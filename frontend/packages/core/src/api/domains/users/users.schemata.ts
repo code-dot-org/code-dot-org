@@ -1,4 +1,5 @@
 import {z} from 'zod';
+import camelcaseKeys from 'camelcase-keys';
 
 export const UserTypes = ['student', 'teacher'] as const;
 
@@ -36,50 +37,13 @@ export const SignedInCurrentUserSchema = z
     sharing_disabled: z.boolean(),
     ai_tutor_enabled_for_pilot: z.boolean(),
   })
-  .transform(data => ({
-    id: data.id,
-    username: data.username,
-    displayName: data.display_name,
-    userType: data.user_type,
-    isSignedIn: data.is_signed_in,
-    shortName: data.short_name,
-    isVerifiedInstructor: data.is_verified_instructor,
-    isLti: data.is_lti,
-    muteMusic: data.mute_music,
-    under13: data.under_13,
-    over21: data.over_21,
-    sortByFamilyName: data.sort_by_family_name,
-    aiRubricsDisabled: data.ai_rubrics_disabled,
-    progressTableV2ClosedBeta: data.progress_table_v2_closed_beta,
-    aiTutorAccessDenied: data.ai_tutor_access_denied,
-    hasSeenProgressTableV2Invitation:
-      data.has_seen_progress_table_v2_invitation,
-    hasSeenHomepageWelcome: data.has_seen_homepage_welcome,
-    hasDismissedPersonalizationAlert: data.has_dismissed_personalization_alert,
-    dateProgressTableInvitationLastDelayed:
-      data.date_progress_table_invitation_last_delayed,
-    childAccountComplianceState: data.child_account_compliance_state,
-    countryCode: data.country_code,
-    usStateCode: data.us_state_code,
-    age: data.age,
-    inSection: data.in_section,
-    createdAt: data.created_at,
-    hasSeenAiAssessmentsAnnouncement: data.has_seen_ai_assessments_announcement,
-    aiDifferentiationEnabled: data.ai_differentiation_enabled,
-    hasCompletedAiDifferentiationWelcome:
-      data.has_completed_ai_differentiation_welcome,
-    educatorRole: data.educator_role,
-    sharingDisabled: data.sharing_disabled,
-    aiTutorEnabledForPilot: data.ai_tutor_enabled_for_pilot,
-  }));
+  .transform(data => camelcaseKeys(data, {deep: true}));
 
 export const SignedOutCurrentUserSchema = z
   .object({
     is_signed_in: z.literal(false),
   })
-  .transform(data => ({
-    isSignedIn: data.is_signed_in,
-  }));
+  .transform(data => camelcaseKeys(data, {deep: true}));
 
 export const CurrentUserSchema = z.union([
   SignedInCurrentUserSchema,
@@ -98,20 +62,13 @@ export const NetsimSignedInSchema = z
     is_signed_in: z.literal(true),
     owned_sections: z.array(z.number()),
   })
-  .transform(data => ({
-    ...data,
-    isAdmin: data.is_admin,
-    isSignedIn: data.is_signed_in,
-    ownedSections: data.owned_sections,
-  }));
+  .transform(data => camelcaseKeys(data, {deep: true}));
 
 export const SchoolNameSchema = z
   .object({
     school_name: z.string().nullable(),
   })
-  .transform(data => ({
-    schoolName: data.school_name,
-  }));
+  .transform(data => camelcaseKeys(data, {deep: true}));
 
 export const ContactDetailsSchema = z
   .object({
@@ -119,11 +76,7 @@ export const ContactDetailsSchema = z
     email: z.string().nullable(),
     zip: z.string().nullable(),
   })
-  .transform(data => ({
-    userName: data.user_name,
-    email: data.email,
-    zip: data.zip,
-  }));
+  .transform(data => camelcaseKeys(data, {deep: true}));
 
 export const DonorTeacherBannerDetailsTeacherSchema = z
   .object({
@@ -141,29 +94,13 @@ export const DonorTeacherBannerDetailsTeacherSchema = z
     school_zip: z.string().nullable(),
     afe_high_needs: z.boolean().nullable(),
   })
-  .transform(data => ({
-    userType: data.user_type,
-    teacherFirstName: data.teacher_first_name,
-    teacherSecondName: data.teacher_second_name,
-    teacherEmail: data.teacher_email,
-    ncesSchoolId: data.nces_school_id,
-    schoolName: data.school_name,
-    schoolAddress1: data.school_address_1,
-    schoolAddress2: data.school_address_2,
-    schoolAddress3: data.school_address_3,
-    schoolCity: data.school_city,
-    schoolState: data.school_state,
-    schoolZip: data.school_zip,
-    afeHighNeeds: data.afe_high_needs,
-  }));
+  .transform(data => camelcaseKeys(data, {deep: true}));
 
 export const DonorTeacherBannerDetailsStudentSchema = z
   .object({
     user_type: z.literal('student'),
   })
-  .transform(data => ({
-    userType: data.user_type,
-  }));
+  .transform(data => camelcaseKeys(data, {deep: true}));
 
 export const DonorTeacherBannerDetailsSchema = z.union([
   DonorTeacherBannerDetailsTeacherSchema,
@@ -178,14 +115,10 @@ export const PostponeCensusBannerSchema = z
   .object({
     next_census_display: z.string(),
   })
-  .transform(data => ({
-    nextCensusDisplay: data.next_census_display,
-  }));
+  .transform(data => camelcaseKeys(data, {deep: true}));
 
 export const HasDismissedPersonalizationAlertSchema = z
   .object({
     has_dismissed_personalization_alert: z.boolean(),
   })
-  .transform(data => ({
-    hasDismissedPersonalizationAlert: data.has_dismissed_personalization_alert,
-  }));
+  .transform(data => camelcaseKeys(data, {deep: true}));
