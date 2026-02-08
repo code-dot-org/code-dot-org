@@ -26,7 +26,7 @@ export const useExtraLinks = (levelId: number) => {
       api,
       {
         levelId,
-        scriptLevelId: scriptLevelId ? parseInt(scriptLevelId) : undefined,
+        scriptLevelId: scriptLevelId || undefined,
       },
       {
         enabled:
