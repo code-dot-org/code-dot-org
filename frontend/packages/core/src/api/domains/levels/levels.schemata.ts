@@ -1,4 +1,5 @@
 import {z} from 'zod';
+import camelcaseKeys from 'camelcase-keys';
 
 import {ProjectTypes} from '../projects';
 
@@ -85,41 +86,42 @@ export const SectionSummarySchema = z
     response_count: z.number(),
     num_students: z.number(),
   })
-  .transform(data => ({
-    responseCount: data.response_count,
-    numStudents: data.num_students,
-  }));
+  .transform(data => camelcaseKeys(data, {deep: true}));
 
 export const ScriptLevelPathLinkSchema = z.object({
   script: z.string(),
   path: z.string(),
 });
 
-export const ParentLevelPathLinkSchema = z.object({
-  level_name: z.string(),
-  path: z.string(),
-  kind: z.string(),
-  position: z.string(),
-});
+export const ParentLevelPathLinkSchema = z
+  .object({
+    level_name: z.string(),
+    path: z.string(),
+    kind: z.string(),
+    position: z.string(),
+  })
+  .transform(data => camelcaseKeys(data, {deep: true}));
 
-export const ExtraLinksLevelDataSchema = z.object({
-  links: z.record(
-    z.string(),
-    z.array(
-      z.object({
-        text: z.string(),
-        url: z.string(),
-        access_key: z.string().optional(),
-      }),
+export const ExtraLinksLevelDataSchema = z
+  .object({
+    links: z.record(
+      z.string(),
+      z.array(
+        z.object({
+          text: z.string(),
+          url: z.string(),
+          access_key: z.string().optional(),
+        }),
+      ),
     ),
-  ),
-  can_clone: z.boolean(),
-  can_delete: z.boolean(),
-  level_name: z.string(),
-  script_level_path_links: z.array(ScriptLevelPathLinkSchema),
-  parent_level_path_links: z.array(ParentLevelPathLinkSchema),
-  is_standalone_project: z.boolean(),
-});
+    can_clone: z.boolean(),
+    can_delete: z.boolean(),
+    level_name: z.string(),
+    script_level_path_links: z.array(ScriptLevelPathLinkSchema),
+    parent_level_path_links: z.array(ParentLevelPathLinkSchema),
+    is_standalone_project: z.boolean(),
+  })
+  .transform(data => camelcaseKeys(data, {deep: true}));
 
 export const AppOptionsSchema = z.object({
   levelId: z.number(),

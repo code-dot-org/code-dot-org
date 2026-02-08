@@ -1,4 +1,5 @@
 import {z} from 'zod';
+import camelcaseKeys from 'camelcase-keys';
 
 export const RubricSchema = z
   .object({
@@ -8,13 +9,7 @@ export const RubricSchema = z
     created_at: z.string(),
     updated_at: z.string(),
   })
-  .transform(data => ({
-    id: data.id,
-    lessonId: data.lesson_id,
-    levelId: data.level_id,
-    createdAt: data.created_at,
-    updatedAt: data.updated_at,
-  }));
+  .transform(data => camelcaseKeys(data, {deep: true}));
 
 export const UnitSummarySchema = z
   .object({
@@ -29,18 +24,7 @@ export const UnitSummarySchema = z
     course_id: z.string().nullable(),
     unit_position: z.number().nullable(),
   })
-  .transform(data => ({
-    name: data.name,
-    displayName: data.displayName,
-    disablePostMilestone: data.disablePostMilestone,
-    studentDetailProgressView: data.student_detail_progress_view,
-    age13Required: data.age_13_required,
-    showSignInCallout: data.show_sign_in_callout,
-    hasUnnumberedLessons: data.hasUnnumberedLessons,
-    courseName: data.course_name,
-    courseId: data.course_id,
-    unitPosition: data.unit_position,
-  }));
+  .transform(data => camelcaseKeys(data, {deep: true}));
 
 export const LessonSummarySchema = z
   .object({
@@ -52,15 +36,7 @@ export const LessonSummarySchema = z
     user_facing: z.boolean(),
     position: z.number(),
   })
-  .transform(data => ({
-    id: data.id,
-    key: data.key,
-    displayName: data.display_name,
-    description: data.description,
-    bigQuestions: data.big_questions,
-    userFacing: data.user_facing,
-    position: data.position,
-  }));
+  .transform(data => camelcaseKeys(data, {deep: true}));
 
 export const LessonGroupSummarySchema = z.array(LessonSummarySchema);
 
@@ -79,15 +55,7 @@ export const VideoSchema = z
     enable_fallback: z.boolean(),
     autoplay: z.boolean(),
   })
-  .transform(data => ({
-    src: data.src,
-    key: data.key,
-    name: data.name,
-    download: data.download,
-    thumbnail: data.thumbnail,
-    enableFallback: data.enable_fallback,
-    autoplay: data.autoplay,
-  }));
+  .transform(data => camelcaseKeys(data, {deep: true}));
 
 export const BaseLevelDefinitionSchema = z.object({
   level_id: z.number(),
@@ -114,46 +82,17 @@ export const BaseLevelDefinitionSchema = z.object({
   video_download: z.string().optional(),
 });
 
-const BaseLevelTransform = (
-  data: z.infer<typeof BaseLevelDefinitionSchema>,
-) => ({
-  levelId: data.level_id,
-  type: data.type,
-  name: data.name,
-  displayName: data.display_name,
-  isValidated: data.is_validated,
-  canHaveFeedback: data.can_have_feedback,
-  title: data.title,
-  questions: data.questions,
-  answers: data.answers,
-  shortInstructions: data.short_instructions,
-  longInstructions: data.long_instructions,
-  markdown: data.markdown,
-  teacherMarkdown: data.teacher_markdown,
-  reference: data.reference,
-  rubricKeyConcept: data.rubric_key_concept,
-  rubricPerformanceLevel1: data.rubric_performance_level_1,
-  rubricPerformanceLevel2: data.rubric_performance_level_2,
-  rubricPerformanceLevel3: data.rubric_performance_level_3,
-  rubricPerformanceLevel4: data.rubric_performance_level_4,
-  miniRubric: data.mini_rubric,
-  videoYoutube: data.video_youtube,
-  videoDownload: data.video_download,
-});
-
-export const BaseLevelSchema =
-  BaseLevelDefinitionSchema.transform(BaseLevelTransform);
+export const BaseLevelSchema = BaseLevelDefinitionSchema.transform(data =>
+  camelcaseKeys(data, {deep: true}),
+);
 
 export const LevelDefinitionSchema = BaseLevelDefinitionSchema.extend({
   contained_levels: z.array(BaseLevelSchema).optional(),
 });
 
-const LevelTransform = (data: z.infer<typeof LevelDefinitionSchema>) => ({
-  ...BaseLevelTransform(data),
-  containedLevels: data.contained_levels,
-});
-
-export const LevelSchema = LevelDefinitionSchema.transform(LevelTransform);
+export const LevelSchema = LevelDefinitionSchema.transform(data =>
+  camelcaseKeys(data, {deep: true}),
+);
 
 export const SublevelDefinitionSchema = LevelDefinitionSchema.extend({
   id: z.number(),
@@ -173,20 +112,9 @@ export const SublevelDefinitionSchema = LevelDefinitionSchema.extend({
   exampleSolutions: z.array(z.string()).optional(),
 });
 
-export const SublevelSchema = SublevelDefinitionSchema.transform(data => ({
-  ...LevelTransform(data),
-  id: data.id,
-  description: data.description,
-  thumbnailUrl: data.thumbnail_url,
-  position: data.position,
-  letter: data.letter,
-  icon: data.icon,
-  usesLab2: data.uses_lab2,
-  parentLevelId: data.parent_level_id,
-  navigationType: data.navigation_type,
-  url: data.url,
-  path: data.path,
-}));
+export const SublevelSchema = SublevelDefinitionSchema.transform(data =>
+  camelcaseKeys(data, {deep: true}),
+);
 
 export const UnitLevelDefinitionSchema = z.object({
   id: z.string(),
@@ -216,30 +144,11 @@ export const UnitLevelDefinitionSchema = z.object({
 });
 
 export const UnitLevelSchema = UnitLevelDefinitionSchema.transform(data => ({
+  ...camelcaseKeys(data, {deep: true}),
   id: parseInt(data.id),
-  ids: data.ids.map(id => parseInt(id)),
   activeId: parseInt(data.activeId),
   inactiveIds: data.inactiveIds.map(id => parseInt(id)),
-  position: data.position,
-  kind: data.kind,
-  icon: data.icon,
-  isConceptLevel: data.is_concept_level,
-  title: data.title,
-  url: data.url,
-  path: data.path,
-  freePlay: data.freePlay,
-  bonus: data.bonus,
-  displayAsUnplugged: data.display_as_unplugged,
-  app: data.app,
-  usesLab2: data.uses_lab2,
-  isValidated: data.is_validated,
-  canHaveFeedback: data.can_have_feedback,
-  progressionDisplayName: data.progression_display_name,
-  name: data.name,
-  sublevels: data.sublevels,
-  previous: data.previous,
-  next: data.next,
-  pageNumber: data.page_number,
+  ids: data.ids.map(id => parseInt(id)),
 }));
 
 export const LessonDefinitionSchema = z.object({
@@ -275,38 +184,9 @@ export const LessonDefinitionSchema = z.object({
   lesson_extras_level_url: z.string().optional(),
 });
 
-export const LessonSchema = LessonDefinitionSchema.transform(data => ({
-  scriptId: data.script_id,
-  scriptName: data.script_name,
-  numScriptLessons: data.num_script_lessons,
-  id: data.id,
-  position: data.position,
-  relativePosition: data.relative_position,
-  name: data.name,
-  key: data.key,
-  assessment: data.assessment,
-  title: data.title,
-  lessonGroupDisplayName: data.lesson_group_display_name,
-  lockable: data.lockable,
-  hasLessonPlan: data.hasLessonPlan,
-  numberedLesson: data.numberedLesson,
-  levels: data.levels,
-  descriptionStudent: data.description_student,
-  descriptionTeacher: data.description_teacher,
-  unplugged: data.unplugged,
-  lessonEditPath: data.lessonEditPath,
-  lessonStartUrl: data.lessonStartUrl,
-  duration: data.duration,
-  background: data.background,
-  rubric: data.rubric,
-  lessonFeedbackUrl: data.lesson_feedback_url,
-  lessonPlanHtmlUrl: data.lesson_plan_html_url,
-  lessonPlanPdfUrl: data.lesson_plan_pdf_url,
-  studentLessonPlanHtmlUrl: data.student_lesson_plan_html_url,
-  finishLink: data.finishLink,
-  finishText: data.finishText,
-  lessonExtrasLevelUrl: data.lesson_extras_level_url,
-}));
+export const LessonSchema = LessonDefinitionSchema.transform(data =>
+  camelcaseKeys(data, {deep: true}),
+);
 
 export const LevelKinds = {
   PeerReview: 'peer_review',

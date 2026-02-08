@@ -1,4 +1,5 @@
 import {z} from 'zod';
+import camelcaseKeys from 'camelcase-keys';
 
 export const AppNames = [
   'unknown',
@@ -81,23 +82,25 @@ export const ProjectChannelForLevelSchema = z.object({
   reduceChannelUpdates: z.boolean().optional(),
 });
 
-export const ExtraLinksProjectDataSchema = z.object({
-  owner_info: z
-    .object({
-      storage_id: z.number(),
-      name: z.string(),
-    })
-    .optional(),
-  project_info: z
-    .object({
-      id: z.number(),
-      sources_link: z.string(),
-      is_featured_project: z.boolean(),
-      featured_status: z.string(),
-      remix_ancestry: z.array(z.string()),
-      is_published_project: z.enum(['yes', 'no']),
-      abuse_score: z.number(),
-    })
-    .optional(),
-  message: z.string().optional(),
-});
+export const ExtraLinksProjectDataSchema = z
+  .object({
+    owner_info: z
+      .object({
+        storage_id: z.number(),
+        name: z.string(),
+      })
+      .optional(),
+    project_info: z
+      .object({
+        id: z.number(),
+        sources_link: z.string(),
+        is_featured_project: z.boolean(),
+        featured_status: z.string(),
+        remix_ancestry: z.array(z.string()),
+        is_published_project: z.enum(['yes', 'no']),
+        abuse_score: z.number(),
+      })
+      .optional(),
+    message: z.string().optional(),
+  })
+  .transform(data => camelcaseKeys(data, {deep: true}));

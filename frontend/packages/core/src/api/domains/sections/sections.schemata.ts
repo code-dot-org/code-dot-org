@@ -1,4 +1,5 @@
 import {z} from 'zod';
+import camelcaseKeys from 'camelcase-keys';
 
 export const SectionLoginTypes = {
   Word: 'word',
@@ -68,11 +69,7 @@ export const SelectedUnitSchema = z
     name: z.string().nullable(),
     project_sharing: z.boolean().nullable(),
   })
-  .transform(data => ({
-    id: data.id,
-    name: data.name,
-    projectSharing: data.project_sharing,
-  }));
+  .transform(data => camelcaseKeys(data, {deep: true}));
 
 export const SectionCourseSchema = z
   .object({
@@ -82,13 +79,7 @@ export const SectionCourseSchema = z
     lesson_extras_available: z.boolean(),
     text_to_speech_enabled: z.boolean(),
   })
-  .transform(data => ({
-    courseOfferingId: data.course_offering_id,
-    versionId: data.version_id,
-    unitId: data.unit_id,
-    lessonExtrasAvailable: data.lesson_extras_available,
-    textToSpeechEnabled: data.text_to_speech_enabled,
-  }));
+  .transform(data => camelcaseKeys(data, {deep: true}));
 
 export const SectionInstructorInfoSchema = z
   .object({
@@ -97,12 +88,7 @@ export const SectionInstructorInfoSchema = z
     status: z.string(),
     id: z.number(),
   })
-  .transform(data => ({
-    instructorEmail: data.instructor_email,
-    instructorName: data.instructor_name,
-    status: data.status,
-    id: data.id,
-  }));
+  .transform(data => camelcaseKeys(data, {deep: true}));
 
 export const SectionInstructorSchema = z
   .object({
@@ -118,17 +104,7 @@ export const SectionInstructorSchema = z
     status: z.string(),
     id: z.number(),
   })
-  .transform(data => ({
-    instructorEmail: data.instructor_email,
-    instructorName: data.instructor_name,
-    invitedByName: data.invited_by_name,
-    invitedByEmail: data.invited_by_email,
-    section_name: data.section_name,
-    section_id: data.section_id,
-    status: data.status,
-    id: data.id,
-    participantType: data.participant_type,
-  }));
+  .transform(data => camelcaseKeys(data, {deep: true}));
 
 export const SectionPrimaryInstructorSchema = z.object({
   email: z.string(),
@@ -162,31 +138,7 @@ export const SectionStudentSchema = z
     latest_permission_request_sent_at: z.string().nullable(),
     us_state: z.string().nullable(),
   })
-  .transform(data => ({
-    id: data.id,
-    name: data.name,
-    username: data.username,
-    givenName: data.given_name,
-    familyName: data.family_name,
-    email: data.email,
-    hashedEmail: data.hashed_email,
-    userType: data.user_type,
-    gender: data.gender,
-    genderTeacherInput: data.gender_teacher_input,
-    birthday: data.birthday,
-    secretWords: data.secret_words,
-    secretPictureName: data.secret_picture_name,
-    secretPictureUrl: data.secret_picture_url,
-    location: data.location,
-    age: data.age,
-    sharingDisabled: data.sharing_disabled,
-    hasEverSignedIn: data.has_ever_signed_in,
-    aiTutorAccessDenied: data.ai_tutor_access_denied,
-    atRiskAgeGatedDate: data.at_risk_age_gated_date,
-    childAccountComplianceState: data.child_account_compliance_state,
-    latestPermissionRequestSentAt: data.latest_permission_request_sent_at,
-    usState: data.us_state,
-  }));
+  .transform(data => camelcaseKeys(data, {deep: true}));
 
 export const SelectedSectionSchema = z
   .object({
@@ -202,19 +154,7 @@ export const SelectedSectionSchema = z
     avatar_color: z.number(),
     avatar_emoji: z.number(),
   })
-  .transform(data => ({
-    id: data.id,
-    name: data.name,
-    students: data.students,
-    loginTypeName: data.login_type_name,
-    script: data.script,
-    course: data.course,
-    anyStudentHasProgress: data.any_student_has_progress,
-    isAssignedSingleUnitCourse: data.is_assigned_single_unit_course,
-    primaryInstructor: data.primaryInstructor,
-    avatarColor: data.avatar_color,
-    avatarEmoji: data.avatar_emoji,
-  }));
+  .transform(data => camelcaseKeys(data, {deep: true}));
 
 export const ConciseSectionSchema = z
   .object({
@@ -252,41 +192,7 @@ export const ConciseSectionSchema = z
     at_risk_age_gated_date: z.string().nullable(),
     at_risk_age_gated_us_state: z.string().nullable(),
   })
-  .transform(data => ({
-    id: data.id,
-    name: data.name,
-    courseVersionName: data.courseVersionName,
-    unitName: data.unitName,
-    unitPosition: data.unitPosition,
-    createdAt: data.createdAt,
-    loginType: data.login_type,
-    grades: data.grades,
-    providerManaged: data.providerManaged,
-    lessonExtras: data.lesson_extras,
-    pairingAllowed: data.pairing_allowed,
-    ttsAutoplayEnabled: data.tts_autoplay_enabled,
-    sharingDisabled: data.sharing_disabled,
-    studentCount: data.studentCount,
-    code: data.code,
-    courseDisplayName: data.course_display_name,
-    courseOfferingId: data.course_offering_id,
-    courseVersionId: data.course_version_id,
-    unitId: data.unit_id,
-    courseId: data.course_id,
-    hidden: data.hidden,
-    restrictSection: data.restrict_section,
-    postMilestoneDisabled: data.post_milestone_disabled,
-    codeReviewExpiresAt: data.code_review_expires_at,
-    isAssignedCsa: data.is_assigned_csa,
-    participantType: data.participant_type,
-    sectionInstructors: data.sectionInstructors,
-    syncEnabled: data.sync_enabled,
-    aiTutorEnabled: data.ai_tutor_enabled,
-    avatarColor: data.avatar_color,
-    avatarEmoji: data.avatar_emoji,
-    atRiskAgeGatedDate: data.at_risk_age_gated_date,
-    atRiskAgeGatedUsState: data.at_risk_age_gated_us_state,
-  }));
+  .transform(data => camelcaseKeys(data, {deep: true}));
 
 export const SectionSchema = z.intersection(
   SelectedSectionSchema,

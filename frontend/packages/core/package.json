@@ -53,6 +53,7 @@
   "dependencies": {
     "@tanstack/react-query": "^5.90.20",
     "@tanstack/react-query-devtools": "^5.91.3",
+    "camelcase-keys": "^10.0.2",
     "events": "^3.3.0",
     "flat": "^6.0.1",
     "tldts": "^7.0.23",
