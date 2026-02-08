@@ -75,6 +75,7 @@ export default defineConfig({
         'src/redux/labSystemSlice.ts',
         'src/redux/labProjectSlice.ts',
         'src/redux/predictLevelSlice.ts',
+        'src/interpreter/index.ts',
       ],
       name: 'lab',
     },

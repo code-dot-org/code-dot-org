@@ -6,7 +6,7 @@
  * structures.
  */
 
-import type {ExecutionInfo} from '@code-dot-org/interpreter';
+import type {ExecutionInfo} from '@code-dot-org/lab/interpreter';
 
 import type {ChordEventValue} from './player/interfaces/ChordEvent';
 import type {Effects, EffectValue} from './player/interfaces/Effects';
