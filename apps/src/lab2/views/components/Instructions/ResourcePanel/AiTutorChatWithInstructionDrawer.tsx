@@ -153,18 +153,25 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
         className={styles.chatPanel}
         style={{
           height: chatHeight,
-          paddingTop: isCollapsed ? '40px' : '0',
         }}
       >
-        <AiTutorChat
-          hiddenContextCallback={hiddenContextCallback}
-          aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
-          levelName={levelName}
-          channelId={channelId}
-          aiTutorChatButtonData={aiTutorChatButtonData}
-          aiTutorSystemPromptName={aiTutorSystemPromptName}
-          aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
-        />
+        <div
+          style={{
+            height: '100%',
+            paddingTop: isCollapsed ? '40px' : '0',
+            boxSizing: 'border-box',
+          }}
+        >
+          <AiTutorChat
+            hiddenContextCallback={hiddenContextCallback}
+            aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
+            levelName={levelName}
+            channelId={channelId}
+            aiTutorChatButtonData={aiTutorChatButtonData}
+            aiTutorSystemPromptName={aiTutorSystemPromptName}
+            aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
+          />
+        </div>
       </div>
     </div>
   );
