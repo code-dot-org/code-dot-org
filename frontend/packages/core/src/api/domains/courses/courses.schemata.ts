@@ -1,6 +1,34 @@
 import {z} from 'zod';
 import camelcaseKeys from 'camelcase-keys';
 
+export const ParticipantAudiences = {
+  Facilitator: 'facilitator',
+  Teacher: 'teacher',
+  Student: 'student',
+} as const;
+
+export const PublishedStates = {
+  InDevelopment: 'in_development',
+  Pilot: 'pilot',
+  Beta: 'beta',
+  Preview: 'preview',
+  Stable: 'stable',
+  Sunsetting: 'sunsetting',
+  Deprecated: 'deprecated',
+} as const;
+
+export const InstructionTypes = {
+  TeacherLed: 'teacher_led',
+  SelfPaced: 'self_paced',
+} as const;
+
+export const InstructorAudiences = {
+  UniversalInstructor: 'universal_instructor',
+  PlcReviewer: 'plc_reviewer',
+  Facilitator: 'facilitator',
+  Teacher: 'teacher',
+} as const;
+
 export const RubricSchema = z
   .object({
     id: z.number(),

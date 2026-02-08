@@ -1,5 +1,3 @@
-'use client';
-
 /**
  * A possible DCDO value to expect to find attached to a key.
  */

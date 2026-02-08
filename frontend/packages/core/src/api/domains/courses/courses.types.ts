@@ -1,11 +1,15 @@
 import {z} from 'zod';
 
 import {
+  InstructionTypes,
+  InstructorAudiences,
   LessonGroupSummarySchema,
   LessonSchema,
   LessonSummarySchema,
   LevelKinds,
   LevelSchema,
+  ParticipantAudiences,
+  PublishedStates,
   SublevelSchema,
   UnitLevelSchema,
   UnitSummarySchema,
@@ -21,3 +25,11 @@ export type Level = z.infer<typeof LevelSchema>;
 export type Sublevel = z.infer<typeof SublevelSchema>;
 export type UnitLevel = z.infer<typeof UnitLevelSchema>;
 export type LevelKind = (typeof LevelKinds)[keyof typeof LevelKinds];
+export type PublishedState =
+  (typeof PublishedStates)[keyof typeof PublishedStates];
+export type ParticipantAudience =
+  (typeof ParticipantAudiences)[keyof typeof ParticipantAudiences];
+export type InstructionType =
+  (typeof InstructionTypes)[keyof typeof InstructionTypes];
+export type InstructorAudience =
+  (typeof InstructorAudiences)[keyof typeof InstructorAudiences];

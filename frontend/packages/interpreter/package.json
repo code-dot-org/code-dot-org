@@ -36,8 +36,7 @@
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "dependencies": {
-    "@code-dot-org/js-interpreter": "^1.3.13",
-    "tldjs": "^2.3.2"
+    "@code-dot-org/js-interpreter": "^1.3.13"
   },
   "devDependencies": {
     "@code-dot-org/lint-config": "workspace:*",

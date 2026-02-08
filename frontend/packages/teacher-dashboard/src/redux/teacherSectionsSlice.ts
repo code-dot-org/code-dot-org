@@ -1,5 +1,5 @@
-import {
-  createSlice,
+import {createSlice} from '@reduxjs/toolkit';
+import type {
   AnyAction,
   PayloadAction,
   ThunkAction,
@@ -7,7 +7,11 @@ import {
 } from '@reduxjs/toolkit';
 import _ from 'lodash';
 
-import {sectionsKeys, SectionLoginTypes} from '@code-dot-org/core/api';
+import {
+  sectionsKeys,
+  ParticipantAudiences,
+  SectionLoginTypes,
+} from '@code-dot-org/core/api';
 import type {
   ApiClient,
   Section,
@@ -23,8 +27,7 @@ import {
   getFilteredSectionOrderIds,
   saveSectionOrder,
 } from '../sectionOrderUtils';
-import {
-  ParticipantAudience,
+import type {
   AssignmentCourseOffering,
   Classroom,
   LtiSectionSyncResult,
@@ -274,12 +277,12 @@ const sectionSlice = createSlice({
 
         const studentSectionIds = sections
           .filter(
-            section => section.participantType === ParticipantAudience.Student,
+            section => section.participantType === ParticipantAudiences.Student,
           )
           .map(section => section.id);
         const plSectionIds = sections
           .filter(
-            section => section.participantType !== ParticipantAudience.Student,
+            section => section.participantType !== ParticipantAudiences.Student,
           )
           .map(section => section.id);
 
@@ -503,7 +506,7 @@ const sectionSlice = createSlice({
       // PL Sections must use email logins and its grade value should be "pl"
       if (
         action.payload.participantType &&
-        action.payload.participantType !== ParticipantAudience.Student
+        action.payload.participantType !== ParticipantAudiences.Student
       ) {
         state.sectionBeingEdited.loginType = SectionLoginTypes.Email;
         state.sectionBeingEdited.grades = [PlGradeValue];
@@ -577,12 +580,12 @@ const sectionSlice = createSlice({
 
       state.studentSectionIds = Object.values(state.sections)
         .filter(
-          section => section.participantType === ParticipantAudience.Student,
+          section => section.participantType === ParticipantAudiences.Student,
         )
         .map(section => section.id);
       state.plSectionIds = Object.values(state.sections)
         .filter(
-          section => section.participantType !== ParticipantAudience.Student,
+          section => section.participantType !== ParticipantAudiences.Student,
         )
         .map(section => section.id);
 
@@ -983,12 +986,15 @@ export const asyncLoadSectionData =
 
 function fetchJSON(url: string, params?: Record<string, string>) {
   return new Promise((resolve, reject) => {
-    fetch(`url${params ? `?${new URLSearchParams(params).toString()}` : ''}`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json;charset=UTF-8',
+    fetch(
+      `${url}${params ? `?${new URLSearchParams(params).toString()}` : ''}`,
+      {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json;charset=UTF-8',
+        },
       },
-    })
+    )
       .then(response => response.json())
       .then(resolve)
       .catch(reject);
@@ -1149,7 +1155,7 @@ export const unassignSection =
 /**
  * Removes null values from stringified object before sending firehose record
  */
-function removeNullValues(key: string, val?: string | number | null) {
+function removeNullValues(_key: string, val?: string | number | null) {
   if (val === null || typeof val === 'undefined') {
     return undefined;
   }

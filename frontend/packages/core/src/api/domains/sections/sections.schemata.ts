@@ -1,6 +1,8 @@
 import {z} from 'zod';
 import camelcaseKeys from 'camelcase-keys';
 
+import {ParticipantAudiences} from '../courses';
+
 export const SectionLoginTypes = {
   Word: 'word',
   Picture: 'picture',
@@ -10,11 +12,7 @@ export const SectionLoginTypes = {
   LtiV1: 'lti_v1',
 } as const;
 
-export const SectionParticipationTypes = {
-  Facilitator: 'facilitator',
-  Teacher: 'teacher',
-  Student: 'student',
-} as const;
+export const SectionParticipationTypes = ParticipantAudiences;
 
 export const AssignmentCourseVersionUnitSchema = z.object({
   id: z.number(),

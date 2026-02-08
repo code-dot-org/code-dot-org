@@ -1,13 +1,13 @@
 import _ from 'lodash';
 
 import {
+  ParticipantAudiences,
   SectionLoginTypes,
   SectionParticipationTypes,
 } from '@code-dot-org/core/api';
 import type {Section, SectionParticipationType} from '@code-dot-org/core/api';
 
-import {
-  ParticipantAudience,
+import type {
   AssignmentCourseOffering,
   AssignmentCourseVersion,
   AssignmentCourseVersionUnit,
@@ -334,7 +334,7 @@ export function hiddenStudentSectionIds(state: RootState) {
   return innerState.sectionIds.filter(
     id =>
       innerState.sections[id].hidden &&
-      innerState.sections[id].participantType === ParticipantAudience.Student,
+      innerState.sections[id].participantType === ParticipantAudiences.Student,
   );
 }
 
@@ -346,7 +346,7 @@ export function hiddenPlSectionIds(state: RootState) {
   return innerState.sectionIds.filter(
     id =>
       innerState.sections[id].hidden &&
-      innerState.sections[id].participantType !== ParticipantAudience.Student,
+      innerState.sections[id].participantType !== ParticipantAudiences.Student,
   );
 }
 
