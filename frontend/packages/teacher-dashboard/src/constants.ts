@@ -1,30 +1,4 @@
-export const PublishedState = {
-  in_development: 'in_development',
-  pilot: 'pilot',
-  beta: 'beta',
-  preview: 'preview',
-  stable: 'stable',
-  sunsetting: 'sunsetting',
-  deprecated: 'deprecated',
-};
-
-export const InstructionType = {
-  teacher_led: 'teacher_led',
-  self_paced: 'self_paced',
-};
-
-export const ParticipantAudience = {
-  facilitator: 'facilitator',
-  teacher: 'teacher',
-  student: 'student',
-};
-
-export const InstructorAudience = {
-  universal_instructor: 'universal_instructor',
-  plc_reviewer: 'plc_reviewer',
-  facilitator: 'facilitator',
-  teacher: 'teacher',
-};
+import {ParticipantAudiences} from '@code-dot-org/core/api';
 
 export const CurriculumUmbrella = {
   CSF: 'CSF',
@@ -146,22 +120,26 @@ export const CourseOfferingSchoolSubjects = [
   'history',
 ];
 
-export const DeviceTypes = [
-  'computer',
-  'chromebook',
-  'tablet',
-  'mobile',
-  'no_device',
-];
+export const DeviceTypes = {
+  Computer: 'computer',
+  Chromebook: 'chromebook',
+  Tablet: 'tablet',
+  Mobile: 'mobile',
+  NoDevice: 'no_device',
+} as const;
 
-export const DeviceCompatibilityLevels = [
-  'ideal',
-  'not_recommended',
-  'incompatible',
-];
+export const DeviceCompatibilityLevels = {
+  Ideal: 'ideal',
+  NotRecommended: 'not_recommended',
+  Incompatible: 'incompatible',
+} as const;
 
 export const ParticipantAudiencesByType = {
-  student: ['student'],
-  teacher: ['student', 'teacher'],
-  facilitator: ['student', 'teacher', 'facilitator'],
+  student: [ParticipantAudiences.Student],
+  teacher: [ParticipantAudiences.Student, ParticipantAudiences.Teacher],
+  facilitator: [
+    ParticipantAudiences.Student,
+    ParticipantAudiences.Teacher,
+    ParticipantAudiences.Facilitator,
+  ],
 };

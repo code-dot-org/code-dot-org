@@ -1,9 +1,7 @@
 import _ from 'lodash';
 
-import {preferencesKeys} from '@code-dot-org/core/api';
-import type {ApiClient, Section, QueryClient} from '@code-dot-org/core/api';
-
-import {ParticipantAudience} from './constants';
+import type {ApiClient, QueryClient, Section} from '@code-dot-org/core/api';
+import {preferencesKeys, ParticipantAudiences} from '@code-dot-org/core/api';
 
 // Takes filtered section IDs and ordered section IDs and returns a properly ordered list
 // If the results are different from the ordered section IDs, it updates the order in the backend.
@@ -36,7 +34,7 @@ export const getFilteredSectionOrderIds = (
   orderedSectionIds: number[],
 ): number[] => {
   const filteredSectionIds = sections
-    .filter(section => section.participantType === ParticipantAudience.student)
+    .filter(section => section.participantType === ParticipantAudiences.Student)
     .filter(section => !section.hidden)
     .map(section => section.id);
 
