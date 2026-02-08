@@ -4,7 +4,7 @@ import {Suspense, useEffect} from 'react';
 import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
 import {injectFontAwesome} from '@code-dot-org/fonts';
 import {progressActions} from '@code-dot-org/progress/redux';
-import {RootStateProvider} from '@code-dot-org/redux/providers';
+import {RootStateProvider} from '@code-dot-org/core/redux';
 
 import {ExtraLinksButtonProvider} from '../contexts/ExtraLinksButtonContext';
 import {LevelPropertiesProvider} from '../contexts/LevelPropertiesContext';

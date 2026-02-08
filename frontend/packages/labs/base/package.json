@@ -42,6 +42,11 @@
       "import": "./dist/instructions/index.mjs",
       "require": "./dist/instructions/index.js"
     },
+    "./interpreter": {
+      "types": "./dist/interpreter/index.d.ts",
+      "import": "./dist/interpreter/index.mjs",
+      "require": "./dist/interpreter/index.js"
+    },
     "./components": {
       "types": "./dist/components/index.d.ts",
       "import": "./dist/components/index.mjs",
@@ -76,9 +81,6 @@
     },
     "./redux/predictLevelSlice": {
       "types": "./dist/redux/predictLevelSlice.d.ts"
-    },
-    "./interpreter": {
-      "types": "./dist/interpreter/index.d.ts"
     },
     "./styles/variables.scss": "./src/components/layout/variables.scss"
   },
@@ -116,7 +118,6 @@
     "@code-dot-org/markdown": "workspace:*",
     "@code-dot-org/progress": "workspace:*",
     "@code-dot-org/projects": "workspace:*",
-    "@code-dot-org/redux": "workspace:*",
     "@code-dot-org/teacher-dashboard": "workspace:*",
     "@code-dot-org/user": "workspace:*",
     "@fortawesome/fontawesome-free": "^7.1.0",

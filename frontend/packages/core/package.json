@@ -32,6 +32,21 @@
       "types": "./dist/metrics/index.d.ts",
       "import": "./dist/metrics/index.mjs",
       "require": "./dist/metrics/index.js"
+    },
+    "./audio": {
+      "types": "./dist/audio/index.d.ts",
+      "import": "./dist/audio/index.mjs",
+      "require": "./dist/audio/index.js"
+    },
+    "./textToSpeech": {
+      "types": "./dist/textToSpeech/index.d.ts",
+      "import": "./dist/textToSpeech/index.mjs",
+      "require": "./dist/textToSpeech/index.js"
+    },
+    "./redux": {
+      "types": "./dist/redux/index.d.ts",
+      "import": "./dist/redux/index.mjs",
+      "require": "./dist/redux/index.js"
     }
   },
   "scripts": {
@@ -52,6 +67,7 @@
   },
   "dependencies": {
     "@newrelic/browser-agent": "^1.294.0",
+    "@reduxjs/toolkit": "^2.8.2",
     "@statsig/js-client": "^3.20.2",
     "@statsig/session-replay": "^3.20.2",
     "@statsig/web-analytics": "^3.20.2",
@@ -63,6 +79,7 @@
     "js-cookie": "^3.0.5",
     "markdown-to-txt": "^2.0.1",
     "query-string": "^9.3.1",
+    "react-redux": "^9.2.0",
     "tldjs": "^2.3.2",
     "zod": "^4.3.6"
   },

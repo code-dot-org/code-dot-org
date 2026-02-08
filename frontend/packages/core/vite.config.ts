@@ -50,6 +50,7 @@ export default defineConfig({
         'src/metrics/index.ts',
         'src/audio/index.ts',
         'src/textToSpeech/index.ts',
+        'src/redux/index.ts',
       ],
       name: 'core',
     },

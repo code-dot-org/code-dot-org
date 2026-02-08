@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import {useAppDispatch} from '@code-dot-org/redux';
+import {useAppDispatch} from '@code-dot-org/core/redux';
 
 import {isChordEvent} from '../../player/interfaces/ChordEvent';
 import {isInstrumentEvent} from '../../player/interfaces/InstrumentEvent';

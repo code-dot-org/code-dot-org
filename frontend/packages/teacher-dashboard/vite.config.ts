@@ -36,6 +36,15 @@ export default defineConfig({
     externalizeDeps(),
   ],
   resolve: {
+    dedupe: [
+      'blockly',
+      'react',
+      'react-dom',
+      'react/jsx-runtime',
+      'react/jsx-dev-runtime',
+      'react-redux',
+      '@reduxjs/toolkit',
+    ],
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
