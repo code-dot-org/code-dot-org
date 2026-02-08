@@ -1,7 +1,7 @@
 import * as Blockly from 'blockly/core';
 import type {JavascriptGenerator} from 'blockly/javascript';
 
-import {evalWithEvents} from '@code-dot-org/interpreter';
+import {evalWithEvents} from '@code-dot-org/lab/interpreter';
 
 import {BlockTypes} from './blockly/blockTypes';
 import {

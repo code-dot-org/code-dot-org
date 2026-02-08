@@ -52,7 +52,6 @@
     "@code-dot-org/component-library-styles": "workspace:*",
     "@code-dot-org/core": "workspace:*",
     "@code-dot-org/fonts": "workspace:*",
-    "@code-dot-org/interpreter": "workspace:*",
     "@code-dot-org/lab": "workspace:*",
     "@code-dot-org/markdown": "workspace:*",
     "@magenta/music": "^1.23.1",

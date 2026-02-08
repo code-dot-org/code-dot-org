@@ -77,6 +77,9 @@
     "./redux/predictLevelSlice": {
       "types": "./dist/redux/predictLevelSlice.d.ts"
     },
+    "./interpreter": {
+      "types": "./dist/interpreter/index.d.ts"
+    },
     "./styles/variables.scss": "./src/components/layout/variables.scss"
   },
   "files": [
@@ -110,6 +113,7 @@
     "@code-dot-org/component-library": "workspace:*",
     "@code-dot-org/core": "workspace:*",
     "@code-dot-org/fonts": "workspace:*",
+    "@code-dot-org/js-interpreter": "^1.3.13",
     "@code-dot-org/markdown": "workspace:*",
     "@code-dot-org/progress": "workspace:*",
     "@code-dot-org/projects": "workspace:*",
@@ -121,6 +125,7 @@
     "focus-trap-react": "^11.0.4",
     "intro.js-react": "^1.0.0",
     "lodash": "^4.17.21",
+    "markdown-to-jsx": "^7.4.7",
     "qrcode.react": "^4.2.0",
     "query-string": "^9.2.2",
     "react-focus-lock": "^2.13.6",
