@@ -8,9 +8,8 @@ import type {
 } from '@reduxjs/toolkit';
 import _ from 'lodash';
 
-import type {Lesson} from '@code-dot-org/api/models/lessons';
-import type {Level} from '@code-dot-org/api/models/levels';
-import {LevelKind} from '@code-dot-org/api/models/levels';
+import type {Lesson, Sublevel, UnitLevel} from '@code-dot-org/core/api';
+import {LevelKinds} from '@code-dot-org/core/api';
 import type {StateFor, MockStore} from '@code-dot-org/redux';
 import currentUserSlice from '@code-dot-org/user/redux/currentUserSlice';
 
@@ -44,6 +43,7 @@ import {
   OptionalMilestoneData,
   ProgressLevelType,
   NumberedLevel,
+  NumberedSublevel,
 } from '../types';
 
 /**
@@ -134,6 +134,49 @@ export const levelProgressFromResult: (
   result: TestResults,
 ) => UnitProgress = result => {
   return levelProgressFromStatus(activityCssClass(result));
+};
+
+/**
+ * The level object passed down to us via the server (and stored in
+ * script.lessons.levels) contains more data than we need. This parses the parts
+ * we care about to conform to our `NumberedLevel` object.
+ */
+export const processedLevel: (
+  level: UnitLevel | Sublevel,
+  parentLevelId?: number,
+) => NumberedLevel = (level, parentLevelId) => {
+  const id = (level as UnitLevel).activeId || level.id;
+
+  return {
+    ...level,
+    isCurrentLevel: false,
+    // Script level ID doesn't apply for sublevels. Set to undefined if we have a parent level.
+    scriptLevelId: parentLevelId ? undefined : level.id,
+    parentLevelId,
+    levelNumber:
+      (level as UnitLevel).kind === LevelKinds.Unplugged
+        ? undefined
+        : level.title || level.position,
+    bubbleText:
+      (level as UnitLevel).kind === LevelKinds.Unplugged
+        ? undefined
+        : (level as Sublevel).letter ||
+          (level as UnitLevel).title?.toString() ||
+          '',
+    pageNumber:
+      typeof (level as UnitLevel).pageNumber !== 'undefined'
+        ? (level as UnitLevel).pageNumber
+        : PUZZLE_PAGE_NONE,
+    sublevels:
+      (level as UnitLevel).sublevels &&
+      (level as UnitLevel).sublevels?.map(sublevel =>
+        processedLevel(sublevel, id),
+      ),
+    path: level.path,
+    navigationType: parentLevelId
+      ? (level as Sublevel).navigationType
+      : undefined, // Only applicable for sublevels.
+  } as NumberedLevel;
 };
 
 /**
@@ -417,17 +460,19 @@ const progressSlice: Slice<ProgressState> = _progressSlice;
  */
 export const getCurrentScriptLevelId: (
   state: RootState,
-) => string | undefined = state => {
+) => number | undefined = state => {
   const currentLevel = getCurrentLevel(state);
   if (!currentLevel) {
     return;
   }
 
-  if (currentLevel.parentLevelId) {
+  const currentSublevel = currentLevel as NumberedSublevel;
+
+  if (currentSublevel.parentLevelId) {
     return levelById(
       state.progress,
       state.progress.currentLessonId,
-      currentLevel.parentLevelId,
+      currentSublevel.parentLevelId,
     )?.scriptLevelId;
   } else {
     return currentLevel.scriptLevelId;
@@ -470,7 +515,7 @@ export const levelById: (
   state: RootState['progress'],
   lessonId: number | undefined,
   levelId: number,
-) => Level | undefined = (state, lessonId, levelId) => {
+) => NumberedLevel | undefined = (state, lessonId, levelId) => {
   return levelsForLessonId(state, lessonId)
     ?.flatMap(level => [level, ...(level?.sublevels || [])])
     ?.find(level => level.id === levelId);
@@ -628,12 +673,14 @@ const levelWithProgress: (
   },
   level: NumberedLevel,
   isLockable: boolean,
+  parentLevelId?: number,
 ) => NumberedLevel = (
   {levelResults, unitProgress, levelPairing = {}, currentLevelId},
   level,
   isLockable,
+  parentLevelId,
 ) => {
-  const normalizedLevel = level;
+  const normalizedLevel = processedLevel(level, parentLevelId);
   if (level.ids) {
     // make sure we're using the id with best progress
     normalizedLevel.id = bestResultLevelId(level.ids, levelResults);
@@ -646,7 +693,8 @@ const levelWithProgress: (
 
   let levelProgress = unitProgress[normalizedLevel.id || 0];
   if (levelProgress?.pages) {
-    levelProgress = levelProgress.pages[(normalizedLevel.pageNumber || 0) - 1];
+    levelProgress =
+      levelProgress.pages[((normalizedLevel as UnitLevel).pageNumber || 0) - 1];
   }
   if (levelProgress) {
     // if we have levelProgress, overwrite default values
@@ -654,7 +702,10 @@ const levelWithProgress: (
     locked = levelProgress.locked;
     teacherFeedbackReviewState = levelProgress.teacherFeedbackReviewState;
   } else if (
-    !(level.kind === LevelKind.assessment && level.type === 'LevelGroup')
+    !(
+      (level as UnitLevel).kind === LevelKinds.Assessment &&
+      (level as UnitLevel).app === 'level_group'
+    )
   ) {
     // if we don't have levelProgress, get the status from `levelResults`.
     // however, `levelResults` doesn't track per-page results for multi-page
@@ -683,9 +734,10 @@ const levelWithProgress: (
           isCurrentLevel: false,
         },
         isLockable,
+        normalizedLevel.id,
       ),
     ),
-  };
+  } as NumberedLevel;
 };
 
 /**
@@ -700,22 +752,20 @@ export const levelsForLessonId: (
     levelWithProgress(
       state,
       {
-        ids: [lessonLevel.data?.id || 0],
-        activeId: -1,
-        sublevels: (lessonLevel.data?.sublevels || []).map(
-          (sublevel: Level, j: number) => ({
-            ids: [sublevel.id || 0],
-            activeId: -1,
-            ...(sublevel || {
-              key: '',
-            }),
-            levelNumber: j,
-            isCurrentLevel: false,
-          }),
-        ) as NumberedLevel[],
-        ...(lessonLevel.data || {
+        ...(lessonLevel || {
           key: '',
         }),
+        ids: lessonLevel?.ids || [lessonLevel.id || 0],
+        activeId: lessonLevel?.activeId || -1,
+        sublevels: (lessonLevel.sublevels || []).map((sublevel, j) => ({
+          ids: [sublevel.id || 0],
+          activeId: -1,
+          ...(sublevel || {
+            key: '',
+          }),
+          levelNumber: j,
+          isCurrentLevel: false,
+        })) as NumberedLevel[],
         levelNumber: i,
         isCurrentLevel: false,
       } as NumberedLevel,

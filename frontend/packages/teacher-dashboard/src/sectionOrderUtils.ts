@@ -1,8 +1,7 @@
 import _ from 'lodash';
 
-import type {Section} from '@code-dot-org/api/models/sections';
 import {preferencesKeys} from '@code-dot-org/core/api';
-import type {ApiClient, QueryClient} from '@code-dot-org/core/api';
+import type {ApiClient, Section, QueryClient} from '@code-dot-org/core/api';
 
 import {ParticipantAudience} from './constants';
 

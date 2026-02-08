@@ -61,8 +61,8 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "dependencies": {
-    "@code-dot-org/api": "workspace:*",
     "@code-dot-org/component-library": "workspace:*",
+    "@code-dot-org/core": "workspace:*",
     "@code-dot-org/fonts": "workspace:*",
     "@code-dot-org/redux": "workspace:*",
     "@code-dot-org/user": "workspace:*",

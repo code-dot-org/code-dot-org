@@ -7,14 +7,15 @@ import {
 } from '@reduxjs/toolkit';
 import _ from 'lodash';
 
-import {SectionLoginType} from '@code-dot-org/api/models/sections';
+import {sectionsKeys, SectionLoginTypes} from '@code-dot-org/core/api';
 import type {
+  ApiClient,
   Section,
   SectionInstructor,
-  SectionLoginTypeKey,
-} from '@code-dot-org/api/models/sections';
-import {sectionsKeys} from '@code-dot-org/core/api';
-import type {ApiClient, QueryClient} from '@code-dot-org/core/api';
+  SectionLoginType,
+  SectionParticipationType,
+  QueryClient,
+} from '@code-dot-org/core/api';
 import {analyticsReporter, firehoseClient, EVENTS} from '@code-dot-org/metrics';
 import {OAuthSectionType} from '@code-dot-org/user';
 
@@ -29,24 +30,18 @@ import {
   LtiSectionSyncResult,
   SectionMap,
   ServerOAuthSectionType,
-  ServerSection,
-  ServerSectionInstructor,
-  ServerStudent,
-  Student,
+  SectionStudent,
   UserEditableSection,
 } from '../types';
 
 import type {RootState} from './store';
 import {
   isAddingSection,
-  sectionFromServerSection as untypedSectionFromServerSection,
-  serverSectionFromSection,
-  studentFromServerStudent,
   newSectionData,
   USER_EDITABLE_SECTION_PROPS,
 } from './teacherSectionsReduxSelectors';
 
-type RosterProvider = string | keyof typeof SectionLoginType | null;
+type RosterProvider = string | SectionLoginType | null;
 
 type AssignmentData = {
   section_id: number;
@@ -78,11 +73,11 @@ export interface TeacherSectionState {
   courseOfferings: AssignmentCourseOffering[];
   courseOfferingsAreLoaded: boolean;
   // The participant types the user can create sections for
-  availableParticipantTypes: string[];
+  availableParticipantTypes: SectionParticipationType[];
   // Mapping from sectionId to section object
   sections: SectionMap;
   // List of students in section currently being edited (see studentShape PropType)
-  selectedStudents: Student[];
+  selectedStudents: SectionStudent[];
   sectionsAreLoaded: boolean;
   // We can edit exactly one section at a time.
   // While editing we store that section's 'in-progress' state separate from
@@ -111,7 +106,7 @@ export interface TeacherSectionState {
   initialUnitName?: string | null;
   initialCourseOfferingId?: number | null;
   initialCourseVersionId?: number | null;
-  initialLoginType?: SectionLoginTypeKey;
+  initialLoginType?: SectionLoginType;
   coteacherInvite?: SectionInstructor;
   coteacherInviteForPl?: SectionInstructor;
   needsReload?: boolean;
@@ -185,23 +180,6 @@ const mapProviderToSectionType: (
   }
 };
 
-const mapServerSectionInstructor: (
-  instructor: ServerSectionInstructor,
-) => SectionInstructor = instructor => ({
-  id: instructor.id,
-  status: instructor.status,
-  instructorEmail: instructor.instructor_email,
-  instructorName: instructor.instructor_name,
-  sectionId: instructor.section_id,
-  sectionName: instructor.section_name,
-  participantType: instructor.participant_type,
-  invitedByEmail: instructor.invited_by_email,
-  invitedByName: instructor.invited_by_name,
-});
-
-const sectionFromServerSection = (section: ServerSection) =>
-  untypedSectionFromServerSection(section) as Section;
-
 const sectionSlice = createSlice({
   name: 'teacherSections',
   initialState,
@@ -217,7 +195,7 @@ const sectionSlice = createSlice({
         (Object.values(OAuthSectionType).includes(
           action.payload as OAuthSectionType,
         ) ||
-          action.payload === SectionLoginType.LtiV1)
+          action.payload === SectionLoginTypes.LtiV1)
       ) {
         state.rosterProvider = action.payload;
       }
@@ -240,12 +218,12 @@ const sectionSlice = createSlice({
         state.selectedSectionName = '';
       }
     },
-    updateSelectedSection(state, action: PayloadAction<ServerSection>) {
+    updateSelectedSection(state, action: PayloadAction<Section>) {
       const sectionId = action.payload.id;
       if (sectionId) {
         state.sections[sectionId] = {
           ...state.sections[sectionId],
-          ...sectionFromServerSection(action.payload),
+          ...action.payload,
         };
       }
     },
@@ -253,13 +231,13 @@ const sectionSlice = createSlice({
       reducer(
         state,
         action: PayloadAction<{
-          sections: ServerSection[];
+          sections: Section[];
           autoSelectOnlySection: boolean;
           sectionOrder: number[] | null;
           destructive: boolean | null;
         }>,
       ) {
-        const sections = action.payload.sections.map(sectionFromServerSection);
+        const sections = action.payload.sections;
 
         // If we have only one section, autoselect it
         const selectedSectionId =
@@ -353,21 +331,15 @@ const sectionSlice = createSlice({
         state,
         action: PayloadAction<{
           sectionId: number;
-          students: ServerStudent[];
+          students: SectionStudent[];
         }>,
       ) {
         const students = action.payload.students || [];
-        const selectedStudents = students.map(
-          student =>
-            studentFromServerStudent(
-              student,
-              action.payload.sectionId,
-            ) as Student,
-        );
+        const selectedStudents = students;
 
         state.selectedStudents = selectedStudents;
       },
-      prepare(sectionId: number, students: ServerStudent[]) {
+      prepare(sectionId: number, students: SectionStudent[]) {
         return {
           payload: {
             sectionId,
@@ -397,7 +369,10 @@ const sectionSlice = createSlice({
       state.courseOfferings = action.payload;
       state.courseOfferingsAreLoaded = true;
     },
-    setAvailableParticipantTypes(state, action: PayloadAction<string[]>) {
+    setAvailableParticipantTypes(
+      state,
+      action: PayloadAction<SectionParticipationType[]>,
+    ) {
       state.availableParticipantTypes = action.payload;
     },
     setSectionCodeReviewExpiresAt: {
@@ -416,7 +391,7 @@ const sectionSlice = createSlice({
         state.sections[action.payload.sectionId].codeReviewExpiresAt = action
           .payload.codeReviewExpiresAt
           ? Date.parse(action.payload.codeReviewExpiresAt)
-          : undefined;
+          : null;
       },
       prepare(sectionId: number, codeReviewExpiresAt: string) {
         return {
@@ -442,7 +417,7 @@ const sectionSlice = createSlice({
           courseOfferingId?: number;
           courseVersionId?: number;
           unitId?: number;
-          participantType?: string;
+          participantType?: SectionParticipationType;
         }>,
       ) {
         const initialSectionData = newSectionData(
@@ -469,7 +444,7 @@ const sectionSlice = createSlice({
         courseOfferingId?: number,
         courseVersionId?: number,
         unitId?: number,
-        participantType?: string,
+        participantType?: SectionParticipationType,
       ) {
         return {
           payload: {
@@ -530,7 +505,7 @@ const sectionSlice = createSlice({
         action.payload.participantType &&
         action.payload.participantType !== ParticipantAudience.Student
       ) {
-        state.sectionBeingEdited.loginType = SectionLoginType.Email;
+        state.sectionBeingEdited.loginType = SectionLoginTypes.Email;
         state.sectionBeingEdited.grades = [PlGradeValue];
       }
 
@@ -550,21 +525,21 @@ const sectionSlice = createSlice({
         ...action.payload,
         courseId:
           action.payload.courseId === null
-            ? undefined
+            ? null
             : action.payload.courseId || state.sectionBeingEdited.courseId,
         courseOfferingId:
           action.payload.courseOfferingId === null
-            ? undefined
+            ? null
             : action.payload.courseOfferingId ||
               state.sectionBeingEdited.courseOfferingId,
         courseVersionId:
           action.payload.courseVersionId === null
-            ? undefined
+            ? null
             : action.payload.courseVersionId ||
               state.sectionBeingEdited.courseVersionId,
         unitId:
           action.payload.unitId === null
-            ? undefined
+            ? null
             : action.payload.unitId || state.sectionBeingEdited.unitId,
       };
     },
@@ -576,14 +551,14 @@ const sectionSlice = createSlice({
       action: PayloadAction<{
         userId?: number;
         sectionId: number;
-        serverSection: ServerSection;
+        section: Section;
       }>,
     ) {
       // When updating a persisted section, oldSectionId will be identical to
       // section.id. However, if this is a newly persisted section, oldSectionId
       // will represent our temporary section. In that case, we want to delete
       // that section, and replace it with our new one.
-      const section = sectionFromServerSection(action.payload.serverSection);
+      const section = action.payload.section;
       const oldSectionId = action.payload.sectionId;
       const isNewSection = section.id !== oldSectionId;
 
@@ -837,28 +812,28 @@ const submitEditingSection = (
     throw new Error('section does not exist');
   }
 
-  return new Promise<ServerSection>((resolve, reject) => {
+  return new Promise<Section>((resolve, reject) => {
     (isAddingSection(state)
       ? fetch('/dashboardapi/sections', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json;charset=UTF-8',
           },
-          body: JSON.stringify(serverSectionFromSection(section)),
+          body: JSON.stringify(section),
         })
       : fetch(`/dashboardapi/sections/${section.id}`, {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json;charset=UTF-8',
           },
-          body: JSON.stringify(serverSectionFromSection(section)),
+          body: JSON.stringify(section),
         })
     )
       .then(response => {
         return response.json();
       })
       .then(json => {
-        resolve(json as ServerSection);
+        resolve(json as Section);
       })
       .catch(err => {
         reject(err);
@@ -887,7 +862,7 @@ export const finishEditingSection =
             finishSaveRequest({
               userId,
               sectionId: section.id,
-              serverSection: result,
+              section: result,
             }),
           );
           resolve(result);
@@ -913,10 +888,6 @@ export const removeSectionOrThrow =
       throw new Error('section does not exist');
     }
   };
-
-type ParticipantTypesResponse = {
-  availableParticipantTypes: string[];
-};
 
 export const asyncLoadTeacherHomepageSectionData =
   (apiClient: ApiClient, queryClient: QueryClient): SectionThunkAction =>
@@ -962,6 +933,10 @@ export const asyncLoadTeacherHomepageSectionData =
       });
   };
 
+type ParticipantTypesResponse = {
+  availableParticipantTypes: SectionParticipationType[];
+};
+
 export const asyncLoadSectionData =
   (id: number | void, destructive: boolean | void): SectionThunkAction =>
   dispatch => {
@@ -969,9 +944,7 @@ export const asyncLoadSectionData =
 
     const promises: Promise<object>[] = [
       fetchJSON('/dashboardapi/sections').then(sections =>
-        dispatch(
-          setSections(sections as ServerSection[], false, null, destructive),
-        ),
+        dispatch(setSections(sections as Section[], false, null, destructive)),
       ),
       fetchJSON('/dashboardapi/sections/valid_course_offerings').then(
         offerings =>
@@ -993,7 +966,7 @@ export const asyncLoadSectionData =
       promises.push(
         fetchJSON(`/dashboardapi/sections/${id}/students`).then(students =>
           dispatch(
-            setStudentsForCurrentSection(id, students as ServerStudent[]),
+            setStudentsForCurrentSection(id, students as SectionStudent[]),
           ),
         ),
       );
@@ -1025,18 +998,18 @@ function fetchJSON(url: string, params?: Record<string, string>) {
 export const asyncLoadCoteacherInvite = (): SectionThunkAction => dispatch => {
   fetchJSON('/api/v1/section_instructors')
     .then(response => {
-      const sectionInstructors = response as ServerSectionInstructor[];
+      const sectionInstructors = response as SectionInstructor[];
       const coteacherInviteForPl = sectionInstructors.find(instructorInvite => {
         return (
           instructorInvite.status === 'invited' &&
-          instructorInvite.participant_type !== 'student'
+          instructorInvite.participantType !== 'student'
         );
       });
       const coteacherInviteForClassrooms = sectionInstructors.find(
         instructorInvite => {
           return (
             instructorInvite.status === 'invited' &&
-            instructorInvite.participant_type === 'student'
+            instructorInvite.participantType === 'student'
           );
         },
       );
@@ -1044,15 +1017,13 @@ export const asyncLoadCoteacherInvite = (): SectionThunkAction => dispatch => {
       dispatch(
         setCoteacherInvite(
           coteacherInviteForClassrooms
-            ? mapServerSectionInstructor(coteacherInviteForClassrooms)
+            ? coteacherInviteForClassrooms
             : undefined,
         ),
       );
       dispatch(
         setCoteacherInviteForPl(
-          coteacherInviteForPl
-            ? mapServerSectionInstructor(coteacherInviteForPl)
-            : undefined,
+          coteacherInviteForPl ? coteacherInviteForPl : undefined,
         ),
       );
     })
@@ -1111,16 +1082,9 @@ export const assignToSection = (
         sectionId: sectionId.toString(),
         sectionLoginType:
           section.loginType !== undefined ? section.loginType : '',
-        previousUnitId:
-          section.unitId !== undefined ? section.unitId.toString() : '',
-        previousCourseId:
-          section.courseOfferingId !== undefined
-            ? section.courseOfferingId.toString()
-            : '',
-        previousCourseVersionId:
-          section.courseVersionId !== undefined
-            ? section.courseVersionId.toString()
-            : '',
+        previousUnitId: section.unitId?.toString() || '',
+        previousCourseId: section.courseOfferingId?.toString() || '',
+        previousCourseVersionId: section.courseVersionId?.toString() || '',
         newUnitId: unitId.toString(),
         newCourseId: courseOfferingId.toString(),
         newCourseVersionId: courseVersionId.toString(),
@@ -1241,7 +1205,7 @@ export const beginImportRosterFlow =
 const importUrlByProvider: {[key: string]: string} = {
   [OAuthSectionType.GoogleClassroom]: '/dashboardapi/import_google_classroom',
   [OAuthSectionType.Clever]: '/dashboardapi/import_clever_classroom',
-  [SectionLoginType.LtiV1]: '/lti/v1/sync_course',
+  [SectionLoginTypes.LtiV1]: '/lti/v1/sync_course',
 } as const;
 
 /**
@@ -1266,7 +1230,7 @@ export const importOrUpdateRoster =
     const importSectionUrl = importUrlByProvider[provider];
 
     dispatch(rosterImportRequest());
-    if (provider === SectionLoginType.LtiV1) {
+    if (provider === SectionLoginTypes.LtiV1) {
       return fetch(`${importSectionUrl}?section_code=${courseId}`, {
         headers: {
           Accept: 'application/json',
@@ -1281,7 +1245,7 @@ export const importOrUpdateRoster =
     }
     let sectionId: number;
     return fetchJSON(importSectionUrl, {courseId, courseName})
-      .then(newSection => (sectionId = (newSection as ServerSection).id))
+      .then(newSection => (sectionId = (newSection as Section).id))
       .then(() => dispatch(asyncLoadSectionData()))
       .then(() => dispatch(rosterImportSuccess(sectionId)));
   };

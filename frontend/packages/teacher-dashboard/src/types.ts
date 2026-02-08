@@ -2,8 +2,9 @@
 
 import type {
   Section,
-  SectionLoginTypeKey,
-} from '@code-dot-org/api/models/sections';
+  SectionLoginType,
+  SectionParticipationType,
+} from '@code-dot-org/core/api';
 import {UserType, OAuthSectionType} from '@code-dot-org/user';
 
 export enum PublishedState {
@@ -194,10 +195,10 @@ export interface UserEditableSection {
   grades?: string[];
   hidden?: boolean;
   lessonExtras?: boolean;
-  loginType?: SectionLoginTypeKey;
+  loginType?: SectionLoginType;
   name?: string;
   pairingAllowed?: boolean;
-  participantType?: string;
+  participantType?: SectionParticipationType;
   restrictSection?: boolean;
   ttsAutoplayEnabled?: boolean;
   unitId?: number | null;
@@ -213,67 +214,7 @@ export interface ServerCourse {
   text_to_speech_enabled: boolean;
 }
 
-export interface ServerSectionInstructor {
-  id: number;
-  status: string;
-  instructor_email: string;
-  instructor_name: string;
-  section_name: string;
-  section_id: number;
-  participant_type: string;
-  invited_by_email: string;
-  invited_by_name: string;
-}
-
-export interface ServerSection {
-  ai_tutor_enabled?: boolean;
-  at_risk_age_gated_date?: string;
-  at_risk_age_gated_us_state?: string;
-  any_student_has_progress?: boolean;
-  code: string;
-  course?: ServerCourse | null;
-  course_display_name?: string | null;
-  course_id: number | null;
-  course_offering_id?: number | null;
-  courseVersionName?: string;
-  course_version_id?: number | null;
-  createdAt?: string;
-  code_review_expires_at?: string;
-  is_assigned_csa?: boolean;
-  sectionInstructors?: ServerSectionInstructor[];
-  primaryInstructor?: string;
-  grades?: string[];
-  hidden: boolean;
-  id: number;
-  isAssignedStandaloneCourse: boolean;
-  is_assigned_single_unit_course?: boolean;
-  lesson_extras: boolean;
-  login_type: SectionLoginTypeKey;
-  login_type_name?: string;
-  name: string;
-  pairing_allowed: boolean;
-  participant_type?: string;
-  post_milestone_disabled?: boolean;
-  provider_managed?: boolean;
-  providerManaged?: boolean;
-  restrict_section?: boolean;
-  script_id?: number;
-  sharing_disabled: boolean;
-  studentCount: number;
-  sync_enabled?: boolean;
-  tts_autoplay_enabled?: boolean;
-  unit_id?: number | null;
-  script?: {
-    id: number;
-    name: string;
-  };
-  unitName?: string;
-  unitPosition?: number | null;
-  avatar_color?: number | null;
-  avatar_emoji?: number | null;
-}
-
-export interface Student {
+export interface SectionStudent {
   familyName: string;
   id: number;
   name: string;
@@ -283,19 +224,6 @@ export interface Student {
   sectionId: number;
   sharingDisabled: boolean;
   userType: UserType;
-}
-
-export interface ServerStudent {
-  family_name: string;
-  id: number;
-  name: string;
-  secret_picture_name: string;
-  secret_picture_path?: string; // @deprecated Use `secret_picture_url` instead
-  secret_picture_url: string;
-  secret_words: string;
-  sectionId: number;
-  sharing_disabled: boolean;
-  user_type: UserType;
 }
 
 export interface AssignmentCourseVersionUnit {
