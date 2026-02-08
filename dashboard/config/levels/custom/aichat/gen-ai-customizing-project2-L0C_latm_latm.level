@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-12-11T21:12:27.000Z",
   "level_num": "custom",
@@ -15,7 +16,7 @@
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
         "temperature": 1,
-        "systemPrompt": "Your job is to recommend a career to students in college who are undecided, based on their interests. Respond in a happy, joyful tone. \nDo not answer any off topic questions. Say \" Hi! I am a Career Finder Chatbot.\" All the steps must be done in order. No steps can be skipped.\n\nStep 1: Say\"  To take the career quiz, type START\"\n\nStep 2: If input = \"START\", then ask 'What are your top interests/hobbies?\" \nStep 3: Ask \"What are your top skills or strengths?\"\nStep 4: Say \"What are your top values or motivations?\"\nStep 5: Say \"What type of work environment do you prefer?\"\nStep 6: Ask \"\nWhat is your preferred level of education or training?\"\nStep 7:  Ask \"What is your preferred salary range?\"\nStep 8: Say one common career from the field that matches the user's responses. Ex. User would do good in social service. suggest a career as a teacher\nStep 9: Say \"The quiz is now over. Thank you for your participation!\"",
+        "systemPrompt": "Tu trabajo es ayudar a las personas a planificar su día con actividades que sean buenas para ellas. El tema es sobre cómo comenzar el día. Asegúrate de ser siempre amable y respetuoso con el usuario. Hazle preguntas sobre en qué son buenos para tener una idea de lo que deberían hacer. Responde únicamente a preguntas relacionadas con comenzar el día. Si el usuario dice algo fuera de tema, responde con \"No lo sé\". \n1.No respondas a preguntas fuera de tema como \"me gustan los waffles\" o algo así.\n2. Asegúrate de que la lista de actividades para comenzar el día no incluya el uso de dispositivos electrónicos.\n3. Asegúrate de que esta lista sea para adultos de entre 30 y 50 años.\n4. si \"comenzar el día\"no es el tema, responde diciendo \"No lo sé.\" y no hables con el usuario.",
         "retrievalContexts": [
           "Six Figure Income jobs ($100,000+) High Income jobs ($80,000 - $100,000) Upper Middle Income jobs ($50,000 - $80,000) Middle Income jobs ($30,000 - $50,000) Entry Level Income jobs ($10,000 - $30,000)",
           "The conventional (organizational/structured) work environment includes jobs like Receptionist",
@@ -58,9 +59,11 @@
     },
     "name_suffix": "_latm",
     "display_name": "Career Finder v.1",
-    "bubble_choice_description": "This chatbot that suggests careers to undecided college students, based on their preferences."
+    "bubble_choice_description": "This chatbot that suggests careers to undecided college students, based on their preferences.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-12-11T21:12:27.284+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project2-L0C_latm\\\"\"],\"cloned_from\":\"gen-ai-customizing-project2-L0C_latm\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-12-11T21:12:27.284+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project2-L0C_latm\\\"\"],\"cloned_from\":\"gen-ai-customizing-project2-L0C_latm\"},{\"changed_at\":\"2026-01-22 21:16:48 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":22599,\"changed_by_email\":\"doyeon.kim@code.org\"},{\"changed_at\":\"2026-01-22 21:19:46 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":22599,\"changed_by_email\":\"doyeon.kim@code.org\"}]"
 }]]></config>
 </Aichat>

@@ -1,14 +1,10 @@
 import {useCallback, useEffect, useRef} from 'react';
 
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-interface LevelProperties {
-  isProjectLevel?: boolean;
-  id?: number;
-  name?: string;
-}
+import {LevelProperties} from '../types';
 
 /**
  * Custom hook that provides a callback to log LEVEL_ACTIVITY or PROJECT_ACTIVITY
@@ -28,7 +24,9 @@ interface LevelProperties {
 export function useLevelActivityMetrics(
   levelProperties: LevelProperties
 ): () => void {
-  const signedIn = useAppSelector(state => state.currentUser.signInState);
+  const signedIn =
+    useAppSelector(state => state.currentUser.signInState) === 'SignedIn' ||
+    false;
   const scriptName = useAppSelector(state => state.progress.scriptName);
 
   const hasLoggedRef = useRef(false);
@@ -48,9 +46,9 @@ export function useLevelActivityMetrics(
       ? EVENTS.PROJECT_ACTIVITY
       : EVENTS.LEVEL_ACTIVITY;
 
-    analyticsReporter.sendEvent(eventName, {
-      signedIn,
-      unitName: scriptName,
+    sendLab2AnalyticsEvent(eventName, {
+      signedIn: signedIn,
+      unitName: scriptName ?? '',
       levelId: levelProperties.id,
       levelName: levelProperties.name,
     });

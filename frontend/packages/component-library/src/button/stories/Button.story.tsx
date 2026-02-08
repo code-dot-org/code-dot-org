@@ -1,10 +1,9 @@
 import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
-import {Meta, StoryFn} from '@storybook/react-webpack5';
+import {Meta, StoryFn} from '@storybook/react-vite';
 
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
 import Button, {ButtonProps, buttonColors} from '../Button';
-// eslint-disable-next-line import-x/namespace
 import {buttonPropsToMui} from '../buttonPropsToMui';
 
 export default {

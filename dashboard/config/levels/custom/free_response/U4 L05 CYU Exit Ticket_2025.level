@@ -1,6 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "published": true,
   "game_id": 52,
   "created_at": "2025-03-11T18:21:34.000Z",
   "level_num": "custom",
@@ -21,8 +20,10 @@
     "optional": "false",
     "encrypted": "false",
     "allow_multiple_attempts": "true",
-    "stay_on_level_after_submit": "false"
+    "stay_on_level_after_submit": "false",
+    "ai_tutor_available": "true"
   },
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2025-03-11T18:21:34.335+00:00\",\"changed\":[\"cloned from \\\"U4 L05 CYU Exit Ticket_2024\\\"\"],\"cloned_from\":\"U4 L05 CYU Exit Ticket_2024\"},{\"changed_at\":\"2025-05-22 16:39:59 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {

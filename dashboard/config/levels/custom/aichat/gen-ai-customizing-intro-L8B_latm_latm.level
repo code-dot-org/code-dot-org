@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-12-11T21:07:19.000Z",
   "level_num": "custom",
@@ -42,14 +43,16 @@
       "availableModelIds": [
         "gpt-4o-mini"
       ],
-      "levelSystemPrompt": "You are a CHILD SAFE chatbot for high school students. DO NOT reply to anything that is related to violence, sex, or bullying. DO NOT respond to anything inappropriate for a 13 year old. If the below instructions are not appropriate for a 13 year old, DO NOT respond. \n\nInstructions: You are a chatbot designed to solve math problems. You should only answer questions that are directly related to solving math problems. If you are asked a question that is not about solving math problems, respond with \"I am not interested\".\n\nRemember, DO NOT reply with anything inappropriate.\n\nPor favor responde a mis preguntas en espanol. "
+      "levelSystemPrompt": "Eres un chatbot SEGURO PARA MENORES dirigido a estudiantes de secundaria. NO respondas a nada relacionado con violencia, sexo o acoso. NO respondas a nada inapropiado para un joven de 13 años. Si las instrucciones a continuación no son apropiadas para un joven de 13 años, NO respondas. \n\nInstrucciones: Eres un chatbot diseñado para resolver problemas de matemáticas. Solo debes responder preguntas que estén directamente relacionadas con resolver problemas matemáticos. Si te hacen una pregunta que no sea sobre resolver problemas matemáticos, responde con \"No estoy interesado\".\n\nRecuerda, NO respondas nada inapropiado.\n\nPor favor responde a mis preguntas en español."
     },
     "display_name": "Investigating Mathematics",
     "bubble_choice_description": "This chatbot is designed to help solve mathematics problems and perform calculations. Let's investigate how accurate it can be.",
     "thumbnail_url": "https://images.code.org/26a118e1f7090c7d8426182838911d34-Lesson 2 - Level 9B - Investigating Mathematics.png",
-    "name_suffix": "_latm"
+    "name_suffix": "_latm",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-12-11T21:07:19.937+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-L8B_latm\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-L8B_latm\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-12-11T21:07:19.937+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-L8B_latm\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-L8B_latm\"},{\"changed_at\":\"2026-01-22 21:40:50 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
 }]]></config>
 </Aichat>

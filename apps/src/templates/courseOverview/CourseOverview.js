@@ -74,7 +74,7 @@ class CourseOverview extends Component {
         {
           'unit group name': props.name,
         },
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
     } else if (props.userType === 'student') {
       analyticsReporter.sendEvent(
@@ -82,7 +82,7 @@ class CourseOverview extends Component {
         {
           'unit group name': props.name,
         },
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
     } else {
       analyticsReporter.sendEvent(
@@ -90,7 +90,7 @@ class CourseOverview extends Component {
         {
           'unit group name': props.name,
         },
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
     }
   }

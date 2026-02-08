@@ -147,9 +147,8 @@ gem 'open_uri_redirections', require: false
 # Optimizes copy-on-write memory usage with GC before web-application fork.
 gem 'nakayoshi_fork'
 
-gem 'puma', '~> 5.6'
+gem 'puma', '~> 7.2'
 gem 'puma_worker_killer'
-gem 'raindrops'
 gem 'sd_notify' # required for Puma to support systemd's Type=notify
 
 gem 'chronic', '~> 0.10.2'
@@ -177,7 +176,7 @@ gem 'devise', '~> 4.9.0'
 gem 'devise_invitable', '~> 2.0.2'
 
 gem 'omniauth-classlink', '~> 0.3.1'
-gem 'omniauth-clever', '~> 2.0.1', github: 'code-dot-org/omniauth-clever', tag: 'v2.0.1'
+gem 'omniauth-clever', '~> 3.0.0', github: 'code-dot-org/omniauth-clever', tag: 'v3.0.0'
 gem 'omniauth-facebook', '~> 10.0.0'
 gem 'omniauth-google-oauth2', '~> 1.1.3'
 gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'

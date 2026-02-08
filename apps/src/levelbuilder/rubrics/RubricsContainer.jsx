@@ -159,6 +159,7 @@ export default function RubricsContainer({
     const selectOptions = submittableLevels.map(level => (
       <option key={level.id} value={level.id}>
         {level.name}
+        {level.sublevels?.length > 0 && ' (contains sublevels)'}
       </option>
     ));
     return selectOptions;
@@ -177,9 +178,23 @@ export default function RubricsContainer({
         <div>
           <BodyTwoText>
             This rubric will be used for {unitName}, lesson {lessonNumber}.
+            <br />
+            In legacy labs, the rubric will be shown on all levels in the
+            lesson.
+            <br />
+            If you are writing a rubric for a lab2 level (Music Lab, Python Lab,
+            Web Lab 2, AI Chat, etc.), rubrics will only show up on the level
+            they are defined on, as well as any levels that share the same
+            project template level. If you want to define a rubric on a choice
+            level, assign the rubric to the parent level that contains the
+            choice level. The same rubric will be shared for all choice levels
+            under that parent, as well as any levels that share project template
+            levels with those choice levels.
           </BodyTwoText>
           <div style={styles.containerStyle}>
-            <label>Choose a level for this rubric to be evaluated on</label>
+            <label htmlFor="rubric_level_id">
+              Choose a level for this rubric to be evaluated on
+            </label>
             <select
               id="rubric_level_id"
               required={true}
@@ -232,6 +247,7 @@ RubricsContainer.propTypes = {
     PropTypes.shape({
       id: PropTypes.number,
       name: PropTypes.string,
+      sublevels: PropTypes.array,
     })
   ),
   rubric: PropTypes.object,

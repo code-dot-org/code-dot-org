@@ -1,5 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
 
 import DebugButtons from '@cdo/apps/lib/tools/jsdebugger/DebugButtons';
@@ -100,12 +101,14 @@ describe('The DebugConsole component', () => {
 
   describe('After clicking the step in button', () => {
     beforeEach(() => {
-      buttons.stepInButton().simulate('click');
-      // kick the interpreter so that it updates it's state.
-      // this normally gets triggered by whatever code is
-      // responsible for dealing with the interpreter (applab/gamelab)
-      // TODO: consider a different architecture?
-      interpreter.executeInterpreter(false);
+      act(() => {
+        buttons.stepInButton().simulate('click');
+        // kick the interpreter so that it updates it's state.
+        // this normally gets triggered by whatever code is
+        // responsible for dealing with the interpreter (applab/gamelab)
+        // TODO: consider a different architecture?
+        interpreter.executeInterpreter(false);
+      });
       root.update();
     });
 
@@ -156,7 +159,9 @@ describe('The DebugConsole component', () => {
 
   describe('When the interpreter is started from somewhere else', () => {
     beforeEach(() => {
-      runApp();
+      act(() => {
+        runApp();
+      });
       root.update();
     });
 

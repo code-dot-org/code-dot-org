@@ -18,4 +18,5 @@ export const RESOURCE_ICONS = Object.freeze({
   VIDEO: makeObjectType('video', styles.video),
   STANDARDS: makeObjectType('files', styles.files),
   VOCABULARY: makeObjectType('files', styles.files),
+  CUSTOM: makeObjectType('shapes', styles.custom),
 } as const);

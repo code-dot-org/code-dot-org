@@ -3879,7 +3879,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/component-library@portal:../frontend/packages/component-library/::locator=blockly-mooc%40workspace%3A."
   dependencies:
-    "@mui/material": "npm:^7.3.2"
     lodash: "npm:^4.17.21"
     react-player: "npm:^3.4.0"
     react-schemaorg: "npm:^2.0.0"

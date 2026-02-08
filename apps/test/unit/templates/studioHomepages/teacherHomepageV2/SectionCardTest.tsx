@@ -112,7 +112,7 @@ describe('SectionCard', () => {
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_CARD_CLASS_CODE_CLICKED,
       {source: 'teacherHomepage'},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   });
 

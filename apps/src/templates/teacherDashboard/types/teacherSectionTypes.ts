@@ -46,6 +46,8 @@ export interface Section {
   unitPosition: string | null;
   avatar_color?: number | null;
   avatar_emoji?: number | null;
+  isAssignedEssentialAiChat?: boolean;
+  aiChatAccessLevel?: string;
 }
 
 type Course = {

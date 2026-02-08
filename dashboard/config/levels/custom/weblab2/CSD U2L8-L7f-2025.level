@@ -1,0 +1,63 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-01-28T05:40:52.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Add image link",
+    "long_instructions": "# Add Image Link\r\n\r\nAn image has already been uploaded for you. The next step is to link it to the web page.\r\n\r\n# Do This\r\n1) Add an image link for the image \"gymnast.gif\".\r\n\r\n::: details [🔎 **Show Me How** 🔍]\r\n\r\n<img src=\"https://images.code.org/de0868aea055a3c42a4a4371892c2b93-image-1677104053660.gif\" style=\"width:500px\">\r\n:::\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::\r\n\r\n![]()",
+    "bubble_choice_description": "Add an image link to make the image appear in the web page.",
+    "thumbnail_url": "https://images.code.org/35e3560f1c74500ef1c310007bf524e4-image-1564421741446.gif",
+    "submittable": "false",
+    "hide_share_and_remix": "true",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n  </head>\n  <body>\n    <!-- info on gymnastics -->\n    <!-- 1) Add an image link for the image \"gymnast.gif\" -->\n    <p>Gymnastics involves balance, strength, flexibility, and coordination. Events for women include the vault, uneven bars, balance beam, and floor. Events for men are vault, parallel bars, floor, pummel horse, and still rings. \n    <br> \n    <br>\n      Image by Rolf Dober from German Wikipedia</p>\n  \n  </body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "Gymnast.gif",
+          "language": "gif",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L8-L7f-2025/uuid/99b4cdc1-1b33-462a-9861-2e549d4ca205.gif",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMq6axOHbZCY2Ot6j2ta\nc2xUssWeFgyQik6LW5d9KjvGXB0WNtSc6Aew3gFAHiWxOPOkXODL1KEHdyrC\n197vfOvUyempysyXw77NCjviYRUdHKAC/uKseWjOSd/luHbWryZzDbQ7fi0B\nFku2c79EZxTnZfFTggFgvSNzp9rxlh1h7ShEzhmHp5i7AFcx0Fyrl/oENU2s\nSZM+4ihyskIuComhdzareDk+EIwnGxFZviPK/mo/6504Egip79PuSvgqLI+3\nRLztreRJuvCIqAoG3oGgwRL1RielsJP7V+QlpJWqII4NkaBlJ61PU+atC/cC\n/+jPLIvaZf/USixObHub8CnjlziJcE6oTyZ0KUkrM+WfEDt/a/r+ieE5ZtR1\nkI3RYmEJHSL6Xmm5aZ9mGwo2na3/56XGOvKvdcQSsieULi+PpqjDeCmzaku2\nCAEtc4xKR5tMSFES+1ASW4/C2QB1CMg4AbAo6AhSLjAYBSIeLVli9q8O8brX\nX8XiccGTRayvtNwAcJg9p+YMzlC4Gw5eZmLaApFStDyz59U42NkeWZ2Sv8Ox\nf9FSzIxfYk2oTAjNWA3xKvpF03iy9FoBWBFPXFLVG86x+PktQg1pzVmLZq1W\nRTcP8/bGJ4PmN1W4GswdIWELBaaVytkTY2jomHzbA/6nw+3+w/Rw9wl7IcCB\nkSdZ+xgrH0CyMgW7lMp51Z5XDIZeyoDYx1lIw2iU+K/A9NNP4JIrgrCN3GAd\nM8tXdV8vKiUUfLvR10PzLc7gHr092ZTRPCPXNnAsT02p4T9z5lcFHXrH2Ncq\nbZDHNeDw2sczAZrM5uUM5uPz7b9Z+h8/ZWpqwwRjdFjvOpvNvdWuOcCdo88Q\nOoGUtYi/Wl0QhPM8QG2xzkSQHpjGRjfVb8pgjCP3xgqm3a4qZ+O+LupYCSlX\nS/cHa0/Q4Q8OlPEftE9kENKGCrut6WZxyUdt1l0n+LlRnj3XoY0ch125YnwR\nyWAOUZ0w4YbKOaU7RdzcgCPucj9ieHpRwmzI+y9V3eGqN0BuFxoh6xLOhQNs\ngbKbrb3rLnOjI6WDpA+5eWTMkORt0MPxAv0koLFYEqC20xYiwgyPDIOkAGf4\nBob5JRyRDv5KvAk0tLwtgtvLX1Sb675T+LFUpT2qnUjQntPbfvUlB2qNp9xc\nKjcPvunKKgJ6t23SwYoNeySrtLYWwaelzukS9w==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-01-28 05:42:04 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-28 05:43:44 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-28 05:43:51 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-28 05:44:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-28 05:44:30 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

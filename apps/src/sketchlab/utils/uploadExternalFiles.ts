@@ -9,7 +9,7 @@ export const uploadExternalFiles = async (
   filesToUpload: SketchlabExternalFiles,
   excalidrawFiles: ExcalidrawFilesWithOptionalData,
   filesBeingUploadedRef: React.MutableRefObject<Set<string>>
-) => {
+): Promise<SketchlabExternalFiles> => {
   for (const [fileId, fileContents] of Object.entries(filesToUpload)) {
     filesBeingUploadedRef.current.add(fileId);
 
@@ -25,6 +25,8 @@ export const uploadExternalFiles = async (
           !!fileContents?.starterAsset,
           fileContents?.filenameWithExtension || ''
         );
+
+        fileContents.uploaded = true;
       }
     } catch {
       // https://codedotorg.atlassian.net/browse/AFL-345
@@ -33,4 +35,6 @@ export const uploadExternalFiles = async (
 
     filesBeingUploadedRef.current.delete(fileId);
   }
+
+  return filesToUpload;
 };

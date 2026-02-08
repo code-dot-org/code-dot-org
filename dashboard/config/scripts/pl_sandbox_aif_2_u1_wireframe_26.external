@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Wireframes
 
-## What is a wireframe?
+## What is a Wireframe?
 #### A wireframe is a low-fidelity, structural layout showing content and functionality, without visual design.
 
 <div style="text-align: center; width: 80%; margin: 0 auto;">
@@ -37,8 +37,7 @@ Image source: <a href="https://www.springboard.com/blog/design/how-to-create-a-w
 <img src="https://images.code.org/366ecab8f8cd0f0c8138c45fc86e687e-image-1761152722160.png" alt="Sample sketched wireframe" width="850px" style="display: block; margin-left: auto; margin-right: auto; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15)">
 
 
-## Let’s practice
-#### Now it's your turn to draw a wireframe in Sketch Lab.
+## Let’s Practice: now it's your turn to draw a wireframe in Sketch Lab.
 
 
 MARKDOWN

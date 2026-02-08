@@ -19,6 +19,7 @@ class Services::User::PiiScrubberTest < ActiveSupport::TestCase
       full_address: '123 Main St, Springfield, USA',
     )
   end
+  let(:section) {create(:section, user: user, name: 'Test Section')}
   let(:described_instance) {described_class.new(user: user)}
 
   describe '#call' do
@@ -54,6 +55,13 @@ class Services::User::PiiScrubberTest < ActiveSupport::TestCase
     it 'removes data from external sources' do
       expect(described_instance).to receive(:scrub_external_data)
       scrub_pii
+    end
+
+    it 'redacts section names' do
+      scrub_pii
+      user.sections.with_deleted.each do |section|
+        _(section.reload.name).must_equal Services::User::PiiScrubber::REDACTED_STRING
+      end
     end
 
     context 'when user has PD data with PII' do

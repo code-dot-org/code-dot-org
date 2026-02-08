@@ -45,3 +45,6 @@ export const ACCEPTED_FILE_TYPES = ['.jpg', '.jpeg', '.png', '.pdf'];
 
 export const FAQ_LINK =
   'https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ';
+
+export const AI_SETTINGS_SUPPORT_LINK =
+  'https://support.code.org/hc/en-us/articles/42550900593677-AI-Settings';

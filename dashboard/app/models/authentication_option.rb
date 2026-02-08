@@ -86,7 +86,8 @@ class AuthenticationOption < ApplicationRecord
 
   module Clever
     VERSION = {
-      v3_1: 'v3.1'
+      v3: 'v3',
+      v2: 'v2',
     }.freeze
   end
 

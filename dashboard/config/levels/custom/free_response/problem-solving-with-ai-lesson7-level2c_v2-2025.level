@@ -15,7 +15,8 @@
     "skip_dialog": true,
     "skip_sound": true,
     "stay_on_level_after_submit": "false",
-    "name_suffix": "_v2-2025"
+    "name_suffix": "_v2-2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-09-25T19:53:01.585+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson7-level2c_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson7-level2c_2025\"}]",

@@ -1,6 +1,12 @@
-import {StorybookConfig} from '@storybook/react-webpack5';
+// This file has been automatically migrated to valid ESM format by Storybook.
+import {StorybookConfig} from '@storybook/react-vite';
+import {createRequire} from 'node:module';
 import {join, dirname, resolve} from 'node:path';
-import {IgnorePlugin} from 'webpack';
+import {fileURLToPath} from 'node:url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const require = createRequire(import.meta.url);
 
 /**
  * This function is used to resolve the absolute path of a package.
@@ -15,99 +21,33 @@ const config: StorybookConfig = {
     '../../../packages/component-library/src/**/stories/*.story.@(ts|tsx)',
   ],
   addons: [
-    getAbsolutePath('@storybook/addon-webpack5-compiler-swc'),
     getAbsolutePath('@storybook/addon-a11y'),
     getAbsolutePath('@storybook/addon-themes'),
     getAbsolutePath('storybook-addon-rtl'),
-    {
-      name: getAbsolutePath('@storybook/addon-styling-webpack'),
-      options: {
-        rules: [
-          {
-            test: /\.s[ac]ss$/i,
-            use: [
-              'style-loader',
-              {
-                loader: 'css-loader',
-                options: {
-                  url: false,
-                  // https://webpack.js.org/loaders/css-loader/#importloaders
-                  // // 2 => style-loader, sass-loader
-                  importLoaders: 2,
-                },
-              },
-              {
-                loader: 'sass-loader',
-                options: {
-                  implementation: require.resolve('sass'),
-                  api: 'legacy',
-                  sassOptions: {
-                    outputStyle: 'compressed',
-                  },
-                },
-              },
-            ],
-          },
-          {
-            test: /\.css$/,
-            use: [
-              'style-loader',
-              {
-                loader: 'css-loader',
-                options: {
-                  modules: {
-                    auto: true,
-                    localIdentName: '[name]__[local]--[hash:base64:5]',
-                  },
-                },
-              },
-            ],
-          },
-        ],
-      },
-    },
     getAbsolutePath('@storybook/addon-docs'),
+    getAbsolutePath('@storybook/addon-vitest'),
   ],
-  framework: {
-    name: getAbsolutePath('@storybook/react-webpack5'),
-    options: {},
-  },
-  staticDirs: ['../public'],
-  swc: () => ({
-    // Removes the need to import React by specifying we are targeting React 17+ using the React jsx transform
-    // See: https://storybook.js.org/docs/8.5/configure/integration/compilers#the-swc-compiler-doesnt-work-with-react
-    jsc: {
-      transform: {
-        react: {
-          runtime: 'automatic',
-        },
-      },
-    },
-  }),
-  webpackFinal: async config => {
-    if (config.resolve) {
-      config.resolve.alias = {
-        ...config.resolve.alias,
+  framework: getAbsolutePath('@storybook/react-vite'),
+  viteFinal: async config => {
+    config.resolve = {
+      ...config.resolve,
+      dedupe: ['react', 'react-dom'],
+      alias: {
+        ...(config.resolve?.alias || {}),
         '@': resolve(__dirname, '../../../packages/component-library/src'),
-        '@public': resolve(__dirname, '../public'),
-      };
-    }
-
-    if (config.plugins) {
-      // Ignore the auto generated index.css which is bundled by tsup
-      // webpack generates its own css in the styling plugin above
-      config.plugins.push(
-        new IgnorePlugin({
-          resourceRegExp: /^\.\/index.css$/,
-          contextRegExp: /component-library\/src/,
-        }),
-      );
-    }
+        '@public': resolve(__dirname, '../src'),
+      },
+    };
 
     return config;
   },
   typescript: {
     reactDocgen: 'react-docgen-typescript',
+    reactDocgenTypescriptOptions: {
+      // react-docgen-typescript has a bug which is unable to resolve project references.
+      // https://github.com/storybookjs/storybook/issues/30015
+      EXPERIMENTAL_useProjectService: true,
+    },
   },
 };
 export default config;

@@ -44,7 +44,7 @@ export default class StudentHomepage extends Component {
     analyticsReporter.sendEvent(
       EVENTS.STUDENT_HOMEPAGE_VISITED,
       {},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   }
 
@@ -73,7 +73,7 @@ export default class StudentHomepage extends Component {
       analyticsReporter.sendEvent(
         EVENTS.STUDENT_LOGIN_EVENT,
         {},
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
     }
 

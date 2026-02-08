@@ -240,7 +240,7 @@ function RubricSettings({
         rubricId: rubricId,
         sectionId: sectionId,
       },
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
     fetch(url, {
       method: 'POST',

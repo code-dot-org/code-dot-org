@@ -6,7 +6,7 @@ import {USER_RETURN_TO_SESSION_KEY} from '@cdo/apps/signUpFlow/signUpFlowConstan
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
-  analyticsReporter.sendEvent(EVENTS.LOGIN_PAGE_VISITED, {}, PLATFORMS.BOTH);
+  analyticsReporter.sendEvent(EVENTS.LOGIN_PAGE_VISITED, {}, PLATFORMS.STATSIG);
 
   const userReturnTo = getScriptData('userReturnTo');
 
@@ -18,7 +18,7 @@ $(document).ready(() => {
     analyticsReporter.sendEvent(
       EVENTS.LOGIN_PAGE_CREATE_ACCOUNT_CLICKED,
       {},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   });
 
@@ -26,7 +26,7 @@ $(document).ready(() => {
     analyticsReporter.sendEvent(
       EVENTS.LOGIN_PAGE_SIGN_IN_CLICKED,
       {},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   });
 
@@ -36,7 +36,7 @@ $(document).ready(() => {
       analyticsReporter.sendEvent(
         EVENTS.LOGIN_PAGE_OAUTH_CLICKED,
         {provider: 'google'},
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
     });
 
@@ -44,7 +44,7 @@ $(document).ready(() => {
     analyticsReporter.sendEvent(
       EVENTS.LOGIN_PAGE_OAUTH_CLICKED,
       {provider: 'facebook'},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   });
 
@@ -54,7 +54,7 @@ $(document).ready(() => {
       analyticsReporter.sendEvent(
         EVENTS.LOGIN_PAGE_OAUTH_CLICKED,
         {provider: 'microsoft'},
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
     });
 
@@ -62,7 +62,7 @@ $(document).ready(() => {
     analyticsReporter.sendEvent(
       EVENTS.LOGIN_PAGE_OAUTH_CLICKED,
       {provider: 'clever'},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   });
 
@@ -74,7 +74,7 @@ $(document).ready(() => {
       analyticsReporter.sendEvent(
         EVENTS.LOGIN_PAGE_COURSE_BLOCK_CLICKED,
         {courseTitle, courseUrl},
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
     });
   });

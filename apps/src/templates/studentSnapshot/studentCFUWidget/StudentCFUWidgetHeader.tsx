@@ -3,6 +3,8 @@ import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import React from 'react';
 
+import {statusBucketsMap} from './common';
+
 import styles from './studentCFUWidgetHeader.module.scss';
 
 interface CfuWidgetHeaderProps {
@@ -43,9 +45,9 @@ const SmallCard: React.FC<{
     <div className={styles.iconContainer}>
       <FontAwesomeV6Icon iconName={iconName} className={styles.icon} />
     </div>
-    <div className={styles.cardText}>
+    <Typography variant="overline3" className={styles.cardText}>
       {count} {label}
-    </div>
+    </Typography>
   </div>
 );
 
@@ -63,12 +65,11 @@ const CfuWidgetHeader: React.FC<CfuWidgetHeaderProps> = ({
             Check For Understanding Questions
           </Typography>
         </Typography>
-        <FontAwesomeV6Icon iconName="circle-info" className={styles.helpIcon} />
       </div>
 
       <div className={styles.summarySection}>
         <div className={styles.summaryLabel}>
-          <Typography variant="body3">
+          <Typography variant="body2">
             <strong>Summary</strong>
           </Typography>
         </div>
@@ -76,34 +77,34 @@ const CfuWidgetHeader: React.FC<CfuWidgetHeaderProps> = ({
         <div className={styles.summaryCards}>
           <div className={styles.metricsContainer}>
             <LargeCard value={`${completed} of ${total}`} label="completed" />
-            <LargeCard value={accuracy} label="Accuracy" />
+            <LargeCard value={`${accuracy}%`} label="Accuracy" />
           </div>
           <div className={styles.correctnessContainer}>
             <div className={styles.smallCardsRow}>
               <SmallCard
                 count={counts.correct}
-                label="Correct"
-                iconName="check"
+                label={statusBucketsMap['correct'].label}
+                iconName={statusBucketsMap['correct'].iconName}
                 cardStyle={styles.correctCard}
               />
               <SmallCard
                 count={counts.partially_correct}
-                label="Partially correct"
-                iconName="circle-half-stroke"
+                label={statusBucketsMap['partially_correct'].label}
+                iconName={statusBucketsMap['partially_correct'].iconName}
                 cardStyle={styles.partiallyCorrectCard}
               />
             </div>
             <div className={styles.smallCardsRow}>
               <SmallCard
                 count={counts.incorrect}
-                label="Incorrect"
-                iconName="xmark"
+                label={statusBucketsMap['incorrect'].label}
+                iconName={statusBucketsMap['incorrect'].iconName}
                 cardStyle={styles.incorrectCard}
               />
               <SmallCard
                 count={counts.incomplete}
-                label="Incomplete"
-                iconName="empty-set"
+                label={statusBucketsMap['incomplete'].label}
+                iconName={statusBucketsMap['incomplete'].iconName}
                 cardStyle={styles.incompleteCard}
               />
             </div>

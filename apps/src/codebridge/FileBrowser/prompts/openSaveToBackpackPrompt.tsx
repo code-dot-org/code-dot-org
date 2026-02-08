@@ -86,12 +86,12 @@ export const openSaveToBackpackPrompt = async ({
       const selectedFileName =
         results.type === 'confirm' ? file.name : fileNameCopy;
 
-      let successMetric = EVENTS.CODEBRIDGE_SAVE_TO_BACKPACK_NEW;
+      let successMetric = EVENTS.SAVE_TO_BACKPACK_NEW;
       if (isDuplicateFileName) {
         successMetric =
           selectedFileName === file.name
-            ? EVENTS.CODEBRIDGE_SAVE_TO_BACKPACK_REPLACE
-            : EVENTS.CODEBRIDGE_SAVE_TO_BACKPACK_RENAME;
+            ? EVENTS.SAVE_TO_BACKPACK_REPLACE
+            : EVENTS.SAVE_TO_BACKPACK_RENAME;
       }
       const successCallback = () =>
         sendLab2AnalyticsEvent(successMetric, {
