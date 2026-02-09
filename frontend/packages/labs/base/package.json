@@ -115,7 +115,6 @@
     "@code-dot-org/core": "workspace:*",
     "@code-dot-org/fonts": "workspace:*",
     "@code-dot-org/js-interpreter": "^1.3.13",
-    "@code-dot-org/markdown": "workspace:*",
     "@code-dot-org/platform": "workspace:*",
     "@code-dot-org/teacher-dashboard": "workspace:*",
     "@fortawesome/fontawesome-free": "^7.1.0",

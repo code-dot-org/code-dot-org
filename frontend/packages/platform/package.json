@@ -60,6 +60,8 @@
     "@reduxjs/toolkit": "^2.8.2",
     "classnames": "^2.5.1",
     "lodash": "^4.17.21",
+    "markdown-to-jsx": "^7.4.7",
+    "markdown-to-txt": "^2.0.1",
     "query-string": "^9.2.2",
     "react-redux": "^9.2.0"
   },

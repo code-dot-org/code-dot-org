@@ -1,6 +1,6 @@
 import type {IProcedureBlock} from '@blockly/block-shareable-procedures';
 import * as Blockly from 'blockly/core';
-import {JavascriptGenerator} from 'blockly/javascript';
+import type {JavascriptGenerator} from 'blockly/javascript';
 
 import type {FieldPlugin, InputPlugin} from '../plugins';
 import type {Mutator, Environment, Extension, Mixin} from '../types';

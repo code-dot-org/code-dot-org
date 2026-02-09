@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import type {FunctionComponent} from 'react';
 
 import Alert from '@code-dot-org/component-library/alert';
-import Markdown from '@code-dot-org/markdown';
+import {Markdown} from '@code-dot-org/platform';
 
 import {isPredictAnswerLocked} from '../../redux/predictLevelSlice';
 import {useAppSelector} from '../../redux/store';

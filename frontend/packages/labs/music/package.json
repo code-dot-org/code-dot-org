@@ -53,7 +53,6 @@
     "@code-dot-org/core": "workspace:*",
     "@code-dot-org/fonts": "workspace:*",
     "@code-dot-org/lab": "workspace:*",
-    "@code-dot-org/markdown": "workspace:*",
     "@code-dot-org/platform": "workspace:*",
     "@magenta/music": "^1.23.1",
     "@react-hook/resize-observer": "^2.0.2",
