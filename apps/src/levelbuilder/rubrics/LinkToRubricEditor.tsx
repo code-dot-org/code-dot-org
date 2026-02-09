@@ -30,10 +30,10 @@ export default function LinkToRubricEditor({lessons}: LinkToRubricEditorProps) {
         new tab.
       </BodyThreeText>
       {lessons.length === 0 && (
-        <BodyThreeText>
+        <BodyTwoText>
           This level is not in any lessons. Assign it to a lesson to add or edit
           the rubric for the lesson.
-        </BodyThreeText>
+        </BodyTwoText>
       )}
       <div className={moduleStyles.rubricButtonContainer}>
         {lessons.map(lesson => (
