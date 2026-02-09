@@ -8,6 +8,7 @@ import {
   useSearchParams,
 } from 'react-router-dom';
 
+import {AiChatToolsDependencyValue} from '@cdo/apps/aichat/types';
 import {
   addAnnouncement,
   VisibilityType,
@@ -25,7 +26,10 @@ import {NotificationType} from '@cdo/apps/sharedComponents/Notification';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiChatToolsDependency,
+  UserTypes,
+} from '@cdo/generated-scripts/sharedConstants';
 
 import {
   CourseRoles,
@@ -79,7 +83,7 @@ interface CourseSummary {
   course_versions: {[id: string]: Version};
   announcements: Announcement[];
   has_verified_resources: boolean;
-  requires_ai_chat_tools: boolean;
+  ai_chat_tools_dependency: AiChatToolsDependencyValue;
 }
 
 interface Response {
@@ -263,9 +267,12 @@ const TeacherCourseOverview: React.FC = () => {
       userType={UserTypes.TEACHER}
       participantAudience={courseSummary.participant_audience}
       courseAlert={
-        <RequiresAiChatToolsAlert
-          aiChatAccessLevel={selectedSection?.aiChatAccessLevel}
-        />
+        courseSummary.ai_chat_tools_dependency ===
+          AiChatToolsDependency.ESSENTIAL && (
+          <RequiresAiChatToolsAlert
+            aiChatAccessLevel={selectedSection?.aiChatAccessLevel}
+          />
+        )
       }
     />
   );
