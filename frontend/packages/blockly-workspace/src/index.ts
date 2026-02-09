@@ -7,6 +7,8 @@ export {defineMixin} from './mixins/defineMixin';
 export {defineMutator} from './mutators/defineMutator';
 export {defineExtension} from './extensions/defineExtension';
 export {defineBlock} from './blocks/defineBlock';
+export {createInjectPlugin} from './plugins';
+export type {InjectPlugin, InjectSetupFunction} from './plugins';
 
 export * from './components';
 export * from './fields';

@@ -1,8 +1,8 @@
 import * as Blockly from 'blockly/core';
 import type {IDraggable} from 'blockly/core';
 
-import {PluginType, WrapPlugin} from '../../plugins';
-import type {Plugin} from '../../plugins';
+import {PluginType} from '../../plugins';
+import type {InjectPlugin} from '../../plugins';
 import type {Theme} from '../../types';
 import {getToolboxWidth} from '../../utils';
 
@@ -444,9 +444,9 @@ export class ToolboxTrashcan extends Blockly.DeleteArea {
   }
 }
 
-export const plugin: Plugin = {
+export const plugin: InjectPlugin = {
   type: PluginType.Inject,
-  instantiate: WrapPlugin(ToolboxTrashcan),
+  plugin: ToolboxTrashcan,
 };
 
 export default plugin;
