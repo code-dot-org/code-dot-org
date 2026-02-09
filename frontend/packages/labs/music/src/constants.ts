@@ -1,3 +1,4 @@
+import type {ChordEventValue} from './player/interfaces/ChordEvent';
 import type {Effects} from './player/interfaces/Effects';
 import type {InstrumentEventValue} from './player/interfaces/InstrumentEvent';
 import type {Trigger} from './types';
@@ -65,8 +66,7 @@ export const DEFAULT_PATTERN_AI: InstrumentEventValue = {
   ai: true,
 };
 
-// Type: ChordEventValue
-export const DEFAULT_CHORD = {
+export const DEFAULT_CHORD: ChordEventValue = {
   instrument: 'piano',
   notes: [],
   playStyle: 'arpeggio-up',

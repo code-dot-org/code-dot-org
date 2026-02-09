@@ -1,7 +1,7 @@
 import * as Blockly from 'blockly/core';
 
-import {PluginType} from '../../../plugins';
-import type {InputPlugin} from '../../../plugins';
+import {PluginType} from '../plugins';
+import type {InputPlugin} from '../plugins';
 
 /**
  * Adds a spiky triangular notch for input/output connections.
