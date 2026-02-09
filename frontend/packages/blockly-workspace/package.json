@@ -87,35 +87,35 @@
       "import": "./dist/plugins/blockLimits/index.mjs",
       "require": "./dist/plugins/blockLimits/index.js"
     },
-    "./plugins/inputs": {
-      "types": "./dist/plugins/inputs/index.d.ts",
-      "import": "./dist/plugins/inputs/index.mjs",
-      "require": "./dist/plugins/inputs/index.js"
+    "./inputs": {
+      "types": "./dist/inputs/index.d.ts",
+      "import": "./dist/inputs/index.mjs",
+      "require": "./dist/inputs/index.js"
     },
-    "./plugins/inputs/rectangle": {
-      "types": "./dist/plugins/inputs/rectangle/index.d.ts",
-      "import": "./dist/plugins/inputs/rectangle/index.mjs",
-      "require": "./dist/plugins/inputs/rectangle/index.js"
+    "./inputs/rectangle": {
+      "types": "./dist/inputs/rectangle.d.ts",
+      "import": "./dist/inputs/rectangle.mjs",
+      "require": "./dist/inputs/rectangle.js"
     },
-    "./plugins/inputs/round": {
-      "types": "./dist/plugins/inputs/round/index.d.ts",
-      "import": "./dist/plugins/inputs/round/index.mjs",
-      "require": "./dist/plugins/inputs/round/index.js"
+    "./inputs/round": {
+      "types": "./dist/inputs/round.d.ts",
+      "import": "./dist/inputs/round.mjs",
+      "require": "./dist/inputs/round.js"
     },
-    "./plugins/inputs/triangle": {
-      "types": "./dist/plugins/inputs/triangle/index.d.ts",
-      "import": "./dist/plugins/inputs/triangle/index.mjs",
-      "require": "./dist/plugins/inputs/triangle/index.js"
+    "./inputs/triangle": {
+      "types": "./dist/inputs/triangle.d.ts",
+      "import": "./dist/inputs/triangle.mjs",
+      "require": "./dist/inputs/triangle.js"
     },
-    "./plugins/fields/fieldButton": {
-      "types": "./dist/plugins/fields/fieldButton/index.d.ts",
-      "import": "./dist/plugins/fields/fieldButton/index.mjs",
-      "require": "./dist/plugins/fields/fieldButton/index.js"
+    "./fields/fieldButton": {
+      "types": "./dist/fields/fieldButton/index.d.ts",
+      "import": "./dist/fields/fieldButton/index.mjs",
+      "require": "./dist/fields/fieldButton/index.js"
     },
-    "./plugins/fields/fieldColour": {
-      "types": "./dist/plugins/fields/fieldColour/index.d.ts",
-      "import": "./dist/plugins/fields/fieldColour/index.mjs",
-      "require": "./dist/plugins/fields/fieldColour/index.js"
+    "./fields/fieldColour": {
+      "types": "./dist/fields/fieldColour/index.d.ts",
+      "import": "./dist/fields/fieldColour/index.mjs",
+      "require": "./dist/fields/fieldColour/index.js"
     },
     "./blocks/types": {
       "types": "./dist/blocks/types.d.ts"

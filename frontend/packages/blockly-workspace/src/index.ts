@@ -9,5 +9,6 @@ export {defineExtension} from './extensions/defineExtension';
 export {defineBlock} from './blocks/defineBlock';
 
 export * from './components';
+export * from './fields';
 
 export * as Blockly from 'blockly/core';

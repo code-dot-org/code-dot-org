@@ -1,7 +1,7 @@
 import * as Blockly from 'blockly/core';
 
-import {PluginType} from '../../../plugins';
-import type {FieldPlugin} from '../../../plugins';
+import {PluginType} from '../../plugins';
+import type {FieldPlugin} from '../../plugins';
 
 interface ColorOverrides {
   button?: string;

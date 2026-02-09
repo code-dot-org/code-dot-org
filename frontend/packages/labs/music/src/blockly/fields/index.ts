@@ -2,7 +2,7 @@ import FieldChord from './FieldChord';
 import FieldPattern from './FieldPattern';
 import FieldPatternAi from './FieldPatternAi';
 import FieldSounds from './FieldSounds';
-import FieldTune from './FieldTune';
+import FieldTunePlugin from './FieldTune';
 
 import {
   TRIGGER_FIELD,
@@ -47,7 +47,7 @@ export const fieldChordDefinition = {
 } as const;
 
 export const fieldTuneDefinition = {
-  type: FieldTune,
+  type: FieldTunePlugin,
   name: FIELD_TUNE_NAME,
   currentValue: DEFAULT_TUNE,
 } as const;

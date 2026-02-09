@@ -4,8 +4,8 @@ import {
 } from '@blockly/field-colour';
 import {javascriptGenerator} from 'blockly/javascript';
 
-import {PluginType} from '../../../plugins';
-import type {FieldPlugin} from '../../../plugins';
+import {PluginType} from '../../plugins';
+import type {FieldPlugin} from '../../plugins';
 
 export const plugin: FieldPlugin = {
   type: PluginType.Field,
