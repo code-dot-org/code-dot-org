@@ -312,7 +312,7 @@ class Registry<T extends Environment = Environment> {
     inline: boolean,
   ) {
     if (injectPlugin.useWithInline || !inline) {
-      injectPlugin.instantiate(workspace, this.theme);
+      new injectPlugin.plugin(workspace, this.theme);
     }
   }
 

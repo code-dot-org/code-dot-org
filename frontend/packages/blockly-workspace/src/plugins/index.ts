@@ -43,12 +43,13 @@ export interface RegistryPlugin extends PluginBase {
 }
 
 /**
- * Registers an injected plugin which just gets constructed with the new
- * workspace as an argument.
+ * Registers an injected plugin which gets constructed with the new
+ * workspace as an argument after injection.
  */
 export interface InjectPlugin extends PluginBase {
   type: 'inject';
-  instantiate: (workspace: Blockly.WorkspaceSvg, theme: Theme) => void;
+  /** The plugin class to instantiate with (workspace, theme) */
+  plugin: new (workspace: Blockly.WorkspaceSvg, theme: Theme) => unknown;
 }
 
 /**
@@ -102,11 +103,43 @@ export type Plugin =
   | InputPlugin
   | FieldPlugin;
 
-export function WrapPlugin(
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  definition: new (workspace: Blockly.WorkspaceSvg, theme: Theme) => any,
-) {
-  return (workspace: Blockly.WorkspaceSvg, theme: Theme) => {
-    new definition(workspace, theme);
+/**
+ * A setup function that is called after workspace injection.
+ * Use this for plugins that just need to initialize behavior without
+ * needing to implement Blockly interfaces.
+ */
+export type InjectSetupFunction = (
+  workspace: Blockly.WorkspaceSvg,
+  theme: Theme,
+) => void;
+
+/**
+ * Creates an inject plugin from a simple setup function.
+ *
+ * Use this helper when your plugin just needs to set up event listeners,
+ * create DOM elements, or perform other initialization that doesn't require
+ * extending Blockly classes.
+ *
+ * @example
+ * ```typescript
+ * export const plugin = createInjectPlugin((workspace, theme) => {
+ *   workspace.addChangeListener((event) => {
+ *     // Handle workspace changes
+ *   });
+ * });
+ * ```
+ */
+export function createInjectPlugin(
+  setup: InjectSetupFunction,
+  options?: {useWithInline?: boolean},
+): InjectPlugin {
+  return {
+    type: PluginType.Inject,
+    useWithInline: options?.useWithInline,
+    plugin: class {
+      constructor(workspace: Blockly.WorkspaceSvg, theme: Theme) {
+        setup(workspace, theme);
+      }
+    },
   };
 }
