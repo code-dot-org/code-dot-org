@@ -1,7 +1,10 @@
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {ProjectFile} from '@cdo/apps/lab2/types';
 import {ValueOf} from '@cdo/apps/types/utils';
-import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiInteractionStatus,
+  AiRequestExecutionStatus,
+} from '@cdo/generated-scripts/sharedConstants';
 
 import {ChatAsset} from './assets';
 import {ModelParameters} from './customizations';
@@ -15,6 +18,9 @@ interface BaseChatEvent {
   /** UTC timestamp in milliseconds */
   timestamp: number;
 }
+
+export type EventStatus = ValueOf<typeof AiInteractionStatus>;
+export type ExecutionStatus = ValueOf<typeof AiRequestExecutionStatus>;
 
 /** Base type for all chat messages */
 interface BaseChatMessage extends BaseChatEvent {
@@ -34,7 +40,7 @@ interface BaseChatMessage extends BaseChatEvent {
   /** Asset file names to optionally send with text content */
   assets?: ChatAsset[];
   role: Role;
-  status: ValueOf<typeof AiInteractionStatus>;
+  status: EventStatus;
   userAddedSelectionContext?: UserAddedSelectionContextItem[];
   /** Necessary to update a pending message to completed or to update chatMessageText */
   updateId?: string;
@@ -61,7 +67,7 @@ export interface CompletedChatMessage extends BaseChatMessage {
    * Note that 'error' here means that the chat message call was returned by the server, but the server returned an error
    * (i.e. downstream AI service error).
    */
-  status: Exclude<ValueOf<typeof AiInteractionStatus>, 'unknown'>;
+  status: Exclude<EventStatus, 'unknown'>;
 }
 
 /** All chat messages must be one of these types */

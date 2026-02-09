@@ -33,12 +33,12 @@ export default async function askAi(message: string) {
     systemPrompt: '',
   };
 
-  const messages = await postAichatCompletionMessage(
-    newUserMessage,
-    [],
-    aiCustomizations,
-    aichatContext
-  );
+  const messages = await postAichatCompletionMessage({
+    newMessage: newUserMessage,
+    storedMessages: [],
+    modelParameters: aiCustomizations,
+    aichatContext,
+  });
 
   return messages;
 }

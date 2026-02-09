@@ -5,7 +5,7 @@ import {
   clearStagedFiles,
   clearUserAddedSelectionContext,
   setChatMessageSent,
-  updateChatMessageStatus,
+  updateChatMessage,
 } from '@cdo/apps/aichat/redux/slice';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
@@ -14,12 +14,13 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {RootState} from '@cdo/apps/types/redux';
+import experiments from '@cdo/apps/util/experiments';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
-import {postAichatCompletionMessage} from '../../aichatApi';
+import {postAichatCompletionMessage, StreamCallbacks} from '../../aichatApi';
 import {logChatEvent} from '../../helpers/logChatEvent';
 import {formatUserAddedSelectionContextForPrompt} from '../../helpers/userAddedSelectionContextFormatter';
 import {
@@ -29,15 +30,17 @@ import {
   CompletedChatMessage,
   ChatAsset,
   ModelParameters,
-  AiChatClientType,
   AnalyticsProperties,
   UserAddedSelectionContextItem,
+  AiChatClientType,
 } from '../../types';
 import {getNewRemoveId} from '../utils';
 
 import {addChatEvent} from './addChatEvent';
 import {notifyErrorUnauthorized} from './helpers/notifyErrorUnauthorized';
 import {sendAnalytics} from './sendAnalytics';
+
+type PendingChatMessageWithUpdateId = PendingChatMessage & {updateId: string};
 
 // This thunk's callback function submits a user's chat content and AI customizations to
 // the chat completion endpoint, then waits for a chat completion response, and updates
@@ -60,7 +63,12 @@ export const submitChatContents = createAsyncThunk(
   ) => {
     const dispatch = thunkAPI.dispatch as AppDispatch;
     const state = thunkAPI.getState() as RootState;
-    const chatEventsCurrent = state.aichat.chatEventsCurrent;
+    const {
+      progress: {currentLevelId, scriptId, viewAsUserId},
+      lab: {channel},
+      aichat: {chatEventsCurrent},
+    } = state;
+    const storedMessages = chatEventsCurrent.filter(isCompletedChatMessage);
     const {
       text,
       hiddenContext,
@@ -73,6 +81,15 @@ export const submitChatContents = createAsyncThunk(
       logLevelActivity,
     } = newUserMessageInput;
 
+    if (logLevelActivity) {
+      logLevelActivity();
+    }
+
+    const isStreaming =
+      experiments.isEnabledAllowingQueryString('ai-chat-stream') &&
+      (modelParameters.selectedModelId.startsWith('gemini') ||
+        modelParameters.selectedModelId.startsWith('gpt'));
+
     // Clear any staged files if present (used with multimodal models)
     dispatch(clearStagedFiles());
     // Clear any user added context if present.
@@ -80,9 +97,9 @@ export const submitChatContents = createAsyncThunk(
 
     const aichatContext: AichatContext = {
       clientType,
-      currentLevelId: parseInt(state.progress.currentLevelId || ''),
-      scriptId: state.progress.scriptId,
-      channelId: state.lab.channel?.id,
+      scriptId,
+      currentLevelId: parseInt(currentLevelId || ''),
+      channelId: channel?.id,
     };
 
     // Default to just sending `chatMessageText`, in case display text is the same as text to send to the model.
@@ -100,7 +117,7 @@ export const submitChatContents = createAsyncThunk(
     }
 
     // Create the new user ChatMessage and add to chatEventsCurrent.
-    const newUserMessage: PendingChatMessage & {updateId: string} = {
+    const newUserMessage: PendingChatMessageWithUpdateId = {
       role: Role.USER,
       status: Status.UNKNOWN,
       chatMessageText,
@@ -111,50 +128,59 @@ export const submitChatContents = createAsyncThunk(
       timestamp: Date.now(),
       updateId: createUuid(),
     };
-    dispatch(addEventToChatEventsCurrent(newUserMessage));
-    dispatch(setChatMessageSent(true));
 
-    if (logLevelActivity) {
-      logLevelActivity();
-    }
-
-    // Post user content and messages to backend and retrieve assistant response.
-    const startTime = Date.now();
-
-    let messages: CompletedChatMessage[] = [];
-    const projectFileCount =
-      newUserMessage.userAddedSelectionContext?.length || 0;
-    const projectFileCountHtml =
-      newUserMessage.userAddedSelectionContext?.filter(file =>
-        file.filename.endsWith('.html')
-      ).length || 0;
-    const projectFileCountJs =
-      newUserMessage.userAddedSelectionContext?.filter(file =>
-        file.filename.endsWith('.js')
-      ).length || 0;
-    const projectFileCountCss =
-      newUserMessage.userAddedSelectionContext?.filter(file =>
-        file.filename.endsWith('.css')
-      ).length || 0;
-    const fileCount = newUserMessage.assets?.length || 0;
-    const fileCountPdf =
-      newUserMessage.assets?.filter(asset => asset.filename.endsWith('.pdf'))
-        .length || 0;
-    const fileCountImage = fileCount - fileCountPdf;
-
-    const eventData = {
-      fileCount,
-      fileCountImage,
-      fileCountPdf,
-      projectFileCount,
-      projectFileCountHtml,
-      projectFileCountJs,
-      projectFileCountCss,
-      clientType,
-      ...analyticsProperties,
+    // Create the placeholder assistant ChatMessage used when streaming
+    const newAssistantMessage: PendingChatMessageWithUpdateId = {
+      role: Role.ASSISTANT,
+      status: Status.UNKNOWN,
+      chatMessageText: '',
+      timestamp: Date.now(),
+      updateId: createUuid(),
     };
 
+    let messages: CompletedChatMessage[] = [];
+
+    let hasAddedAssistantMessage = false;
+
+    let fullText = '';
+
+    let streamCallbacks: StreamCallbacks | undefined;
+    if (isStreaming) {
+      streamCallbacks = {
+        onDelta: delta => {
+          fullText += delta;
+          if (hasAddedAssistantMessage) {
+            dispatch(
+              updateChatMessage({
+                updateId: newAssistantMessage.updateId,
+                chatMessageText: fullText,
+              })
+            );
+          } else {
+            hasAddedAssistantMessage = true;
+            dispatch(
+              addEventToChatEventsCurrent({
+                ...newAssistantMessage,
+                timestamp: Date.now(), // update timestamp
+                chatMessageText: fullText,
+              })
+            );
+          }
+        },
+      };
+    }
+
+    dispatch(addEventToChatEventsCurrent(newUserMessage));
+
+    dispatch(setChatMessageSent(true));
+
     try {
+      const eventData = getAnalyticsEventData({
+        newUserMessage,
+        clientType,
+        analyticsProperties,
+      });
+
       Lab2Registry.getInstance()
         .getMetricsReporter()
         .incrementCounter('Aichat.ChatCompletionRequestInitiated');
@@ -163,12 +189,16 @@ export const submitChatContents = createAsyncThunk(
         sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_INITIATED, eventData)
       );
 
-      messages = await postAichatCompletionMessage(
-        newUserMessage,
-        chatEventsCurrent.filter(isCompletedChatMessage),
+      const startTime = Date.now();
+
+      // Post user content and messages to backend and retrieve assistant response.
+      messages = await postAichatCompletionMessage({
+        newMessage: newUserMessage,
+        storedMessages,
         modelParameters,
-        aichatContext
-      );
+        aichatContext,
+        streamCallbacks,
+      });
 
       // In milliseconds
       const responseTime = Date.now() - startTime;
@@ -178,6 +208,7 @@ export const submitChatContents = createAsyncThunk(
           responseTime,
         })
       );
+
       Lab2Registry.getInstance()
         .getMetricsReporter()
         .reportLoadTime('AichatModelResponseTime', responseTime, [
@@ -186,39 +217,92 @@ export const submitChatContents = createAsyncThunk(
             value: modelParameters.selectedModelId,
           },
         ]);
+
+      // Send a report that the user has started the aichat level after successfully sending
+      // a chat message and then receiving a response from the chatbot.
+      // A teacher will view that the level is now in progress.
+      dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
+
+      messages.forEach(message => {
+        if (message.role === Role.ASSISTANT && responseCallback) {
+          message.chatMessageText = responseCallback(message.chatMessageText);
+        }
+
+        if (message.role === Role.ASSISTANT) {
+          if (hasAddedAssistantMessage) {
+            dispatch(
+              updateChatMessage({
+                updateId: newAssistantMessage.updateId,
+                status: message.status,
+                chatMessageText: message.chatMessageText,
+              })
+            );
+            logChatEvent(message, viewAsUserId);
+          } else {
+            dispatch(addChatEvent(message));
+          }
+        } else if (message.role === Role.USER) {
+          dispatch(
+            updateChatMessage({
+              updateId: newUserMessage.updateId,
+              status: message.status,
+            })
+          );
+          logChatEvent(message, viewAsUserId);
+        }
+      });
     } catch (error) {
       await handleChatCompletionError(
         error as Error,
         newUserMessage,
         dispatch,
-        state.progress.viewAsUserId
+        viewAsUserId
       );
-      return;
     }
-
-    // Send a report that the user has started the aichat level after successfully sending
-    // a chat message and then receiving a response from the chatbot.
-    // A teacher will view that the level is now in progress.
-    dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
-    messages.forEach(message => {
-      if (message.role === Role.ASSISTANT) {
-        message.chatMessageText =
-          responseCallback?.(message.chatMessageText) ??
-          message.chatMessageText;
-        dispatch(addChatEvent(message));
-      }
-      if (message.role === Role.USER) {
-        dispatch(
-          updateChatMessageStatus({
-            updateId: newUserMessage.updateId,
-            status: message.status,
-          })
-        );
-        logChatEvent(message, state.progress.viewAsUserId);
-      }
-    });
   }
 );
+
+function getAnalyticsEventData({
+  newUserMessage,
+  clientType,
+  analyticsProperties = {},
+}: {
+  newUserMessage: PendingChatMessage;
+  clientType: AiChatClientType;
+  analyticsProperties?: AnalyticsProperties;
+}) {
+  const projectFileCount =
+    newUserMessage.userAddedSelectionContext?.length || 0;
+  const projectFileCountHtml =
+    newUserMessage.userAddedSelectionContext?.filter(file =>
+      file.filename.endsWith('.html')
+    ).length || 0;
+  const projectFileCountJs =
+    newUserMessage.userAddedSelectionContext?.filter(file =>
+      file.filename.endsWith('.js')
+    ).length || 0;
+  const projectFileCountCss =
+    newUserMessage.userAddedSelectionContext?.filter(file =>
+      file.filename.endsWith('.css')
+    ).length || 0;
+  const fileCount = newUserMessage.assets?.length || 0;
+  const fileCountPdf =
+    newUserMessage.assets?.filter(asset => asset.filename.endsWith('.pdf'))
+      .length || 0;
+  const fileCountImage = fileCount - fileCountPdf;
+
+  return {
+    fileCount,
+    fileCountImage,
+    fileCountPdf,
+    projectFileCount,
+    projectFileCountHtml,
+    projectFileCountJs,
+    projectFileCountCss,
+    clientType,
+    ...analyticsProperties,
+  };
+}
 
 async function handleChatCompletionError(
   error: Error,
@@ -234,7 +318,7 @@ async function handleChatCompletionError(
   }
 
   dispatch(
-    updateChatMessageStatus({
+    updateChatMessage({
       updateId: newUserMessage.updateId,
       status: Status.ERROR,
     })
