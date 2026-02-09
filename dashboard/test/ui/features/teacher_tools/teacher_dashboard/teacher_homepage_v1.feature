@@ -33,7 +33,6 @@ Feature: Using the teacher dashboard homepage (v1)
 
   Scenario: Decline invitation to new progress view
     Given I am on "http://studio.code.org"
-    When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     Given I create an authorized teacher-associated student named "Sally"
     Given I am assigned to course "allthethingscourse" unit 1
     And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
@@ -51,7 +50,6 @@ Feature: Using the teacher dashboard homepage (v1)
 
   Scenario: Accept invitation to new progress view and see new view immediately.
     Given I am on "http://studio.code.org"
-    When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     Given I create an authorized teacher-associated student named "Sally"
     Given I am assigned to course "allthethingscourse" unit 1
     And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
@@ -69,7 +67,6 @@ Feature: Using the teacher dashboard homepage (v1)
 
   Scenario: Delay responding to invitation to new progress view and see old view immediately.
     Given I am on "http://studio.code.org"
-    When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     Given I create an authorized teacher-associated student named "Sally"
     Given I am assigned to course "allthethingscourse" unit 1
     And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
