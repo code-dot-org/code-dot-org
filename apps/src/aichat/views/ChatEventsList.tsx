@@ -164,8 +164,6 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
     }
   }, [events, events.length, scrollToLastMessage]);
 
-  console.log('hasCollapsedInstructionsDrawer', hasCollapsedInstructionsDrawer);
-
   return (
     <div
       id="chat-workspace-conversation"

@@ -174,7 +174,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   hasInstructionsDrawer,
   ...instructionsProps
 }) => {
-  console.log('hasInstructionsDrawer', hasInstructionsDrawer);
   const {theme} = useTheme();
   const {showRubric} = useRubric();
   const [currentTab, setCurrentTab] = useState<Tabs | undefined>(undefined);
