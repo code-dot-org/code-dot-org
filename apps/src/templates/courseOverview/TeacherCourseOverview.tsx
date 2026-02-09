@@ -37,6 +37,7 @@ import {selectedSectionSelector} from '../teacherDashboard/teacherSectionsReduxS
 import {TEACHER_NAVIGATION_PATHS} from '../teacherNavigation/TeacherNavigationPaths';
 
 import CourseOverview from './CourseOverview';
+import RequiresAiChatToolsAlert from './RequiresAiChatToolsAlert';
 
 interface Resource {
   id: number;
@@ -261,8 +262,11 @@ const TeacherCourseOverview: React.FC = () => {
       userId={userId}
       userType={UserTypes.TEACHER}
       participantAudience={courseSummary.participant_audience}
-      requiresAiChatTools={courseSummary.requires_ai_chat_tools}
-      sectionAiChatAccessLevel={selectedSection?.aiChatAccessLevel}
+      courseAlert={
+        <RequiresAiChatToolsAlert
+          aiChatAccessLevel={selectedSection?.aiChatAccessLevel}
+        />
+      }
     />
   );
 };

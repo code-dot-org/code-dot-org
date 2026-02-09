@@ -31,7 +31,6 @@ import SafeMarkdown from '../SafeMarkdown';
 
 import CourseOverviewActionRow from './CourseOverviewActionRow';
 import CourseScript from './CourseScript';
-import RequiresAiChatToolsAlert from './RequiresAiChatToolsAlert';
 import VerifiedResourcesNotification from './VerifiedResourcesNotification';
 
 class CourseOverview extends Component {
@@ -58,11 +57,10 @@ class CourseOverview extends Component {
     userId: PropTypes.number,
     userType: PropTypes.string,
     participantAudience: PropTypes.string,
+    courseAlert: PropTypes.node,
     // Redux
     announcements: PropTypes.arrayOf(announcementShape),
     isSignedIn: PropTypes.bool.isRequired,
-    requiresAiChatTools: PropTypes.bool.isRequired,
-    sectionAiChatAccessLevel: PropTypes.AiChatAccessLevel,
   };
 
   constructor(props) {
@@ -150,8 +148,7 @@ class CourseOverview extends Component {
       userId,
       isSignedIn,
       participantAudience,
-      requiresAiChatTools,
-      sectionAiChatAccessLevel,
+      courseAlert,
     } = this.props;
 
     const viewAsTeacher = viewAs === ViewType.Instructor;
@@ -216,11 +213,7 @@ class CourseOverview extends Component {
           title={title}
           participantAudience={participantAudience}
         />
-        {requiresAiChatTools && viewAsTeacher && (
-          <RequiresAiChatToolsAlert
-            aiChatAccessLevel={sectionAiChatAccessLevel}
-          />
-        )}
+        {viewAsTeacher && courseAlert}
         <SafeMarkdown
           style={styles.description}
           openExternalLinksInNewTab={true}
