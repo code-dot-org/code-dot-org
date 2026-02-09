@@ -240,12 +240,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
     const tabMap: {[key in Tabs]?: React.ReactNode} = {};
 
-    const instructionsContent = (
+    const instructionsContent = levelProperties.longInstructions ? (
       <Instructions
         {...instructionsProps}
         hideNavigation={hideInstructionsNavigation}
       />
-    );
+    ) : null;
 
     if (levelProperties.longInstructions) {
       tabMap[Tabs.Instructions] = instructionsContent;
@@ -258,7 +258,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
 
     if (hiddenContextCallback && aiTutorVisible) {
-      if (!hasInstructionsDrawer) {
+      if (!hasInstructionsDrawer || !levelProperties.longInstructions) {
         tabMap[Tabs.AiTutor] = (
           <AiTutorChat
             hiddenContextCallback={hiddenContextCallback}
