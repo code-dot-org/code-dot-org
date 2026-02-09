@@ -48,7 +48,10 @@
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "dependencies": {
     "@code-dot-org/core": "workspace:*",
-    "lodash": "^4.17.21"
+    "@code-dot-org/platform": "workspace:*",
+    "@reduxjs/toolkit": "^2.8.2",
+    "lodash": "^4.17.21",
+    "react-redux": "^9.2.0"
   },
   "devDependencies": {
     "@code-dot-org/lint-config": "workspace:*",

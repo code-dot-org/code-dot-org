@@ -2072,6 +2072,8 @@ __metadata:
   dependencies:
     "@code-dot-org/core": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
+    "@code-dot-org/platform": "workspace:*"
+    "@reduxjs/toolkit": "npm:^2.8.2"
     "@types/node": "npm:^20"
     "@types/tldjs": "npm:^2"
     eslint: "npm:^9.39.1"
@@ -2080,6 +2082,7 @@ __metadata:
     lodash: "npm:^4.17.21"
     prettier: "npm:3.4.2"
     react: "npm:^19.2.0"
+    react-redux: "npm:^9.2.0"
     typescript: "npm:~5.9.3"
     vite: "npm:^7.2.4"
     vite-plugin-dts: "npm:^4.5.4"
