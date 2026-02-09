@@ -240,7 +240,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           source: {
             ...serializedData,
             externalFiles: {
-              ...prevSources.source?.externalFiles,
+              ...prevSources.source.externalFiles,
               ...newFiles,
             },
           },
@@ -257,7 +257,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
             source: {
               ...prevSources.source,
               externalFiles: {
-                ...prevSources.source?.externalFiles,
+                ...prevSources.source.externalFiles,
                 ...newFilesWithUploadStatus,
               },
             },
