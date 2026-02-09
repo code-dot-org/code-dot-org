@@ -11,6 +11,8 @@ import {
   useState,
 } from 'react';
 
+import {useLevelProperties} from '@code-dot-org/lab/contexts';
+
 import type {MusicApiClient} from '../api';
 import MusicLibrary from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
@@ -19,6 +21,7 @@ import Driver, {DriverEvent} from '../Driver';
 import type {PlaybackExecutionData} from '../Driver';
 import {musicActions} from '../redux';
 import {useAppSelector, useAppDispatch} from '../redux/store';
+import type {MusicLevelProperties} from '../types';
 
 export interface PlayerContent {
   /** A method to load the given library and establish it on the player */
@@ -26,13 +29,13 @@ export interface PlayerContent {
   /** A reference to the currently loaded library, if loaded */
   library?: MusicLibrary;
   /** A reference to the MusicPlayer */
-  player: MusicPlayer;
+  player?: MusicPlayer;
   /** A possible reference to the blockly workspace */
   workspaceRef?: MutableRefObject<Blockly.Workspace | null>;
   /** A possible reference to the JavaScript generator */
   javascriptGeneratorRef?: MutableRefObject<JavascriptGenerator | null>;
   /** A reference to the Driver */
-  driver: Driver;
+  driver?: Driver;
   /** An upcall to be registered with the Blockly workspace */
   onInject: (workspace: Blockly.WorkspaceSvg) => void;
   /** An upcall for Blockly events to be registered with the workspace */
@@ -63,12 +66,19 @@ export const PlayerProvider = ({api, children}: PlayerProviderProps) => {
   const workspaceRef = useRef<Blockly.WorkspaceSvg | null>(null);
   const javascriptGeneratorRef = useRef<JavascriptGenerator | null>(null);
 
+  const levelProperties = useLevelProperties<MusicLevelProperties>();
+
   const driver = useMemo(() => {
-    return new Driver(api);
-  }, [api]);
+    return api && levelProperties
+      ? new Driver(api, levelProperties)
+      : undefined;
+  }, [api, levelProperties]);
 
   const onInject = useCallback(
     (workspace: Blockly.WorkspaceSvg) => {
+      if (!driver) {
+        return;
+      }
       workspaceRef.current = workspace;
       driver.setWorkspace(workspace);
       driver.setJavascriptGenerator(javascriptGeneratorRef.current!);
@@ -84,6 +94,9 @@ export const PlayerProvider = ({api, children}: PlayerProviderProps) => {
   const selectedBlockId = useAppSelector(state => state.music.selectedBlockId);
   const onSelected = useCallback(
     (blockId?: string) => {
+      if (!driver) {
+        return;
+      }
       if (!driver.getIsPlaying()) {
         dispatch(musicActions.selectBlockId(blockId));
       }
@@ -95,22 +108,25 @@ export const PlayerProvider = ({api, children}: PlayerProviderProps) => {
     state => state.music.startingPlayheadPosition,
   );
   useEffect(
-    () => driver.setStartingPlayheadPosition(playheadPosition),
+    () => driver?.setStartingPlayheadPosition(playheadPosition),
     [driver, playheadPosition],
   );
 
   // Handle when an outsider sets the current block
   useEffect(() => {
     if (selectedBlockId) {
-      driver.selectBlock(selectedBlockId);
+      driver?.selectBlock(selectedBlockId);
     } else {
-      driver.clearSelection();
+      driver?.clearSelection();
     }
   }, [driver, selectedBlockId]);
 
   // Handle blockly events
   const onChange = useCallback(
     (event: Blockly.Events.Abstract) => {
+      if (!driver) {
+        return;
+      }
       driver.onBlockEvent(event);
 
       // Update undo status when blocks change.
@@ -129,6 +145,10 @@ export const PlayerProvider = ({api, children}: PlayerProviderProps) => {
   );
 
   useEffect(() => {
+    if (!driver) {
+      return;
+    }
+
     // Set these in the registry as well
     MusicRegistry.player = driver.player;
     MusicRegistry.analyticsReporter = driver.analyticsReporter;
@@ -189,6 +209,9 @@ export const PlayerProvider = ({api, children}: PlayerProviderProps) => {
     driver.addListener(DriverEvent.UpdatePosition, onUpdatePosition);
 
     return () => {
+      if (!driver) {
+        return;
+      }
       driver.removeListener(DriverEvent.LibraryUpdated, libraryHandler);
       driver.removeListener(DriverEvent.SetTrigger, setTriggerHandler);
       driver.removeListener(DriverEvent.Selected, onSelected);
@@ -203,7 +226,7 @@ export const PlayerProvider = ({api, children}: PlayerProviderProps) => {
 
   const loadAndInitializePlayer = useCallback(
     async (libraryName: string) => {
-      driver.loadAndInitializePlayer(libraryName);
+      driver?.loadAndInitializePlayer(libraryName);
     },
     [driver],
   );
@@ -213,7 +236,7 @@ export const PlayerProvider = ({api, children}: PlayerProviderProps) => {
       value={{
         loadAndInitializePlayer,
         library,
-        player: driver.player,
+        player: driver?.player,
         driver,
         workspaceRef,
         javascriptGeneratorRef,

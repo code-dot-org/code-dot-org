@@ -15,26 +15,35 @@ const baseCategoryCssConfig = {
 
 // Convert a simple toolbox array into a blockly toolbox info
 const convert: (map: {
-  [key: string]: (string | Blockly.utils.toolbox.BlockInfo)[];
+  [key: string]: string | (string | Blockly.utils.toolbox.BlockInfo)[];
 }) => Blockly.utils.toolbox.ToolboxInfo = map => ({
   kind: 'categoryToolbox',
   contents: Object.entries(map).map(([name, blocks]) => ({
     kind: 'category',
     name,
     cssconfig: baseCategoryCssConfig,
-    contents: blocks.map((type: string | Blockly.utils.toolbox.BlockInfo) => ({
-      ...(typeof type === 'string'
-        ? {
-            kind: 'block',
-            type,
-          }
-        : type),
-    })),
+    ...(typeof blocks === 'string' ? {custom: blocks} : {}),
+    ...(typeof blocks !== 'string'
+      ? {
+          contents: blocks.map(
+            (type: string | Blockly.utils.toolbox.BlockInfo) => ({
+              ...(typeof type === 'string'
+                ? {
+                    kind: 'block',
+                    type,
+                  }
+                : type),
+            }),
+          ),
+        }
+      : {}),
   })),
 });
 
 const map = {
   [BlockMode.SIMPLE2]: convert(simple2Toolbox),
 } as const;
+
+export * from './types';
 
 export default map;
