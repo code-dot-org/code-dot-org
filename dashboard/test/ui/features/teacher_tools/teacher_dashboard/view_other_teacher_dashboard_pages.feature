@@ -21,8 +21,8 @@ Feature: Views the pages on the teacher dashboard that are untested elsewhere
     And I wait until element "h6:contains(Icon Key)" is visible
     And I wait until element "#ui-test-progress-table-v2" is visible
     Then I click selector "#ui-test-toggle-progress-view"
-    And I wait until element "#uitest-course-dropdown" is visible
-    And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
+    And I wait until element "#unit-selector-v2" is visible
+    And I select the "All the Things! *" option in dropdown "unit-selector-v2"
 
     # Stats tab
     Given I click selector "#ui-test-teacher-sidebar a:contains('Stats')" once I see it
