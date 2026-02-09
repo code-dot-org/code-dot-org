@@ -108,10 +108,41 @@ export type Plugin =
  * Use this for plugins that just need to initialize behavior without
  * needing to implement Blockly interfaces.
  */
-export type InjectSetupFunction = (
+export type InjectSetupFunction<T = never> = (
   workspace: Blockly.WorkspaceSvg,
   theme: Theme,
-) => void;
+) => [T] extends [never] ? void : T;
+
+export type InjectChangeFunction<T = never> = [T] extends [never]
+  ? (event: Blockly.Events.Abstract) => void
+  : (event: Blockly.Events.Abstract, data: T) => void;
+
+export interface CreateInjectPluginOptionsBase {
+  useWithInline?: boolean;
+}
+
+export interface CreateInjectPluginOptionsWithInitAndChange<T = never>
+  extends CreateInjectPluginOptionsBase {
+  onInit: InjectSetupFunction<T>;
+  onChange: InjectChangeFunction<T>;
+}
+
+export interface CreateInjectPluginOptionsWithInit<T = never>
+  extends CreateInjectPluginOptionsBase {
+  onInit: InjectSetupFunction<T>;
+  onChange: never;
+}
+
+export interface CreateInjectPluginOptionsWithChange<T = never>
+  extends CreateInjectPluginOptionsBase {
+  onInit: never;
+  onChange: InjectChangeFunction<T>;
+}
+
+export type CreateInjectPluginOptions<T = never> =
+  | CreateInjectPluginOptionsWithInitAndChange<T>
+  | CreateInjectPluginOptionsWithChange<T>
+  | CreateInjectPluginOptionsWithInit<T>;
 
 /**
  * Creates an inject plugin from a simple setup function.
@@ -120,25 +151,35 @@ export type InjectSetupFunction = (
  * create DOM elements, or perform other initialization that doesn't require
  * extending Blockly classes.
  *
+ * The plugin must have either an onInit or an onChange or both.
+ *
  * @example
  * ```typescript
- * export const plugin = createInjectPlugin((workspace, theme) => {
- *   workspace.addChangeListener((event) => {
- *     // Handle workspace changes
- *   });
+ * export const plugin = createInjectPlugin({
+ *   onInit: (workspace, theme) => {
+ *     return new Foo(workspace, theme);
+ *   },
+ *   onChange: (event, foo) => {
+ *     foo.onChange(event);
+ *   },
  * });
  * ```
  */
-export function createInjectPlugin(
-  setup: InjectSetupFunction,
-  options?: {useWithInline?: boolean},
+export function createInjectPlugin<T = never>(
+  options: CreateInjectPluginOptions<T>,
 ): InjectPlugin {
   return {
     type: PluginType.Inject,
     useWithInline: options?.useWithInline,
     plugin: class {
       constructor(workspace: Blockly.WorkspaceSvg, theme: Theme) {
-        setup(workspace, theme);
+        const state = options.onInit?.(workspace, theme);
+
+        if (options?.onChange) {
+          workspace.addChangeListener((e: Blockly.Events.Abstract) => {
+            options.onChange(e, state as unknown as T);
+          });
+        }
       }
     },
   };
