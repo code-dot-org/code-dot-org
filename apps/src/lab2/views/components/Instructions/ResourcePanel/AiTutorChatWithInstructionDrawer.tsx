@@ -1,6 +1,6 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {throttle} from 'lodash';
-import React, {useState, useCallback, useMemo, useEffect} from 'react';
+import React, {useState, useCallback, useMemo, useEffect, useRef} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
@@ -19,12 +19,18 @@ interface AiTutorChatWithInstructionDrawerProps {
   aiTutorChatButtonData?: ChatButtonData[];
   aiTutorSystemPromptName?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
-  isInstructionsCollapsed?: boolean;
   instructionsContent?: React.ReactNode;
 }
+
 const MIN_CHAT_HEIGHT = 130; // Minimum so that user message editor is always visible + some chat.
 const MIN_INSTRUCTIONS_HEIGHT = 150;
 const DEFAULT_INITIAL_INSTRUCTIONS_HEIGHT = 250;
+
+const TOGGLE_BUTTON_ICONS = {
+  left: {iconName: 'info-circle', iconStyle: 'solid'} as const,
+  collapsed: {iconName: 'chevron-down', iconStyle: 'solid'} as const,
+  expanded: {iconName: 'chevron-up', iconStyle: 'solid'} as const,
+};
 
 const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   AiTutorChatWithInstructionDrawerProps
@@ -38,8 +44,8 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   aiTutorResponseSchemaSettings,
   instructionsContent,
 }) => {
-  const containerRef = React.useRef<HTMLDivElement>(null);
-  const instructionsContentRef = React.useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const instructionsContentRef = useRef<HTMLDivElement>(null);
   const [chatHeight, setChatHeight] = useState<number | undefined>(undefined);
   const [instructionsHeight, setInstructionsHeight] = useState<
     number | undefined
@@ -48,7 +54,6 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
     number | undefined
   >(undefined);
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const [toggleButtonText, setToggleButtonText] = useState('Hide Instructions');
 
   const {
     position: rawInstructionsHeight,
@@ -82,23 +87,24 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
       availableHeight - MIN_CHAT_HEIGHT
     );
     setInstructionsHeight(newInstructionsHeight);
-  }, [
-    isCollapsed,
-    rawInstructionsHeight,
-    setChatHeight,
-    setInstructionsHeight,
-  ]);
+  }, [isCollapsed, rawInstructionsHeight]);
 
   const throttledAdjustChatHeight = useMemo(
-    () =>
-      throttle(() => {
-        adjustChatHeight();
-      }, 30),
+    () => throttle(adjustChatHeight, 30),
     [adjustChatHeight]
   );
 
   useEffect(() => {
     throttledAdjustChatHeight();
+    return () => throttledAdjustChatHeight.cancel();
+  }, [throttledAdjustChatHeight]);
+
+  // Listen for window resize events
+  useEffect(() => {
+    window.addEventListener('resize', throttledAdjustChatHeight);
+    return () => {
+      window.removeEventListener('resize', throttledAdjustChatHeight);
+    };
   }, [throttledAdjustChatHeight]);
 
   // Measure the instructions content height once when loaded
@@ -120,9 +126,6 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
 
   const toggleInstructions = useCallback(() => {
     setIsCollapsed(prev => !prev);
-    setToggleButtonText(prev =>
-      prev === 'Hide Instructions' ? 'Show Instructions' : 'Hide Instructions'
-    );
   }, []);
 
   return (
@@ -142,15 +145,16 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
         <Button
           className={styles.toggleButton}
           onClick={toggleInstructions}
-          text={toggleButtonText}
+          text={isCollapsed ? 'Show Instructions' : 'Hide Instructions'}
           type="tertiary"
           size="xs"
           color="black"
-          iconLeft={{iconName: 'info-circle', iconStyle: 'solid'}}
-          iconRight={{
-            iconName: isCollapsed ? 'chevron-down' : 'chevron-up',
-            iconStyle: 'solid',
-          }}
+          iconLeft={TOGGLE_BUTTON_ICONS.left}
+          iconRight={
+            isCollapsed
+              ? TOGGLE_BUTTON_ICONS.collapsed
+              : TOGGLE_BUTTON_ICONS.expanded
+          }
         />
       </div>
       {!isCollapsed && (
@@ -160,19 +164,8 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
           isDragging={isDragging}
         />
       )}
-      <div
-        className={styles.chatPanel}
-        style={{
-          height: chatHeight,
-        }}
-      >
-        <div
-          style={{
-            height: '100%',
-            paddingTop: isCollapsed ? '40px' : '0',
-            boxSizing: 'border-box',
-          }}
-        >
+      <div className={styles.chatPanel} style={{height: chatHeight}}>
+        <div className={styles.chatContent}>
           <AiTutorChat
             hiddenContextCallback={hiddenContextCallback}
             aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
