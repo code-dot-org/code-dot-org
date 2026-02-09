@@ -17,11 +17,13 @@
   background: var(--background-neutral-primary);
   padding: 8px;
   box-sizing: border-box;
+  border-radius: 4px;
 }
 
 .instructionsScrollArea {
   height: 100%;
   overflow: auto;
+  border-radius: 4px;
 
   // Remove top/bottom padding from instructions bubbles so we add
   // custom padding to the instructions drawer.
