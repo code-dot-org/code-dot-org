@@ -215,7 +215,12 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
     );
     const completed = total - counts.incomplete;
     const accuracy =
-      completed === 0 ? 0 : Math.round((counts.correct / completed) * 100);
+      completed === 0
+        ? 0
+        : Math.round(
+            ((counts.correct + 0.5 * counts.partially_correct) / completed) *
+              100
+          );
     return {total, completed, accuracy, counts};
   }, [fetchedCfuLevels, statusBuckets]);
 
@@ -251,7 +256,7 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
 
   return (
     <WidgetTemplate
-      widgetName="CFU"
+      widgetName="Check For Understanding Questions"
       gridWidth={gridWidth}
       gridHeight={gridHeight}
       loading={loading}

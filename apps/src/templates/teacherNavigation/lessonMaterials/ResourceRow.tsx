@@ -3,7 +3,7 @@ import React from 'react';
 
 import i18n from '@cdo/locale';
 
-import {Resource} from './LessonMaterialTypes';
+import {CUSTOM_RESOURCE_TYPES, Resource} from './LessonMaterialTypes';
 import ResourceIcon from './ResourceIcon';
 import ResourceViewOptionsDropdown from './ResourceViewOptionsDropdown';
 
@@ -30,6 +30,8 @@ const ResourceRow: React.FC<ResourceRowProps> = ({unitNumber, resource}) => {
       } else {
         return i18n.unitVocabulary();
       }
+    } else if (CUSTOM_RESOURCE_TYPES.includes(resource.type)) {
+      return resource.title;
     } else {
       return `${resource.type}: ${resource.name}`;
     }

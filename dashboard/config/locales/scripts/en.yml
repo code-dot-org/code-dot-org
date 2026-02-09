@@ -26817,7 +26817,29 @@ en:
               name: Introducing AI for Educators
           lesson_groups: {}
           name: self-paced-pl-ai-101-v2-mod1
-          title: Introducing AI for Educators
+          title: Module 1, Introducing AI for Educators
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pl-sandbox-aif-sem-2-unit-5:
+          lessons:
+            lesson-1:
+              name: Teaching Designing Reliable Apps with AI and APIs
+          lesson_groups: {}
+          name: pl-sandbox-aif-sem-2-unit-5
+          title: 'Teaching Unit 5: Designing Reliable Apps with AI and APIs'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-ai-101-v2-mod2:
+          lessons:
+            lesson-1:
+              name: Understanding AI
+          lesson_groups: {}
+          name: self-paced-pl-ai-101-v2-mod2
+          title: Module 2, Understanding AI
           description_audience: ''
           description_short: ''
           description: ''
