@@ -9,6 +9,7 @@ import type {MusicApiClient} from './api';
 import AppConfig from './appConfig';
 import {BlockTypes} from './blockly/blockTypes';
 import {TRIGGER_FIELD} from './blockly/constants';
+import type {ToolboxData} from './blockly/toolbox';
 import {DEFAULT_BPM, DEFAULT_KEY, BlockMode, Triggers} from './constants';
 import type {CompiledEvents} from './Generator';
 import Generator, {Sequencers, triggerIdToEvent} from './Generator';
@@ -18,6 +19,7 @@ import MusicPlayer from './player/MusicPlayer';
 import MusicLibrary from './player/MusicLibrary';
 import Simple2Sequencer from './player/sequencer/Simple2Sequencer';
 import {KeyFromName, KeyMapping} from './utils/Notes';
+import type {MusicLevelProperties} from './types';
 import AnalyticsReporter from './LabMusicMetricsReporter';
 
 import type {LabMetricsReporter} from '@code-dot-org/lab';
@@ -89,6 +91,7 @@ export type PlaybackExecutionData = {
 class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEvents>) {
   protected readonly api: MusicApiClient;
   protected workspace?: Blockly.WorkspaceSvg;
+  protected toolbox: ToolboxData;
   protected javascriptGenerator?: JavascriptGenerator;
   protected generator?: Generator;
   protected library?: MusicLibrary;
@@ -101,10 +104,13 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
   private hasLoadedInitialSounds: boolean;
   private updateTimer?: ReturnType<typeof setInterval>;
   private startingPlayheadPosition: number;
+  private levelProperties: MusicLevelProperties;
 
-  constructor(api: MusicApiClient) {
+  constructor(api: MusicApiClient, levelProperties: MusicLevelProperties) {
     super();
 
+    this.levelProperties = levelProperties;
+    this.toolbox = levelProperties.levelData?.toolbox || {};
     this.api = api;
     this.hasLoadedInitialSounds = false;
     this.playingTriggers = [];
@@ -270,6 +276,10 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
 
     this.clearSelection();
     this.workspace.getBlockById(blockId)?.addSelect();
+  }
+
+  getLevelProperties() {
+    return this.levelProperties;
   }
 
   getSelectedTriggerId(blockId: string) {
@@ -664,6 +674,109 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
       newData.lastMeasure,
     );
   }
+
+  /**
+   * For each function body in the current workspace, add a function call
+   * block to the toolbox. Also add a function definition block, if needed.
+   *\/
+  generateFunctionBlocks() {
+    const workspace = this.workspace;
+    if (!workspace || workspace.isReadOnly()) {
+      return;
+    }
+
+    const blockList: Blockly.utils.toolbox.ToolboxItemInfo[] = [];
+
+    if (this.toolbox?.addFunctionDefinition) {
+      blockList.push({
+        kind: 'block',
+        type: BLOCK_TYPES.procedureDefinition,
+        id: BLOCK_TYPES.procedureDefinition,
+        fields: {
+          NAME: musicI18n.blockly_functionNamePlaceholder(),
+        },
+      });
+    }
+
+    const allFunctions: Blockly.serialization.procedures.State[] = [];
+
+    (
+      this.workspace?.getTopBlocks(
+        this.toolbox?.addFunctionCallsSortByPosition
+      ) as ProcedureBlock[]
+    )
+      .filter(
+        // When a block is dragged from the toolbox, an insertion marker is
+        // created with the same type. Insertion markers just provide a
+        // visual indication of where the actual block will go. They should
+        // not be counted here or we could end up with duplicate call blocks.
+        block =>
+          block.type === BLOCK_TYPES.procedureDefinition &&
+          !block.isInsertionMarker()
+      )
+      .forEach(block => {
+        allFunctions.push(
+          Blockly.serialization.procedures.saveProcedure(
+            block.getProcedureModel()
+          )
+        );
+      });
+
+    const compareFunction = this.toolbox?.addFunctionCallsSortByPosition
+      ? () => 0
+      : nameComparator;
+
+    allFunctions.sort(compareFunction).forEach(({name, id, parameters}) => {
+      blockList.push({
+        kind: 'block',
+        type: BLOCK_TYPES.procedureCall,
+        extraState: {
+          name,
+          id,
+          params: parameters?.map(param => param.name),
+        },
+      });
+    });
+
+    if (this.blockMode) {
+      const existingToolbox =
+        this.toolboxDefinition || getToolbox(this.blockMode, this.toolbox);
+      // Perform a copy of the toolbox contents to avoid modifying the original
+      // this.toolboxDefinition object.
+      const updatedToolbox = {
+        ...existingToolbox,
+        contents: [...existingToolbox.contents, ...blockList],
+      };
+      const workspace = this.workspace as Blockly.WorkspaceSvg;
+      workspace.updateToolbox(updatedToolbox);
+
+      if (workspace.RTL) {
+        // When the flyout is dynamically populated, the flyout width can increase,
+        // thereby overlapping start blocks in RTL. If this happens, we move the
+        // blocks back to the left
+        // Relates to https://github.com/google/blockly/issues/8637
+        const flyout = workspace.getFlyout();
+        const metricsManager = workspace.getMetricsManager();
+        const flyoutWidth = flyout?.getWidth() || 0;
+
+        if (flyoutWidth) {
+          const {left: contentLeft, width: contentWidth} =
+            metricsManager.getContentMetrics();
+          const viewWidth = metricsManager.getViewMetrics().width;
+
+          const contentRight = contentLeft + contentWidth;
+          const expectedMargin = 20; // Add space between right-most block and flyout
+          const overlapAmount = contentRight - viewWidth + expectedMargin;
+
+          if (overlapAmount > 0) {
+            workspace
+              .getTopBlocks()
+              .forEach(block => block.moveBy(-overlapAmount, 0));
+          }
+        }
+      }
+    }
+  }*/
 }
 
 export default Driver;

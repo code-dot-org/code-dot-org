@@ -47,7 +47,7 @@ const map = {
       },
     },
   ],
-  Functions: [],
+  Functions: 'PROCEDURE',
 };
 
 export default map;

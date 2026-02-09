@@ -91,12 +91,12 @@ const MusicLab = () => {
   } = useContext(PlayerContext);
 
   const hideChaff = useCallback(() => {}, []);
-  const undo = useCallback(() => driver.undo(), [driver]);
-  const redo = useCallback(() => driver.redo(), [driver]);
+  const undo = useCallback(() => !!driver?.undo(), [driver]);
+  const redo = useCallback(() => !!driver?.redo(), [driver]);
   const clearCode: (maintainPackId?: boolean) => void = _ => {};
   const allowPackSelection = true;
   const setPlaying = useCallback(
-    (play: boolean) => driver.setPlaying(play),
+    (play: boolean) => driver?.setPlaying(play),
     [driver],
   );
   const triggers: Trigger[] = [];

@@ -1,8 +1,8 @@
 export * from './types';
-export * as hooks from './hooks';
-export * as utils from './utils';
-export * as dialogs from './dialogs';
-export * as LabConstants from './constants';
+export * from './hooks';
+export * from './utils';
+export * from './dialogs';
+export * from './constants';
 export * from './LifecycleNotifier';
 export {default as LifecycleNotifier} from './LifecycleNotifier';
 export * from './components';
