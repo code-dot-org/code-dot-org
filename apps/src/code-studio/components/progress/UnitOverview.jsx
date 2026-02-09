@@ -10,6 +10,7 @@ import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstan
 import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import RequiresAiChatToolsAlert from '@cdo/apps/templates/courseOverview/RequiresAiChatToolsAlert';
 import EndOfLessonDialog from '@cdo/apps/templates/EndOfLessonDialog';
 import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/GoogleClassroomAttributionLabel';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
@@ -22,6 +23,8 @@ import {
   onDismissRedirectDialog,
   dismissedRedirectDialog,
 } from '@cdo/apps/util/dismissVersionRedirect';
+import experiments from '@cdo/apps/util/experiments';
+import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import UnitCalendarGrid from './UnitCalendarGrid';
@@ -66,6 +69,8 @@ class UnitOverview extends React.Component {
     participantAudience: PropTypes.string,
     showAiAssessmentsAnnouncement: PropTypes.bool,
     isOnTeacherDashboard: PropTypes.bool,
+    aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
+      .isRequired,
 
     // redux provided
     scriptId: PropTypes.number.isRequired,
@@ -158,6 +163,7 @@ class UnitOverview extends React.Component {
       participantAudience,
       showAiAssessmentsAnnouncement,
       isOnTeacherDashboard = false,
+      aiChatToolsDependency,
     } = this.props;
 
     const displayRedirectDialog =
@@ -216,6 +222,11 @@ class UnitOverview extends React.Component {
               teacherResources={teacherResources}
               isMigrated={isMigrated}
             />
+            {experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
+              viewAs === ViewType.Instructor &&
+              aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
+                <RequiresAiChatToolsAlert />
+              )}
           </UnitOverviewHeader>
           {/* unit-calendar-for-printing has style `display: none` from `style/curriculum/scripts.scss` which is added from the BE */}
           {showCalendar && viewAs === ViewType.Instructor && (
