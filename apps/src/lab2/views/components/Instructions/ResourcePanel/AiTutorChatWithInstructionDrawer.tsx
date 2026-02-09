@@ -174,6 +174,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
             aiTutorChatButtonData={aiTutorChatButtonData}
             aiTutorSystemPromptName={aiTutorSystemPromptName}
             aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
+            hasCollapsedInstructionsDrawer={isCollapsed}
           />
         </div>
       </div>
