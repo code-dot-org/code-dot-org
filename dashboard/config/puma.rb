@@ -40,3 +40,9 @@ end
 after_booted do
   Cdo::AppServerHooks.after_booted
 end
+
+# Enable the Puma control server with a Unix socket.
+if CDO.puma_control_server_token
+  control_socket = "unix://#{dashboard_dir(CDO.puma_control_server_relative_socket_path)}"
+  activate_control_app control_socket, {auth_token: CDO.puma_control_server_token}
+end
