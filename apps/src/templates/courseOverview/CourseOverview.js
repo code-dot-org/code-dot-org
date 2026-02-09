@@ -25,6 +25,7 @@ import {
   onDismissRedirectWarning,
   dismissedRedirectWarning,
 } from '@cdo/apps/util/dismissVersionRedirect';
+import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 import SafeMarkdown from '../SafeMarkdown';
@@ -213,7 +214,9 @@ class CourseOverview extends Component {
           title={title}
           participantAudience={participantAudience}
         />
-        {viewAsTeacher && courseAlert}
+        {experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
+          viewAsTeacher &&
+          courseAlert}
         <SafeMarkdown
           style={styles.description}
           openExternalLinksInNewTab={true}
