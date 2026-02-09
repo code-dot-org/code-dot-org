@@ -2,6 +2,7 @@ import {LinkButton} from '@code-dot-org/component-library/button';
 import {
   BodyFourText,
   BodyThreeText,
+  BodyTwoText,
   Heading5,
 } from '@code-dot-org/component-library/typography';
 import React from 'react';
@@ -36,10 +37,7 @@ export default function LinkToRubricEditor({lessons}: LinkToRubricEditorProps) {
       )}
       <div className={moduleStyles.rubricButtonContainer}>
         {lessons.map(lesson => (
-          <div key={lesson.id}>
-            <BodyThreeText>
-              Script: {lesson.script_name || 'NONE'}, Lesson: {lesson.name}
-            </BodyThreeText>
+          <div key={lesson.id} className={moduleStyles.rubricRow}>
             {lesson.rubric_id ? (
               <LinkButton
                 href={'/rubrics/' + lesson.rubric_id + '/edit'}
@@ -55,6 +53,10 @@ export default function LinkToRubricEditor({lessons}: LinkToRubricEditorProps) {
                 size={'s'}
               />
             )}
+            <BodyTwoText className={moduleStyles.lessonText}>
+              <b>Script:</b> {lesson.script_name || 'NONE'}, <b>Lesson:</b>{' '}
+              {lesson.name}
+            </BodyTwoText>
           </div>
         ))}
       </div>
