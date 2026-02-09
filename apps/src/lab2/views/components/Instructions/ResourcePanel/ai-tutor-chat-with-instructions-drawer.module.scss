@@ -12,9 +12,22 @@
 }
 
 .instructionsDrawer {
-  overflow: auto;
   flex-shrink: 0;
   position: relative;
+  background: var(--background-neutral-primary);
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.instructionsScrollArea {
+  height: 100%;
+  overflow: auto;
+
+  // Remove top/bottom padding from instructions bubbles so we add
+  // custom padding to the instructions drawer.
+  :global(.instructions) {
+    padding: 0;
+  }
 }
 
 .chatPanel {

@@ -131,7 +131,9 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
         className={styles.instructionsDrawer}
         style={{height: instructionsHeight}}
       >
-        <div ref={instructionsContentRef}>{instructionsContent}</div>
+        <div className={styles.instructionsScrollArea}>
+          <div ref={instructionsContentRef}>{instructionsContent}</div>
+        </div>
       </div>
       <div
         className={styles.toggleButtonContainer}
