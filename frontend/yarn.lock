@@ -1840,7 +1840,6 @@ __metadata:
     "@code-dot-org/lint-config": "workspace:*"
     "@code-dot-org/markdown": "workspace:*"
     "@code-dot-org/platform": "workspace:*"
-    "@code-dot-org/projects": "workspace:*"
     "@code-dot-org/teacher-dashboard": "workspace:*"
     "@code-dot-org/user": "workspace:*"
     "@eslint/js": "npm:^9.15.0"
@@ -2039,7 +2038,6 @@ __metadata:
   dependencies:
     "@code-dot-org/core": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
-    "@code-dot-org/projects": "workspace:*"
     "@code-dot-org/user": "workspace:*"
     "@reduxjs/toolkit": "npm:^2.8.2"
     "@types/node": "npm:^20"
@@ -2060,62 +2058,6 @@ __metadata:
     vitest: "npm:^4.0.17"
   peerDependencies:
     react: ^17.0.0 || ^18.0.0 || ^19.0.0
-  languageName: unknown
-  linkType: soft
-
-"@code-dot-org/projects@workspace:*, @code-dot-org/projects@workspace:packages/projects":
-  version: 0.0.0-use.local
-  resolution: "@code-dot-org/projects@workspace:packages/projects"
-  dependencies:
-    "@code-dot-org/changelogs": "workspace:*"
-    "@code-dot-org/core": "workspace:*"
-    "@code-dot-org/lint-config": "workspace:*"
-    "@code-dot-org/user": "workspace:*"
-    "@eslint/js": "npm:^9.15.0"
-    "@release-it/conventional-changelog": "npm:^10.0.0"
-    "@swc/core": "npm:^1.9.3"
-    "@swc/jest": "npm:^0.2.37"
-    "@testing-library/dom": "npm:^10.4.0"
-    "@testing-library/jest-dom": "npm:^6.6.3"
-    "@testing-library/react": "npm:^16.0.1"
-    "@types/identity-obj-proxy": "npm:^3"
-    "@types/jest": "npm:^29.5.14"
-    "@types/js-cookie": "npm:^3"
-    "@types/lodash": "npm:^4"
-    "@types/node": "npm:^22.9.0"
-    "@types/react": "npm:^18.3.12"
-    "@types/react-dom": "npm:^18.3.1"
-    axe-playwright: "npm:^2.0.3"
-    classnames: "npm:^2.5.1"
-    clean-package: "npm:^2.2.0"
-    esbuild-sass-plugin: "npm:^3.3.1"
-    eslint: "npm:^9.15.0"
-    eslint-plugin-jest: "npm:^28.9.0"
-    eslint-plugin-react: "npm:^7.37.2"
-    glob: "npm:^11.0.0"
-    globals: "npm:^15.12.0"
-    identity-obj-proxy: "npm:^3.0.0"
-    jest: "npm:^29.7.0"
-    jest-environment-jsdom: "npm:^29.7.0"
-    postcss: "npm:^8.4.49"
-    postcss-modules: "npm:^6.0.1"
-    prettier: "npm:3.4.2"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
-    release-it: "npm:^18.1.2"
-    rimraf: "npm:^6.0.1"
-    schema-dts: "npm:^1.1.5"
-    stylelint: "npm:^16.14.1"
-    swiper: "npm:^11.0.5"
-    tsc-alias: "npm:^1.8.11"
-    tsup: "npm:^8.3.5"
-    typescript: "npm:^5.7.3"
-    typescript-eslint: "npm:^8.15.0"
-  peerDependencies:
-    classnames: ^2.5.1
-    react: ">=16"
-    react-dom: ">=16"
-    swiper: ^11.0.5
   languageName: unknown
   linkType: soft
 

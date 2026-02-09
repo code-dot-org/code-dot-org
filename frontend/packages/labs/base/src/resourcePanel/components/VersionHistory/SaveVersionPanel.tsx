@@ -2,7 +2,7 @@ import type {FunctionComponent} from 'react';
 import {useCallback, useState} from 'react';
 
 import {Button} from '@code-dot-org/component-library/button';
-import type {ProjectSources} from '@code-dot-org/projects';
+import type {ProjectSources} from '@code-dot-org/platform/projects';
 import {useApiClient, useUpdateCommit} from '@code-dot-org/core/api';
 
 import LabRegistry from '../../../LabRegistry';

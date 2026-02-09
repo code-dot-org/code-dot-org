@@ -391,6 +391,10 @@ export default class ProjectManager {
     this.forceNewVersion = value;
   }
 
+  getIsStandaloneProjectLevel(): boolean {
+    return this.isStandaloneProjectLevel;
+  }
+
   /**
    * Initialize the forceNewVersion value by checking if the current version has a comment.
    * If the current version has a comment, we set forceNewVersion to true.
