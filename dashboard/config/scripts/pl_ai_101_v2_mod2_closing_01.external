@@ -1,0 +1,115 @@
+name 'pl-ai-101-V2-mod2-closing-01'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Wrap-Up
+
+<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
+
+  <div>
+    <h4 style="margin-top: 0; font-weight: bold;">In this professional learning module, you learned to:</h4>
+    <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
+      <li>Explain what AI is as well as it's impact on industry and education.
+</li><br>
+	  <li>Realize the benefits and address the risks of AI in an educational setting.
+</li><br>
+      <li>Describe AI Literacy and explain the benefits of AI literacy for both educators and students.</li>
+    </ul>
+  </div>
+  <div>
+    <img src="https://images.code.org/89644a0804bcdfc2839b17f70bcef23c-Screenshot 2025-12-04 at 2.33.30 PM.png" 
+         alt="Icon with computer and weblayout" 
+         style="border-radius: 10px; width: 200px; height: auto;">
+  </div>
+</div>
+
+## Resources
+* #### <a href="https://www.teachai.org/" target="_blank">TeachAI.org</a> Empowering educators to teach with and about AI.
+* #### <a href="https://www.teachai.org/ailiteracy" target="_blank">AILit Framework</a> from TeachAI.org.
+* #### <a href="https://quickdraw.withgoogle.com/" target="_blank">Quick, Draw with Google</a> a quick and fun AI-powered game.
+* #### <a href="https://www.khanmigo.ai/" target="_blank">Khanmigo</a> Khanacademy’s on-demand AI-powered support for education.
+* #### <a href="https://labs.google/" target="_blank">Labs.Google</a> Google’s home for the latest AI tools, technology and discourse.
+
+
+## Take it Further
+
+#### Want to learn more? Try out the following optional activities.
+  <!-- Dropdown 1 -->
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 16px; font-weight: bold">
+	Learn More About AI
+</summary>
+
+<div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">A TED Talk is a short, powerful presentation, typically 18 minutes or less, given by experts on a wide range of topics including technology, entertainment, and design, aimed at spreading innovative ideas and sparking discussion. <br> Learn some more about AI on your own. Watch one or more AI-themed Ted Talks. 
+</p>
+
+<a href="https://www.ted.com/playlists/310/artificial_intelligence" 
+         target="blank" 
+         rel="noopener noreferrer" 
+         style="display: inline-block; margin-top: 5px; padding: 8px 12px; background-color: #026C7A; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 14px;">Check it Out
+</a>
+</div>
+
+</details>
+
+  <!-- Dropdown 2 -->
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 16px; font-weight: bold">
+	AI Literacy Activities for the Classroom
+</summary>
+
+<div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">TeachAI.org has ready-to-use AI Literacy focused activity ideas for every subject. Designed to fit into a 40-minute class with almost no prep required.<br> Review these activities and choose one to implement in your classroom.
+</p>
+
+<a href="https://www.teachai.org/media/learningscenarios_deck_final-j9gmue" 
+         target="blank" 
+         rel="noopener noreferrer" 
+         style="display: inline-block; margin-top: 5px; padding: 8px 12px; background-color: #026C7A; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 14px;">Check it Out
+</a>
+</div>
+
+</details>
+
+## What's Next in AI 101 for Educators?
+
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="width:100%; max-width:1200px; border-collapse:separate; border-spacing:10px; font-family:Arial, Helvetica, sans-serif; color:#1f2937;">
+<tr>
+<td style="vertical-align:top; text-align:center">
+<img src="https://images.code.org/8a0afcbf8eec19ee302524d55d369e5b-Screenshot 2026-02-02 at 5.37.35 PM.png" alt="Introducing AI for Educators" style="width:120px; height:100px; object-fit:contain; border-radius:10px" />
+</td>
+<td style="vertical-align:top; text-align:center">
+<img src="https://images.code.org/47091c530a718287c97c673d46bab250-Screenshot 2026-02-02 at 5.37.39 PM.png" alt="Understanding AI" style="width:120px; height:100px; object-fit:contain; border-radius:10px" />
+</td>
+<td style="vertical-align:top; text-align:center">
+<img src="https://images.code.org/e2f4139ad5096ba48d7e24a0f76cdee4-Screenshot 2026-02-02 at 5.37.44 PM.png" alt="Transforming Teaching with AI" style="width:120px; height:100px; object-fit:contain; border-radius:10px" />
+</td>
+<td style="vertical-align:top; text-align:center">
+<img src="https://images.code.org/ac4dbf456a579082128e1ae7e88a5445-Screenshot 2026-02-02 at 5.37.56 PM.png" alt="Bringing AI to the Classroom" style="width:120px; height:100px; object-fit:contain; border-radius:10px" />
+</td>
+<td style="vertical-align:top; text-align:center">
+<img src="https://images.code.org/8de92072252f06e0169337be9cbddc7e-Screenshot 2026-02-02 at 5.38.01 PM.png" alt="Ensuring a Responsible Approach to AI" style="width:120px; height:100px; object-fit:contain; border-radius:10px" />
+</td>
+</tr>
+<tr>
+<td style="font-size:16px; font-weight:700; text-align:center">Introducing AI for Educators</td>
+<td style="font-size:16px; font-weight:700; text-align:center">Understanding AI</td>
+<td style="font-size:16px; font-weight:700; text-align:center">Transforming Teaching with AI</td>
+<td style="font-size:16px; font-weight:700; text-align:center">Bringing AI to the Classroom</td>
+<td style="font-size:16px; font-weight:700; text-align:center">Responsible Approach to AI</td>
+</tr>
+<tr>
+<td style="font-size:14px; color:#4b5563; line-height:1.5; text-align:center">Explore the benefits and risks of AI and why AI literacy matters.</td>
+<td style="font-size:14px; color:#4b5563; line-height:1.5; text-align:center">Build a foundation by learning core AI concepts and real-world examples.</td>
+<td style="font-size:14px; color:#4b5563; line-height:1.5; text-align:center">Learn how AI tools can support planning, feedback, and instructional tasks.</td>
+<td style="font-size:14px; color:#4b5563; line-height:1.5; text-align:center">Plan thoughtful ways to introduce AI to students using inclusive practices.</td>
+<td style="font-size:14px; color:#4b5563; line-height:1.5; text-align:center">Focus on ethics, bias, safety, and data privacy when using AI.</td>
+</tr>
+</table>
+
+
+MARKDOWN
