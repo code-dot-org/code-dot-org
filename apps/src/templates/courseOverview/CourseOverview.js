@@ -26,12 +26,14 @@ import {
   dismissedRedirectWarning,
 } from '@cdo/apps/util/dismissVersionRedirect';
 import experiments from '@cdo/apps/util/experiments';
+import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import SafeMarkdown from '../SafeMarkdown';
 
 import CourseOverviewActionRow from './CourseOverviewActionRow';
 import CourseScript from './CourseScript';
+import RequiresAiChatToolsAlert from './RequiresAiChatToolsAlert';
 import VerifiedResourcesNotification from './VerifiedResourcesNotification';
 
 class CourseOverview extends Component {
@@ -58,7 +60,8 @@ class CourseOverview extends Component {
     userId: PropTypes.number,
     userType: PropTypes.string,
     participantAudience: PropTypes.string,
-    courseAlert: PropTypes.node,
+    aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
+      .isRequired,
     // Redux
     announcements: PropTypes.arrayOf(announcementShape),
     isSignedIn: PropTypes.bool.isRequired,
@@ -149,7 +152,7 @@ class CourseOverview extends Component {
       userId,
       isSignedIn,
       participantAudience,
-      courseAlert,
+      aiChatToolsDependency,
     } = this.props;
 
     const viewAsTeacher = viewAs === ViewType.Instructor;
@@ -216,7 +219,9 @@ class CourseOverview extends Component {
         />
         {experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
           viewAsTeacher &&
-          courseAlert}
+          aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
+            <RequiresAiChatToolsAlert />
+          )}
         <SafeMarkdown
           style={styles.description}
           openExternalLinksInNewTab={true}
