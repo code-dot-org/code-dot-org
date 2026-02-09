@@ -17,4 +17,9 @@
 #  index_aidiff_artifacts_on_user_id           (user_id)
 #
 class AidiffExitTicket < AidiffArtifact
+  def summarize
+    super.merge(
+      url: "/aidiff_exit_tickets/#{id}"
+    )
+  end
 end

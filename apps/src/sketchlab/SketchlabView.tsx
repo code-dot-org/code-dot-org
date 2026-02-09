@@ -247,11 +247,22 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         });
 
         if (newFiles && !readonlyWorkspace) {
-          uploadExternalFiles(
+          const newFilesWithUploadStatus = await uploadExternalFiles(
             newFiles,
             serializedData.files,
             filesBeingUploadedRef
           );
+
+          // We update sources again on upload completion to update the upload status of the new files.
+          updateSources({
+            source: {
+              ...serializedData,
+              externalFiles: {
+                ...currentSources.source.externalFiles,
+                ...newFilesWithUploadStatus,
+              },
+            },
+          });
         }
       }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
     },

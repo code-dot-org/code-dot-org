@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-02-04 20:09:00 UTC",
+    "serialized_at": "2026-02-06 19:23:43 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -438,6 +438,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod1-impact-05"
+        ],
         "progression": "Impact of AI on Education"
       },
       "bonus": false,

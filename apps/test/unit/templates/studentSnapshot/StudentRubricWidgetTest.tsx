@@ -26,6 +26,16 @@ jest.mock('@cdo/apps/templates/rubrics/LearningGoals', () => {
   };
 });
 
+// Mock RubricSubmitFooter component
+jest.mock('@cdo/apps/templates/rubrics/RubricSubmitFooter', () => {
+  return function MockRubricSubmitFooter() {
+    return (
+      // eslint-disable-next-line react/forbid-dom-props
+      <div data-testid="rubric-submit-footer">RubricSubmitFooter Component</div>
+    );
+  };
+});
+
 // Mock Redux store
 const mockStore = createStore(() => ({
   teacherSections: {
