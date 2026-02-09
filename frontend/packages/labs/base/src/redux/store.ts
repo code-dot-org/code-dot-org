@@ -8,7 +8,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import {progressSlice} from '@code-dot-org/platform/progress';
 import {default as defaultStore, injectSlices} from '@code-dot-org/core/redux';
 import {teacherSectionsSlice} from '@code-dot-org/teacher-dashboard/redux';
-import {currentUserSlice} from '@code-dot-org/user/redux';
+import {currentUserSlice} from '@code-dot-org/platform/user';
 
 import labProjectSlice from './labProjectSlice';
 import labSlice from './labSlice';

@@ -1,6 +1,6 @@
 import type {FunctionComponent, PropsWithChildren} from 'react';
 
-import {CourseRoles} from '@code-dot-org/user';
+import {CourseRoles} from '@code-dot-org/platform/user';
 
 import {useAppSelector} from '../../redux/store';
 
