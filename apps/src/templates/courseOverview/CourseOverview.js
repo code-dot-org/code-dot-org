@@ -25,6 +25,7 @@ import {
   onDismissRedirectWarning,
   dismissedRedirectWarning,
 } from '@cdo/apps/util/dismissVersionRedirect';
+import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import SafeMarkdown from '../SafeMarkdown';
@@ -57,7 +58,8 @@ class CourseOverview extends Component {
     userId: PropTypes.number,
     userType: PropTypes.string,
     participantAudience: PropTypes.string,
-    aiChatToolsDependency: PropTypes.string,
+    aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
+      .isRequired,
     // Redux
     announcements: PropTypes.arrayOf(announcementShape),
     isSignedIn: PropTypes.bool.isRequired,
