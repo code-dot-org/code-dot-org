@@ -15,15 +15,17 @@ import {TEACHER_NAVIGATION_PATHS} from '../teacherNavigation/TeacherNavigationPa
 
 import styles from './course-overview.module.scss';
 
-const RequiresAiChatToolsAlert: React.FC<{
-  aiChatAccessLevel?: AiChatAccessLevel;
-}> = ({aiChatAccessLevel}) => {
+const RequiresAiChatToolsAlert: React.FC = () => {
   const selectedSection = useAppSelector(selectedSectionSelector);
   const handleReviewAiSettings = React.useCallback(() => {
     navigateToHref(
       `/teacher_dashboard/sections/${selectedSection.id}/${TEACHER_NAVIGATION_PATHS.aiChatSettings}`
     );
   }, [selectedSection]);
+
+  const aiChatAccessLevel = selectedSection?.aiChatAccessLevel as
+    | AiChatAccessLevel
+    | undefined;
 
   return (
     <>

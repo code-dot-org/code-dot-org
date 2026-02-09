@@ -268,11 +268,7 @@ const TeacherCourseOverview: React.FC = () => {
       participantAudience={courseSummary.participant_audience}
       courseAlert={
         courseSummary.ai_chat_tools_dependency ===
-          AiChatToolsDependency.ESSENTIAL && (
-          <RequiresAiChatToolsAlert
-            aiChatAccessLevel={selectedSection?.aiChatAccessLevel}
-          />
-        )
+          AiChatToolsDependency.ESSENTIAL && <RequiresAiChatToolsAlert />
       }
     />
   );
