@@ -465,9 +465,16 @@ const ResourcePanel: FunctionComponent<ResourcePanelProps> = ({
                 >
                   <Button
                     className={styles.resourcePanelButton}
-                    onClick={() =>
-                      dispatch(setIsStandaloneCollapsed(!isStandaloneCollapsed))
-                    }
+                    onClick={() => {
+                      dispatch(
+                        setIsStandaloneCollapsed(!isStandaloneCollapsed),
+                      );
+
+                      // If no tab is selected... selected the first tab
+                      if (!currentTab) {
+                        setCurrentTab(getTypedKeys(availableTabs)[0]);
+                      }
+                    }}
                     isIconOnly={true}
                     icon={{
                       iconName: isStandaloneCollapsed
@@ -499,7 +506,8 @@ const ResourcePanel: FunctionComponent<ResourcePanelProps> = ({
                     <Button
                       className={classNames(
                         styles.tabButton,
-                        tab === currentTab && styles.selected,
+                        (tab === currentTab || isStandaloneCollapsed) &&
+                          styles.selected,
                         tab === Tabs.TeachersOnly && styles.teachersOnlyTab,
                       )}
                       onClick={() => onClickTab(tab)}

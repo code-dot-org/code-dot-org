@@ -238,88 +238,79 @@ const MusicLab = () => {
                 versionHistoryProps={{startSources, alwaysShowAutoSaves: true}}
               />
             </div>
-
-            <div id="blockly-area" className={moduleStyles.blocklyArea}>
-              <PanelContainer
-                id="workspace-panel"
-                headerContent={<WorkspaceHeader />}
-                hideHeaders={hideHeaders}
-                rightHeaderContent={
-                  <HeaderButtons
-                    onClickUndo={undo}
-                    onClickRedo={redo}
-                    clearCode={clearCode}
-                    allowPackSelection={allowPackSelection}
-                    skipUrl={skipUrl}
-                    hideChaff={hideChaff}
-                  />
-                }
-                headerClassName={moduleStyles.headerWithBorder}
-              >
-                <BlocklyWorkspace
-                  className={moduleStyles.blocklyWorkspace}
-                  options={{
-                    readOnly: levelProperties.multipleChoice ? true : undefined,
-                    trashcan: false,
-                  }}
-                  startBlocks={
-                    currentSources?.source ||
-                    levelProperties.startBlocks ||
-                    DefaultStartBlocks
-                  }
-                  toolboxBlocks={toolboxBlocks}
-                  onInject={onInject}
-                  onChange={onChange}
-                  javascriptGeneratorRef={javascriptGeneratorRef}
+            <PanelContainer
+              className={moduleStyles.blocklyArea}
+              id="workspace-panel"
+              headerContent={<WorkspaceHeader />}
+              hideHeaders={hideHeaders}
+              rightHeaderContent={
+                <HeaderButtons
+                  onClickUndo={undo}
+                  onClickRedo={redo}
+                  clearCode={clearCode}
+                  allowPackSelection={allowPackSelection}
+                  skipUrl={skipUrl}
+                  hideChaff={hideChaff}
                 />
-              </PanelContainer>
-            </div>
+              }
+              headerClassName={moduleStyles.headerWithBorder}
+            >
+              <BlocklyWorkspace
+                className={moduleStyles.blocklyWorkspace}
+                options={{
+                  readOnly: levelProperties.multipleChoice ? true : undefined,
+                  trashcan: false,
+                }}
+                startBlocks={
+                  currentSources?.source ||
+                  levelProperties.startBlocks ||
+                  DefaultStartBlocks
+                }
+                toolboxBlocks={toolboxBlocks}
+                onInject={onInject}
+                onChange={onChange}
+                javascriptGeneratorRef={javascriptGeneratorRef}
+              />
+            </PanelContainer>
           </div>
 
           {!isToolboxMode && (
             <div id="play-area" className={classNames(moduleStyles.playArea)}>
-              <div id="controls-area" className={moduleStyles.controlsArea}>
-                <PanelContainer
-                  id="controls-panel"
-                  headerContent="Controls"
-                  hideHeaders={hideHeaders}
-                >
-                  <Controls
-                    setPlaying={setPlaying}
-                    playTrigger={playTrigger}
-                    triggers={triggers}
-                    isPredictLevel={
-                      levelProperties.predictSettings?.isPredictLevel
-                    }
-                    enableSkipControls={
-                      AppConfig.getValue('skip-controls-enabled') === 'true'
-                    }
-                  />
-                </PanelContainer>
-              </div>
-
-              <div
-                dir="ltr"
-                id="timeline-area"
+              <PanelContainer
+                className={moduleStyles.controlsArea}
+                id="controls-panel"
+                headerContent="Controls"
+                hideHeaders={hideHeaders}
+              >
+                <Controls
+                  setPlaying={setPlaying}
+                  playTrigger={playTrigger}
+                  triggers={triggers}
+                  isPredictLevel={
+                    levelProperties.predictSettings?.isPredictLevel
+                  }
+                  enableSkipControls={
+                    AppConfig.getValue('skip-controls-enabled') === 'true'
+                  }
+                />
+              </PanelContainer>
+              <PanelContainer
                 className={moduleStyles.timelineArea}
+                id="timeline-panel"
+                headerContent="Timeline"
+                hideHeaders={hideHeaders}
                 ref={timelineAreaRef}
               >
-                <PanelContainer
-                  id="timeline-panel"
-                  headerContent="Timeline"
-                  hideHeaders={hideHeaders}
-                >
-                  <Timeline
-                    allowChangeStartingPlayheadPosition={
-                      levelProperties.levelData
-                        ?.allowChangeStartingPlayheadPosition
-                    }
-                    isPredictLevel={
-                      levelProperties.predictSettings?.isPredictLevel
-                    }
-                  />
-                </PanelContainer>
-              </div>
+                <Timeline
+                  allowChangeStartingPlayheadPosition={
+                    levelProperties.levelData
+                      ?.allowChangeStartingPlayheadPosition
+                  }
+                  isPredictLevel={
+                    levelProperties.predictSettings?.isPredictLevel
+                  }
+                />
+              </PanelContainer>
             </div>
           )}
         </div>
