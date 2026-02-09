@@ -288,7 +288,8 @@ MultipleSectionsAssigner.propTypes = {
   participantAudience: PropTypes.string,
   onAssignSuccess: PropTypes.func,
   sectionDirections: PropTypes.string,
-  aiChatToolsDependency: PropTypes.string,
+  aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
+    .isRequired,
   // Redux
   sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
   unassignSection: PropTypes.func.isRequired,

@@ -33,6 +33,7 @@ import {
   unassignSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {
@@ -162,7 +163,8 @@ CurriculumCatalogCard.propTypes = {
   isSignedOut: PropTypes.bool.isRequired,
   recommendedSimilarCurriculum: PropTypes.object,
   recommendedStretchCurriculum: PropTypes.object,
-  aiChatToolsDependency: PropTypes.string,
+  aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
+    .isRequired,
 };
 
 const CustomizableCurriculumCatalogCard = ({
@@ -457,7 +459,8 @@ CustomizableCurriculumCatalogCard.propTypes = {
   courseDisplayNameWithLatestYear: PropTypes.string.isRequired,
   duration: PropTypes.string.isRequired,
   gradeRange: PropTypes.string.isRequired,
-  aiChatToolsDependency: PropTypes.string,
+  aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
+    .isRequired,
   imageSrc: PropTypes.string.isRequired,
   isTranslated: PropTypes.bool,
   isEnglish: PropTypes.bool,
