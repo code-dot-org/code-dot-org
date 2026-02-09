@@ -29,6 +29,7 @@ interface CFUQuestionProps {
   statusBucket: StatusBucket;
   isOpen: boolean;
   onToggle: () => void;
+  hasAiInsight?: boolean;
 }
 
 const CFUQuestion: React.FC<CFUQuestionProps> = ({
@@ -37,6 +38,8 @@ const CFUQuestion: React.FC<CFUQuestionProps> = ({
   statusBucket,
   isOpen,
   onToggle,
+  // this is a placeholder prop for future AI insight functionality, update when implemented
+  hasAiInsight = false,
 }) => (
   <div
     className={`${styles.cfuQuestionWrapper} ${
@@ -71,6 +74,12 @@ const CFUQuestion: React.FC<CFUQuestionProps> = ({
             },
           ]}
         />
+        {hasAiInsight && (
+          <FontAwesomeV6Icon
+            iconName="sparkles"
+            className={styles.cfuQuestionRightPartAiInsightIcon}
+          />
+        )}
         <IconButton size="small" onClick={onToggle}>
           <FontAwesomeV6Icon
             className={styles.cfuQuestionExpandIcon}
