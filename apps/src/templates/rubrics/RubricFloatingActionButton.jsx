@@ -79,6 +79,8 @@ function RubricFloatingActionButton({
   aiEnabled,
   sectionId,
   canShowTaScoresAlert,
+  parentLevelName,
+  levelType,
   reloadOnStudentChange = true,
 }) {
   const sessionStorageKey = 'RubricFabOpenStateKey';
@@ -98,7 +100,17 @@ function RubricFloatingActionButton({
 
   const [internalError, setInternalError] = useState(null);
 
-  const onLevelForEvaluation = currentLevelName === rubric.level.name;
+  // We do not evaluate on Bubble Choice levels directly, we only evaluate on
+  // their child levels. If this level is not a bubble choice level, we evaluate on the
+  // level that matches the rubric level name, or any child levels of the level that
+  // matches the rubric level name (likely the parent in this case is a Bubble Choice level).
+  const onLevelForEvaluation = useMemo(
+    () =>
+      levelType !== 'BubbleChoice' &&
+      (currentLevelName === rubric.level.name ||
+        parentLevelName === rubric.level.name),
+    [levelType, currentLevelName, rubric.level.name, parentLevelName]
+  );
 
   const readyStudentCount = useAppSelector(selectReadyStudentCount);
   const hasLoadedStudentStatus = useAppSelector(selectHasLoadedStudentStatus);
@@ -109,9 +121,9 @@ function RubricFloatingActionButton({
     return {
       ...reportingData,
       viewingStudentWork: !!studentLevelInfo,
-      viewingEvaluationLevel: rubric.level.name === currentLevelName,
+      viewingEvaluationLevel: onLevelForEvaluation,
     };
-  }, [reportingData, studentLevelInfo, rubric.level.name, currentLevelName]);
+  }, [reportingData, studentLevelInfo, onLevelForEvaluation]);
 
   const handleClick = () => {
     const eventName = isOpen
@@ -301,6 +313,8 @@ RubricFloatingActionButton.propTypes = {
   sectionId: PropTypes.number,
   canShowTaScoresAlert: PropTypes.bool,
   reloadOnStudentChange: PropTypes.bool,
+  parentLevelName: PropTypes.string,
+  levelType: PropTypes.string,
 };
 
 export const UnconnectedRubricFloatingActionButton = RubricFloatingActionButton;

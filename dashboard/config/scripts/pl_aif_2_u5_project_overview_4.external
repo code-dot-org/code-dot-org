@@ -5,40 +5,44 @@ description 'description here'
 markdown <<MARKDOWN
 # Begin with the End in Mind: Final Project Overview
 
-#### Unit 4: Iterating with AI culminates with a final **Interactive Data Dashboard** project. 
+#### Unit 5: Designing Reliable Apps with AI and APIs culminates with a final **Explore-Style Web App** project.
 
-## Data Dashboard
-#### In the Interactive Data Dashboard project, students build dashboards that update as filters are applied, showing counts, averages, and breakdowns similar to dashboards they may encounter in real life, like Spotify playlists, Amazon filters, and school dashboards.
+## Tap for More: Explore-Style App
 
+#### In the *Tap for More* project, students design an interactive explore-style app that fetches live data from an external API and presents it in a grid of cards with a detail view. Inspired by apps like Pinterest, Yelp, TikTok, and news feeds, students curate content and design how users explore and learn more about individual items.
 
 ---
+
 ## Sample project
 
-<img src="https://images.code.org/e5e75f6dba393136310fc8866cf35c52-image-1768412595902.png" alt="sample project of a song surfer with artist, genre, and mood" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+<img src="https://images.code.org/b6518963d37d9630807dcd0085aa5036-image-1770400989649.png" alt="sample explore-style app with grid of cards and detail view" width="750px" style="display: block; margin-left: auto; margin-right: auto; border-radius:10px;"><br>
+
+<p style= "font-size: 14pt;">
+ <a href="https://erikdillaman.github.io/U5_Project_Prototype_One/" target="_blank" rel="noopener noreferrer">Explore a sample student project</a>
+</p>
 
 ---
 
-#### **When Project Begins:** Final lesson of the unit
+#### **When Project Begins:** Final three lessons of the unit
 
-#### The project extends over five class periods beginning in Lesson 11.
+#### The project extends over multiple class periods following introductory lessons on `async/await`, error handling, and working with JSON data from APIs.
 
+---
 
 ## What success looks like
 
-> #### **By the end, the students will:**
-> - #### Build a working dashboard that filters and summarizes a dataset
-> - #### Show applied filters and calculations with clear transparency cues
-> - #### Refine categories and defaults to improve findability
-> - #### Balance AI scaffolds and their own logic, documenting choices
-> - #### Reflect on who/what is surfaced or hidden by filtering
+> #### **By the end, students will:**
+> - #### Fetch and display live data from an external API
+> - #### Build an explore-style interface with a “Tap for More” detail view
+> - #### Communicate system status using loading indicators, empty states, and error messages
+> - #### Design defensively to keep apps usable when data is delayed, incomplete, or unavailable
+> - #### Reflect on the reliability, ownership, and risks of relying on external data sources
 
 ---
 
-#### This project lets students apply their design and coding skills in a creative, authentic way while learning how AI can support the web development process.
+#### This project gives students an authentic opportunity to combine technical skills and design thinking while building apps that depend on real-world data and AI-powered systems.
 
-## Now, let’s see how we get here! 
-
-#### We will start with loops! 
+## Now, let’s see how we get here!
 
 
 MARKDOWN
