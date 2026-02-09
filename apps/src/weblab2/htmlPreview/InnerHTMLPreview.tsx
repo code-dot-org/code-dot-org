@@ -120,6 +120,17 @@ const InnerHTMLPreview = () => {
       ) {
         setServiceWorkerReady(true);
         setPreviewKey(prevKey => prevKey + 1);
+      } else if (
+        event.data.type ===
+        ProjectServiceWorkerMessageType.SENDING_NETWORK_REQUEST
+      ) {
+        // Handle sending network request message
+        console.log({networkRequestEvent: event});
+      } else if (
+        event.data.type === ProjectServiceWorkerMessageType.NETWORK_RESPONSE
+      ) {
+        // Handle network response message
+        console.log({networkResponseEvent: event});
       }
     };
     return () => {

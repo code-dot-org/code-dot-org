@@ -13,6 +13,8 @@ const PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL = 'weblab2-file-preview';
 const SERVING_HTML_FILE = 'SERVING_HTML_FILE';
 const RECEIVED_SOURCE = 'RECEIVED_SOURCE';
 const UPDATE_FILES = 'UPDATE_FILES';
+const SENDING_NETWORK_REQUEST = 'SENDING_NETWORK_REQUEST';
+const NETWORK_RESPONSE = 'NETWORK_RESPONSE';
 
 function main() {
   let filesData = {};
@@ -45,7 +47,7 @@ function main() {
   });
 
   // Intercept fetch requests
-  self.addEventListener('fetch', event => {
+  self.addEventListener('fetch', async event => {
     const url = new URL(event.request.url);
     let requestedFile = getFilenameFromUrl(url);
     const referrerFile = getFilenameFromUrl(new URL(event.request.referrer));
@@ -66,6 +68,21 @@ function main() {
           type: SERVING_HTML_FILE,
           filePath: requestedFile,
         });
+      }
+      if (url.origin !== location.origin) {
+        broadcastChannel.postMessage({
+          type: SENDING_NETWORK_REQUEST,
+          url: event.request.url,
+        });
+        const response = await fetch(event.request);
+        const bodyText = await response.text();
+        broadcastChannel.postMessage({
+          type: NETWORK_RESPONSE,
+          url: event.request.url,
+          responseBody: bodyText,
+          responseStatus: response.status,
+        });
+        return response;
       }
       return;
     }
