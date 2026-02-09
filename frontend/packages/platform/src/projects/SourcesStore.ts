@@ -7,7 +7,7 @@ import type {
   UpdateSourceOptions,
 } from '@code-dot-org/core/api';
 import {sourcesKeys} from '@code-dot-org/core/api';
-import {getTabId} from '@code-dot-org/user';
+import {getTabId} from '@code-dot-org/platform/user';
 
 /**
  * A SourcesStore manages the loading and saving of sources to the appropriate location.

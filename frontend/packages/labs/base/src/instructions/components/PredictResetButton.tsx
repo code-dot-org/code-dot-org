@@ -3,7 +3,7 @@ import type {FunctionComponent} from 'react';
 import Alert from '@code-dot-org/component-library/alert';
 import {Button} from '@code-dot-org/component-library/button';
 import {useApiClient, useQueryClient} from '@code-dot-org/core/api';
-import {CourseRoles} from '@code-dot-org/user';
+import {CourseRoles} from '@code-dot-org/platform/user';
 
 import {resetPredictProgress} from '../../redux/predictLevelSlice';
 import {useAppDispatch, useAppSelector} from '../../redux/store';

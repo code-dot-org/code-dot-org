@@ -32,6 +32,11 @@
       "types": "./dist/projects/index.d.ts",
       "import": "./dist/projects/index.mjs",
       "require": "./dist/projects/index.js"
+    },
+    "./user": {
+      "types": "./dist/user/index.d.ts",
+      "import": "./dist/user/index.mjs",
+      "require": "./dist/user/index.js"
     }
   },
   "scripts": {
@@ -52,7 +57,6 @@
   },
   "dependencies": {
     "@code-dot-org/core": "workspace:*",
-    "@code-dot-org/user": "workspace:*",
     "@reduxjs/toolkit": "^2.8.2",
     "classnames": "^2.5.1",
     "lodash": "^4.17.21",

@@ -118,7 +118,6 @@
     "@code-dot-org/markdown": "workspace:*",
     "@code-dot-org/platform": "workspace:*",
     "@code-dot-org/teacher-dashboard": "workspace:*",
-    "@code-dot-org/user": "workspace:*",
     "@fortawesome/fontawesome-free": "^7.1.0",
     "@reduxjs/toolkit": "^2.8.2",
     "focus-trap-react": "^11.0.4",

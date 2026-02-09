@@ -11,7 +11,7 @@ import _ from 'lodash';
 import type {Lesson, Sublevel, UnitLevel} from '@code-dot-org/core/api';
 import {LevelKinds} from '@code-dot-org/core/api';
 import type {StateFor, MockStore} from '@code-dot-org/core/redux';
-import type {default as currentUserSlice} from '@code-dot-org/user/redux/currentUserSlice';
+import type {currentUserSlice} from '@code-dot-org/platform/user';
 
 type Store = MockStore<[typeof progressSlice, typeof currentUserSlice]>;
 type RootState = StateFor<Store>;

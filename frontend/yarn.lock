@@ -1841,7 +1841,6 @@ __metadata:
     "@code-dot-org/markdown": "workspace:*"
     "@code-dot-org/platform": "workspace:*"
     "@code-dot-org/teacher-dashboard": "workspace:*"
-    "@code-dot-org/user": "workspace:*"
     "@eslint/js": "npm:^9.15.0"
     "@fortawesome/fontawesome-free": "npm:^7.1.0"
     "@reduxjs/toolkit": "npm:^2.8.2"
@@ -2038,7 +2037,6 @@ __metadata:
   dependencies:
     "@code-dot-org/core": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
-    "@code-dot-org/user": "workspace:*"
     "@reduxjs/toolkit": "npm:^2.8.2"
     "@types/node": "npm:^20"
     classnames: "npm:^2.5.1"
@@ -2129,7 +2127,6 @@ __metadata:
   dependencies:
     "@code-dot-org/core": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
-    "@code-dot-org/user": "workspace:*"
     "@types/node": "npm:^20"
     "@types/tldjs": "npm:^2"
     eslint: "npm:^9.39.1"
@@ -2148,7 +2145,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@code-dot-org/user@workspace:*, @code-dot-org/user@workspace:packages/user":
+"@code-dot-org/user@workspace:packages/user":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/user@workspace:packages/user"
   dependencies:

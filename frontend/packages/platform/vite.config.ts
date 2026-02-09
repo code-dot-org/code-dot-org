@@ -44,7 +44,12 @@ export default defineConfig({
     sourcemap: true,
     cssCodeSplit: true,
     lib: {
-      entry: ['src/index.ts', 'src/progress/index.ts', 'src/projects/index.ts'],
+      entry: [
+        'src/index.ts',
+        'src/progress/index.ts',
+        'src/projects/index.ts',
+        'src/user/index.ts',
+      ],
       name: 'platform',
     },
     rollupOptions: {

@@ -29,8 +29,7 @@ import {
   ProjectManagerFactory,
   ProjectManager,
 } from '@code-dot-org/platform/projects';
-import {CourseRoles} from '@code-dot-org/user';
-import {currentUserActions} from '@code-dot-org/user/redux';
+import {CourseRoles, currentUserActions} from '@code-dot-org/platform/user';
 
 import LabRegistry from '../LabRegistry';
 import {LifecycleEvent} from '../LifecycleNotifier';

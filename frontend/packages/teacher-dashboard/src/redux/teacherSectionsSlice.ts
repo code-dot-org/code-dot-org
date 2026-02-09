@@ -25,8 +25,8 @@ import {
   firehoseClient,
   EVENTS,
 } from '@code-dot-org/core/metrics';
-import {OAuthSectionTypes} from '@code-dot-org/user';
-import type {OAuthSectionType} from '@code-dot-org/user';
+import {OAuthSectionTypes} from '@code-dot-org/platform/user';
+import type {OAuthSectionType} from '@code-dot-org/platform/user';
 
 import {
   getFilteredSectionOrderIds,

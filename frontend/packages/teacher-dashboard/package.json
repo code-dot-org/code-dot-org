@@ -48,7 +48,6 @@
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "dependencies": {
     "@code-dot-org/core": "workspace:*",
-    "@code-dot-org/user": "workspace:*",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
