@@ -145,7 +145,7 @@ describe('StudentRubricWidget', () => {
     );
 
     await waitFor(() => {
-      expect(screen.getByText('No rubric found')).toBeInTheDocument();
+      screen.getByText("This lesson doesn't have a rubric.");
     });
   });
 
@@ -166,7 +166,7 @@ describe('StudentRubricWidget', () => {
     );
 
     await waitFor(() => {
-      expect(screen.getByText('No rubric data found')).toBeInTheDocument();
+      screen.getByText("This lesson doesn't have a rubric.");
     });
   });
 
@@ -194,7 +194,7 @@ describe('StudentRubricWidget', () => {
     );
 
     await waitFor(() => {
-      expect(screen.getByText('No rubric data available.')).toBeInTheDocument();
+      screen.getByText("This lesson doesn't have a rubric.");
     });
   });
 
