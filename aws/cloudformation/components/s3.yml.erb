@@ -4,7 +4,7 @@
 
   UserContentBucket:
     Type: AWS::S3::Bucket
-    DeletionPolicy: Retain
+    DeletionPolicy: <%= rack_env?(:adhoc) ? "Delete" : "Retain" %>
     Properties:
       BucketName: <%=s3_bucket_namespace%>.user-content
       # To constrain costs, impose a hard limit here. We should consider more proactive cleanup in-platform.
