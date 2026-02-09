@@ -940,19 +940,18 @@ class Level < ApplicationRecord
       properties_camelized["predictSettings"]&.delete("solution")
       properties_camelized["predictSettings"]&.delete("multipleChoiceAnswers")
     end
+    current_parent = get_parent_level_for_script(script&.id)
+    properties_camelized[:parentLevelName] = current_parent&.name
 
     # If there is a rubric for this lesson, show the rubric if it is evaluated on this level or the level's parent.
     # In addition, show the rubric if the evaluation level shares the same project template level as this level.
     # If the level is a sublevel and has a project template level, also show the rubric if the evaluation level has a sublevel
     # with the same project template level.
+    # We don't show rubrics on Bubble choice levels, even if the rubric is defined on that level. The rubric will always instead be shown on
+    # the children of a bubble choice level.
     rubric_level_id = script_level&.lesson&.rubric&.level_id
     if rubric_level_id
-      current_parent = parent_levels.find do |parent|
-        parent.script_levels.find do |script|
-          script&.script_id == script_level&.script_id
-        end
-      end
-      if rubric_level_id == id || rubric_level_id == current_parent&.id
+      if (rubric_level_id == id && type != 'BubbleChoice') || rubric_level_id == current_parent&.id
         properties_camelized[:showRubric] = true
       else
         rubric_level = Level.find(rubric_level_id)
@@ -1066,6 +1065,17 @@ class Level < ApplicationRecord
   def uses_theme_preference?
     # These are the level types that set and use the theme preference in UserPreferences right now.
     is_a?(Pythonlab) || is_a?(Weblab2) || is_a?(Sketchlab)
+  end
+
+  def get_parent_level_for_script(script_id)
+    unless script_id
+      return
+    end
+    parent_levels.find do |parent|
+      parent.script_levels.find do |script_level|
+        script_level&.script_id == script_id
+      end
+    end
   end
 
   # Returns the level name, removing the name_suffix first (if present), and
