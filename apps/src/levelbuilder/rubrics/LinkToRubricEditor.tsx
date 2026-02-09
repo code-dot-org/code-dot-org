@@ -1,6 +1,5 @@
 import {LinkButton} from '@code-dot-org/component-library/button';
 import {
-  BodyFourText,
   BodyThreeText,
   BodyTwoText,
   Heading5,
