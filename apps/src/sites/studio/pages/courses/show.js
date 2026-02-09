@@ -40,7 +40,6 @@ function showCourseOverview() {
   const courseSummary = scriptData.course_summary;
   const isInstructor = scriptData.is_instructor;
   const userId = scriptData.user_id;
-
   const store = getStore();
 
   if (courseSummary.has_verified_resources) {

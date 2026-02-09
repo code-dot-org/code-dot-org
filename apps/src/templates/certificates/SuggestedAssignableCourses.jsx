@@ -51,6 +51,7 @@ function SuggestedAssignableCourses({assignableCourseSuggestions, isEnglish}) {
         display_name_with_latest_year,
         grade_levels,
         duration,
+        ai_chat_tools_dependency,
         school_subject,
         cs_topic,
         course_version_path,
@@ -79,6 +80,7 @@ function SuggestedAssignableCourses({assignableCourseSuggestions, isEnglish}) {
           gradesArray={grade_levels.split(',')}
           subjects={school_subject?.split(',')}
           topics={cs_topic?.split(',')}
+          aiChatToolsDependency={ai_chat_tools_dependency}
           isTranslated={is_translated}
           isEnglish={isEnglish}
           pathToCourse={course_version_path}

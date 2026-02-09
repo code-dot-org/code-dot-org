@@ -119,6 +119,7 @@ const CurriculumCatalogCard = ({
     isTeacher={isTeacher}
     recommendedSimilarCurriculum={recommendedSimilarCurriculum}
     recommendedStretchCurriculum={recommendedStretchCurriculum}
+    aiChatToolsDependency={aiChatToolsDependency}
     {...props}
   />
 );
@@ -425,6 +426,7 @@ const CustomizableCurriculumCatalogCard = ({
           gradeRange={gradeRange}
           subjectsAndTopics={subjectsAndTopics}
           deviceCompatibility={deviceCompatibility}
+          aiChatToolsDependency={aiChatToolsDependency}
           description={description}
           professionalLearningProgram={professionalLearningProgram}
           video={video}
@@ -455,6 +457,7 @@ CustomizableCurriculumCatalogCard.propTypes = {
   courseDisplayNameWithLatestYear: PropTypes.string.isRequired,
   duration: PropTypes.string.isRequired,
   gradeRange: PropTypes.string.isRequired,
+  aiChatToolsDependency: PropTypes.string,
   imageSrc: PropTypes.string.isRequired,
   isTranslated: PropTypes.bool,
   isEnglish: PropTypes.bool,
@@ -489,7 +492,6 @@ CustomizableCurriculumCatalogCard.propTypes = {
   availableResources: PropTypes.object,
   recommendedSimilarCurriculum: PropTypes.object,
   recommendedStretchCurriculum: PropTypes.object,
-  aiChatToolsDependency: PropTypes.string,
   wide: PropTypes.bool,
 };
 

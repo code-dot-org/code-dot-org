@@ -213,6 +213,7 @@ const CurriculumCatalog = ({
                 duration,
                 school_subject,
                 cs_topic,
+                ai_chat_tools_dependency,
                 course_version_path,
                 course_version_id,
                 course_id,
@@ -227,7 +228,6 @@ const CurriculumCatalog = ({
                 published_date,
                 self_paced_pl_course_offering_path,
                 available_resources,
-                ai_chat_tools_dependency,
               }) => (
                 <CurriculumCatalogCard
                   key={key}

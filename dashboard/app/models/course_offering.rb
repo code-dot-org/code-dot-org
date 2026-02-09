@@ -350,10 +350,10 @@ class CourseOffering < ApplicationRecord
 
   def ai_chat_tools_dependency
     units = course_versions.map(&:units).flatten
-    return AI_CHAT_TOOLS_DEPENDENCY.ESSENTIAL if units.any?(&:requires_ai_chat_tools?)
-    return AI_CHAT_TOOLS_DEPENDENCY.AVAILABLE if units.any?(&:has_ai_chat_tools?)
+    return SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:ESSENTIAL] if units.any?(&:requires_ai_chat_tools?)
+    return SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:AVAILABLE] if units.any?(&:has_ai_chat_tools?)
 
-    AI_CHAT_TOOLS_DEPENDENCY.NONE
+    SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE]
   end
 
   def summarize_for_edit

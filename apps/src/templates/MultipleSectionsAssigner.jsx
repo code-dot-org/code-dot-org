@@ -248,11 +248,11 @@ const MultipleSectionsAssigner = ({
             styleAsText
             color={Button.ButtonColor.brandSecondaryDefault}
           />
-          {experiments.AI_CHAT_NEW_PERMISSIONS &&
+          {experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
             aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
               <AiChatToolsRequiredAlert />
             )}
-          {!experiments.AI_CHAT_NEW_PERMISSIONS &&
+          {experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
             aiChatToolsDependency === AiChatToolsDependency.AVAILABLE && (
               <AiChatToolsAvailableAlert />
             )}

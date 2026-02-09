@@ -704,8 +704,8 @@ class UnitGroup < ApplicationRecord
   end
 
   def ai_chat_tools_dependency
-    return AI_CHAT_TOOLS_DEPENDENCY.ESSENTIAL if requires_ai_chat_tools?
-    return AI_CHAT_TOOLS_DEPENDENCY.AVAILABLE if has_ai_chat_tools?
-    AI_CHAT_TOOLS_DEPENDENCY.NONE
+    return SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:ESSENTIAL] if requires_ai_chat_tools?
+    return SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:AVAILABLE] if has_ai_chat_tools?
+    SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE]
   end
 end
