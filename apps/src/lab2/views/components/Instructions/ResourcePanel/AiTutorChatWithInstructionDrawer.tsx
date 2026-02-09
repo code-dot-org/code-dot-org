@@ -22,7 +22,7 @@ interface AiTutorChatWithInstructionDrawerProps {
   instructionsContent?: React.ReactNode;
 }
 
-const MIN_CHAT_HEIGHT = 130; // Minimum so that user message editor is always visible + some chat.
+const MIN_CHAT_HEIGHT = 133; // Minimum so that user message editor is always visible + some chat.
 const MIN_INSTRUCTIONS_HEIGHT = 150;
 const DEFAULT_INITIAL_INSTRUCTIONS_HEIGHT = 250;
 
