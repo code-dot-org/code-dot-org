@@ -82,7 +82,7 @@
       "aiCodeGenerateExtraPrompt": "You can also use any of the following additional drum sounds: \"{drumSounds}\"."
     },
     "encrypted": "false",
-    "offer_browser_tts": "false",
+    "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
     "submittable": "false",
@@ -96,9 +96,10 @@
     },
     "long_instructions": "### Code the music mix for your dance\r\nModify the prompt with more details, then press Generate code.",
     "project_template_level_name": "mix-move-ai-music-prompt-3-input-choice-template",
+    "hide_version_history": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-03T20:54:18.949+00:00\",\"changed\":[\"cloned from \\\"mix-move-ai-music-prompt-3-input\\\"\"],\"cloned_from\":\"mix-move-ai-music-prompt-3-input\"},{\"changed_at\":\"2025-11-03 20:58:40 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-03 21:03:34 +0000\",\"changed\":[\"predict_settings\",\"project_template_level_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-03T20:54:18.949+00:00\",\"changed\":[\"cloned from \\\"mix-move-ai-music-prompt-3-input\\\"\"],\"cloned_from\":\"mix-move-ai-music-prompt-3-input\"},{\"changed_at\":\"2025-11-03 20:58:40 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-03 21:03:34 +0000\",\"changed\":[\"predict_settings\",\"project_template_level_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-02 16:57:12 +0000\",\"changed\":[\"offer_browser_tts\",\"predict_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

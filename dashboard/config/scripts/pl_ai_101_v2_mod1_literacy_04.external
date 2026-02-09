@@ -1,0 +1,25 @@
+name 'pl-ai-101-V2-mod1-literacy-04'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Introducing AI Chat Lab 
+
+<img src="https://images.code.org/d82ce6ee4dc44c9d9ccdf68b2751fc1c-9fa6476e1e62030a0f0814bbc6f006b5-image-1700521543414 (2).png" alt="Code.org AI bot character" style="border-radius:40px; float: right; padding: 10px; height: 200px; clear: both; margin: 0 10px 10px 0;">
+
+#### Code.org has created <strong>AI Chat Lab</strong>, a safe and student-friendly chatbot built directly into the Code.org's platform. This allows students and teachers to explore generative AI in an authentic and secure way without leaving the platform.
+
+#### AI Chat Lab is designed specifically for education, so we’ve added guardrails to keep the experience safe and appropriate.</p>
+
+* #### The chatbot supports learning in a guided, structured environment that encourages students to think critically as they work through problems.
+* #### Content is monitored to ensure it remains appropriate and productive, making AI Chat Lab a safe space for exploration and discovery.
+
+<br>
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;"> ➡️ Want to know more about how AI Chat Lab works? Check out the <a href="https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ" target="blank" rel="noopener noreferrer"> FAQ Support Article</a>.
+</p>
+<br>
+
+#### During the AI 101 for Educators professional learning series you'll interact with a variety of AI platforms including AI Chat Lab as well as external LLMs of your choice such as Gemini, Claude, or ChatGPT.
+
+#### In the next level you'll interact with AI Chat Lab to explore AI literacy scenarios.
+MARKDOWN

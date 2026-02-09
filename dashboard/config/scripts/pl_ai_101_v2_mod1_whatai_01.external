@@ -3,45 +3,120 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# The AI Landscape
+# Practice
 
-#### What about all the other things we’ve heard about - machine learning, natural language processing, how do all of these fit together?
+#### Let's start by activating your current understanding of AI.
 
-#### Take a look at the diagram below to get a better idea. Key terms are defined underneath. 
+#### Below are examples of various technologies. Mentally classify each ones as something that does use or do not use AI. Click on the box to get the answer and explanation. It’s okay if you don’t get them all on the first try!
 
-<p style="text-align:center;">
-<img src="https://images.code.org/6360156161735b4ffe0e2f19d74037d4-Screenshot 2024-04-15 at 1.36.49 PM.png" alt="Venn diagram of nested terms related to AI.">
+<br>
 
-Image Source: https://www.wondavr.com/ai-course/module-1
-
->* #### **Artificial Intelligence (AI):** AI is the branch of computer science that aims to develop systems capable of performing tasks that would normally require human intelligence, including decision-making, visual perception, and speech recognition.
->* #### **Machine Learning (ML):** ML is a subset of AI that involves training algorithms to learn patterns and make decisions with minimal human intervention, based on data.
->* #### **Natural Language Processing (NLP):** NLP is a field at the intersection of computer science, artificial intelligence, and linguistics, focused on enabling computers to understand, interpret, and generate human language.
->* #### **Deep Learning:** Deep learning is a subset of machine learning that uses neural networks with many layers (deep neural networks) to analyze large volumes of data, enabling the model to learn complex patterns.
->* #### **Large Language Models:** These are advanced deep learning models trained on extensive corpora of text data, capable of understanding and generating human-like text by predicting subsequent parts of text based on the input they receive.
->* #### **ChatGPT:** ChatGPT is a prominent example of a large language model, developed by OpenAI, designed specifically for generating human-like responses in a conversational context by processing and producing text based on its training on a diverse dataset.
-
-#### Everything in this diagram falls under the larger umbrella of Data Science, so let’s define that term too.
-
->* #### **Data Science:** an interdisciplinary field that uses scientific methods, processes, algorithms, and systems to extract knowledge and insights from structured and unstructured data.
-
+<!--Self-Driving Cars-->
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">Wait...what...?</summary>
+  <summary style="font-size: 1.5em; font-weight: bold;">Self-Driving Cars</summary>
+
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
-    <p>
 
-#### It’s okay if you didn’t catch all of that! Here are the same terms defined using non-technical language.
+<div style="display:flex;gap:16px;align-items:flex-start;">
+<img src="https://images.code.org/4302af15f049172a62d1df03d6cc8b1d-Screenshot 2026-01-29 at 1.19.23 PM.png" alt="" style="width: 100px; border-radius:8px; flex-shrink:0;">
+<div>
+<p>
 
->* #### **Artificial Intelligence (AI):** Teaching computers to think and make decisions like humans do.
->* #### **Machine Learning (ML):** A way for computers to learn from experience without being directly programmed every step. For example, this is how Netflix recommendation algorithms work.
->* #### **Natural Language Processing (NLP):** Helps computers understand and respond to human language, like reading or listening. This is how Siri understands your questions.
->* #### **Deep Learning:** A method for computers to learn and make decisions by simulating the network of neurons in a human brain. Used to in facial recognition technology such as unlocking smartphones.
->* #### **Large Language Models (LLMs):** Huge computer programs that are really good at understanding and generating human-like text based on what they've learned from a vast amount of written material. The technology behind ChatGPT.
->* #### **ChatGPT:** A smart chat program that can write and chat about almost anything by using what it's learned from a lot of books, websites, and other texts.
->* #### **Data Science:** The process of finding patterns and answers in a lot of information to help solve problems or make decisions. An example would be how Fitbit and other health trackers to analyze sleep patterns
+#### Self-driving cars use artificial intelligence to interpret sensor data, recognize objects, predict the behavior of other road users, and make driving decisions in real time. These systems rely on machine learning models trained on large amounts of driving data to operate safely in changing environments.
 
+</p>
+</div>
+</div>
+
+</div>
+</details>
+
+
+<!--3D Printing-->
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">3D Printing</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+
+<div style="display:flex;gap:16px;align-items:flex-start;">
+<img src="https://images.code.org/c2de23544b5992014cd67388d89f4fe8-Screenshot 2026-01-29 at 4.41.42 PM.png" alt="" style="width: 100px; border-radius:8px; flex-shrink:0;">
+<div>
+<p>
+
+#### 3D printing is a process of creating three-dimensional objects from a digital file, using additive processes where material is laid down in layers. This technology is revolutionary but does not inherently use AI, as it operates based on predefined models and settings.
 
 </p></div>
+</div>
+</div>
 </details>
+
+<!--Music Recommendation Systems-->
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em;"><strong>Music Recommendation Systems</strong></summary>
+
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+
+<div style="display:flex;gap:16px;align-items:flex-start;">
+<img src="https://images.code.org/4302af15f049172a62d1df03d6cc8b1d-Screenshot 2026-01-29 at 1.19.23 PM.png" alt="" style="width: 100px; border-radius:8px; flex-shrink:0;">
+<div>
+<p>
+
+#### Music recommendation systems use AI to analyze listening history, preferences, and patterns across many users. By learning from data, these systems predict which songs or artists a user is likely to enjoy and continuously improve their recommendations over time.
+</p></div>
+</div>
+</div>
+</details>
+
+<!--Smart Home Devices-->
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em"><strong>Smart Home Devices</strong> ⚠️ <i>This one’s tricky on purpose</i></summary>
+
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+
+<div style="display:flex;gap:16px;align-items:flex-start;">
+<img src="https://images.code.org/a81ecedd6e1d294abc7a420081cac9cf-Screenshot 2026-01-29 at 1.57.59 PM.png" alt="" style="width: 100px; border-radius:8px; flex-shrink:0;">
+<div>
+<p>
+
+#### Some smart home devices use simple rules (for example, turning lights on when motion is detected), which is not AI. Others use AI to learn routines, adapt to user behavior, or recognize voices. Whether a smart home device uses AI depends on how it works internally.
+
+</p></div>
+</div>
+</div>
+</details>
+
+<!--Digital Cameras-->
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em;"><strong>Digital Cameras</strong> ⚠️ <i>This one’s tricky on purpose</i></summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+
+<div style="display:flex;gap:16px;align-items:flex-start;">
+<img src="https://images.code.org/c2de23544b5992014cd67388d89f4fe8-Screenshot 2026-01-29 at 4.41.42 PM.png" alt="" style="width: 100px; border-radius:8px; flex-shrink:0;">
+<div>
+<p>
+
+#### Digital cameras capture images using sensors and electronics, not artificial intelligence. While modern cameras may include AI-powered features like face detection or image enhancement, the core function of taking a photo does not rely on AI.
+
+</p></div>
+</div>
+</div>
+</details>
+
+<br>
+
+>#### **💬 Quick Reflection:** Before you move on, think of a technology you use at school or at home. Classify your example as AI or Not. To help you decide, ask yourself whether the technology:
+> - #### Senses the environment?
+> - #### Learns from data?
+> - #### Makes predictions or decisions?
+
+<!-- progress bar -->
+<div style="float:left; display:flex; gap:20px; align-items:center; margin-right:20px; max-width:70%; flex-wrap:wrap;">
+<div style="font-size:13px; color:#6b6f75;">Opening</div>
+<div style="font-size:14px; font-weight:600; color:#292F36; border-bottom:3px solid #0093A4; padding-bottom:2px;">What is AI?</div>
+<div style="font-size:13px; color:#6b6f75;">Applications of AI</div>
+<div style="font-size:13px; color:#6b6f75;">Impact on Education</div>
+<div style="font-size:13px; color:#6b6f75;">AI Literacy</div>
+<div style="font-size:13px; color:#6b6f75;">Closing</div>
+</div>
+
 
 MARKDOWN
