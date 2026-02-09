@@ -1,5 +1,6 @@
 import classNames from 'classnames';
-import type {FunctionComponent, PropsWithChildren, ReactNode} from 'react';
+import type {PropsWithChildren, ReactNode} from 'react';
+import {forwardRef} from 'react';
 
 import Typography from '@code-dot-org/component-library/typography';
 
@@ -22,18 +23,22 @@ export interface PanelContainerProps extends PropsWithChildren {
  * its parent; this means that the main scene is responsible for allocating
  * the layout of all the panels.
  */
-const PanelContainer: FunctionComponent<PanelContainerProps> = ({
-  id,
-  headerContent,
-  rightHeaderContent,
-  leftHeaderContent,
-  children,
-  hideHeaders,
-  className,
-  headerClassName,
-}) => {
-  return (
+const PanelContainer = forwardRef<HTMLDivElement, PanelContainerProps>(
+  (
+    {
+      id,
+      headerContent,
+      rightHeaderContent,
+      leftHeaderContent,
+      children,
+      hideHeaders,
+      className,
+      headerClassName,
+    },
+    ref,
+  ) => (
     <div
+      ref={ref}
       className={classNames(
         'panelContainer',
         moduleStyles.panelContainer,
@@ -86,7 +91,7 @@ const PanelContainer: FunctionComponent<PanelContainerProps> = ({
       )}
       {children}
     </div>
-  );
-};
+  ),
+);
 
 export default PanelContainer;
