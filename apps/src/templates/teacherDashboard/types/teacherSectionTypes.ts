@@ -1,5 +1,8 @@
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
-import {AiChatToolsDependencyValue} from '@cdo/apps/aichat/types/accessControls';
+import {
+  AiChatAccessLevel,
+  AiChatToolsDependencyValue,
+} from '@cdo/apps/aichat/types/accessControls';
 import {
   SectionLoginType,
   UserTypes,
@@ -48,7 +51,7 @@ export interface Section {
   avatar_color?: number | null;
   avatar_emoji?: number | null;
   assignedAiChatToolsDependency?: AiChatToolsDependencyValue;
-  aiChatAccessLevel?: string;
+  aiChatAccessLevel?: AiChatAccessLevel;
 }
 
 type Course = {
