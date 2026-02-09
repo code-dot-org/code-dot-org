@@ -313,12 +313,9 @@
       # Credentials (username and password) for the SQL User this Resource is provisioning.
       DBCredentialSecret: !Ref DatabaseSecretReader
       Privileges: ['SELECT']
+<% if rack_env?(:production) # Provision Zero ETL Integration to Redshift in production only. -%>
   ZeroETLIntegration:
     Type: AWS::RDS::Integration
-<% unless rack_env?(:production) -%>
-    # Ensure Aurora instances are provisioned before creating the integration link.
-    DependsOn: [<%=DB_INSTANCE_RANGE.map {|i| "Aurora#{i}"}.join(',') %>]
-<% end -%>
     Properties:
       IntegrationName: !Sub "${AWS::StackName}-zero-etl"
       Description: "Export transactional tables from MySQL to Redshift via Zero-ETL integration."
@@ -330,6 +327,7 @@
       Tags:
         - Key: environment
           Value: "<%=rack_env %>"
+<% end -%>
 <% # We don't provision DB Cluster and Instances in production via CloudFormation ... yet!
   unless rack_env?(:production)
 -%>
