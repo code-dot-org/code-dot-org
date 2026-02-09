@@ -1939,6 +1939,7 @@
   "manageLinkedAccounts_ageAndStateRequired": "Uh oh! Please provide your age and state before adding a linked account.",
   "manageLinkedAccounts_parentalPermissionRequired": "Uh oh! You must obtain parental permission before creating a linked account.",
   "manageLinkedAccounts_clever": "Clever Account",
+  "manageLinkedAccounts_classlink": "ClassLink Account",
   "manageLinkedAccounts_connect": "Connect",
   "manageLinkedAccounts_disconnect": "Disconnect",
   "manageLinkedAccounts_emailAddress": "Email Address",

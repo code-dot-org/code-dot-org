@@ -13,6 +13,8 @@ markdown <<MARKDOWN
 
 #### They learn to think critically, design with empathy, and take ownership of their AI-assisted work.
 
+<br>
+
 ## Computational Thinking
 
 #### Foundational computational thinking practices are introduced through the design process, allowing students to apply these skills before writing any code.
@@ -338,9 +340,7 @@ markdown <<MARKDOWN
 <hr>
 ---
 
-## Reflection
-
-#### Before you move on, take a moment to think about:
+>#### Before you move on, take a moment to think about:
 >- #### How these ideas will shape the way students design, build, and collaborate with AI in their web apps.
 >- #### Which practices you want to intentionally highlight or reinforce as students work through this unit?
 MARKDOWN

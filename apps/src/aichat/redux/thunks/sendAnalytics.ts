@@ -37,14 +37,6 @@ export const sendAnalytics =
         levelPath: window.location.pathname,
       };
 
-      analyticsReporter.sendEvent(
-        event,
-        allProperties,
-
-        // Only log to Amplitude for AI Chat otherwise just log to Statsig.
-        clientType === AiChatClientTypes.AI_CHAT_LAB
-          ? PLATFORMS.BOTH
-          : PLATFORMS.STATSIG
-      );
+      analyticsReporter.sendEvent(event, allProperties, PLATFORMS.STATSIG);
     }
   };

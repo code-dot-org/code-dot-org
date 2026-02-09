@@ -1,6 +1,6 @@
 import {Typography} from '@mui/material';
 import _ from 'lodash';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import {getSelectedUnitId} from '@cdo/apps/redux/unitSelectionRedux';
@@ -11,13 +11,14 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {getFullName} from '../manageStudents/utils';
 
+import ExemplarCodeWidget from './codeWidget/ExemplarCodeWidget';
 import StudentCodeWidget from './codeWidget/StudentCodeWidget';
 import Header from './header';
 import LessonFeedbackWidget from './lessonFeedbackWidget/LessonFeedbackWidget';
+import LessonInsightWidget from './lessonInsightWidget';
 import StudentCFUWidget from './studentCFUWidget';
 import StudentLessonProgressDetailsWidget from './studentLessonProgressDetailsWidget';
 import StudentRubricWidget from './studentRubricWidget/StudentRubricWidget';
-import WidgetTemplate from './widgetTemplate';
 
 import styles from './studentSnapshot.module.scss';
 
@@ -87,7 +88,7 @@ const StudentSnapshot: React.FC = () => {
     [selectedStudentId, selectedStudents]
   );
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (selectedUnitId) {
       setIsLessonsLoading(true);
       lessonsCachedLoader(selectedUnitId)
@@ -108,7 +109,7 @@ const StudentSnapshot: React.FC = () => {
   }, [sectionId, selectedUnitId, sectionCourseId, selectedUnitPosition]);
 
   // Fetch Student Code when student or lesson changes
-  React.useEffect(() => {
+  useEffect(() => {
     if (selectedUnitId && selectedLessonId && selectedStudentId) {
       setIsStudentCodeLoading(true);
       getStudentCode(selectedUnitId, selectedLessonId, selectedStudentId)
@@ -127,11 +128,8 @@ const StudentSnapshot: React.FC = () => {
     }
   }, [selectedUnitId, selectedLessonId, selectedStudentId]);
 
+  // TODO(lfm): figure out what this is supposed to do
   console.log(isStudentCodeLoading);
-
-  // TODO: replace with actual values from URL/Redux later
-  const HARDCODED_STUDENT_ID = 8; // Replace with actual student ID
-  const HARDCODED_STUDENT_NAME = 'Student Name'; // Replace with actual student name
 
   return (
     <div className={styles.snapshotContainer}>
@@ -156,59 +154,6 @@ const StudentSnapshot: React.FC = () => {
       )}
 
       <div className={styles.widgetGrid}>
-        <LessonFeedbackWidget
-          lessonId={selectedLessonId}
-          studentId={HARDCODED_STUDENT_ID}
-          teacherHasEnabledAi={aiTaEnabled}
-        />
-        <StudentRubricWidget
-          gridWidth={2}
-          gridHeight={2}
-          lessonId={selectedLessonId}
-          studentId={HARDCODED_STUDENT_ID}
-          studentName={HARDCODED_STUDENT_NAME}
-          teacherHasEnabledAi={false}
-          canProvideFeedback={true}
-        />
-        <StudentCFUWidget
-          gridWidth={2}
-          gridHeight={2}
-          lessonId={selectedLessonId}
-          studentId={selectedStudentId}
-        />
-        <WidgetTemplate widgetName="Long Widget" gridWidth={3} gridHeight={1}>
-          <div>content</div>
-        </WidgetTemplate>
-        <StudentCodeWidget studentCode={studentCode} />
-        <WidgetTemplate
-          widgetName="Small Widget 1"
-          gridWidth={1}
-          gridHeight={1}
-        >
-          <div>small content 1</div>
-        </WidgetTemplate>
-        <WidgetTemplate
-          widgetName="Small Widget 2"
-          gridWidth={1}
-          gridHeight={1}
-        >
-          <div>small content 2</div>
-        </WidgetTemplate>
-        <WidgetTemplate
-          widgetName="Small Widget 3"
-          gridWidth={1}
-          gridHeight={1}
-        >
-          <div>small content 3</div>
-        </WidgetTemplate>
-        <WidgetTemplate
-          widgetName="Loading widget"
-          gridWidth={1}
-          gridHeight={1}
-          loading={true}
-        >
-          <div>Should not be displayed</div>
-        </WidgetTemplate>
         {selectedLessonId && selectedStudentId && (
           <StudentLessonProgressDetailsWidget
             selectedUnitId={selectedUnitId}
@@ -216,6 +161,34 @@ const StudentSnapshot: React.FC = () => {
             selectedStudentId={selectedStudentId}
           />
         )}
+        <LessonInsightWidget
+          selectedUnitId={selectedUnitId}
+          selectedLessonId={selectedLessonId}
+          selectedStudentId={selectedStudentId}
+        />
+        <LessonFeedbackWidget
+          lessonId={selectedLessonId}
+          teacherHasEnabledAi={aiTaEnabled}
+          studentId={selectedStudentId}
+          unitId={selectedUnitId}
+        />
+        <StudentCFUWidget
+          gridWidth={2}
+          gridHeight={2}
+          lessonId={selectedLessonId}
+          studentId={selectedStudentId}
+        />
+        <StudentCodeWidget studentCode={studentCode} />
+        <StudentRubricWidget
+          gridWidth={2}
+          gridHeight={2}
+          lessonId={selectedLessonId}
+          studentId={selectedStudentId}
+          studentName={selectedStudent ? getFullName(selectedStudent) : ''}
+          teacherHasEnabledAi={false}
+          canProvideFeedback={true}
+        />
+        <ExemplarCodeWidget lessonId={selectedLessonId} />
       </div>
     </div>
   );

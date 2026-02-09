@@ -10,6 +10,9 @@
       "hideable_lessons": true,
       "is_migrated": true,
       "show_calendar": true,
+      "supported_locales": [
+        "es-MX"
+      ],
       "topic_tags": [
         "ai"
       ],
@@ -17,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-11 21:13:21 UTC",
+    "serialized_at": "2026-01-23 17:48:23 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -3612,6 +3615,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-studentsurvey-premodule_latm_latm"
+        ],
         "progression": "Student Pre-Survey"
       },
       "bonus": false,
@@ -3634,6 +3640,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L1_latm_latm"
+        ],
         "progression": "Explore a Chatbot"
       },
       "bonus": false,
@@ -3656,6 +3665,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L2_latm_latm"
+        ],
         "progression": "Explore a Chatbot"
       },
       "bonus": false,
@@ -3678,6 +3690,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L3_latm_latm"
+        ],
         "progression": "Temperature"
       },
       "bonus": false,
@@ -3700,6 +3715,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L4_latm_latm"
+        ],
         "progression": "Temperature"
       },
       "bonus": false,
@@ -3722,6 +3740,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L5_latm_latm"
+        ],
         "progression": "Temperature"
       },
       "bonus": false,
@@ -3744,6 +3765,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L6_latm_latm"
+        ],
         "progression": "Temperature"
       },
       "bonus": false,
@@ -3766,6 +3790,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L7_latm_latm"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -3788,6 +3815,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L8V2_latm_latm"
+        ],
         "progression": "Investigating Hallucinations"
       },
       "bonus": false,
@@ -3810,6 +3840,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L8_latm_latm"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3832,6 +3865,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L1V2_latm_latm"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -3854,6 +3890,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L2V2_latm_latm"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -3876,6 +3915,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L3_latm_latm"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -3898,6 +3940,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L4_latm_latm"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -3920,6 +3965,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L5_latm_latm"
+        ],
         "progression": "Modify"
       },
       "bonus": false,
@@ -3942,6 +3990,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L6_latm_latm"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -3964,6 +4015,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L7_latm_latm"
+        ],
         "progression": "Make"
       },
       "bonus": false,
@@ -3986,6 +4040,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L1_latm_latm"
+        ],
         "progression": "Using a System Prompt"
       },
       "bonus": false,
@@ -4008,6 +4065,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L2_latm_latm"
+        ],
         "progression": "Using a System Prompt"
       },
       "bonus": false,
@@ -4030,6 +4090,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L3_latm_latm"
+        ],
         "progression": "Using a System Prompt"
       },
       "bonus": false,
@@ -4052,6 +4115,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L4_latm_latm"
+        ],
         "progression": "Role & Tone"
       },
       "bonus": false,
@@ -4074,6 +4140,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L5_latm_latm"
+        ],
         "progression": "Role & Tone"
       },
       "bonus": false,
@@ -4096,6 +4165,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L6_latm_latm"
+        ],
         "progression": "Role & Tone"
       },
       "bonus": false,
@@ -4118,6 +4190,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L7_latm_latm"
+        ],
         "progression": "Audience & Delivery"
       },
       "bonus": false,
@@ -4140,6 +4215,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L8_latm_latm"
+        ],
         "progression": "Audience & Delivery"
       },
       "bonus": false,
@@ -4162,6 +4240,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L9_latm_latm"
+        ],
         "progression": "Audience & Delivery"
       },
       "bonus": false,
@@ -4184,6 +4265,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L10_latm_latm"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -4206,6 +4290,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L11_latm_latm"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4228,6 +4315,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L12_latm_latm"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -4250,6 +4340,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L13_latm_latm"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -4272,6 +4365,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L1_latm_latm"
+        ],
         "progression": "Chain of Reasoning"
       },
       "bonus": false,
@@ -4294,6 +4390,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L2_latm_latm"
+        ],
         "progression": "Chain of Reasoning"
       },
       "bonus": false,
@@ -4316,6 +4415,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L3_latm_latm"
+        ],
         "progression": "Chain of Reasoning"
       },
       "bonus": false,
@@ -4338,6 +4440,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L4_latm_latm"
+        ],
         "progression": "Chain of Reasoning"
       },
       "bonus": false,
@@ -4360,6 +4465,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L5_latm_latm"
+        ],
         "progression": "Giving Examples"
       },
       "bonus": false,
@@ -4382,6 +4490,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L6_latm_latm"
+        ],
         "progression": "Giving Examples"
       },
       "bonus": false,
@@ -4404,6 +4515,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L7_latm_latm"
+        ],
         "progression": "Giving Examples"
       },
       "bonus": false,
@@ -4426,6 +4540,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L9_latm_latm"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4448,6 +4565,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L8_latm_latm"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -4470,6 +4590,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-10V2_latm_latm"
+        ],
         "progression": "Show What You Know"
       },
       "bonus": false,
@@ -4492,6 +4615,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L1_latm_latm"
+        ],
         "progression": "Explore"
       },
       "bonus": false,
@@ -4514,6 +4640,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L2V2_latm_latm"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -4536,6 +4665,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L3V2_latm_latm"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -4558,6 +4690,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L4_latm_latm"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -4580,6 +4715,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L5_latm_latm"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -4602,6 +4740,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L6_latm_latm"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -4624,6 +4765,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L7A_latm_latm"
+        ],
         "progression": "Modify"
       },
       "bonus": false,
@@ -4646,6 +4790,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L8_latm_latm"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -4668,6 +4815,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L9_latm_latm"
+        ],
         "progression": "Make"
       },
       "bonus": false,
@@ -4690,6 +4840,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L1_latm_latm"
+        ],
         "progression": "Current Information"
       },
       "bonus": false,
@@ -4712,6 +4865,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L2_latm_latm"
+        ],
         "progression": "Current Information"
       },
       "bonus": false,
@@ -4734,6 +4890,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L3_latm_latm"
+        ],
         "progression": "Specialized Information"
       },
       "bonus": false,
@@ -4756,6 +4915,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L4_latm_latm"
+        ],
         "progression": "Specialized Information"
       },
       "bonus": false,
@@ -4778,6 +4940,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L5_latm_latm"
+        ],
         "progression": "Accurate Information"
       },
       "bonus": false,
@@ -4800,6 +4965,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L6_latm_latm"
+        ],
         "progression": "Accurate Information"
       },
       "bonus": false,
@@ -4822,6 +4990,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L7_latm_latm"
+        ],
         "progression": "Accurate Information"
       },
       "bonus": false,
@@ -4844,6 +5015,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L8_latm_latm"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -4866,6 +5040,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L9_latm_latm"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4888,6 +5065,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L10_latm_latm"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -4910,6 +5090,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L11_latm_latm"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -4932,6 +5115,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L1_latm_latm"
+        ],
         "progression": "User Story #1: Sarah Thompson"
       },
       "bonus": false,
@@ -4954,6 +5140,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L1.1_latm_latm"
+        ],
         "progression": "User Story #1: Sarah Thompson"
       },
       "bonus": false,
@@ -4976,6 +5165,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L2_latm_latm"
+        ],
         "progression": "User Story #1: Sarah Thompson"
       },
       "bonus": false,
@@ -4998,6 +5190,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L4_latm_latm"
+        ],
         "progression": "User Story #2: Janet Lee"
       },
       "bonus": false,
@@ -5020,6 +5215,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L4.1_latm_latm"
+        ],
         "progression": "User Story #2: Janet Lee"
       },
       "bonus": false,
@@ -5042,6 +5240,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L5_latm_latm"
+        ],
         "progression": "User Story #2: Janet Lee"
       },
       "bonus": false,
@@ -5064,6 +5265,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L10_latm_latm"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -5086,6 +5290,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L11_latm_latm"
+        ],
         "progression": "Show What You Know"
       },
       "bonus": false,
@@ -5108,6 +5315,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L7_latm_latm"
+        ],
         "progression": "(Optional) User Story #3: Alex Martinez"
       },
       "bonus": false,
@@ -5130,6 +5340,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L7.1_latm_latm"
+        ],
         "progression": "(Optional) User Story #3: Alex Martinez"
       },
       "bonus": false,
@@ -5152,6 +5365,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L8_latm_latm"
+        ],
         "progression": "(Optional) User Story #3: Alex Martinez"
       },
       "bonus": false,
@@ -5174,6 +5390,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-modelcards-practice-L1_latm_latm"
+        ],
         "progression": "Initial Scenario"
       },
       "bonus": false,
@@ -5196,6 +5415,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-modelcards-practice-L2_latm_latm"
+        ],
         "progression": "You Decide!"
       },
       "bonus": false,
@@ -5218,6 +5440,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project-L0_latm_latm"
+        ],
         "progression": "Example Projects"
       },
       "bonus": false,
@@ -5240,6 +5465,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project-L1_latm_latm"
+        ],
         "progression": "Model, Temperature, and Prompt"
       },
       "bonus": false,
@@ -5262,6 +5490,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project-L2_latm_latm"
+        ],
         "progression": "Retrieval"
       },
       "bonus": false,
@@ -5284,6 +5515,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project-L3_latm_latm"
+        ],
         "progression": "Model Card"
       },
       "bonus": false,
@@ -5306,6 +5540,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-L1_latm_latm"
+        ],
         "progression": "User Testing"
       },
       "bonus": false,
@@ -5328,6 +5565,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-predict-L2_latm_latm"
+        ],
         "progression": "Making Decisions"
       },
       "bonus": false,
@@ -5350,6 +5590,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-predict-L3_latm_latm"
+        ],
         "progression": "Making Decisions"
       },
       "bonus": false,
@@ -5372,6 +5615,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-predict-L4_latm_latm"
+        ],
         "progression": "Making Decisions"
       },
       "bonus": false,
@@ -5394,6 +5640,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-predict-L5_latm_latm"
+        ],
         "progression": "Making Decisions"
       },
       "bonus": false,
@@ -5416,6 +5665,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project2-L0_latm_latm"
+        ],
         "progression": "Example Projects"
       },
       "bonus": false,
@@ -5438,6 +5690,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project2-L1_latm_latm"
+        ],
         "progression": "Step 4: Create your Chatbot"
       },
       "bonus": false,
@@ -5460,6 +5715,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project2-L2_latm_latm"
+        ],
         "progression": "Step 5: Make a Model Card"
       },
       "bonus": false,
@@ -5482,6 +5740,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-studentsurvey-postmodule_latm_latm"
+        ],
         "progression": "Student Post-Survey"
       },
       "bonus": false,

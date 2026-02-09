@@ -104,7 +104,6 @@ function showHomepage() {
             existingSchoolInfo={homepageData.existingSchoolInfo}
             censusQuestion={homepageData.censusQuestion}
             showCensusBanner={homepageData.showCensusBanner}
-            showNpsSurvey={homepageData.showNpsSurvey}
             afeEligible={homepageData.afeEligible}
             teacherName={homepageData.teacherName}
             teacherId={homepageData.teacherId}

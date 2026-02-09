@@ -18,6 +18,7 @@
   width: 100%;
   flex: 1;
   overflow-y: auto;
+  padding-right: 8px;
 }
 
 .saveButton {
@@ -25,3 +26,26 @@
   width: 100%;
 }
 
+.backpackDivider {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  text-align: center;
+  margin-bottom: 0;
+  color: var(--text-neutral-quaternary);
+
+  // Horizontal line on either side of lab name
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--borders-neutral-primary);
+  }
+}
+
+.secondaryFileList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

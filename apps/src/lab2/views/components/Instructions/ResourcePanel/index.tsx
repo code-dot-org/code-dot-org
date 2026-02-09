@@ -21,6 +21,7 @@ import {ProjectSources} from '@cdo/apps/lab2/types';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
+import IntroJSTourWrapper from '@cdo/apps/lab2/views/components/IntroJSTourWrapper';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
 import {useExtraLinksButtonContext} from '@cdo/apps/lab2/views/LabViewsRenderer';
@@ -36,6 +37,7 @@ import ForTeachersOnly from '../ForTeachersOnly';
 import Instructions, {InstructionsProps} from '../InstructionsV2';
 import NavigationArea from '../NavigationArea';
 
+import BackpackHeaderButtons from './Backpack/BackpackHeaderButtons';
 import BackpackPanel from './Backpack/BackpackPanel';
 import {
   resourcePanelInstructionsElementId,
@@ -136,6 +138,11 @@ type ResourcePanelProps = InstructionsProps & {
   /** Only display the sidebar and hide all tabs. */
   sidebarOnly?: boolean;
   backpackProps?: BackpackProps;
+  onImageFlagged?: (
+    file: File,
+    fileType: string,
+    uploadFunction: () => Promise<void>
+  ) => void;
 };
 
 /**
@@ -161,6 +168,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   documentationUrl,
   sidebarOnly = false,
   backpackProps,
+  onImageFlagged,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -198,6 +206,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const isProjectLevel = instructionsProps.levelProperties.isProjectLevel;
   const isWidgetView = instructionsProps.levelProperties.widgetView;
   const dispatch = useAppDispatch();
+  const setBackpackTabAsActive = useCallback(
+    () => setCurrentTab(Tabs.Backpack),
+    []
+  );
+  const [backpackRefreshKey, setBackpackRefreshKey] = useState(0);
 
   // Tooltip should disappear quickly.
   const hideTooltipDelayMs = 10;
@@ -284,7 +297,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       tabMap[Tabs.Backpack] = (
         <BackpackPanel
           {...backpackProps}
-          openPanelCallback={() => setCurrentTab(Tabs.Backpack)}
+          openPanelCallback={setBackpackTabAsActive}
+          backpackRefreshKey={backpackRefreshKey}
+          onImageFlagged={onImageFlagged}
         />
       );
     }
@@ -331,6 +346,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isViewingOldVersion,
     currentTab,
     backpackProps,
+    setBackpackTabAsActive,
+    backpackRefreshKey,
+    onImageFlagged,
   ]);
 
   const hasTabs = useMemo(() => {
@@ -455,15 +473,17 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         id={resourcePanelInstructionsElementId}
         className={classNames(styles.resourcePanel, className)}
       >
-        {isOnboardingTourEnabled && <OnboardingTourSteps />}
-        {isValidationTourEnabled && (
+        <IntroJSTourWrapper enabled={isOnboardingTourEnabled}>
+          <OnboardingTourSteps />
+        </IntroJSTourWrapper>
+        <IntroJSTourWrapper enabled={isValidationTourEnabled}>
           <ValidationTourSteps
             hasValidationConditions={hasValidationConditions}
             validationSettings={instructionsProps.validationSettings}
             setCurrentTab={setCurrentTab}
             onValidate={instructionsProps.validationSettings?.onValidate}
           />
-        )}
+        </IntroJSTourWrapper>
         <div
           className={classNames(
             styles.sidebar,
@@ -598,6 +618,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               rightHeaderContent={
                 currentTab === Tabs.AiTutor ? (
                   <AiChatHeaderButtons />
+                ) : currentTab === Tabs.Backpack ? (
+                  <BackpackHeaderButtons
+                    incrementBackpackRefreshKey={() =>
+                      setBackpackRefreshKey(prev => prev + 1)
+                    }
+                  />
                 ) : (
                   rightHeaderContent
                 )

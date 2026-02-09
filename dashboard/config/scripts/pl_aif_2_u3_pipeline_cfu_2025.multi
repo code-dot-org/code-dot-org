@@ -1,0 +1,15 @@
+name 'pl-aif-2-U3-pipeline-CFU_2025'
+title 'Multiple Choice: Pipelines'
+description ''
+question '#### **Scenario:**
+A music app wants to show users a “Trending Now” playlist.
+The app should:
+1) Only include songs tagged “pop”,
+2) Order those songs from most plays to least plays,
+3) Display only the top 5 songs.   **Which pipeline correctly creates this playlist?**'
+
+wrong 'sort songs by plays → filter songs with tag "pop" → take first 5'
+wrong 'take first 5 songs → filter songs with tag "pop" → sort by plays'
+wrong 'search for "pop" → sort songs alphabetically → take first 5.'
+right 'filter songs with tag "pop" → sort songs by plays → take first 5'
+allow_multiple_attempts true

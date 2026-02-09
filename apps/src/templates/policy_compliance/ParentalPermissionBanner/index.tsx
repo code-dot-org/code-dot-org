@@ -10,11 +10,19 @@ import {ParentalPermissionRequest} from '@cdo/apps/redux/parentalPermissionReque
 import Notification, {
   NotificationType,
 } from '@cdo/apps/sharedComponents/Notification';
-import ParentalPermissionModal from '@cdo/apps/templates/policy_compliance/ParentalPermissionModal';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {RootState} from '@cdo/apps/types/redux';
 import color from '@cdo/apps/util/color';
 import getCurrentLocale from '@cdo/apps/util/currentLocale';
 import i18n from '@cdo/locale';
+
+const LazyParentalPermissionModal = React.lazy(
+  () =>
+    import(
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      '@cdo/apps/templates/policy_compliance/ParentalPermissionModal' as any
+    )
+);
 
 interface ParentalPermissionBannerProps {
   lockoutDate: string;
@@ -119,14 +127,16 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
   return (
     <Fade in={show} mountOnEnter unmountOnExit>
       <div id="parental-permission-banner">
-        <ParentalPermissionModal
-          lockoutDate={lockoutDate}
-          show={showModal}
-          onClose={handleModalClose}
-          onSubmit={handleModalSubmit}
-          onResend={handleModalResend}
-          onUpdate={handleModalUpdate}
-        />
+        <React.Suspense fallback={<Spinner />}>
+          <LazyParentalPermissionModal
+            lockoutDate={lockoutDate}
+            show={showModal}
+            onClose={handleModalClose}
+            onSubmit={handleModalSubmit}
+            onResend={handleModalResend}
+            onUpdate={handleModalUpdate}
+          />
+        </React.Suspense>
 
         <Notification
           type={NotificationType.warning}

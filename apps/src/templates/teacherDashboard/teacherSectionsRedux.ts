@@ -14,7 +14,6 @@ import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseCo
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {RootState} from '@cdo/apps/types/redux';
-import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {
   PlGradeValue,
@@ -60,10 +59,6 @@ type AssignmentData = {
   course_offering_id?: number | null;
   unitName?: string | null;
 };
-
-interface AifInfo {
-  aif: boolean;
-}
 
 export interface TeacherSectionState {
   nextTempId: number;
@@ -380,6 +375,17 @@ const sectionSlice = createSlice({
       const {sectionId, aiTutorEnabled} = action.payload;
 
       state.sections[sectionId].aiTutorEnabled = aiTutorEnabled;
+    },
+    updateSectionAiChatAccessLevel(
+      state,
+      action: PayloadAction<{
+        sectionId: number;
+        aiChatAccessLevel: string;
+      }>
+    ) {
+      const {sectionId, aiChatAccessLevel} = action.payload;
+
+      state.sections[sectionId].aiChatAccessLevel = aiChatAccessLevel;
     },
     setCourseOfferings(
       state,
@@ -973,34 +979,16 @@ export const assignToSection = (
 ): SectionThunkAction => {
   return (dispatch, getState) => {
     const section = getState().teacherSections.sections[sectionId];
-    if (unitId && section.unitId !== unitId) {
-      if (
-        DCDO.get('show-aita-lesson-summaries', false) ||
-        experiments.isEnabled('ai_lesson_summaries')
-      ) {
-        HttpClient.get(
-          `/ai_lesson_summaries/perform_ai_lesson_summaries_by_unit?unit_id=${unitId}`
-        ).catch(error => {
-          console.error(error);
-        });
-      } else {
-        HttpClient.fetchJson<AifInfo>(
-          `/teacher_dashboard/unit_in_aif?unit_id=${unitId}`
-        ).then(response => {
-          const aif = response.value.aif;
-          if (
-            DCDO.get('show-aita-lesson-summaries', false) ||
-            experiments.isEnabled('ai_lesson_summaries') ||
-            aif
-          ) {
-            HttpClient.get(
-              `/ai_lesson_summaries/perform_ai_lesson_summaries_by_unit?unit_id=${unitId}`
-            ).catch(error => {
-              console.error(error);
-            });
-          }
-        });
-      }
+    if (
+      unitId &&
+      section.unitId !== unitId &&
+      DCDO.get('show-aita-lesson-summaries', false)
+    ) {
+      HttpClient.get(
+        `/ai_lesson_summaries/perform_ai_lesson_summaries_by_unit?unit_id=${unitId}`
+      ).catch(error => {
+        console.error(error);
+      });
     }
     // Only log if the assignment is changing.
     if (
@@ -1021,7 +1009,7 @@ export const assignToSection = (
           newCourseId: courseOfferingId,
           newCourseVersionId: courseVersionId,
         },
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
     }
 
@@ -1207,6 +1195,7 @@ export const {
   setAvailableParticipantTypes,
   startLoadingSectionData,
   updateSectionAiTutorEnabled,
+  updateSectionAiChatAccessLevel,
   updateSelectedSection,
   sectionHasNewData,
   sectionDoesNotHaveNewData,

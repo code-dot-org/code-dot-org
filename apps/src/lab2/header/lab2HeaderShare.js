@@ -51,7 +51,7 @@ export function shareLab2Project(dialogId, finishUrl) {
         channel_id: projectManager.getChannelId(),
         dialog_id: dialogId,
       },
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
     trackEvent('share', 'share_open_dialog', {
       value:

@@ -11,11 +11,11 @@ import {
   TypedDialogProps,
 } from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import {BackpackContextType} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 
 type OpenSaveToBackpackPromptArgsType = {
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
-  backpackApi: BackpackContextType;
+  backpackApi: BackpackClientApi;
   file: ProjectFile;
   sendLab2AnalyticsEvent: (
     eventName: string,
@@ -86,12 +86,12 @@ export const openSaveToBackpackPrompt = async ({
       const selectedFileName =
         results.type === 'confirm' ? file.name : fileNameCopy;
 
-      let successMetric = EVENTS.CODEBRIDGE_SAVE_TO_BACKPACK_NEW;
+      let successMetric = EVENTS.SAVE_TO_BACKPACK_NEW;
       if (isDuplicateFileName) {
         successMetric =
           selectedFileName === file.name
-            ? EVENTS.CODEBRIDGE_SAVE_TO_BACKPACK_REPLACE
-            : EVENTS.CODEBRIDGE_SAVE_TO_BACKPACK_RENAME;
+            ? EVENTS.SAVE_TO_BACKPACK_REPLACE
+            : EVENTS.SAVE_TO_BACKPACK_RENAME;
       }
       const successCallback = () =>
         sendLab2AnalyticsEvent(successMetric, {

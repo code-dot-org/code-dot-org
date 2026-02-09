@@ -10,11 +10,17 @@
           var email = "#{@form_data[:email]}";
           var givenName = "#{@form_data[:given_name]}";
           var familyName = "#{@form_data[:family_name]}";
+          var name = "#{@form_data[:name]}";
           var oauthType = "#{@form_data[:provider]}";
+          var accountType = "#{@form_data[:account_type]}";
+          var usState = "#{@form_data[:us_state]}";
           sessionStorage.setItem('email', email);
           sessionStorage.setItem('givenName', givenName);
           sessionStorage.setItem('familyName', familyName);
+          sessionStorage.setItem('name', name)
           sessionStorage.setItem('oauthType', oauthType);
+          sessionStorage.setItem('accountType', accountType);
+          sessionStorage.setItem('usState', usState);
           window.location.href = "#{sign_up_url}";
         })();
 

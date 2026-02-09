@@ -10,14 +10,44 @@
     "offer_browser_tts": "false",
     "panels": [
       {
+        "text": "# For Loop\n A **for loop** is a loop that repeats a set of steps a specific number of times.\n\n#### Let's break it down! ",
+        "imageUrl": "https://images.code.org/350c5ed6cb3870569ed669bfb37e16c5-forloop.png",
+        "key": "pl-aif-2-U4-forloop-panel-55f5c62b-017c-42b7-aea3-2a05496b037d",
+        "layout": "text-bottom-right"
+      },
+      {
         "text": "# Loop Variable\n\nA **loop variable** is a variable that changes value each time a loop runs. It keeps track of the loop's current step or position.\n\n**Example**: In `for (let i = 0; i < 5; i++)`, the loop variable is `i`.",
         "imageUrl": "https://images.code.org/0dc50f28b7bd87b0d74641242c337a8f-loop_variable.png",
         "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "# Start Value\nThe **start value** is the value where the loop begins. It sets the initial value of the loop variable.\n\nThe start value here is 0.",
+        "imageUrl": "https://images.code.org/fab7ea652f383eb78b966d666567c65b-forloop (1).png",
+        "key": "pl-aif-2-U4-forloop-panel-c76db334-f950-42dc-94f4-ba8691b18868",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "# Stop Value\nThe **stop value** is the value or condition that tells the loop when to stop running. The loop ends when this condition is no longer true.\n\nThe stop value here is anything greater than 10.\n\n***Note:*** *Pay attention to the operators like  `<` vs `<=`, since a single symbol change whether the loop runs one too many times, or not enough.*",
+        "imageUrl": "https://images.code.org/1b9d0fdd55706ee1979648201824d683-forloop (2).png",
+        "key": "pl-aif-2-U4-forloop-panel-d675d816-76e7-4098-aebf-2eae9b8939b9",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "# Step Value\nThe **step value** is how the loop variable should change.\n\nIn this example, the step value runs in increments of 2.",
+        "imageUrl": "https://images.code.org/2e2d6481f7b60a6bf129d732a597e6ab-forloop (3).png",
+        "key": "pl-aif-2-U4-forloop-panel-0a90b29e-b77c-41ed-94d0-1a6d918d8b5e",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "# The Big Idea\nA for loop needs three things to work correctly:\n- A starting value\n- A condition that determines when the loop should stop\n- An update that changes the variable each time the loop runs\n\nIf any one of these pieces is incorrect or missing, the loop may run the wrong number of times, or not at all.\n\n#### Now, let's practice in Web Lab!",
+        "imageUrl": "https://images.code.org/1a9a28a6e9ccf64d806ac6ece0a006af-forloop (4).png",
+        "key": "pl-aif-2-U4-forloop-panel-00a12c5a-7723-4f38-bab1-cb3ea33dc306",
         "layout": "text-bottom-right"
       }
     ],
     "name_suffix": "_2025-pilot"
   },
-  "audit_log": "[{\"changed_at\":\"2026-01-15T16:55:22.829+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson2-loop-variables-test_2025-pilot\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson2-loop-variables-test_2025-pilot\"},{\"changed_at\":\"2026-01-15 16:57:14 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-01-15T16:55:22.829+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson2-loop-variables-test_2025-pilot\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson2-loop-variables-test_2025-pilot\"},{\"changed_at\":\"2026-01-15 16:57:14 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-01-16 15:30:48 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-01-16 15:37:25 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Panels>

@@ -7,7 +7,6 @@
 }
 
 .nps-survey-q-title {
-  padding-top: 10px;
   font-size: 16px;
   font-weight: 600;
   color: var(--text-neutral-primary);
@@ -44,6 +43,7 @@
   width: 200px;
   text-align: left;
   font-size: 14px;
+  line-height: 16px;
   font-weight: 400;
   color: var(--text-neutral-secondary);
 }
@@ -54,15 +54,16 @@
   left: 348px;
   width: 200px;
   text-align: right;
+  line-height: 16px;
   font-size: 14px;
   font-weight: 400;
   color: var(--text-neutral-secondary);
 }
 
 .nps-survey-rating-root {
-  height: 80px;
+  height: 60px;
   position: relative;
-  padding-top: 10px;
+  padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 10px;
 
@@ -98,6 +99,7 @@
   background-color: var(--background-brand-purple-primary);
   height: 32px;
   padding: 0 24px;
+  margin-top: 4px;
   line-height: 32px;
   &:hover {
     background-color: var(--background-brand-purple-strong);

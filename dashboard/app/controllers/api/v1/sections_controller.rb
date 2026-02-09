@@ -70,6 +70,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
         restrict_section: params[:restrict_section].nil? ? false : params[:restrict_section],
         avatar_color: params[:avatar_color].nil? ? 0 : params[:avatar_color],
         avatar_emoji: params[:avatar_emoji].nil? ? 0 : params[:avatar_emoji],
+        ai_chat_access_level: params[:ai_chat_access_level].nil? ? SharedConstants::AI_CHAT_ACCESS_LEVELS[:DISABLED] : params[:ai_chat_access_level],
       }
     )
     return head :bad_request unless section.persisted?
@@ -122,6 +123,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     fields[:ai_tutor_enabled] = params[:ai_tutor_enabled] unless params[:ai_tutor_enabled].nil?
     fields[:avatar_color] = params[:avatar_color].nil? ? 0 : params[:avatar_color]
     fields[:avatar_emoji] = params[:avatar_emoji].nil? ? 0 : params[:avatar_emoji]
+    fields[:ai_chat_access_level] = params[:ai_chat_access_level] unless params[:ai_chat_access_level].nil?
 
     section.update!(fields)
     if @unit
@@ -300,6 +302,14 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
   def set_ai_tutor_enabled
     @section.update!(ai_tutor_enabled: params[:ai_tutor_enabled])
     render json: {result: 'success'}
+  end
+
+  # POST /api/v1/sections/<id>/ai_chat_access_level
+  def set_ai_chat_access_level
+    @section.update!(ai_chat_access_level: params[:ai_chat_access_level])
+    render json: {result: 'success'}
+  rescue ActiveRecord::RecordInvalid
+    render json: {result: 'invalid ai_chat_access_level'}, status: :bad_request
   end
 
   private def find_follower

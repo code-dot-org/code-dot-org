@@ -13,8 +13,10 @@ import React, {useMemo} from 'react';
 import {getFileIconNameAndStyle} from '@cdo/apps/codebridge';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {BackpackProps} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -33,6 +35,12 @@ interface BackpackFileChipProps extends BackpackProps {
   isRecentlyAdded?: boolean;
   disableActions: boolean;
   setActionInProgress: (inProgress: boolean) => void;
+  isSecondaryBackpack?: boolean;
+  onImageFlagged?: (
+    file: File,
+    fileType: string,
+    uploadFunction: () => Promise<void>
+  ) => void;
 }
 
 const EXTENSIONS_WITH_PREVIEWS = ['png', 'jpg', 'jpeg', 'gif'];
@@ -50,6 +58,8 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   supportedFileTypes,
   disableActions,
   setActionInProgress,
+  isSecondaryBackpack,
+  onImageFlagged,
 }) => {
   const fileExtension = fileName.split('.').pop()?.toLowerCase();
   const fileIcon = useMemo(
@@ -85,7 +95,10 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
 
   const filePreviewUrl = useMemo(() => {
     if (fileExtension && EXTENSIONS_WITH_PREVIEWS.includes(fileExtension)) {
-      return `${backpackApi.getFileFetchUrl(fileName)}?cacheBust=${Date.now()}`;
+      const url = backpackApi.getFileFetchUrl(fileName);
+      if (url) {
+        return `${url}?cacheBust=${Date.now()}`;
+      }
     }
     return undefined;
     // We explicitly including `isRecentlyAdded` even though it isn't used so the
@@ -94,7 +107,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [backpackApi, fileExtension, fileName, isRecentlyAdded]);
 
-  const handleAdd = async () => {
+  const handleAdd = async (isSecondaryBackpack?: boolean) => {
     setActionInProgress(true);
     const {isSupportFileName, newFileName} = validateFileName(fileName);
     if (isSupportFileName) {
@@ -119,20 +132,25 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
         createNewProjectFile,
         findIdForFileName,
         fileName,
-        newFileName
+        newFileName,
+        onImageFlagged,
+        isSecondaryBackpack
       );
     } else {
       // Fetch backpack file content and import new file to project - not a duplicate file name.
-      await fetchAndSaveFile(
+      await fetchAndSaveFile({
+        successMetric: EVENTS.IMPORT_FROM_BACKPACK_NEW,
         backpackApi,
         channelId,
         addAlert,
-        saveFileToProject,
-        createNewProjectFile,
+        saveFile: saveFileToProject,
+        createNewFile: createNewProjectFile,
         findIdForFileName,
-        fileName,
-        fileName
-      );
+        selectedFileName: fileName,
+        newFileName: fileName,
+        onImageFlagged,
+        isSecondaryBackpack,
+      });
     }
     setActionInProgress(false);
   };
@@ -143,9 +161,15 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
     const results = await dialogControl?.showDialog({
       type: DialogType.GenericConfirmation,
       title: 'Are you sure?',
-      message: `You are about to delete ${fileName} from your Backpack.`,
-      confirmText: 'Delete',
+      bodyComponent: (
+        <>
+          You are about to delete <strong>{fileName}</strong> from your
+          Backpack.
+        </>
+      ),
+      confirmText: 'Delete file',
       destructive: true,
+      icon: {iconName: 'trash', iconStyle: 'solid'},
     });
     if (results.type === 'confirm') {
       backpackApi.deleteFiles(
@@ -163,8 +187,13 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
         () => {
           // TODO: log to statsig
           setActionInProgress(false);
+          sendLab2AnalyticsEvent(EVENTS.DELETE_FROM_BACKPACK, {
+            fileType: fileExtension || '',
+          });
         }
       );
+    } else {
+      setActionInProgress(false);
     }
   };
 
@@ -223,7 +252,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
                 icon={{iconName: 'plus'}}
                 color="gray"
                 type="secondary"
-                onClick={handleAdd}
+                onClick={() => handleAdd(isSecondaryBackpack)}
                 disabled={addButtonDisabled}
               />
             </div>

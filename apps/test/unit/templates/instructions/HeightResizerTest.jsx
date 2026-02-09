@@ -1,10 +1,11 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 
 import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
 
 describe('HeightResizer', () => {
-  it('handles a drag event', () => {
+  it('handles a drag event', async () => {
     const resizeItemTopCallback = jest.fn().mockReturnValue(5);
     const onResizeCallback = jest.fn();
     const wrapper = mount(
@@ -21,7 +22,10 @@ describe('HeightResizer', () => {
       pageY: 20,
       cancelable: true,
     });
-    wrapper.instance().onMouseDown(mouseDownEvent);
+    await act(async () => {
+      wrapper.instance().onMouseDown(mouseDownEvent);
+    });
+    wrapper.update();
 
     expect(resizeItemTopCallback).toHaveBeenCalledTimes(1);
     expect(onResizeCallback).not.toHaveBeenCalled();
@@ -33,7 +37,10 @@ describe('HeightResizer', () => {
       pageY: 30,
       cancelable: true,
     });
-    wrapper.instance().onMouseMove(mouseMoveEvent);
+    await act(async () => {
+      wrapper.instance().onMouseMove(mouseMoveEvent);
+    });
+    wrapper.update();
 
     expect(resizeItemTopCallback).toHaveBeenCalledTimes(2);
     expect(onResizeCallback).toHaveBeenCalledWith(10);
@@ -46,7 +53,10 @@ describe('HeightResizer', () => {
       pageY: 40,
       cancelable: true,
     });
-    wrapper.instance().onMouseUp(mouseUpEvent);
+    await act(async () => {
+      wrapper.instance().onMouseUp(mouseUpEvent);
+    });
+    wrapper.update();
 
     expect(resizeItemTopCallback).toHaveBeenCalledTimes(2);
     expect(onResizeCallback).toHaveBeenCalledTimes(1);

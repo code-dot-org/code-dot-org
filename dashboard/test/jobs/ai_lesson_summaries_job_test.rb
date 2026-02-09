@@ -119,9 +119,9 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
     end
   end
 
-  test 'job is queued on default queue' do
+  test 'job is queued on low priority queue' do
     job = AiLessonSummariesJob.new(request: @request)
-    assert_equal 'default', job.queue_name
+    assert_equal 'low_priority', job.queue_name
   end
 
   test 'job executes successfully with valid request structure' do

@@ -1,7 +1,7 @@
 /** @file Test of searchAssetsTest.js. */
 
 import {searchAssets} from '@cdo/apps/code-studio/assets/searchAssets';
-import soundLibrary from '@cdo/apps/code-studio/soundLibrary.json';
+import soundLibrary from '@cdo/static/json/code-studio/soundLibrary.json';
 
 import testAnimationLibrary from '../p5lab/testAnimationLibrary.json';
 

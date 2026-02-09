@@ -25,12 +25,12 @@ markdown <<MARKDOWN
 
 ## What success looks like
 
-#### **By the end, the students will:**
-- #### Build a working dashboard that filters and summarizes a dataset
-- #### Show applied filters and calculations with clear transparency cues
-- #### Refine categories and defaults to improve findability
-- #### Balance AI scaffolds and their own logic, documenting choices
-- #### Reflect on who/what is surfaced or hidden by filtering
+> #### **By the end, the students will:**
+> - #### Build a working dashboard that filters and summarizes a dataset
+> - #### Show applied filters and calculations with clear transparency cues
+> - #### Refine categories and defaults to improve findability
+> - #### Balance AI scaffolds and their own logic, documenting choices
+> - #### Reflect on who/what is surfaced or hidden by filtering
 
 ---
 

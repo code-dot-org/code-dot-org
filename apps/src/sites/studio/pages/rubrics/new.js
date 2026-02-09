@@ -8,9 +8,7 @@ $(document).ready(() => {
   const lessonData = getScriptData('lessonData');
   const {unitName, lessonNumber, levels} = lessonData;
   const lessonId = lessonData.id;
-  const submittableLevels = levels.filter(
-    level => level.properties.submittable === 'true'
-  );
+  const submittableLevels = levels.filter(level => level.isSubmittable);
 
   createReactRoot(
     <RubricsContainer

@@ -19,7 +19,8 @@
     "v1_hide_sliders": "false",
     "encrypted": "false",
     "v1_initial_width": "11",
-    "v1_initial_height": "11"
+    "v1_initial_height": "11",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

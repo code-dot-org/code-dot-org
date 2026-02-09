@@ -237,7 +237,7 @@ describe('SectionCardBody', () => {
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_CARD_VIEW_PROGRESS_CLICKED,
       {},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   });
 
@@ -249,7 +249,7 @@ describe('SectionCardBody', () => {
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_CARD_VIEW_LESSON_MATERIALS_CLICKED,
       {},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   });
 

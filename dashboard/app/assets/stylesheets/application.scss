@@ -2454,6 +2454,7 @@ a.download-video {
       opacity: unset;
       float: left;
       margin-left: 24px;
+      height: 18px;
     }
 
     &:focus {
@@ -2489,6 +2490,16 @@ a.download-video {
       background-color: $clever_brand_color;
       border-color: $clever_brand_color;
       color: $neutral_white;
+    }
+
+    &.with-classlink {
+      background-color: $classlink_brand_color;
+      border-color: $classlink_brand_color;
+      color: $neutral_white;
+
+      img {
+        filter: brightness(0) invert(1);
+      }
     }
   }
 }
@@ -3455,7 +3466,7 @@ button>img {
 button:hover>img {
   opacity: 1;
 }
-button:active {
+button:active:not(.MuiButtonBase-root) {
   border: 1px solid $light_gray !important;
 }
 button.button-active-no-border:active {

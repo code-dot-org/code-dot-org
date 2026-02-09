@@ -23,9 +23,17 @@ window.fetch = jest
   .fn()
   .mockResolvedValue({json: jest.fn(), headers: {get: jest.fn()}});
 
+const CONTAINER_ID = 'container-id';
+
 describe('Javalab', () => {
   let javalab;
   let config;
+
+  beforeAll(() => {
+    const rootContainer = document.createElement('div');
+    rootContainer.setAttribute('id', CONTAINER_ID);
+    document.getElementsByTagName('body')[0].appendChild(rootContainer);
+  });
 
   beforeEach(() => {
     javalab = new Javalab();
@@ -36,6 +44,7 @@ describe('Javalab', () => {
     stubStudioApp();
     javalab.studioApp_ = studioApp();
     config = {
+      containerId: CONTAINER_ID,
       level: {},
       skin: {},
     };

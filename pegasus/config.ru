@@ -4,17 +4,6 @@ CDO.cdo_secrets&.required! unless rack_env?(:development) || CDO.unit_test
 
 require File.expand_path('../router', __FILE__)
 
-unless rack_env?(:development)
-  require 'cdo/app_server_metrics'
-  listener = CDO.pegasus_sock || "0.0.0.0:#{CDO.pegasus_port}"
-  use Cdo::AppServerMetrics,
-    listeners: [listener],
-    dimensions: {
-      Environment: CDO.rack_env,
-      Host: CDO.pegasus_hostname
-    }
-end
-
 use Rack::Session::Cookie, secret: (CDO.sinatra_session_secret || 'dev_mode')
 
 require 'rack/ssl-enforcer'

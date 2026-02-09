@@ -2,6 +2,7 @@
 import {Codebridge} from '@codebridge/Codebridge';
 import {useSource} from '@codebridge/hooks/useSource';
 import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
+import {json} from '@codemirror/lang-json';
 import {python} from '@codemirror/lang-python';
 import {LanguageSupport} from '@codemirror/language';
 import React, {useContext, useEffect, useMemo, useState} from 'react';
@@ -56,6 +57,7 @@ const aiTutorHelper = new AiTutorPythonLabContextHelper();
 
 const pythonlabLangMapping: {[key: string]: LanguageSupport} = {
   py: python(),
+  json: json(),
 };
 
 const standaloneStartSources: {[key: string]: ProjectSources} = {

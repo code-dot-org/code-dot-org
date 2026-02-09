@@ -1,0 +1,158 @@
+name 'pl-ai-101-V2-mod1-impact-01'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Impact of AI on Education
+
+#### AI is increasingly influencing instruction, assessment, and school operations. The following scenarios highlight real classroom and school-based examples that show both productive uses of AI and potential concerns.
+
+>#### 💬 **Quick Reflection:** As you read think about which of these scenarios feels most similar to something you've already seen or experienced in your own classroom or school.
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 15px;">
+
+<!-- Scenario 2 -->
+<div style="background:#fff; padding:15px; text-align:center; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:18px;">
+<img 
+  src="https://images.code.org/70c1ca931790351868059db748869eaa-Screenshot 2026-02-04 at 3.02.12 PM.png" 
+  alt="Illustrated classroom scenario involving AI use" 
+  style="
+    width:100%;
+    height:120px;
+    object-fit:cover;
+    border-radius:6px;
+    margin-bottom:10px;
+    background:#ececec;
+  ">
+<p style="font-size:14px;">
+A 10th-grade student submits a polished history essay on the Civil Rights Movement that was generated almost entirely by AI. During peer review, classmates ask questions about specific events and sources mentioned in the essay. The student struggles to explain key events or arguments from the essay.
+</p>
+</div>
+
+<!-- Scenario 3 -->
+<div style="background:#fff; padding:15px; text-align:center; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:18px;">
+<img 
+  src="https://images.code.org/74cd4e2369d3fc68024d19aa164f3e77-Screenshot 2026-02-04 at 3.02.44 PM.png" 
+  alt="Illustrated classroom scenario involving AI use" 
+  style="
+    width:100%;
+    height:120px;
+    object-fit:cover;
+    border-radius:6px;
+    margin-bottom:10px;
+    background:#ececec;
+  ">
+<p style="font-size:14px;">
+A 4th-grade science teacher uses AI to generate reading passages about ecosystems at multiple reading levels, including simplified texts and vocabulary supports for English learners. The teacher reviews and edits the content to ensure accuracy and appropriateness. Students work on the same topic while accessing materials that match their reading ability.
+</p>
+</div>
+
+<!-- Scenario 4 -->
+<div style="background:#fff; padding:15px; text-align:center; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:18px;">
+<img 
+  src="https://images.code.org/58c41bce591f6f537a6f05ea6cccbd34-Screenshot 2026-02-04 at 3.02.17 PM.png" 
+  alt="Illustrated classroom scenario involving AI use" 
+  style="
+    width:100%;
+    height:120px;
+    object-fit:cover;
+    border-radius:6px;
+    margin-bottom:10px;
+    background:#ececec;
+  ">
+<p style="font-size:14px;">
+A 7th-grade math student frequently uses AI to complete homework assignments by entering problems and copying the solutions. During class, the student can follow along with examples but struggles when asked to solve a similar problem independently. During a unit test that does not allow AI, the student has difficulty answering any of the questions.
+</p>
+</div>
+
+<!-- Scenario 1 -->
+<div style="background:#fff; padding:15px; text-align:center; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:18px;">
+<img 
+  src="https://images.code.org/79b1233d96849775ef76ef1f73f02ca4-Screenshot 2026-02-04 at 3.01.59 PM.png" 
+  alt="Illustrated classroom scenario involving AI use" 
+  style="
+    width:100%;
+    height:120px;
+    object-fit:cover;
+    border-radius:6px;
+    margin-bottom:10px;
+    background:#ececec;
+  ">
+<p style="font-size:14px;">
+A middle school assistant principal uses AI to summarize attendance records and behavior referrals across all grade levels. The tool highlights patterns by time of day and student group that would take hours to find manually. The administrator uses these summaries when planning schedules and support programs for the following semester.
+</p>
+</div>
+
+<!-- Scenario 5 -->
+<div style="background:#fff; padding:15px; text-align:center; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:18px;">
+<img 
+  src="https://images.code.org/b89d7ef318c1cf734fe77e43a383e684-Screenshot 2026-02-04 at 3.02.23 PM.png" 
+  alt="Illustrated classroom scenario involving AI use" 
+  style="
+    width:100%;
+    height:120px;
+    object-fit:cover;
+    border-radius:6px;
+    margin-bottom:10px;
+    background:#ececec;
+  ">
+<p style="font-size:14px;">
+In an 8th-grade English class, students submit essay drafts and receive AI-generated feedback on structure, transitions, and grammar. They revise their drafts using the suggestions and highlight which changes they accepted or rejected. The teacher reviews both versions during writing conferences.
+</p>
+</div>
+
+<!-- Scenario 10 -->
+<div style="background:#fff; padding:15px; text-align:center; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:18px;">
+<img 
+  src="https://images.code.org/ea5377f42ea970179efa9f124600378b-Screenshot 2026-02-04 at 3.02.39 PM.png" 
+  alt="Illustrated classroom scenario involving AI use" 
+  style="
+    width:100%;
+    height:120px;
+    object-fit:cover;
+    border-radius:6px;
+    margin-bottom:10px;
+    background:#ececec;
+  ">
+<p style="font-size:14px;">
+A high school student uses AI to generate examples for a career research assignment. The tool repeatedly associates certain professions with specific genders or cultural backgrounds. The student notices similar patterns across multiple prompts.
+</p>
+</div>
+
+<!-- Scenario 11 -->
+<div style="background:#fff; padding:15px; text-align:center; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:18px;">
+<img 
+  src="https://images.code.org/36fbd1519b267daab49c5e56032ac2e5-Screenshot 2026-02-04 at 3.02.28 PM.png" 
+  alt="Illustrated classroom scenario involving AI use" 
+  style="
+    width:100%;
+    height:120px;
+    object-fit:cover;
+    border-radius:6px;
+    margin-bottom:10px;
+    background:#ececec;
+  ">
+<p style="font-size:14px;">
+A school district discusses how to respond to increasing student use of AI tools. Some staff members suggest banning AI entirely, while others point out instructional uses already happening in classrooms. The IT department and instructional leaders meet to evaluate tools based on privacy policies, age appropriateness, and learning goals before approving a limited set.
+</p>
+</div>
+
+<!-- Scenario 12 -->
+<div style="background:#fff; padding:15px; text-align:center; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:18px;">
+<img 
+  src="https://images.code.org/15deaef2f6e1fa07f06a4bcdb3d20d07-Screenshot 2026-02-04 at 3.02.34 PM.png" 
+  alt="Illustrated classroom scenario involving AI use" 
+  style="
+    width:100%;
+    height:120px;
+    object-fit:cover;
+    border-radius:6px;
+    margin-bottom:10px;
+    background:#ececec;
+  ">
+<p style="font-size:14px;">
+A middle school social studies student uses AI to research information for a current events presentation. The AI confidently provides incorrect or outdated facts mixed in with accurate information. Without verifying sources, the student includes the misinformation in their project.</p>
+</div>
+
+</div>
+MARKDOWN

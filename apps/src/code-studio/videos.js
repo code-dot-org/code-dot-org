@@ -223,6 +223,7 @@ videos.showVideoDialog = function (options, forceShowVideo) {
   var download = $('<a/>')
     .append($('<i class="fa fa-download" />'))
     .addClass('download-video btn')
+    .attr('aria-label', 'Download Video')
     .css('float', 'left')
     .attr('href', options.download);
   if (document.dir === 'rtl') {

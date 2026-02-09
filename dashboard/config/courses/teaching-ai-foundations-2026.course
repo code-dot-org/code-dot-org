@@ -9,6 +9,15 @@
     "self-paced-pl-teaching-ai-powered-threats-defenses-s1-2026",
     "self-paced-pl-teaching-insights-from-data-ai-s1-2026"
   ],
+  "unit_prefixes": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6"
+  ],
   "original_script_names": [
     "self-paced-pl-teaching-aif-s1-overview-2026",
     "self-paced-pl-teaching-ps-with-ai-s1-2026",
@@ -25,7 +34,7 @@
   "properties": {
     "family_name": "teaching-ai-foundations",
     "has_verified_resources": true,
-    "numbered_units": "auto",
+    "numbered_units": "custom",
     "version_year": "2026"
   },
   "resources": [

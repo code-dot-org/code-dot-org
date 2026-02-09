@@ -70,7 +70,7 @@ export default function RegionalWorkshopCatalog({
           'number of regional workshops': 0,
           'number of national workshops': nationalWorkshops?.length || 0,
         },
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
     }
   }, [zipFromSchoolInfo, handleSubmitZip, nationalWorkshops]);
@@ -143,7 +143,7 @@ export default function RegionalWorkshopCatalog({
               'number of national workshops':
                 availableNationalWorkshops?.length || 0,
             },
-            PLATFORMS.BOTH
+            PLATFORMS.STATSIG
           );
         }
       } catch (error) {
