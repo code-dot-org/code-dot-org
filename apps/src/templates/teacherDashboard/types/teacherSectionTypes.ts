@@ -1,4 +1,5 @@
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
+import {AiChatToolsDependencyValue} from '@cdo/apps/aichat/types/accessControls';
 import {
   SectionLoginType,
   UserTypes,
@@ -46,7 +47,7 @@ export interface Section {
   unitPosition: string | null;
   avatar_color?: number | null;
   avatar_emoji?: number | null;
-  isAssignedEssentialAiChat?: boolean;
+  assignedAiChatToolsDependency?: AiChatToolsDependencyValue;
   aiChatAccessLevel?: string;
 }
 
