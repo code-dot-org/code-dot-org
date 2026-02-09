@@ -16,7 +16,7 @@ import {
   EVENTS,
   DCDO,
 } from '@code-dot-org/core/metrics';
-import type {ProjectType} from '@code-dot-org/projects';
+import type {ProjectType} from '@code-dot-org/platform/projects';
 
 import {
   TEACHER_FEEDBACK_LINK,

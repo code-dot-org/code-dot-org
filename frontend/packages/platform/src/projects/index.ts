@@ -1,4 +1,5 @@
 export * from './constants';
+export * from './redux';
 export * from './types';
 export * from './ChannelsStore';
 export * from './SourcesStore';

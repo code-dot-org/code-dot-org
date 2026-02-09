@@ -1,5 +1,8 @@
 import type {LevelProperties} from '@code-dot-org/core/api';
-import type {ProjectSources, ProjectManager} from '@code-dot-org/projects';
+import type {
+  ProjectSources,
+  ProjectManager,
+} from '@code-dot-org/platform/projects';
 
 import {useMaybeLevelProperties} from '../contexts/LevelPropertiesContext';
 import {ProjectProvider} from '../contexts/ProjectContext';

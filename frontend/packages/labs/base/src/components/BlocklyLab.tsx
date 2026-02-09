@@ -3,7 +3,7 @@ import {useCallback} from 'react';
 import type {BlocklySerialization} from '@code-dot-org/blockly-workspace';
 import {toolboxToWorkspaceBlocks} from '@code-dot-org/blockly-workspace/utils';
 import type {LevelProperties} from '@code-dot-org/core/api';
-import type {ProjectSources, Source} from '@code-dot-org/projects';
+import type {ProjectSources, Source} from '@code-dot-org/platform/projects';
 
 import type {BlocklyLevelProperties} from '../types';
 import {getInitialBlocklySources} from '../utils';

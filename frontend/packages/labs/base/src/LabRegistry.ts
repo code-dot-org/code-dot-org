@@ -1,5 +1,5 @@
 import type {ProjectType} from '@code-dot-org/core/api';
-import type {ProjectManager} from '@code-dot-org/projects';
+import type {ProjectManager} from '@code-dot-org/platform/projects';
 
 import LabMetricsReporter from './LabMetricsReporter';
 import LifecycleNotifier from './LifecycleNotifier';

@@ -15,7 +15,7 @@ import type {
   ProjectSources,
   LevelProperties,
 } from '@code-dot-org/core/api';
-import type {ProjectManager} from '@code-dot-org/projects';
+import type {ProjectManager} from '@code-dot-org/platform/projects';
 
 import StartOverDialog from '../dialogs/components/StartOverDialog';
 import useLifecycleNotifier from '../hooks/useLifecycleNotifier';

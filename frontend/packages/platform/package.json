@@ -27,6 +27,11 @@
       "types": "./dist/progress/index.d.ts",
       "import": "./dist/progress/index.mjs",
       "require": "./dist/progress/index.js"
+    },
+    "./projects": {
+      "types": "./dist/projects/index.d.ts",
+      "import": "./dist/projects/index.mjs",
+      "require": "./dist/projects/index.js"
     }
   },
   "scripts": {
@@ -47,7 +52,6 @@
   },
   "dependencies": {
     "@code-dot-org/core": "workspace:*",
-    "@code-dot-org/projects": "workspace:*",
     "@code-dot-org/user": "workspace:*",
     "@reduxjs/toolkit": "^2.8.2",
     "classnames": "^2.5.1",

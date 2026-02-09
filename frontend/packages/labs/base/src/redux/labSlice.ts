@@ -24,8 +24,11 @@ import {
   LevelStatuses,
   progressActions,
 } from '@code-dot-org/platform/progress';
-import {ProjectManagerFactory, ProjectManager} from '@code-dot-org/projects';
-import {projectActions} from '@code-dot-org/projects/redux';
+import {
+  projectActions,
+  ProjectManagerFactory,
+  ProjectManager,
+} from '@code-dot-org/platform/projects';
 import {CourseRoles} from '@code-dot-org/user';
 import {currentUserActions} from '@code-dot-org/user/redux';
 
