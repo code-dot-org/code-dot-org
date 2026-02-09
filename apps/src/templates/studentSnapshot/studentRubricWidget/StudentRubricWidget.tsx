@@ -146,16 +146,21 @@ const StudentRubricWidget: React.FC<StudentRubricWidgetProps> = ({
           setFeedbackAdded={setFeedbackAdded}
           aiEvaluations={aiEvaluations}
         />
-        {canProvideFeedback && effectiveStudentLevelInfo?.user_id && (
-          <RubricSubmitFooter
-            rubric={rubric}
-            reportingData={reportingData}
-            studentLevelInfo={effectiveStudentLevelInfo}
-            open={true}
-            feedbackAdded={feedbackAdded}
-            setFeedbackAdded={setFeedbackAdded}
-          />
-        )}
+        {canProvideFeedback &&
+          effectiveStudentLevelInfo?.user_id &&
+          rubric.script?.id &&
+          rubric.level?.id && (
+            <div className={styles.studentRubricWidgetSubmitFooterContainer}>
+              <RubricSubmitFooter
+                rubric={rubric}
+                reportingData={reportingData}
+                studentLevelInfo={effectiveStudentLevelInfo}
+                open={true}
+                feedbackAdded={feedbackAdded}
+                setFeedbackAdded={setFeedbackAdded}
+              />
+            </div>
+          )}
       </div>
     );
   }
