@@ -3,7 +3,10 @@
 import {useResizeObserver} from '@mantine/hooks';
 import 'blockly/blocks';
 import * as Blockly from 'blockly/core';
-import {javascriptGenerator, JavascriptGenerator} from 'blockly/javascript';
+import {
+  javascriptGenerator,
+  type JavascriptGenerator,
+} from 'blockly/javascript';
 import * as En from 'blockly/msg/en';
 import classNames from 'classnames';
 import {createElement, useCallback, useEffect, useRef} from 'react';

@@ -4,7 +4,7 @@ import type {Theme} from '@code-dot-org/component-library/common/contexts';
 import Dialog from '@code-dot-org/component-library/dialog';
 import Link from '@code-dot-org/component-library/link';
 import {BodyThreeText} from '@code-dot-org/component-library/typography';
-import Markdown from '@code-dot-org/markdown';
+import {Markdown} from '@code-dot-org/platform';
 
 import './style.scss';
 

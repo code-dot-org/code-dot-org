@@ -2,8 +2,8 @@ import type {MarkdownToJSX} from 'markdown-to-jsx';
 import {RuleType} from 'markdown-to-jsx';
 
 import {BodyTwoText} from '@code-dot-org/component-library/typography';
-import type {MarkdownProps} from '@code-dot-org/markdown';
-import Markdown from '@code-dot-org/markdown';
+import type {MarkdownProps} from '@code-dot-org/platform';
+import {Markdown} from '@code-dot-org/platform';
 
 import type {Plugin} from '../../plugins';
 import type {Theme, Renderer, BlockDefinition} from '../../types';

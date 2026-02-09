@@ -1,6 +1,5 @@
 import classNames from 'classnames';
-import ReactMarkdown, {MarkdownToJSX} from 'markdown-to-jsx';
-import * as React from 'react';
+import ReactMarkdown, {type MarkdownToJSX} from 'markdown-to-jsx';
 
 import Link from '@code-dot-org/component-library/link';
 import {
@@ -45,6 +44,7 @@ export interface MarkdownProps {
    * Other options to the markdown library.
    */
   options?: MarkdownToJSX.Options;
+  // Only allow string children
   children?: string;
 }
 
@@ -92,14 +92,14 @@ export const reactMarkdownOptions = {
  * the `content` property. If you use the `content` property, the inner children
  * are ignored.
  */
-const Markdown: React.FunctionComponent<MarkdownProps> = ({
+const Markdown = ({
   content,
   inline,
   options,
   overrides,
   className,
   children,
-}) => (
+}: MarkdownProps) => (
   <ReactMarkdown
     options={{
       ...options,

@@ -1,6 +1,6 @@
 import type {FunctionComponent} from 'react';
 
-import Markdown from '@code-dot-org/markdown';
+import {Markdown} from '@code-dot-org/platform';
 
 import moduleStyles from './teacherOnlyMarkdown.module.scss';
 

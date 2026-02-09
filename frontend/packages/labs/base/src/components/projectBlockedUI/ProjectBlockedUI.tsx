@@ -2,7 +2,7 @@ import type {FunctionComponent} from 'react';
 import {useState} from 'react';
 
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
-import Markdown from '@code-dot-org/markdown';
+import {Markdown} from '@code-dot-org/platform';
 
 import LabRegistry from '../../LabRegistry';
 import {useAppSelector} from '../../redux/store';

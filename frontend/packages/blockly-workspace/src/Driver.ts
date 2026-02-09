@@ -1,5 +1,8 @@
 import * as Blockly from 'blockly/core';
-import {javascriptGenerator, JavascriptGenerator} from 'blockly/javascript';
+import {
+  javascriptGenerator,
+  type JavascriptGenerator,
+} from 'blockly/javascript';
 import EventEmitter from 'events';
 import type TypedEmitter from 'typed-emitter';
 import type {EventMap} from 'typed-emitter';
