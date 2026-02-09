@@ -101,11 +101,11 @@ const StudentRubricWidget: React.FC<StudentRubricWidgetProps> = ({
         if (rubricResponse.value?.rubric) {
           setRubric(rubricResponse.value.rubric);
         } else {
-          setError('No rubric data found');
+          setError("This lesson doesn't have a rubric.");
         }
       } catch (err) {
         console.error('Failed to fetch rubric data:', err);
-        setError('No rubric found');
+        setError("This lesson doesn't have a rubric.");
       } finally {
         setIsLoading(false);
       }
@@ -127,7 +127,9 @@ const StudentRubricWidget: React.FC<StudentRubricWidgetProps> = ({
     !rubric.learningGoals ||
     rubric.learningGoals.length === 0
   ) {
-    widgetContent = <BodyThreeText>No rubric data available.</BodyThreeText>;
+    widgetContent = (
+      <BodyThreeText>This lesson doesn't have a rubric.</BodyThreeText>
+    );
   } else {
     scrollable = true;
     widgetContent = (
