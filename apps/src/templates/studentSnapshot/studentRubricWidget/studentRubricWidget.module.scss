@@ -1,7 +1,10 @@
 .studentRubricWidgetContent {
-  // Override default Rubric Submit footer styles
-  > div:last-child {
-    // Moving the footer up to hide LearningGoals border bottom seamlessly.
-    margin-top: -4px;
+
+  .studentRubricWidgetSubmitFooterContainer {
+    // Override default Rubric Submit footer styles
+    > div:last-child {
+      // Moving the footer up to hide LearningGoals border bottom seamlessly.
+      margin-top: -4px;
+    }
   }
 }
