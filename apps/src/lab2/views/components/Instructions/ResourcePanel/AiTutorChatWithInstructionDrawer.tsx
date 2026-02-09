@@ -133,15 +133,24 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
       >
         <div ref={instructionsContentRef}>{instructionsContent}</div>
       </div>
-      <Button
-        className={styles.toggleButton}
+      <div
+        className={styles.toggleButtonContainer}
         style={{top: instructionsHeight}}
-        onClick={toggleInstructions}
-        text={toggleButtonText}
-        type="tertiary"
-        size="xs"
-        color="black"
-      />
+      >
+        <Button
+          className={styles.toggleButton}
+          onClick={toggleInstructions}
+          text={toggleButtonText}
+          type="tertiary"
+          size="xs"
+          color="black"
+          iconLeft={{iconName: 'info-circle', iconStyle: 'solid'}}
+          iconRight={{
+            iconName: isCollapsed ? 'chevron-down' : 'chevron-up',
+            iconStyle: 'solid',
+          }}
+        />
+      </div>
       {!isCollapsed && (
         <ResizeBar
           isVertical={false}

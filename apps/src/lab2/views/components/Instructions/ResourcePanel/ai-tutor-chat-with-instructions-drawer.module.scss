@@ -23,18 +23,27 @@
 }
 
 .toggleButton {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  background-color: var(--background-neutral-primary);
+  border-radius: 4px;
+  padding: 2px 8px;
+  white-space: nowrap;
 }
 
-.toggleButtonCollapsed {
+.toggleButtonContainer {
+  display: inline-flex;
+  padding: 4px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 0 0 6px 6px;
+  border-right: 1px solid var(--borders-neutral-primary);
+  border-bottom: 1px solid var(--borders-neutral-primary);
+  border-left: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-primary);
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--background-neutral-primary);
+  box-shadow: 0 2px 3px 0 rgb(0 0 0 / 0.05);
   z-index: 10;
 }
