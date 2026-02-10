@@ -832,6 +832,7 @@ module SharedConstants
     GEMINI_2_5_FLASH_LITE: "gemini-2.5-flash-lite",
     GEMINI_2_5_PRO: "gemini-2.5-pro",
     GEMINI_3_PRO_PREVIEW: "gemini-3-pro-preview",
+    GEMINI_2_5_FLASH_IMAGE: "gemini-2.5-flash-image",
   }
 
   AI_CHAT_CLIENT_TYPES = {

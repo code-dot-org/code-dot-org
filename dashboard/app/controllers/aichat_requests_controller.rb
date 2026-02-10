@@ -86,6 +86,43 @@ class AichatRequestsController < ApplicationController
     render(status: :ok, json: response_body)
   end
 
+  # POST /aichat_requests
+  # -----------------------
+  # Create a new AichatRequest record without enqueuing a job.
+  # Used for scenarios where the actual request will be carried out elsewhere (e.g. on the client).
+  def create
+    unless chat_completion_has_required_params?
+      return render status: :bad_request, json: {}
+    end
+    unless can_access_aichat_chat_completion? || can_access_ai_tutor_chat_completion?(params[:aichatContext][:clientType])
+      return render status: :forbidden, json: {user_type: current_user.user_type}
+    end
+
+    request = create_request
+    render json: {requestId: request.id}
+  end
+
+  # PUT /aichat_requests/:id
+  # -----------------------
+  # Update an existing AichatRequest record with execution status and response.
+  # Used for scenarios where the request has been carried out elsewhere (e.g. on the client).
+  def update
+    begin
+      request = AichatRequest.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      return render status: :not_found, json: {}
+    end
+
+    # Only the user who initiated the request can update it.
+    return render status: :forbidden, json: {} if request.user_id != current_user.id
+
+    if request.update(update_params)
+      render status: :ok, json: {requestId: request.id}
+    else
+      render status: :unprocessable_entity, json: {errors: request.errors}
+    end
+  end
+
   def create_request
     # TODO: confirm request shape and data usage https://codedotorg.atlassian.net/browse/TEACHING-60
     request_params = params.permit!.to_h.deep_symbolize_keys
@@ -155,5 +192,9 @@ class AichatRequestsController < ApplicationController
 
   private def get_backoff_rate
     DCDO.get("aichat_polling_backoff_rate", DEFAULT_POLLING_BACKOFF_RATE)
+  end
+
+  private def update_params
+    params.permit(:execution_status, :response)
   end
 end

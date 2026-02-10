@@ -1352,6 +1352,7 @@ Dashboard::Application.routes.draw do
 
     get '/langfuse/get_prompt', to: 'langfuse#get_prompt'
 
+    resources :aichat_requests, only: [:create, :update]
     post '/aichat_request/start_chat_completion', to: 'aichat_requests#start_chat_completion'
     get '/aichat_request/chat_request/:id', to: 'aichat_requests#chat_request'
 
