@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
+import RequiresAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/RequiresAiChatToolsAlert';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import Announcements from '@cdo/apps/code-studio/components/progress/Announcements';
 import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
@@ -33,7 +34,6 @@ import SafeMarkdown from '../SafeMarkdown';
 
 import CourseOverviewActionRow from './CourseOverviewActionRow';
 import CourseScript from './CourseScript';
-import RequiresAiChatToolsAlert from './RequiresAiChatToolsAlert';
 import VerifiedResourcesNotification from './VerifiedResourcesNotification';
 
 class CourseOverview extends Component {

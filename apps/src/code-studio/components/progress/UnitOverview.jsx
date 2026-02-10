@@ -3,6 +3,7 @@ import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
 
+import RequiresAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/RequiresAiChatToolsAlert';
 import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
 import {isScriptHiddenForSection} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
@@ -10,7 +11,6 @@ import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstan
 import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import RequiresAiChatToolsAlert from '@cdo/apps/templates/courseOverview/RequiresAiChatToolsAlert';
 import EndOfLessonDialog from '@cdo/apps/templates/EndOfLessonDialog';
 import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/GoogleClassroomAttributionLabel';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
