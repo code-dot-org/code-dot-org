@@ -349,11 +349,9 @@ class CourseOffering < ApplicationRecord
   end
 
   def ai_chat_tools_dependency
-    units = course_versions.map(&:units).flatten
-    return SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:ESSENTIAL] if units.any?(&:requires_ai_chat_tools?)
-    return SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:AVAILABLE] if units.any?(&:has_ai_chat_tools?)
-
-    SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE]
+    # Returns the AI chat tools dependency for this course offering, which is determined by latest course version.
+    unit_group = course_versions.first&.content_root
+    unit_group.ai_chat_tools_dependency
   end
 
   def summarize_for_edit
