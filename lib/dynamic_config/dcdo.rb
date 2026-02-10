@@ -74,7 +74,8 @@ class DCDOBase < DynamicConfigBase
       'ai-lesson-summaries-notifications-enabled': DCDO.get('ai-lesson-summaries-notifications-enabled', false),
       # TODO: Remove this after the ClassLink LMS launch
       classlink_lms_enabled: DCDO.get('classlink_lms_enabled', false),
-      'lab2-fetch-level-properties-by-lesson-id': DCDO.get('lab2-fetch-level-properties-by-lesson-id', true)
+      'lab2-fetch-level-properties-by-lesson-id': DCDO.get('lab2-fetch-level-proper0ties-by-lesson-id', true),
+      'student-snapshot-feedback-link': DCDO.get('student-snapshot-feedback-link', false)
     }
   end
 end
