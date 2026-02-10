@@ -69,8 +69,9 @@ class UnitOverview extends React.Component {
     participantAudience: PropTypes.string,
     showAiAssessmentsAnnouncement: PropTypes.bool,
     isOnTeacherDashboard: PropTypes.bool,
-    aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
-      .isRequired,
+    aiChatToolsDependency: PropTypes.oneOf(
+      Object.values(AiChatToolsDependency)
+    ),
 
     // redux provided
     scriptId: PropTypes.number.isRequired,
