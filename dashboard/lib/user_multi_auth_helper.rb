@@ -44,7 +44,16 @@ module UserMultiAuthHelper
       if auth_hash[:provider] == AuthenticationOption::CLEVER
         # We know for sure we don't need to check for staff here, because that role is not enabled in our Clever app settings.
         legacy_id = auth_hash.dig(:extra, :raw_info, :canonical, :data, :roles, :teacher, :legacy_id)
-        auth_option = authentication_options.find_by(credential_type: AuthenticationOption::CLEVER, authentication_id: auth_hash[:uid]) || authentication_options.find_by(credential_type: AuthenticationOption::CLEVER, authentication_id: legacy_id)
+        auth_option = authentication_options.find_by(
+          credential_type: AuthenticationOption::CLEVER,
+          authentication_id: auth_hash[:uid]
+        )
+        if auth_option.nil? && legacy_id.present?
+          auth_option = authentication_options.find_by(
+            credential_type: AuthenticationOption::CLEVER,
+            authentication_id: legacy_id
+          )
+        end
         auth_option&.update_oauth_credential_tokens(credentials_hash)
         return
       end
