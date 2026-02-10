@@ -17,6 +17,7 @@ execute 'build-cdo' do
   live_stream true
   user user
   group user
+  timeout 7200 # In a full stack environment, this resource can take more than the default 3600 seconds to provision.
   action :nothing
 
   # Rebuild when Ruby is upgraded.
