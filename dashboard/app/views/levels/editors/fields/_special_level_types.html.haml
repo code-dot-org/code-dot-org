@@ -1,5 +1,5 @@
 - content_for :body_scripts do
-  %script{src: webpack_asset_path('js/levels/editors/fields/_special_level_types.js'),  data: {lessons: @level.script_levels.map(&:lesson).compact.uniq.map(&:summarize_for_special_level_types).to_json}}
+  %script{src: webpack_asset_path('js/levels/editors/fields/_special_level_types.js'),  data: {lessons: @level.summarize_lessons_for_special_level_types.to_json}}
 }
 
 %h1.control-legend{data: {toggle: "collapse", target: "#special-levels"}}
