@@ -21,7 +21,7 @@
       ClusterName: !Ref AWS::StackName # Max 50 chars
       Engine: memcached
       EngineVersion: 1.6.22
-      NumCacheNodes: 2
+      NumCacheNodes: 3
       AZMode: cross-az
       PreferredAvailabilityZones: <%= AVAILABILITY_ZONES.first(2).to_json %>
       VpcSecurityGroupIds: [!ImportValue VPC-MemcachedSecurityGroup]
