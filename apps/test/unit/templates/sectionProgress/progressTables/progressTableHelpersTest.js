@@ -55,7 +55,6 @@ describe('progressTableHelpers', () => {
       [student.id]: {
         [lesson.id]: {
           incompletePercent: 20,
-          imperfectPercent: 20,
           completedPercent: 60,
           timeSpent: 300, // time spent = 5 minutes
           lastTimestamp: 1614841198, // date = 3/4

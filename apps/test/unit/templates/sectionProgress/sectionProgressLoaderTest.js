@@ -192,7 +192,6 @@ const fullExpectedResult = {
       101: {
         11: {
           incompletePercent: 50,
-          imperfectPercent: 0,
           completedPercent: 50,
           timeSpent: 12345,
           lastTimestamp: 12345,
@@ -201,7 +200,6 @@ const fullExpectedResult = {
       102: {
         11: {
           incompletePercent: 50,
-          imperfectPercent: 0,
           completedPercent: 50,
           timeSpent: 6789,
           lastTimestamp: 6789,

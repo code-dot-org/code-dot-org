@@ -125,7 +125,6 @@ interface SectionProgressState {
       [userId: number]: {
         [lessonId: number]: {
           incompletePercent: number;
-          imperfectPercent: number;
           completedPercent: number;
           timeSpent: number;
           lastTimestamp: number;

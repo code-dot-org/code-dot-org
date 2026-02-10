@@ -54,11 +54,6 @@ export default class ProgressTableSummaryCell extends React.Component {
       height: this.heightForPercent(studentLessonProgress.incompletePercent),
     };
 
-    const imperfectStyle = {
-      backgroundColor: color.level_passed,
-      height: this.heightForPercent(studentLessonProgress.imperfectPercent),
-    };
-
     const completedStyle = {
       backgroundColor: isAssessmentLesson
         ? color.level_submitted
@@ -69,7 +64,6 @@ export default class ProgressTableSummaryCell extends React.Component {
     return (
       <BorderedBox borderColor={borderColor} onClick={onSelectDetailView}>
         <div style={incompleteStyle} />
-        <div style={imperfectStyle} />
         <div style={completedStyle} />
       </BorderedBox>
     );

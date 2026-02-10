@@ -11,7 +11,6 @@ const DEFAULT_PROPS = {
   studentId: 1,
   studentLessonProgress: {
     completedPercent: 100,
-    imperfectPercent: 0,
     incompletePercent: 0,
     timeSpent: 0,
     lastTimestamp: 0,
@@ -65,7 +64,6 @@ describe('ProgressTableSummaryCell', () => {
     const studentLessonProgress = {
       isStarted: true,
       completedPercent: 25,
-      imperfectPercent: 0,
       incompletePercent: 75,
     };
     const wrapper = setUp({studentLessonProgress});
@@ -78,28 +76,10 @@ describe('ProgressTableSummaryCell', () => {
     expect(height).toBe('75%');
   });
 
-  it('displays imperfect portion as a percent in color.level_passed', () => {
-    const studentLessonProgress = {
-      isStarted: true,
-      completedPercent: 25,
-      imperfectPercent: 25,
-      incompletePercent: 50,
-    };
-    const wrapper = setUp({studentLessonProgress});
-    const imperfectPortion = wrapper.childAt(0).childAt(1);
-
-    const backgroundColor = getStyle(imperfectPortion, 'backgroundColor');
-    expect(backgroundColor).toBe(color.level_passed);
-
-    const height = getStyle(imperfectPortion, 'height');
-    expect(height).toBe('25%');
-  });
-
   it('displays completed portion as a percent in color.level_submitted if it is isAssessmentLesson', () => {
     const studentLessonProgress = {
       isStarted: true,
       completedPercent: 25,
-      imperfectPercent: 25,
       incompletePercent: 50,
     };
     const wrapper = setUp({isAssessmentLesson: true, studentLessonProgress});
@@ -116,7 +96,6 @@ describe('ProgressTableSummaryCell', () => {
     const studentLessonProgress = {
       isStarted: true,
       completedPercent: 25,
-      imperfectPercent: 25,
       incompletePercent: 50,
     };
     const wrapper = setUp({isAssessmentLesson: false, studentLessonProgress});

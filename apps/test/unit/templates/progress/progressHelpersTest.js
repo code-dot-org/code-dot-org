@@ -367,7 +367,6 @@ describe('progressHelpers', () => {
       );
       expect(studentLessonProgress).toEqual({
         incompletePercent: 0,
-        imperfectPercent: 0,
         completedPercent: 100,
         timeSpent: 0,
         lastTimestamp: 0,
@@ -386,7 +385,6 @@ describe('progressHelpers', () => {
       );
       expect(studentLessonProgress).toEqual({
         incompletePercent: 100,
-        imperfectPercent: 0,
         completedPercent: 0,
         timeSpent: 0,
         lastTimestamp: 0,
@@ -412,7 +410,6 @@ describe('progressHelpers', () => {
       // 4 incomplete (attempted, locked, other, untried) / 8 = 50%
       expect(studentLessonProgress).toEqual({
         incompletePercent: 50,
-        imperfectPercent: 0,
         completedPercent: 50,
         timeSpent: 0,
         lastTimestamp: 0,
@@ -434,7 +431,6 @@ describe('progressHelpers', () => {
       // Should show 100% completed (dark green), not 100% imperfect (light green)
       expect(studentLessonProgress).toEqual({
         incompletePercent: 0,
-        imperfectPercent: 0,
         completedPercent: 100,
         timeSpent: 0,
         lastTimestamp: 0,
@@ -456,7 +452,6 @@ describe('progressHelpers', () => {
       );
       expect(studentLessonProgress).toEqual({
         incompletePercent: 100,
-        imperfectPercent: 0,
         completedPercent: 0,
         timeSpent: 3,
         lastTimestamp: 0,
@@ -478,7 +473,6 @@ describe('progressHelpers', () => {
       );
       expect(studentLessonProgress).toEqual({
         incompletePercent: 100,
-        imperfectPercent: 0,
         completedPercent: 0,
         timeSpent: 0,
         lastTimestamp: 2,

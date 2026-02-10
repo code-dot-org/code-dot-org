@@ -201,7 +201,6 @@ function lessonProgressForStudent(studentLevelProgress, lessonLevels) {
   ];
 
   let attempted = 0;
-  let imperfect = 0;
   let completed = 0;
   let timeSpent = 0;
   let lastTimestamp = 0;
@@ -216,8 +215,8 @@ function lessonProgressForStudent(studentLevelProgress, lessonLevels) {
     }
   });
 
-  const incomplete = filteredLevels.length - completed - imperfect;
-  const isLessonStarted = attempted + imperfect + completed > 0;
+  const incomplete = filteredLevels.length - completed;
+  const isLessonStarted = attempted + completed > 0;
 
   if (!isLessonStarted) {
     return null;
@@ -226,7 +225,6 @@ function lessonProgressForStudent(studentLevelProgress, lessonLevels) {
   const getPercent = count => (100 * count) / filteredLevels.length;
   return {
     incompletePercent: getPercent(incomplete),
-    imperfectPercent: getPercent(imperfect),
     completedPercent: getPercent(completed),
     timeSpent: timeSpent,
     lastTimestamp: lastTimestamp,
