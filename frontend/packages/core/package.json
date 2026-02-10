@@ -66,6 +66,7 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "dependencies": {
+    "@code-dot-org/component-library": "workspace:*",
     "@newrelic/browser-agent": "^1.294.0",
     "@reduxjs/toolkit": "^2.8.2",
     "@statsig/js-client": "^3.20.2",
