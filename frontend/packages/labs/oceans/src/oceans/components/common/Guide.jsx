@@ -1,6 +1,5 @@
 import React from 'react';
 import Radium from 'radium';
-import Typist from 'react-typist';
 
 import '@ml/oceans/styles/fade.css';
 
@@ -144,17 +143,9 @@ let UnwrappedGuide = class Guide extends React.Component {
       }
     }
 
-    // Start playing the typing sounds.
-    if (
-      !state.textToSpeechLocale &&
-      !state.guideShowing &&
-      !state.guideTypingTimer &&
-      currentGuide
-    ) {
-      const guideTypingTimer = setInterval(() => {
-        soundLibrary.playSound('no', 0.5);
-      }, 1000 / 10);
-      setState({guideTypingTimer}, {skipCallback: true});
+    // Skip typing animation - show text immediately
+    if (!state.guideShowing && currentGuide) {
+      setState({guideShowing: true}, {skipCallback: true});
     }
 
     if (this.attemptTextToSpeechTextToSpeech(false)) {
@@ -211,16 +202,9 @@ let UnwrappedGuide = class Guide extends React.Component {
                   <div style={{position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden'}} aria-live="polite">
                     {currentGuide.textFn(getState())}
                   </div>
-                  {/* Visible Typist animation for sighted users */}
+                  {/* Visible guide text (no typing animation) */}
                   <div style={styles.guideTypingText} aria-hidden="true">
-                    <Typist
-                      avgTypingDelay={35}
-                      stdTypingDelay={15}
-                      cursor={{show: false}}
-                      onTypingDone={this.onTypingDone}
-                    >
-                      {currentGuide.textFn(getState())}
-                    </Typist>
+                    {currentGuide.textFn(getState())}
                   </div>
 
                   <div

@@ -38,11 +38,18 @@ let UnwrappedPond = class Pond extends React.Component {
     super(props);
   }
 
-  toggleRecall = e => {
+  getMatchingFishSet = (e, showMatching) => {
     const state = getState();
 
     // No-op if transition is already in progress.
     if (state.pondFishTransitionStartTime) {
+      return;
+    }
+
+    // No-op if already showing the desired fish set (matching or non-matching).
+    // Note that recallFish are fish that are not matching the word/attribute.
+    // pondFish are fish that are matching the word/attribute.
+    if (state.showRecallFish !== showMatching) {
       return;
     }
 
@@ -194,7 +201,7 @@ let UnwrappedPond = class Pond extends React.Component {
         <div style={recallIconsStyle}>
           <button
             type="button"
-            onClick={this.toggleRecall}
+            onClick={e => this.getMatchingFishSet(e, true)}
             aria-label={I18n.t('switchToMatchingItems')}
             style={{
               ...styles.recallIcon,
@@ -209,7 +216,7 @@ let UnwrappedPond = class Pond extends React.Component {
           </button>
           <button
             type="button"
-            onClick={this.toggleRecall}
+            onClick={e => this.getMatchingFishSet(e, false)}
             aria-label={I18n.t('switchToNonMatchingItems')}
             style={{
               ...styles.recallIcon,
