@@ -1684,6 +1684,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/core@workspace:packages/core"
   dependencies:
+    "@code-dot-org/component-library": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
     "@newrelic/browser-agent": "npm:^1.294.0"
     "@reduxjs/toolkit": "npm:^2.8.2"
