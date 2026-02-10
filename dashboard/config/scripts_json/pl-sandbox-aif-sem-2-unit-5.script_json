@@ -1,0 +1,452 @@
+{
+  "script": {
+    "name": "pl-sandbox-aif-sem-2-unit-5",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-02-09 16:38:59 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "pl-sandbox-aif-sem-2-unit-5"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Teaching Designing Reliable Apps with AI and APIs",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "6cb0d829-446a-42be-ad42-ec07a58a64cd",
+      "position": 1,
+      "properties": {
+        "duration": 90
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6cb0d829-446a-42be-ad42-ec07a58a64cd",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "0cd8f141-ad81-4aa1-98d5-c08c4161338a",
+      "position": 1,
+      "properties": {
+        "name": "Introduction (5 min)",
+        "progression_name": "Introdcution (5 min)"
+      },
+      "seeding_key": {
+        "activity_section.key": "0cd8f141-ad81-4aa1-98d5-c08c4161338a",
+        "lesson_activity.key": "6cb0d829-446a-42be-ad42-ec07a58a64cd"
+      }
+    },
+    {
+      "key": "4d771bdd-4b14-497d-8242-18db5bb3efbc",
+      "position": 2,
+      "properties": {
+        "progression_name": "What is an API?"
+      },
+      "seeding_key": {
+        "activity_section.key": "4d771bdd-4b14-497d-8242-18db5bb3efbc",
+        "lesson_activity.key": "6cb0d829-446a-42be-ad42-ec07a58a64cd"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-aif-2-U5-Intro-1"
+        ],
+        "progression": "Introdcution (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-Intro-1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "0cd8f141-ad81-4aa1-98d5-c08c4161338a"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-Intro-1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl=aif-2-U5-curriculum-overview-2"
+        ],
+        "progression": "Introdcution (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl=aif-2-U5-curriculum-overview-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "0cd8f141-ad81-4aa1-98d5-c08c4161338a"
+      },
+      "level_keys": [
+        "pl=aif-2-U5-curriculum-overview-2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl_sandbox_aif-2-U5-class-context-3"
+        ],
+        "progression": "Introdcution (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-U5-class-context-3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "0cd8f141-ad81-4aa1-98d5-c08c4161338a"
+      },
+      "level_keys": [
+        "pl_sandbox_aif-2-U5-class-context-3"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-aif-2-U5-project-overview-4"
+        ],
+        "progression": "Introdcution (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-project-overview-4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "0cd8f141-ad81-4aa1-98d5-c08c4161338a"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-project-overview-4"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "What is an API?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-API-JSON-intro"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "4d771bdd-4b14-497d-8242-18db5bb3efbc"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-API-JSON-intro"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "What is an API?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-JSON-weblab-scavhunt"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "4d771bdd-4b14-497d-8242-18db5bb3efbc"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-JSON-weblab-scavhunt"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "What is an API?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-U5-api-documentation-chat-lab"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "4d771bdd-4b14-497d-8242-18db5bb3efbc"
+      },
+      "level_keys": [
+        "pl-aif-U5-api-documentation-chat-lab"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "What is an API?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-pokemon-api-weblab"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "4d771bdd-4b14-497d-8242-18db5bb3efbc"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-pokemon-api-weblab"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "What is an API?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-API-Calll-POkemon-panel"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "4d771bdd-4b14-497d-8242-18db5bb3efbc"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-API-Calll-POkemon-panel"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-Intro-1",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-Intro-1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "0cd8f141-ad81-4aa1-98d5-c08c4161338a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl=aif-2-U5-curriculum-overview-2",
+        "script_level.level_keys": [
+          "pl=aif-2-U5-curriculum-overview-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "0cd8f141-ad81-4aa1-98d5-c08c4161338a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif-2-U5-class-context-3",
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-U5-class-context-3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "0cd8f141-ad81-4aa1-98d5-c08c4161338a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-project-overview-4",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-project-overview-4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "0cd8f141-ad81-4aa1-98d5-c08c4161338a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-API-JSON-intro",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-API-JSON-intro"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "4d771bdd-4b14-497d-8242-18db5bb3efbc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-JSON-weblab-scavhunt",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-JSON-weblab-scavhunt"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "4d771bdd-4b14-497d-8242-18db5bb3efbc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-U5-api-documentation-chat-lab",
+        "script_level.level_keys": [
+          "pl-aif-U5-api-documentation-chat-lab"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "4d771bdd-4b14-497d-8242-18db5bb3efbc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-pokemon-api-weblab",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-pokemon-api-weblab"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "4d771bdd-4b14-497d-8242-18db5bb3efbc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-API-Calll-POkemon-panel",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-API-Calll-POkemon-panel"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "4d771bdd-4b14-497d-8242-18db5bb3efbc"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

@@ -14,16 +14,15 @@ import {
 } from '@excalidraw/excalidraw/types/types';
 import React, {useEffect, useCallback, useRef, useState, useMemo} from 'react';
 
-import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
-import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
+import IntroJSTourWrapper from '@cdo/apps/lab2/views/components/IntroJSTourWrapper';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
@@ -90,8 +89,6 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   >({});
 
   const readonlyWorkspace = useAppSelector(isReadOnlyWorkspace);
-
-  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
   const onClickStartOver = useCallback(() => {
     showStartOverDialog('custom', commonI18n.startOverGeneric());
@@ -250,11 +247,22 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         });
 
         if (newFiles && !readonlyWorkspace) {
-          uploadExternalFiles(
+          const newFilesWithUploadStatus = await uploadExternalFiles(
             newFiles,
             serializedData.files,
             filesBeingUploadedRef
           );
+
+          // We update sources again on upload completion to update the upload status of the new files.
+          updateSources({
+            source: {
+              ...serializedData,
+              externalFiles: {
+                ...currentSources.source.externalFiles,
+                ...newFilesWithUploadStatus,
+              },
+            },
+          });
         }
       }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
     },
@@ -312,7 +320,9 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   return (
     <BackpackAPIContext.Provider value={backpackContext}>
       <div className={moduleStyles.sketchlabContainer}>
-        {!isStartMode && <SketchlabTourSteps />}
+        <IntroJSTourWrapper>
+          <SketchlabTourSteps />
+        </IntroJSTourWrapper>
         <div style={{width: leftPanelWidth}} className={panelClassName}>
           <ResourcePanel
             levelProperties={levelProperties}

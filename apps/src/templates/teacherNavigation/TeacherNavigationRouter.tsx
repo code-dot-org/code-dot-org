@@ -298,7 +298,13 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
             {experiments.isEnabled('student_snapshot') && (
               <Route
                 path={TEACHER_NAVIGATION_PATHS.studentSnapshot}
-                element={<StudentSnapshot />}
+                element={
+                  <ElementOrEmptyPage
+                    showNoStudents={studentCount === 0}
+                    showNoCurriculumAssigned={!anyStudentHasProgress}
+                    element={<StudentSnapshot />}
+                  />
+                }
               />
             )}
             <Route

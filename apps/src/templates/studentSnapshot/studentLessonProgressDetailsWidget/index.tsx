@@ -172,7 +172,11 @@ const StudentLessonProgressDetailsWidget: React.FC<
       const classAvgValidationProgressByLessonMap: ClassAvgValidationProgressByLessonData =
         {};
 
-      if (lessonsToValidationLevels && studentLevelProgressByUnit) {
+      if (
+        lessonsToValidationLevels &&
+        studentLevelProgressByUnit &&
+        studentLevelProgressByUnit[selectedUnitId]
+      ) {
         Object.entries(lessonsToValidationLevels).forEach(
           ([lessonId, validationLevelIds]) => {
             const levelProgressByUser: {[userId: string]: number} = {};

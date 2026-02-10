@@ -49,7 +49,8 @@
       "Photosynthesis Diagram (1).png": "a5ff98cd-ae3c-400c-8ffe-b2661845e6c0.png",
       "Photosynthesis Diagram.png": "b9da7cd2-90d7-4208-916e-aab35d4525af.png"
     },
-    "name_suffix": "_v2-2025"
+    "name_suffix": "_v2-2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:44.174+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson4-level3_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson4-level3_2025\"}]"

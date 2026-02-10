@@ -17,4 +17,9 @@
 #  index_aidiff_artifacts_on_user_id           (user_id)
 #
 class AidiffLessonHook < AidiffArtifact
+  def summarize
+    super.merge(
+      url: "/aidiff_lesson_hooks/#{id}"
+    )
+  end
 end

@@ -105,8 +105,9 @@ class UnitOverviewTopRow extends React.Component {
                   __useDeprecatedTag
                   href={`${scriptPath}/next`}
                   text={NEXT_BUTTON_TEXT[unitProgress]}
+                  color={Button.ButtonColor.purple}
                   size={Button.ButtonSize.large}
-                  style={{marginRight: 10}}
+                  style={{marginRight: 10, boxShadow: 'none'}}
                   onClick={() => this.logTryNowButtonClick(unitProgress)}
                 />
               )}
@@ -124,7 +125,11 @@ class UnitOverviewTopRow extends React.Component {
                 text={i18n.getHelp()}
                 color={Button.ButtonColor.white}
                 size={Button.ButtonSize.large}
-                style={hasButtonMargin ? buttonMarginStyle : {}}
+                style={
+                  hasButtonMargin
+                    ? {...buttonMarginStyle, boxShadow: 'none'}
+                    : {boxShadow: 'none'}
+                }
               />
               {assignedSectionId && <Assigned />}
             </div>
