@@ -8,7 +8,7 @@
   MemcachedParameterGroup:
     Type: AWS::ElastiCache::ParameterGroup
     Properties:
-      CacheParameterGroupFamily: memcached1.4
+      CacheParameterGroupFamily: memcached1.6
       Description: Memcached modified max_item_size.
       Properties:
         max_item_size: <%=64.megabytes%>
