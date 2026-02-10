@@ -600,13 +600,11 @@ describe('Model quality test', () => {
 
     trainer.train();
 
+    const details = trainer.detailedExplanation(trainingOcean[0].fieldInfos);
     const summary = trainer.summarize(trainingOcean[0].fieldInfos);
     console.log(summary);
-    // Both bodies and dorsalFins should be among top 3 (ordering can vary with random data)
-    const top_three = summary
-      .slice(0, 3)
-      .map(entry => entry.partType);
-    expect(top_three).toContain('bodies');
-    expect(top_three).toContain('dorsalFins');
+    const top_two = [summary[0].partType, summary[1].partType];
+    expect(top_two).toContain('bodies');
+    expect(top_two).toContain('dorsalFins');
   });
 });
