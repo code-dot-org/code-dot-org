@@ -21,6 +21,12 @@ class LessonFeedbacksController < ApplicationController
     end
   end
 
+  def show_by_student
+    feedback = LessonFeedback.where(student_id: params[:student_id])
+
+    render json: feedback
+  end
+
   # GET /lesson_feedbacks/saved_feedback?student_id=...&lesson_id=...
   def saved_feedback
     feedback = LessonFeedback.find_by!(

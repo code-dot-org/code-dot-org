@@ -59,6 +59,7 @@ function AllFeedbacks({feedbacksByLevel}) {
     },
   ];
 
+  // TO DO update the hardcoded student Id
   return (
     <div>
       <h1 style={styles.header}>{i18n.feedbackAll()}</h1>
@@ -85,7 +86,10 @@ function AllFeedbacks({feedbacksByLevel}) {
         <LevelFeedbackContainer feedbacksByLevel={feedbacksByLevel} />
       )}
       {showLessonFeedback && (
-        <LessonFeedbackContainer feedbacksByLesson={dummyLessonFeedbacks} />
+        <LessonFeedbackContainer
+          feedbacksByLesson={dummyLessonFeedbacks}
+          studentId={2512}
+        />
       )}
     </div>
   );

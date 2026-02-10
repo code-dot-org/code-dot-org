@@ -170,6 +170,9 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    # Custom route to get lesson feedback by student_id
+    get 'lesson_feedbacks/by_student/:student_id', to: 'lesson_feedbacks#show_by_student'
+
     # Data docs are off of curriculum builder as of fall 2022.
     get 'docs/concepts/data-library', to: 'data_docs#index'
     get 'docs/concepts/data-library/:key', param: :key, constraints: {data_doc_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, to: 'data_docs#show'
@@ -1198,12 +1201,18 @@ Dashboard::Application.routes.draw do
 
     get '/lesson_feedbacks/saved_feedback', to: 'lesson_feedbacks#saved_feedback'
 
+    # Custom route to get only the localized_name for a lesson by id
+    get 'lessons/:id/localized_name', to: 'lessons#localized_name'
+    # Custom route to get lesson feedback data for a lesson by id
+    get 'lessons/:id/lesson_feedback_data', to: 'lessons#lesson_feedback_data'
+
     resources :ai_lesson_summary_podcasts do
       collection do
         get :generate_podcast, controller: :ai_lesson_summary_podcasts, action: :generate_podcast
       end
     end
 
+    get '/dashboardapi/v1/users/:user_id/name', to: 'api/v1/users#get_name'
     get '/dashboardapi/v1/users/:user_id/contact_details', to: 'api/v1/users#get_contact_details'
     get '/dashboardapi/v1/users/:user_id/donor_teacher_banner_details', to: 'api/v1/users#get_donor_teacher_banner_details'
     post '/dashboardapi/v1/users/accept_data_transfer_agreement', to: 'api/v1/users#accept_data_transfer_agreement'

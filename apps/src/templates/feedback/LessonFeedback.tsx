@@ -3,28 +3,76 @@ import {
   BodyFourText,
   Heading5,
 } from '@code-dot-org/component-library/typography';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 import LessonRecommendedAction from './LessonRecommendedAction';
 
 import styles from './LessonFeedback.module.scss';
+
 interface LessonFeedbackProps {
-  feedbackText: string;
-  lessonName: string;
-  lessonNumber: number;
-  lessonLink: string;
+  feedbackText: string | undefined;
+  lessonId: number;
+  teacherId: number;
   submittedAtDate: string | Date;
+}
+
+interface LessonData {
+  lessonName: string;
   teacherName: string;
+  lessonLink: string;
+  isLoading: boolean;
+  error: string | null;
 }
 
 function LessonFeedback({
   feedbackText,
-  lessonName,
-  lessonNumber,
-  lessonLink,
+  lessonId,
   submittedAtDate,
-  teacherName,
+  teacherId,
 }: LessonFeedbackProps) {
+  const [data, setData] = useState<LessonData>({
+    lessonName: '',
+    teacherName: '',
+    lessonLink: '',
+    isLoading: true,
+    error: null,
+  });
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const [lessonResponse, teacherResponse] = await Promise.all([
+          fetch(`/lessons/${lessonId}/lesson_feedback_data`),
+          fetch(`/dashboardapi/v1/users/${teacherId}/name`),
+        ]);
+
+        const lessonData = lessonResponse.ok ? await lessonResponse.json() : {};
+        const teacherData = teacherResponse.ok
+          ? await teacherResponse.json()
+          : {};
+
+        setData({
+          lessonName: lessonData.name || '',
+          teacherName: teacherData.name || 'Your teacher',
+          lessonLink: lessonData.start_url || '',
+          isLoading: false,
+          error: null,
+        });
+      } catch (err) {
+        console.error('Error fetching data:', err);
+        setData(prev => ({
+          ...prev,
+          isLoading: false,
+          error: 'Failed to load lesson data',
+        }));
+      }
+    }
+
+    if (lessonId && teacherId) {
+      fetchData();
+    }
+  }, [lessonId, teacherId]);
+
   const formattedDate = new Date(submittedAtDate).toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
@@ -32,19 +80,37 @@ function LessonFeedback({
   });
 
   const handleGoToLesson = () => {
-    window.open(lessonLink, '_blank');
+    if (data.lessonLink) {
+      window.open(data.lessonLink, '_blank');
+    }
   };
+
+  if (data.isLoading) {
+    return (
+      <div className={styles.lessonFeedbackContainer}>
+        <BodyFourText>Loading lesson details...</BodyFourText>
+      </div>
+    );
+  }
+
+  if (data.error) {
+    return (
+      <div className={styles.lessonFeedbackContainer}>
+        <BodyFourText>Error: {data.error}</BodyFourText>
+      </div>
+    );
+  }
 
   return (
     <div className={styles.lessonFeedbackContainer}>
       <div className={styles.lessonFeedbackHeader}>
         <div className={styles.lessonFeedbackContent}>
           <Heading5 className={styles.lessonFeedbackHeading}>
-            Lesson {lessonNumber}: {lessonName}
+            {data.lessonName}
           </Heading5>
 
           <BodyFourText className={styles.lessonFeedbackDetails}>
-            Sent by {teacherName} on {formattedDate}
+            Sent by {data.teacherName} on {formattedDate}
           </BodyFourText>
         </div>
 
@@ -55,6 +121,7 @@ function LessonFeedback({
           size="s"
           iconRight={{iconName: 'arrow-up-right-from-square'}}
           color="gray"
+          disabled={!data.lessonLink}
         />
       </div>
       <hr />
@@ -63,7 +130,7 @@ function LessonFeedback({
       {/* TODO: Add in real data here */}
       <LessonRecommendedAction
         resourceComment="Review the lesson and complete the exercises to improve your understanding."
-        resourceLink={lessonLink}
+        resourceLink={data.lessonLink}
       />
     </div>
   );

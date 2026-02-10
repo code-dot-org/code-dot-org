@@ -272,6 +272,17 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     }
   end
 
+  # GET /api/v1/users/:user_id/name
+  def get_name
+    user = User.find_by(id: params[:user_id])
+
+    if user
+      render json: {name: user.name}
+    else
+      render json: {error: "User not found"}, status: :not_found
+    end
+  end
+
   # POST /api/v1/users/has_seen_progress_table_v2_invitation
   def post_has_seen_progress_table_v2_invitation
     return head :unauthorized unless current_user

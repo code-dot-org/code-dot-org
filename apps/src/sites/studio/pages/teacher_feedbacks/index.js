@@ -11,6 +11,7 @@ function showFeedback() {
   const feedbackData = JSON.parse(script.dataset.feedback);
 
   ReactDOM.render(
+    // Question to self, should I follow this pattern?  Keep the more modern pattern? OR do a hybrid of keep this data here and fetch data in the lower component for lessons
     <AllFeedbacks feedbacksByLevel={feedbackData.all_feedbacks_by_level} />,
     document.getElementById('feedback-container')
   );

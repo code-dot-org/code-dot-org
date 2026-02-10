@@ -7,8 +7,25 @@ import i18n from '@cdo/locale';
 interface Feedback {
   id: number;
   lesson_id: number;
+  saved_feedback: string;
   submitted_feedback: string;
-  submitted_at: string | Date;
+  submitted_at?: string | Date;
+  updated_at: string | Date;
+}
+
+// In the future we should delete the saved_feedback, but as of now there is no "submitted" feedback
+interface LessonFeedbackData {
+  id?: number;
+  submitted_feedback?: string;
+  lesson_id: number;
+  saved_feedback?: string;
+  updated_at: string | Date;
+  teacher_id: number;
+  resources?: Array<{
+    recommended_action?: string;
+    resource_name?: string;
+    resource_link?: string;
+  }>;
 }
 
 interface LessonFeedbackType {
@@ -20,29 +37,60 @@ interface LessonFeedbackType {
 
 interface LessonFeedbackContainerProps {
   feedbacksByLesson: LessonFeedbackType[];
+  studentId: number | null;
 }
 
 function LessonFeedbackContainer({
   feedbacksByLesson,
+  studentId,
 }: LessonFeedbackContainerProps) {
-  const noFeedback = feedbacksByLesson.length === 0;
+  const [fetchedFeedback, setFetchedFeedback] = React.useState<
+    LessonFeedbackData[] | null
+  >(null);
+
+  React.useEffect(() => {
+    async function fetchAllLessonFeedback(studentId: number) {
+      try {
+        const response = await fetch(
+          `/lesson_feedbacks/by_student/${studentId}`
+        );
+        if (!response.ok) {
+          throw new Error(
+            `Failed to fetch AI lesson feedback: ${response.status} ${response.statusText}`
+          );
+        }
+        const data = await response.json();
+        console.log(data);
+        setFetchedFeedback(data);
+        return data;
+      } catch (err) {
+        console.error('AI lesson feedback error:', err);
+        return null;
+      }
+    }
+    if (studentId) {
+      fetchAllLessonFeedback(studentId);
+    }
+  }, [studentId]);
 
   return (
     <div>
-      {noFeedback && <div>{i18n.feedbackNoneYet()}</div>}
-      {feedbacksByLesson.map((lessonFeedback, i) => {
-        return (
-          <LessonFeedback
-            key={i}
-            feedbackText={lessonFeedback.feedbacks[0].submitted_feedback}
-            lessonName={lessonFeedback.lessonName}
-            lessonNumber={lessonFeedback.lessonNum}
-            lessonLink={lessonFeedback.linkToLesson}
-            submittedAtDate={lessonFeedback.feedbacks[0].submitted_at}
-            teacherName={'Mr. Jacobs'} // TO DO: Add teacher name when available
-          />
-        );
-      })}
+      {!!fetchedFeedback && fetchedFeedback?.length === 0 && (
+        <div>{i18n.feedbackNoneYet()}</div>
+      )}
+      {fetchedFeedback &&
+        fetchedFeedback.length > 0 &&
+        fetchedFeedback.map((lessonFeedback, i) => {
+          return (
+            <LessonFeedback
+              key={i}
+              feedbackText={lessonFeedback?.saved_feedback}
+              lessonId={lessonFeedback.lesson_id}
+              teacherId={lessonFeedback.teacher_id}
+              submittedAtDate={lessonFeedback.updated_at}
+            />
+          );
+        })}
     </div>
   );
 }
