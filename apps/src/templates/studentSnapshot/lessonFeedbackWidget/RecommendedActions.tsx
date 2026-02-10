@@ -122,7 +122,7 @@ const RecommendedActions: React.FC<RecommendedActionsProps> = ({
           className={styles.inputBox}
           type="text"
           placeholder={'Write a message'}
-          value={resourceData[0]?.recommended_action}
+          value={resourceData[0]?.recommended_action || ''}
           onChange={handleRecommendedActionInputChange}
         />
         <div className={styles.resourceRow}>

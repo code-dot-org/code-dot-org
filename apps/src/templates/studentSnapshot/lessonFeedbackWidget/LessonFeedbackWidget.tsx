@@ -44,7 +44,13 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
       resource_name: string;
       resource_link: string;
     }>
-  >([]);
+  >([
+    {
+      recommended_action: '',
+      resource_name: '',
+      resource_link: '',
+    },
+  ]);
 
   // Fetch lesson feedback from backend, and if not found, try generating ai feedback
   React.useEffect(() => {
