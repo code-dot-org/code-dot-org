@@ -49,6 +49,8 @@ export const BlockTypes = {
   FUNCTION_CALL: 'procedures_callnoreturn',
   FUNCTION_DEFINITION: 'procedures_defnoreturn',
   FUNCTION_DEFINITION_RETURN: 'procedures_defreturn',
+  FUNCTION_CALL_SIMPLE2: 'procedures_callnoreturn_simple2',
+  FUNCTION_DEFINITION_SIMPLE2: 'procedures_defnoreturn_simple2',
   CATEGORY: 'category',
   CUSTOM_CATEGORY: 'custom_category',
 } as const;

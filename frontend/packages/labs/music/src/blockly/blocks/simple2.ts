@@ -2,6 +2,7 @@ import * as Blockly from 'blockly/core';
 import * as En from 'blockly/msg/en';
 import type {Environment} from '@code-dot-org/blockly-workspace';
 import {defineBlock} from '@code-dot-org/blockly-workspace';
+import {procedureCallerMutator} from '@code-dot-org/blockly-workspace/mutators';
 
 import imgAiBot from '../../assets/ai/ai-bot-mini-2.svg';
 
@@ -37,6 +38,8 @@ import {
   fieldTriggerDefinition,
   fieldTuneDefinition,
 } from '../fields';
+
+const MAX_FUNCTION_CALLS_COUNT = 100;
 
 interface MusicLabEnvironment extends Environment {
   /** Which top block is current generating */
@@ -521,6 +524,120 @@ const repeatSimple2 = defineBlock({
   },
 });
 
+const procedureDefineSimple2 = defineBlock({
+  type: BlockTypes.FUNCTION_DEFINITION,
+  tooltip: 'Define a function',
+  message0: '%1 %2 %3 %4',
+  message1: '%1',
+  args0: [
+    {
+      type: 'field_label',
+      text: ' ',
+    },
+    {
+      type: 'field_input',
+      name: 'NAME',
+      text: '',
+      spellcheck: false,
+    },
+    {
+      type: 'field_label',
+      name: 'PARAMS',
+      text: '',
+    },
+    {
+      type: 'input_end_row',
+      name: 'TOP',
+    },
+  ],
+  args1: [
+    {
+      type: 'input_statement',
+      name: 'STACK',
+    },
+  ],
+  style: 'procedure_blocks',
+  helpUrl: '/docs/spritelab/codestudio_definingFunction',
+  extensions: [
+    'procedure_def_get_def_mixin',
+    'procedure_def_var_mixin',
+    'procedure_def_update_shape_mixin',
+    'procedure_def_context_menu_mixin',
+    'procedure_def_onchange_mixin',
+    'procedure_def_validator_helper',
+    'procedure_defnoreturn_get_caller_block_mixin',
+    'procedure_def_set_no_return_helper',
+  ],
+  generator: {
+    javascript(block, generator, environment) {
+      environment.generating = block.id;
+
+      // Call the stock function definition code generator
+      const code =
+        environment.originalGeneratorFunctions.javascript.procedures_defnoreturn(
+          block,
+          generator,
+          environment,
+        );
+
+      environment.generating = undefined;
+      return code;
+    },
+  },
+});
+
+const procedureCallSimple2 = defineBlock({
+  type: BlockTypes.FUNCTION_CALL,
+  message0: '%1 %2',
+  args0: [
+    {type: 'field_label', name: 'NAME', text: '%{BKY_UNNAMED_KEY}'},
+    {
+      type: 'input_dummy',
+      name: 'TOPROW',
+    },
+  ],
+  nextStatement: true,
+  previousStatement: true,
+  style: 'procedure_blocks',
+  helpUrl: '/docs/spritelab/codestudio_callingFunction',
+  tooltip: 'Calls this function',
+  extensions: [
+    'procedure_caller_get_def_mixin',
+    'procedure_caller_var_mixin',
+    'procedure_caller_update_shape_mixin',
+    'procedure_caller_context_menu_mixin',
+    'procedure_caller_onchange_mixin',
+    'procedure_callernoreturn_get_def_block_mixin',
+  ],
+  mutator: procedureCallerMutator,
+  generator: {
+    javascript(block, javascriptGenerator, environment) {
+      if (!environment.generating) {
+        // Ignore generating unless it is within a top block
+        return '';
+      }
+
+      // Grab the function name from the inputs
+      const functionName = javascriptGenerator.getProcedureName(
+        block.getFieldValue('NAME'),
+      );
+      const functionCallBlockId = block.getProcedureModel().getId();
+
+      // Call the function, but limit the calls to a maximum to avoid recursion or too
+      // much complexity
+      return `
+        if (__functionCallsCount++ < ${MAX_FUNCTION_CALLS_COUNT}) {
+          Sequencer.startFunctionContext('${functionName}', '${functionCallBlockId}');
+          Sequencer.playSequential();
+          ${functionName}();
+          Sequencer.endSequential();
+          Sequencer.endFunctionContext();
+        }
+      `;
+    },
+  },
+});
+
 const blocks = [
   whenRunSimple2,
   triggeredAtSimple2,
@@ -536,6 +653,8 @@ const blocks = [
   playSoundsSequential,
   playSoundsRandom,
   repeatSimple2,
+  procedureDefineSimple2,
+  procedureCallSimple2,
 ];
 
 export default blocks;

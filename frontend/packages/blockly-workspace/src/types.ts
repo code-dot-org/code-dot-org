@@ -1,6 +1,7 @@
 import * as Blockly from 'blockly/core';
 
 import type {
+  AnyBlockGenerator,
   BlockArgDefinition,
   BlockDefinition,
   BlockDefinitions,
@@ -143,6 +144,17 @@ export interface Renderer {
   class: RendererClassType;
 }
 
+export interface OriginalGeneratorFunctions {
+  /** JavaScript generators */
+  javascript: {
+    [block: string]: JavascriptBlockGenerator;
+  };
+  /** All other languagess */
+  [language: string]: {
+    [block: string]: AnyBlockGenerator;
+  };
+}
+
 /**
  * Represents a payload for block mixins and extensions.
  *
@@ -159,6 +171,8 @@ export interface Environment {
   inlineWorkspaces: Blockly.Workspace[];
   /** The embedded workspaces in the environment, if any */
   embeddedWorkspaces: Blockly.Workspace[];
+  /** Any original stock generators */
+  originalGeneratorFunctions: OriginalGeneratorFunctions;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 }

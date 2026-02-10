@@ -87,6 +87,11 @@
       "import": "./dist/plugins/blockLimits/index.mjs",
       "require": "./dist/plugins/blockLimits/index.js"
     },
+    "./mutators": {
+      "types": "./dist/mutators/index.d.ts",
+      "import": "./dist/mutators/index.mjs",
+      "require": "./dist/mutators/index.js"
+    },
     "./inputs": {
       "types": "./dist/inputs/index.d.ts",
       "import": "./dist/inputs/index.mjs",
@@ -150,7 +155,7 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "dependencies": {
-    "@blockly/block-shareable-procedures": "^6.0.1",
+    "@blockly/block-shareable-procedures": "^6.0.10",
     "@blockly/field-colour": "^6.0.4",
     "@blockly/field-grid-dropdown": "^6.0.3",
     "@blockly/theme-dark": "^8.0.3",

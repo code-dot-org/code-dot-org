@@ -1495,12 +1495,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@blockly/block-shareable-procedures@npm:^6.0.1":
-  version: 6.0.7
-  resolution: "@blockly/block-shareable-procedures@npm:6.0.7"
+"@blockly/block-shareable-procedures@npm:^6.0.10":
+  version: 6.0.10
+  resolution: "@blockly/block-shareable-procedures@npm:6.0.10"
   peerDependencies:
     blockly: ^12.0.0
-  checksum: 10c0/1ab6ae223e8b9cb3e177ae5a6885d16cb2dc07415a94e704f23956fb548643df7bac5136f3adde79f292fd7855d34a970f3499e7e536e14f7d28fefcc225783a
+  checksum: 10c0/5021250ce411670ffb3b1176f5a127b368e229a55e9fd5590f813e0c35c6778b4e51e0e3e4d7f0e4a60e8d579ca6e5e02a16fc6558d9141eca5fc13894dfbd83
   languageName: node
   linkType: hard
 
@@ -1546,7 +1546,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/blockly-workspace@workspace:packages/blockly-workspace"
   dependencies:
-    "@blockly/block-shareable-procedures": "npm:^6.0.1"
+    "@blockly/block-shareable-procedures": "npm:^6.0.10"
     "@blockly/field-colour": "npm:^6.0.4"
     "@blockly/field-grid-dropdown": "npm:^6.0.3"
     "@blockly/theme-dark": "npm:^8.0.3"

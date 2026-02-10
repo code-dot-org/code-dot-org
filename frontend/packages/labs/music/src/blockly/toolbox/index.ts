@@ -1,4 +1,4 @@
-import type * as Blockly from 'blockly/core';
+import type {ToolboxCategory} from '@code-dot-org/blockly-workspace';
 import classNames from 'classnames';
 
 import simple2Toolbox from './simple2';
@@ -13,37 +13,17 @@ const baseCategoryCssConfig = {
   label: moduleStyles.toolboxLabel,
 };
 
-// Convert a simple toolbox array into a blockly toolbox info
-const convert: (map: {
-  [key: string]: string | (string | Blockly.utils.toolbox.BlockInfo)[];
-}) => Blockly.utils.toolbox.ToolboxInfo = map => ({
-  kind: 'categoryToolbox',
-  contents: Object.entries(map).map(([name, blocks]) => ({
-    kind: 'category',
-    name,
+// Imbed css and craft toolboxes
+const map: {
+  [key: string]: ToolboxCategory[];
+} = {
+  [BlockMode.SIMPLE2]: simple2Toolbox.map(info => ({
+    ...info,
     cssconfig: baseCategoryCssConfig,
-    ...(typeof blocks === 'string' ? {custom: blocks} : {}),
-    ...(typeof blocks !== 'string'
-      ? {
-          contents: blocks.map(
-            (type: string | Blockly.utils.toolbox.BlockInfo) => ({
-              ...(typeof type === 'string'
-                ? {
-                    kind: 'block',
-                    type,
-                  }
-                : type),
-            }),
-          ),
-        }
-      : {}),
   })),
-});
-
-const map = {
-  [BlockMode.SIMPLE2]: convert(simple2Toolbox),
 } as const;
 
 export * from './types';
+export * from './constants';
 
 export default map;
