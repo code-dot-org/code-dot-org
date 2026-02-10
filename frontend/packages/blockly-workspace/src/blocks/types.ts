@@ -35,8 +35,17 @@ export interface BlockFieldPluginArgDefinition extends BlockBaseArgDefinition {
   type: FieldPlugin;
 }
 
+export interface BlockLabelArgDefinition {
+  /** Explicitly a label field */
+  type: 'field_label';
+  /** The internal name for the field which is referenced by a generator */
+  name?: string;
+  /** The text for the label */
+  text: string;
+}
+
 export interface BlockImageArgDefinition {
-  /** Explictly an image field */
+  /** Explicitly an image field */
   type: 'field_image';
   /** The internal name for the field which is referenced by a generator */
   name?: string;
@@ -51,14 +60,14 @@ export interface BlockImageArgDefinition {
 }
 
 export interface BlockDropdownArgDefinition extends BlockBaseArgDefinition {
-  /** Explictly a dropdown field */
+  /** Explicitly a dropdown field */
   type: 'field_dropdown';
   /** The options for dropdowns or lists */
   options: BlockOptionsList;
 }
 
 export interface BlockInputArgDefinition extends BlockBaseArgDefinition {
-  /** Explictly a dropdown field */
+  /** Explicitly a dropdown field */
   type: 'input_value' | 'field_input';
   /** The type to explicitly force connecting blocks to output */
   check?: string;
@@ -73,25 +82,27 @@ export interface BlockInputArgDefinition extends BlockBaseArgDefinition {
   align?: 'LEFT' | 'RIGHT' | 'CENTRE';
 }
 
-export interface BlockDummyArgDefinition extends BlockBaseArgDefinition {
-  /** Explictly a blank field */
-  type: 'input_dummy';
+export interface BlockDummyArgDefinition {
+  /** Explicitly a blank field or something that triggers a rendering flag */
+  type: 'input_dummy' | 'input_end_row';
+  /** Optional name for the dummy field */
+  name?: string;
 }
 
 export interface BlockStatementArgDefinition extends BlockBaseArgDefinition {
-  /** Explictly a statement section */
+  /** Explicitly a statement section */
   type: 'input_statement';
 }
 
 export interface BlockVariableArgDefinition extends BlockBaseArgDefinition {
-  /** Explictly a statement section */
+  /** Explicitly a statement section */
   type: 'field_variable';
   /** The name of the variable */
   variable: string;
 }
 
 export interface BlockNumberArgDefinition extends BlockBaseArgDefinition {
-  /** Explictly a numerical input */
+  /** Explicitly a numerical input */
   type: 'field_number';
   /** The initial value */
   value: number;
@@ -110,6 +121,7 @@ export type BlockArgDefinition =
   | BlockVariableArgDefinition
   | BlockStatementArgDefinition
   | BlockImageArgDefinition
+  | BlockLabelArgDefinition
   | BlockNumberArgDefinition
   | BlockDropdownArgDefinition
   | BlockInputArgDefinition;
@@ -158,6 +170,9 @@ export type BlockGenerator<
   generator: T,
   environment: U,
 ) => string | [string, number] | null;
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type AnyBlockGenerator = BlockGenerator<BlockSvg, any, Environment>;
 
 /**
  * The code generation function specific for Javascript generators.

@@ -7,6 +7,7 @@ import EventEmitter from 'events';
 import type TypedEmitter from 'typed-emitter';
 import type {EventMap} from 'typed-emitter';
 
+import type {JavascriptBlockGenerator} from './blocks/types';
 import type {Plugin} from './plugins';
 import {PluginType} from './plugins';
 import Registry from './Registry';
@@ -15,6 +16,7 @@ import type {
   BlockDefinition,
   BlockSvg,
   Environment,
+  OriginalGeneratorFunctions,
   Renderer,
   Theme,
 } from './types';
@@ -34,6 +36,10 @@ interface DriverEvents extends EventMap {
   [DriverEvent.Removed]: (workspace: Blockly.WorkspaceSvg) => void;
   [DriverEvent.BlocklyEvent]: (event: Blockly.Events.Abstract) => void;
 }
+
+const originalGeneratorFunctions: OriginalGeneratorFunctions = {
+  javascript: {},
+};
 
 class Driver<
   T extends Environment = Environment,
@@ -81,6 +87,8 @@ class Driver<
     this._hiddenAgents = [];
     this._inlineAgents = [];
 
+    environment.originalGeneratorFunctions = originalGeneratorFunctions;
+
     this.register(plugins || []);
   }
 
@@ -93,6 +101,10 @@ class Driver<
 
   protected registerBlocks() {
     this._blocks.forEach(blockDefinition => {
+      // Determine if this is a procedure block and register the procedure
+      // extensions.
+      this._registry.registerProcedures();
+
       // Register (and modify the block definition to just reference mixins
       // and extensions by name) any block fields, extensions, etc.
       const formedBlockDefinition =
@@ -104,6 +116,13 @@ class Driver<
       Blockly.common.defineBlocksWithJsonArray([formedBlockDefinition]);
 
       const environment = this._environment;
+
+      // Retain the original generator, in case a block is overriding a stock generator
+      originalGeneratorFunctions.javascript ||= {};
+      originalGeneratorFunctions.javascript[blockDefinition.type] ||=
+        javascriptGenerator.forBlock[
+          blockDefinition.type
+        ] as JavascriptBlockGenerator;
 
       // Bind the given block definition's generator to the overall generator
       javascriptGenerator.forBlock[blockDefinition.type] = function (
@@ -233,6 +252,12 @@ class Driver<
           agent.inline,
           agent.workspace,
         );
+
+        // Register toolboxes
+        const toolbox = agent.getToolbox();
+        if (toolbox) {
+          this._registry.registerToolbox(toolbox, agent.workspace);
+        }
       } else if (agent.hidden) {
         this._environment.hiddenWorkspaces.push(agent.workspace);
       } else if (agent.inline) {

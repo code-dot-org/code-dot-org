@@ -18,6 +18,7 @@ import {useBlocklyContext} from '../../contexts/BlocklyContext';
 import type {Plugin} from '../../plugins';
 import ThrasosRenderer from '../../renderers/thrasos';
 import DefaultTheme from '../../themes/default';
+import type {Toolbox} from '../../toolbox';
 import type {
   BlocklySerialization,
   BlockDefinition,
@@ -36,7 +37,7 @@ export interface BlocklyWorkspaceProps<T extends Environment & object> {
   /** A set of blocks to load as the starting point for the workspace */
   startBlocks?: BlocklySerialization;
   /** A set of blocks to put into the toolbox or flyout within the workspace */
-  toolboxBlocks?: Blockly.utils.toolbox.ToolboxInfo;
+  toolbox?: Toolbox;
   /** The blockly renderer to use. */
   renderer?: Renderer;
   /** The blockly theme to use. */
@@ -83,7 +84,7 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
   blocks,
   options,
   startBlocks,
-  toolboxBlocks,
+  toolbox,
   renderer,
   theme,
   inline,
@@ -128,8 +129,8 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
 
   useEffect(() => {
     // Update toolbox
-    agent.current.setToolbox(toolboxBlocks);
-  }, [toolboxBlocks]);
+    agent.current.setToolbox(toolbox);
+  }, [toolbox]);
 
   const wrappedOnInject = useCallback(
     (workspace: Blockly.WorkspaceSvg) => {

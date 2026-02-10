@@ -59,6 +59,7 @@ export default defineConfig({
         'src/utils/index.ts',
         'src/events/index.ts',
         'src/contexts/index.ts',
+        'src/mutators/index.ts',
         'src/renderers/index.ts',
         'src/renderers/thrasos/index.ts',
         'src/themes/index.ts',

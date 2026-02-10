@@ -5,6 +5,8 @@ import type {EventMap} from 'typed-emitter';
 
 import type Driver from './Driver';
 import {positionBlocksOnWorkspace} from './serialization';
+import type {Toolbox} from './toolbox';
+import {buildToolbox} from './toolbox';
 import type {Environment, BlocklySerialization} from './types';
 
 export const AgentEvent = {
@@ -37,7 +39,7 @@ class Agent<
   // A reference to the document element that contains the injected Workspace
   protected _container?: HTMLDivElement | HTMLSpanElement;
   // Holds the blocks/categories in the toolbox
-  protected _toolbox?: Blockly.utils.toolbox.ToolboxInfo;
+  protected _toolbox?: Toolbox;
 
   /**
    * Constructs a driver to power a Blockly Workspace in the given container.
@@ -120,12 +122,12 @@ class Agent<
     this.container = newContainer;
   }
 
-  getToolbox(): Blockly.utils.toolbox.ToolboxInfo | undefined {
+  getToolbox(): Toolbox | undefined {
     return this._toolbox;
   }
 
-  setToolbox(toolboxBlocks: Blockly.utils.toolbox.ToolboxInfo | undefined) {
-    this._toolbox = toolboxBlocks;
+  setToolbox(toolbox: Toolbox | undefined) {
+    this._toolbox = toolbox;
   }
 
   /**
@@ -151,8 +153,9 @@ class Agent<
       ...this._options,
       renderer: this.driver.renderer.name,
       theme: this.driver.theme.instance,
-      toolbox: this._toolbox,
+      toolbox: this._toolbox ? buildToolbox(this._toolbox) : undefined,
     });
+
     Blockly.svgResize(this._workspace);
     this.driver.onInject(this);
     this.emit(AgentEvent.Injected, this._workspace);

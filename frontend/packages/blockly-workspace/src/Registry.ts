@@ -6,6 +6,10 @@
  */
 
 import * as Blockly from 'blockly/core';
+import {
+  blocks as procedureBlocks,
+  unregisterProcedureBlocks /*, registerProcedureSerializer*/,
+} from '@blockly/block-shareable-procedures';
 
 import {defineMutator} from './mutators/defineMutator';
 import {PluginType} from './plugins';
@@ -18,6 +22,7 @@ import type {
 } from './plugins';
 import ThrasosRenderer from './renderers/thrasos';
 import DefaultTheme from './themes/default';
+import type {Toolbox} from './toolbox';
 import type {
   Environment,
   BlockSvg,
@@ -49,6 +54,8 @@ class Registry<T extends Environment = Environment> {
   private inputs: InputPlugin[] = [];
   /** The Blockly environment data */
   private environment?: T;
+  /** Whether or not the procedure extensions were registered. */
+  private proceduresRegistered: boolean = false;
 
   /**
    * Creates a registry given some environmental properties of Blockly.
@@ -96,6 +103,43 @@ class Registry<T extends Environment = Environment> {
       this.registerGlobal(plugin);
     } else if (plugin.type === PluginType.Input) {
       this.registerInput(plugin);
+    }
+  }
+
+  /**
+   * Registers the procedure extensions.
+   */
+  registerProcedures() {
+    if (!this.proceduresRegistered) {
+      this.proceduresRegistered = true;
+      unregisterProcedureBlocks();
+
+      // Register the procedure blocks
+      Blockly.common.defineBlocks(procedureBlocks);
+    }
+  }
+
+  registerToolbox(toolbox: Toolbox, workspace: Blockly.WorkspaceSvg) {
+    // Only dynamic categories exist in Category list toolboxes
+    // That is, ones that are defined as an array
+    if (Array.isArray(toolbox)) {
+      toolbox.forEach(({blocks, onLoad, key}) => {
+        if (onLoad && key) {
+          const staticBlocks = (blocks || []).map(
+            (type: string | Blockly.utils.toolbox.FlyoutItemInfo) => ({
+              ...(typeof type === 'string' ? {kind: 'block', type} : type),
+            }),
+          );
+
+          workspace.registerToolboxCategoryCallback(
+            key,
+            (workspace: Blockly.WorkspaceSvg) => [
+              ...staticBlocks,
+              ...onLoad(workspace),
+            ],
+          );
+        }
+      });
     }
   }
 
@@ -160,7 +204,11 @@ class Registry<T extends Environment = Environment> {
     if (blockDefinition.mutator) {
       if (typeof blockDefinition.mutator !== 'string') {
         const name = blockDefinition.mutator.name;
-        this.registerMutator(blockDefinition.mutator);
+        // If the mutator did not define itself as not wanting to be
+        // registered (wrapping an existing stock mutator)
+        if (!blockDefinition.mutator.noRegister) {
+          this.registerMutator(blockDefinition.mutator);
+        }
         block.mutator = name;
       }
     } else {

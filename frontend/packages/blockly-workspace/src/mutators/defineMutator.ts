@@ -37,6 +37,7 @@ type InferState<T> = T extends {loadExtraState(state: infer S): void}
 export function defineMutator<T extends object>(
   name: string,
   mutator: T & ThisType<BlockSvg & T>,
+  noRegister?: boolean,
 ): Mutator<InferState<T>, T> {
-  return {name, mutator} as Mutator<InferState<T>, T>;
+  return {name, mutator, noRegister} as Mutator<InferState<T>, T>;
 }

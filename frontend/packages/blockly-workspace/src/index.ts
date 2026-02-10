@@ -1,6 +1,7 @@
 export {default as BaseBlocks} from './blocks';
 export * from './constants';
 export * from './types';
+export * from './toolbox';
 export * as serialization from './serialization';
 export * as xml from './xml';
 export {defineMixin} from './mixins/defineMixin';

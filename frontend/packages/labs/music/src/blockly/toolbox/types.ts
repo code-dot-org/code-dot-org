@@ -1,26 +1,14 @@
 import {BlockTypes} from '../blockTypes';
 
-/**
- * Valid toolbox categories for Music Lab.
- */
-export const Category = {
-  Control: 'Control',
-  Effects: 'Effects',
-  Events: 'Events',
-  Functions: 'Functions',
-  Logic: 'Logic',
-  Math: 'Math',
-  Play: 'Play',
-  Simple: 'Simple',
-  Tracks: 'Tracks',
-  Variables: 'Variables',
-} as const;
+import {Categories} from './constants';
+
+export type Category = (typeof Categories)[keyof typeof Categories];
 
 /**
  * Defines which blocks should be in the toolbox for each category.
  */
 export type CategoryBlocksMap = {
-  [category in keyof typeof Category]?: (keyof typeof BlockTypes | string)[];
+  [category in keyof typeof Categories]?: (keyof typeof BlockTypes | string)[];
 };
 
 /**

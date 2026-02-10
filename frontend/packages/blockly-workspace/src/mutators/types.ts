@@ -17,4 +17,5 @@ export type ExtraStateMethods<TState> =
 export interface Mutator<TState = object, TProps extends object = object> {
   name: string;
   mutator: TProps & ExtraStateMethods<TState> & ThisType<BlockSvg & TProps>;
+  noRegister?: boolean;
 }

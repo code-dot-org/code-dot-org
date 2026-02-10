@@ -137,7 +137,7 @@ const MusicLab = () => {
     [dispatch],
   );
 
-  const toolboxBlocks = useMemo(
+  const toolbox = useMemo(
     () =>
       levelProperties.multipleChoice
         ? undefined
@@ -266,7 +266,7 @@ const MusicLab = () => {
                   levelProperties.startBlocks ||
                   DefaultStartBlocks
                 }
-                toolboxBlocks={toolboxBlocks}
+                toolbox={toolbox}
                 onInject={onInject}
                 onChange={onChange}
                 javascriptGeneratorRef={javascriptGeneratorRef}
