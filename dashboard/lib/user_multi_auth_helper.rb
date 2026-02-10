@@ -40,6 +40,14 @@ module UserMultiAuthHelper
 
     credentials_hash = auth_hash[:credentials]
     if migrated?
+      # TODO: Delete this block once Clever users have been migrated to V3 auth options
+      if auth_hash[:provider] == AuthenticationOption::CLEVER
+        legacy_id = auth_hash.dig(:extra, :raw_info, :canonical, :data, :roles, :teacher, :legacy_id) # We know for sure we don't need to check for staff here, because that role is not enabled in our Clever app settings.
+        auth_option = authentication_options.find_by(credential_type: AuthenticationOption::CLEVER, authentication_id: auth_hash[:uid]) || authentication_options.find_by(credential_type: AuthenticationOption::CLEVER, authentication_id: legacy_id)
+        auth_option&.update_oauth_credential_tokens(credentials_hash)
+        return
+      end
+      # end TODO
       auth_option = authentication_options.find_by(credential_type: auth_hash[:provider], authentication_id: auth_hash[:uid])
       auth_option&.update_oauth_credential_tokens(credentials_hash)
     else
