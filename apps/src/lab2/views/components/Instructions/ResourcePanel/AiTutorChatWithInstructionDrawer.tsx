@@ -132,6 +132,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
     <div ref={containerRef} className={styles.container}>
       {!isCollapsed && (
         <div
+          id="instructions-drawer"
           className={styles.instructionsDrawer}
           style={{height: instructionsHeight}}
         >
