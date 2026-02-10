@@ -301,7 +301,6 @@ class LtiV1Controller < ApplicationController
       end
     end
 
-    lti_course, lti_integration, deployment_id, context_id,  nrps_url = nil
     resource_link_id = params[:rlid]
 
     if params[:section_code].present?
@@ -312,8 +311,6 @@ class LtiV1Controller < ApplicationController
         return render_sync_course_error('We couldn\'t find the given section.', :bad_request, 'no_section')
       end
       lti_integration = lti_course.lti_integration
-      deployment_id = lti_course.lti_deployment_id
-      context_id = lti_course.context_id
       nrps_url = lti_course.nrps_url
       # Requests from the sync button will not include a resource link ID, so it will generally
       # be nil at this point. Use the one from the lti_course record if present.
@@ -326,21 +323,21 @@ class LtiV1Controller < ApplicationController
       rescue
         return render_sync_course_error('LTI Integration not found', :bad_request, 'no_integration')
       end
-      deployment_id = params[:deployment_id]
-      context_id = params[:context_id]
       nrps_url = params[:nrps_url]
+      # Temporary lock to prevent concurrent requests from racing past
+      # the ActiveRecord level uniqueness check and creating LtiCourse duplicates.
+      # TODO(P20-1796): Remove the lock once a DB-level unique constraint
+      #                 on (lti_integration_id, context_id) prevents duplicates.
+      lti_integration.with_lock do
+        lti_course = lti_integration.lti_courses.find_or_create_by!(context_id: params[:context_id]) do |new_record|
+          new_record.assign_attributes(lti_deployment_id: params[:deployment_id], nrps_url:, resource_link_id:)
+        end
+      end
     end
 
-    # This query is also responsible for updating the RLID if it has changed.
-    # This has to happen before we call NRPS, or we will get an error back if the LMS
-    # platform requires an RLID (like Canvas) and the one we have is stale.
-    lti_course ||= Queries::Lti.find_or_create_lti_course(
-      lti_integration_id: lti_integration.id,
-      context_id: context_id,
-      deployment_id: deployment_id,
-      nrps_url: nrps_url,
-      resource_link_id: resource_link_id
-    )
+    # The LTI course `resource_link_id` update must happen before we call NRPS,
+    # or we will get an error if the LMS platform requires an RLID (such as Canvas) and the one we have is stale.
+    lti_course.update!(resource_link_id:) if resource_link_id && lti_course.resource_link_id != resource_link_id
 
     lti_advantage_client = Clients::LtiAdvantageClient.new(lti_integration.client_id, lti_integration.issuer)
     begin

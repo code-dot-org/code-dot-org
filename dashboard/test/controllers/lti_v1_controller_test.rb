@@ -733,6 +733,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
     user = create(:teacher, :with_lti_auth)
     lti_integration = create(:lti_integration)
+    lti_deployment = create(:lti_deployment, lti_integration:)
 
     Clients::LtiAdvantageClient.
       any_instance.
@@ -752,10 +753,10 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
     sign_in user
 
-    assert_no_difference 'LtiCourse.count' do
+    assert_difference 'LtiCourse.count' do
       get '/lti/v1/sync_course', params: {
         lti_integration_id: lti_integration.id,
-        deployment_id: 'foo',
+        deployment_id: lti_deployment.id,
         context_id: lti_course_context_id,
         rlid: lti_course_resource_link_id,
         nrps_url: lti_course_nrps_url
@@ -778,6 +779,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
     user = create(:teacher, :with_lti_auth)
     lti_integration = create(:lti_integration)
+    lti_deployment = create(:lti_deployment, lti_integration:)
 
     Clients::LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course_nrps_url, lti_course_resource_link_id).returns({})
     Policies::Lti.expects(:issuer_accepts_resource_link?).with(lti_integration.issuer).returns(false)
@@ -787,10 +789,10 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
     sign_in user
 
-    assert_no_difference 'LtiCourse.count' do
+    assert_difference 'LtiCourse.count' do
       get '/lti/v1/sync_course', params: {
         lti_integration_id: lti_integration.id,
-        deployment_id: 'foo',
+        deployment_id: lti_deployment.id,
         context_id: lti_course_context_id,
         rlid: lti_course_resource_link_id,
         nrps_url: lti_course_nrps_url
