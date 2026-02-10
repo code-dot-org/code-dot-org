@@ -38,6 +38,16 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
+      // Resolve self-references to source during build
+      '@code-dot-org/core/api': path.resolve(__dirname, './src/api'),
+      '@code-dot-org/core/metrics': path.resolve(__dirname, './src/metrics'),
+      '@code-dot-org/core/audio': path.resolve(__dirname, './src/audio'),
+      '@code-dot-org/core/textToSpeech': path.resolve(
+        __dirname,
+        './src/textToSpeech',
+      ),
+      '@code-dot-org/core/redux': path.resolve(__dirname, './src/redux'),
+      '@code-dot-org/core': path.resolve(__dirname, './src'),
     },
   },
   build: {

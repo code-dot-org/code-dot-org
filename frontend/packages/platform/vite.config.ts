@@ -38,6 +38,17 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
+      // Resolve self-references to source during build
+      '@code-dot-org/platform/progress': path.resolve(
+        __dirname,
+        './src/progress',
+      ),
+      '@code-dot-org/platform/projects': path.resolve(
+        __dirname,
+        './src/projects',
+      ),
+      '@code-dot-org/platform/user': path.resolve(__dirname, './src/user'),
+      '@code-dot-org/platform': path.resolve(__dirname, './src'),
     },
   },
   build: {
