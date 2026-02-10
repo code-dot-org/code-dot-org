@@ -419,8 +419,10 @@ const styles = {
   },
   recallIcon: {
     cursor: 'pointer',
-    padding: '0 15%',
-    height: '100%'
+    height: '100%',
+    border: 'none',
+    padding: '10px',
+    margin: 0
   },
   infoIconContainer: {
     position: 'absolute',

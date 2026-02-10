@@ -1,22 +1,22 @@
-import React from 'react'
-import _ from "lodash";
-import Radium from "radium";
+import React from 'react';
+import _ from 'lodash';
+import Radium from 'radium';
 
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faBan, faCheck, faInfo} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faBan, faCheck, faInfo} from '@fortawesome/free-solid-svg-icons';
 
-import {getState, setState} from "@ml/oceans/state";
-import styles from "@ml/oceans/styles";
-import I18n from "@ml/oceans/i18n";
-import soundLibrary from "@ml/oceans/models/soundLibrary";
-import {arrangeFish} from "@ml/oceans/models/pond";
-import helpers, {$time} from "@ml/oceans/helpers";
-import guide from "@ml/oceans/models/guide";
-import constants, {AppMode, Modes} from "@ml/oceans/constants";
-import {Body, Button} from "@ml/oceans/components/common";
-import aiBotClosed from "@public/images/ai-bot/ai-bot-closed.png";
-import modeHelpers from "@ml/oceans/modeHelpers";
-import PondPanel from "@ml/oceans/components/scenes/pond/PondPanel";
+import {getState, setState} from '@ml/oceans/state';
+import styles from '@ml/oceans/styles';
+import I18n from '@ml/oceans/i18n';
+import soundLibrary from '@ml/oceans/models/soundLibrary';
+import {arrangeFish} from '@ml/oceans/models/pond';
+import helpers, {$time} from '@ml/oceans/helpers';
+import guide from '@ml/oceans/models/guide';
+import constants, {AppMode, Modes} from '@ml/oceans/constants';
+import {Body, Button} from '@ml/oceans/components/common';
+import aiBotClosed from '@public/images/ai-bot/ai-bot-closed.png';
+import modeHelpers from '@ml/oceans/modeHelpers';
+import PondPanel from '@ml/oceans/components/scenes/pond/PondPanel';
 
 function Collide(x1, y1, w1, h1, x2, y2, w2, h2) {
   // Detect a non-collision.
@@ -32,7 +32,6 @@ function Collide(x1, y1, w1, h1, x2, y2, w2, h2) {
   // Otherwise we have a collision.
   return true;
 }
-
 
 let UnwrappedPond = class Pond extends React.Component {
   constructor(props) {
@@ -193,24 +192,36 @@ let UnwrappedPond = class Pond extends React.Component {
       <Body>
         <div onClick={this.onPondClick} style={styles.pondSurface} />
         <div style={recallIconsStyle}>
-          <FontAwesomeIcon
-            icon={faCheck}
+          <button
+            type="button"
+            onClick={this.toggleRecall}
+            aria-label={I18n.t('switchToMatchingItems')}
             style={{
               ...styles.recallIcon,
               ...{borderTopLeftRadius: 8, borderBottomLeftRadius: 8},
               ...(state.showRecallFish ? {} : styles.bgGreen)
             }}
+          >
+            <FontAwesomeIcon
+              icon={faCheck}
+              style={{width: '100%', height: '100%'}}
+            />
+          </button>
+          <button
+            type="button"
             onClick={this.toggleRecall}
-          />
-          <FontAwesomeIcon
-            icon={faBan}
+            aria-label={I18n.t('switchToNonMatchingItems')}
             style={{
               ...styles.recallIcon,
               ...{borderTopRightRadius: 8, borderBottomRightRadius: 8},
               ...(state.showRecallFish ? styles.bgRed : {})
             }}
-            onClick={this.toggleRecall}
-          />
+          >
+            <FontAwesomeIcon
+              icon={faBan}
+              style={{width: '100%', height: '100%'}}
+            />
+          </button>
         </div>
         {showInfoButton && (
           <div
@@ -224,7 +235,7 @@ let UnwrappedPond = class Pond extends React.Component {
             <FontAwesomeIcon icon={faInfo} style={styles.infoIcon} />
           </div>
         )}
-        <img style={styles.pondBot} src={aiBotClosed} alt=""/>
+        <img style={styles.pondBot} src={aiBotClosed} alt="" />
         {state.canSkipPond && (
           <div id="uitest-nav-btns">
             {state.appMode === AppMode.FishLong ? (

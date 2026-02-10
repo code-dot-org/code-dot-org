@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
 
-import Words, {wordSet} from "@ml/oceans/components/scenes/words";
-import Train from "@ml/oceans/components/scenes/train";
-import Predict from "@ml/oceans/components/scenes/predict";
-import Pond from "@ml/oceans/components/scenes/pond";
+import Words, {wordSet} from '@ml/oceans/components/scenes/words';
+import Train from '@ml/oceans/components/scenes/train';
+import Predict from '@ml/oceans/components/scenes/predict';
+import Pond from '@ml/oceans/components/scenes/pond';
 
 import {Guide, Button, ConfirmationDialog} from '@ml/oceans/components/common';
 import guide from '@ml/oceans/models/guide';
@@ -459,20 +459,20 @@ describe('Pond', () => {
 
   it('recall icons toggle fish set on click', () => {
     let wrapper = shallow(<Pond {...DEFAULT_PROPS} />);
-    let checkIcon = wrapper.find('FontAwesomeIcon').at(0);
-    let banIcon = wrapper.find('FontAwesomeIcon').at(1);
+    let checkButton = wrapper.find('button').at(0);
+    let banButton = wrapper.find('button').at(1);
 
-    expect(checkIcon.prop('style').backgroundColor).toEqual(colors.green);
-    expect(banIcon.prop('style').backgroundColor).toBeFalsy();
+    expect(checkButton.prop('style').backgroundColor).toEqual(colors.green);
+    expect(banButton.prop('style').backgroundColor).toBeFalsy();
     expect(playSoundStub.callCount).toEqual(0);
 
-    banIcon.simulate('click');
+    banButton.simulate('click');
     wrapper = shallow(<Pond {...DEFAULT_PROPS} />);
-    checkIcon = wrapper.find('FontAwesomeIcon').at(0);
-    banIcon = wrapper.find('FontAwesomeIcon').at(1);
+    checkButton = wrapper.find('button').at(0);
+    banButton = wrapper.find('button').at(1);
 
-    expect(checkIcon.prop('style').backgroundColor).toBeFalsy();
-    expect(banIcon.prop('style').backgroundColor).toEqual(colors.red);
+    expect(checkButton.prop('style').backgroundColor).toBeFalsy();
+    expect(banButton.prop('style').backgroundColor).toEqual(colors.red);
     expect(playSoundStub.withArgs('no').callCount).toEqual(1);
   });
 
