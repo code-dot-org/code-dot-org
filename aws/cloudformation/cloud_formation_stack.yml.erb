@@ -8,12 +8,9 @@ Metadata:
         - W2001 # Allow unused parameters
 Parameters:
   # ---------------------------------------------
-  # Domain Names - Each Stack operates 5 sites (examples are for production):
+  # Domain Names - Each Stack operates 2 sites (examples are for production):
   # 1) Learning Platform ("Dashboard") - https://studio.code.org
-  # 2) Corporate Website ("Pegasus") - https://code.org
-  # 3) Advocacy Website (runs on LeadPages) - https://advocacy.code.org
-  # 4) Hour of Code (runs on Pegasus) - https://hourofcode.com
-  # 5) Code Projects (host user created content) - https://codeprojects.org
+  # 2) Code Projects (host user created content) - https://codeprojects.org
   # ---------------------------------------------
   BaseDomainName:
     Type: String
@@ -27,15 +24,6 @@ Parameters:
     Type: String
     Default: <%=rack_env?(:production) ? '\'\'' : stack_name %>
     Description: Subdomain name for corporate web site ("Pegasus").
-  # This domain name needs to be referenced both in Cloudformation and in the code for MarketingRouterLambda.
-  # As a result, it is declared here in Ruby so that it can be passed to the Lambda function.
-  # WARNING: Changing this value is NOT sufficient to change the value in the stack. It ONLY changes the default value.
-  # The value must be changed manually in the AWS Console or CLI, followed by an update to the stack. 
-  <% INTERNAL_MARKETING_DOMAIN_NAME = "code.marketing-sites.#{rack_env?(:production) ? 'code.org' : 'test-code.org'}" %>
-  InternalMarketingDomainName:
-    Type: String
-    Default: <%=INTERNAL_MARKETING_DOMAIN_NAME %>
-    Description: Interim domain name of the Contentful CMS-based marketing site. The DNS record for code.org still points to Pegasus, which dynamically routes some requests to the new Contentful site. This parameter is intended for internal routing and should not be used outside that context.
   HourOfCodeBaseDomainName:
     Type: String
     Default: hourofcode.com
@@ -424,99 +412,33 @@ Resources:
 
   # ---------------------------------------------
   # Route53 (DNS) and CloudFront (CDN) resources
-  #
-  # TODO
-  # - hourofcode.com and csedweek.org DNS/CDN resources should be added to this template.
   # ---------------------------------------------
-<%
-  %w(Dashboard Pegasus).each do |app|
-    app_domain = app == 'Dashboard' ? studio_subdomain : subdomain
--%>
-  <%=app%>DNS:
+
+  DashboardDNS:
     Type: AWS::Route53::RecordSetGroup
     Properties:
       HostedZoneName: <%=domain%>.
       RecordSets:
-        - Name: <%=app_domain%>
+        - Name: <%=studio_subdomain%>
           Type: A
-<%   if cdn_enabled -%>
+<% if cdn_enabled -%>
           AliasTarget:
-            DNSName: !GetAtt [<%=app%>CDN, DomainName]
+            DNSName: !GetAtt [DashboardCDN, DomainName]
             HostedZoneId: Z2FDTNDATAQYW2 # static ID for cloudfront aliases
-<%   elsif load_balancer -%>
+<% elsif load_balancer -%>
           AliasTarget:
             DNSName: !GetAtt [ALB, DNSName]
             HostedZoneId: !GetAtt [ALB, CanonicalHostedZoneID]
-<%   else -%>
+<% else -%>
           TTL: <%= DNS_TTL %>
           ResourceRecords: [!GetAtt <%=daemon%>.PublicIp]
-<%   end -%>
+<% end -%>
 
-<%   if cdn_enabled -%>
-  <%=app%>CDN:
+<% if cdn_enabled -%>
+  DashboardCDN:
     Type: AWS::CloudFront::Distribution
     Properties:
-      DistributionConfig: <%= cloudfront_config(app) %>
-<%   end -%>
-
-<%   if cdn_enabled && app == 'Pegasus' -%>
-<%=    component 'www_redirect', app: app -%>
-<%
-       marketing_router_package = zip_directory(
-         'marketing-router',
-         environment_variables: {marketingDomain: INTERNAL_MARKETING_DOMAIN_NAME}
-       )
-%>
-  MarketingRouterLambda:
-    Type: AWS::Lambda::Function
-    Properties:
-      Description: 'Lambda for dynamically routing Corporate website traffic to new NextJS/Contentful system based on the URL path.'
-      FunctionName: !Sub "${AWS::StackName}-marketing-router"
-      Code: <%= marketing_router_package[:s3_location].to_json %>
-      Handler: index.handler
-      Runtime: nodejs22.x
-      Role: !GetAtt MarketingRouterLambdaRole.Arn
-      LoggingConfig:
-        ApplicationLogLevel: "ERROR"
-        LogFormat: "JSON"
-  MarketingRouterVersion:
-    Type: AWS::Lambda::Version
-    Properties:
-      FunctionName: !Ref MarketingRouterLambda
-      Description: "Code hash: <%= marketing_router_package[:content_hash] %>"
-  # Create an Alias to make it easier to monitor Metrics in CloudWatch.
-  MarketingRouterAlias:
-    Type: AWS::Lambda::Alias
-    Properties:
-      FunctionName: !Ref MarketingRouterLambda
-      FunctionVersion: !GetAtt MarketingRouterVersion.Version
-      Name: LIVE
-  MarketingRouterLambdaRole:
-    Type: AWS::IAM::Role
-    Properties:
-      <%=service_role ['lambda', 'edgelambda']%>
-      Path: /
-      Policies:
-        - PolicyName: Logging
-          PolicyDocument:
-            Version: "2012-10-17"
-            Statement:
-              - Effect: Allow
-                Action:
-                  - logs:CreateLogGroup
-                Resource: 
-                  - !Sub "arn:aws:logs:*:*:log-group:/aws/lambda/us-east-1.${AWS::StackName}-marketing-router:*"
-                  - !Sub "arn:aws:logs:*:*:log-group:/aws/lambda/${AWS::StackName}-marketing-router:*"
-              - Effect: Allow
-                Action:
-                  - logs:CreateLogStream
-                  - logs:PutLogEvents
-                Resource:
-                  - !Sub "arn:aws:logs:*:*:log-group:/aws/lambda/us-east-1.${AWS::StackName}-marketing-router:log-stream:*"
-                  - !Sub "arn:aws:logs:*:*:log-group:/aws/lambda/${AWS::StackName}-marketing-router:log-stream:*"
-      PermissionsBoundary: !ImportValue IAM-DevPermissions
-<%  end -%>
-
+      DistributionConfig: <%= cloudfront_config('Dashboard') %>
 <% end -%>
 
 <% if cdn_enabled -%>
@@ -905,9 +827,6 @@ Outputs:
   DashboardURL:
     Value: "https://<%=studio_subdomain%>"
     Description: Dashboard URL
-  PegasusURL:
-    Value: "https://<%=subdomain%>"
-    Description: Pegasus URL
 <% if cdn_enabled -%>
   PreviewCodeprojectsURL:
     Description: Codeprojects URL
