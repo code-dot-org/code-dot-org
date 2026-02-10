@@ -408,7 +408,6 @@ describe('progressHelpers', () => {
         studentProgress,
         levels
       );
-      // After fix: passed (too many blocks) counts as completed, not imperfect
       // 4 completed (submitted, perfect, passed, free_play_complete) / 8 = 50%
       // 4 incomplete (attempted, locked, other, untried) / 8 = 50%
       expect(studentLessonProgress).toEqual({
