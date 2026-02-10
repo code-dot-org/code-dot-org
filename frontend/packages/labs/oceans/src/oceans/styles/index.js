@@ -408,11 +408,8 @@ const styles = {
     position: 'absolute',
     top: '2%',
     right: '7%',
-    backgroundColor: colors.white,
-    color: colors.grey,
     height: '8.5%',
     width: '9.5%',
-    borderRadius: 8,
     display: 'flex',
     alignItems: 'center',
     direction: 'ltr'
