@@ -15,12 +15,19 @@ export default {
         container.id = 'pairing';
         document.body.appendChild(container);
 
-        pairingDialog = createReactRoot(
-          <PairingDialog source={pairingUrl} />,
+        createReactRoot(
+          <PairingDialog
+            source={pairingUrl}
+            ref={dialog => {
+              pairingDialog = dialog;
+            }}
+          />,
           container
         );
       }
-      pairingDialog.open();
+      if (pairingDialog) {
+        pairingDialog.open();
+      }
     }
 
     if (showPairingDialog) {

@@ -311,8 +311,13 @@ $(window).load(function () {
     }
   }
 
-  const contractForm = createReactRoot(
-    <ContractForm />,
+  let contractForm;
+  createReactRoot(
+    <ContractForm
+      ref={instance => {
+        contractForm = instance;
+      }}
+    />,
     document.getElementById('contractForm')
   );
 

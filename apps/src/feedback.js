@@ -1230,7 +1230,8 @@ FeedbackUtils.prototype.showSimpleDialog = function (options) {
   var textBoxStyle = {
     marginBottom: 10,
   };
-  var contentDiv = createReactRoot(
+  var contentDiv = document.createElement('div');
+  createReactRoot(
     <div>
       {options.headerText && (
         <h5 className="dialog-title">{options.headerText}</h5>
@@ -1245,7 +1246,7 @@ FeedbackUtils.prototype.showSimpleDialog = function (options) {
         isDangerCancel={!!options.isDangerCancel}
       />
     </div>,
-    document.createElement('div')
+    contentDiv
   );
 
   var dialog = this.createModalDialog({
