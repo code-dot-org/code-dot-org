@@ -1,5 +1,6 @@
 - content_for :body_scripts do
-  %script{src: webpack_asset_path('js/levels/editors/fields/_special_level_types.js')}
+  %script{src: webpack_asset_path('js/levels/editors/fields/_special_level_types.js'),  data: {lessons: @level.summarize_lessons_for_special_level_types.to_json}}
+}
 
 %h1.control-legend{data: {toggle: "collapse", target: "#special-levels"}}
   Special Level Types
@@ -18,6 +19,7 @@
         By default, submittable levels require the student to edit and
         run their code before they can submit it. Check this box to
         disable this requirement.
+    #link-to-rubric-editor
   - if @level.respond_to? :free_play
     .field
       = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :embed, description: "Embed"}
