@@ -82,7 +82,9 @@ class CodeprojectsPreviewController < ApplicationController
 
     # Security Control: Restrict image loading sources (overrides default-src for images)
     # Goal: Allow student images while preventing external image injection
-    img_src = "'self' blob: #{code_studio_url} #{allowed_image_src}"
+    # We explicitly allow the placeholder image url on all environments so it works across environments. The placeholder image gets hard-coded
+    # into starter code.
+    img_src = "'self' blob: #{code_studio_url} #{allowed_image_src} https://studio.code.org/lab_resources/html-placeholder-image.avif"
 
     # Security Control: Restrict which sites can embed this page in iframes
     # Goal: Prevent clickjacking attacks by controlling frame embedding
