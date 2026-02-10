@@ -207,7 +207,7 @@ gem 'highline', '~> 3.1.0'
 
 gem 'honeybadger', '>= 4.5.6' # error monitoring
 
-gem 'newrelic_rpm', '~> 8.3', group: [:staging, :development, :production], require: false # perf/error/etc monitoring
+gem 'newrelic_rpm', '~> 10.1.0', group: [:staging, :development, :production], require: false # perf/error/etc monitoring
 
 gem 'redcarpet', '~> 3.6.0'
 
