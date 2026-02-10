@@ -194,7 +194,7 @@ function lessonProgressForStudent(studentLevelProgress, lessonLevels) {
 
   const completedStatuses = [
     LevelStatus.perfect,
-    LevelStatus.passed, // "too many blocks" - counts as completed (TEACHING-42)
+    LevelStatus.passed,
     LevelStatus.submitted,
     LevelStatus.free_play_complete,
     LevelStatus.completed_assessment,
@@ -210,7 +210,6 @@ function lessonProgressForStudent(studentLevelProgress, lessonLevels) {
     const levelProgress = studentLevelProgress[level.id];
     if (levelProgress) {
       attempted += levelProgress.status === LevelStatus.attempted;
-      // imperfect is no longer used - passed now counts as completed
       completed += completedStatuses.includes(levelProgress.status);
       timeSpent += levelProgress.timeSpent || 0;
       lastTimestamp = Math.max(lastTimestamp, levelProgress.lastTimestamp || 0);
