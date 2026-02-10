@@ -20,7 +20,7 @@
       CacheSubnetGroupName: !Ref GeocoderSubnetGroup
       ClusterName: !Ref AWS::StackName # Max 50 chars
       Engine: memcached
-      EngineVersion: 1.4
+      EngineVersion: 1.6.22
       NumCacheNodes: 2
       AZMode: cross-az
       PreferredAvailabilityZones: <%= AVAILABILITY_ZONES.first(2).to_json %>
