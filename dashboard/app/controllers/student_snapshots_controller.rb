@@ -31,17 +31,8 @@ class StudentSnapshotsController < ApplicationController
     lesson_id = params[:lesson_id]
     unit_id = params[:unit_id]
     student_id = params[:student_id]
-
-    section_id = nil
-    teacher_id = nil
-    if student_id && unit_id
-      student = User.find_by(id: student_id)
-      if student
-        section = student.sections_as_student.joins(:script).where(scripts: {id: unit_id}).first
-        section_id = section&.id
-        teacher_id = section&.teacher&.id
-      end
-    end
+    teacher_id = current_user.id
+    section_id = params[:section_id]
 
     return render json: {error: "Missing required parameters"}, status: :bad_request unless lesson_id && unit_id && student_id && section_id
 

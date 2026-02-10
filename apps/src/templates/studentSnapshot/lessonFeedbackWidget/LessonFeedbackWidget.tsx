@@ -8,7 +8,6 @@ import i18n from '@cdo/locale';
 import ActionButtons from './ActionButtons';
 import FeedbackTextbox from './FeedbackTextbox';
 import RecommendedActions from './RecommendedActions';
-import {useLessonFeedback} from './useLessonFeedback';
 
 import styles from './lessonFeeedback.module.scss';
 
@@ -17,6 +16,7 @@ interface LessonFeedbackWidgetProps {
   teacherHasEnabledAi: boolean;
   studentId: number | null;
   unitId: number | null;
+  sectionId: number | null;
 }
 
 interface LessonFeedbackData {
@@ -34,6 +34,7 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
   teacherHasEnabledAi = false,
   studentId,
   unitId,
+  sectionId,
 }) => {
   const [feedbackText, setFeedbackText] = React.useState<string>('');
   const [existingFeedbackData, setExistingFeedbackData] =
@@ -51,17 +52,20 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
       resource_link: '',
     },
   ]);
+  const [isLoading, setIsLoading] = React.useState<boolean>(false);
 
   // Fetch lesson feedback from backend, and if not found, try generating ai feedback
   React.useEffect(() => {
+    setIsLoading(true);
     async function getAiLessonFeedback(
       lessonId: number,
       unitId: number,
-      studentId: number
+      studentId: number,
+      sectionId: number
     ) {
       try {
         const response = await fetch(
-          `/student_snapshots/ai_generated_lesson_feedback?lesson_id=${lessonId}&unit_id=${unitId}&student_id=${studentId}`
+          `/student_snapshots/ai_generated_lesson_feedback?lesson_id=${lessonId}&unit_id=${unitId}&student_id=${studentId}&section_id=${sectionId}`
         );
         if (!response.ok) {
           throw new Error(
@@ -95,7 +99,12 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
 
         if (!response.ok) {
           // Try getting AI feedback from student work.
-          const aiData = await getAiLessonFeedback(lessonId, unitId, studentId);
+          const aiData = await getAiLessonFeedback(
+            lessonId,
+            unitId,
+            studentId,
+            sectionId
+          );
           if (aiData && aiData.json) {
             const aiGeneratedInitialFeedback = JSON.parse(aiData.json).feedback;
             setFeedbackText(aiGeneratedInitialFeedback);
@@ -124,13 +133,10 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
         ]);
       }
     }
-    fetchLessonFeedback();
-  }, [lessonId, studentId, unitId]);
-  // Existing hook usage
-  const {isLoading, scrollable, handleSendToStudent} = useLessonFeedback({
-    lessonId,
-    teacherHasEnabledAi,
-  });
+    if (lessonId && studentId && unitId && sectionId) {
+      fetchLessonFeedback();
+    }
+  }, [lessonId, sectionId, studentId, unitId]);
 
   // Save as draft: update local state and persist to backend
   const handleSaveAsDraft = async () => {
@@ -207,7 +213,9 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
       />
       <ActionButtons
         onSaveAsDraft={handleSaveAsDraft}
-        onSendToStudent={handleSendToStudent}
+        onSendToStudent={() => {
+          console.log('Send to student:', feedbackText, resourceData);
+        }}
       />
     </div>
   );
@@ -218,7 +226,7 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
       gridWidth={2}
       gridHeight={2}
       loading={isLoading}
-      scrollable={scrollable}
+      scrollable={true}
     >
       {widgetContent}
     </WidgetTemplate>
