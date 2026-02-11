@@ -6,12 +6,12 @@ import type {MarkdownProps} from '@code-dot-org/platform';
 import {Markdown} from '@code-dot-org/platform';
 
 import type {Plugin} from '../../plugins';
-import type {Theme, Renderer, BlockDefinition} from '../../types';
+import type {Theme, Renderer, BlockDefinitions} from '../../types';
 import {convertBlocklyXmlToJson} from '../../xml';
 import BlocklyWorkspace from '../BlocklyWorkspace';
 
 export interface BlocklyMarkdownProps extends MarkdownProps {
-  blocks?: BlockDefinition[];
+  blocks?: BlockDefinitions;
   renderer?: Renderer;
   plugins?: Plugin[];
   theme?: Theme;

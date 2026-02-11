@@ -3,7 +3,7 @@ import {useCallback, createContext, useRef, useEffect, useContext} from 'react';
 
 import Driver from '../Driver';
 import type {Plugin} from '../plugins';
-import type {BlockDefinition, Theme, Renderer, Environment} from '../types';
+import type {BlockDefinitions, Theme, Renderer, Environment} from '../types';
 
 import DefaultTheme from '../themes/default';
 import ThrasosRenderer from '../renderers/thrasos';
@@ -27,7 +27,7 @@ export const useBlocklyContext = <T extends Environment = Environment>() => {
 
 export interface BlocklyProviderProps<T extends Environment = Environment>
   extends PropsWithChildren {
-  blocks?: BlockDefinition[];
+  blocks?: BlockDefinitions;
   environment?: T;
   theme?: Theme;
   plugins?: Plugin[];
