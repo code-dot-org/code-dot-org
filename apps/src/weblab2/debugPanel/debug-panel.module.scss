@@ -1,0 +1,26 @@
+.debugPanelContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.networkSummary {
+  display: flex;
+  width: 180px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.networkSummaryHeader {
+  display: flex;
+  height: 40px;
+  padding: 10px 8px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  
+  p {
+    margin-bottom: 0;
+    color: var(--text-neutral-tertiary);
+  }
+}
