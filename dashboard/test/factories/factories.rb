@@ -2125,8 +2125,8 @@ FactoryBot.define do
   end
 
   factory :lti_course do
-    lti_integration {create(:lti_integration)}
-    lti_deployment {create(:lti_deployment, lti_integration: lti_integration)}
+    association :lti_integration
+    lti_deployment {build(:lti_deployment, lti_integration:)}
     context_id {SecureRandom.uuid}
     course_id {SecureRandom.uuid}
     nrps_url {"http://test.org/api/names_and_roles"}

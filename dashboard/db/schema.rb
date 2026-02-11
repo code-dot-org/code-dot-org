@@ -1066,7 +1066,7 @@ ActiveRecord::Schema.define(version: 2026_02_11_145245) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.datetime "deleted_at"
-    t.index ["context_id", "lti_integration_id", "deleted_at"], name: "index_lti_courses_on_context_integration_deleted", unique: true
+    t.index "`context_id`, `lti_integration_id`, (if((`deleted_at` is null),true,NULL))", name: "index_lti_courses_on_context_integration_active", unique: true
     t.index ["course_id", "lti_integration_id"], name: "index_on_course_id_and_lti_integration_id"
     t.index ["deleted_at"], name: "index_lti_courses_on_deleted_at"
     t.index ["lti_deployment_id"], name: "fk_rails_19886eb632"
