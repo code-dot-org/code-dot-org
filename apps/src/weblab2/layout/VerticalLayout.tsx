@@ -17,6 +17,7 @@ import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {HTMLPreview} from '@cdo/apps/weblab2/htmlPreview/HTMLPreview';
 import weblab2I18n from '@cdo/apps/weblab2/locale';
 
+import DebugPanel from '../debugPanel/DebugPanel';
 import {ViewMode} from '../types';
 import {setViewMode} from '../weblab2Redux';
 
@@ -218,6 +219,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
               )}
             </div>
           </div>
+          <DebugPanel />
         </div>
       </div>
     </div>
