@@ -15,9 +15,13 @@ function initPage() {
       .clone()
       .insertBefore('#plusAnswerContainedLevel');
   });
-
-  ReactDOM.render(
-    <LinkToRubricEditor lessons={lessons} />,
-    document.getElementById('link-to-rubric-editor')
+  const linkToRubricContainer = document.getElementById(
+    'link-to-rubric-editor'
   );
+  if (linkToRubricContainer) {
+    ReactDOM.render(
+      <LinkToRubricEditor lessons={lessons} />,
+      linkToRubricContainer
+    );
+  }
 }
