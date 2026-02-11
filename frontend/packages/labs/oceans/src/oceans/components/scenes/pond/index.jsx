@@ -38,11 +38,15 @@ let UnwrappedPond = class Pond extends React.Component {
     super(props);
   }
 
-  toggleRecall = e => {
+  getMatchingFishSet = (e, showMatching) => {
     const state = getState();
 
-    // No-op if transition is already in progress.
-    if (state.pondFishTransitionStartTime) {
+    // No-op if transition is already in progress or if already showing the desired fish set.
+    // Note that recallFish are fish that are not matching the word/attribute.
+    // pondFish are fish that are matching the word/attribute.
+    // showMatching true -> want matching (showRecallFish false)
+    // showMatching false -> want recalled fish (showRecallFish true).
+    if (state.pondFishTransitionStartTime || state.showRecallFish === !showMatching) {
       return;
     }
 
@@ -193,12 +197,13 @@ let UnwrappedPond = class Pond extends React.Component {
         <div onClick={this.onPondClick} style={styles.pondSurface} />
         <div style={recallIconsStyle}>
           <button
+            key="toggle-matching"
             type="button"
-            onClick={this.toggleRecall}
+            onClick={e => this.getMatchingFishSet(e, true)}
             aria-label={I18n.t('switchToMatchingItems')}
             style={{
-              ...styles.recallIcon,
-              ...{borderTopLeftRadius: 8, borderBottomLeftRadius: 8},
+              ...styles.toggleIcon,
+              ...styles.matchingIconLeft,
               ...(state.showRecallFish ? {} : styles.bgGreen)
             }}
           >
@@ -208,12 +213,13 @@ let UnwrappedPond = class Pond extends React.Component {
             />
           </button>
           <button
+            key="toggle-non-matching"
             type="button"
-            onClick={this.toggleRecall}
+            onClick={e => this.getMatchingFishSet(e, false)}
             aria-label={I18n.t('switchToNonMatchingItems')}
             style={{
-              ...styles.recallIcon,
-              ...{borderTopRightRadius: 8, borderBottomRightRadius: 8},
+              ...styles.toggleIcon,
+              ...styles.nonMatchingIconRight,
               ...(state.showRecallFish ? styles.bgRed : {})
             }}
           >

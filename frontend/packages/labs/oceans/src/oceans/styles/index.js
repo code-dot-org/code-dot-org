@@ -408,21 +408,34 @@ const styles = {
     position: 'absolute',
     top: '2%',
     right: '7%',
-    backgroundColor: colors.white,
-    color: colors.grey,
     height: '8.5%',
     width: '9.5%',
-    borderRadius: 8,
     display: 'flex',
     alignItems: 'center',
     direction: 'ltr'
   },
-  recallIcon: {
+  toggleIcon: {
     cursor: 'pointer',
     height: '100%',
     border: 'none',
     padding: '10px',
-    margin: 0
+    margin: 0,
+    ':focus': {
+      position: 'relative',
+      zIndex: 1
+    }
+  },
+  matchingIconLeft: {
+    borderTopLeftRadius: 8,
+    borderBottomLeftRadius: 8,
+    borderTopRightRadius: 0,
+    borderBottomRightRadius: 0
+  },
+  nonMatchingIconRight: {
+    borderTopLeftRadius: 0,
+    borderBottomLeftRadius: 0,
+    borderTopRightRadius: 8,
+    borderBottomRightRadius: 8
   },
   infoIconContainer: {
     position: 'absolute',
