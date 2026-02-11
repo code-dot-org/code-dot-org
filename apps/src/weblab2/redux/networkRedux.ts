@@ -21,6 +21,7 @@ interface ResponseData {
   timeElapsed?: number;
   body?: string;
   error?: Error;
+  contentType?: string;
 }
 
 export interface Weblab2NetworkState {

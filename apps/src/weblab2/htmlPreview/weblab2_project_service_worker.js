@@ -108,6 +108,7 @@ function main() {
               : undefined,
             error,
             id: requestId,
+            contentType: response?.headers?.get('Content-Type'),
           },
         });
         return response;

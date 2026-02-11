@@ -63,7 +63,6 @@ export const HTMLPreview: React.FC = () => {
       experiments.WEBLAB2_FULL_URLS
     );
     const isLocalhost = 'localhost' === environmentKey;
-
     // When testing on localhost, it is convenient to have a fixed subdomain
     // to avoid having to give permissions to every channel id version of the preview url.
     // Use the flag ?weblab2-full-urls=true or ?enableExperiments=weblab2-full-urls
