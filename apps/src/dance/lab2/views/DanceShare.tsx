@@ -1,5 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
-import {Heading3} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -71,9 +71,13 @@ const DanceShare: React.FC<DanceShareProps> = props => {
       >
         <div id={props.visualizationId} className={moduleStyles.visualization}>
           <div className={moduleStyles.header}>
-            <Heading3 className={moduleStyles.projectTitle}>
+            <Typography
+              className={moduleStyles.projectTitle}
+              variant="h3"
+              gutterBottom
+            >
               {projectTitle}
-            </Heading3>
+            </Typography>
             <img src={mixMoveAiBanner} alt="Mix & Move with AI" />
           </div>
           {usingMusicProject && (
