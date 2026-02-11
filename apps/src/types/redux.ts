@@ -101,6 +101,7 @@ interface ManageStudentsState {
 }
 
 interface SectionProgressState {
+  isLoadingProgress: boolean;
   unitDataByUnit?: {
     [unitId: number]: {
       id: number;
