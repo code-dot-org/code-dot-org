@@ -1,13 +1,12 @@
 [![Build Status](https://github.com/code-dot-org/ml-activities/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/code-dot-org/ml-activities/actions/workflows/deploy.yml)
 
-
 # **AI for Oceans**
 
 This is the repo for **AI for Oceans** from Code.org.
 
 Like the Dance Party repo, it is a standalone repo that is published as an [NPM package](https://www.npmjs.com/package/@code-dot-org/ml-activities), and consumed by the [main repo](https://github.com/code-dot-org/code-dot-org).
 
-**AI for Oceans** was produced for the Hour of Code in 2019.  This module provides the student experience for the 5 interactive levels in the **AI for Oceans** script at https://studio.code.org/s/oceans.
+**AI for Oceans** was produced for the Hour of Code in 2019. This module provides the student experience for the 5 interactive levels in the **AI for Oceans** script at https://studio.code.org/s/oceans.
 
 We have measured over one million unique [completions](https://twitter.com/codeorg/status/1385266661700288513) of the script.
 
@@ -25,7 +24,7 @@ The user trains the AI to differentiate between fish and trash, and then examine
 
 ### `creaturesvtrashdemo`
 
-Next, the concept of non-fish sea creatures is introduced to show that AI is only as good as its training.  In this mode, the experience is abbreviated: the user doesn't do training, but rather the mode demonstrates what happens when fish-specific training encounters non-fish.
+Next, the concept of non-fish sea creatures is introduced to show that AI is only as good as its training. In this mode, the experience is abbreviated: the user doesn't do training, but rather the mode demonstrates what happens when fish-specific training encounters non-fish.
 
 ### `creaturesvtrash`
 
@@ -33,11 +32,11 @@ In this mode, the user trains the AI again, but this time encountering fish, non
 
 ### `short`
 
-In this mode, the user chooses from one of six adjectives and then categorizes fish based on that.  The AI is trained on which fish fit into this arbitrary category or not, and then demonstrates this training.
+In this mode, the user chooses from one of six adjectives and then categorizes fish based on that. The AI is trained on which fish fit into this arbitrary category or not, and then demonstrates this training.
 
 ### `long`
 
-In this mode, the user chooses from one of fifteen adjectives.  With more subjectivity in this list, the user can explore more subtle implications of training and categorization.
+In this mode, the user chooses from one of fifteen adjectives. With more subjectivity in this list, the user can explore more subtle implications of training and categorization.
 
 ## ML technology
 
@@ -49,9 +48,9 @@ Adapted from content at https://code.org/oceans:
 
 ## Scenes
 
-The **AI for Oceans** script presents a linear narrative structure.  This app is designed to deliver the interactive levels for this script, one mode at a time, with no need to persist data to the browser or server between each level.
+The **AI for Oceans** script presents a linear narrative structure. This app is designed to deliver the interactive levels for this script, one mode at a time, with no need to persist data to the browser or server between each level.
 
-The app itself presents a variety of "scenes", with each mode using a different subset.  The scenes (known as `currentMode` internally) are as follows:
+The app itself presents a variety of "scenes", with each mode using a different subset. The scenes (known as `currentMode` internally) are as follows:
 
 ### `loading`
 
@@ -85,7 +84,7 @@ The user watches A.I. (the "bot") categorizing items, one at a time.
 
 <img width="1298" alt="pond-false" src="https://user-images.githubusercontent.com/2205926/165404481-6e36e7d2-c6db-4e69-b84c-afd28f6444ba.png">
 
-The user is shown the result of the predictions.  The user can toggle between the matching & non-matching sets.
+The user is shown the result of the predictions. The user can toggle between the matching & non-matching sets.
 
 In the `short` and `long` modes, the pond also has a metapanel which can show general information about the ML processing, or, when a fish is selected, specific information about that fish's categorization:
 
@@ -95,9 +94,9 @@ In the `short` and `long` modes, the pond also has a metapanel which can show ge
 
 ## Graphics & UI
 
-The app uses three layers in the DOM.  Underneath, one canvas contains the scene's background image, while another canvas contains all the sprites.  On top, the app uses React to render HTML elements for the user interface, implemented [here](https://github.com/code-dot-org/ml-activities/blob/c9d24c4b7a20ea12d5dc7a094094c5ef4dfbbde3/src/oceans/ui.jsx).
+The app uses three layers in the DOM. Underneath, one canvas contains the scene's background image, while another canvas contains all the sprites. On top, the app uses React to render HTML elements for the user interface, implemented [here](https://github.com/code-dot-org/ml-activities/blob/c9d24c4b7a20ea12d5dc7a094094c5ef4dfbbde3/src/oceans/ui.jsx).
 
-The app is fully responsive by scaling the canvases and also scaling the size of the HTML elements correspondingly.  This way, the UI simply shrinks to match the underlying canvases.
+The app is fully responsive by scaling the canvases and also scaling the size of the HTML elements correspondingly. This way, the UI simply shrinks to match the underlying canvases.
 
 ## Animation
 
@@ -111,7 +110,7 @@ The fish pause under the scanner using a simple S-curve adjustment to their move
 
 ## The Guide
 
-After initial playtests, we identified a need to slow the pacing of the tutorial and tell a clear story.  The solution we adopted was text boxes with "typing" text, reminiscent of old-school computer games.
+After initial playtests, we identified a need to slow the pacing of the tutorial and tell a clear story. The solution we adopted was text boxes with "typing" text, reminiscent of old-school computer games.
 
 "The Guide" is the implementation of this solution, and was designed to be a simple but flexible system that allowed us to add a variety of text for every step and situation encountered in the tutorial.
 
@@ -131,11 +130,11 @@ We also use modal popups to give extra information.
 
 ## State
 
-The app's runtime state is stored in a very simple module [here](https://github.com/code-dot-org/ml-activities/blob/c9d24c4b7a20ea12d5dc7a094094c5ef4dfbbde3/src/oceans/state.js).  Updates to state trigger a React render, unless deliberately skipped.
+The app's runtime state is stored in a very simple module [here](https://github.com/code-dot-org/ml-activities/blob/c9d24c4b7a20ea12d5dc7a094094c5ef4dfbbde3/src/oceans/state.js). Updates to state trigger a React render, unless deliberately skipped.
 
 ## Host interface
 
-The full functionality of this app is enabled when hosted by https://studio.code.org.  The main repo loads this app via code [here](https://github.com/code-dot-org/code-dot-org/tree/c3325655902e82479d0a85d5adc73049810e5b66/apps/src/fish).  Specific parameters passed in during initialization, [here](https://github.com/code-dot-org/code-dot-org/blob/c3325655902e82479d0a85d5adc73049810e5b66/apps/src/fish/Fish.js#L127-L136), include a foreground and background canvas, the `appMode`, a callback when the user continues to the next level, callbacks for loading & playing sound effects, and localized strings.
+The full functionality of this app is enabled when hosted by https://studio.code.org. The main repo loads this app via code [here](https://github.com/code-dot-org/code-dot-org/tree/c3325655902e82479d0a85d5adc73049810e5b66/apps/src/fish). Specific parameters passed in during initialization, [here](https://github.com/code-dot-org/code-dot-org/blob/c3325655902e82479d0a85d5adc73049810e5b66/apps/src/fish/Fish.js#L127-L136), include a foreground and background canvas, the `appMode`, a callback when the user continues to the next level, callbacks for loading & playing sound effects, and localized strings.
 
 ## Analytics
 
@@ -146,7 +145,6 @@ If Google Analytics is available on the page, the app generates a synthetic page
 ## Common operations
 
 The documentation for common operations for **AI Lab** is comprehensive and should apply to this project too: https://github.com/code-dot-org/ml-playground#common-operations
-
 
 ## Getting started
 
@@ -174,23 +172,26 @@ If you want to make changes locally in ml-activities and have them show up in yo
 
 - In the ml-activities root directory `yarn link`
 - In the code-dot-org apps/ directory `yarn link ~/ml-activities`
-This will set up a symlink in apps/node_modules/@code-dot-org to point at your local changes. Run `yarn build` in ml-activities, and then the code-dot-org apps build should pick up the changes (generated in ml-activities' `dist/`) next time it occurs (including in already-running `yarn start` build in code-dot-org).
-  - Note that ml-activities' `yarn start` can be left running when `yarn build` is run.  But a new invocation of `yarn start` will intentionally clear the `dist/` directory populated by `yarn build` to ensure we don't have outdated assets left in it.
-- If you want to go back to using the published module, in the code-dot-org apps/ directory run `yarn unlink ~/ml-activities`.  You'll be given additional instructions on how to force the module to be rebuilt after that.
+  This will set up a symlink in apps/node_modules/@code-dot-org to point at your local changes. Run `yarn build` in ml-activities, and then the code-dot-org apps build should pick up the changes (generated in ml-activities' `dist/`) next time it occurs (including in already-running `yarn start` build in code-dot-org).
+  - Note that ml-activities' `yarn start` can be left running when `yarn build` is run. But a new invocation of `yarn start` will intentionally clear the `dist/` directory populated by `yarn build` to ensure we don't have outdated assets left in it.
+- If you want to go back to using the published module, in the code-dot-org apps/ directory run `yarn unlink ~/ml-activities`. You'll be given additional instructions on how to force the module to be rebuilt after that.
 
 ### Publishing a new version
 
 First, ensure you have the `main` branch checked out locally, and that it's up to date.
 
 To publish a new version, the following command should work:
+
 ```
 npm version 0.0.29
 ```
-With `0.0.29` replaced by the new version number that should be published.
 
-Note: make sure you are logged into `npm` first.  If not, the command may fail with a misleading `E404` error.  You can see if you're logged in with `npm whoami`, and if not logged in, can can use `npm login`.
+With `0.0.29` replaced by the new version number that should be published. Generally try to follow MAJOR.MINOR.PATCH to determine which number to change (for instance, a bug fix increments the third digit by 1, while a non-backwards compatible major update increments the first).
+
+Note: make sure you are logged into `npm` first. If not, the command may fail with a misleading `E404` error. You can see if you're logged in with `npm whoami`, and if not logged in, can can use `npm login`.
 
 ## Adding new fish components
+
 All fish components live in `public/images/fish` in their respective folders (eg bodies live in `body/`). Despite the fact that the fish face right in most of the tutorial, they are built as if they face left in order to simplify the math for the anchor points. This means that all components should be oriented as if the fish is facing left, which might require flopping any new assets. After adding the assets, they will need to be added to `src/utils/fishData.js`. `bin/determineKnnData.js` will output some of the lines that will be needed in `fishData`.
 
 All components can define `exclusions`, which are modes that the component won't be used in. Components appear in all modes by default.
@@ -198,13 +199,17 @@ All components can define `exclusions`, which are modes that the component won't
 Some components need more configuration:
 
 ### Bodies
+
 Bodies need an anchor point for the body then all of the other components, relative to the bounds of the body image. A face anchor point is used for both the eyes and the mouth. The eyes and mouth are arranged with respect to each other and the defined anchor point. The tail Y anchor point is set from where the center of the component should be.
 
 ### Dorsal fin
+
 Some dorsal fins define an x-adjustment to shift the anchor point. This is useful for dorsal fins that might look odd is not positioned correctly (eg symmetical).
 
 ## I18n
+
 By default, this tutorial is in English. The strings live at i18n/oceans.json and should not be moved without corresponding changes to the I18n pipeline in `code-dot-org`. Translations can be passed into the app using the `i18n` param. If any translations are missing, the English string will be used as a default. This also means that adding a new string is safe and does not require any further steps.
 
 ## Machine Learning algorithms
+
 We currently have support for two machine learning algorithms: k nearest neighbor (KNN) and support vector machine (SVM). We also have a mobilenet model that is saved at `src/oceans/model.json` (it's saved here to avoid a call to googleapis.com).
