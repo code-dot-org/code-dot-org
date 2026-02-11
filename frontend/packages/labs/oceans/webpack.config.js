@@ -21,6 +21,7 @@ const commonConfig = {
     rules: [
       {
         test: /\.js$/,
+        exclude: /node_modules\/messageformat/,
         loader: 'babel-loader'
       },
       {test: /\.css$/, loader: 'style-loader!css-loader'},
