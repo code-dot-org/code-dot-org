@@ -173,10 +173,10 @@ Similar to https://github.com/code-dot-org/dance-party, ml-activities is built f
 If you want to make changes locally in ml-activities and have them show up in your apps build, do the following:
 
 - In the ml-activities root directory `yarn link`
-- In the code-dot-org apps/ directory `yarn link @code-dot-org/ml-activities`
+- In the code-dot-org apps/ directory `yarn link ~/ml-activities`
 This will set up a symlink in apps/node_modules/@code-dot-org to point at your local changes. Run `yarn build` in ml-activities, and then the code-dot-org apps build should pick up the changes (generated in ml-activities' `dist/`) next time it occurs (including in already-running `yarn start` build in code-dot-org).
   - Note that ml-activities' `yarn start` can be left running when `yarn build` is run.  But a new invocation of `yarn start` will intentionally clear the `dist/` directory populated by `yarn build` to ensure we don't have outdated assets left in it.
-- If you want to go back to using the published module, in the code-dot-org apps/ directory run `yarn unlink @code-dot-org/ml-activities`.  You'll be given additional instructions on how to force the module to be rebuilt after that.
+- If you want to go back to using the published module, in the code-dot-org apps/ directory run `yarn unlink ~/ml-activities`.  You'll be given additional instructions on how to force the module to be rebuilt after that.
 
 ### Publishing a new version
 
