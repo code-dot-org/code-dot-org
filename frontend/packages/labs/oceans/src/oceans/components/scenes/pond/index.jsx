@@ -197,6 +197,7 @@ let UnwrappedPond = class Pond extends React.Component {
         <div onClick={this.onPondClick} style={styles.pondSurface} />
         <div style={recallIconsStyle}>
           <button
+            key="toggle-matching"
             type="button"
             onClick={e => this.getMatchingFishSet(e, true)}
             aria-label={I18n.t('switchToMatchingItems')}
@@ -212,6 +213,7 @@ let UnwrappedPond = class Pond extends React.Component {
             />
           </button>
           <button
+            key="toggle-non-matching"
             type="button"
             onClick={e => this.getMatchingFishSet(e, false)}
             aria-label={I18n.t('switchToNonMatchingItems')}

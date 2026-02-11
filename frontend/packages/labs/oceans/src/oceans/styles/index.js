@@ -419,7 +419,11 @@ const styles = {
     height: '100%',
     border: 'none',
     padding: '10px',
-    margin: 0
+    margin: 0,
+    ':focus': {
+      position: 'relative',
+      zIndex: 1
+    }
   },
   matchingIconLeft: {
     borderTopLeftRadius: 8,
