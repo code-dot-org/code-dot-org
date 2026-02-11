@@ -13,8 +13,7 @@ const PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL = 'weblab2-file-preview';
 const SERVING_HTML_FILE = 'SERVING_HTML_FILE';
 const RECEIVED_SOURCE = 'RECEIVED_SOURCE';
 const UPDATE_FILES = 'UPDATE_FILES';
-const SENDING_NETWORK_REQUEST = 'SENDING_NETWORK_REQUEST';
-const NETWORK_RESPONSE = 'NETWORK_RESPONSE';
+const NETWORK_REQUEST = 'NETWORK_REQUEST';
 
 function main() {
   let filesData = {};
@@ -70,17 +69,34 @@ function main() {
         });
       }
       if (url.origin !== location.origin) {
+        const performanceStartTime = performance.now();
+        const startTime = new Date().toLocaleString();
+        let response;
+        let performanceEndTime;
+        let error;
+        try {
+          response = await fetch(event.request);
+          performanceEndTime = performance.now();
+        } catch (e) {
+          error = e;
+        }
+        let bodyText;
+        try {
+          bodyText = response ? await response.text() : undefined;
+        } catch (e) {
+          error = e;
+        }
         broadcastChannel.postMessage({
-          type: SENDING_NETWORK_REQUEST,
+          type: NETWORK_REQUEST,
           url: event.request.url,
-        });
-        const response = await fetch(event.request);
-        const bodyText = await response.text();
-        broadcastChannel.postMessage({
-          type: NETWORK_RESPONSE,
-          url: event.request.url,
+          method: event.request.method,
           responseBody: bodyText,
-          responseStatus: response.status,
+          responseStatus: response ? response.status : undefined,
+          timeElapsed: performanceEndTime
+            ? Math.floor(performanceEndTime - performanceStartTime)
+            : undefined,
+          error,
+          startTime,
         });
         return response;
       }

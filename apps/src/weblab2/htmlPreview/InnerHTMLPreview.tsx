@@ -121,21 +121,22 @@ const InnerHTMLPreview = () => {
         setServiceWorkerReady(true);
         setPreviewKey(prevKey => prevKey + 1);
       } else if (
-        event.data.type ===
-        ProjectServiceWorkerMessageType.SENDING_NETWORK_REQUEST
+        event.data.type === ProjectServiceWorkerMessageType.NETWORK_REQUEST
       ) {
-        // Handle sending network request message
-        console.log({networkRequestEvent: event});
-      } else if (
-        event.data.type === ProjectServiceWorkerMessageType.NETWORK_RESPONSE
-      ) {
-        // Handle network response message
-        console.log({networkResponseEvent: event});
+        window.parent.postMessage(
+          {type: IframeMessageType.NETWORK_REQUEST, data: event.data},
+          parentOrigin
+        );
+        // Handle network request message
+        console.log({networkRequestEvent: event.data});
       } else if (
         event.data.type === ProjectServiceWorkerMessageType.CSP_VIOLATION
       ) {
-        console.log('CSP Violation - Blocked URI:', event.data.blockedURI);
-        console.log('Violated directive:', event.data.violatedDirective);
+        window.parent.postMessage(
+          {type: IframeMessageType.CSP_VIOLATION, data: event.data},
+          parentOrigin
+        );
+        console.log({cspViolationEvent: event.data});
       }
     };
     return () => {

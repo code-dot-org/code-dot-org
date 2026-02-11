@@ -1,6 +1,9 @@
 import {findFilePathByRelativePath} from '@codebridge/utils';
 
-import {IframeMessageType} from './constants';
+import {
+  IframeMessageType,
+  PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL,
+} from './constants';
 
 // Replace links to non-html files (css and js) with their appropriate URLs (either blobs or external URLs).
 // We support <link> tags for CSS files, <script> tags for JavaScript files, and <img> tags for images,
@@ -59,21 +62,26 @@ export const updateLinksToHtmlFiles = (doc: Document, fullFileName: string) => {
   });
 };
 
+const handleCSPViolationScript = `
+document.addEventListener("securitypolicyviolation",function(e){
+  const broadcastChannel = new BroadcastChannel("${PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL}");
+  const requestId = Date.now().toString();
+  broadcastChannel.postMessage({
+    type: "CSP_VIOLATION",
+    url: e.blockedURI,
+    effectiveDirective: e.effectiveDirective,
+    requestId,
+    timestamp: new Date().toLocaleString()
+  });
+  broadcastChannel.close();
+});
+`;
+
 // Adds a script to the document that listens for CSP violations and broadcasts them
 // via BroadcastChannel so the parent can be notified.
-export const addCSPViolationListenerToDocument = (
-  doc: Document,
-  broadcastChannelName: string
-) => {
+export const addCSPViolationListenerToDocument = (doc: Document) => {
   const script = doc.createElement('script');
-  script.textContent =
-    'document.addEventListener("securitypolicyviolation",function(e){' +
-    'var bc=new BroadcastChannel("' +
-    broadcastChannelName +
-    '");' +
-    'bc.postMessage({type:"CSP_VIOLATION",blockedURI:e.blockedURI,violatedDirective:e.violatedDirective});' +
-    'bc.close();' +
-    '});';
+  script.textContent = handleCSPViolationScript;
   const head = doc.querySelector('head');
   if (head) {
     head.insertBefore(script, head.firstChild);

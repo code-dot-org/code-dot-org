@@ -4,10 +4,7 @@ import {useEffect, useMemo, useState} from 'react';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 
-import {
-  PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL,
-  ProjectServiceWorkerMessageType,
-} from './constants';
+import {ProjectServiceWorkerMessageType} from './constants';
 import {generateContentSecurityPolicyForPreview} from './contentSecurityPolicyHelper';
 import {
   addBaseTagToDocument,
@@ -100,10 +97,7 @@ function useProjectServiceWorker(
           const doc = parser.parseFromString(file.contents, 'text/html');
           const urlSuffix = folder ? `${folder}/` : '';
           addBaseTagToDocument(doc, `${window.location.origin}/${urlSuffix}`);
-          addCSPViolationListenerToDocument(
-            doc,
-            PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL
-          );
+          addCSPViolationListenerToDocument(doc);
           content = doc.documentElement.outerHTML;
         } else if (file.language === 'css') {
           mimeType = 'text/css';
