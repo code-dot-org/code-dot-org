@@ -36,6 +36,14 @@ class StudentSnapshotsController < ApplicationController
 
     return render json: {error: "Missing required parameters"}, status: :bad_request unless lesson_id && unit_id && student_id && section_id
 
+    # Validate that the section belongs to the current teacher
+    section = Section.find_by(id: section_id)
+    return render json: {error: "Section not found"}, status: :not_found unless section
+
+    unless section.user_id == teacher_id || section.instructors.exists?(id: teacher_id)
+      return render json: {error: "Unauthorized access to section"}, status: :forbidden
+    end
+
     response = AiStudentSnapshotHelper.generate_lesson_feedback(unit_id, lesson_id, teacher_id, student_id, section_id)
 
     render json: response
