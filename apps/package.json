@@ -396,6 +396,7 @@
     "video.js": "7.6.6",
     "vm-browserify": "^1.1.2",
     "vmsg": "^0.3.6",
+    "web-streams-polyfill": "^4.2.0",
     "wgxpath": "^1.2.0",
     "whatwg-fetch": "^2.0.3",
     "zod": "^4.3.6"
