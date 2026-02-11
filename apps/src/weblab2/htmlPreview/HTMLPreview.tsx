@@ -24,8 +24,11 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {filterSourceForPreview} from '@cdo/apps/weblab2/htmlPreview/filterSourceForPreview';
-
-import {addRequestData, addResponseData} from '../redux/networkRedux';
+import {
+  addRequestData,
+  addResponseData,
+  clearRequests,
+} from '@cdo/apps/weblab2/redux/networkRedux';
 
 import {
   IframeMessageType,
@@ -287,6 +290,7 @@ export const HTMLPreview: React.FC = () => {
     setIsStopped(false);
     setIsLevelLoading(true);
     setIsIframeLoaded(false);
+    dispatch(clearRequests());
   });
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
