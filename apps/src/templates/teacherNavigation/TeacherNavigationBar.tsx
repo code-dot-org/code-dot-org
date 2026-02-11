@@ -17,7 +17,11 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SidebarOption from '@cdo/apps/templates/teacherNavigation/SidebarOption';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiChatAccessLevels,
+  AiChatToolsDependency,
+  AiDiffContext,
+} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {selectedSectionSelector} from '../teacherDashboard/teacherSectionsReduxSelectors';
@@ -205,6 +209,18 @@ const TeacherNavigationBar: React.FC<{
     [currentPathName]
   );
 
+  const shouldShowErrorIcon = React.useCallback(
+    (key: string) => {
+      return (
+        key === TEACHER_NAVIGATION_PATH_NAMES.aiChatSettings &&
+        selectedSection?.assignedAiChatToolsDependency ===
+          AiChatToolsDependency.ESSENTIAL &&
+        selectedSection?.aiChatAccessLevel === AiChatAccessLevels.DISABLED
+      );
+    },
+    [selectedSection]
+  );
+
   const getSidebarOptionsForSection = (
     sidebarKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[]
   ) => {
@@ -220,6 +236,7 @@ const TeacherNavigationBar: React.FC<{
         unitPosition={selectedSection.unitPosition}
         unitName={selectedSection.unitName}
         pathKey={key as keyof typeof LABELED_TEACHER_NAVIGATION_PATHS}
+        showErrorIcon={shouldShowErrorIcon(key)}
       />
     ));
   };
