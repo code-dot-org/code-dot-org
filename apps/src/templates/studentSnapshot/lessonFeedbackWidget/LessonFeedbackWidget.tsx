@@ -56,7 +56,6 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
 
   // Fetch lesson feedback from backend, and if not found, try generating ai feedback
   React.useEffect(() => {
-    setIsLoading(true);
     async function getAiLessonFeedback(
       lessonId: number,
       unitId: number,
@@ -81,7 +80,7 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
     }
 
     async function fetchLessonFeedback() {
-      if (!lessonId || !studentId || !unitId) {
+      if (!lessonId || !studentId || !unitId || !sectionId) {
         setFeedbackText('');
         setResourceData([
           {recommended_action: '', resource_name: '', resource_link: ''},
@@ -131,9 +130,12 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
         setResourceData([
           {recommended_action: '', resource_name: '', resource_link: ''},
         ]);
+      } finally {
+        setIsLoading(false);
       }
     }
     if (lessonId && studentId && unitId && sectionId) {
+      setIsLoading(true);
       fetchLessonFeedback();
     }
   }, [lessonId, sectionId, studentId, unitId]);
