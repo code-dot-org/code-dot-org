@@ -5,7 +5,6 @@ import {
 } from '@code-dot-org/craft';
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import {getCodeBlocks, getCode} from '@cdo/apps/blockly/utils';
 import {TestResults} from '@cdo/apps/constants';
@@ -18,6 +17,7 @@ import {getStore} from '@cdo/apps/redux';
 import Sounds from '@cdo/apps/Sounds';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
 import {trySetLocalStorage} from '@cdo/apps/utils';
 
@@ -313,7 +313,7 @@ Craft.init = function (config) {
     isMinecraft: true,
   });
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <div>
         <AppView

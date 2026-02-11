@@ -34,6 +34,7 @@ import {
 } from '@cdo/apps/templates/currentUserRedux';
 import InstructionsDialog from '@cdo/apps/templates/instructions/InstructionsDialog';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 import msg from '@cdo/locale';
 
@@ -368,7 +369,7 @@ StudioApp.prototype.init = function (config) {
   this.configureDom(config);
 
   if (!config.level.iframeEmbedAppAndCode) {
-    ReactDOM.render(
+    createReactRoot(
       <Provider store={getStore()}>
         <InstructionsDialog
           title={msg.puzzleTitle({
@@ -608,7 +609,7 @@ StudioApp.prototype.init = function (config) {
     const isComplete =
       progress.levelResults[progress.currentLevelId] >=
       TestResults.MINIMUM_OPTIMAL_RESULT;
-    ReactDOM.render(
+    createReactRoot(
       <ChallengeDialog
         isOpen={true}
         avatar={this.icon || this.skin.staticAvatar}
@@ -754,7 +755,7 @@ StudioApp.prototype.getSettingsHandler = function () {
       id: 'settings-modal',
     });
 
-    ReactDOM.render(React.createElement(SettingsModal), contentDiv);
+    createReactRoot(React.createElement(SettingsModal), contentDiv);
     dialog.show();
   };
 };
@@ -767,7 +768,7 @@ StudioApp.prototype.getVersionHistoryHandler = function (config) {
       defaultBtnSelector: 'again-button',
       id: 'showVersionsModal',
     });
-    ReactDOM.render(
+    createReactRoot(
       React.createElement(VersionHistory, {
         handleClearPuzzle: this.handleClearPuzzle.bind(this, config),
         isProjectTemplateLevel: !!config.level.projectTemplateLevelName,
@@ -1064,7 +1065,7 @@ StudioApp.prototype.renderShareFooter_ = function (container) {
     channel: project.getCurrentId(),
   };
 
-  ReactDOM.render(<SmallFooter {...reactProps} />, footerDiv);
+  createReactRoot(<SmallFooter {...reactProps} />, footerDiv);
 };
 
 /**
@@ -2326,7 +2327,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
         div.className = 'WireframeButtons_containerRight';
         document.body.appendChild(div);
         if (!options.level.iframeEmbed) {
-          ReactDOM.render(
+          createReactRoot(
             React.createElement(WireframeButtons, {
               channelId: project.getCurrentId(),
               appType: project.getStandaloneApp(),
@@ -3133,7 +3134,7 @@ StudioApp.prototype.displayWorkspaceAlert = function (
     },
     alertContents
   );
-  ReactDOM.render(workspaceAlert, container[0]);
+  createReactRoot(workspaceAlert, container[0]);
 
   return container[0];
 };
@@ -3172,7 +3173,7 @@ StudioApp.prototype.displayPlayspaceAlert = function (type, alertContents) {
   }
 
   const playspaceAlert = React.createElement(Alert, alertProps, alertContents);
-  ReactDOM.render(playspaceAlert, renderElement);
+  createReactRoot(playspaceAlert, renderElement);
 
   return renderElement;
 };

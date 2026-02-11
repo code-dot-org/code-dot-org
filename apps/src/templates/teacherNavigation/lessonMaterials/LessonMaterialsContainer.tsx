@@ -32,6 +32,7 @@ import AIBotTAIcon from '@cdo/static/ai-bot-ta-tag-icon.png';
 import LessonSelector from '../../teacherDashboardShared/LessonSelector';
 import UnitSelectorV2 from '../../teacherDashboardShared/UnitSelectorV2';
 
+import CustomLessonResources from './CustomLessonResources';
 import {LessonMaterialsEmptyState} from './LessonMaterialsEmptyState';
 import {Lesson} from './LessonMaterialTypes';
 import LessonResources from './LessonResources';
@@ -198,7 +199,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   const [selectedLesson, setSelectedLesson] = useState<Lesson | null>(null);
 
   const podcastsEnabled =
-    DCDO.get('ai-lesson-summary-podcasts', false) ||
+    !!DCDO.get('ai-lesson-summary-podcasts', false) ||
     experiments.isEnabled('ai-lesson-podcasts');
 
   React.useEffect(() => {
@@ -298,6 +299,20 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
         resources={selectedLesson.resources.Student || []}
       />
     );
+  };
+
+  const renderCustomResources = () => {
+    if (selectedLesson && experiments.isEnabled(experiments.AI_ARTIFACT)) {
+      return (
+        <CustomLessonResources
+          unitId={selectedSection.unitId}
+          lessonId={selectedLesson.id}
+          sectionId={selectedSection.id}
+        />
+      );
+    } else {
+      return null;
+    }
   };
 
   const renderLessonSummaryContainer = () => {
@@ -472,6 +487,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           <>
             {renderTeacherResources()}
             {renderStudentResources()}
+            {renderCustomResources()}
           </>
         )}
       </div>

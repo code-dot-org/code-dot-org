@@ -11,30 +11,33 @@
     "panels": [
       {
         "text": "# Promise\n\nAn object that represents a value that is not available yet but will be resolved in the future. It's a placeholder for the result of an asynchronous operation.\n\nIt has three states: **pending**, **fulfilled**, or **rejected**.",
-        "imageUrl": "",
+        "imageUrl": "https://images.code.org/3ea3bb0f35aa658a2bf38361d0b0105c-Promise.png",
         "key": "designing-reliable-apps-lesson3-level1-test_2025-pilot-d3fe9601-649f-46dd-9cfd-faef9a1293b5",
         "layout": "text-bottom-center"
       },
       {
         "text": "# Pending\n\nThe asynchronous operation has started, but the Promise has not yet completed. No value or error is available yet.\n\n**Analogy**: The package is \"In Transit.\"",
-        "imageUrl": "",
+        "imageUrl": "https://images.code.org/d74a6461bebeecc55891c9e5c5e62f19-Pending.png",
         "key": "designing-reliable-apps-lesson3-level1-test_2025-pilot-557c8bb2-9dd6-4673-92dd-a129b747c192",
-        "layout": "text-bottom-center"
+        "layout": "text-bottom-center",
+        "fadeInOverPrevious": true
       },
       {
         "text": "# Fulfilled\n\nThe operation completed successfully, and the Promise now holds a resulting value (data).\n\n**Analogy**: The package is \"Delivered.\"",
-        "imageUrl": "",
+        "imageUrl": "https://images.code.org/05e93360bfe53001ca864296d9b6ed52-Fulfilled.png",
         "key": "designing-reliable-apps-lesson3-level1-test_2025-pilot-2805ea43-03bb-4906-b2d7-04392946fe1b",
-        "layout": "text-bottom-center"
+        "layout": "text-bottom-center",
+        "fadeInOverPrevious": true
       },
       {
-        "text": "# Fulfilled\n\nThe operation failed, and the Promise now holds a reason for the failure (an error).\n\n**Analogy**: The package is \"Lost\" or \"Damaged.\"",
-        "imageUrl": "",
+        "text": "# Rejected\n\nThe operation failed, and the Promise now holds a reason for the failure (an error).\n\n**Analogy**: The package is \"Lost\" or \"Damaged.\"",
+        "imageUrl": "https://images.code.org/9b8bbde6827e569e88723305e6a24b65-Rejected.png",
         "key": "designing-reliable-apps-lesson3-level1-test_2025-pilot-fbbe7e97-28d9-496a-aa02-30cb942aae12",
-        "layout": "text-bottom-center"
+        "layout": "text-bottom-center",
+        "fadeInOverPrevious": true
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2026-01-28 20:36:18 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-01-28 20:37:38 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-01-28 20:36:18 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-01-28 20:37:38 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-02-08 15:55:50 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Panels>

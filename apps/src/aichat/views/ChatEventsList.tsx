@@ -20,6 +20,7 @@ interface ChatEventsListProps {
   isTeacherView?: boolean;
   buildAssetUrl?: (asset: ChatAsset) => string;
   isAiTutorVersion?: boolean;
+  hasInstructionsDrawer?: boolean;
 }
 
 /**
@@ -30,6 +31,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   isTeacherView,
   buildAssetUrl,
   isAiTutorVersion,
+  hasInstructionsDrawer,
 }) => {
   const {chatDisabled, chatDisabledMessage} = useAiChatDisabled();
   const [isInChatNavigationMode, setIsInChatNavigationMode] = useState(false);
@@ -184,6 +186,9 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
           <ChatDisabled message={chatDisabledMessage} />
         ) : (
           <>
+            {hasInstructionsDrawer && (
+              <div className={moduleStyles.instructionsDrawerInset} />
+            )}
             {events.map((event, index) => {
               const isLastMessage = index === events.length - 1;
               return (
