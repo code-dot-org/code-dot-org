@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2026-02-09T16:36:50.000Z",
   "level_num": "custom",
@@ -9,45 +10,88 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "# For Loop\n A **for loop** is a loop that repeats a set of steps a specific number of times.\n\n#### Let's break it down! ",
-        "imageUrl": "https://images.code.org/350c5ed6cb3870569ed669bfb37e16c5-forloop.png",
-        "key": "pl-aif-2-U4-forloop-panel-55f5c62b-017c-42b7-aea3-2a05496b037d",
+        "text": "## Deep Dive\n\nThis panel level takes a closer look at what the code from the previous level is doing.\n\nAs you click through, focus on **noticing patterns and ideas**, not memorizing syntax. You are not expected to understand or remember every line of code yet.\n\nThe goal is simply to start building a mental picture of how:\n- an app asks for data\n- receives a response\n- and updates what the user sees\n\nMore explanation and practice are coming next.\n",
+        "imageUrl": "https://images.code.org/4b6f2f8ca728eb8505c67b3d446ca49b-pokemonAPI.png",
+        "key": "pl-aif-2-U5-API-Calll-POkemon-panel-ca1b435a-713a-44b6-9ca1-5de1dddec908"
+      },
+      {
+        "text": "## Getting Started\nThis variable finds the Generate button on the page and saves a reference to it so the code can react when the user clicks it.",
+        "imageUrl": "https://images.code.org/9b74f92ef4c5ee0611e31852a6fc117e-pokemonAPI (1).png",
+        "key": "pl-aif-2-U5-API-Calll-POkemon-panel-7c7e183a-9912-4f38-8b6d-555ee595e195",
         "layout": "text-bottom-right"
       },
       {
-        "text": "# Loop Variable\n\nA **loop variable** is a variable that changes value each time a loop runs. It keeps track of the loop's current step or position.\n\n**Example**: In `for (let i = 0; i < 5; i++)`, the loop variable is `i`.",
-        "imageUrl": "https://images.code.org/0dc50f28b7bd87b0d74641242c337a8f-loop_variable.png",
-        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "text": "## Main Fetch Logic \nListens for a click on the Generate button. When clicked, the function inside runs — this starts the whole process of picking and showing a Pokémon.",
+        "imageUrl": "https://images.code.org/a26ee9fe9cadc66b321e2889fb25f731-pokemonAPI (14).png",
+        "key": "pl-aif-2-U5-API-Calll-POkemon-panel-3f21111e-1637-4492-b93c-cea694ddda8c",
         "layout": "text-bottom-right"
       },
       {
-        "text": "# Start Value\nThe **start value** is the value where the loop begins. It sets the initial value of the loop variable.\n\nThe start value here is 0.",
-        "imageUrl": "https://images.code.org/fab7ea652f383eb78b966d666567c65b-forloop (1).png",
-        "key": "pl-aif-2-U4-forloop-panel-c76db334-f950-42dc-94f4-ba8691b18868",
+        "text": "## Getting a random ID\nHere, the variable stores and picks a random number between 1 and 898 (covers Pokémon Generations 1–8). That number will identify which Pokémon to request from the API.",
+        "imageUrl": "https://images.code.org/577947bd85cb3d77ec55df8d0878599b-pokemonAPI (3).png",
+        "key": "pl-aif-2-U5-API-Calll-POkemon-panel-2260ddbd-0adb-45f6-b017-c05c5c3baa93",
         "layout": "text-bottom-right"
       },
       {
-        "text": "# Stop Value\nThe **stop value** is the value or condition that tells the loop when to stop running. The loop ends when this condition is no longer true.\n\nThe stop value here is anything greater than 10.\n\n***Note:*** *Pay attention to the operators like  `<` vs `<=`, since a single symbol change whether the loop runs one too many times, or not enough.*",
-        "imageUrl": "https://images.code.org/1b9d0fdd55706ee1979648201824d683-forloop (2).png",
-        "key": "pl-aif-2-U4-forloop-panel-d675d816-76e7-4098-aebf-2eae9b8939b9",
+        "text": "## Getting the API URL\nThis constant builds the API web address (URL) using the random number. The app will fetch data from this address to get details for that specific Pokémon.",
+        "imageUrl": "https://images.code.org/f9ad35f60e211d913e2441b6aafc07f7-pokemonAPI (4).png",
+        "key": "pl-aif-2-U5-API-Calll-POkemon-panel-2928995b-8f3c-46d9-9eb2-c9a47b1f486d",
         "layout": "text-bottom-right"
       },
       {
-        "text": "# Step Value\nThe **step value** is how the loop variable should change.\n\nIn this example, the step value runs in increments of 2.",
-        "imageUrl": "https://images.code.org/2e2d6481f7b60a6bf129d732a597e6ab-forloop (3).png",
-        "key": "pl-aif-2-U4-forloop-panel-0a90b29e-b77c-41ed-94d0-1a6d918d8b5e",
+        "text": "## The Fetch function\nSends a network request to the Pokémon API URL you built. It asks the server, “Give me the data for this Pokémon.”",
+        "imageUrl": "https://images.code.org/e103bed776b625a9668b597fb65132cd-pokemonAPI (5).png",
+        "key": "pl-aif-2-U5-API-Calll-POkemon-panel-86cc61ce-1545-44c2-89f8-c3f48427fe91",
         "layout": "text-bottom-right"
       },
       {
-        "text": "# The Big Idea\nA for loop needs three things to work correctly:\n- A starting value\n- A condition that determines when the loop should stop\n- An update that changes the variable each time the loop runs\n\nIf any one of these pieces is incorrect or missing, the loop may run the wrong number of times, or not at all.\n\n#### Now, let's practice in Web Lab!",
-        "imageUrl": "https://images.code.org/1a9a28a6e9ccf64d806ac6ece0a006af-forloop (4).png",
-        "key": "pl-aif-2-U4-forloop-panel-00a12c5a-7723-4f38-bab1-cb3ea33dc306",
+        "text": "## Checking for success\nThis part checks whether the server returned a successful response. If it did, convert the response into JSON (a JavaScript object the app can use). If not, throw an error so we can handle it.",
+        "imageUrl": "https://images.code.org/8e5cc1d8bf30719aa90dae3f6c6f88a7-pokemonAPI (6).png",
+        "key": "pl-aif-2-U5-API-Calll-POkemon-panel-c5aca680-fa2a-4025-be59-c679a667357b",
         "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Updating the UI\nWhen the JSON is ready, pass it to updateUI. That function reads the data and updates what the user sees on the screen.\n",
+        "imageUrl": "https://images.code.org/3451708c61aaf99eb730deee16bd78b4-pokemonAPI (7).png",
+        "key": "pl-aif-2-U5-API-Calll-POkemon-panel-c2e76c31-f703-4d0e-9256-096fc3290e43",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Catching Errors\nIf something goes wrong with the fetch (network issue, bad response), catch the error, log it for debugging, and show a simple “Error!” message in the UI.",
+        "imageUrl": "https://images.code.org/5a66778e08552162fb5c587cf0c6134c-pokemonAPI (8).png",
+        "key": "pl-aif-2-U5-API-Calll-POkemon-panel-bc9a2f73-10c2-426c-8e8f-f9d25da1af5a",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Updating the content\nThis function takes the Pokémon data and fills the page with it. It’s the bridge from data → visible content.",
+        "imageUrl": "https://images.code.org/3e394592b627dcd176509f290742f96f-pokemonAPI (9).png",
+        "key": "pl-aif-2-U5-API-Calll-POkemon-panel-575ab061-a683-464a-9a67-cf153a0b9424"
+      },
+      {
+        "text": "## Getting type and name elements\n- Shows the Pokémon’s name on the page by reading data.name from the JSON.\n\n- Gets the list of the Pokémon’s types (like “grass” or “flying”), turns them into a simple string, and displays them. If there are multiple types, they’re joined with a bullet (•).",
+        "imageUrl": "https://images.code.org/8483996de5e42db2f8243a166fdcb5db-pokemonAPI (10).png",
+        "key": "pl-aif-2-U5-API-Calll-POkemon-panel-c70a5ff4-74fc-40bc-8a87-b8a0ec654a26",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Update Stats\nShows basic stats: base experience, height, and weight. Note the code divides height and weight by 10 to convert units into meters/kilograms. If base_experience isn’t available, it shows N/A.",
+        "imageUrl": "https://images.code.org/e52bb4654f70dbed09ee16ec5e00fb00-pokemonAPI (11).png",
+        "key": "pl-aif-2-U5-API-Calll-POkemon-panel-6da1910e-92b5-4124-9723-bb20f08028ff",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Ability formatting\nShows basic stats: base experience, height, and weight. Note the code divides height and weight by 10 to convert units into meters/kilograms. If base_experience isn’t available, it shows N/A.",
+        "imageUrl": "https://images.code.org/e19a5a587b6adb77c0559e60109cc5f3-pokemonAPI (12).png",
+        "key": "pl-aif-2-U5-API-Calll-POkemon-panel-922a898b-5a46-4750-b57c-c73ac3983242"
+      },
+      {
+        "text": "## Button Update\nUpdates the button text so users know they can click again to fetch another random Pokémon.",
+        "imageUrl": "https://images.code.org/73d084440d46c869a5510c42ca8155e1-pokemonAPI (13).png",
+        "key": "pl-aif-2-U5-API-Calll-POkemon-panel-ed058273-3ab2-4bd9-ad08-b2e7bd981ce3"
       }
     ],
     "name_suffix": "_2025-pilot"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-02-09T16:36:50.982+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U4-forloop-panel\\\"\"],\"cloned_from\":\"pl-aif-2-U4-forloop-panel\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-09T16:36:50.982+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U4-forloop-panel\\\"\"],\"cloned_from\":\"pl-aif-2-U4-forloop-panel\"},{\"changed_at\":\"2026-02-10 21:30:05 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Panels>
