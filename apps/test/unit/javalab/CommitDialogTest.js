@@ -41,7 +41,7 @@ describe('CommitDialog test', () => {
     );
   };
 
-  it('cannot commit with message', async () => {
+  it('cannot commit without message', async () => {
     renderWithProps({});
     const user = userEvent.setup();
 
@@ -65,9 +65,7 @@ describe('CommitDialog test', () => {
     const checkbox = screen.getAllByRole('checkbox')[0];
     await user.click(checkbox);
 
-    expect(
-      screen.getByText(i18n.backpackFileNameConflictWarning())
-    ).toBeInTheDocument();
+    screen.getByText(i18n.backpackFileNameConflictWarning());
   });
 
   it('does not show warning when file not already in backpack included in commit', async () => {
@@ -112,6 +110,25 @@ describe('CommitDialog test', () => {
       expect.any(Function),
       expect.any(Function)
     );
+  });
+
+  it('closes the dialog after commit save succeeds', async () => {
+    const handleCloseSpy = jest.fn();
+    handleCommitSpy.mockImplementation((notes, onSuccess) => onSuccess());
+
+    renderWithProps({
+      backpackEnabled: false,
+      handleClose: handleCloseSpy,
+    });
+
+    const user = userEvent.setup();
+    const notesInput = screen.getByRole('textbox');
+    await user.type(notesInput, 'commit notes');
+
+    const commitButton = screen.getByRole('button', {name: i18n.commit()});
+    await user.click(commitButton);
+
+    expect(handleCloseSpy).toHaveBeenCalled();
   });
 
   it('does not save to backpack when backpack is disabled', async () => {
