@@ -63,6 +63,7 @@ export const HTMLPreview: React.FC = () => {
       experiments.WEBLAB2_FULL_URLS
     );
     const isLocalhost = 'localhost' === environmentKey;
+
     // When testing on localhost, it is convenient to have a fixed subdomain
     // to avoid having to give permissions to every channel id version of the preview url.
     // Use the flag ?weblab2-full-urls=true or ?enableExperiments=weblab2-full-urls
@@ -339,9 +340,6 @@ export const HTMLPreview: React.FC = () => {
       } else if (event.data.type === IframeMessageType.NETWORK_RESPONSE) {
         const {id, ...response} = event.data.response;
         dispatch(addResponseData({id, response: response}));
-      } else if (event.data.type === IframeMessageType.CSP_VIOLATION) {
-        const {id, ...request} = event.data.request;
-        dispatch(addRequestData({id, request: request}));
       }
     };
 

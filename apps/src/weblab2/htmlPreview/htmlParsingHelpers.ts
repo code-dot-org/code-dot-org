@@ -3,6 +3,7 @@ import {findFilePathByRelativePath} from '@codebridge/utils';
 import {
   IframeMessageType,
   PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL,
+  ProjectServiceWorkerMessageType,
 } from './constants';
 
 // Replace links to non-html files (css and js) with their appropriate URLs (either blobs or external URLs).
@@ -67,7 +68,7 @@ document.addEventListener("securitypolicyviolation",function(e){
   const broadcastChannel = new BroadcastChannel("${PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL}");
   const requestId = crypto.randomUUID();
   broadcastChannel.postMessage({
-    type: "CSP_VIOLATION",
+    type: "${ProjectServiceWorkerMessageType.NETWORK_REQUEST}",
     requestData: {
       url: e.blockedURI,
       cspDirectiveViolated: e.effectiveDirective,

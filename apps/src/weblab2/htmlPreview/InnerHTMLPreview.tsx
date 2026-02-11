@@ -140,16 +140,6 @@ const InnerHTMLPreview = () => {
           },
           parentOrigin
         );
-      } else if (
-        event.data.type === ProjectServiceWorkerMessageType.CSP_VIOLATION
-      ) {
-        window.parent.postMessage(
-          {
-            type: IframeMessageType.CSP_VIOLATION,
-            request: event.data.requestData,
-          },
-          parentOrigin
-        );
       }
     };
     return () => {
