@@ -21,7 +21,7 @@ import DefaultTheme from '../../themes/default';
 import type {Toolbox} from '../../toolbox';
 import type {
   BlocklySerialization,
-  BlockDefinition,
+  BlockDefinitions,
   Theme,
   Renderer,
   Environment,
@@ -31,7 +31,7 @@ import moduleStyles from './blocklyWorkspace.module.scss';
 
 export interface BlocklyWorkspaceProps<T extends Environment & object> {
   /** A set of custom blocks to load within the Blockly instance. */
-  blocks?: BlockDefinition[];
+  blocks?: BlockDefinitions;
   /** Some options that will alter the typical Blockly behavior. */
   options?: Blockly.BlocklyOptions;
   /** A set of blocks to load as the starting point for the workspace */

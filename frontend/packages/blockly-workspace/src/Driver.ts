@@ -13,7 +13,7 @@ import {PluginType} from './plugins';
 import Registry from './Registry';
 import DefaultTheme from './themes/default';
 import type {
-  BlockDefinition,
+  BlockDefinitions,
   BlockSvg,
   Environment,
   OriginalGeneratorFunctions,
@@ -49,7 +49,7 @@ class Driver<
   // Reference to the set of plugins that require injection before they can be initialized
   protected _injectPlugins: Plugin[];
   // All of the current blocks that are defined and available
-  protected _blocks: BlockDefinition[];
+  protected _blocks: BlockDefinitions;
   // A reference to the Blockly environment for this instance of the workspace
   protected _environment: T;
   // All workspaces inside our environment
@@ -173,12 +173,12 @@ class Driver<
    *
    * If you give this method another list, it will replace the list of blocks currently in use.
    */
-  set blocks(blocks: BlockDefinition[]) {
+  set blocks(blocks: BlockDefinitions) {
     this._blocks = blocks;
     this.registerBlocks();
   }
 
-  setBlocks(blocks: BlockDefinition[]) {
+  setBlocks(blocks: BlockDefinitions) {
     this.blocks = blocks;
   }
 

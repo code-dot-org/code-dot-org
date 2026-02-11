@@ -12,26 +12,6 @@
     ".": {
       "import": "./dist/App.js",
       "require": "./dist/App.cjs"
-    },
-    "./components": {
-      "types": "./dist/types/components/index.d.ts",
-      "import": "./dist/esm/components/index.mjs",
-      "require": "./dist/cjs/components/index.js"
-    },
-    "./parser": {
-      "types": "./dist/types/parser/index.d.ts",
-      "import": "./dist/esm/parser/index.mjs",
-      "require": "./dist/cjs/parser/index.js"
-    },
-    "./player": {
-      "types": "./dist/types/player/index.d.ts",
-      "import": "./dist/esm/player/index.mjs",
-      "require": "./dist/cjs/player/index.js"
-    },
-    "./redux": {
-      "types": "./dist/types/redux/index.d.ts",
-      "import": "./dist/esm/redux/index.mjs",
-      "require": "./dist/cjs/redux/index.js"
     }
   },
   "scripts": {

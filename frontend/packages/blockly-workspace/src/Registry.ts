@@ -150,7 +150,7 @@ class Registry<T extends Environment = Environment> {
    * extension or field instead.
    */
   registerFromBlockDefinition(
-    definition: BlockDefinition,
+    definition: BlockDefinition | OldBlockDefinition,
   ): (typeof Blockly.Blocks)[string] {
     const block: (typeof Blockly.Blocks)[string] = {
       ...definition,
