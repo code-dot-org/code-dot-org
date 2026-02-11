@@ -28,3 +28,7 @@ export {default as ProjectTemplateWorkspaceIcon} from './ProjectTemplateWorkspac
 export {default as WorkspaceHeader} from './WorkspaceHeader';
 export * from './PanelContainer';
 export {default as PanelContainer} from './PanelContainer';
+export * from './Panel';
+export {default as Panel} from './Panel';
+export * from './Layout';
+export {default as Layout} from './Layout';

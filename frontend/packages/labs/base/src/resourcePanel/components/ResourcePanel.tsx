@@ -104,6 +104,7 @@ const tabInfo: {[key in TabsType]: {title: string; icon: string}} = {
 
 export type ResourcePanelProps = InstructionsProps & {
   className?: string;
+  id?: string;
   headerClassName?: string;
   hiddenContextCallback?: () => Promise<string>;
   rightHeaderContent?: ReactNode;
@@ -128,6 +129,7 @@ export type ResourcePanelProps = InstructionsProps & {
  */
 const ResourcePanel: FunctionComponent<ResourcePanelProps> = ({
   className,
+  id,
   headerClassName,
   //hiddenContextCallback,
   rightHeaderContent,
@@ -426,7 +428,7 @@ const ResourcePanel: FunctionComponent<ResourcePanelProps> = ({
   return (
     <>
       <div
-        id={resourcePanelInstructionsElementId}
+        id={id || resourcePanelInstructionsElementId}
         className={classNames(styles.resourcePanel, className)}
       >
         {isOnboardingTourEnabled && <OnboardingTourSteps />}

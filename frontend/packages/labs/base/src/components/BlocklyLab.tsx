@@ -1,6 +1,8 @@
 import {useCallback} from 'react';
 
 import type {BlocklySerialization} from '@code-dot-org/blockly-workspace';
+import type {BlocklyProviderProps} from '@code-dot-org/blockly-workspace/contexts';
+import {BlocklyProvider} from '@code-dot-org/blockly-workspace/contexts';
 import {toolboxToWorkspaceBlocks} from '@code-dot-org/blockly-workspace/utils';
 import type {LevelProperties} from '@code-dot-org/core/api';
 import type {ProjectSources, Source} from '@code-dot-org/platform/projects';
@@ -11,8 +13,10 @@ import {getInitialBlocklySources} from '../utils';
 import LabWithSources from './LabWithSources';
 import type {LabWithSourcesProps} from './LabWithSources';
 
-export type BlocklyLabProps<T extends LevelProperties = LevelProperties> =
-  LabWithSourcesProps<T, BlocklySerialization>;
+export interface BlocklyLabProps<T extends LevelProperties = LevelProperties>
+  extends LabWithSourcesProps<T, BlocklySerialization> {
+  blocklyProps: BlocklyProviderProps;
+}
 
 // TODO - read this from app_options
 const isToolboxMode = false; //app_options.editBlocks === TOOLBOX_BLOCKS;
@@ -30,7 +34,7 @@ const BlocklyLab = <T extends LevelProperties = LevelProperties>({
   children,
   ...props
 }: BlocklyLabProps<T>) => {
-  const {startOverSources} = props;
+  const {startOverSources, blocklyProps} = props;
 
   // Sources to reset to when starting over. Depends on the level edit mode.
   const memoizedStartOverSources = useCallback(
@@ -73,7 +77,7 @@ const BlocklyLab = <T extends LevelProperties = LevelProperties>({
       }
       transform={transform}
     >
-      {children}
+      <BlocklyProvider {...blocklyProps}>{children}</BlocklyProvider>
     </LabWithSources>
   );
 };

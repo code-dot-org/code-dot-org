@@ -1,15 +1,23 @@
 import {useApiClient} from '@code-dot-org/core/api';
+import {darkTheme} from '@code-dot-org/blockly-workspace/themes';
+import ToolboxTrashcanPlugin from '@code-dot-org/blockly-workspace/plugins/toolboxTrashcan';
+import ThrasosRenderer from '@code-dot-org/blockly-workspace/renderers/thrasos';
 import type {BlocklyLabProps} from '@code-dot-org/lab';
 import {BlocklyLab} from '@code-dot-org/lab';
 import {useMemo} from 'react';
 
 import {createMusicApiClient, MusicApiClientProvider} from './api';
+import blocks from './blockly/blocks/simple2';
 import MusicLab from './components/MusicLab';
 import {PlayerProvider} from './contexts/PlayerContext';
 
 import styles from './app.module.scss';
 
-const App = ({...props}: Omit<BlocklyLabProps, 'defaultSources'>) => {
+const plugins = [ToolboxTrashcanPlugin];
+
+const App = ({
+  ...props
+}: Omit<BlocklyLabProps, 'defaultSources' | 'blocklyProps'>) => {
   const channelId = window.location.pathname.match(
     /^\/app\/projects\/music\/([^/]+)\/edit$/,
   )?.[1];
@@ -30,6 +38,12 @@ const App = ({...props}: Omit<BlocklyLabProps, 'defaultSources'>) => {
           defaultSources={{source: {}}}
           standaloneProjectType="music"
           channelId={props.channelId || channelId}
+          blocklyProps={{
+            theme: darkTheme,
+            renderer: ThrasosRenderer,
+            blocks,
+            plugins,
+          }}
         >
           {musicApi && (
             <MusicApiClientProvider client={musicApi}>
