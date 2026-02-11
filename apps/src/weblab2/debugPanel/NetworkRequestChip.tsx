@@ -1,13 +1,13 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {RadioButton} from '@code-dot-org/component-library/radioButton';
-import FontAwesomeV6Icon from 'node_modules/@code-dot-org/component-library/dist/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import React, {ChangeEvent, useMemo} from 'react';
 
-import {FullRequest} from '../redux/networkRedux';
+import {NetworkEntry} from '../redux/networkRedux';
 
 import moduleStyles from './network-request-chip.module.scss';
 
 interface NetworkRequestChipProps {
-  request: FullRequest;
+  request: NetworkEntry;
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
   isSelected: boolean;
 }
@@ -19,25 +19,38 @@ const NetworkRequestChip: React.FunctionComponent<NetworkRequestChipProps> = ({
 }) => {
   const requestIcon = useMemo(() => {
     if (request.response?.status === 200) {
-      return 'check-circle';
+      return {iconName: 'check-circle', className: moduleStyles.successIcon};
     } else if (!request.response && !request.request.cspDirectiveViolated) {
-      return 'xmark-circle';
+      return {iconName: 'spinner', className: moduleStyles.loadingIcon};
     } else {
-      return 'spinner';
+      return {iconName: 'xmark-circle', className: moduleStyles.errorIcon};
     }
   }, [request.request.cspDirectiveViolated, request.response]);
+
+  const label = useMemo(() => {
+    const url = request.request.url;
+    const [pathPart] = url.split('?');
+    const segments = pathPart.split('/').filter(Boolean);
+    if (segments.length === 0) {
+      return url;
+    }
+    return segments[segments.length - 1];
+  }, [request.request.url]);
 
   return (
     <div className={moduleStyles.networkRequestChip}>
       <RadioButton
-        name={request.request.url}
+        name={request.id}
         checked={isSelected}
         onChange={onChange}
         size={'s'}
-        value={request.request.url}
-        label={request.request.url}
+        value={request.id}
+        label={label}
       />
-      <FontAwesomeV6Icon iconName={requestIcon} />
+      <FontAwesomeV6Icon
+        iconName={requestIcon.iconName}
+        className={requestIcon.className}
+      />
     </div>
   );
 };

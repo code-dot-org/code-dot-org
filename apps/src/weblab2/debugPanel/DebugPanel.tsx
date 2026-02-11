@@ -2,12 +2,12 @@ import {
   BodyFourText,
   StrongText,
 } from '@code-dot-org/component-library/typography';
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {FullRequest} from '../redux/networkRedux';
+import {NetworkEntry} from '../redux/networkRedux';
 
 import NetworkRequestChip from './NetworkRequestChip';
 
@@ -22,12 +22,26 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
     state => state.weblab2Network.requests
   );
   const [selectedRequest, setSelectedRequest] = React.useState<
-    FullRequest | undefined
+    NetworkEntry | undefined
   >(
     networkRequests.length > 0
       ? networkRequests[networkRequests.length - 1]
       : undefined
   );
+
+  useEffect(() => {
+    if (!selectedRequest && networkRequests.length > 0) {
+      setSelectedRequest(networkRequests[networkRequests.length - 1]);
+    }
+  }, [networkRequests, selectedRequest]);
+
+  const onInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const selected = networkRequests.find(
+      request => request.id === event.target.value
+    );
+    setSelectedRequest(selected);
+  };
+
   return (
     <PanelContainer
       id={'debug-panel-container'}
@@ -45,7 +59,16 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
               </BodyFourText>
               <BodyFourText>{networkRequests.length} Items</BodyFourText>
             </div>
-            <div className={moduleStyles.requestList} />
+            <div className={moduleStyles.requestList}>
+              {networkRequests.map(request => (
+                <NetworkRequestChip
+                  key={request.id}
+                  request={request}
+                  onChange={onInputChange}
+                  isSelected={selectedRequest?.id === request.id}
+                />
+              ))}
+            </div>
           </div>
           <div className={moduleStyles.requestDetails}>
             {selectedRequest?.request.url}

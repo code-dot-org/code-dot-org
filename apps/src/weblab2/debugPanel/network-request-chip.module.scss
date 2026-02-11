@@ -1,3 +1,19 @@
 .networkRequestChip {
-  
+  display: flex;
+  width: 167px;
+  padding: 6px 10px;
+  align-items: center;
+  gap: 10px;
+}
+
+.successIcon {
+  color: var(--text-success-primary);
+}
+
+.errorIcon {
+  color: var(--text-error-primary);
+}
+
+.loadingIcon {
+  color: var(--text-neutral-quaternary);
 }
