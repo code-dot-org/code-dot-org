@@ -1,7 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import CourseOfferingEditor from '@cdo/apps/levelbuilder/CourseOfferingEditor';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(showCourseOfferingEditor);
@@ -21,7 +21,7 @@ function showCourseOfferingEditor() {
 
   const facilitatorsCourses = getScriptData('facilitatorsCourses');
 
-  ReactDOM.render(
+  createReactRoot(
     <CourseOfferingEditor
       initialCourseOffering={courseOfferingEditorData}
       selfPacedPLCourseOfferings={selfPacedPLCourseOfferings}
