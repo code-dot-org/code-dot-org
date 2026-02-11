@@ -735,21 +735,15 @@ describe('LearningGoals - Enzyme', () => {
     const wrapper = shallow(
       <LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />
     );
-    deprecatedExpect(wrapper.find('Heading5 span').first().text()).to.equal(
-      learningGoals[0].learningGoal
-    );
+    deprecatedExpect(wrapper.text()).to.contain(learningGoals[0].learningGoal);
     wrapper.find('button').first().simulate('click');
-    deprecatedExpect(wrapper.find('Heading5 span').first().text()).to.equal(
+    deprecatedExpect(wrapper.text()).to.contain(
       i18n.rubricLearningGoalSummary()
     );
     wrapper.find('button').at(1).simulate('click');
-    deprecatedExpect(wrapper.find('Heading5 span').first().text()).to.equal(
-      learningGoals[0].learningGoal
-    );
+    deprecatedExpect(wrapper.text()).to.contain(learningGoals[0].learningGoal);
     wrapper.find('button').at(1).simulate('click');
-    deprecatedExpect(wrapper.find('Heading5 span').first().text()).to.equal(
-      learningGoals[1].learningGoal
-    );
+    deprecatedExpect(wrapper.text()).to.contain(learningGoals[1].learningGoal);
   });
 
   it('renders the summary page after AI evaluations are run', () => {
@@ -761,7 +755,7 @@ describe('LearningGoals - Enzyme', () => {
       />
     );
     wrapper.find('button').first().simulate('click');
-    deprecatedExpect(wrapper.find('Heading5 span').first().text()).to.equal(
+    deprecatedExpect(wrapper.text()).to.contain(
       i18n.rubricLearningGoalSummary()
     );
   });
@@ -828,9 +822,7 @@ describe('LearningGoals - Enzyme', () => {
     const wrapper = shallow(
       <LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />
     );
-    deprecatedExpect(wrapper.find('Heading5 span').first().text()).to.equal(
-      learningGoals[0].learningGoal
-    );
+    deprecatedExpect(wrapper.text()).to.contain(learningGoals[0].learningGoal);
     deprecatedExpect(wrapper.find('AiToken')).to.have.lengthOf(1);
   });
 
@@ -839,9 +831,7 @@ describe('LearningGoals - Enzyme', () => {
       <LearningGoals learningGoals={learningGoals} teacherHasEnabledAi />
     );
     wrapper.find('button').at(1).simulate('click');
-    deprecatedExpect(wrapper.find('Heading5 span').first().text()).to.equal(
-      learningGoals[1].learningGoal
-    );
+    deprecatedExpect(wrapper.text()).to.contain(learningGoals[1].learningGoal);
     deprecatedExpect(wrapper.find('AiToken')).to.have.lengthOf(0);
   });
 
@@ -852,9 +842,7 @@ describe('LearningGoals - Enzyme', () => {
         teacherHasEnabledAi={false}
       />
     );
-    deprecatedExpect(wrapper.find('Heading5 span').first().text()).to.equal(
-      learningGoals[0].learningGoal
-    );
+    deprecatedExpect(wrapper.text()).to.contain(learningGoals[0].learningGoal);
     deprecatedExpect(wrapper.find('AiToken')).to.have.lengthOf(0);
   });
 

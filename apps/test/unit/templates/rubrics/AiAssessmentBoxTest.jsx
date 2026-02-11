@@ -151,9 +151,11 @@ describe('AiAssessmentBox', () => {
         <AiAssessmentBox {...updatedProps} />
       </AiAssessmentFeedbackContext.Provider>
     );
-    expect(wrapper.find('BodyThreeText')).toHaveLength(0);
-    expect(wrapper.find('EmText')).toHaveLength(1);
-    expect(wrapper.html().includes(i18n.aiCannotAssess())).toBe(true);
+    const emNodes = wrapper
+      .find('WithStyles(ForwardRef(Typography))')
+      .filterWhere(node => node.props().variant === 'em');
+    expect(emNodes).toHaveLength(1);
+    expect(emNodes.at(0).text()).toBe(i18n.aiCannotAssess());
   });
 
   it('renders no evidence if none is given', () => {
