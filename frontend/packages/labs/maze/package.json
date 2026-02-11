@@ -1,0 +1,58 @@
+{
+  "name": "@code-dot-org/maze-lab",
+  "version": "0.0.0",
+  "private": true,
+  "sideEffects": [
+    "**/*.css",
+    "**/*.scss"
+  ],
+  "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": "./dist/App.js",
+      "require": "./dist/App.cjs"
+    }
+  },
+  "scripts": {
+    "build": "vite build && tsc --noEmit",
+    "dev": "vite",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "preview": "vite preview"
+  },
+  "stylelint": {
+    "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
+  },
+  "dependencies": {
+    "@code-dot-org/blockly-workspace": "workspace:*",
+    "@code-dot-org/lab": "workspace:*"
+  },
+  "devDependencies": {
+    "@eslint/js": "catalog:",
+    "@types/node": "catalog:",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "catalog:",
+    "eslint": "catalog:",
+    "eslint-plugin-react-hooks": "catalog:",
+    "eslint-plugin-react-refresh": "catalog:",
+    "globals": "catalog:",
+    "prettier": "3.4.2",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "stylelint": "^16.14.1",
+    "typescript": "catalog:",
+    "typescript-eslint": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-css-injected-by-js": "^3.5.2",
+    "vite-plugin-dts": "catalog:",
+    "vite-plugin-externalize-deps": "catalog:"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0 || ^19.0.0"
+  }
+}

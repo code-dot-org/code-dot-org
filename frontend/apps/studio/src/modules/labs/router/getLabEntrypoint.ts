@@ -9,6 +9,7 @@ type LabEntrypointMap = {
 
 const LabEntrypoints: LabEntrypointMap = {
   ['music']: lazy(() => import('@code-dot-org/music-lab')),
+  ['maze']: lazy(() => import('@code-dot-org/maze-lab')),
 };
 
 /**
