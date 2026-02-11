@@ -393,7 +393,7 @@ class Ability
     end
 
     if user.persisted? && user.levelbuilder?
-      can [:add_dataset_item], :langfuse
+      can [:add_internal_ai_tutor_dataset_item], :ai_observability
     end
 
     # In order to accommodate the possibility of there being no database, we

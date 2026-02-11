@@ -46,9 +46,8 @@ const FlagResponseButton: React.FC<{
     modelId: string,
     systemPrompt: string
   ) => {
-    const url = `/langfuse/add_dataset_item`;
+    const url = `/ai_observability/add_internal_ai_tutor_dataset_item`;
     const payload = {
-      datasetName: 'raw-wonky-ai-responses',
       input: {text: chatMessageText},
       metadata: {
         messageId: chatMessageId,

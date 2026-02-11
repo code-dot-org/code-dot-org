@@ -1,13 +1,7 @@
 require 'json'
 
-class LangfuseController < ApplicationController
+class AiPromptManagementController < ApplicationController
   include LangfuseHelper
-
-  def add_dataset_item
-    dataset_item = JSON.parse(request.body.read)
-    response = LangfuseHelper.add_dataset_item(dataset_item)
-    return render(status: response[:status], json: response[:json])
-  end
 
   def get_prompt
     prompt_name = prompt_params[:name]
