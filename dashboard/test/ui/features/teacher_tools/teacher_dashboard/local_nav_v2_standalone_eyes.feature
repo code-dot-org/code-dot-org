@@ -3,7 +3,6 @@
 Feature: V2 teacher dashboard local navigation - single-unit course - Eyes
   Background:
     Given I am on "http://studio.code.org/home"
-    Given I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
 
   Scenario: Local navigation on single-unit course
     When I open my eyes to test "teacher local nav v2 - single-unit course overview"
