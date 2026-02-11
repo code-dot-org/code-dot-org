@@ -45,7 +45,7 @@ const LinkOption: React.FC<LinkElementProps> = ({
               analyticsReporter.sendEvent(
                 eventName,
                 eventOptions,
-                PLATFORMS.BOTH
+                PLATFORMS.STATSIG
               );
           }}
         >
@@ -68,7 +68,7 @@ const LinkOption: React.FC<LinkElementProps> = ({
               analyticsReporter.sendEvent(
                 eventName,
                 eventOptions,
-                PLATFORMS.BOTH
+                PLATFORMS.STATSIG
               );
           }}
         >

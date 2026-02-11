@@ -5,6 +5,7 @@ export const WEBLAB2_EDITABLE_FILE_TYPES = [
   'md',
   'txt',
   'csv',
+  'json',
 ];
 
 export const WEBLAB2_IMAGE_FILE_TYPES = ['jpg', 'jpeg', 'png', 'gif'];

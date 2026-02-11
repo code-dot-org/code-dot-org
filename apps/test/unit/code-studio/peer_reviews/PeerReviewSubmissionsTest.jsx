@@ -2,6 +2,7 @@ import {expect} from 'chai'; // eslint-disable-line no-restricted-imports
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import PeerReviewSubmissions from '@cdo/apps/code-studio/peer_reviews/PeerReviewSubmissions';
@@ -79,13 +80,16 @@ describe('PeerReviewSubmissions', () => {
     server.restore();
   });
 
-  it('Initially renders course options and calls API for submissions', () => {
+  it('Initially renders course options and calls API for submissions', async () => {
     expect(server.requests.length).to.equal(1);
     expect(server.requests[0].url).to.equal(
       '/api/v1/peer_review_submissions/index?user_q=&plc_course_id=&plc_course_unit_id=&page=1&per=30'
     );
 
-    server.respond();
+    await act(async () => {
+      server.respond();
+    });
+    peerReviewSubmissions.update();
 
     expect(peerReviewSubmissions.state()).to.deep.equal({
       loading: false,

@@ -142,10 +142,18 @@ class LevelsController < ApplicationController
   end
 
   # Get a JSON summary of a level's properties, used in modern labs that don't
-  # reload the page between level views.
+  # reload the page between level views. Returns a mapping of level ID to properties,
+  # in the case that the level contains sublevels (e.g. BubbleChoice).
   def level_properties
     # TODO: TEACH-1864 pass in unit_group_unit
-    render json: @level.summarize_for_lab2_properties(nil, nil, current_user)
+    properties = {}
+    properties[@level.id] = @level.summarize_for_lab2_properties(nil, nil, current_user)
+    if @level.is_a?(BubbleChoice)
+      @level.sublevels.each do |sublevel|
+        properties[sublevel.id] = sublevel.summarize_for_lab2_properties(nil, nil, current_user)
+      end
+    end
+    render json: properties
   end
 
   # GET /levels/1/edit
@@ -789,13 +797,13 @@ class LevelsController < ApplicationController
       {
         study: 'level-save-error',
         # Make it easy to count most frequent field name in which errors occur.
-        event: level.errors.keys.first,
+        event: level.errors.attribute_names.first,
         # Level ids are different on levelbuilder, so use the level name. The
         # level name can be joined on, against the levels table, to determine the
         # level type or other level properties.
         data_string: level.name,
         data_json: {
-          errors: level.errors.to_h,
+          errors: level.errors.to_hash,
           # User ids are different on levelbuilder, so use the email.
           user_email: current_user.email,
         }.to_json

@@ -25,6 +25,30 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
     let(:regional_page_path) {File.join('/global', ge_region, international_page_path)}
     let(:ge_region_script_data) {document.at('script[data-ge-region]').try(:[], 'data-ge-region')}
 
+    shared_examples_for 'logs region change event for signed in user' do
+      context 'with signed in user' do
+        let(:international_page_path) {'/'}
+        let(:user) {create(:user)}
+
+        before do
+          sign_in user
+        end
+
+        it 'logs region change event for current user' do
+          subject
+
+          expect(Metrics::Events).to have_received(:log_event).with(
+            event_name: 'Global Edition Region Selected',
+            user:,
+            session: anything,
+            metadata: anything,
+          ).once
+
+          must_respond_with 302
+        end
+      end
+    end
+
     describe 'international page' do
       subject(:get_international_page) {get international_page_path, params: params}
 
@@ -45,11 +69,14 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
           params.merge!(extra_params)
         end
 
+        it_behaves_like 'logs region change event for signed in user'
+
         it 'redirects to regional page with extra params' do
           get_international_page
 
           expect(Metrics::Events).to have_received(:log_event).with(
             event_name: 'Global Edition Region Selected',
+            user: nil,
             session: anything,
             metadata: {
               region: ge_region,
@@ -193,6 +220,7 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
 
           expect(Metrics::Events).not_to have_received(:log_event).with(
             event_name: 'Global Edition Region Selected',
+            user: nil,
             session: anything,
             metadata: anything,
           )
@@ -209,11 +237,14 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
         context 'when locale is not available in region' do
           let(:locale) {'uk-UA'}
 
+          it_behaves_like 'logs region change event for signed in user'
+
           it 'redirects to international page' do
             get_regional_page
 
             expect(Metrics::Events).to have_received(:log_event).with(
               event_name: 'Global Edition Region Selected',
+              user: nil,
               session: anything,
               metadata: {
                 region: nil,

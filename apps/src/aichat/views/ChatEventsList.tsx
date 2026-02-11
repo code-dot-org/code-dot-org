@@ -22,6 +22,7 @@ interface ChatEventsListProps {
   isTeacherView?: boolean;
   buildAssetUrl?: (asset: ChatAsset) => string;
   isAiTutorVersion?: boolean;
+  hasCollapsedInstructionsDrawer?: boolean;
 }
 
 /**
@@ -34,6 +35,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   isTeacherView,
   buildAssetUrl,
   isAiTutorVersion,
+  hasCollapsedInstructionsDrawer,
 }) => {
   const {chatDisabled, chatDisabledMessage} = useAiChatDisabled();
   const [isInChatNavigationMode, setIsInChatNavigationMode] = useState(false);
@@ -183,26 +185,14 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
         moduleStyles.scrollToBottomContainer
       )}
     >
-      {showScrollToBottom && (
-        <div className={moduleStyles.floatingScrollToBottomButtonContainer}>
-          <Button
-            isIconOnly
-            icon={{iconName: 'arrow-down'}}
-            size="xs"
-            color="black"
-            type="secondary"
-            onClick={() => scrollToLastMessage()}
-            className={moduleStyles.scrollToBottomButton}
-            ariaLabel="Scroll to bottom of messages"
-            aria-controls="chat-workspace-conversation"
-          />
-        </div>
-      )}
       <div className={moduleStyles.messageArea} ref={conversationContainerRef}>
         {chatDisabled ? (
           <ChatDisabled message={chatDisabledMessage} />
         ) : (
           <>
+            {hasCollapsedInstructionsDrawer && (
+              <div className={moduleStyles.collapsedInstructionsDrawerInset} />
+            )}
             {events.map((event, index) => {
               const isLastMessage = index === events.length - 1;
               return (
@@ -230,6 +220,21 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
           </>
         )}
       </div>
+      {showScrollToBottom && (
+        <div className={moduleStyles.floatingScrollToBottomButtonContainer}>
+          <Button
+            isIconOnly
+            icon={{iconName: 'arrow-down'}}
+            size="xs"
+            color="black"
+            type="secondary"
+            onClick={() => scrollToLastMessage()}
+            className={moduleStyles.scrollToBottomButton}
+            ariaLabel="Scroll to bottom of messages"
+            aria-controls="chat-workspace-conversation"
+          />
+        </div>
+      )}
     </div>
   );
 };

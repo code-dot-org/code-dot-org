@@ -1,0 +1,28 @@
+name 'pl_sandbox_aif-2-U3-class-context_2-2_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Classroom Context
+
+#### This is the third unit of the course, building off the content from units one and two. The course was designed to teach in order.
+
+#### Teachers serve as guides supporting **design thinking, encouraging responsible AI use, and helping students interpret and improve AI-generated work**.
+
+
+## Unit Length and Format
+
+#### **Total Duration:** Approximately 3 weeks
+#### **Structure:** Eleven 45-minute lessons and one 5-day culminating project
+
+<img src="https://images.code.org/0845fe02cb126948ac8b81f06b861103-image-1767974753854.png" alt="lesson calandar for unit 2" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+
+
+
+
+## Next up
+
+#### Let's dive into the instructional commitments for this course. 
+
+
+MARKDOWN

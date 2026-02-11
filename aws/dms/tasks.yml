@@ -160,6 +160,7 @@ cron:
 - dashboard.ai_tutor_interaction_feedbacks
 - dashboard.aichat_sessions
 - dashboard.aidiff_message_feedbacks
+- dashboard.user_data_retention_statuses
 
 # All tables in this section are exported to the Redshift `dashboard_production` schema. Do NOT export columns containing
 # sensitive data to this schema.

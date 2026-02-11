@@ -1,0 +1,63 @@
+name 'pl-aif-2-U3-schema-fields-5_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# From Arrays to Structured Data 
+#### Now that you’ve explored how arrays can store lists of values in JavaScript, we can take things a step further. Real apps rarely keep track of just one list.
+
+#### A music app, for example, doesn’t just store song titles. It also needs artists, song lengths, whether a song is a favorite, and more. To manage this kind of information, we introduce schemas:
+
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Schema-</strong> a plan or blueprint for our data
+</p>
+
+</div>
+
+#### Together, these help students move from “I can store a list” to “I can organize real-world data for a web app.”
+---
+## What is a Schema?
+
+#### A **schema** is a simple description of what data your app will store and how it will be organized.
+
+#### You can think of it as a blueprint or a table header:
+
+- #### What pieces of information do we need?
+
+- #### What will we call each piece?
+
+- #### What kind of value is it (number, string, boolean, etc.)?
+
+<br>
+
+#### **Example:**
+
+<div style="float:left; margin: 20px 40px 40px 20px; text-align:center;">
+  <img 
+    src="https://images.code.org/72c84be37ebc52609cc513d05469c84b-image-1765392323102.png"
+    alt="phone open to a song playing on spotify app"
+    width="350px"
+    style="border-radius:10px;"
+  >
+  <div style="font-size: 12px; color: #555; margin-top: 4px;">
+    Ty Pendlebury/CNET
+  </div>
+</div>
+
+
+
+#### For a music app, a schema for a song might look like this:
+
+- #### **title** – the name of the song (string)
+
+- #### **artist** – who performs the song (string)
+
+- #### **lengthInSeconds** – how long the song is (number)
+
+- #### **isFavorite** – whether the user has marked it as a favorite (boolean)
+
+#### This schema doesn’t write any code yet. It just gives a shared language: “Each song in our app has these four pieces of data.”
+
+
+MARKDOWN

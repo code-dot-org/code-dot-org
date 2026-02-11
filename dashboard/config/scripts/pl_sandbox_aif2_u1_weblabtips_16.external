@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Common Pitfalls and Pro tips for Web Lab
+# Pro Tips for Web Lab
 
 #### Now that you’ve had a chance to explore Web Lab, let’s look at some common challenges teachers (and students!) run into and how to handle them smoothly.
 
@@ -88,15 +88,13 @@ markdown <<MARKDOWN
 
 </div>
 
+<br>
 
-
-
+> #### Which of these do you want to emphasize with your students during this unit?
 
 
 ---
-## Up Next
-
-#### Let's do a quick vocabulary check before moving on to creating a website.
+## Up Next: let's do a quick vocabulary check before moving on to creating a website.
 
 
 MARKDOWN

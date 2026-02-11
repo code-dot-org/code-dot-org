@@ -118,6 +118,16 @@ To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`."
       subdomain nil, 'studio'
     end
 
+    # Returns the reverse domain parts to serve as a namespace for S3 buckets.
+    # The convention is `org.code.<subdomain>`.
+    #
+    # Examples:
+    #   studio.code.org -> org.code.studio
+    #   test-studio.code.org -> org.code.test-studio
+    def s3_bucket_namespace
+      studio_subdomain.split('.').reverse.join('.')
+    end
+
     # Lookup ACM certificate for ELB and CloudFront SSL.
     # Choose latest expiration among multiple active matching certificates.
     ACM_REGION = 'us-east-1'.freeze

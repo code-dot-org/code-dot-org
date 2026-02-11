@@ -6,12 +6,15 @@ type FlashType = 'notice' | 'alert';
 
 type FlashMessage = string | string[];
 
-type Flash = [FlashType, FlashMessage][];
+export type Flash = [FlashType, FlashMessage][];
 
-export const FlashHandler: FC<{flash?: Flash; autoHideDuration?: number}> = ({
-  flash,
-  autoHideDuration,
-}) => {
+const DEFAULT_DURATION = 6_000; // 6 seconds
+
+export const FlashHandler: FC<{
+  flash?: Flash;
+  autoHideDuration?: number;
+  onClose?: () => void;
+}> = ({flash, autoHideDuration = DEFAULT_DURATION, onClose}) => {
   const [showFlash, setShowFlash] = useState(!!flash?.length);
 
   const getAlertType = (flashType: FlashType): AlertProps['type'] => {
@@ -27,6 +30,7 @@ export const FlashHandler: FC<{flash?: Flash; autoHideDuration?: number}> = ({
 
   const handleClose = () => {
     setShowFlash(false);
+    onClose && onClose();
   };
 
   if (!flash?.length) {

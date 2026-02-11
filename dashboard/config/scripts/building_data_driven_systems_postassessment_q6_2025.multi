@@ -7,7 +7,7 @@ right 'It is an edge case that ensures the function doesn\'t add "blank" items t
 wrong 'Empty strings are the most common type of data in professional apps.'
 wrong 'It proves that the `.map()` function is working correctly.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 3

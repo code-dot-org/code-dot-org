@@ -7,7 +7,7 @@ wrong 'It makes the website\'s background colors change.'
 wrong 'It prevents the user from clicking on other items in the list.'
 wrong 'It is a required security feature for all web apps.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 6

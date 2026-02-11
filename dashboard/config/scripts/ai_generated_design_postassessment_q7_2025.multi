@@ -7,7 +7,7 @@ right 'Adjust the CSS so the layout automatically resizes for smaller screens'
 wrong 'Replace the book images with text-only description'
 wrong 'Change the background color to make the problem less noticeable'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lessons 8, 12

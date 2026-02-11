@@ -1,7 +1,7 @@
 import * as BlocklyCore from 'blockly/core';
 
-import {getToolboxType} from '@cdo/apps/blockly/addons/cdoUtils';
 import {ToolboxType} from '@cdo/apps/blockly/constants';
+import {getToolboxType} from '@cdo/apps/blockly/utils';
 import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
 

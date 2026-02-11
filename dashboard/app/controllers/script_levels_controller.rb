@@ -216,6 +216,8 @@ class ScriptLevelsController < ApplicationController
     if @rubric && ai_rubrics_enabled_for_user
       @rubric_data = {rubric: @rubric.summarize}
       @rubric_data[:canShowTaScoresAlert] = can_show_ta_scores_alert?(@script_level.lesson)
+      @rubric_data[:parentLevelName] = @level.get_parent_level_for_script(@script_level&.script&.id)&.name
+      @rubric_data[:levelType] = @level.type
       if @script_level.lesson.rubric && view_as_other
         viewing_user_level = @view_as_user.user_levels.find_by(script: @script_level.script, level: @level)
         @rubric_data[:studentLevelInfo] = {
@@ -241,23 +243,6 @@ class ScriptLevelsController < ApplicationController
     else
       script.get_script_level_by_id(params[:id])
     end
-  end
-
-  # Get a JSON summary of a level's information, used in modern labs that don't
-  # reload the page between level views.  Note that this can be cached for a relatively
-  # long amount of time, including by the CDN, and does not vary per user.
-  def level_properties
-    authorize! :read, ScriptLevel
-
-    unit_context = ScriptLevelsController.get_unit_context(request)
-    unit_group_unit = unit_context[:unit_group_unit]
-    @script = unit_context[:unit]
-    @script_level = ScriptLevelsController.get_script_level(@script, params)
-    raise ActiveRecord::RecordNotFound unless @script_level
-
-    @level = select_level
-
-    render json: @level.summarize_for_lab2_properties(@script, @script_level, @current_user, unit_group_unit: unit_group_unit)
   end
 
   # Get a list of hidden lessons for the current users section

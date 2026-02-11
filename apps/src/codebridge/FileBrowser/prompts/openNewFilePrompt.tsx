@@ -1,15 +1,11 @@
 import {NewFileFunction} from '@codebridge/codebridgeContext/types';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {FolderId, ProjectFile} from '@codebridge/types';
-import {validateFileName} from '@codebridge/utils';
+import {validateFileNameForModal} from '@codebridge/utils';
 
-import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
-import {
-  DialogType,
-  DialogControlInterface,
-  extractUserInput,
-} from '@cdo/apps/lab2/views/dialogs';
+import {DialogType, DialogControlInterface} from '@cdo/apps/lab2/views/dialogs';
+import {GenericPromptArgs} from '@cdo/apps/lab2/views/dialogs/GenericPrompt';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
 type OpenNewFilePromptArgsType = {
@@ -38,21 +34,48 @@ export const openNewFilePrompt = async ({
 }: OpenNewFilePromptArgsType) => {
   const results = await dialogControl.showDialog({
     type: DialogType.GenericPrompt,
-    title: codebridgeI18n.newFilePrompt(),
-    validateInput: (fileName: string) =>
-      validateFileName({
+    title: 'Create a new file',
+    message: 'Give your new file a name and type.',
+    messageMargin: true,
+    textFieldProps: {
+      label: 'File name',
+    },
+    dropdownProps: {
+      labelText: 'File type',
+      items: validFileTypes
+        ? validFileTypes.map(fileType => {
+            return {
+              key: fileType,
+              text: fileType.toUpperCase(),
+              value: fileType,
+            };
+          })
+        : [],
+      selectedValue: validFileTypes ? validFileTypes[0] : '',
+      styleAsFormField: true,
+    },
+    confirmButtonText: 'Create file',
+    validateInput: (fileName: string, dropdownValue?: string) =>
+      validateFileNameForModal({
         fileName,
         folderId,
         projectFiles,
         isStartMode,
         validationFile,
         validFileTypes,
+        selectedFileType: dropdownValue,
       }),
+    useModal: true,
   });
   if (results.type !== 'confirm') {
     return;
   }
-  const fileName = extractUserInput(results);
+
+  const {textField: baseFileName, dropdown: selectedExtension} =
+    results.args as GenericPromptArgs;
+  const fileName = selectedExtension
+    ? `${baseFileName}.${selectedExtension}`
+    : baseFileName;
 
   newFile({
     fileName,
@@ -60,6 +83,7 @@ export const openNewFilePrompt = async ({
   });
 
   sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_NEW_FILE, {
-    fileType: fileName.split('.').pop()?.toLowerCase() || '',
+    fileType:
+      selectedExtension || fileName.split('.').pop()?.toLowerCase() || '',
   });
 };

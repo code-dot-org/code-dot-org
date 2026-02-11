@@ -1,5 +1,6 @@
 import FunctionEditor from '@cdo/apps/blockly/addons/functionEditor';
-import {BlockColors, BlockStyles} from '@cdo/apps/blockly/constants';
+import {BlockStyles} from '@cdo/apps/blockly/constants';
+import {registerCustomProcedureBlocks} from '@cdo/apps/blockly/utils';
 import i18n from '@cdo/locale';
 
 import CdoFieldDanceAi from '../ai/cdoFieldDanceAi';
@@ -133,7 +134,7 @@ const customInputTypes = {
 export default {
   customInputTypes,
   install(blockly) {
-    Blockly.cdoUtils.registerCustomProcedureBlocks();
+    registerCustomProcedureBlocks();
     // Legacy style block definitions :(
     const generator = blockly.getGenerator();
 
@@ -235,18 +236,14 @@ export default {
         // Must be marked EDITABLE so that cloned blocks share the same var name
         fieldLabel.EDITABLE = true;
         this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
-        Blockly.cdoUtils.handleColorAndStyle(
-          this,
-          BlockColors.BEHAVIOR,
-          BlockStyles.BEHAVIOR
-        );
+        this.setStyle(BlockStyles.BEHAVIOR);
         const mainTitle = this.appendDummyInput()
           .appendField(fieldLabel, 'VAR')
           .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
 
         if (Blockly.useModalFunctionEditor) {
           var editLabel = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
-          Blockly.cdoUtils.bindBrowserEvent(
+          Blockly.browserEvents.bind(
             editLabel.fieldGroup_,
             'mousedown',
             this,

@@ -43,6 +43,13 @@ class Level < ApplicationRecord
   has_many :hint_view_requests
   has_many :rubrics, dependent: :destroy
 
+  scope :with_ai_tutor_available, -> {where("levels.properties->>'$.ai_tutor_available' = 'true'")}
+
+  # scope for levels that require ai chat tools to reasonably function.
+  scope :with_essential_ai_chat_tools, -> {where(type: %w[Aichat Weblab2])}
+
+  scope :with_any_ai_chat_tools, -> {with_essential_ai_chat_tools.or(with_ai_tutor_available)}
+
   before_validation :strip_name
   before_destroy :remove_empty_script_levels
 
@@ -519,10 +526,6 @@ class Level < ApplicationRecord
     unplugged? || properties["display_as_unplugged"] == "true"
   end
 
-  def ai_tutor_available?
-    properties["ai_tutor_available"] == "true" || properties["ai_tutor_available"] == true
-  end
-
   def summarize
     {
       level_id: id.to_s,
@@ -937,16 +940,26 @@ class Level < ApplicationRecord
       properties_camelized["predictSettings"]&.delete("solution")
       properties_camelized["predictSettings"]&.delete("multipleChoiceAnswers")
     end
+    current_parent = get_parent_level_for_script(script&.id)
+    properties_camelized[:parentLevelName] = current_parent&.name
 
-    # If there is a rubric for this lesson, show the rubric if it is evaluated on this level, or if the evaluation level shares the same
-    # project template level as this level.
+    # If there is a rubric for this lesson, show the rubric if it is evaluated on this level or the level's parent.
+    # In addition, show the rubric if the evaluation level shares the same project template level as this level.
+    # If the level is a sublevel and has a project template level, also show the rubric if the evaluation level has a sublevel
+    # with the same project template level.
+    # We don't show rubrics on Bubble choice levels, even if the rubric is defined on that level. The rubric will always instead be shown on
+    # the children of a bubble choice level.
     rubric_level_id = script_level&.lesson&.rubric&.level_id
     if rubric_level_id
-      if rubric_level_id == id
+      if (rubric_level_id == id && type != 'BubbleChoice') || rubric_level_id == current_parent&.id
         properties_camelized[:showRubric] = true
       else
-        rubric_template_level = Level.find(rubric_level_id)&.try(:project_template_level)
-        properties_camelized[:showRubric] = rubric_template_level && rubric_template_level == try(:project_template_level)
+        rubric_level = Level.find(rubric_level_id)
+        rubric_template_level = rubric_level&.try(:project_template_level)
+        rubric_templates_for_sublevels = rubric_level&.try(:sublevels)&.map {|sublevel| sublevel.try(:project_template_level)} || []
+        if try(:project_template_level)
+          properties_camelized[:showRubric] = (rubric_template_level && rubric_template_level == project_template_level) || rubric_templates_for_sublevels.include?(project_template_level)
+        end
       end
     end
     properties_camelized
@@ -1052,6 +1065,23 @@ class Level < ApplicationRecord
   def uses_theme_preference?
     # These are the level types that set and use the theme preference in UserPreferences right now.
     is_a?(Pythonlab) || is_a?(Weblab2) || is_a?(Sketchlab)
+  end
+
+  def get_parent_level_for_script(script_id)
+    unless script_id
+      return
+    end
+    parent_levels.find do |parent|
+      parent.script_levels.find do |script_level|
+        script_level&.script_id == script_id
+      end
+    end
+  end
+
+  def summarize_lessons_for_special_level_types
+    lessons_from_script_levels = script_levels.map(&:lesson).compact.uniq.map(&:summarize_for_special_level_types)
+    lessons_from_parent_script_levels = parent_levels.flat_map(&:script_levels).map(&:lesson).compact.uniq.map(&:summarize_for_special_level_types)
+    (lessons_from_script_levels + lessons_from_parent_script_levels).uniq
   end
 
   # Returns the level name, removing the name_suffix first (if present), and

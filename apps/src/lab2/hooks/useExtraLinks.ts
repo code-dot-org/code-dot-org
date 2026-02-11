@@ -38,7 +38,7 @@ async function fetchExtraLinksData(
 
   // Fetch project link data.
   let projectLinkData: ExtraLinksProjectData | undefined;
-  if (permissions.includes(PERMISSIONS.PROJECT_VALIDATOR)) {
+  if (channelId && permissions.includes(PERMISSIONS.PROJECT_VALIDATOR)) {
     const levelProjectDataResponse =
       await HttpClient.fetchJson<ExtraLinksProjectData>(
         `/projects/${channelId}/extra_links`,

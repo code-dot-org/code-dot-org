@@ -1,4 +1,5 @@
 import '@testing-library/jest-dom';
+import Chips from '@code-dot-org/component-library/chips';
 import {fireEvent, render, screen} from '@testing-library/react';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
@@ -63,7 +64,7 @@ describe('SingleSectionSetUp', () => {
       />
     );
 
-    const chips = wrapper.find('Chips');
+    const chips = wrapper.find(Chips);
     expect(chips.length).toBe(1);
     expect(chips.prop('name')).toBe('grades');
     expect(chips.prop('required')).toBe(true);

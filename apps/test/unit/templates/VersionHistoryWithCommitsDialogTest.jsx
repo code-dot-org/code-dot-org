@@ -4,7 +4,6 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {sources as sourcesApi} from '@cdo/apps/clientApi';
 import project from '@cdo/apps/code-studio/initApp/project';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import VersionHistoryWithCommitsDialog from '@cdo/apps/templates/VersionHistoryWithCommitsDialog';
 import * as utils from '@cdo/apps/utils';
 
@@ -204,7 +203,6 @@ describe('VersionHistoryWithCommitsDialog', () => {
       let handleClearPuzzle;
 
       beforeEach(() => {
-        sinon.stub(firehoseClient, 'putRecord');
         sinon.stub(project, 'getCurrentId').returns('fake-project-id');
         sinon
           .stub(project, 'getCurrentSourceVersionId')
@@ -227,7 +225,6 @@ describe('VersionHistoryWithCommitsDialog', () => {
 
       afterEach(async () => {
         await wasCalled(utils.reload);
-        firehoseClient.putRecord.restore();
         project.getCurrentId.restore();
         project.getCurrentSourceVersionId.restore();
         project.getShareUrl.restore();
@@ -240,25 +237,6 @@ describe('VersionHistoryWithCommitsDialog', () => {
           wrapper.containsMatchingElement(
             <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
           )
-        );
-      });
-
-      it('logs to firehose', () => {
-        expect(firehoseClient.putRecord).to.have.been.calledOnce.and.calledWith(
-          {
-            study: 'project-data-integrity',
-            study_group: 'v4',
-            event: 'clear-puzzle',
-            project_id: 'fake-project-id',
-            data_json: JSON.stringify({
-              isOwner: true,
-              currentUrl: window.location.href,
-              shareUrl: 'fake-share-url',
-              isProjectTemplateLevel: false,
-              currentSourceVersionId: FAKE_CURRENT_VERSION,
-            }),
-          },
-          {includeUserId: true}
         );
       });
 

@@ -206,7 +206,8 @@ function generateBlankBlock(blockly, skin, name, hsv, width, label) {
     helpUrl: '',
     init: function () {
       // Jigsaw blocks use a hard-coded HSV color and are not compatible with themes.
-      Blockly.cdoUtils.handleColorAndStyle(this, hsv);
+      const [h, s, v] = hsv;
+      this.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
       this.appendDummyInput()
         .appendField(new blockly.FieldImage(skin.blank, width, 54))
         .appendField(
@@ -259,7 +260,8 @@ function generateJigsawBlocksForLevel(blockly, skin, options) {
           )
         );
         // Jigsaw blocks use a hard-coded HSV color and are not compatible with themes.
-        Blockly.cdoUtils.handleColorAndStyle(this, HSV);
+        const [h, s, v] = HSV;
+        this.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
       },
     };
   }

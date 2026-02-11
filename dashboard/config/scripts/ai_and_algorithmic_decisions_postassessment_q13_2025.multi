@@ -7,7 +7,7 @@ right 'A NOT operator that allows messages through when they are not in the bloc
 wrong 'An OR operator that chooses messages randomly to let through'
 wrong 'A variable that stores how many texts you\'ve received today'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 10

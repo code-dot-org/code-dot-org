@@ -1,5 +1,6 @@
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
+import {getCode} from '@cdo/apps/blockly/utils';
 import {TestResults} from '@cdo/apps/constants';
 import * as redux from '@cdo/apps/redux';
 
@@ -36,7 +37,7 @@ describe('checkForEmptyContainerBlockFailure_', function () {
 
     // make sure we loaded correctly. text wont match exactly, but make sure if
     // we had xml, we loaded something
-    var loaded = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+    var loaded = getCode(Blockly.mainBlockSpace);
     assert(
       !args.blockXml || loaded,
       'either we didnt have  input xml' + 'or we did, and we loaded something'
@@ -158,7 +159,7 @@ describe('getUserBlocks_', function () {
 
     // make sure we loaded correctly. text wont match exactly, but make sure if
     // we had xml, we loaded something
-    var loaded = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+    var loaded = getCode(Blockly.mainBlockSpace);
     assert(loaded, "we didn't correctly load our test blocks");
 
     var userBlocks = studioApp.feedback_.getUserBlocks_();
@@ -268,7 +269,7 @@ describe('getMissingBlocks_ tests', function () {
 
     // make sure we loaded correctly. text wont match exactly, but make sure if
     // we had xml, we loaded something
-    var loaded = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+    var loaded = getCode(Blockly.mainBlockSpace);
     assert(
       !options.userBlockXml || loaded,
       'either we didnt have  input xml' + 'or we did, and we loaded something'

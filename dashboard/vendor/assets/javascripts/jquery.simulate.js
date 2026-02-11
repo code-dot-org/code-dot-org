@@ -362,10 +362,7 @@
 
   $.extend($.simulate.prototype, {
     simulateDrag: function() {
-      if (
-        window.Blockly &&
-        window["PointerEvent"]
-      ) {
+      if (window.Blockly && !!window.Blockly.inject && window["PointerEvent"]) {
         touchMappings = {
           mousedown: "pointerdown",
           mousemove: "pointermove",

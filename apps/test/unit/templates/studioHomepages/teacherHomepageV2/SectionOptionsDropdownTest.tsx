@@ -273,7 +273,7 @@ describe('SectionOptionsDropdown', () => {
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_CARD_SETTINGS_CLICKED,
       {},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   });
 
@@ -285,7 +285,7 @@ describe('SectionOptionsDropdown', () => {
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_CARD_ROSTER_CLICKED,
       {},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   });
 
@@ -297,7 +297,7 @@ describe('SectionOptionsDropdown', () => {
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_CARD_LOGIN_CARDS_CLICKED,
       {},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   });
 
@@ -309,7 +309,7 @@ describe('SectionOptionsDropdown', () => {
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_TABLE_PRINT_CERTIFICATES_CLICKED,
       {},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
     expect(fetchSpy).toHaveBeenCalledWith('/dashboardapi/sections/11/students');
   });
@@ -321,7 +321,7 @@ describe('SectionOptionsDropdown', () => {
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_CARD_ARCHIVE_CLICKED,
       {},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   });
 
@@ -333,7 +333,7 @@ describe('SectionOptionsDropdown', () => {
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_CARD_DELETE_CLICKED,
       {},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   });
 

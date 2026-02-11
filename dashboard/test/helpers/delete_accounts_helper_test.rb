@@ -1953,10 +1953,10 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
         bucket.any_instance.
           expects(:hard_delete_channel_content).
-          with(storage_encrypt_channel_id(storage_id, project_id_a))
+          with(get_project_channel_id(storage_id, project_id_a))
         bucket.any_instance.
           expects(:hard_delete_channel_content).
-          with(storage_encrypt_channel_id(storage_id, project_id_b))
+          with(get_project_channel_id(storage_id, project_id_b))
 
         helper.delete_s3_contents(student)
       end

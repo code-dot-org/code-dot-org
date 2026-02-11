@@ -15,6 +15,8 @@ import {
   ScriptLevelPathLink,
 } from '../types';
 
+import {useLevelProperties} from './LevelPropertiesWrapper';
+
 import moduleStyles from './extra-links.module.scss';
 
 // Extra Links modal. This is used to display helpful links for levelbuilders, and should
@@ -51,9 +53,8 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
     state => state.lab.channel && state.lab.channel.id
   );
 
-  const isStandaloneProject: boolean = useAppSelector(
-    state => !!state.lab.levelProperties?.isProjectLevel
-  );
+  const isStandaloneProject =
+    useLevelProperties().levelProperties.isProjectLevel || false;
 
   useEffect(() => {
     setClonedLevelName(levelLinkData.level_name);

@@ -337,6 +337,7 @@ class Backpack extends Component {
           isLegacyStyles
           isRtl={false}
           label={javalabMsg.backpackLabel()}
+          ariaLabel={javalabMsg.backpackLabel()}
           leftJustified
           isDisabled={isButtonDisabled}
           style={{

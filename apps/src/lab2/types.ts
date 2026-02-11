@@ -129,7 +129,9 @@ export type ExcalidrawSourceWithExternalFiles = Omit<
 };
 
 export type SketchlabProjectFile = Pick<ProjectFile, 'id' | 'url'> & {
-  uploadFailed?: boolean;
+  uploaded?: boolean;
+  starterAsset?: boolean;
+  filenameWithExtension?: string;
 };
 
 // -- MULTI-FILE -- //
@@ -257,7 +259,10 @@ export interface LevelProperties {
   customHelperLibrary?: string;
   validationCode?: string;
   hideVersionHistory?: boolean;
+  parentLevelName?: string;
 }
+
+export type LevelPropertiesMap = {[levelId: string]: LevelProperties};
 
 export interface BlocklyLevelProperties extends LevelProperties {
   toolboxDefinition?: BlocklyCore.utils.toolbox.ToolboxInfo;

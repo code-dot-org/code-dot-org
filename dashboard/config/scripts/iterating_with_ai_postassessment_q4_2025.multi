@@ -7,7 +7,7 @@ right 'Repeating a data-refresh task until the app receives a "Success" message 
 wrong 'Creating a countdown from 10 to 1.'
 wrong 'Multiplying every number in a 5-item array by two.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 3

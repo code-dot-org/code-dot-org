@@ -308,9 +308,6 @@ export default function currentUser(state = initialState, action) {
       show_progress_table_v2,
       ai_rubrics_disabled,
       ai_differentiation_enabled,
-      showAITALessonSummary,
-      hasCompletedPersonalizationQuiz,
-      audioSummaryTranscript,
       progress_table_v2_closed_beta,
       is_lti,
       is_levelbuilder,
@@ -329,13 +326,8 @@ export default function currentUser(state = initialState, action) {
       has_seen_homepage_welcome,
       ai_tutor_enabled_for_pilot,
     } = action.serverUser;
-    analyticsReport.setUserProperties(
-      id,
-      user_type,
-      experiments.getEnabledExperiments()
-    );
-    // Calling Statsig separately to emphasize different user integrations
-    // and because dual reporting is aspirationally temporary (March 2024)
+    // TODO: Once Amplitude is fully removed, the StatsigReporter class should be
+    // renamed to AnalyticsReporter.
     statsigReporter.setUserProperties({
       userId: id,
       userType: user_type,
@@ -356,9 +348,6 @@ export default function currentUser(state = initialState, action) {
       showProgressTableV2: show_progress_table_v2,
       aiRubricsDisabled: ai_rubrics_disabled,
       aiDifferentiationEnabled: ai_differentiation_enabled,
-      showAITALessonSummary: showAITALessonSummary,
-      hasCompletedPersonalizationQuiz: hasCompletedPersonalizationQuiz,
-      audioSummaryTranscript: audioSummaryTranscript,
       progressTableV2ClosedBeta: progress_table_v2_closed_beta,
       isLti: is_lti,
       isTeacher: user_type === UserTypes.TEACHER,

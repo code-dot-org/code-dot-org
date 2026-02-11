@@ -7,7 +7,7 @@ wrong 'It prevents the user from using any AI tools within the app.'
 wrong 'It is the only way to save the data to the cloud.'
 right 'It gives the user the power to quickly recover from complex filtering or mistakes and return to a known state.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 11

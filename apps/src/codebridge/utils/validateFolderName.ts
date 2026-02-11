@@ -45,3 +45,15 @@ export const validateFolderName = ({
     return codebridgeI18n.duplicateFolderError({folderName});
   }
 };
+
+export const validateFolderNameForModal = (
+  args: ValidateFolderNameArgs
+): {text: string; type: 'error' | 'warning'} | undefined => {
+  const errorMessage = validateFolderName(args);
+  if (errorMessage) {
+    return {
+      text: errorMessage,
+      type: 'error',
+    };
+  }
+};

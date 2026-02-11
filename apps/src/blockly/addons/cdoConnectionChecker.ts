@@ -1,6 +1,7 @@
 import * as BlocklyCore from 'blockly/core';
 
-import {BLOCK_TYPES} from '../constants';
+import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
+import {isFunctionBlock} from '@cdo/apps/blockly/utils';
 
 import {customConnectionBlockTypes} from './cdoConstants';
 
@@ -50,7 +51,7 @@ export default class CdoConnectionChecker extends BlocklyCore.ConnectionChecker 
     // the value input of a function definition block. This connection represents
     // a function parameter, which should not be displaced by another block.
     if (
-      Blockly.cdoUtils.isFunctionBlock(b.getSourceBlock()) &&
+      isFunctionBlock(b.getSourceBlock()) &&
       b.type === Blockly.ConnectionType.INPUT_VALUE &&
       b.isConnected() &&
       b.targetConnection?.getSourceBlock().isShadow() &&

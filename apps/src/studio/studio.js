@@ -11,11 +11,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+import {loadBlocksToWorkspace, getCode} from '@cdo/apps/blockly/utils';
 import {
   showArrowButtons,
   dismissSwipeOverlay,
 } from '@cdo/apps/templates/arrowDisplayRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import commonMsg from '@cdo/locale';
 
 import {blockAsXmlNode, cleanBlocks} from '../block_utils';
@@ -2396,7 +2398,7 @@ Studio.init = function (config) {
     />
   );
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <AppView visualizationColumn={visualizationColumn} onMount={onMount} />
     </Provider>,
@@ -2515,7 +2517,7 @@ Studio.prepareForRemix = function () {
   cleanBlocks(blocksDom);
 
   Blockly.mainBlockSpace.clear();
-  Blockly.cdoUtils.loadBlocksToWorkspace(
+  loadBlocksToWorkspace(
     Blockly.mainBlockSpace,
     Blockly.Xml.domToText(blocksDom)
   );
@@ -3686,7 +3688,7 @@ Studio.sendPuzzleReport = function (onComplete = Studio.onReportComplete) {
 
     program = studioApp().getCode();
   } else {
-    program = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+    program = getCode(Blockly.mainBlockSpace);
   }
 
   Studio.waitingForReport = true;
@@ -5925,7 +5927,7 @@ Studio.askForInput = function (question, callback) {
     Studio.queueCallback(callback, [value]);
   }
 
-  ReactDOM.render(
+  createReactRoot(
     <InputPrompt question={question} onInputReceived={onInputReceived} />,
     target
   );

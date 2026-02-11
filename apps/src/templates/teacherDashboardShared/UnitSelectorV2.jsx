@@ -6,7 +6,6 @@ import {connect} from 'react-redux';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import {getStore} from '@cdo/apps/redux';
 import {
   asyncLoadCoursesWithProgress,
@@ -19,21 +18,6 @@ import i18n from '@cdo/locale';
 
 import styles from './unit-selector-v2.module.scss';
 import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
-
-const recordEvent = (eventName, sectionId, dataJson = {}) => {
-  firehoseClient.putRecord(
-    {
-      study: 'teacher_dashboard_actions',
-      study_group: 'progress_v2',
-      event: eventName,
-      data_json: JSON.stringify({
-        section_id: sectionId,
-        ...dataJson,
-      }),
-    },
-    {includeUserId: true}
-  );
-};
 
 function UnitSelectorV2({
   filterToSelectedCourse = false,
@@ -70,11 +54,6 @@ function UnitSelectorV2({
       const newCourseId = getSelectedCourseId(currentState);
       const newUnitPosition = getSelectedUnitPosition(currentState);
       loadUnitProgress(newUnitId, sectionId, newCourseId, newUnitPosition);
-
-      recordEvent('change_script', sectionId, {
-        old_script_id: unitId,
-        new_script_id: newUnitId,
-      });
 
       analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_CHANGE_UNIT, {
         sectionId: sectionId,

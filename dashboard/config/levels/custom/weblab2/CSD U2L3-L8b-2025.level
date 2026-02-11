@@ -7,7 +7,7 @@
   "user_id": 19378,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "*This level follows a video that you may have watched with your class. If you missed the video, you can watch it in the Help and Tips tab of this level.*\r\n\r\n# Debug: Pink Tags\r\n\r\n\r\nSomeone has submitted a bug report on this web page.  Can you fix the bug?\r\n\r\n![Bug report](https://images.code.org/366cea4f850465f2fe6270ee17356016-image-1767512692434.png)\r\n \r\n# Do this\r\n1) Find and fix the problem that is causing the bug\r\n\r\n",
+    "long_instructions": "*This level follows a video that you may have watched with your class. If you missed the video, you can watch it [here](https://youtu.be/auv10y-dN4s).*\r\n\r\n# Debug: Pink Tags\r\n\r\n\r\nSomeone has submitted a bug report on this web page.  Can you fix the bug?\r\n\r\n![Bug report](https://images.code.org/366cea4f850465f2fe6270ee17356016-image-1767512692434.png)\r\n \r\n# Do this\r\n1) Find and fix the problem that is causing the bug\r\n\r\n",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "disable_edit_run_for_submission": "false",
@@ -47,6 +47,6 @@
     "bubble_choice_description": "Use your debugging skills to figure out why the tags are pink.",
     "thumbnail_url": "https://images.code.org/526ab26f5cbe7feda566ff5841e6fdaf-8b.png"
   },
-  "audit_log": "[{\"changed_at\":\"2026-01-04 07:41:13 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-04 07:43:42 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-04 07:45:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-04 08:23:24 +0000\",\"changed\":[\"hide_share_and_remix\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-04 08:24:31 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-01-04 07:41:13 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-04 07:43:42 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-04 07:45:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-04 08:23:24 +0000\",\"changed\":[\"hide_share_and_remix\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-04 08:24:31 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-10 02:26:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Weblab2>

@@ -5,7 +5,6 @@ import Button from '@cdo/apps/legacySharedComponents/Button';
 import localization from '@cdo/apps/localization';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import {windowOpen} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
@@ -52,30 +51,10 @@ export default class ResourceList extends Component {
     e.preventDefault();
 
     this.sendLinkVisitedEvent(resource, 'download');
-
-    firehoseClient.putRecord(
-      {
-        study:
-          this.props.pageType === 'resources-rollup'
-            ? 'course-rollup-pages'
-            : 'lesson-plan',
-        study_group: this.props.pageType,
-        event: 'download-resource',
-        data_int: resource.id,
-        data_json: JSON.stringify({
-          resourceId: resource.id,
-        }),
-      },
-      {
-        includeUserId: true,
-        callback: () => {
-          windowOpen(
-            this.normalizeUrl(this.localizedDownloadURL(resource)),
-            'noopener',
-            'noreferrer'
-          );
-        },
-      }
+    windowOpen(
+      this.normalizeUrl(this.localizedDownloadURL(resource)),
+      'noopener',
+      'noreferrer'
     );
   };
 
@@ -84,29 +63,10 @@ export default class ResourceList extends Component {
 
     this.sendLinkVisitedEvent(resource, 'open');
 
-    firehoseClient.putRecord(
-      {
-        study:
-          this.props.pageType === 'resources-rollup'
-            ? 'rollup-pages'
-            : 'lesson-plan',
-        study_group: this.props.pageType,
-        event: 'open-resource',
-        data_int: resource.id,
-        data_json: JSON.stringify({
-          resourceId: resource.id,
-        }),
-      },
-      {
-        includeUserId: true,
-        callback: () => {
-          windowOpen(
-            this.normalizeUrl(this.localizedURL(resource)),
-            'noopener',
-            'noreferrer'
-          );
-        },
-      }
+    windowOpen(
+      this.normalizeUrl(this.localizedURL(resource)),
+      'noopener',
+      'noreferrer'
     );
   };
 

@@ -7,7 +7,7 @@ wrong '`val1` is a reserved word in JavaScript that will cause a crash.'
 right 'The AI may misinterpret `val1` as a name or date, generating incorrect filtering logic.'
 wrong 'Field names must be at least 10 characters long to be secure.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 10

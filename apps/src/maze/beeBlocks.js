@@ -2,9 +2,10 @@
  * Blocks specific to Bee
  */
 
+import {numberValidator} from '@cdo/apps/blockly/utils';
+
 var blockUtils = require('../block_utils');
 var BlockStyles = require('../blockly/constants').BlockStyles;
-var BlockColors = require('../blockly/constants').BlockColors;
 
 var msg = require('./locale');
 
@@ -137,11 +138,7 @@ function addIfOnlyFlower(blockly, generator) {
   blockly.Blocks.bee_ifOnlyFlower = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOGIC,
-        BlockStyles.LOGIC
-      );
+      this.setStyle(BlockStyles.LOGIC);
       this.appendDummyInput().appendField(msg.ifCode());
       this.appendDummyInput().appendField(msg.atFlower());
       this.setInputsInline(true);
@@ -175,11 +172,7 @@ function addIfFlowerHive(blockly, generator) {
         [msg.atHoneycomb(), 'atHoneycomb'],
       ];
 
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOGIC,
-        BlockStyles.LOGIC
-      );
+      this.setStyle(BlockStyles.LOGIC);
       this.appendDummyInput().appendField(msg.ifCode());
       this.appendDummyInput().appendField(
         new blockly.FieldDropdown(LOCATIONS),
@@ -218,11 +211,7 @@ function addIfElseFlowerHive(blockly, generator) {
         [msg.atHoneycomb(), 'atHoneycomb'],
       ];
 
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOGIC,
-        BlockStyles.LOGIC
-      );
+      this.setStyle(BlockStyles.LOGIC);
       this.appendDummyInput().appendField(msg.ifCode());
       this.appendDummyInput().appendField(
         new blockly.FieldDropdown(LOCATIONS),
@@ -263,11 +252,7 @@ function addRepeatedActionBlock(
   blockly.Blocks[name] = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.interpolateMsg(
         blockMsg,
         ['NUM', 'Number', Blockly.ALIGN_RIGHT],
@@ -302,27 +287,15 @@ function addConditionalComparisonBlock(blockly, generator, name, type, arg1) {
       switch (type) {
         case 'if':
           conditionalMsg = msg.ifCode();
-          Blockly.cdoUtils.handleColorAndStyle(
-            this,
-            BlockColors.LOGIC,
-            BlockStyles.LOGIC
-          );
+          this.setStyle(BlockStyles.LOGIC);
           break;
         case 'ifelse':
           conditionalMsg = msg.ifCode();
-          Blockly.cdoUtils.handleColorAndStyle(
-            this,
-            BlockColors.LOGIC,
-            BlockStyles.LOGIC
-          );
+          this.setStyle(BlockStyles.LOGIC);
           break;
         case 'while':
           conditionalMsg = msg.whileMsg();
-          Blockly.cdoUtils.handleColorAndStyle(
-            this,
-            BlockColors.LOOP,
-            BlockStyles.LOOP
-          );
+          this.setStyle(BlockStyles.LOOP);
           break;
         default:
           throw 'Unexpected type for addConditionalComparisonBlock';
@@ -340,7 +313,7 @@ function addConditionalComparisonBlock(blockly, generator, name, type, arg1) {
       );
       this.appendDummyInput().appendField(' ');
       this.appendDummyInput().appendField(
-        new blockly.FieldTextInput('0', blockly.cdoUtils.numberValidator),
+        new blockly.FieldTextInput('0', numberValidator),
         'ARG2'
       );
       this.setInputsInline(true);

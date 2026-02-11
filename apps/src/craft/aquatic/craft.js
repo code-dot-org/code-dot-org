@@ -5,9 +5,8 @@ import {
 } from '@code-dot-org/craft';
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
-import {getCodeBlocks} from '@cdo/apps/blockly/utils';
+import {getCodeBlocks, getCode} from '@cdo/apps/blockly/utils';
 import {TestResults} from '@cdo/apps/constants';
 import PlayerSelectionDialog from '@cdo/apps/craft/PlayerSelectionDialog';
 import reducers from '@cdo/apps/craft/redux';
@@ -18,6 +17,7 @@ import {getStore} from '@cdo/apps/redux';
 import Sounds from '@cdo/apps/Sounds';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
 import {trySetLocalStorage} from '@cdo/apps/utils';
 
@@ -313,7 +313,7 @@ Craft.init = function (config) {
     isMinecraft: true,
   });
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <div>
         <AppView
@@ -655,9 +655,7 @@ Craft.reportResult = function (success) {
     result: Craft.initialConfig.level.freePlay ? true : success,
     testResult: testResultType,
     image: encodedImage,
-    program: encodeURIComponent(
-      Blockly.cdoUtils.getCode(Blockly.mainBlockSpace)
-    ),
+    program: encodeURIComponent(getCode(Blockly.mainBlockSpace)),
     // typically delay feedback until response back
     // for things like e.g. crowdsourced hints & hint blocks
     onComplete: function (response) {

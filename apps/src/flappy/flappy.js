@@ -5,6 +5,7 @@
  *
  */
 
+import {getCode} from '@cdo/apps/blockly/utils';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 import placeholder from '../../static/flappy/placeholder.jpg';
@@ -13,10 +14,10 @@ import {dataURIFromURI} from '../imageUtils';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {getStore} from '../redux';
 import AppView from '../templates/AppView';
+import {createReactRoot} from '../util/createReactRoot';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
 
 var React = require('react');
-var ReactDOM = require('react-dom');
 var Provider = require('react-redux').Provider;
 
 var commonMsg = require('@cdo/locale');
@@ -650,7 +651,7 @@ Flappy.init = function (config) {
 
   studioApp().setPageConstants(config);
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <AppView
         visualizationColumn={
@@ -892,7 +893,7 @@ Flappy.onPuzzleComplete = function () {
 };
 
 function sendReport() {
-  const textBlocks = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+  const textBlocks = getCode(Blockly.mainBlockSpace);
 
   Flappy.waitingForReport = true;
 

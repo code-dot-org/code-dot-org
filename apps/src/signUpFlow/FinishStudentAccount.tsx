@@ -32,6 +32,8 @@ import {
   clearSignUpSessionStorage,
   SIGN_UP_USER_TYPE,
   MAX_DISPLAY_NAME_LENGTH,
+  US_STATE_SESSION_KEY,
+  NAME_SESSION_KEY,
 } from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
@@ -86,10 +88,21 @@ const FinishStudentAccount: React.FunctionComponent<{
       );
     }
 
+    // If their name and state are known from their 3rd-party provider login choice, prepopulate their values.
+    const prepopulatedUsState = sessionStorage.getItem(US_STATE_SESSION_KEY);
+    const prepopulatedName = sessionStorage.getItem(NAME_SESSION_KEY);
+
+    if (prepopulatedUsState) {
+      setState(prepopulatedUsState);
+    }
+    if (prepopulatedName) {
+      setName(prepopulatedName);
+    }
+
     analyticsReporter.sendEvent(
       EVENTS.FINISH_ACCOUNT_PAGE_LOADED,
       {'user type': 'student'},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
 
     const fetchGdprData = async () => {
@@ -134,7 +147,7 @@ const FinishStudentAccount: React.FunctionComponent<{
     analyticsReporter.sendEvent(
       EVENTS.PARENT_OR_GUARDIAN_SIGN_UP_CLICKED,
       {},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
     const newIsParentCheckedChoice = !isParent;
     // If the user unchecks the parent checkbox, clear the parent email field
@@ -212,7 +225,7 @@ const FinishStudentAccount: React.FunctionComponent<{
         'has marketing value selected': true,
         'has display name': !nameErrorMessage,
       },
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
 
     // Log to Google Analytics

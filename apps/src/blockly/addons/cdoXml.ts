@@ -2,12 +2,12 @@ import * as BlocklyCore from 'blockly/core';
 
 import {BLOCK_TYPES} from '../constants';
 import {BlocklyWrapperType, XmlBlockConfig} from '../types';
+import {shouldSkipHiddenWorkspace} from '../utils/workspace/serialization';
 import {
   FALSEY_DEFAULT,
   TRUTHY_DEFAULT,
   readBooleanAttribute,
-  shouldSkipHiddenWorkspace,
-} from '../utils';
+} from '../utils/xml/booleanAttributes';
 
 // The user created attribute needs to be read from XML start blocks as 'usercreated'.
 // Once this has been done, all subsequent steps in the serialization use userCreated.

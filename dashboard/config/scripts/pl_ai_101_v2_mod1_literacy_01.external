@@ -1,0 +1,19 @@
+name 'pl-ai-101-V2-mod1-literacy-01'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# AI Literacy
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>AI literacy</strong> represents the technical knowledge, durable skills, and future-ready attitudes required to thrive in a world influenced by AI. It enables learners to engage, create with, manage, and design AI, while critically evaluating its benefits, risks, and ethical implications.</p>
+</div>
+
+#### AI literacy equips individuals to engage productively and responsibly with AI technologies in society, the economy, and their personal lives.
+
+#### AI is increasingly present in everyday life, offering powerful new ways to enhance the information we see, refine the tools we use, and support the decisions we make. As these highly effective AI systems become more common, it's important that students learn to question and understand how they operate, ensuring they can actively leverage AI's capabilities rather than simply accepting its outputs.
+
+#### Foundational concepts of AI literacy include elements of computer science, as well as ethics, psychology, data science, engineering, statistics, and other areas beyond STEM.
+
+#### AI literacy equips individuals to engage productively and responsibly with AI technologies in society, the economy, and their personal lives.
+MARKDOWN

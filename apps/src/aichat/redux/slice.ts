@@ -34,6 +34,7 @@ import {
   UserAddedSelectionContextItem,
   ChatMessage,
   isPendingOrCompletedChatMessage,
+  CompletedChatMessage,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -75,6 +76,7 @@ const initialState: AichatState = {
   hasSetStartingCustomizations: false,
   chatWorkspaceSelectedTab: null,
   userAddedSelectionContext: {},
+  artifactType: undefined,
 };
 
 const aichatSlice = createSlice({
@@ -155,6 +157,9 @@ const aichatSlice = createSlice({
     setThreadKeyId(state, action: PayloadAction<number>) {
       state.threadKeyId = action.payload;
     },
+    setArtifactType(state, action: PayloadAction<string | undefined>) {
+      state.artifactType = action.payload;
+    },
     removeUpdateMessage: (state, action: PayloadAction<number>) => {
       const modelUpdateMessageInfo = getUpdateMessageLocation(
         action.payload,
@@ -194,6 +199,18 @@ const aichatSlice = createSlice({
       );
       if (!event) return;
       event.status = action.payload.status;
+    },
+    updateRequestId: (
+      state,
+      action: PayloadAction<{updateId: string; requestId: number}>
+    ) => {
+      const event = state.chatEventsCurrent.find(
+        (event): event is ChatMessage =>
+          isPendingOrCompletedChatMessage(event) &&
+          event.updateId === action.payload.updateId
+      );
+      if (!event) return;
+      (event as CompletedChatMessage).requestId = action.payload.requestId;
     },
     setChatMessageSent: (state, action: PayloadAction<boolean>) => {
       state.hasSentMessage = action.payload;
@@ -443,6 +460,7 @@ export const {
   addEventToChatEventsCurrent,
   startSave,
   updateChatMessageStatus,
+  updateRequestId,
   setChatMessageSent,
   setSavedAiCustomizations,
   updateChatMessageFeedback,
@@ -468,6 +486,7 @@ export const {
   setThreadMessages,
   addThreadMessage,
   setThreadKeyId,
+  setArtifactType,
   setViewMode,
   addStagedFile,
   stagedFileUploadFinished,

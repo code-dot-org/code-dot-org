@@ -148,7 +148,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
     analyticsReporter.sendEvent(
       EVENTS.FINISH_ACCOUNT_PAGE_LOADED,
       {'user type': 'teacher', country: countryCode},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
 
     const fetchGdprData = async () => {
@@ -370,7 +370,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
         'educator role': educatorRole,
         country: countryCode,
       },
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
 
     // Log to Google Analytics
@@ -478,7 +478,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
             <GradeLevelChips
               inputLabel={locale.grades_taught()}
               values={selectedGrades}
-              setValues={vals => setSelectedGrades(vals)}
+              setValues={(vals: string[]) => setSelectedGrades(vals)}
               className={style.gradeSelectChips}
             />
           )}

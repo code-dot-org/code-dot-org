@@ -8,29 +8,11 @@ import {connect} from 'react-redux';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import styleConstants from '@cdo/apps/styleConstants';
 import color from '@cdo/apps/util/color';
-import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
-import firehoseClient from '../../metrics/firehose';
-
-import {recordImpression} from './impressionHelpers';
 import OwnedPlSectionsTable from './OwnedPlSectionsTable';
 import OwnedSectionsTable from './OwnedSectionsTable';
 import {beginEditingSection} from './teacherSectionsRedux';
-
-const recordOpenEditSectionDetails = (sectionId, studyGroup) => {
-  firehoseClient.putRecord(
-    {
-      study: 'teacher_dashboard_actions',
-      study_group: studyGroup,
-      event: 'open_edit_section_dashboard_header',
-      data_json: JSON.stringify({
-        section_id: sectionId,
-      }),
-    },
-    {includeUserId: true}
-  );
-};
 
 class OwnedSections extends React.Component {
   static propTypes = {
@@ -49,26 +31,10 @@ class OwnedSections extends React.Component {
   constructor(props) {
     super(props);
     this.onEditSection = this.onEditSection.bind(this);
-    if (experiments.isEnabled(experiments.TEACHER_DASHBOARD_SECTION_BUTTONS)) {
-      recordImpression('owned_sections_table_with_dashboard_header_buttons');
-    } else {
-      recordImpression('owned_sections_table_without_dashboard_header_buttons');
-    }
   }
 
   onEditSection(id) {
     this.props.beginEditingSection(id);
-    if (experiments.isEnabled(experiments.TEACHER_DASHBOARD_SECTION_BUTTONS)) {
-      recordOpenEditSectionDetails(
-        id,
-        'owned_sections_table_with_dashboard_header_buttons'
-      );
-    } else {
-      recordOpenEditSectionDetails(
-        id,
-        'owned_sections_table_without_dashboard_header_buttons'
-      );
-    }
   }
 
   // Wrapped to avoid passing event args

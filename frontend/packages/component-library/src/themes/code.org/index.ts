@@ -110,6 +110,31 @@ const theme = createTheme({
     em: {
       fontStyle: 'italic',
     },
+    // Label typography variants for form labels and breadcrumbs
+    label1: {
+      fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
+      fontSize: '1rem', // 16px
+      fontWeight: 600,
+      lineHeight: 1.48,
+    },
+    label2: {
+      fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
+      fontSize: '0.875rem', // 14px
+      fontWeight: 600,
+      lineHeight: 1.54,
+    },
+    label3: {
+      fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
+      fontSize: '0.75rem', // 12px
+      fontWeight: 600,
+      lineHeight: 1.64,
+    },
+    label4: {
+      fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
+      fontSize: '0.625rem', // 10px
+      fontWeight: 600,
+      lineHeight: 1.8,
+    },
   },
 });
 

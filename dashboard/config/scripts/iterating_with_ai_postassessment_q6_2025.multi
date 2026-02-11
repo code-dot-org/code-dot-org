@@ -7,7 +7,7 @@ wrong 'Blank screens use more battery power on mobile devices.'
 wrong 'AI tools cannot read blank screens to help the user.'
 wrong 'Horizontal scrolling is impossible on a blank screen.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 4

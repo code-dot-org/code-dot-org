@@ -1,18 +1,20 @@
-import React, {
-  Dispatch,
-  SetStateAction,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
+import {
+  setThreadId,
+  addThreadMessage,
+  setThreadTitle,
+  setArtifactType,
+} from '@cdo/apps/aichat/redux/slice';
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {PersonalizationData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import experiments from '@cdo/apps/util/experiments';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {
   AiInteractionStatus as Status,
   AiDiffContext,
+  AiDiffArtifactType,
 } from '@cdo/generated-scripts/sharedConstants';
 
 import {EVENTS, PLATFORMS} from '../metrics/AnalyticsConstants';
@@ -25,94 +27,41 @@ import AiDiffChatHeader from './AiDiffChatHeader';
 import AiDiffSuggestedPrompts from './AiDiffSuggestedPrompts';
 import {DEFAULT_THREAD_TITLE} from './constants';
 import {
-  contextPrompts,
-  APCSP_DUMMY_CREATE,
-  APCSP_DUMMY_EXAM,
+  EXIT_TICKET_PROMPT,
+  LESSON_HOOK_PROMPT,
   SUGGESTED_PROMPTS_FOR_SELECTION,
-  SUGGEST_CURRICULUM_PROMPT,
-  GET_STARTED_PROMPT,
-  CREATE_SECTION_PROMPT,
 } from './predefinedPrompts';
 import {ChatItem, ChatPrompt, Context, SuggestPromptsType} from './types';
 
 import style from './ai-differentiation.module.scss';
 
-const APCSP_PROMPTS = [APCSP_DUMMY_CREATE, APCSP_DUMMY_EXAM];
-
 const AIDIFF_THREADS_ENDPOINT = '/aidiff_threads';
 const AIDIFF_CHAT_COMPLETION = 'chat_completion';
 
-const getDefaultSuggestedPrompts = (
-  context: Context,
-  teacherHasSections: boolean,
-  teacherHasSectionWithCurriculum: boolean,
-  teacherHasSectionWithStudents: boolean
-) =>
-  context.type === AiDiffContext.GENERAL
-    ? SUGGESTED_PROMPTS_FOR_SELECTION['support'].suggestedPrompts.filter(
-        ({label}) => {
-          // Hide some new thread default prompts based on teacher's sections
-          if (
-            (label === GET_STARTED_PROMPT.label ||
-              label === CREATE_SECTION_PROMPT.label) &&
-            teacherHasSections &&
-            teacherHasSectionWithCurriculum &&
-            teacherHasSectionWithStudents
-          ) {
-            return false;
-          }
-
-          if (
-            label === SUGGEST_CURRICULUM_PROMPT.label &&
-            teacherHasSectionWithCurriculum
-          ) {
-            return false;
-          }
-
-          return true;
-        }
-      )
-    : SUGGESTED_PROMPTS_FOR_SELECTION['default'].suggestedPrompts;
-
 interface AiDiffChatProps {
   context: Context;
-  threadMessages?: ChatItem[];
-  threadTitle?: string;
-  setThreadTitle?: Dispatch<SetStateAction<string>>;
   scriptName?: string;
   chatResponseCallback?: () => void;
-  initialChatMessage?: string;
-  suggestedPrompts?: ChatPrompt[];
   hideChatHeader?: boolean;
-  curriculumCourses?: string[];
   threadFetchCallback?: () => void;
-  threadId?: number;
-  setThreadId?: Dispatch<SetStateAction<number>>;
-  initialThreadPrompt?: ChatPrompt | null;
-  setInitialThreadPrompt?: Dispatch<SetStateAction<ChatPrompt | null>>;
   personalizationData?: PersonalizationData;
 }
 
 const AiDiffChat: React.FC<AiDiffChatProps> = ({
   context,
-  threadMessages = [],
-  threadTitle = DEFAULT_THREAD_TITLE,
-  setThreadTitle,
   scriptName,
   chatResponseCallback = () => {},
-  initialChatMessage = SUGGESTED_PROMPTS_FOR_SELECTION['default']
-    .initialMessage,
-  suggestedPrompts,
   hideChatHeader = false,
-  curriculumCourses = [],
   threadFetchCallback = () => {},
-  threadId = 0,
-  setThreadId = () => {},
-  initialThreadPrompt = null,
-  setInitialThreadPrompt = () => {},
   personalizationData,
 }) => {
   const [userMessage, setUserMessage] = useState<string>('');
+  const [hasSentInitialPrompt, setHasSentInitialPrompt] =
+    useState<boolean>(false);
+  const [isWaitingForResponse, setIsWaitingForResponse] = useState(false);
+
+  const userMessageEditorRef = useRef<HTMLTextAreaElement>(null);
+
   const reportingData = React.useMemo(() => {
     return {
       chatContext: context,
@@ -120,57 +69,18 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
     };
   }, [context, scriptName]);
 
-  const [isWaitingForResponse, setIsWaitingForResponse] = useState(false);
-  const [localThreadId, setLocalThreadId] = useState(threadId);
-
-  const userMessageEditorRef = useRef<HTMLTextAreaElement>(null);
-
   const viewAsUserId = useAppSelector(
     state => state.progress?.viewAsUserId || undefined
   );
+  const threadId = useAppSelector(state => state.aichat.threadId);
+  const threadTitle = useAppSelector(state => state.aichat.threadTitle);
+  const initialThreadPrompt = useAppSelector(
+    state => state.aichat.initialThreadPrompt
+  );
+  const threadMessages = useAppSelector(state => state.aichat.threadMessages);
+  const artifactType = useAppSelector(state => state.aichat.artifactType);
 
-  const teacherSections = Object.values(
-    useAppSelector(state => state.teacherSections.sections)
-  );
-  const teacherHasSections = teacherSections.length > 0;
-  const teacherHasSectionWithCurriculum = !!teacherSections.find(
-    section => section.courseId !== null
-  );
-  const teacherHasSectionWithStudents = !!teacherSections.find(
-    section => section.studentCount > 0
-  );
-
-  const additionalPrompts: ChatPrompt[] = [];
-  if (curriculumCourses.includes('csp')) {
-    additionalPrompts.push(...APCSP_PROMPTS);
-  }
-  if (context.type === AiDiffContext.LEVEL) {
-    additionalPrompts.push(
-      contextPrompts.code.DEBUG_THIS_CODE,
-      contextPrompts.code.IMPROVE_THIS_CODE
-    );
-  }
-
-  const [messageHistory, setMessageHistory] = useState<ChatItem[]>(
-    threadMessages.length > 0
-      ? threadMessages
-      : [
-          {
-            role: Role.ASSISTANT,
-            chatMessageText: initialChatMessage,
-            status: Status.OK,
-          },
-          (
-            suggestedPrompts ||
-            getDefaultSuggestedPrompts(
-              context,
-              teacherHasSections,
-              teacherHasSectionWithCurriculum,
-              teacherHasSectionWithStudents
-            )
-          ).concat(additionalPrompts),
-        ]
-  );
+  const dispatch = useAppDispatch();
 
   const sendChatEvent = React.useCallback(
     (role: string, prompt: string, preset: boolean, thread: number) => {
@@ -195,21 +105,26 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
     (prompt: string, isPreset: boolean, presetChipText: string | null) => {
       setIsWaitingForResponse(true);
 
-      if (localThreadId !== 0) {
-        sendChatEvent(Role.USER, prompt, isPreset, localThreadId);
+      if (threadId !== 0) {
+        sendChatEvent(Role.USER, prompt, isPreset, threadId);
       }
 
       const endpoint =
-        localThreadId === 0
+        threadId === 0
           ? `${AIDIFF_THREADS_ENDPOINT}`
-          : `${AIDIFF_THREADS_ENDPOINT}/${localThreadId}/${AIDIFF_CHAT_COMPLETION}`;
+          : `${AIDIFF_THREADS_ENDPOINT}/${threadId}/${AIDIFF_CHAT_COMPLETION}`;
 
       const body = JSON.stringify({
         inputText: prompt,
         isPreset,
         presetChipText,
-        context,
+        ...(threadId === 0 ? {context} : {}),
         ...(context.type === AiDiffContext.LEVEL ? {viewAsUserId} : {}),
+        ...(artifactType &&
+        experiments.isEnabled(experiments.AI_ARTIFACT) &&
+        !isPreset
+          ? {artifactType}
+          : {}),
       });
 
       HttpClient.post(endpoint, body, true, {
@@ -226,7 +141,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
 
           // logging here because on the first user message the threadID is 0
           // we only get a threadID initialized in the response
-          if (localThreadId === 0) {
+          if (threadId === 0) {
             threadFetchCallback();
             sendChatEvent(Role.USER, prompt, isPreset, json.thread_id);
           }
@@ -238,10 +153,9 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
             json.thread_id
           );
           if (json.thread_id) {
-            setLocalThreadId(json.thread_id);
-            setThreadId(json.thread_id);
+            dispatch(setThreadId(json.thread_id));
           }
-          setMessageHistory(prevMessages => [...prevMessages, newAiMessage]);
+          dispatch(addThreadMessage(newAiMessage));
         })
         .catch(error => console.log(error))
         .finally(() => {
@@ -253,14 +167,14 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
         });
     },
     [
-      localThreadId,
+      threadId,
       context,
       viewAsUserId,
       sendChatEvent,
+      dispatch,
       threadFetchCallback,
-      setLocalThreadId,
       chatResponseCallback,
-      setThreadId,
+      artifactType,
     ]
   );
 
@@ -276,14 +190,14 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
         setThreadTitle &&
         (!threadTitle || threadTitle === DEFAULT_THREAD_TITLE)
       ) {
-        setThreadTitle(message.slice(0, 100));
+        dispatch(setThreadTitle(message.slice(0, 100)));
       }
 
-      setMessageHistory(prevMessages => [...prevMessages, newUserMessage]);
+      dispatch(addThreadMessage(newUserMessage));
       getAIResponse(message, false, null);
       setUserMessage('');
     },
-    [threadTitle, getAIResponse, setThreadTitle]
+    [threadTitle, dispatch, getAIResponse]
   );
 
   const onPromptSelect = React.useCallback(
@@ -292,51 +206,39 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
         setThreadTitle &&
         (!threadTitle || threadTitle === DEFAULT_THREAD_TITLE)
       ) {
-        setThreadTitle(prompt.label);
+        dispatch(setThreadTitle(prompt.label));
       }
-
       if (prompt.response !== undefined) {
-        setMessageHistory(prevMessages => [
-          ...prevMessages,
-          {
+        dispatch(
+          addThreadMessage({
             role: Role.ASSISTANT,
             chatMessageText: prompt.response ?? '',
             status: Status.OK,
-          },
-        ]);
+          })
+        );
       }
       if (prompt.followUpPrompts !== undefined) {
-        setMessageHistory(prevMessages => [
-          ...prevMessages,
-          prompt.followUpPrompts ?? [],
-        ]);
+        dispatch(addThreadMessage(prompt.followUpPrompts));
       }
       if (!prompt.followUpPrompts && !prompt.response) {
         getAIResponse(prompt.prompt, true, prompt.label);
       }
+      if (prompt === EXIT_TICKET_PROMPT) {
+        dispatch(setArtifactType(AiDiffArtifactType.EXIT_TICKET));
+      }
+      if (prompt === LESSON_HOOK_PROMPT) {
+        dispatch(setArtifactType(AiDiffArtifactType.LESSON_HOOK));
+      }
     },
-    [getAIResponse, setThreadTitle, threadTitle]
+    [dispatch, getAIResponse, threadTitle]
   );
 
   React.useEffect(() => {
-    if (initialThreadPrompt && threadMessages.length === 0 && threadId === 0) {
-      const newUserMessage = {
-        role: Role.USER,
-        chatMessageText: initialThreadPrompt.prompt,
-        status: Status.OK,
-      };
-
-      setMessageHistory(prevMessages => [...prevMessages, newUserMessage]);
+    if (initialThreadPrompt && threadId === 0 && !hasSentInitialPrompt) {
+      setHasSentInitialPrompt(true);
       onPromptSelect(initialThreadPrompt);
-      setInitialThreadPrompt(null);
     }
-  }, [
-    initialThreadPrompt,
-    threadMessages,
-    threadId,
-    onPromptSelect,
-    setInitialThreadPrompt,
-  ]);
+  }, [initialThreadPrompt, threadId, hasSentInitialPrompt, onPromptSelect]);
 
   const onSuggestPrompts = (promptType: SuggestPromptsType) => {
     const aiInitialSuggestionsMessage = {
@@ -348,11 +250,8 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
     const newSuggestions =
       SUGGESTED_PROMPTS_FOR_SELECTION[promptType].suggestedPrompts;
 
-    setMessageHistory(prevMessages => [
-      ...prevMessages,
-      aiInitialSuggestionsMessage,
-      newSuggestions,
-    ]);
+    dispatch(addThreadMessage(aiInitialSuggestionsMessage));
+    dispatch(addThreadMessage(newSuggestions));
   };
 
   // Scroll to bottom of content when a new message comes in
@@ -361,24 +260,24 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
     if (chatWindowRef.current) {
       chatWindowRef.current?.scrollIntoView();
     }
-  }, [messageHistory]);
+  }, [threadMessages]);
 
   return (
     <div className={style.chatContainer}>
       {!hideChatHeader && (
         <AiDiffChatHeader
           onSuggestPrompts={onSuggestPrompts}
-          messages={messageHistory}
+          messages={threadMessages}
           threadTitle={threadTitle}
           personalizationData={personalizationData}
         />
       )}
       <div className={style.chatContent}>
-        {messageHistory.map((item: ChatItem, id: number) =>
+        {threadMessages.map((item: ChatItem, id: number) =>
           Array.isArray(item) ? (
             <AiDiffSuggestedPrompts
               suggestedPrompts={item}
-              isLatest={id === messageHistory.length - 1}
+              isLatest={id === threadMessages.length - 1}
               onSubmit={onPromptSelect}
               key={id}
             />

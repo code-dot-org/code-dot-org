@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
 import AddLevelTableRow from '@cdo/apps/levelbuilder/lesson-editor/AddLevelTableRow';
-import PaginationWrapper from '@cdo/apps/templates/PaginationWrapper';
+import PaginationWrapper from '@cdo/apps/sharedComponents/PaginationWrapper';
 import color from '@cdo/apps/util/color';
 
 export default class AddLevelTable extends Component {

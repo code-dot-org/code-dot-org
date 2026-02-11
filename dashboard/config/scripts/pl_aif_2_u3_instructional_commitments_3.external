@@ -11,6 +11,11 @@ markdown <<MARKDOWN
 
 #### As part of this unit’s *instructional commitments*, students develop the habits and mindsets that connect *computational thinking, human-centered design, and responsible AI use*.
 
+<div style="clear:both;"></div>
+
+
+
+
 
 <div style="clear:both;"></div>
 
@@ -361,7 +366,8 @@ markdown <<MARKDOWN
 
 <hr>
 
-
-
+>#### Before you move on, take a moment to think about:
+>- #### How these ideas will shape the way students design, build, and collaborate with AI in their web apps.
+>- #### Which practices you want to intentionally highlight or reinforce as students work through this unit?
 
 MARKDOWN

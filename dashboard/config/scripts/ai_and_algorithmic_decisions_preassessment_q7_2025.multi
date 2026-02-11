@@ -7,7 +7,7 @@ wrong 'To hide the data so no one can see how the site works'
 right 'To reuse the same logic easily without rewriting it for each city'
 wrong 'To prevent users from changing the city they want to check'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 4

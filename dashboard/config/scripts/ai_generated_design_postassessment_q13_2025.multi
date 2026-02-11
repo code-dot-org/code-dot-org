@@ -7,7 +7,7 @@ right 'Increase text size and color contrast so information is easier to read fo
 wrong 'Keep the design the same since the layout is already organized'
 wrong 'Reduce the number of pages so users can find information faster'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lessons 2, 11

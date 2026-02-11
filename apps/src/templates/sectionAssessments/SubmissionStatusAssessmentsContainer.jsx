@@ -36,7 +36,6 @@ const CSV_SUBMISSION_STATUS_HEADERS = [
 
 class SubmissionStatusAssessmentsContainer extends Component {
   static propTypes = {
-    onClickDownload: PropTypes.func.isRequired,
     // from redux
     localeCode: PropTypes.string,
     studentExportableData: PropTypes.arrayOf(studentExportableDataPropType),
@@ -60,7 +59,6 @@ class SubmissionStatusAssessmentsContainer extends Component {
             filename="assessments-submission-status.csv"
             data={this.props.studentExportableData}
             headers={CSV_SUBMISSION_STATUS_HEADERS}
-            onClick={this.props.onClickDownload}
             style={styles.button}
             className={className}
           >
