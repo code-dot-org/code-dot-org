@@ -130,14 +130,17 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
 
   return (
     <div ref={containerRef} className={styles.container}>
-      <div
-        className={styles.instructionsDrawer}
-        style={{height: instructionsHeight}}
-      >
-        <div className={styles.instructionsScrollArea}>
-          <div ref={instructionsContentRef}>{instructionsContent}</div>
+      {!isCollapsed && (
+        <div
+          id="instructions-drawer"
+          className={styles.instructionsDrawer}
+          style={{height: instructionsHeight}}
+        >
+          <div className={styles.instructionsScrollArea}>
+            <div ref={instructionsContentRef}>{instructionsContent}</div>
+          </div>
         </div>
-      </div>
+      )}
       <div
         className={styles.toggleButtonContainer}
         style={{top: instructionsHeight}}
@@ -174,7 +177,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
             aiTutorChatButtonData={aiTutorChatButtonData}
             aiTutorSystemPromptName={aiTutorSystemPromptName}
             aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
-            hasCollapsedInstructionsDrawer={isCollapsed}
+            hasInstructionsDrawer={true}
           />
         </div>
       </div>
