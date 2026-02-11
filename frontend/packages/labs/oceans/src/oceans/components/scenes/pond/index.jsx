@@ -201,8 +201,8 @@ let UnwrappedPond = class Pond extends React.Component {
             onClick={e => this.getMatchingFishSet(e, true)}
             aria-label={I18n.t('switchToMatchingItems')}
             style={{
-              ...styles.recallIcon,
-              ...{borderTopLeftRadius: 8, borderBottomLeftRadius: 8},
+              ...styles.toggleIcon,
+              ...styles.matchingIconLeft,
               ...(state.showRecallFish ? {} : styles.bgGreen)
             }}
           >
@@ -216,8 +216,8 @@ let UnwrappedPond = class Pond extends React.Component {
             onClick={e => this.getMatchingFishSet(e, false)}
             aria-label={I18n.t('switchToNonMatchingItems')}
             style={{
-              ...styles.recallIcon,
-              ...{borderTopRightRadius: 8, borderBottomRightRadius: 8},
+              ...styles.toggleIcon,
+              ...styles.nonMatchingIconRight,
               ...(state.showRecallFish ? styles.bgRed : {})
             }}
           >

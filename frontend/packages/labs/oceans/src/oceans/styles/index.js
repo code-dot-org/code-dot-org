@@ -414,12 +414,24 @@ const styles = {
     alignItems: 'center',
     direction: 'ltr'
   },
-  recallIcon: {
+  toggleIcon: {
     cursor: 'pointer',
     height: '100%',
     border: 'none',
     padding: '10px',
     margin: 0
+  },
+  matchingIconLeft: {
+    borderTopLeftRadius: 8,
+    borderBottomLeftRadius: 8,
+    borderTopRightRadius: 0,
+    borderBottomRightRadius: 0
+  },
+  nonMatchingIconRight: {
+    borderTopLeftRadius: 0,
+    borderBottomLeftRadius: 0,
+    borderTopRightRadius: 8,
+    borderBottomRightRadius: 8
   },
   infoIconContainer: {
     position: 'absolute',
