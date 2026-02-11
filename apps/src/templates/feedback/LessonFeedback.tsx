@@ -124,9 +124,9 @@ function LessonFeedback({
           disabled={!data.lessonLink}
         />
       </div>
-      <hr />
+      <hr className={styles.lessonFeedbackDivider} />
       <div className={styles.lessonFeedbackBox}>{feedbackText}</div>
-      <hr />
+      <hr className={styles.lessonFeedbackDivider} />
       {/* TODO: Add in real data here */}
       <LessonRecommendedAction
         resourceComment="Review the lesson and complete the exercises to improve your understanding."
