@@ -4,65 +4,23 @@ import React from 'react';
 
 import LessonFeedbackContainer from '@cdo/apps/templates/feedback/LessonFeedbackContainer';
 import LevelFeedbackContainer from '@cdo/apps/templates/feedback/LevelFeedbackContainer';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import {levelFeedbackShape} from './types';
 
+import styles from './LessonFeedback.module.scss';
 function AllFeedbacks({feedbacksByLevel}) {
   const [showLessonFeedback, setShowLessonFeedback] = React.useState(false);
 
   const selectedTab = showLessonFeedback ? 'lesson' : 'level';
 
-  // Dummy lesson feedback data for testing
-  const dummyLessonFeedbacks = [
-    {
-      lessonName: 'Introduction to Loops',
-      lessonNum: 1,
-      linkToLesson: 'https://studio.code.org/s/csp1/lessons/1',
-      feedbacks: [
-        {
-          id: 1,
-          lesson_id: 1,
-          submitted_feedback:
-            'Great work on understanding the concept of loops! You showed excellent problem-solving skills when working through the repeat block challenges. Keep practicing with nested loops to strengthen your understanding.',
-          submitted_at: '2024-01-20T14:30:00Z',
-        },
-      ],
-    },
-    {
-      lessonName: 'Conditionals and If Statements',
-      lessonNum: 3,
-      linkToLesson: 'https://studio.code.org/s/csp1/lessons/3',
-      feedbacks: [
-        {
-          id: 2,
-          lesson_id: 3,
-          submitted_feedback:
-            'You demonstrated a solid understanding of conditional logic. Your solution to the boolean expression problem was particularly creative. Consider exploring more complex conditional scenarios in the next lesson.',
-          submitted_at: '2024-01-18T10:15:00Z',
-        },
-      ],
-    },
-    {
-      lessonName: 'Variables and Data Types',
-      lessonNum: 5,
-      linkToLesson: 'https://studio.code.org/s/csp1/lessons/5',
-      feedbacks: [
-        {
-          id: 3,
-          lesson_id: 5,
-          submitted_feedback:
-            'Nice progress on working with variables! You correctly identified when to use different data types. Try to focus on variable naming conventions to make your code more readable.',
-          submitted_at: '2024-01-15T16:45:00Z',
-        },
-      ],
-    },
-  ];
+  const studentId = useAppSelector(state => state.currentUser.userId);
+  //2512
 
-  // TO DO update the hardcoded student Id
   return (
     <div>
-      <h1 style={styles.header}>{i18n.feedbackAll()}</h1>
+      <h1 className={styles.pageHeader}>{i18n.feedbackAll()}</h1>
       <SegmentedButtons
         selectedButtonValue={selectedTab}
         size="s"
@@ -81,25 +39,15 @@ function AllFeedbacks({feedbacksByLevel}) {
         onChange={() => {
           setShowLessonFeedback(!showLessonFeedback);
         }}
+        className={styles.segmentedButtons}
       />
       {!showLessonFeedback && (
         <LevelFeedbackContainer feedbacksByLevel={feedbacksByLevel} />
       )}
-      {showLessonFeedback && (
-        <LessonFeedbackContainer
-          feedbacksByLesson={dummyLessonFeedbacks}
-          studentId={2512}
-        />
-      )}
+      {showLessonFeedback && <LessonFeedbackContainer studentId={studentId} />}
     </div>
   );
 }
-
-const styles = {
-  header: {
-    marginBottom: 20,
-  },
-};
 
 AllFeedbacks.propTypes = {
   feedbacksByLevel: PropTypes.arrayOf(levelFeedbackShape),
