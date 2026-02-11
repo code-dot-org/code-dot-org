@@ -1,7 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import ProjectCardRow from '@cdo/apps/templates/projects/ProjectCardRow';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import cschelloworldAnimalsImg from '@cdo/static/csc/helloworld/cschelloworld_animals.gif';
 import cschelloworldEmojiImg from '@cdo/static/csc/helloworld/cschelloworld_emoji.gif';
 import cschelloworldHappyfood2Img from '@cdo/static/csc/helloworld/cschelloworld_happyfood2.gif';
@@ -47,7 +47,7 @@ const HELLOWORLD_PROJECTS = [
 
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.getElementById('helloworld_student_projects');
-  ReactDOM.render(
+  createReactRoot(
     <ProjectCardRow
       galleryType="public"
       showFullThumbnail={true}

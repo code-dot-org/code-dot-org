@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-02-10T18:30:37.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Invalid Data\n\n**Invalid data** is any information sent to or from a server that doesn't follow the specific rules, format, or type expected. For example, putting a phone number in a field meant for a home address.",
+        "imageUrl": "https://images.code.org/aa8a0fdf611519f49900e5090c804cca-Screenshot 2026-02-10 at 1.42.41 PM.png",
+        "key": "designing-reliable-apps-lesson2-level1-test_2025-pilot-e834eace-42c5-4df8-990e-d9987f293a0f",
+        "layout": "text-top-left"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2026-02-10T18:30:37.496+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson7-vocab1-2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson7-vocab1-2025-pilot\"},{\"changed_at\":\"2026-02-10 18:30:51 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-10 18:31:11 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-10 20:40:15 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-10 20:43:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

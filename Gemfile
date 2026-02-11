@@ -147,6 +147,7 @@ gem 'open_uri_redirections', require: false
 # Optimizes copy-on-write memory usage with GC before web-application fork.
 gem 'nakayoshi_fork'
 
+gem 'jmespath', '~> 1.4' # Used by our pumactl wrapper shell script to filter JSON output.
 gem 'puma', '~> 7.2'
 gem 'puma_worker_killer'
 gem 'sd_notify' # required for Puma to support systemd's Type=notify

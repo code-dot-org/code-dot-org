@@ -8,6 +8,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import SchoolInfoConfirmationDialog from '@cdo/apps/schoolInfo/SchoolInfoConfirmationDialog';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -21,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.removeChild(mountPoint);
   }
 
-  ReactDOM.render(
+  createReactRoot(
     <SchoolInfoConfirmationDialog scriptData={scriptData} onClose={unmount} />,
     mountPoint
   );

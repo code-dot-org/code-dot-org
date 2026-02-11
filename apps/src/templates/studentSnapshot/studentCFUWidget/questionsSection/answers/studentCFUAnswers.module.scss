@@ -53,6 +53,38 @@
     border: 1px solid var(--borders-neutral-primary, #D4DAE1);
     background: var(--background-neutral-primary, #FFF);
   }
+
+  .freeResponseAiInsightContainer {
+    display: flex;
+    padding: 0.75rem;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 0 0 0.25rem 0.25rem;
+    border-right: 1px solid var(--borders-neutral-primary, #D4DAE1);
+    border-bottom: 1px solid var(--borders-neutral-primary, #D4DAE1);
+    border-left: 1px solid var(--borders-neutral-primary, #D4DAE1);
+    background: var(--background-brand-aqua-extra-light, #EBFFFE);
+
+    .freeResponseAiInsight {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.25rem;
+      flex: 1 0 0;
+
+      .freeResponseAiInsightLabel {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        align-self: stretch;
+
+        i {
+          color: var(--background-brand-aqua-strong);
+        }
+      }
+    }
+  }
 }
 
 .matchAnswerContainer {

@@ -162,6 +162,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
         }
         backpackProps={backpackProps}
         onImageFlagged={onImageFlagged}
+        hasInstructionsDrawer={appName === 'weblab2'}
       />
     </div>
   );

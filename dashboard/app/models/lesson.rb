@@ -648,6 +648,15 @@ class Lesson < ApplicationRecord
     }
   end
 
+  def summarize_for_special_level_types
+    {
+      name: name,
+      rubric_id: rubric&.id,
+      script_name: script&.name,
+      id: id
+    }
+  end
+
   def summarize_for_lab2_properties(current_user = nil, unit_group_unit: nil)
     properties = {}
     script_levels.each do |script_level|

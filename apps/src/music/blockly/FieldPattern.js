@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import color from '@cdo/apps/util/color';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 
 import {DEFAULT_PATTERN_LENGTH} from '../constants';
@@ -109,7 +110,7 @@ class FieldPattern extends BlocklyCore.Field {
     if (!this.newDiv_) {
       return;
     }
-    ReactDOM.render(
+    createReactRoot(
       <InstrumentGrid
         editorType="drums"
         // Make a copy of the value object so that we don't overwrite Blockly's data.
