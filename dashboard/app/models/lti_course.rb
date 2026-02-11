@@ -15,11 +15,11 @@
 #
 # Indexes
 #
-#  fk_rails_19886eb632                         (lti_deployment_id)
-#  index_lti_courses_on_deleted_at             (deleted_at)
-#  index_lti_courses_on_lti_integration_id     (lti_integration_id)
-#  index_on_context_id_and_lti_integration_id  (context_id,lti_integration_id)
-#  index_on_course_id_and_lti_integration_id   (course_id,lti_integration_id)
+#  fk_rails_19886eb632                               (lti_deployment_id)
+#  index_lti_courses_on_context_integration_deleted  (context_id,lti_integration_id,deleted_at) UNIQUE
+#  index_lti_courses_on_deleted_at                   (deleted_at)
+#  index_lti_courses_on_lti_integration_id           (lti_integration_id)
+#  index_on_course_id_and_lti_integration_id         (course_id,lti_integration_id)
 #
 class LtiCourse < ApplicationRecord
   acts_as_paranoid
