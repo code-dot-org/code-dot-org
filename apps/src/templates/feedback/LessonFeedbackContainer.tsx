@@ -5,7 +5,7 @@ import i18n from '@cdo/locale';
 
 // In the future we should delete the saved_feedback, but as of now there is no "submitted" feedback
 interface LessonFeedbackData {
-  id?: number;
+  id: number;
   submitted_feedback?: string;
   lesson_id: number;
   saved_feedback?: string;
@@ -58,10 +58,10 @@ function LessonFeedbackContainer({studentId}: LessonFeedbackContainerProps) {
       )}
       {fetchedFeedback &&
         fetchedFeedback.length > 0 &&
-        fetchedFeedback.map((lessonFeedback, i) => {
+        fetchedFeedback.map(lessonFeedback => {
           return (
             <LessonFeedback
-              key={i}
+              key={lessonFeedback.id}
               feedbackText={lessonFeedback?.saved_feedback}
               lessonId={lessonFeedback.lesson_id}
               teacherId={lessonFeedback.teacher_id}

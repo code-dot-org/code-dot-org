@@ -28,7 +28,7 @@
 
 .lessonFeedbackDetails {
   margin-bottom: 0;
-  color: #666;
+  color: var(--text-neutral-primary, #292f36);
 }
 
 .lessonFeedbackButton {
@@ -37,9 +37,8 @@
 
 .lessonFeedbackBox {
   padding: 16px;
-  border: 1px solid #ddd;
   border-radius: 8px;
-  background-color: #f9f9f9;
+  background-color: var(--background-neutral-secondary, #f0f2f5);
   line-height: 1.5;
   width: 100%;
   box-sizing: border-box;
