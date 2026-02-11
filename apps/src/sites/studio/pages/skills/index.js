@@ -1,12 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import SkillsContainer from '@cdo/apps/levelbuilder/skills/SkillsContainer';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
   const skillsData = getScriptData('skillsData');
-  ReactDOM.render(
+  createReactRoot(
     <SkillsContainer
       canEditSkills={skillsData.canEditSkills}
       skills={skillsData.skills}

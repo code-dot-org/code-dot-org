@@ -31,19 +31,18 @@ class StudentSnapshotsController < ApplicationController
     lesson_id = params[:lesson_id]
     unit_id = params[:unit_id]
     student_id = params[:student_id]
-
-    section_id = nil
-    teacher_id = nil
-    if student_id && unit_id
-      student = User.find_by(id: student_id)
-      if student
-        section = student.sections_as_student.joins(:script).where(scripts: {id: unit_id}).first
-        section_id = section&.id
-        teacher_id = section&.teacher&.id
-      end
-    end
+    teacher_id = current_user.id
+    section_id = params[:section_id]
 
     return render json: {error: "Missing required parameters"}, status: :bad_request unless lesson_id && unit_id && student_id && section_id
+
+    # Validate that the section belongs to the current teacher
+    section = Section.find_by(id: section_id)
+    return render json: {error: "Section not found"}, status: :not_found unless section
+
+    unless section.user_id == teacher_id || section.instructors.exists?(id: teacher_id)
+      return render json: {error: "Unauthorized access to section"}, status: :forbidden
+    end
 
     response = AiStudentSnapshotHelper.generate_lesson_feedback(unit_id, lesson_id, teacher_id, student_id, section_id)
 

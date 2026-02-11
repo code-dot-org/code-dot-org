@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import AllVocabulariesEditor from '@cdo/apps/levelbuilder/AllVocabulariesEditor';
@@ -7,6 +6,7 @@ import vocabulariesEditor, {
   initVocabularies,
 } from '@cdo/apps/levelbuilder/lesson-editor/vocabulariesEditorRedux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(function () {
@@ -20,7 +20,7 @@ $(document).ready(function () {
   const store = getStore();
   store.dispatch(initVocabularies(vocabularies || []));
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <AllVocabulariesEditor
         vocabularies={vocabularies}

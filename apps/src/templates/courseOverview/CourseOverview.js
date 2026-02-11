@@ -216,6 +216,7 @@ class CourseOverview extends Component {
           showAssignButton={showAssignButton}
           title={title}
           participantAudience={participantAudience}
+          aiChatToolsDependency={aiChatToolsDependency}
         />
         {experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
           viewAsTeacher &&
@@ -245,6 +246,7 @@ class CourseOverview extends Component {
             courseVersionId={courseVersionId}
             showAssignButton={showAssignButton}
             participantAudience={participantAudience}
+            aiChatToolsDependency={aiChatToolsDependency}
           />
         ))}
       </div>

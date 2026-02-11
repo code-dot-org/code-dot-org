@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
@@ -28,6 +27,7 @@ import {
   setPageType,
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
 import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
@@ -40,7 +40,6 @@ function showCourseOverview() {
   const courseSummary = scriptData.course_summary;
   const isInstructor = scriptData.is_instructor;
   const userId = scriptData.user_id;
-
   const store = getStore();
 
   if (courseSummary.has_verified_resources) {
@@ -81,7 +80,7 @@ function showCourseOverview() {
   }
 
   // Eventually we want to do this all via redux
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <CourseOverview
         name={courseSummary.name}
@@ -121,7 +120,7 @@ function displayDifferentiationChat(scriptData) {
   );
 
   if (aiDiffFabMountPoint && experiments.isEnabled('ai-differentiation')) {
-    ReactDOM.render(
+    createReactRoot(
       <Provider store={getStore()}>
         <AiDiffFloatingActionButton
           context={{
