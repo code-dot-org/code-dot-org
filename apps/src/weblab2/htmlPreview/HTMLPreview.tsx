@@ -55,10 +55,6 @@ export const HTMLPreview: React.FC = () => {
   const levelId = levelProperties.id;
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const previewContainerRef = useRef<HTMLDivElement | null>(null);
-  const networkRequestData = useAppSelector(
-    state => state.weblab2Network.requests
-  );
-  console.log({networkRequestData});
   const previewUrl = useMemo(() => {
     const re = /([-.]?studio)?\.?(cdn-)?code.org/i;
     const environmentKey = location.hostname.replace(re, '');
