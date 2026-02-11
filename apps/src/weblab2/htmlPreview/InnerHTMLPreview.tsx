@@ -131,6 +131,11 @@ const InnerHTMLPreview = () => {
       ) {
         // Handle network response message
         console.log({networkResponseEvent: event});
+      } else if (
+        event.data.type === ProjectServiceWorkerMessageType.CSP_VIOLATION
+      ) {
+        console.log('CSP Violation - Blocked URI:', event.data.blockedURI);
+        console.log('Violated directive:', event.data.violatedDirective);
       }
     };
     return () => {

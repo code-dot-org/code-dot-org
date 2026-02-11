@@ -59,6 +59,29 @@ export const updateLinksToHtmlFiles = (doc: Document, fullFileName: string) => {
   });
 };
 
+// Adds a script to the document that listens for CSP violations and broadcasts them
+// via BroadcastChannel so the parent can be notified.
+export const addCSPViolationListenerToDocument = (
+  doc: Document,
+  broadcastChannelName: string
+) => {
+  const script = doc.createElement('script');
+  script.textContent =
+    'document.addEventListener("securitypolicyviolation",function(e){' +
+    'var bc=new BroadcastChannel("' +
+    broadcastChannelName +
+    '");' +
+    'bc.postMessage({type:"CSP_VIOLATION",blockedURI:e.blockedURI,violatedDirective:e.violatedDirective});' +
+    'bc.close();' +
+    '});';
+  const head = doc.querySelector('head');
+  if (head) {
+    head.insertBefore(script, head.firstChild);
+  } else {
+    doc.documentElement.insertBefore(script, doc.documentElement.firstChild);
+  }
+};
+
 // This adds a base tag to the header of the given document, setting its href to the provided baseHref.
 // If a base tag already exists, its href is updated.
 export const addBaseTagToDocument = (doc: Document, baseHref: string) => {
