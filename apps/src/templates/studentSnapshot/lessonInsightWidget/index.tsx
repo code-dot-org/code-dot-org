@@ -107,8 +107,18 @@ const LessonInsightWidget: React.FC<LessonInsightWidgetProps> = ({
         },
       ]}
     >
-      {error && <Typography color="error">{error}</Typography>}
-      {insightData && (
+      {error && (
+        <div className={styles.widgetBody}>
+          <div className={styles.errorContainer}>
+            <FontAwesomeV6Icon
+              iconName="triangle-exclamation"
+              iconStyle="regular"
+            />
+            <Typography color="error">{error}</Typography>
+          </div>
+        </div>
+      )}
+      {insightData && !error && (
         <div className={styles.widgetBody}>
           <div>
             <div className={styles.insightText}>
