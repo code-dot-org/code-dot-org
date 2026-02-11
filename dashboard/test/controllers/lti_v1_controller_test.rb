@@ -667,7 +667,14 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
     Services::Lti.expects(:sync_course_roster).returns(@sync_course_result_with_changes)
 
-    get '/lti/v1/sync_course', params: {lti_integration_id: lti_integration.id, deployment_id: 'foo', context_id: lti_course.context_id, rlid: lti_course.resource_link_id, nrps_url: lti_course.nrps_url}
+    get '/lti/v1/sync_course', params: {
+      lti_integration_id: lti_integration.id,
+      deployment_id: lti_course.lti_deployment_id,
+      context_id: lti_course.context_id,
+      rlid: lti_course.resource_link_id,
+      nrps_url: lti_course.nrps_url,
+    }
+
     assert_response :ok
   end
 
@@ -681,7 +688,13 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
     Services::Lti.expects(:sync_course_roster).returns(@sync_course_result_with_changes)
 
-    get '/lti/v1/sync_course', params: {lti_integration_id: lti_integration.id, deployment_id: 'foo', context_id: lti_course.context_id, rlid: new_resource_id, nrps_url: lti_course.nrps_url}
+    get '/lti/v1/sync_course', params: {
+      lti_integration_id: lti_integration.id,
+      deployment_id: lti_course.lti_deployment_id,
+      context_id: lti_course.context_id,
+      rlid: new_resource_id,
+      nrps_url: lti_course.nrps_url,
+    }
 
     lti_course.reload
     assert_response :ok
@@ -695,9 +708,11 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
     user = create(:teacher, :with_lti_auth)
     lti_integration = create(:lti_integration)
+    lti_deployment = create(:lti_deployment, lti_integration:)
     create(
       :lti_course,
       lti_integration: lti_integration,
+      lti_deployment:,
       context_id: lti_course_context_id,
       resource_link_id: lti_course_resource_link_id,
       nrps_url: lti_course_nrps_url
@@ -712,7 +727,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_no_difference 'LtiCourse.count' do
       get '/lti/v1/sync_course', params: {
         lti_integration_id: lti_integration.id,
-        deployment_id: 'foo',
+        deployment_id: lti_deployment.id,
         context_id: lti_course_context_id,
         rlid: lti_course_resource_link_id,
         nrps_url: lti_course_nrps_url
@@ -811,7 +826,14 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
     Services::Lti.expects(:sync_course_roster).returns(@sync_course_result_no_changes)
 
-    get '/lti/v1/sync_course', params: {lti_integration_id: lti_integration.id, deployment_id: 'foo', context_id: lti_course.context_id, rlid: lti_course.resource_link_id, nrps_url: lti_course.nrps_url}
+    get '/lti/v1/sync_course', params: {
+      lti_integration_id: lti_integration.id,
+      deployment_id: lti_course.lti_deployment_id,
+      context_id: lti_course.context_id,
+      rlid: lti_course.resource_link_id,
+      nrps_url: lti_course.nrps_url,
+    }
+
     assert_response :redirect
   end
 
@@ -844,7 +866,14 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     # creating the first Section and LtiSection in the course sync method.
     Services::Lti.expects(:sync_section_roster).raises(Exception, 'sync error')
 
-    get '/lti/v1/sync_course', params: {lti_integration_id: lti_integration.id, deployment_id: 'foo', context_id: lti_course.context_id, rlid: lti_course.resource_link_id, nrps_url: lti_course.nrps_url}
+    get '/lti/v1/sync_course', params: {
+      lti_integration_id: lti_integration.id,
+      deployment_id: lti_course.lti_deployment_id,
+      context_id: lti_course.context_id,
+      rlid: lti_course.resource_link_id,
+      nrps_url: lti_course.nrps_url
+    }
+
     assert_empty lti_course.lti_sections
     assert_response :internal_server_error
   end
@@ -901,7 +930,14 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     Services::Lti.expects(:parse_nrps_response).never
     Services::Lti.expects(:sync_course_roster).never
 
-    get '/lti/v1/sync_course', params: {lti_integration_id: lti_integration.id, deployment_id: 'foo', context_id: lti_course.context_id, rlid: lti_course.resource_link_id, nrps_url: lti_course.nrps_url}
+    get '/lti/v1/sync_course', params: {
+      lti_integration_id: lti_integration.id,
+      deployment_id: lti_course.lti_deployment_id,
+      context_id: lti_course.context_id,
+      rlid: lti_course.resource_link_id,
+      nrps_url: lti_course.nrps_url,
+    }
+
     assert_response :redirect
   end
 
