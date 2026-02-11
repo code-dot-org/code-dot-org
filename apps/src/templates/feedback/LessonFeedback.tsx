@@ -12,13 +12,12 @@ import styles from './LessonFeedback.module.scss';
 interface LessonFeedbackProps {
   feedbackText: string | undefined;
   lessonId: number;
-  teacherId: number;
+  teacherName: string | null;
   submittedAtDate: string | Date;
 }
 
 interface LessonData {
   lessonName: string;
-  teacherName: string;
   lessonLink: string;
   isLoading: boolean;
   error: string | null;
@@ -28,11 +27,10 @@ function LessonFeedback({
   feedbackText,
   lessonId,
   submittedAtDate,
-  teacherId,
+  teacherName,
 }: LessonFeedbackProps) {
   const [data, setData] = useState<LessonData>({
     lessonName: '',
-    teacherName: '',
     lessonLink: '',
     isLoading: true,
     error: null,
@@ -41,19 +39,14 @@ function LessonFeedback({
   useEffect(() => {
     async function fetchData() {
       try {
-        const [lessonResponse, teacherResponse] = await Promise.all([
+        const [lessonResponse] = await Promise.all([
           fetch(`/lessons/${lessonId}/lesson_feedback_data`),
-          fetch(`/dashboardapi/v1/users/${teacherId}/name`),
         ]);
 
         const lessonData = lessonResponse.ok ? await lessonResponse.json() : {};
-        const teacherData = teacherResponse.ok
-          ? await teacherResponse.json()
-          : {};
 
         setData({
           lessonName: lessonData.name || '',
-          teacherName: teacherData.name || 'Your teacher',
           lessonLink: lessonData.start_url || '',
           isLoading: false,
           error: null,
@@ -68,10 +61,10 @@ function LessonFeedback({
       }
     }
 
-    if (lessonId && teacherId) {
+    if (lessonId) {
       fetchData();
     }
-  }, [lessonId, teacherId]);
+  }, [lessonId]);
 
   const formattedDate = new Date(submittedAtDate).toLocaleDateString('en-US', {
     year: 'numeric',
@@ -110,7 +103,7 @@ function LessonFeedback({
           </Heading5>
 
           <BodyFourText className={styles.lessonFeedbackDetails}>
-            Sent by {data.teacherName} on {formattedDate}
+            Sent by {teacherName || 'Your teacher'} on {formattedDate}
           </BodyFourText>
         </div>
 

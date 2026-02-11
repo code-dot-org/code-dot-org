@@ -10,6 +10,7 @@ interface LessonFeedbackData {
   lesson_id: number;
   saved_feedback?: string;
   updated_at: string | Date;
+  teacher_name?: string;
   teacher_id: number;
   resources?: Array<{
     recommended_action?: string;
@@ -64,7 +65,7 @@ function LessonFeedbackContainer({studentId}: LessonFeedbackContainerProps) {
               key={lessonFeedback.id}
               feedbackText={lessonFeedback?.saved_feedback}
               lessonId={lessonFeedback.lesson_id}
-              teacherId={lessonFeedback.teacher_id}
+              teacherName={lessonFeedback.teacher_name || 'Your teacher'}
               submittedAtDate={lessonFeedback.updated_at}
             />
           );
