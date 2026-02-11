@@ -1,5 +1,6 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-02-09T16:38:08.000Z",
   "level_num": "custom",
@@ -25,7 +26,7 @@
       "freeResponseHeight": 50,
       "codeEditableAfterSubmit": false
     },
-    "long_instructions": "## Make a Prediction\r\n\r\nRead through `script.js` and look at the display preview. What do you think will appear on screen when you click \"Generate Random Pokémon\"?",
+    "long_instructions": "## Make a Prediction\r\n\r\nRead through `script.js` and look at the display preview. What do you think will appear on screen when you click \"Generate Random Pokémon\"?\r\n\r\n\r\n<div style=\"clear:both;\"></div>\r\n\r\n<details style=\"background-color: #4f5b68; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 12pt; font-weight: bold; color: #ffffff;\">💡 Hint</summary>\r\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;\">\r\n    <p style=\"font-size: 12pt; color: #ffffff;\">\r\nIf you want to predict what will appear on the screen, focus on the <strong><code>updateUI</code></strong> function.\r\n<br><br>\r\nLook for lines that:\r\n<ul>\r\n  <li>Start with <code>document.getElementById(...).innerText</code></li>\r\n  <li>Pull values from the <code>data</code> object</li>\r\n</ul>\r\nThose lines determine <strong>which pieces of the Pokémon data are shown</strong> and how they are formatted.\r\n</p>\r\n</div>\r\n</details>\r\n",
     "start_sources": {
       "folders": {
       },
@@ -62,7 +63,6 @@
     },
     "thumbnail_url": "https://images.code.org/d15a9c9c914bf1fffa44743731c9cd23-pokemon.png"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-02-09T16:38:08.914+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson1-level4a-choice-test-2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson1-level4a-choice-test-2025-pilot\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-09T16:38:08.914+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson1-level4a-choice-test-2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson1-level4a-choice-test-2025-pilot\"},{\"changed_at\":\"2026-02-10 19:26:54 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-02-10 19:28:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Weblab2>
