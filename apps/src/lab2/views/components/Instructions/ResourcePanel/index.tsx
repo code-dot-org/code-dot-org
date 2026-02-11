@@ -403,12 +403,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   useEffect(() => {
     // Reset current tab to instructions when switching levels or viewAsUserId unless there is an AI tutor tab with instructions drawer.
     // If there is, then we set initial tab to the AI Tutor tab.
-    if (availableTabs[Tabs.AiTutor] && hasInstructionsDrawer) {
+    if (hasInstructionsDrawer && aiTutorVisible) {
       setCurrentTab(Tabs.AiTutor);
     } else {
       setCurrentTab(Tabs.Instructions);
     }
-  }, [levelId, viewAsUserId, hasInstructionsDrawer, availableTabs]);
+  }, [levelId, viewAsUserId, hasInstructionsDrawer, aiTutorVisible]);
 
   // Move focus to panel content when AI Tutor or Version History tab is selected via keyboard.
   useEffect(() => {
