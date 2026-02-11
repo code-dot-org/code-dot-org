@@ -1,10 +1,10 @@
-import {Button} from '@code-dot-org/component-library/button';
-import {Typography} from '@mui/material';
 // BubbleChoice
 //
 // This is a React client for a bubble_choice level.  Note that this is
 // only used for levels that use Lab2.  For levels that don't use Lab2,
 // they will get an older-style level.
+import {Button} from '@code-dot-org/component-library/button';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import _ from 'lodash';
 import React, {useEffect, useMemo, useRef} from 'react';
