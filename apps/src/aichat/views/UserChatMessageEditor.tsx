@@ -70,6 +70,8 @@ const UserChatMessageEditor: React.FunctionComponent<
   const userAddedSelectionContext = useAppSelector(
     state => state.aichat.userAddedSelectionContext
   );
+  const locale = useAppSelector(state => state.pageConstants.locale);
+  const showEnglishOnlyWarning = locale && locale !== 'en_us';
 
   const dispatch = useAppDispatch();
 
@@ -163,6 +165,12 @@ const UserChatMessageEditor: React.FunctionComponent<
           </div>
         )}
       </UserMessageEditor>
+      {showEnglishOnlyWarning && (
+        <p>
+          Code.org AI chat tools support English only; use in other languages is
+          not currently recommended.
+        </p>
+      )}
     </>
   );
 };
