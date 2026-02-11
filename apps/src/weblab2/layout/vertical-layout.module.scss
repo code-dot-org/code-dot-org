@@ -25,6 +25,11 @@
   text-overflow: ellipsis;
 }
 
+.debugPanelContainer {
+  height: 200px;
+  flex: none;
+}
+
 .aiTutorVersionContainer {
   border-left: 1px solid var(--borders-brand-aqua-primary);
 }

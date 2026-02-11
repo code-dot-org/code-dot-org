@@ -219,7 +219,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
               )}
             </div>
           </div>
-          <DebugPanel />
+          <DebugPanel className={weblab2Styles.debugPanelContainer} />
         </div>
       </div>
     </div>
