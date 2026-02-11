@@ -11,6 +11,7 @@ import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import MultipleAssignButton from '@cdo/apps/templates/MultipleAssignButton';
 import AssignmentVersionSelector from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {setViewAsUserId} from '../../progressRedux';
@@ -48,6 +49,7 @@ interface UnitOverviewActionRowProps {
   scriptResourcesPdfUrl: string;
   publishedState: string;
   teacherResources: TeacherResource[];
+  aiChatToolsDependency: (typeof AiChatToolsDependency)[keyof typeof AiChatToolsDependency];
 }
 
 const compilePdfDropdownOptions = (
@@ -90,6 +92,7 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
   scriptResourcesPdfUrl,
   publishedState,
   teacherResources,
+  aiChatToolsDependency,
 }) => {
   const [confirmationMessageOpen, setConfirmationMessageOpen] =
     React.useState(false);
@@ -213,6 +216,7 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
                 isAssigningCourseOnly={false}
                 isSingleUnitCourse={isSingleUnitCourse}
                 participantAudience={participantAudience}
+                aiChatToolsDependency={aiChatToolsDependency}
               />
             </div>
           )}

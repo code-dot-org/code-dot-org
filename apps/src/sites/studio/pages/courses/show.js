@@ -40,7 +40,6 @@ function showCourseOverview() {
   const courseSummary = scriptData.course_summary;
   const isInstructor = scriptData.is_instructor;
   const userId = scriptData.user_id;
-
   const store = getStore();
 
   if (courseSummary.has_verified_resources) {
@@ -106,6 +105,7 @@ function showCourseOverview() {
         userId={userId}
         userType={scriptData.user_type}
         participantAudience={courseSummary.participant_audience}
+        aiChatToolsDependency={courseSummary.ai_chat_tools_dependency}
       />
     </Provider>,
     document.getElementById('course_overview')
