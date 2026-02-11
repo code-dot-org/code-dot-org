@@ -130,6 +130,15 @@ const InnerHTMLPreview = () => {
         // Handle network request message
         console.log({networkRequestEvent: event.data});
       } else if (
+        event.data.type === ProjectServiceWorkerMessageType.NETWORK_RESPONSE
+      ) {
+        // Handle network response message
+        window.parent.postMessage(
+          {type: IframeMessageType.NETWORK_RESPONSE, data: event.data},
+          parentOrigin
+        );
+        console.log({networkResponseEvent: event.data});
+      } else if (
         event.data.type === ProjectServiceWorkerMessageType.CSP_VIOLATION
       ) {
         window.parent.postMessage(

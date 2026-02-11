@@ -14,6 +14,7 @@ const SERVING_HTML_FILE = 'SERVING_HTML_FILE';
 const RECEIVED_SOURCE = 'RECEIVED_SOURCE';
 const UPDATE_FILES = 'UPDATE_FILES';
 const NETWORK_REQUEST = 'NETWORK_REQUEST';
+const NETWORK_RESPONSE = 'NETWORK_RESPONSE';
 
 function main() {
   let filesData = {};
@@ -71,9 +72,17 @@ function main() {
       if (url.origin !== location.origin) {
         const performanceStartTime = performance.now();
         const startTime = new Date().toLocaleString();
+        const requestId = Date.now().toString();
         let response;
         let performanceEndTime;
         let error;
+        broadcastChannel.postMessage({
+          type: NETWORK_REQUEST,
+          url: event.request.url,
+          method: event.request.method,
+          startTime,
+          requestId,
+        });
         try {
           response = await fetch(event.request);
           performanceEndTime = performance.now();
@@ -87,16 +96,15 @@ function main() {
           error = e;
         }
         broadcastChannel.postMessage({
-          type: NETWORK_REQUEST,
+          type: NETWORK_RESPONSE,
           url: event.request.url,
-          method: event.request.method,
           responseBody: bodyText,
           responseStatus: response ? response.status : undefined,
           timeElapsed: performanceEndTime
             ? Math.floor(performanceEndTime - performanceStartTime)
             : undefined,
           error,
-          startTime,
+          requestId,
         });
         return response;
       }
