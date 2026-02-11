@@ -124,7 +124,7 @@ const InnerHTMLPreview = () => {
         event.data.type === ProjectServiceWorkerMessageType.NETWORK_REQUEST
       ) {
         window.parent.postMessage(
-          {type: IframeMessageType.NETWORK_REQUEST, data: event.data},
+          {type: IframeMessageType.NETWORK_REQUEST, request: event.data},
           parentOrigin
         );
         // Handle network request message
@@ -134,7 +134,7 @@ const InnerHTMLPreview = () => {
       ) {
         // Handle network response message
         window.parent.postMessage(
-          {type: IframeMessageType.NETWORK_RESPONSE, data: event.data},
+          {type: IframeMessageType.NETWORK_RESPONSE, response: event.data},
           parentOrigin
         );
         console.log({networkResponseEvent: event.data});

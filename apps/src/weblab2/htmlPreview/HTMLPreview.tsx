@@ -25,6 +25,8 @@ import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {filterSourceForPreview} from '@cdo/apps/weblab2/htmlPreview/filterSourceForPreview';
 
+import {addRequestData, addResponseData} from '../redux/networkRedux';
+
 import {
   IframeMessageType,
   PreviewViewMode,
@@ -53,6 +55,10 @@ export const HTMLPreview: React.FC = () => {
   const levelId = levelProperties.id;
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const previewContainerRef = useRef<HTMLDivElement | null>(null);
+  const networkRequestData = useAppSelector(
+    state => state.weblab2Network.requests
+  );
+  console.log({networkRequestData});
   const previewUrl = useMemo(() => {
     const re = /([-.]?studio)?\.?(cdn-)?code.org/i;
     const environmentKey = location.hostname.replace(re, '');
@@ -331,6 +337,13 @@ export const HTMLPreview: React.FC = () => {
         Lab2Registry.getInstance()
           .getMetricsReporter()
           .logWarning('Service worker unavailable in HTMLPreview iframe.');
+      } else if (event.data.type === IframeMessageType.NETWORK_REQUEST) {
+        console.log({htmlPreviewRequest: event.data});
+        const {id, ...request} = event.data.request;
+        dispatch(addRequestData({id, request}));
+      } else if (event.data.type === IframeMessageType.NETWORK_RESPONSE) {
+        const {id, ...response} = event.data.response;
+        dispatch(addResponseData({id, response: response}));
       }
     };
 
@@ -342,6 +355,7 @@ export const HTMLPreview: React.FC = () => {
     navigationHistory,
     navigationHistoryIndex,
     debouncedSource,
+    dispatch,
   ]);
 
   useEffect(() => {

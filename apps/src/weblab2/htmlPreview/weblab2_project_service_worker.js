@@ -72,7 +72,7 @@ function main() {
       if (url.origin !== location.origin) {
         const performanceStartTime = performance.now();
         const startTime = new Date().toLocaleString();
-        const requestId = Date.now().toString();
+        const requestId = crypto.randomUUID();
         let response;
         let performanceEndTime;
         let error;
@@ -81,7 +81,7 @@ function main() {
           url: event.request.url,
           method: event.request.method,
           startTime,
-          requestId,
+          id: requestId,
         });
         try {
           response = await fetch(event.request);
@@ -104,7 +104,7 @@ function main() {
             ? Math.floor(performanceEndTime - performanceStartTime)
             : undefined,
           error,
-          requestId,
+          id: requestId,
         });
         return response;
       }
