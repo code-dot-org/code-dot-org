@@ -1,11 +1,7 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {Dialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  BodyTwoText,
-  BodyThreeText,
-  BodyFourText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import _ from 'lodash';
 import React, {useState, useMemo} from 'react';
 import {useSelector} from 'react-redux';
@@ -334,10 +330,16 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
                     key={`transcript-line-${timeStamp}`}
                     className={styles.transcriptLine}
                   >
-                    <BodyTwoText className={styles.transcriptLineTimeStamp}>
+                    <Typography
+                      className={styles.transcriptLineTimeStamp}
+                      variant="body2"
+                      gutterBottom
+                    >
                       {timeStamp}
-                    </BodyTwoText>
-                    <BodyTwoText>{text}</BodyTwoText>
+                    </Typography>
+                    <Typography variant="body2" gutterBottom>
+                      {text}
+                    </Typography>
                   </div>
                 ))}
               </div>
@@ -351,7 +353,9 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
               <div className={styles.lessonSummarySectionHeader}>
                 <div className={styles.lessonSummarySectionTitle}>
                   <FontAwesomeV6Icon iconName="headphones" iconStyle="solid" />
-                  <BodyTwoText>{i18n.audioSummary()}</BodyTwoText>
+                  <Typography variant="body2" gutterBottom>
+                    {i18n.audioSummary()}
+                  </Typography>
                 </div>
                 <Button
                   type="secondary"
@@ -385,44 +389,60 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           <div className={styles.lessonSummarySection}>
             <div className={styles.lessonSummarySectionTitle}>
               <FontAwesomeV6Icon iconName="lightbulb" iconStyle="solid" />
-              <BodyTwoText>{i18n.teachingTips()}</BodyTwoText>
+              <Typography variant="body2" gutterBottom>
+                {i18n.teachingTips()}
+              </Typography>
             </div>
             <div className={styles.lessonSummaryInfo}>
               <div className={styles.lessonSummaryInfoBlock}>
-                <BodyThreeText>{i18n.learningObjective()}</BodyThreeText>
-                <BodyThreeText>
+                <Typography variant="body3" gutterBottom>
+                  {i18n.learningObjective()}
+                </Typography>
+                <Typography variant="body3" gutterBottom>
                   {aiTALessonSummaryInfo?.learning_objective}
-                </BodyThreeText>
+                </Typography>
               </div>
               <div className={styles.lessonSummaryInfoBlock}>
-                <BodyThreeText>{i18n.keyLessonBeats()}</BodyThreeText>
+                <Typography variant="body3" gutterBottom>
+                  {i18n.keyLessonBeats()}
+                </Typography>
                 <ol>
                   {aiTALessonSummaryInfo?.lesson_beats.map(
                     (lessonBeat, index) => (
                       <li key={`lessonBeat-${index}`}>
-                        <BodyThreeText>{lessonBeat}</BodyThreeText>
+                        <Typography variant="body3" gutterBottom>
+                          {lessonBeat}
+                        </Typography>
                       </li>
                     )
                   )}
                 </ol>
               </div>
               <div className={styles.lessonSummaryInfoBlock}>
-                <BodyThreeText>{i18n.tipsHeader()}</BodyThreeText>
+                <Typography variant="body3" gutterBottom>
+                  {i18n.tipsHeader()}
+                </Typography>
                 <ol>
                   {aiTALessonSummaryInfo?.tips.map((tip, index) => (
                     <li key={`tip-${index}`}>
-                      <BodyThreeText>{tip}</BodyThreeText>
+                      <Typography variant="body3" gutterBottom>
+                        {tip}
+                      </Typography>
                     </li>
                   ))}
                 </ol>
               </div>
               <div className={styles.lessonSummaryInfoBlock}>
-                <BodyThreeText>{i18n.commonMisconceptions()}</BodyThreeText>
+                <Typography variant="body3" gutterBottom>
+                  {i18n.commonMisconceptions()}
+                </Typography>
                 <ul>
                   {aiTALessonSummaryInfo?.misconceptions.map(
                     (misconception, index) => (
                       <li key={`misconception-${index}`}>
-                        <BodyThreeText>{misconception}</BodyThreeText>
+                        <Typography variant="body3" gutterBottom>
+                          {misconception}
+                        </Typography>
                       </li>
                     )
                   )}
@@ -440,13 +460,13 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
               <div className={styles.personalizationQuizSection}>
                 <div className={styles.horizontalLine} />
                 <div className={styles.personalizationQuizPrompt}>
-                  <BodyThreeText>
+                  <Typography variant="body3" gutterBottom>
                     {i18n.wantToSeeDifferentInformation()}
-                  </BodyThreeText>
+                  </Typography>
                   <a href="/users/personalization_information">
-                    <BodyThreeText>
+                    <Typography variant="body3" gutterBottom>
                       {i18n.customizeForYourClassroom()}
-                    </BodyThreeText>
+                    </Typography>
                   </a>
                 </div>
               </div>
@@ -454,7 +474,9 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           </div>
           <div className={styles.poweredByAITANote}>
             <img src={AIBotTAIcon} alt="" />
-            <BodyFourText>{i18n.poweredByAITA()}</BodyFourText>
+            <Typography variant="body4" gutterBottom>
+              {i18n.poweredByAITA()}
+            </Typography>
           </div>
         </div>
       </>

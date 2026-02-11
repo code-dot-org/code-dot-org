@@ -1,5 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
-import {BodyFourText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import i18n from '@cdo/locale';
@@ -114,9 +114,9 @@ const RecommendedActions: React.FC<RecommendedActionsProps> = ({
       <label className={styles.typographyLabelTwo}>
         {i18n.lessonFeedbackRecommendedAction()}
       </label>
-      <BodyFourText noMargin>
+      <Typography variant="body4">
         {i18n.lessonFeedbackRecommendedActionDirections()}
-      </BodyFourText>
+      </Typography>
       <div className={styles.inputWrapper}>
         <input
           className={styles.inputBox}
