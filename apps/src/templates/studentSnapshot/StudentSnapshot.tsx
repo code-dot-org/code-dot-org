@@ -163,6 +163,7 @@ const StudentSnapshot: React.FC = () => {
           teacherHasEnabledAi={aiTaEnabled}
           studentId={selectedStudentId}
           unitId={selectedUnitId}
+          sectionId={sectionId}
         />
         <StudentCFUWidget
           gridWidth={2}
