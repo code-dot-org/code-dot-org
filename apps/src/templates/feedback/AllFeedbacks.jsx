@@ -16,7 +16,6 @@ function AllFeedbacks({feedbacksByLevel}) {
   const selectedTab = showLessonFeedback ? 'lesson' : 'level';
 
   const studentId = useAppSelector(state => state.currentUser.userId);
-  //2512
 
   return (
     <div>

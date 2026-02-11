@@ -39,15 +39,8 @@ function LessonFeedbackContainer({studentId}: LessonFeedbackContainerProps) {
           );
         }
         const data = await response.json();
-        const sortedData = data.sort(
-          (a: LessonFeedbackData, b: LessonFeedbackData) => {
-            const dateA = new Date(a.updated_at).getTime();
-            const dateB = new Date(b.updated_at).getTime();
-            return dateB - dateA; // Sort descending (most recent first)
-          }
-        );
-        setFetchedFeedback(sortedData);
-        return sortedData;
+        setFetchedFeedback(data);
+        return data;
       } catch (err) {
         console.error('AI lesson feedback error:', err);
         return null;

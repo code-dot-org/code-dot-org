@@ -22,7 +22,7 @@ class LessonFeedbacksController < ApplicationController
   end
 
   def show_by_student
-    feedback = LessonFeedback.where(student_id: params[:student_id])
+    feedback = LessonFeedback.where(student_id: params[:student_id]).order(updated_at: :desc)
 
     render json: feedback
   end
