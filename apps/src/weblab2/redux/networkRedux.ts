@@ -2,7 +2,7 @@ import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 import {registerReducers} from '@cdo/apps/redux';
 
-export interface FullRequest {
+export interface NetworkEntry {
   id: string;
   request: RequestData;
   response?: ResponseData;
@@ -25,7 +25,7 @@ interface ResponseData {
 }
 
 export interface Weblab2NetworkState {
-  requests: FullRequest[];
+  requests: NetworkEntry[];
 }
 
 const initialState: Weblab2NetworkState = {
