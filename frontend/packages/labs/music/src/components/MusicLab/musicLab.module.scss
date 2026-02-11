@@ -4,39 +4,12 @@ $work-area-min-height: 50%;
 $default-border-radius: 0;
 $default-spacing: 2px;
 
-.music-lab {
-  background-color: var(--neutral-gray-99);
-  border-radius: $default-border-radius;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  line-height: 1rem;
-  overflow: hidden;
-  position: relative;
-  user-select: none;
-  width: 100%;
-}
-
 .main-content {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  overflow: hidden;
-  position: relative;
-
-  &.reverse {
-    flex-direction: column-reverse;
-  }
+  background-color: var(--neutral-gray-99);
+  user-select: none;
 }
 
 .work-area {
-  display: flex;
-  flex: 1;
-  flex-direction: row;
-  min-height: $work-area-min-height;
-  overflow: hidden;
-
   &.toolbox-mode {
     max-height: 100%; // Allow the work area to take full height
   }
