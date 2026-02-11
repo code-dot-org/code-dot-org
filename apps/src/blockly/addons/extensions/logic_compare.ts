@@ -25,7 +25,7 @@ const LOGIC_COMPARE_ONCHANGE_MIXIN = {
  */
 const LOGIC_COMPARE_EXTENSION = function (this: CompareBlock) {
   // Add onchange handler to ensure types are compatible.
-  this.mixin(LOGIC_COMPARE_ONCHANGE_MIXIN);
+  this.mixin(LOGIC_COMPARE_ONCHANGE_MIXIN, true);
 };
 export default function registerMutator() {
   if (BlocklyCore.Extensions.isRegistered('logic_compare')) {
