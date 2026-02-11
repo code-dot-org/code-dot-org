@@ -37,6 +37,7 @@ import ForTeachersOnly from '../ForTeachersOnly';
 import Instructions, {InstructionsProps} from '../InstructionsV2';
 import NavigationArea from '../NavigationArea';
 
+import AiTutorChatWithInstructionDrawer from './AiTutorChatWithInstructionDrawer';
 import BackpackHeaderButtons from './Backpack/BackpackHeaderButtons';
 import BackpackPanel from './Backpack/BackpackPanel';
 import {
@@ -143,6 +144,7 @@ type ResourcePanelProps = InstructionsProps & {
     fileType: string,
     uploadFunction: () => Promise<void>
   ) => void;
+  hasInstructionsDrawer?: boolean;
 };
 
 /**
@@ -169,6 +171,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   sidebarOnly = false,
   backpackProps,
   onImageFlagged,
+  hasInstructionsDrawer,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -237,13 +240,15 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
     const tabMap: {[key in Tabs]?: React.ReactNode} = {};
 
+    const instructionsContent = levelProperties.longInstructions ? (
+      <Instructions
+        {...instructionsProps}
+        hideNavigation={hideInstructionsNavigation}
+      />
+    ) : null;
+
     if (levelProperties.longInstructions) {
-      tabMap[Tabs.Instructions] = (
-        <Instructions
-          {...instructionsProps}
-          hideNavigation={hideInstructionsNavigation}
-        />
-      );
+      tabMap[Tabs.Instructions] = instructionsContent;
     }
 
     if (instructionsProps.validationSettings && hasValidationConditions) {
@@ -253,17 +258,32 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
 
     if (hiddenContextCallback && aiTutorVisible) {
-      tabMap[Tabs.AiTutor] = (
-        <AiTutorChat
-          hiddenContextCallback={hiddenContextCallback}
-          aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
-          levelName={levelName}
-          channelId={channelId}
-          aiTutorChatButtonData={aiTutorChatButtonData}
-          aiTutorSystemPromptName={aiTutorSystemPromptName}
-          aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
-        />
-      );
+      if (!hasInstructionsDrawer || !levelProperties.longInstructions) {
+        tabMap[Tabs.AiTutor] = (
+          <AiTutorChat
+            hiddenContextCallback={hiddenContextCallback}
+            aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
+            levelName={levelName}
+            channelId={channelId}
+            aiTutorChatButtonData={aiTutorChatButtonData}
+            aiTutorSystemPromptName={aiTutorSystemPromptName}
+            aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
+          />
+        );
+      } else {
+        tabMap[Tabs.AiTutor] = (
+          <AiTutorChatWithInstructionDrawer
+            hiddenContextCallback={hiddenContextCallback}
+            aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
+            levelName={levelName}
+            channelId={channelId}
+            aiTutorChatButtonData={aiTutorChatButtonData}
+            aiTutorSystemPromptName={aiTutorSystemPromptName}
+            aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
+            instructionsContent={instructionsContent}
+          />
+        );
+      }
     }
 
     // The version history tab is hidden in permanently read-only mode with the following exception:
@@ -349,6 +369,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     setBackpackTabAsActive,
     backpackRefreshKey,
     onImageFlagged,
+    hasInstructionsDrawer,
   ]);
 
   const hasTabs = useMemo(() => {
