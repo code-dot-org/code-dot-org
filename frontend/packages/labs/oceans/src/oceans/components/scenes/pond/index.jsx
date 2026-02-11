@@ -44,7 +44,9 @@ let UnwrappedPond = class Pond extends React.Component {
     // No-op if transition is already in progress or if already showing the desired fish set.
     // Note that recallFish are fish that are not matching the word/attribute.
     // pondFish are fish that are matching the word/attribute.
-    if (state.pondFishTransitionStartTime || state.showRecallFish === showMatching) {
+    // showMatching true -> want matching (showRecallFish false)
+    // showMatching false -> want recalled fish (showRecallFish true).
+    if (state.pondFishTransitionStartTime || state.showRecallFish === !showMatching) {
       return;
     }
 

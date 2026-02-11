@@ -448,6 +448,10 @@ describe('Predict', () => {
 describe('Pond', () => {
   let playSoundStub;
 
+  beforeAll(() => {
+    I18n.initI18n();
+  });
+
   beforeEach(() => {
     playSoundStub = sinon.stub(soundLibrary, 'playSound');
   });
