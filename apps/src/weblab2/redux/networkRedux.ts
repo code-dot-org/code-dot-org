@@ -12,12 +12,14 @@ interface RequestData {
   method: string;
   startTime: string;
   url: string;
+  cspDirectiveViolated?: string;
 }
 
 interface ResponseData {
-  statusCode: number;
+  url: string;
+  status: number;
   timeElapsed?: number;
-  responseData?: string;
+  body?: string;
   error?: Error;
 }
 
@@ -37,14 +39,12 @@ const networkSlice = createSlice({
       state,
       action: PayloadAction<{id: string; request: RequestData}>
     ) => {
-      console.log({addingRequest: action.payload});
       state.requests.push(action.payload);
     },
     addResponseData: (
       state,
       action: PayloadAction<{id: string; response: ResponseData}>
     ) => {
-      console.log({addingResponse: action.payload});
       const {id, response} = action.payload;
       const request = state.requests.find(r => r.id === id);
       if (request) {

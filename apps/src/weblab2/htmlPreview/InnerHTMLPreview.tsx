@@ -124,28 +124,32 @@ const InnerHTMLPreview = () => {
         event.data.type === ProjectServiceWorkerMessageType.NETWORK_REQUEST
       ) {
         window.parent.postMessage(
-          {type: IframeMessageType.NETWORK_REQUEST, request: event.data},
+          {
+            type: IframeMessageType.NETWORK_REQUEST,
+            request: event.data.requestData,
+          },
           parentOrigin
         );
-        // Handle network request message
-        console.log({networkRequestEvent: event.data});
       } else if (
         event.data.type === ProjectServiceWorkerMessageType.NETWORK_RESPONSE
       ) {
-        // Handle network response message
         window.parent.postMessage(
-          {type: IframeMessageType.NETWORK_RESPONSE, response: event.data},
+          {
+            type: IframeMessageType.NETWORK_RESPONSE,
+            response: event.data.responseData,
+          },
           parentOrigin
         );
-        console.log({networkResponseEvent: event.data});
       } else if (
         event.data.type === ProjectServiceWorkerMessageType.CSP_VIOLATION
       ) {
         window.parent.postMessage(
-          {type: IframeMessageType.CSP_VIOLATION, data: event.data},
+          {
+            type: IframeMessageType.CSP_VIOLATION,
+            request: event.data.requestData,
+          },
           parentOrigin
         );
-        console.log({cspViolationEvent: event.data});
       }
     };
     return () => {

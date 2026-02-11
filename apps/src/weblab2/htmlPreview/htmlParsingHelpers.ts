@@ -65,13 +65,15 @@ export const updateLinksToHtmlFiles = (doc: Document, fullFileName: string) => {
 const handleCSPViolationScript = `
 document.addEventListener("securitypolicyviolation",function(e){
   const broadcastChannel = new BroadcastChannel("${PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL}");
-  const requestId = Date.now().toString();
+  const requestId = crypto.randomUUID();
   broadcastChannel.postMessage({
     type: "CSP_VIOLATION",
-    url: e.blockedURI,
-    effectiveDirective: e.effectiveDirective,
-    requestId,
-    timestamp: new Date().toLocaleString()
+    requestData: {
+      url: e.blockedURI,
+      cspDirectiveViolated: e.effectiveDirective,
+      id: requestId,
+      startTime: new Date().toLocaleString()
+    }
   });
   broadcastChannel.close();
 });

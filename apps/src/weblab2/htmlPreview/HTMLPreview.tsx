@@ -338,12 +338,14 @@ export const HTMLPreview: React.FC = () => {
           .getMetricsReporter()
           .logWarning('Service worker unavailable in HTMLPreview iframe.');
       } else if (event.data.type === IframeMessageType.NETWORK_REQUEST) {
-        console.log({htmlPreviewRequest: event.data});
         const {id, ...request} = event.data.request;
         dispatch(addRequestData({id, request}));
       } else if (event.data.type === IframeMessageType.NETWORK_RESPONSE) {
         const {id, ...response} = event.data.response;
         dispatch(addResponseData({id, response: response}));
+      } else if (event.data.type === IframeMessageType.CSP_VIOLATION) {
+        const {id, ...request} = event.data.request;
+        dispatch(addRequestData({id, request: request}));
       }
     };
 

@@ -78,10 +78,12 @@ function main() {
         let error;
         broadcastChannel.postMessage({
           type: NETWORK_REQUEST,
-          url: event.request.url,
-          method: event.request.method,
-          startTime,
-          id: requestId,
+          requestData: {
+            url: event.request.url,
+            method: event.request.method,
+            startTime,
+            id: requestId,
+          },
         });
         try {
           response = await fetch(event.request);
@@ -97,14 +99,16 @@ function main() {
         }
         broadcastChannel.postMessage({
           type: NETWORK_RESPONSE,
-          url: event.request.url,
-          responseBody: bodyText,
-          responseStatus: response ? response.status : undefined,
-          timeElapsed: performanceEndTime
-            ? Math.floor(performanceEndTime - performanceStartTime)
-            : undefined,
-          error,
-          id: requestId,
+          responseData: {
+            url: event.request.url,
+            body: bodyText,
+            status: response ? response.status : undefined,
+            timeElapsed: performanceEndTime
+              ? Math.floor(performanceEndTime - performanceStartTime)
+              : undefined,
+            error,
+            id: requestId,
+          },
         });
         return response;
       }
