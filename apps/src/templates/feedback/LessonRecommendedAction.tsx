@@ -17,7 +17,7 @@ function LessonRecommendedAction({
   resourceLink,
 }: LessonRecommendedActionProps) {
   const handleViewResource = () => {
-    window.open(resourceLink, '_blank');
+    window.open(resourceLink, '_blank', 'noopener,noreferrer');
   };
 
   return (

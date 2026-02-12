@@ -32,11 +32,9 @@ function LessonFeedbackContainer({studentId}: LessonFeedbackContainerProps) {
   >(null);
 
   React.useEffect(() => {
-    async function fetchAllLessonFeedback(studentId: number) {
+    async function fetchAllLessonFeedback() {
       try {
-        const response = await fetch(
-          `/lesson_feedbacks/by_student/${studentId}`
-        );
+        const response = await fetch(`/lesson_feedbacks/by_student`);
         if (!response.ok) {
           throw new Error(
             `Failed to fetch AI lesson feedback: ${response.status} ${response.statusText}`
@@ -51,7 +49,7 @@ function LessonFeedbackContainer({studentId}: LessonFeedbackContainerProps) {
       }
     }
     if (studentId) {
-      fetchAllLessonFeedback(studentId);
+      fetchAllLessonFeedback();
     }
   }, [studentId]);
 

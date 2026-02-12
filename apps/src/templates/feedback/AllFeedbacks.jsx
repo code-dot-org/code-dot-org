@@ -17,6 +17,10 @@ function AllFeedbacks({feedbacksByLevel}) {
 
   const studentId = useAppSelector(state => state.currentUser.userId);
 
+  const handleChange = value => {
+    setShowLessonFeedback(value === 'lesson');
+  };
+
   return (
     <div>
       <h1 className={styles.pageHeader}>{i18n.feedbackAll()}</h1>
@@ -35,9 +39,7 @@ function AllFeedbacks({feedbacksByLevel}) {
             value: 'lesson',
           },
         ]}
-        onChange={() => {
-          setShowLessonFeedback(!showLessonFeedback);
-        }}
+        onChange={handleChange}
         className={styles.segmentedButtons}
       />
       {!showLessonFeedback && (

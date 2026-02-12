@@ -33,7 +33,7 @@ function LessonFeedback({
 
   const handleGoToLesson = () => {
     if (lessonStartUrl) {
-      window.open(lessonStartUrl, '_blank');
+      window.open(lessonStartUrl, '_blank', 'noopener,noreferrer');
     }
   };
 

@@ -22,12 +22,7 @@ class LessonFeedbacksController < ApplicationController
   end
 
   def show_by_student
-    student_id = params[:student_id]
-    if student_id.to_i != current_user.id
-      raise CanCan::AccessDenied.new('Students can only view their own lesson feedback')
-    end
-
-    feedback = LessonFeedback.includes(:teacher, lesson: :script).where(student_id: student_id).order(updated_at: :desc)
+    feedback = LessonFeedback.includes(:teacher, lesson: :script).where(student_id: current_user.id).order(updated_at: :desc)
 
     feedback_with_additional_data = feedback.map do |f|
       f.as_json.merge(
