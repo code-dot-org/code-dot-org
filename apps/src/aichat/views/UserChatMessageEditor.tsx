@@ -2,7 +2,7 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
-import AiTutorEnglishOnlyWarning from '@cdo/apps/aiTutor/views/englishOnlyWarning';
+import AiTutorEnglishOnlyWarning from '@cdo/apps/aiTutor/views/AiTutorEnglishOnlyWarning';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {selectIsWaitingForChatResponse, submitChatContents} from '../redux';
