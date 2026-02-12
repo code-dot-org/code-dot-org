@@ -1,6 +1,10 @@
 import {findFilePathByRelativePath} from '@codebridge/utils';
 
-import {IframeMessageType} from './constants';
+import {
+  IframeMessageType,
+  PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL,
+  ProjectServiceWorkerMessageType,
+} from './constants';
 
 // Replace links to non-html files (css and js) with their appropriate URLs (either blobs or external URLs).
 // We support <link> tags for CSS files, <script> tags for JavaScript files, and <img> tags for images,
@@ -57,6 +61,36 @@ export const updateLinksToHtmlFiles = (doc: Document, fullFileName: string) => {
       );
     }
   });
+};
+
+const handleCSPViolationScript = `
+document.addEventListener("securitypolicyviolation",function(e){
+  const broadcastChannel = new BroadcastChannel("${PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL}");
+  const requestId = crypto.randomUUID();
+  broadcastChannel.postMessage({
+    type: "${ProjectServiceWorkerMessageType.NETWORK_REQUEST}",
+    requestData: {
+      url: e.blockedURI,
+      cspDirectiveViolated: e.effectiveDirective,
+      id: requestId,
+      startTime: new Date().toLocaleString()
+    }
+  });
+  broadcastChannel.close();
+});
+`;
+
+// Adds a script to the document that listens for CSP violations and broadcasts them
+// via BroadcastChannel so the parent can be notified.
+export const addCSPViolationListenerToDocument = (doc: Document) => {
+  const script = doc.createElement('script');
+  script.textContent = handleCSPViolationScript;
+  const head = doc.querySelector('head');
+  if (head) {
+    head.insertBefore(script, head.firstChild);
+  } else {
+    doc.documentElement.insertBefore(script, doc.documentElement.firstChild);
+  }
 };
 
 // This adds a base tag to the header of the given document, setting its href to the provided baseHref.
