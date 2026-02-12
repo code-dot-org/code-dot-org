@@ -11,7 +11,10 @@ import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {updateSectionAiChatAccessLevel} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiChatAccessLevels,
+  AiChatToolsDependency,
+} from '@cdo/generated-scripts/sharedConstants';
 
 import {handleUpdateSectionAiChatAccessLevel} from '../../accessControlsApi';
 import {AI_SETTINGS_SUPPORT_LINK} from '../../constants';
@@ -65,7 +68,7 @@ const AiChatAccessControls: React.FC = () => {
   );
 
   const shouldShowAlert =
-    section.isAssignedEssentialAiChat &&
+    section.assignedAiChatToolsDependency === AiChatToolsDependency.ESSENTIAL &&
     calculateAccessLevel(accessToggle, essentialOnlyCheckbox) ===
       AiChatAccessLevels.DISABLED;
 
@@ -136,6 +139,7 @@ const AiChatAccessControls: React.FC = () => {
                   href: AI_SETTINGS_SUPPORT_LINK,
                   text: 'Learn more',
                 }}
+                icon={{iconName: 'triangle-exclamation', iconStyle: 'solid'}}
                 className={style.alert}
               />
             )}
