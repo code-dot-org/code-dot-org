@@ -1,0 +1,67 @@
+#!/usr/bin/env ruby
+
+# This script deletes duplicate LTI course records
+# See: https://codedotorg.atlassian.net/browse/P20-1796
+
+options = {dry_run: false}
+
+require 'optparse'
+OptionParser.new do |opts|
+  opts.banner = <<~BANNER
+    Usage: #{File.basename(__FILE__)} [options]
+
+    This script deletes duplicate LTI course records.
+    See: https://codedotorg.atlassian.net/browse/P20-1796
+
+    Options:
+  BANNER
+
+  opts.on('-d', '--dry-run', 'Enables read-only mode where no changes are written to the database') do
+    options[:dry_run] = true
+  end
+
+  opts.on('-h', '--help') do
+    puts opts
+    exit
+  end
+end.parse!
+
+print "Proceed with options #{options} (y/N): "
+abort unless $stdin.gets&.strip&.downcase == 'y'
+
+require 'ruby-progressbar'
+require_relative '../../../dashboard/config/environment'
+
+duplicate_pair_query = LtiCourse.group(:lti_integration_id, :context_id).having('COUNT(*) > 1').order(:lti_integration_id, :context_id)
+duplicate_pair_count = LtiCourse.unscoped.from(duplicate_pair_query.select('1'), :dupes).count
+
+progress_bar = ProgressBar.create(total: duplicate_pair_count, format: 'Deleted duplicate pairs[%c/%C]: |%W| %a')
+batch_size = 1000
+loop do
+  duplicated_data_batch = duplicate_pair_query.limit(batch_size).pluck(:lti_integration_id, :context_id)
+
+  duplicated_data_batch.each do |lti_integration_id, context_id|
+    duplicate_pair_records = LtiCourse.where(lti_integration_id:, context_id:).order(updated_at: :desc, id: :desc).to_a
+    progress_bar.log "\n[Duplicated data] lti_integration_id: #{lti_integration_id}, context_id: #{context_id}, count: #{duplicate_pair_records.size}".bold.cyan
+
+    relevant_record = duplicate_pair_records.max_by(&:updated_at)
+    progress_bar.log "[Relevant record] #{relevant_record.inspect}".green
+
+    (duplicate_pair_records - [relevant_record]).each do |duplicate_record|
+      if options[:dry_run]
+        progress_bar.log "[Duplicated record] #{duplicate_record.inspect}".yellow
+      else
+        duplicate_record.destroy!
+        progress_bar.log "[Deleted duplicate] #{duplicate_record.inspect}".red
+      end
+    rescue StandardError => exception
+      progress_bar.log "[Error deleting duplicate] #{duplicate_record.inspect}".red
+      progress_bar.log exception.message
+    end
+  ensure
+    progress_bar.increment
+  end
+
+  break if duplicated_data_batch.size < batch_size
+end
+progress_bar.finish
