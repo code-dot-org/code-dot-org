@@ -598,8 +598,6 @@ export default class Craft {
         }
 
         studioApp().toggleRunReset('reset');
-        // Turn on call tracing
-        Blockly.mainBlockSpace.traceOn(true);
         studioApp().attempts++;
 
         const codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);

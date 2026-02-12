@@ -363,7 +363,8 @@ class UnitGroup < ApplicationRecord
         course_offering_id: course_version&.course_offering&.id,
         course_version_id: course_version&.id,
         course_path: link,
-        course_offering_edit_path: for_edit && course_version&.course_offering ? edit_course_offering_path(course_version.course_offering.key) : nil
+        course_offering_edit_path: for_edit && course_version&.course_offering ? edit_course_offering_path(course_version.course_offering.key) : nil,
+        ai_chat_tools_dependency: ai_chat_tools_dependency,
       }
     end
   end
@@ -700,5 +701,11 @@ class UnitGroup < ApplicationRecord
 
   def requires_ai_chat_tools?
     default_units.with_essential_ai_chat_tools.exists?
+  end
+
+  def ai_chat_tools_dependency
+    return SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:ESSENTIAL] if requires_ai_chat_tools?
+    return SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:AVAILABLE] if has_ai_chat_tools?
+    SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE]
   end
 end

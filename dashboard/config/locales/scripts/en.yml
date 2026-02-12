@@ -26637,7 +26637,9 @@ en:
           description: ''
           student_description: ''
         cs50-testing-things:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Example Lesson
           lesson_groups: {}
           name: cs50-testing-things
           title: CS50 Testing Things

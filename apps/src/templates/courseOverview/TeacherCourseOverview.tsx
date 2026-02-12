@@ -25,7 +25,10 @@ import {NotificationType} from '@cdo/apps/sharedComponents/Notification';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiChatToolsDependency,
+  UserTypes,
+} from '@cdo/generated-scripts/sharedConstants';
 
 import {
   CourseRoles,
@@ -78,6 +81,7 @@ interface CourseSummary {
   course_versions: {[id: string]: Version};
   announcements: Announcement[];
   has_verified_resources: boolean;
+  ai_chat_tools_dependency: (typeof AiChatToolsDependency)[keyof typeof AiChatToolsDependency];
 }
 
 interface Response {
@@ -242,6 +246,7 @@ const TeacherCourseOverview: React.FC = () => {
       title={courseSummary.title}
       assignmentFamilyTitle={courseSummary.assignment_family_title}
       id={courseSummary.id}
+      aiChatToolsDependency={courseSummary.ai_chat_tools_dependency}
       courseOfferingId={courseSummary.course_offering_id}
       courseVersionId={courseSummary.course_version_id}
       descriptionStudent={courseSummary.description_student}
