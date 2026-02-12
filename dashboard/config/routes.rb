@@ -170,6 +170,9 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    # Custom route to get lesson feedback for current student
+    get 'lesson_feedbacks/by_student', to: 'lesson_feedbacks#show_by_student'
+
     # Data docs are off of curriculum builder as of fall 2022.
     get 'docs/concepts/data-library', to: 'data_docs#index'
     get 'docs/concepts/data-library/:key', param: :key, constraints: {data_doc_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, to: 'data_docs#show'
