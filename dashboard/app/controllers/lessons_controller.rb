@@ -1,7 +1,7 @@
 class LessonsController < ApplicationController
   load_and_authorize_resource
 
-  skip_authorize_resource only: [:level_properties_by_id]
+  skip_authorize_resource only: :level_properties_by_id
 
   before_action :require_levelbuilder_mode_or_test_env, except: [:show, :student_lesson_plan, :level_properties, :level_properties_by_id]
   before_action :disallow_legacy_script_levels, only: [:edit, :update]
