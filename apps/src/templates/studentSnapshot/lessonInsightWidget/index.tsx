@@ -113,6 +113,7 @@ const LessonInsightWidget: React.FC<LessonInsightWidgetProps> = ({
             <FontAwesomeV6Icon
               iconName="triangle-exclamation"
               iconStyle="regular"
+              aria-label="Error"
             />
             <Typography color="error">{error}</Typography>
           </div>
