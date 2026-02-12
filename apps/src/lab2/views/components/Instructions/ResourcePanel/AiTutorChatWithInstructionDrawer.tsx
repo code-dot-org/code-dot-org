@@ -81,15 +81,15 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
       const startHeight = instructionsHeightAtDragStartRef.current;
       instructionsHeightAtDragStartRef.current = null;
       const endHeight = rawInstructionsHeight;
-      if (endHeight > startHeight) {
-        sendLab2AnalyticsEvent(
-          EVENTS.RESOURCE_PANEL_INSTRUCTIONS_DRAWER_RESIZED_INCREASED
-        );
-      } else if (endHeight < startHeight) {
-        sendLab2AnalyticsEvent(
-          EVENTS.RESOURCE_PANEL_INSTRUCTIONS_DRAWER_RESIZED_DECREASED
-        );
-      }
+      const eventToReport =
+        endHeight > startHeight
+          ? EVENTS.RESOURCE_PANEL_INSTRUCTIONS_DRAWER_RESIZED_INCREASED
+          : EVENTS.RESOURCE_PANEL_INSTRUCTIONS_DRAWER_RESIZED_DECREASED;
+
+      sendLab2AnalyticsEvent(eventToReport, {
+        startHeight: startHeight,
+        endHeight: endHeight,
+      });
     }
   }, [isDragging, rawInstructionsHeight]);
 
