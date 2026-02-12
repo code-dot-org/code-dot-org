@@ -23,7 +23,7 @@ interface LessonFeedbackData {
   id?: number;
   saved_feedback?: string;
   submitted_feedback?: string;
-  submitted_at?: Date;
+  submitted_at?: Date | string;
   resources?: Array<{
     recommended_action?: string;
     resource_name?: string;
@@ -145,8 +145,8 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
 
     try {
       let response;
+      setIsSaving(true);
       if (feedbackId) {
-        setIsSaving(true);
         // Update existing feedback
         response = await fetch(`/lesson_feedbacks/${feedbackId}`, {
           method: 'PATCH',
@@ -167,6 +167,7 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
           body: JSON.stringify({
             lesson_id: lessonId,
             student_id: studentId,
+            section_id: sectionId,
             ...payload,
           }),
         });
@@ -175,11 +176,12 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
       if (!response.ok) {
         throw new Error('Failed to save feedback');
       }
-      setIsSaving(false);
       return await response.json();
     } catch (err) {
       console.error('Error saving feedback:', err);
       throw err;
+    } finally {
+      setIsSaving(false);
     }
   };
 
@@ -192,13 +194,12 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
 
     setExistingFeedbackData(newFeedbackData);
 
-    await persistFeedbackToBackend(
-      {
-        saved_feedback: feedbackText,
-        resources: resourceData,
-      },
+    const savedData = await persistFeedbackToBackend(
+      newFeedbackData,
       existingFeedbackData?.id
     );
+
+    setExistingFeedbackData(savedData);
   };
 
   const handleSendToStudent = async () => {
@@ -214,15 +215,12 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
     // Update local state
     setExistingFeedbackData(newFeedbackData);
 
-    await persistFeedbackToBackend(
-      {
-        saved_feedback: feedbackText,
-        resources: resourceData,
-        submitted_feedback: feedbackText,
-        submitted_at: new Date(),
-      },
+    const savedData = await persistFeedbackToBackend(
+      newFeedbackData,
       existingFeedbackData?.id
     );
+
+    setExistingFeedbackData(savedData);
   };
 
   // TO DO: Use Loading widget when needed here.
