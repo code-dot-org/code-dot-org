@@ -1078,6 +1078,12 @@ class Level < ApplicationRecord
     end
   end
 
+  def summarize_lessons_for_special_level_types
+    lessons_from_script_levels = script_levels.map(&:lesson).compact.uniq.map(&:summarize_for_special_level_types)
+    lessons_from_parent_script_levels = parent_levels.flat_map(&:script_levels).map(&:lesson).compact.uniq.map(&:summarize_for_special_level_types)
+    (lessons_from_script_levels + lessons_from_parent_script_levels).uniq
+  end
+
   # Returns the level name, removing the name_suffix first (if present), and
   # also removing any additional suffixes of the format "_NNNN" which might
   # represent a version year.

@@ -5,13 +5,13 @@ import {
 } from '@code-dot-org/craft';
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import {getCodeBlocks, getCode} from '@cdo/apps/blockly/utils';
 import PlayerSelectionDialog from '@cdo/apps/craft/PlayerSelectionDialog';
 import reducers from '@cdo/apps/craft/redux';
 import {handlePlayerSelection} from '@cdo/apps/craft/utils';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import {trySetLocalStorage} from '@cdo/apps/utils';
 
 import {TestResults} from '../../constants';
@@ -451,7 +451,7 @@ Craft.init = function (config) {
     isMinecraft: true,
   });
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <div>
         <AppView
