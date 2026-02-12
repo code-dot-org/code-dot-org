@@ -8,8 +8,8 @@ import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
-import AiChatToolsAvailableAlert from '@cdo/apps/aiComponentLibrary/sectionAssignmentAlerts/AiChatToolsAvailableAlert';
-import AiChatToolsRequiredAlert from '@cdo/apps/aiComponentLibrary/sectionAssignmentAlerts/AiChatToolsRequiredAlert';
+import AssigningAvailableAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/AssigningAvailableAiChatToolsAlert';
+import AssigningEssentialAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/AssigningEssentialAiChatToolsAlert';
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
@@ -250,11 +250,11 @@ const MultipleSectionsAssigner = ({
           />
           {experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
             aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
-              <AiChatToolsRequiredAlert />
+              <AssigningEssentialAiChatToolsAlert />
             )}
           {experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
             aiChatToolsDependency === AiChatToolsDependency.AVAILABLE && (
-              <AiChatToolsAvailableAlert />
+              <AssigningAvailableAiChatToolsAlert />
             )}
         </div>
       </div>

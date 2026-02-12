@@ -1,4 +1,3 @@
-import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import Button from '@code-dot-org/component-library/button';
 import Link from '@code-dot-org/component-library/link';
 import NotificationBanner from '@code-dot-org/component-library/notification-banner';
@@ -12,8 +11,14 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {navigateToHref} from '@cdo/apps/utils';
 import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
 
+import AiChatToolsInfoAlert from './AiChatToolsInfoAlert';
+
 import styles from './ai-chat-tools-dependency-alerts.module.scss';
 
+/**
+ * Alerts the teacher that a course or unit requires AI Chat tools, or
+ * warns them loudly if they have it turned off.
+ */
 const RequiresAiChatToolsAlert: React.FC = () => {
   const selectedSection = useAppSelector(selectedSectionSelector);
   const handleReviewAiSettings = React.useCallback(() => {
@@ -29,17 +34,7 @@ const RequiresAiChatToolsAlert: React.FC = () => {
   return (
     <>
       {aiChatAccessLevel !== AiChatAccessLevels.DISABLED && (
-        <Alert
-          text="This course requires the use of AI chat tools to complete."
-          type={alertTypes.aqua}
-          link={{
-            href: AI_SETTINGS_SUPPORT_LINK,
-            text: 'Learn more',
-          }}
-          icon={{iconName: 'ai-bot-solid', iconFamily: 'kit'}}
-          showIcon={true}
-          className={styles.chatToolsInfo}
-        />
+        <AiChatToolsInfoAlert text="This course requires the use of AI chat tools to complete." />
       )}
       {aiChatAccessLevel === AiChatAccessLevels.DISABLED && (
         <NotificationBanner
