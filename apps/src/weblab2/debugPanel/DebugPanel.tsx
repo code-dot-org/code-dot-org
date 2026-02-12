@@ -1,8 +1,5 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   BodyFourText,
-  BodyThreeText,
-  OverlineThreeText,
   StrongText,
 } from '@code-dot-org/component-library/typography';
 import React, {useEffect, useMemo} from 'react';
@@ -15,6 +12,7 @@ import SuccessDivider from '@cdo/apps/weblab2/debugPanel/images/Success.svg';
 
 import {NetworkEntry} from '../redux/networkRedux';
 
+import DetailsBox from './DetailsBox';
 import NetworkRequestChip from './NetworkRequestChip';
 
 import moduleStyles from './debug-panel.module.scss';
@@ -107,57 +105,41 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
             </div>
           </div>
           <div className={moduleStyles.detailsContainer}>
-            <div className={moduleStyles.detailsBox}>
-              <div className={moduleStyles.detailsHeader}>
-                <BodyThreeText className={moduleStyles.detailsHeaderText}>
-                  <StrongText>Request</StrongText>
-                </BodyThreeText>
-                <FontAwesomeV6Icon
-                  iconName={requestSuccess ? 'check-circle' : 'xmark-circle'}
-                  className={
-                    requestSuccess
-                      ? moduleStyles.successIcon
-                      : moduleStyles.errorIcon
-                  }
-                />
-              </div>
-              <div className={moduleStyles.detailsBody}>
-                <div className={moduleStyles.detailsRow}>
-                  <div className={moduleStyles.detailsField}>
-                    <OverlineThreeText
-                      className={moduleStyles.detailsFieldLabel}
-                    >
-                      Method
-                    </OverlineThreeText>
-                    <BodyThreeText className={moduleStyles.detailsFieldValue}>
-                      {selectedRequest?.request.method}
-                    </BodyThreeText>
-                  </div>
-                  <div className={moduleStyles.detailsField}>
-                    <OverlineThreeText
-                      className={moduleStyles.detailsFieldLabel}
-                    >
-                      Request Time
-                    </OverlineThreeText>
-                    <BodyThreeText className={moduleStyles.detailsFieldValue}>
-                      {selectedRequest?.request.startTime}
-                    </BodyThreeText>
-                  </div>
-                </div>
-                <div className={moduleStyles.detailsField}>
-                  <OverlineThreeText className={moduleStyles.detailsFieldLabel}>
-                    URL
-                  </OverlineThreeText>
-                  <BodyThreeText className={moduleStyles.detailsFieldValue}>
-                    {selectedRequest?.request.url}
-                  </BodyThreeText>
-                </div>
-              </div>
-            </div>
+            <DetailsBox
+              title="Request"
+              success={requestSuccess}
+              rows={[
+                [
+                  {
+                    label: 'Method',
+                    value: selectedRequest?.request.method,
+                  },
+                  {
+                    label: 'Request Time',
+                    value: selectedRequest?.request.startTime,
+                  },
+                ],
+                [{label: 'URL', value: selectedRequest?.request.url}],
+              ]}
+            />
             <img src={dividerIcon} alt={dividerAltText} />
-            <div className={moduleStyles.detailsBox}>
-              {selectedRequest?.response?.status}
-            </div>
+            <DetailsBox
+              title="Response"
+              success={responseSuccess}
+              rows={[
+                [
+                  {
+                    label: 'Status',
+                    value: selectedRequest?.response?.status,
+                  },
+                  {
+                    label: 'Response Time',
+                    value: selectedRequest?.response?.timeElapsed,
+                  },
+                ],
+                [{label: 'URL', value: selectedRequest?.response?.url}],
+              ]}
+            />
           </div>
         </div>
       )}

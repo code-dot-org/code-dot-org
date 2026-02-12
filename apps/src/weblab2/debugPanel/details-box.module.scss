@@ -1,0 +1,75 @@
+@use '../../lab2/views/components/layout/variables.scss' as variables;
+
+.detailsBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: 4px;
+  border: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-primary);
+}
+
+.detailsHeader {
+  display: flex;
+  padding: 8px 10px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-bottom: variables.$default-border;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.detailsHeaderText {
+  flex: 1 0 0;
+}
+
+.detailsBody {
+  display: flex;
+  padding: 8px 10px 10px 10px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  align-self: stretch;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.detailsRow {
+  display: flex;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.detailsField {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.detailsFieldLabel {
+  color: var(--text-neutral-tertiary);
+}
+
+.detailsFieldValue {
+  border-radius: 4px;
+  background: var(--background-neutral-secondary, #F0F2F5);
+  padding: 4px 6px;
+  align-self: stretch;
+  font-family: monospace;
+}
+
+.successIcon {
+  color: var(--text-success-primary);
+}
+
+.errorIcon {
+  color: var(--text-error-primary);
+}
