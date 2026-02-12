@@ -136,11 +136,16 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
                       value: selectedRequest?.response?.status,
                     },
                     {
-                      label: 'Response Time',
+                      label: 'Time',
                       value: selectedRequest?.response?.timeElapsed,
                     },
                   ],
-                  [{label: 'URL', value: selectedRequest?.response?.url}],
+                  [
+                    {
+                      label: 'Response Data',
+                      value: selectedRequest?.response?.body,
+                    },
+                  ],
                 ]}
               />
             ) : (

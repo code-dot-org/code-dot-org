@@ -35,6 +35,8 @@
   align-items: stretch;
   gap: 8px;
   align-self: stretch;
+  overflow: hidden;
+  overflow-y: auto;
 
   p {
     margin-bottom: 0;
