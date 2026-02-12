@@ -34,6 +34,7 @@ class CourseScript extends Component {
     assignedSectionId: PropTypes.number,
     showAssignButton: PropTypes.bool,
     participantAudience: PropTypes.string,
+    aiChatToolsDependency: PropTypes.string,
     // redux provided
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     selectedSectionId: PropTypes.number,
@@ -81,6 +82,7 @@ class CourseScript extends Component {
       sectionsForDropdown,
       showAssignButton,
       participantAudience,
+      aiChatToolsDependency,
     } = this.props;
     const {confirmationMessageOpen} = this.state;
 
@@ -151,6 +153,7 @@ class CourseScript extends Component {
                   isAssigningCourseOnly={false}
                   isSingleUnitCourse={false}
                   participantAudience={participantAudience}
+                  aiChatToolsDependency={aiChatToolsDependency}
                 />
               </div>
             )}

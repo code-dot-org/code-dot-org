@@ -697,7 +697,9 @@ roles.each do |name, config| %>
                 - s3:DeleteObjectVersionTagging
                 - s3:PutObjectLegalHold
                 - s3:PutObjectRetention
-              Resource: '*'
+              NotResource:
+                - arn:aws:s3:::org.cdn-code.adhoc-*.*
+                - arn:aws:s3:::org.cdn-code.adhoc-*.*/*
             - Sid: DenyDestructiveRDSOperationsOnProduction
               Effect: Deny
               Action:

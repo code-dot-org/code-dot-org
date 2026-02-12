@@ -1,13 +1,27 @@
+import Alert from '@code-dot-org/component-library/alert';
 import {Typography} from '@mui/material';
 import _ from 'lodash';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 
+import DCDO from '@cdo/apps/dcdo';
 import {getSelectedUnitId} from '@cdo/apps/redux/unitSelectionRedux';
 import {loadUnitProgress} from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 import {LessonOption} from '@cdo/apps/templates/teacherDashboardShared/LessonSelector';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+const canParseUrl = (urlString: string | object | boolean): boolean => {
+  if (urlString && typeof urlString === 'string') {
+    try {
+      new URL(urlString);
+      return true;
+    } catch {
+      return false;
+    }
+  }
+  return false;
+};
 
 import {getFullName} from '../manageStudents/utils';
 
@@ -34,20 +48,6 @@ const getLessons = (unitId: number) =>
 
 const lessonsCachedLoader = _.memoize(getLessons);
 
-interface StudentCodeData {
-  studentCode: Record<string, string>;
-}
-
-const getStudentCode = (
-  unitId: number,
-  lessonId: number,
-  studentId: number
-): Promise<Record<string, string>> => {
-  return HttpClient.fetchJson<StudentCodeData>(
-    `/student_snapshots/units/${unitId}/lessons/${lessonId}/students/${studentId}/code`
-  ).then(response => response?.value?.studentCode || {});
-};
-
 const StudentSnapshot: React.FC = () => {
   const [selectedStudentId, setSelectedStudentId] = React.useState<
     number | null
@@ -57,9 +57,6 @@ const StudentSnapshot: React.FC = () => {
   const [isLessonsLoading, setIsLessonsLoading] = useState<boolean>(false);
   const [hasUnnumberedLessons, setHasUnnumberedLessons] =
     useState<boolean>(false);
-  const [isStudentCodeLoading, setIsStudentCodeLoading] =
-    useState<boolean>(false);
-  const [studentCode, setStudentCode] = useState<Record<string, string>>({});
 
   const sectionId = useAppSelector(
     state => state.teacherSections.selectedSectionId
@@ -88,7 +85,9 @@ const StudentSnapshot: React.FC = () => {
     [selectedStudentId, selectedStudents]
   );
 
-  React.useEffect(() => {
+  const feedbackLink = DCDO.get('student-snapshot-feedback-link', undefined);
+
+  useEffect(() => {
     if (selectedUnitId) {
       setIsLessonsLoading(true);
       lessonsCachedLoader(selectedUnitId)
@@ -108,29 +107,6 @@ const StudentSnapshot: React.FC = () => {
     }
   }, [sectionId, selectedUnitId, sectionCourseId, selectedUnitPosition]);
 
-  // Fetch Student Code when student or lesson changes
-  React.useEffect(() => {
-    if (selectedUnitId && selectedLessonId && selectedStudentId) {
-      setIsStudentCodeLoading(true);
-      getStudentCode(selectedUnitId, selectedLessonId, selectedStudentId)
-        .then(code => {
-          setStudentCode(code);
-        })
-        .catch(error => {
-          console.error('Error fetching student code:', error);
-          setStudentCode({});
-        })
-        .finally(() => {
-          setIsStudentCodeLoading(false);
-        });
-    } else {
-      setStudentCode({});
-    }
-  }, [selectedUnitId, selectedLessonId, selectedStudentId]);
-
-  // TODO(lfm): figure out what this is supposed to do
-  console.log(isStudentCodeLoading);
-
   return (
     <div className={styles.snapshotContainer}>
       <Header
@@ -142,6 +118,22 @@ const StudentSnapshot: React.FC = () => {
         setSelectedStudentId={setSelectedStudentId}
         hasUnnumberedLessons={hasUnnumberedLessons}
       />
+
+      {canParseUrl(feedbackLink) && (
+        <Alert
+          type={'primary'}
+          size={'s'}
+          text={
+            "We'd love your feedback on the new Student Snapshot page. Just a few minutes will help us improve!"
+          }
+          link={{
+            text: 'Feedback form',
+            href: String(feedbackLink),
+            openInNewTab: true,
+          }}
+          icon={{iconName: 'comment-dots', iconStyle: 'regular'}}
+        />
+      )}
 
       {selectedStudent && (
         <Typography
@@ -168,8 +160,10 @@ const StudentSnapshot: React.FC = () => {
         />
         <LessonFeedbackWidget
           lessonId={selectedLessonId}
-          studentId={selectedStudentId}
           teacherHasEnabledAi={aiTaEnabled}
+          studentId={selectedStudentId}
+          unitId={selectedUnitId}
+          sectionId={sectionId}
         />
         <StudentCFUWidget
           gridWidth={2}
@@ -177,7 +171,11 @@ const StudentSnapshot: React.FC = () => {
           lessonId={selectedLessonId}
           studentId={selectedStudentId}
         />
-        <StudentCodeWidget studentCode={studentCode} />
+        <StudentCodeWidget
+          selectedUnitId={selectedUnitId}
+          selectedLessonId={selectedLessonId}
+          selectedStudentId={selectedStudentId}
+        />
         <StudentRubricWidget
           gridWidth={2}
           gridHeight={2}

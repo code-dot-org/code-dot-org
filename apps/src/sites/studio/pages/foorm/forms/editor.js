@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import foorm, {
@@ -7,6 +6,7 @@ import foorm, {
 } from '@cdo/apps/code-studio/pd/foorm/editor/foormEditorRedux';
 import FoormFormEditorManager from '@cdo/apps/code-studio/pd/foorm/editor/form/FoormFormEditorManager';
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 import {
@@ -25,7 +25,7 @@ $(document).ready(function () {
   const formNamesAndVersions = scriptData.formNamesAndVersions;
   getStore().dispatch(setFetchableEntities(formNamesAndVersions));
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <FoormFormEditorManager
         populateCodeMirror={populateCodeMirror}

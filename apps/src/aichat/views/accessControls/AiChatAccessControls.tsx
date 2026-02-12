@@ -1,11 +1,7 @@
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import Toggle from '@code-dot-org/component-library/toggle';
-import {
-  Heading4,
-  BodyThreeText,
-  BodyTwoText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
@@ -124,10 +120,10 @@ const AiChatAccessControls: React.FC = () => {
   return (
     <div className={style.container}>
       <div className={style.interactionsElement}>
-        <Heading4 noMargin={true}>Class Section Settings</Heading4>
-        <BodyThreeText className={style.subHeader}>
+        <Typography variant="h4">Class Section Settings</Typography>
+        <Typography className={style.subHeader} variant="body3" gutterBottom>
           Control access to AI features and tools for the entire class section.
-        </BodyThreeText>
+        </Typography>
         {isLoadingSectionData ? (
           <Spinner />
         ) : (
@@ -146,9 +142,9 @@ const AiChatAccessControls: React.FC = () => {
             <div
               className={classNames(style.rowContainer, style.withBorderTop)}
             >
-              <BodyTwoText noMargin className={style.semiBold}>
+              <Typography className={style.semiBold} variant="body2">
                 AI Chat Tools
-              </BodyTwoText>
+              </Typography>
               {!accessToggle && (
                 <div className={style.toolTipContainer}>
                   <Checkbox

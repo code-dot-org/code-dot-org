@@ -146,8 +146,24 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
         return 'partially_correct';
       }
 
+      // Match: backend sends correct/incorrect only; derive partially_correct from student_result.
+      // Option at index i is correct when student_result[i] === i (same as CFUMatchAnswer).
+      if (response.type === 'Match') {
+        const studentResult = (response as {student_result?: number[]})
+          .student_result;
+        if (!Array.isArray(studentResult) || studentResult.length === 0) {
+          return 'incomplete';
+        }
+        const total = studentResult.length;
+        const correctCount = studentResult.filter(
+          (answer: number, index: number) => answer === index
+        ).length;
+        if (correctCount === total) return 'correct';
+        if (correctCount > 0) return 'partially_correct';
+        return 'incorrect';
+      }
+
       // Multi: status is correct/incorrect/unsubmitted
-      // Match: status is array of submitted/unsubmitted, correctness determined by student_result
       // Free response: status is "" and student_result contains the text
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const status = (response as any).status;
@@ -158,10 +174,7 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
       if (status === 'incorrect') return 'incorrect';
       if (status === 'unsubmitted') return 'incomplete';
       if (Array.isArray(status)) {
-        // For Match levels: if any unsubmitted, it's incomplete
         if (status.includes('unsubmitted')) return 'incomplete';
-        // If all submitted, check if all matches are correct
-        // For Match, correct means student_result[index] === index for all
         if (
           Array.isArray(studentResult) &&
           studentResult.length === status.length &&
@@ -202,7 +215,12 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
     );
     const completed = total - counts.incomplete;
     const accuracy =
-      completed === 0 ? 0 : Math.round((counts.correct / completed) * 100);
+      completed === 0
+        ? 0
+        : Math.round(
+            ((counts.correct + 0.5 * counts.partially_correct) / completed) *
+              100
+          );
     return {total, completed, accuracy, counts};
   }, [fetchedCfuLevels, statusBuckets]);
 
@@ -213,7 +231,9 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
     content = <BodyThreeText>Loading CFU data...</BodyThreeText>;
   } else if (!fetchedCfuLevels || fetchedCfuLevels.length === 0) {
     content = (
-      <BodyThreeText>No CFU data available for this lesson.</BodyThreeText>
+      <BodyThreeText>
+        This lesson doesn't have any "Check for Understanding" questions.
+      </BodyThreeText>
     );
   } else {
     scrollable = true;
@@ -232,50 +252,13 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
             statusBuckets={statusBuckets}
           />
         )}
-
-        <div style={{marginBottom: 12}}>
-          <ul style={{margin: '8px 0 0 18px', padding: 0}}>
-            {fetchedCfuLevels.map(level => {
-              const bucket = bucketForLevel(level.id);
-              return (
-                <li key={level.id} style={{marginBottom: 6}}>
-                  <BodyThreeText>
-                    {level.display_name} — {level.type} —{' '}
-                    <strong>{bucket}</strong>
-                  </BodyThreeText>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-        <BodyThreeText>
-          <strong>Raw data</strong>
-        </BodyThreeText>
-        <pre
-          style={{
-            whiteSpace: 'pre-wrap',
-            wordBreak: 'break-word',
-            fontFamily: 'monospace',
-            fontSize: 12,
-            margin: 0,
-          }}
-        >
-          {JSON.stringify(
-            {
-              levels: fetchedCfuLevels,
-              responses: fetchedCfuResponses || [],
-            },
-            null,
-            2
-          )}
-        </pre>
       </div>
     );
   }
 
   return (
     <WidgetTemplate
-      widgetName="CFU"
+      widgetName="Check For Understanding Questions"
       gridWidth={gridWidth}
       gridHeight={gridHeight}
       loading={loading}

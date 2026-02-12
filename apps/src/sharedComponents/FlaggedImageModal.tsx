@@ -1,5 +1,5 @@
 import Modal from '@code-dot-org/component-library/modal';
-import {BodyTwoText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import i18n from '@cdo/locale';
@@ -24,26 +24,30 @@ const FlaggedImageModal: React.FC<FlaggedImageModalProps> = ({
       title={i18n.animationPicker_flaggedImageModalTitle()}
       customContent={
         <div id="dsco-dialog-description">
-          <BodyTwoText>{i18n.animationPicker_flaggedImage()}</BodyTwoText>
+          <Typography variant="body2" gutterBottom>
+            {i18n.animationPicker_flaggedImage()}
+          </Typography>
           <ul>
             <li>
-              <BodyTwoText>
+              <Typography variant="body2" gutterBottom>
                 {i18n.animationPicker_flaggedImageNoShare()}
-              </BodyTwoText>
+              </Typography>
             </li>
             <li>
-              <BodyTwoText>
+              <Typography variant="body2" gutterBottom>
                 {i18n.animationPicker_flaggedImageNoUpload()}
-              </BodyTwoText>
+              </Typography>
             </li>
             <li>
-              <BodyTwoText>
+              <Typography variant="body2" gutterBottom>
                 {i18n.animationPicker_flaggedImageTOS()}
-              </BodyTwoText>
+              </Typography>
             </li>
           </ul>
           {errorMessage && (
-            <BodyTwoText style={{color: 'red'}}>{errorMessage}</BodyTwoText>
+            <Typography style={{color: 'red'}} variant="body2" gutterBottom>
+              {errorMessage}
+            </Typography>
           )}
         </div>
       }

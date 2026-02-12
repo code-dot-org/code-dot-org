@@ -27,7 +27,7 @@ markdown <<MARKDOWN
 
 
 
-<img src="https://images.code.org/27d7b6030e8e13feff668b11c076f6f7-image-1767807024312.png" alt="JavaScript code sample with a sorting function for highest score" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+<img src="https://images.code.org/27d7b6030e8e13feff668b11c076f6f7-image-1767807024312.png" alt="JavaScript code sample with a sorting function for highest score" width="850px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
 
 ---
 
@@ -37,18 +37,19 @@ markdown <<MARKDOWN
 
 #### **1. The data (array of objects)** 
 
-<img src="https://images.code.org/0b65b2bb3aa1f996960173280e8430cb-image-1767807082322.png" alt="array of students with scores in javascript" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 20px;">
+<img src="https://images.code.org/0b65b2bb3aa1f996960173280e8430cb-image-1767807082322.png" alt="array of students with scores in javascript" width="650px" style="border-radius:10px; float:right; margin: 0 0 40px 20px;">
 
 #### This is the data the app starts with. 
 #### Each student is an object, and all the students together are stored in an array. 
 
 <br><br>
 
+<div style="clear:both;"></div>
 
 #### **2. The sort logic (inside a function)**
 
 <div style="clear:both;"></div>
-<img src="https://images.code.org/82ab47eabbc680e18ae36151e17c01b2-image-1767807127427.png" alt="function with sorting algorithm" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 20px;">
+<img src="https://images.code.org/82ab47eabbc680e18ae36151e17c01b2-image-1767807127427.png" alt="function with sorting algorithm" width="650px" style="border-radius:10px; float:right; margin: 0 0 40px 20px;">
 
 
 #### This function defines the sort rule.
@@ -59,10 +60,11 @@ markdown <<MARKDOWN
 
 <br><br>
 
+<div style="clear:both;"></div>
 
 #### **3. Using the function**
 
-<img src="https://images.code.org/f6ec4d1caba87b0013b42acc2abe3e42-image-1767807197683.png" alt="calling the sorting function in javascript" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 20px;">
+<img src="https://images.code.org/f6ec4d1caba87b0013b42acc2abe3e42-image-1767807197683.png" alt="calling the sorting function in javascript" width="650px" style="border-radius:10px; float:right; margin: 0 0 40px 20px;">
 
 #### This line runs the function using the original data.
 #### The result is the same list of students, but reordered so the highest scores appear first.

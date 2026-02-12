@@ -1,10 +1,13 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {CodebridgeEmptyState} from '@codebridge/components/CodebridgeEmptyState';
+import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import classNames from 'classnames';
 import {isEqual} from 'lodash';
-import React, {useEffect, useMemo, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {getFilesByLanguage} from '@cdo/apps/codebridge/utils/getFilesByLanguage';
+import {getFolderPath} from '@cdo/apps/codebridge/utils/getFolderPath';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {setIsFullScreenView} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -21,6 +24,11 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {filterSourceForPreview} from '@cdo/apps/weblab2/htmlPreview/filterSourceForPreview';
+import {
+  addRequestData,
+  addResponseData,
+  clearRequests,
+} from '@cdo/apps/weblab2/redux/networkRedux';
 
 import {
   IframeMessageType,
@@ -129,6 +137,41 @@ export const HTMLPreview: React.FC = () => {
   const canNavigateBack = navigationHistoryIndex > 0;
   const canNavigateForward =
     navigationHistoryIndex < navigationHistory.length - 1;
+
+  // We use a ref here to avoid rerendering on every source change (ie, when the contents of a file are changed).
+  const htmlFileOptionsRef = useRef<string[]>([]);
+
+  const htmlFileOptions = useMemo(() => {
+    if (!source) {
+      return [];
+    }
+    const options = getFilesByLanguage(source, 'html')
+      .map(file => {
+        if (file.folderId === DEFAULT_FOLDER_ID) {
+          return file.name;
+        }
+        const folderPath = getFolderPath(file.folderId, source.folders);
+        const fullPath = `${folderPath}/${file.name}`;
+        return fullPath.startsWith('/') ? fullPath.substring(1) : fullPath;
+      })
+      .sort((a, b) => a.localeCompare(b));
+    return options;
+  }, [source]);
+
+  useEffect(() => {
+    htmlFileOptionsRef.current = htmlFileOptions;
+  }, [htmlFileOptions]);
+
+  const fetchHtmlFileOptions = useCallback(async (searchValue: string) => {
+    const normalizedSearch = searchValue.trim().toLowerCase();
+    const options = htmlFileOptionsRef.current;
+    if (!normalizedSearch) {
+      return options;
+    }
+    return options.filter(option =>
+      option.toLowerCase().includes(normalizedSearch)
+    );
+  }, []);
 
   useEffect(() => {
     if (aiFilePathToPreview) {
@@ -247,6 +290,7 @@ export const HTMLPreview: React.FC = () => {
     setIsStopped(false);
     setIsLevelLoading(true);
     setIsIframeLoaded(false);
+    dispatch(clearRequests());
   });
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
@@ -293,6 +337,12 @@ export const HTMLPreview: React.FC = () => {
         Lab2Registry.getInstance()
           .getMetricsReporter()
           .logWarning('Service worker unavailable in HTMLPreview iframe.');
+      } else if (event.data.type === IframeMessageType.NETWORK_REQUEST) {
+        const {id, ...request} = event.data.request;
+        dispatch(addRequestData({id, request}));
+      } else if (event.data.type === IframeMessageType.NETWORK_RESPONSE) {
+        const {id, ...response} = event.data.response;
+        dispatch(addResponseData({id, response: response}));
       }
     };
 
@@ -304,6 +354,7 @@ export const HTMLPreview: React.FC = () => {
     navigationHistory,
     navigationHistoryIndex,
     debouncedSource,
+    dispatch,
   ]);
 
   useEffect(() => {
@@ -408,6 +459,7 @@ export const HTMLPreview: React.FC = () => {
           setPreviewViewMode={setPreviewViewMode}
           onStopPreview={onStopPreview}
           isStopEnabled={!isStopped}
+          fetchFileSearchOptions={fetchHtmlFileOptions}
         />
         {isEmptyProject ? (
           <PreviewEmptyState />
@@ -428,7 +480,7 @@ export const HTMLPreview: React.FC = () => {
             aria-label="Web Preview Frame"
           >
             <iframe
-              sandbox="allow-scripts allow-same-origin"
+              sandbox="allow-scripts allow-same-origin allow-forms"
               allow="self"
               title="Web Preview"
               ref={iframeRef}

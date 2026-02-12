@@ -38,6 +38,7 @@ import {
   UserAddedSelectionContextItem,
   ChatMessage,
   isPendingOrCompletedChatMessage,
+  CompletedChatMessage,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -209,6 +210,18 @@ const aichatSlice = createSlice({
       );
       if (!event) return;
       event.status = action.payload.status;
+    },
+    updateRequestId: (
+      state,
+      action: PayloadAction<{updateId: string; requestId: number}>
+    ) => {
+      const event = state.chatEventsCurrent.find(
+        (event): event is ChatMessage =>
+          isPendingOrCompletedChatMessage(event) &&
+          event.updateId === action.payload.updateId
+      );
+      if (!event) return;
+      (event as CompletedChatMessage).requestId = action.payload.requestId;
     },
     setChatMessageSent: (state, action: PayloadAction<boolean>) => {
       state.hasSentMessage = action.payload;
@@ -458,6 +471,7 @@ export const {
   addEventToChatEventsCurrent,
   startSave,
   updateChatMessageStatus,
+  updateRequestId,
   setChatMessageSent,
   setSavedAiCustomizations,
   updateChatMessageFeedback,

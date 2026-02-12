@@ -120,6 +120,26 @@ const InnerHTMLPreview = () => {
       ) {
         setServiceWorkerReady(true);
         setPreviewKey(prevKey => prevKey + 1);
+      } else if (
+        event.data.type === ProjectServiceWorkerMessageType.NETWORK_REQUEST
+      ) {
+        window.parent.postMessage(
+          {
+            type: IframeMessageType.NETWORK_REQUEST,
+            request: event.data.requestData,
+          },
+          parentOrigin
+        );
+      } else if (
+        event.data.type === ProjectServiceWorkerMessageType.NETWORK_RESPONSE
+      ) {
+        window.parent.postMessage(
+          {
+            type: IframeMessageType.NETWORK_RESPONSE,
+            response: event.data.responseData,
+          },
+          parentOrigin
+        );
       }
     };
     return () => {
@@ -138,7 +158,9 @@ const InnerHTMLPreview = () => {
       return (
         <iframe
           ref={iframeRef}
-          sandbox={`${allowScripts ? 'allow-scripts ' : ''}allow-same-origin`}
+          sandbox={`${
+            allowScripts ? 'allow-scripts ' : ''
+          }allow-same-origin allow-forms`}
           allow="self"
           title="Inner HTML Preview"
           id="inner-preview"

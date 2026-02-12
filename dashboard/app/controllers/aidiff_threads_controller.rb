@@ -117,6 +117,12 @@ class AidiffThreadsController < ApplicationController
       # Add user message to thread
       begin
         log_messages(response_body)
+        if response_body[:is_artifact_candidate]
+          response_body[:chat_message_text] = AidiffArtifact.to_markdown(
+            response_body[:chat_message_text],
+            response_body[:artifact_type]
+          )
+        end
         response_body[:message_id] = @assistant_message.id
         response_body[:thread_id] = @aidiff_thread.id
         if session_id.nil?
@@ -127,7 +133,7 @@ class AidiffThreadsController < ApplicationController
       end
     end
 
-    return_body = response_body.slice(:role, :status, :chat_message_text, :message_id, :thread_id, :is_artifact_candidate, :artifact_candidate_type)
+    return_body = response_body.slice(:role, :status, :chat_message_text, :message_id, :thread_id, :is_artifact_candidate, :artifact_type)
 
     render(json: return_body)
   end

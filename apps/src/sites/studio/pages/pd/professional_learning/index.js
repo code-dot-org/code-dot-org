@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {displayDifferentiationChat} from '@cdo/apps/aiDifferentiation/aiDiffUtils';
@@ -7,6 +6,7 @@ import LandingPage from '@cdo/apps/code-studio/pd/professional_learning/LandingP
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 // Execute after page has fully loaded so the Amplitude event only fires on full page load
@@ -17,7 +17,7 @@ $(() => {
 
   const landingPageData = getScriptData('landingPageData');
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <LandingPage
         lastWorkshopSurveyUrl={landingPageData['last_workshop_survey_url']}
