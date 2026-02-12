@@ -2,6 +2,7 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
+import AiTutorEnglishOnlyWarning from '@cdo/apps/aiTutor/views/englishOnlyWarning';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {selectIsWaitingForChatResponse, submitChatContents} from '../redux';
@@ -70,8 +71,6 @@ const UserChatMessageEditor: React.FunctionComponent<
   const userAddedSelectionContext = useAppSelector(
     state => state.aichat.userAddedSelectionContext
   );
-  const locale = useAppSelector(state => state.pageConstants.locale);
-  const showEnglishOnlyWarning = locale && locale !== 'en_us';
 
   const dispatch = useAppDispatch();
 
@@ -165,12 +164,7 @@ const UserChatMessageEditor: React.FunctionComponent<
           </div>
         )}
       </UserMessageEditor>
-      {showEnglishOnlyWarning && (
-        <p>
-          Code.org AI chat tools support English only; use in other languages is
-          not currently recommended.
-        </p>
-      )}
+      <AiTutorEnglishOnlyWarning />
     </>
   );
 };
