@@ -12,8 +12,8 @@ interface LessonFeedbackData {
   updated_at: string | Date;
   teacher_name?: string;
   teacher_id: number;
-  lessonTitle?: string;
-  lessonStartUrl?: string;
+  lesson_title?: string;
+  lesson_start_url?: string;
   resources?: Array<{
     recommended_action?: string;
     resource_name?: string;
@@ -68,8 +68,8 @@ function LessonFeedbackContainer({studentId}: LessonFeedbackContainerProps) {
               lessonId={lessonFeedback.lesson_id}
               teacherName={lessonFeedback.teacher_name || 'Your teacher'}
               submittedAtDate={lessonFeedback.updated_at}
-              lessonTitle={lessonFeedback.lessonTitle}
-              lessonStartUrl={lessonFeedback.lessonStartUrl}
+              lessonTitle={lessonFeedback.lesson_title}
+              lessonStartUrl={lessonFeedback.lesson_start_url}
             />
           );
         })}

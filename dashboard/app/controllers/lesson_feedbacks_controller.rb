@@ -26,9 +26,9 @@ class LessonFeedbacksController < ApplicationController
 
     feedback_with_additional_data = feedback.map do |f|
       f.as_json.merge(
-        'teacherName' => f.teacher.name,
-        'lessonTitle' => f.lesson.localized_title,
-        'lessonStartUrl' => f.lesson.start_url
+        'teacher_name' => f.teacher.name,
+        'lesson_title' => f.lesson.localized_title,
+        'lesson_start_url' => f.lesson.start_url
       )
     end
 
