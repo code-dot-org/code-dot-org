@@ -4,6 +4,8 @@ import {useLocalization} from '@cdo/apps/localization';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
+import styles from './aiTutorEnglishOnlyWarning.module.scss';
+
 const AiTutorEnglishOnlyWarning: React.FunctionComponent = () => {
   const clientType = useAppSelector(state => state.aichat?.clientType);
   const legacyLabState = useAppSelector(state => state.pageConstants);
@@ -18,7 +20,7 @@ const AiTutorEnglishOnlyWarning: React.FunctionComponent = () => {
   return (
     <>
       {showEnglishOnlyWarning && (
-        <p>
+        <p className={styles.message}>
           Code.org AI chat tools support English only; use in other languages is
           not currently recommended.
         </p>
