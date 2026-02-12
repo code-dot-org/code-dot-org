@@ -48,6 +48,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const instructionsContentRef = useRef<HTMLDivElement>(null);
+  const instructionsHeightAtDragStartRef = useRef<number | null>(null);
   const [chatHeight, setChatHeight] = useState<number | undefined>(undefined);
   const [instructionsHeight, setInstructionsHeight] = useState<
     number | undefined
@@ -68,7 +69,29 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
     min: MIN_INSTRUCTIONS_HEIGHT,
     max: maxInstructionsHeight,
     containerRef,
+    onResizeStart: () => {
+      instructionsHeightAtDragStartRef.current = rawInstructionsHeight;
+    },
   });
+
+  // Report increase/decrease when drag ends; use effect so we read the final
+  // position after state has updated (avoids stale closure in onResizeEnd).
+  useEffect(() => {
+    if (!isDragging && instructionsHeightAtDragStartRef.current !== null) {
+      const startHeight = instructionsHeightAtDragStartRef.current;
+      instructionsHeightAtDragStartRef.current = null;
+      const endHeight = rawInstructionsHeight;
+      if (endHeight > startHeight) {
+        sendLab2AnalyticsEvent(
+          EVENTS.RESOURCE_PANEL_INSTRUCTIONS_DRAWER_RESIZED_INCREASED
+        );
+      } else if (endHeight < startHeight) {
+        sendLab2AnalyticsEvent(
+          EVENTS.RESOURCE_PANEL_INSTRUCTIONS_DRAWER_RESIZED_DECREASED
+        );
+      }
+    }
+  }, [isDragging, rawInstructionsHeight]);
 
   const adjustChatHeight = useCallback(() => {
     const containerElement = containerRef.current;

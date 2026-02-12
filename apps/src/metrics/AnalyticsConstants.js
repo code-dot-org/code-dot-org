@@ -635,6 +635,10 @@ const EVENTS = {
     'Resource Panel Instructions Drawer Collapsed',
   RESOURCE_PANEL_INSTRUCTIONS_DRAWER_EXPANDED:
     'Resource Panel Instructions Drawer Expanded',
+  RESOURCE_PANEL_INSTRUCTIONS_DRAWER_RESIZED_INCREASED:
+    'Resource Panel Instructions Drawer Resized Increased',
+  RESOURCE_PANEL_INSTRUCTIONS_DRAWER_RESIZED_DECREASED:
+    'Resource Panel Instructions Drawer Resized Decreased',
 
   // IntroJS flows
   INTROJS_FLOW_STARTED: 'IntroJS Flow Started',
