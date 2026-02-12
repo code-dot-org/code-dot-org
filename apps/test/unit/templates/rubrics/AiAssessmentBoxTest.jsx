@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 import {render, screen} from '@testing-library/react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
@@ -152,7 +153,7 @@ describe('AiAssessmentBox', () => {
       </AiAssessmentFeedbackContext.Provider>
     );
     const emNodes = wrapper
-      .find('WithStyles(ForwardRef(Typography))')
+      .find(Typography)
       .filterWhere(node => node.props().variant === 'em');
     expect(emNodes).toHaveLength(1);
     expect(emNodes.at(0).text()).toBe(i18n.aiCannotAssess());

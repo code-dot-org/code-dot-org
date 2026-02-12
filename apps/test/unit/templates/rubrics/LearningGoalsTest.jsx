@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 import {render, screen, act as rtlAct, fireEvent} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
@@ -967,15 +968,25 @@ describe('LearningGoals - Enzyme', () => {
     });
 
     wrapper.find('button').first().simulate('click');
-    deprecatedExpect(wrapper.find('Heading5 span').first().text()).to.equal(
+
+    const title = wrapper
+      .find(Typography)
+      .filterWhere(node => node.props().variant === 'h5')
+      .at(0);
+    deprecatedExpect(title.find('span').text()).to.equal(
       i18n.rubricLearningGoalSummary()
     );
-    deprecatedExpect(
-      wrapper.find('BodyThreeText StrongText').at(0).text()
-    ).to.equal('Learning Goal 1');
-    deprecatedExpect(wrapper.find('BodyThreeText').at(2).text()).to.equal(
-      'Limited Evidence'
-    );
+
+    const strongNodes = wrapper
+      .find(Typography)
+      .filterWhere(node => node.props().variant === 'strong');
+    deprecatedExpect(strongNodes.at(0).text()).to.equal('Learning Goal 1');
+
+    const body3Texts = wrapper
+      .find(Typography)
+      .filterWhere(node => node.props().variant === 'body3')
+      .map(node => node.text());
+    deprecatedExpect(body3Texts).to.include('Limited Evidence');
     postStub.restore();
   });
 
