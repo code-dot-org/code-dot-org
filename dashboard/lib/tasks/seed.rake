@@ -583,6 +583,48 @@ namespace :seed do
     MegaSection.seed
   end
 
+  timed_task_with_logging security_program_environment_check: :environment do
+    raise "seed:security_program should only be run in adhoc or development" unless [:adhoc, :development].include?(CDO.rack_env)
+  end
+
+  timed_task_with_logging security_program_accounts: :environment do
+    account_specs = [
+      {email: 'mock-student@example.com', name: 'Mock Student', user_type: User::TYPE_STUDENT, age: 13},
+      {email: 'mock-teacher@example.com', name: 'Mock Teacher', user_type: User::TYPE_TEACHER, age: '21+'},
+      {email: 'mock-verified-teacher@example.com', name: 'Mock Verified Teacher', user_type: User::TYPE_TEACHER, age: '21+'}
+    ]
+
+    ensure_account = lambda do |spec|
+      user = User.find_by_email_or_hashed_email(spec[:email])
+
+      if user.nil?
+        user = User.create!(
+          name: spec[:name],
+          email: spec[:email],
+          password: '123qwe',
+          password_confirmation: '123qwe',
+          user_type: spec[:user_type],
+          age: spec[:age]
+        )
+      else
+        updates = {}
+        updates[:name] = spec[:name] if user.name != spec[:name]
+        updates[:user_type] = spec[:user_type] if user.user_type != spec[:user_type]
+        updates[:age] = spec[:age] if user.age != spec[:age]
+        user.update!(updates) unless updates.empty?
+        user.update!(password: '123qwe', password_confirmation: '123qwe')
+      end
+
+      user
+    end
+
+    users = account_specs.map {|spec| ensure_account.call(spec)}
+    verified_teacher = users.find {|u| u.email == 'mock-verified-teacher@example.com'}
+
+    UserPermission.find_or_create_by!(user: verified_teacher, permission: UserPermission::AUTHORIZED_TEACHER)
+    puts "Ensured security-program accounts and verified-teacher permission."
+  end
+
   # Seeds shared tables in datablock storage
   timed_task_with_logging datablock_storage: :environment do
     DatablockStorageLibraryManifest.seed_all
@@ -666,6 +708,9 @@ namespace :seed do
   timed_task_with_logging default: DEFAULT_SEED_TASKS
   desc "seed all dashboard data"
   timed_task_with_logging all: FULL_SEED_TASKS
+  SECURITY_PROGRAM_SEED_TASKS = [:security_program_environment_check, :all, :sample_data, :mega_section, :security_program_accounts].freeze
+  desc "seed full production data plus security-program extras (adhoc/development only)"
+  timed_task_with_logging security_program: SECURITY_PROGRAM_SEED_TASKS
   timed_task_with_logging ui_test: UI_TEST_SEED_TASKS
 
   desc "seed all dashboard data that has changed since last seed"
