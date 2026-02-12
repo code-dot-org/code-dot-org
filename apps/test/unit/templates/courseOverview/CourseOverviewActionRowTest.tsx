@@ -27,6 +27,7 @@ const DEFAULT_PROPS = {
   showAssignButton: true,
   title: 'Course Title',
   participantAudience: ParticipantAudience.student,
+  aiChatToolsDependency: 'none' as 'none' | 'essential' | 'available',
 };
 
 const TEACHER_RESOURCES = [

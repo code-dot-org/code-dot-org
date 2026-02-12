@@ -1205,6 +1205,7 @@ Dashboard::Application.routes.draw do
     end
 
     get '/lesson_feedbacks/saved_feedback', to: 'lesson_feedbacks#saved_feedback'
+    resources :lesson_feedbacks, only: [:create, :update]
 
     resources :ai_lesson_summary_podcasts do
       collection do
@@ -1383,8 +1384,8 @@ Dashboard::Application.routes.draw do
 
     resources :aidiff_artifacts, only: [:index]
 
-    resources :aidiff_exit_tickets, only: [:index, :update, :create]
-    resources :aidiff_lesson_hooks, only: [:index, :update, :create]
+    resources :aidiff_exit_tickets, only: [:index, :update, :create, :show]
+    resources :aidiff_lesson_hooks, only: [:index, :update, :create, :show]
 
     resources :aidiff_messages, only: [] do
       member do

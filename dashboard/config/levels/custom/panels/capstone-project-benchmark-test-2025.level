@@ -11,11 +11,11 @@
     "panels": [
       {
         "text": "# Benchmark\n\nA **benchmark** a scheduled moment to check in on progress.",
-        "imageUrl": "",
+        "imageUrl": "https://images.code.org/b2c10a671faf8373fa218a9c48a10e4d-Screenshot 2026-02-06 151018.png",
         "key": "undefined-7fcb598e-1242-4643-9b90-6c7a6113e6da"
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2026-02-06 00:16:32 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-06 00:16:32 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-06 23:03:35 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-06 23:10:40 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

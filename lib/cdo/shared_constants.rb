@@ -864,6 +864,16 @@ module SharedConstants
     ESSENTIAL_ONLY: 'essential_only',
   }.freeze
 
+  # The degree to which a curriculum depends on AI chat features.
+  # 'essential' means the curriculum cannot be completed without AI chat tools.
+  # 'available' means the curriculum can be completed without AI chat tools but the tools are available for use.
+  # 'none' means the curriculum does not depend on AI chat tools at all.
+  AI_CHAT_TOOLS_DEPENDENCY = {
+    ESSENTIAL: 'essential',
+    AVAILABLE: 'available',
+    NONE: 'none',
+  }.freeze
+
   US_STATES = STATE_ABBR_WITH_DC_HASH.merge(DC: 'Washington, D.C.').sort_by(&:last).to_h.freeze
 
   PROJECT_SUBMISSION_STATUS = {

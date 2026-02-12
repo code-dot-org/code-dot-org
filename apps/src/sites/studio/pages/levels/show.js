@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
@@ -15,6 +14,7 @@ import instructions, {
   setTaRubric,
 } from '@cdo/apps/redux/instructions';
 import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
 import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
@@ -40,7 +40,7 @@ function initPage() {
 
   const redirectDialogMountPoint = document.getElementById('redirect-dialog');
   if (redirectDialogMountPoint && config.redirect_script_url) {
-    ReactDOM.render(
+    createReactRoot(
       <ScriptLevelRedirectDialog
         redirectUrl={config.redirect_script_url}
         scriptName={config.script_name}
@@ -69,7 +69,7 @@ function initPage() {
       'ai-differentiation-fab-mount-point'
     );
     if (aiDiffFabMountPoint && experiments.isEnabled('ai-diff-levels')) {
-      ReactDOM.render(
+      createReactRoot(
         <Provider store={getStore()}>
           <AiDiffFloatingActionButton
             context={differentiationContext}
@@ -86,7 +86,14 @@ function initPage() {
 
   if (hasScriptData('script[data-rubricdata]')) {
     const rubricData = getScriptData('rubricdata');
-    const {rubric, studentLevelInfo, canShowTaScoresAlert} = rubricData;
+    const {
+      rubric,
+      studentLevelInfo,
+      canShowTaScoresAlert,
+      parentLevelName,
+      levelType,
+    } = rubricData;
+
     const reportingData = {
       unitName: config.script_name,
       courseName: config.course_name,
@@ -113,7 +120,7 @@ function initPage() {
           PLATFORMS.STATSIG
         );
       }
-      ReactDOM.render(
+      createReactRoot(
         <Provider store={getStore()}>
           <RubricFloatingActionButton
             rubric={rubric}
@@ -121,7 +128,9 @@ function initPage() {
             reportingData={reportingData}
             currentLevelName={config.level_name}
             aiEnabled={rubric.learningGoals.some(lg => lg.aiEnabled)}
+            parentLevelName={parentLevelName}
             canShowTaScoresAlert={canShowTaScoresAlert}
+            levelType={levelType}
           />
         </Provider>,
         rubricFabMountPoint

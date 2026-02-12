@@ -5,12 +5,12 @@ import 'jquery-ui/ui/widgets/droppable';
 import 'jquery-ui/ui/widgets/resizable';
 import objectFitImages from 'object-fit-images';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import RGBColor from 'rgbcolor';
 
 import autogenerateML from '@cdo/apps/applab/ai';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 import * as assetPrefix from '../assetManagement/assetPrefix';
 import {ImageMode} from '../code-studio/components/AssetManager';
@@ -1694,7 +1694,7 @@ designMode.renderDesignWorkspace = function (element) {
     ),
     autogenerateML,
   };
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <DesignWorkspace {...props} />
     </Provider>,

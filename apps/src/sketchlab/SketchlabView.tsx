@@ -12,6 +12,7 @@ import {
   ExcalidrawInitialDataState,
   DataURL,
 } from '@excalidraw/excalidraw/types/types';
+import cloneDeep from 'lodash/cloneDeep';
 import React, {useEffect, useCallback, useRef, useState, useMemo} from 'react';
 
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
@@ -133,17 +134,21 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     console.error(error);
   }, []);
 
-  const initialData = useMemo(
-    () =>
-      experiments.isEnabledAllowingQueryString(S3_IMAGE_EXPERIMENT)
-        ? populateInitialExcalidrawState(
-            currentSources.source,
-            downloadedFilesDataRef.current,
-            onError
-          )
-        : (currentSources.source as ExcalidrawInitialDataState),
-    [currentSources.source, onError]
-  );
+  const initialData = useMemo(() => {
+    // Clone the sources to ensure we don't accidentally mutate the original object (which is frozen/immutable),
+    // since Excalidraw mutates the initial data object that is passed in.
+    const clonedSource = cloneDeep(
+      currentSources.source
+    ) as ExcalidrawInitialDataState;
+
+    return experiments.isEnabledAllowingQueryString(S3_IMAGE_EXPERIMENT)
+      ? populateInitialExcalidrawState(
+          clonedSource,
+          downloadedFilesDataRef.current,
+          onError
+        )
+      : clonedSource;
+  }, [currentSources.source, onError]);
 
   const currentUserId = useAppSelector(state => state.currentUser.userId);
   const backpackContext = useMemo(() => {
@@ -247,11 +252,22 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         });
 
         if (newFiles && !readonlyWorkspace) {
-          uploadExternalFiles(
+          const newFilesWithUploadStatus = await uploadExternalFiles(
             newFiles,
             serializedData.files,
             filesBeingUploadedRef
           );
+
+          // We update sources again on upload completion to update the upload status of the new files.
+          updateSources({
+            source: {
+              ...serializedData,
+              externalFiles: {
+                ...currentSources.source.externalFiles,
+                ...newFilesWithUploadStatus,
+              },
+            },
+          });
         }
       }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
     },

@@ -1,16 +1,13 @@
 import Alert from '@code-dot-org/component-library/alert';
-import {Button} from '@code-dot-org/component-library/button';
-import {BodyFourText} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
 import WidgetTemplate from '@cdo/apps/templates/studentSnapshot/widgetTemplate';
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
 
 import ActionButtons from './ActionButtons';
-import AddResourceDialog from './AddResourceDialog';
 import FeedbackTextbox from './FeedbackTextbox';
-import UrlTab from './UrlTab';
-import {useLessonFeedback} from './useLessonFeedback';
+import RecommendedActions from './RecommendedActions';
 
 import styles from './lessonFeeedback.module.scss';
 
@@ -19,6 +16,17 @@ interface LessonFeedbackWidgetProps {
   teacherHasEnabledAi: boolean;
   studentId: number | null;
   unitId: number | null;
+  sectionId: number | null;
+}
+
+interface LessonFeedbackData {
+  id?: number;
+  saved_feedback?: string;
+  resources?: Array<{
+    recommended_action?: string;
+    resource_name?: string;
+    resource_link?: string;
+  }>;
 }
 
 const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
@@ -26,21 +34,37 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
   teacherHasEnabledAi = false,
   studentId,
   unitId,
+  sectionId,
 }) => {
-  const [initialFeedback, setInitialFeedback] = React.useState<string>('');
+  const [feedbackText, setFeedbackText] = React.useState<string>('');
+  const [existingFeedbackData, setExistingFeedbackData] =
+    React.useState<LessonFeedbackData | null>(null);
+  const [resourceData, setResourceData] = React.useState<
+    Array<{
+      recommended_action: string;
+      resource_name: string;
+      resource_link: string;
+    }>
+  >([
+    {
+      recommended_action: '',
+      resource_name: '',
+      resource_link: '',
+    },
+  ]);
+  const [isLoading, setIsLoading] = React.useState<boolean>(false);
 
   // Fetch lesson feedback from backend, and if not found, try generating ai feedback
-  // TODO: Add loading state while fetching feedback
-  // TODO: check to see if there is progress before getting ai feedback
   React.useEffect(() => {
     async function getAiLessonFeedback(
       lessonId: number,
       unitId: number,
-      studentId: number
+      studentId: number,
+      sectionId: number
     ) {
       try {
         const response = await fetch(
-          `/student_snapshots/ai_generated_lesson_feedback?lesson_id=${lessonId}&unit_id=${unitId}&student_id=${studentId}`
+          `/student_snapshots/ai_generated_lesson_feedback?lesson_id=${lessonId}&unit_id=${unitId}&student_id=${studentId}&section_id=${sectionId}`
         );
         if (!response.ok) {
           throw new Error(
@@ -56,11 +80,17 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
     }
 
     async function fetchLessonFeedback() {
-      if (!lessonId || !studentId || !unitId) {
-        setInitialFeedback('');
+      if (!lessonId || !studentId || !unitId || !sectionId) {
+        setFeedbackText('');
+        setResourceData([
+          {recommended_action: '', resource_name: '', resource_link: ''},
+        ]);
         return;
       }
-      setInitialFeedback(''); // Clear feedback before fetching
+      setFeedbackText('');
+      setResourceData([
+        {recommended_action: '', resource_name: '', resource_link: ''},
+      ]);
       try {
         const response = await fetch(
           `/lesson_feedbacks/saved_feedback?lesson_id=${lessonId}&student_id=${studentId}`
@@ -68,49 +98,99 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
 
         if (!response.ok) {
           // Try getting AI feedback from student work.
-          const aiData = await getAiLessonFeedback(lessonId, unitId, studentId);
+          const aiData = await getAiLessonFeedback(
+            lessonId,
+            unitId,
+            studentId,
+            sectionId
+          );
           if (aiData && aiData.json) {
             const aiGeneratedInitialFeedback = JSON.parse(aiData.json).feedback;
-            setInitialFeedback(aiGeneratedInitialFeedback);
+            setFeedbackText(aiGeneratedInitialFeedback);
+            setResourceData([
+              {recommended_action: '', resource_name: '', resource_link: ''},
+            ]);
           }
         } else {
           const data = await response.json();
           if (data.saved_feedback) {
-            setInitialFeedback(data.saved_feedback);
+            setFeedbackText(data.saved_feedback);
+          }
+          setExistingFeedbackData(data);
+          if (data.resources && data.resources.length > 0) {
+            setResourceData(data.resources);
+          } else {
+            setResourceData([
+              {recommended_action: '', resource_name: '', resource_link: ''},
+            ]);
           }
         }
       } catch (error) {
         console.error('Error fetching feedback:', error);
+        setResourceData([
+          {recommended_action: '', resource_name: '', resource_link: ''},
+        ]);
+      } finally {
+        setIsLoading(false);
       }
     }
-    fetchLessonFeedback();
-  }, [lessonId, studentId, unitId]);
-  // Existing hook usage
-  const {
-    isLoading,
-    scrollable,
-    feedbackText,
-    recommendedActionText,
-    resourceLink,
-    resourceName,
-    showAddResourcePopup,
-    tempResourceName,
-    tempResourceLink,
-    handleFeedbackEdited,
-    handleRecommendedActionChange,
-    handleAddResourceClick,
-    handleCloseResourcePopup,
-    handleTempResourceNameChange,
-    handleTempResourceLinkChange,
-    exitResourcePopup,
-    handleResourceSave,
-    handleSaveAsDraft,
-    handleSendToStudent,
-    deleteResourceLink,
-  } = useLessonFeedback({
-    lessonId,
-    teacherHasEnabledAi,
-  });
+    if (lessonId && studentId && unitId && sectionId) {
+      setIsLoading(true);
+      fetchLessonFeedback();
+    }
+  }, [lessonId, sectionId, studentId, unitId]);
+
+  // Save as draft: update local state and persist to backend
+  const handleSaveAsDraft = async () => {
+    // Update local state
+    setExistingFeedbackData((prev: LessonFeedbackData | null) => ({
+      ...prev,
+      saved_feedback: feedbackText,
+      resources: resourceData,
+    }));
+
+    // Persist to backend
+    if (!lessonId || !studentId) return;
+    try {
+      let response;
+      if (existingFeedbackData && existingFeedbackData.id) {
+        // Update existing feedback
+        response = await fetch(`/lesson_feedbacks/${existingFeedbackData.id}`, {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': await getAuthenticityToken(),
+          },
+          body: JSON.stringify({
+            saved_feedback: feedbackText,
+            resources: resourceData,
+          }),
+        });
+      } else {
+        // Create new feedback
+        response = await fetch('/lesson_feedbacks', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': await getAuthenticityToken(),
+          },
+          body: JSON.stringify({
+            lesson_id: lessonId,
+            student_id: studentId,
+            saved_feedback: feedbackText,
+            resources: resourceData,
+          }),
+        });
+      }
+      if (!response.ok) {
+        throw new Error('Failed to save draft feedback');
+      }
+      const data = await response.json();
+      setExistingFeedbackData(data);
+    } catch (err) {
+      console.error('Error saving draft feedback:', err);
+    }
+  };
 
   // TO DO: Use Loading widget when needed here.
   const widgetContent = (
@@ -125,62 +205,19 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
       <div className={styles.feedbackTextBoxWrapper}>
         <label className={styles.typographyLabelTwo}>{i18n.feedback()}</label>
         <FeedbackTextbox
-          feedbackText={feedbackText || initialFeedback}
-          onFeedbackChange={handleFeedbackEdited}
+          feedbackText={feedbackText}
+          onFeedbackChange={setFeedbackText}
         />
       </div>
-      <div className={styles.recommendedActionContainer}>
-        <label className={styles.typographyLabelTwo}>
-          {i18n.lessonFeedbackRecommendedAction()}
-        </label>
-        <BodyFourText noMargin>
-          {i18n.lessonFeedbackRecommendedActionDirections()}
-        </BodyFourText>
-        <div className={styles.inputWrapper}>
-          <input
-            className={styles.inputBox}
-            type="text"
-            placeholder={'Write a message'}
-            value={recommendedActionText}
-            onChange={handleRecommendedActionChange}
-          />
-          <div className={styles.resourceRow}>
-            <Button
-              text={'Add resource link'}
-              size="xs"
-              type="secondary"
-              color="gray"
-              disabled={!!resourceLink}
-              iconLeft={{
-                iconStyle: 'solid',
-                iconName: 'plus',
-                title: 'Add Resource',
-              }}
-              onClick={handleAddResourceClick}
-            />
-            {resourceLink && resourceName && (
-              <UrlTab
-                urlName={resourceName}
-                onClickHandler={deleteResourceLink}
-              />
-            )}
-          </div>
-        </div>
-        {showAddResourcePopup && (
-          <AddResourceDialog
-            tempResourceName={tempResourceName}
-            tempResourceLink={tempResourceLink}
-            onResourceNameChange={handleTempResourceNameChange}
-            onResourceLinkChange={handleTempResourceLinkChange}
-            onCancel={exitResourcePopup}
-            onSave={handleResourceSave}
-            onClose={handleCloseResourcePopup}
-          />
-        )}
-      </div>
+      <RecommendedActions
+        resourceData={resourceData}
+        setResourceData={setResourceData}
+      />
       <ActionButtons
         onSaveAsDraft={handleSaveAsDraft}
-        onSendToStudent={handleSendToStudent}
+        onSendToStudent={() => {
+          console.log('Send to student:', feedbackText, resourceData);
+        }}
       />
     </div>
   );
@@ -191,7 +228,7 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
       gridWidth={2}
       gridHeight={2}
       loading={isLoading}
-      scrollable={scrollable}
+      scrollable={true}
     >
       {widgetContent}
     </WidgetTemplate>

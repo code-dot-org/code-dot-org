@@ -1,4 +1,9 @@
+import {CdoTheme} from '@code-dot-org/component-library/themes';
+import {ThemeProvider} from '@mui/material/styles';
 import type {Meta, StoryObj} from '@storybook/react';
+import React from 'react';
+
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 import StudentCodeWidget from './StudentCodeWidget';
 
@@ -23,29 +28,89 @@ const meta: Meta<typeof StudentCodeWidget> = {
   },
   tags: ['autodocs'],
   argTypes: {
-    studentCode: {
-      control: 'object',
-      description: 'Student code files (Record<string, string>)',
+    selectedUnitId: {
+      control: 'number',
+      description: 'Selected unit ID',
+    },
+    selectedLessonId: {
+      control: 'number',
+      description: 'Selected lesson ID',
+    },
+    selectedStudentId: {
+      control: 'number',
+      description: 'Selected student ID',
     },
   },
+  decorators: [
+    Story => {
+      return (
+        <ThemeProvider theme={CdoTheme}>
+          <Story />
+        </ThemeProvider>
+      );
+    },
+  ],
 };
 
 export default meta;
 type Story = StoryObj<typeof StudentCodeWidget>;
 
-export const NoFiles: Story = {
-  args: {
-    studentCode: {},
-  },
-};
 export const SingleFile: Story = {
   args: {
-    studentCode: SAMPLE_STUDENT_CODE,
+    selectedUnitId: 1,
+    selectedLessonId: 1,
+    selectedStudentId: 1,
   },
+  decorators: [
+    Story => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (HttpClient as any).fetchJson = async () => {
+        return {
+          value: {studentCode: SAMPLE_STUDENT_CODE},
+          response: new Response(),
+        };
+      };
+      return <Story />;
+    },
+  ],
 };
 
 export const MultipleFiles: Story = {
   args: {
-    studentCode: SAMPLE_STUDENT_CODE_2,
+    selectedUnitId: 1,
+    selectedLessonId: 1,
+    selectedStudentId: 1,
   },
+  decorators: [
+    Story => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (HttpClient as any).fetchJson = async () => {
+        return {
+          value: {studentCode: SAMPLE_STUDENT_CODE_2},
+          response: new Response(),
+        };
+      };
+      return <Story />;
+    },
+  ],
+};
+
+export const NoFiles: Story = {
+  args: {
+    selectedUnitId: 1,
+    selectedLessonId: 1,
+    selectedStudentId: 1,
+  },
+  decorators: [
+    Story => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (HttpClient as any).fetchJson = async () => {
+        return {
+          value: {studentCode: {}},
+          response: new Response(),
+        };
+      };
+      return <Story />;
+    },
+  ],
 };

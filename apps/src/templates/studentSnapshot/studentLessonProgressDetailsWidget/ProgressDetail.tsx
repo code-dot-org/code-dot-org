@@ -3,6 +3,8 @@ import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
+
 import styles from './studentLessonProgressDetailsWidget.module.scss';
 
 interface ProgressDetailProps {
@@ -13,6 +15,7 @@ interface ProgressDetailProps {
   displayStudentDetailAsComplete: boolean;
   showAvgComparisonArrow: boolean;
   studentIsAboveClassAvg: boolean;
+  isLoading: boolean;
 }
 
 const ProgressDetail: React.FC<ProgressDetailProps> = ({
@@ -23,32 +26,44 @@ const ProgressDetail: React.FC<ProgressDetailProps> = ({
   displayStudentDetailAsComplete,
   showAvgComparisonArrow,
   studentIsAboveClassAvg,
+  isLoading,
 }) => (
-  <div className={styles.lessonDetail}>
-    <FontAwesomeV6Icon iconName={detailIconName} iconStyle={'regular'} />
-    <div
-      className={classNames(
-        styles.lessonDetailLabelAndInfo,
-        displayStudentDetailAsComplete && styles.greenCompletedText
-      )}
-    >
-      <Typography variant="overline3">{detailTitle}</Typography>
-      <Typography variant="h4">{selectedStudentDetail}</Typography>
-      <div
-        className={classNames(
-          styles.classAvgInfo,
-          studentIsAboveClassAvg ? styles.aboveClassAvg : styles.belowClassAvg
-        )}
-      >
-        <Typography variant="body4">{classAvgDetail}</Typography>
-        {showAvgComparisonArrow && (
-          <FontAwesomeV6Icon
-            iconName={studentIsAboveClassAvg ? 'arrow-up' : 'arrow-down'}
-            iconStyle={'regular'}
-          />
-        )}
+  <div className={classNames(styles.lessonDetail, isLoading && styles.loading)}>
+    {isLoading && (
+      <div className={styles.loadingSpinner}>
+        <Spinner />
       </div>
-    </div>
+    )}
+    {!isLoading && (
+      <>
+        <FontAwesomeV6Icon iconName={detailIconName} iconStyle={'regular'} />
+        <div
+          className={classNames(
+            styles.lessonDetailLabelAndInfo,
+            displayStudentDetailAsComplete && styles.greenCompletedText
+          )}
+        >
+          <Typography variant="overline3">{detailTitle}</Typography>
+          <Typography variant="h4">{selectedStudentDetail}</Typography>
+          <div
+            className={classNames(
+              styles.classAvgInfo,
+              studentIsAboveClassAvg
+                ? styles.aboveClassAvg
+                : styles.belowClassAvg
+            )}
+          >
+            <Typography variant="body4">{classAvgDetail}</Typography>
+            {showAvgComparisonArrow && (
+              <FontAwesomeV6Icon
+                iconName={studentIsAboveClassAvg ? 'arrow-up' : 'arrow-down'}
+                iconStyle={'regular'}
+              />
+            )}
+          </div>
+        </div>
+      </>
+    )}
   </div>
 );
 
