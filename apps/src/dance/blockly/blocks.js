@@ -181,7 +181,7 @@ export default {
             'VAR'
           )
           .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
-        this.setOutput(true, Blockly.BlockValueType.SPRITE);
+        this.setStrictOutput(true, Blockly.BlockValueType.SPRITE);
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
       },
       getVars: function () {
@@ -191,7 +191,7 @@ export default {
       },
       renameVar: function (oldName, newName) {
         if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
-          this.setFieldValue(newName, 'VAR');
+          this.setTitleValue(newName, 'VAR');
         }
       },
       removeVar: Blockly.Blocks.variables_get.removeVar,
@@ -217,7 +217,7 @@ export default {
           .appendField(Blockly.Msg.VARIABLES_GET_TITLE)
           .appendField(fieldLabel, 'VAR')
           .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
-        this.setOutput(true, Blockly.BlockValueType.SPRITE);
+        this.setStrictOutput(true, Blockly.BlockValueType.SPRITE);
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
       },
       renameVar(oldName, newName) {
@@ -252,7 +252,7 @@ export default {
           mainTitle.appendField(editLabel);
         }
 
-        this.setOutput(true, Blockly.BlockValueType.BEHAVIOR);
+        this.setStrictOutput(true, Blockly.BlockValueType.BEHAVIOR);
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
         this.currentParameterNames_ = [];
       },
@@ -270,13 +270,13 @@ export default {
 
       renameVar(oldName, newName) {
         if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
-          this.setFieldValue(newName, 'VAR');
+          this.setTitleValue(newName, 'VAR');
         }
       },
 
       renameProcedure(oldName, newName) {
         if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
-          this.setFieldValue(newName, 'VAR');
+          this.setTitleValue(newName, 'VAR');
         }
       },
 

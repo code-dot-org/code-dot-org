@@ -673,6 +673,7 @@ Dance.prototype.runButtonClick = async function () {
     value: getStore().getState().dance.selectedSong,
   });
 
+  Blockly.mainBlockSpace.traceOn(true);
   this.studioApp_.attempts++;
 
   try {

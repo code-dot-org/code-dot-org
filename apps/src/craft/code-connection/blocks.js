@@ -540,7 +540,7 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(new blockly.FieldTextInput(''), 'TARGET');
       this.appendValueInput('VEC3')
         .setCheck('Number')
-        .setAlign(Blockly.inputs.Align.RIGHT)
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(new blockly.FieldLabel(i18n.at()))
         .appendField(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
       this.setPreviousStatement(true);
@@ -644,7 +644,7 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(new blockly.FieldTextInput(''), 'VICTIM');
       this.appendValueInput('VEC3')
         .setCheck('Number')
-        .setAlign(Blockly.inputs.Align.RIGHT)
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(new blockly.FieldLabel(i18n.to()))
         .appendField(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
       this.setPreviousStatement(true);
@@ -671,14 +671,14 @@ export const install = (blockly, blockInstallOptions) => {
       );
       this.appendValueInput('FROM_VEC3')
         .setCheck('Number')
-        .setAlign(Blockly.inputs.Align.RIGHT)
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(
           new blockly.FieldDropdown(positionTypes),
           'FROMPOSITIONTYPE'
         );
       this.appendValueInput('TO_VEC3')
         .setCheck('Number')
-        .setAlign(Blockly.inputs.Align.RIGHT)
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(new blockly.FieldLabel(i18n.to()))
         .appendField(
           new blockly.FieldDropdown(positionTypes),
@@ -686,7 +686,7 @@ export const install = (blockly, blockInstallOptions) => {
         );
       this.appendValueInput('ITEM')
         .setCheck(ITEM_TYPE)
-        .setAlign(Blockly.inputs.Align.RIGHT)
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(new blockly.FieldLabel(i18n.blockActionWith()));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -722,7 +722,7 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(new blockly.FieldLabel(i18n.blockActionGive()));
       this.appendValueInput('ITEM')
         .setCheck(ITEM_TYPE)
-        .setAlign(Blockly.inputs.Align.RIGHT)
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(new blockly.FieldLabel(i18n.itemsOfBlockType()));
       this.appendDummyInput()
         .appendField(new blockly.FieldLabel(i18n.to()))
@@ -779,11 +779,11 @@ export const install = (blockly, blockInstallOptions) => {
         .appendField(new blockly.FieldLabel(i18n.oldBlockHandling()));
       this.appendValueInput('VEC3')
         .setCheck('Number')
-        .setAlign(Blockly.inputs.Align.RIGHT)
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
       this.appendValueInput('ITEM')
         .setCheck(ITEM_TYPE)
-        .setAlign(Blockly.inputs.Align.RIGHT)
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(new blockly.FieldLabel(i18n.blockActionWith()));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -843,12 +843,12 @@ export const install = (blockly, blockInstallOptions) => {
       );
       this.appendValueInput('VEC3')
         .setCheck('Number')
-        .setAlign(Blockly.inputs.Align.RIGHT)
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(new blockly.FieldLabel(i18n.at()))
         .appendField(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
       this.appendValueInput('ITEM')
         .setCheck(ITEM_TYPE)
-        .setAlign(Blockly.inputs.Align.RIGHT)
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(new blockly.FieldLabel(i18n.blockIs()));
       this.setOutput(true, Blockly.BlockValueType.BOOLEAN);
     },
@@ -881,7 +881,7 @@ export const install = (blockly, blockInstallOptions) => {
       );
       this.appendValueInput('FROM_VEC3')
         .setCheck('Number')
-        .setAlign(Blockly.inputs.Align.RIGHT)
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(new blockly.FieldLabel(i18n.from()))
         .appendField(
           new blockly.FieldDropdown(positionTypes),
@@ -889,7 +889,7 @@ export const install = (blockly, blockInstallOptions) => {
         );
       this.appendValueInput('TO_VEC3')
         .setCheck('Number')
-        .setAlign(Blockly.inputs.Align.RIGHT)
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(new blockly.FieldLabel(i18n.to()))
         .appendField(
           new blockly.FieldDropdown(positionTypes),
@@ -897,11 +897,11 @@ export const install = (blockly, blockInstallOptions) => {
         );
       this.appendValueInput('VEC3')
         .setCheck('Number')
-        .setAlign(Blockly.inputs.Align.RIGHT)
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(new blockly.FieldLabel(i18n.destination()))
         .appendField(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
       this.appendDummyInput()
-        .setAlign(Blockly.inputs.Align.RIGHT)
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(new blockly.FieldDropdown(testModes), 'TESTMODE');
       this.setOutput(true, Blockly.BlockValueType.BOOLEAN);
     },
@@ -941,7 +941,7 @@ export const install = (blockly, blockInstallOptions) => {
       );
       this.appendValueInput('FROM_VEC3')
         .setCheck('Number')
-        .setAlign(Blockly.inputs.Align.RIGHT)
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(new blockly.FieldLabel(i18n.from()))
         .appendField(
           new blockly.FieldDropdown(positionTypes),
@@ -949,7 +949,7 @@ export const install = (blockly, blockInstallOptions) => {
         );
       this.appendValueInput('TO_VEC3')
         .setCheck('Number')
-        .setAlign(Blockly.inputs.Align.RIGHT)
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(new blockly.FieldLabel(i18n.to()))
         .appendField(
           new blockly.FieldDropdown(positionTypes),
@@ -957,7 +957,7 @@ export const install = (blockly, blockInstallOptions) => {
         );
       this.appendValueInput('VEC3')
         .setCheck('Number')
-        .setAlign(Blockly.inputs.Align.RIGHT)
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(new blockly.FieldLabel(i18n.destination()))
         .appendField(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
       this.appendDummyInput()
@@ -1000,11 +1000,11 @@ export const install = (blockly, blockInstallOptions) => {
     init: function () {
       this.appendValueInput('ITEM')
         .setCheck(ITEM_TYPE)
-        .setAlign(Blockly.inputs.Align.RIGHT)
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(new blockly.FieldLabel(i18n.blockActionCloneFiltered()));
       this.appendValueInput('FROM_VEC3')
         .setCheck('Number')
-        .setAlign(Blockly.inputs.Align.RIGHT)
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(new blockly.FieldLabel(i18n.from()))
         .appendField(
           new blockly.FieldDropdown(positionTypes),
@@ -1012,7 +1012,7 @@ export const install = (blockly, blockInstallOptions) => {
         );
       this.appendValueInput('TO_VEC3')
         .setCheck('Number')
-        .setAlign(Blockly.inputs.Align.RIGHT)
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(new blockly.FieldLabel(i18n.to()))
         .appendField(
           new blockly.FieldDropdown(positionTypes),
@@ -1020,7 +1020,7 @@ export const install = (blockly, blockInstallOptions) => {
         );
       this.appendValueInput('VEC3')
         .setCheck('Number')
-        .setAlign(Blockly.inputs.Align.RIGHT)
+        .setAlign(Blockly.ALIGN_RIGHT)
         .appendField(new blockly.FieldLabel(i18n.destination()))
         .appendField(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
       this.appendDummyInput()
