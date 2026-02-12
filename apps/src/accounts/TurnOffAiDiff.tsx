@@ -46,7 +46,7 @@ const TurnOffAiDiff: React.FC = () => {
       >
         {i18n.aiTeachingAssistantSettings()}
       </Typography>
-      <Typography variant="body2" gutterBottom>
+      <Typography component="div" variant="body2" gutterBottom>
         <SafeMarkdown
           unwrapped
           markdown={i18n.aiTeachingAssistantSettingsDescription()}
