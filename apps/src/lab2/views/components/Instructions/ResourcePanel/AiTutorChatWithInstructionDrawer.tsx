@@ -4,10 +4,12 @@ import React, {useState, useCallback, useMemo, useEffect, useRef} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import ResizeBar, {
   RESIZE_BAR_SIZE_PX,
 } from '@cdo/apps/lab2/views/components/layout/ResizeBar';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
 import styles from './ai-tutor-chat-with-instructions-drawer.module.scss';
 
@@ -125,8 +127,12 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   }, [instructionsContent, setRawInstructionsHeight]);
 
   const toggleInstructions = useCallback(() => {
+    const eventToReport = isCollapsed
+      ? EVENTS.RESOURCE_PANEL_INSTRUCTIONS_DRAWER_EXPANDED
+      : EVENTS.RESOURCE_PANEL_INSTRUCTIONS_DRAWER_COLLAPSED;
+    sendLab2AnalyticsEvent(eventToReport);
     setIsCollapsed(prev => !prev);
-  }, []);
+  }, [isCollapsed]);
 
   return (
     <div ref={containerRef} className={styles.container}>
