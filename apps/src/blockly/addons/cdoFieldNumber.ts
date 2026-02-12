@@ -1,10 +1,13 @@
 import * as BlocklyCore from 'blockly/core';
 
 import {EMPTY_OPTION} from '../constants';
-import {ExtendedBlockSvg, AngleHelperOptions} from '../types';
+import {
+  ExtendedBlockSvg,
+  ExtendedConnection,
+  FieldHelperOptions,
+} from '../types';
 
 import CdoAngleHelper from './cdoAngleHelper';
-import {AngleHelperConnection} from './cdoAngleHelperOptions';
 
 export default class CdoFieldNumber extends BlocklyCore.FieldNumber {
   private config: string | null | undefined;
@@ -45,25 +48,28 @@ export default class CdoFieldNumber extends BlocklyCore.FieldNumber {
 
   /**
    * If this field is attached to a block whose output connection is attached to a
-   * connection that has an angle helper, get the options for it.
+   * connection that has the specified field helper, get the options for that
+   * field helper.
    * For example, with a math_number block containing this field, we will look at
-   * the input connection of parent block. A draw_turn block will have angle helper
+   * the input connection of parent block. A draw_turn block will have field helper
    * options whereas other blocks, like draw_move, will not. These options are found
    * on the connection of the parent block's input.
+   * @param {string} fieldHelper - the field helper to retrieve. One of
+   *        Blockly.BlockFieldHelper
    * @return {Object|undefined} the options object if it exists
    */
-  getAngleHelperOptions() {
+  getFieldHelperOptions(fieldHelper: string) {
     return (this.sourceBlock_ &&
       this.sourceBlock_.outputConnection &&
       this.sourceBlock_.outputConnection.targetConnection &&
       (
         this.sourceBlock_.outputConnection
-          .targetConnection as AngleHelperConnection
-      ).angleHelperOptions) as AngleHelperOptions | undefined;
+          .targetConnection as ExtendedConnection
+      ).getFieldHelperOptions(fieldHelper)) as FieldHelperOptions | undefined;
   }
 
   shouldShowAngleHelper() {
-    return this.getAngleHelperOptions();
+    return this.getFieldHelperOptions(Blockly.BlockFieldHelper.ANGLE_HELPER);
   }
 
   protected showEditor_(e?: Event, quietInput?: boolean): void {
@@ -99,7 +105,9 @@ export default class CdoFieldNumber extends BlocklyCore.FieldNumber {
    */
   getAnglePickerDirection(): string {
     const defaultDirection = 'turnRight';
-    const options = this.getAngleHelperOptions();
+    const options = this.getFieldHelperOptions(
+      Blockly.BlockFieldHelper.ANGLE_HELPER
+    );
 
     if (!options) {
       return defaultDirection;

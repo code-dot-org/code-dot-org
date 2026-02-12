@@ -190,7 +190,7 @@ function createEmbeddedWorkspace(
   // resize after initial render, so we also want to resize the container
   // whenever a blockSpaceChange results in the content size changing.
   let metrics = workspace.getMetrics();
-  workspace.addChangeListener(function () {
+  Blockly.addChangeListener(workspace, function () {
     const oldHeight = metrics.contentHeight;
     const oldWidth = metrics.contentWidth;
     const newHeight = workspace.getMetrics().contentHeight;

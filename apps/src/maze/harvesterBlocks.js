@@ -2,8 +2,6 @@
  * Blocks specific to Harvester
  */
 
-import {INFINITE_LOOP_TRAP} from '@cdo/apps/blockly/utils';
-
 var blockUtils = require('../block_utils');
 var BlockStyles = require('../blockly/constants').BlockStyles;
 
@@ -85,7 +83,7 @@ function addUntilAtSpecificCropBlock(blockly, generator, crop) {
   generator[`harvester_untilAt${capitalizeFirstLetter(crop)}`] = function () {
     var atCrop = `Maze.at${capitalizeFirstLetter(crop)}('block_id_${this.id}')`;
     var branch = generator.statementToCode(this, 'DO');
-    branch = INFINITE_LOOP_TRAP + branch;
+    branch = Blockly.getInfiniteLoopTrap() + branch;
     var code = `while (!${atCrop}) {\n${branch}}\n`;
     return code;
   };
@@ -163,7 +161,7 @@ function addWhileSpecificCropHasBlock(blockly, generator, crop) {
       this.id
     }')`;
     var branch = generator.statementToCode(this, 'DO');
-    branch = INFINITE_LOOP_TRAP + branch;
+    branch = Blockly.getInfiniteLoopTrap() + branch;
     var code = `while (${argument}) {\n${branch}}\n`;
     return code;
   };
@@ -189,7 +187,7 @@ function addUntilSpecificCropHasBlock(blockly, generator, crop) {
       this.id
     }')`;
     var branch = generator.statementToCode(this, 'DO');
-    branch = INFINITE_LOOP_TRAP + branch;
+    branch = Blockly.getInfiniteLoopTrap() + branch;
     var code = `while (!${argument}) {\n${branch}}\n`;
     return code;
   };
@@ -301,7 +299,7 @@ exports.install = function (blockly, blockInstallOptions) {
   generator.harvester_untilAtCrop = function () {
     var atCrop = `Maze.at${this.getFieldValue('LOC')}('block_id_${this.id}')`;
     var branch = generator.statementToCode(this, 'DO');
-    branch = INFINITE_LOOP_TRAP + branch;
+    branch = Blockly.getInfiniteLoopTrap() + branch;
     var code = `while (!${atCrop}) {\n${branch}}\n`;
     return code;
   };
@@ -379,7 +377,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.id
     }')`;
     var branch = generator.statementToCode(this, 'DO');
-    branch = INFINITE_LOOP_TRAP + branch;
+    branch = Blockly.getInfiniteLoopTrap() + branch;
     var code = `while (${argument}) {\n${branch}}\n`;
     return code;
   };
@@ -405,7 +403,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.id
     }')`;
     var branch = generator.statementToCode(this, 'DO');
-    branch = INFINITE_LOOP_TRAP + branch;
+    branch = Blockly.getInfiniteLoopTrap() + branch;
     var code = `while (!${argument}) {\n${branch}}\n`;
     return code;
   };

@@ -103,7 +103,7 @@ export function appendMiniToolboxToggle(
   // We set the inputs to align left so that if the flyout is larger than the
   // inputs will be aligned with the left edge of the block.
   parentBlock.inputList.forEach(input => {
-    input.setAlign(Blockly.inputs.Align.LEFT);
+    input.setAlign(Blockly.ALIGN_LEFT);
   });
 
   // Insert the toggle field at the beginning for the first input row.

@@ -666,11 +666,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function (options) {
         var hasWhenRun = Blockly.mainBlockSpace
           .getTopBlocks()
           .some(function (block) {
-            return (
-              block.type === 'when_run' &&
-              // Ignore blocks on the hidden workspace (unlikely but possible?)
-              block.workspace === Blockly.getMainWorkspace()
-            );
+            return block.type === 'when_run' && block.isUserVisible();
           });
 
         var defaultMessage = hasWhenRun
