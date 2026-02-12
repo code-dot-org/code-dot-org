@@ -1,8 +1,8 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import JobBoard from '@cdo/apps/templates/jobBoard/JobBoard';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 $(document).ready(showJobBoard);
 
@@ -45,7 +45,7 @@ function showJobBoard() {
       });
     })
     .complete(() => {
-      ReactDOM.render(
+      createReactRoot(
         <JobBoard jobsByDepartment={jobsByDepartment} />,
         jobBoardElement[0]
       );

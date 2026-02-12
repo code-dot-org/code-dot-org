@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {getStore, registerReducers} from '@cdo/apps/redux';
@@ -10,6 +9,7 @@ import data, {
   updateTableColumns,
   updateTableRecords,
 } from '@cdo/apps/storage/redux/data';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(function () {
@@ -28,7 +28,7 @@ $(document).ready(function () {
   store.dispatch(updateTableRecords(tableName, dataset.records));
   store.dispatch(updateTableColumns(tableName, dataset.columns));
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <Dataset isLive={isLive} />
     </Provider>,
