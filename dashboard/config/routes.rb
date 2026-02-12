@@ -1202,9 +1202,6 @@ Dashboard::Application.routes.draw do
     get '/lesson_feedbacks/saved_feedback', to: 'lesson_feedbacks#saved_feedback'
     resources :lesson_feedbacks, only: [:create, :update]
 
-    # Custom route to get only the localized_name for a lesson by id
-    get 'lessons/:id/localized_name', to: 'lessons#localized_name'
-
     resources :ai_lesson_summary_podcasts do
       collection do
         get :generate_podcast, controller: :ai_lesson_summary_podcasts, action: :generate_podcast

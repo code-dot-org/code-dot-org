@@ -1,9 +1,9 @@
 class LessonsController < ApplicationController
   load_and_authorize_resource
 
-  skip_authorize_resource only: [:level_properties_by_id, :localized_name]
+  skip_authorize_resource only: [:level_properties_by_id]
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :student_lesson_plan, :level_properties, :level_properties_by_id, :localized_name]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :student_lesson_plan, :level_properties, :level_properties_by_id]
   before_action :disallow_legacy_script_levels, only: [:edit, :update]
   before_action :disable_session_for_cached_pages, only: [:show]
   before_action :redirect_to_canonical_path, only: [:show, :student_lesson_plan]
@@ -52,12 +52,6 @@ class LessonsController < ApplicationController
   def show_by_id
     @lesson_data = @lesson.summarize_for_lesson_show(@current_user, Policies::InlineAnswer.visible_for_unit?(@current_user, @script))
     render :show
-  end
-
-  # GET /lessons/:id/localized_name
-  def localized_name
-    lesson = Lesson.find(params[:id])
-    render json: {id: lesson.id, localized_name: lesson.localized_name}
   end
 
   # GET /s/:script_name_or_id/lessons/:lesson_position/student

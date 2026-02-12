@@ -409,14 +409,6 @@ class Lesson < ApplicationRecord
     }
   end
 
-  def summarize_for_lesson_feedback(unit_group_unit: nil)
-    {
-      id: id,
-      name: localized_name,
-      start_url: start_url(unit_group_unit: unit_group_unit)
-    }
-  end
-
   # Provides data about this lesson needed by the edit page for unmigrated units.
   def summarize_for_unit_edit
     summary = summarize(true, for_edit: true).dup
