@@ -21,6 +21,7 @@ import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
 import {saveFileThunk} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {
@@ -50,6 +51,15 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
   const projectSourceBeforeAiTutorVersion = useAppSelector(
     state => state.lab2Project.projectSourceBeforeAiTutorVersion
   );
+
+  const allowMergeView = experiments.isEnabledAllowingQueryString(
+    experiments.ACCEPT_REJECT_UNIFIED_DIFF
+  );
+
+  const allowSplitView = experiments.isEnabledAllowingQueryString(
+    experiments.ACCEPT_REJECT_SPLIT_VIEW
+  );
+
   const dispatch = useAppDispatch();
 
   const onChange = useCallback(
@@ -115,7 +125,12 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
         );
       }
     }
-    if (hasMergeView && projectSourceBeforeAiTutorVersion) {
+    if (
+      allowMergeView &&
+      !allowSplitView &&
+      hasMergeView &&
+      projectSourceBeforeAiTutorVersion
+    ) {
       const originalFiles = projectSourceBeforeAiTutorVersion.files;
       const activeOriginalFile = activeFile?.name
         ? Object.values(originalFiles).find(f => f.name === activeFile.name)
@@ -139,6 +154,8 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     levelProperties.appName,
     hasMergeView,
     projectSourceBeforeAiTutorVersion,
+    allowMergeView,
+    allowSplitView,
   ]);
 
   if (activeFile?.url && viewableImageFileType(activeFile.language)) {
