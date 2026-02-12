@@ -13,6 +13,8 @@ const PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL = 'weblab2-file-preview';
 const SERVING_HTML_FILE = 'SERVING_HTML_FILE';
 const RECEIVED_SOURCE = 'RECEIVED_SOURCE';
 const UPDATE_FILES = 'UPDATE_FILES';
+const NETWORK_REQUEST = 'NETWORK_REQUEST';
+const NETWORK_RESPONSE = 'NETWORK_RESPONSE';
 
 function main() {
   let filesData = {};
@@ -45,7 +47,7 @@ function main() {
   });
 
   // Intercept fetch requests
-  self.addEventListener('fetch', event => {
+  self.addEventListener('fetch', async event => {
     const url = new URL(event.request.url);
     let requestedFile = getFilenameFromUrl(url);
     const referrerFile = getFilenameFromUrl(new URL(event.request.referrer));
@@ -66,6 +68,50 @@ function main() {
           type: SERVING_HTML_FILE,
           filePath: requestedFile,
         });
+      }
+      if (url.origin !== location.origin) {
+        const performanceStartTime = performance.now();
+        const startTime = new Date().toLocaleString();
+        const requestId = crypto.randomUUID();
+        let response;
+        let performanceEndTime;
+        let error;
+        broadcastChannel.postMessage({
+          type: NETWORK_REQUEST,
+          requestData: {
+            url: event.request.url,
+            method: event.request.method,
+            startTime,
+            id: requestId,
+          },
+        });
+        try {
+          response = await fetch(event.request);
+          performanceEndTime = performance.now();
+        } catch (e) {
+          error = e;
+        }
+        let bodyText;
+        try {
+          bodyText = response ? await response.text() : undefined;
+        } catch (e) {
+          error = e;
+        }
+        broadcastChannel.postMessage({
+          type: NETWORK_RESPONSE,
+          responseData: {
+            url: event.request.url,
+            body: bodyText,
+            status: response ? response.status : undefined,
+            timeElapsed: performanceEndTime
+              ? Math.floor(performanceEndTime - performanceStartTime)
+              : undefined,
+            error,
+            id: requestId,
+            contentType: response?.headers?.get('Content-Type'),
+          },
+        });
+        return response;
       }
       return;
     }
