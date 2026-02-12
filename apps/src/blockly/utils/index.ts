@@ -23,7 +23,6 @@ export * from './toolbox/metrics';
 export * from './toolbox/retrieval';
 export * from './toolbox/validateBlockCategories';
 export * from './workspace/blocks';
-export * from './workspace/clearAllStudentWorkspaces';
 export * from './workspace/getCode';
 export * from './workspace/disabledBlocks';
 export * from './workspace/layout';

@@ -6,7 +6,7 @@ import {handleWorkspaceResizeOrScroll} from '@cdo/apps/code-studio/callouts';
 import color from '@cdo/apps/util/color';
 
 import BlockSvgLimitIndicator from './addons/blockSvgLimitIndicator';
-import {BLOCK_TYPES, BlockColors} from './constants';
+import {BLOCK_TYPES} from './constants';
 import {
   ExtendedBlock,
   ExtendedBlockSvg,
@@ -138,10 +138,10 @@ export function setPathFill(e: BlocklyCore.Events.Abstract) {
       .getAllBlocks()
       .map(block => block as ExtendedBlock)
       .forEach(block => {
-        const pattern = block.getFillPattern?.();
+        const pattern = block.getFillPattern();
         if (block instanceof BlocklyCore.BlockSvg) {
           if (!block.svgPathFill) {
-            block.svgPathFill = BlocklyCore.utils.dom.createSvgElement(
+            block.svgPathFill = Blockly.createSvgElement(
               'path',
               {class: 'blocklyPath'},
               block.getSvgRoot()
@@ -256,39 +256,4 @@ export function updateBlockCountMap(workspace: ExtendedWorkspaceSvg) {
       );
     }
   });
-}
-
-export function handleGrayUndeletableBlocks(
-  event: BlocklyCore.Events.Abstract
-) {
-  const expectedEventTypes: string[] = [
-    Blockly.Events.BLOCK_CREATE,
-    Blockly.Events.FINISHED_LOADING,
-    Blockly.Events.SELECTED,
-  ];
-
-  // Common top blocks that we do not want to gray out.
-  const unexpectedBlockTypes: string[] = [
-    BLOCK_TYPES.whenRun,
-    BLOCK_TYPES.procedureDefinition,
-  ];
-
-  if (expectedEventTypes.includes(event.type) && event.workspaceId) {
-    const workspace = Blockly.Workspace.getById(
-      `${event.workspaceId}`
-    ) as ExtendedWorkspaceSvg;
-    if (workspace && !workspace.isReadOnly()) {
-      workspace
-        .getAllBlocks()
-        .filter(
-          block =>
-            block.isDeletable() === false &&
-            !unexpectedBlockTypes.includes(block.type)
-        )
-        .forEach(block => {
-          const [h, s, v] = BlockColors.DISABLED;
-          block.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
-        });
-    }
-  }
 }

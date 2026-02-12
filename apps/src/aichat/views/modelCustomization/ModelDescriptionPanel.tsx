@@ -1,8 +1,5 @@
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
-import {
-  BodyThreeText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useState} from 'react';
 
 import aichatI18n from '../../locale';
@@ -45,18 +42,22 @@ const ModelDescriptionPanel: React.FunctionComponent<{
       />
       <br />
       <div className={styles.modelDescriptionContainer}>
-        <StrongText>{aichatI18n.technicalInfoHeader_overview()}</StrongText>
+        <Typography variant="strong">
+          {aichatI18n.technicalInfoHeader_overview()}
+        </Typography>
         <div className={styles.textContainer}>
-          <BodyThreeText className={styles.modelText}>
+          <Typography className={styles.modelText} variant="body3" gutterBottom>
             {selectedModel.overview}
-          </BodyThreeText>
+          </Typography>
         </div>
         <br />
-        <StrongText>{aichatI18n.technicalInfoHeader_trainingData()}</StrongText>
+        <Typography variant="strong">
+          {aichatI18n.technicalInfoHeader_trainingData()}
+        </Typography>
         <div className={styles.textContainer}>
-          <BodyThreeText className={styles.modelText}>
+          <Typography className={styles.modelText} variant="body3" gutterBottom>
             {selectedModel.trainingData}
-          </BodyThreeText>
+          </Typography>
         </div>
       </div>
     </div>

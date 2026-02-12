@@ -1376,8 +1376,8 @@ Dashboard::Application.routes.draw do
 
     resources :aidiff_artifacts, only: [:index]
 
-    resources :aidiff_exit_tickets, only: [:index, :update, :create]
-    resources :aidiff_lesson_hooks, only: [:index, :update, :create]
+    resources :aidiff_exit_tickets, only: [:index, :update, :create, :show]
+    resources :aidiff_lesson_hooks, only: [:index, :update, :create, :show]
 
     resources :aidiff_messages, only: [] do
       member do

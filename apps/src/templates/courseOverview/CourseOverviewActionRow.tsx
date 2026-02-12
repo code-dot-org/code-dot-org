@@ -1,8 +1,8 @@
 import React from 'react';
 
+import {AiChatToolsDependencyValue} from '@cdo/apps/aichat/types';
 import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import * as utils from '../../utils';
@@ -29,7 +29,7 @@ interface CourseOverviewActionRowProps {
   showAssignButton: boolean;
   title: string;
   participantAudience: string;
-  aiChatToolsDependency: (typeof AiChatToolsDependency)[keyof typeof AiChatToolsDependency];
+  aiChatToolsDependency: AiChatToolsDependencyValue;
 }
 
 const CourseOverviewActionRow: React.FC<CourseOverviewActionRowProps> = ({
