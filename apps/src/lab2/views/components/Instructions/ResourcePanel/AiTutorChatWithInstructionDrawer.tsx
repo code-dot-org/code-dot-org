@@ -20,6 +20,7 @@ interface AiTutorChatWithInstructionDrawerProps {
   aiTutorSystemPromptName?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   instructionsContent?: React.ReactNode;
+  isCollapsedByDefault: boolean;
 }
 
 const MIN_CHAT_HEIGHT = 133; // Minimum so that user message editor is always visible + some chat.
@@ -43,6 +44,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   aiTutorSystemPromptName,
   aiTutorResponseSchemaSettings,
   instructionsContent,
+  isCollapsedByDefault,
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const instructionsContentRef = useRef<HTMLDivElement>(null);
@@ -53,7 +55,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   const [maxInstructionsHeight, setMaxInstructionsHeight] = useState<
     number | undefined
   >(undefined);
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(isCollapsedByDefault);
 
   const {
     position: rawInstructionsHeight,
@@ -106,6 +108,10 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
       window.removeEventListener('resize', throttledAdjustChatHeight);
     };
   }, [throttledAdjustChatHeight]);
+
+  useEffect(() => {
+    setIsCollapsed(isCollapsedByDefault);
+  }, [isCollapsedByDefault]);
 
   // Measure the instructions content height once when loaded
   // and adjust the initial height if content is smaller.
