@@ -1,5 +1,7 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   BodyFourText,
+  BodyThreeText,
   StrongText,
 } from '@code-dot-org/component-library/typography';
 import React, {useEffect, useMemo} from 'react';
@@ -112,7 +114,7 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
                 [
                   {
                     label: 'Method',
-                    value: selectedRequest?.request.method,
+                    value: selectedRequest?.request.method || 'Unknown',
                   },
                   {
                     label: 'Request Time',
@@ -123,23 +125,34 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
               ]}
             />
             <img src={dividerIcon} alt={dividerAltText} />
-            <DetailsBox
-              title="Response"
-              success={responseSuccess}
-              rows={[
-                [
-                  {
-                    label: 'Status',
-                    value: selectedRequest?.response?.status,
-                  },
-                  {
-                    label: 'Response Time',
-                    value: selectedRequest?.response?.timeElapsed,
-                  },
-                ],
-                [{label: 'URL', value: selectedRequest?.response?.url}],
-              ]}
-            />
+            {selectedRequest?.response ? (
+              <DetailsBox
+                title="Response"
+                success={responseSuccess}
+                rows={[
+                  [
+                    {
+                      label: 'Status',
+                      value: selectedRequest?.response?.status,
+                    },
+                    {
+                      label: 'Response Time',
+                      value: selectedRequest?.response?.timeElapsed,
+                    },
+                  ],
+                  [{label: 'URL', value: selectedRequest?.response?.url}],
+                ]}
+              />
+            ) : (
+              <div className={moduleStyles.responsePlaceholder}>
+                <BodyThreeText>Response</BodyThreeText>
+                <FontAwesomeV6Icon
+                  iconName="circle"
+                  className={moduleStyles.placeholderIcon}
+                  iconStyle="regular"
+                />
+              </div>
+            )}
           </div>
         </div>
       )}

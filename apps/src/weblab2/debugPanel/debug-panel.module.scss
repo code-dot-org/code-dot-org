@@ -62,3 +62,25 @@
 .loadingIcon {
   color: var(--text-neutral-quaternary);
 }
+
+.responsePlaceholder {
+  display: flex;
+  padding: 8px 10px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 1px solid var(--borders-neutral-disabled);
+  background: var(--background-neutral-primary);
+  width: 150px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
+
+  p {
+    margin-bottom: 0;
+    color: var(--text-neutral-disabled);
+  }
+}
+
+.placeholderIcon {
+  color: var(--text-neutral-disabled);
+}
