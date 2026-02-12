@@ -55,7 +55,6 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   const [maxInstructionsHeight, setMaxInstructionsHeight] = useState<
     number | undefined
   >(undefined);
-  console.log('isCollapsedByDefault', isCollapsedByDefault);
   const [isCollapsed, setIsCollapsed] = useState(isCollapsedByDefault);
 
   const {
