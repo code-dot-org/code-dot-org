@@ -85,11 +85,12 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
         endHeight > startHeight
           ? EVENTS.RESOURCE_PANEL_INSTRUCTIONS_DRAWER_RESIZED_INCREASED
           : EVENTS.RESOURCE_PANEL_INSTRUCTIONS_DRAWER_RESIZED_DECREASED;
-
-      sendLab2AnalyticsEvent(eventToReport, {
-        startHeight: startHeight,
-        endHeight: endHeight,
-      });
+      if (endHeight !== startHeight) {
+        sendLab2AnalyticsEvent(eventToReport, {
+          startHeight: startHeight,
+          endHeight: endHeight,
+        });
+      }
     }
   }, [isDragging, rawInstructionsHeight]);
 
