@@ -11,12 +11,11 @@ REGION=${AWS::Region}
 BRANCH=${Branch}
 BASE_DOMAIN_NAME=${BaseDomainName}
 DASHBOARD_SUBDOMAIN_NAME=${DashboardSubdomainName}
-PEGASUS_SUBDOMAIN_NAME=${PegasusSubdomainName}
 # Bash and CloudFormation use the same string interpolation syntax. Escape with "!" to ensure CloudFormation
 # does not modify the bash syntax.
 DASHBOARD_DOMAIN_NAME="${!DASHBOARD_SUBDOMAIN_NAME}.${!BASE_DOMAIN_NAME}"
-# In production the fully qualified Pegasus domain name is just "code.org"; detect if the Pegasus sub domain is empty.
-[ -z "$PEGASUS_SUBDOMAIN_NAME" ] && PEGASUS_DOMAIN_NAME=$BASE_DOMAIN_NAME || PEGASUS_DOMAIN_NAME="${!PEGASUS_SUBDOMAIN_NAME}.${!BASE_DOMAIN_NAME}"
+# All deployments link to the production corporate site, now that Pegasus is deprecated.
+ PEGASUS_DOMAIN_NAME=code.org
 
 # These environment variables are NOT set with CloudFormation string substitution.
 CHEF_VERSION=<%=CHEF_VERSION%>
@@ -134,7 +133,7 @@ cat <<JSON > $FIRST_BOOT
 <% if rack_env?(:adhoc) -%>
     "image_optim": false,
     "override_dashboard": "<%=studio_subdomain%>",
-    "override_pegasus": "<%=subdomain%>",
+    "override_pegasus": "$PEGASUS_DOMAIN_NAME",
 <% end -%>
     "stack_name": "$STACK"
   },
