@@ -1,9 +1,9 @@
 class LessonsController < ApplicationController
   load_and_authorize_resource
 
-  skip_authorize_resource only: [:level_properties_by_id, :localized_name, :lesson_feedback_data]
+  skip_authorize_resource only: [:level_properties_by_id, :localized_name]
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :student_lesson_plan, :level_properties, :level_properties_by_id, :localized_name, :lesson_feedback_data]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :student_lesson_plan, :level_properties, :level_properties_by_id, :localized_name]
   before_action :disallow_legacy_script_levels, only: [:edit, :update]
   before_action :disable_session_for_cached_pages, only: [:show]
   before_action :redirect_to_canonical_path, only: [:show, :student_lesson_plan]
@@ -58,14 +58,6 @@ class LessonsController < ApplicationController
   def localized_name
     lesson = Lesson.find(params[:id])
     render json: {id: lesson.id, localized_name: lesson.localized_name}
-  end
-
-  # GET /lessons/:id/lesson_feedback_data
-  def lesson_feedback_data
-    lesson = Lesson.find(params[:id])
-    unit_context = Queries::Courses.get_course_context(lesson.script_id)
-    unit_group_unit = unit_context[:unit_group_unit]
-    render json: lesson.summarize_for_lesson_feedback(unit_group_unit: unit_group_unit)
   end
 
   # GET /s/:script_name_or_id/lessons/:lesson_position/student

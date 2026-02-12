@@ -12,6 +12,8 @@ interface LessonFeedbackData {
   updated_at: string | Date;
   teacher_name?: string;
   teacher_id: number;
+  lessonTitle?: string;
+  lessonStartUrl?: string;
   resources?: Array<{
     recommended_action?: string;
     resource_name?: string;
@@ -23,6 +25,7 @@ interface LessonFeedbackContainerProps {
   studentId: number | null;
 }
 
+// TODO: Add in loading state
 function LessonFeedbackContainer({studentId}: LessonFeedbackContainerProps) {
   const [fetchedFeedback, setFetchedFeedback] = React.useState<
     LessonFeedbackData[] | null
@@ -67,6 +70,8 @@ function LessonFeedbackContainer({studentId}: LessonFeedbackContainerProps) {
               lessonId={lessonFeedback.lesson_id}
               teacherName={lessonFeedback.teacher_name || 'Your teacher'}
               submittedAtDate={lessonFeedback.updated_at}
+              lessonTitle={lessonFeedback.lessonTitle}
+              lessonStartUrl={lessonFeedback.lessonStartUrl}
             />
           );
         })}

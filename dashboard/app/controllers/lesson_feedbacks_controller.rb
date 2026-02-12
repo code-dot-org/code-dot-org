@@ -22,13 +22,17 @@ class LessonFeedbacksController < ApplicationController
   end
 
   def show_by_student
-    feedback = LessonFeedback.includes(:teacher).where(student_id: params[:student_id]).order(updated_at: :desc)
+    feedback = LessonFeedback.includes(:teacher, lesson: :script).where(student_id: params[:student_id]).order(updated_at: :desc)
 
-    feedback_with_teacher_names = feedback.map do |f|
-      f.as_json.merge('teacher_name' => f.teacher.name)
+    feedback_with_additional_data = feedback.map do |f|
+      f.as_json.merge(
+        'teacherName' => f.teacher.name,
+        'lessonTitle' => f.lesson.localized_title,
+        'lessonStartUrl' => f.lesson.start_url
+      )
     end
 
-    render json: feedback_with_teacher_names
+    render json: feedback_with_additional_data
   end
 
   # GET /lesson_feedbacks/saved_feedback?student_id=...&lesson_id=...

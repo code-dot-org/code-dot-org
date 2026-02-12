@@ -21,7 +21,7 @@
 class LessonFeedback < ApplicationRecord
   belongs_to :teacher, class_name: 'User'
   belongs_to :student, class_name: 'User'
+  belongs_to :lesson
 
-  validates :lesson_id, :student_id, :teacher_id
   validates :lesson_id, uniqueness: {scope: :student_id}
 end

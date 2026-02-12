@@ -1204,8 +1204,6 @@ Dashboard::Application.routes.draw do
 
     # Custom route to get only the localized_name for a lesson by id
     get 'lessons/:id/localized_name', to: 'lessons#localized_name'
-    # Custom route to get lesson feedback data for a lesson by id
-    get 'lessons/:id/lesson_feedback_data', to: 'lessons#lesson_feedback_data'
 
     resources :ai_lesson_summary_podcasts do
       collection do
