@@ -2,6 +2,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {
   BodyFourText,
   BodyThreeText,
+  OverlineThreeText,
   StrongText,
 } from '@code-dot-org/component-library/typography';
 import React, {useEffect, useMemo} from 'react';
@@ -119,6 +120,38 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
                       : moduleStyles.errorIcon
                   }
                 />
+              </div>
+              <div className={moduleStyles.detailsBody}>
+                <div className={moduleStyles.detailsRow}>
+                  <div className={moduleStyles.detailsField}>
+                    <OverlineThreeText
+                      className={moduleStyles.detailsFieldLabel}
+                    >
+                      Method
+                    </OverlineThreeText>
+                    <BodyThreeText className={moduleStyles.detailsFieldValue}>
+                      {selectedRequest?.request.method}
+                    </BodyThreeText>
+                  </div>
+                  <div className={moduleStyles.detailsField}>
+                    <OverlineThreeText
+                      className={moduleStyles.detailsFieldLabel}
+                    >
+                      Request Time
+                    </OverlineThreeText>
+                    <BodyThreeText className={moduleStyles.detailsFieldValue}>
+                      {selectedRequest?.request.startTime}
+                    </BodyThreeText>
+                  </div>
+                </div>
+                <div className={moduleStyles.detailsField}>
+                  <OverlineThreeText className={moduleStyles.detailsFieldLabel}>
+                    URL
+                  </OverlineThreeText>
+                  <BodyThreeText className={moduleStyles.detailsFieldValue}>
+                    {selectedRequest?.request.url}
+                  </BodyThreeText>
+                </div>
               </div>
             </div>
             <img src={dividerIcon} alt={dividerAltText} />

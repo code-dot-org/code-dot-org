@@ -1,4 +1,5 @@
 @use '../../lab2/views/components/layout/variables.scss' as variables;
+
 .debugPanelContainer {
   display: flex;
   overflow-y: auto;
@@ -67,6 +68,7 @@
   align-items: center;
   gap: 10px;
   align-self: stretch;
+  border-bottom: variables.$default-border;
 
   p {
     margin-bottom: 0;
@@ -81,8 +83,36 @@
   display: flex;
   padding: 8px 10px 10px 10px;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 8px;
+  align-self: stretch;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.detailsRow {
+  display: flex;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.detailsField {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.detailsFieldLabel {
+  color: var(--text-neutral-tertiary);
+}
+
+.detailsFieldValue {
+  border-radius: 4px;
+  background: var(--background-neutral-secondary, #F0F2F5);
+  padding: 4px 6px;
   align-self: stretch;
 }
 
