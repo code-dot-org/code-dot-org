@@ -9,6 +9,7 @@ import $ from 'jquery';
 import _ from 'lodash';
 
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
+import {AiChatAccessLevel} from '@cdo/apps/aichat/types/accessControls';
 import DCDO from '@cdo/apps/dcdo';
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -384,7 +385,7 @@ const sectionSlice = createSlice({
       state,
       action: PayloadAction<{
         sectionId: number;
-        aiChatAccessLevel: string;
+        aiChatAccessLevel: AiChatAccessLevel;
       }>
     ) {
       const {sectionId, aiChatAccessLevel} = action.payload;

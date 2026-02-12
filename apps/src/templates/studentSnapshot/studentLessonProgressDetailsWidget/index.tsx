@@ -66,15 +66,12 @@ const formatTimeSpent = (secondsSpent: number) => {
 const StudentLessonProgressDetailsWidget: React.FC<
   StudentLessonProgressDetailsWidgetProps
 > = ({selectedUnitId, selectedLessonId, selectedStudentId}) => {
-  const unitDataByUnit = useAppSelector(
-    state => state.sectionProgress?.unitDataByUnit
-  );
-  const lessonProgressByUnit = useAppSelector(
-    state => state.sectionProgress?.studentLessonProgressByUnit
-  );
-  const studentLevelProgressByUnit = useAppSelector(
-    state => state.sectionProgress?.studentLevelProgressByUnit
-  );
+  const {
+    unitDataByUnit,
+    studentLessonProgressByUnit,
+    studentLevelProgressByUnit,
+    isLoadingProgress,
+  } = useAppSelector(state => state.sectionProgress);
   const studentIds = useAppSelector(state =>
     state.teacherSections?.selectedStudents?.map(student => student.id)
   );
@@ -85,11 +82,12 @@ const StudentLessonProgressDetailsWidget: React.FC<
     const progressByUser: UserProgressByLessonData = {};
     const progressAverages: ProgressAveragesByLessonData = {};
     if (
+      !isLoadingProgress &&
       unitDataByUnit &&
       studentIds &&
       studentIds.length > 0 &&
-      lessonProgressByUnit &&
-      lessonProgressByUnit[selectedUnitId]
+      studentLessonProgressByUnit &&
+      studentLessonProgressByUnit[selectedUnitId]
     ) {
       const lessons = unitDataByUnit[selectedUnitId]?.lessons;
       if (lessons) {
@@ -102,7 +100,7 @@ const StudentLessonProgressDetailsWidget: React.FC<
           // Iterate through students in this section
           studentIds.forEach(userId => {
             const unitProgressForUser =
-              lessonProgressByUnit[selectedUnitId][userId];
+              studentLessonProgressByUnit[selectedUnitId][userId];
             const lessonProgressForUser = unitProgressForUser
               ? unitProgressForUser[lesson.id]
               : null;
@@ -141,12 +139,18 @@ const StudentLessonProgressDetailsWidget: React.FC<
       userProgressByLesson: progressByUser,
       progressAveragesByLesson: progressAverages,
     };
-  }, [unitDataByUnit, lessonProgressByUnit, studentIds, selectedUnitId]);
+  }, [
+    unitDataByUnit,
+    studentLessonProgressByUnit,
+    studentIds,
+    selectedUnitId,
+    isLoadingProgress,
+  ]);
 
   // Map each lesson to the number of validated levels it has
   const lessonsToValidationLevels = React.useMemo(() => {
     const lessonsToValidationLevelsMap: {[lessonId: number]: string[]} = {};
-    if (unitDataByUnit) {
+    if (!isLoadingProgress && unitDataByUnit) {
       const lessons = unitDataByUnit[selectedUnitId]?.lessons;
       if (lessons) {
         Object.values(lessons).forEach(lesson => {
@@ -161,7 +165,7 @@ const StudentLessonProgressDetailsWidget: React.FC<
       }
     }
     return lessonsToValidationLevelsMap;
-  }, [unitDataByUnit, selectedUnitId]);
+  }, [unitDataByUnit, selectedUnitId, isLoadingProgress]);
 
   // Map each lesson to both the amount of validation levels each student has completed and
   // the class average of it
@@ -173,6 +177,7 @@ const StudentLessonProgressDetailsWidget: React.FC<
         {};
 
       if (
+        !isLoadingProgress &&
         lessonsToValidationLevels &&
         studentLevelProgressByUnit &&
         studentLevelProgressByUnit[selectedUnitId]
@@ -211,6 +216,7 @@ const StudentLessonProgressDetailsWidget: React.FC<
       lessonsToValidationLevels,
       studentIds,
       studentLevelProgressByUnit,
+      isLoadingProgress,
     ]);
 
   const selectedStudentLessonProgressInfo = React.useMemo(() => {
@@ -274,6 +280,7 @@ const StudentLessonProgressDetailsWidget: React.FC<
             studentIsAboveClassAvg={
               selectedStudentLessonProgress > classAvgLessonProgress
             }
+            isLoading={isLoadingProgress}
           />
           <ProgressDetail
             detailTitle={'Validation tests'}
@@ -293,6 +300,7 @@ const StudentLessonProgressDetailsWidget: React.FC<
               numValidationLevelsUserCompleted >
               classAvgNumValidationLevelsCompleted
             }
+            isLoading={isLoadingProgress}
           />
           <ProgressDetail
             detailTitle={'Time spent'}
@@ -306,6 +314,7 @@ const StudentLessonProgressDetailsWidget: React.FC<
             studentIsAboveClassAvg={
               selectedStudentLessonTimeSpent < classAvgLessonTimeSpent
             }
+            isLoading={isLoadingProgress}
           />
         </div>
         <div
