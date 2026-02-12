@@ -467,7 +467,7 @@ export const HTMLPreview: React.FC = () => {
             aria-label="Web Preview Frame"
           >
             <iframe
-              sandbox="allow-scripts allow-same-origin"
+              sandbox="allow-scripts allow-same-origin allow-forms"
               allow="self"
               title="Web Preview"
               ref={iframeRef}
