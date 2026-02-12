@@ -14,6 +14,7 @@ import {
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import currentUser, {
   setShowAITALessonSummary,
+  setShowAITAPodcasts,
   setHasCompletedPersonalizationQuiz,
   setAudioSummaryTranscript,
 } from '@cdo/apps/templates/currentUserRedux';
@@ -725,7 +726,7 @@ describe('LessonMaterialsContainer', () => {
     });
 
     it('renders audio component when experiment is false and DCDO flag is true', async () => {
-      DCDO.set('ai-lesson-summary-podcasts', true);
+      store.dispatch(setShowAITAPodcasts(true));
       experiments.isEnabled = jest.fn(() => false);
       await renderDefault();
 
