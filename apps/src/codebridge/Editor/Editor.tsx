@@ -2,6 +2,7 @@ import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {esLint} from '@codemirror/lang-javascript';
 import {LanguageSupport} from '@codemirror/language';
 import {linter, lintGutter} from '@codemirror/lint';
+import {unifiedMergeView} from '@codemirror/merge';
 import {Extension} from '@codemirror/state';
 import {EditorView} from '@codemirror/view';
 import js from '@eslint/js';
@@ -39,34 +40,57 @@ interface EditorProps {
 
 export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
   const {levelProperties} = useCodebridgeContext();
-  const file = useAppSelector(state => {
+  const activeFile = useAppSelector(state => {
     const source = state.lab2Project.projectSources?.source as MultiFileSource;
     return getActiveFileForSource(source);
   });
+  const isAiTutorVersion = useAppSelector(
+    state => state.lab2Project.viewingAiTutorVersion
+  );
+  const projectSourceBeforeAiTutorVersion = useAppSelector(
+    state => state.lab2Project.projectSourceBeforeAiTutorVersion
+  );
   const dispatch = useAppDispatch();
 
   const onChange = useCallback(
     (value: string) => {
-      if (file?.id) {
-        dispatch(saveFileThunk({fileId: file.id, contents: value}));
+      if (activeFile?.id) {
+        dispatch(saveFileThunk({fileId: activeFile.id, contents: value}));
       }
     },
-    [dispatch, file?.id]
+    [dispatch, activeFile?.id]
   );
+
+  // Only show unified diff view when we have both AI tutor mode and original file content.
+  // Used in key so we remount CodeEditor when this becomes true.
+  const hasMergeView = useMemo(() => {
+    if (
+      !isAiTutorVersion ||
+      !projectSourceBeforeAiTutorVersion ||
+      !activeFile?.name
+    ) {
+      return false;
+    }
+    const originalFiles = projectSourceBeforeAiTutorVersion.files;
+    const activeOriginalFile = Object.values(originalFiles).find(
+      f => f.name === activeFile.name
+    );
+    return Boolean(activeOriginalFile?.contents);
+  }, [isAiTutorVersion, projectSourceBeforeAiTutorVersion, activeFile?.name]);
 
   const editorConfigExtensions = useMemo(() => {
     const extensions: Extension[] = [];
     if (
-      file?.name &&
+      activeFile?.name &&
       enableUserAddedSelectionContext(levelProperties.appName)
     ) {
-      const addToAiTutorField = getAddToAiTutorField(file.name, dispatch);
+      const addToAiTutorField = getAddToAiTutorField(activeFile.name, dispatch);
       extensions.push(addToAiTutorField);
     }
 
-    if (file?.language && langMapping[file.language]) {
-      extensions.push(langMapping[file.language]);
-      if (file.language === 'js') {
+    if (activeFile?.language && langMapping[activeFile.language]) {
+      extensions.push(langMapping[activeFile.language]);
+      if (activeFile.language === 'js') {
         // eslint configuration
         const config = {
           ...js.configs.recommended,
@@ -79,7 +103,7 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
 
         extensions.push(linter(esLint(new eslint.Linter(), config)));
         extensions.push(lintGutter());
-      } else if (file.language === 'css') {
+      } else if (activeFile.language === 'css') {
         // Add css color picker and remove white outline from color indicator.
         extensions.push(colorPicker);
         extensions.push(
@@ -91,33 +115,52 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
         );
       }
     }
+    if (hasMergeView && projectSourceBeforeAiTutorVersion) {
+      const originalFiles = projectSourceBeforeAiTutorVersion.files;
+      const activeOriginalFile = activeFile?.name
+        ? Object.values(originalFiles).find(f => f.name === activeFile.name)
+        : undefined;
+
+      if (activeOriginalFile?.contents) {
+        extensions.push(
+          unifiedMergeView({
+            original: activeOriginalFile.contents,
+            mergeControls: false,
+          })
+        );
+      }
+    }
     return extensions;
   }, [
     dispatch,
-    file?.language,
-    file?.name,
+    activeFile?.language,
+    activeFile?.name,
     langMapping,
     levelProperties.appName,
+    hasMergeView,
+    projectSourceBeforeAiTutorVersion,
   ]);
 
-  if (file?.url && viewableImageFileType(file.language)) {
+  if (activeFile?.url && viewableImageFileType(activeFile.language)) {
     // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
-    return <img src={file.url} alt={file.name} tabIndex={0} />;
+    return <img src={activeFile.url} alt={activeFile.name} tabIndex={0} />;
   }
 
-  if (file && !editableFileType(file.language, editableFileTypes)) {
+  if (activeFile && !editableFileType(activeFile.language, editableFileTypes)) {
     return (
-      <div>{codebridgeI18n.cannotEditFile({language: file.language})}</div>
+      <div>
+        {codebridgeI18n.cannotEditFile({language: activeFile.language})}
+      </div>
     );
   }
 
   return (
     <div className={moduleStyles.editorContainer}>
-      {file ? (
+      {activeFile ? (
         <CodeEditor
-          key={`${file.id}/${1}`}
+          key={`${activeFile.id}/${hasMergeView ? 'diff' : 'normal'}`}
           onCodeChange={onChange}
-          startCode={file.contents}
+          startCode={activeFile.contents}
           appName={levelProperties.appName}
           editorConfigExtensions={editorConfigExtensions}
         />
