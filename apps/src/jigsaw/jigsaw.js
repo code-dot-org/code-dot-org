@@ -118,7 +118,7 @@ var drawMap = function () {
 
   if (level.ghost) {
     var blockCanvas = Blockly.mainBlockSpace.getCanvas();
-    Blockly.utils.dom.createSvgElement(
+    Blockly.createSvgElement(
       'rect',
       {
         fill: 'url(#pat_' + level.id + 'A)',
@@ -208,7 +208,7 @@ Jigsaw.init = function (config) {
 function checkForSuccess() {
   var success = level.goal.successCondition();
   if (success) {
-    Blockly.getMainWorkspace().removeChangeListener(Jigsaw.successListener);
+    Blockly.removeChangeListener(Jigsaw.successListener);
 
     Jigsaw.result = ResultType.SUCCESS;
     Jigsaw.onPuzzleComplete();

@@ -728,6 +728,9 @@ export default class P5Lab {
         ].join(',')
       );
       Blockly.JavaScript.addReservedWords(SpritelabReservedWords.join(','));
+
+      // Don't add infinite loop protection
+      Blockly.clearInfiniteLoopTrap();
     }
 
     if (this.level.blocklyVariables) {
@@ -959,6 +962,10 @@ export default class P5Lab {
    */
   runButtonClick() {
     this.studioApp_.toggleRunReset('reset');
+    // document.getElementById('spinner').style.visibility = 'visible';
+    if (this.studioApp_.isUsingBlockly()) {
+      Blockly.mainBlockSpace.traceOn(true);
+    }
     this.studioApp_.attempts++;
     this.execute();
 

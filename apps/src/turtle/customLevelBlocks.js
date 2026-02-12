@@ -65,7 +65,7 @@ function makeBlockInitializer(title, parameter) {
 
       if (parameter !== undefined) {
         this.appendValueInput('VALUE')
-          .setAlign(Blockly.inputs.Align.RIGHT)
+          .setAlign(Blockly.ALIGN_RIGHT)
           .setCheck(Blockly.BlockValueType.NUMBER)
           .appendField(parameter + ':');
       }

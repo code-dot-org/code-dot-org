@@ -6,7 +6,6 @@ type InputArgs = [...(InputTuple | InputCallback)[], number];
 
 /**
  * Interpolate a message string, creating fields and inputs.
- * @param {!ExtendedBlock} block The block to append inputs and fields to.
  * @param {string} msg The message string to parse.  %1, %2, etc. are symbols
  *     for value inputs.
  * @param {!Array.<string|number>|number} inputArgs A series of tuples or
@@ -23,7 +22,7 @@ type InputArgs = [...(InputTuple | InputCallback)[], number];
  * https://github.com/code-dot-org/blockly/blob/v4.1.0/core/ui/block.js#L2632-L2692
  */
 export function interpolateMsg(
-  block: ExtendedBlock,
+  this: ExtendedBlock,
   msg: string,
   ...inputArgs: InputArgs
 ): void {
@@ -48,11 +47,10 @@ export function interpolateMsg(
       const inputArg = inputArgs[digit - 1];
 
       if (typeof inputArg === 'function') {
-        block.appendDummyInput().appendField(text);
+        this.appendDummyInput().appendField(text);
         inputArg();
       } else if (Array.isArray(inputArg)) {
-        block
-          .appendValueInput(inputArg[0])
+        this.appendValueInput(inputArg[0])
           .setCheck(inputArg[1])
           .setAlign(inputArg[2])
           .appendField(text);
@@ -60,7 +58,7 @@ export function interpolateMsg(
       usedArgs[digit - 1] = true; // Mark input as used.
     } else if (text) {
       // Trailing dummy input.
-      block.appendDummyInput().setAlign(dummyAlign).appendField(text);
+      this.appendDummyInput().setAlign(dummyAlign).appendField(text);
     }
   }
 
@@ -74,5 +72,5 @@ export function interpolateMsg(
   }
 
   // Make the inputs inline unless there is only one input and no text follows it.
-  block.setInputsInline(!msg.match(/%1\s*$/));
+  this.setInputsInline(!msg.match(/%1\s*$/));
 }

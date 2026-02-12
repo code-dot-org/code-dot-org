@@ -1,7 +1,5 @@
 import * as BlocklyCore from 'blockly/core';
 
-import {LOOP_HIGHLIGHT} from '../code/strip';
-
 type BlockList = Array<BlocklyCore.Block | BlocklyCore.BlockSvg>;
 /**
  * Retrieves the top-level Blockly blocks from the students Blockly workspace and
@@ -38,23 +36,9 @@ export function getCodeBlocks(): BlockList {
  */
 export function getAllBlocks(): BlockList {
   return [
-    ...getAllUsedBlocks(Blockly.getMainWorkspace()),
+    ...Blockly.mainBlockSpace.getAllUsedBlocks(),
     ...(Blockly.getHiddenDefinitionWorkspace()
       ? Blockly.getHiddenDefinitionWorkspace().getAllBlocks()
       : []),
   ];
-}
-
-export function loopHighlight(apiName: string, blockId: string) {
-  let args = "'block_id_" + blockId + "'";
-  if (blockId === undefined) {
-    args = '%1';
-  }
-  return '  ' + apiName + '.' + LOOP_HIGHLIGHT.replace('()', '(' + args + ')');
-}
-
-export function getAllUsedBlocks(workspace: BlocklyCore.Workspace) {
-  return workspace
-    .getAllBlocks()
-    .filter(block => block.isEnabled() && block.getRootBlock().isEnabled());
 }

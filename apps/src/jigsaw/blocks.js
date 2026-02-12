@@ -4,8 +4,6 @@
  * Copyright 2013 Code.org
  *
  */
-import '@cdo/apps/blockly/addons/extensions/jigsawFillPatternMixin';
-
 var levels = require('./levels');
 
 var patternCache = {
@@ -101,7 +99,7 @@ var addPattern = function (id, imagePath, width, height, offsetX, offsetY) {
     // add the pattern
     x = typeof offsetX === 'function' ? -offsetX() : -offsetX;
     y = typeof offsetY === 'function' ? -offsetY() : -offsetY;
-    pattern = Blockly.utils.dom.createSvgElement(
+    pattern = Blockly.createSvgElement(
       'pattern',
       {
         id: id,
@@ -113,7 +111,7 @@ var addPattern = function (id, imagePath, width, height, offsetX, offsetY) {
       },
       svgDefs
     );
-    patternImage = Blockly.utils.dom.createSvgElement(
+    patternImage = Blockly.createSvgElement(
       'image',
       {
         width: width,
@@ -246,7 +244,6 @@ function generateJigsawBlocksForLevel(blockly, skin, options) {
     blockly.Blocks[blockName] = {
       helpUrl: '',
       init: function () {
-        Blockly.Extensions.apply('jigsaw_fill_pattern_mixin', this, false);
         this.appendDummyInput().appendField(
           new blockly.FieldImage(skin.blank, titleWidth, titleHeight)
         );
