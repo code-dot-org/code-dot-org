@@ -70,15 +70,14 @@ const SidebarOption: React.FC<SidebarOptionProps> = ({
         })}
       >
         {LABELED_TEACHER_NAVIGATION_PATHS[pathKey].label}
-        {showErrorIcon && (
-          // TODO: make the icon float right
-          // make the icon red.
-          <>
-            &nbsp;
-            <FontAwesomeV6Icon iconName="triangle-exclamation" />
-          </>
-        )}
       </BodyTwoText>
+      {showErrorIcon && (
+        <FontAwesomeV6Icon
+          iconName="triangle-exclamation"
+          iconStyle="solid"
+          className={styles.errorIcon}
+        />
+      )}
     </NavLink>
   );
 };
