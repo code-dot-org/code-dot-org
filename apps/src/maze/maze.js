@@ -153,8 +153,6 @@ module.exports = class Maze {
         // This prevents students from overriding these with their own
         // functions/variables.
         Blockly.JavaScript.addReservedWords('Maze,code');
-
-        Blockly.setInfiniteLoopTrap();
       }
 
       const svg = document.getElementById('svgMaze');
@@ -292,9 +290,6 @@ module.exports = class Maze {
       resetButton.style.minWidth = runButton.offsetWidth + 'px';
     }
     studioApp().toggleRunReset('reset');
-    if (studioApp().isUsingBlockly()) {
-      Blockly.mainBlockSpace.traceOn(true);
-    }
     studioApp().reset(false);
     studioApp().attempts++;
   }

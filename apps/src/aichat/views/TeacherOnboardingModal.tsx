@@ -1,10 +1,6 @@
 import Button, {buttonColors} from '@code-dot-org/component-library/button';
 import Link from '@code-dot-org/component-library/link';
-import {
-  BodyOneText,
-  BodyTwoText,
-  Heading3,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
@@ -31,53 +27,57 @@ const TeacherOnboardingModal: React.FunctionComponent<
       className={moduleStyles.teacherOnboardingModal}
     >
       <div className={moduleStyles.headerContainer}>
-        <Heading3>{aichatI18n.welcomeToAichatLab()}</Heading3>
+        <Typography variant="h3" gutterBottom>
+          {aichatI18n.welcomeToAichatLab()}
+        </Typography>
       </div>
       <hr />
       <div className={moduleStyles.contentContainer}>
         <div className={moduleStyles.warning}>
-          <BodyTwoText>
+          <Typography variant="body2" gutterBottom>
             {aichatI18n.teacherOnboardingModal_warning()}
-          </BodyTwoText>
+          </Typography>
         </div>
         <div className={moduleStyles.textContainer}>
-          <BodyOneText>{aichatI18n.chatComponentsHeader()}</BodyOneText>
+          <Typography variant="body1" gutterBottom>
+            {aichatI18n.chatComponentsHeader()}
+          </Typography>
           <ul>
             <li>
-              <BodyTwoText>
+              <Typography variant="body2" gutterBottom>
                 <SafeMarkdown
                   markdown={aichatI18n.teacherOnboardingModal_instructionsBullet()}
                 />
-              </BodyTwoText>
+              </Typography>
             </li>
             <li>
-              <BodyTwoText>
+              <Typography variant="body2" gutterBottom>
                 <SafeMarkdown
                   markdown={aichatI18n.teacherOnboardingModal_modelCustomizationBullet()}
                 />
-              </BodyTwoText>
+              </Typography>
             </li>
             <li>
-              <BodyTwoText>
+              <Typography variant="body2" gutterBottom>
                 <SafeMarkdown
                   markdown={aichatI18n.teacherOnboardingModal_aiChatBullet()}
                 />
-              </BodyTwoText>
+              </Typography>
             </li>
             <li>
-              <BodyTwoText>
+              <Typography variant="body2" gutterBottom>
                 <SafeMarkdown
                   markdown={aichatI18n.teacherOnboardingModal_userViewBullet()}
                 />
-              </BodyTwoText>
+              </Typography>
             </li>
           </ul>
-          <BodyTwoText>
+          <Typography variant="body2" gutterBottom>
             {aichatI18n.teacherOnboardingModal_chatHistoryAccess()}
             <Link href="https://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher">
               {aichatI18n.learnMoreHereInBrackets()}
             </Link>
-          </BodyTwoText>
+          </Typography>
         </div>
       </div>
       <hr />
