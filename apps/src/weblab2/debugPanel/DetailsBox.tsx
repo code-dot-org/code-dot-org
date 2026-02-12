@@ -1,3 +1,4 @@
+import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   BodyThreeText,
@@ -17,12 +18,14 @@ interface DetailsBoxProps {
   title: string;
   success: boolean;
   rows: DetailsField[][];
+  errorMessage?: string;
 }
 
 const DetailsBox: React.FunctionComponent<DetailsBoxProps> = ({
   title,
   success,
   rows,
+  errorMessage,
 }) => {
   return (
     <div className={moduleStyles.detailsBox}>
@@ -38,6 +41,7 @@ const DetailsBox: React.FunctionComponent<DetailsBoxProps> = ({
         />
       </div>
       <div className={moduleStyles.detailsBody}>
+        {errorMessage && <Alert text={errorMessage} type="danger" size="xs" />}
         {rows.map((row, rowIndex) => {
           const content = row.map(field => (
             <div key={field.label} className={moduleStyles.detailsField}>

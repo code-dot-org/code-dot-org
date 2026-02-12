@@ -112,6 +112,13 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
     return [];
   }, [selectedRequest]);
 
+  const requestErrorMessage = useMemo(() => {
+    if (selectedRequest?.request.cspDirectiveViolated) {
+      return `We cannot connect to that url. It is not in our list of available apis.`;
+    }
+    return undefined;
+  }, [selectedRequest]);
+
   return (
     <PanelContainer
       id={'debug-panel-container'}
@@ -157,6 +164,7 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
                 ],
                 [{label: 'URL', value: selectedRequest?.request.url}],
               ]}
+              errorMessage={requestErrorMessage}
             />
             <img src={dividerIcon} alt={dividerAltText} />
             {selectedRequest?.response ? (
@@ -164,6 +172,11 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
                 title="Response"
                 success={responseSuccess}
                 rows={responseRows}
+                errorMessage={
+                  !responseSuccess
+                    ? `Response failed with status code ${selectedRequest?.response?.status}`
+                    : undefined
+                }
               />
             ) : (
               <div className={moduleStyles.responsePlaceholder}>
