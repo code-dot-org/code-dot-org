@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
+import RequiresAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/RequiresAiChatToolsAlert';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import Announcements from '@cdo/apps/code-studio/components/progress/Announcements';
 import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
@@ -25,6 +26,7 @@ import {
   onDismissRedirectWarning,
   dismissedRedirectWarning,
 } from '@cdo/apps/util/dismissVersionRedirect';
+import experiments from '@cdo/apps/util/experiments';
 import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -153,10 +155,10 @@ class CourseOverview extends Component {
       aiChatToolsDependency,
     } = this.props;
 
+    const viewAsTeacher = viewAs === ViewType.Instructor;
+
     const showNotification =
-      viewAs === ViewType.Instructor &&
-      !isVerifiedInstructor &&
-      hasVerifiedResources;
+      viewAsTeacher && !isVerifiedInstructor && hasVerifiedResources;
 
     return (
       <div style={styles.main}>
@@ -216,6 +218,11 @@ class CourseOverview extends Component {
           participantAudience={participantAudience}
           aiChatToolsDependency={aiChatToolsDependency}
         />
+        {experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
+          viewAsTeacher &&
+          aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
+            <RequiresAiChatToolsAlert />
+          )}
         <SafeMarkdown
           style={styles.description}
           openExternalLinksInNewTab={true}
