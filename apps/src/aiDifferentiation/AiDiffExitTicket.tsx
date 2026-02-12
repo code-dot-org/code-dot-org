@@ -75,7 +75,6 @@ const AiDiffExitTicket: React.FC<AiDiffExitTicketProps> = ({
               markdown={`**Question ${id + 1}:** ${question}`}
             />
           </Typography>
-          {/* <BodyOneText>{`ANSWER: ${item.answer}`}</BodyOneText> */}
         </div>
       </div>
     );
@@ -114,14 +113,12 @@ const AiDiffExitTicket: React.FC<AiDiffExitTicketProps> = ({
           </div>
           {!collapsed &&
             items.map((item: ExitTicketItem, id: number) => (
-              // <div className={style.artifactContent} key={id}>
               <Typography semanticTag="div" visualAppearance="body-two">
                 <SafeMarkdown
                   unwrapped
                   markdown={`**Question ${id + 1}:**\n${item.answer}`}
                 />
               </Typography>
-              // </div>
             ))}
         </div>
       </div>

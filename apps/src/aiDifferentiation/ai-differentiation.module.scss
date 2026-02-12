@@ -523,8 +523,6 @@ html body .sidebarActionTooltip {
 
 .artifactContainer {
   display: flex;
-  // width: 960px;
-  // height: 918px;
   padding-top: 60px;
   flex-direction: column;
   align-items: center;
@@ -567,7 +565,6 @@ html body .sidebarActionTooltip {
   width: 800px;
   padding: 50px 40px 40px 40px;
   flex-direction: column;
-  // justify-content: center;
   align-items: center;
   gap: 12px;
   margin-top: -16px;
@@ -628,15 +625,15 @@ html body .sidebarActionTooltip {
 .markdownStyle {
   p {
   color: var(--text-neutral-primary, #292F36);
-text-align: center;
-font-feature-settings: 'liga' off, 'clig' off;
+  text-align: center;
+  font-feature-settings: 'liga' off, 'clig' off;
 
-/* Body/Body 1 - ExtraStrong */
-font-family: var(--font-family-body, Figtree);
-font-size: var(--font-size-body-lg, 20px);
-font-style: normal;
-font-weight: 700;
-line-height: var(--font-line-height-body-lg, 28px); /* 140% */
+  /* Body/Body 1 - ExtraStrong */
+  font-family: var(--font-family-body, Figtree);
+  font-size: var(--font-size-body-lg, 20px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--font-line-height-body-lg, 28px); /* 140% */
   }
 }
 

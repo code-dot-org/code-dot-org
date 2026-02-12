@@ -5,10 +5,10 @@ import AiDiffLessonHook from '@cdo/apps/aiDifferentiation/AiDiffLessonHook';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(function () {
-  displayExitTicket();
+  displayLessonHook();
 });
 
-function displayExitTicket() {
+function displayLessonHook() {
   const lessonHookData = getScriptData('artifact');
 
   ReactDOM.render(
