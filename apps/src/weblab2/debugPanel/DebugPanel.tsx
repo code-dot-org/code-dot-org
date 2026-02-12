@@ -78,6 +78,40 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
     }
   }, [requestSuccess, responseSuccess]);
 
+  const responseRows = useMemo(() => {
+    if (selectedRequest?.response) {
+      const rows = [
+        [
+          {
+            label: 'Status',
+            value: selectedRequest?.response?.status,
+          },
+          {
+            label: 'Time',
+            value: selectedRequest?.response?.timeElapsed + ' ms',
+          },
+        ],
+      ];
+      let responseDataValue = `Cannot display response data of type ${selectedRequest?.response?.contentType}`;
+      if (!selectedRequest.response?.body) {
+        responseDataValue = 'No response data found';
+      } else if (
+        selectedRequest?.response?.contentType?.startsWith('text') ||
+        selectedRequest?.response?.contentType === 'application/json'
+      ) {
+        responseDataValue = selectedRequest.response.body;
+      }
+      rows.push([
+        {
+          label: 'Response Data',
+          value: responseDataValue,
+        },
+      ]);
+      return rows;
+    }
+    return [];
+  }, [selectedRequest]);
+
   return (
     <PanelContainer
       id={'debug-panel-container'}
@@ -129,24 +163,7 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
               <DetailsBox
                 title="Response"
                 success={responseSuccess}
-                rows={[
-                  [
-                    {
-                      label: 'Status',
-                      value: selectedRequest?.response?.status,
-                    },
-                    {
-                      label: 'Time',
-                      value: selectedRequest?.response?.timeElapsed,
-                    },
-                  ],
-                  [
-                    {
-                      label: 'Response Data',
-                      value: selectedRequest?.response?.body,
-                    },
-                  ],
-                ]}
+                rows={responseRows}
               />
             ) : (
               <div className={moduleStyles.responsePlaceholder}>
