@@ -20,7 +20,7 @@ class AidiffArtifactsController <ApplicationController
     @artifact = AidiffArtifact.create(
       type: message.artifact_candidate_type,
       aidiff_thread: message.aidiff_thread,
-      content: message.content,
+      content: JSON::Validator.parse(message.content),
       user: current_user,
       aidiff_artifact_associations_attributes: section_ids.map do |id|
         {
