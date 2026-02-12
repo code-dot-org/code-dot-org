@@ -631,10 +631,14 @@ const EVENTS = {
   RESOURCE_PANEL_SETTINGS_CHANGE: 'Resource Panel Settings Change',
 
   // Resource Panel - Instructions Drawer
-  RESOURCE_PANEL_INSTRUCTIONS_DRAWER_TOGGLED:
-    'Resource Panel Instructions Drawer Toggled',
-  RESOURCE_PANEL_INSTRUCTIONS_DRAWER_RESIZED:
-    'Resource Panel Instructions Drawer Resized',
+  RESOURCE_PANEL_INSTRUCTIONS_DRAWER_COLLAPSED:
+    'Resource Panel Instructions Drawer Collapsed',
+  RESOURCE_PANEL_INSTRUCTIONS_DRAWER_EXPANDED:
+    'Resource Panel Instructions Drawer Expanded',
+  RESOURCE_PANEL_INSTRUCTIONS_DRAWER_RESIZED_INCREASED:
+    'Resource Panel Instructions Drawer Resized Increased',
+  RESOURCE_PANEL_INSTRUCTIONS_DRAWER_RESIZED_DECREASED:
+    'Resource Panel Instructions Drawer Resized Decreased',
 
   // IntroJS flows
   INTROJS_FLOW_STARTED: 'IntroJS Flow Started',

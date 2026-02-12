@@ -81,11 +81,15 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
       const startHeight = instructionsHeightAtDragStartRef.current;
       instructionsHeightAtDragStartRef.current = null;
       const endHeight = rawInstructionsHeight;
-      const dragType = endHeight > startHeight ? 'increase' : 'decrease';
-      sendLab2AnalyticsEvent(
-        EVENTS.RESOURCE_PANEL_INSTRUCTIONS_DRAWER_RESIZED,
-        {dragType: dragType}
-      );
+      if (endHeight > startHeight) {
+        sendLab2AnalyticsEvent(
+          EVENTS.RESOURCE_PANEL_INSTRUCTIONS_DRAWER_RESIZED_INCREASED
+        );
+      } else if (endHeight < startHeight) {
+        sendLab2AnalyticsEvent(
+          EVENTS.RESOURCE_PANEL_INSTRUCTIONS_DRAWER_RESIZED_DECREASED
+        );
+      }
     }
   }, [isDragging, rawInstructionsHeight]);
 
@@ -146,10 +150,10 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   }, [instructionsContent, setRawInstructionsHeight]);
 
   const toggleInstructions = useCallback(() => {
-    const toggleType = isCollapsed ? 'expand' : 'collapse';
-    sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_INSTRUCTIONS_DRAWER_TOGGLED, {
-      toggleType: toggleType,
-    });
+    const eventToReport = isCollapsed
+      ? EVENTS.RESOURCE_PANEL_INSTRUCTIONS_DRAWER_EXPANDED
+      : EVENTS.RESOURCE_PANEL_INSTRUCTIONS_DRAWER_COLLAPSED;
+    sendLab2AnalyticsEvent(eventToReport);
     setIsCollapsed(prev => !prev);
   }, [isCollapsed]);
 
