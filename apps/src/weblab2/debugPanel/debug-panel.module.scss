@@ -60,3 +60,40 @@
   border: 1px solid var(--borders-neutral-primary);
   background: var(--background-neutral-primary);
 }
+
+.detailsHeader {
+  display: flex;
+  padding: 8px 10px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.detailsHeaderText {
+  flex: 1 0 0;
+}
+
+.detailsBody {
+  display: flex;
+  padding: 8px 10px 10px 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.successIcon {
+  color: var(--text-success-primary);
+}
+
+.errorIcon {
+  color: var(--text-error-primary);
+}
+
+.loadingIcon {
+  color: var(--text-neutral-quaternary);
+}

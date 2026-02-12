@@ -1,5 +1,7 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   BodyFourText,
+  BodyThreeText,
   StrongText,
 } from '@code-dot-org/component-library/typography';
 import React, {useEffect, useMemo} from 'react';
@@ -105,7 +107,19 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
           </div>
           <div className={moduleStyles.detailsContainer}>
             <div className={moduleStyles.detailsBox}>
-              {selectedRequest?.request.url}
+              <div className={moduleStyles.detailsHeader}>
+                <BodyThreeText className={moduleStyles.detailsHeaderText}>
+                  <StrongText>Request</StrongText>
+                </BodyThreeText>
+                <FontAwesomeV6Icon
+                  iconName={requestSuccess ? 'check-circle' : 'xmark-circle'}
+                  className={
+                    requestSuccess
+                      ? moduleStyles.successIcon
+                      : moduleStyles.errorIcon
+                  }
+                />
+              </div>
             </div>
             <img src={dividerIcon} alt={dividerAltText} />
             <div className={moduleStyles.detailsBox}>

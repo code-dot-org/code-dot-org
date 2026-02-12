@@ -4,6 +4,7 @@ import React, {ChangeEvent, useMemo} from 'react';
 
 import {NetworkEntry} from '../redux/networkRedux';
 
+import parentStyles from './debug-panel.module.scss';
 import moduleStyles from './network-request-chip.module.scss';
 
 interface NetworkRequestChipProps {
@@ -18,12 +19,12 @@ const NetworkRequestChip: React.FunctionComponent<NetworkRequestChipProps> = ({
   isSelected,
 }) => {
   const requestIcon = useMemo(() => {
-    if (request.response && request.response?.status < 300) {
-      return {iconName: 'check-circle', className: moduleStyles.successIcon};
+    if (request.response && request.response.status < 300) {
+      return {iconName: 'check-circle', className: parentStyles.successIcon};
     } else if (!request.response && !request.request.cspDirectiveViolated) {
-      return {iconName: 'spinner', className: moduleStyles.loadingIcon};
+      return {iconName: 'spinner', className: parentStyles.loadingIcon};
     } else {
-      return {iconName: 'xmark-circle', className: moduleStyles.errorIcon};
+      return {iconName: 'xmark-circle', className: parentStyles.errorIcon};
     }
   }, [request.request.cspDirectiveViolated, request.response]);
 
