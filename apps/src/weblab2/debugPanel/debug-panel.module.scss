@@ -1,12 +1,13 @@
 .debugPanelContainer {
   display: flex;
-  flex-direction: column;
   overflow-y: auto;
 }
 
 .networkSummary {
   display: flex;
-  width: 180px;
+  width: 190px;
+  flex-shrink: 0;
+  box-sizing: border-box;
   flex-direction: column;
   align-items: flex-start;
   align-self: stretch;
@@ -24,4 +25,25 @@
     margin-bottom: 0;
     color: var(--text-neutral-tertiary);
   }
+}
+
+.requestList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow-y: auto;
+  padding: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.requestDetails {
+  background: var(--background-neutral-secondary);
+  display: flex;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+  flex: 1 0 0;
+  align-self: stretch;
 }

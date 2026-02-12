@@ -28,13 +28,11 @@ const NetworkRequestChip: React.FunctionComponent<NetworkRequestChipProps> = ({
   }, [request.request.cspDirectiveViolated, request.response]);
 
   const label = useMemo(() => {
-    const url = request.request.url;
-    const [pathPart] = url.split('?');
-    const segments = pathPart.split('/').filter(Boolean);
-    if (segments.length === 0) {
-      return url;
+    try {
+      return new URL(request.request.url).hostname;
+    } catch {
+      return request.request.url;
     }
-    return segments[segments.length - 1];
   }, [request.request.url]);
 
   return (
@@ -43,9 +41,10 @@ const NetworkRequestChip: React.FunctionComponent<NetworkRequestChipProps> = ({
         name={request.id}
         checked={isSelected}
         onChange={onChange}
-        size={'s'}
+        size={'xs'}
         value={request.id}
         label={label}
+        className={moduleStyles.radioButton}
       />
       <FontAwesomeV6Icon
         iconName={requestIcon.iconName}
