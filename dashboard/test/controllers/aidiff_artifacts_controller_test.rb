@@ -54,7 +54,7 @@ class AidiffArtifactsControllerTest < ActionController::TestCase
   test "create makes artifact AND associations" do
     sign_in @teacher
     thread1 = create(:aidiff_thread, user: @teacher, llm_version: AiDiffBedrockHelper::MODEL_ID, course_id: @unit_group.id, unit_id: nil, lesson_id: nil, context_type: "course")
-    message1 = create(:aidiff_message, aidiff_thread: thread1, content: {blah: 'lol'}, is_artifact_candidate: true, artifact_candidate_type: SharedConstants::AI_DIFF_ARTIFACT_TYPE[:EXIT_TICKET])
+    message1 = create(:aidiff_message, aidiff_thread: thread1, content: '{"blah": "lol"}', is_artifact_candidate: true, artifact_candidate_type: SharedConstants::AI_DIFF_ARTIFACT_TYPE[:EXIT_TICKET])
 
     section1 = create(:section, user: @teacher)
     section2 = create(:section, user: @teacher)
@@ -70,7 +70,10 @@ class AidiffArtifactsControllerTest < ActionController::TestCase
     assert_response :success
     json_response = JSON.parse(response.body)
     assert_equal "AidiffExitTicket", json_response["type"]
-    assert_equal '{:blah=>"lol"}', json_response["content"]
+    expected = {
+      'blah' => 'lol'
+    }
+    assert_equal expected, json_response["content"]
 
     artifact = AidiffArtifact.find_by_id(json_response["id"])
     assert_equal 2, artifact.aidiff_artifact_associations.count
