@@ -1,4 +1,4 @@
-import {Heading5} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import {PersonalizationData} from '../../../hooks/useTeachingProfileData';
@@ -54,10 +54,9 @@ const PersonalizationInterstitial: React.FC<
           </div>
         </div>
       )}
-
-      <Heading5 noMargin className={style.interstitialMessage}>
+      <Typography className={style.interstitialMessage} variant="h5">
         {message}
-      </Heading5>
+      </Typography>
     </div>
   );
 };

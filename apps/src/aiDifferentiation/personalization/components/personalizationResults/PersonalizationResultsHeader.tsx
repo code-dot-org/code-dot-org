@@ -1,8 +1,4 @@
-import {
-  OverlineTwoText,
-  BodyTwoText,
-  Heading1,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import i18n from '@cdo/locale';
@@ -20,13 +16,13 @@ const PersonalizationResultsHeader: React.FC<
 > = ({teachingStyle}) => {
   return (
     <div className={style.revealHeader}>
-      <OverlineTwoText noMargin className={style.lightText}>
+      <Typography className={style.lightText} variant="overline2">
         {i18n.teachingStyleIs()}
-      </OverlineTwoText>
-      <Heading1 noMargin>{teachingStyle.name}</Heading1>
-      <BodyTwoText noMargin className={style.lightText}>
+      </Typography>
+      <Typography variant="h1">{teachingStyle.name}</Typography>
+      <Typography className={style.lightText} variant="body2">
         <span>{teachingStyle.emoji}</span> {teachingStyle.tagline}
-      </BodyTwoText>
+      </Typography>
     </div>
   );
 };
