@@ -2,10 +2,13 @@ import {
   BodyFourText,
   StrongText,
 } from '@code-dot-org/component-library/typography';
-import React, {useEffect} from 'react';
+import React, {useEffect, useMemo} from 'react';
 
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import RequestFailureDivider from '@cdo/apps/weblab2/debugPanel/images/RequestFailure.svg';
+import ResponseFailureDivier from '@cdo/apps/weblab2/debugPanel/images/ResponseFailure.svg';
+import SuccessDivider from '@cdo/apps/weblab2/debugPanel/images/Success.svg';
 
 import {NetworkEntry} from '../redux/networkRedux';
 
@@ -42,6 +45,36 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
     setSelectedRequest(selected);
   };
 
+  const requestSuccess = useMemo(() => {
+    if (selectedRequest) {
+      return selectedRequest.request.cspDirectiveViolated === undefined;
+    }
+    return false;
+  }, [selectedRequest]);
+
+  const responseSuccess = useMemo(() => {
+    if (selectedRequest?.response) {
+      return selectedRequest.response.status < 300;
+    }
+    return false;
+  }, [selectedRequest]);
+
+  const {dividerIcon, dividerAltText} = useMemo(() => {
+    if (requestSuccess && responseSuccess) {
+      return {dividerIcon: SuccessDivider, dividerAltText: 'Success'};
+    } else if (requestSuccess) {
+      return {
+        dividerIcon: ResponseFailureDivier,
+        dividerAltText: 'Response Failure',
+      };
+    } else {
+      return {
+        dividerIcon: RequestFailureDivider,
+        dividerAltText: 'Request Failure',
+      };
+    }
+  }, [requestSuccess, responseSuccess]);
+
   return (
     <PanelContainer
       id={'debug-panel-container'}
@@ -70,8 +103,14 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
               ))}
             </div>
           </div>
-          <div className={moduleStyles.requestDetails}>
-            {selectedRequest?.request.url}
+          <div className={moduleStyles.detailsContainer}>
+            <div className={moduleStyles.detailsBox}>
+              {selectedRequest?.request.url}
+            </div>
+            <img src={dividerIcon} alt={dividerAltText} />
+            <div className={moduleStyles.detailsBox}>
+              {selectedRequest?.response?.status}
+            </div>
           </div>
         </div>
       )}

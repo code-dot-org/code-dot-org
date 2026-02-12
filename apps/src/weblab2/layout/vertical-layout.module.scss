@@ -26,8 +26,9 @@
 }
 
 .debugPanelContainer {
-  height: 200px;
+  height: 300px;
   flex: none;
+  border-top: variables.$default-border;
 }
 
 .aiTutorVersionContainer {

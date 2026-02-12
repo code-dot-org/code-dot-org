@@ -18,7 +18,7 @@ const NetworkRequestChip: React.FunctionComponent<NetworkRequestChipProps> = ({
   isSelected,
 }) => {
   const requestIcon = useMemo(() => {
-    if (request.response?.status === 200) {
+    if (request.response && request.response?.status < 300) {
       return {iconName: 'check-circle', className: moduleStyles.successIcon};
     } else if (!request.response && !request.request.cspDirectiveViolated) {
       return {iconName: 'spinner', className: moduleStyles.loadingIcon};
