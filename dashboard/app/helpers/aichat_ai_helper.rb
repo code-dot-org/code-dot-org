@@ -161,12 +161,31 @@ module AichatAiHelper
     if model_id == "gpt-4o-mini"
       return AichatOpenaiResponsesClient.new(CDO.openai_student_learning_api_key, SharedConstants::AICHAT_MODEL_VERSION, usage_reporter)
     else
+
+      # We use separate keys per-client for Gemini so that we can more easily allocate donated credits appropriately.
+      # In the longer term, we should consider adding per-client keys for OpenAI as well in order to more easily differentiate between use cases.
+      # We assume AI Chat Lab if not AI Tutor here, which is not strictly true because of FLOW_LAB. We should convert
+      # FLOW_LAB to an EXPERIMENT client type and add experiment projects/keys key to handle those use cases.
+      api_key = client_type == SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR] ?
+        CDO.google_vertex_ai_tutor_service_account_key : CDO.google_vertex_ai_chat_service_account_key
+
+      return AichatGeminiClient.new(api_key, model_id, usage_reporter)
+    end
+  end
+
+  # Remove after new Vertex implementation is tested on production
+  # Create an instance of the appropriate ai-client-derived class based on model id.
+  def self.create_ai_client_instance_legacy(client_type, model_id, usage_reporter = nil)
+    # We assume it's one of the gemini models if not 'gpt-4o-mini'.
+    if model_id == "gpt-4o-mini"
+      return AichatOpenaiResponsesClient.new(CDO.openai_student_learning_api_key, SharedConstants::AICHAT_MODEL_VERSION, usage_reporter)
+    else
       # We use separate keys per-client for Gemini so that we can more easily allocate donated credits appropriately.
       # In the longer term, we should consider adding per-client keys for OpenAI as well in order to more easily differentiate between use cases.
       # Also note that we assume AI Chat Lab if not AI Tutor here, which is not strictly true because of Flow Lab. We could add an EXPERIMENT client type and add an explicit key to handle those use cases (eg, Flow Lab).
       api_key = client_type == SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR] ?
         CDO.google_gemini_ai_tutor_api_key : CDO.google_gemini_ai_chat_lab_api_key
-      return AichatGeminiClient.new(api_key, model_id, usage_reporter)
+      return AichatGeminiClientLegacy.new(api_key, model_id, usage_reporter)
     end
   end
 
@@ -190,7 +209,11 @@ module AichatAiHelper
 
     usage_reporter = AichatAiUsageReporter.new(model_id, user_id, project_id, level_id)
 
-    client = create_ai_client_instance(client_type, model_id, usage_reporter)
+    use_legacy = !aichat_model_customizations['useVertex']
+
+    client = use_legacy ?
+      create_ai_client_instance_legacy(client_type, model_id, usage_reporter)
+      : create_ai_client_instance(client_type, model_id, usage_reporter)
 
     config, request, context = get_config_request_context(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id, client_type, json_schema)
 
