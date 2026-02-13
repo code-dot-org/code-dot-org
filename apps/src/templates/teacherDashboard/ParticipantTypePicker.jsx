@@ -47,7 +47,7 @@ export default class ParticipantTypePicker extends Component {
 
     return (
       <div style={style.container} className="uitest-participant-type-picker">
-        <Typography isRebranded variant="h3" gutterBottom>
+        <Typography variant="h3" gutterBottom>
           {title}
         </Typography>
         <p style={style.bodyText}>

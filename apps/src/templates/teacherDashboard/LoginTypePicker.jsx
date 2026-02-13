@@ -166,7 +166,7 @@ class LoginTypePicker extends Component {
 
     return (
       <div style={style.container}>
-        <Typography isRebranded variant="h3" gutterBottom>
+        <Typography variant="h3" gutterBottom>
           {title}
         </Typography>
         <p>{i18n.addStudentsToSectionInstructionsUpdated()}</p>
