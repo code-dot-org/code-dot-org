@@ -3,15 +3,16 @@ import React from 'react';
 
 import {AI_SETTINGS_SUPPORT_LINK} from '@cdo/apps/aichat/constants';
 
+import styles from './ai-chat-tools-dependency-alerts.module.scss';
+
 /**
- * Warns that the assigned course or unit needs AI chat tools enabled.
- * Used when a teacher assigns a section to AI-dependent curriculum.
+ * Displays an aqua alert with the bot icon, a help link, and custom text.
  */
-const AiChatToolsRequiredAlert: React.FC = () => {
+const AiChatToolsInfoAlert: React.FC<{text: string}> = ({text}) => {
   return (
     <Alert
       type={alertTypes.aqua}
-      text="This course requires the use of AI chat tools to complete. By assigning this course, you consent to students in these class sections accessing and using AI chat tools."
+      text={text}
       link={{
         href: AI_SETTINGS_SUPPORT_LINK,
         text: 'Learn more',
@@ -19,8 +20,9 @@ const AiChatToolsRequiredAlert: React.FC = () => {
       }}
       icon={{iconName: 'ai-bot-solid', iconFamily: 'kit'}}
       showIcon={true}
+      className={styles.chatToolsInfo}
     />
   );
 };
 
-export default AiChatToolsRequiredAlert;
+export default AiChatToolsInfoAlert;

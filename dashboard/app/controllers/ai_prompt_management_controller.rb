@@ -1,6 +1,6 @@
 require 'json'
 
-class LangfuseController < ApplicationController
+class AiPromptManagementController < ApplicationController
   include LangfuseHelper
 
   def get_prompt

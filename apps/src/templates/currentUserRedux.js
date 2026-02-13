@@ -24,6 +24,7 @@ const SET_AI_DIFFERENTIATION_ENABLED =
   'currentUser/SET_AI_DIFFERENTIATION_ENABLED';
 const SET_SHOW_AI_TA_LESSON_SUMMARY =
   'currentUser/SET_SHOW_AI_TA_LESSON_SUMMARY';
+const SET_SHOW_AI_TA_PODCASTS = 'currentUser/SET_SHOW_AI_TA_PODCASTS';
 const SET_HAS_COMPLETED_PERSONALIZATION_QUIZ =
   'currentUser/SET_HAS_COMPLETED_PERSONALIZATION_QUIZ';
 const SET_AUDIO_SUMMARY_TRANSCRIPT = 'currentUser/SET_AUDIO_SUMMARY_TRANSCRIPT';
@@ -115,6 +116,10 @@ export const setShowAITALessonSummary = showAITALessonSummary => ({
   type: SET_SHOW_AI_TA_LESSON_SUMMARY,
   showAITALessonSummary,
 });
+export const setShowAITAPodcasts = showAITAPodcasts => ({
+  type: SET_SHOW_AI_TA_PODCASTS,
+  showAITAPodcasts,
+});
 export const setHasCompletedPersonalizationQuiz =
   hasCompletedPersonalizationQuiz => ({
     type: SET_HAS_COMPLETED_PERSONALIZATION_QUIZ,
@@ -142,12 +147,14 @@ const initialState = {
   hasSeenStandardsReportInfo: false,
   aiDifferentiationEnabled: null,
   showAITALessonSummary: false,
+  showAITAPodcasts: false,
   hasCompletedPersonalizationQuiz: false,
   audioSummaryTranscript: [],
   isBackgroundMusicMuted: false,
   isSortedByFamilyName: false,
   isLti: undefined,
   isTeacher: undefined,
+  isLevelbuilder: undefined,
   // Setting default under13 value to true to err on the side of caution for age-restricted content.
   under13: true,
   over21: false,
@@ -269,6 +276,12 @@ export default function currentUser(state = initialState, action) {
       showAITALessonSummary: action.showAITALessonSummary,
     };
   }
+  if (action.type === SET_SHOW_AI_TA_PODCASTS) {
+    return {
+      ...state,
+      showAITAPodcasts: action.showAITAPodcasts,
+    };
+  }
   if (action.type === SET_HAS_COMPLETED_PERSONALIZATION_QUIZ) {
     return {
       ...state,
@@ -309,6 +322,7 @@ export default function currentUser(state = initialState, action) {
       ai_differentiation_enabled,
       progress_table_v2_closed_beta,
       is_lti,
+      is_levelbuilder,
       date_progress_table_invitation_last_delayed,
       has_seen_progress_table_v2_invitation,
       child_account_compliance_state,
@@ -349,6 +363,7 @@ export default function currentUser(state = initialState, action) {
       progressTableV2ClosedBeta: progress_table_v2_closed_beta,
       isLti: is_lti,
       isTeacher: user_type === UserTypes.TEACHER,
+      isLevelbuilder: is_levelbuilder,
       inUSA: ['US', 'RD'].includes(country_code) || !!us_state_code,
       dateProgressTableInvitationDelayed:
         date_progress_table_invitation_last_delayed,

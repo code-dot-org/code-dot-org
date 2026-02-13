@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
 
@@ -33,6 +32,11 @@ class ImagePreviewUnwrapped extends React.Component {
       ariaLabel = `${ariaLabel}. ${alt}`;
     }
 
+    const previewStyle = {
+      ...styles.aniGifPreview(url),
+      ...(noVisualization ? styles.bigPreview : {}),
+    };
+
     return (
       <div id="ani-gif-preview-wrapper" style={styles.wrapper}>
         <div
@@ -40,10 +44,7 @@ class ImagePreviewUnwrapped extends React.Component {
           role="button"
           tabIndex={0}
           aria-label={ariaLabel}
-          style={[
-            styles.aniGifPreview(url),
-            noVisualization && styles.bigPreview,
-          ]}
+          style={previewStyle}
           onClick={showInstructionsDialog}
           onKeyDown={this.handleKeyDown}
         />
@@ -69,7 +70,7 @@ const styles = {
   },
 };
 
-export const ImagePreview = Radium(ImagePreviewUnwrapped);
+export const ImagePreview = ImagePreviewUnwrapped;
 export default connect(
   state => ({
     url: state.pageConstants.aniGifURL,
