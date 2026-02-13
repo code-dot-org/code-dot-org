@@ -45,6 +45,9 @@ import {sendAnalytics} from './sendAnalytics';
 // This will be removed once we switch over to Vertex completely.
 const useVertex = queryParams('aitutor-use-vertex') === 'true' ? true : false;
 
+// Log whether using Vertex API or not in case query param entered incorrectly.
+console.log(`🤖: Tutor set to use Vertex API? ${useVertex ? 'YES' : 'NO'}`);
+
 // This thunk's callback function submits a user's chat content and AI customizations to
 // the chat completion endpoint, then waits for a chat completion response, and updates
 // the user messages.
