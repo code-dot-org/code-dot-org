@@ -1,5 +1,6 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {autocompletion} from '@codemirror/autocomplete';
+import {MergeView} from '@codemirror/merge';
 import {Compartment, EditorState, Extension} from '@codemirror/state';
 import {EditorView, ViewUpdate} from '@codemirror/view';
 import classNames from 'classnames';
@@ -14,6 +15,7 @@ import {
 import {AppName} from '@cdo/apps/lab2/types';
 import i18n from '@cdo/apps/pythonlab/locale';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {editorConfig} from './editorConfig';
@@ -40,7 +42,9 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   const editorRef = useRef<HTMLDivElement>(null);
   const dispatch = useAppDispatch();
   const [didInit, setDidInit] = useState(false);
-  const [editorView, setEditorView] = useState<EditorView | null>(null);
+  const [editorView, setEditorView] = useState<EditorView | MergeView | null>(
+    null
+  );
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const {editorFontSizeKey, editorFontSizeLoaded} = useAppSelector(
@@ -48,6 +52,33 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   );
   const {signInState} = useAppSelector(state => state.currentUser);
   const {theme} = useTheme();
+
+  const allowSplitView = experiments.isEnabledAllowingQueryString(
+    experiments.ACCEPT_REJECT_SPLIT_VIEW
+  );
+
+  const isAiTutorVersion = useAppSelector(
+    state => state.lab2Project.viewingAiTutorVersion
+  );
+  const projectSourceBeforeAiTutorVersion = useAppSelector(
+    state => state.lab2Project.projectSourceBeforeAiTutorVersion
+  );
+  console.log('isAiTutorVersion', isAiTutorVersion);
+  console.log(
+    'projectSourceBeforeAiTutorVersion',
+    projectSourceBeforeAiTutorVersion
+  );
+  console.log('allowSplitView', allowSplitView);
+
+  // Only show split diff view when we have AI tutor mode and projectSourceBeforeAiTutorVersion.
+  // For new files that don't exist in projectSourceBeforeAiTutorVersion, we'll show diff against an empty document (empty string).
+  // Used in key so we remount CodeEditor when this becomes true.
+  const hasSplitView = useMemo(() => {
+    return (
+      isAiTutorVersion && projectSourceBeforeAiTutorVersion && allowSplitView
+    );
+  }, [isAiTutorVersion, projectSourceBeforeAiTutorVersion, allowSplitView]);
+  console.log('hasSplitView', hasSplitView);
 
   // Load the user's preferred editor font size from the backend which is saved
   // per app type (currently either pythonlab or weblab) for signed-in users.
@@ -175,20 +206,36 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     } else {
       editorExtensions.push(themeCompartment.of(lightModeTheme));
     }
-    setEditorView(
-      new EditorView({
-        state: EditorState.create({
-          doc: startCode,
-          extensions: editorExtensions,
-        }),
-        parent: editorRef.current,
-        // Always start on the first line.
-        // TODO: Determine if we should track line position and scroll to
-        // a saved position instead.
-        // https://codedotorg.atlassian.net/browse/CT-870
-        scrollTo: EditorView.scrollIntoView(0),
-      })
-    );
+    if (!hasSplitView) {
+      setEditorView(
+        new EditorView({
+          state: EditorState.create({
+            doc: startCode,
+            extensions: editorExtensions,
+          }),
+          parent: editorRef.current,
+          // Always start on the first line.
+          // TODO: Determine if we should track line position and scroll to
+          // a saved position instead.
+          // https://codedotorg.atlassian.net/browse/CT-870
+          scrollTo: EditorView.scrollIntoView(0),
+        })
+      );
+    } else {
+      setEditorView(
+        new MergeView({
+          a: {
+            doc: '',
+            extensions: editorExtensions,
+          },
+          b: {
+            doc: startCode,
+            extensions: editorExtensions,
+          },
+          parent: editorRef.current,
+        })
+      );
+    }
     setDidInit(true);
   }, [
     dispatch,
@@ -205,6 +252,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     editorFontSizeKey,
     editorFontSizeLoaded,
     themeCompartment,
+    hasSplitView,
   ]);
 
   // When we have a new fontSizeKey, reset font size.
