@@ -68,6 +68,8 @@ experiments.USE_LANGFUSE_PROMPT = 'use-langfuse-prompt';
 experiments.AI_LESSON_PODCASTS = 'ai-lesson-podcasts';
 // Use channel-id based preview urls on localhost for Web Lab 2
 experiments.WEBLAB2_FULL_URLS = 'weblab2-full-urls';
+// Show debug panel in Web Lab 2
+experiments.WEBLAB2_DEBUG_PANEL = 'weblab2-show-debug';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

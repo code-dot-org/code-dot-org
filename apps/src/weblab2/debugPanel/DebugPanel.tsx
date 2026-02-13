@@ -65,16 +65,19 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
 
   const {dividerIcon, dividerAltText} = useMemo(() => {
     if (requestSuccess && responseSuccess) {
-      return {dividerIcon: SuccessDivider, dividerAltText: 'Success'};
+      return {
+        dividerIcon: SuccessDivider,
+        dividerAltText: 'Request and response success',
+      };
     } else if (requestSuccess) {
       return {
         dividerIcon: ResponseFailureDivider,
-        dividerAltText: 'Response Failure',
+        dividerAltText: 'Response failure',
       };
     } else {
       return {
         dividerIcon: RequestFailureDivider,
-        dividerAltText: 'Request Failure',
+        dividerAltText: 'Request failure',
       };
     }
   }, [requestSuccess, responseSuccess]);

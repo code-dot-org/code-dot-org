@@ -2,7 +2,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {RadioButton} from '@code-dot-org/component-library/radioButton';
 import React, {ChangeEvent, useMemo} from 'react';
 
-import {NetworkEntry} from '../redux/networkRedux';
+import {NetworkEntry} from '@cdo/apps/weblab2/redux/networkRedux';
 
 import parentStyles from './debug-panel.module.scss';
 import moduleStyles from './network-request-chip.module.scss';
