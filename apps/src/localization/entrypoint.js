@@ -65,6 +65,7 @@ const prefixes = {
 
 const live = [
   '/courses/k5-unplugged',
+  '/courses/ai-ethics-2023',
   '/courses/express-2024',
   '/courses/pre-express-2024',
   '/courses/k5-onlinepd-2024',
