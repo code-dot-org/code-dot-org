@@ -6,7 +6,11 @@ import {
   THREAD_TYPES,
 } from '@cdo/apps/aiDifferentiation/constants';
 import {SUGGESTED_PROMPTS_FOR_SELECTION} from '@cdo/apps/aiDifferentiation/predefinedPrompts';
-import {ChatItem, ChatPrompt} from '@cdo/apps/aiDifferentiation/types';
+import {
+  ChatItem,
+  ChatPrompt,
+  ChatTextMessage,
+} from '@cdo/apps/aiDifferentiation/types';
 import {registerReducers} from '@cdo/apps/redux';
 
 import {
@@ -77,6 +81,7 @@ const initialState: AichatState = {
   chatWorkspaceSelectedTab: null,
   userAddedSelectionContext: {},
   artifactType: undefined,
+  pendingArtifactMessage: undefined,
 };
 
 const aichatSlice = createSlice({
@@ -159,6 +164,12 @@ const aichatSlice = createSlice({
     },
     setArtifactType(state, action: PayloadAction<string | undefined>) {
       state.artifactType = action.payload;
+    },
+    setPendingArtifactMessage(state, action: PayloadAction<ChatTextMessage>) {
+      state.pendingArtifactMessage = action.payload;
+    },
+    clearPendingArtifactMessage: state => {
+      state.pendingArtifactMessage = undefined;
     },
     removeUpdateMessage: (state, action: PayloadAction<number>) => {
       const modelUpdateMessageInfo = getUpdateMessageLocation(
@@ -487,6 +498,8 @@ export const {
   addThreadMessage,
   setThreadKeyId,
   setArtifactType,
+  setPendingArtifactMessage,
+  clearPendingArtifactMessage,
   setViewMode,
   addStagedFile,
   stagedFileUploadFinished,
