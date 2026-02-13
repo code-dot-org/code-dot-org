@@ -67,21 +67,13 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     [dispatch, activeFile?.id]
   );
 
-  // Only show unified diff view when we have both AI tutor mode and original file content.
+  // Only show unified diff view when we have AI tutor mode and projectSourceBeforeAiTutorVersion.
+  // For new files that don't exist in projectSourceBeforeAiTutorVersion, we'll show diff against an empty document (empty string).
   // Used in key so we remount CodeEditor when this becomes true.
   const hasMergeView = useMemo(() => {
-    if (
-      !isAiTutorVersion ||
-      !projectSourceBeforeAiTutorVersion ||
-      !activeFile?.name
-    ) {
-      return false;
-    }
-    const originalFiles = projectSourceBeforeAiTutorVersion.files;
-    const activeOriginalFile = Object.values(originalFiles).find(
-      f => f.name === activeFile.name
+    return (
+      isAiTutorVersion && projectSourceBeforeAiTutorVersion && activeFile?.name
     );
-    return Boolean(activeOriginalFile?.contents);
   }, [isAiTutorVersion, projectSourceBeforeAiTutorVersion, activeFile?.name]);
 
   const editorConfigExtensions = useMemo(() => {
@@ -127,11 +119,21 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
         ? Object.values(originalFiles).find(f => f.name === activeFile.name)
         : undefined;
 
-      if (activeOriginalFile?.contents) {
+      // For new files that don't exist in the original version, we still want
+      // to show diff highlighting so will assign an empty string to the original contents.
+      const activeOriginalFileContents = activeOriginalFile?.contents ?? '';
+      extensions.push(
+        unifiedMergeView({
+          original: activeOriginalFileContents,
+          mergeControls: false,
+        })
+      );
+      // For new files (empty original), hide deletion markers so only green additions show.
+      if (activeOriginalFileContents.length === 0) {
         extensions.push(
-          unifiedMergeView({
-            original: activeOriginalFile.contents,
-            mergeControls: false,
+          EditorView.theme({
+            '.cm-deletedLine': {display: 'none'},
+            '.cm-deletedChunk': {display: 'none'},
           })
         );
       }
