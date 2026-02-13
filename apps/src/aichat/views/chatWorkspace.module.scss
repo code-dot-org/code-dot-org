@@ -70,8 +70,9 @@ $tabs-default-spacing: 4px;
   padding: 0.625rem;
 }
 
-.collapsedInstructionsDrawerInset {
-  height: 50px;
+.instructionsDrawerInset {
+  flex-shrink: 0;
+  height: 18px;
 }
 
 .floatingScrollToBottomButtonContainer {

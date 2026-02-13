@@ -9,6 +9,24 @@ import {ResponseValidator} from '../util/HttpClient';
 
 import {EXIT_TICKET_PROMPT, LESSON_HOOK_PROMPT} from './predefinedPrompts';
 
+export type LessonHook = {
+  comment: string;
+  introduction: string;
+  activity: string;
+  wrap_up: string;
+};
+
+export type ExitTicket = {
+  comment: string;
+  exit_ticket_items: ExitTicketItem[];
+};
+
+export type ExitTicketItem = {
+  type: string;
+  question: string;
+  answer: string;
+};
+
 export type ChatTextMessage = {
   role: Role;
   chatMessageText: string;
