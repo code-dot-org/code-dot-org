@@ -1,0 +1,15 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-02-12T17:54:29.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "display_name": "The Apology",
+    "bubble_choice_description": "Implement a polite, non-technical apology message.",
+    "thumbnail_url": "https://images.code.org/f523a1b7e7dab843ae75fd76383944a2-Screenshot 2026-02-12 at 1.11.20 PM.png"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-12 17:57:19 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-12 17:58:07 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-12 20:26:52 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>
