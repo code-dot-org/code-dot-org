@@ -29,6 +29,7 @@ import {
   unassignSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {
@@ -65,6 +66,7 @@ const CurriculumCatalogCard = ({
   isTeacher,
   recommendedSimilarCurriculum,
   recommendedStretchCurriculum,
+  aiChatToolsDependency,
   ...props
 }) => (
   <CustomizableCurriculumCatalogCard
@@ -114,6 +116,7 @@ const CurriculumCatalogCard = ({
     isTeacher={isTeacher}
     recommendedSimilarCurriculum={recommendedSimilarCurriculum}
     recommendedStretchCurriculum={recommendedStretchCurriculum}
+    aiChatToolsDependency={aiChatToolsDependency}
     {...props}
   />
 );
@@ -156,6 +159,8 @@ CurriculumCatalogCard.propTypes = {
   isSignedOut: PropTypes.bool.isRequired,
   recommendedSimilarCurriculum: PropTypes.object,
   recommendedStretchCurriculum: PropTypes.object,
+  aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
+    .isRequired,
 };
 
 const CustomizableCurriculumCatalogCard = ({
@@ -194,6 +199,7 @@ const CustomizableCurriculumCatalogCard = ({
   recommendedSimilarCurriculum,
   recommendedStretchCurriculum,
   wide,
+  aiChatToolsDependency,
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
@@ -237,6 +243,7 @@ const CustomizableCurriculumCatalogCard = ({
       return (
         <MultipleSectionsAssigner
           assignmentName={courseDisplayNameWithLatestYear}
+          aiChatToolsDependency={aiChatToolsDependency}
           onClose={() => setIsAssignDialogOpen(false)}
           sections={sectionsForDropdown}
           participantAudience="student"
@@ -423,6 +430,7 @@ const CustomizableCurriculumCatalogCard = ({
           gradeRange={gradeRange}
           subjectsAndTopics={subjectsAndTopics}
           deviceCompatibility={deviceCompatibility}
+          aiChatToolsDependency={aiChatToolsDependency}
           description={description}
           professionalLearningProgram={professionalLearningProgram}
           video={video}
@@ -453,6 +461,8 @@ CustomizableCurriculumCatalogCard.propTypes = {
   courseDisplayNameWithLatestYear: PropTypes.string.isRequired,
   duration: PropTypes.string.isRequired,
   gradeRange: PropTypes.string.isRequired,
+  aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
+    .isRequired,
   imageSrc: PropTypes.string.isRequired,
   isTranslated: PropTypes.bool,
   isEnglish: PropTypes.bool,
@@ -487,7 +497,6 @@ CustomizableCurriculumCatalogCard.propTypes = {
   availableResources: PropTypes.object,
   recommendedSimilarCurriculum: PropTypes.object,
   recommendedStretchCurriculum: PropTypes.object,
-
   wide: PropTypes.bool,
 };
 

@@ -1,4 +1,4 @@
-import {Heading5} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -24,9 +24,9 @@ const PersonalizationResultsColumnSuperpowers: React.FC<
           style.superpowersHeader
         )}
       >
-        <Heading5 noMargin className={style.superpowersHeaderText}>
+        <Typography className={style.superpowersHeaderText} variant="h5">
           {i18n.teachingStyleSuperpowers()}
-        </Heading5>
+        </Typography>
       </div>
       {superpowers.map((superpower, index) => (
         <PersonalizationInformationBox

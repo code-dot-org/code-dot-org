@@ -21,7 +21,7 @@ Feature: Using the assessments tab in the teacher dashboard
     And I press the first "#uitest-save-section-changes" element to load a new page
 
     # Progress tab
-    And I wait until element "#uitest-course-dropdown" is visible
+    And I wait until element "#unit-selector-v2" is visible
 
     # Assessments tab
     And I click selector "#ui-test-teacher-sidebar a:contains(Assessments)" once I see it

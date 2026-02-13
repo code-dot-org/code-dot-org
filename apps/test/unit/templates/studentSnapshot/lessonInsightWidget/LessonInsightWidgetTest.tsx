@@ -114,7 +114,8 @@ describe('LessonInsightWidget', () => {
     renderComponent();
 
     await waitFor(() => {
-      screen.getByText('Failed to fetch insight data');
+      screen.getByText('Error loading insight data');
+      screen.getByLabelText('Error');
     });
   });
 
@@ -131,7 +132,8 @@ describe('LessonInsightWidget', () => {
     renderComponent();
 
     await waitFor(() => {
-      screen.getByText('Failed to parse insight data');
+      screen.getByText('Error loading insight data');
+      screen.getByLabelText('Error');
     });
   });
 
