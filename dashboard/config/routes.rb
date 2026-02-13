@@ -472,7 +472,7 @@ Dashboard::Application.routes.draw do
         get 'get_rollup_resources'
       end
 
-      resources :lessons, only: [:show], param: 'position', format: false do
+      resources :lessons, only: [:show, :index], param: 'position', format: false do
         get 'student', to: 'lessons#student_lesson_plan'
         get 'extras', to: 'script_levels#lesson_extras', format: false
         get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
@@ -1377,7 +1377,7 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    resources :aidiff_artifacts, only: [:index]
+    resources :aidiff_artifacts, only: [:index, :create]
 
     resources :aidiff_exit_tickets, only: [:index, :update, :create, :show]
     resources :aidiff_lesson_hooks, only: [:index, :update, :create, :show]
