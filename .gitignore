@@ -93,7 +93,6 @@ dashboard/brakeman_security_report.htm
 /bin/i18n/crowdin/etags/**/*testing.json
 /bin/i18n/crowdin/etags/**/*test.json
 /bin/test/coverage
-/dashboard/config/newrelic.yml
 /dashboard/public/blockly
 /dashboard/public/code-studio
 /dashboard/public/shared
