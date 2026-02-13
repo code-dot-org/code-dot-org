@@ -24,6 +24,7 @@ const SET_AI_DIFFERENTIATION_ENABLED =
   'currentUser/SET_AI_DIFFERENTIATION_ENABLED';
 const SET_SHOW_AI_TA_LESSON_SUMMARY =
   'currentUser/SET_SHOW_AI_TA_LESSON_SUMMARY';
+const SET_SHOW_AI_TA_PODCASTS = 'currentUser/SET_SHOW_AI_TA_PODCASTS';
 const SET_HAS_COMPLETED_PERSONALIZATION_QUIZ =
   'currentUser/SET_HAS_COMPLETED_PERSONALIZATION_QUIZ';
 const SET_AUDIO_SUMMARY_TRANSCRIPT = 'currentUser/SET_AUDIO_SUMMARY_TRANSCRIPT';
@@ -115,6 +116,10 @@ export const setShowAITALessonSummary = showAITALessonSummary => ({
   type: SET_SHOW_AI_TA_LESSON_SUMMARY,
   showAITALessonSummary,
 });
+export const setShowAITAPodcasts = showAITAPodcasts => ({
+  type: SET_SHOW_AI_TA_PODCASTS,
+  showAITAPodcasts,
+});
 export const setHasCompletedPersonalizationQuiz =
   hasCompletedPersonalizationQuiz => ({
     type: SET_HAS_COMPLETED_PERSONALIZATION_QUIZ,
@@ -142,6 +147,7 @@ const initialState = {
   hasSeenStandardsReportInfo: false,
   aiDifferentiationEnabled: null,
   showAITALessonSummary: false,
+  showAITAPodcasts: false,
   hasCompletedPersonalizationQuiz: false,
   audioSummaryTranscript: [],
   isBackgroundMusicMuted: false,
@@ -268,6 +274,12 @@ export default function currentUser(state = initialState, action) {
     return {
       ...state,
       showAITALessonSummary: action.showAITALessonSummary,
+    };
+  }
+  if (action.type === SET_SHOW_AI_TA_PODCASTS) {
+    return {
+      ...state,
+      showAITAPodcasts: action.showAITAPodcasts,
     };
   }
   if (action.type === SET_HAS_COMPLETED_PERSONALIZATION_QUIZ) {

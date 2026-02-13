@@ -37,6 +37,7 @@ export interface CurrentUserState {
   aiDifferentiationEnabled: boolean;
   hasCompletedAiDifferentiationWelcome: boolean;
   showAITALessonSummary: boolean;
+  showAITAPodcasts: boolean;
   hasCompletedPersonalizationQuiz: boolean;
   audioSummaryTranscript: AudioSummaryTranscriptLine[];
   userSharingDisabled: boolean;
