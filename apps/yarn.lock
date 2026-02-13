@@ -4207,6 +4207,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@codemirror/merge@npm:^6.11.2":
+  version: 6.11.2
+  resolution: "@codemirror/merge@npm:6.11.2"
+  dependencies:
+    "@codemirror/language": "npm:^6.0.0"
+    "@codemirror/state": "npm:^6.0.0"
+    "@codemirror/view": "npm:^6.17.0"
+    "@lezer/highlight": "npm:^1.0.0"
+    style-mod: "npm:^4.1.0"
+  checksum: 10/17a3ddcf70bbac7fb29ec7c6866a64a12af9f131ced3ac4ac91c9cc2db5066ea957bfab00c795111323b56a80b0c784c718588803c8dd5f2c8d1d5aa83c3db34
+  languageName: node
+  linkType: hard
+
 "@codemirror/search@npm:^6.5.10":
   version: 6.5.10
   resolution: "@codemirror/search@npm:6.5.10"
@@ -11215,6 +11228,7 @@ __metadata:
     "@codemirror/lang-python": "npm:^6.1.7"
     "@codemirror/language": "npm:^6.11.0"
     "@codemirror/lint": "npm:^6.8.5"
+    "@codemirror/merge": "npm:^6.11.2"
     "@codemirror/search": "npm:^6.5.10"
     "@codemirror/state": "npm:^6.5.2"
     "@codemirror/view": "npm:^6.36.5"

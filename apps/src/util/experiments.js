@@ -68,7 +68,8 @@ experiments.USE_LANGFUSE_PROMPT = 'use-langfuse-prompt';
 experiments.AI_LESSON_PODCASTS = 'ai-lesson-podcasts';
 // Use channel-id based preview urls on localhost for Web Lab 2
 experiments.WEBLAB2_FULL_URLS = 'weblab2-full-urls';
-
+// Show unified diff view in Code Editor.
+experiments.ACCEPT_REJECT_UNIFIED_DIFF = 'accept-reject-unified-diff';
 /**
  * This was a gamified version of the finish dialog, built in 2018,
  * but never fully shipped.
