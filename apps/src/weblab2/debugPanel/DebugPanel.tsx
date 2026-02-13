@@ -9,10 +9,9 @@ import React, {useEffect, useMemo} from 'react';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import RequestFailureDivider from '@cdo/apps/weblab2/debugPanel/images/RequestFailure.svg';
-import ResponseFailureDivier from '@cdo/apps/weblab2/debugPanel/images/ResponseFailure.svg';
+import ResponseFailureDivider from '@cdo/apps/weblab2/debugPanel/images/ResponseFailure.svg';
 import SuccessDivider from '@cdo/apps/weblab2/debugPanel/images/Success.svg';
-
-import {NetworkEntry} from '../redux/networkRedux';
+import {NetworkEntry} from '@cdo/apps/weblab2/redux/networkRedux';
 
 import DetailsBox from './DetailsBox';
 import NetworkRequestChip from './NetworkRequestChip';
@@ -38,6 +37,8 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
   useEffect(() => {
     if (!selectedRequest && networkRequests.length > 0) {
       setSelectedRequest(networkRequests[networkRequests.length - 1]);
+    } else if (networkRequests.length === 0 && selectedRequest !== undefined) {
+      setSelectedRequest(undefined);
     }
   }, [networkRequests, selectedRequest]);
 
@@ -67,7 +68,7 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
       return {dividerIcon: SuccessDivider, dividerAltText: 'Success'};
     } else if (requestSuccess) {
       return {
-        dividerIcon: ResponseFailureDivier,
+        dividerIcon: ResponseFailureDivider,
         dividerAltText: 'Response Failure',
       };
     } else {
@@ -97,7 +98,7 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
         responseDataValue = 'No response data found';
       } else if (
         selectedRequest?.response?.contentType?.startsWith('text') ||
-        selectedRequest?.response?.contentType === 'application/json'
+        selectedRequest?.response?.contentType?.startsWith('application/json')
       ) {
         responseDataValue = selectedRequest.response.body;
       }

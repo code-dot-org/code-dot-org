@@ -39,7 +39,7 @@ const NetworkRequestChip: React.FunctionComponent<NetworkRequestChipProps> = ({
   return (
     <div className={moduleStyles.networkRequestChip}>
       <RadioButton
-        name={request.id}
+        name={'network-requests'}
         checked={isSelected}
         onChange={onChange}
         size={'xs'}
