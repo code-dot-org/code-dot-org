@@ -72,12 +72,7 @@ const optionButton = (
         className={style.optionIcon}
       />
       <div className={style.optionText}>
-        <Typography
-          className={style.optionTitle}
-          variant="body2"
-          component="span"
-          gutterBottom
-        >
+        <Typography className={style.optionTitle} variant="body2" gutterBottom>
           <Typography variant="strong">{title}</Typography>
         </Typography>
 
@@ -85,7 +80,6 @@ const optionButton = (
           <Typography
             className={style.optionDescription}
             variant="body3"
-            component="span"
             gutterBottom
           >
             {description}
