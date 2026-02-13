@@ -283,7 +283,9 @@ const ExpandedCurriculumCatalogCard = ({
                         iconFamily="kit"
                         className={style.aiBotIcon}
                       />
-                      <BodyTwoText>Requires AI chat tools</BodyTwoText>
+                      <Typography variant="body2" gutterBottom>
+                        Requires AI chat tools
+                      </Typography>
                     </div>
                   )}
               </div>
