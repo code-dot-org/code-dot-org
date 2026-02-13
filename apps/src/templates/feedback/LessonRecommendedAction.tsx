@@ -28,7 +28,7 @@ function LessonRecommendedAction({resource}: LessonRecommendedActionProps) {
   return (
     <div>
       <BodyTwoText className={styles.strongText}>
-        Recommended Action
+        Recommended action
       </BodyTwoText>
       <BodyThreeText>{resource.recommended_action}</BodyThreeText>
       {resource.resource_name && resource.resource_link && (
