@@ -1,4 +1,3 @@
-import * as BlocklyCore from 'blockly/core';
 import _ from 'lodash';
 
 import {
@@ -554,8 +553,12 @@ const STANDARD_INPUT_TYPES = {
     addInputRow(blockly, block, inputConfig) {
       const inputRow = block
         .appendValueInput(inputConfig.name)
-        .setAlign(BlocklyCore.inputs.Align.RIGHT);
-      inputRow.setCheck(inputConfig.type);
+        .setAlign(blockly.ALIGN_RIGHT);
+      if (inputConfig.strict) {
+        inputRow.setStrictCheck(inputConfig.type);
+      } else {
+        inputRow.setCheck(inputConfig.type);
+      }
       return inputRow;
     },
     generateCode(block, inputConfig) {
@@ -932,12 +935,10 @@ exports.createJsWrapperBlockCreator = function (
       init: function () {
         this.setStyle(style || BlockStyles.DEFAULT);
 
-        const check =
-          returnType === Blockly.BlockValueType.NONE ? null : returnType;
         if (returnType) {
           this.setOutput(
             true,
-            check,
+            returnType,
             strictOutput || strictTypes.includes(returnType)
           );
         } else if (eventLoopBlock) {

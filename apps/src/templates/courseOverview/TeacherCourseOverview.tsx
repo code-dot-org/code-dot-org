@@ -8,6 +8,7 @@ import {
   useSearchParams,
 } from 'react-router-dom';
 
+import {AiChatToolsDependencyValue} from '@cdo/apps/aichat/types';
 import {
   addAnnouncement,
   VisibilityType,
@@ -25,10 +26,7 @@ import {NotificationType} from '@cdo/apps/sharedComponents/Notification';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {
-  AiChatToolsDependency,
-  UserTypes,
-} from '@cdo/generated-scripts/sharedConstants';
+import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {
   CourseRoles,
@@ -81,7 +79,7 @@ interface CourseSummary {
   course_versions: {[id: string]: Version};
   announcements: Announcement[];
   has_verified_resources: boolean;
-  ai_chat_tools_dependency: (typeof AiChatToolsDependency)[keyof typeof AiChatToolsDependency];
+  ai_chat_tools_dependency: AiChatToolsDependencyValue;
 }
 
 interface Response {

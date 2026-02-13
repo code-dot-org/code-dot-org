@@ -24,11 +24,7 @@
 
 import {utils as mazeUtils} from '@code-dot-org/maze';
 
-import {
-  INFINITE_LOOP_TRAP,
-  loopHighlight,
-  registerCustomProcedureBlocks,
-} from '@cdo/apps/blockly/utils';
+import {registerCustomProcedureBlocks} from '@cdo/apps/blockly/utils';
 import commonMsg from '@cdo/locale';
 
 import blockUtils from '../block_utils';
@@ -365,7 +361,7 @@ exports.install = function (blockly, blockInstallOptions) {
     var argument =
       'Maze.' + this.getFieldValue('DIR') + "('block_id_" + this.id + "')";
     var branch = generator.statementToCode(this, 'DO');
-    branch = INFINITE_LOOP_TRAP + branch;
+    branch = Blockly.getInfiniteLoopTrap() + branch;
     return 'while (' + argument + ') {\n' + branch + '}\n';
   };
 
@@ -389,7 +385,7 @@ exports.install = function (blockly, blockInstallOptions) {
   generator.maze_untilBlocked = function () {
     var argument = 'Maze.isPathForward' + "('block_id_" + this.id + "')";
     var branch = generator.statementToCode(this, 'DO');
-    branch = INFINITE_LOOP_TRAP + branch;
+    branch = Blockly.getInfiniteLoopTrap() + branch;
     return 'while (' + argument + ') {\n' + branch + '}\n';
   };
 
@@ -410,7 +406,10 @@ exports.install = function (blockly, blockInstallOptions) {
   generator.maze_forever = function () {
     // Generate JavaScript for do forever loop.
     var branch = generator.statementToCode(this, 'DO');
-    branch = INFINITE_LOOP_TRAP + loopHighlight('Maze', this.id) + branch;
+    branch =
+      Blockly.getInfiniteLoopTrap() +
+      Blockly.loopHighlight('Maze', this.id) +
+      branch;
     return 'while (Maze.notFinished()) {\n' + branch + '}\n';
   };
 
@@ -433,7 +432,7 @@ exports.install = function (blockly, blockInstallOptions) {
     var argument =
       'Maze.' + this.getFieldValue('DIR') + "('block_id_" + this.id + "')";
     var branch = generator.statementToCode(this, 'DO');
-    branch = INFINITE_LOOP_TRAP + branch;
+    branch = Blockly.getInfiniteLoopTrap() + branch;
     return 'while (' + argument + ') {\n' + branch + '}\n';
   };
 

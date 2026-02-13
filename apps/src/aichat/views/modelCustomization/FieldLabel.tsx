@@ -19,7 +19,12 @@ const FieldLabel: React.FunctionComponent<FieldLabelProps> = ({
   return (
     <div className={styles.fieldLabelContainer}>
       <label htmlFor={id}>
-        <Typography className={styles.fieldLabel} variant="body3" gutterBottom>
+        <Typography
+          className={styles.fieldLabel}
+          variant="body3"
+          component="span"
+          gutterBottom
+        >
           <Typography variant="strong">{label}</Typography>
         </Typography>
       </label>

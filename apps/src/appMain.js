@@ -113,6 +113,7 @@ export default function (app, levels, options) {
         }
       }
     }
+    Blockly.setInfiniteLoopTrap();
   }
 
   function onReady() {

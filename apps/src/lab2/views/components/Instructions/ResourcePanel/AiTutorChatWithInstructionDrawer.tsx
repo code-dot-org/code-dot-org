@@ -4,10 +4,12 @@ import React, {useState, useCallback, useMemo, useEffect, useRef} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import ResizeBar, {
   RESIZE_BAR_SIZE_PX,
 } from '@cdo/apps/lab2/views/components/layout/ResizeBar';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
 import styles from './ai-tutor-chat-with-instructions-drawer.module.scss';
 
@@ -20,6 +22,7 @@ interface AiTutorChatWithInstructionDrawerProps {
   aiTutorSystemPromptName?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   instructionsContent?: React.ReactNode;
+  isCollapsedByDefault: boolean;
 }
 
 const MIN_CHAT_HEIGHT = 133; // Minimum so that user message editor is always visible + some chat.
@@ -43,9 +46,11 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   aiTutorSystemPromptName,
   aiTutorResponseSchemaSettings,
   instructionsContent,
+  isCollapsedByDefault,
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const instructionsContentRef = useRef<HTMLDivElement>(null);
+  const instructionsHeightAtDragStartRef = useRef<number | null>(null);
   const [chatHeight, setChatHeight] = useState<number | undefined>(undefined);
   const [instructionsHeight, setInstructionsHeight] = useState<
     number | undefined
@@ -53,7 +58,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   const [maxInstructionsHeight, setMaxInstructionsHeight] = useState<
     number | undefined
   >(undefined);
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(isCollapsedByDefault);
 
   const {
     position: rawInstructionsHeight,
@@ -66,7 +71,30 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
     min: MIN_INSTRUCTIONS_HEIGHT,
     max: maxInstructionsHeight,
     containerRef,
+    onResizeStart: () => {
+      instructionsHeightAtDragStartRef.current = rawInstructionsHeight;
+    },
   });
+
+  // Report increase/decrease when drag ends; use effect so we read the final
+  // position after state has updated (avoids stale closure in onResizeEnd).
+  useEffect(() => {
+    if (!isDragging && instructionsHeightAtDragStartRef.current !== null) {
+      const startHeight = instructionsHeightAtDragStartRef.current;
+      instructionsHeightAtDragStartRef.current = null;
+      const endHeight = rawInstructionsHeight;
+      const eventToReport =
+        endHeight > startHeight
+          ? EVENTS.RESOURCE_PANEL_INSTRUCTIONS_DRAWER_RESIZED_INCREASED
+          : EVENTS.RESOURCE_PANEL_INSTRUCTIONS_DRAWER_RESIZED_DECREASED;
+      if (endHeight !== startHeight) {
+        sendLab2AnalyticsEvent(eventToReport, {
+          startHeight: startHeight,
+          endHeight: endHeight,
+        });
+      }
+    }
+  }, [isDragging, rawInstructionsHeight]);
 
   const adjustChatHeight = useCallback(() => {
     const containerElement = containerRef.current;
@@ -107,6 +135,10 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
     };
   }, [throttledAdjustChatHeight]);
 
+  useEffect(() => {
+    setIsCollapsed(isCollapsedByDefault);
+  }, [isCollapsedByDefault]);
+
   // Measure the instructions content height once when loaded
   // and adjust the initial height if content is smaller.
   useEffect(() => {
@@ -125,8 +157,12 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   }, [instructionsContent, setRawInstructionsHeight]);
 
   const toggleInstructions = useCallback(() => {
+    const eventToReport = isCollapsed
+      ? EVENTS.RESOURCE_PANEL_INSTRUCTIONS_DRAWER_EXPANDED
+      : EVENTS.RESOURCE_PANEL_INSTRUCTIONS_DRAWER_COLLAPSED;
+    sendLab2AnalyticsEvent(eventToReport);
     setIsCollapsed(prev => !prev);
-  }, []);
+  }, [isCollapsed]);
 
   return (
     <div ref={containerRef} className={styles.container}>

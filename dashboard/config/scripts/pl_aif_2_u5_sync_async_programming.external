@@ -1,0 +1,81 @@
+name 'pl-aif-2-U5-sync-async-programming'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Why Apps Wait
+  
+
+####  Have you noticed a web app that feels like it “pauses” while it loads something—like a map, feed, or search results?
+
+#### That’s your program waiting on work happening somewhere else (usually a network request).
+
+<img src="https://images.code.org/1aca9c1c602c02f849d5182bc359154f-image-1770914096808.png" alt="icon of server, network, and clock symbolizing the time it takes for programs to run" width="300px" style="border-radius:10px; float:right; margin: 0 0 10px 10px;">
+
+## What Is the Program Waiting For?
+
+#### When your app loads data, it often has to ask something outside of itself for help:
+- #### A server
+- #### A database
+- #### An API
+- #### The network
+
+#### Those requests take time.
+
+#### The question is not **whether** there will be waiting.
+
+#### **The real question is:**
+
+> #### What should the program do *while* it waits?
+
+
+---
+
+## Synchronous vs. Asynchronous Programming
+
+<div style="width:90%; margin:30px auto; text-align:center;">
+
+<div style="display:inline-block; vertical-align:top;height:320px; width:300px; margin:20px 15px; background-color:#ffffff; color:#000000; padding:20px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.1); text-align:center;">
+    <img src="https://images.code.org/d856a99241a595bfcac8d22abcfdbc4f-image-1770911888063.png" 
+         alt="timeline showing async programming" style="width: 300px;height:150px;  margin-bottom: 10px;">
+    <p style="font-size: 14pt; font-weight: bold; margin: 0;">Synchronous Programming</p>
+    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">Code that <strong>waits for one task to fully finish</strong> before moving on to the next.
+      <br><br>
+      Each step blocks the next step..</p>
+</div>
+ 
+ <!-- ASYNC CARD -->
+
+  
+<div style="display:inline-block; vertical-align:top; height:320px; width:300px; margin:20px 15px; background-color:#ffffff; color:#000000; padding:20px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.1); text-align:center;">
+    <img src="https://images.code.org/55b6d1a0d9e431bce92e0f9eb621672b-image-1770912258147.png" 
+         alt="timeline showing async programming" style="width: 300px; height:150px; margin-bottom: 10px;">
+    <p style="font-size: 14pt; font-weight: bold; margin: 0;">Asynchronous Programming</p>
+    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">  Code that <strong>continues doing other work</strong> while waiting for a task 
+      (like loading data) to finish.
+      <br><br>
+      Waiting does not stop everything else.</p>
+</div>
+
+</div>
+
+
+
+## Why This Matters
+     
+- #### **User experience:** Async helps apps stay responsive instead of freezing while they wait.
+- #### **Correctness:** If you use data before it arrives, you get bugs (empty screens, undefined values, wrong results).
+- #### **Performance:** Async lets you overlap “waiting time” with useful work.
+
+ 
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+  <p style="font-size: 14pt; margin-top: 12px; line-height: 140%;">
+    📖 <strong>Systems awareness</strong> is understanding how different parts of a system—like networks, servers, databases, and devices—work together, so you can design software that is reliable, responsive, and efficient.
+  </p>
+</div>
+
+![]()
+
+
+MARKDOWN

@@ -281,6 +281,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             aiTutorSystemPromptName={aiTutorSystemPromptName}
             aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
             instructionsContent={instructionsContent}
+            isCollapsedByDefault={!!viewAsUserId}
           />
         );
       }

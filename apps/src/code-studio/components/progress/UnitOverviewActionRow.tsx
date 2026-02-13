@@ -2,6 +2,7 @@ import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import React from 'react';
 import {useSelector} from 'react-redux';
 
+import {AiChatToolsDependencyValue} from '@cdo/apps/aichat/types';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -11,7 +12,6 @@ import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import MultipleAssignButton from '@cdo/apps/templates/MultipleAssignButton';
 import AssignmentVersionSelector from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {setViewAsUserId} from '../../progressRedux';
@@ -49,7 +49,7 @@ interface UnitOverviewActionRowProps {
   scriptResourcesPdfUrl: string;
   publishedState: string;
   teacherResources: TeacherResource[];
-  aiChatToolsDependency: (typeof AiChatToolsDependency)[keyof typeof AiChatToolsDependency];
+  aiChatToolsDependency: AiChatToolsDependencyValue;
 }
 
 const compilePdfDropdownOptions = (
