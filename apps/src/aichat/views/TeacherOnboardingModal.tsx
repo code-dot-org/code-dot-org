@@ -44,28 +44,28 @@ const TeacherOnboardingModal: React.FunctionComponent<
           </Typography>
           <ul>
             <li>
-              <Typography component="div" variant="body2" gutterBottom>
+              <Typography variant="body2" gutterBottom>
                 <SafeMarkdown
                   markdown={aichatI18n.teacherOnboardingModal_instructionsBullet()}
                 />
               </Typography>
             </li>
             <li>
-              <Typography component="div" variant="body2" gutterBottom>
+              <Typography variant="body2" gutterBottom>
                 <SafeMarkdown
                   markdown={aichatI18n.teacherOnboardingModal_modelCustomizationBullet()}
                 />
               </Typography>
             </li>
             <li>
-              <Typography component="div" variant="body2" gutterBottom>
+              <Typography variant="body2" gutterBottom>
                 <SafeMarkdown
                   markdown={aichatI18n.teacherOnboardingModal_aiChatBullet()}
                 />
               </Typography>
             </li>
             <li>
-              <Typography component="div" variant="body2" gutterBottom>
+              <Typography variant="body2" gutterBottom>
                 <SafeMarkdown
                   markdown={aichatI18n.teacherOnboardingModal_userViewBullet()}
                 />

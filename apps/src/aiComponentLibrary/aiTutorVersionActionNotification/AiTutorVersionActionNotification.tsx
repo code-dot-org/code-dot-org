@@ -60,7 +60,7 @@ const AiTutorVersionActionNotification = forwardRef<
           )}
           {commitDescription && (
             <div className={moduleStyles.commitDescriptionContainer}>
-              <Typography component="div" variant="body4" gutterBottom>
+              <Typography variant="body4" gutterBottom>
                 <div>
                   <strong>What changed:</strong>
                 </div>

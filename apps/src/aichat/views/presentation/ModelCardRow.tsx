@@ -71,7 +71,6 @@ const ModelCardRow: React.FunctionComponent<ModelCardRowProps> = ({
           <Typography
             className={moduleStyles.expandedContent}
             variant="body3"
-            component="div"
             gutterBottom
           >
             <div>{expandedContentToDisplay}</div>
