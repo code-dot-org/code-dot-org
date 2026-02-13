@@ -71,6 +71,8 @@ export const isReadOnlyWorkspace = (state: RootState) => {
   );
 };
 
+// If the level should show an exemplar link, the exemplar link is the current url
+// with the query parameter exemplar=true at the end.
 export const getExampleSolutionLink = (state: RootState) => {
   if (state.lab.levelProperties?.showExemplarLink) {
     const url = new URL(window.location.href);
