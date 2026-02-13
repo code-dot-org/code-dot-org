@@ -1,6 +1,6 @@
 import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {EmText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {memo} from 'react';
 
@@ -93,7 +93,9 @@ const ProfanityFeedbackFooter: React.FC<Props> = ({
     >
       {profaneMessageVisible && (
         <>
-          <EmText className={moduleStyles.flaggedText}>{text}</EmText>
+          <Typography className={moduleStyles.flaggedText} variant="em">
+            {text}
+          </Typography>
           <ThumbButton type="up" selected={thumbsUpSelected} />
           <ThumbButton type="down" selected={thumbsDownSelected} />
         </>

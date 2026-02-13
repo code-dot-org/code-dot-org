@@ -3,7 +3,6 @@ import {
   ExcalidrawInitialDataState,
   DataURL,
 } from '@excalidraw/excalidraw/types/types';
-import cloneDeep from 'lodash/cloneDeep';
 
 import {ExcalidrawSourceWithExternalFiles} from '@cdo/apps/lab2/types';
 
@@ -14,14 +13,12 @@ export const populateInitialExcalidrawState = async (
   downloadedFileData: Record<ExcalidrawElement['id'], DataURL>,
   onError: (error: Error) => void
 ) => {
-  const excalidrawInitialState = cloneDeep(sourcesWithExternalFiles);
-
-  if (excalidrawInitialState.files) {
+  if (sourcesWithExternalFiles.files) {
     const imageDownloadPromises = Object.values(
-      excalidrawInitialState.files
+      sourcesWithExternalFiles.files
     ).map(async file => {
       if (!Object.keys(downloadedFileData).includes(file.id)) {
-        const fileUrl = excalidrawInitialState.externalFiles?.[file.id].url;
+        const fileUrl = sourcesWithExternalFiles.externalFiles?.[file.id].url;
         if (fileUrl) {
           // While we're still storing base64 encodings of strings in parallel with S3 uploads,
           // delete these so that we can confirm that the load from S3 is working.
@@ -52,6 +49,6 @@ export const populateInitialExcalidrawState = async (
 
   // Excalidraw does not need to access externalFiles, so we remove it
   // before passing this initial state to Excalidraw.
-  delete excalidrawInitialState.externalFiles;
-  return excalidrawInitialState as ExcalidrawInitialDataState;
+  delete sourcesWithExternalFiles.externalFiles;
+  return sourcesWithExternalFiles as ExcalidrawInitialDataState;
 };

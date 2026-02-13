@@ -189,6 +189,7 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = () => {
       participantAudience={unitSummaryResponse.unitData.participantAudience}
       showAiAssessmentsAnnouncement={showAiAssessmentsAnnouncement}
       isOnTeacherDashboard={true}
+      aiChatToolsDependency={selectedSection.assignedAiChatToolsDependency}
     />
   );
 };

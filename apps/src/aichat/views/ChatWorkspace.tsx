@@ -62,7 +62,7 @@ interface ChatWorkspaceProps {
   // Optional callback to log level activity
   logLevelActivity?: () => void;
 
-  hasCollapsedInstructionsDrawer?: boolean;
+  hasInstructionsDrawer?: boolean;
 }
 
 /**
@@ -80,7 +80,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   hideModelChangeMessage = false,
   responseCallback,
   logLevelActivity,
-  hasCollapsedInstructionsDrawer,
+  hasInstructionsDrawer,
 }) => {
   const {chatDisabled} = useAiChatDisabled();
   if (multimodalEnabled && (!levelName || !channelId)) {
@@ -325,7 +325,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           isTeacherView={isTeacherView}
           buildAssetUrl={buildAssetUrlValue}
           isAiTutorVersion={isAiTutorVersion}
-          hasCollapsedInstructionsDrawer={hasCollapsedInstructionsDrawer}
+          hasInstructionsDrawer={hasInstructionsDrawer}
         />
       )}
       <div className={moduleStyles.footer}>
