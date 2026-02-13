@@ -69,17 +69,16 @@
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  border: 1px solid var(--borders-neutral-disabled);
+  border: variables.$default-border;
   background: var(--background-neutral-primary);
   width: 150px;
   border-radius: variables.$default-border-radius;
 
   p {
     margin-bottom: 0;
-    color: var(--text-neutral-disabled);
   }
 }
 
 .placeholderIcon {
-  color: var(--text-neutral-disabled);
+  color: var(--text-neutral-tertiary);
 }

@@ -37,6 +37,7 @@
   align-self: stretch;
   overflow: hidden;
   overflow-y: auto;
+  container-type: inline-size;
 
   p {
     margin-bottom: 0;
@@ -47,6 +48,10 @@
   display: flex;
   gap: 8px;
   align-self: stretch;
+
+  @container (max-width: 400px) {
+    flex-direction: column;
+  }
 }
 
 .detailsField {
