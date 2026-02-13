@@ -71,6 +71,15 @@ export const isReadOnlyWorkspace = (state: RootState) => {
   );
 };
 
+export const getExampleSolutionLink = (state: RootState) => {
+  if (state.lab.levelProperties?.showExemplarLink) {
+    const url = new URL(window.location.href);
+    url.searchParams.set('exemplar', 'true');
+    return [url.toString()];
+  }
+  return [];
+};
+
 // Helper functions
 
 // Returns if the current state represents a predict level that should be read only.
