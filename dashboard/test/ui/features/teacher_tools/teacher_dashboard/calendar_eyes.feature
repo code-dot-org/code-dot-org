@@ -9,7 +9,6 @@ Feature: Calendar page - Eyes
 
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
-    Given I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
 
     When I click selector "#task-button-View-progress-New-Section" once I see it
 

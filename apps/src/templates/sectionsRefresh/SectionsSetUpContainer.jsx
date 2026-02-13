@@ -159,7 +159,7 @@ export default function SectionsSetUpContainer({
           flowVersion: NEW,
           isOnTeacherDashboard: location.pathname.includes('teacher_dashboard'),
         },
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
     }
     /*
@@ -193,7 +193,7 @@ export default function SectionsSetUpContainer({
           flowVersion: NEW,
           isOnTeacherDashboard: location.pathname.includes('teacher_dashboard'),
         },
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
     }
   };

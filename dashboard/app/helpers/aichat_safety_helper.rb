@@ -98,7 +98,7 @@ module AichatSafetyHelper
     end
 
     private def get_safety_system_prompt(level_id)
-      spanish_script_names = ['customizing-llms-latm-pilot']
+      spanish_script_names = ['customizing-llms-latm-pilot', 'customizing-llms-latm-2025']
 
       in_spanish_script = false
       if level_id

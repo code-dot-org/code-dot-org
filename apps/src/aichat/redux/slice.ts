@@ -6,7 +6,11 @@ import {
   THREAD_TYPES,
 } from '@cdo/apps/aiDifferentiation/constants';
 import {SUGGESTED_PROMPTS_FOR_SELECTION} from '@cdo/apps/aiDifferentiation/predefinedPrompts';
-import {ChatItem, ChatPrompt} from '@cdo/apps/aiDifferentiation/types';
+import {
+  ChatItem,
+  ChatPrompt,
+  ChatTextMessage,
+} from '@cdo/apps/aiDifferentiation/types';
 import {registerReducers} from '@cdo/apps/redux';
 
 import {
@@ -34,6 +38,7 @@ import {
   UserAddedSelectionContextItem,
   ChatMessage,
   isPendingOrCompletedChatMessage,
+  CompletedChatMessage,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -76,6 +81,7 @@ const initialState: AichatState = {
   chatWorkspaceSelectedTab: null,
   userAddedSelectionContext: {},
   artifactType: undefined,
+  pendingArtifactMessage: undefined,
 };
 
 const aichatSlice = createSlice({
@@ -159,6 +165,12 @@ const aichatSlice = createSlice({
     setArtifactType(state, action: PayloadAction<string | undefined>) {
       state.artifactType = action.payload;
     },
+    setPendingArtifactMessage(state, action: PayloadAction<ChatTextMessage>) {
+      state.pendingArtifactMessage = action.payload;
+    },
+    clearPendingArtifactMessage: state => {
+      state.pendingArtifactMessage = undefined;
+    },
     removeUpdateMessage: (state, action: PayloadAction<number>) => {
       const modelUpdateMessageInfo = getUpdateMessageLocation(
         action.payload,
@@ -198,6 +210,18 @@ const aichatSlice = createSlice({
       );
       if (!event) return;
       event.status = action.payload.status;
+    },
+    updateRequestId: (
+      state,
+      action: PayloadAction<{updateId: string; requestId: number}>
+    ) => {
+      const event = state.chatEventsCurrent.find(
+        (event): event is ChatMessage =>
+          isPendingOrCompletedChatMessage(event) &&
+          event.updateId === action.payload.updateId
+      );
+      if (!event) return;
+      (event as CompletedChatMessage).requestId = action.payload.requestId;
     },
     setChatMessageSent: (state, action: PayloadAction<boolean>) => {
       state.hasSentMessage = action.payload;
@@ -447,6 +471,7 @@ export const {
   addEventToChatEventsCurrent,
   startSave,
   updateChatMessageStatus,
+  updateRequestId,
   setChatMessageSent,
   setSavedAiCustomizations,
   updateChatMessageFeedback,
@@ -473,6 +498,8 @@ export const {
   addThreadMessage,
   setThreadKeyId,
   setArtifactType,
+  setPendingArtifactMessage,
+  clearPendingArtifactMessage,
   setViewMode,
   addStagedFile,
   stagedFileUploadFinished,

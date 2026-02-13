@@ -3,6 +3,7 @@ import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
 
+import RequiresAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/RequiresAiChatToolsAlert';
 import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
 import {isScriptHiddenForSection} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
@@ -22,6 +23,8 @@ import {
   onDismissRedirectDialog,
   dismissedRedirectDialog,
 } from '@cdo/apps/util/dismissVersionRedirect';
+import experiments from '@cdo/apps/util/experiments';
+import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import UnitCalendarGrid from './UnitCalendarGrid';
@@ -65,6 +68,10 @@ class UnitOverview extends React.Component {
     publishedState: PropTypes.oneOf(Object.values(PublishedState)),
     participantAudience: PropTypes.string,
     showAiAssessmentsAnnouncement: PropTypes.bool,
+    isOnTeacherDashboard: PropTypes.bool,
+    aiChatToolsDependency: PropTypes.oneOf(
+      Object.values(AiChatToolsDependency)
+    ),
 
     // redux provided
     scriptId: PropTypes.number.isRequired,
@@ -89,7 +96,7 @@ class UnitOverview extends React.Component {
         {
           'unit name': props.scriptName,
         },
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
     } else if (props.userType === 'student') {
       analyticsReporter.sendEvent(
@@ -97,7 +104,7 @@ class UnitOverview extends React.Component {
         {
           'unit name': props.scriptName,
         },
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
     } else {
       analyticsReporter.sendEvent(
@@ -105,7 +112,7 @@ class UnitOverview extends React.Component {
         {
           'unit name': props.scriptName,
         },
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
     }
   }
@@ -156,6 +163,8 @@ class UnitOverview extends React.Component {
       publishedState,
       participantAudience,
       showAiAssessmentsAnnouncement,
+      isOnTeacherDashboard = false,
+      aiChatToolsDependency,
     } = this.props;
 
     const displayRedirectDialog =
@@ -197,6 +206,7 @@ class UnitOverview extends React.Component {
             courseName={courseName}
             courseId={courseId}
             userId={userId}
+            isOnTeacherDashboard={isOnTeacherDashboard}
           >
             <UnitOverviewActionRow
               courseVersionId={courseVersionId}
@@ -213,6 +223,11 @@ class UnitOverview extends React.Component {
               teacherResources={teacherResources}
               isMigrated={isMigrated}
             />
+            {experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
+              viewAs === ViewType.Instructor &&
+              aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
+                <RequiresAiChatToolsAlert />
+              )}
           </UnitOverviewHeader>
           {/* unit-calendar-for-printing has style `display: none` from `style/curriculum/scripts.scss` which is added from the BE */}
           {showCalendar && viewAs === ViewType.Instructor && (

@@ -13,8 +13,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-01-20 05:15:33 UTC",
-    "hide_within_course": true,
+    "serialized_at": "2026-01-21 16:55:54 UTC",
+    "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -145,6 +145,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-Intro-1_2025"
+        ],
         "progression": "Intro to Data-Driven Systems"
       },
       "bonus": false,
@@ -167,6 +170,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl=aif-2-U3-curriculum-overview-2_2025"
+        ],
         "progression": "Intro to Data-Driven Systems"
       },
       "bonus": false,
@@ -189,6 +195,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_sandbox_aif-2-U3-class-context_2-2_2025"
+        ],
         "progression": "Intro to Data-Driven Systems"
       },
       "bonus": false,
@@ -211,6 +220,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-instructional-commitments-3_2025"
+        ],
         "progression": "Intro to Data-Driven Systems"
       },
       "bonus": false,
@@ -233,6 +245,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-project-overview-4_2025"
+        ],
         "progression": "Intro to Data-Driven Systems"
       },
       "bonus": false,
@@ -255,6 +270,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-data-structure-array-1_2025"
+        ],
         "progression": "Data Structures"
       },
       "bonus": false,
@@ -277,6 +295,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-array-syntax-panel-2_2025"
+        ],
         "progression": "Data Structures"
       },
       "bonus": false,
@@ -299,6 +320,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-data-structures-array-practice-3_2025"
+        ],
         "progression": "Data Structures"
       },
       "bonus": false,
@@ -321,6 +345,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-data-structures-array-debug-4_2025"
+        ],
         "progression": "Data Structures"
       },
       "bonus": false,
@@ -343,6 +370,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-schema-fields-5_2025"
+        ],
         "progression": "Data Structures"
       },
       "bonus": false,
@@ -365,6 +395,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-parallel-arrays-5-2_2025"
+        ],
         "progression": "Data Structures"
       },
       "bonus": false,
@@ -387,6 +420,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-schema-practice-6_2025"
+        ],
         "progression": "Data Structures"
       },
       "bonus": false,
@@ -409,6 +445,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-weblab-schema-7_2025"
+        ],
         "progression": "Data Structures"
       },
       "bonus": false,
@@ -431,6 +470,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-privacy-discussion-8_2025"
+        ],
         "progression": "Data Structures"
       },
       "bonus": false,
@@ -453,6 +495,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-array-methods-1_2025"
+        ],
         "progression": "Array Methods"
       },
       "bonus": false,
@@ -475,6 +520,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-weblab-array-methods-2_2025"
+        ],
         "progression": "Array Methods"
       },
       "bonus": false,
@@ -497,6 +545,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-reflectionmd-3_2025"
+        ],
         "progression": "Array Methods"
       },
       "bonus": false,
@@ -519,6 +570,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-array-method-choice-level_2025"
+        ],
         "progression": "Array Methods"
       },
       "bonus": false,
@@ -541,6 +595,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-array-method-CFU_2025"
+        ],
         "progression": "Array Methods"
       },
       "bonus": false,
@@ -563,6 +620,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-CFU-check-6_2025"
+        ],
         "progression": "Objects"
       },
       "bonus": false,
@@ -585,6 +645,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-first-object-weblab-2_2025"
+        ],
         "progression": "Objects"
       },
       "bonus": false,
@@ -607,6 +670,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-object-syntax-3_2025"
+        ],
         "progression": "Objects"
       },
       "bonus": false,
@@ -629,6 +695,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-array-to-object-weblab-4_2025"
+        ],
         "progression": "Objects"
       },
       "bonus": false,
@@ -651,6 +720,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-lists-of-objects-5_2025"
+        ],
         "progression": "Objects"
       },
       "bonus": false,
@@ -673,6 +745,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-list-of-objects-weblab-6_2025"
+        ],
         "progression": "Objects"
       },
       "bonus": false,
@@ -695,6 +770,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-datasets-with-arrays-7_2025"
+        ],
         "progression": "Objects"
       },
       "bonus": false,
@@ -717,6 +795,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-debugging-data-weblab-26_2025"
+        ],
         "progression": "Objects"
       },
       "bonus": false,
@@ -739,6 +820,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-render-DOM-9_2025"
+        ],
         "progression": "Objects"
       },
       "bonus": false,
@@ -761,6 +845,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-2-U3-map-with-objects-weblab-10_2025"
+        ],
         "progression": "Objects"
       },
       "bonus": false,
@@ -783,6 +870,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-CHAT-12_2025"
+        ],
         "progression": "Objects"
       },
       "bonus": false,
@@ -805,6 +895,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-CFU-map-13_2025"
+        ],
         "progression": "Objects"
       },
       "bonus": false,
@@ -827,6 +920,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-filter-function-1_2025"
+        ],
         "progression": "Filter, Search, and Sort"
       },
       "bonus": false,
@@ -849,6 +945,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-filter-function-1-2_2025"
+        ],
         "progression": "Filter, Search, and Sort"
       },
       "bonus": false,
@@ -871,6 +970,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-filter-weblab-5_2025"
+        ],
         "progression": "Filter, Search, and Sort"
       },
       "bonus": false,
@@ -893,6 +995,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-serching-function-2_2025"
+        ],
         "progression": "Filter, Search, and Sort"
       },
       "bonus": false,
@@ -915,6 +1020,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-search-function-2-2_2025"
+        ],
         "progression": "Filter, Search, and Sort"
       },
       "bonus": false,
@@ -937,6 +1045,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-sorting-function-2_2025"
+        ],
         "progression": "Filter, Search, and Sort"
       },
       "bonus": false,
@@ -959,6 +1070,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-sorting-function-2-2_2025"
+        ],
         "progression": "Filter, Search, and Sort"
       },
       "bonus": false,
@@ -981,6 +1095,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-pipeline-4_2025"
+        ],
         "progression": "Filter, Search, and Sort"
       },
       "bonus": false,
@@ -1003,6 +1120,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif2-U3-pipeline-weblab_2025"
+        ],
         "progression": "Filter, Search, and Sort"
       },
       "bonus": false,
@@ -1025,6 +1145,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-pipeline-CFU_2025"
+        ],
         "progression": "Filter, Search, and Sort"
       },
       "bonus": false,
@@ -1047,6 +1170,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-wrap-project-1_2025"
+        ],
         "progression": "Final Thoughts"
       },
       "bonus": false,
@@ -1069,6 +1195,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-lesson-resources-2_2025"
+        ],
         "progression": "Final Thoughts"
       },
       "bonus": false,
@@ -1091,6 +1220,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-reflect-wrap-3_2025"
+        ],
         "progression": "Final Thoughts"
       },
       "bonus": false,
@@ -1113,6 +1245,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-final-level_2025"
+        ],
         "progression": "Final Thoughts"
       },
       "bonus": false,

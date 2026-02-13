@@ -170,6 +170,9 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    # Custom route to get lesson feedback for current student
+    get 'lesson_feedbacks/by_student', to: 'lesson_feedbacks#show_by_student'
+
     # Data docs are off of curriculum builder as of fall 2022.
     get 'docs/concepts/data-library', to: 'data_docs#index'
     get 'docs/concepts/data-library/:key', param: :key, constraints: {data_doc_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, to: 'data_docs#show'
@@ -213,6 +216,7 @@ Dashboard::Application.routes.draw do
           post 'code_review_groups', to: 'sections#set_code_review_groups'
           post 'code_review_enabled', to: 'sections#set_code_review_enabled'
           post 'ai_tutor_enabled', to: 'sections#set_ai_tutor_enabled'
+          post 'ai_chat_access_level', to: 'sections#set_ai_chat_access_level'
         end
         collection do
           get 'membership'
@@ -468,7 +472,7 @@ Dashboard::Application.routes.draw do
         get 'get_rollup_resources'
       end
 
-      resources :lessons, only: [:show], param: 'position', format: false do
+      resources :lessons, only: [:show, :index], param: 'position', format: false do
         get 'student', to: 'lessons#student_lesson_plan'
         get 'extras', to: 'script_levels#lesson_extras', format: false
         get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
@@ -559,6 +563,7 @@ Dashboard::Application.routes.draw do
     resources :lessons, only: [:edit, :update] do
       member do
         get :show, to: 'lessons#show_by_id'
+        get :level_properties, to: 'lessons#level_properties_by_id', format: false
         post :clone
       end
     end
@@ -1184,12 +1189,18 @@ Dashboard::Application.routes.draw do
     # Routes used for the Student Snapshot page on the teacher dashboard
     resources :student_snapshots, only: [] do
       collection do
-        get '/lessons/:unit_id', controller: :student_snapshots, action: :lessons # GET /student_snapshots/lessons/{unit_id}
-        get '/cfu_levels/:lesson_id', controller: :student_snapshots, action: :cfu_levels # GET /student_snapshots/cfu_levels/{lesson_id}
-        get '/cfu_responses/:lesson_id', controller: :student_snapshots, action: :cfu_responses # GET /student_snapshots/cfu_responses/{lesson_id}?student_id=123
+        get 'lessons/:unit_id', controller: :student_snapshots, action: :lessons # GET /student_snapshots/lessons/{unit_id}
+        get 'cfu_levels/:lesson_id', controller: :student_snapshots, action: :cfu_levels # GET /student_snapshots/cfu_levels/{lesson_id}
+        get 'cfu_responses/:lesson_id', controller: :student_snapshots, action: :cfu_responses # GET /student_snapshots/cfu_responses/{lesson_id}?student_id=123
+        get 'exemplar_code/:lesson_id', action: :exemplar_code # GET /student_snapshots/exemplar_code/{lesson_id}
         get 'units/:unit_id/lessons/:lesson_id/students/:student_id/code', action: :student_code # GET /student_snapshots/units/:unit_id/lessons/:lesson_id/students/:student_id/code
+        get 'ai_generated_lesson_feedback', controller: :student_snapshots, action: :ai_generated_lesson_feedback # GET /student_snapshots/ai_generated_lesson_feedback
+        get 'lesson_insight', controller: :student_snapshots, action: :lesson_insight # GET /student_snapshots/lesson_insight
       end
     end
+
+    get '/lesson_feedbacks/saved_feedback', to: 'lesson_feedbacks#saved_feedback'
+    resources :lesson_feedbacks, only: [:create, :update]
 
     resources :ai_lesson_summary_podcasts do
       collection do
@@ -1366,10 +1377,10 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    resources :aidiff_artifacts, only: [:index]
+    resources :aidiff_artifacts, only: [:index, :create]
 
-    resources :aidiff_exit_tickets, only: [:index, :update, :create]
-    resources :aidiff_lesson_hooks, only: [:index, :update, :create]
+    resources :aidiff_exit_tickets, only: [:index, :update, :create, :show]
+    resources :aidiff_lesson_hooks, only: [:index, :update, :create, :show]
 
     resources :aidiff_messages, only: [] do
       member do

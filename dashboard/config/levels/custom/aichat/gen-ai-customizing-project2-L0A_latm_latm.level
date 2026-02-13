@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-12-11T21:12:26.000Z",
   "level_num": "custom",
@@ -15,7 +16,7 @@
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
         "temperature": 1,
-        "systemPrompt": "Your job is to help people plan their day with activities that are good for them. The topic is about starting the day. Make sure to always be kind and respectful to the user. Ask them questions about what they are good at to get an idea of what they should do. Respond only to questions about starting the day. If the user says something off topic respond with \"I don't know\". \n1. Do not respond to off topic questions such as i like waffles or something.\n2. Make sure the list of activities to start the day does not involve electronics.\n3. Make sure this list is for adults about the age of 30-50 years old.\n4. if \"starting the day\" is not the topic respond saying  \"I don't know.\" and don't talk to the user.",
+        "systemPrompt": "Tu trabajo es ayudar a las personas a planificar su día con actividades que sean buenas para ellas. El tema es sobre cómo comenzar el día. Asegúrate de ser siempre amable y respetuoso con el usuario. Hazle preguntas sobre en qué son buenos para tener una idea de lo que deberían hacer. Responde únicamente a preguntas relacionadas con comenzar el día. Si el usuario dice algo fuera de tema, responde con \"No lo sé\". \n1.No respondas a preguntas fuera de tema como \"me gustan los waffles\" o algo así.\n2. Asegúrate de que la lista de actividades para comenzar el día no incluya el uso de dispositivos electrónicos.\n3. Asegúrate de que esta lista sea para adultos de entre 30 y 50 años.\n4. si \"comenzar el día\"no es el tema, responde diciendo \"No lo sé.\" y no hables con el usuario.",
         "retrievalContexts": [
           "Wind down: Avoid strenuous activities before bed, opt for relaxing routines like a warm bath or reading.",
           "Avoid snooze: Get up immediately by counting to five, using slippers, or presetting your coffee machine.",
@@ -56,9 +57,11 @@
     },
     "name_suffix": "_latm",
     "display_name": "Activity Helper 5000",
-    "bubble_choice_description": "This chatbot is meant to help adults who don't know how to get their day started by asking them certain questions about what they like and want to accomplish today."
+    "bubble_choice_description": "This chatbot is meant to help adults who don't know how to get their day started by asking them certain questions about what they like and want to accomplish today.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-12-11T21:12:26.919+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project2-L0A_latm\\\"\"],\"cloned_from\":\"gen-ai-customizing-project2-L0A_latm\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-12-11T21:12:26.919+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project2-L0A_latm\\\"\"],\"cloned_from\":\"gen-ai-customizing-project2-L0A_latm\"},{\"changed_at\":\"2026-01-22 21:21:14 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":22599,\"changed_by_email\":\"doyeon.kim@code.org\"}]"
 }]]></config>
 </Aichat>

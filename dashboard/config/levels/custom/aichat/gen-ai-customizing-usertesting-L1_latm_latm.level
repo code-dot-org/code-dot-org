@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-12-11T21:11:21.000Z",
   "level_num": "custom",
@@ -15,7 +16,7 @@
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
         "temperature": "0.8",
-        "systemPrompt": "You are a chatbot that encourages responsible recycling habits. The user will can ask questions about recycling uses and you provide friendly informative answers. The user may also describe different activities they participate in, and you can describe ways recycling can be incorporated. After each response, ask a question that prompts the user to reflect on their own recycling habits and how they can be improved. Respond with a friendly and upbeat tone. ",
+        "systemPrompt": "Eres un chatbot que fomenta hábitos responsables de reciclaje. El usuario puede hacer preguntas sobre prácticas de reciclaje y tú brindarás respuestas amigables e informativas. El usuario también puede describir diferentes actividades en las que participa, y tú puedes explicar maneras de incorporar el reciclaje en ellas. Después de cada respuesta, haz una pregunta que invite al usuario a reflexionar sobre sus propios hábitos de reciclaje y cómo pueden mejorarse. Responde siempre con un tono amigable y optimista.",
         "retrievalContexts": [
 
         ],
@@ -46,9 +47,11 @@
       ],
       "levelSystemPrompt": "Por favor responde a mis preguntas en espanol."
     },
-    "name_suffix": "_latm"
+    "name_suffix": "_latm",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-12-11T21:11:21.367+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-usertesting-L1_latm\\\"\"],\"cloned_from\":\"gen-ai-customizing-usertesting-L1_latm\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-12-11T21:11:21.367+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-usertesting-L1_latm\\\"\"],\"cloned_from\":\"gen-ai-customizing-usertesting-L1_latm\"},{\"changed_at\":\"2026-01-22 21:19:31 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
 }]]></config>
 </Aichat>

@@ -348,6 +348,12 @@ class CourseOffering < ApplicationRecord
     facilitated_workshops.sort_by {|ws| ws.sessions.first.start}
   end
 
+  def ai_chat_tools_dependency
+    # Returns the AI chat tools dependency for this course offering, which is determined by latest course version.
+    unit_group = course_versions.first&.content_root
+    unit_group.ai_chat_tools_dependency
+  end
+
   def summarize_for_edit
     {
       key: key,
@@ -397,7 +403,8 @@ class CourseOffering < ApplicationRecord
       self_paced_pl_course_offering_path: self_paced_pl_course_offering&.path_to_latest_published_version(locale_code),
       self_paced_pl_course_offering_id: self_paced_pl_course_offering_id,
       available_resources: get_available_resources(locale_code),
-      facilitated_workshops: Array(upcoming_facilitated_workshops(user)).map(&:summarize_for_pl_catalog)
+      facilitated_workshops: Array(upcoming_facilitated_workshops(user)).map(&:summarize_for_pl_catalog),
+      ai_chat_tools_dependency: ai_chat_tools_dependency,
     }
   end
 
@@ -454,6 +461,8 @@ class CourseOffering < ApplicationRecord
     Dir.glob(root_dir.join(glob)).each do |path|
       removed_records -= [CourseOffering.seed_record(path)]
     end
+    # Don't destroy ui-test-* course offerings; they are seeded separately
+    removed_records = removed_records.reject {|key| key.start_with?('ui-test-')}
     where(key: removed_records).destroy_all
   end
 

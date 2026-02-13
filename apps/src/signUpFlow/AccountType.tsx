@@ -36,7 +36,7 @@ const AccountType: React.FunctionComponent<{
       analyticsReporter.sendEvent(
         EVENTS.SIGN_UP_STARTED_EVENT,
         {},
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
 
       // If sent here from trying to log in with OAuth without an account, log the OAuth type and have this page
@@ -58,7 +58,7 @@ const AccountType: React.FunctionComponent<{
           {
             'user login type': oauthType,
           },
-          PLATFORMS.BOTH
+          PLATFORMS.STATSIG
         );
       }
     }
@@ -70,7 +70,7 @@ const AccountType: React.FunctionComponent<{
       {
         'account type': accountType,
       },
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
     sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, accountType);
 
@@ -95,7 +95,7 @@ const AccountType: React.FunctionComponent<{
     analyticsReporter.sendEvent(
       EVENTS.CURRICULUM_FREE_DIALOG_BUTTON_CLICKED,
       {},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   };
 

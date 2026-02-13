@@ -280,6 +280,15 @@
       "import": "./dist/modal/index.mjs",
       "require": "./dist/modal/index.js"
     },
+    "./notification-banner": {
+      "types": {
+        "import": "./dist/notification-banner/index.d.ts",
+        "require": "./dist/notification-banner/index.d.ts"
+      },
+      "import": "./dist/notification-banner/index.mjs",
+      "require": "./dist/notification-banner/index.js"
+    },
+    "./notification-banner/index.css": "./dist/notification-banner/index.css",
     "./popover": {
       "types": {
         "import": "./dist/popover/index.d.ts",
@@ -406,7 +415,6 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "dependencies": {
-    "@mui/material": "^7.3.2",
     "lodash": "^4.17.21",
     "react-player": "^3.4.0",
     "react-schemaorg": "^2.0.0"
@@ -416,6 +424,7 @@
     "@code-dot-org/component-library-styles": "workspace:*",
     "@code-dot-org/fonts": "workspace:*",
     "@code-dot-org/lint-config": "workspace:*",
+    "@mui/material": "^7.3.2",
     "@release-it/conventional-changelog": "^10.0.0",
     "@swc/core": "^1.9.3",
     "@swc/jest": "^0.2.37",
@@ -432,7 +441,7 @@
     "clean-package": "^2.2.0",
     "esbuild-sass-plugin": "^3.3.1",
     "eslint-plugin-jest": "^28.9.0",
-    "eslint-plugin-storybook": "^9.0.18",
+    "eslint-plugin-storybook": "^10.1.7",
     "glob": "^11.1.0",
     "globals": "^15.12.0",
     "identity-obj-proxy": "^3.0.0",

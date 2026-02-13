@@ -797,13 +797,13 @@ class LevelsController < ApplicationController
       {
         study: 'level-save-error',
         # Make it easy to count most frequent field name in which errors occur.
-        event: level.errors.keys.first,
+        event: level.errors.attribute_names.first,
         # Level ids are different on levelbuilder, so use the level name. The
         # level name can be joined on, against the levels table, to determine the
         # level type or other level properties.
         data_string: level.name,
         data_json: {
-          errors: level.errors.to_h,
+          errors: level.errors.to_hash,
           # User ids are different on levelbuilder, so use the email.
           user_email: current_user.email,
         }.to_json

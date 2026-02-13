@@ -1,7 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import ProjectCardRow from '@cdo/apps/templates/projects/ProjectCardRow';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import catchMegatronImg from '@cdo/static/transformers/catch_megatron.png';
 import clickTheCogImg from '@cdo/static/transformers/click_the_cog.png';
 import elitaImg from '@cdo/static/transformers/elita.png';
@@ -39,7 +39,7 @@ const TRANSFORMERSONE_PROJECTS = [
 
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.getElementById('transformersone_student_projects');
-  ReactDOM.render(
+  createReactRoot(
     <ProjectCardRow
       galleryType="public"
       showFullThumbnail={true}

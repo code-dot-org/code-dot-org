@@ -289,6 +289,10 @@ class Ability
       if Experiment.enabled?(user: user, experiment_name: 'ai-differentiation') && user.teacher?
         can :submit_feedback, AidiffMessage
         can :create, AidiffThread
+        can :manage, AidiffThread, user_id: user.id
+        can :manage, AidiffMessage do |message|
+          can?(:manage, message.aidiff_thread)
+        end
         can [:index, :show, :chat_completion, :curriculum_courses], AidiffThread, user_id: user.id
         if Experiment.enabled?(user: user, experiment_name: 'ai-artifact')
           can :create, AidiffArtifact
@@ -350,7 +354,7 @@ class Ability
       end
     end
 
-    can [:read, :show_by_id, :student_lesson_plan, :level_properties], Lesson do |lesson, context_unit_group|
+    can [:read, :show_by_id, :student_lesson_plan, :level_properties, :level_properties_by_id], Lesson do |lesson, context_unit_group|
       script = lesson.script
       unit_group = context_unit_group || script.original_unit_group
       can?(:read, script, unit_group)

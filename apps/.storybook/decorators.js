@@ -1,3 +1,5 @@
+import {CdoTheme} from '@code-dot-org/component-library/themes';
+import {ThemeProvider as MuiThemeProvider} from '@mui/material';
 import {merge} from 'lodash';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers, applyMiddleware} from 'redux';
@@ -20,6 +22,13 @@ export const reduxStoreDecorator = function (Story, context) {
   return Provider({
     children: Story(),
     store: reduxStore(this.reducers, state),
+  });
+};
+
+export const MuiDecorator = Story => {
+  return MuiThemeProvider({
+    theme: CdoTheme,
+    children: Story(),
   });
 };
 

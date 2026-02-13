@@ -27,6 +27,7 @@
 #  ai_tutor_enabled     :boolean          default(FALSE)
 #  avatar_color         :integer
 #  avatar_emoji         :integer
+#  ai_chat_access_level :string(255)      default("disabled")
 #
 # Indexes
 #
@@ -114,6 +115,8 @@ class Section < ApplicationRecord
   validate :participant_type_not_changed
 
   scope :visible, -> {where(hidden: false)}
+
+  validates :ai_chat_access_level, inclusion: {in: SharedConstants::AI_CHAT_ACCESS_LEVELS.values}
 
   # PL courses which are run with adults should be set up with teacher accounts so they must use
   # email logins
@@ -480,6 +483,8 @@ class Section < ApplicationRecord
         primaryInstructor: primary_instructor,
         avatar_color: avatar_color,
         avatar_emoji: avatar_emoji,
+        assigned_ai_chat_tools_dependency: assigned_ai_chat_tools_dependency,
+        ai_chat_access_level: ai_chat_access_level,
       }
     end
   end
@@ -566,6 +571,8 @@ class Section < ApplicationRecord
           at_risk_age_gated_us_state: at_risk_student&.us_state,
           avatar_color: avatar_color,
           avatar_emoji: avatar_emoji,
+          assigned_ai_chat_tools_dependency: assigned_ai_chat_tools_dependency,
+          ai_chat_access_level: ai_chat_access_level,
         }
       )
     end
@@ -693,6 +700,12 @@ class Section < ApplicationRecord
     units = Unit.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)})
     unit_groups = units.map(&:unit_groups).flatten.uniq
     unit_groups.any? {|unit_group| unit_group.course_assignable?(user)}
+  end
+
+  def assigned_ai_chat_tools_dependency
+    return SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:ESSENTIAL] if script&.requires_ai_chat_tools? || unit_group&.requires_ai_chat_tools?
+    return SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:AVAILABLE] if script&.has_ai_chat_tools? || unit_group&.has_ai_chat_tools?
+    SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE]
   end
 
   # A section can be assigned a course (aka unit_group) without being assigned a script,

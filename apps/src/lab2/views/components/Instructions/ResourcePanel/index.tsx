@@ -21,6 +21,7 @@ import {ProjectSources} from '@cdo/apps/lab2/types';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
+import IntroJSTourWrapper from '@cdo/apps/lab2/views/components/IntroJSTourWrapper';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
 import {useExtraLinksButtonContext} from '@cdo/apps/lab2/views/LabViewsRenderer';
@@ -36,6 +37,8 @@ import ForTeachersOnly from '../ForTeachersOnly';
 import Instructions, {InstructionsProps} from '../InstructionsV2';
 import NavigationArea from '../NavigationArea';
 
+import AiTutorChatWithInstructionDrawer from './AiTutorChatWithInstructionDrawer';
+import BackpackHeaderButtons from './Backpack/BackpackHeaderButtons';
 import BackpackPanel from './Backpack/BackpackPanel';
 import {
   resourcePanelInstructionsElementId,
@@ -136,6 +139,12 @@ type ResourcePanelProps = InstructionsProps & {
   /** Only display the sidebar and hide all tabs. */
   sidebarOnly?: boolean;
   backpackProps?: BackpackProps;
+  onImageFlagged?: (
+    file: File,
+    fileType: string,
+    uploadFunction: () => Promise<void>
+  ) => void;
+  hasInstructionsDrawer?: boolean;
 };
 
 /**
@@ -161,6 +170,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   documentationUrl,
   sidebarOnly = false,
   backpackProps,
+  onImageFlagged,
+  hasInstructionsDrawer,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -202,6 +213,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     () => setCurrentTab(Tabs.Backpack),
     []
   );
+  const [backpackRefreshKey, setBackpackRefreshKey] = useState(0);
 
   // Tooltip should disappear quickly.
   const hideTooltipDelayMs = 10;
@@ -228,13 +240,15 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
     const tabMap: {[key in Tabs]?: React.ReactNode} = {};
 
+    const instructionsContent = levelProperties.longInstructions ? (
+      <Instructions
+        {...instructionsProps}
+        hideNavigation={hideInstructionsNavigation}
+      />
+    ) : null;
+
     if (levelProperties.longInstructions) {
-      tabMap[Tabs.Instructions] = (
-        <Instructions
-          {...instructionsProps}
-          hideNavigation={hideInstructionsNavigation}
-        />
-      );
+      tabMap[Tabs.Instructions] = instructionsContent;
     }
 
     if (instructionsProps.validationSettings && hasValidationConditions) {
@@ -244,17 +258,33 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
 
     if (hiddenContextCallback && aiTutorVisible) {
-      tabMap[Tabs.AiTutor] = (
-        <AiTutorChat
-          hiddenContextCallback={hiddenContextCallback}
-          aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
-          levelName={levelName}
-          channelId={channelId}
-          aiTutorChatButtonData={aiTutorChatButtonData}
-          aiTutorSystemPromptName={aiTutorSystemPromptName}
-          aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
-        />
-      );
+      if (!hasInstructionsDrawer || !levelProperties.longInstructions) {
+        tabMap[Tabs.AiTutor] = (
+          <AiTutorChat
+            hiddenContextCallback={hiddenContextCallback}
+            aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
+            levelName={levelName}
+            channelId={channelId}
+            aiTutorChatButtonData={aiTutorChatButtonData}
+            aiTutorSystemPromptName={aiTutorSystemPromptName}
+            aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
+          />
+        );
+      } else {
+        tabMap[Tabs.AiTutor] = (
+          <AiTutorChatWithInstructionDrawer
+            hiddenContextCallback={hiddenContextCallback}
+            aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
+            levelName={levelName}
+            channelId={channelId}
+            aiTutorChatButtonData={aiTutorChatButtonData}
+            aiTutorSystemPromptName={aiTutorSystemPromptName}
+            aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
+            instructionsContent={instructionsContent}
+            isCollapsedByDefault={!!viewAsUserId}
+          />
+        );
+      }
     }
 
     // The version history tab is hidden in permanently read-only mode with the following exception:
@@ -289,6 +319,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         <BackpackPanel
           {...backpackProps}
           openPanelCallback={setBackpackTabAsActive}
+          backpackRefreshKey={backpackRefreshKey}
+          onImageFlagged={onImageFlagged}
         />
       );
     }
@@ -336,6 +368,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     currentTab,
     backpackProps,
     setBackpackTabAsActive,
+    backpackRefreshKey,
+    onImageFlagged,
+    hasInstructionsDrawer,
   ]);
 
   const hasTabs = useMemo(() => {
@@ -367,9 +402,14 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   }, [currentTab, availableTabs]);
 
   useEffect(() => {
-    // Reset current tab to instructions when switching levels or viewAsUserId.
-    setCurrentTab(Tabs.Instructions);
-  }, [levelId, viewAsUserId]);
+    // Reset current tab to instructions when switching levels or viewAsUserId unless there is an AI tutor tab with instructions drawer.
+    // If there is, then we set initial tab to the AI Tutor tab.
+    if (hasInstructionsDrawer && aiTutorVisible) {
+      setCurrentTab(Tabs.AiTutor);
+    } else {
+      setCurrentTab(Tabs.Instructions);
+    }
+  }, [levelId, viewAsUserId, hasInstructionsDrawer, aiTutorVisible]);
 
   // Move focus to panel content when AI Tutor or Version History tab is selected via keyboard.
   useEffect(() => {
@@ -460,15 +500,17 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         id={resourcePanelInstructionsElementId}
         className={classNames(styles.resourcePanel, className)}
       >
-        {isOnboardingTourEnabled && <OnboardingTourSteps />}
-        {isValidationTourEnabled && (
+        <IntroJSTourWrapper enabled={isOnboardingTourEnabled}>
+          <OnboardingTourSteps />
+        </IntroJSTourWrapper>
+        <IntroJSTourWrapper enabled={isValidationTourEnabled}>
           <ValidationTourSteps
             hasValidationConditions={hasValidationConditions}
             validationSettings={instructionsProps.validationSettings}
             setCurrentTab={setCurrentTab}
             onValidate={instructionsProps.validationSettings?.onValidate}
           />
-        )}
+        </IntroJSTourWrapper>
         <div
           className={classNames(
             styles.sidebar,
@@ -603,6 +645,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               rightHeaderContent={
                 currentTab === Tabs.AiTutor ? (
                   <AiChatHeaderButtons />
+                ) : currentTab === Tabs.Backpack ? (
+                  <BackpackHeaderButtons
+                    incrementBackpackRefreshKey={() =>
+                      setBackpackRefreshKey(prev => prev + 1)
+                    }
+                  />
                 ) : (
                   rightHeaderContent
                 )

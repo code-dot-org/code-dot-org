@@ -494,8 +494,12 @@ export default function manageStudents(state = initialState, action) {
           },
         },
       };
+    } else if (state.studentData[addRowId]?.rowType === RowType.ADD) {
+      addRowInitialization = {
+        studentData: _.omit(state.studentData, addRowId),
+        editingData: _.omit(state.editingData, addRowId),
+      };
     }
-
     let reduxState = {
       ...state,
       loginType: action.loginType,
@@ -521,6 +525,8 @@ export default function manageStudents(state = initialState, action) {
         ...blankAddRow,
         loginType: state.loginType,
       };
+    } else if (state.studentData[addRowId]?.rowType === RowType.ADD) {
+      studentData = _.omit(state.studentData, addRowId);
     }
     return {
       ...state,

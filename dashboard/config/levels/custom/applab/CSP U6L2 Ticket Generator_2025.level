@@ -217,6 +217,7 @@
     "parent_level_id": 19257,
     "libraries_enabled": "false",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

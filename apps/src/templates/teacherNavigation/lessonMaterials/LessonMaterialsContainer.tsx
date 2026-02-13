@@ -13,6 +13,7 @@ import {useSelector} from 'react-redux';
 import {setChatIsOpen} from '@cdo/apps/aichat/redux/slice';
 import {fetchThreadMessages} from '@cdo/apps/aichat/redux/thunks';
 import {THREAD_TYPES} from '@cdo/apps/aiDifferentiation/constants';
+import DCDO from '@cdo/apps/dcdo';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
@@ -31,16 +32,13 @@ import AIBotTAIcon from '@cdo/static/ai-bot-ta-tag-icon.png';
 import LessonSelector from '../../teacherDashboardShared/LessonSelector';
 import UnitSelectorV2 from '../../teacherDashboardShared/UnitSelectorV2';
 
+import CustomLessonResources from './CustomLessonResources';
 import {LessonMaterialsEmptyState} from './LessonMaterialsEmptyState';
 import {Lesson} from './LessonMaterialTypes';
 import LessonResources from './LessonResources';
 import UnitResourcesDropdown from './UnitResourcesDropdown';
 
 import styles from './lesson-materials.module.scss';
-
-interface AifInfo {
-  aif: boolean;
-}
 
 interface LessonMaterialsData {
   unitId: number;
@@ -134,21 +132,9 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     state => state.currentUser.showAITALessonSummary
   );
 
-  // This checks to see if the AI lesson summaries experiment or DCDO key are set
-  // or if the section has AIF assigned in order to enable AI Lesson Summaries
   React.useEffect(() => {
     if (!!unitToLoad && !!aiTALessonSummaryInfo) {
-      if (!showAITALessonSummary) {
-        HttpClient.fetchJson<AifInfo>(
-          `/teacher_dashboard/unit_in_aif?unit_id=${unitToLoad}`
-        ).then(response => {
-          setCanShowLessonSummaries(response.value.aif);
-        });
-      } else {
-        setCanShowLessonSummaries(showAITALessonSummary);
-      }
-    } else {
-      setCanShowLessonSummaries(false);
+      setCanShowLessonSummaries(showAITALessonSummary);
     }
   }, [unitToLoad, aiTALessonSummaryInfo, showAITALessonSummary]);
 
@@ -212,10 +198,12 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
 
   const [selectedLesson, setSelectedLesson] = useState<Lesson | null>(null);
 
-  const generatePodcastUrl = `/ai_lesson_summary_podcasts/generate_podcast?lesson_id=${selectedLesson?.id}`;
+  const podcastsEnabled =
+    !!DCDO.get('ai-lesson-summary-podcasts', false) ||
+    experiments.isEnabled('ai-lesson-podcasts');
 
   React.useEffect(() => {
-    if (selectedLesson) {
+    if (selectedLesson && showAITALessonSummary) {
       HttpClient.fetchJson<LessonSummaryInfoResponse>(
         `/ai_lesson_summaries/show?lesson_id=${selectedLesson?.id}`
       )
@@ -232,7 +220,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           console.log(`Error: ${error}`);
         });
     }
-  }, [userId, selectedLesson]);
+  }, [userId, selectedLesson, showAITALessonSummary]);
 
   const handleLessonSummaryAskAITAClick = () => {
     dispatch(
@@ -313,6 +301,20 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     );
   };
 
+  const renderCustomResources = () => {
+    if (selectedLesson && experiments.isEnabled(experiments.AI_ARTIFACT)) {
+      return (
+        <CustomLessonResources
+          unitId={selectedSection.unitId}
+          lessonId={selectedLesson.id}
+          sectionId={selectedSection.id}
+        />
+      );
+    } else {
+      return null;
+    }
+  };
+
   const renderLessonSummaryContainer = () => {
     return (
       <>
@@ -344,12 +346,8 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           />
         )}
         <div className={styles.lessonSummaryContainer}>
-          {experiments.isEnabled('ai-lesson-podcasts') && (
+          {podcastsEnabled && (
             <div className={styles.lessonSummarySection}>
-              {/* The following link is temporary for testing and will be removed before official release */}
-              <a href={generatePodcastUrl}>
-                Generate Podcast (this may take a minute...)
-              </a>
               <div className={styles.lessonSummarySectionHeader}>
                 <div className={styles.lessonSummarySectionTitle}>
                   <FontAwesomeV6Icon iconName="headphones" iconStyle="solid" />
@@ -489,6 +487,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           <>
             {renderTeacherResources()}
             {renderStudentResources()}
+            {renderCustomResources()}
           </>
         )}
       </div>

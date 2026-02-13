@@ -43,7 +43,8 @@
     "display_name": "Technology",
     "bubble_choice_description": "Practice asking the same question in different ways about automation in modern industries.",
     "thumbnail_url": "https://images.code.org/cc7b370290f7f3b7708228920c4d8f2b-Automation Icon.png",
-    "name_suffix": "_v2-2025"
+    "name_suffix": "_v2-2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:48.611+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson5-level3-choice3_2025\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson5-level3-choice3_2025\"}]"

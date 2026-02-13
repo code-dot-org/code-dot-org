@@ -1,0 +1,15 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-02-12T17:54:42.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "display_name": "The Fallback",
+    "bubble_choice_description": "Display a local fallback image when the fetch fails.",
+    "thumbnail_url": "https://images.code.org/7cb2df7e80f878cb81ec6729c8008147-Screenshot 2026-02-12 at 1.13.51 PM.png"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-12 17:57:25 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-12 17:58:25 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-12 20:27:42 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

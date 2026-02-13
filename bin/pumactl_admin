@@ -1,0 +1,95 @@
+#!/usr/bin/env ruby
+#
+# Wrapper for pumactl that handles authentication and socket location automatically.
+#
+# USAGE:
+#   bin/pumactl_admin [COMMAND] [ARGS] [--query=JMESPath]
+#
+# EXAMPLES:
+#   bin/pumactl_admin stats
+#   bin/pumactl_admin stats --query="booted_workers"
+#   bin/pumactl_admin stats --query="worker_status[0].last_status.backlog"
+#   bin/pumactl_admin stats --query="worker_status[?pid == \`433276\`].last_status.backlog | [0]"
+#   bin/pumactl_admin stats --query="length(worker_status)"
+#   bin/pumactl_admin phased-restart
+#   bin/pumactl_admin thread-backtraces   # Only outputs for parent puma process threads.
+#
+# CUSTOM ARGUMENTS:
+#   --query, -q    JMESPath to extract specific data from the output; similar to AWS CLI --query. https://jmespath.org
+#
+# STANDARD ARGUMENTS:
+#   Accepts all standard pumactl commands (stats, stop, restart, etc).
+#   See https://github.com/puma/puma/blob/master/lib/puma/control_cli.rb
+#
+require_relative '../deployment'
+require 'json'
+require 'open3'
+require 'jmespath'
+
+# Parse and extract the custom --query argument
+query_path = nil
+ARGV.reject! do |arg|
+  if arg.start_with?('--query=', '-q=')
+    query_path = arg.split('=', 2).last
+    true
+  else
+    false
+  end
+end
+
+raise 'CDO.puma_control_server_token is not defined' unless CDO.puma_control_server_token
+token = CDO.puma_control_server_token
+
+socket_url = "unix://#{dashboard_dir('tmp', 'pumactl.sock')}"
+
+cmd = [
+  'bundle', 'exec', 'pumactl',
+  '--control-url', socket_url,
+  '--control-token', token
+] + ARGV
+
+stdout, stderr, status = Open3.capture3(*cmd)
+
+if status.success?
+  # pumactl sometimes outputs a preamble ("command stats sent success") before JSON output.
+  json_start_index = stdout.index('{')
+
+  if json_start_index
+    preamble = stdout[0...json_start_index]
+    json_part = stdout[json_start_index..].strip
+
+    begin
+      data = JSON.parse(json_part)
+
+      if query_path
+        # Send the preamble to STDERR.
+        warn preamble.strip.chomp unless preamble.strip.empty?
+
+        # Use JMESPath to search the JSON response.
+        result = JMESPath.search(query_path, data)
+
+        if result.is_a?(Hash) || result.is_a?(Array)
+          puts JSON.pretty_generate(result)
+        else
+          puts result
+        end
+      else
+        # HUMAN MODE: Preamble and Pretty JSON go to STDOUT.
+        puts preamble unless preamble.strip.empty?
+        puts JSON.pretty_generate(data)
+      end
+    rescue JSON::ParserError
+      # If parsing fails, we warn the error and output the raw pumactl response.
+      warn "Failed to parse JSON part."
+      puts stdout
+    end
+  else
+    # Non-JSON output (e.g. 'restart' command).
+    puts stdout unless stdout.empty?
+  end
+else
+  warn "Error executing pumactl:"
+  warn stdout
+  warn stderr
+  exit status.exitstatus
+end

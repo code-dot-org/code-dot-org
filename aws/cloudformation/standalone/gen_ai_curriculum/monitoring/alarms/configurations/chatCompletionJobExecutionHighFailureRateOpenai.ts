@@ -20,6 +20,7 @@ export const chatCompletionJobExecutionHighFailureRateOpenaiConfiguration: PutMe
 *Next Steps*:
 - Check the [GenAICurriculum Dashboard](https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards/dashboard/GenAICurriculum)
 - Check HoneyBadger for **AichatRequestChatCompletionJob** errors
+- You can set the DCDO flag \`aichat_verbose_honeybadger_reporting\` to true to get more detailed error reports in HoneyBadger, which may help with debugging.
 - Check [Student Learning Tips & Tricks](${SL_HANDBOOK_LINK}) for more details.`,
         ActionsEnabled: true,
         OKActions: [],

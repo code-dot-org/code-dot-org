@@ -738,6 +738,7 @@ module SharedConstants
   # reference: https://platform.openai.com/docs/models/gpt-3-5.
   AICHAT_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
   EVALUATE_STUDENT_LEARNING_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
+  STUDENT_SNAPSHOT_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
   PERSONALIZATION_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
 
   AI_EVALUATION_TYPES = {
@@ -861,6 +862,16 @@ module SharedConstants
     ENABLED: 'enabled',
     DISABLED: 'disabled',
     ESSENTIAL_ONLY: 'essential_only',
+  }.freeze
+
+  # The degree to which a curriculum depends on AI chat features.
+  # 'essential' means the curriculum cannot be completed without AI chat tools.
+  # 'available' means the curriculum can be completed without AI chat tools but the tools are available for use.
+  # 'none' means the curriculum does not depend on AI chat tools at all.
+  AI_CHAT_TOOLS_DEPENDENCY = {
+    ESSENTIAL: 'essential',
+    AVAILABLE: 'available',
+    NONE: 'none',
   }.freeze
 
   US_STATES = STATE_ABBR_WITH_DC_HASH.merge(DC: 'Washington, D.C.').sort_by(&:last).to_h.freeze

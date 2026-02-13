@@ -121,6 +121,10 @@ class Unit < ApplicationRecord
     end
   )
 
+  scope :with_ai_chat_tools, -> {joins(:levels).merge(Level.with_any_ai_chat_tools)}
+
+  scope :with_essential_ai_chat_tools, -> {joins(:levels).merge(Level.with_essential_ai_chat_tools)}
+
   attr_accessor :skip_name_format_validation
 
   include SerializedToFileValidation
@@ -1904,7 +1908,15 @@ class Unit < ApplicationRecord
 
   # TODO-AITUTOR: update or remove
   def has_ai_tutor_level?
-    levels&.any?(&:ai_tutor_available?)
+    levels.with_ai_tutor_available.exists?
+  end
+
+  def has_ai_chat_tools?
+    self.class.where(id: id).with_ai_chat_tools.exists?
+  end
+
+  def requires_ai_chat_tools?
+    self.class.where(id: id).with_essential_ai_chat_tools.exists?
   end
 
   private def teacher_feedback_enabled?

@@ -1,8 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  BodyThreeText,
-  Heading6,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useMemo} from 'react';
 
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
@@ -56,12 +53,13 @@ const ModelCardRow: React.FunctionComponent<ModelCardRowProps> = ({
                   className={moduleStyles.titleIcon}
                 />
               )}
-              <Heading6
-                visualAppearance="heading-xs"
+              <Typography
                 className={moduleStyles.sectionTitle}
+                variant="h6"
+                gutterBottom
               >
                 {title}
-              </Heading6>
+              </Typography>
               <InfoTooltipIcon
                 id={title}
                 tooltipText={tooltipText}
@@ -70,9 +68,14 @@ const ModelCardRow: React.FunctionComponent<ModelCardRowProps> = ({
             </div>
           }
         >
-          <BodyThreeText className={moduleStyles.expandedContent}>
+          <Typography
+            className={moduleStyles.expandedContent}
+            variant="body3"
+            component="div"
+            gutterBottom
+          >
             <div>{expandedContentToDisplay}</div>
-          </BodyThreeText>
+          </Typography>
         </CollapsibleSection>
       </div>
       <hr className={moduleStyles.borderLine} />

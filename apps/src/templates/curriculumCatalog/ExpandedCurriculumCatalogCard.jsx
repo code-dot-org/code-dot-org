@@ -13,6 +13,8 @@ import React, {useEffect, useRef} from 'react';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import experiments from '@cdo/apps/util/experiments';
+import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {
@@ -35,6 +37,7 @@ const ExpandedCurriculumCatalogCard = ({
   gradeRange,
   subjectsAndTopics,
   deviceCompatibility,
+  aiChatToolsDependency,
   description,
   professionalLearningProgram,
   video,
@@ -261,6 +264,17 @@ const ExpandedCurriculumCatalogCard = ({
                       </div>
                     )
                 )}
+                {experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
+                  aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
+                    <div className={style.iconWithDescription}>
+                      <FontAwesomeV6Icon
+                        iconName="ai-bot-solid"
+                        iconFamily="kit"
+                        className={style.aiBotIcon}
+                      />
+                      <BodyTwoText>Requires AI chat tools</BodyTwoText>
+                    </div>
+                  )}
               </div>
               <hr className={style.horizontalDivider} />
               <div className={style.buttonsContainer}>
@@ -367,6 +381,8 @@ ExpandedCurriculumCatalogCard.propTypes = {
   gradeRange: PropTypes.string.isRequired,
   subjectsAndTopics: PropTypes.arrayOf(PropTypes.string).isRequired,
   deviceCompatibility: PropTypes.string.isRequired,
+  aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
+    .isRequired,
   description: PropTypes.string.isRequired,
   professionalLearningProgram: PropTypes.string,
   video: PropTypes.string,
