@@ -30,7 +30,9 @@ function LessonRecommendedAction({resource}: LessonRecommendedActionProps) {
       <BodyTwoText className={styles.strongText}>
         Recommended action
       </BodyTwoText>
-      <BodyThreeText>{resource.recommended_action}</BodyThreeText>
+      {resource.recommended_action && (
+        <BodyThreeText>{resource.recommended_action}</BodyThreeText>
+      )}
       {resource.resource_name && resource.resource_link && (
         <Button
           onClick={handleViewResource}
