@@ -108,7 +108,7 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
             studentId,
             sectionId
           );
-          if (aiData && aiData.json) {
+          if (aiData && aiData.record) {
             const aiGeneratedInitialFeedbackRecord = aiData.record;
             setExistingFeedbackData(aiGeneratedInitialFeedbackRecord);
             setFeedbackText(aiGeneratedInitialFeedbackRecord.saved_feedback);
