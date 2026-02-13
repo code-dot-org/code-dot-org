@@ -25,11 +25,9 @@ class ExpiredDeletedAccountPiiScrubberTest < ActiveSupport::TestCase
     it 'runs the PII scrub service on expired deleted accounts' do
       expect(Services::User::PiiScrubber).to receive(:call).with(user: user)
       scrub_pii
-    end
-
-    it 'increments num_accounts_scrubbed' do
-      scrub_pii
-      _(described_instance.send(:num_accounts_scrubbed)).must_equal 1
+      _(described_instance.processed_user_ids).must_equal [user.id]
+      _(described_instance.num_accounts_scrubbed).must_equal 1
+      _(described_instance.user_errors).must_equal({})
     end
 
     it 'uploads metrics' do
@@ -47,28 +45,33 @@ class ExpiredDeletedAccountPiiScrubberTest < ActiveSupport::TestCase
     end
 
     context 'when an error occurs' do
+      let(:error_message) {'Test error'}
+
       before do
-        expect(described_instance).to receive(:scrub_user).and_raise(StandardError.new('Test error'))
+        expect(Services::User::PiiScrubber).to receive(:call).with(user:).and_raise(error_message)
       end
 
-      it 'increments num_errors' do
+      it 'adds user id to #processed_user_ids' do
         scrub_pii
-        _(described_instance.send(:num_errors)).must_equal 1
+        _(described_instance.processed_user_ids).must_equal [user.id]
+      end
+
+      it 'does not increment #num_accounts_scrubbed' do
+        scrub_pii
+        _(described_instance.num_accounts_scrubbed).must_equal 0
+      end
+
+      it 'adds error message to #user_errors' do
+        scrub_pii
+        _(described_instance.user_errors).must_equal({user.id => error_message})
       end
 
       it 'notifies Honeybadger' do
         expect(Honeybadger).to receive(:notify).with(
-          instance_of(StandardError),
-          context: {user_id: user.id}
+          'Failed to scrub PII for users',
+          context: {num_accounts_scrubbed: 0, user_errors: {user.id => error_message}}
         )
         scrub_pii
-      end
-    end
-
-    context 'when the number of accounts exceeds limit' do
-      let(:limit) {0}
-      it 'raises a SafetyConstraintViolation' do
-        _(proc {scrub_pii}).must_raise described_class::SafetyConstraintViolation
       end
     end
   end
