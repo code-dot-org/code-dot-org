@@ -7,6 +7,7 @@ import {
 } from '@code-dot-org/component-library/typography';
 import React from 'react';
 
+import parentStyles from './debug-panel.module.scss';
 import moduleStyles from './details-box.module.scss';
 
 interface DetailsField {
@@ -36,7 +37,7 @@ const DetailsBox: React.FunctionComponent<DetailsBoxProps> = ({
         <FontAwesomeV6Icon
           iconName={success ? 'check-circle' : 'xmark-circle'}
           className={
-            success ? moduleStyles.successIcon : moduleStyles.errorIcon
+            success ? parentStyles.successIcon : parentStyles.errorIcon
           }
         />
       </div>

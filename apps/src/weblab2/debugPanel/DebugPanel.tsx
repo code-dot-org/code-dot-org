@@ -114,7 +114,15 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
 
   const requestErrorMessage = useMemo(() => {
     if (selectedRequest?.request.cspDirectiveViolated) {
-      return `We cannot connect to that url. It is not in our list of available apis.`;
+      let requestDomain = selectedRequest.request.url;
+      try {
+        const url = new URL(selectedRequest.request.url);
+        requestDomain = url.origin;
+      } catch {
+        // Fall back to the full URL if parsing fails.
+      }
+      // TODO: once we have documentation we should link to the allow-list here.
+      return `Sorry, ${requestDomain} is not in our list of available APIs.`;
     }
     return undefined;
   }, [selectedRequest]);

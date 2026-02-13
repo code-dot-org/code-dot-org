@@ -69,11 +69,10 @@
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  border-bottom: 1px solid var(--borders-neutral-disabled);
+  border: 1px solid var(--borders-neutral-disabled);
   background: var(--background-neutral-primary);
   width: 150px;
-  border: 1px solid var(--borders-neutral-primary);
-  border-radius: 4px;
+  border-radius: variables.$default-border-radius;
 
   p {
     margin-bottom: 0;

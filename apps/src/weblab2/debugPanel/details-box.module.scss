@@ -6,8 +6,8 @@
   align-items: flex-start;
   flex: 1 0 0;
   align-self: stretch;
-  border-radius: 4px;
-  border: 1px solid var(--borders-neutral-primary);
+  border-radius: variables.$default-border-radius;
+  border: variables.$default-border;
   background: var(--background-neutral-primary);
 }
 
@@ -61,17 +61,9 @@
 }
 
 .detailsFieldValue {
-  border-radius: 4px;
+  border-radius: variables.$default-border-radius;
   background: var(--background-neutral-secondary, #F0F2F5);
   padding: 4px 6px;
   align-self: stretch;
   font-family: monospace;
-}
-
-.successIcon {
-  color: var(--text-success-primary);
-}
-
-.errorIcon {
-  color: var(--text-error-primary);
 }
