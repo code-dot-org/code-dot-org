@@ -13,7 +13,6 @@ import {useSelector} from 'react-redux';
 import {setChatIsOpen} from '@cdo/apps/aichat/redux/slice';
 import {fetchThreadMessages} from '@cdo/apps/aichat/redux/thunks';
 import {THREAD_TYPES} from '@cdo/apps/aiDifferentiation/constants';
-import DCDO from '@cdo/apps/dcdo';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
@@ -132,11 +131,9 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     state => state.currentUser.showAITALessonSummary
   );
 
-  React.useEffect(() => {
-    if (!!unitToLoad && !!aiTALessonSummaryInfo) {
-      setCanShowLessonSummaries(showAITALessonSummary);
-    }
-  }, [unitToLoad, aiTALessonSummaryInfo, showAITALessonSummary]);
+  const showAITAPodcasts = useAppSelector(
+    state => state.currentUser.showAITAPodcasts
+  );
 
   React.useEffect(() => {
     const selectedSectionId = selectedSection.id;
@@ -155,6 +152,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     lessonMaterialsCachedLoader(unitToLoad).then(data => {
       setLessonMaterials(data);
       setIsLoading(false);
+      setSelectedLesson(data.lessons[0]);
 
       if (data?.unitName) {
         analyticsReporter.sendEvent(EVENTS.VIEW_LESSON_MATERIALS, {
@@ -198,10 +196,6 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
 
   const [selectedLesson, setSelectedLesson] = useState<Lesson | null>(null);
 
-  const podcastsEnabled =
-    !!DCDO.get('ai-lesson-summary-podcasts', false) ||
-    experiments.isEnabled('ai-lesson-podcasts');
-
   React.useEffect(() => {
     if (selectedLesson && showAITALessonSummary) {
       HttpClient.fetchJson<LessonSummaryInfoResponse>(
@@ -209,14 +203,17 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
       )
         .then(response => {
           const preParsedResponse = response.value?.lesson_summary;
-          setAITALessonSummaryInfo(
-            response.response.ok && preParsedResponse
-              ? JSON.parse(preParsedResponse)
-              : null
-          );
+          if (response.response.ok && preParsedResponse) {
+            setAITALessonSummaryInfo(JSON.parse(preParsedResponse));
+            setCanShowLessonSummaries(true);
+          } else {
+            setAITALessonSummaryInfo(null);
+            setCanShowLessonSummaries(false);
+          }
         })
         .catch(error => {
           setAITALessonSummaryInfo(null);
+          setCanShowLessonSummaries(false);
           console.log(`Error: ${error}`);
         });
     }
@@ -346,7 +343,8 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           />
         )}
         <div className={styles.lessonSummaryContainer}>
-          {podcastsEnabled && (
+          {(showAITAPodcasts ||
+            experiments.isEnabled('ai-lesson-podcasts')) && (
             <div className={styles.lessonSummarySection}>
               <div className={styles.lessonSummarySectionHeader}>
                 <div className={styles.lessonSummarySectionTitle}>
@@ -475,23 +473,27 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     );
   }
 
+  const showSpinner = isLoading || needsReload;
+
   return (
     <div className={styles.lessonContainer}>
       <div className={styles.lessonMaterialsContainer}>
         {renderHeader()}
-        {isLoading || needsReload ? (
+        {showSpinner ? (
           <div>
             <Spinner size={'large'} />
           </div>
         ) : (
           <>
-            {renderTeacherResources()}
-            {renderStudentResources()}
-            {renderCustomResources()}
+            <div>
+              {renderTeacherResources()}
+              {renderStudentResources()}
+              {renderCustomResources()}
+            </div>
           </>
         )}
       </div>
-      {canShowLessonSummaries && renderLessonSummaryContainer()}
+      {!showSpinner && canShowLessonSummaries && renderLessonSummaryContainer()}
     </div>
   );
 };
