@@ -39,6 +39,7 @@ bucket_names=(\
   "cdo-v3-files"\
   "cdo-v3-libraries"\
   "cdo-v3-sources"\
+  "org.code.localhost-studio.user-content"\
   "videos.code.org"\
 )
 
