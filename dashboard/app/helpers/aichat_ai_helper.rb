@@ -157,8 +157,8 @@ module AichatAiHelper
 
   # Create an instance of the appropriate ai-client-derived class based on model id.
   def self.create_ai_client_instance(client_type, model_id, usage_reporter = nil)
-    # We assume it's one of the gemini models if not 'gpt-4o-mini'.
-    if model_id == "gpt-4o-mini"
+    # We assume it's one of the Vertex models if not ChatGPT.
+    if model_id == SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]
       return AichatOpenaiResponsesClient.new(CDO.openai_student_learning_api_key, SharedConstants::AICHAT_MODEL_VERSION, usage_reporter)
     else
 
