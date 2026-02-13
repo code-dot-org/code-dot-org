@@ -13,6 +13,20 @@ class CdoTest < Minitest::Test
     assert_includes CDO.curriculum_languages, "zh-tw"
   end
 
+  def test_user_content_s3_bucket
+    CDO.stubs(:dashboard_hostname).returns('studio.code.org')
+    assert_equal 'org.code.studio.user-content', CDO.user_content_s3_bucket
+
+    CDO.stubs(:dashboard_hostname).returns('staging-studio.code.org')
+    assert_equal 'org.code.staging-studio.user-content', CDO.user_content_s3_bucket
+
+    CDO.stubs(:dashboard_hostname).returns('test-studio.code.org')
+    assert_equal 'org.code.test-studio.user-content', CDO.user_content_s3_bucket
+
+    CDO.stubs(:dashboard_hostname).returns('localhost-studio.code.org')
+    assert_equal 'org.code.localhost-studio.user-content', CDO.user_content_s3_bucket
+  end
+
   def test_curriculum_url
     CDO.stubs(:curriculum_languages).returns(["es-mx"])
 
