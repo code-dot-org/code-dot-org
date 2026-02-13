@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-02-10 17:28:48 UTC",
+    "serialized_at": "2026-02-12 15:39:29 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -220,6 +220,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U5-JSON"
+        ],
         "progression": "What is an API?"
       },
       "bonus": false,
@@ -334,6 +337,50 @@
       },
       "level_keys": [
         "pl-aif-2-U5-API-Calll-POkemon-panel"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "What is an API?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-sync-async-programming"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "4d771bdd-4b14-497d-8242-18db5bb3efbc"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-sync-async-programming"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "What is an API?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-sync-async-code-chef"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "4d771bdd-4b14-497d-8242-18db5bb3efbc"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-sync-async-code-chef"
       ]
     }
   ],
@@ -451,6 +498,30 @@
         "level.key": "pl-aif-2-U5-API-Calll-POkemon-panel",
         "script_level.level_keys": [
           "pl-aif-2-U5-API-Calll-POkemon-panel"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "4d771bdd-4b14-497d-8242-18db5bb3efbc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-sync-async-programming",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-sync-async-programming"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "4d771bdd-4b14-497d-8242-18db5bb3efbc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-sync-async-code-chef",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-sync-async-code-chef"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
