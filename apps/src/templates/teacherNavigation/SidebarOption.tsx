@@ -21,6 +21,7 @@ interface SidebarOptionProps {
   unitPosition?: number;
   unitName: string | null;
   pathKey: keyof typeof LABELED_TEACHER_NAVIGATION_PATHS;
+  showErrorIcon: boolean;
 }
 
 const SidebarOption: React.FC<SidebarOptionProps> = ({
@@ -30,6 +31,7 @@ const SidebarOption: React.FC<SidebarOptionProps> = ({
   unitPosition,
   unitName,
   pathKey,
+  showErrorIcon,
 }) => {
   const reportMetric = (path: string) => () => {
     analyticsReporter.sendEvent(EVENTS.NAVIGATE_TO_PAGE, {
@@ -69,6 +71,13 @@ const SidebarOption: React.FC<SidebarOptionProps> = ({
       >
         {LABELED_TEACHER_NAVIGATION_PATHS[pathKey].label}
       </BodyTwoText>
+      {showErrorIcon && (
+        <FontAwesomeV6Icon
+          iconName="triangle-exclamation"
+          iconStyle="solid"
+          className={styles.errorIcon}
+        />
+      )}
     </NavLink>
   );
 };

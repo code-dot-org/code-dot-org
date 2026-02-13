@@ -249,6 +249,7 @@ export interface LevelProperties {
   widgetView?: boolean;
   widgetViewAllowShowCode?: boolean;
   aiTutorMode?: string;
+  levelSystemPrompt?: string;
   // Properties added for parity with non-lab2 AI Tutor levels
   aiTutorAvailable?: boolean;
   isAssessment?: boolean;
