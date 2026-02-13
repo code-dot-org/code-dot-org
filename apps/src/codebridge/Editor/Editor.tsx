@@ -56,10 +56,6 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     experiments.ACCEPT_REJECT_UNIFIED_DIFF
   );
 
-  const allowSplitView = experiments.isEnabledAllowingQueryString(
-    experiments.ACCEPT_REJECT_SPLIT_VIEW
-  );
-
   const dispatch = useAppDispatch();
 
   const onChange = useCallback(
@@ -125,12 +121,7 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
         );
       }
     }
-    if (
-      allowMergeView &&
-      !allowSplitView &&
-      hasMergeView &&
-      projectSourceBeforeAiTutorVersion
-    ) {
+    if (allowMergeView && hasMergeView && projectSourceBeforeAiTutorVersion) {
       const originalFiles = projectSourceBeforeAiTutorVersion.files;
       const activeOriginalFile = activeFile?.name
         ? Object.values(originalFiles).find(f => f.name === activeFile.name)
@@ -155,7 +146,6 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     hasMergeView,
     projectSourceBeforeAiTutorVersion,
     allowMergeView,
-    allowSplitView,
   ]);
 
   if (activeFile?.url && viewableImageFileType(activeFile.language)) {

@@ -70,8 +70,6 @@ experiments.AI_LESSON_PODCASTS = 'ai-lesson-podcasts';
 experiments.WEBLAB2_FULL_URLS = 'weblab2-full-urls';
 // Show unified diff view in Code Editor.
 experiments.ACCEPT_REJECT_UNIFIED_DIFF = 'accept-reject-unified-diff';
-// Show split view in Code Editor.
-experiments.ACCEPT_REJECT_SPLIT_VIEW = 'accept-reject-split-view';
 /**
  * This was a gamified version of the finish dialog, built in 2018,
  * but never fully shipped.
