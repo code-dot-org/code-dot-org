@@ -72,11 +72,12 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
   );
 
   // Only show unified diff view when we have AI tutor mode and projectSourceBeforeAiTutorVersion.
-  // For new files that don't exist in projectSourceBeforeAiTutorVersion, we'll show diff against an empty document (empty string).
   // Used in key so we remount CodeEditor when this becomes true.
   const hasMergeView = useMemo(() => {
-    return (
-      isAiTutorVersion && projectSourceBeforeAiTutorVersion && activeFile?.name
+    return !!(
+      isAiTutorVersion &&
+      projectSourceBeforeAiTutorVersion &&
+      activeFile?.name
     );
   }, [isAiTutorVersion, projectSourceBeforeAiTutorVersion, activeFile?.name]);
 
@@ -94,7 +95,25 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     }
     return undefined;
   }, [projectSourceBeforeAiTutorVersion, activeFile?.name]);
-  console.log('codeBeforeAiTutorVersion', codeBeforeAiTutorVersion);
+
+  // Determine if we should show split view (side-by-side diff)
+  // We need to ensure codeBeforeAiTutorVersion is defined (not just projectSourceBeforeAiTutorVersion)
+  // Move this AFTER codeBeforeAiTutorVersion is computed so we can check it
+  const hasSplitView = useMemo(() => {
+    const hasData =
+      isAiTutorVersion &&
+      projectSourceBeforeAiTutorVersion &&
+      activeFile?.name &&
+      allowSplitView &&
+      codeBeforeAiTutorVersion !== undefined;
+    return hasData;
+  }, [
+    isAiTutorVersion,
+    projectSourceBeforeAiTutorVersion,
+    activeFile?.name,
+    allowSplitView,
+    codeBeforeAiTutorVersion,
+  ]);
 
   const editorConfigExtensions = useMemo(() => {
     const extensions: Extension[] = [];
@@ -189,7 +208,9 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     <div className={moduleStyles.editorContainer}>
       {activeFile ? (
         <CodeEditor
-          key={`${activeFile.id}/${hasMergeView ? 'diff' : 'normal'}`}
+          key={`${activeFile.id}/${
+            hasSplitView ? 'split' : hasMergeView ? 'diff' : 'normal'
+          }`}
           onCodeChange={onChange}
           initialCode={activeFile.contents}
           appName={levelProperties.appName}

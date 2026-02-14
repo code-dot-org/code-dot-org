@@ -70,9 +70,9 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   // For new files that don't exist in projectSourceBeforeAiTutorVersion, we'll show diff against an empty document (empty string).
   // Used in key so we remount CodeEditor when this becomes true.
   const hasSplitView = useMemo(() => {
-    return (
-      isAiTutorVersion && projectSourceBeforeAiTutorVersion && allowSplitView
-    );
+    const result =
+      isAiTutorVersion && projectSourceBeforeAiTutorVersion && allowSplitView;
+    return result;
   }, [isAiTutorVersion, projectSourceBeforeAiTutorVersion, allowSplitView]);
 
   // Load the user's preferred editor font size from the backend which is saved
@@ -175,52 +175,60 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
       return;
     }
 
-    const onEditorUpdate = EditorView.updateListener.of(
-      (update: ViewUpdate) => {
-        if (update.docChanged) {
-          onCodeChange(update.state.doc.toString());
-        }
-      }
-    );
-
-    const editorExtensions = [
-      ...editorConfig,
-
-      onEditorUpdate,
-      autocompletion(),
-      ...editorConfigExtensions,
-    ];
-
-    editorExtensions.push(
-      editorReadOnlyCompartment.of(EditorState.readOnly.of(isReadOnly)),
-      editorEditableCompartment.of(EditorView.editable.of(!isReadOnly)),
-      fontSizeCompartment.of(getFontSizeTheme(FontSize[editorFontSizeKey]))
-    );
-    if (theme === 'Dark') {
-      editorExtensions.push(themeCompartment.of(darkModeTheme));
-    } else {
-      editorExtensions.push(themeCompartment.of(lightModeTheme));
+    // Clear any existing editor DOM before creating a new one.
+    if (editorRef.current) {
+      editorRef.current.innerHTML = '';
     }
-    if (!hasSplitView) {
-      setEditorView(
-        new EditorView({
-          state: EditorState.create({
-            doc: initialCode,
-            extensions: editorExtensions,
-          }),
-          parent: editorRef.current,
-          // Always start on the first line.
-          // TODO: Determine if we should track line position and scroll to
-          // a saved position instead.
-          // https://codedotorg.atlassian.net/browse/CT-870
-          scrollTo: EditorView.scrollIntoView(0),
-        })
+
+    // Use requestAnimationFrame to ensure DOM is ready before creating editor.
+    const rafId = requestAnimationFrame(() => {
+      if (!editorRef.current) return;
+
+      const onEditorUpdate = EditorView.updateListener.of(
+        (update: ViewUpdate) => {
+          if (update.docChanged) {
+            onCodeChange(update.state.doc.toString());
+          }
+        }
       );
-    } else {
-      setEditorView(
-        new MergeView({
+
+      const editorExtensions = [
+        ...editorConfig,
+
+        onEditorUpdate,
+        autocompletion(),
+        ...editorConfigExtensions,
+      ];
+
+      editorExtensions.push(
+        editorReadOnlyCompartment.of(EditorState.readOnly.of(isReadOnly)),
+        editorEditableCompartment.of(EditorView.editable.of(!isReadOnly)),
+        fontSizeCompartment.of(getFontSizeTheme(FontSize[editorFontSizeKey]))
+      );
+      if (theme === 'Dark') {
+        editorExtensions.push(themeCompartment.of(darkModeTheme));
+      } else {
+        editorExtensions.push(themeCompartment.of(lightModeTheme));
+      }
+      if (!hasSplitView) {
+        setEditorView(
+          new EditorView({
+            state: EditorState.create({
+              doc: initialCode,
+              extensions: editorExtensions,
+            }),
+            parent: editorRef.current,
+            // Always start on the first line.
+            // TODO: Determine if we should track line position and scroll to
+            // a saved position instead.
+            // https://codedotorg.atlassian.net/browse/CT-870
+            scrollTo: EditorView.scrollIntoView(0),
+          })
+        );
+      } else {
+        const newEditor = new MergeView({
           a: {
-            doc: codeBeforeAiTutorVersion,
+            doc: codeBeforeAiTutorVersion ?? '',
             extensions: editorExtensions,
           },
           b: {
@@ -228,10 +236,15 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
             extensions: editorExtensions,
           },
           parent: editorRef.current,
-        })
-      );
-    }
-    setDidInit(true);
+        });
+        setEditorView(newEditor);
+      }
+      setDidInit(true);
+    });
+
+    return () => {
+      cancelAnimationFrame(rafId);
+    };
   }, [
     dispatch,
     editorRef,
@@ -314,6 +327,19 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     editorReadOnlyCompartment,
     editorEditableCompartment,
   ]);
+
+  // Cleanup effect: destroy editor when component unmounts
+  useEffect(() => {
+    return () => {
+      if (editorView) {
+        if (editorView instanceof EditorView) {
+          editorView.destroy();
+        } else if (editorView instanceof MergeView) {
+          editorView.destroy();
+        }
+      }
+    };
+  }, [editorView]);
 
   if (!editorFontSizeLoaded) {
     return null;
