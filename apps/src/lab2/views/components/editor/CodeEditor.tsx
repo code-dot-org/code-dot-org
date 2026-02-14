@@ -41,10 +41,6 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   appName,
   codeBeforeAiTutorVersion,
 }) => {
-  console.log(
-    'codeBeforeAiTutorVersion in CodeEditor',
-    codeBeforeAiTutorVersion
-  );
   const editorRef = useRef<HTMLDivElement>(null);
   const dispatch = useAppDispatch();
   const [didInit, setDidInit] = useState(false);
@@ -69,12 +65,6 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   const projectSourceBeforeAiTutorVersion = useAppSelector(
     state => state.lab2Project.projectSourceBeforeAiTutorVersion
   );
-  console.log('isAiTutorVersion', isAiTutorVersion);
-  console.log(
-    'projectSourceBeforeAiTutorVersion',
-    projectSourceBeforeAiTutorVersion
-  );
-  console.log('allowSplitView', allowSplitView);
 
   // Only show split diff view when we have AI tutor mode and projectSourceBeforeAiTutorVersion.
   // For new files that don't exist in projectSourceBeforeAiTutorVersion, we'll show diff against an empty document (empty string).
@@ -84,7 +74,6 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
       isAiTutorVersion && projectSourceBeforeAiTutorVersion && allowSplitView
     );
   }, [isAiTutorVersion, projectSourceBeforeAiTutorVersion, allowSplitView]);
-  console.log('hasSplitView', hasSplitView);
 
   // Load the user's preferred editor font size from the backend which is saved
   // per app type (currently either pythonlab or weblab) for signed-in users.
