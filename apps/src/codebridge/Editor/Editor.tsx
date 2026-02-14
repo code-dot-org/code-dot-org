@@ -57,7 +57,7 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
   );
 
   const allowSplitView = experiments.isEnabledAllowingQueryString(
-    experiments.ACCEPT_REJECT_SPLIT_VIEW
+    experiments.ACCEPT_REJECT_SPLIT_DIFF
   );
 
   const dispatch = useAppDispatch();
@@ -79,6 +79,22 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
       isAiTutorVersion && projectSourceBeforeAiTutorVersion && activeFile?.name
     );
   }, [isAiTutorVersion, projectSourceBeforeAiTutorVersion, activeFile?.name]);
+
+  const codeBeforeAiTutorVersion = useMemo(() => {
+    if (projectSourceBeforeAiTutorVersion) {
+      const originalFiles = projectSourceBeforeAiTutorVersion.files;
+      const activeOriginalFile = activeFile?.name
+        ? Object.values(originalFiles).find(f => f.name === activeFile.name)
+        : undefined;
+
+      // For new files that don't exist in the original version, we still want
+      // to show diff highlighting so will assign an empty string to the original contents.
+      const activeOriginalFileContents = activeOriginalFile?.contents ?? '';
+      return activeOriginalFileContents;
+    }
+    return undefined;
+  }, [projectSourceBeforeAiTutorVersion, activeFile?.name]);
+  console.log('codeBeforeAiTutorVersion', codeBeforeAiTutorVersion);
 
   const editorConfigExtensions = useMemo(() => {
     const extensions: Extension[] = [];
@@ -123,14 +139,9 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
       hasMergeView &&
       projectSourceBeforeAiTutorVersion
     ) {
-      const originalFiles = projectSourceBeforeAiTutorVersion.files;
-      const activeOriginalFile = activeFile?.name
-        ? Object.values(originalFiles).find(f => f.name === activeFile.name)
-        : undefined;
-
       // For new files that don't exist in the original version, we still want
       // to show diff highlighting so will assign an empty string to the original contents.
-      const activeOriginalFileContents = activeOriginalFile?.contents ?? '';
+      const activeOriginalFileContents = codeBeforeAiTutorVersion ?? '';
       extensions.push(
         unifiedMergeView({
           original: activeOriginalFileContents,
@@ -158,6 +169,7 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     projectSourceBeforeAiTutorVersion,
     allowMergeView,
     allowSplitView,
+    codeBeforeAiTutorVersion,
   ]);
 
   if (activeFile?.url && viewableImageFileType(activeFile.language)) {
@@ -179,9 +191,10 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
         <CodeEditor
           key={`${activeFile.id}/${hasMergeView ? 'diff' : 'normal'}`}
           onCodeChange={onChange}
-          startCode={activeFile.contents}
+          initialCode={activeFile.contents}
           appName={levelProperties.appName}
           editorConfigExtensions={editorConfigExtensions}
+          codeBeforeAiTutorVersion={codeBeforeAiTutorVersion}
         />
       ) : (
         <CodebridgeEmptyState

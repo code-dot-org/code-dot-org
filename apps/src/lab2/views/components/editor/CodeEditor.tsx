@@ -29,16 +29,22 @@ import moduleStyles from './code-editor.module.scss';
 interface CodeEditorProps {
   onCodeChange: (code: string) => void;
   editorConfigExtensions: Extension[];
-  startCode: string;
+  initialCode: string;
   appName: AppName;
+  codeBeforeAiTutorVersion?: string;
 }
 
 const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   onCodeChange,
   editorConfigExtensions,
-  startCode,
+  initialCode,
   appName,
+  codeBeforeAiTutorVersion,
 }) => {
+  console.log(
+    'codeBeforeAiTutorVersion in CodeEditor',
+    codeBeforeAiTutorVersion
+  );
   const editorRef = useRef<HTMLDivElement>(null);
   const dispatch = useAppDispatch();
   const [didInit, setDidInit] = useState(false);
@@ -54,7 +60,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   const {theme} = useTheme();
 
   const allowSplitView = experiments.isEnabledAllowingQueryString(
-    experiments.ACCEPT_REJECT_SPLIT_VIEW
+    experiments.ACCEPT_REJECT_SPLIT_DIFF
   );
 
   const isAiTutorVersion = useAppSelector(
@@ -210,7 +216,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
       setEditorView(
         new EditorView({
           state: EditorState.create({
-            doc: startCode,
+            doc: initialCode,
             extensions: editorExtensions,
           }),
           parent: editorRef.current,
@@ -225,11 +231,11 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
       setEditorView(
         new MergeView({
           a: {
-            doc: '',
+            doc: codeBeforeAiTutorVersion,
             extensions: editorExtensions,
           },
           b: {
-            doc: startCode,
+            doc: initialCode,
             extensions: editorExtensions,
           },
           parent: editorRef.current,
@@ -242,7 +248,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     editorRef,
     editorConfigExtensions,
     onCodeChange,
-    startCode,
+    initialCode,
     didInit,
     theme,
     editorReadOnlyCompartment,
@@ -253,11 +259,12 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     editorFontSizeLoaded,
     themeCompartment,
     hasSplitView,
+    codeBeforeAiTutorVersion,
   ]);
 
   // When we have a new fontSizeKey, reset font size.
   useEffect(() => {
-    if (editorView) {
+    if (editorView && editorView instanceof EditorView) {
       editorView.dispatch({
         effects: [
           fontSizeCompartment.reconfigure(
@@ -270,7 +277,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
 
   // When we have a new theme, reset the theme.
   useEffect(() => {
-    if (editorView) {
+    if (editorView && editorView instanceof EditorView) {
       editorView.dispatch({
         effects: [
           themeCompartment.reconfigure(
@@ -284,19 +291,23 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   // When we have a new channelId and/or start code, reset the editor with the start code.
   // A new channelId means we are loading a new project, and we need to reset the editor.
   useEffect(() => {
-    if (editorView && editorView.state.doc.toString() !== startCode) {
+    if (
+      editorView &&
+      editorView instanceof EditorView &&
+      editorView.state.doc.toString() !== initialCode
+    ) {
       editorView.dispatch({
         changes: {
           from: 0,
           to: editorView.state.doc.length,
-          insert: startCode,
+          insert: initialCode,
         },
       });
     }
-  }, [startCode, editorView, channelId]);
+  }, [initialCode, editorView, channelId]);
 
   useEffect(() => {
-    if (editorView) {
+    if (editorView && editorView instanceof EditorView) {
       editorView.dispatch({
         effects: [
           editorReadOnlyCompartment.reconfigure(
