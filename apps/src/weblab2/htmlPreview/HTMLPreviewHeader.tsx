@@ -47,6 +47,7 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
   fetchFileSearchOptions,
 }) => {
   const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
+  const isShareView = useAppSelector(state => state.lab.isShareView);
 
   // Supports our preview page "navigation" feature so the autocomplete suggestions
   // are only shown for user input and not for programmatic changes to the URL bar.
@@ -193,10 +194,12 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
         className={moduleStyles.previewViewModeButtons}
         {...previewViewModeButtonsProps}
       />
-      <ToggleFullScreenButton
-        isFullScreenView={isFullScreenView}
-        onToggleFullScreen={onToggleFullScreen}
-      />
+      {!isShareView && (
+        <ToggleFullScreenButton
+          isFullScreenView={isFullScreenView}
+          onToggleFullScreen={onToggleFullScreen}
+        />
+      )}
     </div>
   );
 };
