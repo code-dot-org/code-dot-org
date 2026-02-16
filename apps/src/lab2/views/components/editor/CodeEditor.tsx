@@ -328,15 +328,11 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     editorEditableCompartment,
   ]);
 
-  // Cleanup effect: destroy editor when component unmounts
+  // Cleanup effect: destroy editor when component unmounts.
   useEffect(() => {
     return () => {
       if (editorView) {
-        if (editorView instanceof EditorView) {
-          editorView.destroy();
-        } else if (editorView instanceof MergeView) {
-          editorView.destroy();
-        }
+        editorView.destroy();
       }
     };
   }, [editorView]);
