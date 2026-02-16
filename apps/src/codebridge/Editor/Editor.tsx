@@ -81,6 +81,7 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     );
   }, [isAiTutorVersion, projectSourceBeforeAiTutorVersion, activeFile?.name]);
 
+  // When we have either unified or split diff view, we need to know the original contents of the file.
   const codeBeforeAiTutorVersion = useMemo(() => {
     if (projectSourceBeforeAiTutorVersion) {
       const originalFiles = projectSourceBeforeAiTutorVersion.files;
@@ -96,17 +97,17 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     return undefined;
   }, [projectSourceBeforeAiTutorVersion, activeFile?.name]);
 
-  // Determine if we should show split view (side-by-side diff)
+  // Determine if we should show split view (side-by-side diff).
   // We need to ensure codeBeforeAiTutorVersion is defined (not just projectSourceBeforeAiTutorVersion)
-  // Move this AFTER codeBeforeAiTutorVersion is computed so we can check it
+  // so this is computed AFTER codeBeforeAiTutorVersion is computed.
   const hasSplitView = useMemo(() => {
-    const hasData =
+    return !!(
       isAiTutorVersion &&
       projectSourceBeforeAiTutorVersion &&
       activeFile?.name &&
       allowSplitView &&
-      codeBeforeAiTutorVersion !== undefined;
-    return hasData;
+      codeBeforeAiTutorVersion !== undefined
+    );
   }, [
     isAiTutorVersion,
     projectSourceBeforeAiTutorVersion,
