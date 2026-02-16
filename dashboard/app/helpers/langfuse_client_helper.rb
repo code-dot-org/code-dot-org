@@ -26,5 +26,21 @@ module LangfuseClientHelper
       )
       response
     end
+
+    def add_dataset_item(dataset_item)
+      headers = {
+        "Content-Type" => "application/json",
+      }
+      response = HTTParty.post(
+        "#{LANGFUSE_URL}/dataset-items",
+        basic_auth: {
+          username: @public_key,
+          password: @secret_key
+        },
+        headers: headers,
+        body: dataset_item.to_json
+      )
+      response
+    end
   end
 end

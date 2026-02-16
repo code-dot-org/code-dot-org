@@ -52,7 +52,7 @@ class AidiffThreadsController < ApplicationController
       end
     end
 
-    return_body = response_body.slice(:role, :status, :chat_message_text, :message_id, :thread_id)
+    return_body = response_body.slice(:role, :status, :chat_message_text, :message_id, :thread_id, :is_artifact_candidate, :artifact_candidate_type)
 
     render(json: return_body)
   end
