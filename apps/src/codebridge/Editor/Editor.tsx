@@ -71,7 +71,8 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     [dispatch, activeFile?.id]
   );
 
-  // Only show unified diff view when we have AI tutor mode and projectSourceBeforeAiTutorVersion.
+  // Only show unified diff view when experiment flag is turned on, we are in AI tutor mode,
+  // and have projectSourceBeforeAiTutorVersion along with an active file.
   // Used in key so we remount CodeEditor when this becomes true.
   const hasMergeView = useMemo(() => {
     return !!(
