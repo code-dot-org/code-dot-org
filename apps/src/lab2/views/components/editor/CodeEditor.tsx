@@ -66,8 +66,10 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     state => state.lab2Project.projectSourceBeforeAiTutorVersion
   );
 
-  // Only show split diff view when we have AI tutor mode and projectSourceBeforeAiTutorVersion.
-  // For new files that don't exist in projectSourceBeforeAiTutorVersion, we'll show diff against an empty document (empty string).
+  // Only show split diff view when experiment flag is turned on, we are in AI tutor mode,
+  // and have projectSourceBeforeAiTutorVersion.
+  // For new files that don't exist in projectSourceBeforeAiTutorVersion,
+  // we'll show diff against an empty document (empty string).
   // Used in key so we remount CodeEditor when this becomes true.
   const hasSplitView = useMemo(() => {
     const result =
