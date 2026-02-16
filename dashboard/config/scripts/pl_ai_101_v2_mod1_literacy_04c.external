@@ -1,13 +1,12 @@
-name 'pl-ai-101-V2-mod1-literacy-04'
+name 'pl-ai-101-V2-mod1-literacy-04c'
 title 'title'
 description 'description here'
-display_name 'Elementary School'
-bubble_choice_description 'Explore AI Literacy Skills with Elementary School Examples'
-thumbnail_url 'https://images.code.org/5394516c25f360d45e47665aa5eecd86-Screenshot 2026-02-13 at 1.22.31 PM.png'
+display_name 'High School'
+bubble_choice_description 'Explore AI Literacy Skills with High School Examples'
+thumbnail_url 'https://images.code.org/c8d5c049bf30a12688cf16cf08dc2f6c-Screenshot 2026-02-13 at 1.22.42 PM.png'
 
 markdown <<MARKDOWN
-# AI Literacy Skills, Elementary
-
+# AI Literacy Skills, High School
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 <summary style="font-size: 1.5em; font-weight: bold;">1. Recognize and Explain AI in Everyday Life</summary>
@@ -16,15 +15,16 @@ markdown <<MARKDOWN
 <p style="font-size: 16px">
 <strong>Examples:</strong></p>
  <ul style="font-size: 16px">
-  <li>Identify tools that use AI (voice assistants, recommendations, filters).</li>
-  <li>Explain that AI uses patterns from data to make suggestions.</li>
-  <li>Describe what information AI uses (inputs) and what it produces (outputs).</li>
-  <li>Avoid saying AI “thinks” or “feels.”</li>
+  <li>Explain how algorithms and statistical models generate predictions or content.</li>
+  <li>Compare machine learning systems to rule-based systems.</li>
+  <li>Analyze how system design shapes outcomes.</li>
+  <li>Critically evaluate claims about AI capabilities in media.</li>
  </ul>
  
 <p style="font-size: 16px"><strong>Why it Matters:</strong> Students must first see AI clearly before they can evaluate or manage it — recognizing AI is the first step to using it responsibly and critically.</p>
 </div>
 </details>
+
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 <summary style="font-size: 1.5em; font-weight: bold;">2. Evaluate AI Outputs for Accuracy, Bias, and Relevance</summary>
@@ -33,10 +33,10 @@ markdown <<MARKDOWN
 <p style="font-size: 16px">
 <strong>Examples:</strong></p>
  <ul style="font-size: 16px">
-  <li>Check AI answers against class materials or trusted sources.</li>
-  <li>Ask: “Does this make sense?” and “Is this fair?”</li>
-  <li>Identify when AI gives incorrect or silly answers.</li>
-  <li>Decide whether to use or ignore an AI suggestion.</li>
+  <li>Systematically evaluate outputs for reliability, bias, and completeness.</li>
+  <li>Analyze how training data might shape inaccurate outputs.</li>
+  <li>Assess misinformation risks in generative AI.</li>
+  <li>Decide whether outputs should be accepted, revised, or rejected with justification.</li>
  </ul>
  
 <p style="font-size: 16px"><strong>Why it Matters:</strong> AI can produce convincing but incorrect or unfair results; learning to verify outputs builds critical thinking and safer use habits.</p>
@@ -51,10 +51,10 @@ markdown <<MARKDOWN
 <p style="font-size: 16px">
 <strong>Examples:</strong></p>
  <ul style="font-size: 16px">
-  <li>Sort and label examples to simulate how AI learns patterns.</li>
-  <li>Explain that AI needs lots of examples to learn.</li>
-  <li>Understand that humans choose and organize the data.</li>
-  <li>Notice how different examples change results.</li>
+  <li>Explain how machine learning models use statistical inference.</li>
+  <li>Analyze how data selection and labeling influence outcomes.</li>
+  <li>Evaluate fairness and representation in training datasets.</li>
+  <li>Describe model limitations, tradeoffs, and potential harms.</li>
  </ul>
  
 <p style="font-size: 16px"><strong>Why it Matters:</strong> Understanding how AI is trained helps students see how inputs shape outputs and why fairness and data quality matter.</p>
@@ -69,10 +69,10 @@ markdown <<MARKDOWN
 <p style="font-size: 16px">
 <strong>Examples:</strong></p>
  <ul style="font-size: 16px">
-  <li>Use AI to brainstorm ideas for stories or projects.</li>
-  <li>Choose which suggestions fit their creative vision.</li>
-  <li>Revise AI-generated ideas in their own words.</li>
-  <li>Give credit when AI helped.</li>
+  <li>Use advanced prompting strategies to guide output quality.</li>
+  <li>Reflect on how AI influenced creative decisions.</li>
+  <li>Evaluate intellectual property and attribution concerns.</li>
+  <li>Maintain accountability for final products.</li>
  </ul>
  
 <p style="font-size: 16px"><strong>Why it Matters:</strong> AI can amplify creativity, but students must remain the authors of their work and learn to take responsibility for final products.</p>
@@ -87,10 +87,10 @@ markdown <<MARKDOWN
 <p style="font-size: 16px">
 <strong>Examples:</strong></p>
  <ul style="font-size: 16px">
-  <li>Decide whether AI is helpful for a task (e.g., spelling vs. storytelling).</li>
-  <li>Recognize tasks that require personal effort.</li>
-  <li>Ask a teacher before using AI for assignments.</li>
-  <li>Consider if AI makes the task better or worse.</li>
+  <li>Evaluate technical, ethical, and environmental tradeoffs before using AI.</li>
+  <li>Determine when AI use undermines authentic learning.</li>
+  <li>Justify AI use decisions using defined criteria.</li>
+  <li>Compare multiple AI tools for alignment with task goals.</li>
  </ul>
  
 <p style="font-size: 16px"><strong>Why it Matters:</strong> Learning to choose tools intentionally protects learning goals and builds responsible technology habits.</p>
@@ -105,10 +105,10 @@ markdown <<MARKDOWN
 <p style="font-size: 16px">
 <strong>Examples:</strong></p>
  <ul style="font-size: 16px">
-  <li>Use AI for structured tasks (e.g., spelling checks).</li>
-  <li>Keep control over important decisions.</li>
-  <li>Improve AI responses with clearer instructions.</li>
-  <li>Explain how they used AI.</li>
+  <li>Strategically distribute workflows between AI systems and human judgment.</li>
+  <li>Evaluate AI performance using defined criteria.</li>
+  <li>Develop guidelines for responsible AI collaboration.</li>
+  <li>Reflect on how AI changes human roles and responsibilities.</li>
  </ul>
  
 <p style="font-size: 16px"><strong>Why it Matters:</strong> AI should enhance human thinking, not replace it — students need to maintain agency and responsibility in their work.</p>
@@ -123,10 +123,10 @@ markdown <<MARKDOWN
 <p style="font-size: 16px">
 <strong>Examples:</strong></p>
  <ul style="font-size: 16px">
-  <li>Discuss how AI can help or hurt people.</li>
-  <li>Notice when recommendations seem unfair.</li>
-  <li>Learn that AI uses electricity and devices.</li>
-  <li>Talk about being kind and fair when using AI.</li>
+  <li>Analyze systemic bias in predictive systems (e.g., hiring, loans, policing).</li>
+  <li>Evaluate fairness, transparency, and accountability in AI systems.</li>
+  <li>Debate regulation and oversight of AI technologies.</li>
+  <li>Assess sustainability tradeoffs of AI deployment.</li>
  </ul>
  
 <p style="font-size: 16px"><strong>Why it Matters:</strong> Understanding AI’s broader impact builds empathy, fairness, and responsible digital citizenship.</p>
@@ -141,16 +141,14 @@ markdown <<MARKDOWN
 <p style="font-size: 16px">
 <strong>Examples:</strong></p>
  <ul style="font-size: 16px">
-  <li>Create simple sorting systems using rules.</li>
-  <li>Label data and test how it changes results.</li>
-  <li>Identify when a system makes mistakes.</li>
-  <li>Suggest ways to improve fairness.</li>
+  <li>Propose AI solutions to community problems.</li>
+  <li>Define success criteria and evaluation metrics for AI systems.</li>
+  <li>Create model documentation describing purpose, users, and limitations.</li>
+  <li>Iteratively improve systems based on diverse user feedback.</li>
  </ul>
  
 <p style="font-size: 16px"><strong>Why it Matters:</strong> Designing and improving systems empowers students to see themselves as creators and shapers of technology, not just consumers.</p>
 </div>
 </details>
-
-
 
 MARKDOWN
