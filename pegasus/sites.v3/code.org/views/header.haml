@@ -27,8 +27,9 @@
 %nav.main
   .left
     -# rubocop:disable CustomCops/DashboardDbUsage
-    %a{href: current_user ? CDO.studio_url("/home") : CDO.code_org_url}
-      %img.logo{src: '/images/logo-inverse.svg', alt: I18n.t(:code_org_logo_alt)}
+    - require 'cdo/brand'
+    %a{href: current_user ? CDO.studio_url("/home") : Cdo::Brand.marketing_url(ge_region: request.ge_region)}
+      %img.logo{src: "/images/#{Cdo::Brand.logo}", alt: Cdo::Brand.logo_alt_text}
     -# rubocop:enable CustomCops/DashboardDbUsage
     %ul#headerlinks
       - Hamburger.get_header_contents(header_contents_options).each do |entry|
