@@ -1,4 +1,4 @@
-@import 'color';
+@import 'color', 'font';
 @import '@code-dot-org/component-library-styles/font';
 @import '@code-dot-org/component-library-styles/typography.module';
 @import '@code-dot-org/component-library-styles/mixins';
@@ -521,6 +521,113 @@ html body .sidebarActionTooltip {
   }
 }
 
+.artifactButtons {
+  button {
+    margin-inline-end: 8px;
+    margin-bottom: 8px;
+  }
+
+  a {
+    color: var(--text-neutral-tertiary);
+    font-weight: 600;
+    text-decoration: underline;
+
+    i {
+      margin-inline-start: 4px;
+    }
+  }
+}
+
+.artifactConfiguration {
+  &Section {
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--background-neutral-secondary);
+
+    h6 {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    &Header {
+      border-bottom: 1px solid var(--borders-neutral-primary);
+      padding-bottom: 12px;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      align-self: stretch;
+
+      a {
+        color: #9660bf;
+        text-decoration: underline;
+        font-weight: 600;
+        font-size: 14px;
+      }
+    }
+  }
+
+  &Dropdowns {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+
+    label {
+      width: 294px;
+    }
+  }
+
+  &Checkboxes {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    label {
+      width: 294px;
+    }
+  }
+
+  &FAQLink {
+    margin-left: 20px;
+    color: var(--text-neutral-primary);
+    text-decoration: underline;
+    font-weight: 600;
+
+    i {
+      margin-inline-start: 4px;
+      text-decoration: none;
+    }
+  }
+
+  &SaveButtons {
+    margin: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--borders-neutral-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+  }
+
+  h3 {
+    color: var(--text-neutral-primary);
+    font-size: 24px;
+    line-height: 31.68px;
+    font-family: $barlowSemiCondensed-semibold;
+    margin: 0 0 8px 0;
+  }
+
+  h4 {
+    color: var(--text-neutral-primary);
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
 .artifactContainer {
   display: flex;
   padding-top: 60px;
