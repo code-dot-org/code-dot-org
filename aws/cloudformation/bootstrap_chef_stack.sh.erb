@@ -15,7 +15,7 @@ DASHBOARD_SUBDOMAIN_NAME=${DashboardSubdomainName}
 # does not modify the bash syntax.
 DASHBOARD_DOMAIN_NAME="${!DASHBOARD_SUBDOMAIN_NAME}.${!BASE_DOMAIN_NAME}"
 # All deployments link to the production corporate site, now that Pegasus is deprecated.
- PEGASUS_DOMAIN_NAME=code.org
+PEGASUS_DOMAIN_NAME=code.org
 
 # These environment variables are NOT set with CloudFormation string substitution.
 CHEF_VERSION=<%=CHEF_VERSION%>
