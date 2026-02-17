@@ -41,6 +41,8 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
     } else if (networkRequests.length === 0 && selectedRequest !== undefined) {
       setSelectedRequest(undefined);
     } else if (selectedRequest) {
+      // If the selected request has changed in redux (e.g. we received a response for it),
+      // update the selected request to reflect those changes.
       const matchingRequest = networkRequests.find(
         request => request.id === selectedRequest.id
       );
