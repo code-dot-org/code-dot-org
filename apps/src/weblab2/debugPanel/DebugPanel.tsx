@@ -1,3 +1,4 @@
+import CloseButton from '@code-dot-org/component-library/closeButton';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   BodyFourText,
@@ -7,11 +8,12 @@ import {
 import React, {useEffect, useMemo} from 'react';
 
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import RequestFailureDivider from '@cdo/apps/weblab2/debugPanel/images/RequestFailure.svg';
 import ResponseFailureDivider from '@cdo/apps/weblab2/debugPanel/images/ResponseFailure.svg';
 import SuccessDivider from '@cdo/apps/weblab2/debugPanel/images/Success.svg';
 import {NetworkEntry} from '@cdo/apps/weblab2/redux/networkRedux';
+import {setDebugPanelOpen} from '@cdo/apps/weblab2/weblab2Redux';
 
 import DetailsBox from './DetailsBox';
 import NetworkRequestChip from './NetworkRequestChip';
@@ -33,6 +35,7 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
       ? networkRequests[networkRequests.length - 1]
       : undefined
   );
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     if (!selectedRequest && networkRequests.length > 0) {
@@ -136,6 +139,12 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
       id={'debug-panel-container'}
       headerContent={'Debug'}
       className={className}
+      rightHeaderContent={
+        <CloseButton
+          onClick={() => dispatch(setDebugPanelOpen(false))}
+          aria-label="Close debug panel"
+        />
+      }
     >
       {networkRequests.length === 0 ? (
         <div>No network requests</div>

@@ -37,7 +37,7 @@ const INITIAL_PREVIEW_WIDTH_WIDGET = 900;
 const INITIAL_INFO_PANEL_WIDTH_COLLAPSED = 55;
 const INITIAL_PREVIEW_WIDTH_COLLAPSED = 650;
 const DEBUG_PANEL_INITIAL_HEIGHT = 300;
-const MIN_DEBUG_PANEL_HEIGHT = 100;
+const MIN_DEBUG_PANEL_HEIGHT = 200;
 
 const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
   isWidgetView,
