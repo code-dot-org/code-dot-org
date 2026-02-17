@@ -232,6 +232,8 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
       } else {
         // For split diff view, we want to hide green "inserted" markers in doc B
         // that correspond to deletions in doc A (not actual additions).
+        // For actual additions, we continue to show the green markers because they include
+        // 'cm-changedText' class which is used to style the added text.
         const splitDiffTheme = EditorView.theme({
           '.cm-merge-b .cm-insertedLine': {display: 'none'},
           '.cm-merge-b .cm-insertedChunk': {display: 'none'},
