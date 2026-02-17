@@ -257,8 +257,11 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
                 separatorProps={debugPanelSeparatorProps}
                 isDragging={debugPanelDragging}
               />
-              <div style={{height: debugPanelHeight}}>
-                <DebugPanel className={weblab2Styles.debugPanelContainer} />
+              <div
+                style={{height: debugPanelHeight}}
+                className={lab2Styles.flexShrink0}
+              >
+                <DebugPanel />
               </div>
             </>
           )}
