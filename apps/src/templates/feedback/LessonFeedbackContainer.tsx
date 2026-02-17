@@ -70,6 +70,7 @@ function LessonFeedbackContainer({studentId}: LessonFeedbackContainerProps) {
               submittedAtDate={lessonFeedback.updated_at}
               lessonTitle={lessonFeedback.lesson_title}
               lessonStartUrl={lessonFeedback.lesson_start_url}
+              resource={lessonFeedback.resources?.[0]}
             />
           );
         })}
