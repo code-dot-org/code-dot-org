@@ -26,6 +26,7 @@ import {loadLevelsWithProgress} from '@cdo/apps/code-studio/teacherPanelRedux';
 import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import fontConstants from '@cdo/apps/fontConstants';
+import {getExampleSolutionLink} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
@@ -360,7 +361,7 @@ export default connect(
       isSortedByFamilyName: state.currentUser.isSortedByFamilyName,
       exampleSolutions: state.pageConstants?.exampleSolutions,
       currentLevelId: state.progress.currentLevelId,
-      lab2ExampleSolutions: state.lab?.levelProperties?.exampleSolutions,
+      lab2ExampleSolutions: getExampleSolutionLink(state),
       isCurrentLevelLab2: getCurrentLevel(state)?.usesLab2,
     };
   },

@@ -11,6 +11,7 @@
   --brand_primary_light: #abdfe5;
   --brand_primary_medium: #7bc6cf;
   --brand_primary_default: #0093a4;
+  --brand_primary_contrast: #00818f;
   --brand_primary_dark: #008291;
   --brand_secondary_light: #e0d1ec;
   --brand_secondary_default: #8c52ba;
@@ -520,7 +521,7 @@ td {
 
 /* Start top navigation bar styles ------------------------ */
 nav.main {
-  background-color: var(--brand_primary_default);
+  background-color: var(--brand_primary_contrast);;
   margin: 0;
   padding: 0.375rem 0.875rem;
   position: relative;
