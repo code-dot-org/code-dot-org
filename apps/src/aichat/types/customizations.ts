@@ -14,6 +14,8 @@ export interface ModelParameters {
   systemPrompt: string;
   retrievalContexts: string[];
   responseJsonSchema?: object;
+  // TODO - remove once moved over to Vertex API completely.
+  useVertex?: boolean;
 }
 
 /**

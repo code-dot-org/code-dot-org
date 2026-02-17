@@ -8,16 +8,21 @@ import React from 'react';
 import styles from './LessonFeedback.module.scss';
 
 interface LessonRecommendedActionProps {
-  resourceComment: string;
-  resourceLink: string;
+  resource: {
+    recommended_action?: string;
+    resource_name?: string;
+    resource_link?: string;
+  };
 }
 
-function LessonRecommendedAction({
-  resourceComment,
-  resourceLink,
-}: LessonRecommendedActionProps) {
+function LessonRecommendedAction({resource}: LessonRecommendedActionProps) {
   const handleViewResource = () => {
-    window.open(resourceLink, '_blank', 'noopener,noreferrer');
+    if (resource.resource_link) {
+      const url = resource.resource_link.match(/^https?:\/\//)
+        ? resource.resource_link
+        : `https://${resource.resource_link}`;
+      window.open(url, '_blank', 'noopener,noreferrer');
+    }
   };
 
   return (
@@ -25,15 +30,18 @@ function LessonRecommendedAction({
       <BodyTwoText className={styles.strongText}>
         Recommended action
       </BodyTwoText>
-      <BodyThreeText>{resourceComment}</BodyThreeText>
-
-      <Button
-        onClick={handleViewResource}
-        text="View Resource"
-        type="primary"
-        size="xs"
-        iconLeft={{iconName: 'link'}}
-      />
+      {resource.recommended_action && (
+        <BodyThreeText>{resource.recommended_action}</BodyThreeText>
+      )}
+      {resource.resource_name && resource.resource_link && (
+        <Button
+          onClick={handleViewResource}
+          text={resource.resource_name || 'View Resource'}
+          type="primary"
+          size="xs"
+          iconLeft={{iconName: 'link'}}
+        />
+      )}
     </div>
   );
 }

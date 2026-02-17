@@ -1,10 +1,11 @@
-require_relative './aichat_ai_client_test'
+require_relative './aichat_ai_client_test_legacy'
 
-class AichatGeminiClientTest < AichatAiClientTest
+# Remove after new Vertex implementation is tested on production
+class AichatGeminiClientTestLegacy < AichatAiClientTestLegacy
   let(:internal_model_id) {'gemini-2.0-flash'}
   let(:endpoint_model_id) {internal_model_id}
 
-  let(:endpoint_url) {"https://aiplatform.googleapis.com/v1/projects/#{@vertex_project_id}/locations/global/publishers/google/models/#{endpoint_model_id}:generateContent"}
+  let(:endpoint_url) {"https://generativelanguage.googleapis.com/v1beta/models/#{endpoint_model_id}:generateContent?key="}
 
   let(:json_schema) {nil}
 

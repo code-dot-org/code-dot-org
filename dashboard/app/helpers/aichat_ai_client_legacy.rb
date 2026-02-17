@@ -1,7 +1,7 @@
 # Combined class to hold shared logic for multiple AI API backends. This is essentially an "abstract" class
 # that is never instantiated directly. The derived classes hold implementation details in required overridden
 # methods. Currently the two implemented APIs (OpenAI and Gemini) are POST based REST APIs.
-class AichatAiClient
+class AichatAiClientLegacy
   # Call the API (through methods overridden in derived class) and get response text to send back to user.
   # Accept a config hash, request array and optional context array.  These types are defined and documented
   # in `aichat_ai_client_types.rb``.
@@ -89,14 +89,7 @@ class AichatAiClient
   private def headers
     {
       "Content-Type" => "application/json",
-      "Authorization" => "Bearer #{bearer_token}",
     }
-  end
-
-  # Bearer token defaults to the api_key instance variable.
-  # The derived class can optionally override this.
-  private def bearer_token
-    api_key
   end
 
   private def raise_not_implemented_error

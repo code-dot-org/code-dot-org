@@ -1,7 +1,8 @@
 require 'test_helper'
 require 'webmock/minitest'
 
-class AichatAiClientTest < ActionView::TestCase
+# Remove after new Vertex implementation is tested on production
+class AichatAiClientTestLegacy < ActionView::TestCase
   setup do
     @stored_messages = [
       {
@@ -28,8 +29,6 @@ class AichatAiClientTest < ActionView::TestCase
     @encrypted_channel_id = 12345
     @user_id = 'test-user'
     @project_id = 'Aichat project'
-    @vertex_project_id = 'vertex-project-id'
-    @vertex_bearer_token = 'vertex-bearer-token'
     @client_type = SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB]
     @response_text = "some response text"
     @specific_error_message = 'some specific error message'
@@ -183,21 +182,18 @@ class AichatAiClientTest < ActionView::TestCase
       json_schema
     )
 
-    AichatAiHelper.create_ai_client_instance(@client_type, model_id, usage_reporter).get_response(
+    AichatAiHelper.create_ai_client_instance_legacy(@client_type, model_id, usage_reporter).get_response(
       config, request, context
     )
   end
 
   private def stub_request_and_get_response(new_message, url_to_post, expected_request_body, expected_headers, stubbed_response_body, model_id, level, json_schema = nil)
-    AichatGeminiClient.any_instance.stubs(:project_id).returns(@vertex_project_id)
-    AichatGeminiClient.any_instance.stubs(:bearer_token).returns(@vertex_bearer_token)
-
     stub_request(:post, url_to_post).
-        with(
-          body: expected_request_body,
-          headers: expected_headers
-      ).
-      to_return(status: 200, body: stubbed_response_body.to_json, headers: {})
+          with(
+            body: expected_request_body,
+            headers: expected_headers
+        ).
+        to_return(status: 200, body: stubbed_response_body.to_json, headers: {})
 
     call_get_response(model_id, level, new_message, json_schema)
   end
