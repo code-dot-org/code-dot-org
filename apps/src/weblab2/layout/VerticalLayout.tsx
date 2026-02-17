@@ -54,9 +54,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
     state => state.weblab2.aiTutorVersionFiles
   );
 
-  const debugPanelCollapsed = useAppSelector(
-    state => state.weblab2.debugPanelCollapsed
-  );
+  const debugPanelOpen = useAppSelector(state => state.weblab2.debugPanelOpen);
 
   const dispatch = useAppDispatch();
 
@@ -176,7 +174,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
 
   const showDebugPanel =
     experiments.isEnabledAllowingQueryString(experiments.WEBLAB2_DEBUG_PANEL) &&
-    !debugPanelCollapsed;
+    debugPanelOpen;
 
   return (
     <div className={lab2Styles.defaultContainer}>
