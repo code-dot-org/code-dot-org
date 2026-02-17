@@ -74,6 +74,8 @@ experiments.ACCEPT_REJECT_UNIFIED_DIFF = 'accept-reject-unified-diff';
 experiments.ACCEPT_REJECT_SPLIT_DIFF = 'accept-reject-split-diff';
 // Show debug panel in Web Lab 2
 experiments.WEBLAB2_DEBUG_PANEL = 'weblab2-show-debug';
+// Enable the new teacher dashboard student snapshot page and features
+experiments.STUDENT_SNAPSHOT = 'student-snapshot';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,
