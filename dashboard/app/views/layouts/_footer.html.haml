@@ -1,4 +1,5 @@
 - require 'cdo/footer'
+- require 'cdo/brand'
 
 - full_width = local_assigns[:full_width]
 - options = {}
@@ -41,4 +42,5 @@
         - if request.ge_region
           = render_shared_haml('global_edition/region_reset_button')
         %small.dim
-          !="&copy; Code.org, #{Time.now.year}"
+          - brand_name = Cdo::Brand.current_brand_name.to_s.capitalize
+          !="&copy; #{brand_name}, #{Time.now.year}"

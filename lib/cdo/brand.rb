@@ -4,7 +4,7 @@ module Cdo
   class Brand
     # Brand configurations
     BRANDS = {
-      'code' => {
+      'code.org' => {
         logo: 'logo-inverse.svg',
         logo_alt_key: :code_org_logo_alt,
         favicon: 'favicon.ico',
@@ -15,13 +15,13 @@ module Cdo
     # Get the current brand name from DCDO flag
     # Defaults to 'code' if flag is not set
     def self.current_brand_name
-      DCDO.get('studio_brand_name', 'code')
+      DCDO.get('studio_brand_name', 'code.org')
     end
 
     # Get the current brand configuration
     def self.current_brand
       brand_name = current_brand_name
-      BRANDS[brand_name] || BRANDS['code']
+      BRANDS[brand_name] || BRANDS['code.org']
     end
 
     # Get the logo filename for the current brand
