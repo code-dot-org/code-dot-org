@@ -78,7 +78,6 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
           );
         }
         const data = await response.json();
-        console.log('AI lesson feedback data:', data);
         return data;
       } catch (err) {
         console.error('AI lesson feedback error:', err);
@@ -101,7 +100,6 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
 
         if (!response.ok) {
           // Try getting AI feedback from student work.
-          // I owonder if here is where I need to clear out the "existingFeedbackData"
           const aiData = await getAiLessonFeedback(
             lessonId,
             unitId,

@@ -56,7 +56,7 @@ module AiStudentSnapshotHelper
       saved_record = save_lesson_feedback(feedback_string, student_id, lesson_id, section_id, teacher_id)
       return {status: evaluation[:status], record: saved_record}
     else
-      raise StandardError.new("Recieved status code #{response.code} when processing AI lesson feedback: #{response.body}")
+      raise StandardError.new("Received status code #{response.code} when processing AI lesson feedback: #{response.body}")
     end
   end
 
