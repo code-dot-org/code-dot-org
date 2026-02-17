@@ -169,6 +169,11 @@ Resources:
           -
             Name: HONEYBADGER_API_KEY
             Value: !Ref HoneybadgerApiKey
+          # Wait for Cluster to restore from Snapshot.
+          - Name: DB_RESTORE_MAX_ATTEMPTS
+            Value: "240"
+          - Name: DB_RESTORE_DELAY_SECONDS
+            Value: "60"
   CloudwatchLogsGroup:
     Type: AWS::Logs::LogGroup
     Properties:

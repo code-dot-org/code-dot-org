@@ -31,6 +31,8 @@ const REGION = process.env.REGION;
 const DB_INSTANCE_CLASS = process.env.DB_INSTANCE_CLASS;
 const DB_ENGINE = process.env.DB_ENGINE;
 const DB_NAME = process.env.DB_NAME;
+const MAX_ATTEMPTS = parseInt(process.env.DB_RESTORE_MAX_ATTEMPTS || "240", 10);
+const DELAY_SECONDS = parseInt(process.env.DB_RESTORE_DELAY_SECONDS || "60", 10);
 const NEW_PASSWORD = generateSimplePassword(32);
 
 const main = async () => {
@@ -116,13 +118,13 @@ const restoreLatestSnapshot = async (rdsClient, clusterId, instanceId) => {
 
   await rdsClient.send(createInstanceCommand);
 
-  // Wait for instance to be available
+  // Wait for instance to be available.
   let instanceAvailable = false;
   let attempts = 0;
-  const maxAttempts = 120;
-  const delaySeconds = 60;
 
-  while (!instanceAvailable && attempts < maxAttempts) {
+  console.log(`Waiting for instance. Max timeout: ${(MAX_ATTEMPTS * DELAY_SECONDS) / 3600} hours.`);
+
+  while (!instanceAvailable && attempts < MAX_ATTEMPTS) {
     try {
       const describeInstanceCommand = new DescribeDBInstancesCommand({
         DBInstanceIdentifier: instanceId
@@ -133,16 +135,16 @@ const restoreLatestSnapshot = async (rdsClient, clusterId, instanceId) => {
         instanceAvailable = true;
       } else {
         attempts++;
-        await sleepMs(delaySeconds * 1000);
+        await sleepMs(DELAY_SECONDS * 1000);
       }
     } catch (error) {
       attempts++;
-      await sleepMs(delaySeconds * 1000);
+      await sleepMs(DELAY_SECONDS * 1000);
     }
   }
 
   if (!instanceAvailable) {
-    throw new Error(`Instance ${instanceId} did not become available after ${maxAttempts} attempts`);
+    throw new Error(`Instance ${instanceId} did not become available after ${MAX_ATTEMPTS} attempts (${(MAX_ATTEMPTS * DELAY_SECONDS) / 60} minutes)`);
   }
 };
 
