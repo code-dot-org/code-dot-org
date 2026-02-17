@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-02-16T13:04:06.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# CIW AI Associate Standard: 3.9\n# Standard Description: Explain the difference between classification and regression.\n#\n# Rationale: This tutorial introduces the two most common types of supervised learning.\n# By using scikit-learn to build both a classifier and a regressor, students can \n# see firsthand how the output type (categorical vs. continuous) determines the \n# nature of the machine learning task.\n\n\"\"\"\nWelcome! In this tutorial, we are going to explore two main ways machines \"learn\" \nfrom data: Classification and Regression.\n\nThink of it like this:\n- Classification is like sorting mail into boxes (Category A, Category B, Category C).\n- Regression is like guessing the price of a house or the temperature outside (A specific number).\n\nLet's see how scikit-learn handles both!\n\"\"\"\n\n# First, we import the tools we need\nfrom sklearn.datasets import load_iris, load_diabetes\nfrom sklearn.linear_model import LogisticRegression, LinearRegression\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# --- PART 1: CLASSIFICATION ---\n# Classification is used when we want to predict a LABEL or CATEGORY.\n\nprint(\"--- Part 1: Classification (Predicting Categories) ---\")\n\n# We'll use the famous \"Iris\" dataset. It contains measurements of flowers.\n# Our goal is to predict which SPECIES (category) the flower belongs to.\niris = load_iris()\n# To keep the graph simple, we will only use the first two features (Length/Width)\nX_class = iris.data[:, :2] \ny_class = iris.target\n\n# We create a \"Classifier\"\nclassifier = LogisticRegression(max_iter=200)\nclassifier.fit(X_class, y_class)\n\n# Visualization for Classification\nplt.figure(figsize=(10, 4))\nplt.subplot(1, 2, 1)\nplt.scatter(X_class[:, 0], X_class[:, 1], c=y_class, cmap='brg', edgecolors='k')\nplt.title(\"Classification: Sorting by Category\\n(Iris Species)\")\nplt.xlabel(\"Sepal Length\")\nplt.ylabel(\"Sepal Width\")\n\n# Let's make a prediction for a new flower\nnew_flower = [[5.1, 3.5]]\nprediction = classifier.predict(new_flower)\nspecies_name = iris.target_names[prediction][0]\n\nprint(f\"For measurements {new_flower}, the AI predicts the species is: {species_name}\")\n\n# --- PART 2: REGRESSION ---\n# Regression is used when we want to predict a CONTINUOUS NUMBER.\n\nprint(\"\\n--- Part 2: Regression (Predicting Numbers) ---\")\n\n# We'll use the \"Diabetes\" dataset. \ndiabetes = load_diabetes()\n# We will use just one feature (BMI) to see the relationship clearly on a graph\nX_reg = diabetes.data[:, np.newaxis, 2] \ny_reg = diabetes.target\n\n# We create a \"Regressor\"\nregressor = LinearRegression()\nregressor.fit(X_reg, y_reg)\n\n# Visualization for Regression\nplt.subplot(1, 2, 2)\nplt.scatter(X_reg, y_reg, color='gray', alpha=0.5)\nplt.plot(X_reg, regressor.predict(X_reg), color='red', linewidth=2)\nplt.title(\"Regression: Predicting a Number\\n(Disease Progression)\")\nplt.xlabel(\"BMI (scaled)\")\nplt.ylabel(\"Progression Score\")\n\nplt.tight_layout()\nprint(\"Look for the popup window to see the difference visually!\")\nplt.show()\n\n\"\"\"\n--- YOUR TURN ---\nNow it's your chance to try! We've started the code for you below.\n\nTask: Complete this fruit classifier (Apple vs. Orange) by creating the model \nand making the final prediction.\n\n1. We've provided the data (X_fruit) and labels (y_fruit).\n2. Create the LogisticRegression model.\n3. Use .fit() to train it.\n4. Predict the type of the 'unknown_fruit'.\n\"\"\"\n\n# STARTING CODE FOR STUDENT:\nfrom sklearn.linear_model import LogisticRegression\n\n# X_fruit features: [Weight (grams), Texture (1=Smooth, 2=Rough)]\nX_fruit = [[140, 1], [155, 1], [180, 2], [195, 2]]\ny_fruit = [0, 0, 1, 1] # 0 = Apple, 1 = Orange\n\nunknown_fruit = [[160, 1.5]]\n\n# TODO: Create the model (name it 'fruit_model')\n# TODO: Fit the model to X_fruit and y_fruit\n# TODO: Predict for 'unknown_fruit' and print the result!\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFTDG6jyYgtI/CEUE/82dEkG4hlI8OLsdjJD0In8S\n03BB+jPkGgyYB0/9C3zqHMHEFpKeCsugYbpGMxzBNwrd7qASagJaFzMnVUyM\n2TXS7Hau9lj7JpZIHXn9fmxXRRANWQJntWHlmIeCi5TTPI1LirVDaAxD+4/3\n2WZ0vOR4SQp+fdWhd6xVLrcN8pUWHrTjexeXEMD6d6cwAHXiKNXIlNco/Qzh\nZekMNAUeJihHwzgqeBdOmHAnQ9H3QV9QLWE8BhF7blbs9wiqeZU6K54q/fup\nZd/cBIY3EYRqU071VLGm+in1xKqsoYwZe0g5ziL7pUzdtV6AYB/DOk7KpW1l\nozFiqHwvC+hXrJ4IzkoBHPczs0sPkPAPejVJ//A/pjGfzKbwF2s5prvV6+VK\n+Su+o9sRsXTmG2NzJa186YgfIGH2yZaNSz2sm5sRxcEGMMX4qwoVW67vou4a\njNvnWboRZs4mVrZgrsJDehHICPLNSZst9s10/IboKcXBdAf3CI1pvCc+nzAq\nR+GsCyUNTVAFV2e/y0BK6X9068GXAMRXrlD/dU/pIxmaUeQuC5irUl3td2+9\nCLlfCkd6YeW5Klsp1a+hXD6cirz1b7nlNR97HlsNv18SY6MAxvNJOyycyKVK\nwqfCOpJVwKVim0k1IHXlVNu1ufNDevOvXfYCdhhz0IcIkfqb8Aq2sN3pSv8U\nxISoRKQnoE7d+q1BDp7SgHtiZjT7arBaK664NjPW907NwancybMGuxuLS0om\nZcAaY/w1Ams2id9kTII++98HWGFcibF40TmD41aoSNDaBtX7hmqZeghm3hO1\naPCofz7DU+oFFx5UWuCbGfwz0YnoaxRM4e7OFqHnGrvQXfMPnaqfR11iXB7e\nTy22cy68On9hk69VmZmp7xNyh6CSq1QS0a5XhqaBMm/yoBCF1PMKcgVedsPS\nWcoZgw1yG4hEgW1YFe0ca/2zP8T/6cA46B3Ircv9TNgAIED5Ot9q9HNhWgo4\ncHNhaEA8D54JF1ooEQpHlc9duZposKQO+qLXIMIRXAOFxvcpaH8xQfkuUx4N\n3/s41TDKMFZ6qRv6sqsOFhVxbDlXNLEEFqlA/NWKs/uNq27Lh5qBo2afA31n\nq0yBW/jaWJBFImjkAS6x3JpmguJ3IqANaMk/bH9YWThfuXUgNbRyoh0FX1tM\nBkl4KY94jOk8LZsy9MJck1a3TF8xY0a4WjRA4JJuEcQnv6zwAC6+ATuGc5M4\n/SUksFBQNigYniqFFvYIXXOhMrQZ6+Cy1TjdPtQRvOc7tFX/u4nInVjxow1T\nCUC2FXXt5bRPHCk5UoZkGYPdDgUFERWlnGvAMHekcq1Xwh3S40y6WMe3kAxx\njG1Umvo9g8zzSZdxZ+IONPye9dmFWG3N0SZEqEAnhCg5GnxMLzzqyZkLo1My\nuRyNJONUXu275qKEn3no9/QwkHP/Rjrm+youUkp18tib4TYZA2ZWTMillNgR\ng/wTgTSPCVclRfBtbgBz8NjzMTGZBPNi1ODsqOaa4urFfB8y+MjNXILeV0Da\nZ/g+c9J9PuzkbPh9Jcj7y18FHS4sYmr/F0wKu0o0qOG09/LAn6qMC1jIvRDb\nHWc2wzWKc3KBxi7+uTbOI7Ho9K+Rl230y/PcYkssXUXY\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-16 13:05:30 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-16 13:05:58 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-16 13:06:11 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>
