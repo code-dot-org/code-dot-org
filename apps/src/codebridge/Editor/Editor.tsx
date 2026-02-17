@@ -76,11 +76,19 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
   // Used in key so we remount CodeEditor when this becomes true.
   const hasUnifiedDiffView = useMemo(() => {
     return !!(
+      allowUnifiedDiffView &&
+      !allowSplitDiffView &&
       isAiTutorVersion &&
       projectSourceBeforeAiTutorVersion &&
       activeFile?.name
     );
-  }, [isAiTutorVersion, projectSourceBeforeAiTutorVersion, activeFile?.name]);
+  }, [
+    allowUnifiedDiffView,
+    allowSplitDiffView,
+    isAiTutorVersion,
+    projectSourceBeforeAiTutorVersion,
+    activeFile?.name,
+  ]);
 
   // When we have either unified or split diff view, we need to know the original contents of the file.
   const codeBeforeAiTutorVersion = useMemo(() => {
@@ -154,12 +162,7 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
         );
       }
     }
-    if (
-      allowUnifiedDiffView &&
-      !allowSplitDiffView &&
-      hasUnifiedDiffView &&
-      projectSourceBeforeAiTutorVersion
-    ) {
+    if (hasUnifiedDiffView) {
       // For new files that don't exist in the original version, we still want
       // to show diff highlighting so will assign an empty string to the original contents.
       const activeOriginalFileContents = codeBeforeAiTutorVersion ?? '';
@@ -187,9 +190,6 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     langMapping,
     levelProperties.appName,
     hasUnifiedDiffView,
-    projectSourceBeforeAiTutorVersion,
-    allowUnifiedDiffView,
-    allowSplitDiffView,
     codeBeforeAiTutorVersion,
   ]);
 

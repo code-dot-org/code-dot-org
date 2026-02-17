@@ -234,6 +234,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
         // that correspond to deletions in doc A (not actual additions).
         // For actual additions, we continue to show the green markers because they include
         // 'cm-changedText' class which is used to style the added text.
+        // If we decide on split diff view, we should move theme to `editorThemes.ts`.
         const splitDiffTheme = EditorView.theme({
           '.cm-merge-b .cm-insertedLine': {display: 'none'},
           '.cm-merge-b .cm-insertedChunk': {display: 'none'},
