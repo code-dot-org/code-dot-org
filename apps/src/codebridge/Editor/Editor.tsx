@@ -52,11 +52,11 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     state => state.lab2Project.projectSourceBeforeAiTutorVersion
   );
 
-  const allowMergeView = experiments.isEnabledAllowingQueryString(
+  const allowUnifiedDiffView = experiments.isEnabledAllowingQueryString(
     experiments.ACCEPT_REJECT_UNIFIED_DIFF
   );
 
-  const allowSplitView = experiments.isEnabledAllowingQueryString(
+  const allowSplitDiffView = experiments.isEnabledAllowingQueryString(
     experiments.ACCEPT_REJECT_SPLIT_DIFF
   );
 
@@ -74,7 +74,7 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
   // Only show unified diff view when experiment flag is turned on, we are in AI tutor mode,
   // and have projectSourceBeforeAiTutorVersion along with an active file.
   // Used in key so we remount CodeEditor when this becomes true.
-  const hasMergeView = useMemo(() => {
+  const hasUnifiedDiffView = useMemo(() => {
     return !!(
       isAiTutorVersion &&
       projectSourceBeforeAiTutorVersion &&
@@ -98,22 +98,22 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     return undefined;
   }, [projectSourceBeforeAiTutorVersion, activeFile?.name]);
 
-  // Determine if we should show split view (side-by-side diff).
+  // Determine if we should show split diff view (side-by-side diff).
   // We need to ensure codeBeforeAiTutorVersion is defined (not just projectSourceBeforeAiTutorVersion)
   // so this is computed AFTER codeBeforeAiTutorVersion is computed.
-  const hasSplitView = useMemo(() => {
+  const hasSplitDiffView = useMemo(() => {
     return !!(
       isAiTutorVersion &&
       projectSourceBeforeAiTutorVersion &&
       activeFile?.name &&
-      allowSplitView &&
+      allowSplitDiffView &&
       codeBeforeAiTutorVersion !== undefined
     );
   }, [
     isAiTutorVersion,
     projectSourceBeforeAiTutorVersion,
     activeFile?.name,
-    allowSplitView,
+    allowSplitDiffView,
     codeBeforeAiTutorVersion,
   ]);
 
@@ -155,9 +155,9 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
       }
     }
     if (
-      allowMergeView &&
-      !allowSplitView &&
-      hasMergeView &&
+      allowUnifiedDiffView &&
+      !allowSplitDiffView &&
+      hasUnifiedDiffView &&
       projectSourceBeforeAiTutorVersion
     ) {
       // For new files that don't exist in the original version, we still want
@@ -186,10 +186,10 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     activeFile?.name,
     langMapping,
     levelProperties.appName,
-    hasMergeView,
+    hasUnifiedDiffView,
     projectSourceBeforeAiTutorVersion,
-    allowMergeView,
-    allowSplitView,
+    allowUnifiedDiffView,
+    allowSplitDiffView,
     codeBeforeAiTutorVersion,
   ]);
 
@@ -211,7 +211,11 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
       {activeFile ? (
         <CodeEditor
           key={`${activeFile.id}/${
-            hasSplitView ? 'split' : hasMergeView ? 'diff' : 'normal'
+            hasSplitDiffView
+              ? 'split'
+              : hasUnifiedDiffView
+              ? 'unified'
+              : 'normal'
           }`}
           onCodeChange={onChange}
           initialCode={activeFile.contents}

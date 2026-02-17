@@ -55,7 +55,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   const {signInState} = useAppSelector(state => state.currentUser);
   const {theme} = useTheme();
 
-  const allowSplitView = experiments.isEnabledAllowingQueryString(
+  const allowSplitDiffView = experiments.isEnabledAllowingQueryString(
     experiments.ACCEPT_REJECT_SPLIT_DIFF
   );
 
@@ -71,11 +71,13 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   // For new files that don't exist in projectSourceBeforeAiTutorVersion,
   // we'll show diff against an empty document (empty string).
   // Used in key so we remount CodeEditor when this becomes true.
-  const hasSplitView = useMemo(() => {
+  const hasSplitDiffView = useMemo(() => {
     const result =
-      isAiTutorVersion && projectSourceBeforeAiTutorVersion && allowSplitView;
+      isAiTutorVersion &&
+      projectSourceBeforeAiTutorVersion &&
+      allowSplitDiffView;
     return result;
-  }, [isAiTutorVersion, projectSourceBeforeAiTutorVersion, allowSplitView]);
+  }, [isAiTutorVersion, projectSourceBeforeAiTutorVersion, allowSplitDiffView]);
 
   // Load the user's preferred editor font size from the backend which is saved
   // per app type (currently either pythonlab or weblab) for signed-in users.
@@ -212,7 +214,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
       } else {
         editorExtensions.push(themeCompartment.of(lightModeTheme));
       }
-      if (!hasSplitView) {
+      if (!hasSplitDiffView) {
         setEditorView(
           new EditorView({
             state: EditorState.create({
@@ -262,7 +264,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     editorFontSizeKey,
     editorFontSizeLoaded,
     themeCompartment,
-    hasSplitView,
+    hasSplitDiffView,
     codeBeforeAiTutorVersion,
   ]);
 
