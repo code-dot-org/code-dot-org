@@ -31,8 +31,8 @@ const REGION = process.env.REGION;
 const DB_INSTANCE_CLASS = process.env.DB_INSTANCE_CLASS;
 const DB_ENGINE = process.env.DB_ENGINE;
 const DB_NAME = process.env.DB_NAME;
-const MAX_ATTEMPTS = parseInt(process.env.DB_RESTORE_MAX_ATTEMPTS || "240", 10);
-const DELAY_SECONDS = parseInt(process.env.DB_RESTORE_DELAY_SECONDS || "60", 10);
+const MAX_ATTEMPTS = parseInt(process.env.DB_RESTORE_MAX_ATTEMPTS, 10)  || 240;
+const DELAY_SECONDS = parseInt(process.env.DB_RESTORE_DELAY_SECONDS, 10)  || 60;
 const NEW_PASSWORD = generateSimplePassword(32);
 
 const main = async () => {
