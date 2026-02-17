@@ -52,8 +52,12 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     state => state.lab2Project.projectSourceBeforeAiTutorVersion
   );
 
-  const allowMergeView = experiments.isEnabledAllowingQueryString(
+  const allowUnifiedDiffView = experiments.isEnabledAllowingQueryString(
     experiments.ACCEPT_REJECT_UNIFIED_DIFF
+  );
+
+  const allowSplitDiffView = experiments.isEnabledAllowingQueryString(
+    experiments.ACCEPT_REJECT_SPLIT_DIFF
   );
 
   const dispatch = useAppDispatch();
@@ -67,14 +71,59 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     [dispatch, activeFile?.id]
   );
 
-  // Only show unified diff view when we have AI tutor mode and projectSourceBeforeAiTutorVersion.
-  // For new files that don't exist in projectSourceBeforeAiTutorVersion, we'll show diff against an empty document (empty string).
+  // Only show unified diff view when experiment flag is turned on, we are in AI tutor mode,
+  // and have projectSourceBeforeAiTutorVersion along with an active file.
   // Used in key so we remount CodeEditor when this becomes true.
-  const hasMergeView = useMemo(() => {
-    return (
-      isAiTutorVersion && projectSourceBeforeAiTutorVersion && activeFile?.name
+  const hasUnifiedDiffView = useMemo(() => {
+    return !!(
+      allowUnifiedDiffView &&
+      !allowSplitDiffView &&
+      isAiTutorVersion &&
+      projectSourceBeforeAiTutorVersion &&
+      activeFile?.name
     );
-  }, [isAiTutorVersion, projectSourceBeforeAiTutorVersion, activeFile?.name]);
+  }, [
+    allowUnifiedDiffView,
+    allowSplitDiffView,
+    isAiTutorVersion,
+    projectSourceBeforeAiTutorVersion,
+    activeFile?.name,
+  ]);
+
+  // When we have either unified or split diff view, we need to know the original contents of the file.
+  const codeBeforeAiTutorVersion = useMemo(() => {
+    if (projectSourceBeforeAiTutorVersion) {
+      const originalFiles = projectSourceBeforeAiTutorVersion.files;
+      const activeOriginalFile = activeFile?.name
+        ? Object.values(originalFiles).find(f => f.name === activeFile.name)
+        : undefined;
+
+      // For new files that don't exist in the original version, we still want
+      // to show diff highlighting so will assign an empty string to the original contents.
+      const activeOriginalFileContents = activeOriginalFile?.contents ?? '';
+      return activeOriginalFileContents;
+    }
+    return undefined;
+  }, [projectSourceBeforeAiTutorVersion, activeFile?.name]);
+
+  // Determine if we should show split diff view (side-by-side diff).
+  // We need to ensure codeBeforeAiTutorVersion is defined (not just projectSourceBeforeAiTutorVersion)
+  // so this is computed AFTER codeBeforeAiTutorVersion is computed.
+  const hasSplitDiffView = useMemo(() => {
+    return !!(
+      isAiTutorVersion &&
+      projectSourceBeforeAiTutorVersion &&
+      activeFile?.name &&
+      allowSplitDiffView &&
+      codeBeforeAiTutorVersion !== undefined
+    );
+  }, [
+    isAiTutorVersion,
+    projectSourceBeforeAiTutorVersion,
+    activeFile?.name,
+    allowSplitDiffView,
+    codeBeforeAiTutorVersion,
+  ]);
 
   const editorConfigExtensions = useMemo(() => {
     const extensions: Extension[] = [];
@@ -113,15 +162,10 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
         );
       }
     }
-    if (allowMergeView && hasMergeView && projectSourceBeforeAiTutorVersion) {
-      const originalFiles = projectSourceBeforeAiTutorVersion.files;
-      const activeOriginalFile = activeFile?.name
-        ? Object.values(originalFiles).find(f => f.name === activeFile.name)
-        : undefined;
-
+    if (hasUnifiedDiffView) {
       // For new files that don't exist in the original version, we still want
       // to show diff highlighting so will assign an empty string to the original contents.
-      const activeOriginalFileContents = activeOriginalFile?.contents ?? '';
+      const activeOriginalFileContents = codeBeforeAiTutorVersion ?? '';
       extensions.push(
         unifiedMergeView({
           original: activeOriginalFileContents,
@@ -145,9 +189,8 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     activeFile?.name,
     langMapping,
     levelProperties.appName,
-    hasMergeView,
-    projectSourceBeforeAiTutorVersion,
-    allowMergeView,
+    hasUnifiedDiffView,
+    codeBeforeAiTutorVersion,
   ]);
 
   if (activeFile?.url && viewableImageFileType(activeFile.language)) {
@@ -167,11 +210,18 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     <div className={moduleStyles.editorContainer}>
       {activeFile ? (
         <CodeEditor
-          key={`${activeFile.id}/${hasMergeView ? 'diff' : 'normal'}`}
+          key={`${activeFile.id}/${
+            hasSplitDiffView
+              ? 'split'
+              : hasUnifiedDiffView
+              ? 'unified'
+              : 'normal'
+          }`}
           onCodeChange={onChange}
-          startCode={activeFile.contents}
+          initialCode={activeFile.contents}
           appName={levelProperties.appName}
           editorConfigExtensions={editorConfigExtensions}
+          codeBeforeAiTutorVersion={codeBeforeAiTutorVersion}
         />
       ) : (
         <CodebridgeEmptyState
