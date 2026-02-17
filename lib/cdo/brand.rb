@@ -34,9 +34,9 @@ module Cdo
       current_brand[:logo_alt_key]
     end
 
-    # Get the logo alt text using I18n
+    # Get the logo alt text using the global I18n module
     def self.logo_alt_text
-      I18n.t(logo_alt_key)
+      ::I18n.t(logo_alt_key)
     end
 
     # Get the favicon filename for the current brand
