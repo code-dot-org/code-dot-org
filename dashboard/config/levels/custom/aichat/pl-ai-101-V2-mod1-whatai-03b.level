@@ -2,12 +2,12 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 71,
-  "created_at": "2026-01-29T16:16:03.000Z",
+  "created_at": "2026-02-13T16:28:59.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Welcome to AI Chat Lab!\r\n\r\nThis AI chat bot will provide ideas of how to integrate AI literacy skills into your school context.\r\n\r\nStart the chat by sharing your role in education.\r\n\r\nFor example, you can say:\r\n>- I'm a middle school science teacher.\r\n>- I'm an administrator.\r\n>- I teach high school chemistry.\r\n>- I'm a parent of a elementary school student.\r\n\r\n*Spend as much time interacting with the chatbot as you find helpful.*",
+    "long_instructions": "## Welcome to AI Chat Lab!\r\n\r\nInteract with this AI chat bot to ask any initial questions you have about AI and how it works.\r\n\r\nFor example, you can ask:\r\n>- What is AI?\r\n>- Why should I, a high school English teacher, care about AI?\r\n>- What does a school administrator need to know about how AI works?\r\n\r\n*Spend as much time interacting with the chatbot as you find helpful. You'll have a lot more opportunities to learn throughout the AI 101 series, so don't feel like you have to get all of your questions answered on this level.*",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -38,7 +38,7 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "The user will prompt with a grade level and/or subject matter. ASK for more context. THEN, after they answer, come up with three scenarios where AI literacy could be integrated into their classroom context. Use the scenarios provided in the context as a guide. ASK if any of those scenarios are helpful, if not ask for more context. The user may prompt that they are an administrator, in which case the scenario should be with teachers, but otherwise the goals are the same.  The user may prompt that they are a parent, in which case change the context of the scenario from school to home.",
+      "levelSystemPrompt": "Answer the users questions about AI. Be friendly and informative. Keep your answers short - less than 100 words. Your answers should be directed to an educator (teacher or administrator) who is learning about AI. Don't use very much technical jargon unless you are asked to by the user. Don't just answer questions, ask questions from the user to get their understanding of AI and respond to it. Don't let the topic stray from AI. ",
       "hidePresentationPanel": true,
       "availableModelIds": [
         "gpt-4o-mini"
@@ -49,6 +49,6 @@
     "submittable": "false",
     "disable_edit_run_for_submission": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-01-29T16:16:03.880+00:00\",\"changed\":[\"cloned from \\\"csaif_pl_ai_rev_chat_practice_-launch_2026\\\"\"],\"cloned_from\":\"csaif_pl_ai_rev_chat_practice_-launch_2026\"},{\"changed_at\":\"2026-02-05 21:33:30 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2026-02-05 21:35:04 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2026-02-05 21:38:12 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2026-02-05 21:40:04 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2026-02-05 21:51:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2026-02-05 21:55:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2026-02-13 17:07:30 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-13T16:28:59.114+00:00\",\"changed\":[\"cloned from \\\"pl-ai-101-V2-mod1-literacy-05\\\"\"],\"cloned_from\":\"pl-ai-101-V2-mod1-literacy-05\"},{\"changed_at\":\"2026-02-13 16:29:03 +0000\",\"changed\":[],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2026-02-13 16:42:52 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2026-02-13 16:46:40 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2026-02-13 16:53:32 +0000\",\"changed\":[],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
 }]]></config>
 </Aichat>

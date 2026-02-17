@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-02-12 16:34:43 UTC",
+    "serialized_at": "2026-02-13 21:09:48 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -7055,6 +7055,13 @@
       "seeding_key": {
         "lesson.key": "Lesson 11: Network Security Risk Assessment Project",
         "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Network Security Risk Assessment Project",
+        "framework.shortcode": "csta",
         "standard.shortcode": "3A-IC-29"
       }
     },
@@ -7062,7 +7069,42 @@
       "seeding_key": {
         "lesson.key": "Lesson 11: Network Security Risk Assessment Project",
         "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-30"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Network Security Risk Assessment Project",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Network Security Risk Assessment Project",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Network Security Risk Assessment Project",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Network Security Risk Assessment Project",
+        "framework.shortcode": "csta",
         "standard.shortcode": "3A-NI-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Introduction to the Internet",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-21"
       }
     },
     {
@@ -7132,6 +7174,20 @@
       "seeding_key": {
         "lesson.key": "Lesson 6: HTTP and DNS",
         "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: HTTP and DNS",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: HTTP and DNS",
+        "framework.shortcode": "csta",
         "standard.shortcode": "3A-NI-04"
       }
     },
@@ -7159,6 +7215,13 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 7: The Internet's Hidden Barriers",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-26"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Internet Access Advocacy Campaign Project",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-IC-26"
       }
