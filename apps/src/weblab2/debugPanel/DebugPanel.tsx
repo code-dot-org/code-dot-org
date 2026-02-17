@@ -17,6 +17,7 @@ import {setDebugPanelOpen} from '@cdo/apps/weblab2/weblab2Redux';
 
 import DetailsBox from './DetailsBox';
 import NetworkRequestChip from './NetworkRequestChip';
+import NoRequestsPlaceholder from './NoRequestsPlaceholder';
 
 import moduleStyles from './debug-panel.module.scss';
 
@@ -143,7 +144,7 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
       }
     >
       {networkRequests.length === 0 ? (
-        <div>No network requests</div>
+        <NoRequestsPlaceholder />
       ) : (
         <div className={moduleStyles.debugPanelContainer}>
           <div className={moduleStyles.networkSummary}>
