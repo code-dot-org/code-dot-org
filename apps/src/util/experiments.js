@@ -72,6 +72,9 @@ experiments.WEBLAB2_FULL_URLS = 'weblab2-full-urls';
 experiments.ACCEPT_REJECT_UNIFIED_DIFF = 'accept-reject-unified-diff';
 // Show split diff view in Code Editor.
 experiments.ACCEPT_REJECT_SPLIT_DIFF = 'accept-reject-split-diff';
+// Show debug panel in Web Lab 2
+experiments.WEBLAB2_DEBUG_PANEL = 'weblab2-show-debug';
+
 /**
  * This was a gamified version of the finish dialog, built in 2018,
  * but never fully shipped.

@@ -13,10 +13,12 @@ import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {HTMLPreview} from '@cdo/apps/weblab2/htmlPreview/HTMLPreview';
 import weblab2I18n from '@cdo/apps/weblab2/locale';
 
+import DebugPanel from '../debugPanel/DebugPanel';
 import {ViewMode} from '../types';
 import {setViewMode} from '../weblab2Redux';
 
@@ -148,6 +150,10 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
     );
   }, [setLeftPanelSize, isWidgetView, isStandaloneCollapsed]);
 
+  const showDebugPanel = experiments.isEnabledAllowingQueryString(
+    experiments.WEBLAB2_DEBUG_PANEL
+  );
+
   return (
     <div className={lab2Styles.defaultContainer}>
       <div className={lab2Styles.layoutContainer}>
@@ -218,6 +224,9 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
               )}
             </div>
           </div>
+          {showDebugPanel && (
+            <DebugPanel className={weblab2Styles.debugPanelContainer} />
+          )}
         </div>
       </div>
     </div>

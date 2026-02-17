@@ -5,11 +5,13 @@ description 'description here'
 markdown <<MARKDOWN
 # Practice
 
-#### There are so many resources out there to support teachers who want to teach about AI in their classrooms.
 
-#### Today, you're going to get the chance to explore one of Code.org’s lessons on AI - AI for Oceans. AI for Oceans is a 45 minute lesson that is appropriate for grades 3-12.
+#### AI for Oceans
 
-#### Don’t worry! We’re not going to do the whole lesson. As you click Continue, you’ll work through a few of the student levels to get an idea of the activity. We’ll share the teacher resources and the complete activity when you’re done.
+#### In this fun introduction to artificial intelligence, you train a real machine learning model to identify sea creatures and trash in the ocean.
 
-#### If you’ve completed the previous modules in this AI 101 Self-Paced Professional Learning, you’ve already watched the associated videos so feel free to click Continue and skip past those.
+<p style="text-align:center;">
+<img src="https://images.code.org/3da57cd660e580eac539927156d953e9-Screenshot 2026-02-16 at 12.20.10 PM.png">
+
+
 MARKDOWN

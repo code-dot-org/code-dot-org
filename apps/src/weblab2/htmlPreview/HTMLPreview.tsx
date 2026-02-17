@@ -272,6 +272,7 @@ export const HTMLPreview: React.FC = () => {
       {type: IframeMessageType.REFRESH},
       previewUrl
     );
+    dispatch(clearRequests());
   };
 
   const onStopPreview = () => {
@@ -281,6 +282,7 @@ export const HTMLPreview: React.FC = () => {
 
   const onReloadPreview = () => {
     setIsStopped(false);
+    dispatch(clearRequests());
   };
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
