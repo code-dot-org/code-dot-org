@@ -25,7 +25,7 @@
           %br/
           = sanitize(t('footer.art_from_html_old', current_year: Time.now.year), tags: %w(a br), attributes: %w(href))
           %br/
-          = sanitize(t('footer.trademark', current_year: Time.now.year, cs_discoveries: "CS Discoveries&reg;"), tags: %w(a br), attributes: %w(href))
+          = sanitize(t('footer.trademark', brand: Cdo::Brand.current_brand_name,  current_year: Time.now.year, cs_discoveries: "CS Discoveries&reg;"), tags: %w(a br), attributes: %w(href))
           %br/
           = sanitize(t('footer.built_on_github'), tags: %w(a br), attributes: %w(href))
         %div.powered-by-aws
@@ -42,5 +42,4 @@
         - if request.ge_region
           = render_shared_haml('global_edition/region_reset_button')
         %small.dim
-          - brand_name = Cdo::Brand.current_brand_name.to_s.capitalize
-          !="&copy; #{brand_name}, #{Time.now.year}"
+          !="&copy; #{Cdo::Brand.current_brand_name}, #{Time.now.year}"

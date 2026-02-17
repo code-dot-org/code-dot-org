@@ -672,7 +672,7 @@ en:
     code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: 'Amazon Web Services and the “Powered by AWS” logo are trademarks of Amazon.com, Inc. or its affiliates in the United States and/or other countries.'
     built_on_github: 'Built on GitHub from Microsoft'
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo, Hour of Code&reg; and %{cs_discoveries} are trademarks of Code.org.'
+    trademark: '&copy; %{brand}, %{current_year}. %{brand}&reg;, the CODE logo, Hour of Code&reg; and %{cs_discoveries} are trademarks of %{brand}.'
     copyright: 'Copyright'
     more: 'More'
     feedback: 'Provide feedback'
