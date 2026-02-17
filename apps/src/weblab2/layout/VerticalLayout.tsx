@@ -7,9 +7,11 @@ import HeaderButtons from '@codebridge/Workspace/HeaderButtons';
 import Workspace from '@codebridge/Workspace/Workspace';
 import classNames from 'classnames';
 import React, {useEffect} from 'react';
+import {useResizable} from 'react-resizable-layout';
 
 import AiTutorVersionAlert from '@cdo/apps/aiComponentLibrary/aiTutorVersionAlert/AiTutorVersionAlert';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
+import {logOnResize} from '@cdo/apps/lab2/utils/resizeUtils';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
@@ -34,6 +36,8 @@ const INITIAL_PREVIEW_WIDTH = 400;
 const INITIAL_PREVIEW_WIDTH_WIDGET = 900;
 const INITIAL_INFO_PANEL_WIDTH_COLLAPSED = 55;
 const INITIAL_PREVIEW_WIDTH_COLLAPSED = 650;
+const DEBUG_PANEL_INITIAL_HEIGHT = 300;
+const MIN_DEBUG_PANEL_HEIGHT = 100;
 
 const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
   isWidgetView,
@@ -48,6 +52,10 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
 
   const aiTutorVersionFiles = useAppSelector(
     state => state.weblab2.aiTutorVersionFiles
+  );
+
+  const debugPanelCollapsed = useAppSelector(
+    state => state.weblab2.debugPanelCollapsed
   );
 
   const dispatch = useAppDispatch();
@@ -92,6 +100,22 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
       name: 'preview',
     },
     appName: 'weblab2',
+  });
+
+  const {
+    position: debugPanelHeight,
+    separatorProps: debugPanelSeparatorProps,
+    isDragging: debugPanelDragging,
+  } = useResizable({
+    axis: 'y',
+    initial: DEBUG_PANEL_INITIAL_HEIGHT,
+    min: MIN_DEBUG_PANEL_HEIGHT,
+    reverse: true,
+    onResizeStart: () =>
+      logOnResize('weblab2', {
+        layout: 'vertical',
+        resizeBar: 'debugPanel',
+      }),
   });
 
   const viewModeButtonsProps: SegmentedButtonsProps = {
@@ -150,9 +174,9 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
     );
   }, [setLeftPanelSize, isWidgetView, isStandaloneCollapsed]);
 
-  const showDebugPanel = experiments.isEnabledAllowingQueryString(
-    experiments.WEBLAB2_DEBUG_PANEL
-  );
+  const showDebugPanel =
+    experiments.isEnabledAllowingQueryString(experiments.WEBLAB2_DEBUG_PANEL) &&
+    !debugPanelCollapsed;
 
   return (
     <div className={lab2Styles.defaultContainer}>
@@ -200,7 +224,8 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
                     style={{width: middlePanelWidth}}
                     className={classNames(
                       lab2Styles.shrinkAndGrow,
-                      panelClassName
+                      panelClassName,
+                      debugPanelDragging && lab2Styles.resizingPanel
                     )}
                     hideHeaders
                   />
@@ -216,7 +241,8 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
                   style={{width: rightPanelWidth}}
                   className={classNames(
                     lab2Styles.shrinkAndGrow,
-                    panelClassName
+                    panelClassName,
+                    debugPanelDragging && lab2Styles.resizingPanel
                   )}
                 >
                   <HTMLPreview />
@@ -225,7 +251,16 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
             </div>
           </div>
           {showDebugPanel && (
-            <DebugPanel className={weblab2Styles.debugPanelContainer} />
+            <>
+              <ResizeBar
+                isVertical={false}
+                separatorProps={debugPanelSeparatorProps}
+                isDragging={debugPanelDragging}
+              />
+              <div style={{height: debugPanelHeight}}>
+                <DebugPanel className={weblab2Styles.debugPanelContainer} />
+              </div>
+            </>
           )}
         </div>
       </div>

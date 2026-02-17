@@ -15,12 +15,14 @@ export type Weblab2State = {
   viewMode: ViewMode;
   aiFilePathToPreview: AiFilePathToPreview | undefined;
   aiTutorVersionFiles: ProjectFile[] | undefined;
+  debugPanelCollapsed: boolean;
 };
 
 const initialState: Weblab2State = {
   viewMode: ViewMode.SPLIT,
   aiFilePathToPreview: undefined,
   aiTutorVersionFiles: undefined,
+  debugPanelCollapsed: false,
 };
 
 const weblab2Slice = createSlice({
@@ -42,10 +44,17 @@ const weblab2Slice = createSlice({
     ) => {
       state.aiTutorVersionFiles = action.payload;
     },
+    setDebugPanelCollapsed: (state, action: PayloadAction<boolean>) => {
+      state.debugPanelCollapsed = action.payload;
+    },
   },
 });
 
 registerReducers({weblab2: weblab2Slice.reducer});
 
-export const {setViewMode, setAiFilePathToPreview, setAiTutorVersionFiles} =
-  weblab2Slice.actions;
+export const {
+  setViewMode,
+  setAiFilePathToPreview,
+  setAiTutorVersionFiles,
+  setDebugPanelCollapsed,
+} = weblab2Slice.actions;
