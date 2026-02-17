@@ -230,6 +230,13 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
           })
         );
       } else {
+        // For split diff view, we want to hide green "inserted" markers in doc B
+        // that correspond to deletions in doc A (not actual additions).
+        const splitDiffTheme = EditorView.theme({
+          '.cm-merge-b .cm-insertedLine': {display: 'none'},
+          '.cm-merge-b .cm-insertedChunk': {display: 'none'},
+        });
+
         const newEditor = new MergeView({
           a: {
             doc: codeBeforeAiTutorVersion ?? '',
@@ -237,7 +244,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
           },
           b: {
             doc: initialCode,
-            extensions: editorExtensions,
+            extensions: [...editorExtensions, splitDiffTheme],
           },
           parent: editorRef.current,
         });
