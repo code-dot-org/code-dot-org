@@ -5,7 +5,7 @@ import {
   OverlineThreeText,
   StrongText,
 } from '@code-dot-org/component-library/typography';
-import React from 'react';
+import React, {useMemo} from 'react';
 
 import parentStyles from './debug-panel.module.scss';
 import moduleStyles from './details-box.module.scss';
@@ -17,29 +17,44 @@ interface DetailsField {
 
 interface DetailsBoxProps {
   title: string;
-  success: boolean;
+  status: 'success' | 'error' | 'pending';
   rows: DetailsField[][];
   errorMessage?: string;
 }
 
 const DetailsBox: React.FunctionComponent<DetailsBoxProps> = ({
   title,
-  success,
+  status,
   rows,
   errorMessage,
 }) => {
+  const {iconName, iconClassName} = useMemo(() => {
+    switch (status) {
+      case 'success':
+        return {
+          iconName: 'check-circle',
+          iconClassName: parentStyles.successIcon,
+        };
+      case 'error':
+        return {
+          iconName: 'xmark-circle',
+          iconClassName: parentStyles.errorIcon,
+        };
+      case 'pending':
+        return {
+          iconName: 'spinner',
+          iconClassName: parentStyles.loadingIcon,
+        };
+    }
+  }, [status]);
+
   return (
     <div className={moduleStyles.detailsBox}>
       <div className={moduleStyles.detailsHeader}>
         <BodyThreeText className={moduleStyles.detailsHeaderText}>
           <StrongText>{title}</StrongText>
         </BodyThreeText>
-        <FontAwesomeV6Icon
-          iconName={success ? 'check-circle' : 'xmark-circle'}
-          className={
-            success ? parentStyles.successIcon : parentStyles.errorIcon
-          }
-        />
+        <FontAwesomeV6Icon iconName={iconName} className={iconClassName} />
       </div>
       <div className={moduleStyles.detailsBody}>
         {errorMessage && <Alert text={errorMessage} type="danger" size="xs" />}
