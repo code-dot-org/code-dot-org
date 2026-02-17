@@ -9,7 +9,7 @@
   dashboard.widget.setupWidgetLevel();
 
 #external
-  - if template_exists?(@level.partial_template)
+  - if lookup_context.template_exists?(@level.partial_template, [], true)
     / We eventually want to convert all of these over to use Rails templates,
     / so always prefer that if it exists.
     = render partial: @level.partial_template
