@@ -1,0 +1,368 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-02-11T17:40:17.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Invalid Data: Designing for the \"Oops\"\r\n\r\nBased on the following user complaint about the Concert App bug (Level 1), design the UI for what should appear on screen instead:\r\n\r\n> **The Code Crash:** “It says ‘Object Reference Null’ when I click my profile.”\r\n\r\nUse simple boxes and labels to show your layout. Your sketch must include three elements:\r\n\r\n1. **The Message:** Explain what happened in plain English. Avoid using \"Error 404\" or \"Null\".\r\n2. **The Action:** Give the user a clear next step, e.g., a \"Retry\" button, a \"Contact Support\" link, or a \"Return to Home\" option.\r\n3. **The Tone Check:** Ensure the tone is calm and helpful. Avoid scary icons or blaming the user.",
+    "start_sources": {
+      "source": {
+        "type": "excalidraw",
+        "version": 2,
+        "source": "https://levelbuilder-studio.code.org",
+        "elements": [
+          {
+            "type": "rectangle",
+            "version": 1013,
+            "versionNonce": 265700037,
+            "isDeleted": false,
+            "id": "V29L9wujj4e7u_7C34J3A",
+            "fillStyle": "solid",
+            "strokeWidth": 4,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 10,
+            "angle": 0,
+            "x": -1932.600247648903,
+            "y": -1266.0881048726114,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 1152.421771383269,
+            "height": 1390.3630783784213,
+            "seed": 948343503,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 3
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1770831050709,
+            "link": null,
+            "locked": false
+          },
+          {
+            "type": "rectangle",
+            "version": 943,
+            "versionNonce": 834140171,
+            "isDeleted": false,
+            "id": "ngMpTMAOddjHz1JAPno5_",
+            "fillStyle": "solid",
+            "strokeWidth": 4,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 10,
+            "angle": 0,
+            "x": -2772.300230398304,
+            "y": -1259.581518486833,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 736.4923735859911,
+            "height": 995.8757534874999,
+            "seed": 451502319,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 3
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1770831050709,
+            "link": null,
+            "locked": false
+          },
+          {
+            "type": "text",
+            "version": 1602,
+            "versionNonce": 1609277989,
+            "isDeleted": false,
+            "id": "JucVLJAin0j1LMt6msMEZ",
+            "fillStyle": "hachure",
+            "strokeWidth": 1,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": -2700.3812680216593,
+            "y": -1085.6442093312442,
+            "strokeColor": "#000",
+            "backgroundColor": "transparent",
+            "width": 508.541748046875,
+            "height": 38.71023326496925,
+            "seed": 584466927,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1770831050709,
+            "link": null,
+            "locked": false,
+            "fontSize": 30.861259036605265,
+            "fontFamily": 1,
+            "text": "Message: What will the user see?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Message: What will the user see?",
+            "lineHeight": 1.2543309791429484,
+            "baseline": 27
+          },
+          {
+            "type": "text",
+            "version": 1135,
+            "versionNonce": 531807915,
+            "isDeleted": false,
+            "id": "tJAZKd_1uGRvY3P0KQP8T",
+            "fillStyle": "hachure",
+            "strokeWidth": 1,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": -2745.371668557565,
+            "y": -663.4210103746932,
+            "strokeColor": "#000000",
+            "backgroundColor": "transparent",
+            "width": 667.64697265625,
+            "height": 44.49217565800461,
+            "seed": 2017390479,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1770831050709,
+            "link": null,
+            "locked": false,
+            "fontSize": 34.97686368015933,
+            "fontFamily": 1,
+            "text": "Action: What should the user do next?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Action: What should the user do next?",
+            "lineHeight": 1.272045889101339,
+            "baseline": 31
+          },
+          {
+            "type": "text",
+            "version": 1182,
+            "versionNonce": 2027820421,
+            "isDeleted": false,
+            "id": "UB3_DVlBFUV71Hxn5fAQH",
+            "fillStyle": "hachure",
+            "strokeWidth": 1,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": -2716.28578439993,
+            "y": -1211.3699373559368,
+            "strokeColor": "#000000",
+            "backgroundColor": "transparent",
+            "width": 362.997802734375,
+            "height": 56.437023608659544,
+            "seed": 1311241487,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1770831050709,
+            "link": null,
+            "locked": false,
+            "fontSize": 44.367128648582465,
+            "fontFamily": 1,
+            "text": "Plan Your Design",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Plan Your Design",
+            "lineHeight": 1.2720458891013384,
+            "baseline": 40
+          },
+          {
+            "type": "text",
+            "version": 1333,
+            "versionNonce": 467382603,
+            "isDeleted": false,
+            "id": "fBy4xyYgrrqcZ-APMfeKb",
+            "fillStyle": "hachure",
+            "strokeWidth": 1,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": -1842.194733229876,
+            "y": -1223.9808977379255,
+            "strokeColor": "#000000",
+            "backgroundColor": "transparent",
+            "width": 235.55282592773438,
+            "height": 55.13842492918674,
+            "seed": 2112568655,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1770831050709,
+            "link": null,
+            "locked": false,
+            "fontSize": 43.346254566445204,
+            "fontFamily": 1,
+            "text": "User's View",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "User's View",
+            "lineHeight": 1.2720458891013384,
+            "baseline": 39
+          },
+          {
+            "type": "rectangle",
+            "version": 1129,
+            "versionNonce": 1709907173,
+            "isDeleted": false,
+            "id": "-kslNR-1WviAOdfBvO4IM",
+            "fillStyle": "solid",
+            "strokeWidth": 4,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 10,
+            "angle": 0,
+            "x": -2711.981613838288,
+            "y": -983.4328346625466,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "#b2f2bb",
+            "width": 615.1212338672635,
+            "height": 281.30811943065805,
+            "seed": 2003310223,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 3
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1770831050709,
+            "link": null,
+            "locked": false
+          },
+          {
+            "type": "rectangle",
+            "version": 1168,
+            "versionNonce": 395137003,
+            "isDeleted": false,
+            "id": "VEhkyD4LGr1McA5KAUYOg",
+            "fillStyle": "solid",
+            "strokeWidth": 4,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 10,
+            "angle": 0,
+            "x": -2713.3452709325634,
+            "y": -601.8351813930359,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "#a5d8ff",
+            "width": 615.1212338672635,
+            "height": 281.30811943065805,
+            "seed": 1072361231,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 3
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1770831050709,
+            "link": null,
+            "locked": false
+          }
+        ],
+        "appState": {
+          "gridSize": null,
+          "viewBackgroundColor": "#ffffff",
+          "scrollX": 3321.861225302117,
+          "scrollY": 1841.5880746548721,
+          "zoom": {
+            "value": 0.3100610983371733
+          }
+        },
+        "files": {
+        },
+        "externalFiles": {
+        }
+      }
+    },
+    "exemplar_sources": {
+      "source": {
+        "type": "excalidraw",
+        "version": 2,
+        "source": "https://levelbuilder-studio.code.org",
+        "elements": [
+
+        ],
+        "appState": {
+          "gridSize": null,
+          "viewBackgroundColor": "#ffffff",
+          "scrollX": 800.7823732261043,
+          "scrollY": 688.0028834201171,
+          "zoom": {
+            "value": 0.37912703914703433
+          }
+        },
+        "files": {
+        },
+        "externalFiles": {
+          "e763c2a87619101bc354e83af052e895dcba87bf": {
+            "id": "e763c2a87619101bc354e83af052e895dcba87bf",
+            "url": "/level_starter_assets/designing-reliable-apps-lesson7-sketchlab-2025-pilot/uuid/e763c2a87619101bc354e83af052e895dcba87bf.png",
+            "starterAsset": true,
+            "filenameWithExtension": "e763c2a87619101bc354e83af052e895dcba87bf.png",
+            "uploaded": true
+          },
+          "56fd141bcd13ab0074d8859ca1b17466d4c2e889": {
+            "id": "56fd141bcd13ab0074d8859ca1b17466d4c2e889",
+            "url": "/level_starter_assets/designing-reliable-apps-lesson7-sketchlab-2025-pilot/uuid/56fd141bcd13ab0074d8859ca1b17466d4c2e889.png",
+            "starterAsset": true,
+            "filenameWithExtension": "56fd141bcd13ab0074d8859ca1b17466d4c2e889.png",
+            "uploaded": true
+          }
+        }
+      }
+    },
+    "display_name": "Invalid Data",
+    "bubble_choice_description": "Design the UI for what should appear on screen when this error happens.",
+    "thumbnail_url": "https://images.code.org/f3cb40f5572ee4066e18d5f16aaf5d87-Screenshot 2026-02-11 at 11.16.17 AM.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-02-11T17:40:17.876+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson7-sketchlab-choiceB-2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson7-sketchlab-choiceB-2025-pilot\"},{\"changed_at\":\"2026-02-11 17:40:20 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-11 17:47:38 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-11 17:50:01 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-11 18:17:07 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-11 18:19:21 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-11 18:48:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

@@ -1,5 +1,6 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-02-09T16:22:19.000Z",
   "level_num": "custom",
@@ -57,7 +58,7 @@
       ]
     },
     "encrypted": "false",
-    "long_instructions": "## Browser Scavenger Hunt\r\n\r\nLet's explore this weather app's data! \r\n\r\nClick the 'Inspect Fetch Request' button to find the raw JSON file. Then answer the scavenger hunt questions in your activity guide.\r\n",
+    "long_instructions": "## Browser Scavenger Hunt\r\n\r\nLet's explore this weather app's data! \r\n\r\nClick the 'Inspect Fetch Request' button to find the raw JSON file and think about the questions below. \r\n\r\n---\r\n\r\n1️⃣ Where would the app look to find the current temperature?\r\n\r\nWrite down the path to the temperature value (not just the number).\r\n\r\n<div style=\"clear:both;\"></div>\r\n\r\n<details style=\"background-color: #4f5b68; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 12pt; font-weight: bold; color: #ffffff;\">💡 Reveal</summary>\r\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;\">\r\n    <p style=\"font-size: 12pt; color: #ffffff;\">\r\nThe temperature is stored under the <strong>\"main\"</strong> object.\r\n<br><br>\r\nThe app would look for:\r\n<br><br>\r\n<strong>main → temp</strong>\r\n<br><br>\r\nThis shows that JSON data is often nested, and apps must follow the structure to find what they need.\r\n</p>\r\n</div>\r\n</details>\r\n\r\n2️⃣ Which pieces of information are grouped together, and why do you think that is?\r\n\r\nFind one example where related data is stored inside the same object.\r\n\r\n<div style=\"clear:both;\"></div>\r\n\r\n<details style=\"background-color: #4f5b68; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 12pt; font-weight: bold; color: #ffffff;\">💡 Reveal</summary>\r\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;\">\r\n    <p style=\"font-size: 12pt; color: #ffffff;\">\r\nRelated information is grouped together to keep the data organized.\r\n<br><br>\r\nFor example, the <strong>\"main\"</strong> object contains temperature, humidity, pressure, and how the temperature feels. The <strong>\"wind\"</strong> object groups wind speed and direction.\r\n<br><br>\r\nThis makes it easier for an app to find related data in one place.\r\n</p>\r\n</div>\r\n</details>\r\n\r\n3️⃣ Some values are single numbers, and others are inside lists. Which part of the data is in a list, and what might that tell you?\r\n\r\nLook for square brackets <strong>[ ]</strong>.\r\n\r\n<div style=\"clear:both;\"></div>\r\n\r\n<details style=\"background-color: #4f5b68; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 12pt; font-weight: bold; color: #ffffff;\">💡 Reveal</summary>\r\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;\">\r\n    <p style=\"font-size: 12pt; color: #ffffff;\">\r\nThe <strong>\"weather\"</strong> data is stored in a list (array).\r\n<br><br>\r\nThis suggests that the API can return <strong>multiple weather conditions</strong>, even if the app only shows one. The app has to decide which item in the list to use.\r\n</p>\r\n</div>\r\n</details>\r\n",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "disable_edit_run_for_submission": "false",
@@ -76,7 +77,6 @@
       "codeEditableAfterSubmit": false
     }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-02-09T16:22:19.261+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson1-level1-test-2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson1-level1-test-2025-pilot\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-09T16:22:19.261+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson1-level1-test-2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson1-level1-test-2025-pilot\"},{\"changed_at\":\"2026-02-10 18:59:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-02-10 19:11:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Weblab2>

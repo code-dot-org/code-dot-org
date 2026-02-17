@@ -1,4 +1,4 @@
-import {BodyThreeText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import arrowRight from './../images/arrow-right.svg';
@@ -21,12 +21,12 @@ const PersonalizationInformationBox: React.FC<
           if (parts.length === 2) {
             return (
               <div className={style.boldedInformationBox}>
-                <BodyThreeText noMargin>
+                <Typography variant="body3">
                   <strong>{parts[0].trim()}</strong>
-                </BodyThreeText>
-                <BodyThreeText noMargin className={style.lightText}>
+                </Typography>
+                <Typography className={style.lightText} variant="body3">
                   {parts[1].trim()}
-                </BodyThreeText>
+                </Typography>
               </div>
             );
           }
@@ -39,9 +39,9 @@ const PersonalizationInformationBox: React.FC<
       case 'regular':
       default:
         return (
-          <BodyThreeText noMargin className={style.lightText}>
+          <Typography className={style.lightText} variant="body3">
             {information}
-          </BodyThreeText>
+          </Typography>
         );
     }
   };

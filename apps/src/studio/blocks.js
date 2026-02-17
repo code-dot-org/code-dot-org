@@ -10,6 +10,7 @@ import _ from 'lodash';
 
 import {
   addSerializationHooksToBlock,
+  interpolateMsg,
   registerCustomProcedureBlocks,
 } from '@cdo/apps/blockly/utils';
 import commonMsg from '@cdo/locale';
@@ -985,7 +986,8 @@ exports.install = function (blockly, blockInstallOptions) {
       dropdown.setValue(this.VALUES[1][1]); // default to top-left
       this.setStyle(BlockStyles.DEFAULT);
       if (spriteCount > 1) {
-        this.interpolateMsg(
+        interpolateMsg(
+          this,
           msg.setSpritePosition(),
           () => {
             this.appendDummyInput().appendField(spriteIndexDropdown, 'SPRITE');
@@ -993,15 +995,16 @@ exports.install = function (blockly, blockInstallOptions) {
           () => {
             this.appendDummyInput().appendField(dropdown, 'VALUE');
           },
-          blockly.ALIGN_RIGHT
+          blockly.inputs.Align.RIGHT
         );
       } else {
-        this.interpolateMsg(
+        interpolateMsg(
+          this,
           msg.setPosition(),
           () => {
             this.appendDummyInput().appendField(dropdown, 'VALUE');
           },
-          blockly.ALIGN_RIGHT
+          blockly.inputs.Align.RIGHT
         );
       }
       this.setPreviousStatement(true);
@@ -1028,7 +1031,8 @@ exports.install = function (blockly, blockInstallOptions) {
       var dropdown = new blockly.FieldDropdown(POSITION_VALUES);
       dropdown.setValue(POSITION_VALUES[1][1]); // default to top-left
       this.setStyle(BlockStyles.DEFAULT);
-      this.interpolateMsg(
+      interpolateMsg(
+        this,
         msg.setSpritePosition(),
         () => {
           this.appendValueInput('SPRITE').setCheck(
@@ -1038,7 +1042,7 @@ exports.install = function (blockly, blockInstallOptions) {
         () => {
           this.appendDummyInput().appendField(dropdown, 'VALUE');
         },
-        blockly.ALIGN_RIGHT
+        blockly.inputs.Align.RIGHT
       );
       this.setPreviousStatement(true);
       this.setInputsInline(true);
@@ -1113,12 +1117,13 @@ exports.install = function (blockly, blockInstallOptions) {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]); // default to top-left
       this.setStyle(BlockStyles.DEFAULT);
-      this.interpolateMsg(
+      interpolateMsg(
+        this,
         msg.addGoalPosition(),
         () => {
           this.appendDummyInput().appendField(dropdown, 'VALUE');
         },
-        blockly.ALIGN_RIGHT
+        blockly.inputs.Align.RIGHT
       );
       this.setPreviousStatement(true);
       this.setInputsInline(true);
@@ -2401,6 +2406,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(msg.whenSpriteAndGroupCollideTooltip());
+      this.setInputsInline(true);
     },
   };
 
@@ -2585,11 +2591,11 @@ exports.install = function (blockly, blockInstallOptions) {
       if (options.params) {
         this.appendValueInput('TITLE')
           .setCheck(blockly.BlockValueType.STRING)
-          .setAlign(Blockly.ALIGN_RIGHT)
+          .setAlign(Blockly.inputs.Align.RIGHT)
           .appendField(msg.showTitleScreenTitle());
         this.appendValueInput('TEXT')
           .setCheck(blockly.BlockValueType.STRING)
-          .setAlign(Blockly.ALIGN_RIGHT)
+          .setAlign(Blockly.inputs.Align.RIGHT)
           .appendField(msg.showTitleScreenText());
       } else {
         this.appendDummyInput()

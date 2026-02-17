@@ -127,7 +127,7 @@ const customInputTypes = {
       icon.style.fontFamily = 'FontAwesome';
       icon.textContent = ' \uf08e '; // arrow-up-right-from-square
       const onSelect = function (soundValue) {
-        block.setTitleValue(soundValue, inputConfig.name);
+        block.setFieldValue(soundValue, inputConfig.name);
       };
       const onClick = () => {
         dashboard.assets.showAssetManager(onSelect, 'audio', null, {
@@ -638,7 +638,7 @@ export default {
             'VAR'
           )
           .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
-        this.setStrictOutput(true, Blockly.BlockValueType.SPRITE);
+        this.setOutput(true, Blockly.BlockValueType.SPRITE);
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
         this.setStyle('sprite_blocks');
       },
@@ -649,7 +649,7 @@ export default {
       },
       renameVar: function (oldName, newName) {
         if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
-          this.setTitleValue(newName, 'VAR');
+          this.setFieldValue(newName, 'VAR');
         }
       },
       removeVar: Blockly.Blocks.variables_get.removeVar,

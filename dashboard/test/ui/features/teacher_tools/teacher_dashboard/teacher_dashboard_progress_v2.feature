@@ -2,7 +2,6 @@
 Feature: Using the V2 progress page
   Background:
     Given I am on "http://studio.code.org"
-    And I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
 
 Scenario: Teacher can open and close Icon Key and details
   Given I create an authorized teacher-associated student named "Sally"

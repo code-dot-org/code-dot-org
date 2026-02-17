@@ -1,4 +1,4 @@
-import {Heading4} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
@@ -66,12 +66,14 @@ const PresentationView: React.FunctionComponent = () => {
         moduleStyles.container
       )}
     >
-      <Heading4
+      <Typography
         id="uitest-presentation-view-header"
         className={moduleStyles.modelCardTitle}
+        variant="h4"
+        gutterBottom
       >
         {modelCardInfo['botName']}
-      </Heading4>
+      </Typography>
       <div className={moduleStyles.modelCardFields}>
         {MODEL_CARD_FIELDS_LABELS_ICONS.map(
           ({property, label, icon, displayTooltip}) => {

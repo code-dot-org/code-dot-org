@@ -1,8 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {getStore} from '@cdo/apps/redux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 import DataDocFormEditor from '../../../../levelbuilder/data-docs-editor/DataDocFormEditor';
@@ -10,7 +10,7 @@ import DataDocFormEditor from '../../../../levelbuilder/data-docs-editor/DataDoc
 $(document).ready(() => {
   const store = getStore();
   const {dataDocKey, dataDocName, dataDocContent} = getScriptData('dataDoc');
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <DataDocFormEditor
         dataDocKey={dataDocKey}

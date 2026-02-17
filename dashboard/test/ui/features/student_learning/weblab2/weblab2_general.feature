@@ -9,8 +9,8 @@ Feature: Web Lab 2 Preview
 # general loading of the editor/instructions into two separate tests.
 Scenario: Web Lab 2 Instructions and Editor load
   Given I create a student named "Penelope"
-  When I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/51/levels/11"
-  And I wait until element "#instructions-panel" is visible
-  Then element with ID "instructions-panel" contains text "This is the level for a basic Web Lab 2 UI Test. Please do not change the start code for this level without changing the UI test!"
+  When I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/51/levels/11?noIntrojs=true"
+  And I wait until element "#instructions-drawer" is visible
+  Then element with ID "instructions-drawer" contains text "This is the level for a basic Web Lab 2 UI Test. Please do not change the start code for this level without changing the UI test!"
   And element with ID "uitest-files-list" contains text "index.html"
   And I wait until element ".codemirror-container" contains text "Hello world!"

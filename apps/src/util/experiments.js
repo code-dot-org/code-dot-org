@@ -48,12 +48,8 @@ experiments.AI_ARTIFACT = 'ai-artifact';
 experiments.AI_CHAT_NEW_PERMISSIONS = 'ai-chat-new-permissions';
 // Adds a "Get help with this block" option to block context menus if docs exist (e.g. Sprite Lab)
 experiments.BLOCKLY_DOCS = 'blockly_docs';
-// Adds the ability to toggle between v1 and v2 of the section progress page of the teacher dashboard
-experiments.SECTION_PROGRESS_V2 = 'section_progress_v2';
 // Allows the playspace to be dragged to take up a larger portion of the screen
 experiments.BIG_PLAYSPACE = 'bigPlayspace';
-// Allows user to view the new version of the teacher navigation
-experiments.TEACHER_LOCAL_NAV_V2 = 'teacher-local-nav-v2';
 // Use glow effect for Blockly block highlighting
 experiments.BLOCKLY_GLOW_HIGHLIGHT = 'blockly-glow-highlight';
 // Turn on Blockly Keyboard Navigation
