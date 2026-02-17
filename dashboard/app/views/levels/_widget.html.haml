@@ -9,10 +9,11 @@
   dashboard.widget.setupWidgetLevel();
 
 #external
-  / If there is no actual template, the template won't be found and the returned
-  / path will be an absolute path. These are intended to be rendered inline.
-  - if @level.template.start_with?("/")
-    = render inline: File.read(@level.template), type: @level.template_type
+  - if template_exists?(@level.partial_template)
+    / We eventually want to convert all of these over to use Rails templates,
+    / so always prefer that if it exists.
+    = render partial: @level.partial_template
   - else
-    = render partial: @level.template, type: @level.template_type
+    / Otherwise, fall back to the original static implementation.
+    = render inline: @level.inline_template
 .clear
