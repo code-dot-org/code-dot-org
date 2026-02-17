@@ -1,5 +1,5 @@
 # This class implements an openai backend for the generic AichatAiClient.
-class AichatOpenaiResponsesClient < AichatAiClient
+class AichatOpenaiResponsesClientLegacy < AichatAiClientLegacy
   # The url to send with the post request
   private def url
     "https://api.openai.com/v1/responses"
@@ -57,6 +57,15 @@ class AichatOpenaiResponsesClient < AichatAiClient
     }.compact # Use compact to remove null text
 
     body
+  end
+
+  # Override base headers and merge in Bearer token.
+  private def headers
+    super.merge(
+      {
+        "Authorization" => "Bearer #{api_key}"
+      }
+    )
   end
 
   # Convert role from internal representation to OpenAI's role
