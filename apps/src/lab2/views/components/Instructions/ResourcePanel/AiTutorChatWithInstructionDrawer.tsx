@@ -139,22 +139,42 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
     setIsCollapsed(isCollapsedByDefault);
   }, [isCollapsedByDefault]);
 
-  // Measure the instructions content height once when loaded
-  // and adjust the initial height if content is smaller.
+  // Measure the instructions content height and update when content change
+  // (e.g., details elements are expanded/collapsed).
   useEffect(() => {
+    // Skip if instructions drawer is collapsed (unmounted).
+    if (isCollapsed) {
+      return;
+    }
+
     const instructionsContentElement = instructionsContentRef.current;
     if (!instructionsContentElement) {
       return;
     }
 
-    const contentHeight = instructionsContentElement.scrollHeight;
-    setMaxInstructionsHeight(contentHeight);
+    const updateMaxHeight = () => {
+      const contentHeight = instructionsContentElement.scrollHeight;
+      setMaxInstructionsHeight(contentHeight);
 
-    // If content is smaller than initial height, adjust to fit content.
-    if (contentHeight < DEFAULT_INITIAL_INSTRUCTIONS_HEIGHT) {
-      setRawInstructionsHeight(contentHeight);
-    }
-  }, [instructionsContent, setRawInstructionsHeight]);
+      // If content is smaller than initial height, adjust to fit content.
+      if (contentHeight < DEFAULT_INITIAL_INSTRUCTIONS_HEIGHT) {
+        setRawInstructionsHeight(contentHeight);
+      }
+    };
+
+    updateMaxHeight();
+
+    // Watch for size changes (e.g., when details elements expand/collapse).
+    const resizeObserver = new ResizeObserver(() => {
+      updateMaxHeight();
+    });
+
+    resizeObserver.observe(instructionsContentElement);
+
+    return () => {
+      resizeObserver.disconnect();
+    };
+  }, [instructionsContent, setRawInstructionsHeight, isCollapsed]);
 
   const toggleInstructions = useCallback(() => {
     const eventToReport = isCollapsed
