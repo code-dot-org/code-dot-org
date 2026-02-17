@@ -257,7 +257,10 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
               />
               <div
                 style={{height: debugPanelHeight}}
-                className={lab2Styles.flexShrink0}
+                className={classNames(
+                  lab2Styles.flexShrink0,
+                  debugPanelDragging && lab2Styles.resizingPanel
+                )}
               >
                 <DebugPanel />
               </div>
