@@ -77,4 +77,8 @@ class Widget < Level
   def inline_template
     File.read(Rails.root.join('public', properties['href']))
   end
+
+  def inline_template_type
+    File.extname(properties['href'])[1..].to_sym
+  end
 end

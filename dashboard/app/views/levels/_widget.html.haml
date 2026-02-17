@@ -15,5 +15,5 @@
     = render partial: @level.partial_template
   - else
     / Otherwise, fall back to the original static implementation.
-    = render inline: @level.inline_template
+    = render inline: @level.inline_template, type: @level.inline_template_type
 .clear
