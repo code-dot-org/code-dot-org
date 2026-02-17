@@ -99,11 +99,21 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
       let responseDataValue = `Cannot display response data of type ${selectedRequest?.response?.contentType}`;
       if (!selectedRequest.response?.body) {
         responseDataValue = 'No response data found';
+      } else if (selectedRequest?.response?.contentType?.startsWith('text')) {
+        responseDataValue = selectedRequest.response.body;
       } else if (
-        selectedRequest?.response?.contentType?.startsWith('text') ||
         selectedRequest?.response?.contentType?.startsWith('application/json')
       ) {
-        responseDataValue = selectedRequest.response.body;
+        try {
+          responseDataValue = JSON.stringify(
+            JSON.parse(selectedRequest.response.body),
+            null,
+            2
+          );
+        } catch {
+          // Fall back to unformatted response if parsing fails.
+          responseDataValue = selectedRequest.response.body;
+        }
       }
       rows.push([
         {

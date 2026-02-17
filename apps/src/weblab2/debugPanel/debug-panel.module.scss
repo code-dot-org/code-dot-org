@@ -19,11 +19,11 @@
 
 .networkSummaryHeader {
   display: flex;
-  height: 40px;
   padding: 10px 8px;
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
+  border-bottom: variables.$default-border;
   
   p {
     margin-bottom: 0;

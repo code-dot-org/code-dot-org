@@ -6,6 +6,7 @@
   align-items: flex-start;
   flex: 1 0 0;
   align-self: stretch;
+  min-height: 0;
   border-radius: variables.$default-border-radius;
   border: variables.$default-border;
   background: var(--background-neutral-primary);
@@ -35,7 +36,9 @@
   align-items: stretch;
   gap: 8px;
   align-self: stretch;
-  overflow: hidden;
+  flex: 1;
+  min-height: 0;
+  overflow-x: hidden;
   overflow-y: auto;
   container-type: inline-size;
 
@@ -59,6 +62,7 @@
   flex-direction: column;
   gap: 4px;
   flex: 1;
+  min-height: 0;
 }
 
 .detailsFieldLabel {
@@ -70,5 +74,16 @@
   background: var(--background-neutral-secondary, #F0F2F5);
   padding: 4px 6px;
   align-self: stretch;
-  font-family: monospace;
+  overflow: hidden;
+
+  pre {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    font-family: monospace;
+    font-size: var(--font-size-body-sm);
+    overflow: auto;
+    max-height: 100%;
+  }
 }
