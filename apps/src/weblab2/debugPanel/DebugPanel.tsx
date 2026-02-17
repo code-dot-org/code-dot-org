@@ -30,16 +30,12 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
   );
   const [selectedRequest, setSelectedRequest] = React.useState<
     NetworkEntry | undefined
-  >(
-    networkRequests.length > 0
-      ? networkRequests[networkRequests.length - 1]
-      : undefined
-  );
+  >(networkRequests.length > 0 ? networkRequests[0] : undefined);
   const dispatch = useAppDispatch();
 
   useEffect(() => {
     if (!selectedRequest && networkRequests.length > 0) {
-      setSelectedRequest(networkRequests[networkRequests.length - 1]);
+      setSelectedRequest(networkRequests[0]);
     } else if (networkRequests.length === 0 && selectedRequest !== undefined) {
       setSelectedRequest(undefined);
     }
