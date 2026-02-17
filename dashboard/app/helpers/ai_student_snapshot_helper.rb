@@ -8,6 +8,7 @@ module AiStudentSnapshotHelper
     feedback_record.section_id = section_id
     feedback_record.saved_feedback = feedback_json
     feedback_record.save!
+    feedback_record
   end
 
   API_KEY = CDO.openai_lesson_summaries_api_key # TODO before merge: CHANGE TO NEW KEY
@@ -52,10 +53,10 @@ module AiStudentSnapshotHelper
 
       feedback_json = JSON.parse(response_body)
       feedback_string = feedback_json.is_a?(Hash) ? feedback_json['feedback'] : feedback_json
-      save_lesson_feedback(feedback_string, student_id, lesson_id, section_id, teacher_id)
-      return {status: evaluation[:status], json: evaluation[:json]}
+      saved_record = save_lesson_feedback(feedback_string, student_id, lesson_id, section_id, teacher_id)
+      return {status: evaluation[:status], record: saved_record}
     else
-      raise StandardError.new("Recieved status code #{response.code} when processing AI lesson feedback: #{response.body}")
+      raise StandardError.new("Received status code #{response.code} when processing AI lesson feedback: #{response.body}")
     end
   end
 
