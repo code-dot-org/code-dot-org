@@ -23,5 +23,5 @@
       EngineVersion: 1.6.22
       NumCacheNodes: 3
       AZMode: cross-az
-      PreferredAvailabilityZones: <%= AVAILABILITY_ZONES.first(2).to_json %>
+      PreferredAvailabilityZones: <%= AVAILABILITY_ZONES.first(3).to_json %>
       VpcSecurityGroupIds: [!ImportValue VPC-MemcachedSecurityGroup]
