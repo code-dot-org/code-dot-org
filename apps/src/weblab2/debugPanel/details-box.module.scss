@@ -70,20 +70,18 @@
 }
 
 .detailsFieldValue {
-  border-radius: variables.$default-border-radius;
-  background: var(--background-neutral-secondary, #F0F2F5);
-  padding: 4px 6px;
   align-self: stretch;
   overflow: hidden;
+  font-family: monospace;
+}
 
-  pre {
-    margin: 0;
-    padding: 0;
-    background: none;
-    border: none;
-    font-family: monospace;
-    font-size: var(--font-size-body-sm);
-    overflow: auto;
-    max-height: 100%;
-  }
+.detailsFieldValueContainer {
+  border: none;
+  border-radius: variables.$default-border-radius;
+  background: var(--background-neutral-secondary, #F0F2F5);
+  margin: 0;
+  padding: 4px 6px;
+  font-size: var(--font-size-body-sm);
+  overflow: auto;
+  max-height: 100%;
 }
