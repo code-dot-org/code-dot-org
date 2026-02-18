@@ -1,12 +1,14 @@
 default['cdo-otel-collector'] = {
   # Version of OpenTelemetry Collector to install
   version: '0.146.0',
+  # User and group are created by the DEB package
   user: 'otelcol',
   group: 'otelcol',
   home_dir: '/var/lib/otelcol',
   config_dir: '/etc/otelcol',
   config_file: '/etc/otelcol/config.yaml',
-  binary_path: '/usr/local/bin/otelcol',
+  # Binary is installed by package to /usr/bin/otelcol
+  service_name: 'otelcol',
   log_level: 'info',
 
   # Receiver configurations

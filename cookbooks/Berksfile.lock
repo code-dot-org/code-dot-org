@@ -27,6 +27,8 @@ DEPENDENCIES
     path: cdo-nginx
   cdo-nodejs
     path: cdo-nodejs
+  cdo-otel-collector
+    path: cdo-otel-collector
   cdo-postfix
     path: cdo-postfix
   cdo-python
@@ -72,6 +74,7 @@ GRAPH
     cdo-mysql (>= 0.0.0)
     cdo-nginx (>= 0.0.0)
     cdo-nodejs (>= 0.0.0)
+    cdo-otel-collector (>= 0.0.0)
     cdo-postfix (>= 0.0.0)
     cdo-python (>= 0.0.0)
     cdo-redis (>= 0.0.0)
@@ -103,6 +106,9 @@ GRAPH
     ssl_certificate (>= 0.0.0)
   cdo-nodejs (0.3.50)
     nodejs (>= 10.2.0)
+  cdo-otel-collector (0.1.0)
+    apt (>= 0.0.0)
+    ark (>= 0.0.0)
   cdo-postfix (0.2.20)
     apt (>= 0.0.0)
     postfix (>= 0.0.0)
