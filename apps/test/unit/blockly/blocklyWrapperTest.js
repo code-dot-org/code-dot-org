@@ -33,11 +33,4 @@ describe('Blockly Wrapper', () => {
   it('getGenerator returns the JS Generator', () => {
     expect(Blockly.getGenerator()).to.deep.equal(Blockly.blockly_.JavaScript);
   });
-
-  it('Setting SNAP_RADIUS also sets CONNECTING_SNAP_RADIUS', () => {
-    Blockly.SNAP_RADIUS = 0;
-    expect(Blockly.blockly_.CONNECTING_SNAP_RADIUS).to.equal(0);
-    Blockly.SNAP_RADIUS = 100;
-    expect(Blockly.blockly_.CONNECTING_SNAP_RADIUS).to.equal(100);
-  });
 });

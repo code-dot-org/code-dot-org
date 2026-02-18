@@ -579,13 +579,17 @@ class LevelsController < ApplicationController
 
       if project_template_level_name = @level.properties['project_template_level_name']
         project_template_level = Level.find_by_name(project_template_level_name)
-        links["Template Level"] = [
-          {text: project_template_level_name, url: level_path(project_template_level)}
-        ]
-        template_level_edit_link = can_edit_level ?
-          {text: 'Edit', url: edit_level_path(project_template_level)} :
-          {text: '(Cannot edit)', url: ''}
-        links["Template Level"] << template_level_edit_link
+        if project_template_level
+          links["Template Level"] = [
+            {text: project_template_level_name, url: level_path(project_template_level)}
+          ]
+          template_level_edit_link = can_edit_level ?
+            {text: 'Edit', url: edit_level_path(project_template_level)} :
+            {text: '(Cannot edit)', url: ''}
+          links["Template Level"] << template_level_edit_link
+        else
+          links["Template Level"] = [{text: "No template level found with name \"#{project_template_level_name}\"", url: ''}]
+        end
       end
     elsif script_level
       links[@level.name] << {

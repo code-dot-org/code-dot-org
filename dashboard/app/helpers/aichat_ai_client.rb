@@ -89,7 +89,14 @@ class AichatAiClient
   private def headers
     {
       "Content-Type" => "application/json",
+      "Authorization" => "Bearer #{bearer_token}",
     }
+  end
+
+  # Bearer token defaults to the api_key instance variable.
+  # The derived class can optionally override this.
+  private def bearer_token
+    api_key
   end
 
   private def raise_not_implemented_error
