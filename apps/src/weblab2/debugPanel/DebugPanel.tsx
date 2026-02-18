@@ -1,3 +1,4 @@
+import Button from '@code-dot-org/component-library/button';
 import CloseButton from '@code-dot-org/component-library/closeButton';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
@@ -5,7 +6,7 @@ import {
   BodyThreeText,
   StrongText,
 } from '@code-dot-org/component-library/typography';
-import React, {useEffect, useMemo} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -29,21 +30,34 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
   const networkRequests = useAppSelector(
     state => state.weblab2Network.requests
   );
-  const [selectedRequest, setSelectedRequest] = React.useState<
+  const [orderedNetworkRequests, setOrderedNetworkRequests] = useState(
+    [...networkRequests].reverse()
+  );
+  const [selectedRequest, setSelectedRequest] = useState<
     NetworkEntry | undefined
-  >(networkRequests.length > 0 ? networkRequests[0] : undefined);
+  >(orderedNetworkRequests.length > 0 ? orderedNetworkRequests[0] : undefined);
   const dispatch = useAppDispatch();
+  const [newestFirst, setNewestFirst] = useState(true);
 
   useEffect(() => {
-    if (!selectedRequest && networkRequests.length > 0) {
-      setSelectedRequest(networkRequests[0]);
-    } else if (networkRequests.length === 0 && selectedRequest !== undefined) {
+    if (!selectedRequest && orderedNetworkRequests.length > 0) {
+      setSelectedRequest(orderedNetworkRequests[0]);
+    } else if (
+      orderedNetworkRequests.length === 0 &&
+      selectedRequest !== undefined
+    ) {
       setSelectedRequest(undefined);
     }
-  }, [networkRequests, selectedRequest]);
+  }, [orderedNetworkRequests, selectedRequest]);
+
+  useEffect(() => {
+    setOrderedNetworkRequests(
+      newestFirst ? [...networkRequests].reverse() : [...networkRequests]
+    );
+  }, [networkRequests, newestFirst]);
 
   const onInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const selected = networkRequests.find(
+    const selected = orderedNetworkRequests.find(
       request => request.id === event.target.value
     );
     setSelectedRequest(selected);
@@ -143,19 +157,26 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
         />
       }
     >
-      {networkRequests.length === 0 ? (
+      {orderedNetworkRequests.length === 0 ? (
         <NoRequestsPlaceholder />
       ) : (
         <div className={moduleStyles.debugPanelContainer}>
           <div className={moduleStyles.networkSummary}>
             <div className={moduleStyles.networkSummaryHeader}>
               <BodyFourText>
-                <StrongText>Network Activity</StrongText>
+                <StrongText>Activity</StrongText>
               </BodyFourText>
-              <BodyFourText>{networkRequests.length} Items</BodyFourText>
+              <Button
+                onClick={() => setNewestFirst(!newestFirst)}
+                size="xs"
+                type="secondary"
+                iconLeft={{iconName: 'sort'}}
+                text={newestFirst ? 'Newest first' : 'Oldest first'}
+                color={'gray'}
+              />
             </div>
             <div className={moduleStyles.requestList}>
-              {networkRequests.map(request => (
+              {orderedNetworkRequests.map(request => (
                 <NetworkRequestChip
                   key={request.id}
                   request={request}
