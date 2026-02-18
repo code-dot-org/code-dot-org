@@ -3,7 +3,6 @@ import React from 'react';
 import LessonFeedback from '@cdo/apps/templates/feedback/LessonFeedback';
 import i18n from '@cdo/locale';
 
-// In the future we should delete the saved_feedback, but as of now there is no "submitted" feedback
 interface LessonFeedbackData {
   id: number;
   submitted_feedback?: string;
@@ -64,7 +63,7 @@ function LessonFeedbackContainer({studentId}: LessonFeedbackContainerProps) {
           return (
             <LessonFeedback
               key={lessonFeedback.id}
-              feedbackText={lessonFeedback?.saved_feedback}
+              feedbackText={lessonFeedback?.submitted_feedback}
               lessonId={lessonFeedback.lesson_id}
               teacherName={lessonFeedback.teacher_name || 'Your teacher'}
               submittedAtDate={lessonFeedback.updated_at}
