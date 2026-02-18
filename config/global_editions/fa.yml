@@ -141,7 +141,6 @@ pages:
   # All pages
   - path: /
     components:
-      LtiFeedbackBanner: false
       CurriculumCatalog:
         # Do not allow switching away from showing ONLY translated courses
         forceTranslated: true
