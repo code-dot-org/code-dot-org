@@ -209,27 +209,32 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
     return isLookingAtOriginalAiFeedback && hasEdited;
   };
 
+  // Helper function to generate common analytics properties for feedback actions
+  const getCommonAnalyticsProperties = () => {
+    const hasRecommendedAction = !!(
+      resourceData[0]?.recommended_action &&
+      resourceData[0].recommended_action.trim()
+    );
+    const hasRecommendActionLink = !!(
+      resourceData[0]?.resource_link && resourceData[0].resource_link.trim()
+    );
+
+    return {
+      aiFeedbackEdited: userHasEditedAiFeedback(),
+      hasRecommendedAction,
+      recommendedActionCharacterCount: resourceData[0]?.recommended_action
+        ? resourceData[0].recommended_action.trim().length
+        : 0,
+      hasRecommendActionLink,
+      // Only include resourceLinkCount for save as draft (backward compatibility)
+      ...(hasRecommendActionLink && {resourceLinkCount: 1}),
+    };
+  };
+
   const handleSaveAsDraft = async () => {
     analyticsReporter.sendEvent(
       EVENTS.LESSON_SNAPSHOT_SAVE_AS_DRAFT_CLICKED,
-      {
-        aiFeedbackEdited: userHasEditedAiFeedback(),
-        hasRecommendedAction: !!(
-          resourceData[0]?.recommended_action &&
-          resourceData[0].recommended_action.trim()
-        ),
-        resourceLinkCount: !!(
-          resourceData[0]?.resource_link && resourceData[0].resource_link.trim()
-        )
-          ? 1
-          : 0,
-        recommendedActionCharacterCount: resourceData[0]?.recommended_action
-          ? resourceData[0].recommended_action.trim().length
-          : 0,
-        hasRecommendActionLink: !!(
-          resourceData[0]?.resource_link && resourceData[0].resource_link.trim()
-        ),
-      },
+      getCommonAnalyticsProperties(),
       PLATFORMS.STATSIG
     );
     const newFeedbackData = {
@@ -249,21 +254,13 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
   };
 
   const handleSendToStudent = async () => {
+    const analyticsProperties = getCommonAnalyticsProperties();
+    // Remove resourceLinkCount for send to student event (only used for save as draft)
+    delete analyticsProperties.resourceLinkCount;
+
     analyticsReporter.sendEvent(
       EVENTS.LESSON_SNAPSHOT_SEND_FEEDBACK_TO_STUDENT_CLICKED,
-      {
-        aiFeedbackEdited: userHasEditedAiFeedback(),
-        hasRecommendedAction: !!(
-          resourceData[0]?.recommended_action &&
-          resourceData[0].recommended_action.trim()
-        ),
-        recommendedActionCharacterCount: resourceData[0]?.recommended_action
-          ? resourceData[0].recommended_action.trim().length
-          : 0,
-        hasRecommendActionLink: !!(
-          resourceData[0]?.resource_link && resourceData[0].resource_link.trim()
-        ),
-      },
+      analyticsProperties,
       PLATFORMS.STATSIG
     );
     // Create the new feedback data
