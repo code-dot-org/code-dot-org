@@ -352,7 +352,7 @@ class CourseOffering < ApplicationRecord
   def ai_chat_tools_dependency
     # Returns the AI chat tools dependency for this course offering, which is determined by latest course version.
     unit_group = course_versions.first&.content_root
-    unit_group.ai_chat_tools_dependency
+    unit_group&.ai_chat_tools_dependency
   end
 
   def summarize_for_edit
