@@ -3,6 +3,7 @@ import {
   PutDashboardCommand,
 } from '@aws-sdk/client-cloudwatch';
 import {Dashboard} from 'cloudwatch-dashboard-types';
+import {exit} from 'process';
 
 import modelDescriptions from '../../../../../../apps/static/aichat/modelDescriptions.json';
 import {BROWSERS, DASHBOARD_NAME, REGION} from '../constants';
@@ -117,6 +118,12 @@ async function putDashboard(name: string) {
   }
 }
 
-const dashboardName = DASHBOARD_NAME;
+const args = process.argv.slice(2);
+if (args.length === 0 || !['test', 'production'].includes(args[0])) {
+  console.log('Usage: npx ts-node createDashboard.ts <test|production>');
+  exit(0);
+}
+
+const dashboardName = DASHBOARD_NAME + (args[0] === 'test' ? '-TEST' : '');
 console.log('Updating dashboard: ' + dashboardName);
 putDashboard(dashboardName);
