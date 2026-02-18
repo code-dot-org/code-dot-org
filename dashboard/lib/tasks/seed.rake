@@ -286,7 +286,7 @@ namespace :seed do
   end
 
   timed_task_with_logging scripts: SCRIPTS_DEPENDENCIES do
-    update_scripts(incremental: false)
+    update_scripts(incremental: true)
   end
 
   timed_task_with_logging scripts_incremental: SCRIPTS_DEPENDENCIES do
