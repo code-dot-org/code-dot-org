@@ -12,13 +12,15 @@ module Cdo
         logo_filename: 'logo-inverse.svg',
         logo_alt_key: :code_org_logo_alt,
         favicon: 'favicon.ico',
-        legal_name: 'Code.org'
+        legal_name: 'Code.org',
+        trademark_html: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo, Hour of Code&reg; and CS Discoveries&reg; are trademarks of Code.org.'
       },
       BRAND_CODE_CODE_ORG_UPD => {
         logo_filename: 'logo.svg',
         logo_alt_key: :code_org_logo_alt,
         favicon: 'favicon.ico',
-        legal_name: 'Code.org'
+        legal_name: 'Code.ai',
+        trademark_html: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo, Hour of Code&reg; and CS Discoveries&reg; are trademarks of Code.org.'
       }
     }.freeze
 
@@ -32,7 +34,7 @@ module Cdo
     # Get the current brand configuration
     def self.current_brand_configuration
       brand_code = current_brand_code
-      BRANDS[brand_code] || BRANDS[BRAND_CODE_CODE]
+      BRANDS[brand_code] || BRANDS[BRAND_CODE_CODE_ORG]
     end
 
     # Get the logo filename for the current brand
@@ -58,6 +60,19 @@ module Cdo
     # Get the legal name for the current brand (for copyright notices)
     def self.legal_name
       current_brand_configuration[:legal_name]
+    end
+
+    # Get the trademark HTML for the current brand.
+    # @param current_year [Integer]
+    # @return [String] HTML-safe trademark string with placeholders filled
+    def self.trademark_html(current_year:)
+      template = current_brand_configuration[:trademark_html]
+      html = format(template, current_year: current_year)
+      ActionController::Base.helpers.sanitize(
+        html,
+        tags: %w[a br],
+        attributes: %w[href]
+      )
     end
 
     # Get the marketing URL for the current brand
