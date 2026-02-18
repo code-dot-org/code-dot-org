@@ -93,6 +93,44 @@ export const addCSPViolationListenerToDocument = (doc: Document) => {
   }
 };
 
+const consoleOverrideScript = `
+(function() {
+  const channel = new BroadcastChannel("${PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL}");
+  const METHODS = ["log", "warn", "error", "info"];
+  function serialize(arg) {
+    if (arg === undefined) return "undefined";
+    if (arg === null) return "null";
+    if (arg instanceof Error) return arg.toString();
+    if (typeof arg === "string") return arg;
+    try { return JSON.stringify(arg); } catch(e) { return String(arg); }
+  }
+  METHODS.forEach(function(method) {
+    const originalMethod = console[method];
+    console[method] = function() {
+      const args = [];
+      for (let i = 0; i < arguments.length; i++) { args.push(serialize(arguments[i])); }
+      try {
+        channel.postMessage({type: "CONSOLE_LOG", level: method, args: args});
+      } catch(e) {}
+      return originalMethod.apply(console, arguments);
+    };
+  });
+})();
+`;
+
+// Adds a script to the document that overrides console methods (log, warn, error, info)
+// and broadcasts the serialized arguments via BroadcastChannel so the parent can capture them.
+export const addConsoleOverrideToDocument = (doc: Document) => {
+  const script = doc.createElement('script');
+  script.textContent = consoleOverrideScript;
+  const head = doc.querySelector('head');
+  if (head) {
+    head.insertBefore(script, head.firstChild);
+  } else {
+    doc.documentElement.insertBefore(script, doc.documentElement.firstChild);
+  }
+};
+
 // This adds a base tag to the header of the given document, setting its href to the provided baseHref.
 // If a base tag already exists, its href is updated.
 export const addBaseTagToDocument = (doc: Document, baseHref: string) => {
