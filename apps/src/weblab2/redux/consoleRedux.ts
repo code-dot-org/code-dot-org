@@ -5,7 +5,6 @@ import {registerReducers} from '@cdo/apps/redux';
 export type ConsoleLogLevel = 'log' | 'warn' | 'error' | 'info';
 
 export interface ConsoleEntry {
-  id: number;
   level: ConsoleLogLevel;
   args: string[];
   timestamp: string;
@@ -13,12 +12,10 @@ export interface ConsoleEntry {
 
 export interface Weblab2ConsoleState {
   logs: ConsoleEntry[];
-  nextId: number;
 }
 
 const initialState: Weblab2ConsoleState = {
   logs: [],
-  nextId: 0,
 };
 
 const consoleSlice = createSlice({
@@ -30,12 +27,10 @@ const consoleSlice = createSlice({
       action: PayloadAction<{level: ConsoleLogLevel; args: string[]}>
     ) => {
       state.logs.push({
-        id: state.nextId,
         level: action.payload.level,
         args: action.payload.args,
         timestamp: new Date().toISOString(),
       });
-      state.nextId++;
     },
     clearConsoleLogs: state => {
       state.logs = [];

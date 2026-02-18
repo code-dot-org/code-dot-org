@@ -95,8 +95,8 @@ export const addCSPViolationListenerToDocument = (doc: Document) => {
 
 const consoleOverrideScript = `
 (function() {
-  var channel = new BroadcastChannel("${PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL}");
-  var METHODS = ["log", "warn", "error", "info"];
+  const channel = new BroadcastChannel("${PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL}");
+  const METHODS = ["log", "warn", "error", "info"];
   function serialize(arg) {
     if (arg === undefined) return "undefined";
     if (arg === null) return "null";
@@ -104,10 +104,10 @@ const consoleOverrideScript = `
     try { return JSON.stringify(arg); } catch(e) { return String(arg); }
   }
   METHODS.forEach(function(method) {
-    var originalMethod = console[method];
+    const originalMethod = console[method];
     console[method] = function() {
-      var args = [];
-      for (var i = 0; i < arguments.length; i++) { args.push(serialize(arguments[i])); }
+      const args = [];
+      for (let i = 0; i < arguments.length; i++) { args.push(serialize(arguments[i])); }
       try {
         channel.postMessage({type: "CONSOLE_LOG", level: method, args: args});
       } catch(e) {}
