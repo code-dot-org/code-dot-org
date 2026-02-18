@@ -15,6 +15,7 @@ import {
   AiInteractionStatus as Status,
   AiDiffContext,
   AiDiffArtifactType,
+  AiInteractionStatus,
 } from '@cdo/generated-scripts/sharedConstants';
 
 import {EVENTS, PLATFORMS} from '../metrics/AnalyticsConstants';
@@ -296,6 +297,9 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
               customStyles={style}
               key={id}
               isTA={true}
+              messageStyle={
+                item.status !== AiInteractionStatus.OK ? 'danger' : 'default'
+              }
               footer={
                 item.role === Role.ASSISTANT && (
                   <AiDiffBotMessageFooter

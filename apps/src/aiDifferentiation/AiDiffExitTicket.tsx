@@ -42,7 +42,11 @@ const AiDiffExitTicket: React.FC<AiDiffExitTicketProps> = ({
       iconName = 'pencil';
       label = 'Free Response';
       styleName = 'Red';
-    } else if (type === 'short_answer') {
+    } else if (
+      type === 'short_answer' ||
+      type === 'true_false' ||
+      type === 'fill_in_the_blank'
+    ) {
       iconName = 'comments-question-check';
       label = 'Short Answer';
       styleName = 'Purple';
