@@ -536,7 +536,7 @@ class Ability
       end
 
       can :find_toxicity, :aichat do
-        user.teacher_can_access_ai_chat? || user.student_can_access_ai_chat?
+        user.teacher_can_access_ai_chat_lab? || user.student_can_access_ai_chat_lab?
       end
 
       can :user_has_access, :aichat

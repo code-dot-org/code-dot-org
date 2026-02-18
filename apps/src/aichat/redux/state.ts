@@ -66,7 +66,7 @@ export interface AichatState extends AiDiffChatState {
   saveInProgress: boolean;
   // The type of save action being performed (customization update, publish, model card save, etc).
   currentSaveType: SaveType | undefined;
-  userHasAichatAccess: boolean;
+  userHasAichatLabAccess: boolean;
   // List of files that have been staged for upload to the model.
   stagedFiles: {
     key: string;

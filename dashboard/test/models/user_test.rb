@@ -4432,44 +4432,44 @@ class UserTest < ActiveSupport::TestCase
     assert_equal new_us_state, student.reload.us_state
   end
 
-  describe 'Access to AI Chat' do
+  describe 'Access to AI Chat Lab' do
     context 'when user is a teacher with oauth account' do
       let(:teacher) {create(:teacher, :google_sso_provider)}
 
-      it 'can access AI Chat' do
-        _(teacher.teacher_can_access_ai_chat?).must_equal true
+      it 'can access AI Chat Lab' do
+        _(teacher.teacher_can_access_ai_chat_lab?).must_equal true
       end
     end
 
     context 'when user is a teacher with LTI account' do
       let(:teacher) {create(:teacher, :with_lti_auth)}
 
-      it 'can access AI Chat' do
-        _(teacher.teacher_can_access_ai_chat?).must_equal true
+      it 'can access AI Chat Lab' do
+        _(teacher.teacher_can_access_ai_chat_lab?).must_equal true
       end
     end
 
     context 'when user is a teacher with AUTHORIZED_TEACHER permissions' do
       let(:teacher) {create(:authorized_teacher)}
 
-      it 'can access AI Chat' do
-        _(teacher.teacher_can_access_ai_chat?).must_equal true
+      it 'can access AI Chat Lab' do
+        _(teacher.teacher_can_access_ai_chat_lab?).must_equal true
       end
     end
 
     context 'when user is a teacher with email account' do
       let(:teacher) {create(:teacher)}
 
-      it 'cannot access AI Chat' do
-        _(teacher.teacher_can_access_ai_chat?).must_equal false
+      it 'cannot access AI Chat Lab' do
+        _(teacher.teacher_can_access_ai_chat_lab?).must_equal false
       end
     end
 
     context 'when user is a student with email account' do
       let(:student) {create(:student)}
 
-      it 'cannot access AI Chat' do
-        _(student.student_can_access_ai_chat?).must_equal false
+      it 'cannot access AI Chat Lab' do
+        _(student.student_can_access_ai_chat_lab?).must_equal false
       end
     end
 
@@ -4480,8 +4480,8 @@ class UserTest < ActiveSupport::TestCase
       let(:student) {create(:student)}
       let!(:follower) {create(:follower, section: section, student_user: student, user: teacher)}
 
-      it 'can access AI Chat' do
-        _(student.student_can_access_ai_chat?).must_equal true
+      it 'can access AI Chat Lab' do
+        _(student.student_can_access_ai_chat_lab?).must_equal true
       end
     end
 
@@ -4491,8 +4491,8 @@ class UserTest < ActiveSupport::TestCase
       let(:student) {create(:student)}
       let!(:follower) {create(:follower, section: section, student_user: student, user: teacher)}
 
-      it 'cannot access AI Chat' do
-        _(student.student_can_access_ai_chat?).must_equal false
+      it 'cannot access AI Chat Lab' do
+        _(student.student_can_access_ai_chat_lab?).must_equal false
       end
     end
 
@@ -4503,7 +4503,7 @@ class UserTest < ActiveSupport::TestCase
       let!(:follower) {create(:follower, section: section, student_user: student, user: teacher)}
 
       it 'does not have access' do
-        _(student.student_can_access_ai_chat?).must_equal false
+        _(student.student_can_access_ai_chat_lab?).must_equal false
       end
     end
   end

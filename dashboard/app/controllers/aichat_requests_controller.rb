@@ -102,7 +102,7 @@ class AichatRequestsController < ApplicationController
 
   private def can_access_aichat_chat_completion?
     return false if DCDO.get("block_aichat_chat_completion", false)
-    current_user.has_aichat_access?
+    current_user.has_aichat_lab_access?
   end
 
   private def should_throttle_request_count?

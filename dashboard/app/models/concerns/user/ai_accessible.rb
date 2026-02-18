@@ -31,17 +31,17 @@ module User::AiAccessible
     levelbuilder?
   end
 
-  def teacher_can_access_ai_chat?
+  def teacher_can_access_ai_chat_lab?
     teacher? && (verified_instructor? || oauth? || Policies::Lti.lti?(self))
   end
 
-  def student_can_access_ai_chat?
-    teachers.any?(&:teacher_can_access_ai_chat?) &&
+  def student_can_access_ai_chat_lab?
+    teachers.any?(&:teacher_can_access_ai_chat_lab?) &&
       sections_as_student.any?(&:assigned_ai_chat?)
   end
 
-  def has_aichat_access?
-    teacher_can_access_ai_chat? || student_can_access_ai_chat?
+  def has_aichat_lab_access?
+    teacher_can_access_ai_chat_lab? || student_can_access_ai_chat_lab?
   end
 
   def ai_tutor_enabled_for_pilot?
