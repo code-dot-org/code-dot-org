@@ -138,38 +138,9 @@ function main() {
     return `${location.protocol}//${environment}studio.${cdn}code.org${port}`;
   }
 
-  // Script injected into HTML files to intercept console methods and forward
-  // them to InnerHTMLPreview via BroadcastChannel.
-  var CONSOLE_OVERRIDE_SCRIPT =
-    '<script>' +
-    '(function() {' +
-    '  var channel = new BroadcastChannel("' +
-    PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL +
-    '");' +
-    '  var METHODS = ["log", "warn", "error", "info"];' +
-    '  function serialize(arg) {' +
-    '    if (arg === undefined) return "undefined";' +
-    '    if (arg === null) return "null";' +
-    '    if (arg instanceof Error) return arg.toString();' +
-    '    try { return JSON.stringify(arg); } catch(e) { return String(arg); }' +
-    '  }' +
-    '  METHODS.forEach(function(method) {' +
-    '    var original = console[method];' +
-    '    console[method] = function() {' +
-    '      var args = [];' +
-    '      for (var i = 0; i < arguments.length; i++) { args.push(serialize(arguments[i])); }' +
-    '      try {' +
-    '        channel.postMessage({type: "CONSOLE_LOG", level: method, args: args});' +
-    '      } catch(e) {}' +
-    '      return original.apply(console, arguments);' +
-    '    };' +
-    '  });' +
-    '})();' +
-    '</script>';
-
   async function handleProjectRequest(requestedFile, fileData) {
     try {
-      var {content, mimeType, url} = fileData;
+      const {content, mimeType, url} = fileData;
       if (requestedFile.endsWith('.html')) {
         broadcastChannel.postMessage({
           type: SERVING_HTML_FILE,
@@ -177,29 +148,16 @@ function main() {
         });
       }
       if (url) {
-        var fetchUrl = url;
+        let fetchUrl = url;
         if (url.startsWith('/level_starter_assets/')) {
           // We fetch level starter assets from the code.org origin for this environment.
           // We use a cache-busting query parameter to ensure that we get the correct response headers,
           // specifically to avoid CORs issues with Access-Control-Allow-Origin being set to someone else's
           // preview url.
-          var cacheBust = '?cache-bust=' + cacheBustSuffix;
+          const cacheBust = `?cache-bust=${cacheBustSuffix}`;
           fetchUrl = codeDotOrgOrigin + url + cacheBust;
         }
         return await fetch(fetchUrl);
-      }
-      // Inject console override script into HTML files so we can
-      // capture console output before any user scripts run.
-      if (requestedFile.endsWith('.html') && content) {
-        var headIndex = content.indexOf('<head>');
-        if (headIndex !== -1) {
-          content =
-            content.slice(0, headIndex + 6) +
-            CONSOLE_OVERRIDE_SCRIPT +
-            content.slice(headIndex + 6);
-        } else {
-          content = CONSOLE_OVERRIDE_SCRIPT + content;
-        }
       }
       return new Response(content, {
         status: 200,
