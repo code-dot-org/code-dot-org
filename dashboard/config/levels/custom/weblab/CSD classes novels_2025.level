@@ -28,7 +28,8 @@
       "/courses/csd-2024/guides/debugging-html"
     ],
     "map_reference": "/courses/csd-2024/guides/classes",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-12T20:54:37.514+00:00\",\"changed\":[\"cloned from \\\"CSD classes novels_2024\\\"\"],\"cloned_from\":\"CSD classes novels_2024\"}]"

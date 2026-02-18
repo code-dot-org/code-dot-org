@@ -1,5 +1,9 @@
 import {ThreadTypeFields} from '@cdo/apps/aiDifferentiation/constants';
-import {ChatItem, ChatPrompt} from '@cdo/apps/aiDifferentiation/types';
+import {
+  ChatItem,
+  ChatPrompt,
+  ChatTextMessage,
+} from '@cdo/apps/aiDifferentiation/types';
 
 import {ModalTypes} from '../constants';
 import {
@@ -7,7 +11,6 @@ import {
   ChatAsset,
   ChatEvent,
   FieldVisibilities,
-  PendingChatMessage,
   SaveError,
   SaveType,
   ServerChatEvent,
@@ -46,8 +49,6 @@ export interface AichatState {
   chatEventsPast: ChatEvent[];
   // Items in the current chat session that we want to provide as history to the model.
   chatEventsCurrent: ChatEvent[];
-  // The user message currently awaiting response from the model (if any).
-  chatMessagePending?: PendingChatMessage;
   // Student events viewed by a teacher user in chat workspace. Always fetched from the server.
   studentChatHistory: ServerChatEvent[];
   // Denotes whether we should show the warning or teacher onboarding modal
@@ -87,4 +88,10 @@ export interface AichatState {
   // The tab selected when a teacher is viewing a student's chat history.
   chatWorkspaceSelectedTab: WorkspaceTeacherViewTab | null;
   userAddedSelectionContext: UserAddedSelectionContext;
+  // The thread's artifact state- undefined if not in the artifact creation flow,
+  // otherwise a string representing the artifact type
+  artifactType: string | undefined;
+  // If the user is viewing the artifact save screen, this will contain the
+  // message they want to create an artifact from. Undefined otherwise.
+  pendingArtifactMessage?: ChatTextMessage;
 }

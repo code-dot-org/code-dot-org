@@ -1,0 +1,33 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-12-19T16:14:03.000Z",
+  "level_num": "custom",
+  "user_id": 6959,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Web Lab 2 with Initial View Mode Set to Preview\r\n\r\nThis is an example of setting the initial \"view mode\" to preview, with the option to switch to see code.",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "true",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "initial_view_mode": "preview",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "name_suffix": "_cs50"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-19T16:14:03.020+00:00\",\"changed\":[\"cloned from \\\"Allthethings Weblab2 6\\\"\"],\"cloned_from\":\"Allthethings Weblab2 6\"}]"
+}]]></config>
+</Weblab2>

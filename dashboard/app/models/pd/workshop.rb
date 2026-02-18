@@ -668,11 +668,9 @@ class Pd::Workshop < ApplicationRecord
     end
   end
 
-  # Apply max # of hours for certificates, if applicable, to the number of scheduled session-hours.
-  # @return [Integer] number of pd hours, after applying constraints
-  def effective_num_hours
-    actual_hours = sessions.sum(&:hours)
-    [actual_hours, time_constraint(:max_hours)].compact.min
+  # @return [Integer] number of scheduled pd session hours
+  def num_scheduled_session_hours
+    sessions&.sum(&:hours)&.presence || 0
   end
 
   # @return [Boolean] true if a Code Studio account is required for attendance, otherwise false.
@@ -810,7 +808,7 @@ class Pd::Workshop < ApplicationRecord
   end
 
   # Lookup a time constraint by type
-  # @param constraint_type [Symbol] e.g. :min_days, :max_days, or :max_hours
+  # @param constraint_type [Symbol] e.g. :min_days or :max_days
   # @returns [Number, nil] constraint for the specified subject and type, or nil if none exists
   def time_constraint(constraint_type)
     TIME_CONSTRAINTS[course].try(:[], subject).try(:[], constraint_type)

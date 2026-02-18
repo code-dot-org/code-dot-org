@@ -4,8 +4,6 @@ class ApiControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
   include Minitest::RSpecMocks
 
-  self.use_transactional_test_case = true
-
   setup_all do
     @teacher = create(:teacher)
 
@@ -104,7 +102,7 @@ class ApiControllerTest < ActionController::TestCase
     get :section_text_responses, params: {section_id: @section.id}
     assert_response :success
 
-    # we fall back to twenty_hour_unit, which has no text_response levels
+    # we fall back to hoc_2014_unit, which has no text_response levels
     assert_equal '[]', @response.body
   end
 
@@ -1706,12 +1704,6 @@ class ApiControllerTest < ActionController::TestCase
     get :clever_classrooms
   end
 
-  test 'import_clever_classroom is Forbidden when not signed in' do
-    sign_out :user
-    get :import_clever_classroom
-    assert_response :forbidden
-  end
-
   test 'google_classrooms is Forbidden when not signed in' do
     sign_out :user
     get :google_classrooms
@@ -2080,6 +2072,102 @@ class ApiControllerTest < ActionController::TestCase
         it 'returns the outside_unit_group' do
           _(response.find {|cv| cv[:id] == outside_course_version.id}).must_be_instance_of Hash
         end
+      end
+    end
+  end
+
+  describe 'GET /api/import_clever_classroom' do
+    subject(:get_import_clever_classroom) do
+      get :import_clever_classroom, params: {courseId: course_id, courseName: course_name}
+    end
+
+    let(:course_id) {'expected_course_id'}
+    let(:course_name) {'expected_course_name'}
+
+    let!(:teacher) {create(:teacher, :with_clever_authentication_option)}
+
+    before do
+      sign_in teacher
+    end
+
+    context 'when teacher is not signed in' do
+      before do
+        sign_out teacher
+      end
+
+      it 'forbids request' do
+        get_import_clever_classroom
+        assert_response :forbidden
+      end
+    end
+
+    context 'when provider oauth_token has expired' do
+      around do |test|
+        VCR.use_cassette('api/get_import_clever_classroom/with_expired_oauth_token') {test.call}
+      end
+
+      it 'renders error message instructing to re-login using provider type' do
+        get_import_clever_classroom
+        assert_response :unauthorized
+        _(response.body).must_equal(
+          'Your sign-in with Clever has expired. ' \
+          "Please sign out of Code.org and sign back in using your Clever account to continue.\n"
+        )
+      end
+    end
+  end
+
+  describe 'GET /api/clever_classrooms' do
+    subject(:get_clever_classrooms) {get :clever_classrooms}
+    let(:teacher) {create(:teacher, :with_clever_authentication_option)}
+    let(:oauth_token) {teacher.oauth_tokens_for_provider(AuthenticationOption::CLEVER)[:oauth_token]}
+    let(:clever_auth_option) {teacher.authentication_options.find_by(credential_type: AuthenticationOption::CLEVER)}
+
+    before do
+      sign_in teacher
+    end
+
+    context 'when v2.1 auth option' do
+      it 'creates REST client for v2.1' do
+        clever_client = mock('clever_client')
+        Clients::CleverRest.expects(:new).with(oauth_token:, api_version: AuthenticationOption::Clever::VERSION[:v2]).returns(clever_client)
+        clever_client.stubs(:get).returns({'data' => []})
+
+        get_clever_classrooms
+        assert_response :ok
+      end
+
+      it 'calls /teachers/:id/sections endpoint' do
+        clever_client = mock('clever_client')
+        expected_uid = teacher.uid_for_provider(AuthenticationOption::CLEVER)
+        Clients::CleverRest.expects(:new).with(oauth_token:, api_version: AuthenticationOption::Clever::VERSION[:v2]).returns(clever_client)
+        clever_client.expects(:get).with("teachers/#{expected_uid}/sections").returns({'data' => []})
+
+        get_clever_classrooms
+        assert_response :ok
+      end
+    end
+
+    context 'when v3 auth option' do
+      let(:teacher) {create(:teacher, :with_clever_authentication_option, auth_option_version: AuthenticationOption::Clever::VERSION[:v3])}
+
+      it 'creates REST client for v3' do
+        clever_client = mock('clever_client')
+        Clients::CleverRest.expects(:new).with(oauth_token:, api_version: AuthenticationOption::Clever::VERSION[:v3]).returns(clever_client)
+        clever_client.stubs(:get).returns({'data' => []})
+
+        get_clever_classrooms
+        assert_response :ok
+      end
+
+      it 'calls /users/:id/sections endpoint' do
+        clever_client = mock('clever_client')
+        expected_uid = clever_auth_option.authentication_id
+        Clients::CleverRest.expects(:new).with(oauth_token:, api_version: AuthenticationOption::Clever::VERSION[:v3]).returns(clever_client)
+        clever_client.expects(:get).with("users/#{expected_uid}/sections").returns({'data' => []})
+
+        get_clever_classrooms
+        assert_response :ok
       end
     end
   end

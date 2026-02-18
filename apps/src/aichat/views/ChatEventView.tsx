@@ -18,6 +18,7 @@ import {
   isModelUpdate,
   ChatEventDescriptionKey,
   ChatAsset,
+  ModelParameters,
 } from '../types';
 
 import ChatMessageView, {getChatMessageDisplayText} from './ChatMessageView';
@@ -41,6 +42,8 @@ interface ChatEventViewProps extends React.HTMLAttributes<HTMLDivElement> {
   buildAssetUrl?: (asset: ChatAsset) => string;
   isAiTutorVersion?: boolean;
   isLastMessage?: boolean;
+  clientType?: string;
+  modelParameters?: ModelParameters;
 }
 
 function formatModelUpdateText(update: ModelUpdate): string {
@@ -84,6 +87,8 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
       onKeyDown,
       isAiTutorVersion,
       isLastMessage,
+      clientType,
+      modelParameters,
     },
     ref
   ) => {
@@ -114,15 +119,24 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
             buildAssetUrl={buildAssetUrl}
             isAiTutorVersion={isAiTutorVersion}
             isLastMessage={isLastMessage}
+            clientType={clientType}
+            modelParameters={modelParameters}
           />
         </div>
       );
     }
 
     if (isNotification(event)) {
-      const {removeId, text, notificationType, files, timestamp} = event;
+      const {
+        removeId,
+        text,
+        notificationType,
+        files,
+        timestamp,
+        commitDescription,
+      } = event;
 
-      // Use special notification component for AI tutor version actions
+      // Use special notification component for AI tutor version actions.
       if (
         notificationType === 'aiTutorVersionActionAccept' ||
         notificationType === 'aiTutorVersionActionReject'
@@ -141,6 +155,7 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
             aria-label={`Notification: ${text}`}
             className={styles.chatMessageOutline}
             files={files}
+            commitDescription={commitDescription}
           />
         );
       }

@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-20 21:08:34 UTC",
+    "serialized_at": "2026-01-20 16:45:15 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -115,8 +115,22 @@
       }
     },
     {
-      "key": "1ff3400c-1d7d-4ff1-a72b-5467e7a3f0a0",
+      "key": "2adb0747-61a0-4255-a120-a4ee0159f5ec",
       "position": 5,
+      "properties": {
+        "duration": 3,
+        "name": "Celebrate"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2adb0747-61a0-4255-a120-a4ee0159f5ec",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "mix-move-ai-2025"
+      }
+    },
+    {
+      "key": "1ff3400c-1d7d-4ff1-a72b-5467e7a3f0a0",
+      "position": 6,
       "properties": {
         "name": "Continue Learning "
       },
@@ -264,7 +278,7 @@
         "tips": [
           {
             "type": "contentCorner",
-            "markdown": "The images and code in Mix & Move with AI were pre-generated using OpenAI’s GPT Image 1 and Google’s Gemini Flash 2.5 models respectively, then reviewed by the Code.org team to ensure they’re safe and appropriate for students. The tutorial uses pre-saved (pre-cached) images and code snippets rather than generating new ones live to simulate AI generation safely. Learn more about the process [here](link tbd)"
+            "markdown": "The images and code in Mix & Move with AI were pre-generated using OpenAI’s GPT Image 1 and Google’s Gemini Flash 2.5 models, respectively, then reviewed by the Code.org team to ensure they’re safe and appropriate for students. The tutorial uses pre-saved (pre-cached) images and code snippets rather than generating new ones live to simulate AI generation safely. Learn more about the process [on pages 7-8 of the Educator's Guide.](https://drive.google.com/file/d/1aS4cwFjks_Pd12a_aZDusj49QfdaHlTx/view)"
           }
         ]
       },
@@ -288,6 +302,17 @@
       "seeding_key": {
         "activity_section.key": "0975eb14-bf16-4bec-8b26-3c6c85e9218e",
         "lesson_activity.key": "0aff64dc-3032-47f9-b417-6794a9ed3833"
+      }
+    },
+    {
+      "key": "e17041d8-eac1-4912-9725-38846ccc2783",
+      "position": 1,
+      "properties": {
+        "description": "Celebrate the students' accomplishments! At the end of the activity, students will have a number of extension opportunities. They can:\n- Share their creation with their friends and family.\n- Keep playing to reflect on what they've learned and practice additional skills.\n- Further explore career paths in music and technology with Amazon Music through a [free virtual field trip](https://www.amazonfutureengineer.com/music?utm_campaign=Code.org&utm_medium=Musiclab&utm_source=US&utm_content=Career%20Tours&utm_term=2024). \n- Receive a [certificate](http://code.org/certificates) for completing the Hour of Code."
+      },
+      "seeding_key": {
+        "activity_section.key": "e17041d8-eac1-4912-9725-38846ccc2783",
+        "lesson_activity.key": "2adb0747-61a0-4255-a120-a4ee0159f5ec"
       }
     },
     {

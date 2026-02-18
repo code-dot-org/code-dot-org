@@ -1,5 +1,6 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {autocompletion} from '@codemirror/autocomplete';
+import {MergeView} from '@codemirror/merge';
 import {Compartment, EditorState, Extension} from '@codemirror/state';
 import {EditorView, ViewUpdate} from '@codemirror/view';
 import classNames from 'classnames';
@@ -14,6 +15,7 @@ import {
 import {AppName} from '@cdo/apps/lab2/types';
 import i18n from '@cdo/apps/pythonlab/locale';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {editorConfig} from './editorConfig';
@@ -27,20 +29,24 @@ import moduleStyles from './code-editor.module.scss';
 interface CodeEditorProps {
   onCodeChange: (code: string) => void;
   editorConfigExtensions: Extension[];
-  startCode: string;
+  initialCode: string;
   appName: AppName;
+  codeBeforeAiTutorVersion?: string;
 }
 
 const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   onCodeChange,
   editorConfigExtensions,
-  startCode,
+  initialCode,
   appName,
+  codeBeforeAiTutorVersion,
 }) => {
   const editorRef = useRef<HTMLDivElement>(null);
   const dispatch = useAppDispatch();
   const [didInit, setDidInit] = useState(false);
-  const [editorView, setEditorView] = useState<EditorView | null>(null);
+  const [editorView, setEditorView] = useState<EditorView | MergeView | null>(
+    null
+  );
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const {editorFontSizeKey, editorFontSizeLoaded} = useAppSelector(
@@ -48,6 +54,30 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   );
   const {signInState} = useAppSelector(state => state.currentUser);
   const {theme} = useTheme();
+
+  const allowSplitDiffView = experiments.isEnabledAllowingQueryString(
+    experiments.ACCEPT_REJECT_SPLIT_DIFF
+  );
+
+  const isAiTutorVersion = useAppSelector(
+    state => state.lab2Project.viewingAiTutorVersion
+  );
+  const projectSourceBeforeAiTutorVersion = useAppSelector(
+    state => state.lab2Project.projectSourceBeforeAiTutorVersion
+  );
+
+  // Only show split diff view when experiment flag is turned on, we are in AI tutor mode,
+  // and have projectSourceBeforeAiTutorVersion.
+  // For new files that don't exist in projectSourceBeforeAiTutorVersion,
+  // we'll show diff against an empty document (empty string).
+  // Used in key so we remount CodeEditor when this becomes true.
+  const hasSplitDiffView = useMemo(() => {
+    const result =
+      isAiTutorVersion &&
+      projectSourceBeforeAiTutorVersion &&
+      allowSplitDiffView;
+    return result;
+  }, [isAiTutorVersion, projectSourceBeforeAiTutorVersion, allowSplitDiffView]);
 
   // Load the user's preferred editor font size from the backend which is saved
   // per app type (currently either pythonlab or weblab) for signed-in users.
@@ -149,51 +179,92 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
       return;
     }
 
-    const onEditorUpdate = EditorView.updateListener.of(
-      (update: ViewUpdate) => {
-        onCodeChange(update.state.doc.toString());
-      }
-    );
-
-    const editorExtensions = [
-      ...editorConfig,
-
-      onEditorUpdate,
-      autocompletion(),
-      ...editorConfigExtensions,
-    ];
-
-    editorExtensions.push(
-      editorReadOnlyCompartment.of(EditorState.readOnly.of(isReadOnly)),
-      editorEditableCompartment.of(EditorView.editable.of(!isReadOnly)),
-      fontSizeCompartment.of(getFontSizeTheme(FontSize[editorFontSizeKey]))
-    );
-    if (theme === 'Dark') {
-      editorExtensions.push(themeCompartment.of(darkModeTheme));
-    } else {
-      editorExtensions.push(themeCompartment.of(lightModeTheme));
+    // Clear any existing editor DOM before creating a new one.
+    if (editorRef.current) {
+      editorRef.current.innerHTML = '';
     }
-    setEditorView(
-      new EditorView({
-        state: EditorState.create({
-          doc: startCode,
-          extensions: editorExtensions,
-        }),
-        parent: editorRef.current,
-        // Always start on the first line.
-        // TODO: Determine if we should track line position and scroll to
-        // a saved position instead.
-        // https://codedotorg.atlassian.net/browse/CT-870
-        scrollTo: EditorView.scrollIntoView(0),
-      })
-    );
-    setDidInit(true);
+
+    // Use requestAnimationFrame to ensure DOM is ready before creating editor.
+    const rafId = requestAnimationFrame(() => {
+      if (!editorRef.current) return;
+
+      const onEditorUpdate = EditorView.updateListener.of(
+        (update: ViewUpdate) => {
+          if (update.docChanged) {
+            onCodeChange(update.state.doc.toString());
+          }
+        }
+      );
+
+      const editorExtensions = [
+        ...editorConfig,
+
+        onEditorUpdate,
+        autocompletion(),
+        ...editorConfigExtensions,
+      ];
+
+      editorExtensions.push(
+        editorReadOnlyCompartment.of(EditorState.readOnly.of(isReadOnly)),
+        editorEditableCompartment.of(EditorView.editable.of(!isReadOnly)),
+        fontSizeCompartment.of(getFontSizeTheme(FontSize[editorFontSizeKey]))
+      );
+      if (theme === 'Dark') {
+        editorExtensions.push(themeCompartment.of(darkModeTheme));
+      } else {
+        editorExtensions.push(themeCompartment.of(lightModeTheme));
+      }
+      if (!hasSplitDiffView) {
+        setEditorView(
+          new EditorView({
+            state: EditorState.create({
+              doc: initialCode,
+              extensions: editorExtensions,
+            }),
+            parent: editorRef.current,
+            // Always start on the first line.
+            // TODO: Determine if we should track line position and scroll to
+            // a saved position instead.
+            // https://codedotorg.atlassian.net/browse/CT-870
+            scrollTo: EditorView.scrollIntoView(0),
+          })
+        );
+      } else {
+        // For split diff view, we want to hide green "inserted" markers in doc B
+        // that correspond to deletions in doc A (not actual additions).
+        // For actual additions, we continue to show the green markers because they include
+        // 'cm-changedText' class which is used to style the added text.
+        // If we decide on split diff view, we should move theme to `editorThemes.ts`.
+        const splitDiffTheme = EditorView.theme({
+          '.cm-merge-b .cm-insertedLine': {display: 'none'},
+          '.cm-merge-b .cm-insertedChunk': {display: 'none'},
+        });
+
+        const newEditor = new MergeView({
+          a: {
+            doc: codeBeforeAiTutorVersion ?? '',
+            extensions: editorExtensions,
+          },
+          b: {
+            doc: initialCode,
+            extensions: [...editorExtensions, splitDiffTheme],
+          },
+          parent: editorRef.current,
+        });
+        setEditorView(newEditor);
+      }
+      setDidInit(true);
+    });
+
+    return () => {
+      cancelAnimationFrame(rafId);
+    };
   }, [
     dispatch,
     editorRef,
     editorConfigExtensions,
     onCodeChange,
-    startCode,
+    initialCode,
     didInit,
     theme,
     editorReadOnlyCompartment,
@@ -203,11 +274,13 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     editorFontSizeKey,
     editorFontSizeLoaded,
     themeCompartment,
+    hasSplitDiffView,
+    codeBeforeAiTutorVersion,
   ]);
 
   // When we have a new fontSizeKey, reset font size.
   useEffect(() => {
-    if (editorView) {
+    if (editorView && editorView instanceof EditorView) {
       editorView.dispatch({
         effects: [
           fontSizeCompartment.reconfigure(
@@ -220,7 +293,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
 
   // When we have a new theme, reset the theme.
   useEffect(() => {
-    if (editorView) {
+    if (editorView && editorView instanceof EditorView) {
       editorView.dispatch({
         effects: [
           themeCompartment.reconfigure(
@@ -234,19 +307,23 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   // When we have a new channelId and/or start code, reset the editor with the start code.
   // A new channelId means we are loading a new project, and we need to reset the editor.
   useEffect(() => {
-    if (editorView && editorView.state.doc.toString() !== startCode) {
+    if (
+      editorView &&
+      editorView instanceof EditorView &&
+      editorView.state.doc.toString() !== initialCode
+    ) {
       editorView.dispatch({
         changes: {
           from: 0,
           to: editorView.state.doc.length,
-          insert: startCode,
+          insert: initialCode,
         },
       });
     }
-  }, [startCode, editorView, channelId]);
+  }, [initialCode, editorView, channelId]);
 
   useEffect(() => {
-    if (editorView) {
+    if (editorView && editorView instanceof EditorView) {
       editorView.dispatch({
         effects: [
           editorReadOnlyCompartment.reconfigure(
@@ -264,6 +341,15 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     editorReadOnlyCompartment,
     editorEditableCompartment,
   ]);
+
+  // Cleanup effect: destroy editor when component unmounts.
+  useEffect(() => {
+    return () => {
+      if (editorView) {
+        editorView.destroy();
+      }
+    };
+  }, [editorView]);
 
   if (!editorFontSizeLoaded) {
     return null;

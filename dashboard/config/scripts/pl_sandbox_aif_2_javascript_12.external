@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 #### JavaScript (JS) is the language that makes a webpage interactive.
 
-#### If HTML is the structure and CSS is the style, then JavaScript is the brain—it controls behavior, logic, and actions.
+#### If HTML is the structure and CSS is the style, then JavaScript is the brain. It controls behavior, logic, and actions.
 
 #### **Key things JavaScript does:**
 - #### Responds to user actions (like clicks, typing, or scrolling)
@@ -18,7 +18,7 @@ markdown <<MARKDOWN
 
 ## Sample Code with HTML + CSS + JavaScript
 
-#### Notice the addition of the interactive button. CSS is used to style the button and an interacitve event function makes a 
+#### Notice the addition of the interactive button. CSS is used to style the button and an interactive event function makes a 
 
  <div style="text-align: center;">
     <img src="https://images.code.org/46d435908ac369aad8e1b10f86aff0e9-image-1759503682492.png" 

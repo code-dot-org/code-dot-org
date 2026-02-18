@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import Attachments from '@cdo/apps/code-studio/components/Attachments';
@@ -9,6 +8,7 @@ import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/metrics/analyt
 import {getStore} from '@cdo/apps/redux';
 import SummaryEntryPoint from '@cdo/apps/templates/levelSummary/SummaryEntryPoint';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
@@ -18,7 +18,7 @@ $(document).ready(() => {
     const container = this;
     const store = getStore();
 
-    ReactDOM.render(
+    createReactRoot(
       <Provider store={store}>
         <InstructorsOnly>
           <SummaryEntryPoint scriptData={scriptData} />
@@ -34,7 +34,7 @@ $(document).ready(() => {
       return;
     }
 
-    ReactDOM.render(
+    createReactRoot(
       React.createElement(SafeMarkdown, container.dataset, null),
       container
     );
@@ -51,7 +51,7 @@ $(document).ready(() => {
       return appOptions.channel;
     };
 
-    ReactDOM.render(
+    createReactRoot(
       <Attachments
         showUnderageWarning={!appOptions.is13Plus}
         {...attachmentsProps}

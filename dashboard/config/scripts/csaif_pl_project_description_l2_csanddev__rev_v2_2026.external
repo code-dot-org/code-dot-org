@@ -1,0 +1,111 @@
+name 'csaif_pl_project-description-L2-CSandDev_-rev_v2_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Sustainable Systems Project Overview
+
+
+#### In this project, students propose and design an **AI-infused computer system** and demonstrate how it would contribute to achieving one of the **United Nations Sustainable Development Goals**. The UN Sustainable Development Goals is the specific framework that students will be using to pick a focus for their project.
+
+#### This structured approach ensures students think critically, iterate on their work, and develop independence while also learning how to give and apply feedback effectively.
+
+<img src="https://images.code.org/7db28bc9b3ce8d905ef520e44bb2c503-image-1742581125951.png" alt="design process graph of the cycle" width="250px" style="display: block; margin-left: auto; margin-right: auto;">
+
+
+<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
+
+  <div>
+    <h4 style="margin-top: 0; font-weight: bold;">In this project, students will:</h4>
+    <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
+      <li>Demonstrate how hardware, software, and communication combine to create a computer system
+</li> <br>
+    <li>Design a prototype of a device that solves a real-world issue
+</li><br>
+        <li>Evaluate the ethical implications of design decisions
+</li><br>
+    </ul>
+  </div>
+  <div>
+    <img src="https://images.code.org/4e1b6412c687590c048f087cef0675e6-image-1741789708762.png" 
+         alt="Icon of clipboard and pen" 
+         style="border-radius: 10px; width: 300px; height: auto;">
+  </div>
+</div>
+
+
+## Project Requirements
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🧠 System Diagram
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### Provides a clear system diagram detailing user interactions, data flow, processing and a defined problem statement.
+
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🧩 Computational Systems: Hardware Layer</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### Clearly identifies hardware used within the system. Describes how hardware interacts with other system layers.
+
+
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">✏️ Computational Systems: Software Layer</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### Describes how software enables key system functions and processes data. 
+- #### May include automation, AI, or interactive features.
+
+
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">💭 Computational Systems: Communications Layer</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### Provides a detailed explanation of how the system transmits and retrieves data across devices, networks, or cloud platforms.
+
+
+
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">💜 Ethical Considerations</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### Critically reflects on potential ethical issues within the system and proposes strategies for future development.
+
+</p></div>
+</details>
+
+<br>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ Check out the <a href="https://docs.google.com/document/d/1B564B7VVxuGwiYfi1YQBLMzoS6eqT8d8DvixrwaqBTs/edit?tab=t.0#heading=h.xe9cnc3216z0" target="blank" rel="noopener noreferrer">Exemplar</a> to see how these concepts come to life in the classroom.
+</p>
+
+MARKDOWN

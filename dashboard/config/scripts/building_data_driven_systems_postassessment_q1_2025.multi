@@ -1,0 +1,16 @@
+name 'building-data-driven-systems-postassessment-q1_2025'
+
+question 'A developer is building a "Favorites" feature where users can add and remove items. Which statement best explains why an array is necessary for this feature?'
+
+wrong 'Arrays are the only way to save data permanently to a hard drive.'
+right 'Arrays allow the app to treat a group of items as a single collection that can grow or shrink as the user interacts with it.'
+wrong 'Arrays automatically sort data alphabetically, which users expect in a favorites list.'
+wrong 'Variables cannot store strings, so an array is needed to hold the names of favorite items.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 1
+
+Arrays provide the structure needed to manage dynamic collections. Unlike individual variables, arrays can expand (using `.push()`) or contract (using `.pop()`) based on user actions. 
+MARKDOWN

@@ -42,8 +42,6 @@ const karmaConfig = {
       },
     },
     externals: {
-      blockly: 'this Blockly',
-
       // The below are necessary for enzyme to work.
       // See https://github.com/airbnb/enzyme/blob/master/docs/guides/webpack.md
       cheerio: 'window',

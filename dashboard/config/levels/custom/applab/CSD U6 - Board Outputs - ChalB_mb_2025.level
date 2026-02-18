@@ -84,6 +84,7 @@
     "bubble_choice_description": "Create an app that helps translate words into other languages when they click on items on the screen",
     "encrypted_examples": "cP259Q67ltXZbJq3OUiXNlwnyMGJzPkQeR+MjOC0Y05M3Z2ZIk0YnkpIH8Cj\nzlkcdKTSDlHQovej7Z5XSWwYpg==\n",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -2,6 +2,7 @@ import {act, render, screen, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import React from 'react';
+import {MemoryRouter} from 'react-router-dom';
 
 import {WorkshopStatusSection} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/overview/sections/WorkshopStatusSection';
 import {WorkshopData} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/types';
@@ -69,11 +70,13 @@ describe('WorkshopStatusSection', () => {
     isWorkshopAdmin: boolean = false
   ) => {
     return render(
-      <WorkshopStatusSection
-        workshop={workshop}
-        isWorkshopAdmin={isWorkshopAdmin}
-        onWorkshopUpdate={mockOnWorkshopUpdate}
-      />
+      <MemoryRouter>
+        <WorkshopStatusSection
+          workshop={workshop}
+          isWorkshopAdmin={isWorkshopAdmin}
+          onWorkshopUpdate={mockOnWorkshopUpdate}
+        />
+      </MemoryRouter>
     );
   };
 
@@ -683,7 +686,7 @@ describe('WorkshopStatusSection', () => {
         createTestWorkshop({
           id: workshopId,
           state: 'In Progress',
-          accountRequiredForAttendance: true,
+          accountRequiredForAttendance: false,
         })
       );
 

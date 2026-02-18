@@ -1,0 +1,148 @@
+name 'csaif-pl-nextsteps-cyber_aug2025_-rev_v2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Wrap-Up
+
+<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
+
+  <div>
+    <h4 style="margin-top: 0; font-weight: bold;">In this professional learning module, you learned how to:</h4>
+    <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
+      <li>Prepare to teach foundational cybersecurity concepts, including common AI-powered threats, defensive strategies, and the role of cybersecurity in protecting digital systems.</li><br>
+      <li>Support students in understanding core security principles such as the CIA Triad, authentication and authorization (AAA), and basic encryption techniques.</li><br>
+      <li>Guide students in analyzing real-world scenarios involving cybersecurity risks, helping them reason about how AI can both introduce vulnerabilities and strengthen defenses.</li>
+    </ul>
+  </div>
+  <div>
+    <img src="https://images.code.org/89644a0804bcdfc2839b17f70bcef23c-Screenshot 2025-12-04 at 2.33.30 PM.png" 
+         alt="Icon with computer and weblayout" 
+         style="border-radius: 10px; width: 300px; height: auto;">
+  </div>
+</div>
+
+#### Below is some additional information, resources, and practice which you may choose to explore before continuing.
+
+## Tips from Teachers
+
+#### Here are some insights into teaching the **AI-Powered Threats and Defenses** unit. 
+
+<!-- Flexbox Section 1 -->
+<div style="display: flex; align-items: center; gap: 5px; width: 100%; margin: 20px auto;">
+  <!-- Image -->
+  <div style="flex: 1; text-align: center;">
+   
+  </div>
+  <!-- Text Box -->
+  <div style="flex: 3; background-color: #b2dee3; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
+    <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
+      What I love about this unit is how it connects real-world issues with student learning. The curriculum doesn't just teach concepts—it helps students see why cybersecurity matters in their daily lives.
+    </p>
+    <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
+  </div>
+</div>
+
+<!-- Flexbox Section 2 -->
+<div style="display: flex; align-items: center; gap: 5px; flex-direction: row-reverse; width: 100%; margin: 20px auto;">
+  <!-- Image -->
+  <div style="flex: 1; text-align: center;">
+   
+  </div>
+  <!-- Text Box -->
+  <div style="flex: 3; background-color: #ffd199; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
+    <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
+      The built-in resources made teaching cybersecurity easy [...] everything from lesson plans to videos was clear, organized, and ready to go.
+    </p>
+    <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
+  </div>
+</div>
+
+<!-- Flexbox Section 3 -->
+<div style="display: flex; align-items: center; gap: 5px; width: 100%; margin: 20px auto;">
+  <!-- Image -->
+  <div style="flex: 1; text-align: center;">
+
+  </div>
+  <!-- Text Box -->
+  <div style="flex: 3; background-color: #f6a6a6; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
+    <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
+My students were so engaged, especially during the projects. They took ownership of their ideas and really took the role of a cybersecurity expert.
+    </p>
+    <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
+  </div>
+</div>
+
+## Additional Practice
+
+#### Need some additional practice? Try out the following optional activities.
+
+
+  <!-- Dropdown 1 -->
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 16px; font-weight: bold">
+	Career Connection
+</summary>
+
+<div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">Click through these panel levels from <a href='https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/5/lessons/6' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 6: Confidentiality, Integrity, and Availability</a> to learn about cybersecurity careers.
+</p>
+
+
+<a href="https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/5/lessons/6/levels/3" 
+         target="blank" 
+         rel="noopener noreferrer" 
+         style="display: inline-block; margin-top: 5px; padding: 8px 12px; background-color: #026C7A; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 14px;"> Open Additional Practice
+</a>
+</div>
+
+</details>
+
+  <!-- Dropdown 2 -->
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 16px; font-weight: bold">
+	Fraud Detection
+</summary>
+
+<div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">Work through the curriculum levels from <a href='https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/5/lessons/8' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 8: AAA and AI</a> to practice fraud detection with and without the support of AI.
+</p>
+
+
+<a href="https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/5/lessons/8/levels/1" 
+         target="blank" 
+         rel="noopener noreferrer" 
+         style="display: inline-block; margin-top: 5px; padding: 8px 12px; background-color: #026C7A; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 14px;"> Open Additional Practice
+</a>
+</div>
+
+</details>
+
+  <!-- Dropdown 3 -->
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 16px; font-weight: bold">
+	Putting it All Together
+</summary>
+
+<div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">Work through the curriculum levels from <a href='https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/5/lessons/12' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 12: Layered Defenses</a> to practice analyzing how several small defenses, stacked together, keep an everyday app safe and usable.
+
+<strong style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">You'll need to also open the <a href='https://docs.google.com/document/d/1A20Ct1B4DdbddiDFSVDbcec7-aXbX_ZKNVT90Zgv2wc/edit?tab=t.0#heading=h.xe9cnc3216z0' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Activity Guide</a> for this Lesson.</strong>
+</p>
+
+
+<a href="https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/5/lessons/12/levels/1" 
+         target="blank" 
+         rel="noopener noreferrer" 
+         style="display: inline-block; margin-top: 5px; padding: 8px 12px; background-color: #026C7A; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 14px;"> Open Additional Practice
+</a>
+</div>
+
+</details>
+MARKDOWN

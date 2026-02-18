@@ -90,6 +90,7 @@
     "bubble_choice_description": "Use what you've learned to recreate your favorite book, movie, TV show, or even video game scene.",
     "validation_enabled": "false",
     "start_blocks": "//1) Add sprites or draw a scene to recreate your favorite book, movie, TV show, or video game scene.\r\n//2) Add text to your scene.",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -89,6 +89,7 @@
     "start_blocks": "//Be sure to plan out your story and update the design elements before starting your code\r\n\r\nonEvent(\"startButton\", \"click\", function() {\r\n  setScreen(\"part1Screen\");\r\n  //Add your code here!\r\n  \r\n});\r\n\r\n\r\n//These events are already completed\r\nonEvent(\"nextPart1Button\", \"click\", function() {\r\n  setScreen(\"part2Screen\");\r\n});\r\nonEvent(\"nextPart2Button\", \"click\", function() {\r\n  setScreen(\"part3Screen\");\r\n});\r\nonEvent(\"nextPart3Button\", \"click\", function() {\r\n  setScreen(\"homeScreen\");\r\n});\r\n",
     "bubble_choice_description": "Create an app prototype that lets the user generate words to appear in a customized story",
     "encrypted_examples": "u5Hf+cDBLbBFzMj+Qq/Ik06r1pRDiyrKIqWd9yJT9Odj54Jn3EDy87ZKGVgL\nJLbdn9tV46tQxMAdzvjo4hupfA==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

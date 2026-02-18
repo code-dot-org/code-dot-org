@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 import Sounds from '../../Sounds';
 import loadable from '../../util/loadable';
@@ -58,7 +59,7 @@ function showAssetManager(assetChosen, typeFilter, onClose, options) {
 
   let pickerType = typeFilter === 'audio' ? SoundPicker : ImagePicker;
 
-  ReactDOM.render(
+  createReactRoot(
     React.createElement(pickerType, {
       typeFilter: typeFilter,
       customAllowedExtensions: options.customAllowedExtensions,

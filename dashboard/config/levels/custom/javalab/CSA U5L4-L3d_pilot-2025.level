@@ -46,7 +46,7 @@
       }
     },
     "name_suffix": "_pilot-2025",
-    "ai_tutor_available": "true"
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T18:15:48.528+00:00\",\"changed\":[\"cloned from \\\"CSA U5L4-L3d_2025\\\"\"],\"cloned_from\":\"CSA U5L4-L3d_2025\"},{\"changed_at\":\"2025-03-26 20:35:53 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\",\"ai_tutor_available\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-26 20:36:44 +0000\",\"changed\":[\"encrypted_validation\",\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-26 20:37:01 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class Pd::PreWorkshopSurveyControllerTest < ActionController::TestCase
-  self.use_transactional_test_case = true
   setup_all do
     @teacher = create(:teacher)
     @workshop = create(:workshop, course: Pd::Workshop::COURSE_CSD, num_sessions: 1)

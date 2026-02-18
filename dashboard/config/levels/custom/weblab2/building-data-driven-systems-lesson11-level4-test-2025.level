@@ -1,6 +1,5 @@
 <Weblab2>
   <config><![CDATA[{
-  "published": true,
   "game_id": 74,
   "created_at": "2025-11-25T15:21:05.000Z",
   "level_num": "custom",
@@ -61,8 +60,12 @@
         "3"
       ]
     },
-    "project_template_level_name": "building-data-driven-systems-lesson11-template-test-2025"
+    "project_template_level_name": "building-data-driven-systems-lesson11-template-test-2025",
+    "display_name": "Render Your UI",
+    "bubble_choice_description": "Turn your wireframes into code by building your HTML/CSS structure and using `map()` to display your dataset clearly and accessibly ***(supports completing Milestone 2 tasks)***.",
+    "thumbnail_url": "https://images.code.org/ae6f63421668b4869f5d5308ddf03e11-user-experience.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-25T15:21:05.086+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-template\\\"\"],\"cloned_from\":\"building-data-driven-systems-template\"},{\"changed_at\":\"2025-11-25 15:21:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-25 15:29:05 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-25 15:59:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-11-25T15:21:05.086+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-template\\\"\"],\"cloned_from\":\"building-data-driven-systems-template\"},{\"changed_at\":\"2025-11-25 15:21:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-25 15:29:05 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-25 15:59:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-06 00:02:41 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-06 00:05:54 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-06 00:08:46 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-06 00:09:37 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-08 18:18:28 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-08 18:19:10 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-08 18:24:44 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-08 21:54:07 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

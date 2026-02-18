@@ -15,7 +15,7 @@
     "display_name": "Song Sentiment",
     "bubble_choice_description": "Find the average sentiment of a song.",
     "thumbnail_url": "https://images.code.org/cc96067bc437b2b9d63230dfd982fe28-song.png",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-04-14T19:45:04.392+00:00\",\"changed\":[\"cloned from \\\"CSA U6L10-L4b CR_2022\\\"\"],\"cloned_from\":\"CSA U6L10-L4b CR_2022\"},{\"changed_at\":\"2022-04-14 19:45:05 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-06 20:28:35 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-06 20:44:02 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-07 15:27:41 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-07 15:28:22 +0000\",\"changed\":[\"encrypted_examples\",\"thumbnail_url\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-21 19:10:03 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

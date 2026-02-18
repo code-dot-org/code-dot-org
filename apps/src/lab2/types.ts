@@ -14,7 +14,7 @@ import {
   BinaryFileData,
   DataURL,
 } from '@excalidraw/excalidraw/types/types';
-import type * as GoogleBlockly from 'blockly/core';
+import type * as BlocklyCore from 'blockly/core';
 import {ComponentType, LazyExoticComponent} from 'react';
 
 import {BlockDefinition} from '@cdo/apps/blockly/types';
@@ -129,7 +129,9 @@ export type ExcalidrawSourceWithExternalFiles = Omit<
 };
 
 export type SketchlabProjectFile = Pick<ProjectFile, 'id' | 'url'> & {
-  uploadFailed?: boolean;
+  uploaded?: boolean;
+  starterAsset?: boolean;
+  filenameWithExtension?: string;
 };
 
 // -- MULTI-FILE -- //
@@ -226,7 +228,7 @@ export interface LevelProperties {
   referenceLinks?: string[];
   helpVideos?: VideoData[];
   // Exemplars
-  exampleSolutions?: string[];
+  showExemplarLink?: boolean;
   exemplarSources?: ProjectSources | MultiFileSource;
   exemplarSettings?: ExemplarSettings;
   // For Teachers Only value
@@ -247,6 +249,7 @@ export interface LevelProperties {
   widgetView?: boolean;
   widgetViewAllowShowCode?: boolean;
   aiTutorMode?: string;
+  levelSystemPrompt?: string;
   // Properties added for parity with non-lab2 AI Tutor levels
   aiTutorAvailable?: boolean;
   isAssessment?: boolean;
@@ -255,10 +258,14 @@ export interface LevelProperties {
   showRubric?: boolean;
   customHelperLibrary?: string;
   validationCode?: string;
+  hideVersionHistory?: boolean;
+  parentLevelName?: string;
 }
 
+export type LevelPropertiesMap = {[levelId: string]: LevelProperties};
+
 export interface BlocklyLevelProperties extends LevelProperties {
-  toolboxDefinition?: GoogleBlockly.utils.toolbox.ToolboxInfo;
+  toolboxDefinition?: BlocklyCore.utils.toolbox.ToolboxInfo;
   sharedBlocks?: BlockDefinition[];
 }
 

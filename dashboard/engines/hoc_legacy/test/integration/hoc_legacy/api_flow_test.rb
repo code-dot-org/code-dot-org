@@ -5,17 +5,11 @@ require 'test_helper'
 class HocLegacy::ApiFlowTest < ActionDispatch::IntegrationTest
   include Minitest::RSpecMocks
 
-  self.vcr_cassette_library_dir = HocLegacy::Engine.root.join('test/fixtures/vcr_cassettes')
+  self.vcr_cassette_library_dir = HocLegacy::Engine.root.join('test/vcr_cassettes')
 
   let(:tutorial_code) {'mc'}
   let(:encoded_tutorial_code) {CGI.escape(Base64.urlsafe_encode64(tutorial_code))}
   let(:student_name) {'Student Name'}
-
-  setup do
-    VCR.configure do |config|
-      config.cassette_library_dir = dashboard_engines_dir('hoc_legacy', 'test', 'fixtures', 'vcr_cassettes')
-    end
-  end
 
   around do |test|
     HocLegacy::Tutorials.clear

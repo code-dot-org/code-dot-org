@@ -1,6 +1,5 @@
 <Music>
   <config><![CDATA[{
-  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T02:56:30.000Z",
   "level_num": "custom",
@@ -187,8 +186,10 @@
     "teacher_markdown": "💡 **Teacher Tip**: Fidelity to the original song doesn't matter here. Prompt students to explore as long as they have each required element.\r\n\r\n**Rubrics & Feedback:** Assessment levels have rubrics where you can provide feedback to students. Use the TA icon to open the evaluation tool and give feedback to students. [Learn more by watching this video overview](https://www.loom.com/share/9e86438769e940afbafa9efc602a12e3).",
     "submittable": "true",
     "disable_edit_run_for_submission": "true",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:30.906+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequence-explore-evaluative\\\"\"],\"cloned_from\":\"test-music-lab-sequence-explore-evaluative\"},{\"changed_at\":\"2025-06-06 21:46:31 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-09-02 17:23:13 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2025-09-05 20:28:40 +0000\",\"changed\":[\"predict_settings\",\"submittable\",\"disable_edit_run_for_submission\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-10-03 03:01:20 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-10-03 03:54:55 +0000\",\"changed\":[\"predict_settings\",\"teacher_markdown\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>

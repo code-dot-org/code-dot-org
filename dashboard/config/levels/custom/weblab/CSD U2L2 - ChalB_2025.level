@@ -20,7 +20,8 @@
     "display_name": "Debugging: Fix Typos",
     "bubble_choice_description": "Sometimes mistakes appear in our code because we mis-type or misspell something. Try to fix the errors in the code below by fixing the spelling mistakes",
     "thumbnail_url": "https://images.code.org/c7eb7c89b50c7eb062a5e962d38256a0-debug2.png",
-    "encrypted_examples": "yx/QakRzk4CAZdq8dFofm25Vq66/YEeT/f9ZKkwGYYDRkq94oFsHfm/kshId\nokKDJD+t2boRM7/VDI35mWc9Qg==\n"
+    "encrypted_examples": "yx/QakRzk4CAZdq8dFofm25Vq66/YEeT/f9ZKkwGYYDRkq94oFsHfm/kshId\nokKDJD+t2boRM7/VDI35mWc9Qg==\n",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

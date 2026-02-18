@@ -13,6 +13,10 @@
   }
 }
 
+.uitest-ProgressPill:focus-visible {
+  outline-offset: 1px;
+}
+
 a.progress-bubble-link {
   display: inline-block;
   cursor: pointer;

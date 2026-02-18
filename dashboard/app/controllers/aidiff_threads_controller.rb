@@ -1,5 +1,6 @@
 class AidiffThreadsController < ApplicationController
   include AiDiffBedrockHelper
+  include AidiffPromptHelper
   include LevelsHelper
 
   before_action :authenticate_user!
@@ -51,7 +52,7 @@ class AidiffThreadsController < ApplicationController
       end
     end
 
-    return_body = response_body.slice(:role, :status, :chat_message_text, :message_id, :thread_id)
+    return_body = response_body.slice(:role, :status, :chat_message_text, :message_id, :thread_id, :is_artifact_candidate, :artifact_candidate_type)
 
     render(json: return_body)
   end
@@ -109,13 +110,19 @@ class AidiffThreadsController < ApplicationController
     end
 
     get_curriculum_contexts(@aidiff_thread.level_id, @aidiff_thread.lesson_id, @aidiff_thread.unit_id, @aidiff_thread.course_id, context[:sectionId], @aidiff_thread.context_type)
-    response_body = get_response_body(session_id, @aidiff_thread.context_type, input)
+    response_body = get_response_body(session_id, @aidiff_thread.context_type, input, @aidiff_thread.aidiff_messages.last)
 
     # Log messages if the response was successful and not flagged for PII.
     if response_body[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK]
       # Add user message to thread
       begin
         log_messages(response_body)
+        if response_body[:is_artifact_candidate]
+          response_body[:chat_message_text] = AidiffArtifact.to_markdown(
+            response_body[:chat_message_text],
+            response_body[:artifact_type]
+          )
+        end
         response_body[:message_id] = @assistant_message.id
         response_body[:thread_id] = @aidiff_thread.id
         if session_id.nil?
@@ -126,7 +133,7 @@ class AidiffThreadsController < ApplicationController
       end
     end
 
-    return_body = response_body.slice(:role, :status, :chat_message_text, :message_id, :thread_id)
+    return_body = response_body.slice(:role, :status, :chat_message_text, :message_id, :thread_id, :is_artifact_candidate, :artifact_type)
 
     render(json: return_body)
   end
@@ -164,7 +171,7 @@ class AidiffThreadsController < ApplicationController
     max_score > 0.9
   end
 
-  private def get_response_body(session_id, context_type, input)
+  private def get_response_body(session_id, context_type, input, previous_message = nil)
     if contains_pii?
       return {
         role: "assistant",
@@ -172,7 +179,9 @@ class AidiffThreadsController < ApplicationController
         chat_message_text: 'Sorry, I cannot accept messages that contain personal information.',
         raw_content: 'Sorry, I cannot accept messages that contain personal information.',
         links: nil,
-        session_id: session_id
+        session_id: session_id,
+        is_artifact_candidate: false,
+        artifact_type: nil,
       }
     end
 
@@ -196,19 +205,23 @@ class AidiffThreadsController < ApplicationController
       params[:isPreset],
       @section_contexts,
       @level&.long_instructions,
-      student_code
+      student_code,
+      params[:artifactType],
+      previous_message
     )
 
-    response = request_bedrock_rag_chat(input, prompt, lesson_num, unit_num, course_names, session_id, @section_contexts, get_labs(context_type))
+    response = request_bedrock_rag_chat(input, prompt, lesson_num, unit_num, course_names, session_id, @section_contexts, get_labs(context_type), params[:artifactType])
     #TODO: check for profanity/PII in model response
 
     {
       role: "assistant",
-      status: SharedConstants::AI_INTERACTION_STATUS[:OK],
+      status: response[:status],
       chat_message_text: response[:content],
       session_id: response[:session_id],
       raw_content: response[:raw_content],
       links: response[:links],
+      is_artifact_candidate: response[:is_artifact_candidate],
+      artifact_type: response[:artifact_type]
     }
   end
 
@@ -322,6 +335,8 @@ class AidiffThreadsController < ApplicationController
       raw_content: response_body[:raw_content],
       source_links: response_body[:links],
       is_preset: params[:isPreset],
+      is_artifact_candidate: response_body[:is_artifact_candidate],
+      artifact_candidate_type: response_body[:artifact_type]
     )
   end
 

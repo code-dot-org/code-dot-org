@@ -3,6 +3,7 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 import {Provider} from 'react-redux';
 
+import {aichatReducer} from '@cdo/apps/aichat/redux/slice';
 import AiDiffContainer from '@cdo/apps/aiDifferentiation/AiDiffContainer';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {
@@ -29,8 +30,8 @@ const DEFAULT_PROPS = {
     type: AiDiffContext.LESSON,
     lessonId: 2,
   },
-  scriptName: 'test_lesson',
   curriculumCourses: [],
+  scriptName: 'test_lesson',
 };
 
 const defaultThreadListResponse = [
@@ -67,6 +68,7 @@ describe('AiDiffContainer', () => {
     registerReducers({
       currentUser,
       teacherSections,
+      aichat: aichatReducer,
     });
     store.dispatch(
       setInitialData({

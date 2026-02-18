@@ -1,4 +1,4 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import {Themes} from '../constants';
 
@@ -9,7 +9,7 @@ import {
 } from './cdoAccessibleStyles';
 import CdoDarkTheme from './cdoDark';
 
-export const CdoProtanopiaDarkTheme = GoogleBlockly.Theme.defineTheme(
+export const CdoProtanopiaDarkTheme = BlocklyCore.Theme.defineTheme(
   Themes.PROTANOPIA_DARK,
   {
     base: CdoDarkTheme,
@@ -17,7 +17,7 @@ export const CdoProtanopiaDarkTheme = GoogleBlockly.Theme.defineTheme(
   }
 );
 
-export const CdoDeuteranopiaDarkTheme = GoogleBlockly.Theme.defineTheme(
+export const CdoDeuteranopiaDarkTheme = BlocklyCore.Theme.defineTheme(
   Themes.DEUTERANOPIA_DARK,
   {
     base: CdoDarkTheme,
@@ -25,7 +25,7 @@ export const CdoDeuteranopiaDarkTheme = GoogleBlockly.Theme.defineTheme(
   }
 );
 
-export const CdoTritanopiaDarkTheme = GoogleBlockly.Theme.defineTheme(
+export const CdoTritanopiaDarkTheme = BlocklyCore.Theme.defineTheme(
   Themes.TRITANOPIA_DARK,
   {
     base: CdoDarkTheme,

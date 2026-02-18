@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "### Do This: \r\n\r\n- Run the code and observe how it works. \r\n- Modify the prompt to ask for the user's favorite color, and print it in the message. ",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

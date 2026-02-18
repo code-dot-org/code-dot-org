@@ -220,6 +220,7 @@
     "display_name": "Four Square",
     "thumbnail_url": "https://images.code.org/8bb5eb13207c03bba11669bf8c5deb5d-Screenshot 2024-05-05 at 5.25.47 PM.png",
     "ai_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

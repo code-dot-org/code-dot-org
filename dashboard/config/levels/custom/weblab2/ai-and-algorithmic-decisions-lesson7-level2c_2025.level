@@ -13,18 +13,18 @@
     "hide_share_and_remix": "false",
     "widget_view": "false",
     "initial_view_mode": "split",
-    "ai_tutor_mode": "outline",
+    "ai_tutor_mode": "tutor",
     "predict_settings": {
       "isPredictLevel": false,
       "solution": "",
       "questionType": "freeResponse",
-      "allowMultipleAttempts": false,
       "placeholderText": "",
       "multipleChoiceOptions": [
         ""
       ],
       "freeResponseHeight": 50,
-      "codeEditableAfterSubmit": false
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
     },
     "display_name": "User: Sofi",
     "bubble_choice_description": "Sofi wants to help bake a cake for her sister's wedding and has visited a recipe site to assist.",
@@ -77,6 +77,6 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-13T04:02:18.298+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson7-level2c-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson7-level2c-test-2025\"},{\"changed_at\":\"2025-11-13 04:05:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-13T04:02:18.298+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson7-level2c-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson7-level2c-test-2025\"},{\"changed_at\":\"2025-11-13 04:05:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-12-19 14:41:17 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Weblab2>

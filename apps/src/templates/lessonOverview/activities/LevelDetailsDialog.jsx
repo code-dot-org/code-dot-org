@@ -9,7 +9,6 @@ import SublevelCard from '@cdo/apps/code-studio/components/SublevelCard';
 import {createVideoWithFallback} from '@cdo/apps/code-studio/videos';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import styleConstants from '@cdo/apps/styleConstants';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import TeacherOnlyMarkdown from '@cdo/apps/templates/instructions/TeacherOnlyMarkdown';
@@ -212,22 +211,7 @@ class LevelDetailsDialog extends Component {
 
   recordSeeFullLevelClick = (e, url, scriptLevel) => {
     e.preventDefault();
-    firehoseClient.putRecord(
-      {
-        study: 'lesson-plan',
-        study_group: 'teacher-lesson-plan',
-        event: 'click-see-full-level',
-        data_json: JSON.stringify({
-          scriptLevelId: scriptLevel.id,
-        }),
-      },
-      {
-        includeUserId: true,
-        callback: () => {
-          windowOpen(url, 'noopener', 'noreferrer');
-        },
-      }
-    );
+    windowOpen(url, 'noopener', 'noreferrer');
   };
 
   handleBubbleChoiceBubbleClick = clickedObject => {

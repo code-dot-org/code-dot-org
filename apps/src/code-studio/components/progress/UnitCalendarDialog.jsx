@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
 import i18n from '@cdo/locale';
@@ -43,23 +42,8 @@ export default class UnitCalendarDialog extends Component {
     ));
   };
 
-  logMinutesChange = (originalTime, newTime) => {
-    const record = {
-      study: 'script_overview_actions',
-      study_group: 'unit_calendar',
-      event: 'update_instructional_minutes',
-      data_json: JSON.stringify({
-        original_time: originalTime,
-        new_time: newTime,
-        script_id: this.props.scriptId,
-      }),
-    };
-    firehoseClient.putRecord(record, {includeUserId: true});
-  };
-
   changeMinutes = e => {
     const newTime = e.target.value;
-    this.logMinutesChange(this.state.instructionalMinutes, newTime);
     this.setState({instructionalMinutes: Number(newTime)});
   };
 

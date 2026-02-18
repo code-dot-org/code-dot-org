@@ -6,4 +6,4 @@ description      'Installs/Configures cdo-nodejs'
 long_description File.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.3.50'
 
-depends 'nodejs'
+depends 'nodejs', '>= 10.2.0' # 10.2 added support for new NodeSource repository

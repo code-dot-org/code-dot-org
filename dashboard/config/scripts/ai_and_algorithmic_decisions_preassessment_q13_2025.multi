@@ -7,7 +7,7 @@ wrong 'An OR operator that turns the lights on or off at random'
 wrong 'A variable that stores how much power the lightbulb uses each day'
 right 'A NOT operator that checks if it\'s not bright before turning on the lights'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 10

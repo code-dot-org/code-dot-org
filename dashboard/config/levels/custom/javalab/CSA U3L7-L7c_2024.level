@@ -53,7 +53,7 @@
     },
     "video_key": "csa_enhanced_for_loops",
     "name_suffix": "_2024",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T20:52:23.590+00:00\",\"changed\":[\"cloned from \\\"CSA U3L7-L7c_2023\\\"\"],\"cloned_from\":\"CSA U3L7-L7c_2023\"}]"

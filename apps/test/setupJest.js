@@ -81,8 +81,9 @@ window.Element.prototype.getClientRects = function () {
     }
     node = node.parentNode;
   }
-  var self = $(this);
-  return [{width: self.width(), height: self.height()}];
+  const width = this.offsetWidth || this.clientWidth || 0;
+  const height = this.offsetHeight || this.clientHeight || 0;
+  return [{width, height}];
 };
 
 global.$ = global.jQuery = $;

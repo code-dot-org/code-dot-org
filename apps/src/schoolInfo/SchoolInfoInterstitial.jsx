@@ -45,7 +45,7 @@ export default function SchoolInfoInterstitial({
     analyticsReporter.sendEvent(
       EVENTS.SCHOOL_INTERSTITIAL_SHOW,
       {},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   }, []);
 
@@ -77,7 +77,7 @@ export default function SchoolInfoInterstitial({
         hasNcesId: hasNcesId.toString(),
         attempt: showSchoolInfoUnknownError ? 2 : 1,
       },
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
 
     try {
@@ -93,7 +93,7 @@ export default function SchoolInfoInterstitial({
         {
           attempt: showSchoolInfoUnknownError ? 2 : 1,
         },
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
 
       onClose();
@@ -103,7 +103,7 @@ export default function SchoolInfoInterstitial({
         {
           attempt: showSchoolInfoUnknownError ? 2 : 1,
         },
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
 
       if (!showSchoolInfoUnknownError) {
@@ -121,7 +121,7 @@ export default function SchoolInfoInterstitial({
     analyticsReporter.sendEvent(
       EVENTS.SCHOOL_INTERSTITIAL_DISMISS,
       {},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
     setIsOpen(false);
     onClose();

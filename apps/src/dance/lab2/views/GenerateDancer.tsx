@@ -475,6 +475,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
             !isReadOnly && (
               <div className={moduleStyles.buttonRow}>
                 <Button
+                  id="generate-dancer-button"
                   ariaLabel={
                     aiGenerateState === 'none'
                       ? 'Generate dancer'
@@ -512,6 +513,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
             <>
               <div className={moduleStyles.buttonRow}>
                 <Button
+                  id="back-to-prompt-button"
                   ariaLabel={'Back to prompt'}
                   text={'Back to prompt'}
                   type="secondary"
@@ -530,6 +532,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
                 />
 
                 <Button
+                  id="regenerate-button"
                   ariaLabel={'Regenerate'}
                   text={'Regenerate'}
                   type="secondary"
@@ -550,6 +553,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
                     className={moduleStyles.buttonWide}
                     // If on a Music Dance AI sublevel, make sure we report success for this specific sublevel so that progress is correctly updated.
                     onContinue={sublevelOnContinue}
+                    textVariant={'simple'}
                   />
                 )}
               </div>

@@ -13,6 +13,29 @@ markdown <<MARKDOWN
 
 #### They learn to think critically, design with empathy, and take ownership of their AI-assisted work—building a foundation that mirrors real-world roles in technology and design.
 
+ <div
+  style="
+    display: flex;
+    align-items: flex-start;
+    border-radius: 10px;
+    padding: 12px;
+    margin: 16px 0;
+    background: #b2dee3;
+  "
+>
+  <img 
+    src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" 
+    alt="A clipboard labeled TO DO" 
+    width="40px"
+    style="margin-right: 12px;"
+  >
+
+  <p style="margin: 0; font-size: 16px;">
+    <strong>As you explore each commitment below, consider how these ideas will shape the way students design, build, and collaborate with AI in their web apps.</strong>
+  </p>
+</div>
+
+
 <div style="clear:both;"></div>
 
 ## Computational Thinking
@@ -338,7 +361,22 @@ markdown <<MARKDOWN
 
 <hr>
 
+<div
+  style="
+    display: flex;
+    align-items: flex-start;
+    
+    border-radius: 10px;
+    padding: 12px;
+    margin: 16px 0;
+    background: #b2dee3;
+  "
+>
+  <img src="https://images.code.org/ea1028ad53d0de66f5f5b523b715eb3c-image-1684266381955.png" alt="A red push pin. This icon is used to signal a callback to synchronous work in the workshop." width="30px" style="border-radius:10px; float:left; margin: 10px 10px 5px 0px;">
 
-
+  <p style="margin: 0; font-size: 16px;">
+    <strong>After reviewing the commitments, pause to reflect on which practices you want to intentionally highlight or reinforce as students work through this unit.</strong>
+  </p>
+</div>
 
 MARKDOWN

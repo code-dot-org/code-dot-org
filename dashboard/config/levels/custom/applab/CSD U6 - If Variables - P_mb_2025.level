@@ -62,6 +62,7 @@
     "slider_speed": "0.5",
     "watchers_prepopulated": "[\"rectangleWidth\", \"rectangleHeight\"]",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

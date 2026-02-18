@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class AichatEventsControllerTest < ActionController::TestCase
-  self.use_transactional_test_case = true
-
   setup_all do
     @authorized_teacher1 = create(:authorized_teacher)
     @authorized_teacher2 = create(:authorized_teacher)
@@ -39,7 +37,7 @@ class AichatEventsControllerTest < ActionController::TestCase
   end
 
   setup do
-    @controller.stubs(:storage_decrypt_channel_id).returns([123, 456])
+    @controller.stubs(:get_storage_id_and_project_id).returns([123, 456])
   end
 
   # *****
@@ -203,7 +201,7 @@ class AichatEventsControllerTest < ActionController::TestCase
       :aichat_event,
       user_id: @authorized_student1.id,
       level_id: @level.id,
-      project_id: 456, # matches stubbed storage_decrypt_channel_id
+      project_id: 456, # matches stubbed get_storage_id_and_project_id
       aichat_event: {role: 'user', chatMessageText: 'project match', status: 'ok', timestamp: Time.now.to_i}
     )
     _non_matching_event = create(

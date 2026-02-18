@@ -1,4 +1,4 @@
-import type * as GoogleBlockly from 'blockly/core';
+import type * as BlocklyCore from 'blockly/core';
 
 import {BLOCK_TYPES, DYNAMIC_CATEGORY_OPTIONS} from '../../constants';
 
@@ -10,7 +10,7 @@ export const DEFAULT_CATEGORY_NAME = 'DEFAULT';
  * @param category
  */
 export function isValidCategory(
-  category: GoogleBlockly.utils.toolbox.StaticCategoryInfo
+  category: BlocklyCore.utils.toolbox.StaticCategoryInfo
 ): boolean {
   return !!(
     category.contents.length || category.name !== DEFAULT_CATEGORY_NAME
@@ -24,12 +24,12 @@ export function isValidCategory(
  */
 export function getNewStaticCategory(
   name: string = DEFAULT_CATEGORY_NAME
-): GoogleBlockly.utils.toolbox.StaticCategoryInfo {
+): BlocklyCore.utils.toolbox.StaticCategoryInfo {
   return {
     kind: 'category',
     name,
     cssconfig: undefined,
-    contents: [] as GoogleBlockly.utils.toolbox.ToolboxItemInfo[],
+    contents: [] as BlocklyCore.utils.toolbox.ToolboxItemInfo[],
     id: name,
     categorystyle: undefined,
     colour: undefined,
@@ -44,7 +44,7 @@ export function getNewStaticCategory(
  */
 export function getNewDynamicCategory(
   name: string
-): GoogleBlockly.utils.toolbox.ToolboxItemInfo {
+): BlocklyCore.utils.toolbox.ToolboxItemInfo {
   return {
     kind: 'category',
     custom: DYNAMIC_CATEGORY_OPTIONS[name],
@@ -64,17 +64,17 @@ export function getNewDynamicCategory(
  * Adapted from {@link @cdo/apps/music/blockly/MusicBlocklyWorkspace} workspaceToToolboxDefinition().
  * TODO: Consolidate
  */
-export default function (workspace: GoogleBlockly.WorkspaceSvg) {
+export default function (workspace: BlocklyCore.WorkspaceSvg) {
   const topBlocks = workspace.getTopBlocks(true);
 
   // This will be the final toolbox returned by this function, either a
   // flyout toolbox or a category toolbox.
-  const fullToolbox: GoogleBlockly.utils.toolbox.ToolboxInfo = {
+  const fullToolbox: BlocklyCore.utils.toolbox.ToolboxInfo = {
     contents: [],
   };
   // Temporary storage for blocks that will be added to the next category,
   // if categories exist, or the final flyout toolbox.
-  let flyoutItems: GoogleBlockly.utils.toolbox.FlyoutItemInfo[] = [];
+  let flyoutItems: BlocklyCore.utils.toolbox.FlyoutItemInfo[] = [];
 
   // Temporary storage for a category, containing a name, type, list of contents.
   let currentCategory = getNewStaticCategory();

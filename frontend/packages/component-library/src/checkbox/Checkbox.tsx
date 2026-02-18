@@ -103,7 +103,6 @@ const Checkbox: React.FunctionComponent<CheckboxProps> = ({
         {...HTMLAttributes}
         className={className}
         aria-label={ariaLabel || HTMLAttributes['aria-label']}
-        aria-checked={indeterminate ? 'mixed' : undefined}
       />
       <i className="fa-solid" />
       {label && (

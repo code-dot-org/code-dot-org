@@ -62,6 +62,7 @@ const PackEntry: React.FunctionComponent<PackEntryProps> = ({
   return (
     <div
       className={classNames(
+        'pack-dialog-entry',
         styles.pack,
         !isSelected && folderIndex % 2 === 1 && styles.packAlternate,
         isSelected && styles.packSelected
@@ -321,6 +322,7 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({
                 />
               )}
               <Button
+                id="pack-dialog-select-button"
                 ariaLabel={musicI18n.select()}
                 text={musicI18n.select()}
                 type="primary"

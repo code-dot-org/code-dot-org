@@ -28,7 +28,8 @@
     "validation_enabled": "true",
     "display_name": "NEW User: Savannah",
     "bubble_choice_description": "Choose this level to style Savannah's Animal Shelter web page!",
-    "thumbnail_url": "https://images.code.org/7b3bdf570503fbf216e055c0355f7af6-animal-shelter.png"
+    "thumbnail_url": "https://images.code.org/7b3bdf570503fbf216e055c0355f7af6-animal-shelter.png",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

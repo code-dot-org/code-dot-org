@@ -701,6 +701,7 @@
       "playerTitle": "Example"
     },
     "name_suffix": "_v2",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

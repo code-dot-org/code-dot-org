@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-12-19T16:11:20.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Documenting Your Goals",
+    "long_instructions": "__What are your goals for your ECS class?__ *These goals will change over time, and we'll revisit this your response as we go through the course so we can check in on how we're progressing towards those goals.*\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "allow_multiple_attempts": "true",
+    "name_suffix": "_cs50"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-19T16:11:20.191+00:00\",\"changed\":[\"cloned from \\\"ECSPD your goals\\\"\"],\"cloned_from\":\"ECSPD your goals\"}]"
+}]]></config>
+</FreeResponse>

@@ -14,7 +14,7 @@
     "skip_dialog": true,
     "skip_sound": true,
     "allow_multiple_attempts": "false",
-    "ai_tutor_available": true,
+    "ai_tutor_available": "false",
     "name_suffix": "_oo2025"
   },
   "published": true,

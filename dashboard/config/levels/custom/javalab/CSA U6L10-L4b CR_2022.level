@@ -15,7 +15,7 @@
     "display_name": "Product Review",
     "bubble_choice_description": "Determine the overall sentiment of a product review.",
     "thumbnail_url": "https://images.code.org/70750e8c4193e3a26f88d7f7679aae6d-rating.png",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-04-14T19:44:54.826+00:00\",\"changed\":[\"cloned from \\\"CSA U6L10-L4a CR_2022\\\"\"],\"cloned_from\":\"CSA U6L10-L4a CR_2022\"},{\"changed_at\":\"2022-04-14 19:44:56 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-06 20:28:30 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-06 20:41:54 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-21 19:09:58 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

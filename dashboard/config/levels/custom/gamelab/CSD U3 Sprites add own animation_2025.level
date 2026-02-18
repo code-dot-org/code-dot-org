@@ -86,6 +86,7 @@
     "validation_enabled": "false",
     "start_blocks": "// Create character sprite and set animation and location\r\nvar character = createSprite(225, 300);\r\nvar character2 = createSprite(75, 175);\r\n\r\n// Draw background\r\nbackground(\"black\");\r\n\r\n// Draw planets\r\nnoStroke();\r\nfill(\"DarkGrey\");\r\nellipse(50, 300);\r\nfill(\"LightCoral\");\r\nellipse(150, 100);\r\nfill(\"Thistle\");\r\nellipse(250, 50);\r\nfill(\"Aquamarine\");\r\nellipse(300, 200);\r\n\r\n//Draw stars\r\nfill(\"white\");\r\nellipse(randomNumber(10, 390), randomNumber(10, 390), 5, 5);\r\nellipse(randomNumber(10, 390), randomNumber(10, 390), 5, 5);\r\nellipse(randomNumber(10, 390), randomNumber(10, 390), 5, 5);\r\nellipse(randomNumber(10, 390), randomNumber(10, 390), 5, 5);\r\nellipse(randomNumber(10, 390), randomNumber(10, 390), 5, 5);\r\nellipse(randomNumber(10, 390), randomNumber(10, 390), 5, 5);\r\nellipse(randomNumber(10, 390), randomNumber(10, 390), 5, 5);\r\nellipse(randomNumber(10, 390), randomNumber(10, 390), 5, 5);\r\nellipse(randomNumber(10, 390), randomNumber(10, 390), 5, 5);\r\nellipse(randomNumber(10, 390), randomNumber(10, 390), 5, 5);\r\n\r\n// Draw sprite\r\ndrawSprites();\r\n",
     "encrypted_examples": "0LWI1e8J4t7hD6/WZ7MmOT0trYPv4n1SxbTXmSpIqkEESt4xIARIZw0pmLvC\nWPhWspDzaszEVaaXi+2o/Fv4jA==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

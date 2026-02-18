@@ -1,0 +1,45 @@
+name 'pl_sandbox_aif-2-U3-class-context_2-2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Classroom Context
+
+#### This is the third unit of the course, building off the content from units one and two. The course was designed to teach in order.
+
+#### Teachers serve as guides supporting **design thinking, encouraging responsible AI use, and helping students interpret and improve AI-generated work**.
+
+<div style="display: flex; align-items: center; border: 2px solid black; border-radius: 20px; padding: 20px 10px; margin: 20px 0;">
+
+    
+<img src="https://images.code.org/dbedbfcaab19f5e6b172d54f0a4cdf51-image-1740597203712.png" 
+         style="width: auto; height: 70px; margin-right: 15px;" 
+         alt="An icon of a teacher at a board.">
+
+    
+<div style="background-color: #FFFFFF; border-radius: 20px; color: #000000; width: 90%; padding: 10px;">
+        <h3 style="margin: 0;"><b>Role of the Teacher</b></h3>
+        <p style="color: black; line-height: 1.25; font-size: 18px; margin: 5px 0 0 0;">
+            All lessons within the unit are intended to be <strong>facilitated by a teacher</strong>. These lessons are <strong>not designed as self-paced experiences for students</strong> to work through at their own pace.
+        </p>
+    </div>
+
+</div>
+
+
+## Unit Length and Format
+
+#### **Total Duration:** Approximately 3 weeks
+#### **Structure:** Eleven 45-minute lessons and one 5-day culminating project
+
+<img src="https://images.code.org/0845fe02cb126948ac8b81f06b861103-image-1767974753854.png" alt="lesson calandar for unit 2" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+
+
+
+
+## Next up
+
+#### Let's dive into the instructional commitments for this course. 
+
+
+MARKDOWN

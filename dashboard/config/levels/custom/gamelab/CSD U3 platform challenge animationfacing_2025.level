@@ -70,6 +70,7 @@
     "bubble_choice_description": "Make your player's animation change direction when the player changes direction.",
     "thumbnail_url": "https://images.code.org/480ed34fbaa298f151f488b76418bbc3-image-1589999744571.gif",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

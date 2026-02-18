@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Reflect on Inclusivity in Your Dataset",
-    "long_instructions": "Reflect on the schema / dataset that you just created. \r\n* Whose perspectives are well represented in your dataset right now? Give 1–2 specific examples\r\n* Whose perspectives might be missing or underrepresented? ",
+    "long_instructions": "Reflect on the schema / dataset that you just created. \r\n* Whose perspectives are well represented in your dataset right now? Give 1–2 specific examples\r\n* Whose perspectives might be missing or underrepresented? \r\n* Based on what you noticed, write 2-3 ethical guidelines you will follow as you build your dataset. How will these guidelines help keep your app fair, safe, and inclusive?",
     "stay_on_level_after_submit": "false",
     "height": "100",
     "placeholder": "enter response here...",
@@ -18,9 +18,12 @@
     "optional": "false",
     "allow_multiple_attempts": "true",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "display_name": "Inclusivity Reflection",
+    "thumbnail_url": "https://images.code.org/464e75ae884ae65e09f919f71795b8a8-thought-leadership.png",
+    "bubble_choice_description": "Reflect on whose perspectives are represented in your dataset and whose voices might be missing or underrepresented ***(supports completing Milestone 1 tasks)***."
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-25 15:23:14 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-11-25 15:23:14 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-05 23:57:24 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-08 18:12:23 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-08 18:13:19 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-08 18:14:17 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-08 21:53:08 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-08 22:07:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

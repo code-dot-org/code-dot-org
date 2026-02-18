@@ -100,6 +100,7 @@
     "bubble_choice_description": "Use buttons to control individual LED lights",
     "thumbnail_url": "https://images.code.org/da0c9ca0d59f9bd0a46fc31e1e248192-image-1649456230074.png",
     "encrypted_examples": "hnZ9LplvrTzUMQwUNkKAohxbpkSGVuUJgVwpVfbAzYPpH/iZYRSAMofVRDbV\nuE6RLW+XxHS+w+WuVg2MZWh39A==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

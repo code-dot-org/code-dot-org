@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This: \r\n- **Modify**: Change the condition to trigger the rare magical herb on a dice roll of 5 or 6.\r\n- **Hint**: Use the `>=` operator.",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

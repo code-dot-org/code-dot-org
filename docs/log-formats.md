@@ -331,7 +331,7 @@ fields @timestamp, @message, @logStream, @log
 | limit 30
 ```
 
-Find Admin-only actions like deleting a user, granting a role, or starting an "Assume  Identity" session:
+Find Admin-only actions like deleting a user, granting a role, or starting an "Assume Identity" session:
 ```
 fields @timestamp, @message, @logStream, @log
 | parse @message '"namespace":"*"' as namespace
@@ -352,6 +352,14 @@ Find interactive SSH or SSM logins:
 ```
 fields @timestamp, @message
 | filter @message like /sshd/ and @message like /Accepted/
+| sort @timestamp desc
+| limit 50
+```
+
+Find some former Firehose logs that were switched to CloudWatch:
+```
+fields @timestamp, @message 
+| filter @message like /"study":"project-data-integrity"/
 | sort @timestamp desc
 | limit 50
 ```

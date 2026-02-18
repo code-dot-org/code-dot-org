@@ -1,0 +1,25 @@
+name 'sp-pl-DS_dataTalk_-rev_-launch'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Viewing Student Responses 
+
+#### When you are **logged into your class as a teacher**, you can see student responses on your teacher dashboard. This is a great way to quickly gather information on how your students are doing with the lesson objectives.
+
+#### Viewing student responses is also a powerful tool for encouraging classroom discussion and highlight student thinking.
+
+- #### **Access Student Responses:** Navigate to the level where students responding to a question such as a Warm Up or Check for Understanding. Click the top left corner to view student submissions.
+
+- #### **Encourage Discussion:** Select interesting responses to read aloud, sparking conversation and showcasing diverse perspectives.
+
+- #### **Project for the Class:** Display responses on screen to highlight ideas and promote collaboration.
+
+- #### **Privacy Options:** Hide student names for anonymity and selectively conceal responses for better control over shared content.
+
+<p align="center">
+<img src="https://images.code.org/189d6a495bc3891ac13e857f99411738-Screenshot 2025-12-18 at 1.19.29 PM.png" alt="Caeasar Cipher shifting the message free pizza in the cafeteria by 13 to serr cvmmn va gur pnsrgrevn" width="95%" style="border-radius:10px; border: 3px solid black;">
+</p>
+
+### Use these features to create an engaging and inclusive classroom experience!
+MARKDOWN

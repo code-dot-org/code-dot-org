@@ -1,0 +1,59 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-01-08T01:20:43.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Exploration: Adding Style",
+    "long_instructions": "# Adding Style\r\n\r\nThis project is using a new language to add style to the page. With a partner explore both the `index.html` and `style.css` files. Be ready to discuss the following questions.\r\n\r\n1) What changes is this new language making to the page?\r\n* How is this language different from HTML?\r\n* How are the `index.html` and `style.css` files connected?",
+    "teacher_markdown": "Have students explore this level with a partner. Afterwards lead a short share out so that partners can share with the class their responses to the three questions in the instructions. The subsequent video should help reinforce what students discovered so there's no need to lead a lengthy debrief conversation.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html> \n<html> \n<head>\n   <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  \n  <!-- text to help us explore -->\n  <h1>We're about to learn a new language!</h1>\n  <h2>And it's going to help us add STYLE</h2>\n  <h1>But how does it work?</h1>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "h1 {\n    color: blue;\n    text-align: center;\n}\n\nh2 {\ntext-align: right;\n  color: red;\n}",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-01-08 01:21:09 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-08 01:21:15 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-08 01:21:46 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

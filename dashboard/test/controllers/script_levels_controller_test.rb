@@ -8,8 +8,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   include ScriptLevelsHelper
   include Minitest::RSpecMocks
 
-  self.use_transactional_test_case = true
-
   setup_all do
     @student = create(:student)
     @young_student = create(:young_student)
@@ -717,7 +715,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "ridiculous chapter number throws NotFound instead of RangeError" do
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {
-        course_course_name: Unit.twenty_hour_unit.original_unit_group.name,
+        course_course_name: Unit.hoc_2014_unit.original_unit_group.name,
         unit_position: '1',
         lesson_position: '99999999999999999999999999',
         id: '1'
@@ -726,7 +724,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {
-        course_course_name: Unit.twenty_hour_unit.original_unit_group.name,
+        course_course_name: Unit.hoc_2014_unit.original_unit_group.name,
         unit_position: '1',
         lesson_position: '1',
         id: '99999999999999999999999999'
@@ -867,15 +865,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   #TODO: TEACH-1788 This will need to be updated when we change the test fixtures
-  test "updated routing for 20 hour script" do
-    sl = ScriptLevel.find_by script: Unit.twenty_hour_unit, chapter: 3
-    assert_equal '/s/20-hour/lessons/2/levels/2', build_script_level_path(sl)
-    assert_routing(
-      {method: "get", path: "http://#{CDO.dashboard_hostname}#{build_script_level_path(sl)}"},
-      {controller: "script_levels", action: "show", script_id: Unit::TWENTY_HOUR_NAME, lesson_position: sl.lesson.to_param, id: sl.to_param}
-    )
-  end
-
   test "chapter based routing" do
     assert_routing(
       {method: "get", path: "http://#{CDO.dashboard_hostname}/hoc/reset"},

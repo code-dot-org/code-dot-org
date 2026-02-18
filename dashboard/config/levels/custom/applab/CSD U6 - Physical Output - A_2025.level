@@ -76,6 +76,7 @@
     "rubric_performance_level_4": "The program has not been started or there are no LEDs",
     "teacher_markdown": "**Assessing Student Work:** It may be appropriate to assess students on this level by having them physically show you the working prototype, since this app involves physical components to be wired together. You could also consider having students record a video of their app working and submitting it in addition to submitting their code.",
     "encrypted_examples": "xJSdL9N5eLROaKoNDTicJGGVFCgw5G9MGuh+ib+xXW+0rXbATmjlw0/HM1LC\nICgJ1EwTjG1tkMTT2XakcqSK1A==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

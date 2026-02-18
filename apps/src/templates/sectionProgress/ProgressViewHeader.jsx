@@ -12,7 +12,6 @@ import {
 import i18n from '@cdo/locale';
 
 import {h3Style} from '../../legacySharedComponents/Headings';
-import firehoseClient from '../../metrics/firehose';
 import color from '../../util/color';
 import {getNestedUnitUrl} from '../teacherDashboard/urlHelpers';
 
@@ -37,19 +36,6 @@ class ProgressViewHeader extends Component {
   }
 
   navigateToScript = () => {
-    firehoseClient.putRecord(
-      {
-        study: 'teacher_dashboard_actions',
-        study_group: 'progress',
-        event: 'go_to_script',
-        data_json: JSON.stringify({
-          section_id: this.props.sectionId,
-          script_id: this.props.scriptId,
-        }),
-      },
-      {includeUserId: true}
-    );
-
     analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED, {
       sectionId: this.props.sectionId,
       unitId: this.props.scriptId,

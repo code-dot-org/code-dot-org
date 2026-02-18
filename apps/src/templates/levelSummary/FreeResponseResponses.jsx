@@ -38,7 +38,7 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
     analyticsReporter.sendEvent(
       EVENTS.CFU_RESPONSE_HIDDEN,
       eventData,
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
     setHiddenResponses(prevHidden => [...prevHidden, userId]);
   };
@@ -127,7 +127,7 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
                 analyticsReporter.sendEvent(
                   EVENTS.CFU_RESPONSE_ALL_UNPINNED,
                   eventData,
-                  PLATFORMS.BOTH
+                  PLATFORMS.STATSIG
                 );
                 setPinnedResponseIds([]);
               }}
@@ -147,7 +147,7 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
                     analyticsReporter.sendEvent(
                       EVENTS.CFU_RESPONSE_UNPINNED,
                       eventData,
-                      PLATFORMS.BOTH
+                      PLATFORMS.STATSIG
                     );
                     setPinnedResponseIds(prevPinned =>
                       prevPinned.filter(id => id !== userId)
@@ -173,7 +173,7 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
                 analyticsReporter.sendEvent(
                   EVENTS.CFU_RESPONSE_PINNED,
                   eventData,
-                  PLATFORMS.BOTH
+                  PLATFORMS.STATSIG
                 );
                 setPinnedResponseIds(prevPinned => [...prevPinned, userId]);
               },
@@ -192,7 +192,7 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
               analyticsReporter.sendEvent(
                 EVENTS.CFU_RESPONSE_ALL_UNHID,
                 eventData,
-                PLATFORMS.BOTH
+                PLATFORMS.STATSIG
               );
               setHiddenResponses([]);
             },

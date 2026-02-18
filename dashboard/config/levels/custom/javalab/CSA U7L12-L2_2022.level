@@ -12,7 +12,7 @@
     "hide_share_and_remix": "false",
     "csa_view_mode": "theater",
     "project_template_level_name": "CSA U7 Creative Coding with The Theater PBT_2022",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-04-18T12:53:19.408+00:00\",\"changed\":[\"cloned from \\\"CSA U7L11-L2_2022\\\"\"],\"cloned_from\":\"CSA U7L11-L2_2022\"},{\"changed_at\":\"2022-04-18 12:53:21 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-11 14:35:26 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-21 19:11:49 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

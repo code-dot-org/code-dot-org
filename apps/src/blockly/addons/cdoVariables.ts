@@ -1,7 +1,8 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import {BLOCK_TYPES, VARIABLE_BLOCK_TYPES} from '../constants';
 import {BlocklyWrapperType} from '../types';
+import {addSerializationHooksToBlock} from '../utils/serialization/hooks';
 
 export default function initializeVariables(
   blocklyWrapper: BlocklyWrapperType
@@ -31,7 +32,7 @@ export default function initializeVariables(
   /**
    * Standard implementation of getVars for blocks with a single 'VAR' field
    */
-  blocklyWrapper.Variables.getVars = function (this: GoogleBlockly.Block) {
+  blocklyWrapper.Variables.getVars = function (this: BlocklyCore.Block) {
     return [this.getFieldValue('VAR')];
   };
 
@@ -40,15 +41,13 @@ export default function initializeVariables(
   // variable dropdown blocks in the toolbox.
   VARIABLE_BLOCK_TYPES.forEach(blockType => {
     if (blocklyWrapper.Blocks[blockType]) {
-      blocklyWrapper.customBlocks.addSerializationHooksToBlock(
-        blocklyWrapper.Blocks[blockType]
-      );
+      addSerializationHooksToBlock(blocklyWrapper.Blocks[blockType]);
     }
   });
 }
 
 // Delete all variables except those that are in use in the workspace.
-export function deleteUnusedVariables(workspace: GoogleBlockly.Workspace) {
+export function deleteUnusedVariables(workspace: BlocklyCore.Workspace) {
   // Get all declared variables
   const allVariables = workspace.getAllVariables();
 
@@ -69,7 +68,7 @@ export function deleteUnusedVariables(workspace: GoogleBlockly.Workspace) {
   });
 }
 
-export function getNonFunctionVariableIds(workspace: GoogleBlockly.Workspace) {
+export function getNonFunctionVariableIds(workspace: BlocklyCore.Workspace) {
   const allVariableIds =
     workspace?.getVariablesOfType('').map(variable => variable.getId()) || [];
   if (!workspace.rendered) {

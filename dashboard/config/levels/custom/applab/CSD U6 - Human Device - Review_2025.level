@@ -70,6 +70,7 @@
     "ai_enabled": "false",
     "project_template_level_name": "CSD U6 - Human Device - template_2025",
     "encrypted_examples": "1HKlgXCoWM4yW4CcfCxZgbB5eeZ8iZwyVspN8EmdwPim1FfrP9oiKeZB8Ot2\nDMGhcBjLIjN3fHequEM22vJ3TVRShkQ8pfuBatieSPBIIlfclNFjSlhm1XBM\n0GLU4BjdpTY3uNPl6w5/L5m3mTREsKFh4c0ufxjasPd28xL0TzdmhvHraAEM\n4oSVzBNcMWZlZZjRpZOIRYLac0uvWl6UqQ==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

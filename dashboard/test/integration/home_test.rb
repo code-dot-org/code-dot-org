@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class HomeTest < ActionDispatch::IntegrationTest
-  self.use_transactional_test_case = true
-
   setup_all do
     @student = create(:student)
     @teacher = create(:teacher)

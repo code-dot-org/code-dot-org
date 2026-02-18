@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Functions with Parameters\r\n\r\nParameters can streamline repetitive actions. In this example, the character is planting beanstalks to grow a magical garden. \r\n\r\n- In a game, you can choose a character to perform an action. \r\n- Instead of writing the character's name each time, you can create a function with a parameter called `{character}` that will update every instance of that character's name.\r\n- Read the code and notice where the character's name is updated.\r\n- Modify the character's name and press run to watch the program update. \r\n",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

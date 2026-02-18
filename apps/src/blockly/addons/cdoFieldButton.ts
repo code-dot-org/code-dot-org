@@ -1,4 +1,4 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 interface ColorOverrides {
   button?: string;
@@ -8,7 +8,7 @@ interface ColorOverrides {
 
 interface CdoFieldButtonOptions {
   value?: string;
-  validator?: GoogleBlockly.FieldValidator<string> | null;
+  validator?: BlocklyCore.FieldValidator<string> | null;
   onClick: () => void;
   transformText?: (text: string) => string;
   icon?: SVGElement;
@@ -16,7 +16,7 @@ interface CdoFieldButtonOptions {
   allowReadOnlyClick?: boolean;
 }
 
-export default class CdoFieldButton extends GoogleBlockly.Field {
+export default class CdoFieldButton extends BlocklyCore.Field {
   private onClick: () => void | undefined;
   private transformText: ((text: string) => string) | undefined;
   private icon: SVGElement | undefined;
@@ -55,7 +55,7 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
     this.allowReadOnlyClick = allowReadOnlyClick;
   }
 
-  static fromJson(_options: GoogleBlockly.FieldConfig) {
+  static fromJson(_options: BlocklyCore.FieldConfig) {
     const options = _options as CdoFieldButtonOptions;
     return new CdoFieldButton(options);
   }
@@ -66,7 +66,7 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
   initView() {
     super.initView();
     if (this.icon) {
-      const sourceBlock = this.getSourceBlock() as GoogleBlockly.BlockSvg;
+      const sourceBlock = this.getSourceBlock() as BlocklyCore.BlockSvg;
       this.icon.style.fill =
         this.colorOverrides?.icon || sourceBlock?.style.colourPrimary;
       // Make the icon centered on Safari.
@@ -115,7 +115,7 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
    * @override
    */
   applyColour() {
-    const sourceBlock = this.getSourceBlock() as GoogleBlockly.BlockSvg;
+    const sourceBlock = this.getSourceBlock() as BlocklyCore.BlockSvg;
     const buttonColor = this.colorOverrides?.button;
     const textColor = this.colorOverrides?.text;
     const iconColor = this.colorOverrides?.icon;

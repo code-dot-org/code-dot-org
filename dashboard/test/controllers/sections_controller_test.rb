@@ -3,8 +3,6 @@ require 'test_helper'
 class SectionsControllerTest < ActionController::TestCase
   include Minitest::RSpecMocks
 
-  self.use_transactional_test_case = true
-
   setup_all do
     @teacher = create(:teacher)
 
@@ -57,30 +55,6 @@ class SectionsControllerTest < ActionController::TestCase
     get :show, params: {id: @word_section.code}
 
     assert_response :success
-  end
-
-  test "valid log_in with picture" do
-    assert_difference '@picture_user_1.reload.sign_in_count' do # devise Trackable fields are updated
-      post :log_in, params: {
-        id: @picture_section.code,
-        user_id: @picture_user_1.id,
-        secret_picture_id: @picture_user_1.secret_picture_id
-      }
-    end
-
-    assert_redirected_to '/'
-  end
-
-  test "invalid log_in with picture" do
-    assert_no_difference '@picture_user_1.reload.sign_in_count' do # devise Trackable fields are not updated
-      post :log_in, params: {
-        id: @picture_section.code,
-        user_id: @picture_user_1.id,
-        secret_picture_id: @picture_user_1.secret_picture_id + 1
-      }
-    end
-
-    assert_redirected_to section_path(id: @picture_section.code)
   end
 
   test "former picture section member cannot log in with picture" do
@@ -340,6 +314,72 @@ class SectionsControllerTest < ActionController::TestCase
 
     it 'returns lesson path' do
       _(response_lesson[:value]).must_equal "/courses/#{unit_group.name}/units/#{unit_position}/lessons/1/levels/1"
+    end
+  end
+
+  describe 'POST /sections/:id/log_in' do
+    subject(:log_in_section) {post :log_in, params: {id: @picture_section.code, **section_params}}
+
+    shared_examples_for 'does not update user sign_in_count' do
+      it 'does not update user sign_in_count' do
+        _ {log_in_section}.wont_differ -> {user.reload.sign_in_count}
+      end
+    end
+
+    shared_examples_for 'redirects to root path' do
+      it 'redirects to root path' do
+        log_in_section
+        assert_redirected_to '/'
+      end
+    end
+
+    describe 'for picture user' do
+      let(:user) {@picture_user_1}
+      let(:section) {@picture_section}
+
+      let(:user_id) {user.id}
+      let(:secret_picture_id) {user.secret_picture_id}
+      let(:section_params) {{user_id:, secret_picture_id:}}
+
+      it_behaves_like 'redirects to root path'
+
+      it 'signs in user' do
+        _ {log_in_section}.must_change -> {warden.session_serializer.fetch(:user)}, from: nil, to: user
+      end
+
+      it 'updates user sign_in_count' do
+        _ {log_in_section}.must_differ -> {user.reload.sign_in_count}, 1
+      end
+
+      context 'when secret picture is invalid' do
+        let(:secret_picture_id) {user.secret_picture_id.next}
+
+        it_behaves_like 'does not update user sign_in_count'
+
+        it 'does not sign in user' do
+          _ {log_in_section}.wont_change -> {warden.session_serializer.fetch(:user)}
+          _(warden.session_serializer.fetch(:user)).must_be_nil
+        end
+
+        it 'redirects to section' do
+          log_in_section
+          assert_redirected_to section_path(id: @picture_section.code)
+        end
+      end
+
+      context 'when picture user is already signed in' do
+        before do
+          sign_in user
+        end
+
+        it_behaves_like 'does not update user sign_in_count'
+        it_behaves_like 'redirects to root path'
+
+        it 'does not resign in user' do
+          _ {log_in_section}.wont_change -> {warden.session_serializer.fetch(:user)}
+          _(warden.session_serializer.fetch(:user)).must_equal user
+        end
+      end
     end
   end
 end

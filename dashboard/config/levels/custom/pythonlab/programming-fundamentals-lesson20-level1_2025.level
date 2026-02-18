@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "### Nested Loops\r\n- Read the code. \r\n- Predict how this code works in the box below. ",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

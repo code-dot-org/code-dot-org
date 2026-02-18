@@ -205,6 +205,17 @@ Resources:
               - 's3:ReplicateObject'
               - 's3:RestoreObject'
             Resource: 'arn:aws:s3:::cdo-v3-libraries/libraries_<%=environment%>/*'
+          # S3 access for user-content bucket (AI-generated audio, etc.)
+          - Effect: Allow
+            Action:
+              - 's3:GetObject'
+              - 's3:PutObject'
+              - 's3:DeleteObject'
+            Resource: !Sub "arn:aws:s3:::<%=s3_bucket_namespace%>.user-content/*"
+          - Effect: Allow
+            Action:
+              - 's3:ListBucket'
+            Resource: !Sub "arn:aws:s3:::<%=s3_bucket_namespace%>.user-content"
           # General s3 access.
           # TODO: Switch from `allow *` then `deny risky` to a proper least-privilege allow-list
           - Effect: Allow
@@ -302,7 +313,7 @@ Resources:
   frontend_availability_zones: frontend_availability_zones,
   frontend_policies: [{Ref: 'CDOPolicy'}, {'Fn::ImportValue': 'IAM-SessionPermissions'}],
   frontend_properties: {TargetGroupARNs: [Ref: 'ALBTargetGroup']},
-  frontend_volume_size: 64,
+  frontend_volume_size: 128,
   ami_timeout: 'PT120M',
   build_ami: erb_file(BOOTSTRAP_CHEF,
     resource_id: "AMICreate#{commit_hash}",
@@ -874,6 +885,11 @@ Resources:
 <% end -%>
 
 <%=  component 'logging'%>
+
+  # ---------------------------------------------
+  # Stack-specific S3 Buckets
+  # ---------------------------------------------
+<%=  component 's3'%>
 
   # ---------------------------------------------
   # Database

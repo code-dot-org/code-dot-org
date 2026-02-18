@@ -14,6 +14,10 @@ markdown <<MARKDOWN
 
 #### This professional learning module prepares you to teach **AI Generated Design**—a unit where students design and build web apps by combining empathy-driven design thinking with AI-assisted creation.
 
+
+#### **AI Generated Design** is the first unit in the six unit AI Foundations Semester 2 course.
+
+#### *Note: AI Foundations Semester 2 is designed to be taught sequentially*.
 ___
 
 <div style="display: flex; justify-content: space-between; width: 95%; margin: 20pt auto; padding: 0 5px;">
@@ -31,20 +35,48 @@ ___
 
 * #### Guide students through human-centered design practices, including developing user personas, defining user problems, and establishing a brand identity.
 
-* #### Practice foundational web development skills using AI to build HTML files for structure and CSS files for styling.
+* #### Practice foundational web development skills using AI to build **HTML** files for structure and **CSS** files for styling.
 
 
 * #### Support students in visual planning, preparing to introduce sitemaps and wireframes that emphasize accessibility and responsive design.
 
+---
 
+<div style="
+  margin: 32px 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+">
+  <a
+    class="btn btn-large btn-primary"
+    href="https://studio.code.org/form/selfpaced_pd_teaching_programming_in_musiclab_pre_survey"
+    target="_blank"
+    rel="noopener noreferrer"
+    style="white-space: nowrap;"
+  >
+    Take the Pre-Survey
+  </a>
 
-## Take Our Pre-Survey
-
-#### To better gauge your learning and improve this professional learning module, please take our pre-survey - it will take fewer than five minutes to complete.
-
-<div style="margin: 20px 0px">
-<a class="btn btn-large btn-primary" href="https://studio.code.org/form/selfpaced_pd_teaching_programming_in_musiclab_pre_survey" target="blank" rel="noopener noreferrer">Take the Pre-Survey</a>
+  <div>
+    <div style="
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    ">
+      Help us improve this module
+    </div>
+    <div style="
+      font-size: 16px;
+      line-height: 1.4;
+      color: #555;
+    ">
+      Take a quick pre-survey — it takes fewer than five minutes to complete.
+    </div>
+  </div>
 </div>
+
+---
 
 ### **Suggested total time for this module:** 60 minutes
 

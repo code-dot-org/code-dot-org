@@ -2,7 +2,6 @@ require 'test_helper'
 class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
   freeze_time
 
-  self.use_transactional_test_case = true
   setup_all do
     @organizer = create(:program_manager)
     @workshop_organizer = create(:workshop_organizer)

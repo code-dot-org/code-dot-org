@@ -17,22 +17,6 @@ Dashboard::Application.configure do
   config.public_file_server.enabled = true
   config.public_file_server.headers = {'Cache-Control' => "public, max-age=3600, s-maxage=1800"}
 
-  is_ci = !!ENV.fetch('CI', nil)
-
-  # test environment should use precompiled, minified, digested assets like production,
-  # unless it's being used for unit tests.
-  ci_test = !!(ENV['UNIT_TEST'] || is_ci)
-
-  unless ci_test
-    # Compress JavaScripts and CSS.
-    # webpack handles js compression for us
-    # config.assets.js_compressor = :uglifier
-    # config.assets.css_compressor = :sass
-
-    # Version of your assets, change this if you want to expire all your assets.
-    config.assets.version = '1.0'
-  end
-
   # In CI environments (ie, Drone), stub relevant third-party services
   # (currently SageMaker, our safety check via OpenAI, and currently unused AWS Comprehend safety check)
   # so we can run UI tests for our AI Chat (ie, Generative AI) lab.
@@ -46,8 +30,8 @@ Dashboard::Application.configure do
   config.consider_all_requests_local = true
   config.action_controller.perform_caching = false
 
-  # Disable Rails.cache when running unit tests.
-  config.cache_store = :memory_store, {size: 64.megabytes} if ci_test
+  # Use smaller cache size when running unit tests.
+  config.cache_store = :memory_store, {size: 64.megabytes} if CDO.unit_test
 
   # config.action_mailer.raise_delivery_errors = true
   # config.action_mailer.delivery_method = :smtp

@@ -82,6 +82,7 @@
     },
     "name_suffix": "_v2",
     "thumbnail_url": "https://images.code.org/b443cb3d9de6f926d42f5ad95de2c8e0-audio-waves.png",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

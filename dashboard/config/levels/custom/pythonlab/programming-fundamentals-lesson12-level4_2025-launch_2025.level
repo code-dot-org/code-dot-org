@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\nThe `Painter` is trying to follow a winding path, but something's off! The `Painter` turns left *no matter what*, even when the `Painter` is supposed to move forward.\r\n\r\n1. Look at the `move_or_turn()` function in `custom.py`.\r\n\r\n   * It checks if the `Painter` can move. If so, the `Painter` moves forward.\r\n   \r\n   * But right now, the `Painter` *always* turns left, *even when moving forward*, which causes problems!\r\n   \r\n2. Find and fix the bug by adding an `else` statement so the `Painter` only turns left when it can't move forward.\r\n\r\n&nbsp;\r\n\r\n![](https://images.code.org/62b990764f2a161d41522ea3d621a0d8-image-1745168571995.gif)\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nIf both the `if` and the following line run every time, it's not really a choice! Use `else` to make sure **only one** action happens each time the function runs.",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

@@ -75,6 +75,7 @@
     "rubric_performance_level_4": "The app has not been started or there are no buttons hooked up to the circuit playground",
     "teacher_markdown": "**Assessing Student Work:** It may be appropriate to assess students on this level by having them physically show you the working prototype, since this app involves physical components to be wired together. You could also consider having students record a video of their app working and submitting it in addition to submitting their code.",
     "encrypted_examples": "h2buxBycnfCE99w63jzlrn0MidFX6EH2EWNZmIgqOT6FRNc8WoPHggOThg4a\nYaPafB2ggihJmz+2OEef4s/btg==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

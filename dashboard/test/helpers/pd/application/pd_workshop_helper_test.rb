@@ -5,7 +5,6 @@ module Pd::Application
     include PdWorkshopHelper
     include ActiveApplicationModels
 
-    self.use_transactional_test_case = true
     setup_all do
       @workshop = create(:workshop)
       @application = create TEACHER_APPLICATION_FACTORY, pd_workshop_id: @workshop.id

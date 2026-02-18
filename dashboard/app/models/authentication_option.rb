@@ -47,6 +47,7 @@ class AuthenticationOption < ApplicationRecord
     QWIKLABS = 'lti_lti_prod_kids.qwikcamps.com',
     TWITTER = 'twitter',
     MICROSOFT = 'microsoft_v2_auth',
+    CLASSLINK = 'classlink'
   ].freeze
 
   CREDENTIAL_TYPES = [
@@ -69,6 +70,7 @@ class AuthenticationOption < ApplicationRecord
   # user, and instead to rely exclusively on authentication_id
   UNTRUSTED_EMAIL_CREDENTIAL_TYPES = [
     CLEVER,
+    CLASSLINK,
     LTI_V1,
   ].freeze
 
@@ -81,6 +83,13 @@ class AuthenticationOption < ApplicationRecord
     GOOGLE,
     MICROSOFT
   ].freeze
+
+  module Clever
+    VERSION = {
+      v3: 'v3',
+      v2: 'v2',
+    }.freeze
+  end
 
   scope :trusted_email, -> {where(credential_type: TRUSTED_EMAIL_CREDENTIAL_TYPES)}
 

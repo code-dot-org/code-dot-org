@@ -90,7 +90,7 @@ class Documents < Sinatra::Base
   configure do
     dir = pegasus_dir('sites.v3')
     set :launched_at, Time.now
-    set :configs, load_configs_in(dir)
+    set :configs, load_configs_in(pegasus_dir('config/sites'))
     set :views, dir
     set :image_extnames, ['.png', '.jpeg', '.jpg', '.gif']
     set :exclude_extnames, ['.collate']

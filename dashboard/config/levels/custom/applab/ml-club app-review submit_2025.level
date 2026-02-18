@@ -66,6 +66,7 @@
     "rubric_performance_level_3": "The model has been imported and the app works correctly, but there have been no changes to the design or text on the screen. There is no welcome screen.",
     "rubric_performance_level_4": "The app has not been started",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

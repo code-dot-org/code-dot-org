@@ -76,6 +76,7 @@
     "rubric_performance_level_3": "There are errors when trying to get values from the text input, dropdown, or slider; or the app is incomplete and does not get all of the input elements.",
     "rubric_performance_level_4": "The app does not get input from any of the elements on the screen.",
     "encrypted_examples": "lEhGcgx+Cft89OF1ylO7URCxm1xwjkHnv/x7BDtHDKekIbi+CA935/ZxSbNH\n8fisrSRH2nsReMd3rY6QvOJcFA==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

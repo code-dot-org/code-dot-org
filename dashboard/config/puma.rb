@@ -31,7 +31,18 @@ before_fork do
   Cdo::AppServerHooks.before_fork
 end
 
-on_worker_boot do |_index|
-  Cdo::AppServerHooks.after_fork(host: CDO.dashboard_hostname)
+before_worker_boot do |_index|
+  Cdo::AppServerHooks.before_worker_boot(host: CDO.dashboard_hostname)
   ActiveRecord::Base.establish_connection
+end
+
+# Code to run in the Puma parent process after it boots, and also after a phased restart completes.
+after_booted do
+  Cdo::AppServerHooks.after_booted
+end
+
+# Enable the Puma control server with a Unix socket.
+if CDO.puma_control_server_token
+  control_socket = "unix://#{dashboard_dir(CDO.puma_control_server_relative_socket_path)}"
+  activate_control_app control_socket, {auth_token: CDO.puma_control_server_token}
 end

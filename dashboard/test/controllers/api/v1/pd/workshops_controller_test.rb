@@ -4,7 +4,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
   include Pd::Application::RegionalPartnerTeacherconMapping
   freeze_time
 
-  self.use_transactional_test_case = true
   setup do
     @workshop_admin = create(:workshop_admin)
     @regional_partner = create(:regional_partner)

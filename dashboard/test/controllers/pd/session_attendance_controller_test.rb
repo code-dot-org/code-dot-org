@@ -2,8 +2,6 @@ require 'test_helper'
 class Pd::SessionAttendanceControllerTest < ActionController::TestCase
   freeze_time
 
-  self.use_transactional_test_case = true
-
   setup do
     @workshop = create(:workshop, num_sessions: 1)
     @workshop.start!

@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class Api::V1::Pd::WorkshopSurveyFoormSubmissionsControllerTest < ActionController::TestCase
-  self.use_transactional_test_case = true
   setup do
     @user = create(:user)
     @pd_summer_workshop = create(:csp_summer_workshop)

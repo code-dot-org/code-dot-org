@@ -1,0 +1,53 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-01-12T16:34:17.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "## Processing Library Data\n\nIn this activity from <a href='https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/3/lessons/8' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 8</a>, you’ll step into the shoes of a librarian who uses computational thinking to quickly analyze a large book dataset.\n\nYou'll work with a \n<a href=\"https://docs.google.com/spreadsheets/d/1PTUtOodDTW-5tsD2-rGgKBvY0OWvq9SwBxyJoTjbrhU/edit?gid=1933359472#gid=1933359472\" target=\"blank\" rel=\"noopener noreferrer\">Library Books Dataset</a> to uncover patterns and make data-driven decisions, just like a computer system would.",
+        "imageUrl": "https://images.code.org/4072d52c0063ca4b76c11d6ed962a2ba-Screenshot 2025-12-15 at 1.21.23 PM.png",
+        "key": "hardware-components-3d887b32-d501-4032-b990-2a51ae5b4de8",
+        "layout": "text-top-center",
+        "typing": false,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "## Scenario A\nEach scenario comes with a different challenge.\n\nYou’ll demonstrate the first challenge to students before they choose two to complete on their own.\n\nIn Scenario A, a visitor wants to know the hottest books to start reading.",
+        "imageUrl": "https://images.code.org/37d452f17963192381cccbd36914a8ce-Screenshot 2025-12-15 at 1.20.24 PM.png",
+        "key": "hardware-components-e56bb056-0af5-475f-b8e1-7b49f9c79f82",
+        "layout": "text-top-left",
+        "typing": false,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "## Analyzing the Data \nWhen exploring the\n<a href=\"https://docs.google.com/spreadsheets/d/1PTUtOodDTW-5tsD2-rGgKBvY0OWvq9SwBxyJoTjbrhU/edit?gid=1933359472#gid=1933359472\" target=\"blank\" rel=\"noopener noreferrer\">Library Books Dataset</a>, you notice a popularity rating column—perfect for sorting to find the most popular picks.\n\nUse the filter tab in the popularity rating column to sort the data from highest to lowest—this will help you quickly find the top-rated books.\n",
+        "imageUrl": "https://images.code.org/97bf9f891b4d635cbf4a6a33f06b9e0c-Screenshot 2025-12-15 at 1.24.31 PM.png",
+        "key": "hardware-components-ed2b07b1-278f-49d5-ba3b-02994f4bccd8",
+        "layout": "text-top-left",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "## Madlab Template\nAfter sorting the data, you'll model filling out the Madlib template on chart paper or the board for the first scenario.\n\nStudents will record this information on their <a href=\"https://docs.google.com/document/d/1-JLKmlnVwZffCRvACIRb3teUV4m6yF7GiENiNdAlgeg/edit?tab=t.0\" target=\"blank\" rel=\"noopener noreferrer\">Activity Guide</a>.",
+        "imageUrl": "https://images.code.org/099ac293a091f7c74711c808ac2825f2-Screenshot 2025-12-15 at 1.26.10 PM.png",
+        "key": "hardware-components-60bbd87e-b298-4721-8344-14ba7f84abc6",
+        "layout": "text-top-center",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "## Up Next\nAs you proceed to the next level, feel free to work through as much or as little of the activity as you like.\n\nYou may choose to use the <a href=\"https://docs.google.com/document/d/1-JLKmlnVwZffCRvACIRb3teUV4m6yF7GiENiNdAlgeg/edit?tab=t.0\" target=\"blank\" rel=\"noopener noreferrer\">Activity Guide</a> to guide you through the lesson.",
+        "imageUrl": "https://images.code.org/360426e13d8aca6a1fef93b0c4949a8a-Screenshot 2025-12-15 at 1.26.45 PM.png",
+        "key": "csaif-pl-data-library-panels-L5-CSandDev-061a3301-6515-4f18-9963-040f193637c5",
+        "layout": "text-top-left"
+      }
+    ],
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-01-12T16:34:17.848+00:00\",\"changed\":[\"cloned from \\\"csaif-pl-data-library-panels-L5-CSandDev_-rev_v2\\\"\"],\"cloned_from\":\"csaif-pl-data-library-panels-L5-CSandDev_-rev_v2\"}]"
+}]]></config>
+</Panels>

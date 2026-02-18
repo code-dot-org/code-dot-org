@@ -79,7 +79,7 @@ module Pd
     private_class_method def self.pd_hours(workshop)
       [
         {
-          string: ActiveSupport::NumberHelper.number_to_rounded(workshop.effective_num_hours, precision: 1, strip_insignificant_zeros: true),
+          string: ActiveSupport::NumberHelper.number_to_rounded(workshop.num_scheduled_session_hours, precision: 1, strip_insignificant_zeros: true),
           y: 143,
           x: -265,
           pointsize: 30,

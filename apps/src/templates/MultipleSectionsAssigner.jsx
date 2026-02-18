@@ -8,6 +8,8 @@ import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
+import AssigningAvailableAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/AssigningAvailableAiChatToolsAlert';
+import AssigningEssentialAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/AssigningEssentialAiChatToolsAlert';
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
@@ -17,6 +19,8 @@ import {
   unassignSection,
   sectionHasNewData,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import experiments from '@cdo/apps/util/experiments';
+import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import moduleStyle from './multiple-sections-assigner.module.scss';
@@ -27,6 +31,7 @@ const MultipleSectionsAssigner = ({
   onClose,
   courseOfferingId,
   courseVersionId,
+  aiChatToolsDependency,
   scriptId,
   reassignConfirm = () => {},
   isAssigningCourseOnly,
@@ -243,6 +248,14 @@ const MultipleSectionsAssigner = ({
             styleAsText
             color={Button.ButtonColor.brandSecondaryDefault}
           />
+          {experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
+            aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
+              <AssigningEssentialAiChatToolsAlert />
+            )}
+          {experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
+            aiChatToolsDependency === AiChatToolsDependency.AVAILABLE && (
+              <AssigningAvailableAiChatToolsAlert />
+            )}
         </div>
       </div>
       <div className={moduleStyle.buttonContainer}>
@@ -275,6 +288,8 @@ MultipleSectionsAssigner.propTypes = {
   participantAudience: PropTypes.string,
   onAssignSuccess: PropTypes.func,
   sectionDirections: PropTypes.string,
+  aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
+    .isRequired,
   // Redux
   sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
   unassignSection: PropTypes.func.isRequired,

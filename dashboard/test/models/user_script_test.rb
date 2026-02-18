@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class UserScriptTest < ActiveSupport::TestCase
-  self.use_transactional_test_case = true
   setup_all do
     @script = create(:script, :in_single_unit_course)
     @unit_group = create(:unit_group, :with_unit, unit: @script)
@@ -91,8 +90,6 @@ end
 
 # Additional tests for find_and_migrate_or_create_by!
 class UserScriptFindAndMigrateMethodsTest < ActiveSupport::TestCase
-  self.use_transactional_test_case = true
-
   setup do
     @user = create(:user)
 

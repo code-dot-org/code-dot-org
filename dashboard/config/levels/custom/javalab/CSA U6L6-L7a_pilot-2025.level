@@ -29,7 +29,7 @@
       }
     },
     "name_suffix": "_pilot-2025",
-    "ai_tutor_available": "true"
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T21:31:27.540+00:00\",\"changed\":[\"cloned from \\\"CSA U6L6-L7a_2025\\\"\"],\"cloned_from\":\"CSA U6L6-L7a_2025\"},{\"changed_at\":\"2025-03-26 21:29:31 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_available\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-26 21:30:19 +0000\",\"changed\":[\"encrypted_validation\",\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-26 21:30:50 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

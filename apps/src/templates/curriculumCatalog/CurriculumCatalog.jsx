@@ -14,7 +14,7 @@ import React, {useState, useEffect} from 'react';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import NoMatchingSearchResultsFound from '@cdo/apps/templates/courseOfferings/noMatchingSearchResultsFound/NoMathcingSearchResultsFound';
+import NoMatchingSearchResultsFound from '@cdo/apps/templates/courseOfferings/noMatchingSearchResultsFound/NoMatchingSearchResultsFound';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import {
   getSimilarRecommendations,
@@ -78,7 +78,7 @@ const CurriculumCatalog = ({
       {
         curriculum_offering: assignmentData.assignedTitle,
       },
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   };
 
@@ -213,6 +213,7 @@ const CurriculumCatalog = ({
                 duration,
                 school_subject,
                 cs_topic,
+                ai_chat_tools_dependency,
                 course_version_path,
                 course_version_id,
                 course_id,
@@ -240,6 +241,7 @@ const CurriculumCatalog = ({
                   gradesArray={grade_levels.split(',')}
                   subjects={school_subject?.split(',')}
                   topics={cs_topic?.split(',')}
+                  aiChatToolsDependency={ai_chat_tools_dependency}
                   isTranslated={is_translated}
                   isEnglish={isEnglish}
                   pathToCourse={course_version_path}
@@ -350,7 +352,6 @@ CurriculumCatalog.propTypes = {
  *   # Home dashboards
  *   - path: /
  *     components:
- *       LtiFeedbackBanner: false
  *       CurriculumCatalog:
  *         forceTranslated: true
  * ```

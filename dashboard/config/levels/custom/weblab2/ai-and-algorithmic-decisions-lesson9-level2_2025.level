@@ -13,18 +13,18 @@
     "hide_share_and_remix": "false",
     "widget_view": "false",
     "initial_view_mode": "preview",
-    "ai_tutor_mode": "outline",
+    "ai_tutor_mode": "tutor",
     "predict_settings": {
       "isPredictLevel": false,
       "solution": "",
       "questionType": "freeResponse",
-      "allowMultipleAttempts": false,
       "placeholderText": "",
       "multipleChoiceOptions": [
         ""
       ],
       "freeResponseHeight": 50,
-      "codeEditableAfterSubmit": false
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
     },
     "display_name": "OR Operator",
     "start_sources": {
@@ -63,6 +63,6 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-13T03:41:56.854+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson9-level2-or-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson9-level2-or-test-2025\"},{\"changed_at\":\"2025-11-13 03:47:18 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-13T03:41:56.854+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson9-level2-or-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson9-level2-or-test-2025\"},{\"changed_at\":\"2025-11-13 03:47:18 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-12-19 14:44:05 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Weblab2>

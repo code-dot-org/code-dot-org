@@ -13,18 +13,18 @@
     "hide_share_and_remix": "false",
     "widget_view": "false",
     "initial_view_mode": "split",
-    "ai_tutor_mode": "outline",
+    "ai_tutor_mode": "tutor",
     "predict_settings": {
       "isPredictLevel": false,
       "solution": "",
       "questionType": "freeResponse",
-      "allowMultipleAttempts": false,
       "placeholderText": "",
       "multipleChoiceOptions": [
         ""
       ],
       "freeResponseHeight": 50,
-      "codeEditableAfterSubmit": false
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
     },
     "level_system_prompt": "Use the uploaded flowchart image to identify the variable(s), the condition in the decision diamond, and both branch outcomes, then return pseudocode that replaces any \"print\" steps with \"rendering the result to the screen\" using the correct on-page element (e.g., `output`). You’re not wiring events or app logic, just showing what would appear on the screen. Follow this structure: set or read the input value, check the condition exactly as shown, assign the correct message for each branch, and update the output element with that message. Example:\r\n\r\n```\r\nSET position TO 245\r\nIF position ≤ 100:\r\n    SET status TO \"Early access granted\"\r\n    UPDATE output WITH status\r\nELSE:\r\n    SET status TO \"Waitlist - hang tight\"\r\n    UPDATE output WITH status\r\n```",
     "start_sources": {
@@ -64,6 +64,6 @@
     },
     "encrypted_exemplar_sources": "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\n"
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-13T03:08:51.639+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson5-level3-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson5-level3-test-2025\"},{\"changed_at\":\"2025-11-13 03:09:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-13T03:08:51.639+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson5-level3-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson5-level3-test-2025\"},{\"changed_at\":\"2025-11-13 03:09:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-12-19 14:36:06 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Weblab2>

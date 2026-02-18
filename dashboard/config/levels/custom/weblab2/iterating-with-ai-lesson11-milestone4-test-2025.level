@@ -1,6 +1,5 @@
 <Weblab2>
   <config><![CDATA[{
-  "published": true,
   "game_id": 74,
   "created_at": "2025-11-26T15:49:15.000Z",
   "level_num": "custom",
@@ -26,8 +25,12 @@
       "freeResponseHeight": 50,
       "codeEditableAfterSubmit": false
     },
-    "long_instructions": "# Polishing the App\r\n\r\n1.  **Identify Edge Cases:** Prompt the AI to find weaknesses in your code. You might ask:\r\n      * *What are potential edge cases for my filtering system?*\r\n      * *How do I handle situations where the data is missing a value?*\r\n2.  **Handle Errors:** Update your JavaScript with conditional logic (`if/else`) to fix at least two issues.\r\n      * **Note:** Common fixes include converting text to `toLowerCase()` before comparing, or checking if a value exists (`!== undefined`) before displaying it.\r\n3.  **Final Polish:** Add comments to explain your code sections (e.g., `// Filter Logic`, `// Event Listeners`). Run your app one last time to ensure the Undo button, Reset button, and filters all work together smoothly."
+    "long_instructions": "# Polishing the App\r\n\r\n1.  **Identify Edge Cases:** Prompt the AI to find weaknesses in your code. You might ask:\r\n      * *What are potential edge cases for my filtering system?*\r\n      * *How do I handle situations where the data is missing a value?*\r\n2.  **Handle Errors:** Update your JavaScript with conditional logic (`if/else`) to fix at least two issues.\r\n      * **Note:** Common fixes include converting text to `toLowerCase()` before comparing, or checking if a value exists (`!== undefined`) before displaying it.\r\n3.  **Final Polish:** Add comments to explain your code sections (e.g., `// Filter Logic`, `// Event Listeners`). Run your app one last time to ensure the Undo button, Reset button, and filters all work together smoothly.",
+    "bubble_choice_description": "Identify edge cases, fix errors in your filtering and sorting logic, and clean up your UI for clarity and usability. Use AI to help spot and refine weak areas in your dashboard ***(supports completing Milestone 4 tasks)***.",
+    "display_name": "Polishing the App",
+    "thumbnail_url": "https://images.code.org/e3b216b7e6bfd5f77bf3212e72c989f0-dashboard.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-26T15:49:15.066+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson11-milestone2-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson11-milestone2-test-2025\"},{\"changed_at\":\"2025-11-26 15:49:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-26 19:01:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-11-26T15:49:15.066+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson11-milestone2-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson11-milestone2-test-2025\"},{\"changed_at\":\"2025-11-26 15:49:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-26 19:01:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-10 22:25:44 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-10 22:26:36 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-10 22:26:57 +0000\",\"changed\":[\"thumbnail_url\",\"display_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-10 22:27:44 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-10 22:28:14 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

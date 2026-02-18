@@ -10,7 +10,7 @@
  * @fileoverview A field for a plus button used for mutation.
  */
 
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import {getExtraBlockState} from './serialization_helper';
 
@@ -18,10 +18,10 @@ import {getExtraBlockState} from './serialization_helper';
  * Creates a plus image field used for mutation.
  * @param {Object=} args Untyped args passed to block.minus when the field
  *     is clicked.
- * @returns {GoogleBlockly.FieldImage} The Plus field.
+ * @returns {BlocklyCore.FieldImage} The Plus field.
  */
 export function createPlusField(args = undefined) {
-  const plus = new GoogleBlockly.FieldImage(
+  const plus = new BlocklyCore.FieldImage(
     plusImage,
     15,
     15,
@@ -39,7 +39,7 @@ export function createPlusField(args = undefined) {
 
 /**
  * Calls block.plus(args) when the plus field is clicked.
- * @param {!GoogleBlockly.FieldImage} plusField The field being clicked.
+ * @param {!BlocklyCore.FieldImage} plusField The field being clicked.
  * @private
  */
 function onClick_(plusField) {
@@ -50,14 +50,14 @@ function onClick_(plusField) {
     return;
   }
 
-  GoogleBlockly.Events.setGroup(true);
+  BlocklyCore.Events.setGroup(true);
   const oldExtraState = getExtraBlockState(block);
   block.plus(plusField.args_);
   const newExtraState = getExtraBlockState(block);
 
   if (oldExtraState !== newExtraState) {
-    GoogleBlockly.Events.fire(
-      new GoogleBlockly.Events.BlockChange(
+    BlocklyCore.Events.fire(
+      new BlocklyCore.Events.BlockChange(
         block,
         'mutation',
         null,
@@ -66,7 +66,7 @@ function onClick_(plusField) {
       )
     );
   }
-  GoogleBlockly.Events.setGroup(false);
+  BlocklyCore.Events.setGroup(false);
 }
 
 const plusImage =

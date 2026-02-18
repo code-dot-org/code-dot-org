@@ -139,6 +139,7 @@
     "thumbnail_url": "https://images.code.org/ae26314d8c304e9f2945fed4351ccce6-image-1588880926553.gif",
     "bubble_choice_description": "Make the plane curve to avoid the two spikes.",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

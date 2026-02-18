@@ -1,6 +1,5 @@
 import {setAssetPath} from '@code-dot-org/ml-activities/dist/assetPath';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -8,6 +7,7 @@ import {TestResults} from '@cdo/apps/constants';
 import localization from '@cdo/apps/localization';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 import {getStore} from '../redux';
 
@@ -61,17 +61,21 @@ Fish.prototype.init = function (config) {
   config.pinWorkspaceToBottom = true;
 
   const reportActivityEvent = () => {
-    const {isProjectLevel} = getStore().getState().pageConstants;
-
+    // For publicly cached pages, config.isSignedIn will be false even when signed in.
+    // Check the Redux store for the actual sign-in state.
+    const state = getStore().getState();
+    const signedIn = state.currentUser?.signInState === 'SignedIn' || false;
     analyticsReporter.sendEvent(
-      isProjectLevel ? EVENTS.PROJECT_ACTIVITY : EVENTS.LEVEL_ACTIVITY,
+      EVENTS.LEVEL_ACTIVITY,
       {
-        signedIn: config.isSignedIn,
+        signedIn: signedIn,
         unitName: config.scriptName,
         levelId: config.serverLevelId,
         levelName: config.level.name,
+        appName: config.app,
+        levelPath: window.location.pathname,
       },
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   };
 
@@ -109,7 +113,7 @@ Fish.prototype.init = function (config) {
     isProjectLevel: !!config.level.isProjectLevel,
   });
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <FishView onMount={onMount} />
     </Provider>,

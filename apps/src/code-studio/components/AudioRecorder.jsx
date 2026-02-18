@@ -3,7 +3,6 @@ import React from 'react';
 
 import {assets as assetsApi} from '@cdo/apps/clientApi';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
@@ -92,17 +91,7 @@ export default class AudioRecorder extends React.Component {
   };
 
   startRecording = () => {
-    const studyGroup = this.props.imagePicker ? 'manage-assets' : 'library-tab';
     this.recorder.startRecording().then(() => {
-      firehoseClient.putRecord(
-        {
-          study: 'sound-dialog-2',
-          study_group: studyGroup,
-          event: 'record-sound',
-          data_json: this.state.audioName,
-        },
-        {includeUserId: true}
-      );
       this.setState({recording: !this.state.recording});
     });
 

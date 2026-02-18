@@ -26,9 +26,6 @@ describe('GraduateToNextLevel', () => {
     });
   });
   [
-    'course2',
-    'course3',
-    'course4',
     'courseb-2017',
     'coursec-2050',
     'coursed-2011',

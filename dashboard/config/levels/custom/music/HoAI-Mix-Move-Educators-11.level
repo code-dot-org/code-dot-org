@@ -183,7 +183,6 @@
     "level_data": {
       "validationTimeout": 6,
       "library": "launch2024",
-      "danceMove": "rest",
       "packId": "default",
       "guideMode": "instructions",
       "startSources": {

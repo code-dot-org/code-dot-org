@@ -14,7 +14,8 @@
     "optional": "false",
     "allow_multiple_attempts": "false",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-06-27T18:42:37.515+00:00\",\"changed\":[\"cloned from \\\"music-lab-612-pre-careersQ\\\"\"],\"cloned_from\":\"music-lab-612-pre-careersQ\"}]"

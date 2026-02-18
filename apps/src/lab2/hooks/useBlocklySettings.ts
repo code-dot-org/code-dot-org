@@ -45,7 +45,7 @@ export function useBlocklySettings(): Setting[] {
   }, []);
 
   const handleBlocklyThemeChange = (name: string) => {
-    setWorkspaceTheme(Blockly.getMainWorkspace(), name);
+    setWorkspaceTheme(name);
     setSelectedTheme(name);
   };
 

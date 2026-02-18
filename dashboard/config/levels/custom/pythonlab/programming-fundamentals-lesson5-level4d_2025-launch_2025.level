@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\nModify the program so the `Painter` navigates to the bottom traffic cone.\r\n\r\n![](https://images.code.org/7bd6fb40dbbad2c8aeacc533f3d0b0ec-choiceD.gif)",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

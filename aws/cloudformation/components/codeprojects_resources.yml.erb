@@ -15,7 +15,7 @@
 # - bramble-download.codeprojects.org
 # - adhoc-bethany-nginx-update.codeprojects.org
 # - localhost.codeprojects.org
-# - localhost.preview.codeprojects.org
+# - *.preview.localhost.codeprojects.org
 # - localhost.staging.codeprojects.org
 # 
 # Therefore we're using <env>.codeprojects.org, except in prod, where we use the base domain.
@@ -41,7 +41,7 @@ LocalhostPreviewCodeprojectsRecord:
   Type: AWS::Route53::RecordSet
   Properties:
     HostedZoneId: !Ref CodeprojectsHostedZoneId
-    Name: !Sub preview.localhost.codeprojects.org
+    Name: !Sub '*.preview.localhost.codeprojects.org'
     Type: A
     TTL: 3600
     ResourceRecords:
@@ -54,7 +54,7 @@ CodeprojectsCertificate:
   Properties:
     DomainName: !Ref CodeprojectsBaseDomainName
     SubjectAlternativeNames:
-      - !Sub preview.${CodeprojectsBaseDomainName}
+      - !Sub '*.preview.${CodeprojectsBaseDomainName}'
       - !Sub www.${CodeprojectsBaseDomainName}
       - !Sub static.${CodeprojectsBaseDomainName}
       - !Sub bramble-download.${CodeprojectsBaseDomainName}
@@ -62,7 +62,7 @@ CodeprojectsCertificate:
     DomainValidationOptions:
       - DomainName: !Ref CodeprojectsBaseDomainName
         HostedZoneId: !Ref CodeprojectsHostedZoneId
-      - DomainName: !Sub preview.${CodeprojectsBaseDomainName}
+      - DomainName: !Sub '*.preview.${CodeprojectsBaseDomainName}'
         HostedZoneId: !Ref CodeprojectsHostedZoneId
       - DomainName: !Sub www.${CodeprojectsBaseDomainName}
         HostedZoneId: !Ref CodeprojectsHostedZoneId
@@ -76,7 +76,7 @@ CodeprojectsRecords:
   Properties:
     HostedZoneId: !Ref CodeprojectsHostedZoneId
     RecordSets:
-      - Name: !Sub preview.${CodeprojectsBaseDomainName}
+      - Name: !Sub '*.preview.${CodeprojectsBaseDomainName}'
         Type: A
         AliasTarget:
           DNSName: !GetAtt CodeprojectsCloudFrontDistribution.DomainName
@@ -92,7 +92,7 @@ CodeprojectsCloudFrontDistribution:
       PriceClass: PriceClass_All
       Aliases:
         # - !Ref CodeprojectsBaseDomainName
-        - !Sub preview.${CodeprojectsBaseDomainName}
+        - !Sub '*.preview.${CodeprojectsBaseDomainName}'
       Origins:
         - Id: DashboardOrigin
           DomainName: <%= cdn_enabled ? subdomain('origin') : '!Sub ${DashboardSubdomainName}.${BaseDomainName}' %>

@@ -38,7 +38,8 @@
     "display_name": "Button Links",
     "bubble_choice_description": "Learn how to style hyperlinks to make them look like buttons",
     "thumbnail_url": "https://images.code.org/9ab0592cc5c5c982147cdfbc100ab8aa-button3.png",
-    "encrypted_examples": "Sg6F/1GGFJy6OCaDVFfCuvCNtYHNef+VjYgjwyyH/10S26wvS9b3wvf1vb7j\nV6ZSiXwAd8vzIAi6PUgcJh44kg==\n"
+    "encrypted_examples": "Sg6F/1GGFJy6OCaDVFfCuvCNtYHNef+VjYgjwyyH/10S26wvS9b3wvf1vb7j\nV6ZSiXwAd8vzIAi6PUgcJh44kg==\n",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

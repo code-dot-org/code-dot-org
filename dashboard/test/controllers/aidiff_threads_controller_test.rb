@@ -8,7 +8,7 @@ class AidiffThreadsControllerTest < ActionController::TestCase
     @unit_group2 = create(:unit_group, family_name: 'dootdoot')
     @course_offering = create(:course_offering, display_name: 'Course Name')
     @course_version = create(:course_version, content_root: @unit_group, course_offering: @course_offering)
-    @unit_in_course = create(:script, name: 'unit-in-teacher-instructed-course2')
+    @unit_in_course = create(:script)
     create(:unit_group_unit, script: @unit_in_course, unit_group: @unit_group, position: 1)
     @lesson_group = create(:lesson_group, script: @unit_in_course)
     @lesson = create(:lesson, script: @unit_in_course, lesson_group: @lesson_group)

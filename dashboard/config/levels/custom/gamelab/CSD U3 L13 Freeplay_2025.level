@@ -138,6 +138,7 @@
     "bubble_choice_description": "Use what you've learned to create an emoji work of art that changes whenever the mouse is pressed.",
     "validation_enabled": "false",
     "encrypted_examples": "8BGj9VJTKwuoYPj9vBxQXvX+0Zb9kFK2fc5wd6fZ1ZYyIirW+vro4AMrE+FH\n/dZ4tPs/xBV8V77sU9Q6LuPmxg==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -9,3 +9,5 @@ level 'test-problem-solving-with-ai-lesson2-level4-choice1_-rev'
 level 'test-problem-solving-with-ai-lesson2-level4-choice2_-rev'
 level 'test-problem-solving-with-ai-lesson2-level4-choice3_-rev'
 level 'test-problem-solving-with-ai-lesson2-level4-choice4_-rev'
+
+uses_lab2

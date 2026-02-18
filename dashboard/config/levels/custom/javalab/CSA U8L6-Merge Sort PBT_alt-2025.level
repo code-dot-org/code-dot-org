@@ -22,7 +22,8 @@
         "tabOrder": 1
       }
     },
-    "name_suffix": "_alt-2025"
+    "name_suffix": "_alt-2025",
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T22:57:13.630+00:00\",\"changed\":[\"cloned from \\\"CSA U8L6-Merge Sort PBT_pilot-2025\\\"\"],\"cloned_from\":\"CSA U8L6-Merge Sort PBT_pilot-2025\"},{\"changed_at\":\"2025-08-21 20:24:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-21 20:24:24 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"

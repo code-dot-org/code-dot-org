@@ -7,6 +7,10 @@ declare module '@mui/material/styles' {
     overline2: React.CSSProperties;
     overline3: React.CSSProperties;
     figcaption: React.CSSProperties;
+    label1: React.CSSProperties;
+    label2: React.CSSProperties;
+    label3: React.CSSProperties;
+    label4: React.CSSProperties;
     strong: React.CSSProperties;
     em: React.CSSProperties;
   }
@@ -18,6 +22,10 @@ declare module '@mui/material/styles' {
     overline2?: React.CSSProperties;
     overline3?: React.CSSProperties;
     figcaption?: React.CSSProperties;
+    label1?: React.CSSProperties;
+    label2?: React.CSSProperties;
+    label3?: React.CSSProperties;
+    label4?: React.CSSProperties;
     strong?: React.CSSProperties;
     em?: React.CSSProperties;
   }
@@ -33,8 +41,18 @@ declare module '@mui/material/Typography' {
     overline3: true;
     caption: false; // disable the default caption
     figcaption: true; // add figcaption variant to match DSCO naming pattern
+    label1: true;
+    label2: true;
+    label3: true;
+    label4: true;
     strong: true;
     em: true;
+  }
+}
+
+declare module '@mui/material/Breadcrumbs' {
+  interface BreadcrumbsProps {
+    size?: 'xs' | 's' | 'm' | 'l';
   }
 }
 

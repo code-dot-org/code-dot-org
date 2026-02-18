@@ -9,6 +9,7 @@ import {
   getProjectXml,
   removeIdsFromBlocks,
 } from '@cdo/apps/blockly/addons/cdoXml';
+import {loadBlocksToWorkspace} from '@cdo/apps/blockly/utils';
 import {convertXmlToBlockly} from '@cdo/apps/templates/instructions/utils';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 
@@ -74,7 +75,7 @@ window.levelbuilder.pasteBlocksToWorkspace = function () {
     return;
   }
 
-  Blockly.cdoUtils.loadBlocksToWorkspace(Blockly.mainBlockSpace, str);
+  loadBlocksToWorkspace(Blockly.mainBlockSpace, str);
 };
 
 // TODO: Remove when global `CodeMirror` is no longer required.

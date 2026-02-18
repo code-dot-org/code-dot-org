@@ -1,8 +1,4 @@
-import {
-  Button,
-  buttonColors,
-  LinkButton,
-} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Link from '@code-dot-org/component-library/link';
 import {
   BodyTwoText,
@@ -10,12 +6,15 @@ import {
   Heading4,
 } from '@code-dot-org/component-library/typography';
 import {TextLink} from '@dsco_/link';
+import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useEffect, useRef} from 'react';
 
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import experiments from '@cdo/apps/util/experiments';
+import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {
@@ -38,6 +37,7 @@ const ExpandedCurriculumCatalogCard = ({
   gradeRange,
   subjectsAndTopics,
   deviceCompatibility,
+  aiChatToolsDependency,
   description,
   professionalLearningProgram,
   video,
@@ -264,58 +264,74 @@ const ExpandedCurriculumCatalogCard = ({
                       </div>
                     )
                 )}
+                {experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
+                  aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
+                    <div className={style.iconWithDescription}>
+                      <FontAwesomeV6Icon
+                        iconName="ai-bot-solid"
+                        iconFamily="kit"
+                        className={style.aiBotIcon}
+                      />
+                      <BodyTwoText>Requires AI chat tools</BodyTwoText>
+                    </div>
+                  )}
               </div>
               <hr className={style.horizontalDivider} />
               <div className={style.buttonsContainer}>
                 {isTeacherOrSignedOut ? (
                   <>
-                    <LinkButton
-                      color={buttonColors.black}
-                      type="secondary"
-                      href={pathToCourse}
-                      text={i18n.seeCurriculumDetails()}
+                    <MuiButton
+                      variant="outlined"
+                      color="secondary"
+                      size="medium"
                       className={centererStyle.buttonFlex}
-                      ariaLabel={i18n.quickViewDescription({
+                      aria-label={i18n.quickViewDescription({
                         course_name: courseDisplayName,
                       })}
-                    />
-                    <Button
-                      color={buttonColors.purple}
-                      type="primary"
-                      onClick={() => assignButtonOnClick('expanded-card')}
-                      ariaLabel={assignButtonDescription}
-                      text={i18n.assignToClassSections()}
+                      href={pathToCourse}
+                    >
+                      {i18n.seeCurriculumDetails()}
+                    </MuiButton>
+                    <MuiButton
+                      variant="contained"
+                      color="primary"
+                      size="medium"
                       className={centererStyle.buttonFlex}
-                    />
+                      onClick={() => assignButtonOnClick('expanded-card')}
+                      aria-label={assignButtonDescription}
+                      type="button"
+                    >
+                      {i18n.assignToClassSections()}
+                    </MuiButton>
                   </>
                 ) : (
-                  <LinkButton
-                    color={buttonColors.purple}
-                    type="primary"
-                    href={pathToCourse}
-                    ariaLabel={i18n.tryCourseNow({
+                  <MuiButton
+                    variant="contained"
+                    color="primary"
+                    size="medium"
+                    className={centererStyle.buttonFlex}
+                    aria-label={i18n.tryCourseNow({
                       course_name: courseDisplayName,
                     })}
-                    text={i18n.tryNow()}
-                    className={centererStyle.buttonFlex}
-                  />
+                    href={pathToCourse}
+                  >
+                    {i18n.tryNow()}
+                  </MuiButton>
                 )}
               </div>
             </div>
             <div className={style.relatedCurriculaContainer}>
               <div className={style.closeButtonContainer}>
-                <Button
+                <MuiIconButton
                   onClick={onClose}
-                  icon={{
-                    iconName: 'xmark',
-                    iconStyle: 'solid',
-                  }}
-                  ariaLabel="Close Button"
-                  isIconOnly
-                  type="tertiary"
-                  color={buttonColors.black}
+                  variant="text"
+                  color="secondary"
+                  size="medium"
                   className={style.closeButton}
-                />
+                  aria-label="Close Button"
+                >
+                  <FontAwesomeV6Icon iconName="xmark" iconStyle="solid" />
+                </MuiIconButton>
               </div>
               {recommendedSimilarCurriculum && (
                 <div className={style.relatedContainer}>
@@ -365,6 +381,8 @@ ExpandedCurriculumCatalogCard.propTypes = {
   gradeRange: PropTypes.string.isRequired,
   subjectsAndTopics: PropTypes.arrayOf(PropTypes.string).isRequired,
   deviceCompatibility: PropTypes.string.isRequired,
+  aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
+    .isRequired,
   description: PropTypes.string.isRequired,
   professionalLearningProgram: PropTypes.string,
   video: PropTypes.string,

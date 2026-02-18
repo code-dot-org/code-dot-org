@@ -21,7 +21,7 @@
     "project_template_level_name": "CSA U8L7-Multiple Lists PBT_alt-2025",
     "teacher_markdown": "Students should realize that the method returns a new `ArrayList` that contains the elements that appear in both lists.",
     "name_suffix": "_alt-2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T22:57:27.129+00:00\",\"changed\":[\"cloned from \\\"CSA U8L7-L2_pilot-2025\\\"\"],\"cloned_from\":\"CSA U8L7-L2_pilot-2025\"}]"

@@ -1,10 +1,10 @@
 import React, {useCallback, useMemo, useRef, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {moderateImage} from '@cdo/apps/lab2/utils';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import UploadsDisabledModal from '@cdo/apps/sharedComponents/UploadsDisabledModal';
-import HttpClient from '@cdo/apps/util/HttpClient';
-import {WEBLAB2_IMAGE_FILE_TYPES} from '@cdo/apps/weblab2/constants';
 
 export const enum analyticsEvents {
   UPLOAD_FAILED = 'UPLOAD_FAILED',
@@ -73,29 +73,6 @@ const isValidMimeType = (
   );
 };
 
-const moderateImage = async (
-  file: File,
-  ext: string,
-  appName?: string
-): Promise<'ok' | 'flagged' | 'skipped'> => {
-  if (appName !== 'weblab2' || !WEBLAB2_IMAGE_FILE_TYPES.includes(ext)) {
-    return 'skipped';
-  }
-  const response = await HttpClient.post(`/v3/images/moderate`, file, true, {
-    'Content-Type': file.type || 'application/octet-stream',
-  });
-  if (!response.ok) {
-    Lab2Registry.getInstance()
-      .getMetricsReporter()
-      .logError('Error with image moderation');
-    return 'skipped';
-  }
-  const json = await response.json();
-  if (json?.rating !== 'everyone' && json?.rating !== 'unknown') {
-    return 'flagged';
-  }
-  return 'ok';
-};
 /**
  * A custom hook that provides functionality for file uploads,
  * including validation, reading, uploading to S3 for non-text files, and handling callbacks.
@@ -196,6 +173,11 @@ export const useFileUploader = ({
           }
         };
       } else {
+        analyticsReporter.sendEvent(
+          EVENTS.UPLOAD_CUSTOM_IMAGE,
+          {UploaderType: 'Lab2 File Uploader', ProjectType: appName},
+          PLATFORMS.STATSIG
+        );
         try {
           if (onImageFlagged) {
             const ext = file.name.split('.').pop()?.toLowerCase() || '';

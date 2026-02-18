@@ -29,7 +29,8 @@
     "display_name": "Extra Code: Text Shadow",
     "bubble_choice_description": "Learn how to give your text a shadow",
     "thumbnail_url": "https://images.code.org/c334f96e10ec77ef82e33b8c10297418-image-1566577458241.PNG",
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

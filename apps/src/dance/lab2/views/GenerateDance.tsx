@@ -1,5 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 import {sample} from 'lodash';
 import React, {useCallback, useEffect, useState} from 'react';
 
@@ -70,11 +70,11 @@ interface GenerateCodeProps {
   resetProgram: () => void;
   updateSources: (newSources: {
     workspaceSerialization: WorkspaceSerialization;
-    flyoutDefinition: GoogleBlockly.utils.toolbox.ToolboxInfo;
+    flyoutDefinition: BlocklyCore.utils.toolbox.ToolboxInfo;
   }) => void;
   startOver: () => void;
   onFlyoutGenerated: (
-    toolboxDefinition: GoogleBlockly.utils.toolbox.ToolboxInfo
+    toolboxDefinition: BlocklyCore.utils.toolbox.ToolboxInfo
   ) => void;
 }
 
@@ -306,6 +306,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
           />
 
           <Button
+            id="generate-dance-button"
             ariaLabel={
               aiGenerateState === 'none' ? 'Generate code' : 'Generating code'
             }
@@ -343,6 +344,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
       {aiGenerateState === 'listened' && (
         <div className={styles.buttonRow}>
           <Button
+            id="back-to-prompt-button"
             ariaLabel={'Back to prompt'}
             text={'Back to prompt'}
             type="secondary"
@@ -359,6 +361,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
           />
 
           <Button
+            id="regenerate-button"
             ariaLabel={'Regenerate'}
             text={'Regenerate'}
             type="secondary"
@@ -374,6 +377,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
           />
 
           <Button
+            id="use-code-button"
             ariaLabel={'Use code'}
             text={'Use code'}
             type="primary"
@@ -451,6 +455,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
                 className={styles.buttonWide}
                 // If on a Music Dance AI sublevel, make sure we report success for this specific sublevel so that progress is correctly updated.
                 onContinue={sublevelOnContinue}
+                textVariant={'simple'}
               />
             )}
           </div>

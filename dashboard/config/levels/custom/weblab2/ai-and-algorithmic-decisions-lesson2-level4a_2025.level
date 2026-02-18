@@ -70,21 +70,21 @@
     "disable_edit_run_for_submission": "false",
     "widget_view": "false",
     "initial_view_mode": "split",
-    "ai_tutor_mode": "outline",
+    "ai_tutor_mode": "tutor",
     "predict_settings": {
       "isPredictLevel": false,
       "solution": "",
       "questionType": "freeResponse",
-      "allowMultipleAttempts": false,
       "placeholderText": "",
       "multipleChoiceOptions": [
         ""
       ],
       "freeResponseHeight": 50,
-      "codeEditableAfterSubmit": false
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
     },
     "long_instructions": "## Reminder App\r\n\r\n**Dcoument the UI** (buttons and output) in the Activity Guide\r\n\r\n**Explore**: Create additional buttons in HTML; `querySelector` each; add `click` listeners; in handlers, update `output` text.\r\n\r\n**Test every button** with the debug checklist; fix issues.\r\n\r\n**Use AI** to clarify terms, generate short display text (Reminders/Days), and translate errors."
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-13T11:55:56.993+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson2-level5-choicea-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson2-level5-choicea-test-2025\"},{\"changed_at\":\"2025-11-13 11:58:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-13T11:55:56.993+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson2-level5-choicea-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson2-level5-choicea-test-2025\"},{\"changed_at\":\"2025-11-13 11:58:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-12-19 14:30:47 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Weblab2>

@@ -1,6 +1,8 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 import {ChordEventValue} from '../player/interfaces/ChordEvent';
 import {generateGraphDataFromChord, ChordGraphNote} from '../utils/Chords';
@@ -23,8 +25,8 @@ interface FieldChordOptions {
  * A custom field that renders the chord selection UI, used in the
  * "play_chord" block. The UI is rendered by {@link ChordPanel}.
  */
-export default class FieldChord extends GoogleBlockly.Field {
-  static fromJson(_options: GoogleBlockly.FieldConfig) {
+export default class FieldChord extends BlocklyCore.Field {
+  static fromJson(_options: BlocklyCore.FieldConfig) {
     const options = _options as FieldChordOptions;
     return new FieldChord(options);
   }
@@ -58,7 +60,7 @@ export default class FieldChord extends GoogleBlockly.Field {
     }
 
     this.backgroundElement =
-      GoogleBlockly.utils.dom.createSvgElement<SVGGraphicsElement>(
+      BlocklyCore.utils.dom.createSvgElement<SVGGraphicsElement>(
         'g',
         {
           transform: 'translate(1,1)',
@@ -70,7 +72,7 @@ export default class FieldChord extends GoogleBlockly.Field {
   }
 
   applyColour() {
-    const style = (this.sourceBlock_ as GoogleBlockly.BlockSvg).style;
+    const style = (this.sourceBlock_ as BlocklyCore.BlockSvg).style;
     if (this.borderRect_) {
       this.borderRect_.setAttribute('stroke', style.colourTertiary);
       this.borderRect_.setAttribute('fill', 'transparent');
@@ -96,7 +98,7 @@ export default class FieldChord extends GoogleBlockly.Field {
       this.backgroundElement.innerHTML = '';
     }
 
-    GoogleBlockly.utils.dom.createSvgElement(
+    BlocklyCore.utils.dom.createSvgElement(
       'rect',
       {
         fill: color.neutral_dark90,
@@ -120,7 +122,7 @@ export default class FieldChord extends GoogleBlockly.Field {
     });
 
     graphNotes.forEach(graphNote => {
-      GoogleBlockly.utils.dom.createSvgElement(
+      BlocklyCore.utils.dom.createSvgElement(
         'rect',
         {
           fill: color.light_cyan,
@@ -152,15 +154,15 @@ export default class FieldChord extends GoogleBlockly.Field {
     super.showEditor_();
 
     const editor = this.createDropdown();
-    GoogleBlockly.DropDownDiv.getContentDiv().appendChild(editor);
+    BlocklyCore.DropDownDiv.getContentDiv().appendChild(editor);
 
-    const style = (this.sourceBlock_ as GoogleBlockly.BlockSvg).style;
-    GoogleBlockly.DropDownDiv.setColour(
+    const style = (this.sourceBlock_ as BlocklyCore.BlockSvg).style;
+    BlocklyCore.DropDownDiv.setColour(
       style.colourPrimary,
       style.colourTertiary
     );
 
-    GoogleBlockly.DropDownDiv.showPositionedByField(
+    BlocklyCore.DropDownDiv.showPositionedByField(
       this,
       this.disposeDropdown.bind(this)
     );
@@ -184,7 +186,7 @@ export default class FieldChord extends GoogleBlockly.Field {
       return;
     }
 
-    ReactDOM.render(
+    createReactRoot(
       React.createElement<ChordPanelProps>(ChordPanel, {
         initValue: this.getValue(),
         onChange: this.onValueChange,

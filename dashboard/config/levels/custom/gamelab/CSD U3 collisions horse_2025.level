@@ -81,6 +81,7 @@
     "rubric_performance_level_3": "The program uses a conditional and detects when the rainbow touches the horse, but there are enough errors that it does not react in any way.",
     "rubric_performance_level_4": "The program does not detect when the rainbow touches the horse, or there is no conditional in the program.",
     "libraries_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

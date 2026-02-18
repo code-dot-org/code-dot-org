@@ -21,7 +21,7 @@
     "project_template_level_name": "CSA U7L3-L1 Overloaded PBT_pilot_oo2025",
     "teacher_markdown": "Students notice that when the `play()` method is called with a `String`, Java finds the version of the `play()` method that has a `String` parameter and executes it.",
     "name_suffix": "_oo2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-13T01:02:10.571+00:00\",\"changed\":[\"cloned from \\\"CSA U7L3-L4_pilot-2025\\\"\"],\"cloned_from\":\"CSA U7L3-L4_pilot-2025\"}]"

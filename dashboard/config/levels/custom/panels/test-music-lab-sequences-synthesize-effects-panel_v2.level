@@ -1,6 +1,5 @@
 <Panels>
   <config><![CDATA[{
-  "published": true,
   "game_id": 73,
   "created_at": "2025-05-31T02:57:02.000Z",
   "level_num": "custom",
@@ -48,8 +47,10 @@
         "typing": true
       }
     ],
-    "name_suffix": "_v2"
+    "name_suffix": "_v2",
+    "ai_tutor_available": "true"
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:02.757+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-effects-panel\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-effects-panel\"},{\"changed_at\":\"2025-07-03 16:49:45 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-03 20:11:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-03 20:11:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

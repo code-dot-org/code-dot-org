@@ -37,7 +37,7 @@
         "tabOrder": 3
       }
     },
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:56:53.566+00:00\",\"changed\":[\"cloned from \\\"CSA U8L1-L1d_2022\\\"\"],\"cloned_from\":\"CSA U8L1-L1d_2022\"},{\"changed_at\":\"2023-03-17 15:18:59 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-17 15:19:26 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

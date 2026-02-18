@@ -1,13 +1,16 @@
 import {createAsyncThunk} from '@reduxjs/toolkit';
 
 import {
-  clearChatMessagePending,
+  addEventToChatEventsCurrent,
   clearStagedFiles,
   clearUserAddedSelectionContext,
-  setChatMessagePending,
+  setChatMessageSent,
+  updateChatMessageStatus,
+  updateRequestId,
 } from '@cdo/apps/aichat/redux/slice';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import {TestResults} from '@cdo/apps/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -15,9 +18,11 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import {RootState} from '@cdo/apps/types/redux';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
+import {createUuid} from '@cdo/apps/utils';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import {postAichatCompletionMessage} from '../../aichatApi';
+import {logChatEvent} from '../../helpers/logChatEvent';
 import {formatUserAddedSelectionContextForPrompt} from '../../helpers/userAddedSelectionContextFormatter';
 import {
   AichatContext,
@@ -35,6 +40,13 @@ import {getNewRemoveId} from '../utils';
 import {addChatEvent} from './addChatEvent';
 import {notifyErrorUnauthorized} from './helpers/notifyErrorUnauthorized';
 import {sendAnalytics} from './sendAnalytics';
+
+// We currently default to using the legacy Gemini API unless use vertex query param set.
+// This will be removed once we switch over to Vertex completely.
+const useVertex = queryParams('aitutor-use-vertex') === 'true' ? true : false;
+
+// Log whether using Vertex API or not in case query param entered incorrectly.
+console.log(`🤖: Tutor set to use Vertex API? ${useVertex ? 'YES' : 'NO'}`);
 
 // This thunk's callback function submits a user's chat content and AI customizations to
 // the chat completion endpoint, then waits for a chat completion response, and updates
@@ -71,9 +83,9 @@ export const submitChatContents = createAsyncThunk(
     } = newUserMessageInput;
 
     // Clear any staged files if present (used with multimodal models)
-    thunkAPI.dispatch(clearStagedFiles());
+    dispatch(clearStagedFiles());
     // Clear any user added context if present.
-    thunkAPI.dispatch(clearUserAddedSelectionContext());
+    dispatch(clearUserAddedSelectionContext());
 
     const aichatContext: AichatContext = {
       clientType,
@@ -96,8 +108,8 @@ export const submitChatContents = createAsyncThunk(
       chatMessageDisplayText = text;
     }
 
-    // Create the new user ChatCompleteMessage and add to chatMessages.
-    const newUserMessage: PendingChatMessage = {
+    // Create the new user ChatMessage and add to chatEventsCurrent.
+    const newUserMessage: PendingChatMessage & {updateId: string} = {
       role: Role.USER,
       status: Status.UNKNOWN,
       chatMessageText,
@@ -106,8 +118,11 @@ export const submitChatContents = createAsyncThunk(
       assets,
       userAddedSelectionContext,
       timestamp: Date.now(),
+      updateId: createUuid(),
     };
-    dispatch(setChatMessagePending(newUserMessage));
+    dispatch(addEventToChatEventsCurrent(newUserMessage));
+    dispatch(setChatMessageSent(true));
+
     if (logLevelActivity) {
       logLevelActivity();
     }
@@ -160,9 +175,10 @@ export const submitChatContents = createAsyncThunk(
       messages = await postAichatCompletionMessage(
         newUserMessage,
         chatEventsCurrent.filter(isCompletedChatMessage),
-        modelParameters,
+        {...modelParameters, useVertex},
         aichatContext
       );
+
       // In milliseconds
       const responseTime = Date.now() - startTime;
       dispatch(
@@ -180,28 +196,50 @@ export const submitChatContents = createAsyncThunk(
           },
         ]);
     } catch (error) {
-      await handleChatCompletionError(error as Error, newUserMessage, dispatch);
+      await handleChatCompletionError(
+        error as Error,
+        newUserMessage,
+        dispatch,
+        state.progress.viewAsUserId
+      );
       return;
     }
 
-    thunkAPI.dispatch(clearChatMessagePending());
     // Send a report that the user has started the aichat level after successfully sending
     // a chat message and then receiving a response from the chatbot.
     // A teacher will view that the level is now in progress.
     dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
     messages.forEach(message => {
-      if (responseCallback && message.role === Role.ASSISTANT) {
-        message.chatMessageText = responseCallback(message.chatMessageText);
+      if (message.role === Role.ASSISTANT) {
+        message.chatMessageText =
+          responseCallback?.(message.chatMessageText) ??
+          message.chatMessageText;
+        dispatch(addChatEvent(message));
       }
-      dispatch(addChatEvent(message));
+      if (message.role === Role.USER) {
+        dispatch(
+          updateChatMessageStatus({
+            updateId: newUserMessage.updateId,
+            status: message.status,
+          })
+        );
+        dispatch(
+          updateRequestId({
+            updateId: newUserMessage.updateId,
+            requestId: message.requestId,
+          })
+        );
+        logChatEvent(message, state.progress.viewAsUserId);
+      }
     });
   }
 );
 
 async function handleChatCompletionError(
   error: Error,
-  newUserMessage: PendingChatMessage,
-  dispatch: AppDispatch
+  newUserMessage: PendingChatMessage & {updateId: string},
+  dispatch: AppDispatch,
+  viewAsUserId: number | null
 ) {
   // Only send log report if not a 403 error.
   if (!(error instanceof NetworkError && error.response.status === 403)) {
@@ -210,8 +248,13 @@ async function handleChatCompletionError(
       .logError('Error in aichat completion request', error as Error);
   }
 
-  dispatch(clearChatMessagePending());
-  dispatch(addChatEvent({...newUserMessage, status: Status.ERROR}));
+  dispatch(
+    updateChatMessageStatus({
+      updateId: newUserMessage.updateId,
+      status: Status.ERROR,
+    })
+  );
+  logChatEvent({...newUserMessage, status: Status.ERROR}, viewAsUserId);
 
   // Display specific error notifications if the user was rate limited (HTTP 429) or not authorized (HTTP 403).
   // Otherwise, display a generic error assistant response.

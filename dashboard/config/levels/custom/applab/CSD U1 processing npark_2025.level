@@ -221,6 +221,7 @@
     "parent_level_id": 23132,
     "teacher_markdown": "[key]\r\n\r\nThere are two distinct forms of processing.\r\n\r\n1. Comparing - the user's choice is compared to the correct answer\r\n2. If/then - if they are the same, the app displays the \"correct\" message; if they are different, the app displays the \"incorrect\" message\r\n\r\nNote that this app is very similar to the birthday app students saw on the last level in that it uses the same two types of processing.  Use this similarity to compare how the same types of processing can be used in very different types of apps.\r\n\r\n[/key]",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

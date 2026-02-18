@@ -36,7 +36,8 @@
     "validation_enabled": "true",
     "display_name": "Step 2: Add User Content",
     "bubble_choice_description": "Next step is to add your user's content to the web page.",
-    "thumbnail_url": "https://images.code.org/b1ac5034beda3ad282d4032331970b62-html.png"
+    "thumbnail_url": "https://images.code.org/b1ac5034beda3ad282d4032331970b62-html.png",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

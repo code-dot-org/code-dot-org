@@ -1,0 +1,23 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-01-26T23:32:00.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "thumbnail_url": "https://images.code.org/a790e384d85dbfd9556ad19e090e3195-async.png",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Asynchronous Programming\n\n**Asynchronous programming** is code that allows other work to continue while waiting for a task to finish.",
+        "imageUrl": "https://images.code.org/a62862f4864fdeb0de544e832ba6ce8f-async.png",
+        "key": "designing-reliable-apps-lesson2-level3-test_2025-pilot-aff75c85-6709-4f28-8a2b-140844032e8a",
+        "layout": "text-bottom-center"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2026-01-27 00:19:20 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-01-27 00:19:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Panels>

@@ -14,18 +14,18 @@
     "hide_share_and_remix": "false",
     "widget_view": "false",
     "initial_view_mode": "split",
-    "ai_tutor_mode": "outline",
+    "ai_tutor_mode": "tutor",
     "predict_settings": {
       "isPredictLevel": false,
       "solution": "",
       "questionType": "freeResponse",
-      "allowMultipleAttempts": false,
       "placeholderText": "",
       "multipleChoiceOptions": [
         ""
       ],
       "freeResponseHeight": 50,
-      "codeEditableAfterSubmit": false
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
     },
     "display_name": "Broken Bookmark Star",
     "thumbnail_url": "https://images.code.org/0d4d544eb306ec4f5435faad395a5cf5-ChatGPT Image Oct 16, 2025, 09_19_35 PM.png",
@@ -77,6 +77,6 @@
     },
     "encrypted_exemplar_sources": "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\nJxll6m62hWlK\n"
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-13T11:55:15.948+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson2-level3-choicec-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson2-level3-choicec-test-2025\"},{\"changed_at\":\"2025-11-13 12:08:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-13T11:55:15.948+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson2-level3-choicec-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson2-level3-choicec-test-2025\"},{\"changed_at\":\"2025-11-13 12:08:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-12-19 14:30:13 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Weblab2>

@@ -137,6 +137,7 @@
     "thumbnail_url": "https://images.code.org/36b8c4f797b3aa62f74948caf0457086-image-1585833223868.gif",
     "bubble_choice_description": "Make the spirals move in the opposite way when the mouse is pressed down.",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

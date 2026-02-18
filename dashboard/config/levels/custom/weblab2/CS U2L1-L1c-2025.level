@@ -1,0 +1,104 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-12-31T20:46:25.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Template A",
+    "long_instructions": "Use your Web Design for Users activity guide in order to determine which user this website might be a match for. ",
+    "teacher_markdown": "**Answer Keys & Exemplars:** An answer key or exemplar is provided for verified teachers as part of the resources in this lesson plan. If you do not see an answer key or exemplar listed as a resource, [follow these steps](https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-) to become a verified teacher.\r\n",
+    "thumbnail_url": "https://images.code.org/c030607ab7c9eacdffc613aff3992381-image-1677194170313.png",
+    "submittable": "false",
+    "hide_share_and_remix": "true",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "true",
+    "initial_view_mode": "preview",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <h1>\n      Maria Bonita Catering\n    </h1>\n    \n    <img class=\"header\" src=\"food.jpg\" />\n    \n    <p>Maria Bonita Catering can provide excellent service and delicious food for your next event! Contact us at 1 (234) 555-6789.\n    \n    <h2>Available Dishes</h2>\n    \n    <img class=\"align-left\" src=\"tacos.jpg\" />\n    <p class=\"itemtitle\">Tacos - $4.99 per taco</p>\n    <p>We offer several varieties of tacos, including vegetarian and vegan options</p>\n    \n    <hr />\n    \n    <img class=\"align-right\" src=\"chips.jpg\" />\n    <p class=\"itemtitle\">Chips and Salsa - $10.99 per bag of chips</p>\n    <p>We offer yellow and blue corn tortilla chips with three flavors of salsa</p>\n    \n    \n    <hr />\n    \n    <img class=\"align-left\" src=\"burrito.jpg\" />\n    <p class=\"itemtitle\">Burritos - $8.99 per burrito</p>\n    <p>Burritos include your choice of meat or fish with enchilada sauce on the top</p>\n\n    <hr />\n    \n    <p class=\"disclaimer\">All images from Pixabay and are provided with a Pixabay license</p>\n    \n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "10": {
+          "id": "10",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  background: gold;\n  font-family: cursive;\n}\np {\n  color: black;\n}\nh1 {\n  font-weight: bold;\n  text-align: center;\n}\n\n.header {\n  width: 50%;\n  margin-left: 25%;\n  border: solid 4px green;\n  border-radius: 10px;\n}\n\n.align-left {\n  width: 25%;\n  margin-right: 20px;\n  float:left;\n  margin-bottom: 10px;\n  border: solid 4px green;\n  border-radius: 10px;\n}\n\n.align-right {\n  width: 25%;\n  margin-left: 20px;\n  float:right;\n  \n}\n\nhr {\n  clear: both;\n}\n\n.itemtitle {\n  font-family: Arial;\n  font-weight: bold;\n  \n}\n\n.disclaimer {\n  font-family: Consolas;\n  font-size: 10px;\n  color: grey;\n  text-align: center;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "11": {
+          "id": "11",
+          "name": "chips.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CS%20U2L1-L1c-2025/uuid/43f3e6b8-32cd-43e0-824c-fcc50d436ec3.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "12": {
+          "id": "12",
+          "name": "burrito.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CS%20U2L1-L1c-2025/uuid/dd9f0ef8-d33d-41a4-b167-e27b0f6af685.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "13": {
+          "id": "13",
+          "name": "food.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CS%20U2L1-L1c-2025/uuid/37355bff-596f-490b-8d1b-e5372c0cb1c8.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "14": {
+          "id": "14",
+          "name": "tacos.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CS%20U2L1-L1c-2025/uuid/83a4966c-1c45-4841-8d9e-0d3e11c0ba5e.jpg",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-12-31T20:46:25.051+00:00\",\"changed\":[\"cloned from \\\"CS U2L1-L1b-2025\\\"\"],\"cloned_from\":\"CS U2L1-L1b-2025\"},{\"changed_at\":\"2025-12-31 20:46:34 +0000\",\"changed\":[\"thumbnail_url\",\"widget_view\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 20:47:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 20:48:04 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

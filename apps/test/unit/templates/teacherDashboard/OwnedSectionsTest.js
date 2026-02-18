@@ -2,7 +2,6 @@ import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import {UnconnectedOwnedSections as OwnedSections} from '@cdo/apps/templates/teacherDashboard/OwnedSections';
-import * as globalEdition from '@cdo/apps/util/globalEdition';
 
 import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
@@ -71,42 +70,5 @@ describe('OwnedSections', () => {
     expect(
       wrapper.find('Connect(OwnedSectionsTable)').props().sectionIds
     ).to.deep.equal([11, 12]);
-  });
-
-  it('renders an LtiFeedbackBanner', () => {
-    const wrapper = shallow(<OwnedSections {...defaultProps} />);
-    const globalWrapper = wrapper.find('GlobalEditionWrapper', {
-      componentId: 'LtiFeedbackBanner',
-    });
-    expect(globalWrapper.dive().find('LtiFeedbackBanner').length).to.equal(1);
-  });
-});
-
-describe('OwnedSections - Farsi Global Edition', () => {
-  const oldWindowLocation = window.location;
-  const getGlobalEditionRegionMock = jest.spyOn(
-    globalEdition,
-    'getGlobalEditionRegion'
-  );
-
-  beforeEach(() => {
-    delete window.location;
-    window.location = new URL(
-      'https://studio.code.org/global/fa/teacher_dashboard'
-    );
-    getGlobalEditionRegionMock.mockReturnValue('fa');
-  });
-
-  afterEach(() => {
-    window.location = oldWindowLocation;
-    getGlobalEditionRegionMock.mockRestore();
-  });
-
-  it('does not render an LtiFeedbackBanner', () => {
-    const wrapper = shallow(<OwnedSections {...defaultProps} />);
-    const globalWrapper = wrapper.find('GlobalEditionWrapper', {
-      componentId: 'LtiFeedbackBanner',
-    });
-    expect(globalWrapper.dive().find('LtiFeedbackBanner').length).to.equal(0);
   });
 });

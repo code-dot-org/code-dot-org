@@ -28,7 +28,8 @@
       "/courses/csd-2024/guides/html-tags",
       "/courses/csd-2024/guides/web-lab"
     ],
-    "map_reference": "/courses/csd-2024/guides/layout-properties"
+    "map_reference": "/courses/csd-2024/guides/layout-properties",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

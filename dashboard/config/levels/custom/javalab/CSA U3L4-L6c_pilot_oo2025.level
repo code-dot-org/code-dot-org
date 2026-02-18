@@ -1,6 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 68,
   "created_at": "2025-03-13T00:07:13.000Z",
   "level_num": "custom",
@@ -780,11 +779,9 @@
     "encrypted_exemplar_sources": "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\n57JnAQ==\n",
     "video_key": "csa_for_loops",
     "name_suffix": "_oo2025",
-    "ai_tutor_available": true,
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": "false"
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-13T00:07:13.860+00:00\",\"changed\":[\"cloned from \\\"CSA U3L4-L6c_pilot-2025\\\"\"],\"cloned_from\":\"CSA U3L4-L6c_pilot-2025\"},{\"changed_at\":\"2025-08-01 14:11:15 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-08-01 14:21:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-31 17:30:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-31 17:30:31 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>

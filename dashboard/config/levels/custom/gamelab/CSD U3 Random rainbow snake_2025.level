@@ -69,6 +69,7 @@
     "rubric_performance_level_4": "No student produced circles, or any new circles share a color or horizontal position with circles produced by the original code.",
     "encrypted": "false",
     "libraries_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

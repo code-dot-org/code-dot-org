@@ -25,7 +25,8 @@
     "parent_level_id": 18813,
     "name_suffix": "_2025",
     "validation_enabled": "false",
-    "video_key": "csd_debugging"
+    "video_key": "csd_debugging",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "Thumbnail: https://images.code.org/c999dfe04a1b89333692b94fbc2ca8af-image-1561587964054.25.38 PM.png\r\n",

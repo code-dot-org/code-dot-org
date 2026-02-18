@@ -104,6 +104,7 @@
     "thumbnail_url": "https://images.code.org/60702b4d79f65a81feb1eab8a7118e7c-animated rainbow snake.gif",
     "validation_enabled": "false",
     "start_blocks": "//Setting World Frame Rate\r\nWorld.frameRate = 5;\r\n\r\n//1) Create your sprite for the snake head and set it's location to be at the front of the body.\r\n\r\n//2) Set the animation for the snake head.\r\n\r\n//3) Resize the snake head.\r\n\r\n//Rainbow Snake Code\r\nbackground(\"skyBlue\");\r\n\r\nfill(\"red\");\r\nellipse(100, randomNumber(190,210), 50, 50);\r\n\r\nfill(\"orange\");\r\nellipse(140, randomNumber(190,210), 50, 50);\r\n\r\nfill(\"yellow\");\r\nellipse(180, randomNumber(190,210), 50, 50);\r\n\r\nfill(\"green\");\r\nellipse(220, randomNumber(190,210), 50, 50);\r\n\r\nfill(\"blue\");\r\nellipse(260, randomNumber(190,210), 50, 50);\r\n\r\nfill(\"purple\");\r\nellipse(300, randomNumber(190,210), 50, 50);\r\n\r\n//4) Add a draw loop and move the necessary code into it so that the snake is animated.\r\n\r\n//5) Update the appropriate sprite property for the snake head so that it is also animated with the rest of the body.\r\n\r\n\r\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

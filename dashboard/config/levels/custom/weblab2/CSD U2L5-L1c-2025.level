@@ -1,0 +1,52 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-01-06T20:22:36.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Debug missing paragraph",
+    "long_instructions": "# Debug: Missing Paragraph and List\r\n\r\n\r\nIt looks like a paragraph is missing from the preview and the lists aren't quite right. Can you find and fix the bugs? \r\n \r\n# Do this\r\n\r\n1) Find and fix the problems that are causing the bugs.",
+    "bubble_choice_description": "Use your debugging skills to figure out why the paragraph has disappeared.",
+    "thumbnail_url": "https://images.code.org/83b9723f9f3389674374366a73e59d06-image-1585676172131.png",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html> \n<html>\n  <head>\n  </head>\n  <body>\n <h1>Fun Family Activities</h1>\n    <p>Pick one of these fun things to do with your family</p>\n    <h2>Indoor Activities</h2>\n    <p> Board games are a great indoor activity! Here are my top 3 favorites:</p>\n    <ol>\n    <li>Settlers of Catan</li>\n    <p>One of my favorites is Settlers of Catan. It's a relatively simple game that can accommodate up to 6 players</p>\n    <li>Blukus</li>\n    <p>Blokus is a game of spatial reasoning and problem-solving, so everyone's mind gets a workout!</p>\n    <li>Azul</li>\n    <p>This is a fun, creative game where players take turns drafting colored tiles from suppliers to their player board. Later, players score points based on how they've placed their tiles to decorate the palace</p>\n    <h2>Fishing</h2>\n    <p. My dad really likes fishing because he thinks it is calming, although it might be a little boring. He says \"It's called fishing, not catching\"</p\n    <h2>Going outside</h2>\n    <p>Sometimes you just need to get some fresh air and enjoy the outside. Whether that's going to a local park or driving to a trail to go on a hike.</p>\n  </body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMrWt2HFvH/UaEd1Aw6m\nH7NPCh2Lr52063tDqEoStRSedn5LQYmzKopHnMdxEddzMa1ry9pfnBII8zb7\nMD3Gw+QxEX86iJuKhBFDqXvjC26WIR0dnDES221G1n9EocbLnjZdpnhQwMUd\nqxqCSt+fF4jNvz7r09IJnCAdY955R5do4VxjUFFbqhRrvnHQS0rOxyRRDnch\nywoR+cE+M3bsXL/1lVKK1YuMZUQiXRzV6JR54QoReLhBUpPoHFyRu+F/QEMR\nrojguK7v2FgS7H9zZvHRKNVg2An1ScTmBGZXbhwuyUhvFAIBAKyGTfUCClTA\nt17QnetXJ8KLRdCzKi/GZLoWg2syjpQgpExY8x0uy4nNEDfDo3uzuDa/Z6AO\n0OckTyqaDrcDIlyaiRDSXABVNi1tLaYxfqrGin1cpQRd0Xyer4m/ybAe96Yc\nT7YUoWacSSHPPbRN6Dg2YhjrTSn0tAkzVhdvEP3xAiz+gbXIMLHTAq+x+Bgj\noLJbDcJniaicbmEkl7R7FcsAyCKc9tXX8gRPSNds2L/XMRybX7cWLWywiv1B\neaGe94NH/ip8HNF/gM1z3J9no6tUDDHcjJTq7qRXira4jOHtsxjKw6lK7aBv\neMZ7zAURLY4vZ+4iej/8CyHXrqi0akgaQnijvtgLmzvGSjvF+3bY2NbOyau+\nRCO2l2BNvymQUWKx1rFVrDfesp9K5iWnufbnF3/uWNDsexgz4YCEZ+1fpIIe\nNE9AmWoBQpympn+i02mF140aJ7cCrazf/4kdan5129DFs1xD+wGubCWutgyc\nt9gNcR5ydmvDIk3RuXnT30wrCyiUoR/ow73HKkgBbG0YitgSUP9Fci8LQcMw\n389dR2jHOfHRETNjym9LFhEzINP5h+T8nKlk1jNpQhAct2bC6qCxKpg323Lf\n+W3eTv36WozSlUiu1s24vC3p4CHEBrhriGiM6RpNo3AbkdUZw8BlBjnH7Ass\n+0Rsu4Elwe/fQttEV6FXN+hmbtpFhftCRXorJfDAuuyklXIhz9e7X3ynBfRc\nHI3f7lsz7386tj4RozxRf+v9MA6aHsfhVeNUNq5bp1lQuZxTad8FRNH0BTVo\nJdzPcwU0tSGgNcj5XK/bb8geTkBEQPuGMA==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-01-06 20:22:50 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-06 20:23:16 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

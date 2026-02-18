@@ -20,7 +20,7 @@
     },
     "project_template_level_name": "CSA U8L7-Multiple Lists PBT_2023",
     "teacher_markdown": "Students realize that this method returns a new `ArrayList` containing the elements that appear in exactly one of the lists.",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-04-14T14:06:39.187+00:00\",\"changed\":[\"cloned from \\\"CSA U8L7-L3_2023\\\"\"],\"cloned_from\":\"CSA U8L7-L3_2023\"},{\"changed_at\":\"2023-04-14 14:06:42 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-21 00:58:07 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

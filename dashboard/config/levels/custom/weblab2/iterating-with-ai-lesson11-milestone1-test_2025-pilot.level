@@ -1,0 +1,37 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-12-22T17:42:21.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "iterating-with-ai-lesson11-template-test_2025-pilot",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "code",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "long_instructions": "# Finalize Your Dataset\r\n\r\n1.  **Import Your Dataset:** At the top of your files panel, click the `+` sign to import your `dataset.js` file from your backpack. \r\n2.  **Consult AI:** Upload a screenshot of your schema from the previous level and consult AI. You might ask:\r\n\t- *Is this the right schema to represent this data?*\r\n    - *What potential biases should I consider with these fields?*\r\n3.  **Generate the Revised Dataset:** use AI to eliminate any fields you don't want from your dataset and update the `dataset.js` file. ",
+    "display_name": "Finalize Your Dataset",
+    "bubble_choice_description": "Refine your dataset with AI by cleaning field names, removing unneeded fields, and checking for missing perspectives or bias ***(supports completing Milestone 1 tasks)***.",
+    "thumbnail_url": "https://images.code.org/167b920ca51fb0baa5783fc94d66f3f0-data-cleaning.png",
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-22T17:42:21.378+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson11-milestone1-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson11-milestone1-test-2025\"}]"
+}]]></config>
+</Weblab2>

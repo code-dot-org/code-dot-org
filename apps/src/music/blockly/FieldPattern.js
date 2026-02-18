@@ -1,8 +1,9 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
 import color from '@cdo/apps/util/color';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 
 import {DEFAULT_PATTERN_LENGTH} from '../constants';
@@ -17,7 +18,7 @@ const FIELD_PADDING = 2;
  * A custom field that renders the pattern editing UI, used in the
  * "play_pattern" block.
  */
-class FieldPattern extends GoogleBlockly.Field {
+class FieldPattern extends BlocklyCore.Field {
   constructor(options) {
     super(options.currentValue);
 
@@ -52,7 +53,7 @@ class FieldPattern extends GoogleBlockly.Field {
       this.borderRect_.classList.add('blocklyDropdownRect');
     }
 
-    this.backgroundElement = GoogleBlockly.utils.dom.createSvgElement(
+    this.backgroundElement = BlocklyCore.utils.dom.createSvgElement(
       'g',
       {
         transform: 'translate(1,1)',
@@ -109,7 +110,7 @@ class FieldPattern extends GoogleBlockly.Field {
     if (!this.newDiv_) {
       return;
     }
-    ReactDOM.render(
+    createReactRoot(
       <InstrumentGrid
         editorType="drums"
         // Make a copy of the value object so that we don't overwrite Blockly's data.
@@ -136,7 +137,7 @@ class FieldPattern extends GoogleBlockly.Field {
       this.backgroundElement.innerHTML = '';
     }
 
-    GoogleBlockly.utils.dom.createSvgElement(
+    BlocklyCore.utils.dom.createSvgElement(
       'rect',
       {
         fill: color.neutral_dark,
@@ -158,7 +159,7 @@ class FieldPattern extends GoogleBlockly.Field {
     });
 
     graphNotes.forEach(graphNote => {
-      GoogleBlockly.utils.dom.createSvgElement(
+      BlocklyCore.utils.dom.createSvgElement(
         'rect',
         {
           fill: color.neutral_light,

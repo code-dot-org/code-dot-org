@@ -3,7 +3,6 @@ require 'test_helper'
 class Pd::AttendanceTest < ActiveSupport::TestCase
   freeze_time
 
-  self.use_transactional_test_case = true
   setup_all do
     @workshop = create(:workshop)
     2.times {@workshop.sessions << create(:pd_session)}

@@ -158,9 +158,12 @@ class LtiV1Controller < ApplicationController
       deployment_id = decoded_jwt[Policies::Lti::LTI_DEPLOYMENT_ID_CLAIM]
       deployment_name = decoded_jwt[Policies::Lti::LTI_DEPLOYMENT_PLATFORM_CLAIM]&.[](:name)
       deployment = Queries::Lti.get_deployment(integration[:id], deployment_id)
-      # ClassLink uses a non-standard role claim key
-      role_key = decoded_jwt[Policies::Lti::CLASSLINK_ROLE_KEY].present? ? Policies::Lti::CLASSLINK_ROLE_KEY : Policies::Lti::LTI_ROLES_KEY
-      lti_account_type = Policies::Lti.get_account_type(decoded_jwt[role_key])
+      lti_account_type = Policies::Lti.get_account_type(decoded_jwt[Policies::Lti::LTI_ROLES_KEY])
+
+      # Store deployment ID and issuer in session for later use
+      session[:external_lti_deployment_id] = deployment_id
+      session[:lti_issuer] = extracted_issuer_id
+      session[:lti_client_id] = extracted_client_id
 
       # If deployment name is nil, update it with the name from the JWT. This
       # could likely be removed after a period of time, as we also write the name
@@ -251,16 +254,17 @@ class LtiV1Controller < ApplicationController
     honeybadger_id = Honeybadger.notify(
       'LTI roster sync error',
       context: {
-        reason: reason,
+        reason:,
         details: message,
       }
     )
     Clients::LtiLogger.log_event(
       message,
       {
-        reason: reason,
-        status: status,
-        error: error,
+        reason:,
+        status:,
+        error:,
+        honeybadger_id:,
       }
     )
     @lti_section_sync_result = {error: error, message: message}
@@ -295,7 +299,6 @@ class LtiV1Controller < ApplicationController
       end
     end
 
-    lti_course, lti_integration, deployment_id, context_id,  nrps_url = nil
     resource_link_id = params[:rlid]
 
     if params[:section_code].present?
@@ -306,14 +309,9 @@ class LtiV1Controller < ApplicationController
         return render_sync_course_error('We couldn\'t find the given section.', :bad_request, 'no_section')
       end
       lti_integration = lti_course.lti_integration
-      deployment_id = lti_course.lti_deployment_id
-      context_id = lti_course.context_id
       nrps_url = lti_course.nrps_url
-      # Prefer the resource link from the SSO parameter instead of the course one. The resource link could have changed.
-      # For example, the teacher could have had Code.org in one material/module but deleted that material/module and
-      # made a new one (deleted the old LtiResourceLink and created a brand new one). This results in a mismatch between
-      # what is stored on Code.org's LtiCourse. Therefore, when doing an SSO sync, prefer the latest RLID and update our
-      # records with that.
+      # Requests from the sync button will not include a resource link ID, so it will generally
+      # be nil at this point. Use the one from the lti_course record if present.
       resource_link_id ||= lti_course.resource_link_id
     else
       # Section code isn't present, meaning this is a sync from an LTI launch.
@@ -323,10 +321,25 @@ class LtiV1Controller < ApplicationController
       rescue
         return render_sync_course_error('LTI Integration not found', :bad_request, 'no_integration')
       end
-      deployment_id = params[:deployment_id]
-      context_id = params[:context_id]
       nrps_url = params[:nrps_url]
+
+      lti_deployment = lti_integration.lti_deployments.find_by(id: params[:deployment_id])
+      return render_sync_course_error('LTI Deployment not found', :bad_request, 'no_deployment') unless lti_deployment
+
+      # Temporary lock to prevent concurrent requests from racing past
+      # the ActiveRecord level uniqueness check and creating LtiCourse duplicates.
+      # TODO(P20-1796): Remove the lock once a DB-level unique constraint
+      #                 on (lti_integration_id, context_id) prevents duplicates.
+      lti_deployment.with_lock do
+        lti_course = lti_integration.lti_courses.find_or_create_by!(context_id: params[:context_id]) do |new_record|
+          new_record.assign_attributes(lti_deployment:, nrps_url:, resource_link_id:)
+        end
+      end
     end
+
+    # The LTI course `resource_link_id` update must happen before we call NRPS,
+    # or we will get an error if the LMS platform requires an RLID (such as Canvas) and the one we have is stale.
+    lti_course.update!(resource_link_id:) if resource_link_id && lti_course.resource_link_id != resource_link_id
 
     lti_advantage_client = Clients::LtiAdvantageClient.new(lti_integration.client_id, lti_integration.issuer)
     begin
@@ -353,14 +366,6 @@ class LtiV1Controller < ApplicationController
     total_sections = 0
     total_students = 0
     ActiveRecord::Base.transaction do
-      lti_course ||= Queries::Lti.find_or_create_lti_course(
-        lti_integration_id: lti_integration.id,
-        context_id: context_id,
-        deployment_id: deployment_id,
-        nrps_url: nrps_url,
-        resource_link_id: resource_link_id
-      )
-
       result = Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: nrps_sections, current_user: current_user)
       had_changes ||= !result[:changed].empty?
 

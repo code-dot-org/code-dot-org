@@ -46,8 +46,6 @@ updates:
       # Exclude Blockly, for more info: https://github.com/code-dot-org/code-dot-org/pull/61094
       - dependency-name: "@blockly/*"
       - dependency-name: "blockly"
-      - dependency-name: "pepjs"
-      - dependency-name: "@code-dot-org/blockly"
     groups:
       amplitude:
         patterns:
@@ -61,7 +59,6 @@ updates:
         patterns:
         - "@blockly/*"
         - "blockly"
-        - "pepjs"
       codemirror:
         patterns:
         - "@codemirror/*"

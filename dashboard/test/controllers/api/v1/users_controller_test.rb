@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class Api::V1::UsersControllerTest < ActionController::TestCase
-  self.use_transactional_test_case = true
-
   setup do
     @user = create(:user)
   end

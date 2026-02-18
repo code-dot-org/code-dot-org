@@ -1,22 +1,10 @@
-import {CdoTheme} from '@code-dot-org/component-library/themes';
-import {ThemeProvider as MuiThemeProvider} from '@mui/material/styles';
 import MuiTypography from '@mui/material/Typography';
 import type {Meta, StoryObj} from '@storybook/react';
 import React from 'react';
 
-// global styles so typography tokens apply
-import '@code-dot-org/component-library-styles/colors.scss';
-
 export default {
   title: 'DesignSystem/MUITypography', // eslint-disable-line storybook/no-title-property-in-meta
   component: MuiTypography,
-  decorators: [
-    Story => (
-      <MuiThemeProvider theme={CdoTheme}>
-        <Story />
-      </MuiThemeProvider>
-    ),
-  ],
 } as Meta;
 
 type Story = StoryObj<typeof MuiTypography>;

@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Create your main character\r\n\r\nYou can use a function to introduce a new character with attributes like name, health, and power. \r\n### Do This: \r\n- Run the code to see the output. \r\n- Modify the function to create your own unique character with a name, health, and special power. \r\n\r\n**Reflect**:\r\n- How does making a function like `introduce character()` make the code reusable? \r\n- Why is it helpful to use print() for displaying attributes? ",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

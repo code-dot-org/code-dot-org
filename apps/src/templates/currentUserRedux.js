@@ -24,6 +24,7 @@ const SET_AI_DIFFERENTIATION_ENABLED =
   'currentUser/SET_AI_DIFFERENTIATION_ENABLED';
 const SET_SHOW_AI_TA_LESSON_SUMMARY =
   'currentUser/SET_SHOW_AI_TA_LESSON_SUMMARY';
+const SET_SHOW_AI_TA_PODCASTS = 'currentUser/SET_SHOW_AI_TA_PODCASTS';
 const SET_HAS_COMPLETED_PERSONALIZATION_QUIZ =
   'currentUser/SET_HAS_COMPLETED_PERSONALIZATION_QUIZ';
 const SET_AUDIO_SUMMARY_TRANSCRIPT = 'currentUser/SET_AUDIO_SUMMARY_TRANSCRIPT';
@@ -115,6 +116,10 @@ export const setShowAITALessonSummary = showAITALessonSummary => ({
   type: SET_SHOW_AI_TA_LESSON_SUMMARY,
   showAITALessonSummary,
 });
+export const setShowAITAPodcasts = showAITAPodcasts => ({
+  type: SET_SHOW_AI_TA_PODCASTS,
+  showAITAPodcasts,
+});
 export const setHasCompletedPersonalizationQuiz =
   hasCompletedPersonalizationQuiz => ({
     type: SET_HAS_COMPLETED_PERSONALIZATION_QUIZ,
@@ -135,7 +140,6 @@ export const setHasSeenHomepageWelcome = hasSeenHomepageWelcome => ({
 
 const initialState = {
   userId: null,
-  uuid: null,
   userName: null,
   userType: 'unknown',
   userRoleInCourse: CourseRoles.Unknown,
@@ -143,12 +147,14 @@ const initialState = {
   hasSeenStandardsReportInfo: false,
   aiDifferentiationEnabled: null,
   showAITALessonSummary: false,
+  showAITAPodcasts: false,
   hasCompletedPersonalizationQuiz: false,
   audioSummaryTranscript: [],
   isBackgroundMusicMuted: false,
   isSortedByFamilyName: false,
   isLti: undefined,
   isTeacher: undefined,
+  isLevelbuilder: undefined,
   // Setting default under13 value to true to err on the side of caution for age-restricted content.
   under13: true,
   over21: false,
@@ -270,6 +276,12 @@ export default function currentUser(state = initialState, action) {
       showAITALessonSummary: action.showAITALessonSummary,
     };
   }
+  if (action.type === SET_SHOW_AI_TA_PODCASTS) {
+    return {
+      ...state,
+      showAITAPodcasts: action.showAITAPodcasts,
+    };
+  }
   if (action.type === SET_HAS_COMPLETED_PERSONALIZATION_QUIZ) {
     return {
       ...state,
@@ -298,7 +310,6 @@ export default function currentUser(state = initialState, action) {
   if (action.type === SET_INITIAL_DATA) {
     const {
       id,
-      uuid,
       username,
       display_name,
       user_type,
@@ -309,11 +320,9 @@ export default function currentUser(state = initialState, action) {
       show_progress_table_v2,
       ai_rubrics_disabled,
       ai_differentiation_enabled,
-      showAITALessonSummary,
-      hasCompletedPersonalizationQuiz,
-      audioSummaryTranscript,
       progress_table_v2_closed_beta,
       is_lti,
+      is_levelbuilder,
       date_progress_table_invitation_last_delayed,
       has_seen_progress_table_v2_invitation,
       child_account_compliance_state,
@@ -327,14 +336,10 @@ export default function currentUser(state = initialState, action) {
       educator_role,
       sharing_disabled,
       has_seen_homepage_welcome,
+      ai_tutor_enabled_for_pilot,
     } = action.serverUser;
-    analyticsReport.setUserProperties(
-      id,
-      user_type,
-      experiments.getEnabledExperiments()
-    );
-    // Calling Statsig separately to emphasize different user integrations
-    // and because dual reporting is aspirationally temporary (March 2024)
+    // TODO: Once Amplitude is fully removed, the StatsigReporter class should be
+    // renamed to AnalyticsReporter.
     statsigReporter.setUserProperties({
       userId: id,
       userType: user_type,
@@ -345,7 +350,6 @@ export default function currentUser(state = initialState, action) {
     return {
       ...state,
       userId: id,
-      uuid: uuid,
       userName: username,
       userType: user_type,
       displayName: display_name,
@@ -356,12 +360,10 @@ export default function currentUser(state = initialState, action) {
       showProgressTableV2: show_progress_table_v2,
       aiRubricsDisabled: ai_rubrics_disabled,
       aiDifferentiationEnabled: ai_differentiation_enabled,
-      showAITALessonSummary: showAITALessonSummary,
-      hasCompletedPersonalizationQuiz: hasCompletedPersonalizationQuiz,
-      audioSummaryTranscript: audioSummaryTranscript,
       progressTableV2ClosedBeta: progress_table_v2_closed_beta,
       isLti: is_lti,
       isTeacher: user_type === UserTypes.TEACHER,
+      isLevelbuilder: is_levelbuilder,
       inUSA: ['US', 'RD'].includes(country_code) || !!us_state_code,
       dateProgressTableInvitationDelayed:
         date_progress_table_invitation_last_delayed,
@@ -376,6 +378,7 @@ export default function currentUser(state = initialState, action) {
       userCreatedAt: created_at,
       userSharingDisabled: sharing_disabled,
       hasSeenHomepageWelcome: has_seen_homepage_welcome,
+      aiTutorEnabledForPilot: ai_tutor_enabled_for_pilot,
     };
   }
 

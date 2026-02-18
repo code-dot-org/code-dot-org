@@ -12,18 +12,18 @@
     "widget_view": "false",
     "initial_view_mode": "split",
     "disable_edit_run_for_submission": "false",
-    "ai_tutor_mode": "suggest",
+    "ai_tutor_mode": "designer",
     "predict_settings": {
       "isPredictLevel": false,
       "solution": "",
       "questionType": "freeResponse",
-      "allowMultipleAttempts": false,
       "placeholderText": "",
       "multipleChoiceOptions": [
         ""
       ],
       "freeResponseHeight": 50,
-      "codeEditableAfterSubmit": false
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
     },
     "display_name": "Typography Challenge",
     "long_instructions": "#Typography Challenge\r\n\r\nWith the help of AI, improve the page's typography so it's consistent. This can include:\r\n   - Heading hierarchy - clear difference between title, section heads, subheads\r\n   - Body readability - comfortable size, line height, line length, spacing\r\n   - Emphasis elements - links, quotes, lists, captions\r\n   \r\n::: details [Example AI Style Prompts]\r\nTry having AI update the typography with these example prompts:\r\n- *Style the title to be larger and uppercase. Make it visually distinct from the sub-titles.*\r\n- *Style the body text with 1.5 line height and comfortable max-width.*\r\n- *Improve the blockquote with larger size left border, and italics for emphasis.*\r\n- *Import a legible font family from Google Fonts to my stylesheet. Then, apply this front to [x] elements.*\r\n:::",
@@ -56,6 +56,6 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-23T23:34:27.707+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson6-level4c-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson6-level4c-test-2025\"},{\"changed_at\":\"2025-10-23 23:38:22 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-10-27 19:04:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-23T23:34:27.707+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson6-level4c-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson6-level4c-test-2025\"},{\"changed_at\":\"2025-10-23 23:38:22 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-10-27 19:04:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-12-19 14:22:51 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Weblab2>

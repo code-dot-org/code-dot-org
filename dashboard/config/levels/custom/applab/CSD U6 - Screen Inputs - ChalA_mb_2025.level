@@ -96,6 +96,7 @@
     "bubble_choice_description": "Create an app that uses a slider and images to show your level of excitement",
     "encrypted_examples": "vZJWdPWM52xbxuECZ12V/+AXtrtnNoKQ5W4gJb10flRKSbaHE5eCjQlFVasS\nLUQvgbSrwCV5lGs9fYilbGtoQg==\n",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

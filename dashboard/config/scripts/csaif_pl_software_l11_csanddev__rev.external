@@ -5,35 +5,25 @@ description 'description here'
 markdown <<MARKDOWN
 # Software and Operating Systems
 
-#### Software and hardware are like a team. The **hardware performs** the physical tasks — like displaying images on the screen, printing a document, or saving files on a hard drive.
+#### Software and hardware are like a team. 
 
-#### The **software** that decides what to display, print, or save and how to do it.
+#### **Hardware** performs the physical tasks — displaying images on a screen, printing a document, storing files, or running electrical signals through circuits.
 
+#### **Software**  tells the hardware what to do and how to do it. It provides the instructions that guide the computer’s actions, from opening an app to saving a file.
 
-<img src="https://images.code.org/3378f9afce385d56deb8bb6e38a41455-image-1742394518945.png" alt="diagram of the componets of a computer - hardware: input, outptu, storage, and internal and software: system software, application software, and utlity software" width="550px" style="display: block; margin-left: auto; margin-right: auto;">
+<img src="https://images.code.org/3378f9afce385d56deb8bb6e38a41455-image-1742394518945.png" alt="diagram of the componets of a computer - hardware: input, outptu, storage, and internal and software: system software, application software, and utlity software" width="70%" style="border: 2px solid black; border-radius: 8px; display: block; margin: auto; width: 70%;">
 
-## Computer Software 
+#### You can think of software as the “thoughts” or “commands” that control how the computer operates and what tasks it performs.
 
-#### **Software** is a set of instructions that tells a computer what to do. It’s like the thoughts or instructions of a computer, controlling how it runs and what tasks it performs. 
+#### Just as there are many types of hardware, there are also different types of software, each serving a specific purpose.
 
-## Types of Software
+<img src="https://images.code.org/5ee5ee363d83b7a2882235524c86b13d-image-1742394326783.png" alt="diagram of software: system software, application software, and utlity software with examples of icons of each" alt="chatbot lab level" width="70%" style="border: 2px solid black; border-radius: 8px; display: block; margin: auto; width: 70%;">
 
-- #### **System Software**-Manages hardware and software, enables basic functionality.
+- #### **System Software**- Manages the computer’s hardware and basic operations.
+#### This includes the operating system (like Windows, macOS, ChromeOS, or Linux), which coordinates memory, processes, files, and devices so everything works together.
 - #### **Application Software**- Helps users perform specific tasks.
-- #### **Utility Software**- Maintains, optimizes, and secures the system.
-
-
-<br>
-
-
-
-<img src="https://images.code.org/5ee5ee363d83b7a2882235524c86b13d-image-1742394326783.png" alt="diagram of software: system software, application software, and utlity software with examples of icons of each" width="650px" style="display: block; margin-left: auto; margin-right: auto;">
-
-
-
-
-
-
-
+#### Examples include word processors, web browsers, games, design tools, and educational apps.
+- #### **Utility Software**- Maintains, protects, and optimizes the computer system.
+#### Examples include antivirus programs, file compression tools, backup software, and disk cleanup utilities.
 
 MARKDOWN

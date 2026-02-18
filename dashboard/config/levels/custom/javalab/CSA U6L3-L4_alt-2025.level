@@ -21,7 +21,7 @@
     "project_template_level_name": "CSA U6L3-Wrapper PBT_alt-2025",
     "teacher_markdown": "1. When run we see the values `-2147483647` and `2147483648` printed to the console -- the minimum and maximum values for an `Integer` object.\r\n\r\n2. When we add one to `Integer.MAX\\_VALUE` or subtract one from `Integer.MIN\\_VALUE`, we see that the value switches to the opposite end of the `Integer` range.",
     "name_suffix": "_alt-2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T22:50:58.408+00:00\",\"changed\":[\"cloned from \\\"CSA U6L3-L4_pilot-2025\\\"\"],\"cloned_from\":\"CSA U6L3-L4_pilot-2025\"}]"

@@ -67,6 +67,7 @@
     "mini_rubric": "false",
     "libraries_enabled": "false",
     "video_key": "csd_gamelab_draw_1",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

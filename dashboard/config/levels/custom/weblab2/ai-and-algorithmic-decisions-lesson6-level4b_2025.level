@@ -1,5 +1,6 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2025-11-13T11:31:42.000Z",
   "level_num": "custom",
@@ -11,18 +12,18 @@
     "hide_share_and_remix": "false",
     "widget_view": "false",
     "initial_view_mode": "split",
-    "ai_tutor_mode": "outline",
+    "ai_tutor_mode": "tutor",
     "predict_settings": {
       "isPredictLevel": false,
       "solution": "",
       "questionType": "freeResponse",
-      "allowMultipleAttempts": false,
       "placeholderText": "",
       "multipleChoiceOptions": [
         ""
       ],
       "freeResponseHeight": 50,
-      "codeEditableAfterSubmit": false
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
     },
     "start_sources": {
       "folders": {
@@ -72,7 +73,6 @@
     "thumbnail_url": "https://images.code.org/bef89a52be15a46c063393b7895b2330-Screenshot 2025-10-21 at 7.05.08 PM.png",
     "display_name": "Set Your Status"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-11-13T11:31:42.922+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson6-level4a-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson6-level4a-test-2025\"},{\"changed_at\":\"2025-11-13 11:33:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-11-13 11:37:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-13T11:31:42.922+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson6-level4a-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson6-level4a-test-2025\"},{\"changed_at\":\"2025-11-13 11:33:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-11-13 11:37:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-12-19 14:37:40 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Weblab2>

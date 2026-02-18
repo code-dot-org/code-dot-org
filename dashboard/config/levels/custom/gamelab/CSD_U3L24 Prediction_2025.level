@@ -203,6 +203,7 @@
     "start_blocks": "drawBackground();\r\ndrawPlanet();\r\ndrawPlanet();\r\n\r\n\r\nfunction drawBackground() {\r\n  noStroke();\r\n  background(\"black\");\r\n  drawStar();\r\n  drawStar();\r\n  drawStar();\r\n  drawStar();\r\n  drawStar();\r\n}\r\n\r\n\r\nfunction drawStar() {\r\n  fill(\"yellow\");\r\n  ellipse(random(0,400),random(0,400),5,5);\r\n}\r\n\r\n\r\nfunction drawPlanet() {\r\n  noStroke();\r\n  fill(rgb(random(100,255), random(100,255), random(100,255)));\r\n  ellipse(random(10, 350), random(10,350), 50, 50);\r\n}\r\n",
     "video_key": "csd_gamelab_functions",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

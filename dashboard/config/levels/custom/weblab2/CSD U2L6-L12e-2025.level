@@ -1,0 +1,61 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-01-09T21:17:13.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Extra Code: Text Shadow",
+    "long_instructions": "\r\n# Text Shadow\r\n\r\nThe `text-shadow` property sets a shadow for the text elements.\r\n\r\n# Do This\r\n1) Find the CSS code that is giving the letters in \"Stradivarius Violins\" a shadow in the `h1` tag.\r\n* Give the `h2` tag a shadow spaced two pixels to the right and up from the original text.\r\n* Give a text shadow to other tags as well.\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "bubble_choice_description": "Learn how to give your text a shadow",
+    "thumbnail_url": "https://images.code.org/c334f96e10ec77ef82e33b8c10297418-image-1566577458241.PNG",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html> \n<html> \n<head>\n   <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- content on the stradivarius violin -->\n  <h1>Stradivarius Violins</h1>\n  <h2> Why Are They So Expensive? </h2>\n  <p> Stradivarius violins are legendary violins that nowadays are worth MILLIONS of dollars. But why? What makes them so different from violins created today?\n  <h3>\n    Some History\n  </h3>\n  <p>\n    A Stradivarius actually refers to a collection of string instruments  such as violins, violas, cellos, harps and others. Called Strads for short, they were made between the 17th and 18th century by the Stradivari family, but most well known member is Antonio Stradivari.\n  </p>\n  <h3>Is it Even Worth it?</h3>\n  <p> \n    The truth is, Strads do not sound that much different than violins created today. In studies with professional violinists, it was shown that the professionals could not really tell the difference between a Strad and a much newer violin. \n  </p> \n\n  <h3>So Why?</h3>\n  <p>\n    So why spend millions of dollars for a violin that sounds just like other violins then? Well, some people deem Strads to be a strong part of history. So many famous historical figures, from royalty to other composers, have held and played these instruments. Many times, historical pieces of like art can sell for millions, and these instruments are no different. They are historical and beautiful, so when you have a Strad, it's not just about the beautiful sound, but also all the stories it carries with it.\n  </p> \n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* 2) Give the h2 tag a shadow spaced two pixels to the right and up from the original text */\n/* 3) Give a text shadow to other tags as well */\nh1 {\n  color: lightpink;\n  text-align: center;\n  text-shadow: -2px 2px black;\n}\n\nh2 {\n  color:palevioletred;\n  text-align: center;\n}\n\nh3 {\n  text-align:center; \n}\n\np {\n  font-size: 14px;\n  text-align: center;\n}",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nexeCrCse575OcHfDqw35Bof1wHezQq2Tl8E=\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-01-09 21:17:46 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-09 21:18:26 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-26 00:33:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

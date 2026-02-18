@@ -1,4 +1,4 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import {
   printerStyleNumberRangeToList,
@@ -9,20 +9,20 @@ import {EMPTY_OPTION} from '../constants';
 
 export type CustomMenuGenerator =
   | CustomMenuOption[]
-  | GoogleBlockly.MenuGeneratorFunction;
+  | BlocklyCore.MenuGeneratorFunction;
 // Blockly's MenuOption can either be [string, string] or [ImageProperties, string]. We
 // will always use [string, string].
 type CustomMenuOption = [string, string];
 
-export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
+export default class CdoFieldDropdown extends BlocklyCore.FieldDropdown {
   private config: string | null | undefined;
 
   // Blockly expects a menu generator, but some of our older blocks skip this and use
   // the field element's config attribute to specify a range of menu options.
   constructor(
     menuGenerator?: CustomMenuGenerator,
-    validator?: GoogleBlockly.FieldDropdownValidator,
-    config?: GoogleBlockly.FieldDropdownConfig
+    validator?: BlocklyCore.FieldDropdownValidator,
+    config?: BlocklyCore.FieldDropdownConfig
   ) {
     if (!menuGenerator) {
       menuGenerator = [['', '']];
@@ -100,7 +100,7 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
       this.setValue(state);
       return;
     }
-    const field = GoogleBlockly.utils.xml.textToDom(state);
+    const field = BlocklyCore.utils.xml.textToDom(state);
     // Currently, we support the `config` attribute if `config` is stored in xml, but not in json.
     // The config is handled by `fromXml`.
     this.fromXml(field);

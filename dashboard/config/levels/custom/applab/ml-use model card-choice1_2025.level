@@ -57,6 +57,7 @@
     "bubble_choice_description": "Change the font, color, border, and other properties of your app",
     "thumbnail_url": "https://images.code.org/a031cdf013542eef1ec8bfaf42f09644-image-1617977616534.png",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

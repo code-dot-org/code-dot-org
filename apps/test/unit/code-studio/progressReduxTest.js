@@ -16,6 +16,10 @@ import reducer, {
   __testonly__,
 } from '@cdo/apps/code-studio/progressRedux';
 import {
+  nextLevelId,
+  getLessonCount,
+  getNextLevel,
+  getParentLevel,
   isPerfect,
   levelsByLesson,
   levelsForLessonId,
@@ -44,6 +48,7 @@ const lessonData = [
     title: 'Lesson 1: Computational Thinking',
     lesson_group_display_name: null,
     lockable: false,
+    num_script_lessons: 2,
     levels: [
       {
         id: '101',
@@ -145,6 +150,7 @@ const lessonData = [
     title: 'Lesson 2: Maze',
     lesson_group_display_name: null,
     lockable: false,
+    num_script_lessons: 2,
     levels: [
       {
         id: '201',
@@ -913,6 +919,332 @@ describe('progressReduxTest', () => {
         levelResults: {},
       });
       assert.equal(results[0][0].isLocked, true);
+    });
+  });
+
+  describe('getParentLevel', () => {
+    it('returns undefined if this is a standalone level', () => {
+      const initializedState = {
+        ...reducer(undefined, initProgress(initialUnitOverviewProgress)),
+        currentLevelId: '341',
+        currentLessonId: undefined,
+        lessons: undefined,
+      };
+
+      const state = {
+        progress: initializedState,
+      };
+
+      assert.equal(getParentLevel(state), undefined);
+    });
+
+    it('returns undefined if this is not a sublevel', () => {
+      const initializedState = {
+        ...reducer(undefined, initProgress(initialUnitOverviewProgress)),
+        currentLevelId: lessonData[0].levels[1].activeId,
+        currentLessonId: lessonData[0].id,
+      };
+
+      const state = {
+        progress: initializedState,
+      };
+
+      assert.equal(getParentLevel(state), undefined);
+    });
+
+    it('returns the parent level of a sublevel', () => {
+      const initializedState = {
+        ...reducer(undefined, initProgress(initialUnitOverviewProgress)),
+        currentLevelId: lessonData[0].levels[2].sublevels[1].id,
+        currentLessonId: lessonData[0].id,
+      };
+
+      const state = {
+        progress: initializedState,
+      };
+
+      assert.equal(
+        getParentLevel(state).id,
+        initializedState.lessons[0].levels[2].activeId
+      );
+    });
+  });
+
+  describe('nextLevelId', () => {
+    it('returns undefined when not on a level', () => {
+      const initializedState = reducer(
+        undefined,
+        initProgress(initialUnitOverviewProgress)
+      );
+
+      const state = {
+        progress: initializedState,
+      };
+
+      assert.equal(nextLevelId(state), undefined);
+    });
+
+    it('returns undefined if this is a standalone level', () => {
+      const initializedState = {
+        ...reducer(undefined, initProgress(initialUnitOverviewProgress)),
+        currentLevelId: '341',
+        currentLessonId: undefined,
+        lessons: undefined,
+      };
+
+      const state = {
+        progress: initializedState,
+      };
+
+      assert.equal(nextLevelId(state), undefined);
+    });
+
+    it('returns the next level id for a standard level within a lesson', () => {
+      const initializedState = {
+        ...reducer(undefined, initProgress(initialUnitOverviewProgress)),
+        currentLevelId: lessonData[0].levels[1].activeId,
+        currentLessonId: lessonData[0].id,
+      };
+
+      const state = {
+        progress: initializedState,
+      };
+
+      assert.equal(
+        nextLevelId(state),
+        initializedState.lessons[0].levels[2].activeId
+      );
+    });
+
+    it('returns the parent level id when this is a sublevel without the "next_level" navigation', () => {
+      const initializedState = {
+        ...reducer(undefined, initProgress(initialUnitOverviewProgress)),
+        currentLevelId: lessonData[0].levels[2].sublevels[1].id,
+        currentLessonId: lessonData[0].id,
+      };
+
+      const state = {
+        progress: initializedState,
+      };
+
+      assert.equal(
+        nextLevelId(state),
+        initializedState.lessons[0].levels[2].activeId
+      );
+    });
+
+    it('returns the next level when this is a sublevel with the "next_level" navigation and there is a level after the parent', () => {
+      const finalLevel = {
+        id: '104',
+        ids: ['324'],
+        activeId: '324',
+        position: 4,
+        page_number: 3,
+        kind: LevelKind.assessment,
+        icon: null,
+        title: 3,
+        url: 'http://localhost-studio.code.org:3000/courses/course3/units/1/lessons/1/levels/4',
+        is_concept_level: false,
+        bonus: false,
+        display_as_unplugged: false,
+        sublevels: [],
+        app: 'maze',
+        uses_lab2: false,
+        is_validated: true,
+        path: '/courses/course3/units/1/lessons/1/levels/4',
+      };
+
+      const initializedState = {
+        ...reducer(
+          undefined,
+          initProgress({
+            ...initialUnitOverviewProgress,
+            lessons: [
+              ...lessonData.map((lesson, i) =>
+                i === 0
+                  ? {
+                      ...lesson,
+                      levels: [...lesson.levels, finalLevel],
+                    }
+                  : lesson
+              ),
+            ],
+          })
+        ),
+        currentLevelId: lessonData[0].levels[2].sublevels[0].id,
+        currentLessonId: lessonData[0].id,
+      };
+
+      const state = {
+        progress: initializedState,
+      };
+
+      assert.equal(nextLevelId(state), finalLevel.activeId);
+    });
+  });
+
+  describe('getLessonCount', () => {
+    it('returns the number of lessons given by num_script_lessons', () => {
+      const initializedState = reducer(
+        undefined,
+        initProgress(initialUnitOverviewProgress)
+      );
+
+      const state = {
+        progress: initializedState,
+      };
+
+      assert.equal(getLessonCount(state), 2);
+    });
+
+    it('returns 1 even if there are no lessons (a standalone level)', () => {
+      const initializedState = reducer(
+        undefined,
+        initProgress({
+          ...initialUnitOverviewProgress,
+        })
+      );
+
+      const state = {
+        progress: {
+          ...initializedState,
+          lessons: undefined,
+        },
+      };
+
+      assert.equal(getLessonCount(state), 1);
+    });
+
+    it('returns 1 if the num_script_lessons is not provided', () => {
+      const initializedState = reducer(
+        undefined,
+        initProgress({
+          ...initialUnitOverviewProgress,
+          lessons: lessonData.map(lesson => ({
+            ...lesson,
+            num_script_lessons: undefined,
+          })),
+        })
+      );
+
+      const state = {
+        progress: initializedState,
+      };
+
+      assert.equal(getLessonCount(state), 1);
+    });
+  });
+
+  describe('getNextLevel', () => {
+    it('returns undefined when not on a level', () => {
+      const initializedState = reducer(
+        undefined,
+        initProgress(initialUnitOverviewProgress)
+      );
+
+      const state = {
+        progress: initializedState,
+      };
+
+      assert.equal(getNextLevel(state), undefined);
+    });
+
+    it('returns undefined if this is a standalone level', () => {
+      const initializedState = {
+        ...reducer(undefined, initProgress(initialUnitOverviewProgress)),
+        currentLevelId: '341',
+        currentLessonId: undefined,
+        lessons: undefined,
+      };
+
+      const state = {
+        progress: initializedState,
+      };
+
+      assert.equal(getNextLevel(state), undefined);
+    });
+
+    it('returns the next level for a standard level within a lesson', () => {
+      const initializedState = {
+        ...reducer(undefined, initProgress(initialUnitOverviewProgress)),
+        currentLevelId: lessonData[0].levels[1].activeId,
+        currentLessonId: lessonData[0].id,
+      };
+
+      const state = {
+        progress: initializedState,
+      };
+
+      assert.equal(
+        getNextLevel(state).id,
+        initializedState.lessons[0].levels[2].activeId
+      );
+    });
+
+    it('returns the parent level when this is a sublevel without the "next_level" navigation', () => {
+      const initializedState = {
+        ...reducer(undefined, initProgress(initialUnitOverviewProgress)),
+        currentLevelId: lessonData[0].levels[2].sublevels[1].id,
+        currentLessonId: lessonData[0].id,
+      };
+
+      const state = {
+        progress: initializedState,
+      };
+
+      assert.equal(
+        getNextLevel(state).id,
+        initializedState.lessons[0].levels[2].activeId
+      );
+    });
+
+    it('returns the next level when this is a sublevel with the "next_level" navigation and there is a level after the parent', () => {
+      const finalLevel = {
+        id: '104',
+        ids: ['324'],
+        activeId: '324',
+        position: 4,
+        page_number: 3,
+        kind: LevelKind.assessment,
+        icon: null,
+        title: 3,
+        url: 'http://localhost-studio.code.org:3000/courses/course3/units/1/lessons/1/levels/4',
+        is_concept_level: false,
+        bonus: false,
+        display_as_unplugged: false,
+        sublevels: [],
+        app: 'maze',
+        uses_lab2: false,
+        is_validated: true,
+        path: '/courses/course3/units/1/lessons/1/levels/4',
+      };
+
+      const initializedState = {
+        ...reducer(
+          undefined,
+          initProgress({
+            ...initialUnitOverviewProgress,
+            lessons: [
+              ...lessonData.map((lesson, i) =>
+                i === 0
+                  ? {
+                      ...lesson,
+                      levels: [...lesson.levels, finalLevel],
+                    }
+                  : lesson
+              ),
+            ],
+          })
+        ),
+        currentLevelId: lessonData[0].levels[2].sublevels[0].id,
+        currentLessonId: lessonData[0].id,
+      };
+
+      const state = {
+        progress: initializedState,
+      };
+
+      assert.equal(getNextLevel(state).id, finalLevel.activeId);
     });
   });
 

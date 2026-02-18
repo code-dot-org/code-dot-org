@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2025-11-25T22:23:04.000Z",
   "level_num": "custom",
@@ -47,11 +48,16 @@
         "text": "##FAQ Excerpt:\n\n**Q**: “My device stopped sending me celebratory texts and audio cues; what do I do?”\n\n**A**: “First, verify your wearable’s battery is fully charged (recommended minimum 80%). Then, confirm there is available memory (under 20 MB used). Clear old workout logs via your computer or the Z35 companion app if near capacity.”",
         "imageUrl": "https://images.code.org/f579e64c0ffd1fd2f495781456a5c816-scenario1_c.png",
         "key": "undefined-9989f337-5219-42f9-86d6-9204105e8673"
+      },
+      {
+        "text": "<div style=\"background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;\">\n<h2>Introducing AI Chat Lab</h2>\n\n<p style = \"font-size:14pt;\">Code.org has created <strong>AI Chat Lab</strong>, a safe and student-friendly chatbot built directly into the curriculum. This allows students to explore generative AI in an authentic and secure way without leaving the platform.</p>\n\n<p style = \"font-size:14pt;\">AI Chat Lab is designed specifically for education, so we’ve added guardrails to keep the experience safe and appropriate.</p>\n\n<ul style = \"font-size:14pt;\">\n\t<li>The chatbot supports learning in a guided, structured environment that encourages students to think critically as they work through problems.</li><br>\n    <li>Content is monitored to ensure it remains appropriate and productive, making AI Chat Lab a safe space for exploration and discovery.</li>\n</ul>\n\n<p style = \"font-size:14pt;\">You'll get a chance to try out AI Chat Lab on the next level.</p>\n\n<p style=\"font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;\"> ➡️ Want to know more about how AI Chat Lab works? Check out the <a href=\"https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ\" target=\"blank\" rel=\"noopener noreferrer\"> FAQ Support Article</a>.\n</p>\n</div>",
+        "imageUrl": "https://images.code.org/9ce6f2df0e42c3f7c2bd4a2d41b58f6f-Screenshot 2025-12-16 at 9.01.18 AM.png",
+        "key": "csaif-pl-hardware-troubleshoot-panels-L6-CSandDev_-rev-6f785f9a-77ac-4a5f-a0dd-a508c420b09c",
+        "layout": "text-top-left"
       }
     ],
     "name_suffix": "_-rev"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-11-25T22:23:04.923+00:00\",\"changed\":[\"cloned from \\\"csaif-pl-hardware-troubleshoot-panels-L6-CSandDev_2025\\\"\"],\"cloned_from\":\"csaif-pl-hardware-troubleshoot-panels-L6-CSandDev_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-25T22:23:04.923+00:00\",\"changed\":[\"cloned from \\\"csaif-pl-hardware-troubleshoot-panels-L6-CSandDev_2025\\\"\"],\"cloned_from\":\"csaif-pl-hardware-troubleshoot-panels-L6-CSandDev_2025\"},{\"changed_at\":\"2025-12-16 13:57:45 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-12-16 14:01:30 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-12-16 15:06:14 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
 }]]></config>
 </Panels>

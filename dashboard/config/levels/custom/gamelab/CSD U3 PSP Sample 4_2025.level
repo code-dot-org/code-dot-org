@@ -51,6 +51,7 @@
     "display_name": "Template D",
     "bubble_choice_description": "Interactive side-scroller game template.",
     "thumbnail_url": "https://images.code.org/9818a4bada15aa886349c00266a19e71-template4.png",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

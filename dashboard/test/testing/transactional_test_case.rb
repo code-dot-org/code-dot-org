@@ -1,6 +1,4 @@
-# Submitted upstream at https://github.com/rails/rails/pull/28178
-require "active_support/concern"
-require "active_support/callbacks"
+require_relative 'setup_all_and_teardown_all'
 
 module ActiveSupport
   module Testing
@@ -8,48 +6,36 @@ module ActiveSupport
     module TransactionalTestCase
       extend ActiveSupport::Concern
 
+      include ActiveSupport::Testing::SetupAllAndTeardownAll
+
       included do
-        class_attribute :use_transactional_test_case
-        self.use_transactional_test_case = false
+        class_attribute :db_connection
 
-        setup do
-          pools = ActiveRecord::Base.connection_handler.connection_pool_list
-          all_connections = pools.map(&:connections).flatten
-          if all_connections.many?
-            warning = 'WARN: Multiple ActiveRecord connections are in use, this can make transactional tests fail in weird ways.'
-            CDO.log.warn warning
-            puts warning
+        # Runs each test inside a database transaction that is rolled back after the test.
+        # @note Enabled by default, but set explicitly to make this behavior clear and ensure it stays enabled.
+        # @see https://github.com/rails/rails/blob/v6.1.7.7/activerecord/lib/active_record/test_fixtures.rb
+        self.use_transactional_tests = true
+
+        # Skips per-test fixture loading to reduce database setup overhead.
+        # @note Fixtures are already loaded during test database seeding.
+        self.pre_loaded_fixtures = true
+      end
+
+      class_methods do
+        # Ensures any database changes made in setup_all are rolled back after all tests in the class.
+        # @warning This keeps a transaction open for the whole test class.
+        #          Writes from other connections, for example Sequel, can wait on locks or hit a MySQL deadlock.
+        private def setup_all(*args, &block)
+          self.db_connection = ActiveRecord::Base.connection
+
+          super(*args) do
+            db_connection.begin_transaction(joinable: false)
+            instance_exec(&block) if block
           end
-        end
 
-        setup_all do
-          # Global fixture-setup happens once, and must persist outside any transaction.
-          setup_fixtures
-          if use_transactional_test_case?
-            @test_case_connections = enlist_transaction_connections
-            @test_case_connections.each do |connection|
-              connection.begin_transaction joinable: false, _lazy: false
-              connection.pool.lock_thread = true
-            end
+          teardown_all do
+            db_connection.rollback_transaction
           end
-        end
-
-        teardown_all do
-          if use_transactional_test_case && @test_case_connections
-            @test_case_connections.each do |connection|
-              connection.rollback_transaction if connection.transaction_open?
-              connection.pool.lock_thread = false
-            end
-          end
-        end
-
-        # Only select connections that support savepoints,
-        # because individual test transactions will be nested
-        # within the outer test case transaction.
-        private def enlist_transaction_connections
-          ActiveRecord::Base.connection_handler.connection_pool_list.
-            map(&:connection).
-            select(&:supports_savepoints?)
         end
       end
     end

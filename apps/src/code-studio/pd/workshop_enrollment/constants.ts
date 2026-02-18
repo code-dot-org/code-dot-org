@@ -7,6 +7,8 @@ export const SUBMISSION_STATUSES = {
   CLOSED: 'closed',
   FULL: 'full',
   NOT_FOUND: 'not found',
+  NO_SCHOOL: 'no school',
+  NOT_USA: 'not usa',
   SUCCESS: 'success',
   UNKNOWN_ERROR: 'error',
 };

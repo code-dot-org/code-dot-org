@@ -21,7 +21,6 @@ markdown <<MARKDOWN
 
 - #### Discuss how decisions (like pizza ordering) can be informed by data
 
----
 
 ## ⚙️ Teacher Tips for Using the AI Chatbot
 - #### ✅ The Dataset Is Ready to Go: The class pizza data is pre-collected and available in the library.
@@ -30,7 +29,6 @@ markdown <<MARKDOWN
 
 - #### 🔁 Try Iteration: If the AI answer is too general, students can re-prompt for more detail or to clarify a specific part of the data.
 
----
 
 ## 🔍 What Students Might Notice When Comparing to AI
 #### The AI might notice precise totals or slice counts students missed.
@@ -39,12 +37,11 @@ markdown <<MARKDOWN
 
 #### AI will make assumptions (like 8 slices per pizza) that students might question or adjust.
 
----
->## 🧩 Guiding Questions for Class Reflection
->- #### What were the main similarities/differences between your findings and the AI’s?
->- #### What assumptions did the AI make?
->- #### What might the AI miss that a human might catch?
->- #### How confident are you in the AI's recommendation? Would you follow it?
+## 🧩 Guiding Questions for Class Reflection
+#### What were the main similarities/differences between your findings and the AI’s?
+#### What assumptions did the AI make?
+#### What might the AI miss that a human might catch?
+#### How confident are you in the AI's recommendation? Would you follow it?
 
 ## ✅ Reminders on Responsible AI Use
 #### 🔒 **Privacy First:** No personal or identifying information should be in the dataset or prompts.

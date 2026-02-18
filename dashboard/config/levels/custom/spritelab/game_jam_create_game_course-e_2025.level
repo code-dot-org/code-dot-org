@@ -75,7 +75,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-04-14T15:45:42.012+00:00\",\"changed\":[\"cloned from \\\"game_jam_create_game_course-e\\\"\"],\"cloned_from\":\"game_jam_create_game_course-e\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-04-14T15:45:42.012+00:00\",\"changed\":[\"cloned from \\\"game_jam_create_game_course-e\\\"\"],\"cloned_from\":\"game_jam_create_game_course-e\"},{\"changed_at\":\"2025-12-15 18:59:49 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
     "events": 1,
@@ -1494,6 +1494,8 @@
               </block>
             </value>
           </block>
+          <block type="gamelab_randomLocation" id="%[md!S!)|T+5syWK{|.@"/>
+          <block type="gamelab_mouseLocation" id="bM{N;Div=lL7HT5G+@KC"/>
         </category>
         <category name="Behaviors">
           <block type="gamelab_toggleBehaviorSimple" id="r48p2H6jy.%#JgLn#i$z">
@@ -1510,7 +1512,7 @@
             </value>
           </block>
           <block type="GameDev_playerJump" id="s67mUnR#LA%qC5`8+|0k">
-            <field name="STRENGTH">6</field>
+            <field name="STRENGTH">10</field>
           </block>
         </category>
         <category name="Events">

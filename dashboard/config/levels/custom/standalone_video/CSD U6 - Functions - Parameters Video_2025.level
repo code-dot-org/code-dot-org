@@ -14,7 +14,8 @@
     "name_suffix": "_2025",
     "encrypted": "false",
     "long_instructions": "## Questions to Consider\r\n\r\n* How do parameters make functions more useful?\r\n* How do you know when you can combine multiple functions into one?\r\n",
-    "teacher_markdown": "## Discussion Goals\r\n\r\nStudents will have a chance to practice defining functions with parameters in the lesson, so it's not necessary for them to understand the exact process. Students should understand that parameters are useful because they let programmers use the same function to solve problems that are very similar, but with slight differences.  If multiple functions are almost alike, but have a small difference, students may want to combine those functions into one, and use a parameter to account for the difference."
+    "teacher_markdown": "## Discussion Goals\r\n\r\nStudents will have a chance to practice defining functions with parameters in the lesson, so it's not necessary for them to understand the exact process. Students should understand that parameters are useful because they let programmers use the same function to solve problems that are very similar, but with slight differences.  If multiple functions are almost alike, but have a small difference, students may want to combine those functions into one, and use a parameter to account for the difference.",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

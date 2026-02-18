@@ -87,6 +87,7 @@
     "rubric_performance_level_3": "The sprite animates, but there are major problems, such as leaving a \"trails\" of previous locations behind or other parts of the scene disappearing.",
     "rubric_performance_level_4": "The sprite does not animate.",
     "start_blocks": "//1) Add the draw loop block to the bottom of this program.\r\n//2) Move any blocks that need to be inside the draw loop.\r\n\r\nvar salt = createSprite(200,200);\r\nsalt.setAnimation(\"salt\");\r\nbackground(\"skyblue\");\r\ndrawSprites();",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

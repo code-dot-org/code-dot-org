@@ -116,6 +116,7 @@
     "bubble_choice_description": "Use functions to create light patterns with the LEDs",
     "thumbnail_url": "https://images.code.org/de73a7386535d1d98703fc3e1b2dbd7c-image-1649455884333.png",
     "encrypted_examples": "UHVWXLuz8cqyX7d+JG3dbMUMMcEop12G8K6B/Wp/8L5HsyaPt4lgS/MTD2jD\nq7kOxignRQ5xnhosGk3ot3wCLA==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

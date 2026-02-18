@@ -1,7 +1,7 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
-import {getToolboxType} from '@cdo/apps/blockly/addons/cdoUtils';
 import {ToolboxType} from '@cdo/apps/blockly/constants';
+import {getToolboxType} from '@cdo/apps/blockly/utils';
 import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
 
@@ -13,7 +13,7 @@ const ITEM_SPACING = 1;
 const FIELD_HEIGHT = 24;
 const FIELD_PADDING = 2;
 
-class CdoFieldDanceAi extends GoogleBlockly.Field {
+class CdoFieldDanceAi extends BlocklyCore.Field {
   constructor(options) {
     super();
 
@@ -42,7 +42,7 @@ class CdoFieldDanceAi extends GoogleBlockly.Field {
       this.borderRect_.classList.add('blocklyDropdownRect');
     }
 
-    this.backgroundElement = GoogleBlockly.utils.dom.createSvgElement(
+    this.backgroundElement = BlocklyCore.utils.dom.createSvgElement(
       'g',
       {
         transform: 'translate(1,1)',
@@ -111,7 +111,7 @@ class CdoFieldDanceAi extends GoogleBlockly.Field {
 
     // Create the background rectangle and attach it to the background
     // parent.
-    GoogleBlockly.utils.dom.createSvgElement(
+    BlocklyCore.utils.dom.createSvgElement(
       'rect',
       {
         fill: color.neutral_dark90,
@@ -125,7 +125,7 @@ class CdoFieldDanceAi extends GoogleBlockly.Field {
     );
 
     inputs?.forEach((input, index) => {
-      GoogleBlockly.utils.dom.createSvgElement(
+      BlocklyCore.utils.dom.createSvgElement(
         'image',
         {
           x: FIELD_PADDING + (ITEM_WIDTH + ITEM_SPACING) * index,

@@ -12,18 +12,18 @@
     "hide_share_and_remix": "false",
     "widget_view": "false",
     "initial_view_mode": "split",
-    "ai_tutor_mode": "produce",
+    "ai_tutor_mode": "designer",
     "predict_settings": {
       "isPredictLevel": false,
       "solution": "",
       "questionType": "freeResponse",
-      "allowMultipleAttempts": false,
       "placeholderText": "",
       "multipleChoiceOptions": [
         ""
       ],
       "freeResponseHeight": 50,
-      "codeEditableAfterSubmit": false
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
     },
     "long_instructions": "### Producing HTML\r\n\r\nUsing AI, produce a webpage about a topic of your choice using only HTML (_no CSS_).",
     "level_system_prompt": "This activity is designed to show student HTML structure without CSS. Do not produce CSS even if the user asks for specific styling. ",
@@ -45,6 +45,6 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-23T17:37:38.185+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson1-level2-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson1-level2-test-2025\"},{\"changed_at\":\"2025-10-23 19:01:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-23T17:37:38.185+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson1-level2-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson1-level2-test-2025\"},{\"changed_at\":\"2025-10-23 19:01:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-12-19 14:17:53 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Weblab2>

@@ -13,22 +13,22 @@
     "widget_view": "false",
     "initial_view_mode": "split",
     "disable_edit_run_for_submission": "false",
-    "ai_tutor_mode": "outline",
+    "ai_tutor_mode": "tutor",
     "predict_settings": {
       "isPredictLevel": false,
       "solution": "",
       "questionType": "freeResponse",
-      "allowMultipleAttempts": false,
       "placeholderText": "",
       "multipleChoiceOptions": [
         ""
       ],
       "freeResponseHeight": 50,
-      "codeEditableAfterSubmit": false
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
     },
     "project_template_level_name": "ai-and-algorithmic-decisions-lesson11-template-test-2025",
     "level_system_prompt": "The student is finalizing their web app and preparing to showcase it.\r\nYour role is to act as a reviewer and mentor, helping them polish, document, and reflect on their work.\r\n\t•\tEncourage attention to readability, organization, and comments in code.\r\n\t•\tSupport reflection on how their app meets their goals and how AI contributed to their process.\r\n\t•\tAsk reflective prompts such as: “What parts of your logic work best?” or “How might you simplify this for readability?”\r\n\t•\tHelp them identify possible next steps or “future enhancements.”\r\n\t•\tProvide feedback that reinforces ownership, creativity, and pride in their final product."
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-13T03:16:37.739+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson11-level4-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson11-level4-test-2025\"},{\"changed_at\":\"2025-11-13 03:17:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-13T03:16:37.739+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson11-level4-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson11-level4-test-2025\"},{\"changed_at\":\"2025-11-13 03:17:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-12-19 14:48:18 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Weblab2>

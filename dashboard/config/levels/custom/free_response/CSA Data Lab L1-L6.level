@@ -15,7 +15,7 @@
     "skip_dialog": true,
     "skip_sound": true,
     "allow_multiple_attempts": "true",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-09-15T19:01:30.508+00:00\",\"changed\":[\"cloned from \\\"CSA Data Lab L1-L5\\\"\"],\"cloned_from\":\"CSA Data Lab L1-L5\"},{\"changed_at\":\"2022-09-15 19:02:26 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",

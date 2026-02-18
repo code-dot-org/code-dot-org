@@ -1,7 +1,10 @@
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 
 import {tryFetchDocsForClass} from '@cdo/apps/aiTutor/docContextApi';
-import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
+import {
+  AiTutorContextHelper,
+  MAX_CONSOLE_LINES,
+} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
 import {AiTutorContext} from '@cdo/apps/aiTutor/types';
 import {stripAnsiSequences} from '@cdo/apps/codebridge/Console/MessageHelpers';
 import {ProjectFile} from '@cdo/apps/codebridge/types';
@@ -74,6 +77,7 @@ export class AiTutorPythonLabContextHelper extends AiTutorContextHelper<AiTutorP
     const consoleLines = CodebridgeRegistry.getInstance()
       .getConsoleManager()
       ?.getTerminalLines()
+      ?.slice(-MAX_CONSOLE_LINES)
       ?.map(line => stripAnsiSequences(line));
     const consoleOutput =
       consoleLines && consoleLines.length > 0

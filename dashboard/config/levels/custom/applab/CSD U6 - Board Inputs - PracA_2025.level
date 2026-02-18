@@ -81,6 +81,7 @@
     "thumbnail_url": "https://images.code.org/31f18a56e31a6f5318f625d50efb8074-image-1650057083558.gif",
     "encrypted_examples": "g8saxuHY/IqCfXlPuadywsx6iVg5LBqbDxa4C2f2otXjFHrdbgbzqxX1gV9+\ncMctcFztitIDH1vlLQMoySpVfQ==\n",
     "video_key": "csd_debugging",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

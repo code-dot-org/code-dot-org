@@ -28,7 +28,8 @@
     "validation_enabled": "true",
     "display_name": "NEW User: Pedro",
     "bubble_choice_description": "Choose this level to style Pedro's makeup line web page!",
-    "thumbnail_url": "https://images.code.org/6e659adeeee0e916e2da1d589d9285ce-cosmetics.png"
+    "thumbnail_url": "https://images.code.org/6e659adeeee0e916e2da1d589d9285ce-cosmetics.png",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

@@ -51,16 +51,23 @@
           "contents": "// --- Parallel Arrays (Reference Data) ---\nconst dessertNames = [\"Brownie\", \"Cupcake\", \"Ice Cream\"];\nconst dessertFlavors = [\"Chocolate\", \"Vanilla\", \"Strawberry\"];\nconst dessertIsFrozen = [false, false, true];\n\n//Dessert object\n\n//Render function to display object properties\nconst render = () => {\n  const nameSpan = document.querySelector(\"#dessertName\");\n  const flavorSpan = document.querySelector(\"#dessertFlavor\");\n  const frozenSpan = document.querySelector(\"#dessertFrozen\");\n\n  nameSpan.textContent = \"\";\n  flavorSpan.textContent = \"\";\n\n  if (true) {\n    frozenSpan.textContent = \"Yes\";\n  } else {\n    frozenSpan.textContent = \"No\";\n  }\n};\n\nrender();",
           "folderId": "0",
           "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "PAIR.md",
+          "language": "md",
+          "contents": "## Prompt \nAsk AI how to update object properties using dot notation \nand bracket notation\n\n## Analyze \nExamine the AI’s examples, noting the similarities and differences \nbetween the two methods.\n\n## Integrate \nTry both methods to change property values\n\n## Reflect \nWhich syntax feels easier or clearer? \n\n\nWhen might you need bracket notation instead?\n\n",
+          "folderId": "0",
+          "active": false
         }
       },
       "openFiles": [
         "3",
-        "1",
-        "2"
+        "4"
       ]
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-11-21 04:53:47 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-21 04:53:47 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-12-08 17:44:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-08 17:44:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-10 16:00:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Weblab2>

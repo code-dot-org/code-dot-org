@@ -5,6 +5,20 @@ require_relative '../../../../../shared/middleware/helpers/storage_id'
 class ProjectsTest < Minitest::Test
   include SetupTest
 
+  def test_create_project_returns_uuid
+    uuid_format = /\A[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\z/i
+    signedout_storage_id = create_storage_id_for_user(nil)
+
+    #If DCDO flag is disabled, create should return old style channel id
+    channel_id = Projects.new(signedout_storage_id).create({projectType: 'artist'}, ip: 123)
+    refute uuid_format.match?(channel_id)
+
+    # If DCDO flag is enabled, create should return a uuid
+    DCDO.stubs(:get).with('project-uuid-in-url', false).returns(true)
+    channel_id = Projects.new(signedout_storage_id).create({projectType: 'artist'}, ip: 123)
+    assert uuid_format.match?(channel_id)
+  end
+
   def test_get_anonymous_age_restricted_app
     signedout_storage_id = create_storage_id_for_user(nil)
     signedin_storage_id = create_storage_id_for_user(20)
@@ -215,8 +229,8 @@ class ProjectsTest < Minitest::Test
     project = Projects.new(student_storage_id)
     channel_id = project.create({projectType: 'spritelab'}, ip: 123)
 
-    # Stub storage_decrypt_channel_id to return the correct owner storage ID.
-    project.expects(:storage_decrypt_channel_id).with(channel_id).returns([student_storage_id, 123])
+    # Stub get_storage_id_and_project_id to return the correct owner storage ID.
+    project.expects(:get_storage_id_and_project_id).with(channel_id).returns([student_storage_id, 123])
     project.expects(:user_id_for_storage_id).with(student_storage_id).returns(student_user_id)
     project.expects(:teaches_student?).with(student_user_id, teacher_user_id).returns(true)
 
@@ -231,7 +245,7 @@ class ProjectsTest < Minitest::Test
     project = Projects.new(student_storage_id)
     channel_id = project.create({projectType: 'spritelab'}, ip: 123)
 
-    project.expects(:storage_decrypt_channel_id).with(channel_id).returns([student_storage_id, 123])
+    project.expects(:get_storage_id_and_project_id).with(channel_id).returns([student_storage_id, 123])
     project.expects(:user_id_for_storage_id).with(student_storage_id).returns(student_user_id)
     project.expects(:teaches_student?).with(student_user_id, non_teacher_user_id).returns(false)
 

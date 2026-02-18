@@ -91,6 +91,11 @@
   color: var(--sentiment-information-50);
 }
 
+.custom {
+  background-color: var(--brand-aqua-20);
+  color: var(--brand-aqua-70);
+}
+
 .noUnitContainer {
   margin-top: 60px;
   text-align: center;
@@ -122,7 +127,8 @@
   gap: 2.5rem;
 }
 
-.lessonMaterialsContainer, .lessonSummaryContainer {
+.lessonMaterialsContainer,
+.lessonSummaryContainer {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -257,11 +263,12 @@ audio::-webkit-media-controls-time-remaining-display {
 }
 
 .lessonSummaryInfoBlock {
-  > p:first-of-type{
+  > p:first-of-type {
     font-weight: 600;
   }
 
-  ol, ul {
+  ol,
+  ul {
     margin-bottom: 0;
   }
 }
@@ -289,7 +296,8 @@ audio::-webkit-media-controls-time-remaining-display {
 .personalizationQuizPrompt {
   justify-content: center;
 
-  p, a {
+  p,
+  a {
     color: var(--text-neutral-tertiary);
   }
 
@@ -321,6 +329,6 @@ audio::-webkit-media-controls-time-remaining-display {
   margin-inline-start: 8px;
 }
 
-.unitSelector{
+.unitSelector {
   max-width: 400px;
 }

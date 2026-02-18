@@ -14,7 +14,8 @@
     "skip_sound": true,
     "parent_level_id": 20713,
     "name_suffix": "_2025",
-    "allow_multiple_attempts": "false"
+    "allow_multiple_attempts": "false",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

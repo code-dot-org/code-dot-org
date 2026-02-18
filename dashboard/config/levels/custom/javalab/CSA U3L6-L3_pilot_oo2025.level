@@ -21,7 +21,7 @@
     "project_template_level_name": "CSA U3L6-Polymorphism PBT_pilot_oo2025",
     "teacher_markdown": "When students change the 1D array `allShapes` to be of type `Rectangle`, they should see the following errors in the console:\r\n\r\n```\r\n/ShapeRunner.java:8: error: incompatible types: Shape cannot be converted to Rectangle\r\n    Rectangle[] allShapes = {poly, rect, circ};\r\n                             ^\r\n/ShapeRunner.java:8: error: incompatible types: Circle cannot be converted to Rectangle\r\n    Rectangle[] allShapes = {poly, rect, circ};\r\n```\r\n\r\nThis is because the 1D array can now only store objects of type `Rectangle` instead of `Shape`, so `Shape` and `Circle` objects cannot be stored in `allShapes`. `Shape` and `Circle` objects are not `Rectangle` objects.",
     "name_suffix": "_oo2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-13T00:09:25.192+00:00\",\"changed\":[\"cloned from \\\"CSA U3L6-L3_pilot-2025\\\"\"],\"cloned_from\":\"CSA U3L6-L3_pilot-2025\"}]"

@@ -1,3 +1,4 @@
+import {Heading3} from '@code-dot-org/component-library/typography';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
@@ -92,11 +93,7 @@ export default class SublevelCard extends React.Component {
     const {isLessonExtra, sublevel} = this.props;
 
     if (isLessonExtra) {
-      return (
-        <a href={this.getSublevelUrl()}>
-          <LessonExtrasFlagIcon isPerfect={sublevel.perfect} size={30} />
-        </a>
-      );
+      return <LessonExtrasFlagIcon isPerfect={sublevel.perfect} size={30} />;
     }
 
     let mappedSublevel = sublevel;
@@ -109,7 +106,7 @@ export default class SublevelCard extends React.Component {
     return (
       <ProgressBubble
         level={mappedSublevel}
-        disabled={false}
+        disabled={true}
         hideToolTips={true}
       />
     );
@@ -119,43 +116,45 @@ export default class SublevelCard extends React.Component {
     const {sublevel} = this.props;
 
     return (
-      <div
-        key={sublevel.id}
-        style={styles.row}
-        className="uitest-bubble-choice"
-      >
-        <a href={this.getSublevelUrl()}>{this.renderThumbnail()}</a>
+      <a href={this.getSublevelUrl()}>
         <div
-          style={{
-            ...styles.column,
-            ...{width: WIDTH - (MARGIN * 2 + THUMBNAIL_IMAGE_SIZE)},
-          }}
+          key={sublevel.id}
+          style={styles.row}
+          className="uitest-bubble-choice"
         >
-          <div style={styles.bubbleAndTitle}>
-            {this.renderBubble()}
-            <a
-              href={this.getSublevelUrl()}
-              style={styles.title}
-              className="sublevel-card-title-uitest"
-            >
-              {sublevel.display_name}
-            </a>
-          </div>
-          {sublevel.description && (
-            <div
-              style={styles.description}
-              className="sublevel-card-description-uitest"
-            >
-              <SafeMarkdown markdown={sublevel.description} />
+          {this.renderThumbnail()}
+          <div
+            style={{
+              ...styles.column,
+              ...{width: WIDTH - (MARGIN * 2 + THUMBNAIL_IMAGE_SIZE)},
+            }}
+          >
+            <div style={styles.bubbleAndTitle}>
+              {this.renderBubble()}
+              <Heading3
+                className="sublevel-card-title-uitest"
+                visualAppearance="heading-xs"
+                noMargin
+              >
+                {sublevel.display_name}
+              </Heading3>
             </div>
-          )}
+            {sublevel.description && (
+              <div
+                style={styles.description}
+                className="sublevel-card-description-uitest"
+              >
+                <SafeMarkdown markdown={sublevel.description} />
+              </div>
+            )}
+          </div>
         </div>
-      </div>
+      </a>
     );
   }
 }
 
-const THUMBNAIL_IMAGE_SIZE = 200;
+const THUMBNAIL_IMAGE_SIZE = 150;
 const MARGIN = 10;
 const WIDTH = 435;
 
@@ -168,13 +167,14 @@ const styles = {
     backgroundColor: color.white,
     border: '1px solid rgb(187, 187, 187)',
     borderRadius: 2,
+    cursor: 'pointer',
   },
   thumbnail: {
     minWidth: THUMBNAIL_IMAGE_SIZE,
     width: THUMBNAIL_IMAGE_SIZE,
     height: THUMBNAIL_IMAGE_SIZE,
-    border: '1px solid rgb(187, 187, 187)',
-    borderRadius: 2,
+    padding: MARGIN,
+    borderInlineEnd: '1px solid rgb(187, 187, 187)',
   },
   placeholderThumbnail: {
     minWidth: THUMBNAIL_IMAGE_SIZE,
@@ -202,7 +202,8 @@ const styles = {
   bubbleAndTitle: {
     display: 'flex',
     flexDirection: 'row',
-    alignItems: 'flex-start',
+    alignItems: 'center',
+    gap: 10,
   },
   title: {
     minHeight: 30,
@@ -219,6 +220,8 @@ const styles = {
     alignItems: 'center',
   },
   description: {
-    marginTop: 5,
+    marginTop: 6,
+    marginInlineStart: 4,
+    color: color.black,
   },
 };

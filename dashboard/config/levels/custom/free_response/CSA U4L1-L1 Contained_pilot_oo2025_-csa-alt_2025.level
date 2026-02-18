@@ -15,7 +15,7 @@
     "skip_sound": true,
     "allow_multiple_attempts": "false",
     "name_suffix": "_-csa-alt_2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-05-21T19:32:48.481+00:00\",\"changed\":[\"cloned from \\\"CSA U4L1-L1 Contained_pilot_oo2025\\\"\"],\"cloned_from\":\"CSA U4L1-L1 Contained_pilot_oo2025\"}]",

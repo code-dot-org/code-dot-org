@@ -1,11 +1,11 @@
 /** @overview Component for editing a key/value pair row. */
+import {Button} from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import msg from '@cdo/locale';
 
-import PendingButton from '../../legacySharedComponents/PendingButton';
 import {storageBackend} from '../storage';
 
 import {castValue, displayableValue, editableValue} from './dataUtils';
@@ -113,39 +113,52 @@ class EditKeyRow extends React.Component {
         <td className={classNames(dataStyles.cell, dataStyles.editButton)}>
           {!this.state.isDeleting &&
             (this.state.isEditing ? (
-              <PendingButton
-                isPending={this.state.isSaving}
+              <Button
+                id="saveKeyValueButton"
+                text={msg.save()}
                 onClick={this.handleSave}
-                pendingText={msg.saving()}
+                disabled={this.state.isSaving}
+                isPending={this.state.isSaving}
+                ariaLabel={msg.save()}
                 className={classNames(
                   dataStyles.button,
-                  dataStyles.buttonBlue,
-                  dataStyles.buttonBlueSave
+                  dataStyles.buttonText,
+                  dataStyles.buttonRightMargin
                 )}
-                text={msg.save()}
+                size="s"
+                type="secondary"
+                color="gray"
               />
             ) : (
-              <button
-                type="button"
+              <Button
+                id="editKeyValueButton"
+                text={msg.edit()}
+                onClick={this.handleEdit}
+                disabled={this.state.isSaving}
+                ariaLabel={msg.edit()}
                 className={classNames(
                   dataStyles.button,
-                  dataStyles.buttonWhite,
-                  dataStyles.buttonWhiteEdit
+                  dataStyles.buttonText,
+                  dataStyles.buttonRightMargin
                 )}
-                onClick={this.handleEdit}
-              >
-                {msg.edit()}
-              </button>
+                size="s"
+                type="secondary"
+                color="gray"
+              />
             ))}
 
           {!this.state.isSaving && (
-            <PendingButton
-              isPending={this.state.isDeleting}
-              onClick={this.handleDelete}
-              pendingStyle={{float: 'right'}}
-              pendingText={msg.deletingWithEllipsis()}
-              className={classNames(dataStyles.button, dataStyles.buttonRed)}
+            <Button
+              id="deleteKeyValueButton"
               text={msg.delete()}
+              onClick={this.handleDelete}
+              disabled={this.state.isDeleting}
+              isPending={this.state.isDeleting}
+              ariaLabel={msg.delete()}
+              className={classNames(dataStyles.button, dataStyles.buttonText)}
+              size="s"
+              type="primary"
+              color="destructive"
             />
           )}
         </td>

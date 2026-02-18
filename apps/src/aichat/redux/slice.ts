@@ -6,7 +6,11 @@ import {
   THREAD_TYPES,
 } from '@cdo/apps/aiDifferentiation/constants';
 import {SUGGESTED_PROMPTS_FOR_SELECTION} from '@cdo/apps/aiDifferentiation/predefinedPrompts';
-import {ChatItem, ChatPrompt} from '@cdo/apps/aiDifferentiation/types';
+import {
+  ChatItem,
+  ChatPrompt,
+  ChatTextMessage,
+} from '@cdo/apps/aiDifferentiation/types';
 import {registerReducers} from '@cdo/apps/redux';
 
 import {
@@ -27,12 +31,14 @@ import {
   FeedbackValue,
   ServerChatEvent,
   isCompletedChatMessage,
-  PendingChatMessage,
   ChatAsset,
   SaveError,
   AiChatClientType,
   WorkspaceTeacherViewTab,
   UserAddedSelectionContextItem,
+  ChatMessage,
+  isPendingOrCompletedChatMessage,
+  CompletedChatMessage,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -55,7 +61,6 @@ const initialState: AichatState = {
   initialChatMessage: SUGGESTED_PROMPTS_FOR_SELECTION['default'].initialMessage,
   chatEventsPast: [],
   chatEventsCurrent: [],
-  chatMessagePending: undefined,
   studentChatHistory: [],
   showModalType: undefined,
   initialAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
@@ -75,6 +80,8 @@ const initialState: AichatState = {
   hasSetStartingCustomizations: false,
   chatWorkspaceSelectedTab: null,
   userAddedSelectionContext: {},
+  artifactType: undefined,
+  pendingArtifactMessage: undefined,
 };
 
 const aichatSlice = createSlice({
@@ -155,6 +162,15 @@ const aichatSlice = createSlice({
     setThreadKeyId(state, action: PayloadAction<number>) {
       state.threadKeyId = action.payload;
     },
+    setArtifactType(state, action: PayloadAction<string | undefined>) {
+      state.artifactType = action.payload;
+    },
+    setPendingArtifactMessage(state, action: PayloadAction<ChatTextMessage>) {
+      state.pendingArtifactMessage = action.payload;
+    },
+    clearPendingArtifactMessage: state => {
+      state.pendingArtifactMessage = undefined;
+    },
     removeUpdateMessage: (state, action: PayloadAction<number>) => {
       const modelUpdateMessageInfo = getUpdateMessageLocation(
         action.payload,
@@ -183,14 +199,33 @@ const aichatSlice = createSlice({
       state.chatEventsPast = [];
       state.chatEventsCurrent = [];
     },
-    setChatMessagePending: (
+    updateChatMessageStatus: (
       state,
-      action: PayloadAction<PendingChatMessage>
+      action: PayloadAction<{updateId: string; status: ChatMessage['status']}>
     ) => {
-      state.chatMessagePending = action.payload;
-      state.hasSentMessage = true;
+      const event = state.chatEventsCurrent.find(
+        (event): event is ChatMessage =>
+          isPendingOrCompletedChatMessage(event) &&
+          event.updateId === action.payload.updateId
+      );
+      if (!event) return;
+      event.status = action.payload.status;
     },
-    clearChatMessagePending: state => (state.chatMessagePending = undefined),
+    updateRequestId: (
+      state,
+      action: PayloadAction<{updateId: string; requestId: number}>
+    ) => {
+      const event = state.chatEventsCurrent.find(
+        (event): event is ChatMessage =>
+          isPendingOrCompletedChatMessage(event) &&
+          event.updateId === action.payload.updateId
+      );
+      if (!event) return;
+      (event as CompletedChatMessage).requestId = action.payload.requestId;
+    },
+    setChatMessageSent: (state, action: PayloadAction<boolean>) => {
+      state.hasSentMessage = action.payload;
+    },
     setNewChatSession: state => {
       state.chatEventsPast.push(...state.chatEventsCurrent);
       state.chatEventsCurrent = [];
@@ -435,8 +470,9 @@ export const {
   setChatIsOpen,
   addEventToChatEventsCurrent,
   startSave,
-  setChatMessagePending,
-  clearChatMessagePending,
+  updateChatMessageStatus,
+  updateRequestId,
+  setChatMessageSent,
   setSavedAiCustomizations,
   updateChatMessageFeedback,
   clearChatMessages,
@@ -461,6 +497,9 @@ export const {
   setThreadMessages,
   addThreadMessage,
   setThreadKeyId,
+  setArtifactType,
+  setPendingArtifactMessage,
+  clearPendingArtifactMessage,
   setViewMode,
   addStagedFile,
   stagedFileUploadFinished,

@@ -1,7 +1,7 @@
 name 'csaif_pl_nets_interent_3_-rev'
 title 'Network Components'
 description 'Match each network component to its correct function.'
-height '250'
+height '150'
 question '![](https://images.code.org/5b945603bb271e94668991780def9e73-router.png)'
 answer 'Forwards data packets between networks and finds the best path.'
 question '![](https://images.code.org/7cee888faf0ee9432543083251029f0c-switch.png)'

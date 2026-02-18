@@ -9,9 +9,11 @@ markdown <<MARKDOWN
 
 <br>
 
-#### As part of this unit’s *instructional commitments*, students develop the habits and mindsets that connect computational thinking, human-centered design, and responsible AI use. They learn to think critically, design with empathy, and take ownership of their AI-assisted work—building a foundation that mirrors real-world roles in technology and design.
+#### As part of this unit’s *instructional commitments*, students develop the habits and mindsets that connect computational thinking, human-centered design, and responsible AI use.
 
-<div style="clear:both;"></div>
+#### They learn to think critically, design with empathy, and take ownership of their AI-assisted work.
+
+<br>
 
 ## Computational Thinking
 
@@ -336,8 +338,9 @@ markdown <<MARKDOWN
 </div>
 
 <hr>
+---
 
-
-
-
+>#### Before you move on, take a moment to think about:
+>- #### How these ideas will shape the way students design, build, and collaborate with AI in their web apps.
+>- #### Which practices you want to intentionally highlight or reinforce as students work through this unit?
 MARKDOWN

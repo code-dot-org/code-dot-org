@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
-  self.use_transactional_test_case = true
   setup_all do
     @teacher = create(:teacher)
     @student = create(:student)

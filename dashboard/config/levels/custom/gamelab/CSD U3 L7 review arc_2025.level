@@ -74,6 +74,7 @@
     "libraries_enabled": "false",
     "bubble_choice_description": "Review how to draw arcs. How can you use this block with your robot face?",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

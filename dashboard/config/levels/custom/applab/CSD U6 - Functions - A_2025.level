@@ -99,6 +99,7 @@
     "rubric_performance_level_3": "The app uses a function but it does not use parameters, or not all of the snow elements move on the screen",
     "rubric_performance_level_4": "The code has not changed from the original app",
     "encrypted_examples": "ch/llNrHmFNP8BRB/UtOGsM0u3a2sVWSrJJHrWHF46atwavDK86CHGrgDMQU\nVIbW8OIokZqip1N13vGQqOCYPw==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

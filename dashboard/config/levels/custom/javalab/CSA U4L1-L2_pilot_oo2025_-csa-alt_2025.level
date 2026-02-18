@@ -30,7 +30,7 @@
       }
     },
     "name_suffix": "_-csa-alt_2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-05-21T19:32:50.040+00:00\",\"changed\":[\"cloned from \\\"CSA U4L1-L2_pilot_oo2025\\\"\"],\"cloned_from\":\"CSA U4L1-L2_pilot_oo2025\"},{\"changed_at\":\"2025-05-23 19:07:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-23 19:09:55 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

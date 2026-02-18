@@ -109,6 +109,7 @@
     "bubble_choice_description": "Use the temperature sensor to detect when someone blows out the candles of a card",
     "thumbnail_url": "https://images.code.org/a4c512a9fff8dbf6d75995a1b26f7115-image-1648852629293.png",
     "encrypted_examples": "7fKoh7CUXE9pMZ3n1zQ8/y8t9vPRWjTSekLhr6BfbHm+gXD+u03dX7sL+oxw\n+SFClnjbKgT7EFk8wOllWst3Yg==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

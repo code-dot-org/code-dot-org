@@ -1,7 +1,5 @@
 import appMain from '@cdo/apps/appMain';
 import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibraryApi';
-import {getCurrentId} from '@cdo/apps/code-studio/initApp/project';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import levels from '@cdo/apps/p5lab/levels';
 import skins from '@cdo/apps/p5lab/skins';
 import blocks from '@cdo/apps/p5lab/spritelab/blocks';
@@ -20,15 +18,6 @@ export default function loadSpritelab(options) {
     .catch(() => {
       // If the S3 request for defaultAnimationList fails, use a backup mini list of animations.
       let spritelab = new SpriteLab(defaultSprites);
-
-      // Log data that we're using the backup default animations.
-      firehoseClient.putRecord({
-        study: 'sprite_default_load',
-        study_group: 'spritelab',
-        event: 'backup_animations_used',
-        project_id: getCurrentId(),
-      });
-
       return initializeOptionsAndSpritelab(spritelab, options);
     });
 }

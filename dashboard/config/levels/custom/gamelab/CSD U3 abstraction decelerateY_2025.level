@@ -100,6 +100,7 @@
     "rubric_performance_level_3": "The rock starts to move up the screen, and its velocity continually changes in some way as the program is being run.",
     "rubric_performance_level_4": "There is no change to the rock's velocity as the program is run.",
     "libraries_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

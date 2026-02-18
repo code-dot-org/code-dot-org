@@ -209,6 +209,10 @@ FactoryBot.define do
       after(:create, &:demigrate_from_multi_auth)
     end
 
+    transient do
+      auth_option_version {nil}
+    end
+
     factory :teacher, class: Teacher do
       user_type {User::TYPE_TEACHER}
       birthday {Date.new(1980, 3, 14)}
@@ -463,8 +467,8 @@ FactoryBot.define do
       factory :student_with_ai_tutor_access do
         after(:create) do |user|
           teacher = create(:teacher)
-          create(:single_user_experiment, min_user_id: teacher.id, name: 'ai-tutor')
-          section = create(:section, ai_tutor_enabled: true, user: teacher)
+          create(:single_user_experiment, min_user_id: teacher.id, name: User::AiAccessible::AI_TUTOR_PILOT_NAME)
+          section = create(:section, user: teacher)
           create(:follower, student_user: user, section: section)
           user.reload
         end
@@ -473,8 +477,7 @@ FactoryBot.define do
       factory :student_without_ai_tutor_access do
         after(:create) do |user|
           teacher = create(:teacher)
-          create(:single_user_experiment, min_user_id: teacher.id, name: 'ai-tutor')
-          section = create(:section, ai_tutor_enabled: false, user: teacher)
+          section = create(:section, user: teacher)
           create(:follower, student_user: user, section: section)
           user.reload
         end
@@ -627,6 +630,11 @@ FactoryBot.define do
       end
     end
 
+    trait :classlink_sso_provider do
+      sso_provider_with_token
+      provider {'classlink'}
+    end
+
     trait :clever_sso_provider do
       untrusted_email_sso_provider
       provider {'clever'}
@@ -715,7 +723,7 @@ FactoryBot.define do
     end
 
     trait :with_clever_authentication_option do
-      after(:create) do |user|
+      after(:create) do |user, evaluator|
         create(
           :authentication_option,
           user: user,
@@ -723,6 +731,7 @@ FactoryBot.define do
           hashed_email: user.hashed_email,
           credential_type: AuthenticationOption::CLEVER,
           authentication_id: SecureRandom.uuid,
+          version: evaluator.auth_option_version,
           data: {
             oauth_token: 'some-clever-token'
           }.to_json
@@ -817,6 +826,19 @@ FactoryBot.define do
       if section.script_id && section.course_id.nil?
         section.course_id = section.script.original_unit_group_id
       end
+    end
+
+    trait :hidden do
+      hidden {true}
+    end
+
+    trait :archived do
+      hidden
+    end
+
+    trait :from_clever do
+      login_type {Section::LOGIN_TYPE_CLEVER}
+      code {"#{CleverSection::CODE_PREFIX}#{Faker::Alphanumeric.unique.alphanumeric(number: 24)}"}
     end
 
     trait :teacher_participants do
@@ -2053,13 +2075,6 @@ FactoryBot.define do
     pardot_id_updated_at {Time.now.utc - 1.hour}
     data_synced {{db_Opt_In: 'No'}}
     data_synced_at {Time.now.utc}
-  end
-
-  factory :lti_feedback, class: 'Lti::Feedback' do
-    association :user, factory: :teacher
-
-    locale {I18n.locale.to_s}
-    satisfied {true}
   end
 
   factory :lti_integration do

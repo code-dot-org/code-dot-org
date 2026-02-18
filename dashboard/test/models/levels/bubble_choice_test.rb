@@ -3,7 +3,6 @@ require 'test_helper'
 class BubbleChoiceTest < ActiveSupport::TestCase
   include Rails.application.routes.url_helpers
   include LevelsHelper
-  self.use_transactional_test_case = true
   include SharedConstants
 
   setup_all do

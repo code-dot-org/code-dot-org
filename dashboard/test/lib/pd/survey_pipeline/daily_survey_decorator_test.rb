@@ -5,7 +5,6 @@ module Pd::SurveyPipeline
   class DailySurveyDecoratorTest < ActiveSupport::TestCase
     include Pd::WorkshopConstants
 
-    self.use_transactional_test_case = true
     setup_all do
       @facilitators = create_list(:facilitator, 2)
       @workshop = build(:csf_deep_dive_workshop, facilitators: @facilitators)

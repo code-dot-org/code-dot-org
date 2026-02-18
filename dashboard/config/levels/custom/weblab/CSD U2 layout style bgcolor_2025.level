@@ -29,7 +29,8 @@
     "map_reference": "/courses/csd-2024/guides/layout-properties",
     "encrypted": "false",
     "validation_enabled": "true",
-    "mini_rubric": "false"
+    "mini_rubric": "false",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

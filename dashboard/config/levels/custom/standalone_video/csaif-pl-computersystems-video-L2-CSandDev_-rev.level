@@ -1,5 +1,6 @@
 <StandaloneVideo>
   <config><![CDATA[{
+  "published": true,
   "game_id": 54,
   "created_at": "2025-11-25T22:23:03.000Z",
   "level_num": "custom",
@@ -12,11 +13,10 @@
     "parent_level_id": 28731,
     "name_suffix": "_-rev",
     "encrypted": "false",
-    "long_instructions": "#### A computer system is a set of parts that work together to process information and complete tasks. Simply put, it includes:\r\n\r\n>- #### **Hardware** - the physical parts\r\n>- #### **Software** - the programs that run on it\r\n>- #### **Operating System** - manages the hardware and software\r\n\r\n#### This video gives a brief overview of computer systems. While you watch this video, consider how the different parts of a computer system — **hardware, software, and the operating system** — work together."
+    "long_instructions": "<div style=\"background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;\">\r\n<p style=\"font-size: 14pt; margin-top: 12px; line-height: 120%;\">📖 <strong>A Computer System</strong> is a set of parts that work together to process information and complete tasks. It includes</p>\r\n<ul>\r\n<li style=\"font-size: 14pt; margin-top: 12px; line-height: 120%;\"> <strong>Hardware</strong> the physical parts.</li>\r\n<li style=\"font-size: 14pt; margin-top: 12px; line-height: 120%;\"> <strong>Software</strong> the programs that run on it.</li>\r\n<li style=\"font-size: 14pt; margin-top: 12px; line-height: 120%;\"> <strong>Operating System</strong> manages the hardware and software.</li>\r\n</ul>\r\n</div>\r\n\r\n#### Computer systems are everywhere in daily life, from smartphones and gaming consoles to self-checkout kiosks, smart home devices, and even AI-powered cars.\r\n\r\n<br>\r\n\r\n#### 🔎 **Think About** \r\n#### As you watch, listen for how the different parts of a computer system — hardware, software, and the operating system — work together.\r\n<br>"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-11-25T22:23:03.011+00:00\",\"changed\":[\"cloned from \\\"csaif-pl-computersystems-video-L2-CSandDev_2025\\\"\"],\"cloned_from\":\"csaif-pl-computersystems-video-L2-CSandDev_2025\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-11-25T22:23:03.011+00:00\",\"changed\":[\"cloned from \\\"csaif-pl-computersystems-video-L2-CSandDev_2025\\\"\"],\"cloned_from\":\"csaif-pl-computersystems-video-L2-CSandDev_2025\"},{\"changed_at\":\"2025-12-10 15:58:06 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-12-10 15:58:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-12-15 16:39:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-12-15 22:04:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-12-16 15:01:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-12-18 22:08:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-12-18 22:10:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-12-18 22:11:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-12-18 22:21:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

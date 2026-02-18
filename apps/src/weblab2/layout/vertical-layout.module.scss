@@ -6,6 +6,13 @@
   border-bottom: variables.$default-border;
 }
 
+.workspaceContainer {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
 .editorAndPreviewContainer {
   display: flex;
   flex-grow: 1;
@@ -16,4 +23,8 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.aiTutorVersionContainer {
+  border-left: 1px solid var(--borders-brand-aqua-primary);
 }

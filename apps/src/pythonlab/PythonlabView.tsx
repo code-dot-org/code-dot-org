@@ -2,10 +2,12 @@
 import {Codebridge} from '@codebridge/Codebridge';
 import {useSource} from '@codebridge/hooks/useSource';
 import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
+import {json} from '@codemirror/lang-json';
 import {python} from '@codemirror/lang-python';
 import {LanguageSupport} from '@codemirror/language';
 import React, {useContext, useEffect, useMemo, useState} from 'react';
 
+import {shouldShowAiTutor} from '@cdo/apps/aiTutor/helpers/shouldShowAiTutor';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -55,6 +57,7 @@ const aiTutorHelper = new AiTutorPythonLabContextHelper();
 
 const pythonlabLangMapping: {[key: string]: LanguageSupport} = {
   py: python(),
+  json: json(),
 };
 
 const standaloneStartSources: {[key: string]: ProjectSources} = {
@@ -84,6 +87,9 @@ const PythonlabView: React.FunctionComponent<
     levelProperties,
     initialSources
   );
+  const sourceLevelId = useAppSelector(
+    state => state.lab2Project.projectSourceLevelId
+  );
   const validationFile = levelProperties.validationFile;
   const isPredictLevel = levelProperties.predictSettings?.isPredictLevel;
   const progressManager = useContext(ProgressManagerContext);
@@ -108,15 +114,20 @@ const PythonlabView: React.FunctionComponent<
   );
   const hasRun = useAppSelector(state => state.lab2System.hasRun);
   const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
+  const aiTutorEnabledForPilot = useAppSelector(
+    state => state.currentUser.aiTutorEnabledForPilot
+  );
 
   const hasSource = !!source;
-  const isAiTutorEnabled = useMemo(() => {
-    return (
-      levelProperties.aiTutorAvailable ||
-      queryParams('show-ai-tutor2') === 'true' ||
-      queryParams('show-ai-tutor') === 'true'
-    );
-  }, [levelProperties.aiTutorAvailable]);
+
+  const isAiTutorEnabled =
+    shouldShowAiTutor({
+      tutorPilot: aiTutorEnabledForPilot,
+      appName: levelProperties.appName,
+      tutorLevel: levelProperties.aiTutorAvailable,
+    }) ||
+    queryParams('show-ai-tutor2') === 'true' ||
+    queryParams('show-ai-tutor') === 'true';
 
   const dispatch = useAppDispatch();
 
@@ -246,7 +257,7 @@ const PythonlabView: React.FunctionComponent<
 
   return (
     <div className={moduleStyles.pythonlab}>
-      {hasSource && (
+      {hasSource && sourceLevelId === levelProperties.id && (
         <Codebridge
           config={config}
           setConfig={setConfig}

@@ -95,6 +95,7 @@
     "encrypted_examples": "ymHT2xd7LVnS0xr7pYkKNnaOT31+qwP3A3J31Ob/Nf4nL6KfQempAUtAxcai\nFWUzfADf2zyv/BvjhTfMg/iBuw==\n",
     "map_reference": "/courses/csd-2022/guides/sprite-properties",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

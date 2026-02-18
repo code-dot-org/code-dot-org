@@ -33,7 +33,7 @@
   "dragAndDropInstructionsFolders": "To pick up a file or folder, press m. While dragging, use the arrow keys or tab to move the item. Press m, space or enter to drop the item in its new position, or press escape to cancel.",
   "dragAndDropInstructionsTabs": "To pick up a file, press m. While dragging, use the arrow keys or tab to move the file. Press m, space or enter to drop the file in its new position, or press escape to cancel.",
   "duplicateFileError": "Filename {fileName} is already in use in this folder. Please choose a different name.",
-  "duplicateFolderError": "Foldername {folderName} is already in use in this folder. Please choose a different name.",
+  "duplicateFolderError": "Folder name {folderName} is already in use in this folder. Please choose a different name.",
   "duplicateSupportFileError": "Filename {fileName} is already in use in this folder in the level's support code. Please choose a different name.",
   "error": "Error",
   "expectedFailure": "Expected failure",

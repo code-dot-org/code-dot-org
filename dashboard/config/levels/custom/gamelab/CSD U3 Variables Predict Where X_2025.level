@@ -64,6 +64,7 @@
     "mini_rubric": "false",
     "libraries_enabled": "false",
     "teacher_markdown": "Students may notice that the term `xPosition` is associated with the value 50, and so when we see the term `xPosition` farther down in the code, they may think it will use the value of 50 in that spot and draw the circle on the left side of the screen. When describing this relationship, they may not have the correct words to describe what's happening and may wonder what the purple `var` keyword means. Encourage students to use other familiar words when describing this relationship, like \"container\" or \"placeholder\", before introducing vocabulary",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

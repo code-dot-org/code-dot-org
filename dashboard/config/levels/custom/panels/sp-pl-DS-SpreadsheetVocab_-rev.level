@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2025-11-25T22:26:20.000Z",
   "level_num": "custom",
@@ -8,7 +9,7 @@
     "encrypted": "false",
     "panels": [
       {
-        "text": "Click through the panels to learn about spreadsheet basics. \n\n",
+        "text": "In <a href='https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/6/lessons/2' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 2</a> students learn about spreadsheets.\n\nClick through the panels to learn the basics. ",
         "imageUrl": "https://images.code.org/edc8460ccee5be3e42431cab91852ffb-spreadsheet-data (1).png",
         "key": "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c"
       },
@@ -48,7 +49,6 @@
     "name_suffix": "_-rev",
     "offer_browser_tts": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-11-25T22:26:20.633+00:00\",\"changed\":[\"cloned from \\\"sp-pl-DS-SpreadsheetVocab_2025\\\"\"],\"cloned_from\":\"sp-pl-DS-SpreadsheetVocab_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-25T22:26:20.633+00:00\",\"changed\":[\"cloned from \\\"sp-pl-DS-SpreadsheetVocab_2025\\\"\"],\"cloned_from\":\"sp-pl-DS-SpreadsheetVocab_2025\"},{\"changed_at\":\"2025-12-16 15:32:23 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-12-16 21:53:33 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Panels>

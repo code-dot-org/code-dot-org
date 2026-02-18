@@ -6,6 +6,7 @@ import Tags from '@code-dot-org/component-library/tags';
 import {Card, CardContent, CardHeader, Box, Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
@@ -68,6 +69,7 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
   const inProgress = workshop.state === 'In Progress';
   const ended = workshop.state === 'Ended';
   const cannotEndWorkshop = !workshop.readyToClose;
+  const navigate = useNavigate();
 
   const handleClick = (stateKey: WorkshopActions) => {
     setError(null);
@@ -210,19 +212,23 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
                   </Typography>
                   <Typography variant="body4">
                     After workshop attendees have signed into their Code Studio
-                    accounts, use the attendance links below to take attendance.
-                    Note: Workshop attendees need to have enrolled in the
-                    workshop in order to take attendance. They can enroll in the
-                    workshop using{' '}
+                    accounts, share the attendance link(s) from the{' '}
                     <Link
                       className={styles.workshopLink}
                       size="xs"
-                      openInNewTab
-                      aria-label="Open enrollment page in new tab"
-                      href={`/professional-learning/workshops/${workshop.id}`}
+                      aria-label="Open attendance link"
+                      href={`/pd/workshop_dashboard/workshops/${workshop.id}/attendance`}
+                      onClick={e => {
+                        // preventing native link behavior to navigate client side using react-router
+                        e.preventDefault();
+                        navigate(`/workshops/${workshop.id}/attendance`);
+                      }}
                     >
-                      {`${window.origin}/professional-learning/workshops/${workshop.id}`}
+                      attendance tab
                     </Link>
+                    . Note: if a teacher has not already enrolled in the
+                    workshop, they will be prompted to do so before completing
+                    attendance.
                   </Typography>
                 </>
               )}

@@ -90,6 +90,7 @@
     "rubric_performance_level_3": "At least one sprite has been created with an animation that is drawn to the canvas.",
     "rubric_performance_level_4": "No sprites were created or were created without an animation - shown by a gray square.",
     "start_blocks": "// 1) Go to the animation tab and add at least two animations to your project.\r\n// 2)In the code tab, create at least two sprites in two different places on the screen.\r\n// 3) Assign each sprite a different animation.\r\n// 4) Draw your sprites to the screen.",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -1,4 +1,4 @@
-import type * as GoogleBlockly from 'blockly/core';
+import type * as BlocklyCore from 'blockly/core';
 
 /**
  * Generates a toolbox definition from a map of blocks by category.
@@ -6,7 +6,7 @@ import type * as GoogleBlockly from 'blockly/core';
 export default function (
   blocksByCategory: {[category: string]: string[]},
   kind: 'categoryToolbox' | 'flyoutToolbox'
-): GoogleBlockly.utils.toolbox.ToolboxInfo {
+): BlocklyCore.utils.toolbox.ToolboxInfo {
   const categories = Object.keys(blocksByCategory);
   if (kind === 'categoryToolbox') {
     return {

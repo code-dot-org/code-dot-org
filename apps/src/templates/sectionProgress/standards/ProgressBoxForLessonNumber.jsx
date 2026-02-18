@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import firehoseClient from '../../../metrics/firehose';
 import ProgressBox from '../ProgressBox';
 
 class ProgressBoxForLessonNumber extends Component {
@@ -14,23 +13,6 @@ class ProgressBoxForLessonNumber extends Component {
     linkToLessonPlan: PropTypes.string,
     sectionId: PropTypes.number,
     scriptId: PropTypes.number,
-  };
-
-  handleClick = () => {
-    firehoseClient.putRecord(
-      {
-        study: 'teacher_dashboard_actions',
-        study_group: 'standards',
-        event: 'click_lesson_progress_box',
-        data_json: JSON.stringify({
-          link: this.props.linkToLessonPlan,
-          section_id: this.props.sectionId,
-          script_id: this.props.scriptId,
-          in_report: window.location.pathname.includes('standards_report'),
-        }),
-      },
-      {includeUserId: true}
-    );
   };
 
   render() {
@@ -57,7 +39,6 @@ class ProgressBoxForLessonNumber extends Component {
           rel="noopener noreferrer"
           data-for={tooltipId}
           data-tip
-          onClick={this.handleClick}
         >
           {progressBox}
         </a>

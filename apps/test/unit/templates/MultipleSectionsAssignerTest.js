@@ -1,3 +1,4 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
@@ -46,7 +47,7 @@ describe('MultipleSectionsAssigner', () => {
     // Checks that an assigned section is checked
     expect(
       wrapper
-        .find('Checkbox')
+        .find(Checkbox)
         .filterWhere(n => n.props().name === assignedCourseANDUnitSection.id)
         .first()
         .props().checked
@@ -55,7 +56,7 @@ describe('MultipleSectionsAssigner', () => {
     // Checks that a section assiged the course but not the unit is NOT checked
     expect(
       wrapper
-        .find('Checkbox')
+        .find(Checkbox)
         .filterWhere(n => n.props().name === assignedCourseButNOTUnitSection.id)
         .first()
         .props().checked
@@ -73,7 +74,7 @@ describe('MultipleSectionsAssigner', () => {
     // Checks that an assigned section is checked
     expect(
       wrapper
-        .find('Checkbox')
+        .find(Checkbox)
         .filterWhere(n => n.props().name === assignedCourseANDUnitSection.id)
         .first()
         .props().checked
@@ -82,7 +83,7 @@ describe('MultipleSectionsAssigner', () => {
     // Checks that a section assiged the course but not the unit is checked
     expect(
       wrapper
-        .find('Checkbox')
+        .find(Checkbox)
         .filterWhere(n => n.props().name === assignedCourseButNOTUnitSection.id)
         .first()
         .props().checked
@@ -91,7 +92,7 @@ describe('MultipleSectionsAssigner', () => {
     // Checks that a section not assigned ANY curriculum is NOT checked
     expect(
       wrapper
-        .find('Checkbox')
+        .find(Checkbox)
         .filterWhere(n => n.props().name === unassignedSection.id)
         .first()
         .props().checked
@@ -100,7 +101,7 @@ describe('MultipleSectionsAssigner', () => {
     // Checks that a section assigned to a different curriculum is NOT checked
     expect(
       wrapper
-        .find('Checkbox')
+        .find(Checkbox)
         .filterWhere(n => n.props().name === assignedSection.id)
         .first()
         .props().checked
@@ -123,7 +124,7 @@ describe('MultipleSectionsAssigner', () => {
     assignableSections.forEach(section => {
       expect(
         wrapper
-          .find('Checkbox')
+          .find(Checkbox)
           .filterWhere(option => option.props().name === section.id)
       ).to.exist;
     });
@@ -134,7 +135,7 @@ describe('MultipleSectionsAssigner', () => {
     notAssignableSections.forEach(section => {
       expect(
         wrapper
-          .find('Checkbox')
+          .find(Checkbox)
           .filterWhere(option => option.props().name === section.id)
       ).to.have.lengthOf(0);
     });
@@ -157,7 +158,7 @@ describe('MultipleSectionsAssigner', () => {
     assignableSections.forEach(section => {
       expect(
         wrapper
-          .find('Checkbox')
+          .find(Checkbox)
           .filterWhere(option => option.props().name === section.id)
       ).to.exist;
     });
@@ -168,7 +169,7 @@ describe('MultipleSectionsAssigner', () => {
     notAssignableSections.forEach(section => {
       expect(
         wrapper
-          .find('Checkbox')
+          .find(Checkbox)
           .filterWhere(option => option.props().name === section.id)
       ).to.have.lengthOf(0);
     });
@@ -190,14 +191,14 @@ describe('MultipleSectionsAssigner', () => {
     });
 
     wrapper
-      .find('Checkbox')
+      .find(Checkbox)
       .filterWhere(n => n.props().name === assignedCourseANDUnitSection.id)
       .first()
       .simulate('change');
 
     expect(
       wrapper
-        .find('Checkbox')
+        .find(Checkbox)
         .filterWhere(n => n.props().name === assignedCourseANDUnitSection.id)
         .first()
         .props().checked
@@ -233,14 +234,14 @@ describe('MultipleSectionsAssigner', () => {
     });
 
     wrapper
-      .find('Checkbox')
+      .find(Checkbox)
       .filterWhere(n => n.props().name === unassignedSection.id)
       .first()
       .simulate('change');
 
     expect(
       wrapper
-        .find('Checkbox')
+        .find(Checkbox)
         .filterWhere(n => n.props().name === unassignedSection.id)
         .first()
         .props().checked
@@ -275,14 +276,14 @@ describe('MultipleSectionsAssigner', () => {
     });
 
     wrapper
-      .find('Checkbox')
+      .find(Checkbox)
       .filterWhere(n => n.props().name === assignedSingleUnitCourseSection.id)
       .first()
       .simulate('change');
 
     expect(
       wrapper
-        .find('Checkbox')
+        .find(Checkbox)
         .filterWhere(n => n.props().name === assignedSingleUnitCourseSection.id)
         .first()
         .props().checked
@@ -315,14 +316,14 @@ describe('MultipleSectionsAssigner', () => {
     });
 
     wrapper
-      .find('Checkbox')
+      .find(Checkbox)
       .filterWhere(n => n.props().name === unassignedSection.id)
       .first()
       .simulate('change');
 
     expect(
       wrapper
-        .find('Checkbox')
+        .find(Checkbox)
         .filterWhere(n => n.props().name === unassignedSection.id)
         .first()
         .props().checked
@@ -358,14 +359,14 @@ describe('MultipleSectionsAssigner', () => {
     });
 
     wrapper
-      .find('Checkbox')
+      .find(Checkbox)
       .filterWhere(n => n.props().name === assignedCourseANDUnitSection.id)
       .first()
       .simulate('change');
 
     expect(
       wrapper
-        .find('Checkbox')
+        .find(Checkbox)
         .filterWhere(n => n.props().name === assignedCourseANDUnitSection.id)
         .first()
         .props().checked
@@ -397,14 +398,14 @@ describe('MultipleSectionsAssigner', () => {
     });
 
     wrapper
-      .find('Checkbox')
+      .find(Checkbox)
       .filterWhere(n => n.props().name === unassignedSection.id)
       .first()
       .simulate('change');
 
     expect(
       wrapper
-        .find('Checkbox')
+        .find(Checkbox)
         .filterWhere(n => n.props().name === unassignedSection.id)
         .first()
         .props().checked
@@ -432,7 +433,7 @@ describe('MultipleSectionsAssigner', () => {
     });
 
     wrapper.find('#select-all-sections').simulate('click');
-    const allSections = wrapper.find('Checkbox');
+    const allSections = wrapper.find(Checkbox);
     for (let i = 0; i < allSections.length; i++) {
       expect(allSections.at(i).props().checked).to.be.true;
     }

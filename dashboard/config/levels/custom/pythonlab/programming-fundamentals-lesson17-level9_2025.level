@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "Combine random numbers with a loop to gather ingredients dynamically.\r\n\r\n## Do This: \r\n- Run the code to see how ingredients are gathered using dice rolls.\r\n- Modify the code to stop rolling once you have at least 15 ingredients.",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

@@ -37,7 +37,8 @@
     "video_key": "csd_weblab_intro_3",
     "display_name": "Step 5: Publish The Page",
     "bubble_choice_description": "It's finished! Time to publish the page you made for your user!",
-    "thumbnail_url": "https://images.code.org/f4d58edfa90def61c03c086a95aa6a15-web.png"
+    "thumbnail_url": "https://images.code.org/f4d58edfa90def61c03c086a95aa6a15-web.png",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

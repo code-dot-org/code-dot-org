@@ -1,0 +1,52 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-01-01T01:01:08.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Alternating Stories",
+    "long_instructions": "# Fortunately / Unfortunately Stories\r\n\r\nA Fortunately / Unfortunately story is a story that starts with an initial sentence, and then alternates between sentences that start with \"fortunately\" and \"unfortunately\". For example:\r\n- A man needed to go to the grocery store to buy some milk\r\n- Fortunately, he had a car that he could drive to the store\r\n- Unfortunately, the car was out of gas\r\n- Fortunately, there was a gas station nearby that he could walk to\r\n- Unfortunately, the path to the gas station went through the swamp that was infested with crocodiles\r\n\r\n# Do This\r\n\r\n1) Work with your partner to add alternating sentences to the story below. One person should add the \"fortunately\" sentences, and the other person should add the \"unfortunately\" sentences\r\n\t- Be sure to use `<p>` and `</p>` tags so each line of the story appears as a separate line\r\n- Repeat this until the story is at least 8 lines long",
+    "bubble_choice_description": "Work with your neighbor to tell a Fortunately / Unfortunately story using paragraph tags",
+    "thumbnail_url": "https://images.code.org/82514cfc54baccb0a043756192fd0e04-Screenshot 2025-12-31 170419.png",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <body>\n    \n  </body>\n</html>\n  ",
+          "active": true,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMrWt2HFvH/UaEd1Aw6m\nH7NPCh2Lr52063tDqEoStRSedn5LQYmzKopHnMdxEddzMa1ry9pfnBII8zb7\nMD3Gw+QxEX86iJuKhBFDqXvjC26WIR0dnDES221G1n9EocbLnjZAGZZBJj+G\nOp3GGrkU29k/bUaXBZO05NoUUgHyrb+3rz/9D+z5X2WrcdTJANFngn5hxeZH\nHR12JZ5NHCObiiqmiAZtIL8q6UPT91d3SNAJANwAf2u5ivlpTJpPkpd0IGXu\nc7Pn9xeXmkRAyyAp+Nl8hHQhqVEyteW4lgEOsoUvdMO//p927BFETPCOABoM\n7JPiZbWfZ0jMD4d7djLX+hQtqaWZt6nChomopPxmPrkyoOgN6X2qxD3Hbw4/\ndAiEBtugDImGrE+TgJGa0bHhjcC/A1XOxnEDYHhZTND0RvvJ86t+UE34riEz\nl3w0PGFv8i8WPkJzJABmWCZhxKzZu1UhB5IHrTi11AtOlWzhVqIhcZLPkGy+\ndJxMhQfv7ruO8EsFV53dif9rroSEVrWm8AE+VyT9O9lAZtdHJG5wiZ2IOXPv\nQlgmQdNNVmpGRqShw5SSHviDObzEVkIQOP/p4hTRfIDx3kJY+3C048TEhP61\nh2uAEu+q+Tzl5RyhA+JBaDtUuCF02oCXm8qLkHcC3J0GRnq2sMP8ciO8ENR9\n6p1kBIeKWAzZPym3GCVmtKxxZr2L6V2UCLTtV1Bk2l5xMpaMcRAQsuNEGwa2\n1/wOG2jDaMxG0EWdwln+w+lNIYAQdkjoLHW1e9ZiOhs7sX6R7ych2NQdKnVk\nbnWelXvGxs9eWg==\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-01-01 01:01:25 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-01 01:01:26 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-01 01:02:56 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-01 01:04:37 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-01 01:05:07 +0000\",\"changed\":[\"thumbnail_url\",\"hide_share_and_remix\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

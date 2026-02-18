@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-12-16T07:13:53.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Here is a student explanation of how they can tell a message is phishing: \r\n> “This message is phishing because it has bad grammar.” \r\n\r\nIs this explanation complete, incomplete, or incorrect based on what you learned about how phishing works? Explain why.",
+    "stay_on_level_after_submit": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "teacher_markdown": "**Assessment Opportunity**\r\n\r\nThis level can be used as a formative assessment to check student understanding of the lesson objectives. Here are things to look for and actions you can take:\r\n\r\n- If students demonstrate strong understanding, their explanations should note that phishing is defined by manipulation and intent, not by surface features like grammar or formatting. They should also identify what the attacker is trying to get the user to do.\r\n- If students describe phishing only in terms of appearance (logos, grammar, formatting), revisit examples from Levels 1–2 and highlight common manipulation tactics like urgency, fear, or excitement.\r\n- If students explain grammar as a clue but miss the underlying behavior being exploited, prompt them to connect the message to emotions (trust, urgency, curiosity) that attackers use.\r\n- If students identify the emotional tactic but not the attacker’s goal (getting credentials, money, or access), ask: “What action was the attacker trying to make the user take?”\r\n- If students suggest that messages with good grammar are “safe”, revist the idea that phishing is defined by manipulation and motive, not writing quality",
+    "title": "Check for Understanding"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-12-16T07:13:53.154+00:00\",\"changed\":[\"cloned from \\\"ai-powered-threats-defenses-lesson1-level1_2025-v2\\\"\"],\"cloned_from\":\"ai-powered-threats-defenses-lesson1-level1_2025-v2\"},{\"changed_at\":\"2025-12-16 07:15:31 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -37,9 +37,12 @@ export interface CurrentUserState {
   aiDifferentiationEnabled: boolean;
   hasCompletedAiDifferentiationWelcome: boolean;
   showAITALessonSummary: boolean;
+  showAITAPodcasts: boolean;
   hasCompletedPersonalizationQuiz: boolean;
   audioSummaryTranscript: AudioSummaryTranscriptLine[];
   userSharingDisabled: boolean;
   hasSeenHomepageWelcome: boolean;
   inUSA: boolean;
+  isLevelbuilder: boolean;
+  aiTutorEnabledForPilot: boolean;
 }

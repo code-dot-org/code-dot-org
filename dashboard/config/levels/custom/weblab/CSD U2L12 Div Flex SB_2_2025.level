@@ -30,7 +30,8 @@
     ],
     "map_reference": "/courses/csd-2024/guides/flexbox",
     "encrypted_examples": "F1+igug1REdPxHwL7MRVX7MHZz4Q3w/IkUUDVKSC/nObJqskK/Gu5dvcm6op\nCtwn5QYdsEoFj2bmA+PCIeQitA==\n",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-12T20:54:42.099+00:00\",\"changed\":[\"cloned from \\\"CSD U2L12 Div Flex SB_2\\\"\"],\"cloned_from\":\"CSD U2L12 Div Flex SB_2\"}]"

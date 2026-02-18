@@ -33,7 +33,7 @@
         "tabOrder": 1
       }
     },
-    "ai_tutor_available": true
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-19T20:09:57.699+00:00\",\"changed\":[\"cloned from \\\"CSA U4L2-L7b_modular\\\"\"],\"cloned_from\":\"CSA U4L2-L7b_modular\"}]"

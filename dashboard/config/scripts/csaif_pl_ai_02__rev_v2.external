@@ -1,0 +1,42 @@
+name 'csaif_pl_ai_02_-rev_v2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Multimodal Prompting
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Multimodal Model</strong> is an AI system that can process information from multiple types of input.</p>
+</div>
+
+<img src="https://images.code.org/1a18d8f154f916d657b501f0ad677efd-Screenshot 2025-04-07 at 11.29.10 AM.png" alt="Remember to chat responsibily pop-up" width="250px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
+
+#### AI Chat Lab allows you to use multimodal prompts—including uploading an image or sharing a PDF—alongside text. When an AI can combine information from multiple sources, it can form a more complete understanding of your prompt. This often leads to clearer, more accurate, and more useful responses than text alone.
+
+#### However, adding more information also increases what the AI can pick up. Modern multimodal AI doesn’t just “see” visible objects in an image—it can sometimes infer:
+* #### approximate time of day,
+* #### location clues based on surroundings,
+* #### emotions or activities of people in the image,
+* #### or other personal or contextual details you may not intend to share.
+
+#### Because of this, it’s important to think carefully before uploading images or documents, especially those with people or personal information.
+
+#### There are also both benefits and risks when AI interprets images without human context. AI might make reasonable guesses, but it can also misunderstand a scene or misidentify objects. Clear prompting helps guide the AI back toward your intended meaning.
+
+<div style="background-color:#F5F7F8; border-left: 6px solid #B7E0E5; padding: 10px; margin-top: 20px; font-family: sans-serif; max-width: 70%">
+  <strong style="font-size: 16px;"><i class="fa-solid fa-user-graduate"></i> Career Journeys:</strong>
+  <span style="font-size: 14px;">Multimodal AI is used in many industries including: </span>
+  <ul>
+  <li>Accessibility: screen readers interpreting images and text</li>
+  <li>Healthcare: AI analyzing X-ray images and text</li>
+  <li>Translation: real-time text and audio speech translation</li>
+  <li>Security: facial and object recognition</li>
+  </ul>
+</div>
+
+<br>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ Multimodal AI is introduced in Lesson 2. You can find more details in the full <a href='https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/1/lessons/2' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+</p>
+MARKDOWN

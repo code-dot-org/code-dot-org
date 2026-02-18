@@ -12,7 +12,8 @@
     "parent_level_id": 20031,
     "name_suffix": "_2025",
     "encrypted": "false",
-    "mini_rubric": "false"
+    "mini_rubric": "false",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

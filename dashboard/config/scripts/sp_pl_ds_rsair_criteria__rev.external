@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Effective Data Questions
 
-#### In lesson 6, students will complete the **Three Reads** strategy again, but this time focus on improving their questions using the ***RSAIR*** approach.
+#### In lesson 5, students will complete the **Three Reads** strategy again, but this time focus on improving their questions using the ***RSAIR*** approach.
 
 ## RSAIR Criteria 
 <br>
@@ -57,10 +57,5 @@ markdown <<MARKDOWN
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
     ➡️ This activity is from Lesson 5. You can find more details in the full <a href='https://studio.code.org/s/aif6-2025/lessons/5' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
 </p>
-
-
-
-## Let's continue to storytelling with data!
-
 
 MARKDOWN

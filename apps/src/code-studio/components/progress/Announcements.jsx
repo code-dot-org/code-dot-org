@@ -14,7 +14,6 @@ export default class Announcements extends Component {
     announcements: PropTypes.arrayOf(announcementShape).isRequired,
     width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    firehoseAnalyticsData: PropTypes.object,
   };
 
   /*
@@ -59,7 +58,6 @@ export default class Announcements extends Component {
                 : announcement.dismissible
             }
             width={this.props.width}
-            firehoseAnalyticsData={this.props.firehoseAnalyticsData}
           />
         ))}
       </div>

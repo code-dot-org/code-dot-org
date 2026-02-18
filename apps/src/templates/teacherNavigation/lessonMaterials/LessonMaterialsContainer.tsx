@@ -24,16 +24,17 @@ import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teac
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 import AIBotTAIcon from '@cdo/static/ai-bot-ta-tag-icon.png';
 
 import LessonSelector from '../../teacherDashboardShared/LessonSelector';
 import UnitSelectorV2 from '../../teacherDashboardShared/UnitSelectorV2';
 
+import CustomLessonResources from './CustomLessonResources';
 import {LessonMaterialsEmptyState} from './LessonMaterialsEmptyState';
 import {Lesson} from './LessonMaterialTypes';
 import LessonResources from './LessonResources';
-import {AIF_UNIT_IDS} from './LessonSummaryConstants';
 import UnitResourcesDropdown from './UnitResourcesDropdown';
 
 import styles from './lesson-materials.module.scss';
@@ -82,6 +83,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   const [showTranscriptDialog, setShowTranscriptDialog] = useState(false);
   const [finishedListeningToSummary, setFinishedListeningToSummary] =
     useState(false);
+  const [canShowLessonSummaries, setCanShowLessonSummaries] = useState(false);
 
   const userId = useAppSelector(state => state.currentUser.userId);
 
@@ -129,11 +131,9 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     state => state.currentUser.showAITALessonSummary
   );
 
-  // This checks to see if the AI lesson summaries experiment or DCDO key are set
-  // or if the section has AIF assigned in order to enable AI Lesson Summaries
-  const canShowLessonSummaries =
-    (showAITALessonSummary || AIF_UNIT_IDS.includes(unitToLoad)) &&
-    aiTALessonSummaryInfo;
+  const showAITAPodcasts = useAppSelector(
+    state => state.currentUser.showAITAPodcasts
+  );
 
   React.useEffect(() => {
     const selectedSectionId = selectedSection.id;
@@ -152,6 +152,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     lessonMaterialsCachedLoader(unitToLoad).then(data => {
       setLessonMaterials(data);
       setIsLoading(false);
+      setSelectedLesson(data.lessons[0]);
 
       if (data?.unitName) {
         analyticsReporter.sendEvent(EVENTS.VIEW_LESSON_MATERIALS, {
@@ -196,30 +197,35 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   const [selectedLesson, setSelectedLesson] = useState<Lesson | null>(null);
 
   React.useEffect(() => {
-    if (selectedLesson) {
+    if (selectedLesson && showAITALessonSummary) {
       HttpClient.fetchJson<LessonSummaryInfoResponse>(
         `/ai_lesson_summaries/show?lesson_id=${selectedLesson?.id}`
       )
         .then(response => {
           const preParsedResponse = response.value?.lesson_summary;
-          setAITALessonSummaryInfo(
-            response.response.ok && preParsedResponse
-              ? JSON.parse(preParsedResponse)
-              : null
-          );
+          if (response.response.ok && preParsedResponse) {
+            setAITALessonSummaryInfo(JSON.parse(preParsedResponse));
+            setCanShowLessonSummaries(true);
+          } else {
+            setAITALessonSummaryInfo(null);
+            setCanShowLessonSummaries(false);
+          }
         })
         .catch(error => {
           setAITALessonSummaryInfo(null);
+          setCanShowLessonSummaries(false);
           console.log(`Error: ${error}`);
         });
     }
-  }, [userId, selectedLesson]);
+  }, [userId, selectedLesson, showAITALessonSummary]);
 
   const handleLessonSummaryAskAITAClick = () => {
     dispatch(
       fetchThreadMessages({
+        contextType: AiDiffContext.LESSON,
         thread: 0,
         threadType: THREAD_TYPES.lessonSummaryHelp,
+        curriculumCourses: [],
       })
     );
     dispatch(setChatIsOpen(true));
@@ -292,6 +298,20 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     );
   };
 
+  const renderCustomResources = () => {
+    if (selectedLesson && experiments.isEnabled(experiments.AI_ARTIFACT)) {
+      return (
+        <CustomLessonResources
+          unitId={selectedSection.unitId}
+          lessonId={selectedLesson.id}
+          sectionId={selectedSection.id}
+        />
+      );
+    } else {
+      return null;
+    }
+  };
+
   const renderLessonSummaryContainer = () => {
     return (
       <>
@@ -323,7 +343,8 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           />
         )}
         <div className={styles.lessonSummaryContainer}>
-          {experiments.isEnabled('ai-lesson-podcasts') && (
+          {(showAITAPodcasts ||
+            experiments.isEnabled('ai-lesson-podcasts')) && (
             <div className={styles.lessonSummarySection}>
               <div className={styles.lessonSummarySectionHeader}>
                 <div className={styles.lessonSummarySectionTitle}>
@@ -452,11 +473,13 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     );
   }
 
+  const showSpinner = isLoading || needsReload;
+
   return (
     <div className={styles.lessonContainer}>
       <div className={styles.lessonMaterialsContainer}>
         {renderHeader()}
-        {isLoading || needsReload ? (
+        {showSpinner ? (
           <div>
             <Spinner size={'large'} />
           </div>
@@ -464,10 +487,11 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           <>
             {renderTeacherResources()}
             {renderStudentResources()}
+            {renderCustomResources()}
           </>
         )}
       </div>
-      {canShowLessonSummaries && renderLessonSummaryContainer()}
+      {!showSpinner && canShowLessonSummaries && renderLessonSummaryContainer()}
     </div>
   );
 };

@@ -1,8 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  BodyThreeText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -63,6 +60,11 @@ const Notification: React.FC<NotificationProps> = ({
     <li className={styles.notification}>
       <FontAwesomeV6Icon
         iconName={notificationOrPlaceholder.iconName}
+        iconFamily={
+          notificationOrPlaceholder.iconName === 'solid-flask-sparkle'
+            ? 'kit'
+            : undefined
+        }
         iconStyle="solid"
         className={classNames(
           styles.icon,
@@ -74,19 +76,19 @@ const Notification: React.FC<NotificationProps> = ({
         data-testid={'icon-' + notificationOrPlaceholder.iconName}
       />
       <div className={styles.textAndLinks}>
-        <BodyThreeText
-          noMargin
+        <Typography
           className={classNames(
             styles.text,
             isLoading && skeletonizeContent.skeletonizeContent
           )}
+          variant="body3"
         >
-          <StrongText>
+          <Typography variant="strong">
             {notificationOrPlaceholder.title}
             {': '}
-          </StrongText>
+          </Typography>
           {notificationOrPlaceholder.description}
-        </BodyThreeText>
+        </Typography>
         <ol className={styles.links}>
           {notificationOrPlaceholder.hrefLinks?.length > 0 &&
             notificationOrPlaceholder.hrefLinks.map((link, index) => (
@@ -135,17 +137,17 @@ const Notification: React.FC<NotificationProps> = ({
             ))}
         </ol>
       </div>
-      <BodyThreeText
+      <Typography
         className={classNames(
           styles.date,
           isLoading && skeletonizeContent.skeletonizeContent
         )}
-        noMargin
+        variant="body3"
       >
         {getRelativeTimeString(
           notificationOrPlaceholder.publishedAt
         ).toLocaleUpperCase()}
-      </BodyThreeText>
+      </Typography>
       {!notificationOrPlaceholder.readAt && notification !== null ? (
         <FontAwesomeV6Icon
           iconName="circle"

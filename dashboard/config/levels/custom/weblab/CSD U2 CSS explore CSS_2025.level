@@ -23,7 +23,8 @@
       "/courses/csd-2024/guides/headings-and-paragraphs",
       "/courses/csd-2024/guides/html-tags"
     ],
-    "map_reference": "/courses/csd-2024/guides/web-lab"
+    "map_reference": "/courses/csd-2024/guides/web-lab",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

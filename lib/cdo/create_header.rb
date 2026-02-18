@@ -44,6 +44,10 @@ class CreateHeader
     dance: {
       image: "header-dance-party-icon.png"
     },
+    music_dance_ai: {
+      image: "header-music-dance-ai-icon.png",
+      url: CDO.code_org_url("/mix-move-ai")
+    },
   }.freeze
 
   # project info data can be inferred from the key, except when otherwise
@@ -61,15 +65,16 @@ class CreateHeader
 
   def self.get_create_dropdown_contents(options)
     entries = options[:limit_project_types] == "true" ?
-      %w(spritelab minecraft_designer) :
-      %w(spritelab applab gamelab)
+      %w(spritelab minecraft_designer music artist dance) :
+      %w(music_dance_ai spritelab applab gamelab music pythonlab artist dance)
 
-    entries << "music"
-    entries += options[:limit_project_types] == "true" ?
-      %w(artist dance) :
-      %w(pythonlab artist dance)
-
-    if options[:project_type] && !(entries.include? options[:project_type])
+    if options[:project_type] &&
+        !entries.include?(options[:project_type]) &&
+        renderable_project_type?(
+          options[:project_type],
+          loc_prefix: options[:loc_prefix],
+          ge_region: options[:ge_region]
+        )
       entries.unshift(options[:project_type])
     end
 
@@ -77,5 +82,10 @@ class CreateHeader
     entries &= available_entries if available_entries
 
     entries.map {|entry| get_project_info(entry, ge_region: options[:ge_region])}
+  end
+
+  def self.renderable_project_type?(key, loc_prefix:, ge_region: nil)
+    info = get_project_info(key, ge_region: ge_region)
+    I18n.exists?("#{loc_prefix}#{info[:title]}")
   end
 end

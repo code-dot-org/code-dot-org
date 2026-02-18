@@ -20,7 +20,8 @@
     ],
     "mode": "{\r\n  \"datasets\": [\r\n    \"club_biased_toy\",\r\n    \"club_sparse_toy\",\r\n    \"club_random_toy\",\r\n    \"club_specific_toy\"\r\n  ],\r\n  \"hideSave\": true,\r\n  \"hideInstructionsOverlay\": true\r\n}",
     "teacher_markdown": "**Additional Resources:** This level is _not_ intended to be completed independently by students or in a self-paced manner - students should be following along with instructions from a teacher and completing information in an activity guide. [See the lesson plan](.././) for more information about how to support students in completing this level.",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

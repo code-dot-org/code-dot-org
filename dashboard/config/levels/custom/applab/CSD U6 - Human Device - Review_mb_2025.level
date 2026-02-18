@@ -68,6 +68,7 @@
     "project_template_level_name": "CSD U6 - Human Device - template_mb_2025",
     "map_reference": "/courses/csd-2022/guides/problem-solving-process-programming",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

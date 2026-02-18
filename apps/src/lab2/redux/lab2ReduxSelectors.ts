@@ -21,13 +21,6 @@ export const hasPageError = (state: {lab: LabState}) => {
   return state.lab.pageError !== undefined;
 };
 
-// If the share and remix buttons should be hidden for the lab. Defaults to true (hidden)
-// if not specified.
-export const shouldHideShareAndRemix = (state: {lab: LabState}): boolean => {
-  const hideShareAndRemix = state.lab.levelProperties?.hideShareAndRemix;
-  return hideShareAndRemix === undefined ? true : hideShareAndRemix;
-};
-
 export const isProjectTemplateLevel = (state: {lab: LabState}) =>
   !!state.lab.levelProperties?.projectTemplateLevelName;
 
@@ -76,6 +69,17 @@ export const isReadOnlyWorkspace = (state: RootState) => {
     isAiTutorVersion ||
     readOnlyPredictLevel
   );
+};
+
+// If the level should show an exemplar link, the exemplar link is the current url
+// with the query parameter exemplar=true at the end.
+export const getExampleSolutionLink = (state: RootState) => {
+  if (state.lab.levelProperties?.showExemplarLink) {
+    const url = new URL(window.location.href);
+    url.searchParams.set('exemplar', 'true');
+    return [url.toString()];
+  }
+  return [];
 };
 
 // Helper functions

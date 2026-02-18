@@ -10,13 +10,13 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "# Fallback Label\n\nA **fallback label** is text you show when some data is missing or not provided.\n\nInstead of leaving a blank space, a fallback label makes it clear what’s happening.\n\n**Example:**\n* If a user doesn’t enter their location, the app shows `Location: Not provided` instead of leaving it empty.\n",
+        "text": "# Fallback Label\n\nA **fallback label** is text you show when some data is missing or not provided. Instead of leaving a blank space, a fallback label makes it clear what’s happening.\n\n**Example:** If a user doesn’t enter their email address, the app shows `Email: Not provided` instead of leaving it empty.\n",
         "imageUrl": "https://images.code.org/e07ed55deda2d9d81547b3cef8a1a289-Screenshot 2025-11-24 141246.png",
         "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
         "layout": "text-bottom-left"
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-24T16:17:22.719+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson9-vocab-threshold-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson9-vocab-threshold-test-2025\"},{\"changed_at\":\"2025-11-24 16:18:15 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-24 22:13:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-24T16:17:22.719+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson9-vocab-threshold-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson9-vocab-threshold-test-2025\"},{\"changed_at\":\"2025-11-24 16:18:15 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-24 22:13:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-12 17:37:36 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-12 17:38:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

@@ -56,7 +56,6 @@
       }
     ],
     "level_data": {
-      "danceMove": "roll",
       "guideMode": "instructions",
       "startSources": {
         "blocks": {

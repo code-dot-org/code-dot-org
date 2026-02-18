@@ -5,8 +5,6 @@ class UnitTest < ActiveSupport::TestCase
   include SharedConstants
   include Minitest::RSpecMocks
 
-  self.use_transactional_test_case = true
-
   setup_all do
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     @game = create(:game)
@@ -467,10 +465,6 @@ class UnitTest < ActiveSupport::TestCase
 
   test 'banner image' do
     assert_nil Unit.find_by_name('flappy').banner_image
-    course1_unit = create(:script, name: 'course1')
-    course2_unit = create(:script, name: 'course2')
-    assert_equal 'banner_course1.jpg', course1_unit.banner_image
-    assert_equal 'banner_course2.jpg', course2_unit.banner_image
     assert_nil Unit.find_by_name('csf1').banner_image
   end
 
@@ -1935,40 +1929,41 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'does allow major changes to unit within in_development course' do
-    @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
-    @unit_in_unit_group.reload
-    assert @unit_in_unit_group.allow_major_curriculum_changes?
+    unit_group = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
+    unit = unit_group.first_unit
+    assert unit.allow_major_curriculum_changes?
   end
 
   test 'does allow major changes to unit within pilot course' do
-    @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot)
-    @unit_in_unit_group.reload
-    assert @unit_in_unit_group.allow_major_curriculum_changes?
+    unit_group = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot)
+    unit = unit_group.first_unit
+    assert unit.allow_major_curriculum_changes?
   end
 
   test 'does not allow major changes to unit within beta course' do
-    @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
-    @unit_in_unit_group.reload
-    refute @unit_in_unit_group.allow_major_curriculum_changes?
+    unit_group = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
+    unit = unit_group.first_unit
+    refute unit.allow_major_curriculum_changes?
   end
 
   test 'does not allow major changes to unit within stable course' do
-    @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    @unit_in_unit_group.reload
-    refute @unit_in_unit_group.allow_major_curriculum_changes?
+    unit_group = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    unit = unit_group.first_unit
+    refute unit.allow_major_curriculum_changes?
   end
 
   test 'does not allow major changes to in_development unit within stable course' do
-    @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    @unit_in_unit_group.reload
-    refute @unit_in_unit_group.allow_major_curriculum_changes?
+    unit_group = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    unit = unit_group.first_unit
+    unit.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
+    refute unit.allow_major_curriculum_changes?
   end
 
   test 'does allow major changes to hidden unit within stable course' do
-    @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    @unit_in_unit_group.update!(hide_within_course: true)
-    @unit_in_unit_group.reload
-    assert @unit_in_unit_group.allow_major_curriculum_changes?
+    unit_group = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    unit = unit_group.first_unit
+    unit.update!(hide_within_course: true)
+    assert unit.allow_major_curriculum_changes?
   end
 
   class MigratedScriptCopyTests < ActiveSupport::TestCase
@@ -2288,6 +2283,58 @@ class UnitTest < ActiveSupport::TestCase
     assert unit_with_ai_tutor.has_ai_tutor_level?
   end
 
+  test 'with_ai_chat_tools returns units with essential or optional AI chat tools' do
+    essential_ai_level = create(:aichat)
+    optional_ai_level = create(:level, properties: {'ai_tutor_available' => true})
+    normal_level = create(:level)
+
+    unit_with_essential_ai = create(:script, name: 'unit-with-ai')
+    lesson_with_essential_ai = create(:lesson, :with_lesson_group, script: unit_with_essential_ai)
+    create(:script_level, script: unit_with_essential_ai, lesson: lesson_with_essential_ai, levels: [essential_ai_level])
+
+    unit_with_optional_ai = create(:script, name: 'unit-with-tutor')
+    lesson_with_optional_ai = create(:lesson, :with_lesson_group, script: unit_with_optional_ai)
+    create(:script_level, script: unit_with_optional_ai, lesson: lesson_with_optional_ai, levels: [optional_ai_level])
+
+    unit_without_ai = create(:script, name: 'unit-without-ai')
+    lesson_without_ai = create(:lesson, :with_lesson_group, script: unit_without_ai)
+    create(:script_level, script: unit_without_ai, lesson: lesson_without_ai, levels: [normal_level])
+
+    result = Unit.with_ai_chat_tools
+    assert_includes result, unit_with_essential_ai
+    assert_includes result, unit_with_optional_ai
+    refute_includes result, unit_without_ai
+
+    assert unit_with_essential_ai.requires_ai_chat_tools?
+    assert unit_with_essential_ai.has_ai_chat_tools?
+    refute unit_with_optional_ai.requires_ai_chat_tools?
+    assert unit_with_optional_ai.has_ai_chat_tools?
+    refute unit_without_ai.requires_ai_chat_tools?
+    refute unit_without_ai.has_ai_chat_tools?
+  end
+
+  test 'with_essential_ai_chat_tools returns only units with essential AI chat tools' do
+    essential_ai_level = create(:weblab2)
+    normal_level = create(:level)
+
+    unit_with_essential_ai = create(:script, name: 'unit-with-ai')
+    lesson_with_essential_ai = create(:lesson, :with_lesson_group, script: unit_with_essential_ai)
+    create(:script_level, script: unit_with_essential_ai, lesson: lesson_with_essential_ai, levels: [essential_ai_level])
+
+    unit_without_ai = create(:script, name: 'unit-without-ai')
+    lesson_without_ai = create(:lesson, :with_lesson_group, script: unit_without_ai)
+    create(:script_level, script: unit_without_ai, lesson: lesson_without_ai, levels: [normal_level])
+
+    result = Unit.with_essential_ai_chat_tools
+    assert_includes result, unit_with_essential_ai
+    refute_includes result, unit_without_ai
+
+    assert unit_with_essential_ai.requires_ai_chat_tools?
+    assert unit_with_essential_ai.has_ai_chat_tools?
+    refute unit_without_ai.requires_ai_chat_tools?
+    refute unit_without_ai.has_ai_chat_tools?
+  end
+
   describe '#title_for_display' do
     let(:numbered_units) {nil}
     let(:unit_group) {create(:unit_group, numbered_units: numbered_units)}
@@ -2398,6 +2445,49 @@ class UnitTest < ActiveSupport::TestCase
         end
       end
     end
+  end
+
+  test 'script_json_filepath returns UI test directory for ui-test- prefixed units' do
+    expected = "#{Rails.root}/test/ui/config/scripts_json/ui-test-example.script_json"
+    assert_equal expected, Unit.script_json_filepath('ui-test-example')
+  end
+
+  test 'script_json_filepath returns normal directory for non-ui-test units' do
+    expected = "#{Rails.root}/config/scripts_json/regular-script.script_json"
+    assert_equal expected, Unit.script_json_filepath('regular-script')
+  end
+
+  test 'script_json_filepath returns normal directory when ui-test is not a prefix' do
+    expected = "#{Rails.root}/config/scripts_json/my-ui-test-script.script_json"
+    assert_equal expected, Unit.script_json_filepath('my-ui-test-script')
+  end
+
+  test 'write_script_json updates md5 in levelbuilder mode' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns(true)
+
+    unit = create(:unit, name: 'test-write-md5')
+    unit.write_script_json
+
+    unit.reload
+    refute_nil unit.md5
+
+    # Verify MD5 matches file contents
+    filepath = Unit.script_json_filepath(unit.name)
+    expected_md5 = Digest::MD5.hexdigest(File.read(filepath))
+    assert_equal expected_md5, unit.md5
+  ensure
+    FileUtils.rm_f(Unit.script_json_filepath('test-write-md5'))
+  end
+
+  test 'write_script_json does nothing outside levelbuilder mode' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns(false)
+
+    unit = create(:unit, name: 'test-no-write-md5')
+    unit.write_script_json
+
+    unit.reload
+    assert_nil unit.md5
+    refute File.exist?(Unit.script_json_filepath(unit.name))
   end
 
   private def has_unlaunched_unit?(units)

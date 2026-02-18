@@ -15,18 +15,18 @@
     "widget_view": "false",
     "initial_view_mode": "split",
     "disable_edit_run_for_submission": "false",
-    "ai_tutor_mode": "outline",
+    "ai_tutor_mode": "tutor",
     "predict_settings": {
       "isPredictLevel": false,
       "solution": "",
       "questionType": "freeResponse",
-      "allowMultipleAttempts": false,
       "placeholderText": "",
       "multipleChoiceOptions": [
         ""
       ],
       "freeResponseHeight": 50,
-      "codeEditableAfterSubmit": false
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
     },
     "bubble_choice_description": "Apply if student or 65+ or referral, and not an expired code.",
     "start_sources": {
@@ -66,6 +66,6 @@
     },
     "encrypted_exemplar_sources": "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\n"
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-13T03:34:06.576+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson10-level3c-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson10-level3c-test-2025\"},{\"changed_at\":\"2025-11-13 03:35:26 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-13T03:34:06.576+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson10-level3c-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson10-level3c-test-2025\"},{\"changed_at\":\"2025-11-13 03:35:26 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-12-19 14:47:03 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Weblab2>

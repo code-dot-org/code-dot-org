@@ -1,5 +1,5 @@
 class CodeprojectsPreviewController < ApplicationController
-  include AllowedHostnameHelper
+  include SharedConstants
   # Public preview page, static content for now.
   def show
     set_content_security_policy
@@ -8,7 +8,7 @@ class CodeprojectsPreviewController < ApplicationController
 
   skip_forgery_protection only: :weblab2_project_service_worker
   def weblab2_project_service_worker
-    send_file "#{apps_dir}/src/codebridge/FilePreview/weblab2_project_service_worker.js", type: 'application/javascript'
+    send_file "#{apps_dir}/src/weblab2/htmlPreview/weblab2_project_service_worker.js", type: 'application/javascript'
   end
 
   def not_found
@@ -16,9 +16,14 @@ class CodeprojectsPreviewController < ApplicationController
     render 'page_not_found', layout: false, status: :not_found
   end
 
+  # This is mostly copied over to apps/src/weblab2/htmlPreview/contentSecurityPolicyHelper.ts
+  # to generate the same Content Security Policy on the frontend. If you make changes here,
+  # please make sure to update the frontend version as well. The only differences between the two are we
+  # don't need to add the websocket URL in the frontend version, and we get the preview and code.org urls
+  # differently (and don't need to account for multiple ports in development, since we know what port we are using).
   def set_content_security_policy
     code_studio_url = CDO.dashboard_site_host
-    preview_url = CDO.preview_codeprojects_hostname
+    preview_url = "*.#{CDO.preview_codeprojects_hostname}"
     # Chrome will block connecting to an http url from an https page, even with upgrade-insecure-requests.
     # Therefore we explicitly set the prefix to 'http', which will also allow https.
     prefix = 'http://'
@@ -34,7 +39,7 @@ class CodeprojectsPreviewController < ApplicationController
 
       # Explicitly allow WebSocket connections to preview.localhost.codeprojects.org:9000, which is used by the webpack dev server
       # both on ports 9000 and 3000.
-      allowed_connect_src += " ws://preview.localhost.codeprojects.org:9000/ws"
+      allowed_connect_src += " ws://#{preview_url}:9000/ws"
       # preview_url does not have a port by default.
       preview_url = "#{preview_url}:3000 #{preview_url}:9000"
     end
@@ -77,8 +82,9 @@ class CodeprojectsPreviewController < ApplicationController
 
     # Security Control: Restrict image loading sources (overrides default-src for images)
     # Goal: Allow student images while preventing external image injection
-    # Remaining Risk: Data URLs could contain malicious content (mitigated by iframe sandbox)
-    img_src = "'self' data: blob: #{code_studio_url} #{allowed_image_src}"
+    # We explicitly allow the placeholder image url on all environments so it works across environments. The placeholder image gets hard-coded
+    # into starter code.
+    img_src = "'self' blob: #{code_studio_url} #{allowed_image_src} https://studio.code.org/lab_resources/html-placeholder-image.avif"
 
     # Security Control: Restrict which sites can embed this page in iframes
     # Goal: Prevent clickjacking attacks by controlling frame embedding
@@ -97,7 +103,8 @@ class CodeprojectsPreviewController < ApplicationController
       "script-src #{script_src}",
       "style-src #{style_src}",
       "img-src #{img_src}",
-      "font-src #{font_src}"
+      "font-src #{font_src}",
+      "form-action 'none'",
     ]
 
     unless rack_env?(:development) || rack_env?(:test)

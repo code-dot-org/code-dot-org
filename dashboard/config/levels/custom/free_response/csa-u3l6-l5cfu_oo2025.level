@@ -16,7 +16,8 @@
     "allow_multiple_attempts": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "name_suffix": "_oo2025"
+    "name_suffix": "_oo2025",
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-13T00:08:08.912+00:00\",\"changed\":[\"cloned from \\\"csa-u3l6-l5cfu_2024\\\"\"],\"cloned_from\":\"csa-u3l6-l5cfu_2024\"}]",

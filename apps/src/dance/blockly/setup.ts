@@ -1,5 +1,6 @@
 import * as blockUtils from '@cdo/apps/block_utils';
 import {BlockDefinition} from '@cdo/apps/blockly/types';
+import {registerCustomProcedureBlocks} from '@cdo/apps/blockly/utils';
 import danceBlocks from '@cdo/apps/dance/blockly/blocks';
 
 import blockDefinitions from './blockDefinitions';
@@ -10,10 +11,9 @@ export function setupBlocklyEnvironment() {
   if (isBlocklyEnvironmentSetup) {
     return;
   }
-  Blockly.cdoUtils.registerCustomProcedureBlocks();
+  registerCustomProcedureBlocks();
   delete Blockly.Blocks.procedures_defreturn;
   delete Blockly.Blocks.procedures_ifreturn;
-  Blockly.setInfiniteLoopTrap();
 
   for (const {definition, generator, extendedOptions} of blockDefinitions) {
     Blockly.Blocks[definition.type] = {

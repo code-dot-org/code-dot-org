@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\nHmmm . . . there are some issues with this code that's preventing the `Painter` from getting to the other end of The Neighborhood. Find and fix the bugs!\r\n\r\n![](https://images.code.org/fb9b77e97ce9d69299230a1cf6f44f10-image-1744678546469.gif)",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

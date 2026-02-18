@@ -194,9 +194,8 @@ export function elementsEquivalent(expected, given, ignoreChildBlocks) {
       (expectedTagName === 'field' && givenTagName === 'title')
     ) {
       // titles were renamed to fields in Blockly in 2013. As of Dec 2021, all
-      // blockly code on our platform (both CdoBlockly and Google Blockly)
-      // serializes using <field> tags, but we should still treat <title> tags
-      // as equivalent for backwards compatibility.
+      // blockly code on our platform serializes using <field> tags, but we
+      // should still treat <title> tags as equivalent for backwards compatibility.
       // Test code and validation code still use <title> tags.
     } else {
       return false;
@@ -269,9 +268,8 @@ function attributesEquivalent(expected, given) {
  */
 function childrenEquivalent(expected, given, ignoreChildBlocks) {
   const filterFn = function (node) {
-    // CDO Blockly returns tag names in all caps
     const tagName = node.tagName && node.tagName.toLowerCase();
-    // Google Blockly sometimes adds a mutation where CDO Blockly would not.
+    // Ignore mutation nodes to tolerate legacy/version differences in serialized XML.
     const isMutation = tagName === 'mutation';
     const isIgnorableChild =
       ignoreChildBlocks && (tagName === 'next' || tagName === 'statement');

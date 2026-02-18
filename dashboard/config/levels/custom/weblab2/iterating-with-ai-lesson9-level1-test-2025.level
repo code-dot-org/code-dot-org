@@ -42,7 +42,7 @@
       ]
     },
     "encrypted": "false",
-    "long_instructions": "## Do This\r\n\r\nImagine you're curating the homepage of an music streaming platform. The algorithm only shows \"top artists,\" but it seems to be the same few people every week. Why do some creators stay hidden?\r\n\r\n**Run and Observe:**\r\n* Enter **1000** in the input and click \"Show Top Artists\". You should see a mix of genres and ages.\r\n* Enter **1,000,000**. Notice who disappears.\r\n* **Reflection:** What do the remaining \"Top Artists\" have in common? (Look at their different properties).",
+    "long_instructions": "## Do This\r\n\r\nImagine you're curating the homepage of a music streaming platform. The algorithm only shows \"top artists,\" but it seems to be the same few people every week. Why do some creators stay hidden?\r\n\r\n**Record your answers in your activity guide:**\r\n* Enter **100** in the input and click \"Show Top Artists\". What do you notice? \r\n* Enter **1,000,000**. What do you notice now?\r\n* **Reflect:** What do the remaining \"Top Artists\" have in common? (Look at their different properties).",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "widget_view": "false",
@@ -62,6 +62,6 @@
       "codeEditableAfterSubmit": false
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-25 19:00:25 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-25 19:01:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-25 19:15:12 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-25 19:00:25 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-25 19:01:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-25 19:15:12 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-12 16:28:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-12 18:37:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-12 19:11:24 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-12 19:13:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

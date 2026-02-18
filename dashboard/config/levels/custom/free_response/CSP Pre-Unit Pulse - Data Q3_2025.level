@@ -15,7 +15,8 @@
     "allow_multiple_attempts": "true",
     "skip_dialog": true,
     "skip_sound": true,
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-11T18:22:41.889+00:00\",\"changed\":[\"cloned from \\\"CSP Pre-Unit Pulse - Data Q3_2024\\\"\"],\"cloned_from\":\"CSP Pre-Unit Pulse - Data Q3_2024\"}]",

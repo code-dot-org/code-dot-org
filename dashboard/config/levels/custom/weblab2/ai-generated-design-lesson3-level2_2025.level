@@ -13,18 +13,18 @@
     "hide_share_and_remix": "false",
     "widget_view": "false",
     "initial_view_mode": "preview",
-    "ai_tutor_mode": "suggest",
+    "ai_tutor_mode": "designer",
     "predict_settings": {
       "isPredictLevel": false,
       "solution": "",
       "questionType": "freeResponse",
-      "allowMultipleAttempts": false,
       "placeholderText": "",
       "multipleChoiceOptions": [
         ""
       ],
       "freeResponseHeight": 50,
-      "codeEditableAfterSubmit": false
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
     },
     "start_sources": {
       "folders": {
@@ -86,6 +86,6 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-23T19:16:57.347+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson3-level1-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson3-level1-test-2025\"},{\"changed_at\":\"2025-10-23 19:21:58 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-23T19:16:57.347+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson3-level1-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson3-level1-test-2025\"},{\"changed_at\":\"2025-10-23 19:21:58 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-12-19 14:19:09 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2025-12-19 14:20:02 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2025-12-19 14:20:10 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Weblab2>

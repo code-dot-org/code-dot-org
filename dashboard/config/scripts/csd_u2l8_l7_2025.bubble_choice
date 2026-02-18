@@ -1,0 +1,14 @@
+name 'CSD U2L8-L7-2025'
+display_name 'Adding Images'
+description 'Practice your new skills here.'
+
+sublevels
+level 'CSD U2L8-L7a-2025'
+level 'CSD U2L8-L7b-2025'
+level 'CSD U2L8-L7c-2025'
+level 'CSD U2L8-L7d-2025'
+level 'CSD U2L8-L7e-2025'
+level 'CSD U2L8-L7f-2025'
+level 'CSD U2L8-L7g-2025'
+
+uses_lab2

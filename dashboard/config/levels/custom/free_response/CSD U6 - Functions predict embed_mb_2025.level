@@ -16,7 +16,8 @@
     "encrypted": "false",
     "optional": "false",
     "allow_multiple_attempts": "false",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

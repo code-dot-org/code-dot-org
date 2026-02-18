@@ -23,7 +23,7 @@ let mockState: {
   aichat: Partial<AichatState>;
 } = {
   aichat: {
-    chatMessagePending: undefined,
+    chatEventsCurrent: [],
     saveInProgress: false,
     stagedFiles: [],
     userAddedSelectionContext: {},
@@ -38,6 +38,7 @@ jest.mock('@cdo/apps/util/reduxHooks', () => ({
 
 jest.mock('@cdo/apps/aichat/redux', () => ({
   __esModule: true,
+  ...jest.requireActual('@cdo/apps/aichat/redux'),
   submitChatContents: (...args: unknown[]) => mockSubmitChatContents(...args),
 }));
 
@@ -58,7 +59,7 @@ describe('UserChatMessageEditor', () => {
     mockSubmitChatContents.mockReset();
     mockState = {
       aichat: {
-        chatMessagePending: undefined,
+        chatEventsCurrent: [],
         saveInProgress: false,
         stagedFiles: [],
         userAddedSelectionContext: {},
@@ -83,9 +84,13 @@ describe('UserChatMessageEditor', () => {
   });
 
   it('disables editor when chat response is pending', async () => {
-    mockState.aichat.chatMessagePending = {
-      status: 'unknown',
-    } as PendingChatMessage;
+    mockState.aichat.chatEventsCurrent = [
+      {
+        status: 'unknown',
+        role: 'user',
+        chatMessageText: 'what is up?',
+      } as PendingChatMessage,
+    ];
 
     render(<UserChatMessageEditor {...baseProps} />);
 

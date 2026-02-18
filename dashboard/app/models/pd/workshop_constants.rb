@@ -38,58 +38,57 @@ module Pd
     # Each subject has the following constraints:
     # min_days: the minimum # of days a teacher must attend in order to be counted at all.
     # max_days: the maximum # of days the workshop can be recognized for.
-    # max_hours: the maximum # of hours the workshop can be recognized for.
     TIME_CONSTRAINTS = {
       COURSE_ECS => {
-        SUBJECT_ECS_PHASE_2 => {min_days: 3, max_days: 5, max_hours: 30},
-        SUBJECT_ECS_UNIT_3 => {min_days: 1, max_days: 1, max_hours: 6},
-        SUBJECT_ECS_UNIT_4 => {min_days: 1, max_days: 1, max_hours: 6},
-        SUBJECT_ECS_UNIT_5 => {min_days: 1, max_days: 1, max_hours: 6},
-        SUBJECT_ECS_UNIT_6 => {min_days: 1, max_days: 1, max_hours: 6},
-        SUBJECT_ECS_PHASE_4 => {min_days: 2, max_days: 3, max_hours: 18}
+        SUBJECT_ECS_PHASE_2 => {min_days: 3, max_days: 5},
+        SUBJECT_ECS_UNIT_3 => {min_days: 1, max_days: 1},
+        SUBJECT_ECS_UNIT_4 => {min_days: 1, max_days: 1},
+        SUBJECT_ECS_UNIT_5 => {min_days: 1, max_days: 1},
+        SUBJECT_ECS_UNIT_6 => {min_days: 1, max_days: 1},
+        SUBJECT_ECS_PHASE_4 => {min_days: 2, max_days: 3}
       },
       COURSE_CS_IN_A => {
-        SUBJECT_CS_IN_A_PHASE_2 => {min_days: 2, max_days: 3, max_hours: 18},
-        SUBJECT_CS_IN_A_PHASE_3 => {min_days: 1, max_days: 1, max_hours: 7}
+        SUBJECT_CS_IN_A_PHASE_2 => {min_days: 2, max_days: 3},
+        SUBJECT_CS_IN_A_PHASE_3 => {min_days: 1, max_days: 1}
       },
       COURSE_CS_IN_S => {
-        SUBJECT_CS_IN_S_PHASE_2 => {min_days: 2, max_days: 3, max_hours: 18},
-        SUBJECT_CS_IN_S_PHASE_3_SEMESTER_1 => {min_days: 1, max_days: 1, max_hours: 7},
-        SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 => {min_days: 1, max_days: 1, max_hours: 7}
+        SUBJECT_CS_IN_S_PHASE_2 => {min_days: 2, max_days: 3},
+        SUBJECT_CS_IN_S_PHASE_3_SEMESTER_1 => {min_days: 1, max_days: 1},
+        SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 => {min_days: 1, max_days: 1}
       },
       COURSE_CSP => {
-        SUBJECT_CSP_SUMMER_WORKSHOP => {max_hours: 33.5},
-        SUBJECT_CSP_WORKSHOP_1 => {min_days: 1, max_days: 1, max_hours: 6},
-        SUBJECT_CSP_WORKSHOP_2 => {min_days: 1, max_days: 1, max_hours: 6},
-        SUBJECT_CSP_WORKSHOP_3 => {min_days: 1, max_days: 1, max_hours: 6},
-        SUBJECT_CSP_WORKSHOP_4 => {min_days: 1, max_days: 1, max_hours: 6},
-        SUBJECT_CSP_WORKSHOP_1_2 => {min_days: 2, max_days: 2, max_hours: 12},
-        SUBJECT_CSP_WORKSHOP_3_4 => {min_days: 2, max_days: 2, max_hours: 12},
-        SUBJECT_CSP_TEACHER_CON => {max_hours: 33.5},
-        SUBJECT_CSP_FOR_RETURNING_TEACHERS => {max_hours: 7}
+        SUBJECT_CSP_SUMMER_WORKSHOP => {},
+        SUBJECT_CSP_WORKSHOP_1 => {min_days: 1, max_days: 1},
+        SUBJECT_CSP_WORKSHOP_2 => {min_days: 1, max_days: 1},
+        SUBJECT_CSP_WORKSHOP_3 => {min_days: 1, max_days: 1},
+        SUBJECT_CSP_WORKSHOP_4 => {min_days: 1, max_days: 1},
+        SUBJECT_CSP_WORKSHOP_1_2 => {min_days: 2, max_days: 2},
+        SUBJECT_CSP_WORKSHOP_3_4 => {min_days: 2, max_days: 2},
+        SUBJECT_CSP_TEACHER_CON => {},
+        SUBJECT_CSP_FOR_RETURNING_TEACHERS => {}
       },
       COURSE_CSA => {
-        SUBJECT_CSA_SUMMER_WORKSHOP => {max_hours: 33.5},
-        SUBJECT_CSA_WORKSHOP_1 => {min_days: 1, max_days: 1, max_hours: 6},
-        SUBJECT_CSA_WORKSHOP_2 => {min_days: 1, max_days: 1, max_hours: 6},
-        SUBJECT_CSA_WORKSHOP_3 => {min_days: 1, max_days: 1, max_hours: 6},
-        SUBJECT_CSA_WORKSHOP_4 => {min_days: 1, max_days: 1, max_hours: 6},
-        SUBJECT_CSA_WORKSHOP_1_2 => {min_days: 2, max_days: 2, max_hours: 12},
-        SUBJECT_CSA_WORKSHOP_3_4 => {min_days: 2, max_days: 2, max_hours: 12}
+        SUBJECT_CSA_SUMMER_WORKSHOP => {},
+        SUBJECT_CSA_WORKSHOP_1 => {min_days: 1, max_days: 1},
+        SUBJECT_CSA_WORKSHOP_2 => {min_days: 1, max_days: 1},
+        SUBJECT_CSA_WORKSHOP_3 => {min_days: 1, max_days: 1},
+        SUBJECT_CSA_WORKSHOP_4 => {min_days: 1, max_days: 1},
+        SUBJECT_CSA_WORKSHOP_1_2 => {min_days: 2, max_days: 2},
+        SUBJECT_CSA_WORKSHOP_3_4 => {min_days: 2, max_days: 2}
       },
       COURSE_CSD => {
-        SUBJECT_CSD_SUMMER_WORKSHOP => {max_hours: 33.5},
-        SUBJECT_CSD_WORKSHOP_1 => {min_days: 1, max_days: 1, max_hours: 6},
-        SUBJECT_CSD_WORKSHOP_2 => {min_days: 1, max_days: 1, max_hours: 6},
-        SUBJECT_CSD_WORKSHOP_3 => {min_days: 1, max_days: 1, max_hours: 6},
-        SUBJECT_CSD_WORKSHOP_4 => {min_days: 1, max_days: 1, max_hours: 6},
-        SUBJECT_CSD_WORKSHOP_1_2 => {min_days: 2, max_days: 2, max_hours: 12},
-        SUBJECT_CSD_WORKSHOP_3_4 => {min_days: 2, max_days: 2, max_hours: 12},
-        SUBJECT_CSD_TEACHER_CON => {max_hours: 33.5}
+        SUBJECT_CSD_SUMMER_WORKSHOP => {},
+        SUBJECT_CSD_WORKSHOP_1 => {min_days: 1, max_days: 1},
+        SUBJECT_CSD_WORKSHOP_2 => {min_days: 1, max_days: 1},
+        SUBJECT_CSD_WORKSHOP_3 => {min_days: 1, max_days: 1},
+        SUBJECT_CSD_WORKSHOP_4 => {min_days: 1, max_days: 1},
+        SUBJECT_CSD_WORKSHOP_1_2 => {min_days: 2, max_days: 2},
+        SUBJECT_CSD_WORKSHOP_3_4 => {min_days: 2, max_days: 2},
+        SUBJECT_CSD_TEACHER_CON => {}
       },
       COURSE_CSF => {
-        SUBJECT_CSF_101 => {min_days: 1, max_days: 1, max_hours: 7},
-        SUBJECT_CSF_201 => {min_days: 1, max_days: 1, max_hours: 6}
+        SUBJECT_CSF_101 => {min_days: 1, max_days: 1},
+        SUBJECT_CSF_201 => {min_days: 1, max_days: 1}
       }
     }.freeze
 

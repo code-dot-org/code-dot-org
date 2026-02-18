@@ -21,7 +21,7 @@
     "project_template_level_name": "CSA U6L5-ArrayLists PBT_pilot-2025",
     "teacher_markdown": "When we use print the `ArrayList`, it lists all of the elements that it contains. In this instance, it prints: `[10, 30, 50, 60]`.",
     "name_suffix": "_pilot-2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T21:31:07.226+00:00\",\"changed\":[\"cloned from \\\"CSA U6L5-L2_2025\\\"\"],\"cloned_from\":\"CSA U6L5-L2_2025\"}]"

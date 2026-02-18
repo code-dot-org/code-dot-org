@@ -23,7 +23,7 @@
       }
     },
     "name_suffix": "_oo2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-13T00:40:36.085+00:00\",\"changed\":[\"cloned from \\\"CSA U5L2-2D Arrays PBT_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L2-2D Arrays PBT_pilot-2025\"},{\"changed_at\":\"2025-05-22 18:01:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-04 19:49:15 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-11-04 19:49:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"

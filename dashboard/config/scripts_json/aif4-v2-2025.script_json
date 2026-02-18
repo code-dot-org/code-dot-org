@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-16 21:21:25 UTC",
+    "serialized_at": "2026-02-13 21:09:48 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -3916,6 +3916,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson1-level2_v3-2025"
+        ],
         "progression": "AI Networks Chat"
       },
       "bonus": false,
@@ -3938,6 +3941,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson1-level3_v3-2025"
+        ],
         "progression": "AI Networks Chat"
       },
       "bonus": false,
@@ -3960,6 +3966,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson1-level4_v2-2025"
+        ],
         "progression": "Internet Simulator"
       },
       "bonus": false,
@@ -4182,6 +4191,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson5-level2_v3-2025"
+        ],
         "progression": "Revising with AI"
       },
       "bonus": false,
@@ -4204,6 +4216,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson5-level3_v2-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4276,6 +4291,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson6-level3_v3-2025"
+        ],
         "progression": "AI Chat: Energy Costs of the Internet"
       },
       "bonus": false,
@@ -4298,6 +4316,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson6-level4_v3-2025"
+        ],
         "progression": "HTTP Requests Exploration"
       },
       "bonus": false,
@@ -4320,6 +4341,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson6-level5_v3-2025"
+        ],
         "progression": "HTTP Requests Exploration"
       },
       "bonus": false,
@@ -4342,6 +4366,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson6-level6_v3-2025"
+        ],
         "progression": "HTTP Requests Exploration"
       },
       "bonus": false,
@@ -4514,6 +4541,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson8-level1_v3-2025"
+        ],
         "progression": "AI Message Testing"
       },
       "bonus": false,
@@ -4536,6 +4566,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson8-level2_v3-2025"
+        ],
         "progression": "Final Project Reflection"
       },
       "bonus": false,
@@ -4558,6 +4591,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "fabric-of-the-internet-and-ai-lesson8-level3_v3-2025"
+        ],
         "progression": "Final Project Reflection"
       },
       "bonus": false,
@@ -4755,6 +4791,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson11-level2_v3-2025"
+        ],
         "progression": "AI-Driven Solutions"
       },
       "bonus": false,
@@ -4777,6 +4816,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson11-level3_v3-2025"
+        ],
         "progression": "AI Chat Evaluation"
       },
       "bonus": false,
@@ -4799,6 +4841,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson11-level4_v3-2025"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4820,6 +4865,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "fabric-of-the-internet-and-ai-lesson11-level5_v2-2025"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -7007,6 +7055,13 @@
       "seeding_key": {
         "lesson.key": "Lesson 11: Network Security Risk Assessment Project",
         "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Network Security Risk Assessment Project",
+        "framework.shortcode": "csta",
         "standard.shortcode": "3A-IC-29"
       }
     },
@@ -7014,7 +7069,42 @@
       "seeding_key": {
         "lesson.key": "Lesson 11: Network Security Risk Assessment Project",
         "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-30"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Network Security Risk Assessment Project",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Network Security Risk Assessment Project",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Network Security Risk Assessment Project",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Network Security Risk Assessment Project",
+        "framework.shortcode": "csta",
         "standard.shortcode": "3A-NI-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Introduction to the Internet",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-21"
       }
     },
     {
@@ -7084,6 +7174,20 @@
       "seeding_key": {
         "lesson.key": "Lesson 6: HTTP and DNS",
         "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: HTTP and DNS",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: HTTP and DNS",
+        "framework.shortcode": "csta",
         "standard.shortcode": "3A-NI-04"
       }
     },
@@ -7111,6 +7215,13 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 7: The Internet's Hidden Barriers",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-26"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Internet Access Advocacy Campaign Project",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-IC-26"
       }

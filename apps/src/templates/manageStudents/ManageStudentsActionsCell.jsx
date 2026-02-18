@@ -6,7 +6,6 @@ import {connect} from 'react-redux';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import PopUpMenu, {MenuBreak} from '@cdo/apps/sharedComponents/PopUpMenu';
 import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
@@ -79,18 +78,6 @@ class ManageStudentsActionsCell extends Component {
     })
       .done(() => {
         removeStudent(id);
-        firehoseClient.putRecord(
-          {
-            study: 'teacher-dashboard',
-            study_group: 'manage-students-actions',
-            event: 'single-student-delete',
-            data_json: JSON.stringify({
-              sectionId: sectionId,
-              studentId: id,
-            }),
-          },
-          {includeUserId: true}
-        );
         loadSectionData(sectionId);
       })
       .fail((jqXhr, status) => {
@@ -110,61 +97,25 @@ class ManageStudentsActionsCell extends Component {
   };
 
   onEdit = () => {
-    const {id, sectionId} = this.props;
+    const {id} = this.props;
     this.props.startEditingStudent(id);
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-dashboard',
-        study_group: 'manage-students-actions',
-        event: 'single-student-start-edit',
-        data_json: JSON.stringify({
-          sectionId: sectionId,
-          studentId: id,
-        }),
-      },
-      {includeUserId: true}
-    );
   };
 
   onCancel = () => {
-    const {id, sectionId} = this.props;
+    const {id} = this.props;
     if (this.props.rowType === RowType.NEW_STUDENT) {
       this.props.removeStudent(this.props.id);
     } else {
-      firehoseClient.putRecord(
-        {
-          study: 'teacher-dashboard',
-          study_group: 'manage-students-actions',
-          event: 'single-student-cancel-edit',
-          data_json: JSON.stringify({
-            sectionId: sectionId,
-            studentId: id,
-          }),
-        },
-        {includeUserId: true}
-      );
       this.props.cancelEditingStudent(id);
     }
   };
 
   onSave = () => {
-    const {id, sectionId} = this.props;
+    const {id} = this.props;
     if (this.props.rowType === RowType.NEW_STUDENT) {
       this.onAdd();
     } else {
       this.props.saveStudent(id);
-      firehoseClient.putRecord(
-        {
-          study: 'teacher-dashboard',
-          study_group: 'manage-students-actions',
-          event: 'single-student-save',
-          data_json: JSON.stringify({
-            sectionId: sectionId,
-            studentId: id,
-          }),
-        },
-        {includeUserId: true}
-      );
       this.reportEvent(EVENTS.SECTION_STUDENTS_TABLE_SAVE_ROW_CLICKED, {
         studentId: this.props.id || null,
         originalUsState: this.props.rowData?.usState,
@@ -173,38 +124,13 @@ class ManageStudentsActionsCell extends Component {
   };
 
   onAdd = () => {
-    const {id, sectionId} = this.props;
+    const {id} = this.props;
     this.props.addStudent(id);
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-dashboard',
-        study_group: 'manage-students-actions',
-        event: 'single-student-add',
-        data_json: JSON.stringify({
-          sectionId: sectionId,
-          studentId: id,
-        }),
-      },
-      {includeUserId: true}
-    );
     this.reportEvent(EVENTS.SECTION_STUDENTS_TABLE_ADD_ROW_CLICKED);
   };
 
   onPrintLoginInfo = () => {
     const {id, sectionId} = this.props;
-
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-dashboard',
-        study_group: 'manage-students-actions',
-        event: 'single-student-print-login-card',
-        data_json: JSON.stringify({
-          sectionId: sectionId,
-          studentId: id,
-        }),
-      },
-      {includeUserId: true}
-    );
 
     const url =
       teacherDashboardUrl(sectionId, '/login_info') + `?studentId=${id}`;
@@ -216,18 +142,6 @@ class ManageStudentsActionsCell extends Component {
     const url =
       teacherDashboardUrl(sectionId, '/parent_letter') + `?studentId=${id}`;
     window.open(url, '_blank', 'noopener,noreferrer');
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-dashboard',
-        study_group: 'manage-students-actions',
-        event: 'single-student-download-parent-letter',
-        data_json: JSON.stringify({
-          sectionId: sectionId,
-          studentId: id,
-        }),
-      },
-      {includeUserId: true}
-    );
   };
 
   render() {

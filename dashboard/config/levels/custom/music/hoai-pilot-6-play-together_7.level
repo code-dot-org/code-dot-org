@@ -56,7 +56,6 @@
       }
     ],
     "level_data": {
-      "danceMove": "roll",
       "startSources": {
         "blocks": {
           "languageVersion": 0,

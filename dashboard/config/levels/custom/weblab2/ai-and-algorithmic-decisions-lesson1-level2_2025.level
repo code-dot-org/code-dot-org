@@ -12,18 +12,18 @@
     "widget_view": "false",
     "initial_view_mode": "preview",
     "disable_edit_run_for_submission": "false",
-    "ai_tutor_mode": "outline",
+    "ai_tutor_mode": "tutor",
     "predict_settings": {
       "isPredictLevel": false,
       "solution": "",
       "questionType": "freeResponse",
-      "allowMultipleAttempts": false,
       "placeholderText": "",
       "multipleChoiceOptions": [
         ""
       ],
       "freeResponseHeight": 50,
-      "codeEditableAfterSubmit": false
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
     },
     "start_sources": {
       "folders": {
@@ -71,6 +71,6 @@
     },
     "long_instructions": "## Explore the Improved App\r\n\r\n* Add a few reminders.\r\n* Mark some as done and delete one.\r\n* Use Clear All and try Light/Dark mode.\r\n* Navigate between pages."
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-12T19:29:19.521+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson1-level2-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson1-level2-test-2025\"},{\"changed_at\":\"2025-11-12 19:31:58 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-12T19:29:19.521+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson1-level2-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson1-level2-test-2025\"},{\"changed_at\":\"2025-11-12 19:31:58 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-12-19 14:28:52 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Weblab2>

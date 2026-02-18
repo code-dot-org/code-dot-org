@@ -82,6 +82,7 @@
     "bubble_choice_description": "Figure out why this code is not detecting the collision, even though it calls isTouching.",
     "thumbnail_url": "https://images.code.org/27f5853ed0ad2f40ab24d75186c4daeb-image-1586285320068.png",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

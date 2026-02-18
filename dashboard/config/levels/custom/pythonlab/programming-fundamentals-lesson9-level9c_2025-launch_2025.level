@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2025-04-14T23:14:03.000Z",
   "level_num": "custom",
@@ -8,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\n1. Import your `custom.py` into your project.\r\n\r\n2. In `custom.py`, write the `keep_painting()` function. This function should:\r\n\r\n   * Have parameters for `this_painter` and `color`\r\n\r\n   * Use a `while` loop to continue painting while the `Painter` `can_move()`\r\n   \r\n   * At each step, paint the current space and move forward\r\n   \r\n   * After the loop ends, paint the final space\r\n\r\n3. Write the `move_to_next_row()` function.\r\n\r\n   * Have a parameter for `this_painter`\r\n\r\n   * If the `Painter` `is_facing_east()`, turn left, move forward one space, and turn left again.\r\n   \r\n   * If the `Painter` `is_facing_south()`, call your `turn_right(this_painter)` function, move forward one space, and turn right again.\r\n\r\n4. Save `custom.py` to your Backpack.\r\n\r\n5. In `main.py`, import your functions.\r\n\r\n6. Use your functions to navigate and paint the areas.\r\n\r\n&nbsp;\r\n\r\n![](https://images.code.org/1ea5fd39088265c5ef223c2fd9d278b3-u1l9-l4d.gif)",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",
@@ -797,6 +796,7 @@
       "type": "validation"
     }
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2025-04-14T23:14:03.339+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson9-level9c_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson9-level9c_2025-launch\"},{\"changed_at\":\"2025-04-19 17:39:35 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-19 18:00:51 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-19 20:01:26 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-19 20:07:55 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"bubble_choice_description\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-19 20:36:49 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-19 20:54:46 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-19 20:56:31 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-19 20:59:00 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-19 21:00:29 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-21 02:53:47 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-25 01:12:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-25 01:12:56 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-01 16:36:48 +0000\",\"changed\":[\"predict_settings\",\"bubble_choice_description\",\"serialized_maze\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-05-01 16:37:39 +0000\",\"changed\":[\"predict_settings\",\"bubble_choice_description\",\"serialized_maze\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-05-01 16:37:57 +0000\",\"changed\":[\"predict_settings\",\"bubble_choice_description\",\"serialized_maze\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Pythonlab>

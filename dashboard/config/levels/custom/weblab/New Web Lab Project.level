@@ -6,10 +6,13 @@
   "user_id": 2,
   "properties": {
     "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\n<html>\\n  <head>\\n    <link rel=\\\"stylesheet\\\" href=\\\"style.css\\\">\\n  </head>\\n  <body>\\n    \\n  </body>\\n</html>\"\r\n    },\r\n    {\r\n      \"name\": \"style.css\",\r\n      \"data\": \"body {\\n  background: white;\\n}\\np {\\n  color: black;\\n}\\nh1 {\\n  font-weight: bold;\\n}\"\r\n    }\r\n  ]\r\n}\r\n",
-    "is_project_level": "true"
+    "is_project_level": "true",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",
-  "level_concept_difficulty": {}
+  "audit_log": "[{\"changed_at\":\"2024-01-04 00:56:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-01-04 00:57:44 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Weblab>

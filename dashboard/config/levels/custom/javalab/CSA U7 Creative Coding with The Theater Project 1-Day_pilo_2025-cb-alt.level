@@ -20,7 +20,7 @@
     },
     "project_template_level_name": "CSA U7 Creative Coding with The Theater Project PBT_pilot__2025-cb-alt",
     "name_suffix": "_2025-cb-alt",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-24T02:19:54.505+00:00\",\"changed\":[\"cloned from \\\"CSA U7 Creative Coding with The Theater Project 1-Day_pilot_oo2025\\\"\"],\"cloned_from\":\"CSA U7 Creative Coding with The Theater Project 1-Day_pilot_oo2025\"}]"

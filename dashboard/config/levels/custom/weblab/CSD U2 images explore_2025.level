@@ -23,7 +23,8 @@
       "/courses/csd-2024/guides/html-tags"
     ],
     "map_reference": "/courses/csd-2024/guides/images-in-html",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-12T20:54:15.123+00:00\",\"changed\":[\"cloned from \\\"CSD U2 images explore_2024\\\"\"],\"cloned_from\":\"CSD U2 images explore_2024\"}]"

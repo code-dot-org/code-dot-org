@@ -1,15 +1,7 @@
 import {Button} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Link from '@code-dot-org/component-library/link';
-import {
-  BodyOneText,
-  BodyThreeText,
-  BodyTwoText,
-  Heading1,
-  Heading3,
-  Heading6,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 import Confetti from 'react-dom-confetti';
@@ -52,9 +44,9 @@ const WelcomeStates: {[key in WelcomeState]: WelcomeState} = {
 interface AiDiffWelcomeProps {
   setShowWelcomeExperience: (show: boolean) => void;
   context: Context;
+  curriculumCourses: string[];
   scriptName?: string;
   firstState?: WelcomeState;
-  curriculumCourses?: string[];
 }
 
 const optionButton = (
@@ -80,14 +72,18 @@ const optionButton = (
         className={style.optionIcon}
       />
       <div className={style.optionText}>
-        <BodyTwoText className={style.optionTitle}>
-          <StrongText>{title}</StrongText>
-        </BodyTwoText>
+        <Typography className={style.optionTitle} variant="body2" gutterBottom>
+          <Typography variant="strong">{title}</Typography>
+        </Typography>
 
         {description && (
-          <BodyThreeText className={style.optionDescription}>
+          <Typography
+            className={style.optionDescription}
+            variant="body3"
+            gutterBottom
+          >
             {description}
-          </BodyThreeText>
+          </Typography>
         )}
       </div>
     </button>
@@ -104,8 +100,12 @@ const getStartedPage = (onClick: () => void) => {
             className={style.botScanning}
             alt={'AI Teaching Assistant'}
           />
-          <Heading1>AI Teaching Assistant</Heading1>
-          <BodyOneText>Empowering teachers. Enhancing learning.</BodyOneText>
+          <Typography variant="h1" gutterBottom>
+            AI Teaching Assistant
+          </Typography>
+          <Typography variant="body1" gutterBottom>
+            Empowering teachers. Enhancing learning.
+          </Typography>
         </div>
         <Button onClick={onClick} text="Get Started" />
       </div>
@@ -141,19 +141,16 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   setShowWelcomeExperience,
   context,
   scriptName,
+  curriculumCourses,
   // This should only be used for testing purposes
   firstState = 'get_started',
-  curriculumCourses,
 }) => {
   const [currentWelcomeState, setCurrentWelcomeState] =
     React.useState<WelcomeState>(firstState);
-
   const [chatContinueButtonDisabled, setChatContinueButtonDisabled] =
     React.useState(true);
-
   const [selectedOption, setSelectedOption] =
     React.useState<SuggestPromptsType | null>(null);
-
   const [confettiActive, setConfettiActive] = React.useState<boolean>(false);
 
   const dispatch = useAppDispatch();
@@ -166,6 +163,24 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
       url: window.location.href,
     };
   }, [context, scriptName, selectedOption]);
+
+  React.useEffect(() => {
+    if (selectedOption) {
+      const {initialMessage, suggestedPrompts} =
+        SUGGESTED_PROMPTS_FOR_SELECTION[selectedOption];
+      dispatch(setInitialChatMessage(initialMessage));
+      dispatch(
+        setThreadMessages([
+          {
+            role: Role.ASSISTANT,
+            chatMessageText: initialMessage,
+            status: Status.OK,
+          },
+          suggestedPrompts,
+        ])
+      );
+    }
+  }, [selectedOption, dispatch]);
 
   const updateShowWelcomeExperience = React.useCallback(
     (statsigKey: string) => {
@@ -238,10 +253,16 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
         <div className={style.selectOptionPage}>
           {progressBarHeader(30, () => setCurrentWelcomeState('get_started'))}
           <div className={style.selectOptionContent}>
-            <Heading3>Pick a skill to practice</Heading3>
-            <Heading6 className={style.selectOptionSubtitle}>
+            <Typography variant="h3" gutterBottom>
+              Pick a skill to practice
+            </Typography>
+            <Typography
+              className={style.selectOptionSubtitle}
+              variant="h6"
+              gutterBottom
+            >
               Using AI in multiple ways increases productivity.
-            </Heading6>
+            </Typography>
             {context.type === AiDiffContext.GENERAL &&
               optionButton(
                 selectedOption === 'support',
@@ -264,8 +285,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
               'Create',
               'Differentiate assessment materials, generate lesson-aligned activities and practice problems'
             )}
-            {curriculumCourses &&
-              curriculumCourses.includes('csp') &&
+            {curriculumCourses.includes('csp') &&
               optionButton(
                 selectedOption === 'apcsp',
                 () => setSelectedOption('apcsp'),
@@ -290,24 +310,6 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
     }
   }, [currentWelcomeState]);
 
-  React.useEffect(() => {
-    if (selectedOption) {
-      const {initialMessage, suggestedPrompts} =
-        SUGGESTED_PROMPTS_FOR_SELECTION[selectedOption];
-      dispatch(setInitialChatMessage(initialMessage));
-      dispatch(
-        setThreadMessages([
-          {
-            role: Role.ASSISTANT,
-            chatMessageText: initialMessage,
-            status: Status.OK,
-          },
-          suggestedPrompts,
-        ])
-      );
-    }
-  }, [selectedOption, dispatch]);
-
   const endPage = React.useCallback(() => {
     return (
       <div className={style.endPage}>
@@ -320,10 +322,16 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             className={style.botHappy}
             alt={'Congratulations!'}
           />
-          <Heading3>You’re on your way to becoming an AI all-star!</Heading3>
-          <Heading6 className={style.endPageSubTitle}>
+          <Typography variant="h3" gutterBottom>
+            You’re on your way to becoming an AI all-star!
+          </Typography>
+          <Typography
+            className={style.endPageSubTitle}
+            variant="h6"
+            gutterBottom
+          >
             Continue your learning journey
-          </Heading6>
+          </Typography>
           {optionButton(
             false,
             () => setCurrentWelcomeState(WelcomeStates.select_option),
@@ -349,11 +357,15 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
                 iconFamily="duotone"
                 className={style.optionIcon}
               />
-              <BodyTwoText className={style.optionTitle}>
-                <StrongText>
+              <Typography
+                className={style.optionTitle}
+                variant="body2"
+                gutterBottom
+              >
+                <Typography variant="strong">
                   Take Code.org’s self-paced AI 101 professional learning course
-                </StrongText>
-              </BodyTwoText>
+                </Typography>
+              </Typography>
             </div>
             <img
               src={ai101Thumnail}

@@ -17,7 +17,8 @@
     "name_suffix": "_2025",
     "encrypted": "false",
     "allow_multiple_attempts": "false",
-    "encrypted_solution": "olrMrNkG6j2FMWTrAm0tDwVL0Fj7VSBc4mZmgHHhBRRibv56QuIvct1VUGm2\nwPCoqJPYTo93pgyZfKbOh1mpWel5UfFg/xVksvs53iEzkkw+jO9nA9qBXCnO\nHJqXCgArThm9PYASFr4s5k+9iUFy4A==\n"
+    "encrypted_solution": "olrMrNkG6j2FMWTrAm0tDwVL0Fj7VSBc4mZmgHHhBRRibv56QuIvct1VUGm2\nwPCoqJPYTo93pgyZfKbOh1mpWel5UfFg/xVksvs53iEzkkw+jO9nA9qBXCnO\nHJqXCgArThm9PYASFr4s5k+9iUFy4A==\n",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

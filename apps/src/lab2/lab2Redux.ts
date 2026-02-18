@@ -45,7 +45,6 @@ import ProjectManagerFactory from './projects/ProjectManagerFactory';
 import {getPredictResponse} from './projects/userLevelsApi';
 import {setProjectTooLarge} from './redux/lab2ProjectRedux';
 import {isReadOnlyWorkspace} from './redux/lab2ReduxSelectors';
-import {LevelPropertiesValidator} from './responseValidators';
 import {
   Channel,
   LevelProperties,
@@ -53,7 +52,6 @@ import {
   PartialUserAppOptions,
   Validation,
 } from './types';
-import LevelPropertiesCache from './utils/LevelPropertiesCache';
 import {LifecycleEvent} from './utils/LifecycleNotifier';
 
 interface PageError {
@@ -129,11 +127,10 @@ export const setUpWithLevel = createAsyncThunk<
   {
     levelId: number;
     scriptId?: number;
-    levelPropertiesPath: string;
+    levelProperties: LevelProperties;
     userAppOptionsPath?: string;
     channelId?: string;
     userId?: number;
-    scriptLevelId?: string;
   },
   {dispatch: AppDispatch; state: RootState}
 >('lab/setUpWithLevel', async (payload, thunkAPI) => {
@@ -141,26 +138,20 @@ export const setUpWithLevel = createAsyncThunk<
     .getLifecycleNotifier()
     .notify(LifecycleEvent.LevelLoadStarted, payload.levelId);
   try {
-    // Update properties for reporting as early as possible in case of errors.
-    Lab2Registry.getInstance().getMetricsReporter().updateProperties({
-      currentLevelId: payload.levelId,
-      scriptId: payload.scriptId,
-      channelId: payload.channelId,
-    });
+    // Update standalone channel ID early if we have one.
+    if (payload.channelId) {
+      Lab2Registry.getInstance().getMetricsReporter().updateProperties({
+        channelId: payload.channelId,
+      });
+    }
 
     await cleanUpProjectManager();
     const isViewingExemplar = getAppOptionsViewingExemplar();
     const isEditingExemplar = getAppOptionsEditingExemplar();
 
-    // Load level properties if we have a levelPropertiesPath.
-    const levelProperties = await loadLevelProperties(
-      payload.levelPropertiesPath
-    );
     thunkAPI.dispatch(setScriptId(payload.scriptId));
 
-    Lab2Registry.getInstance()
-      .getMetricsReporter()
-      .updateProperties({appName: levelProperties.appName});
+    const levelProperties = payload.levelProperties;
 
     Lab2Registry.getInstance().setAppName(levelProperties.appName);
 
@@ -221,13 +212,14 @@ export const setUpWithLevel = createAsyncThunk<
     const projectManager = payload.channelId
       ? ProjectManagerFactory.getProjectManager(
           payload.channelId,
+          levelProperties.isProjectLevel || false,
           thunkAPI.getState().lab.isShareView
         )
       : await ProjectManagerFactory.getProjectManagerForLevel(
           payload.levelId,
+          levelProperties.isProjectLevel || false,
           payload.userId,
-          payload.scriptId,
-          payload.scriptLevelId
+          payload.scriptId
         );
 
     // Only set the project manager and initiate load
@@ -505,22 +497,6 @@ function setProjectAndLevelData(
       data.sharingDisabled,
       data.isTeacherOfProjectOwner
     );
-}
-
-async function loadLevelProperties(
-  levelPropertiesPath: string
-): Promise<LevelProperties> {
-  const cached = LevelPropertiesCache.get(levelPropertiesPath);
-  if (cached) {
-    return cached;
-  }
-  const response = await HttpClient.fetchJson<LevelProperties>(
-    levelPropertiesPath,
-    {},
-    LevelPropertiesValidator
-  );
-  LevelPropertiesCache.set(levelPropertiesPath, response.value);
-  return response.value;
 }
 
 async function loadUserAppOptions(

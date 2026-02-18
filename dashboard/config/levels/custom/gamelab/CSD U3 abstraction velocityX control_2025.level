@@ -98,6 +98,7 @@
     "rubric_performance_level_3": "The fish swims to the right side of the screen, turns and swims to the left side of the screen, but does not repeat. The student only changed its velocity by using the provided first conditional statement. ",
     "rubric_performance_level_4": "The fish just moves right across the screen, then disappears.",
     "libraries_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

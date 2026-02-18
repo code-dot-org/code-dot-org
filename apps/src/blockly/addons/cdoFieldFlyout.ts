@@ -1,14 +1,14 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import CdoBlockFlyout from './cdoBlockFlyout';
 
-interface FieldFlyoutConfig extends GoogleBlockly.FieldConfig {
+interface FieldFlyoutConfig extends BlocklyCore.FieldConfig {
   flyoutKey: string;
   name: string;
 }
 
-export default class CdoFieldFlyout extends GoogleBlockly.Field {
-  private workspace_: GoogleBlockly.WorkspaceSvg | undefined;
+export default class CdoFieldFlyout extends BlocklyCore.Field {
+  private workspace_: BlocklyCore.WorkspaceSvg | undefined;
   private flyout_: CdoBlockFlyout | undefined;
   private minWidth_ = 0;
   private maxWidth_ = 1000;
@@ -29,15 +29,15 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
   /**
    * Construct a FieldFlyout from a JSON arg object.
    *
-   * @param {GoogleBlockly.FieldConfig} _options A JSON object with options.
+   * @param {BlocklyCore.FieldConfig} _options A JSON object with options.
    * @returns {CdoFieldFlyout} The new field instance.
    */
-  static fromJson(_options: GoogleBlockly.FieldConfig) {
+  static fromJson(_options: BlocklyCore.FieldConfig) {
     const options = _options as FieldFlyoutConfig;
     return new CdoFieldFlyout(options.flyoutKey, options);
   }
 
-  static getFlyoutId(block: GoogleBlockly.Block) {
+  static getFlyoutId(block: BlocklyCore.Block) {
     return `flyout_${block.type}_${block.id}`;
   }
 
@@ -50,7 +50,7 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
    */
   initView() {
     this.workspace_ = this.getSourceBlock()
-      ?.workspace as GoogleBlockly.WorkspaceSvg;
+      ?.workspace as BlocklyCore.WorkspaceSvg;
     const options =
       Blockly.getMainWorkspace()?.options || this.workspace_?.options || {};
     this.flyout_ = new CdoBlockFlyout({

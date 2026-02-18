@@ -71,6 +71,7 @@
       "CSD U6 LEDbutton predict 2 embed_mb_2025"
     ],
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

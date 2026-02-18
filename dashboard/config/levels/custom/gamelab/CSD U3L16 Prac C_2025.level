@@ -133,6 +133,7 @@
     "bubble_choice_description": "Change the emoji when a mouse button is clicked!",
     "thumbnail_url": "https://images.code.org/90e16e505f4cb51856789dc6359127fb-emoji-gif.gif",
     "encrypted_examples": "lv4/RMmqO3/pvqSrJIJV89y9j8gwJlaJfzCvET6911S3NlTCXGVISsHVfkmB\nYlA+o3bJZwSj4Ejmb6081QRjJA==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -1,0 +1,36 @@
+name 'pl_sandbox_aif-2-U2-class-context_2-2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Classroom Context
+
+#### This is the second unit of the course, building off the content from unit one. The course was designed to teach in order.
+
+#### Teachers serve as guides supporting **design thinking, encouraging responsible AI use, and helping students interpret and improve AI-generated work**.
+
+
+## Unit Length and Format
+
+#### **Total Duration:** Approximately 3 weeks
+#### **Structure:** Eleven 45-minute lessons and one 3-day culminating project
+
+<img src="https://images.code.org/90238cb17488ca22b7bcaa13be5ebf64-image-1767899047978.png" alt="lesson calandar for unit 2" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+
+#### **Lesson Flow:**
+
+
+- #### Early lessons focus on understanding interactivity and event-driven programming as students explore how user actions drive app behavior and practice debugging with AI support.
+
+- #### Mid-unit lessons introduce variables, functions, and conditional logic, helping students plan and code dynamic interactions through flowcharts, reusable code, and logical operators.
+
+- #### The final project brings these skills together as students design, build, and refine interactive web apps that respond to users in real time, using AI-assisted debugging.
+
+
+## Next up
+
+#### Let's dive into the instructional commitments for this course. 
+
+
+
+MARKDOWN

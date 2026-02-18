@@ -4,8 +4,6 @@ require 'cdo/shared_constants'
 class PeerReviewsControllerTest < ActionController::TestCase
   include SharedConstants
 
-  self.use_transactional_test_case = true
-
   setup_all do
     @user = create(:teacher)
     @other_user = create(:teacher)

@@ -120,12 +120,10 @@ namespace :test do
     Dir.chdir(dashboard_dir) do
       ChatClient.wrap('dashboard ruby unit tests') do
         ENV['DISABLE_SPRING'] = '1'
-        ENV['UNIT_TEST'] = '1'
         ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
 
         TestRunUtils.run_dashboard_tests(parallel: true, upload_seed_data: true)
 
-        ENV.delete 'UNIT_TEST'
         ENV.delete 'USE_PEGASUS_UNITTEST_DB'
       end
     end

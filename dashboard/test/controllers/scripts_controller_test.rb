@@ -60,6 +60,16 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_redirected_to "/s/#{new_unit.name}"
   end
 
+  test "should render deprecated course page for deprecated courses" do
+    deprecated_unit = create(:script, :in_single_unit_course)
+    deprecated_unit.update(is_deprecated: true)
+
+    get :show, params: {course_course_name: deprecated_unit.original_unit_group.name, position: 1}
+    assert_response :success
+    assert_template 'errors/deprecated_course'
+    assert_equal deprecated_unit.name, assigns(:deprecated_curriculum_name)
+  end
+
   test "should not get index if not signed in" do
     get :index
 

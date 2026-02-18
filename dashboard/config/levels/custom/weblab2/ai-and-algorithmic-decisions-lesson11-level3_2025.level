@@ -13,22 +13,22 @@
     "widget_view": "false",
     "initial_view_mode": "split",
     "disable_edit_run_for_submission": "false",
-    "ai_tutor_mode": "outline",
+    "ai_tutor_mode": "tutor",
     "predict_settings": {
       "isPredictLevel": false,
       "solution": "",
       "questionType": "freeResponse",
-      "allowMultipleAttempts": false,
       "placeholderText": "",
       "multipleChoiceOptions": [
         ""
       ],
       "freeResponseHeight": 50,
-      "codeEditableAfterSubmit": false
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
     },
     "project_template_level_name": "ai-and-algorithmic-decisions-lesson11-template-test-2025",
     "level_system_prompt": "The student is now completing their app’s interactivity and testing its logic.\r\nYour role is to act as a debugging and design partner who helps them think critically about how their app responds to user input.\r\n\t•\tEncourage them to test multiple inputs, identify logical errors, and refine code organization.\r\n\t•\tSupport their understanding of conditional logic, state management, and function design.\r\n\t•\tAsk diagnostic questions (“What happens when you…?” or “What should happen instead?”) to prompt reflection.\r\n\t•\tCelebrate progress and frame debugging as part of the creative process.\r\n\t•\tAvoid writing entire features; focus on helping them reason through fixes and improvements."
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-13T03:16:26.123+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson11-level3-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson11-level3-test-2025\"},{\"changed_at\":\"2025-11-13 03:17:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-13T03:16:26.123+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson11-level3-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson11-level3-test-2025\"},{\"changed_at\":\"2025-11-13 03:17:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-12-19 14:48:03 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Weblab2>

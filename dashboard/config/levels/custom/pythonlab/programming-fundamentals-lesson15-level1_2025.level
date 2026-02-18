@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## What does print() do? \r\n\r\n- Read the code\r\n- What do you think the `print()` function does?\r\n- Press Run\r\n- Where do you see the result?",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

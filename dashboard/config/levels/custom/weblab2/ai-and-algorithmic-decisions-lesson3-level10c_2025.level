@@ -13,18 +13,18 @@
     "widget_view": "false",
     "initial_view_mode": "split",
     "disable_edit_run_for_submission": "false",
-    "ai_tutor_mode": "outline",
+    "ai_tutor_mode": "tutor",
     "predict_settings": {
       "isPredictLevel": false,
       "solution": "",
       "questionType": "freeResponse",
-      "allowMultipleAttempts": false,
       "placeholderText": "",
       "multipleChoiceOptions": [
         ""
       ],
       "freeResponseHeight": 50,
-      "codeEditableAfterSubmit": false
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
     },
     "display_name": "Mood Tracker Web App",
     "bubble_choice_description": "Complete the `script.js` code to make your Mood Tracker Web App work.",
@@ -66,6 +66,6 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-12T20:22:09.724+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson3-level4c-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson3-level4c-test-2025\"},{\"changed_at\":\"2025-11-12 20:22:23 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-12T20:22:09.724+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson3-level4c-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson3-level4c-test-2025\"},{\"changed_at\":\"2025-11-12 20:22:23 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-12-19 14:33:31 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Weblab2>

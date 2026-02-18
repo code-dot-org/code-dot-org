@@ -14,7 +14,7 @@ Feature: Send and receive messages in the AI differentiation chat
     And I am on "http://studio.code.org/teacher_dashboard/home"
     And element "#sign_in_or_user" contains text "Stilgar"
     # Close the FAB
-    And I wait until element "#ui-floatingActionButton" is visible
+    And I wait until element "button:contains(Get Started)" is visible
     When I click selector "#ui-floatingActionButton"
     And I wait until element "button:contains(Get Started)" is not visible
 
@@ -40,7 +40,7 @@ Feature: Send and receive messages in the AI differentiation chat
     Then I see no difference for "ai diff welcome create"
     #eyes here
     And I click selector "#uitest_aiDiffWelcomeContinue"
-    And I click selector "input[value='Write an extension activity for students who finish early']" once I see it
+    And I click selector "button:contains(Write an extension activity for students who finish early)" once I see it
     And I wait until element "p:contains(Lorem ipsum)" is visible
     And I wait until element "#uitest-chat-textarea" has focus
     Then I see no difference for "ai diff welcome create chat"
@@ -54,7 +54,7 @@ Feature: Send and receive messages in the AI differentiation chat
     And I click selector "button:contains(Finish)" once I see it
 
     #Now we see the regular AI diff chat (with thread sidebar)
-    And I wait until element "input[value='Write an exit ticket']" is visible
+    And I wait until element "button:contains(Write an exit ticket)" is visible
     Then I see no difference for "ai diff chat initial view"
 
     And I click selector "#uitest-chat-textarea" once I see it
@@ -97,7 +97,7 @@ Feature: Send and receive messages in the AI differentiation chat
     # Clicking "suggest prompts" gives another set of prompts
     And I click selector "button:contains(Suggest prompts)"
     And I click selector "button:contains(Create)"
-    And I click selector "input[value='Write a lesson hook']" once I see it
+    And I click selector "button:contains(Write a lesson hook)" once I see it
     And I wait until I see 2 of jquery selector p:contains(Lorem ipsum)
 
     # Clicking the feedback buttons works
@@ -145,7 +145,7 @@ Feature: Send and receive messages in the AI differentiation chat
     # Teacher views lesson page and floating action button
     When I sign in as "Stilgar"
     And I get debug info for the current user
-    And I am on "http://studio.code.org/teacher_dashboard/home?enableExperiments=teacher-notifications"
+    And I am on "http://studio.code.org/teacher_dashboard/home"
     And I wait until element "h2:contains(Welcome, Stilgar)" is visible
     And element "#sign_in_or_user" contains text "Stilgar"
     And I wait until element "#ui-floatingActionButton" is visible

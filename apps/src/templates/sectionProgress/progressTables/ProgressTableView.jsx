@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import {
   getSelectedCourseName,
   getSelectedUnitPosition,
@@ -99,7 +98,6 @@ class ProgressTableView extends React.Component {
     super(props);
     this.onScroll = this.onScroll.bind(this);
     this.onToggleRow = this.onToggleRow.bind(this);
-    this.recordToggleRow = this.recordToggleRow.bind(this);
 
     this.summaryCellFormatters = getSummaryCellFormatters(
       props.lessonProgressByStudent,
@@ -263,24 +261,7 @@ class ProgressTableView extends React.Component {
     } else {
       this.collapseDetailRows(rowData, rowIndex);
     }
-    this.recordToggleRow(!rowData.isExpanded, rowData.student.id);
     this.syncScrollTop();
-  }
-
-  recordToggleRow(expanding, studentId) {
-    firehoseClient.putRecord(
-      {
-        study: 'teacher_dashboard_actions',
-        study_group: 'time_spent',
-        event: 'toggle_details',
-        data_json: JSON.stringify({
-          student_id: studentId,
-          section_id: this.props.sectionId,
-          visible: expanding,
-        }),
-      },
-      {includeUserId: true}
-    );
   }
 
   expandDetailRows(rowData, rowIndex) {

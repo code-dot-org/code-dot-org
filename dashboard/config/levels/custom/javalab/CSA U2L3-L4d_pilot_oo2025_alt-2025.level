@@ -39,7 +39,7 @@
       }
     },
     "name_suffix": "_alt-2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-20T13:15:50.515+00:00\",\"changed\":[\"cloned from \\\"CSA U2L3-L4d_pilot_oo2025\\\"\"],\"cloned_from\":\"CSA U2L3-L4d_pilot_oo2025\"}]"

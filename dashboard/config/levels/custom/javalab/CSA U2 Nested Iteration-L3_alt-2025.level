@@ -24,7 +24,7 @@
       }
     },
     "teacher_markdown": "Students should notice that the outer `for` loop is moving to the next row for each shape, while the inner `for` loop is filling in each row with `\"*\"`. Calling the methods with different values will impact the number of rows that are printed and the number of `\"*\"` on each row.",
-    "ai_tutor_available": true,
+    "ai_tutor_available": "false",
     "name_suffix": "_alt-2025"
   },
   "published": true,

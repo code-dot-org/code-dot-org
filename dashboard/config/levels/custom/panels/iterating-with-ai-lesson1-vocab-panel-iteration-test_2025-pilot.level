@@ -1,0 +1,23 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-12-22T17:39:28.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Iteration\n\n**Iteration** means doing the same set of steps over and over again. \n\nFor example, let's say you have to do 3 loads of laundry. Washing a single load of clothes, then drying them, folding them, and putting them away is **one** iteration.",
+        "imageUrl": "https://images.code.org/69b8e729d0b1a282e72f2340774277c6-Screenshot 2025-11-19 at 11.00.10 AM.png",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-22T17:39:28.129+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson1-vocab-panel-iteration-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson1-vocab-panel-iteration-test-2025\"}]"
+}]]></config>
+</Panels>

@@ -12,7 +12,7 @@
     "link_title": "FlixRate App",
     "url": "https://github.com/code-dot-org/csa-se-lesson3a",
     "thumbnail_url": "https://images.code.org/aa7b1b9588057e37a833db48b99e3a78-flixrate.gif",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-08-02 16:24:46 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-09-07 16:54:43 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

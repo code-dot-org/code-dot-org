@@ -35,7 +35,8 @@
     ],
     "encrypted": "false",
     "mini_rubric": "false",
-    "validation_enabled": "true"
+    "validation_enabled": "true",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

@@ -5,7 +5,8 @@ description 'description here'
 markdown <<MARKDOWN
 # Introducing the CIA Triad
 
-#### Let's take a look at a few short short tech scenarios. For each one, think about how much you would trust it - yes, no, or maybe.
+#### 🔎 **Think About** 
+#### Let's take a look at a few short short tech scenarios. For each one, <i>think about how much you would trust it - yes, no, or maybe</i>.
 
 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 15px;">
 

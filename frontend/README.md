@@ -69,20 +69,14 @@ yarn build
 
 ### Develop
 
-To develop **all** apps and packages, run the following command:
+To develop on the **studio** application, run in the `frontend` directory
 
 ```bash
 yarn dev
 ```
 
-To develop a specific set of apps and packages, use `yarn workspace [workspace name] [command]`.
-More information on this command [here](https://yarnpkg.com/cli/workspace).
-
-For example, to only run the design system storybook:
-
-```bash
-yarn workspace @code-dot-org/design-system-storybook dev
-```
+Changing any monorepo managed dependencies (such as labs) will automatically trigger a rebuild and be made
+available to the persistent dev server using Turborepo's watch feature.
 
 ### Formatting, Linting. (Prettier, ESLint, Stylelint)
 

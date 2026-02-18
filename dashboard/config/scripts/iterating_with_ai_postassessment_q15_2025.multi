@@ -1,0 +1,16 @@
+name 'iterating-with-ai-postassessment-q15_2025'
+
+question ' A developer uses an AI to generate a loop. The AI\'s code works but is very complex and difficult to explain. What is the most accountable action for the developer?'
+
+wrong 'Use the code anyway because it works.'
+wrong 'Delete the code and write it from scratch without any AI help.'
+right 'Refactor (simplify) and document the code until they fully understand how it works and can verify its safety.'
+wrong 'Ask a different AI to explain why the first AI wrote it that way.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 11
+
+AI accountability means the human developer is responsible for the code. Using code you don't understand is a risk; you must be able to verify and explain your logic.
+MARKDOWN

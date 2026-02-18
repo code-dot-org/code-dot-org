@@ -77,6 +77,7 @@
     "bubble_choice_description": "Draw a changing image using variables, shapes and drawing tools you have learned so far.",
     "validation_enabled": "true",
     "encrypted_examples": "8h4mpbcMNbav/Xud1BTESNW6h9EaF52kZleXhMH0QCx/UKfLxz+rS6FV4cQ+\ndl3OarZuGIH4KhAR/oqUf0TPlA==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

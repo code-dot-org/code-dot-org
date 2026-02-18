@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import {navigationLessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import color from '@cdo/apps/util/color';
@@ -39,26 +38,7 @@ export default class LessonNavigationDropdown extends Component {
   handleDropdownClick = (e, listItem) => {
     e.preventDefault();
     if (listItem.link) {
-      firehoseClient.putRecord(
-        {
-          study: 'lesson-plan',
-          study_group: this.props.isStudentLessonPlan
-            ? 'student-lesson-plan'
-            : 'teacher-lesson-plan',
-          event: 'navigate-between-lessons',
-          data_int: this.props.lesson.id,
-          data_json: JSON.stringify({
-            startingLessonId: this.props.lesson.id,
-            endingLessonId: listItem.id,
-          }),
-        },
-        {
-          includeUserId: true,
-          callback: () => {
-            navigateToHref(linkWithQueryParams(listItem.link));
-          },
-        }
-      );
+      navigateToHref(linkWithQueryParams(listItem.link));
     } else {
       this.setState({currentSection: listItem.sectionNumber});
     }

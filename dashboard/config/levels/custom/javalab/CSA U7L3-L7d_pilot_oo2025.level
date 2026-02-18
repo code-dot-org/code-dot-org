@@ -40,7 +40,7 @@
       "blanksign.png": "aa93bb83-0ce8-4248-9de2-4de40c29cc06.png"
     },
     "name_suffix": "_oo2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-13T01:02:13.453+00:00\",\"changed\":[\"cloned from \\\"CSA U7L3-L7d_pilot-2025\\\"\"],\"cloned_from\":\"CSA U7L3-L7d_pilot-2025\"}]"

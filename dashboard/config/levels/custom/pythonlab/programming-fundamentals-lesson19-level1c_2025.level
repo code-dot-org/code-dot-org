@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "### Example 3: \"The Mystery of the Missing Cupcake\" \r\n\r\n**Narrative:** The player is a detective solving the case of a stolen cupcake. They interrogate suspects, gather clues, and make decisions that lead to different suspects being accused.\r\n\r\n**Key Features:**\r\n- Three interrogation questions with two possible answers each\r\n- Uses conditionals to track clues and determine the outcome\r\n- Fun and light-hearted, with simple logic puzzles",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

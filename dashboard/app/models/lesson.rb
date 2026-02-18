@@ -587,12 +587,30 @@ class Lesson < ApplicationRecord
   end
 
   def summarize_for_rubric_edit
+    level_summary = levels.map do |level|
+      if level.type == 'BubbleChoice'
+        level.attributes.symbolize_keys.merge(
+          sublevels: level.sublevels.map do |sublevel|
+            {
+              id: sublevel.id,
+              name: sublevel.name,
+              type: sublevel.type,
+            }
+          end,
+          isSubmittable: level.sublevels.any? {|sublevel| sublevel.properties['submittable'] == 'true'}
+        )
+      else
+        level.attributes.symbolize_keys.merge(
+          isSubmittable: level.properties['submittable'] == 'true'
+        )
+      end
+    end
     {
       id: id,
       unitName: script.title_for_display,
       lessonNumber: relative_position,
       lessonName: name,
-      levels: levels
+      levels: level_summary
     }
   end
 
@@ -620,6 +638,28 @@ class Lesson < ApplicationRecord
         level_json
       end
     }
+  end
+
+  def summarize_for_special_level_types
+    {
+      name: name,
+      rubric_id: rubric&.id,
+      script_name: script&.name,
+      id: id
+    }
+  end
+
+  def summarize_for_lab2_properties(current_user = nil, unit_group_unit: nil)
+    properties = {}
+    script_levels.each do |script_level|
+      level = script_level.level
+      properties[level.id] = level.summarize_for_lab2_properties(script, script_level, current_user, unit_group_unit: unit_group_unit)
+      next unless level.is_a?(BubbleChoice)
+      level.sublevels.each do |sublevel|
+        properties[sublevel.id] = sublevel.summarize_for_lab2_properties(script, script_level, current_user, unit_group_unit: unit_group_unit)
+      end
+    end
+    properties
   end
 
   # For a given set of students, determine when the given lesson is locked for

@@ -1,0 +1,52 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-01-06T20:17:43.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Paragraphs",
+    "long_instructions": "\r\n\r\n# Use Paragraph Tags\r\n\r\nThe `<p>` `</p>` tags or \"paragraph\" start and end tags are placed around text to indicate that it is part of a paragraph. Placing text between paragraph start and end tags lets the computer know that it should be treated differently, often just spacing it out from other text.\r\n\r\n# Do This\r\n\r\n1) Use `<p>` tags to separate the content into different paragraphs.",
+    "bubble_choice_description": "Add paragraph tags to separate the paragraphs",
+    "thumbnail_url": "https://images.code.org/6759651ae1adb74458c8b7f6349d1e6e-image-1589303766669.png",
+    "submittable": "true",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<html>\n<head>\n</head>\n<body>\n  <h1>Animals Native to the Americas</h1>\n  \n  Some species of animals living in the Americas were not originally from here. They were brought over by boat and some are considered invasive species. Today, let's look at some animals that are native to the Americas and appreciate the diversity they bring to their ecosystems\n  \n  Coyotes are a species of canine native to North America. They are most closely related to wolves. They are not an endangered species; in fact, they are widespread throughout North America. Coyotes appear in Native American folklore, especially in the areas which are now Mexico and the Southwest United States.\n  \n  Rattlesnakes are a group of species of snakes native to the Americas, ranging from Canada to Argentina. They get their name from the \"rattle\" at the end of their tail which they can vibrate to deter other predators or warn other animals. Although their rattle can be frightening, they rarely bite without being provoked.\n  \n  Tortoises are a group of species of turtle, notable for being land-dwelling. Tortoises are the longest-living land animal in the world. Galápagos tortoises, native to the Galápagos Islands off the coast of Central America, regularly live to be over 150 years old\n</body>\n</html>\n",
+          "active": true,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nBLk0G1Xt\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-01-06 20:17:55 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-06 20:18:28 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

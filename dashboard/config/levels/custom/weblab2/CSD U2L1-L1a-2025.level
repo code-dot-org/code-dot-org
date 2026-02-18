@@ -1,0 +1,149 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-12-31T20:24:29.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Use your Web Design for Users activity guide in order to determine which user this website might be a match for. ",
+    "teacher_markdown": "**Answer Keys & Exemplars:** An answer key or exemplar is provided for verified teachers as part of the resources in this lesson plan. If you do not see an answer key or exemplar listed as a resource, [follow these steps](https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-) to become a verified teacher.\r\n",
+    "thumbnail_url": "https://images.code.org/301502f3280461ed7b9f16bf5ed11bb8-image-1677189841902.png",
+    "submittable": "false",
+    "hide_share_and_remix": "true",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "true",
+    "initial_view_mode": "preview",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <!-- Import the webpage's stylesheet -->\n    <link rel=\"stylesheet\" href=\"style.css\" />\n\n  </head>\n  <body>\n\n    <h1 class=\"title\">\n      Photo Gallery!\n    </h1>\n\n    <img class=\"galleryImg\" src=\"field.jpg\" />\n    <img class=\"galleryImg\" src=\"forest.jpg\" />\n    <img class=\"galleryImg\" src=\"mountain.jpg\" />\n    <img class=\"galleryImg\" src=\"path.jpg\" />\n    <img class=\"galleryImg\" src=\"road.jpg\" />\n    <img class=\"galleryImg\" src=\"sunset.jpg\" />\n    <img class=\"galleryImg\" src=\"morning.png\" />\n    <img class=\"galleryImg\" src=\"night.png\" />\n    \n    <p>\n      All images from Pixabay provided under a Pixabay license\n    </p>\n\n\n\n  </body>\n</html>\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "10": {
+          "id": "10",
+          "name": "style.css",
+          "language": "css",
+          "contents": ".galleryImg {\n  float: left;\n  width: 25%;\n}\n\n.title {\n  font-family: Helvetica;\n  color: blue;\n  text-align: center;\n  font-size: 50px;\n  text-decoration: underline;\n}\n\nbody {\n  background: orange;\n}\n\np {\n  clear:both;\n  color: #252525;\n  font-family: Consolas;\n  font-size: 10px;\n  text-align: center;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "11": {
+          "id": "11",
+          "name": "sunset.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L1-L1a-2025/uuid/50c6990a-d001-42dd-8e7e-398eb0c05257.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "12": {
+          "id": "12",
+          "name": "road.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L1-L1a-2025/uuid/09983683-7eb8-4557-a97d-e7739c9b50d9.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "13": {
+          "id": "13",
+          "name": "field.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L1-L1a-2025/uuid/2ced109c-b92e-425f-9a2f-b03bdc2b62c5.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "14": {
+          "id": "14",
+          "name": "morning.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L1-L1a-2025/uuid/a6f152cc-03f3-47db-8ccf-e5ab073a11ae.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "15": {
+          "id": "15",
+          "name": "mountain.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L1-L1a-2025/uuid/d8684988-ef59-4083-bfea-8eff5b4cc8c3.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "16": {
+          "id": "16",
+          "name": "forest.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L1-L1a-2025/uuid/0a53bb6f-0d64-404c-86e1-678af3ebfe93.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "17": {
+          "id": "17",
+          "name": "path.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L1-L1a-2025/uuid/af41e959-39a6-43ef-8b37-f9a5ed8a5e6b.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "18": {
+          "id": "18",
+          "name": "night.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L1-L1a-2025/uuid/7640c3ff-efe9-4b23-8da1-eecdd11fbc12.jpg",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18"
+      ]
+    },
+    "display_name": "Template A",
+    "bubble_choice_description": "A photo gallery showing eight images taken by a local photographer."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-12-31 20:26:12 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 20:34:42 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 20:36:20 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 20:36:32 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 20:40:59 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\",\"bubble_choice_description\",\"hide_share_and_remix\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 20:52:38 +0000\",\"changed\":[\"name\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 21:07:33 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 21:09:26 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 21:14:32 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 21:38:39 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 22:36:51 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 22:37:16 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 22:39:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 22:40:49 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

@@ -29,6 +29,17 @@ SKIP_APPS_TESTS_FLAG = 'skip apps'.freeze
 # Don't run any UI or Eyes tests.
 SKIP_UI_TESTS_TAG = 'skip ui'.freeze
 
+# Reset the dashboard database before seeding for UI tests. It is recommended to
+# use this tag when running drone against PRs that reduce what gets seeded in
+# drone via seed:ui_test, such as if you remove something from UI_TEST_SCRIPTS.
+#
+# By default, the database will have been prepopulated based on recent data
+# from the staging branch (see cache-staging-build pipeline in .drone.yml).
+# If you remove something from UI_TEST_SCRIPTS but do not specify this tag,
+# drone will still have that unit seeded in the database, possibly masking any
+# test failures that might show up in later drone builds after you merge.
+RESET_DB_TAG = 'reset db'.freeze
+
 # Don't run any unit tests.
 SKIP_UNIT_TESTS_TAG = 'skip unit'.freeze
 
@@ -182,12 +193,24 @@ namespace :ci do
     end
 
     Dir.chdir('dashboard') do
+      if CI::Utils.tagged?(RESET_DB_TAG)
+        ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{RESET_DB_TAG}], resetting dashboard database."
+        RakeUtils.rake_stream_output 'db:reset db:setup_or_migrate'
+      end
+      RakeUtils.rake_stream_output 'seed:ui_test'
+    end
+  end
+
+  timed_task_with_logging :force_seed_ui_test do
+    Dir.chdir('dashboard') do
       RakeUtils.rake_stream_output 'seed:ui_test'
     end
   end
 
   timed_task_with_logging :sparse_checkout do
-    if CI::Utils.tagged?(SKIP_PEGASUS_CONTENT)
+    # never do sparse checkout in prepare_cacheable_build CI job, or it will
+    # cause later unit and ui jobs to fail.
+    if CI::Utils.tagged?(SKIP_PEGASUS_CONTENT) && ['unit_tests', 'ui_tests'].include?(ENV.fetch('CI_JOB', nil))
       cmd = 'bin/sparse-checkout no-pegasus-content'
       ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{SKIP_PEGASUS_CONTENT}], running `#{cmd}`."
       RakeUtils.system_stream_output "git status --porcelain"

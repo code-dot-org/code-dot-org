@@ -7,7 +7,7 @@ import {
   flush,
   setUserId,
 } from '@amplitude/analytics-browser';
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import DCDO from '@cdo/apps/dcdo';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -289,7 +289,7 @@ export default class AnalyticsReporter {
     this.session.soundsPlayed[id] = 1 + (this.session.soundsPlayed[id] ?? 0);
   }
 
-  onBlocksUpdated(blocks: GoogleBlockly.Block[]) {
+  onBlocksUpdated(blocks: BlocklyCore.Block[]) {
     if (!this.session) {
       this.log('No session in progress');
       return;

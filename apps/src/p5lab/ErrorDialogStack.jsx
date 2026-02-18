@@ -3,10 +3,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {getCurrentId} from '@cdo/apps/code-studio/initApp/project';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import msg from '@cdo/locale';
@@ -28,39 +26,11 @@ class ErrorDialogStack extends React.Component {
   };
 
   handleDeleteChoice(key) {
-    // Log data about when this scenario occurs
-    firehoseClient.putRecord(
-      {
-        study: 'animation_no_load',
-        study_group: 'animation_no_load_v4',
-        event: 'delete_selected',
-        project_id: getCurrentId(),
-        data_json: JSON.stringify({
-          version: this.props.animationList.propsByKey[key].version,
-          animationName: this.props.animationList.propsByKey[key].name,
-        }),
-      },
-      {includeUserId: true}
-    );
     this.props.deleteAnimation(key, this.props.isSpriteLab);
     this.props.dismissError();
   }
 
   handleReloadChoice(key) {
-    // Log data about when this scenario occurs
-    firehoseClient.putRecord(
-      {
-        study: 'animation_no_load',
-        study_group: 'animation_no_load_v4',
-        event: 'reload_selected',
-        project_id: getCurrentId(),
-        data_json: JSON.stringify({
-          version: this.props.animationList.propsByKey[key].version,
-          animationName: this.props.animationList.propsByKey[key].name,
-        }),
-      },
-      {includeUserId: true}
-    );
     location.reload();
   }
 

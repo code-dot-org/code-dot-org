@@ -300,6 +300,10 @@ export default class MusicLibrary {
     return attributions;
   }
 
+  getExtraCredit(): string | undefined {
+    return this.libraryJson?.extraCredit;
+  }
+
   // Return a deep copy of the packs folders only containing folders
   // and sounds currently allowed by the level.
   private getAllowedSounds(): SoundFolder[] {
@@ -498,6 +502,7 @@ export type LibraryJson = {
   bpm?: number;
   key?: number;
   defaultSound?: string;
+  extraCredit?: string;
   folders: SoundFolder[];
   instruments: SoundFolder[];
   kits: SoundFolder[];

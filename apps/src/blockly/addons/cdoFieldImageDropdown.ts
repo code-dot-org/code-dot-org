@@ -1,5 +1,5 @@
 import {FieldGridDropdown} from '@blockly/field-grid-dropdown';
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import color from '@cdo/apps/util/color';
 
@@ -26,9 +26,7 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
   private config: string | null | undefined;
 
   constructor(
-    menuGenerator:
-      | GoogleBlockly.MenuOption[]
-      | (() => GoogleBlockly.MenuOption[]),
+    menuGenerator: BlocklyCore.MenuOption[] | (() => BlocklyCore.MenuOption[]),
     width: number,
     height: number,
     buttons: ButtonConfig[] | undefined,
@@ -77,7 +75,7 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
   protected showEditor_(e?: MouseEvent) {
     super.showEditor_(e);
 
-    const block = this.getSourceBlock() as GoogleBlockly.BlockSvg | null;
+    const block = this.getSourceBlock() as BlocklyCore.BlockSvg | null;
     if (block) {
       const parent = block.getParent();
       const isShadow = block.isShadow();
@@ -154,7 +152,7 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
       this.setValue(state);
       return;
     }
-    const field = GoogleBlockly.utils.xml.textToDom(state);
+    const field = BlocklyCore.utils.xml.textToDom(state);
     // Currently, we support the `config` attribute if `config` is stored in xml, but not in json.
     // The config is handled by `fromXml`.
     this.fromXml(field);
@@ -215,12 +213,10 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
 }
 
 export function fixMenuGenerator(
-  menuGenerator:
-    | GoogleBlockly.MenuOption[]
-    | (() => GoogleBlockly.MenuOption[]),
+  menuGenerator: BlocklyCore.MenuOption[] | (() => BlocklyCore.MenuOption[]),
   width: number,
   height: number
-): GoogleBlockly.MenuOption[] {
+): BlocklyCore.MenuOption[] {
   // Google Blockly supports images in dropdowns but has a different format,
   // so we just need to restructure our menu items before passing through to
   // the FieldDropdown constructor.
@@ -241,6 +237,6 @@ export function fixMenuGenerator(
     return [
       {src: url, width: width, height: height, alt: code_id},
       code_id,
-    ] as [GoogleBlockly.ImageProperties, string];
+    ] as [BlocklyCore.ImageProperties, string];
   });
 }

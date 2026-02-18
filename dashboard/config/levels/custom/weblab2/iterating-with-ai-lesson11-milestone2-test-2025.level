@@ -1,6 +1,5 @@
 <Weblab2>
   <config><![CDATA[{
-  "published": true,
   "game_id": 74,
   "created_at": "2025-11-26T15:46:59.000Z",
   "level_num": "custom",
@@ -26,8 +25,12 @@
       "freeResponseHeight": 50,
       "codeEditableAfterSubmit": false
     },
-    "long_instructions": "# Build a Static Web Page\r\n\r\n1.  **Build the Structure:** With the help of AI, write the HTML and CSS to match your wireframe. Create an empty `script.js` file and ensure you have imported both the `script.js` and `dataset.js` files from your `index.html` file.\r\n2.  **Consult AI:** Use the AI Assistant to help plan your JavaScript logic to display all cards in the dataset. You might ask:\r\n      * *Help me write a function that takes my array of data and displays it as HTML cards.*\r\n      * *How do I use a loop to add multiple items to my container div?*\r\n3.  **Render the Data:** In `script.js`, write a function that reads in the data from `dataset.js` and loops through your dataset to display all the cards when the page loads."
+    "long_instructions": "# Build a Static Web Page\r\n\r\n1.  **Build the Structure:** With the help of AI, write the HTML and CSS to match your wireframe. Create an empty `script.js` file and ensure you have imported both the `script.js` and `dataset.js` files from your `index.html` file.\r\n2.  **Consult AI:** Use the AI Assistant to help plan your JavaScript logic to display all cards in the dataset. You might ask:\r\n      * *Help me write a function that takes my array of data and displays it as HTML cards.*\r\n      * *How do I use a loop to add multiple items to my container div?*\r\n3.  **Render the Data:** In `script.js`, write a function that reads in the data from `dataset.js` and loops through your dataset to display all the cards when the page loads.",
+    "bubble_choice_description": "Write the HTML and CSS for your dashboard and use JavaScript to loop through your dataset and display every item on the page ***(supports completing Milestone 2 tasks)***.",
+    "thumbnail_url": "https://images.code.org/4f1cbd979c358099c6f34479d722f913-dashboard.png",
+    "display_name": "Build a Static Web Page"
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-26T15:46:59.614+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson11-level4-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson11-level4-test-2025\"},{\"changed_at\":\"2025-11-26 15:47:13 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-26 18:29:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-11-26T15:46:59.614+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson11-level4-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson11-level4-test-2025\"},{\"changed_at\":\"2025-11-26 15:47:13 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-26 18:29:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-10 20:38:32 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-10 20:38:53 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-10 20:39:27 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-10 20:41:51 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-10 20:41:59 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-10 20:42:54 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-10 22:24:11 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

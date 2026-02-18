@@ -20,7 +20,7 @@
     },
     "project_template_level_name": "CSA U4L10-MultiSelection PBT_2023",
     "teacher_markdown": "The updated method now displays `\"Invalid shipping method\"` when the shipping method is an empty `String`. This is because the first `if` branch checks for an empty `String` and returns `\"Invalid shipping method\"` if this is `true`. Otherwise, it checks if the order is filled to calculate the shipping cost or returns `\"Order not ready\"` if the order is not filled.",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-02-17T19:03:57.769+00:00\",\"changed\":[\"cloned from \\\"CSA U4L10-L2_2023\\\"\"],\"cloned_from\":\"CSA U4L10-L2_2023\"},{\"changed_at\":\"2023-02-17 19:03:59 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-10 19:57:19 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-10 20:45:49 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
