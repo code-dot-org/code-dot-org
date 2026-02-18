@@ -1,0 +1,25 @@
+[Unit]
+Description=OpenTelemetry Collector
+After=network.target
+
+[Service]
+Type=simple
+User=<%= @config['user'] %>
+Group=<%= @config['group'] %>
+WorkingDirectory=<%= @config['home_dir'] %>
+ExecStart=<%= @config['binary_path'] %> --config=<%= @config['config_file'] %>
+Restart=always
+RestartSec=5
+
+# Security settings
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=<%= @config['home_dir'] %>
+ReadWritePaths=<%= @config['config_dir'] %>
+
+# Resource limits
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target
