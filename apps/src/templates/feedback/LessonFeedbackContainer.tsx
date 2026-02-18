@@ -52,27 +52,31 @@ function LessonFeedbackContainer({studentId}: LessonFeedbackContainerProps) {
     }
   }, [studentId]);
 
+  const hasSubmittedFeedback =
+    fetchedFeedback &&
+    fetchedFeedback.length > 0 &&
+    fetchedFeedback.some(item => item.submitted_feedback !== null);
+
   return (
     <div>
-      {!!fetchedFeedback && fetchedFeedback?.length === 0 && (
-        <div>{i18n.feedbackNoneYet()}</div>
-      )}
-      {fetchedFeedback &&
-        fetchedFeedback.length > 0 &&
-        fetchedFeedback.map(lessonFeedback => {
-          return (
-            <LessonFeedback
-              key={lessonFeedback.id}
-              feedbackText={lessonFeedback?.submitted_feedback}
-              lessonId={lessonFeedback.lesson_id}
-              teacherName={lessonFeedback.teacher_name || 'Your teacher'}
-              submittedAtDate={lessonFeedback.updated_at}
-              lessonTitle={lessonFeedback.lesson_title}
-              lessonStartUrl={lessonFeedback.lesson_start_url}
-              resource={lessonFeedback.resources?.[0]}
-            />
-          );
-        })}
+      {!hasSubmittedFeedback && <div>{i18n.feedbackNoneYet()}</div>}
+      {hasSubmittedFeedback &&
+        fetchedFeedback
+          .filter(lessonFeedback => lessonFeedback.submitted_feedback !== null)
+          .map(lessonFeedback => {
+            return (
+              <LessonFeedback
+                key={lessonFeedback.id}
+                feedbackText={lessonFeedback?.submitted_feedback}
+                lessonId={lessonFeedback.lesson_id}
+                teacherName={lessonFeedback.teacher_name || 'Your teacher'}
+                submittedAtDate={lessonFeedback.updated_at}
+                lessonTitle={lessonFeedback.lesson_title}
+                lessonStartUrl={lessonFeedback.lesson_start_url}
+                resource={lessonFeedback.resources?.[0]}
+              />
+            );
+          })}
     </div>
   );
 }
