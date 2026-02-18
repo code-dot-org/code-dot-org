@@ -1,8 +1,10 @@
 class AiLessonSummaryPodcastsController < ApplicationController
   before_action :authenticate_user!
+  PODCAST_BUCKET = 'org.code.autoscale-prod-studio.user-content'
+  PODCAST_FOLDER = 'podcasts/'
 
   def show
-    podcast = AiLessonSummaryPodcastsHelper.retrieve_and_save_ai_lesson_summary(params[:lesson_id])
+    podcast = AWS::S3.download_from_bucket(PODCAST_BUCKET, PODCAST_FOLDER+'lesson_'+params[:lesson_id].to_s+'_podcast.mp3')
     send_data podcast, type: 'audio/mpeg', disposition: 'inline'
   end
 
