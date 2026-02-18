@@ -26,17 +26,13 @@ dpkg_package 'otelcol' do
 end
 
 # Generate configuration file (package creates the directory)
-template node['cdo-otel-collector']['config_file'] do
-  source 'otel-collector-config.yaml.erb'
+cookbook_file node['cdo-otel-collector']['config_file'] do
+  source 'config.yaml'
   owner 'root'
   group 'root'
   mode '0644'
-  variables(
-    config: node['cdo-otel-collector'],
-    environment: node.chef_environment
-  )
   notifies :restart, 'service[otelcol]', :delayed
-  # Only create template if package is installed
+  # Only create config if package is installed
   only_if {File.exist?('/usr/bin/otelcol')}
 end
 
