@@ -55,6 +55,15 @@ const InnerHTMLPreview = () => {
         setCurrentFile(data.fileName);
       } else if (data.type === IframeMessageType.SET_ALLOW_SCRIPTS) {
         setAllowScripts(!!data.allow);
+      } else if (data.type === IframeMessageType.CONSOLE_LOG) {
+        window.parent.postMessage(
+          {
+            type: IframeMessageType.CONSOLE_LOG,
+            level: data.level,
+            args: data.args,
+          },
+          parentOrigin
+        );
       } else if (data.type === IframeMessageType.REFRESH) {
         iframeRef.current?.contentWindow?.location.reload();
       } else if (data.type === IframeMessageType.LEVEL_LOADING) {
