@@ -4,9 +4,8 @@ import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import React from 'react';
 
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-
-import {clearRequests} from '../redux/networkRedux';
-import {setDebugPanelOpen} from '../weblab2Redux';
+import {clearRequests} from '@cdo/apps/weblab2/redux/networkRedux';
+import {setDebugPanelOpen} from '@cdo/apps/weblab2/weblab2Redux';
 
 import moduleStyles from './debug-panel-right-header-buttons.module.scss';
 
