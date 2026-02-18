@@ -12,7 +12,7 @@ import ReactDOM from 'react-dom';
 
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 
-import {DATE_FORMAT} from '../workshopConstants';
+import {DATE_FORMAT} from '../code-studio/pd/workshop_dashboard/workshopConstants';
 
 import 'react-datepicker/dist/react-datepicker.css';
 import '@cdo/apps/code-studio/assets/date_picker.scss';

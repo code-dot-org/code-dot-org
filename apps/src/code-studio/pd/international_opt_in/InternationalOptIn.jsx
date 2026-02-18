@@ -9,7 +9,7 @@ import i18n from '@cdo/locale';
 
 import FormComponent from '../form_components/FormComponent';
 import FormController from '../form_components/FormController';
-import DatePicker from '../workshop_dashboard/components/date_picker';
+import DatePicker from '../../../sharedComponents/DatePicker';
 import {DATE_FORMAT} from '../workshop_dashboard/workshopConstants';
 
 export default class InternationalOptIn extends FormController {
