@@ -36,7 +36,9 @@ const NetworkRequestChip: React.FunctionComponent<NetworkRequestChipProps> = ({
 
   const label = useMemo(() => {
     try {
-      return new URL(request.request.url).hostname;
+      const url = new URL(request.request.url);
+      const lastSegment = url.pathname.split('/').filter(Boolean).pop();
+      return lastSegment || url.hostname;
     } catch {
       return request.request.url;
     }
