@@ -18,7 +18,6 @@ import {setCurrentView} from './sectionProgressRedux';
  */
 class SectionProgressToggle extends React.Component {
   static propTypes = {
-    showStandardsToggle: PropTypes.bool,
     // Redux provided
     currentView: PropTypes.string.isRequired,
     setCurrentView: PropTypes.func.isRequired,
@@ -36,7 +35,7 @@ class SectionProgressToggle extends React.Component {
   };
 
   render() {
-    const {currentView, showStandardsToggle} = this.props;
+    const {currentView} = this.props;
     return (
       <ToggleGroup
         selected={currentView}
@@ -59,16 +58,6 @@ class SectionProgressToggle extends React.Component {
         >
           <div>{i18n.levels()}</div>
         </button>
-        {showStandardsToggle && (
-          <button
-            type="button"
-            value={ViewType.STANDARDS}
-            style={styles.toggleButton}
-            id="uitest-standards-toggle"
-          >
-            <div>{i18n.standards()}</div>
-          </button>
-        )}
       </ToggleGroup>
     );
   }
