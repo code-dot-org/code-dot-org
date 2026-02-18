@@ -115,7 +115,7 @@ footer:
     studio:
       - title: privacy
         url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
-        style: 'color: #ffa400;'
+        style: "color: #ffa400;"
       - title: cookie_notice
         url: https://code-org.translate.goog/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp
       - title: tos_short
@@ -164,10 +164,6 @@ pages:
       DownloadParentLetterButton: false
       ManageStudentsLoginInfo:
         providePrivacyLetter: false
-      SectionProgressSelector:
-        showProgressTableV2: true
-      ProgressV1OrV2ToggleLink: false
-      ProgressFeedbackBanner: false
   # Home dashboards
   - path: /home
     components:

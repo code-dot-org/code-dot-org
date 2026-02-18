@@ -1,3 +1,5 @@
+// DECIDE WHETHER TO DELETE THIS BEFORE MERGE]
+
 import React from 'react';
 import {Alert, Fade} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 

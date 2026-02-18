@@ -11,7 +11,6 @@ import {
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import {AgeGatedStudentsBanner} from '@cdo/apps/templates/policy_compliance/AgeGatedStudentsModal/AgeGatedStudentsBanner';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import i18n from '@cdo/locale';
 
 import {selectedSectionSelector} from '../teacherDashboard/teacherSectionsReduxSelectors';
 
@@ -43,10 +42,6 @@ const PageHeader: React.FC<{urlSectionId: string}> = ({urlSectionId}) => {
   }, [ageGatedModalOpen]);
   const selectedSection = useAppSelector(selectedSectionSelector);
 
-  const showProgressV2 = useAppSelector(
-    state => state.currentUser.showProgressTableV2
-  );
-
   const dispatch = useAppDispatch();
   useEffect(() => {
     if (urlSectionId) {
@@ -65,18 +60,14 @@ const PageHeader: React.FC<{urlSectionId: string}> = ({urlSectionId}) => {
   const showAgeGatedStudentsBanner = ageGatedStudents?.length > 0;
 
   const location = useLocation();
-  const pathName = React.useMemo(() => {
-    const result =
+  const pathName = React.useMemo(
+    () =>
       _.find(
         LABELED_TEACHER_NAVIGATION_PATHS,
         path => matchPath(path.absoluteUrl, location.pathname) !== null
-      )?.label || 'unknown path';
-
-    if (result === 'Progress' && showProgressV2 === 'legacy') {
-      return i18n.progressLegacy();
-    }
-    return result;
-  }, [location, showProgressV2]);
+      )?.label || 'unknown path',
+    [location]
+  );
 
   const sectionNameText = selectedSection ? selectedSection.name : '';
 
