@@ -20,10 +20,6 @@ Parameters:
     Type: String
     Default: <%=rack_env?(:production) ? 'studio' : "#{stack_name}-studio" %>
     Description: Subdomain name for learning platform ("Dashboard").
-  PegasusSubdomainName:
-    Type: String
-    Default: <%=rack_env?(:production) ? '\'\'' : stack_name %>
-    Description: Subdomain name for corporate web site ("Pegasus").
   HourOfCodeBaseDomainName:
     Type: String
     Default: hourofcode.com

@@ -228,7 +228,7 @@
 <%   if rack_env?(:production) -%>
         - Name: !Sub "db-reporting.${BaseDomainName}"
 <%   else -%>
-        - Name: !Sub "${PegasusSubdomainName}-db-reporting.${BaseDomainName}"
+        - Name: !Sub "${AWS::StackName}-db-reporting.${BaseDomainName}"
 <%   end -%>
           Type: CNAME
           TTL: <%= DNS_TTL %>
