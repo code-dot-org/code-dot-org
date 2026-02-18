@@ -1,6 +1,25 @@
 module AiLessonSummaryPodcastsHelper
   API_KEY = CDO.elevenlabs_api_key
   MODEL = "eleven_v3"
+  PODCAST_BUCKET = 'org.code.autoscale-prod-studio.user-content'
+  PODCAST_FOLDER = 'podcasts/'
+
+  def self.create_and_save_to_s3_by_unit(lesson_ids, user_id)
+    lesson_ids.each do |lesson_id|
+      script = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(lesson_id, user_id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])[:script]
+      podcast = get_podcast_from_script(script)
+      filename = PODCAST_FOLDER+'lesson_'+lesson_id.to_s+'_podcast.mp3'
+
+      unless AWS::S3.exists_in_bucket(PODCAST_BUCKET, filename)
+        AWS::S3.upload_to_bucket(PODCAST_BUCKET, filename, podcast, no_random: true)
+      end
+    end
+  end
+
+  def self.retrieve_podcast_from_s3(lesson_id)
+    filename = PODCAST_FOLDER+'lesson_'+lesson_id.to_s+'_podcast.mp3'
+    AWS::S3.download_from_bucket(PODCAST_BUCKET, filename)
+  end
 
   def self.get_podcast_from_script(script)
     client = Client.new(API_KEY, MODEL)

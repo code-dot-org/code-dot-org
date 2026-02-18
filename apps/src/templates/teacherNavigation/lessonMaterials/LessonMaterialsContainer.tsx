@@ -131,9 +131,9 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     state => state.currentUser.showAITALessonSummary
   );
 
-  const showAITAPodcasts = useAppSelector(
-    state => state.currentUser.showAITAPodcasts
-  );
+  const showAITAPodcasts =
+    useAppSelector(state => state.currentUser.showAITAPodcasts) ||
+    experiments.isEnabled('ai-lesson-podcasts');
 
   React.useEffect(() => {
     const selectedSectionId = selectedSection.id;
@@ -216,8 +216,15 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           setCanShowLessonSummaries(false);
           console.log(`Error: ${error}`);
         });
+      if (showAITAPodcasts) {
+        HttpClient.get(
+          `ai_lesson_summary_podcasts/show?lesson_id=${selectedLesson?.id}`
+        )
+          .then(data => console.log(data))
+          .catch(error => console.log(error));
+      }
     }
-  }, [userId, selectedLesson, showAITALessonSummary]);
+  }, [userId, selectedLesson, showAITALessonSummary, showAITAPodcasts]);
 
   const handleLessonSummaryAskAITAClick = () => {
     dispatch(

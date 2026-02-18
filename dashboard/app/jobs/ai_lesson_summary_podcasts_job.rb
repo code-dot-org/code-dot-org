@@ -48,16 +48,6 @@ class AiLessonSummaryPodcastsJob < ApplicationJob
   end
 
   def perform(request:)
-    request[:lesson_ids].each do |lesson_id|
-      script = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(lesson_id, request[:user_id], AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])[:json]
-      script = JSON.parse(script)['podcast_script']
-      podcast = AiLessonSummaryPodcastsHelper.get_podcast_from_script(script)
-      filename = 'lesson_'+lesson_id.to_s+'_podcast.mp3'
-
-      # Temporary solution for testing until S3 storage is ready
-      unless File.exist?(filename)
-        File.binwrite('lesson_'+lesson_id.to_s+'_podcast.mp3', podcast)
-      end
-    end
+    AiLessonSummaryPodcastsHelper.create_and_save_to_s3_by_unit(request[:lesson_ids], request[:user_id])
   end
 end

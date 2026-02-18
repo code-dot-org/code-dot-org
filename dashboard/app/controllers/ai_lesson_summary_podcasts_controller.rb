@@ -1,6 +1,11 @@
 class AiLessonSummaryPodcastsController < ApplicationController
   before_action :authenticate_user!
 
+  def show
+    podcast = AiLessonSummaryPodcastsHelper.retrieve_and_save_ai_lesson_summary(params[:lesson_id])
+    send_data podcast, type: 'audio/mpeg', disposition: 'inline'
+  end
+
   def generate_podcasts_by_unit
     if current_user && DCDO.get('ai-lesson-summary-podcasts', false)
       unit = Unit.find(params[:unit_id])

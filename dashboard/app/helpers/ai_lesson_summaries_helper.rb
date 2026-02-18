@@ -49,7 +49,7 @@ module AiLessonSummariesHelper
           {user_id: user_id, lesson_id: lesson_id, script: existing_script.script}
           AiLessonSummary.create!(new_ai_lesson_summary_params)
         end
-        return existing_script.script
+        return existing_script
       end
     end
 
