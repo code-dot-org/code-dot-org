@@ -1,10 +1,10 @@
+import {Typography} from '@mui/material';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {Heading2} from '@cdo/apps/legacySharedComponents/Headings';
 import color from '@cdo/apps/util/color';
 import {findProfanity} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
@@ -370,11 +370,17 @@ export default class LibraryPublisher extends React.Component {
 
     return (
       <div>
-        <Heading2>{i18n.libraryName()}</Heading2>
+        <Typography variant="h2" gutterBottom>
+          {i18n.libraryName()}
+        </Typography>
         {this.displayNameInput()}
-        <Heading2>{i18n.description()}</Heading2>
+        <Typography variant="h2" gutterBottom>
+          {i18n.description()}
+        </Typography>
         {this.displayDescription()}
-        <Heading2>{i18n.catProcedures()}</Heading2>
+        <Typography variant="h2" gutterBottom>
+          {i18n.catProcedures()}
+        </Typography>
         <div style={styles.functionSelector}>
           <input
             style={styles.largerCheckbox}

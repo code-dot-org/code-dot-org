@@ -1,8 +1,7 @@
 // My Professional Learning landing page
 // studio.code.org/my-professional-learning
-
 import Tabs from '@code-dot-org/component-library/tabs';
-import {Heading2} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useEffect, useState} from 'react';
 import {connect, useDispatch} from 'react-redux';
@@ -394,7 +393,9 @@ function LandingPage({
   const RenderSelfPacedPL = () => {
     return (
       <section id={'self-paced-pl'}>
-        <Heading2>{i18n.plLandingSelfPacedProgressHeading()}</Heading2>
+        <Typography variant="h2" gutterBottom>
+          {i18n.plLandingSelfPacedProgressHeading()}
+        </Typography>
         <SelfPacedProgressTable plCoursesStarted={plCoursesStarted} />
       </section>
     );
@@ -444,7 +445,9 @@ function LandingPage({
   const RenderOwnedPlSections = () => {
     return (
       <section>
-        <Heading2>{i18n.plSectionsInstructorTitle()}</Heading2>
+        <Typography variant="h2" gutterBottom>
+          {i18n.plSectionsInstructorTitle()}
+        </Typography>
         <SetUpSections
           headingText={i18n.newSectionCreate()}
           descriptionText={i18n.newSectionMyPlAdd()}
@@ -608,7 +611,9 @@ function LandingPage({
         )}
         {!hideMyPLStaticRecommendedPL && (
           <section>
-            <Heading2>{i18n.plLandingRecommendedHeading()}</Heading2>
+            <Typography variant="h2" gutterBottom>
+              {i18n.plLandingRecommendedHeading()}
+            </Typography>
             {RenderStaticRecommendedPL()}
           </section>
         )}
@@ -621,7 +626,9 @@ function LandingPage({
       <>
         {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
         <section>
-          <Heading2>{i18n.plSectionsFacilitatorResources()}</Heading2>
+          <Typography variant="h2" gutterBottom>
+            {i18n.plSectionsFacilitatorResources()}
+          </Typography>
           {RenderFacilitatorResources()}
         </section>
         {RenderOwnedPlSections()}
@@ -644,7 +651,9 @@ function LandingPage({
       <>
         {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
         <section>
-          <Heading2>{i18n.plSectionsRegionalPartnerResources()}</Heading2>
+          <Typography variant="h2" gutterBottom>
+            {i18n.plSectionsRegionalPartnerResources()}
+          </Typography>
           {RenderRegionalPartnerResources()}
         </section>
         <LandingPageWorkshopsTable
@@ -662,7 +671,9 @@ function LandingPage({
       <>
         {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
         <section>
-          <Heading2>{i18n.plSectionsWorkshopResources()}</Heading2>
+          <Typography variant="h2" gutterBottom>
+            {i18n.plSectionsWorkshopResources()}
+          </Typography>
           <BorderedCallToAction
             key={4}
             headingText={i18n.plSectionsWorkshopTitle()}
