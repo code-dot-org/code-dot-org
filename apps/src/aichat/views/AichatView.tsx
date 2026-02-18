@@ -45,10 +45,10 @@ import {
   selectAllFieldsHidden,
   sendAnalytics,
   setShowModalType,
-  setStartingAiCustomizations,
   setUserHasAichatAccess,
   setViewMode,
   updateAiCustomization,
+  initializeAiCustomizations,
 } from '../redux';
 import {AichatLevelProperties, ModelParameters, ViewMode} from '../types';
 
@@ -144,10 +144,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
       (initialSources?.source as string) || '{}'
     );
     dispatch(
-      setStartingAiCustomizations({
-        levelAichatSettings,
-        studentAiCustomizations,
-      })
+      initializeAiCustomizations(studentAiCustomizations, levelAichatSettings)
     );
     dispatch(
       addChatEvent({

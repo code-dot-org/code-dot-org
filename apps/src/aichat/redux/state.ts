@@ -20,7 +20,8 @@ import {
   UserAddedSelectionContext,
 } from '../types';
 
-export interface AichatState {
+// State pertaining to AI TA Differentiation chat. TODO: Move this to a separate slice.
+interface AiDiffChatState {
   chatIsOpen: boolean;
   clientType?: AiChatClientType;
   // Id of the current thread open
@@ -44,6 +45,9 @@ export interface AichatState {
   threadKeyId: number;
   // AI TA's opening message for a thread
   initialChatMessage: string;
+}
+
+export interface AichatState extends AiDiffChatState {
   // Content from previous chat sessions that we track purely for visibility to the user
   // and do not send to the model as history.
   chatEventsPast: ChatEvent[];
@@ -85,6 +89,8 @@ export interface AichatState {
   saveError: SaveError | undefined;
   // If the model customizations were just reset to the default level values.
   showResetMessage: boolean;
+  // If the user had previously selected a model that is no longer available.
+  showUnsupportedModelMessage: boolean;
   // The tab selected when a teacher is viewing a student's chat history.
   chatWorkspaceSelectedTab: WorkspaceTeacherViewTab | null;
   userAddedSelectionContext: UserAddedSelectionContext;

@@ -11,7 +11,6 @@ export {
   setModelCardProperty,
   setNewChatSession,
   setShowModalType,
-  setStartingAiCustomizations,
   setStudentChatHistory,
   setUserHasAichatAccess,
   setClientType,
