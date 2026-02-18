@@ -1,4 +1,4 @@
-import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
@@ -35,9 +35,11 @@ export const validateModelId = (
     : supportedModelIds;
 
   if (supportedAndAllowed.length === 0) {
-    MetricsReporter.logWarning(
-      'No overlap between levelbuilder-allowed models and supported models. Defaulting to first supported model.'
-    );
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logWarning(
+        'No overlap between levelbuilder-allowed models and supported models. Defaulting to first supported model.'
+      );
     return {isValid: false, modelId: supportedModelIds[0]};
   }
 
