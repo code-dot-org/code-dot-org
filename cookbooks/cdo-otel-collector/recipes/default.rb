@@ -25,9 +25,9 @@ dpkg_package 'otelcol' do
   notifies :restart, 'service[otelcol]', :delayed
 end
 
-# Generate configuration file (package creates the directory)
-cookbook_file node['cdo-otel-collector']['config_file'] do
-  source 'config.yaml'
+# Generate configuration file from template (package creates the directory)
+template node['cdo-otel-collector']['config_file'] do
+  source 'config.yaml.erb'
   owner 'root'
   group 'root'
   mode '0644'

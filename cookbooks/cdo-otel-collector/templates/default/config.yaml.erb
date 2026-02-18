@@ -1,0 +1,46 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+        endpoint: 127.0.0.1:4317
+      http:
+        endpoint: 127.0.0.1:4318
+
+  # Host telemetry (emits every 60s)
+  hostmetrics:
+    collection_interval: 60s
+    scrapers:
+      cpu: {}
+      load: {}
+      memory: {}
+      disk: {}
+      filesystem: {}
+      network: {}
+
+processors:
+  batch:
+
+exporters:
+  otlphttp:
+    endpoint: https://otlp.nr-data.net:4318
+    headers:
+      api-key: <%= node['cdo-otel']['newrelic_license_key'] %>
+    compression: gzip
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [otlphttp]
+
+    # Metrics includes both OTLP metrics (later from Rails) + hostmetrics (now, once/minute)
+    metrics:
+      receivers: [otlp, hostmetrics]
+      processors: [batch]
+      exporters: [otlphttp]
+
+    logs:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [otlphttp]
