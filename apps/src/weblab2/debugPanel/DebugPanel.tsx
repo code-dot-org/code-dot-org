@@ -1,5 +1,4 @@
 import Button from '@code-dot-org/component-library/button';
-import CloseButton from '@code-dot-org/component-library/closeButton';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   BodyFourText,
@@ -10,14 +9,14 @@ import {isEqual} from 'lodash';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import PendingDivider from '@cdo/apps/weblab2/debugPanel/images/Pending.svg';
 import RequestFailureDivider from '@cdo/apps/weblab2/debugPanel/images/RequestFailure.svg';
 import ResponseFailureDivider from '@cdo/apps/weblab2/debugPanel/images/ResponseFailure.svg';
 import SuccessDivider from '@cdo/apps/weblab2/debugPanel/images/Success.svg';
 import {NetworkEntry} from '@cdo/apps/weblab2/redux/networkRedux';
-import {setDebugPanelOpen} from '@cdo/apps/weblab2/weblab2Redux';
 
+import DebugPanelRightHeaderButtons from './DebugPanelRightHeaderButtons';
 import DetailsBox from './DetailsBox';
 import NetworkRequestChip from './NetworkRequestChip';
 import NoRequestsPlaceholder from './NoRequestsPlaceholder';
@@ -38,7 +37,6 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
   const [selectedRequest, setSelectedRequest] = useState<
     NetworkEntry | undefined
   >(orderedNetworkRequests.length > 0 ? orderedNetworkRequests[0] : undefined);
-  const dispatch = useAppDispatch();
   const [newestFirst, setNewestFirst] = useState(true);
 
   useEffect(() => {
@@ -194,12 +192,7 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
       id={'debug-panel-container'}
       headerContent={'Debug'}
       className={className}
-      rightHeaderContent={
-        <CloseButton
-          onClick={() => dispatch(setDebugPanelOpen(false))}
-          aria-label="Close debug panel"
-        />
-      }
+      rightHeaderContent={<DebugPanelRightHeaderButtons />}
     >
       {orderedNetworkRequests.length === 0 ? (
         <NoRequestsPlaceholder />
