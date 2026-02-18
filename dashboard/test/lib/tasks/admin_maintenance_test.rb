@@ -3,7 +3,7 @@ require 'rake'
 
 class AdminMaintenanceTaskTest < ActiveSupport::TestCase
   setup do
-    @original_execute = ENV['EXECUTE', nil]
+    @original_execute = ENV.fetch('EXECUTE', nil)
     @original_rake = Rake.application
     Rake.application = Rake::Application.new
     Rake.application.rake_require('dashboard/lib/tasks/admin_maintenance', [Rails.root.to_s])
