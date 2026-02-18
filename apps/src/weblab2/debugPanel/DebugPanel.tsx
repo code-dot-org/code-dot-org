@@ -10,6 +10,7 @@ import React, {useEffect, useMemo} from 'react';
 
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import PendingDivider from '@cdo/apps/weblab2/debugPanel/images/Pending.svg';
 import RequestFailureDivider from '@cdo/apps/weblab2/debugPanel/images/RequestFailure.svg';
 import ResponseFailureDivider from '@cdo/apps/weblab2/debugPanel/images/ResponseFailure.svg';
 import SuccessDivider from '@cdo/apps/weblab2/debugPanel/images/Success.svg';
@@ -98,6 +99,11 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
         dividerIcon: SuccessDivider,
         dividerAltText: 'Request and response success',
       };
+    } else if (requestSuccess && responsePending) {
+      return {
+        dividerIcon: PendingDivider,
+        dividerAltText: 'Request success, response pending',
+      };
     } else if (requestSuccess) {
       return {
         dividerIcon: ResponseFailureDivider,
@@ -109,7 +115,7 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
         dividerAltText: 'Request failure',
       };
     }
-  }, [requestSuccess, responseSuccess]);
+  }, [requestSuccess, responseSuccess, responsePending]);
 
   const responseRows = useMemo(() => {
     const rows = [

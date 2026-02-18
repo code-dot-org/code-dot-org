@@ -28,7 +28,7 @@ const DetailsBox: React.FunctionComponent<DetailsBoxProps> = ({
   rows,
   errorMessage,
 }) => {
-  const {iconName, iconClassName} = useMemo(() => {
+  const {iconName, iconClassName, animationType} = useMemo(() => {
     switch (status) {
       case 'success':
         return {
@@ -44,6 +44,7 @@ const DetailsBox: React.FunctionComponent<DetailsBoxProps> = ({
         return {
           iconName: 'spinner',
           iconClassName: parentStyles.loadingIcon,
+          animationType: 'spin' as const,
         };
     }
   }, [status]);
@@ -54,7 +55,11 @@ const DetailsBox: React.FunctionComponent<DetailsBoxProps> = ({
         <BodyThreeText className={moduleStyles.detailsHeaderText}>
           <StrongText>{title}</StrongText>
         </BodyThreeText>
-        <FontAwesomeV6Icon iconName={iconName} className={iconClassName} />
+        <FontAwesomeV6Icon
+          iconName={iconName}
+          className={iconClassName}
+          animationType={animationType}
+        />
       </div>
       <div className={moduleStyles.detailsBody}>
         {errorMessage && <Alert text={errorMessage} type="danger" size="xs" />}
