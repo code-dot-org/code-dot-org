@@ -5,7 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Synchronous vs. Asynchronous
 
-#### In real programs, some tasks happen immediately, while others take time — like waiting for data from a server or a timer to finish.
+<img src="https://images.code.org/6f13673a0ca38964117b3ad1e8261040-image-1771342723588.png" alt="cartoon image of chef flipping a pancake" width="275px" style="border-radius:10px; float:right; margin: 0 0 0px 20px;">
+
+#### In real programs, some tasks happen immediately, while others take time.
 
 #### The question is not whether waiting happens.  
 #### The real question is: **What does the program do while it waits?**
@@ -14,11 +16,15 @@ markdown <<MARKDOWN
 - ####  **Synchronous (blocking):** Tasks happen one at a time, in order.
 - ####  **Asynchronous (non-blocking):** Some tasks are scheduled to finish later, allowing other work to continue.
 
+
+<div style="clear:both;"></div>
+
+
 ---
 
 ## Predict 
 
-##### Look at the blocking code, or synchronous code below and predict the order of the chef's events. 
+#### Look at the blocking code, or synchronous code below and predict the order of the chef's events. 
 
 <img src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." width="30px" style="border-radius:10px; float:left; margin: 0px 10px 5px 0px;">
 
@@ -61,7 +67,7 @@ markdown <<MARKDOWN
 <div style="clear:both;"></div>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">▶️ Run routine:</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">Run routine:</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
      <div style="background-color:#000000; color:#00FF00; padding:15px; border-radius:8px; margin:20px auto; max-width:90%; font-family:Courier, 'Courier New', monospace; font-size:12px; line-height:1.6;">
 
@@ -136,7 +142,7 @@ markdown <<MARKDOWN
 <div style="clear:both;"></div>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-   <summary style="font-size: 1.5em; font-weight: bold;">▶️ Run routine:</summary>
+   <summary style="font-size: 1.5em; font-weight: bold;">Run routine:</summary>
 
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
 <div style="background-color:#000000; color:#00FF00; padding:15px; border-radius:8px; margin:20px auto; max-width:90%; font-family:Courier, 'Courier New', monospace; font-size:14px; line-height:1.6;">
@@ -175,7 +181,7 @@ markdown <<MARKDOWN
 - #### 2. It continues executing the rest of the code immediately.
 - #### 3. When the timer finishes, the scheduled task is added back into the queue to run.
 
-#### That’s why the chef pours orange juice and places the ticket on the counter *before* the toast pops — even though the toast code appears earlier in the file.
+#### That’s why the chef pours orange juice and places the ticket on the counter *before* the toast pops even though the toast code appears earlier in the file.
 
 #### The order of completion depends on the timer, not the position in the code.
 
