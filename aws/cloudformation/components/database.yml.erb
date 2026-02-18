@@ -313,7 +313,7 @@
       # Credentials (username and password) for the SQL User this Resource is provisioning.
       DBCredentialSecret: !Ref DatabaseSecretReader
       Privileges: ['SELECT']
-<% if rack_env?(:production) # Provision Zero ETL Integration to Redshift in production only. -%>
+<% if rack_env?(:production) || rack_env?(:test) # Provision Zero ETL on managed test server and production. -%>
   ZeroETLIntegration:
     Type: AWS::RDS::Integration
     Properties:
