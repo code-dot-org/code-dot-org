@@ -182,6 +182,7 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
                   request={request}
                   onChange={onInputChange}
                   isSelected={selectedRequest?.id === request.id}
+                  newestFirst={newestFirst}
                 />
               ))}
             </div>
