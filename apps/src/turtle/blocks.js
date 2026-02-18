@@ -26,9 +26,11 @@ import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {
   registerCustomProcedureBlocks,
   numberValidator,
+  interpolateMsg,
 } from '@cdo/apps/blockly/utils';
 import commonMsg from '@cdo/locale';
 
+import {setAngleHelperOptions} from '../blockly/addons/cdoAngleHelperOptions';
 import {Position} from '../constants';
 
 import Colours from './colours';
@@ -418,13 +420,13 @@ exports.install = function (blockly, blockInstallOptions) {
 
   blockly.Blocks.point_to_param = createPointToBlocks(function (block) {
     // Block for pointing to a specified direction
-    block
+    const input = block
       .appendValueInput('VALUE')
-      .setCheck(blockly.BlockValueType.NUMBER)
-      .addFieldHelper(blockly.BlockFieldHelper.ANGLE_HELPER, {
-        block,
-        direction: 'turnRight',
-      });
+      .setCheck(blockly.BlockValueType.NUMBER);
+    setAngleHelperOptions(input.connection, {
+      block,
+      direction: 'turnRight',
+    });
     block.appendDummyInput().appendField(msg.degrees());
   });
 
@@ -541,7 +543,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setStyle(BlockStyles.PROCEDURE);
       this.appendDummyInput().appendField(msg.drawASquare());
       this.appendValueInput('VALUE')
-        .setAlign(blockly.ALIGN_RIGHT)
+        .setAlign(blockly.inputs.Align.RIGHT)
         .setCheck(blockly.BlockValueType.NUMBER)
         .appendField(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
@@ -575,7 +577,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setStyle(BlockStyles.PROCEDURE);
       this.appendDummyInput().appendField(msg.drawASnowman());
       this.appendValueInput('VALUE')
-        .setAlign(blockly.ALIGN_RIGHT)
+        .setAlign(blockly.inputs.Align.RIGHT)
         .setCheck(blockly.BlockValueType.NUMBER)
         .appendField(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
@@ -653,13 +655,14 @@ exports.install = function (blockly, blockInstallOptions) {
           blockly.Msg.CONTROLS_FOR_INPUT_WITH || msg.controlsForInputWith()
         )
         .appendField(new blockly.FieldLabel(msg.loopVariable()), 'VAR');
-      this.interpolateMsg(
+      interpolateMsg(
+        this,
         blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY ||
           msg.controlsForInputFromToBy(),
-        ['FROM', 'Number', blockly.ALIGN_RIGHT],
-        ['TO', 'Number', blockly.ALIGN_RIGHT],
-        ['BY', 'Number', blockly.ALIGN_RIGHT],
-        blockly.ALIGN_RIGHT
+        ['FROM', 'Number', blockly.inputs.Align.RIGHT],
+        ['TO', 'Number', blockly.inputs.Align.RIGHT],
+        ['BY', 'Number', blockly.inputs.Align.RIGHT],
+        blockly.inputs.Align.RIGHT
       );
       this.appendStatementInput('DO').appendField(
         Blockly.Msg.CONTROLS_FOR_INPUT_DO
@@ -686,7 +689,7 @@ exports.install = function (blockly, blockInstallOptions) {
     // deserialize the counter variable name
     domToMutation: function (xmlElement) {
       var counter = xmlElement.getAttribute('counter');
-      this.setTitleValue(counter, 'VAR');
+      this.setFieldValue(counter, 'VAR');
     },
   };
   generator.controls_for_counter = generator.forBlock.controls_for;
@@ -702,7 +705,8 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
-      this.interpolateMsg(
+      interpolateMsg(
+        this,
         msg.moveDirectionByPixels(),
         () => {
           this.appendDummyInput().appendField(
@@ -710,8 +714,8 @@ exports.install = function (blockly, blockInstallOptions) {
             'DIR'
           );
         },
-        ['VALUE', 'Number', blockly.ALIGN_RIGHT],
-        blockly.ALIGN_RIGHT
+        ['VALUE', 'Number', blockly.inputs.Align.RIGHT],
+        blockly.inputs.Align.RIGHT
       );
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -740,7 +744,8 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
-      this.interpolateMsg(
+      interpolateMsg(
+        this,
         msg.jumpByDirection(),
         () => {
           this.appendDummyInput().appendField(
@@ -748,8 +753,8 @@ exports.install = function (blockly, blockInstallOptions) {
             'DIR'
           );
         },
-        ['VALUE', 'Number', blockly.ALIGN_RIGHT],
-        blockly.ALIGN_RIGHT
+        ['VALUE', 'Number', blockly.inputs.Align.RIGHT],
+        blockly.inputs.Align.RIGHT
       );
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -1102,12 +1107,13 @@ exports.install = function (blockly, blockInstallOptions) {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]); // default to top-left
       this.setStyle(BlockStyles.DEFAULT);
-      this.interpolateMsg(
+      interpolateMsg(
+        this,
         msg.jumpToPosition(),
         () => {
           this.appendDummyInput().appendField(dropdown, 'VALUE');
         },
-        blockly.ALIGN_RIGHT
+        blockly.inputs.Align.RIGHT
       );
       this.setPreviousStatement(true);
       this.setInputsInline(true);
@@ -1134,7 +1140,8 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
-      this.interpolateMsg(
+      interpolateMsg(
+        this,
         msg.jumpToOverDown(),
         () => {
           this.appendDummyInput().appendField(
@@ -1148,7 +1155,7 @@ exports.install = function (blockly, blockInstallOptions) {
             'YPOS'
           );
         },
-        blockly.ALIGN_RIGHT
+        blockly.inputs.Align.RIGHT
       );
       this.setPreviousStatement(true);
       this.setInputsInline(true);
@@ -1168,7 +1175,8 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
-      this.interpolateMsg(
+      interpolateMsg(
+        this,
         msg.turnDirection(),
         () => {
           this.appendDummyInput().appendField(
@@ -1177,15 +1185,13 @@ exports.install = function (blockly, blockInstallOptions) {
           );
         },
         () => {
-          this.appendValueInput('VALUE').addFieldHelper(
-            blockly.BlockFieldHelper.ANGLE_HELPER,
-            {
-              block: this,
-              directionTitle: 'DIR',
-            }
-          );
+          const input = this.appendValueInput('VALUE');
+          setAngleHelperOptions(input.connection, {
+            block: this,
+            directionTitle: 'DIR',
+          });
         },
-        blockly.ALIGN_RIGHT
+        blockly.inputs.Align.RIGHT
       );
       this.setInputsInline(true);
       this.setPreviousStatement(true);

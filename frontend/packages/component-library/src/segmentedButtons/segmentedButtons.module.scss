@@ -65,20 +65,20 @@
   // Selected styles
   .selectedSegmentedButton.segmentedButton {
     z-index: 0;
-    background-color: var(--background-brand-teal-primary);
+    background-color: var(--brand-teal-65);
     border-color: var(--borders-brand-teal-primary);
     color: var(--text-neutral-white-fixed);
 
     // Hover styles
     &:hover {
-      background-color: var(--background-brand-teal-primary);
+      background-color: var(--brand-teal-65);
       border-color: var(--borders-brand-teal-primary);
       color: var(--text-neutral-white-fixed);
     }
 
     // Focus styles
     &:focus-visible {
-      background-color: var(--background-brand-teal-primary);
+      background-color: var(--brand-teal-65);
       color: var(--text-neutral-white-fixed);
     }
 

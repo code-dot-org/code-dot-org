@@ -289,6 +289,10 @@ class Ability
       if Experiment.enabled?(user: user, experiment_name: 'ai-differentiation') && user.teacher?
         can :submit_feedback, AidiffMessage
         can :create, AidiffThread
+        can :manage, AidiffThread, user_id: user.id
+        can :manage, AidiffMessage do |message|
+          can?(:manage, message.aidiff_thread)
+        end
         can [:index, :show, :chat_completion, :curriculum_courses], AidiffThread, user_id: user.id
         if Experiment.enabled?(user: user, experiment_name: 'ai-artifact')
           can :create, AidiffArtifact
@@ -391,6 +395,10 @@ class Ability
     if user.persisted? && user.can_access_student_work?
       can [:fetch_student_code_samples], :student_work_sample
       can [:fetch_free_response_answers], :student_work_sample
+    end
+
+    if user.persisted? && user.levelbuilder?
+      can [:add_internal_ai_tutor_dataset_item], :ai_observability
     end
 
     # In order to accommodate the possibility of there being no database, we

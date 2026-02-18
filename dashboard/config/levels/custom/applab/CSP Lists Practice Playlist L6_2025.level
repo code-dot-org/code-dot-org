@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2025-03-11T18:23:27.000Z",
   "level_num": "custom",
@@ -47,7 +48,7 @@
     },
     "embed": "false",
     "project_template_level_name": "CSP Lists Practice Playlist_template_2025",
-    "long_instructions": "# Random Notification Message\r\n\r\n<details style=\"background-color: #ddecd1; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">🧑🏿👧🏽👦 Analyzing User Stories</summary>\r\n    <br/>\r\n\t<p>I would like for the notification message that gets displayed to be chosen at random.\r\n \t</p>\r\n</details>\r\n\r\n### ✅ Do This - Milestone **6/9**\r\n\r\n**Task**\r\n\r\n1) ::: details [Modify the `updateNotification()` function so that a random String from the `notifcations` list is displayed in the `notification_label` element.]\r\n    - [**👉 Show me where 👈**](#triggercallout=milestone6)\r\n    - Use [`setText(id, text)`(#fff176)](/docs/ide/applab/expressions/setText) and [`randomNumber(min, max);`(#FFB74D)](/docs/ide/applab/expressions/randomNumber_min_max) to display a random message from `notifications`.\r\n    - Use the [Random List Access Pattern](courses/csp-2024/guides/random-list-access) as a reference\r\n:::\r\n<br>\r\n\r\n<hr>\r\n\r\n### 🎯 Test Your Code \r\n_Note: You can click the tests below to expand them and see more specific instructions_\r\n\r\n1) Start the app and click the “Add to Favorites” button. The text for the notification should change at random.\r\n2) Another way to test would be to press ‘Run” and then to go to the Debug Console. Next to the `>` character, write `updateNotification()`. Look on the app’s screen to see if the message changes. Do this several times to test.",
+    "long_instructions": "# Random Notification Message\r\n\r\n<details style=\"background-color: #ddecd1; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">🧑🏿👧🏽👦 Analyzing User Stories</summary>\r\n    <br/>\r\n\t<p>I would like for the notification message that gets displayed to be chosen at random.\r\n \t</p>\r\n</details>\r\n\r\n### ✅ Do This - Milestone **6/9**\r\n\r\n**Task**\r\n\r\n1) ::: details [Modify the `updateNotification()` function so that a random String from the `notifications` list is displayed in the `notification_label` element.]\r\n    - [**👉 Show me where 👈**](#triggercallout=milestone6)\r\n    - Use [`setText(id, text)`(#fff176)](/docs/ide/applab/expressions/setText) and [`randomNumber(min, max);`(#FFB74D)](/docs/ide/applab/expressions/randomNumber_min_max) to display a random message from `notifications`.\r\n    - Use the [Random List Access Pattern](courses/csp-2024/guides/random-list-access) as a reference\r\n:::\r\n<br>\r\n\r\n<hr>\r\n\r\n### 🎯 Test Your Code \r\n_Note: You can click the tests below to expand them and see more specific instructions_\r\n\r\n1) Start the app and click the “Add to Favorites” button. The text for the notification should change at random.\r\n2) Another way to test would be to press ‘Run” and then to go to the Debug Console. Next to the `>` character, write `updateNotification()`. Look on the app’s screen to see if the message changes. Do this several times to test.",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -80,8 +81,7 @@
     "ai_tutor_available": "true",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-11T18:23:27.368+00:00\",\"changed\":[\"cloned from \\\"CSP Lists Practice Playlist L6\\\"\"],\"cloned_from\":\"CSP Lists Practice Playlist L6\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-11T18:23:27.368+00:00\",\"changed\":[\"cloned from \\\"CSP Lists Practice Playlist L6\\\"\"],\"cloned_from\":\"CSP Lists Practice Playlist L6\"},{\"changed_at\":\"2026-02-10 21:50:09 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

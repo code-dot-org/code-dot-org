@@ -18,7 +18,8 @@ import 'codemirror/mode/javascript/javascript';
 import './vendor/codemirror.inline-attach';
 import {JSHINT} from 'jshint';
 import React from 'react';
-import ReactDOM from 'react-dom';
+
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 import MainInstructionsPreview from '../lab2/views/components/Instructions/MainInstructionsPreview';
 import SafeMarkdown from '../templates/SafeMarkdown';
@@ -79,7 +80,7 @@ function initializeCodeMirror(target, mode, options = {}) {
       const originalCallback = callback;
       updatePreview = editor => {
         if (game === 'Pythonlab' || game === 'Weblab2') {
-          ReactDOM.render(
+          createReactRoot(
             React.createElement(MainInstructionsPreview, {
               instructionsText: editor.getValue(),
               theme: 'Dark',
@@ -87,7 +88,7 @@ function initializeCodeMirror(target, mode, options = {}) {
             previewElement
           );
         } else if (game === 'Aichat' || game === 'Music') {
-          ReactDOM.render(
+          createReactRoot(
             React.createElement(MainInstructionsPreview, {
               instructionsText: editor.getValue(),
               theme: 'Light',
@@ -95,7 +96,7 @@ function initializeCodeMirror(target, mode, options = {}) {
             previewElement
           );
         } else {
-          ReactDOM.render(
+          createReactRoot(
             React.createElement(SafeMarkdown, {
               markdown: editor.getValue(),
             }),

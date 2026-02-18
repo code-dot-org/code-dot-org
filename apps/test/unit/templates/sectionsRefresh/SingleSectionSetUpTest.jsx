@@ -103,7 +103,7 @@ describe('SingleSectionSetUp', () => {
     expect(updateSectionSpy).toHaveBeenCalledTimes(1);
   });
 
-  it('renders section avatar and button when teacher-homepage-v2 experiment is enabled', () => {
+  it('renders section avatar and button', () => {
     renderComponent();
     screen.getByText('Avatar');
     screen.getByText('Edit avatar');

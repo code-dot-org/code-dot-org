@@ -2,7 +2,6 @@ import React from 'react';
 
 import {getStore} from '@cdo/apps/redux';
 import Sounds from '@cdo/apps/Sounds';
-import * as utils from '@cdo/apps/utils';
 import msg from '@cdo/spritelab/locale';
 
 import {closeWorkspaceAlert} from '../../code-studio/projectRedux';
@@ -132,26 +131,6 @@ export default class SpriteLab extends P5Lab {
   onPromptAnswer(variableName, value) {
     getStore().dispatch(popPrompt());
     this.library.onPromptAnswer(variableName, value);
-  }
-
-  setupReduxSubscribers(store) {
-    super.setupReduxSubscribers(store);
-    let state = {};
-    store.subscribe(function () {
-      const lastState = state;
-      state = store.getState();
-
-      if (
-        lastState.animationList?.propsByKey !== state.animationList?.propsByKey
-      ) {
-        if (window.Blockly && Blockly.mainBlockSpace) {
-          const customEvent = utils.createEvent(
-            Blockly.BlockSpace.EVENTS.ANIMATIONS_CHANGED
-          );
-          Blockly.mainBlockSpace.events.dispatchEvent(customEvent);
-        }
-      }
-    });
   }
 
   /**

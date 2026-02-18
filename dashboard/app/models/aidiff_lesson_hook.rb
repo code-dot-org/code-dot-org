@@ -17,6 +17,13 @@
 #  index_aidiff_artifacts_on_user_id           (user_id)
 #
 class AidiffLessonHook < AidiffArtifact
+  def self.to_markdown(json)
+    "#{json['comment']}\n\n***\n\n" \
+    "**Introduction:** #{json['lesson_hook']['introduction']}  \n***\n" \
+    "**Activity:**  \n#{json['lesson_hook']['activity']}  \n***\n" \
+    "**Wrap Up:** #{json['lesson_hook']['wrap_up']}"
+  end
+
   def summarize
     super.merge(
       url: "/aidiff_lesson_hooks/#{id}"

@@ -2,6 +2,7 @@ import React, {useCallback, useEffect, useState} from 'react';
 
 import {fetchThreadMessages} from '@cdo/apps/aichat/redux/thunks';
 import {PersonalizationData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
+import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import HttpClient from '../util/HttpClient';
@@ -19,6 +20,7 @@ interface AiDiffWorkSpaceProps {
   curriculumCourses: string[];
   unreadNotificationCount: number;
   personalizationData?: PersonalizationData;
+  setArtifactMessageId?: (id: number) => void;
 }
 
 const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
@@ -54,6 +56,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
 
   useEffect(() => {
     fetchThreads();
+    asyncLoadSectionData();
   }, [fetchThreads]);
 
   const aiPromptOutsideChatClicked = useCallback(
