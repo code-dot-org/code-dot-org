@@ -1,6 +1,6 @@
+// Student-facing rubric view inside Lab2 panel
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
-// Student-facing rubric view inside Lab2 panel
 import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
