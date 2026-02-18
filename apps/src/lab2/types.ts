@@ -228,7 +228,7 @@ export interface LevelProperties {
   referenceLinks?: string[];
   helpVideos?: VideoData[];
   // Exemplars
-  exampleSolutions?: string[];
+  showExemplarLink?: boolean;
   exemplarSources?: ProjectSources | MultiFileSource;
   exemplarSettings?: ExemplarSettings;
   // For Teachers Only value

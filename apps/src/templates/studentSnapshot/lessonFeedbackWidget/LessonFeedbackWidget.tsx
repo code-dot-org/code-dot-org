@@ -106,9 +106,10 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
             studentId,
             sectionId
           );
-          if (aiData && aiData.json) {
-            const aiGeneratedInitialFeedback = JSON.parse(aiData.json).feedback;
-            setFeedbackText(aiGeneratedInitialFeedback);
+          if (aiData && aiData.record) {
+            const aiGeneratedInitialFeedbackRecord = aiData.record;
+            setExistingFeedbackData(aiGeneratedInitialFeedbackRecord);
+            setFeedbackText(aiGeneratedInitialFeedbackRecord.saved_feedback);
             setResourceData([DEFAULT_RESOURCE]);
           }
         } else {

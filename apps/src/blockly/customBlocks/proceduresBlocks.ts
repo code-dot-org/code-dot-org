@@ -71,7 +71,6 @@ export const blocks = BlocklyCore.common.createBlockDefinitionsFromJsonArray([
       'procedures_block_frame',
       'procedure_def_mini_toolbox',
       'modal_procedures_no_destroy',
-      'procedure_def_no_gray_out',
       'procedure_def_get_info',
     ],
     mutator: 'procedure_def_mutator',
@@ -341,14 +340,6 @@ BlocklyCore.Extensions.registerMixin(
   'procedure_caller_onchange_mixin',
   procedureCallerOnChangeMixin
 );
-
-// Labs like Maze and Artist turn undeletable blocks gray. This is not
-// done for special blocks like "when run" or procedure definitions.
-BlocklyCore.Extensions.registerMixin('procedure_def_no_gray_out', {
-  shouldBeGrayedOut: function () {
-    return false;
-  },
-});
 
 // Used for giving feedback about empty function definition blocks.
 BlocklyCore.Extensions.registerMixin('procedure_def_get_info', {

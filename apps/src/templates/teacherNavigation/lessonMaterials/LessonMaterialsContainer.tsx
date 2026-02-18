@@ -485,11 +485,9 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           </div>
         ) : (
           <>
-            <div>
-              {renderTeacherResources()}
-              {renderStudentResources()}
-              {renderCustomResources()}
-            </div>
+            {renderTeacherResources()}
+            {renderStudentResources()}
+            {renderCustomResources()}
           </>
         )}
       </div>

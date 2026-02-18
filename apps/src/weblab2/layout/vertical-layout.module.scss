@@ -25,6 +25,12 @@
   text-overflow: ellipsis;
 }
 
+.debugPanelContainer {
+  height: 300px;
+  flex: none;
+  border-top: variables.$default-border;
+}
+
 .aiTutorVersionContainer {
   border-left: 1px solid var(--borders-brand-aqua-primary);
 }

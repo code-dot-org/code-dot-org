@@ -474,7 +474,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               {AppConfig.getValue('js-editor') === 'true' && (
                 <CodeEditor
                   onCodeChange={executeCode}
-                  startCode={''}
+                  initialCode={''}
                   editorConfigExtensions={[javascript()]}
                   appName="music"
                 />
