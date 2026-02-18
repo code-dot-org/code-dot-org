@@ -9,6 +9,7 @@ version          '0.2.691'
 depends 'apt'
 
 depends 'cdo-cloudwatch-agent'
+depends 'cdo-otel-collector'
 depends 'cdo-repository'
 depends 'cdo-secrets'
 depends 'cdo-postfix'
