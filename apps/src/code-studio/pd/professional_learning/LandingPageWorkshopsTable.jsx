@@ -1,6 +1,6 @@
 import Button from '@code-dot-org/component-library/button';
 import Modal from '@code-dot-org/component-library/modal';
-import {Heading2} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -244,7 +244,9 @@ export default class LandingPageWorkshopsTable extends React.Component {
         {this.props.workshops && (
           <section>
             {this.props.tableHeader && (
-              <Heading2>{this.props.tableHeader}</Heading2>
+              <Typography variant="h2" gutterBottom>
+                {this.props.tableHeader}
+              </Typography>
             )}
             {this.renderWorkshopsTable()}
           </section>
