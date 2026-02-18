@@ -925,9 +925,7 @@ class Level < ApplicationRecord
     properties_camelized["exemplarSettings"] = localized_exemplar_settings if get_exemplar_settings
     properties_camelized["panels"] = localized_panels if properties_camelized["panels"]
     properties_camelized["longInstructions"] = (get_localized_property("long_instructions") || long_instructions) if properties_camelized["longInstructions"]
-    if script_level
-      properties_camelized[:exampleSolutions] = script_level.get_example_solutions(self, current_user, nil, unit_group_unit: unit_group_unit)
-    end
+    properties_camelized[:showExemplarLink] = script_level && try(:exemplar_sources).present? && current_user&.verified_instructor?
     is_verified_instructor = current_user&.verified_instructor? || current_user&.permission?(UserPermission::LEVELBUILDER)
     if is_verified_instructor || try(:exemplar_settings)
       # Verified instructors can view exemplars and levelbuilders can edit them, so we include them in the properties
@@ -1076,6 +1074,12 @@ class Level < ApplicationRecord
         script_level&.script_id == script_id
       end
     end
+  end
+
+  def summarize_lessons_for_special_level_types
+    lessons_from_script_levels = script_levels.map(&:lesson).compact.uniq.map(&:summarize_for_special_level_types)
+    lessons_from_parent_script_levels = parent_levels.flat_map(&:script_levels).map(&:lesson).compact.uniq.map(&:summarize_for_special_level_types)
+    (lessons_from_script_levels + lessons_from_parent_script_levels).uniq
   end
 
   # Returns the level name, removing the name_suffix first (if present), and

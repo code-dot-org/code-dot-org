@@ -27,7 +27,7 @@ import ManageStudents from '../manageStudents/ManageStudents';
 import SectionProjectsListWithData from '../projects/SectionProjectsListWithData';
 import SectionAssessments from '../sectionAssessments/SectionAssessments';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
-import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
+import SectionProgressV2 from '../sectionProgressV2/SectionProgressV2';
 import StudentSnapshot from '../studentSnapshot/StudentSnapshot';
 import TeacherHomepage from '../studioHomepages/teacherHomepageV2/TeacherHomepage';
 import SectionLoginInfo from '../teacherDashboard/SectionLoginInfo';
@@ -225,8 +225,8 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                   showNoCurriculumAssigned={!anyStudentHasProgress}
                   element={
                     <GlobalEditionWrapper
-                      component={SectionProgressSelector}
-                      componentId="SectionProgressSelector"
+                      component={SectionProgressV2}
+                      componentId="SectionProgressV2"
                       props={{}}
                     />
                   }
@@ -295,10 +295,16 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
               path={TEACHER_NAVIGATION_PATHS.unitOverview}
               element={<TeacherUnitOverview />}
             />
-            {experiments.isEnabled('student_snapshot') && (
+            {experiments.isEnabled('student-snapshot') && (
               <Route
                 path={TEACHER_NAVIGATION_PATHS.studentSnapshot}
-                element={<StudentSnapshot />}
+                element={
+                  <ElementOrEmptyPage
+                    showNoStudents={studentCount === 0}
+                    showNoCurriculumAssigned={!anyStudentHasProgress}
+                    element={<StudentSnapshot />}
+                  />
+                }
               />
             )}
             <Route

@@ -3,42 +3,48 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Unit 4: Iterating with AI
+# Unit 5: Designing Reliable Apps with AI and APIs
 
-## What is Iterating with AI all about?
- 
-#### In **Iterating with AI**, students learn how iteration and loops enable programs to process collections of data and create interactive features such as filters and view. 
+## What is Designing Reliable Apps with AI and APIs all about?
 
-#### Building on their earlier work with arrays and objects, they design systems that users control over how information is displayed, while reflecting on how algorithmic filtering can introduce issues of bias, transparency, and trust.
+#### In Designing Reliable Apps with AI and APIs, students learn how web apps use external APIs to fetch data and integrate AI-powered services into their programs.
+
+#### Building on their earlier work with asynchronous JavaScript, arrays, and objects, they design apps that respond gracefully to loading delays, errors, and missing data, while considering how reliance on external systems affects reliability, user trust, and app behavior.
 
 
 ---
 
-#### ***Note: Unlike the first semester, the second semester of AI Foundations is a continuous sequence and must be taught in order. Iterating with AI is the 4th unit in the course.***
+#### ***Note: Unlike the first semester, the second semester of AI Foundations is a continuous sequence and must be taught in order. Designing Reliable App unit in the course.***
+
+
 
 ## Student Learning Goals
+
 <div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
 
-  <div>
-    <h4 style="margin-top: 0; font-weight: bold;">By the end of this unit, students will be able to :</h4>
-    <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
-      <li>Explain how iteration and loops work by describing how repeated logic enables programs to process entire collections of data rather than single items.
-
-</li> <br>
-      <li>Implement loops in JavaScript to create interactive features such as filters, searches, and views that allow users to explore and control information.</li><br>
-      <li>Evaluate the impact of algorithmic filtering by analyzing how design choices affect fairness, transparency, inclusivity, and user trust.
-</li><br>
-      <li>Make informed coding decisions by documenting when they adapt suggested code and when they write or refactor loop logic independently, justifying how their choices supported clarity and control.
-</li><br>
-    </ul>
-  </div>
-  
-  <div>
-    <img src="https://images.code.org/cc0cb6dc862dad283380d1a653d9b3f1-image-1768411041153.png" 
-         alt="Icon with computer and weblayout" 
-         style="border-radius: 10px; width: 300px; height: auto;">
-  </div>
+<div>
+  <h4 style="margin-top: 0; font-weight: bold;">By the end of this unit, students will be able to :</h4>
+  <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
+    <li>
+      Write asynchronous JavaScript using <code>async/await</code> to fetch data from an external API and display it in a web app.
+    </li><br>
+    <li>
+      Use <code>try/catch</code> blocks and UI feedback (loading indicators, error messages, and empty states) to clearly communicate system status to users.
+    </li><br>
+    <li>
+      Compare local datasets (arrays and objects) with remote API data, explaining trade-offs in control, reliability, flexibility, and availability.
+    </li><br>
+    <li>
+      Explain how relying on external APIs makes apps part of larger systems and apply defensive design strategies when data is delayed, incomplete, or unavailable.
+    </li><br>
+  </ul>
 </div>
 
+<div>
+  <img src="https://images.code.org/f8032eef2c6251f22bbb65dfb6a770f3-image-1770399893024.png" 
+       alt="Icon with cloud and arrows signifying data transfer" 
+       style="border-radius: 10px; width: 300px; height: auto;">
+</div>
 
+![]()
 MARKDOWN

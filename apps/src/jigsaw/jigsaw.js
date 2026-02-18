@@ -10,9 +10,9 @@ import {getCode} from '@cdo/apps/blockly/utils';
 import {TestResults, ResultType} from '../constants';
 import {getStore} from '../redux';
 import AppView from '../templates/AppView';
+import {createReactRoot} from '../util/createReactRoot';
 
 var React = require('react');
-var ReactDOM = require('react-dom');
 var Provider = require('react-redux').Provider;
 
 var studioApp = require('../StudioApp').singleton;
@@ -118,7 +118,7 @@ var drawMap = function () {
 
   if (level.ghost) {
     var blockCanvas = Blockly.mainBlockSpace.getCanvas();
-    Blockly.createSvgElement(
+    Blockly.utils.dom.createSvgElement(
       'rect',
       {
         fill: 'url(#pat_' + level.id + 'A)',
@@ -194,7 +194,7 @@ Jigsaw.init = function (config) {
     noVisualization: true,
   });
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <AppView
         visualizationColumn={<JigsawVisualizationColumn />}
@@ -208,7 +208,7 @@ Jigsaw.init = function (config) {
 function checkForSuccess() {
   var success = level.goal.successCondition();
   if (success) {
-    Blockly.removeChangeListener(Jigsaw.successListener);
+    Blockly.getMainWorkspace().removeChangeListener(Jigsaw.successListener);
 
     Jigsaw.result = ResultType.SUCCESS;
     Jigsaw.onPuzzleComplete();

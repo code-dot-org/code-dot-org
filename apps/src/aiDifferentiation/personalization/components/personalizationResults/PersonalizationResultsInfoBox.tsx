@@ -1,4 +1,4 @@
-import {BodyThreeText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import i18n from '@cdo/locale';
@@ -8,12 +8,12 @@ import style from './../../personalization-information.module.scss';
 const PersonalizationResultsInfoBox: React.FC = () => {
   return (
     <div className={style.revealInfoBox}>
-      <BodyThreeText noMargin>
+      <Typography variant="body3">
         <strong>{i18n.teachingStyleDataBoxHeadline()}</strong>
-      </BodyThreeText>
-      <BodyThreeText className={style.lightText}>
+      </Typography>
+      <Typography className={style.lightText} variant="body3" gutterBottom>
         {i18n.teachingStyleDataBoxBody()}
-      </BodyThreeText>
+      </Typography>
     </div>
   );
 };

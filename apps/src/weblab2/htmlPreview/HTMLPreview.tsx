@@ -24,6 +24,11 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {filterSourceForPreview} from '@cdo/apps/weblab2/htmlPreview/filterSourceForPreview';
+import {
+  addRequestData,
+  addResponseData,
+  clearRequests,
+} from '@cdo/apps/weblab2/redux/networkRedux';
 
 import {
   IframeMessageType,
@@ -267,6 +272,7 @@ export const HTMLPreview: React.FC = () => {
       {type: IframeMessageType.REFRESH},
       previewUrl
     );
+    dispatch(clearRequests());
   };
 
   const onStopPreview = () => {
@@ -276,6 +282,7 @@ export const HTMLPreview: React.FC = () => {
 
   const onReloadPreview = () => {
     setIsStopped(false);
+    dispatch(clearRequests());
   };
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
@@ -285,6 +292,7 @@ export const HTMLPreview: React.FC = () => {
     setIsStopped(false);
     setIsLevelLoading(true);
     setIsIframeLoaded(false);
+    dispatch(clearRequests());
   });
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
@@ -331,6 +339,12 @@ export const HTMLPreview: React.FC = () => {
         Lab2Registry.getInstance()
           .getMetricsReporter()
           .logWarning('Service worker unavailable in HTMLPreview iframe.');
+      } else if (event.data.type === IframeMessageType.NETWORK_REQUEST) {
+        const {id, ...request} = event.data.request;
+        dispatch(addRequestData({id, request}));
+      } else if (event.data.type === IframeMessageType.NETWORK_RESPONSE) {
+        const {id, ...response} = event.data.response;
+        dispatch(addResponseData({id, response: response}));
       }
     };
 
@@ -342,6 +356,7 @@ export const HTMLPreview: React.FC = () => {
     navigationHistory,
     navigationHistoryIndex,
     debouncedSource,
+    dispatch,
   ]);
 
   useEffect(() => {
@@ -467,7 +482,7 @@ export const HTMLPreview: React.FC = () => {
             aria-label="Web Preview Frame"
           >
             <iframe
-              sandbox="allow-scripts allow-same-origin"
+              sandbox="allow-scripts allow-same-origin allow-forms"
               allow="self"
               title="Web Preview"
               ref={iframeRef}

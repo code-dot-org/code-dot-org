@@ -21,6 +21,20 @@ class LessonFeedbacksController < ApplicationController
     end
   end
 
+  def show_by_student
+    feedback = LessonFeedback.includes(:teacher, lesson: :script).where(student_id: current_user.id).order(updated_at: :desc)
+
+    feedback_with_additional_data = feedback.map do |f|
+      f.as_json.merge(
+        'teacher_name' => f.teacher.name,
+        'lesson_title' => f.lesson.localized_title,
+        'lesson_start_url' => f.lesson.start_url
+      )
+    end
+
+    render json: feedback_with_additional_data
+  end
+
   # GET /lesson_feedbacks/saved_feedback?student_id=...&lesson_id=...
   def saved_feedback
     feedback = LessonFeedback.find_by!(
@@ -32,7 +46,7 @@ class LessonFeedbacksController < ApplicationController
   end
 
   def lesson_feedback_params
-    params.require(:lesson_feedback).permit(
+    params.permit(
       :teacher_id,
       :student_id,
       :section_id,
@@ -40,7 +54,7 @@ class LessonFeedbacksController < ApplicationController
       :saved_feedback,
       :submitted_feedback,
       :submitted_at,
-      resources: {}
+      resources: [:recommended_action, :resource_name, :resource_link]
     )
   end
 end

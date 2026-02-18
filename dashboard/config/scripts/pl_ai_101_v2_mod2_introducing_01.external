@@ -1,0 +1,17 @@
+name 'pl-ai-101-V2-mod2-introducing-01'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Practice
+
+
+#### AI for Oceans
+
+#### In this fun introduction to artificial intelligence, you train a real machine learning model to identify sea creatures and trash in the ocean.
+
+<p style="text-align:center;">
+<img src="https://images.code.org/3da57cd660e580eac539927156d953e9-Screenshot 2026-02-16 at 12.20.10 PM.png">
+
+
+MARKDOWN

@@ -427,6 +427,8 @@ dashboard_port: 3000
 dashboard_workers: 8
 dashboard_web_server_name: dashboard
 dashboard_sock:
+puma_control_server_relative_socket_path: tmp/pumactl.sock
+puma_control_server_token: !Secret
 
 # Causes dashboard-server to run pegasus as middleware, starting both in a
 # single command.  This is preferred (and default) in development mode.
@@ -665,6 +667,10 @@ langfuse_public_key: !Secret
 # Credentials for Google Gemini API
 google_gemini_ai_chat_lab_api_key: !Secret
 google_gemini_ai_tutor_api_key: !Secret
+
+# Credentials for Google Vertex API
+google_vertex_ai_tutor_service_account_key: !Secret
+google_vertex_ai_chat_service_account_key: !Secret
 
 # AI Proxy for OpenAI API
 ai_proxy_origin: https://aiproxy-test.code.org

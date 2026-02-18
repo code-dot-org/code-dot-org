@@ -1,8 +1,5 @@
 import Toggle from '@code-dot-org/component-library/toggle';
-import {
-  BodyTwoText,
-  Heading5,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
@@ -42,15 +39,19 @@ const TurnOffAiDiff: React.FC = () => {
   return (
     <div>
       <hr />
-      <Heading5 className={moduleStyles.sectionHeader}>
+      <Typography
+        className={moduleStyles.sectionHeader}
+        variant="h5"
+        gutterBottom
+      >
         {i18n.aiTeachingAssistantSettings()}
-      </Heading5>
-      <BodyTwoText>
+      </Typography>
+      <Typography variant="body2" gutterBottom>
         <SafeMarkdown
           unwrapped
           markdown={i18n.aiTeachingAssistantSettingsDescription()}
         />
-      </BodyTwoText>
+      </Typography>
       <Toggle
         checked={aiDifferentiationEnabled}
         onChange={handleToggle}

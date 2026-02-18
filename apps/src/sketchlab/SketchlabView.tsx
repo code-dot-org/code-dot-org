@@ -9,8 +9,10 @@ import {
   AppState,
   BinaryFiles,
   ExcalidrawImperativeAPI,
+  ExcalidrawInitialDataState,
   DataURL,
 } from '@excalidraw/excalidraw/types/types';
+import cloneDeep from 'lodash/cloneDeep';
 import React, {useEffect, useCallback, useRef, useState, useMemo} from 'react';
 
 import DCDO from '@cdo/apps/dcdo';
@@ -57,7 +59,7 @@ const INITIAL_INFO_PANEL_WIDTH = 290;
 const MIN_WORKSPACE_WIDTH = 400;
 const INITIAL_WORKSPACE_WIDTH = 800;
 
-const DEBOUNCED_WORKSPACE_SERIALIZATION_MS = 500;
+const DEBOUNCED_WORKSPACE_SERIALIZATION_MS = 200;
 
 const DEFAULT_SOURCES = {source: {}};
 
@@ -130,15 +132,19 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     console.error(error);
   }, []);
 
-  const initialData = useMemo(
-    () =>
-      populateInitialExcalidrawState(
-        currentSources.source,
-        downloadedFilesDataRef.current,
-        onError
-      ),
-    [currentSources.source, onError]
-  );
+  const initialData = useMemo(() => {
+    // Clone the sources to ensure we don't accidentally mutate the original object (which is frozen/immutable),
+    // since Excalidraw mutates the initial data object that is passed in.
+    const clonedSource = cloneDeep(
+      currentSources.source
+    ) as ExcalidrawInitialDataState;
+
+    return populateInitialExcalidrawState(
+      clonedSource,
+      downloadedFilesDataRef.current,
+      onError
+    );
+  }, [currentSources.source, onError]);
 
   const currentUserId = useAppSelector(state => state.currentUser.userId);
   const backpackContext = useMemo(() => {
@@ -243,15 +249,15 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           }
         });
 
-        updateSources({
+        updateSources(prevSources => ({
           source: {
             ...serializedData,
             externalFiles: {
-              ...currentSources.source.externalFiles,
+              ...prevSources.source.externalFiles,
               ...newFiles,
             },
           },
-        });
+        }));
 
         if (newFiles && !readonlyWorkspace) {
           const newFilesWithUploadStatus = await uploadExternalFiles(
@@ -260,16 +266,15 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
             filesBeingUploadedRef
           );
 
-          // We update sources again on upload completion to update the upload status of the new files.
-          updateSources({
+          updateSources(prevSources => ({
             source: {
-              ...serializedData,
+              ...prevSources.source,
               externalFiles: {
-                ...currentSources.source.externalFiles,
+                ...prevSources.source.externalFiles,
                 ...newFilesWithUploadStatus,
               },
             },
-          });
+          }));
         }
       }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
     },

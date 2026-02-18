@@ -4,7 +4,7 @@ description 'description here'
 
 markdown <<MARKDOWN
 <div style="position: relative; text-align: center; color: white; margin-top: 20px;">
-    <img src="https://images.code.org/b9ec2b9419701a0750c82b41935dc3f2-image-1768410703151.png" alt="Banner image that says, Welcome to Teaching Iterating with AI" style="width: 100%; border-radius: 10px;">
+    <img src="https://images.code.org/f732984c74d50c60424df2b3ef81ed17-image-1770398155108.png" alt="Banner image that says, Welcome to Teaching Designing Reliable Apps and APIs" style="width: 100%; border-radius: 10px;">
     <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; width: 70%; max-width: 800px; border-radius: 10px;">
     </div>
 </div>
@@ -12,9 +12,9 @@ markdown <<MARKDOWN
 
 # Welcome!
 
-#### This professional learning module prepares you to teach a unit where students advance from managing single interactions to processing entire collections of data using iteration and loops.
+#### This professional learning module prepares you to teach a unit where students expand their understanding of web apps by connecting them to external data sources through APIs. They learn that modern applications rarely operate in isolation; instead, they depend on information and services provided by larger systems.
 
-
+#### An **API (Application Programming Interface)** is a set of rules that allow software applications to communicate and use data from another server. 
 
 
 ___
@@ -30,11 +30,13 @@ ___
 
 #### **By the end of this professional learning module, you will be able to:**
 
-* #### Explain how iteration and loops work
-* #### Implement loops in JavaScript to create interactive features such as filters, searches, and views
-* #### Guide students in using AI-generated scaffolds responsibly, emphasizing accountability for both data choices and code.
+* #### Use JavaScript to get data from an external API and show it in a web app.
 
+* #### Write asynchronous code with `async/await` to load data without freezing the page.
 
+* #### Compare using local data versus API data and explain when each makes sense.
+
+* #### Get a solid introduction of APIs to prepare you to teach Unit 5.
 
 
 
@@ -80,5 +82,5 @@ ___
 
 ### **Suggested total time for this module:** 90 minutes
 
-
+![]()
 MARKDOWN

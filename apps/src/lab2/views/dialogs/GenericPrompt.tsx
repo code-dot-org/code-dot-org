@@ -1,6 +1,6 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import TextField from '@code-dot-org/component-library/textField';
-import {BodyTwoText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import debounce from 'lodash/debounce';
 import React, {
   ComponentProps,
@@ -76,11 +76,13 @@ const GenericPromptBody: React.FunctionComponent<GenericPromptBodyProps> = ({
   return (
     <>
       {message && (
-        <BodyTwoText
+        <Typography
           className={messageMargin ? moduleStyles.messageMargin : ''}
+          variant="body2"
+          gutterBottom
         >
           {message}
-        </BodyTwoText>
+        </Typography>
       )}
       <div className={moduleStyles.inputContainer}>
         <TextField

@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-20 02:23:30 UTC",
+    "serialized_at": "2026-02-13 21:00:24 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -8319,6 +8319,20 @@
       "seeding_key": {
         "lesson.key": "Lesson 11: User Testing",
         "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: User Testing",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: User Testing",
+        "framework.shortcode": "csta",
         "standard.shortcode": "3A-IC-24"
       }
     },
@@ -8334,6 +8348,20 @@
         "lesson.key": "Lesson 11: User Testing",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 12: Just Because We Can, Should We?",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 12: Just Because We Can, Should We?",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-25"
       }
     },
     {
@@ -8382,7 +8410,42 @@
       "seeding_key": {
         "lesson.key": "Lesson 13: Sustainable Systems Project",
         "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Sustainable Systems Project",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Sustainable Systems Project",
+        "framework.shortcode": "csta",
         "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Sustainable Systems Project",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Sustainable Systems Project",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-29"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Sustainable Systems Project",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-30"
       }
     },
     {
@@ -8495,6 +8558,27 @@
         "lesson.key": "Lesson 6: Build a Computer System",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Build a Computer System",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Build a Computer System",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Build a Computer System",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-23"
       }
     },
     {

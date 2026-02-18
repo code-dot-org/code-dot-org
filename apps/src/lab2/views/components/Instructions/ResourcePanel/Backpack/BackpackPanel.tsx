@@ -1,6 +1,6 @@
 import Alert from '@code-dot-org/component-library/alert';
 import Button from '@code-dot-org/component-library/button';
-import {BodyThreeText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -326,9 +326,13 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
                     key={`backpack-${appName}`}
                     className={moduleStyles.secondaryFileList}
                   >
-                    <BodyThreeText className={moduleStyles.backpackDivider}>
+                    <Typography
+                      className={moduleStyles.backpackDivider}
+                      variant="body3"
+                      gutterBottom
+                    >
                       {convertProjectTypeToDisplayName(appName as ProjectType)}
-                    </BodyThreeText>
+                    </Typography>
                     {secondaryFileList?.map(fileName =>
                       renderFileChip(
                         fileName,

@@ -1,4 +1,4 @@
-import {Heading5} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import React from 'react';
 
@@ -9,15 +9,17 @@ import style from './../../personalization-information.module.scss';
 const PersonalizationResultsColumnArrows: React.FC = () => {
   return (
     <div className={classnames(style.personaColumn, style.arrowColumn)}>
-      <Heading5
+      <Typography
         className={classnames(
           style.headerWhite,
           style.header,
           style.arrowHeader
         )}
+        variant="h5"
+        gutterBottom
       >
         {' '}
-      </Heading5>
+      </Typography>
       <PersonalizationInformationBox type={'arrow'} />
       <PersonalizationInformationBox type={'arrow'} />
       <PersonalizationInformationBox type={'arrow'} />

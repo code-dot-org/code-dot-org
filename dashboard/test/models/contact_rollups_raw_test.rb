@@ -77,7 +77,7 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
     ActiveRecord::Base.connection.execute(query)
 
     refute_empty ContactRollupsRaw.where(
-      "email = :email and data->'$.higher_student_id' = :higher_student_id and sources = :sources",
+      "email = :email and data->'$.higher_student_id' = CAST(:higher_student_id AS UNSIGNED) and sources = :sources",
       email: first_child.parent_email,
       sources: source_name,
       higher_student_id: second_child.id

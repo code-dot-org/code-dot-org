@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import msg from '@cdo/locale';
 
 import AlertExclamation from '../components/AlertExclamation';
@@ -19,7 +19,7 @@ export function ProjectNotFoundAlert() {
 }
 
 export default () => {
-  ReactDOM.render(<ProjectNotFoundAlert />, document.getElementById('codeApp'));
+  createReactRoot(<ProjectNotFoundAlert />, document.getElementById('codeApp'));
 };
 
 const styles = {

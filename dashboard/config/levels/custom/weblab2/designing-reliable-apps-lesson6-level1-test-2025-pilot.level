@@ -1,13 +1,12 @@
 <Weblab2>
   <config><![CDATA[{
-  "published": true,
   "game_id": 74,
   "created_at": "2026-02-05T18:31:42.000Z",
   "level_num": "custom",
   "user_id": 18762,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Design Your Music App\r\n\r\nUsing what you designed in the previous level, build a web app to display your music playlist or card view.\r\n\r\nMake sure that `script.js` loops through the data found in `data.json`.",
+    "long_instructions": "## Design Your Music App\r\n\r\nUse what you designed in the previous level to build a web app to displaying your music playlist or card view.\r\n\r\n_Hint: Create your HTML and CSS files first. Then make sure that `script.js` loops through the data found in `data.json`._\r\n\r\nWhen you finish, upload your files `index.html`, `styles.css`, and `script.js` to your backpack. You'll need these as a starting point for the next level.",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "disable_edit_run_for_submission": "false",
@@ -25,8 +24,159 @@
       "freeResponseHeight": 50,
       "codeEditableAfterSubmit": false
     },
-    "project_template_level_name": "designing-reliable-apps-lesson6-template-test-2025-pilot"
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "images",
+          "parentId": "0",
+          "open": false
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "Add your changes to index.html",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "data.json",
+          "language": "json",
+          "contents": "{\n  \"artists_and_tracks\": [\n    {\n      \"track\": \"Electric Sparks\",\n      \"artist\": \"Neon Echoes\",\n      \"popularity\": 63,\n      \"genres\": [\"Indie rock\", \"Dream pop\"],\n      \"id\": \"7FAKEechoes001\",\n      \"images\": [\n        {\n          \"url\": \"/images/neon_echoes.jpg\",\n          \"height\": 300,\n          \"width\": 300\n        }\n      ],\n      \"followers\": {\n        \"total\": 184230\n      }\n    },\n    {\n      \"track\": \"Midnight Circuit\",\n      \"artist\": \"Digital Drift\",\n      \"popularity\": 45,\n      \"genres\": [\"Synthwave\", \"Cyberpunk\"],\n      \"id\": \"7FAKEdrift002\",\n      \"images\": [\n        {\n          \"url\": \"/images/digital_drift.jpg\",\n          \"height\": 300,\n          \"width\": 300\n        }\n      ],\n      \"followers\": {\n        \"total\": 12400\n      }\n    },\n    {\n      \"track\": \"Lunar Dust\",\n      \"artist\": \"Velvet Nebula\",\n      \"popularity\": 78,\n      \"genres\": [\"Ambient\", \"Space Rock\"],\n      \"id\": \"7FAKEnubula003\",\n      \"images\": [\n        {\n          \"url\": \"/images/velvet_nebula.jpg\",\n          \"height\": 300,\n          \"width\": 300\n        }\n      ],\n      \"followers\": {\n        \"total\": 450920\n      }\n    },\n    {\n      \"track\": \"Concrete Roots\",\n      \"artist\": \"Iron Garden\",\n      \"popularity\": 32,\n      \"genres\": [\"Post-punk\", \"Industrial\"],\n      \"id\": \"7FAKEgarden004\",\n      \"images\": [\n        {\n          \"url\": \"/images/iron_garden.jpg\",\n          \"height\": 300,\n          \"width\": 300\n        }\n      ],\n      \"followers\": {\n        \"total\": 8900\n      }\n    },\n    {\n      \"track\": \"Golden Hour\",\n      \"artist\": \"Saffron Soul\",\n      \"popularity\": 85,\n      \"genres\": [\"R&B\", \"Neo-soul\"],\n      \"id\": \"7FAKESsoul005\",\n      \"images\": [\n        {\n          \"url\": \"/images/saffron_soul.jpg\",\n          \"height\": 300,\n          \"width\": 300\n        }\n      ],\n      \"followers\": {\n        \"total\": 1205400\n      }\n    },\n    {\n      \"track\": \"Static Whispers\",\n      \"artist\": \"Analog Ghost\",\n      \"popularity\": 51,\n      \"genres\": [\"Lo-fi\", \"Trip-hop\"],\n      \"id\": \"7FAKEghost006\",\n      \"images\": [\n        {\n          \"url\": \"/images/analog_ghost.jpg\",\n          \"height\": 300,\n          \"width\": 300\n        }\n      ],\n      \"followers\": {\n        \"total\": 56210\n      }\n    },\n    {\n      \"track\": \"Ocean Floor\",\n      \"artist\": \"Coral Theory\",\n      \"popularity\": 69,\n      \"genres\": [\"Indie Folk\", \"Chamber Pop\"],\n      \"id\": \"7FAKEcoral007\",\n      \"images\": [\n        {\n          \"url\": \"/images/coral_theory.jpg\",\n          \"height\": 300,\n          \"width\": 300\n        }\n      ],\n      \"followers\": {\n        \"total\": 213000\n      }\n    },\n    {\n      \"track\": \"Hyperdrive High\",\n      \"artist\": \"Sonic Bloom\",\n      \"popularity\": 92,\n      \"genres\": [\"Hyperpop\", \"Glitchcore\"],\n      \"id\": \"7FAKEbloom008\",\n      \"images\": [\n        {\n          \"url\": \"/images/sonic_bloom.jpg\",\n          \"height\": 300,\n          \"width\": 300\n        }\n      ],\n      \"followers\": {\n        \"total\": 3402800\n      }\n    },\n    {\n      \"track\": \"Rusty Strings\",\n      \"artist\": \"The Copper Keys\",\n      \"popularity\": 41,\n      \"genres\": [\"Bluegrass\", \"Alt-country\"],\n      \"id\": \"7FAKEkeys009\",\n      \"images\": [\n        {\n          \"url\": \"/images/copper_keys.jpg\",\n          \"height\": 300,\n          \"width\": 300\n        }\n      ],\n      \"followers\": {\n        \"total\": 15700\n      }\n    },\n    {\n      \"track\": \"Vapor Trails\",\n      \"artist\": \"Skyward Bound\",\n      \"popularity\": 57,\n      \"genres\": [\"Alternative Rock\", \"Shoegaze\"],\n      \"id\": \"7FAKEbound010\",\n      \"images\": [\n        {\n          \"url\": \"/images/skyward_bound.jpg\",\n          \"height\": 300,\n          \"width\": 300\n        }\n      ],\n      \"followers\": {\n        \"total\": 98400\n      }\n    }\n  ]\n}",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "copper_keys.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/designing-reliable-apps-lesson6-level1-test-2025-pilot/uuid/ddb235c5-6658-4aed-aca0-7280d9e9a5d5.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "velvet_nebula.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/designing-reliable-apps-lesson6-level1-test-2025-pilot/uuid/c139a213-8eae-4898-8fff-0a084d2056e0.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "saffron_soul.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/designing-reliable-apps-lesson6-level1-test-2025-pilot/uuid/af3b4cf5-08a2-4a75-9704-c3b7dc2e55a1.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "digital_drift.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/designing-reliable-apps-lesson6-level1-test-2025-pilot/uuid/25ea4c3f-cb74-4cc0-a059-156de8ae6161.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "skyward_bound.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/designing-reliable-apps-lesson6-level1-test-2025-pilot/uuid/cd30f9ce-008c-4265-89ab-b435bb4fcf45.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "coral_theory.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/designing-reliable-apps-lesson6-level1-test-2025-pilot/uuid/f8af1ba5-f5f5-4f6f-97ae-f1584469cae2.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "sonic_bloom.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/designing-reliable-apps-lesson6-level1-test-2025-pilot/uuid/1b2f8edd-b307-489b-ad4f-17244dc33d6a.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "analog_ghost.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/designing-reliable-apps-lesson6-level1-test-2025-pilot/uuid/3ae971a9-0036-49ef-b2dd-99bb3d3a129b.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "11": {
+          "id": "11",
+          "name": "iron_garden.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/designing-reliable-apps-lesson6-level1-test-2025-pilot/uuid/2aba5e43-de64-4bee-adc2-a4456726307d.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "12": {
+          "id": "12",
+          "name": "neon_echoes.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/designing-reliable-apps-lesson6-level1-test-2025-pilot/uuid/abf29dda-73a0-466d-a040-d63d02ee8e73.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "13": {
+          "id": "13",
+          "name": "styles.css",
+          "language": "css",
+          "contents": "Add your changes to styles.css",
+          "folderId": "0",
+          "active": false
+        },
+        "14": {
+          "id": "14",
+          "name": "script.js",
+          "language": "js",
+          "contents": "Add your changes to script.js",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2",
+        "1",
+        "13",
+        "14"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\ntGTRvmD02LzRyFCy\n"
   },
-  "audit_log": "[{\"changed_at\":\"2026-02-05 20:06:34 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-05 20:09:00 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-05 20:40:41 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":18753,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-05 22:39:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-05 22:47:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-05 20:06:34 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-05 20:09:00 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-05 20:40:41 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":18753,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-05 22:39:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-05 22:47:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-06 17:50:49 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-06 17:57:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-06 18:04:19 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-06 18:16:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-06 18:17:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-06 18:18:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-06 18:18:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-06 18:20:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-06 18:25:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-06 18:26:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-06 18:27:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-06 18:27:46 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-06 18:28:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-06 18:28:57 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-06 18:29:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-06 18:29:46 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

@@ -77,3 +77,14 @@
 .fullScreenPreviewHeaderContainer {
   border-radius: 0.25rem 0.25rem 0 0;
 }
+
+
+.closeDebugPanelButton.closeDebugPanelButton {
+  background-color: var(--background-brand-teal-primary);
+  color: var(--text-neutral-white-fixed);
+
+  &:hover {
+    background-color: var(--background-brand-teal-strong);
+    color: var(--text-neutral-white-fixed);
+  }
+}
