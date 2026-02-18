@@ -25,25 +25,19 @@ dpkg_package 'otelcol' do
   notifies :restart, 'service[otelcol]', :delayed
 end
 
-# Create configuration directory with proper permissions (if not exists)
-directory node['cdo-otel-collector']['config_dir'] do
-  owner 'root'
-  group 'otelcol'
-  mode '0750'
-  recursive true
-end
-
-# Generate configuration file
+# Generate configuration file (package creates the directory)
 template node['cdo-otel-collector']['config_file'] do
   source 'otel-collector-config.yaml.erb'
   owner 'root'
-  group 'otelcol'
-  mode '0640'
+  group 'root'
+  mode '0644'
   variables(
     config: node['cdo-otel-collector'],
     environment: node.chef_environment
   )
   notifies :restart, 'service[otelcol]', :delayed
+  # Only create template if package is installed
+  only_if {File.exist?('/usr/bin/otelcol')}
 end
 
 # Validate the configuration

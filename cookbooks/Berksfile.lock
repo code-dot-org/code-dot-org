@@ -108,7 +108,6 @@ GRAPH
     nodejs (>= 10.2.0)
   cdo-otel-collector (0.1.0)
     apt (>= 0.0.0)
-    ark (>= 0.0.0)
   cdo-postfix (0.2.20)
     apt (>= 0.0.0)
     postfix (>= 0.0.0)
