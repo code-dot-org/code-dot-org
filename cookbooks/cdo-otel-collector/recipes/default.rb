@@ -36,13 +36,13 @@ template node['cdo-otel-collector']['config_file'] do
   only_if {File.exist?('/usr/bin/otelcol')}
 end
 
-# Validate the configuration
+# Validate the configuration is valid before starting
 script 'otel-collector-config-validation' do
   action :run
   interpreter 'bash'
 
   code <<-EOH
-    /usr/bin/otelcol --config=#{node['cdo-otel-collector']['config_file']} --dry-run
+    /usr/bin/otelcol validate --config=#{node['cdo-otel-collector']['config_file']}
     exit $?
   EOH
 end

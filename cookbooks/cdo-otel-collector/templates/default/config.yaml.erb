@@ -6,7 +6,7 @@ receivers:
       http:
         endpoint: 127.0.0.1:4318
 
-  # Host telemetry (emits every 60s)
+  # Host telemetry
   hostmetrics:
     collection_interval: 60s
     scrapers:
@@ -21,7 +21,7 @@ processors:
   batch:
 
 exporters:
-  otlphttp:
+  otlp_http:
     endpoint: https://otlp.nr-data.net:4318
     headers:
       api-key: <%= node['cdo-otel']['newrelic_license_key'] %>
@@ -32,15 +32,14 @@ service:
     traces:
       receivers: [otlp]
       processors: [batch]
-      exporters: [otlphttp]
+      exporters: [otlp_http]
 
-    # Metrics includes both OTLP metrics (later from Rails) + hostmetrics (now, once/minute)
     metrics:
       receivers: [otlp, hostmetrics]
       processors: [batch]
-      exporters: [otlphttp]
+      exporters: [otlp_http]
 
     logs:
       receivers: [otlp]
       processors: [batch]
-      exporters: [otlphttp]
+      exporters: [otlp_http]
