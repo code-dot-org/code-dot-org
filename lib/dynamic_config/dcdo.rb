@@ -65,7 +65,8 @@ class DCDOBase < DynamicConfigBase
       'hoai2025-share-enabled': DCDO.get('hoai2025-share-enabled', true),
       'ai-lesson-summaries-notifications-enabled': DCDO.get('ai-lesson-summaries-notifications-enabled', false),
       'lab2-fetch-level-properties-by-lesson-id': DCDO.get('lab2-fetch-level-proper0ties-by-lesson-id', true),
-      'student-snapshot-feedback-link': DCDO.get('student-snapshot-feedback-link', false)
+      'student-snapshot-feedback-link': DCDO.get('student-snapshot-feedback-link', false),
+      'studio-brand-update-enabled': DCDO.get('studio-brand-update-enabled', false)
     }
   end
 end
