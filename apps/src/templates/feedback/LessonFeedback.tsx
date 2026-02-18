@@ -16,6 +16,11 @@ interface LessonFeedbackProps {
   submittedAtDate: string | Date;
   lessonTitle?: string;
   lessonStartUrl?: string;
+  resource?: {
+    recommended_action?: string;
+    resource_name?: string;
+    resource_link?: string;
+  };
 }
 
 function LessonFeedback({
@@ -24,6 +29,7 @@ function LessonFeedback({
   teacherName,
   lessonTitle,
   lessonStartUrl,
+  resource,
 }: LessonFeedbackProps) {
   const formattedDate = new Date(submittedAtDate).toLocaleDateString('en-US', {
     year: 'numeric',
@@ -36,6 +42,11 @@ function LessonFeedback({
       window.open(lessonStartUrl, '_blank', 'noopener,noreferrer');
     }
   };
+
+  const showRecommendedAction =
+    resource &&
+    (!!resource.recommended_action ||
+      (resource.resource_name && resource.resource_link));
 
   return (
     <div className={styles.lessonFeedbackContainer}>
@@ -62,12 +73,12 @@ function LessonFeedback({
       </div>
       <hr className={styles.lessonFeedbackDivider} />
       <div className={styles.lessonFeedbackBox}>{feedbackText}</div>
-      <hr className={styles.lessonFeedbackDivider} />
-      {/* TODO: Add in real data here */}
-      <LessonRecommendedAction
-        resourceComment="Review the lesson and complete the exercises to improve your understanding."
-        resourceLink={lessonStartUrl || ''}
-      />
+      {showRecommendedAction && (
+        <>
+          <hr className={styles.lessonFeedbackDivider} />
+          <LessonRecommendedAction resource={resource} />
+        </>
+      )}
     </div>
   );
 }

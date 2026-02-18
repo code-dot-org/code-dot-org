@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-02-11 16:23:52 UTC",
+    "serialized_at": "2026-02-16 13:10:43 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -46,19 +46,88 @@
         "lesson_group.key": "",
         "script.name": "cs50-testing-things"
       }
+    },
+    {
+      "key": "lesson-2",
+      "name": "SciKit-Learn Experiments",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things"
+      }
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "08774b80-963d-4d4a-9936-edcf3170193a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "4657983f-8628-43c0-97ca-0104e4a9abf5",
+      "position": 1,
+      "properties": {
+        "description": "## 1. Classification vs. Regression\n*   **Standard:** 3.9 (Difference between classification and regression)\n*   **How it addresses the standard:** It provides a direct side-by-side comparison of the two primary supervised learning tasks using standard scikit-learn datasets.\n*   **Student Exploration:** Students observe how `LogisticRegression` sorts flowers into species (bins) while `LinearRegression` predicts a continuous disease progression score. They view a matplotlib graph showing the visual difference between categorical points and a regression line.\n*   **The Task:** Students must complete a \"Fruit Classifier\" to sort Apples and Oranges based on weight and texture, explaining why it is a classification task.",
+        "progression_name": "3.9 | Categories vs. Continuous Numbers"
+      },
+      "seeding_key": {
+        "activity_section.key": "4657983f-8628-43c0-97ca-0104e4a9abf5",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "3.9 | Categories vs. Continuous Numbers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-01"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "4657983f-8628-43c0-97ca-0104e4a9abf5"
+      },
+      "level_keys": [
+        "cs50-scikit-01"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-01",
+        "script_level.level_keys": [
+          "cs50-scikit-01"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "4657983f-8628-43c0-97ca-0104e4a9abf5"
+      }
+    }
   ],
   "resources": [
 

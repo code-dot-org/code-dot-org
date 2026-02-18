@@ -1,5 +1,4 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Heading1} from '@code-dot-org/component-library/typography';
 import {
   Breadcrumbs as MUIBreadcrumbs,
   Link as MUILink,
@@ -92,9 +91,9 @@ const WorkshopMarketingPage: React.FunctionComponent<
             Workshop information
           </Typography>
         </MUIBreadcrumbs>
-        <Heading1>
+        <Typography variant="h1" gutterBottom>
           {isUserEnrolled ? 'Workshop information' : 'Register for a workshop'}
-        </Heading1>
+        </Typography>
       </section>
       <div className={moduleStyles.bodyWrapper}>
         <div className={moduleStyles.bodyContainer}>
@@ -134,7 +133,6 @@ const WorkshopMarketingPage: React.FunctionComponent<
           </aside>
         </div>
       </div>
-
       <WorkshopEventJsonLdData {...props} />
     </div>
   );

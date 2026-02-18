@@ -33,7 +33,10 @@ const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
 
 interface SourcesContextType<T extends ProjectSources = ProjectSources> {
   currentSources: T;
-  updateSources: (newSources: T, forceSave?: boolean) => void;
+  updateSources: (
+    newSourcesOrUpdater: T | ((prev: T) => T),
+    forceSave?: boolean
+  ) => void;
   showStartOverDialog: (type: MessageType, message?: string) => void;
   setReinitializationHandler: (handler: () => void) => void;
   startOver: () => void;
@@ -130,21 +133,37 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
       : ((templateSources || startSources || defaultSources) as ProjectSources);
   }, [defaultSources, levelProperties]);
 
+  // In order to avoid possible stale state updates,
+  // we support passing a function that can take in the most up-to-date state as an argument
+  // and return new state.
   const updateSources = useCallback(
-    (newSources: ProjectSources, forceSave = false) => {
+    (
+      newSourcesOrUpdater:
+        | ProjectSources
+        | ((prev: ProjectSources) => ProjectSources),
+      forceSave = false
+    ) => {
       setCurrentSources(prev => {
+        // Handle both direct value and updater function
+        const newSources =
+          typeof newSourcesOrUpdater === 'function'
+            ? newSourcesOrUpdater(prev)
+            : newSourcesOrUpdater;
+
         // Perform a deep equality check to prevent unnecessary re-renders
         if (isEqual(prev, newSources)) {
           return prev;
         }
+
+        // Save if needed
+        if (!readonlyWorkspaceRef.current) {
+          (
+            projectManager || Lab2Registry.getInstance().getProjectManager()
+          )?.save(newSources, forceSave);
+        }
+
         return newSources;
       });
-
-      if (!readonlyWorkspaceRef.current) {
-        (
-          projectManager || Lab2Registry.getInstance().getProjectManager()
-        )?.save(newSources, forceSave);
-      }
     },
     [setCurrentSources, projectManager]
   );

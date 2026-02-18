@@ -1,0 +1,182 @@
+name 'pl-aif-2-U5-promise-chain'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<div style="font-size:14pt; line-height:1.6;">
+
+# Tracing the Promise Timeline
+
+<span style="font-size: 1.05em;">
+In this level, we’ll trace what happens <em>over time</em> in a full Promise chain. A button click starts the request, <code>fetch()</code> creates a Promise, and then <code>.then()</code> / <code>.catch()</code> run later when the Promise settles.
+</span>
+
+---
+
+## The Big Idea
+
+<div style="display:inline-block; padding:10px 12px; border-left:4px solid #6c63ff; background:#f6f6ff; border-radius:8px; margin:10px 0;">
+<strong>Timeline mindset:</strong> <code>fetch()</code> happens now. <code>.then()</code> / <code>.catch()</code> happen later.
+</div>
+
+---
+
+## Promise Chain We’re Tracing
+
+<div style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; font-size:0.95em; background:#0b1020; color:#e5e7eb; padding:12px; border-radius:10px; overflow:auto; max-width:880px;">
+button click
+  → fetch(url)<br>
+    .then(response =&gt; response.json())<br>
+    .then(data =&gt; /* use the data */)<br>
+    .catch(error =&gt; /* handle problems */)
+</div>
+
+---
+
+## Timeline: Step-by-Step
+
+<div style="border:1px solid #e5e7eb; border-radius:14px; padding:14px; background:#ffffff; max-width:900px; margin:12px 0;">
+  <div style="font-weight:800; margin-bottom:10px;">What happens in order</div>
+
+  <!-- Timeline item 1 -->
+  <div style="display:flex; gap:12px; align-items:flex-start; margin:10px 0;">
+    <div style="width:28px; height:28px; border-radius:999px; background:#eef2ff; border:1px solid #c7d2fe; display:flex; align-items:center; justify-content:center; font-weight:800;">1</div>
+    <div style="flex:1;">
+      <div style="font-weight:700;">Button click starts the request</div>
+      <div style="margin-top:4px; line-height:1.55;">
+        Your code begins running because an event happened (the user clicked).
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-left:13px; border-left:2px dashed #e5e7eb; height:16px;"></div>
+
+  <!-- Timeline item 2 -->
+  <div style="display:flex; gap:12px; align-items:flex-start; margin:10px 0;">
+    <div style="width:28px; height:28px; border-radius:999px; background:#fff7ed; border:1px solid #fed7aa; display:flex; align-items:center; justify-content:center; font-weight:800;">2</div>
+    <div style="flex:1;">
+      <div style="font-weight:700;"><code>fetch()</code> creates a <span style="display:inline-block; padding:2px 8px; border-radius:999px; background:#fff7ed; border:1px solid #fed7aa;">Pending</span> Promise</div>
+      <div style="margin-top:4px; line-height:1.55;">
+        <code>fetch(url)</code> returns immediately with a Promise. The request is in progress, so the Promise is <strong>pending</strong>.
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-left:13px; border-left:2px dashed #e5e7eb; height:16px;"></div>
+
+  <!-- Timeline item 3 -->
+  <div style="display:flex; gap:12px; align-items:flex-start; margin:10px 0;">
+    <div style="width:28px; height:28px; border-radius:999px; background:#f9fafb; border:1px solid #e5e7eb; display:flex; align-items:center; justify-content:center; font-weight:800;">3</div>
+    <div style="flex:1;">
+      <div style="font-weight:700;">You attach handlers: <code>.then()</code> and <code>.catch()</code></div>
+      <div style="margin-top:4px; line-height:1.55;">
+        This is you saying: “When this Promise finishes, run this code.”
+        The handlers don’t run yet — they’re just <em>registered</em>.
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-left:13px; border-left:2px dashed #e5e7eb; height:16px;"></div>
+
+  <!-- Timeline item 4 -->
+  <div style="display:flex; gap:12px; align-items:flex-start; margin:10px 0;">
+    <div style="width:28px; height:28px; border-radius:999px; background:#f0fdf4; border:1px solid #bbf7d0; display:flex; align-items:center; justify-content:center; font-weight:800;">4</div>
+    <div style="flex:1;">
+      <div style="font-weight:700;">If it succeeds, the Promise is <span style="display:inline-block; padding:2px 8px; border-radius:999px; background:#f0fdf4; border:1px solid #bbf7d0;">Fulfilled</span></div>
+      <div style="margin-top:4px; line-height:1.55;">
+        The <strong>first</strong> <code>.then()</code> runs with a <strong>Response</strong> object.
+        Usually you convert it into usable data:
+        <br/>
+        <span style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;">
+          <code>.then(response =&gt; response.json())</code>
+        </span>
+      </div>
+      <div style="margin-top:6px; padding:8px 10px; background:#f9fafb; border:1px solid #e5e7eb; border-radius:10px; line-height:1.55;">
+        <strong>Why a 2nd <code>.then()</code>?</strong><br/>
+        <code>response.json()</code> is also asynchronous — it returns a Promise too.  
+        The <strong>second</strong> <code>.then()</code> runs when that data is ready.
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-left:13px; border-left:2px dashed #e5e7eb; height:16px;"></div>
+
+  <!-- Timeline item 5 -->
+  <div style="display:flex; gap:12px; align-items:flex-start; margin:10px 0;">
+    <div style="width:28px; height:28px; border-radius:999px; background:#fef2f2; border:1px solid #fecaca; display:flex; align-items:center; justify-content:center; font-weight:800;">5</div>
+    <div style="flex:1;">
+      <div style="font-weight:700;">If anything fails, <code>.catch()</code> runs</div>
+      <div style="margin-top:4px; line-height:1.55;">
+        If the request fails (or something throws an error in the chain), the Promise becomes
+        <span style="display:inline-block; padding:2px 8px; border-radius:999px; background:#fef2f2; border:1px solid #fecaca;"><strong>Rejected</strong></span>,
+        and <code>.catch(error =&gt; ...)</code> handles it.
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+
+## What Each Part “Receives”
+
+<div style="border:1px solid #e5e7eb; border-radius:12px; padding:12px; background:#ffffff; max-width:900px; margin:12px 0;">
+  <table style="width:100%; border-collapse:collapse; font-size:0.98em;">
+    <thead>
+      <tr>
+        <th style="text-align:left; padding:10px; border-bottom:1px solid #e5e7eb;">Part</th>
+        <th style="text-align:left; padding:10px; border-bottom:1px solid #e5e7eb;">What it gets</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding:10px; border-bottom:1px solid #f0f2f5;"><code>fetch(url)</code></td>
+        <td style="padding:10px; border-bottom:1px solid #f0f2f5;">A <strong>Promise</strong> (starts Pending)</td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border-bottom:1px solid #f0f2f5;"><code>.then(response =&gt; ...)</code></td>
+        <td style="padding:10px; border-bottom:1px solid #f0f2f5;">A <strong>Response</strong> (if fetch succeeded)</td>
+      </tr>
+      <tr>
+        <td style="padding:10px; border-bottom:1px solid #f0f2f5;"><code>.then(data =&gt; ...)</code></td>
+        <td style="padding:10px; border-bottom:1px solid #f0f2f5;">The parsed <strong>data</strong> (often JSON)</td>
+      </tr>
+      <tr>
+        <td style="padding:10px;"><code>.catch(error =&gt; ...)</code></td>
+        <td style="padding:10px;">An <strong>Error</strong> (if something failed)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+---
+
+## Mini Checkpoint: Put It in Order
+
+<details style="margin:10px 0; border:1px solid #e5e7eb; border-radius:10px; padding:10px; background:#f9fafb; max-width:900px;">
+  <summary style="cursor:pointer; font-weight:800;">Try it ▼</summary>
+  <div style="padding-top:10px; line-height:1.6;">
+    Put these in timeline order:
+    <ol>
+      <li>The <strong>second</strong> <code>.then()</code> runs with data</li>
+      <li><code>fetch()</code> returns a pending Promise</li>
+      <li>Button click starts the request</li>
+      <li><code>.catch()</code> runs if there’s an error</li>
+      <li>The <strong>first</strong> <code>.then()</code> runs with a Response</li>
+    </ol>
+  </div>
+</details>
+
+<details style="margin:10px 0; border:1px solid #d1fae5; border-radius:10px; padding:10px; background:#f0fdf4; max-width:900px;">
+  <summary style="cursor:pointer; font-weight:900;">Show Answer ✅</summary>
+  <div style="padding-top:10px; line-height:1.6;">
+    <strong>Correct order:</strong> 3 → 2 → 5 → 1 → 4<br/>
+    (Button click → fetch returns Promise → first then gets Response → second then gets data → catch runs if error)
+  </div>
+</details>
+
+
+</div>
+
+## Next up
+#### Practice tracing a timeline in Web Lab!
+MARKDOWN

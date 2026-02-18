@@ -7,12 +7,16 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useCallback} from 'react';
 
+import AssigningAvailableAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/AssigningAvailableAiChatToolsAlert';
+import AssigningEssentialAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/AssigningEssentialAiChatToolsAlert';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {
   CourseOfferingCurriculumTypes as curriculumTypes,
   ParticipantAudience,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import experiments from '@cdo/apps/util/experiments';
+import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import CurriculumQuickAssignTopRow from './CurriculumQuickAssignTopRow';
@@ -280,6 +284,10 @@ export default function CurriculumQuickAssign({
       ? QuickAssignTableHocPl
       : QuickAssignTable;
 
+  const aiChatToolsDependency = selectedCourseOffering
+    ? selectedCourseOffering.ai_chat_tools_dependency
+    : AiChatToolsDependency.NONE;
+
   return (
     <div className={moduleStyles.containerWithMarginTop}>
       {isLoading && !isNewSection ? (
@@ -348,6 +356,14 @@ export default function CurriculumQuickAssign({
               isNewSection={isNewSection}
             />
           )}
+          {experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
+            aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
+              <AssigningEssentialAiChatToolsAlert />
+            )}
+          {experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
+            aiChatToolsDependency === AiChatToolsDependency.AVAILABLE && (
+              <AssigningAvailableAiChatToolsAlert />
+            )}
         </>
       )}
     </div>

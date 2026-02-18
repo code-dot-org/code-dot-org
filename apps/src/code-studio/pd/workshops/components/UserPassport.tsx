@@ -1,10 +1,7 @@
 import {LinkButton} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tags from '@code-dot-org/component-library/tags';
-import {
-  BodyThreeText,
-  OverlineThreeText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -59,7 +56,9 @@ const UserPassport: React.FunctionComponent<{
     return (
       <span className={style.errorMessage}>
         <FontAwesomeV6Icon iconName="exclamation-circle" iconStyle="solid" />
-        <BodyThreeText>{message}</BodyThreeText>
+        <Typography variant="body3" gutterBottom>
+          {message}
+        </Typography>
       </span>
     );
   };
@@ -89,7 +88,9 @@ const UserPassport: React.FunctionComponent<{
       >
         <div className={style.displayName}>
           <FontAwesomeV6Icon iconName="user-circle" iconStyle="solid" />
-          <BodyThreeText>{displayName}</BodyThreeText>
+          <Typography variant="body3" gutterBottom>
+            {displayName}
+          </Typography>
         </div>
         {isUserEnrolled ? (
           <Tags
@@ -111,37 +112,62 @@ const UserPassport: React.FunctionComponent<{
       {!isUserEnrolled && (
         <div className={style.userInfoContent}>
           <div className={style.userInfoRow}>
-            <OverlineThreeText className={style.userInfoLabel}>
+            <Typography
+              className={style.userInfoLabel}
+              variant="overline3"
+              gutterBottom
+            >
               Full name
-            </OverlineThreeText>
+            </Typography>
             {givenName && familyName ? (
-              <BodyThreeText>{`${givenName} ${familyName}`}</BodyThreeText>
+              <Typography
+                variant="body3"
+                gutterBottom
+              >{`${givenName} ${familyName}`}</Typography>
             ) : (
               RenderErrorMessage('Add your full name')
             )}
           </div>
           <div className={style.userInfoRow}>
-            <OverlineThreeText className={style.userInfoLabel}>
+            <Typography
+              className={style.userInfoLabel}
+              variant="overline3"
+              gutterBottom
+            >
               Email
-            </OverlineThreeText>
-            <BodyThreeText>{email}</BodyThreeText>
+            </Typography>
+            <Typography variant="body3" gutterBottom>
+              {email}
+            </Typography>
           </div>
           <div className={style.userInfoRow}>
-            <OverlineThreeText className={style.userInfoLabel}>
+            <Typography
+              className={style.userInfoLabel}
+              variant="overline3"
+              gutterBottom
+            >
               Role
-            </OverlineThreeText>
+            </Typography>
             {educatorRole ? (
-              <BodyThreeText>{educatorRole}</BodyThreeText>
+              <Typography variant="body3" gutterBottom>
+                {educatorRole}
+              </Typography>
             ) : (
               RenderErrorMessage('Add your role')
             )}
           </div>
           <div className={style.userInfoRow}>
-            <OverlineThreeText className={style.userInfoLabel}>
+            <Typography
+              className={style.userInfoLabel}
+              variant="overline3"
+              gutterBottom
+            >
               School
-            </OverlineThreeText>
+            </Typography>
             {schoolName || schoolType ? (
-              <BodyThreeText>{listedSchoolName}</BodyThreeText>
+              <Typography variant="body3" gutterBottom>
+                {listedSchoolName}
+              </Typography>
             ) : (
               RenderErrorMessage('Add your school')
             )}
