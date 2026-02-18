@@ -34,12 +34,12 @@ import {
   States,
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
+import DatePicker from '../../../sharedComponents/DatePicker';
 import RegionalPartnerDropdown, {
   RegionalPartnerPropType,
 } from '../components/regional_partner_dropdown';
 import {SelectStyleProps, DATE_ORDER_ASC, DATE_ORDER_DESC} from '../constants';
 
-import DatePicker from '../../../sharedComponents/DatePicker';
 import ServerSortWorkshopTable from './components/server_sort_workshop_table';
 import {PermissionPropType, WorkshopAdmin} from './permission';
 import {DATE_FORMAT} from './workshopConstants';
