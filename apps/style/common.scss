@@ -614,6 +614,12 @@ button.blocklyLaunch {
     margin-right: 0;
   }
 
+  &:focus-visible,
+  *:focus-visible {
+    outline: var(--borders-brand-teal-primary) solid 2px;
+    outline-offset: 2px;
+  }
+
   &#resetButton {
     border: 1px solid $brand_secondary_default;
     background-color: $brand_secondary_default;
