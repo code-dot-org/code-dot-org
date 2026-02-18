@@ -139,10 +139,13 @@ function main() {
   }
 
   // Script injected into HTML files to intercept console methods and forward
-  // them to the parent frame (InnerHTMLPreview) via postMessage.
+  // them to InnerHTMLPreview via BroadcastChannel.
   var CONSOLE_OVERRIDE_SCRIPT =
     '<script>' +
     '(function() {' +
+    '  var channel = new BroadcastChannel("' +
+    PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL +
+    '");' +
     '  var METHODS = ["log", "warn", "error", "info"];' +
     '  function serialize(arg) {' +
     '    if (arg === undefined) return "undefined";' +
@@ -156,7 +159,7 @@ function main() {
     '      var args = [];' +
     '      for (var i = 0; i < arguments.length; i++) { args.push(serialize(arguments[i])); }' +
     '      try {' +
-    '        window.parent.postMessage({type: "CONSOLE_LOG", level: method, args: args}, "*");' +
+    '        channel.postMessage({type: "CONSOLE_LOG", level: method, args: args});' +
     '      } catch(e) {}' +
     '      return original.apply(console, arguments);' +
     '    };' +

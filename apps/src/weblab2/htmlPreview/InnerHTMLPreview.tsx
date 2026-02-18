@@ -55,15 +55,6 @@ const InnerHTMLPreview = () => {
         setCurrentFile(data.fileName);
       } else if (data.type === IframeMessageType.SET_ALLOW_SCRIPTS) {
         setAllowScripts(!!data.allow);
-      } else if (data.type === IframeMessageType.CONSOLE_LOG) {
-        window.parent.postMessage(
-          {
-            type: IframeMessageType.CONSOLE_LOG,
-            level: data.level,
-            args: data.args,
-          },
-          parentOrigin
-        );
       } else if (data.type === IframeMessageType.REFRESH) {
         iframeRef.current?.contentWindow?.location.reload();
       } else if (data.type === IframeMessageType.LEVEL_LOADING) {
@@ -146,6 +137,17 @@ const InnerHTMLPreview = () => {
           {
             type: IframeMessageType.NETWORK_RESPONSE,
             response: event.data.responseData,
+          },
+          parentOrigin
+        );
+      } else if (
+        event.data.type === ProjectServiceWorkerMessageType.CONSOLE_LOG
+      ) {
+        window.parent.postMessage(
+          {
+            type: IframeMessageType.CONSOLE_LOG,
+            level: event.data.level,
+            args: event.data.args,
           },
           parentOrigin
         );

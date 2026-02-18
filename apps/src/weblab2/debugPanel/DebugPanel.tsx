@@ -29,6 +29,8 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
   const networkRequests = useAppSelector(
     state => state.weblab2Network.requests
   );
+  const consoleLogs = useAppSelector(state => state.weblab2Console.logs);
+  console.log({consoleLogs});
   const [selectedRequest, setSelectedRequest] = React.useState<
     NetworkEntry | undefined
   >(networkRequests.length > 0 ? networkRequests[0] : undefined);
