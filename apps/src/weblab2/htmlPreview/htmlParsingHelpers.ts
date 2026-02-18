@@ -101,6 +101,7 @@ const consoleOverrideScript = `
     if (arg === undefined) return "undefined";
     if (arg === null) return "null";
     if (arg instanceof Error) return arg.toString();
+    if (typeof arg === "string") return arg;
     try { return JSON.stringify(arg); } catch(e) { return String(arg); }
   }
   METHODS.forEach(function(method) {

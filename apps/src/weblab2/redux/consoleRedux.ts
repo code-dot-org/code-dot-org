@@ -6,7 +6,7 @@ export type ConsoleLogLevel = 'log' | 'warn' | 'error' | 'info';
 
 export interface ConsoleEntry {
   level: ConsoleLogLevel;
-  args: string[];
+  message: string;
   timestamp: string;
 }
 
@@ -28,7 +28,7 @@ const consoleSlice = createSlice({
     ) => {
       state.logs.push({
         level: action.payload.level,
-        args: action.payload.args,
+        message: action.payload.args.join(' '),
         timestamp: new Date().toISOString(),
       });
     },
