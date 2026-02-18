@@ -694,6 +694,20 @@ const EVENTS = {
   IMPORT_FROM_BACKPACK_REPLACE:
     'Import a file from backpack, replacing existing file',
   IMPORT_FROM_BACKPACK_RENAME: 'Import a file from backpack, renaming it',
+
+  // student snapshot events
+  LESSON_SNAPSHOT_RESOURCE_LINK_ADDED:
+    'Teacher clicks “Add resource link” and successfully adds a URL',
+  LESSON_SNAPSHOT_SAVE_AS_DRAFT_CLICKED:
+    'Teacher clicks "Save as draft" and feedback is successfully saved as draft.',
+  LESSON_SNAPSHOT_AI_FEEDBACK_EDITED:
+    'Teacher modifies the AI-generated feedback text before saving or sending.',
+  LESSON_SNAPSHOT_SEND_FEEDBACK_TO_STUDENT_CLICKED:
+    'Teacher clicks "Send feedback to student" and feedback is successfully sent.',
+  LESSON_SNAPSHOT_AI_FEEDBACK_GENERATED:
+    'AI-generated feedback is successfully returned and displayed in the feedback text box.',
+  LESSON_SNAPSHOT_FEEDBACK_WIDGET_LOADED:
+    "Teacher opens a student's lesson view and the feedback widget is rendered.",
 };
 
 const EVENT_GROUP_NAMES = {

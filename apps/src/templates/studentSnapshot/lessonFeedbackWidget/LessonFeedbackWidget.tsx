@@ -1,6 +1,8 @@
 import Alert from '@code-dot-org/component-library/alert';
 import React from 'react';
 
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import WidgetTemplate from '@cdo/apps/templates/studentSnapshot/widgetTemplate';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
@@ -29,6 +31,8 @@ interface LessonFeedbackData {
     resource_name?: string;
     resource_link?: string;
   }>;
+  created_at?: Date | string;
+  updated_at?: Date | string;
 }
 
 // Constants
@@ -111,6 +115,11 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
             setExistingFeedbackData(aiGeneratedInitialFeedbackRecord);
             setFeedbackText(aiGeneratedInitialFeedbackRecord.saved_feedback);
             setResourceData([DEFAULT_RESOURCE]);
+            analyticsReporter.sendEvent(
+              EVENTS.LESSON_SNAPSHOT_AI_FEEDBACK_GENERATED,
+              {},
+              PLATFORMS.STATSIG
+            );
           }
         } else {
           const data = await response.json();
@@ -129,6 +138,11 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
         setResourceData([DEFAULT_RESOURCE]);
       } finally {
         setIsLoading(false);
+        analyticsReporter.sendEvent(
+          EVENTS.LESSON_SNAPSHOT_FEEDBACK_WIDGET_LOADED,
+          {},
+          PLATFORMS.STATSIG
+        );
       }
     }
     if (lessonId && studentId && unitId && sectionId) {
@@ -186,7 +200,38 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
     }
   };
 
+  const userHasEditedAiFeedback = () => {
+    const isLookingAtOriginalAiFeedback =
+      existingFeedbackData &&
+      existingFeedbackData.updated_at === existingFeedbackData.created_at;
+
+    const hasEdited = feedbackText !== existingFeedbackData?.saved_feedback;
+    return isLookingAtOriginalAiFeedback && hasEdited;
+  };
+
   const handleSaveAsDraft = async () => {
+    analyticsReporter.sendEvent(
+      EVENTS.LESSON_SNAPSHOT_SAVE_AS_DRAFT_CLICKED,
+      {
+        aiFeedbackEdited: userHasEditedAiFeedback(),
+        hasRecommendedAction: !!(
+          resourceData[0]?.recommended_action &&
+          resourceData[0].recommended_action.trim()
+        ),
+        resourceLinkCount: !!(
+          resourceData[0]?.resource_link && resourceData[0].resource_link.trim()
+        )
+          ? 1
+          : 0,
+        recommendedActionCharacterCount: resourceData[0]?.recommended_action
+          ? resourceData[0].recommended_action.trim().length
+          : 0,
+        hasRecommendActionLink: !!(
+          resourceData[0]?.resource_link && resourceData[0].resource_link.trim()
+        ),
+      },
+      PLATFORMS.STATSIG
+    );
     const newFeedbackData = {
       ...existingFeedbackData,
       saved_feedback: feedbackText,
@@ -204,6 +249,23 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
   };
 
   const handleSendToStudent = async () => {
+    analyticsReporter.sendEvent(
+      EVENTS.LESSON_SNAPSHOT_SEND_FEEDBACK_TO_STUDENT_CLICKED,
+      {
+        aiFeedbackEdited: userHasEditedAiFeedback(),
+        hasRecommendedAction: !!(
+          resourceData[0]?.recommended_action &&
+          resourceData[0].recommended_action.trim()
+        ),
+        recommendedActionCharacterCount: resourceData[0]?.recommended_action
+          ? resourceData[0].recommended_action.trim().length
+          : 0,
+        hasRecommendActionLink: !!(
+          resourceData[0]?.resource_link && resourceData[0].resource_link.trim()
+        ),
+      },
+      PLATFORMS.STATSIG
+    );
     // Create the new feedback data
     const newFeedbackData = {
       ...existingFeedbackData,
