@@ -1,10 +1,6 @@
 import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  BodyFourText,
-  BodyThreeText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import {isEqual} from 'lodash';
 import React, {useEffect, useMemo, useState} from 'react';
 
@@ -200,9 +196,9 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
         <div className={moduleStyles.debugPanelContainer}>
           <div className={moduleStyles.networkSummary}>
             <div className={moduleStyles.networkSummaryHeader}>
-              <BodyFourText>
-                <StrongText>Activity</StrongText>
-              </BodyFourText>
+              <Typography variant="body4" gutterBottom>
+                <Typography variant="strong">Activity</Typography>
+              </Typography>
               <Button
                 onClick={() => setNewestFirst(!newestFirst)}
                 size="xs"
@@ -263,7 +259,9 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
               />
             ) : (
               <div className={moduleStyles.responsePlaceholder}>
-                <BodyThreeText>Response</BodyThreeText>
+                <Typography variant="body3" gutterBottom>
+                  Response
+                </Typography>
                 <FontAwesomeV6Icon
                   iconName="circle"
                   className={moduleStyles.placeholderIcon}

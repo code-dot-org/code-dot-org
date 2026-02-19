@@ -1,10 +1,6 @@
 import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  BodyThreeText,
-  OverlineThreeText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useMemo} from 'react';
 
 import parentStyles from './debug-panel.module.scss';
@@ -52,9 +48,13 @@ const DetailsBox: React.FunctionComponent<DetailsBoxProps> = ({
   return (
     <div className={moduleStyles.detailsBox}>
       <div className={moduleStyles.detailsHeader}>
-        <BodyThreeText className={moduleStyles.detailsHeaderText}>
-          <StrongText>{title}</StrongText>
-        </BodyThreeText>
+        <Typography
+          className={moduleStyles.detailsHeaderText}
+          variant="body3"
+          gutterBottom
+        >
+          <Typography variant="strong">{title}</Typography>
+        </Typography>
         <FontAwesomeV6Icon
           iconName={iconName}
           className={iconClassName}
@@ -66,13 +66,21 @@ const DetailsBox: React.FunctionComponent<DetailsBoxProps> = ({
         {rows.map((row, rowIndex) => {
           const content = row.map(field => (
             <div key={field.label} className={moduleStyles.detailsField}>
-              <OverlineThreeText className={moduleStyles.detailsFieldLabel}>
+              <Typography
+                className={moduleStyles.detailsFieldLabel}
+                variant="overline3"
+                gutterBottom
+              >
                 {field.label}
-              </OverlineThreeText>
+              </Typography>
               <pre className={moduleStyles.detailsFieldValueContainer}>
-                <BodyThreeText className={moduleStyles.detailsFieldValue}>
+                <Typography
+                  className={moduleStyles.detailsFieldValue}
+                  variant="body3"
+                  gutterBottom
+                >
                   {field.value}
-                </BodyThreeText>
+                </Typography>
               </pre>
             </div>
           ));

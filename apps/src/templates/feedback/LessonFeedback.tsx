@@ -1,8 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
-import {
-  BodyFourText,
-  Heading5,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import LessonRecommendedAction from './LessonRecommendedAction';
@@ -52,13 +49,21 @@ function LessonFeedback({
     <div className={styles.lessonFeedbackContainer}>
       <div className={styles.lessonFeedbackHeader}>
         <div className={styles.lessonFeedbackContent}>
-          <Heading5 className={styles.lessonFeedbackHeading}>
+          <Typography
+            className={styles.lessonFeedbackHeading}
+            variant="h5"
+            gutterBottom
+          >
             {lessonTitle}
-          </Heading5>
+          </Typography>
 
-          <BodyFourText className={styles.lessonFeedbackDetails}>
+          <Typography
+            className={styles.lessonFeedbackDetails}
+            variant="body4"
+            gutterBottom
+          >
             Sent by {teacherName || 'Your teacher'} on {formattedDate}
-          </BodyFourText>
+          </Typography>
         </div>
 
         <Button
