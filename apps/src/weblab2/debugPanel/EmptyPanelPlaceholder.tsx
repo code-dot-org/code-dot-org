@@ -6,24 +6,32 @@ import {
 } from '@code-dot-org/component-library/typography';
 import React from 'react';
 
-import moduleStyles from './no-requests-placeholder.module.scss';
+import moduleStyles from './empty-panel-placeholder.module.scss';
 
-const NoRequestsPlaceholder: React.FunctionComponent = () => {
+interface EmptyPanelPlaceholderProps {
+  iconName: string;
+  title: string;
+  description: string;
+}
+
+const EmptyPanelPlaceholder: React.FunctionComponent<
+  EmptyPanelPlaceholderProps
+> = ({iconName, title, description}) => {
   return (
     <div className={moduleStyles.container}>
       <div className={moduleStyles.innerContainer}>
         <div className={moduleStyles.iconCircle}>
-          <FontAwesomeV6Icon iconName="globe" />
+          <FontAwesomeV6Icon iconName={iconName} />
         </div>
         <BodyTwoText className={moduleStyles.title}>
-          <StrongText>No network activity</StrongText>
+          <StrongText>{title}</StrongText>
         </BodyTwoText>
         <BodyFourText className={moduleStyles.description}>
-          Network requests will appear here when your app makes API calls.
+          {description}
         </BodyFourText>
       </div>
     </div>
   );
 };
 
-export default NoRequestsPlaceholder;
+export default EmptyPanelPlaceholder;

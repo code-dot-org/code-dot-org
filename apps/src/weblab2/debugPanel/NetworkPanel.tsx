@@ -17,8 +17,8 @@ import SuccessDivider from '@cdo/apps/weblab2/debugPanel/images/Success.svg';
 import {NetworkEntry} from '../redux/networkRedux';
 
 import DetailsBox from './DetailsBox';
+import EmptyPanelPlaceholder from './EmptyPanelPlaceholder';
 import NetworkRequestChip from './NetworkRequestChip';
-import NoRequestsPlaceholder from './NoRequestsPlaceholder';
 
 import moduleStyles from './network-panel.module.scss';
 
@@ -184,7 +184,11 @@ const NetworkPanel: React.FC = () => {
   return (
     <>
       {orderedNetworkRequests.length === 0 ? (
-        <NoRequestsPlaceholder />
+        <EmptyPanelPlaceholder
+          iconName="globe"
+          title="No network activity"
+          description="Network requests will appear here when your app makes API calls."
+        />
       ) : (
         <div className={moduleStyles.networkPanelContainer}>
           <div className={moduleStyles.networkSummary}>

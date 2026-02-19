@@ -11,6 +11,8 @@ import {
   ConsoleLogLevel,
 } from '@cdo/apps/weblab2/redux/consoleRedux';
 
+import EmptyPanelPlaceholder from './EmptyPanelPlaceholder';
+
 import moduleStyles from './console.module.scss';
 
 const Console: React.FunctionComponent = () => {
@@ -47,16 +49,26 @@ const Console: React.FunctionComponent = () => {
 
   return (
     <div className={moduleStyles.consoleContainer}>
-      {consoleLogs.map((log, index) => (
-        <Alert
-          key={index}
-          type={mapLogLevelToAlertType(log.level)}
-          text={formatLogWithTimestamp(log)}
-          size={'s'}
-          className={moduleStyles.consoleLog}
+      {consoleLogs.length === 0 ? (
+        <EmptyPanelPlaceholder
+          iconName="terminal"
+          title="No console output"
+          description="Add console.log() statements to you code to see output here."
         />
-      ))}
-      <div ref={bottomRef} />
+      ) : (
+        <>
+          {consoleLogs.map((log, index) => (
+            <Alert
+              key={index}
+              type={mapLogLevelToAlertType(log.level)}
+              text={formatLogWithTimestamp(log)}
+              size={'s'}
+              className={moduleStyles.consoleLog}
+            />
+          ))}
+          <div ref={bottomRef} />
+        </>
+      )}
     </div>
   );
 };
