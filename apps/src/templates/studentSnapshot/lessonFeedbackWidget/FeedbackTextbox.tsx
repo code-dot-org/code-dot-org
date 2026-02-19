@@ -33,15 +33,17 @@ const FeedbackTextbox: React.FC<FeedbackTextboxProps> = ({
   };
 
   const handleBlur = () => {
-    analyticsReporter.sendEvent(
-      EVENTS.LESSON_SNAPSHOT_AI_FEEDBACK_EDITED,
-      {
-        originalTextLength: originalText.length,
-        endingTextLength: text.length,
-        textChanged: originalText !== text,
-      },
-      PLATFORMS.STATSIG
-    );
+    if (originalText !== text) {
+      analyticsReporter.sendEvent(
+        EVENTS.LESSON_SNAPSHOT_AI_FEEDBACK_EDITED,
+        {
+          originalTextLength: originalText.length,
+          endingTextLength: text.length,
+          textChanged: originalText !== text,
+        },
+        PLATFORMS.STATSIG
+      );
+    }
   };
 
   return (

@@ -120,11 +120,21 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
               {},
               PLATFORMS.STATSIG
             );
+            analyticsReporter.sendEvent(
+              EVENTS.LESSON_SNAPSHOT_FEEDBACK_WIDGET_LOADED,
+              {},
+              PLATFORMS.STATSIG
+            );
           }
         } else {
           const data = await response.json();
           if (data.saved_feedback) {
             setFeedbackText(data.saved_feedback);
+            analyticsReporter.sendEvent(
+              EVENTS.LESSON_SNAPSHOT_FEEDBACK_WIDGET_LOADED,
+              {},
+              PLATFORMS.STATSIG
+            );
           }
           setExistingFeedbackData(data);
           if (data.resources && data.resources.length > 0) {
@@ -138,11 +148,6 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
         setResourceData([DEFAULT_RESOURCE]);
       } finally {
         setIsLoading(false);
-        analyticsReporter.sendEvent(
-          EVENTS.LESSON_SNAPSHOT_FEEDBACK_WIDGET_LOADED,
-          {},
-          PLATFORMS.STATSIG
-        );
       }
     }
     if (lessonId && studentId && unitId && sectionId) {
@@ -226,17 +231,11 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
         ? resourceData[0].recommended_action.trim().length
         : 0,
       hasRecommendActionLink,
-      // Only include resourceLinkCount for save as draft (backward compatibility)
-      ...(hasRecommendActionLink && {resourceLinkCount: 1}),
+      resourceLinkCount: hasRecommendActionLink ? 1 : 0,
     };
   };
 
   const handleSaveAsDraft = async () => {
-    analyticsReporter.sendEvent(
-      EVENTS.LESSON_SNAPSHOT_SAVE_AS_DRAFT_CLICKED,
-      getCommonAnalyticsProperties(),
-      PLATFORMS.STATSIG
-    );
     const newFeedbackData = {
       ...existingFeedbackData,
       saved_feedback: feedbackText,
@@ -245,18 +244,25 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
 
     setExistingFeedbackData(newFeedbackData);
 
-    const savedData = await persistFeedbackToBackend(
-      newFeedbackData,
-      existingFeedbackData?.id
-    );
+    try {
+      const savedData = await persistFeedbackToBackend(
+        newFeedbackData,
+        existingFeedbackData?.id
+      );
+      analyticsReporter.sendEvent(
+        EVENTS.LESSON_SNAPSHOT_SAVE_AS_DRAFT_CLICKED,
+        getCommonAnalyticsProperties(),
+        PLATFORMS.STATSIG
+      );
 
-    setExistingFeedbackData(savedData);
+      setExistingFeedbackData(savedData);
+    } catch (error) {
+      console.error('Failed to save feedback as draft:', error);
+    }
   };
 
   const handleSendToStudent = async () => {
     const analyticsProperties = getCommonAnalyticsProperties();
-    // Remove resourceLinkCount for send to student event (only used for save as draft)
-    delete analyticsProperties.resourceLinkCount;
 
     analyticsReporter.sendEvent(
       EVENTS.LESSON_SNAPSHOT_SEND_FEEDBACK_TO_STUDENT_CLICKED,
