@@ -67,6 +67,6 @@ service:
       processors: [batch]
       exporters: [datadog/connector, datadog/exporter]
     logs:
-      receivers: [otlp, filelog]
+      receivers: [otlp]
       processors: [batch]
       exporters: [datadog/exporter]
