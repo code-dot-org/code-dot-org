@@ -29,8 +29,6 @@ var filesApi = require('@cdo/apps/clientApi').files;
 
 var assetListStore = require('../code-studio/assets/assetListStore');
 
-export const WEBLAB_FOOTER_HEIGHT = 30;
-
 /**
  * An instantiable WebLab class
  */
