@@ -7,8 +7,6 @@ import DebugPanelLeftHeaderButtons from './DebugPanelLeftHeaderButtons';
 import DebugPanelRightHeaderButtons from './DebugPanelRightHeaderButtons';
 import NetworkPanel from './NetworkPanel';
 
-//import moduleStyles from './debug-panel.module.scss';
-
 interface DebugPanelProps {
   className?: string;
 }

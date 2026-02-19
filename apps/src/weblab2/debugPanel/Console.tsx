@@ -1,8 +1,15 @@
 import Alert from '@code-dot-org/component-library/alert';
+import {
+  BodyFourText,
+  BodyThreeText,
+} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {ConsoleLogLevel} from '@cdo/apps/weblab2/redux/consoleRedux';
+import {
+  ConsoleEntry,
+  ConsoleLogLevel,
+} from '@cdo/apps/weblab2/redux/consoleRedux';
 
 import moduleStyles from './console.module.scss';
 
@@ -21,14 +28,26 @@ const Console: React.FunctionComponent = () => {
     }
   };
 
+  const formatLogWithTimestamp = (log: ConsoleEntry) => {
+    return (
+      <div className={moduleStyles.consoleLogEntry}>
+        <BodyThreeText>{log.message}</BodyThreeText>
+        <BodyFourText className={moduleStyles.timestamp}>
+          {log.timestamp}
+        </BodyFourText>
+      </div>
+    );
+  };
+
   return (
     <div className={moduleStyles.consoleContainer}>
       {consoleLogs.map((log, index) => (
         <Alert
           key={index}
           type={mapLogLevelToAlertType(log.level)}
-          text={log.message}
+          text={formatLogWithTimestamp(log)}
           size={'s'}
+          className={moduleStyles.consoleLog}
         />
       ))}
     </div>

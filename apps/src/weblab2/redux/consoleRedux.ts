@@ -29,7 +29,7 @@ const consoleSlice = createSlice({
       state.logs.push({
         level: action.payload.level,
         message: action.payload.args.join(' '),
-        timestamp: new Date().toISOString(),
+        timestamp: new Date().toLocaleTimeString(),
       });
     },
     clearConsoleLogs: state => {

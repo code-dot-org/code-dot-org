@@ -6,3 +6,24 @@
   height: 100%;
   padding: 8px;
 }
+
+.consoleLogEntry {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.timestamp {
+  font-family: monospace;
+}
+
+.consoleLog {
+  span {
+    display: block;
+    width: 100%;
+  }
+}
