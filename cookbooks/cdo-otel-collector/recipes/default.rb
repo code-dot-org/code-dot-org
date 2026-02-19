@@ -11,16 +11,16 @@ apt_package 'wget' do
 end
 
 # Download OpenTelemetry Collector DEB package
-remote_file "#{Chef::Config[:file_cache_path]}/otelcol_#{node['cdo-otel-collector']['version']}_linux_amd64.deb" do
-  source "https://github.com/open-telemetry/opentelemetry-collector-releases/releases/download/v#{node['cdo-otel-collector']['version']}/otelcol_#{node['cdo-otel-collector']['version']}_linux_amd64.deb"
+remote_file "#{Chef::Config[:file_cache_path]}/otelcol-contrib_#{node['cdo-otel-collector']['version']}_linux_amd64.deb" do
+  source "https://github.com/open-telemetry/opentelemetry-collector-releases/releases/download/v#{node['cdo-otel-collector']['version']}/otelcol-contrib_#{node['cdo-otel-collector']['version']}_linux_amd64.deb"
   mode '0644'
   action :create
-  not_if "dpkg -l | grep -q '^ii  otelcol '"
+  not_if "dpkg -l | grep -q '^ii  otelcol-contrib '"
 end
 
 # Install OpenTelemetry Collector DEB package
-dpkg_package 'otelcol' do
-  source "#{Chef::Config[:file_cache_path]}/otelcol_#{node['cdo-otel-collector']['version']}_linux_amd64.deb"
+dpkg_package 'otelcol-contrib' do
+  source "#{Chef::Config[:file_cache_path]}/otelcol-contrib_#{node['cdo-otel-collector']['version']}_linux_amd64.deb"
   action :install
   notifies :restart, 'service[otelcol]', :delayed
 end
