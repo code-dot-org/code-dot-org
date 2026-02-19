@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import LessonFeedback from '@cdo/apps/templates/feedback/LessonFeedback';
 import i18n from '@cdo/locale';
 
@@ -7,7 +8,6 @@ interface LessonFeedbackData {
   id: number;
   submitted_feedback?: string;
   lesson_id: number;
-  saved_feedback?: string;
   updated_at: string | Date;
   teacher_name?: string;
   teacher_id: number;
@@ -29,10 +29,12 @@ function LessonFeedbackContainer({studentId}: LessonFeedbackContainerProps) {
   const [fetchedFeedback, setFetchedFeedback] = React.useState<
     LessonFeedbackData[] | null
   >(null);
+  const [isLoading, setIsLoading] = React.useState<boolean>(false);
 
   React.useEffect(() => {
     async function fetchAllLessonFeedback() {
       try {
+        setIsLoading(true);
         const response = await fetch(`/lesson_feedbacks/by_student`);
         if (!response.ok) {
           throw new Error(
@@ -41,9 +43,11 @@ function LessonFeedbackContainer({studentId}: LessonFeedbackContainerProps) {
         }
         const data = await response.json();
         setFetchedFeedback(data);
+        setIsLoading(false);
         return data;
       } catch (err) {
         console.error('AI lesson feedback error:', err);
+        setIsLoading(false);
         return null;
       }
     }
@@ -55,14 +59,19 @@ function LessonFeedbackContainer({studentId}: LessonFeedbackContainerProps) {
   const hasSubmittedFeedback =
     fetchedFeedback &&
     fetchedFeedback.length > 0 &&
-    fetchedFeedback.some(item => item.submitted_feedback !== null);
+    fetchedFeedback.some(item => !!item.submitted_feedback);
 
   return (
     <div>
-      {!hasSubmittedFeedback && <div>{i18n.feedbackNoneYet()}</div>}
+      {isLoading && <Spinner size={'large'} />}
+      {!hasSubmittedFeedback && !isLoading && (
+        <div>{i18n.feedbackNoneYet()}</div>
+      )}
       {hasSubmittedFeedback &&
+        fetchedFeedback &&
+        !isLoading &&
         fetchedFeedback
-          .filter(lessonFeedback => lessonFeedback.submitted_feedback !== null)
+          .filter(lessonFeedback => !!lessonFeedback.submitted_feedback)
           .map(lessonFeedback => {
             return (
               <LessonFeedback
