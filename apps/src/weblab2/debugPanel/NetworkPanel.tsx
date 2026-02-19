@@ -186,7 +186,7 @@ const NetworkPanel: React.FC = () => {
       {orderedNetworkRequests.length === 0 ? (
         <NoRequestsPlaceholder />
       ) : (
-        <div className={moduleStyles.debugPanelContainer}>
+        <div className={moduleStyles.networkPanelContainer}>
           <div className={moduleStyles.networkSummary}>
             <div className={moduleStyles.networkSummaryHeader}>
               <BodyFourText>

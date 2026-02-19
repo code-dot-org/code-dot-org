@@ -31,8 +31,7 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
         />
       }
     >
-      {selectedPanel === 'network' && <NetworkPanel />}
-      {selectedPanel === 'console' && <Console />}
+      {selectedPanel === 'network' ? <NetworkPanel /> : <Console />}
     </PanelContainer>
   );
 };
