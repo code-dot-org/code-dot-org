@@ -90,7 +90,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     current_user.assign_script(@unit, @course) if @unit
 
     if @unit
-      AiLessonSummariesHelper.perform_ai_lesson_summaries_by_unit(@unit)
+      AiLessonSummariesHelper.perform_ai_lesson_summaries_by_unit(@unit, current_user.id)
     end
 
     render json: section.summarize
