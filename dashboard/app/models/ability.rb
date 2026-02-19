@@ -161,6 +161,8 @@ class Ability
       can :workshops_user_enrolled_in, Pd::Workshop
       can :index, Section, user_id: user.id
       can [:get_feedbacks, :count, :increment_visit_count, :index], TeacherFeedback, student_id: user.id
+      # Students can read their own lesson feedback
+      can [:show], LessonFeedback, student_id: user.id
       can :create, UserMlModel, user_id: user.id
 
       can :list_projects, Section do |section|
@@ -217,6 +219,14 @@ class Ability
           user.students.exists?(id: evaluation.student_id)
         end
         can :get_feedbacks, TeacherFeedback do |feedback|
+          user.students.exists?(id: feedback.student_id)
+        end
+
+        # LessonFeedback abilities - teachers can manage lesson feedback for their students
+        can [:create, :update], LessonFeedback do |feedback|
+          user.students.exists?(id: feedback.student_id)
+        end
+        can :show, LessonFeedback do |feedback|
           user.students.exists?(id: feedback.student_id)
         end
 

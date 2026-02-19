@@ -1,23 +1,23 @@
 class LessonFeedbacksController < ApplicationController
   before_action :authenticate_user!
 
-  def create
-    feedback = LessonFeedback.new(lesson_feedback_params)
+  load_and_authorize_resource except: [:show_by_student, :saved_feedback]
 
-    if feedback.save
-      render json: feedback, status: :created
+  def create
+    @lesson_feedback.assign_attributes(lesson_feedback_params)
+
+    if @lesson_feedback.save
+      render json: @lesson_feedback, status: :created
     else
-      render json: {errors: feedback.errors.full_messages}, status: :unprocessable_entity
+      render json: {errors: @lesson_feedback.errors.full_messages}, status: :unprocessable_entity
     end
   end
 
   def update
-    feedback = LessonFeedback.find(params[:id])
-
-    if feedback.update(lesson_feedback_params)
-      render json: feedback
+    if @lesson_feedback.update(lesson_feedback_params)
+      render json: @lesson_feedback
     else
-      render json: {errors: feedback.errors.full_messages}, status: :unprocessable_entity
+      render json: {errors: @lesson_feedback.errors.full_messages}, status: :unprocessable_entity
     end
   end
 
@@ -37,6 +37,9 @@ class LessonFeedbacksController < ApplicationController
 
   # GET /lesson_feedbacks/saved_feedback?student_id=...&lesson_id=...
   def saved_feedback
+    student = User.find(params[:student_id])
+    return head :forbidden unless student&.student_of?(current_user)
+
     feedback = LessonFeedback.find_by!(
       student_id: params[:student_id],
       lesson_id: params[:lesson_id]
