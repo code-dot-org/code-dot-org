@@ -1,9 +1,9 @@
 require 'opentelemetry/sdk'
 require 'opentelemetry/instrumentation/all'
 require 'opentelemetry-exporter-otlp'
-require 'services/opentelemetry/filtering_sampler'
+# require 'services/opentelemetry/filtering_sampler'
 
-if CDO.otlp_endpoint && CDO.otlp_api_key
+if ENV['OTEL_EXPORTER_OTLP_ENDPOINT']
   OpenTelemetry::SDK.configure do |c|
     c.service_name = 'dashboard'
 
@@ -20,15 +20,14 @@ if CDO.otlp_endpoint && CDO.otlp_api_key
     c.add_span_processor(
       OpenTelemetry::SDK::Trace::Export::BatchSpanProcessor.new(
         OpenTelemetry::Exporter::OTLP::Exporter.new(
-          endpoint: "#{CDO.otlp_endpoint}/v1/traces",
-          headers: {'api-key' => CDO.otlp_api_key}
+          endpoint: "#{ENV['OTEL_EXPORTER_OTLP_ENDPOINT']}/v1/traces"
         )
       )
     )
   end
 
-  parent_sampler = OpenTelemetry::SDK::Trace::Samplers::ALWAYS_ON
+  # parent_sampler = OpenTelemetry::SDK::Trace::Samplers::ALWAYS_ON
   #OpenTelemetry::SDK::Trace::Samplers::TraceIdRatioBased.new(0.001)
 
-  OpenTelemetry.tracer_provider.sampler = Services::OpenTelemetry::FilteringSampler.new(parent_sampler)
+  # OpenTelemetry.tracer_provider.sampler = Services::OpenTelemetry::FilteringSampler.new(parent_sampler)
 end
