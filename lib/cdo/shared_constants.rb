@@ -1058,7 +1058,7 @@ module SharedConstants
     'pixabay.com',              # Photos/videos - API key required 🔑
     'wikipedia.org',            # Wikipedia content - Public API
     'xeno-canto.org',           # Bird sounds - API key required 🔑
-    'fruityvice.com/api/fruit', # Fruit data - Public API
+    'fruityvice.com',           # Fruit data - Public API
     'bored-api.appbrewery.com', # Bored API activity generator - Public API
 
     # === WORDS & TEXTS ===
