@@ -3,7 +3,7 @@ import {
   BodyFourText,
   BodyThreeText,
 } from '@code-dot-org/component-library/typography';
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {
@@ -39,6 +39,12 @@ const Console: React.FunctionComponent = () => {
     );
   };
 
+  const bottomRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({behavior: 'smooth'});
+  }, [consoleLogs]);
+
   return (
     <div className={moduleStyles.consoleContainer}>
       {consoleLogs.map((log, index) => (
@@ -50,6 +56,7 @@ const Console: React.FunctionComponent = () => {
           className={moduleStyles.consoleLog}
         />
       ))}
+      <div ref={bottomRef} />
     </div>
   );
 };
