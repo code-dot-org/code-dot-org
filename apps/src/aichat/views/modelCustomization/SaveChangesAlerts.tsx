@@ -9,7 +9,7 @@ import {
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {FAQ_LINK} from '../../constants';
+import {FAQ_LINK, modelDescriptions} from '../../constants';
 import aichatI18n from '../../locale';
 
 import styles from '../model-customization-workspace.module.scss';
@@ -26,6 +26,15 @@ const SaveChangesAlerts: React.FunctionComponent<{isReadOnly: boolean}> = ({
   const saveError = useAppSelector(state => state.aichat.saveError);
   const showResetMessage = useAppSelector(
     state => state.aichat.showResetMessage
+  );
+  const showUnsupportedModelMessage = useAppSelector(
+    state => state.aichat.showUnsupportedModelMessage
+  );
+  const currentModelName = useAppSelector(
+    state =>
+      modelDescriptions.find(
+        ({id}) => id === state.aichat.currentAiCustomizations.selectedModelId
+      )?.name
   );
 
   const alerts = {
@@ -56,6 +65,12 @@ const SaveChangesAlerts: React.FunctionComponent<{isReadOnly: boolean}> = ({
       text: aichatI18n.modelResetNotification(),
       type: alertTypes.success,
     },
+    unsupportedModel: {
+      text: `Your previously selected model is no longer available. ${
+        currentModelName && `We've switched you to ${currentModelName}.`
+      }`,
+      type: alertTypes.warning,
+    },
   };
 
   const showError = !!saveError;
@@ -65,6 +80,8 @@ const SaveChangesAlerts: React.FunctionComponent<{isReadOnly: boolean}> = ({
 
   const alert = showError
     ? alerts.error
+    : showUnsupportedModelMessage
+    ? alerts.unsupportedModel
     : showResetMessage
     ? alerts.reset
     : showReminder

@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-02-17 17:07:21 UTC",
+    "serialized_at": "2026-02-18 19:02:28 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -406,6 +406,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U5-mailbox-promise"
+        ],
         "progression": "Getting Data Online"
       },
       "bonus": false,
@@ -428,6 +431,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U5-fetch"
+        ],
         "progression": "Getting Data Online"
       },
       "bonus": false,
@@ -450,6 +456,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U5-promise-chain"
+        ],
         "progression": "Getting Data Online"
       },
       "bonus": false,
@@ -472,6 +481,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U5-trace-a-promise-weblab"
+        ],
         "progression": "Getting Data Online"
       },
       "bonus": false,
@@ -486,6 +498,28 @@
       },
       "level_keys": [
         "pl-aif-2-U5-trace-a-promise-weblab"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 17,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Getting Data Online"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-making-steps-clear-L4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "bf61b007-61d0-4778-90fc-930cbec114bc"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-making-steps-clear-L4"
       ]
     }
   ],
@@ -675,6 +709,18 @@
         "level.key": "pl-aif-2-U5-trace-a-promise-weblab",
         "script_level.level_keys": [
           "pl-aif-2-U5-trace-a-promise-weblab"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "bf61b007-61d0-4778-90fc-930cbec114bc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-making-steps-clear-L4",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-making-steps-clear-L4"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

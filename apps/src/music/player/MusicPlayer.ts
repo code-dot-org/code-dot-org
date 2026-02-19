@@ -1,6 +1,6 @@
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
+import MusicAnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 
 import {DEFAULT_CHORD_LENGTH, MIN_BPM, MAX_BPM} from '../constants';
 import {LoadFinishedCallback, UpdateLoadProgressCallback} from '../types';
@@ -47,7 +47,7 @@ const DEFAULT_KEY = Key.C;
  */
 export default class MusicPlayer {
   private readonly metricsReporter: LabMetricsReporter;
-  private readonly analyticsReporter: AnalyticsReporter | undefined;
+  private readonly analyticsReporter: MusicAnalyticsReporter | undefined;
   private readonly audioPlayer: ToneJSPlayer;
   private updateLoadProgress: UpdateLoadProgressCallback | undefined;
 
@@ -61,7 +61,7 @@ export default class MusicPlayer {
   constructor(
     bpm: number = DEFAULT_BPM,
     key: Key = DEFAULT_KEY,
-    analyticsReporter?: AnalyticsReporter | undefined,
+    analyticsReporter?: MusicAnalyticsReporter | undefined,
     audioPlayer?: ToneJSPlayer,
     metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
   ) {

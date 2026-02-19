@@ -1,4 +1,4 @@
-import Typography, {Heading1} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import _ from 'lodash';
 import React, {useCallback, useEffect, useState} from 'react';
@@ -21,12 +21,13 @@ import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.m
 
 const skeletonSectionName = (
   <Typography
-    semanticTag={'h2'}
-    visualAppearance={'overline-two'}
     className={classNames(
       skeletonizeContent.skeletonizeContent,
       styles.skeletonHeaderSectionName
     )}
+    component="h2"
+    variant="overline2"
+    gutterBottom
   >
     SKELETON SECTION NAME
   </Typography>
@@ -73,9 +74,10 @@ const PageHeader: React.FC<{urlSectionId: string}> = ({urlSectionId}) => {
 
   const sectionName = (
     <Typography
-      semanticTag={'h2'}
-      visualAppearance={'overline-two'}
       className={styles.headerSectionName}
+      component="h2"
+      variant="overline2"
+      gutterBottom
     >
       {sectionNameText}
     </Typography>
@@ -84,7 +86,9 @@ const PageHeader: React.FC<{urlSectionId: string}> = ({urlSectionId}) => {
   return (
     <div className={styles.header}>
       {isLoadingSectionData ? skeletonSectionName : sectionName}
-      <Heading1>{pathName}</Heading1>
+      <Typography variant="h1" gutterBottom>
+        {pathName}
+      </Typography>
       {showAgeGatedStudentsBanner && (
         <AgeGatedStudentsBanner
           toggleModal={toggleAgeGatedModal}

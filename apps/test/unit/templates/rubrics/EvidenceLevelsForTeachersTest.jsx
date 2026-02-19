@@ -1,5 +1,5 @@
 import {RadioButton} from '@code-dot-org/component-library/radioButton';
-import {BodyThreeText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
@@ -22,18 +22,19 @@ describe('EvidenceLevelsForTeachers', () => {
     const wrapper = shallow(
       <EvidenceLevelsForTeachers {...DEFAULT_PROPS} canProvideFeedback={true} />
     );
-    expect(wrapper.find('Heading6').length).to.equal(1);
-    expect(wrapper.find('Heading6').props().children).to.equal(
+    expect(wrapper.find(Typography).at(0).props().variant).to.equal('h6');
+    expect(wrapper.find(Typography).at(0).props().children).to.equal(
       'Assign a Rubric Score'
     );
     expect(wrapper.find(RadioButton).length).to.equal(
       DEFAULT_PROPS.evidenceLevels.length
     );
-    expect(wrapper.find(BodyThreeText).length).to.equal(
-      DEFAULT_PROPS.evidenceLevels.length
-    );
+    const body3Nodes = wrapper
+      .find(Typography)
+      .filterWhere(node => node.props().variant === 'body3');
+    expect(body3Nodes.length).to.equal(DEFAULT_PROPS.evidenceLevels.length);
     const firstEvidenceLevel = DEFAULT_PROPS.evidenceLevels[0];
-    expect(wrapper.find(BodyThreeText).at(0).props().children).to.equal(
+    expect(body3Nodes.at(0).props().children).to.equal(
       firstEvidenceLevel.teacherDescription
     );
     expect(wrapper.find(RadioButton).at(0).prop('label')).to.equal(
@@ -59,18 +60,21 @@ describe('EvidenceLevelsForTeachers', () => {
 
   it('renders evidence levels without RadioButtons when the teacher cannot provide feedback', () => {
     const wrapper = shallow(<EvidenceLevelsForTeachers {...DEFAULT_PROPS} />);
-    expect(wrapper.find('Heading6').length).to.equal(1);
-    expect(wrapper.find('Heading6').props().children).to.equal('Rubric Scores');
-    expect(wrapper.find('Memo(RadioButton)').length).to.equal(0);
-    // Two BodyThreeText per evidence level
-    expect(wrapper.find('BodyThreeText').length).to.equal(
-      DEFAULT_PROPS.evidenceLevels.length * 2
+    expect(wrapper.find(Typography).at(0).props().variant).to.equal('h6');
+    expect(wrapper.find(Typography).at(0).props().children).to.equal(
+      'Rubric Scores'
     );
+    expect(wrapper.find('Memo(RadioButton)').length).to.equal(0);
+    const body3Nodes = wrapper
+      .find(Typography)
+      .filterWhere(node => node.props().variant === 'body3');
+    // Two body3 Typography per evidence level
+    expect(body3Nodes.length).to.equal(DEFAULT_PROPS.evidenceLevels.length * 2);
     const firstEvidenceLevel = DEFAULT_PROPS.evidenceLevels[0];
-    expect(wrapper.find('StrongText').at(0).props().children).to.equal(
+    expect(body3Nodes.at(0).props().children.props.children).to.equal(
       UNDERSTANDING_LEVEL_STRINGS[firstEvidenceLevel.understanding]
     );
-    expect(wrapper.find('BodyThreeText').at(1).props().children).to.equal(
+    expect(body3Nodes.at(1).props().children).to.equal(
       firstEvidenceLevel.teacherDescription
     );
   });
