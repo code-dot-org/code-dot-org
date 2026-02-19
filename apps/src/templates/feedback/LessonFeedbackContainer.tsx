@@ -24,7 +24,6 @@ interface LessonFeedbackContainerProps {
   studentId: number | null;
 }
 
-// TODO: Add in loading state
 function LessonFeedbackContainer({studentId}: LessonFeedbackContainerProps) {
   const [fetchedFeedback, setFetchedFeedback] = React.useState<
     LessonFeedbackData[] | null
@@ -43,12 +42,12 @@ function LessonFeedbackContainer({studentId}: LessonFeedbackContainerProps) {
         }
         const data = await response.json();
         setFetchedFeedback(data);
-        setIsLoading(false);
         return data;
       } catch (err) {
         console.error('AI lesson feedback error:', err);
-        setIsLoading(false);
         return null;
+      } finally {
+        setIsLoading(false);
       }
     }
     if (studentId) {
