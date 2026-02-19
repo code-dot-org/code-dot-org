@@ -129,7 +129,7 @@ const NetworkPanel: React.FC = () => {
       [
         {
           label: 'Status',
-          value: selectedRequest?.response?.status || '-',
+          value: selectedRequest?.response?.status ?? '-',
         },
         {
           label: 'Duration',
