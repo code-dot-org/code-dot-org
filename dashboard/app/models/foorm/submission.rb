@@ -27,7 +27,7 @@ class Foorm::Submission < ApplicationRecord
   has_one :workshop_metadata, class_name: 'Pd::WorkshopSurveyFoormSubmission', foreign_key: :foorm_submission_id
   has_one :simple_survey_submission, foreign_key: :foorm_submission_id
 
-  belongs_to :form, foreign_key: [:form_name, :form_version], primary_key: [:name, :version], optional: true
+  belongs_to :form, query_constraints: [:form_name, :form_version], primary_key: [:name, :version], optional: true
 
   before_save :handle_empty_answers
 
