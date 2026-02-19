@@ -35,32 +35,13 @@ class AiLessonSummariesController < ApplicationController
     end
   end
 
-  def perform_ai_lesson_summaries_by_unit
+  def request_ai_lesson_summaries
     unit = Unit.find(params[:unit_id])
-    lesson_ids = []
-    unit.lessons.each do |lesson|
-      if lesson.has_lesson_plan
-        lesson_ids << lesson.id
-      end
-    end
-    request = {
-      user_id: current_user.id,
-      lesson_ids: lesson_ids,
-      unit_id: unit.id
-    }
-    AiLessonSummariesJob.perform_later(request: request)
-  end
-
-  def perform_ai_lesson_summary_by_lesson
-    lesson = Lesson.find(params[:lesson_id])
-    unit = Unit.find(params[:unit_id])
-    if lesson.has_lesson_plan
-      request = {
-        user_id: current_user.id,
-        lesson_ids: [lesson.id],
-        unit_id: unit.id
-      }
-      AiLessonSummariesJob.perform_later(request: request)
+    if params[:lesson_id]
+      lesson = Lesson.find(params[:lesson_id])
+      AiLessonSummariesHelper.perform_ai_lesson_summary_by_lesson(lesson, unit, current_user.id)
+    else
+      AiLessonSummariesHelper.perform_ai_lesson_summaries_by_unit(unit, current_user.id)
     end
   end
 
