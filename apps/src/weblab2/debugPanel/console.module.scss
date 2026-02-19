@@ -20,6 +20,8 @@
 .timestamp {
   font-family: monospace;
   color: var(--text-neutral-secondary);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .consoleLog {
