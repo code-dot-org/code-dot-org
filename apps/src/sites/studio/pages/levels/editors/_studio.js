@@ -1,5 +1,9 @@
 import {javascript} from '@codemirror/lang-javascript';
-import {bracketMatching} from '@codemirror/language';
+import {
+  bracketMatching,
+  defaultHighlightStyle,
+  syntaxHighlighting,
+} from '@codemirror/language';
 import {EditorState} from '@codemirror/state';
 import {EditorView} from '@codemirror/view';
 import $ from 'jquery';
@@ -20,6 +24,7 @@ function initializeEditor(textarea) {
       extensions: [
         javascript(),
         bracketMatching(),
+        syntaxHighlighting(defaultHighlightStyle, {fallback: true}),
         EditorView.lineWrapping,
         EditorView.updateListener.of(update => {
           if (update.docChanged) {
