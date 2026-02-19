@@ -1,5 +1,5 @@
 import Link from '@code-dot-org/component-library/link';
-import Typography from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -26,11 +26,7 @@ const LmsInformationalCard = ({
   return (
     <div className={styles.card}>
       <div className={styles.cardText}>
-        <Typography
-          semanticTag="h4"
-          visualAppearance="heading-md"
-          className={styles.title}
-        >
+        <Typography className={styles.title} variant="h4" gutterBottom>
           {lmsName}
         </Typography>
         <Link

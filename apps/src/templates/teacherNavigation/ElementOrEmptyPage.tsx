@@ -1,8 +1,5 @@
 import Button, {LinkButton} from '@code-dot-org/component-library/button';
-import {
-  Heading3,
-  BodyTwoText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 import {useNavigate, NavLink} from 'react-router-dom';
 
@@ -98,8 +95,12 @@ const ElementOrEmptyPage: React.FC<ElementOrEmptyPageProps> = ({
     return (
       <div className={styles.emptyClassroomDiv}>
         <div className={styles.emptyClassroomImage}>{displayedImage()}</div>
-        <Heading3 className={styles.topPadding}>{heading}</Heading3>
-        <BodyTwoText>{textDescription()}</BodyTwoText>
+        <Typography className={styles.topPadding} variant="h3" gutterBottom>
+          {heading}
+        </Typography>
+        <Typography variant="body2" gutterBottom>
+          {textDescription()}
+        </Typography>
         {link()}
       </div>
     );

@@ -1,0 +1,46 @@
+name 'pl-aif-2-U5-making-steps-clear-L4'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<div style="font-size:14pt; line-height:1.4;">
+
+  <h2 style="font-size:14pt; margin:0 0 8px 0;">Level 1: A clearer way to write Promise code</h2>
+
+  <p style="margin:0 0 10px 0;">
+    You just learned how to use a Promise chain with <code>.then()</code> to handle asynchronous code (like <code>fetch</code>).
+    Now you’ll learn a different way to write the <em>same</em> logic so it reads more like normal, step-by-step code:
+    <strong>async</strong> and <strong>await</strong>.
+  </p>
+
+  <hr style="margin:10px 0;" />
+
+  <p style="margin:0 0 6px 0;"><strong>Key vocabulary</strong></p>
+
+  <ul style="margin:0 0 10px 20px; padding:0;">
+    <li style="margin:0 0 6px 0;">
+      <code>async</code> marks a function as asynchronous. An <code>async</code> function automatically returns a
+      <strong>Promise</strong>, and it allows you to use <code>await</code> inside it.
+    </li>
+    <li style="margin:0 0 6px 0;">
+      <code>await</code> is used inside an <code>async</code> function. It pauses <em>that function</em> until a Promise resolves,
+      then gives you the resolved value so the next line can run.
+    </li>
+  </ul>
+
+  <p style="margin:0 0 10px 0;">
+    <strong>Important:</strong> async/await does <em>not</em> make the code “less asynchronous.”
+    It’s a cleaner way to write Promise logic you already understand.
+  </p>
+
+  <hr style="margin:10px 0;" />
+
+  <p style="margin:0 0 6px 0;"><strong>Quick Check (answer in your own words)</strong></p>
+  <ol style="margin:0 0 0 20px; padding:0;">
+    <li style="margin:0 0 6px 0;">Where are you allowed to use <code>await</code>?</li>
+    <li style="margin:0 0 6px 0;">Does <code>await</code> pause the whole program, or just one function?</li>
+  </ol>
+
+</div>
+
+MARKDOWN
