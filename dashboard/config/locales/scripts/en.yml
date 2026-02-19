@@ -26848,14 +26848,3 @@ en:
           description_short: ''
           description: ''
           student_description: ''
-        ui-test-vocab:
-          lessons:
-            lesson-1:
-              name: lesson one
-          lesson_groups: {}
-          name: ui-test-vocab
-          title: ''
-          description_audience: ''
-          description_short: ''
-          description: ''
-          student_description: ''
