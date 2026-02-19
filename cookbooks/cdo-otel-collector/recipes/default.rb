@@ -22,7 +22,7 @@ end
 dpkg_package 'otelcol-contrib' do
   source "#{Chef::Config[:file_cache_path]}/otelcol-contrib_#{node['cdo-otel-collector']['version']}_linux_amd64.deb"
   action :install
-  notifies :restart, 'service[otelcol]', :delayed
+  notifies :restart, 'service[otelcol-contrib]', :delayed
 end
 
 # Generate configuration file from template (package creates the directory)
@@ -31,9 +31,9 @@ template node['cdo-otel-collector']['config_file'] do
   owner 'root'
   group 'root'
   mode '0644'
-  notifies :restart, 'service[otelcol]', :delayed
+  notifies :restart, 'service[otelcol-contrib]', :delayed
   # Only create config if package is installed
-  only_if {File.exist?('/usr/bin/otelcol')}
+  only_if {File.exist?('/usr/bin/otelcol-contrib')}
 end
 
 # Validate the configuration is valid before starting
@@ -42,13 +42,13 @@ script 'otel-collector-config-validation' do
   interpreter 'bash'
 
   code <<-EOH
-    /usr/bin/otelcol validate --config=#{node['cdo-otel-collector']['config_file']}
+    /usr/bin/otelcol-contrib validate --config=#{node['cdo-otel-collector']['config_file']}
     exit $?
   EOH
 end
 
 # Enable and start the service (service is created by the DEB package)
-service 'otelcol' do
+service 'otelcol-contrib' do
   supports restart: true, reload: true, status: true
   action [:enable, :start]
   provider Chef::Provider::Service::Systemd
