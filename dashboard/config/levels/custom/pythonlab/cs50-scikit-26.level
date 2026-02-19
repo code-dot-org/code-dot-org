@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-02-18T17:00:41.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# CIW AI Associate Standard: 3.12\n# Standard Description: Explain the major distinctions between algorithms to fit supervised and unsupervised models.\n#\n# Rationale: While both Supervised and Unsupervised models use a .fit() method \n# in scikit-learn, what happens \"under the hood\" is very different. \n# - Supervised Fit: Minimizes the ERROR between its guess and the real label.\n# - Unsupervised Fit: Minimizes the DISTANCE between points to find clusters.\n# This tutorial compares the internal logic of these two \"Fitting\" processes.\n\n\"\"\"\nWelcome! Today we're looking at the difference between \"Learning with a Key\" \nand \"Learning by Looking\".\n\nThink of it like a puzzle:\n- Supervised: You have the picture on the box (the labels) to help you.\n- Unsupervised: You have no picture—you just group the blue pieces together \n  and the green pieces together.\n\"\"\"\n\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.cluster import KMeans\nimport numpy as np\n\n# --- THE DATA ---\n# X is the input (Features), y is the \"Answer Key\" (Labels)\nX = np.array([[1], [2], [10], [11]])\ny = np.array([5, 10, 50, 55]) # y = x * 5 (approx)\n\n# --- PART 1: SUPERVISED FITTING ---\nprint(\"--- Part 1: Supervised Fitting (Learning the Key) ---\")\n# The algorithm looks at X AND y. \n# It tries to find a formula: y = (X * weight) + intercept\nsup_model = LinearRegression()\nsup_model.fit(X, y) # Notice we pass BOTH X and y\n\nprint(f\"Supervised rule found: Multiply by {sup_model.coef_[0]:.1f}\")\n\n# --- PART 2: UNSUPERVISED FITTING ---\nprint(\"\\n--- Part 2: Unsupervised Fitting (Finding Groups) ---\")\n# The algorithm ONLY looks at X. \n# It doesn't know about 'y'. It just sees that 1 and 2 are close together, \n# and 10 and 11 are close together.\nunsup_model = KMeans(n_clusters=2, n_init=10)\nunsup_model.fit(X) # Notice we ONLY pass X!\n\n# It doesn't find a formula; it finds \"Centers\".\nprint(f\"Unsupervised centers found at: {unsup_model.cluster_centers_.flatten()}\")\n\n\"\"\"\n--- YOUR TURN ---\nWe've listed three algorithms below. \n1. Determine if each one requires a 'y' (the labels) to fit.\n2. If it does, it's Supervised. If not, it's Unsupervised.\n\n- Algorithm A: LogisticRegression\n- Algorithm B: PCA (Principal Component Analysis)\n- Algorithm C: RandomForestClassifier\n\"\"\"\n\n# STARTING CODE FOR STUDENT:\n# TODO: Match the styles!\n# Alg_A = \"___\"\n# Alg_B = \"___\"\n# Alg_C = \"___\"\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFTDG6jyYgtI/CEUE/82dEkG4hlI8OLsdjJD0In8S\n03BB+jPkGgyYB0/9C3zqHMHEFpKeCsugYbpGMxzBNwrd7qASagJaFzMnVUyM\n2TXS7Hau9lj7JpZIHXn9fmxXRRANWctwPOf+Yfv0jEMHLRsdFBkB2Co2LuWu\nt3BtBf0FQ+G7Y1752uFVnR5SqLkUi4+d4vZ47TCPMsak6VlGqmUihBhNj2jE\najgzTtNM8MEAQpz/T0Cuz3LWpHGs5ZR7PEGLYnrJtclIbJC9gocqoeh/bR1Q\nP9Ev7qmeLQNBur8GIva3NCBFN2360pQN8mSgcGy6XsHHCoEZVUNodZ+rtBYj\nAw+gn8ol/5O3hp6BW+gmo0y117zYoKDvcu6gp8hcJZjL6VXJHctYpxmvi3F0\nH3FAnHur5bzCKZMmDxL11cjcOhzL0Eh5b+hSuR+f9QZQYnGf5w08gtaMbH9t\ntIzNfp3JFHq69/u185zfUFDQIJHVSBJC09dmr70Ko4sMSBMtXYr1lhI52i47\n5Rs8lsOZemS1AmDhlXqc8cngRm8z23dqWKHhMOdaj7iyMxxz2ImPatmEaBB3\nCb+DECs8XyvQE06/y7j+zF71bUC+2d41SL5oajySEdUVveif/uc169bHgT3i\nNMej7GPHsuCHnI0GWroMAShNygewTZ+y7+sC7BLhOBRaJ/61NL8tM4UVyofz\njXlKXgO/jDchPmOCf+HncFDmkul598iKRRKJp/rXKhLPDPvgJ3UBlWiumNCt\n70Xt4j/bjPHD6560fY6717ORZ62opLjCE+1n0c9HTn25xJ9X/r/rIsVtEiyK\n2Op8ZXM5AkhnPGWiycKHI63BIJlMtn3HEx0UKuGSo9egucryggZh6UP8SdeD\nWrexGBoJNbs16Ed0KZ4fxFBCKlp3jNfWzXzQ3me0zJcv3Nu7XJM+Yk0cQkT2\nmrgL1ecJC/ZGgJIY3fpVP0PM9l1S9wtGxOLEBOMYMG5M3iAPefmNGB8nHtn2\nVFjDldvbXedfmzV84tltuRRRYXQ5rWRR5r6Ss1YYJgvsxWQJIDNTWktawmQt\nJOFWry9OZq8QcahGA9Qk3zlehZWOSkjbeoXV2HRpPcwqaW5qD7OyvPBO/VF0\n6nwzbyKwNU02HmKkFxTsE8Bncgk06zV3eIjh6G6p/35pIBaHFZEKRHhi2pjf\nGwUWSfi24Up9E823RkJ/NkOfeBwCxdEyLlAKangua2ChzQrCrdp8ur6ssTbx\nhDgLGo/QZDHS2lEk/NCZeoDPCNnh2sYbA0dy9aiTTQt/hs02ekfguJSe6Kv3\nRfT8kHPP0OWuxM4WGBTtEXVTvmNDilRs8p6ps07N1smzHhvb1dowJot9vbmy\n+VIJ3AAHoqwO0sw8qwH9OWc+Wyp4\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-18T17:00:41.895+00:00\",\"changed\":[\"cloned from \\\"cs50-scikit-25\\\"\"],\"cloned_from\":\"cs50-scikit-25\"},{\"changed_at\":\"2026-02-18 17:00:45 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:44:36 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:44:44 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>
