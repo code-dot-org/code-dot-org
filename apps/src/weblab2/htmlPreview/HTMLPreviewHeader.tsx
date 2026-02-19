@@ -50,6 +50,7 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
   fetchFileSearchOptions,
 }) => {
   const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
+  const isShareView = useAppSelector(state => state.lab.isShareView);
   const enableDebugPanel = experiments.isEnabledAllowingQueryString(
     experiments.WEBLAB2_DEBUG_PANEL
   );
@@ -226,10 +227,12 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
           />
         </WithTooltip>
       )}
-      <ToggleFullScreenButton
-        isFullScreenView={isFullScreenView}
-        onToggleFullScreen={onToggleFullScreen}
-      />
+      {!isShareView && (
+        <ToggleFullScreenButton
+          isFullScreenView={isFullScreenView}
+          onToggleFullScreen={onToggleFullScreen}
+        />
+      )}
     </div>
   );
 };

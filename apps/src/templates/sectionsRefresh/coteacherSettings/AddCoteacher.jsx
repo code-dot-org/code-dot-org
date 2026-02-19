@@ -1,4 +1,4 @@
-import {Figcaption} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
@@ -202,18 +202,24 @@ export default function AddCoteacher({
 
     if (addError) {
       return (
-        <Figcaption
+        <Typography
           className={classNames(styles.error, styles.inputDescription)}
+          variant="figcaption"
+          gutterBottom
         >
           <FontAwesome icon="info-circle" className={styles.infoCircle} />
           {addError}
-        </Figcaption>
+        </Typography>
       );
     } else {
       return (
-        <Figcaption className={styles.inputDescription}>
+        <Typography
+          className={styles.inputDescription}
+          variant="figcaption"
+          gutterBottom
+        >
           {i18n.coteacherCount({count: numCoteachers})}
-        </Figcaption>
+        </Typography>
       );
     }
   };

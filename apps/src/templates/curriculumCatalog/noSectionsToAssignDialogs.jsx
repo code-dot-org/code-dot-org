@@ -1,4 +1,4 @@
-import Typography from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -71,11 +71,11 @@ const NoSectionsToAssignBaseDialog = ({
 
   return (
     <AccessibleDialog onClose={onClose} className={style.dialogContainer}>
-      <Typography semanticTag="h3" visualAppearance="heading-lg" tabIndex="0">
+      <Typography tabIndex="0" variant="h3" gutterBottom>
         {headerText}
       </Typography>
       <hr />
-      <Typography semanticTag="p" visualAppearance="body-two">
+      <Typography variant="body2" gutterBottom>
         {helpText}
       </Typography>
       <div className={style.lowerContainer}>

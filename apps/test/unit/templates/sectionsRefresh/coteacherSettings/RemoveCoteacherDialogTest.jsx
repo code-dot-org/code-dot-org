@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
@@ -51,9 +52,11 @@ describe('RemoveCoteacherDialog', () => {
     });
 
     expect(wrapper.find('Button')).to.have.lengthOf(2);
-    expect(wrapper.find('StrongText').dive().text()).to.contain(
-      'Remove newsaurus@code.org'
-    );
+    const title = wrapper
+      .find(Typography)
+      .filterWhere(node => node.props().variant === 'strong')
+      .at(0);
+    expect(title.text()).to.contain('Remove newsaurus@code.org');
   });
   it('cancel remove does nothing', () => {
     const {

@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-01-28 07:06:01 UTC",
+    "serialized_at": "2026-02-19 05:18:10 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -7278,6 +7278,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L8-L1-2025"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -7300,6 +7303,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L8-L2-2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7322,6 +7328,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L8-L3-2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7344,6 +7353,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L8-L4-2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7366,6 +7378,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L8-L5-2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7388,6 +7403,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L8-L6-2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7410,6 +7428,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L8-L7-2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -7432,6 +7453,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2L8-L8-2025"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -7454,6 +7478,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2L8-L9-2025"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -7476,6 +7503,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L8-L10-2025"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -7494,6 +7524,366 @@
     },
     {
       "chapter": 49,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2L9-L1-2025"
+        ],
+        "progression": "Sample Website"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L9-L1-2025"
+        ],
+        "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "fcc9d88c-6670-4d34-8de4-0f15668c2cdb"
+      },
+      "level_keys": [
+        "CSD U2L9-L1-2025"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2L9-L2-2025"
+        ],
+        "progression": "Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L9-L2-2025"
+        ],
+        "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "c07274b3-f741-41e5-adca-01e5b1eeda7b"
+      },
+      "level_keys": [
+        "CSD U2L9-L2-2025"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2L9-L3-2025"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L9-L3-2025"
+        ],
+        "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "0959f5e3-8c08-4d49-a0f0-4f3e023c44c9"
+      },
+      "level_keys": [
+        "CSD U2L9-L3-2025"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2L9-L4-2025"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L9-L4-2025"
+        ],
+        "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "0959f5e3-8c08-4d49-a0f0-4f3e023c44c9"
+      },
+      "level_keys": [
+        "CSD U2L9-L4-2025"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2L9-L5-2025"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L9-L5-2025"
+        ],
+        "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "0959f5e3-8c08-4d49-a0f0-4f3e023c44c9"
+      },
+      "level_keys": [
+        "CSD U2L9-L5-2025"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2L9-L6-2025"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L9-L6-2025"
+        ],
+        "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "0959f5e3-8c08-4d49-a0f0-4f3e023c44c9"
+      },
+      "level_keys": [
+        "CSD U2L9-L6-2025"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2L9-L7-2025"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L9-L7-2025"
+        ],
+        "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "9cdf1c67-e6e0-4e8b-9bba-128700159930"
+      },
+      "level_keys": [
+        "CSD U2L9-L7-2025"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSD U2L9-L8-2025"
+        ],
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L9-L8-2025"
+        ],
+        "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "a59a48f1-e2d7-41c5-9c85-a7cc4b654a21"
+      },
+      "level_keys": [
+        "CSD U2L9-L8-2025"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSD U2L9-L9-2025"
+        ],
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L9-L9-2025"
+        ],
+        "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "a59a48f1-e2d7-41c5-9c85-a7cc4b654a21"
+      },
+      "level_keys": [
+        "CSD U2L9-L9-2025"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2L9-L10-2025"
+        ],
+        "progression": "Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L9-L10-2025"
+        ],
+        "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "c83e75f0-e6f4-48ac-91f9-d321bf818e4e"
+      },
+      "level_keys": [
+        "CSD U2L9-L10-2025"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Review: CSS"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L10-L1-2025"
+        ],
+        "lesson.key": "Lesson 10: Mini-Project - Adding Style to a Web Page",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "5e013ea8-83c5-4e6e-a876-7ad6c61cf79d"
+      },
+      "level_keys": [
+        "CSD U2L10-L1-2025"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Add Style to Your User's Page"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L10-L2-2025"
+        ],
+        "lesson.key": "Lesson 10: Mini-Project - Adding Style to a Web Page",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "a9c12981-42e9-4f8f-b751-3c42226a5958"
+      },
+      "level_keys": [
+        "CSD U2L10-L2-2025"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Add Style to Your User's Page"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L10-L3-2025"
+        ],
+        "lesson.key": "Lesson 10: Mini-Project - Adding Style to a Web Page",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "a9c12981-42e9-4f8f-b751-3c42226a5958"
+      },
+      "level_keys": [
+        "CSD U2L10-L3-2025"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Add Style to Your User's Page"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L10-L4-2025"
+        ],
+        "lesson.key": "Lesson 10: Mini-Project - Adding Style to a Web Page",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "a9c12981-42e9-4f8f-b751-3c42226a5958"
+      },
+      "level_keys": [
+        "CSD U2L10-L4-2025"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Review Your Page"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L10-L5-2025"
+        ],
+        "lesson.key": "Lesson 10: Mini-Project - Adding Style to a Web Page",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "8aec2807-0ad3-486d-b45e-fd0594e1e12d"
+      },
+      "level_keys": [
+        "CSD U2L10-L5-2025"
+      ]
+    },
+    {
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7517,7 +7907,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 65,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -8117,6 +8507,186 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-web-lab-update-2025",
         "activity_section.key": "e2bb83a1-5b47-4d97-9e73-fc16da1e413a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L9-L1-2025",
+        "script_level.level_keys": [
+          "CSD U2L9-L1-2025"
+        ],
+        "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "fcc9d88c-6670-4d34-8de4-0f15668c2cdb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L9-L2-2025",
+        "script_level.level_keys": [
+          "CSD U2L9-L2-2025"
+        ],
+        "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "c07274b3-f741-41e5-adca-01e5b1eeda7b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L9-L3-2025",
+        "script_level.level_keys": [
+          "CSD U2L9-L3-2025"
+        ],
+        "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "0959f5e3-8c08-4d49-a0f0-4f3e023c44c9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L9-L4-2025",
+        "script_level.level_keys": [
+          "CSD U2L9-L4-2025"
+        ],
+        "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "0959f5e3-8c08-4d49-a0f0-4f3e023c44c9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L9-L5-2025",
+        "script_level.level_keys": [
+          "CSD U2L9-L5-2025"
+        ],
+        "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "0959f5e3-8c08-4d49-a0f0-4f3e023c44c9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L9-L6-2025",
+        "script_level.level_keys": [
+          "CSD U2L9-L6-2025"
+        ],
+        "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "0959f5e3-8c08-4d49-a0f0-4f3e023c44c9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L9-L7-2025",
+        "script_level.level_keys": [
+          "CSD U2L9-L7-2025"
+        ],
+        "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "9cdf1c67-e6e0-4e8b-9bba-128700159930"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L9-L8-2025",
+        "script_level.level_keys": [
+          "CSD U2L9-L8-2025"
+        ],
+        "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "a59a48f1-e2d7-41c5-9c85-a7cc4b654a21"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L9-L9-2025",
+        "script_level.level_keys": [
+          "CSD U2L9-L9-2025"
+        ],
+        "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "a59a48f1-e2d7-41c5-9c85-a7cc4b654a21"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L9-L10-2025",
+        "script_level.level_keys": [
+          "CSD U2L9-L10-2025"
+        ],
+        "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "c83e75f0-e6f4-48ac-91f9-d321bf818e4e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L10-L1-2025",
+        "script_level.level_keys": [
+          "CSD U2L10-L1-2025"
+        ],
+        "lesson.key": "Lesson 10: Mini-Project - Adding Style to a Web Page",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "5e013ea8-83c5-4e6e-a876-7ad6c61cf79d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L10-L2-2025",
+        "script_level.level_keys": [
+          "CSD U2L10-L2-2025"
+        ],
+        "lesson.key": "Lesson 10: Mini-Project - Adding Style to a Web Page",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "a9c12981-42e9-4f8f-b751-3c42226a5958"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L10-L3-2025",
+        "script_level.level_keys": [
+          "CSD U2L10-L3-2025"
+        ],
+        "lesson.key": "Lesson 10: Mini-Project - Adding Style to a Web Page",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "a9c12981-42e9-4f8f-b751-3c42226a5958"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L10-L4-2025",
+        "script_level.level_keys": [
+          "CSD U2L10-L4-2025"
+        ],
+        "lesson.key": "Lesson 10: Mini-Project - Adding Style to a Web Page",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "a9c12981-42e9-4f8f-b751-3c42226a5958"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L10-L5-2025",
+        "script_level.level_keys": [
+          "CSD U2L10-L5-2025"
+        ],
+        "lesson.key": "Lesson 10: Mini-Project - Adding Style to a Web Page",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "8aec2807-0ad3-486d-b45e-fd0594e1e12d"
       }
     },
     {
@@ -9303,14 +9873,16 @@
     },
     {
       "name": "Styling Elements with CSS",
-      "url": "https://docs.google.com/presentation/d/14BYGoCn3gDy5dcP18LTgvKbwKirCi6ayso8hU1Decgw/template/preview",
-      "key": "styling_elements_with_css",
+      "url": "https://docs.google.com/presentation/d/1vZetOBRuFpyTDAJWgBvkY0t81AyjxkHxq4-q4GUBkvc/edit?usp=sharing",
+      "key": "styling_elements_with_css_1",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "styling_elements_with_css"
+        "resource.key": "styling_elements_with_css_1"
       }
     },
     {
@@ -10272,7 +10844,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 9: Styling Elements with CSS",
-        "resource.key": "styling_elements_with_css"
+        "resource.key": "styling_elements_with_css_1"
       }
     }
   ],
@@ -11769,9 +12341,30 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-web-lab-update-2025"
       }
+    },
+    {
+      "level_name": "CSD U2L9-L8-2025",
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
     }
   ],
   "learning_goals": [
+    {
+      "key": "1809454b-012b-4123-a0ab-f99f811ef8c0",
+      "position": 1,
+      "learning_goal": "Create rules that affect entire groups of elements; apply formatting in a web page using CSS.",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "1809454b-012b-4123-a0ab-f99f811ef8c0",
+        "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
     {
       "key": "b1816d10-3caa-483b-be41-d48aef58b1a5",
       "position": 1,
@@ -11826,6 +12419,54 @@
     }
   ],
   "learning_goal_evidence_levels": [
+    {
+      "understanding": 0,
+      "teacher_description": "There are no rule-sets in the stylesheet, or the rule-sets do not have the necessary selectors to style the background or images in the pages.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "1809454b-012b-4123-a0ab-f99f811ef8c0",
+        "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Rule-sets have been created in the style-sheet to style the background, images, and text, but there are major errors that prevent the code from working properly.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "1809454b-012b-4123-a0ab-f99f811ef8c0",
+        "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "The background, images, and text have all been styled as described in the instructions, but there may be minimal errors or non-functioning code in the stylesheet.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "1809454b-012b-4123-a0ab-f99f811ef8c0",
+        "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "The background, images, and text have all been styled as described in the instructions. There are no syntax errors or extra code (that does not function) in the stylesheet.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "1809454b-012b-4123-a0ab-f99f811ef8c0",
+        "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
     {
       "understanding": 0,
       "teacher_description": "The `img` tag is not used or no source address is given for the image.\n\n",

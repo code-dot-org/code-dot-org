@@ -1,4 +1,4 @@
-import Typography from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useCallback} from 'react';
 import {useSelector} from 'react-redux';
 
@@ -34,7 +34,7 @@ const FrozenProjectInfoDialog: React.FunctionComponent = () => {
       useUpdatedStyles
       style={styles.dialog}
     >
-      <Typography semanticTag="h2" visualAppearance="heading-lg">
+      <Typography component="h2" variant="h3" gutterBottom>
         {i18n.projectInfo()}
       </Typography>
       <p>{i18n.congratsProjectSelected()}</p>

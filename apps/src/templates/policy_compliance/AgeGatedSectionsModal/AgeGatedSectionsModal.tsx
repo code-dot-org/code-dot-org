@@ -1,5 +1,5 @@
 import Link from '@code-dot-org/component-library/link';
-import Typography from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
 
@@ -84,24 +84,25 @@ export const AgeGatedSectionsModal: React.FC<Props> = ({
       >
         <div>
           <Typography
-            semanticTag="h2"
-            visualAppearance="heading-md"
             className={styles.modalHeader}
+            component="h2"
+            variant="h4"
+            gutterBottom
           >
             {i18n.childAccountPolicy_ageGatedSectionsModal_header()}
           </Typography>
           <hr />
-          <Typography semanticTag="p" visualAppearance="body-two">
+          <Typography variant="body2" gutterBottom>
             {i18n.childAccountPolicy_ageGatedSectionsModal_notice({
               startDate: startDateText,
             })}
           </Typography>
-          <Typography semanticTag="p" visualAppearance="body-two">
+          <Typography variant="body2" gutterBottom>
             <strong>
               {i18n.childAccountPolicy_ageGatedSectionsModal_action()}
             </strong>
           </Typography>
-          <Typography semanticTag="p" visualAppearance="body-two">
+          <Typography variant="body2" gutterBottom>
             <Link
               href={helpDocsUrl}
               onClick={modalDocumentationClicked}
