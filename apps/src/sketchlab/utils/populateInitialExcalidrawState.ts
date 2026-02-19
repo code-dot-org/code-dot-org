@@ -39,6 +39,8 @@ export const populateInitialExcalidrawState = async (
           }
         }
       } else {
+        // If the file has already been downloaded/encoded,
+        // reuse the existing dataURL instead of re-downloading and re-encoding the image.
         const base64 = downloadedFileData[file.id];
         file.dataURL = base64;
       }
