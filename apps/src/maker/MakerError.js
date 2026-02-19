@@ -35,7 +35,7 @@ export function wrapKnownMakerErrors(originalError) {
   // to communicate with the board firmware after ten seconds.
   // https://github.com/code-dot-org/johnny-five/blob/v0.10.10-cdo.0/lib/board.js#L388-L401
   if (
-    originalError.message?.includes(
+    originalError.message.includes(
       'A timeout occurred while connecting to the Board'
     )
   ) {
