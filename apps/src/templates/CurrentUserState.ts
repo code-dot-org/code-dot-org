@@ -21,7 +21,6 @@ export interface CurrentUserState {
   userType: 'unknown' | 'teacher' | 'student';
   userRoleInCourse: CourseRole;
   signInState: SignInState;
-  hasSeenStandardsReportInfo: boolean;
   isBackgroundMusicMuted: boolean;
   isSortedByFamilyName: boolean;
   under13: boolean;
