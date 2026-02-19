@@ -1,5 +1,5 @@
 import Button, {buttonColors} from '@code-dot-org/component-library/button';
-import {Heading3, StrongText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
@@ -154,12 +154,16 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
 
   return isOpen ? (
     <AccessibleDialog onClose={onClose} theme="Light">
-      <Heading3>Extra links</Heading3>
+      <Typography variant="h3" gutterBottom>
+        Extra links
+      </Typography>
       {Object.entries(levelLinkData.links).map(([listTitle, links]) => (
         // Levels can be part of level groups (sublevels) and/or can be a template level
         // so we list these here as well.
         <div key={`${listTitle}-div`}>
-          <StrongText key={`${listTitle}-title`}>{listTitle}</StrongText>
+          <Typography key={`${listTitle}-title`} variant="strong">
+            {listTitle}
+          </Typography>
           <ul key={`${listTitle}-list`}>
             {links.map(link => (
               <li key={link.url}>
@@ -406,7 +410,7 @@ const ProjectLinkData: React.FunctionComponent<ProjectLinkDataProps> = ({
   }
   return (
     <>
-      <StrongText>Project Info</StrongText>
+      <Typography variant="strong">Project Info</Typography>
       <ul>
         <li>Project owner: {ownerInfo.name}</li>
         <li>Owner storage id: {ownerInfo.storage_id}</li>
@@ -456,9 +460,9 @@ const ScriptLevelPathLinks: React.FunctionComponent<
   }
   return (
     <>
-      <StrongText>
+      <Typography variant="strong">
         This level is in {Object.entries(scriptLevelPathLinks).length} scripts:
-      </StrongText>
+      </Typography>
       <ul>
         {scriptLevelPathLinks.map(link => (
           <li key={link.path}>
@@ -483,10 +487,10 @@ const ParentLevelPathLinks: React.FunctionComponent<
   }
   return (
     <>
-      <StrongText>
+      <Typography variant="strong">
         This level is in {Object.entries(parentLevelPathLinks).length} other
         levels:
-      </StrongText>
+      </Typography>
       <ul>
         {parentLevelPathLinks.map(link => (
           <li key={link.path}>

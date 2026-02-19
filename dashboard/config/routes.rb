@@ -472,7 +472,7 @@ Dashboard::Application.routes.draw do
         get 'get_rollup_resources'
       end
 
-      resources :lessons, only: [:show], param: 'position', format: false do
+      resources :lessons, only: [:show, :index], param: 'position', format: false do
         get 'student', to: 'lessons#student_lesson_plan'
         get 'extras', to: 'script_levels#lesson_extras', format: false
         get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
@@ -1353,7 +1353,8 @@ Dashboard::Application.routes.draw do
     post '/openai/evaluate_section', to: 'openai_evaluate#evaluate_section'
     post '/openai/match_teaching_profile', to: 'openai_personalization#match_teaching_profile'
 
-    get '/langfuse/get_prompt', to: 'langfuse#get_prompt'
+    get '/ai_prompt_management/get_prompt', to: 'ai_prompt_management#get_prompt'
+    post '/ai_observability/add_internal_ai_tutor_dataset_item', to: 'ai_observability#add_internal_ai_tutor_dataset_item'
 
     post '/aichat_request/start_chat_completion', to: 'aichat_requests#start_chat_completion'
     get '/aichat_request/chat_request/:id', to: 'aichat_requests#chat_request'
@@ -1377,7 +1378,7 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    resources :aidiff_artifacts, only: [:index]
+    resources :aidiff_artifacts, only: [:index, :create]
 
     resources :aidiff_exit_tickets, only: [:index, :update, :create, :show]
     resources :aidiff_lesson_hooks, only: [:index, :update, :create, :show]

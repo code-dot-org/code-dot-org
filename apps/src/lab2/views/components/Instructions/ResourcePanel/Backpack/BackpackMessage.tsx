@@ -1,11 +1,7 @@
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  BodyFourText,
-  BodyTwoText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import moduleStyles from './backpack-message.module.scss';
@@ -44,10 +40,12 @@ const BackpackMessage: React.FC<BackpackMessageProps> = ({
         />
       </div>
       <div className={moduleStyles.backpackMessageText}>
-        <BodyTwoText>
-          <StrongText>{title}</StrongText>
-        </BodyTwoText>
-        <BodyFourText>{message}</BodyFourText>
+        <Typography variant="body2" gutterBottom>
+          <Typography variant="strong">{title}</Typography>
+        </Typography>
+        <Typography variant="body4" gutterBottom>
+          {message}
+        </Typography>
       </div>
       {BottomComponent}
     </div>

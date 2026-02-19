@@ -25,6 +25,10 @@ import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {filterSourceForPreview} from '@cdo/apps/weblab2/htmlPreview/filterSourceForPreview';
 import {
+  addConsoleLog,
+  clearConsoleLogs,
+} from '@cdo/apps/weblab2/redux/consoleRedux';
+import {
   addRequestData,
   addResponseData,
   clearRequests,
@@ -272,6 +276,8 @@ export const HTMLPreview: React.FC = () => {
       {type: IframeMessageType.REFRESH},
       previewUrl
     );
+    dispatch(clearRequests());
+    dispatch(clearConsoleLogs());
   };
 
   const onStopPreview = () => {
@@ -281,6 +287,8 @@ export const HTMLPreview: React.FC = () => {
 
   const onReloadPreview = () => {
     setIsStopped(false);
+    dispatch(clearRequests());
+    dispatch(clearConsoleLogs());
   };
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
@@ -291,6 +299,7 @@ export const HTMLPreview: React.FC = () => {
     setIsLevelLoading(true);
     setIsIframeLoaded(false);
     dispatch(clearRequests());
+    dispatch(clearConsoleLogs());
   });
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
@@ -343,6 +352,10 @@ export const HTMLPreview: React.FC = () => {
       } else if (event.data.type === IframeMessageType.NETWORK_RESPONSE) {
         const {id, ...response} = event.data.response;
         dispatch(addResponseData({id, response: response}));
+      } else if (event.data.type === IframeMessageType.CONSOLE_LOG) {
+        dispatch(
+          addConsoleLog({level: event.data.level, args: event.data.args})
+        );
       }
     };
 

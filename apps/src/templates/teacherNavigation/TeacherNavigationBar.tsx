@@ -119,7 +119,7 @@ const TeacherNavigationBar: React.FC<{
   const defaultPerformanceContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
     ['progress', 'assessments', 'projects', 'stats', 'textResponses'];
   const performanceContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
-    experiments.isEnabled('student_snapshot')
+    experiments.isEnabled('student-snapshot')
       ? [...defaultPerformanceContentKeys, 'studentSnapshot']
       : defaultPerformanceContentKeys;
 

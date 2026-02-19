@@ -27,7 +27,7 @@ exports.setupTestBlockly = function () {
 
   Blockly.mainBlockSpace.clear();
   assert(
-    Blockly.mainBlockSpace.getBlockCount() === 0,
+    Blockly.mainBlockSpace.getAllBlocks().length === 0,
     'Blockly workspace is empty'
   );
 };

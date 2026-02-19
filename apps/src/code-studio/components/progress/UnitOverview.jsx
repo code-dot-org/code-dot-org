@@ -222,6 +222,7 @@ class UnitOverview extends React.Component {
               scriptResourcesPdfUrl={scriptResourcesPdfUrl}
               teacherResources={teacherResources}
               isMigrated={isMigrated}
+              aiChatToolsDependency={aiChatToolsDependency}
             />
             {experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
               viewAs === ViewType.Instructor &&

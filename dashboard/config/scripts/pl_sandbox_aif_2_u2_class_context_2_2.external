@@ -17,14 +17,40 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/90238cb17488ca22b7bcaa13be5ebf64-image-1767899047978.png" alt="lesson calandar for unit 2" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
 
-#### **Lesson Flow:**
+## **Lesson Flow:**
 
 
-- #### Early lessons focus on understanding interactivity and event-driven programming as students explore how user actions drive app behavior and practice debugging with AI support.
+<!-- Simplified Lesson Flow Table (All text 14pt) -->
+<table style="width:100%; max-width:800px; border-collapse:collapse; font-family:Arial, Helvetica, sans-serif; font-size:14pt; line-height:1.4;">
 
-- #### Mid-unit lessons introduce variables, functions, and conditional logic, helping students plan and code dynamic interactions through flowcharts, reusable code, and logical operators.
+  <tr>
+    <th style="border:2px solid #000; padding:10px; text-align:left; width:30%;font-size:14pt;">Phase</th>
+    <th style="border:2px solid #000; padding:10px; text-align:left;font-size:14pt;">Summary</th>
+  </tr>
 
-- #### The final project brings these skills together as students design, build, and refine interactive web apps that respond to users in real time, using AI-assisted debugging.
+  <tr>
+    <td style="border:2px solid #000; padding:10px; font-weight:bold;font-size:14pt;">Early Lessons</td>
+    <td style="border:2px solid #000; padding:10px;font-size:14pt;">
+      Students learn interactivity and event-driven programming by exploring how user actions control app behavior and practicing debugging with AI support.
+    </td>
+  </tr>
+
+  <tr>
+    <td style="border:2px solid #000; padding:10px; font-weight:bold;font-size:14pt;">Mid-Unit Lessons</td>
+    <td style="border:2px solid #000; padding:10px;font-size:14pt;">
+      Students use variables, functions, and conditional logic to plan and build dynamic interactions using flowcharts and reusable code.
+    </td>
+  </tr>
+
+  <tr>
+    <td style="border:2px solid #000; padding:10px; font-weight:bold;font-size:14pt;">Final Project</td>
+    <td style="border:2px solid #000; padding:10px;font-size:14pt;">
+      Students design, build, and refine a fully interactive web app that responds to users in real time, using AI-assisted debugging.
+    </td>
+  </tr>
+
+</table>
+
 
 
 ## Next up

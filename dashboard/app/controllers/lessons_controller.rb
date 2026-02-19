@@ -3,7 +3,7 @@ class LessonsController < ApplicationController
 
   skip_authorize_resource only: :level_properties_by_id
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :student_lesson_plan, :level_properties, :level_properties_by_id]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show, :student_lesson_plan, :level_properties, :level_properties_by_id]
   before_action :disallow_legacy_script_levels, only: [:edit, :update]
   before_action :disable_session_for_cached_pages, only: [:show]
   before_action :redirect_to_canonical_path, only: [:show, :student_lesson_plan]
@@ -19,6 +19,22 @@ class LessonsController < ApplicationController
   def disallow_legacy_script_levels
     return unless @lesson.script_levels.reject(&:activity_section).any?
     return render :forbidden
+  end
+
+  # GET /s/:script_name_or_id/lessons
+  # GET /courses/:course_course_name/units/:unit_position/lessons
+  def index
+    unit_context = get_unit_context(params)
+    script = unit_context[:unit]
+
+    lesson_info = script.lessons.map do |lesson|
+      {
+        id: lesson.id,
+        name: lesson.localized_name
+      }
+    end
+
+    render json: lesson_info
   end
 
   # GET /s/:script_name_or_id/lessons/:position

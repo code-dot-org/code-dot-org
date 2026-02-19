@@ -1,0 +1,65 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-02-12T17:47:22.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Web Lab: The Safe Fetch</title>\n    <link rel=\"stylesheet\" href=\"styles.css\">\n</head>\n<body>\n\n    <div class=\"app-container\">\n        <div class=\"status-box\">Status: <span id=\"status\">IDLE</span></div>\n        \n        <div class=\"card\">\n            <h1>Boredom Buster</h1>\n            <p id=\"activity-text\">Ready to find an activity?</p>\n            <button id=\"fetch-btn\">Run Code</button>\n        </div>\n\n        <div id=\"dom-console\">\n            <div class=\"console-header\">System Console</div>\n            <div id=\"console-output\"></div>\n        </div>\n    </div>\n\n    <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "styles.css",
+          "language": "css",
+          "contents": "body {\n    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n    background: #f0f2f5;\n    display: flex;\n    justify-content: center;\n    padding: 40px;\n}\n\n.app-container {\n    width: 400px;\n    background: white;\n    padding: 25px;\n    border-radius: 12px;\n    box-shadow: 0 4px 15px rgba(0,0,0,0.1);\n    text-align: center;\n}\n\n.status-box {\n    font-size: 0.8rem;\n    color: #666;\n    margin-bottom: 10px;\n    border-bottom: 1px solid #eee;\n    padding-bottom: 5px;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n}\n\n#status {\n    font-weight: bold;\n    color: #007bff;\n}\n\n.card h1 {\n    font-size: 1.5rem;\n    color: #333;\n}\n\n#activity-text {\n    margin: 20px 0;\n    color: #555;\n    min-height: 40px;\n}\n\nbutton {\n    background: #007bff;\n    color: white;\n    border: none;\n    padding: 12px 24px;\n    border-radius: 6px;\n    cursor: pointer;\n    font-weight: bold;\n    font-size: 1rem;\n}\n\nbutton:hover {\n    background: #0056b3;\n}\n\n/* Simulated Console */\n#dom-console {\n    background: #1e1e1e;\n    color: #d4d4d4;\n    border-radius: 6px;\n    text-align: left;\n    font-family: 'Courier New', monospace;\n    overflow: hidden;\n    margin-top: 25px;\n}\n\n.console-header {\n    background: #333;\n    color: #888;\n    padding: 6px 12px;\n    font-size: 11px;\n}\n\n#console-output {\n    padding: 12px;\n    min-height: 80px;\n    font-size: 13px;\n    line-height: 1.5;\n}\n\n.error-text {\n    color: #ff5f56;\n    font-weight: bold;\n}\n\n.caught-text {\n    color: #ffbd2e;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const btn = document.getElementById(\"fetch-btn\");\nconst display = document.getElementById(\"activity-text\");\nconst status = document.getElementById(\"status\");\nconst consoleOutput = document.getElementById(\"console-output\");\n\n// This listener simulates the \"Big Red Error\" in the browser\nwindow.addEventListener('unhandledrejection', function (event) {\n    const p = document.createElement(\"p\");\n    p.className = \"error-text\";\n    p.innerText = \"❌ Uncaught (in promise) TypeError: Failed to fetch\";\n    consoleOutput.appendChild(p);\n});\n\nbtn.addEventListener(\"click\", async () => {\n    // Reset UI\n    consoleOutput.innerHTML = \"\";\n    status.innerText = \"FETCHING...\";\n    \n    // The Broken URL\n    const response = await fetch(\"https://www.boredapi.com/api/activity\");\n    \n    // If the previous line fails, the function stops immediately\n    const data = await response.json();\n\n    // These lines are never reached \n    display.innerText = data.activity;\n    status.innerText = \"COMPLETE!\";\n});",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "encrypted": "false",
+    "long_instructions": "## Modify & Make (The \"Safe\" App)\r\n\r\nNow, we are going to install a \"Safety Net.\" We use `try...catch` blocks to tell the computer: \"Try doing this, but if you hit a snag, don't crash just do this other thing instead.\"\r\n\r\nRewrite your `btn.addEventListener` in `script.js` using `try...catch` blocks. \r\n\r\n_Hint: You will need to wrap the dangerous code inside a `try` block and provide instructions for the failure inside a `catch` block._",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-02-12 19:50:16 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-12 19:51:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-12 19:52:17 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-12 19:57:23 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-12 19:58:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-12 19:59:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-12 20:02:55 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>
