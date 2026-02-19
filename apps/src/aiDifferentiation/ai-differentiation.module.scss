@@ -568,6 +568,16 @@ html body .sidebarActionTooltip {
     }
   }
 
+  &TitleSection {
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--background-neutral-secondary);
+    flex-direction: row;
+    display: flex;
+    gap: 12px;
+    align-items: end;
+  }
+
   &Dropdowns {
     display: flex;
     align-items: flex-start;
@@ -767,4 +777,18 @@ html body .sidebarActionTooltip {
   display: flex;
   justify-content: center;
   color: $neutral_dark;
+}
+
+.artifactTitleInput {
+  min-height: 24px;
+  max-height: 24px;
+  box-sizing: border-box;
+  resize: none;
+  margin: 0;
+  width: 100%;
+
+  &:disabled {
+    opacity: 0.5;
+    background: none;
+  }
 }
