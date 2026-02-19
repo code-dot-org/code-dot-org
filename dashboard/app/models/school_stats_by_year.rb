@@ -97,7 +97,7 @@ class SchoolStatsByYear < ApplicationRecord
     STATUS_REOPENED = '8-Reopened'.freeze
   ].freeze
 
-  self.primary_keys = :school_id, :school_year
+  self.primary_key = [:school_id, :school_year]
 
   belongs_to :school, optional: true
 
