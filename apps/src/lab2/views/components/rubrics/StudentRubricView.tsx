@@ -1,11 +1,6 @@
 // Student-facing rubric view inside Lab2 panel
-
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  BodyFourText,
-  BodyThreeText,
-  BodyTwoText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
@@ -87,21 +82,31 @@ const StudentRubricView: React.FC = () => {
           </button>
         </div>
       )}
-      <BodyTwoText className={styles.learningGoalHeader}>
+      <Typography
+        className={styles.learningGoalHeader}
+        variant="body2"
+        gutterBottom
+      >
         {currentLearningGoal.learningGoal}
-      </BodyTwoText>
+      </Typography>
       <div className={styles.scrollContainer}>
         <div className={styles.feedbackContainer}>
-          <BodyFourText className={styles.feedbackHeader}>
+          <Typography
+            className={styles.feedbackHeader}
+            variant="body4"
+            gutterBottom
+          >
             <i>
               {!!currentEvaluation?.feedback
                 ? commonI18n.studentRubricTeacherFeedback()
                 : commonI18n.studentRubricNoFeedback()}
             </i>
-          </BodyFourText>
+          </Typography>
           {currentEvaluation?.feedback && (
             <div className={styles.teacherFeedback}>
-              <BodyThreeText>{currentEvaluation?.feedback}</BodyThreeText>
+              <Typography variant="body3" gutterBottom>
+                {currentEvaluation?.feedback}
+              </Typography>
             </div>
           )}
         </div>
@@ -159,13 +164,13 @@ const EvidenceLevelView: React.FC<EvidenceLevelViewProps> = ({
             selected && styles.bubbleSelected
           )}
         />
-        <BodyTwoText>
+        <Typography variant="body2" gutterBottom>
           {
             (UNDERSTANDING_LEVEL_STRINGS as {[level: number]: string})[
               understanding
             ]
           }
-        </BodyTwoText>
+        </Typography>
       </div>
       <div
         className={classNames(
@@ -173,9 +178,13 @@ const EvidenceLevelView: React.FC<EvidenceLevelViewProps> = ({
           collapsed && styles.descriptionContainerCollapsed
         )}
       >
-        <BodyThreeText className={classNames(styles.description)}>
+        <Typography
+          className={classNames(styles.description)}
+          variant="body3"
+          gutterBottom
+        >
           {teacherDescription}
-        </BodyThreeText>
+        </Typography>
       </div>
     </div>
   );

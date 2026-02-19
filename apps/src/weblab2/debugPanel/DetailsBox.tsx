@@ -5,7 +5,7 @@ import {
   OverlineThreeText,
   StrongText,
 } from '@code-dot-org/component-library/typography';
-import React from 'react';
+import React, {useMemo} from 'react';
 
 import parentStyles from './debug-panel.module.scss';
 import moduleStyles from './details-box.module.scss';
@@ -17,17 +17,38 @@ interface DetailsField {
 
 interface DetailsBoxProps {
   title: string;
-  success: boolean;
+  status: 'success' | 'error' | 'pending';
   rows: DetailsField[][];
   errorMessage?: string;
 }
 
 const DetailsBox: React.FunctionComponent<DetailsBoxProps> = ({
   title,
-  success,
+  status,
   rows,
   errorMessage,
 }) => {
+  const {iconName, iconClassName, animationType} = useMemo(() => {
+    switch (status) {
+      case 'success':
+        return {
+          iconName: 'check-circle',
+          iconClassName: parentStyles.successIcon,
+        };
+      case 'error':
+        return {
+          iconName: 'xmark-circle',
+          iconClassName: parentStyles.errorIcon,
+        };
+      case 'pending':
+        return {
+          iconName: 'spinner',
+          iconClassName: parentStyles.loadingIcon,
+          animationType: 'spin' as const,
+        };
+    }
+  }, [status]);
+
   return (
     <div className={moduleStyles.detailsBox}>
       <div className={moduleStyles.detailsHeader}>
@@ -35,10 +56,9 @@ const DetailsBox: React.FunctionComponent<DetailsBoxProps> = ({
           <StrongText>{title}</StrongText>
         </BodyThreeText>
         <FontAwesomeV6Icon
-          iconName={success ? 'check-circle' : 'xmark-circle'}
-          className={
-            success ? parentStyles.successIcon : parentStyles.errorIcon
-          }
+          iconName={iconName}
+          className={iconClassName}
+          animationType={animationType}
         />
       </div>
       <div className={moduleStyles.detailsBody}>
@@ -49,9 +69,11 @@ const DetailsBox: React.FunctionComponent<DetailsBoxProps> = ({
               <OverlineThreeText className={moduleStyles.detailsFieldLabel}>
                 {field.label}
               </OverlineThreeText>
-              <BodyThreeText className={moduleStyles.detailsFieldValue}>
-                {field.value}
-              </BodyThreeText>
+              <pre className={moduleStyles.detailsFieldValueContainer}>
+                <BodyThreeText className={moduleStyles.detailsFieldValue}>
+                  {field.value}
+                </BodyThreeText>
+              </pre>
             </div>
           ));
 

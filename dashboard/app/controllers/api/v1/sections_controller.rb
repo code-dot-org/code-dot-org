@@ -70,7 +70,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
         restrict_section: params[:restrict_section].nil? ? false : params[:restrict_section],
         avatar_color: params[:avatar_color].nil? ? 0 : params[:avatar_color],
         avatar_emoji: params[:avatar_emoji].nil? ? 0 : params[:avatar_emoji],
-        ai_chat_access_level: params[:ai_chat_access_level].nil? ? SharedConstants::AI_CHAT_ACCESS_LEVELS[:DISABLED] : params[:ai_chat_access_level],
+        ai_chat_access_level: get_ai_chat_access_level,
       }
     )
     return head :bad_request unless section.persisted?
@@ -106,6 +106,10 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       return head :forbidden unless Section.can_be_assigned_course?(participant_audience, section.participant_type)
     end
 
+    # If assigning a new course, derive the new ai_chat_access_level, otherwise leave it as-is.
+    is_updating_course = @course && @course.id != section.course_id
+    ai_chat_access_level = is_updating_course ? get_ai_chat_access_level(section.ai_chat_access_level) : params[:ai_chat_access_level]
+
     # TODO: (madelynkasula) refactor to use strong params
     fields = {}
     fields[:course_id] = @course&.id
@@ -123,7 +127,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     fields[:ai_tutor_enabled] = params[:ai_tutor_enabled] unless params[:ai_tutor_enabled].nil?
     fields[:avatar_color] = params[:avatar_color].nil? ? 0 : params[:avatar_color]
     fields[:avatar_emoji] = params[:avatar_emoji].nil? ? 0 : params[:avatar_emoji]
-    fields[:ai_chat_access_level] = params[:ai_chat_access_level] unless params[:ai_chat_access_level].nil?
+    fields[:ai_chat_access_level] = ai_chat_access_level unless ai_chat_access_level.nil?
 
     section.update!(fields)
     if @unit
@@ -341,5 +345,19 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       # Should not get a unit_id unless also get a course version which is course
       return head :bad_request if params[:unit_id]
     end
+  end
+
+  private def get_ai_chat_access_level(previous_access_level = nil)
+    previous_access_level ||= SharedConstants::AI_CHAT_ACCESS_LEVELS[:DISABLED]
+
+    # Leave it as is if it was already turned on or to essential_only
+    return previous_access_level if previous_access_level != SharedConstants::AI_CHAT_ACCESS_LEVELS[:DISABLED]
+
+    # Auto-enable access if the course needs it.
+    # TODO: Once pilot goes GA, we can enable for any @course&.has_ai_chat_tools?
+    return SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED] if @course&.requires_ai_chat_tools?
+    return SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED] if @course&.has_ai_chat_tools? && current_user.ai_tutor_enabled_for_pilot?
+
+    SharedConstants::AI_CHAT_ACCESS_LEVELS[:DISABLED]
   end
 end

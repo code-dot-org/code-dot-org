@@ -59,7 +59,7 @@ const INITIAL_INFO_PANEL_WIDTH = 290;
 const MIN_WORKSPACE_WIDTH = 400;
 const INITIAL_WORKSPACE_WIDTH = 800;
 
-const DEBOUNCED_WORKSPACE_SERIALIZATION_MS = 500;
+const DEBOUNCED_WORKSPACE_SERIALIZATION_MS = 200;
 
 const DEFAULT_SOURCES = {source: {}};
 
@@ -241,15 +241,15 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           channelId
         );
 
-        updateSources({
+        updateSources(prevSources => ({
           source: {
             ...serializedData,
             externalFiles: {
-              ...currentSources.source.externalFiles,
+              ...prevSources.source.externalFiles,
               ...newFiles,
             },
           },
-        });
+        }));
 
         if (newFiles && !readonlyWorkspace) {
           const newFilesWithUploadStatus = await uploadExternalFiles(
@@ -258,16 +258,15 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
             filesBeingUploadedRef
           );
 
-          // We update sources again on upload completion to update the upload status of the new files.
-          updateSources({
+          updateSources(prevSources => ({
             source: {
-              ...serializedData,
+              ...prevSources.source,
               externalFiles: {
-                ...currentSources.source.externalFiles,
+                ...prevSources.source.externalFiles,
                 ...newFilesWithUploadStatus,
               },
             },
-          });
+          }));
         }
       }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
     },

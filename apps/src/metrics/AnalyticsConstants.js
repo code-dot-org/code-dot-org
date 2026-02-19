@@ -520,6 +520,8 @@ const EVENTS = {
   SUBMIT_AICHAT_TEACHER_FEEDBACK: 'Teacher submits feedback on aichat message',
   AICHAT_MULTIMODAL_UPLOAD_OPENED: 'User clicks to upload multimodal assets',
   AICHAT_MULTIMODAL_UPLOAD_STAGED: 'User stages multimodal assets',
+  AICHAT_UNSUPPORTED_MODEL_SELECTED:
+    'User had previously selected a model that is no longer supported',
 
   // AI chat response copied. Shared across features; check event properties for usage and clientType
   // to determine feature.

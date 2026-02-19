@@ -4,7 +4,7 @@
 // only used for levels that use Lab2.  For levels that don't use Lab2,
 // they will get an older-style level.
 import {Button} from '@code-dot-org/component-library/button';
-import {Heading4} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import _ from 'lodash';
 import React, {useEffect, useMemo, useRef} from 'react';
@@ -152,9 +152,9 @@ const BubbleChoice: React.FC<LabProps<BubbleChoiceLevelProperties>> = ({
     <div id="bubble-choice" className={styles.bubbleChoiceContainer}>
       <div>
         {levelBubbleChoice.displayName && (
-          <Heading4 className={styles.heading}>
+          <Typography className={styles.heading} variant="h4" gutterBottom>
             {levelBubbleChoice.displayName}
-          </Heading4>
+          </Typography>
         )}
         {levelBubbleChoice.description && (
           <div className={styles.text}>
@@ -204,14 +204,16 @@ const BubbleChoice: React.FC<LabProps<BubbleChoiceLevelProperties>> = ({
                 </div>
               </div>
               <div className={styles.sublevelTextContainer}>
-                <Heading4
+                <Typography
                   className={classNames(
                     styles.heading,
                     styles.sublevelTextHeading
                   )}
+                  variant="h4"
+                  gutterBottom
                 >
                   {sublevel.display_name}
-                </Heading4>
+                </Typography>
 
                 {sublevel.description && (
                   <EnhancedSafeMarkdown

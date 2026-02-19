@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -14,18 +15,21 @@ const DEFAULT_PROPS = {
 describe('EvidenceLevelsForStudents', () => {
   it('renders evidence levels', () => {
     const wrapper = shallow(<EvidenceLevelsForStudents {...DEFAULT_PROPS} />);
-    expect(wrapper.find('Heading6').length).toBe(1);
-    expect(wrapper.find('Heading6').props().children).toBe('Rubric Scores');
-    expect(wrapper.find('Memo(RadioButton)').length).toBe(0);
-    // Two BodyThreeText per evidence level
-    expect(wrapper.find('BodyThreeText').length).toBe(
-      DEFAULT_PROPS.evidenceLevels.length * 2
-    );
+    const header = wrapper.find(Typography).at(0);
+    expect(header.props().variant).toBe('h6');
+    expect(header.props().children).toBe('Rubric Scores');
+
+    const body3Nodes = wrapper
+      .find(Typography)
+      .filterWhere(node => node.props().variant === 'body3');
+    // Two body3 Typography per evidence level
+    expect(body3Nodes.length).toBe(DEFAULT_PROPS.evidenceLevels.length * 2);
+
     const firstEvidenceLevel = DEFAULT_PROPS.evidenceLevels[0];
-    expect(wrapper.find('StrongText').at(0).props().children).toBe(
+    expect(body3Nodes.at(0).props().children.props.children).toBe(
       UNDERSTANDING_LEVEL_STRINGS[firstEvidenceLevel.understanding]
     );
-    expect(wrapper.find('BodyThreeText').at(1).props().children).toBe(
+    expect(body3Nodes.at(1).props().children).toBe(
       firstEvidenceLevel.teacherDescription
     );
   });

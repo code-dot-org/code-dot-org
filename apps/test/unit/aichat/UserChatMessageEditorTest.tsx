@@ -21,12 +21,18 @@ const mockDispatch = jest.fn();
 const mockSubmitChatContents = jest.fn();
 let mockState: {
   aichat: Partial<AichatState>;
+  pageConstants?: {
+    locale: string;
+  };
 } = {
   aichat: {
     chatEventsCurrent: [],
     saveInProgress: false,
     stagedFiles: [],
     userAddedSelectionContext: {},
+  },
+  pageConstants: {
+    locale: 'en_us',
   },
 };
 

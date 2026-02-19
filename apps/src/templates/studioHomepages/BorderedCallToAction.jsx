@@ -1,8 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
-import {
-  Heading3,
-  BodyThreeText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -30,8 +27,12 @@ const BorderedCallToAction = ({
   return (
     <div className={`${styles.outerBox} ${borderStyle} ${className}`}>
       <div className={styles.textWrapper}>
-        <Heading3 visualAppearance="heading-sm">{headingText}</Heading3>
-        <BodyThreeText>{descriptionText}</BodyThreeText>
+        <Typography component="h3" variant="h5" gutterBottom>
+          {headingText}
+        </Typography>
+        <Typography variant="body3" gutterBottom>
+          {descriptionText}
+        </Typography>
       </div>
       <Button
         onClick={onClick}

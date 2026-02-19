@@ -1,6 +1,6 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import Tags from '@code-dot-org/component-library/tags';
-import Typography from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import _ from 'lodash';
 import React, {useState, useEffect} from 'react';
 import {
@@ -72,9 +72,10 @@ const TeacherNavigationBar: React.FC<{
   const getSectionHeader = (label: string) => {
     return (
       <Typography
-        semanticTag={'h2'}
-        visualAppearance={'overline-two'}
         className={styles.sectionHeader}
+        component="h2"
+        variant="overline2"
+        gutterBottom
       >
         {label}
       </Typography>
@@ -118,7 +119,7 @@ const TeacherNavigationBar: React.FC<{
   const defaultPerformanceContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
     ['progress', 'assessments', 'projects', 'stats', 'textResponses'];
   const performanceContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
-    experiments.isEnabled('student_snapshot')
+    experiments.isEnabled('student-snapshot')
       ? [...defaultPerformanceContentKeys, 'studentSnapshot']
       : defaultPerformanceContentKeys;
 
@@ -290,9 +291,10 @@ const TeacherNavigationBar: React.FC<{
     <nav className={styles.sidebarContainer} id="ui-test-teacher-sidebar">
       <div className={styles.sidebarContent}>
         <Typography
-          semanticTag={'h2'}
-          visualAppearance={'overline-two'}
           className={styles.sectionHeader}
+          component="h2"
+          variant="overline2"
+          gutterBottom
         >
           {i18n.classSections()}
         </Typography>

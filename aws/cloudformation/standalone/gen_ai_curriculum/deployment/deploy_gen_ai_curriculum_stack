@@ -6,7 +6,7 @@ require 'optparse'
 require 'open3'
 require_relative './config'
 
-VALID_ENVIRONMENTS = %w[production test].freeze
+VALID_ENVIRONMENTS = %w[production].freeze
 # Manually retrieved by running get_huggingface_llm_image_uri using the Sagemaker Python SDK.
 # See script instructions for how to change or update this value.
 HUGGINGFACE_IMAGE_URI = "763104351884.dkr.ecr.us-east-1.amazonaws.com/huggingface-pytorch-tgi-inference:2.3.0-tgi2.2.0-gpu-py310-cu121-ubuntu22.04-v2.0".freeze
