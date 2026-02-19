@@ -30,7 +30,7 @@ export type ExitTicketItem = {
 export type ChatTextMessage = {
   role: Role;
   chatMessageText: string;
-  status: string;
+  status: (typeof AiInteractionStatus)[keyof typeof AiInteractionStatus];
   id?: number;
   isArtifactCandidate?: boolean;
   artifactCandidateType?: (typeof AiDiffArtifactType)[keyof typeof AiDiffArtifactType];
@@ -58,6 +58,7 @@ type ServerChatThread = {
 
 type ServerChatMessage = {
   id: number;
+  status: string;
   role: string;
   content: string;
   updated_at: Date;
@@ -119,7 +120,10 @@ function messageValidatorHelper(
       serverMsg.is_preset && serverMsg.preset_chip_text
         ? serverMsg.preset_chip_text
         : serverMsg.content,
-    status: AiInteractionStatus.OK,
+    status:
+      serverMsg.status === undefined
+        ? AiInteractionStatus.OK
+        : serverMsg.status,
     id: serverMsg.id,
     isArtifactCandidate: serverMsg.is_artifact_candidate,
     artifactCandidateType:

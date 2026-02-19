@@ -278,6 +278,7 @@ export const HTMLPreview: React.FC = () => {
     );
     dispatch(clearRequests());
     dispatch(clearConsoleLogs());
+    setIsStopped(false);
   };
 
   const onStopPreview = () => {
