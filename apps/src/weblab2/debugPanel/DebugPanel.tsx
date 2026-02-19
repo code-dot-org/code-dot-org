@@ -15,12 +15,15 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
   const [selectedPanel, setSelectedPanel] = React.useState<
     'network' | 'console'
   >('console');
+
   return (
     <PanelContainer
       id={'debug-panel-container'}
       headerContent={'Debug'}
       className={className}
-      rightHeaderContent={<DebugPanelRightHeaderButtons />}
+      rightHeaderContent={
+        <DebugPanelRightHeaderButtons selectedPanel={selectedPanel} />
+      }
       leftHeaderContent={
         <DebugPanelLeftHeaderButtons
           selectedPanel={selectedPanel}
