@@ -1,0 +1,85 @@
+@use '../../lab2/views/components/layout/variables.scss' as variables;
+
+.debugPanelContainer {
+  display: flex;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.networkSummary {
+  display: flex;
+  width: 190px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  border-right: variables.$default-border;
+}
+
+.networkSummaryHeader {
+  display: flex;
+  padding: 10px 8px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  border-bottom: variables.$default-border;
+  
+  p {
+    margin-bottom: 0;
+    color: var(--text-neutral-tertiary);
+  }
+}
+
+.requestList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow-y: auto;
+  padding: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.detailsContainer {
+  background: var(--background-neutral-secondary);
+  display: flex;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+.successIcon {
+  color: var(--text-success-primary);
+}
+
+.errorIcon {
+  color: var(--text-error-primary);
+}
+
+.loadingIcon {
+  color: var(--text-neutral-quaternary);
+}
+
+.responsePlaceholder {
+  display: flex;
+  padding: 8px 10px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border: variables.$default-border;
+  background: var(--background-neutral-primary);
+  width: 150px;
+  border-radius: variables.$default-border-radius;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.placeholderIcon {
+  color: var(--text-neutral-tertiary);
+}
