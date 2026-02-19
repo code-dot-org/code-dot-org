@@ -89,6 +89,10 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     # TODO: Move to an after_create step on Section model when old API is fully deprecated
     current_user.assign_script(@unit, @course) if @unit
 
+    if @unit
+      AiLessonSummariesHelper.perform_ai_lesson_summaries_by_unit(@unit)
+    end
+
     render json: section.summarize
   end
 
