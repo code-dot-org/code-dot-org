@@ -31,6 +31,10 @@ const consoleSlice = createSlice({
         message: action.payload.args.join(' '),
         timestamp: new Date().toLocaleTimeString(),
       });
+      // Cap length of console logs to 500 entries.
+      if (state.logs.length > 500) {
+        state.logs.shift();
+      }
     },
     clearConsoleLogs: state => {
       state.logs = [];

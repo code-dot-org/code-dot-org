@@ -44,7 +44,10 @@ const Console: React.FunctionComponent = () => {
   const bottomRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({behavior: 'smooth'});
+    const timeout = setTimeout(() => {
+      bottomRef.current?.scrollIntoView({behavior: 'smooth'});
+    }, 50);
+    return () => clearTimeout(timeout);
   }, [consoleLogs]);
 
   return (
