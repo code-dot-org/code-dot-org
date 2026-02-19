@@ -1063,7 +1063,7 @@ module SharedConstants
     'api.datamuse.com',         # Word-finding engine - Public API
     'gutendex.com',             # Project Gutenberg ebook metadata - Public API
     'api.scripture.api.bible',  # Bible verses - API key required 🔑
-    'api.adviceslip.com/advice', # Advice API - Public API
+    'api.adviceslip.com',       # Advice API - Public API
 
     # === OTHER ===
     # SECURITY: Varies by API, most are public educational resources
