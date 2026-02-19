@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-02-18T16:59:31.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# CIW AI Associate Standard: 2.11\n# Standard Description: Identify univariate and multivariate outliers in a dataset.\n#\n# Rationale: An outlier is a data point that is \"weird\" or doesn't fit the pattern. \n# - Univariate: An outlier in ONE column (e.g., a student who is 12 feet tall).\n# - Multivariate: An outlier that only looks weird when you look at TWO columns \n#   (e.g., a student who is 3 feet tall but weighs 500 lbs).\n# This tutorial uses Box Plots and Isolation Forests to find them.\n\n\"\"\"\nWelcome! Imagine you are looking at a line of 100 people. \nIf one person is 8 feet tall, they are an OUTLIER. \n\nBut sometimes, a point is only an outlier when you combine facts. \nIf someone is 4 years old, that's normal. If someone has a PhD, that's normal. \nBut a 4-year-old WITH a PhD? That's a multivariate outlier!\n\"\"\"\n\nimport pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.ensemble import IsolationForest\n\n# --- PART 1: UNIVARIATE OUTLIERS (One Column) ---\nprint(\"--- Part 1: Finding Outliers in One Column ---\")\n# Let's look at a list of test scores (0-100). \n# Notice the '999'—that's probably a typo!\nscores = [85, 92, 78, 88, 95, 82, 999, 90, 87, 84]\ndf_uni = pd.DataFrame({'Score': scores})\n\n# We visualize this with a Box Plot\nplt.figure(figsize=(10, 5))\nplt.subplot(1, 2, 1)\nplt.boxplot(df_uni['Score'])\nplt.title(\"Univariate: Spot the Typo!\")\nplt.ylabel(\"Test Score\")\n\n# --- PART 2: MULTIVARIATE OUTLIERS (Two+ Columns) ---\nprint(\"--- Part 2: Finding Outliers in Multiple Columns ---\")\n# We'll create data for Height and Weight.\n# Most points follow a pattern, but one point is a 4ft tall, 300lb person.\nheights = [60, 62, 65, 68, 70, 72, 48] \nweights = [120, 130, 150, 165, 180, 200, 300]\nX = pd.DataFrame({'Height': heights, 'Weight': weights})\n\n# We use an \"Isolation Forest\" to find multivariate outliers.\n# It works by \"isolating\" points that are in lonely areas of the graph.\niso = IsolationForest(contamination=0.15, random_state=42)\noutlier_labels = iso.fit_predict(X) # -1 means Outlier, 1 means Normal\n\nplt.subplot(1, 2, 2)\n# Color points by whether they are outliers\nplt.scatter(X['Height'], X['Weight'], c=outlier_labels, cmap='RdYlGn', edgecolors='k')\nplt.title(\"Multivariate: Spot the Weird Combo!\")\nplt.xlabel(\"Height\")\nplt.ylabel(\"Weight\")\n\nplt.tight_layout()\nplt.show()\n\nprint(\"In the scatter plot, the RED point is the outlier.\")\nprint(\"Even if 48 inches is a normal height and 300 lbs is a normal weight,\")\nprint(\"the COMBINATION is what makes it an outlier.\")\n\n\"\"\"\n--- YOUR TURN ---\nWe have a dataset of \"Bank Transactions\". \nOne person spent $5,000 on a Tuesday at 3:00 AM. \n\n1. Use the Isolation Forest logic to detect if that transaction is an outlier.\n2. We've provided the data for you below.\n\"\"\"\n\n# STARTING CODE FOR STUDENT:\n# Transaction Features: [Amount ($), Hour of Day (0-23)]\ntransactions = [\n    [20, 12], [15, 14], [50, 18], [10, 9], [30, 13], [5000, 3]\n]\nX_bank = pd.DataFrame(transactions, columns=['Amount', 'Hour'])\n\n# TODO: Create the IsolationForest\n# TODO: Use fit_predict(X_bank) to get labels\n# TODO: Print the labels! (Look for the -1)\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFTDG6jyYgtI/CEUE/82dEkG4hlI8OLsdjJD0In8S\n03BB+jPkGgyYB0/9C3zqHMHEFpKeCsugYbpGMxzBNwrd7qASagJaFzMnVUyM\n2TXS7Hau9lj7JpZIHXn9fmxXRRANWW10N5yHB8xyvgejgwOfkrcMJqO07Ee1\najgLNTI7JgpG+kduK3GmIflvNAqE+TdVM6vKamArrA4oqRA0/kmVeJAnxnNL\nSoVtdcXonR5nOePb0259UaH0NQvvVYfeX7tES5r9yaN0Plfo9ascq7L3AmHg\nveMIcZ+91r58U9GQx5s7pBdn95wHn/O81x4UXwXlCnPTU7SodDkl7uXtcqed\nNl5udKBYHRQaMflhttXLjyzfbkpOdQ9Aj8Wx6PHaRxJ7OjxiGUDxmHLGWfPw\nw0cJUaJmWk71+dIvuSlvNUxxU/RRh/eUp3OXRL7kR7HSZ5J3yJw9PzScutFG\nHDbObFanMfmKli4eBc19VeFwnaFMY9/ABmT6K7z44oNU/uw35obzrSa9boh7\nqeHCtQwDv3cCorfjr8dwSRE40K0paIvRCiZPBRnCHahzkmALUC41b5D31xrF\nWNKmVlZOgwGzaoa3qsq/CBC7a2nN55uH7FatRnz4dqa4DJ4YQfY0aN3S4Xj1\nLpO2mkLlvLTPKSzoCDYivzcz9FJ8tnhuzfe6yshu4vNe6AfnaY9Zpni+qv6p\nj8+E95ypvsU0kh3UNe3BY7fpW0wg9kCb4bGeRPrq9qcMzTalZ9XZ4pUNltkZ\nnOQJX1KncSRB6Uh0A+7JqljpLsdLV0l4UxhDSGh6e2zmOpthsi/HYVvHf6vq\nnE2TQ+UQYpkMiVXzn4A4U4pJifLD2JDFdD6AFqAI8PKp9TSk5vlR1CSC061s\nOyEvGicKkH+caGVC8zzjM7HFdwCPA8lhEWjje1vHHcA45Dbqe5W3ghPuPq3I\nlVYb7AG6nD5WWDL/h+K+yObs3lO4QYlqb2NnbpX4jni3hDDXJGii4MOd3IkO\n1ZamAVK6Uscdi+wBTY66oHKxHqRlEELqva7Kb9J7YEde5sI7UaqejFH/LRdC\nfGMh0FWR71Ozl9ZOEY2OESZdcNx4PXAmipUPhP3OXtYs7+aWuBAkWtUC84Hm\neYCmwIhfTovZjkqgpG/LZfAoX8QxqZWV2Tay2/8Nqu2MDPkDiRZxSpTBH6cw\nMQHc/X7ctSWaUam+QUL//HLFZ8+cS077SSdfDIQOmHFvi53jn0fHPb8zqg/o\nwDOxXq278eWoxMwHscgjcwcstVdfqZl/ZMy9rBO7BrpLKfmymH7KAdqT8mcL\n14olv4oPFaczApepT1Hl4Aguy2Sc4xzoBTunYfgVlFYQ8yTILLcY6pIYfUA2\nBMFdPKHWwXJo/l1cW05uFUIdvsjc/vaBWSZ3rvN6kAGOSk5jHY29KhHvE21q\nYzUiOqGGYCfTn5Dq8zw+Sf6rcfQb3Ve8b+LY/6jg6PzbIRQQvW3dec8YY6K2\n0Oz5C9Vigl3oy2A=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-18T16:59:31.255+00:00\",\"changed\":[\"cloned from \\\"cs50-scikit-18\\\"\"],\"cloned_from\":\"cs50-scikit-18\"},{\"changed_at\":\"2026-02-18 16:59:33 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:37:51 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:38:03 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>

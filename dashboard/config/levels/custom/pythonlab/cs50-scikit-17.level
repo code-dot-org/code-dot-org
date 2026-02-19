@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-02-18T16:58:22.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# CIW AI Associate Standard: 2.8\n# Standard Description: Explain what data distribution shift is and its implications in production.\n#\n# Rationale: An AI is only as good as the data it was trained on. If the \n# real-world data (Production) looks different from the training data, the \n# AI will fail. This is called \"Distribution Shift\". This tutorial simulates \n# a shift in temperature data to show how it breaks a model.\n\n\"\"\"\nWelcome! Imagine you trained a robot to wear a coat when it's 30 degrees \nFahrenheit. Then, you move the robot to a desert where \"30\" actually means \nCelsius! The robot would be very confused.\n\nThis is \"Distribution Shift\". The \"shape\" of the data changed, and the AI \ndidn't know how to handle the new environment.\n\"\"\"\n\nimport numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt\nfrom sklearn.linear_model import LinearRegression\n\n# --- PART 1: TRAINING DATA (The \"Past\") ---\nprint(\"--- Part 1: Training the Model ---\")\n# Let's say we train a model to predict ice cream sales based on \n# temperatures between 60 and 80 degrees.\nnp.random.seed(42)\ntrain_temp = np.random.normal(70, 5, 100) # Average 70 degrees\ntrain_sales = train_temp * 2 + np.random.normal(0, 5, 100)\n\nmodel = LinearRegression()\nmodel.fit(train_temp.reshape(-1, 1), train_sales)\nprint(f\"Model trained on temperatures around {train_temp.mean():.1f} degrees.\")\n\n# --- PART 2: PRODUCTION DATA (The \"Future\" Shift) ---\nprint(\"\\n--- Part 2: Moving to Production (Data Shift!) ---\")\n# Suddenly, a heatwave hits! The temperatures shift to 90-110 degrees.\nprod_temp = np.random.normal(100, 5, 100) # Average 100 degrees\nprod_sales_real = prod_temp * 2 + np.random.normal(0, 5, 100)\n\n# The AI tries to predict in this new environment\nprod_preds = model.predict(prod_temp.reshape(-1, 1))\n\n# --- VISUALIZATION ---\nplt.figure(figsize=(10, 5))\n\n# Plot the Shift\nplt.hist(train_temp, alpha=0.5, label='Training Data (Normal)', color='blue')\nplt.hist(prod_temp, alpha=0.5, label='Production Data (Shifted)', color='red')\nplt.title(\"Visualizing Data Distribution Shift\")\nplt.xlabel(\"Temperature\")\nplt.ylabel(\"Frequency\")\nplt.legend()\nplt.show()\n\nprint(f\"Original Training Average: {train_temp.mean():.1f}\")\nprint(f\"New Production Average: {prod_temp.mean():.1f}\")\nprint(\"Implication: The AI is now making predictions for temperatures it has NEVER seen before!\")\n\n\"\"\"\n--- YOUR TURN ---\nWe've shifted the data for you. \n1. Calculate the 'Error' by subtracting prod_preds from prod_sales_real.\n2. Print the average error.\n3. Why is the error likely to be higher in the shifted production data \n   than it was during training?\n\"\"\"\n\n# STARTING CODE FOR STUDENT:\n# TODO: Calculate how \"wrong\" the AI was in the new environment\n# errors = prod_sales_real - prod_preds\n# print(f\"Average Error in Production: {np.abs(errors).mean():.2f}\")\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFTDG6jyYgtI/CEUE/82dEkG4hlI8OLsdjJD0In8S\n03BB+jPkGgyYB0/9C3zqHMHEFpKeCsugYbpGMxzBNwrd7qASagJaFzMnVUyM\n2TXS7Hau9lj7JpZIHXn9fmxXRRANWRi6VgAEuHKv1YtaH5U26tWXZVqbzm2A\nOE8SO1NJxDBFcETqdBdQXuyLFsYta5kfD5OaoLkYCEGO19+SO7addUREVM1f\nm82ZFdN5vkN9v7wohn03dp8o/Y/7TSObJwNOhVKZqYiQA7E2sIYy8iJy+3D8\nhfpftYYakYD1A7KHl6Z2UaC+8PPV8fpD29LjFCiiOsLarF91gdw8jL3cAyeS\n898ZpXHLJ8OYkC2AoTuJQP816fotr8aoMb/1BmgCemfEynrrlUcF8pqtHIam\nSpPzMlUKv1HulB1eXxDIO8oDni9lk6VK8iSzVZCraozda+OhED7De1hk+NRk\n6zgMpxD6lysLNjbpH1C2hBhm3tJAti2f7kdCVVMK9V5B+rUOnRwpxiLjZ326\nLsaYLiZDU1kB5Pf3893Wq3lb0fGYJ0qP+tOt4FgpKVSIxDWalpIr0BnhLMcu\nPRxigdeSNzJ9sT5Fog2G4sXFgbubpMlqsi7Q5ilUeKTZ1LzjmGsGkOIvW72j\n2wcKXFsnVCcBaFwFnvn8ozrPa1qaMak09tm8W7eRD3N4/bloYjy1GaBv/yZn\nSFyYK5LKWlSczBkT5S22WBEd0LPqluXBFG+ryLb438nZwl1RO31uI4sSXTk1\nLTB3NERUi2QsI5CHeXymuJTFc/MRiwP8eqRkOyB9NrWO+sc6bwpZ5PGoaZHm\n6Wo+VctCBMNrp/j3g4V57fUHA8BIASwT+5rDahuwIX5xLahD1JpvsmQIJZku\nMzo+93Lbikd+30wlqfpb+uoC1br8oXEFAniTA8RdhQ89SdyBZJ/hHU+KEfyn\nO5xUw5SSfJyqQrwmmWnnYFbcfHVtPkpOfkWbZYoc1Uu0X71KCaC0b52Vq5CY\natTyDD6S5uXfveZ4+ERXoufyZ9zNQhESlruJNqtFfwab8tCF2PDNLJgNVdUo\nTRQm1DZtfnzhpkPTRV1B9MaWIhIapnILzFoV1w1E8LgZUM+PPD+AUTbqaP/E\nX9+KAXJp3ZMcoD60gS37Y4opkIpL9XaPZyD6GkeumZC0SCBUtrdq3ZINwbyJ\nAZNd+gh0t0IW5SSD4P6AHSiGVb8XdJ9bvci+vWhgR970gfidAklBmVJTTAdW\nzJyojTxsO4GgdFDCtN6sEnY7d0qIEy/GDr5q7HMazRDQ54qA/b9/frNSkX6S\nsxpmqu1SekOLwFAOFJNGp8pyTAM/w4WxbqocQAhUod1LcBm0BRELduX/170w\n5mI6ZzGGAp9UgxRcLxQ2XuHLB5ljzTNPvbD3IFt9ojhrw1rvXAcHm3BYh413\nYqUOKvseGCJmrD/c3Ki2a4mNvGWb/OeL32a1dXRWvypYC36ocwEcN47dwBVX\nFjEyeYrS7pBVJLF9LloiZZDLJ8p6AHXq79MV6kypR3sr5tVbIbK2qDMJAdb1\nXnsidri7PVBOZoocv0cA4LXiegQ5cZ31rl06PXP7D+d4J1EudA1zfOoEnvjX\n4G8hhbDMqh4jYC0zmRsXV0h5Ncwlehv8qsZH6659nDTg/2stkk2RTNhOxjpu\nUFaGUHFrPEz4Hs4sq6Eg0yUIJmAQSoqtPdrffNrdOr1sHWre3ui+MhDg8psP\nvQXmVhGW8g==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-18T16:58:22.447+00:00\",\"changed\":[\"cloned from \\\"cs50-scikit-16\\\"\"],\"cloned_from\":\"cs50-scikit-16\"},{\"changed_at\":\"2026-02-18 16:58:25 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:34:23 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:34:42 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>

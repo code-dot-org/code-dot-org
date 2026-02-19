@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-02-17 21:14:09 UTC",
+    "serialized_at": "2026-02-19 00:58:51 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -340,6 +340,66 @@
       "seeding_key": {
         "lesson_activity.key": "6cf030b0-e481-4f88-9b2b-2c2a4509d6e2",
         "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5"
+      }
+    },
+    {
+      "key": "b327016d-19f8-4a20-bbd9-50d49948c1e4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b327016d-19f8-4a20-bbd9-50d49948c1e4",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5"
+      }
+    },
+    {
+      "key": "6d2bf39e-9d16-483d-8c82-3951264e446c",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6d2bf39e-9d16-483d-8c82-3951264e446c",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5"
+      }
+    },
+    {
+      "key": "c8bbebb8-f9c1-4795-9e58-a3e10ca853a0",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c8bbebb8-f9c1-4795-9e58-a3e10ca853a0",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5"
+      }
+    },
+    {
+      "key": "8c2e3635-7a6a-41a3-bac7-3eb370c0b39f",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8c2e3635-7a6a-41a3-bac7-3eb370c0b39f",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5"
+      }
+    },
+    {
+      "key": "a2b0dd80-358a-4d10-88da-bc5e53012d28",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a2b0dd80-358a-4d10-88da-bc5e53012d28",
+        "lesson.key": "lesson-10",
         "lesson_group.key": "",
         "script.name": "6-12-aif-s2-unit5"
       }
@@ -837,6 +897,71 @@
       "seeding_key": {
         "activity_section.key": "5f3099e5-2923-40c2-9197-c76f99c02e36",
         "lesson_activity.key": "6cf030b0-e481-4f88-9b2b-2c2a4509d6e2"
+      }
+    },
+    {
+      "key": "85e80e66-dd80-4172-bfce-73f2c75ca62b",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "85e80e66-dd80-4172-bfce-73f2c75ca62b",
+        "lesson_activity.key": "6cf030b0-e481-4f88-9b2b-2c2a4509d6e2"
+      }
+    },
+    {
+      "key": "9f14d4dc-2e65-4143-a34b-a528a9553a57",
+      "position": 1,
+      "properties": {
+        "progression_name": "Vocab: Local Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "9f14d4dc-2e65-4143-a34b-a528a9553a57",
+        "lesson_activity.key": "b327016d-19f8-4a20-bbd9-50d49948c1e4"
+      }
+    },
+    {
+      "key": "807d5b1e-9788-4bd4-ab96-573f73931d61",
+      "position": 1,
+      "properties": {
+        "progression_name": "Vocab: Remote Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "807d5b1e-9788-4bd4-ab96-573f73931d61",
+        "lesson_activity.key": "6d2bf39e-9d16-483d-8c82-3951264e446c"
+      }
+    },
+    {
+      "key": "7c2257c0-aea8-419f-93aa-e1b744f029be",
+      "position": 1,
+      "properties": {
+        "progression_name": "Create an App Shell"
+      },
+      "seeding_key": {
+        "activity_section.key": "7c2257c0-aea8-419f-93aa-e1b744f029be",
+        "lesson_activity.key": "c8bbebb8-f9c1-4795-9e58-a3e10ca853a0"
+      }
+    },
+    {
+      "key": "8f0e2155-f6db-4377-a1d3-1a2c75da151d",
+      "position": 1,
+      "properties": {
+        "progression_name": "Store Backup Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "8f0e2155-f6db-4377-a1d3-1a2c75da151d",
+        "lesson_activity.key": "8c2e3635-7a6a-41a3-bac7-3eb370c0b39f"
+      }
+    },
+    {
+      "key": "aacb6777-4c10-4fe9-af3b-7e9966627a00",
+      "position": 1,
+      "properties": {
+        "progression_name": "Implement Hybrid Logic"
+      },
+      "seeding_key": {
+        "activity_section.key": "aacb6777-4c10-4fe9-af3b-7e9966627a00",
+        "lesson_activity.key": "a2b0dd80-358a-4d10-88da-bc5e53012d28"
       }
     }
   ],
@@ -2222,6 +2347,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson9-vocab1-2025-pilot"
+        ],
         "progression": "Vocab: Human-Centered Reliability"
       },
       "bonus": false,
@@ -2244,6 +2372,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson9-vocabsummary1-2025-pilot"
+        ],
         "progression": "Vocab: Human-Centered Reliability"
       },
       "bonus": false,
@@ -2266,6 +2397,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson9-sketchlab-test-2025-pilot"
+        ],
         "progression": "Drafting the Web App State"
       },
       "bonus": false,
@@ -2293,7 +2427,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "designing-reliable-apps-lesson9-level4-test-2025-pilot"
+          "designing-reliable-apps-lesson9-level4-weblab-2025-pilot"
         ],
         "lesson.key": "lesson-9",
         "lesson_group.key": "",
@@ -2301,7 +2435,7 @@
         "activity_section.key": "0a51a104-1727-44de-8b34-33692819b3c7"
       },
       "level_keys": [
-        "designing-reliable-apps-lesson9-level4-test-2025-pilot"
+        "designing-reliable-apps-lesson9-level4-weblab-2025-pilot"
       ]
     },
     {
@@ -2310,6 +2444,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson9-level5-test-2025-pilot"
+        ],
         "progression": "Getting Feedback"
       },
       "bonus": false,
@@ -2324,6 +2461,160 @@
       },
       "level_keys": [
         "designing-reliable-apps-lesson9-level5-test-2025-pilot"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Local Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson10-level1-test_2025-pilot"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "9f14d4dc-2e65-4143-a34b-a528a9553a57"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson10-level1-test_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Local Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson10-level2-test_2025-pilot"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "9f14d4dc-2e65-4143-a34b-a528a9553a57"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson10-level2-test_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Remote Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson10-level3-test_2025-pilot"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "807d5b1e-9788-4bd4-ab96-573f73931d61"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson10-level3-test_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Remote Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson10-level4-test_2025-pilot"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "807d5b1e-9788-4bd4-ab96-573f73931d61"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson10-level4-test_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Create an App Shell"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson10-level5-test_2025-pilot"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "7c2257c0-aea8-419f-93aa-e1b744f029be"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson10-level5-test_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Store Backup Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson10-level6-test_2025-pilot"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "8f0e2155-f6db-4377-a1d3-1a2c75da151d"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson10-level6-test_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Implement Hybrid Logic"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson10-level7-test_2025-pilot"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "aacb6777-4c10-4fe9-af3b-7e9966627a00"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson10-level7-test_2025-pilot"
       ]
     }
   ],
@@ -3026,9 +3317,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson9-level4-test-2025-pilot",
+        "level.key": "designing-reliable-apps-lesson9-level4-weblab-2025-pilot",
         "script_level.level_keys": [
-          "designing-reliable-apps-lesson9-level4-test-2025-pilot"
+          "designing-reliable-apps-lesson9-level4-weblab-2025-pilot"
         ],
         "lesson.key": "lesson-9",
         "lesson_group.key": "",
@@ -3046,6 +3337,90 @@
         "lesson_group.key": "",
         "script.name": "6-12-aif-s2-unit5",
         "activity_section.key": "5f3099e5-2923-40c2-9197-c76f99c02e36"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson10-level1-test_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson10-level1-test_2025-pilot"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "9f14d4dc-2e65-4143-a34b-a528a9553a57"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson10-level2-test_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson10-level2-test_2025-pilot"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "9f14d4dc-2e65-4143-a34b-a528a9553a57"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson10-level3-test_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson10-level3-test_2025-pilot"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "807d5b1e-9788-4bd4-ab96-573f73931d61"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson10-level4-test_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson10-level4-test_2025-pilot"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "807d5b1e-9788-4bd4-ab96-573f73931d61"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson10-level5-test_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson10-level5-test_2025-pilot"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "7c2257c0-aea8-419f-93aa-e1b744f029be"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson10-level6-test_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson10-level6-test_2025-pilot"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "8f0e2155-f6db-4377-a1d3-1a2c75da151d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson10-level7-test_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson10-level7-test_2025-pilot"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "aacb6777-4c10-4fe9-af3b-7e9966627a00"
       }
     }
   ],
