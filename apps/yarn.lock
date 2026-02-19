@@ -11034,13 +11034,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"balanced-match@npm:^0.4.1":
-  version: 0.4.2
-  resolution: "balanced-match@npm:0.4.2"
-  checksum: 10/205ebb42ce8529fa8e043a808b41bfb9818d5f98a8eb76a1cd5483f8a98dd0baefc8a9d940f36b591b1316a04f56b35c32b60ac9b1f848e41e4698672cec6c1e
-  languageName: node
-  linkType: hard
-
 "balanced-match@npm:^1.0.0":
   version: 1.0.2
   resolution: "balanced-match@npm:1.0.2"
@@ -11638,16 +11631,6 @@ __metadata:
   dependencies:
     big-integer: "npm:^1.6.44"
   checksum: 10/15d31c1b0c7e0fb384e96349453879a33609d92d91b55a9ccee04b4be4b0645f1c823253d73326a1a23104521fbc45c2dd97fb05adf61863841b68cbb2ca7a3d
-  languageName: node
-  linkType: hard
-
-"brace-expansion@npm:^1.0.0":
-  version: 1.1.6
-  resolution: "brace-expansion@npm:1.1.6"
-  dependencies:
-    balanced-match: "npm:^0.4.1"
-    concat-map: "npm:0.0.1"
-  checksum: 10/0261df01acbeba30ab94bbfb138fc785050ad806176bbaaab44d4176b5496718020e66832a51256a85864aa8d70d0b2f8a4d08346f3f1fca217084277e9a98ec
   languageName: node
   linkType: hard
 
@@ -22219,25 +22202,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"minimatch@npm:2 || 3, minimatch@npm:^3.0.4, minimatch@npm:~3.0.2":
-  version: 3.0.4
-  resolution: "minimatch@npm:3.0.4"
-  dependencies:
-    brace-expansion: "npm:^1.1.7"
-  checksum: 10/3b3f17f76582417dd139646505f1d1bb5f148ea5191eb98fe73cd41224a678dadb94cc674c7d06b36de4ab5c303f039cfd7cd2d089348d6f70d04db169cf3770
-  languageName: node
-  linkType: hard
-
-"minimatch@npm:^3.0.0, minimatch@npm:^3.0.2":
-  version: 3.0.3
-  resolution: "minimatch@npm:3.0.3"
-  dependencies:
-    brace-expansion: "npm:^1.0.0"
-  checksum: 10/0bd9ce1d39084305963fa291153755ca549dabad9ec5f7065607df4176ce1b5aef1c2ead5c96f71b0de27f87b8be45909748c72d214f67e3765931cfd7a6bccf
-  languageName: node
-  linkType: hard
-
-"minimatch@npm:^3.0.5, minimatch@npm:^3.1.1, minimatch@npm:^3.1.2":
+"minimatch@npm:2 || 3, minimatch@npm:^3.0.0, minimatch@npm:^3.0.2, minimatch@npm:^3.0.4, minimatch@npm:^3.0.5, minimatch@npm:^3.1.1, minimatch@npm:^3.1.2":
   version: 3.1.2
   resolution: "minimatch@npm:3.1.2"
   dependencies:
@@ -22255,16 +22220,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"minimatch@npm:^9.0.1":
-  version: 9.0.3
-  resolution: "minimatch@npm:9.0.3"
-  dependencies:
-    brace-expansion: "npm:^2.0.1"
-  checksum: 10/c81b47d28153e77521877649f4bab48348d10938df9e8147a58111fe00ef89559a2938de9f6632910c4f7bf7bb5cd81191a546167e58d357f0cfb1e18cecc1c5
-  languageName: node
-  linkType: hard
-
-"minimatch@npm:^9.0.4":
+"minimatch@npm:^9.0.1, minimatch@npm:^9.0.4":
   version: 9.0.5
   resolution: "minimatch@npm:9.0.5"
   dependencies:
@@ -22273,7 +22229,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"minimatch@npm:~3.0.4":
+"minimatch@npm:~3.0.2, minimatch@npm:~3.0.4":
   version: 3.0.8
   resolution: "minimatch@npm:3.0.8"
   dependencies:
