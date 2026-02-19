@@ -64,6 +64,13 @@ class ConnectionInstructions extends React.Component {
               .requestPort({filters: WEB_SERIAL_FILTERS})
               .then(port => {
                 this.setState({webSerialPort: port});
+              })
+              .catch(err => {
+                // User cancelled the port picker or another error occurred (e.g. no serial support).
+                // Don't treat as fatal - just leave state unchanged so they can try again.
+                if (err?.name !== 'NotFoundError') {
+                  console.warn('Web Serial requestPort failed:', err);
+                }
               });
           }}
         />

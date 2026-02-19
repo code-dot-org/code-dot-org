@@ -31,11 +31,18 @@ export class ConnectionFailedError extends MakerError {
  * @return {Error|MakerError} The original error, or a wrapped version of it.
  */
 export function wrapKnownMakerErrors(originalError) {
+  // User closed the Web Serial port picker without selecting a port.
+  if (
+    originalError?.name === 'NotFoundError' &&
+    originalError?.message?.includes('No port selected')
+  ) {
+    return new ConnectionCanceledError();
+  }
   // Known failure mode: johnny-five emits this timeout error when it's unable
   // to communicate with the board firmware after ten seconds.
   // https://github.com/code-dot-org/johnny-five/blob/v0.10.10-cdo.0/lib/board.js#L388-L401
   if (
-    originalError.message.includes(
+    originalError?.message?.includes(
       'A timeout occurred while connecting to the Board'
     )
   ) {
