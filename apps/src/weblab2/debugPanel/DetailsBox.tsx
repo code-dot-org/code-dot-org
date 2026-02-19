@@ -69,9 +69,11 @@ const DetailsBox: React.FunctionComponent<DetailsBoxProps> = ({
               <OverlineThreeText className={moduleStyles.detailsFieldLabel}>
                 {field.label}
               </OverlineThreeText>
-              <BodyThreeText className={moduleStyles.detailsFieldValue}>
-                <pre>{field.value}</pre>
-              </BodyThreeText>
+              <pre className={moduleStyles.detailsFieldValueContainer}>
+                <BodyThreeText className={moduleStyles.detailsFieldValue}>
+                  {field.value}
+                </BodyThreeText>
+              </pre>
             </div>
           ));
 

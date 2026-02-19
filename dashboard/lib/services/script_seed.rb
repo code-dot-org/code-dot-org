@@ -227,6 +227,14 @@ module Services
         # Course version must be set before resources and vocabulary are imported. If the
         # script is in a unit group, we must wait and let the next seed step set
         # the course version on the unit group before resources and vocabulary can be imported.
+        #
+        # If this script has resources or vocabulary to import but is missing its
+        # course version, clear the md5 so incremental seeding will retry this
+        # script on the next run (once the course version is established).
+        if md5 && !seed_context.script.get_course_version &&
+            (resources_data&.any? || vocabularies_data&.any?)
+          seed_context.script.update_column(:md5, nil)
+        end
 
         seed_context.lesson_groups = import_lesson_groups(lesson_groups_data, seed_context)
         seed_context.lessons = import_lessons(lessons_data, seed_context)

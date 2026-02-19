@@ -1,5 +1,5 @@
 import Link from '@code-dot-org/component-library/link';
-import Typography from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useEffect} from 'react';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -97,19 +97,20 @@ const AgeGatedStudentsModal: React.FC<Props> = ({
       >
         <div>
           <Typography
-            semanticTag="h2"
-            visualAppearance="heading-md"
             className={styles.modalHeader}
+            component="h2"
+            variant="h4"
+            gutterBottom
           >
             {i18n.childAccountPolicy_studentParentalConsentStatus()}
           </Typography>
           <hr />
-          <Typography semanticTag="p" visualAppearance="body-two">
+          <Typography variant="body2" gutterBottom>
             {i18n.childAccountPolicy_studentParentalConsentNotice({
               startDate: startDateText,
             })}
           </Typography>
-          <Typography semanticTag="p" visualAppearance="body-two">
+          <Typography variant="body2" gutterBottom>
             <Link
               href={helpDocsUrl}
               onClick={modalDocumentationClicked}

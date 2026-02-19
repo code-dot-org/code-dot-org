@@ -140,6 +140,17 @@ const InnerHTMLPreview = () => {
           },
           parentOrigin
         );
+      } else if (
+        event.data.type === ProjectServiceWorkerMessageType.CONSOLE_LOG
+      ) {
+        window.parent.postMessage(
+          {
+            type: IframeMessageType.CONSOLE_LOG,
+            level: event.data.level,
+            args: event.data.args,
+          },
+          parentOrigin
+        );
       }
     };
     return () => {

@@ -1,5 +1,5 @@
 import Button, {buttonColors} from '@code-dot-org/component-library/button';
-import {Heading4} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useState} from 'react';
 import {ControlLabel, Fade, FormControl, FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
@@ -53,9 +53,13 @@ const BulkSetModal: React.FC<BulkSetModalProps> = ({
   return (
     <Fade in={isOpen} mountOnEnter unmountOnExit>
       <AccessibleDialog id="us-state-column-bulk-set-modal" onClose={onClose}>
-        <Heading4 id="us-state-column-bulk-set-modal-title">
+        <Typography
+          id="us-state-column-bulk-set-modal-title"
+          variant="h4"
+          gutterBottom
+        >
           {i18n.studentUsStateUpdatesModal_title()}
-        </Heading4>
+        </Typography>
 
         <hr aria-hidden="true" />
 
