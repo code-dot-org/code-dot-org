@@ -40,7 +40,7 @@ import {
   onSaveComplete,
   onSaveFail,
   onSaveNoop,
-  clearHasSetStartingCustomizations,
+  clearHasSetInitialCustomizations,
   resetToDefaultAiCustomizations,
   selectAllFieldsHidden,
   sendAnalytics,
@@ -106,8 +106,8 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     state.lab.permissions?.includes(PERMISSIONS.LEVELBUILDER)
   );
 
-  const hasSetStartingCustomizations = useAppSelector(
-    state => state.aichat.hasSetStartingCustomizations
+  const hasSetInitialCustomizations = useAppSelector(
+    state => state.aichat.hasSetInitialCustomizations
   );
 
   const projectManager = Lab2Registry.getInstance().getProjectManager();
@@ -282,7 +282,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
   }, [dialogControl, resetProject]);
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
-    dispatch(clearHasSetStartingCustomizations());
+    dispatch(clearHasSetInitialCustomizations());
   });
 
   // Only recreate modelParameters when relevant customizations are updated.
@@ -381,7 +381,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
               headerClassName={moduleStyles.panelHeader}
               rightHeaderContent={<AiChatHeaderButtons />}
             >
-              {hasSetStartingCustomizations && (
+              {hasSetInitialCustomizations && (
                 <ChatWorkspace
                   modelParameters={modelParameters}
                   clientType={AiChatClientTypes.AI_CHAT_LAB}

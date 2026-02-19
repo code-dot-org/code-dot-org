@@ -21,6 +21,6 @@ export {
   stagedFilesLimitExceeded,
   clearStagedFilesAlert,
   clearStagedFiles,
-  clearHasSetStartingCustomizations,
+  clearHasSetInitialCustomizations,
   setChatWorkspaceSelectedTab,
 } from './slice';

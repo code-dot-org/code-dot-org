@@ -78,7 +78,7 @@ const initialState: AichatState = {
   saveError: undefined,
   showResetMessage: false,
   showUnsupportedModelMessage: false,
-  hasSetStartingCustomizations: false,
+  hasSetInitialCustomizations: false,
   chatWorkspaceSelectedTab: null,
   userAddedSelectionContext: {},
   artifactType: undefined,
@@ -261,11 +261,11 @@ const aichatSlice = createSlice({
       // Reset sent message and updated customizations flags
       state.hasSentMessage = false;
       state.hasUpdatedCustomizations = false;
-      state.hasSetStartingCustomizations = true;
+      state.hasSetInitialCustomizations = true;
       state.showUnsupportedModelMessage = showUnsupportedModelMessage;
     },
-    clearHasSetStartingCustomizations: state => {
-      state.hasSetStartingCustomizations = false;
+    clearHasSetInitialCustomizations: state => {
+      state.hasSetInitialCustomizations = false;
     },
     resetToDefaultAiCustomizations: (
       state,
@@ -485,7 +485,7 @@ export const {
   stagedFilesLimitExceeded,
   clearStagedFilesAlert,
   setSaveError,
-  clearHasSetStartingCustomizations,
+  clearHasSetInitialCustomizations,
   setChatWorkspaceSelectedTab,
   addItemToUserAddedSelectionContext,
   removeItemFromUserAddedSelectionContext,
