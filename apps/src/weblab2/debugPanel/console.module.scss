@@ -1,0 +1,8 @@
+.consoleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow-y: auto;
+  height: 100%;
+  padding: 8px;
+}

@@ -2,6 +2,7 @@ import React from 'react';
 
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 
+import Console from './Console';
 import DebugPanelLeftHeaderButtons from './DebugPanelLeftHeaderButtons';
 import DebugPanelRightHeaderButtons from './DebugPanelRightHeaderButtons';
 import NetworkPanel from './NetworkPanel';
@@ -30,7 +31,7 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
       }
     >
       {selectedPanel === 'network' && <NetworkPanel />}
-      {selectedPanel === 'console' && <div>Console!</div>}
+      {selectedPanel === 'console' && <Console />}
     </PanelContainer>
   );
 };
