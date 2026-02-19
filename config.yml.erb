@@ -253,9 +253,8 @@ acapela_ephemeral_password:
 new_relic_license_key:
 newrelic_logging: false
 
-# Credentials for OpenTelemetry OTLP exporter. Used to send OpenTelemetry traces, logs, and metrics.
-otlp_endpoint:
-otlp_api_key:
+# Enables OpenTelemetry instrumentation and exporting to the OpenTelemetry Collector. See `dashboard/config/initializers/opentelemetry.rb` for more details.
+enable_opentelemetry: false
 
 # Credentials for Google-federated AWS access.
 # (Deprecated: move these configuration values to AWS config file)
