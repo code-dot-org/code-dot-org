@@ -79,6 +79,7 @@ namespace :seed do
     ui-test-shared-unit
     ui-test-versioned-script-2017
     ui-test-versioned-script-2019
+    ui-test-vocab
     ui-test-csa-family-script
     ui-test-teacher-pl-course
     ui-test-self-paced-pl
@@ -377,6 +378,7 @@ namespace :seed do
       ui-test-self-paced-pl
       ui-test-versioned-script-2017
       ui-test-versioned-script-2019
+      ui-test-vocab
       ui-test-unnumbered-lessons
     ).each do |course_name|
       UnitGroup.load_from_path("#{CURRICULUM_CONTENT_DIR}/test/ui/config/courses/#{course_name}.course")
@@ -517,6 +519,7 @@ namespace :seed do
       ui-test-facilitator-pl-course
       ui-test-single-unit-course
       ui-test-versioned-course
+      ui-test-vocab
       ui-test-unnumbered-lessons
     ).each do |course_offering_name|
       CourseOffering.seed_record("#{CURRICULUM_CONTENT_DIR}/test/ui/config/course_offerings/#{course_offering_name}.json")

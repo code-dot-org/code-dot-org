@@ -1,0 +1,24 @@
+{
+  "name": "ui-test-vocab",
+  "script_names": [
+    "ui-test-vocab"
+  ],
+  "original_script_names": [
+    "ui-test-vocab"
+  ],
+  "published_state": "stable",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "ui-test-vocab",
+    "numbered_units": "auto",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}
