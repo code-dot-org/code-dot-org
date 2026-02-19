@@ -11,8 +11,6 @@ const SET_USER_SIGNED_IN = 'currentUser/SET_USER_SIGNED_IN';
 const SET_USER_TYPE = 'currentUser/SET_USER_TYPE';
 const SET_OVER_21 = 'currentUser/SET_OVER_21';
 const SET_USER_ROLE_IN_COURSE = 'currentUser/SET_USER_ROLE_IN_COURSE';
-const SET_HAS_SEEN_STANDARDS_REPORT =
-  'currentUser/SET_HAS_SEEN_STANDARDS_REPORT';
 const SET_INITIAL_DATA = 'currentUser/SET_INITIAL_DATA';
 const SET_MUTE_MUSIC = 'currentUser/SET_MUTE_MUSIC';
 const SET_SORT_BY_FAMILY_NAME = 'currentUser/SET_SORT_BY_FAMILY_NAME';
@@ -38,11 +36,6 @@ export const setCurrentUserName = userName => ({
   type: SET_CURRENT_USER_NAME,
   userName,
 });
-export const setCurrentUserHasSeenStandardsReportInfo =
-  hasSeenStandardsReport => ({
-    type: SET_HAS_SEEN_STANDARDS_REPORT,
-    hasSeenStandardsReport,
-  });
 export const setUserSignedIn = isSignedIn => ({
   type: SET_USER_SIGNED_IN,
   isSignedIn,
@@ -120,7 +113,6 @@ const initialState = {
   userType: 'unknown',
   userRoleInCourse: CourseRoles.Unknown,
   signInState: SignInState.Unknown,
-  hasSeenStandardsReportInfo: false,
   aiDifferentiationEnabled: null,
   showAITALessonSummary: false,
   showAITAPodcasts: false,
@@ -148,12 +140,6 @@ export default function currentUser(state = initialState, action) {
     return {
       ...state,
       userName: action.userName,
-    };
-  }
-  if (action.type === SET_HAS_SEEN_STANDARDS_REPORT) {
-    return {
-      ...state,
-      hasSeenStandardsReportInfo: action.hasSeenStandardsReport,
     };
   }
   if (action.type === SET_USER_SIGNED_IN) {

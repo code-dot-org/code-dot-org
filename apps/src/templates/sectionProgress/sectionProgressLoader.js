@@ -7,15 +7,9 @@ import {
   processServerSectionProgress,
   lessonProgressForSection,
 } from '@cdo/apps/templates/progress/progressHelpers';
-import {
-  fetchStandardsCoveredForScript,
-  fetchStudentLevelScores,
-} from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 
-import {ViewType} from './sectionProgressConstants';
 import {
   startLoadingProgress,
-  setCurrentView,
   finishLoadingProgress,
   addDataByUnit,
   startRefreshingProgress,
@@ -32,12 +26,9 @@ export function loadUnitProgress(scriptId, sectionId, courseId, unitPosition) {
   let progressLatencyMs = -1;
   let structureLatencyMs = -1;
 
-  // TODO: Save Standards data in a way that allows us
-  // not to reload all data to get correct standards data
   if (
     state.studentLevelProgressByUnit[scriptId] &&
-    state.unitDataByUnit[scriptId] &&
-    state.currentView !== ViewType.STANDARDS
+    state.unitDataByUnit[scriptId]
   ) {
     if (state.isRefreshingProgress) {
       return;
@@ -75,13 +66,6 @@ export function loadUnitProgress(scriptId, sectionId, courseId, unitPosition) {
           sectionData.lessonExtras
         ),
       };
-
-      if (
-        state.currentView === ViewType.STANDARDS &&
-        !scriptData.hasStandards
-      ) {
-        getStore().dispatch(setCurrentView(ViewType.SUMMARY));
-      }
     });
 
   const numPages = Math.ceil(students.length / NUM_STUDENTS_PER_PAGE);
@@ -127,11 +111,6 @@ export function loadUnitProgress(scriptId, sectionId, courseId, unitPosition) {
     getStore().dispatch(addDataByUnit(sectionProgress));
     getStore().dispatch(finishLoadingProgress());
     getStore().dispatch(finishRefreshingProgress());
-
-    if (sectionProgress.unitDataByUnit[scriptId].hasStandards) {
-      getStore().dispatch(fetchStandardsCoveredForScript(scriptId));
-      getStore().dispatch(fetchStudentLevelScores(scriptId, sectionId));
-    }
   });
 }
 
@@ -142,7 +121,6 @@ function postProcessDataByScript(scriptData, includeBonusLevels) {
     csf: !!scriptData.csf,
     isCsd: scriptData.isCsd,
     isCsp: scriptData.isCsp,
-    hasStandards: scriptData.hasStandards,
     title: scriptData.title,
     path: scriptData.path,
     lessons: scriptData.lessons,

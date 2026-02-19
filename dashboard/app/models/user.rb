@@ -173,7 +173,6 @@ class User < ApplicationRecord
     display_theme
     mute_music
     last_seen_school_info_interstitial
-    has_seen_standards_report_info_dialog
     oauth_refresh_token
     oauth_token
     oauth_token_expiration
