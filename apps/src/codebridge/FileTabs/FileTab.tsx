@@ -1,8 +1,8 @@
 import CloseButton from '@code-dot-org/component-library/closeButton';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {BodyFourText} from '@code-dot-org/component-library/typography';
 import {ProjectFile} from '@codebridge/types';
 import {getFileIconNameAndStyle} from '@codebridge/utils';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import {throttle} from 'lodash';
 import React, {useEffect, useMemo, useRef} from 'react';
@@ -91,7 +91,7 @@ const FileTab = ({file}: FileTabProps) => {
           iconStyle={iconStyle}
           className={iconClassName}
         />
-        <BodyFourText noMargin>{file.name}</BodyFourText>
+        <Typography variant="body4">{file.name}</Typography>
       </div>
       <CloseButton
         onClick={() => dispatch(closeFileThunk(file.id))}

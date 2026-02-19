@@ -295,7 +295,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
               path={TEACHER_NAVIGATION_PATHS.unitOverview}
               element={<TeacherUnitOverview />}
             />
-            {experiments.isEnabled('student_snapshot') && (
+            {experiments.isEnabled('student-snapshot') && (
               <Route
                 path={TEACHER_NAVIGATION_PATHS.studentSnapshot}
                 element={
