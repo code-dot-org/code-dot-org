@@ -1,9 +1,5 @@
 import {LinkButton} from '@code-dot-org/component-library/button';
-import {
-  BodyThreeText,
-  BodyTwoText,
-  Heading5,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import moduleStyles from './link-to-rubric-editor.module.scss';
@@ -20,19 +16,21 @@ interface LinkToRubricEditorProps {
 export default function LinkToRubricEditor({lessons}: LinkToRubricEditorProps) {
   return (
     <div className={moduleStyles.linkContainer}>
-      <Heading5>Add or Edit Rubrics</Heading5>
-      <BodyThreeText>
+      <Typography variant="h5" gutterBottom>
+        Add or Edit Rubrics
+      </Typography>
+      <Typography variant="body3" gutterBottom>
         Rubrics are defined on the lesson. The level the rubric is assigned to
         must be submittable. Below are links to the lessons that this level is a
         part of. You must make this level submittable and save it before you
         will be able to assign a rubric to it. The edit/add links will open in a
         new tab.
-      </BodyThreeText>
+      </Typography>
       {lessons.length === 0 && (
-        <BodyTwoText>
+        <Typography variant="body2" gutterBottom>
           This level is not in any lessons. Assign it to a lesson to add or edit
           the rubric for the lesson.
-        </BodyTwoText>
+        </Typography>
       )}
       <div className={moduleStyles.rubricButtonContainer}>
         {lessons.map(lesson => (
@@ -52,10 +50,14 @@ export default function LinkToRubricEditor({lessons}: LinkToRubricEditorProps) {
                 size={'s'}
               />
             )}
-            <BodyTwoText className={moduleStyles.lessonText}>
+            <Typography
+              className={moduleStyles.lessonText}
+              variant="body2"
+              gutterBottom
+            >
               <b>Script:</b> {lesson.script_name || 'NONE'}, <b>Lesson:</b>{' '}
               {lesson.name}
-            </BodyTwoText>
+            </Typography>
           </div>
         ))}
       </div>
