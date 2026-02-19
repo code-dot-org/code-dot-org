@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-02-18T16:56:15.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# CIW AI Associate Standard: 2.6\n# Standard Description: Explain the importance of feature engineering.\n#\n# Rationale: Sometimes data comes in different \"sizes\". For example, Age (0-100) \n# and Salary (20,000 - 200,000). If we don't fix this, the AI might think \n# Salary is more important just because the numbers are bigger! \n# This tutorial shows how \"Scaling\" helps.\n\n\"\"\"\nWelcome! Have you ever tried to compare Apples to Oranges? \nIn AI, we often have data that looks very different. \n- One column might be \"Years of Experience\" (small numbers like 1, 5, 10).\n- Another might be \"Annual Salary\" (huge numbers like 50000, 100000).\n\nIf we aren't careful, the AI will ignore the small numbers. \nWe fix this with \"Feature Scaling\".\n\"\"\"\n\nfrom sklearn.datasets import load_wine\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.neighbors import KNeighborsClassifier\nimport matplotlib.pyplot as plt\n\n# --- LOAD DATA ---\n# The Wine dataset has features with very different scales (e.g., Proline vs Alcohol)\nwine = load_wine()\nX, y = wine.data, wine.target\n\n# We'll use just two features to make it easy to visualize:\n# Feature 0: Alcohol (looks like 11.0 - 14.0)\n# Feature 12: Proline (looks like 200 - 1600)\nX_subset = X[:, [0, 12]]\n\n# Split the data\nX_train, X_test, y_train, y_test = train_test_split(X_subset, y, random_state=42)\n\n# --- PART 1: WITHOUT SCALING ---\nprint(\"--- Part 1: Training WITHOUT Scaling ---\")\nknn_raw = KNeighborsClassifier()\nknn_raw.fit(X_train, y_train)\nscore_raw = knn_raw.score(X_test, y_test)\nprint(f\"Accuracy with raw data: {score_raw:.2%}\")\n\n# --- PART 2: WITH SCALING ---\nprint(\"--- Part 2: Training WITH Scaling ---\")\n# StandardScaler shifts the data so the mean is 0 and the scale is 1.\nscaler = StandardScaler()\nX_train_scaled = scaler.fit_transform(X_train)\nX_test_scaled = scaler.transform(X_test) # Note: We use .transform() on test data, not .fit_transform()!\n\nknn_scaled = KNeighborsClassifier()\nknn_scaled.fit(X_train_scaled, y_train)\nscore_scaled = knn_scaled.score(X_test_scaled, y_test)\nprint(f\"Accuracy with scaled data: {score_scaled:.2%}\")\n\nprint(\"Notice the improvement! The AI can now 'see' both features equally.\")\n\n# --- VISUALIZATION ---\nplt.figure(figsize=(10, 4))\n\n# Raw Data Plot\nplt.subplot(1, 2, 1)\nplt.scatter(X_train[:, 0], X_train[:, 1], c=y_train, cmap='viridis', edgecolors='k')\nplt.title(\"Raw Data (Look at the axes!)\")\nplt.xlabel(\"Alcohol\")\nplt.ylabel(\"Proline\")\n\n# Scaled Data Plot\nplt.subplot(1, 2, 2)\nplt.scatter(X_train_scaled[:, 0], X_train_scaled[:, 1], c=y_train, cmap='viridis', edgecolors='k')\nplt.title(\"Scaled Data (Centered at 0)\")\nplt.xlabel(\"Alcohol (Scaled)\")\nplt.ylabel(\"Proline (Scaled)\")\n\nplt.tight_layout()\nplt.show()\n\n\"\"\"\n--- YOUR TURN ---\nWe've loaded the 'Breast Cancer' dataset for you. \n1. Train a KNeighborsClassifier on the raw data and print the score.\n2. Scale the data using StandardScaler.\n3. Train a new KNeighborsClassifier on the scaled data and print the score.\n\"\"\"\n\n# STARTING CODE FOR STUDENT:\nfrom sklearn.datasets import load_breast_cancer\n\ndata = load_breast_cancer()\nX_bc = data.data\ny_bc = data.target\n\nX_train_bc, X_test_bc, y_train_bc, y_test_bc = train_test_split(X_bc, y_bc, random_state=42)\n\n# TODO: Train and score on RAW data\n\n# TODO: Create a scaler, fit_transform the train data, and transform the test data\n\n# TODO: Train and score on SCALED data\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFTDG6jyYgtI/CEUE/82dEkG4hlI8OLsdjJD0In8S\n03BB+jPkGgyYB0/9C3zqHMHEFpKeCsugYbpGMxzBNwrd7qASagJaFzMnVUyM\n2TXS7Hau9lj7JpZIHXn9fmxXRRANWblzHEdl+MzWzWRgTdWP2zWfp5pzKzsO\nyj7IuP6hRCgSnjasDPDhf3zdz/huXcXxfrCAfgOGYfscwahFhv1PUQejhyYj\nTzGsv+pHxH+fx3sQU+c0/1h3fNmyk2EYhtENHnQrTedfVuc3BX7mLccIR5mi\nWYayCwu38LtU45MAbEggyYtpaNj4800cS5x+OgYqci9ZRDvhE217Q8ziMmc7\n7v5kPRQ2TSjuYnewD0ZaOabkqwn+96b0jg1PtlrtNz2dOMtnY0+3XJqGEGRe\n3jmeMgXydEgCu2AEaCyNMq3YZ5ZxHwQ/MxBp9X5YVQh6VrtHaiF0lJAk86gs\ni5uknn+3V7p5n0xcGM8ZJTVJ5NF2Sgu2RwPeX1EXzvhnHeNvMFogbqOi7wsL\nbaJAZmESPaOOs5ObWwA7/oK5678kRcFtwB/l2PGK3Jx/DA4hMz1wPrU5MB2+\n6ryC76egraU0ywEFhrBjQEte8aP2hIutAjz2vqV26NtmxxWa+PJmkRalW+bz\nsLOylGNnCXedHEmslINUh9HPRVXihHgDR8QuQaU0tilhGPMAvQCpaxsit2ED\n6f1v7ZrBHcFlZhyq3DsgyKDg+zqfAQgnFJcU+fyjV5knTP9pMd8k75Lesa86\n2MgaHH3dZclh6+tBy6VUw1+6SfwaMjA6tWcvrny1ufWeF7Lr2WJ4pL+VBrOW\nSLs+6MbvELoXbiZ0D8jW9h6UCja/vJwOKzPBmbD9GyAiRcWKfBLOR9/auEcP\nSC6ZURM8GSJky8UP+ApyPYtEfsKOguSJMtPy+Xls2sn2ZbQzHpA8pPHA6YJQ\nrhnDSwDXj5Y4luf/Udtr58fqEQL6Irv+lxxzhkLp8r2pAwc7ciwNfAW+HfmY\nE4Ruop8om9BLc3fTJ+lU0b6vuLxpYKtI27Y5INwxkxqY/Az+0dE5uM3P+Zhj\nYjx83+4KdbrurO+Yn+Rs0vFZhy3VKQk9nd3tNMZAC7P5lXgAJpzwK+mYs9Cv\n0dKI8m3yicI8gv7+3sJnDcotYom+3/wxA9Wl/wKJoPZH6OKeYgKN9QxR9Fc3\nAV3o/EoLpN50i6TACRWqh1UEY7jzu9F9f8EdZQQW78WEkUW0tFmzbr1Y/oCs\nEdMmsBwxvwv5fETm6phTE2CwlYy1R1S2+2WtFAirUNpP+ds34c5gs5AjlSZP\nCV3/4rpGgPWAkAVZqW/Cxj5G7sx5koop6FIlrAVbpH876SPj6yN94RZxtU2v\nJrlnm1+ydeinhFC9JKBhz+9UDwX+yj1jrTgJJnsfR3nj6HpmfUtyNhi+4bKb\n01b2fcW1I0nRqFH2INc3R+VtyPhFyimd+8d2YmkZ+/NFCvElsGAt+enh0o4E\nxDcsYC9011meA3utoXkmQZvEVcdJIPWy7YSl6WbvNEY2p6C5Wm2qRaqwRMEd\nGgySakm/Gag2gi8FLo2vBXAX/zPbI8J0Q6p4UiogVJhDrVEpCgNOiLuF3XIx\nhIHDx9aSiJ2Zk6vKwaw9MnCkfFGL69ekMgCRNC5AKFKGHvcmQ6ciD8TH9sQm\nyWnm8RnotxOPT0OmdZeH8tgxahsDlZK7RrYQt6HTDnYX1fYfM2dZ7i3EzXyF\nMkEOl+M1N+M6CGiZiJKoGfsMMcsl0qz/fE8qVbSxKuXs0JW9rlK2kCDoqyRo\nJExmtC0G3W2s+JAVgnaEHK6F9VxTCqfiSZs=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-18T16:56:15.086+00:00\",\"changed\":[\"cloned from \\\"cs50-scikit-05\\\"\"],\"cloned_from\":\"cs50-scikit-05\"},{\"changed_at\":\"2026-02-18 16:56:17 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:23:08 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:23:15 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>

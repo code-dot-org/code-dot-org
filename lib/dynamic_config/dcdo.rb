@@ -64,8 +64,9 @@ class DCDOBase < DynamicConfigBase
       'ai-lesson-summary-podcasts': DCDO.get('ai-lesson-summary-podcasts', false),
       'hoai2025-share-enabled': DCDO.get('hoai2025-share-enabled', true),
       'ai-lesson-summaries-notifications-enabled': DCDO.get('ai-lesson-summaries-notifications-enabled', false),
-      'lab2-fetch-level-properties-by-lesson-id': DCDO.get('lab2-fetch-level-proper0ties-by-lesson-id', true),
-      'student-snapshot-feedback-link': DCDO.get('student-snapshot-feedback-link', false)
+      'lab2-fetch-level-properties-by-lesson-id': DCDO.get('lab2-fetch-level-properties-by-lesson-id', true),
+      'student-snapshot-feedback-link': DCDO.get('student-snapshot-feedback-link', false),
+      'sketchlab-s3-image-storage': DCDO.get('sketchlab-s3-image-storage', true)
     }
   end
 end

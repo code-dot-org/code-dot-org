@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-02-18T17:03:28.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# CIW AI Associate Standard: 5.5\n# Standard Description: Describe the issue of \"black-box\" ML models.\n#\n# Rationale: Why did the AI say \"No\" to my loan? If the AI is a \"Black Box,\" \n# even the engineers might not know why! This tutorial compares a \n# Decision Tree (which is transparent) with a Random Forest (which is a \n# Black Box) to show why \"Explainability\" is important in AI ethics.\n\n\"\"\"\nWelcome! Have you ever asked a friend \"Why?\" and they just said \"Because!\"?\nThat's a Black Box model. It gives you an answer, but it can't explain its \nreasoning.\n\n1. Interpretable Models: Like a recipe. You can see every step.\n2. Black Box Models: Like a magic crystal ball. It works well, but it's a mystery.\n\"\"\"\n\nimport matplotlib.pyplot as plt\nfrom sklearn.datasets import load_iris\nfrom sklearn.tree import DecisionTreeClassifier, plot_tree\nfrom sklearn.ensemble import RandomForestClassifier\n\n# --- THE DATA ---\niris = load_iris()\nX, y = iris.data, iris.target\n\n# --- PART 1: THE INTERPRETABLE MODEL (Decision Tree) ---\nprint(\"--- Part 1: The Transparent Model ---\")\n# A single tree is easy to read. We can literally DRAW the logic.\ntree = DecisionTreeClassifier(max_depth=3)\ntree.fit(X, y)\n\nplt.figure(figsize=(12, 6))\nplot_tree(tree, feature_names=iris.feature_names, class_names=iris.target_names, filled=True)\nplt.title(\"Interpretable: You can follow the lines to see WHY it chose a species!\")\nplt.show()\n\n# --- PART 2: THE BLACK BOX (Random Forest) ---\nprint(\"\\n--- Part 2: The Black Box ---\")\n# A Forest has 100 trees. How do you follow 100 different logic paths at once?\n# You can't! It's too complex for a human to explain.\nforest = RandomForestClassifier(n_estimators=100)\nforest.fit(X, y)\n\nprint(\"The Forest is trained. It is very accurate!\")\nprint(\"But... can you tell me exactly why it predicted 'Setosa' for a specific flower?\")\nprint(\"No. It's a Black Box.\")\n\n\"\"\"\n--- YOUR TURN ---\nThink about these two situations. Which one NEEDS an interpretable model \n(where you can explain 'Why')?\n\nScenario A: An AI that suggests which Netflix movie to watch.\nScenario B: An AI that decides if a person should be allowed to go to jail.\n\n1. Which scenario requires an explanation?\n2. Why is a \"Black Box\" dangerous in Scenario B?\n\"\"\"\n\n# STARTING CODE FOR STUDENT:\n# TODO: Answer the questions!\n# Needs_Explanation = \"___\"\n# Danger_Reason = \"___\"\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFTDG6jyYgtI/CEUE/82dEkG4hlI8OLsdjJD0In8S\n03BB+jPkGgyYB0/9C3zqHMHEFpKeCsugYbpGMxzBNwrd7qASagJaFzMnVUyM\n2TXS7Hau9lj7JpZIHXn9fmxXRRANWeSfUE7UR90C2mjsiEaPimOZDZP2mBXG\n8pwgvswN4V9nX5/5770u+sFgu4xrCzvXPCwJskW83N5av7SgKm0xcOeEjy0X\n7jvy75Kw2xRrbl9bLdnF8D+Ctv3Hjh8SoNa8eK+X0ua1Te5J7VcqJcdF5f2k\n5Fqab3fkxzdmeGwoiKz2M9jfEqNz85Bv6FfR3jjkhcQZOpqRp2xMSYBWweQe\n6t/DHY1oIzfb4au1zroc7WXyS5HoVLkEfqztYYiaH0jYt/B5W1jto8eT2Q39\nEc6Wm5cUkMtPgbjFnN5QoY4UvWDmhn7uYWdNFhJWwsqUiKOATpvjXwTDcFmM\n/F6ujtV1SHswNS0hBzFizD9UcYsRxpk6Vrbe1+UnDW00Z8yjpBr60dkkvSkJ\nJxe/IwBSKfMkUKrYuUgg/MI35E2A33n9KcWFc0ig6Zl0yDRgnKmOwKskQLHD\nZ8EDU+pU0KwlzGB3DbpTW0W9W9F2oxRaBG+cRF1hd7dfXUODoJlRfK3l+rsu\n/wNve7m1VV/QJlKSqvvmPRVFHEEsiNfoWmsmPq5zckneLW/pw12ojgJdinaf\njSmIWLsq1m/HZXnOzLrc0qdzRLea6umWQ9J6wLZej/2AQEUnBO6WZxWyRo/D\nf1Gjs+YD4f8Ibw0zX0/urciYQb/HkvA5TYuRRQhu0o2cahds/PY8IBQXcqGg\nGso5yQDr6nGGNkdalPaIwJ77JjOZffhzZxACuOwG+ZuGGy3t7tkkm1/UtRg/\n10k0X2x8CeIYb6m210ymmlKOUe9bI/FFgRAIFFyoZkT+bF2dDzRWQTmCwIQY\nvMFDIgJWDukiEb/jsU2IAr2h0rie6k5LhfjQz0lB05qtmjSyfhuUoRntln+u\nJ3tgkOIaSOe0pzKUS4JJmdOgbcJZvb4/vG+c+vZwa1BGjq/COQdf8To0eu7S\ntI8m3wIGeB6QgXRQiv56MoEmMcecq6TwjxfohLtJ7pxkL+bKOsRgzMbglYW/\n9tTbgQNPPjUT9MbksBgW1VFKi0MPnC+fVJ2yDRyxu6OVPPK7z6DdYNC4lx2/\nArt8JBGWtFMH8Zgd9b72aDOo6EAZyy6M+i44c1LmyYMcT0k0UdpDcUvyf337\nLLhg5ZtcftdayQGxS4qjn8M3F0bgFlqkSaGRadyXZC1o9ZdVpg1gedAVKtD6\nHJdJqvOr5soZGr6bBr81Wit/e1cX56UKyoaEecqCR7ihD8QfQrOIfueEorjg\n2bFOOOr9bKxdbYOpn7cOkwcEkVRa\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-18T17:03:28.061+00:00\",\"changed\":[\"cloned from \\\"cs50-scikit-29\\\"\"],\"cloned_from\":\"cs50-scikit-29\"},{\"changed_at\":\"2026-02-18 17:03:31 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:47:04 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:47:13 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -4,11 +4,7 @@ import CloseButton from '@code-dot-org/component-library/closeButton';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
-import {
-  Heading2,
-  BodyTwoText,
-  BodyThreeText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import cookies from 'js-cookie';
 import React, {useState, useEffect, useMemo} from 'react';
@@ -284,8 +280,12 @@ const FinishStudentAccount: React.FunctionComponent<{
     <div>
       <div className={style.finishAccountContainer}>
         <div className={style.headerTextContainer}>
-          <Heading2>{locale.finish_creating_student_account()}</Heading2>
-          <BodyTwoText>{locale.tailor_experience()}</BodyTwoText>
+          <Typography variant="h2" gutterBottom>
+            {locale.finish_creating_student_account()}
+          </Typography>
+          <Typography variant="body2" gutterBottom>
+            {locale.tailor_experience()}
+          </Typography>
         </div>
         {errorCreatingAccountMessage && (
           <div className={style.errorSigningUpMessage}>
@@ -294,9 +294,13 @@ const FinishStudentAccount: React.FunctionComponent<{
                 iconName={'circle-xmark'}
                 className={style.xIcon}
               />
-              <BodyThreeText className={style.errorMessageText}>
+              <Typography
+                className={style.errorMessageText}
+                variant="body3"
+                gutterBottom
+              >
                 <SafeMarkdown markdown={errorCreatingAccountMessage} />
-              </BodyThreeText>
+              </Typography>
             </div>
             <CloseButton
               onClick={() => setErrorCreatingAccountMessage('')}
@@ -324,15 +328,23 @@ const FinishStudentAccount: React.FunctionComponent<{
                     onChange={onParentEmailChange}
                   />
                   {showParentEmailError && (
-                    <BodyThreeText className={style.errorMessage}>
+                    <Typography
+                      className={style.errorMessage}
+                      variant="body3"
+                      gutterBottom
+                    >
                       {locale.email_error_message()}
-                    </BodyThreeText>
+                    </Typography>
                   )}
                 </div>
                 <div>
-                  <BodyThreeText className={style.parentKeepMeUpdated}>
+                  <Typography
+                    className={style.parentKeepMeUpdated}
+                    variant="body3"
+                    gutterBottom
+                  >
                     <strong>{locale.keep_me_updated()}</strong>
-                  </BodyThreeText>
+                  </Typography>
                   <Checkbox
                     name="parentEmailOptIn"
                     label={locale.email_me_with_updates()}
@@ -354,9 +366,13 @@ const FinishStudentAccount: React.FunctionComponent<{
               onChange={onNameChange}
             />
             {nameErrorMessage && (
-              <BodyThreeText className={style.errorMessage}>
+              <Typography
+                className={style.errorMessage}
+                variant="body3"
+                gutterBottom
+              >
                 {nameErrorMessage}
-              </BodyThreeText>
+              </Typography>
             )}
           </div>
           <div>
@@ -371,9 +387,13 @@ const FinishStudentAccount: React.FunctionComponent<{
               onChange={onAgeChange}
             />
             {showAgeError && (
-              <BodyThreeText className={style.errorMessage}>
+              <Typography
+                className={style.errorMessage}
+                variant="body3"
+                gutterBottom
+              >
                 {locale.age_error_message()}
-              </BodyThreeText>
+              </Typography>
             )}
           </div>
           {usIp && (
@@ -389,9 +409,13 @@ const FinishStudentAccount: React.FunctionComponent<{
                 onChange={onStateChange}
               />
               {showStateError && (
-                <BodyThreeText className={style.errorMessage}>
+                <Typography
+                  className={style.errorMessage}
+                  variant="body3"
+                  gutterBottom
+                >
                   {locale.state_error_message()}
-                </BodyThreeText>
+                </Typography>
               )}
             </div>
           )}
@@ -403,14 +427,16 @@ const FinishStudentAccount: React.FunctionComponent<{
           />
           {showGDPR && (
             <div>
-              <BodyThreeText
+              <Typography
                 className={classNames(
                   style.teacherKeepMeUpdated,
                   style.required
                 )}
+                variant="body3"
+                gutterBottom
               >
                 <strong>{locale.data_transfer_notice()}</strong>
-              </BodyThreeText>
+              </Typography>
               <Checkbox
                 name="gdprAcknowledge"
                 label={locale.data_transfer_agreement_student()}

@@ -29,55 +29,19 @@ markdown <<MARKDOWN
 
 #### Most consumer AI tools, including all of the above, are now **multimodal**, meaning they can work with more than just text. They can understand and create content using text, images, audio, and sometimes video.
 
-#### Users interact with these tools using prompts.
+#### Users interact with these tools using prompts, usually through a AI chat interface.
 
-#### Prompt Engineering is a technique that involves refining and adjusting the inputs given to AI models to achieve more accurate or desired outputs.
-
-
-#### There are a number of ways to format prompts to get better outputs from LLMs. One structure you can use is: Instruction, Context, Constraints, Output.
-
-#### Here's an example prompt.
-
-<div style="max-width:1000px; margin:0 auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; font-size:16px; color:#292F36; line-height:1.6;">
-<table style="width:100%; border-collapse:collapse; table-layout:fixed; background:#FFFFFF; border:2px solid #292F36;">
-<tr>
-<td style="padding:18px; border:2px solid #292F36; width:75%; vertical-align:top; font-weight:600;">
-Create a lesson outline for a 6th-grade robotics class.
-</td>
-<td style="padding:18px; border:2px solid #292F36; width:25%; vertical-align:top; font-weight:800; color:#8C52BA;">
-Instruction
-</td>
-</tr>
-
-<tr>
-<td style="padding:18px; border:2px solid #292F36; vertical-align:top;">
-The lesson introduces students to robotics by defining what a robot is, identifying key components, understanding basic coding commands, and navigating a simple obstacle course. The lesson should be designed to be inclusive and accessible to all students, incorporating diverse examples, adaptive resources, and collaborative activities that encourage participation from learners of different backgrounds and abilities.
-</td>
-<td style="padding:18px; border:2px solid #292F36; vertical-align:top; font-weight:800; color:#0093A4;">
-Context
-</td>
-</tr>
-
-<tr>
-<td style="padding:18px; border:2px solid #292F36; vertical-align:top;">
-The lesson should fit within a 60–90 minute class period and include a mix of direct instruction, guided practice, and hands-on exploration. It should incorporate interactive methods such as small-group discussions, coding demonstrations, and a culminating activity where students apply their knowledge to program a robot through an obstacle course. The lesson should allow time for student reflection and discussion to reinforce key concepts.
-</td>
-<td style="padding:18px; border:2px solid #292F36; vertical-align:top; font-weight:800; color:#0093A4;">
-Constraints
-</td>
-</tr>
-
-<tr>
-<td style="padding:18px; border:2px solid #292F36; vertical-align:top;">
-A concise lesson outline with objectives, key concepts, instructional steps, suggested activities, and clear takeaways for students.
-</td>
-<td style="padding:18px; border:2px solid #292F36; vertical-align:top; font-weight:800; color:#0093A4;">
-Output
-</td>
-</tr>
-</table>
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Prompt Engineering:</strong> A technique that involves refining and adjusting the inputs given to AI models to achieve more accurate or desired outputs.</p>
 </div>
 
+#### There are a number of ways to format prompts to get better outputs from LLMs. One simple prompt engineering structure you can use is **TaCo FoRT**.
+
+<p align="center">
+<img src="https://images.code.org/a9b6ae8f94bfa64afbf2af4a60ec6609-Screenshot 2025-04-07 at 2.01.43 PM.png" alt="lesson plan diagram" width="70%" style="border-radius:10px; border: 5px solid black;">
+</p>
+
+#### Click **Continue** to learn more about the **TaCo FoRT** prompt structure.
 
 
 MARKDOWN

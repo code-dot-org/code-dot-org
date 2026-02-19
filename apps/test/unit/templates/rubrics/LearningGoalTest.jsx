@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -84,7 +85,10 @@ describe('LearningGoal', () => {
         isStudent={false}
       />
     );
-    expect(wrapper.find('Heading6')).toHaveLength(2);
+    const headings = wrapper
+      .find(Typography)
+      .filterWhere(node => node.props().variant === 'h6');
+    expect(headings).toHaveLength(2);
     expect(wrapper.find('SafeMarkdown')).toHaveLength(1);
     expect(wrapper.find('SafeMarkdown').props().markdown).toBe('Tips');
   });
@@ -102,7 +106,10 @@ describe('LearningGoal', () => {
         isStudent={true}
       />
     );
-    expect(wrapper.find('Heading6')).toHaveLength(1);
+    const headings = wrapper
+      .find(Typography)
+      .filterWhere(node => node.props().variant === 'h6');
+    expect(headings).toHaveLength(1);
     expect(wrapper.find('SafeMarkdown')).toHaveLength(0);
   });
 
@@ -117,7 +124,11 @@ describe('LearningGoal', () => {
         teacherHasEnabledAi
       />
     );
-    expect(wrapper.find('Heading6').first().props().children).toBe('Testing');
+    const heading = wrapper
+      .find(Typography)
+      .filterWhere(node => node.props().variant === 'h6')
+      .at(0);
+    expect(heading.props().children).toBe('Testing');
     expect(wrapper.find('AiToken')).toHaveLength(1);
   });
 
@@ -132,7 +143,11 @@ describe('LearningGoal', () => {
         teacherHasEnabledAi
       />
     );
-    expect(wrapper.find('Heading6').first().props().children).toBe('Testing');
+    const heading = wrapper
+      .find(Typography)
+      .filterWhere(node => node.props().variant === 'h6')
+      .at(0);
+    expect(heading.props().children).toBe('Testing');
     expect(wrapper.find('AiToken')).toHaveLength(0);
   });
 
@@ -147,7 +162,11 @@ describe('LearningGoal', () => {
         teacherHasEnabledAi={false}
       />
     );
-    expect(wrapper.find('Heading6').first().props().children).toBe('Testing');
+    const heading = wrapper
+      .find(Typography)
+      .filterWhere(node => node.props().variant === 'h6')
+      .at(0);
+    expect(heading.props().children).toBe('Testing');
     expect(wrapper.find('AiToken')).toHaveLength(0);
   });
 
@@ -218,7 +237,10 @@ describe('LearningGoal', () => {
       />
     );
     wrapper.update();
-    expect(wrapper.find('BodyThreeText').first().text()).toContain('Evaluate');
+    const body3Nodes = wrapper
+      .find(Typography)
+      .filterWhere(node => node.props().variant === 'body3');
+    expect(body3Nodes.at(0).text()).toContain('Evaluate');
     wrapper.unmount();
   });
 
@@ -235,7 +257,10 @@ describe('LearningGoal', () => {
       />
     );
     wrapper.update();
-    expect(wrapper.find('BodyThreeText').first().text()).toContain('Approve');
+    const body3Nodes = wrapper
+      .find(Typography)
+      .filterWhere(node => node.props().variant === 'body3');
+    expect(body3Nodes.at(0).text()).toContain('Approve');
     wrapper.unmount();
   });
 
@@ -284,9 +309,10 @@ describe('LearningGoal', () => {
         }}
       />
     );
-    expect(wrapper.find('BodyThreeText').props().children).toBe(
-      'Limited Evidence'
-    );
+    const body3Nodes = wrapper
+      .find(Typography)
+      .filterWhere(node => node.props().variant === 'body3');
+    expect(body3Nodes.at(0).props().children).toBe('Limited Evidence');
   });
 
   it('shows No Evidence understanding in header if submittedEvaluation contains understand', () => {
@@ -302,7 +328,10 @@ describe('LearningGoal', () => {
         }}
       />
     );
-    expect(wrapper.find('BodyThreeText').props().children).toBe('No Evidence');
+    const body3Nodes = wrapper
+      .find(Typography)
+      .filterWhere(node => node.props().variant === 'body3');
+    expect(body3Nodes.at(0).props().children).toBe('No Evidence');
   });
 
   it('passes isStudent down to EvidenceLevels', () => {

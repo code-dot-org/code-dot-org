@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-02-18T16:56:24.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# CIW AI Associate Standard: 6.6\n# Standard Description: Explain the curse of dimensionality.\n#\n# Rationale: Sometimes, more data is NOT better. If we have too many features \n# (columns), our model can get confused by the \"noise\". This is called the \n# \"Curse of Dimensionality\". We use PCA (Principal Component Analysis) to \n# reduce the number of features while keeping the most important information.\n\n\"\"\"\nWelcome! Imagine you are trying to find a needle in a haystack. \nIf the haystack is huge (lots of dimensions), it's really hard. \nIf we can make the haystack smaller without losing the needle, it gets easier!\n\nThat's what PCA does: it squishes data down to its most important parts.\n\"\"\"\n\nfrom sklearn.datasets import load_digits\nfrom sklearn.decomposition import PCA\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.neighbors import KNeighborsClassifier\nimport matplotlib.pyplot as plt\n\n# --- LOAD DATA ---\n# The Digits dataset has 64 features (pixels in an 8x8 image)\ndigits = load_digits()\nX, y = digits.data, digits.target\n\nprint(f\"Original shape of data: {X.shape} (1797 images, 64 features)\")\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, random_state=42)\n\n# --- PART 1: WITH ALL FEATURES ---\nprint(\"--- Part 1: Training with all 64 Features ---\")\nknn = KNeighborsClassifier()\nknn.fit(X_train, y_train)\nscore_full = knn.score(X_test, y_test)\nprint(f\"Accuracy with all 64 features: {score_full:.2%}\")\n\n# --- PART 2: DIMENSIONALITY REDUCTION (PCA) ---\nprint(\"--- Part 2: Reducing to just 2 Features ---\")\n# We'll squash the 64 features down to just 2 \"Principal Components\".\npca = PCA(n_components=2)\nX_pca = pca.fit_transform(X)\n\nprint(f\"New shape of data: {X_pca.shape} (1797 images, 2 features)\")\n\n# Let's visualize the data now that it's 2D!\nplt.figure(figsize=(8, 6))\nplt.scatter(X_pca[:, 0], X_pca[:, 1], c=y, cmap='tab10', edgecolors='k', alpha=0.7)\nplt.colorbar()\nplt.title(\"Digits Data Squished to 2 Dimensions\")\nplt.xlabel(\"Principal Component 1\")\nplt.ylabel(\"Principal Component 2\")\nplt.show()\n\n# --- PART 3: TRAINING ON REDUCED DATA ---\nprint(\"--- Part 3: Training on the Compressed Data ---\")\nX_train_pca, X_test_pca, y_train_pca, y_test_pca = train_test_split(X_pca, y, random_state=42)\n\nknn_pca = KNeighborsClassifier()\nknn_pca.fit(X_train_pca, y_train_pca)\nscore_pca = knn_pca.score(X_test_pca, y_test_pca)\nprint(f\"Accuracy with only 2 features: {score_pca:.2%}\")\n\nprint(\"\\nNotice: We lost some accuracy, but we made the data 32x smaller!\")\nprint(\"This makes training MUCH faster for huge datasets.\")\n\n\"\"\"\n--- YOUR TURN ---\nWe reduced 64 features down to 2, which was a huge jump. \nWhat if we keep more information?\n\n1. Create a new PCA model with n_components=10.\n2. Transform the original digits data (X).\n3. Split the new data into train/test sets.\n4. Train a KNeighborsClassifier and print the score.\n\"\"\"\n\n# STARTING CODE FOR STUDENT:\n# TODO: Create a PCA with 10 components\n# pca_10 = ...\n\n# TODO: Fit and transform X\n# X_10 = ...\n\n# TODO: Split the data\n# X_train_10, X_test_10, y_train_10, y_test_10 = ...\n\n# TODO: Train and score the model!\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFTDG6jyYgtI/CEUE/82dEkG4hlI8OLsdjJD0In8S\n03BB+jPkGgyYB0/9C3zqHMHEFpKeCsugYbpGMxzBNwrd7qASagJaFzMnVUyM\n2TXS7Hau9lj7JpZIHXn9fmxXRRANWcEf61+LUqDa9Bwz+gQ9oD8XqAvFimEu\nCEHuTuTgUV1u/pLPm6f0h6NyYvGcMFHwZ7sDdyEBrKCTQod/WsAF+vvZNrYe\n9jDZfPpXjMcvADoLdw34yRtAfDbL+N7j2WUGGfjqN7pc0agBrrtP5nNtN9qK\n7MPM1ZtMRBO8NLDOkoscL7DsCB5IWpDIl60btqp38wM0noBgnqWxVJMhQ7pP\nJWmrbLaI5kSKRNxH0y6bjUprdiqdidFnoOEdmJV6T2U361rYbYWuG8pYF9hl\nAAh932M/orgvTDEbZLoTU1F2s+6dgoyWnxp2vAzRaXJ66PV+cBb7bgos1wbc\nCDxiDU+Q+PoJQQ9ueTGD+m0E+RKYkuudx9SzwFvybTj+zvhCdwYzZ/6/vNhg\nyqZ6O6ghRHG1zPGbc58bWMp4ba8vgB7Fwu11/QiiakEsQZlH7crktxFi/3uJ\ngyBE2PRZKtDqDdl1EimyIMbb49sSFizKc4LZgxpX1jNBdaOW+OGxXhGanDJb\nHlE7W1tp1BAGfHYRxHKvD+qrLtc9tjl9znlrmobw0bOdv+YJH6GE3Jt3000C\n4fw+EOKHxiUlEgu1tgr2URGSD1ua2YtEb/eFknKM421KRB0+OFJwaDLXSw0/\n0WoWiM1UVu+sOgFrfGhDbQQftvNDmW31i89e21yHFxmWXClpiwrTGecQWoLj\n0qNp/KOAv9xzyOX5cCwfOIshyX0uFAWiYRpXEQQjBL0yLQvbwbDw/KRAOP7M\nAzC3niCMOs4VE2lbxyzbkUtn2DCceXQYaP3UWVO3W7YhKaHC6z6+/8VUorpB\nyHinJX+DD5bgA3348WZGDy6KeNaLpnjGAxGX5qG2BRbd5e5yiTP5cqMVXhCj\nAky3vhEwpmNBvjWUZ5xj3KWQd7NJxiHz7fuRmkEV3hDU+4IVQCrtr5jESbu+\nn0aavx7V7OzwryICGVhbm2mEivAREjx20ul1eQN4mO8gm/Vdr9MkqMUVN50B\nC91TVydI6JOy+7+y5vjWii6aY8UQjDf4zx2HVcv9/7xcOHYFBIyh8dZrK5b5\n9iXKRKFRDX8HgTIaK+yBkfxV3CnccU7qs/5PwnAE7wPzZAPs9rxURsJpmASx\nIDeAKGd2cncvbUZQ+3S6zw5dDbw6qevNh2fERsoXVQSEWzDswJtIFvRosdrP\nsxnFUrmQYmhqPcHl0xf14/LBT0OfidL2d/gJTlqTC1LtFmgaLUT7q6GjiV/H\n95mJyPyg6u3KLac5bvaj3JQN7fffHQsnjughILGmMFmAk78ui3nQPSkPW9jG\nqoETHehxgHcYTHCumdLwUBsgEJ5nQpkdESXSIMtu3C0eilqhS4TCDJe69t84\ndCt5KNVVOJkSVvAb+FcErlYYTLXRiXkSyOotN8ocqF/WO96fy398gv+NlDb9\nHeMtln8uONOUYvXRh6sOEfRJ6gHgb5XDku6VmG3QinaJPOl4FwsgU2vqsSbU\n8QDxSlr0tqfwQs8swG+jEI0=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-18T16:56:24.359+00:00\",\"changed\":[\"cloned from \\\"cs50-scikit-06\\\"\"],\"cloned_from\":\"cs50-scikit-06\"},{\"changed_at\":\"2026-02-18 16:56:26 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:23:32 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:23:39 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>

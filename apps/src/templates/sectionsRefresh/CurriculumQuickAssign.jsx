@@ -1,7 +1,4 @@
-import {
-  BodyTwoText,
-  Heading3,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
@@ -292,7 +289,9 @@ export default function CurriculumQuickAssign({
     <div className={moduleStyles.containerWithMarginTop}>
       {isLoading && !isNewSection ? (
         <>
-          <Heading3>{i18n.assignCurriculum()}</Heading3>
+          <Typography variant="h3" gutterBottom>
+            {i18n.assignCurriculum()}
+          </Typography>
           <div className={moduleStyles.loadingSpinner}>
             <Spinner />
           </div>
@@ -321,8 +320,12 @@ export default function CurriculumQuickAssign({
               id="decide-later"
               onChange={toggleDecideLater}
             />
-            <Heading3>{i18n.assignCurriculum()}</Heading3>
-            <BodyTwoText>{i18n.useDropdownMessage()}</BodyTwoText>
+            <Typography variant="h3" gutterBottom>
+              {i18n.assignCurriculum()}
+            </Typography>
+            <Typography variant="body2" gutterBottom>
+              {i18n.useDropdownMessage()}
+            </Typography>
           </div>
           <CurriculumQuickAssignTopRow
             showPlOfferings={showPlOfferings}

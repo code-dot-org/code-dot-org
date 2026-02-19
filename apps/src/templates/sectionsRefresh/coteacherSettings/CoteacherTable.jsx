@@ -1,7 +1,4 @@
-import {
-  StrongText,
-  BodyTwoText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -22,10 +19,10 @@ const getPendingPill = () => {
         data-event-off="mouseleave blur"
         data-for={'pending-tooltip'}
       >
-        <StrongText>
+        <Typography variant="strong">
           <FontAwesome icon={'ellipsis'} className={styles.tablePillIcon} />
           {i18n.coteacherPending()}
-        </StrongText>
+        </Typography>
       </div>
       <ReactTooltip
         id={'pending-tooltip'}
@@ -33,9 +30,13 @@ const getPendingPill = () => {
         effect="solid"
         place="top"
       >
-        <BodyTwoText className={styles.tableToolTipText}>
+        <Typography
+          className={styles.tableToolTipText}
+          variant="body2"
+          gutterBottom
+        >
           {i18n.coteacherPendingTooltip()}
-        </BodyTwoText>
+        </Typography>
       </ReactTooltip>
     </span>
   );
@@ -51,28 +52,28 @@ const getStatusPill = status => {
     case 'active':
       return (
         <div className={classNames(styles.tableActive, styles.tablePill)}>
-          <StrongText>
+          <Typography variant="strong">
             <FontAwesome icon={'check'} className={styles.tablePillIcon} />
             {i18n.coteacherAccepted()}
-          </StrongText>
+          </Typography>
         </div>
       );
     case 'declined':
       return (
         <div className={classNames(styles.tableDeclined, styles.tablePill)}>
-          <StrongText>
+          <Typography variant="strong">
             <FontAwesome icon={'xmark'} className={styles.tablePillIcon} />
             {i18n.coteacherDeclined()}
-          </StrongText>
+          </Typography>
         </div>
       );
     default:
       return (
         <div className={classNames(styles.tableError, styles.tablePill)}>
-          <StrongText>
+          <Typography variant="strong">
             <FontAwesome icon={'xmark'} className={styles.tablePillIcon} />
             {i18n.coteacherError()}
-          </StrongText>
+          </Typography>
         </div>
       );
   }
@@ -90,7 +91,10 @@ export default function CoteacherTable({
           <div>
             {coteacher.instructorName && (
               <>
-                <StrongText> {coteacher.instructorName}</StrongText>
+                <Typography variant="strong">
+                  {' '}
+                  {coteacher.instructorName}
+                </Typography>
                 <br />
               </>
             )}
