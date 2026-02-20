@@ -167,7 +167,7 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
     setToggleValue(oldValue => !oldValue);
   };
 
-  return (
+  return activeStudentSections.length && unitMenuList.length ? (
     <div className={style.artifactConfiguration}>
       <div className={style.artifactConfigurationSection}>
         <h3>Which class sections do you want to save this artifact for?</h3>
@@ -253,6 +253,24 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
             !selectedUnitId ||
             !selectedLessonId
           }
+        />
+      </div>
+    </div>
+  ) : (
+    <div className={style.artifactConfiguration}>
+      <div className={style.artifactConfigurationSection}>
+        You are required to have at least one active section with curriculum
+        assigned in order to create an artifact. Please create a section from
+        your <a href="/teacher_dashboard/home">dashboard</a> and then try to
+        create this artifact again.
+      </div>
+      <div className={style.artifactConfigurationSaveButtons}>
+        <Button
+          size="m"
+          type="secondary"
+          color="black"
+          onClick={() => dispatch(clearPendingArtifactMessage())}
+          text="Cancel"
         />
       </div>
     </div>
