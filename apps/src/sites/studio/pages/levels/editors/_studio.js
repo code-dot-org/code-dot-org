@@ -1,17 +1,20 @@
 import {javascript} from '@codemirror/lang-javascript';
-import {
-  bracketMatching,
-  defaultHighlightStyle,
-  syntaxHighlighting,
-} from '@codemirror/language';
 import {EditorState} from '@codemirror/state';
 import {EditorView} from '@codemirror/view';
 import $ from 'jquery';
+
+import {editorConfig} from '@cdo/apps/lab2/views/components/editor/editorConfig';
 
 /**
  * @file Main entry point for scripts used only in levelbuilder on when editing
  *       studio-type levels.
  */
+
+const studioEditorTheme = EditorView.theme({
+  '&': {
+    border: '1px solid #eee',
+  },
+});
 
 function initializeEditor(textarea) {
   const editorContainer = document.createElement('div');
@@ -22,10 +25,9 @@ function initializeEditor(textarea) {
     state: EditorState.create({
       doc: textarea.value || '',
       extensions: [
+        ...editorConfig,
         javascript(),
-        bracketMatching(),
-        syntaxHighlighting(defaultHighlightStyle, {fallback: true}),
-        EditorView.lineWrapping,
+        studioEditorTheme,
         EditorView.updateListener.of(update => {
           if (update.docChanged) {
             textarea.value = update.state.doc.toString();
@@ -37,7 +39,6 @@ function initializeEditor(textarea) {
   });
 }
 
-// On page load, specifically for this editor page.
 $(document).ready(function () {
   const jQuerySuccessConditionBox = $('#level_success_condition');
   if (jQuerySuccessConditionBox.length) {
