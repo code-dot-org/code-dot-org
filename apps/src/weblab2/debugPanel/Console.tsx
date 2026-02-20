@@ -56,7 +56,7 @@ const Console: React.FunctionComponent = () => {
         <EmptyPanelPlaceholder
           iconName="terminal"
           title="No console output"
-          description="Add console.log() statements to you code to see output here."
+          description="Add console.log() statements to your code to see output here."
         />
       ) : (
         <>
