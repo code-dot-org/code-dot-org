@@ -38,8 +38,9 @@ class LessonFeedbacksController < ApplicationController
 
   # GET /lesson_feedbacks/saved_feedback?student_id=...&lesson_id=...
   def saved_feedback
-    student = User.find(params[:student_id])
-    return head :forbidden unless student&.student_of?(current_user)
+    student = User.find_by(id: params[:student_id])
+    return head :not_found unless student
+    return head :forbidden unless student.student_of?(current_user)
 
     feedback = LessonFeedback.find_by!(
       student_id: params[:student_id],
