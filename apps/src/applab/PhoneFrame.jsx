@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import FontAwesome from '../legacySharedComponents/FontAwesome';
+import {singleton as studioApp} from '../StudioApp';
 import {styles as CompletionButtonStyles} from '../templates/CompletionButton';
 import {RunButton, ResetButton} from '../templates/GameButtons';
 
@@ -25,7 +26,7 @@ export default class PhoneFrame extends React.Component {
       this.props;
     return (
       <span id="phoneFrame">
-        <div id="phoneFrameWrapper">
+        <div id="phoneFrameWrapper" className={style.phoneFrameWrapper}>
           <div
             className={classNames(
               style.phoneFrame,
@@ -47,6 +48,25 @@ export default class PhoneFrame extends React.Component {
                 PAUSED
               </div>
             )}
+            <div className={style.topButtons}>
+              {isDark ? (
+                <button
+                  type="button"
+                  className={style.topResetButton}
+                  onClick={() => studioApp().resetButtonClick()}
+                >
+                  <FontAwesome icon="repeat" />
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  className={style.topRunButton}
+                  onClick={() => studioApp().runButtonClick()}
+                >
+                  <FontAwesome icon="play" /> Run
+                </button>
+              )}
+            </div>
           </div>
           {this.props.children}
           <div

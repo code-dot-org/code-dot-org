@@ -48,3 +48,49 @@ $frame-height: 60px;
 .pauseIcon {
   margin-right: 5px;
 }
+
+.phoneFrameWrapper {
+  max-height: calc(100vh - 130px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.topButtons {
+  display: none;
+}
+
+.topRunButton,
+.topResetButton {
+  height: 28px;
+  padding: 0 10px;
+  font-size: 12px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: color.$white;
+  background-color: color.$orange;
+}
+
+.topResetButton {
+  background-color: color.$brand_secondary_default;
+}
+
+@media screen and (max-height: 530px) {
+  .phoneFrameTop {
+    padding: 0 16px;
+    gap: 8px;
+  }
+
+  .topButtons {
+    display: flex;
+  }
+
+  .screenSelector {
+    width: auto;
+    flex: 1;
+    min-width: 0;
+  }
+}
