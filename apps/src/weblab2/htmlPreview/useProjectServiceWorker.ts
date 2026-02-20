@@ -8,6 +8,7 @@ import {ProjectServiceWorkerMessageType} from './constants';
 import {generateContentSecurityPolicyForPreview} from './contentSecurityPolicyHelper';
 import {
   addBaseTagToDocument,
+  addConsoleOverrideToDocument,
   addCSPViolationListenerToDocument,
 } from './htmlParsingHelpers';
 
@@ -97,6 +98,7 @@ function useProjectServiceWorker(
           const doc = parser.parseFromString(file.contents, 'text/html');
           const urlSuffix = folder ? `${folder}/` : '';
           addBaseTagToDocument(doc, `${window.location.origin}/${urlSuffix}`);
+          addConsoleOverrideToDocument(doc);
           addCSPViolationListenerToDocument(doc);
           content = doc.documentElement.outerHTML;
         } else if (file.language === 'css') {

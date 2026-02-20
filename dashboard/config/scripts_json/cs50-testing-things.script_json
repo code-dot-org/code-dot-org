@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-02-11 16:23:52 UTC",
+    "serialized_at": "2026-02-18 19:18:33 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -46,19 +46,1610 @@
         "lesson_group.key": "",
         "script.name": "cs50-testing-things"
       }
+    },
+    {
+      "key": "lesson-2",
+      "name": "SciKit-Learn Experiments",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "overview": "A series of AI-Generated python tasks to test which features of scikit-learn do or don't work with our implementation of PythonLab.\n\nHow these were generated:\n- Used Gemini CLI in a directory that had a CSV of the CIW AI standards and and [docs folder from the Scikit-learn github.](https://github.com/scikit-learn/scikit-learn/tree/main/doc)\n- Gemini was prompted to analyze the standards and analyze the docs and make a plan for creating examples with exemplars that mapped from the standards to scikit-learn tools. Examples should follow a \"worked example\" model, where the code demonstrates/explains a concept, and then there is a prompt to edit/remix/modify the code in a new context as a task for a student\n- The initial list missed some standards and I realized I needed to explicitly say \"it's okay if an example doesn't use scikit-learn at all, and instead only uses pandas or numpy\". This helped catch several data standards\n- I manually prompted a few other standards I wanted it to try and cover\n- Once the examples were generated, I moved them into levels. AI took ~15 mins to generate these; I took 2 hours manually moving into levelbuilder.\n\nThese examples are NOT meant to represent \"good pedagogy\" or potential student-facing activities. They're purely a way to \"stress test\" potential alignment between scikit-learn and the CIW standards, and then see if PythonLab can run the tasks associated with them"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things"
+      }
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "08774b80-963d-4d4a-9936-edcf3170193a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "4657983f-8628-43c0-97ca-0104e4a9abf5",
+      "position": 1,
+      "properties": {
+        "description": "## 1. Classification vs. Regression\n*   **Standard:** 3.9 (Difference between classification and regression)\n*   **How it addresses the standard:** It provides a direct side-by-side comparison of the two primary supervised learning tasks using standard scikit-learn datasets.\n*   **Student Exploration:** Students observe how `LogisticRegression` sorts flowers into species (bins) while `LinearRegression` predicts a continuous disease progression score. They view a matplotlib graph showing the visual difference between categorical points and a regression line.\n*   **The Task:** Students must complete a \"Fruit Classifier\" to sort Apples and Oranges based on weight and texture, explaining why it is a classification task.",
+        "progression_name": "✅ | **3.9** | Categories vs. Continuous Numbers"
+      },
+      "seeding_key": {
+        "activity_section.key": "4657983f-8628-43c0-97ca-0104e4a9abf5",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    },
+    {
+      "key": "15313aaa-7afe-4e5f-85f9-eb351dd31eac",
+      "position": 2,
+      "properties": {
+        "description": "## 2. Supervised vs. Unsupervised Learning\n*   **Standard:** 5.1 (Identify supervised, unsupervised, reinforcement types)\n*   **How it addresses the standard:** It demonstrates the difference between learning with a \"teacher\" (labels) and finding patterns autonomously.\n*   **Student Exploration:** Students compare a Classifier (using `y` labels) with a KMeans clustering algorithm (using only `X` features) on the same dataset.\n*   **The Task:** Apply KMeans to a \"Mystery Blobs\" dataset to find two hidden groups without being given any labels.",
+        "progression_name": "✅ | **5.1** | Labeled vs. Unlabeled Data (Clustering)"
+      },
+      "seeding_key": {
+        "activity_section.key": "15313aaa-7afe-4e5f-85f9-eb351dd31eac",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    },
+    {
+      "key": "eb3c7912-6545-44ff-a8eb-188676b062a5",
+      "position": 3,
+      "properties": {
+        "description": "## 3. Data Cleaning (Imputation & Encoding)\n*   **Standards:** 2.9 (Missing data) & 5.10 (Categorical variables)\n*   **How it addresses the standard:** It introduces the \"Pre-processing\" phase of the data cycle, focusing on making messy data machine-readable.\n*   **Student Exploration:** Students use `SimpleImputer` to fill missing temperature gaps and `OneHotEncoder` to convert weather words into binary columns.\n*   **The Task:** Clean a \"Pet\" dataset by filling a missing weight using the *median* and encoding the pet species.",
+        "progression_name": "✅ | **2.9, 5.10** | Missing Data & Categorical Encoding"
+      },
+      "seeding_key": {
+        "activity_section.key": "eb3c7912-6545-44ff-a8eb-188676b062a5",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    },
+    {
+      "key": "9d51d312-0b31-4efa-a6b2-db3205b9baa6",
+      "position": 4,
+      "properties": {
+        "description": "## 4. Evaluation and Overfitting\n*   **Standards:** 5.11 (Cross-validation) & 5.13 (Under/Overfitting)\n*   **How it addresses the standard:** It moves beyond training to validation, teaching students that accuracy on training data can be misleading.\n*   **Student Exploration:** Students witness a complex Decision Tree \"overfit\" (100% training score, but poor test score). They use `cross_val_score` to see how the model performs across 5 different tests.\n*   **The Task:** Experiment with the `max_depth` parameter to find the \"sweet spot\" where the model generalizes best to new data.",
+        "progression_name": "✅ | **5.11, 5.13** | Validating Model Performance"
+      },
+      "seeding_key": {
+        "activity_section.key": "9d51d312-0b31-4efa-a6b2-db3205b9baa6",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    },
+    {
+      "key": "1c90323a-ada9-411b-8e6a-a65c22a82075",
+      "position": 5,
+      "properties": {
+        "description": "## 5. Ensemble Methods (Random Forest)\n*   **Standards:** 5.2 (Model complexity) & 5.9 (Ensemble methods)\n*   **How it addresses the standard:** It introduces the concept of \"Bagging\" and how multiple simple models can outperform one complex one.\n*   **Student Exploration:** Students compare a single `DecisionTreeClassifier` with a `RandomForestClassifier` (a team of 100 trees) on a complex \"Moons\" dataset.\n*   **The Task:** Experiment with `n_estimators` to see how adding more \"members\" to the team improves the final accuracy.",
+        "progression_name": "✅ | **5.2, 5.9** | Teamwork: Random Forests vs. Single Trees |"
+      },
+      "seeding_key": {
+        "activity_section.key": "1c90323a-ada9-411b-8e6a-a65c22a82075",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    },
+    {
+      "key": "72a18d70-9421-43fd-a8d3-92368150b61b",
+      "position": 6,
+      "properties": {
+        "description": "## 6. Feature Scaling\n*   **Standard:** 2.6 (Feature Engineering importance)\n*   **How it addresses the standard:** It explains why data ranges (e.g., 0-1 vs 0-1000) matter for distance-based algorithms.\n*   **Student Exploration:** Students see a `KNeighborsClassifier` fail on raw data and then succeed after using `StandardScaler` to normalize the features.\n*   **The Task:** Perform scaling and KNN classification on the Breast Cancer dataset to observe the performance jump.",
+        "progression_name": "✅ | **2.6** | Normalizing Data Ranges (StandardScaler) |"
+      },
+      "seeding_key": {
+        "activity_section.key": "72a18d70-9421-43fd-a8d3-92368150b61b",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    },
+    {
+      "key": "3287eee6-a025-4f9c-b413-bc39a6f6a1d5",
+      "position": 7,
+      "properties": {
+        "description": "## 7. Dimensionality Reduction (PCA)\n*   **Standard:** 6.6 (Curse of dimensionality)\n*   **How it addresses the standard:** It demonstrates how to handle datasets with too many features by \"squishing\" them into their most important components.\n*   **Student Exploration:** Students reduce the 64-pixel \"Digits\" dataset down to just 2 dimensions for visualization using `PCA`.\n*   **The Task:** Create a PCA model that retains 10 components and measure how much accuracy is preserved compared to the full 64-feature model.",
+        "progression_name": "✅ | **6.6** | The Curse of Dimensionality (PCA) |"
+      },
+      "seeding_key": {
+        "activity_section.key": "3287eee6-a025-4f9c-b413-bc39a6f6a1d5",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    },
+    {
+      "key": "a2774d7a-3fdb-413a-b7cb-85e62c8de271",
+      "position": 8,
+      "properties": {
+        "description": "## 8. Hyperparameter Tuning\n*   **Standards:** 3.7 (Search algorithms) & 3.13 (Informed vs Uninformed search)\n*   **How it addresses the standard:** It introduces `GridSearchCV` as a systematic (uninformed) search for the best model settings.\n*   **Student Exploration:** Students move from \"guessing\" parameters like `k` neighbors to using a computer-guided search to find the optimal configuration.\n*   **The Task:** Run a Grid Search on a Support Vector Machine (SVC) to find the best combination of `C` and `kernel` type.",
+        "progression_name": "✅ | **3.7, 3.13** | Grid Search vs. Guessing |"
+      },
+      "seeding_key": {
+        "activity_section.key": "a2774d7a-3fdb-413a-b7cb-85e62c8de271",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    },
+    {
+      "key": "5ad53bfa-4e5d-41e2-8626-3bf749c29464",
+      "position": 9,
+      "properties": {
+        "description": "## 9. Pipelines\n*   **Standard:** 2.1 (Data processing cycle)\n*   **How it addresses the standard:** It formalizes the \"Input-Processing-Output\" cycle into a single scikit-learn object.\n*   **Student Exploration:** Students build an automated assembly line that handles Imputation, Scaling, and Classification in one `.fit()` call.\n*   **The Task:** Construct a regression pipeline for the Diabetes dataset that handles both missing data and linear prediction.",
+        "progression_name": "✅ | **2.1** | The Data Processing Cycle |"
+      },
+      "seeding_key": {
+        "activity_section.key": "5ad53bfa-4e5d-41e2-8626-3bf749c29464",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    },
+    {
+      "key": "f8caf234-c3e0-4994-a63a-5026dec67ac1",
+      "position": 10,
+      "properties": {
+        "description": "## 10. Model Metrics (Regression)\n*   **Standard:** 5.7 (Evaluate continuous variable models)\n*   **How it addresses the standard:** It teaches students how to measure \"error\" instead of \"accuracy.\"\n*   **Student Exploration:** Students calculate Mean Absolute Error (MAE) and R-squared ($R^2$) to see how close their house price predictions are to the truth.\n*   **The Task:** Calculate and interpret the MAE and $R^2$ for a California Housing price predictor.",
+        "progression_name": "✅ With Tweaks | **5.7** | Evaluating Regression (MAE, R^2) |"
+      },
+      "seeding_key": {
+        "activity_section.key": "f8caf234-c3e0-4994-a63a-5026dec67ac1",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    },
+    {
+      "key": "16debb77-978e-44c8-bccd-c452c7c12d05",
+      "position": 11,
+      "properties": {
+        "description": "## 11. Cost Functions and Neural Nets\n*   **Standard:** 6.1 (Define a cost function)\n*   **How it addresses the standard:** It visualizes the \"Loss Curve\" to show how a neural network uses cost to learn.\n*   **Student Exploration:** Students watch a red \"Loss\" line move down over 100 training steps, signifying the model is minimizing its error.\n*   **The Task:** Experiment with the `learning_rate_init` to see how \"fast\" or \"slow\" learning affects the stability of the cost curve.",
+        "progression_name": "| **6.1** | Cost Functions & Learning Curves |"
+      },
+      "seeding_key": {
+        "activity_section.key": "16debb77-978e-44c8-bccd-c452c7c12d05",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    },
+    {
+      "key": "8e6a15f2-71b8-45ea-8847-3f146d99af56",
+      "position": 12,
+      "properties": {
+        "description": "## 12. Data Gathering\n*   **Standard:** 2.2 (Data gathering for new datasets)\n*   **How it addresses the standard:** It teaches students how to structure raw observations into a computer-readable table.\n*   **Student Exploration:** Students simulate \"Digital Science\" by generating synthetic tree age and height data using `numpy`.\n*   **The Task:** Gather simulated revenue and customer data for a coffee shop and organize it into a Pandas DataFrame.",
+        "progression_name": "| **2.2** | Creating Synthetic Datasets (Pandas/Numpy) |"
+      },
+      "seeding_key": {
+        "activity_section.key": "8e6a15f2-71b8-45ea-8847-3f146d99af56",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    },
+    {
+      "key": "8b54dc9d-7aa0-443c-81ba-bd4442e47f73",
+      "position": 13,
+      "properties": {
+        "description": "## 13. Data Selection\n*   **Standard:** 2.3 (Dataset selection techniques)\n*   **How it addresses the standard:** It focuses on selecting high-quality, relevant data rather than using everything available.\n*   **Student Exploration:** Students use Pandas to filter columns (Features) and rows (Examples) to find specific subsets like \"Electric Cars Only.\"\n*   **The Task:** Select and display only high-scoring students (Score > 85) from a class roster.",
+        "progression_name": "| **2.3** | Filtering & Selecting Relevant Data |"
+      },
+      "seeding_key": {
+        "activity_section.key": "8b54dc9d-7aa0-443c-81ba-bd4442e47f73",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    },
+    {
+      "key": "c2714b9d-1664-4c11-9312-10d8a8414be0",
+      "position": 14,
+      "properties": {
+        "description": "## 14. Data Curation\n*   **Standard:** 2.4 (Importance of dataset curation)\n*   **How it addresses the standard:** It explains the \"curator's\" role in ensuring data is consistent, labeled, and polished.\n*   **Student Exploration:** Students fix inconsistent capitalization (Banana vs BANANA), remove extra whitespace, and rename vague columns like `val_x`.\n*   **The Task:** Curate a \"People\" dataset by fixing name formatting and providing descriptive column names.",
+        "progression_name": "| **2.4** | Polishing & Organizing Data for AI |"
+      },
+      "seeding_key": {
+        "activity_section.key": "c2714b9d-1664-4c11-9312-10d8a8414be0",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    },
+    {
+      "key": "3b0669d9-4658-4a9e-a0a9-b5ca26c6b0c5",
+      "position": 15,
+      "properties": {
+        "description": "## 15. Feature Engineering (Creation)\n*   **Standard:** 2.6 (Feature Engineering importance)\n*   **How it addresses the standard:** It shows how to create \"New Knowledge\" by combining or extracting raw data columns.\n*   **Student Exploration:** Students extract the \"Day of the Week\" from a date and create an \"Is_Weekend\" flag to help the AI spot patterns.\n*   **The Task:** Create a 'Pace' feature for a runner (Minutes/Miles) and a 'Long Run' flag.",
+        "progression_name": "| **2.6** | Creating New Features from Raw Data |"
+      },
+      "seeding_key": {
+        "activity_section.key": "3b0669d9-4658-4a9e-a0a9-b5ca26c6b0c5",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    },
+    {
+      "key": "48669a5b-85ec-4dfd-acbf-7409486aa517",
+      "position": 16,
+      "properties": {
+        "description": "## 16. Data Sampling\n*   **Standard:** 2.7 (Sampling plans and subsampling)\n*   **How it addresses the standard:** It teaches how to take a representative \"bite\" of a large dataset to avoid bias and save time.\n*   **Student Exploration:** Students take random 5% and 10% samples from a 1,000-student dataset and observe how the average remains stable.\n*   **The Task:** Take a 25% fractional sample of website visit durations and calculate the sample mean.",
+        "progression_name": "| **2.7** | Random Sampling & Subsampling |"
+      },
+      "seeding_key": {
+        "activity_section.key": "48669a5b-85ec-4dfd-acbf-7409486aa517",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    },
+    {
+      "key": "b358a9ee-8324-4e4b-a85b-519499d22cd2",
+      "position": 17,
+      "properties": {
+        "description": "## 17. Distribution Shift\n*   **Standard:** 2.8 (Distribution shift in production)\n*   **How it addresses the standard:** It visualizes why an AI breaks when the real world changes.\n*   **Student Exploration:** Students train a model on normal weather (70°F) but test it during a heatwave (100°F), observing the massive error jump.\n*   **The Task:** Calculate the \"Production Error\" for the shifted data and explain why the AI struggled.",
+        "progression_name": "| **2.8** | Data Distribution Shift in Production |"
+      },
+      "seeding_key": {
+        "activity_section.key": "b358a9ee-8324-4e4b-a85b-519499d22cd2",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    },
+    {
+      "key": "b2faf666-c6ad-4533-9bc2-ccde0e43945e",
+      "position": 18,
+      "properties": {
+        "description": "## 18. Filtering Missing Data\n*   **Standard:** 2.9 (Filter out missing/NA data)\n*   **How it addresses the standard:** It provides the technical tools to identify and \"Drop\" incomplete records.\n*   **Student Exploration:** Students use `.isna().sum()` to generate a report of where the \"holes\" are in their data and use `dropna()` to remove them.\n*   **The Task:** Filter a weather dataset specifically to remove rows where 'Temperature' is missing, while keeping others.",
+        "progression_name": "| **2.9** | Finding & Removing (Dropping) Nulls |"
+      },
+      "seeding_key": {
+        "activity_section.key": "b2faf666-c6ad-4533-9bc2-ccde0e43945e",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    },
+    {
+      "key": "a6f10cca-eeac-4a0b-9ee4-5e25ab00f812",
+      "position": 19,
+      "properties": {
+        "description": "## 19. Identifying Outliers\n*   **Standard:** 2.11 (Univariate and multivariate outliers)\n*   **How it addresses the standard:** It teaches how to find \"weird\" data points using both simple stats and complex models.\n*   **Student Exploration:** Students use Box Plots to find a 999-degree typo (Univariate) and an `IsolationForest` to find a 4ft tall, 300lb person (Multivariate).\n*   **The Task:** Detect a fraudulent bank transaction ($5,000 at 3:00 AM) using an Isolation Forest.",
+        "progression_name": "| **2.11** | Univariate & Multivariate Outliers |"
+      },
+      "seeding_key": {
+        "activity_section.key": "a6f10cca-eeac-4a0b-9ee4-5e25ab00f812",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    },
+    {
+      "key": "a283d22d-24a9-4e94-9018-572e58d59a0f",
+      "position": 20,
+      "properties": {
+        "description": "## 20. Modifying Cleaning Scripts\n*   **Standard:** 2.12 (Modify existing script to clean data)\n*   **How it addresses the standard:** A practical challenge in debugging and improving legacy code.\n*   **Student Exploration:** Students are given a \"Broken\" cleaning function and must identify why the price strings aren't converting to numbers.\n*   **The Task:** Repair the script by stripping whitespace, removing currency symbols, and converting types to float.",
+        "progression_name": "| **2.12** | Practical Data Cleaning Challenge |"
+      },
+      "seeding_key": {
+        "activity_section.key": "a283d22d-24a9-4e94-9018-572e58d59a0f",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    },
+    {
+      "key": "9fc1c454-95db-41d4-9dcd-99303ac6888b",
+      "position": 21,
+      "properties": {
+        "description": "## 21. Algorithm Families\n*   **Standards:** 3.1 & 3.2 (Define main algorithm families)\n*   **How it addresses the standard:** Provides a taxonomical overview of AI: Classification, Approximation, Recognition, and Search.\n*   **Student Exploration:** Students map real-world problems to the scikit-learn tools that solve them (e.g., LogisticReg for Classification).\n*   **The Task:** Categorize four scenarios (Self-driving cars, Bank spending, Friend suggestions, Factory packing) into their correct families.",
+        "progression_name": "| **3.1, 3.2** | Families of AI: Classification vs. Search |"
+      },
+      "seeding_key": {
+        "activity_section.key": "9fc1c454-95db-41d4-9dcd-99303ac6888b",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    },
+    {
+      "key": "f011e007-63dd-49b7-9106-90cd196a4a4f",
+      "position": 22,
+      "properties": {
+        "description": "## 22. Maximum Likelihood Estimation (MLE)\n*   **Standard:** 3.6 (Explain MLE)\n*   **How it addresses the standard:** It explains the statistical \"Reasoning\" used by models to pick their parameters.\n*   **Student Exploration:** Students view a \"Mountain\" graph to see which center point is most likely for a specific data point.\n*   **The Task:** Solve a coin-flip logic puzzle to determine the most likely probability of a biased coin.",
+        "progression_name": "| **3.6** | How AI Picks the Best Guess (MLE) |"
+      },
+      "seeding_key": {
+        "activity_section.key": "f011e007-63dd-49b7-9106-90cd196a4a4f",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    },
+    {
+      "key": "9dbd5f3a-3629-4a6e-bce5-d77dabb9ea86",
+      "position": 23,
+      "properties": {
+        "description": "## 23. Bivariate Linear Regression\n*   **Standard:** 3.8 (Algorithm for fitting bivariate models)\n*   **How it addresses the standard:** It explains the \"Ordinary Least Squares\" (OLS) method of drawing a line.\n*   **Student Exploration:** Students view a graph of \"Residuals\" (errors) and learn that the AI's goal is to minimize the total length of those lines.\n*   **The Task:** Predict and calculate the \"Slope\" for a dataset showing a relationship between Gaming Hours and Test Scores.",
+        "progression_name": "| **3.8** | The Math of Fitting a Line (OLS) |"
+      },
+      "seeding_key": {
+        "activity_section.key": "9dbd5f3a-3629-4a6e-bce5-d77dabb9ea86",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    },
+    {
+      "key": "93f60c42-3cc0-4a79-b4ff-b9d2d2119f69",
+      "position": 24,
+      "properties": {
+        "description": "## 24. Computational Complexity\n*   **Standard:** 3.10 (Effect of complexity on algorithms)\n*   **How it addresses the standard:** It explains why some AI projects get stuck or take too long to run.\n*   **Student Exploration:** Students time a `LinearRegression` vs an `SVC` as the data grows from 100 to 5,000 rows, observing the exponential curve.\n*   **The Task:** Answer questions about how \"doubling the data\" affects different types of algorithms.",
+        "progression_name": "| **3.10** | Timing Models: Why Big Data is Hard |"
+      },
+      "seeding_key": {
+        "activity_section.key": "93f60c42-3cc0-4a79-b4ff-b9d2d2119f69",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    },
+    {
+      "key": "bee16e4f-eb06-403e-ba52-6e8092384666",
+      "position": 25,
+      "properties": {
+        "description": "## 25. K-Means Initialization\n*   **Standard:** 3.11 (K-means starting values)\n*   **How it addresses the standard:** It explains why \"Starting Values\" (centroids) determine if a clustering model succeeds or fails.\n*   **Student Exploration:** Students compare a \"Smart Start\" (`k-means++`) with a \"Bad Start\" that causes the AI to get stuck in a poor solution.\n*   **The Task:** Explain the purpose of the `n_init` parameter in preventing \"Bad Starts.\"",
+        "progression_name": "| **3.11** | Clustering: The Danger of a \"Bad Start\" |"
+      },
+      "seeding_key": {
+        "activity_section.key": "bee16e4f-eb06-403e-ba52-6e8092384666",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    },
+    {
+      "key": "3e4afb80-8b2f-4a9d-88d3-b17e2de08d6f",
+      "position": 26,
+      "properties": {
+        "description": "## 26. Supervised vs. Unsupervised Fit\n*   **Standard:** 3.12 (Distinction between fitting supervised/unsupervised)\n*   **How it addresses the standard:** It explains the technical difference between `.fit(X, y)` and `.fit(X)`.\n*   **Student Exploration:** Students compare the internal logic of \"Learning with a Key\" vs \"Finding Patterns by Looking.\"\n*   **The Task:** Correctly identify whether Logistic Regression, PCA, and Random Forest are Supervised or Unsupervised.",
+        "progression_name": "| **3.12** | How Models \"Fit\" (Key vs. Patterns) |"
+      },
+      "seeding_key": {
+        "activity_section.key": "3e4afb80-8b2f-4a9d-88d3-b17e2de08d6f",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    },
+    {
+      "key": "5f28a188-a9a1-48cd-b05b-67fc941ace98",
+      "position": 27,
+      "properties": {
+        "description": "## 27. Logistic vs. Linear Regression\n*   **Standard:** 5.15 (When to use Logistic vs. Linear)\n*   **How it addresses the standard:** It clarifies the most common naming confusion in Machine Learning.\n*   **Student Exploration:** Students compare a straight line (Linear) with an \"S\" curve (Logistic) and see why the \"S\" curve is better for Yes/No questions.\n*   **The Task:** Choose the correct model for predicting the \"Price of a Fish\" vs \"Is the Fish Kawaii?\".",
+        "progression_name": "| **5.15** | When to use Logistic vs. Linear |"
+      },
+      "seeding_key": {
+        "activity_section.key": "5f28a188-a9a1-48cd-b05b-67fc941ace98",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    },
+    {
+      "key": "4ef1b330-e02d-4065-a16f-87e6c1a7b4c0",
+      "position": 28,
+      "properties": {
+        "description": "## 28. Bias-Variance Trade-off\n*   **Standard:** 5.8 (Explain bias-variance trade-off)\n*   **How it addresses the standard:** It visualizes the struggle between a model being too simple vs too complex.\n*   **Student Exploration:** Students view three polynomial models: a straight line (High Bias), a good curve (Sweet Spot), and a crazy squiggle (High Variance).\n*   **The Task:** Analyze the sensitivity of a High Variance model to new data points.",
+        "progression_name": "| **5.8** | Bias vs. Variance: The Sweet Spot |"
+      },
+      "seeding_key": {
+        "activity_section.key": "4ef1b330-e02d-4065-a16f-87e6c1a7b4c0",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    },
+    {
+      "key": "8e45ab99-22e3-4284-a71a-999339d54100",
+      "position": 29,
+      "properties": {
+        "description": "## 29. Reinforcement Learning Concepts\n*   **Standard:** 5.12 (Concepts of Agent and Action in RL)\n*   **How it addresses the standard:** It introduces the \"Trial and Error\" style of learning using a game-like metaphor.\n*   **Student Exploration:** Students interact with a \"Fish Battle\" simulation where an **Agent** (Fish) takes an **Action** (Skill) to get a **Reward** (Points).\n*   **The Task:** Add a new high-reward move (\"Deep Dive\") to the agent's logic and simulate its learning.",
+        "progression_name": "| **5.12** | RL: Agents, Actions, and Rewards |"
+      },
+      "seeding_key": {
+        "activity_section.key": "8e45ab99-22e3-4284-a71a-999339d54100",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    },
+    {
+      "key": "0065dee1-6a03-4526-9a74-1f2b30aa481b",
+      "position": 30,
+      "properties": {
+        "description": "## 30. Black-Box vs. Interpretable Models\n*   **Standard:** 5.5 (Issue of \"black-box\" models)\n*   **How it addresses the standard:** It focuses on AI ethics and the \"Right to an Explanation.\"\n*   **Student Exploration:** Students compare a \"Glass Box\" (Decision Tree they can read) with a \"Black Box\" (Random Forest they can't).\n*   **The Task:** Conduct an ethical analysis of using Black Box models in the legal/justice system.",
+        "progression_name": "| **5.5** | Explainability: Magic vs. Logic |"
+      },
+      "seeding_key": {
+        "activity_section.key": "0065dee1-6a03-4526-9a74-1f2b30aa481b",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    },
+    {
+      "key": "9317c222-4e63-4894-bd9f-877da98b9943",
+      "position": 31,
+      "properties": {
+        "description": "## 31. Data Types Examples\n*   **Standard:** 6.8 (Examples for continuous, binary, categorical, ordinal)\n*   **How it addresses the standard:** It ensures students know the fundamental \"Building Blocks\" of data.\n*   **Student Exploration:** Students explore a dataset containing Test Scores (Continuous), Pass/Fail (Binary), Color (Categorical), and T-Shirt Size (Ordinal).\n*   **The Task:** Classify four new scenarios (Movie Stars, Temperature, Home State, Subscriber Status) into their correct data types.",
+        "progression_name": "| **6.8** | Continuous, Binary, Categorical, Ordinal |"
+      },
+      "seeding_key": {
+        "activity_section.key": "9317c222-4e63-4894-bd9f-877da98b9943",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    },
+    {
+      "key": "6a1b8f31-0174-414a-896e-4897e0fbdd6e",
+      "position": 32,
+      "properties": {
+        "description": "## 32. Bootstrapping and Uncertainty\n*   **Standards:** 6.4 (Bootstrapping) & 6.7 (Sources of uncertainty)\n*   **How it addresses the standard:** It explains how we measure \"Confidence\" in our AI's results.\n*   **Student Exploration:** Students run 1,000 \"Mini-Tests\" using re-sampling with replacement to see how much the average height \"wiggles.\"\n*   **The Task:** Perform manual bootstrap sampling on a runner's mile times to calculate a range of uncertainty.",
+        "progression_name": "| **6.4, 6.7** | Measuring Uncertainty (Sampling) |"
+      },
+      "seeding_key": {
+        "activity_section.key": "6a1b8f31-0174-414a-896e-4897e0fbdd6e",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    },
+    {
+      "key": "b9a83537-2f58-4472-88cb-9ef997c71599",
+      "position": 33,
+      "properties": {
+        "description": "## 33. Mean and Standard Error\n*   **Standard:** 6.3 (Estimate mean and standard error)\n*   **How it addresses the standard:** It introduces the foundational math of statistical estimation.\n*   **Student Exploration:** Students calculate the average battery life of phones and determine the \"Standard Error\" (how shaky that average is).\n*   **The Task:** Observe how the Standard Error changes (shrinks) when the sample size doubles from 10 to 20 phones.",
+        "progression_name": "| **6.3** | Statistics: Mean vs. Standard Error |"
+      },
+      "seeding_key": {
+        "activity_section.key": "b9a83537-2f58-4472-88cb-9ef997c71599",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    },
+    {
+      "key": "db308034-d57f-49a0-bcae-b562267f1667",
+      "position": 34,
+      "properties": {
+        "description": "## 34. Predictions and Probabilities\n*   **Standard:** 5.3 (How predictions or decisions are made)\n*   **How it addresses the standard:** It explains the \"Threshold\" logic used by computers to turn numbers into choices.\n*   **Student Exploration:** Students use `predict_proba` to see that an AI might be \"85% sure\" a wave is dangerous before it makes a \"YES\" decision.\n*   **The Task:** Analyze why a doctor might use a lower threshold (10%) to be extra cautious when detecting a disease.",
+        "progression_name": "| **5.3** | How Decisions are Made (Thresholds) |"
+      },
+      "seeding_key": {
+        "activity_section.key": "db308034-d57f-49a0-bcae-b562267f1667",
+        "lesson_activity.key": "08774b80-963d-4d4a-9936-edcf3170193a"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "cs50-scikit-01"
+        ],
+        "progression": "✅ | **3.9** | Categories vs. Continuous Numbers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-01"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "4657983f-8628-43c0-97ca-0104e4a9abf5"
+      },
+      "level_keys": [
+        "cs50-scikit-01"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "✅ | **5.1** | Labeled vs. Unlabeled Data (Clustering)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-02"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "15313aaa-7afe-4e5f-85f9-eb351dd31eac"
+      },
+      "level_keys": [
+        "cs50-scikit-02"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "✅ | **2.9, 5.10** | Missing Data & Categorical Encoding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-03"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "eb3c7912-6545-44ff-a8eb-188676b062a5"
+      },
+      "level_keys": [
+        "cs50-scikit-03"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "✅ | **5.11, 5.13** | Validating Model Performance"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-04"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "9d51d312-0b31-4efa-a6b2-db3205b9baa6"
+      },
+      "level_keys": [
+        "cs50-scikit-04"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "✅ | **5.2, 5.9** | Teamwork: Random Forests vs. Single Trees |"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-05"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "1c90323a-ada9-411b-8e6a-a65c22a82075"
+      },
+      "level_keys": [
+        "cs50-scikit-05"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "✅ | **2.6** | Normalizing Data Ranges (StandardScaler) |"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-06"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "72a18d70-9421-43fd-a8d3-92368150b61b"
+      },
+      "level_keys": [
+        "cs50-scikit-06"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "✅ | **6.6** | The Curse of Dimensionality (PCA) |"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-07"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "3287eee6-a025-4f9c-b413-bc39a6f6a1d5"
+      },
+      "level_keys": [
+        "cs50-scikit-07"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "✅ | **3.7, 3.13** | Grid Search vs. Guessing |"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-08"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "a2774d7a-3fdb-413a-b7cb-85e62c8de271"
+      },
+      "level_keys": [
+        "cs50-scikit-08"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "✅ | **2.1** | The Data Processing Cycle |"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-09"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "5ad53bfa-4e5d-41e2-8626-3bf749c29464"
+      },
+      "level_keys": [
+        "cs50-scikit-09"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "✅ With Tweaks | **5.7** | Evaluating Regression (MAE, R^2) |"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-10"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "f8caf234-c3e0-4994-a63a-5026dec67ac1"
+      },
+      "level_keys": [
+        "cs50-scikit-10"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "| **6.1** | Cost Functions & Learning Curves |"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-11"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "16debb77-978e-44c8-bccd-c452c7c12d05"
+      },
+      "level_keys": [
+        "cs50-scikit-11"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "| **2.2** | Creating Synthetic Datasets (Pandas/Numpy) |"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-12"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "8e6a15f2-71b8-45ea-8847-3f146d99af56"
+      },
+      "level_keys": [
+        "cs50-scikit-12"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "| **2.3** | Filtering & Selecting Relevant Data |"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-13"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "8b54dc9d-7aa0-443c-81ba-bd4442e47f73"
+      },
+      "level_keys": [
+        "cs50-scikit-13"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "| **2.4** | Polishing & Organizing Data for AI |"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-14"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "c2714b9d-1664-4c11-9312-10d8a8414be0"
+      },
+      "level_keys": [
+        "cs50-scikit-14"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "| **2.6** | Creating New Features from Raw Data |"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-15"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "3b0669d9-4658-4a9e-a0a9-b5ca26c6b0c5"
+      },
+      "level_keys": [
+        "cs50-scikit-15"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 16,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "| **2.7** | Random Sampling & Subsampling |"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-16"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "48669a5b-85ec-4dfd-acbf-7409486aa517"
+      },
+      "level_keys": [
+        "cs50-scikit-16"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 17,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "| **2.8** | Data Distribution Shift in Production |"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-17"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "b358a9ee-8324-4e4b-a85b-519499d22cd2"
+      },
+      "level_keys": [
+        "cs50-scikit-17"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 18,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "| **2.9** | Finding & Removing (Dropping) Nulls |"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-18"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "b2faf666-c6ad-4533-9bc2-ccde0e43945e"
+      },
+      "level_keys": [
+        "cs50-scikit-18"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 19,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "| **2.11** | Univariate & Multivariate Outliers |"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-19"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "a6f10cca-eeac-4a0b-9ee4-5e25ab00f812"
+      },
+      "level_keys": [
+        "cs50-scikit-19"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 20,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "| **2.12** | Practical Data Cleaning Challenge |"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-20"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "a283d22d-24a9-4e94-9018-572e58d59a0f"
+      },
+      "level_keys": [
+        "cs50-scikit-20"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 21,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "| **3.1, 3.2** | Families of AI: Classification vs. Search |"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-21"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "9fc1c454-95db-41d4-9dcd-99303ac6888b"
+      },
+      "level_keys": [
+        "cs50-scikit-21"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 22,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "| **3.6** | How AI Picks the Best Guess (MLE) |"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-22"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "f011e007-63dd-49b7-9106-90cd196a4a4f"
+      },
+      "level_keys": [
+        "cs50-scikit-22"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 23,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "| **3.8** | The Math of Fitting a Line (OLS) |"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-23"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "9dbd5f3a-3629-4a6e-bce5-d77dabb9ea86"
+      },
+      "level_keys": [
+        "cs50-scikit-23"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 24,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "| **3.10** | Timing Models: Why Big Data is Hard |"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-24"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "93f60c42-3cc0-4a79-b4ff-b9d2d2119f69"
+      },
+      "level_keys": [
+        "cs50-scikit-24"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 25,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "| **3.11** | Clustering: The Danger of a \"Bad Start\" |"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-25"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "bee16e4f-eb06-403e-ba52-6e8092384666"
+      },
+      "level_keys": [
+        "cs50-scikit-25"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 26,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "| **3.12** | How Models \"Fit\" (Key vs. Patterns) |"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-26"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "3e4afb80-8b2f-4a9d-88d3-b17e2de08d6f"
+      },
+      "level_keys": [
+        "cs50-scikit-26"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 27,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "| **5.15** | When to use Logistic vs. Linear |"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-27"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "5f28a188-a9a1-48cd-b05b-67fc941ace98"
+      },
+      "level_keys": [
+        "cs50-scikit-27"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 28,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "| **5.8** | Bias vs. Variance: The Sweet Spot |"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-28"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "4ef1b330-e02d-4065-a16f-87e6c1a7b4c0"
+      },
+      "level_keys": [
+        "cs50-scikit-28"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 29,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "| **5.12** | RL: Agents, Actions, and Rewards |"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-29"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "8e45ab99-22e3-4284-a71a-999339d54100"
+      },
+      "level_keys": [
+        "cs50-scikit-29"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 30,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "| **5.5** | Explainability: Magic vs. Logic |"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-30"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "0065dee1-6a03-4526-9a74-1f2b30aa481b"
+      },
+      "level_keys": [
+        "cs50-scikit-30"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 31,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "| **6.8** | Continuous, Binary, Categorical, Ordinal |"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-31"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "9317c222-4e63-4894-bd9f-877da98b9943"
+      },
+      "level_keys": [
+        "cs50-scikit-31"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 32,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "| **6.4, 6.7** | Measuring Uncertainty (Sampling) |"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-32"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "6a1b8f31-0174-414a-896e-4897e0fbdd6e"
+      },
+      "level_keys": [
+        "cs50-scikit-32"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 33,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "| **6.3** | Statistics: Mean vs. Standard Error |"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-33"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "b9a83537-2f58-4472-88cb-9ef997c71599"
+      },
+      "level_keys": [
+        "cs50-scikit-33"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 34,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "| **5.3** | How Decisions are Made (Thresholds) |"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50-scikit-34"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "db308034-d57f-49a0-bcae-b562267f1667"
+      },
+      "level_keys": [
+        "cs50-scikit-34"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-01",
+        "script_level.level_keys": [
+          "cs50-scikit-01"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "4657983f-8628-43c0-97ca-0104e4a9abf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-02",
+        "script_level.level_keys": [
+          "cs50-scikit-02"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "15313aaa-7afe-4e5f-85f9-eb351dd31eac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-03",
+        "script_level.level_keys": [
+          "cs50-scikit-03"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "eb3c7912-6545-44ff-a8eb-188676b062a5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-04",
+        "script_level.level_keys": [
+          "cs50-scikit-04"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "9d51d312-0b31-4efa-a6b2-db3205b9baa6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-05",
+        "script_level.level_keys": [
+          "cs50-scikit-05"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "1c90323a-ada9-411b-8e6a-a65c22a82075"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-06",
+        "script_level.level_keys": [
+          "cs50-scikit-06"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "72a18d70-9421-43fd-a8d3-92368150b61b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-07",
+        "script_level.level_keys": [
+          "cs50-scikit-07"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "3287eee6-a025-4f9c-b413-bc39a6f6a1d5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-08",
+        "script_level.level_keys": [
+          "cs50-scikit-08"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "a2774d7a-3fdb-413a-b7cb-85e62c8de271"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-09",
+        "script_level.level_keys": [
+          "cs50-scikit-09"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "5ad53bfa-4e5d-41e2-8626-3bf749c29464"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-10",
+        "script_level.level_keys": [
+          "cs50-scikit-10"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "f8caf234-c3e0-4994-a63a-5026dec67ac1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-11",
+        "script_level.level_keys": [
+          "cs50-scikit-11"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "16debb77-978e-44c8-bccd-c452c7c12d05"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-12",
+        "script_level.level_keys": [
+          "cs50-scikit-12"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "8e6a15f2-71b8-45ea-8847-3f146d99af56"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-13",
+        "script_level.level_keys": [
+          "cs50-scikit-13"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "8b54dc9d-7aa0-443c-81ba-bd4442e47f73"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-14",
+        "script_level.level_keys": [
+          "cs50-scikit-14"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "c2714b9d-1664-4c11-9312-10d8a8414be0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-15",
+        "script_level.level_keys": [
+          "cs50-scikit-15"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "3b0669d9-4658-4a9e-a0a9-b5ca26c6b0c5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-16",
+        "script_level.level_keys": [
+          "cs50-scikit-16"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "48669a5b-85ec-4dfd-acbf-7409486aa517"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-17",
+        "script_level.level_keys": [
+          "cs50-scikit-17"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "b358a9ee-8324-4e4b-a85b-519499d22cd2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-18",
+        "script_level.level_keys": [
+          "cs50-scikit-18"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "b2faf666-c6ad-4533-9bc2-ccde0e43945e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-19",
+        "script_level.level_keys": [
+          "cs50-scikit-19"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "a6f10cca-eeac-4a0b-9ee4-5e25ab00f812"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-20",
+        "script_level.level_keys": [
+          "cs50-scikit-20"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "a283d22d-24a9-4e94-9018-572e58d59a0f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-21",
+        "script_level.level_keys": [
+          "cs50-scikit-21"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "9fc1c454-95db-41d4-9dcd-99303ac6888b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-22",
+        "script_level.level_keys": [
+          "cs50-scikit-22"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "f011e007-63dd-49b7-9106-90cd196a4a4f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-23",
+        "script_level.level_keys": [
+          "cs50-scikit-23"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "9dbd5f3a-3629-4a6e-bce5-d77dabb9ea86"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-24",
+        "script_level.level_keys": [
+          "cs50-scikit-24"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "93f60c42-3cc0-4a79-b4ff-b9d2d2119f69"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-25",
+        "script_level.level_keys": [
+          "cs50-scikit-25"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "bee16e4f-eb06-403e-ba52-6e8092384666"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-26",
+        "script_level.level_keys": [
+          "cs50-scikit-26"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "3e4afb80-8b2f-4a9d-88d3-b17e2de08d6f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-27",
+        "script_level.level_keys": [
+          "cs50-scikit-27"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "5f28a188-a9a1-48cd-b05b-67fc941ace98"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-28",
+        "script_level.level_keys": [
+          "cs50-scikit-28"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "4ef1b330-e02d-4065-a16f-87e6c1a7b4c0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-29",
+        "script_level.level_keys": [
+          "cs50-scikit-29"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "8e45ab99-22e3-4284-a71a-999339d54100"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-30",
+        "script_level.level_keys": [
+          "cs50-scikit-30"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "0065dee1-6a03-4526-9a74-1f2b30aa481b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-31",
+        "script_level.level_keys": [
+          "cs50-scikit-31"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "9317c222-4e63-4894-bd9f-877da98b9943"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-32",
+        "script_level.level_keys": [
+          "cs50-scikit-32"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "6a1b8f31-0174-414a-896e-4897e0fbdd6e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-33",
+        "script_level.level_keys": [
+          "cs50-scikit-33"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "b9a83537-2f58-4472-88cb-9ef997c71599"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50-scikit-34",
+        "script_level.level_keys": [
+          "cs50-scikit-34"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "cs50-testing-things",
+        "activity_section.key": "db308034-d57f-49a0-bcae-b562267f1667"
+      }
+    }
   ],
   "resources": [
 

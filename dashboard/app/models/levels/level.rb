@@ -925,9 +925,7 @@ class Level < ApplicationRecord
     properties_camelized["exemplarSettings"] = localized_exemplar_settings if get_exemplar_settings
     properties_camelized["panels"] = localized_panels if properties_camelized["panels"]
     properties_camelized["longInstructions"] = (get_localized_property("long_instructions") || long_instructions) if properties_camelized["longInstructions"]
-    if script_level
-      properties_camelized[:exampleSolutions] = script_level.get_example_solutions(self, current_user, nil, unit_group_unit: unit_group_unit)
-    end
+    properties_camelized[:showExemplarLink] = script_level && try(:exemplar_sources).present? && current_user&.verified_instructor?
     is_verified_instructor = current_user&.verified_instructor? || current_user&.permission?(UserPermission::LEVELBUILDER)
     if is_verified_instructor || try(:exemplar_settings)
       # Verified instructors can view exemplars and levelbuilders can edit them, so we include them in the properties

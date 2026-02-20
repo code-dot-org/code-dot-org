@@ -15,6 +15,7 @@ import {
 import cloneDeep from 'lodash/cloneDeep';
 import React, {useEffect, useCallback, useRef, useState, useMemo} from 'react';
 
+import DCDO from '@cdo/apps/dcdo';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
@@ -31,7 +32,6 @@ import SourcesContainer, {
   useSources,
 } from '@cdo/apps/lab2/views/SourcesContainer';
 import {commonI18n} from '@cdo/apps/types/locale';
-import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useDialogControl} from '../lab2/views/dialogs';
@@ -59,11 +59,9 @@ const INITIAL_INFO_PANEL_WIDTH = 290;
 const MIN_WORKSPACE_WIDTH = 400;
 const INITIAL_WORKSPACE_WIDTH = 800;
 
-const DEBOUNCED_WORKSPACE_SERIALIZATION_MS = 500;
+const DEBOUNCED_WORKSPACE_SERIALIZATION_MS = 200;
 
 const DEFAULT_SOURCES = {source: {}};
-
-const S3_IMAGE_EXPERIMENT = 's3-images';
 
 const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   levelProperties,
@@ -141,13 +139,11 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
       currentSources.source
     ) as ExcalidrawInitialDataState;
 
-    return experiments.isEnabledAllowingQueryString(S3_IMAGE_EXPERIMENT)
-      ? populateInitialExcalidrawState(
-          clonedSource,
-          downloadedFilesDataRef.current,
-          onError
-        )
-      : clonedSource;
+    return populateInitialExcalidrawState(
+      clonedSource,
+      downloadedFilesDataRef.current,
+      onError
+    );
   }, [currentSources.source, onError]);
 
   const currentUserId = useAppSelector(state => state.currentUser.userId);
@@ -241,15 +237,27 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           channelId
         );
 
-        updateSources({
+        // We remove base64 encoded images from the serialized data before storing them to a student's project.
+        // The images are instead uploaded to/retrieved from S3.
+        // Including an experiment flag as well in case we observe issues and need to turn this off quickly.
+        Object.entries(serializedData.files).forEach(([id, file]) => {
+          if (
+            savedFiles[id]?.uploaded &&
+            DCDO.get('sketchlab-s3-image-storage', true)
+          ) {
+            delete file.dataURL;
+          }
+        });
+
+        updateSources(prevSources => ({
           source: {
             ...serializedData,
             externalFiles: {
-              ...currentSources.source.externalFiles,
+              ...prevSources.source.externalFiles,
               ...newFiles,
             },
           },
-        });
+        }));
 
         if (newFiles && !readonlyWorkspace) {
           const newFilesWithUploadStatus = await uploadExternalFiles(
@@ -258,16 +266,15 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
             filesBeingUploadedRef
           );
 
-          // We update sources again on upload completion to update the upload status of the new files.
-          updateSources({
+          updateSources(prevSources => ({
             source: {
-              ...serializedData,
+              ...prevSources.source,
               externalFiles: {
-                ...currentSources.source.externalFiles,
+                ...prevSources.source.externalFiles,
                 ...newFilesWithUploadStatus,
               },
             },
-          });
+          }));
         }
       }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
     },

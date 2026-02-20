@@ -989,7 +989,7 @@ export const assignToSection = (
       DCDO.get('show-aita-lesson-summaries', false)
     ) {
       HttpClient.get(
-        `/ai_lesson_summaries/perform_ai_lesson_summaries_by_unit?unit_id=${unitId}`
+        `/ai_lesson_summaries/request_ai_lesson_summaries?unit_id=${unitId}`
       ).catch(error => {
         console.error(error);
       });

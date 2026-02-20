@@ -71,6 +71,32 @@ module AiLessonSummariesHelper
     end
   end
 
+  def self.perform_ai_lesson_summaries_by_unit(unit, user_id)
+    lesson_ids = []
+    unit.lessons.each do |lesson|
+      if lesson.has_lesson_plan
+        lesson_ids << lesson.id
+      end
+    end
+    request = {
+      user_id: user_id,
+      lesson_ids: lesson_ids,
+      unit_id: unit.id
+    }
+    AiLessonSummariesJob.perform_later(request: request)
+  end
+
+  def self.perform_ai_lesson_summary_by_lesson(lesson, unit, user_id)
+    if lesson.has_lesson_plan
+      request = {
+        user_id: user_id,
+        lesson_ids: [lesson.id],
+        unit_id: unit.id
+      }
+      AiLessonSummariesJob.perform_later(request: request)
+    end
+  end
+
   class Client
     attr_accessor :api_key, :model
 

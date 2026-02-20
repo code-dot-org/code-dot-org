@@ -2,7 +2,6 @@ import currentUser, {
   SignInState,
   setUserSignedIn,
   setUserType,
-  setCurrentUserHasSeenStandardsReportInfo,
   setShowAITALessonSummary,
   setHasCompletedPersonalizationQuiz,
   setAudioSummaryTranscript,
@@ -62,15 +61,6 @@ describe('currentUserRedux', () => {
       const nextState = currentUser(initialState, action);
 
       expect(nextState.userType).toEqual('teacher');
-    });
-  });
-
-  describe('setCurrentUserHasSeenStandardsReportInfo', () => {
-    it('can set the standards info dialog to seen', () => {
-      const action = setCurrentUserHasSeenStandardsReportInfo(true);
-      const nextState = currentUser(initialState, action);
-
-      expect(nextState.hasSeenStandardsReportInfo).toEqual(true);
     });
   });
 

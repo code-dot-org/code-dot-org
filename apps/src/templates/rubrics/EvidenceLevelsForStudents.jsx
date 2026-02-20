@@ -1,8 +1,4 @@
-import {
-  BodyThreeText,
-  Heading6,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -20,7 +16,9 @@ export default function EvidenceLevelsForStudents({
 }) {
   return (
     <div className={style.evidenceLevelSet}>
-      <Heading6>{i18n.rubricScores()}</Heading6>
+      <Typography variant="h6" gutterBottom>
+        {i18n.rubricScores()}
+      </Typography>
       <div className={style.evidenceLevelSetHorizontal}>
         {evidenceLevels.map((evidenceLevel, index) => (
           <div key={evidenceLevel.id} className={style.evidenceLevelInnerDiv}>
@@ -32,12 +30,14 @@ export default function EvidenceLevelsForStudents({
               })}
             >
               {/*TODO: [DES-321] Label-two styles here*/}
-              <BodyThreeText>
-                <StrongText>
+              <Typography variant="body3" gutterBottom>
+                <Typography variant="strong">
                   {UNDERSTANDING_LEVEL_STRINGS[evidenceLevel.understanding]}
-                </StrongText>
-              </BodyThreeText>
-              <BodyThreeText>{evidenceLevel.teacherDescription}</BodyThreeText>
+                </Typography>
+              </Typography>
+              <Typography variant="body3" gutterBottom>
+                {evidenceLevel.teacherDescription}
+              </Typography>
             </div>
           </div>
         ))}

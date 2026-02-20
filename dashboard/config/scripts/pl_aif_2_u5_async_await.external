@@ -1,0 +1,184 @@
+name 'pl-aif-2-U5-async-await'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<div style="font-size:14pt; line-height:1.4;">
+
+# Promise chain vs. async/await
+  
+#### You already know how to use a Promise chain with <code style="font-size:12pt;">.then()</code>.
+
+#### In this level, you’ll compare two versions of the *same* logic: one written with a Promise chain and one written with <code style="font-size:12pt;">async</code>/<code style="font-size:12pt;">await</code>.
+
+#### Your job is to explain what looks different and why the behavior stays the same.
+ 
+
+<div style="background:#f7f8fa; border-radius:10px; padding:14px; margin:12px 0; box-sizing:border-box;">
+    <p style="margin:0; font-size:14pt;">
+      💡 <strong>Key idea:</strong> <code style="font-size:12pt;">async</code>/<code style="font-size:12pt;">await</code> does not replace Promises — it’s a cleaner way to write
+      Promise logic so it reads like step-by-step code.
+    </p>
+  </div>
+
+
+
+<hr style="margin:12px 0;" />
+
+## Let's Compare
+
+<div style="font-size:14pt; line-height:1.4;">
+
+<div style="display:flex; gap:16px; flex-wrap:wrap; justify-content:center; align-items:flex-start; margin-top:10px;">
+
+<!-- LEFT CARD -->
+ <div style="background:#ffffff; border:1px solid #ddd; border-radius:12px; padding:14px; width:440px; height:550px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+
+<div style="font-size:14pt; font-weight:bold; margin-bottom:10px;">
+      Version A: Promise Chain (.then())
+    </div>
+
+<!-- BLACK CODE BOX -->
+<div style="background-color:#000000; border-radius:12px; padding:18px; margin-bottom:14px; overflow-x:auto;">
+
+<pre style="margin:0; background-color:#000000; font-family:Consolas, Monaco, 'Courier New', monospace; font-size:14px; line-height:1.5; color:#f8f8f2;">
+
+<span style="color:#4dabf7;">fetch</span>(<span style="color:#69db7c;">url</span>)
+  .<span style="color:#ffd43b;">then</span>((response) => {
+    <span style="color:#ff6b6b;">return</span> response.<span style="color:#4dabf7;">json</span>();
+  })
+  .<span style="color:#ffd43b;">then</span>((data) => {
+    <span style="color:#4dabf7;">console</span>.<span style="color:#4dabf7;">log</span>(data);
+  });
+
+</pre>
+ </div>
+
+<!-- HOW TO READ -->
+<div style="font-size:14pt;">
+ <strong>How to read it:</strong>
+  <ul style="margin-top:8px;">
+        <li style="font-size:14pt;"><code style="font-size:12pt;">fetch(url)</code> starts a request and returns a <strong>Promise</strong>.</li>
+        <li style="font-size:14pt;">The first <code style="font-size:12pt;">.then()</code> runs after the response is ready and returns <code>response.json()</code>.</li>
+        <li style="font-size:14pt;">The second <code style="font-size:12pt;">.then()</code> runs after the JSON is ready and gives you <code style="font-size:12pt;">data</code>.</li>
+      </ul>
+    </div>
+
+  </div>
+
+<!-- RIGHT CARD -->
+<div style="background:#ffffff; border:1px solid #ddd; border-radius:12px; padding:14px; width:440px;height:550px;  box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+
+<div style="font-size:14pt; font-weight:bold; margin-bottom:10px;">
+      Version B: async / await
+    </div>
+
+<!-- BLACK CODE BOX -->
+<div style="background-color:#000000; border-radius:12px; padding:18px; margin-bottom:14px; overflow-x:auto;">
+
+<pre style="margin:0; background-color:#000000; font-family:Consolas, Monaco, 'Courier New', monospace; font-size:14px; line-height:1.5; color:#f8f8f2;">
+
+<span style="color:#ff6b6b;">async</span> <span style="color:#ff6b6b;">function</span> <span style="color:#4dabf7;">getData</span>() {
+
+  <span style="color:#ff6b6b;">const</span> response =
+    <span style="color:#ff6b6b;">await</span> <span style="color:#4dabf7;">fetch</span>(<span style="color:#69db7c;">url</span>);
+
+  <span style="color:#ff6b6b;">const</span> data =
+    <span style="color:#ff6b6b;">await</span> response.<span style="color:#4dabf7;">json</span>();
+
+  <span style="color:#4dabf7;">console</span>.<span style="color:#4dabf7;">log</span>(data);
+
+}
+
+</pre>
+</div>
+
+<!-- HOW TO READ -->
+<div style="font-size:14pt;">
+<strong>How to read it:</strong>
+<ul style="margin-top:8px;">
+        <li style="font-size:14pt;"><code style="font-size:12pt;">await fetch(url)</code> pauses <em>this async function</em> until the Promise resolves.</li>
+        <li style="font-size:14pt;"><code style="font-size:12pt;">await response.json()</code> pauses again because JSON parsing also returns a Promise.</li>
+        <li style="font-size:14pt;">Then the next line runs, using <code style="font-size:12pt;">data</code> like normal step-by-step code.</li>
+      </ul>
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
+  </div>
+
+  <hr style="margin:12px 0;" />
+
+## What’s different (and what stays the same)?
+
+<ul style="margin:0 0 12px 20px; padding:0;">
+    <li style="margin:0 0 6px 0; font-size:14pt;">
+      <strong>Different structure:</strong> The Promise chain uses nested callback functions inside <code style="font-size:12pt;">.then(...)</code>.
+      The <code style="font-size:12pt;">async</code>/<code>await</code> version removes most nesting and reads top-to-bottom.
+    </li>
+    <li style="margin:0 0 6px 0;font-size:14pt;">
+      <strong>Same timing:</strong> Both versions still rely on Promises and still run asynchronously. Nothing “became synchronous.”
+    </li>
+    <li style="margin:0 0 6px 0; font-size:14pt;">
+      <strong>Same steps:</strong> (1) request data, (2) wait for the response, (3) convert to JSON, (4) use the data.
+    </li>
+  </ul>
+
+  <div style="background:#B2dee3; border-radius:10px; padding:14px; margin:12px 0; box-sizing:border-box;">
+    <p style="margin:0; font-size:14pt;">
+      ⭐ <strong>Teacher Tip:</strong> There are <strong>two</strong> waits in both versions.
+      <code style="font-size:12pt;">fetch(url)</code> returns a Promise, and <code style="font-size:12pt;">response.json()</code> also returns a Promise.
+      That’s why you see either <strong>two <code style="font-size:12pt;">.then()</code></strong> calls or <strong>two <code style="font-size:12pt;">await</code></strong> lines.
+    </p>
+  </div>
+
+## Quick Check
+
+<ol style="margin:0 0 0 20px; padding:0;">
+<li style="margin:0 0 8px 0; font-size:14pt;">
+      What replaced <code style="font-size:12pt;">.then()</code> in Version B?
+    </li>
+    <li style="margin:0 0 8px 0; font-size:14pt;">
+      Why are there still two <code style="font-size:12pt;">await</code> lines?
+    </li>
+    <li style="margin:0 0 8px 0; font-size:14pt;">
+      Does Version B change what the program does, or only how it’s written? Explain.
+    </li>
+  </ol>
+
+  <details style="background-color:#ececec; padding:10px; margin-top:12px; border:1px solid transparent; border-radius:8px;">
+    <summary style="font-size:14pt; font-weight:bold;">💡 Check your thinking (click to reveal)</summary>
+<div style="margin-top:12px; margin-left:14px; margin-right:14px; margin-bottom:10px; font-size:14pt; line-height:1.4;">
+
+<ul style="margin:0 0 0 20px; padding:0;">
+<li style="margin:0 0 8px 0; font-size:14pt;">
+          <strong>What replaced <code style="font-size:12pt;">.then()</code>?</strong><br />
+          Each <code style="font-size:12pt;">await</code> is doing the same job as a <code>.then()</code>: “wait for this Promise to finish, then continue.”
+        </li>
+        <li style="margin:0 0 8px 0; font-size:14pt;">
+          <strong>Why two awaits?</strong><br />
+          Because there are two Promises: one from <code>fetch(url)</code> (wait for the response) and one from <code style="font-size:12pt;">response.json()</code> (wait for the data).
+        </li>
+        <li style="margin:0 0 8px 0; font-size:14pt;">
+          <strong>Did the behavior change?</strong><br />
+          No — both versions do the same steps in the same order and still run asynchronously. The difference is readability.
+        </li>
+      </ul>
+ </div>
+  </details>
+
+</div>
+
+
+
+---
+
+
+## Next 
+
+Change a Promise chain to an async/ await function in Web Lab. 
+MARKDOWN

@@ -1,4 +1,4 @@
-import {Heading4} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -30,7 +30,9 @@ export default function QuickAssignTable({
         <thead>
           <tr className={moduleStyles.headerRow}>
             <td className={moduleStyles.headerCell}>
-              <Heading4>{title}</Heading4>
+              <Typography variant="h4" gutterBottom>
+                {title}
+              </Typography>
             </td>
           </tr>
         </thead>
