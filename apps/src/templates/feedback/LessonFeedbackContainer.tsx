@@ -60,6 +60,7 @@ function LessonFeedbackContainer({studentId}: LessonFeedbackContainerProps) {
     fetchedFeedback.length > 0 &&
     fetchedFeedback.some(item => !!item.submitted_feedback);
 
+  // TODO: TEACHING-98 - update so only submitted resources are shown to students
   return (
     <div>
       {isLoading && <Spinner size={'large'} />}
@@ -67,7 +68,6 @@ function LessonFeedbackContainer({studentId}: LessonFeedbackContainerProps) {
         <div>{i18n.feedbackNoneYet()}</div>
       )}
       {hasSubmittedFeedback &&
-        fetchedFeedback &&
         !isLoading &&
         fetchedFeedback
           .filter(lessonFeedback => !!lessonFeedback.submitted_feedback)
