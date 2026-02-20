@@ -54,6 +54,8 @@ export default class PhoneFrame extends React.Component {
                   type="button"
                   className={style.topResetButton}
                   onClick={() => studioApp().resetButtonClick()}
+                  aria-label="Reset"
+                  title="Reset"
                 >
                   <FontAwesome icon="repeat" />
                 </button>
