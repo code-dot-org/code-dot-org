@@ -443,6 +443,11 @@ html body .sidebarActionTooltip {
   overflow: hidden;
 }
 
+.sidebarArtifactIconContainer {
+  justify-content: space-between;
+  display: flex;
+}
+
 .sidebarChatItemSecondary {
   color: var(--text-neutral-tertiary) !important;
   font-family: Figtree, sans-serif !important;
@@ -534,6 +539,33 @@ html body .sidebarActionTooltip {
 
     i {
       margin-inline-start: 4px;
+    }
+  }
+}
+
+.artifactShowButtons {
+  display: flex;
+  margin-top: 12px;
+
+  button {
+    margin-inline-end: 8px;
+    margin-bottom: 8px;
+  }
+
+  a {
+    color: var(--text-neutral-tertiary);
+    font-weight: 600;
+    text-decoration: underline;
+    align-self: center;
+    width: 100%;
+    justify-content: flex-start;
+
+    i {
+      padding: 4px;
+      margin-inline-start: 4px;
+      border-radius: 4px;
+      background: var(--background-brand-aqua-light, #BFFFFC);
+      color: var(--text-brand-aqua-secondary);
     }
   }
 }
@@ -767,4 +799,9 @@ html body .sidebarActionTooltip {
   display: flex;
   justify-content: center;
   color: $neutral_dark;
+}
+
+.artifactThreadIcon {
+  color: var(--background-neutral-octonary);
+  align-self: center;
 }
