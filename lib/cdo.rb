@@ -101,6 +101,15 @@ module Cdo
       canonical_hostname('studio.code.org')
     end
 
+    # Returns the S3 bucket name for user-generated content in the current environment.
+    # Matches the naming convention used by the CloudFormation stack (s3.yml.erb):
+    #   {reversed dashboard hostname}.user-content
+    # e.g., "org.code.studio.user-content" in production,
+    #        "org.code.staging-studio.user-content" in staging.
+    def user_content_s3_bucket
+      dashboard_hostname.split('.').reverse.join('.') + '.user-content'
+    end
+
     def pegasus_hostname
       canonical_hostname('code.org')
     end
