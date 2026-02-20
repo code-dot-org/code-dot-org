@@ -22,7 +22,7 @@ class LessonFeedbacksController < ApplicationController
   end
 
   def show_by_student
-    feedback = LessonFeedback.includes(:teacher, lesson: :script).where(student_id: current_user.id).order(updated_at: :desc)
+    feedback = LessonFeedback.includes(:teacher, lesson: :script).where(student_id: current_user.id).where.not(submitted_at: nil).order(updated_at: :desc)
 
     feedback_with_additional_data = feedback.map do |f|
       f.as_json.merge(
