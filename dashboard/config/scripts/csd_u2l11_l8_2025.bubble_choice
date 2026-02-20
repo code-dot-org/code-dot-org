@@ -1,0 +1,10 @@
+name 'CSD U2L11-L8-2025'
+display_name 'Using Classes'
+description 'Try extra challenges or learn some new code.'
+
+sublevels
+level 'CSD U2L11-L8a-2025'
+level 'CSD U2L11-L8b-2025'
+level 'CSD U2L11-L8c-2025'
+
+uses_lab2

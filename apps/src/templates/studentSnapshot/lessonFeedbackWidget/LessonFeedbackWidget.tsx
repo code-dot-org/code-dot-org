@@ -1,6 +1,8 @@
 import Alert from '@code-dot-org/component-library/alert';
 import React from 'react';
 
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import WidgetTemplate from '@cdo/apps/templates/studentSnapshot/widgetTemplate';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
@@ -29,6 +31,8 @@ interface LessonFeedbackData {
     resource_name?: string;
     resource_link?: string;
   }>;
+  created_at?: Date | string;
+  updated_at?: Date | string;
 }
 
 // Constants
@@ -111,11 +115,26 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
             setExistingFeedbackData(aiGeneratedInitialFeedbackRecord);
             setFeedbackText(aiGeneratedInitialFeedbackRecord.saved_feedback);
             setResourceData([DEFAULT_RESOURCE]);
+            analyticsReporter.sendEvent(
+              EVENTS.LESSON_SNAPSHOT_AI_FEEDBACK_GENERATED,
+              {},
+              PLATFORMS.STATSIG
+            );
+            analyticsReporter.sendEvent(
+              EVENTS.LESSON_SNAPSHOT_FEEDBACK_WIDGET_LOADED,
+              {},
+              PLATFORMS.STATSIG
+            );
           }
         } else {
           const data = await response.json();
           if (data.saved_feedback) {
             setFeedbackText(data.saved_feedback);
+            analyticsReporter.sendEvent(
+              EVENTS.LESSON_SNAPSHOT_FEEDBACK_WIDGET_LOADED,
+              {},
+              PLATFORMS.STATSIG
+            );
           }
           setExistingFeedbackData(data);
           if (data.resources && data.resources.length > 0) {
@@ -186,6 +205,36 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
     }
   };
 
+  const userHasEditedAiFeedback = () => {
+    const isLookingAtOriginalAiFeedback =
+      existingFeedbackData &&
+      existingFeedbackData.updated_at === existingFeedbackData.created_at;
+
+    const hasEdited = feedbackText !== existingFeedbackData?.saved_feedback;
+    return isLookingAtOriginalAiFeedback && hasEdited;
+  };
+
+  // Helper function to generate common analytics properties for feedback actions
+  const getCommonAnalyticsProperties = () => {
+    const hasRecommendedAction = !!(
+      resourceData[0]?.recommended_action &&
+      resourceData[0].recommended_action.trim()
+    );
+    const hasRecommendActionLink = !!(
+      resourceData[0]?.resource_link && resourceData[0].resource_link.trim()
+    );
+
+    return {
+      aiFeedbackEdited: userHasEditedAiFeedback(),
+      hasRecommendedAction,
+      recommendedActionCharacterCount: resourceData[0]?.recommended_action
+        ? resourceData[0].recommended_action.trim().length
+        : 0,
+      hasRecommendActionLink,
+      resourceLinkCount: hasRecommendActionLink ? 1 : 0,
+    };
+  };
+
   const handleSaveAsDraft = async () => {
     const newFeedbackData = {
       ...existingFeedbackData,
@@ -195,15 +244,31 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
 
     setExistingFeedbackData(newFeedbackData);
 
-    const savedData = await persistFeedbackToBackend(
-      newFeedbackData,
-      existingFeedbackData?.id
-    );
+    try {
+      const savedData = await persistFeedbackToBackend(
+        newFeedbackData,
+        existingFeedbackData?.id
+      );
+      analyticsReporter.sendEvent(
+        EVENTS.LESSON_SNAPSHOT_SAVE_AS_DRAFT_CLICKED,
+        getCommonAnalyticsProperties(),
+        PLATFORMS.STATSIG
+      );
 
-    setExistingFeedbackData(savedData);
+      setExistingFeedbackData(savedData);
+    } catch (error) {
+      console.error('Failed to save feedback as draft:', error);
+    }
   };
 
   const handleSendToStudent = async () => {
+    const analyticsProperties = getCommonAnalyticsProperties();
+
+    analyticsReporter.sendEvent(
+      EVENTS.LESSON_SNAPSHOT_SEND_FEEDBACK_TO_STUDENT_CLICKED,
+      analyticsProperties,
+      PLATFORMS.STATSIG
+    );
     // Create the new feedback data
     const newFeedbackData = {
       ...existingFeedbackData,

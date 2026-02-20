@@ -26,7 +26,6 @@ import TeacherCourseOverview from '../courseOverview/TeacherCourseOverview';
 import ManageStudents from '../manageStudents/ManageStudents';
 import SectionProjectsListWithData from '../projects/SectionProjectsListWithData';
 import SectionAssessments from '../sectionAssessments/SectionAssessments';
-import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SectionProgressV2 from '../sectionProgressV2/SectionProgressV2';
 import StudentSnapshot from '../studentSnapshot/StudentSnapshot';
 import TeacherHomepage from '../studioHomepages/teacherHomepageV2/TeacherHomepage';
@@ -181,16 +180,6 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                   sectionProviderName={providerName}
                 />
               )}
-            />
-            <Route
-              path={TEACHER_NAVIGATION_PATHS.standardsReport}
-              element={
-                <ElementOrEmptyPage
-                  showNoStudents={studentCount === 0}
-                  showNoCurriculumAssigned={!anyStudentHasProgress}
-                  element={applyV1TeacherDashboardWidth(<StandardsReport />)}
-                />
-              }
             />
             <Route
               path={TEACHER_NAVIGATION_PATHS.projects}

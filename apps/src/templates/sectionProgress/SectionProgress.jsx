@@ -13,7 +13,6 @@ import {
 } from '@cdo/apps/redux/unitSelectionRedux';
 import ProgressTableView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableView';
 import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
-import StandardsView from '@cdo/apps/templates/sectionProgress/standards/StandardsView';
 import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
 import i18n from '@cdo/locale';
 
@@ -56,7 +55,6 @@ class SectionProgress extends Component {
     setLessonOfInterest: PropTypes.func.isRequired,
     isLoadingProgress: PropTypes.bool.isRequired,
     isRefreshingProgress: PropTypes.bool,
-    showStandardsIntroDialog: PropTypes.bool,
   };
 
   constructor(props) {
@@ -182,23 +180,13 @@ class SectionProgress extends Component {
   };
 
   render() {
-    const {
-      currentView,
-      scriptId,
-      courseVersionId,
-      scriptData,
-      sectionId,
-      showStandardsIntroDialog,
-    } = this.props;
+    const {currentView, scriptId, courseVersionId, scriptData, sectionId} =
+      this.props;
     const levelDataInitialized = this.levelDataInitialized();
     const lessons = scriptData ? scriptData.lessons : [];
-    const scriptWithStandardsSelected =
-      levelDataInitialized && scriptData.hasStandards;
     const showProgressTable =
       levelDataInitialized &&
       (currentView === ViewType.SUMMARY || currentView === ViewType.DETAIL);
-    const standardsStyle =
-      currentView === ViewType.STANDARDS ? styles.show : styles.hide;
 
     return (
       <div
@@ -220,9 +208,7 @@ class SectionProgress extends Component {
           {levelDataInitialized && (
             <div style={styles.toggle}>
               <div style={{...h3Style, ...styles.heading}}>{i18n.viewBy()}</div>
-              <SectionProgressToggle
-                showStandardsToggle={scriptWithStandardsSelected}
-              />
+              <SectionProgressToggle />
             </div>
           )}
           {currentView === ViewType.DETAIL && lessons.length !== 0 && (
@@ -251,13 +237,6 @@ class SectionProgress extends Component {
             />
           )}
           {showProgressTable && <ProgressTableView currentView={currentView} />}
-          {levelDataInitialized && currentView === ViewType.STANDARDS && (
-            <div id="uitest-standards-view" style={standardsStyle}>
-              <StandardsView
-                showStandardsIntroDialog={showStandardsIntroDialog}
-              />
-            </div>
-          )}
         </div>
       </div>
     );
@@ -317,7 +296,6 @@ export default connect(
     scriptData: getCurrentUnitData(state),
     isLoadingProgress: state.sectionProgress.isLoadingProgress,
     isRefreshingProgress: state.sectionProgress.isRefreshingProgress,
-    showStandardsIntroDialog: !state.currentUser.hasSeenStandardsReportInfo,
   }),
   dispatch => ({
     setUnit(scriptId, courseVersionId) {
