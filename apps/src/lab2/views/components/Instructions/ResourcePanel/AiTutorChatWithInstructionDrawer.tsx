@@ -189,7 +189,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
     return () => {
       resizeObserver.disconnect();
     };
-  }, [instructionsContent, setRawInstructionsHeight, isCollapsed]);
+  }, [setRawInstructionsHeight, isCollapsed]);
 
   const toggleInstructions = useCallback(() => {
     const eventToReport = isCollapsed
