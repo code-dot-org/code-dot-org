@@ -1,11 +1,17 @@
 class LessonFeedbacksController < ApplicationController
   before_action :authenticate_user!
 
-  load_and_authorize_resource except: [:show_by_student, :saved_feedback]
+  load_and_authorize_resource except: [:show_by_student, :saved_feedback, :create]
 
   def create
-    @lesson_feedback.assign_attributes(create_lesson_feedback_params)
+    student = User.find_by(id: params[:student_id])
+    return head :not_found unless student
+    return head :forbidden unless student.student_of?(current_user)
+
+    @lesson_feedback = LessonFeedback.new(create_lesson_feedback_params)
     @lesson_feedback.teacher_id = current_user.id
+
+    authorize! :create, @lesson_feedback
 
     if @lesson_feedback.save
       render json: @lesson_feedback, status: :created
