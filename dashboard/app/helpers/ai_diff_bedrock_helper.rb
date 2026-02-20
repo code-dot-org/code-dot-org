@@ -194,10 +194,13 @@ module AiDiffBedrockHelper
         config
       )
       if artifact_type
-        if json_post_process(response.output.text.dup).nil?
+        json_text = json_post_process(response.output.text.dup)
+        valid = JSON::Validator.validate(AidiffPromptHelper::EXIT_TICKET_SCHEMA, json_text) if artifact_type == SharedConstants::AI_DIFF_ARTIFACT_TYPE[:EXIT_TICKET]
+        valid = JSON::Validator.validate(AidiffPromptHelper::LESSON_HOOK_SCHEMA, json_text) if artifact_type == SharedConstants::AI_DIFF_ARTIFACT_TYPE[:LESSON_HOOK]
+        if json_text.nil? || !valid
           raise AidiffJsonError
         else
-          return format_rag_response(response, artifact_type, true)
+          return format_rag_response(response, artifact_type, valid)
         end
       end
     rescue AidiffJsonError
@@ -219,18 +222,17 @@ module AiDiffBedrockHelper
     return nil
   end
 
-  def format_rag_response(response, artifact_type, is_json = false)
+  def format_rag_response(response, artifact_type, valid = false)
     text = response.output.text.dup
 
-    if artifact_type && is_json
+    if artifact_type
       #fix json
       json_text = json_post_process(text)
-
-      valid = JSON::Validator.validate(AidiffPromptHelper::EXIT_TICKET_SCHEMA, json_text) if artifact_type == SharedConstants::AI_DIFF_ARTIFACT_TYPE[:EXIT_TICKET]
-      valid = JSON::Validator.validate(AidiffPromptHelper::LESSON_HOOK_SCHEMA, json_text) if artifact_type == SharedConstants::AI_DIFF_ARTIFACT_TYPE[:LESSON_HOOK]
-      if json_text
-        text = json_text
-      end
+      text = if json_text && valid
+               json_text
+             else
+               "Sorry, there was an error generating this artifact. Please try again"
+             end
     end
     # Remove useless references such as '(Sources 1 and 7)' from the response
     text.gsub!(/ ?\([Ss]ource[^)]+\)/, '')
