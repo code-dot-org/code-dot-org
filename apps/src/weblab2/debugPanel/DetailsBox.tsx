@@ -1,5 +1,4 @@
 import Alert from '@code-dot-org/component-library/alert';
-import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   BodyThreeText,
@@ -7,6 +6,8 @@ import {
   StrongText,
 } from '@code-dot-org/component-library/typography';
 import React, {useMemo} from 'react';
+
+import CopyButton from './CopyButton';
 
 import parentStyles from './debug-panel.module.scss';
 import moduleStyles from './details-box.module.scss';
@@ -73,16 +74,9 @@ const DetailsBox: React.FunctionComponent<DetailsBoxProps> = ({
                   {field.label}
                 </OverlineThreeText>
                 {field.copyable && (
-                  <Button
-                    icon={{iconStyle: 'solid', iconName: 'copy'}}
-                    isIconOnly
-                    size="xs"
-                    type="tertiary"
-                    color="gray"
-                    ariaLabel={`Copy ${field.label}`}
-                    onClick={() =>
-                      navigator.clipboard.writeText(String(field.value ?? ''))
-                    }
+                  <CopyButton
+                    label={field.label}
+                    value={String(field.value ?? '')}
                   />
                 )}
               </div>

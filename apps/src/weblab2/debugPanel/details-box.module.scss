@@ -71,6 +71,16 @@
   justify-content: space-between;
 }
 
+.copyButtonContainer {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.copiedText {
+  color: var(--text-neutral-tertiary);
+}
+
 .detailsFieldLabel {
   color: var(--text-neutral-tertiary);
 }
