@@ -2,6 +2,8 @@ import {Button} from '@code-dot-org/component-library/button';
 import {Typography} from '@mui/material';
 import React from 'react';
 
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
 import AddResourceDialog from './AddResourceDialog';
@@ -59,6 +61,11 @@ const RecommendedActions: React.FC<RecommendedActionsProps> = ({
         resource_link: tempResourceLink,
       };
       setResourceData([newResource]);
+      analyticsReporter.sendEvent(
+        EVENTS.LESSON_SNAPSHOT_RESOURCE_LINK_ADDED,
+        {},
+        PLATFORMS.STATSIG
+      );
       handleCloseResourcePopup();
     }
   };
