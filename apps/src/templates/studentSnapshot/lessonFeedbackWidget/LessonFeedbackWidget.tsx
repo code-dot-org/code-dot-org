@@ -313,13 +313,13 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
         {existingFeedbackData?.submitted_at
           ? 'submitted to student on '
           : 'saved on '}
-        {savedOrSubmittedTimestamp?.toLocaleDateString([], {
+        {savedOrSubmittedTimestamp?.toLocaleDateString(undefined, {
           year: 'numeric',
           month: 'short',
           day: 'numeric',
         })}{' '}
         at{' '}
-        {savedOrSubmittedTimestamp?.toLocaleTimeString([], {
+        {savedOrSubmittedTimestamp?.toLocaleTimeString(undefined, {
           hour: 'numeric',
           minute: '2-digit',
           hour12: true,
@@ -351,13 +351,11 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
       />
       <div className={styles.footerWrapper}>
         {savedOrSubmittedTimestamp && getFormattedTimestamp()}
-        <div>
-          <ActionButtons
-            onSaveAsDraft={handleSaveAsDraft}
-            onSendToStudent={handleSendToStudent}
-            isSaving={isSaving}
-          />
-        </div>
+        <ActionButtons
+          onSaveAsDraft={handleSaveAsDraft}
+          onSendToStudent={handleSendToStudent}
+          isSaving={isSaving}
+        />
       </div>
     </div>
   );
