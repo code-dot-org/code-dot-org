@@ -27,8 +27,6 @@ export interface CurrentUserState {
   under13: boolean;
   over21: boolean;
   isTeacher: boolean | undefined;
-  showProgressTableV2: string;
-  progressTableV2ClosedBeta: boolean;
   childAccountComplianceState: string | null;
   inSection: boolean | null;
   usStateCode: string | null;

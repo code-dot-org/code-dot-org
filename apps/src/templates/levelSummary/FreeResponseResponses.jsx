@@ -2,7 +2,7 @@ import Alert from '@code-dot-org/component-library/alert';
 import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Heading3} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useEffect} from 'react';
@@ -120,7 +120,9 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
               className={styles.pinHeaderIcon}
               scale="1.25x"
             />
-            <Heading3>{i18n.pinnedResponses()}</Heading3>
+            <Typography variant="h3" gutterBottom>
+              {i18n.pinnedResponses()}
+            </Typography>
             <Button
               text={i18n.unpinAll()}
               onClick={() => {

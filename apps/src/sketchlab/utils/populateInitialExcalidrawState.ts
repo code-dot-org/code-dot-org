@@ -18,12 +18,11 @@ export const populateInitialExcalidrawState = async (
       sourcesWithExternalFiles.files
     ).map(async file => {
       if (!Object.keys(downloadedFileData).includes(file.id)) {
-        const fileUrl = sourcesWithExternalFiles.externalFiles?.[file.id].url;
-        if (fileUrl) {
-          // While we're still storing base64 encodings of strings in parallel with S3 uploads,
-          // delete these so that we can confirm that the load from S3 is working.
-          delete file.dataURL;
+        const externalFile = sourcesWithExternalFiles.externalFiles?.[file.id];
+        const fileUrl = externalFile?.url;
+        const successfullyUploaded = externalFile?.uploaded;
 
+        if (fileUrl && successfullyUploaded) {
           try {
             const base64 = (await imageUrlToBase64(fileUrl)) as DataURL;
             file.dataURL = base64 as DataURL;
@@ -40,6 +39,8 @@ export const populateInitialExcalidrawState = async (
           }
         }
       } else {
+        // If the file has already been downloaded/encoded,
+        // reuse the existing dataURL instead of re-downloading and re-encoding the image.
         const base64 = downloadedFileData[file.id];
         file.dataURL = base64;
       }

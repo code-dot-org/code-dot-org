@@ -1,5 +1,5 @@
 import Tags from '@code-dot-org/component-library/tags';
-import {BodyThreeText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useState} from 'react';
 
 import {StudentWorkEvaluation} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
@@ -157,18 +157,30 @@ const FreeResponseStudentResponseRow: React.FC<
 
   return (
     <div className={styles.rowContainer}>
-      <BodyThreeText className={styles.aiAnalysisNameColumn}>
+      <Typography
+        className={styles.aiAnalysisNameColumn}
+        variant="body3"
+        gutterBottom
+      >
         <strong>{studentWorkEvaluation?.studentDisplayName}</strong>
-      </BodyThreeText>
-      <BodyThreeText className={styles.aiAnalysisResponseColumn}>
+      </Typography>
+      <Typography
+        className={styles.aiAnalysisResponseColumn}
+        variant="body3"
+        gutterBottom
+      >
         {typeof studentWorkEvaluation?.studentWork === 'string'
           ? studentWorkEvaluation.studentWork
           : ''}
-      </BodyThreeText>
+      </Typography>
       <div className={styles.aiAnalysisTagColumn}>{analysisTag()}</div>
-      <BodyThreeText className={styles.aiAnalysisReasoningColumn}>
+      <Typography
+        className={styles.aiAnalysisReasoningColumn}
+        variant="body3"
+        gutterBottom
+      >
         {getReasoningText()}
-      </BodyThreeText>
+      </Typography>
       <div>
         <FeedbackToggle
           onThumbsUpClick={() => handleFeedbackClick(true)}

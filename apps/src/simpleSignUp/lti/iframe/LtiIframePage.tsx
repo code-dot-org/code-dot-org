@@ -1,5 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
-import Typography from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
 import i18n from '@cdo/locale';
@@ -39,11 +39,7 @@ export const LtiIframePage = ({logoUrl, authUrl}: LtiIframePageProps) => {
     <main className={styles.mainContentContainer}>
       <div className={styles.mainContent}>
         <img className={styles.logo} src={logoUrl} alt={i18n.codeLogo()} />
-        <Typography
-          semanticTag="p"
-          visualAppearance="body-one"
-          className={styles.description}
-        >
+        <Typography className={styles.description} variant="body1" gutterBottom>
           {textContent}
         </Typography>
         <div>
