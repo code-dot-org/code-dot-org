@@ -239,9 +239,8 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     let(:user_cap_compliant?) {false}
     let(:user_grace_period_end_date) {14.days.since}
     let(:user_predates_cap_policy?) {false}
-    let(:user_state_policy_start_date) {1.year.ago}
     let(:user_state_policy_lockout_date) {1.year.since}
-    let(:user_state_policy) {{start_date: user_state_policy_start_date, lockout_date: user_state_policy_lockout_date}}
+    let(:user_state_policy) {{lockout_date: user_state_policy_lockout_date}}
 
     around do |test|
       Timecop.freeze {test.call}
@@ -254,8 +253,8 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       Policies::ChildAccount::StatePolicies.stubs(:state_policy).with(user).returns(user_state_policy)
     end
 
-    it 'returns state policy start date' do
-      _(lockout_date).must_equal user_state_policy_start_date
+    it 'returns state policy lockout date' do
+      _(lockout_date).must_equal user_state_policy_lockout_date
     end
 
     context 'when user was created before state policy took effect' do

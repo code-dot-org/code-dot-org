@@ -94,7 +94,7 @@ class Policies::ChildAccount
     return grace_period_end_date(user, approximate: approximate) if user_predates_policy?(user)
 
     # CAP non-compliant "post-policy" created students should be locked out immediately after the policy goes into effect.
-    StatePolicies.state_policy(user)&.dig(:start_date)
+    StatePolicies.state_policy(user)&.dig(:lockout_date)
   end
 
   # Checks if the user is partially locked out due to current non-compliance with CAP, even
