@@ -3,7 +3,6 @@ display_name 'AI in Everything!'
 description 'With a partner, explore lots of examples of AI'
 
 sublevels
-level 'level1'
-level 'level2'
+level 'aid-thinking-critically-lesson1-level5a_2026-test'
 
 uses_lab2
