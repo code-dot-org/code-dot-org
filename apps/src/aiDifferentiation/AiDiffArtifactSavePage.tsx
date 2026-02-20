@@ -4,12 +4,21 @@ import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React, {ChangeEvent, useCallback, useMemo, useState} from 'react';
 
-import {clearPendingArtifactMessage} from '@cdo/apps/aichat/redux/slice';
+import {
+  addThreadMessage,
+  clearPendingArtifactMessage,
+  setArtifact,
+} from '@cdo/apps/aichat/redux/slice';
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {TeacherSectionState} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {
+  AiDiffArtifactType,
+  AiInteractionStatus as Status,
+} from '@cdo/generated-scripts/sharedConstants';
 
-import {ChatTextMessage} from './types';
+import {ChatTextMessage, artifactValidatorHelper} from './types';
 
 import style from './ai-differentiation.module.scss';
 
@@ -106,7 +115,24 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
 
     HttpClient.post('/aidiff_artifacts/', info, true, {
       'Content-Type': 'application/json',
-    }).then(() => dispatch(clearPendingArtifactMessage()));
+    })
+      .then(response => response.json())
+      .then(json => {
+        dispatch(setArtifact(artifactValidatorHelper(json)));
+        dispatch(
+          addThreadMessage({
+            role: Role.ASSISTANT,
+            chatMessageText: `I've created an artifact for this ${
+              json.type === AiDiffArtifactType.EXIT_TICKET
+                ? 'exit ticket'
+                : 'lesson hook'
+            }. Click the button below for a projection view to share with your students.`,
+            status: Status.OK,
+            isArtifact: true,
+          })
+        );
+      })
+      .finally(() => dispatch(clearPendingArtifactMessage()));
   };
 
   const unitMenuList = useMemo(() => {
