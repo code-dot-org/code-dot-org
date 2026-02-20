@@ -21,7 +21,7 @@ module AidiffPromptHelper
             },
             "type" => {
               "type" => "string",
-              "enum" => ["short_answer", "multiple_choice", "free_response"],
+              "enum" => %w(short_answer multiple_choice free_response true_false fill_in_the_blank),
               "description" => "The type of question this is, either short answer, multiple choice, or free response"
             },
             "answer" => {

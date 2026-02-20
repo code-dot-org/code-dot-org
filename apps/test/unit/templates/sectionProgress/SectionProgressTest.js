@@ -30,10 +30,8 @@ const DEFAULT_PROPS = {
       },
     ],
     csf: true,
-    hasStandards: true,
   },
   isLoadingProgress: false,
-  showStandardsIntroDialog: false,
 };
 
 describe('SectionProgress', () => {
@@ -81,10 +79,6 @@ describe('SectionProgress', () => {
     wrapper = setUp({currentView: ViewType.SUMMARY});
     await setTimeout(() => {}, 50);
     expect(wrapper.find(ProgressTableView)).toHaveLength(1);
-
-    wrapper = setUp({currentView: ViewType.STANDARDS});
-    await setTimeout(() => {}, 50);
-    expect(wrapper.find(ProgressTableView)).toHaveLength(0);
   });
 
   it('passes currentView to ProgressTableView', async () => {
@@ -93,12 +87,6 @@ describe('SectionProgress', () => {
     expect(wrapper.find(ProgressTableView).props().currentView).toEqual(
       ViewType.DETAIL
     );
-  });
-
-  it('shows standards view', async () => {
-    const wrapper = setUp({currentView: ViewType.STANDARDS});
-    await setTimeout(() => {}, 50);
-    expect(wrapper.find('#uitest-standards-view').exists()).toEqual(true);
   });
 
   it('sends Amplitude progress event when onChangeScript is called', async () => {
