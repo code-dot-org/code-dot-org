@@ -1078,10 +1078,6 @@ Dashboard::Application.routes.draw do
 
         post 'users/sort_by_family_name', to: 'users#post_sort_by_family_name'
 
-        post 'users/show_progress_table_v2', to: 'users#post_show_progress_table_v2'
-        post 'users/date_progress_table_invitation_last_delayed', to: 'users#post_date_progress_table_invitation_last_delayed'
-        post 'users/has_seen_progress_table_v2_invitation', to: 'users#post_has_seen_progress_table_v2_invitation'
-        post 'users/has_seen_homepage_welcome', to: 'users#post_has_seen_homepage_welcome'
         post 'users/ai_rubrics_disabled', to: 'users#post_ai_rubrics_disabled'
         post 'users/ai_differentiation_enabled', to: 'users#post_ai_differentiation_enabled'
         post 'users/has_seen_ai_assessments_announcement', to: 'users#post_has_seen_ai_assessments_announcement'
