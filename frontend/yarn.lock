@@ -1315,7 +1315,7 @@ __metadata:
     schema-dts: "npm:^1.1.5"
     shadow-dom-testing-library: "npm:^1.13.1"
     stylelint: "npm:^16.14.1"
-    swiper: "npm:^11.0.5"
+    swiper: "npm:^12.1.2"
     ts-node: "npm:^10.9.2"
     tsc-alias: "npm:^1.8.11"
     typescript: "catalog:"
@@ -1327,7 +1327,7 @@ __metadata:
     classnames: ^2.5.1
     react: ">=16"
     react-dom: ">=16"
-    swiper: ^11.0.5
+    swiper: ^12.1.2
   languageName: unknown
   linkType: soft
 
@@ -19400,10 +19400,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"swiper@npm:^11.0.5":
-  version: 11.2.4
-  resolution: "swiper@npm:11.2.4"
-  checksum: 10c0/911c405a2d7feae9ac59d8b6683c40e50f6f5be8ca5c5e44673647c37e319a564417b813dc79a09da034e8fe927b2883253fe72cd8efecfcc09247f669fd5a30
+"swiper@npm:^12.1.2":
+  version: 12.1.2
+  resolution: "swiper@npm:12.1.2"
+  checksum: 10c0/f2597a67c4d647e367a236735bb7779e2833346b332e6d7b8caf48c6b82da52787959e86f06762983ab82b142958690a0d1b9f6fc5a59170a648949b35cfedd0
   languageName: node
   linkType: hard
 

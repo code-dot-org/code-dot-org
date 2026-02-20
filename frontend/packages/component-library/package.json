@@ -457,7 +457,7 @@
     "schema-dts": "^1.1.5",
     "shadow-dom-testing-library": "^1.13.1",
     "stylelint": "^16.14.1",
-    "swiper": "^11.0.5",
+    "swiper": "^12.1.2",
     "ts-node": "^10.9.2",
     "tsc-alias": "^1.8.11",
     "typescript": "catalog:",
@@ -470,7 +470,7 @@
     "classnames": "^2.5.1",
     "react": ">=16",
     "react-dom": ">=16",
-    "swiper": "^11.0.5"
+    "swiper": "^12.1.2"
   },
   "engines": {
     "node": ">=20"
