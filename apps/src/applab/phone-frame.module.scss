@@ -53,39 +53,39 @@ $frame-height: 60px;
   max-height: calc(100vh - 130px);
   overflow-x: hidden;
   overflow-y: auto;
+
 }
 
 .topButtons {
   display: none;
 }
 
-.topRunButton,
-.topResetButton {
-  height: 28px;
-  padding: 0 10px;
-  font-size: 12px;
-  border-radius: 4px;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  color: color.$white;
-  background-color: color.$orange;
-}
-
-.topResetButton {
-  background-color: color.$brand_secondary_default;
-}
-
 @media screen and (max-height: 530px) {
   .phoneFrameTop {
     padding: 0 16px;
     gap: 8px;
+    justify-content: flex-end;
   }
 
   .topButtons {
     display: flex;
+
+    :global(button.blocklyLaunch) {
+      min-width: 0 !important;
+      padding: 0 4px !important;
+      height: 28px !important;
+      font-size: 12px !important;
+
+      img {
+        transform: scale(0.6);
+        margin: 0 -4px;
+      }
+    }
+
+    :global(#topResetButton) {
+      border-color: color.$brand_secondary_default;
+      background-color: color.$brand_secondary_default;
+    }
   }
 
   .screenSelector {

@@ -21,12 +21,40 @@ export default class PhoneFrame extends React.Component {
     children: PropTypes.node,
   };
 
+  wrapperRef = React.createRef();
+
+  preserveScroll = callback => {
+    const wrapper = this.wrapperRef.current;
+    if (!wrapper) {
+      callback();
+      return;
+    }
+    const scrollTop = wrapper.scrollTop;
+    callback();
+    wrapper.scrollTop = scrollTop;
+    requestAnimationFrame(() => {
+      wrapper.scrollTop = scrollTop;
+    });
+  };
+
+  handleRunClick = () => {
+    this.preserveScroll(() => studioApp().runButtonClick());
+  };
+
+  handleResetClick = () => {
+    this.preserveScroll(() => studioApp().resetButtonClick());
+  };
+
   render() {
     const {isDark, screenIds, showSelector, isPaused, onScreenCreate} =
       this.props;
     return (
       <span id="phoneFrame">
-        <div id="phoneFrameWrapper" className={style.phoneFrameWrapper}>
+        <div
+          id="phoneFrameWrapper"
+          ref={this.wrapperRef}
+          className={style.phoneFrameWrapper}
+        >
           <div
             className={classNames(
               style.phoneFrame,
@@ -49,25 +77,16 @@ export default class PhoneFrame extends React.Component {
               </div>
             )}
             <div className={style.topButtons}>
-              {isDark ? (
-                <button
-                  type="button"
-                  className={style.topResetButton}
-                  onClick={() => studioApp().resetButtonClick()}
-                  aria-label="Reset"
-                  title="Reset"
-                >
-                  <FontAwesome icon="repeat" />
-                </button>
-              ) : (
-                <button
-                  type="button"
-                  className={style.topRunButton}
-                  onClick={() => studioApp().runButtonClick()}
-                >
-                  <FontAwesome icon="play" /> Run
-                </button>
-              )}
+              <RunButton
+                id="topRunButton"
+                hidden={isDark}
+                onClick={this.handleRunClick}
+              />
+              <ResetButton
+                id="topResetButton"
+                style={isDark ? {display: 'inline-block'} : {}}
+                onClick={this.handleResetClick}
+              />
             </div>
           </div>
           {this.props.children}

@@ -22,18 +22,21 @@ export const FinishButton = () => (
 export const RunButton = Radium(props => (
   <button
     type="button"
-    id="runButton"
+    id={props.id || 'runButton'}
     className={classNames(['launch', 'blocklyLaunch', props.hidden && 'hide'])}
     style={props.style}
+    onClick={props.onClick}
   >
     <div>{props.runButtonText || msg.runProgram()}</div>
     <img src={blankImg} className="run26" alt="" />
   </button>
 ));
 RunButton.propTypes = {
+  id: PropTypes.string,
   hidden: PropTypes.bool,
   style: PropTypes.object,
   runButtonText: PropTypes.string,
+  onClick: PropTypes.func,
 };
 RunButton.displayName = 'RunButton';
 
@@ -44,7 +47,7 @@ RunButton.displayName = 'RunButton';
 export const ResetButton = Radium(props => (
   <button
     type="button"
-    id="resetButton"
+    id={props.id || 'resetButton'}
     // See apps/style/common.scss for these class definitions
     className={classNames([
       'launch',
@@ -53,15 +56,18 @@ export const ResetButton = Radium(props => (
       props.hidden && 'hide',
     ])}
     style={[commonStyles.hidden, props.style]}
+    onClick={props.onClick}
   >
     <div>{!props.hideText && msg.resetProgram()}</div>
     <img src={blankImg} className="reset26" alt="" />
   </button>
 ));
 ResetButton.propTypes = {
+  id: PropTypes.string,
   hidden: PropTypes.bool,
   style: PropTypes.object,
   hideText: PropTypes.bool,
+  onClick: PropTypes.func,
 };
 ResetButton.displayName = 'ResetButton';
 
