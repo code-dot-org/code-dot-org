@@ -148,6 +148,8 @@ const InnerHTMLPreview = () => {
             type: IframeMessageType.CONSOLE_LOG,
             level: event.data.level,
             args: event.data.args,
+            file: event.data.file,
+            line: event.data.line,
           },
           parentOrigin
         );

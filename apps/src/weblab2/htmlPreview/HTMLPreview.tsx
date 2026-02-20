@@ -354,7 +354,12 @@ export const HTMLPreview: React.FC = () => {
         dispatch(addResponseData({id, response: response}));
       } else if (event.data.type === IframeMessageType.CONSOLE_LOG) {
         dispatch(
-          addConsoleLog({level: event.data.level, args: event.data.args})
+          addConsoleLog({
+            level: event.data.level,
+            args: event.data.args,
+            file: event.data.file,
+            line: event.data.line,
+          })
         );
       }
     };

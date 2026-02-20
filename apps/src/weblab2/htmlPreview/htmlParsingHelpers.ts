@@ -44,13 +44,37 @@ const consoleOverrideScript = `
     if (typeof arg === "string") return arg;
     try { return JSON.stringify(arg); } catch(e) { return String(arg); }
   }
+  function parseCallerLocation(stack) {
+    if (!stack) return { file: null, line: null };
+    var frames = stack.split('\\n');
+    // Frame 0 is "Error", frame 1 is this override, frame 2 is the caller.
+    var callerFrame = frames[2] || '';
+    // Chrome/V8: "    at something (https://...:line:col)" or "    at https://...:line:col"
+    var match = callerFrame.match(/(?:https?|blob):\\/\\/[^\\s)]+/);
+    if (match) {
+      var parts = match[0].split(':');
+      parts.pop(); // remove col
+      var lineNum = parts.pop(); // remove line
+      var url = parts.join(':');
+      var file = url.split('/').pop().split('?')[0] || url;
+      return { file: file, line: lineNum };
+    }
+    // Firefox: "@https://...:line:col"
+    match = callerFrame.match(/@(.+):(\\d+):\\d+$/);
+    if (match) {
+      var file = match[1].split('/').pop().split('?')[0] || match[1];
+      return { file: file, line: match[2] };
+    }
+    return { file: null, line: null };
+  }
   METHODS.forEach(function(method) {
     const originalMethod = console[method];
     console[method] = function() {
       const args = [];
       for (let i = 0; i < arguments.length; i++) { args.push(serialize(arguments[i])); }
+      var location = parseCallerLocation(new Error().stack);
       try {
-        channel.postMessage({type: "CONSOLE_LOG", level: method, args: args});
+        channel.postMessage({type: "CONSOLE_LOG", level: method, args: args, file: location.file, line: location.line});
       } catch(e) {}
       return originalMethod.apply(console, arguments);
     };

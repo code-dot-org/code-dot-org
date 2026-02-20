@@ -34,9 +34,17 @@ const Console: React.FunctionComponent = () => {
     return (
       <div className={moduleStyles.consoleLogEntry}>
         <BodyThreeText>{log.message}</BodyThreeText>
-        <BodyFourText className={moduleStyles.timestamp}>
-          {log.timestamp}
-        </BodyFourText>
+        <div className={moduleStyles.logMeta}>
+          {log.file && (
+            <BodyFourText className={moduleStyles.source}>
+              {log.file}
+              {log.line && `:${log.line}`}
+            </BodyFourText>
+          )}
+          <BodyFourText className={moduleStyles.timestamp}>
+            {log.timestamp}
+          </BodyFourText>
+        </div>
       </div>
     );
   };
@@ -67,6 +75,9 @@ const Console: React.FunctionComponent = () => {
               text={formatLogWithTimestamp(log)}
               size={'s'}
               className={moduleStyles.consoleLog}
+              aria-label={`${log.level}: ${log.message}${
+                log.file ? `, ${log.file}${log.line ? `:${log.line}` : ''}` : ''
+              }, ${log.timestamp}`}
             />
           ))}
           <div ref={bottomRef} />

@@ -8,6 +8,8 @@ export interface ConsoleEntry {
   level: ConsoleLogLevel;
   message: string;
   timestamp: string;
+  file?: string;
+  line?: string;
 }
 
 export interface Weblab2ConsoleState {
@@ -24,12 +26,19 @@ const consoleSlice = createSlice({
   reducers: {
     addConsoleLog: (
       state,
-      action: PayloadAction<{level: ConsoleLogLevel; args: string[]}>
+      action: PayloadAction<{
+        level: ConsoleLogLevel;
+        args: string[];
+        file?: string;
+        line?: string;
+      }>
     ) => {
       state.logs.push({
         level: action.payload.level,
         message: action.payload.args.join(' '),
         timestamp: new Date().toLocaleTimeString(),
+        file: action.payload.file,
+        line: action.payload.line,
       });
       // Cap length of console logs to 500 entries.
       if (state.logs.length > 500) {

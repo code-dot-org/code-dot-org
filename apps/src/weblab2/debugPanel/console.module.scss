@@ -17,11 +17,24 @@
   }
 }
 
+.logMeta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
+  gap: 2px;
+}
+
+.source {
+  font-family: monospace;
+  color: var(--text-neutral-secondary);
+  white-space: nowrap;
+}
+
 .timestamp {
   font-family: monospace;
   color: var(--text-neutral-secondary);
   white-space: nowrap;
-  flex-shrink: 0;
 }
 
 .consoleLog {
