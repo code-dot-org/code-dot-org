@@ -1,5 +1,6 @@
 import {ThreadTypeFields} from '@cdo/apps/aiDifferentiation/constants';
 import {
+  AiArtifact,
   ChatItem,
   ChatPrompt,
   ChatTextMessage,
@@ -43,6 +44,8 @@ interface AiDiffChatState {
   // key value to reset state (-1 is safe because it won't accidentally match a
   // threadId value).
   threadKeyId: number;
+  // The thread's artifact if an artifact has been saved for this thread
+  artifact?: AiArtifact;
   // AI TA's opening message for a thread
   initialChatMessage: string;
 }

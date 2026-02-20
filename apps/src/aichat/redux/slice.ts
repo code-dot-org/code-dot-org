@@ -7,6 +7,7 @@ import {
 } from '@cdo/apps/aiDifferentiation/constants';
 import {SUGGESTED_PROMPTS_FOR_SELECTION} from '@cdo/apps/aiDifferentiation/predefinedPrompts';
 import {
+  AiArtifact,
   ChatItem,
   ChatPrompt,
   ChatTextMessage,
@@ -82,6 +83,7 @@ const initialState: AichatState = {
   chatWorkspaceSelectedTab: null,
   userAddedSelectionContext: {},
   artifactType: undefined,
+  artifact: undefined,
   pendingArtifactMessage: undefined,
 };
 
@@ -165,6 +167,9 @@ const aichatSlice = createSlice({
     },
     setArtifactType(state, action: PayloadAction<string | undefined>) {
       state.artifactType = action.payload;
+    },
+    setArtifact(state, action: PayloadAction<AiArtifact | undefined>) {
+      state.artifact = action.payload;
     },
     setPendingArtifactMessage(state, action: PayloadAction<ChatTextMessage>) {
       state.pendingArtifactMessage = action.payload;
@@ -475,6 +480,7 @@ export const {
   addThreadMessage,
   setThreadKeyId,
   setArtifactType,
+  setArtifact,
   setPendingArtifactMessage,
   clearPendingArtifactMessage,
   setViewMode,
