@@ -165,7 +165,7 @@ class Policies::ChildAccount
     # Parental permission is not required until the policy is in effect.
     # Skip the date check if we want to know if the student will need parent
     # permission in the future.
-    return false if !future && policy[:start_date] > DateTime.now
+    return false if !future && policy[:lockout_date] > DateTime.now
 
     # Parental permission is not required for students
     # whose age cannot be identified or who are older than the maximum age covered by the policy.

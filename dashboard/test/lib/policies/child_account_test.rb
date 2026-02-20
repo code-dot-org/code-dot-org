@@ -430,11 +430,9 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     let(:user_account_is_personal?) {true}
     let(:user) {build_stubbed(:user, user_type: user_type, birthday: user_age&.year&.ago)}
 
-    # This is the policy: max age of 12 with a lockout date 1 year after the start date
-    let(:user_state_policy_start_date) {1.second.ago}
     let(:user_state_policy_max_age) {12}
-    let(:user_lockout_date) {user_state_policy_start_date + 1.year}
-    let(:user_state_policy) {{start_date: user_state_policy_start_date, lockout_date: user_lockout_date, max_age: user_state_policy_max_age}}
+    let(:user_lockout_date) {DateTime.now}
+    let(:user_state_policy) {{lockout_date: user_lockout_date, max_age: user_state_policy_max_age}}
 
     # Use the default `future` flag if we want to know if the student will need
     # parent permission in the future.
@@ -478,7 +476,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
 
     context 'when policy has not yet taken effect' do
-      let(:user_state_policy_start_date) {1.second.since}
+      let(:user_lockout_date) {1.second.since}
 
       it 'returns false' do
         _(parent_permission_required?).must_equal false
