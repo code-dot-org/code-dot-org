@@ -63,6 +63,17 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
   >(DEFAULT_RESOURCES);
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
   const [isSaving, setIsSaving] = React.useState<boolean>(false);
+  const [savedOrSubmittedTimestamp, setSavedOrSubmittedTimestamp] =
+    React.useState<Date | null>(null);
+
+  const determineTimeStamp = (feedbackData: LessonFeedbackData) => {
+    if (feedbackData.submitted_at) {
+      return new Date(feedbackData.submitted_at);
+    } else if (feedbackData.updated_at) {
+      return new Date(feedbackData.updated_at);
+    }
+    return null;
+  };
 
   // Fetch lesson feedback from backend, and if not found, try generating ai feedback
   React.useEffect(() => {
@@ -115,6 +126,9 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
             setExistingFeedbackData(aiGeneratedInitialFeedbackRecord);
             setFeedbackText(aiGeneratedInitialFeedbackRecord.saved_feedback);
             setResourceData([DEFAULT_RESOURCE]);
+            setSavedOrSubmittedTimestamp(
+              determineTimeStamp(aiGeneratedInitialFeedbackRecord)
+            );
             analyticsReporter.sendEvent(
               EVENTS.LESSON_SNAPSHOT_AI_FEEDBACK_GENERATED,
               {},
@@ -137,6 +151,7 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
             );
           }
           setExistingFeedbackData(data);
+          setSavedOrSubmittedTimestamp(determineTimeStamp(data));
           if (data.resources && data.resources.length > 0) {
             setResourceData(data.resources);
           } else {
@@ -256,6 +271,7 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
       );
 
       setExistingFeedbackData(savedData);
+      setSavedOrSubmittedTimestamp(determineTimeStamp(savedData));
     } catch (error) {
       console.error('Failed to save feedback as draft:', error);
     }
@@ -287,6 +303,29 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
     );
 
     setExistingFeedbackData(savedData);
+    setSavedOrSubmittedTimestamp(determineTimeStamp(savedData));
+  };
+
+  const getFormattedTimestamp = () => {
+    return (
+      <div className={styles.submittedAtText}>
+        Last{' '}
+        {existingFeedbackData?.submitted_at
+          ? 'submitted to student on '
+          : 'saved on '}
+        {savedOrSubmittedTimestamp?.toLocaleDateString([], {
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric',
+        })}{' '}
+        at{' '}
+        {savedOrSubmittedTimestamp?.toLocaleTimeString([], {
+          hour: 'numeric',
+          minute: '2-digit',
+          hour12: true,
+        })}
+      </div>
+    );
   };
 
   // TO DO: Use Loading widget when needed here.
@@ -310,11 +349,16 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
         resourceData={resourceData}
         setResourceData={setResourceData}
       />
-      <ActionButtons
-        onSaveAsDraft={handleSaveAsDraft}
-        onSendToStudent={handleSendToStudent}
-        isSaving={isSaving}
-      />
+      <div className={styles.footerWrapper}>
+        {savedOrSubmittedTimestamp && getFormattedTimestamp()}
+        <div>
+          <ActionButtons
+            onSaveAsDraft={handleSaveAsDraft}
+            onSendToStudent={handleSendToStudent}
+            isSaving={isSaving}
+          />
+        </div>
+      </div>
     </div>
   );
 
