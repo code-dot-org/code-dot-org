@@ -3,7 +3,7 @@ import {EditorState} from '@codemirror/state';
 import {EditorView} from '@codemirror/view';
 import $ from 'jquery';
 
-import {editorConfig} from '@cdo/apps/lab2/views/components/editor/editorConfig';
+import {editorConfig} from '@cdo/apps/codemirror/editorConfig';
 
 /**
  * @file Main entry point for scripts used only in levelbuilder on when editing
