@@ -1,10 +1,7 @@
 import Alert from '@code-dot-org/component-library/alert';
 import Button from '@code-dot-org/component-library/button';
 import Link from '@code-dot-org/component-library/link';
-import {
-  BodyTwoText,
-  Heading3,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useCallback, useEffect, useState} from 'react';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -111,15 +108,19 @@ const SubmitProjectDialog: React.FunctionComponent<
       onDeactivate={null}
     >
       <div className={moduleStyles.headerContainer}>
-        <Heading3 className={moduleStyles.heading3}>
+        <Typography className={moduleStyles.heading3} variant="h3" gutterBottom>
           {i18n.submitProjectGallery_header()}
-        </Heading3>
+        </Typography>
       </div>
       <hr />
       <div className={moduleStyles.submitProjectTextContainer}>
-        <BodyTwoText className={moduleStyles.bodyTwoText}>
+        <Typography
+          className={moduleStyles.bodyTwoText}
+          variant="body2"
+          gutterBottom
+        >
           {i18n.submitProjectGallery_describeProject()}
-        </BodyTwoText>
+        </Typography>
         <textarea
           id="submission-input"
           value={projectDescription}
@@ -127,9 +128,13 @@ const SubmitProjectDialog: React.FunctionComponent<
           placeholder={i18n.submitProjectGallery_placeholder()}
           maxLength={150}
         />
-        <BodyTwoText className={moduleStyles.bodyTwoText}>
+        <Typography
+          className={moduleStyles.bodyTwoText}
+          variant="body2"
+          gutterBottom
+        >
           {i18n.submitProjectGallery_details()}
-        </BodyTwoText>
+        </Typography>
       </div>
       <hr />
       {showSubmitError && (

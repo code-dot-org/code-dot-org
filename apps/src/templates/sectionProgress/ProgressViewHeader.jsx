@@ -17,7 +17,6 @@ import {getNestedUnitUrl} from '../teacherDashboard/urlHelpers';
 
 import {ViewType, unitDataPropType} from './sectionProgressConstants';
 import {getCurrentUnitData} from './sectionProgressRedux';
-import StandardsViewHeaderButtons from './standards/StandardsViewHeaderButtons';
 
 class ProgressViewHeader extends Component {
   static propTypes = {
@@ -50,7 +49,6 @@ class ProgressViewHeader extends Component {
     const headingText = {
       [ViewType.SUMMARY]: i18n.lessonsAttempted() + ' ',
       [ViewType.DETAIL]: i18n.levelsAttempted() + ' ',
-      [ViewType.STANDARDS]: i18n.CSTAStandardsIn() + ' ',
     };
     return (
       <div style={{...h3Style, ...styles.heading, ...styles.tableHeader}}>
@@ -66,9 +64,6 @@ class ProgressViewHeader extends Component {
             </a>
           )}
         </span>
-        {currentView === ViewType.STANDARDS && (
-          <StandardsViewHeaderButtons sectionId={this.props.sectionId} />
-        )}
       </div>
     );
   }

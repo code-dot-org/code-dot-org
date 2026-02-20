@@ -6,7 +6,11 @@ import {
   THREAD_TYPES,
 } from '@cdo/apps/aiDifferentiation/constants';
 import {SUGGESTED_PROMPTS_FOR_SELECTION} from '@cdo/apps/aiDifferentiation/predefinedPrompts';
-import {ChatItem, ChatPrompt} from '@cdo/apps/aiDifferentiation/types';
+import {
+  ChatItem,
+  ChatPrompt,
+  ChatTextMessage,
+} from '@cdo/apps/aiDifferentiation/types';
 import {registerReducers} from '@cdo/apps/redux';
 
 import {
@@ -73,10 +77,12 @@ const initialState: AichatState = {
   hasUpdatedCustomizations: false,
   saveError: undefined,
   showResetMessage: false,
-  hasSetStartingCustomizations: false,
+  showUnsupportedModelMessage: false,
+  hasSetInitialCustomizations: false,
   chatWorkspaceSelectedTab: null,
   userAddedSelectionContext: {},
   artifactType: undefined,
+  pendingArtifactMessage: undefined,
 };
 
 const aichatSlice = createSlice({
@@ -160,6 +166,12 @@ const aichatSlice = createSlice({
     setArtifactType(state, action: PayloadAction<string | undefined>) {
       state.artifactType = action.payload;
     },
+    setPendingArtifactMessage(state, action: PayloadAction<ChatTextMessage>) {
+      state.pendingArtifactMessage = action.payload;
+    },
+    clearPendingArtifactMessage: state => {
+      state.pendingArtifactMessage = undefined;
+    },
     removeUpdateMessage: (state, action: PayloadAction<number>) => {
       const modelUpdateMessageInfo = getUpdateMessageLocation(
         action.payload,
@@ -231,57 +243,29 @@ const aichatSlice = createSlice({
     setViewMode: (state, action: PayloadAction<ViewMode>) => {
       state.viewMode = action.payload;
     },
-    setStartingAiCustomizations: (
+    setInitialConfiguration: (
       state,
       action: PayloadAction<{
-        levelAichatSettings?: LevelAichatSettings;
-        studentAiCustomizations: AiCustomizations;
+        customizations: AiCustomizations;
+        visibilities: {[key in keyof AiCustomizations]: Visibility};
+        showUnsupportedModelMessage: boolean;
       }>
     ) => {
-      const {levelAichatSettings, studentAiCustomizations} = action.payload;
-
-      let reconciledAiCustomizations: AiCustomizations = {
-        ...(levelAichatSettings?.initialCustomizations ||
-          EMPTY_AI_CUSTOMIZATIONS),
-      };
-
-      for (const customizationUntyped in reconciledAiCustomizations) {
-        const customization = customizationUntyped as keyof AiCustomizations;
-
-        if (
-          (levelAichatSettings?.visibilities || DEFAULT_VISIBILITIES)[
-            customization
-          ] === Visibility.EDITABLE &&
-          studentAiCustomizations[customization]
-        ) {
-          reconciledAiCustomizations = {
-            ...reconciledAiCustomizations,
-            [customization]: studentAiCustomizations[customization],
-          };
-        }
-      }
-
-      // Make sure model ID is valid
-      reconciledAiCustomizations = {
-        ...reconciledAiCustomizations,
-        selectedModelId: validateModelId(
-          reconciledAiCustomizations.selectedModelId
-        ),
-      };
-
-      state.initialAiCustomizations = reconciledAiCustomizations;
-      state.savedAiCustomizations = reconciledAiCustomizations;
-      state.currentAiCustomizations = reconciledAiCustomizations;
-      state.fieldVisibilities =
-        levelAichatSettings?.visibilities || DEFAULT_VISIBILITIES;
+      const {customizations, visibilities, showUnsupportedModelMessage} =
+        action.payload;
+      state.initialAiCustomizations = customizations;
+      state.savedAiCustomizations = customizations;
+      state.currentAiCustomizations = customizations;
+      state.fieldVisibilities = visibilities;
 
       // Reset sent message and updated customizations flags
       state.hasSentMessage = false;
       state.hasUpdatedCustomizations = false;
-      state.hasSetStartingCustomizations = true;
+      state.hasSetInitialCustomizations = true;
+      state.showUnsupportedModelMessage = showUnsupportedModelMessage;
     },
-    clearHasSetStartingCustomizations: state => {
-      state.hasSetStartingCustomizations = false;
+    clearHasSetInitialCustomizations: state => {
+      state.hasSetInitialCustomizations = false;
     },
     resetToDefaultAiCustomizations: (
       state,
@@ -296,8 +280,9 @@ const aichatSlice = createSlice({
       defaultAiCustomizations = {
         ...defaultAiCustomizations,
         selectedModelId: validateModelId(
-          defaultAiCustomizations.selectedModelId
-        ),
+          defaultAiCustomizations.selectedModelId,
+          levelAichatSettings?.availableModelIds
+        ).modelId,
       };
 
       state.currentAiCustomizations = defaultAiCustomizations;
@@ -328,6 +313,7 @@ const aichatSlice = createSlice({
       // Clear save error and reset message, if any.
       state.saveError = undefined;
       state.showResetMessage = false;
+      state.showUnsupportedModelMessage = false;
     },
     setModelCardProperty: <T extends keyof ModelCardInfo>(
       state: AichatState,
@@ -343,12 +329,14 @@ const aichatSlice = createSlice({
       };
       state.currentAiCustomizations.modelCardInfo = updatedModelCardInfo;
       state.showResetMessage = false;
+      state.showUnsupportedModelMessage = false;
     },
     startSave(state, action: PayloadAction<SaveType>) {
       state.saveInProgress = true;
       state.currentSaveType = action.payload;
       // Clear save error, if any.
       state.saveError = undefined;
+      state.showUnsupportedModelMessage = false;
     },
     endSave(state) {
       state.saveInProgress = false;
@@ -473,7 +461,7 @@ export const {
   setNewChatSession,
   setInitialChatMessage,
   setShowModalType,
-  setStartingAiCustomizations,
+  setInitialConfiguration,
   setStudentChatHistory,
   setOwnChatHistory,
   setUserHasAichatAccess,
@@ -487,6 +475,8 @@ export const {
   addThreadMessage,
   setThreadKeyId,
   setArtifactType,
+  setPendingArtifactMessage,
+  clearPendingArtifactMessage,
   setViewMode,
   addStagedFile,
   stagedFileUploadFinished,
@@ -495,7 +485,7 @@ export const {
   stagedFilesLimitExceeded,
   clearStagedFilesAlert,
   setSaveError,
-  clearHasSetStartingCustomizations,
+  clearHasSetInitialCustomizations,
   setChatWorkspaceSelectedTab,
   addItemToUserAddedSelectionContext,
   removeItemFromUserAddedSelectionContext,

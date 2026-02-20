@@ -144,8 +144,10 @@ const Weblab2View: React.FC<
     dispatch(setViewMode(levelProperties?.initialViewMode || ViewMode.SPLIT));
   }, [dispatch, levelProperties?.initialViewMode]);
 
-  const aiTutorResponseSchemaSettings =
-    useAiTutorResponseSchemaSettings(source);
+  const aiTutorResponseSchemaSettings = useAiTutorResponseSchemaSettings(
+    source,
+    levelProperties?.widgetView
+  );
 
   const secondaryBackpackAppNames: AppName[] = useMemo(() => ['sketchlab'], []);
 

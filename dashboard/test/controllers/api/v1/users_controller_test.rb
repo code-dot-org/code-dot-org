@@ -244,16 +244,6 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_equal "true", test_user.parent_email_banner_dismissed
   end
 
-  test 'a post request to set_standards_report_info_to_seen' do
-    test_user = create(:user)
-    sign_in(test_user)
-    assert_nil test_user.has_seen_standards_report_info_dialog
-    post :set_standards_report_info_to_seen, params: {user_id: 'me'}
-    assert_response :success
-    test_user.reload
-    assert_equal true, test_user.has_seen_standards_report_info_dialog
-  end
-
   test "a get request to get current returns signed out user info" do
     get :current
     assert_response :success

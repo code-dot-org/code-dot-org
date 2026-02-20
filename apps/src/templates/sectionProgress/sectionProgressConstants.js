@@ -12,7 +12,6 @@ import {studentType} from '@cdo/apps/templates/progress/progressTypes';
 export const unitDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   csf: PropTypes.bool,
-  hasStandards: PropTypes.bool,
   title: PropTypes.string,
   path: PropTypes.string,
   lessons: PropTypes.arrayOf(
@@ -29,7 +28,6 @@ export const unitDataPropType = PropTypes.shape({
 export const ViewType = {
   SUMMARY: 'summary', // lessons
   DETAIL: 'detail', // levels
-  STANDARDS: 'standards',
 };
 
 /**

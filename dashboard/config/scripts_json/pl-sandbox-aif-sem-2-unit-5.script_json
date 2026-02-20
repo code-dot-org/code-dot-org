@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-02-10 17:28:48 UTC",
+    "serialized_at": "2026-02-18 19:02:28 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -84,6 +84,17 @@
       },
       "seeding_key": {
         "activity_section.key": "4d771bdd-4b14-497d-8242-18db5bb3efbc",
+        "lesson_activity.key": "6cb0d829-446a-42be-ad42-ec07a58a64cd"
+      }
+    },
+    {
+      "key": "bf61b007-61d0-4778-90fc-930cbec114bc",
+      "position": 3,
+      "properties": {
+        "progression_name": "Getting Data Online"
+      },
+      "seeding_key": {
+        "activity_section.key": "bf61b007-61d0-4778-90fc-930cbec114bc",
         "lesson_activity.key": "6cb0d829-446a-42be-ad42-ec07a58a64cd"
       }
     }
@@ -220,6 +231,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U5-JSON"
+        ],
         "progression": "What is an API?"
       },
       "bonus": false,
@@ -334,6 +348,178 @@
       },
       "level_keys": [
         "pl-aif-2-U5-API-Calll-POkemon-panel"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-aif-2-U5-sync-async-programming"
+        ],
+        "progression": "What is an API?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-sync-async-programming"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "4d771bdd-4b14-497d-8242-18db5bb3efbc"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-sync-async-programming"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-aif-2-U5-sync-async-code-chef"
+        ],
+        "progression": "What is an API?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-sync-async-code-chef"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "4d771bdd-4b14-497d-8242-18db5bb3efbc"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-sync-async-code-chef"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-aif-2-U5-mailbox-promise"
+        ],
+        "progression": "Getting Data Online"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-mailbox-promise"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "bf61b007-61d0-4778-90fc-930cbec114bc"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-mailbox-promise"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-aif-2-U5-fetch"
+        ],
+        "progression": "Getting Data Online"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-fetch"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "bf61b007-61d0-4778-90fc-930cbec114bc"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-fetch"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-aif-2-U5-promise-chain"
+        ],
+        "progression": "Getting Data Online"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-promise-chain"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "bf61b007-61d0-4778-90fc-930cbec114bc"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-promise-chain"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 16,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-aif-2-U5-trace-a-promise-weblab"
+        ],
+        "progression": "Getting Data Online"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-trace-a-promise-weblab"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "bf61b007-61d0-4778-90fc-930cbec114bc"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-trace-a-promise-weblab"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 17,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Getting Data Online"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-making-steps-clear-L4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "bf61b007-61d0-4778-90fc-930cbec114bc"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-making-steps-clear-L4"
       ]
     }
   ],
@@ -456,6 +642,90 @@
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-5",
         "activity_section.key": "4d771bdd-4b14-497d-8242-18db5bb3efbc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-sync-async-programming",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-sync-async-programming"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "4d771bdd-4b14-497d-8242-18db5bb3efbc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-sync-async-code-chef",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-sync-async-code-chef"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "4d771bdd-4b14-497d-8242-18db5bb3efbc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-mailbox-promise",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-mailbox-promise"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "bf61b007-61d0-4778-90fc-930cbec114bc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-fetch",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-fetch"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "bf61b007-61d0-4778-90fc-930cbec114bc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-promise-chain",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-promise-chain"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "bf61b007-61d0-4778-90fc-930cbec114bc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-trace-a-promise-weblab",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-trace-a-promise-weblab"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "bf61b007-61d0-4778-90fc-930cbec114bc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-making-steps-clear-L4",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-making-steps-clear-L4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "bf61b007-61d0-4778-90fc-930cbec114bc"
       }
     }
   ],

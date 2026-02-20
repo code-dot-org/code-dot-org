@@ -1,0 +1,15 @@
+name 'pl-ai-101-V2-mod2-understanding-00'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# AI Use Pitfalls
+
+#### Understanding how AI works can help keep yourself and your students from falling to common pitfalls.
+
+#### Review the scenarios on the following levels to explore various pitfalls, to learn more about why each occured, and to learn how to avoid them in the future.
+
+>#### **💬 Quick Reflection:** What pitfalls have you fallen into when using AI? What pitfalls have you seen your colleagues or students fall into?
+>#### Keep an eye out for these pitfalls as you're reviewing the following scenarios.
+
+MARKDOWN

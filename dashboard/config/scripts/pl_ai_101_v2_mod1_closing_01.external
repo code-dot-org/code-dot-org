@@ -3,28 +3,9 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Wrap-Up
+# Don't stop here, keep learning!
 
-<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
-
-  <div>
-    <h4 style="margin-top: 0; font-weight: bold;">In this professional learning module, you learned to:</h4>
-    <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
-      <li>Explain what AI is as well as it's impact on industry and education.
-</li><br>
-	  <li>Realize the benefits and address the risks of AI in an educational setting.
-</li><br>
-      <li>Describe AI Literacy and explain the benefits of AI literacy for both educators and students.</li>
-    </ul>
-  </div>
-  <div>
-    <img src="https://images.code.org/89644a0804bcdfc2839b17f70bcef23c-Screenshot 2025-12-04 at 2.33.30 PM.png" 
-         alt="Icon with computer and weblayout" 
-         style="border-radius: 10px; width: 200px; height: auto;">
-  </div>
-</div>
-
-## Resources
+## Additional Resources
 * #### <a href="https://www.teachai.org/" target="_blank">TeachAI.org</a> Empowering educators to teach with and about AI.
 * #### <a href="https://www.teachai.org/ailiteracy" target="_blank">AILit Framework</a> from TeachAI.org.
 * #### <a href="https://quickdraw.withgoogle.com/" target="_blank">Quick, Draw with Google</a> a quick and fun AI-powered game.
@@ -32,7 +13,7 @@ markdown <<MARKDOWN
 * #### <a href="https://labs.google/" target="_blank">Labs.Google</a> Google’s home for the latest AI tools, technology and discourse.
 
 
-## Take it Further
+## Take it Further Activities
 
 #### Want to learn more? Try out the following optional activities.
   <!-- Dropdown 1 -->
