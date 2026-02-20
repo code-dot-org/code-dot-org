@@ -1,4 +1,5 @@
 import Button from '@code-dot-org/component-library/button';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import React, {useCallback, useRef, useState} from 'react';
 
@@ -30,15 +31,24 @@ const CopyButton: React.FunctionComponent<CopyButtonProps> = ({
           Copied!
         </BodyThreeText>
       )}
-      <Button
-        icon={{iconStyle: 'solid', iconName: 'copy'}}
-        isIconOnly
-        size="xs"
-        type="tertiary"
-        color="gray"
-        ariaLabel={`Copy ${label}`}
-        onClick={handleCopy}
-      />
+      <WithTooltip
+        tooltipProps={{
+          tooltipId: `copy-${label}-tooltip`,
+          direction: 'onTop',
+          size: 'xs',
+          text: `Copy ${label}`,
+        }}
+      >
+        <Button
+          icon={{iconStyle: 'solid', iconName: 'copy'}}
+          isIconOnly
+          size="xs"
+          type="tertiary"
+          color="gray"
+          ariaLabel={`Copy ${label}`}
+          onClick={handleCopy}
+        />
+      </WithTooltip>
     </div>
   );
 };
