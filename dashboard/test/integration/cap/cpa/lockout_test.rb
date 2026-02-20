@@ -46,50 +46,6 @@ module CAP
           end
         end
 
-        describe 'new user lockout phase' do
-          let(:current_date) {new_user_lockout_date.since(1.day)}
-
-          it 'student should be locked out immediately until permission is granted' do
-            assert_student_is_locked_out_until_permission_granted
-          end
-
-          context 'when student was create before policy took effect' do
-            let(:student) {create(:cpa_non_compliant_student, :predates_policy)}
-
-            it 'student should not be locked out yet' do
-              assert_student_is_not_locked_out
-            end
-
-            it 'student should be redirected away from the lockout page' do
-              assert_student_is_redirected_away_from_lockout
-            end
-          end
-
-          context 'when student provider is Google' do
-            let(:student) {create(:cpa_non_compliant_student, :predates_policy, :without_email_auth_option, :with_google_authentication_option)}
-
-            it 'student should not be locked out yet' do
-              assert_student_is_not_locked_out
-            end
-
-            it 'student should be redirected away from the lockout page' do
-              assert_student_is_redirected_away_from_lockout
-            end
-          end
-
-          context 'when student is CAP compliant' do
-            let(:student) {create(:student, :not_U13)}
-
-            it 'student should not be locked out' do
-              assert_student_is_not_locked_out
-            end
-
-            it 'student should be redirected away from the lockout page' do
-              assert_student_is_redirected_away_from_lockout
-            end
-          end
-        end
-
         describe 'all user lockout phase' do
           let(:current_date) {all_user_lockout_date}
 

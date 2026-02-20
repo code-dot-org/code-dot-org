@@ -62,7 +62,7 @@ class Policies::ChildAccount
       user.created_at < user_state_policy[:lockout_date] &&
       user.authentication_options.any?(&:google?)
 
-    user.created_at < user_state_policy[:start_date]
+    user.created_at < user_state_policy[:lockout_date]
   end
 
   # The date on which the student's grace period ends.
