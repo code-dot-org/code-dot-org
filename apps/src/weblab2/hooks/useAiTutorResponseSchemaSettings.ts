@@ -28,7 +28,8 @@ import {setAiFilePathToPreview, setAiTutorVersionFiles} from '../weblab2Redux';
  * AI tutor responses including accept/reject functionality.
  */
 export const useAiTutorResponseSchemaSettings = (
-  source: MultiFileSource | undefined
+  source: MultiFileSource | undefined,
+  isWidgetView?: boolean
 ): ResponseSchemaSettings | undefined => {
   const dispatch = useAppDispatch();
 
@@ -47,7 +48,8 @@ export const useAiTutorResponseSchemaSettings = (
         const files = formattedResponse.code;
         if (
           !acceptRejectAnswerTypes.includes(answerType) ||
-          !isAcceptRejectCodeFileTypes(files)
+          !isAcceptRejectCodeFileTypes(files) ||
+          isWidgetView
         ) {
           return formatCopyPasteResponse(jsonResponse.answer);
         }
@@ -98,5 +100,5 @@ export const useAiTutorResponseSchemaSettings = (
         return formattedResponse.explanation;
       },
     };
-  }, [dispatch, source]);
+  }, [dispatch, source, isWidgetView]);
 };

@@ -483,7 +483,7 @@ class Section < ApplicationRecord
         primaryInstructor: primary_instructor,
         avatar_color: avatar_color,
         avatar_emoji: avatar_emoji,
-        is_assigned_essential_ai_chat: assigned_essential_ai_chat?,
+        assigned_ai_chat_tools_dependency: assigned_ai_chat_tools_dependency,
         ai_chat_access_level: ai_chat_access_level,
       }
     end
@@ -571,7 +571,7 @@ class Section < ApplicationRecord
           at_risk_age_gated_us_state: at_risk_student&.us_state,
           avatar_color: avatar_color,
           avatar_emoji: avatar_emoji,
-          is_assigned_essential_ai_chat: assigned_essential_ai_chat?,
+          assigned_ai_chat_tools_dependency: assigned_ai_chat_tools_dependency,
           ai_chat_access_level: ai_chat_access_level,
         }
       )
@@ -702,12 +702,10 @@ class Section < ApplicationRecord
     unit_groups.any? {|unit_group| unit_group.course_assignable?(user)}
   end
 
-  def assigned_essential_ai_chat?
-    !!(script&.requires_ai_chat_tools? || unit_group&.requires_ai_chat_tools?)
-  end
-
-  def assigned_any_ai_chat?
-    !!(script&.has_ai_chat_tools? || unit_group&.has_ai_chat_tools?)
+  def assigned_ai_chat_tools_dependency
+    return SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:ESSENTIAL] if script&.requires_ai_chat_tools? || unit_group&.requires_ai_chat_tools?
+    return SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:AVAILABLE] if script&.has_ai_chat_tools? || unit_group&.has_ai_chat_tools?
+    SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE]
   end
 
   # A section can be assigned a course (aka unit_group) without being assigned a script,

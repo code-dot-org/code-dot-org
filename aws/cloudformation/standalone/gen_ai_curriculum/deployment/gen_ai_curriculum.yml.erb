@@ -8,8 +8,8 @@ Description: SageMaker resources for Gen AI Curriculum.
 Parameters:
   Environment:
     Type: String
-    Default: "test"
-    Description: "Environment being deployed to (production or test)"
+    Default: "production"
+    Description: "Environment being deployed to"
   HuggingFaceToken:
     Type: String
     Description: "HuggingFace token with read access; required for deploying HuggingFace models."
@@ -43,9 +43,9 @@ Resources:
       EndpointConfigName: !Sub "<%= "#{config[:model_name]}-${Environment}-EndpointConfig-#{Time.now.to_i}" %>"
       ProductionVariants:
         - ContainerStartupHealthCheckTimeoutInSeconds: 600
-          InitialInstanceCount: <%= environment == 'production' ? config[:min_num_instances] : 1 %>
+          InitialInstanceCount: <%= config[:min_num_instances] %>
           InitialVariantWeight: 1
-          InstanceType: "<%= config[:instance_type][environment.to_sym] %>"
+          InstanceType: "<%= config[:instance_type] %>"
           ModelName: !GetAtt <%= config[:model_name] %>Model.ModelName
           VariantName: "AllTraffic"
 
@@ -55,7 +55,6 @@ Resources:
       EndpointConfigName: !GetAtt <%= config[:model_name] %>EndpointConfig.EndpointConfigName
       EndpointName: !Sub "<%= "#{config[:model_id]}-${Environment}" %>"
 
-  <% if environment == 'production' %>
   <%= config[:model_name] %>ScalingTarget:
     Type: "AWS::ApplicationAutoScaling::ScalableTarget"
     Properties:
@@ -78,6 +77,5 @@ Resources:
         ScaleOutCooldown: 300
         PredefinedMetricSpecification:
           PredefinedMetricType: SageMakerVariantInvocationsPerInstance
-  <% end %>
 <% end %>
 

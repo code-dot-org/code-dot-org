@@ -325,6 +325,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           isTeacherView={isTeacherView}
           buildAssetUrl={buildAssetUrlValue}
           isAiTutorVersion={isAiTutorVersion}
+          clientType={clientType}
+          modelParameters={modelParameters}
           hasInstructionsDrawer={hasInstructionsDrawer}
         />
       )}

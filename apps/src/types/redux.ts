@@ -22,6 +22,7 @@ import {MapboxState} from '@cdo/apps/redux/mapbox';
 import {CurrentUserState} from '@cdo/apps/templates/CurrentUserState';
 import {TeacherRubricState} from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 import {TeacherSectionState} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {Weblab2ConsoleState} from '@cdo/apps/weblab2/redux/consoleRedux';
 import {Weblab2NetworkState} from '@cdo/apps/weblab2/redux/networkRedux';
 import {Weblab2State} from '@cdo/apps/weblab2/weblab2Redux';
 
@@ -64,6 +65,7 @@ export interface RootState {
   teacherRubric: TeacherRubricState;
   teacherSections: TeacherSectionState;
   weblab2: Weblab2State;
+  weblab2Console: Weblab2ConsoleState;
   weblab2Network: Weblab2NetworkState;
 }
 
@@ -103,6 +105,7 @@ interface ManageStudentsState {
 }
 
 interface SectionProgressState {
+  isLoadingProgress: boolean;
   unitDataByUnit?: {
     [unitId: number]: {
       id: number;

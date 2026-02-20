@@ -9,7 +9,9 @@ import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 const fetchLangfusePrompt = async (promptName: string) => {
-  const url = `/langfuse/get_prompt?name=${encodeURIComponent(promptName)}`;
+  const url = `/ai_prompt_management/get_prompt?name=${encodeURIComponent(
+    promptName
+  )}`;
   const response = await HttpClient.get(url);
   const prompt = await response.json();
   const promptText = prompt.prompt;

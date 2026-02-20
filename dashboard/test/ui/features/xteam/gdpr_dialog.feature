@@ -7,8 +7,6 @@ Feature: GDPR Dialog - data transfer agreement
     And I am a teacher
     And I am on "http://studio.code.org/home"
     When element ".ui-test-gdpr-dialog" is visible
-    And I click ".ui-test-gdpr-dialog-logout" to load a new page
-    Then check that the URL contains "http://code.org"
 
   Scenario: EU user sees the GDPR Dialog on dashboard, opt in, don't show again
     Given I am in Europe

@@ -520,6 +520,8 @@ const EVENTS = {
   SUBMIT_AICHAT_TEACHER_FEEDBACK: 'Teacher submits feedback on aichat message',
   AICHAT_MULTIMODAL_UPLOAD_OPENED: 'User clicks to upload multimodal assets',
   AICHAT_MULTIMODAL_UPLOAD_STAGED: 'User stages multimodal assets',
+  AICHAT_UNSUPPORTED_MODEL_SELECTED:
+    'User had previously selected a model that is no longer supported',
 
   // AI chat response copied. Shared across features; check event properties for usage and clientType
   // to determine feature.
@@ -629,6 +631,16 @@ const EVENTS = {
   RESOURCE_PANEL_SETTINGS_CHANGED: 'Resource Panel Settings Changed',
   RESOURCE_PANEL_LANGUAGE_CHANGE: 'Resource Panel Language Change',
   RESOURCE_PANEL_SETTINGS_CHANGE: 'Resource Panel Settings Change',
+
+  // Resource Panel - Instructions Drawer
+  RESOURCE_PANEL_INSTRUCTIONS_DRAWER_COLLAPSED:
+    'Resource Panel Instructions Drawer Collapsed',
+  RESOURCE_PANEL_INSTRUCTIONS_DRAWER_EXPANDED:
+    'Resource Panel Instructions Drawer Expanded',
+  RESOURCE_PANEL_INSTRUCTIONS_DRAWER_RESIZED_INCREASED:
+    'Resource Panel Instructions Drawer Resized Increased',
+  RESOURCE_PANEL_INSTRUCTIONS_DRAWER_RESIZED_DECREASED:
+    'Resource Panel Instructions Drawer Resized Decreased',
 
   // IntroJS flows
   INTROJS_FLOW_STARTED: 'IntroJS Flow Started',

@@ -13,7 +13,6 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import currentUser, {
-  setCurrentUserHasSeenStandardsReportInfo,
   setShowAITALessonSummary,
   setHasCompletedPersonalizationQuiz,
   setAudioSummaryTranscript,
@@ -21,8 +20,6 @@ import currentUser, {
 import manageStudents from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import sectionStandardsProgress from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
-import progressV2Feedback from '@cdo/apps/templates/sectionProgressV2/progressV2FeedbackRedux';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/TeacherHomepage';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import teacherSections, {
@@ -43,7 +40,6 @@ const {
   section,
   sections,
   localeCode,
-  hasSeenStandardsReportInfo,
   showAITALessonSummary,
   hasCompletedPersonalizationQuiz,
   sectionOrder,
@@ -56,12 +52,10 @@ $(document).ready(function () {
     teacherSections,
     manageStudents,
     sectionProgress,
-    progressV2Feedback,
     unitSelection,
     stats,
     sectionAssessments,
     currentUser,
-    sectionStandardsProgress,
     locales,
     viewAs,
     hiddenLesson,
@@ -72,9 +66,6 @@ $(document).ready(function () {
   });
 
   const store = getStore();
-  store.dispatch(
-    setCurrentUserHasSeenStandardsReportInfo(hasSeenStandardsReportInfo)
-  );
   if (showAITALessonSummary) {
     store.dispatch(setShowAITALessonSummary(true));
     store.dispatch(

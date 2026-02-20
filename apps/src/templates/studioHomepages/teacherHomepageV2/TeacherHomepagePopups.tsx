@@ -1,7 +1,6 @@
 import React from 'react';
 
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
-import DCDO from '@cdo/apps/dcdo';
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -10,7 +9,6 @@ import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
 import {SchoolInfo} from './TeacherHomepageConstants';
 import TeacherHomepageDrawer from './TeacherHomepageDrawer';
-import WelcomePopup from './welcome/WelcomePopup';
 
 export interface TeacherHomepagePopupsProps {}
 
@@ -45,10 +43,6 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
   const [NPSProps, setNPSProps] = React.useState('');
 
   const [hasSeenPopup, setHasSeenPopup] = React.useState(false);
-
-  const hasSeenHomepageWelcome = useAppSelector(
-    state => state.currentUser.hasSeenHomepageWelcome
-  );
 
   const aiDifferentiationEnabled = useAppSelector(
     state => state.currentUser.aiDifferentiationEnabled
@@ -147,14 +141,6 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
           onCloseCallback={onClosePopup}
         />
       );
-    } else if (
-      DCDO.get('teacher-homepage-welcome', false) &&
-      (!hasSeenHomepageWelcome ||
-        new URLSearchParams(window.location.search).get(
-          'showHomepageWelcome'
-        ) === 'true')
-    ) {
-      return <WelcomePopup onCloseCallback={onClosePopup} />;
     }
     return null;
   }, [
@@ -167,7 +153,6 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
     NPSProps,
     existingSchoolInfo,
     onClosePopup,
-    hasSeenHomepageWelcome,
     hasSeenPopup,
   ]);
 

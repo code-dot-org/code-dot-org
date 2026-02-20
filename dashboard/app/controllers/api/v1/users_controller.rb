@@ -76,6 +76,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         has_completed_ai_differentiation_welcome: current_user.has_completed_ai_differentiation_welcome?,
         educator_role: current_user.educator_role,
         sharing_disabled: current_user.sharing_disabled,
+        is_levelbuilder: current_user.levelbuilder?,
         ai_tutor_enabled_for_pilot: current_user.ai_tutor_enabled_for_pilot?
       }
     else
@@ -432,12 +433,6 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     @user.save
 
     head :ok
-  end
-
-  # POST /api/v1/users/<user_id>/set_standards_report_info_to_seen
-  def set_standards_report_info_to_seen
-    @user.has_seen_standards_report_info_dialog = true
-    @user.save!
   end
 
   # POST /api/v1/users/set_seen_ta_scores

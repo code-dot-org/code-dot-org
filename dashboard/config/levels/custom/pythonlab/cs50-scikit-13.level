@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-02-18T16:57:37.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# CIW AI Associate Standard: 2.3\n# Standard Description: Describe dataset selection techniques and methods.\n#\n# Rationale: Just because you gathered data doesn't mean you should use ALL of it. \n# Dataset selection is the process of choosing the specific pieces of data \n# that are actually relevant to the problem you want to solve. This tutorial \n# uses pandas to filter out unnecessary information.\n\n\"\"\"\nWelcome! Imagine you have a giant toy box with 1,000 toys, but you only \nwant to play with \"Blue LEGOs\". You wouldn't dump the whole box on the floor; \nyou would SELECT just the ones you need.\n\nIn AI, we do the same thing. If we want to predict if it will rain, we don't \nneed to know what color the weather station is painted! We select the \nimportant parts.\n\"\"\"\n\nimport pandas as pd\n\n# --- OUR BIG DATASET ---\n# Let's imagine we have a dataset about Cars.\ndata = {\n    'Brand': ['Toyota', 'Ford', 'Tesla', 'Ford', 'Toyota', 'Tesla'],\n    'Color': ['Red', 'Blue', 'White', 'Black', 'Silver', 'Red'],\n    'Year': [2015, 2018, 2022, 2012, 2020, 2023],\n    'Type': ['Gas', 'Gas', 'Electric', 'Gas', 'Hybrid', 'Electric'],\n    'Price': [15000, 12000, 45000, 8000, 25000, 52000]\n}\ndf = pd.DataFrame(data)\n\nprint(\"--- The Full Dataset ---\")\nprint(df)\nprint(\"\\n\")\n\n# --- TECHNIQUE 1: SELECTING COLUMNS ---\nprint(\"--- Technique 1: Column Selection ---\")\n# If we only want to study prices, we don't need the 'Color' column.\n# We \"select\" only the columns we want to keep.\nuseful_cols = df[['Brand', 'Type', 'Price']]\nprint(\"Only keeping relevant columns:\")\nprint(useful_cols)\nprint(\"\\n\")\n\n# --- TECHNIQUE 2: SELECTING ROWS (FILTERING) ---\nprint(\"--- Technique 2: Row Selection (Filtering) ---\")\n# If we only care about Electric cars, we \"select\" only those rows.\nelectric_only = df[df['Type'] == 'Electric']\nprint(\"Only keeping Electric cars:\")\nprint(electric_only)\nprint(\"\\n\")\n\n# --- TECHNIQUE 3: COMBINED SELECTION ---\nprint(\"--- Technique 3: Precise Selection ---\")\n# We can select rows AND columns at the same time!\n# Let's find the Price of Ford cars only.\nford_prices = df.loc[df['Brand'] == 'Ford', ['Brand', 'Price']]\nprint(\"Finding just the Brand and Price for Ford cars:\")\nprint(ford_prices)\n\n\"\"\"\n--- YOUR TURN ---\nWe have a dataset of students. \nYour goal: Select only the students who scored HIGHER than 85.\n\n1. Create a filter to select rows where 'Score' > 85.\n2. Only show the 'Name' and 'Score' columns for those students.\n\"\"\"\n\n# STARTING CODE FOR STUDENT:\nstudents = pd.DataFrame({\n    'Name': ['Alice', 'Bob', 'Charlie', 'David', 'Eva'],\n    'Score': [92, 78, 88, 70, 95],\n    'Grade': [10, 11, 10, 12, 9]\n})\n\n# TODO: Select rows where Score > 85\n# high_scores = ...\n\n# TODO: Print only Name and Score for those high-scoring students\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFTDG6jyYgtI/CEUE/82dEkG4hlI8OLsdjJD0In8S\n03BB+jPkGgyYB0/9C3zqHMHEFpKeCsugYbpGMxzBNwrd7qASagJaFzMnVUyM\n2TXS7Hau9lj7JpZIHXn9fmxXRRANWTctDHAgY9Xzm2aa+5ykT2V3BpEyRA7L\nFcrysxe0rL64Jv6sXIwhqnjQTklBcHjfBpITuKjtVu6CLyx+ikopxOMpuH2Y\nqZYvaxqMUM4csboEJgf8IgWJQB1KKPdk0kYIibd2OZRzV/7EaMb37zaSeK5v\nHbXZwYp356QIHd8kl1FTADm6hATmrssbWuCpJ0tZGtf2zKDDdG0RoDbvJaSN\n575Al6Za1B8T7Xe3F0RDj/u495THlqNIcDj3SdJXZprmBfqUeBRqxMHZyuyW\nDL+tRnq8nD0714p7dagIyxjj22XB231yMdoSkMKfLC6SEOwo48BETIwHZ6Wa\njB7Kquo1xN8g5ZZvmkcoMjoSwXgLOLzj6uAX1JzK+sH7Pg2rZdnEr6k05mZA\n1EhjLhvFSrdmmLnGnPRkLnGQ44/X/U0+xLvD/2YWArm19Hp/qkIQz31pTwcD\n9nYzZgPOCcilQwiBNIwsQL/odbOJjihWfAk2zvBakHN3A+NUzNP3bvEsQYCs\nUqyOf9Wz2YP/YER8MgYsFSvDG3IVYfspelvRWczJ1XGlRCP/duVl5TDDHf1E\ni2lAHCwARZHCPnfhQqFZ0fWUuZDv9qrdyTn4D9cqRvq9O23dQqsixwm7W9cZ\nUbMCvsPma21C4cJ9E+jlQsSXa+p0NxchQJa5vUFV66QLrx05++2DCq9NrGzn\nr759S8BuClvi5hhYYYbL9wWt31PUZzIcfJ38USgN59fHDTCJLWdth/NdEM/1\nXW1weBH8IVgS3+px1+BvY3CWdNAVfxrWn5pYtPjSmJNj0XZSE5uwCwmUiq1N\nfJGmWGbsve07L/Ym9erlPgGZ1E5BV/iscsD/aY5WCjJOgg5M/oJV5+elFBf7\n8v69D+0IT/C7n6c9zCb80495xsRskdRStTljCdqhCAjREFExO+YZGQQ/3bwL\nZWNuuav7H4a//fKbfGlLYHnuHiWRp8dMitcmII25JMjaH+9DZr+u/577MIZT\nug6OMFu0YjUfyFsRBk754DzTmDRlebCgayEdecPRWveJ7mBPM8rhugs+A769\nTIXx42d1B/PikfuiqhtCRVGQjI2SD0vJMWWGu+jlaDz0APEW8NUgsq7pbsGi\nT+GZt4Spj6ZR0I33pOdoQkN9LlFiM/UpL/ylVpKrMA==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-18T16:57:37.175+00:00\",\"changed\":[\"cloned from \\\"cs50-scikit-12\\\"\"],\"cloned_from\":\"cs50-scikit-12\"},{\"changed_at\":\"2026-02-18 16:57:41 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:29:18 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:29:24 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>

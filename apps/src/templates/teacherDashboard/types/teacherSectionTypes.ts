@@ -1,5 +1,9 @@
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
 import {
+  AiChatAccessLevel,
+  AiChatToolsDependencyValue,
+} from '@cdo/apps/aichat/types/accessControls';
+import {
   SectionLoginType,
   UserTypes,
 } from '@cdo/generated-scripts/sharedConstants';
@@ -46,8 +50,8 @@ export interface Section {
   unitPosition: string | null;
   avatar_color?: number | null;
   avatar_emoji?: number | null;
-  isAssignedEssentialAiChat?: boolean;
-  aiChatAccessLevel?: string;
+  assignedAiChatToolsDependency?: AiChatToolsDependencyValue;
+  aiChatAccessLevel?: AiChatAccessLevel;
 }
 
 type Course = {
@@ -143,6 +147,30 @@ export interface AssignmentCourseOffering {
   high: object;
   hoc: object;
   middle: object;
+}
+
+export interface CourseOffering {
+  id: number;
+  display_name: string;
+  is_featured: boolean;
+  participant_audience: string;
+  course_versions: {
+    [courseVersionId: number]: CourseVersion;
+  };
+}
+
+export interface CourseVersion {
+  id: number;
+  content_root_id: number;
+  is_recommended: boolean;
+  is_stable: boolean;
+  key: string;
+  locale_codes: [string];
+  locale: [string];
+  name: string;
+  path: string;
+  units: object;
+  version_year: string;
 }
 
 export type SectionInstructor = {
