@@ -74,6 +74,20 @@ class LessonFeedbacksControllerTest < ActionController::TestCase
     assert_equal "New feedback", feedback.saved_feedback
   end
 
+  test "teacher cannot create lesson feedback for student they don't teach" do
+    other_teacher = create(:teacher)
+    sign_in other_teacher
+    assert_no_difference 'LessonFeedback.count' do
+      post :create, params: {
+        teacher_id: other_teacher.id,
+        student_id: @student.id,
+        lesson_id: @lesson.id,
+        saved_feedback: "Unauthorized feedback"
+      }
+    end
+    assert_response :forbidden
+  end
+
   test "student can view their own feedback" do
     sign_in @student
 

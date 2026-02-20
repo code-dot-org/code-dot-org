@@ -4,7 +4,8 @@ class LessonFeedbacksController < ApplicationController
   load_and_authorize_resource except: [:show_by_student, :saved_feedback]
 
   def create
-    @lesson_feedback.assign_attributes(lesson_feedback_params)
+    @lesson_feedback.assign_attributes(create_lesson_feedback_params)
+    @lesson_feedback.teacher_id = current_user.id
 
     if @lesson_feedback.save
       render json: @lesson_feedback, status: :created
@@ -14,7 +15,7 @@ class LessonFeedbacksController < ApplicationController
   end
 
   def update
-    if @lesson_feedback.update(lesson_feedback_params)
+    if @lesson_feedback.update(update_lesson_feedback_params)
       render json: @lesson_feedback
     else
       render json: {errors: @lesson_feedback.errors.full_messages}, status: :unprocessable_entity
@@ -48,12 +49,20 @@ class LessonFeedbacksController < ApplicationController
     render json: feedback
   end
 
-  def lesson_feedback_params
+  private def create_lesson_feedback_params
     params.permit(
-      :teacher_id,
       :student_id,
       :section_id,
       :lesson_id,
+      :saved_feedback,
+      :submitted_feedback,
+      :submitted_at,
+      resources: [:recommended_action, :resource_name, :resource_link]
+    )
+  end
+
+  private def update_lesson_feedback_params
+    params.permit(
       :saved_feedback,
       :submitted_feedback,
       :submitted_at,

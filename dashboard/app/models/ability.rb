@@ -223,11 +223,11 @@ class Ability
         end
 
         # LessonFeedback abilities - teachers can manage lesson feedback for their students
-        can [:create, :update], LessonFeedback do |feedback|
+        can :create, LessonFeedback do |feedback|
           user.students.exists?(id: feedback.student_id)
         end
-        can :show, LessonFeedback do |feedback|
-          user.students.exists?(id: feedback.student_id)
+        can :update, LessonFeedback do |feedback|
+          user.students.exists?(id: feedback.student_id) && feedback.teacher_id == user.id
         end
 
       end
