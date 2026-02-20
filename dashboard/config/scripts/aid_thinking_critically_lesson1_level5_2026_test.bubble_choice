@@ -1,0 +1,9 @@
+name 'aid-thinking-critically-lesson1-level5_2026-test'
+display_name 'AI in Everything!'
+description 'With a partner, explore lots of examples of AI'
+
+sublevels
+level 'level1'
+level 'level2'
+
+uses_lab2
