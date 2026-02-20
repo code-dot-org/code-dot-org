@@ -56,12 +56,13 @@ class LessonFeedbacksControllerTest < ActionController::TestCase
 
   test "teacher can create lesson feedback for their student" do
     sign_in @teacher
+    different_lesson = create(:lesson)
 
     assert_difference 'LessonFeedback.count', 1 do
       post :create, params: {
         teacher_id: @teacher.id,
         student_id: @student.id,
-        lesson_id: @lesson.id,
+        lesson_id: different_lesson.id,
         saved_feedback: "New feedback"
       }
     end
