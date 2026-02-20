@@ -1,16 +1,15 @@
-require 'opentelemetry/sdk'
-require 'opentelemetry/instrumentation/all'
-require 'opentelemetry-exporter-otlp'
-
 # Only configure OpenTelemetry if enabled in CDO config, to avoid unnecessary overhead in environments where it's not needed
 if CDO.enable_opentelemetry
+  require 'opentelemetry/sdk'
+  require 'opentelemetry/instrumentation/all'
+  require 'opentelemetry-exporter-otlp'
+
   OpenTelemetry::SDK.configure do |c|
     c.service_name = 'dashboard'
 
     # Enable all ruby instrumentation, with a custom configuration for Rack.
     c.use_all(
       'OpenTelemetry::Instrumentation::Rack' => {
-        url_quantization: ->(path, _) {path.to_s},
         untraced_requests: lambda {|env|
           path = env['PATH_INFO']
           # Don't trace requests for static assets. They are very high volume and noisy and not applicable for most application performance monitoring use cases.
