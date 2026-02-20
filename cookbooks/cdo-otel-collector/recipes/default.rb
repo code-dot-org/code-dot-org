@@ -2,102 +2,65 @@
 # Cookbook Name:: cdo-otel-collector
 # Recipe:: default
 #
-# Installs and configures DataDog OpenTelemetry Collector
+# Installs and configures New Relic NRDOT Collector
 
-# Get API key from secrets - fail if not provided
-api_key = node['cdo-otel-collector']['api_key']
+# Get license key from secrets - fail if not provided
+license_key = node['cdo-otel-collector']['license_key']
 
-raise 'DataDog API key must be provided via node[\'cdo-otel-collector\'][\'api_key\']' unless api_key
+raise 'New Relic License Key must be provided via node[\'cdo-otel-collector\'][\'license_key\']' unless license_key
 
-# Download and cache the installation script
-install_script_path = "#{Chef::Config[:file_cache_path]}/datadog_install_script.sh"
+# Set up package variables
+collector_distro = node['cdo-otel-collector']['distribution']
+collector_version = node['cdo-otel-collector']['version']
+collector_arch = node['cdo-otel-collector']['architecture']
 
-remote_file install_script_path do
-  source 'https://install.datadoghq.com/scripts/install_script_agent7.sh'
-  mode '0755'
-  action :create_if_missing
-end
+# Download New Relic NRDOT collector DEB package
+collector_package_path = "#{Chef::Config[:file_cache_path]}/nrdot-collector.deb"
 
-# Execute the DataDog installation script with proper environment variables
-script 'install_datadog_agent_with_otel' do
-  action :run
-  interpreter 'bash'
-  cwd Chef::Config[:file_cache_path]
-  environment(
-    'DD_API_KEY' => api_key,
-    'DD_SITE' => node['cdo-otel-collector']['site'],
-    'DD_OTELCOLLECTOR_ENABLED' => 'true',
-    'DD_AGENT_MAJOR_VERSION' => '7',
-    'DD_AGENT_MINOR_VERSION' => '75.0-1'
-  )
-  code <<-EOH
-    bash #{install_script_path}
-  EOH
-
-  # Only run if datadog-agent is not already installed
-  not_if {File.exist?('/usr/bin/datadog-agent')}
-end
-
-# Ensure the datadog-agent configuration directory exists
-directory '/etc/datadog-agent' do
-  owner 'dd-agent'
-  group 'dd-agent'
-  mode '0755'
-  action :create
-end
-
-# Configure datadog.yaml with OpenTelemetry Collector enabled
-template '/etc/datadog-agent/datadog.yaml' do
-  source 'datadog.yaml.erb'
-  owner 'dd-agent'
-  group 'dd-agent'
-  mode '0600'
-  variables({
-              api_key: api_key,
-    site: node['cdo-otel-collector']['site']
-            }
-)
-  notifies :restart, 'service[datadog-agent]', :delayed
-end
-
-# Configure OpenTelemetry Collector configuration
-template '/etc/datadog-agent/otel-config.yaml' do
-  source 'otel-config.yaml.erb'
-  owner 'dd-agent'
-  group 'dd-agent'
+remote_file collector_package_path do
+  source "https://github.com/newrelic/nrdot-collector-releases/releases/download/#{collector_version}/#{collector_distro}_#{collector_version}_linux_#{collector_arch}.deb"
   mode '0644'
-  variables({
-              api_key: api_key,
-    site: node['cdo-otel-collector']['site']
-            }
-)
-  notifies :restart, 'service[datadog-agent]', :delayed
+  action :create_if_missing
+  notifies :run, 'dpkg_package[nrdot-collector]', :immediately
 end
 
-# Manage the DataDog agent service
-service 'datadog-agent' do
+# Install the New Relic NRDOT collector package
+dpkg_package 'nrdot-collector' do
+  source collector_package_path
+  action :nothing
+end
+
+# Create environment configuration file with license key
+file "/etc/#{collector_distro}/#{collector_distro}.conf" do
+  content "NEW_RELIC_LICENSE_KEY=#{license_key}\n"
+  mode '0600'
+  owner 'root'
+  group 'root'
+  action :create
+  notifies :restart, "service[#{collector_distro}]", :delayed
+end
+
+# Manage the New Relic NRDOT collector service
+service collector_distro do
   action [:enable, :start]
   supports restart: true, status: true
 end
 
 # Verify the installation was successful
-script 'verify_datadog_installation' do
+script 'verify_nrdot_installation' do
   action :run
   interpreter 'bash'
   code <<-EOH
-    # Wait for the agent to start up
+    # Wait for the collector to start up
     sleep 10
 
-    # Check if the agent is running and OTel collector is enabled
-    /usr/bin/datadog-agent status | grep -q "OTel Agent"
-    if [ $? -eq 0 ]; then
-      echo "DataDog OpenTelemetry Collector installed and running successfully"
+    # Check if the collector is running using health check endpoint
+    if curl -s localhost:13133 | grep -q "Server available"; then
+      echo "New Relic NRDOT Collector installed and running successfully"
     else
-      echo "Warning: DataDog agent is installed but OTel collector status unclear"
+      echo "Warning: New Relic NRDOT collector health check failed"
       exit 1
     fi
   EOH
-
-  # Only run verification after installation
-  only_if {File.exist?('/usr/bin/datadog-agent')}
+  only_if {File.exist?("/usr/bin/#{collector_distro}")}
 end
