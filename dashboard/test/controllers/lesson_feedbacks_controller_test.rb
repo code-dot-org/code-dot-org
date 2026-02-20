@@ -198,7 +198,6 @@ class LessonFeedbacksControllerTest < ActionController::TestCase
     assert response_json['errors'].present?
   end
 
-  # Test complex resource parameters
   test "teacher can create lesson feedback with resources" do
     sign_in @teacher
     different_lesson = create(:lesson)
@@ -227,7 +226,6 @@ class LessonFeedbacksControllerTest < ActionController::TestCase
     assert_equal "https://example.com/tutorial", feedback.resources[0]["resource_link"]
   end
 
-  # Test submitted_feedback functionality
   test "teacher can submit feedback with submitted_at timestamp" do
     sign_in @teacher
 
