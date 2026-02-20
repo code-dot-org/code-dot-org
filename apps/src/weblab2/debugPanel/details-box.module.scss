@@ -65,6 +65,12 @@
   min-height: 0;
 }
 
+.detailsFieldLabelRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .detailsFieldLabel {
   color: var(--text-neutral-tertiary);
 }

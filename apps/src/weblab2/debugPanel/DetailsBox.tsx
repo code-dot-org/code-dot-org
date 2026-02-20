@@ -1,4 +1,5 @@
 import Alert from '@code-dot-org/component-library/alert';
+import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   BodyThreeText,
@@ -10,9 +11,10 @@ import React, {useMemo} from 'react';
 import parentStyles from './debug-panel.module.scss';
 import moduleStyles from './details-box.module.scss';
 
-interface DetailsField {
+export interface DetailsField {
   label: string;
   value?: string | number;
+  copyable?: boolean;
 }
 
 interface DetailsBoxProps {
@@ -66,9 +68,24 @@ const DetailsBox: React.FunctionComponent<DetailsBoxProps> = ({
         {rows.map((row, rowIndex) => {
           const content = row.map(field => (
             <div key={field.label} className={moduleStyles.detailsField}>
-              <OverlineThreeText className={moduleStyles.detailsFieldLabel}>
-                {field.label}
-              </OverlineThreeText>
+              <div className={moduleStyles.detailsFieldLabelRow}>
+                <OverlineThreeText className={moduleStyles.detailsFieldLabel}>
+                  {field.label}
+                </OverlineThreeText>
+                {field.copyable && (
+                  <Button
+                    icon={{iconStyle: 'solid', iconName: 'copy'}}
+                    isIconOnly
+                    size="xs"
+                    type="tertiary"
+                    color="gray"
+                    ariaLabel={`Copy ${field.label}`}
+                    onClick={() =>
+                      navigator.clipboard.writeText(String(field.value ?? ''))
+                    }
+                  />
+                )}
+              </div>
               <pre className={moduleStyles.detailsFieldValueContainer}>
                 <BodyThreeText className={moduleStyles.detailsFieldValue}>
                   {field.value}

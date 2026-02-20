@@ -17,7 +17,7 @@ import SuccessDivider from '@cdo/apps/weblab2/debugPanel/images/Success.svg';
 import {NetworkEntry} from '@cdo/apps/weblab2/redux/networkRedux';
 
 import DebugPanelRightHeaderButtons from './DebugPanelRightHeaderButtons';
-import DetailsBox from './DetailsBox';
+import DetailsBox, {DetailsField} from './DetailsBox';
 import NetworkRequestChip from './NetworkRequestChip';
 import NoRequestsPlaceholder from './NoRequestsPlaceholder';
 
@@ -130,7 +130,7 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
   }, [requestSuccess, responseSuccess, responsePending]);
 
   const responseRows = useMemo(() => {
-    const rows = [
+    const rows: DetailsField[][] = [
       [
         {
           label: 'Status',
@@ -167,6 +167,7 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
       {
         label: 'Response Data',
         value: responseDataValue,
+        copyable: true,
       },
     ]);
     return rows;
@@ -239,7 +240,13 @@ const DebugPanel: React.FunctionComponent<DebugPanelProps> = ({className}) => {
                     value: selectedRequest?.request.startTime,
                   },
                 ],
-                [{label: 'URL', value: selectedRequest?.request.url}],
+                [
+                  {
+                    label: 'URL',
+                    value: selectedRequest?.request.url,
+                    copyable: true,
+                  },
+                ],
               ]}
               errorMessage={requestErrorMessage}
             />
