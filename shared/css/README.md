@@ -9,10 +9,10 @@ If you are looking to update the FontAwesome files in `font.scss`, you'll need t
 3. Once you've downloaded the kit, **update the relative paths**
    for font files listed in CSS to be absolute paths to URLs storing the font files, rather than relative paths. For example, you'd replace:
    - `../webfonts` with
-   - `https://dsco.code.org/assets/font-awesome-pro/1762452190/webfonts`
+   - `https://dsco.code.org/assets/font-awesome-pro/1771519720295/webfonts`
 5. **Upload the css and webfont files to the `cdo-dsco` bucket S3 bucket.** Timestamp the folder location in S3 with the current unix timestamp. For example, you'd end up with a S3 locations like:
-   - `cdo-dsco/assets/font-awesome-pro/1762452190/css/all.css`
-   - `cdo-dsco/assets/font-awesome-pro/1762452190/webfonts/custom-icons.woff2`
+   - `cdo-dsco/assets/font-awesome-pro/1771519720295/css/all.css`
+   - `cdo-dsco/assets/font-awesome-pro/1771519720295/webfonts/custom-icons.woff2`
 6. **[Only necessary if starting from scratch, should apply by default to new uploads] Update CORS configuration on `cdo-dsco` bucket**
    to allow fetching of these files across code.org, studio.code.org, and hourofcode.com.
    More documentation on those changes are in [this Slack thread](https://codedotorg.slack.com/archives/C03CK49G9/p1681500978173639).
