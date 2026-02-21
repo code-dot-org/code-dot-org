@@ -47,8 +47,10 @@ function useProjectServiceWorker(
             const installingWorker = registration.installing;
             if (installingWorker) {
               installingWorker.addEventListener('statechange', () => {
-                if (installingWorker.state === 'installed') {
-                  // If we get a message that we have a new active service worker, update our reference.
+                if (installingWorker.state === 'activated') {
+                  // Wait for the service worker to be fully activated (and call clients.claim())
+                  // before updating our reference. Safari requires the worker to be controlling
+                  // the page before it will intercept fetch requests from iframes.
                   setServiceWorker(installingWorker);
                 }
               });
