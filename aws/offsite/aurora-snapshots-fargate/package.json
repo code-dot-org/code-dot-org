@@ -9,8 +9,8 @@
   "author": "",
   "license": "apache-2.0",
   "dependencies": {
-    "@aws-sdk/client-rds": "^3.725.0",
-    "@aws-sdk/client-s3": "^3.723.0",
+    "@aws-sdk/client-rds": "^3.995.0",
+    "@aws-sdk/client-s3": "^3.995.0",
     "honeybadger": "latest",
     "promise-mysql": "latest"
   },
