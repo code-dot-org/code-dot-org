@@ -18,6 +18,8 @@ const initialState: Weblab2ConsoleState = {
   logs: [],
 };
 
+const MAX_LOG_ENTRIES = 500;
+
 const consoleSlice = createSlice({
   name: 'console',
   initialState,
@@ -29,8 +31,12 @@ const consoleSlice = createSlice({
       state.logs.push({
         level: action.payload.level,
         message: action.payload.args.join(' '),
-        timestamp: new Date().toISOString(),
+        timestamp: new Date().toLocaleTimeString(),
       });
+      // Cap length of console logs to MAX_LOG_ENTRIES entries.
+      if (state.logs.length > MAX_LOG_ENTRIES) {
+        state.logs.shift();
+      }
     },
     clearConsoleLogs: state => {
       state.logs = [];
