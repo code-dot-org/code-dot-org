@@ -1,4 +1,6 @@
 class Widget2Controller < ApplicationController
+  before_action :require_levelbuilder_mode
+
   BASE_DIRECTORY = "#{Rails.root}/config/widget2".freeze
   NEW_WEBLAB2_PROJECT_LEVEL_ID = Level.find_by_name("New Web Lab 2 Project").id
 
