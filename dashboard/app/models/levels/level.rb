@@ -972,20 +972,12 @@ class Level < ApplicationRecord
 
       source_files = []
 
+      types = ['html', 'css', 'js']
       source_files_list.map do |file_path|
         file_name = File.basename(file_path)
         file_contents = File.read(file_path)
         file_extension = File.extname(file_path).delete('.')
-        language = case file_extension
-                   when 'html'
-                     'html'
-                   when 'css'
-                     'css'
-                   when 'js'
-                     'javascript'
-                   else
-                     'text'
-                   end
+        language = types.include?(file_extension) ? file_extension : 'text'
         source_files.push({name: file_name, contents: file_contents, language: language})
       end
 
@@ -1015,7 +1007,9 @@ class Level < ApplicationRecord
       #   "openFiles":["1"]
       # }
 
-      properties_camelized[:widgetView] = true
+      if properties["widget2"]
+        properties_camelized[:widgetView] = true
+      end
     end
 
     properties_camelized
