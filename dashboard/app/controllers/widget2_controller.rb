@@ -2,7 +2,7 @@ class Widget2Controller < ApplicationController
   BASE_DIRECTORY = "#{Rails.root}/config/widget2".freeze
   NEW_WEBLAB2_PROJECT_LEVEL_ID = Level.find_by_name("New Web Lab 2 Project").id
 
-  def edit
+  def index
     directories = Dir.glob(BASE_DIRECTORY + '/*')
 
     @directories = directories.map do |directory|

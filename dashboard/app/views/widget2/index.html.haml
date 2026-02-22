@@ -1,11 +1,11 @@
-%h1 Widget2 Edit
+%h1 Widget2 Library
 
-%h2 Widgets
+%h2 Widget2s
 - @directories.each do |directory|
-  .field
-    %a{href: directory[:url]}= directory[:name]
+  %a{href: directory[:url]}= directory[:name]
+  %br/
 
-%h3 New Widget
+%h2 New Widget2
 = form_with url: "/widget2/new", method: :post do |f|
   .field
     = f.label "New widget2 ID:"
