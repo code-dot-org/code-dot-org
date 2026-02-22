@@ -1,10 +1,9 @@
 %h1 Widget2 Edit
 
-= @directories.to_json
-
 %h2 Widgets
 - @directories.each do |directory|
-  %a{href: directory[:url]}= directory[:name]
+  .field
+    %a{href: directory[:url]}= directory[:name]
 
 %h3 New Widget
 = form_with url: "/widget2/new", method: :post do |f|
