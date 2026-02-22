@@ -19,61 +19,88 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@amplitude/analytics-browser@npm:^1.5.4":
-  version: 1.5.4
-  resolution: "@amplitude/analytics-browser@npm:1.5.4"
+"@amplitude/analytics-browser@npm:^2.35.2":
+  version: 2.35.2
+  resolution: "@amplitude/analytics-browser@npm:2.35.2"
   dependencies:
-    "@amplitude/analytics-client-common": "npm:^0.3.0"
-    "@amplitude/analytics-core": "npm:^0.9.5"
-    "@amplitude/analytics-types": "npm:^0.11.0"
-    "@amplitude/ua-parser-js": "npm:^0.7.31"
-    tslib: "npm:^2.3.1"
-  checksum: 10/aeaf9f5ec110fcccdaae2cc9f07737bb33fee4bf405ec8de621fac44305ef12680d26d722d17118f65519b2cfce2099c5d1096c86ec4f4daeba7f3ed477f5036
+    "@amplitude/analytics-core": "npm:2.40.0"
+    "@amplitude/plugin-autocapture-browser": "npm:1.22.1"
+    "@amplitude/plugin-network-capture-browser": "npm:1.8.1"
+    "@amplitude/plugin-page-url-enrichment-browser": "npm:0.6.1"
+    "@amplitude/plugin-page-view-tracking-browser": "npm:2.7.1"
+    "@amplitude/plugin-web-vitals-browser": "npm:1.1.12"
+    tslib: "npm:^2.4.1"
+  checksum: 10/180fd931888387fbcaf34b363054487b9201dedae99b4285c7424faefb5d49f623b4293c748926221fb75dd0f7a3c28e6aa57ca1fdd89bbb395b0cf8a18c89f4
   languageName: node
   linkType: hard
 
-"@amplitude/analytics-client-common@npm:^0.3.0":
-  version: 0.3.0
-  resolution: "@amplitude/analytics-client-common@npm:0.3.0"
+"@amplitude/analytics-connector@npm:^1.6.4":
+  version: 1.6.4
+  resolution: "@amplitude/analytics-connector@npm:1.6.4"
+  checksum: 10/5adea7f5234f037b730df93d8fbdeb0422aa31b152683a3cbdb31f49fe57b3d483b1a16fd626e9e2ef329461c1a3c00161c4bb473dd5713c498d6eea0b12ea4f
+  languageName: node
+  linkType: hard
+
+"@amplitude/analytics-core@npm:2.40.0":
+  version: 2.40.0
+  resolution: "@amplitude/analytics-core@npm:2.40.0"
   dependencies:
-    "@amplitude/analytics-connector": "npm:^1.4.5"
-    "@amplitude/analytics-core": "npm:^0.9.5"
-    "@amplitude/analytics-types": "npm:^0.11.0"
-    tslib: "npm:^2.3.1"
-  checksum: 10/29ba664a86864378d1b1a03a1dfe9be389155261bb707ef46e8cdea9c852fa21c5bc3fc2b97340827420fe4b68c74d504aec3d2effd3ca7b52f4e22591ce9b9b
+    "@amplitude/analytics-connector": "npm:^1.6.4"
+    safe-json-stringify: "npm:1.2.0"
+    tslib: "npm:^2.4.1"
+    zen-observable-ts: "npm:^1.1.0"
+  checksum: 10/db19cb32aacfc321348808a66174e6d533595da5d597cd4fcb2b7310bbb930cfddfc9ef4af7ef8849a541b7e5fd2e616d4f4d476bdbab4632b411bb2989abb2a
   languageName: node
   linkType: hard
 
-"@amplitude/analytics-connector@npm:^1.4.5":
-  version: 1.4.5
-  resolution: "@amplitude/analytics-connector@npm:1.4.5"
+"@amplitude/plugin-autocapture-browser@npm:1.22.1":
+  version: 1.22.1
+  resolution: "@amplitude/plugin-autocapture-browser@npm:1.22.1"
   dependencies:
-    "@amplitude/ua-parser-js": "npm:0.7.31"
-  checksum: 10/34f1b4d681fdb6ca7d21ab4fa9cf4a436be6673eecf4cbd9b9fb9c2b72599ccba79bdb73fcdf5c4c7e2a13ddf2b3b77a82f06bcc1ef157c04b69cc25d6c5040f
+    "@amplitude/analytics-core": "npm:2.40.0"
+    tslib: "npm:^2.4.1"
+  checksum: 10/ce5670c14c0bdda6c14dd5ac4c8050d1f26b3682c432217c851a94cc1a4eb28a00ea901488f6886a94d25a63ae282edc9cc13c5839204c6becc100a14e17b4a0
   languageName: node
   linkType: hard
 
-"@amplitude/analytics-core@npm:^0.9.5":
-  version: 0.9.5
-  resolution: "@amplitude/analytics-core@npm:0.9.5"
+"@amplitude/plugin-network-capture-browser@npm:1.8.1":
+  version: 1.8.1
+  resolution: "@amplitude/plugin-network-capture-browser@npm:1.8.1"
   dependencies:
-    "@amplitude/analytics-types": "npm:^0.11.0"
-    tslib: "npm:^2.3.1"
-  checksum: 10/0a7cafb66790ab67721e1231eb97d2ce11507db8b97f7c20282ba593a721652ac043294deae4240214b4bb82f57cacd88f91a635f7c1707b359fff4056df4813
+    "@amplitude/analytics-core": "npm:2.40.0"
+    tslib: "npm:^2.4.1"
+  checksum: 10/4630ef40f5a96489a7525c9d94c4666a347bdf35538c993151a12db2833fd865eda8c03a1291d14148ccf00adae5f0401fecbdb56afc5cf71b7bbae846ea93ce
   languageName: node
   linkType: hard
 
-"@amplitude/analytics-types@npm:^0.11.0":
-  version: 0.11.0
-  resolution: "@amplitude/analytics-types@npm:0.11.0"
-  checksum: 10/eb87bdfeecb75dd03f400030a9f4c65c111d3edecc902a32a1f6ff546165743d94b1cf43bd634123f716f8573564241a3053ddce5f73eb9352421484d9a4f79e
+"@amplitude/plugin-page-url-enrichment-browser@npm:0.6.1":
+  version: 0.6.1
+  resolution: "@amplitude/plugin-page-url-enrichment-browser@npm:0.6.1"
+  dependencies:
+    "@amplitude/analytics-core": "npm:2.40.0"
+    tslib: "npm:^2.4.1"
+  checksum: 10/bf01f34b6cd6d24eb6a528a431b5cba034be3cdefbe4bf718120287a0c5b84610ea587fa338c5cb48985b045c41951b7dbb21a50fd4be7ac3d00e23e6210e477
   languageName: node
   linkType: hard
 
-"@amplitude/ua-parser-js@npm:^0.7.33":
-  version: 0.7.33
-  resolution: "@amplitude/ua-parser-js@npm:0.7.33"
-  checksum: 10/54e0344746cb1fe556f008464599c72de17ebeba012c577137c2a90c9e0915a18588704c60c5ac4138cb3d89973e95132d014ff0896062c98f4e9b3547dda2fe
+"@amplitude/plugin-page-view-tracking-browser@npm:2.7.1":
+  version: 2.7.1
+  resolution: "@amplitude/plugin-page-view-tracking-browser@npm:2.7.1"
+  dependencies:
+    "@amplitude/analytics-core": "npm:2.40.0"
+    tslib: "npm:^2.4.1"
+  checksum: 10/23ef34d9712c3e1987b8818b2dce7d19a5edf7b7b1a038ccd0fdf84703fd5a0342e48a79d473946eff07695584b4bffb7ea42c9047842d0a6f1f1cd7e1dfccd0
+  languageName: node
+  linkType: hard
+
+"@amplitude/plugin-web-vitals-browser@npm:1.1.12":
+  version: 1.1.12
+  resolution: "@amplitude/plugin-web-vitals-browser@npm:1.1.12"
+  dependencies:
+    "@amplitude/analytics-core": "npm:2.40.0"
+    tslib: "npm:^2.4.1"
+    web-vitals: "npm:5.1.0"
+  checksum: 10/4c24036da580c8f9f558616edde231880da83d6e631c69b81245a4c15d892ebd88704d9398e4a7e0461e793a965290d0b353f514a9c2da17ae7b1a66c26e93f3
   languageName: node
   linkType: hard
 
@@ -11179,7 +11206,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "blockly-mooc@workspace:."
   dependencies:
-    "@amplitude/analytics-browser": "npm:^1.5.4"
+    "@amplitude/analytics-browser": "npm:^2.35.2"
     "@babel/core": "npm:^7.26.0"
     "@babel/eslint-parser": "npm:7.25.9"
     "@babel/plugin-proposal-object-rest-spread": "npm:^7.20.7"
@@ -27459,6 +27486,13 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"safe-json-stringify@npm:1.2.0":
+  version: 1.2.0
+  resolution: "safe-json-stringify@npm:1.2.0"
+  checksum: 10/7121e746faf1ac73f586210b84b71f483b5bc89a3d6271f1628b89217221c8256566a91a3a26eb82def531184addf67dc6c236cb2f7e100bf843086c1b23c1b3
+  languageName: node
+  linkType: hard
+
 "safe-regex-test@npm:^1.0.0":
   version: 1.0.0
   resolution: "safe-regex-test@npm:1.0.0"
@@ -30064,6 +30098,13 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"tslib@npm:^2.4.1":
+  version: 2.8.1
+  resolution: "tslib@npm:2.8.1"
+  checksum: 10/3e2e043d5c2316461cb54e5c7fe02c30ef6dccb3384717ca22ae5c6b5bc95232a6241df19c622d9c73b809bea33b187f6dbc73030963e29950c2141bc32a79f7
+  languageName: node
+  linkType: hard
+
 "tslib@npm:^2.6.2":
   version: 2.6.2
   resolution: "tslib@npm:2.6.2"
@@ -31343,6 +31384,13 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"web-vitals@npm:5.1.0":
+  version: 5.1.0
+  resolution: "web-vitals@npm:5.1.0"
+  checksum: 10/3b99e3e5e031257387f59f5e71f84d873b259bc09d560993fff1d0c84e0196a509712bc974666c47f51561f8bb8297ff1c1fdf18d4ebde2345a1cd06dba36021
+  languageName: node
+  linkType: hard
+
 "webidl-conversions@npm:^3.0.0":
   version: 3.0.1
   resolution: "webidl-conversions@npm:3.0.1"
@@ -32380,6 +32428,22 @@ canvg@gabelerner/canvg:
   version: 1.8.0
   resolution: "youtube-video-element@npm:1.8.0"
   checksum: 10/a3be17ce59b0fa9f7eb0da22fd7a64937e8b2885d1b8086bba1c024e3121eea90d8fd364b0259ebf40762e44ea355a91f203d946c1f7b9d34aaf4fe976d194ca
+  languageName: node
+  linkType: hard
+
+"zen-observable-ts@npm:^1.1.0":
+  version: 1.2.5
+  resolution: "zen-observable-ts@npm:1.2.5"
+  dependencies:
+    zen-observable: "npm:0.8.15"
+  checksum: 10/2384cf92a60e39e7b9735a0696f119684fee0f8bcc81d71474c92d656eca1bc3e87b484a04e97546e56bd539f8756bf97cf21a28a933ff7a94b35a8d217848eb
+  languageName: node
+  linkType: hard
+
+"zen-observable@npm:0.8.15":
+  version: 0.8.15
+  resolution: "zen-observable@npm:0.8.15"
+  checksum: 10/30eac3f4055d33f446b4cd075d3543da347c2c8e68fbc35c3f5a19fb43be67c6ed27ee136bc8f8933efa547be7ce04957809ad00ee7f1b00a964f199ae6fb514
   languageName: node
   linkType: hard
 
