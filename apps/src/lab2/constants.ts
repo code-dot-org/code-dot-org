@@ -17,6 +17,7 @@ export enum PERMISSIONS {
 export const START_SOURCES = 'start_sources';
 export const TOOLBOX_BLOCKS = 'toolbox_blocks';
 export const EDIT_EXEMPLAR = 'edit_exemplar';
+export const WIDGET2_SOURCES = 'widget2_sources';
 
 export const PROJECT_TYPES_USING_NEW_SHARE_DIALOG: ProjectType[] = [
   'music',
@@ -37,6 +38,7 @@ export enum WARNING_BANNER_MESSAGES {
   EXEMPLAR_MODE = 'You are editing exemplar sources.',
   VIEWING_EXEMPLAR = 'You are viewing an example solution.',
   VIEWING_VERSION = 'You are viewing an older version of this project. To continue working, you can either restore this version or go back to the current version.',
+  EDITING_WIDGET2 = 'You are editing a widget2.  Changes to this will affect all levels that use this widget2.',
 }
 
 // Default height of the predict question free response text area.

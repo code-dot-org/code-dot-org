@@ -10,7 +10,11 @@ import classnames from 'classnames';
 import React, {useMemo, useRef} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import {START_SOURCES, WARNING_BANNER_MESSAGES} from '@cdo/apps/lab2/constants';
+import {
+  START_SOURCES,
+  WIDGET2_SOURCES,
+  WARNING_BANNER_MESSAGES,
+} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {
   isProjectTemplateLevel,
@@ -41,6 +45,7 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
 }) => {
   const {config} = useCodebridgeContext();
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+  const isWidget2SourcesMode = getAppOptionsEditBlocks() === WIDGET2_SOURCES;
   const containerRef = useRef<HTMLDivElement>(null);
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
   const teacherViewingStudent = Boolean(
@@ -167,6 +172,13 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
                 type={'warning'}
               />
             )}
+            {isWidget2SourcesMode && (
+              <Alert
+                text={WARNING_BANNER_MESSAGES.EDITING_WIDGET2}
+                type={'warning'}
+              />
+            )}
+
             {projectTooLarge && (
               <Alert text={codebridgeI18n.projectTooLarge()} type={'danger'} />
             )}

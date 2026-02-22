@@ -6,6 +6,7 @@ import header from '@cdo/apps/code-studio/header';
 import {
   START_SOURCES,
   TOOLBOX_BLOCKS,
+  WIDGET2_SOURCES,
   WARNING_BANNER_MESSAGES,
 } from '../constants';
 import {
@@ -17,6 +18,7 @@ import {LevelProperties} from '../types';
 const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
 const isEditingExemplar = getAppOptionsEditingExemplar();
+const isWidget2Mode = getAppOptionsEditBlocks() === WIDGET2_SOURCES;
 
 export type GetUpdatedProperties<T extends LevelProperties> = (
   mode: 'start' | 'exemplar' | 'toolbox'
@@ -59,6 +61,8 @@ export default function <T extends LevelProperties>(
       ? isProjectTemplateLevel
         ? WARNING_BANNER_MESSAGES.TEMPLATE
         : WARNING_BANNER_MESSAGES.STANDARD
+      : isWidget2Mode
+      ? WARNING_BANNER_MESSAGES.EDITING_WIDGET2
       : null;
     if (text) {
       return <Alert size="s" text={text} type="warning" />;

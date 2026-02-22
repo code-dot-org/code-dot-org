@@ -147,7 +147,7 @@ class LevelsController < ApplicationController
   def level_properties
     # TODO: TEACH-1864 pass in unit_group_unit
     properties = {}
-    properties[@level.id] = @level.summarize_for_lab2_properties(nil, nil, current_user)
+    properties[@level.id] = @level.summarize_for_lab2_properties(nil, nil, current_user, params[:widget2])
     if @level.is_a?(BubbleChoice)
       @level.sublevels.each do |sublevel|
         properties[sublevel.id] = sublevel.summarize_for_lab2_properties(nil, nil, current_user)
@@ -169,6 +169,12 @@ class LevelsController < ApplicationController
     @skills = @level.skills.map {|skill| skill.attributes.deep_transform_keys {|key| key.to_s.camelize(:lower)}}
     if @level.is_a? Applab
       @dataset_library_manifest = DatablockStorageLibraryManifest.instance.library_manifest
+    end
+    if @level.is_a? Weblab2
+      directories = Dir.glob("#{Rails.root}/config/widget2/*")
+      @widget2_ids = directories.map do |directory|
+        File.basename(directory)
+      end
     end
   end
 
@@ -199,7 +205,8 @@ class LevelsController < ApplicationController
   # Action for using blockly workspace as a toolbox/startblock editor.
   # Expects params[:type] which can be either 'toolbox_blocks' or 'start_blocks'
   # Javalab also uses this route to edit starter code, and sets the type param
-  # to 'start_sources'
+  # to 'start_sources'.
+  # Widget2 also uses this route to edit widget2 starter code, with type "widget2_sources'.
   def edit_blocks
     type = params[:type]
     blocks_xml = @level.properties[type].presence || @level[type] || EMPTY_XML

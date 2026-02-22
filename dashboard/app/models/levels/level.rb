@@ -895,7 +895,7 @@ class Level < ApplicationRecord
   # These properties are usually just the serialized properties for
   # the level, which usually include levelData.  If this level is a
   # StandaloneVideo then we put its properties into levelData.
-  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
+  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, widget2_start_sources = nil, unit_group_unit: nil)
     video = specified_autoplay_video&.summarize(false)&.camelize_keys
     properties_camelized = properties.camelize_keys
     properties_camelized[:name] = name
@@ -960,6 +960,64 @@ class Level < ApplicationRecord
         end
       end
     end
+
+    # If this is a widget2 level, then startSources will come from the files in the repo, rather than
+    # that serialized into the level file.
+    widget2_id = properties["widget2"] || widget2_start_sources
+
+    if widget2_id
+      directory = "#{Rails.root}/config/widget2/#{widget2_id}".freeze
+
+      source_files_list = Dir.glob(directory + '/*')
+
+      source_files = []
+
+      source_files_list.map do |file_path|
+        file_name = File.basename(file_path)
+        file_contents = File.read(file_path)
+        file_extension = File.extname(file_path).delete('.')
+        language = case file_extension
+                   when 'html'
+                     'html'
+                   when 'css'
+                     'css'
+                   when 'js'
+                     'javascript'
+                   else
+                     'text'
+                   end
+        source_files.push({name: file_name, contents: file_contents, language: language})
+      end
+
+      files_hash = {}
+      source_files.each_with_index do |source_file, index|
+        use_index = index + 1
+        files_hash[use_index.to_s] = {
+          id: use_index.to_s, name: source_file[:name], language: source_file[:language], contents: source_file[:contents], active: use_index == 1, folderId: 0
+        }
+      end
+
+      properties_camelized[:startSources] = {
+        folders: {},
+        files: files_hash,
+        openFiles: files_hash.keys
+      }
+
+      # { "folders":{},
+      #   "files":{
+      #     "1":{
+      #       "id":"1","name":"index.html","language":"html",
+      #       "contents":"\u003c!DOCTYPE html\u003e\n\u003chtml\u003e\n  \u003cbody\u003e\n    This is my text\n  \u003c/body\u003e\n\u003c/html\u003e\n  ",
+      #       "active":true,
+      #       "folderId":"0"
+      #     }
+      #   },
+      #   "openFiles":["1"]
+      # }
+
+      properties_camelized[:widgetView] = true
+    end
+
     properties_camelized
   end
 
