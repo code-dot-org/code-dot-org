@@ -7,6 +7,7 @@
 # - has_completed_ai_differentiation_welcome
 module User::AiAccessible
   extend ActiveSupport::Concern
+  include SharedConstants
 
   AI_TUTOR_PILOT_NAME = 'ai-tutor-pilot'.freeze
 
@@ -14,17 +15,9 @@ module User::AiAccessible
   # This allows us the flexibility to do things like turn on the tutor UI
   # with a url param, or experiment with new lab types with low friction.
   def trust_chat_client?(client_type)
-    return true if client_type == SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR]
-    return true if client_type == SharedConstants::AI_CHAT_CLIENT_TYPES[:FLOW_LAB]
+    return true if client_type == AI_CHAT_CLIENT_TYPES[:AI_TUTOR]
+    return true if client_type == AI_CHAT_CLIENT_TYPES[:FLOW_LAB]
     false
-  end
-
-  # This was originally meant to be used to inform the UI of when to set Tutor to "sleeping"
-  # on a level that would otherwise show Tutor. It is currently unused while the
-  # permissions features for tutor and ai chat features in general are being shaped.
-  def has_ai_tutor_access?
-    return false if ai_tutor_access_denied || ai_tutor_feature_globally_disabled?
-    in_ai_tutor_pilot? || in_ai_tutor_enabled_section_with_pilot_teacher?
   end
 
   def can_use_ai_iteration_tools?
@@ -38,10 +31,22 @@ module User::AiAccessible
   def student_can_access_ai_chat_lab?
     teachers.any?(&:teacher_can_access_ai_chat_lab?) &&
       sections_as_student.any?(&:assigned_ai_chat?)
+
+    # TODO: Add a flag param for whether the new permissions experiment is enabled and use this logic in that case:
+    # teachers.any?(&:teacher_can_access_ai_chat_lab?) && (
+    #   ai_chat_access_level != AI_CHAT_ACCESS_LEVELS[:DISABLED]
+    # )
   end
 
   def has_aichat_lab_access?
     teacher_can_access_ai_chat_lab? || student_can_access_ai_chat_lab?
+  end
+
+  def ai_chat_access_level
+    return AI_CHAT_ACCESS_LEVELS[:ENABLED] if teacher?
+    return AI_CHAT_ACCESS_LEVELS[:ENABLED] if in_section_with_ai_chat_enabled?
+    return AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY] if in_section_with_ai_chat_essential_only?
+    return AI_CHAT_ACCESS_LEVELS[:DISABLED]
   end
 
   def ai_tutor_enabled_for_pilot?
@@ -61,6 +66,14 @@ module User::AiAccessible
   # Students: enabled if any of their teachers are in the pilot
   private def ai_tutor_enabled_for_pilot_student?
     student? && Queries::User::TeacherEnabledExperiments.call(self).include?(AI_TUTOR_PILOT_NAME)
+  end
+
+  private def in_section_with_ai_chat_access_enabled?
+    sections_as_student.any? {|s| s.ai_chat_access_level == AI_CHAT_ACCESS_LEVELS[:ENABLED]}
+  end
+
+  private def in_section_with_ai_chat_access_essential_only?
+    sections_as_student.any? {|s| s.ai_chat_access_level == AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY]}
   end
 
   private def ai_tutor_feature_globally_disabled?
