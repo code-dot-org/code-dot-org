@@ -69,10 +69,7 @@ const AiDiffLessonHook: React.FC<AiDiffLessonHookProps> = ({
               iconName={`paintbrush-pencil`}
               className={style.artifactIcon}
             />
-            <Typography
-              variant="overline1"
-              gutterBottom
-            >{`Activity`}</Typography>
+            <Typography variant="overline1">{`Activity`}</Typography>
           </div>
           <div
             className={classNames(
@@ -97,10 +94,7 @@ const AiDiffLessonHook: React.FC<AiDiffLessonHookProps> = ({
               iconName={`lightbulb-on`}
               className={style.artifactIcon}
             />
-            <Typography
-              variant="overline1"
-              gutterBottom
-            >{`Reflection`}</Typography>
+            <Typography variant="overline1">{`Reflection`}</Typography>
           </div>
           <div
             className={classNames(
