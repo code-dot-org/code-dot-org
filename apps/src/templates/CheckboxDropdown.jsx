@@ -1,5 +1,5 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
-import Typography from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useCallback} from 'react';
@@ -52,7 +52,7 @@ const CheckboxDropdown = ({
             title={i18n.filterCheckIconTitle({filter_label: label})}
           />
         )}
-        <Typography semanticTag="span" visualAppearance="body-two">
+        <Typography component="span" variant="body2">
           {label}
         </Typography>
         <FontAwesome id={'chevron-down-icon'} icon={'chevron-down'} />

@@ -1,0 +1,58 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-02-21T03:39:11.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Flex-grow\r\n\r\nThe `flex-grow` property specifies how much a flex item will grow relative to the rest of the flex items.\r\n\r\nThe last item stretches to fill the remaining space. Item 3 below has `flex-grow` set to `5` which means it will grow up to 5 times more than the other items or until the container is filled.\r\n\r\n<img src=\"https://images.code.org/0fd52bfb0eaed029b17aea3763cb66b8-image-1707149814516.png\" width=\"500px;\">\r\n\r\n# Do This\r\n\r\n**In the HTML file:**\r\n1. Give the third child item a class attribute of \"grow\"\r\n\r\n**In the CSS file:**\r\n1. Add a rule in the CSS file for the third child item using its class attribute as the selector.\r\n2. Give the third child item a `flex-grow` property with a value of 5.\r\n3. Resize the Preview Window to see the size change accordingly.\r\n\r\n<br>\r\n\r\n::: details [🔎 **Show Me How To Get Started** 🔍]\r\n\r\n<img src=\"https://images.code.org/2a31f9874fd0e4b956c438b291b4fb28-image-1708194627627.gif\" style=\"width:500px\">\r\n:::\r\n\r\n<br>\r\n\r\n::: details [**Show Me How To Resize The Preview Window**]\r\n\r\n<img src=\"https://images.code.org/3af3419482a8b0d3c7d8929e61547c21-image-1705694267212.gif\" style=\"width: 250px\">\r\n:::\r\n\r\n<br>\r\n\r\n**Don't forget to refer back to your <a href=\"https://docs.google.com/document/d/1lrkMGcPwjKo4g5uyvVfaXpFb7kRUfdtqcsqLRtaDWYM/edit?usp=sharing\">Flexbox Children Cheat Sheet</a> when needed!**\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Flexbox Children](https://studio.code.org/courses/csd-2024/guides/flex-children)\r\n- [<i class=\"fa-solid fa-book\"></i> Flexbox](https://studio.code.org/courses/csd-2024/guides/flexbox)\r\n- [<i class=\"fa-solid fa-book\"></i> Div Tags](https://studio.code.org/courses/csd-2024/guides/div)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Selectors](https://studio.code.org/courses/csd-2024/guides/html-selectors)\r\n- [<i class=\"fa-solid fa-book\"></i> Classes](https://studio.code.org/courses/csd-2024/guides/classes)\r\n- [<i class=\"fa-solid fa-book\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n\n    <!-- parent container with 3 child div tags -->\n    <div class=\"flex-grow\">\n      <div>1</div>\n      <div>2</div>\n      <div>3</div>\n    </div>\n\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* 1) Add a rule in the CSS file for the third child item using its class attribute as the selector. */\n\n/* 2) Give the third child item a flex-grow property with a value of 5. */\n\n.flex-grow {\n  /* We gave the parent div container a background color so you can see how the items are positioned within it */\n  background: #b691d6;\n  display: flex;\n  padding: 5px;\n}\n\n/* styled child divs in parent continer */\n.flex-grow > div {\n  background-color: aliceblue;\n  margin: 5px;\n  width: 20%;\n  text-align: center;\n  line-height: 55px;\n  font-size: 20px;\n  border-style: solid;\n  font-family: sans-serif;\n}\n\n/* ADD CODE BELOW to give the 3rd child div a flex-grow of 5 */",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMq6axOHbZCY2Ot6j2ta\nc2xUssWeFgyQik6LW5d9KjvGXB0WNtSc6Aew3gFAHiWxOPOkXODL1KEHdyrC\n197vfOvUyempysyXw77NCjviYRUdHKAC/uKseWjOSd/luHbWrybq68sXGHhC\n0mZ2Et2+YmBJDd+3RBBbwFcN2vVGGhmr5r8CBBwld34g+c9oBBZCv2guNjmO\n+m1FMO2wMca44/GocK8Hu7jEqFa72V+K9O7T0A4cHFPjr/3JgMJPSNOocvGf\n1m9LwM5tm9Ra0Iax7hGEqU9XF5ySWocMsVYM6mZHNMLagWpK7vpZaBOPO20o\n8o8puLQesHN70Ns/KLSwLorO2O9vPObfvu7s9Df7l0ezVCBuG1lEnU/vsojI\nIJZuPB+oej34sh0R2mpWERjppX0Kh0sdfP9sV0fPHvvUS3gP682DYfeV+063\nGC3Gw9PEEOSAKhkDFnmB2To2DOHO4rcKyMPFJ6zqbRqPmu21+OOCaebOkOMA\n4fQIbXN6TjA2hlEOp8KQC7LPfEm5ft7QrP6GNMURiHohbVGL1lIJK6oGJu6d\n9O0QY7Wg+nrFyG945pybUsa2kuYLq50DnFf6v/k1Za1Zt5fzi7pWx/fs/MO7\nYHskaDrUEkSJvQeUmYpjkyB7KXfA4mDzHsEU5nZXqd63r7FHsoY9Ws+7ufqz\ncejAm6RRoDgjjGTSdUxXZucSUgnppIMmTM3thST5claenobt4k2qlki1WpVm\nHKGI793r7S134ZovOXwt4a8AqW23z0v3GF+yrlNRV5pE5HqwmcSnmXOSQ9GH\npl0RRXmK5YpFsVId11jkQ3xMH3+6LfLjdh8R0a6VlZUxr9P2EDj3XjNrLS69\n9+lMRCLqn8Yr8BT/GSLcXShRZYIEPKMm7V3W8GMRaVjLzaVeKRnwqSbHgyOk\nCVqWZPyf+sx7DZZmrp2Yq1KiO1sQ2ytv3mVhM8yMFMI0UEBxfKP5uLvXFYxA\nT6dj2Tm1S4+WZDumXm9aOIXG8rlU9FMX+NOXa+LKxrORnKcOZxh+AVACf620\nBNcnOV+H+RpAgDYo0gj6MNsL2g6NEqE8svY5Dek3m37y0ayNncsuvrzapGDD\n8FTh/zbxcmFrep7APDMeEjCDN8dA5zJbx4Uiq4kVi0f251OgGLGNhw1tk3Ih\naVwhuYQGm+bQkcqLnZA1YhfdrShajMQcmuEkbF3I2UKtudjm8it6LfZxAFqU\nPuFl8sjPDEzQ1qk2UBb00keGd+IBhCwNtejs6EwJkRzJ61s1t5CtUhfOyEq3\nUgHWeOfIojFRmUZSv2jL2h3r2AzHx/+ZNs0lP7xpE8TOhqG1BTx+HAIZHtp3\ntV5huFI/bJF2FBBRlGJTaSTGjwDLAoUlMjsPDfHXlr0ZUEWCnCdm83F6Y3mg\naJVw/95FCdrtqERVtfT7tbd/mv4jjR1NqbbAflkUxZ28542kvDekloA/3QmR\njN2HFO3enzTgdVjYOqUgTlLzr6nbo7hzJ8d2UkYd9vzBr+o/JK8WWvJVjRVo\ne1J6kkydvhcUmQgssLM8tr4Ztt2D52HTLXgePUuR05Trs0K6ti0eRPqi5UwI\nijzD1VDjDkfuIo2MVNZrYdmfvaiedEhVn/z6DaSGo0fRXiNkNumM3v2Syxpa\nvyTsoA==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-21 03:39:26 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-21 03:39:40 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

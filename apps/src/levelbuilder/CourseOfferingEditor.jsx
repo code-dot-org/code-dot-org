@@ -26,7 +26,7 @@ import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import {StudentGradeLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import DatePicker from '../code-studio/pd/workshop_dashboard/components/date_picker';
+import DatePicker from '../sharedComponents/DatePicker';
 
 import ImageInput from './ImageInput';
 
