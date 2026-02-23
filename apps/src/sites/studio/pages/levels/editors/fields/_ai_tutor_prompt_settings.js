@@ -6,10 +6,11 @@ import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(function () {
-  const initialSettings = getScriptData('aitutorpromptsettings');
+  const answerTypes = getScriptData('answertypes');
+  console.log({answerTypes});
 
   createReactRoot(
-    <EditAiTutorPromptSettings initialSettings={initialSettings} />,
+    <EditAiTutorPromptSettings answerTypes={answerTypes} />,
     document.getElementById('ai-tutor-prompt-settings-editor')
   );
 });
