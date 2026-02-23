@@ -1,4 +1,3 @@
-@use 'sass:math';
 @use 'color.scss';
 
 $border-radius: 30px;
@@ -59,7 +58,6 @@ $min-viz-height: 280px;
   max-height: calc(100vh - $chrome-above-frame);
   overflow-x: hidden;
   overflow-y: auto;
-  overflow-anchor: none;
 }
 
 .topButtons {
@@ -79,7 +77,6 @@ $min-viz-height: 280px;
     :global(button.blocklyLaunch) {
       min-width: 0;
       padding: 0 4px;
-      font-size: 14px;
 
       img {
         transform: scale(0.6);
