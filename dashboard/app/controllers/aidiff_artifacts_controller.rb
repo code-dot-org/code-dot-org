@@ -18,6 +18,7 @@ class AidiffArtifactsController <ApplicationController
     lesson_id = params[:lessonId].to_i
 
     @artifact = AidiffArtifact.create(
+      title: params[:title],
       type: message.artifact_candidate_type,
       aidiff_thread: message.aidiff_thread,
       content: JSON::Validator.parse(message.content),
