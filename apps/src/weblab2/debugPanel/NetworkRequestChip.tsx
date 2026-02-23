@@ -4,7 +4,7 @@ import React, {ChangeEvent, useEffect, useMemo, useRef} from 'react';
 
 import {NetworkEntry} from '@cdo/apps/weblab2/redux/networkRedux';
 
-import parentStyles from './debug-panel.module.scss';
+import parentStyles from './network-panel.module.scss';
 import moduleStyles from './network-request-chip.module.scss';
 
 interface NetworkRequestChipProps {
