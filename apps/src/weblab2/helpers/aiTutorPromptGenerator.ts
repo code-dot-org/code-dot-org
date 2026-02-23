@@ -1,3 +1,4 @@
+import {AiTutorMode} from '@cdo/apps/lab2/levelEditors/types';
 import basePrompt from '@cdo/apps/weblab2/prompts/basePrompt.md';
 import askContract from '@cdo/apps/weblab2/prompts/modeContracts/ask.md';
 import buildCSSContract from '@cdo/apps/weblab2/prompts/modeContracts/buildCSS.md';
@@ -26,21 +27,6 @@ import refusalTrigger from '@cdo/apps/weblab2/prompts/modeTriggers/refusal.md';
 import refusalJavaScriptSnippetsTrigger from '@cdo/apps/weblab2/prompts/modeTriggers/refusalJavaScriptSnippets.md';
 import testCaseTrigger from '@cdo/apps/weblab2/prompts/modeTriggers/testCase.md';
 import preReplyCheck from '@cdo/apps/weblab2/prompts/preReplyCheck.md';
-
-export type AiTutorMode =
-  | 'ask'
-  | 'buildCSS'
-  | 'buildHTML'
-  | 'buildJavaScript'
-  | 'debug'
-  | 'documentation'
-  | 'example'
-  | 'explainCode'
-  | 'hint'
-  | 'pseudocode'
-  | 'refusal'
-  | 'refusalJavaScriptSnippets'
-  | 'testCase';
 
 const MODE_TRIGGERS: Record<AiTutorMode, string> = {
   ask: askTrigger,

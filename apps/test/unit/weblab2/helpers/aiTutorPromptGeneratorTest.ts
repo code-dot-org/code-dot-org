@@ -1,7 +1,5 @@
-import {
-  AiTutorMode,
-  generateAiTutorPrompt,
-} from '@cdo/apps/weblab2/helpers/aiTutorPromptGenerator';
+import {AiTutorMode} from '@cdo/apps/lab2/levelEditors/types';
+import {generateAiTutorPrompt} from '@cdo/apps/weblab2/helpers/aiTutorPromptGenerator';
 import basePrompt from '@cdo/apps/weblab2/prompts/basePrompt.md';
 import askContract from '@cdo/apps/weblab2/prompts/modeContracts/ask.md';
 import buildCSSContract from '@cdo/apps/weblab2/prompts/modeContracts/buildCSS.md';
