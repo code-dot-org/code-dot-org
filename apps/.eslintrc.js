@@ -190,6 +190,11 @@ module.exports = {
             name: 'sinon-chai',
             message: 'Use jest matchers instead of chai',
           },
+          {
+            name: '@code-dot-org/component-library/typography',
+            message:
+              'DSCO Typography is deprecated. Use MUI Typography from @mui/material instead. Run: npx jscodeshift -t ./tools/codemod/typography-to-mui.js "src" --parser=tsx --extensions=tsx,ts,jsx,js',
+          },
         ],
         patterns: [
           {
