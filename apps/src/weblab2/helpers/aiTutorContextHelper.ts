@@ -1,6 +1,7 @@
 import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
 import {AiTutorContext} from '@cdo/apps/aiTutor/types';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
+import {getFileExtension} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 
 interface AiTutorWebLab2Params {
   source: MultiFileSource | undefined;
@@ -28,7 +29,9 @@ export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWeb
             file =>
               file.type !== ProjectFileType.VALIDATION &&
               file.type !== ProjectFileType.SYSTEM_SUPPORT &&
-              !LANGUAGES_TO_EXCLUDE_FROM_CONTEXT.includes(file.language)
+              !LANGUAGES_TO_EXCLUDE_FROM_CONTEXT.includes(
+                getFileExtension(file.name)
+              )
           )
           .map(
             file => `filename: ${file.name}\n${this.codeBlock(file.contents)}`
