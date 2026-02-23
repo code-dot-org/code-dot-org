@@ -57,10 +57,8 @@ export const useAiTutorModelParameters = (
   const [systemPrompt, setSystemPrompt] = useState<string | undefined>();
 
   useEffect(() => {
-    if (options?.aiTutorSystemPrompt) {
-      setSystemPrompt(options.aiTutorSystemPrompt);
-      return;
-    }
+    const promptString =
+      options?.aiTutorSystemPromptName ?? defaultSystemPrompt;
 
     let mounted = true;
 
@@ -68,26 +66,26 @@ export const useAiTutorModelParameters = (
 
     const fetchPrompt = async () => {
       if (!promptName) {
-        setSystemPrompt(defaultSystemPrompt);
+        setSystemPrompt(promptString);
         return;
       }
 
       try {
         const prompt = await fetchCustomPrompt(promptName);
         if (mounted) {
-          setSystemPrompt(prompt || defaultSystemPrompt);
+          setSystemPrompt(prompt || promptString);
         }
       } catch (error) {
         console.error('Error fetching custom prompt', error);
         if (mounted) {
-          setSystemPrompt(defaultSystemPrompt);
+          setSystemPrompt(promptString);
         }
       }
     };
 
     const fetchLangfusePromptAndSet = async () => {
       if (!promptName) {
-        setSystemPrompt(defaultSystemPrompt);
+        setSystemPrompt(promptString);
         return;
       }
 
@@ -99,7 +97,7 @@ export const useAiTutorModelParameters = (
       } catch (error) {
         console.error('Error fetching Langfuse prompt:', error);
         if (mounted) {
-          setSystemPrompt(defaultSystemPrompt);
+          setSystemPrompt(promptString);
         }
       }
     };
