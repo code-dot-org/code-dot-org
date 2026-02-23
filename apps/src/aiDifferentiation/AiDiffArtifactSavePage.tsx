@@ -42,10 +42,15 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
   const [lessonInfo, setLessonInfo] = useState<LessonList>({});
   const [unitLessons, setUnitLessons] = useState<LessonInfo[]>([]);
   const [toggleValue, setToggleValue] = useState<boolean>(true);
+  const [artifactTitle, setArtifactTitle] = useState<string>('');
 
   const sections: TeacherSectionState = useAppSelector(state => {
     return state.teacherSections || {};
   });
+
+  const artifactTitleIsEmpty = useMemo(() => {
+    return artifactTitle.trim() === '';
+  }, [artifactTitle]);
 
   const activeStudentSections = sections.sectionIds
     .map(sectionId => sections.sections[sectionId])
@@ -94,6 +99,7 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
 
   const onSubmit = () => {
     const info = JSON.stringify({
+      title: artifactTitle,
       messageId: message.id,
       sectionIds: Object.keys(selectedSectionIds).filter(
         // Need to filter out the checkboxes that have been selected and then
@@ -169,6 +175,18 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
 
   return (
     <div className={style.artifactConfiguration}>
+      <div className={style.artifactConfigurationTitleSection}>
+        <h3>Title:</h3>
+        <input
+          id="uitest-artifact-titleinput"
+          className={style.artifactTitleInput}
+          maxLength={128}
+          placeholder={'Give this artifact a name...'}
+          aria-label={'Give this artifact a name'}
+          onChange={e => setArtifactTitle(e.target.value)}
+          type="text"
+        />
+      </div>
       <div className={style.artifactConfigurationSection}>
         <h3>Which class sections do you want to save this artifact for?</h3>
         <h4>
@@ -251,7 +269,8 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
             Object.values(selectedSectionIds).filter(value => value === true)
               .length === 0 ||
             !selectedUnitId ||
-            !selectedLessonId
+            !selectedLessonId ||
+            artifactTitleIsEmpty
           }
         />
       </div>
