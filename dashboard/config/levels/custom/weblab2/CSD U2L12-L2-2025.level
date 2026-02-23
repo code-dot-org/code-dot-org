@@ -1,0 +1,123 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-02-21T01:07:50.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Display, Direction and Wrap\r\n\r\nThe first three steps we typically follow when applying Flex properties are: 1) establish the layout, 2) define the flow direction and if items should wrap, and 3) define how the items should be distributed. Let's try out the **first two steps**:  **1) establish flex layout** and **2) define the direction and wrap**.\r\n\r\n# Do This\r\n\r\n1. Add a `div` container around the image tags.\r\n2. Add the class name `.container` to the `div` tag.\r\n3. Add the following Flex properties to the container:\r\n   - Establish flex layout with `display: flex;`\r\n   - Define the flow direction with `flex-direction: row;`. \r\n    - Define if items should wrap with `flex-wrap: wrap;`.\r\n4. Change the size of your Preview window to see the wrapping effects (see gif below).\r\n5. Change the values for the `flex-direction` property to see what each one does: \r\n   - Value options include:\r\n      - `row`\r\n      - `row-reverse`\r\n      - `column`\r\n      - `column-reverse`\r\n6. Change the values for the `flex-wrap` property to see what each one does: \r\n   - Value options include:\r\n      - `wrap`\r\n      - `nowrap`\r\n      - `wrap-reverse`\r\n\r\n<br>\r\n\r\n::: details [🔎 **Show Me How To Complete This Level** 🔍]\r\n![](https://images.code.org/87b99e15299d4c3e3433c3303022582c-image-1771636399884.gif)\r\n:::\r\n\r\n<br>\r\n\r\n::: details [**Show Me How To Resize The Preview Window**]\r\n\r\n![](https://images.code.org/a6263f23f215b8387ee600b707aab150-image-1771636757562.gif)\r\n\r\n:::\r\n\r\n<br>\r\n\r\n**Don't forget to refer back to your <a href=\"https://docs.google.com/document/d/1f5t7oUfV-5PRtcKrJVskrb_Mt_r8941VT-Qa-07mP9o/edit?usp=sharing\">Flexbox Cheat Sheet</a> when needed!**\r\n\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Div Tags](https://studio.code.org/courses/csd-2024/guides/div)\r\n- [<i class=\"fa-solid fa-book\"></i> Flexbox](https://studio.code.org/courses/csd-2024/guides/flexbox)\r\n- [<i class=\"fa-solid fa-book\"></i> Classes](https://studio.code.org/courses/csd-2024/guides/classes)\r\n- [<i class=\"fa-solid fa-book\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    \n    <!-- ADD A DIV container with a class attribute around the 6 images -->\n \n      <img src=\"one.jpg\" alt=\"one\">\n      <img src=\"two.jpg\" alt=\"two\">\n      <img src=\"three.jpg\" alt=\"three\">\n      <img src=\"four.jpg\" alt=\"four\">\n      <img src=\"five.jpg\" alt=\"five\">\n      <img src=\"six.jpg\" alt=\"six\">\n\n    \n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": ".container {\n  /* We gave the div container a background color so you can see how the items are positioned within it */\n  background: #b691d6;\n  \n  /* First, create a flex layout context */\n\n\n\n  /* Then, define the flow direction \n  and if the items should wrap */\n\n \n}\n\n\nimg {\n  border-style: solid;\n  width: 100px;\n}",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "four.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L2-2025/uuid/5a6c5fd9-ec73-4857-93a2-653a5d3f56b1.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "three.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L2-2025/uuid/163d4056-e04d-4452-91ae-466350cebed9.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "five.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L2-2025/uuid/fbe92d78-c4f7-4007-9a42-4eb253635664.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "two.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L2-2025/uuid/ca6ff1ad-fd53-4578-89aa-5f168d9316f7.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "six.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L2-2025/uuid/df8396fd-f3c8-4dd6-9e9f-778b6bda27f5.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "one.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L2-2025/uuid/5a3feac7-5453-4d5a-a4b3-2f7e29d57e9d.jpg",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-02-21 01:08:08 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-21 01:13:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-21 01:14:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-21 01:20:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-21 01:22:36 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>
