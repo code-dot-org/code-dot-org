@@ -3,8 +3,8 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Typography} from '@mui/material';
 import React, {useMemo} from 'react';
 
-import parentStyles from './debug-panel.module.scss';
 import moduleStyles from './details-box.module.scss';
+import parentStyles from './network-panel.module.scss';
 
 interface DetailsField {
   label: string;
