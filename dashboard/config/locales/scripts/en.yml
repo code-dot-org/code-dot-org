@@ -25330,14 +25330,14 @@ en:
 
             #### Here, you will prepare to teach event-driven programming, explaining how user interactions drive algorithms and conditional logic in interactive apps.
 
-            #### **Suggested Time: 60 minutes**
+            #### **Suggested Time: 75 minutes**
           student_description: |-
             ## Welcome!
             #### This professional learning module prepares you to teach **Unit 2: AI and Algorithmic Decisions.**  In this unit,  students bring their web apps to life with JavaScript, using AI as a debugging partner and coding coach.
 
             #### Here, you will prepare to teach event-driven programming, explaining how user interactions drive algorithms and conditional logic in interactive apps.
 
-            #### **Suggested Time: 60 minutes**
+            #### **Suggested Time: 75 minutes**
         aif1-v2-2025:
           lesson_groups:
             lessonGroup-3:
@@ -25671,6 +25671,10 @@ en:
           lessons:
             lesson-1:
               name: Web Lab 2 Test - October 2025
+            lesson-2:
+              name: Network Panel Test
+            lesson-3:
+              name: Diffs Test
           lesson_groups: {}
           name: dani-test
           title: Dani Test

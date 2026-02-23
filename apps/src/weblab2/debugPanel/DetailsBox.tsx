@@ -1,16 +1,12 @@
 import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  BodyThreeText,
-  OverlineThreeText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useMemo} from 'react';
 
 import CopyButton from './CopyButton';
 
-import parentStyles from './debug-panel.module.scss';
 import moduleStyles from './details-box.module.scss';
+import parentStyles from './network-panel.module.scss';
 
 export interface DetailsField {
   label: string;
@@ -55,9 +51,9 @@ const DetailsBox: React.FunctionComponent<DetailsBoxProps> = ({
   return (
     <div className={moduleStyles.detailsBox}>
       <div className={moduleStyles.detailsHeader}>
-        <BodyThreeText className={moduleStyles.detailsHeaderText}>
-          <StrongText>{title}</StrongText>
-        </BodyThreeText>
+        <Typography className={moduleStyles.detailsHeaderText} variant="body3">
+          <Typography variant="strong">{title}</Typography>
+        </Typography>
         <FontAwesomeV6Icon
           iconName={iconName}
           className={iconClassName}
@@ -81,9 +77,12 @@ const DetailsBox: React.FunctionComponent<DetailsBoxProps> = ({
                 )}
               </div>
               <pre className={moduleStyles.detailsFieldValueContainer}>
-                <BodyThreeText className={moduleStyles.detailsFieldValue}>
+                <Typography
+                  className={moduleStyles.detailsFieldValue}
+                  variant="body3"
+                >
                   {field.value}
-                </BodyThreeText>
+                </Typography>
               </pre>
             </div>
           ));
