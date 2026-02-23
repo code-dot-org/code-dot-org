@@ -3,6 +3,7 @@ import {getFolderPath} from '@codebridge/utils';
 import {useEffect, useMemo, useState} from 'react';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {getFileExtension} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 
 import {ProjectServiceWorkerMessageType} from './constants';
 import {generateContentSecurityPolicyForPreview} from './contentSecurityPolicyHelper';
@@ -88,12 +89,12 @@ function useProjectServiceWorker(
         let mimeType = 'text/plain';
         let url = undefined;
 
-        // Determine MIME type based on file extension or language
+        const fileExt = getFileExtension(file.name);
         if (file.url) {
           // Right now only images are handled via URL
           url = file.url;
-          mimeType = `image/${file.name.split('.').pop()?.toLowerCase()}`;
-        } else if (file.language === 'html') {
+          mimeType = `image/${fileExt}`;
+        } else if (fileExt === 'html') {
           mimeType = 'text/html';
           // Process HTML files to add base tag
           const parser = new DOMParser();
@@ -103,9 +104,9 @@ function useProjectServiceWorker(
           addConsoleOverrideToDocument(doc);
           addCSPViolationListenerToDocument(doc);
           content = doc.documentElement.outerHTML;
-        } else if (file.language === 'css') {
+        } else if (fileExt === 'css') {
           mimeType = 'text/css';
-        } else if (file.language === 'js') {
+        } else if (fileExt === 'js') {
           mimeType = 'application/javascript';
         }
 
