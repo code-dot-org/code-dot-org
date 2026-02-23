@@ -58,7 +58,6 @@ class Services::Clever::V3AuthOptionBuilderTest < ActiveSupport::TestCase
         _(result).must_be_nil
       end
     end
-<<<<<<< HEAD
 
     context 'when v3 auth option already exists' do
       let(:user) {create(:student, :with_clever_authentication_option)}
@@ -79,7 +78,5 @@ class Services::Clever::V3AuthOptionBuilderTest < ActiveSupport::TestCase
         _(result).must_be_nil
       end
     end
-=======
->>>>>>> f857e6ed65a (Service for migrating Clever v2 -> v3.1 auth)
   end
 end
