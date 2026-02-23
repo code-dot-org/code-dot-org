@@ -49,19 +49,11 @@ function LessonFeedback({
     <div className={styles.lessonFeedbackContainer}>
       <div className={styles.lessonFeedbackHeader}>
         <div className={styles.lessonFeedbackContent}>
-          <Typography
-            className={styles.lessonFeedbackHeading}
-            variant="h5"
-            gutterBottom
-          >
+          <Typography className={styles.lessonFeedbackHeading} variant="h5">
             {lessonTitle}
           </Typography>
 
-          <Typography
-            className={styles.lessonFeedbackDetails}
-            variant="body4"
-            gutterBottom
-          >
+          <Typography className={styles.lessonFeedbackDetails} variant="body4">
             Sent by {teacherName || 'Your teacher'} on {formattedDate}
           </Typography>
         </div>

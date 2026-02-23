@@ -19,14 +19,10 @@ const EmptyPanelPlaceholder: React.FunctionComponent<
         <div className={moduleStyles.iconCircle}>
           <FontAwesomeV6Icon iconName={iconName} />
         </div>
-        <Typography className={moduleStyles.title} variant="body2" gutterBottom>
+        <Typography className={moduleStyles.title} variant="body2">
           <Typography variant="strong">{title}</Typography>
         </Typography>
-        <Typography
-          className={moduleStyles.description}
-          variant="body4"
-          gutterBottom
-        >
+        <Typography className={moduleStyles.description} variant="body4">
           {description}
         </Typography>
       </div>

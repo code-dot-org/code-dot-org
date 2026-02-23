@@ -60,9 +60,7 @@ const AiDiffExitTicket: React.FC<AiDiffExitTicketProps> = ({
             iconName={iconName}
             className={style.artifactIcon}
           />
-          <Typography variant="overline1" gutterBottom>
-            {label}
-          </Typography>
+          <Typography variant="overline1">{label}</Typography>
         </div>
         <div
           className={classNames(
@@ -88,7 +86,7 @@ const AiDiffExitTicket: React.FC<AiDiffExitTicketProps> = ({
         <Typography variant="h1" gutterBottom>
           {title}
         </Typography>
-        <Typography variant="overline1" gutterBottom>
+        <Typography variant="overline1">
           {updated.toLocaleDateString(undefined, {
             month: 'long',
             day: 'numeric',

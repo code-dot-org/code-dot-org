@@ -211,19 +211,15 @@ const MultipleSectionsAssigner = ({
         className={moduleStyle.information}
       >
         <div className={moduleStyle.modalHeader}>
-          <Typography variant="h3" gutterBottom>
+          <Typography variant="h3">
             {i18n.chooseSectionsPrompt({assignmentName})}
           </Typography>
         </div>
         <div className={moduleStyle.sectionsDirections}>
-          <Typography variant="body2" gutterBottom>
-            {sectionDirections}
-          </Typography>
+          <Typography variant="body2">{sectionDirections}</Typography>
         </div>
         <div className={moduleStyle.sectionList}>
-          <Typography variant="h5" gutterBottom>
-            {i18n.yourSectionsList()}
-          </Typography>
+          <Typography variant="h5">{i18n.yourSectionsList()}</Typography>
           <div className={moduleStyle.sectionListOptionsContainer}>
             {sections &&
               sections.map(

@@ -29,11 +29,7 @@ export default function SchoolZipSearch({fieldNames, schoolZip, setSchoolZip}) {
           value={schoolZip}
         />
         {schoolZip && !schoolZipIsValid && (
-          <Typography
-            className={style.errorMessage}
-            variant="body3"
-            gutterBottom
-          >
+          <Typography className={style.errorMessage} variant="body3">
             {i18n.zipInvalidMessage()}
           </Typography>
         )}

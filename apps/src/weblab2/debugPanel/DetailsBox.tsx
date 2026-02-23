@@ -48,11 +48,7 @@ const DetailsBox: React.FunctionComponent<DetailsBoxProps> = ({
   return (
     <div className={moduleStyles.detailsBox}>
       <div className={moduleStyles.detailsHeader}>
-        <Typography
-          className={moduleStyles.detailsHeaderText}
-          variant="body3"
-          gutterBottom
-        >
+        <Typography className={moduleStyles.detailsHeaderText} variant="body3">
           <Typography variant="strong">{title}</Typography>
         </Typography>
         <FontAwesomeV6Icon
@@ -69,7 +65,6 @@ const DetailsBox: React.FunctionComponent<DetailsBoxProps> = ({
               <Typography
                 className={moduleStyles.detailsFieldLabel}
                 variant="overline3"
-                gutterBottom
               >
                 {field.label}
               </Typography>
@@ -77,7 +72,6 @@ const DetailsBox: React.FunctionComponent<DetailsBoxProps> = ({
                 <Typography
                   className={moduleStyles.detailsFieldValue}
                   variant="body3"
-                  gutterBottom
                 >
                   {field.value}
                 </Typography>

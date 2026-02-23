@@ -23,10 +23,8 @@ const AiDiffLessonHook: React.FC<AiDiffLessonHookProps> = ({
   return (
     <div className={style.artifactContainer}>
       <div className={style.artifactHeader}>
-        <Typography variant="h1" gutterBottom>
-          {title}
-        </Typography>
-        <Typography variant="overline1" gutterBottom>
+        <Typography variant="h1">{title}</Typography>
+        <Typography variant="overline1">
           {updated.toLocaleDateString(undefined, {
             month: 'long',
             day: 'numeric',
@@ -46,10 +44,7 @@ const AiDiffLessonHook: React.FC<AiDiffLessonHookProps> = ({
               iconName={`thought-bubble`}
               className={style.artifactIcon}
             />
-            <Typography
-              variant="overline1"
-              gutterBottom
-            >{`Introduction`}</Typography>
+            <Typography variant="overline1">{`Introduction`}</Typography>
           </div>
           <div
             className={classNames(
@@ -57,7 +52,7 @@ const AiDiffLessonHook: React.FC<AiDiffLessonHookProps> = ({
               style.artifactContentBlue
             )}
           >
-            <Typography component="div" variant="body2" gutterBottom>
+            <Typography component="div" variant="body2">
               <SafeMarkdown unwrapped markdown={content.introduction} />
             </Typography>
           </div>

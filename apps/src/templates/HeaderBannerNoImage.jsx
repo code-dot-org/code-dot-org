@@ -33,9 +33,7 @@ export default class HeaderBannerNoImage extends React.Component {
     return (
       <section style={backgroundStyling} className={style.banner}>
         <div className={style.wrapper}>
-          <Typography variant="h1" gutterBottom>
-            {headingText}
-          </Typography>
+          <Typography variant="h1">{headingText}</Typography>
           {subHeadingText && (
             <Typography variant="body1" gutterBottom>
               {subHeadingText}

@@ -42,18 +42,12 @@ export default class HeaderBanner extends React.Component {
       <div style={backgroundImageStyle} className={style.banner}>
         <div className={style.contentWrapper}>
           <div className={style.textWrapper}>
-            <Typography variant="h1" gutterBottom>
-              {headingText}
-            </Typography>
+            <Typography variant="h1">{headingText}</Typography>
             {subHeadingText && (
-              <Typography variant="body1" gutterBottom>
-                {subHeadingText}
-              </Typography>
+              <Typography variant="body1">{subHeadingText}</Typography>
             )}
             {description && (
-              <Typography variant="body1" gutterBottom>
-                {description}
-              </Typography>
+              <Typography variant="body1">{description}</Typography>
             )}
             {children}
           </div>
