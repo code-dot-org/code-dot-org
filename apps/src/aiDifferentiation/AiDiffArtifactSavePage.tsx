@@ -51,10 +51,15 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
   const [lessonInfo, setLessonInfo] = useState<LessonList>({});
   const [unitLessons, setUnitLessons] = useState<LessonInfo[]>([]);
   const [toggleValue, setToggleValue] = useState<boolean>(true);
+  const [artifactTitle, setArtifactTitle] = useState<string>('');
 
   const sections: TeacherSectionState = useAppSelector(state => {
     return state.teacherSections || {};
   });
+
+  const artifactTitleIsEmpty = useMemo(() => {
+    return artifactTitle.trim() === '';
+  }, [artifactTitle]);
 
   const activeStudentSections = sections.sectionIds
     .map(sectionId => sections.sections[sectionId])
@@ -103,6 +108,7 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
 
   const onSubmit = () => {
     const info = JSON.stringify({
+      title: artifactTitle,
       messageId: message.id,
       sectionIds: Object.keys(selectedSectionIds).filter(
         // Need to filter out the checkboxes that have been selected and then
@@ -193,8 +199,20 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
     setToggleValue(oldValue => !oldValue);
   };
 
-  return (
+  return activeStudentSections.length && unitMenuList.length ? (
     <div className={style.artifactConfiguration}>
+      <div className={style.artifactConfigurationTitleSection}>
+        <h3>Title:</h3>
+        <input
+          id="uitest-artifact-titleinput"
+          className={style.artifactTitleInput}
+          maxLength={128}
+          placeholder={'Give this artifact a name...'}
+          aria-label={'Give this artifact a name'}
+          onChange={e => setArtifactTitle(e.target.value)}
+          type="text"
+        />
+      </div>
       <div className={style.artifactConfigurationSection}>
         <h3>Which class sections do you want to save this artifact for?</h3>
         <h4>
@@ -277,8 +295,27 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
             Object.values(selectedSectionIds).filter(value => value === true)
               .length === 0 ||
             !selectedUnitId ||
-            !selectedLessonId
+            !selectedLessonId ||
+            artifactTitleIsEmpty
           }
+        />
+      </div>
+    </div>
+  ) : (
+    <div className={style.artifactConfiguration}>
+      <div className={style.artifactConfigurationSection}>
+        You are required to have at least one active section with curriculum
+        assigned in order to create an artifact. Please create a section from
+        your <a href="/teacher_dashboard/home">dashboard</a> and then try to
+        create this artifact again.
+      </div>
+      <div className={style.artifactConfigurationSaveButtons}>
+        <Button
+          size="m"
+          type="secondary"
+          color="black"
+          onClick={() => dispatch(clearPendingArtifactMessage())}
+          text="Cancel"
         />
       </div>
     </div>

@@ -10,13 +10,13 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "# async / await\n\n**`async`** is a keyword that tells a function to handle asynchronous operations, like requesting a list of book titles.\n\n**`await`** is a keyword used inside an async function that tells the program to wait for a Promise to resolve before moving to the next line.\n\n```\nasync function fetchBooks() {\n    const response = await fetch('/books');\n    return await response.json();\n}\n```",
+        "text": "# async / await\n\n**`async`** is a keyword that tells a function to handle asynchronous operations, like requesting a list of book titles.\n\n**`await`** is a keyword used inside an async function that tells the program to wait for a Promise to resolve before moving to the next line.\n\n```\nconst fetchBooks = async () => {\n    const response = await fetch('/books');\n    return await response.json();\n};\n```",
         "imageUrl": "https://images.code.org/f160578af173c9011d72473095dd701f-books.jpg",
         "key": "designing-reliable-apps-lesson2-level1-test_2025-pilot-e834eace-42c5-4df8-990e-d9987f293a0f",
         "layout": "text-top-left"
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2026-02-03T19:55:47.640+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson1-vocab1-2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson1-vocab1-2025-pilot\"},{\"changed_at\":\"2026-02-03 19:59:12 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-03 20:13:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-18 18:18:10 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-03T19:55:47.640+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson1-vocab1-2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson1-vocab1-2025-pilot\"},{\"changed_at\":\"2026-02-03 19:59:12 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-03 20:13:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-18 18:18:10 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-02-19 21:01:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

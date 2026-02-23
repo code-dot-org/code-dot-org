@@ -16,8 +16,8 @@ import Select from 'react-select/lib/Select';
 import ReactTooltip from 'react-tooltip';
 
 import FontAwesome from '../../../../../legacySharedComponents/FontAwesome.jsx';
+import DatePicker from '../../../../../sharedComponents/DatePicker.jsx';
 import {SelectStyleProps} from '../../../constants.js';
-import DatePicker from '../../components/date_picker.jsx';
 
 export default class SubmissionsDownloadForm extends React.Component {
   static propTypes = {
