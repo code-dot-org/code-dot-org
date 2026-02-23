@@ -28,18 +28,18 @@ module User::AiAccessible
     teacher? && (verified_instructor? || oauth? || Policies::Lti.lti?(self))
   end
 
-  def student_can_access_ai_chat_lab?
-    teachers.any?(&:teacher_can_access_ai_chat_lab?) &&
-      sections_as_student.any?(&:assigned_ai_chat?)
-
-    # TODO: Add a flag param for whether the new permissions experiment is enabled and use this logic in that case:
-    # teachers.any?(&:teacher_can_access_ai_chat_lab?) && (
-    #   ai_chat_access_level != AI_CHAT_ACCESS_LEVELS[:DISABLED]
-    # )
+  def student_can_access_ai_chat_lab?(new_permissions_enabled: false)
+    if new_permissions_enabled
+      teachers.any?(&:teacher_can_access_ai_chat_lab?) &&
+        ai_chat_access_level != AI_CHAT_ACCESS_LEVELS[:DISABLED]
+    else
+      teachers.any?(&:teacher_can_access_ai_chat_lab?) &&
+        sections_as_student.any?(&:assigned_ai_chat?)
+    end
   end
 
-  def has_aichat_lab_access?
-    teacher_can_access_ai_chat_lab? || student_can_access_ai_chat_lab?
+  def has_aichat_lab_access?(new_permissions_enabled: false)
+    teacher_can_access_ai_chat_lab? || student_can_access_ai_chat_lab?(new_permissions_enabled: new_permissions_enabled)
   end
 
   def ai_chat_access_level

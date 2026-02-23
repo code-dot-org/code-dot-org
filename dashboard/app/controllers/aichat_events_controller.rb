@@ -1,3 +1,5 @@
+require_relative '../../../shared/middleware/helpers/experiments'
+
 class AichatEventsController < ApplicationController
   authorize_resource class: false
 
@@ -126,7 +128,8 @@ class AichatEventsController < ApplicationController
   end
 
   private def can_log_aichat_events?(client_type)
-    current_user.has_aichat_lab_access? || current_user.trust_chat_client?(client_type)
+    ai_chat_new_permissions = experiment_value('ai-chat-new-permissions', request).present?
+    current_user.has_aichat_lab_access?(new_permissions_enabled: ai_chat_new_permissions) || current_user.trust_chat_client?(client_type)
   end
 
   private def can_view_chat_history?(user_id)
