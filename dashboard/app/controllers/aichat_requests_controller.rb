@@ -35,7 +35,7 @@ class AichatRequestsController < ApplicationController
     unless chat_completion_has_required_params?
       return render status: :bad_request, json: {}
     end
-    unless can_access_aichat_chat_completion? || can_access_ai_tutor_chat_completion?(params[:aichatContext][:clientType])
+    unless can_access_aichat_lab_chat_completion? || can_access_ai_tutor_chat_completion?(params[:aichatContext][:clientType])
       return render status: :forbidden, json: {user_type: current_user.user_type}
     end
     return head :too_many_requests if should_throttle_request_count?
@@ -101,8 +101,8 @@ class AichatRequestsController < ApplicationController
     current_user.trust_chat_client?(client_type)
   end
 
-  private def can_access_aichat_chat_completion?
-    return false if DCDO.get("block_aichat_chat_completion", false)
+  private def can_access_aichat_lab_chat_completion?
+    return false if DCDO.get("block_aichat_lab_chat_completion", false)
     ai_chat_new_permissions = experiment_value('ai-chat-new-permissions', request).present?
     current_user.has_aichat_lab_access?(new_permissions_enabled: ai_chat_new_permissions)
   end
