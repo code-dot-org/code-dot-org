@@ -1,8 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import Typography, {
-  Heading1,
-  OverlineOneText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -26,14 +23,14 @@ const AiDiffLessonHook: React.FC<AiDiffLessonHookProps> = ({
   return (
     <div className={style.artifactContainer}>
       <div className={style.artifactHeader}>
-        <Heading1>{title}</Heading1>
-        <OverlineOneText>
+        <Typography variant="h1">{title}</Typography>
+        <Typography variant="overline1">
           {updated.toLocaleDateString(undefined, {
             month: 'long',
             day: 'numeric',
             year: 'numeric',
           })}
-        </OverlineOneText>
+        </Typography>
       </div>
       <div className={style.artifactContentBlocksContainer}>
         <div className={style.artifactContentBlock}>
@@ -47,7 +44,7 @@ const AiDiffLessonHook: React.FC<AiDiffLessonHookProps> = ({
               iconName={`thought-bubble`}
               className={style.artifactIcon}
             />
-            <OverlineOneText>{`Introduction`}</OverlineOneText>
+            <Typography variant="overline1">{`Introduction`}</Typography>
           </div>
           <div
             className={classNames(
@@ -55,7 +52,7 @@ const AiDiffLessonHook: React.FC<AiDiffLessonHookProps> = ({
               style.artifactContentBlue
             )}
           >
-            <Typography semanticTag="div" visualAppearance="body-two">
+            <Typography component="div" variant="body2">
               <SafeMarkdown unwrapped markdown={content.introduction} />
             </Typography>
           </div>
@@ -72,7 +69,7 @@ const AiDiffLessonHook: React.FC<AiDiffLessonHookProps> = ({
               iconName={`paintbrush-pencil`}
               className={style.artifactIcon}
             />
-            <OverlineOneText>{`Activity`}</OverlineOneText>
+            <Typography variant="overline1">{`Activity`}</Typography>
           </div>
           <div
             className={classNames(
@@ -80,7 +77,7 @@ const AiDiffLessonHook: React.FC<AiDiffLessonHookProps> = ({
               style.artifactContentPurple
             )}
           >
-            <Typography semanticTag="div" visualAppearance="body-two">
+            <Typography component="div" variant="body2" gutterBottom>
               <SafeMarkdown unwrapped markdown={content.activity} />
             </Typography>
           </div>
@@ -97,7 +94,7 @@ const AiDiffLessonHook: React.FC<AiDiffLessonHookProps> = ({
               iconName={`lightbulb-on`}
               className={style.artifactIcon}
             />
-            <OverlineOneText>{`Reflection`}</OverlineOneText>
+            <Typography variant="overline1">{`Reflection`}</Typography>
           </div>
           <div
             className={classNames(
@@ -105,7 +102,7 @@ const AiDiffLessonHook: React.FC<AiDiffLessonHookProps> = ({
               style.artifactContentRed
             )}
           >
-            <Typography semanticTag="div" visualAppearance="body-two">
+            <Typography component="div" variant="body2" gutterBottom>
               <SafeMarkdown unwrapped markdown={content.wrap_up} />
             </Typography>
           </div>
