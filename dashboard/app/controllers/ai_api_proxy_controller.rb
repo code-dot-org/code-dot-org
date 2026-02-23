@@ -18,9 +18,10 @@ class AiApiProxyController < ApplicationController
       return render json: {error: "Invalid or missing provider: #{provider}"}, status: :bad_request
     end
 
-    url = params[:url]
-    body = params[:body]
-    headers = params[:headers] || {}
+    request_params = JSON.parse(request.body.read)
+    url = request_params["url"]
+    body = request_params["body"]
+    headers = request_params["headers"] || {}
 
     unless url.present? && body
       return render json: {error: "Missing required parameters: url and body"}, status: :bad_request
