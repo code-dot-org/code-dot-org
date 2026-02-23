@@ -44,13 +44,13 @@ module User::AiAccessible
 
   def ai_chat_access_level
     return AI_CHAT_ACCESS_LEVELS[:ENABLED] if teacher?
-    return AI_CHAT_ACCESS_LEVELS[:ENABLED] if in_section_with_ai_chat_enabled?
-    return AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY] if in_section_with_ai_chat_essential_only?
+    return AI_CHAT_ACCESS_LEVELS[:ENABLED] if in_section_with_ai_chat_access_enabled?
+    return AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY] if in_section_with_ai_chat_access_essential_only?
     return AI_CHAT_ACCESS_LEVELS[:DISABLED]
   end
 
   def ai_tutor_enabled_for_pilot?
-    return false if ai_tutor_access_denied || ai_tutor_feature_globally_disabled?
+    return false if ai_tutor_feature_globally_disabled?
 
     ai_tutor_enabled_for_pilot_teacher? || ai_tutor_enabled_for_pilot_student?
   rescue => exception
