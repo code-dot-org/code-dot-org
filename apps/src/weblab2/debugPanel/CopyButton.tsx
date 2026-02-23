@@ -10,6 +10,8 @@ interface CopyButtonProps {
   value: string;
 }
 
+const COPY_CONFIRMATION_TIMEOUT_MS = 3000;
+
 const CopyButton: React.FunctionComponent<CopyButtonProps> = ({
   label,
   value,
@@ -21,7 +23,10 @@ const CopyButton: React.FunctionComponent<CopyButtonProps> = ({
     navigator.clipboard.writeText(value);
     setCopied(true);
     timerRef.current && clearTimeout(timerRef.current);
-    timerRef.current = setTimeout(() => setCopied(false), 3000);
+    timerRef.current = setTimeout(
+      () => setCopied(false),
+      COPY_CONFIRMATION_TIMEOUT_MS
+    );
   }, [value]);
 
   return (
