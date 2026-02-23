@@ -83,9 +83,7 @@ const AiDiffExitTicket: React.FC<AiDiffExitTicketProps> = ({
   return (
     <div className={style.artifactContainer}>
       <div className={style.artifactHeader}>
-        <Typography variant="h1" gutterBottom>
-          {title}
-        </Typography>
+        <Typography variant="h1">{title}</Typography>
         <Typography variant="overline1">
           {updated.toLocaleDateString(undefined, {
             month: 'long',

@@ -102,10 +102,8 @@ export default function SchoolDataInputs({
     <div id={SCHOOL_INFO_ID} className={computedStyleClass}>
       {includeHeaders && (
         <div className={style.headerContainer}>
-          <Typography variant="h2" gutterBottom>
-            {i18n.censusHeading()}
-          </Typography>
-          <Typography variant="body2" gutterBottom>
+          <Typography variant="h2">{i18n.censusHeading()}</Typography>
+          <Typography variant="body2">
             {i18n.schoolInfoInterstitialTitle()}
           </Typography>
         </div>
