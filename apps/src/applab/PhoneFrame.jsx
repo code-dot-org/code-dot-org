@@ -65,6 +65,7 @@ export default class PhoneFrame extends React.Component {
     this.scrollPinTimeout = setTimeout(() => {
       wrapper.removeEventListener('scroll', this.scrollPinHandler);
       this.scrollPinHandler = null;
+      this.scrollPinTimeout = null;
     }, 200);
   }
 
