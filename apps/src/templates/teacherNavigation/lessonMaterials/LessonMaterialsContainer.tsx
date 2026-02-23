@@ -57,6 +57,7 @@ interface LessonSummaryInfo {
 
 interface LessonSummaryInfoResponse {
   lesson_summary: string;
+  script: string;
 }
 
 const lessonMaterialsApiCall = (unitId: number) =>
@@ -80,6 +81,8 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   const [finishedListeningToSummary, setFinishedListeningToSummary] =
     useState(false);
   const [canShowLessonSummaries, setCanShowLessonSummaries] = useState(false);
+  const [audioSummaryTranscript, setAudioSummaryTranscript] =
+    useState<string>('');
 
   const userId = useAppSelector(state => state.currentUser.userId);
 
@@ -91,10 +94,6 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
 
   const hasCompletedPersonalizationQuiz = useAppSelector(
     state => state.currentUser.hasCompletedPersonalizationQuiz
-  );
-
-  const audioSummaryTranscript = useAppSelector(
-    state => state.currentUser.audioSummaryTranscript
   );
 
   const selectedUnitId = useSelector(getSelectedUnitId);
@@ -198,9 +197,15 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
         `/ai_lesson_summaries/show?lesson_id=${selectedLesson?.id}`
       )
         .then(response => {
-          const preParsedResponse = response.value?.lesson_summary;
-          if (response.response.ok && preParsedResponse) {
-            setAITALessonSummaryInfo(JSON.parse(preParsedResponse));
+          if (response.response.ok) {
+            if (response.value?.lesson_summary) {
+              setAITALessonSummaryInfo(
+                JSON.parse(response.value.lesson_summary)
+              );
+            }
+            if (response.value?.script) {
+              setAudioSummaryTranscript(response.value.script);
+            }
             setCanShowLessonSummaries(true);
           } else {
             setAITALessonSummaryInfo(null);
@@ -212,13 +217,6 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           setCanShowLessonSummaries(false);
           console.log(`Error: ${error}`);
         });
-      if (showAITAPodcasts) {
-        HttpClient.get(
-          `ai_lesson_summary_podcasts/show?lesson_id=${selectedLesson?.id}`
-        )
-          .then(data => console.log(data))
-          .catch(error => console.log(error));
-      }
     }
   }, [userId, selectedLesson, showAITALessonSummary, showAITAPodcasts]);
 
@@ -329,31 +327,14 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
             closeLabel={i18n.closeTranscript()}
             customContent={
               <div className={styles.transcriptDialogContent}>
-                {audioSummaryTranscript.map(({timeStamp, text}) => (
-                  <div
-                    key={`transcript-line-${timeStamp}`}
-                    className={styles.transcriptLine}
-                  >
-                    <Typography
-                      className={styles.transcriptLineTimeStamp}
-                      variant="body2"
-                      gutterBottom
-                    >
-                      {timeStamp}
-                    </Typography>
-                    <Typography variant="body2" gutterBottom>
-                      {text}
-                    </Typography>
-                  </div>
-                ))}
+                {audioSummaryTranscript}
               </div>
             }
             className={styles.transcriptDialog}
           />
         )}
         <div className={styles.lessonSummaryContainer}>
-          {(showAITAPodcasts ||
-            experiments.isEnabled('ai-lesson-podcasts')) && (
+          {showAITAPodcasts && (
             <div className={styles.lessonSummarySection}>
               <div className={styles.lessonSummarySectionHeader}>
                 <div className={styles.lessonSummarySectionTitle}>
@@ -376,7 +357,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
                 {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
                 <audio
                   id="lesson-summary-audio"
-                  src="https://tts.code.org/sharon22k/180/100/e91c9a88c669b0aeba648353cc478452/courseC_maze_programming9.mp3"
+                  src={`/ai_lesson_summary_podcasts/show?lesson_id=${selectedLesson?.id}`}
                   preload="auto"
                   controls
                   onEnded={() => setFinishedListeningToSummary(true)}

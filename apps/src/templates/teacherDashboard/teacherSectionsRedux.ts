@@ -996,7 +996,7 @@ export const assignToSection = (
       // Generate AI podcasts
 
       if (
-        !!DCDO.get('ai-lesson-summary-podcasts', false) ||
+        DCDO.get('ai-lesson-summary-podcasts', false) ||
         experiments.isEnabled('ai-lesson-podcasts')
       ) {
         HttpClient.get(

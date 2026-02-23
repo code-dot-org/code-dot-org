@@ -128,11 +128,11 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
 
   test "retrieve_and_save_ai_lesson_summary creates AiLessonSummary when API call succeeds for brief text summary response" do
     # Mock successful API response
-    AiLessonSummariesHelper.expects(:generate_lesson_summary).with(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY]).
+    AiLessonSummariesHelper.expects(:generate_lesson_summary).with(@lesson.id, @user.id, false).
       returns({status: 200, json: "Generated lesson summary"})
 
     assert_difference 'AiLessonSummary.count', 1 do
-      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
+      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, false)
     end
 
     created_summary = AiLessonSummary.last
@@ -147,7 +147,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
       returns({status: 500, json: "Internal server error"})
 
     assert_no_difference 'AiLessonSummary.count' do
-      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
+      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, false)
     end
   end
 
@@ -160,7 +160,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     HTTParty.stubs(:post).returns(mock_response)
 
     assert_difference 'AiLessonSummary.count', 1 do
-      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
+      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, false)
     end
 
     created_summary = AiLessonSummary.last
@@ -181,7 +181,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     HTTParty.stubs(:post).returns(mock_response)
 
     assert_difference 'AiLessonSummary.count', 1 do
-      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])
+      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, false)
     end
 
     created_summary = AiLessonSummary.last
@@ -196,7 +196,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
       returns({status: 500, json: "Internal server error"})
 
     assert_no_difference 'AiLessonSummary.count' do
-      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])
+      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, true)
     end
   end
 
@@ -206,7 +206,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
 
     brief_text_lesson_summary = nil
     assert_no_difference 'AiLessonSummary.count' do
-      brief_text_lesson_summary = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
+      brief_text_lesson_summary = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, false)
     end
 
     assert_equal @user.id, brief_text_lesson_summary.user_id
@@ -220,7 +220,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
 
     podcast_script_lesson_summary = nil
     assert_no_difference 'AiLessonSummary.count' do
-      podcast_script_lesson_summary = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])
+      podcast_script_lesson_summary = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, true)
     end
 
     assert_equal @user.id, podcast_script_lesson_summary.user_id
@@ -235,8 +235,8 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     brief_text_lesson_summary = nil
     podcast_script_lesson_summary = nil
     assert_no_difference 'AiLessonSummary.count' do
-      brief_text_lesson_summary = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
-      podcast_script_lesson_summary = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])
+      brief_text_lesson_summary = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, false)
+      podcast_script_lesson_summary = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, true)
     end
 
     assert_equal @user.id, brief_text_lesson_summary.user_id
@@ -259,7 +259,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
 
     lesson_summary = nil
     assert_no_difference 'AiLessonSummary.count' do
-      lesson_summary = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])
+      lesson_summary = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, true)
     end
 
     assert_equal @user.id, lesson_summary.user_id
@@ -280,7 +280,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
 
     lesson_summary = nil
     assert_no_difference 'AiLessonSummary.count' do
-      lesson_summary = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
+      lesson_summary = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, false)
     end
 
     assert_equal @user.id, lesson_summary.user_id

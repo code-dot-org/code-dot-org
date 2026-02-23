@@ -48,6 +48,8 @@ class AiLessonSummaryPodcastsJob < ApplicationJob
   end
 
   def perform(request:)
-    AiLessonSummaryPodcastsHelper.create_and_save_to_s3_by_unit(request[:lesson_ids], request[:user_id])
+    request[:lesson_ids].each do |lesson_id|
+      AiLessonSummaryPodcastsHelper.create_and_save_to_s3(lesson_id, request[:user_id])
+    end
   end
 end

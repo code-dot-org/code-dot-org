@@ -4,15 +4,13 @@ module AiLessonSummaryPodcastsHelper
   PODCAST_BUCKET = 'org.code.autoscale-prod-studio.user-content'
   PODCAST_FOLDER = 'podcasts/'
 
-  def self.create_and_save_to_s3_by_unit(lesson_ids, user_id)
-    lesson_ids.each do |lesson_id|
-      script = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(lesson_id, user_id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])[:script]
-      podcast = get_podcast_from_script(script)
-      filename = PODCAST_FOLDER+'lesson_'+lesson_id.to_s+'_podcast.mp3'
+  def self.create_and_save_to_s3(lesson_id, user_id)
+    script = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(lesson_id, user_id, true)[:script]
+    filename = PODCAST_FOLDER+'lesson_'+lesson_id.to_s+'_podcast.mp3'
 
-      unless AWS::S3.exists_in_bucket(PODCAST_BUCKET, filename)
-        AWS::S3.upload_to_bucket(PODCAST_BUCKET, filename, podcast, no_random: true)
-      end
+    unless AWS::S3.exists_in_bucket(PODCAST_BUCKET, filename)
+      podcast = get_podcast_from_script(script)
+      AWS::S3.upload_to_bucket(PODCAST_BUCKET, filename, podcast, no_random: true)
     end
   end
 
@@ -25,7 +23,7 @@ module AiLessonSummaryPodcastsHelper
     client = Client.new(API_KEY, MODEL)
     begin
       response = client.request_podcast(script)
-    rescue Net::ReadTimeout
+    rescue Net::OpenTimeout, Net::ReadTimeout
       raise StandardError.new("Timeout waiting for AI client to return lesson summary podcast")
     rescue StandardError => exception
       raise StandardError.new("Error processing AI lesson summary podcast: #{exception.message}")
@@ -63,7 +61,8 @@ module AiLessonSummaryPodcastsHelper
       HTTParty.post(
         ELEVENLABS_URL,
         headers: headers,
-        body: data.to_json
+        body: data.to_json,
+        timeout: 180,
       )
     end
   end

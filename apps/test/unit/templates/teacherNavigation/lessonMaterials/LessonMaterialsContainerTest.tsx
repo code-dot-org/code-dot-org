@@ -16,7 +16,6 @@ import currentUser, {
   setShowAITALessonSummary,
   setShowAITAPodcasts,
   setHasCompletedPersonalizationQuiz,
-  setAudioSummaryTranscript,
 } from '@cdo/apps/templates/currentUserRedux';
 import teacherSections, {
   selectSection,
@@ -722,7 +721,6 @@ describe('LessonMaterialsContainer', () => {
         {timeStamp: '0:30', text: 'Second line of dialogue.'},
         {timeStamp: '1:00', text: 'Third line of dialogue.'},
       ];
-      store.dispatch(setAudioSummaryTranscript(audioTranscript));
 
       await renderDefault();
 
