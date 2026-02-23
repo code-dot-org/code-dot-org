@@ -49,6 +49,9 @@ function useProjectServiceWorker(
             if (installingWorker) {
               installingWorker.addEventListener('statechange', () => {
                 if (installingWorker.state === 'activated') {
+                  console.log(
+                    'Service worker activated and ready to receive messages'
+                  );
                   // Wait for the service worker to be fully activated (and call clients.claim())
                   // before updating our reference. Safari requires the worker to be controlling
                   // the page before it will intercept fetch requests from iframes.
@@ -112,7 +115,7 @@ function useProjectServiceWorker(
 
         filesData[fullFileName] = {content, mimeType, url};
       });
-
+      console.log('Sending file update to service worker');
       // Send files data to service worker
       serviceWorker.postMessage({
         type: ProjectServiceWorkerMessageType.UPDATE_FILES,

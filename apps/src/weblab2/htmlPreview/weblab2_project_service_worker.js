@@ -43,11 +43,16 @@ function main() {
       filesData = files || {};
       broadcastChannel.postMessage({type: RECEIVED_SOURCE});
       contentSecurityPolicyValue = contentSecurityPolicy;
+      console.log('service worker received file update');
     }
   });
 
   // Intercept fetch requests
   self.addEventListener('fetch', async event => {
+    console.log(
+      'service worker intercepted fetch request for:',
+      event.request.url
+    );
     const url = new URL(event.request.url);
     let requestedFile = getFilenameFromUrl(url);
     const referrerFile = getFilenameFromUrl(new URL(event.request.referrer));
