@@ -16,7 +16,7 @@ import SuccessDivider from '@cdo/apps/weblab2/debugPanel/images/Success.svg';
 
 import {NetworkEntry} from '../redux/networkRedux';
 
-import DetailsBox from './DetailsBox';
+import DetailsBox, {DetailsField} from './DetailsBox';
 import EmptyPanelPlaceholder from './EmptyPanelPlaceholder';
 import NetworkRequestChip from './NetworkRequestChip';
 
@@ -125,7 +125,7 @@ const NetworkPanel: React.FC = () => {
   }, [requestSuccess, responseSuccess, responsePending]);
 
   const responseRows = useMemo(() => {
-    const rows = [
+    const rows: DetailsField[][] = [
       [
         {
           label: 'Status',
@@ -162,6 +162,7 @@ const NetworkPanel: React.FC = () => {
       {
         label: 'Response Data',
         value: responseDataValue,
+        copyable: true,
       },
     ]);
     return rows;
@@ -232,7 +233,13 @@ const NetworkPanel: React.FC = () => {
                     value: selectedRequest?.request.startTime,
                   },
                 ],
-                [{label: 'URL', value: selectedRequest?.request.url}],
+                [
+                  {
+                    label: 'URL',
+                    value: selectedRequest?.request.url,
+                    copyable: true,
+                  },
+                ],
               ]}
               errorMessage={requestErrorMessage}
             />

@@ -3,12 +3,15 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Typography} from '@mui/material';
 import React, {useMemo} from 'react';
 
+import CopyButton from './CopyButton';
+
 import moduleStyles from './details-box.module.scss';
 import parentStyles from './network-panel.module.scss';
 
-interface DetailsField {
+export interface DetailsField {
   label: string;
   value?: string | number;
+  copyable?: boolean;
 }
 
 interface DetailsBoxProps {
@@ -62,12 +65,20 @@ const DetailsBox: React.FunctionComponent<DetailsBoxProps> = ({
         {rows.map((row, rowIndex) => {
           const content = row.map(field => (
             <div key={field.label} className={moduleStyles.detailsField}>
-              <Typography
-                className={moduleStyles.detailsFieldLabel}
-                variant="overline3"
-              >
-                {field.label}
-              </Typography>
+              <div className={moduleStyles.detailsFieldLabelRow}>
+                <Typography
+                  className={moduleStyles.detailsFieldLabel}
+                  variant="overline3"
+                >
+                  {field.label}
+                </Typography>
+                {field.copyable && (
+                  <CopyButton
+                    label={field.label}
+                    value={String(field.value ?? '')}
+                  />
+                )}
+              </div>
               <pre className={moduleStyles.detailsFieldValueContainer}>
                 <Typography
                   className={moduleStyles.detailsFieldValue}
