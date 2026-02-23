@@ -27,10 +27,6 @@ import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSections
 import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
 import i18n from '@cdo/locale';
 
-import {
-  getDetailCellFormatters,
-  getLevelIconHeaderFormatter,
-} from './progressTableHelpers';
 import ProgressTableStudentList from './ProgressTableStudentList';
 
 /**
@@ -98,11 +94,6 @@ class ProgressTableView extends React.Component {
     this.onToggleRow = this.onToggleRow.bind(this);
 
     this.summaryCellFormatters = [() => {}];
-
-    this.detailCellFormatters = getDetailCellFormatters(
-      props.levelProgressByStudent,
-      props.sectionId
-    );
 
     // the primary table rows are represented by the students in the section,
     // but to support expanding those rows, we wrap each student in a
@@ -302,16 +293,6 @@ class ProgressTableView extends React.Component {
 
     return {
       className: rowClassName,
-    };
-  }
-
-  detailContentViewProps() {
-    return {
-      lessonCellFormatters: this.detailCellFormatters,
-      extraHeaderFormatters: [
-        getLevelIconHeaderFormatter(this.props.scriptData),
-      ],
-      includeHeaderArrows: true,
     };
   }
 
