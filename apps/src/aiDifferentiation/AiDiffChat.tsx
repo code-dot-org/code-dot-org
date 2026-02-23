@@ -73,7 +73,7 @@ const AiDiffArtifactLink: React.FC<{artifact: AiArtifact | undefined}> = ({
           type="secondary"
           target="_blank"
           href={artifact.url}
-          aria-label={'fnord'}
+          aria-label={'Open artifact'}
           iconLeft={{iconName: 'shapes'}}
           text={title}
         />
