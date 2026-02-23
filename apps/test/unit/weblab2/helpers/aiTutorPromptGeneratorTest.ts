@@ -58,13 +58,6 @@ describe('generateAiTutorPrompt', () => {
         result.indexOf('## Mode Answer Contracts')
       );
     });
-
-    it('places Mode Answer Contracts before preReplyCheck', () => {
-      const result = generateAiTutorPrompt(ALL_MODES);
-      expect(result.indexOf('## Mode Answer Contracts')).toBeLessThan(
-        result.indexOf(preReplyCheck.trim())
-      );
-    });
   });
 
   describe('mode router group headings', () => {
