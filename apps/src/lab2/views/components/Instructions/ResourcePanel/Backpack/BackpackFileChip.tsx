@@ -63,7 +63,6 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
       getFileIconNameAndStyle({
         name: fileName,
         id: '',
-        language: '',
         contents: '',
         folderId: '',
       }),

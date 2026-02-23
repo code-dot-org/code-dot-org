@@ -16,6 +16,7 @@ import {
   ProjectSources,
 } from '@cdo/apps/lab2/types';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
+import {getFileExtension} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {RootState} from '@cdo/apps/types/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -73,7 +74,7 @@ export const acceptAiTutorVersion = createAsyncThunk<
     thunkAPI.dispatch(addChatEvent(notification));
     sendLab2AnalyticsEvent(EVENTS.AI_TUTOR_VERSION_ACCEPTED, {
       numFiles: files.length.toString(),
-      fileTypes: files[0].language || '',
+      fileTypes: getFileExtension(files[0].name),
     });
     resetAiTutorVersionState(thunkAPI.dispatch);
 
@@ -175,7 +176,7 @@ export const rejectAiTutorVersion = createAsyncThunk<
   thunkAPI.dispatch(addChatEvent(notification));
   sendLab2AnalyticsEvent(EVENTS.AI_TUTOR_VERSION_REJECTED, {
     numFiles: files.length.toString(),
-    fileTypes: files[0].language || '',
+    fileTypes: getFileExtension(files[0].name),
   });
 
   // Revert to previous source.
