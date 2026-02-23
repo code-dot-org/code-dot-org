@@ -443,9 +443,10 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
   test "perform_ai_lesson_summaries_by_unit enqueues job with lesson IDs that have lesson plans" do
     # Create a unit with lessons, some with lesson plans and some without
     unit = create(:unit)
-    lesson_with_plan = create(:lesson, script: unit, has_lesson_plan: true)
-    create(:lesson, script: unit, has_lesson_plan: false)
-    lesson_with_plan_2 = create(:lesson, script: unit, has_lesson_plan: true)
+    lesson_group = create(:lesson_group, script: unit)
+    lesson_with_plan = create(:lesson, lesson_group: lesson_group, has_lesson_plan: true)
+    create(:lesson, lesson_group: lesson_group, has_lesson_plan: false)
+    lesson_with_plan_2 = create(:lesson, lesson_group: lesson_group, has_lesson_plan: true)
 
     expected_request = {
       user_id: @user.id,
