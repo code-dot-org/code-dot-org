@@ -1,8 +1,14 @@
-@use "sass:math";
-@use "color.scss";
+@use 'sass:math';
+@use 'color.scss';
 
 $border-radius: 30px;
 $frame-height: 60px;
+
+// Height of fixed UI above the phone frame (page header + workspace header).
+$chrome-above-frame: 130px;
+
+// Approximate minimum visualization height at the most compressed responsive breakpoint.
+$min-viz-height: 280px;
 
 .phoneFrame {
   display: block;
@@ -50,17 +56,17 @@ $frame-height: 60px;
 }
 
 .phoneFrameWrapper {
-  max-height: calc(100vh - 130px);
+  max-height: calc(100vh - $chrome-above-frame);
   overflow-x: hidden;
   overflow-y: auto;
-
+  overflow-anchor: none;
 }
 
 .topButtons {
   display: none;
 }
 
-@media screen and (max-height: 530px) {
+@media screen and (max-height: #{$chrome-above-frame + 2 * $frame-height + $min-viz-height}) {
   .phoneFrameTop {
     padding: 0 16px;
     gap: 8px;
@@ -71,10 +77,9 @@ $frame-height: 60px;
     display: flex;
 
     :global(button.blocklyLaunch) {
-      min-width: 0 !important;
-      padding: 0 4px !important;
-      height: 28px !important;
-      font-size: 12px !important;
+      min-width: 0;
+      padding: 0 4px;
+      font-size: 14px;
 
       img {
         transform: scale(0.6);

@@ -25,7 +25,6 @@ export const RunButton = Radium(props => (
     id={props.id || 'runButton'}
     className={classNames(['launch', 'blocklyLaunch', props.hidden && 'hide'])}
     style={props.style}
-    onClick={props.onClick}
   >
     <div>{props.runButtonText || msg.runProgram()}</div>
     <img src={blankImg} className="run26" alt="" />
@@ -36,7 +35,6 @@ RunButton.propTypes = {
   hidden: PropTypes.bool,
   style: PropTypes.object,
   runButtonText: PropTypes.string,
-  onClick: PropTypes.func,
 };
 RunButton.displayName = 'RunButton';
 
@@ -56,7 +54,6 @@ export const ResetButton = Radium(props => (
       props.hidden && 'hide',
     ])}
     style={[commonStyles.hidden, props.style]}
-    onClick={props.onClick}
   >
     <div>{!props.hideText && msg.resetProgram()}</div>
     <img src={blankImg} className="reset26" alt="" />
@@ -67,7 +64,6 @@ ResetButton.propTypes = {
   hidden: PropTypes.bool,
   style: PropTypes.object,
   hideText: PropTypes.bool,
-  onClick: PropTypes.func,
 };
 ResetButton.displayName = 'ResetButton';
 

@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import FontAwesome from '../legacySharedComponents/FontAwesome';
-import {singleton as studioApp} from '../StudioApp';
 import {styles as CompletionButtonStyles} from '../templates/CompletionButton';
 import {RunButton, ResetButton} from '../templates/GameButtons';
+import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
 
 import ScreenSelector from './ScreenSelector';
 
@@ -22,28 +22,65 @@ export default class PhoneFrame extends React.Component {
   };
 
   wrapperRef = React.createRef();
+  scrollPinHandler = null;
+  scrollPinTimeout = null;
 
-  preserveScroll = callback => {
-    const wrapper = this.wrapperRef.current;
-    if (!wrapper) {
-      callback();
-      return;
+  componentDidMount() {
+    this.pinScroll(0);
+    // Use capture phase to save scroll position BEFORE StudioApp's
+    // imperative click handlers modify the DOM and cause scroll shifts.
+    this.wrapperRef.current?.addEventListener(
+      'click',
+      this.onWrapperClick,
+      true
+    );
+  }
+
+  componentWillUnmount() {
+    this.clearPin();
+    this.wrapperRef.current?.removeEventListener(
+      'click',
+      this.onWrapperClick,
+      true
+    );
+  }
+
+  onWrapperClick = e => {
+    if (e.target.closest('button') && this.wrapperRef.current) {
+      this.pinScroll(this.wrapperRef.current.scrollTop);
     }
-    const scrollTop = wrapper.scrollTop;
-    callback();
-    wrapper.scrollTop = scrollTop;
-    requestAnimationFrame(() => {
-      wrapper.scrollTop = scrollTop;
-    });
   };
 
-  handleRunClick = () => {
-    this.preserveScroll(() => studioApp().runButtonClick());
-  };
+  // Temporarily pins the wrapper scroll position for 200ms to prevent
+  // jumps caused by DOM changes (e.g. resizeVisualization, button toggling).
+  pinScroll(target) {
+    this.clearPin();
+    const wrapper = this.wrapperRef.current;
+    if (!wrapper) return;
+    wrapper.scrollTop = target;
+    this.scrollPinHandler = () => {
+      wrapper.scrollTop = target;
+    };
+    wrapper.addEventListener('scroll', this.scrollPinHandler);
+    this.scrollPinTimeout = setTimeout(() => {
+      wrapper.removeEventListener('scroll', this.scrollPinHandler);
+      this.scrollPinHandler = null;
+    }, 200);
+  }
 
-  handleResetClick = () => {
-    this.preserveScroll(() => studioApp().resetButtonClick());
-  };
+  clearPin() {
+    if (this.scrollPinTimeout) {
+      clearTimeout(this.scrollPinTimeout);
+      this.scrollPinTimeout = null;
+    }
+    if (this.scrollPinHandler && this.wrapperRef.current) {
+      this.wrapperRef.current.removeEventListener(
+        'scroll',
+        this.scrollPinHandler
+      );
+      this.scrollPinHandler = null;
+    }
+  }
 
   render() {
     const {isDark, screenIds, showSelector, isPaused, onScreenCreate} =
@@ -76,18 +113,10 @@ export default class PhoneFrame extends React.Component {
                 PAUSED
               </div>
             )}
-            <div className={style.topButtons}>
-              <RunButton
-                id="topRunButton"
-                hidden={isDark}
-                onClick={this.handleRunClick}
-              />
-              <ResetButton
-                id="topResetButton"
-                style={isDark ? {display: 'inline-block'} : {}}
-                onClick={this.handleResetClick}
-              />
-            </div>
+            <ProtectedStatefulDiv className={style.topButtons} canUnmount>
+              <RunButton id="topRunButton" />
+              <ResetButton id="topResetButton" />
+            </ProtectedStatefulDiv>
           </div>
           {this.props.children}
           <div
