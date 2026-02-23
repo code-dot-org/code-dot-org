@@ -1,6 +1,6 @@
 import Button from '@code-dot-org/component-library/button';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {BodyThreeText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useCallback, useRef, useState} from 'react';
 
 import moduleStyles from './details-box.module.scss';
@@ -27,9 +27,9 @@ const CopyButton: React.FunctionComponent<CopyButtonProps> = ({
   return (
     <div className={moduleStyles.copyButtonContainer}>
       {copied && (
-        <BodyThreeText className={moduleStyles.copiedText}>
+        <Typography className={moduleStyles.copiedText} variant="body3">
           Copied!
-        </BodyThreeText>
+        </Typography>
       )}
       <WithTooltip
         tooltipProps={{

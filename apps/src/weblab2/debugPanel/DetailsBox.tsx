@@ -66,9 +66,12 @@ const DetailsBox: React.FunctionComponent<DetailsBoxProps> = ({
           const content = row.map(field => (
             <div key={field.label} className={moduleStyles.detailsField}>
               <div className={moduleStyles.detailsFieldLabelRow}>
-                <OverlineThreeText className={moduleStyles.detailsFieldLabel}>
+                <Typography
+                  className={moduleStyles.detailsFieldLabel}
+                  variant="overline3"
+                >
                   {field.label}
-                </OverlineThreeText>
+                </Typography>
                 {field.copyable && (
                   <CopyButton
                     label={field.label}
