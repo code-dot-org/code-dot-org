@@ -6,7 +6,6 @@ import {
   fakeStudentLevelProgress,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 import {
-  getSummaryCellFormatters,
   getDetailCellFormatters,
   unitTestExports,
 } from '@cdo/apps/templates/sectionProgress/progressTables/progressTableHelpers';
@@ -45,51 +44,6 @@ describe('progressTableHelpers', () => {
     it('returns timestamp in month and day format', () => {
       const studentProgress = {lastTimestamp: 1614841198};
       expect(formatLastUpdated(studentProgress)).toBe('3/4');
-    });
-  });
-
-  describe('getSummaryCellFormatters', () => {
-    const student = {id: 1};
-    const lesson = fakeLessonWithLevels();
-    const lessonProgressByStudent = {
-      [student.id]: {
-        [lesson.id]: {
-          incompletePercent: 20,
-          imperfectPercent: 20,
-          completedPercent: 60,
-          timeSpent: 300, // time spent = 5 minutes
-          lastTimestamp: 1614841198, // date = 3/4
-        },
-      },
-    };
-
-    const summaryCellFormatters = getSummaryCellFormatters(
-      lessonProgressByStudent,
-      () => {}
-    );
-
-    it('returns an array of 3 formatters', () => {
-      expect(summaryCellFormatters).toHaveLength(3);
-    });
-
-    it('the first formatter returns a ProgressTableSummaryCell when called', () => {
-      const mainCellFormatter = summaryCellFormatters[0];
-      const mainCell = mount(mainCellFormatter(lesson, student));
-      expect(mainCell.name()).toBe('ProgressTableSummaryCell');
-    });
-
-    it('the second formatter returns time spent in a span when called', () => {
-      const secondCellFormatter = summaryCellFormatters[1];
-      const secondCell = mount(secondCellFormatter(lesson, student));
-      expect(secondCell.name()).toBe('span');
-      expect(secondCell.text()).toBe('5');
-    });
-
-    it('the third formatter returns last updated in a span when called', () => {
-      const thirdCellFormatter = summaryCellFormatters[2];
-      const thirdCell = mount(thirdCellFormatter(lesson, student));
-      expect(thirdCell.name()).toBe('span');
-      expect(thirdCell.text()).toBe('3/4');
     });
   });
 

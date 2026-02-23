@@ -27,9 +27,7 @@ import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSections
 import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
 import i18n from '@cdo/locale';
 
-import ProgressTableContentView from './ProgressTableContentView';
 import {
-  getSummaryCellFormatters,
   getDetailCellFormatters,
   getLevelIconHeaderFormatter,
 } from './progressTableHelpers';
@@ -99,10 +97,7 @@ class ProgressTableView extends React.Component {
     this.onScroll = this.onScroll.bind(this);
     this.onToggleRow = this.onToggleRow.bind(this);
 
-    this.summaryCellFormatters = getSummaryCellFormatters(
-      props.lessonProgressByStudent,
-      props.onClickLesson
-    );
+    this.summaryCellFormatters = [() => {}];
 
     this.detailCellFormatters = getDetailCellFormatters(
       props.levelProgressByStudent,
@@ -336,10 +331,6 @@ class ProgressTableView extends React.Component {
     const studentListHeaders = [i18n.lesson()];
     isDetailView && studentListHeaders.push(i18n.levelType());
 
-    const contentViewProps = isDetailView
-      ? this.detailContentViewProps()
-      : this.summaryContentViewProps();
-
     // we use the view type as a key to force a full re-instantiation of the
     // table components when the view changes
     const key = this.props.currentView;
@@ -362,20 +353,6 @@ class ProgressTableView extends React.Component {
               onToggleRow={this.onToggleRow}
               courseVersionName={this.props.courseVersionName}
               unitPosition={this.props.unitPosition}
-            />
-          </div>
-          <div style={styles.contentView} className="content-view">
-            <ProgressTableContentView
-              key={key}
-              ref={r => (this.contentView = r)}
-              rows={this.state.rows}
-              onRow={this.onRow}
-              needsGutter={this.needsContentHeaderGutter()}
-              onScroll={this.onScroll}
-              scriptData={this.props.scriptData}
-              lessonOfInterest={this.props.lessonOfInterest}
-              onClickLesson={this.props.onClickLesson}
-              {...contentViewProps}
             />
           </div>
         </div>

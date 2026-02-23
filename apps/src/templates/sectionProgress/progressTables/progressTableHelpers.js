@@ -1,69 +1,11 @@
 import moment from 'moment';
 import React from 'react';
 
-import {
-  lessonIsAllAssessment,
-  lessonHasLevels,
-} from '@cdo/apps/templates/progress/progressHelpers';
-import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
+import {lessonHasLevels} from '@cdo/apps/templates/progress/progressHelpers';
 
 import ProgressTableDetailCell from './ProgressTableDetailCell';
 import ProgressTableLevelIconSet from './ProgressTableLevelIconSet';
 import ProgressTableLevelSpacer from './ProgressTableLevelSpacer';
-import ProgressTableSummaryCell from './ProgressTableSummaryCell';
-
-/**
- * @return {Array} Array of formatter functions for the progress table summary view
- * mainCellFormatter is used to format the main cell (summary of progress on lesson) for each student
- * timeSpentCellFormatter is used to format the time spent cell (time spent on the lesson) in the expanded view
- * lastUpdatedCellFormatter is used to format the last updated cell (progress last updated) in the expanded view
- *
- * @param {Object} lessonProgressByStudent
- * An object mapping student id to an object with lesson id mapping to studentLessonProgressType
- * @param {function} onClickLesson
- * A function which is called when a summary cell is clicked
- *
- * */
-export function getSummaryCellFormatters(
-  lessonProgressByStudent,
-  onClickLesson
-) {
-  const mainCellFormatter = (lesson, student) => {
-    if (lessonHasLevels(lesson) && lessonProgressByStudent?.[student.id]) {
-      return (
-        <ProgressTableSummaryCell
-          studentId={student.id}
-          studentLessonProgress={lessonProgressByStudent[student.id][lesson.id]}
-          isAssessmentLesson={lessonIsAllAssessment(lesson.levels)}
-          onSelectDetailView={() => onClickLesson(lesson.position)}
-        />
-      );
-    }
-    return emptyLessonFormatter();
-  };
-
-  const timeSpentCellFormatter = (lesson, student) => {
-    if (lessonHasLevels(lesson)) {
-      const progress = lessonProgressByStudent[student.id][lesson.id];
-      return (
-        <span style={progressStyles.flex}>{formatTimeSpent(progress)}</span>
-      );
-    }
-    return missingDataFormatter(true);
-  };
-
-  const lastUpdatedCellFormatter = (lesson, student) => {
-    if (lessonHasLevels(lesson)) {
-      const progress = lessonProgressByStudent[student.id][lesson.id];
-      return (
-        <span style={progressStyles.flex}>{formatLastUpdated(progress)}</span>
-      );
-    }
-    return missingDataFormatter(true);
-  };
-
-  return [mainCellFormatter, timeSpentCellFormatter, lastUpdatedCellFormatter];
-}
 
 /**
  * @return {Array} Array of formatter functions for the progress table detail view
