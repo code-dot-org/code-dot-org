@@ -68,7 +68,6 @@ const StudentCodeWidget = ({
       files[fileId] = {
         id: fileId,
         name: filename,
-        language: '',
         contents: contents,
         folderId: 'root',
         active: index === 0, // Make first file active
