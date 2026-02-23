@@ -1,0 +1,157 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-02-21T04:15:27.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "<img src=\"https://images.code.org/f76a2fe814e5bd440ee7cad7093bb5ee-image-1707427214244.png\" style=\"float: right; width: 400px; margin: 10px;\">\r\n\r\n# Match The Image\r\n\r\nZoie is trying to style her web page to match the layout in the image to the right. Can you help her?\r\n\r\n# Do This\r\n\r\nNotice the order, size, alignment, and spacing of the items in the example image.\r\n1. Adjust the order of the items to match the example.\r\n2. Identify any items that are aligned differently from others within the container and apply `align-self` to achieve the same effect.\r\n3. Determine which items need to be larger than others and appy `flex-grow` to these items, consider their proportion in the example image.\r\n\r\n*Make sure you adjust the Preview Window to see if you've matched the image example.*\r\n\r\n<br>\r\n\r\n\r\n\r\n**Don't forget to refer back to your <a href=\"https://docs.google.com/document/d/1lrkMGcPwjKo4g5uyvVfaXpFb7kRUfdtqcsqLRtaDWYM/edit?usp=sharing\">Flexbox Children Cheat Sheet</a> when needed!**",
+    "submittable": "true",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    \n    <!-- title -->\n    <div class=\"title\">\n      <h1>The Planets Gallery</h1>\n    </div>\n    \n    <!-- information paragraphs -->\n    <div class=\"info\">\n      <img class=\"info-img\" src=\"planets.jpg\" alt=\"plants\">\n      <p class=\"info-p1\">Our solar system has eight planets and five dwarf planets - all located in an outer spiral arm of the Milky Way galaxy called the Orion Arm.</p>\n      <p class=\"info-p2\">Moving outward from the Sun, the planets are: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune.</p>\n    </div>\n    \n    <!-- image gallery -->\n    <div class=\"image-container\">\n      <img class=\"earth\" src=\"earth.jpg\" alt=\"Earth\">\n      <img class=\"jupiter\" src=\"jupiter.jpg\" alt=\"Jupiter\">\n      <img class=\"mars\" src=\"mars.jpg\" alt=\"Mars\">\n      <img class=\"mercury\" src=\"mercury.jpg\" alt=\"Mercury\">\n      <img class=\"neptune\" src=\"neptune.jpg\" alt=\"Neptune\">\n      <img class=\"saturn\" src=\"saturn.jpg\" alt=\"Saturn\">\n      <img class=\"uranus\" src=\"uranus.jpg\" alt=\"Uranus\">\n      <img class=\"venus\" src=\"venus.jpg\" alt=\"Venus\">\n    </div>\n    \n    <!-- final information -->\n    <div class=\"final-info\">\n      <p>In 2006, Pluto was reclassified as a dward planet.</p>\n      <p class=\"newHorizons\">NASA's New Horizons spacecraft visited Pluto in 2015, and is currently exploring the Kuiper Belt beyond Pluto. </p>\n      <p>The other dwarf planets are Ceres, Makemake, Haumea, and Eris.</p>\n    </div>\n    \n    <!-- image citation -->\n    <div class=\"footer\">\n      <p>All images CC0 from free-images.com</p>\n    </div>\n    \n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "uranus.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L13-L7-2025/uuid/c1f58146-2575-4127-9ef2-b7e2fe77dbd0.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "neptune.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L13-L7-2025/uuid/e19efc46-494f-4be3-b488-c0dedb151a0a.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "mercury.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L13-L7-2025/uuid/d6b1b4de-3f1c-4a2f-8917-86a597aec7b0.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "saturn.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L13-L7-2025/uuid/56fa28cd-8570-4acf-a13c-58715ec9418e.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "jupiter.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L13-L7-2025/uuid/bbea566a-3553-460b-9256-cf9a50b6dcab.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "earth.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L13-L7-2025/uuid/fc6c2119-5f24-4422-87bd-1ea5a44d44d6.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "venus.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L13-L7-2025/uuid/6a865790-c440-4d71-a45f-d625a21e0cd8.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "mars.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L13-L7-2025/uuid/162244c3-eb92-498d-8fd8-f3e5516089e8.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "planets.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L13-L7-2025/uuid/8da2dace-fbda-4668-85f7-4d99ef2c22d7.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "11": {
+          "id": "11",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* 1) Adjust the order of the items to match the example. */\n\n/* 2) Identify any items that are aligned differently from others within the container and apply align-self to achieve the same effect. */\n\n/* 3) Determine which items need to be larger than others and appy flex-grow to thesee items, consider their proportion in the example image. */\n\n/* planet layout */\n.earth {\n\n}\n\n.jupiter {\n\n}\n\n.mars {\n\n}\n\n.mercury {\n\n}\n\n.neptune {\n\n}\n\n.saturn {\n\n}\n\n.uranus {\n\n}\n\n.venus {\n\n}\n\n\n/* top informational paragraph layouts */\n.info-p1 {\n\n  \n}\n\n.info-p2 {\n\n}\n\n\n/* final information paragraph layout */\n.newHorizons {\n\n}\n\n\n\n\n/* DO NOT CHANGE CODE BELOW **/\n\n/* body style */\nbody {\n  font-family: Arial;\n  background-color: #000000;\n}\n\n/* basic style for text on page */\n.title, .footer, p {\n  text-align: center;\n  padding: 5px;\n  color: aliceblue;\n}\n\n/* flex layout for image container */\n.image-container {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  padding: 20px;\n}\n\n/* flex layout for final information paragraphs */\n.final-info {\n  display: flex;\n}\n\n.final-info > p {\n  margin: 5px;\n  width: 20%;\n}\n\n/* images style */\n.img {\n  width: 100%;\n  height: auto;\n}\n\n/* flex layout for first information paragraphs */\n.info {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n}\n\n/* style for informational image */\n.info-img{\n  width: 75%;\n}",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\naZiIUpgAwW8w2g8re8c=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-21 04:16:19 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-21 04:17:43 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

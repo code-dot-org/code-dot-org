@@ -10,7 +10,7 @@
     "submittable": "false",
     "hide_share_and_remix": "false",
     "disable_edit_run_for_submission": "false",
-    "widget_view": "false",
+    "widget_view": "true",
     "initial_view_mode": "split",
     "ai_tutor_mode": "engineer",
     "predict_settings": {
@@ -42,6 +42,6 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-02-12 18:52:58 +0000\",\"changed\":[],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2026-02-12 18:53:10 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2026-02-12 20:53:07 +0000\",\"changed\":[],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2026-02-12 20:54:49 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2026-02-12 20:56:42 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2026-02-13 19:21:09 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2026-02-13 19:23:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2026-02-13 19:23:50 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2026-02-13 19:32:58 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-12 18:52:58 +0000\",\"changed\":[],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2026-02-12 18:53:10 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2026-02-12 20:53:07 +0000\",\"changed\":[],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2026-02-12 20:54:49 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2026-02-12 20:56:42 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2026-02-13 19:21:09 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2026-02-13 19:23:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2026-02-13 19:23:50 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2026-02-13 19:32:58 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2026-02-20 23:13:08 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
 }]]></config>
 </Weblab2>
