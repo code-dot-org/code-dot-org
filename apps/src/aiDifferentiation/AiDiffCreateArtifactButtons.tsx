@@ -23,7 +23,7 @@ const AiDiffCreateArtifactButtons: React.FC<Props> = ({message}) => {
         size="s"
         type="secondary"
         onClick={() => dispatch(setPendingArtifactMessage(message))}
-        aria-label={'fnord'}
+        aria-label={'Create artifact'}
         iconLeft={{iconName: 'shapes'}}
         text="Create artifact"
       />
