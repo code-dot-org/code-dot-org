@@ -7,8 +7,8 @@ import DropletPaletteSelector from '@cdo/apps/levelbuilder/level-editor/DropletP
 describe('DropletPaletteSelector', () => {
   let editor;
 
-  function createMockEditor(initialValue = '') {
-    let value = initialValue;
+  function createMockEditor() {
+    let value = '';
     const changeListeners = [];
 
     return {
