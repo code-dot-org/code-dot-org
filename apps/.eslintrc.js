@@ -193,7 +193,7 @@ module.exports = {
           {
             name: '@code-dot-org/component-library/typography',
             message:
-              'DSCO Typography is deprecated. Use MUI Typography from @mui/material instead. Run: npx jscodeshift -t ./tools/codemod/typography-to-mui.js "src" --parser=tsx --extensions=tsx,ts,jsx,js',
+              'DSCO Typography is deprecated. Use MUI Typography from @mui/material instead. From the apps directory (cd apps), run: npx jscodeshift -t ./tools/codemod/typography-to-mui.js "src" --parser=tsx --extensions=tsx,ts,jsx,js',
           },
         ],
         patterns: [
