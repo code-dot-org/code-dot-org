@@ -1,5 +1,9 @@
 import {ThreadTypeFields} from '@cdo/apps/aiDifferentiation/constants';
-import {ChatItem, ChatPrompt} from '@cdo/apps/aiDifferentiation/types';
+import {
+  ChatItem,
+  ChatPrompt,
+  ChatTextMessage,
+} from '@cdo/apps/aiDifferentiation/types';
 
 import {ModalTypes} from '../constants';
 import {
@@ -16,7 +20,8 @@ import {
   UserAddedSelectionContext,
 } from '../types';
 
-export interface AichatState {
+// State pertaining to AI TA Differentiation chat. TODO: Move this to a separate slice.
+interface AiDiffChatState {
   chatIsOpen: boolean;
   clientType?: AiChatClientType;
   // Id of the current thread open
@@ -40,6 +45,9 @@ export interface AichatState {
   threadKeyId: number;
   // AI TA's opening message for a thread
   initialChatMessage: string;
+}
+
+export interface AichatState extends AiDiffChatState {
   // Content from previous chat sessions that we track purely for visibility to the user
   // and do not send to the model as history.
   chatEventsPast: ChatEvent[];
@@ -73,18 +81,23 @@ export interface AichatState {
     | undefined;
   // If the user has a sent a message on this level
   hasSentMessage: boolean;
-  // If starting customizations have been set on this level
-  hasSetStartingCustomizations: boolean;
+  // If initial customizations have been set on this level
+  hasSetInitialCustomizations: boolean;
   // If the user has updated customizations on this level
   hasUpdatedCustomizations: boolean;
   // Error message to display if a save fails
   saveError: SaveError | undefined;
   // If the model customizations were just reset to the default level values.
   showResetMessage: boolean;
+  // If the user had previously selected a model that is no longer available.
+  showUnsupportedModelMessage: boolean;
   // The tab selected when a teacher is viewing a student's chat history.
   chatWorkspaceSelectedTab: WorkspaceTeacherViewTab | null;
   userAddedSelectionContext: UserAddedSelectionContext;
   // The thread's artifact state- undefined if not in the artifact creation flow,
   // otherwise a string representing the artifact type
   artifactType: string | undefined;
+  // If the user is viewing the artifact save screen, this will contain the
+  // message they want to create an artifact from. Undefined otherwise.
+  pendingArtifactMessage?: ChatTextMessage;
 }

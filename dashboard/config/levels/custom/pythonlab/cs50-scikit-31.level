@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-02-18T17:03:44.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# CIW AI Associate Standard: 6.8\n# Standard Description: Give examples for continuous, binary, categorical and ordinal data types.\n#\n# Rationale: Computers see everything as numbers, but those numbers mean \n# different things. Is the number \"1\" a price, a \"Yes\", or a \"First Place\" \n# ribbon? This tutorial uses a Pandas DataFrame to define and demonstrate \n# the four main types of data used in AI.\n\n\"\"\"\nWelcome! Not all numbers are created equal. \n1. Continuous: Any value (like 5.25 feet).\n2. Binary: Only two options (Yes/No, 0/1).\n3. Categorical: Bins with names (Apple, Orange, Banana).\n4. Ordinal: Categories with a SPECIFIC ORDER (Small, Medium, Large).\n\"\"\"\n\nimport pandas as pd\n\n# --- CREATING A MIXED DATASET ---\ndata = {\n    'Student_Name': ['Alice', 'Bob', 'Charlie', 'David'],\n    'Test_Score': [92.5, 88.0, 75.2, 98.1], # CONTINUOUS\n    'Passed': [1, 1, 0, 1],                # BINARY\n    'Favorite_Color': ['Red', 'Blue', 'Green', 'Red'], # CATEGORICAL\n    'T_Shirt_Size': ['S', 'M', 'L', 'XL']  # ORDINAL\n}\ndf = pd.DataFrame(data)\n\nprint(\"--- The Student Dataset ---\")\nprint(df)\nprint(\"\\n--- Identifying the Types ---\")\n\n# --- 1. CONTINUOUS ---\nprint(\"1. Continuous (Test_Score): Numbers that can have decimals.\")\nprint(f\"Average Score: {df['Test_Score'].mean():.2f}\")\n\n# --- 2. BINARY ---\nprint(\"\\n2. Binary (Passed): 0 or 1. True or False.\")\nprint(f\"Number of students who passed: {df['Passed'].sum()}\")\n\n# --- 3. CATEGORICAL ---\nprint(\"\\n3. Categorical (Favorite_Color): Names or Labels.\")\nprint(f\"Unique colors: {df['Favorite_Color'].unique()}\")\n\n# --- 4. ORDINAL ---\nprint(\"\\n4. Ordinal (T_Shirt_Size): Categories where order MATTERS.\")\nprint(\"Even though they are letters, we know that L is bigger than M.\")\n\n\"\"\"\n--- YOUR TURN ---\nWe have three pieces of data. Identify if they are Continuous, Binary, \nCategorical, or Ordinal.\n\nA) The temperature outside (e.g., 72.5 degrees).\nB) A star rating for a movie (1 Star, 2 Stars, 3 Stars, 4 Stars).\nC) Whether a person is a subscriber (Yes or No).\nD) A person's home state (California, Texas, New York).\n\"\"\"\n\n# STARTING CODE FOR STUDENT:\n# TODO: Match the types!\n# Data_A = \"___\"\n# Data_B = \"___\"\n# Data_C = \"___\"\n# Data_D = \"___\"\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFTDG6jyYgtI/CEUE/82dEkG4hlI8OLsdjJD0In8S\n03BB+jPkGgyYB0/9C3zqHMHEFpKeCsugYbpGMxzBNwrd7qASagJaFzMnVUyM\n2TXS7Hau9lj7JpZIHXn9fmxXRRANWRRWQfqflFedHXUE5SAhIpJ3mCi6drxv\n6xUbfgyNQ8JecoNuzx4n8j4HoQSYrAu30kam+Ygf6Fxf1EzLaXjkMmyIcDTv\n7AcvjDxwTXgzQgdM6+O86bjSWWjqo9bxOCAvPRjJYJGDUrtdxu5hqfmsFVND\n8G91cJwefCaRH24y4nm9Ayjj8wtzN51Mn9v6pC2uLKSWDyD66Dl0o+oo/SZt\n6WFOgR076k3BKRgeUaqhZRfRkK12yW3+swr4Y0sze62E5K2I6eChJw2uzGqB\nZfE3k7rBTM3pqb7tjfrZp/muWi1XJKY6/VuWu/M7chLo/YnHX58i9tzxTsns\nf62IyAiRcszYtRqE9cXcRep3mZTw3VBw4hYVgFQsLggUdBnNblPHoejj1Emg\nAKGKVJ1zt+acB54ClAIIIP8+joCfQDAZM4e/Thy6VpW5D0Hny8b777d9hCvI\nFLxqyEz1s7FMit+B9MDsP1dYuhgGOvfCd1WVTZZCXY2tT8l0JlD1IQ/Ttmfc\nuSCJZC36JI4KPFjeVtw3wbwxl/5enuxy1uw+QBg6bOMM7iMkkVwHazoEppIi\njJn24gLxqBfkZr1b1V+m/n0HVowrIYlxU9Rsr+W7ysXMUDuCBD0/Or68KLGj\nuAETbjhQ1cl+qkWvrz64ESYvIzFUvtVnh6Bf/0zWaqySaSFwmToJN3BXhHPs\nBiJ4HwXcC+6wTx6GOdt1PgQZTohwsyBZqjNUN2+3sHyRP7h8oHyVWBEpj1ev\nnMqYCidzLc2XZJxPggySSBOZcNcipMhfMI1ywsNt12dUXrG8ml+A8v1/gN5L\nO4L+JCRMHXR8tcXXjL0jgWQuRG6PpKyDxd8ucwlZA5zQQI6YoFMQjIR9gsXF\nn1pcihQpFhfv2hCdwBuHExB7Okh4HppYrQtiMs1tjCSTTaRolfBhu80+pi+T\n0V0z9t8Yo6frAloYzCRRo6woGT6FEYQIb1RciD/zpxn/ZEduT98=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-18T17:03:44.912+00:00\",\"changed\":[\"cloned from \\\"cs50-scikit-30\\\"\"],\"cloned_from\":\"cs50-scikit-30\"},{\"changed_at\":\"2026-02-18 17:03:49 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:47:51 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:47:59 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>

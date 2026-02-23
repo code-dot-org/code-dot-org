@@ -1,0 +1,189 @@
+name 'pl-aif-2-U5-sync-async-code-chef'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Synchronous vs. Asynchronous
+
+<img src="https://images.code.org/6f13673a0ca38964117b3ad1e8261040-image-1771342723588.png" alt="cartoon image of chef flipping a pancake" width="275px" style="border-radius:10px; float:right; margin: 0 0 0px 20px;">
+
+#### In real programs, some tasks happen immediately, while others take time.
+
+#### The question is not whether waiting happens.  
+#### The real question is: **What does the program do while it waits?**
+
+#### In this activity, we’ll compare two patterns:
+- ####  **Synchronous (blocking):** Tasks happen one at a time, in order.
+- ####  **Asynchronous (non-blocking):** Some tasks are scheduled to finish later, allowing other work to continue.
+
+
+<div style="clear:both;"></div>
+
+
+---
+
+## Predict 
+
+#### Look at the blocking code, or synchronous code below and predict the order of the chef's events. 
+
+<img src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." width="30px" style="border-radius:10px; float:left; margin: 0px 10px 5px 0px;">
+
+#### **To Do:**
+
+> #### **Read**: Look closely at the code inside the Event Listener.
+> #### **Predict**: Think or write it down - In what order will the chef complete the tasks? 
+> #### **"Run:"** Click the 'Run Routine' button to see the actual order in which the chef completes the tasks.
+
+<div style="background-color:#000000; border-radius:12px; padding:20px; margin:20px auto; max-width:90%; overflow-x:auto;">
+
+<pre style="margin:0; background-color:#000000; font-family:Consolas, Monaco, 'Courier New', monospace; font-size:14px; line-height:1.5; color:#f8f8f2;">
+
+<span style="color:#ff6b6b;">runBtn</span>.<span style="color:#4dabf7;">addEventListener</span>(<span style="color:#69db7c;">'click'</span>, () => {
+
+    <span style="color:#4dabf7;">addLog</span>(<span style="color:#69db7c;">"Chef grabs the order ticket."</span>);
+
+    <span style="color:#4dabf7;">addLog</span>(<span style="color:#69db7c;">"Heating up the pan..."</span>);
+
+    <span style="color:#9aa0a6;">// A loop to show repetitive synchronous work</span>
+    <span style="color:#c77dff;">for</span> (<span style="color:#c77dff;">let</span> i = <span style="color:#ffa94d;">1</span>; i &lt;= <span style="color:#ffa94d;">3</span>; i++) {
+        <span style="color:#4dabf7;">addLog</span>(<span style="color:#69db7c;">"Cracking egg "</span> + i + <span style="color:#69db7c;">" into bowl..."</span>);
+    }
+
+    <span style="color:#4dabf7;">addLog</span>(<span style="color:#69db7c;">"Whisking the eggs."</span>);
+
+    <span style="color:#4dabf7;">addLog</span>(<span style="color:#69db7c;">"Pouring mixture into pan."</span>);
+
+    <span style="color:#4dabf7;">addLog</span>(<span style="color:#69db7c;">"Cooking the omelette."</span>);
+
+    <span style="color:#4dabf7;">addLog</span>(<span style="color:#69db7c;">"Sliding omelette onto plate."</span>);
+
+    <span style="color:#4dabf7;">addLog</span>(<span style="color:#69db7c;">"Order served!"</span>);
+
+});
+</pre>
+
+</div>
+
+<div style="clear:both;"></div>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">Run routine:</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
+     <div style="background-color:#000000; color:#00FF00; padding:15px; border-radius:8px; margin:20px auto; max-width:90%; font-family:Courier, 'Courier New', monospace; font-size:12px; line-height:1.6;">
+
+<pre style="margin:0; background-color:#000000; color:#00FF00; font-family:Courier, 'Courier New', monospace; font-size:14px;">
+
+&gt; Chef grabs the order ticket.
+&gt; Heating up the pan...
+&gt; Cracking egg 1 into bowl...
+&gt; Cracking egg 2 into bowl...
+&gt; Cracking egg 3 into bowl...
+&gt; Whisking the eggs.
+&gt; Pouring mixture into pan.
+&gt; Cooking the omelette.
+&gt; Sliding omelette onto plate.
+&gt; Order served!
+
+</pre>
+</div>
+</div>
+</details>
+
+
+---
+
+#### Look at the -nonblocking code, or asynchronous code below and predict the order of the chef's events. 
+
+<img src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." width="30px" style="border-radius:10px; float:left; margin: 0px 10px 5px 0px;">
+
+#### **To Do:**
+
+> #### **Read**:Look closely at the milliseconds (e.g. 2000, 5000) inside the code.
+> #### **Predict:** In what order will the chef complete the tasks based on their timers? Think or write it down.
+> #### **"Run"**: Click the 'Run Routine' button to see the actual order in which the chef completes the tasks.
+
+
+<div style="background-color:#000000; border-radius:12px; padding:20px; margin:20px auto; max-width:90%; overflow-x:auto;">
+
+<pre style="margin:0; background-color:#000000; font-family:Consolas, Monaco, 'Courier New', monospace; font-size:14px; line-height:1.5; color:#f8f8f2;">
+
+<span style="color:#ff6b6b;">runBtn</span>.<span style="color:#4dabf7;">addEventListener</span>(<span style="color:#69db7c;">'click'</span>, () => {
+
+  
+    <span style="color:#4dabf7;">addLog</span>(<span style="color:#69db7c;">"Order started..."</span>);
+
+  
+    <span style="color:#4dabf7;">setTimeout</span>(() => {
+        <span style="color:#4dabf7;">addLog</span>(<span style="color:#69db7c;">"Coffee is brewed!"</span>);
+    }, <span style="color:#ffa94d;">5000</span>);
+
+
+    <span style="color:#4dabf7;">setTimeout</span>(() => {
+        <span style="color:#4dabf7;">addLog</span>(<span style="color:#69db7c;">"Eggs are fried!"</span>);
+    }, <span style="color:#ffa94d;">3000</span>);
+
+  
+    <span style="color:#4dabf7;">setTimeout</span>(() => {
+        <span style="color:#4dabf7;">addLog</span>(<span style="color:#69db7c;">"Toast popped!"</span>);
+    }, <span style="color:#ffa94d;">2000</span>);
+
+
+    <span style="color:#4dabf7;">addLog</span>(<span style="color:#69db7c;">"Pouring Orange Juice"</span>);
+
+  
+    <span style="color:#4dabf7;">addLog</span>(<span style="color:#69db7c;">"Ticket placed on counter."</span>);
+
+});
+</pre>
+
+</div>
+
+
+<div style="clear:both;"></div>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+   <summary style="font-size: 1.5em; font-weight: bold;">Run routine:</summary>
+
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
+<div style="background-color:#000000; color:#00FF00; padding:15px; border-radius:8px; margin:20px auto; max-width:90%; font-family:Courier, 'Courier New', monospace; font-size:14px; line-height:1.6;">
+
+<pre style="margin:0; background-color:#000000; color:#00FF00; font-family:Courier, 'Courier New', monospace; font-size:12px;">
+
+&gt; Order started...
+&gt; Pouring Orange Juice
+&gt; Ticket placed on counter.
+&gt; Toast popped!
+&gt; Eggs are fried!
+&gt; Coffee is brewed!
+
+</pre>
+</div>
+
+
+</div>
+</details>
+
+
+---
+
+## 🕒 How the Milliseconds Make It Asynchronous
+
+#### The numbers inside `setTimeout` (like 2000, 3000, 5000) represent **milliseconds**.
+
+- #### 1000 milliseconds = 1 second  
+- ####  2000 = 2 seconds  
+- ####  5000 = 5 seconds  
+
+#### When the code runs, JavaScript does **not** stop and wait.
+
+#### **Instead:**
+- #### 1. It schedules the task to run later.
+- #### 2. It continues executing the rest of the code immediately.
+- #### 3. When the timer finishes, the scheduled task is added back into the queue to run.
+
+#### That’s why the chef pours orange juice and places the ticket on the counter *before* the toast pops even though the toast code appears earlier in the file.
+
+#### The order of completion depends on the timer, not the position in the code.
+
+
+MARKDOWN

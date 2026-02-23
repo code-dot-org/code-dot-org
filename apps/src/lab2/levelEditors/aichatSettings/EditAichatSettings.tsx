@@ -1,9 +1,5 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
-import {
-  BodyFourText,
-  BodyThreeText,
-  BodyTwoText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useCallback, useState} from 'react';
 
 import {modelDescriptions} from '@cdo/apps/aichat/constants';
@@ -191,7 +187,7 @@ const EditAichatSettings: React.FunctionComponent<{
           name="level[aichat_settings]"
           value={JSON.stringify(sanitizeSettings(aichatSettings))}
         />
-        <BodyThreeText>
+        <Typography variant="body3" gutterBottom>
           Set the initial values and visibility for AI model customizations.
           <br />
           <br />
@@ -200,7 +196,7 @@ const EditAichatSettings: React.FunctionComponent<{
           <b>Read Only:</b> students can see the value but cannot change it.
           <br />
           <b>Hidden:</b> the field is not shown on the customization panel.
-        </BodyThreeText>
+        </Typography>
         <ModelSelectionFields />
         <CollapsibleFieldSection
           fieldName="temperature"
@@ -215,8 +211,10 @@ const EditAichatSettings: React.FunctionComponent<{
           <hr />
           <CollapsibleSection headerContent="System Prompt">
             <div>
-              <BodyTwoText>Level System Prompt</BodyTwoText>
-              <BodyFourText>
+              <Typography variant="body2" gutterBottom>
+                Level System Prompt
+              </Typography>
+              <Typography variant="body4" gutterBottom>
                 <i>
                   This system prompt is hidden from students and is prepended to
                   their student system prompt. It can be used to add additional
@@ -224,7 +222,7 @@ const EditAichatSettings: React.FunctionComponent<{
                   won't see. It does not go through a PII/Profanity filter,
                   giving you more freedom for setting the prompt.
                 </i>
-              </BodyFourText>
+              </Typography>
               <div className={moduleStyles.fieldRow}>
                 <label
                   htmlFor="levelSystemPrompt"
@@ -247,7 +245,9 @@ const EditAichatSettings: React.FunctionComponent<{
             </div>
             <hr />
             <div>
-              <BodyTwoText>Student System Prompt</BodyTwoText>
+              <Typography variant="body2" gutterBottom>
+                Student System Prompt
+              </Typography>
               <FieldSection
                 fieldName="systemPrompt"
                 inputType="textarea"
@@ -303,7 +303,7 @@ const EditAichatSettings: React.FunctionComponent<{
         <div className={moduleStyles.collapsibleFieldSection}>
           <hr />
           <CollapsibleSection headerContent="Additional Configuration">
-            <BodyFourText>
+            <Typography variant="body4" gutterBottom>
               <i>
                 Students always have access to the Edit View, where they can
                 customize their chatbot. Published chatbots are able to be
@@ -314,7 +314,7 @@ const EditAichatSettings: React.FunctionComponent<{
                 publish their work when this setting is enabled. Use the setting
                 below to hide the option to enter presentation view in a level.
               </i>
-            </BodyFourText>
+            </Typography>
             <div className={moduleStyles.fieldRow}>
               <label
                 htmlFor="hidePresentationPanel"

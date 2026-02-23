@@ -4,7 +4,7 @@ class EmailPreferenceTest < ActiveSupport::TestCase
   test "create email preference with valid attributes creates email preference" do
     assert_creates EmailPreference do
       create(:email_preference,
-        email: 'test_valid@example.net',
+        email: Faker::Internet.unique.email,
         opt_in: true,
         ip_address: '1.1.1.1',
         source: EmailPreference::ACCOUNT_SIGN_UP,

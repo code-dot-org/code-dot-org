@@ -4,10 +4,7 @@ import {
   buttonColors,
 } from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  Heading3,
-  BodyTwoText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import i18n from '@cdo/locale';
@@ -44,7 +41,9 @@ const SelfPacedPLCatalogExpandedCard: React.FunctionComponent<{
         <div className={style.expandedCardContainer}>
           <div className={style.flexDivider}>
             <div className={style.plCourseOfferingContainer}>
-              <Heading3>{displayName}</Heading3>
+              <Typography variant="h3" gutterBottom>
+                {displayName}
+              </Typography>
               <div className={style.infoContainer}>
                 <div className={style.iconWithDescription}>
                   <FontAwesomeV6Icon
@@ -52,7 +51,9 @@ const SelfPacedPLCatalogExpandedCard: React.FunctionComponent<{
                     iconStyle="solid"
                     className="fa-solid"
                   />
-                  <BodyTwoText>{gradeLevels}</BodyTwoText>
+                  <Typography variant="body2" gutterBottom>
+                    {gradeLevels}
+                  </Typography>
                 </div>
                 <div className={style.iconWithDescription}>
                   <FontAwesomeV6Icon
@@ -60,7 +61,9 @@ const SelfPacedPLCatalogExpandedCard: React.FunctionComponent<{
                     iconStyle="solid"
                     className="fa-solid"
                   />
-                  <BodyTwoText>{duration}</BodyTwoText>
+                  <Typography variant="body2" gutterBottom>
+                    {duration}
+                  </Typography>
                 </div>
                 <div className={style.iconWithDescription}>
                   <FontAwesomeV6Icon
@@ -68,14 +71,18 @@ const SelfPacedPLCatalogExpandedCard: React.FunctionComponent<{
                     iconStyle="solid"
                     className="fa-solid"
                   />
-                  <BodyTwoText>{i18n.topic() + ': ' + csTopics}</BodyTwoText>
+                  <Typography variant="body2" gutterBottom>
+                    {i18n.topic() + ': ' + csTopics}
+                  </Typography>
                 </div>
               </div>
               <hr className={style.horizontalDivider} />
               <div className={style.centerContentContainer}>
                 <div className={style.descriptionContentContainer}>
                   <div className={style.descriptionContainer}>
-                    <BodyTwoText>{description}</BodyTwoText>
+                    <Typography variant="body2" gutterBottom>
+                      {description}
+                    </Typography>
                   </div>
                   <div className={style.mediaContainer}>
                     {video ? (

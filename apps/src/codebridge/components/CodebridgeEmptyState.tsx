@@ -1,10 +1,6 @@
 import {Button, ButtonProps} from '@code-dot-org/component-library/button';
 import Image, {ImageProps} from '@code-dot-org/component-library/image';
-import {
-  BodyThreeText,
-  BodyTwoText,
-} from '@code-dot-org/component-library/typography';
-import {Box} from '@mui/material';
+import {Box, Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {FC} from 'react';
 
@@ -39,9 +35,15 @@ export const CodebridgeEmptyState: FC<CodebridgeEmptyStateProps> = ({
       )}
       <div className={styles.textContainer}>
         {title && (
-          <BodyTwoText visualAppearance="heading-md">{title}</BodyTwoText>
+          <Typography component="p" variant="h4" gutterBottom>
+            {title}
+          </Typography>
         )}
-        {description && <BodyThreeText>{description}</BodyThreeText>}
+        {description && (
+          <Typography variant="body3" gutterBottom>
+            {description}
+          </Typography>
+        )}
       </div>
       {buttonProps && <Button {...buttonProps} />}
     </Box>

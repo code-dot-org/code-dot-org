@@ -1,8 +1,8 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import FeaturedProjects from '@cdo/apps/templates/projects/FeaturedProjects';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 $(document).ready(function () {
   const script = document.querySelector('script[data-featuredprojects]');
@@ -11,7 +11,7 @@ $(document).ready(function () {
   const archivedFeaturedProjects = featuredProjectsData.archived;
   const bookmarkedFeaturedProjects = featuredProjectsData.bookmarked;
 
-  ReactDOM.render(
+  createReactRoot(
     <FeaturedProjects
       activeFeaturedProjects={activeFeaturedProjects}
       bookmarkedFeaturedProjects={bookmarkedFeaturedProjects}

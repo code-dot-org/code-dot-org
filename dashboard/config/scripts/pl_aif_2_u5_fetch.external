@@ -1,0 +1,100 @@
+name 'pl-aif-2-U5-fetch'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Getting Data Online: fetch()
+
+
+#### When we use <code>fetch()</code>, we’re starting an online request. 
+
+#### **The key idea:** <code>fetch()</code> doesn’t hand you data right away — it hands you something that <em>can later become data</em>.
+
+
+---
+
+## Promise States (Quick Review)
+
+<div style="display:flex; gap:10px; flex-wrap:wrap; margin:10px 0;">
+  <div style="flex:1; min-width:190px; border-radius:12px; padding:12px; background:#dccbea;font-size: 14pt;">
+    <div style="font-weight:700;font-size: 14pt;">Pending</div>
+    <div style="margin-top:6px;font-size: 14pt;">waiting</div>
+  </div>
+  <div style="flex:1; min-width:190px;  border-radius:12px; padding:12px; background:#b2dee3;font-size: 14pt;">
+    <div style="font-weight:700;font-size: 14pt;">Fulfilled</div>
+    <div style="margin-top:6px;font-size: 14pt;">success</div>
+  </div>
+  <div style="flex:1; min-width:190px;  border-radius:12px; padding:12px; background:#f7bfbf;font-size: 14pt;">
+    <div style="font-weight:700;font-size: 14pt;">Rejected</div>
+    <div style="margin-top:6px;font-size: 14pt;">failure</div>
+  </div>
+</div>
+
+---
+
+## fetch() -Truth vs. Misconception
+
+<div style="border:1px solid #e5e7eb; border-radius:12px; overflow:hidden; max-width:820px; margin:12px 0;">
+  <div style="background:#f9fafb; padding:10px 12px; border-bottom:1px solid #e5e7eb;font-size: 14pt;">
+    <strong>Common Confusion</strong>
+  </div>
+  <div style="padding:12px; line-height:1.6;font-size: 14pt;">
+    <div style="margin-bottom:10px;font-size: 14pt;">
+      <span style="display:inline-block; padding:4px 10px; border-radius:999px; background:#f7bfbf;  font-weight:700;font-size: 14pt;">
+        Misconception
+      </span>
+      <span style="margin-left:8px;font-size: 14pt;"><code style= "font-size: 12pt;">fetch()</code> gives me the data.</span>
+    </div>
+    <div>
+      <span style="display:inline-block; padding:4px 10px; border-radius:999px; background:#b2dee3; ; font-weight:700;font-size: 14pt;">
+        Truth
+      </span>
+      <span style="margin-left:8px;font-size: 14pt;"><code style= "font-size: 12pt;">fetch()</code> returns a <strong>Promise</strong> that may deliver data later.</span>
+    </div>
+  </div>
+</div>
+
+---
+
+## What `fetch()` Actually Returns
+
+<div style="border:1px solid #e5e7eb; border-radius:12px; padding:12px; background:#ffffff; max-width:820px; margin:12px 0;">
+  <div style="font-weight:700; margin-bottom:6px;font-size: 14pt;">Flow of a fetch request</div>
+
+  <div style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; font-size:0.98em; background:#0b1020; color:#e5e7eb; padding:12px; border-radius:10px; overflow:auto;font-size: 14pt;">
+fetch(url)  →  Promise (Pending) <br>
+              ↳ Fulfilled → Response <br>
+              ↳ Rejected  → Error<br>
+  </div>
+
+  <div style="margin-top:10px; line-height:1.6;font-size: 14pt;">
+    <strong>Important:</strong> When the Promise is fulfilled, you do <em>not</em> get the final data yet. You get a <strong>Response</strong> object.<br>
+    That Response can then be turned into usable data (like JSON).
+  </div>
+</div>
+
+---
+
+
+
+
+## Mini Checkpoint
+
+#### Think about the following and check your answer before moving on.
+  
+#### If <code style= "font-size: 12pt;">fetch()</code> doesn’t give the final data right away, what does it give you immediately?
+
+
+<details style="margin:10px 0; border-radius:10px; padding:10px; background:#f7f8fa; max-width:820px;">
+  <summary style="cursor:pointer; font-weight:800;font-size: 14pt;">Show Answer ✅</summary>
+  <div style="padding-top:10px; line-height:1.6;font-size: 14pt;">
+    <strong>A Promise.</strong> It starts in the <strong>pending</strong> state and may later be fulfilled (with a <strong>Response</strong>) or rejected (with an <strong>Error</strong>).
+  </div>
+</details>
+
+
+
+
+
+
+MARKDOWN

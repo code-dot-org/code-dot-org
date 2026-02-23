@@ -42,7 +42,7 @@ Dir.chdir(REPO_DIR + '/dashboard')
 
 # This test suite can be modified - we can test a smaller set or add UI tests
 # here.
-test_result = system 'rake seed:incremental'
+test_result = system 'rake seed:all'
 
 Dir.chdir REPO_DIR
 

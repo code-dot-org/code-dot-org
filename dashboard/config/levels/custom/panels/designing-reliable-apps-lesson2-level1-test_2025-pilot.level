@@ -10,13 +10,13 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "# Synchronous Programming\n\n**Synchronous programming** is code that blocks progress by waiting for one task to fully finish before starting the next.",
-        "imageUrl": "https://images.code.org/40f48b98dcd32afdc633e1476b9efb46-sychronous.png",
+        "text": "# Synchronous Programming\n\n**Synchronous programming** is code that blocks progress by waiting for one task to fully finish before starting the next.\n\nThis is the type of code you've been programming up until this point, where each line runs in order and must complete before the next line executes.",
+        "imageUrl": "https://images.code.org/fc6f40498f38cee85762d703f145a6ab-Vocab Images (5).png",
         "key": "designing-reliable-apps-lesson2-level1-test_2025-pilot-e834eace-42c5-4df8-990e-d9987f293a0f",
         "layout": "text-bottom-center"
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2026-01-27 00:08:24 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-01-27 00:08:24 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-02-20 18:36:43 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-02-20 18:38:21 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Panels>

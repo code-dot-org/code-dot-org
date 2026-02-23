@@ -91,19 +91,13 @@ export interface BlocklyWrapperType extends BlocklyCoreType {
   isDarkTheme: boolean | undefined;
   varsInGlobals: boolean;
   disableVariableEditing: boolean;
-  ALIGN_CENTRE: BlocklyCore.inputs.Align.CENTRE;
-  ALIGN_LEFT: BlocklyCore.inputs.Align.LEFT;
-  ALIGN_RIGHT: BlocklyCore.inputs.Align.RIGHT;
   inputTypes: typeof BlocklyCore.inputs.inputTypes;
-  createSvgElement: typeof BlocklyCore.utils.dom.createSvgElement;
   analyticsData: AnalyticsData;
   showUnusedBlocks: boolean | undefined;
-  BlockFieldHelper: {[fieldHelper: string]: string};
   enableParamEditing: boolean;
   selected: BlocklyCore.BlockSvg;
   blockCountMap: Map<string, number> | undefined;
   blockLimitMap: Map<string, number> | undefined;
-  grayOutUndeletableBlocks: boolean;
   topLevelProcedureAutopopulate: boolean;
   isJigsaw: boolean;
   blockly_: typeof BlocklyCore;
@@ -157,19 +151,7 @@ export interface BlocklyWrapperType extends BlocklyCoreType {
   overrideFields: (
     overrides: [string, string, BlocklyCore.fieldRegistry.RegistrableField][]
   ) => void;
-  setInfiniteLoopTrap: () => void;
-  clearInfiniteLoopTrap: () => void;
-  getInfiniteLoopTrap: () => string | null;
-  loopHighlight: (apiName: string, blockId: string) => string;
   getWorkspaceCode: () => string;
-  addChangeListener: (
-    blockspace: BlocklyCore.Workspace,
-    handler: (e: BlocklyCore.Events.Abstract) => void
-  ) => void;
-  removeChangeListener: (
-    handler: (e: BlocklyCore.Events.Abstract) => void,
-    blockspace: BlocklyCore.Workspace
-  ) => void;
   getGenerator: () => ExtendedJavascriptGenerator;
   addEmbeddedWorkspace: (workspace: BlocklyCore.Workspace) => void;
   isEmbeddedWorkspace: (workspace: BlocklyCore.Workspace) => boolean;
@@ -187,7 +169,6 @@ export interface BlocklyWrapperType extends BlocklyCoreType {
   getHiddenDefinitionWorkspace: () => ExtendedWorkspace;
   fireUiEvent: (element: Element, eventName: string) => void;
   getFunctionEditorWorkspace: () => ExtendedWorkspaceSvg | undefined;
-  clearAllStudentWorkspaces: () => void;
   getPointerBlockImageUrl: (
     block: ExtendedBlockSvg,
     pointerMetadataMap: PointerMetadataMap,
@@ -231,7 +212,6 @@ export type BlocklyCoreInstance = typeof BlocklyCore;
 
 export interface ExtendedBlockSvg extends BlocklyCore.BlockSvg {
   canSerializeNextConnection?: boolean;
-  isUserVisible: () => boolean;
   shouldBeGrayedOut: () => boolean;
   // imageSourceId, shortString, longString and thumbnailSize are used for sprite pointer blocks
   imageSourceId?: string;
@@ -244,44 +224,15 @@ export interface ExtendedBlockSvg extends BlocklyCore.BlockSvg {
   workspace: ExtendedWorkspaceSvg;
 }
 
-export interface FieldHelperOptions {
+export interface AngleHelperOptions {
   block: BlocklyCore.Block;
   directionTitle?: string; // Ex. 'DIR'
   direction?: string; // Ex. 'turnRight'
 }
-
-export interface FieldHelpers {
-  [fieldHelper: string]: FieldHelperOptions;
-}
-export interface ExtendedInput extends BlocklyCore.Input {
-  addFieldHelper: (
-    fieldHelper: string,
-    options: FieldHelperOptions
-  ) => ExtendedInput;
-  setStrictCheck: (check: string | string[] | null) => BlocklyCore.Input;
-  // Blockly explicitly uses any for this type
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  getFieldRow: () => BlocklyCore.Field<any>[];
-}
-export interface ExtendedConnection extends BlocklyCore.Connection {
-  getFieldHelperOptions: (fieldHelper: string) => FieldHelperOptions;
-  fieldHelpers_: FieldHelpers;
-  addFieldHelper(fieldHelper: string, options: FieldHelperOptions): unknown;
-}
-
 export interface ExtendedBlock extends BlocklyCore.Block {
-  getFillPattern: () => string | undefined;
+  getFillPattern?: () => string | undefined;
   fillPattern?: string;
-  setFillPattern: (pattern: string) => void;
-  interpolateMsg: (
-    this: ExtendedBlock,
-    msg: string,
-    ...inputArgs: [...([string, string, number] | (() => void))[], number]
-  ) => void;
-  setStrictOutput: (isOutput: boolean, check: string | string[] | null) => void;
-  // Blockly uses any for value.
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  setTitleValue: (newValue: any, name: string) => void;
+  setFillPattern?: (pattern: string) => void;
   skipNextBlockGeneration?: boolean;
   svgPathFill: SVGElement;
 }
@@ -296,24 +247,13 @@ export interface ExtendedWorkspaceSvg extends BlocklyCore.WorkspaceSvg {
   events: {
     dispatchEvent: () => void;
   };
-  addUnusedBlocksHelpListener: () => void;
-  getAllUsedBlocks: () => BlocklyCore.Block[];
   registerGlobalVariables: (variableList: string[]) => void;
-  getVariableMap: () => ExtendedVariableMap;
-  getContainer: () => ParentNode | null;
-  setEnableToolbox: () => void;
-  traceOn: () => void;
   isReadOnly: () => boolean;
   cleanUp: (includeImmovableBlocks?: boolean) => void;
-  getBlockCount: () => number;
 }
 
 export interface EditorWorkspaceSvg extends ExtendedWorkspaceSvg {
   svgFrame_: WorkspaceSvgFrame;
-}
-
-export interface ExtendedVariableMap extends BlocklyCore.VariableMap {
-  addVariables: (variableList: string[]) => void;
 }
 
 export interface ExtendedBlocklyOptions extends BlocklyCore.BlocklyOptions {

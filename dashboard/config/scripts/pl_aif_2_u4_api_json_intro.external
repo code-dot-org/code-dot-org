@@ -5,17 +5,15 @@ description 'description here'
 markdown <<MARKDOWN
 # How Does an App Get Live Data? Intro to APIs
 
+<img src="https://images.code.org/ec00814b3780812d00fe6876a97daedc-image-1770743841734.png" alt="partly cloudy weather icon" width="250px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
 #### Many apps show information that doesn’t come from their own code.
 #### Weather apps, maps, music apps, and sports apps often pull data from somewhere else.
 #### So how does an app “ask” another service for information?
 
 #### In this level, you’ll learn what an API is and how it helps apps communicate with other systems.
 
----
-
-## A Simple Example: “Asking for Data”
-
-<img src="https://images.code.org/0b8a2e6a1e2b1d1b2e8ff3c0e8b6fbdd-image-1768601417811.png" alt="simple diagram showing client app sending request to server and receiving response" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+<div style="clear:both;"></div>
 
 ---
 
@@ -32,12 +30,11 @@ markdown <<MARKDOWN
     <summary style="font-size: 1.5em; font-weight: bold;">💡 Check your thinking:</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
     <p style="font-size: 14pt;">
-Many apps don’t store all the information they show. Instead, they pull live data from another service—like weather forecasts, maps, or movie times. That means the app has to communicate with another system to request the data and receive it back.
+Many apps don’t store all the information they show. Instead, they pull live data from another service, like weather forecasts, maps, or movie times. That means the app has to communicate with another system to request the data and receive it back.
 </p>
 </div>
 </details>
 
----
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">
@@ -46,6 +43,13 @@ Many apps don’t store all the information they show. Instead, they pull live d
 </div>
 
 ---
+
+##  “Asking for Data”
+
+<img src="https://images.code.org/5f49c06b5874c513ec0055162e10b53c-image-1770743675458.png" alt="simple diagram showing client app sending request to server and receiving response" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+
+---
+
 
 ## What Happens When an App Uses an API?
 
@@ -70,12 +74,11 @@ The app doesn’t “grab” data magically—it follows a predictable pattern: 
 
 ---
 
-<div style="background-color: #F6E7B4; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<div style="background-color: #dccbea; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%; margin-bottom: 8px;">
-<strong>🧠 Vocabulary</strong>
+<strong>🧠 Terms to know:</strong>
 </p>
 <p style="font-size: 14pt; line-height: 135%; margin: 0;">
-<strong>API:</strong> A set of rules that allows software to communicate<br>
 <strong>Client:</strong> The app asking for data<br>
 <strong>Server:</strong> The service that stores and sends data<br>
 <strong>Request:</strong> A message asking for data<br>

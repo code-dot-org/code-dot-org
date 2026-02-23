@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -74,6 +75,14 @@ describe('EvidenceDescriptions', () => {
     expect(
       wrapper.find('EvidenceDescriptionsRow').at(0).props().learningGoalId
     ).toBe(learningGoalData.id);
-    expect(wrapper.find('Heading6').length).toBe(3);
+    const headers = wrapper
+      .find(Typography)
+      .filterWhere(node => node.props().variant === 'h6');
+    expect(headers.length).toBe(3);
+    expect(headers.at(0).text()).toBe('Evidence level');
+    expect(headers.at(1).text()).toBe('Description for external viewers');
+    expect(headers.at(2).text()).toBe(
+      'Description for AI generated evaluation'
+    );
   });
 });

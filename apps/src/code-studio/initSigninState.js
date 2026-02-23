@@ -1,7 +1,6 @@
 import $ from 'jquery';
 import cookies from 'js-cookie';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
@@ -10,6 +9,7 @@ import {
   setUserType,
 } from '@cdo/apps/templates/currentUserRedux';
 import SignInOrAgeDialog from '@cdo/apps/templates/SignInOrAgeDialog';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 import {getStore} from './redux';
 
@@ -47,7 +47,7 @@ export default function initSigninState(userType, under13) {
     }
 
     const div = document.createElement('div');
-    ReactDOM.render(
+    createReactRoot(
       <Provider store={store}>
         <SignInOrAgeDialog />
       </Provider>,
