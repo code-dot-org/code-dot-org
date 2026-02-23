@@ -6,6 +6,7 @@ import {EditorView, ViewUpdate} from '@codemirror/view';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
 
+import {editorConfig} from '@cdo/apps/codemirror/editorConfig';
 import {FontSize} from '@cdo/apps/lab2/constants';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {
@@ -18,7 +19,6 @@ import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
-import {editorConfig} from './editorConfig';
 import {
   darkMode as darkModeTheme,
   lightMode as lightModeTheme,
