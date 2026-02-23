@@ -1,0 +1,36 @@
+@import 'color';
+
+.textLink {
+  display: inline-block;
+  margin: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 25px;
+  cursor: pointer;
+  max-width: 90%;
+}
+
+.mapThumbnail {
+  background-color: $teal;
+}
+
+.commonThumbnail {
+  border-radius: 5px;
+  padding: 16px 26px 9px 26px;
+}
+
+.commonIcon {
+  font-size: 22px;
+}
+
+.mapIcon {
+  color: $white;
+}
+
+.resourceIcon {
+  color: $teal;
+}
+
+.resourceStyle {
+  margin: 8px;
+}
