@@ -4,7 +4,6 @@ import {CSVLink} from 'react-csv';
 import {connect} from 'react-redux';
 
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import {setUnit} from '@cdo/apps/redux/unitSelectionRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {
   asyncLoadAssessments,
@@ -63,7 +62,6 @@ class SectionAssessments extends Component {
     scriptId: PropTypes.number,
     courseVersionId: PropTypes.number,
     assessmentId: PropTypes.number,
-    setUnit: PropTypes.func.isRequired,
     setAssessmentId: PropTypes.func.isRequired,
     asyncLoadAssessments: PropTypes.func.isRequired,
     multipleChoiceSurveyResults: PropTypes.array,
@@ -336,9 +334,6 @@ export default connect(
     studentList: state.teacherSections.selectedStudents,
   }),
   dispatch => ({
-    setUnit(scriptId, courseVersionId) {
-      dispatch(setUnit(scriptId, courseVersionId));
-    },
     asyncLoadAssessments(sectionId, scriptId, courseVersionId) {
       return dispatch(
         asyncLoadAssessments(sectionId, scriptId, courseVersionId)
