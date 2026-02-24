@@ -10,7 +10,7 @@ import {connect} from 'react-redux';
 
 import {projectChanged} from '@cdo/apps/code-studio/initApp/project';
 import {hasQueryParam} from '@cdo/apps/code-studio/utils';
-import {editorConfig} from '@cdo/apps/lab2/views/components/editor/editorConfig';
+import {editorConfig} from '@cdo/apps/codemirror/editorConfig';
 import {
   darkMode,
   lightMode,

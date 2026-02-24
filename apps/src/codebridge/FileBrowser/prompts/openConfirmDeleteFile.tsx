@@ -3,6 +3,7 @@ import {ProjectFile} from '@codebridge/types';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
+import {getFileExtension} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 import {DialogType, DialogControlInterface} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
@@ -42,7 +43,7 @@ export const openConfirmDeleteFile = async ({
     }
     deleteFile({fileId: file.id});
     sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_DELETE_FILE, {
-      fileType: file.language?.toLowerCase(),
+      fileType: getFileExtension(file.name),
     });
   }
 };

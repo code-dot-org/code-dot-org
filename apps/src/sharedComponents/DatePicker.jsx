@@ -3,8 +3,8 @@
  * It's basically a wrapper around react-datepicker (with limited props) that displays
  * as a React-Bootstrap select with a calendar icon Addon.
  */
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {InputGroup, FormGroup, FormControl} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import ReactDatePicker from 'react-datepicker';
@@ -12,10 +12,11 @@ import ReactDOM from 'react-dom';
 
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 
-import {DATE_FORMAT} from '../workshopConstants';
+import {DATE_FORMAT} from '../code-studio/pd/workshop_dashboard/workshopConstants';
 
 import 'react-datepicker/dist/react-datepicker.css';
 import '@cdo/apps/code-studio/assets/date_picker.scss';
+import styles from './date-picker.module.scss';
 
 class DateInputWithIconUnwrapped extends React.Component {
   static propTypes = {
@@ -51,7 +52,7 @@ class DateInputWithIconUnwrapped extends React.Component {
             type="text"
             value={this.props.value}
             onChange={this.props.onChange}
-            style={this.props.disabled ? styles.readOnlyInput : null}
+            className={classNames(this.props.disabled && styles.readOnlyInput)}
             disabled={this.props.disabled}
             onBlur={this.props.onBlur}
             ref={ref => (this.inputControl = ReactDOM.findDOMNode(ref))}
@@ -59,7 +60,7 @@ class DateInputWithIconUnwrapped extends React.Component {
           {!this.props.disabled && this.props.value && this.props.onClear && (
             <FormControl.Feedback>
               <span
-                style={styles.clearElement}
+                className={styles.clearElement}
                 onClick={this.handleClear}
                 title="Clear value"
               >
@@ -75,7 +76,7 @@ class DateInputWithIconUnwrapped extends React.Component {
     );
   }
 }
-const DateInputWithIcon = Radium(DateInputWithIconUnwrapped);
+const DateInputWithIcon = DateInputWithIconUnwrapped;
 
 export default class DatePicker extends React.Component {
   static propTypes = {
@@ -128,21 +129,3 @@ export default class DatePicker extends React.Component {
     );
   }
 }
-
-const styles = {
-  readOnlyInput: {
-    backgroundColor: 'inherit',
-    cursor: 'default',
-    border: 'none',
-  },
-  clearElement: {
-    color: '#999',
-    fontSize: '18px',
-    zIndex: 10,
-    cursor: 'pointer',
-    pointerEvents: 'all',
-    ':hover': {
-      color: '#D0021B',
-    },
-  },
-};

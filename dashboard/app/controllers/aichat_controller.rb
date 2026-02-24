@@ -3,7 +3,8 @@ class AichatController < ApplicationController
 
   # GET /aichat/user_has_access
   def user_has_access
-    render(status: :ok, json: {userHasAccess: current_user&.has_aichat_access?})
+    ai_chat_new_permissions = params[:'ai-chat-new-permissions'].present?
+    render(status: :ok, json: {userHasAccess: current_user&.has_aichat_lab_access?(new_permissions_enabled: ai_chat_new_permissions)})
   end
 
   # POST /aichat/find_toxicity

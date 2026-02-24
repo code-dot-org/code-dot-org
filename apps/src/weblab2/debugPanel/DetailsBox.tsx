@@ -1,18 +1,17 @@
 import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  BodyThreeText,
-  OverlineThreeText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useMemo} from 'react';
+
+import CopyButton from './CopyButton';
 
 import moduleStyles from './details-box.module.scss';
 import parentStyles from './network-panel.module.scss';
 
-interface DetailsField {
+export interface DetailsField {
   label: string;
   value?: string | number;
+  copyable?: boolean;
 }
 
 interface DetailsBoxProps {
@@ -52,9 +51,9 @@ const DetailsBox: React.FunctionComponent<DetailsBoxProps> = ({
   return (
     <div className={moduleStyles.detailsBox}>
       <div className={moduleStyles.detailsHeader}>
-        <BodyThreeText className={moduleStyles.detailsHeaderText}>
-          <StrongText>{title}</StrongText>
-        </BodyThreeText>
+        <Typography className={moduleStyles.detailsHeaderText} variant="body3">
+          <Typography variant="strong">{title}</Typography>
+        </Typography>
         <FontAwesomeV6Icon
           iconName={iconName}
           className={iconClassName}
@@ -66,13 +65,27 @@ const DetailsBox: React.FunctionComponent<DetailsBoxProps> = ({
         {rows.map((row, rowIndex) => {
           const content = row.map(field => (
             <div key={field.label} className={moduleStyles.detailsField}>
-              <OverlineThreeText className={moduleStyles.detailsFieldLabel}>
-                {field.label}
-              </OverlineThreeText>
+              <div className={moduleStyles.detailsFieldLabelRow}>
+                <Typography
+                  className={moduleStyles.detailsFieldLabel}
+                  variant="overline3"
+                >
+                  {field.label}
+                </Typography>
+                {field.copyable && (
+                  <CopyButton
+                    label={field.label}
+                    value={String(field.value ?? '')}
+                  />
+                )}
+              </div>
               <pre className={moduleStyles.detailsFieldValueContainer}>
-                <BodyThreeText className={moduleStyles.detailsFieldValue}>
+                <Typography
+                  className={moduleStyles.detailsFieldValue}
+                  variant="body3"
+                >
                   {field.value}
-                </BodyThreeText>
+                </Typography>
               </pre>
             </div>
           ));

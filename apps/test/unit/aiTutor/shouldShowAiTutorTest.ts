@@ -1,12 +1,12 @@
 import {
   shouldShowAiTutor,
-  APPS_ALWAYS_USING_AI_TUTOR,
-} from '@cdo/apps/aiTutor/helpers/shouldShowAiTutor';
+  APPS_WITH_ESSENTIAL_AI_CHAT,
+} from '@cdo/apps/aichat/helpers/aiChatAccess';
 
 describe('shouldShowAiTutor', () => {
   describe('when app is always using AI tutor', () => {
     it('returns true for any app in APPS_ALWAYS_USING_AI_TUTOR', () => {
-      APPS_ALWAYS_USING_AI_TUTOR.forEach(appName => {
+      APPS_WITH_ESSENTIAL_AI_CHAT.forEach(appName => {
         const result = shouldShowAiTutor({
           appName,
           tutorLevel: false,

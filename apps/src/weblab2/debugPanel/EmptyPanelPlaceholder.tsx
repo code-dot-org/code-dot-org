@@ -1,9 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  BodyFourText,
-  BodyTwoText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import moduleStyles from './empty-panel-placeholder.module.scss';
@@ -23,12 +19,12 @@ const EmptyPanelPlaceholder: React.FunctionComponent<
         <div className={moduleStyles.iconCircle}>
           <FontAwesomeV6Icon iconName={iconName} />
         </div>
-        <BodyTwoText className={moduleStyles.title}>
-          <StrongText>{title}</StrongText>
-        </BodyTwoText>
-        <BodyFourText className={moduleStyles.description}>
+        <Typography className={moduleStyles.title} variant="body2">
+          <Typography variant="strong">{title}</Typography>
+        </Typography>
+        <Typography className={moduleStyles.description} variant="body4">
           {description}
-        </BodyFourText>
+        </Typography>
       </div>
     </div>
   );
