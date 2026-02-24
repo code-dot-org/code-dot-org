@@ -107,10 +107,12 @@ $(document).ready(function () {
         <div>
           <div>(shift-click or cmd-click to select multiple)</div>
           <div>
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a href="#" onClick={this.selectAll}>
               Select All
             </a>
             <span> | </span>
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a href="#" onClick={this.clearAll}>
               Select None
             </a>
