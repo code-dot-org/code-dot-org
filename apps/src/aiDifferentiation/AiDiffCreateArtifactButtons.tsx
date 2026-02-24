@@ -28,7 +28,6 @@ const AiDiffCreateArtifactButtons: React.FC<Props> = ({message}) => {
         text="Create artifact"
       />
       <br />
-      {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
       <a href="#">
         What is an artifact?
         <FontAwesomeV6Icon iconName="arrow-up-right-from-square" />
