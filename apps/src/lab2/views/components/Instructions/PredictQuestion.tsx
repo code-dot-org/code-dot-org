@@ -1,6 +1,7 @@
 import Button from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import {RadioButton} from '@code-dot-org/component-library/radioButton';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
@@ -12,7 +13,6 @@ import {
 } from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import commonI18n from '@cdo/locale';
 
 import {PREDICT_FREE_RESPONSE_DEFAULT_HEIGHT} from '../../../constants';
 
@@ -150,13 +150,18 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
             );
           })
         )}
+        {isWeblab2 && !predictAnswerLocked && (
+          <Typography variant="body4">
+            Javascript will not run until you submit your prediction.
+          </Typography>
+        )}
       </div>
       {/* Because weblab2 does not have a 'Run' button to indicate that they have submitted their answer,
         we display a 'Submit answer button. */}
       {isWeblab2 && (
         <Button
           onClick={onSubmitAnswer}
-          text={commonI18n.submitAnswer()}
+          text="Submit Answer"
           size="s"
           className={moduleStyles.submitButton}
           disabled={predictAnswerLocked || !hasAnswer}
