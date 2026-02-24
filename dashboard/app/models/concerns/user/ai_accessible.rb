@@ -29,6 +29,7 @@ module User::AiAccessible
   end
 
   def student_can_access_ai_chat_lab?(new_permissions_enabled: false)
+    # REMOVE getAiChatNewPermissionsParam hack after experiment ships!!!
     if new_permissions_enabled
       teachers.any?(&:teacher_can_access_ai_chat_lab?) &&
         ai_chat_access_level != AI_CHAT_ACCESS_LEVELS[:DISABLED]

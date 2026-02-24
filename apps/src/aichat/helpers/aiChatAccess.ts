@@ -43,6 +43,7 @@ export const areAiChatToolsEnabled = ({
     return true;
   }
   if (APPS_WITH_ESSENTIAL_AI_CHAT.includes(appName)) {
+    // either ESSENTIAL_ONLY or ENABLED access level permits AI Chat tools for apps that consider AI Chat essential
     return aiChatAccessLevel !== AiChatAccessLevels.DISABLED;
   }
   return aiChatAccessLevel === AiChatAccessLevels.ENABLED;

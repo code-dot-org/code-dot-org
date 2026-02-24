@@ -80,6 +80,7 @@ export async function postLogChatEvent(
     newChatEvent,
     aichatContext,
   };
+  // REMOVE getAiChatNewPermissionsParam hack after experiment ships!!!
   const response = await HttpClient.post(
     paths.LOG_CHAT_EVENT_URL + getAiChatNewPermissionsParam(),
     JSON.stringify(payload),
@@ -173,6 +174,7 @@ export async function postAichatCompletionMessage(
   maxPollingTimeMs =
     maxPollingTimeMs || AiChatReadTimeouts[aichatContext.clientType] * 1500;
 
+  // REMOVE getAiChatNewPermissionsParam hack after experiment ships!!!
   const response = await HttpClient.post(
     paths.START_CHAT_COMPLETION_URL + getAiChatNewPermissionsParam(),
     JSON.stringify(payload),
@@ -317,6 +319,7 @@ function getUpdatedMessages(
 }
 
 /**
+ * *** REMOVE THIS AND ALL CALLERS AFTER THE EXPERIMENT ENDS ***
  * This is a temporary method to pass on the experiment flag to the backend until we remove the experiment.
  */
 function getAiChatNewPermissionsParam(): string {
