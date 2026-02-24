@@ -47,7 +47,7 @@ namespace :install do
         if ENV['CI']
           if ENV['CI_JOB'] == 'unit_tests'
             # Prepare for dashboard unit tests to run.
-            RakeUtils.rake 'db:create db:test:prepare'
+            RakeUtils.rake_stream_output 'db:create db:test:prepare'
           else
             # If we don't already have a database that's been restored from a
             # cache, prepare one from scratch by creating the database and loading
