@@ -1,5 +1,5 @@
 import TextField from '@code-dot-org/component-library/textField';
-import {BodyThreeText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useMemo} from 'react';
 
@@ -29,9 +29,9 @@ export default function SchoolZipSearch({fieldNames, schoolZip, setSchoolZip}) {
           value={schoolZip}
         />
         {schoolZip && !schoolZipIsValid && (
-          <BodyThreeText className={style.errorMessage}>
+          <Typography className={style.errorMessage} variant="body3">
             {i18n.zipInvalidMessage()}
-          </BodyThreeText>
+          </Typography>
         )}
       </label>
     </div>

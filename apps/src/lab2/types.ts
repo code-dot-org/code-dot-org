@@ -153,7 +153,6 @@ export interface MultiFileSource {
 export interface ProjectFile {
   id: FileId;
   name: string;
-  language: string;
   contents: string;
   active?: boolean;
   folderId: string;

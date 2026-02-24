@@ -77,7 +77,8 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         educator_role: current_user.educator_role,
         sharing_disabled: current_user.sharing_disabled,
         is_levelbuilder: current_user.levelbuilder?,
-        ai_tutor_enabled_for_pilot: current_user.ai_tutor_enabled_for_pilot?
+        ai_tutor_enabled_for_pilot: current_user.ai_tutor_enabled_for_pilot?,
+        ai_chat_access_level: current_user.ai_chat_access_level,
       }
     else
       render json: {

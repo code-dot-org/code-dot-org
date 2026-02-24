@@ -220,6 +220,14 @@ class Ability
           user.students.exists?(id: feedback.student_id)
         end
 
+        # LessonFeedback abilities - teachers can manage lesson feedback for their students
+        can :create, LessonFeedback do |feedback|
+          user.students.exists?(id: feedback.student_id)
+        end
+        can :update, LessonFeedback do |feedback|
+          user.students.exists?(id: feedback.student_id) && feedback.teacher_id == user.id
+        end
+
       end
 
       if user.facilitator?
@@ -528,7 +536,7 @@ class Ability
       end
 
       can :find_toxicity, :aichat do
-        user.teacher_can_access_ai_chat? || user.student_can_access_ai_chat?
+        user.teacher_can_access_ai_chat_lab? || user.student_can_access_ai_chat_lab?
       end
 
       can :user_has_access, :aichat

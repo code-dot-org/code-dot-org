@@ -1,0 +1,36 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-02-21T03:58:31.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Step Layout",
+    "long_instructions": "<img src=\"https://images.code.org/436a2703e4959673c6232f2669a4d0a8-steps.png\" style=\"float: right; width: 300px;\">\r\n\r\n# Simple Steps\r\n\r\nWe can do some fun stuff without layouts using Flex child properties! Let's practice both the `flex-grow` and `align-self` properties to make us some steps!\r\n\r\n# Do This\r\n\r\n**In the HTML file:**\r\n1. Make note of the class attribute names for each of the paragraph tags in the \"steps\" parent container.\r\n\r\n**In the CSS file:**\r\n1. Add a rule to set all child paragraph elements to take up an equal portion of the parent container.\r\n   - _Hint: you will need to use a child selector. See the \"Help & Tips\" tab to find out more about child selectors._\r\n2. Add a rule set for **each** of the paragraph elements to look like steps.\r\n   - _Hint: you will need to use the `align-self` property for each of the elements._\r\n\r\n<br>\r\n\r\n::: details [🔎 **Show Me How To Get Started** 🔍]\r\n\r\n<img src=\"https://images.code.org/3bd1faf95c594601a1c97a55569f953f-image-1708195963394.gif\" style=\"width:500px\">\r\n\r\n:::\r\n\r\n<br>\r\n\r\n\r\n\r\n**Don't forget to refer back to your <a href=\"https://docs.google.com/document/d/1lrkMGcPwjKo4g5uyvVfaXpFb7kRUfdtqcsqLRtaDWYM/edit?usp=sharing\">Flexbox Children Cheat Sheet</a> when needed!**\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Flex Children](https://studio.code.org/courses/csd-2024/guides/flex-children)\r\n- [<i class=\"fa-solid fa-book\"></i> Flexbox](https://studio.code.org/courses/csd-2024/guides/flexbox)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Selectors](https://studio.code.org/courses/csd-2024/guides/html-selectors)\r\n- [<i class=\"fa-solid fa-book\"></i> Div Tags](https://studio.code.org/courses/csd-2024/guides/div)\r\n- [<i class=\"fa-solid fa-book\"></i> Classes](https://studio.code.org/courses/csd-2024/guides/classes)\r\n- [<i class=\"fa-solid fa-book\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "bubble_choice_description": "Practice setting the `align-self` property to create some steps!",
+    "thumbnail_url": "https://images.code.org/436a2703e4959673c6232f2669a4d0a8-steps.png",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "project_template_level_name": "CSD U2L13-L6b-template-2025",
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMq6axOHbZCY2Ot6j2ta\nc2xUssWeFgyQik6LW5d9KjvGXB0WNtSc6Aew3gFAHiWxOPOkXODL1KEHdyrC\n197vfOvUyempysyXw77NCjviYRUdHKAC/uKseWjOSd/luHbWryZc9iBMHMte\nHk6nqUJ6FIxUZW91dEZAVOD6d5Nnt8JE6cDhMmGH1Qa1uQsXNZ7A/sXGNI6S\nMuoyQSQOP2IvGZFPWS7H+seWPxBtZ6Y/cISo3IqH2iB9QG1tcDLeVSbZQoJj\nG7brlWQ05zM9dYgJy0/8YP//T6QwXhwPeHp5u9O9nDKrp6rK0zDv4TM4UigI\n6yUaalkWetuMGjdZ9Waii6kgyPJyrOfkAo0ykKr9mbXpNeKTFOR60pqcM++5\n2PPs3N74GHJK7VAMpAI7vN9FrjMVwCgwWagNv2BNAsZqqiNx+1OPimxcNa01\nekkcBRJi2/ZTFmZEDCP8mfL8aH6gWaX59vkXc+YwEazsqMoU5Zl1ijDjKDvh\nTMO9KVYb6jVgfHkIpV7gXMGBq2KCfClReUXy0t3gflJZ6/c4o0xHmPVNTN7f\nZcfTRJBpQySHVkGuuld1nKYCslmf1U7Wou/w7jqAUqE5T7uQHvn0gRXZhOrc\nDe9oUm+zs/xeNTPOXOs06vJt3s00UavQ95emhnTASGRf7nM3jOALCj4p2yNc\nybUQPR1KAH5FQNneBMZtgvmBmRHFM80VjRjlaXTwXpYkzFYmi09x4vskw3X6\nykNmORbiwMlJmUBvVoBljSF80oWhGunwzaqdjTuh2ppW5wjwZDfBdR6P4BON\n8840FKJupHTjMS1JN82X16E627DsIqR11HlvXFLo3fUHPAmqMTcfSLZIsckc\nvSlgcGT1GSvM/j0CwvZrJhgJXu+HUZFOuBpECtK3krWzM4eiGgIIRP3xUeeE\n8vFqqjoIggLvmdTdL1ZSg/E+Fnz6lXdgGUPgiLH8aPgmD0fKinRRo5DeUCnS\n8j79uvtZ+Jc1xA60c0IsqhT6OuuJnIWX62+oRZR8SZ/PvcE1c8MPXl00q0V5\nrSrHyYe6DbbN6j0V4+irZlkvkg2FRmql+GkugQLbHzsq2qpXU2J3tC8dMTwW\nAPHGWQspFbXEj8lBfgis7ce25kCQJkwr3qGfE/d3sc09zjK/4mwsaahtavke\nVfdtZtUdi6yZxWX7TdeUW2zZXhXJK4zSX3MRjt5pWIp3WB3t292HIH9GpT4n\nq6YvSsHQ/zqa37ukYMGy3FfXTVbTvLDIQZ1w6z2cyq+MaF6rsXRc3HtiVDI/\n+Qk6wJlAmYXtesE4khDwtnaeeud3yg6YY1Dj57YJzVAU/3vzisxEWBuj76QE\nV7vkFmH6t9aNzNBdOBLwC9WmxO6ycxrA0acR/XDlUVmDbJe+5cI305FFRlPX\nC1oepzyj9KAZSAfgRnF6/EJKRoZ8IrXCkwi78US3+mo2/ve5Vz3i369v6JWc\nHmGlya44DpejHxnj1k3jhFaUYy/myifTMp7r2g2mgX6LwCKHNRl//6QRSxKY\nM3TIXlISRygX2ZTzP3tDXmOHCPemvWbSJSMjgv50xKQ1IFZY/7rDxgRUm9bo\njUqaLvi8/tImhIf+BhG5T0Gm+XJ5hIp8fUhvEw8E8AS+\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-21 03:59:29 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-21 04:01:09 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-21 04:01:28 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

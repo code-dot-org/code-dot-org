@@ -313,7 +313,21 @@
       # Credentials (username and password) for the SQL User this Resource is provisioning.
       DBCredentialSecret: !Ref DatabaseSecretReader
       Privileges: ['SELECT']
-
+<% if rack_env?(:production) || rack_env?(:test) # Provision Zero ETL on managed test server and production. -%>
+  ZeroETLIntegration:
+    Type: AWS::RDS::Integration
+    Properties:
+      IntegrationName: !Sub "${AWS::StackName}-zero-etl"
+      Description: "Export transactional tables from MySQL to Redshift via Zero-ETL integration."
+      SourceArn: !Sub
+        - "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:${ClusterId}"
+        - ClusterId: <%=rack_env?(:production) ? PRODUCTION_DB_CLUSTER_ID : '!Ref AuroraCluster' %>
+      TargetArn: !ImportValue DATA-production-RedshiftClusterNamespace
+      DataFilter: !Sub "include: dashboard_<%=rack_env %>.levels"
+      Tags:
+        - Key: environment
+          Value: "<%=rack_env %>"
+<% end -%>
 <% # We don't provision DB Cluster and Instances in production via CloudFormation ... yet!
   unless rack_env?(:production)
 -%>
