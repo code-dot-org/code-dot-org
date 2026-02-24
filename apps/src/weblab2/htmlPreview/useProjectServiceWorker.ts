@@ -43,7 +43,7 @@ function useProjectServiceWorker(
         .then(registration => {
           if (registration.active) {
             console.log(
-              'setting active service worker, navigator.serviceWorker.controller:',
+              'setting already active service worker, navigator.serviceWorker.controller:',
               navigator.serviceWorker.controller
             );
             setServiceWorker(registration.active);
@@ -54,7 +54,8 @@ function useProjectServiceWorker(
               installingWorker.addEventListener('statechange', () => {
                 if (installingWorker.state === 'activated') {
                   console.log(
-                    'Service worker activated and ready to receive messages'
+                    'setting activated service worker, navigator.serviceWorker.controller:',
+                    navigator.serviceWorker.controller
                   );
                   // Wait for the service worker to be fully activated (and call clients.claim())
                   // before updating our reference. Safari requires the worker to be controlling
