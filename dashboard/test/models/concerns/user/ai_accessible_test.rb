@@ -18,44 +18,6 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
 
     allow(Policies::Lti).to receive(:lti?).and_return(false)
     allow(DCDO).to receive(:get).and_call_original
-    allow(DCDO).to receive(:get).with('ai-tutor-disabled', false).and_return(false)
-    allow(SingleUserExperiment).to receive(:enabled?).with(user: user, experiment_name: User::AiAccessible::AI_TUTOR_PILOT_NAME).and_return(false)
-    allow(Queries::User::TeacherEnabledExperiments).to receive(:call).with(user).and_return([])
-  end
-
-  describe '#ai_tutor_enabled_for_pilot?' do
-    subject(:ai_tutor_enabled_for_pilot?) {user.ai_tutor_enabled_for_pilot?}
-
-    it 'returns false if ai_tutor_access_denied is true' do
-      user.update!(ai_tutor_access_denied: true)
-      _ai_tutor_enabled_for_pilot?.must_equal false
-    end
-
-    it 'returns false if globally disabled' do
-      allow(DCDO).to receive(:get).with('ai-tutor-disabled', false).and_return(true)
-      _ai_tutor_enabled_for_pilot?.must_equal false
-    end
-
-    it 'returns true if student has a teacher in the pilot' do
-      allow(Queries::User::TeacherEnabledExperiments).to receive(:call).with(user).and_return([User::AiAccessible::AI_TUTOR_PILOT_NAME])
-      _ai_tutor_enabled_for_pilot?.must_equal true
-    end
-
-    it 'returns false if student does not have a teacher in the pilot' do
-      _ai_tutor_enabled_for_pilot?.must_equal false
-    end
-
-    it 'returns true if teacher is in the pilot' do
-      allow(user).to receive(:teacher?).and_return(true)
-
-      allow(SingleUserExperiment).to receive(:enabled?).with(user: user, experiment_name: User::AiAccessible::AI_TUTOR_PILOT_NAME).and_return(true)
-      _ai_tutor_enabled_for_pilot?.must_equal true
-    end
-
-    it 'returns false if teacher is not in the pilot' do
-      allow(user).to receive(:teacher?).and_return(true)
-      _ai_tutor_enabled_for_pilot?.must_equal false
-    end
   end
 
   describe '#can_use_ai_iteration_tools?' do
