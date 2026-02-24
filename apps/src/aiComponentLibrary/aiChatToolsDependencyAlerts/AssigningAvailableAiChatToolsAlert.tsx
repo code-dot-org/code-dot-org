@@ -14,7 +14,7 @@ import AiChatToolsInfoAlert from './AiChatToolsInfoAlert';
  */
 const AssigningAvailableAiChatToolsAlert: React.FC = () => {
   const aiTutorEnabledForPilot = useAppSelector(
-    state => state.currentUser?.aiTutorEnabledForPilot
+    state => state.currentUser.aiTutorEnabledForPilot
   );
 
   if (!aiTutorEnabledForPilot) {
