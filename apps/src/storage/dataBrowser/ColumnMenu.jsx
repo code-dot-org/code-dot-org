@@ -25,30 +25,59 @@ export default class ColumnMenu extends React.Component {
     /* TODO(dave): remove 'pull-right' once we upgrade to bootstrap 3.1.0 */
     return (
       <span className="dropdown pull-right" style={menuStyle}>
-        <a className="dropdown-toggle" data-toggle="dropdown">
+        <button
+          type="button"
+          className="dropdown-toggle"
+          data-toggle="dropdown"
+          style={styles.dropdownToggle}
+        >
           <FontAwesome icon="cog" style={styles.icon} />
-        </a>
+        </button>
         <ul className="dropdown-menu dropdown-menu-right" style={{minWidth: 0}}>
           <li style={{cursor: 'pointer'}}>
-            <a onClick={this.props.handleRename}>{msg.rename()}</a>
+            <button
+              type="button"
+              onClick={this.props.handleRename}
+              style={styles.menuButton}
+            >
+              {msg.rename()}
+            </button>
           </li>
           <li style={{cursor: 'pointer'}}>
-            <a onClick={this.props.handleDelete}>{msg.delete()}</a>
+            <button
+              type="button"
+              onClick={this.props.handleDelete}
+              style={styles.menuButton}
+            >
+              {msg.delete()}
+            </button>
           </li>
           <li style={{cursor: 'pointer'}}>
-            <a onClick={() => this.props.coerceColumn(ColumnType.STRING)}>
+            <button
+              type="button"
+              onClick={() => this.props.coerceColumn(ColumnType.STRING)}
+              style={styles.menuButton}
+            >
               {msg.dataTableConvertToString()}
-            </a>
+            </button>
           </li>
           <li style={{cursor: 'pointer'}}>
-            <a onClick={() => this.props.coerceColumn(ColumnType.NUMBER)}>
+            <button
+              type="button"
+              onClick={() => this.props.coerceColumn(ColumnType.NUMBER)}
+              style={styles.menuButton}
+            >
               {msg.dataTableConvertToNumber()}
-            </a>
+            </button>
           </li>
           <li style={{cursor: 'pointer'}}>
-            <a onClick={() => this.props.coerceColumn(ColumnType.BOOLEAN)}>
+            <button
+              type="button"
+              onClick={() => this.props.coerceColumn(ColumnType.BOOLEAN)}
+              style={styles.menuButton}
+            >
               {msg.dataTableConvertToBoolean()}
-            </a>
+            </button>
           </li>
         </ul>
       </span>
@@ -56,9 +85,28 @@ export default class ColumnMenu extends React.Component {
   }
 }
 
+const buttonReset = {
+  background: 'none',
+  border: 'none',
+  font: 'inherit',
+  cursor: 'pointer',
+};
+
 const styles = {
   icon: {
     color: 'white',
     cursor: 'pointer',
+  },
+  dropdownToggle: {
+    ...buttonReset,
+    padding: 0,
+    margin: 0,
+  },
+  menuButton: {
+    ...buttonReset,
+    display: 'block',
+    width: '100%',
+    textAlign: 'left',
+    padding: '2px 12px',
   },
 };
