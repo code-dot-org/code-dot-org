@@ -7,10 +7,14 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(function () {
   const answerTypes = getScriptData('answertypes');
-  console.log({answerTypes});
+  const legacyMode = document.querySelector('script[data-legacymode').dataset
+    .legacymode;
 
   createReactRoot(
-    <EditAiTutorPromptSettings answerTypes={answerTypes} />,
+    <EditAiTutorPromptSettings
+      answerTypes={answerTypes}
+      legacyMode={legacyMode}
+    />,
     document.getElementById('ai-tutor-prompt-settings-editor')
   );
 });
