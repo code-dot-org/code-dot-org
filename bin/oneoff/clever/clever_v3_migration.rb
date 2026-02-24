@@ -34,7 +34,7 @@ csv_data.each do |row|
   legacy_id = row['role_id']
   v3_user_id = row['user_id']
   next if legacy_id.nil? || v3_user_id.nil?
-  auth_option = V3AuthOptionBuilder.new(
+  auth_option = Services::Clever::V3AuthOptionBuilder.new(
     clever_v2_id: legacy_id,
     clever_v3_id: v3_user_id
   ).call
