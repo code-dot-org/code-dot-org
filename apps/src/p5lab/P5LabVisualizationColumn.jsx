@@ -173,7 +173,6 @@ class P5LabVisualizationColumn extends React.Component {
             <Pointable
               id="divGameLab"
               style={divGameLabStyle}
-              tabIndex="1"
               onPointerMove={this.pickerPointerMove}
               onPointerUp={this.pickerPointerUp}
               elementRef={el => (this.divGameLab = el)}

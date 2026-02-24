@@ -55,7 +55,6 @@ export default class BootstrapButton extends React.Component {
         className={this.buttonClasses()}
         style={{...styles.button, ...style}}
         onClick={onClick}
-        tabIndex="1"
         disabled={disabled}
       >
         {text}
