@@ -3,8 +3,8 @@ import {LevelProperties} from '@cdo/apps/lab2/types';
 export interface Weblab2LevelProperties extends LevelProperties {
   widgetView?: boolean;
   initialViewMode?: ViewMode;
-  aiTutorMode?: string;
-  aiTutorPromptAnswerTypes?: AiTutorMode[];
+  aiTutorMode?: AiTutorMode;
+  aiTutorPromptAnswerTypes?: AiTutorAnswerType[];
 }
 
 export enum ViewMode {
@@ -13,7 +13,7 @@ export enum ViewMode {
   PREVIEW = 'preview',
 }
 
-export type AiTutorMode =
+export type AiTutorAnswerType =
   | 'ask'
   | 'buildCSS'
   | 'buildHTML'
@@ -28,7 +28,7 @@ export type AiTutorMode =
   | 'refusalJavaScriptSnippets'
   | 'testCase';
 
-export type LegacyMode =
+export type AiTutorMode =
   | 'suggest'
   | 'outline'
   | 'guide'
@@ -37,3 +37,5 @@ export type LegacyMode =
   | 'tutor'
   | 'engineer'
   | 'qa';
+
+export const DEFAULT_AI_TUTOR_MODE = 'engineer';

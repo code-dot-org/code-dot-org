@@ -1,4 +1,4 @@
-import {LegacyMode, AiTutorMode} from './types';
+import {AiTutorMode, AiTutorAnswerType} from './types';
 
 export const WEBLAB2_EDITABLE_FILE_TYPES = [
   'html',
@@ -18,7 +18,10 @@ export const WEBLAB2_SUPPORTED_FILE_TYPES = WEBLAB2_EDITABLE_FILE_TYPES.concat(
 
 export const AI_SAVED_COMMENT = 'AI***SAVE';
 
-export const LEGACY_MODE_TO_ANSWER_TYPE: Record<LegacyMode, AiTutorMode[]> = {
+export const TUTOR_MODE_TO_ANSWER_TYPE: Record<
+  AiTutorMode,
+  AiTutorAnswerType[]
+> = {
   suggest: [
     'buildHTML',
     'buildCSS',
