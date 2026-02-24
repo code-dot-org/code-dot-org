@@ -9,16 +9,14 @@ export const APPS_WITH_ESSENTIAL_AI_CHAT = ['weblab2', 'aichat'];
 export const shouldShowAiTutor = ({
   appName,
   tutorLevel,
-  tutorPilot,
 }: {
   appName: string;
   tutorLevel?: boolean;
-  tutorPilot?: boolean;
 }) => {
   return (
     APPS_WITH_ESSENTIAL_AI_CHAT.includes(appName) ||
-    // user is in ai tutor pilot and it's a tutor enabled level
-    (tutorPilot && tutorLevel)
+    // AI_CHAT_NEW_PERMISSIONS experiment is enabled and it's a tutor enabled level
+    (experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) && tutorLevel)
   );
 };
 

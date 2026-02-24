@@ -2,6 +2,7 @@ import {
   shouldShowAiTutor,
   APPS_WITH_ESSENTIAL_AI_CHAT,
 } from '@cdo/apps/aichat/helpers/aiChatAccess';
+import experiments from '@cdo/apps/util/experiments';
 
 describe('shouldShowAiTutor', () => {
   describe('when app is always using AI tutor', () => {
@@ -10,19 +11,25 @@ describe('shouldShowAiTutor', () => {
         const result = shouldShowAiTutor({
           appName,
           tutorLevel: false,
-          tutorPilot: false,
         });
         expect(result).toBe(true);
       });
     });
   });
 
-  describe('when tutorPilot is enabled', () => {
+  describe('when AI_CHAT_NEW_PERMISSIONS experiment is enabled', () => {
+    beforeEach(() => {
+      jest.spyOn(experiments, 'isEnabled').mockReturnValue(true);
+    });
+
+    afterEach(() => {
+      jest.restoreAllMocks();
+    });
+
     it('returns true when tutorLevel is true', () => {
       const result = shouldShowAiTutor({
         appName: 'applab',
         tutorLevel: true,
-        tutorPilot: true,
       });
       expect(result).toBe(true);
     });
@@ -31,18 +38,24 @@ describe('shouldShowAiTutor', () => {
       const result = shouldShowAiTutor({
         appName: 'applab',
         tutorLevel: false,
-        tutorPilot: true,
       });
       expect(result).toBe(false);
     });
   });
 
-  describe('when tutorPilot is disabled', () => {
+  describe('when AI_CHAT_NEW_PERMISSIONS experiment is disabled', () => {
+    beforeEach(() => {
+      jest.spyOn(experiments, 'isEnabled').mockReturnValue(false);
+    });
+
+    afterEach(() => {
+      jest.restoreAllMocks();
+    });
+
     it('returns false when tutorLevel is true', () => {
       const result = shouldShowAiTutor({
         appName: 'applab',
         tutorLevel: true,
-        tutorPilot: false,
       });
       expect(result).toBe(false);
     });
@@ -51,7 +64,6 @@ describe('shouldShowAiTutor', () => {
       const result = shouldShowAiTutor({
         appName: 'applab',
         tutorLevel: false,
-        tutorPilot: false,
       });
       expect(result).toBe(false);
     });
