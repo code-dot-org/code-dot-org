@@ -27,12 +27,6 @@ import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSections
 import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
 import i18n from '@cdo/locale';
 
-import ProgressTableContentView from './ProgressTableContentView';
-import {
-  getSummaryCellFormatters,
-  getDetailCellFormatters,
-  getLevelIconHeaderFormatter,
-} from './progressTableHelpers';
 import ProgressTableStudentList from './ProgressTableStudentList';
 
 /**
@@ -99,15 +93,7 @@ class ProgressTableView extends React.Component {
     this.onScroll = this.onScroll.bind(this);
     this.onToggleRow = this.onToggleRow.bind(this);
 
-    this.summaryCellFormatters = getSummaryCellFormatters(
-      props.lessonProgressByStudent,
-      props.onClickLesson
-    );
-
-    this.detailCellFormatters = getDetailCellFormatters(
-      props.levelProgressByStudent,
-      props.sectionId
-    );
+    this.summaryCellFormatters = [() => {}];
 
     // the primary table rows are represented by the students in the section,
     // but to support expanding those rows, we wrap each student in a
@@ -310,16 +296,6 @@ class ProgressTableView extends React.Component {
     };
   }
 
-  detailContentViewProps() {
-    return {
-      lessonCellFormatters: this.detailCellFormatters,
-      extraHeaderFormatters: [
-        getLevelIconHeaderFormatter(this.props.scriptData),
-      ],
-      includeHeaderArrows: true,
-    };
-  }
-
   summaryContentViewProps() {
     return {
       columnWidths: new Array(this.props.scriptData.lessons.length).fill(
@@ -335,10 +311,6 @@ class ProgressTableView extends React.Component {
 
     const studentListHeaders = [i18n.lesson()];
     isDetailView && studentListHeaders.push(i18n.levelType());
-
-    const contentViewProps = isDetailView
-      ? this.detailContentViewProps()
-      : this.summaryContentViewProps();
 
     // we use the view type as a key to force a full re-instantiation of the
     // table components when the view changes
@@ -362,20 +334,6 @@ class ProgressTableView extends React.Component {
               onToggleRow={this.onToggleRow}
               courseVersionName={this.props.courseVersionName}
               unitPosition={this.props.unitPosition}
-            />
-          </div>
-          <div style={styles.contentView} className="content-view">
-            <ProgressTableContentView
-              key={key}
-              ref={r => (this.contentView = r)}
-              rows={this.state.rows}
-              onRow={this.onRow}
-              needsGutter={this.needsContentHeaderGutter()}
-              onScroll={this.onScroll}
-              scriptData={this.props.scriptData}
-              lessonOfInterest={this.props.lessonOfInterest}
-              onClickLesson={this.props.onClickLesson}
-              {...contentViewProps}
             />
           </div>
         </div>
