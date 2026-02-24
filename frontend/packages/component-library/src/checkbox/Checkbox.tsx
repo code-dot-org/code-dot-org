@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import {
   useRef,
@@ -9,7 +10,6 @@ import {
 
 import {componentSizeToBodyTextSizeMap} from '@/common/constants';
 import {ComponentSizeXSToL} from '@/common/types';
-import Typography from '@/typography';
 
 import moduleStyles from './checkbox.module.scss';
 
@@ -107,13 +107,12 @@ const Checkbox: React.FunctionComponent<CheckboxProps> = ({
       <i className="fa-solid" />
       {label && (
         <Typography
-          semanticTag="span"
           className={classnames(
             moduleStyles.checkboxLabel,
             moduleStyles[`checkboxLabel-${textThickness}`],
           )}
-          visualAppearance={bodyTextSize}
-          noMargin
+          variant={bodyTextSize}
+          component="span"
         >
           {label}
         </Typography>
