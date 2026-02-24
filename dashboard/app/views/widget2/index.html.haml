@@ -1,8 +1,8 @@
 %h1 Widget2 Library
 
 %h2 Widget2s
-- @directories.each do |directory|
-  %a{href: directory[:url]}= directory[:name]
+- @widget2s.each do |widget2|
+  %a{href: widget2[:url]}= widget2[:id]
   %br/
 
 %h2 New Widget2

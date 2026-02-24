@@ -1,13 +1,14 @@
 module Widget2Helper
   WIDGET2_BASE_DIRECTORY = "#{Rails.root}/config/widget2".freeze
+  NEW_WEBLAB2_PROJECT_LEVEL_ID = Level.find_by_name("New Web Lab 2 Project")&.id
 
   # Retrieve widget2 sources from the file system.
   def get_widget2_sources(widget2_id)
     widget2_directory = get_widget2_directory(widget2_id)
-    source_files_list = Dir.glob(File.join(widget2_directory, "*"))
+    source_directories_list = Dir.glob(File.join(widget2_directory, "*"))
 
     source_files = []
-    source_files_list.each do |file_path|
+    source_directories_list.each do |file_path|
       file_name = File.basename(file_path)
       file_contents = File.read(file_path)
       source_files.push({name: file_name, contents: file_contents})
@@ -49,6 +50,20 @@ module Widget2Helper
         File.write(path, contents)
       end
     end
+  end
+
+  # Returns a list of available widget2 IDs.
+  def get_widget2_ids
+    source_directories_list = Dir.glob(File.join(WIDGET2_BASE_DIRECTORY, "*"))
+
+    source_directories_list.map do |directory|
+      File.basename(directory)
+    end
+  end
+
+  # Returns the edit URL for a widget2.
+  private def get_widget2_edit_url(widget2_id)
+    "/levels/#{NEW_WEBLAB2_PROJECT_LEVEL_ID}/edit_blocks/widget2_sources?widget2=#{widget2_id}"
   end
 
   private def get_widget2_directory(widget2_id)

@@ -6,6 +6,7 @@ EMPTY_XML = '<xml></xml>'.freeze
 
 class LevelsController < ApplicationController
   include LevelsHelper
+  include Widget2Helper
   include ActiveSupport::Inflector
   before_action :authenticate_user!, except: [:show, :level_properties, :embed_level, :get_rubric, :get_serialized_maze]
   before_action :require_levelbuilder_mode_or_test_env, except: [:show, :level_properties, :embed_level, :get_rubric, :get_serialized_maze, :extra_links]
@@ -171,10 +172,7 @@ class LevelsController < ApplicationController
       @dataset_library_manifest = DatablockStorageLibraryManifest.instance.library_manifest
     end
     if @level.is_a? Weblab2
-      directories = Dir.glob("#{Rails.root}/config/widget2/*")
-      @widget2_ids = directories.map do |directory|
-        File.basename(directory)
-      end
+      @widget2_ids = get_widget2_ids
     end
   end
 
