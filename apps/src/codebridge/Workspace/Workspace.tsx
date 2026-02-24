@@ -9,6 +9,7 @@ import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import React, {useMemo, useRef} from 'react';
 
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {
   START_SOURCES,
@@ -174,7 +175,10 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
             )}
             {isWidget2SourcesMode && (
               <Alert
-                text={WARNING_BANNER_MESSAGES.EDITING_WIDGET2}
+                text={WARNING_BANNER_MESSAGES.EDITING_WIDGET2.replace(
+                  '{widgetId}',
+                  queryParams('widget2') as string
+                )}
                 type={'warning'}
               />
             )}

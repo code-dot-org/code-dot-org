@@ -38,7 +38,7 @@ export enum WARNING_BANNER_MESSAGES {
   EXEMPLAR_MODE = 'You are editing exemplar sources.',
   VIEWING_EXEMPLAR = 'You are viewing an example solution.',
   VIEWING_VERSION = 'You are viewing an older version of this project. To continue working, you can either restore this version or go back to the current version.',
-  EDITING_WIDGET2 = 'You are editing a widget2.  Changes to this will affect all levels that use this widget2.',
+  EDITING_WIDGET2 = 'You are editing a widget2 ({widgetId}).  Changes will affect all levels that use it.',
 }
 
 // Default height of the predict question free response text area.
