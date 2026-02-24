@@ -5,22 +5,22 @@ module Widget2Helper
   # Retrieve widget2 sources from the file system.
   def get_widget2_sources(widget2_id)
     widget2_directory = get_widget2_directory(widget2_id)
-    source_directories_list = Dir.glob(File.join(widget2_directory, "*"))
+    source_file_paths = Dir.glob(File.join(widget2_directory, "*"))
 
-    source_files = []
-    source_directories_list.each do |file_path|
-      file_name = File.basename(file_path)
-      file_contents = File.read(file_path)
-      source_files.push({name: file_name, contents: file_contents})
+    sources = source_file_paths.map do |file_path|
+      {
+        name: File.basename(file_path),
+        contents: File.read(file_path)
+      }
     end
 
-    files_hash = {}
-    source_files.each_with_index do |source_file, index|
+    files = {}
+    sources.each_with_index do |source, index|
       use_index = index + 1
-      files_hash[use_index.to_s] = {
+      files[use_index.to_s] = {
         id: use_index.to_s,
-        name: source_file[:name],
-        contents: source_file[:contents],
+        name: source[:name],
+        contents: source[:contents],
         active: use_index == 1,
         folderId: "0"
       }
@@ -28,8 +28,8 @@ module Widget2Helper
 
     {
       folders: {},
-      files: files_hash,
-      openFiles: files_hash.keys
+      files: files,
+      openFiles: files.keys
     }
   end
 
@@ -39,9 +39,9 @@ module Widget2Helper
 
     FileUtils.mkdir_p(widget2_directory)
 
-    files_hash = start_sources && start_sources[:files]
-    if files_hash.present?
-      files_hash.each do |_id, file|
+    files = start_sources && start_sources[:files]
+    if files.present?
+      files.each do |_, file|
         name = file[:name]
         contents = file[:contents]
         next unless name && contents
