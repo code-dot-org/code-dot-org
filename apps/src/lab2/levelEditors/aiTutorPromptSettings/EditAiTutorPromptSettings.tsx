@@ -7,7 +7,7 @@ import {AiTutorAnswerType, AiTutorMode} from '@cdo/apps/weblab2/types';
 
 import moduleStyles from './edit-ai-tutor-prompt-settings.module.scss';
 
-const TOGGLEABLE_TUTOR_MODES: AiTutorAnswerType[] = [
+const TOGGLEABLE_TUTOR_MODES = [
   'ask',
   'buildCSS',
   'buildHTML',
@@ -19,7 +19,21 @@ const TOGGLEABLE_TUTOR_MODES: AiTutorAnswerType[] = [
   'hint',
   'pseudocode',
   'testCase',
-];
+] as const;
+
+const MODE_TO_LABEL = {
+  ask: 'Ask',
+  buildCSS: 'Build CSS',
+  buildHTML: 'Build HTML',
+  buildJavaScript: 'Build JavaScript',
+  debug: 'Debug',
+  documentation: 'Documentation',
+  example: 'Example',
+  explainCode: 'Explain Code',
+  hint: 'Hint',
+  pseudocode: 'Pseudocode',
+  testCase: 'Test Case',
+};
 
 interface EditAiTutorPromptSettingsProps {
   answerTypes?: AiTutorAnswerType[];
@@ -56,9 +70,8 @@ const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
 
   return (
     <div>
-      <Typography variant="h3">AI Tutor Prompt Settings</Typography>
-      <Typography variant="body3">
-        Specify which answer types you would like the AI tutor to be able to
+      <Typography variant="body2" className={moduleStyles.instructions}>
+        Choose which answer types you would like the AI tutor to be able to
         respond with. You must specify at least one.
       </Typography>
       <input
@@ -72,7 +85,7 @@ const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
           <Toggle
             key={mode}
             name={mode}
-            label={mode}
+            label={MODE_TO_LABEL[mode]}
             checked={enabledModes.has(mode)}
             onChange={e => handleToggle(mode, e.target.checked)}
           />
