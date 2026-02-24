@@ -83,6 +83,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   const showTts = offerBrowserTts || queryParams('show-tts') === 'true';
   const {theme: defaultTheme} = useTheme();
   const ref: MutableRefObject<HTMLDivElement | null> = useRef(null);
+  const appName = levelProperties.appName;
 
   // Don't render anything if we don't have any instructions.
   if (longInstructions === undefined) {
@@ -127,6 +128,8 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
             <PredictQuestion
               levelProperties={levelProperties}
               className={moduleStyles.predictQuestion}
+              showJavascriptWarning={appName === 'weblab2'}
+              showSubmitButton={appName === 'weblab2'}
             />
           </div>
           {showTts && (
@@ -153,7 +156,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
                 <PredictSummary />
               </div>
             </InstructorsOnly>
-            <PredictQuestionRunPrompt appName={levelProperties.appName} />
+            <PredictQuestionRunPrompt appName={appName} />
           </>
         )}
         {!hideNavigation && (

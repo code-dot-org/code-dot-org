@@ -23,14 +23,17 @@ import moduleStyles from './predict.module.scss';
 interface PredictQuestionProps {
   levelProperties: LevelProperties;
   className?: string;
+  showJavascriptWarning?: boolean;
+  showSubmitButton?: boolean;
 }
 
 const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
   levelProperties,
   className,
+  showJavascriptWarning,
+  showSubmitButton,
 }) => {
   const {predictSettings, appName} = levelProperties;
-  const isWeblab2 = appName === 'weblab2';
   const predictResponse = useAppSelector(state => state.predictLevel.response);
   const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
   const dispatch = useAppDispatch();
@@ -150,7 +153,7 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
             );
           })
         )}
-        {isWeblab2 && !predictAnswerLocked && (
+        {showJavascriptWarning && !predictAnswerLocked && (
           <Typography variant="body4">
             Javascript will not run until you submit your prediction.
           </Typography>
@@ -158,7 +161,7 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
       </div>
       {/* Because weblab2 does not have a 'Run' button to indicate that they have submitted their answer,
         we display a 'Submit answer button. */}
-      {isWeblab2 && (
+      {showSubmitButton && (
         <Button
           onClick={onSubmitAnswer}
           text="Submit Answer"
