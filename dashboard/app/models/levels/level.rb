@@ -30,6 +30,7 @@ require 'cdo/shared_constants'
 class Level < ApplicationRecord
   include SharedConstants
   include Levels::LevelsWithinLevels
+  include Widget2Helper
 
   belongs_to :game, optional: true
   has_and_belongs_to_many :concepts
@@ -961,53 +962,17 @@ class Level < ApplicationRecord
       end
     end
 
-    # If this is a widget2 level, then startSources will come from the files in the repo, rather than
+    # If this is a widget2 level or we are editing widget2 starter sources,
+    # then startSources will come from the files in the repo, rather than
     # that serialized into the level file.
     widget2_id = properties["widget2"] || widget2_start_sources
-
     if widget2_id
-      directory = "#{Rails.root}/config/widget2/#{widget2_id}".freeze
+      properties_camelized[:startSources] = get_widget2_sources(widget2_id)
+    end
 
-      source_files_list = Dir.glob(directory + '/*')
-
-      source_files = []
-
-      source_files_list.each do |file_path|
-        file_name = File.basename(file_path)
-        file_contents = File.read(file_path)
-        source_files.push({name: file_name, contents: file_contents})
-      end
-
-      files_hash = {}
-      source_files.each_with_index do |source_file, index|
-        use_index = index + 1
-        files_hash[use_index.to_s] = {
-          id: use_index.to_s, name: source_file[:name], contents: source_file[:contents], active: use_index == 1, folderId: 0
-        }
-      end
-
-      properties_camelized[:startSources] = {
-        folders: {},
-        files: files_hash,
-        openFiles: files_hash.keys
-      }
-
-      # { "folders":{},
-      #   "files":{
-      #     "1":{
-      #       "id":"1",
-      #"name":"index.html",
-      #       "contents":"\u003c!DOCTYPE html\u003e\n\u003chtml\u003e\n  \u003cbody\u003e\n    This is my text\n  \u003c/body\u003e\n\u003c/html\u003e\n  ",
-      #       "active":true,
-      #       "folderId":"0"
-      #     }
-      #   },
-      #   "openFiles":["1"]
-      # }
-
-      if properties["widget2"]
-        properties_camelized[:widgetView] = true
-      end
+    # And if this is a widget2 level, then show it as a widget.
+    if properties["widget2"]
+      properties_camelized[:widgetView] = true
     end
 
     properties_camelized
