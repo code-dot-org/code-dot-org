@@ -22,54 +22,31 @@ class AiLessonSummaryPodcastsJobTest < ActiveJob::TestCase
     Honeybadger.stubs(:notify)
     DCDO.stubs(:get).with('ai-lesson-summaries-notifications-enabled', false).returns(false)
 
-    # Mock the helpers
-    @test_script_json = {
-      podcast_script: "Welcome to the AI Teaching Assistant's Daily Byte, your quick check-in before class."
-    }.to_json
-    @test_podcast_data = "fake_mp3_binary_data_content"
+    # Mock the new S3-based helper method
+    AiLessonSummaryPodcastsHelper.stubs(:create_and_save_to_s3)
 
-    AiLessonSummariesHelper.stubs(:generate_lesson_summary).returns({
-                                                                      status: 200,
-      json: @test_script_json
-                                                                    }
-)
-    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).returns(@test_podcast_data)
-
-    # Mock File operations to avoid creating actual files
-    File.stubs(:binwrite)
+    # Mock AWS S3 operations
+    AWS::S3.stubs(:exists_in_bucket).returns(false)
+    AWS::S3.stubs(:upload_to_bucket)
+    AWS::S3.stubs(:download_from_bucket)
   end
 
   teardown do
     DCDO.unstub(:get)
-    # Clean up any files that might have been created during testing
-    Dir.glob('lesson_*_podcast.mp3').each {|file| FileUtils.rm_f(file)}
   end
 
   # *****
   # Job execution tests
   # *****
 
-  test 'perform generates podcast for each lesson_id' do
+  test 'perform creates podcast for each lesson_id through S3' do
     # Expect the helper to be called for each lesson
-    AiLessonSummariesHelper.expects(:generate_lesson_summary).
-      with(@lesson1.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT]).
-      returns({status: 200, json: @test_script_json})
-    AiLessonSummariesHelper.expects(:generate_lesson_summary).
-      with(@lesson2.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT]).
-      returns({status: 200, json: @test_script_json})
-    AiLessonSummariesHelper.expects(:generate_lesson_summary).
-      with(@lesson3.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT]).
-      returns({status: 200, json: @test_script_json})
-
-    # Expect podcast generation for each lesson
-    extracted_script = JSON.parse(@test_script_json)['podcast_script']
-    AiLessonSummaryPodcastsHelper.expects(:get_podcast_from_script).
-      with(extracted_script).times(3).returns(@test_podcast_data)
-
-    # Expect file writing for each lesson
-    File.expects(:binwrite).with("lesson_#{@lesson1.id}_podcast.mp3", @test_podcast_data)
-    File.expects(:binwrite).with("lesson_#{@lesson2.id}_podcast.mp3", @test_podcast_data)
-    File.expects(:binwrite).with("lesson_#{@lesson3.id}_podcast.mp3", @test_podcast_data)
+    AiLessonSummaryPodcastsHelper.expects(:create_and_save_to_s3).
+      with(@lesson1.id, @user.id)
+    AiLessonSummaryPodcastsHelper.expects(:create_and_save_to_s3).
+      with(@lesson2.id, @user.id)
+    AiLessonSummaryPodcastsHelper.expects(:create_and_save_to_s3).
+      with(@lesson3.id, @user.id)
 
     AiLessonSummaryPodcastsJob.perform_now(request: @request)
   end
@@ -80,62 +57,35 @@ class AiLessonSummaryPodcastsJobTest < ActiveJob::TestCase
       lesson_ids: [@lesson1.id]
     }
 
-    AiLessonSummariesHelper.expects(:generate_lesson_summary).
-      with(@lesson1.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT]).
-      returns({status: 200, json: @test_script_json})
-
-    extracted_script = JSON.parse(@test_script_json)['podcast_script']
-    AiLessonSummaryPodcastsHelper.expects(:get_podcast_from_script).
-      with(extracted_script).returns(@test_podcast_data)
-
-    File.expects(:binwrite).with("lesson_#{@lesson1.id}_podcast.mp3", @test_podcast_data)
+    AiLessonSummaryPodcastsHelper.expects(:create_and_save_to_s3).
+      with(@lesson1.id, @user.id)
 
     AiLessonSummaryPodcastsJob.perform_now(request: single_request)
   end
 
-  test 'perform processes lesson_ids as integers when passed as strings' do
+  test 'perform processes lesson_ids when passed as strings' do
     string_request = {
       user_id: @user.id.to_s,
       lesson_ids: [@lesson1.id.to_s, @lesson2.id.to_s]
     }
 
-    # Should convert strings to integers when calling helper
-    AiLessonSummariesHelper.expects(:generate_lesson_summary).
-      with(@lesson1.id.to_s, @user.id.to_s, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT]).
-      returns({status: 200, json: @test_script_json})
-    AiLessonSummariesHelper.expects(:generate_lesson_summary).
-      with(@lesson2.id.to_s, @user.id.to_s, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT]).
-      returns({status: 200, json: @test_script_json})
-
-    extracted_script = JSON.parse(@test_script_json)['podcast_script']
-    AiLessonSummaryPodcastsHelper.expects(:get_podcast_from_script).
-      with(extracted_script).times(2).returns(@test_podcast_data)
-
-    File.expects(:binwrite).with("lesson_#{@lesson1.id}_podcast.mp3", @test_podcast_data)
-    File.expects(:binwrite).with("lesson_#{@lesson2.id}_podcast.mp3", @test_podcast_data)
+    AiLessonSummaryPodcastsHelper.expects(:create_and_save_to_s3).
+      with(@lesson1.id.to_s, @user.id.to_s)
+    AiLessonSummaryPodcastsHelper.expects(:create_and_save_to_s3).
+      with(@lesson2.id.to_s, @user.id.to_s)
 
     AiLessonSummaryPodcastsJob.perform_now(request: string_request)
   end
 
-  test 'perform correctly parses JSON script and extracts podcast_script' do
-    complex_script_json = {
-      podcast_script: "Hello, welcome to today's lesson on variables and expressions.",
-      other_data: "This should be ignored"
-    }.to_json
-
-    AiLessonSummariesHelper.expects(:generate_lesson_summary).
-      returns({status: 200, json: complex_script_json})
-
-    expected_script = "Hello, welcome to today's lesson on variables and expressions."
-    AiLessonSummaryPodcastsHelper.expects(:get_podcast_from_script).
-      with(expected_script).returns(@test_podcast_data)
-
-    File.expects(:binwrite).with("lesson_#{@lesson1.id}_podcast.mp3", @test_podcast_data)
-
+  test 'perform delegates script processing to helper method' do
     single_request = {
       user_id: @user.id,
       lesson_ids: [@lesson1.id]
     }
+
+    # The JSON parsing and script extraction is now handled by the helper
+    AiLessonSummaryPodcastsHelper.expects(:create_and_save_to_s3).
+      with(@lesson1.id, @user.id)
 
     AiLessonSummaryPodcastsJob.perform_now(request: single_request)
   end
@@ -149,7 +99,7 @@ class AiLessonSummaryPodcastsJobTest < ActiveJob::TestCase
     error = StandardError.new(error_message)
 
     # Make the helper raise an error
-    AiLessonSummariesHelper.stubs(:generate_lesson_summary).raises(error)
+    AiLessonSummaryPodcastsHelper.stubs(:create_and_save_to_s3).raises(error)
 
     # Expect Honeybadger notification
     Honeybadger.expects(:notify).with(
@@ -165,29 +115,14 @@ class AiLessonSummaryPodcastsJobTest < ActiveJob::TestCase
     end
   end
 
-  test 'job rescues JSON::ParserError from malformed script' do
-    malformed_json = "invalid json content"
+  test 'job rescues errors from S3 helper and notifies Honeybadger' do
+    s3_error = StandardError.new('S3 upload failed')
 
-    AiLessonSummariesHelper.stubs(:generate_lesson_summary).
-      returns({status: 200, json: malformed_json})
+    AiLessonSummaryPodcastsHelper.stubs(:create_and_save_to_s3).raises(s3_error)
 
-    # Expect Honeybadger notification for JSON parse error
-    Honeybadger.expects(:notify)
-
-    assert_raises(JSON::ParserError) do
-      AiLessonSummaryPodcastsJob.perform_now(request: @request)
-    end
-  end
-
-  test 'job rescues error from podcast helper' do
-    podcast_error = StandardError.new('Podcast generation failed')
-
-    AiLessonSummariesHelper.stubs(:generate_lesson_summary).
-      returns({status: 200, json: @test_script_json})
-    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).raises(podcast_error)
-
+    # Expect Honeybadger notification for S3 error
     Honeybadger.expects(:notify).with(
-      "AiLessonSummaryPodcastsJob failed with unexpected error: Podcast generation failed",
+      "AiLessonSummaryPodcastsJob failed with unexpected error: S3 upload failed",
       context: {
         request: @request.to_json
       }
@@ -198,22 +133,36 @@ class AiLessonSummaryPodcastsJobTest < ActiveJob::TestCase
     end
   end
 
-  test 'job rescues error from file write operation' do
-    file_error = IOError.new('Permission denied')
+  test 'job rescues timeout errors from S3 helper' do
+    timeout_error = Net::OpenTimeout.new('Request timeout')
 
-    AiLessonSummariesHelper.stubs(:generate_lesson_summary).
-      returns({status: 200, json: @test_script_json})
-    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).returns(@test_podcast_data)
-    File.stubs(:binwrite).raises(file_error)
+    AiLessonSummaryPodcastsHelper.stubs(:create_and_save_to_s3).raises(timeout_error)
 
     Honeybadger.expects(:notify).with(
-      "AiLessonSummaryPodcastsJob failed with unexpected error: Permission denied",
+      "AiLessonSummaryPodcastsJob failed with unexpected error: Request timeout",
       context: {
         request: @request.to_json
       }
     )
 
-    assert_raises(IOError) do
+    assert_raises(Net::OpenTimeout) do
+      AiLessonSummaryPodcastsJob.perform_now(request: @request)
+    end
+  end
+
+  test 'job rescues database errors from lesson summary retrieval' do
+    db_error = ActiveRecord::RecordNotFound.new('Lesson not found')
+
+    AiLessonSummaryPodcastsHelper.stubs(:create_and_save_to_s3).raises(db_error)
+
+    Honeybadger.expects(:notify).with(
+      "AiLessonSummaryPodcastsJob failed with unexpected error: Lesson not found",
+      context: {
+        request: @request.to_json
+      }
+    )
+
+    assert_raises(ActiveRecord::RecordNotFound) do
       AiLessonSummaryPodcastsJob.perform_now(request: @request)
     end
   end
@@ -222,7 +171,7 @@ class AiLessonSummaryPodcastsJobTest < ActiveJob::TestCase
     custom_error = Class.new(StandardError)
     error = custom_error.new('Custom error')
 
-    AiLessonSummariesHelper.stubs(:generate_lesson_summary).raises(error)
+    AiLessonSummaryPodcastsHelper.stubs(:create_and_save_to_s3).raises(error)
 
     # Should still notify Honeybadger and re-raise
     Honeybadger.expects(:notify)
@@ -250,9 +199,7 @@ class AiLessonSummaryPodcastsJobTest < ActiveJob::TestCase
 
   test 'job executes successfully with valid request structure' do
     # Mock successful helper calls
-    AiLessonSummariesHelper.stubs(:generate_lesson_summary).
-      returns({status: 200, json: @test_script_json})
-    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).returns(@test_podcast_data)
+    AiLessonSummaryPodcastsHelper.stubs(:create_and_save_to_s3)
 
     # Should complete without error
     assert_nothing_raised do
@@ -261,59 +208,66 @@ class AiLessonSummaryPodcastsJobTest < ActiveJob::TestCase
   end
 
   # *****
-  # File operations tests
+  # S3 integration tests
   # *****
 
-  test 'job creates correctly named files for each lesson' do
+  test 'job calls S3 helper with correct parameters for each lesson' do
     single_request = {
       user_id: @user.id,
       lesson_ids: [@lesson1.id]
     }
 
-    expected_filename = "lesson_#{@lesson1.id}_podcast.mp3"
-
-    AiLessonSummariesHelper.stubs(:generate_lesson_summary).
-      returns({status: 200, json: @test_script_json})
-    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).returns(@test_podcast_data)
-
-    File.expects(:binwrite).with(expected_filename, @test_podcast_data)
+    AiLessonSummaryPodcastsHelper.expects(:create_and_save_to_s3).
+      with(@lesson1.id, @user.id)
 
     AiLessonSummaryPodcastsJob.perform_now(request: single_request)
   end
 
-  test 'job writes binary data correctly to files' do
-    binary_data = "\x00\x01\x02\x03binary_mp3_data"
-
-    AiLessonSummariesHelper.stubs(:generate_lesson_summary).
-      returns({status: 200, json: @test_script_json})
-    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).returns(binary_data)
-
-    File.expects(:binwrite).with("lesson_#{@lesson1.id}_podcast.mp3", binary_data)
-
-    single_request = {
+  test 'job processes multiple lessons with S3 storage' do
+    multi_request = {
       user_id: @user.id,
-      lesson_ids: [@lesson1.id]
+      lesson_ids: [@lesson1.id, @lesson2.id]
     }
 
-    AiLessonSummaryPodcastsJob.perform_now(request: single_request)
+    AiLessonSummaryPodcastsHelper.expects(:create_and_save_to_s3).
+      with(@lesson1.id, @user.id)
+    AiLessonSummaryPodcastsHelper.expects(:create_and_save_to_s3).
+      with(@lesson2.id, @user.id)
+
+    AiLessonSummaryPodcastsJob.perform_now(request: multi_request)
   end
 
   # *****
-  # after_perform callback tests (commented out functionality)
+  # after_perform callback tests
   # *****
 
-  test 'after_perform callback exists but is currently disabled' do
-    # Test that the callback is defined but doesn't execute the notification logic
-    # since it's commented out in the actual implementation
+  test 'after_perform callback does not create notification when notifications disabled' do
+    # notifications are disabled by default in test setup
+    AiLessonSummaryPodcastsHelper.stubs(:create_and_save_to_s3)
 
-    AiLessonSummariesHelper.stubs(:generate_lesson_summary).
-      returns({status: 200, json: @test_script_json})
-    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).returns(@test_podcast_data)
-
-    # Should not attempt to create notifications since the code is commented out
+    # Should not attempt to create notifications when disabled
     TeacherNotification.expects(:create!).never
 
     AiLessonSummaryPodcastsJob.perform_now(request: @request)
+  end
+
+  test 'after_perform callback creates notification when notifications enabled' do
+    DCDO.stubs(:get).with('ai-lesson-summaries-notifications-enabled', false).returns(true)
+
+    AiLessonSummaryPodcastsHelper.stubs(:create_and_save_to_s3)
+
+    # Should create notification when enabled
+    TeacherNotification.expects(:create!).with(
+      user_id: @user.id,
+      title: 'Your AI Lesson Summary Podcasts are ready',
+      description: "Your lesson summary podcasts for 3 lessons for #{@unit.title_for_display} are live — prepare for your next class in minutes!",
+      icon_name: 'solid-flask-sparkle',
+      icon_color: 'Aqua',
+      href_links: [{text: 'View lesson materials',
+                   url: "/teacher_dashboard/sections/#{@section.id}/materials"}]
+    )
+
+    AiLessonSummaryPodcastsJob.perform_now(request: @request.merge(unit_id: @unit.id))
   end
 
   # *****
@@ -328,17 +282,10 @@ class AiLessonSummaryPodcastsJobTest < ActiveJob::TestCase
       unit_id: @unit.id
     }
 
-    # Set up expectations for all steps
+    # Set up expectations for S3 upload for each lesson
     [@lesson1.id, @lesson2.id].each do |lesson_id|
-      AiLessonSummariesHelper.expects(:generate_lesson_summary).
-        with(lesson_id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT]).
-        returns({status: 200, json: @test_script_json})
-
-      extracted_script = JSON.parse(@test_script_json)['podcast_script']
-      AiLessonSummaryPodcastsHelper.expects(:get_podcast_from_script).
-        with(extracted_script).returns(@test_podcast_data)
-
-      File.expects(:binwrite).with("lesson_#{lesson_id}_podcast.mp3", @test_podcast_data)
+      AiLessonSummaryPodcastsHelper.expects(:create_and_save_to_s3).
+        with(lesson_id, @user.id)
     end
 
     assert_nothing_raised do
@@ -350,23 +297,22 @@ class AiLessonSummaryPodcastsJobTest < ActiveJob::TestCase
     # Test what happens when some lessons succeed and others fail
     # In the current implementation, any error stops the entire job
 
-    AiLessonSummariesHelper.expects(:generate_lesson_summary).
-      with(@lesson1.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT]).
-      returns({status: 200, json: @test_script_json})
+    # First lesson succeeds
+    AiLessonSummaryPodcastsHelper.expects(:create_and_save_to_s3).
+      with(@lesson1.id, @user.id)
 
-    # Second lesson will fail
-    AiLessonSummariesHelper.expects(:generate_lesson_summary).
-      with(@lesson2.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT]).
-      raises(StandardError.new("API failure"))
-
-    # First lesson should succeed
-    extracted_script = JSON.parse(@test_script_json)['podcast_script']
-    AiLessonSummaryPodcastsHelper.expects(:get_podcast_from_script).
-      with(extracted_script).returns(@test_podcast_data)
-    File.expects(:binwrite).with("lesson_#{@lesson1.id}_podcast.mp3", @test_podcast_data)
+    # Second lesson fails
+    AiLessonSummaryPodcastsHelper.expects(:create_and_save_to_s3).
+      with(@lesson2.id, @user.id).
+      raises(StandardError.new("S3 upload failure"))
 
     # Should fail on second lesson and notify Honeybadger
-    Honeybadger.expects(:notify)
+    Honeybadger.expects(:notify).with(
+      "AiLessonSummaryPodcastsJob failed with unexpected error: S3 upload failure",
+      context: {
+        request: @request.to_json
+      }
+    )
 
     assert_raises(StandardError) do
       AiLessonSummaryPodcastsJob.perform_now(request: @request)
