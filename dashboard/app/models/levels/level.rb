@@ -972,20 +972,17 @@ class Level < ApplicationRecord
 
       source_files = []
 
-      types = ['html', 'css', 'js']
-      source_files_list.map do |file_path|
+      source_files_list.each do |file_path|
         file_name = File.basename(file_path)
         file_contents = File.read(file_path)
-        file_extension = File.extname(file_path).delete('.')
-        language = types.include?(file_extension) ? file_extension : 'text'
-        source_files.push({name: file_name, contents: file_contents, language: language})
+        source_files.push({name: file_name, contents: file_contents})
       end
 
       files_hash = {}
       source_files.each_with_index do |source_file, index|
         use_index = index + 1
         files_hash[use_index.to_s] = {
-          id: use_index.to_s, name: source_file[:name], language: source_file[:language], contents: source_file[:contents], active: use_index == 1, folderId: 0
+          id: use_index.to_s, name: source_file[:name], contents: source_file[:contents], active: use_index == 1, folderId: 0
         }
       end
 
@@ -998,7 +995,8 @@ class Level < ApplicationRecord
       # { "folders":{},
       #   "files":{
       #     "1":{
-      #       "id":"1","name":"index.html","language":"html",
+      #       "id":"1",
+      #"name":"index.html",
       #       "contents":"\u003c!DOCTYPE html\u003e\n\u003chtml\u003e\n  \u003cbody\u003e\n    This is my text\n  \u003c/body\u003e\n\u003c/html\u003e\n  ",
       #       "active":true,
       #       "folderId":"0"
