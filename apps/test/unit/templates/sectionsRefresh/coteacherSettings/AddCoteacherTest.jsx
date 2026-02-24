@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
@@ -50,9 +51,11 @@ describe('AddCoteacher', () => {
 
     expect(wrapper.find('input').first()).to.exist;
     expect(wrapper.find('Button').first().props().disabled).to.be.false;
-    expect(wrapper.find('Figcaption').dive().text()).to.equal(
-      '3/5 co-teachers added'
-    );
+    const caption = wrapper
+      .find(Typography)
+      .filterWhere(node => node.props().variant === 'figcaption')
+      .at(0);
+    expect(caption.text()).to.equal('3/5 co-teachers added');
   });
   it('shows error', () => {
     const wrapper = shallow(
@@ -60,9 +63,11 @@ describe('AddCoteacher', () => {
     );
     expect(wrapper.find('input').first()).to.exist;
     expect(wrapper.find('Button').first().props().disabled).to.be.false;
-    expect(wrapper.find('Figcaption').dive().text()).to.include(
-      'The T-rex ate everyone'
-    );
+    const caption = wrapper
+      .find(Typography)
+      .filterWhere(node => node.props().variant === 'figcaption')
+      .at(0);
+    expect(caption.text()).to.include('The T-rex ate everyone');
     expect(wrapper.find('FontAwesome').props().icon).to.include('info-circle');
   });
   it('disables add button when max coteachers reached', () => {

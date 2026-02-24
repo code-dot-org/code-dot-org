@@ -4,6 +4,7 @@ import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
 import {Store} from 'redux';
 
+import DCDO from '@cdo/apps/dcdo';
 import {
   getStore,
   stubRedux,
@@ -13,6 +14,7 @@ import {
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import currentUser, {
   setShowAITALessonSummary,
+  setShowAITAPodcasts,
   setHasCompletedPersonalizationQuiz,
   setAudioSummaryTranscript,
 } from '@cdo/apps/templates/currentUserRedux';
@@ -92,6 +94,17 @@ const SECTIONS = [
     unitName: null,
     unitSelection: null,
     course_display_name: null,
+  },
+  {
+    id: 13,
+    name: 'Period 13',
+    course_offering_id: 123,
+    courseVersionId: 2023,
+    unitName: 'csd1-2024',
+    unit_id: 100,
+    unitSelection: {
+      unitName: 'csd1-2024',
+    },
   },
 ];
 
@@ -319,11 +332,6 @@ describe('LessonMaterialsContainer', () => {
           value: {lesson_summary: JSON.stringify(lessonSummary)},
           response: new Response(),
         });
-      } else if (path.includes('unit_in_aif')) {
-        return Promise.resolve({
-          value: {aif: aif_unit},
-          response: new Response(),
-        });
       }
     });
   };
@@ -470,6 +478,22 @@ describe('LessonMaterialsContainer', () => {
       screen.queryAllByTestId('resource-icon-' + RESOURCE_ICONS.SLIDES.icon)
         .length === 0
     );
+  });
+
+  it('renders the first lesson for the assigned unit when a new section is selected', async () => {
+    await renderDefault();
+
+    const selectedLessonInput = screen.getByRole('combobox', {
+      name: 'Choose a lesson',
+    });
+
+    fireEvent.change(selectedLessonInput, {target: {value: '2'}});
+
+    screen.getByText('Lesson Plan: Second lesson');
+
+    store.dispatch(selectSection(13));
+    await act(async () => await new Promise(process.nextTick));
+    screen.getByText('Lesson Plan: First lesson');
   });
 
   it('renders will render message when there is no lesson plan', async () => {
@@ -692,21 +716,6 @@ describe('LessonMaterialsContainer', () => {
       LESSON_SUMMARY.tips.forEach(tip => screen.getByText(tip));
     });
 
-    it('renders lesson summary when AIF unit is assigned', async () => {
-      store.dispatch(setShowAITALessonSummary(false));
-
-      await renderDefault(false, mockLessonData, LESSON_SUMMARY, true);
-
-      screen.getByText(i18n.audioSummary());
-      screen.getByText(i18n.teachingTips());
-      screen.getByText(LESSON_SUMMARY.learning_objective);
-      LESSON_SUMMARY.lesson_beats.forEach(beat => screen.getByText(beat));
-      LESSON_SUMMARY.misconceptions.forEach(misconception =>
-        screen.getByText(misconception)
-      );
-      LESSON_SUMMARY.tips.forEach(tip => screen.getByText(tip));
-    });
-
     it('renders audio summary transcript dialog when transcript data is present', async () => {
       const audioTranscript = [
         {timeStamp: '0:00', text: 'First line of dialogue.'},
@@ -726,6 +735,35 @@ describe('LessonMaterialsContainer', () => {
         screen.getByText(transcriptLine.timeStamp);
         screen.getByText(transcriptLine.text);
       });
+    });
+
+    it('does not render audio component when experiment and DCDO flag are false', async () => {
+      DCDO.set('ai-lesson-summary-podcasts', false);
+      experiments.isEnabled = jest.fn((key: string) => {
+        if (key === 'ai-lesson-podcasts') {
+          return false;
+        } else {
+          return true;
+        }
+      });
+      await renderDefault();
+
+      expect(screen.queryByText(i18n.audioSummary())).toBe(null);
+    });
+
+    it('renders audio component when experiment is true and DCDO flag is false', async () => {
+      DCDO.set('ai-lesson-summary-podcasts', false);
+      await renderDefault();
+
+      screen.getByText(i18n.audioSummary());
+    });
+
+    it('renders audio component when experiment is false and DCDO flag is true', async () => {
+      store.dispatch(setShowAITAPodcasts(true));
+      experiments.isEnabled = jest.fn(() => false);
+      await renderDefault();
+
+      screen.getByText(i18n.audioSummary());
     });
 
     it('does not render Personalization Quiz note if user has completed the quiz', async () => {

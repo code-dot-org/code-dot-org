@@ -5,7 +5,9 @@
  */
 import React, {createContext, Suspense, useEffect, useState} from 'react';
 
+import {TEACHER_DISABLED_AI_CHAT_MESSAGE} from '@cdo/apps/aichat/constants';
 import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
+import {areAiChatToolsEnabled} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {PERMISSIONS} from '@cdo/apps/lab2/constants';
 import {useInitialLabTheme} from '@cdo/apps/lab2/hooks/useInitialLabTheme';
@@ -72,16 +74,26 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     currentAppName,
     levelProperties,
   });
-  const isPredictLevel = useAppSelector(
-    state => state.lab.levelProperties?.predictSettings?.isPredictLevel || false
-  );
+  const isPredictLevel =
+    levelProperties?.predictSettings?.isPredictLevel || false;
   const hasSubmittedPredictResponse = useAppSelector(
     state => state.predictLevel.hasSubmittedResponse
   );
 
+  const aiChatAccessLevel = useAppSelector(
+    state => state.currentUser.aiChatAccessLevel
+  );
   const {setChatDisabledState} = useAiChatDisabled();
   useEffect(() => {
-    if (isPredictLevel && !hasSubmittedPredictResponse) {
+    if (
+      currentAppName &&
+      !areAiChatToolsEnabled({appName: currentAppName, aiChatAccessLevel})
+    ) {
+      setChatDisabledState({
+        chatDisabled: true,
+        chatDisabledMessage: TEACHER_DISABLED_AI_CHAT_MESSAGE,
+      });
+    } else if (isPredictLevel && !hasSubmittedPredictResponse) {
       setChatDisabledState({
         chatDisabled: true,
         chatDisabledMessage: lab2I18n.predictTutorDisabledMessage(),
@@ -89,7 +101,13 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     } else {
       setChatDisabledState({chatDisabled: false});
     }
-  }, [isPredictLevel, hasSubmittedPredictResponse, setChatDisabledState]);
+  }, [
+    currentAppName,
+    aiChatAccessLevel,
+    isPredictLevel,
+    hasSubmittedPredictResponse,
+    setChatDisabledState,
+  ]);
 
   const blockLabView = getIsLabViewBlocked(
     pageAction,

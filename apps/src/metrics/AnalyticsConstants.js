@@ -362,6 +362,8 @@ const EVENTS = {
   DANCE_PARTY_AI_BACKGROUND_EXPLAINED: 'Dance Party AI Background Explained',
   DANCE_PARTY_AI_EMOJI_USED: 'Dance Party AI Emoji Used',
   DANCE_PARTY_SONG_UNAVAILABLE: 'Dance Party Song Unavailable',
+  DANCE_PARTY_RESTRICTED_SONG_AUTH_ERROR:
+    'Dance Party Restricted Song Auth Error',
   DANCE_PARTY_VALIDATION: 'Dance Party Validation',
   DANCE_PARTY_AI_MODAL_CLOSED: 'Dance Party AI Modal Closed',
 
@@ -447,6 +449,7 @@ const EVENTS = {
 
   // Add custom image to project
   UPLOAD_CUSTOM_IMAGE: 'User clicks on upload image to project',
+  MODERATE_CUSTOM_IMAGE: 'User-submitted image is moderated',
   SUBMIT_IMAGE_URL: 'User clicks on submit image URL to project',
   FLAGGED_CUSTOM_IMAGE:
     'User attempting to upload an image that is flagged for abuse',
@@ -517,6 +520,8 @@ const EVENTS = {
   SUBMIT_AICHAT_TEACHER_FEEDBACK: 'Teacher submits feedback on aichat message',
   AICHAT_MULTIMODAL_UPLOAD_OPENED: 'User clicks to upload multimodal assets',
   AICHAT_MULTIMODAL_UPLOAD_STAGED: 'User stages multimodal assets',
+  AICHAT_UNSUPPORTED_MODEL_SELECTED:
+    'User had previously selected a model that is no longer supported',
 
   // AI chat response copied. Shared across features; check event properties for usage and clientType
   // to determine feature.
@@ -545,19 +550,6 @@ const EVENTS = {
   CODEBRIDGE_UPLOAD_UNACCEPTED_FILE:
     'Attempted upload of unaccepted file on codebridge',
   CODEBRIDGE_UPLOAD_FAILED: 'Failed to upload file on codebridge',
-
-  // Codebridge - Backpack events
-  CODEBRIDGE_SAVE_TO_BACKPACK_NEW: 'Save new file to backpack on codebridge',
-  CODEBRIDGE_SAVE_TO_BACKPACK_REPLACE: 'Replace file in backpack on codebridge',
-  CODEBRIDGE_SAVE_TO_BACKPACK_RENAME:
-    'Save renamed file to backpack on codebridge',
-  CODEBRIDGE_DELETE_FROM_BACKPACK: 'Delete from backpack on codebridge',
-  CODEBRIDGE_IMPORT_FROM_BACKPACK_NEW:
-    'Import new file from backpack on codebridge',
-  CODEBRIDGE_IMPORT_FROM_BACKPACK_REPLACE:
-    'Import a file from backpack on codebridge, replacing existing file',
-  CODEBRIDGE_IMPORT_FROM_BACKPACK_RENAME:
-    'Import a file from backpack on codebridge, renaming it',
 
   // Codebridge - Other events
   CODEBRIDGE_CLEAR_CONSOLE: 'Console cleared on codebridge',
@@ -640,6 +632,16 @@ const EVENTS = {
   RESOURCE_PANEL_LANGUAGE_CHANGE: 'Resource Panel Language Change',
   RESOURCE_PANEL_SETTINGS_CHANGE: 'Resource Panel Settings Change',
 
+  // Resource Panel - Instructions Drawer
+  RESOURCE_PANEL_INSTRUCTIONS_DRAWER_COLLAPSED:
+    'Resource Panel Instructions Drawer Collapsed',
+  RESOURCE_PANEL_INSTRUCTIONS_DRAWER_EXPANDED:
+    'Resource Panel Instructions Drawer Expanded',
+  RESOURCE_PANEL_INSTRUCTIONS_DRAWER_RESIZED_INCREASED:
+    'Resource Panel Instructions Drawer Resized Increased',
+  RESOURCE_PANEL_INSTRUCTIONS_DRAWER_RESIZED_DECREASED:
+    'Resource Panel Instructions Drawer Resized Decreased',
+
   // IntroJS flows
   INTROJS_FLOW_STARTED: 'IntroJS Flow Started',
   INTROJS_FLOW_EXIT: 'IntroJS Flow Exited',
@@ -684,6 +686,30 @@ const EVENTS = {
     'AI Tutor Version File Preview Button Clicked',
   AI_TUTOR_VERSION_FILE_PREVIEWED_IN_URL_BAR:
     'File Previewed in AI Tutor Version View via URL bar',
+
+  // Generic backpack events
+  SAVE_TO_BACKPACK_NEW: 'Save new file to backpack',
+  SAVE_TO_BACKPACK_REPLACE: 'Replace file in backpack',
+  SAVE_TO_BACKPACK_RENAME: 'Save renamed file to backpack',
+  DELETE_FROM_BACKPACK: 'Delete from backpack',
+  IMPORT_FROM_BACKPACK_NEW: 'Import new file from backpack',
+  IMPORT_FROM_BACKPACK_REPLACE:
+    'Import a file from backpack, replacing existing file',
+  IMPORT_FROM_BACKPACK_RENAME: 'Import a file from backpack, renaming it',
+
+  // student snapshot events
+  LESSON_SNAPSHOT_RESOURCE_LINK_ADDED:
+    'Teacher clicks “Add resource link” and successfully adds a URL',
+  LESSON_SNAPSHOT_SAVE_AS_DRAFT_CLICKED:
+    'Teacher clicks "Save as draft" and feedback is successfully saved as draft',
+  LESSON_SNAPSHOT_AI_FEEDBACK_EDITED:
+    'Teacher modifies the AI-generated feedback text before saving or sending',
+  LESSON_SNAPSHOT_SEND_FEEDBACK_TO_STUDENT_CLICKED:
+    'Teacher clicks "Send feedback to student" and feedback is successfully sent',
+  LESSON_SNAPSHOT_AI_FEEDBACK_GENERATED:
+    'AI-generated feedback is successfully returned and displayed in the feedback text box',
+  LESSON_SNAPSHOT_FEEDBACK_WIDGET_LOADED:
+    "Teacher opens a student's lesson view and the feedback widget is rendered",
 };
 
 const EVENT_GROUP_NAMES = {

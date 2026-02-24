@@ -34,7 +34,7 @@ class AichatRequestsController < ApplicationController
     unless chat_completion_has_required_params?
       return render status: :bad_request, json: {}
     end
-    unless can_access_aichat_chat_completion? || can_access_ai_tutor_chat_completion?(params[:aichatContext][:clientType])
+    unless can_access_aichat_lab_chat_completion? || can_access_ai_tutor_chat_completion?(params[:aichatContext][:clientType])
       return render status: :forbidden, json: {user_type: current_user.user_type}
     end
     return head :too_many_requests if should_throttle_request_count?
@@ -46,24 +46,9 @@ class AichatRequestsController < ApplicationController
       return head :too_many_requests
     end
 
-    # Filter out non-OK messages (e.g. errors).
-    messages_for_model = params[:storedMessages].select {|message| message[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK]}
-    context = params[:aichatContext]
-
-    # Add client type to model parameters.
-    params[:modelParameters][:clientType] = params[:aichatContext][:clientType]
-
     # Create the request object.
     begin
-      request = AichatRequest.create!(
-        user_id: current_user.id,
-        model_customizations: params[:modelParameters],
-        stored_messages: messages_for_model,
-        new_message: params[:newMessage],
-        level_id: context[:currentLevelId],
-        script_id: context[:scriptId],
-        project_id: get_project_id(context)
-      )
+      request = create_request
     rescue StandardError => exception
       return render status: :bad_request, json: {error: exception.message}
     end
@@ -101,14 +86,24 @@ class AichatRequestsController < ApplicationController
     render(status: :ok, json: response_body)
   end
 
+  def create_request
+    # TODO: confirm request shape and data usage https://codedotorg.atlassian.net/browse/TEACHING-60
+    request_params = params.permit!.to_h.deep_symbolize_keys
+
+    attributes = AichatAiHelper.build_request_attributes(current_user.id, request_params)
+
+    AichatRequest.new(attributes).tap(&:save!)
+  end
+
   private def can_access_ai_tutor_chat_completion?(client_type)
     return false if DCDO.get("block_ai_tutor_chat_completion", false)
     current_user.trust_chat_client?(client_type)
   end
 
-  private def can_access_aichat_chat_completion?
-    return false if DCDO.get("block_aichat_chat_completion", false)
-    current_user.has_aichat_access?
+  private def can_access_aichat_lab_chat_completion?
+    return false if DCDO.get("block_aichat_lab_chat_completion", false)
+    ai_chat_new_permissions = params[:'ai-chat-new-permissions'].present?
+    current_user.has_aichat_lab_access?(new_permissions_enabled: ai_chat_new_permissions)
   end
 
   private def should_throttle_request_count?
@@ -152,13 +147,6 @@ class AichatRequestsController < ApplicationController
     if params[:aichatModelCustomizations].present?
       params[:modelParameters] = params[:aichatModelCustomizations]
       params.delete(:aichatModelCustomizations)
-    end
-  end
-
-  private def get_project_id(context)
-    if context[:channelId]
-      _, project_id = storage_decrypt_channel_id(context[:channelId])
-      project_id
     end
   end
 

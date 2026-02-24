@@ -178,29 +178,6 @@ Function.prototype.inherits = function (parent) {
 };
 
 /**
- * Wrap a couple of our Blockly number validators to allow for ???.  This is
- * done so that level builders can specify required blocks with wildcard fields.
- */
-export function wrapNumberValidatorsForLevelBuilder() {
-  var nonNeg = Blockly.cdoUtils.nonnegativeIntegerValidator;
-  var numVal = Blockly.cdoUtils.numberValidator;
-
-  Blockly.cdoUtils.nonnegativeIntegerValidator = function (text) {
-    if (text === '???') {
-      return text;
-    }
-    return nonNeg(text);
-  };
-
-  Blockly.cdoUtils.numberValidator = function (text) {
-    if (text === '???') {
-      return text;
-    }
-    return numVal(text);
-  };
-}
-
-/**
  * Return a random value from an array
  */
 export function randomValue(values) {
@@ -391,18 +368,6 @@ export function showGenericQtip(targetElement, title, message, position) {
       show: false, // don't show on mouseover
     })
     .qtip('show');
-}
-
-export function showUnusedBlockQtip(targetElement) {
-  const msg = require('@cdo/locale');
-  const title = msg.unattachedBlockTipTitle();
-  const message = msg.unattachedBlockTipBody();
-  const position = {
-    my: 'bottom left',
-    at: 'top right',
-  };
-
-  showGenericQtip(targetElement, title, message, position);
 }
 
 /**

@@ -230,7 +230,7 @@ class RosterDialog extends React.Component {
       {
         oauthSource: rosterProvider,
       },
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   };
 

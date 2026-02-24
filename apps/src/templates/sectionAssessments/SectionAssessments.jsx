@@ -20,7 +20,6 @@ import UnitSelector from '@cdo/apps/templates/sectionProgress/UnitSelector';
 import i18n from '@cdo/locale';
 
 import {h3Style} from '../../legacySharedComponents/Headings';
-import firehoseClient from '../../metrics/firehose';
 
 import AssessmentSelector from './AssessmentSelector';
 import FeedbackDownload from './FeedbackDownload';
@@ -89,60 +88,20 @@ class SectionAssessments extends Component {
   }
 
   onSelectScript = (newScriptId, newCourseVersionId) => {
-    const {setUnit, asyncLoadAssessments, scriptId, sectionId} = this.props;
+    const {setUnit, asyncLoadAssessments, sectionId} = this.props;
     asyncLoadAssessments(sectionId, newScriptId, newCourseVersionId);
     setUnit(newScriptId, newCourseVersionId);
-
-    this.logEvent('select_script', {
-      old_script_id: scriptId,
-      new_script_id: newScriptId,
-    });
   };
 
   onSelectAssessment = newAssessmentId => {
-    const {setAssessmentId, assessmentId, scriptId} = this.props;
+    const {setAssessmentId} = this.props;
     setAssessmentId(newAssessmentId);
-
-    this.logEvent('select_assessment', {
-      script_id: scriptId,
-      old_level_group_id: assessmentId,
-      new_level_group_id: newAssessmentId,
-    });
   };
 
   onSelectStudent = studentId => {
-    const {setStudentId, assessmentId, scriptId} = this.props;
+    const {setStudentId} = this.props;
     setStudentId(studentId);
-
-    this.logEvent('select_student', {
-      student_id: studentId,
-      script_id: scriptId,
-      level_group_id: assessmentId,
-    });
   };
-
-  onClickDownload(dataType) {
-    const {assessmentId, scriptId} = this.props;
-    this.logEvent(`download_${dataType}`, {
-      script_id: scriptId,
-      level_group_id: assessmentId,
-    });
-  }
-
-  logEvent(event, data) {
-    firehoseClient.putRecord(
-      {
-        study: 'teacher_dashboard_actions',
-        study_group: 'assessments_surveys',
-        event: event,
-        data_json: JSON.stringify({
-          section_id: this.props.sectionId,
-          ...data,
-        }),
-      },
-      {includeUserId: true}
-    );
-  }
 
   showFreeResponseDetailDialog = () => {
     this.setState({
@@ -245,7 +204,6 @@ class SectionAssessments extends Component {
                         filename="assessments.csv"
                         data={exportableData}
                         headers={CSV_ASSESSMENT_HEADERS}
-                        onClick={() => this.onClickDownload('assessments')}
                       >
                         <div>{i18n.downloadAssessmentCSV()}</div>
                       </CSVLink>
@@ -254,11 +212,7 @@ class SectionAssessments extends Component {
                   {totalStudentSubmissions <= 0 && (
                     <div>{i18n.emptyAssessmentSubmissions()}</div>
                   )}
-                  <SubmissionStatusAssessmentsContainer
-                    onClickDownload={() =>
-                      this.onClickDownload('submission_stats')
-                    }
-                  />
+                  <SubmissionStatusAssessmentsContainer />
                   {totalStudentSubmissions > 0 && (
                     <div>
                       <MultipleChoiceAssessmentsOverviewContainer
@@ -280,10 +234,7 @@ class SectionAssessments extends Component {
               )}
             {/* Feedback Download */}
             {isCurrentAssessmentFeedbackOption && (
-              <FeedbackDownload
-                sectionName={sectionName}
-                onClickDownload={() => this.onClickDownload('feedback')}
-              />
+              <FeedbackDownload sectionName={sectionName} />
             )}
             {/* Surveys */}
             {isCurrentAssessmentSurvey && (
@@ -294,7 +245,6 @@ class SectionAssessments extends Component {
                       filename="surveys.csv"
                       data={exportableData}
                       headers={CSV_SURVEY_HEADERS}
-                      onClick={() => this.onClickDownload('surveys')}
                     >
                       <div>{i18n.downloadAssessmentCSV()}</div>
                     </CSVLink>

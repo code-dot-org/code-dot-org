@@ -27,6 +27,7 @@
 #  ai_tutor_enabled     :boolean          default(FALSE)
 #  avatar_color         :integer
 #  avatar_emoji         :integer
+#  ai_chat_access_level :string(255)      default("disabled")
 #
 # Indexes
 #
@@ -38,20 +39,23 @@
 #
 
 class CleverSection < OmniAuthSection
+  CODE_PREFIX = 'C-'.freeze
+
   def self.from_service(course_id, owner_id, student_list, section_name)
-    code = "C-#{course_id}"
+    code = "#{CODE_PREFIX}#{course_id}"
 
-    set_family_name = DCDO.get('clever_family_name', false)
-
-    students = student_list.map do |student|
+    students = student_list.filter_map do |student|
       data = student['data']
+      student_role_data = data['roles']['student']
+      next if student_role_data.blank?
+
       OmniAuth::AuthHash.new(
         uid: data['id'],
         provider: 'clever',
         info: {
-          name: set_family_name ? data['name']['first'] : data['name'],
-          family_name: set_family_name ? data['name']['last'] : nil,
-          dob: data['dob'],
+          name: data['name']['first'],
+          family_name: data['name']['last'],
+          dob: student_role_data['dob'],
         },
       )
     end
@@ -63,5 +67,9 @@ class CleverSection < OmniAuthSection
       students: students,
       section_name: section_name,
     )
+  end
+
+  def clever_id
+    code.sub(/^#{CODE_PREFIX}/o, '')
   end
 end

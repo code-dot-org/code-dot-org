@@ -7,12 +7,7 @@ import {
 } from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
-import {
-  BodyThreeText,
-  BodyFourText,
-  BodyTwoText,
-  Heading2,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import cookies from 'js-cookie';
 import React, {useState, useEffect, useMemo} from 'react';
@@ -148,7 +143,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
     analyticsReporter.sendEvent(
       EVENTS.FINISH_ACCOUNT_PAGE_LOADED,
       {'user type': 'teacher', country: countryCode},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
 
     const fetchGdprData = async () => {
@@ -370,7 +365,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
         'educator role': educatorRole,
         country: countryCode,
       },
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
 
     // Log to Google Analytics
@@ -383,8 +378,12 @@ const FinishTeacherAccount: React.FunctionComponent<{
     <div>
       <div className={style.finishAccountContainer}>
         <div className={style.headerTextContainer}>
-          <Heading2>{locale.finish_creating_teacher_account()}</Heading2>
-          <BodyTwoText>{locale.tailor_experience()}</BodyTwoText>
+          <Typography variant="h2" gutterBottom>
+            {locale.finish_creating_teacher_account()}
+          </Typography>
+          <Typography variant="body2" gutterBottom>
+            {locale.tailor_experience()}
+          </Typography>
         </div>
         {errorCreatingAccountMessage && (
           <div className={style.errorSigningUpMessage}>
@@ -437,12 +436,18 @@ const FinishTeacherAccount: React.FunctionComponent<{
               onChange={e => onNameChange(e, NAME_TYPES.DisplayName)}
               errorMessage={displayNameErrorMessage}
             />
-            <BodyThreeText className={style.displayNameSubtext}>
+            <Typography
+              className={style.displayNameSubtext}
+              variant="body3"
+              gutterBottom
+            >
               {locale.this_is_what_your_students_will_see()}
-            </BodyThreeText>
+            </Typography>
           </div>
           <div className={style.signupSourcesContainer}>
-            <BodyThreeText>{locale.how_did_you_hear_about_us()}</BodyThreeText>
+            <Typography variant="body3" gutterBottom>
+              {locale.how_did_you_hear_about_us()}
+            </Typography>
             <CheckboxDropdown
               name="signupSources"
               labelText={locale.select_all_that_apply()}
@@ -478,21 +483,23 @@ const FinishTeacherAccount: React.FunctionComponent<{
             <GradeLevelChips
               inputLabel={locale.grades_taught()}
               values={selectedGrades}
-              setValues={vals => setSelectedGrades(vals)}
+              setValues={(vals: string[]) => setSelectedGrades(vals)}
               className={style.gradeSelectChips}
             />
           )}
           <SchoolDataInputs {...schoolInfo} includeHeaders={false} />
           {showGDPR && (
             <div>
-              <BodyThreeText
+              <Typography
                 className={classNames(
                   style.teacherKeepMeUpdated,
                   style.required
                 )}
+                variant="body3"
+                gutterBottom
               >
                 <strong>{locale.data_transfer_notice()}</strong>
-              </BodyThreeText>
+              </Typography>
               <Checkbox
                 name="gdprAcknowledge"
                 label={locale.data_transfer_agreement_teacher()}
@@ -510,9 +517,13 @@ const FinishTeacherAccount: React.FunctionComponent<{
             </div>
           )}
           <div>
-            <BodyThreeText className={style.teacherKeepMeUpdated}>
+            <Typography
+              className={style.teacherKeepMeUpdated}
+              variant="body3"
+              gutterBottom
+            >
               <strong>{locale.keep_me_updated()}</strong>
-            </BodyThreeText>
+            </Typography>
             <Checkbox
               name="userEmailOptIn"
               label={locale.get_informational_emails()}
@@ -520,10 +531,14 @@ const FinishTeacherAccount: React.FunctionComponent<{
               onChange={e => setEmailOptInChecked(e.target.checked)}
               size="s"
             />
-            <BodyFourText className={style.emailOptInFootnote}>
+            <Typography
+              className={style.emailOptInFootnote}
+              variant="body4"
+              gutterBottom
+            >
               <strong>{locale.note()}</strong>{' '}
               {locale.after_creating_your_account()}
-            </BodyFourText>
+            </Typography>
           </div>
         </fieldset>
         <div className={style.finishSignUpButtonContainer}>

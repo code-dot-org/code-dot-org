@@ -2,7 +2,6 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import {
   BubbleSize,
   getBubbleUrl,
@@ -27,27 +26,10 @@ export default class ProgressTableDetailCell extends React.Component {
 
   constructor(props) {
     super(props);
-    this.recordBubbleClick = this.recordBubbleClick.bind(this);
   }
 
   shouldComponentUpdate(nextProps) {
     return !_.isEqual(this.props, nextProps);
-  }
-
-  recordBubbleClick(levelId) {
-    firehoseClient.putRecord(
-      {
-        study: 'teacher_dashboard_actions',
-        study_group: 'progress',
-        event: 'go_to_level',
-        data_json: JSON.stringify({
-          student_id: this.props.studentId,
-          section_id: this.props.sectionId,
-          level_id: levelId,
-        }),
-      },
-      {includeUserId: true}
-    );
   }
 
   buildBubbleUrl(level) {
@@ -60,11 +42,7 @@ export default class ProgressTableDetailCell extends React.Component {
         {level.sublevels.map(sublevel => {
           const sublevelProgress = this.props.studentProgress[sublevel.id];
           return (
-            <div
-              key={sublevel.id}
-              style={styles.sublevelContainer}
-              onClick={_ => this.recordBubbleClick(sublevel.id)}
-            >
+            <div key={sublevel.id} style={styles.sublevelContainer}>
               <ProgressTableLevelBubble
                 levelStatus={sublevelProgress?.status}
                 bubbleSize={BubbleSize.letter}
@@ -87,7 +65,7 @@ export default class ProgressTableDetailCell extends React.Component {
 
     return (
       <div key={`${level.id}_${level.levelNumber}`} style={styles.container}>
-        <div onClick={_ => this.recordBubbleClick(level.id)}>
+        <div>
           <ProgressTableLevelBubble
             levelStatus={levelProgress?.status}
             isLocked={levelProgress?.locked}

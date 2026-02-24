@@ -173,7 +173,6 @@ class User < ApplicationRecord
     display_theme
     mute_music
     last_seen_school_info_interstitial
-    has_seen_standards_report_info_dialog
     oauth_refresh_token
     oauth_token
     oauth_token_expiration
@@ -356,12 +355,16 @@ class User < ApplicationRecord
   # check that we handle validation errors from AuthenticationOption everywhere.
   validate if: :migrated? do |user|
     if user.primary_contact_info && !user.primary_contact_info.valid?
-      user.primary_contact_info.errors.each {|k, v| user.errors.add k, v}
+      user.primary_contact_info.errors.each do |error|
+        user.errors.add(error.attribute, error.message)
+      end
     end
 
     user.authentication_options.each do |ao|
       unless ao.valid?
-        ao.errors.each {|k, v| user.errors.add k, v}
+        ao.errors.each do |error|
+          user.errors.add(error.attribute, error.message)
+        end
       end
     end
   end
@@ -654,7 +657,7 @@ class User < ApplicationRecord
     # For this step, we only care about email, password, and password confirmation.
     # Remove any other validation errors for now.
     required_fields = [:email, :password, :password_confirmation]
-    errors.each do |attribute, _|
+    errors.attribute_names.each do |attribute|
       errors.delete(attribute) unless required_fields.include?(attribute)
     end
 
@@ -1920,7 +1923,7 @@ class User < ApplicationRecord
   end
 
   def self.find_channel_owner(encrypted_channel_id)
-    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    owner_storage_id, _ = get_storage_id_and_project_id(encrypted_channel_id)
     user_id = user_id_for_storage_id(owner_storage_id)
     User.find(user_id)
   rescue ArgumentError, OpenSSL::Cipher::CipherError, ActiveRecord::RecordNotFound

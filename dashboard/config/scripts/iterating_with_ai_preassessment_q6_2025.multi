@@ -7,7 +7,7 @@ right 'Show an "empty state" message (e.g., "No items found") to provide transpa
 wrong 'Automatically generate random data so the screen isn\'t empty.'
 wrong 'Trigger an error message that tells the user the code is broken.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 4

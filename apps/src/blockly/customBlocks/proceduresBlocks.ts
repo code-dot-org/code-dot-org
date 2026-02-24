@@ -5,8 +5,14 @@ import BlockSvgFrame from '@cdo/apps/blockly/addons/blockSvgFrame';
 import CdoFieldButton from '@cdo/apps/blockly/addons/cdoFieldButton';
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 import {ExtendedWorkspaceSvg, ProcedureBlock} from '@cdo/apps/blockly/types';
+import {getCategoryBlocksJson} from '@cdo/apps/blockly/utils/toolbox/retrieval';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {nameComparator} from '@cdo/apps/util/sort';
+
+import {
+  appendMiniToolboxToggle,
+  initializeMiniToolbox,
+} from '../utils/fields/miniToolbox';
 
 import procedureCallerOnChangeMixin from './mixins/procedureCallerOnChangeMixin';
 import procedureCallerMutator from './mutators/procedureCallerMutator';
@@ -65,7 +71,6 @@ export const blocks = BlocklyCore.common.createBlockDefinitionsFromJsonArray([
       'procedures_block_frame',
       'procedure_def_mini_toolbox',
       'modal_procedures_no_destroy',
-      'procedure_def_no_gray_out',
       'procedure_def_get_info',
     ],
     mutator: 'procedure_def_mutator',
@@ -174,11 +179,10 @@ BlocklyCore.Extensions.register(
     }
 
     const renderToolboxBeforeStack = true;
-    const flyoutToggleButton = Blockly.customBlocks.initializeMiniToolbox.bind(
-      this
-    )(undefined, renderToolboxBeforeStack);
+    const flyoutToggleButton = initializeMiniToolbox(renderToolboxBeforeStack);
     const renderingInFunctionEditor = true;
-    Blockly.customBlocks.appendMiniToolboxToggle.bind(this)(
+    appendMiniToolboxToggle(
+      this,
       miniToolboxBlocks,
       flyoutToggleButton,
       renderingInFunctionEditor
@@ -199,7 +203,7 @@ BlocklyCore.Extensions.register(
       !(this.workspace as ExtendedWorkspaceSvg).noFunctionBlockFrame
     ) {
       const getColor = () => {
-        return Blockly.cdoUtils.getBlockColor(this);
+        return this.style?.colourPrimary || '';
       };
       this.functionalSvg_ = new BlockSvgFrame(
         this,
@@ -337,14 +341,6 @@ BlocklyCore.Extensions.registerMixin(
   procedureCallerOnChangeMixin
 );
 
-// Labs like Maze and Artist turn undeletable blocks gray. This is not
-// done for special blocks like "when run" or procedure definitions.
-BlocklyCore.Extensions.registerMixin('procedure_def_no_gray_out', {
-  shouldBeGrayedOut: function () {
-    return false;
-  },
-});
-
 // Used for giving feedback about empty function definition blocks.
 BlocklyCore.Extensions.registerMixin('procedure_def_get_info', {
   getProcedureInfo: function () {
@@ -391,7 +387,7 @@ export function flyoutCategory(
   }
 
   // Add blocks from the level toolbox XML, if present.
-  blockList.push(...Blockly.cdoUtils.getCategoryBlocksJson('PROCEDURE'));
+  blockList.push(...getCategoryBlocksJson('PROCEDURE'));
 
   // Workspaces to populate functions flyout category from
   const workspaces = [

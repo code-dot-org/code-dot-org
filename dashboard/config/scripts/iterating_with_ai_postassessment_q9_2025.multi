@@ -7,7 +7,7 @@ wrong 'Performing a calculation and returning the result.'
 right 'Updating a global variable that tracks the "Total Users" outside the function.'
 wrong 'Accepting two numbers as inputs.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 7

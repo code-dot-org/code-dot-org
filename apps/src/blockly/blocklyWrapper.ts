@@ -12,7 +12,6 @@ import * as BlocklyCore from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
 
 import {
-  BlockColors,
   READ_ONLY_PROPERTIES,
   SETTABLE_PROPERTIES,
   WORKSPACE_EVENTS,
@@ -60,10 +59,8 @@ import CdoRendererGeras from './addons/cdoRendererGeras';
 import CdoRendererThrasos from './addons/cdoRendererThrasos';
 import CdoRendererZelos from './addons/cdoRendererZelos';
 import {initializeScrollbarPair} from './addons/cdoScrollbar';
-import {cleanUp} from './addons/cdoSerializationHelpers';
 import {getPointerBlockImageUrl} from './addons/cdoSpritePointer';
 import CdoTrashcan from './addons/cdoTrashcan';
-import * as cdoUtils from './addons/cdoUtils';
 import initializeVariables from './addons/cdoVariables';
 import CdoVerticalFlyout from './addons/cdoVerticalFlyout';
 import initializeBlocklyXml, {
@@ -79,13 +76,13 @@ import registerTextJoinMutator from './addons/plusMinusBlocks/text_join';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {Themes, Renderers} from './constants';
 import {flyoutCategory as behaviorsFlyoutCategory} from './customBlocks/behaviorBlocks';
-import customBlocks from './customBlocks/index';
 import {flyoutCategory as functionsFlyoutCategory} from './customBlocks/proceduresBlocks';
 import {flyoutCategory as variablesFlyoutCategory} from './customBlocks/variableBlocks';
 import {
   adjustCalloutsOnViewportChange,
   bumpRTLBlocks,
   disableOrphans,
+  handleGrayUndeletableBlocks,
   reflowToolbox,
   setPathFill,
   storeWorkspaceWidth,
@@ -108,27 +105,22 @@ import CdoJigsawTheme from './themes/cdoJigsaw';
 import CdoTheme from './themes/cdoTheme';
 import {
   BlocklyWrapperType,
-  ExtendedBlock,
-  ExtendedBlockSvg,
   ExtendedBlocklyOptions,
-  ExtendedConnection,
-  ExtendedInput,
   ExtendedJavascriptGenerator,
-  ExtendedVariableMap,
   ExtendedWorkspace,
   ExtendedWorkspaceSvg,
-  FieldHelperOptions,
   BlocklyCoreInstance,
 } from './types';
 import {
-  INFINITE_LOOP_TRAP,
-  LOOP_HIGHLIGHT,
   handleCodeGenerationFailure,
   strip,
   initializeVariableLocalization,
-  interpolateMsg,
   isDarkTheme,
   setThemeAndRenderBlocks,
+  getUserTheme,
+  createBlockLimitMap,
+  loadBlocksToWorkspace,
+  cleanUp,
 } from './utils';
 
 const options: {contextMenu: true; shortcut: true} = {
@@ -212,28 +204,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   const blocklyWrapper = new (BlocklyWrapper as any)(
     blocklyInstance
   ) as BlocklyWrapperType;
-
-  blocklyWrapper.setInfiniteLoopTrap = function () {
-    Blockly.JavaScript.INFINITE_LOOP_TRAP = INFINITE_LOOP_TRAP;
-  };
-
-  blocklyWrapper.clearInfiniteLoopTrap = function () {
-    Blockly.JavaScript.INFINITE_LOOP_TRAP = '';
-  };
-
-  blocklyWrapper.getInfiniteLoopTrap = function () {
-    return Blockly.JavaScript.INFINITE_LOOP_TRAP;
-  };
-
-  blocklyWrapper.loopHighlight = function (apiName, blockId) {
-    let args = "'block_id_" + blockId + "'";
-    if (blockId === undefined) {
-      args = '%1';
-    }
-    return (
-      '  ' + apiName + '.' + LOOP_HIGHLIGHT.replace('()', '(' + args + ')')
-    );
-  };
 
   blocklyWrapper.getWorkspaceCode = function () {
     return getWorkspaceCodeHelper(0, this.getHiddenDefinitionWorkspace());
@@ -393,11 +363,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
       return this.mainWorkspace || this.blockly_.getMainWorkspace();
     },
   });
-  Object.defineProperty(blocklyWrapper, 'SVG_NS', {
-    get: function () {
-      return this.blockly_.utils.dom.SVG_NS;
-    },
-  });
   Object.defineProperty(blocklyWrapper, 'selected', {
     get: function () {
       // In the event that the block is no longer focused, we can
@@ -416,22 +381,11 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
       return Blockly.getSelected();
     },
   });
-  Object.defineProperty(blocklyWrapper, 'BlockFieldHelper', {
-    get: function () {
-      return {
-        ANGLE_HELPER: 'Angle Helper',
-      };
-    },
-  });
 
   // Properties cannot be modified until wrapSettableProperty has been called
   SETTABLE_PROPERTIES.forEach(property =>
     blocklyWrapper.wrapSettableProperty(property)
   );
-
-  blocklyWrapper.ALIGN_CENTRE = blocklyWrapper.inputs.Align.CENTRE;
-  blocklyWrapper.ALIGN_LEFT = blocklyWrapper.inputs.Align.LEFT;
-  blocklyWrapper.ALIGN_RIGHT = blocklyWrapper.inputs.Align.RIGHT;
 
   // Allows for dynamically setting the workspace theme with workspace.setTheme()
   blocklyWrapper.themes = {
@@ -454,199 +408,8 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
 
   blocklyWrapper.JavaScript = javascriptGenerator;
 
-  // Wrap SNAP_RADIUS property, and in the setter make sure we keep SNAP_RADIUS and CONNECTING_SNAP_RADIUS in sync.
-  // See https://github.com/google/blockly/issues/2217
-  Object.defineProperty(blocklyWrapper, 'SNAP_RADIUS', {
-    get: function () {
-      return this.blockly_.SNAP_RADIUS;
-    },
-    set: function (snapRadius) {
-      this.blockly_.SNAP_RADIUS = snapRadius;
-      this.blockly_.CONNECTING_SNAP_RADIUS = snapRadius;
-    },
-  });
-
-  blocklyWrapper.addChangeListener = function (blockspace, handler) {
-    blockspace.addChangeListener(handler);
-  };
-
-  blocklyWrapper.removeChangeListener = function (
-    handler,
-    blockspace = Blockly.getMainWorkspace()
-  ) {
-    blockspace.removeChangeListener(handler);
-  };
-
-  const googleBlocklyMixin = blocklyWrapper.BlockSvg.prototype.mixin;
-  blocklyWrapper.BlockSvg.prototype.mixin = function (mixinObj) {
-    googleBlocklyMixin.call(this, mixinObj, true);
-  };
-
-  const extendedBlockSvg = blocklyWrapper.BlockSvg
-    .prototype as ExtendedBlockSvg;
-
-  extendedBlockSvg.isVisible = function () {
-    // TODO (eventually) - All Blockly blocks are currently visible.
-    // This shouldn't be a problem until we convert other labs.
-    return true;
-  };
-
-  extendedBlockSvg.isUserVisible = function () {
-    // Used for EXTRA_TOP_BLOCKS_FAIL feedback
-    // Mainline Blockly doesn't support invisible blocks. If a block should be
-    // invisible, we instead load it to the hidden workspace. We use custom
-    // serialization hooks to manage this block state.
-    // Any block on the main workspace is visible.
-    return this.workspace === Blockly.getMainWorkspace();
-  };
-
-  // Labs like Maze and Artist turn undeletable blocks gray.
-  extendedBlockSvg.shouldBeGrayedOut = function () {
-    return (
-      blocklyWrapper.grayOutUndeletableBlocks &&
-      !this.workspace.isReadOnly() &&
-      !this.isDeletable()
-    );
-  };
-
-  const originalSetDeletable = blocklyWrapper.Block.prototype.setDeletable;
-  // Replace the original setDeletable with a version that will also re-color
-  // blocks if they are meant to be gray.
-  extendedBlockSvg.setDeletable = function (deletable) {
-    originalSetDeletable.call(this, deletable);
-    if (this.shouldBeGrayedOut()) {
-      Blockly.cdoUtils.setHSV(this, ...BlockColors.DISABLED);
-    }
-  };
-
-  const originalSetInputsInline =
-    blocklyWrapper.Block.prototype.setInputsInline;
-  // Replace the original setInputsInline with a version that forces a
-  // two-row Play Lab block to always use inline inputs..
-  extendedBlockSvg.setInputsInline = function (inline) {
-    originalSetInputsInline.call(this, inline);
-    if (
-      this.type === 'studio_whenSpriteAndGroupCollide' &&
-      !this.getInputsInline()
-    ) {
-      this.setInputsInline(true);
-    }
-  };
-
-  const originalToCopyData = blocklyWrapper.BlockSvg.prototype.toCopyData;
-  extendedBlockSvg.toCopyData = function () {
-    const blockCopyData = originalToCopyData.call(this);
-    if (blockCopyData) {
-      blockCopyData.blockState = BlocklyCore.serialization.blocks.save(this, {
-        addCoordinates: true,
-        addNextBlocks: false,
-        // We intentionally do not save IDs, because this can break student code
-        // on the hidden procedure definition workspace.
-        // https://github.com/google/blockly/issues/9226
-        saveIds: false,
-      })!;
-    }
-    return blockCopyData;
-  };
-
-  const extendedInput = blocklyWrapper.Input.prototype as ExtendedInput;
-  const extendedConnection = blocklyWrapper.Connection
-    .prototype as ExtendedConnection;
-
-  extendedInput.setStrictCheck = function (check) {
-    return this.setCheck(check);
-  };
-
-  // We use fieldRow because it is public.
-  extendedInput.getFieldRow = function () {
-    return this.fieldRow;
-  };
-
-  /**
-   * Enable the specified field helper with the specified options for this
-   * input's connection
-   * @param {string} fieldHelper the field helper to retrieve. One of
-   *        Blockly.BlockFieldHelper
-   * @param {*} options for this helper
-   * @return {!Blockly.Input} The input being modified (to allow chaining).
-   */
-  extendedInput.addFieldHelper = function (
-    fieldHelper: string,
-    options: FieldHelperOptions
-  ) {
-    (this.connection as ExtendedConnection).addFieldHelper(
-      fieldHelper,
-      options
-    );
-    return this;
-  };
-
-  // This is intentionally a no-op. Called by PlayLab.
-  // Blockly's implementation uses end row inputs instead.
-  extendedInput.setInline = function (inline) {
-    return this;
-  };
-
-  extendedConnection.addFieldHelper = function (
-    fieldHelper: string,
-    options: FieldHelperOptions
-  ) {
-    if (!this.fieldHelpers_) {
-      this.fieldHelpers_ = {};
-    }
-    this.fieldHelpers_[fieldHelper] = options;
-  };
-  extendedConnection.getFieldHelperOptions = function (fieldHelper: string) {
-    return this.fieldHelpers_ && this.fieldHelpers_[fieldHelper];
-  };
-  const extendedBlock = blocklyWrapper.Block.prototype as ExtendedBlock;
-
-  extendedBlock.interpolateMsg = interpolateMsg;
-  extendedBlock.setStrictOutput = function (isOutput, check) {
-    return this.setOutput(isOutput, check);
-  };
-
-  const originalSetOutput = blocklyWrapper.Block.prototype.setOutput;
-  // Replaces the original setOutput method with a custom version that will handle the case when "None" is passed appropriately
-  // See: https://github.com/code-dot-org/code-dot-org/blob/9d63cbcbfd84b8179ae2519adbb5869cbc319643/apps/src/blocklyAddons/cdoConstants.js#L9
-  extendedBlock.setOutput = function (isOutput, check) {
-    if (check === 'None') {
-      return originalSetOutput.call(this, isOutput, null);
-    } else {
-      return originalSetOutput.call(this, isOutput, check);
-    }
-  };
-
-  // Block fields are referred to as titles in CDO Blockly.
-  extendedBlock.setTitleValue = function (newValue, name) {
-    return this.setFieldValue(newValue, name);
-  };
-  /**
-   * Change the fill pattern of a block
-   * @param {string} pattern The id of the pattern
-   */
-  extendedBlock.setFillPattern = function (pattern: string) {
-    this.fillPattern = pattern;
-  };
-
-  /**
-   * Get the fill pattern for the block
-   * @return {string} Pattern name xlink
-   */
-  extendedBlock.getFillPattern = function () {
-    return this.fillPattern;
-  };
   const extendedWorkspaceSvg = blocklyWrapper.WorkspaceSvg
     .prototype as ExtendedWorkspaceSvg;
-
-  // Called by StudioApp, but only implemented for CDO Blockly.
-  extendedWorkspaceSvg.addUnusedBlocksHelpListener = function () {};
-
-  extendedWorkspaceSvg.getAllUsedBlocks = function () {
-    return this.getAllBlocks().filter(
-      block => block.isEnabled() && block.getRootBlock().isEnabled()
-    );
-  };
 
   // Used in levels when starting over or resetting Version History
   const googleBlocklyBlocklyClear = blocklyWrapper.WorkspaceSvg.prototype.clear;
@@ -655,50 +418,23 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     // After clearing the workspace, we need to reinitialize global variables
     // if there are any.
     if (this.globalVariables) {
-      this.getVariableMap().addVariables(this.globalVariables);
+      const variableMap = this.getVariableMap();
+      this.globalVariables.forEach(varName => {
+        variableMap.createVariable(varName);
+      });
     }
   };
 
   // Used in levels with pre-defined "Blockly Variables"
   extendedWorkspaceSvg.registerGlobalVariables = function (variableList) {
     this.globalVariables = variableList;
-    this.getVariableMap().addVariables(variableList);
-  };
-
-  extendedWorkspaceSvg.getContainer = function () {
-    return this.svgGroup_.parentNode;
-  };
-
-  extendedWorkspaceSvg.events = {
-    dispatchEvent: () => {}, // TODO
-  };
-
-  // TODO - called by StudioApp, not sure whether they're still needed.
-  extendedWorkspaceSvg.setEnableToolbox = function () {};
-  extendedWorkspaceSvg.traceOn = function () {};
-
-  extendedWorkspaceSvg.getBlockCount = function () {
-    return this.getAllBlocks().length;
-  };
-
-  const extendedVariableMap = blocklyWrapper.VariableMap
-    .prototype as ExtendedVariableMap;
-
-  extendedVariableMap.addVariables = function (variableList) {
-    variableList.forEach(varName => this.createVariable(varName));
+    const variableMap = this.getVariableMap();
+    variableList.forEach(varName => {
+      variableMap.createVariable(varName);
+    });
   };
 
   gestureOverrides(blocklyWrapper);
-
-  // Used for spritelab behavior blocks.
-  // We can remove this once we are ready to no longer support sprite lab on CDO Blockly.
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  (blocklyWrapper.Block as any).createProcedureDefinitionBlock = function () {};
-
-  // In cdo this is used to add "create a behavior" button to the toolbox
-  // Once we have fully moved to Blockly we can remove this.
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  (blocklyWrapper.Flyout as any).configure = function () {};
 
   blocklyWrapper.getGenerator = function () {
     // Additional methods are added to the generator when initializeGenerator is called,
@@ -787,7 +523,7 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     // We do not include hidden definitions in embedded workspaces
     // because embedded workspaces are only used for displaying blocks.
     const includeHiddenDefinitions = false;
-    Blockly.cdoUtils.loadBlocksToWorkspace(
+    loadBlocksToWorkspace(
       workspace,
       Blockly.Xml.domToText(xml),
       includeHiddenDefinitions
@@ -892,7 +628,7 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     blocklyWrapper.analyticsData = optOptionsExtended.analyticsData;
     blocklyWrapper.toolboxBlocks = options.toolbox;
     blocklyWrapper.showUnusedBlocks = options.showUnusedBlocks;
-    blocklyWrapper.blockLimitMap = cdoUtils.createBlockLimitMap();
+    blocklyWrapper.blockLimitMap = createBlockLimitMap();
     blocklyWrapper.isDarkTheme = isDarkTheme(
       options.theme as BlocklyCore.Theme | undefined
     );
@@ -916,23 +652,23 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
       (container as HTMLElement).classList.remove('notranslate');
     }
 
-    Blockly.cdoUtils
-      .getUserTheme(workspace.getTheme())
-      .then((theme: BlocklyCore.Theme) => {
-        setThemeAndRenderBlocks(
-          workspace,
-          theme,
-          options.theme as BlocklyCore.Theme
-        );
-      });
-    workspace.defs = Blockly.createSvgElement(
+    getUserTheme(workspace.getTheme()).then((theme: BlocklyCore.Theme) => {
+      setThemeAndRenderBlocks(
+        workspace,
+        theme,
+        options.theme as BlocklyCore.Theme
+      );
+    });
+    workspace.defs = BlocklyCore.utils.dom.createSvgElement(
       'defs',
       {id: 'blocklySvgDefs'},
       workspace.svgGroup_
     );
 
-    blocklyWrapper.grayOutUndeletableBlocks =
-      !!options.grayOutUndeletableBlocks;
+    if (!!options.grayOutUndeletableBlocks) {
+      workspace.addChangeListener(handleGrayUndeletableBlocks);
+    }
+
     blocklyWrapper.topLevelProcedureAutopopulate =
       !!options.topLevelProcedureAutopopulate;
     blocklyWrapper.showBlockHelp = !!optOptionsExtended.showBlockHelp;
@@ -1084,13 +820,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     return workspace;
   };
 
-  // Used by StudioApp to tell Blockly to resize for Mobile Safari.
-  blocklyWrapper.fireUiEvent = function (element, eventName) {
-    if (eventName === 'resize') {
-      blocklyWrapper.svgResize(blocklyWrapper.mainBlockSpace);
-    }
-  };
-
   blocklyWrapper.setMainWorkspace = function (mainWorkspace) {
     this.mainWorkspace = mainWorkspace;
   };
@@ -1113,29 +842,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     return blocklyWrapper.functionEditor?.getWorkspace();
   };
 
-  blocklyWrapper.createSvgElement = blocklyWrapper.utils.dom.createSvgElement;
-
-  // Blockly labs also need to clear separate workspaces for the function editor.
-  blocklyWrapper.clearAllStudentWorkspaces = function () {
-    // Disable Blockly events to prevent unnecessary event mirroring
-    Blockly.Events.disable();
-
-    const studentWorkspaces = [
-      Blockly.getMainWorkspace(),
-      Blockly.getFunctionEditorWorkspace(),
-      Blockly.getHiddenDefinitionWorkspace(),
-    ];
-
-    studentWorkspaces.forEach(workspace => {
-      if (workspace) {
-        workspace.clear();
-        workspace.getProcedureMap().clear();
-      }
-    });
-
-    Blockly.Events.enable();
-  };
-
   // Initialize metadata houses for original English source strings for
   // various Blockly metadata that gets installed. These are used by the
   // updateLocale(), localizeVariables(), etc, functions to translate a
@@ -1148,10 +854,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   };
   blocklyWrapper.SourceCustomInputTypes = {};
 
-  // Keep track of the custom blocks that are used to initialize the
-  // Blockly environment.
-  blocklyWrapper.customBlocks = customBlocks;
-
   initializeBlocklyXml(blocklyWrapper);
   initializeGenerator(blocklyWrapper);
   initializeVariables(blocklyWrapper);
@@ -1160,8 +862,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
 
   blocklyWrapper.Blocks.unknown = UNKNOWN_BLOCK;
   blocklyWrapper.JavaScript.forBlock.unknown = () => '/* unknown block */\n';
-
-  blocklyWrapper.cdoUtils = cdoUtils;
   blocklyWrapper.getPointerBlockImageUrl = getPointerBlockImageUrl;
 
   return blocklyWrapper;

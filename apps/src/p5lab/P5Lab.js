@@ -1,8 +1,8 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
+import {getCode} from '@cdo/apps/blockly/utils';
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
 import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
@@ -10,6 +10,7 @@ import {
   outputError,
   injectErrorHandler,
 } from '@cdo/apps/lib/util/javascriptMode';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 
 import {changeInterfaceMode, viewAnimationJson} from './actions';
@@ -497,7 +498,7 @@ export default class P5Lab {
     const loader = this.studioApp_
       .loadLibraries(this.level.helperLibraries)
       .then(() =>
-        ReactDOM.render(
+        createReactRoot(
           <Provider store={getStore()}>
             <P5LabView
               showFinishButton={finishButtonFirstLine && showFinishButton}
@@ -727,9 +728,6 @@ export default class P5Lab {
         ].join(',')
       );
       Blockly.JavaScript.addReservedWords(SpritelabReservedWords.join(','));
-
-      // Don't add infinite loop protection
-      Blockly.clearInfiniteLoopTrap();
     }
 
     if (this.level.blocklyVariables) {
@@ -907,7 +905,7 @@ export default class P5Lab {
       this.message = null;
     } else {
       let textBlocks;
-      textBlocks = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+      textBlocks = getCode(Blockly.mainBlockSpace);
       program = encodeURIComponent(textBlocks);
     }
 
@@ -961,10 +959,6 @@ export default class P5Lab {
    */
   runButtonClick() {
     this.studioApp_.toggleRunReset('reset');
-    // document.getElementById('spinner').style.visibility = 'visible';
-    if (this.studioApp_.isUsingBlockly()) {
-      Blockly.mainBlockSpace.traceOn(true);
-    }
     this.studioApp_.attempts++;
     this.execute();
 

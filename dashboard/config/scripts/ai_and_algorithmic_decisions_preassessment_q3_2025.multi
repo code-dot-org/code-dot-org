@@ -7,7 +7,7 @@ wrong 'It stores information about which videos you like the most.'
 wrong 'It changes the website\'s color theme based on your device settings.'
 wrong 'It automatically updates the browser to the newest version.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 2

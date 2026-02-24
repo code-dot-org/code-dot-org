@@ -886,10 +886,10 @@ class FilesTest < FilesApiTestBase
   end
 
   def test_moderate_image_unsupported_type
-    header 'CONTENT_TYPE', 'image/gif'
-    post '/v3/images/moderate', 'fake-gif-bytes'
+    header 'CONTENT_TYPE', 'image/bmp'
+    post '/v3/images/moderate', 'fake-bmp-bytes'
     assert_equal 400, last_response.status
-    assert_equal({'error' => 'Unsupported image type. Only PNG and JPEG files are allowed.'}, JSON.parse(last_response.body))
+    assert_equal({'error' => 'Unsupported image type. Only PNG, JPEG, and GIF files are allowed.'}, JSON.parse(last_response.body))
   end
 
   private def delete_all_files(bucket)

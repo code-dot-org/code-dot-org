@@ -1,28 +1,36 @@
 import Button, {buttonColors} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {OverlineThreeText} from '@code-dot-org/component-library/typography';
-import {Box, List, ListItem, ListItemButton, ListItemText} from '@mui/material';
+import {
+  Box,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+  Typography,
+} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useState} from 'react';
 
+import {fetchThreadMessages} from '@cdo/apps/aichat/redux/thunks';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {commonI18n} from '@cdo/apps/types/locale';
 import experiments from '@cdo/apps/util/experiments';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
-import {ChatThread} from './types';
+import {ChatThread, Context} from './types';
 
 import styles from './ai-differentiation.module.scss';
 
 interface AiDiffSidebarProps {
+  context: Context;
   threads?: ChatThread[];
-  selectedThreadId?: number;
-  threadSelectCallback?: (thread: number) => void;
   setShowNotifications: (show: boolean) => void;
   showNotifications: boolean;
   unreadNotificationCount: number;
+  curriculumCourses: string[] | undefined;
 }
 
 const now = new Date();
@@ -46,7 +54,9 @@ const ThreadItem: React.FC<{
       className={styles.sidebarChatButton}
     >
       <ListItemText
-        primary={chat.title}
+        primary={
+          chat.hasArtifact ? <TitleAndIcon title={chat.title} /> : chat.title
+        }
         secondary={chat.updatedAt.toLocaleString([], {
           dateStyle: 'medium',
           timeStyle: 'short',
@@ -63,25 +73,38 @@ const ThreadItem: React.FC<{
   </ListItem>
 );
 
+const TitleAndIcon: React.FC<{
+  title: string;
+}> = ({title}) => (
+  <div className={styles.sidebarArtifactIconContainer}>
+    <text>{title}</text>
+    <FontAwesomeV6Icon
+      iconName="shapes"
+      className={styles.artifactThreadIcon}
+    />
+  </div>
+);
+
 const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
+  context,
   threads = [],
-  selectedThreadId,
-  threadSelectCallback = () => {},
   setShowNotifications,
   showNotifications,
   unreadNotificationCount,
+  curriculumCourses,
 }) => {
+  const selectedThreadId = useAppSelector(state => state.aichat.threadId);
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [showDailyBytes, setShowDailyBytes] = useState(false);
+
+  const dispatch = useAppDispatch();
+
   const toggleSidebar = () => {
     setIsCollapsed(!isCollapsed);
   };
 
-  const onNewChatButtonClick = useCallback(() => {
-    setShowNotifications(false);
-    setShowDailyBytes(false);
-    threadSelectCallback(0);
-  }, [setShowNotifications, threadSelectCallback, setShowDailyBytes]);
+  const checkIfThreadIsSelected = (thread: ChatThread) =>
+    !showNotifications && !showDailyBytes && thread.id === selectedThreadId;
 
   const onNotificationsButtonClick = useCallback(() => {
     setShowNotifications(true);
@@ -101,7 +124,13 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
   const handleListItemClick = (chatId: number) => {
     setShowNotifications(false);
     setShowDailyBytes(false);
-    threadSelectCallback(chatId);
+    dispatch(
+      fetchThreadMessages({
+        contextType: context.type,
+        thread: chatId,
+        curriculumCourses: curriculumCourses,
+      })
+    );
   };
 
   const todayChats = threads.filter(thread => {
@@ -119,8 +148,23 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
     return thread.updatedAt < thirtyDaysAgo;
   });
 
-  const checkIfThreadIsSelected = (thread: ChatThread) =>
-    !showNotifications && !showDailyBytes && thread.id === selectedThreadId;
+  const onNewChatButtonClick = useCallback(() => {
+    setShowNotifications(false);
+    setShowDailyBytes(false);
+    dispatch(
+      fetchThreadMessages({
+        contextType: context.type,
+        thread: 0,
+        curriculumCourses: curriculumCourses,
+      })
+    );
+  }, [
+    setShowNotifications,
+    setShowDailyBytes,
+    curriculumCourses,
+    context,
+    dispatch,
+  ]);
 
   return (
     <aside
@@ -285,9 +329,13 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
             <List disablePadding={true}>
               {todayChats.length > 0 && (
                 <>
-                  <OverlineThreeText className={styles.sidebarSectionTitle}>
+                  <Typography
+                    className={styles.sidebarSectionTitle}
+                    variant="overline3"
+                    gutterBottom
+                  >
                     TODAY
-                  </OverlineThreeText>
+                  </Typography>
                   {todayChats.map(chat => (
                     <ThreadItem
                       key={chat.id}
@@ -300,9 +348,13 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
               )}
               {past7DaysChats.length > 0 && (
                 <>
-                  <OverlineThreeText className={styles.sidebarSectionTitle}>
+                  <Typography
+                    className={styles.sidebarSectionTitle}
+                    variant="overline3"
+                    gutterBottom
+                  >
                     PREVIOUS 7 DAYS
-                  </OverlineThreeText>
+                  </Typography>
                   {past7DaysChats.map(chat => (
                     <ThreadItem
                       key={chat.id}
@@ -315,9 +367,13 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
               )}
               {past30DaysChats.length > 0 && (
                 <>
-                  <OverlineThreeText className={styles.sidebarSectionTitle}>
+                  <Typography
+                    className={styles.sidebarSectionTitle}
+                    variant="overline3"
+                    gutterBottom
+                  >
                     PREVIOUS 30 DAYS
-                  </OverlineThreeText>
+                  </Typography>
                   {past30DaysChats.map(chat => (
                     <ThreadItem
                       key={chat.id}
@@ -330,9 +386,13 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
               )}
               {oldChats.length > 0 && (
                 <>
-                  <OverlineThreeText className={styles.sidebarSectionTitle}>
+                  <Typography
+                    className={styles.sidebarSectionTitle}
+                    variant="overline3"
+                    gutterBottom
+                  >
                     OLDER CHATS
-                  </OverlineThreeText>
+                  </Typography>
                   {oldChats.map(chat => (
                     <ThreadItem
                       key={chat.id}

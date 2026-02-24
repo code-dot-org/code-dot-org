@@ -13,6 +13,7 @@ class Policies::Lti
     CLAIM = :'https://purl.imsglobal.org/spec/lti/claim/message_type'
     RESOURCE_LINK_REQUEST = 'LtiResourceLinkRequest'
     DEEP_LINKING_REQUEST = 'LtiDeepLinkingRequest'
+    DEEP_LINKING_RESPONSE = 'LtiDeepLinkingResponse'
   end
 
   module DeploymentConfiguration
@@ -32,8 +33,7 @@ class Policies::Lti
 
   MEMBERSHIP_CONTAINER_CONTENT_TYPE = 'application/vnd.ims.lti-nrps.v2.membershipcontainer+json'
   TEACHER_ROLES = Set.new(['http://purl.imsglobal.org/vocab/lis/v1/institution/person#Instructor',
-                           'http://purl.imsglobal.org/vocab/lis/v2/membership#Instructor',
-                           'Teacher']
+                           'http://purl.imsglobal.org/vocab/lis/v2/membership#Instructor']
 ).freeze
   STAFF_ROLES = Set.new(
     [
@@ -53,9 +53,11 @@ class Policies::Lti
   LTI_DEPLOYMENT_PLATFORM_CLAIM = "https://purl.imsglobal.org/spec/lti/claim/tool_platform"
   LTI_NRPS_CLAIM = "https://purl.imsglobal.org/spec/lti-nrps/claim/namesroleservice"
   DEEP_LINKING_SETTINGS_CLAIM = "https://purl.imsglobal.org/spec/lti-dl/claim/deep_linking_settings"
+  DEEP_LINKING_DATA_CLAIM = 'https://purl.imsglobal.org/spec/lti-dl/claim/data'
+  DEEP_LINKING_CONTENT_ITEMS_CLAIM = 'https://purl.imsglobal.org/spec/lti-dl/claim/content_items'
   LTI_PLATFORM_CONFIGURATION = "https://purl.imsglobal.org/spec/lti-platform-configuration"
   CANVAS_ACCOUNT_NAME = "https://canvas.instructure.com/lti/account_name"
-  CLASSLINK_ROLE_KEY = 'classLink_role'
+  VERSION_CLAIM = 'https://purl.imsglobal.org/spec/lti/claim/version'
 
   # Prioritized lists for looking up a user's name from custom LTI variable claims.
   TEACHER_NAME_KEYS = [:name, :display_name, :full_name, :family_name, :given_name].freeze
@@ -101,17 +103,6 @@ class Policies::Lti
       supported_message_types: [
         MessageType::RESOURCE_LINK_REQUEST,
         MessageType::DEEP_LINKING_REQUEST,
-      ],
-    },
-    # https://launchpad.classlink.com/.well-known/openid-configuration
-    classlink: {
-      name: 'ClassLink',
-      issuer: "https://launchpad.classlink.com",
-      auth_redirect_url: "https://launchpad.classlink.com/oauth2/v2/auth",
-      jwks_url: "https://launchpad.classlink.com/oauth2/v2/jwks",
-      access_token_url: "https://launchpad.classlink.com/oauth2/v2/token",
-      supported_message_types: [
-        MessageType::RESOURCE_LINK_REQUEST,
       ],
     },
   }
@@ -161,10 +152,6 @@ class Policies::Lti
   MAX_COURSE_MEMBERSHIP = 1000
 
   def self.get_account_type(roles)
-    # ClassLink includes a non-standard role as a string instead of an array of strings
-    if roles.is_a?(String)
-      return STAFF_ROLES.include?(roles) ? User::TYPE_TEACHER : User::TYPE_STUDENT
-    end
     roles.each do |role|
       return User::TYPE_TEACHER if STAFF_ROLES.include? role
     end

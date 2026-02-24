@@ -6,7 +6,6 @@ import {connect} from 'react-redux';
 import SortedTableSelect from '@cdo/apps/code-studio/components/SortedTableSelect';
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import {getVisibleSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
@@ -69,17 +68,6 @@ class MoveStudents extends Component {
 
   openDialog = () => {
     this.setState({isDialogOpen: true});
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-dashboard',
-        study_group: 'manage-students-actions',
-        event: 'move-students-button-click',
-        data_json: JSON.stringify({
-          sectionId: this.props.currentSectionId,
-        }),
-      },
-      {includeUserId: true}
-    );
   };
 
   closeDialog = () => {

@@ -7,7 +7,7 @@ wrong 'Using `<h3>` makes the text too small for most users to read.'
 right 'Without a label or currency symbol (e.g., "Price: $"), the user might not understand what the number represents.'
 wrong 'The `.map()` method cannot render numbers inside of header tags.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 6

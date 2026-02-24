@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
+import RequiresAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/RequiresAiChatToolsAlert';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import Announcements from '@cdo/apps/code-studio/components/progress/Announcements';
 import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
@@ -25,6 +26,8 @@ import {
   onDismissRedirectWarning,
   dismissedRedirectWarning,
 } from '@cdo/apps/util/dismissVersionRedirect';
+import experiments from '@cdo/apps/util/experiments';
+import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import SafeMarkdown from '../SafeMarkdown';
@@ -57,6 +60,8 @@ class CourseOverview extends Component {
     userId: PropTypes.number,
     userType: PropTypes.string,
     participantAudience: PropTypes.string,
+    aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
+      .isRequired,
     // Redux
     announcements: PropTypes.arrayOf(announcementShape),
     isSignedIn: PropTypes.bool.isRequired,
@@ -74,7 +79,7 @@ class CourseOverview extends Component {
         {
           'unit group name': props.name,
         },
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
     } else if (props.userType === 'student') {
       analyticsReporter.sendEvent(
@@ -82,7 +87,7 @@ class CourseOverview extends Component {
         {
           'unit group name': props.name,
         },
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
     } else {
       analyticsReporter.sendEvent(
@@ -90,7 +95,7 @@ class CourseOverview extends Component {
         {
           'unit group name': props.name,
         },
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
     }
   }
@@ -147,12 +152,13 @@ class CourseOverview extends Component {
       userId,
       isSignedIn,
       participantAudience,
+      aiChatToolsDependency,
     } = this.props;
 
+    const viewAsTeacher = viewAs === ViewType.Instructor;
+
     const showNotification =
-      viewAs === ViewType.Instructor &&
-      !isVerifiedInstructor &&
-      hasVerifiedResources;
+      viewAsTeacher && !isVerifiedInstructor && hasVerifiedResources;
 
     return (
       <div style={styles.main}>
@@ -210,7 +216,13 @@ class CourseOverview extends Component {
           showAssignButton={showAssignButton}
           title={title}
           participantAudience={participantAudience}
+          aiChatToolsDependency={aiChatToolsDependency}
         />
+        {experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
+          viewAsTeacher &&
+          aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
+            <RequiresAiChatToolsAlert />
+          )}
         <SafeMarkdown
           style={styles.description}
           openExternalLinksInNewTab={true}
@@ -234,6 +246,7 @@ class CourseOverview extends Component {
             courseVersionId={courseVersionId}
             showAssignButton={showAssignButton}
             participantAudience={participantAudience}
+            aiChatToolsDependency={aiChatToolsDependency}
           />
         ))}
       </div>

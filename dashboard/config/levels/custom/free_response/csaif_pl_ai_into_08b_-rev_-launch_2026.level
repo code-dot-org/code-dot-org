@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-01-12T16:15:26.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "# AI Literacy\r\n\r\n\r\n>**AI literacy** represents the technical knowledge, durable skills, and future-ready attitudes required to thrive in a world influenced by AI. It enables learners to engage, create with, manage, and design AI, while critically evaluating its benefits, risks, and ethical implications.\r\n\r\n\r\n#### AI literacy equips individuals to engage productively and responsibly with AI technologies in society, the economy, and their personal lives.\r\n\r\n#### AI is increasingly present in everyday life, offering powerful new ways to enhance the information we see, refine the tools we use, and support the decisions we make. As these highly effective AI systems become more common, it's important that students learn to question and understand how they operate, ensuring they can actively leverage AI's capabilities rather than simply accepting its outputs.\r\n\r\n#### With AI making its way into more and more aspects of our life, AI literacy is going to become an increasingly important skill for students.\r\n\r\n<p style=\"font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;\">\r\n    ➡️ Want to learn more about AI Literacy? Check out <a href='https://studio.code.org/s/self-paced-pl-ai-101-mod1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Introducing AI for Educators</a>, Module 1 of Code.org's AI 101 Professional Learning Series.\r\n</p>\r\n\r\n## 📝 To Do\r\n#### Think of the last way you interacted with AI. Describe the interaction, what was it like working with AI? Try to provide a *balanced perspective* and include both positive aspects as well as critiques.\r\n\r\n<div style=\"display: flex; align-items: left; margin:20px 0px 30px 0px\">\r\n\r\n<a href=\"https://forum.code.org/t/teaching-problem-solving-with-ai-pl-reflection-interacting-with-ai/40990\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n<img src=\"https://images.code.org/7dbe63a051fbad4ef262d6ab710e2966-image-1731959037460.png\" style=\"width: auto; height: 100px;\"  alt=\"A browser with two text boxes, both including an avatar and lines of text.\"></a>\r\n\r\n<div style=\"background-color: #007786; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 5%; margin-right: 5%; padding: 10px 10px 5px 10px;\">\r\n\r\n<p style=\"color: white; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px\"><b>Post to the Code.org Forum</b></p>\r\n\r\n<p style=\"color: white; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px\">Share your response and read other educators' ideas on the forum! Click on the icon to the left to direct to our forum post.\r\n</p>\r\n\r\n\r\n</div>\r\n</div>\r\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19619,
+    "name_suffix": "_2026",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "stay_on_level_after_submit": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-01-12T16:15:26.429+00:00\",\"changed\":[\"cloned from \\\"csaif_pl_ai_into_08b_-rev_-launch\\\"\"],\"cloned_from\":\"csaif_pl_ai_into_08b_-rev_-launch\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

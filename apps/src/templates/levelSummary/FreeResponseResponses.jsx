@@ -2,7 +2,7 @@ import Alert from '@code-dot-org/component-library/alert';
 import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Heading3} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useEffect} from 'react';
@@ -38,7 +38,7 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
     analyticsReporter.sendEvent(
       EVENTS.CFU_RESPONSE_HIDDEN,
       eventData,
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
     setHiddenResponses(prevHidden => [...prevHidden, userId]);
   };
@@ -120,14 +120,16 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
               className={styles.pinHeaderIcon}
               scale="1.25x"
             />
-            <Heading3>{i18n.pinnedResponses()}</Heading3>
+            <Typography variant="h3" gutterBottom>
+              {i18n.pinnedResponses()}
+            </Typography>
             <Button
               text={i18n.unpinAll()}
               onClick={() => {
                 analyticsReporter.sendEvent(
                   EVENTS.CFU_RESPONSE_ALL_UNPINNED,
                   eventData,
-                  PLATFORMS.BOTH
+                  PLATFORMS.STATSIG
                 );
                 setPinnedResponseIds([]);
               }}
@@ -147,7 +149,7 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
                     analyticsReporter.sendEvent(
                       EVENTS.CFU_RESPONSE_UNPINNED,
                       eventData,
-                      PLATFORMS.BOTH
+                      PLATFORMS.STATSIG
                     );
                     setPinnedResponseIds(prevPinned =>
                       prevPinned.filter(id => id !== userId)
@@ -173,7 +175,7 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
                 analyticsReporter.sendEvent(
                   EVENTS.CFU_RESPONSE_PINNED,
                   eventData,
-                  PLATFORMS.BOTH
+                  PLATFORMS.STATSIG
                 );
                 setPinnedResponseIds(prevPinned => [...prevPinned, userId]);
               },
@@ -192,7 +194,7 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
               analyticsReporter.sendEvent(
                 EVENTS.CFU_RESPONSE_ALL_UNHID,
                 eventData,
-                PLATFORMS.BOTH
+                PLATFORMS.STATSIG
               );
               setHiddenResponses([]);
             },

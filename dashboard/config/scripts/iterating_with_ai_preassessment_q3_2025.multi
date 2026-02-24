@@ -7,7 +7,7 @@ right 'A `for` loop'
 wrong 'A `filter` loop'
 wrong 'An `if` statement'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 2

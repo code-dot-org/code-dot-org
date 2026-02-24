@@ -9,7 +9,6 @@ import {
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import Assigned from '@cdo/apps/templates/Assigned';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
@@ -35,6 +34,7 @@ class CourseScript extends Component {
     assignedSectionId: PropTypes.number,
     showAssignButton: PropTypes.bool,
     participantAudience: PropTypes.string,
+    aiChatToolsDependency: PropTypes.string,
     // redux provided
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     selectedSectionId: PropTypes.number,
@@ -62,19 +62,6 @@ class CourseScript extends Component {
   onClickHiddenToggle = value => {
     const {name, selectedSectionId, id, toggleHiddenScript} = this.props;
     toggleHiddenScript(name, selectedSectionId, id, value === 'hidden');
-    firehoseClient.putRecord(
-      {
-        study: 'hidden-units',
-        study_group: 'v0',
-        event: value,
-        script_id: id,
-        data_json: JSON.stringify({
-          script_name: name,
-          section_id: selectedSectionId,
-        }),
-      },
-      {useProgressScriptId: false}
-    );
   };
 
   render() {
@@ -95,6 +82,7 @@ class CourseScript extends Component {
       sectionsForDropdown,
       showAssignButton,
       participantAudience,
+      aiChatToolsDependency,
     } = this.props;
     const {confirmationMessageOpen} = this.state;
 
@@ -165,6 +153,7 @@ class CourseScript extends Component {
                   isAssigningCourseOnly={false}
                   isSingleUnitCourse={false}
                   participantAudience={participantAudience}
+                  aiChatToolsDependency={aiChatToolsDependency}
                 />
               </div>
             )}

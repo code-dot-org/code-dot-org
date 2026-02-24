@@ -10,11 +10,10 @@ markdown <<MARKDOWN
   <div>
     <h4 style="margin-top: 0; font-weight: bold;">In this professional learning module, you learned how to:</h4>
     <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
-      <li>Prepare to teach how AI generates responses by modeling the iterative cycle of prompting, testing, analyzing, and refining AI-generated outputs.</li><br>
-      <li>Guide students in developing strong prompting and evaluation skills to critically assess and improve AI-generated content.</li><br>
-      <li>Support students in exploring AI’s role in creativity, forecasting, and decision-making through hands-on activities and real-world examples.</li><br>
-      <li>Lead students in designing and testing AI-assisted solutions to authentic challenges, emphasizing responsible use and effective problem-solving practices.</li><br>
-      <li>Lead students in designing and testing AI-assisted solutions to authentic challenges, emphasizing responsible use and effective problem-solving practices.</li>
+      <li>Explain how computer systems process information.</li><br>
+      <li>Teach troubleshooting and optimization using structured strategies and AI tools.</li><br>
+      <li>Guide students in validating and analyzing real-world data.</li><br>
+      <li>Lead discussions on ethical and real-world uses of AI-powered systems.</li>
     </ul>
   </div>
   <div>
@@ -23,6 +22,7 @@ markdown <<MARKDOWN
          style="border-radius: 10px; width: 300px; height: auto;">
   </div>
 </div>
+
 
 #### Below is some additional information, resources, and practice which you may choose to explore before continuing.
 

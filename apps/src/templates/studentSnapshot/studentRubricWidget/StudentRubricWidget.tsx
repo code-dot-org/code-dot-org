@@ -1,9 +1,10 @@
-import {BodyThreeText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import type {InferProps} from 'prop-types';
 import React, {useEffect, useState} from 'react';
 
 import LearningGoals from '@cdo/apps/templates/rubrics/LearningGoals';
 import {aiEvaluationShape} from '@cdo/apps/templates/rubrics/rubricShapes';
+import RubricSubmitFooter from '@cdo/apps/templates/rubrics/RubricSubmitFooter';
 import WidgetTemplate from '@cdo/apps/templates/studentSnapshot/widgetTemplate';
 import type {
   Rubric,
@@ -12,13 +13,15 @@ import type {
 } from '@cdo/apps/types/rubricTypes';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
+import styles from './studentRubricWidget.module.scss';
+
 type AiEvaluation = InferProps<typeof aiEvaluationShape>['isRequired'];
 
 interface StudentRubricWidgetProps {
   gridWidth?: number;
   gridHeight?: number;
   lessonId: number | null;
-  studentId: number;
+  studentId: number | null;
   studentName?: string; // Optional - student name for display in AiAssessment
   levelId?: number; // Optional - if not provided, uses lesson.rubric (first rubric for lesson)
   // These map directly to LearningGoals props so we can reuse it as-is.
@@ -98,11 +101,11 @@ const StudentRubricWidget: React.FC<StudentRubricWidgetProps> = ({
         if (rubricResponse.value?.rubric) {
           setRubric(rubricResponse.value.rubric);
         } else {
-          setError('No rubric data found');
+          setError("This lesson doesn't have a rubric.");
         }
       } catch (err) {
         console.error('Failed to fetch rubric data:', err);
-        setError('No rubric found');
+        setError("This lesson doesn't have a rubric.");
       } finally {
         setIsLoading(false);
       }
@@ -116,32 +119,61 @@ const StudentRubricWidget: React.FC<StudentRubricWidgetProps> = ({
   let scrollable = false;
 
   if (isLoading) {
-    widgetContent = <BodyThreeText>Loading rubric...</BodyThreeText>;
+    widgetContent = (
+      <Typography variant="body3" gutterBottom>
+        Loading rubric...
+      </Typography>
+    );
   } else if (error) {
-    widgetContent = <BodyThreeText>{error}</BodyThreeText>;
+    widgetContent = (
+      <Typography variant="body3" gutterBottom>
+        {error}
+      </Typography>
+    );
   } else if (
     !rubric ||
     !rubric.learningGoals ||
     rubric.learningGoals.length === 0
   ) {
-    widgetContent = <BodyThreeText>No rubric data available.</BodyThreeText>;
+    widgetContent = (
+      <Typography variant="body3" gutterBottom>
+        This lesson doesn't have a rubric.
+      </Typography>
+    );
   } else {
     scrollable = true;
     widgetContent = (
-      <LearningGoals
-        productTour={false}
-        open={true}
-        learningGoals={rubric.learningGoals}
-        teacherHasEnabledAi={teacherHasEnabledAi}
-        canProvideFeedback={canProvideFeedback}
-        reportingData={reportingData}
-        studentLevelInfo={effectiveStudentLevelInfo}
-        submittedEvaluation={undefined}
-        isStudent={false}
-        feedbackAdded={feedbackAdded}
-        setFeedbackAdded={setFeedbackAdded}
-        aiEvaluations={aiEvaluations}
-      />
+      <div className={styles.studentRubricWidgetContent}>
+        <LearningGoals
+          productTour={false}
+          open={true}
+          learningGoals={rubric.learningGoals}
+          teacherHasEnabledAi={teacherHasEnabledAi}
+          canProvideFeedback={canProvideFeedback}
+          reportingData={reportingData}
+          studentLevelInfo={effectiveStudentLevelInfo}
+          submittedEvaluation={undefined}
+          isStudent={false}
+          feedbackAdded={feedbackAdded}
+          setFeedbackAdded={setFeedbackAdded}
+          aiEvaluations={aiEvaluations}
+        />
+        {canProvideFeedback &&
+          effectiveStudentLevelInfo?.user_id &&
+          rubric.script?.id &&
+          rubric.level?.id && (
+            <div className={styles.studentRubricWidgetSubmitFooterContainer}>
+              <RubricSubmitFooter
+                rubric={rubric}
+                reportingData={reportingData}
+                studentLevelInfo={effectiveStudentLevelInfo}
+                open={true}
+                feedbackAdded={feedbackAdded}
+                setFeedbackAdded={setFeedbackAdded}
+              />
+            </div>
+          )}
+      </div>
     );
   }
 

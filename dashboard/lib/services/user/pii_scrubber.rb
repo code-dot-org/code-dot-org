@@ -91,6 +91,9 @@ module Services
 
         # Project IP addresses (but no other project data)
         scrub_project_ips
+
+        # Sections
+        scrub_sections
       end
 
       # Legacy delete acccounts helper client for purging data from deprecated tables
@@ -154,6 +157,14 @@ module Services
       # other methods since it is not reversible.
       private def scrub_external_data
         MailJet.delete_contact(email) if email.present? && !::User.exists?(email: email)
+      end
+
+      private def scrub_sections
+        if user.teacher?
+          user.sections.with_deleted.find_each do |section|
+            section.update!(name: REDACTED_STRING)
+          end
+        end
       end
 
       private def mark_scrubbed

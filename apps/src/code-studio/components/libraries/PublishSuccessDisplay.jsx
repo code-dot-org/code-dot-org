@@ -1,8 +1,8 @@
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {Heading2} from '@cdo/apps/legacySharedComponents/Headings';
 import i18n from '@cdo/locale';
 
 import LibraryIdCopier from './LibraryIdCopier';
@@ -18,10 +18,10 @@ export default class PublishSuccessDisplay extends React.Component {
     const {libraryName, channelId, onShareTeacherLibrary} = this.props;
     return (
       <div>
-        <Heading2>
+        <Typography variant="h2" gutterBottom>
           <b>{i18n.libraryPublishTitle()}</b>
           {libraryName}
-        </Heading2>
+        </Typography>
         <div>
           <p>{i18n.libraryPublishExplanation()}</p>
           <div style={styles.centerContent}>

@@ -7,6 +7,7 @@ import {
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {getFileExtension} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 import {
   DialogType,
   DialogControlInterface,
@@ -63,6 +64,7 @@ export const openMoveFilePrompt = async ({
     selectedValue: possibleDestinationFolders[0].value,
     items: possibleDestinationFolders,
     dropdownLabel: '',
+    useModal: true,
   });
 
   if (results.type !== 'confirm') {
@@ -73,6 +75,6 @@ export const openMoveFilePrompt = async ({
   moveFile(fileId, destinationFolderId);
 
   sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_MOVE_FILE, {
-    fileType: file.language?.toLowerCase() || '',
+    fileType: getFileExtension(file.name),
   });
 };

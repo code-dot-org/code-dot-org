@@ -7,7 +7,7 @@ wrong 'It hides all the color options to make the site load faster.'
 wrong 'It limits users to only one color so they don\'t get overwhelmed.'
 wrong 'It automatically changes every product on the page to match the new color.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 1

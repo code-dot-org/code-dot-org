@@ -69,11 +69,18 @@ class ApiController < ApplicationController
     end
   end
 
+  # TODO: Move to `Api::V1::Roster::Clever::SectionsController`
   def clever_classrooms
     return head :forbidden unless current_user
 
-    uid = current_user.uid_for_provider(AuthenticationOption::CLEVER)
-    query_clever_service("v2.1/teachers/#{uid}/sections") do |response|
+    v3_ao = current_user.authentication_options.find_by(
+      credential_type: AuthenticationOption::CLEVER,
+      version: AuthenticationOption::Clever::VERSION[:v3]
+    )
+    api_version = v3_ao.present? ? AuthenticationOption::Clever::VERSION[:v3] : AuthenticationOption::Clever::VERSION[:v2]
+    uid = v3_ao.present? ? v3_ao.authentication_id : current_user.uid_for_provider(AuthenticationOption::CLEVER)
+
+    query_clever_service(api_version:, endpoint: clever_sections_url_path(api_version:, uid:)) do |response|
       json = response.map do |section|
         data = section['data']
         {
@@ -88,13 +95,14 @@ class ApiController < ApplicationController
     end
   end
 
+  # TODO: Move to `Api::V1::Roster::Clever::SectionsController`
   def import_clever_classroom
     return head :forbidden unless current_user
 
     course_id = params[:courseId].to_s
     course_name = params[:courseName].to_s
 
-    query_clever_service("v2.1/sections/#{course_id}/students") do |students|
+    query_clever_service(api_version: AuthenticationOption::Clever::VERSION[:v3], endpoint: "sections/#{course_id}/users?role=student") do |students|
       section = CleverSection.from_service(course_id, current_user.id, students, course_name)
       render json: section.summarize
     end
@@ -680,18 +688,32 @@ class ApiController < ApplicationController
     )
   end
 
-  private def query_clever_service(endpoint)
+  private def query_clever_service(api_version:, endpoint:)
     tokens = current_user.oauth_tokens_for_provider(AuthenticationOption::CLEVER)
+    clever_client = Clients::CleverRest.new(oauth_token: tokens[:oauth_token], api_version:)
     begin
-      auth = {authorization: "Bearer #{tokens[:oauth_token]}"}
-      response = RestClient.get("https://api.clever.com/#{endpoint}", auth)
-      yield JSON.parse(response)['data']
+      yield clever_client.get(endpoint)['data']
     rescue RestClient::ExceptionWithResponse => exception
       if exception.http_code == 401 && exception.response.body.include?('Unrecognized token string')
         render status: exception.response.code, plain: I18n.t('auth.token_expired', provider: I18n.t('auth.clever'))
       else
         render status: exception.response.code, json: {error: exception.response.body}
       end
+    end
+  end
+
+  # The sections endpoint path varies between Clever API versions.
+  # v3 wants users/:uid/sections with the new role-agnostic Clever ID
+  # instead of the old teachers endpoint that used the now-deprecated teacher ID.
+  # TODO: Remove this method when we drop support for Clever API v2.1
+  private def clever_sections_url_path(api_version:, uid:)
+    case api_version
+    when AuthenticationOption::Clever::VERSION[:v2]
+      "teachers/#{uid}/sections"
+    when AuthenticationOption::Clever::VERSION[:v3]
+      "users/#{uid}/sections"
+    else
+      raise "Unsupported Clever API version: #{api_version}"
     end
   end
 

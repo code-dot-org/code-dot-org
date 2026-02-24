@@ -1,16 +1,22 @@
 import {Codebridge} from '@codebridge/Codebridge';
-import {DEFAULT_START_HTML_FILE} from '@codebridge/FilePreview/constants';
 import {ConfigType} from '@codebridge/types';
 import {css} from '@codemirror/lang-css';
 import {html} from '@codemirror/lang-html';
 import {javascript} from '@codemirror/lang-javascript';
+import {json} from '@codemirror/lang-json';
 import {markdown} from '@codemirror/lang-markdown';
 import {LanguageSupport} from '@codemirror/language';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 
 import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
-import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
+import {
+  AppName,
+  LabProps,
+  MultiFileSource,
+  ProjectSources,
+} from '@cdo/apps/lab2/types';
+import {DEFAULT_START_HTML_FILE} from '@cdo/apps/weblab2/htmlPreview/constants';
 
 import {useSource} from '../codebridge/hooks/useSource';
 import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
@@ -36,6 +42,7 @@ const weblab2LangMapping: {[key: string]: LanguageSupport} = {
   css: css(),
   js: javascript(),
   md: markdown(),
+  json: json(),
 };
 
 const defaultConfig: ConfigType = {
@@ -56,7 +63,6 @@ const defaultSource: MultiFileSource = {
     '1': {
       id: '1',
       name: DEFAULT_START_HTML_FILE,
-      language: 'html',
       contents: `<!DOCTYPE html>
 <html>
   <body>
@@ -137,8 +143,12 @@ const Weblab2View: React.FC<
     dispatch(setViewMode(levelProperties?.initialViewMode || ViewMode.SPLIT));
   }, [dispatch, levelProperties?.initialViewMode]);
 
-  const aiTutorResponseSchemaSettings =
-    useAiTutorResponseSchemaSettings(source);
+  const aiTutorResponseSchemaSettings = useAiTutorResponseSchemaSettings(
+    source,
+    levelProperties?.widgetView
+  );
+
+  const secondaryBackpackAppNames: AppName[] = useMemo(() => ['sketchlab'], []);
 
   return (
     <div className={moduleStyles.weblab2Container}>
@@ -156,6 +166,7 @@ const Weblab2View: React.FC<
             levelProperties.aiTutorMode
           )}
           aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
+          secondaryBackpackAppNames={secondaryBackpackAppNames}
         />
       )}
     </div>

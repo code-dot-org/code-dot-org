@@ -47,15 +47,11 @@ class UnitGroup < ApplicationRecord
   scope(
     :with_associated_models, lambda do
       includes(
-        [
-          :plc_course,
-          :default_unit_group_units,
-          {
-            course_version: {
-              course_offering: :course_versions
-            }
-          }
-        ]
+        :plc_course,
+        :default_unit_group_units,
+        course_version: {
+          course_offering: :course_versions
+        }
       )
     end
   )
@@ -146,8 +142,21 @@ class UnitGroup < ApplicationRecord
     published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
   end
 
+  # Subdirectory paths for course files, relative to root_path
+  COURSE_DIRECTORY = 'config/courses'.freeze
+  UI_TEST_COURSE_DIRECTORY = 'test/ui/config/courses'.freeze
+
+  # Returns the filepath for a unit group's .course file.
+  # UI test courses (those with names starting with 'ui-test-') are stored in
+  # test/ui/config/courses/, while normal courses are stored in config/courses/.
+  # The root_path parameter can be customized for different environments or testing.
+  #
+  # @param [String] name - the name of the course
+  # @param [Pathname, String] root_path - the root directory path (defaults to Rails.root)
+  # @return [Pathname] - the absolute filepath to the .course file
   def self.file_path(name, root_path = Rails.root)
-    root_path.join("config/courses/#{name}.course")
+    subdirectory = name.start_with?('ui-test-') ? UI_TEST_COURSE_DIRECTORY : COURSE_DIRECTORY
+    root_path.join(subdirectory, "#{name}.course")
   end
 
   def self.load_from_path(path)
@@ -354,7 +363,8 @@ class UnitGroup < ApplicationRecord
         course_offering_id: course_version&.course_offering&.id,
         course_version_id: course_version&.id,
         course_path: link,
-        course_offering_edit_path: for_edit && course_version&.course_offering ? edit_course_offering_path(course_version.course_offering.key) : nil
+        course_offering_edit_path: for_edit && course_version&.course_offering ? edit_course_offering_path(course_version.course_offering.key) : nil,
+        ai_chat_tools_dependency: ai_chat_tools_dependency,
       }
     end
   end
@@ -683,5 +693,19 @@ class UnitGroup < ApplicationRecord
 
   def duration_in_minutes
     default_units.sum(&:duration_in_minutes)
+  end
+
+  def has_ai_chat_tools?
+    default_units.with_ai_chat_tools.exists?
+  end
+
+  def requires_ai_chat_tools?
+    default_units.with_essential_ai_chat_tools.exists?
+  end
+
+  def ai_chat_tools_dependency
+    return SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:ESSENTIAL] if requires_ai_chat_tools?
+    return SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:AVAILABLE] if has_ai_chat_tools?
+    SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE]
   end
 end

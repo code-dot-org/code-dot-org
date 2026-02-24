@@ -1,11 +1,11 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import {getStore} from '@cdo/apps/redux';
 import SummaryEntryPoint from '@cdo/apps/templates/levelSummary/SummaryEntryPoint';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
@@ -13,7 +13,7 @@ $(document).ready(() => {
     const container = this;
     const store = getStore();
 
-    ReactDOM.render(
+    createReactRoot(
       <Provider store={store}>
         <InstructorsOnly>
           <SummaryEntryPoint scriptData={getScriptData('summaryinfo')} />

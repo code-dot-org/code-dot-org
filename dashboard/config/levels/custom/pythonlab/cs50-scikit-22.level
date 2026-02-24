@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-02-18T17:00:01.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# CIW AI Associate Standard: 3.6\n# Standard Description: Explain Maximum Likelihood Estimation (MLE).\n#\n# Rationale: How does an AI know which \"guess\" is the best? It uses Maximum \n# Likelihood Estimation (MLE). MLE is a way of saying: \"Which set of rules \n# makes the data we ALREADY HAVE look the most normal and expected?\" \n# This tutorial uses Logistic Regression to show how we pick the \"most \n# likely\" line.\n\n\"\"\"\nWelcome! Imagine you find a wet umbrella on the floor. \nWhich is the most LIKELY reason it's there?\nA) It rained outside.\nB) Someone spilled a giant bucket of water by accident.\n\nBoth could be true, but \"A\" is much more LIKELY based on what we know \nabout the world. AI models use a math version of this called MLE.\n\"\"\"\n\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.linear_model import LogisticRegression\nfrom scipy.stats import norm\n\n# --- PART 1: THE IDEA OF LIKELIHOOD ---\nprint(\"--- Part 1: Visualizing Likelihood ---\")\n# Let's say we have a data point at X=10.\n# Which center (mean) is more likely for this data? \n# A center at 10, or a center at 50?\n\nx_axis = np.linspace(0, 60, 100)\nplt.plot(x_axis, norm.pdf(x_axis, 10, 5), label=\"Guess A: Center=10\", color='green')\nplt.plot(x_axis, norm.pdf(x_axis, 50, 5), label=\"Guess B: Center=50\", color='red')\nplt.scatter([10], [0.01], color='black', s=100, label=\"Our Data Point\")\n\nplt.title(\"Maximum Likelihood: Which 'Mountain' fits our data best?\")\nplt.legend()\nplt.show()\n\nprint(\"Notice the black dot is at the TOP of the green mountain.\")\nprint(\"The Green Mountain is the 'Maximum Likelihood' for that data point.\")\n\n# --- PART 2: MLE IN MODELS ---\nprint(\"\\n--- Part 2: MLE in Logistic Regression ---\")\n# When we run Logistic Regression, the computer is actually testing \n# thousands of \"mountains\" to find the one that fits our data best.\n\nX = np.array([[1], [2], [3], [4], [5], [6], [7], [8]])\ny = np.array([0, 0, 0, 0, 1, 1, 1, 1]) # 0s for low numbers, 1s for high\n\nmodel = LogisticRegression()\nmodel.fit(X, y)\n\n# The 'coef_' and 'intercept_' are the values the computer found \n# using the MLE method!\nprint(f\"The model found that the most likely 'split point' is between 4 and 5.\")\n\n\"\"\"\n--- YOUR TURN ---\nImagine you have a coin. You flip it 10 times and get \"Heads\" 9 times.\n1. What is the Maximum Likelihood for the probability of getting heads?\n   A) 0.5 (It's a fair coin)\n   B) 0.9 (It's a biased coin)\n2. Why does MLE choose the answer that it does?\n\"\"\"\n\n# STARTING CODE FOR STUDENT:\n# TODO: Explain your answer!\n# MLE_Answer = \"___\"\n# Reason = \"___\"\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFTDG6jyYgtI/CEUE/82dEkG4hlI8OLsdjJD0In8S\n03BB+jPkGgyYB0/9C3zqHMHEFpKeCsugYbpGMxzBNwrd7qASagJaFzMnVUyM\n2TXS7Hau9lj7JpZIHXn9fmxXRRANWeGO6zCzZNQBDg3B38CNvLYSUcYEXxh6\nlCf+LvmQWwohxfF/5aFTgE8QSAPljKO1K14tUzR4L5a20AFzCSMnrk4nUMFr\n1bcL+RtDJ41QmZegoX58FSIxhj5yS0QYK/oJDXZ/vyHfg1ounYqjO8uhkpAq\nYADn4fELOh4ZJg+AuhozyOWlO4DRkk+Z7lqQqRWrEXsWW9wsOLGlLrsqw83C\n8oSxJKiBOPj4Eolt+3bDEogQjyc0nlI3iZFCT9m1nOjxv6gz/YltIaJUixNM\ne4AZ2QMHoeVm6yTH8PVeAtFHTbRNIxGtUAX/uB84xn5VB2fiqJdAx2ee0Dq7\nthmQ/KHgYAm3mP9Z8jvJ0/Z/dQLg4p3KzsWnw4PZZjt9DC05qg1cOIEdcjOM\n2zlZyYvcmMapcyp6TMSjTwrgV/uDEWe2JMTe1uAKoPo2cXZfnqVrd/uA9pPl\nk0Av7ysRedS3/HOvXDvKQ2S+TpP57GnbbhdgpKZ0gzPxkvfvjKJMRSxy60iI\n+7NrJWOcQTdzAQgB8ygvHjQXJzRspkgwjW7AFnvJvJW2i9Xd4FGQ8tcGhvU9\nZXijYwBjYTyrwSvNVpk7Z9PaO/bw0BTRYxGygn98OTbgRkC7um1ETaQ5oiqp\nHEL18ERWhovOFbNjrKsf3cIkKpG2/aa4lfegikd0nPneHY7XJ8ufr7giehx0\nKDM2X8+hm6y8ZktUU9/k5odpo2YNqiDmR4Tc40OjryWu+Wg8SE18vN4ci0c/\nBKHegh4UbaUMi0WFRu0zW0YQzcD9VAfgRgohAOXx/zenUKAUwx1mu9bTqwWi\nV4fHeu56EAh+plFIUoUiSlqlIg7RLwVT8kCFmyIst31jw5bW3uO4ELtWV+Qv\nsI/7weu0DOIY4fB8iUZdX2uee1gaRWizoOjJP8KYdbcoOBKEFHFa1sV0bD87\nRMeaqOmW2iWDE92Oet/Y2ocUL8CQxmWsSu50paqg59U7gSqm+Aaq5kE30lYj\nhwb9XjeQdhgA865yXaBC0RPKlmrcr6YktrbayiEhuL6p17YpiuQkY/mMewbr\nJbUBUzOx1m5L6tmYt9jUjKJlR3U2wp77+CjyNiJQmC6oKn2ktOZPi2DOI9RD\nleZJqz41oRsG4nrf5o9U\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-18T17:00:01.901+00:00\",\"changed\":[\"cloned from \\\"cs50-scikit-21\\\"\"],\"cloned_from\":\"cs50-scikit-21\"},{\"changed_at\":\"2026-02-18 17:00:04 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:41:59 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:42:06 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -7,7 +7,6 @@ import ReactTooltip from 'react-tooltip';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
@@ -71,21 +70,6 @@ class ProgressLesson extends React.Component {
     this.setState({
       collapsed: !this.state.collapsed,
     });
-
-  onClickStudentLessonPlan = () => {
-    firehoseClient.putRecord(
-      {
-        study: 'script_overview_actions',
-        study_group: 'student_lesson_plan',
-        event: 'open_student_lesson_plan',
-        data_json: JSON.stringify({
-          lesson_id: this.props.lesson.id,
-          script_id: this.props.scriptId,
-        }),
-      },
-      {includeUserId: true}
-    );
-  };
 
   render() {
     const {
@@ -206,18 +190,16 @@ class ProgressLesson extends React.Component {
             </div>
             {viewAs === ViewType.Participant &&
               lesson.student_lesson_plan_html_url && (
-                <span style={styles.buttonStyle}>
-                  <Button
-                    __useDeprecatedTag
-                    className="ui-test-lesson-resources"
-                    href={lesson.student_lesson_plan_html_url}
-                    text={i18n.lessonResources()}
-                    icon="file-text"
-                    color="purple"
-                    target="_blank"
-                    onClick={this.onClickStudentLessonPlan}
-                  />
-                </span>
+                <Button
+                  __useDeprecatedTag
+                  className="ui-test-lesson-resources"
+                  href={lesson.student_lesson_plan_html_url}
+                  text={i18n.lessonResources()}
+                  icon="file-text"
+                  color="white"
+                  target="_blank"
+                  style={styles.buttonStyle}
+                />
               )}
           </div>
           {showNotAuthorizedWarning && (
@@ -242,11 +224,7 @@ class ProgressLesson extends React.Component {
           )}
         </div>
         {viewAs === ViewType.Instructor && !this.props.isMiniView && (
-          <ProgressLessonTeacherInfo
-            lesson={lesson}
-            lessonUrl={lessonUrl}
-            onClickStudentLessonPlan={this.onClickStudentLessonPlan}
-          />
+          <ProgressLessonTeacherInfo lesson={lesson} lessonUrl={lessonUrl} />
         )}
         {lesson.isFocusArea && <FocusAreaIndicator />}
       </div>
@@ -288,6 +266,7 @@ const styles = {
   },
   buttonStyle: {
     marginLeft: 'auto',
+    boxShadow: 'none',
   },
   hiddenOrLocked: {
     borderStyle: 'dashed',

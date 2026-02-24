@@ -7,7 +7,7 @@ wrong 'Add more images to distract from the broken links.'
 right 'Test the website and correct the AI\'s mistakes before publishing it.'
 wrong 'Delete the project and start over with a new AI tool.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lessons 3, 6, 10

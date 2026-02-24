@@ -79,7 +79,7 @@ class SchoolInfoConfirmationDialog extends Component {
     analyticsReporter.sendEvent(
       EVENTS.UPDATE_SCHOOL_INFO_DIALOG_CLOSED,
       {},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
     this.setState({isOpen: false});
     this.props.onClose();
@@ -89,7 +89,7 @@ class SchoolInfoConfirmationDialog extends Component {
     analyticsReporter.sendEvent(
       EVENTS.CONFIRM_SCHOOL_CLICKED,
       {},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
     const formData = new FormData();
     try {
@@ -113,7 +113,7 @@ class SchoolInfoConfirmationDialog extends Component {
     analyticsReporter.sendEvent(
       EVENTS.UPDATE_SCHOOL_CLICKED,
       {},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
     this.setState({showSchoolInterstitial: true});
   };
@@ -122,7 +122,7 @@ class SchoolInfoConfirmationDialog extends Component {
     analyticsReporter.sendEvent(
       EVENTS.UPDATE_SCHOOL_INFO_DIALOG_SHOWN,
       {},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
     const {schoolName} = this.state;
     const isRTL = getStore().getState()?.isRtl;

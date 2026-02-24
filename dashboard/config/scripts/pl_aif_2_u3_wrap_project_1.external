@@ -15,6 +15,8 @@ markdown <<MARKDOWN
 
 ## Building value explorer app
 
+<br>
+
 #### In this project, students act as Front-End Developers and QA Engineers to create an app that explores and compares data.
 
 #### They start by making a plan for their data by mapping out schema fields and work their way through the milestones over the course of 3 days.
@@ -28,9 +30,10 @@ markdown <<MARKDOWN
 
 ## Support along the way
 
-<img src="https://images.code.org/068dc84e19b5854c6fd7ae9eaf84e482-image-1767890629612.png" alt="icons for bots that support along the way" width="750px" style="display: block; margin-left: auto; margin-right: auto;">
-
 #### Students can choose which tool best supports their current task: brainstorming ideas, organizing their plan, or sketching out their logic and design.
+
+
+<img src="https://images.code.org/068dc84e19b5854c6fd7ae9eaf84e482-image-1767890629612.png" alt="icons for bots that support along the way" width="750px" style="display: block; margin-left: auto; margin-right: auto;">
 
 #### 🔁 **Circulate: As students explore the hub, ask guiding questions such as:**
 - #### “What type of interaction or outcome are you imagining for your app?”

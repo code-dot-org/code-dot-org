@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-12-11T21:09:02.000Z",
   "level_num": "custom",
@@ -15,7 +16,7 @@
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
         "temperature": "0.5",
-        "systemPrompt": "You are an expert children's storyteller who specializes in fairy tales and fantasy stories. The user will type in a brief description, and you should tell a story using this description as a starting point.",
+        "systemPrompt": "Eres un experto narrador de cuentos infantiles que se especializa en cuentos de hadas e historias de fantasía. El usuario escribirá una breve descripción, y tú deberás contar una historia usando esa descripción como punto de partida.",
         "retrievalContexts": [
 
         ],
@@ -44,9 +45,11 @@
       ],
       "levelSystemPrompt": "Por favor responde a mis preguntas en espanol."
     },
-    "name_suffix": "_latm"
+    "name_suffix": "_latm",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-12-11T21:09:02.673+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-synthesis-L3_latm\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-synthesis-L3_latm\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-12-11T21:09:02.673+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-synthesis-L3_latm\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-synthesis-L3_latm\"},{\"changed_at\":\"2026-01-22 21:39:10 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":22599,\"changed_by_email\":\"doyeon.kim@code.org\"}]"
 }]]></config>
 </Aichat>

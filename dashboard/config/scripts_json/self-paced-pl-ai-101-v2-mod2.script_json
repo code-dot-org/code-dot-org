@@ -1,0 +1,1310 @@
+{
+  "script": {
+    "name": "self-paced-pl-ai-101-v2-mod2",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-02-18 16:30:39 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "self-paced-pl-ai-101-v2-mod2"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Understanding AI",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "631496fb-dcb9-4118-b88a-3fb74ee734c7",
+      "position": 1,
+      "properties": {
+        "duration": 60
+      },
+      "seeding_key": {
+        "lesson_activity.key": "631496fb-dcb9-4118-b88a-3fb74ee734c7",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "672d1446-44ee-4e34-b047-9866f6672f6c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Opening"
+      },
+      "seeding_key": {
+        "activity_section.key": "672d1446-44ee-4e34-b047-9866f6672f6c",
+        "lesson_activity.key": "631496fb-dcb9-4118-b88a-3fb74ee734c7"
+      }
+    },
+    {
+      "key": "afd19dc2-2132-4526-8e1c-1fc6cbcd7164",
+      "position": 2,
+      "properties": {
+        "progression_name": "Introducing AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "afd19dc2-2132-4526-8e1c-1fc6cbcd7164",
+        "lesson_activity.key": "631496fb-dcb9-4118-b88a-3fb74ee734c7"
+      }
+    },
+    {
+      "key": "e6322f00-6e63-44d0-8da0-3b0ed34d3d6f",
+      "position": 3,
+      "properties": {
+        "progression_name": "Large Language Models"
+      },
+      "seeding_key": {
+        "activity_section.key": "e6322f00-6e63-44d0-8da0-3b0ed34d3d6f",
+        "lesson_activity.key": "631496fb-dcb9-4118-b88a-3fb74ee734c7"
+      }
+    },
+    {
+      "key": "b783f87c-7327-4f79-b41d-ac2f1cb0c818",
+      "position": 4,
+      "properties": {
+        "progression_name": "Understanding AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "b783f87c-7327-4f79-b41d-ac2f1cb0c818",
+        "lesson_activity.key": "631496fb-dcb9-4118-b88a-3fb74ee734c7"
+      }
+    },
+    {
+      "key": "f30be9d9-b154-4838-a2a7-906d0dffb65c",
+      "position": 5,
+      "properties": {
+        "progression_name": "Closing"
+      },
+      "seeding_key": {
+        "activity_section.key": "f30be9d9-b154-4838-a2a7-906d0dffb65c",
+        "lesson_activity.key": "631496fb-dcb9-4118-b88a-3fb74ee734c7"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod2-opening-01"
+        ],
+        "progression": "Opening"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-opening-01"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "672d1446-44ee-4e34-b047-9866f6672f6c"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod2-opening-01"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod2-opening-02"
+        ],
+        "progression": "Opening"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-opening-02"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "672d1446-44ee-4e34-b047-9866f6672f6c"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod2-opening-02"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod2-opening-03"
+        ],
+        "progression": "Opening"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-opening-03"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "672d1446-44ee-4e34-b047-9866f6672f6c"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod2-opening-03"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod2-introducing-08"
+        ],
+        "progression": "Introducing AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-introducing-08"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "afd19dc2-2132-4526-8e1c-1fc6cbcd7164"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod2-introducing-08"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod2-introducing-09"
+        ],
+        "progression": "Introducing AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-introducing-09"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "afd19dc2-2132-4526-8e1c-1fc6cbcd7164"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod2-introducing-09"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod2-introducing-01"
+        ],
+        "progression": "Introducing AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-introducing-01"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "afd19dc2-2132-4526-8e1c-1fc6cbcd7164"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod2-introducing-01"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod2-introducing-02"
+        ],
+        "progression": "Introducing AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-introducing-02"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "afd19dc2-2132-4526-8e1c-1fc6cbcd7164"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod2-introducing-02"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod2-introducing-03"
+        ],
+        "progression": "Introducing AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-introducing-03"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "afd19dc2-2132-4526-8e1c-1fc6cbcd7164"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod2-introducing-03"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod2-introducing-04"
+        ],
+        "progression": "Introducing AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-introducing-04"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "afd19dc2-2132-4526-8e1c-1fc6cbcd7164"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod2-introducing-04"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod2-introducing-05"
+        ],
+        "progression": "Introducing AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-introducing-05"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "afd19dc2-2132-4526-8e1c-1fc6cbcd7164"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod2-introducing-05"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod2-introducing-06"
+        ],
+        "progression": "Introducing AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-introducing-06"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "afd19dc2-2132-4526-8e1c-1fc6cbcd7164"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod2-introducing-06"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod2-introducing-07"
+        ],
+        "progression": "Introducing AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-introducing-07"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "afd19dc2-2132-4526-8e1c-1fc6cbcd7164"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod2-introducing-07"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod2-introducing-08b"
+        ],
+        "progression": "Introducing AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-introducing-08b"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "afd19dc2-2132-4526-8e1c-1fc6cbcd7164"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod2-introducing-08b"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod2-llm-01"
+        ],
+        "progression": "Large Language Models"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-llm-01"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "e6322f00-6e63-44d0-8da0-3b0ed34d3d6f"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod2-llm-01"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod2-llm-02"
+        ],
+        "progression": "Large Language Models"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-llm-02"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "e6322f00-6e63-44d0-8da0-3b0ed34d3d6f"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod2-llm-02"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 16,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod2-llm-03"
+        ],
+        "progression": "Large Language Models"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-llm-03"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "e6322f00-6e63-44d0-8da0-3b0ed34d3d6f"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod2-llm-03"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 17,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod2-llm-05"
+        ],
+        "progression": "Large Language Models"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-llm-05"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "e6322f00-6e63-44d0-8da0-3b0ed34d3d6f"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod2-llm-05"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 18,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Large Language Models"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-llm-05a"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "e6322f00-6e63-44d0-8da0-3b0ed34d3d6f"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod2-llm-05a"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 19,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod2-llm-05b"
+        ],
+        "progression": "Large Language Models"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-llm-05b"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "e6322f00-6e63-44d0-8da0-3b0ed34d3d6f"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod2-llm-05b"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 20,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod2-llm-06"
+        ],
+        "progression": "Large Language Models"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-llm-06"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "e6322f00-6e63-44d0-8da0-3b0ed34d3d6f"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod2-llm-06"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 21,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod2-understanding-00"
+        ],
+        "progression": "Understanding AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-understanding-00"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "b783f87c-7327-4f79-b41d-ac2f1cb0c818"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod2-understanding-00"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 22,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod2-understanding-01"
+        ],
+        "progression": "Understanding AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-understanding-01"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "b783f87c-7327-4f79-b41d-ac2f1cb0c818"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod2-understanding-01"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 23,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod2-understanding-02"
+        ],
+        "progression": "Understanding AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-understanding-02"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "b783f87c-7327-4f79-b41d-ac2f1cb0c818"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod2-understanding-02"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 24,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod2-understanding-03"
+        ],
+        "progression": "Understanding AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-understanding-03"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "b783f87c-7327-4f79-b41d-ac2f1cb0c818"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod2-understanding-03"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 25,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod2-understanding-04"
+        ],
+        "progression": "Understanding AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-understanding-04"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "b783f87c-7327-4f79-b41d-ac2f1cb0c818"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod2-understanding-04"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 26,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod2-understanding-05"
+        ],
+        "progression": "Understanding AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-understanding-05"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "b783f87c-7327-4f79-b41d-ac2f1cb0c818"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod2-understanding-05"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 27,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod2-understanding-06"
+        ],
+        "progression": "Understanding AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-understanding-06"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "b783f87c-7327-4f79-b41d-ac2f1cb0c818"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod2-understanding-06"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 28,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod2-understanding-07"
+        ],
+        "progression": "Understanding AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-understanding-07"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "b783f87c-7327-4f79-b41d-ac2f1cb0c818"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod2-understanding-07"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 29,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod2-closing-00"
+        ],
+        "progression": "Closing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-closing-00"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "f30be9d9-b154-4838-a2a7-906d0dffb65c"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod2-closing-00"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 30,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod2-closing-01"
+        ],
+        "progression": "Closing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-closing-01"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "f30be9d9-b154-4838-a2a7-906d0dffb65c"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod2-closing-01"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 31,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod2-closing-02"
+        ],
+        "progression": "Closing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-closing-02"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "f30be9d9-b154-4838-a2a7-906d0dffb65c"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod2-closing-02"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod2-opening-01",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-opening-01"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "672d1446-44ee-4e34-b047-9866f6672f6c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod2-opening-02",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-opening-02"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "672d1446-44ee-4e34-b047-9866f6672f6c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod2-opening-03",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-opening-03"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "672d1446-44ee-4e34-b047-9866f6672f6c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod2-introducing-08",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-introducing-08"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "afd19dc2-2132-4526-8e1c-1fc6cbcd7164"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod2-introducing-09",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-introducing-09"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "afd19dc2-2132-4526-8e1c-1fc6cbcd7164"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod2-introducing-01",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-introducing-01"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "afd19dc2-2132-4526-8e1c-1fc6cbcd7164"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod2-introducing-02",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-introducing-02"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "afd19dc2-2132-4526-8e1c-1fc6cbcd7164"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod2-introducing-03",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-introducing-03"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "afd19dc2-2132-4526-8e1c-1fc6cbcd7164"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod2-introducing-04",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-introducing-04"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "afd19dc2-2132-4526-8e1c-1fc6cbcd7164"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod2-introducing-05",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-introducing-05"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "afd19dc2-2132-4526-8e1c-1fc6cbcd7164"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod2-introducing-06",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-introducing-06"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "afd19dc2-2132-4526-8e1c-1fc6cbcd7164"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod2-introducing-07",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-introducing-07"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "afd19dc2-2132-4526-8e1c-1fc6cbcd7164"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod2-introducing-08b",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-introducing-08b"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "afd19dc2-2132-4526-8e1c-1fc6cbcd7164"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod2-llm-01",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-llm-01"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "e6322f00-6e63-44d0-8da0-3b0ed34d3d6f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod2-llm-02",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-llm-02"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "e6322f00-6e63-44d0-8da0-3b0ed34d3d6f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod2-llm-03",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-llm-03"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "e6322f00-6e63-44d0-8da0-3b0ed34d3d6f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod2-llm-05",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-llm-05"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "e6322f00-6e63-44d0-8da0-3b0ed34d3d6f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod2-llm-05a",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-llm-05a"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "e6322f00-6e63-44d0-8da0-3b0ed34d3d6f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod2-llm-05b",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-llm-05b"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "e6322f00-6e63-44d0-8da0-3b0ed34d3d6f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod2-llm-06",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-llm-06"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "e6322f00-6e63-44d0-8da0-3b0ed34d3d6f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod2-understanding-00",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-understanding-00"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "b783f87c-7327-4f79-b41d-ac2f1cb0c818"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod2-understanding-01",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-understanding-01"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "b783f87c-7327-4f79-b41d-ac2f1cb0c818"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod2-understanding-02",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-understanding-02"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "b783f87c-7327-4f79-b41d-ac2f1cb0c818"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod2-understanding-03",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-understanding-03"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "b783f87c-7327-4f79-b41d-ac2f1cb0c818"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod2-understanding-04",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-understanding-04"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "b783f87c-7327-4f79-b41d-ac2f1cb0c818"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod2-understanding-05",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-understanding-05"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "b783f87c-7327-4f79-b41d-ac2f1cb0c818"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod2-understanding-06",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-understanding-06"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "b783f87c-7327-4f79-b41d-ac2f1cb0c818"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod2-understanding-07",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-understanding-07"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "b783f87c-7327-4f79-b41d-ac2f1cb0c818"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod2-closing-00",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-closing-00"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "f30be9d9-b154-4838-a2a7-906d0dffb65c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod2-closing-01",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-closing-01"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "f30be9d9-b154-4838-a2a7-906d0dffb65c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod2-closing-02",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod2-closing-02"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-ai-101-v2-mod2",
+        "activity_section.key": "f30be9d9-b154-4838-a2a7-906d0dffb65c"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

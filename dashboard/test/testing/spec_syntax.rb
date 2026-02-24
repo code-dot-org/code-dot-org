@@ -61,6 +61,8 @@ module ActiveSupport
         # @param block [Proc] The block that defines the subject
         # @return [void]
         def subject(name = :subject, &block)
+          subject(:subject, &block) unless name == :subject
+
           already_initialized = respond_to?(name)
 
           let name, &block

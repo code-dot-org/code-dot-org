@@ -1,4 +1,4 @@
-import {StrongText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -12,9 +12,9 @@ import styles from './progress-table-legend.module.scss';
 export default function LevelTypesBox() {
   return (
     <div className={classNames(styles.legend, styles.levelTypes)}>
-      <StrongText className={styles.headerContainer}>
+      <Typography className={styles.headerContainer} variant="strong">
         {i18n.levelTypes()}
-      </StrongText>
+      </Typography>
       <div className={styles.icons}>
         <div className={styles.legendColumn}>
           <LegendItem

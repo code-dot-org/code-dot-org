@@ -12,13 +12,11 @@ import {
 import i18n from '@cdo/locale';
 
 import {h3Style} from '../../legacySharedComponents/Headings';
-import firehoseClient from '../../metrics/firehose';
 import color from '../../util/color';
 import {getNestedUnitUrl} from '../teacherDashboard/urlHelpers';
 
 import {ViewType, unitDataPropType} from './sectionProgressConstants';
 import {getCurrentUnitData} from './sectionProgressRedux';
-import StandardsViewHeaderButtons from './standards/StandardsViewHeaderButtons';
 
 class ProgressViewHeader extends Component {
   static propTypes = {
@@ -37,19 +35,6 @@ class ProgressViewHeader extends Component {
   }
 
   navigateToScript = () => {
-    firehoseClient.putRecord(
-      {
-        study: 'teacher_dashboard_actions',
-        study_group: 'progress',
-        event: 'go_to_script',
-        data_json: JSON.stringify({
-          section_id: this.props.sectionId,
-          script_id: this.props.scriptId,
-        }),
-      },
-      {includeUserId: true}
-    );
-
     analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED, {
       sectionId: this.props.sectionId,
       unitId: this.props.scriptId,
@@ -64,7 +49,6 @@ class ProgressViewHeader extends Component {
     const headingText = {
       [ViewType.SUMMARY]: i18n.lessonsAttempted() + ' ',
       [ViewType.DETAIL]: i18n.levelsAttempted() + ' ',
-      [ViewType.STANDARDS]: i18n.CSTAStandardsIn() + ' ',
     };
     return (
       <div style={{...h3Style, ...styles.heading, ...styles.tableHeader}}>
@@ -80,9 +64,6 @@ class ProgressViewHeader extends Component {
             </a>
           )}
         </span>
-        {currentView === ViewType.STANDARDS && (
-          <StandardsViewHeaderButtons sectionId={this.props.sectionId} />
-        )}
       </div>
     );
   }

@@ -7,7 +7,7 @@ right 'Adding a `low_vision_mode: true` property to a user\'s settings object to
 wrong 'Using a variable to store the total number of users.'
 wrong 'Naming a function `calculateTotal()` to show the price of a cart.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 4

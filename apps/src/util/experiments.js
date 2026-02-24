@@ -48,12 +48,8 @@ experiments.AI_ARTIFACT = 'ai-artifact';
 experiments.AI_CHAT_NEW_PERMISSIONS = 'ai-chat-new-permissions';
 // Adds a "Get help with this block" option to block context menus if docs exist (e.g. Sprite Lab)
 experiments.BLOCKLY_DOCS = 'blockly_docs';
-// Adds the ability to toggle between v1 and v2 of the section progress page of the teacher dashboard
-experiments.SECTION_PROGRESS_V2 = 'section_progress_v2';
 // Allows the playspace to be dragged to take up a larger portion of the screen
 experiments.BIG_PLAYSPACE = 'bigPlayspace';
-// Allows user to view the new version of the teacher navigation
-experiments.TEACHER_LOCAL_NAV_V2 = 'teacher-local-nav-v2';
 // Use glow effect for Blockly block highlighting
 experiments.BLOCKLY_GLOW_HIGHLIGHT = 'blockly-glow-highlight';
 // Turn on Blockly Keyboard Navigation
@@ -64,19 +60,22 @@ experiments.MODULARITY = 'modularity';
 experiments.LOCALIZEJS = 'localizejs';
 // Show AI Tutor in legacy labs
 experiments.LEGACY_LAB_AI_TUTOR = 'legacy-lab-ai-tutor';
-// Use accept/reject code flow in Web Lab 2
-experiments.WEBLAB2_ACCEPT_REJECT = 'weblab2-accept-reject';
 // Enable ActionCable load testing
 experiments.ACTIONCABLE_LOAD_TESTING = 'actioncable-load-testing';
 // Use AI Tutor system prompts from Langfuse
 experiments.USE_LANGFUSE_PROMPT = 'use-langfuse-prompt';
-// Enable AI lesson summaries
-experiments.AI_LESSON_SUMMARIES = 'ai_lesson_summaries';
 // Enable AI lesson podcasts
 experiments.AI_LESSON_PODCASTS = 'ai-lesson-podcasts';
 // Use channel-id based preview urls on localhost for Web Lab 2
 experiments.WEBLAB2_FULL_URLS = 'weblab2-full-urls';
-experiments.WEBLAB2_LEGACY_PREVIEW = 'weblab2-legacy-preview';
+// Show unified diff view in Code Editor.
+experiments.ACCEPT_REJECT_UNIFIED_DIFF = 'accept-reject-unified-diff';
+// Show split diff view in Code Editor.
+experiments.ACCEPT_REJECT_SPLIT_DIFF = 'accept-reject-split-diff';
+// Show debug panel in Web Lab 2
+experiments.WEBLAB2_DEBUG_PANEL = 'weblab2-show-debug';
+// Enable the new teacher dashboard student snapshot page and features
+experiments.STUDENT_SNAPSHOT = 'student-snapshot';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

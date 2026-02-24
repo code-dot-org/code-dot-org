@@ -147,10 +147,19 @@ gem 'open_uri_redirections', require: false
 # Optimizes copy-on-write memory usage with GC before web-application fork.
 gem 'nakayoshi_fork'
 
-gem 'puma', '~> 5.6'
+gem 'jmespath', '~> 1.4' # Used by our pumactl wrapper shell script to filter JSON output.
 gem 'puma_worker_killer'
-gem 'raindrops'
 gem 'sd_notify' # required for Puma to support systemd's Type=notify
+
+# We are using Puma just 2 commits past Puma 7.2 release, but crucially this includes a PR
+# that enables Puma to dump backtraces when it receives SIGPWR on Linux. We need this
+# PR for debugging and it is not included in a release (yet).
+#
+# Backtrace PR: https://github.com/puma/puma/pull/3829
+#
+# We should switch to Puma 7.3 as soon as it is released and remove this comment, (expected ~Mar-May 2026)
+gem 'puma', git: 'https://github.com/puma/puma.git', ref: '42161dd0fc3f3ad9d51359e4037c75b351b18219'
+# gem 'puma', '~> 7.2'
 
 gem 'chronic', '~> 0.10.2'
 
@@ -176,7 +185,8 @@ gem 'cancancan', '~> 3.5.0'
 gem 'devise', '~> 4.9.0'
 gem 'devise_invitable', '~> 2.0.2'
 
-gem 'omniauth-clever', '~> 2.0.1', github: 'code-dot-org/omniauth-clever', tag: 'v2.0.1'
+gem 'omniauth-classlink', '~> 0.3.1'
+gem 'omniauth-clever', '~> 3.0.0', github: 'code-dot-org/omniauth-clever', tag: 'v3.0.0'
 gem 'omniauth-facebook', '~> 10.0.0'
 gem 'omniauth-google-oauth2', '~> 1.1.3'
 gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
@@ -292,7 +302,7 @@ gem 'pusher', '~> 1.3.1', require: false
 gem 'youtube-dl.rb', group: [:development, :staging, :levelbuilder]
 
 gem 'daemons', '1.1.9' # Pinned to old version, see PR 57938
-gem 'httparty'
+gem 'httparty', '~> 0.24'
 gem 'oj', '~> 3.10'
 
 gem 'rest-client', '~> 2.0.1'

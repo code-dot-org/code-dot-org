@@ -7,7 +7,7 @@ right 'The design uses color and style to match the emotions and needs of its au
 wrong 'The design ignores the users and focuses on personal taste.'
 wrong 'The design improves the site\'s speed and security features.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lessons 5, 7

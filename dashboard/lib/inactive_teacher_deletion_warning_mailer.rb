@@ -29,10 +29,14 @@ class InactiveTeacherDeletionWarningMailer
     ActiveRecord::Base.connected_to(role: :reporting) do
       loop do
         accounts_batch = inactive_teachers
-        break if accounts_batch.empty? || num_teachers_warned >= @limit
+        break if accounts_batch.empty?
         accounts_batch.each do |teacher|
+          break if num_teachers_warned >= @limit
           next if teacher.email.blank?
-          next if teacher.email.end_with?('@code.org') # skip internal accounts
+          if teacher.email.end_with?('@code.org') # skip internal accounts
+            mark_warning_email_sent(teacher.id) unless @dry_run # Mark as sent to avoid re-processing
+            next
+          end
           send_warning_email(teacher)
           # Set email sent at field
           mark_warning_email_sent(teacher.id) unless @dry_run
@@ -40,7 +44,7 @@ class InactiveTeacherDeletionWarningMailer
           upload_metrics(teacher.id) unless @dry_run
         rescue StandardError => exception
           self.num_errors += 1
-          log_message("Error deleting user_id #{teacher.id}: #{exception.message}")
+          log_message("Error emailing user_id #{teacher.id}: #{exception.message}")
         ensure
           processed_teacher_ids << teacher.id
         end

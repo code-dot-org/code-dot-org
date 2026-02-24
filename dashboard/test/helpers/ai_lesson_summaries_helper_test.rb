@@ -17,6 +17,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     # Mock DCDO timeouts
     DCDO.stubs(:get).with('openai_http_open_timeout', 5).returns(5)
     DCDO.stubs(:get).with('openai_http_read_timeout', 30).returns(30)
+    DCDO.stubs(:get).with('modularity', true).returns(true)
 
     @system_prompt = "Test system prompt for lesson #{@lesson.id}"
     @lesson_summary = {
@@ -433,5 +434,93 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
 
     client = AiLessonSummariesHelper::Client.new(@api_key, @model)
     client.request_lesson_summary(prompt, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])
+  end
+
+  # *****
+  # perform_ai_lesson_summaries_by_unit tests
+  # *****
+
+  test "perform_ai_lesson_summaries_by_unit enqueues job with lesson IDs that have lesson plans" do
+    # Create a unit with lessons, some with lesson plans and some without
+    unit = create(:unit)
+    lesson_group = create(:lesson_group, script: unit)
+    lesson_with_plan = create(:lesson, lesson_group: lesson_group, has_lesson_plan: true)
+    create(:lesson, lesson_group: lesson_group, has_lesson_plan: false)
+    lesson_with_plan_2 = create(:lesson, lesson_group: lesson_group, has_lesson_plan: true)
+
+    expected_request = {
+      user_id: @user.id,
+      lesson_ids: [lesson_with_plan.id, lesson_with_plan_2.id],
+      unit_id: unit.id
+    }
+
+    # Mock the job enqueue call
+    AiLessonSummariesJob.expects(:perform_later).with(request: expected_request)
+
+    AiLessonSummariesHelper.perform_ai_lesson_summaries_by_unit(unit, @user.id)
+  end
+
+  test "perform_ai_lesson_summaries_by_unit enqueues job with empty lesson IDs when no lessons have lesson plans" do
+    # Create a unit with lessons that don't have lesson plans
+    unit = create(:unit)
+    create(:lesson, script: unit, has_lesson_plan: false)
+    create(:lesson, script: unit, has_lesson_plan: false)
+
+    expected_request = {
+      user_id: @user.id,
+      lesson_ids: [],
+      unit_id: unit.id
+    }
+
+    # Mock the job enqueue call
+    AiLessonSummariesJob.expects(:perform_later).with(request: expected_request)
+
+    AiLessonSummariesHelper.perform_ai_lesson_summaries_by_unit(unit, @user.id)
+  end
+
+  test "perform_ai_lesson_summaries_by_unit enqueues job with empty lesson IDs when unit has no lessons" do
+    # Create a unit with no lessons
+    unit = create(:unit)
+
+    expected_request = {
+      user_id: @user.id,
+      lesson_ids: [],
+      unit_id: unit.id
+    }
+
+    # Mock the job enqueue call
+    AiLessonSummariesJob.expects(:perform_later).with(request: expected_request)
+
+    AiLessonSummariesHelper.perform_ai_lesson_summaries_by_unit(unit, @user.id)
+  end
+
+  # *****
+  # perform_ai_lesson_summary_by_lesson tests
+  # *****
+
+  test "perform_ai_lesson_summary_by_lesson enqueues job when lesson has lesson plan" do
+    unit = create(:unit)
+    lesson = create(:lesson, script: unit, has_lesson_plan: true)
+
+    expected_request = {
+      user_id: @user.id,
+      lesson_ids: [lesson.id],
+      unit_id: unit.id
+    }
+
+    # Mock the job enqueue call
+    AiLessonSummariesJob.expects(:perform_later).with(request: expected_request)
+
+    AiLessonSummariesHelper.perform_ai_lesson_summary_by_lesson(lesson, unit, @user.id)
+  end
+
+  test "perform_ai_lesson_summary_by_lesson does not enqueue job when lesson does not have lesson plan" do
+    unit = create(:unit)
+    lesson = create(:lesson, script: unit, has_lesson_plan: false)
+
+    # Should not call perform_later at all
+    AiLessonSummariesJob.expects(:perform_later).never
+
+    AiLessonSummariesHelper.perform_ai_lesson_summary_by_lesson(lesson, unit, @user.id)
   end
 end

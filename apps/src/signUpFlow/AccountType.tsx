@@ -1,6 +1,6 @@
 import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Heading2} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useState, useEffect} from 'react';
 
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
@@ -36,7 +36,7 @@ const AccountType: React.FunctionComponent<{
       analyticsReporter.sendEvent(
         EVENTS.SIGN_UP_STARTED_EVENT,
         {},
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
 
       // If sent here from trying to log in with OAuth without an account, log the OAuth type and have this page
@@ -58,7 +58,7 @@ const AccountType: React.FunctionComponent<{
           {
             'user login type': oauthType,
           },
-          PLATFORMS.BOTH
+          PLATFORMS.STATSIG
         );
       }
     }
@@ -70,7 +70,7 @@ const AccountType: React.FunctionComponent<{
       {
         'account type': accountType,
       },
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
     sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, accountType);
 
@@ -95,7 +95,7 @@ const AccountType: React.FunctionComponent<{
     analyticsReporter.sendEvent(
       EVENTS.CURRICULUM_FREE_DIALOG_BUTTON_CLICKED,
       {},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   };
 
@@ -145,9 +145,9 @@ const AccountType: React.FunctionComponent<{
         />
         <div className={style.freeCurriculumWrapper}>
           <FontAwesomeV6Icon iconName={'book-open-cover'} />
-          <Heading2 visualAppearance="heading-xs">
+          <Typography component="h2" variant="h6" gutterBottom>
             {locale.free_curriculum_forever()}
-          </Heading2>
+          </Typography>
           <Button
             className={style.dialogButton}
             size="s"

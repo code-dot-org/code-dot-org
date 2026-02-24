@@ -28,7 +28,7 @@ class AichatEventsController < ApplicationController
 
     project_id = nil
     if context[:channelId]
-      _, project_id = storage_decrypt_channel_id(context[:channelId])
+      _, project_id = get_storage_id_and_project_id(context[:channelId])
     end
 
     begin
@@ -77,7 +77,7 @@ class AichatEventsController < ApplicationController
     if script_id.present? && level_id.present?
       aichat_events = AichatEvent.where(user_id: user_id, script_id: script_id, level_id: level_id)
     elsif channel_id.present?
-      _, project_id = storage_decrypt_channel_id(channel_id)
+      _, project_id = get_storage_id_and_project_id(channel_id)
       aichat_events = AichatEvent.where(user_id: user_id, project_id: project_id)
     end
     aichat_events = aichat_events.order(:id).map do |event|
@@ -126,7 +126,8 @@ class AichatEventsController < ApplicationController
   end
 
   private def can_log_aichat_events?(client_type)
-    current_user.has_aichat_access? || current_user.trust_chat_client?(client_type)
+    ai_chat_new_permissions = params[:'ai-chat-new-permissions'].present?
+    current_user.has_aichat_lab_access?(new_permissions_enabled: ai_chat_new_permissions) || current_user.trust_chat_client?(client_type)
   end
 
   private def can_view_chat_history?(user_id)

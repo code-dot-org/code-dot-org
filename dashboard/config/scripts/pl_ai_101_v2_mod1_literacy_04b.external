@@ -1,0 +1,154 @@
+name 'pl-ai-101-V2-mod1-literacy-04b'
+title 'title'
+description 'description here'
+display_name 'Middle School'
+bubble_choice_description 'Explore AI Literacy Skills with Middle School Examples'
+thumbnail_url 'https://images.code.org/fb5ace46113de21d9bf25ffc9c8ea365-Screenshot 2026-02-13 at 1.22.35 PM.png'
+
+markdown <<MARKDOWN
+# AI Literacy Skills, Middle School
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">1. Recognize and Explain AI in Everyday Life</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+<p style="font-size: 18px">Students can identify when AI is being used and describe how it works in realistic terms.</p>
+<p style="font-size: 16px">
+<strong>Examples:</strong></p>
+ <ul style="font-size: 16px">
+  <li>Distinguish between AI systems and simple rule-based programs.</li>
+  <li>Explain how data influences AI recommendations.</li>
+  <li>Describe why AI may produce different results for different users.</li>
+  <li>Recognize that AI systems are designed by people.</li>
+ </ul>
+ 
+<p style="font-size: 16px"><strong>Why it Matters:</strong> Students must first see AI clearly before they can evaluate or manage it — recognizing AI is the first step to using it responsibly and critically.</p>
+</div>
+</details>
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">2. Evaluate AI Outputs for Accuracy, Bias, and Relevance</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+<p style="font-size: 18px">Students critically assess AI-generated content before accepting or using it.</p>
+<p style="font-size: 16px">
+<strong>Examples:</strong></p>
+ <ul style="font-size: 16px">
+  <li>Cross-reference AI-generated information with multiple sources.</li>
+  <li>Identify possible bias or missing perspectives.</li>
+  <li>Recognize hallucinations or fabricated details.</li>
+  <li>Revise AI outputs to improve clarity or fairness.</li>
+ </ul>
+ 
+<p style="font-size: 16px"><strong>Why it Matters:</strong> AI can produce convincing but incorrect or unfair results; learning to verify outputs builds critical thinking and safer use habits.</p>
+</div>
+</details>
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">3. Understand How AI Systems Are Built and Trained</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+<p style="font-size: 18px">Students understand, at an age-appropriate level, how AI systems learn from data and patterns.</p>
+<p style="font-size: 16px">
+<strong>Examples:</strong></p>
+ <ul style="font-size: 16px">
+  <li>Describe how labeled data trains AI models.</li>
+  <li>Compare fixed-rule systems and learning systems.</li>
+  <li>Identify how biased or incomplete data affects results.</li>
+  <li>Explain that AI models improve through testing and feedback.</li>
+ </ul>
+ 
+<p style="font-size: 16px"><strong>Why it Matters:</strong> Understanding how AI is trained helps students see how inputs shape outputs and why fairness and data quality matter.</p>
+</div>
+</details>
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">4. Collaborate Creatively and Responsibly with AI</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+<p style="font-size: 18px">Students use AI as a creative partner while maintaining ownership and accountability for their work.</p>
+<p style="font-size: 16px">
+<strong>Examples:</strong></p>
+ <ul style="font-size: 16px">
+  <li>Write structured prompts to improve AI outputs.</li>
+  <li>Iteratively refine AI-generated drafts.</li>
+  <li>Combine AI outputs with original ideas.</li>
+  <li>Discuss originality and ownership.</li>
+ </ul>
+ 
+<p style="font-size: 16px"><strong>Why it Matters:</strong> AI can amplify creativity, but students must remain the authors of their work and learn to take responsibility for final products.</p>
+</div>
+</details>
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">5. Decide When and How to Use AI</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+<p style="font-size: 18px">Students determine whether AI is appropriate for a given task.</p>
+<p style="font-size: 16px">
+<strong>Examples:</strong></p>
+ <ul style="font-size: 16px">
+  <li>Analyze task goals before choosing AI tools.</li>
+  <li>Identify which parts of a task AI can help with.</li>
+  <li>Consider fairness and classroom expectations.</li>
+  <li>Reflect on whether AI use supports learning goals.</li>
+ </ul>
+ 
+<p style="font-size: 16px"><strong>Why it Matters:</strong> Learning to choose tools intentionally protects learning goals and builds responsible technology habits.</p>
+</div>
+</details>
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">6. Manage AI to Augment — Not Replace — Human Judgment</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+<p style="font-size: 18px">Students intentionally use AI to support their work while keeping human judgment at the center.</p>
+<p style="font-size: 16px">
+<strong>Examples:</strong></p>
+ <ul style="font-size: 16px">
+  <li>Break tasks into parts and assign roles to AI and humans.</li>
+  <li>Automate repetitive tasks while focusing on analysis.</li>
+  <li>Monitor AI performance and adjust prompts.</li>
+  <li>Transparently disclose AI use.</li>
+ </ul>
+ 
+<p style="font-size: 16px"><strong>Why it Matters:</strong> AI should enhance human thinking, not replace it — students need to maintain agency and responsibility in their work.</p>
+</div>
+</details>
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">7. Analyze AI’s Societal and Environmental Impact</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+<p style="font-size: 18px">Students examine how AI affects people, communities, and the environment.</p>
+<p style="font-size: 16px">
+<strong>Examples:</strong></p>
+ <ul style="font-size: 16px">
+  <li>Examine how bias appears in AI systems.</li>
+  <li>Discuss privacy and data collection.</li>
+  <li>Compare benefits and risks of AI in daily life.</li>
+  <li>Explore environmental costs of AI systems.</li>
+ </ul>
+ 
+<p style="font-size: 16px"><strong>Why it Matters:</strong> Understanding AI’s broader impact builds empathy, fairness, and responsible digital citizenship.</p>
+</div>
+</details>
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">8. Design and Improve AI Systems for Human Good</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+<p style="font-size: 18px">Students explore how AI systems can be shaped, tested, and improved.</p>
+<p style="font-size: 16px">
+<strong>Examples:</strong></p>
+ <ul style="font-size: 16px">
+  <li>Collect and curate data for small AI simulations.</li>
+  <li>Test models with new inputs.</li>
+  <li>Identify unintended consequences.</li>
+  <li>Revise systems based on feedback.</li>
+ </ul>
+ 
+<p style="font-size: 16px"><strong>Why it Matters:</strong> Designing and improving systems empowers students to see themselves as creators and shapers of technology, not just consumers.</p>
+</div>
+</details>
+
+MARKDOWN

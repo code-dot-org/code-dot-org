@@ -3,6 +3,7 @@ import * as BlocklyCore from 'blockly/core';
 import BlockSvgFrame from '@cdo/apps/blockly/addons/blockSvgFrame';
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 import {ExtendedBlockSvg, ProcedureBlock} from '@cdo/apps/blockly/types';
+import {getCategoryBlocksJson} from '@cdo/apps/blockly/utils/';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {nameComparator} from '@cdo/apps/util/sort';
 
@@ -65,7 +66,6 @@ export const blocks = BlocklyCore.common.createBlockDefinitionsFromJsonArray([
       'procedure_def_validator_helper',
       'procedure_defnoreturn_get_caller_block_mixin',
       'procedure_def_set_no_return_helper',
-      'procedure_def_no_gray_out',
       'behaviors_block_frame',
       'procedure_def_mini_toolbox',
       'modal_procedures_no_destroy',
@@ -140,7 +140,7 @@ BlocklyCore.Extensions.register(
     ) {
       // Used to create and render an SVG frame instance.
       const getColor = () => {
-        return Blockly.cdoUtils.getBlockColor(this);
+        return this.style?.colourPrimary || '';
       };
       this.functionalSvg_ = new BlockSvgFrame(
         this,
@@ -241,7 +241,7 @@ export function flyoutCategory(
   }
 
   // Add blocks from the level toolbox XML, if present.
-  blockList.push(...Blockly.cdoUtils.getCategoryBlocksJson('Behavior'));
+  blockList.push(...getCategoryBlocksJson('Behavior'));
 
   // Workspaces to populate behaviors flyout category from
   const workspaces = [

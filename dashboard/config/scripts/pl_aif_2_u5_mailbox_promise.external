@@ -1,0 +1,133 @@
+name 'pl-aif-2-U5-mailbox-promise'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Getting Data Online
+
+
+#### When your code asks for data from the internet, it doesn’t get the answer instantly. Just like ordering something online, there’s a waiting period before you know what happened.
+
+
+---
+
+<img src="https://images.code.org/c0123c345ec6c97b12ecfd2c29f89d47-image-1771349104095.png" alt="icon of an open mailbox with a package inside" width="200px" style="border-radius:10px; float:right; margin: 0 0 0px 20px;">
+
+## Scenario: The Mystery Mailbox
+
+#### Imagine you ordered a **mystery box** online.  
+#### You walk to the mailbox to check it.
+
+<span style="display:inline-block; padding:10px 12px; border-left:4px solid #6c63ff; background:#f6f6ff; border-radius:8px; margin:10px 0; font-size: 14pt;">
+<strong>Question:</strong> What could be happening with your package right now?
+</span>
+
+<div style="clear:both;"></div>
+
+---
+
+## Delivery Status Chart
+
+<div style="border:1px solid #e5e7eb; border-radius:12px; overflow:hidden; margin:12px 0; max-width:760px;">
+  <div style="background:#f9fafb; padding:10px 12px; border-bottom:1px solid #e5e7eb;font-size: 14pt;">
+    <strong>Mailbox Delivery States</strong>
+  </div>
+  <div style="padding:12px;">
+    <table style="width:100%; border-collapse:collapse; font-size: 14pt;;">
+      <thead>
+        <tr>
+          <th style="text-align:left; padding:10px; border-bottom:1px solid #e5e7eb;">State</th>
+          <th style="text-align:left; padding:10px; border-bottom:1px solid #e5e7eb;">What it looks like in the mailbox story</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:10px; border-bottom:1px solid #f0f2f5;">
+            <span style="display:inline-block; padding:4px 10px; border-radius:999px; background:#fff7ed; border:1px solid #fed7aa;font-size: 14pt;">
+              <strong>Pending</strong>
+            </span>
+          </td>
+          <td style="padding:10px; border-bottom:1px solid #f0f2f5; font-size: 14pt;">
+            Still waiting — you haven’t opened it yet, so you don’t know what’s inside.
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:10px; border-bottom:1px solid #f0f2f5;font-size: 14pt;">
+            <span style="display:inline-block; padding:4px 10px; border-radius:999px; background:#f0fdf4; border:1px solid #bbf7d0;font-size: 14pt;">
+              <strong>Fulfilled</strong>
+            </span>
+          </td>
+          <td style="padding:10px; border-bottom:1px solid #f0f2f5;font-size: 14pt;">
+            The package arrives safely and is in good condition.
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:10px;">
+            <span style="display:inline-block; padding:4px 10px; border-radius:999px; background:#fef2f2; border:1px solid #fecaca;font-size: 14pt;">
+              <strong>Rejected</strong>
+            </span>
+          </td>
+          <td style="padding:10px;font-size: 14pt;">
+            The package was lost/damaged, or you got a delivery failure note.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+---
+
+## Match the State (Dropdown)
+
+<div style="border:1px solid #e5e7eb; border-radius:12px; padding:12px; background:#ffffff; max-width:760px;">
+  <div style="margin-bottom:8px;font-size: 14pt;">
+    <strong>Prompt:</strong> Which state matches the moment when they are <em>walking back from the mailbox</em> (before looking inside)?
+  </div>
+
+  
+  <details style="margin:10px 0; border:1px solid #dbeafe; border-radius:10px; padding:10px; background:#eff6ff;">
+    <summary style="cursor:pointer; font-weight:700;font-size: 14pt;">Show Answer ✅</summary>
+    <div style="padding-top:10px; line-height:1.55;">
+      <div style="font-size: 14pt;"><strong>Answer: Pending</strong></div>
+      <div style="margin-top:6px;font-size: 14pt;">
+        Even if the delivery process has started, the outcome isn’t known yet.
+        Until you actually see the package (or a note), the delivery is still <strong>pending</strong>.
+      </div>
+    </div>
+  </details>
+</div>
+
+---
+
+## Connection to JavaScript Promises
+
+<p style = "font-size: 14pt;">These same three words — <strong>pending</strong>, <strong>fulfilled</strong>, and <strong>rejected</strong> — are exactly how JavaScript describes the status of a <strong>Promise</strong>.</p>
+
+<div style="display:grid; gap:10px; margin:12px 0; max-width:760px;">
+  <div style="border:1px solid #e5e7eb; border-radius:12px; padding:12px; background:#ffffff;font-size: 14pt;">
+    <div><strong>Pending</strong></div>
+    <div style="margin-top:4px;font-size: 14pt;">The request is still in progress (you’re still waiting).</div>
+  </div>
+  <div style="border:1px solid #e5e7eb; border-radius:12px; padding:12px; background:#ffffff;font-size: 14pt;">
+    <div><strong>Fulfilled</strong></div>
+    <div style="margin-top:4px;font-size: 14pt;">The request succeeded — your code received the data.</div>
+  </div>
+  <div style="border:1px solid #e5e7eb; border-radius:12px; padding:12px; background:#ffffff;font-size: 14pt;">
+    <div><strong>Rejected</strong></div>
+    <div style="margin-top:4px;font-size: 14pt;">Something went wrong — the request failed (error).</div>
+  </div>
+</div>
+
+<span style="display:inline-block; padding:10px 12px; border-left:4px solid #10b981; background:#f0fdf4; border-radius:8px;font-size: 14pt;">
+<strong>Big idea:</strong> A Promise tracks the “delivery status” of an online request your code made.
+</span>
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 A <strong>promise</strong> an object that represents a value that is not available yet but will be resolved in the future. It's a placeholder for the result of an asynchronous operation. <br><br> It has three states: <strong>pending, fulfilled, or rejected.</strong>
+
+</p>
+</div>
+
+![]()
+MARKDOWN

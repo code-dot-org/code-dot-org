@@ -24,7 +24,7 @@ import {
 } from '@cdo/apps/lab2/projects/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
-import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
+import MusicAnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {setExtraCopyrightContent} from '@cdo/apps/sharedComponents/footer/CopyrightDialog/index';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
@@ -151,7 +151,7 @@ class UnconnectedMusicView extends React.Component {
 
     const bpm = AppConfig.getValue('bpm');
     const key = AppConfig.getValue('key');
-    this.analyticsReporter = new AnalyticsReporter();
+    this.analyticsReporter = new MusicAnalyticsReporter();
     this.player = new MusicPlayer(
       bpm,
       key && Key[key.toUpperCase()],

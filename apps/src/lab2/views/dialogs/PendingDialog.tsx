@@ -1,6 +1,6 @@
+import Dialog from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import Modal from '@code-dot-org/component-library/modal';
-import {BodyTwoText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 export type dialogCallback = (args?: unknown) => void;
@@ -34,7 +34,12 @@ const PendingDialog: React.FunctionComponent<PendingDialogProps> = ({
 }) => {
   const customContent = (
     <>
-      {bodyComponent || (message && <BodyTwoText>{message}</BodyTwoText>)}
+      {bodyComponent ||
+        (message && (
+          <Typography variant="body2" gutterBottom>
+            {message}
+          </Typography>
+        ))}
       <div className={moduleStyles.spinnerContainer}>
         <FontAwesomeV6Icon
           iconName="spinner"
@@ -46,11 +51,16 @@ const PendingDialog: React.FunctionComponent<PendingDialogProps> = ({
   );
 
   return (
-    <Modal
+    <Dialog
       title={title}
-      customContent={customContent}
+      customContent={<div id="dsco-dialog-description">{customContent}</div>}
       className={moduleStyles.genericDialog}
-      primaryButtonProps={{isPending: true, text: 'Loading', onClick: () => {}}}
+      primaryButtonProps={{
+        disabled: true,
+        isPending: true,
+        text: 'Loading',
+        onClick: () => {},
+      }}
     />
   );
 };

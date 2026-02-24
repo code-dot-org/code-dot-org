@@ -1,4 +1,4 @@
-@import 'color';
+@import 'color', 'font';
 @import '@code-dot-org/component-library-styles/font';
 @import '@code-dot-org/component-library-styles/typography.module';
 @import '@code-dot-org/component-library-styles/mixins';
@@ -443,6 +443,11 @@ html body .sidebarActionTooltip {
   overflow: hidden;
 }
 
+.sidebarArtifactIconContainer {
+  justify-content: space-between;
+  display: flex;
+}
+
 .sidebarChatItemSecondary {
   color: var(--text-neutral-tertiary) !important;
   font-family: Figtree, sans-serif !important;
@@ -518,5 +523,309 @@ html body .sidebarActionTooltip {
     margin-inline-start: 8px;
     width: 8px;
     line-height: var(--font-line-height-body-xxs, 17.6px);
+  }
+}
+
+.artifactButtons {
+  button {
+    margin-inline-end: 8px;
+    margin-bottom: 8px;
+  }
+
+  a {
+    color: var(--text-neutral-tertiary);
+    font-weight: 600;
+    text-decoration: underline;
+
+    i {
+      margin-inline-start: 4px;
+    }
+  }
+}
+
+.artifactShowButtons {
+  display: flex;
+  margin-top: 12px;
+
+  button {
+    margin-inline-end: 8px;
+    margin-bottom: 8px;
+  }
+
+  a {
+    color: var(--text-neutral-tertiary);
+    font-weight: 600;
+    text-decoration: underline;
+    align-self: center;
+    width: 100%;
+    justify-content: flex-start;
+
+    i {
+      padding: 4px;
+      margin-inline-start: 4px;
+      border-radius: 4px;
+      background: var(--background-brand-aqua-light, #BFFFFC);
+      color: var(--text-brand-aqua-secondary);
+    }
+  }
+}
+
+.artifactConfiguration {
+  &Section {
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--background-neutral-secondary);
+
+    h6 {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    &Header {
+      border-bottom: 1px solid var(--borders-neutral-primary);
+      padding-bottom: 12px;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      align-self: stretch;
+
+      a {
+        color: #9660bf;
+        text-decoration: underline;
+        font-weight: 600;
+        font-size: 14px;
+      }
+    }
+  }
+
+  &TitleSection {
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--background-neutral-secondary);
+    flex-direction: row;
+    display: flex;
+    gap: 12px;
+    align-items: end;
+  }
+
+  &Dropdowns {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+
+    label {
+      width: 294px;
+    }
+  }
+
+  &Checkboxes {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    label {
+      width: 294px;
+    }
+  }
+
+  &FAQLink {
+    margin-left: 20px;
+    color: var(--text-neutral-primary);
+    text-decoration: underline;
+    font-weight: 600;
+
+    i {
+      margin-inline-start: 4px;
+      text-decoration: none;
+    }
+  }
+
+  &SaveButtons {
+    margin: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--borders-neutral-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+  }
+
+  h3 {
+    color: var(--text-neutral-primary);
+    font-size: 24px;
+    line-height: 31.68px;
+    font-family: $barlowSemiCondensed-semibold;
+    margin: 0 0 8px 0;
+  }
+
+  h4 {
+    color: var(--text-neutral-primary);
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
+.artifactContainer {
+  display: flex;
+  padding-top: 60px;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+.artifactHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  align-self: stretch;
+
+  h1 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.artifactContentBlocksContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  margin-bottom: 64px;
+}
+
+.artifactContentBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.artifactContent {
+  display: flex;
+  width: 800px;
+  padding: 50px 40px 40px 40px;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: -16px;
+  border-radius: 4px;
+
+  p{
+    white-space: pre-line;
+  }
+
+  &Blue {
+    border: 1px solid var(--borders-brand-teal-primary, #0093A4);
+    background: var(--background-brand-teal-extra-light, #E0F8F9);
+  }
+
+  &Red {
+    border: 1px solid var(--accent-strawberry-50, #ED6060);
+    background: var(--accent-strawberry-10, #FFE3E3);
+  }
+
+  &Purple {
+    border: 1px solid var(--borders-brand-purple-primary, #8C52BA);
+    background: var(--background-brand-purple-extra-light, #F6EDFD);
+  }
+}
+
+.artifactContentLabel {
+  display: inline-flex;
+  padding: 8px 16px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+  background: var(--background-brand-teal-primary, #0093A4);
+  z-index: 1;
+  p{
+    color: $neutral_white;
+    margin: 0;
+  }
+  &Blue {
+    background: var(--background-brand-teal-primary, #0093A4);
+  }
+
+  &Red {
+    background: var(--accent-strawberry-50, #ED6060);
+  }
+
+  &Purple {
+    background: var(--borders-brand-purple-primary, #8C52BA);
+  }
+}
+
+.artifactIcon {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  color: $neutral_white;
+}
+
+.markdownStyle {
+  p {
+  color: var(--text-neutral-primary, #292F36);
+  text-align: center;
+  font-feature-settings: 'liga' off, 'clig' off;
+
+  /* Body/Body 1 - ExtraStrong */
+  font-family: var(--font-family-body, Figtree);
+  font-size: var(--font-size-body-lg, 20px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--font-line-height-body-lg, 28px); /* 140% */
+  }
+}
+
+.answerKeyContainer {
+  display: flex;
+  flex-direction: column;
+  width: 840px;
+  padding: 12px 20px;
+  gap: 20px;
+  border-radius: 4px;
+  border: 1px solid var(--borders-neutral-primary, #D4DAE1);
+  background: var(--background-neutral-secondary, #F0F2F5);
+}
+
+.answerKeyHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 0 0;
+}
+
+.answerIcon {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  color: $neutral_dark;
+}
+
+.artifactThreadIcon {
+  color: var(--background-neutral-octonary);
+  align-self: center;
+}
+
+.artifactTitleInput {
+  min-height: 24px;
+  max-height: 24px;
+  box-sizing: border-box;
+  resize: none;
+  margin: 0;
+  width: 100%;
+
+  &:disabled {
+    opacity: 0.5;
+    background: none;
   }
 }

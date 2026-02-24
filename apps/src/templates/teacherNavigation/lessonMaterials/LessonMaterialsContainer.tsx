@@ -1,16 +1,14 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {Dialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  BodyTwoText,
-  BodyThreeText,
-  BodyFourText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import _ from 'lodash';
 import React, {useState, useMemo} from 'react';
 import {useSelector} from 'react-redux';
 
-import {EXT_COMPONENT_OPEN_FAB_EVENT} from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
+import {setChatIsOpen} from '@cdo/apps/aichat/redux/slice';
+import {fetchThreadMessages} from '@cdo/apps/aichat/redux/thunks';
+import {THREAD_TYPES} from '@cdo/apps/aiDifferentiation/constants';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
@@ -22,22 +20,20 @@ import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teac
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 import AIBotTAIcon from '@cdo/static/ai-bot-ta-tag-icon.png';
 
 import LessonSelector from '../../teacherDashboardShared/LessonSelector';
 import UnitSelectorV2 from '../../teacherDashboardShared/UnitSelectorV2';
 
+import CustomLessonResources from './CustomLessonResources';
 import {LessonMaterialsEmptyState} from './LessonMaterialsEmptyState';
 import {Lesson} from './LessonMaterialTypes';
 import LessonResources from './LessonResources';
 import UnitResourcesDropdown from './UnitResourcesDropdown';
 
 import styles from './lesson-materials.module.scss';
-
-interface AifInfo {
-  aif: boolean;
-}
 
 interface LessonMaterialsData {
   unitId: number;
@@ -67,13 +63,6 @@ const lessonMaterialsApiCall = (unitId: number) =>
   HttpClient.fetchJson<LessonMaterialsData>(
     `/dashboardapi/lesson_materials/${unitId}`
   ).then(response => response?.value);
-
-const handleLessonSummaryAskAITAClick = () => {
-  const openAITAEvent = new Event(EXT_COMPONENT_OPEN_FAB_EVENT, {
-    bubbles: true,
-  });
-  document.dispatchEvent(openAITAEvent);
-};
 
 interface LessonMaterialsContainerProps {
   showNoCurriculumAssigned: boolean;
@@ -138,23 +127,9 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     state => state.currentUser.showAITALessonSummary
   );
 
-  // This checks to see if the AI lesson summaries experiment or DCDO key are set
-  // or if the section has AIF assigned in order to enable AI Lesson Summaries
-  React.useEffect(() => {
-    if (!!unitToLoad && !!aiTALessonSummaryInfo) {
-      if (!showAITALessonSummary) {
-        HttpClient.fetchJson<AifInfo>(
-          `/teacher_dashboard/unit_in_aif?unit_id=${unitToLoad}`
-        ).then(response => {
-          setCanShowLessonSummaries(response.value.aif);
-        });
-      } else {
-        setCanShowLessonSummaries(showAITALessonSummary);
-      }
-    } else {
-      setCanShowLessonSummaries(false);
-    }
-  }, [unitToLoad, aiTALessonSummaryInfo, showAITALessonSummary]);
+  const showAITAPodcasts = useAppSelector(
+    state => state.currentUser.showAITAPodcasts
+  );
 
   React.useEffect(() => {
     const selectedSectionId = selectedSection.id;
@@ -173,6 +148,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     lessonMaterialsCachedLoader(unitToLoad).then(data => {
       setLessonMaterials(data);
       setIsLoading(false);
+      setSelectedLesson(data.lessons[0]);
 
       if (data?.unitName) {
         analyticsReporter.sendEvent(EVENTS.VIEW_LESSON_MATERIALS, {
@@ -217,24 +193,39 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   const [selectedLesson, setSelectedLesson] = useState<Lesson | null>(null);
 
   React.useEffect(() => {
-    if (selectedLesson) {
+    if (selectedLesson && showAITALessonSummary) {
       HttpClient.fetchJson<LessonSummaryInfoResponse>(
         `/ai_lesson_summaries/show?lesson_id=${selectedLesson?.id}`
       )
         .then(response => {
           const preParsedResponse = response.value?.lesson_summary;
-          setAITALessonSummaryInfo(
-            response.response.ok && preParsedResponse
-              ? JSON.parse(preParsedResponse)
-              : null
-          );
+          if (response.response.ok && preParsedResponse) {
+            setAITALessonSummaryInfo(JSON.parse(preParsedResponse));
+            setCanShowLessonSummaries(true);
+          } else {
+            setAITALessonSummaryInfo(null);
+            setCanShowLessonSummaries(false);
+          }
         })
         .catch(error => {
           setAITALessonSummaryInfo(null);
+          setCanShowLessonSummaries(false);
           console.log(`Error: ${error}`);
         });
     }
-  }, [userId, selectedLesson]);
+  }, [userId, selectedLesson, showAITALessonSummary]);
+
+  const handleLessonSummaryAskAITAClick = () => {
+    dispatch(
+      fetchThreadMessages({
+        contextType: AiDiffContext.LESSON,
+        thread: 0,
+        threadType: THREAD_TYPES.lessonSummaryHelp,
+        curriculumCourses: [],
+      })
+    );
+    dispatch(setChatIsOpen(true));
+  };
 
   const renderHeader = () => {
     return (
@@ -303,6 +294,20 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     );
   };
 
+  const renderCustomResources = () => {
+    if (selectedLesson && experiments.isEnabled(experiments.AI_ARTIFACT)) {
+      return (
+        <CustomLessonResources
+          unitId={selectedSection.unitId}
+          lessonId={selectedLesson.id}
+          sectionId={selectedSection.id}
+        />
+      );
+    } else {
+      return null;
+    }
+  };
+
   const renderLessonSummaryContainer = () => {
     return (
       <>
@@ -322,10 +327,16 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
                     key={`transcript-line-${timeStamp}`}
                     className={styles.transcriptLine}
                   >
-                    <BodyTwoText className={styles.transcriptLineTimeStamp}>
+                    <Typography
+                      className={styles.transcriptLineTimeStamp}
+                      variant="body2"
+                      gutterBottom
+                    >
                       {timeStamp}
-                    </BodyTwoText>
-                    <BodyTwoText>{text}</BodyTwoText>
+                    </Typography>
+                    <Typography variant="body2" gutterBottom>
+                      {text}
+                    </Typography>
                   </div>
                 ))}
               </div>
@@ -334,12 +345,15 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           />
         )}
         <div className={styles.lessonSummaryContainer}>
-          {experiments.isEnabled('ai-lesson-podcasts') && (
+          {(showAITAPodcasts ||
+            experiments.isEnabled('ai-lesson-podcasts')) && (
             <div className={styles.lessonSummarySection}>
               <div className={styles.lessonSummarySectionHeader}>
                 <div className={styles.lessonSummarySectionTitle}>
                   <FontAwesomeV6Icon iconName="headphones" iconStyle="solid" />
-                  <BodyTwoText>{i18n.audioSummary()}</BodyTwoText>
+                  <Typography variant="body2" gutterBottom>
+                    {i18n.audioSummary()}
+                  </Typography>
                 </div>
                 <Button
                   type="secondary"
@@ -373,44 +387,60 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           <div className={styles.lessonSummarySection}>
             <div className={styles.lessonSummarySectionTitle}>
               <FontAwesomeV6Icon iconName="lightbulb" iconStyle="solid" />
-              <BodyTwoText>{i18n.teachingTips()}</BodyTwoText>
+              <Typography variant="body2" gutterBottom>
+                {i18n.teachingTips()}
+              </Typography>
             </div>
             <div className={styles.lessonSummaryInfo}>
               <div className={styles.lessonSummaryInfoBlock}>
-                <BodyThreeText>{i18n.learningObjective()}</BodyThreeText>
-                <BodyThreeText>
+                <Typography variant="body3" gutterBottom>
+                  {i18n.learningObjective()}
+                </Typography>
+                <Typography variant="body3" gutterBottom>
                   {aiTALessonSummaryInfo?.learning_objective}
-                </BodyThreeText>
+                </Typography>
               </div>
               <div className={styles.lessonSummaryInfoBlock}>
-                <BodyThreeText>{i18n.keyLessonBeats()}</BodyThreeText>
+                <Typography variant="body3" gutterBottom>
+                  {i18n.keyLessonBeats()}
+                </Typography>
                 <ol>
                   {aiTALessonSummaryInfo?.lesson_beats.map(
                     (lessonBeat, index) => (
                       <li key={`lessonBeat-${index}`}>
-                        <BodyThreeText>{lessonBeat}</BodyThreeText>
+                        <Typography variant="body3" gutterBottom>
+                          {lessonBeat}
+                        </Typography>
                       </li>
                     )
                   )}
                 </ol>
               </div>
               <div className={styles.lessonSummaryInfoBlock}>
-                <BodyThreeText>{i18n.tipsHeader()}</BodyThreeText>
+                <Typography variant="body3" gutterBottom>
+                  {i18n.tipsHeader()}
+                </Typography>
                 <ol>
                   {aiTALessonSummaryInfo?.tips.map((tip, index) => (
                     <li key={`tip-${index}`}>
-                      <BodyThreeText>{tip}</BodyThreeText>
+                      <Typography variant="body3" gutterBottom>
+                        {tip}
+                      </Typography>
                     </li>
                   ))}
                 </ol>
               </div>
               <div className={styles.lessonSummaryInfoBlock}>
-                <BodyThreeText>{i18n.commonMisconceptions()}</BodyThreeText>
+                <Typography variant="body3" gutterBottom>
+                  {i18n.commonMisconceptions()}
+                </Typography>
                 <ul>
                   {aiTALessonSummaryInfo?.misconceptions.map(
                     (misconception, index) => (
                       <li key={`misconception-${index}`}>
-                        <BodyThreeText>{misconception}</BodyThreeText>
+                        <Typography variant="body3" gutterBottom>
+                          {misconception}
+                        </Typography>
                       </li>
                     )
                   )}
@@ -428,13 +458,13 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
               <div className={styles.personalizationQuizSection}>
                 <div className={styles.horizontalLine} />
                 <div className={styles.personalizationQuizPrompt}>
-                  <BodyThreeText>
+                  <Typography variant="body3" gutterBottom>
                     {i18n.wantToSeeDifferentInformation()}
-                  </BodyThreeText>
+                  </Typography>
                   <a href="/users/personalization_information">
-                    <BodyThreeText>
+                    <Typography variant="body3" gutterBottom>
                       {i18n.customizeForYourClassroom()}
-                    </BodyThreeText>
+                    </Typography>
                   </a>
                 </div>
               </div>
@@ -442,7 +472,9 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           </div>
           <div className={styles.poweredByAITANote}>
             <img src={AIBotTAIcon} alt="" />
-            <BodyFourText>{i18n.poweredByAITA()}</BodyFourText>
+            <Typography variant="body4" gutterBottom>
+              {i18n.poweredByAITA()}
+            </Typography>
           </div>
         </div>
       </>
@@ -463,11 +495,13 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     );
   }
 
+  const showSpinner = isLoading || needsReload;
+
   return (
     <div className={styles.lessonContainer}>
       <div className={styles.lessonMaterialsContainer}>
         {renderHeader()}
-        {isLoading || needsReload ? (
+        {showSpinner ? (
           <div>
             <Spinner size={'large'} />
           </div>
@@ -475,10 +509,11 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           <>
             {renderTeacherResources()}
             {renderStudentResources()}
+            {renderCustomResources()}
           </>
         )}
       </div>
-      {canShowLessonSummaries && renderLessonSummaryContainer()}
+      {!showSpinner && canShowLessonSummaries && renderLessonSummaryContainer()}
     </div>
   );
 };

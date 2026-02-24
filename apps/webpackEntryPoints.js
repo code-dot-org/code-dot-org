@@ -26,6 +26,8 @@ const ALL_APPS = [
 // prettier-ignore
 const CODE_STUDIO_ENTRIES = {
   'admin_users/mass_delete_student_progress': './src/sites/studio/pages/admin_users/mass_delete_student_progress.js',
+  'aidiff_exit_tickets/show': './src/sites/studio/pages/aidiff_exit_tickets/show.js',
+  'aidiff_lesson_hooks/show': './src/sites/studio/pages/aidiff_lesson_hooks/show.js',
   'certificates/batch': './src/sites/studio/pages/certificates/batch.js',
   'certificates/show': './src/sites/studio/pages/certificates/show.js',
   'code-studio': './src/sites/studio/pages/code-studio.js',
@@ -204,7 +206,6 @@ const PEGASUS_ENTRIES = {
   'code.org/public/transformersone': './src/sites/code.org/pages/public/transformersone.js',
   'code.org/public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
   'code.org/views/admins_email_signup_form': './src/sites/code.org/pages/views/admins_email_signup_form.js',
-  'code.org/views/share_privacy': './src/sites/code.org/pages/views/share_privacy.js',
   'code.org/views/theme_common_head_after': './src/sites/code.org/pages/views/theme_common_head_after.js',
   'code.org/views/theme_google_analytics': './src/sites/code.org/pages/views/theme_google_analytics.js',
   'code.org/views/job_board': './src/sites/code.org/pages/views/job_board.js',

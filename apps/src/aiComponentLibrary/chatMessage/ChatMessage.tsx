@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import React, {useEffect} from 'react';
 
 import {sendAnalytics} from '@cdo/apps/aichat/redux';
+import {jsonVideoRehypeMap} from '@cdo/apps/jsonVideo/jsonVideoRehypeMap';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {getStore} from '@cdo/apps/redux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -17,6 +18,7 @@ import {Role} from './types';
 import moduleStyles from './chat-message.module.scss';
 interface ChatMessageProps {
   text: string;
+  postText?: React.ReactNode;
   role: Role;
   customStyles?: {[label: string]: string};
   header?: React.ReactNode;
@@ -34,16 +36,19 @@ const taRehypeMap = {
   pre: (props: React.ComponentPropsWithoutRef<'pre'>) => (
     <CopyableCodeBlock {...props} onCopy={codeCopiedAnalytics(true)} />
   ),
+  ...jsonVideoRehypeMap,
 };
 
 const nonTaRehypeMap = {
   pre: (props: React.ComponentPropsWithoutRef<'pre'>) => (
     <CopyableCodeBlock {...props} onCopy={codeCopiedAnalytics(false)} />
   ),
+  ...jsonVideoRehypeMap,
 };
 
 const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   text,
+  postText,
   role,
   customStyles,
   header,
@@ -133,6 +138,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
                 {showAiTutorVersionActions && (
                   <AiTutorVersionActions files={aiTutorVersionFiles} />
                 )}
+                {postText}
               </div>
             ) : (
               <p>{text}</p>

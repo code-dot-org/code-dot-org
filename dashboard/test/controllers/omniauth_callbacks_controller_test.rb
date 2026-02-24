@@ -10,12 +10,13 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   TEST_CLEVER_STUDENT_DATA = OmniAuth::AuthHash.new(JSON.parse(<<~JSON
     {
       "provider": "clever",
-      "uid": "5966ed736b21538e3c000006",
+      "uid": "65cb9c1570fcf808965b9870",
       "info": {
-        "name": "Elizabeth Smith",
-        "first_name": "Elizabeth",
-        "last_name": "Smith",
-        "user_type": "student"
+        "name": "Maurice Schaefer",
+        "first_name": "Maurice",
+        "last_name": "Schaefer",
+        "email": "#{Faker::Internet.email}",
+        "user_type": "user"
       },
       "credentials": {
         "token": "faketoken123455678",
@@ -24,11 +25,11 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       "extra": {
         "raw_info": {
           "me": {
-            "type": "student",
+            "type": "user",
             "data": {
-              "id": "5966ed736b21538e3c000006",
-              "district": "59484d29ae5dee0001fd3291",
-              "type": "student",
+              "id": "65cb9c1570fcf808965b9870",
+              "district": "54299f6ecc544da87c000070",
+              "type": "user",
               "authorized_by": "district"
             },
             "links": [
@@ -38,43 +39,103 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
               },
               {
                 "rel": "canonical",
-                "uri": "/v2.1/students/5966ed736b21538e3c000006"
+                "uri": "/v3.0/users/65cb9c1570fcf808965b9870"
               },
               {
                 "rel": "district",
-                "uri": "/v2.1/districts/59484d29ae5dee0001fd3291"
+                "uri": "/v3.0/districts/54299f6ecc544da87c000070"
               }
             ]
           },
           "canonical": {
             "data": {
-              "created": "2017-07-13T03:48:03.512Z",
-              "district": "59484d29ae5dee0001fd3291",
-              "dob": "2000-05-21T00:00:00.000Z",
-              "enrollments": [],
-              "gender": "M",
-              "hispanic_ethnicity": "",
-              "last_modified": "2017-11-02T00:49:40.504Z",
+              "created": "2024-02-13T16:43:22.075Z",
+              "district": "54299f6ecc544da87c000070",
+              "email": "#{Faker::Internet.email}",
+              "last_modified": "2024-02-13T16:43:22.075Z",
               "name": {
-                "first": "Elizabeth",
-                "last": "Smith",
-                "middle": ""
+                "first": "Maurice",
+                "last": "Schaefer"
               },
-              "race": "",
-              "school": "5966ed6cf9d478523c000004",
-              "schools": [
-                "5966ed6cf9d478523c000004"
-              ],
-              "sis_id": "202",
-              "id": "5966ed736b21538e3c000006"
+              "roles": {
+                "student": {
+                  "dob": "2012-02-12T00:00:00.000Z",
+                  "enrollments": [],
+                  "gender": "",
+                  "hispanic_ethnicity": "",
+                  "race": "",
+                  "school": "65cb9c1570fcf808965b986d",
+                  "schools": [
+                    "65cb9c1570fcf808965b986d"
+                  ],
+                  "sis_id": "10435651"
+                }
+              },
+              "id": "65cb9c1570fcf808965b9870"
             },
             "links": [
               {
                 "rel": "self",
-                "uri": "/v2.1/students/5966ed736b21538e3c000006"
+                "uri": "/v3.0/users/65cb9c1570fcf808965b9870"
               }
             ]
           }
+        }
+      }
+    }
+  JSON
+  )
+  )
+
+  # This is a sample AuthHash provided by omniauth-classlink plugin
+  TEST_CLASSLINK_AUTH_HASH = OmniAuth::AuthHash.new(JSON.parse(<<~JSON
+    {
+      "provider": "classlink",
+      "uid": "987654321",
+      "info": {
+        "first_name": "Teacher",
+        "last_name": "Test",
+        "district_id": "0001",
+        "classlink_id": "987654321",
+        "external_id": "1234_5678-0000",
+        "role": "Teacher",
+        "email": "classlink_teacher@school.test",
+        "image": "",
+        "name": "Teacher Test"
+      },
+      "credentials": {
+        "token": "faketoken123455678",
+        "expires": false
+      },
+      "extra": {
+        "raw_info": {
+          "user_id": "12345678",
+          "tenant_id": "0001",
+          "state_id": "2",
+          "state_name": "New Jersey",
+          "building_id": "0000",
+          "authentication_type": "2",
+          "display_name": "Teacher Test",
+          "first_name": "Teacher",
+          "last_name": "Test",
+          "email": "classlink_teacher@school.test",
+          "login_id": "1234_5678-0000",
+          "image_path": "",
+          "language_id": "1",
+          "language": "en",
+          "default_time_format": "12",
+          "profile": "Teachers",
+          "profile_id": "11111",
+          "tenant": "Dev: ClassLink Test District",
+          "building": "Global - ClassLink Certification 3",
+          "role": "Teacher",
+          "role_level": "3",
+          "last_access_time": "2026-01-12T17:45:26.324Z",
+          "org_id": [
+            "1234",
+            "1234-2"
+          ],
+          "sourced_id": "1234_5678-0000"
         }
       }
     }
@@ -129,18 +190,13 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test "login: authorizing with unknown clever teacher account" do
-    auth = OmniAuth::AuthHash.new(
-      uid: '1111',
+    auth = generate_auth_user_hash(
       provider: 'clever',
-      info: {
-        nickname: '',
-        name: {'first' => 'Hat', 'last' => 'Cat'},
-        email: 'first_last@clever-teacher.xx',
-        user_type: 'teacher',
-        dob: nil,
-        gender: nil
-      },
+      uid: '1111',
+      email: Faker::Internet.email,
+      user_type: 'user'
     )
+    auth.extra[:raw_info][:canonical] = {data: {roles: {teacher: {legacy_id: '123456'}}}}
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
 
@@ -156,18 +212,13 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test "login: authorizing with unknown clever teacher account needs additional information" do
-    auth = OmniAuth::AuthHash.new(
-      uid: '1111',
+    auth = generate_auth_user_hash(
       provider: 'clever',
-      info: {
-        nickname: '',
-        name: {'first' => 'Hat', 'last' => 'Cat'},
-        email: nil,
-        user_type: 'teacher',
-        dob: nil,
-        gender: nil
-      },
+      uid: '1111',
+      email: nil,
+      user_type: 'user'
     )
+    auth.extra[:raw_info][:canonical] = {data: {roles: {teacher: {legacy_id: '123456'}}}}
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
 
@@ -179,6 +230,29 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_template 'omniauth/redirect'
     partial_user = User.new_from_partial_registration(session)
     assert_empty partial_user.email
+  end
+
+  test "login: authorizing with unknown clever staff account creates teacher" do
+    auth = generate_auth_user_hash(
+      provider: 'clever',
+      uid: '2222',
+      email: Faker::Internet.email,
+      user_type: 'user'
+    )
+    auth.extra[:raw_info][:canonical] = {data: {roles: {staff: {legacy_id: '654321'}}}}
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    assert_does_not_create(User) do
+      get :clever
+    end
+
+    assert_equal 200, @response.status
+    assert_template 'omniauth/redirect'
+    partial_user = User.new_from_partial_registration(session)
+    assert_equal AuthenticationOption::CLEVER, partial_user.provider
+    assert_equal auth.uid, partial_user.uid
+    assert_equal User::TYPE_TEACHER, partial_user.user_type
   end
 
   test "login: authorizing with unknown clever student account creates student" do
@@ -198,21 +272,12 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test "login: authorizing with known clever student account does not alter email or hashed email" do
-    clever_student = create(:student, provider: 'clever', uid: '111133')
+    clever_student = create(:student, provider: 'clever', uid: TEST_CLEVER_STUDENT_DATA.uid)
     student_hashed_email = clever_student.hashed_email
 
-    auth = OmniAuth::AuthHash.new(
-      uid: '111133',
-      provider: 'clever',
-      info: {
-        nickname: '',
-        name: {'first' => 'Hat', 'last' => 'Cat'},
-        email: 'hat.cat@example.com',
-        user_type: 'student',
-        dob: Time.zone.today - 10.years,
-        gender: 'f'
-      },
-    )
+    auth = TEST_CLEVER_STUDENT_DATA.dup
+    auth.info.email = Faker::Internet.email # different email than the one on record
+
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
 
@@ -356,6 +421,31 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
 
     # Then I am signed in
+    user.reload
+    assert_equal user.id, signed_in_user_id
+  end
+
+  test 'clever: signs in user if user is found by legacy_id' do
+    legacy_id = SecureRandom.alphanumeric(10)
+    user = create(:teacher)
+    create(
+      :authentication_option,
+      user: user,
+      credential_type: AuthenticationOption::CLEVER,
+      authentication_id: legacy_id
+    )
+
+    auth = generate_auth_user_hash \
+      provider: AuthenticationOption::CLEVER,
+      uid: 'new-uid'
+    auth.extra[:raw_info][:canonical] = {data: {roles: {teacher: {legacy_id: legacy_id}}}}
+
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    assert_does_not_create(User) do
+      get :clever
+    end
+
     user.reload
     assert_equal user.id, signed_in_user_id
   end
@@ -928,8 +1018,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'login: clever does not silently add authentication_option to migrated student with matching email' do
-    email = 'test@foo.xyz'
-    uid = '654321'
+    email = TEST_CLEVER_STUDENT_DATA.info.email
+    uid =  TEST_CLEVER_STUDENT_DATA.uid
     user = create(:student, email: email)
     auth = generate_auth_user_hash(provider: AuthenticationOption::CLEVER, uid: uid, user_type: User::TYPE_STUDENT, email: email)
     @request.env['omniauth.auth'] = auth
@@ -949,7 +1039,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
     auth = generate_auth_user_hash(
       provider: AuthenticationOption::CLEVER,
-      user_type: User::TYPE_TEACHER,
       email: email
     )
     @request.env['omniauth.auth'] = auth
@@ -1459,6 +1548,88 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal 1, account.authentication_options.count
 
     assert_nil signed_in_user_id
+  end
+
+  describe '#classlink' do
+    context 'when authorizing with unknown user' do
+      subject(:partial_user) {User.new_from_partial_registration(session)}
+      let(:classlink_req) {get :classlink}
+      before do
+        request.env['omniauth.auth'] = TEST_CLASSLINK_AUTH_HASH
+        request.env['omniauth.params'] = {}
+      end
+      it 'does not create new user' do
+        assert_does_not_create(User) do
+          classlink_req
+        end
+      end
+      it 'redirects to omniauth/redirect' do
+        _(classlink_req.status).must_equal 200
+        assert_template 'omniauth/redirect'
+      end
+      it 'creates new user (Teacher) from auth hash' do
+        classlink_req
+        _(partial_user).wont_be_nil
+        _(partial_user.uid).must_equal TEST_CLASSLINK_AUTH_HASH.uid
+        _(partial_user.provider).must_equal AuthenticationOption::CLASSLINK
+        _(partial_user.user_type).must_equal User::TYPE_TEACHER
+      end
+      it 'sets token on new user' do
+        classlink_req
+        _(partial_user.oauth_token).must_equal TEST_CLASSLINK_AUTH_HASH.credentials.token
+        _(partial_user.oauth_token_expiration).must_equal TEST_CLASSLINK_AUTH_HASH.credentials.expires_at
+      end
+    end
+    context 'when authorizing with unknown Student' do
+      subject(:partial_user) {User.new_from_partial_registration(session)}
+      let(:classlink_req) {get :classlink}
+      let(:student_auth_hash) do
+        auth_hash = TEST_CLASSLINK_AUTH_HASH.dup
+        auth_hash.extra.raw_info.role = 'Student'
+        auth_hash
+      end
+      before do
+        request.env['omniauth.auth'] = student_auth_hash
+        request.env['omniauth.params'] = {}
+      end
+
+      it 'creates partial user (Student) from auth hash' do
+        classlink_req
+        _(partial_user).wont_be_nil
+        _(partial_user.uid).must_equal student_auth_hash.uid
+        _(partial_user.provider).must_equal AuthenticationOption::CLASSLINK
+        _(partial_user.user_type).must_equal User::TYPE_STUDENT
+      end
+    end
+    context 'when authorizing with existing user' do
+      subject(:existing_user) {create(:teacher, :classlink_sso_provider, uid: TEST_CLASSLINK_AUTH_HASH.uid)}
+      let(:auth_hash) do
+        auth = TEST_CLASSLINK_AUTH_HASH.dup
+        auth.token = 'new-token'
+        auth.expires_at = 12345
+        auth
+      end
+      let(:classlink_req) {get :classlink}
+      before do
+        request.env['omniauth.auth'] = auth_hash
+        request.env['omniauth.params'] = {}
+        existing_user
+      end
+
+      it 'updates tokens when migrated user is found by credentials' do
+        _(existing_user.primary_contact_info.data_hash[:oauth_token]).wont_equal auth_hash[:credentials][:token]
+        _(existing_user.primary_contact_info.data_hash[:oauth_token_expiration]).wont_equal auth_hash[:credentials][:expires_at]
+        classlink_req
+        existing_user.reload
+        _(existing_user.primary_contact_info.data_hash[:oauth_token]).must_equal auth_hash[:credentials][:token]
+        _(existing_user.primary_contact_info.data_hash[:oauth_token_expiration]).must_equal auth_hash[:credentials][:expires_at]
+      end
+
+      it 'signs in the existing user' do
+        classlink_req
+        _(existing_user.id).must_equal signed_in_user_id
+      end
+    end
   end
 
   describe '#connect_provider' do

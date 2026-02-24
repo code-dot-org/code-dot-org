@@ -1,6 +1,6 @@
 import {Button} from '@code-dot-org/component-library/button';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
-import Typography from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {
   useCallback,
@@ -62,6 +62,7 @@ const PackEntry: React.FunctionComponent<PackEntryProps> = ({
   return (
     <div
       className={classNames(
+        'pack-dialog-entry',
         styles.pack,
         !isSelected && folderIndex % 2 === 1 && styles.packAlternate,
         isSelected && styles.packSelected
@@ -259,9 +260,10 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({
         <div id="pack-dialog" className={styles.packDialog}>
           <div id="hidden-item" tabIndex={0} role="button" />
           <Typography
-            semanticTag="h1"
-            visualAppearance="heading-lg"
             className={styles.heading}
+            component="h1"
+            variant="h3"
+            gutterBottom
           >
             {musicI18n.packDialogTitle()}
           </Typography>
@@ -321,6 +323,7 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({
                 />
               )}
               <Button
+                id="pack-dialog-select-button"
                 ariaLabel={musicI18n.select()}
                 text={musicI18n.select()}
                 type="primary"
