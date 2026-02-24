@@ -1,9 +1,5 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
-import {
-  Heading3,
-  Heading5,
-  BodyTwoText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
@@ -215,13 +211,15 @@ const MultipleSectionsAssigner = ({
         className={moduleStyle.information}
       >
         <div className={moduleStyle.modalHeader}>
-          <Heading3>{i18n.chooseSectionsPrompt({assignmentName})}</Heading3>
+          <Typography variant="h3">
+            {i18n.chooseSectionsPrompt({assignmentName})}
+          </Typography>
         </div>
         <div className={moduleStyle.sectionsDirections}>
-          <BodyTwoText>{sectionDirections}</BodyTwoText>
+          <Typography variant="body2">{sectionDirections}</Typography>
         </div>
         <div className={moduleStyle.sectionList}>
-          <Heading5>{i18n.yourSectionsList()}</Heading5>
+          <Typography variant="h5">{i18n.yourSectionsList()}</Typography>
           <div className={moduleStyle.sectionListOptionsContainer}>
             {sections &&
               sections.map(

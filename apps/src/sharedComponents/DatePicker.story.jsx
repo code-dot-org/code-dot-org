@@ -2,7 +2,7 @@ import {action} from '@storybook/addon-actions';
 import moment from 'moment';
 import React from 'react';
 
-import DatePicker from './date_picker';
+import DatePicker from './DatePicker';
 
 export default {
   component: DatePicker,

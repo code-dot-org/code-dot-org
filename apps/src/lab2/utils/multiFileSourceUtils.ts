@@ -2,6 +2,11 @@ import {ProjectFile, ProjectFolder} from '@cdo/apps/lab2/types';
 
 // Helper functions for operations on multi-file sources in lab2.
 
+// Returns the lowercase file extension from a filename (e.g., "main.py" => "py").
+// If there is no extension, returns an empty string.
+export const getFileExtension = (filename: string): string =>
+  filename.split('.').pop()?.toLowerCase() || '';
+
 // Get the next available file ID based on the existing files in the project.
 export const getNextFileId = (files: ProjectFile[]) => {
   return String(Math.max(0, ...files.map(f => Number(f.id))) + 1);

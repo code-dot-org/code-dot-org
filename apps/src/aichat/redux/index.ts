@@ -12,7 +12,7 @@ export {
   setNewChatSession,
   setShowModalType,
   setStudentChatHistory,
-  setUserHasAichatAccess,
+  setUserHasAichatLabAccess,
   setClientType,
   setViewMode,
   addStagedFile,
