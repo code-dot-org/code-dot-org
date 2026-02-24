@@ -42,7 +42,7 @@ function resolveTarget(target: string | Element): HTMLTextAreaElement {
 
 function initializeCodeMirror6(
   target: string | Element,
-  mode: EditorMode = 'javascript',
+  mode: EditorMode,
   options: Options = {}
 ): CodeMirrorLegacyAdapter {
   const node = resolveTarget(target);

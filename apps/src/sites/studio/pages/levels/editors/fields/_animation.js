@@ -40,6 +40,6 @@ $(document).ready(function () {
   });
 
   if (document.getElementById('level_custom_helper_library')) {
-    initializeCodeMirror6('level_custom_helper_library');
+    initializeCodeMirror6('level_custom_helper_library', 'javascript');
   }
 });
