@@ -42,6 +42,10 @@ function useProjectServiceWorker(
         .register('/weblab2_project_service_worker.js')
         .then(registration => {
           if (registration.active) {
+            console.log(
+              'setting active service worker, navigator.serviceWorker.controller:',
+              navigator.serviceWorker.controller
+            );
             setServiceWorker(registration.active);
           }
           registration.addEventListener('updatefound', () => {

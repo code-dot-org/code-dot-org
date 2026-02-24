@@ -118,6 +118,9 @@ const InnerHTMLPreview = () => {
       } else if (
         event.data.type === ProjectServiceWorkerMessageType.RECEIVED_SOURCE
       ) {
+        console.log(
+          'got received source message from service worker, setting ready to true'
+        );
         setServiceWorkerReady(true);
         setPreviewKey(prevKey => prevKey + 1);
       } else if (
