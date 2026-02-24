@@ -1,4 +1,7 @@
-import {TUTOR_MODE_TO_ANSWER_TYPE} from '@cdo/apps/weblab2/constants';
+import {
+  DEFAULT_AI_TUTOR_MODE,
+  TUTOR_MODE_TO_ANSWER_TYPE,
+} from '@cdo/apps/weblab2/constants';
 import basePrompt from '@cdo/apps/weblab2/prompts/basePrompt.md';
 import askContract from '@cdo/apps/weblab2/prompts/modeContracts/ask.md';
 import buildCSSContract from '@cdo/apps/weblab2/prompts/modeContracts/buildCSS.md';
@@ -108,7 +111,7 @@ const generateFinalModeList = (
 ): AiTutorAnswerType[] => {
   let finalModes = [...modes];
   if (modes.length === 0) {
-    finalModes = TUTOR_MODE_TO_ANSWER_TYPE['engineer'];
+    finalModes = TUTOR_MODE_TO_ANSWER_TYPE[DEFAULT_AI_TUTOR_MODE];
   }
   // Remove any hard-coded refusal modes since we derive the refusal mode
   // based on whether buildJavaScript is included.

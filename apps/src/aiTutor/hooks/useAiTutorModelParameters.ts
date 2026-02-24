@@ -126,11 +126,7 @@ export const useAiTutorModelParameters = (
     } else if (systemPrompt !== undefined) {
       console.log(`🤖: systemPrompt: ${systemPrompt}`);
     }
-  }, [
-    systemPrompt,
-    options?.aiTutorSystemPrompt,
-    options?.aiTutorSystemPromptName,
-  ]);
+  }, [systemPrompt, options?.aiTutorSystemPromptName]);
 
   useEffect(() => {
     // We currently use query params to allow AI model selection but otherwise do not provide any user

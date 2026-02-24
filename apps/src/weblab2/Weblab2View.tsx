@@ -22,6 +22,7 @@ import {useSource} from '../codebridge/hooks/useSource';
 import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
 import {
+  DEFAULT_AI_TUTOR_MODE,
   TUTOR_MODE_TO_ANSWER_TYPE,
   WEBLAB2_EDITABLE_FILE_TYPES,
   WEBLAB2_SUPPORTED_FILE_TYPES,
@@ -133,9 +134,9 @@ const Weblab2View: React.FC<
       answerTypes =
         TUTOR_MODE_TO_ANSWER_TYPE[
           levelProperties.aiTutorMode as keyof typeof TUTOR_MODE_TO_ANSWER_TYPE
-        ] || TUTOR_MODE_TO_ANSWER_TYPE['engineer'];
+        ] || TUTOR_MODE_TO_ANSWER_TYPE[DEFAULT_AI_TUTOR_MODE];
     } else if (!answerTypes) {
-      answerTypes = TUTOR_MODE_TO_ANSWER_TYPE['engineer'];
+      answerTypes = TUTOR_MODE_TO_ANSWER_TYPE[DEFAULT_AI_TUTOR_MODE];
     }
     return generateAiTutorPrompt(answerTypes);
   }, [levelProperties.aiTutorMode, levelProperties.aiTutorPromptAnswerTypes]);

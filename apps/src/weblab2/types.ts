@@ -37,5 +37,3 @@ export type AiTutorMode =
   | 'tutor'
   | 'engineer'
   | 'qa';
-
-export const DEFAULT_AI_TUTOR_MODE = 'engineer';
