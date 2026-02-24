@@ -222,9 +222,9 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
         <div className={style.artifactConfigurationSectionHeader}>
           <h6>Class Sections</h6>
           <Button
-            size="m"
-            type="primary"
-            color="purple"
+            size="s"
+            type="secondary"
+            color="black"
             text="Select All"
             onClick={toggleAll}
           />
