@@ -15,18 +15,3 @@ export enum PredictQuestionType {
   FreeResponse = 'freeResponse',
   MultipleChoice = 'multipleChoice',
 }
-
-export type AiTutorMode =
-  | 'ask'
-  | 'buildCSS'
-  | 'buildHTML'
-  | 'buildJavaScript'
-  | 'debug'
-  | 'documentation'
-  | 'example'
-  | 'explainCode'
-  | 'hint'
-  | 'pseudocode'
-  | 'refusal'
-  | 'refusalJavaScriptSnippets'
-  | 'testCase';

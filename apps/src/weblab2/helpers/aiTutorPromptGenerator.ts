@@ -1,4 +1,3 @@
-import {AiTutorMode} from '@cdo/apps/lab2/levelEditors/types';
 import basePrompt from '@cdo/apps/weblab2/prompts/basePrompt.md';
 import askContract from '@cdo/apps/weblab2/prompts/modeContracts/ask.md';
 import buildCSSContract from '@cdo/apps/weblab2/prompts/modeContracts/buildCSS.md';
@@ -26,7 +25,9 @@ import pseudocodeTrigger from '@cdo/apps/weblab2/prompts/modeTriggers/pseudocode
 import refusalTrigger from '@cdo/apps/weblab2/prompts/modeTriggers/refusal.md';
 import refusalJavaScriptSnippetsTrigger from '@cdo/apps/weblab2/prompts/modeTriggers/refusalJavaScriptSnippets.md';
 import testCaseTrigger from '@cdo/apps/weblab2/prompts/modeTriggers/testCase.md';
-import preReplyCheck from '@cdo/apps/weblab2/prompts/preReplyCheck.md';
+import preReplyCheckAllowJs from '@cdo/apps/weblab2/prompts/preReplyCheckAllowJs.md';
+import preReplyCheckNoJs from '@cdo/apps/weblab2/prompts/preReplyCheckNoJs.md';
+import {AiTutorMode} from '@cdo/apps/weblab2/types';
 
 const MODE_TRIGGERS: Record<AiTutorMode, string> = {
   ask: askTrigger,
@@ -89,10 +90,17 @@ const MODE_GROUPS: ModeGroup[] = [
   },
 ];
 
-const buildModeRouterSection = (modes: AiTutorMode[]): string => {
-  const modeSet = new Set(modes);
+const buildModeRouterSection = (
+  modes: AiTutorMode[],
+  allowJs: boolean
+): string => {
+  // If the mode list includes buildJavaScript, we will use the refusal mode that allows JavaScript,
+  // otherwise we block JavaScript from being generated. The mode list should not include a refusal mode, since those
+  // are not part of the level edit page.
+  const refusalMode = allowJs ? 'refusal' : 'refusalJavaScriptSnippets';
+  modes.push(refusalMode);
   return MODE_GROUPS.flatMap(group => {
-    const groupModes = group.modes.filter(mode => modeSet.has(mode));
+    const groupModes = group.modes.filter(mode => modes.includes(mode));
     if (groupModes.length === 0) return [];
     return [
       group.heading,
@@ -103,6 +111,7 @@ const buildModeRouterSection = (modes: AiTutorMode[]): string => {
 
 export const generateAiTutorPrompt = (modes: AiTutorMode[]): string => {
   const contracts = modes.map(mode => MODE_CONTRACTS[mode].trim()).join('\n\n');
+  const allowJs = modes.includes('buildJavaScript');
 
   return [
     basePrompt.trim(),
@@ -112,13 +121,13 @@ export const generateAiTutorPrompt = (modes: AiTutorMode[]): string => {
     '## Mode Router (deterministic)',
     'Choose exactly one mode per reply using these rules:',
     '',
-    buildModeRouterSection(modes),
+    buildModeRouterSection(modes, allowJs),
     '',
     '--------',
     '## Mode Answer Contracts',
     '',
     contracts,
     '',
-    preReplyCheck.trim(),
+    (allowJs ? preReplyCheckAllowJs : preReplyCheckNoJs).trim(),
   ].join('\n');
 };

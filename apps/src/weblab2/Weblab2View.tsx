@@ -22,15 +22,16 @@ import {useSource} from '../codebridge/hooks/useSource';
 import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
 import {
+  LEGACY_MODE_TO_ANSWER_TYPE,
   WEBLAB2_EDITABLE_FILE_TYPES,
   WEBLAB2_SUPPORTED_FILE_TYPES,
 } from './constants';
 import {AiTutorWebLab2ContextHelper} from './helpers/aiTutorContextHelper';
-import {getPromptNameFromMode} from './helpers/aiTutorHelper';
+import {generateAiTutorPrompt} from './helpers/aiTutorPromptGenerator';
 import {useAiTutorResponseSchemaSettings} from './hooks/useAiTutorResponseSchemaSettings';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
-import {Weblab2LevelProperties, ViewMode} from './types';
+import {Weblab2LevelProperties, ViewMode, AiTutorMode} from './types';
 import {setViewMode} from './weblab2Redux';
 
 import moduleStyles from './styles/weblab2-view.module.scss';
@@ -122,6 +123,24 @@ const Weblab2View: React.FC<
     });
   }, [source, levelProperties.longInstructions, hasEdited, hasRun]);
 
+  const systemPrompt = useMemo(() => {
+    let answerTypes: AiTutorMode[] | undefined =
+      levelProperties.aiTutorPromptAnswerTypes;
+    if (
+      !levelProperties.aiTutorPromptAnswerTypes &&
+      levelProperties.aiTutorMode
+    ) {
+      answerTypes =
+        LEGACY_MODE_TO_ANSWER_TYPE[
+          levelProperties.aiTutorMode as keyof typeof LEGACY_MODE_TO_ANSWER_TYPE
+        ] || LEGACY_MODE_TO_ANSWER_TYPE['engineer'];
+    } else if (!answerTypes) {
+      answerTypes = LEGACY_MODE_TO_ANSWER_TYPE['engineer'];
+    }
+    console.log({answerTypes});
+    return generateAiTutorPrompt(answerTypes);
+  }, [levelProperties.aiTutorMode, levelProperties.aiTutorPromptAnswerTypes]);
+
   // Since there's no run button in Weblab2, set it to true by default
   // to enable the Submit button on edit on submittable levels.
   // Set back to false on unmount in case we switch to a different level type.
@@ -163,9 +182,7 @@ const Weblab2View: React.FC<
           aiTutorMultimodalEnabled={true}
           aiTutorChatButtonData={[]}
           aiTutorContextHelper={aiTutorHelper}
-          aiTutorSystemPromptName={getPromptNameFromMode(
-            levelProperties.aiTutorMode
-          )}
+          aiTutorSystemPrompt={systemPrompt}
           aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
           secondaryBackpackAppNames={secondaryBackpackAppNames}
         />

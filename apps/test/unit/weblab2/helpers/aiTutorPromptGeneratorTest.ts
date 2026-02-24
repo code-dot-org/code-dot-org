@@ -1,4 +1,3 @@
-import {AiTutorMode} from '@cdo/apps/lab2/levelEditors/types';
 import {generateAiTutorPrompt} from '@cdo/apps/weblab2/helpers/aiTutorPromptGenerator';
 import basePrompt from '@cdo/apps/weblab2/prompts/basePrompt.md';
 import askContract from '@cdo/apps/weblab2/prompts/modeContracts/ask.md';
@@ -8,6 +7,7 @@ import askTrigger from '@cdo/apps/weblab2/prompts/modeTriggers/ask.md';
 import buildCSSTrigger from '@cdo/apps/weblab2/prompts/modeTriggers/buildCSS.md';
 import buildHTMLTrigger from '@cdo/apps/weblab2/prompts/modeTriggers/buildHTML.md';
 import preReplyCheck from '@cdo/apps/weblab2/prompts/preReplyCheck.md';
+import {AiTutorMode} from '@cdo/apps/weblab2/types';
 
 const ALL_MODES: AiTutorMode[] = [
   'buildHTML',

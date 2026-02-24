@@ -2,7 +2,8 @@ import Toggle from '@code-dot-org/component-library/toggle';
 import {Typography} from '@mui/material';
 import React, {useState} from 'react';
 
-import {AiTutorMode} from '../types';
+import {LEGACY_MODE_TO_ANSWER_TYPE} from '@cdo/apps/weblab2/constants';
+import {AiTutorMode, LegacyMode} from '@cdo/apps/weblab2/types';
 
 const TOGGLEABLE_TUTOR_MODES: AiTutorMode[] = [
   'ask',
@@ -18,110 +19,10 @@ const TOGGLEABLE_TUTOR_MODES: AiTutorMode[] = [
   'testCase',
 ];
 
-type LegacyMode =
-  | 'suggest'
-  | 'outline'
-  | 'guide'
-  | 'produce'
-  | 'designer'
-  | 'tutor'
-  | 'engineer'
-  | 'qa';
-
 interface EditAiTutorPromptSettingsProps {
   answerTypes?: AiTutorMode[];
   legacyMode?: LegacyMode;
 }
-
-const legacyModeToAnswerTypeMap: Record<LegacyMode, AiTutorMode[]> = {
-  suggest: [
-    'buildHTML',
-    'buildCSS',
-    'ask',
-    'hint',
-    'debug',
-    'example',
-    'explainCode',
-    'documentation',
-    'pseudocode',
-  ],
-  // TODO: outline and guide may need to be adjusted
-  outline: [
-    'buildHTML',
-    'buildCSS',
-    'ask',
-    'hint',
-    'debug',
-    'example',
-    'explainCode',
-    'documentation',
-  ],
-  guide: [
-    'buildHTML',
-    'buildCSS',
-    'ask',
-    'hint',
-    'debug',
-    'example',
-    'explainCode',
-    'documentation',
-  ],
-  produce: [
-    'buildHTML',
-    'buildCSS',
-    'ask',
-    'hint',
-    'debug',
-    'example',
-    'explainCode',
-    'documentation',
-  ],
-  designer: [
-    'buildHTML',
-    'buildCSS',
-    'ask',
-    'hint',
-    'debug',
-    'example',
-    'explainCode',
-    'documentation',
-  ],
-  tutor: [
-    'buildHTML',
-    'buildCSS',
-    'ask',
-    'hint',
-    'debug',
-    'example',
-    'explainCode',
-    'documentation',
-    'pseudocode',
-  ],
-  engineer: [
-    'buildHTML',
-    'buildCSS',
-    'buildJavaScript',
-    'ask',
-    'hint',
-    'debug',
-    'example',
-    'explainCode',
-    'documentation',
-    'pseudocode',
-  ],
-  qa: [
-    'buildHTML',
-    'buildCSS',
-    'ask',
-    'hint',
-    'debug',
-    'example',
-    'explainCode',
-    'documentation',
-    'pseudocode',
-    'testCase',
-  ],
-};
 
 const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
   answerTypes,
@@ -131,7 +32,7 @@ const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
     if (answerTypes && answerTypes.length > 0) {
       return new Set(answerTypes);
     } else if (legacyMode) {
-      return new Set(legacyModeToAnswerTypeMap[legacyMode]);
+      return new Set(LEGACY_MODE_TO_ANSWER_TYPE[legacyMode]);
     } else {
       return new Set();
     }
