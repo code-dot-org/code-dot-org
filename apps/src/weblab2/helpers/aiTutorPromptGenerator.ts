@@ -98,7 +98,7 @@ const buildModeRouterSection = (
   // otherwise we block JavaScript from being generated. The mode list should not include a refusal mode, since those
   // are not part of the level edit page.
   const refusalMode = allowJs ? 'refusal' : 'refusalJavaScriptSnippets';
-  modes.push(refusalMode);
+  modes = [...modes, refusalMode];
   return MODE_GROUPS.flatMap(group => {
     const groupModes = group.modes.filter(mode => modes.includes(mode));
     if (groupModes.length === 0) return [];
