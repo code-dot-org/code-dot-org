@@ -15,6 +15,6 @@
     %p
       * Note that if this checkbox is checked and the 'Enable Widget View' checkbox is unchecked, there is no effect on the level.
 
-  - if @level.is_a? Weblab2
+  - if @level.is_a?(Weblab2) && @widget2_ids.present?
     %h2 Widget2
     = f.select :widget2, options_for_select(@widget2_ids), {include_blank: true}
