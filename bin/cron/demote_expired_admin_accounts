@@ -1,0 +1,51 @@
+#!/usr/bin/env ruby
+require 'optparse'
+require 'date'
+# delaying expensive requires until after Option Parser
+
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+options = {}
+OptionParser.new do |opts|
+  opts.banner = <<~BANNER
+    Usage: #{File.basename(__FILE__)} [options]
+
+    This script locates accounts with admin privileges that have not been logged
+    into for more than 90 days and revokes admin privileges.
+
+    Options:
+  BANNER
+
+  opts.on('--dry-run', 'Report expected results without modifying anything') do |dry_run|
+    options[:dry_run] = dry_run
+  end
+
+  opts.on('-h', '--help', 'Print this help message') do
+    puts opts
+    exit
+  end
+end.parse!
+
+require_relative '../../dashboard/config/environment'
+require 'cdo/chat_client'
+
+begin
+  # Calculate the date 90 days ago
+  cutoff_date = 90.days.ago.to_date
+  expired_admins = User.where(admin: true).where('last_sign_in_at < ?', cutoff_date)
+
+  if options[:dry_run]
+    puts "Dry run: Found #{expired_admins.count} admin accounts eligible for privilege revocation."
+    expired_admins.each do |user|
+      puts "User ID: #{user.id}, Email: #{user.email}, Last Sign In: #{user.last_sign_in_at}"
+    end
+  else
+    # Revoke admin privileges
+    revoked_count = expired_admins.update_all(admin: false)
+    ChatClient.message('cron-daily', "Revoked admin privileges for #{revoked_count} accounts due to lack of use.")
+  end
+rescue => exception
+  ChatClient.message('cron-daily', "Error executing #{File.basename(__FILE__)}: #{exception.message}", color: 'red')
+  raise exception
+end

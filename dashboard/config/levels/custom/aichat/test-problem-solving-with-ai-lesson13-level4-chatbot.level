@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-03-26T22:16:32.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Refining Your Prompt\r\n\r\nUse AI Chat to help explore, refine, and develop your future prediction.\r\n\r\n### Do This:\r\n\r\n1. Refine your initial prompt to increase accuracy and reduce bias. Use the tips below to help you. Remember to upload all of your saved artifacts again.\r\n2. Send your prompt to AI Chat and read its response.\r\n3. Repeat this process several times until you are satisfied with AI's prediction.\r\n\r\n---\r\n\r\n**Tips for Better Results**\r\n- Ask the AI to predict based on current trends, research, or diverse perspectives.\r\n- Don't just accept the first answer - challenge it or ask for alternatives.\r\n- Want to make it more inclusive? Ask: _\"How might this affect different communities?\"_",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Purpose: Help students explore and refine future predictions.\n\nYou are helping a student generate and refine a future prediction. Respond to their prompts with relevant ideas and reasoning, but do not write long paragraphs unless asked. Wait for the student to guide the direction, tone, or detail level of your responses. Encourage the student to give you more context, ask clarifying questions, or request a specific style if needed.\n\nEncourage student agency and responsibility\n\nKeep AI responses from becoming overly long by default\n\nLet students “hit a wall” productively so they can learn to revise prompts",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "bubble_choice_description": "Use AI Chat to do some market research for your product or app. ",
+    "display_name": "Marketing Research Chat",
+    "thumbnail_url": "https://images.code.org/0c2e3bb0e1a6a1b4ee36a79baa8f9df5-analytics.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-26T22:16:32.898+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson13-level1\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson13-level1\"},{\"changed_at\":\"2025-03-26 22:17:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-26 22:26:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-26 22:30:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-26 22:35:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-26 22:36:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-27 16:57:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

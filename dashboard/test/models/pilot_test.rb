@@ -10,7 +10,7 @@ class PilotTest < ActiveSupport::TestCase
     ]
 
     VALID_NAMES.each do |name|
-      pilot = build :pilot, name: name
+      pilot = build(:pilot, name: name)
       assert pilot.valid?
     end
   end
@@ -24,25 +24,25 @@ class PilotTest < ActiveSupport::TestCase
     ]
 
     INVALID_NAMES.each do |name|
-      pilot = build :pilot, name: name, display_name: 'A Pilot'
+      pilot = build(:pilot, name: name, display_name: 'A Pilot')
       refute pilot.valid?
     end
   end
 
   test 'pilot without display name is invalid' do
-    pilot = build :pilot, display_name: nil
+    pilot = build(:pilot, display_name: nil)
     refute pilot.valid?
   end
 
   test 'pilot with empty display name is invalid' do
-    pilot = build :pilot, display_name: ''
+    pilot = build(:pilot, display_name: '')
     refute pilot.valid?
   end
 
   test 'cannot create a pilot with the same name as one that already exists' do
-    create :pilot, name: 'pilot-a'
+    create(:pilot, name: 'pilot-a')
     assert_raises ActiveRecord::RecordInvalid do
-      create :pilot, name: 'pilot-a'
+      create(:pilot, name: 'pilot-a')
     end
   end
 end

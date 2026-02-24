@@ -1,0 +1,76 @@
+import {RenameFileFunction} from '@codebridge/codebridgeContext/types';
+import {ProjectFile, FileId} from '@codebridge/types';
+import {validateFileNameForModal} from '@codebridge/utils';
+
+import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {
+  DialogType,
+  DialogControlInterface,
+  extractUserInput,
+} from '@cdo/apps/lab2/views/dialogs';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+
+type RenameNewFilePromptArgsType = {
+  fileId: FileId;
+  dialogControl: Pick<DialogControlInterface, 'showDialog'>;
+  renameFile: RenameFileFunction;
+  projectFiles: MultiFileSource['files'];
+  isStartMode: boolean;
+  validationFile: ProjectFile | undefined;
+  validFileTypes?: string[];
+  sendLab2AnalyticsEvent: (
+    eventName: string,
+    payload?: Record<string, string>
+  ) => void;
+};
+
+export const openRenameFilePrompt = async ({
+  fileId,
+  dialogControl,
+  renameFile,
+  projectFiles,
+  sendLab2AnalyticsEvent,
+  isStartMode,
+  validationFile,
+  validFileTypes,
+}: RenameNewFilePromptArgsType) => {
+  const file = projectFiles[fileId];
+  const results = await dialogControl?.showDialog({
+    type: DialogType.GenericPrompt,
+    title: 'Rename file',
+    message: 'Give your file a new name.',
+    textFieldProps: {
+      label: 'New file name',
+    },
+    confirmButtonText: 'Rename file',
+    value: file.name,
+    validateInput: (newName: string) => {
+      if (!newName.length) {
+        return;
+      }
+      if (newName === file.name) {
+        return;
+      }
+
+      return validateFileNameForModal({
+        fileName: newName,
+        folderId: file.folderId,
+        projectFiles,
+        isStartMode,
+        validationFile,
+        validFileTypes,
+      });
+    },
+    useModal: true,
+  });
+
+  if (results.type !== 'confirm') {
+    return;
+  }
+
+  const newName = extractUserInput(results);
+  renameFile(fileId, newName);
+  sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_RENAME_FILE, {
+    fileType: newName.split('.').pop()?.toLowerCase() || '',
+  });
+};

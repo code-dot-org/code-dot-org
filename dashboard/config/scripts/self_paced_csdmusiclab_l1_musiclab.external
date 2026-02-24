@@ -1,0 +1,11 @@
+name 'self-paced-CSDMusicLab-L1-musiclab'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Introduction to Music Lab
+
+## What can students do in Music Lab?
+
+## Music Lab Components
+MARKDOWN

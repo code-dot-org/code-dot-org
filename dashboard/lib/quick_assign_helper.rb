@@ -7,11 +7,13 @@ module QuickAssignHelper
     assignable_middle_offerings = assignable_offerings.filter(&:middle_school_level?)
     assignable_high_offerings = assignable_offerings.filter(&:high_school_level?)
     assignable_hoc_offerings = assignable_offerings.filter(&:hoc?)
+    assignable_hoai_offerings = assignable_offerings.filter(&:hoai?)
 
     offerings[:elementary] = group_grade_level_offerings(assignable_elementary_offerings, user, locale)
     offerings[:middle] = group_grade_level_offerings(assignable_middle_offerings, user, locale)
     offerings[:high] = group_grade_level_offerings(assignable_high_offerings, user, locale)
     offerings[:hoc] = group_hoc_and_pl_offerings(assignable_hoc_offerings, user, locale)
+    offerings[:hoai] = group_hoc_and_pl_offerings(assignable_hoai_offerings, user, locale)
 
     unless participant_type == Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
       # Courses with a participant_audience of student are shown in other places

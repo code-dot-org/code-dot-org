@@ -4,12 +4,13 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "curriculum_umbrella": "CSD Self Paced PL",
+      "content_area": "self_paced_pl_6_8",
+      "curriculum_umbrella": "Self-paced PL - CSD",
       "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-02-13 20:05:42 UTC",
+    "serialized_at": "2025-01-22 18:59:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

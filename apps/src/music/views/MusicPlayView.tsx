@@ -1,13 +1,15 @@
-import React, {memo, useCallback, useMemo} from 'react';
+import {Button} from '@code-dot-org/component-library/button';
+import {Typography} from '@mui/material';
+import React, {memo, useCallback, useContext, useMemo} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {Button} from '@cdo/apps/componentLibrary/button';
-import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import commonI18n from '@cdo/locale';
 import musicPlayViewLogo from '@cdo/static/music/music-play-view.png';
 
+import {AnalyticsContext} from '../context';
 import musicI18n from '../locale';
 
 import ProgressSlider from './ProgressSlider';
@@ -16,10 +18,14 @@ import moduleStyles from './music-play-view.module.scss';
 
 interface MusicPlayViewProps {
   setPlaying: (value: boolean) => void;
+  projectName?: string;
+  overrideProjectManager?: ProjectManager;
 }
 
 const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
   setPlaying,
+  projectName,
+  overrideProjectManager,
 }) => {
   const isPlaying = useAppSelector(state => state.music.isPlaying);
   const percentPlayed = useAppSelector(state => {
@@ -29,11 +35,11 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
       : ((currentPlayheadPosition - 1) / (lastMeasure - 1)) * 100;
   });
 
-  const projectName = useAppSelector(state => state.lab.channel?.name);
   // Disable play button until sound is loaded.
   const isLoading = useAppSelector(
     state => state.music.soundLoadingProgress < 1
   );
+  const analyticsReporter = useContext(AnalyticsContext);
 
   const shareData = useMemo(
     () => ({
@@ -55,20 +61,25 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
     );
   }, [canShareInternal, shareData]);
 
-  const projectManager = Lab2Registry.getInstance().getProjectManager();
+  const projectManager =
+    overrideProjectManager || Lab2Registry.getInstance().getProjectManager();
+
   const onShareProject = useCallback(() => {
+    analyticsReporter?.onButtonClicked('shareFromShareView');
     navigator?.share(shareData);
-  }, [shareData]);
+  }, [shareData, analyticsReporter]);
   const onViewCode = useCallback(() => {
+    analyticsReporter?.onButtonClicked('viewCodeFromShareView');
     projectManager?.redirectToView();
-  }, [projectManager]);
+  }, [projectManager, analyticsReporter]);
   const onRemix = useCallback(() => {
+    analyticsReporter?.onButtonClicked('remixFromShareView');
     if (projectManager) {
       projectManager.flushSave().then(() => {
         projectManager.redirectToRemix();
       });
     }
-  }, [projectManager]);
+  }, [projectManager, analyticsReporter]);
 
   return (
     <div className={moduleStyles.container}>
@@ -80,10 +91,20 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
         />
         <div className={moduleStyles.card}>
           <div className={moduleStyles.infoSection}>
-            <Heading2 className={moduleStyles.infoText}>{projectName}</Heading2>
-            <BodyTwoText className={moduleStyles.infoText}>
+            <Typography
+              className={moduleStyles.infoText}
+              variant="h2"
+              gutterBottom
+            >
+              {projectName}
+            </Typography>
+            <Typography
+              className={moduleStyles.infoText}
+              variant="body2"
+              gutterBottom
+            >
               {musicI18n.builtWithMusicLab()}
-            </BodyTwoText>
+            </Typography>
           </div>
           <div className={moduleStyles.playSection}>
             <Button
@@ -106,7 +127,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
             <Button
               text={commonI18n.viewCode()}
               type="tertiary"
-              color="white"
+              color="black"
               size="xs"
               iconLeft={{iconStyle: 'solid', iconName: 'code'}}
               onClick={onViewCode}
@@ -115,7 +136,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
               <Button
                 text={musicI18n.share()}
                 type="tertiary"
-                color="white"
+                color="black"
                 size="xs"
                 iconLeft={{
                   iconStyle: 'solid',
@@ -127,7 +148,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
             <Button
               text={commonI18n.makeMyOwn()}
               type="tertiary"
-              color="white"
+              color="black"
               size="xs"
               iconLeft={{iconStyle: 'regular', iconName: 'pen-to-square'}}
               onClick={onRemix}

@@ -34,12 +34,7 @@ module Honeybadger
   # stdout - captured stdout from the command
   # stderr - captured stderr from the command
   def self.notify_command_error(command, status, stdout, stderr)
-    return if stderr.to_s.empty? && status == 0
-
-    # Temporarily ignore this high-volume deprecation warning, until we can
-    # implement alternatives to the deprecated functionality.
-    # TODO: eliminate this warning, and remove this exception
-    return if stderr.start_with?("WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.")
+    return if status == 0
 
     error_message, backtrace = parse_exception_dump stderr
 
@@ -62,7 +57,7 @@ module Honeybadger
 
   # notify_cronjob_error - logs a Honeybadger error in the Cronjobs project
   # See https://docs.honeybadger.io/ruby/gem-reference/api.html#honeybadger-notify-error-opts
-  def self.notify_cronjob_error(opts)
+  def self.notify_cronjob_error(...)
     # Configure and start Honeybadger
     Honeybadger.configure do |config|
       config.env = ENV.fetch('RACK_ENV', nil)
@@ -73,7 +68,7 @@ module Honeybadger
       config.report_data = true
     end
 
-    result = Honeybadger.notify(opts)
+    result = Honeybadger.notify(...)
     Honeybadger.flush # these events are sometimes getting swallowed without this
     result
   end

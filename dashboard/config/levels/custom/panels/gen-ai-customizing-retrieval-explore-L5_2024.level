@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2024-06-28T19:56:04.000Z",
   "level_num": "custom",
@@ -8,32 +9,32 @@
     "encrypted": "false",
     "panels": [
       {
-        "text": "You can use the retrieval tab to add information to the chatbot that is outside of its training data.",
-        "imageUrl": "https://images.code.org/fc8bc8f34e8d3d12a5b9a80d03a354fb-navigate_to_retrieval_tab-chatbot_retrieval.png",
+        "text": "# Retrieval\nYou can use the retrieval tab to add information to the chatbot that is outside of its training data.",
+        "imageUrl": "https://images.code.org/539583c476601bf237708048e8e82b20-Slide23.PNG",
         "key": "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c",
         "layout": "text-top-left"
       },
       {
-        "text": "Press the \"Add\" button when you're ready to add your retrieval information.",
-        "imageUrl": "https://images.code.org/c9948837ddd6ad53658d62b0f9dee36f-add_retrieval_info-chatbot_retrieval.png",
+        "text": "# Retrieval\nPress the \"Add\" button when you're ready to add your retrieval information.",
+        "imageUrl": "https://images.code.org/b1ad0c98584885fc9dde418013ddb9e7-Slide24.PNG",
         "key": "gen-ai-customizing-retrieval-explore-L5-eb123342-6d4c-4001-90b5-0a42512701bb"
       },
       {
-        "text": "You can remove retrieval information by pressing the X next to the prompt you want to remove.",
-        "imageUrl": "https://images.code.org/1afc3ce1c0bea15cc881cb40b7b6db23-remove_retrieval_info-chatbot_retrieval.png",
+        "text": "# Retrieval\nYou can remove retrieval information by pressing the X next to the prompt you want to remove.",
+        "imageUrl": "https://images.code.org/70aa8e59e462253e3e9fe67f45701e31-Slide25.PNG",
         "key": "gen-ai-customizing-retrieval-explore-L5-9f0eb8c0-3401-4c95-be80-86d28aba6526",
         "layout": "text-bottom-right"
       },
       {
-        "text": "Press the \"Update\" button when you're ready to add the retrieval information to the chatbot.",
-        "imageUrl": "https://images.code.org/ccb2966a5062a86d1aafd5c0b4b561c3-updating_retrieval_info-chatbot_retrieval.png",
+        "text": "# Retrieval\nPress the \"Update\" button when you're ready to add the retrieval information to the chatbot.",
+        "imageUrl": "https://images.code.org/e288d97d2026bfa47fb0d5149ce2d564-Slide26.PNG",
         "key": "gen-ai-customizing-retrieval-explore-L5-90ef177f-49e5-4136-8115-1b61df0cb147",
-        "layout": "text-bottom-left"
+        "layout": "text-top-left"
       }
     ],
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "offer_browser_tts": "true"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-06-28T19:56:04.622+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-explore-L5\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-explore-L5\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-06-28T19:56:04.622+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-explore-L5\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-explore-L5\"},{\"changed_at\":\"2024-10-27 19:51:11 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-01-10 22:03:33 +0000\",\"changed\":[\"panels\",\"offer_browser_tts\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Panels>

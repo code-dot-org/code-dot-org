@@ -15,7 +15,7 @@ Show Code 20	20-hour	2_13	Maze	show_code_explanation	#show-code-header	{"positio
 Show Code HoC	Hour of Code	2_13	Maze	show_code_explanation	#show-code-header	{"position": {"my": "center right", "at": "center left"}}
 Instructions 20	20-hour	2_14	Maze	instructions_repeat_explanation	#prompt	{"position": {"my": "bottom left", "at": "top center"}}
 Instructions HoC	Hour of Code	2_14	Maze	instructions_repeat_explanation	#prompt	{"position": {"my": "bottom left", "at": "top center"}}
-Category 20	20-hour	2_1	Artist3	category_explanation	.blocklyTreeRoot	{"position": {"my": "center left", "at": "center right"}}
+Category 20	20-hour	2_1	Artist3	category_explanation	.blocklyToolboxCategoryGroup	{"position": {"my": "center left", "at": "center right"}}
 Jigsaw Click	jigsaw	1	Jigsaw	jigsaw_click	[block-id='1']	{"position": {"my": "top left", "at": "center right"}}
 Drag Blocks HoC	hourofcode	2_2	Maze	drag_blocks	[block-id='1']	{"position": {"my": "top left", "at": "bottom right", "adjust": {"x": 22, "y":60}}, "style": { "classes": "no-tip" }}
 Drag Blocks HoC	hourofcode	2_2	Maze	drag_blocks	[data-id='moveForward']	{"position": {"my": "top left", "at": "bottom right", "adjust": {"x": 22, "y":60}}, "style": { "classes": "no-tip" }}
@@ -53,16 +53,3 @@ Gumball_add_score	gumball	gumball_sound_and_points	Studio	playlab_add_score	[blo
 Gumball_add_score	gumball	gumball_sound_and_points	Studio	playlab_add_score	[data-id='whenActorTouches']	{"position": {"my": "top left", "at": "bottom left", "adjust": {"x": 22, "y":4}} }
 Gumball_add_blocks	gumball	gumball_warn_food_fight	Studio	playlab_add_blocks	[block-id='7']	{"position": {"my": "top left", "at": "bottom left", "adjust": {"x": 22, "y":4}} }
 Gumball_add_blocks	gumball	gumball_warn_food_fight	Studio	playlab_add_blocks	[data-id='whenRun']	{"position": {"my": "top left", "at": "bottom left", "adjust": {"x": 22, "y":4}} }
-Iceage_drag_say	iceage	iceage_hello1	Studio	playlab_drag_say	[block-id='2']	{"position": {"my": "top left", "at": "bottom left", "adjust": {"x": 22, "y":4}} }
-Iceage_drag_say	iceage	iceage_hello1	Studio	playlab_drag_say	[data-id='whenRun']	{"position": {"my": "top left", "at": "bottom left", "adjust": {"x": 22, "y":4}} }
-Icage_use_twice	iceage	iceage_hello2	Studio	playlab_use_twice	[block-id='1']	{"position": {"my": "top left", "at": "bottom left", "adjust": {"x": 62, "y":0}} }
-Icage_use_twice	iceage	iceage_hello2	Studio	playlab_use_twice	[data-id='actorSay']	{"position": {"my": "top left", "at": "bottom left", "adjust": {"x": 62, "y":0}} }
-Iceage_play_sound	iceage	iceage_move_to_actor	Studio	playlab_play_sound	[block-id='7']	{"position": {"my": "top left", "at": "bottom left", "adjust": {"x": 22, "y":4}} }
-Iceage_play_sound	iceage	iceage_move_to_actor	Studio	playlab_play_sound	[data-id='whenActorTouches']	{"position": {"my": "top left", "at": "bottom left", "adjust": {"x": 22, "y":4}} }
-Iceage_arrow_keys	iceage	iceage_move_events	Studio	arrows_move_actor	#rightButton	{"position": {"my": "bottom left", "at": "top middle", "adjust": {"x": 0, "y":4}} }
-Iceage_add_move	iceage	iceage_repeat	Studio	playlab_add_move	[block-id='5']	{"position": {"my": "top left", "at": "top left", "adjust": {"x": 60, "y":40}} }
-Iceage_add_move	iceage	iceage_repeat	Studio	playlab_add_move	[data-id='repeatForever']	{"position": {"my": "top left", "at": "top left", "adjust": {"x": 60, "y":40}} }
-Iceage_add_score	iceage	iceage_sound_and_points	Studio	playlab_add_score	[block-id='3']	{"position": {"my": "top left", "at": "bottom left", "adjust": {"x": 22, "y":4}} }
-Iceage_add_score	iceage	iceage_sound_and_points	Studio	playlab_add_score	[data-id='whenActorTouches']	{"position": {"my": "top left", "at": "bottom left", "adjust": {"x": 22, "y":4}} }
-Iceage_add_blocks	iceage	iceage_warn_ice_age	Studio	playlab_add_blocks	[block-id='7']	{"position": {"my": "top left", "at": "bottom left", "adjust": {"x": 22, "y":4}} }
-Iceage_add_blocks	iceage	iceage_warn_ice_age	Studio	playlab_add_blocks	[data-id='whenRun']	{"position": {"my": "top left", "at": "bottom left", "adjust": {"x": 22, "y":4}} }

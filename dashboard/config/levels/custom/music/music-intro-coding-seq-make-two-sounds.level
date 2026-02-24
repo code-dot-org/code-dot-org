@@ -1,0 +1,84 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2024-08-27T20:58:06.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "####<i class=\"fa-solid fa-sparkles\"></i> Make Music!\r\n\r\n1. Start with connecting one sound under [when run](#clickable=when-run-block).\r\n2. Then drag another sound block under the first one.\r\n3. Add as many as you like!\r\n4. Press [Run](#clickable=run-button) to hear your song.\r\n",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when_run_simple2",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together"
+          ]
+        },
+        "type": "flyout"
+      },
+      "library": "launch2024",
+      "packId": "default"
+    },
+    "validations": [
+      {
+        "key": "music-intro-coding-seq-make-two-sounds_b4579bcc-4a19-41cf-b29b-494d2d39f0b0",
+        "message": "Nice work! You played a melody!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "key": "music-intro-coding-seq-make-two-sounds_34960f4b-901d-4035-8b8c-4f673a784af4",
+        "message": "Nice work. You played a sound! Now play two sounds.",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 1
+          }
+        ],
+        "callout": "play-sound-block---play-sound-block-workspace"
+      },
+      {
+        "key": "music-intro-coding-seq-make-two-sounds_e17cc797-9774-4906-a4a4-fcdd00b184da",
+        "message": "You found the Run button! Now, drag the [play](#clickable=play-sound-block) block and connect it under [when run](#clickable=when-run-block). ",
+        "next": false,
+        "conditions": [
+
+        ],
+        "callout": "play-sound-block---when-run-block"
+      }
+    ],
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2024-08-29 20:25:56 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-29 20:27:24 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-29 20:30:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-29 20:33:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-29 20:37:05 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-10-08 18:09:46 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-08 18:10:43 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-08 18:11:26 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-08 18:11:55 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-08 18:21:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-08 18:23:04 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-08 21:22:08 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 16:40:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-08 23:56:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-09 00:10:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-13 18:41:43 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-13 18:42:02 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-13 18:42:48 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-13 18:43:39 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

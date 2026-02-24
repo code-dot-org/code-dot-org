@@ -4,7 +4,7 @@ targets:
     database:  dashboard
     host:      <%= CDO.redshift_host %>
     port:      5439
-    username:  dev
+    username:  <%= CDO.redshift_username %>
     password:  <%= CDO.redshift_password %>
 steps:
   - name: school-and-state-stats

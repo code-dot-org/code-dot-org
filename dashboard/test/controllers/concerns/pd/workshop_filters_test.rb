@@ -134,21 +134,18 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
   test 'filter_workshops with virtual status' do
     params virtual: 'yes'
 
-    # No virtual workshops found, uses none to return empty set of records.
-    @workshop_query.expects(:select).returns([])
-    expects(:none)
+    @workshop_query.expects(:joins).with(:sessions).returns(@workshop_query)
+    @workshop_query.expects(:where).with(sessions: {session_format: 'virtual'}).returns([])
 
     @controller.filter_workshops @workshop_query
 
-    virtual_workshop = create :workshop,
+    virtual_workshop = create(:workshop,
       virtual: true,
       suppress_email: true
+)
 
-    # Need to override expects method used elsewhere in this test file
-    # to set the return value to an array, instead of the mock @workshop_query
-    # object.
-    @workshop_query.expects(:select).returns([virtual_workshop])
-    expects(:where).with(id: [virtual_workshop.id])
+    @workshop_query.expects(:joins).with(:sessions).returns(@workshop_query)
+    @workshop_query.expects(:where).with(sessions: {session_format: 'virtual'}).returns([virtual_workshop])
 
     @controller.filter_workshops @workshop_query
   end
@@ -167,14 +164,14 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
   end
 
   test 'filter_workshops with teacher_email' do
-    teacher = create :teacher, email: "test@example.net"
+    teacher = create(:teacher, email: "test@example.net")
     expects(:enrolled_in_by).with(teacher)
     params teacher_email: teacher.email
     @controller.filter_workshops @workshop_query
   end
 
   test 'filter_workshops with teacher_email and only_attended' do
-    teacher = create :teacher, email: "test@example.net"
+    teacher = create(:teacher, email: "test@example.net")
     expects(:attended_by).with(teacher)
     params teacher_email: teacher.email
     params only_attended: true
@@ -205,7 +202,7 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
   end
 
   # Normal sort fields
-  %w(location_name on_map funded course subject).each do |sort_field|
+  %w(on_map funded course subject).each do |sort_field|
     test "filter_workshops with order_by #{sort_field}" do
       expects(:order).with(sort_field)
       params order_by: sort_field

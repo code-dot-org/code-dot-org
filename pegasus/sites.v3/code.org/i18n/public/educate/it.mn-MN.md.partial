@@ -17,7 +17,7 @@ theme: responsive
 
 ## Minimum Supported Browsers and Platforms
 
-2024 оны 7-р сараас эхлэн бид хөтөч болон үйлдлийн системд шаардагдах хамгийн бага хувилбаруудыг шинэчлэх болно. Хуучин хувилбарууд нь ажилласаар байж болох ч хуучин хувилбаруудад алдааны засварлах хүсэлтийг бид дэмжих боломжгүй болно.
+Жил бүр бид хөтөч болон үйлдлийн системд шаардагдах хамгийн бага хувилбаруудыг шинэчлэх болно. Хуучин хувилбарууд нь ажилласаар байж болох ч хуучин хувилбаруудад алдааны засварлах хүсэлтийг бид дэмжих боломжгүй болно.
 
 <table>
   <tr>
@@ -25,28 +25,6 @@ theme: responsive
       <table>
         <th>
           Browser
-        </th>
-        <tr>
-          <td>Chrome 96.x</td>
-        </tr>
-        <tr>
-          <td>Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Mobile Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Edge 94.x</td>
-        </tr>
-        <tr>
-          <td>Firefox 91.x</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
-      <table>
-        <th>
-          Хөтөч долдугаар сарын '24
         </th>
         <tr>
           <td>Хром 103.x</td>
@@ -71,28 +49,6 @@ theme: responsive
           Платформ
         </th>
         <tr>
-          <td>macOS 10.13</td>
-        </tr>
-        <tr>
-          <td>iOS 11.x</td>
-        </tr>
-        <tr>
-          <td>Windows 7</td>
-        </tr>
-        <tr>
-          <td>Android 6</td>
-        </tr>
-        <tr>
-          <td>ChromeOS (Chromebooks)</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
-      <table>
-        <th>
-          Платформ долдугаар сарын 24
-        </th>
-        <tr>
           <td>Макос 10.15</td>
         </tr>
         <tr>
@@ -103,6 +59,51 @@ theme: responsive
         </tr>
         <tr>
           <td>Андройд 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+    <!-- "coming soon" system requirements, to be updated and made live from March through July. -->
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Хөтөч долдугаар сарын '25
+        </th>
+        <tr>
+          <td>Хром 109</td>
+        </tr>
+        <tr>
+          <td>Сафари 16.6</td>
+        </tr>
+        <tr>
+          <td>Мобайл Сафари 16</td>
+        </tr>
+        <tr>
+          <td>Зах 128</td>
+        </tr>
+        <tr>
+          <td>Файрокс 115</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Платформ долдугаар сарын 25
+        </th>
+        <tr>
+          <td>Макос 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 16.x</td>
+        </tr>
+        <tr>
+          <td>Виндоус 10</td>
+        </tr>
+        <tr>
+          <td>Андройд 8</td>
         </tr>
         <tr>
           <td>ChromeOS (Chromebooks)</td>
@@ -126,7 +127,6 @@ theme: responsive
 | **Интернет симуляторыг ашиглахын тулд**                                                                                         | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **Вэб лабораторийг ашиглахын тулд**                                                                                             | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Google Classroom Хуваалцах товчийг ашиглахын тулд**                                                                           | `https://apis.google.com`                                                                                  |
-| **Апп лабораторийн өгөгдлийн багцыг ашиглах**                                                                                   | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Mobile and Tablet Support Details
 
@@ -148,7 +148,6 @@ K-5 курс (Компьютерийн шинжлэх ухааны үндэс) �
 ### Can you play this video?
 
 Та Code.org-ийн онлайн курс эхлэхээсээ өмнө та явах сайн байгаа эсэхийг шалгахын тулд доорх видео нь тоглуулах тест.
-
 
 <!--
 The following HTML is a copy of video_with_fallback.haml. once this file can be converted to

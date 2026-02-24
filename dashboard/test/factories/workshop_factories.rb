@@ -16,24 +16,26 @@ FactoryBot.define do
   factory :workshop, class: 'Pd::Workshop', aliases: [:pd_workshop] do
     transient do
       num_sessions {1}
+      virtual {false}
       num_facilitators {0}
       sessions_from {Time.zone.today + 9.hours} # Start time of the first session, then one per day after that.
+      session_location_name {nil}
+      session_location_address {nil}
+      session_meeting_link {nil}
       each_session_hours {6}
       num_enrollments {0}
       enrolled_and_attending_users {0}
-      enrolled_unattending_users {0}
-      num_completed_surveys {0}
-      randomized_survey_answers {false}
+      enrolled_absent_users {0}
       assign_session_code {false}
     end
 
     association :organizer, factory: :workshop_organizer
-    location_name {'Hogwarts School of Witchcraft and Wizardry'}
-    course {Pd::Workshop::COURSES.first}
-    subject {Pd::Workshop::SUBJECTS[course].try(&:first)}
+    course {Pd::Workshop::COURSE_CSP}
+    subject {Pd::Workshop::SUBJECTS[course].try(&:second)}
     capacity {10}
-    on_map {true}
-    funded {false}
+    name {'Cool workshop'}
+    description {'A really cool workshop'}
+    grades {['K', '1']}
 
     #
     # Traits
@@ -74,7 +76,11 @@ FactoryBot.define do
           params = [{
             workshop: workshop,
             start: evaluator.sessions_from + i.days,
-            duration_hours: evaluator.each_session_hours
+            duration_hours: evaluator.each_session_hours,
+            session_format: evaluator.virtual ? 'virtual' : 'in_person',
+            location_name: evaluator.session_location_name,
+            location_address: evaluator.session_location_address,
+            meeting_link: evaluator.session_meeting_link
           }]
           params.prepend :with_assigned_code if evaluator.assign_session_code
           workshop.sessions << build(:pd_session, *params)
@@ -84,14 +90,14 @@ FactoryBot.define do
         workshop.enrollments << build(:pd_enrollment, workshop: workshop)
       end
       evaluator.enrolled_and_attending_users.times do
-        teacher = create :teacher
+        teacher = create(:teacher)
         workshop.enrollments << build(:pd_enrollment, workshop: workshop, user: teacher)
         workshop.sessions.each do |session|
           session.attendances << build(:pd_attendance, session: session, teacher: teacher)
         end
       end
-      evaluator.enrolled_unattending_users.times do
-        teacher = create :teacher
+      evaluator.enrolled_absent_users.times do
+        teacher = create(:teacher)
         workshop.enrollments << build(:pd_enrollment, workshop: workshop, user: teacher)
       end
     end
@@ -100,16 +106,7 @@ FactoryBot.define do
       workshop.sessions.map(&:save)
 
       evaluator.num_facilitators.times do
-        workshop.facilitators << (create :facilitator, course: workshop.course)
-      end
-
-      evaluator.num_completed_surveys.times do
-        enrollment = create :pd_enrollment, workshop: workshop
-        if workshop.teachercon?
-          create :pd_teachercon_survey, pd_enrollment: enrollment, randomized_survey_answers: evaluator.randomized_survey_answers
-        else
-          raise 'Num_completed_surveys trait unsupported for this workshop type'
-        end
+        workshop.facilitators << (create(:facilitator, course: workshop.course))
       end
     end
 
@@ -125,8 +122,6 @@ FactoryBot.define do
 
       course {Pd::Workshop::COURSE_CSF}
       capacity {30}          # Average capacity
-      on_map {true}          # About 60% are on the map
-      funded               # About 90% are funded
       num_sessions {1}       # Most have 1 session
       num_facilitators {1}   # Most have 1 facilitator
       each_session_hours {7} # The most common session length
@@ -135,14 +130,14 @@ FactoryBot.define do
       # Our most common workshop type as of August 2019.
       trait :intro do
         subject {Pd::Workshop::SUBJECT_CSF_101}
-        location_name {'Walkerville Elementary School'}
+        session_location_name {'Walkerville Elementary School'}
       end
       factory(:csf_intro_workshop, aliases: [:csf_101_workshop]) {intro}
 
       # CSF Deep Dive, also known as CSF 201
       trait :deep_dive do
         subject {Pd::Workshop::SUBJECT_CSF_201}
-        location_name {'Third Street Elementary School'}
+        session_location_name {'Third Street Elementary School'}
       end
       factory(:csf_deep_dive_workshop, aliases: [:csf_201_workshop]) {deep_dive}
     end
@@ -155,8 +150,6 @@ FactoryBot.define do
       csp
 
       capacity {30}          # Average capacity
-      on_map {false}         # Never on the map
-      funded               # More than half are funded
       num_facilitators {2}   # Most have 2 facilitators
 
       # Some specific academic year workshops are usually two days instead of one.
@@ -180,7 +173,7 @@ FactoryBot.define do
       # CSP Academic Year Workshops
       trait :csp do
         course {Pd::Workshop::COURSE_CSP}
-        location_name {'Bayside High School'}
+        session_location_name {'Bayside High School'}
 
         # Possible subjects:
         # Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
@@ -196,7 +189,7 @@ FactoryBot.define do
       # CSD Academic Year Workshops
       trait :csd do
         course {Pd::Workshop::COURSE_CSD}
-        location_name {'Sunrise Middle School'}
+        session_location_name {'Sunrise Middle School'}
 
         # Possible subjects:
         # Pd::Workshop::SUBJECT_CSD_WORKSHOP_1
@@ -212,7 +205,7 @@ FactoryBot.define do
       # CSA Academic Year Workshops
       trait :csa do
         course {Pd::Workshop::COURSE_CSA}
-        location_name {'Greendale Community College'}
+        session_location_name {'Greendale Community College'}
 
         # Possible subjects:
         # Pd::Workshop::SUBJECT_CSA_WORKSHOP_1
@@ -231,7 +224,7 @@ FactoryBot.define do
       # CSP local summer workshop by default
       csp
 
-      location_name {'Greendale Community College'}
+      session_location_name {'Greendale Community College'}
       on_map {false}         # Never on the map
       funded {false}         # Less than half are funded
       num_facilitators {2}   # Most have 2 facilitators
@@ -258,14 +251,6 @@ FactoryBot.define do
       end
       factory(:csd_summer_workshop) {csd}
 
-      trait :csd_virtual do
-        course {Pd::Workshop::COURSE_CSD}
-        subject {Pd::Workshop::SUBJECT_VIRTUAL_KICKOFF}
-        virtual {true}
-        capacity {35}          # Average capacity
-      end
-      factory(:csd_virtual_workshop) {csd_virtual}
-
       trait :csa do
         course {Pd::Workshop::COURSE_CSA}
         subject {Pd::Workshop::SUBJECT_CSA_SUMMER_WORKSHOP}
@@ -278,8 +263,6 @@ FactoryBot.define do
       course {Pd::Workshop::COURSE_FACILITATOR}
       subject {nil}
       capacity {100}         # Typical capacity
-      on_map {false}         # Never on map
-      funded {false}         # Never funded
       num_sessions {2}       # Most have 2 sessions
       num_facilitators {0}   # Most have no facilitators
       each_session_hours {8} # The most common session length
@@ -290,8 +273,6 @@ FactoryBot.define do
       subject {Pd::Workshop::SUBJECT_FIT}
       course {Pd::Workshop::COURSE_CSP} # CSD is also valid
       capacity {100}         # Typical capacity
-      on_map {false}         # Never on map
-      funded               # Sometimes funded (50%)
       num_sessions {2}       # Most have 2 sessions
       num_facilitators {2}   # Most have 2 facilitators
       each_session_hours {8} # The most common session length
@@ -301,8 +282,6 @@ FactoryBot.define do
       course {Pd::Workshop::COURSE_ADMIN}
       subject {nil}
       capacity {35}          # Average capacity
-      on_map {false}         # Never on map
-      funded               # More than half are funded
       num_sessions {1}       # Most have 1 session
       num_facilitators {0}   # Most have no facilitators
       each_session_hours {2} # The most common session length
@@ -312,8 +291,6 @@ FactoryBot.define do
       course {Pd::Workshop::COURSE_ADMIN_COUNSELOR}
       subject {Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_WELCOME}
       capacity {35}          # Average capacity
-      on_map {false}         # Never on map
-      funded {false}         # Never funded
       num_sessions {1}       # Most have 1 session
       num_facilitators {1}   # Want to work with facilitators
       each_session_hours {2} # Not sure on session length
@@ -323,22 +300,34 @@ FactoryBot.define do
       course {Pd::Workshop::COURSE_COUNSELOR}
       subject {nil}
       capacity {40}          # Average capacity
-      on_map {false}         # Never on map
-      funded               # All funded
       num_sessions {1}       # Most have 1 session
       num_facilitators {0}   # Most have no facilitators
       each_session_hours {6} # The most common session length
     end
 
-    factory :csp_wfrt do
-      course {Pd::Workshop::COURSE_CSP}
-      subject {Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS}
-      capacity {40}
-      on_map {false}
-      funded {false}
-      num_sessions {1}
-      num_facilitators {2}
-      each_session_hours {7}
+    factory :byo_workshop do
+      course {Pd::Workshop::COURSE_BUILD_YOUR_OWN}
+      subject {nil}
+      participant_group_type {'Regional'}
+      capacity {40}          # Average capacity
+      num_sessions {1}       # Most have 1 session
+      num_facilitators {0}   # Most have no facilitators
+      each_session_hours {6} # The most common session length
+
+      transient do
+        course_offerings {[]} # Allow overriding course offerings
+      end
+
+      after(:build) do |workshop, evaluator|
+        if evaluator.course_offerings.empty?
+          # Create a default course offering if none are provided
+          workshop.course_offerings << build(:course_offering)
+        else
+          evaluator.course_offerings.each do |offering|
+            workshop.course_offerings << offering
+          end
+        end
+      end
     end
   end
 end

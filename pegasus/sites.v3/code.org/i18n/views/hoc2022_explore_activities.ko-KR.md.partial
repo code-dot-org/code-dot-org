@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "헬로 월드: 우주", body: "\"헬로 월드!\"라고 말하게 만드는 캐릭터 및 사운드와 함께 은하계 간의 장면을 만들어 보세요", image: "/images/hoc2022-hello-world-space.png", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
-
-{{ featured_tutorial, title: "NASA's Space Jam", body: "정말로 감동을 주는 태양계를 만들고, 그 과정에서 음악, 천문학, 코딩에 관해 배워 보세요!", image: "/images/hoc2022-nasa-space-jam.png", url: "https://chandra.si.edu/sound/code/" }}
-
-{{ featured_tutorial, title: "스타워즈", body: "드로이드 프로그래밍을 배우고, 머나먼 은하계에서 나만의 스타워즈 게임을 만들어보세요.", image: "/shared/images/courses/logo_tall_starwars.jpg", url: "https://code.org/starwars" }}
-
-{{ featured_tutorial, title: "SciGirls Code Quest", body: "이 온라인 코딩 어드벤처에서, 바닷속 챌린지를 헤쳐 나가는 잠수함 Subby를 갖게 됩니다.", image: "/images/hoc2022-scigirls-code-quest.png", url: "https://pbskids.org/scigirls/games/code-quest" }}

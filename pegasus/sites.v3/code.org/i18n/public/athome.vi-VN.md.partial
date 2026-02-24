@@ -20,7 +20,6 @@ theme: responsive
     <li><a class="linktag" id="self-paced-nav" href="#express">Tham gia khóa học nhập môn theo nhịp độ của bản thân</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">Làm game hoặc một ứng dụng</a></li>
     <li><a class="linktag" id="unplugged-nav" href="#unplugged">Thử học KHMT mà không cần máy tính (tùy chọn ‘không dùng thiết bị điện tử’ & thiết bị di động)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Học KHMT từ nhóm Code.org và các vị khách mời đặc biệt</a></li>
 </ul>
 
 <br>
@@ -283,56 +282,6 @@ theme: responsive
   <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Xin chào Ruby</a> – Cách kỳ lạ nhất thế giới để tìm hiểu về máy tính, công nghệ và lập trình. Các hoạt động về một loạt các chủ đề KHMT như khả năng phân tích vấn đề, xác định kiểu mẫu, tư duy bằng thuật toán, gỡ lỗi các sự cố và làm việc nhóm. (dành cho độ tuổi 4-10)</li>
   <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">KHMT Không dùng thiết bị điện tử</a> – Bộ sưu tập tài liệu đào tạo miễn phí để dạy khoa học máy tính thông qua các trò chơi và câu đố hấp dẫn sử dụng thẻ, dây, bút màu và rất nhiều trò chơi vận động. (dành cho độ tuổi 5-14)</li>
 </ul>
-
-<h2>Bạn không có máy tính ở nhà? Thử học KHMT trên điện thoại với các ứng dụng từ đối tác của chúng tôi</h2>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Đảo hộp"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>Một trò chơi mã hóa di động quyến rũ đưa người học vào một cuộc phiêu lưu thú vị, đồng thời dạy các nguyên tắc cơ bản của mã hóa, như thuật toán, nhận dạng mẫu, trình tự, vòng lặp và điều kiện. <i>(dành cho mọi lứa tuổi)</i>
-</div>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">Nền tảng học mã</h3></a>từng đoạt giải thưởng CodeSpark dành cho trẻ em từ 5-9 tuổi. Giải đố và lập trình game với The Foos, đồng thời học viết mã lệnh. <strong>Lưu ý: codeSpark đang cung cấp bản dùng thử 3 tháng miễn phí. Địa chỉ email của phụ huynh và thông tin thẻ tín dụng là bắt buộc khi đăng ký.</strong><i>(dành cho trẻ chưa biết đọc đến Lớp 5)</i>
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[Trở lại đầu trang]</a></p>
-
-<a id="livecoding"></a>
-<h2>Học hỏi từ đội ngũ Code.org và các khách mời đặc biệt!</h2>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Logo CodeBytes">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes là những bài học tương tác 20 phút dễ hiểu, pha trộn khoa học máy tính với các chủ đề trong thế giới thực. Đào tạo AI để đọc ngôn ngữ ký hiệu, thiết kế ứng dụng có ích, khám phá thế giới Minecraft và nhiều điều thú vị khác!</div>
-        <br>
-        <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Xem các tập</button></a>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Giờ giải lao lập trình">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">Code Break</h3>
-        <div class="smalltext" style="">Giữ cho khoa học máy tính vui vẻ bằng cách thực hiện Code Break! Bạn có thể tạo thuật toán cùng Ashton Kutcher, tìm hiểu về biến với Yara Shahidi và thậm chí là khám phá cách hoạt động của Internet với nhà phát minh thực tế của Internet, là Vint Cerf.</div>
-        <br>
-        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Kết nối</button></a>
-    </span>
-  </div>
-</div>
-</div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 

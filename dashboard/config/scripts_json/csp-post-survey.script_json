@@ -4,13 +4,19 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSP",
       "has_verified_resources": true,
-      "is_migrated": true
+      "is_deprecated": true,
+      "is_migrated": true,
+      "topic_tags": [
+        "survey"
+      ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-09 20:39:31 UTC",
+    "serialized_at": "2025-07-07 21:34:15 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -148,6 +154,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

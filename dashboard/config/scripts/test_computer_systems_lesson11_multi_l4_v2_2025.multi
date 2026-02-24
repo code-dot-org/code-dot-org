@@ -1,0 +1,22 @@
+name 'test-computer-systems-lesson11-multi-L4_v2-2025'
+question 'Given this new information, what do you think we should do?'
+
+wrong '🟢Launch it anyway - no action needed!'
+wrong '🟡Launch the chatbot, but follow-up with a quick fix to address the issue'
+wrong '🟠Delay the launch until we until we do more testing and fix the issue'
+wrong '🔴Cancel the project altogether - this issue is too serious'
+
+allow_multiple_attempts false
+markdown <<MARKDOWN
+## Josh's Driver Assistant
+
+#### Josh is the inventor of an AI-powered device that allows drivers to control their car climate, media, and more using just their voice.  
+
+#### After an initial round of testing, Josh noticed that drivers with higher pitched voices, the majority of whom were women, had a significantly harder time getting the device to accurately understand their voice prompts.
+
+
+#### Now Josh needs to make a decision about what to do with this new information
+
+<hr />
+
+MARKDOWN

@@ -1,0 +1,286 @@
+require 'cdo/aws/metrics'
+require_relative '../../../shared/middleware/helpers/storage_id'
+
+class OpenaiUserInputResponseTimeout < StandardError; end
+
+# Prepares the input (user/level system prompt, context, existing chat history)
+# from AI Chat lab to be sent to the AI API, and then sends the request to the API.
+
+module AichatAiHelper
+  TOKEN_THROTTLING_PREFIX = "aichat/tokens/".freeze
+
+  def self.get_api_model(model_id)
+    # For now we just assume it's one of the gemini models if not 'gpt-4o-mini'.
+    model_id == SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT] ? SharedConstants::AICHAT_MODEL_VERSION : model_id
+  end
+
+  def self.format_message_parts(message, encrypted_channel_id, level_name)
+    parts = [
+      AichatAiClientTypes::TextMessagePart.new(
+        type: 'text',
+        content: message['chatMessageText']
+      )
+    ]
+
+    message['assets']&.each do |asset|
+      filename = asset["filename"]
+      source = asset["source"]
+
+      base64_string = AichatAssetHelper.get_asset_base64_string(filename, source, encrypted_channel_id, level_name)
+
+      parts << AichatAiClientTypes::FileMessagePart.new(
+        type: 'file',
+        content: AichatAiClientTypes::FileMessagePartContent.new(
+          name: filename,
+          mimeType: Rack::Mime.mime_type(File.extname(filename)),
+          data: base64_string
+        )
+      )
+    end
+
+    parts
+  end
+
+  def self.convert_json_schema_to_ruby_types(json_schema)
+    json_schema = json_schema.transform_keys(&:to_sym)
+    type = json_schema[:type]
+    description = json_schema[:description]
+
+    case (type)
+    when "object"
+      AichatAiClientTypes::JsonObjectSchema.new(
+        type: type,
+        description: description,
+        properties:  AichatAiClientTypes::JsonProperties.new(
+          **(json_schema[:properties].transform_values {|value| convert_json_schema_to_ruby_types(value)})
+        ),
+        required: json_schema[:required],
+        additionalProperties: json_schema[:additionalProperties]
+      )
+    when "array"
+      AichatAiClientTypes::JsonArraySchema.new(
+        type: type,
+        description: description,
+        items: convert_json_schema_to_ruby_types(json_schema[:items])
+      )
+    when "string"
+      AichatAiClientTypes::JsonStringSchema.new(
+        type: type,
+        description: description,
+        enum: json_schema[:enum]
+      )
+    when "number"
+      AichatAiClientTypes::JsonNumberSchema.new(
+        type: type,
+        description: description,
+        enum: json_schema[:enum]
+      )
+    when "boolean"
+      AichatAiClientTypes::JsonBooleanSchema.new(
+        type: type,
+        description: description
+      )
+    when "null"
+      AichatAiClientTypes::JsonNullSchema.new(
+        type: type,
+        description: description
+      )
+    else
+      raise StandardError.new("Unexpected schema type='#{type}'")
+    end
+  end
+
+  # Parse the AI Chat message format and convert it to the AI-API-endpoint-agnostic
+  # "config" object and "request" and "context" arrays.
+  #
+  # See 'aichat_ai_client.rb' for typescript definitions of these objects.
+  def self.get_config_request_context(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id, client_type, json_schema = nil)
+    level = Level.find_by(id: level_id)
+
+    # Level system prompt - string or nil.
+    level_system_prompt = level&.properties&.dig('aichat_settings', 'levelSystemPrompt') || level&.properties&.[]("level_system_prompt")
+
+    # Level name - string.
+    level_name = level&.name
+
+    system_instructions = []
+    system_instructions << AichatAiClientTypes::TextMessagePart.new(type: 'text', content: level_system_prompt) if level_system_prompt.present?
+    system_instructions << AichatAiClientTypes::TextMessagePart.new(type: 'text', content: system_prompt) if system_prompt.present?
+    retrieval_contexts&.each do |retrieval_context|
+      system_instructions << AichatAiClientTypes::TextMessagePart.new(type: 'text', content: retrieval_context)
+    end
+
+    system_instructions <<  AichatAiClientTypes::TextMessagePart.new(type: 'text', content: new_message['hiddenContext']) if new_message['hiddenContext']
+
+    temperature *= if model_id == SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]
+                     # If OpenAI:
+                     #   We expose a temperature scale of 0.1-1 to users, but OpenAI's API allows a scale of 0-2.
+                     #   As of 7/11/25, testing revealed temperatures exceeding 1.5 generate garbage and trigger timeouts/false moderation calls
+                     DCDO.get('openai_temperature_scaling_factor', 1.5)
+                   else
+                     # Else Gemini:
+                     #   We expose a temperature scale of 0.1-1 to users, but Gemini's API allows a scale of 0-2.
+                     2
+                   end
+
+    unless json_schema.nil?
+      response_validation = AichatAiClientTypes::JsonResponseConfigValidation.new(
+        type: 'jsonSchema',
+        schema: convert_json_schema_to_ruby_types(json_schema)
+      )
+      response = AichatAiClientTypes::JsonResponseConfig.new(mimeType: 'application/json', validation: response_validation)
+    end
+
+    config = AichatAiClientTypes::AiConfig.new(
+      model: get_api_model(model_id),
+      systemInstructions: system_instructions,
+      temperature: temperature,
+      clientType: client_type,
+      response: response
+    )
+
+    request = format_message_parts(new_message, encrypted_channel_id, level_name)
+
+    context = []
+
+    stored_messages&.each do |stored_message|
+      # Convert stored message role from user/assistant (aichat) => user/model (internal representation)
+      role = stored_message['role'] == 'assistant' ? 'model' : stored_message['role']
+      context << AichatAiClientTypes::Message.new(
+        role: role,
+        parts: format_message_parts(stored_message, encrypted_channel_id, level_name)
+      )
+    end
+
+    return config, request, context
+  end
+
+  # Create an instance of the appropriate ai-client-derived class based on model id.
+  def self.create_ai_client_instance(client_type, model_id, usage_reporter = nil)
+    # We assume it's one of the Vertex models if not ChatGPT.
+    if model_id == SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]
+      return AichatOpenaiResponsesClient.new(CDO.openai_student_learning_api_key, SharedConstants::AICHAT_MODEL_VERSION, usage_reporter)
+    else
+
+      # We use separate keys per-client for Gemini so that we can more easily allocate donated credits appropriately.
+      # In the longer term, we should consider adding per-client keys for OpenAI as well in order to more easily differentiate between use cases.
+      # We assume AI Chat Lab if not AI Tutor here, which is not strictly true because of FLOW_LAB. We should convert
+      # FLOW_LAB to an EXPERIMENT client type and add experiment projects/keys key to handle those use cases.
+      api_key = client_type == SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR] ?
+        CDO.google_vertex_ai_tutor_service_account_key : CDO.google_vertex_ai_chat_service_account_key
+
+      return AichatGeminiClient.new(api_key, model_id, usage_reporter)
+    end
+  end
+
+  # Remove after new Vertex implementation is tested on production
+  # Create an instance of the appropriate ai-client-derived class based on model id.
+  def self.create_ai_client_instance_legacy(client_type, model_id, usage_reporter = nil)
+    # We assume it's one of the gemini models if not ChatGPT.
+    if model_id == SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]
+      return AichatOpenaiResponsesClient.new(CDO.openai_student_learning_api_key, SharedConstants::AICHAT_MODEL_VERSION, usage_reporter)
+    else
+      # We use separate keys per-client for Gemini so that we can more easily allocate donated credits appropriately.
+      # In the longer term, we should consider adding per-client keys for OpenAI as well in order to more easily differentiate between use cases.
+      # Also note that we assume AI Chat Lab if not AI Tutor here, which is not strictly true because of Flow Lab. We could add an EXPERIMENT client type and add an explicit key to handle those use cases (eg, Flow Lab).
+      api_key = client_type == SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR] ?
+        CDO.google_gemini_ai_tutor_api_key : CDO.google_gemini_ai_chat_lab_api_key
+      return AichatGeminiClientLegacy.new(api_key, model_id, usage_reporter)
+    end
+  end
+
+  def self.get_openai_assistant_response(aichat_model_customizations, stored_messages, new_message, level_id, project_id, user_id)
+    encrypted_channel_id = get_project_channel_id(storage_id_for_user_id(user_id), project_id) if project_id
+
+    model_id = aichat_model_customizations["selectedModelId"]
+
+    temperature = aichat_model_customizations['temperature'].to_f
+
+    client_type = aichat_model_customizations['clientType']
+
+    # System prompt - string or nil.
+    system_prompt = aichat_model_customizations['systemPrompt']
+
+    # System prompt - array of strings or nil.
+    retrieval_contexts = aichat_model_customizations['retrievalContexts']
+
+    # JSON schema or nil.
+    json_schema = aichat_model_customizations['responseJsonSchema']
+
+    usage_reporter = AichatAiUsageReporter.new(model_id, user_id, project_id, level_id)
+
+    use_legacy = !aichat_model_customizations['useVertex']
+
+    client = use_legacy ?
+      create_ai_client_instance_legacy(client_type, model_id, usage_reporter)
+      : create_ai_client_instance(client_type, model_id, usage_reporter)
+
+    config, request, context = get_config_request_context(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id, client_type, json_schema)
+
+    begin
+      response = client.get_response(config, request, context)
+    rescue Net::ReadTimeout
+      raise OpenaiUserInputResponseTimeout.new("Timeout waiting for AI client to provide response to user input.")
+    end
+
+    response
+  end
+
+  def self.token_throttling_key(model_id, user_id)
+    # "/user/" included to leave space for potential throttling at the classroom/teacher level.
+    # Token throttling also only currently in place for gpt-4o-mini, but inclusion of model ID leaves space for other models.
+    TOKEN_THROTTLING_PREFIX + 'model/' + model_id + '/user/' + user_id.to_s
+  end
+
+  def self.handle_error(source, exception, request, locale)
+    if rack_env?(:development)
+      puts "#{source} Error: #{exception.full_message}"
+    end
+
+    request.update!(response: exception.message, execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:FAILURE])
+
+    if DCDO.get('aichat_verbose_honeybadger_reporting', false)
+      Honeybadger.notify(
+        "#{source} failed with unexpected error: #{exception.message}",
+        context: {
+          request: request.to_json,
+          user_id: request.user_id,
+          locale: locale
+        }
+      )
+    end
+  end
+
+  def self.build_request_attributes(user_id, params)
+    context = params[:aichatContext] || {}
+    model_customizations = params[:modelParameters] || {}
+
+    # Add client type to model parameters.
+    model_customizations[:clientType] ||= context[:clientType]
+
+    {
+      user_id:              user_id,
+      model_customizations: model_customizations,
+      stored_messages:      successful_stored_chat_messages(params[:storedMessages]),
+      new_message:          params[:newMessage] || {},
+      level_id:             context[:currentLevelId],
+      script_id:            context[:scriptId],
+      project_id:           project_id_from_context(context),
+    }
+  end
+
+  def self.successful_stored_chat_messages(stored_messages)
+    # Filter out non-OK messages (e.g. errors).
+    Array(stored_messages).select do |message|
+      message[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK] &&
+        message[:chatMessageText].present?
+    end
+  end
+
+  def self.project_id_from_context(context)
+    if context[:channelId]
+      _, project_id = get_storage_id_and_project_id(context[:channelId])
+      project_id
+    end
+  end
+end

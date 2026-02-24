@@ -1,15 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {TestResults} from '@cdo/apps/constants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 import javalabMsg from '@cdo/javalab/locale';
 
-import BackpackClientApi from '../code-studio/components/backpack/BackpackClientApi';
 import {
   getContainedLevelResultInfo,
   postContainedLevelAttempt,
@@ -17,12 +23,10 @@ import {
 } from '../containedLevels';
 import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
 
-import {BackpackAPIContext} from './BackpackAPIContext';
 import {CsaViewMode, ExecutionType, InputMessageType} from './constants';
 import {getDisplayThemeFromString} from './DisplayTheme';
 import JavabuilderConnection from './JavabuilderConnection';
 import JavalabView from './JavalabView';
-import Neighborhood from './neighborhood/Neighborhood';
 import NeighborhoodVisualizationColumn from './neighborhood/NeighborhoodVisualizationColumn';
 import javalabConsole, {
   appendOutputLog,
@@ -94,6 +98,8 @@ Javalab.prototype.init = function (config) {
 
   this.skin = config.skin;
   this.level = config.level;
+  this.levelIdForAnalytics = config.serverLevelId;
+  this.scriptIdForAnalytics = config.serverScriptId;
   // Sets display theme based on displayTheme user preference
   this.displayTheme = getDisplayThemeFromString(config.displayTheme);
   this.isStartMode = !!config.level.editBlocks;
@@ -115,7 +121,6 @@ Javalab.prototype.init = function (config) {
   config.noInstructionsWhenCollapsed = true;
 
   config.pinWorkspaceToBottom = true;
-
   config.getCode = this.getCode.bind(this);
   config.afterClearPuzzle = this.afterClearPuzzle.bind(this);
   const onRun = this.onRun.bind(this);
@@ -133,14 +138,22 @@ Javalab.prototype.init = function (config) {
       this.miniApp = new Neighborhood(
         this.onOutputMessage,
         this.onNewlineMessage,
-        this.setIsRunning
+        this.setIsRunning,
+        // In Java Lab we don't distinguish between partial lines and full lines,
+        // the provided message should have a newline at the end to be treated as
+        // a full line.
+        this.onOutputMessage
       );
       config.afterInject = () =>
         this.miniApp.afterInject(
           this.level,
           this.skin,
           config,
-          this.studioApp_
+          (sound, options) =>
+            this.studioApp_.playAudio(sound, {...options, noOverlap: true}),
+          this.studioApp_.playAudioOnFailure.bind(this.studioApp_),
+          this.studioApp_.loadAudio.bind(this.studioApp_),
+          this.studioApp_.getTestResults.bind(this.studioApp_)
         );
       this.visualization = <NeighborhoodVisualizationColumn />;
       break;
@@ -298,7 +311,7 @@ Javalab.prototype.init = function (config) {
 
   let backpackApi = null;
   if (backpackEnabled) {
-    backpackApi = new BackpackClientApi(config.backpackChannel);
+    backpackApi = new BackpackClientApi('javalab', config.backpackChannel);
   }
 
   // Used for some post requests made in Javalab, namely
@@ -308,7 +321,7 @@ Javalab.prototype.init = function (config) {
     method: 'GET',
   }).then(response => (this.csrf_token = response.headers.get('csrf-token')));
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <BackpackAPIContext.Provider value={backpackApi}>
         <JavalabView
@@ -355,10 +368,29 @@ Javalab.prototype.onRun = function () {
   }
 
   this.miniApp?.reset?.();
+  logUserLevelInteraction({
+    levelId: this.levelIdForAnalytics,
+    scriptId: this.scriptIdForAnalytics,
+    interaction: UserLevelInteractions.click_run,
+  });
+  analyticsReporter.sendEvent(EVENTS.JAVALAB_RUN_BUTTON_CLICK, {
+    levelId: this.levelIdForAnalytics,
+  });
   this.executeJavabuilder(ExecutionType.RUN);
 };
 
 Javalab.prototype.onTest = function () {
+  const validation = this.level.validation;
+  const validated = !!validation && Object.keys(validation).length !== 0;
+  logUserLevelInteraction({
+    levelId: this.levelIdForAnalytics,
+    scriptId: this.scriptIdForAnalytics,
+    interaction: UserLevelInteractions.click_validate,
+  });
+  analyticsReporter.sendEvent(EVENTS.JAVALAB_TEST_BUTTON_CLICK, {
+    levelId: this.levelIdForAnalytics,
+    validated: validated,
+  });
   this.executeJavabuilder(ExecutionType.TEST);
 };
 

@@ -128,7 +128,7 @@ class RegionalPartner < ApplicationRecord
       future.
       where(subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP).
       order_by_scheduled_start.
-      map {|w| w.slice(:location_name, :location_address, :workshop_date_range_string, :course)}
+      map {|w| w.slice(:format, :location_name, :location_address, :workshop_date_range_string, :course)}
   end
 
   before_validation do |model|

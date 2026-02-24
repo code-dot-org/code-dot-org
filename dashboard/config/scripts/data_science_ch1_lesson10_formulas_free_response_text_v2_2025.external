@@ -1,0 +1,12 @@
+name 'data-science-ch1-lesson10-formulas-free-response-text_v2-2025'
+title 'Using Formulas in Google Sheets'
+description 'description here'
+
+markdown <<MARKDOWN
+## Using Formulas
+
+##### When trying to analyze our data, finding the sum, count, and average of a range elements can help us quickly understand the data.
+
+#### [Google Sheets Link](https://docs.google.com/spreadsheets/d/1hZ9K6TX3CklY56b4NQAABD5UqYEEGBeP64UQQ7-OnvU/edit?gid=1782593835#gid=1782593835)
+
+MARKDOWN

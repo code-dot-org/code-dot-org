@@ -2,7 +2,7 @@ require 'test_helper'
 
 class SerializedPropertiesTest < ActiveSupport::TestCase
   setup do
-    @user = create :user, properties: {us_state: 'CO'}
+    @user = create(:user, properties: {us_state: 'CO'})
   end
 
   test 'assign_attributes ensures properties are merged' do
@@ -13,7 +13,7 @@ class SerializedPropertiesTest < ActiveSupport::TestCase
   end
 
   test 'assign_attributes adds properties when none already exist' do
-    user = create :user, properties: {}
+    user = create(:user, properties: {})
     user.assign_attributes({properties: {gender_student_input: 'f'}})
 
     assert_equal 'f', user.gender_student_input
@@ -116,5 +116,58 @@ class SerializedPropertiesTest < ActiveSupport::TestCase
     @user.save!
 
     refute @user.read_attribute('properties').key?('gender_student_input')
+  end
+
+  describe '#property_previously_changed?' do
+    subject(:property_previously_changed?) {record.property_previously_changed?(property_name)}
+
+    let(:record) {create(:user, property_name => property_old_value)}
+    let(:property_name) {'us_state'}
+    let(:property_old_value) {'AL'}
+    let(:property_new_value) {'WA'}
+
+    it 'returns false' do
+      _property_previously_changed?.must_equal false
+    end
+
+    context 'when new property value has been saved' do
+      before do
+        record.update!(property_name => property_new_value)
+      end
+
+      it 'returns true' do
+        _property_previously_changed?.must_equal true
+      end
+    end
+
+    context 'when property has been changed without saving' do
+      before do
+        record.assign_attributes(property_name => property_new_value)
+      end
+
+      it 'returns false' do
+        _property_previously_changed?.must_equal false
+      end
+    end
+
+    context 'when same property value has been saved' do
+      before do
+        record.update!(property_name => property_old_value)
+      end
+
+      it 'returns false' do
+        _property_previously_changed?.must_equal false
+      end
+    end
+
+    context 'when property value has not been changed prior to saving' do
+      before do
+        record.save!
+      end
+
+      it 'returns false' do
+        _property_previously_changed?.must_equal false
+      end
+    end
   end
 end

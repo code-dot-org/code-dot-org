@@ -1,8 +1,8 @@
 import $ from 'jquery';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   stubRedux,
   restoreRedux,
@@ -17,34 +17,38 @@ import reducer, {
   setRosterProvider,
   setCourseOfferings,
   setSections,
+  setSectionOrder,
   selectSection,
-  removeSection,
   beginCreatingSection,
   beginEditingSection,
   editSectionProperties,
   cancelEditingSection,
   finishEditingSection,
   asyncLoadSectionData,
-  assignmentNames,
-  assignmentPaths,
-  sectionFromServerSection,
-  isAddingSection,
   beginImportRosterFlow,
   cancelImportRosterFlow,
   importOrUpdateRoster,
-  isRosterDialogOpen,
-  sectionCode,
-  sectionName,
-  sectionProvider,
-  isSectionProviderManaged,
-  getVisibleSections,
-  sectionsNameAndId,
-  getSectionRows,
-  sortedSectionsList,
-  sortSectionsList,
   assignToSection,
   NO_SECTION,
+  removeSectionOrThrow,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {
+  assignmentNames,
+  assignmentPaths,
+  getSectionRows,
+  getVisibleSections,
+  isAddingSection,
+  isRosterDialogOpen,
+  isSectionProviderManaged,
+  sectionCode,
+  sectionFromServerSection,
+  sectionName,
+  sectionProvider,
+  sectionsNameAndId,
+  sortedSectionsList,
+  sortSectionsList,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {assert, expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
@@ -64,6 +68,7 @@ const sections = [
     location: '/v2/sections/11',
     name: 'My Section',
     courseVersionName: 'csd-2017',
+    course_display_name: 'CS Discoveries 2017',
     login_type: 'picture',
     participant_type: 'student',
     grades: ['2'],
@@ -74,13 +79,16 @@ const sections = [
     sharing_disabled: false,
     course_offering_id: 2,
     course_version_id: 3,
+    script: {name: null},
+    unitName: null,
+    unitPosition: null,
     unit_id: null,
     createdAt: createdAt,
     studentCount: 10,
     hidden: false,
     restrict_section: false,
     post_milestone_disabled: false,
-    section_instructors: [
+    sectionInstructors: [
       {
         id: 1,
         status: 'accepted',
@@ -88,12 +96,20 @@ const sections = [
         instructor_email: 'teacher@code.org',
       },
     ],
+    primaryInstructor: {
+      name: 'teacher',
+      email: 'teacher@code.org',
+      ltiRosterSyncEnabled: false,
+    },
+    avatar_color: 1,
+    avatar_emoji: 1,
   },
   {
     id: 12,
     location: '/v2/sections/12',
     name: 'My Other Section',
     courseVersionName: 'coursea-2017',
+    course_display_name: 'Course A',
     login_type: 'picture',
     participant_type: 'student',
     grades: ['11'],
@@ -104,13 +120,23 @@ const sections = [
     sharing_disabled: false,
     course_offering_id: 1,
     course_version_id: 1,
-    unit_id: null,
+    course: {
+      lesson_extras_available: true,
+      text_to_speech_enabled: false,
+      course_offering_id: 1,
+      unit_id: 12,
+      version_id: 2017,
+    },
+    unitName: 'coursea-2017',
+    unitPosition: 1,
+    unit_id: 12,
+    script: {name: 'coursea-2017'},
     createdAt: createdAt,
     studentCount: 1,
     hidden: false,
     restrict_section: false,
     post_milestone_disabled: false,
-    section_instructors: [
+    sectionInstructors: [
       {
         id: 2,
         status: 'accepted',
@@ -124,12 +150,69 @@ const sections = [
         instructor_email: 'coteacher@code.org',
       },
     ],
+    primaryInstructor: {
+      name: 'teacher',
+      email: 'teacher@code.org',
+      ltiRosterSyncEnabled: false,
+    },
+    avatar_color: 1,
+    avatar_emoji: 1,
+  },
+  {
+    id: 13,
+    location: '/v2/sections/13',
+    name: 'My Single-Unit Course Section',
+    courseVersionName: 'Single Unit Course 2026',
+    course_display_name: 'Single Unit Course',
+    login_type: 'picture',
+    participant_type: 'student',
+    grades: ['11'],
+    code: 'FPNZLN',
+    lesson_extras: false,
+    tts_autoplay_enabled: false,
+    pairing_allowed: true,
+    sharing_disabled: false,
+    course_offering_id: 10,
+    course_version_id: 14,
+    course: {
+      lesson_extras_available: true,
+      text_to_speech_enabled: false,
+      course_offering_id: 10,
+      unit_id: 18,
+      version_id: 14,
+    },
+    unitName: 'Single Unit 2026',
+    unitPosition: 1,
+    unit_id: 18,
+    is_assigned_single_unit_course: true,
+    script: {id: 18, name: 'Single Unit 2026'},
+    createdAt: createdAt,
+    studentCount: 1,
+    hidden: false,
+    restrict_section: false,
+    post_milestone_disabled: false,
+    sectionInstructors: [
+      {
+        id: 2,
+        status: 'accepted',
+        instructor_name: 'teacher',
+        instructor_email: 'teacher@code.org',
+      },
+    ],
+    primaryInstructor: {
+      name: 'teacher',
+      email: 'teacher@code.org',
+      ltiRosterSyncEnabled: false,
+    },
+    avatar_color: 1,
+    avatar_emoji: 1,
   },
   {
     id: 307,
     location: '/v2/sections/307',
     name: 'My Third Section',
     courseVersionName: undefined,
+    course_display_name: undefined,
     login_type: 'email',
     participant_type: 'student',
     grades: ['10'],
@@ -140,13 +223,16 @@ const sections = [
     sharing_disabled: false,
     course_offering_id: 3,
     course_version_id: 5,
+    unitName: null,
+    unitPosition: null,
     unit_id: 7,
+    script: {name: null},
     createdAt: createdAt,
     studentCount: 0,
     hidden: false,
     restrict_section: false,
     post_milestone_disabled: false,
-    section_instructors: [
+    sectionInstructors: [
       {
         id: 4,
         status: 'accepted',
@@ -154,6 +240,15 @@ const sections = [
         instructor_email: 'teacher@code.org',
       },
     ],
+    primaryInstructor: {
+      name: 'teacher',
+      email: 'teacher@code.org',
+      ltiRosterSyncEnabled: false,
+    },
+    at_risk_age_gated_date: undefined,
+    at_risk_age_gated_us_state: undefined,
+    avatar_color: 1,
+    avatar_emoji: 1,
   },
 ];
 
@@ -176,6 +271,12 @@ describe('teacherSectionsRedux', () => {
   const initialState = reducer(undefined, {});
   let store;
 
+  const successResponse = (body = {}) => [
+    200,
+    {'Content-Type': 'application/json'},
+    JSON.stringify(body),
+  ];
+
   beforeEach(() => {
     stubRedux();
     registerReducers({currentUser, teacherSections: reducer});
@@ -190,18 +291,12 @@ describe('teacherSectionsRedux', () => {
 
   describe('setAuthProviders', () => {
     it("sets teacher's auth providers", () => {
-      const action = setAuthProviders([
-        'google_oauth2',
-        'clever',
-        'email',
-        'windowslive',
-      ]);
+      const action = setAuthProviders(['google_oauth2', 'clever', 'email']);
       const nextState = reducer(initialState, action);
       assert.deepEqual(nextState.providers, [
         'google_classroom',
         'clever',
         'email',
-        'windowslive',
       ]);
     });
   });
@@ -229,15 +324,21 @@ describe('teacherSectionsRedux', () => {
     it('adds an id for each section', () => {
       const action = setSections(sections);
       const nextState = reducer(startState, action);
-      assert.deepEqual(nextState.sectionIds, [11, 12, 307]);
+      assert.deepEqual(nextState.sectionIds, [11, 12, 13, 307]);
     });
 
     it('groups our sections by id', () => {
       const action = setSections(sections);
       const nextState = reducer(startState, action);
-      assert.deepEqual(Object.keys(nextState.sections), ['11', '12', '307']);
+      assert.deepEqual(Object.keys(nextState.sections), [
+        '11',
+        '12',
+        '13',
+        '307',
+      ]);
       assert.strictEqual(nextState.sections[11].id, 11);
       assert.strictEqual(nextState.sections[12].id, 12);
+      assert.strictEqual(nextState.sections[13].id, 13);
       assert.strictEqual(nextState.sections[307].id, 307);
     });
 
@@ -254,9 +355,15 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('does set selectedSectionId if passed a single section', () => {
-      const action = setSections(sections.slice(0, 1));
+      const action = setSections(sections.slice(0, 1), true);
       const nextState = reducer(startState, action);
       assert.strictEqual(nextState.selectedSectionId, sections[0].id);
+    });
+
+    it('does not set selectedSectionId if passed a single section and autoSelect false', () => {
+      const action = setSections(sections.slice(0, 1), false);
+      const nextState = reducer(startState, action);
+      assert.strictEqual(nextState.selectedSectionId, NO_SECTION);
     });
 
     it('throws rather than let us destroy data', () => {
@@ -314,26 +421,32 @@ describe('teacherSectionsRedux', () => {
     });
   });
 
-  describe('removeSection', () => {
-    const stateWithSections = reducer(initialState, setSections(sections));
+  describe('removeSectionOrThrow', () => {
+    beforeEach(() => {
+      store.dispatch(setSections(sections));
+    });
 
     it('removes sectionid for a persisted section', () => {
       const sectionId = sections[0].id;
-      const action = removeSection(sectionId);
-      const state = reducer(stateWithSections, action);
-      assert.equal(state.sectionIds.includes(sectionId), false);
+      store.dispatch(removeSectionOrThrow(sectionId));
+      assert.equal(
+        getState().teacherSections.sectionIds.includes(sectionId),
+        false
+      );
     });
 
     it('removes a persisted section', () => {
       const sectionId = sections[0].id;
-      const action = removeSection(sectionId);
-      const state = reducer(stateWithSections, action);
-      assert.strictEqual(state.sections[sectionId], undefined);
+      store.dispatch(removeSectionOrThrow(sectionId));
+      assert.strictEqual(
+        getState().teacherSections.sections[sectionId],
+        undefined
+      );
     });
 
     it('doesnt let you remove a non-existent section', () => {
       assert.throws(() => {
-        reducer(stateWithSections, removeSection(1234));
+        store.dispatch(removeSectionOrThrow(1234));
       });
     });
   });
@@ -358,6 +471,9 @@ describe('teacherSectionsRedux', () => {
         courseId: null,
         courseOfferingId: null,
         courseVersionId: null,
+        courseDisplayName: null,
+        unitName: null,
+        unitPosition: null,
         unitId: null,
         hidden: false,
         restrictSection: false,
@@ -390,6 +506,9 @@ describe('teacherSectionsRedux', () => {
         courseId: null,
         courseOfferingId: courseOfferingId,
         courseVersionId: courseVersionId,
+        courseDisplayName: null,
+        unitName: null,
+        unitPosition: null,
         unitId: unitId,
         hidden: false,
         restrictSection: false,
@@ -397,7 +516,6 @@ describe('teacherSectionsRedux', () => {
       });
     });
   });
-
   describe('beginEditingSection', () => {
     it('populates sectionBeingEdited if no section provided', () => {
       assert.isNull(initialState.sectionBeingEdited);
@@ -418,6 +536,9 @@ describe('teacherSectionsRedux', () => {
         courseId: null,
         courseOfferingId: null,
         courseVersionId: null,
+        courseDisplayName: null,
+        unitName: null,
+        unitPosition: null,
         unitId: null,
         hidden: false,
         restrictSection: false,
@@ -445,7 +566,18 @@ describe('teacherSectionsRedux', () => {
         sharingDisabled: false,
         courseOfferingId: 1,
         courseVersionId: 1,
-        unitId: null,
+        courseDisplayName: 'Course A',
+        course: {
+          courseOfferingId: 1,
+          unitId: 12,
+          versionId: 2017,
+          lessonExtrasAvailable: true,
+          textToSpeechEnabled: false,
+        },
+        unitName: 'coursea-2017',
+        unitPosition: 1,
+        unitId: 12,
+        isAssignedSingleUnitCourse: undefined,
         courseId: undefined,
         createdAt: createdAt,
         studentCount: 1,
@@ -458,18 +590,30 @@ describe('teacherSectionsRedux', () => {
           {
             id: 2,
             status: 'accepted',
-            instructor_name: 'teacher',
-            instructor_email: 'teacher@code.org',
+            instructorName: 'teacher',
+            instructorEmail: 'teacher@code.org',
           },
           {
             id: 3,
             status: 'invited',
-            instructor_name: 'coteacher',
-            instructor_email: 'coteacher@code.org',
+            instructorName: 'coteacher',
+            instructorEmail: 'coteacher@code.org',
           },
         ],
+        primaryInstructor: {
+          name: 'teacher',
+          email: 'teacher@code.org',
+          ltiRosterSyncEnabled: false,
+        },
         syncEnabled: undefined,
         aiTutorEnabled: undefined,
+        anyStudentHasProgress: undefined,
+        atRiskAgeGatedDate: null,
+        atRiskAgeGatedUsState: undefined,
+        avatar_color: 1,
+        avatar_emoji: 1,
+        assignedAiChatToolsDependency: undefined,
+        aiChatAccessLevel: undefined,
       });
     });
   });
@@ -622,12 +766,15 @@ describe('teacherSectionsRedux', () => {
       code: 'BCDFGH',
       courseOfferingId: null,
       courseVersionId: null,
+      courseDisplayName: undefined,
       unitId: null,
       createdAt: createdAt,
       hidden: false,
       restrict_section: false,
       post_milestone_disabled: false,
       ai_tutor_enabled: false,
+      at_risk_age_gated_date: undefined,
+      at_risk_age_gated_us_state: undefined,
     };
 
     function successResponse(customProps = {}) {
@@ -753,7 +900,19 @@ describe('teacherSectionsRedux', () => {
           login_type: 'picture',
           grades: ['3'],
           participantType: 'student',
-          section_instructors: [],
+          sectionInstructors: [
+            {
+              id: 1,
+              status: 'accepted',
+              instructor_name: 'teacher',
+              instructor_email: 'teacher@code.org',
+            },
+          ],
+          primaryInstructor: {
+            name: 'teacher',
+            email: 'teacher@code.org',
+            ltiRosterSyncEnabled: false,
+          },
         })
       );
 
@@ -780,7 +939,12 @@ describe('teacherSectionsRedux', () => {
           code: 'BCDFGH',
           courseOfferingId: undefined,
           courseVersionId: undefined,
+          courseDisplayName: undefined,
+          unitName: undefined,
+          unitPosition: undefined,
           unitId: undefined,
+          course: null,
+          isAssignedSingleUnitCourse: undefined,
           courseId: undefined,
           createdAt: createdAt,
           hidden: false,
@@ -788,9 +952,28 @@ describe('teacherSectionsRedux', () => {
           postMilestoneDisabled: false,
           codeReviewExpiresAt: null,
           isAssignedCSA: undefined,
-          sectionInstructors: [],
+          sectionInstructors: [
+            {
+              id: 1,
+              status: 'accepted',
+              instructorName: 'teacher',
+              instructorEmail: 'teacher@code.org',
+            },
+          ],
+          primaryInstructor: {
+            name: 'teacher',
+            email: 'teacher@code.org',
+            ltiRosterSyncEnabled: false,
+          },
           syncEnabled: undefined,
           aiTutorEnabled: false,
+          anyStudentHasProgress: undefined,
+          atRiskAgeGatedDate: null,
+          atRiskAgeGatedUsState: undefined,
+          avatar_color: undefined,
+          avatar_emoji: undefined,
+          assignedAiChatToolsDependency: undefined,
+          aiChatAccessLevel: undefined,
         },
       });
     });
@@ -933,7 +1116,7 @@ describe('teacherSectionsRedux', () => {
 
     it('sets courseOfferings from server responses', () => {
       const promise = store.dispatch(asyncLoadSectionData());
-      expect(state().courseOfferings).to.deep.equal({});
+      expect(state().courseOfferings).to.deep.equal([]);
 
       expect(server.requests).to.have.length(3);
       server.respondWith('GET', '/dashboardapi/sections', successResponse());
@@ -958,7 +1141,7 @@ describe('teacherSectionsRedux', () => {
 
     it('sets availableParticipantTypes from server responses', () => {
       const promise = store.dispatch(asyncLoadSectionData());
-      expect(state().courseOfferings).to.deep.equal({});
+      expect(state().courseOfferings).to.deep.equal([]);
 
       expect(server.requests).to.have.length(3);
       server.respondWith('GET', '/dashboardapi/sections', successResponse());
@@ -981,7 +1164,7 @@ describe('teacherSectionsRedux', () => {
 
     it('sets students from server responses', () => {
       const promise = store.dispatch(asyncLoadSectionData('id'));
-      expect(state().courseOfferings).to.deep.equal({});
+      expect(state().courseOfferings).to.deep.equal([]);
 
       expect(server.requests).to.have.length(4);
       server.respondWith('GET', '/dashboardapi/sections', successResponse());
@@ -1072,34 +1255,40 @@ describe('teacherSectionsRedux', () => {
     const stateWithSections = reducer(stateWithAssigns, setSections(sections));
     const stateWithUnassignedSection = reducer(stateWithSections, {
       type: EDIT_SECTION_SUCCESS,
-      sectionId: '12',
-      serverSection: {
-        ...sections[1],
-        course_offering_id: null,
-        course_version_id: null,
-        unit_id: null,
+      payload: {
+        sectionId: '12',
+        serverSection: {
+          ...sections[1],
+          course_offering_id: null,
+          course_version_id: null,
+          unit_id: null,
+        },
       },
     });
     const stateWithInvalidUnitAssignment = reducer(stateWithSections, {
       type: EDIT_SECTION_SUCCESS,
-      sectionId: '12',
-      serverSection: {
-        ...sections[1],
-        course_offering_id: 2,
-        course_version_id: 3,
-        unit_id: 9999,
+      payload: {
+        sectionId: '12',
+        serverSection: {
+          ...sections[1],
+          course_offering_id: 2,
+          course_version_id: 3,
+          unit_id: 9999,
+        },
       },
     });
     const stateWithInvalidCourseOfferingAssignment = reducer(
       stateWithSections,
       {
         type: EDIT_SECTION_SUCCESS,
-        sectionId: '12',
-        serverSection: {
-          ...sections[1],
-          course_offering_id: 9999,
-          course_version_id: 9999,
-          unit_id: null,
+        payload: {
+          sectionId: '12',
+          serverSection: {
+            ...sections[1],
+            course_offering_id: 9999,
+            course_version_id: 9999,
+            unit_id: null,
+          },
         },
       }
     );
@@ -1164,7 +1353,10 @@ describe('teacherSectionsRedux', () => {
         stateWithUnassignedSection.courseOfferings,
         assignedSectionWithUnit
       );
-      assert.deepEqual(paths, ['/courses/csa-2022', '/s/csa1-2022']);
+      assert.deepEqual(paths, [
+        '/courses/csa-2022',
+        '/courses/csa-2022/units/1',
+      ]);
     });
 
     it('assignmentPaths returns empty array if unassigned', () => {
@@ -1348,7 +1540,7 @@ describe('teacherSectionsRedux', () => {
     it('clears the classroom list', () => {
       store.dispatch({
         type: IMPORT_ROSTER_FLOW_LIST_LOADED,
-        classrooms: [1, 2, 3],
+        payload: [1, 2, 3],
       });
       expect(getState().teacherSections.classrooms).to.deep.equal([1, 2, 3]);
       store.dispatch(cancelImportRosterFlow());
@@ -1357,11 +1549,16 @@ describe('teacherSectionsRedux', () => {
   });
 
   describe('the importOrUpdateRoster action', () => {
-    let server;
+    let server, fetchSpy;
     const TEST_COURSE_ID = 'test-course-id';
     const TEST_COURSE_NAME = 'test-course-name';
 
     beforeEach(() => {
+      fetchSpy = sinon
+        .stub(HttpClient, 'fetchJson')
+        .returns(
+          Promise.resolve({response: new Response(), value: {aif: false}})
+        );
       server = sinon.fakeServer.create();
       // We have chained server requests separated by promises in these
       // tests, so have the fake server respond immediately becaue it's
@@ -1395,13 +1592,10 @@ describe('teacherSectionsRedux', () => {
         successResponse({availableParticipantTypes: ['student']})
       );
     });
-    afterEach(() => server.restore());
-
-    const successResponse = (body = {}) => [
-      200,
-      {'Content-Type': 'application/json'},
-      JSON.stringify(body),
-    ];
+    afterEach(() => {
+      server.restore();
+      fetchSpy.restore();
+    });
 
     const withGoogle = () =>
       store.dispatch(setRosterProvider(OAuthSectionTypes.google_classroom));
@@ -1412,7 +1606,7 @@ describe('teacherSectionsRedux', () => {
       withGoogle();
       store.dispatch({
         type: IMPORT_ROSTER_FLOW_LIST_LOADED,
-        classrooms: [1, 2, 3],
+        payload: [1, 2, 3],
       });
       expect(getState().teacherSections.classrooms).to.deep.equal([1, 2, 3]);
 
@@ -1664,6 +1858,10 @@ describe('teacherSectionsRedux', () => {
           name: 'My Third Section',
         },
         {
+          id: 13,
+          name: 'My Single-Unit Course Section',
+        },
+        {
           id: 12,
           name: 'My Other Section',
         },
@@ -1681,12 +1879,13 @@ describe('teacherSectionsRedux', () => {
       const sectionState = reducer(initialState, setSections(sections));
       const state = reducer(sectionState, setCourseOfferings(courseOfferings));
 
-      const data = getSectionRows({teacherSections: state}, [11, 12]);
+      const data = getSectionRows({teacherSections: state}, [11, 12, 13]);
       const expected = [
         {
           id: 11,
           name: 'My Section',
           courseVersionName: 'csd-2017',
+          courseDisplayName: 'CS Discoveries 2017',
           loginType: 'picture',
           loginTypeName: undefined,
           studentCount: 10,
@@ -1698,11 +1897,13 @@ describe('teacherSectionsRedux', () => {
           hidden: false,
           assignmentNames: ['CS Discoveries 2017'],
           assignmentPaths: ['/courses/csd-2017'],
+          isAssignedSingleUnitCourse: undefined,
         },
         {
           id: 12,
           name: 'My Other Section',
           courseVersionName: 'coursea-2017',
+          courseDisplayName: 'Course A',
           loginType: 'picture',
           loginTypeName: undefined,
           studentCount: 1,
@@ -1713,7 +1914,26 @@ describe('teacherSectionsRedux', () => {
           providerManaged: false,
           hidden: false,
           assignmentNames: ['Course A'],
-          assignmentPaths: ['/s/coursea-2017'],
+          assignmentPaths: ['/courses/coursea-2017'],
+          isAssignedSingleUnitCourse: undefined,
+        },
+        {
+          id: 13,
+          name: 'My Single-Unit Course Section',
+          courseVersionName: 'Single Unit Course 2026',
+          courseDisplayName: 'Single Unit Course',
+          loginType: 'picture',
+          loginTypeName: undefined,
+          studentCount: 1,
+          code: 'FPNZLN',
+          courseOfferingsAreLoaded: true,
+          grades: ['11'],
+          participantType: 'student',
+          providerManaged: false,
+          hidden: false,
+          assignmentNames: ['Single Unit Course 2026'],
+          assignmentPaths: ['/courses/single-unit-course-2026'],
+          isAssignedSingleUnitCourse: true,
         },
       ];
       assert.deepEqual(data, expected);
@@ -1737,8 +1957,45 @@ describe('teacherSectionsRedux', () => {
     });
   });
 
+  describe('setSectionOrder', () => {
+    let putSpy;
+
+    beforeEach(() => {
+      putSpy = sinon
+        .stub(HttpClient, 'put')
+        .returns(Promise.resolve(new Response()));
+    });
+
+    afterEach(() => {
+      putSpy.restore();
+    });
+
+    it('sets the order of sections', () => {
+      const state = reducer(initialState, setSections(sections));
+      const orderedSections = [11, 12, 13, 307];
+      const newState = reducer(state, setSectionOrder(orderedSections));
+      assert.deepEqual(newState.sectionOrder, orderedSections);
+    });
+
+    it('saves the order of sections to the BE if order is different', () => {
+      const state = reducer(initialState, setSections(sections));
+      const orderedSections = [11, 12, 13];
+      const newState = reducer(state, setSectionOrder(orderedSections, true));
+      assert.deepEqual(newState.sectionOrder, [307, ...orderedSections]);
+      expect(putSpy).to.be.called.once;
+    });
+
+    it('does not save the order of sections to the BE if order is the same', () => {
+      const state = reducer(initialState, setSections(sections));
+      const orderedSections = [11, 12, 13, 307];
+      const newState = reducer(state, setSectionOrder(orderedSections, true));
+      assert.deepEqual(newState.sectionOrder, orderedSections);
+      expect(putSpy).not.to.be.called;
+    });
+  });
+
   describe('AnalyticsReporter events', () => {
-    let analyticsSpy, jqueryStub;
+    let analyticsSpy, jqueryStub, fetchSpy;
 
     beforeEach(() => {
       store.dispatch(setSections(sections));
@@ -1746,11 +2003,16 @@ describe('teacherSectionsRedux', () => {
 
       jqueryStub = sinon.stub($, 'ajax');
       jqueryStub.returns({done: sinon.stub().returns({fail: sinon.stub()})});
+      fetchSpy = sinon.stub(HttpClient, 'fetchJson');
+      fetchSpy.returns(
+        Promise.resolve({response: new Response(), value: {aif: false}})
+      );
     });
 
     afterEach(() => {
       analyticsSpy.restore();
       jqueryStub.restore();
+      fetchSpy.restore();
     });
 
     it('sends an event when course offering is assigned', () => {
@@ -1796,7 +2058,7 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('doesnt send an event when course offering is unchanged', () => {
-      jest.mock('@cdo/apps/lib/util/firehose');
+      jest.mock('@cdo/apps/metrics/firehose');
       store.dispatch(assignToSection(11, 2, 2, 3, null));
       expect(analyticsSpy).to.not.be.called;
     });

@@ -1,0 +1,10 @@
+/dashboard/public/blockly
+/dashboard/public/code-studio
+/dashboard/public/shared
+/dashboard/public/styleguide
+/dashboard/public/assets
+/i18n/locales/*/codeorg-markdown/
+/i18n/locales/*/curriculum_content/
+/i18n/locales/*/piskel/
+/i18n/locales/*/standards/
+/i18n/locales/*/docs/

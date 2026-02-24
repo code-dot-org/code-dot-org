@@ -23,7 +23,7 @@ class EmailDeliveryInterceptorTest < ActiveSupport::TestCase
     ]
     Cdo::Metrics.expects(:push).with('ActionMailer', expected_metric)
 
-    teacher = build :teacher, email: 'teacher@gmail.com'
+    teacher = build(:teacher, email: 'teacher@gmail.com')
     TeacherMailer.verified_teacher_email(teacher).deliver_now
   end
 end

@@ -1,3 +1,4 @@
+import Button from '@code-dot-org/component-library/button';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -6,7 +7,6 @@ import InlineFeedback from '@cdo/apps/templates/instructions/InlineFeedback';
 import InlineHint from '@cdo/apps/templates/instructions/InlineHint';
 import Instructions from '@cdo/apps/templates/instructions/Instructions';
 import {UnconnectedInstructionsCsfMiddleCol as InstructionsCsfMiddleCol} from '@cdo/apps/templates/instructions/InstructionsCsfMiddleCol';
-import LegacyButton from '@cdo/apps/templates/LegacyButton';
 
 const DEFAULT_PROPS = {
   dismissHintPrompt: () => {},
@@ -101,15 +101,15 @@ describe('InstructionsCsfMiddleCol', () => {
     expect(wrapper.find('.secondary-instructions')).toHaveLength(1);
   });
 
-  it('display LegacyButton when overlayVisible', () => {
+  it('display Button when overlayVisible', () => {
     const wrapper = setUp({overlayVisible: true});
-    expect(wrapper.find(LegacyButton)).toHaveLength(1);
+    expect(wrapper.find(Button)).toHaveLength(1);
   });
 
-  it('calls hideOverlay when overlayVisible and LegacyButton is clicked', () => {
+  it('calls hideOverlay when overlayVisible and Button is clicked', () => {
     const hideOverlaySpy = jest.fn();
     const wrapper = setUp({overlayVisible: true, hideOverlay: hideOverlaySpy});
-    wrapper.find(LegacyButton).simulate('click');
+    wrapper.find(Button).simulate('click');
     expect(hideOverlaySpy).toHaveBeenCalledTimes(1);
   });
 

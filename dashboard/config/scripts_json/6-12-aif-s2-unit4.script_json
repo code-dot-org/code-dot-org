@@ -1,0 +1,3439 @@
+{
+  "script": {
+    "name": "6-12-aif-s2-unit4",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-12-11 16:40:48 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "6-12-aif-s2-unit4"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Intro to Loops",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Counted Repetition",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Open-Ended Repetition",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Displaying Arrays as List Views",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Displaying Objects as Cards",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Filtering and Transparency",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Pure Functions vs Side Effects",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Copy, Don't Mutate",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Inclusive Filters and Clear Labels",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Schema Design for Simples Features",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "Interactive Data Dashboard",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "ac49600a-c7b6-4a7a-b000-2b2dc87751c6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ac49600a-c7b6-4a7a-b000-2b2dc87751c6",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
+    },
+    {
+      "key": "c140044e-d7ea-4ba0-81da-771b6bfb2b5d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c140044e-d7ea-4ba0-81da-771b6bfb2b5d",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
+    },
+    {
+      "key": "41d250f2-2f91-4622-b533-968937c0cba3",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "41d250f2-2f91-4622-b533-968937c0cba3",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
+    },
+    {
+      "key": "bc4fcb7c-aa07-4011-94bd-001250780455",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bc4fcb7c-aa07-4011-94bd-001250780455",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
+    },
+    {
+      "key": "3f05b847-600a-4378-b556-7d2f4baff52b",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3f05b847-600a-4378-b556-7d2f4baff52b",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
+    },
+    {
+      "key": "53a91257-dfcc-4c84-ac89-d82e87143f66",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "53a91257-dfcc-4c84-ac89-d82e87143f66",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
+    },
+    {
+      "key": "e880bf5a-204a-4c90-a26a-42e1d1095057",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e880bf5a-204a-4c90-a26a-42e1d1095057",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
+    },
+    {
+      "key": "f843540d-d6bb-416c-9645-aabc2dffab21",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f843540d-d6bb-416c-9645-aabc2dffab21",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
+    },
+    {
+      "key": "b5637103-0c82-4449-acce-3cf870c4a7a4",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b5637103-0c82-4449-acce-3cf870c4a7a4",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
+    },
+    {
+      "key": "f9a0d909-c9b6-466d-a522-4a5214f6b217",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f9a0d909-c9b6-466d-a522-4a5214f6b217",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
+    },
+    {
+      "key": "215bbb35-75c2-4ecc-9b47-dec551e31ab1",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "215bbb35-75c2-4ecc-9b47-dec551e31ab1",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
+    },
+    {
+      "key": "9b0a14cd-536a-4a83-95b3-134650884df1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9b0a14cd-536a-4a83-95b3-134650884df1",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
+    },
+    {
+      "key": "65fb54a1-a4af-4412-9ab5-e02311c5d248",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "65fb54a1-a4af-4412-9ab5-e02311c5d248",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
+    },
+    {
+      "key": "f13bf2e3-df00-4806-8c89-25c80778eb64",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f13bf2e3-df00-4806-8c89-25c80778eb64",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
+    },
+    {
+      "key": "8f1a2321-8942-4758-8a96-b4710839cf2d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8f1a2321-8942-4758-8a96-b4710839cf2d",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
+    },
+    {
+      "key": "695d822d-8fd2-424b-ab93-729612f79bd9",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "695d822d-8fd2-424b-ab93-729612f79bd9",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
+    },
+    {
+      "key": "0dbda20e-8a44-484d-95fd-1af7cdcc8a78",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0dbda20e-8a44-484d-95fd-1af7cdcc8a78",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
+    },
+    {
+      "key": "30c84813-7b99-40a8-b1e5-f3007b2b8458",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "30c84813-7b99-40a8-b1e5-f3007b2b8458",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
+    },
+    {
+      "key": "7f343a91-66e5-4526-9e2a-eb9284f0c81c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7f343a91-66e5-4526-9e2a-eb9284f0c81c",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
+    },
+    {
+      "key": "c57d2230-ab14-4207-bb1f-83a716b5d529",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c57d2230-ab14-4207-bb1f-83a716b5d529",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
+    },
+    {
+      "key": "1d016342-a0be-48bb-95a5-f0291c9a2556",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1d016342-a0be-48bb-95a5-f0291c9a2556",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "9dd4f6a7-0fe7-4d9a-9d1a-29307ca5abe1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9dd4f6a7-0fe7-4d9a-9d1a-29307ca5abe1",
+        "lesson_activity.key": "ac49600a-c7b6-4a7a-b000-2b2dc87751c6"
+      }
+    },
+    {
+      "key": "7910f7c8-33d4-4a57-ae93-7e0e44746e25",
+      "position": 2,
+      "properties": {
+        "progression_name": "Vocab: Iteration"
+      },
+      "seeding_key": {
+        "activity_section.key": "7910f7c8-33d4-4a57-ae93-7e0e44746e25",
+        "lesson_activity.key": "ac49600a-c7b6-4a7a-b000-2b2dc87751c6"
+      }
+    },
+    {
+      "key": "933997b2-6e59-4939-8365-1058eb73874a",
+      "position": 3,
+      "properties": {
+        "progression_name": "For Loop Flowchart"
+      },
+      "seeding_key": {
+        "activity_section.key": "933997b2-6e59-4939-8365-1058eb73874a",
+        "lesson_activity.key": "ac49600a-c7b6-4a7a-b000-2b2dc87751c6"
+      }
+    },
+    {
+      "key": "8a4cd436-2c97-47ac-a840-92af3fcaeba9",
+      "position": 4,
+      "properties": {
+        "progression_name": "Vocab: For Loop"
+      },
+      "seeding_key": {
+        "activity_section.key": "8a4cd436-2c97-47ac-a840-92af3fcaeba9",
+        "lesson_activity.key": "ac49600a-c7b6-4a7a-b000-2b2dc87751c6"
+      }
+    },
+    {
+      "key": "9d8f1bf3-62b9-46d6-ac87-746903b8f2df",
+      "position": 5,
+      "properties": {
+        "progression_name": "While Loop Flowchart"
+      },
+      "seeding_key": {
+        "activity_section.key": "9d8f1bf3-62b9-46d6-ac87-746903b8f2df",
+        "lesson_activity.key": "ac49600a-c7b6-4a7a-b000-2b2dc87751c6"
+      }
+    },
+    {
+      "key": "8867d312-938c-42bb-8656-a6afd01e4638",
+      "position": 6,
+      "properties": {
+        "progression_name": "Vocab: While Loop"
+      },
+      "seeding_key": {
+        "activity_section.key": "8867d312-938c-42bb-8656-a6afd01e4638",
+        "lesson_activity.key": "ac49600a-c7b6-4a7a-b000-2b2dc87751c6"
+      }
+    },
+    {
+      "key": "ff186467-99d8-4851-8816-f0bbe81b36e0",
+      "position": 7,
+      "properties": {
+        "progression_name": "Loops in Pseudocode"
+      },
+      "seeding_key": {
+        "activity_section.key": "ff186467-99d8-4851-8816-f0bbe81b36e0",
+        "lesson_activity.key": "ac49600a-c7b6-4a7a-b000-2b2dc87751c6"
+      }
+    },
+    {
+      "key": "28c5ae56-6361-4deb-a189-7a4110f59074",
+      "position": 1,
+      "properties": {
+        "progression_name": "Vocab: Loop Variable"
+      },
+      "seeding_key": {
+        "activity_section.key": "28c5ae56-6361-4deb-a189-7a4110f59074",
+        "lesson_activity.key": "c140044e-d7ea-4ba0-81da-771b6bfb2b5d"
+      }
+    },
+    {
+      "key": "dc346cbc-7336-4fde-9fc3-18bf000da92a",
+      "position": 1,
+      "properties": {
+        "progression_name": "Broken Password Generator"
+      },
+      "seeding_key": {
+        "activity_section.key": "dc346cbc-7336-4fde-9fc3-18bf000da92a",
+        "lesson_activity.key": "41d250f2-2f91-4622-b533-968937c0cba3"
+      }
+    },
+    {
+      "key": "72cbec49-d50c-47c5-b4a5-90f5b11b4aa7",
+      "position": 1,
+      "properties": {
+        "progression_name": "Vocab: Off-By-One Error"
+      },
+      "seeding_key": {
+        "activity_section.key": "72cbec49-d50c-47c5-b4a5-90f5b11b4aa7",
+        "lesson_activity.key": "bc4fcb7c-aa07-4011-94bd-001250780455"
+      }
+    },
+    {
+      "key": "c5da7ab9-ad39-4b9e-be8c-edecbe53956b",
+      "position": 1,
+      "properties": {
+        "progression_name": "Add Counted Repetition"
+      },
+      "seeding_key": {
+        "activity_section.key": "c5da7ab9-ad39-4b9e-be8c-edecbe53956b",
+        "lesson_activity.key": "3f05b847-600a-4378-b556-7d2f4baff52b"
+      }
+    },
+    {
+      "key": "050996b5-9958-49eb-8743-ddecde2262ec",
+      "position": 1,
+      "properties": {
+        "progression_name": "Debugging a While Loop Flowchart"
+      },
+      "seeding_key": {
+        "activity_section.key": "050996b5-9958-49eb-8743-ddecde2262ec",
+        "lesson_activity.key": "53a91257-dfcc-4c84-ac89-d82e87143f66"
+      }
+    },
+    {
+      "key": "4fbf6648-10e0-49d1-9ae7-02c693394469",
+      "position": 2,
+      "properties": {
+        "progression_name": "Vocab: State Variable"
+      },
+      "seeding_key": {
+        "activity_section.key": "4fbf6648-10e0-49d1-9ae7-02c693394469",
+        "lesson_activity.key": "53a91257-dfcc-4c84-ac89-d82e87143f66"
+      }
+    },
+    {
+      "key": "ba6e1280-c4e3-46ed-997a-5f4e880277f0",
+      "position": 3,
+      "properties": {
+        "progression_name": "Vocab: Infinite Loop"
+      },
+      "seeding_key": {
+        "activity_section.key": "ba6e1280-c4e3-46ed-997a-5f4e880277f0",
+        "lesson_activity.key": "53a91257-dfcc-4c84-ac89-d82e87143f66"
+      }
+    },
+    {
+      "key": "5de3e129-c389-446f-aaaf-ab3e5fdf3a4f",
+      "position": 4,
+      "properties": {
+        "progression_name": "Debugging While Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "5de3e129-c389-446f-aaaf-ab3e5fdf3a4f",
+        "lesson_activity.key": "53a91257-dfcc-4c84-ac89-d82e87143f66"
+      }
+    },
+    {
+      "key": "6b53aa01-d22b-4d4e-994f-ca0939fd8f78",
+      "position": 5,
+      "properties": {
+        "progression_name": "Keep Going with While Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "6b53aa01-d22b-4d4e-994f-ca0939fd8f78",
+        "lesson_activity.key": "53a91257-dfcc-4c84-ac89-d82e87143f66"
+      }
+    },
+    {
+      "key": "ae3fc823-c910-4fb0-bac1-6aeb400fb549",
+      "position": 1,
+      "properties": {
+        "progression_name": "Vocab: Transparency Cue"
+      },
+      "seeding_key": {
+        "activity_section.key": "ae3fc823-c910-4fb0-bac1-6aeb400fb549",
+        "lesson_activity.key": "e880bf5a-204a-4c90-a26a-42e1d1095057"
+      }
+    },
+    {
+      "key": "c6f10145-9e40-45d9-8abf-b24f9f696a01",
+      "position": 1,
+      "properties": {
+        "progression_name": "Adding Transparency"
+      },
+      "seeding_key": {
+        "activity_section.key": "c6f10145-9e40-45d9-8abf-b24f9f696a01",
+        "lesson_activity.key": "f843540d-d6bb-416c-9645-aabc2dffab21"
+      }
+    },
+    {
+      "key": "887b2d94-fbf8-4b61-82ee-43d3230a7d6b",
+      "position": 1,
+      "properties": {
+        "progression_name": "Build a Display Pipeline"
+      },
+      "seeding_key": {
+        "activity_section.key": "887b2d94-fbf8-4b61-82ee-43d3230a7d6b",
+        "lesson_activity.key": "b5637103-0c82-4449-acce-3cf870c4a7a4"
+      }
+    },
+    {
+      "key": "66f2ac16-d232-4780-b138-7df00953a0a8",
+      "position": 1,
+      "properties": {
+        "progression_name": "Vocab: Pipeline"
+      },
+      "seeding_key": {
+        "activity_section.key": "66f2ac16-d232-4780-b138-7df00953a0a8",
+        "lesson_activity.key": "f9a0d909-c9b6-466d-a522-4a5214f6b217"
+      }
+    },
+    {
+      "key": "4d726da0-cbb2-44b9-91a0-39c8fe2674ac",
+      "position": 1,
+      "properties": {
+        "progression_name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "4d726da0-cbb2-44b9-91a0-39c8fe2674ac",
+        "lesson_activity.key": "215bbb35-75c2-4ecc-9b47-dec551e31ab1"
+      }
+    },
+    {
+      "key": "b7e4aaa7-a142-486a-b06b-656c0068ed86",
+      "position": 1,
+      "properties": {
+        "progression_name": "From Schema to Layout"
+      },
+      "seeding_key": {
+        "activity_section.key": "b7e4aaa7-a142-486a-b06b-656c0068ed86",
+        "lesson_activity.key": "9b0a14cd-536a-4a83-95b3-134650884df1"
+      }
+    },
+    {
+      "key": "f2f56267-f5e0-452b-bd1e-a6c737b0f9da",
+      "position": 2,
+      "properties": {
+        "progression_name": "Vocab: Fallback Value"
+      },
+      "seeding_key": {
+        "activity_section.key": "f2f56267-f5e0-452b-bd1e-a6c737b0f9da",
+        "lesson_activity.key": "9b0a14cd-536a-4a83-95b3-134650884df1"
+      }
+    },
+    {
+      "key": "cab37595-bd72-4757-a88e-edb4aaafb978",
+      "position": 3,
+      "properties": {
+        "progression_name": "Displaying a Schema with Cards"
+      },
+      "seeding_key": {
+        "activity_section.key": "cab37595-bd72-4757-a88e-edb4aaafb978",
+        "lesson_activity.key": "9b0a14cd-536a-4a83-95b3-134650884df1"
+      }
+    },
+    {
+      "key": "c501844b-280c-45af-a940-e9363f315938",
+      "position": 4,
+      "properties": {
+        "progression_name": "Free Response: Bias & Transparency Labels"
+      },
+      "seeding_key": {
+        "activity_section.key": "c501844b-280c-45af-a940-e9363f315938",
+        "lesson_activity.key": "9b0a14cd-536a-4a83-95b3-134650884df1"
+      }
+    },
+    {
+      "key": "875e8f2c-6475-4dfb-8b23-ed108ef52db6",
+      "position": 1,
+      "properties": {
+        "progression_name": "Inclusive and Transparent Filters"
+      },
+      "seeding_key": {
+        "activity_section.key": "875e8f2c-6475-4dfb-8b23-ed108ef52db6",
+        "lesson_activity.key": "65fb54a1-a4af-4412-9ab5-e02311c5d248"
+      }
+    },
+    {
+      "key": "bcd3c835-c416-46f7-969a-b69dc6210523",
+      "position": 2,
+      "properties": {
+        "progression_name": "Vocab: Active Filter"
+      },
+      "seeding_key": {
+        "activity_section.key": "bcd3c835-c416-46f7-969a-b69dc6210523",
+        "lesson_activity.key": "65fb54a1-a4af-4412-9ab5-e02311c5d248"
+      }
+    },
+    {
+      "key": "c74d0cc5-1ec3-4567-8b9c-6fb2ecf8d7c5",
+      "position": 3,
+      "properties": {
+        "progression_name": "Build Filtered Volunteer Work Search "
+      },
+      "seeding_key": {
+        "activity_section.key": "c74d0cc5-1ec3-4567-8b9c-6fb2ecf8d7c5",
+        "lesson_activity.key": "65fb54a1-a4af-4412-9ab5-e02311c5d248"
+      }
+    },
+    {
+      "key": "b8e5b798-e5e4-433f-ae06-2b9d2b650a5d",
+      "position": 4,
+      "properties": {
+        "progression_name": "Vocab: Filter Bubble"
+      },
+      "seeding_key": {
+        "activity_section.key": "b8e5b798-e5e4-433f-ae06-2b9d2b650a5d",
+        "lesson_activity.key": "65fb54a1-a4af-4412-9ab5-e02311c5d248"
+      }
+    },
+    {
+      "key": "f4dcc076-d08b-4f1e-be9c-99b2e9b65a31",
+      "position": 1,
+      "properties": {
+        "progression_name": "Comparing Methods"
+      },
+      "seeding_key": {
+        "activity_section.key": "f4dcc076-d08b-4f1e-be9c-99b2e9b65a31",
+        "lesson_activity.key": "f13bf2e3-df00-4806-8c89-25c80778eb64"
+      }
+    },
+    {
+      "key": "a9b8a0b7-1d03-4e69-88b6-abc37fd1efe5",
+      "position": 2,
+      "properties": {
+        "progression_name": "Vocab: Pure Function"
+      },
+      "seeding_key": {
+        "activity_section.key": "a9b8a0b7-1d03-4e69-88b6-abc37fd1efe5",
+        "lesson_activity.key": "f13bf2e3-df00-4806-8c89-25c80778eb64"
+      }
+    },
+    {
+      "key": "2f575074-0cfc-4d00-a27a-20e8a70f3285",
+      "position": 3,
+      "properties": {
+        "progression_name": "Vocab: Side Effect"
+      },
+      "seeding_key": {
+        "activity_section.key": "2f575074-0cfc-4d00-a27a-20e8a70f3285",
+        "lesson_activity.key": "f13bf2e3-df00-4806-8c89-25c80778eb64"
+      }
+    },
+    {
+      "key": "716aa983-25fe-4e4b-805f-388166b83004",
+      "position": 4,
+      "properties": {
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "716aa983-25fe-4e4b-805f-388166b83004",
+        "lesson_activity.key": "f13bf2e3-df00-4806-8c89-25c80778eb64"
+      }
+    },
+    {
+      "key": "6e3cdf00-06f9-4087-9340-70cc8ed54d20",
+      "position": 5,
+      "properties": {
+        "progression_name": "Debugging Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "6e3cdf00-06f9-4087-9340-70cc8ed54d20",
+        "lesson_activity.key": "f13bf2e3-df00-4806-8c89-25c80778eb64"
+      }
+    },
+    {
+      "key": "6a8c7d62-52b1-4bc5-b0c9-1e218b97a5b6",
+      "position": 1,
+      "properties": {
+        "progression_name": "Reset and Undo User Journey"
+      },
+      "seeding_key": {
+        "activity_section.key": "6a8c7d62-52b1-4bc5-b0c9-1e218b97a5b6",
+        "lesson_activity.key": "8f1a2321-8942-4758-8a96-b4710839cf2d"
+      }
+    },
+    {
+      "key": "de8cee48-8126-45d0-9583-06a47857c53e",
+      "position": 1,
+      "properties": {
+        "progression_name": "Fix the Reset Button"
+      },
+      "seeding_key": {
+        "activity_section.key": "de8cee48-8126-45d0-9583-06a47857c53e",
+        "lesson_activity.key": "695d822d-8fd2-424b-ab93-729612f79bd9"
+      }
+    },
+    {
+      "key": "03447544-39f0-477e-9295-0509bab484c2",
+      "position": 1,
+      "properties": {
+        "progression_name": "Build an Undo History Stack"
+      },
+      "seeding_key": {
+        "activity_section.key": "03447544-39f0-477e-9295-0509bab484c2",
+        "lesson_activity.key": "0dbda20e-8a44-484d-95fd-1af7cdcc8a78"
+      }
+    },
+    {
+      "key": "5616e279-c84b-46ce-bbeb-1db4a27af436",
+      "position": 1,
+      "properties": {
+        "progression_name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "5616e279-c84b-46ce-bbeb-1db4a27af436",
+        "lesson_activity.key": "30c84813-7b99-40a8-b1e5-f3007b2b8458"
+      }
+    },
+    {
+      "key": "bc36035b-ca1e-43d9-84f9-52e983c538a7",
+      "position": 1,
+      "properties": {
+        "progression_name": "Explore the Filters"
+      },
+      "seeding_key": {
+        "activity_section.key": "bc36035b-ca1e-43d9-84f9-52e983c538a7",
+        "lesson_activity.key": "7f343a91-66e5-4526-9e2a-eb9284f0c81c"
+      }
+    },
+    {
+      "key": "10d89380-23dd-493d-b1e5-38b7c378aa30",
+      "position": 2,
+      "properties": {
+        "progression_name": "Vocab: Threshold"
+      },
+      "seeding_key": {
+        "activity_section.key": "10d89380-23dd-493d-b1e5-38b7c378aa30",
+        "lesson_activity.key": "7f343a91-66e5-4526-9e2a-eb9284f0c81c"
+      }
+    },
+    {
+      "key": "ed1b3b62-0983-466c-9c6a-ffa6a25025ba",
+      "position": 3,
+      "properties": {
+        "progression_name": "Vocab: Fallback Label"
+      },
+      "seeding_key": {
+        "activity_section.key": "ed1b3b62-0983-466c-9c6a-ffa6a25025ba",
+        "lesson_activity.key": "7f343a91-66e5-4526-9e2a-eb9284f0c81c"
+      }
+    },
+    {
+      "key": "57773caf-b71c-444d-b790-cd5c9b4f3a79",
+      "position": 4,
+      "properties": {
+        "progression_name": "Redesign the Filters"
+      },
+      "seeding_key": {
+        "activity_section.key": "57773caf-b71c-444d-b790-cd5c9b4f3a79",
+        "lesson_activity.key": "7f343a91-66e5-4526-9e2a-eb9284f0c81c"
+      }
+    },
+    {
+      "key": "4ad70a7d-4b9b-48b2-adb8-fda8676d97f8",
+      "position": 5,
+      "properties": {
+        "progression_name": "Judging the Entries"
+      },
+      "seeding_key": {
+        "activity_section.key": "4ad70a7d-4b9b-48b2-adb8-fda8676d97f8",
+        "lesson_activity.key": "7f343a91-66e5-4526-9e2a-eb9284f0c81c"
+      }
+    },
+    {
+      "key": "a48c2228-b7f3-4fad-8b64-118bcc25ad08",
+      "position": 1,
+      "properties": {
+        "progression_name": "Investigate Misleading Fields"
+      },
+      "seeding_key": {
+        "activity_section.key": "a48c2228-b7f3-4fad-8b64-118bcc25ad08",
+        "lesson_activity.key": "c57d2230-ab14-4207-bb1f-83a716b5d529"
+      }
+    },
+    {
+      "key": "2ab991dc-65f4-4497-b2ba-7980d870e5ba",
+      "position": 2,
+      "properties": {
+        "progression_name": "Data Architect Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "2ab991dc-65f4-4497-b2ba-7980d870e5ba",
+        "lesson_activity.key": "c57d2230-ab14-4207-bb1f-83a716b5d529"
+      }
+    },
+    {
+      "key": "1718d6f5-8705-40c9-8ddf-832c32b37ed0",
+      "position": 3,
+      "properties": {
+        "progression_name": "Reflection: Justify Your Design Choice"
+      },
+      "seeding_key": {
+        "activity_section.key": "1718d6f5-8705-40c9-8ddf-832c32b37ed0",
+        "lesson_activity.key": "c57d2230-ab14-4207-bb1f-83a716b5d529"
+      }
+    },
+    {
+      "key": "64efe28e-b0c9-460d-8b1b-203862d1feca",
+      "position": 1,
+      "properties": {
+        "progression_name": "Milestone One"
+      },
+      "seeding_key": {
+        "activity_section.key": "64efe28e-b0c9-460d-8b1b-203862d1feca",
+        "lesson_activity.key": "1d016342-a0be-48bb-95a5-f0291c9a2556"
+      }
+    },
+    {
+      "key": "c50f4bba-a71c-467c-ac58-90b20365ffce",
+      "position": 2,
+      "properties": {
+        "progression_name": "Milestone Two"
+      },
+      "seeding_key": {
+        "activity_section.key": "c50f4bba-a71c-467c-ac58-90b20365ffce",
+        "lesson_activity.key": "1d016342-a0be-48bb-95a5-f0291c9a2556"
+      }
+    },
+    {
+      "key": "c22cd621-5c58-4a42-82b8-019d0fb3bcfd",
+      "position": 3,
+      "properties": {
+        "progression_name": "Milestone Three"
+      },
+      "seeding_key": {
+        "activity_section.key": "c22cd621-5c58-4a42-82b8-019d0fb3bcfd",
+        "lesson_activity.key": "1d016342-a0be-48bb-95a5-f0291c9a2556"
+      }
+    },
+    {
+      "key": "743d47c0-ef4a-46b9-9400-a2c8dc679e60",
+      "position": 4,
+      "properties": {
+        "progression_name": "Milestone Four"
+      },
+      "seeding_key": {
+        "activity_section.key": "743d47c0-ef4a-46b9-9400-a2c8dc679e60",
+        "lesson_activity.key": "1d016342-a0be-48bb-95a5-f0291c9a2556"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson1-vocab-panel-iteration-test-2025"
+        ],
+        "progression": "Vocab: Iteration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson1-vocab-panel-iteration-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "7910f7c8-33d4-4a57-ae93-7e0e44746e25"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson1-vocab-panel-iteration-test-2025"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson1-vocab-frq-iteration-test-2025"
+        ],
+        "progression": "Vocab: Iteration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson1-vocab-frq-iteration-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "7910f7c8-33d4-4a57-ae93-7e0e44746e25"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson1-vocab-frq-iteration-test-2025"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson1-level4-test-2025"
+        ],
+        "progression": "For Loop Flowchart"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson1-level4-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "933997b2-6e59-4939-8365-1058eb73874a"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson1-level4-test-2025"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson1-vocab-panel-for-loop-test-2025"
+        ],
+        "progression": "Vocab: For Loop"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson1-vocab-panel-for-loop-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "8a4cd436-2c97-47ac-a840-92af3fcaeba9"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson1-vocab-panel-for-loop-test-2025"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson1-vocab-for-loop-iteration-test-2025"
+        ],
+        "progression": "Vocab: For Loop"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson1-vocab-for-loop-iteration-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "8a4cd436-2c97-47ac-a840-92af3fcaeba9"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson1-vocab-for-loop-iteration-test-2025"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson1-level7-test-2025"
+        ],
+        "progression": "While Loop Flowchart"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson1-level7-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "9d8f1bf3-62b9-46d6-ac87-746903b8f2df"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson1-level7-test-2025"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson1-vocab-panel-while-loop-test-2025"
+        ],
+        "progression": "Vocab: While Loop"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson1-vocab-panel-while-loop-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "8867d312-938c-42bb-8656-a6afd01e4638"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson1-vocab-panel-while-loop-test-2025"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson1-vocab-while-loop-test-2025"
+        ],
+        "progression": "Vocab: While Loop"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson1-vocab-while-loop-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "8867d312-938c-42bb-8656-a6afd01e4638"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson1-vocab-while-loop-test-2025"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Loops in Pseudocode"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson1-ai-chat-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "ff186467-99d8-4851-8816-f0bbe81b36e0"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson1-ai-chat-test-2025"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson2-loop-variables-test-2025"
+        ],
+        "progression": "Vocab: Loop Variable"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson2-loop-variables-test-2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "28c5ae56-6361-4deb-a189-7a4110f59074"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson2-loop-variables-test-2025"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson2-vocab-frq-loop-variable-test-2025"
+        ],
+        "progression": "Vocab: Loop Variable"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson2-vocab-frq-loop-variable-test-2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "28c5ae56-6361-4deb-a189-7a4110f59074"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson2-vocab-frq-loop-variable-test-2025"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson2-level2-test-2025"
+        ],
+        "progression": "Broken Password Generator"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson2-level2-test-2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "dc346cbc-7336-4fde-9fc3-18bf000da92a"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson2-level2-test-2025"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson2-off-by-one-error-test-2025"
+        ],
+        "progression": "Vocab: Off-By-One Error"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson2-off-by-one-error-test-2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "72cbec49-d50c-47c5-b4a5-90f5b11b4aa7"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson2-off-by-one-error-test-2025"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson2-vocab-frq-off-by-one-errors-test-2025"
+        ],
+        "progression": "Vocab: Off-By-One Error"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson2-vocab-frq-off-by-one-errors-test-2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "72cbec49-d50c-47c5-b4a5-90f5b11b4aa7"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson2-vocab-frq-off-by-one-errors-test-2025"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson2-level5-test-2025"
+        ],
+        "progression": "Add Counted Repetition"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson2-level5-test-2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "c5da7ab9-ad39-4b9e-be8c-edecbe53956b"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson2-level5-test-2025"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson3-level1-test-2025"
+        ],
+        "progression": "Debugging a While Loop Flowchart"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson3-level1-test-2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "050996b5-9958-49eb-8743-ddecde2262ec"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson3-level1-test-2025"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson3-vocab-panel-state-variable-test-2025"
+        ],
+        "progression": "Vocab: State Variable"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson3-vocab-panel-state-variable-test-2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "4fbf6648-10e0-49d1-9ae7-02c693394469"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson3-vocab-panel-state-variable-test-2025"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson3-vocab-frq-state-variable-test-2025"
+        ],
+        "progression": "Vocab: State Variable"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson3-vocab-frq-state-variable-test-2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "4fbf6648-10e0-49d1-9ae7-02c693394469"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson3-vocab-frq-state-variable-test-2025"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson3-vocab-panel-infinite-loop-test-2025"
+        ],
+        "progression": "Vocab: Infinite Loop"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson3-vocab-panel-infinite-loop-test-2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "ba6e1280-c4e3-46ed-997a-5f4e880277f0"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson3-vocab-panel-infinite-loop-test-2025"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson3-vocab-frq-infinite-loop-test-2025"
+        ],
+        "progression": "Vocab: Infinite Loop"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson3-vocab-frq-infinite-loop-test-2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "ba6e1280-c4e3-46ed-997a-5f4e880277f0"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson3-vocab-frq-infinite-loop-test-2025"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson3-level6-test-2025"
+        ],
+        "progression": "Debugging While Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson3-level6-test-2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "5de3e129-c389-446f-aaaf-ab3e5fdf3a4f"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson3-level6-test-2025"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson3-level7-web-lab-test-2025"
+        ],
+        "progression": "Keep Going with While Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson3-level7-web-lab-test-2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "6b53aa01-d22b-4d4e-994f-ca0939fd8f78"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson3-level7-web-lab-test-2025"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson4-vocab-transparency-cue-test-2025"
+        ],
+        "progression": "Vocab: Transparency Cue"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson4-vocab-transparency-cue-test-2025"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "ae3fc823-c910-4fb0-bac1-6aeb400fb549"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson4-vocab-transparency-cue-test-2025"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson4-vocab-frq-transparency-cue-test-2025"
+        ],
+        "progression": "Vocab: Transparency Cue"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson4-vocab-frq-transparency-cue-test-2025"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "ae3fc823-c910-4fb0-bac1-6aeb400fb549"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson4-vocab-frq-transparency-cue-test-2025"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson3-test-2025"
+        ],
+        "progression": "Adding Transparency"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson3-test-2025"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "c6f10145-9e40-45d9-8abf-b24f9f696a01"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson3-test-2025"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson4-test-2025"
+        ],
+        "progression": "Build a Display Pipeline"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson4-test-2025"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "887b2d94-fbf8-4b61-82ee-43d3230a7d6b"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson4-test-2025"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson4-vocab-pipeline-test-2025"
+        ],
+        "progression": "Vocab: Pipeline"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson4-vocab-pipeline-test-2025"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "66f2ac16-d232-4780-b138-7df00953a0a8"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson4-vocab-pipeline-test-2025"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson4-vocab-frq-pipeline-test-2025"
+        ],
+        "progression": "Vocab: Pipeline"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson4-vocab-frq-pipeline-test-2025"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "66f2ac16-d232-4780-b138-7df00953a0a8"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson4-vocab-frq-pipeline-test-2025"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson4-level7-test-2025"
+        ],
+        "progression": "Reflection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson4-level7-test-2025"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "4d726da0-cbb2-44b9-91a0-39c8fe2674ac"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson4-level7-test-2025"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson5-level1-test-2025"
+        ],
+        "progression": "From Schema to Layout"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson5-level1-test-2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "b7e4aaa7-a142-486a-b06b-656c0068ed86"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson5-level1-test-2025"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson5-vocab-fallback-value-test-2025"
+        ],
+        "progression": "Vocab: Fallback Value"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson5-vocab-fallback-value-test-2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "f2f56267-f5e0-452b-bd1e-a6c737b0f9da"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson5-vocab-fallback-value-test-2025"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson5-vocab-frq-fallback-value-test-2025"
+        ],
+        "progression": "Vocab: Fallback Value"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson5-vocab-frq-fallback-value-test-2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "f2f56267-f5e0-452b-bd1e-a6c737b0f9da"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson5-vocab-frq-fallback-value-test-2025"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson5-level5-test-2025"
+        ],
+        "progression": "Displaying a Schema with Cards"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson5-level5-test-2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "cab37595-bd72-4757-a88e-edb4aaafb978"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson5-level5-test-2025"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson5-level8-test-2025"
+        ],
+        "progression": "Free Response: Bias & Transparency Labels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson5-level8-test-2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "c501844b-280c-45af-a940-e9363f315938"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson5-level8-test-2025"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson6-level1-test-2025"
+        ],
+        "progression": "Inclusive and Transparent Filters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson6-level1-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "875e8f2c-6475-4dfb-8b23-ed108ef52db6"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson6-level1-test-2025"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson6-vocab-active-filter-test-2025"
+        ],
+        "progression": "Vocab: Active Filter"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson6-vocab-active-filter-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "bcd3c835-c416-46f7-969a-b69dc6210523"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson6-vocab-active-filter-test-2025"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson6-vocab-frq-active-filter-test-2025"
+        ],
+        "progression": "Vocab: Active Filter"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson6-vocab-frq-active-filter-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "bcd3c835-c416-46f7-969a-b69dc6210523"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson6-vocab-frq-active-filter-test-2025"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson6-level2-test-2025"
+        ],
+        "progression": "Build Filtered Volunteer Work Search "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson6-level2-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "c74d0cc5-1ec3-4567-8b9c-6fb2ecf8d7c5"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson6-level2-test-2025"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson6-vocab-filter-bubble-test-2025"
+        ],
+        "progression": "Vocab: Filter Bubble"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson6-vocab-filter-bubble-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "b8e5b798-e5e4-433f-ae06-2b9d2b650a5d"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson6-vocab-filter-bubble-test-2025"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson6-vocab-frq-filter-bubble-test-2025"
+        ],
+        "progression": "Vocab: Filter Bubble"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson6-vocab-frq-filter-bubble-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "b8e5b798-e5e4-433f-ae06-2b9d2b650a5d"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson6-vocab-frq-filter-bubble-test-2025"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson7-level1-test-2025"
+        ],
+        "progression": "Comparing Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson7-level1-test-2025"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "f4dcc076-d08b-4f1e-be9c-99b2e9b65a31"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson7-level1-test-2025"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson7-vocab-pure-function-test-2025"
+        ],
+        "progression": "Vocab: Pure Function"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson7-vocab-pure-function-test-2025"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "a9b8a0b7-1d03-4e69-88b6-abc37fd1efe5"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson7-vocab-pure-function-test-2025"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson7-vocab-frq-pure-function-test-2025"
+        ],
+        "progression": "Vocab: Pure Function"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson7-vocab-frq-pure-function-test-2025"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "a9b8a0b7-1d03-4e69-88b6-abc37fd1efe5"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson7-vocab-frq-pure-function-test-2025"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson7-vocab-side-effect-test-2025"
+        ],
+        "progression": "Vocab: Side Effect"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson7-vocab-side-effect-test-2025"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "2f575074-0cfc-4d00-a27a-20e8a70f3285"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson7-vocab-side-effect-test-2025"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson7-vocab-frq-side-effect-test-2025"
+        ],
+        "progression": "Vocab: Side Effect"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson7-vocab-frq-side-effect-test-2025"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "2f575074-0cfc-4d00-a27a-20e8a70f3285"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson7-vocab-frq-side-effect-test-2025"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson7-level6-CFU-test-2025"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson7-level6-CFU-test-2025"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "716aa983-25fe-4e4b-805f-388166b83004"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson7-level6-CFU-test-2025"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson7-level7-test-2025"
+        ],
+        "progression": "Debugging Challenge"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson7-level7-test-2025"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "6e3cdf00-06f9-4087-9340-70cc8ed54d20"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson7-level7-test-2025"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson8-level1-test-2025"
+        ],
+        "progression": "Reset and Undo User Journey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson8-level1-test-2025"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "6a8c7d62-52b1-4bc5-b0c9-1e218b97a5b6"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson8-level1-test-2025"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson8-level2-test-2025"
+        ],
+        "progression": "Fix the Reset Button"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson8-level2-test-2025"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "de8cee48-8126-45d0-9583-06a47857c53e"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson8-level2-test-2025"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson8-level3-test-2025"
+        ],
+        "progression": "Build an Undo History Stack"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson8-level3-test-2025"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "03447544-39f0-477e-9295-0509bab484c2"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson8-level3-test-2025"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson6-level4-test-2025"
+        ],
+        "progression": "Reflection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson6-level4-test-2025"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "5616e279-c84b-46ce-bbeb-1db4a27af436"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson6-level4-test-2025"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson9-level1-test-2025"
+        ],
+        "progression": "Explore the Filters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson9-level1-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "bc36035b-ca1e-43d9-84f9-52e983c538a7"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson9-level1-test-2025"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson9-vocab-threshold-test-2025"
+        ],
+        "progression": "Vocab: Threshold"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson9-vocab-threshold-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "10d89380-23dd-493d-b1e5-38b7c378aa30"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson9-vocab-threshold-test-2025"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson9-vocab-frq-threshold-test-2025"
+        ],
+        "progression": "Vocab: Threshold"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson9-vocab-frq-threshold-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "10d89380-23dd-493d-b1e5-38b7c378aa30"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson9-vocab-frq-threshold-test-2025"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson9-vocab-fallback-label-test-2025"
+        ],
+        "progression": "Vocab: Fallback Label"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson9-vocab-fallback-label-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "ed1b3b62-0983-466c-9c6a-ffa6a25025ba"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson9-vocab-fallback-label-test-2025"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson9-vocab-frq-fallback-label-test-2025"
+        ],
+        "progression": "Vocab: Fallback Label"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson9-vocab-frq-fallback-label-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "ed1b3b62-0983-466c-9c6a-ffa6a25025ba"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson9-vocab-frq-fallback-label-test-2025"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson9-level6-test-2025"
+        ],
+        "progression": "Redesign the Filters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson9-level6-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "57773caf-b71c-444d-b790-cd5c9b4f3a79"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson9-level6-test-2025"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson9-level7-test-2025"
+        ],
+        "progression": "Judging the Entries"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson9-level7-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "4ad70a7d-4b9b-48b2-adb8-fda8676d97f8"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson9-level7-test-2025"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson10-l1-test-2025"
+        ],
+        "progression": "Investigate Misleading Fields"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson10-l1-test-2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "a48c2228-b7f3-4fad-8b64-118bcc25ad08"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson10-l1-test-2025"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson10-l2-test-2025"
+        ],
+        "progression": "Data Architect Challenge"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson10-l2-test-2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "2ab991dc-65f4-4497-b2ba-7980d870e5ba"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson10-l2-test-2025"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "iterating-with-ai-lesson10-l5-test-2025"
+        ],
+        "progression": "Reflection: Justify Your Design Choice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson10-l5-test-2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "1718d6f5-8705-40c9-8ddf-832c32b37ed0"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson10-l5-test-2025"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Milestone One"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson11-level1-hub-test-2025"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "64efe28e-b0c9-460d-8b1b-203862d1feca"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson11-level1-hub-test-2025"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Milestone Two"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson11-level2-hub-test-2025"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "c50f4bba-a71c-467c-ac58-90b20365ffce"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson11-level2-hub-test-2025"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Milestone Three"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson11-level3-hub-test-2025"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "c22cd621-5c58-4a42-82b8-019d0fb3bcfd"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson11-level3-hub-test-2025"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Milestone Four"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson11-level4-hub-test-2025"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "743d47c0-ef4a-46b9-9400-a2c8dc679e60"
+      },
+      "level_keys": [
+        "iterating-with-ai-lesson11-level4-hub-test-2025"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson1-vocab-panel-iteration-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson1-vocab-panel-iteration-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "7910f7c8-33d4-4a57-ae93-7e0e44746e25"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson1-vocab-frq-iteration-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson1-vocab-frq-iteration-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "7910f7c8-33d4-4a57-ae93-7e0e44746e25"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson1-level4-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson1-level4-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "933997b2-6e59-4939-8365-1058eb73874a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson1-vocab-panel-for-loop-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson1-vocab-panel-for-loop-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "8a4cd436-2c97-47ac-a840-92af3fcaeba9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson1-vocab-for-loop-iteration-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson1-vocab-for-loop-iteration-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "8a4cd436-2c97-47ac-a840-92af3fcaeba9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson1-level7-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson1-level7-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "9d8f1bf3-62b9-46d6-ac87-746903b8f2df"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson1-vocab-panel-while-loop-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson1-vocab-panel-while-loop-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "8867d312-938c-42bb-8656-a6afd01e4638"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson1-vocab-while-loop-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson1-vocab-while-loop-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "8867d312-938c-42bb-8656-a6afd01e4638"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson1-ai-chat-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson1-ai-chat-test-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "ff186467-99d8-4851-8816-f0bbe81b36e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson2-loop-variables-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson2-loop-variables-test-2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "28c5ae56-6361-4deb-a189-7a4110f59074"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson2-vocab-frq-loop-variable-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson2-vocab-frq-loop-variable-test-2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "28c5ae56-6361-4deb-a189-7a4110f59074"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson2-level2-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson2-level2-test-2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "dc346cbc-7336-4fde-9fc3-18bf000da92a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson2-off-by-one-error-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson2-off-by-one-error-test-2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "72cbec49-d50c-47c5-b4a5-90f5b11b4aa7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson2-vocab-frq-off-by-one-errors-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson2-vocab-frq-off-by-one-errors-test-2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "72cbec49-d50c-47c5-b4a5-90f5b11b4aa7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson2-level5-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson2-level5-test-2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "c5da7ab9-ad39-4b9e-be8c-edecbe53956b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson3-level1-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson3-level1-test-2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "050996b5-9958-49eb-8743-ddecde2262ec"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson3-vocab-panel-state-variable-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson3-vocab-panel-state-variable-test-2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "4fbf6648-10e0-49d1-9ae7-02c693394469"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson3-vocab-frq-state-variable-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson3-vocab-frq-state-variable-test-2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "4fbf6648-10e0-49d1-9ae7-02c693394469"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson3-vocab-panel-infinite-loop-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson3-vocab-panel-infinite-loop-test-2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "ba6e1280-c4e3-46ed-997a-5f4e880277f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson3-vocab-frq-infinite-loop-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson3-vocab-frq-infinite-loop-test-2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "ba6e1280-c4e3-46ed-997a-5f4e880277f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson3-level6-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson3-level6-test-2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "5de3e129-c389-446f-aaaf-ab3e5fdf3a4f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson3-level7-web-lab-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson3-level7-web-lab-test-2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "6b53aa01-d22b-4d4e-994f-ca0939fd8f78"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson4-vocab-transparency-cue-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson4-vocab-transparency-cue-test-2025"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "ae3fc823-c910-4fb0-bac1-6aeb400fb549"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson4-vocab-frq-transparency-cue-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson4-vocab-frq-transparency-cue-test-2025"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "ae3fc823-c910-4fb0-bac1-6aeb400fb549"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson3-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson3-test-2025"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "c6f10145-9e40-45d9-8abf-b24f9f696a01"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson4-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson4-test-2025"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "887b2d94-fbf8-4b61-82ee-43d3230a7d6b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson4-vocab-pipeline-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson4-vocab-pipeline-test-2025"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "66f2ac16-d232-4780-b138-7df00953a0a8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson4-vocab-frq-pipeline-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson4-vocab-frq-pipeline-test-2025"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "66f2ac16-d232-4780-b138-7df00953a0a8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson4-level7-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson4-level7-test-2025"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "4d726da0-cbb2-44b9-91a0-39c8fe2674ac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson5-level1-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson5-level1-test-2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "b7e4aaa7-a142-486a-b06b-656c0068ed86"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson5-vocab-fallback-value-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson5-vocab-fallback-value-test-2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "f2f56267-f5e0-452b-bd1e-a6c737b0f9da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson5-vocab-frq-fallback-value-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson5-vocab-frq-fallback-value-test-2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "f2f56267-f5e0-452b-bd1e-a6c737b0f9da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson5-level5-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson5-level5-test-2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "cab37595-bd72-4757-a88e-edb4aaafb978"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson5-level8-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson5-level8-test-2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "c501844b-280c-45af-a940-e9363f315938"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson6-level1-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson6-level1-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "875e8f2c-6475-4dfb-8b23-ed108ef52db6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson6-vocab-active-filter-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson6-vocab-active-filter-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "bcd3c835-c416-46f7-969a-b69dc6210523"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson6-vocab-frq-active-filter-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson6-vocab-frq-active-filter-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "bcd3c835-c416-46f7-969a-b69dc6210523"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson6-level2-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson6-level2-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "c74d0cc5-1ec3-4567-8b9c-6fb2ecf8d7c5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson6-vocab-filter-bubble-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson6-vocab-filter-bubble-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "b8e5b798-e5e4-433f-ae06-2b9d2b650a5d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson6-vocab-frq-filter-bubble-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson6-vocab-frq-filter-bubble-test-2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "b8e5b798-e5e4-433f-ae06-2b9d2b650a5d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson7-level1-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson7-level1-test-2025"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "f4dcc076-d08b-4f1e-be9c-99b2e9b65a31"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson7-vocab-pure-function-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson7-vocab-pure-function-test-2025"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "a9b8a0b7-1d03-4e69-88b6-abc37fd1efe5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson7-vocab-frq-pure-function-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson7-vocab-frq-pure-function-test-2025"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "a9b8a0b7-1d03-4e69-88b6-abc37fd1efe5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson7-vocab-side-effect-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson7-vocab-side-effect-test-2025"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "2f575074-0cfc-4d00-a27a-20e8a70f3285"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson7-vocab-frq-side-effect-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson7-vocab-frq-side-effect-test-2025"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "2f575074-0cfc-4d00-a27a-20e8a70f3285"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson7-level6-CFU-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson7-level6-CFU-test-2025"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "716aa983-25fe-4e4b-805f-388166b83004"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson7-level7-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson7-level7-test-2025"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "6e3cdf00-06f9-4087-9340-70cc8ed54d20"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson8-level1-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson8-level1-test-2025"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "6a8c7d62-52b1-4bc5-b0c9-1e218b97a5b6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson8-level2-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson8-level2-test-2025"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "de8cee48-8126-45d0-9583-06a47857c53e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson8-level3-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson8-level3-test-2025"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "03447544-39f0-477e-9295-0509bab484c2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson6-level4-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson6-level4-test-2025"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "5616e279-c84b-46ce-bbeb-1db4a27af436"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson9-level1-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson9-level1-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "bc36035b-ca1e-43d9-84f9-52e983c538a7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson9-vocab-threshold-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson9-vocab-threshold-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "10d89380-23dd-493d-b1e5-38b7c378aa30"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson9-vocab-frq-threshold-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson9-vocab-frq-threshold-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "10d89380-23dd-493d-b1e5-38b7c378aa30"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson9-vocab-fallback-label-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson9-vocab-fallback-label-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "ed1b3b62-0983-466c-9c6a-ffa6a25025ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson9-vocab-frq-fallback-label-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson9-vocab-frq-fallback-label-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "ed1b3b62-0983-466c-9c6a-ffa6a25025ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson9-level6-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson9-level6-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "57773caf-b71c-444d-b790-cd5c9b4f3a79"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson9-level7-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson9-level7-test-2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "4ad70a7d-4b9b-48b2-adb8-fda8676d97f8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson10-l1-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson10-l1-test-2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "a48c2228-b7f3-4fad-8b64-118bcc25ad08"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson10-l2-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson10-l2-test-2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "2ab991dc-65f4-4497-b2ba-7980d870e5ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson10-l5-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson10-l5-test-2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "1718d6f5-8705-40c9-8ddf-832c32b37ed0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson11-level1-hub-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson11-level1-hub-test-2025"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "64efe28e-b0c9-460d-8b1b-203862d1feca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson11-level2-hub-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson11-level2-hub-test-2025"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "c50f4bba-a71c-467c-ac58-90b20365ffce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson11-level3-hub-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson11-level3-hub-test-2025"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "c22cd621-5c58-4a42-82b8-019d0fb3bcfd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iterating-with-ai-lesson11-level4-hub-test-2025",
+        "script_level.level_keys": [
+          "iterating-with-ai-lesson11-level4-hub-test-2025"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit4",
+        "activity_section.key": "743d47c0-ef4a-46b9-9400-a2c8dc679e60"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

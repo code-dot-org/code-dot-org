@@ -1,0 +1,8 @@
+name 'programming-fundamentals-lesson6-level7_2025-preview'
+display_name 'Practice with Functions and Parameters'
+description 'Choose one of the options below!'
+
+sublevels
+level 'programming-fundamentals-lesson6-level7a_2025-preview'
+level 'programming-fundamentals-lesson6-level7b_2025-preview'
+level 'programming-fundamentals-lesson6-level7c_2025-preview'

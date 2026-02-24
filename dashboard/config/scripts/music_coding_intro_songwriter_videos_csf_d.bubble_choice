@@ -1,0 +1,8 @@
+name 'music-coding-intro-songwriter-videos_csf_d'
+display_name 'Career Exploration'
+description 'Learn how these singer songwriters use computer science in their career!'
+
+sublevels
+level 'music-coding-intro-songwriter-shakira-video_csf_d'
+level 'music-coding-intro-songwriter-aloe-blacc-video_csf_d'
+level 'music-coding-intro-songwriter-rosa-linn-video_csf_d'

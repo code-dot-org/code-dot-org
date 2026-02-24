@@ -67,7 +67,10 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
         pairing_allowed: params[:pairing_allowed].nil? ? true : params[:pairing_allowed],
         tts_autoplay_enabled: params[:tts_autoplay_enabled].nil? ? false : params[:tts_autoplay_enabled],
         ai_tutor_enabled: params[:ai_tutor_enabled].nil? ? false : params[:ai_tutor_enabled],
-        restrict_section: params[:restrict_section].nil? ? false : params[:restrict_section]
+        restrict_section: params[:restrict_section].nil? ? false : params[:restrict_section],
+        avatar_color: params[:avatar_color].nil? ? 0 : params[:avatar_color],
+        avatar_emoji: params[:avatar_emoji].nil? ? 0 : params[:avatar_emoji],
+        ai_chat_access_level: get_ai_chat_access_level,
       }
     )
     return head :bad_request unless section.persisted?
@@ -84,7 +87,11 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     params[:instructor_emails]&.each {|instructor_email| section.invite_instructor(instructor_email, current_user)}
 
     # TODO: Move to an after_create step on Section model when old API is fully deprecated
-    current_user.assign_script @unit if @unit
+    current_user.assign_script(@unit, @course) if @unit
+
+    if @unit
+      AiLessonSummariesHelper.perform_ai_lesson_summaries_by_unit(@unit, current_user.id)
+    end
 
     render json: section.summarize
   end
@@ -103,6 +110,10 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       return head :forbidden unless Section.can_be_assigned_course?(participant_audience, section.participant_type)
     end
 
+    # If assigning a new course, derive the new ai_chat_access_level, otherwise leave it as-is.
+    is_updating_course = @course && @course.id != section.course_id
+    ai_chat_access_level = is_updating_course ? get_ai_chat_access_level(section.ai_chat_access_level) : params[:ai_chat_access_level]
+
     # TODO: (madelynkasula) refactor to use strong params
     fields = {}
     fields[:course_id] = @course&.id
@@ -118,11 +129,14 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     fields[:hidden] = params[:hidden] unless params[:hidden].nil?
     fields[:restrict_section] = params[:restrict_section] unless params[:restrict_section].nil?
     fields[:ai_tutor_enabled] = params[:ai_tutor_enabled] unless params[:ai_tutor_enabled].nil?
+    fields[:avatar_color] = params[:avatar_color].nil? ? 0 : params[:avatar_color]
+    fields[:avatar_emoji] = params[:avatar_emoji].nil? ? 0 : params[:avatar_emoji]
+    fields[:ai_chat_access_level] = ai_chat_access_level unless ai_chat_access_level.nil?
 
     section.update!(fields)
     if @unit
       section.students.each do |student|
-        student.assign_script(@unit)
+        student.assign_script(@unit, @course)
       end
     end
 
@@ -176,9 +190,9 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       return
     end
     render json: {
-      sections: current_user.sections_as_student.reload.map(&:summarize_without_students),
-      studentSections: current_user.sections_as_student_participant.map(&:summarize_without_students),
-      plSections: current_user.sections_as_pl_participant.map(&:summarize_without_students),
+      sections: current_user.sections_as_student.reload.map(&:summarize_for_participant),
+      studentSections: current_user.sections_as_student_participant.map(&:summarize_for_participant),
+      plSections: current_user.sections_as_pl_participant.map(&:summarize_for_participant),
       result: result
     }
   end
@@ -188,9 +202,9 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     authorize! :destroy, @follower
     @section.remove_student(current_user, @follower, {notify: true})
     render json: {
-      sections: current_user.sections_as_student.map(&:summarize_without_students),
-      studentSections: current_user.sections_as_student_participant.map(&:summarize_without_students),
-      plSections: current_user.sections_as_pl_participant.map(&:summarize_without_students),
+      sections: current_user.sections_as_student.map(&:summarize_for_participant),
+      studentSections: current_user.sections_as_student_participant.map(&:summarize_for_participant),
+      plSections: current_user.sections_as_pl_participant.map(&:summarize_for_participant),
       result: "success"
     }
   end
@@ -273,8 +287,11 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
 
   # POST /api/v1/sections/<id>/code_review_groups
   def set_code_review_groups
-    @section.reset_code_review_groups(params[:groups])
-    render json: {result: 'success'}
+    students_with_sharing_enabled = @section.reset_code_review_groups(params[:groups])
+    render json: {
+      result: 'success',
+      students_with_sharing_enabled: students_with_sharing_enabled
+    }
   # if the group data is invalid we will get a record invalid exception
   rescue ActiveRecord::RecordInvalid
     render json: {result: 'invalid groups'}, status: :bad_request
@@ -295,6 +312,14 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     render json: {result: 'success'}
   end
 
+  # POST /api/v1/sections/<id>/ai_chat_access_level
+  def set_ai_chat_access_level
+    @section.update!(ai_chat_access_level: params[:ai_chat_access_level])
+    render json: {result: 'success'}
+  rescue ActiveRecord::RecordInvalid
+    render json: {result: 'invalid ai_chat_access_level'}, status: :bad_request
+  end
+
   private def find_follower
     unless current_user
       render_404
@@ -310,23 +335,33 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       course_version = CourseVersion.find_by_id(params[:course_version_id])
       return head :bad_request unless course_version
 
-      case course_version.content_root_type
-      when 'UnitGroup'
-        course_id = course_version.content_root_id
-        @course = UnitGroup.get_from_cache(course_id)
-        return head :bad_request unless @course
-        return head :forbidden unless @course.course_assignable?(current_user)
-        @unit = params[:unit_id] ? Unit.get_from_cache(params[:unit_id]) : nil
-        return head :bad_request if @unit && @course.id != @unit.unit_group.try(:id)
-      when 'Unit'
-        unit_id = course_version.content_root_id
-        @unit = Unit.get_from_cache(unit_id)
-        return head :bad_request unless @unit
-        return head :forbidden unless @unit.course_assignable?(current_user)
-      end
+      course_id = course_version.content_root_id
+      @course = UnitGroup.get_from_cache(course_id)
+      return head :bad_request unless @course
+      return head :forbidden unless @course.course_assignable?(current_user)
+      @unit = if @course.single_unit_course?
+                @course.units_for_user(current_user).first
+              else
+                params[:unit_id] ? Unit.get_from_cache(params[:unit_id]) : nil
+              end
+      return head :bad_request if @unit && @course && @unit.unit_groups.exclude?(@course)
     else
       # Should not get a unit_id unless also get a course version which is course
       return head :bad_request if params[:unit_id]
     end
+  end
+
+  private def get_ai_chat_access_level(previous_access_level = nil)
+    previous_access_level ||= SharedConstants::AI_CHAT_ACCESS_LEVELS[:DISABLED]
+
+    # Leave it as is if it was already turned on or to essential_only
+    return previous_access_level if previous_access_level != SharedConstants::AI_CHAT_ACCESS_LEVELS[:DISABLED]
+
+    # Auto-enable access if the course needs it.
+    # TODO: Once pilot goes GA, we can enable for any @course&.has_ai_chat_tools?
+    return SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED] if @course&.requires_ai_chat_tools?
+    return SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED] if @course&.has_ai_chat_tools? && current_user.ai_tutor_enabled_for_pilot?
+
+    SharedConstants::AI_CHAT_ACCESS_LEVELS[:DISABLED]
   end
 end

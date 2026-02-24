@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 class Maze < Grid
@@ -30,10 +31,6 @@ class Maze < Grid
     step_mode
     shape_shift
   )
-  # Use a DCDO flag here so we can revert back to CDO Blockly without a deploy
-  def uses_google_blockly?
-    DCDO.get('maze_sw_google_blockly', true)
-  end
 
   # List of possible skins, the first is used as a default.
   def self.skins
@@ -50,7 +47,7 @@ class Maze < Grid
     [['Run Button Only', 0], ['Run and Step', 1], ['Step Button Only', 2]]
   end
 
-  def summarize_as_bonus
+  def summarize_as_bonus(unit_group_unit: nil)
     summary = super
     summary[:start_direction] = start_direction.to_i
     summary

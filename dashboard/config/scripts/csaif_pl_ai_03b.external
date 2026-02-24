@@ -1,0 +1,32 @@
+name 'csaif_pl_ai_03b'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Multi-modal Prompting
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Multimodal Model</strong> is an AI system that can process information from multiple types of input.</p>
+</div>
+
+<p align="center">
+<img src="https://images.code.org/1a18d8f154f916d657b501f0ad677efd-Screenshot 2025-04-07 at 11.29.10 AM.png" alt="lesson plan diagram" width="50%" style="border-radius:10px; border: 5px solid black;">
+</p>
+
+## Career Connection
+
+#### Where is Multimodal AI Used?
+* #### Accessibility: screen readers interpreting images and text
+* #### Healthcare: AI analyzing X-ray images and text
+* #### Translation: real-time text and audio speech translation
+* #### Security: facial and object recognition
+
+## 📝 To Do
+
+#### Try out multi-modal prompting in the next level. While you’re prompting, think about *What should we consider before sharing images online with AI tools? What are the benefits and risks of AI interpreting images without human context?*
+
+<br>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 2. You can find more details in the full <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+</p>
+MARKDOWN

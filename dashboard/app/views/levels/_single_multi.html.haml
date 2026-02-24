@@ -70,7 +70,7 @@
           -# When LevelGroup-hosted, with students (or teachers doing PD), set all answers false before rendering page.
           - correct = include_multi_answers?(standalone) ? answer['correct'] : false
           - answer_class = "answerbutton " + (use_tight_layout ? "" : "btn")
-          %div{class: answer_class, style: "display: inline-block; height: #{height}", correct: "#{correct}", index: "#{i}"}
+          %button{class: answer_class, style: "display: inline-block; margin-left: 0", correct: "#{correct}", index: "#{i}"}
             .item-mark{id: "unchecked_#{i}"}
               .fa{class: unchecked_class}
             .item-mark{id: "checked_#{i}", style: 'display: none;'}
@@ -80,7 +80,7 @@
             %label.item-label.item-answer-letter{style: "height: #{height}"}
               ="#{multi_answer_characters[i]}. "
               &nbsp;
-            %label.item-label{style: "height: #{height}"}
+            %label.item-label{style: "height: #{height}; max-width: calc(100% - 40px);"}
               != render_multi_or_match_content(localized_answers[i]['text'])
           - if use_tight_layout && !force_wrap_layout
             %br/
@@ -119,7 +119,7 @@
 
   :ruby
     js_data = {
-      response_count: @responses&.count || 0,
+      response_count: @responses&.first&.count || 0,
       is_contained_level: contained_mode,
       question_content_blank: question_content_blank,
     }

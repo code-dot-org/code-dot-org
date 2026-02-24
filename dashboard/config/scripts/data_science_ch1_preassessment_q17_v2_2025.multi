@@ -1,0 +1,19 @@
+name 'data-science-ch1-preassessment-q17_v2-2025'
+
+question 'Which of the following best describes the role of a data scientist?'
+
+wrong 'Organizes and categorizes information into data structures.'
+right 'Creates visualizations and communicates findings from data analysis.'
+wrong 'Collects, filters, and performs routine checks on raw data for quality.'
+wrong 'Stores data securely and ensures access rights for users.'
+
+
+
+
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

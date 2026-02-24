@@ -4,8 +4,6 @@ require 'cdo/shared_constants'
 class PeerReviewTest < ActiveSupport::TestCase
   include SharedConstants
 
-  self.use_transactional_test_case = true
-
   setup_all do
     @level = FreeResponse.find_or_create_by!(
       game: Game.free_response,
@@ -18,19 +16,20 @@ class PeerReviewTest < ActiveSupport::TestCase
       peer_reviewable: 'true'
     )
 
-    @plc_course = create :plc_course
-    @plc_course_unit = create :plc_course_unit, plc_course: @plc_course
-    @learning_module = create :plc_learning_module, plc_course_unit: @plc_course_unit
+    @plc_course = create(:plc_course)
+    @plc_course_unit = create(:plc_course_unit, plc_course: @plc_course)
+    @learning_module = create(:plc_learning_module, plc_course_unit: @plc_course_unit)
 
-    @script_level = create :script_level, levels: [@level], script: @learning_module.plc_course_unit.script, lesson: @learning_module.lesson
+    @script_level = create(:script_level, levels: [@level], script: @learning_module.plc_course_unit.script, lesson: @learning_module.lesson)
     @script = @script_level.script
+    @unit_group = create(:unit_group, :with_unit, unit: @script)
 
-    @user = create :user
+    @user = create(:user)
 
-    @level_source = create :level_source, level: @script_level.level
+    @level_source = create(:level_source, level: @script_level.level)
     Activity.create! user: @user, level: @script_level.level, test_result: Activity::UNREVIEWED_SUBMISSION_RESULT, level_source: @level_source
 
-    @instructor = create :plc_reviewer
+    @instructor = create(:plc_reviewer)
   end
 
   setup do
@@ -52,12 +51,12 @@ class PeerReviewTest < ActiveSupport::TestCase
       submittable: true,
       peer_reviewable: 'true'
     )
-    script_only_instructor_review = create :script, only_instructor_review_required: true
-    script_level_only_instructor_review = create :script_level, levels: [level], script: script_only_instructor_review
-    level_source = create :level_source, level: level
+    script_only_instructor_review = create(:script, :in_single_unit_course, only_instructor_review_required: true)
+    script_level_only_instructor_review = create(:script_level, levels: [level], script: script_only_instructor_review)
+    level_source = create(:level_source, level: level)
 
     assert_difference('PeerReview.count', 1) do
-      track_progress level_source.id, @user, script_level_only_instructor_review
+      track_progress level_source.id, @user, script_level_only_instructor_review, nil
     end
 
     assert_equal ['escalated'], PeerReview.where(submitter: @user, level: level).map(&:status)
@@ -82,7 +81,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     PeerReview.last.update! reviewer: create(:user)
 
     # Submit a new answer
-    updated_level_source = create :level_source, data: 'UPDATED: My submitted answer'
+    updated_level_source = create(:level_source, data: 'UPDATED: My submitted answer')
 
     # Two new reviews were created
     track_progress updated_level_source.id
@@ -107,7 +106,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     assert_equal 1, PeerReview.where(submitter: @user).count
 
     # Submit a new answer
-    updated_level_source = create :level_source, data: 'UPDATED: My submitted answer'
+    updated_level_source = create(:level_source, data: 'UPDATED: My submitted answer')
     track_progress updated_level_source.id, @user
 
     # No new reviews were created
@@ -163,7 +162,7 @@ class PeerReviewTest < ActiveSupport::TestCase
   end
 
   test 'pull review from pool' do
-    reviewer = create :teacher
+    reviewer = create(:teacher)
 
     level_source = create(:level_source, data: 'Some answer')
 
@@ -186,8 +185,8 @@ class PeerReviewTest < ActiveSupport::TestCase
   end
 
   test 'pull review from pool handles stale reviews' do
-    reviewer_1 = create :teacher
-    reviewer_2 = create :teacher
+    reviewer_1 = create(:teacher)
+    reviewer_2 = create(:teacher)
 
     level_source = create(:level_source, data: 'Some answer')
 
@@ -208,8 +207,8 @@ class PeerReviewTest < ActiveSupport::TestCase
 
   test 'pull review from the pool clones reviews if necessary' do
     @script.update(peer_reviews_to_complete: 2)
-    reviewer_1 = create :teacher
-    reviewer_2 = create :teacher
+    reviewer_1 = create(:teacher)
+    reviewer_2 = create(:teacher)
 
     level_source = create(:level_source, data: 'Some answer')
 
@@ -228,7 +227,7 @@ class PeerReviewTest < ActiveSupport::TestCase
   end
 
   test 'pull review from the pool returns nothing if there are no reviews' do
-    reviewer_1 = create :teacher
+    reviewer_1 = create(:teacher)
     assert_nil PeerReview.pull_review_from_pool(@script_level.script, reviewer_1)
   end
 
@@ -247,9 +246,9 @@ class PeerReviewTest < ActiveSupport::TestCase
 
     assert PeerReview.get_peer_review_summaries(@user, @script).empty?
 
-    submitter_1 = create :teacher
-    submitter_2 = create :teacher
-    submitter_3 = create :teacher
+    submitter_1 = create(:teacher)
+    submitter_2 = create(:teacher)
+    submitter_3 = create(:teacher)
 
     level_source_1 = create(:level_source, data: 'Some answer')
     level_source_2 = create(:level_source, data: 'Other answer')
@@ -295,8 +294,8 @@ class PeerReviewTest < ActiveSupport::TestCase
   test 'peer review section status' do
     @script.update(peer_reviews_to_complete: 2)
     Plc::EnrollmentUnitAssignment.stubs(:exists?).returns(true)
-    review_1 = create :peer_review, script: @script, reviewer_id: @user.id, status: nil, data: 'lgtm'
-    review_2 = create :peer_review, script: @script, reviewer_id: @user.id, status: nil, data: 'lgtm'
+    review_1 = create(:peer_review, script: @script, reviewer_id: @user.id, status: nil, data: 'lgtm')
+    review_2 = create(:peer_review, script: @script, reviewer_id: @user.id, status: nil, data: 'lgtm')
 
     assert_equal Plc::EnrollmentModuleAssignment::COMPLETED, PeerReview.get_review_completion_status(@user, @script)
 
@@ -321,15 +320,15 @@ class PeerReviewTest < ActiveSupport::TestCase
   end
 
   test 'clear_data clears the data column' do
-    peer_review = create :peer_review, data: 'data'
+    peer_review = create(:peer_review, data: 'data')
     peer_review.clear_data
     assert_equal PeerReview::SYSTEM_DELETED_DATA, peer_review.data
   end
 
   test 'assignments are logged to the audit trail' do
-    peer_review = create :peer_review
-    user1 = create :user
-    user2 = create :user
+    peer_review = create(:peer_review)
+    user1 = create(:user)
+    user2 = create(:user)
 
     peer_review.update! reviewer: user1
     assert_equal 1, peer_review.audit_trail.lines.count
@@ -347,7 +346,7 @@ class PeerReviewTest < ActiveSupport::TestCase
 
   test 'reviews are logged to the audit trail' do
     user = create(:user)
-    peer_review = create :peer_review, reviewer: user
+    peer_review = create(:peer_review, reviewer: user)
     peer_review.update! data: 'accepted'
 
     assert_includes(peer_review.audit_trail.lines.last, "REVIEWED by user id #{user.id}")
@@ -399,14 +398,14 @@ class PeerReviewTest < ActiveSupport::TestCase
     level_1, level_2, level_3 = create_list(:free_response, 4, peer_reviewable: true)
 
     [level_1, level_2, level_3].each do |level|
-      script_level = create :script_level, levels: [level], script: @learning_module.plc_course_unit.script, lesson: @learning_module.lesson
-      level_source = create :level_source, level: level
+      script_level = create(:script_level, levels: [level], script: @learning_module.plc_course_unit.script, lesson: @learning_module.lesson)
+      level_source = create(:level_source, level: level)
       track_progress(level_source.id, @user, script_level)
     end
 
-    PeerReview.find_by(submitter: @user, level: level_2, status: nil).update data: 'accepted_data', reviewer: (create :teacher)
+    PeerReview.find_by(submitter: @user, level: level_2, status: nil).update data: 'accepted_data', reviewer: (create(:teacher))
     PeerReview.find_by(submitter: @user, level: level_2, status: 'escalated').update status: 'accepted', reviewer: @instructor, from_instructor: true
-    PeerReview.find_by(submitter: @user, level: level_3, status: nil).update data: 'rejected_data', reviewer: (create :teacher)
+    PeerReview.find_by(submitter: @user, level: level_3, status: nil).update data: 'rejected_data', reviewer: (create(:teacher))
     PeerReview.find_by(submitter: @user, level: level_3, status: 'escalated').update status: 'rejected', reviewer: @instructor, from_instructor: true
 
     ul1 = UserLevel.find_by(user: @user, level: level_1)
@@ -468,19 +467,20 @@ class PeerReviewTest < ActiveSupport::TestCase
     assert_equal 6, PeerReview.count
   end
 
+  # TODO: TEACH-1863 Use unit group in peer review. the url will need to be updated
   test 'submission_path' do
-    script_level = create :script_level
-    peer_review_with_script_level = create :peer_review, script: script_level.script, level: script_level.level
+    script_level = create(:script_level, script: create(:script, :in_single_unit_course))
+    peer_review_with_script_level = create(:peer_review, script: script_level.script, level: script_level.level)
 
-    standalone_level = create :level
-    peer_review_with_standalone_level = create :peer_review, level: standalone_level
+    standalone_level = create(:level)
+    peer_review_with_standalone_level = create(:peer_review, level: standalone_level)
 
     assert_equal "/s/#{script_level.script.name}/lessons/1/levels/1", peer_review_with_script_level.submission_path
     assert_equal "/levels/#{standalone_level.id}", peer_review_with_standalone_level.submission_path
   end
 
   test 'status change triggers review email' do
-    peer_review = create :peer_review
+    peer_review = create(:peer_review)
     PeerReviewMailer.expects(:review_completed_receipt).with(peer_review).returns(stub(:deliver_now)).twice
 
     peer_review.update!(status: :accepted)
@@ -488,14 +488,14 @@ class PeerReviewTest < ActiveSupport::TestCase
   end
 
   test 'escalation does not trigger review email' do
-    peer_review = create :peer_review
+    peer_review = create(:peer_review)
     PeerReviewMailer.expects(:review_completed_receipt).never
 
     peer_review.update!(status: :escalated)
   end
 
   test 'updates aside from status do not trigger review email' do
-    peer_review = create :peer_review, status: :accepted
+    peer_review = create(:peer_review, status: :accepted)
     PeerReviewMailer.expects(:review_completed_receipt).never
 
     # no change, no email
@@ -514,7 +514,7 @@ class PeerReviewTest < ActiveSupport::TestCase
 
     # We don't try to create new peer reviews if nothing changed, so make a
     # new level source to simulate a new submission.
-    new_level_source = create :level_source, level: @level
+    new_level_source = create(:level_source, level: @level)
     assert_raises(Exception) do
       track_progress new_level_source.id
     end
@@ -523,7 +523,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     refute PeerReview.exists?(level_source_id: new_level_source.id)
   end
 
-  private def track_progress(level_source_id, user = @user, script_level = @script_level)
+  private def track_progress(level_source_id, user = @user, script_level = @script_level, unit_group = @unit_group)
     # this is what creates the peer review objects
     User.track_level_progress(
       user_id: user.id,
@@ -532,7 +532,8 @@ class PeerReviewTest < ActiveSupport::TestCase
       new_result: Activity::UNREVIEWED_SUBMISSION_RESULT,
       submitted: true,
       level_source_id: level_source_id,
-      pairing_user_ids: nil
+      pairing_user_ids: nil,
+      unit_group: unit_group
     )
   end
 

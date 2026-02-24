@@ -1,23 +1,20 @@
+import {Button as MuiButton, Typography} from '@mui/material';
 import classNames from 'classnames';
 import {concat, intersection} from 'lodash';
 import PropTypes from 'prop-types';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
+import {createPortal} from 'react-dom';
 import {connect} from 'react-redux';
 
-import {
-  Button,
-  buttonColors,
-  LinkButton,
-} from '@cdo/apps/componentLibrary/button';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import CardLabels from '@cdo/apps/templates/curriculumCatalog/CardLabels';
 import {
   CreateSectionsToAssignSectionsDialog,
   SignInToAssignSectionsDialog,
   UpgradeAccountToAssignSectionsDialog,
 } from '@cdo/apps/templates/curriculumCatalog/noSectionsToAssignDialogs';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import MultipleSectionsAssigner from '@cdo/apps/templates/MultipleSectionsAssigner';
 import {
   translatedCourseOfferingCsTopics,
@@ -29,9 +26,10 @@ import {
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {
   assignToSection,
-  sectionsForDropdown,
   unassignSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {
@@ -68,6 +66,7 @@ const CurriculumCatalogCard = ({
   isTeacher,
   recommendedSimilarCurriculum,
   recommendedStretchCurriculum,
+  aiChatToolsDependency,
   ...props
 }) => (
   <CustomizableCurriculumCatalogCard
@@ -117,6 +116,7 @@ const CurriculumCatalogCard = ({
     isTeacher={isTeacher}
     recommendedSimilarCurriculum={recommendedSimilarCurriculum}
     recommendedStretchCurriculum={recommendedStretchCurriculum}
+    aiChatToolsDependency={aiChatToolsDependency}
     {...props}
   />
 );
@@ -143,7 +143,6 @@ CurriculumCatalogCard.propTypes = {
   courseId: PropTypes.number,
   courseOfferingId: PropTypes.number,
   scriptId: PropTypes.number,
-  isStandAloneUnit: PropTypes.bool,
   onAssignSuccess: PropTypes.func,
   deviceCompatibility: PropTypes.string,
   description: PropTypes.string,
@@ -160,6 +159,8 @@ CurriculumCatalogCard.propTypes = {
   isSignedOut: PropTypes.bool.isRequired,
   recommendedSimilarCurriculum: PropTypes.object,
   recommendedStretchCurriculum: PropTypes.object,
+  aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
+    .isRequired,
 };
 
 const CustomizableCurriculumCatalogCard = ({
@@ -197,10 +198,26 @@ const CustomizableCurriculumCatalogCard = ({
   availableResources,
   recommendedSimilarCurriculum,
   recommendedStretchCurriculum,
+  wide,
+  aiChatToolsDependency,
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
   const isTeacherOrSignedOut = isSignedOut || isTeacher;
+
+  const disallowWideViewThreshold = 640;
+  const [disallowWideView, setDisallowWideView] = useState(
+    window.innerWidth <= disallowWideViewThreshold
+  );
+
+  useEffect(() => {
+    const onResize = () =>
+      setDisallowWideView(window.innerWidth <= disallowWideViewThreshold);
+    window.addEventListener('resize', onResize);
+    return () => {
+      window.removeEventListener('resize', onResize);
+    };
+  }, []);
 
   const handleClickAssign = cardType => {
     setIsAssignDialogOpen(true);
@@ -226,11 +243,12 @@ const CustomizableCurriculumCatalogCard = ({
       return (
         <MultipleSectionsAssigner
           assignmentName={courseDisplayNameWithLatestYear}
+          aiChatToolsDependency={aiChatToolsDependency}
           onClose={() => setIsAssignDialogOpen(false)}
           sections={sectionsForDropdown}
           participantAudience="student"
           onAssignSuccess={onAssignSuccess}
-          isAssigningCourse={!!courseId}
+          isAssigningCourseOnly={!!courseId}
           courseId={courseId}
           sectionDirections={i18n.chooseSectionsDirectionsOnCatalog()}
           {...props}
@@ -252,6 +270,62 @@ const CustomizableCurriculumCatalogCard = ({
     }
   };
 
+  const isWide = wide && !disallowWideView;
+
+  const getCurriculumInfo = () => {
+    if (isWide) {
+      return (
+        <div className={style.wideCardContent}>
+          <CardLabels subjectsAndTopics={subjectsAndTopics} />
+          <Typography variant="h4" gutterBottom>
+            {courseDisplayName}
+          </Typography>
+          <Typography
+            className={style.wideCardDescription}
+            variant="body3"
+            gutterBottom
+          >
+            {description}
+          </Typography>
+          <div className={style.wideCardAspects}>
+            <div className={style.iconWithDescription}>
+              <FontAwesome icon="user" className="fa-solid" />
+              <p>{gradeRange}</p>
+            </div>
+            <div className={style.iconWithDescription}>
+              <FontAwesome icon="clock" className="fa-solid" />
+              <p>{duration}</p>
+            </div>
+          </div>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <div className={style.labelsAndTranslatabilityContainer}>
+            <CardLabels subjectsAndTopics={subjectsAndTopics} />
+            {!isEnglish && isTranslated && (
+              <FontAwesome
+                icon="language"
+                className="fa-solid"
+                title={translationIconTitle}
+              />
+            )}
+          </div>
+          <h4>{courseDisplayName}</h4>
+          <div className={style.iconWithDescription}>
+            <FontAwesome icon="user" className="fa-solid" />
+            <p>{gradeRange}</p>
+          </div>
+          <div className={style.iconWithDescription}>
+            <FontAwesome icon="clock" className="fa-solid" />
+            <p>{duration}</p>
+          </div>
+        </div>
+      );
+    }
+  };
+
   return (
     <div
       id={`${curriculumCatalogCardIdPrefix}${courseKey}`}
@@ -264,30 +338,13 @@ const CustomizableCurriculumCatalogCard = ({
             isExpanded ? style.expandedCard : '',
             isEnglish
               ? style.curriculumCatalogCardContainer_english
-              : style.curriculumCatalogCardContainer_notEnglish
+              : style.curriculumCatalogCardContainer_notEnglish,
+            isWide ? style.wideCard : ''
           )}
         >
           <img src={imageSrc} alt={imageAltText} />
           <div className={style.curriculumInfoContainer}>
-            <div className={style.labelsAndTranslatabilityContainer}>
-              <CardLabels subjectsAndTopics={subjectsAndTopics} />
-              {!isEnglish && isTranslated && (
-                <FontAwesome
-                  icon="language"
-                  className="fa-solid"
-                  title={translationIconTitle}
-                />
-              )}
-            </div>
-            <h4>{courseDisplayName}</h4>
-            <div className={style.iconWithDescription}>
-              <FontAwesome icon="user" className="fa-solid" />
-              <p>{gradeRange}</p>
-            </div>
-            <div className={style.iconWithDescription}>
-              <FontAwesome icon="clock" className="fa-solid" />
-              <p>{duration}</p>
-            </div>
+            {getCurriculumInfo()}
             <div
               className={classNames(
                 style.buttonsContainer,
@@ -296,52 +353,74 @@ const CustomizableCurriculumCatalogCard = ({
                   : style.buttonsContainer_notEnglish
               )}
             >
-              <Button
-                onClick={onQuickViewClick}
-                ariaLabel={quickViewButtonDescription}
-                text={i18n.quickView()}
-                className={`${style.buttonFlex} ${style.quickViewButton}`}
-                type="secondary"
-                color={buttonColors.black}
-              />
+              {onQuickViewClick && (
+                <MuiButton
+                  onClick={onQuickViewClick}
+                  variant="outlined"
+                  color="secondary"
+                  size="medium"
+                  className={classNames(
+                    style.quickViewButton,
+                    isEnglish && style.buttonFlex
+                  )}
+                  aria-label={quickViewButtonDescription}
+                  type="button"
+                >
+                  {i18n.quickView()}
+                </MuiButton>
+              )}
               {isTeacherOrSignedOut && (
                 <>
-                  <LinkButton
-                    color={buttonColors.black}
-                    type="secondary"
-                    href={pathToCourse}
-                    ariaLabel={i18n.learnMoreDescription({
+                  <MuiButton
+                    variant="outlined"
+                    color="secondary"
+                    size="medium"
+                    className={classNames(
+                      style.teacherAndSignedOutLearnMoreButton,
+                      isEnglish && style.buttonFlex
+                    )}
+                    aria-label={i18n.learnMoreDescription({
                       course_name: courseDisplayName,
                     })}
-                    text={i18n.learnMore()}
-                    className={`${style.buttonFlex} ${style.teacherAndSignedOutLearnMoreButton}`}
-                  />
-                  <Button
-                    color={buttonColors.purple}
-                    type="primary"
+                    href={pathToCourse}
+                  >
+                    {i18n.learnMore()}
+                  </MuiButton>
+                  <MuiButton
+                    variant="contained"
+                    color="primary"
+                    size="medium"
+                    className={classNames(isEnglish && style.buttonFlex)}
                     onClick={() => handleClickAssign('top-card')}
-                    ariaLabel={assignButtonDescription}
-                    text={assignButtonText}
-                    className={style.buttonFlex}
-                  />
+                    aria-label={assignButtonDescription}
+                    type="button"
+                  >
+                    {assignButtonText}
+                  </MuiButton>
                 </>
               )}
               {!isTeacherOrSignedOut && (
-                <LinkButton
-                  color={buttonColors.purple}
-                  type="primary"
-                  href={pathToCourse}
-                  ariaLabel={i18n.tryCourseNow({
+                <MuiButton
+                  variant="contained"
+                  color="primary"
+                  size="medium"
+                  className={classNames(
+                    style.studentLearnMoreButton,
+                    isEnglish && style.buttonFlex
+                  )}
+                  aria-label={i18n.tryCourseNow({
                     course_name: courseDisplayName,
                   })}
-                  text={i18n.tryNow()}
-                  className={`${style.buttonFlex} ${style.studentLearnMoreButton}`}
-                />
+                  href={pathToCourse}
+                >
+                  {i18n.tryNow()}
+                </MuiButton>
               )}
             </div>
           </div>
         </div>
-        {isAssignDialogOpen && renderAssignDialog()}
+        {isAssignDialogOpen &&
+          createPortal(renderAssignDialog(), document.body)}
       </div>
       {isExpanded && (
         <ExpandedCurriculumCatalogCard
@@ -351,6 +430,7 @@ const CustomizableCurriculumCatalogCard = ({
           gradeRange={gradeRange}
           subjectsAndTopics={subjectsAndTopics}
           deviceCompatibility={deviceCompatibility}
+          aiChatToolsDependency={aiChatToolsDependency}
           description={description}
           professionalLearningProgram={professionalLearningProgram}
           video={video}
@@ -381,6 +461,8 @@ CustomizableCurriculumCatalogCard.propTypes = {
   courseDisplayNameWithLatestYear: PropTypes.string.isRequired,
   duration: PropTypes.string.isRequired,
   gradeRange: PropTypes.string.isRequired,
+  aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
+    .isRequired,
   imageSrc: PropTypes.string.isRequired,
   isTranslated: PropTypes.bool,
   isEnglish: PropTypes.bool,
@@ -393,7 +475,6 @@ CustomizableCurriculumCatalogCard.propTypes = {
   courseId: PropTypes.number,
   courseOfferingId: PropTypes.number,
   scriptId: PropTypes.number,
-  isStandAloneUnit: PropTypes.bool,
   sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
   isTeacher: PropTypes.bool.isRequired,
   isSignedOut: PropTypes.bool.isRequired,
@@ -416,6 +497,7 @@ CustomizableCurriculumCatalogCard.propTypes = {
   availableResources: PropTypes.object,
   recommendedSimilarCurriculum: PropTypes.object,
   recommendedStretchCurriculum: PropTypes.object,
+  wide: PropTypes.bool,
 };
 
 export default connect(

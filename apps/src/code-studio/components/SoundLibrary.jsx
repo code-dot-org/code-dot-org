@@ -2,8 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import SearchBar from '@cdo/apps/templates/SearchBar';
+import SearchBar from '@cdo/apps/sharedComponents/SearchBar';
 import i18n from '@cdo/locale';
 
 import Sounds from '../../Sounds';
@@ -85,15 +84,6 @@ export default class SoundLibrary extends React.Component {
   };
 
   onClickChoose = () => {
-    firehoseClient.putRecord(
-      {
-        study: 'sound-dialog-2',
-        study_group: 'library-tab',
-        event: 'choose-library-sound',
-        data_json: this.state.selectedSound.sourceUrl,
-      },
-      {includeUserId: true}
-    );
     this.sounds.stopAllAudio();
     this.props.assetChosen(this.state.selectedSound.sourceUrl);
   };

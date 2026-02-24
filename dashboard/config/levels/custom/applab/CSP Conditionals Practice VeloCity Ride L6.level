@@ -73,15 +73,13 @@
     "libraries_enabled": "false",
     "ai_enabled": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSP U4L7 Step 4\",\r\n  \"callout_text\": \"Start Here\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"step4\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"Step 4\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"right bottom\",\r\n    \"adjust\": {\r\n     \"x\": 50,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
     "display_name": "VeloCity, Milestone 6",
     "bubble_choice_description": "Make the app your own by implementing your own feature(s)!",
-    "thumbnail_url": "https://images.code.org/9ca103f511c4976f5d571151624e1f32-scooterApp.png"
+    "thumbnail_url": "https://images.code.org/9ca103f511c4976f5d571151624e1f32-scooterApp.png",
+    "preload_asset_list": null,
+    "encrypted_examples": "DY3Hn9AKqrTu/X7Bg4xpzUlHhHyQ5bhJtMc0Yj4N0/Wa7uQsfbDdlMH5i4gI\nt088h2uShqvZLpTY+2Pm07q8Nw==\n"
   },
-  "audit_log": "[{\"changed_at\":\"2024-04-03T15:37:27.525+00:00\",\"changed\":[\"cloned from \\\"CSP Conditionals Practice MindEase L6\\\"\"],\"cloned_from\":\"CSP Conditionals Practice MindEase L6\"},{\"changed_at\":\"2024-04-03 15:38:16 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"preload_asset_list\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-04 14:10:15 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-16 19:46:05 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-17 17:49:39 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-19 18:29:17 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-03T15:37:27.525+00:00\",\"changed\":[\"cloned from \\\"CSP Conditionals Practice MindEase L6\\\"\"],\"cloned_from\":\"CSP Conditionals Practice MindEase L6\"},{\"changed_at\":\"2024-04-03 15:38:16 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"preload_asset_list\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-04 14:10:15 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-16 19:46:05 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-17 17:49:39 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-19 18:29:17 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 14:54:25 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

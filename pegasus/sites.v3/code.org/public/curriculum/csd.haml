@@ -6,10 +6,6 @@ theme: responsive_full_width
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/page/csd-styles.css", rel: "stylesheet"}
 
--# TODO - Remove the DCDO logic after the AI Teaching Assistant launch
-- if !!DCDO.get('ai-teaching-assistant-launch', false)
-  = view :top_skinny_banner, banner_id: "banner-csd", banner_url: nil, banner_icon: "fa fa-megaphone", banner_text: hoc_s("ai_ta_page.announcement_banner_csd_page", markdown: :inline, locals: {learn_url: "/ai/teaching-assistant"}), external_link: false, light_theme: true
-
 %section.hero-banner-basic.overlay
   .wrapper.flex-container.justify-space-between.align-items-center.wrap
     .text-wrapper
@@ -105,7 +101,7 @@ theme: responsive_full_width
 
 %section.bg-neutral-light
   .wrapper
-    = view :"tabs_section/resources/resources_tabs", resources_heading: hoc_s(:resources_tabs_heading), resources_desc: hoc_s(:resources_tabs_desc, markdown: :inline, locals: {sign_up_url: CDO.studio_url("/users/sign_up")})
+    = view :"tabs_section/resources/resources_tabs", resources_heading: hoc_s(:resources_tabs_heading), resources_desc: hoc_s(:resources_tabs_desc, markdown: :inline, locals: {sign_up_url: CDO.studio_url("/users/sign_up/account_type")})
 
 %section
   .wrapper

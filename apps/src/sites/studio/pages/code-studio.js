@@ -6,9 +6,12 @@
  * Note: This is included _after_ application.js.erb during our transition period,
  * so when moving things preserve the include order as much as possible.
  */
+import '@code-dot-org/component-library-styles/fontVariables.css';
+import '@code-dot-org/component-library-styles/primitiveColors.css';
+import '@code-dot-org/component-library-styles/colors.css';
+import {injectFontAwesome} from '@code-dot-org/fonts';
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import hashEmail from '@cdo/apps/code-studio/hashEmail';
 import initSigninState from '@cdo/apps/code-studio/initSigninState';
@@ -22,6 +25,7 @@ import {getStore} from '@cdo/apps/code-studio/redux';
 import initResponsive from '@cdo/apps/code-studio/responsive';
 import {initHamburger} from '@cdo/apps/hamburger/hamburger.js';
 import GDPRDialog from '@cdo/apps/templates/GDPRDialog';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 // disable import/order rule to import consoleShim after setting store.
 // This might be safe to remove but needs investigation whether any behavior is changed by order.
 /* eslint-disable import/order*/
@@ -111,7 +115,7 @@ $(document).ready(function () {
   if (document.querySelector(`script[data-gdpr]`)) {
     const gdprData = getScriptData('gdpr');
     if (gdprData.show_gdpr_dialog && gdprData.current_user_id) {
-      ReactDOM.render(
+      createReactRoot(
         <GDPRDialog
           isDialogOpen={gdprData.show_gdpr_dialog}
           currentUserId={gdprData.current_user_id}
@@ -138,3 +142,4 @@ checkForUnsupportedBrowsersOnLoad();
 initHamburger();
 initSigninState(userType, under13);
 initResponsive();
+injectFontAwesome();

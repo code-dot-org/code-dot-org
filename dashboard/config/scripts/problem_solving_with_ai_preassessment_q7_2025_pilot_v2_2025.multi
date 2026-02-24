@@ -1,0 +1,14 @@
+name 'problem-solving-with-ai-preassessment-q7_2025-pilot_v2-2025'
+
+question 'Which of the following best describes why context reduces AI contradictions?'
+
+wrong 'Context allows the AI to read human minds and avoid repeated mistakes.'
+wrong 'Context guarantees that the AI only references its most recently updated training data.'
+right 'Context gives the AI more relevant details, helping it generate answers tailored to the user\'s specific needs.'
+wrong 'Context transforms the AI into an expert system, granting it human-like reasoning capabilities.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 5: Uncovering Contradictions
+MARKDOWN

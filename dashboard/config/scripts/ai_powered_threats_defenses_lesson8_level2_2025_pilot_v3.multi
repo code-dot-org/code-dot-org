@@ -1,0 +1,14 @@
+name 'ai-powered-threats-defenses-lesson8-level2_2025-pilot_v3'
+title 'Checking for Understanding'
+
+question 'Which explanation best shows strong reasoning when deciding whether a log entry is suspicious?'
+
+wrong 'It is suspicious because it looks unusual.'
+right 'It is suspicious because it does not match the normal pattern of the user.'
+wrong 'It is suspicious because all late-night activity is suspicious even if it is normal for the user.'
+wrong 'It is suspicious because I personally would not do that.'
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Strong anomaly reasoning relies on comparing log entries to the user’s established patterns and habits. Students should avoid judging entries based only on surface features (such as time or personal preference). Suspicious behavior is defined by how much it diverges from what is typical for that user, not what seems unusual in general.
+MARKDOWN

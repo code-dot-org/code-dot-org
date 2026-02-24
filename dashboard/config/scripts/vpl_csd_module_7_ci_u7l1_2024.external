@@ -6,17 +6,21 @@ title 'Debugging Session'
 markdown <<MARKDOWN
 # AI and Machine Learning - Lesson 1: Intro to App Lab
 
-> ##### <a href="https://studio.code.org/s/csd7-2023/lessons/1" target="blank">U7L1 Lesson Plan: Intro to App Lab</a>
+<div style="background-color: #F7F8FA; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px;">
 
-> ##### **Note:** This unit assumes students are already familiar with App Lab, so we recommend starting with the App Lab Hour of Code which is included in this lesson. If your students are already familiar with App Lab, you may decide to skip this lesson, which requires hiding it from students in the unit overview page. <a href="https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students" target="blank">Click here to learn more about hiding this lesson</a>
+#### <a href="https://studio.code.org/s/csd7-2024/lessons/1" target="blank">U7L1 Lesson Plan: Intro to App Lab</a>
+<br>
 
-## Lesson Overview
-##### This tutorial is designed to quickly introduce the App Lab programming environment as a powerful tool for building and sharing apps. The tutorial itself teaches students to create and control buttons, text, images, sounds, and screens in JavaScript using either blocks or text. At the end of the tutorial, students are given time to either extend a project they started building into a "Choose Your Own Adventure", "Greeting Card", or "Personality Quiz" app. They can also continue on to build more projects featured on the code.org/applab page.
+##### **Note:** This unit assumes students are already familiar with App Lab, so we recommend starting with the App Lab Hour of Code which is included in this lesson. If your students are already familiar with App Lab, you may decide to skip this lesson, which requires hiding it from students in the unit overview page. <a href="https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students" target="blank">Click here to learn more about hiding this lesson</a>
+</p></div>
 
-## Lesson Objectives
-* ##### Build and share their own apps in App Lab using features like buttons, text, images, sound, and screens.
+## 🌎 Lesson Overview
+#### This tutorial is designed to quickly introduce the App Lab programming environment as a powerful tool for building and sharing apps. The tutorial itself teaches students to create and control buttons, text, images, sounds, and screens in JavaScript using either blocks or text. At the end of the tutorial, students are given time to either extend a project they started building into a "Choose Your Own Adventure", "Greeting Card", or "Personality Quiz" app. They can also continue on to build more projects featured on the code.org/applab page.
 
-## Investigation Tasks
+## ✅ Lesson Objective
+* #### Build and share their own apps in App Lab using features like buttons, text, images, sound, and screens.
 
-##### If you haven't done so already, review the lesson plan.
+## 📋 Investigation Task
+
+#### If you haven't done so already, review the lesson plan.
 MARKDOWN

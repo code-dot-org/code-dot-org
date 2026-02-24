@@ -17,7 +17,7 @@
     {
       "name": "",
       "description": "",
-      "code": "```\n// Change the image element from the Code.org logo to the dog character.\r\nimage(\"image\", \"http://code.org/images/logo.png\");\r\nsetImageURL(\"image\", \"http://studio.code.org/blockly/media/skins/applab/static_avatar.png\");\r\n\n```",
+      "code": "```\n// Change the image element from the Code.org logo to the dog character.\r\nimage(\"image\", \"https://studio.code.org/blockly/media/logo.png\");\r\nsetImageURL(\"image\", \"http://studio.code.org/blockly/media/skins/applab/static_avatar.png\");\r\n\n```",
       "app": "",
       "image": null,
       "app_display_type": "codeFromCodeField",

@@ -1,4 +1,4 @@
-@import "color", "font", "barlow-semi-condensed-font";
+@import "color", "font";
 
 /* This file is an adopted copy of apps/src/componentLibrary/typography/typography.module.scss.
    Updating styles in this file will require a manual sync with the that file.
@@ -13,7 +13,7 @@
 // identical classes for potential use on other elements if needed.
 
 // ----------------------------------------
-// v 2.0.1
+// v 2.0.2
 // ----------------------------------------
 
 // Sizes
@@ -101,7 +101,7 @@
   @include heading-common;
   @include main-font-semi-bold;
   font-size: 1.25rem;
-  line-height: 1.40;
+  line-height: 1.4;
 }
 
 @mixin heading-xs {
@@ -138,7 +138,7 @@
 
 @mixin body-four {
   @include paragraph-common;
-  font-size: 0.75rem;
+  font-size: 0.813rem;
   line-height: 1.64;
 }
 
@@ -158,13 +158,13 @@
 
 @mixin overline-two {
   @include overline-common;
-  font-size: 0.75rem;
+  font-size: 0.813rem;
   line-height: 1.64;
 }
 
 @mixin overline-three {
   @include overline-common;
-  font-size: 0.625rem;
+  font-size: 0.688rem;
   line-height: 1.76;
 }
 
@@ -173,20 +173,12 @@
   @include main-font-semi-bold;
 }
 
-@mixin extra-strong {
-  @include main-font-bold;
-}
-
 @mixin em {
   @include main-font-regular-italic;
 }
 
 @mixin strong-em {
   @include main-font-semi-bold-italic;
-}
-
-@mixin extra-strong-em {
-  @include main-font-bold-italic;
 }
 
 // Caption styles
@@ -201,49 +193,85 @@
 
 // Headings
 h1,
-.heading-xxl { @include heading-xxl; }
+.heading-xxl {
+  @include heading-xxl;
+}
+
 h2,
-.heading-xl { @include heading-xl; }
+.heading-xl {
+  @include heading-xl;
+}
+
 h3,
-.heading-lg { @include heading-lg; }
+.heading-lg {
+  @include heading-lg;
+}
+
 h4,
-.heading-md { @include heading-md; }
+.heading-md {
+  @include heading-md;
+}
+
 h5,
-.heading-sm { @include heading-sm; }
+.heading-sm {
+  @include heading-sm;
+}
+
 h6,
-.heading-xs { @include heading-xs; }
+.heading-xs {
+  @include heading-xs;
+}
 
 // Paragraphs
 // Use on larger paragraphs
-.body-one { @include body-one; }
+.body-one {
+  @include body-one;
+}
+
 // Use on default paragraphs
-.body-two { @include body-two; }
+.body-two {
+  @include body-two;
+}
+
 // Use on course block descriptions or anywhere
 // else that needs smaller paragraph text
-.body-three { @include body-three; }
+.body-three {
+  @include body-three;
+}
+
 // Use on smallest paragraph text
-.body-four { @include body-four; }
+.body-four {
+  @include body-four;
+}
 
 // Overlines
 // Use on small uppercase labels or descriptions
 // (Bigger size)
-.overline-one { @include overline-one; }
+.overline-one {
+  @include overline-one;
+}
+
 // (Default size)
-.overline-two { @include overline-two; }
+.overline-two {
+  @include overline-two;
+}
+
 // (Smaller size)
-.overline-three { @include overline-three; }
+.overline-three {
+  @include overline-three;
+}
 
 // Use in paragraphs to bold text
 strong,
-.strong { @include strong; }
-
-.extra-strong {
-  @include extra-strong;
+.strong {
+  @include strong;
 }
 
 // Use in paragraphs to italicize text
 em,
-.em { @include em; }
+.em {
+  @include em;
+}
 
 strong em,
 em strong,
@@ -252,12 +280,9 @@ em.strong,
   @include strong-em;
 }
 
-em.extra-strong,
-.extra-strong em {
-  @include extra-strong-em;
-}
-
 // Captions
 // Use on figcaption elements that accompany images or videos
 figcaption,
-.figcaption { @include figcaption; }
+.figcaption {
+  @include figcaption;
+}

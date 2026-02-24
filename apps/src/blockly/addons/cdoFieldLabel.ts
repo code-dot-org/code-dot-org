@@ -1,4 +1,4 @@
-import GoogleBlockly, {Field, FieldLabelConfig} from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 // The second parameter of CDO Blockly implementation of this class is
 // a config object, which we are not currently using. In Google Blockly,
@@ -7,16 +7,42 @@ import GoogleBlockly, {Field, FieldLabelConfig} from 'blockly/core';
 // The config option is specified for certain blocks in Jigsaw, Maze,
 // Artist, and Play Lab. We can potentially add additional handling of
 // this argument to this class in the future should we need it.
-export default class CdoFieldLabel extends GoogleBlockly.FieldLabel {
+export default class CdoFieldLabel extends BlocklyCore.FieldLabel {
+  // An override for legacy labs like Jigsaw where the rendered block size is constant.
+  fixedSize: {width: number; height: number} | undefined;
+
   constructor(
-    value?: string | typeof Field.SKIP_SETUP,
-    styleConfig?: string | object,
-    config?: FieldLabelConfig
-  ) {
-    let textClass = undefined;
-    if (typeof styleConfig === 'string') {
-      textClass = styleConfig;
+    value?: string | typeof BlocklyCore.Field.SKIP_SETUP,
+    customOptions?: {
+      fixedSize?: {width: number; height: number};
     }
-    super(value, textClass, config);
+  ) {
+    // Blockly also supports optional textClass and config parameters,
+    // but these are unused.
+    super(value);
+
+    this.fixedSize = customOptions?.fixedSize;
+  }
+
+  updateSize_(margin?: number) {
+    super.updateSize_(margin);
+    if (this.fixedSize) {
+      const {width, height} = this.fixedSize;
+      this.size_ = new BlocklyCore.utils.Size(width, height);
+    }
+  }
+
+  applyColour(): void {
+    // Darken the white block text for shadow blocks in dark themes.
+    if (Blockly.isDarkTheme && this.textElement_) {
+      if (this.getSourceBlock()?.isShadow()) {
+        Blockly.utils.dom.addClass(this.textElement_, 'blocklyShadowFieldText');
+      } else {
+        Blockly.utils.dom.removeClass(
+          this.textElement_,
+          'blocklyShadowFieldText'
+        );
+      }
+    }
   }
 }

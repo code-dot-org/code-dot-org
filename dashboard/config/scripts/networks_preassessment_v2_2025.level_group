@@ -1,0 +1,27 @@
+name 'networks-preassessment_v2-2025'
+title 'The Fabric of the Internet and AI'
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'networks-preassessment-intro_v2-2025'
+level 'networks-preassessment-question1_v2-2025'
+level 'networks-preassessment-question2_v2-2025'
+level 'networks-preassessment-question3_v2-2025'
+level 'networks-preassessment-question4_v2-2025'
+level 'networks-preassessment-question5_v2-2025'
+
+page
+level 'networks-preassessment-question6_v2-2025'
+level 'networks-preassessment-question7_v2-2025'
+level 'networks-preassessment-question8_v2-2025'
+level 'networks-preassessment-question9_v2-2025'
+level 'networks-preassessment-question10_v2-2025'
+
+page
+level 'networks-preassessment-question11_v2-2025'
+level 'networks-preassessment-question12_v2-2025'
+level 'networks-preassessment-question13_v2-2025'
+level 'networks-preassessment-question14_v2-2025'
+level 'networks-preassessment-question15_v2-2025'

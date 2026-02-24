@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-10-26T18:13:37.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Parameter\n\nA **parameter** is a variable that is passed into a function. It allows the function to be more flexible and reusable.\n\nFor example, `size`, `quantity`, and `color` are examples of parameters.\n",
+        "imageUrl": "https://images.code.org/63cea5e52416042882eeb5af51d99bdc-parameter.png",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-top-right"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-26T18:13:37.180+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson5-panel-conditional-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson5-panel-conditional-test-2025\"},{\"changed_at\":\"2025-10-26 18:14:30 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-26 19:51:58 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

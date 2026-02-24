@@ -1,0 +1,55 @@
+name 'self-paced-equity-U2L1-accessiblespaces'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Making Your Classroom More Accessible
+
+#### This level includes several strategies for making your classroom more accessible. Don't feel overwhelmed by the amount you read here - instead, while you read, commit to choosing **one or two** strategies to implement in the **next month**. You can always come back to this page to pick new strategies to implement.
+
+## Universal Design for Learning
+
+#### **Universal Design for Learning (UDL)** is "a framework to improve and optimize teaching and learning for all people based on scientific insights into how humans learn" <a href="https://www.cast.org/impact/universal-design-for-learning-udl" target="blank" rel="noopener noreferrer">(CAST)</a>. UDL provides guidance for how to provide students with **multiple means of engagement, representation, and action & expression**.
+
+#### The University of Florida’s Creative Technology Research Lab (CTRL) has adapted the UDL guidelines for computer science (UDL4CS) to provide teachers with the tools to make learning more accessible for their students. This is a great resource for K-12 computer science educators. 
+
+### **Read About the UDL Guidelines**
+
+#### There are two ways to read the UDL for CS guidelines:
+
+* #### Review the <a href="https://ctrl.education.ufl.edu/wp-content/uploads/sites/5/2020/05/Copy-of-UDL-and-CS_CT-remix.pdf" target="blank" rel="noopener noreferrer">UDL4CS Guidelines in text format</a>
+* #### Review videos provided in the <a href="https://udl4cs.education.ufl.edu/interactive-table/" rel="noopener noreferrer" target="blank">UDL4CS Interactive Table</a>
+
+### **Watch a Video About the UDL Guidelines**
+
+#### Would you like another way of engaging with Universal Design for Learning methods? Check out this video by the DO-IT (Disabilities, Opportunities, Internetworking, and Technology) Center at the University of Washington about including students with disabilities in computing courses.
+
+##### **Note**: This video opens in a new tab.
+
+<div style="text-align: center; margin: 20px 0px 20px 0px;">
+  <a href="https://www.youtube.com/watch?v=g0xFuslKQtQ" target="_blank" rel="noopener noreferrer">
+    <img src="https://images.code.org/a41c2bbe8941b3cfe3398c6f24a5e526-image-1738886730569.05.27 PM.png" 
+         alt="YouTube Video Thumbnail" 
+         style="width: 80%; max-width: 600px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);">
+  </a>
+</div>
+
+##### "How can we include students with disabilities in computing courses?" by The DO-IT Center, YouTube (https://www.youtube.com/watch?v=g0xFuslKQtQ).
+
+## Improving Your Physical Space
+
+<img src="https://images.code.org/549644e1c7f38e946420664d30b84477-image-1736057061352.04.19 PM.png" alt="A group of students and their teacher in a computer science classroom." style="border-radius:20px; float: right; height: 200px; clear: both; margin: 20px 20px 0px 20px;">
+
+#### **AccessCSForAll**, from the University of Washington, provides guidelines for how to make a computer lab accessible for students with a range of disabilities. While this resource has been created for educators who teach at the university level, many of the guidelines are universal and may benefit your classroom design.
+
+* ### Review <a href="https://www.washington.edu/accesscomputing/equal-access-universal-design-computer-labs" rel="noopener noreferrer" target="blank">Equal Access: Universal Design of Computer Labs</a>
+
+#### The above document includes a lot of valuable information. If you feel overwhelmed, consider starting with just the following questions, from the same document:
+
+* #### Are printed materials within easy reach from a variety of heights and without furniture blocking access?
+* #### Do video presentations have captions? Audio descriptions?
+* #### Are adequate work areas available for both right- and left-handed users?
+* #### Are key documents provided in language(s) other than English?
+* #### Is a trackball available for those who have difficulty controlling a mouse?
+* #### Can controls on computers, printers, scanners, and other devices be reached from a seated position?
+MARKDOWN

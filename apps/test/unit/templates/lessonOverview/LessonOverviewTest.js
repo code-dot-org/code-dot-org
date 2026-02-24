@@ -6,8 +6,8 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import {UnconnectedLessonOverview as LessonOverview} from '@cdo/apps/templates/lessonOverview/LessonOverview';
 import * as currentLocaleModule from '@cdo/apps/util/currentLocale';
@@ -18,7 +18,7 @@ import {
   fakeTeacherAndStudentAnnouncement,
   fakeTeacherAnnouncement,
 } from '../../code-studio/components/progress/FakeAnnouncementsTestData';
-import {sampleActivities} from '../../lib/levelbuilder/lesson-editor/activitiesTestData';
+import {sampleActivities} from '../../levelbuilder/lesson-editor/activitiesTestData';
 
 describe('LessonOverview', () => {
   let currentLocaleStub;
@@ -29,7 +29,7 @@ describe('LessonOverview', () => {
       lesson: {
         unit: {
           displayName: 'Unit 1',
-          link: '/s/unit-1',
+          link: '/courses/course/units/1',
           publishedState: 'beta',
           lessonGroups: [
             {
@@ -40,14 +40,14 @@ describe('LessonOverview', () => {
                 {
                   key: 'lesson-1',
                   position: 1,
-                  displayName: 'Lesson 1',
+                  displayName: 'Lesson One',
                   link: '/lessons/1',
                   lockable: false,
                 },
                 {
                   key: 'lesson-2',
                   position: 2,
-                  displayName: 'Lesson 2',
+                  displayName: 'Lesson Two',
                   link: '/lessons/2',
                   lockable: false,
                 },
@@ -60,7 +60,8 @@ describe('LessonOverview', () => {
         duration: 45,
         position: 1,
         lockable: false,
-        displayName: 'Lesson 1',
+        displayName: 'Lesson One',
+        title: 'Lesson One Title',
         overview: 'Lesson Overview',
         purpose: 'The purpose of the lesson is for people to learn',
         preparation: '- One',
@@ -119,12 +120,12 @@ describe('LessonOverview', () => {
   it('renders default props', () => {
     const wrapper = shallow(<LessonOverview {...defaultProps} />);
     const navLink = wrapper.find('a').at(0);
-    expect(navLink.props().href).to.contain('/s/unit-1');
+    expect(navLink.props().href).to.contain('/courses/course/units/1');
     expect(navLink.contains('< Unit 1')).to.be.true;
 
     expect(wrapper.find('LessonNavigationDropdown').length).to.equal(1);
 
-    expect(wrapper.contains('Lesson 1: Lesson 1'), 'Lesson Name').to.be.true;
+    expect(wrapper.contains('Lesson One Title'), 'Lesson Title').to.be.true;
     expect(wrapper.contains('45 minutes'), 'Lesson Duration').to.be.true;
 
     const enhancedSafeMarkdowns = wrapper.find('EnhancedSafeMarkdown');

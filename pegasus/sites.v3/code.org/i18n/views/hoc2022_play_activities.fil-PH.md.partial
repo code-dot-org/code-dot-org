@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "Hello World: Soccer", body: "Ikaw ang kapitan ng team habang nagko-code ka ng mga interactive na eksena sa soccer pitch. GOOOAAALLL!", image: "/images/hoc2022-hello-world-soccer.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
-
-{{ featured_tutorial, title: "Mga Isport", body: "Gumawa ng basketball game o mix and match sa isport.", image: "/shared/images/courses/logo_tall_sports.jpg", url: "https://code.org/athletes" }}
-
-{{ featured_tutorial, title: "Flappy Code", body: "Gusto mo bang magsulat ng sarili mong laro sa loob ng wala pang 10 minuto? Subukan ang aming Flappy Code tutorial!", image: "/shared/images/courses/logo_tall_flappy.jpg", url: "https://studio.code.org/s/flappy/reset" }}
-
-{{ featured_tutorial, title: "Minecraft Hour of Code", body: "Heto ulit ang Minecraft sa Hour of Code na may bagong aktibidad! Maglakbay sa Minecraft na may code.", image: "/images/hoc2022-mc-escape.png", url: "https://aka.ms/HourofCode2022" }}

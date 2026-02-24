@@ -1,0 +1,475 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-02-28T18:17:25.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential"
+          ]
+        },
+        "addFunctionDefinition": false,
+        "addFunctionCalls": false
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "MITfNP)flV,a{[^spke}",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sounds_sequential",
+                        "id": "z88zeLXs}wl(v%:/cK{|",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "W(;()ataAgK[tevCVN0k",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "mc_hammer_u_cant_touch_this/main_loop"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "Tkzomzi0g+yirVe_by}7",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "mc_hammer_u_cant_touch_this/main_loop"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "0c!`orij=VFw-P1;u:@n",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "mc_hammer_u_cant_touch_this/main_loop"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "DTR!?`yT_ig$F4?kQGXd",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": true
+                                          },
+                                          "fields": {
+                                            "sound": "mc_hammer_u_cant_touch_this/main_loop"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sounds_sequential",
+                            "id": "sX:fh+*|TK+^InP[}?Ah",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "inputs": {
+                              "code": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "_QOUheAGT{HN)2L$6(0K",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "mc_hammer_u_cant_touch_this/beat"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "zME[L.v,hztP)9sW#4=9",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "mc_hammer_u_cant_touch_this/beat"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "{oYg);??`ed8zm4Efwmn",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "mc_hammer_u_cant_touch_this/beat"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "vx%vKdj~qb-dW]AZNVQS",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": true
+                                              },
+                                              "fields": {
+                                                "sound": "mc_hammer_u_cant_touch_this/beat"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together",
+                      "id": ";)ejWYpvk!-U.(ofFW)t",
+                      "deletable": false,
+                      "movable": false,
+                      "editable": false,
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "inputs": {
+                        "code": {
+                          "block": {
+                            "type": "play_sounds_sequential",
+                            "id": "eHsPh$NmHaR?D/.2Y@4z",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "inputs": {
+                              "code": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "~|cy_=eq~@w3V5TQu^`^",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "mc_hammer_u_cant_touch_this/synth"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "f$`K.%Oi1$,92oKUSFMN",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "mc_hammer_u_cant_touch_this/synth"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "i0Bf^$Z,1/;{u9{@ZE;e",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "mc_hammer_u_cant_touch_this/synth"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "3,Jg2y+Jz8!a|B.n8abs",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": true
+                                              },
+                                              "fields": {
+                                                "sound": "mc_hammer_u_cant_touch_this/synth"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sounds_sequential",
+                                "id": "sqgFT[)LL1Q7Jt=V31mT",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "inputs": {
+                                  "code": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "ZG$b)p8Ai{6QXHc{%Z#_",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "mc_hammer_u_cant_touch_this/bass_breakdown"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": ":lo;nkdP=s$RHl/1VS`%",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "mc_hammer_u_cant_touch_this/bass_breakdown"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "HbM#%-uC`rfdu%Y5%[74",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "mc_hammer_u_cant_touch_this/bass_breakdown"
+                                              },
+                                              "next": {
+                                                "block": {
+                                                  "type": "play_sound_at_current_location_simple2",
+                                                  "id": "-;taFl@S2dq*{tWQxl)2",
+                                                  "deletable": false,
+                                                  "movable": false,
+                                                  "editable": false,
+                                                  "extraState": {
+                                                    "disableNextConnection": true
+                                                  },
+                                                  "fields": {
+                                                    "sound": "mc_hammer_u_cant_touch_this/bass_breakdown"
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sounds_sequential",
+                                    "id": "SUVL+vT[-AT],OMuC*=o",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "inputs": {
+                                      "code": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "ACqAV6yz?x=$xFkk_fLf",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "mc_hammer_u_cant_touch_this/beat_breakdown"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "Gg]5~.Erz_e`GcRDOeu9",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "mc_hammer_u_cant_touch_this/beat_breakdown"
+                                              },
+                                              "next": {
+                                                "block": {
+                                                  "type": "play_sound_at_current_location_simple2",
+                                                  "id": "lrT`X6K2dtc%8|kP(n|Y",
+                                                  "deletable": false,
+                                                  "movable": false,
+                                                  "editable": false,
+                                                  "extraState": {
+                                                    "disableNextConnection": false
+                                                  },
+                                                  "fields": {
+                                                    "sound": "mc_hammer_u_cant_touch_this/beat_breakdown"
+                                                  },
+                                                  "next": {
+                                                    "block": {
+                                                      "type": "play_sound_at_current_location_simple2",
+                                                      "id": "6;;3)]mde(}C9~pjO@!p",
+                                                      "deletable": false,
+                                                      "movable": false,
+                                                      "editable": false,
+                                                      "extraState": {
+                                                        "disableNextConnection": true
+                                                      },
+                                                      "fields": {
+                                                        "sound": "mc_hammer_u_cant_touch_this/beat_breakdown"
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "packId": "mc_hammer_u_cant_touch_this",
+      "sounds": {
+        "mc_hammer_u_cant_touch_this": [
+          "main_loop",
+          "beat",
+          "bass_breakdown",
+          "synth",
+          "beat_breakdown",
+          "breakdown_oohs",
+          "chopped_oohs",
+          "oohs",
+          "break_it_down",
+          "i_told_ya",
+          "yo_let_me_bust",
+          "mymymy",
+          "cant_touch_this",
+          "stop_hammer_time"
+        ]
+      },
+      "showSoundFilters": true
+    },
+    "long_instructions": "Add some vocal flairs to this background beat. The vocals should be spaced out appropriately.",
+    "encrypted_exemplar_sources": "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\ndXNw\n",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-02-28T18:17:25.519+00:00\",\"changed\":[\"cloned from \\\"music-lab-simple-template\\\"\"],\"cloned_from\":\"music-lab-simple-template\"},{\"changed_at\":\"2025-02-28 18:18:48 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-28 18:20:21 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-28 18:22:21 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-28 19:09:07 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

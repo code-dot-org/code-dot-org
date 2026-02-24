@@ -1,0 +1,81 @@
+name 'self-paced-equity-U1L3-strategies'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<img src="https://images.code.org/b913995388f4882d6a8e257edc1fc2e0-image-1733872466523.14.22 PM.png" alt="A student sits in a classroom surrounded by other students." style="border-radius:20px; float: right; padding-right: 10px; height: 200px; clear: both; margin: 20px 20px 20px 20px;">
+
+# What's Next?
+
+#### Understanding and being comfortable with your identity is part of being a better teacher. But it's also important to get to know your students' identities too, so you can celebrate their strengths, learning styles, and contributions to your classroom community.
+
+## Getting to Know Your Students
+
+#### You likely already have a toolbox of strategies for getting to know your students, but these are specific to the computer science classroom. We've included a strategy and a connection to Code.org's curriculum below so you can see them in action!
+<br>
+
+#### <b>1. Learn how students are already using technology at home and in other classes to build on their existing knowledge and competencies.</b>
+#### From Kindergarten to 12th grade, your students are already interacting with devices that run on code! Make connections to students' lives outside of the classroom by asking them about the experience they already have with computer science and helping them incorporate new knowledge.
+
+<div style="display: flex; align-items: left; margin: 20px 10px 20px 10px;">
+
+<img src="https://images.code.org/86fb480e433c7feca6d9e6df4a73a062-image-1731961341605.png" style="width: auto; height: 100px;"  alt="Two interconnected links.">
+
+<div style="background-color: #F7F8FA; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 5%; margin-right: 5%; padding: 10px 10px 5px 10px;">
+
+<p style="color: black; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Curriculum Connection</b></p>
+
+<p style="color: black; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px">In <a href="https://studio.code.org/s/coursef-2024/lessons/2" target="_blank" rel="noopener noreferrer">Course F, Lesson 2: Introducing Sprite Lab</a> (designed for students in fifth grade), students begin a series of lessons to build a game by answering the questions, "What is your favorite game or app?" and "What choices do you get to make while using it?" The teacher has the opportunity to bridge this information into game design during the unit.
+</p>
+</div>
+</div>
+
+#### <b>2. Allow your students to code projects that are personally interesting to them, and talk to them about their interests.</b>
+#### Students in all grade levels benefit from age-appropriate flexibility in how they choose to engage with projects in the classroom. By encouraging students to follow their interests, you can learn more about what motivates them and how it connects to computer science.
+
+<div style="display: flex; align-items: left; margin: 20px 10px 20px 10px;">
+
+<img src="https://images.code.org/86fb480e433c7feca6d9e6df4a73a062-image-1731961341605.png" style="width: auto; height: 100px;"  alt="Two interconnected links.">
+
+<div style="background-color: #F7F8FA; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 5%; margin-right: 5%; padding: 10px 10px 5px 10px;">
+
+<p style="color: black; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Curriculum Connection</b></p>
+
+<p style="color: black; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px">In CS Principles, a curriculum designed for 9-12 graders, students create their own app starting in <a href="https://studio.code.org/s/csp3-2024/lessons/3" target="_blank" rel="noopener noreferrer">Unit 3, Lesson 3 - Designing an App Part 1</a>. They are able to brainstorm a topic which they can educate a user about, making them the experts.</p>
+</div>
+</div>
+
+#### <b>3. Make space for all students to engage with classroom discussions about their coding habits.</b>
+#### As students learn the skills, habits, and mindsets essential to writing and debugging code, assist them in processing their work through classroom discussions. You can use these to get to know your students and celebrate their growth as problem solvers.
+
+<div style="display: flex; align-items: left; margin: 20px 10px 20px 10px;">
+
+<img src="https://images.code.org/86fb480e433c7feca6d9e6df4a73a062-image-1731961341605.png" style="width: auto; height: 100px;"  alt="Two interconnected links.">
+
+<div style="background-color: #F7F8FA; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 5%; margin-right: 5%; padding: 10px 10px 5px 10px;">
+
+<p style="color: black; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Curriculum Connection</b></p>
+
+<p style="color: black; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px">In CS Discoveries, a curriculum designed for 6-10 graders, students discuss their work on developing a game in <a href="https://studio.code.org/s/csd3-2024/lessons/5" rel="noopener noreferrer">Unit 3, Lesson 5 - Variables</a>. At the end of the lesson, they discuss the questions, "What is your own definition of a variable?" and "Why are variables useful in programs?"
+</p>
+</div>
+</div>
+
+___
+
+<div style="display: flex; align-items: left;">
+
+<a href="https://forum.code.org/t/understanding-equity-in-computer-science-lesson-3-level-8-reflection/40324" target="_blank" rel="noopener noreferrer">
+<img src="https://images.code.org/7dbe63a051fbad4ef262d6ab710e2966-image-1731959037460.png" style="width: auto; height: 100px;"  alt="A browser with two text boxes, both including an avatar and lines of text."></a>
+
+<div style="background-color: #007786; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 5%; margin-right: 5%; padding: 10px 10px 5px 10px;">
+
+<p style="color: white; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Post to the Code.org Forum</b></p>
+
+<p style="color: white; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px">Have strategies you want to share with others? Head over to the forum to share with others and learn from them.</p>
+
+</div>
+</div>
+
+
+MARKDOWN

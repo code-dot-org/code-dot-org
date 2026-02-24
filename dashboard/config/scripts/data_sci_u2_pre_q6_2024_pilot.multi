@@ -1,0 +1,10 @@
+name 'Data Sci U2 Pre Q6_2024-pilot'
+
+question 'Explain the implications of invalid or inconsistent data entries in a dataset and how they can affect the results of data analysis.'
+
+wrong 'Invalid or inconsistent data entries can enhance the dataset\'s diversity, potentially leading to a more comprehensive analysis and robust conclusions.'
+wrong 'Invalid or inconsistent data entries can be automatically corrected by pandas, ensuring they have minimal impact on the analysis results.'
+right 'Invalid or inconsistent data entries may introduce biases or errors into calculations, leading to inaccurate or misleading analysis results.'
+wrong 'Invalid or inconsistent data entries are ignored by pandas during analysis, ensuring that only valid data is considered, and the results remain accurate.'
+
+allow_multiple_attempts false

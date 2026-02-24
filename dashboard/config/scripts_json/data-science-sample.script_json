@@ -4,11 +4,13 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-06-20 19:41:55 UTC",
+    "serialized_at": "2024-11-19 01:17:17 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -104,6 +106,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-sample-2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -125,6 +130,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-sample-3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -146,6 +154,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-sample-4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -167,6 +178,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-sample-5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -188,6 +202,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-sample-6"
+        ]
       },
       "bonus": false,
       "seeding_key": {

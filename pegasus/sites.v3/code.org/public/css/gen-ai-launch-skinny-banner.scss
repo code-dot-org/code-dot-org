@@ -1,0 +1,85 @@
+@import 'color', 'breakpoints';
+
+.gen-ai-launch-skinny-banner {
+  display: flex;
+  background-color: #0F1E2E;
+  background-image: url('/images/banners/banner-bg-horizontal-line-gaps.png');
+  background-repeat: repeat;
+  background-size: contain;
+  color: $white !important;
+  padding: 2rem;
+
+  .wrapper {
+    display: flex;
+    max-width: 960px;
+    margin: 0 auto;
+    gap: 4rem;
+
+    @media (max-width: 900px) {
+      gap: 2rem;
+    }
+
+    @media (max-width: $width-sm) {
+      padding-block: 2rem;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+    }
+  }
+
+  .text-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    flex: 2;
+
+    h5 {
+      font-size: 1.25rem;
+      margin-top: 0;
+      color: $white;
+    }
+
+    p {
+      color: $white;
+    }
+
+    @media (max-width: $width-sm) {
+      text-align: center;
+    }
+  }
+
+  img {
+    max-width: 15rem;
+    max-height: 8.5rem;
+
+    @media (max-width: $width-sm) {
+      margin: auto;
+    }
+  }
+
+  a.link-button {
+    max-width: 15rem;
+    height: fit-content;
+    margin: auto;
+  }
+  
+  .afe-container {
+    display: flex;
+    flex-direction: row;
+
+    @media (max-width: $width-sm) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    .afe-partnership-logo {
+      max-width: 190px;
+      max-height: 1.5rem;
+      padding-inline-start: 0.5rem;
+    }
+  }
+}

@@ -11,11 +11,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+import {loadBlocksToWorkspace, getCode} from '@cdo/apps/blockly/utils';
 import {
   showArrowButtons,
   dismissSwipeOverlay,
 } from '@cdo/apps/templates/arrowDisplayRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import commonMsg from '@cdo/locale';
 
 import {blockAsXmlNode, cleanBlocks} from '../block_utils';
@@ -416,7 +418,6 @@ Studio.loadLevel = function () {
         staticPlayer: true,
       });
   }
-  blocks.registerCustomGameLogic(Studio.customLogic);
 
   // Custom game logic doesn't work yet in the interpreter.
   Studio.legacyRuntime = !!Studio.customLogic;
@@ -2282,12 +2283,6 @@ Studio.init = function (config) {
       Blockly.HSV_SATURATION = 0.6;
 
       Blockly.SNAP_RADIUS *= Studio.scale.snapRadius;
-
-      if (Blockly.contractEditor) {
-        Blockly.contractEditor.registerTestHandler(
-          Studio.getStudioExampleFailure
-        );
-      }
     }
 
     drawMap();
@@ -2403,7 +2398,7 @@ Studio.init = function (config) {
     />
   );
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <AppView visualizationColumn={visualizationColumn} onMount={onMount} />
     </Provider>,
@@ -2522,7 +2517,7 @@ Studio.prepareForRemix = function () {
   cleanBlocks(blocksDom);
 
   Blockly.mainBlockSpace.clear();
-  Blockly.cdoUtils.loadBlocksToWorkspace(
+  loadBlocksToWorkspace(
     Blockly.mainBlockSpace,
     Blockly.Xml.domToText(blocksDom)
   );
@@ -2935,45 +2930,6 @@ Studio.getGoalAssetFromSkin = function () {
 };
 
 /**
- * Runs test of a given example
- * @param exampleBlock
- * @returns {string} string to display after example execution
- */
-Studio.getStudioExampleFailure = function (exampleBlock) {
-  try {
-    var actualBlock = exampleBlock.getInputTargetBlock('ACTUAL');
-    var expectedBlock = exampleBlock.getInputTargetBlock('EXPECTED');
-
-    studioApp().feedback_.throwOnInvalidExampleBlocks(
-      actualBlock,
-      expectedBlock
-    );
-
-    var defCode = Blockly.Generator.blockSpaceToCode('JavaScript', [
-      'functional_definition',
-    ]);
-    var exampleCode = Blockly.Generator.blocksToCode('JavaScript', [
-      exampleBlock,
-    ]);
-    if (exampleCode) {
-      var resultBoolean = CustomMarshalingInterpreter.evalWith(
-        defCode + '; return' + exampleCode,
-        {
-          Studio: api,
-          Globals: Studio.Globals,
-        },
-        {legacy: true}
-      );
-      return resultBoolean ? null : 'Does not match definition.';
-    } else {
-      return 'No example code.';
-    }
-  } catch (error) {
-    return 'Execution error: ' + error.message;
-  }
-};
-
-/**
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
@@ -2988,9 +2944,6 @@ Studio.runButtonClick = function () {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
   studioApp().toggleRunReset('reset');
-  if (studioApp().isUsingBlockly()) {
-    Blockly.mainBlockSpace.traceOn(true);
-  }
 
   // Stop the music the first time the run button is pressed (hoc2015)
   Studio.musicController.fadeOut();
@@ -3161,7 +3114,15 @@ var registerHandlers = function (
   matchParam2Val,
   argNames
 ) {
-  const blocks = Blockly.mainBlockSpace.getTopBlocks();
+  const blocks = [...Blockly.mainBlockSpace.getTopBlocks()];
+
+  // Account for hidden blocks, e.g. function definitions or blocks from
+  // legacy levels that were set as invisible to the user.
+  const hiddenWorkspace = Blockly.getHiddenDefinitionWorkspace();
+  if (hiddenWorkspace) {
+    blocks.push(...hiddenWorkspace.getTopBlocks());
+  }
+
   for (let x = 0; blocks[x]; x++) {
     const block = blocks[x];
     // default field values to '0' for case when there is only one sprite
@@ -3367,19 +3328,6 @@ var defineProcedures = function (blockType) {
  * @returns {boolean} True if we have a pre-execution failure
  */
 Studio.checkForBlocklyPreExecutionFailure = function () {
-  if (studioApp().hasUnfilledFunctionalBlock()) {
-    Studio.result = false;
-    Studio.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
-    // Some of our levels (i.e. big game) have a different top level block, but
-    // those should be undeletable/unmovable and not hit this. If they do,
-    // they'll still get the generic unfilled block message
-    Studio.message = studioApp().getUnfilledFunctionalBlockError(
-      'functional_start_setValue'
-    );
-    Studio.preExecutionFailure = true;
-    return true;
-  }
-
   if (studioApp().hasUnwantedExtraTopBlocks()) {
     Studio.result = false;
     Studio.testResults = TestResults.EXTRA_TOP_BLOCKS_FAIL;
@@ -3387,71 +3335,7 @@ Studio.checkForBlocklyPreExecutionFailure = function () {
     return true;
   }
 
-  if (studioApp().hasEmptyFunctionOrVariableName()) {
-    Studio.result = false;
-    Studio.testResults = TestResults.EMPTY_FUNCTION_NAME;
-    Studio.message = commonMsg.unnamedFunction();
-    Studio.preExecutionFailure = true;
-    return true;
-  }
-
-  var outcome = Studio.checkExamples_();
-  if (outcome.result !== undefined) {
-    Object.assign(Studio, outcome);
-    Studio.preExecutionFailure = true;
-    return true;
-  }
-
   return false;
-};
-
-/**
- * @returns {Object} outcome
- * @returns {boolean} outcome.result
- * @returns {number} outcome.testResults
- * @returns {string} outcome.message
- */
-Studio.checkExamples_ = function () {
-  var outcome = {};
-  if (!level.examplesRequired) {
-    return outcome;
-  }
-
-  var exampleless = studioApp().getFunctionWithoutTwoExamples();
-  if (exampleless) {
-    outcome.result = ResultType.FAILURE;
-    outcome.testResults = TestResults.EXAMPLE_FAILED;
-    outcome.message = commonMsg.emptyExampleBlockErrorMsg({
-      functionName: exampleless,
-    });
-    return outcome;
-  }
-
-  var unfilled = studioApp().getUnfilledFunctionalExample();
-  if (unfilled) {
-    outcome.result = ResultType.FAILURE;
-    outcome.testResults = TestResults.EXAMPLE_FAILED;
-
-    var name = unfilled
-      .getRootBlock()
-      .getInputTargetBlock('ACTUAL')
-      .getFieldValue('NAME');
-    outcome.message = commonMsg.emptyExampleBlockErrorMsg({functionName: name});
-    return outcome;
-  }
-
-  var failingBlockName = studioApp().checkForFailingExamples(
-    Studio.getStudioExampleFailure
-  );
-  if (failingBlockName) {
-    outcome.result = false;
-    outcome.testResults = TestResults.EXAMPLE_FAILED;
-    outcome.message = commonMsg.exampleErrorMessage({
-      functionName: failingBlockName,
-    });
-  }
-
-  return outcome;
 };
 
 /**
@@ -3568,14 +3452,6 @@ Studio.execute = function () {
     }
 
     registerHandlers(handlers, 'when_run', 'whenGameStarts');
-    registerHandlers(handlers, 'functional_start_setSpeeds', 'whenGameStarts');
-    registerHandlers(
-      handlers,
-      'functional_start_setBackgroundAndSpeeds',
-      'whenGameStarts'
-    );
-    registerHandlers(handlers, 'functional_start_setFuncs', 'whenGameStarts');
-    registerHandlers(handlers, 'functional_start_setValue', 'whenGameStarts');
     registerHandlers(handlers, 'studio_whenLeft', 'when-left');
     registerHandlers(handlers, 'studio_whenRight', 'when-right');
     registerHandlers(handlers, 'studio_whenUp', 'when-up');
@@ -3685,17 +3561,12 @@ Studio.execute = function () {
     if (Studio.legacyRuntime) {
       defineProcedures('procedures_defreturn');
       defineProcedures('procedures_defnoreturn');
-      defineProcedures('functional_definition');
     } else {
       const generator = Blockly.Generator.blockSpaceToCode.bind(
         Blockly.Generator,
         'JavaScript'
       );
-      const code = [
-        'procedures_defreturn',
-        'procedures_defnoreturn',
-        'functional_definition',
-      ]
+      const code = ['procedures_defreturn', 'procedures_defnoreturn']
         .map(generator)
         .join(';');
 
@@ -3814,7 +3685,7 @@ Studio.sendPuzzleReport = function (onComplete = Studio.onReportComplete) {
 
     program = studioApp().getCode();
   } else {
-    program = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+    program = getCode(Blockly.mainBlockSpace);
   }
 
   Studio.waitingForReport = true;
@@ -5433,6 +5304,9 @@ Studio.paramAsNumber = function (value) {
 };
 
 Studio.adjustScore = function (value) {
+  // Resetting the scoreText ensures the new score player score
+  // is used when displayScore updates the play area.
+  Studio.scoreText = null;
   Studio.playerScore += value;
 
   Studio.displayFloatingScore(value);
@@ -6050,7 +5924,7 @@ Studio.askForInput = function (question, callback) {
     Studio.queueCallback(callback, [value]);
   }
 
-  ReactDOM.render(
+  createReactRoot(
     <InputPrompt question={question} onInputReceived={onInputReceived} />,
     target
   );

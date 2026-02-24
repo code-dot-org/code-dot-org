@@ -1,0 +1,15 @@
+name 'programming-fundamentals-preassessment-question5_v2-2025'
+title 'Programming Fundamentals Pre-Assessment: Question 5'
+
+question 'Which of the following is an example of a Boolean variable?'
+
+wrong '`age = 16`'
+wrong '`name = "Alice"`'
+right '`is_student = True`'
+wrong '`height = 5.9`'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 4: Variables and Data Flow
+MARKDOWN

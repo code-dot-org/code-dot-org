@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-07-31T19:02:47.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Warm Up",
+    "long_instructions": "### Emma and Aryanna are being silly and they started a competition to make the “always losing arguments” chatbot. It’s a chatbot designed to argue why dogs are better than cats, but it’s been designed to lose the argument every single time.\r\n- ###Emma’s chatbot loses the argument by saying a bunch of factually incorrect information about dogs and cats\r\n- ###Aryanna’s chatbot loses the argument by speaking in confusing sentences and acting incredibly rude.\r\n\r\n###**Which person primarily used retrieval to influence their chatbot?** \r\n###**Which person primarily used system prompting?**\r\n",
+    "teacher_markdown": "Discussion Goal: This scenario is complicated to setup, but the actual question is just identifying which person used retrieval more than the other person, and the same for system prompting. The clues are in how each chatbot loses the argument: since Aryanna’s chatbot loses the argument by its behavior and tone, that chatbot likely has a system prompt telling it to lose the argument. On the other hand, since Emma’s chatbot says incorrect information, it likely uses retrieval to set the incorrect information. Once these points are made, continue with the lesson.",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2024-07-31 19:02:50 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

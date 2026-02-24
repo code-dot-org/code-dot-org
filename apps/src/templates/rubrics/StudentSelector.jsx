@@ -1,23 +1,23 @@
+import {CustomDropdown} from '@code-dot-org/component-library/dropdown';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import Select from 'react-select';
 
 import {levelWithProgress} from '@cdo/apps/code-studio/components/progress/teacherPanel/types';
-import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
-import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {
-  BodyThreeText,
-  EmText,
-  OverlineThreeText,
-} from '@cdo/apps/componentLibrary/typography';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+  queryUserProgress,
+  setViewAsUserId,
+} from '@cdo/apps/code-studio/progressRedux';
+import {updateQueryParam} from '@cdo/apps/code-studio/utils';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {reload} from '@cdo/apps/utils';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {reportingDataShape} from './rubricShapes';
+import {selectStudentProgressStatusMap} from './teacherRubricRedux';
 
 import style from './rubrics.module.scss';
 
@@ -35,9 +35,11 @@ function StudentSelector({
   students,
   selectUser,
   levelsWithProgress,
+  hasTeacherFeedbackMap,
+  aiEvalStatusMap,
 }) {
-  const handleSelectStudentChange = event => {
-    const newUserId = event.value;
+  const handleSelectStudentChange = selectedOption => {
+    const newUserId = selectedOption.value;
     updateQueryParam(
       'user_id',
       newUserId === NO_SELECTED_SECTION_VALUE ? undefined : newUserId
@@ -54,60 +56,77 @@ function StudentSelector({
     }
   };
 
+  const studentProgressStatusMap = useAppSelector(
+    selectStudentProgressStatusMap
+  );
+
   if (students.length === 0) {
     return null;
   }
 
+  const getStudentProgressStatusForUser = userId => {
+    return studentProgressStatusMap[userId];
+  };
+
+  const handleOptionClick = value => {
+    const selectedOption = {value};
+    handleSelectStudentChange(selectedOption);
+  };
+
+  const getStudentDisplayName = student => {
+    return student.familyName
+      ? student.familyName.length + student.name.length < MAX_NAME_LENGTH
+        ? `${student.name} ${student.familyName}`
+        : `${student.name} ${student.familyName}`
+            .substring(0, MAX_NAME_LENGTH - 1)
+            .concat('', '...')
+      : `${student.name}`;
+  };
+
+  const selectedDisplayValue = selectedUserId
+    ? (() => {
+        const selectedStudent = students.find(s => s.id === selectedUserId);
+        return selectedStudent ? getStudentDisplayName(selectedStudent) : '';
+      })()
+    : i18n.selectStudentOption();
+
   return (
-    <Select
+    <CustomDropdown
       className={styleName ? styleName : 'uitest-studentselect'}
       name="students"
-      clearable={false}
-      searchable={false}
+      size="s"
+      styleAsFormField={true}
+      selectedValueText={selectedDisplayValue}
       aria-label={i18n.selectStudentOption()}
-      value={selectedUserId || NO_SELECTED_SECTION_VALUE}
-      onChange={handleSelectStudentChange}
-      options={(selectedUserId
-        ? []
-        : [
-            {
-              value: NO_SELECTED_SECTION_VALUE,
-              label: (
-                <BodyThreeText className={style.submitStatusText}>
-                  <EmText>{i18n.selectStudentOption()}</EmText>
-                </BodyThreeText>
-              ),
-            },
-          ]
-      ).concat(
-        students.map(student => ({
-          value: student.id,
-          label: (
-            <div className={style.studentDropdownOptionContainer}>
-              <div className={style.studentDropdownOption}>
-                <BodyThreeText className={style.submitStatusText}>
-                  {student.familyName
-                    ? student.familyName.length + student.name.length <
-                      MAX_NAME_LENGTH
-                      ? `${student.name} ${student.familyName}`
-                      : `${student.name} ${student.familyName}`
-                          .substring(0, MAX_NAME_LENGTH - 1)
-                          .concat('', '...')
-                    : `${student.name}`}
-                </BodyThreeText>
-                {!!levelsWithProgress && (
-                  <StudentProgressStatus
-                    level={levelsWithProgress.find(
-                      userLevel => student.id === userLevel.userId
-                    )}
-                  />
-                )}
-              </div>
+    >
+      <ul>
+        {!selectedUserId && (
+          <li className={style.unselectableDropdownOption} key="select-student">
+            <div className={style.dropdownOption}>
+              <span>{i18n.selectStudentOption()}</span>
             </div>
-          ),
-        }))
-      )}
-    />
+          </li>
+        )}
+        {students.map(student => (
+          <li key={student.id}>
+            <button
+              className={style.dropdownOption}
+              onClick={() => handleOptionClick(student.id)}
+              type="button"
+            >
+              <span>{getStudentDisplayName(student)}</span>
+              {!!levelsWithProgress && aiEvalStatusMap && (
+                <StudentProgressStatus
+                  aiEvalStatus={aiEvalStatusMap[student.id]}
+                  hasTeacherFeedback={hasTeacherFeedbackMap[student.id]}
+                  status={getStudentProgressStatusForUser(student.id)}
+                />
+              )}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </CustomDropdown>
   );
 }
 
@@ -117,6 +136,7 @@ StudentSelector.propTypes = {
   reloadOnChange: PropTypes.bool,
   sectionId: PropTypes.number,
   reportingData: reportingDataShape,
+  aiEvalStatusMap: PropTypes.object,
 
   //from redux
   students: PropTypes.arrayOf(
@@ -127,6 +147,7 @@ StudentSelector.propTypes = {
   ).isRequired,
   selectUser: PropTypes.func.isRequired,
   levelsWithProgress: PropTypes.arrayOf(levelWithProgress),
+  hasTeacherFeedbackMap: PropTypes.object,
 };
 
 export const UnconnectedStudentSelector = StudentSelector;
@@ -135,64 +156,49 @@ export default connect(
   state => ({
     students: state.teacherSections.selectedStudents,
     levelsWithProgress: state.teacherPanel.levelsWithProgress,
+    hasTeacherFeedbackMap: state.teacherRubric.hasTeacherFeedbackMap,
+    aiEvalStatusMap: state.teacherRubric.aiEvalStatusMap,
   }),
   dispatch => ({
     selectUser(userId) {
       dispatch(queryUserProgress(userId));
+      dispatch(setViewAsUserId(userId));
     },
   })
 )(StudentSelector);
 
-function StudentProgressStatus({level}) {
-  const bubbleColor = () => {
-    if (!level || level.status === LevelStatus.not_tried) {
-      return style.grayStatusBlob;
-    } else if (
-      level.status === LevelStatus.attempted ||
-      level.status === LevelStatus.passed
-    ) {
-      return style.yellowStatusBlob;
-    } else if (
-      level.status === LevelStatus.submitted ||
-      level.status === LevelStatus.perfect ||
-      level.status === LevelStatus.completed_assessment ||
-      level.status === LevelStatus.free_play_complete
-    ) {
-      return style.greenStatusBlob;
-    }
-  };
+const STATUS_BUBBLE_COLOR = {
+  NOT_STARTED: style.grayStatusBlob,
+  IN_PROGRESS: style.yellowStatusBlob,
+  SUBMITTED: style.purpleStatusBlob,
+  READY_TO_REVIEW: style.redStatusBlob,
+  EVALUATED: style.greenStatusBlob,
+};
 
-  const bubbleText = () => {
-    if (!level || level.status === LevelStatus.not_tried) {
-      return i18n.notStarted();
-    } else if (
-      level.status === LevelStatus.attempted ||
-      level.status === LevelStatus.passed
-    ) {
-      return i18n.inProgress();
-    } else if (
-      level.status === LevelStatus.submitted ||
-      level.status === LevelStatus.perfect ||
-      level.status === LevelStatus.completed_assessment ||
-      level.status === LevelStatus.free_play_complete
-    ) {
-      return i18n.submitted();
-    } else {
-      return null;
-    }
-  };
+const STATUS_BUBBLE_TEXT = {
+  NOT_STARTED: i18n.notStarted(),
+  IN_PROGRESS: i18n.inProgress(),
+  SUBMITTED: i18n.submitted(),
+  READY_TO_REVIEW: i18n.readyToReview(),
+  EVALUATED: i18n.evaluated(),
+};
 
-  if (bubbleText === null) {
+function StudentProgressStatus({status}) {
+  if (!status) {
     return null;
   }
 
-  return (
-    <OverlineThreeText className={bubbleColor()}>
-      {bubbleText()}
-    </OverlineThreeText>
+  const bubbleColor = STATUS_BUBBLE_COLOR[status];
+  const bubbleText = STATUS_BUBBLE_TEXT[status];
+
+  const classes = classNames(
+    'uitest-student-progress-status',
+    style.statusBlob,
+    bubbleColor
   );
+  return <span className={classes}>{bubbleText}</span>;
 }
 
 StudentProgressStatus.propTypes = {
-  level: levelWithProgress,
+  status: PropTypes.string,
 };

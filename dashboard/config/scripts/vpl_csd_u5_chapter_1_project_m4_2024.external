@@ -5,15 +5,17 @@ description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # Data and Society - End of Chapter 1 Project
-##Lesson 8: Create A Representation
 
-##### Data and Society, Chapter 1 ends with Lesson 8 in which students design a structure to represent their perfect day using the binary representation system they learned about.  This is an opportunity for students to show how they engaged in the Problem Solving Process for data and considered the needs of others.
+## Lesson 8: Create A Representation
+
+#### Unit 5 - Data and Society, Chapter 1 ends with Lesson 8 in which students design a structure to represent their perfect day using the binary representation system they learned about.  This is an opportunity for students to show how they engaged in the Problem Solving Process for data and considered the needs of others.
 
 ## Project Resources
 
-##### **Optional:** Explore the lesson plan and accompanying resources.
+#### **Optional:** Explore the lesson plan and accompanying resources.
 
-><a href="https://studio.code.org/s/csd5-2023/lessons/8" target="blank" rel="noopener noreferrer">Data and Society Lesson 8: Create a Representation </a>
+<div style="background-color: #F7F8FA; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
+<a href="https://studio.code.org/s/csd5-2024/lessons/8" target="blank" rel="noopener noreferrer">Data and Society Lesson 8: Create a Representation </a></p></div>
 
 
 MARKDOWN

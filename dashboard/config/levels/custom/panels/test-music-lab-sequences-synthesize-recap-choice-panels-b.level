@@ -1,0 +1,13 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-03-12T16:25:29.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "display_name": "How does Play Together work?"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-12 16:52:29 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Panels>

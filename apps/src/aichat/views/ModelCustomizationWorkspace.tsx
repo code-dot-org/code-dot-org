@@ -1,11 +1,13 @@
+import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
 import React, {useCallback, useMemo, useState} from 'react';
 import {useSelector} from 'react-redux';
 
-import {AichatLevelProperties} from '@cdo/apps/aichat/types';
-import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import Tabs, {TabsProps} from '@cdo/apps/componentLibrary/tabs/Tabs';
-import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {useLevelProperties} from '../levelPropertiesContext';
+import aichatI18n from '../locale';
 
 import PublishNotes from './modelCustomization/PublishNotes';
 import RetrievalCustomization from './modelCustomization/RetrievalCustomization';
@@ -26,11 +28,8 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
 
   const isReadOnly = useSelector(isReadOnlyWorkspace);
 
-  const hidePresentationPanel = useAppSelector(
-    state =>
-      (state.lab.levelProperties as AichatLevelProperties | undefined)
-        ?.aichatSettings?.hidePresentationPanel
-  );
+  const hidePresentationPanel =
+    useLevelProperties().aichatSettings?.hidePresentationPanel;
 
   const showSetupCustomization =
     isVisible(temperature) ||
@@ -51,11 +50,12 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
       visibleTabs.push({
         value: 'setup',
         text:
-          'Setup' +
-          ((isSetupCustomizationReadOnly || isReadOnly) &&
+          (isSetupCustomizationReadOnly || isReadOnly) &&
           selectedTab === 'setup'
-            ? ' (view only)'
-            : ''),
+            ? aichatI18n.viewOnlyTabLabel({
+                fieldLabel: aichatI18n.modelCustomizationTab_setupText(),
+              })
+            : aichatI18n.modelCustomizationTab_setupText(),
         tabContent: <SetupCustomization />,
         iconLeft:
           isSetupCustomizationReadOnly || isReadOnly ? iconValue : undefined,
@@ -65,11 +65,12 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
       visibleTabs.push({
         value: 'retrieval',
         text:
-          'Retrieval' +
-          ((isDisabled(retrievalContexts) || isReadOnly) &&
+          (isDisabled(retrievalContexts) || isReadOnly) &&
           selectedTab === 'retrieval'
-            ? ' (view only)'
-            : ''),
+            ? aichatI18n.viewOnlyTabLabel({
+                fieldLabel: aichatI18n.modelCustomizationTab_retrievalText(),
+              })
+            : aichatI18n.modelCustomizationTab_retrievalText(),
         tabContent: <RetrievalCustomization />,
         iconLeft:
           isDisabled(retrievalContexts) || isReadOnly ? iconValue : undefined,
@@ -79,11 +80,12 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
       visibleTabs.push({
         value: 'modelCardInfo',
         text:
-          'Publish' +
-          ((isDisabled(modelCardInfo) || isReadOnly) &&
+          (isDisabled(modelCardInfo) || isReadOnly) &&
           selectedTab === 'modelCardInfo'
-            ? ' (view only)'
-            : ''),
+            ? aichatI18n.viewOnlyTabLabel({
+                fieldLabel: aichatI18n.modelCustomizationTab_modelPublishText(),
+              })
+            : aichatI18n.modelCustomizationTab_modelPublishText(),
         tabContent: <PublishNotes />,
         iconLeft:
           isDisabled(modelCardInfo) || isReadOnly ? iconValue : undefined,
@@ -106,6 +108,12 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
     },
     [setSelectedTab]
   );
+
+  // When switching levels, visible tabs can momentarily become empty.
+  // Don't render anything if there are no visible tabs.
+  if (visibleTabs.length === 0) {
+    return null;
+  }
 
   const tabArgs: TabsProps = {
     name: 'modelCustomizationTabs',

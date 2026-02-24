@@ -1,10 +1,13 @@
 import {setAssetPath} from '@code-dot-org/ml-activities/dist/assetPath';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {TestResults} from '@cdo/apps/constants';
+import localization from '@cdo/apps/localization';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 import {getStore} from '../redux';
 
@@ -57,6 +60,25 @@ Fish.prototype.init = function (config) {
 
   config.pinWorkspaceToBottom = true;
 
+  const reportActivityEvent = () => {
+    // For publicly cached pages, config.isSignedIn will be false even when signed in.
+    // Check the Redux store for the actual sign-in state.
+    const state = getStore().getState();
+    const signedIn = state.currentUser?.signInState === 'SignedIn' || false;
+    analyticsReporter.sendEvent(
+      EVENTS.LEVEL_ACTIVITY,
+      {
+        signedIn: signedIn,
+        unitName: config.scriptName,
+        levelId: config.serverLevelId,
+        levelName: config.level.name,
+        appName: config.app,
+        levelPath: window.location.pathname,
+      },
+      PLATFORMS.STATSIG
+    );
+  };
+
   const onMount = () => {
     // NOTE: Other apps call studioApp.init(), except WebLab. Fish is imitating WebLab
     this.studioApp_.setConfigValues_(config);
@@ -80,6 +102,7 @@ Fish.prototype.init = function (config) {
     }
 
     this.initMLActivities();
+    reportActivityEvent();
   };
 
   // Push initial level properties into the Redux store
@@ -90,7 +113,7 @@ Fish.prototype.init = function (config) {
     isProjectLevel: !!config.level.isProjectLevel,
   });
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <FishView onMount={onMount} />
     </Provider>,
@@ -129,6 +152,12 @@ Fish.prototype.initMLActivities = function () {
 
   const {initAll} = require('@code-dot-org/ml-activities');
 
+  // Localize
+  const msg = Object.entries(fishMsg).reduce((acc, [key, msgFunction]) => {
+    acc[key] = (...args) => localization.translate(msgFunction(...args));
+    return acc;
+  }, {});
+
   // Set initial state for UI elements.
   initAll({
     canvas,
@@ -139,7 +168,7 @@ Fish.prototype.initMLActivities = function () {
     onContinue,
     registerSound: this.studioApp_.registerAudio.bind(this.studioApp_),
     playSound: this.studioApp_.playAudio.bind(this.studioApp_),
-    i18n: fishMsg,
+    i18n: msg,
   });
 };
 

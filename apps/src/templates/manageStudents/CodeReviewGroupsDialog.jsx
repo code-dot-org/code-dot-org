@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useCallback} from 'react';
 
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import CodeReviewGroupsManager from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsManager';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
@@ -75,7 +75,10 @@ export default function CodeReviewGroupsDialog({
     switch (submitStatus) {
       case SUBMIT_STATES.SUCCESS:
         return (
-          <span style={styles.successMessageContainer}>
+          <span
+            style={styles.successMessageContainer}
+            id="uitest-code-review-groups-save-confirm"
+          >
             <i className={'fa fa-check fa-lg'} style={styles.checkIcon} />
             {i18n.codeReviewGroupsSaveSuccess()}
           </span>
@@ -123,9 +126,17 @@ export default function CodeReviewGroupsDialog({
     setSubmitStatus(SUBMIT_STATES.SUBMITTING);
     dataApi
       .setCodeReviewGroups(groups)
-      .done(() => {
+      .done(response => {
         setGroupsHaveChanged(false);
         setSubmitStatus(SUBMIT_STATES.SUCCESS);
+
+        // Show alert if this caused any students to have sharing automatically enabled
+        if (response.students_with_sharing_enabled?.length > 0) {
+          const studentNames =
+            response.students_with_sharing_enabled.join(', ');
+          const message = `Project sharing (required for code reviews) has been enabled for the following students: ${studentNames}`;
+          alert(message);
+        }
       })
       .fail(() => {
         setSubmitStatus(SUBMIT_STATES.ERROR);

@@ -1,0 +1,11 @@
+name 'test-elem-career-journeys-basic-skills-choices'
+display_name 'Basic Skills in Sprite Lab'
+description 'Which skill will your practice first?'
+
+sublevels
+level 'test-elem-career-journeys-sprite-location'
+level 'test-elem-career-journeys-backgrounds'
+level 'test-elem-career-journeys-event-say'
+
+
+

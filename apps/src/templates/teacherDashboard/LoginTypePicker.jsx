@@ -1,30 +1,34 @@
-/**
- * View shown to a teacher when beginning to add students to an empty section.
- * Lets the teacher decide whether to use word/picture logins, have students
- * manage their own accounts via email/oauth, or to sync students with an
- * external service like Microsoft Classroom or Clever.
- */
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+import {
+  OAuthSectionTypes,
+  LmsLoginTypeNames,
+  LmsLoginInstructionUrls,
+} from '@cdo/apps/accounts/constants';
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
+import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import color from '@cdo/apps/util/color';
-import experiments from '@cdo/apps/util/experiments';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import {Heading3} from '../../lib/ui/Headings';
 import styleConstants from '../../styleConstants';
 
 import CardContainer from './CardContainer';
+import LmsInformationalCard from './LmsInformationalCard';
+import {
+  canvasLogo,
+  cleverLogo,
+  googleClassroomLogo,
+  schoologyLogo,
+} from './LmsInformationalCard/assets';
 import LoginTypeCard from './LoginTypeCard';
-
 const LOGIN_TYPE_SELECTED_EVENT = 'Login Type Selected';
 const CANCELLED_EVENT = 'Section Setup Cancelled';
 const SELECT_LOGIN_TYPE = 'Login Type Selection';
@@ -64,7 +68,7 @@ class LoginTypePicker extends Component {
       {
         source: SELECT_LOGIN_TYPE,
       },
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   };
 
@@ -93,14 +97,19 @@ class LoginTypePicker extends Component {
       providers && providers.includes(OAuthSectionTypes.microsoft_classroom);
     const withClever =
       providers && providers.includes(OAuthSectionTypes.clever);
-    const hasThirdParty = withGoogle | withMicrosoft | withClever;
+    const withAllLmsProviders =
+      providers &&
+      [
+        OAuthSectionTypes.google_classroom,
+        OAuthSectionTypes.clever,
+        SectionLoginType.lti_v1,
+      ].every(provider => providers.includes(provider));
     const currentUser = getStore().getState().currentUser;
     const inUSA =
       ['US', 'RD'].includes(currentUser.countryCode) ||
       !!currentUser.usStateCode;
     const showStudentsToSectionPermissionWarning =
-      (inUSA && currentUser.isTeacher) ||
-      experiments.isEnabledAllowingQueryString(experiments.CPA_EXPERIENCE);
+      inUSA && currentUser.isTeacher;
 
     const style = {
       container: {
@@ -111,6 +120,7 @@ class LoginTypePicker extends Component {
       scroll: {
         overflowX: 'hidden',
         overflowY: 'auto',
+        marginBottom: '16px',
       },
       thirdPartyProviderUpsell: {
         marginBottom: '10px',
@@ -136,19 +146,29 @@ class LoginTypePicker extends Component {
         color: color.neutral_dark,
         ...fontConstants['main-font-semi-bold'],
       },
-      learnHow: {
-        marginTop: '12px',
-      },
       emailPolicyNote: {
         marginBottom: '31px',
         paddingTop: '8px',
         borderTop: `1px solid ${color.neutral_dark}`,
       },
+      subheader: {
+        color: color.charcoal,
+      },
+      lmsInfoCardsContainer: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'flex-start',
+        rowGap: '16px',
+        columnGap: '16px',
+        paddingBottom: '16px',
+      },
     };
 
     return (
       <div style={style.container}>
-        <Heading3 isRebranded>{title}</Heading3>
+        <Typography variant="h3" gutterBottom>
+          {title}
+        </Typography>
         <p>{i18n.addStudentsToSectionInstructionsUpdated()}</p>
         {showStudentsToSectionPermissionWarning && (
           <p>
@@ -182,6 +202,9 @@ class LoginTypePicker extends Component {
             handleClose={() => this.setState({isLearnMoreOpen: false})}
           />
         )}
+        <Typography style={style.subheader} variant="h6" gutterBottom>
+          {i18n.loginTypes()}
+        </Typography>
         <div style={style.scroll}>
           <CardContainer>
             {withGoogle && (
@@ -195,16 +218,44 @@ class LoginTypePicker extends Component {
             <WordLoginCard onClick={this.onLoginTypeSelect} />
             <EmailLoginCard onClick={this.onLoginTypeSelect} />
           </CardContainer>
-          {!hasThirdParty && (
-            <p style={{...style.mediumText, ...style.learnHow}}>
-              {i18n.thirdPartyProviderUpsell() + ' '}
-              <a href="https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-or-Clever">
-                {i18n.learnHow()}
-              </a>
-              {' ' + i18n.connectAccountThirdPartyProviders()}
-            </p>
-          )}
         </div>
+        {!withAllLmsProviders && (
+          <>
+            <Typography style={style.subheader} variant="h6" gutterBottom>
+              {i18n.lmsIntegrations()}
+            </Typography>
+            <div
+              style={style.lmsInfoCardsContainer}
+              // eslint-disable-next-line react/forbid-dom-props
+              data-testid={'lms-info-cards-container'}
+            >
+              {!withClever && (
+                <LmsInformationalCard
+                  lmsName={LmsLoginTypeNames.clever}
+                  lmsLogo={cleverLogo}
+                  lmsInformationalUrl={LmsLoginInstructionUrls.clever}
+                />
+              )}
+              {!withGoogle && (
+                <LmsInformationalCard
+                  lmsName={LmsLoginTypeNames.google_classroom}
+                  lmsLogo={googleClassroomLogo}
+                  lmsInformationalUrl={LmsLoginInstructionUrls.google_classroom}
+                />
+              )}
+              <LmsInformationalCard
+                lmsName={LmsLoginTypeNames.canvas}
+                lmsLogo={canvasLogo}
+                lmsInformationalUrl={LmsLoginInstructionUrls.canvas}
+              />
+              <LmsInformationalCard
+                lmsName={LmsLoginTypeNames.schoology}
+                lmsLogo={schoologyLogo}
+                lmsInformationalUrl={LmsLoginInstructionUrls.schoology}
+              />
+            </div>
+          </>
+        )}
         <div style={style.footer}>
           <p style={{...style.mediumText, ...style.emailPolicyNote}}>
             {i18n.note()}
@@ -224,6 +275,7 @@ class LoginTypePicker extends Component {
 }
 
 export const UnconnectedLoginTypePicker = LoginTypePicker;
+
 export default connect(state => ({
   providers: state.teacherSections.providers,
 }))(LoginTypePicker);
@@ -237,6 +289,7 @@ const PictureLoginCard = props => (
     onClick={() => props.onClick('picture')}
   />
 );
+
 PictureLoginCard.propTypes = {
   onClick: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
@@ -251,6 +304,7 @@ const WordLoginCard = props => (
     onClick={() => props.onClick('word')}
   />
 );
+
 WordLoginCard.propTypes = PictureLoginCard.propTypes;
 
 const EmailLoginCard = props => (
@@ -262,6 +316,7 @@ const EmailLoginCard = props => (
     onClick={() => props.onClick('email')}
   />
 );
+
 EmailLoginCard.propTypes = PictureLoginCard.propTypes;
 
 const GoogleClassroomCard = props => (
@@ -271,6 +326,7 @@ const GoogleClassroomCard = props => (
     onClick={() => props.onClick(OAuthSectionTypes.google_classroom)}
   />
 );
+
 GoogleClassroomCard.propTypes = PictureLoginCard.propTypes;
 
 const MicrosoftClassroomCard = props => (
@@ -280,6 +336,7 @@ const MicrosoftClassroomCard = props => (
     onClick={() => props.onClick(OAuthSectionTypes.microsoft_classroom)}
   />
 );
+
 MicrosoftClassroomCard.propTypes = PictureLoginCard.propTypes;
 
 const CleverCard = props => (
@@ -289,4 +346,5 @@ const CleverCard = props => (
     onClick={() => props.onClick(OAuthSectionTypes.clever)}
   />
 );
+
 CleverCard.propTypes = PictureLoginCard.propTypes;

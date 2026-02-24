@@ -6,7 +6,7 @@ import ReactTooltip from 'react-tooltip';
 
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import fontConstants from '@cdo/apps/fontConstants';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
@@ -26,6 +26,7 @@ function SummaryProgressRow({
   lessonIsHiddenForStudents,
   lessonIsLockedForUser,
   lessonIsLockedForAllStudents,
+  unitHasUnnumberedLessons,
   viewAs,
 }) {
   // The parent component filters out hidden SummaryProgressRows from the student view,
@@ -39,7 +40,7 @@ function SummaryProgressRow({
   const showAsLocked = isLockedForUser || isLockedForSection;
 
   let lessonTitle = lesson.name;
-  if (lesson.lessonNumber) {
+  if (lesson.lessonNumber && !unitHasUnnumberedLessons) {
     lessonTitle = lesson.lessonNumber + '. ' + lessonTitle;
   }
 
@@ -137,6 +138,7 @@ SummaryProgressRow.propTypes = {
   lessonIsHiddenForStudents: PropTypes.bool.isRequired,
   lessonIsLockedForUser: PropTypes.func.isRequired,
   lessonIsLockedForAllStudents: PropTypes.func.isRequired,
+  unitHasUnnumberedLessons: PropTypes.bool.isRequired,
 };
 
 export const styles = {
@@ -209,6 +211,7 @@ export default connect((state, ownProps) => ({
     state,
     ViewType.Participant
   ),
+  unitHasUnnumberedLessons: state.progress.unitHasUnnumberedLessons,
   lessonIsLockedForUser: (lesson, levels, viewAs) =>
     lessonIsLockedForUser(lesson, levels, state, viewAs),
   lessonIsLockedForAllStudents: lessonId =>

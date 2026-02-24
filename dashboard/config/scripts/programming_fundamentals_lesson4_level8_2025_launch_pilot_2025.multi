@@ -1,0 +1,11 @@
+name 'programming-fundamentals-lesson4-level8_2025-launch_pilot-2025'
+title 'Check Your Understanding'
+
+question 'Which of the following correctly creates a variable and assigns it a value in Python?'
+
+wrong '`meal time = "lunch"`'
+wrong '`city == "Seattle"`'
+right '`favorite_color = "green"`'
+wrong '`"game" = level_1`'
+
+allow_multiple_attempts false

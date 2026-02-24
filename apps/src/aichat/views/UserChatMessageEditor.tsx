@@ -1,41 +1,171 @@
-import React, {useCallback} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
+import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
+import AiTutorEnglishOnlyWarning from '@cdo/apps/aiTutor/views/AiTutorEnglishOnlyWarning';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {submitChatContents} from '../redux/aichatRedux';
+import {selectIsWaitingForChatResponse, submitChatContents} from '../redux';
+import {
+  AiChatClientType,
+  ChatButtonAndKey,
+  ModelParameters,
+  AnalyticsProperties,
+} from '../types';
+
+import UploadButton, {UploadButtonProps} from './assets/UploadButton';
+
+import moduleStyles from './UserChatMessageEditor.module.scss';
+
+interface UserChatMessageEditorProps {
+  modelParameters: ModelParameters;
+  clientType: AiChatClientType;
+  editorContainerClassName?: string;
+  chatButtons?: ChatButtonAndKey[];
+  hiddenContextCallback?: () => Promise<string>;
+  multimodalAvailable?: boolean;
+  responseCallback?: (response: string) => string;
+  currentLevelId?: string | null;
+  logLevelActivity?: () => void;
+
+  /** UploadButton props */
+  uploadDisabled?: UploadButtonProps['isDisabled'];
+  levelName?: UploadButtonProps['levelName'];
+  buildAssetUrl?: UploadButtonProps['buildAssetUrl'];
+  hasStarterAssets?: UploadButtonProps['hasStarterAssets'];
+}
 
 /**
  * Renders the AI Chat Lab user chat message editor component.
  */
-const UserChatMessageEditor: React.FunctionComponent<{
-  editorContainerClassName?: string;
-}> = ({editorContainerClassName}) => {
+const UserChatMessageEditor: React.FunctionComponent<
+  UserChatMessageEditorProps
+> = ({
+  modelParameters,
+  clientType,
+  editorContainerClassName,
+  chatButtons,
+  hiddenContextCallback,
+  multimodalAvailable,
+  responseCallback,
+  currentLevelId,
+  logLevelActivity,
+  levelName,
+  hasStarterAssets,
+  buildAssetUrl,
+  uploadDisabled,
+}) => {
+  const [userMessage, setUserMessage] = useState<string>('');
+  const {chatDisabled} = useAiChatDisabled();
   const isWaitingForChatResponse = useAppSelector(
-    state => state.aichat.isWaitingForChatResponse
+    selectIsWaitingForChatResponse
   );
 
   const saveInProgress = useAppSelector(state => state.aichat.saveInProgress);
+  const chatAssets = useAppSelector(state =>
+    state.aichat.stagedFiles.map(file => file.asset)
+  );
+  const uploadsPending = useAppSelector(state =>
+    state.aichat.stagedFiles.some(file => file.status === 'uploading')
+  );
+  const userAddedSelectionContext = useAppSelector(
+    state => state.aichat.userAddedSelectionContext
+  );
 
   const dispatch = useAppDispatch();
 
+  const inputRef = useRef<HTMLTextAreaElement>(null);
+
+  const disabled =
+    isWaitingForChatResponse ||
+    saveInProgress ||
+    uploadsPending ||
+    chatDisabled;
+
+  const clearUserMessage = () => setUserMessage('');
+
   const handleSubmit = useCallback(
-    (userMessage: string) => {
-      if (!isWaitingForChatResponse) {
-        dispatch(submitChatContents(userMessage));
+    async (message: string, analyticsProperties?: AnalyticsProperties) => {
+      if (!disabled) {
+        const hiddenContext = await hiddenContextCallback?.();
+        dispatch(
+          submitChatContents({
+            text: message,
+            modelParameters,
+            clientType,
+            hiddenContext,
+            analyticsProperties,
+            assets:
+              multimodalAvailable && chatAssets.length > 0
+                ? chatAssets
+                : undefined,
+            userAddedSelectionContext:
+              Object.values(userAddedSelectionContext).length > 0
+                ? Object.values(userAddedSelectionContext)
+                : undefined,
+            responseCallback,
+            logLevelActivity,
+          })
+        );
+        clearUserMessage();
       }
     },
-    [isWaitingForChatResponse, dispatch]
+    [
+      disabled,
+      hiddenContextCallback,
+      dispatch,
+      modelParameters,
+      clientType,
+      multimodalAvailable,
+      chatAssets,
+      userAddedSelectionContext,
+      responseCallback,
+      logLevelActivity,
+    ]
   );
 
-  const disabled = isWaitingForChatResponse || saveInProgress;
+  useEffect(() => {
+    clearUserMessage();
+  }, [currentLevelId]);
+
+  useEffect(() => {
+    if (!disabled) {
+      // Return focus to user input textarea after user submits chat message and response displayed
+      // or after user updates model customizations.
+      inputRef.current?.focus();
+    }
+  }, [disabled]);
 
   return (
-    <UserMessageEditor
-      onSubmit={handleSubmit}
-      disabled={disabled}
-      editorContainerClassName={editorContainerClassName}
-    />
+    <>
+      {chatButtons && chatButtons.length > 0 && !chatDisabled && (
+        <div className={moduleStyles.chatButtonsContainer}>
+          {chatButtons.map(({ChatButton, key}) => (
+            <ChatButton key={key} onClick={handleSubmit} />
+          ))}
+        </div>
+      )}
+      <UserMessageEditor
+        userMessage={userMessage}
+        onChange={setUserMessage}
+        onSubmit={handleSubmit}
+        disabled={disabled}
+        editorContainerClassName={editorContainerClassName}
+        ref={inputRef}
+      >
+        {multimodalAvailable && buildAssetUrl && levelName && (
+          <div className={moduleStyles.buttonRow}>
+            <UploadButton
+              isDisabled={!!uploadDisabled || disabled}
+              levelName={levelName}
+              hasStarterAssets={hasStarterAssets}
+              buildAssetUrl={buildAssetUrl}
+            />
+          </div>
+        )}
+      </UserMessageEditor>
+      <AiTutorEnglishOnlyWarning />
+    </>
   );
 };
 

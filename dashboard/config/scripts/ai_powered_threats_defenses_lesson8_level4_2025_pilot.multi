@@ -1,0 +1,9 @@
+name 'ai-powered-threats-defenses-lesson8-level4_2025-pilot'
+title 'Check Your Understanding'
+
+question 'Which of the following situations is MOST likely to trigger a high-risk score and require extra verification?'
+wrong 'Logging in from home computer at 8 PM'
+right 'Logging in from an unknown device in another country at 3 AM'
+wrong 'Opening calendar from school laptop'
+wrong 'Using mobile app from familiar location'
+allow_multiple_attempts false

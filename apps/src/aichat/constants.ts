@@ -1,9 +1,21 @@
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 import modelsJson from '@cdo/static/aichat/modelDescriptions.json';
 
-import {ModelDescription, SaveType} from './types';
+import type {ValueOf} from '../types/utils';
 
-export const modelDescriptions: ModelDescription[] = modelsJson;
+import type {ModelDescription, SaveType} from './types';
+
+export const modelDescriptions: ModelDescription[] =
+  modelsJson.filter(isValidDescription);
+
+function isValidDescription(
+  description: (typeof modelsJson)[number]
+): description is ModelDescription {
+  return Object.values(AiChatModelIds).includes(
+    description.id as ValueOf<typeof AiChatModelIds>
+  );
+}
 
 export const saveTypeToAnalyticsEvent: {[key in SaveType]: string} = {
   updateChatbot: EVENTS.UPDATE_CHATBOT,
@@ -12,3 +24,30 @@ export const saveTypeToAnalyticsEvent: {[key in SaveType]: string} = {
 };
 
 export const MAX_NAME_LENGTH = 15;
+
+export enum ModalTypes {
+  WARNING = 'warning',
+  TEACHER_ONBOARDING = 'teacherOnboarding',
+}
+
+export const RESET_CONVERSATION_CUSTOMIZATION_UPDATES = [
+  'selectedModelId',
+  'temperature',
+  'systemPrompt',
+  'retrievalContexts',
+];
+
+// Maximum number of files that can be attached to a chat message in multimodal mode.
+export const MAX_NUM_FILES = 5;
+export const MAX_FILE_SIZE_MB = 5;
+// Allowed file types for upload in multimodal mode.
+export const ACCEPTED_FILE_TYPES = ['.jpg', '.jpeg', '.png', '.pdf'];
+
+export const FAQ_LINK =
+  'https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ';
+
+export const AI_SETTINGS_SUPPORT_LINK =
+  'https://support.code.org/hc/en-us/articles/42550900593677-AI-Settings';
+
+export const TEACHER_DISABLED_AI_CHAT_MESSAGE =
+  'Your teacher has not enabled this tool.';

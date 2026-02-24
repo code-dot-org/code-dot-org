@@ -1,0 +1,6 @@
+@use '@fontsource-variable/noto-sans-arabic/scss/mixins' as NotoSansArabic;
+@include NotoSansArabic.faces($family: 'Noto Sans Arabic');
+
+.className {
+  font-family: 'Noto Sans Arabic', sans-serif;
+}

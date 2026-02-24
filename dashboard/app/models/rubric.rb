@@ -30,8 +30,10 @@ class Rubric < ApplicationRecord
         id: get_script_level.script.id,
       },
       lesson: {
+        id: lesson.id,
         name: lesson.name,
         position: lesson.relative_position,
+        title: lesson.localized_title,
       },
       level: {
         id: level.id,

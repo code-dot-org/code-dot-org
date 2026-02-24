@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React, {Component} from 'react';
 
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
@@ -31,6 +31,12 @@ export const tipTypes = {
     icon: 'check-circle',
     color: color.purple,
     backgroundColor: color.lightest_purple,
+  },
+  ethicsOpportunity: {
+    displayName: i18n.ethicsOpportunity(),
+    icon: 'head-side-heart',
+    color: color.green,
+    backgroundColor: color.lighter_green,
   },
 };
 

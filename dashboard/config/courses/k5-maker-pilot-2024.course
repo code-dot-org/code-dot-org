@@ -8,7 +8,15 @@
     "k5-maker-pilot-2024-5",
     "self-paced-pl-microbit-2024-6"
   ],
-  "published_state": "stable",
+  "original_script_names": [
+    "self-paced-pl-microbit-2024-6",
+    "k5-maker-pilot-2024-1",
+    "k5-maker-pilot-2024-2",
+    "k5-maker-pilot-2024-3",
+    "k5-maker-pilot-2024-4",
+    "k5-maker-pilot-2024-5"
+  ],
+  "published_state": "deprecated",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",

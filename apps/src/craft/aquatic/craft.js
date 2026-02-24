@@ -5,9 +5,8 @@ import {
 } from '@code-dot-org/craft';
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
-import {getCodeBlocks} from '@cdo/apps/blockly/utils';
+import {getCodeBlocks, getCode} from '@cdo/apps/blockly/utils';
 import {TestResults} from '@cdo/apps/constants';
 import PlayerSelectionDialog from '@cdo/apps/craft/PlayerSelectionDialog';
 import reducers from '@cdo/apps/craft/redux';
@@ -18,13 +17,13 @@ import {getStore} from '@cdo/apps/redux';
 import Sounds from '@cdo/apps/Sounds';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
 import {trySetLocalStorage} from '@cdo/apps/utils';
 
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import AppView from '../../templates/AppView';
 import {muteCookieWithLevel} from '../../util/muteCookieHelpers';
-import trackEvent from '../../util/trackEvent';
 import craftMsg from '../locale';
 
 var Provider = require('react-redux').Provider;
@@ -314,7 +313,7 @@ Craft.init = function (config) {
     isMinecraft: true,
   });
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <div>
         <AppView
@@ -352,7 +351,6 @@ Craft.getCurrentCharacter = function () {
 };
 
 Craft.setCurrentCharacter = function (name = DEFAULT_CHARACTER) {
-  trackEvent('Minecraft', 'ChoseCharacter', name);
   Craft.clearPlayerState();
   trySetLocalStorage('craftSelectedPlayer', name);
   Craft.updateUIForCharacter(name);
@@ -473,11 +471,7 @@ Craft.reset = function (first) {
 };
 
 Craft.phaserLoaded = function () {
-  return (
-    Craft.gameController &&
-    Craft.gameController.game &&
-    !Craft.gameController.game.load.isLoading
-  );
+  return !!Craft.gameController?.game?.load;
 };
 
 /**
@@ -497,7 +491,6 @@ Craft.runButtonClick = function () {
   }
 
   studioApp().toggleRunReset('reset');
-  Blockly.mainBlockSpace.traceOn(true);
   studioApp().attempts++;
 
   Craft.executeUserCode();
@@ -534,9 +527,6 @@ Craft.executeUserCode = function () {
 
   studioApp().playAudio('start');
   let interpreter;
-
-  // Start tracing calls.
-  Blockly.mainBlockSpace.traceOn(true);
 
   var appCodeOrgAPI = Craft.gameController.codeOrgAPI;
   appCodeOrgAPI.startCommandCollection();
@@ -661,9 +651,7 @@ Craft.reportResult = function (success) {
     result: Craft.initialConfig.level.freePlay ? true : success,
     testResult: testResultType,
     image: encodedImage,
-    program: encodeURIComponent(
-      Blockly.cdoUtils.getCode(Blockly.mainBlockSpace)
-    ),
+    program: encodeURIComponent(getCode(Blockly.mainBlockSpace)),
     // typically delay feedback until response back
     // for things like e.g. crowdsourced hints & hint blocks
     onComplete: function (response) {

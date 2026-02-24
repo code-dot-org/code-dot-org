@@ -4,8 +4,8 @@ import React, {Component} from 'react';
 
 import msg from '@cdo/locale';
 
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import color from '../../util/color';
-import FontAwesome from '../FontAwesome';
 
 /**
  * A button for toggling the collapse state of instructions in CSF

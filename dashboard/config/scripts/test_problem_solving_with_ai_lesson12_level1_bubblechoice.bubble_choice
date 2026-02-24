@@ -1,0 +1,10 @@
+name 'test-problem-solving-with-ai-lesson12-level1-bubblechoice'
+display_name 'AI In The Community'
+description 'Use AI Chat to help you summarize and pull out key info from the articles on your topic.'
+
+sublevels
+level 'test-problem-solving-with-ai-lesson12-level1-choice1'
+level 'test-problem-solving-with-ai-lesson12-level1-choice2'
+level 'test-problem-solving-with-ai-lesson12-level1-choice3'
+level 'test-problem-solving-with-ai-lesson12-level1-choice4'
+

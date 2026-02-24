@@ -1,0 +1,19 @@
+name 'pl-ai-101-V2-mod1-impact-03'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Check for Understanding
+
+## Answer: E
+
+#### All of the options listed (A through D) are possible impacts of AI on education. 
+
+#### **(A) AI has the potential to personalize learning experiences.** AI can adapt content, pacing, and feedback to individual students’ needs, helping learners progress at a level that matches their strengths and gaps. This personalization can increase engagement and improve learning outcomes, especially in diverse classrooms.
+
+#### **(B) AI has the potential to increase administrative efficiency.** AI can automate routine tasks such as grading, scheduling, and data analysis, freeing educators and administrators to focus more on teaching and student support. By reducing paperwork and manual processes, schools can focus more time and energy on meeting student needs.
+
+#### **(C) AI has the potential to enhance access to educational resources.** AI-powered tools can make high-quality learning materials available anytime and anywhere, including supports like translation, text-to-speech, and adaptive interfaces. This helps reduce barriers for students with disabilities, language differences, or limited access to traditional resources.
+
+#### **(D) AI has the potential to facilitate collaborative learning environments.** AI can support collaboration by forming balanced groups, recommending peer connections, and enabling shared digital workspaces with real-time feedback. These tools encourage communication, teamwork, and deeper learning through social interaction.
+MARKDOWN

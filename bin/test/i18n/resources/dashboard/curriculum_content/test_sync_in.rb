@@ -38,7 +38,7 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncIn do
 
     let(:course_version_key) {'expected-course-version-key'}
     let(:course_offering_key) {'expected-course-offering-key'}
-    let(:unit_course_version) do
+    let(:course_version) do
       FactoryBot.build(
         :course_version,
         key: course_version_key,
@@ -50,12 +50,14 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncIn do
     end
 
     let(:unit_name) {'expected-unit-name'}
-    let(:unit) {FactoryBot.create(:unit, name: unit_name, course_version: unit_course_version)}
+    let(:unit) {FactoryBot.create(:unit, name: unit_name)}
+    let(:unit_group) {FactoryBot.create(:single_unit_course, unit: unit, course_version: course_version)}
 
     before do
       unit.stubs(:in_initiative?).with('HOC').returns(false)
       unit.stubs(:csf?).returns(false)
       unit.stubs(:csc?).returns(false)
+      unit.stubs(:get_course_version).returns(course_version)
     end
 
     it 'returns the unit subdirectory path based on course_version and course_offering keys' do
@@ -83,7 +85,7 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncIn do
     end
 
     context 'when the init does not have a course version' do
-      let(:unit_course_version) {nil}
+      let(:course_version) {nil}
 
       it 'returns subdirectory path for "other" units' do
         assert_equal 'other', unit_subdirectory

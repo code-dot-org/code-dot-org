@@ -1,0 +1,5 @@
+{
+  "key": "steam-games",
+  "name": "Top 100 Steam Games",
+  "content": "Description: This dataset contains information about the top 100 popular games on Steam in July 2024, a leading digital distribution platform for PC gaming. It includes details such as game rank, image links, titles, current player count, 24-hour peak player count, all-time peak player count, and genre.\r\n\r\n[Source](https://www.kaggle.com/datasets/devildyno/top-100-steam-games-july-2024)\r\n\r\nColumns:\r\n\r\n* Rank (numerical): Ranking of the game based on current player count.\r\n* Image Link (link): URL link to the game's image\r\n* Title (string): Name of the game\r\n* Current (numerical): Current number of players\r\n* 24th Peak (numerical): Highest number of players within the last 24 hours\r\n* All-Time Peak (numerical): Highest number of players recorded for the game\r\n* Genre (string): Genre of the game\r\n"
+}

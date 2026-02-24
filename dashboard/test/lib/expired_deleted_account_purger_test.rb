@@ -85,9 +85,9 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
   end
 
   test 'correctly identifies soft-deleted accounts' do
-    active_account = create :student
-    soft_deleted_account = create :student, deleted_at: 1.day.ago
-    hard_deleted_account = create :student, deleted_at: 1.day.ago, purged_at: 1.day.ago
+    active_account = create(:student)
+    soft_deleted_account = create(:student, deleted_at: 1.day.ago)
+    hard_deleted_account = create(:student, deleted_at: 1.day.ago, purged_at: 1.day.ago)
 
     found_accounts = ExpiredDeletedAccountPurger.new.send :soft_deleted_accounts
 
@@ -97,8 +97,8 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
   end
 
   test 'does not locate accounts that have not been soft-deleted' do
-    active_account = create :student
-    soft_deleted_account = create :student, deleted_at: 29.days.ago
+    active_account = create(:student)
+    soft_deleted_account = create(:student, deleted_at: 29.days.ago)
 
     picked_users = ExpiredDeletedAccountPurger.new(
       deleted_after: 30.days.ago,
@@ -110,8 +110,8 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
   end
 
   test 'does not locate accounts that have already been purged' do
-    purged_account = create :student, deleted_at: 29.days.ago, purged_at: 1.day.ago
-    unpurged_account = create :student, deleted_at: 29.days.ago
+    purged_account = create(:student, deleted_at: 29.days.ago, purged_at: 1.day.ago)
+    unpurged_account = create(:student, deleted_at: 29.days.ago)
 
     picked_users = ExpiredDeletedAccountPurger.new(
       deleted_after: 30.days.ago,
@@ -123,8 +123,8 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
   end
 
   test 'does not locate accounts deleted before the start date' do
-    account_deleted_before_cutoff = create :student, deleted_at: 31.days.ago
-    account_deleted_after_cutoff = create :student, deleted_at: 29.days.ago
+    account_deleted_before_cutoff = create(:student, deleted_at: 31.days.ago)
+    account_deleted_after_cutoff = create(:student, deleted_at: 29.days.ago)
 
     picked_users = ExpiredDeletedAccountPurger.new(
       deleted_after: 30.days.ago,
@@ -136,8 +136,8 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
   end
 
   test 'does not locate accounts deleted less than 28 days ago' do
-    account_deleted_too_recently = create :student, deleted_at: 27.days.ago
-    account_deleted_long_enough = create :student, deleted_at: 29.days.ago
+    account_deleted_too_recently = create(:student, deleted_at: 27.days.ago)
+    account_deleted_long_enough = create(:student, deleted_at: 29.days.ago)
 
     picked_users = ExpiredDeletedAccountPurger.new(
       deleted_after: 30.days.ago,
@@ -149,9 +149,9 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
   end
 
   test 'locates only accounts within custom window' do
-    deleted_10_days_ago = create :student, deleted_at: 10.days.ago
-    deleted_20_days_ago = create :student, deleted_at: 20.days.ago
-    deleted_30_days_ago = create :student, deleted_at: 30.days.ago
+    deleted_10_days_ago = create(:student, deleted_at: 10.days.ago)
+    deleted_20_days_ago = create(:student, deleted_at: 20.days.ago)
+    deleted_30_days_ago = create(:student, deleted_at: 30.days.ago)
 
     picked_users = ExpiredDeletedAccountPurger.new(
       deleted_after: 25.days.ago,
@@ -164,9 +164,9 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
   end
 
   test 'does not locate any accounts when window is negative' do
-    deleted_10_days_ago = create :student, deleted_at: 10.days.ago
-    deleted_20_days_ago = create :student, deleted_at: 20.days.ago
-    deleted_30_days_ago = create :student, deleted_at: 30.days.ago
+    deleted_10_days_ago = create(:student, deleted_at: 10.days.ago)
+    deleted_20_days_ago = create(:student, deleted_at: 20.days.ago)
+    deleted_30_days_ago = create(:student, deleted_at: 30.days.ago)
 
     picked_users = ExpiredDeletedAccountPurger.new(
       deleted_after: 15.days.ago,
@@ -179,9 +179,9 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
   end
 
   test 'does not locate accounts already queued for manual review' do
-    autodeleteable = create :student, deleted_at: 3.days.ago
-    needs_manual_review = create :student, deleted_at: 3.days.ago
-    create :queued_account_purge, user: needs_manual_review
+    autodeleteable = create(:student, deleted_at: 3.days.ago)
+    needs_manual_review = create(:student, deleted_at: 3.days.ago)
+    create(:queued_account_purge, user: needs_manual_review)
 
     picked_users = ExpiredDeletedAccountPurger.new(
       deleted_after: 4.days.ago,
@@ -193,9 +193,9 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
   end
 
   test 'does locate accounts that are queued but also auto-retryable' do
-    autodeleteable = create :student, deleted_at: 3.days.ago
-    autoretryable = create :student, deleted_at: 3.days.ago
-    create :queued_account_purge, :autoretryable, user: autoretryable
+    autodeleteable = create(:student, deleted_at: 3.days.ago)
+    autoretryable = create(:student, deleted_at: 3.days.ago)
+    create(:queued_account_purge, :autoretryable, user: autoretryable)
 
     picked_users = ExpiredDeletedAccountPurger.new(
       deleted_after: 4.days.ago,
@@ -211,10 +211,10 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
   #
 
   test 'with two eligible and two ineligible accounts' do
-    student_a = create :student, deleted_at: 1.day.ago
-    student_b = create :student, deleted_at: 3.days.ago
-    student_c = create :student, deleted_at: 3.days.ago
-    student_d = create :student, deleted_at: 5.days.ago
+    student_a = create(:student, deleted_at: 1.day.ago)
+    student_b = create(:student, deleted_at: 3.days.ago)
+    student_c = create(:student, deleted_at: 3.days.ago)
+    student_d = create(:student, deleted_at: 5.days.ago)
 
     edap = ExpiredDeletedAccountPurger.new \
       deleted_after: 4.days.ago,
@@ -259,8 +259,8 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
 
   test 'with an auto-retryable account' do
     # Create an account that's queued, but autoretryable
-    autoretryable = create :student, deleted_at: 3.days.ago
-    qap = create :queued_account_purge, :autoretryable, user: autoretryable
+    autoretryable = create(:student, deleted_at: 3.days.ago)
+    qap = create(:queued_account_purge, :autoretryable, user: autoretryable)
 
     Cdo::Metrics.expects(:push)
 
@@ -278,9 +278,9 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
   end
 
   test 'moves account to queue when purge fails' do
-    student_succeeds = create :student, deleted_at: 3.days.ago
-    student_needs_review = create :student, deleted_at: 3.days.ago
-    student_autoretryable = create :student, deleted_at: 3.days.ago
+    student_succeeds = create(:student, deleted_at: 3.days.ago)
+    student_needs_review = create(:student, deleted_at: 3.days.ago)
+    student_autoretryable = create(:student, deleted_at: 3.days.ago)
 
     edap = ExpiredDeletedAccountPurger.new \
       deleted_after: 4.days.ago,
@@ -335,10 +335,10 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
   end
 
   test 'dry-run behavior' do
-    create :student, deleted_at: 1.day.ago
-    student_b = create :student, deleted_at: 3.days.ago
-    student_c = create :student, deleted_at: 3.days.ago
-    create :student, deleted_at: 5.days.ago
+    create(:student, deleted_at: 1.day.ago)
+    student_b = create(:student, deleted_at: 3.days.ago)
+    student_c = create(:student, deleted_at: 3.days.ago)
+    create(:student, deleted_at: 5.days.ago)
 
     edap = ExpiredDeletedAccountPurger.new \
       deleted_after: 4.days.ago,
@@ -368,8 +368,8 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
   end
 
   test 'does not queue accounts when dry-run is true' do
-    student_a = create :student, deleted_at: 3.days.ago
-    student_b = create :student, deleted_at: 3.days.ago
+    student_a = create(:student, deleted_at: 3.days.ago)
+    student_b = create(:student, deleted_at: 3.days.ago)
 
     edap = ExpiredDeletedAccountPurger.new \
       deleted_after: 4.days.ago,
@@ -409,7 +409,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
   end
 
   test 'when number of teachers to delete exceeds safety constraint' do
-    create_list :teacher, 6, deleted_at: 20.days.ago
+    create_list(:teacher, 6, deleted_at: 20.days.ago)
 
     edap = ExpiredDeletedAccountPurger.new \
       deleted_after: 25.days.ago,
@@ -454,7 +454,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
   end
 
   test 'max teachers safety constraint does not limit number of students' do
-    students = create_list :student, 6, deleted_at: 20.days.ago
+    students = create_list(:student, 6, deleted_at: 20.days.ago)
 
     edap = ExpiredDeletedAccountPurger.new \
       deleted_after: 25.days.ago,
@@ -501,7 +501,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
   end
 
   test 'when number of accounts to delete exceeds safety constraint' do
-    create_list :student, 6, deleted_at: 20.days.ago
+    create_list(:student, 6, deleted_at: 20.days.ago)
 
     edap = ExpiredDeletedAccountPurger.new \
       deleted_after: 25.days.ago,

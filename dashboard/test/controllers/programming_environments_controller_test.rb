@@ -7,7 +7,7 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
 
   setup do
     File.stubs(:write)
-    @levelbuilder = create :levelbuilder
+    @levelbuilder = create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     Unit.stubs(:should_cache?).returns false
   end
@@ -15,7 +15,7 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
   test 'data is passed down to edit page' do
     sign_in @levelbuilder
 
-    programming_environment = create :programming_environment
+    programming_environment = create(:programming_environment)
 
     get :edit, params: {name: programming_environment.name}
     assert_response :ok
@@ -27,10 +27,10 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
   test 'data is passed down to show page' do
     sign_in @levelbuilder
 
-    programming_environment = create :programming_environment
-    category = create :programming_environment_category, programming_environment: programming_environment
-    create :programming_environment_category, programming_environment: programming_environment
-    create :programming_expression, programming_environment: programming_environment, programming_environment_category: category
+    programming_environment = create(:programming_environment)
+    category = create(:programming_environment_category, programming_environment: programming_environment)
+    create(:programming_environment_category, programming_environment: programming_environment)
+    create(:programming_expression, programming_environment: programming_environment, programming_environment_category: category)
 
     get :show, params: {name: programming_environment.name}
     assert_response :ok
@@ -45,10 +45,10 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
   test 'redirects to docs show page url if using studio code docs' do
     Rails.application.config.stubs(:levelbuilder_mode).returns false
 
-    programming_environment = create :programming_environment, name: 'weblab'
-    category = create :programming_environment_category, programming_environment: programming_environment
-    create :programming_environment_category, programming_environment: programming_environment
-    create :programming_expression, programming_environment: programming_environment, programming_environment_category: category
+    programming_environment = create(:programming_environment, name: 'weblab')
+    category = create(:programming_environment_category, programming_environment: programming_environment)
+    create(:programming_environment_category, programming_environment: programming_environment)
+    create(:programming_expression, programming_environment: programming_environment, programming_environment_category: category)
 
     get :docs_show, params: {programming_environment_name: programming_environment.name}
     assert_response :redirect
@@ -57,7 +57,7 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
   test 'page is not proxied to docs index if using studio code docs' do
     Rails.application.config.stubs(:levelbuilder_mode).returns false
 
-    create :programming_environment
+    create(:programming_environment)
     stubbed_request = stub_request(:get, "https://curriculum.code.org/docs/").
       to_return(body: 'curriculum.code.org/docs content', headers: {})
 
@@ -79,7 +79,7 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
   test 'can update programming expression from params' do
     sign_in @levelbuilder
 
-    programming_environment = create :programming_environment
+    programming_environment = create(:programming_environment)
     File.expects(:write).with {|filename, _| filename.to_s.end_with? "#{programming_environment.name}.json"}.once
     post :update, params: {
       name: programming_environment.name,
@@ -102,9 +102,9 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
   test 'can update programming expression categories from params' do
     sign_in @levelbuilder
 
-    programming_environment = create :programming_environment
-    category_to_keep = create :programming_environment_category, programming_environment: programming_environment, position: 0
-    category_to_destroy = create :programming_environment_category, programming_environment: programming_environment, position: 1
+    programming_environment = create(:programming_environment)
+    category_to_keep = create(:programming_environment_category, programming_environment: programming_environment, position: 0)
+    category_to_destroy = create(:programming_environment_category, programming_environment: programming_environment, position: 1)
     File.expects(:write).with {|filename, _| filename.to_s.end_with? "#{programming_environment.name}.json"}.once
     post :update, params:
       {
@@ -157,7 +157,7 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
   test 'can destroy a programming environment' do
     sign_in @levelbuilder
 
-    programming_environment = create :programming_environment, name: 'test-environment'
+    programming_environment = create(:programming_environment, name: 'test-environment')
 
     FileUtils.expects(:rm_f).once
     delete :destroy, params: {
@@ -170,7 +170,7 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
   test 'destroying a programming environment fails if File cannot be deleted' do
     sign_in @levelbuilder
 
-    programming_environment = create :programming_environment, name: 'test-environment'
+    programming_environment = create(:programming_environment, name: 'test-environment')
 
     FileUtils.expects(:rm_f).throws(StandardError).once
     delete :destroy, params: {
@@ -181,9 +181,9 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
   end
 
   test 'can get summary by name' do
-    programming_environment = create :programming_environment, name: 'test-environment', published: true
-    programming_category = create :programming_environment_category, name: 'test-category', programming_environment_id: programming_environment.id
-    programming_class = create :programming_class, name: 'test-class', programming_environment_category_id: programming_category.id, programming_environment_id: programming_environment.id
+    programming_environment = create(:programming_environment, name: 'test-environment', published: true)
+    programming_category = create(:programming_environment_category, name: 'test-category', programming_environment_id: programming_environment.id)
+    programming_class = create(:programming_class, name: 'test-class', programming_environment_category_id: programming_category.id, programming_environment_id: programming_environment.id)
     get :get_summary_by_name, params: {name: programming_environment.name}
     assert_response :ok
     response = JSON.parse(@response.body)
@@ -195,8 +195,8 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
   class AccessTests < ActionController::TestCase
     setup do
       File.stubs(:write)
-      @published_programming_environment = create :programming_environment, published: true
-      @unpublished_programming_environment = create :programming_environment, published: false
+      @published_programming_environment = create(:programming_environment, published: true)
+      @unpublished_programming_environment = create(:programming_environment, published: false)
 
       @update_params = {name: @published_programming_environment.name, title: 'new title'}
     end

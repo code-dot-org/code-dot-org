@@ -6,19 +6,15 @@ class LevelsControllerTest < ActionController::TestCase
 
   STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
 
-  setup_all do
-    seed_deprecated_unit_fixtures
-  end
-
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     Policies::LevelFiles.stubs(:write_to_file?).returns(false) # don't write to level files
 
     @level = create(:level)
-    @partner_level = create :level, editor_experiment: 'platformization-partners'
+    @partner_level = create(:level, editor_experiment: 'platformization-partners')
     @admin = create(:admin)
     @not_admin = create(:user)
-    @platformization_partner = create :platformization_partner
+    @platformization_partner = create(:platformization_partner)
     @levelbuilder = create(:levelbuilder)
     sign_in(@levelbuilder)
     @program = '<hey/>'
@@ -61,14 +57,15 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "empty success response for get_rubric on rubricless level" do
-    level = create :level
+    level = create(:level)
     get :get_rubric, params: {id: level.id}
     assert_response :no_content
     assert_equal '', @response.body
   end
 
   def create_level_with_rubric
-    create(:level,
+    create(
+      :level,
       mini_rubric: 'true',
       rubric_key_concept: 'This is the key concept',
       rubric_performance_level_1: 'This is great',
@@ -78,20 +75,11 @@ class LevelsControllerTest < ActionController::TestCase
     )
   end
 
-  test "should return level_properties " do
-    level = create :maze, name: 'music 1', properties: {level_data: {hello: "there"}, other: "other"}
-
-    get :level_properties, params: {id: level}
-    assert_response :success
-
-    body = JSON.parse(response.body)
-    assert_equal({"id" => level.id, "levelData" => {"hello" => "there"}, "other" => "other", "preloadAssetList" => nil, "type" => "Maze", "appName" => "maze", "useRestrictedSongs" => false, "sharedBlocks" => [], "usesProjects" => false, "exemplarSources" => nil}, body)
-  end
-
   test "should get filtered levels with just page param" do
     get :get_filtered_levels, params: {page: 1}
-    assert_equal 7, JSON.parse(@response.body)['levels'].length
-    assert_equal 22, JSON.parse(@response.body)['numPages']
+    response = JSON.parse(@response.body)
+    assert response['levels'].any?
+    assert_kind_of Integer, response['numPages']
   end
 
   test "should get filtered levels with name matching level key for blockly levels" do
@@ -112,7 +100,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should get filtered levels with script_id" do
-    script = create(:script, :with_levels, levels_count: 7)
+    script = create(:script, :in_single_unit_course, :with_levels, levels_count: 7)
     get :get_filtered_levels, params: {page: 1, script_id: script.id}
     assert_equal 7, JSON.parse(@response.body)['levels'].length
     assert_equal 1, JSON.parse(@response.body)['numPages']
@@ -120,7 +108,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should get filtered levels with owner_id" do
     Level.where(user_id: @levelbuilder.id).destroy_all
-    level = create :applab, user: @levelbuilder
+    level = create(:applab, user: @levelbuilder)
     get :get_filtered_levels, params: {page: 1, owner_id: @levelbuilder.id}
     assert_equal level.name, JSON.parse(@response.body)['levels'][0]["name"]
     assert_equal 1, JSON.parse(@response.body)['numPages']
@@ -651,7 +639,7 @@ class LevelsControllerTest < ActionController::TestCase
   test 'can edit encrypted level' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @levelbuilder
-    level = create :multi, encrypted: true
+    level = create(:multi, encrypted: true)
 
     get :edit, params: {id: level.id}
     assert_response :success
@@ -687,7 +675,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should show level group" do
-    level_group = create :level_group, :with_sublevels, name: 'lg'
+    level_group = create(:level_group, :with_sublevels, name: 'lg')
     level_group.save!
     get :show, params: {id: level_group.id}
     assert_response :success
@@ -745,10 +733,11 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should prevent rename of level in launched or pilot script" do
-    script_level = create :script_level
+    script_level = create(:script_level)
     script = script_level.script
-    script.published_state = 'stable'
-    script.save!
+    unit_group = script.original_unit_group
+    unit_group.published_state = 'stable'
+    unit_group.save!
     level = script_level.level
 
     get :edit, params: {id: level.id}
@@ -756,16 +745,8 @@ class LevelsControllerTest < ActionController::TestCase
     assert_includes @response.body, level.name
     assert_includes @response.body, 'level cannot be renamed'
 
-    script.published_state = 'beta'
-    script.save!
-    get :edit, params: {id: level.id}
-    assert_response :success
-    assert_includes @response.body, level.name
-    assert_includes @response.body, 'level cannot be renamed'
-
-    script.pilot_experiment = 'platformization-partners'
-    script.published_state = 'pilot'
-    script.save!
+    unit_group.published_state = 'beta'
+    unit_group.save!
     get :edit, params: {id: level.id}
     assert_response :success
     assert_includes @response.body, level.name
@@ -996,24 +977,24 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test 'should show match level' do
-    my_level = create :match, name: 'MatchLevel', type: 'Match'
+    my_level = create(:match, name: 'MatchLevel', type: 'Match')
     get :show, params: {id: my_level, game_id: my_level.game}
   end
 
   test 'should show applab level' do
-    my_level = create :applab, type: 'Applab'
+    my_level = create(:applab, type: 'Applab')
     get :show, params: {id: my_level, game_id: my_level.game}
   end
 
   test 'should show legacy unplugged level' do
-    level = create :unplugged, name: 'OldUnplugged', type: 'Unplugged'
+    level = create(:unplugged, name: 'OldUnplugged', type: 'Unplugged')
     get :show, params: {id: level, game_id: level.game}
     assert_select 'div.unplugged > h1', 'Test title'
     assert_select 'div.unplugged > p', 'Test description'
   end
 
   test 'should hide legacy unplugged pdf download button for students' do
-    level = create :unplugged, name: 'OldUnplugged', type: 'Unplugged'
+    level = create(:unplugged, name: 'OldUnplugged', type: 'Unplugged')
     teacher = create(:teacher)
     sign_out(@levelbuilder)
     sign_in(teacher)
@@ -1029,7 +1010,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test 'should show new style unplugged level' do
-    level = create :unplugged, name: 'NewUnplugged', type: 'Unplugged'
+    level = create(:unplugged, name: 'NewUnplugged', type: 'Unplugged')
     get :show, params: {id: level, game_id: level.game}
 
     assert_select 'div.unplugged > h1', 'Test title'
@@ -1037,7 +1018,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test 'should hide unplugged pdf download section for students' do
-    level = create :unplugged, name: 'NewUnplugged', type: 'Unplugged'
+    level = create(:unplugged, name: 'NewUnplugged', type: 'Unplugged')
     teacher = create(:teacher)
     sign_out(@levelbuilder)
     sign_in(teacher)
@@ -1124,7 +1105,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test 'cannot update level name with just a case change' do
-    level = create :level, name: 'original name'
+    level = create(:level, name: 'original name')
 
     post :update, params: {id: level.id, level: {name: 'ORIGINAL NAME'}}
 
@@ -1139,7 +1120,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test 'no error message when not actually changing level name' do
-    level = create :level, name: 'original name'
+    level = create(:level, name: 'original name')
 
     post :update, params: {id: level.id, level: {name: 'original name'}}
 
@@ -1154,7 +1135,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test 'can update level name' do
-    level = create :level, name: 'original name'
+    level = create(:level, name: 'original name')
 
     post :update, params: {id: level.id, level: {name: 'different name'}}
 
@@ -1164,7 +1145,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test 'trailing spaces in level name get stripped' do
-    level = create :level, name: 'original name '
+    level = create(:level, name: 'original name ')
     assert_equal 'original name', level.name
 
     post :update, params: {id: level.id, level: {name: 'different name  '}}
@@ -1177,7 +1158,7 @@ class LevelsControllerTest < ActionController::TestCase
   test 'can show level when not signed in' do
     set_env :test
 
-    level = create :artist
+    level = create(:artist)
     sign_out @levelbuilder
 
     get :edit, params: {id: level}
@@ -1190,7 +1171,7 @@ class LevelsControllerTest < ActionController::TestCase
   test 'can show embed level when not signed in' do
     set_env :test
 
-    level = create :artist
+    level = create(:artist)
     sign_out @levelbuilder
 
     get :embed_level, params: {id: level}
@@ -1252,14 +1233,15 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "empty success response for get_serialized_maze on level without maze" do
-    level = create :level
+    level = create(:level)
     get :get_serialized_maze, params: {id: level.id}
     assert_response :no_content
     assert_equal '', @response.body
   end
 
   def create_level_with_serialized_maze
-    create(:javalab,
+    create(
+      :javalab,
       serialized_maze: [[{tileType: 1, value: 0}], [{tileType: 0, assetId: 5, value: 0}]]
     )
   end
@@ -1293,6 +1275,62 @@ class LevelsControllerTest < ActionController::TestCase
     user: :platformization_partner,
     params: -> {{id: @partner_level.id, level: {name: 'new partner name'}}}
   )
+
+  test "add and remove skills" do
+    level = create(:level)
+    assert level.skills.empty?
+    refute level.skill_keys
+    # Add one skill, make sure it's as expected
+    skill_1 = create(:skill)
+    post :add_skill, params: {id: level.id, skillId: skill_1.id}
+    assert_response :success
+    level.reload
+    assert_equal [skill_1], level.skills
+    assert level.skill_keys.include?(skill_1.key)
+    assert level.skill_keys == [skill_1.key].to_json
+    # Add another skill, make sure both are expected
+    skill_2 = create(:skill)
+    post :add_skill, params: {id: level.id, skillId: skill_2.id}
+    assert_response :success
+    level.reload
+    assert_equal [skill_1, skill_2], level.skills
+    assert level.skill_keys.include?(skill_1.key)
+    assert level.skill_keys.include?(skill_2.key)
+    assert level.skill_keys == [skill_1.key, skill_2.key].to_json
+    # Remove one skill, make sure it's gone but the other is still there
+    post :remove_skill, params: {id: level.id, skillId: skill_1.id}
+    assert_response :success
+    level.reload
+    assert_equal [skill_2], level.skills
+    refute level.skill_keys.include?(skill_1.key)
+    assert level.skill_keys.include?(skill_2.key)
+    assert level.skill_keys == [skill_2.key].to_json
+    # Remove the last skill, make sure there are no skills left
+    post :remove_skill, params: {id: level.id, skillId: skill_2.id}
+    assert_response :success
+    level.reload
+    assert level.skills.empty?
+    refute level.skill_keys
+  end
+
+  test "level_properties returns map of ID to properties" do
+    level = create(:level)
+    get :level_properties, params: {id: level.id}
+    assert_response :success
+    properties = JSON.parse(@response.body)
+    assert_equal level.name, properties[level.id.to_s]["name"]
+  end
+
+  test "level_properties includes sublevels if present" do
+    level = create(:bubble_choice_level, :with_sublevels)
+    get :level_properties, params: {id: level.id}
+    assert_response :success
+    properties = JSON.parse(@response.body)
+    assert_equal level.name, properties[level.id.to_s]["name"]
+    level.sublevels.each do |sublevel|
+      assert_equal sublevel.name, properties[sublevel.id.to_s]["name"]
+    end
+  end
 
   # Assert that the url is a real S3 url, and not a placeholder.
   private def assert_s3_image_url(url)

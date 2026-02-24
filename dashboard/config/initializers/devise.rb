@@ -190,7 +190,7 @@ Devise.setup do |config|
   # ==> Configuration for :timeoutable
   # The time you want to timeout the user session without activity. After this
   # time the user will be asked for credentials again. Default is 30 minutes.
-  # config.timeout_in = 30.minutes
+  config.timeout_in = CDO.dashboard_session_ttl_days.days
 
   # If true, expires auth token on session timeout.
   # config.expire_auth_token_on_timeout = false
@@ -293,7 +293,6 @@ Devise.setup do |config|
       end
     end,
   }
-  config.omniauth :windowslive, CDO.dashboard_windowslive_key, CDO.dashboard_windowslive_secret, scope: 'wl.basic wl.emails'
 
   config.omniauth :microsoft_v2_auth, CDO.dashboard_microsoft_key, CDO.dashboard_microsoft_secret
 
@@ -302,34 +301,13 @@ Devise.setup do |config|
   # with a log in with facebook button)
   config.omniauth :clever, CDO.dashboard_clever_key, CDO.dashboard_clever_secret, provider_ignores_state: true
 
-  config.omniauth :openid_connect, {
-    name: :the_school_project,
-    scope: [:profile, :email, :school],
-    response_type: :code,
-    issuer: 'https://www.cleio.fr/openid',
-    discovery: true,
-    client_options: {
-      port: 443,
-      scheme: 'https',
-      host: CDO.dashboard_hostname,
-      identifier: CDO.dashboard_schoolproject_key,
-      secret: CDO.dashboard_schoolproject_secret,
-      redirect_uri: CDO.studio_url('/users/auth/the_school_project/callback', 'https:')
-    }
-  }
-
-  # Powerschool OpenID config
-  config.omniauth :openid, {
-    provider_ignores_state: true,
-    name: :powerschool,
-    identifier_param: 'openid_identifier',
-    required: %w(
-      http://powerschool.com/entity/type
-      http://powerschool.com/entity/email
-      http://powerschool.com/entity/firstName
-      http://powerschool.com/entity/lastName
-    ).freeze
-  }
+  # ClassLink initiates the OAuth flow (IDP-initiated) so it won't return our
+  # state param; ignore state to avoid CSRF errors in the callback.
+  config.omniauth :classlink,
+    CDO.dashboard_classlink_key,
+    CDO.dashboard_classlink_secret,
+    strategy_class: OmniAuth::Strategies::ClassLink,
+    provider_ignores_state: true
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
@@ -356,11 +334,11 @@ Devise.setup do |config|
       end
     # Students younger than 13 shouldn't see App Lab and Game Lab unless they
     # are in a teacher's section for privacy reasons.
-    limit_project_types = user.under_13? && !user.sections_as_student.any?
+    limit_project_types = user.under_13? && user.sections_as_student.none?
     auth.cookies[environment_specific_cookie_name("_limit_project_types")] = {value: limit_project_types, domain: :all, httponly: true}
     auth.cookies[environment_specific_cookie_name("_user_type")] = {value: user_type, domain: :all, httponly: true}
     auth.cookies[environment_specific_cookie_name("_shortName")] = {value: user.short_name, domain: :all}
-    auth.cookies[environment_specific_cookie_name("_experiments")] = {value: user.get_active_experiment_names.to_json, domain: :all}
+    auth.cookies[environment_specific_cookie_name("_experiments")] = {value: Queries::User::EnabledExperiments.call(user).to_json, domain: :all}
   end
 
   Warden::Manager.before_logout do |_, auth|
@@ -369,6 +347,10 @@ Devise.setup do |config|
     auth.cookies[environment_specific_cookie_name("_shortName")] = {value: "", expires: Time.at(0), domain: :all}
     auth.cookies[environment_specific_cookie_name("_experiments")] = {value: "", expires: Time.at(0), domain: :all}
     auth.cookies[environment_specific_cookie_name("_assumed_identity")] = {value: "", expires: Time.at(0), domain: :all, httponly: true}
+    # statsig_stable_id is set in the application controller so it's available for
+    # all users, both signed-in and signed-out. When the user logs out, we remove
+    # this cookie because it is user-specific.
+    auth.cookies[:statsig_stable_id] = {value: "", expires: Time.at(0), domain: :all}
 
     # These marketing cookies are set in the home_controller in init_homepage. When the user logs out, we
     # remove these cookies because they are user-specific. The cookies are set in init_homepage instead of after_set_user
@@ -379,10 +361,11 @@ Devise.setup do |config|
   end
 
   OmniAuth.config.before_request_phase do |env|
-    Metrics::Events.log_event_with_session(
-      session: env['rack.session'],
+    session = env['rack.session']
+    Metrics::Events.log_event(
+      session: session,
       event_name: "#{env['omniauth.strategy'].options[:name]}-begin-auth",
-      )
+    )
   end
 
   # ==> Mountable engine configurations
@@ -400,7 +383,11 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = "/my_engine/users/auth"
 end
 
+require 'devise/models/custom_lockable'
+
 Rails.application.config.to_prepare do
   # See lib/devise/models/custom_lockable.rb
-  Devise::Models::Lockable.prepend Devise::Models::CustomLockable
+  unless Devise::Models::Lockable <= Devise::Models::CustomLockable
+    Devise::Models::Lockable.prepend(Devise::Models::CustomLockable)
+  end
 end

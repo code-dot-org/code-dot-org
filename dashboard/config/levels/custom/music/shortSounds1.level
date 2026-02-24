@@ -1,0 +1,147 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2024-12-03T23:47:19.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "curriculum2024",
+      "sounds": {
+        "curriculum": [
+          "drum_short_1",
+          "drum_short_2",
+          "drum_short_3",
+          "drum_long_1",
+          "drum_long_2",
+          "drum_long_3",
+          "bass_short_1",
+          "bass_short_2",
+          "bass_short_3",
+          "bass_long_1",
+          "bass_long_2",
+          "bass_long_3",
+          "lead_short_1",
+          "lead_short_2",
+          "lead_short_3",
+          "lead_long_1",
+          "lead_long_2",
+          "lead_long_3",
+          "fx_short_1",
+          "fx_short_2",
+          "fx_short_3",
+          "fx_long_1",
+          "fx_long_2",
+          "fx_long_3"
+        ]
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "repeat_simple2",
+                  "id": "repeat_simple2",
+                  "fields": {
+                    "times": 2
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sounds_together",
+                        "id": ":UKtL;?mh$Za`F_3,Rsl",
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "bykzZY^7Q-[*l}h|P/,$",
+                              "fields": {
+                                "sound": "curriculum/drum_short_1"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "w/g487^ti#3wqVUSF?yI",
+                                  "fields": {
+                                    "sound": "curriculum/bass_short_1"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "play_sound_at_current_location_simple2",
+                                      "fields": {
+                                        "sound": "curriculum/lead_short_3"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together",
+                      "id": "play_sounds_together",
+                      "inputs": {
+                        "code": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "Y$VIrc3)AB%:7[X;HSW*",
+                            "fields": {
+                              "sound": "curriculum/drum_long_1"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "D:!j}PHbHjy}/k2;~]+@",
+                                "fields": {
+                                  "sound": "curriculum/bass_long_1"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": ";w9STch|Mkl}iX)O`r4x",
+                                    "fields": {
+                                      "sound": "curriculum/lead_long_3"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-12-03 23:48:35 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 00:16:43 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 00:18:12 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 00:22:34 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

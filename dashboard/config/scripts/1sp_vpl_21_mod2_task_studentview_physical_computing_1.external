@@ -1,0 +1,67 @@
+name '1SP-VPL-21-mod2-Task-StudentView_physical-computing_1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Differences Between Code.org Student View and Teacher View
+
+#### **Student View** is designed for learners to engage with lessons and activities. Students can access coding puzzles, interactive exercises, and tutorials tailored to their skill levels. It’s streamlined and focuses on fostering creativity and exploration.
+
+
+#### **Teacher View**, however, provides educators with tools to guide and monitor student progress. Teachers can see lesson plans, manage student accounts, track performance, and access solutions to activities. It includes additional resources, like teaching tips and curriculum overviews, to support effective instruction. <a href="https://support.code.org/hc/en-us/articles/202138023-How-do-I-access-solutions-and-answer-keys" target="_blank">Solutions</a> and <a href="https://support.code.org/hc/en-us/articles/23621978654605-Sync-Rosters-with-your-Learning-Management-System" target="_blank">rosters </a> are available in teacher view. 
+
+
+##How do I know if I'm in Student View or Teacher View? 
+### **My Dashboard** 
+#### * Teacher View has "create a section" and "class sections" 
+
+
+
+### **Course Page**
+<br>
+<p>
+  <img 
+    src="https://images.code.org/691cd16597ece614a68f8f93ab790ded-image-1734124258562.gif" 
+    alt="Teacher panel opening and closing on the right side of the screen" 
+    style="float: left; height: 300px; width: 275px; clear: both; margin: 0 20px 20px 0;">
+</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+#### * Teacher view has resources like lesson plans, blue pop out window on the side 
+#### * Student view only has course levels
+
+
+
+### **Course Level**
+#### * Teacher view has blue panel on the right
+
+Update the image of differences between views: 
+![](https://images.code.org/dd07437ffb774ccdb97afd1f3bef4a86-image-1733952107312.21.43 PM.png)
+
+
+#### Don't see solutions or lesson plans in your account? <a href="https://form.jotform.com/240863841362155" target="blank" rel="noopener noreferrer" >Click here</a> to complete the form to become a verified teacher. 
+
+
+</div>
+</details>
+
+MARKDOWN

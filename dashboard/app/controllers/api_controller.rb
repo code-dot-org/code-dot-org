@@ -69,11 +69,18 @@ class ApiController < ApplicationController
     end
   end
 
+  # TODO: Move to `Api::V1::Roster::Clever::SectionsController`
   def clever_classrooms
     return head :forbidden unless current_user
 
-    uid = current_user.uid_for_provider(AuthenticationOption::CLEVER)
-    query_clever_service("v2.1/teachers/#{uid}/sections") do |response|
+    v3_ao = current_user.authentication_options.find_by(
+      credential_type: AuthenticationOption::CLEVER,
+      version: AuthenticationOption::Clever::VERSION[:v3]
+    )
+    api_version = v3_ao.present? ? AuthenticationOption::Clever::VERSION[:v3] : AuthenticationOption::Clever::VERSION[:v2]
+    uid = v3_ao.present? ? v3_ao.authentication_id : current_user.uid_for_provider(AuthenticationOption::CLEVER)
+
+    query_clever_service(api_version:, endpoint: clever_sections_url_path(api_version:, uid:)) do |response|
       json = response.map do |section|
         data = section['data']
         {
@@ -88,13 +95,14 @@ class ApiController < ApplicationController
     end
   end
 
+  # TODO: Move to `Api::V1::Roster::Clever::SectionsController`
   def import_clever_classroom
     return head :forbidden unless current_user
 
     course_id = params[:courseId].to_s
     course_name = params[:courseName].to_s
 
-    query_clever_service("v2.1/sections/#{course_id}/students") do |students|
+    query_clever_service(api_version: AuthenticationOption::Clever::VERSION[:v3], endpoint: "sections/#{course_id}/users?role=student") do |students|
       section = CleverSection.from_service(course_id, current_user.id, students, course_name)
       render json: section.summarize
     end
@@ -124,6 +132,11 @@ class ApiController < ApplicationController
       end
 
       section = GoogleClassroomSection.from_service(course_id, current_user.id, students, course_name)
+
+      # If a teacher passes the criteria for becoming verified, upgrade them here
+      if section && Policies::User.verified_teacher_candidate?(current_user)
+        current_user.verify_teacher!
+      end
 
       render json: section.summarize
     end
@@ -199,6 +212,13 @@ class ApiController < ApplicationController
     end
 
     render json: data
+  end
+
+  use_reader_connection_for_route(:section)
+  def section
+    section = load_section
+
+    render json: section.selected_section_summarize.merge(section.concise_summarize)
   end
 
   use_reader_connection_for_route(:section_progress)
@@ -278,6 +298,20 @@ class ApiController < ApplicationController
     render json: data
   end
 
+  def show_courses_with_progress
+    section = load_section
+    unit_ids = section.participant_unit_ids
+    # Always include the Units assigned to the Section.
+    if section.course_id
+      unit_group = UnitGroup.get_from_cache(section.course_id)
+    elsif section.script_id
+      # Some older Sections only have a script_id defined.
+      unit_group = Unit.get_from_cache(section.script_id)&.get_original_unit_group
+    end
+    unit_ids.concat(unit_group.default_units.pluck(:id)).uniq! if unit_group
+    render json: CourseVersion.courses_for_unit_selector(unit_ids, current_user)
+  end
+
   use_reader_connection_for_route(:section_level_progress)
 
   # This API returns data similar to user_progress, but aggregated for all users
@@ -294,7 +328,12 @@ class ApiController < ApplicationController
     page = [params[:page].to_i, 1].max
     per = params[:per].to_i || 50
 
-    paged_students = section.students.page(page).per(per)
+    # Occassionaly, students will be double-added to a section. When this happens, errors can
+    # occur when we get the progress for the student twice.  We saw two issues that were caused by
+    # having duplicate students in a section AND the number of students being a multiple of the page amount
+    # Deduplicating students ensures all data for all students is pulled.
+    deduplicated_students = section.students.distinct.order(:id)
+    paged_students = deduplicated_students.page(page).per(per)
     # As designed, if there are 50 students, the client will ask for both
     # page 1 and page 2, even though page 2 is out of range. However, it should
     # never ask for page 3
@@ -383,9 +422,24 @@ class ApiController < ApplicationController
   end
 
   def script_structure
-    script = Unit.get_from_cache(params[:script])
-    overview_path = CDO.studio_url(script_path(script))
-    summary = script.summarize(true, current_user, true)
+    context = nil
+    if params[:script]
+      context = Queries::Courses.get_course_context(params[:script])
+    else
+      course_name = params[:course_name]
+      unit_position = params[:unit_position]
+      context = Queries::Courses.get_unit_context(course_name, unit_position)
+    end
+    return render json: {error: 'Unit not found'}, status: :bad_request unless context
+    unit = context[:unit]
+    unit_group = context[:unit_group]
+    ugu = context[:unit_group_unit]
+    return render json: {error: 'Unit not found'}, status: :bad_request unless unit
+    overview_path = CDO.studio_url(script_path(unit))
+    if Policies::Courses.modularity_enabled? && ugu
+      overview_path = CDO.studio_url(course_unit_path(unit_group, ugu.position))
+    end
+    summary = unit.summarize(true, current_user, true, unit_group_unit: ugu)
     summary[:path] = overview_path
     render json: summary
   end
@@ -394,6 +448,85 @@ class ApiController < ApplicationController
     script = Unit.get_from_cache(params[:script])
     standards = script.standards
     render json: standards
+  end
+
+  def lesson_materials
+    unit_id = params[:unit_id]
+    context = Queries::Courses.get_course_context(unit_id)
+    unit = context[:unit]
+    return render json: {error: "Can't find Unit id=#{unit_id}"}, status: :bad_request unless unit
+    render json: unit.summarize_for_lesson_materials_view(current_user, unit_group_unit: context[:unit_group_unit])
+  end
+
+  def course_summary
+    course_name = params[:course_name]
+    unit_group = UnitGroup.get_from_cache(course_name)
+
+    # When the url of a course family is requested, redirect to a specific course version.
+    if !unit_group && UnitGroup.family_names.include?(params[:course_name])
+      unit_group = UnitGroup.latest_stable_version(params[:course_name])
+      if unit_group
+        redirect_path = url_for(action: params[:action], course_name: unit_group.name)
+        redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
+        redirect_to "#{redirect_path}#{redirect_query_string}"
+      end
+    end
+
+    render json: {is_verified_instructor: current_user.try(:verified_instructor?) || false,
+                  course_summary: unit_group.summarize(current_user, for_edit: false, locale_code: request.locale),
+                  hidden_scripts: current_user.try(:get_hidden_unit_ids, unit_group),
+                  redirect_to_course_url: unit_group.redirect_to_course_url(current_user),
+                  show_version_warning: unit_group.has_older_version_progress?(current_user) && !unit_group.has_dismissed_version_warning?(current_user)}
+  end
+
+  def unit_summary
+    unit_name = params[:unit_name]
+    unit_position = params[:unit_position]
+    course_name = params[:course_name]
+    unless unit_name || (unit_position && course_name)
+      return render json: {error: 'Must specify either unit_name or unit_position and course_name'}, status: :bad_request
+    end
+
+    if unit_name
+      context = Queries::Courses.get_course_context(unit_name)
+      unit = context[:unit]
+      unit_group = context[:unit_group]
+      unit_group_unit = context[:unit_group_unit]
+      course_name = unit_group&.name
+      unit_position = unit_group_unit&.position
+    else
+      course_name = params[:course_name]
+      unit_position = params[:unit_position]&.to_i
+      context = Queries::Courses.get_unit_context(course_name, unit_position)
+      return render json: {error: "Can't find Unit params=#{params}"}, status: :bad_request unless context
+      unit = context[:unit]
+      unit_group = context[:unit_group]
+      unit_group_unit = context[:unit_group_unit]
+    end
+    return render json: {error: "Can't find Unit params=#{params}"}, status: :bad_request unless unit
+
+    redirect_unit_url = unit.redirect_to_unit_url(current_user, unit_group: unit_group, locale: request.locale)
+
+    additional_script_data = {
+      is_instructor: unit.can_be_instructor?(current_user),
+      is_verified_instructor: current_user&.verified_instructor?,
+      locale: Unit.locale_english_name_map[request.locale],
+      locale_code: request.locale,
+      course_link: unit_group&.link(section_id: params[:section_id]),
+      course_title: unit_group&.localized_title || I18n.t('view_all_units'),
+      course_name: course_name,
+      redirect_unit_url: redirect_unit_url,
+      unit_position: unit_position,
+    }
+
+    if unit.old_professional_learning_course? && current_user && Plc::UserCourseEnrollment.exists?(user: current_user, plc_course: unit.plc_course_unit.plc_course)
+      plc_breadcrumb = {unit_name: unit.plc_course_unit.unit_name, course_view_path: course_path(unit.plc_course_unit.plc_course.unit_group)}
+    end
+
+    render json: {
+      unitData: unit.summarize(true, current_user, false, request.locale, unit_group_unit: unit_group_unit).merge(additional_script_data),
+      plcBreadcrumb: plc_breadcrumb
+    }
   end
 
   use_reader_connection_for_route(:user_progress)
@@ -486,12 +619,16 @@ class ApiController < ApplicationController
     script_level = Unit.cache_find_script_level params[:script_level_id].to_i
     level = Unit.cache_find_level params[:level_id].to_i
     section_id = params[:section_id].present? ? params[:section_id].to_i : nil
+    # TODO: TEACH-1866 pass in `unit_group_unit`
     render json: script_level.get_example_solutions(level, current_user, section_id)
   end
 
   def section_text_responses
     section = load_section
     script = load_script(section)
+    # TODO: TEACH-2042 default to original unit group unit if the unit is not part of the assigned course
+    # If unit_group_unit is nil, it returns the /s/ url instead of the correct /courses/ url
+    unit_group_unit = script.unit_group_units.find {|ugu| ugu.unit_group.id == section.course_id}
 
     text_response_levels = script.text_response_levels
 
@@ -508,7 +645,7 @@ class ApiController < ApplicationController
           puzzle: level_hash[:script_level].position,
           question: last_attempt.level.properties['title'],
           response: response,
-          url: build_script_level_url(level_hash[:script_level], section_id: section.id, user_id: student.id)
+          url: build_script_level_url(level_hash[:script_level], section_id: section.id, user_id: student.id, unit_group_unit: unit_group_unit)
         }
       end
     end.flatten
@@ -551,14 +688,32 @@ class ApiController < ApplicationController
     )
   end
 
-  private def query_clever_service(endpoint)
+  private def query_clever_service(api_version:, endpoint:)
     tokens = current_user.oauth_tokens_for_provider(AuthenticationOption::CLEVER)
+    clever_client = Clients::CleverRest.new(oauth_token: tokens[:oauth_token], api_version:)
     begin
-      auth = {authorization: "Bearer #{tokens[:oauth_token]}"}
-      response = RestClient.get("https://api.clever.com/#{endpoint}", auth)
-      yield JSON.parse(response)['data']
+      yield clever_client.get(endpoint)['data']
     rescue RestClient::ExceptionWithResponse => exception
-      render status: exception.response.code, json: {error: exception.response.body}
+      if exception.http_code == 401 && exception.response.body.include?('Unrecognized token string')
+        render status: exception.response.code, plain: I18n.t('auth.token_expired', provider: I18n.t('auth.clever'))
+      else
+        render status: exception.response.code, json: {error: exception.response.body}
+      end
+    end
+  end
+
+  # The sections endpoint path varies between Clever API versions.
+  # v3 wants users/:uid/sections with the new role-agnostic Clever ID
+  # instead of the old teachers endpoint that used the now-deprecated teacher ID.
+  # TODO: Remove this method when we drop support for Clever API v2.1
+  private def clever_sections_url_path(api_version:, uid:)
+    case api_version
+    when AuthenticationOption::Clever::VERSION[:v2]
+      "teachers/#{uid}/sections"
+    when AuthenticationOption::Clever::VERSION[:v3]
+      "users/#{uid}/sections"
+    else
+      raise "Unsupported Clever API version: #{api_version}"
     end
   end
 
@@ -631,7 +786,7 @@ class ApiController < ApplicationController
     script_id = params[:script_id] if params[:script_id].present?
     script_id ||= section.default_script.try(:id)
     script = Unit.get_from_cache(script_id) if script_id
-    script ||= Unit.twenty_hour_unit
+    script ||= Unit.hoc_2014_unit
     script
   end
 end

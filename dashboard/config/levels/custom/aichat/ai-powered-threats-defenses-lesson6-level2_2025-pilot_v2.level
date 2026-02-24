@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-11-29T06:15:02.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Investigate a CIA Scenario\r\n\r\nUse this AI Chat level to help you with your case files investigations, as the attacker, defender, or together.\r\n\r\n### Do This:\r\n\r\n1. Tell AI Chat:  \r\n   - Which case file you are working on  \r\n   - The role you are playing (attacker or defender)  \r\n   - Your question  \r\n\r\n**Try it out!**\r\n\r\n:::details [<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Need help figuring out what to ask AI Chat?**]\r\n\r\n### **If you’re the Attacker**\r\nTry asking:\r\n- “Here’s my scenario. What could someone *see, change, or block* here?”\r\n- “Which CIA pillar does this failure point to, and why?”\r\n- “What weakness in the system made this attack possible?”\r\n\r\n### **If you’re the Defender**\r\nTry asking:\r\n- “Given this attacker’s action, what fix would reduce the harm?”\r\n- “How does this fix protect confidentiality / integrity / availability?”\r\n- “What tradeoff might this fix create for real users?”\r\n\r\n### **If you’re stuck on ‘Why It Matters’**\r\nTry asking:\r\n- “Who gets harmed in this scenario, and how?”\r\n- “What real-world consequences could this failure cause?”\r\n\r\n### **If you’re looking for patterns**\r\nTry asking:\r\n- “What do the confidentiality failures in my cases have in common?”\r\n- “Which types of fixes usually help with integrity or availability?”\r\n\r\n:::\r\n",
+    "submittable": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a student helper for a cyber security activity. Here is a description of the activity and the case files students are working with.\n\n- The **attacker** looks for what they could *see, change,* or *block* in the scenario.\n- The **defender** picks a solution from the list (or suggests their own) that would help stop the attacker or reduce the harm.\n- Together, they decide why the failure matters and what tradeoff the solution might introduce.\n\nCase Files:\n🔧 Case 1: Deleted Memories\nA teen shares a family photo folder with a few relatives. Everyone can view, upload, and delete files. One cousin accidentally deletes half the folder while trying to reorganize the photos.\n⛔ Case 2: Locked Out on Launch Day\nOn the night of a game release, the login system can’t handle the traffic. A few people say their logins failed even though they typed everything correctly. No one knows who was able to get in, and some were blocked from logging in entirely.\n🔒🔧 Case 3: Calendar Chaos\nA student adds personal notes to a school calendar. Later, they find out their classmates and even parents can see everything and someone edited one of the notes to be a joke.\n🔧 Case 4: Science Fair Switch-Up\nTwo groups share the same online document folder. One group accidentally overwrites the other’s project file. The teacher can’t tell who made the change or when it happened.\n🔒🔧 Case 5: Guest Wi-Fi Surprise\nMaya gives her friend the guest password to her home Wi-Fi. Later that night, she finds her smart TV auto-connected and her Netflix profile renamed “Comedy Queen.” No one else is home, but someone clearly accessed and changed the account.\n⛔ Case 6: Locked Grades\nA school’s grade portal goes through an update. For two days, no students or teachers can log in. A student misses a scholarship deadline because they couldn’t access their GPA in time.\n\n",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": false
+    },
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-29T06:15:02.644+00:00\",\"changed\":[\"cloned from \\\"ai-powered-threats-defenses-lesson6-level2_2025-pilot\\\"\"],\"cloned_from\":\"ai-powered-threats-defenses-lesson6-level2_2025-pilot\"},{\"changed_at\":\"2025-11-29 06:45:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Aichat>

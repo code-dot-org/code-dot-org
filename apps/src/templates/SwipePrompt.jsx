@@ -4,7 +4,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {dismissSwipeOverlay} from '@cdo/apps/templates/arrowDisplayRedux';
-import trackEvent from '@cdo/apps/util/trackEvent';
 
 const HideSwipeOverlayCookieName = 'hide_swipe_overlay';
 
@@ -17,7 +16,6 @@ export class SwipePrompt extends React.Component {
     buttonsAreDisabled: PropTypes.bool.isRequired,
     hasBeenDismissed: PropTypes.bool.isRequired,
     onDismiss: PropTypes.func.isRequired,
-    dismissAction: PropTypes.string.isRequired,
   };
 
   constructor(props) {
@@ -28,7 +26,7 @@ export class SwipePrompt extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    const {hasBeenDismissed, dismissAction} = this.props;
+    const {hasBeenDismissed} = this.props;
     if (
       hasBeenDismissed &&
       !prevProps.hasBeenDismissed &&
@@ -36,7 +34,6 @@ export class SwipePrompt extends React.Component {
     ) {
       // The overlay was just dismissed. Don't show it again for a while.
       cookies.set(HideSwipeOverlayCookieName, 'true', {expires: 30, path: '/'});
-      trackEvent('Research', 'HideSwipeOverlay', 'hide-' + dismissAction);
     }
   }
 
@@ -132,7 +129,6 @@ export default connect(
     buttonsAreVisible: state.arrowDisplay.buttonsAreVisible,
     buttonsAreDisabled: state.arrowDisplay.buttonsAreDisabled,
     hasBeenDismissed: state.arrowDisplay.swipeOverlayHasBeenDismissed,
-    dismissAction: state.arrowDisplay.swipeOverlayDismissAction,
   }),
   dispatch => ({
     onDismiss(action) {

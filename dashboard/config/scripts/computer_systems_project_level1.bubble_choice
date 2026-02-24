@@ -1,0 +1,9 @@
+name 'computer-systems-project-level1'
+display_name 'Explore Sustainable Development Goal Targets'
+description '#### Select a category to explore related Sustainable Development Goals (SDGs).'
+
+sublevels
+level 'computer-systems-category-1'
+level 'computer-systems-category-2'
+level 'computer-systems-category-3'
+level 'computer-systems-category-4'

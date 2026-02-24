@@ -6,7 +6,7 @@ module Api::V1::Pd::Foorm
 
     test 'levelbuilder can validate form' do
       sign_in create :levelbuilder
-      foorm = create :foorm_form
+      foorm = create(:foorm_form)
       post :validate_form, params: {form_questions: JSON.parse(foorm.questions)}
       assert_response :success
     end

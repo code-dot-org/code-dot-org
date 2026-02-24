@@ -5,13 +5,24 @@
     %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
     %title= t('nav.user.loading')
 
-    = form_with(url: users_finish_sign_up_path, method: :post, html: {id: 'redirect-form'}) do |f|
-      = f.hidden_field "user[email]", value: @form_data[:email]
-
     :javascript
-      window.onload = function() {
-        document.getElementById("redirect-form").submit()
-      };
+        (function() {
+          var email = "#{@form_data[:email]}";
+          var givenName = "#{@form_data[:given_name]}";
+          var familyName = "#{@form_data[:family_name]}";
+          var name = "#{@form_data[:name]}";
+          var oauthType = "#{@form_data[:provider]}";
+          var accountType = "#{@form_data[:account_type]}";
+          var usState = "#{@form_data[:us_state]}";
+          sessionStorage.setItem('email', email);
+          sessionStorage.setItem('givenName', givenName);
+          sessionStorage.setItem('familyName', familyName);
+          sessionStorage.setItem('name', name)
+          sessionStorage.setItem('oauthType', oauthType);
+          sessionStorage.setItem('accountType', accountType);
+          sessionStorage.setItem('usState', usState);
+          window.location.href = "#{sign_up_url}";
+        })();
 
   %body
     %p=t('nav.user.loading')

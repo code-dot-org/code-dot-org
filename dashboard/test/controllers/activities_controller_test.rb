@@ -37,7 +37,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     @admin = create(:admin)
 
-    @script = create(:script)
+    @script = create(:unit, :in_single_unit_course)
     @script_level_prev = create(:script_level, script: @script)
     @script_level = create(:script_level, script: @script)
     @script_level_next = create(:script_level, script: @script)
@@ -50,6 +50,9 @@ class ActivitiesControllerTest < ActionController::TestCase
     create(:lesson_group, lessons: [@lesson], script: @script)
     @level = @script_level.level
 
+    @playlab_script_level = create(:script_level, :playlab)
+    @playlab_script = @playlab_script_level.script
+
     @blank_image = File.read('test/fixtures/artist_image_blank.png', binmode: true)
     @good_image = File.read('test/fixtures/artist_image_1.png', binmode: true)
     @another_good_image = File.read('test/fixtures/artist_image_2.png', binmode: true)
@@ -57,6 +60,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     @milestone_params = {
       user_id: @user,
       script_level_id: @script_level.id,
+      course_id: @script.original_unit_group_id,
       attempt: '1',
       result: 'true',
       testResult: '100',
@@ -67,14 +71,24 @@ class ActivitiesControllerTest < ActionController::TestCase
     }
 
     # set up params for testing rubric evaluation
-    @teacher = create :teacher
-    @section = create :section, teacher: @teacher
-    @student = create :student
-    create :follower, section: @section, student_user: @student
+    @teacher = create(:authorized_teacher)
+    @section = create(:section, teacher: @teacher)
+    @student = create(:student)
+    create(:follower, section: @section, student_user: @student)
     @milestone_rubric_params = @milestone_params.merge(
       user_id: @student.id,
       submitted: 'true'
     )
+
+    @unauthorized_teacher = create(:teacher)
+    @unauth_teacher_section = create(:section, teacher: @unauthorized_teacher)
+    @unauth_teacher_student = create(:student)
+    create(:follower, section: @unauth_teacher_section, student_user: @unauth_teacher_student)
+    @unauth_milestone_rubric_params = @milestone_params.merge(
+      user_id: @unauth_teacher_student.id,
+      submitted: 'true'
+    )
+
     Metrics::Events.stubs(:log_event).never
     EvaluateRubricJob.expects(:perform_later).never
   end
@@ -100,9 +114,9 @@ class ActivitiesControllerTest < ActionController::TestCase
       '</title><title name="TEXT">type text here</title></block></next></block>'
   end
 
-  def build_expected_response(options = {})
+  def build_expected_response(options = {}, unit_group: nil)
     {
-      redirect: build_script_level_path(@script_level_next),
+      redirect: build_script_level_path(@script_level_next, unit_group_unit: Queries::Courses.unit_group_unit(@script, unit_group)),
     }.merge options
   end
 
@@ -114,15 +128,14 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "logged in milestone" do
-    # do all the logging
-    @controller.expects :log_milestone
-
-    assert_creates(LevelSource, Activity, UserLevel, UserScript) do
-      post :milestone, params: @milestone_params
+    assert_creates(LevelSource, UserLevel, UserScript) do
+      assert_does_not_create(Activity) do
+        post :milestone, params: @milestone_params
+      end
     end
     assert_response :success
 
-    expected_response = build_expected_response(level_source: "http://test.host/c/#{assigns(:level_source).id}")
+    expected_response = build_expected_response({level_source: "http://test.host/c/#{assigns(:level_source).id}"})
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
 
     # created a user script
@@ -138,6 +151,19 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal @script_level.script, UserLevel.last.script
   end
 
+  test "logged in milestone sets unit_group_id from course_id parameter" do
+    assert_creates(LevelSource, UserLevel, UserScript) do
+      assert_does_not_create(Activity) do
+        post :milestone, params: @milestone_params
+      end
+    end
+    assert_response :success
+
+    # created UserLevel should have unit_group_id matching the course_id parameter
+    user_level = UserLevel.last
+    assert_equal @milestone_params[:course_id], user_level.unit_group_id
+  end
+
   test "successful milestone does not require script_level_id" do
     params = @milestone_params
     params.delete(:script_level_id)
@@ -146,6 +172,21 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     post :milestone, params: params
     assert_response :success
+  end
+
+  test "successful milestone with modular course" do
+    secondary_course = create(:single_unit_course, unit: @script)
+
+    params = @milestone_params
+    params[:course_id] = secondary_course.id
+    params[:result] = 'true'
+
+    post :milestone, params: params
+    assert_response :success
+
+    puts JSON.parse(@response.body)
+    expected_response = build_expected_response({level_source: "http://test.host/c/#{assigns(:level_source).id}"}, unit_group: secondary_course)
+    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
   test "unsuccessful milestone does not require script_level_id" do
@@ -166,6 +207,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     params = @milestone_params
     params[:script_level_id] = @script_level.id
+    params[:course_id] = @script.original_unit_group_id
 
     user_level = UserLevel.create(level: @script_level.level, user: @user, script: @script_level.script, time_spent: 30)
 
@@ -186,6 +228,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     params = @milestone_params.dup
     params[:script_level_id] = @script_level.id
+    params[:course_id] = @script.original_unit_group_id
     params[:timeSinceLastMilestone] = 4_000_000
 
     user_level = UserLevel.create(level: @script_level.level, user: @user, script: @script_level.script)
@@ -201,10 +244,11 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test "milestone creates userlevel with specified level when scriptlevel has multiple levels" do
     params = @milestone_params
-    level1 = create :maze, name: 'level 1'
-    level2 = create :maze, name: 'level 2'
-    script_level = create :script_level, levels: [level1, level2]
+    level1 = create(:maze, name: 'level 1')
+    level2 = create(:maze, name: 'level 2')
+    script_level = create(:script_level, levels: [level1, level2])
     params[:script_level_id] = script_level.id
+    params[:course_id] = script_level.script.original_unit_group_id
     params[:level_id] = level1.id
     params[:result] = 'true'
 
@@ -215,10 +259,11 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test "milestone creates userlevel with specified level when scriptlevel has multiple levels for second level" do
     params = @milestone_params
-    level1 = create :maze, name: 'level 1'
-    level2 = create :maze, name: 'level 2'
-    script_level = create :script_level, levels: [level1, level2]
+    level1 = create(:maze, name: 'level 1')
+    level2 = create(:maze, name: 'level 2')
+    script_level = create(:script_level, levels: [level1, level2])
     params[:script_level_id] = script_level.id
+    params[:course_id] = script_level.script.original_unit_group_id
     params[:level_id] = level2.id
     params[:result] = 'true'
 
@@ -228,14 +273,11 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "logged in milestone with existing userlevel with script" do
-    # do all the logging
-    @controller.expects :log_milestone
-
-    UserScript.create(user: @user, script: @script_level.script)
+    UserScript.create(user: @user, script: @script, unit_group: @script.get_original_unit_group)
     UserLevel.create(level: @script_level.level, user: @user, script: @script_level.script)
 
-    assert_creates(LevelSource, Activity) do
-      assert_does_not_create(UserLevel, UserScript) do
+    assert_creates(LevelSource) do
+      assert_does_not_create(UserLevel, UserScript, Activity) do
         post :milestone, params: @milestone_params
       end
     end
@@ -246,11 +288,8 @@ class ActivitiesControllerTest < ActionController::TestCase
   test "logged in milestone with too large program does not crash" do
     # the column that we store the program is 20000 bytes, don't crash if we fail to save because the field is too large
 
-    # do all the logging
-    @controller.expects :log_milestone
-
-    assert_creates(Activity, UserLevel, UserScript) do
-      assert_does_not_create(LevelSource) do
+    assert_creates(UserLevel, UserScript) do
+      assert_does_not_create(LevelSource, Activity) do
         post :milestone, params: @milestone_params.merge(program: "<hey>" * 10000)
       end
     end
@@ -272,23 +311,14 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "logged in milestone with panda does not crash" do
-    # do all the logging
-    @controller.expects :log_milestone
-
-    assert_creates(Activity, UserLevel, UserScript, LevelSource) do
-      post :milestone, params: @milestone_params.merge(program: "<hey>#{panda_panda}</hey>")
+    assert_creates(UserLevel, UserScript, LevelSource) do
+      assert_does_not_create(Activity) do
+        post :milestone, params: @milestone_params.merge(program: "<hey>#{panda_panda}</hey>")
+      end
     end
 
     assert_response :success
     assert_equal_expected_keys build_expected_response, JSON.parse(@response.body)
-  end
-
-  # Expect the controller to invoke "milestone_logger.info()" with a
-  # string that matches given regular expression.
-  def expect_controller_logs_milestone_regexp(regexp)
-    @controller.send(:milestone_logger).expects(:info).with do |log_string|
-      log_string !~ regexp
-    end
   end
 
   test "logged in milestone with messed up email" do
@@ -300,12 +330,11 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "logged in milestone not passing" do
-    # do all the logging
-    @controller.expects :log_milestone
-
-    assert_creates(LevelSource, Activity, UserLevel) do
-      post :milestone,
-        params: @milestone_params.merge(result: 'false', testResult: 10)
+    assert_creates(LevelSource, UserLevel) do
+      assert_does_not_create(Activity) do
+        post :milestone,
+          params: @milestone_params.merge(result: 'false', testResult: 10)
+      end
     end
 
     assert_response :success
@@ -313,16 +342,15 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "logged in milestone with image not passing" do
-    # do all the logging
-    @controller.expects :log_milestone
-
-    assert_creates(LevelSource, Activity, UserLevel) do
-      post :milestone,
-        params: @milestone_params.merge(
-          result: 'false',
-          testResult: 10,
-          image: Base64.encode64(@good_image)
-        )
+    assert_creates(LevelSource, UserLevel) do
+      assert_does_not_create(Activity) do
+        post :milestone,
+          params: @milestone_params.merge(
+            result: 'false',
+            testResult: 10,
+            image: Base64.encode64(@good_image)
+          )
+      end
     end
 
     # assert_equal @good_image.size, LevelSourceImage.last.image.size
@@ -332,21 +360,18 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "logged in milestone with image" do
-    # do all the logging
-    @controller.expects :log_milestone
-
     expect_s3_upload
 
-    original_activity_count = Activity.count
     original_user_level_count = UserLevel.count
 
     expected_created_classes = [LevelSource, UserLevel, LevelSourceImage]
 
     assert_creates(*expected_created_classes) do
-      post :milestone,
-        params: @milestone_params.merge(image: Base64.encode64(@good_image))
+      assert_does_not_create(Activity) do
+        post :milestone,
+          params: @milestone_params.merge(image: Base64.encode64(@good_image))
+      end
     end
-    assert_equal original_activity_count + 1, Activity.count
     assert_equal original_user_level_count + 1, UserLevel.count
     refute_nil UserLevel.where(
       user_id: @user,
@@ -358,15 +383,12 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
   test "logged in milestone with existing level source and level source image" do
-    # do all the logging
-    @controller.expects :log_milestone
-
     program = "<whatever>"
 
     level_source = LevelSource.find_identical_or_create(@script_level.level, program)
@@ -377,8 +399,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expect_no_s3_upload
 
-    assert_creates(Activity, UserLevel) do
-      assert_does_not_create(LevelSource) do
+    assert_creates(UserLevel) do
+      assert_does_not_create(LevelSource, Activity) do
         post :milestone,
           params: @milestone_params.merge(
             program: program,
@@ -394,7 +416,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal level_source, assigns(:level_source)
 
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -409,8 +431,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expect_no_s3_upload
 
-    assert_creates(Activity, UserLevel) do
-      assert_does_not_create(LevelSource) do
+    assert_creates(UserLevel) do
+      assert_does_not_create(LevelSource, Activity) do
         post :milestone,
           params: @milestone_params.merge(
             program: program,
@@ -424,7 +446,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal level_source, assigns(:level_source)
 
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -439,8 +461,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expect_no_s3_upload
 
-    assert_creates(Activity, UserLevel) do
-      assert_does_not_create(LevelSource) do
+    assert_creates(UserLevel) do
+      assert_does_not_create(LevelSource, Activity) do
         post :milestone,
           params: @milestone_params.merge(
             program: program,
@@ -456,7 +478,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal level_source, assigns(:level_source)
 
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -471,8 +493,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expect_no_s3_upload
 
-    assert_creates(Activity, UserLevel) do
-      assert_does_not_create(LevelSource) do
+    assert_creates(UserLevel) do
+      assert_does_not_create(LevelSource, Activity) do
         post :milestone,
           params: @milestone_params.merge(
             program: program,
@@ -488,7 +510,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal level_source, assigns(:level_source)
 
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -500,9 +522,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # catch that exception and just run it again (the second time we
     # will get the 'existing' object)
 
-    # do all the logging
-    @controller.expects :log_milestone
-
     # some Mocha shenanigans to simulate throwing a duplicate entry
     # error and then succeeding by returning the existing userlevel
     # (assumes that the only call to first_or_initialize when handling
@@ -513,15 +532,15 @@ class ActivitiesControllerTest < ActionController::TestCase
       then.
       returns(existing_user_level)
 
-    assert_creates(LevelSource, Activity) do
-      assert_does_not_create(UserLevel) do
+    assert_creates(LevelSource) do
+      assert_does_not_create(UserLevel, Activity) do
         post :milestone, params: @milestone_params
       end
     end
 
     assert_response :success
 
-    expected_response = build_expected_response(level_source: "http://test.host/c/#{assigns(:level_source).id}")
+    expected_response = build_expected_response({level_source: "http://test.host/c/#{assigns(:level_source).id}"})
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -548,6 +567,29 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal false, UserLevel.where(user_id: @user.id, level: @level.id).first.submitted?
   end
 
+  test 'logged in milestone with current locale' do
+    current_locale = set_request_locale('uk-UA')
+
+    post :milestone, params: @milestone_params
+    assert_response :success
+
+    user_level = UserLevel.find_by(user_id: @user.id, level: @level.id)
+    assert_equal current_locale, user_level.locale
+    assert_equal false, user_level.locale_supported
+  end
+
+  test 'logged in milestone with current locale support flag' do
+    current_locale = set_request_locale('uk-UA')
+    @script.update!(supported_locales: [current_locale])
+
+    post :milestone, params: @milestone_params
+    assert_response :success
+
+    user_level = UserLevel.find_by(user_id: @user.id, level: @level.id)
+    assert_equal current_locale, user_level.locale
+    assert_equal true, user_level.locale_supported
+  end
+
   test "Milestone with milestone posts disabled returns 503 status" do
     Gatekeeper.set('postMilestone', where: {script_name: @script.name}, value: false)
     post :milestone, params: @milestone_params
@@ -556,9 +598,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test "anonymous milestone starting with empty session saves progress in section" do
     sign_out @user
-
-    # do all the logging
-    @controller.expects :log_milestone
 
     assert_creates(LevelSource) do
       assert_does_not_create(Activity, UserLevel) do
@@ -569,7 +608,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -580,9 +619,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # set up existing session
     client_state.set_level_progress(@script_level_prev, 50)
 
-    # do all the logging
-    @controller.expects :log_milestone
-
     assert_creates(LevelSource) do
       assert_does_not_create(Activity, UserLevel) do
         post :milestone, params: @milestone_params.merge(user_id: 0)
@@ -592,16 +628,13 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
   test "anonymous milestone not passing" do
     sign_out @user
-
-    # do all the logging
-    @controller.expects :log_milestone
 
     assert_creates(LevelSource) do
       assert_does_not_create(Activity, UserLevel) do
@@ -626,9 +659,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # set up existing session
     client_state.set_level_progress(@script_level_prev, 50)
 
-    # do all the logging
-    @controller.expects :log_milestone
-
     expect_s3_upload
 
     assert_creates(LevelSource, LevelSourceImage) do
@@ -644,7 +674,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -654,9 +684,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # set up existing session
     client_state.set_level_progress(@script_level_prev, 50)
-
-    # do all the logging
-    @controller.expects :log_milestone
 
     expect_s3_upload_failure
 
@@ -676,10 +703,13 @@ class ActivitiesControllerTest < ActionController::TestCase
   test 'sharing program with swear word returns error' do
     ProfanityFilter.stubs(:find_potential_profanity).returns 'shit'
 
+    script = create(:unit, :in_single_unit_course)
+
     assert_does_not_create(LevelSource) do
       post :milestone, params: {
         user_id: @user.id,
-        script_level_id: create(:script_level, :playlab).id,
+        script_level_id: create(:script_level, :playlab, script: script).id,
+        course_id: script.original_unit_group_id,
         program: studio_program_with_text('shit')
       }
     end
@@ -701,7 +731,8 @@ class ActivitiesControllerTest < ActionController::TestCase
       assert_does_not_create(LevelSource) do
         post :milestone,
           params: @milestone_params.merge(
-            script_level_id: create(:script_level, :playlab).id,
+            script_level_id: @playlab_script_level.id,
+            course_id: @playlab_script.original_unit_group_id,
             program: studio_program_with_text('scheiße')
           )
       end
@@ -719,7 +750,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_creates(LevelSource) do
       post :milestone,
         params: @milestone_params.merge(
-          script_level_id: create(:script_level, :playlab).id,
+          script_level_id: @playlab_script_level.id,
+          course_id: @playlab_script.original_unit_group_id,
           program: studio_program_with_text('shit')
         )
     end
@@ -739,7 +771,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_creates(LevelSource) do
       post :milestone,
         params: @milestone_params.merge(
-          script_level_id: create(:script_level, :playlab).id,
+          script_level_id: @playlab_script_level.id,
+          course_id: @playlab_script.original_unit_group_id,
           program: studio_program_with_text('shit')
         )
     end
@@ -760,7 +793,8 @@ class ActivitiesControllerTest < ActionController::TestCase
       assert_does_not_create(LevelSource) do
         post :milestone,
           params: @milestone_params.merge(
-            script_level_id: create(:script_level, :playlab).id,
+            script_level_id: @playlab_script_level.id,
+            course_id: @playlab_script.original_unit_group_id,
             program: studio_program_with_text('putamadre')
           )
       end
@@ -774,7 +808,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_does_not_create(LevelSource) do
       post :milestone,
         params: @milestone_params.merge(
-          script_level_id: create(:script_level, :playlab).id,
+          script_level_id: @playlab_script_level.id,
+          course_id: @playlab_script.original_unit_group_id,
           program: studio_program_with_text('800-555-5555')
         )
     end
@@ -792,12 +827,12 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'sharing when gatekeeper has disabled sharing does not work' do
-    script_level = create(:script_level, :playlab)
-    Gatekeeper.set('shareEnabled', where: {script_name: script_level.script.name}, value: false)
+    Gatekeeper.set('shareEnabled', where: {script_name: @playlab_script.name}, value: false)
 
     post :milestone,
       params: @milestone_params.merge(
-        script_level_id: script_level.id,
+        script_level_id: @playlab_script_level.id,
+        course_id: @playlab_script.original_unit_group_id,
         program: studio_program_with_text('hey some text')
       )
 
@@ -814,7 +849,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     post :milestone,
       params: @milestone_params.merge(
-        script_level_id: create(:script_level, :playlab).id,
+        script_level_id: @playlab_script_level.id,
+        course_id: @playlab_script.original_unit_group_id,
         program: studio_program_with_text('hey some text')
       )
 
@@ -827,14 +863,15 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test 'milestone changes to next lesson in custom script' do
     ScriptLevel.class_variable_set(:@@script_level_map, nil)
-    script = create :script, :with_levels, lessons_count: 2, name: 'Milestone Unit', skip_name_format_validation: true
+    script = create(:script, :in_single_unit_course, :with_levels, lessons_count: 2, name: 'Milestone Unit', skip_name_format_validation: true)
     script.lessons.first.update!(key: 'Milestone Lesson 1', name: 'Milestone Lesson 1')
     script.reload
 
     last_level_in_first_lesson = script.lessons.first.script_levels.last
     post :milestone,
       params: @milestone_params.merge(
-        script_level_id: last_level_in_first_lesson.id
+        script_level_id: last_level_in_first_lesson.id,
+        course_id: last_level_in_first_lesson.script.original_unit_group_id
       )
     assert_response :success
     response = JSON.parse(@response.body)
@@ -845,15 +882,16 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'milestone post respects level_id for active level' do
-    script = create :script
-    lesson = create :lesson, script: script
-    level1a = create :maze, name: 'maze 1'
-    level1b = create :maze, name: 'maze 1 new'
-    script_level = create :script_level, script: script, lesson: lesson, levels: [level1a, level1b], properties: {'maze 1': {active: false}}
+    script = create(:script, :in_single_unit_course)
+    lesson = create(:lesson, script: script)
+    level1a = create(:maze, name: 'maze 1')
+    level1b = create(:maze, name: 'maze 1 new')
+    script_level = create(:script_level, script: script, lesson: lesson, levels: [level1a, level1b], properties: {'maze 1': {active: false}})
 
     post :milestone,
       params: @milestone_params.merge(
         script_level_id: script_level.id,
+        course_id: script_level.script.original_unit_group_id,
         level_id: level1a.id
       )
     response = JSON.parse(@response.body)
@@ -919,7 +957,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     session[:pairings] = [pairing.id]
     session[:pairing_section_id] = section.id
 
-    existing_navigator_user_level = create :user_level, user: pairing, script: @script, level: @level, best_result: 10
+    existing_navigator_user_level = create(:user_level, user: pairing, script: @script, level: @level, best_result: 10)
 
     assert_difference('UserLevel.count', 1) do # one gets a new user level
       assert_creates(PairedUserLevel) do # there is one PairedUserLevel to link them
@@ -941,7 +979,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     session[:pairings] = [pairing.id]
     session[:pairing_section_id] = section.id
 
-    existing_driver_user_level = create :user_level, user: @user, script: @script, level: @level, best_result: 10
+    existing_driver_user_level = create(:user_level, user: @user, script: @script, level: @level, best_result: 10)
 
     assert_difference('UserLevel.count', 1) do # one gets a new user level
       assert_creates(PairedUserLevel) do # there is one PairedUserLevel to link them
@@ -964,7 +1002,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     session[:pairing_section_id] = section.id
     section.update!(pairing_allowed: false)
 
-    existing_driver_user_level = create :user_level, user: @user, script: @script, level: @level, best_result: 10
+    existing_driver_user_level = create(:user_level, user: @user, script: @script, level: @level, best_result: 10)
 
     assert_no_difference('UserLevel.count') do # no new UserLevel is created
       assert_no_difference('PairedUserLevel.count') do # no PairedUserLevel is created
@@ -986,18 +1024,18 @@ class ActivitiesControllerTest < ActionController::TestCase
     student_1 = create(:follower, section: section).student_user
     sign_in student_1
 
-    script = create :script
+    script = create(:script, :in_single_unit_course)
 
     # Create a LevelGroup level.
-    level = create :level_group, :with_sublevels, name: 'LevelGroupLevel1'
+    level = create(:level_group, :with_sublevels, name: 'LevelGroupLevel1')
     level.properties['title'] =  'Long assessment 1'
     level.properties['submittable'] = true
     level.save!
 
-    lesson = create :lesson, name: 'Lesson1', script: script, lockable: true
+    lesson = create(:lesson, name: 'Lesson1', script: script, lockable: true)
 
     # Create a ScriptLevel joining this level to the script.
-    script_level = create :script_level, script: script, levels: [level], assessment: true, lesson: lesson
+    script_level = create(:script_level, script: script, levels: [level], assessment: true, lesson: lesson)
 
     milestone_params = {
       user_id: student_1,
@@ -1017,7 +1055,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response 403
 
     # explicity create a user_level that is unlocked
-    user_level = create :user_level, user: student_1, script: script, level: level, submitted: false, locked: false
+    user_level = create(:user_level, user: student_1, script: script, level: level, submitted: false, locked: false)
 
     # should now succeed
     post :milestone, params: milestone_params
@@ -1033,7 +1071,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     user_level.really_destroy!
     # explicity create a user_level that is readonly_answers
-    create :user_level, user: student_1, script: script, level: level, submitted: true, locked: true, readonly_answers: true
+    create(:user_level, user: student_1, script: script, level: level, submitted: true, locked: true, readonly_answers: true)
     post :milestone, params: milestone_params
     assert_response 403
   end
@@ -1053,19 +1091,27 @@ class ActivitiesControllerTest < ActionController::TestCase
     post :milestone, params: @milestone_params
     assert_nil AssessmentActivity.find_by(user_id: @user, level_id: @script_level.id, script_id: @script_level.script.id)
 
-    assessment_script_level = create :script_level, assessment: true
-    post :milestone, params: @milestone_params.merge(script_level_id: assessment_script_level.id)
+    assessment_script_level = create(:script_level, assessment: true)
+    post :milestone, params: @milestone_params.merge(
+      script_level_id: assessment_script_level.id,
+      course_id: assessment_script_level.script.original_unit_group_id
+    )
     assert_nil AssessmentActivity.find_by(user_id: @user, level_id: assessment_script_level.level.id, script_id: assessment_script_level.script.id)
 
-    multi_level = create :multi
+    multi_level = create(:multi)
 
-    multi_sl = create :script_level, levels: [multi_level]
-    post :milestone, params: @milestone_params.merge(script_level_id: multi_sl.id)
+    multi_sl = create(:script_level, levels: [multi_level])
+    post :milestone, params: @milestone_params.merge(
+      script_level_id: multi_sl.id,
+      course_id: multi_sl.script.original_unit_group_id
+    )
     assert_nil AssessmentActivity.find_by(user_id: @user, level_id: multi_sl.level.id, script_id: multi_sl.script.id)
 
-    assessment_multi_sl = create :script_level, levels: [multi_level], assessment: true
+    assessment_multi_sl = create(:script_level, levels: [multi_level], assessment: true)
     milestone_params = @milestone_params.merge(
-      script_level_id: assessment_multi_sl.id, program: '0'
+      script_level_id: assessment_multi_sl.id,
+      course_id: assessment_multi_sl.script.original_unit_group_id,
+      program: '0',
     )
     post :milestone, params: milestone_params
     assessment_activity = AssessmentActivity.find_by(
@@ -1093,21 +1139,22 @@ class ActivitiesControllerTest < ActionController::TestCase
     # make sure that we don't create an AssessmentActivity when the multi level
     # is updated within an assessment level group.
 
-    multi_sublevel = create :multi
-    level_group = create :level_group, name: 'assessment-level-group'
-    script_level = create :script_level, levels: [level_group], assessment: true
+    multi_sublevel = create(:multi)
+    level_group = create(:level_group, name: 'assessment-level-group')
+    script_level = create(:script_level, levels: [level_group], assessment: true)
     post :milestone, params: @milestone_params.merge(
       script_level_id: script_level.id,
+      course_id: script_level.script.original_unit_group_id,
       level_id: multi_sublevel.id
     )
     assert_nil AssessmentActivity.find_by(user_id: @user, level_id: multi_sublevel.id)
   end
 
   test "milestone_for_bubble_choice_sublevel_also_stores_progress_for_parent_level" do
-    sublevel1 = create :applab, name: 'choice_1'
-    sublevel2 = create :gamelab, name: 'choice_2'
-    bubble_choice = create :bubble_choice_level, sublevels: [sublevel1, sublevel2]
-    script_level = create :script_level, levels: [bubble_choice]
+    sublevel1 = create(:applab, name: 'choice_1')
+    sublevel2 = create(:gamelab, name: 'choice_2')
+    bubble_choice = create(:bubble_choice_level, sublevels: [sublevel1, sublevel2])
+    script_level = create(:script_level, levels: [bubble_choice])
     script = script_level.script
 
     assert_nil UserLevel.find_by(user: @user, level: sublevel1, script: script)
@@ -1126,24 +1173,28 @@ class ActivitiesControllerTest < ActionController::TestCase
       submitted: false
     }
 
+    current_locale = set_request_locale('uk-UA')
+
     post :milestone, params: milestone_params
     assert_response :success
 
     user_level = UserLevel.find_by(user: @user, level: sublevel1, script: script)
     refute_nil user_level
     assert_equal 100, user_level.best_result
+    assert_equal current_locale, user_level.locale
 
     assert_nil UserLevel.find_by(user: @user, level: sublevel2, script: script)
 
     parent_user_level = UserLevel.find_by(user: @user, level: bubble_choice, script: script)
     refute_nil parent_user_level
     assert_equal 100, parent_user_level.best_result
+    assert_equal current_locale, parent_user_level.locale
   end
 
-  test 'milestone with student in experiment triggers rubric eval job' do
-    section = create :section, teacher: @teacher, script: @script
-    create :follower, section: section, student_user: @student
-    create :single_section_experiment, section: section, name: 'ai-rubrics', script: @script
+  test 'milestone triggers AI rubric eval job' do
+    section = create(:section, teacher: @teacher, script: @script)
+    create(:follower, section: section, student_user: @student)
+
     Metrics::Events.stubs(:log_event).once
     AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(true)
     EvaluateRubricJob.expects(:perform_later).with(user_id: @student.id, requester_id: @student.id, script_level_id: @script_level.id).once
@@ -1153,12 +1204,11 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test 'milestone with student in experiment but where teacher disables AI does not triggers rubric eval job' do
+  test 'milestone where teacher disables AI does not triggers rubric eval job' do
     @teacher.ai_rubrics_disabled = true
     @teacher.save!
-    section = create :section, teacher: @teacher, script: @script
-    create :follower, section: section, student_user: @student
-    create :single_section_experiment, section: section, name: 'ai-rubrics', script: @script
+    section = create(:section, teacher: @teacher, script: @script)
+    create(:follower, section: section, student_user: @student)
     Metrics::Events.stubs(:log_event).never
     AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(true)
     EvaluateRubricJob.expects(:perform_later).never
@@ -1168,10 +1218,9 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test 'milestone with student in experiment on non ai level does not trigger rubric eval job' do
-    section = create :section, teacher: @teacher, script: @script
-    create :follower, section: section, student_user: @student
-    create :single_section_experiment, section: section, name: 'ai-rubrics', script: @script
+  test 'milestone with student on non ai level does not trigger rubric eval job' do
+    section = create(:section, teacher: @teacher, script: @script)
+    create(:follower, section: section, student_user: @student)
     Metrics::Events.stubs(:log_event).never
     AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(false)
     EvaluateRubricJob.expects(:perform_later).never
@@ -1181,8 +1230,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test 'milestone with teacher in experiment does not trigger rubric eval job' do
-    create :single_section_experiment, section: @section, name: 'ai-rubrics'
+  test 'milestone with teacher does not trigger rubric eval job' do
     Metrics::Events.stubs(:log_event).never
     AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(true)
     EvaluateRubricJob.expects(:perform_later).never
@@ -1197,20 +1245,17 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test 'milestone with student not in experiment does not trigger rubric eval job' do
-    # some other section is added to the experiment
-    create :single_section_experiment, name: 'ai-rubrics'
+  test 'milestone submitted by student with unverified teacher does not trigger rubric eval job' do
     Metrics::Events.stubs(:log_event).never
     AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(true)
     EvaluateRubricJob.expects(:perform_later).never
-    sign_in @student
+    sign_in @unauth_teacher_student
 
-    post :milestone, params: @milestone_rubric_params
+    post :milestone, params: @unauth_milestone_rubric_params
     assert_response :success
   end
 
   test 'milestone on level without ai enabled does not trigger rubric eval job' do
-    create :single_section_experiment, section: @section, name: 'ai-rubrics'
     Metrics::Events.stubs(:log_event).never
     AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(false)
     EvaluateRubricJob.expects(:perform_later).never

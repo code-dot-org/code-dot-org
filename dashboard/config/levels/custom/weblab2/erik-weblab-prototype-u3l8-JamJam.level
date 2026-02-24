@@ -1,0 +1,66 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-11-12T20:25:00.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Searching\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "suggest",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<script defer src=\"script.js\"></script>\n<label for=\"search\"><strong>Search for a color:</strong></label>\n<input id=\"search\" type=\"text\" placeholder=\"type a color name\" />\n<button id=\"run\">Search</button>\n<button id=\"clear\">Clear</button>\n\n<section id=\"list\" aria-label=\"Search results\"></section>\n\n<p>\n  <strong>Matches:</strong> <span id=\"matchCount\"></span> /\n  <span id=\"totalCount\"></span>\n</p>",
+          "active": false,
+          "folderId": "0"
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// Dataset\nconst colors = [\n  { name: \"red\",     hex: \"#FF0000\" },\n  { name: \"green\",   hex: \"#00FF00\" },\n  { name: \"blue\",    hex: \"#0000FF\" },\n  { name: \"purple\",  hex: \"#800080\" },\n  { name: \"orange\",  hex: \"#FFA500\" }\n];\n\n// Make one card for a color\nconst makeCard = (color) => {\n  return `\n    <article class=\"card\">\n      <h2>${color.name}</h2>\n      <p><strong>Hex code:</strong> ${color.hex}</p>\n    </article>\n  `;\n};\n\n// Custom search function using .map()\n// Returns a new array with only items whose name includes the query text.\nconst searchColors = (data, query) => {\n  const results = [];\n  const q = query.toLowerCase();\n\n  data.map((color) => {\n    const nameLower = color.name.toLowerCase();\n\n    if (q === \"\" || nameLower.includes(q)) {\n      results.push(color);\n    }\n  });\n\n  return results;\n};\n\n// Render a list of color cards\nconst renderList = (data) => {\n  const cards = data.map((color) => makeCard(color));\n  document.getElementById(\"list\").innerHTML = cards.join(\"\");\n  document.getElementById(\"matchCount\").textContent = data.length;\n  document.getElementById(\"totalCount\").textContent = colors.length;\n};\n\n// Event actions\nconst runSearch = () => {\n  const query = document.getElementById(\"search\").value;\n  const matches = searchColors(colors, query);\n  renderList(matches);\n};\n\nconst clearSearch = () => {\n  document.getElementById(\"search\").value = \"\";\n  renderList(colors);\n};\n\n// Wire up buttons\ndocument.getElementById(\"run\").onclick = runSearch;\ndocument.getElementById(\"clear\").onclick = clearSearch;\n\n// Initial paint\nrenderList(colors);",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "progression.md",
+          "language": "md",
+          "contents": "# Lesson 8 · Student Film Festival Organizer\nGoal: build and check a simple search for short films, then validate it.\n\n## App basics\n- Search box matches **title**, **genre**, and **vibes**.\n- Optional operators inside the box:\n  - `genre:comedy` filters to a single genre.\n  - `len:short` or `len:medium` or `len:long` filters by length group.\n- The status line shows **match count**, **total minutes**, and whether it **fits** the block.\n\n---\n\n## Part A · Implement & explain\n1. Read the search code: `searchFilms(items, query)` splits the query into tokens and uses AND logic.\n2. In your own words, explain where a token can match: title, genre, or vibes.\n3. Try three queries and record totals:\n   - `quiet`  \n   - `genre:documentary calm`  \n   - `len:short`\n\n---\n\n## Part B · Debug\n1. Break it on purpose: search with `len:SHORT` and notice it fails.  \n   Fix: the app expects lowercase; note how you would handle case-insensitive values.\n2. Try a query with an extra comma: `quiet, , comedy`.  \n   Check that empty tokens are ignored. If not, patch the split/trim logic.\n3. Confirm that every keyword must match somewhere (AND).  \n   Example: `quiet space` likely narrows the list a lot. Is that expected?\n\n---\n\n## Part C · Validate with AI test cases\nAsk an AI to propose compact tests.\n\n**Prompt**\n> Create five queries for a student film list that uses: title, genre, vibes; operators genre: and len: (short|medium|long). For each, give the expected **count** and the expected **total minutes** based on the data I describe next. Output as a table with columns: query | expected_count | expected_minutes. Keep queries short.\n\nThen paste the dataset (title, minutes, genre, vibes) and run the tests in the app. If a result disagrees, note why and fix the search if needed.\n\n---\n\n## Part D · Edge cases & refinements\n- Add case-insensitive handling for `genre:` and `len:` values.\n- Allow `OR` with a vertical bar in one token: `quiet|calm` (treat it as either word).\n- Prevent negative numbers in the block field.  \n- Optional: show a tiny warning when a single film is longer than the block.\n\n---\n\n## Exit ticket\nWrite two lines:\n1) What change made your search more reliable?  \n2) One query where AND logic helped and one where it felt too strict.\n",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "3"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-11-12T20:25:00.967+00:00\",\"changed\":[\"cloned from \\\"erik-weblab-prototype-u3l8-thinking\\\"\"],\"cloned_from\":\"erik-weblab-prototype-u3l8-thinking\"},{\"changed_at\":\"2025-11-12 20:25:03 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-12 20:28:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

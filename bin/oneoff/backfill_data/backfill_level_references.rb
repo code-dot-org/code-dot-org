@@ -12,7 +12,7 @@
 require_relative '../../../dashboard/config/environment'
 
 # Override for the dry run variable using an commandline argument
-DRY_RUN = !((ARGV.find {|arg| arg.casecmp('-dryrun')}).nil?)
+DRY_RUN = !(ARGV.find {|arg| arg.casecmp('-dryrun')}).nil?
 
 def update_reference_guide_format(unit_group_name, course_version_id, reference_guide_link)
   # Reference guide formats

@@ -47,21 +47,26 @@ const multiChartData = (data, highlightCorrect = false) => [
   ]),
 ];
 
-const MultiResponses = ({scriptData, showCorrectAnswer = false}) => {
+const MultiResponses = ({
+  scriptData,
+  levelNumber,
+  showCorrectAnswer = false,
+}) => {
   // Get the number of answers and a list of correct answers.
   // The correct answers will be the letters for the correct answers, ex. ['A', 'C']
+  const level = scriptData.levels[levelNumber];
   const [numAnswers, correctAnswers] = useMemo(() => {
     let answers = [];
     let correctIndices = [];
-    if (scriptData.level.properties.answers) {
+    if (level.properties.answers) {
       // If the level is a multi/contained level, the answers are in the level properties.
-      answers = scriptData.level.properties.answers;
+      answers = level.properties.answers;
       correctIndices = answers
         .filter(answer => answer.correct)
         .map(answer => answers.indexOf(answer));
-    } else if (scriptData.level.properties.predict_settings) {
+    } else if (level.properties.predict_settings) {
       // If the level is a predict level (lab2) the answers are in predict_settings.
-      const predictSettings = scriptData.level.properties.predict_settings;
+      const predictSettings = level.properties.predict_settings;
       // We should only be trying to load this component if this is a multiple choice question.
       if (predictSettings.multipleChoiceOptions) {
         answers = predictSettings.multipleChoiceOptions;
@@ -74,14 +79,12 @@ const MultiResponses = ({scriptData, showCorrectAnswer = false}) => {
     }
     const correctAnswers = correctIndices.map(index => LETTERS.charAt(index));
     return [answers.length, correctAnswers];
-  }, [
-    scriptData.level.properties.answers,
-    scriptData.level.properties.predict_settings,
-  ]);
+  }, [level.properties.answers, level.properties.predict_settings]);
 
+  const levelResponses = scriptData.responses[levelNumber];
   const answerData = useMemo(
-    () => multiAnswerCounts(scriptData.responses, numAnswers),
-    [scriptData.responses, numAnswers]
+    () => multiAnswerCounts(levelResponses, numAnswers),
+    [levelResponses, numAnswers]
   );
   const answerMax = useMemo(
     () => Math.max(...Object.values(answerData)),
@@ -147,6 +150,7 @@ const MultiResponses = ({scriptData, showCorrectAnswer = false}) => {
 
 MultiResponses.propTypes = {
   scriptData: PropTypes.object,
+  levelNumber: PropTypes.number,
   showCorrectAnswer: PropTypes.bool,
 };
 

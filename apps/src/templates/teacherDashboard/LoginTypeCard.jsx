@@ -9,7 +9,7 @@ class LoginTypeCard extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
     subtitle: PropTypes.string,
-    description: PropTypes.string.isRequired,
+    description: PropTypes.string,
     onClick: PropTypes.func.isRequired,
     className: PropTypes.string,
   };
@@ -68,7 +68,7 @@ const styles = {
     borderStyle: 'solid',
     borderWidth: 1,
     borderColor: color.neutral_dark20,
-    borderRadius: 1,
+    borderRadius: 4,
     background: color.neutral_white,
     cursor: 'pointer',
   },

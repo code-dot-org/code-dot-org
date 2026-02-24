@@ -1,0 +1,126 @@
+import {getFileNameWithNumberSuffix} from '@codebridge/utils';
+import React from 'react';
+
+import BackpackErrorAlertBody from '@cdo/apps/codebridge/FileBrowser/BackpackErrorAlertBody';
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {ProjectFile} from '@cdo/apps/lab2/types';
+import {
+  DialogType,
+  DialogControlInterface,
+  TypedDialogProps,
+} from '@cdo/apps/lab2/views/dialogs';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+
+type OpenSaveToBackpackPromptArgsType = {
+  dialogControl: Pick<DialogControlInterface, 'showDialog'>;
+  backpackApi: BackpackClientApi;
+  file: ProjectFile;
+  sendLab2AnalyticsEvent: (
+    eventName: string,
+    payload?: Record<string, string>
+  ) => void;
+};
+
+export const openSaveToBackpackPrompt = async ({
+  dialogControl,
+  backpackApi,
+  file,
+  sendLab2AnalyticsEvent,
+}: OpenSaveToBackpackPromptArgsType) => {
+  const handleError =
+    (title: string, message: string, errorMessage: string) =>
+    (error?: Error) => {
+      const bodyComponent = <BackpackErrorAlertBody message={message} />;
+      dialogControl?.showDialog({
+        type: DialogType.GenericAlert,
+        title,
+        bodyComponent,
+      });
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logError(errorMessage, error);
+    };
+  backpackApi.getFileList(
+    handleError(
+      codebridgeI18n.importFromBackpackTitle(),
+      `${codebridgeI18n.getBackpackFileListError()} ${codebridgeI18n.closeWindowTryAgain()}`,
+      'Backpack file list fetch error'
+    ),
+    async (filenames: string[]) => {
+      // Check if filename is a duplicate of a saved file in backpack.
+      const isDuplicateFileName = filenames.includes(file.name);
+
+      let fileNameCopy = file.name;
+      while (filenames.includes(fileNameCopy)) {
+        fileNameCopy = getFileNameWithNumberSuffix(fileNameCopy);
+      }
+
+      const dialog = isDuplicateFileName
+        ? {
+            type: DialogType.GenericConfirmation,
+            title: codebridgeI18n.saveToBackpackTitle(),
+            message: codebridgeI18n.saveToBackpackDuplicateMessage({
+              newFileName: fileNameCopy,
+            }),
+            confirmText: codebridgeI18n.replace(),
+            neutralText: codebridgeI18n.renameFile(),
+          }
+        : {
+            type: DialogType.GenericConfirmation,
+            title: codebridgeI18n.saveToBackpackTitle(),
+            message: codebridgeI18n.saveToBackpackMessage({
+              fileName: file.name,
+            }),
+            confirmText: codebridgeI18n.saveToBackpackTitle(),
+          };
+      const results = await dialogControl?.showDialog(
+        dialog as TypedDialogProps
+      );
+
+      if (results.type === 'cancel') {
+        return;
+      }
+
+      const selectedFileName =
+        results.type === 'confirm' ? file.name : fileNameCopy;
+
+      let successMetric = EVENTS.SAVE_TO_BACKPACK_NEW;
+      if (isDuplicateFileName) {
+        successMetric =
+          selectedFileName === file.name
+            ? EVENTS.SAVE_TO_BACKPACK_REPLACE
+            : EVENTS.SAVE_TO_BACKPACK_RENAME;
+      }
+      const successCallback = () =>
+        sendLab2AnalyticsEvent(successMetric, {
+          fileType: selectedFileName.split('.').pop()?.toLowerCase() || '',
+        });
+
+      const errorCallback = handleError(
+        codebridgeI18n.saveToBackpackTitle(),
+        codebridgeI18n.saveToBackpackError({selectedFileName}) +
+          ' ' +
+          codebridgeI18n.closeWindowTryAgain(),
+        'Save to backpack error'
+      );
+
+      if (file.url) {
+        backpackApi.saveCodebridgeFileFromUrl(
+          selectedFileName,
+          file.url,
+          errorCallback,
+          successCallback
+        );
+      } else {
+        backpackApi.saveCodebridgeFile(
+          selectedFileName,
+          file.contents,
+          errorCallback,
+          successCallback
+        );
+      }
+    }
+  );
+};

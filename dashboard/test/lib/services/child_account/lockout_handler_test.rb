@@ -90,11 +90,11 @@ class Services::ChildAccount::LockoutHandlerTest < ActiveSupport::TestCase
         _(handle_user_lockout).must_equal true
       end
 
-      context 'but also CAP compliant now' do
+      context 'when CAP compliant' do
         let(:user_is_cap_compliant?) {true}
 
-        it 'still returns true' do
-          _(handle_user_lockout).must_equal true
+        it 'returns false' do
+          _(handle_user_lockout).must_equal false
         end
       end
     end

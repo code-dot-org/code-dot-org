@@ -1,4 +1,5 @@
 //This is an experimental library by Mike that is intended to work with a separate scoreboard block.
+// Currently used by the population_2021 level
 
 // Setup sim
 function setupScoreboard(

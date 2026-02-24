@@ -1,4 +1,7 @@
+import {Button} from '@code-dot-org/component-library/button';
 import React from 'react';
+
+import {commonI18n} from '@cdo/apps/types/locale';
 
 import moduleStyles from './Lab2Wrapper.module.scss';
 
@@ -10,7 +13,7 @@ export interface ErrorUIProps {
 
 export const ErrorUI: React.FunctionComponent<ErrorUIProps> = ({message}) => (
   <div id="page-error-container" className={moduleStyles.pageErrorContainer}>
-    <div id="page-error" className={moduleStyles.pageError}>
+    <div data-theme="Light" id="page-error" className={moduleStyles.pageError}>
       <img
         className={moduleStyles.pageErrorImage}
         src="/shared/images/sad-bee-avatar.png"
@@ -20,6 +23,13 @@ export const ErrorUI: React.FunctionComponent<ErrorUIProps> = ({message}) => (
       {message && (
         <div className={moduleStyles.pageErrorMessage}>({message})</div>
       )}
+      <Button
+        text={commonI18n.reloadPage()}
+        onClick={() => {
+          location.reload();
+        }}
+        size="s"
+      />
     </div>
   </div>
 );

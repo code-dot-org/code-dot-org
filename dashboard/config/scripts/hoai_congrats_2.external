@@ -1,0 +1,14 @@
+name 'HoAI_congrats_2'
+title 'Review'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1 style="text-align: center;"><i class="fa-solid fa-party-horn"></i> Time to dance! <i class="fa-solid fa-party-horn"></i></h1>
+
+<h2 style="text-align: center;"> Next, use another AI tool to code some dance moves!</h2>
+
+![](https://images.code.org/9abc38343ed3e0c297a4ee964ce97e6e-image-1758320833820.jpg)
+
+
+
+MARKDOWN

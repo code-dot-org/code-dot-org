@@ -7,7 +7,7 @@
 
 #validation.in.collapse
   -# Deprecated for Sprite Lab and Dance not used in Gamelab, Weblab or Applab
-  - if (!(@level.is_a?(Gamelab) || @level.is_a?(Applab) || @level.is_a?(Weblab)) && (@level.is_a?(Blockly)))
+  - if (!(@level.is_a?(Gamelab) || @level.is_a?(Applab) || @level.is_a?(Weblab)) && @level.is_a?(Blockly))
     .field
       = f.label :failure_message_override, 'Failure Message Override'
       %p If specified this error message will be used to replace ALL error

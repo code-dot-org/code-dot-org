@@ -1,0 +1,10 @@
+name 'IPP-careerPersonaChoices'
+display_name 'Persona Social Media Sleuthing'
+description 'Pick one of the personas below. Investigate their social media posts and record clues about their interests and skills.'
+
+sublevels
+level 'IPP-careerPersonas'
+level 'IPP-careerPersonas2'
+level 'IPP-careerPersonas3'
+level 'IPP-careerPersonas4'
+

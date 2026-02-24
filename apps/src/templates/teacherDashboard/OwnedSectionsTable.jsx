@@ -5,8 +5,8 @@ import {connect} from 'react-redux';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
+import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import color from '@cdo/apps/util/color';
 import {
@@ -15,15 +15,14 @@ import {
 } from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import {stringifyQueryParams} from '../../utils';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import wrappedSortable from '../tables/wrapped_sortable';
 
 import SectionActionDropdown from './SectionActionDropdown';
 import {sortableSectionShape} from './shapes';
-import {getSectionRows} from './teacherSectionsRedux';
+import {getSectionRows} from './teacherSectionsReduxSelectors';
 
-import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
+import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 
 /** @enum {number} */
 export const COLUMNS = {
@@ -46,26 +45,38 @@ export const sectionLinkFormatter = function (name, {rowData}) {
 };
 
 export const courseLinkFormatter = function (course, {rowData}) {
-  const {assignmentNames, assignmentPaths, courseOfferingsAreLoaded} = rowData;
+  const {
+    assignmentNames,
+    assignmentPaths,
+    courseOfferingsAreLoaded,
+    isAssignedSingleUnitCourse,
+  } = rowData;
+
   return (
     <div>
       {courseOfferingsAreLoaded ? (
         <>
           <a
-            href={`${assignmentPaths[0]}${stringifyQueryParams({
-              section_id: rowData.id,
-            })}`}
+            href={
+              assignmentPaths.length > 0 && assignmentPaths[0].includes('/s/')
+                ? teacherDashboardUrl(
+                    rowData.id,
+                    assignmentPaths[0].replace('/s/', '/unit/')
+                  )
+                : teacherDashboardUrl(rowData.id, assignmentPaths[0])
+            }
             style={tableLayoutStyles.link}
           >
             {assignmentNames[0]}
           </a>
-          {assignmentPaths.length > 1 && (
+          {assignmentPaths.length > 1 && !isAssignedSingleUnitCourse && (
             <div style={styles.currentUnit}>
               <div>{i18n.currentUnit()}</div>
               <a
-                href={`${assignmentPaths[1]}${stringifyQueryParams({
-                  section_id: rowData.id,
-                })}`}
+                href={teacherDashboardUrl(
+                  rowData.id,
+                  assignmentPaths[1].replace('/s/', '/unit/')
+                )}
                 style={tableLayoutStyles.link}
               >
                 {assignmentNames[1]}
@@ -84,6 +95,7 @@ export const courseLinkFormatter = function (course, {rowData}) {
       ) : (
         <span
           className={skeletonizeContent.skeletonizeContent}
+          // eslint-disable-next-line react/forbid-dom-props
           data-testid={'skeletonize-content'}
           style={{width: random(30, 90) + '%'}}
         />
@@ -116,19 +128,18 @@ export const loginInfoFormatter = function (loginType, {rowData}) {
 };
 
 export const studentsFormatter = function (studentCount, {rowData}) {
-  const manageStudentsUrl = teacherDashboardUrl(rowData.id, '/manage_students');
   const studentHtml =
     rowData.studentCount <= 0 ? (
       <Button
         __useDeprecatedTag
         text={i18n.addStudents()}
-        href={manageStudentsUrl}
+        href={teacherDashboardUrl(rowData.id, '/roster')}
         color={Button.ButtonColor.neutralDark}
       />
     ) : (
       <a
         style={tableLayoutStyles.link}
-        href={manageStudentsUrl}
+        href={teacherDashboardUrl(rowData.id, '/roster')}
         aria-label={i18n.manageStudentsAriaLabel({
           numStudents: studentCount,
         })}
@@ -340,7 +351,11 @@ class OwnedSectionsTable extends Component {
     })(this.props.sectionRows);
 
     return (
-      <Table.Provider columns={columns} style={tableLayoutStyles.table}>
+      <Table.Provider
+        className="uitest-owned-sections"
+        columns={columns}
+        style={tableLayoutStyles.table}
+      >
         <Table.Header />
         <Table.Body
           className="uitest-sorted-rows"

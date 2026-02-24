@@ -1,0 +1,35 @@
+$qr-code-size: 117;
+
+.shareContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--background-neutral-tertiary);
+  align-items: center;
+  border-radius: 10px;
+  width: 280px;
+  box-sizing: border-box;
+  
+  > h2 {
+    margin: 0;
+  }
+}
+
+.qrCode {
+  padding: 4px;
+  border-radius: 4px;
+  background-color: white;
+  height: #{$qr-code-size}px;
+  width: #{$qr-code-size}px;
+}
+
+:export {
+  qrCodeSize: $qr-code-size;
+}

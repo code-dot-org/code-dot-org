@@ -1,7 +1,8 @@
 class CoursesController < ApplicationController
   include VersionRedirectOverrider
+  include TeacherDashboardUtils
 
-  before_action :require_levelbuilder_mode, except: [:index, :show, :vocab, :resources, :code, :standards]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show, :vocab, :resources, :code, :standards]
   before_action :authenticate_user!, except: [:index, :show, :vocab, :resources, :code, :standards]
   check_authorization except: [:index]
   before_action :set_unit_group, only: [:show, :vocab, :resources, :code, :standards, :edit, :update, :get_rollup_resources]
@@ -29,23 +30,59 @@ class CoursesController < ApplicationController
     @course_families_course_types = @course_families_course_types.to_h
   end
 
+  def all
+    authorize! :manage, UnitGroup
+    # Show all the units groups
+    @courses = UnitGroup.all
+  end
+
   def show
-    if !params[:section_id] && current_user&.last_section_id
-      redirect_to "#{request.path}?section_id=#{current_user.last_section_id}"
+    # If this is a single-unit course, redirect to the unit overview
+    if @unit_group.single_unit_course?
+      redirect_path = Policies::Courses.modularity_enabled? ?
+                        course_unit_path(@unit_group, 1) :
+                        script_path(@unit_group.first_unit)
+      redirect_to request.query_string.present? ? "#{redirect_path}?#{request.query_string}" : redirect_path, status: :moved_permanently
       return
     end
 
     # Attempt to redirect user if we think they ended up on the wrong course overview page.
     override_redirect = VersionRedirectOverrider.override_course_redirect?(session, @unit_group)
-    if !override_redirect && redirect_unit_group = redirect_unit_group(@unit_group)
+    redirect_unit_group = redirect_unit_group(@unit_group)
+    if !override_redirect && redirect_unit_group
       redirect_to "#{course_path(redirect_unit_group)}/?redirect_warning=true"
       return
     end
 
-    sections = current_user.try {|u| u.sections_instructed.all.reject(&:hidden).map(&:summarize)}
-    @sections_with_assigned_info = sections&.map {|section| section.merge!({"isAssigned" => section[:course_id] == @unit_group.id})}
+    if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| s.course_id == @unit_group.id} && TeacherDashboardUtils.can_redirect_to_teacher_dashboard?(current_user)
+      section_id = params[:section_id] || current_user.sections_instructed.select {|s| s.course_id == @unit_group.id}.last.id
+      if section_id
+        redirect_to "/teacher_dashboard/sections/#{section_id}/courses/#{@unit_group.name}"
+        return
+      end
+    end
+
+    # For deprecated courses, show deprecated course page
+    # if we haven't already redirected to a newer version of the course or the teacher dashboard.
+    units = @unit_group.default_units
+    if !units.empty? && units.all?(&:is_deprecated)
+      return render 'errors/deprecated_course'
+    end
+
+    if !params[:section_id] && current_user&.last_section_id && !TeacherDashboardUtils.can_redirect_to_teacher_dashboard?(current_user)
+      redirect_to "#{request.path}?section_id=#{current_user.last_section_id}"
+      return
+    end
+
+    @sections = current_user.try {|u| u.sections_instructed.all.reject(&:hidden).map(&:summarize)}
 
     @locale_code = request.locale
+
+    @page_title = @unit_group.localized_title
+    @page_description = I18n.t("data.course.name.#{@unit_group.name}.description_short", default: '').truncate(200, separator: '.', omission: '.')
+
+    link = UnitGroup.latest_stable_version(@unit_group.family_name)&.link
+    @canonical_url = CDO.studio_url(link) if link
 
     render 'show', locals: {unit_group: @unit_group, redirect_warning: params[:redirect_warning] == 'true'}
   end
@@ -58,7 +95,7 @@ class CoursesController < ApplicationController
       instruction_type: params[:instruction_type] ? params[:instruction_type] : Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
       instructor_audience: params[:instructor_audience] ? params[:instructor_audience] : Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
       participant_audience: params[:participant_audience] ? params[:participant_audience] : Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
-      has_numbered_units: true
+      numbered_units: Curriculum::SharedCourseConstants::NUMBERED_UNITS_TYPE.auto,
     )
     if @unit_group.save
       @unit_group.write_serialization
@@ -69,7 +106,7 @@ class CoursesController < ApplicationController
   end
 
   def update
-    @unit_group.persist_strings_and_units_changes(params[:scripts], params[:alternate_units], i18n_params)
+    @unit_group.persist_strings_and_units_changes(params[:scripts], i18n_params)
     @unit_group.update(course_params)
     CourseOffering.add_course_offering(@unit_group)
     @unit_group.reload
@@ -77,6 +114,12 @@ class CoursesController < ApplicationController
     if @unit_group.has_migrated_unit? && @unit_group.course_version
       @unit_group.resources = params[:resourceIds].map {|id| Resource.find(id)} if params.key?(:resourceIds)
       @unit_group.student_resources = params[:studentResourceIds].map {|id| Resource.find(id)} if params.key?(:studentResourceIds)
+    end
+
+    if @unit_group.numbered_units == Curriculum::SharedCourseConstants::NUMBERED_UNITS_TYPE.custom
+      @unit_group.default_unit_group_units.each do |ugu|
+        ugu.update!(unit_prefix: params[:unit_prefixes][ugu.position-1])
+      end
     end
 
     @unit_group.reload
@@ -89,7 +132,7 @@ class CoursesController < ApplicationController
     raise ActiveRecord::ReadOnlyRecord if @unit_group.try(:plc_course)
     @unit_group_data = {
       course_summary: @unit_group.summarize(@current_user, for_edit: true),
-      script_names: Unit.all.select {|unit| unit.is_course? == false}.map(&:name),
+      script_names: Unit.all.map(&:name),
       course_families: UnitGroup.family_names,
       version_year_options: UnitGroup.get_version_year_options,
       missing_required_device_compatibilities: @unit_group&.course_version&.course_offering&.missing_required_device_compatibility?
@@ -154,7 +197,11 @@ class CoursesController < ApplicationController
 
     # When the url of a course family is requested, redirect to a specific course version.
     if UnitGroup.family_names.include?(params[:course_name])
-      unit_group = UnitGroup.latest_stable_version(params[:course_name])
+      # Look for latest version in the user's locale, fall back to latest version
+      # in English if no translated version exists.
+      unit_group =
+        UnitGroup.latest_stable_version(params[:course_name], locale: request.locale) ||
+        UnitGroup.latest_stable_version(params[:course_name])
       if unit_group
         redirect_path = url_for(action: params[:action], course_name: unit_group.name)
         redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
@@ -186,7 +233,7 @@ class CoursesController < ApplicationController
   end
 
   private def course_params
-    cp = params.permit(:version_year, :family_name, :has_verified_resources, :has_numbered_units, :pilot_experiment, :published_state, :instruction_type, :instructor_audience, :participant_audience, :announcements).to_h
+    cp = params.permit(:version_year, :family_name, :has_verified_resources, :numbered_units, :pilot_experiment, :published_state, :instruction_type, :instructor_audience, :participant_audience, :announcements).to_h
     cp[:announcements] = JSON.parse(cp[:announcements]) if cp[:announcements]
     cp[:published_state] = Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development unless cp[:published_state]
 
@@ -201,11 +248,12 @@ class CoursesController < ApplicationController
 
   private def redirect_unit_group(unit_group)
     # Return nil if unit_group is nil or we know the user can view the version requested.
-    return nil if !unit_group || unit_group.can_view_version?(current_user)
+    return nil if !unit_group || unit_group.can_view_version?(current_user, request.locale)
 
     # Redirect the user to the latest assigned unit_group in this family, or to the latest unit_group in this family if none
     # are assigned.
     redirect_unit_group = UnitGroup.latest_assigned_version(unit_group.family_name, current_user)
+    redirect_unit_group ||= UnitGroup.latest_stable_version(unit_group.family_name, locale: request.locale)
     redirect_unit_group ||= UnitGroup.latest_stable_version(unit_group.family_name)
 
     # Do not redirect if we are already on the correct unit_group.

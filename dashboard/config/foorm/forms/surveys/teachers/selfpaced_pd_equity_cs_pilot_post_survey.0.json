@@ -1,0 +1,432 @@
+{
+  "title": "Equity in CS: Post-module survey",
+  "pages": [
+    {
+      "name": "page1",
+      "description": "Section 1 of 3",
+      "elements": [
+        {
+          "type": "html",
+          "name": "intro_selfpaced_pd_equity_post",
+          "html": "<h1>Equity in CS Self-paced Online Professional Learning for Educators</h1><h3><strong>Post-Module Survey</strong></h3>\n\n<p>Code.org relies on surveys as a crucial tool to stay connected to teachers, gather feedback about our curriculum and your teaching experience, and to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>Equity in CS  - Post-Module Survey</h2>"
+        },
+        {
+          "type": "html",
+          "name": "section1_effectiveness",
+          "html": "\n<p><span style='font-size: 12pt;'><strong>The questions in this section aim to understand how valuable was this self-paced learning experience for you as an educator.</strong> Please indicate your level of agreement with each statement</p>.</span></p>\n"
+        },
+        {
+          "type": "rating",
+          "name": "good_use_of_time",
+          "title": "Engaging with the Equity in CS professional learning module was a good use of my time.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Strongly disagree",
+          "maxRateDescription": "Strongly agree"
+        },
+        {
+          "type": "rating",
+          "name": "nps_self_paced_pd",
+          "title": "How likely are you to recommend this self-paced professional learning experience to a friend or colleague?",
+          "rateCount": 11,
+          "rateMin": 0,
+          "rateMax": 10,
+          "minRateDescription": "Not likely at all",
+          "maxRateDescription": "Extremely likely"
+        },
+        {
+          "type": "rating",
+          "name": "plan_implement",
+          "title": "I plan to use what I learned in the Equity in CS module in my role as an educator.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Strongly disagree",
+          "maxRateDescription": "Strongly agree"
+        },
+        {
+          "type": "rating",
+          "name": "equity_comfort_ability_implement",
+          "title": "After completing this module, I am more confident in my ability to identify and address inequities within my computer science classroom and/or school. ",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Strongly disagree",
+          "maxRateDescription": "Strongly agree"
+        },
+        {
+          "type": "rating",
+          "name": "content_relevant_role",
+          "title": "The content of the module was relevant to my role.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not relevant at all",
+          "maxRateDescription": "Extremely relevant"
+        },
+        {
+          "type": "matrix",
+          "name": "equity_concepts_strategies",
+          "title": "After participating in the Equity in CS module, I feel comfortable with my ability to implement strategies related to these concepts in my role as a  CS educator",
+          "columns": [
+            {
+              "value": "1",
+              "text": "1 - Strongly disagree"
+            },
+            {
+              "value": "2",
+              "text": "2"
+            },
+            {
+              "value": "3",
+              "text": "3"
+            },
+            {
+              "value": "4",
+              "text": "4"
+            },
+            {
+              "value": "5",
+              "text": "5"
+            },
+            {
+              "value": "6",
+              "text": "6"
+            },
+            {
+              "value": "7",
+              "text": "7 - Strongly agree"
+            }
+          ],
+          "rows": [
+            {
+              "value": "equity",
+              "text": "Equity"
+            },
+            {
+              "value": "diversity",
+              "text": "Diversity"
+            },
+            {
+              "value": "stereotype_threat",
+              "text": "Stereotype Threat"
+            },
+            {
+              "value": "implicit_bias",
+              "text": "Implicit bias"
+            },
+            {
+              "value": "intersectionality",
+              "text": "Intersectionality"
+            },
+            {
+              "value": "student_centered_pedagogy",
+              "text": "Student-Centered Pedagogy"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "content_to_improve_relevance",
+          "title": "What specific topics or examples would you like to see added to this unit to make it more relevant to your teaching?"
+        },
+        {
+          "type": "checkbox",
+          "name": "barriers_implementation",
+          "title": "What, if any, are the main barriers to using what you’ve learned?",
+          "choices": [
+            {
+              "value": "none",
+              "text": "None"
+            },
+            {
+              "value": "not_cs_teacher",
+              "text": "I am not currently teaching computer science."
+            },
+            {
+              "value": "application_unclear",
+              "text": "It is not clear to me how to apply what I’ve learned."
+            },
+            {
+              "value": "learn_more",
+              "text": "I need to learn more about Equity in CS before using it in my classroom."
+            },
+            {
+              "value": "discouraged_school_district",
+              "text": "It is not supported by school/district administration."
+            },
+            {
+              "value": "time_constraints",
+              "text": "I lack the time to implement these strategies."
+            },
+            {
+              "value": "more_examples",
+              "text": "I need more examples that are relevant to my grade level/subject area."
+            }
+          ],
+          "hasOther": true
+        }
+      ]
+    },
+    {
+      "name": "page2",
+      "description": "Section 2 of 3",
+      "elements": [
+        {
+          "type": "html",
+          "name": "section2_perceptions_structure",
+          "html": "\n<p><span style='font-size: 12pt;'><strong>The questions in this section aim to understand your experience with this self-paced learning module.</strong> Please indicate your level of agreement with each statement.</span></p>\n"
+        },
+        {
+          "type": "rating",
+          "name": "information_clarity",
+          "title": "The information presented in this module was clear and easy to understand.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Strongly disagree",
+          "maxRateDescription": "Strongly agree"
+        },
+        {
+          "type": "rating",
+          "name": "easy_navigation",
+          "title": "Course navigation was clear and easy to follow.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Strongly disagree",
+          "maxRateDescription": "Strongly agree"
+        },
+        {
+          "type": "text",
+          "name": "easy_navigation_improvement",
+          "visibleIf": "{easy_navigation} < 3",
+          "title": "How can course navigation could be improved.?"
+        },
+        {
+          "type": "rating",
+          "name": "pacing",
+          "title": "The pacing was appropriate for a self-paced learning experience.",
+          "autoGenerate": false,
+          "rateValues": [
+            1,
+            2,
+            3,
+            {
+              "value": 4,
+              "text": "Just right"
+            },
+            5,
+            6,
+            7
+          ],
+          "minRateDescription": "Too slow",
+          "maxRateDescription": "Too fast"
+        },
+        {
+          "type": "rating",
+          "name": "module_progression",
+          "title": "The module progressed in a logical order.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Strongly disagree",
+          "maxRateDescription": "Strongly agree"
+        },
+        {
+          "type": "text",
+          "name": "module_progression_improvement",
+          "visibleIf": "{module_progression} < 3",
+          "title": "How could the module's progression and structure be improved?"
+        },
+        {
+          "type": "rating",
+          "name": "amount_reading_material",
+          "title": "The amount of reading material was appropriate for this module.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Strongly disagree",
+          "maxRateDescription": "Strongly agree"
+        },
+        {
+          "type": "rating",
+          "name": "equity_guide_frequency_use",
+          "title": "I often used the Equity in CS activity guide while progressing through the module.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Strongly disagree",
+          "maxRateDescription": "Strongly agree"
+        },
+        {
+          "type": "text",
+          "name": "equity_guide_feedback",
+          "visibleIf": "{frequency_use_equity_guide} > 2",
+          "title": "Please briefly explain what you found most effective about the activity guide, and what may need improvement."
+        },
+        {
+          "type": "matrix",
+          "name": "equity_supported_learning",
+          "title": "Which of the following components of the module supported your learning the most?",
+          "description": "Rank the options from most helpful (5) to least helpful (1).",
+          "columns": [
+            {
+              "value": "1",
+              "text": "1 - Least helpful"
+            },
+            {
+              "value": "2",
+              "text": "2"
+            },
+            {
+              "value": "3",
+              "text": "3"
+            },
+            {
+              "value": "4",
+              "text": "4"
+            },
+            {
+              "value": "5",
+              "text": "5 - Most helpful"
+            }
+          ],
+          "rows": [
+            {
+              "value": "reading",
+              "text": "Reading a page that contained text and images about a topic."
+            },
+            {
+              "value": "making_a_plan",
+              "text": "Making a plan to foster equitable access, diversity, and inclusion in my CS classroom."
+            },
+            {
+              "value": "reflections",
+              "text": "Writing reflections on experiences and teaching practices."
+            },
+            {
+              "value": "forum_participation",
+              "text": "Sharing strategies in the Code.org forum."
+            },
+            {
+              "value": "video_content",
+              "text": "Engaging with video content."
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "engagement_components",
+          "title": "Is there any feedback you would like to share about what made these components more or less engaging?",
+          "rows": 2
+        },
+        {
+          "type": "radiogroup",
+          "name": "how_long_to_complete",
+          "title": "How long did you spend completing this module?",
+          "choices": [
+            {
+              "value": "less_than_30",
+              "text": "Less than 30 minutes"
+            },
+            {
+              "value": "30_60",
+              "text": "Between 30 minutes and 60 minutes"
+            },
+            {
+              "value": "60_90",
+              "text": "Between 60 minutes and 90 minutes"
+            },
+            {
+              "value": "90_120",
+              "text": "Between 90 minutes and 120 minutes"
+            },
+            {
+              "value": "over_120",
+              "text": "Over 120 minutes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "page3",
+      "description": "Section 3 of 3",
+      "elements": [
+        {
+          "type": "html",
+          "name": "section3_content",
+          "html": "\n<p><span style='font-size: 12pt;'><strong>The questions in this section aim to understand your perceptions about the content by creating some opportunities for reflection.</strong></span></p>\n"
+        },
+        {
+          "type": "comment",
+          "name": "changes_teaching_practices",
+          "title": "What, if any, specific changes do you plan to make in your teaching practice as a result of this module?",
+          "rows": 2
+        },
+        {
+          "type": "comment",
+          "name": "significant_learning_experience",
+          "title": "Can you tell us about a time when you had an 'aha' moment or a significant learning experience during the module?",
+          "rows": 2
+        },
+        {
+          "type": "comment",
+          "name": "concepts_challenge_understanding",
+          "title": "Were there any concepts presented in the module that challenged your current understanding of equity in CS?",
+          "rows": 2
+        },
+        {
+          "type": "comment",
+          "name": "ongoing_support",
+          "title": "What kind of ongoing support would be helpful for you to continue implementing inclusive practices in your CS teaching?",
+          "rows": 2
+        },
+        {
+          "type": "comment",
+          "name": "other_feedback",
+          "title": "Do you have any feedback about this module that you would like to share with the Code.org team?"
+        },
+        {
+          "type": "radiogroup",
+          "name": "permission_to_quote",
+          "title": "I give Code.org permission to quote my written comments from this survey for use on social media, promotional materials, and other communications.",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes, I give Code.org permission to quote me and use my name."
+            },
+            {
+              "value": "yes_anon",
+              "text": "Yes, I give Code.org permission to quote me, but I want to be anonymous."
+            },
+            {
+              "value": "no",
+              "text": "No, I do not give Code.org my permission."
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "equity_participate_focus_group",
+          "title": "OPTIONAL: Would you be willing to participate in a follow-up focus group to provide direct feedback about this online course?",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes"
+            },
+            {
+              "value": "no",
+              "text": "No"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "equity_email_focus_group",
+          "visibleIf": "{equity_participate_focus_group}='yes'",
+          "title": "Great! Please share an email address where we may contact you."
+        },
+        {
+          "type": "html",
+          "name": "thank_you",
+          "html": "<h3><strong>Thank You!</strong></h3>\n<p><span style='font-size: 12pt;'>Thanks from Code.org for your time, thoughts, and passion for teaching.</span>&nbsp;</p>"
+        }
+      ]
+    }
+  ],
+  "published": true
+}

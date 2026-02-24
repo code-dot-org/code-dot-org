@@ -1,14 +1,9 @@
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
-import {
-  BodyThreeText,
-  BodyTwoText,
-  Heading3,
-  Heading4,
-} from '@cdo/apps/componentLibrary/typography';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import i18n from '@cdo/locale';
 
 import LearningGoals from './LearningGoals';
@@ -51,6 +46,7 @@ export default function RubricContent({
   feedbackAdded,
   setFeedbackAdded,
   sectionId,
+  reloadOnStudentChange = true,
 }) {
   const {lesson} = rubric;
   const rubricLevel = rubric.level;
@@ -74,19 +70,16 @@ export default function RubricContent({
     >
       {infoText && <InfoAlert text={infoText} />}
       <div className={style.studentInfoGroup}>
-        <Heading3>
-          {i18n.lessonNumbered({
-            lessonNumber: lesson?.position,
-            lessonName: lesson?.name,
-          })}
-        </Heading3>
+        <Typography variant="h3" gutterBottom>
+          {lesson?.title}
+        </Typography>
 
         <div className={style.selectors}>
           <SectionSelector reloadOnChange={true} />
           <StudentSelector
             styleName={style.studentSelector}
             selectedUserId={studentLevelInfo ? studentLevelInfo.user_id : null}
-            reloadOnChange={true}
+            reloadOnChange={reloadOnStudentChange}
             sectionId={sectionId}
             reportingData={reportingData}
           />
@@ -98,40 +91,54 @@ export default function RubricContent({
               {onLevelForEvaluation && (
                 <div className={style.studentMetadata}>
                   {studentLevelInfo.timeSpent && (
-                    <BodyThreeText className={style.singleMetadatum}>
+                    <Typography
+                      className={style.singleMetadatum}
+                      variant="body3"
+                      gutterBottom
+                    >
                       <FontAwesome icon="clock" />
                       <span>{formatTimeSpent(studentLevelInfo.timeSpent)}</span>
-                    </BodyThreeText>
+                    </Typography>
                   )}
-                  <BodyThreeText className={style.singleMetadatum}>
+                  <Typography
+                    className={style.singleMetadatum}
+                    variant="body3"
+                    gutterBottom
+                  >
                     <FontAwesome icon="rocket" />
                     {i18n.numAttempts({
                       numAttempts: studentLevelInfo.attempts || 0,
                     })}
-                  </BodyThreeText>
+                  </Typography>
                   {studentLevelInfo.lastAttempt && (
-                    <BodyThreeText className={style.singleMetadatum}>
+                    <Typography
+                      className={style.singleMetadatum}
+                      variant="body3"
+                      gutterBottom
+                    >
                       <FontAwesome icon="calendar" />
                       <span>
                         {formatLastAttempt(studentLevelInfo.lastAttempt)}
                       </span>
-                    </BodyThreeText>
+                    </Typography>
                   )}
                 </div>
               )}
               {!onLevelForEvaluation && rubricLevel?.position && (
-                <BodyThreeText>
+                <Typography variant="body3" gutterBottom>
                   {i18n.feedbackAvailableOnLevel({
                     levelPosition: rubricLevel.position,
                   })}
-                </BodyThreeText>
+                </Typography>
               )}
             </div>
           </div>
         )}
       </div>
       <div className={style.learningGoalsWrapper}>
-        <Heading4>{i18n.rubric()}</Heading4>
+        <Typography variant="h4" gutterBottom>
+          {i18n.rubric()}
+        </Typography>
         <LearningGoals
           productTour={productTour}
           open={open}
@@ -164,6 +171,7 @@ RubricContent.propTypes = {
   feedbackAdded: PropTypes.bool,
   setFeedbackAdded: PropTypes.func,
   sectionId: PropTypes.number,
+  reloadOnStudentChange: PropTypes.bool,
 };
 
 export const InfoAlert = ({text, dismissable}) => {
@@ -178,6 +186,7 @@ export const InfoAlert = ({text, dismissable}) => {
         [style.infoAlert]: !closed,
         [style.infoAlertClosed]: !!closed,
       })}
+      // eslint-disable-next-line react/forbid-dom-props
       data-testid="info-alert"
     >
       <div className={style.infoAlertLeft}>
@@ -186,7 +195,9 @@ export const InfoAlert = ({text, dismissable}) => {
           className={style.infoAlertIcon}
           title="info circle icon"
         />
-        <BodyTwoText>{text}</BodyTwoText>
+        <Typography variant="body2" gutterBottom>
+          {text}
+        </Typography>
       </div>
       {!!dismissable && (
         <button

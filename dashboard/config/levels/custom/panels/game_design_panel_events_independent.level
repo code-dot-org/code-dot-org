@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2024-05-31T21:51:59.000Z",
   "level_num": "custom",
@@ -28,9 +29,9 @@
         "key": "game_design_panel_events-068701d9-edca-4086-99eb-27a027450240"
       }
     ],
-    "name_suffix": "_independent"
+    "name_suffix": "_independent",
+    "offer_browser_tts": "true"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-05-31T21:51:59.457+00:00\",\"changed\":[\"cloned from \\\"game_design_panel_events_course-e\\\"\"],\"cloned_from\":\"game_design_panel_events_course-e\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-31T21:51:59.457+00:00\",\"changed\":[\"cloned from \\\"game_design_panel_events_course-e\\\"\"],\"cloned_from\":\"game_design_panel_events_course-e\"},{\"changed_at\":\"2024-12-13 16:55:28 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

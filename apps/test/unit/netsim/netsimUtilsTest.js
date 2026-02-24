@@ -202,12 +202,16 @@ describe('NetSimUtils', function () {
     });
 
     it('ignores trailing slash in the URL', function () {
-      expect('s-csp1-2019-lessons-3-levels-2')
+      expect('courses-csp-2019-units-1-lessons-3-levels-2')
         .to.equal(
-          urlToKey('https://studio.code.org/s/csp1-2019/lessons/3/levels/2')
+          urlToKey(
+            'https://studio.code.org/courses/csp-2019/units/1/lessons/3/levels/2'
+          )
         )
         .to.equal(
-          urlToKey('https://studio.code.org/s/csp1-2019/lessons/3/levels/2/')
+          urlToKey(
+            'https://studio.code.org/courses/csp-2019/units/1/lessons/3/levels/2/'
+          )
         );
     });
   });

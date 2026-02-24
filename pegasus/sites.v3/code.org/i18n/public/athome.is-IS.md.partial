@@ -20,7 +20,6 @@ theme: responsive
     <li><a class="linktag" id="self-paced-nav" href="#express">Taktu inngangs, sjálf-skref námskeið</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">Búðu til leik eða forrit</a></li>
     <li><a class="linktag" id="unplugged-nav" href="#unplugged">Prófaðu CS án tölvu ('unplugged' & mobile options)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Lærðu CS frá Code.org teyminu og sérstökum gestum</a></li>
 </ul>
 
 <br>
@@ -283,56 +282,6 @@ theme: responsive
   <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Halló Ruby</a> - Mest duttlungafullur leið heims til að læra um tölvur, tækni og forritun. Starfsemi á ýmsum CS efni, eins og getu til að sundra vandamál, blettur mynstur, hugsa reiknirit, kemba vandamál og vinna saman. (fyrir 4-10 ára aldur)</li>
   <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> - Safn af ókeypis kennsluefni sem kennir tölvunarfræði í gegnum grípandi leiki og þrautir sem nota spil, band, vaxliti og fullt af hlaupum í kring. (fyrir 5-14 ára aldur)</li>
 </ul>
-
-<h2>Engin tölva heima? Prófaðu CS í símanum þínum með þessum forritum frá samstarfsaðilum okkar</h2>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box Island"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>Heillandi hreyfanlegur kóðunarleikur sem tekur nemendur í spennandi ævintýri, en kennir grundvallaratriði kóðunar, eins og reiknirit, mynstur viðurkenningu, raðir, lykkjur og conditionals. <i>(fyrir alla aldurshópa)</i>
-</div>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="CodesPark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">CodeSpark</h3></a>margverðlaunaður nám-til-kóða vettvangur fyrir börn á aldrinum 5-9 ára. Leystu þrautir og búðu til leiki með The Foos meðan þú lærir að kóða. <strong>Athugið: CodeSpark býður upp á ókeypis 3 mánaða prufu. Netfang foreldris og kreditkortaupplýsingar eru nauðsynlegar við skráningu.</strong> <i>(fyrir forlesendur í gegnum 5. bekk)</i>
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[Aftur efst]</a></p>
-
-<a id="livecoding"></a>
-<h2>Lærðu af Code.org teyminu og sérstökum gestum!</h2>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="CodeBytes lógó">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes er auðvelt að melta, 20 mínútna gagnvirkar kennslustundir sem blanda tölvunarfræði við raunveruleg efni. Þjálfa gervigreind til að lesa táknmál, hanna app til góðs, kanna heim Minecraft og fleira!</div>
-        <br>
-        <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Skoða þætti</button></a>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Brot kóða">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">Code Break</h3>
-        <div class="smalltext" style="">Halda tölvunarfræði gaman með því að taka Code Break! Þú getur búið til cypher með Ashton Kutcher, læra um breytur með Yara Shahidi, og jafnvel kanna hvernig internetið virkar með raunverulegum uppfinningamaður á Netinu, Vilt Cerf!</div>
-        <br>
-        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Tengjast</button></a>
-    </span>
-  </div>
-</div>
-</div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 

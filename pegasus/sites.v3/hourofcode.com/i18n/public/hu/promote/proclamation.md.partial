@@ -1,7 +1,6 @@
 ---
 title: Mintafelbontás, amely támogatja a számítástechnikai oktatási hetet és a kódolás óráját
 layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

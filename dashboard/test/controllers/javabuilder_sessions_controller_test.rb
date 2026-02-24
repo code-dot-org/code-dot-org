@@ -4,7 +4,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
   setup do
     @rsa_key_test = OpenSSL::PKey::RSA.new(2048)
     OpenSSL::PKey::RSA.stubs(:new).returns(@rsa_key_test)
-    @fake_channel_id = storage_encrypt_channel_id(1, 1)
+    @fake_channel_id = get_project_channel_id(1, 1)
 
     JavalabFilesHelper.stubs(:get_project_files).returns({})
     JavalabFilesHelper.stubs(:get_project_files_with_override_sources).returns({})
@@ -17,15 +17,15 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     user: :student,
     response: :forbidden
   test_user_gets_response_for :get_access_token,
-    params: {channelId: storage_encrypt_channel_id(1, 1), executionType: 'RUN', miniAppType: 'console'},
+    params: {channelId: get_project_channel_id(1, 1), executionType: 'RUN', miniAppType: 'console'},
     user: :with_recent_captcha_teacher,
     response: :success
   test_user_gets_response_for :get_access_token,
-    params: {channelId: storage_encrypt_channel_id(1, 1), executionType: 'RUN', miniAppType: 'console'},
+    params: {channelId: get_project_channel_id(1, 1), executionType: 'RUN', miniAppType: 'console'},
     user: :levelbuilder,
     response: :success
   test_user_gets_response_for :get_access_token,
-    params: {channelId: storage_encrypt_channel_id(1, 1), executionType: 'RUN', miniAppType: 'console'},
+    params: {channelId: get_project_channel_id(1, 1), executionType: 'RUN', miniAppType: 'console'},
     user: :authorized_teacher,
     response: :success
 
@@ -63,12 +63,12 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     response: :forbidden
   test_user_gets_response_for :access_token_with_override_validation,
     method: :post,
-    params: {channelId: storage_encrypt_channel_id(1, 1), overrideValidation: "{'MyClass.java': {}}", executionType: 'RUN', miniAppType: 'console'},
+    params: {channelId: get_project_channel_id(1, 1), overrideValidation: "{'MyClass.java': {}}", executionType: 'RUN', miniAppType: 'console'},
     user: :levelbuilder,
     response: :success
 
   test 'can decode jwt token' do
-    levelbuilder = create :levelbuilder
+    levelbuilder = create(:levelbuilder)
     sign_in(levelbuilder)
     get :get_access_token, params: {channelId: @fake_channel_id, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
 
@@ -83,7 +83,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
   end
 
   test 'sends options as stringified json' do
-    levelbuilder = create :levelbuilder
+    levelbuilder = create(:levelbuilder)
     sign_in(levelbuilder)
     get :get_access_token, params: {
       channelId: @fake_channel_id,
@@ -130,7 +130,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
   end
 
   test 'student not in the authorized teachers csa section cannot get access token' do
-    csa_script = create(:csa_script)
+    csa_script = create(:csa_script, :in_single_unit_course)
     teacher = create(:authorized_teacher)
     section = create(:section, user: teacher, login_type: 'word')
     create(:section, user: teacher, login_type: 'word', script: csa_script)
@@ -142,7 +142,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
 
   test 'student of authorized teacher in csa section can get access token' do
     teacher = create(:authorized_teacher)
-    csa_script = create(:csa_script)
+    csa_script = create(:csa_script, :in_single_unit_course)
     section = create(:section, user: teacher, login_type: 'word', script: csa_script)
     student_1 = create(:follower, section: section).student_user
     sign_in(student_1)
@@ -161,35 +161,35 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
   end
 
   test 'param for channel id is required' do
-    levelbuilder = create :levelbuilder
+    levelbuilder = create(:levelbuilder)
     sign_in(levelbuilder)
     get :get_access_token, params: {executionType: 'RUN', miniAppType: 'console'}
     assert_response :bad_request
   end
 
   test 'param for override sources is required when using override sources route' do
-    levelbuilder = create :levelbuilder
+    levelbuilder = create(:levelbuilder)
     sign_in(levelbuilder)
     post :access_token_with_override_sources, params: {executionType: 'RUN', miniAppType: 'console'}
     assert_response :bad_request
   end
 
   test 'param for override validation is required when using override validation route' do
-    levelbuilder = create :levelbuilder
+    levelbuilder = create(:levelbuilder)
     sign_in(levelbuilder)
     post :access_token_with_override_validation, params: {executionType: 'RUN', miniAppType: 'console'}
     assert_response :bad_request
   end
 
   test 'param for execution type is required' do
-    levelbuilder = create :levelbuilder
+    levelbuilder = create(:levelbuilder)
     sign_in(levelbuilder)
     get :get_access_token, params: {channelId: @fake_channel_id, miniAppType: 'console'}
     assert_response :bad_request
   end
 
   test 'param for mini-app type is required' do
-    levelbuilder = create :levelbuilder
+    levelbuilder = create(:levelbuilder)
     sign_in(levelbuilder)
     get :get_access_token, params: {channelId: @fake_channel_id, executionType: 'RUN'}
     assert_response :bad_request
@@ -197,14 +197,14 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
 
   test 'returns error if upload fails' do
     JavalabFilesHelper.stubs(:upload_project_files).returns(nil)
-    levelbuilder = create :levelbuilder
+    levelbuilder = create(:levelbuilder)
     sign_in(levelbuilder)
     get :get_access_token, params: {channelId: @fake_channel_id, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
     assert_response :internal_server_error
   end
 
   test 'student of verified teacher has correct verified_teachers parameter' do
-    csa_script = create(:csa_script)
+    csa_script = create(:csa_script, :in_single_unit_course)
     verified_teacher_1 = create(:authorized_teacher)
     csa_section = create(:section, user: verified_teacher_1, login_type: 'word', script: csa_script)
     verified_teacher_2 = create(:authorized_teacher)
@@ -228,14 +228,14 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     teachers_string = decoded_token[0]['verified_teachers']
     teachers = teachers_string.split(',')
     assert_equal 1, teachers.length
-    assert_includes(teachers, (verified_teacher_1.id).to_s)
+    assert_includes(teachers, verified_teacher_1.id.to_s)
     # verified teacher 2 is not teaching the student csa
-    refute teachers.include?((verified_teacher_2.id).to_s)
-    refute teachers.include?((regular_teacher.id).to_s)
+    refute teachers.include?(verified_teacher_2.id.to_s)
+    refute teachers.include?(regular_teacher.id.to_s)
   end
 
   test 'levelbuilder has correct verified_teachers parameter' do
-    levelbuilder = create :levelbuilder
+    levelbuilder = create(:levelbuilder)
     sign_in(levelbuilder)
     get :get_access_token, params: {channelId: @fake_channel_id, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
 
@@ -243,11 +243,11 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     token = response['token']
     decoded_token = JWT.decode(token, @rsa_key_test.public_key, true, {algorithm: 'RS256'})
     teachers_string = decoded_token[0]['verified_teachers']
-    assert_equal (levelbuilder.id).to_s, teachers_string
+    assert_equal levelbuilder.id.to_s, teachers_string
   end
 
   test 'regular teacher account has correct verified_teachers parameter (supports javalab eval mode)' do
-    teacher = create :with_recent_captcha_teacher
+    teacher = create(:with_recent_captcha_teacher)
     sign_in(teacher)
     get :get_access_token, params: {channelId: @fake_channel_id, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
 
@@ -255,11 +255,11 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     token = response['token']
     decoded_token = JWT.decode(token, @rsa_key_test.public_key, true, {algorithm: 'RS256'})
     teachers_string = decoded_token[0]['verified_teachers']
-    assert_equal (teacher.id).to_s, teachers_string
+    assert_equal teacher.id.to_s, teachers_string
   end
 
   test 'regular teacher who has never verified via captcha gets prompted for captcha' do
-    teacher = create :teacher
+    teacher = create(:teacher)
     sign_in(teacher)
     get :get_access_token, params: {channelId: @fake_channel_id, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
 
@@ -269,7 +269,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
   end
 
   test 'regular teacher who has verified via captcha more than 24 hours ago gets prompted for captcha' do
-    teacher = create :teacher, last_verified_captcha_at: Time.now.utc - 25.hours
+    teacher = create(:teacher, last_verified_captcha_at: Time.now.utc - 25.hours)
     sign_in(teacher)
     get :get_access_token, params: {channelId: @fake_channel_id, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
 

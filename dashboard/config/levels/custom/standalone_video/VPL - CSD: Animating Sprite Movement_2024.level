@@ -1,5 +1,6 @@
 <StandaloneVideo>
   <config><![CDATA[{
+  "published": true,
   "game_id": 54,
   "created_at": "2024-03-25T22:41:24.000Z",
   "level_num": "custom",
@@ -13,11 +14,10 @@
     "parent_level_id": 20722,
     "name_suffix": "_2024",
     "encrypted": "false",
-    "long_instructions": "## Instructions\r\n##### Students will watch this video as a part of <a href=\"https://studio.code.org/s/csd3-2023/lessons/13\" target=\"blank\">Lesson 13: Sprite Movement</a>. Watch this video to get an overview of how to make sprites move in Game Lab.\r\n\r\n## Important Takeaways\r\n\r\n* ##### The counter pattern allows the programmer to update the value of a variable in a pattern that counts up (or down) on every iteration of the draw loop.  \r\n* ##### The counter pattern can be used for many different things, such as spinning, growing, shrinking, or timers, but it's most often used to move sprites across the screen.\r\n* ##### When a sprite's x or y property is updated in a counter pattern, its position changes in a consistent way over time, causing it to move across the screen.  \r\n* ##### Students should be able to explain that movement in an animation is just a change in position, and that changing a sprite's x position will cause it to move horizontally, and changing a sprite's y position will cause it to move vertically\r\n"
+    "long_instructions": "## Instructions\r\n#### Students will watch this video as a part of <a href=\"https://studio.code.org/s/csd3-2024/lessons/13\" target=\"blank\">Lesson 13: Sprite Movement</a>. Watch this video to get an overview of how to make sprites move in Game Lab.\r\n\r\n## Important Takeaways\r\n\r\n* #### The counter pattern allows the programmer to update the value of a variable in a pattern that counts up (or down) on every iteration of the draw loop.  \r\n* #### The counter pattern can be used for many different things, such as spinning, growing, shrinking, or timers, but it's most often used to move sprites across the screen.\r\n* #### When a sprite's x or y property is updated in a counter pattern, its position changes in a consistent way over time, causing it to move across the screen.  \r\n* #### Students should be able to explain that movement in an animation is just a change in position, and that changing a sprite's x position will cause it to move horizontally, and changing a sprite's y position will cause it to move vertically\r\n"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-25T22:41:24.086+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD: Animating Sprite Movement_2023\\\"\"],\"cloned_from\":\"VPL - CSD: Animating Sprite Movement_2023\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-25T22:41:24.086+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD: Animating Sprite Movement_2023\\\"\"],\"cloned_from\":\"VPL - CSD: Animating Sprite Movement_2023\"},{\"changed_at\":\"2024-08-16 17:27:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -57,6 +57,15 @@ http {
       proxy_pass http://unix:<%= @run_dir %>/$upstream.sock;
       proxy_set_header Host $upstream_host;
     }
+
+    location /cable {
+      proxy_pass http://unix:<%= @run_dir %>/$upstream.sock;
+      proxy_set_header Host $upstream_host;
+
+      proxy_http_version 1.1;
+      proxy_set_header Upgrade $http_upgrade;
+      proxy_set_header Connection "upgrade";
+    }
   }
 <% redirects = node['cdo-nginx']['redirects'].group_by(&:last).transform_values {|v| v.to_h.keys}
    redirects.each do |site, domains| -%>
@@ -92,6 +101,16 @@ http {
       proxy_pass http://unix:<%= @run_dir %>/$upstream.sock;
       proxy_set_header Host $http_host;
       proxy_set_header X-Forwarded-Proto https;
+    }
+
+    location /cable {
+      proxy_pass http://unix:<%= @run_dir %>/$upstream.sock;
+      proxy_set_header Host $http_host;
+      proxy_set_header X-Forwarded-Proto https;
+
+      proxy_http_version 1.1;
+      proxy_set_header Upgrade $http_upgrade;
+      proxy_set_header Connection "upgrade";
     }
   }
 }

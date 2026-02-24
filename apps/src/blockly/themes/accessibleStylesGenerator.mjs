@@ -1,5 +1,6 @@
-import cdoBlockStyles from './cdoBlockStyles.js';
 import nearestColor from 'nearest-color';
+
+import cdoBlockStyles from './cdoBlockStyles.js';
 
 // The colors here come Martin Krzywinski's 24-color palette for colorblindness:
 // http://mkweb.bcgsc.ca/colorblind/palettes.mhtml#top
@@ -119,13 +120,18 @@ function mapBlockStylesToPalette(blockStyles, theme) {
 
   if (enoughColors) {
     // Each color in our standard palette is mapped to a new "nearest" color from the accesible palette.
-    for (const [, value] of Object.entries(blockStyles)) {
+    for (const [blockType, value] of Object.entries(blockStyles)) {
       const nearestAvailableColor = nearestColor.from(
         accessiblePalettes[theme]
       );
       const newColor = nearestAvailableColor(value.colourPrimary);
       value.colourPrimary = newColor.value;
       const colorKey = newColor.name.substring(0, 7);
+      // We use the primary colour for variable shadow blocks. Shadow blocks cannot include a variable field,
+      // so this only applies to argument_reporter blocks.
+      if (blockType === 'variable_blocks') {
+        value.colourSecondary = value.colourPrimary;
+      }
       // Remove the color (and any alternates) from the available palette so we don't assign it twice.
       delete accessiblePalettes[theme][`${colorKey}Primary`];
       delete accessiblePalettes[theme][`${colorKey}Secondary`];

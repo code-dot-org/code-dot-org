@@ -1,3 +1,4 @@
+import {MAX_LOOP_ITERATIONS_COUNT} from '../../constants';
 import musicI18n from '../../locale';
 import {BlockTypes} from '../blockTypes';
 import {getCodeForSingleBlock} from '../blockUtils';
@@ -5,77 +6,30 @@ import {
   TRIGGER_FIELD,
   FIELD_SOUNDS_NAME,
   FIELD_PATTERN_NAME,
+  FIELD_PATTERN_AI_NAME,
   FIELD_REST_DURATION_NAME,
   FIELD_EFFECTS_NAME,
   FIELD_EFFECTS_VALUE,
   FIELD_CHORD_NAME,
+  FIELD_TUNE_NAME,
   DOCS_BASE_URL,
   FIELD_TRIGGER_START_NAME,
   TriggerStart,
   FIELD_EFFECTS_EXTENSION,
   FIELD_EFFECT_NAME_OPTIONS,
+  FIELD_SOUNDS_VALIDATOR,
+  FIELD_PATTERNS_VALIDATOR,
+  NEXT_CONNECTION_MUTATOR,
 } from '../constants';
 import {
   fieldSoundsDefinition,
   fieldPatternDefinition,
+  fieldPatternAiDefinition,
   fieldRestDurationDefinition,
   fieldChordDefinition,
+  fieldTuneDefinition,
   fieldTriggerDefinition,
 } from '../fields';
-
-// Some helpers used when generating code to be used by the interpreter.
-// Called by executeSong().
-export class GeneratorHelpersSimple2 {
-  // Given the function's name and body code, this returns the
-  // code for the function's implementation.  All functions
-  // in this model play sounds sequentially by default.
-  static getFunctionImplementation(functionName, functionCode) {
-    const actualFunctionName = this.getSafeFunctionName(functionName);
-    return `function ${actualFunctionName}() {
-      Sequencer.startFunctionContext('${functionName}');
-      Sequencer.playSequential();
-      ${functionCode}
-      Sequencer.endSequential();
-      Sequencer.endFunctionContext();
-    }
-    `;
-  }
-
-  // Given a block of code with function calls, and also function implementations,
-  // this returns the implementation of the when_run block to be used when the user
-  // didn't provide their own implementation.  In this implementation, all of the
-  // provided functions are called immediately, simulating tracks mode.
-  static getDefaultWhenRunImplementation(
-    functionCallsCode,
-    functionImplementationsCode
-  ) {
-    return `
-    Sequencer.newSequence();
-    Sequencer.playTogether();
-    Sequencer.startFunctionContext('when_run');
-    ${functionCallsCode}
-    ${functionImplementationsCode}
-  `;
-  }
-
-  // Return a function name in JavaScript.
-  // Adapted from Blockly.JavaScript.nameDB_.safeName_
-  // at https://github.com/google/blockly/blob/498766b930287ab8ef86accf95e9453018997461/core/names.ts
-  static getSafeFunctionName(functionName) {
-    // Unfortunately names in non-latin characters will look like
-    // _E9_9F_B3_E4_B9_90 which is pretty meaningless.
-    // https://github.com/google/blockly/issues/1654
-    let name = encodeURI(functionName.replace(/ /g, '_')).replace(
-      /[^\w]/g,
-      '_'
-    );
-    // Most languages don't allow names with leading numbers.
-    if ('0123456789'.indexOf(name[0]) !== -1) {
-      name = 'my_' + name;
-    }
-    return name;
-  }
-}
 
 export const whenRunSimple2 = {
   definition: {
@@ -87,12 +41,17 @@ export const whenRunSimple2 = {
     tooltip: musicI18n.blockly_blockWhenRunTooltip(),
     helpUrl: '',
   },
-  generator: () =>
-    `
-      Sequencer.newSequence();
-      Sequencer.startFunctionContext('when_run');
-      Sequencer.playSequential();
-    `,
+  generator: ctx => {
+    const nextBlock = ctx.nextConnection && ctx.nextConnection.targetBlock();
+    let handlerCode = Blockly.JavaScript.blockToCode(nextBlock, false);
+    return `
+      if (__context == 'when_run') {
+        Sequencer.newSequence();
+        Sequencer.startFunctionContext('when_run');
+        Sequencer.playSequential();
+        ${handlerCode}
+      }`;
+  },
 };
 
 export const triggeredAtSimple2 = {
@@ -126,12 +85,18 @@ export const triggeredAtSimple2 = {
     tooltip: musicI18n.blockly_blockTriggeredTooltip(),
     helpUrl: DOCS_BASE_URL + 'trigger',
   },
-  generator: block =>
-    `
-      Sequencer.newSequence(startPosition, true);
-      Sequencer.startFunctionContext('${block.getFieldValue(TRIGGER_FIELD)}');
-      Sequencer.playSequential();
-    `,
+  generator: ctx => {
+    const id = ctx.getFieldValue(TRIGGER_FIELD);
+    const nextBlock = ctx.nextConnection && ctx.nextConnection.targetBlock();
+    let handlerCode = Blockly.JavaScript.blockToCode(nextBlock, false);
+    return `
+      if (__context == "${id}") {
+        Sequencer.newSequence(startPosition, true);
+        Sequencer.startFunctionContext('${id}');
+        Sequencer.playSequential();
+        ${handlerCode}
+      }`;
+  },
 };
 
 export const playSoundAtCurrentLocationSimple2 = {
@@ -145,6 +110,8 @@ export const playSoundAtCurrentLocationSimple2 = {
     style: 'lab_blocks',
     tooltip: musicI18n.blockly_blockPlaySoundTooltip(),
     helpUrl: DOCS_BASE_URL + 'play_sample',
+    extensions: [FIELD_SOUNDS_VALIDATOR],
+    mutator: NEXT_CONNECTION_MUTATOR,
   },
   generator: block =>
     `Sequencer.playSound("${block.getFieldValue(FIELD_SOUNDS_NAME)}", "${
@@ -163,10 +130,41 @@ export const playPatternAtCurrentLocationSimple2 = {
     style: 'lab_blocks',
     tooltip: musicI18n.blockly_blockPlayPatternTooltip(),
     helpUrl: DOCS_BASE_URL + 'play_pattern',
+    extensions: [FIELD_PATTERNS_VALIDATOR],
+    mutator: NEXT_CONNECTION_MUTATOR,
   },
   generator: block =>
     `Sequencer.playPattern(${JSON.stringify(
       block.getFieldValue(FIELD_PATTERN_NAME)
+    )}, "${block.id}");`,
+};
+
+export const playPatternAiAtCurrentLocationSimple2 = {
+  definition: {
+    type: BlockTypes.PLAY_PATTERN_AI_AT_CURRENT_LOCATION_SIMPLE2,
+    message0: musicI18n.blockly_blockPlayPatternAi({bot: '%1', pattern: '%2'}),
+    args0: [
+      {
+        type: 'field_image',
+        src: '/blockly/media/ai-bot-mini-2.svg',
+        width: 24,
+        height: 24,
+        alt: '',
+      },
+      fieldPatternAiDefinition,
+    ],
+    inputsInline: true,
+    previousStatement: null,
+    nextStatement: null,
+    style: 'lab_blocks',
+    tooltip: musicI18n.blockly_blockPlayPatternAiTooltip(),
+    helpUrl: DOCS_BASE_URL + 'play_pattern_ai',
+    extensions: [FIELD_PATTERNS_VALIDATOR],
+    mutator: NEXT_CONNECTION_MUTATOR,
+  },
+  generator: block =>
+    `Sequencer.playPattern(${JSON.stringify(
+      block.getFieldValue(FIELD_PATTERN_AI_NAME)
     )}, "${block.id}");`,
 };
 
@@ -181,10 +179,30 @@ export const playChordAtCurrentLocationSimple2 = {
     style: 'lab_blocks',
     tooltip: musicI18n.blockly_blockPlayChordTooltip(),
     helpUrl: DOCS_BASE_URL + 'play_keys',
+    mutator: NEXT_CONNECTION_MUTATOR,
   },
   generator: block =>
     `Sequencer.playChord(${JSON.stringify(
       block.getFieldValue(FIELD_CHORD_NAME)
+    )},  "${block.id}");`,
+};
+
+export const playTuneAtCurrentLocationSimple2 = {
+  definition: {
+    type: BlockTypes.PLAY_TUNE_AT_CURRENT_LOCATION_SIMPLE2,
+    message0: musicI18n.blockly_blockPlayTune({tune: '%1'}),
+    args0: [fieldTuneDefinition],
+    inputsInline: true,
+    previousStatement: null,
+    nextStatement: null,
+    style: 'lab_blocks',
+    tooltip: musicI18n.blockly_blockPlayTuneTooltip(),
+    helpUrl: DOCS_BASE_URL + 'play_tune',
+    mutator: NEXT_CONNECTION_MUTATOR,
+  },
+  generator: block =>
+    `Sequencer.playTune(${JSON.stringify(
+      block.getFieldValue(FIELD_TUNE_NAME)
     )},  "${block.id}");`,
 };
 
@@ -199,6 +217,7 @@ export const playRestAtCurrentLocationSimple2 = {
     style: 'lab_blocks',
     tooltip: musicI18n.blockly_blockRestTooltip(),
     helpUrl: DOCS_BASE_URL + 'rest',
+    mutator: NEXT_CONNECTION_MUTATOR,
   },
   generator: block =>
     `Sequencer.rest(${block.getFieldValue(FIELD_REST_DURATION_NAME)});`,
@@ -253,12 +272,22 @@ export const playSoundsTogether = {
     style: 'logic_blocks',
     tooltip: musicI18n.blockly_blockPlaySoundsTogether(),
     helpUrl: DOCS_BASE_URL + 'play_together',
+    mutator: NEXT_CONNECTION_MUTATOR,
   },
   generator: block =>
     ` Sequencer.playTogether();
       ${Blockly.JavaScript.statementToCode(block, 'code')}
       Sequencer.endTogether();
     `,
+};
+
+export const playSoundsTogetherNoNext = {
+  ...playSoundsTogether,
+  definition: {
+    ...playSoundsTogether.definition,
+    type: BlockTypes.PLAY_SOUNDS_TOGETHER_NO_NEXT,
+    nextStatement: undefined,
+  },
 };
 
 export const playSoundsSequential = {
@@ -279,6 +308,7 @@ export const playSoundsSequential = {
     style: 'logic_blocks',
     tooltip: musicI18n.blockly_blockPlaySoundsSequentialTooltip(),
     helpUrl: DOCS_BASE_URL + 'play_sequential',
+    mutator: NEXT_CONNECTION_MUTATOR,
   },
   generator: block =>
     ` Sequencer.playSequential();
@@ -305,6 +335,7 @@ export const playSoundsRandom = {
     style: 'logic_blocks',
     tooltip: musicI18n.blockly_blockPlaySoundsRandomTooltip(),
     helpUrl: DOCS_BASE_URL + 'play_random',
+    mutator: NEXT_CONNECTION_MUTATOR,
   },
   generator: block => {
     const resultArray = [];
@@ -333,10 +364,15 @@ export const playSoundsRandom = {
   },
 };
 
+// This definition is passed to block documentation before Blockly's
+// translations are loaded, so we need to provide a fallback for each message.
+// TODO: Determine why Blockly.Msg is not loaded before this file in documentation.
 export const repeatSimple2 = {
   definition: {
     type: BlockTypes.REPEAT_SIMPLE2,
-    message0: Blockly.Msg['CONTROLS_REPEAT_TITLE'],
+    message0:
+      Blockly.Msg['CONTROLS_REPEAT_TITLE'] ||
+      musicI18n.blockly_controlsRepeatTitle(),
     args0: [
       {
         type: 'field_number',
@@ -346,7 +382,10 @@ export const repeatSimple2 = {
         max: 100,
       },
     ],
-    message1: `${Blockly.Msg['CONTROLS_REPEAT_INPUT_DO']} %1`,
+    message1: `${
+      Blockly.Msg['CONTROLS_REPEAT_INPUT_DO'] ||
+      musicI18n.blockly_controlsRepeatInputDo()
+    } %1`,
     args1: [
       {
         type: 'input_statement',
@@ -357,8 +396,11 @@ export const repeatSimple2 = {
     previousStatement: null,
     nextStatement: null,
     style: 'loop_blocks',
-    tooltip: Blockly.Msg['CONTROLS_REPEAT_TOOLTIP'],
+    tooltip:
+      Blockly.Msg['CONTROLS_REPEAT_TOOLTIP'] ||
+      musicI18n.blockly_controlsRepeatTooltip(),
     helpUrl: DOCS_BASE_URL + 'repeat',
+    mutator: NEXT_CONNECTION_MUTATOR,
   },
   generator: block => {
     const repeats = block.getFieldValue('times');
@@ -375,19 +417,12 @@ export const repeatSimple2 = {
       'repeat_end',
       Blockly.Names.NameType.VARIABLE
     );
-    code += 'var ' + endVar + ' = ' + repeats + ';\n';
-    code +=
-      'for (var ' +
-      loopVar +
-      ' = 0; ' +
-      loopVar +
-      ' < ' +
-      endVar +
-      '; ' +
-      loopVar +
-      '++) {\n' +
-      branch +
-      '}\n';
+    code += `
+      var ${endVar} = ${repeats};
+      for (var ${loopVar} = 0; ${loopVar} < ${endVar} && __loopIterationsCount < ${MAX_LOOP_ITERATIONS_COUNT}; ${loopVar}++, __loopIterationsCount++) {
+        ${branch}
+      }
+    `;
 
     return `
       Sequencer.playSequential();

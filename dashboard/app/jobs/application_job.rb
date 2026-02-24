@@ -1,5 +1,7 @@
 class ApplicationJob < ActiveJob::Base
   include ActiveJobMetrics
+  include ActiveJobReporting
+
   # Automatically retry jobs that encountered a deadlock
   # retry_on ActiveRecord::Deadlocked
 

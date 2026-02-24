@@ -20,7 +20,6 @@ theme: responsive
     <li><a class="linktag" id="self-paced-nav" href="#express">Merrni një kurs hyrës, të vetë-ritmit</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">Krijoni një lojë ose një aplikacion</a></li>
     <li><a class="linktag" id="unplugged-nav" href="#unplugged">Provoni CS pa një kompjuter ('unplugged' & opsionet celular)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Mësoni CS nga ekipi i Code.org dhe mysafirët specialë</a></li>
 </ul>
 
 <br>
@@ -283,56 +282,6 @@ theme: responsive
   <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Hello Ruby</a> - Mënyra më e çuditshme në botë për të mësuar rreth kompjuterëve, teknologjisë dhe programimit. Aktivitetet në një sërë temash CS, si aftësia për të dekompozuar një problem, modelet e vendit, mendojnë algoritmikisht, korrigjojnë problemet dhe punojnë së bashku. (për moshat 4-10 vjeç)</li>
   <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> - Një koleksion i materialit mësimor falas që mëson shkencën kompjuterike përmes lojërave dhe enigmave tërheqëse që përdorin karta, vargje, shkumësa dhe shumë vrapime. (për moshat 5-14 vjeç)</li>
 </ul>
-
-<h2>Nuk ka kompjuter në shtëpi? Provoni CS në telefonin tuaj me këto aplikacione nga partnerët tanë</h2>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Ishulli Box"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>Një lojë simpatike e kodimit celular që i çon nxënësit në një aventurë emocionuese, ndërsa mëson bazat e kodimit, si algoritmet, njohja e modelit, sekuencat, sythet dhe kushtëzimet. <i>(për të gjitha moshat)</i>
-</div>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="Kodi Park"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">Platforma e mësimit në kod</h3></a>fituese e çmimit CodePark për fëmijët e moshës 5-9 vjeç. Zgjidhni enigma dhe krijoni lojëra me The Foos ndërsa mësoni të kodojnë. <strong>Shënim: CodeshPark po ofron një provë falas 3-mujore. Adresa e emailit të prindërve dhe informacioni i kartës së kreditit kërkohen në regjistrim.</strong> <i>(për para-lexuesit përmes klasës 5)</i>
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[Kthehu në krye]</a></p>
-
-<a id="livecoding"></a>
-<h2>Mësoni nga ekipi i Code.org dhe mysafirët specialë!</h2>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Logo CodeBytes">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes janë lehtë-to-tretet, 20 minuta mësime interaktive përzierjen e shkencave kompjuterike me tema të botës reale. Trajnoni një AI për të lexuar gjuhën e shenjave, për të hartuar një aplikacion për të mirë, për të eksploruar botën e Minecraft dhe më shumë!</div>
-        <br>
-        <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Shikoni episodet</button></a>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Kodi Pushim">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">Kodi Break</h3>
-        <div class="smalltext" style="">Mbani argëtim shkenca kompjuterike duke marrë një kod pushim! Ju mund të krijoni një shifër me Ashton Kutcher, të mësoni rreth variablave me Yara Shahidi dhe madje të eksploroni se si funksionon interneti me shpikësin aktual të internetit, Vint Cerf!</div>
-        <br>
-        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Lidhuni</button></a>
-    </span>
-  </div>
-</div>
-</div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 

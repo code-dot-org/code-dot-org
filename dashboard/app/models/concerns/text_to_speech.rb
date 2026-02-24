@@ -5,8 +5,6 @@ require 'uri'
 require 'redcarpet'
 require 'redcarpet/render_strip'
 
-TTS_BUCKET = 'cdo-tts'.freeze
-
 class TTSSafe < Redcarpet::Render::StripDown
   def block_code(code, language)
     ''
@@ -37,6 +35,7 @@ TTSSafeScrubber.tags = ['xml']
 module TextToSpeech
   extend ActiveSupport::Concern
 
+  TTS_BUCKET = 'cdo-tts'.freeze
   UPDATED_TTS_PATH_DCDO_KEY = 'updated_tts_path'.freeze
 
   # Pull the VOICES out of the SharedConstants (updating the locale keys to
@@ -241,7 +240,7 @@ module TextToSpeech
 
     tts_upload_to_s3(tts_long_instructions_text, 'long_instructions', context) if tts_should_update_long_instructions?(update_all: update_all)
 
-    if authored_hints && (tts_should_update('authored_hints', update_all))
+    if authored_hints && tts_should_update('authored_hints', update_all)
       hints = JSON.parse(authored_hints)
       hints.each do |hint|
         text = TextToSpeech.sanitize(hint["hint_markdown"])

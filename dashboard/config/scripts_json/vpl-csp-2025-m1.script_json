@@ -1,0 +1,441 @@
+{
+  "script": {
+    "name": "vpl-csp-2025-m1",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "pl_workshop_activities",
+      "curriculum_umbrella": "PD Workshop Activity CSP",
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "version_year": "2025"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-03-31 23:18:51 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "vpl-csp-2025-m1"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m1"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Module 1: Wrapping Up Unit 3 & EIPM",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m1"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "ec3b0d2f-e44b-4c65-82cd-538882f5ed64",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ec3b0d2f-e44b-4c65-82cd-538882f5ed64",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m1"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "28850e1c-7956-497d-85ab-1669453c99a2",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 1 Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "28850e1c-7956-497d-85ab-1669453c99a2",
+        "lesson_activity.key": "ec3b0d2f-e44b-4c65-82cd-538882f5ed64"
+      }
+    },
+    {
+      "key": "22f26c18-43bb-4567-b1ba-97e04af025b0",
+      "position": 2,
+      "properties": {
+        "progression_name": "Wrapping Up Unit 3 (~20 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "22f26c18-43bb-4567-b1ba-97e04af025b0",
+        "lesson_activity.key": "ec3b0d2f-e44b-4c65-82cd-538882f5ed64"
+      }
+    },
+    {
+      "key": "af6dd4aa-25db-4b61-94cc-a0b095ae75c8",
+      "position": 3,
+      "properties": {
+        "progression_name": "Unit 4 Overview (~30 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "af6dd4aa-25db-4b61-94cc-a0b095ae75c8",
+        "lesson_activity.key": "ec3b0d2f-e44b-4c65-82cd-538882f5ed64"
+      }
+    },
+    {
+      "key": "820cf510-1f13-4d2c-b1ac-77023eacf8a6",
+      "position": 4,
+      "properties": {
+        "progression_name": "Introducing EIPM (~25 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "820cf510-1f13-4d2c-b1ac-77023eacf8a6",
+        "lesson_activity.key": "ec3b0d2f-e44b-4c65-82cd-538882f5ed64"
+      }
+    },
+    {
+      "key": "959c00d3-526d-4ddf-b3aa-bacae06f694a",
+      "position": 5,
+      "properties": {
+        "progression_name": "Module 1 Asynchronous Wrap Up (~10 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "959c00d3-526d-4ddf-b3aa-bacae06f694a",
+        "lesson_activity.key": "ec3b0d2f-e44b-4c65-82cd-538882f5ed64"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Module 1 Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL AYWS1 Workshop Overview_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m1",
+        "activity_section.key": "28850e1c-7956-497d-85ab-1669453c99a2"
+      },
+      "level_keys": [
+        "CSP-PL AYWS1 Workshop Overview_2025"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrapping Up Unit 3 (~20 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Module 1 Unit 3 Context-21_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m1",
+        "activity_section.key": "22f26c18-43bb-4567-b1ba-97e04af025b0"
+      },
+      "level_keys": [
+        "CSP Module 1 Unit 3 Context-21_2025"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 4 Overview (~30 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Unit 4 tasks overview_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m1",
+        "activity_section.key": "af6dd4aa-25db-4b61-94cc-a0b095ae75c8"
+      },
+      "level_keys": [
+        "CSP - Unit 4 tasks overview_2025"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 4 Overview (~30 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL - U4 L12 Practice PT 1_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m1",
+        "activity_section.key": "af6dd4aa-25db-4b61-94cc-a0b095ae75c8"
+      },
+      "level_keys": [
+        "CSP-PL - U4 L12 Practice PT 1_2025"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 4 Overview (~30 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL U4 L12 Practice PT 2_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m1",
+        "activity_section.key": "af6dd4aa-25db-4b61-94cc-a0b095ae75c8"
+      },
+      "level_keys": [
+        "CSP-PL U4 L12 Practice PT 2_2025"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 4 Overview (~30 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Module 1 Unit 4 Reflection_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m1",
+        "activity_section.key": "af6dd4aa-25db-4b61-94cc-a0b095ae75c8"
+      },
+      "level_keys": [
+        "CSP Module 1 Unit 4 Reflection_2025"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing EIPM (~25 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Module 1 EIPM Reflection_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m1",
+        "activity_section.key": "820cf510-1f13-4d2c-b1ac-77023eacf8a6"
+      },
+      "level_keys": [
+        "CSP Module 1 EIPM Reflection_2025"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Module 1 Asynchronous Wrap Up (~10 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Module 1 Wrap Up_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m1",
+        "activity_section.key": "959c00d3-526d-4ddf-b3aa-bacae06f694a"
+      },
+      "level_keys": [
+        "CSP - Module 1 Wrap Up_2025"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL AYWS1 Workshop Overview_2025",
+        "script_level.level_keys": [
+          "CSP-PL AYWS1 Workshop Overview_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m1",
+        "activity_section.key": "28850e1c-7956-497d-85ab-1669453c99a2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP Module 1 Unit 3 Context-21_2025",
+        "script_level.level_keys": [
+          "CSP Module 1 Unit 3 Context-21_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m1",
+        "activity_section.key": "22f26c18-43bb-4567-b1ba-97e04af025b0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Unit 4 tasks overview_2025",
+        "script_level.level_keys": [
+          "CSP - Unit 4 tasks overview_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m1",
+        "activity_section.key": "af6dd4aa-25db-4b61-94cc-a0b095ae75c8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL - U4 L12 Practice PT 1_2025",
+        "script_level.level_keys": [
+          "CSP-PL - U4 L12 Practice PT 1_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m1",
+        "activity_section.key": "af6dd4aa-25db-4b61-94cc-a0b095ae75c8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL U4 L12 Practice PT 2_2025",
+        "script_level.level_keys": [
+          "CSP-PL U4 L12 Practice PT 2_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m1",
+        "activity_section.key": "af6dd4aa-25db-4b61-94cc-a0b095ae75c8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP Module 1 Unit 4 Reflection_2025",
+        "script_level.level_keys": [
+          "CSP Module 1 Unit 4 Reflection_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m1",
+        "activity_section.key": "af6dd4aa-25db-4b61-94cc-a0b095ae75c8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP Module 1 EIPM Reflection_2025",
+        "script_level.level_keys": [
+          "CSP Module 1 EIPM Reflection_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m1",
+        "activity_section.key": "820cf510-1f13-4d2c-b1ac-77023eacf8a6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Module 1 Wrap Up_2025",
+        "script_level.level_keys": [
+          "CSP - Module 1 Wrap Up_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2025-m1",
+        "activity_section.key": "959c00d3-526d-4ddf-b3aa-bacae06f694a"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

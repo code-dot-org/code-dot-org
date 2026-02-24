@@ -1,0 +1,212 @@
+@import 'color.scss';
+@import 'style-constants';
+
+@media print {
+  .sidebarContainer {
+    display: none !important;
+  }
+}
+
+.pageAndSidebar {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.pageWithHeader {
+  flex-grow: 1;
+  padding: 20px 48px 28px 38px;
+  overflow-y: auto;
+}
+
+.widthLockedPage {
+  max-width: $content-width;
+  padding: 10px 0 64px 0;
+}
+
+.sidebarContainer {
+  width: 242px;
+  flex: 0 0 242px;
+  background-color: var(--background-neutral-secondary);
+  height: auto;
+
+  .sectionHeader {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 16px;
+    padding-top: 20px;
+    color: var(--text-neutral-quaternary);
+  }
+}
+
+.sidebarContent {
+  position: sticky;
+  top: 0;
+  padding-bottom: 16px;
+}
+
+.sidebarSectionHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  margin-bottom: 2px;
+}
+
+.sidebarNewTags {
+  margin-inline-start: 10px;
+}
+
+.sidebarSectionHeader .sidebarNewTags div {
+  background-color: var(--background-brand-teal-primary);
+}
+
+.sidebarSectionHeader .sidebarNewTags div span {
+  color: white;
+}
+
+.sectionDropdown {
+  padding-left: 16px;
+  width: 210px;
+}
+
+.optionIcon {
+  font-size: 16px;
+  line-height: normal;
+}
+
+.linkText {
+  margin-bottom: 0 !important;
+  font-weight: 600 !important;
+  color: var(--text-neutral-tertiary);
+  &.selected {
+    color: var(--text-neutral-primary);
+  }
+}
+
+.errorIcon {
+  margin-left: auto;
+  margin-right: 10px;
+  color: var(--text-error-primary-fixed);
+  font-size: 1rem;
+}
+
+.sidebarOption {
+  display: flex;
+  height: 32px;
+  align-items: center;
+  gap: 12px;
+  padding-left: 32px;
+  text-decoration: none;
+  margin-top: 4px;
+  color: var(--text-neutral-tertiary);
+
+  &.selected {
+    border-left: 4px solid var(--borders-brand-teal-primary);
+    background-color: var(--background-neutral-quaternary);
+    padding-left: 28px;
+    text-decoration: none;
+    color: var(--text-neutral-primary);
+  }
+
+  &:hover {
+    background-color: var(--background-neutral-tertiary);
+    text-decoration: none;
+    .optionIcon {
+      color: var(--text-neutral-primary);
+    }
+
+    .linkText {
+      color: var(--text-neutral-primary);
+    }
+  }
+}
+
+.navLink {
+  display: inline-block;
+  background-color: var(--background-brand-purple-primary);
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  height: auto;
+  line-height: 24px;
+  font-weight: 600;
+
+  &:hover {
+    background-color: var(--background-brand-purple-strong);
+    color: white;
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: var(--borders-brand-teal-primary) solid 2px;
+    outline-offset: 2px;
+    color: white;
+  }
+}
+
+.topPadding {
+  padding-top: 24px;
+}
+
+.iconContainer {
+  width: 20px;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+
+  .headerSectionName {
+    margin-bottom: 0;
+    margin-top: 0;
+    color: var(--text-brand-teal-primary);
+  }
+}
+
+h2.skeletonHeaderSectionName {
+  width: fit-content;
+  height: 21px;
+  margin-bottom: 0;
+  margin-top: 0;
+  border-radius: 4px;
+}
+
+.calendarContentContainer {
+  width: fit-content;
+}
+
+.calendarDropdowns {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  margin-bottom: 10px;
+}
+
+.calendarUnitDropdown {
+  max-width: 240px;
+}
+
+.calendarDropdown {
+  display: flex;
+  align-items: center;
+}
+
+.calendarDropdownDescription {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.emptyClassroomDiv {
+  margin: 24px 64px 82px 64px;
+  text-align: center;
+}
+
+.emptyClassroomImage {
+  height: 200px;
+  align-items: end;
+  display: flex;
+  justify-content: center;
+}

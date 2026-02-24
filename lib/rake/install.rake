@@ -42,11 +42,19 @@ namespace :install do
     if RakeUtils.local_environment?
       Dir.chdir(dashboard_dir) do
         RakeUtils.bundle_install
-        puts CDO.dashboard_db_writer
+        RakeUtils.python_venv_install
+
         if ENV['CI']
-          # Prepare for dashboard unit tests to run. We can't seed UI test data
-          # yet because doing so would break unit tests.
-          RakeUtils.rake 'db:create db:test:prepare'
+          if ENV['CI_JOB'] == 'unit_tests'
+            # Prepare for dashboard unit tests to run.
+            RakeUtils.rake 'db:create db:test:prepare'
+          else
+            # If we don't already have a database that's been restored from a
+            # cache, prepare one from scratch by creating the database and loading
+            # the schema. If we do, make sure it's up to date with the branch
+            # being tested. Either way, seeding will be performed in a later step.
+            RakeUtils.rake_stream_output 'db:setup_or_migrate'
+          end
         else
           RakeUtils.rake_stream_output 'dashboard:setup_db', ([:adhoc, :development].include?(rack_env) ? '--trace' : nil)
         end

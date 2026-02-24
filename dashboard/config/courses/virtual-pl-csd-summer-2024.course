@@ -7,6 +7,13 @@
     "virtual-pl-csd-summer-2024-day4",
     "virtual-pl-csd-summer-2024-day5"
   ],
+  "original_script_names": [
+    "virtual-pl-csd-summer-2024-day1",
+    "virtual-pl-csd-summer-2024-day2",
+    "virtual-pl-csd-summer-2024-day3",
+    "virtual-pl-csd-summer-2024-day4",
+    "virtual-pl-csd-summer-2024-day5"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "teacher",
@@ -17,13 +24,13 @@
   },
   "resources": [
     {
-      "name": "2024 Summer Workshop Virtual Overview",
-      "url": "https://docs.google.com/document/d/1djP0Rnow-dXJnCO8nKZ8LXWOeF0QwnqfhAO1yu15p08/edit?usp=sharing",
-      "key": "2024_summer_workshop_virtual_overview",
+      "name": "2025 Virtual CSD Summer Workshop Overview",
+      "url": "https://docs.google.com/document/d/1FALyM5RVwxwmAYCiabgRBA4k5_ljQtrJUlnc3bR87NY/edit?usp=drive_link",
+      "key": "2025_virtual_csd_summer_workshop_overview",
       "properties": {
       },
       "seeding_key": {
-        "resource.key": "2024_summer_workshop_virtual_overview"
+        "resource.key": "2025_virtual_csd_summer_workshop_overview"
       }
     }
   ],

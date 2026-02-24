@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-08-13T00:29:28.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Choose one defense you learned about today. What made it effective? In your response, explain how system design, human behavior, or AI helped stop the threat and how they worked together.",
+    "stay_on_level_after_submit": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "teacher_markdown": "**Assessment Opportunity**\r\n\r\nThe free response level can be used as a formative assessment of the lesson objectives:\r\n- **Explain how system design, human behavior, and AI can work together** to prevent a cyber threat.\r\n- **Evaluate different defenses** to determine what made them effective.\r\n\r\nAs students submit their responses, **teachers can circulate and provide quick feedback** by:\r\n- Looking for **clear and accurate descriptions** of:\r\n    - What type of threat was involved\r\n    - Who or what stopped it (human, system, or AI)\r\n    - Why the defense worked (and what could’ve gone wrong without it)\r\n- Asking **probing questions** like:\r\n    - “How did human action support or fail the defense here?”\r\n    - “Would this defense have worked without AI or without the system?”\r\n    - “What makes this defense effective even if users don’t notice it?”\r\n\r\n**Teachers can also provide written feedback** through the Free Response level, prompting students to clarify:\r\n- Which part of the defense was most important\r\n- How different roles (human, AI, system) worked together\r\n- Whether their example shows a **layered defense** or a **single point of failure**"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-08-13T00:29:28.417+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson5-level2\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson5-level2\"},{\"changed_at\":\"2025-08-13 00:31:55 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

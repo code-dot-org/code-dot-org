@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import reducers, {
@@ -7,26 +6,29 @@ import reducers, {
   initLevelSearching,
   initUnitInfo,
   mapActivityDataForEditor,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import LessonEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/LessonEditor';
+} from '@cdo/apps/levelbuilder/lesson-editor/activitiesEditorRedux';
+import LessonEditor from '@cdo/apps/levelbuilder/lesson-editor/LessonEditor';
 import programmingExpressionsEditor, {
   initProgrammingExpressions,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/programmingExpressionsEditorRedux';
+} from '@cdo/apps/levelbuilder/lesson-editor/programmingExpressionsEditorRedux';
 import createResourcesReducer, {
   initResources,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
+} from '@cdo/apps/levelbuilder/lesson-editor/resourcesEditorRedux';
 import createStandardsReducer, {
   initStandards,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/standardsEditorRedux';
+} from '@cdo/apps/levelbuilder/lesson-editor/standardsEditorRedux';
 import vocabulariesEditor, {
   initVocabularies,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
+} from '@cdo/apps/levelbuilder/lesson-editor/vocabulariesEditorRedux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
 import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
+import {prepareBlocklyForEmbeddingAllEnvironments} from '@cdo/apps/templates/utils/embeddedBlocklyUtils';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(function () {
+  prepareBlocklyForEmbeddingAllEnvironments();
   const lessonData = getScriptData('lesson');
   const relatedLessons = getScriptData('relatedLessons');
   const unitInfo = getScriptData('unitForLesson');
@@ -60,7 +62,7 @@ $(document).ready(function () {
     initStandards('opportunityStandard', lessonData.opportunityStandards || [])
   );
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <div>
         <LessonEditor

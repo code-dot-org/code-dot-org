@@ -5,8 +5,8 @@ import queryString from 'query-string';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -65,6 +65,45 @@ export const navigateToLevelOverviewUrl = (levelUrl, studentId, sectionId) => {
   return levelUrl;
 };
 
+export const getLevelCellValue = (
+  studentLevelProgress,
+  level,
+  expandedChoiceLevel
+) => {
+  if (expandedChoiceLevel) {
+    return ITEM_TYPE.CHOICE_LEVEL;
+  }
+  if (
+    studentLevelProgress?.teacherFeedbackReviewState === 'keepWorking' &&
+    studentLevelProgress?.teacherFeedbackNew
+  ) {
+    return ITEM_TYPE.KEEP_WORKING;
+  }
+  if (
+    !studentLevelProgress ||
+    studentLevelProgress.status === LevelStatus.not_tried
+  ) {
+    return ITEM_TYPE.NO_PROGRESS;
+  }
+  if (
+    studentLevelProgress.status === LevelStatus.perfect ||
+    studentLevelProgress.status === LevelStatus.submitted ||
+    studentLevelProgress.status === LevelStatus.free_play_complete ||
+    studentLevelProgress.status === LevelStatus.completed_assessment ||
+    studentLevelProgress.status === LevelStatus.passed
+  ) {
+    if (level.isValidated) {
+      return ITEM_TYPE.VALIDATED;
+    } else {
+      return ITEM_TYPE.SUBMITTED;
+    }
+  }
+  if (studentLevelProgress.status === LevelStatus.attempted) {
+    return ITEM_TYPE.IN_PROGRESS;
+  }
+  return ITEM_TYPE.NO_PROGRESS;
+};
+
 function LevelDataCell({
   level,
   studentId,
@@ -76,41 +115,12 @@ function LevelDataCell({
   parentLevelId,
   lessonId,
   metadataExpanded,
+  index,
 }) {
-  const itemType = React.useMemo(() => {
-    if (expandedChoiceLevel) {
-      return ITEM_TYPE.CHOICE_LEVEL;
-    }
-    if (
-      studentLevelProgress?.teacherFeedbackReviewState === 'keepWorking' &&
-      studentLevelProgress?.teacherFeedbackNew
-    ) {
-      return ITEM_TYPE.KEEP_WORKING;
-    }
-    if (
-      !studentLevelProgress ||
-      studentLevelProgress.status === LevelStatus.not_tried
-    ) {
-      return ITEM_TYPE.NO_PROGRESS;
-    }
-    if (
-      studentLevelProgress.status === LevelStatus.perfect ||
-      studentLevelProgress.status === LevelStatus.submitted ||
-      studentLevelProgress.status === LevelStatus.free_play_complete ||
-      studentLevelProgress.status === LevelStatus.completed_assessment ||
-      studentLevelProgress.status === LevelStatus.passed
-    ) {
-      if (level.isValidated) {
-        return ITEM_TYPE.VALIDATED;
-      } else {
-        return ITEM_TYPE.SUBMITTED;
-      }
-    }
-    if (studentLevelProgress.status === LevelStatus.attempted) {
-      return ITEM_TYPE.IN_PROGRESS;
-    }
-    return ITEM_TYPE.NO_PROGRESS;
-  }, [studentLevelProgress, level, expandedChoiceLevel]);
+  const itemType = React.useMemo(
+    () => getLevelCellValue(studentLevelProgress, level, expandedChoiceLevel),
+    [studentLevelProgress, level, expandedChoiceLevel]
+  );
 
   const feedbackStyle = React.useMemo(() => {
     if (expandedChoiceLevel) {
@@ -156,6 +166,9 @@ function LevelDataCell({
           className={classNames(
             styles.gridBox,
             styles.gridBoxLevel,
+            index % 2 === 0
+              ? styles.lighterBackground
+              : styles.darkerBackground,
             feedbackStyle,
             className
           )}
@@ -163,17 +176,31 @@ function LevelDataCell({
           {levelCellUnexpanded}
         </div>
         <div
-          className={classNames(styles.gridBox, styles.gridBoxMetadata, {
-            [styles.gridBoxChoiceSubLevel]: level.parentLevelId !== undefined,
-          })}
+          className={classNames(
+            styles.gridBox,
+            styles.gridBoxMetadata,
+            index % 2 === 0
+              ? styles.lighterBackground
+              : styles.darkerBackground,
+            {
+              [styles.gridBoxChoiceSubLevel]: level.parentLevelId !== undefined,
+            }
+          )}
           aria-label={i18n.timeSpentMins()}
         >
           {!level.parentLevelId && formatTimeSpent(studentLevelProgress)}
         </div>
         <div
-          className={classNames(styles.gridBox, styles.gridBoxMetadata, {
-            [styles.gridBoxChoiceSubLevel]: level.parentLevelId !== undefined,
-          })}
+          className={classNames(
+            styles.gridBox,
+            styles.gridBoxMetadata,
+            index % 2 === 0
+              ? styles.lighterBackground
+              : styles.darkerBackground,
+            {
+              [styles.gridBoxChoiceSubLevel]: level.parentLevelId !== undefined,
+            }
+          )}
           aria-label={i18n.lastUpdated()}
         >
           {!level.parentLevelId && formatLastUpdated(studentLevelProgress)}
@@ -188,7 +215,8 @@ function LevelDataCell({
         styles.gridBox,
         styles.gridBoxLevel,
         feedbackStyle,
-        className
+        className,
+        index % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
       )}
       headers={getHeadersForCell(studentId, level.id, parentLevelId, lessonId)}
     >
@@ -214,4 +242,5 @@ LevelDataCell.propTypes = {
   className: PropTypes.string,
   linkClassName: PropTypes.string,
   metadataExpanded: PropTypes.bool,
+  index: PropTypes.number,
 };

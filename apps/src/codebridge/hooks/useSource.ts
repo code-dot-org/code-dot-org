@@ -1,16 +1,20 @@
-import {useMemo, useEffect, useCallback, useRef} from 'react';
+import {CodebridgeLevelProperties} from '@codebridge/types';
+import {prepareSourceForLevelbuilderSave} from '@codebridge/utils';
+import {useEffect, useMemo, useRef} from 'react';
 
 import header from '@cdo/apps/code-studio/header';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
-import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
   getAppOptionsEditBlocks,
   getAppOptionsEditingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
 import {
-  setAndSaveProjectSource,
   setProjectSource,
+  setProjectSourceLevelId,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {setAndSaveProjectSources} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -19,61 +23,58 @@ import {useInitialSources} from './useInitialSources';
 // Hook for handling the project source for the current level.
 // Returns the current project source and a function to save the source.
 // This also handles displaying the levelbuilder save button in start mode.
-export const useSource = (defaultSources: ProjectSources) => {
+export const useSource = (
+  defaultSources: ProjectSources,
+  levelProperties: CodebridgeLevelProperties,
+  initiaServerSources: ProjectSources | undefined
+) => {
   const dispatch = useAppDispatch();
-  const projectSource = useAppSelector(
-    state => state.lab2Project.projectSource
+  const source = useAppSelector(
+    state => state.lab2Project.projectSources?.source as MultiFileSource
   );
-  const source = projectSource?.source as MultiFileSource;
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const isEditingExemplarMode = getAppOptionsEditingExemplar();
-  const initialSources = useInitialSources(defaultSources);
-  const levelStartSource = useAppSelector(
-    state => state.lab.levelProperties?.startSources
-  );
-  const templateStartSource = useAppSelector(
-    state => state.lab.levelProperties?.templateSources
-  );
+  const {
+    initialSources,
+    levelStartSources,
+    templateStartSources,
+    parsedDefaultSources,
+  } = useInitialSources(defaultSources, levelProperties, initiaServerSources);
   const previousLevelIdRef = useRef<number | null>(null);
-  const levelId = useAppSelector(state => state.lab.levelProperties?.id);
+  const previousInitialSources = useRef<ProjectSources | null>(null);
+
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
+  const {id: levelId} = levelProperties;
 
   const setSourceHelper = useMemo(
     () => (newProjectSource: ProjectSources) => {
       const saveFunction = isReadOnly
         ? setProjectSource
-        : setAndSaveProjectSource;
+        : setAndSaveProjectSources;
       dispatch(saveFunction(newProjectSource));
     },
     [dispatch, isReadOnly]
   );
 
-  const setSource = useMemo(
-    () => (newSource: MultiFileSource) => {
-      setSourceHelper({source: newSource});
-    },
-    [setSourceHelper]
-  );
-
-  const resetToStartSource = useCallback(() => {
-    // When resetting in start mode, we always use the level start source.
-    setSource(
-      (!isStartMode && templateStartSource) ||
-        levelStartSource ||
-        (defaultSources.source as MultiFileSource)
+  const startSources = useMemo(() => {
+    return (
+      (!isStartMode && templateStartSources) ||
+      levelStartSources ||
+      parsedDefaultSources
     );
   }, [
-    defaultSources.source,
     isStartMode,
-    templateStartSource,
-    levelStartSource,
-    setSource,
+    templateStartSources,
+    levelStartSources,
+    parsedDefaultSources,
   ]);
 
   useEffect(() => {
     if (isStartMode) {
       header.showLevelBuilderSaveButton(() => {
-        return {start_sources: source};
+        const {parsedSource, validationFile} =
+          prepareSourceForLevelbuilderSave(source);
+        return {start_sources: parsedSource, validation_file: validationFile};
       });
     } else if (isEditingExemplarMode) {
       header.showLevelBuilderSaveButton(
@@ -82,19 +83,36 @@ export const useSource = (defaultSources: ProjectSources) => {
         `/levels/${levelId}/update_exemplar_code`
       );
     }
-  }, [isStartMode, isEditingExemplarMode, levelId, source]);
+  }, [isStartMode, isEditingExemplarMode, source, levelId]);
 
   useEffect(() => {
-    if (levelId && previousLevelIdRef.current !== levelId) {
-      // We reset the project when the levelId changes, as this means we are on a new level.
+    // We reset the project when the levelId changes, as this means we are on a new level.
+    // We also reset if the initialSources changed; this could occur if we are a teacher
+    // viewing a student's project.
+    if (
+      (levelId && previousLevelIdRef.current !== levelId) ||
+      initialSources !== previousInitialSources.current
+    ) {
       if (initialSources) {
+        // Set the last source in project manager to initial sources.
+        // This prevents us from immediately saving the source on load,
+        // as we only want to save when the user makes a change.
+        // Initial sources always comes from the server, so we never need to save
+        // it again.
+        Lab2Registry.getInstance()
+          .getProjectManager()
+          ?.setLastSource(initialSources);
         setSourceHelper(initialSources);
+        dispatch(setProjectSourceLevelId(levelId));
       }
       if (levelId) {
         previousLevelIdRef.current = levelId;
       }
+      previousInitialSources.current = initialSources;
     }
-  }, [initialSources, levelId, setSourceHelper]);
+  }, [dispatch, initialSources, levelId, setSourceHelper]);
 
-  return {source, setSource, resetToStartSource};
+  return {
+    startSources,
+  };
 };

@@ -1,9 +1,8 @@
-import React, {useEffect, useState, useRef} from 'react';
+import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
+import {Typography} from '@mui/material';
+import React, {useState} from 'react';
 
-import Button from '@cdo/apps/componentLibrary/button/Button';
-import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
-import {BodyThreeText, StrongText} from '@cdo/apps/componentLibrary/typography';
-
+import aichatI18n from '../../locale';
 import {ModelDescription} from '../../types';
 
 import styles from './compare-models-dialog.module.scss';
@@ -22,32 +21,15 @@ const ModelDescriptionPanel: React.FunctionComponent<{
   const [selectedModel, setSelectedModel] = useState<ModelDescription>(
     getModelFromId(initialSelectedModelId)
   );
-  const [userWantsScroll, setUserWantsScroll] = useState<boolean>(false);
-  const [contentNeedsScroll, setContentNeedsScroll] = useState<boolean>(false);
-
-  const descriptionsContainerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (
-      descriptionsContainerRef.current &&
-      descriptionsContainerRef.current.scrollHeight >
-        descriptionsContainerRef.current.clientHeight
-    ) {
-      setContentNeedsScroll(true);
-    }
-  }, [setContentNeedsScroll, descriptionsContainerRef]);
-
-  const showViewMoreButton = !userWantsScroll && contentNeedsScroll;
-  const shouldScroll = userWantsScroll && contentNeedsScroll;
 
   const onDropdownChange = (value: string) => {
     setSelectedModel(getModelFromId(value));
   };
 
   return (
-    <div className={styles.modelDescriptionContainer}>
+    <div className={styles.modelDescriptionPanelContainer}>
       <SimpleDropdown
-        labelText="Choose a model"
+        labelText={aichatI18n.modelDescriptionPanel()}
         isLabelVisible={false}
         onChange={event => onDropdownChange(event.target.value)}
         items={availableModels.map(model => {
@@ -56,36 +38,28 @@ const ModelDescriptionPanel: React.FunctionComponent<{
         selectedValue={selectedModel.id}
         name={dropdownName}
         size="s"
-        className={styles.fullWidth}
+        className={styles.compareModelsDropdown}
       />
-      <div
-        ref={descriptionsContainerRef}
-        className={
-          shouldScroll ? styles.overflowYScroll : styles.overflowYHidden
-        }
-      >
-        <StrongText>Overview</StrongText>
+      <br />
+      <div className={styles.modelDescriptionContainer}>
+        <Typography variant="strong">
+          {aichatI18n.technicalInfoHeader_overview()}
+        </Typography>
         <div className={styles.textContainer}>
-          <BodyThreeText>{selectedModel.overview}</BodyThreeText>
+          <Typography className={styles.modelText} variant="body3" gutterBottom>
+            {selectedModel.overview}
+          </Typography>
         </div>
         <br />
-        <StrongText>Training Data</StrongText>
+        <Typography variant="strong">
+          {aichatI18n.technicalInfoHeader_trainingData()}
+        </Typography>
         <div className={styles.textContainer}>
-          <BodyThreeText>{selectedModel.trainingData}</BodyThreeText>
+          <Typography className={styles.modelText} variant="body3" gutterBottom>
+            {selectedModel.trainingData}
+          </Typography>
         </div>
       </div>
-      {showViewMoreButton && (
-        <div className={styles.rightAlign}>
-          <Button
-            size="xs"
-            type="secondary"
-            onClick={() => setUserWantsScroll(true)}
-            text="view more"
-            iconRight={{iconName: 'chevron-down'}}
-            className={styles.viewMoreButton}
-          />
-        </div>
-      )}
     </div>
   );
 };

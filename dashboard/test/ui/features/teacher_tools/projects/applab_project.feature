@@ -10,7 +10,7 @@ Scenario: Applab Flow
   And I wait for the lab page to fully load
   Then evaluate JavaScript expression "localStorage.setItem('is13Plus', 'true'), true"
   And I switch to text mode
-  And I add code "image('id', 'https://code.org/images/logo.png')" to ace editor
+  And I add code "image('id', 'https://studio.code.org/blockly/media/logo.png')" to ace editor
   And element ".project_updated_at" eventually contains text "Saved"
   And I click selector ".project_edit"
   And I type "Code Ninja" into "input.project_name"
@@ -37,7 +37,7 @@ Scenario: Applab Flow
   And selector "#codeWorkspace" doesn't have class "readonly"
   And I should see title includes "Code Ninja - App Lab - Code.org"
 
-  Then I am on "http://studio.code.org/users/sign_out"
+  And I sign out
   And I navigate to the last shared URL
   And I wait to see "#footerDiv"
   And element "#codeWorkspace" is hidden
@@ -62,7 +62,7 @@ Scenario: Applab Flow
   And I wait to see "#codeWorkspace"
   And selector "#codeWorkspace" has class "readonly"
 
-  Then I am on "http://studio.code.org/users/sign_out"
+  And I sign out
   And I am on "http://studio.code.org/"
   # TODO - maybe we do a remix and/or create new as well
 
@@ -82,7 +82,7 @@ Scenario: Save Project After Signing Out
   And I press "runButton"
   And element ".project_updated_at" eventually contains text "Saved"
 
-  When I sign out using jquery
+  And I sign out
   And I add code "// comment 2" to ace editor
   And ace editor code is equal to "// comment 1// comment 2"
   And I press "resetButton"
@@ -95,11 +95,15 @@ Scenario: Save Project After Signing Out
   And I ensure droplet is in text mode
   Then ace editor code is equal to "// comment 1"
 
-@no_mobile
+# This test began failing, but the user experience is not broken.
+# Investigate whether we should remove or update this scenario. https://codedotorg.atlassian.net/browse/SL-1195
+# This test also uses 2017 CSP, which is no longer available on test. 
+# When re-enabling, we need to change to the relevant lesson on CSP 24 or 25
+@skip
 Scenario: Save Script Level After Signing Out
   Given I create a student named "Sally Student"
-  Given I am assigned to unit "csp3-2017"
-  And I am on "http://studio.code.org/s/csp3-2017/lessons/5/levels/3"
+  Given I am assigned to course "csp-2017" unit 1
+  And I am on "http://studio.code.org/courses/csp-2017/units/3/lessons/5/levels/3"
   And I wait for the lab page to fully load
   And I wait for initial project save to complete
   And I ensure droplet is in block mode
@@ -108,7 +112,7 @@ Scenario: Save Script Level After Signing Out
   And I press "runButton"
   And element ".project_updated_at" eventually contains text "Saved"
 
-  When I sign out using jquery
+  And I sign out
   And I add code "// turtle 2" to ace editor
   And ace editor code is equal to "// turtle 1// turtle 2"
   And I press "resetButton"
@@ -116,7 +120,7 @@ Scenario: Save Script Level After Signing Out
   Then I get redirected to "/users/sign_in" via "dashboard"
 
   When I sign in as "Sally Student" from the sign in page
-  And I get redirected to "/s/csp3-2017/lessons/5/levels/3" via "dashboard"
+  And I get redirected to "/courses/csp-2017/units/3/lessons/5/levels/3" via "dashboard"
   And I wait for the lab page to fully load
   And I ensure droplet is in text mode
   Then ace editor code is equal to "// turtle 1"

@@ -1,5 +1,5 @@
-import {MetricEvent} from '@cdo/apps/lib/metrics/events';
-import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
+import {MetricEvent} from '@cdo/apps/metrics/events';
+import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
 import {StudentServerData} from './types';
@@ -85,7 +85,7 @@ export const fetchStudents = async (sectionId: number) => {
     return studentData.map(formatServerData);
   } catch (error) {
     MetricsReporter.logError({
-      event: MetricEvent.AI_TUTOR_CHAT_FETCH_FAIL,
+      event: MetricEvent.AI_TUTOR_STUDENTS_FETCH_FAIL,
       errorMessage: JSON.stringify(error),
     });
     throw error;

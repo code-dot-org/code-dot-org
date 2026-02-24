@@ -1,0 +1,30 @@
+@use '../../lab2/views/components/layout/variables.scss' as variables;
+@import '../../mixins.scss';
+
+.headerContainer {
+  height: 2.5rem;
+  border-bottom: variables.$default-border;
+}
+
+.workspaceContainer {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.editorAndPreviewContainer {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.truncateButtonText {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.aiTutorVersionContainer {
+  border-left: 1px solid var(--borders-brand-aqua-primary);
+}

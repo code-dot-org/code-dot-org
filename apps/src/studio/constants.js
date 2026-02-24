@@ -414,3 +414,12 @@ export const BEHAVIOR_GRID_ALIGNED = 'grid';
 // Take the screenshot almost immediately, hopefully catching the
 // title screen and any characters in their initial positions.
 export const CAPTURE_TICK_COUNT = 20;
+
+// Image sizes associated with K1 image field dropdowns.
+export const IMAGE_SIZES = {
+  K1_ARROW_KEY: {width: 48, height: 47},
+  K1_DIR: {width: 40, height: 40},
+  K1_EMOTIONS: {width: 34, height: 34},
+  K1_SPEEDS: {width: 88, height: 46},
+  K1_MOVE_LINE: {width: 55, height: 27},
+};

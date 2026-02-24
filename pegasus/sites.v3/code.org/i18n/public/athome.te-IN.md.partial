@@ -20,7 +20,6 @@ theme: responsive
     <li><a class="linktag" id="self-paced-nav" href="#express">ఒక పరిచయ, స్వీయ-గమన కోర్సు తీసుకోండి</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">ఒక గేమ్ లేదా యాప్ సృష్టించండి</a></li>
     <li><a class="linktag" id="unplugged-nav" href="#unplugged">కంప్యూటర్ లేకుండా CS ప్రయత్నించండి ('అన్‌ప్లగ్డ్' & మొబైల్ వికల్పాలు)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Code.org బృందం మరియు ప్రత్యేక అతిథుల నుండి CS నేర్చుకోండి</a></li>
 </ul>
 
 <br>
@@ -277,51 +276,6 @@ theme: responsive
   <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">హల్లో రూబీ</a> - కంప్యూటర్లు, టెక్నాలజీ మరియు ప్రోగ్రామింగ్ గురించి నేర్చుకోవడానికి ప్రపంచంలోనే విచిత్రమైన మార్గం. సమస్యను విడగొట్టే సామర్థ్యం, పాటర్న్‌లను గుర్తించడం, అల్గారిథమిక్‌గా ఆలోచించడం, సమస్యలను డీబగ్ చేయడం మరియు కలిసి పని చేయడం వంటి విస్తృత పరిధిలో CS అంశాల యాక్టివిటీలు. (4-10 వయస్సుల వారికి)</li>
   <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> - కార్డులు, స్ట్రింగ్, క్రేయాన్‌లు ఉపయోగించే మరియు చాలా ఉరుకులు పరుగులతో కూడిన ఆకర్షణీయమైన గేమ్స్ మరియు ఫజిల్స్ ద్వారా కంప్యూటర్ సైన్స్ నేర్పించే ఉచిత బోధన సామగ్రి కలెక్షన్. (5-14 వయస్సుల వారికి)</li>
 </ul>
-
-<h2>ఇంట్లో కంప్యూటర్ లేదా? మా భాగస్వాముల ఈ యాప్స్‌తో మీ ఫోన్‌లో CS ప్రయత్నించండి</h2>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="బాక్స్ ఐలాండ్"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">బాక్స్ ఐలాండ్</h3></a>అల్గోరిథంలు, నమూనా గుర్తింపు, సన్నివేశాలు, ఉచ్చులు మరియు షరతులు వంటి కోడింగ్ యొక్క ప్రాథమికాలను బోధించేటప్పుడు, అభ్యాసకులను ఉత్తేజకరమైన సాహసానికి తీసుకువెళ్ళే మనోహరమైన మొబైల్ కోడింగ్ గేమ్. <i>(అని వయస్సుల వారికి)</i>
-</div>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">5-9 సంవత్సరాల వయస్సు గల పిల్లల కోసం కోడ్స్పార్క్</h3></a>అవార్డు గెలుచుకున్న లెర్న్-టు-కోడ్ ప్లాట్ఫాం. కోడ్ చేయడం నేర్చుకుంటూ ద ఫూల్స్‌తో ఫజిల్స్ పరిష్కరించండి మరియు గేమ్స్ సృష్టించండి. <strong>గమనిక: codeSpark ఉచిత 3-నెలల ట్రయల్ అందిస్తున్నది. సైన్‌అప్‌లో తల్లిదండ్రుల ఇమెయిల్ అడ్రసు మరియు క్రెడిట్ కార్డు సమాచారం అవసరం.</strong> <i>(గ్రేడ్ 5 వరకు ప్రీ-రీడర్ల కోస)</i>
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[తిరిగి పై భాగానికి]</a></p>
-
-<a id="livecoding"></a>
-<h2>Code.org బృందం మరియు ప్రత్యేక అతిథుల నుండి నేర్చుకోండి!</h2>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="CodeBytes లోగో">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">కోడ్బైట్స్</h3>
-        <div class="smalltext" style="color: dimgray;">కోడ్బైట్స్ సులభంగా జీర్ణించుకోగల, కంప్యూటర్ సైన్స్ను వాస్తవ ప్రపంచ అంశాలతో మిళితం చేసే 20 నిమిషాల ఇంటరాక్టివ్ పాఠాలు. సైన్ భాషను చదవడానికి, ఖచ్చితంగా యాప్ రూపొందించడానికి, Minecraft ప్రపంచాన్ని అన్వేషించడానికి మరియు మరెన్నో చేయడానికి AI కు శిక్షణ ఇవ్వండి!</div>        <br>        <br>        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>View episodes</button></a>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="కోడ్ బ్రేక్">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">కోడ్ బ్రేక్ కోడ్ బ్రేక్ తీసుకోవడం ద్వారా కంప్యూటర్ సైన్స్ను సరదాగా</h3>
-        <div class="smalltext" style="">ఉంచండి! మీరు యాష్టన్ కుచర్‌తో సైఫర్‌ను సృష్టించవచ్చు, యారా షాహిదీతో వేరియబుల్స్ గురించి తెలుసుకోవచ్చు మరియు ఇంటర్నెట్ అసలు ఆవిష్కర్త,వింట్ సెర్ఫ్‌తో ఇంటర్నెట్ ఎలా పనిచేస్తుందో కూడా అన్వేషించవచ్చు, Vint Cerf!</div>        <br>        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>కనెక్ట్ అవ్వండి</button></a>
-    </span>
-  </div>
-</div>
-</div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 

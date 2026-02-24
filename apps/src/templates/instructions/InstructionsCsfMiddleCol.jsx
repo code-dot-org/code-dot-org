@@ -1,3 +1,4 @@
+import Button, {buttonColors} from '@code-dot-org/component-library/button';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -6,7 +7,6 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 
 import color from '../../util/color';
-import LegacyButton from '../LegacyButton';
 import SafeMarkdown from '../SafeMarkdown';
 
 import ChatBubble from './ChatBubble';
@@ -173,9 +173,14 @@ class InstructionsCsfMiddleCol extends React.Component {
           {this.props.overlayVisible && (
             <div>
               <hr />
-              <LegacyButton type="primary" onClick={this.closeOverlay}>
-                {i18n.dialogOK()}
-              </LegacyButton>
+              <Button
+                color={buttonColors.purple}
+                text={i18n.dialogOK()}
+                onClick={this.closeOverlay}
+                size="m"
+                type="primary"
+                aria-label={i18n.dialogOK()}
+              />
             </div>
           )}
         </ChatBubble>

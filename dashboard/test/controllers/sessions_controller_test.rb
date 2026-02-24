@@ -6,9 +6,6 @@ class SessionsControllerTest < ActionController::TestCase
 
   setup do
     @request.env["devise.mapping"] = Devise.mappings[:user]
-    Cpa.stubs(:cpa_experience).
-      with(any_parameters).
-      returns(Cpa::NEW_USER_LOCKOUT)
   end
 
   test 'login error derives locale from cdo.locale' do
@@ -20,30 +17,14 @@ class SessionsControllerTest < ActionController::TestCase
 
   test "teachers go to homepage after signing in" do
     teacher = create(:teacher)
-
-    post :create, params: {
-      user: {
-        login: '',
-        hashed_email: teacher.hashed_email,
-        password: teacher.password
-      }
-    }
-
+    create_session_for_user(teacher)
     assert_signed_in_as teacher
     assert_redirected_to '/home'
   end
 
   test "students go to learn homepage after signing in" do
     student = create(:student)
-
-    post :create, params: {
-      user: {
-        login: '',
-        hashed_email: student.hashed_email,
-        password: student.password
-      }
-    }
-
+    create_session_for_user(student)
     assert_signed_in_as student
     assert_redirected_to '/'
   end
@@ -72,17 +53,8 @@ class SessionsControllerTest < ActionController::TestCase
 
   test "teachers go to specified return to url after signing in" do
     teacher = create(:teacher)
-
     session[:user_return_to] = user_return_to = '//test.code.org/the-return-to-url'
-
-    post :create, params: {
-      user: {
-        login: '',
-        hashed_email: teacher.hashed_email,
-        password: teacher.password
-      }
-    }
-
+    create_session_for_user(teacher)
     assert_signed_in_as teacher
     assert_redirected_to user_return_to
   end
@@ -100,32 +72,15 @@ class SessionsControllerTest < ActionController::TestCase
 
   test 'signing in as student via hashed_email' do
     student = create(:student, birthday: Date.new(2010, 1, 3), email: 'my@email.xx')
-
-    post :create, params: {
-      user: {
-        login: '',
-        hashed_email: student.hashed_email,
-        password: student.password
-      }
-    }
-
+    create_session_for_user(student)
     assert_signed_in_as student
     assert_redirected_to '/'
   end
 
   test 'signing in new user creates blank UserGeo' do
     user = create(:user)
-
     assert UserGeo.find_by_user_id(user.id).nil?
-
-    post :create, params: {
-      user: {
-        login: '',
-        hashed_email: user.hashed_email,
-        password: user.password
-      }
-    }
-
+    create_session_for_user(user)
     assert UserGeo.find_by_user_id(user.id)
   end
 
@@ -134,13 +89,7 @@ class SessionsControllerTest < ActionController::TestCase
     UserGeo.create(user_id: user.id, ip_address: '127.0.0.1')
 
     assert_no_change('UserGeo.find_by_user_id(user.id)') do
-      post :create, params: {
-        user: {
-          login: '',
-          hashed_email: user.hashed_email,
-          password: user.password
-        }
-      }
+      create_session_for_user(user)
     end
 
     assert_equal 1, UserGeo.count
@@ -163,15 +112,9 @@ class SessionsControllerTest < ActionController::TestCase
   test 'signing in user creates SignIn' do
     frozen_time = Date.parse('1985-10-26 01:20:00')
     DateTime.stubs(:now).returns(frozen_time)
-    user = create :user, sign_in_count: 2
+    user = create(:user, sign_in_count: 2)
     assert_creates(SignIn) do
-      post :create, params: {
-        user: {
-          login: '',
-          hashed_email: user.hashed_email,
-          password: user.password
-        }
-      }
+      create_session_for_user(user)
     end
     sign_in = SignIn.find_by_user_id(user.id)
     assert sign_in
@@ -180,7 +123,7 @@ class SessionsControllerTest < ActionController::TestCase
   end
 
   test 'failed signin does not create SignIn' do
-    user = create :user
+    user = create(:user)
     assert_does_not_create(SignIn) do
       post :create, params: {
         user: {
@@ -225,15 +168,6 @@ class SessionsControllerTest < ActionController::TestCase
     assert_redirected_to '/oauth_sign_out/migrated'
   end
 
-  test "microsoft account users go to generic oauth sign out page after logging out" do
-    student = create(:student, provider: :windowslive)
-    sign_in student
-
-    delete :destroy
-
-    assert_redirected_to '/oauth_sign_out/migrated'
-  end
-
   test "oauth sign out page for facebook" do
     get :oauth_sign_out, params: {provider: 'facebook'}
     assert_select 'a[href="https://www.facebook.com/logout.php"]'
@@ -246,37 +180,15 @@ class SessionsControllerTest < ActionController::TestCase
     assert_select 'h4', 'You used Google to sign in. Click here to sign out of Google.'
   end
 
-  test "oauth sign out page for microsoft account" do
-    get :oauth_sign_out, params: {provider: 'windowslive'}
-    assert_select 'a[href="http://login.live.com/logout.srf"]'
-    assert_select 'h4', 'You used Microsoft to sign in. Click here to sign out of Microsoft.'
-  end
-
   test "deleted user cannot sign in" do
     teacher = create(:teacher, :deleted)
-
-    post :create, params: {
-      user: {
-        login: '',
-        hashed_email: teacher.hashed_email,
-        password: teacher.password
-      }
-    }
-
+    create_session_for_user(teacher)
     assert_signed_in_as nil
   end
 
   test "session cookie set if remember me not checked" do
     teacher = create(:teacher)
-
-    post :create, params: {
-      user: {
-        login: '',
-        hashed_email: teacher.hashed_email,
-        password: teacher.password
-      }
-    }
-
+    create_session_for_user(teacher)
     assert_nil @response.cookies["remember_user_token"]
   end
 
@@ -295,26 +207,38 @@ class SessionsControllerTest < ActionController::TestCase
     assert @response.cookies["remember_user_token"]
   end
 
+  test "session can be expired" do
+    teacher = create(:teacher)
+    create_session_for_user(teacher)
+    original_id = session.id.dup
+
+    post :expire_other
+    refute_equal session.id, original_id
+  end
+
+  test "misc session data will be preserved through expiration" do
+    teacher = create(:teacher)
+    create_session_for_user(teacher)
+    # User-identifying data will NOT be preserved.
+    session[:_csrf_token] = "baz"
+    session[:foo] = "bar"
+
+    post :expire_other
+    refute_equal session[:_csrf_token], "baz"
+    assert_equal session[:foo], "bar"
+  end
+
   class LtiAccountLinkingSignInPageTest < ActionDispatch::IntegrationTest
     test 'renders alternative account linking login page during LTI registration' do
       DCDO.stubs(:get)
-      DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
       Policies::Lti.stubs(:lti_registration_in_progress?).returns(true)
 
       get user_session_path
       assert_template partial: 'devise/sessions/_login_lti_account_linking'
     end
 
-    test 'renders normal login page if the account linking DCDO flag is disabled' do
-      Policies::Lti.stubs(:lti_registration_in_progress?).returns(true)
-
-      get user_session_path
-      assert_template partial: 'devise/sessions/_login'
-    end
-
     test 'renders normal login page for non-LTI/non-partial registrations' do
       DCDO.stubs(:get)
-      DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
       Policies::Lti.stubs(:lti_registration_in_progress?).returns(false)
 
       get user_session_path
@@ -333,7 +257,7 @@ class SessionsControllerTest < ActionController::TestCase
 
     before do
       Policies::ChildAccount::ComplianceState.stubs(:locked_out?).with(user).returns(user_is_locked_out)
-      user.update(child_account_compliance_lock_out_date: DateTime.now)
+      user.update(cap_status_date: DateTime.now)
 
       sign_in user
     end
@@ -350,7 +274,7 @@ class SessionsControllerTest < ActionController::TestCase
 
     it 'assigns @delete_date with 7 day after user lockout date' do
       get :lockout
-      _(assigns[:delete_date]).must_equal DateTime.parse(user.child_account_compliance_lock_out_date).since(7.days)
+      _(assigns[:delete_date]).must_equal user.cap_status_date.since(7.days)
     end
 
     it 'renders lockout page' do
@@ -407,5 +331,16 @@ class SessionsControllerTest < ActionController::TestCase
         _(assigns[:disallowed_email]).must_equal User.hash_email(user_email)
       end
     end
+  end
+
+  # Simple helper method to sign the specified user in using email plus password
+  private def create_session_for_user(user)
+    post :create, params: {
+      user: {
+        login: '',
+        hashed_email: user.hashed_email,
+        password: user.password
+      }
+    }
   end
 end

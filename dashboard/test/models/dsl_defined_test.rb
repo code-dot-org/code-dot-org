@@ -2,9 +2,7 @@ require 'test_helper'
 
 class DSLDefinedLevelTest < ActiveSupport::TestCase
   test 'localized_property defaults to property' do
-    level = create :match, properties: {
-      answers: [{text: "one"}, {text: "two"}, {text: "three"}]
-    }
+    level = create(:match, properties: {answers: [{text: "one"}, {text: "two"}, {text: "three"}]})
 
     # Note that we expect the answers to use string keys, even though it was
     # initialized with symbols
@@ -28,9 +26,11 @@ class DSLDefinedLevelTest < ActiveSupport::TestCase
     }
     I18n.backend.store_translations test_locale, custom_i18n
 
-    level = create :match, name: "Test DSLDefined", properties: {
-      answers: [{text: "one"}, {text: "two"}, {text: "three"}]
-    }
+    level = create(
+      :match,
+      name: "Test DSLDefined",
+      properties: {answers: [{text: "one"}, {text: "two"}, {text: "three"}]}
+    )
 
     # Note that we again expect string keys
     expected = [{'text' => "un"}, {'text' => "deux"}, {'text' => "troi"}]
@@ -51,9 +51,11 @@ class DSLDefinedLevelTest < ActiveSupport::TestCase
     }
     I18n.backend.store_translations test_locale, custom_i18n
 
-    level = create :match, name: "Test DSLDefined", properties: {
-      answers: [{text: "one"}, {text: "two"}, {text: "three"}]
-    }
+    level = create(
+      :match,
+      name: "Test DSLDefined",
+      properties: {answers: [{text: "one"}, {text: "two"}, {text: "three"}]}
+    )
 
     # Note that we again expect string keys
     expected = [{'text' => "un"}, {'text' => "two"}, {'text' => "three"}]
@@ -62,9 +64,11 @@ class DSLDefinedLevelTest < ActiveSupport::TestCase
 
   test 'cannot create level with default name' do
     e = assert_raises do
-      create :match, name: 'unique level name here', properties: {
-        answers: [{text: "one"}, {text: "two"}, {text: "three"}]
-      }
+      create(
+        :match,
+        name: 'unique level name here',
+        properties: {answers: [{text: "one"}, {text: "two"}, {text: "three"}]}
+      )
     end
     assert_includes(e.message, 'Name cannot be the default level name')
   end

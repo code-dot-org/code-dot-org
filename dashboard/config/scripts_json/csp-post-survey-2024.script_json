@@ -4,14 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSP",
       "hideable_lessons": true,
       "is_migrated": true,
+      "topic_tags": [
+        "survey"
+      ],
       "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-11 16:55:29 UTC",
+    "serialized_at": "2024-11-19 01:17:12 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

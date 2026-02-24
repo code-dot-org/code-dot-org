@@ -85,7 +85,7 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "start_blocks": "var bee = createSprite(200,200);\r\nbee.setAnimation(\"bee\");\r\nbee.x = 350;\r\nbee.y = 350;\r\ndrawSprites();",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"3b12495c-d82e-409f-b969-09a5a41585ca\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"3b12495c-d82e-409f-b969-09a5a41585ca\": {\r\n      \"name\": \"bee\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/Cjcw5kJ4JMlZgeyhfWNDnFnLbrFmrEwR/category_animals/bee.png\",\r\n      \"frameSize\": {\r\n        \"x\": 63,\r\n        \"y\": 50\r\n      },\r\n      \"frameCount\": 2,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"Cjcw5kJ4JMlZgeyhfWNDnFnLbrFmrEwR\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\n  \"orderedKeys\": [\n    \"3b12495c-d82e-409f-b969-09a5a41585ca\"\n  ],\n  \"propsByKey\": {\n    \"3b12495c-d82e-409f-b969-09a5a41585ca\": {\n      \"name\": \"bee\",\n      \"sourceUrl\": \"/api/v1/animation-library/Cjcw5kJ4JMlZgeyhfWNDnFnLbrFmrEwR/category_animals/bee.png\",\n      \"frameSize\": {\n        \"x\": 63,\n        \"y\": 50\n      },\n      \"frameCount\": 2,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"Cjcw5kJ4JMlZgeyhfWNDnFnLbrFmrEwR\"\n    }\n  }\n}",
     "contained_level_names": [
       "CSD Games Properties multi predict_2023"
     ],

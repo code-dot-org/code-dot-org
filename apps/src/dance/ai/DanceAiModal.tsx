@@ -1,14 +1,15 @@
-import {FieldDropdown, Workspace} from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import color from '@cdo/apps/util/color';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useInterval} from '@cdo/apps/util/useInterval';
 import inputLibraryJson from '@cdo/static/dance/ai/ai-inputs.json';
 import aiBotBodyNormal from '@cdo/static/dance/ai/bot/ai-bot-body-normal.png';
 import aiBotBodyThink0 from '@cdo/static/dance/ai/bot/ai-bot-body-think0.png';
@@ -61,7 +62,6 @@ import {
   getPreviewCode,
   getRangeArray,
   lerp,
-  useInterval,
 } from './utils';
 
 import moduleStyles from './dance-ai-modal.module.scss';
@@ -271,17 +271,17 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   }, [currentAiModalField, mode, calculateMinMax]);
 
   const labels = useMemo(() => {
-    const tempWorkspace = new Workspace();
+    const tempWorkspace = new BlocklyCore.Workspace();
     const blocksSvg = generateAiEffectBlocks(tempWorkspace);
 
     const foregroundLabels = getLabelMap(
-      blocksSvg[0].getField('EFFECT') as FieldDropdown
+      blocksSvg[0].getField('EFFECT') as BlocklyCore.FieldDropdown
     );
     const backgroundLabels = getLabelMap(
-      blocksSvg[1].getField('EFFECT') as FieldDropdown
+      blocksSvg[1].getField('EFFECT') as BlocklyCore.FieldDropdown
     );
     const paletteLabels = getLabelMap(
-      blocksSvg[1].getField('PALETTE') as FieldDropdown
+      blocksSvg[1].getField('PALETTE') as BlocklyCore.FieldDropdown
     );
 
     tempWorkspace.dispose();

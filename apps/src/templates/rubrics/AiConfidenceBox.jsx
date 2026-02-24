@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React, {useMemo} from 'react';
 import ReactTooltip from 'react-tooltip';
 
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import i18n from '@cdo/locale';
 
 import style from './rubrics.module.scss';

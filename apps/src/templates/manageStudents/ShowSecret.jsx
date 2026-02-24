@@ -5,8 +5,6 @@ import {connect} from 'react-redux';
 import ReactTooltip from 'react-tooltip';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -16,7 +14,7 @@ class ShowSecret extends Component {
   static propTypes = {
     initialIsShowing: PropTypes.bool,
     secretWord: PropTypes.string,
-    secretPicture: PropTypes.string,
+    secretPictureUrl: PropTypes.string,
     loginType: PropTypes.string.isRequired,
     id: PropTypes.number.isRequired,
     sectionId: PropTypes.number.isRequired,
@@ -32,47 +30,18 @@ class ShowSecret extends Component {
   };
 
   show = () => {
-    const {sectionId, id, loginType} = this.props;
     this.setState({
       isShowing: true,
     });
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-dashboard',
-        study_group: 'manage-students',
-        event: 'show-secret',
-        data_json: JSON.stringify({
-          sectionId: sectionId,
-          studentId: id,
-          loginType: loginType,
-        }),
-      },
-      {includeUserId: true}
-    );
   };
 
   hide = () => {
-    const {sectionId, id, loginType} = this.props;
     this.setState({
       isShowing: false,
     });
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-dashboard',
-        study_group: 'manage-students',
-        event: 'hide-secret',
-        data_json: JSON.stringify({
-          sectionId: sectionId,
-          studentId: id,
-          loginType: loginType,
-        }),
-      },
-      {includeUserId: true}
-    );
   };
 
   reset = () => {
-    const {sectionId, id, loginType} = this.props;
     const dataToUpdate = {
       secrets: 'reset_secrets',
       student: {id: this.props.id},
@@ -86,23 +55,10 @@ class ShowSecret extends Component {
     })
       .done(data => {
         if (this.props.loginType === SectionLoginType.picture) {
-          this.props.setSecretImage(this.props.id, data.secret_picture_path);
+          this.props.setSecretImage(this.props.id, data.secret_picture_url);
         } else if (this.props.loginType === SectionLoginType.word) {
           this.props.setSecretWords(this.props.id, data.secret_words);
         }
-        firehoseClient.putRecord(
-          {
-            study: 'teacher-dashboard',
-            study_group: 'manage-students',
-            event: 'reset-secret',
-            data_json: JSON.stringify({
-              sectionId: sectionId,
-              studentId: id,
-              loginType: loginType,
-            }),
-          },
-          {includeUserId: true}
-        );
       })
       .fail((jqXhr, status) => {
         // We may want to handle this more cleanly in the future, but for now this
@@ -150,7 +106,7 @@ class ShowSecret extends Component {
               // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
               // Verify or update this alt-text as necessary
               <img
-                src={pegasus('/images/' + this.props.secretPicture)}
+                src={this.props.secretPictureUrl}
                 style={styles.image}
                 alt=""
               />

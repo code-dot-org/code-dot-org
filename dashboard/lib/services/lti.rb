@@ -13,14 +13,12 @@ module Services
       user = ::User.new
       user.provider = ::User::PROVIDER_MIGRATED
       user.user_type = user_type
-      if user_type == ::User::TYPE_TEACHER
+      if user.teacher?
         user.age = '21+'
-        user.name = get_claim_from_list(id_token, Policies::Lti::TEACHER_NAME_KEYS)
         user.lti_roster_sync_enabled = true
-      else
-        user.name = get_claim_from_list(id_token, Policies::Lti::STUDENT_NAME_KEYS)
-        user.family_name = get_claim(id_token, :family_name)
       end
+      assign_user_name(user, id_token)
+
       ao = AuthenticationOption.new(
         authentication_id: Services::Lti::AuthIdGenerator.new(id_token).call,
         credential_type: AuthenticationOption::LTI_V1,
@@ -32,7 +30,7 @@ module Services
     end
 
     def self.create_lti_user_identity(user)
-      auth_option = user.authentication_options.find(&:lti?)
+      auth_option = user.authentication_options.order(created_at: :desc).find_by(credential_type: AuthenticationOption::LTI_V1)
       issuer, client_id, subject = auth_option.authentication_id.split('|')
       lti_integration = Queries::Lti.get_lti_integration(issuer, client_id)
       LtiUserIdentity.create!(user: user, subject: subject, lti_integration: lti_integration)
@@ -60,10 +58,11 @@ module Services
       )
     end
 
-    def self.create_lti_deployment(integration_id, deployment_id)
+    def self.create_lti_deployment(integration_id, deployment_id, deployment_name)
       LtiDeployment.create(
         lti_integration_id: integration_id,
         deployment_id: deployment_id,
+        name: deployment_name,
       )
     end
 
@@ -84,11 +83,16 @@ module Services
     end
 
     def self.lti_user_type(current_user, lti_integration, nrps_section)
-      lti_user_id = Queries::Lti.lti_user_id(current_user, lti_integration)
-      member_roles = lti_user_roles(nrps_section, lti_user_id)
+      lti_user_ids = Queries::Lti.lti_user_ids(current_user, lti_integration)
 
-      if Policies::Lti.lti_teacher?(member_roles)
-        return ::User::TYPE_TEACHER
+      return ::User::TYPE_STUDENT unless lti_user_ids
+
+      # Check if any of the user's LTI IDs have teacher roles
+      lti_user_ids.each do |lti_user_id|
+        member_roles = lti_user_roles(nrps_section, lti_user_id)
+        if Policies::Lti.lti_teacher?(member_roles)
+          return ::User::TYPE_TEACHER
+        end
       end
 
       return ::User::TYPE_STUDENT
@@ -101,14 +105,16 @@ module Services
 
       user = ::User.new
       user.provider = ::User::PROVIDER_MIGRATED
+      user.roster_synced = true
       user.name = get_claim_from_list(nrps_member_message, Policies::Lti::STUDENT_NAME_KEYS)
+      user.family_name = get_claim(nrps_member_message, :family_name)
 
       if account_type == ::User::TYPE_TEACHER && email_address.present?
         user.user_type = ::User::TYPE_TEACHER
+        user.given_name = get_claim(nrps_member_message, :given_name)
         user.lti_roster_sync_enabled = true
       else
         user.user_type = ::User::TYPE_STUDENT
-        user.family_name = get_claim(nrps_member_message, :family_name)
       end
 
       id_token = {
@@ -122,8 +128,6 @@ module Services
         email: email_address,
         )
       user.authentication_options = [ao]
-      user.primary_contact_info = ao
-      # TODO As final step of the LTI user creation, create LtiUserIdentity for the new user. https://codedotorg.atlassian.net/browse/P20-788
       user
     end
 
@@ -191,8 +195,32 @@ module Services
           issuer: issuer,
           nrps_member: nrps_member
         )
-        had_changes ||= (user.new_record? || user.changed?)
+        user_was_new = user.new_record?
+
+        # Update name if different from the NRPS response
+        unless user_was_new
+          nrps_member_message = Policies::Lti.issuer_accepts_resource_link?(issuer) ? nrps_member[:message].first : nrps_member
+          assign_user_name(user, nrps_member_message)
+        end
+
+        had_changes ||= (user_was_new || user.changed?)
         user.save!
+        if user_was_new
+          lti_user_identity = Queries::Lti.lti_user_identity(user, lti_integration)
+          deployment = lti_section.lti_course&.lti_deployment
+          unless deployment&.lti_user_identities&.include?(lti_user_identity)
+            deployment.lti_user_identities << lti_user_identity
+          end
+
+          Metrics::Events.log_event(
+            user: user,
+            event_name: 'lti_user_created',
+            metadata: {
+              lms_name: lti_integration[:platform_name],
+              context: 'roster_sync'
+            }
+          )
+        end
         if account_type == ::User::TYPE_TEACHER
           # Skip adding the instructor and reporting changes if the user is already an instructor
           unless section.instructors.include?(user)
@@ -228,6 +256,9 @@ module Services
           had_changes = true
         end
       end
+
+      # Unarchive archived sections, even if there are no changes
+      section.update(hidden: false) if section.hidden
 
       {
         had_changes: had_changes,
@@ -306,6 +337,16 @@ module Services
         new_cta_type: new_cta_type,
         user_type: user_type,
       }
+    end
+
+    def self.assign_user_name(user, nrps_member)
+      if user.teacher?
+        user.given_name = get_claim(nrps_member, :given_name)
+        user.name = get_claim_from_list(nrps_member, Policies::Lti::TEACHER_NAME_KEYS)
+      else
+        user.name = get_claim_from_list(nrps_member, Policies::Lti::STUDENT_NAME_KEYS)
+      end
+      user.family_name = get_claim(nrps_member, :family_name)
     end
   end
 end

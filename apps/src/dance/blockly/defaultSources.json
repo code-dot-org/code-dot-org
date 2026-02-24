@@ -1,0 +1,14 @@
+{
+  "source": {
+    "blocks": {
+      "blocks": [
+        {
+          "id": "when-run-block",
+          "type": "Dancelab_whenRun",
+          "deletable": false,
+          "movable": false
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,9 @@
+name 'CSA U4L2-L6_alt_2025-cb-alt'
+display_name 'Practice: Using Static Variables'
+description 'Use a static variable to declare and initialize a shared value for different types of objects.'
+
+sublevels
+level 'CSA U4L2-L6a_alt_2025-cb-alt'
+level 'CSA U4L2-L6b_alt_2025-cb-alt'
+level 'CSA U4L2-L6c_alt_2025-cb-alt'
+level 'CSA U4L2-L6d_alt_2025-cb-alt'

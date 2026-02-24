@@ -1,0 +1,8 @@
+name 'programming-fundamentals-lesson15-level10_v2-2025'
+display_name 'Variables Practice'
+description 'Pick one of the levels below. Use variables to store data and update their value. Then print out the result.'
+
+sublevels
+level 'programming-fundamentals-lesson15-level10a_v2-2025'
+level 'programming-fundamentals-lesson15-level10b_v2-2025'
+level 'programming-fundamentals-lesson15-level10c_v2-2025'

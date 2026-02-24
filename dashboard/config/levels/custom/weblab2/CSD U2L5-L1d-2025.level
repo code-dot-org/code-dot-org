@@ -1,0 +1,52 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-01-06T20:25:03.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Debug: Headings",
+    "long_instructions": "# Debug: Headings\r\n\r\nThere are a few issues with this page's headings. Can you fix them?\r\n\r\n# Do This\r\n1) Fix all of the pink errors.\r\n- Adjust the heading tags to be the appropriate size, if necessary.\r\n",
+    "bubble_choice_description": "Fix the bugs caused by incorrect heading tags.",
+    "thumbnail_url": "https://images.code.org/9f4b35dc417ddb274faab244187edf9c-image-1585676309512.png",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html> \n<html>\n  <head>\n  </head>\n  <body>\n    <h1>Styles of Dance</h3>\n    <p>This page will explain a few of the different ways that people dance.</p>\n    <h3>Ballet</h1>\n    <p>Ballets are often accompanied by music, like The Nutcracker. Ballet dancers practice using something called a bar, which they may rest their hand on while practicing their leg movements. One common misconception is that ballet is only for women, there are many successful male ballet dancers.</p>\n    <h1>B-Boying (Break Dancing)</h3>\n    <p>B-boying was created by African American youth in the 1970s and became one of the four key elements of hip hop, alongside rapping, DJing, and graffiti.</p>\n    <h3>Modern Dance</h3>\n    <p>Despite the name, modern dance is just a name for dance that embraces free movement, as opposed to the strictly defined kind of movement common in ballet.</p>\n  </body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMrWt2HFvH/UaEd1Aw6m\nH7NPCh2Lr52063tDqEoStRSedn5LQYmzKopHnMdxEddzMa1ry9pfnBII8zb7\nMD3Gw+QxEX86iJuKhBFDqXvjC26WIR0dnDES221G1n9EocbLnjYEX2rqV9kb\nX9iRglIeF9zLtjQmbBZEG2kuKruS5HJwBLkmq34JrMvB1Xk/AgC/w1o4FPzS\nd4+tSCsM04tIELNsjfPuWOXBTiaKhjpHFIaE7/1CEby96wYwL0FhSvYdZekR\nTXn/HKw2OZEq/3PAhkEJ1GuNWYTgHxhJppV2m1gtSS44FLkc4i9N2UWnGJJ9\nJg6YWEKdiNGvZsjmHibSz+PnjoHIIeAep08XQ3uOYV5IYdNJqzg0FsOYOO02\nRZKd3im1IBsoY3VOJkPIYfDjkinAhAGNZYcIBU83RExeP9v2N7CMcftT2JJJ\nUQLjXWoX1GMafwU5ooQ7t9Zhs/y5XHx6Lgl9eH/nFphaWkc9lO0G3UhmBNId\nBZmtDV5Gx5JmCMXRxdoMTFw1lN8+zhIxJ3qv4tTuC4T90A5oHpYpThDsy8Vc\neT7TacJxarOm95hkgSCRmQ6V+kXTYgufXEt2yBNyyE5lTLcMd2tn37UAq6rQ\n8IMqWShCDlnZN4oTn0PbKPsjAGQDrbPDskDZ2Wd+vc+UkytGNyVcV8Xo7fNv\n65Qaknux9KMpjsB5UI3/KZOePra7vcy+q/mBlBuBwgOpKGqcUEu6rDb4dJj8\nWNQFRTlqSG319k1ygG80L+igKXmEY0pCeezF/yqUraM2lM+eLwSgiqSzQYIL\nM1P8n0cv7Dv6p+c5p7J+RyACNrYTHCyNX37JZZgdp8smCk3jwCleA3DwKZJO\nPrD5Dbu9Y57aHuSu86huIWqpzR3eGpenoxGlSZcgcuQQvl7rXkkPJpBaHLnP\nw2hVxH8YlsdeCM+d3GY1z1zr2uroch+RRmZRbGnh3hoqqQZHnXDHista0aNe\noxdXTSq96o4b2ezyNsT6RxR2Cm0e/i7IvDlSXafTrb4qhLxE6q04og6pV11J\naigzlnm5kF+eqSYF2xGHj8w8ijLeoj3VbLR8Ch3nRubPIU/AhXPjvnvxWIOc\nkgV2HzH7MHMe+CSPEMIu8grYAwfT5h3/2H0TlHIgJppnGEH4EJ+rgvsL+aDC\nuZZiRYKN7N95Kz9wP8R93JDQL81N4YpHeDOtnvlS9wIaoJdQ2TDT+zjMc4sN\nN2844X2LYFanNmUWHvX/ro5fZ6dzw95yRRmhdkd23fCTgVD6KsLVTIozoL6Y\nT4UoHfWnKomAuGOMrU/nNI/1HIy4LXYNmXgMnc3OeEzO3cTQbwrMNs6lnlDu\ng5tClRnZEKWy6eElarC4TnIGvpbWFOHtdLXLcxIHBwSgr8EdrQVJZCyQOxnI\ndNog8LcSwbBL8EW3d242JcHRyd67AlKk\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-01-06 20:25:18 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-06 20:25:36 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

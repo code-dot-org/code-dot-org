@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-05-04T01:21:11.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "title": "Wrap Up: Ethical Checkpoint",
+    "long_instructions": "<br/>\r\n\r\nWhen Dustin celebrates Thanksgiving, his family gathers with the Yaqui elders in his community and they cook **masa**, **polenta**, and **squash**. But when Dustin asks a chatbot for common Thanksgiving recipes, it only suggests **turkey**, **stuffing**, and **cranberry sauce**, which are none of the meals he's familiar with.\r\n\r\nAn AI Auditor reviewed this response and said it showed some bias, using the checklist below:\r\n\r\n* Relied on a stereotype\r\n*  Assumed one identity\r\n*  Left out other perspectives\r\n*  Language didn't feel inclusive\r\n\r\n\r\n---\r\n\r\n**Do This**:\r\n\r\n1. Which checklist items apply to the chatbot's response?\r\n2. Explain your thinking.\r\n3. How could the AI be improved to better reflect Dustin's experience?\r\n\t* **Sentence Starter**: One part of the checklist that applies is \\_\\_\\_\\_, because \\_\\_\\_\\_. To improve the response, the AI could \\_\\_\\_\\_.\r\n\r\n",
+    "stay_on_level_after_submit": "false",
+    "height": "400",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-04 01:21:14 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-05-04 01:22:24 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-05-04 01:25:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-05-04 01:26:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-05-04 01:26:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-05-04 01:26:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-05-04 01:31:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-05-04 01:31:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-05-29 13:01:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-05-29 13:04:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-05-29 13:04:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

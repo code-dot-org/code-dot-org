@@ -25,9 +25,9 @@ export default class ProjectCardRow extends React.Component {
 
   render() {
     return (
-      <div style={styles.row}>
+      <div role="list" style={styles.row}>
         {this.props.projects.map(project => (
-          <div key={project.channel} style={styles.card}>
+          <div role="listitem" key={project.channel} style={styles.card}>
             <ProjectCard
               projectData={project}
               showFullThumbnail={this.props.showFullThumbnail}

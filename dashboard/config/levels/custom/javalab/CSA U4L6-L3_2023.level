@@ -20,7 +20,7 @@
     },
     "project_template_level_name": "CSA U4L6-Aliases PBT_2023",
     "teacher_markdown": "`secondEvent` is an object reference variable that points to the same object as `firstEvent`. Therefore, this statement will also evaluate to `false`.",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-02-17T18:44:50.334+00:00\",\"changed\":[\"cloned from \\\"CSA U4L6-L2_2023\\\"\"],\"cloned_from\":\"CSA U4L6-L2_2023\"},{\"changed_at\":\"2023-02-17 18:44:51 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-07 18:38:28 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-07 18:43:37 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

@@ -9,7 +9,7 @@ SURVEY_YEAR_HEADER = '2022-23'.freeze
 LAST_SURVEY_YEAR = '2021-2022'.freeze
 
 # Override for the dry run variable using an commandline argument
-DRY_RUN = !((ARGV.find {|arg| arg.casecmp('-dryrun')}).nil?)
+DRY_RUN = !(ARGV.find {|arg| arg.casecmp('-dryrun')}).nil?
 
 VIRTUAL_SCHOOL_MAP = {
   'Full Virtual' => 'Yes',

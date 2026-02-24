@@ -223,7 +223,7 @@ class Foorm::Form < ApplicationRecord
   def submissions_to_csv(submissions_to_report = nil)
     calculated_readable_questions = readable_questions
     headers = calculated_readable_questions[:general]
-    has_facilitator_questions = !(calculated_readable_questions[:facilitator].nil_or_empty?)
+    has_facilitator_questions = !calculated_readable_questions[:facilitator].nil_or_empty?
     filtered_submissions = submissions_to_report || submissions
 
     if has_facilitator_questions

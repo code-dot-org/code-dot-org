@@ -10,7 +10,7 @@ class Policies::ScriptActivity
   def self.can_view_congrats_page?(user, script)
     return false unless script
 
-    return true if script.hoc?
+    return true if script.hoc_or_hoai?
     return true if script.csf?
     return true if script.csc?
 

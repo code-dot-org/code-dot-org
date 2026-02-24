@@ -98,8 +98,8 @@ Level 10 [free play]
 */ -%>
 <xml id="toolbox" style="display: none;">
   <% if (page === 1) { -%>
-    <block type="draw_move_by_constant"></block>
-    <block type="draw_turn_by_constant<% if (level <= 8) { %>_restricted<% } %>">
+    <block type="draw_move_by_constant" id="moveForward"></block>
+    <block type="draw_turn_by_constant<% if (level <= 8) { %>_restricted<% } %>" id="turnRight">
       <title name="VALUE">90</title>
     </block>
     <% if (level >= 2) { -%>

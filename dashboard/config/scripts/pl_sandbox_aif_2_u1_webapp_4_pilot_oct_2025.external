@@ -1,0 +1,79 @@
+name 'pl_sandbox_aif_2_U1-webapp_4_pilot-oct-2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# What is a Web App?
+
+#### A **web app (web application)** is a program that runs in a web browser—like Chrome, Safari, or Edge—instead of being installed on your computer or phone. It combines web technologies such as HTML, CSS, and JavaScript to create an interactive experience for users.
+
+
+#### Whereas a **website** usually displays static information (like an online brochure or article), a web app lets users do something—such as submit a form, play a game, generate text with AI, or draw on a canvas.
+
+___
+
+<div style="display: flex; justify-content: space-between; width: 95%; margin: 20pt auto; padding: 0 5px;">
+
+  <img src="https://images.code.org/f717660937a4dfe9e5ee5c26c2559e84-image-1760984133668.png" alt ="gmail logo" style="border-radius: 5pt; width: 32%;">
+    <img src="https://images.code.org/1c777228b8b20369dbbd4bdc9c541b32-image-1760984038365.png" alt= "netflix logo" style="border-radius: 5pt; width: 32%;">
+  <img src="https://images.code.org/ddaccf7331f24af662dd70608194f8ae-image-1760984217033.png" alt="amazon logo" style="border-radius: 5pt; width: 32%;">
+</div>
+
+___
+
+## Key Components
+
+#### A web app is built using three core web technologies, and students can now use AI tools to assist in their development process.
+
+<!-- Web Development Concepts Cards -->
+<div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; max-width: 1200px; margin: auto;">
+
+  <!-- HTML Card -->
+  <div style="flex: 1 1 250px; background: #f2f4f7; border-radius: 14px; box-shadow: 0 6px 16px rgba(0,0,0,0.08); padding: 18px 20px; display: flex; flex-direction: column; align-items: center; text-align: left;">
+    <img src="https://emojiapi.dev/api/v1/building_construction/128.png" alt="Construction Emoji" style="width: 50px; height: 50px; margin-bottom: 10px;">
+    <h3 style="margin: 0 0 10px 0; font-weight: bold; text-align: center; font-size: 1.1rem; line-height: 1.3;">HTML (Structure)</h3>
+    <p style="margin: 0; font-size: 1rem; line-height: 1.5;">Builds the structure — like the bones of the app.</p>
+  </div>
+
+  <!-- CSS Card -->
+  <div style="flex: 1 1 250px; background: #f2f4f7; border-radius: 14px; box-shadow: 0 6px 16px rgba(0,0,0,0.08); padding: 18px 20px; display: flex; flex-direction: column; align-items: center; text-align: left;">
+    <img src="https://emojiapi.dev/api/v1/artist_palette/128.png" alt="Art Emoji" style="width: 50px; height: 50px; margin-bottom: 10px;">
+    <h3 style="margin: 0 0 10px 0; font-weight: bold; text-align: center; font-size: 1.1rem; line-height: 1.3;">CSS (Style)</h3>
+    <p style="margin: 0; font-size: 1rem; line-height: 1.5;">Styles the page — like the paint, colors, and layout.</p>
+  </div>
+
+  <!-- JavaScript Card -->
+  <div style="flex: 1 1 250px; background: #f2f4f7; border-radius: 14px; box-shadow: 0 6px 16px rgba(0,0,0,0.08); padding: 18px 20px; display: flex; flex-direction: column; align-items: center; text-align: left;">
+    <img src="https://emojiapi.dev/api/v1/brain/128.png" alt="Brain Emoji" style="width: 50px; height: 50px; margin-bottom: 10px;">
+    <h3 style="margin: 0 0 10px 0; font-weight: bold; text-align: center; font-size: 1.1rem; line-height: 1.3;">JavaScript (Behavior)</h3>
+    <p style="margin: 0; font-size: 1rem; line-height: 1.5;">Adds behavior and interactivity — the “brain” that responds to user actions.</p>
+  </div>
+
+  <!-- AI Development Assistant Card -->
+  <div style="flex: 1 1 250px; background: #f2f4f7; border-radius: 14px; box-shadow: 0 6px 16px rgba(0,0,0,0.08); padding: 18px 20px; display: flex; flex-direction: column; align-items: center; text-align: left;">
+    <img src="https://emojiapi.dev/api/v1/robot/128.png" alt="Robot Emoji" style="width: 50px; height: 50px; margin-bottom: 10px;">
+    <h3 style="margin: 0 0 10px 0; font-weight: bold; text-align: center; font-size: 1.1rem; line-height: 1.3;">AI as a Development Assistant</h3>
+    <p style="margin: 0; font-size: 1rem; line-height: 1.5;">Students can use AI to help write, debug, or understand code—for example, explaining JavaScript, suggesting better CSS, or brainstorming web app features.</p>
+  </div>
+
+</div>
+
+
+#### *Note: Unit One only covers HTML and CSS. JavaScript will be introduced in Unit 2*. 
+
+
+
+## Why it matters for students:
+
+#### **Building web apps helps students:**
+- #### See the connection between code and creativity.
+- #### Practice problem-solving and computational thinking.
+- #### Understand how many of the tools they use every day (from Google Docs to ChatGPT) are built with the same foundational technologies.
+
+
+## Next Up
+
+#### Let's take a look at the final project the students will create in this unit. 
+
+![]()
+MARKDOWN

@@ -4,8 +4,8 @@ import React from 'react';
 import {
   LegacyIncorrectDialog,
   LegacyTooFewDialog,
-} from '@cdo/apps/lib/ui/LegacyDialogContents';
-import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
+} from '@cdo/apps/legacySharedComponents/LegacyDialogContents';
+import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/metrics/analyticsUtils';
 
 import {TestResults} from '../../constants';
 import Sounds from '../../Sounds';
@@ -218,7 +218,9 @@ Multi.prototype.lockAnswers = function () {
   if (this.allowMultipleAttempts) {
     return;
   }
-  $('#' + this.id + ' .answerbutton').addClass('lock-answers');
+  $('#' + this.id + ' .answerbutton')
+    .addClass('lock-answers')
+    .attr('tabindex', '-1');
   $('#reset-predict-progress-button')?.prop('disabled', false);
 };
 

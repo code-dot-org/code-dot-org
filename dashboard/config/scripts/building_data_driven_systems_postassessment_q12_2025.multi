@@ -1,0 +1,16 @@
+name 'building-data-driven-systems-postassessment-q12_2025'
+
+question 'A filter function for a "Job Board" app is returning zero results for every search. What is the most likely "Logic Error" to investigate?'
+
+wrong 'The `.filter()` method is not a valid JavaScript command.'
+right 'The condition inside the filter (e.g., `job.salary > 1000000`) is too restrictive for the available data.'
+wrong 'The developer forgot to use a `.map()` method before filtering.'
+wrong 'The array has too many items for the filter to process.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 8
+
+If a filter is too restrictive or has incorrect logic (like looking for a property that doesn't exist), it will return an empty array, even if the dataset itself is healthy.
+MARKDOWN

@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import fontConstants from '@cdo/apps/fontConstants';
 import msg from '@cdo/locale';
 
-import FontAwesome from '../../templates/FontAwesome';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import color from '../../util/color';
 import experiments from '../../util/experiments';
 import {showPreview} from '../redux/data';

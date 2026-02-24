@@ -1,13 +1,8 @@
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {
-  Heading3,
-  Heading6,
-  StrongText,
-  BodyThreeText,
-} from '@cdo/apps/componentLibrary/typography';
-import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
+import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 
@@ -25,10 +20,10 @@ export default function MoreDetailsDialog({onClose}) {
   const renderItem = (itemType, itemTitle, itemDetails) => (
     <div className={styles.item}>
       <ProgressIcon itemType={itemType} />
-      <BodyThreeText>
-        <StrongText>{itemTitle + ': '}</StrongText>
+      <Typography variant="body3" gutterBottom>
+        <Typography variant="strong">{itemTitle + ': '}</Typography>
         {itemDetails}
-      </BodyThreeText>
+      </Typography>
     </div>
   );
 
@@ -38,11 +33,15 @@ export default function MoreDetailsDialog({onClose}) {
       closeOnClickBackdrop={true}
       initialFocus={false}
     >
-      <Heading3>{i18n.progressTrackingIconKey()}</Heading3>
+      <Typography variant="h3" gutterBottom>
+        {i18n.progressTrackingIconKey()}
+      </Typography>
       <hr />
       {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
       <div role="region" className={styles.dialog} tabIndex={0} ref={regionRef}>
-        <Heading6>{i18n.assignmentCompletionStates()}</Heading6>
+        <Typography variant="h6" gutterBottom>
+          {i18n.assignmentCompletionStates()}
+        </Typography>
         {renderItem(
           ITEM_TYPE.IN_PROGRESS,
           i18n.inProgress(),
@@ -51,9 +50,11 @@ export default function MoreDetailsDialog({onClose}) {
         <div className={styles.item}>
           <ProgressIcon itemType={ITEM_TYPE.SUBMITTED} />
           <div>
-            <BodyThreeText>
-              <StrongText>{i18n.submitted() + ': '}</StrongText>
-            </BodyThreeText>
+            <Typography variant="body3" gutterBottom>
+              <Typography variant="strong">
+                {i18n.submitted() + ': '}
+              </Typography>
+            </Typography>
             <SafeMarkdown
               className={styles.firstMarkdown}
               markdown={i18n.progressLegendDetailsSubmittedForLessons()}
@@ -73,7 +74,9 @@ export default function MoreDetailsDialog({onClose}) {
           i18n.noOnlineWork(),
           i18n.progressLegendDetailsNoOnlineWork()
         )}
-        <Heading6>{i18n.teacherActions()}</Heading6>
+        <Typography variant="h6" gutterBottom>
+          {i18n.teacherActions()}
+        </Typography>
         {renderItem(
           ITEM_TYPE.NEEDS_FEEDBACK,
           i18n.needsFeedback(),
@@ -89,7 +92,9 @@ export default function MoreDetailsDialog({onClose}) {
           i18n.markedAsKeepWorking(),
           i18n.progressLegendDetailsKeepGoing()
         )}
-        <Heading6>{i18n.levelTypes()}</Heading6>
+        <Typography variant="h6" gutterBottom>
+          {i18n.levelTypes()}
+        </Typography>
         {renderItem(
           ITEM_TYPE.ASSESSMENT_LEVEL,
           i18n.assessmentLevel(),

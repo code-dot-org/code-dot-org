@@ -6,15 +6,16 @@ import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {
-  setScriptId,
-  getSelectedScriptName,
+  setUnit,
+  getSelectedCourseName,
+  getSelectedUnitPosition,
 } from '@cdo/apps/redux/unitSelectionRedux';
 import UnitSelector from '@cdo/apps/templates/sectionProgress/UnitSelector';
 import {loadTextResponsesFromServer} from '@cdo/apps/templates/textResponses/textReponsesDataApi';
 import TextResponsesLessonSelector from '@cdo/apps/templates/textResponses/TextResponsesLessonSelector';
 import i18n from '@cdo/locale';
 
-import {h3Style} from '../../lib/ui/Headings';
+import {h3Style} from '../../legacySharedComponents/Headings';
 import color from '../../util/color';
 
 import TextResponsesTable from './TextResponsesTable';
@@ -30,10 +31,10 @@ const PADDING = 8;
 
 function TextResponses({
   sectionId,
-  coursesWithProgress,
   scriptId,
-  scriptName,
-  setScriptId,
+  courseVersionName,
+  unitPosition,
+  setUnit,
 }) {
   const [textResponsesByScript, setTextResponsesByScript] = useState({});
   const [isLoadingResponses, setIsLoadingResponses] = useState(false);
@@ -82,8 +83,8 @@ function TextResponses({
     [textResponsesByScript]
   );
 
-  const onChangeScript = scriptId => {
-    setScriptId(scriptId);
+  const onChangeScript = (scriptId, courseVersionId) => {
+    setUnit(scriptId, courseVersionId);
     setFilterByLessonName(null);
   };
 
@@ -103,11 +104,7 @@ function TextResponses({
     <div>
       <div style={styles.unitSelection}>
         <div style={{...h3Style, ...styles.header}}>{i18n.selectACourse()}</div>
-        <UnitSelector
-          coursesWithProgress={coursesWithProgress}
-          scriptId={scriptId}
-          onChange={onChangeScript}
-        />
+        <UnitSelector scriptId={scriptId} onChange={onChangeScript} />
       </div>
       {filteredResponses.length > 0 && (
         <div id="uitest-response-actions" style={styles.actionRow}>
@@ -135,7 +132,8 @@ function TextResponses({
           responses={filteredResponses}
           sectionId={sectionId}
           isLoading={isLoadingResponses}
-          scriptName={scriptName}
+          courseVersionName={courseVersionName}
+          unitPosition={unitPosition}
         />
       </div>
     </div>
@@ -145,10 +143,10 @@ function TextResponses({
 TextResponses.propTypes = {
   // Provided by redux.
   sectionId: PropTypes.number.isRequired,
-  coursesWithProgress: PropTypes.array.isRequired,
   scriptId: PropTypes.number,
-  scriptName: PropTypes.string,
-  setScriptId: PropTypes.func.isRequired,
+  courseVersionName: PropTypes.string,
+  unitPosition: PropTypes.number,
+  setUnit: PropTypes.func.isRequired,
 };
 
 const styles = {
@@ -181,13 +179,14 @@ export const UnconnectedTextResponses = TextResponses;
 export default connect(
   state => ({
     sectionId: state.teacherSections.selectedSectionId,
-    coursesWithProgress: state.unitSelection.coursesWithProgress,
     scriptId: state.unitSelection.scriptId,
-    scriptName: getSelectedScriptName(state),
+    courseVersionId: state.unitSelection.courseVersionId,
+    courseVersionName: getSelectedCourseName(state),
+    unitPosition: getSelectedUnitPosition(state),
   }),
   dispatch => ({
-    setScriptId(scriptId) {
-      dispatch(setScriptId(scriptId));
+    setUnit(scriptId, courseVersionId) {
+      dispatch(setUnit(scriptId, courseVersionId));
     },
   })
 )(TextResponses);

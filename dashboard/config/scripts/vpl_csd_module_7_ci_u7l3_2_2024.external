@@ -7,6 +7,8 @@ markdown <<MARKDOWN
 # AI and Machine Learning - Lesson 3: Types of Machine Learning
 
 ## Key Vocabulary:
+<br>
+
 * #### **Model** - a computer program designed to make a decision
 * #### **Unsupervised Learning** - finding patterns in data that doesn’t have any labels
 * #### **Features** - the inputs that the model uses to make decisions

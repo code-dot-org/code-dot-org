@@ -8,7 +8,7 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Spinner from '../components/spinner';
+import Spinner from '../../../sharedComponents/Spinner';
 
 export default class ApplicationLoader extends React.Component {
   static propTypes = {

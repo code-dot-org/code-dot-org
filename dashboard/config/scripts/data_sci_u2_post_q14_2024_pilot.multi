@@ -1,0 +1,15 @@
+name 'Data Sci U2 Post Q14_2024-pilot'
+
+question 'Explain how the `value_counts()` function in pandas can be leveraged to uncover patterns in categorical data, and provide an example of its application in a real-world scenario.'
+
+right '`value_counts()` tallies the occurrences of each unique value in a categorical column, making it a powerful tool for identifying dominant categories or classes.'
+wrong '1value_counts()` provides a summary of all numeric columns, allowing for a quick overview of the dataset\’s statistical properties.'
+wrong '`value_counts()` aggregates data across multiple columns, providing insights into the relationships between different variables.'
+wrong '`value_counts()` generates a visual summary of the data, simplifying the process of identifying patterns.'
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

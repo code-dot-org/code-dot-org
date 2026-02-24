@@ -1,0 +1,187 @@
+name 'test-ai-powered-threats-defenses-lesson3-level1b-pl_aug2025'
+title 'Jordan P. - User Profile'
+
+display_name 'Marcus Lee'
+bubble_choice_description 'Marcus is a 15 year old student from Terre Haute, IN'
+thumbnail_url 'https://images.code.org/e7e1fa149304e0c03c767c590c334fb4-image-1755184710786.png'
+
+markdown <<MARKDOWN
+#Marcus Lee
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Phishing</strong> is when someone pretends to be a trusted person or company in order to steal your personal information, like passwords or credit card numbers.</p>
+</div>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 3. You can find more details in the full <a href='https://studio.code.org/courses/ai-powered-threats-and-defenses-2025/units/1/lessons/3' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>. Optionally, you can reference the <a href='https://docs.google.com/document/d/1owIfysW2x4L7v-2BMGz1NkkrSwuU3XhrsjyXXyLhKmg/edit?tab=t.0#heading=h.45vdw05yjci0' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Activity Guide</a> while you work through this activity.
+</p>
+
+##User Profiles
+
+#### Look through Marcus's social media posts for important information that might be used for a phishing attack.
+
+<table style="width:100%; border-collapse:collapse; border:none;">
+  <!-- Row 1: Top image row -->
+  <tr>
+    <td style="width:48%; vertical-align:top;">
+      <img src="https://images.code.org/bc043b3a865aba9136a78457159002cf-image-1755117278782.gif" alt="Social media image 1" style="width:100%; height:auto;">
+    </td>
+    <td style="width:4%;"></td> <!-- blank spacer column -->
+    <td style="width:48%; vertical-align:top;">
+      <img src="https://images.code.org/ca6eb435ba7b04f1fa6138cfc6d8f2dd-image-1755117283568.gif" alt="Social media image 2" style="width:100%; height:auto;">
+    </td>
+  </tr>
+
+  <!-- Row 2: Captions for first set -->
+  <tr>
+    <td style="background-color:black; color:white; padding:8px; font-family:sans-serif; width: 220px; height: 100px; vertical-align: top;">
+    <h3>@MarcInMotion</h3>
+    These kicks aren’t just shoes… they’re art 
+    <br>
+	#SneakerDrop #AirJordan #FreshKicks #Sneakerhead
+    </td>
+    <td></td> <!-- spacer -->
+    <td style="background-color:black; color:white; padding:8px; font-family:sans-serif; width: 220px; height: 100px; vertical-align: top;">
+    <h3>@SneakAttack_Marc</h3>
+    Look out, world — permit level unlocked. Next stop: license boss battle
+    <br>
+    #FirstDrive #LearnersPermit #LevelUp #TeenDriver
+    </td>
+  </tr>
+
+  <!-- Row 3: Vertical spacer row -->
+  <tr>
+    <td style="height:24px;"></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <!-- Row 4: Second image row -->
+  <tr>
+    <td style="vertical-align:top;">
+      <img src="https://images.code.org/c4a5ba27058be2022db29902f0b87a9c-image-1755117301634.gif" alt="Social media image 3" style="width:100%; height:auto;">
+    </td>
+    <td></td> <!-- spacer -->
+    <td style="vertical-align:top;">
+      <img src="https://images.code.org/67e3c153e901667d0b7fcc88d873aff0-image-1755117307932.gif" alt="Social media image 4" style="width:100%; height:auto;">
+    </td>
+  </tr>
+
+  <!-- Row 5: Captions for second set -->
+  <tr>
+    <td style="background-color:black; color:white; padding:8px; font-family:sans-serif; width: 220px; height: 100px; vertical-align: top;">
+     <h3>@GameOnMarc</h3> 
+     New kicks, same hustle. Court’s calling
+     <br>
+     #BallIsLife #CourtReady #DripCheck #SneakerCulture
+    </td>
+    <td></td> <!-- spacer -->
+    <td style="background-color:black; color:white; padding:8px; font-family:sans-serif; width: 220px; height: 100px; vertical-align: top;">
+    <h3>@MarcInMotion</h3>
+    Post-practice fuel. Burger Bliss never misses
+    <br>
+    #DenverEats #SneakerLife #BurgerGoal
+    </td>
+  </tr>
+</table>
+
+##Phishing Attacks
+
+#### Look through Marcus's emails below and see which ones might be legit and which might be phishing attacks.
+
+<div style="font-family: sans-serif; font-size: 16px; line-height: 1.6;">
+
+
+  <hr>
+
+  <p><strong>Message A – Text</strong></p>
+  <p>
+    Hey Marcus — Coach D here. The sports store’s got a deal for team players on new sneakers.<br><br>
+    You’ll need your school ID and cell for the discount code.<br><br>
+    Want me to add you to the list?
+  </p>
+
+  <hr>
+
+  <p><strong>Message B – Email</strong></p>
+  <p><em>Subject:</em> <strong>Colorado DMV Action Required – Learner’s Permit Suspension Notice</strong></p>
+  <p>
+    Dear Marcus Lee,<br><br>
+    Our system shows that your learner’s permit file is incomplete. If we don’t receive verification within 72 hours, your permit will be automatically suspended.<br><br>
+    To avoid interruption, please log in to your DMV profile and confirm your info:<br>
+    <a href="#">dmv.colorado.gov-verify.info</a><br><br>
+    Sincerely,<br>
+    Colorado DMV Processing Center
+  </p>
+
+  <hr>
+
+  <p><strong>Message C – Instagram DM</strong></p>
+  <p>
+    <strong>From: @JordanDenverSneaks</strong><br><br>
+    Hey Marcus! We’re giving away early access passes to the Air Jordan Retro Drop in Denver this Saturday!<br><br>
+    To confirm you’re 16+, we just need your full name, birthdate, and cell.<br><br>
+    Spots are limited and going fast — reply by tonight to lock it in!
+  </p>
+
+</div>
+
+##Breach Reports 
+####A data breach is a security incident where sensitive, confidential, or private information is accessed, disclosed, or stolen by unauthorized individuals.
+
+#### Look through Marcus's breach report to try to determine what happened and what type of password attack your user was vulnerable to.
+
+<div style="font-family: sans-serif; font-size: 16px; line-height: 1.6;">
+
+  <h3 style="color: #00838f;">Breach Report</h3>
+  <p><strong>Service Breached:</strong> CourtCast Sports Streaming<br>
+     <strong>Login Location:</strong> Dallas, TX<br>
+     <strong>Time of Access:</strong> 11:42 p.m.<br>
+     <strong>AI Analysis:</strong> Time and device usage consistent with late-night mobile logins on previous dates.
+  </p>
+
+  <p>Account activity followed a sneaker promotion post by the service.<br>
+     The login was successful on the first attempt from an Android phone using mobile data.<br>
+     The password used was: <strong>FreshKicks23</strong>
+  </p>
+
+  <p><strong>AI Analysis:</strong> Password found in 2023 breach dataset associated with sneaker resale site.<br>
+     No password changes had been made since that breach.<br>
+     The attacker viewed saved payment settings but made no purchases.<br>
+     <strong>AI Analysis:</strong> User's account had not been updated with a profile photo or linked payment method since signup.
+  </p>
+
+  <br>
+
+  <h3 style="color: #00838f;">Password Attacks</h3>
+
+  <table style="width:100%; border-collapse:collapse; border:1px solid #ccc; font-size: 15px;">
+    <tr>
+      <td style="font-weight:bold; padding:10px; border:1px solid #ccc;">Credential stuffing attack</td>
+      <td style="padding:10px; border:1px solid #ccc;">
+        When attackers use real usernames and passwords (often from past breaches) to break into other accounts.
+      </td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; padding:10px; border:1px solid #ccc;">Password guessing attack</td>
+      <td style="padding:10px; border:1px solid #ccc;">
+        When attackers try different passwords for one account, hoping to guess the right one.
+      </td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; padding:10px; border:1px solid #ccc;">Password spraying attack</td>
+      <td style="padding:10px; border:1px solid #ccc;">
+        When an attacker tries one common password on many different accounts to avoid detection.
+      </td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; padding:10px; border:1px solid #ccc;">Brute force attack</td>
+      <td style="padding:10px; border:1px solid #ccc;">
+        When an attacker rapidly tries a large number of possible passwords on one account, using automated tools to find the correct one.
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+MARKDOWN

@@ -1,0 +1,22 @@
+name 'computer-systems-lesson3-level5d_2025-preview'
+title 'Farming Technology'
+description 'Discover how modern agriculture uses cutting-edge hardware to improve efficiency and sustainability.'
+display_name 'Farming Technology'
+bubble_choice_description 'Discover how modern agriculture uses cutting-edge hardware to improve efficiency and sustainability.'
+thumbnail_url 'https://images.code.org/819b6dfb2838c2c40e811fca3a123821-farm-tech.png'
+
+markdown <<MARKDOWN
+# Farming Technology
+
+Discover how modern agriculture uses cutting-edge hardware to improve efficiency and sustainability.
+
+As you watch, be prepared to reflect on the following in the next activity:
+
+- What kind of hardware components are used by people in this career?  
+- What kind of troubleshooting might they need to do? Put another way, what kinds of bugs could they run into?  
+
+**Note**: This video opens in a new tab ⧉.  
+
+[![YouTube Video Thumbnail](https://images.code.org/819b6dfb2838c2c40e811fca3a123821-farm-tech.png)](https://www.youtube.com/watch?v=mYdt6CAwKAY)
+
+MARKDOWN

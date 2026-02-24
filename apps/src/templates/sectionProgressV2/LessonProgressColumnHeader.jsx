@@ -5,14 +5,14 @@ import {connect} from 'react-redux';
 
 import i18n from '@cdo/locale';
 
-import FontAwesome from '../FontAwesome';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import {lessonHasLevels} from '../progress/progressHelpers';
 import {addExpandedLesson} from '../sectionProgress/sectionProgressRedux';
 
 import LessonTitleTooltip, {getTooltipId} from './LessonTitleTooltip';
 
 import styles from './progress-table-v2.module.scss';
-import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
+import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 
 const getUninteractiveLessonColumnHeader = (lesson, allLocked) => {
   return (
@@ -44,6 +44,7 @@ const getSkeletonLessonHeader = lessonId => (
     key={lessonId}
   >
     <div
+      // eslint-disable-next-line react/forbid-dom-props
       data-testid={'skeletonize-content'}
       className={classNames(
         styles.lessonSkeletonHeaderCell,

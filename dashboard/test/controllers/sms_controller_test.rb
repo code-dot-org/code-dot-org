@@ -9,7 +9,7 @@ class SmsControllerTest < ActionController::TestCase
   end
 
   test "send to phone with level_source succeeds when twilio succeeds" do
-    level_source = create :level_source
+    level_source = create(:level_source)
     expected_twilio_options = {
       messaging_service_sid: 'fake_messaging_service_sid',
       to: 'xxxxxx',

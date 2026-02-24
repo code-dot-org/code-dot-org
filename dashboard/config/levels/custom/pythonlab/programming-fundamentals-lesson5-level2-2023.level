@@ -1,0 +1,49 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2025-02-21T15:57:10.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "long_instructions": "## Do This: \r\n1. Click on `painter.py` to look at the contents of the file.\r\n2. Look at lines 4-7 to determine the default values given to a Painter object.\r\n    - **Discuss:** What X and Y position do you expect the Painter to start at?\r\n    - Which direction will it face?\r\n    - How much paint will it have?\r\n3. Take a look at the 4 methods shown: `move()`, `turn_left()`, `paint`, and `take_paint`. \r\n    - **Discuss:** What do you think each one does?",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# import Painter class to user Painter methods\nfrom neighborhood import Painter\n\n",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        },
+        "2": {
+          "id": "2",
+          "name": "painter.py",
+          "language": "py",
+          "contents": "class Painter:\n  \n  def __init__(self, x_location, y_location, direction, remaining_paint):\n   x_location = 0\n   y_location = 0\n   direction = \"east\"\n   remaining_paint = 0\n  \n  def move():\n    # Code not shown #\n  \n  def turn_left():\n    # Code not shown #\n  \n  def paint():\n    # Code not shown #\n  \n  def take_paint():\n      # Code not shown #\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "2"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-02-21T15:57:10.457+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson6-level1b\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson6-level1b\"},{\"changed_at\":\"2025-02-21 15:59:23 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Pythonlab>

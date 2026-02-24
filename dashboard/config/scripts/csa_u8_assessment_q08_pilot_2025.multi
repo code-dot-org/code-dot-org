@@ -1,0 +1,59 @@
+name 'CSA U8 Assessment q08_pilot-2025'
+
+wrong '`1`'
+right '`2`'
+wrong '`3`'
+wrong '`4`'
+wrong '`5`'
+
+markdown <<MARKDOWN
+Consider the following method, which implements a recursive binary search that returns an index in `arr` where the value `x` appears if `x` appears in `arr` between `arr[left]` and `arr[right]`, inclusive; otherwise returns `-1`.
+
+```
+public static int bSearch(int[] arr, int left, int right, int x) {
+  if (right >= left) {
+    int mid = (left + right) / 2;
+
+    if (arr[mid] == x) {
+      return mid;
+    }
+    else if (arr[mid] > x) {
+      return bSearch(arr, left, mid - 1, x);
+    }
+    else {
+      return bSearch(arr, mid + 1, right, x);
+    }
+  }
+
+  return -1;
+}
+```
+
+The following code segment appears in a method in the same class as `bSearch`.
+
+```
+int[] nums = {20, 30, 30, 60, 70, 90};
+int result = bSearch(nums, 0, nums.length - 1, 30);
+```
+
+What is the value of `result` after the code segment has been executed?
+MARKDOWN
+
+allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+Let's step through the code to understand why:
+
+1. The array `nums` is initialized with the values `{20, 30, 30, 60, 70, 90}`.
+
+2. The `bSearch` method is called with the array `nums`, `left = 0`, `right = nums.length - 1`, and `x = 30`.
+
+3. In the first call to `bSearch`, the condition `right >= left` is satisfied, as `right` is `5` and `left` is `0`.
+
+4. The midpoint `mid` is calculated as `(left + right) / 2`, which gives `(0 + 5) / 2 = 2`.
+
+5. The value at index `mid` in the array `nums` is checked against the target `x` (`30`). Since the condition `arr[mid] == x` is `true` (`nums[mid]` is 30 and `x` is 30), the method returns `mid`, which is `2`.
+
+6. The value `2` is assigned to the variable `result`.
+
+Therefore, after the code segment has been executed, the value of `result` is `2`, indicating that the target value of `30` is found at index `2` in the array `nums`.
+MARKDOWN

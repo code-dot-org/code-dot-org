@@ -1,64 +1,166 @@
-import classnames from 'classnames';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Draggable, {DraggableEventHandler} from 'react-draggable';
+import FocusLock from 'react-focus-lock';
 
-import Button from '@cdo/apps/componentLibrary/button';
-import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
+import {useTeachingProfileData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
+
+import {useAppSelector} from '../util/reduxHooks';
+import {tryGetSessionStorage, trySetSessionStorage} from '../utils';
+
+import AiDiffArtifactSavePage from './AiDiffArtifactSavePage';
+import AiDiffHeader from './AiDiffHeader';
+import AiDiffWorkSpace from './AiDiffWorkspace';
+import {Context} from './types';
+import AiDiffWelcome from './welcome/AiDiffWelcome';
 
 import style from './ai-differentiation.module.scss';
 
+const AI_DIFF_POSITION_X = 'aiDiffPositionX';
+const AI_DIFF_POSITION_Y = 'aiDiffPositionY';
 interface AiDiffContainerProps {
   closeTutor?: () => void;
-  open: boolean;
+  context: Context;
+  curriculumCourses: string[];
+  scriptName?: string;
+  unreadNotificationCount: number;
 }
+
+const MIN_VISIBLE = 40;
+const boxWidth = parseInt(style.containerWidth);
+const originX = parseInt(style.fabOriginX);
+// These isNaN checks are for testing as the SCSS variables don't come
+// through properly in the test environment.
+const minX = isNaN(originX) ? 0 : MIN_VISIBLE - originX - boxWidth;
+const maxX = isNaN(originX)
+  ? 1000
+  : document.documentElement.clientWidth - originX - MIN_VISIBLE;
+
+const boxHeight = parseInt(style.containerHeight);
+const originY = parseInt(style.fabOriginY);
+// These isNaN checks are for testing as the SCSS variables don't come
+// through properly in the test environment.
+const minY = isNaN(originY)
+  ? 0
+  : originY - document.documentElement.clientHeight + boxHeight;
+const maxY = isNaN(originY) ? 1000 : originY + boxHeight - MIN_VISIBLE;
+
+const AI_DIFF_CLOSE_BUTTON_CLASSNAME = 'ai_diff_close_button';
 
 const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   closeTutor,
-  open,
+  context,
+  curriculumCourses,
+  scriptName,
+  unreadNotificationCount,
 }) => {
-  // TODO: Update to support i18n
-  const aiDiffHeaderText = 'AI Teaching Assistant';
+  const [showWelcomeExperience, setShowWelcomeExperience] = useState(true);
+  const {personalizationData} = useTeachingProfileData();
 
-  const [positionX, setPositionX] = useState(0);
-  const [positionY, setPositionY] = useState(0);
+  const [positionX, setPositionX] = useState(
+    parseInt(tryGetSessionStorage(AI_DIFF_POSITION_X, 0)) || 0
+  );
+  const [positionY, setPositionY] = useState(
+    parseInt(tryGetSessionStorage(AI_DIFF_POSITION_Y, 0)) || 0
+  );
+
+  const hasCompletedAiDifferentiationWelcome = useAppSelector(
+    state => state.currentUser.hasCompletedAiDifferentiationWelcome
+  );
+
+  const pendingArtifactMessage = useAppSelector(
+    state => state.aichat.pendingArtifactMessage
+  );
+
+  const chatIsOpen = useAppSelector(state => state.aichat.chatIsOpen);
+
+  useEffect(() => {
+    const ensureDraggableIsVisible = () => {
+      if (positionX < minX) {
+        setPositionX(minX);
+      } else if (positionX > maxX) {
+        setPositionX(maxX);
+      }
+    };
+    ensureDraggableIsVisible();
+    window.addEventListener('resize', ensureDraggableIsVisible);
+    trySetSessionStorage(AI_DIFF_POSITION_X, String(positionX));
+    return () => {
+      window.removeEventListener('resize', ensureDraggableIsVisible);
+    };
+  }, [positionX]);
+
+  useEffect(() => {
+    const ensureDraggableIsVisible = () => {
+      if (positionY < minY) {
+        setPositionY(minY);
+      } else if (positionY > maxY) {
+        setPositionY(maxY);
+      }
+    };
+    ensureDraggableIsVisible();
+    window.addEventListener('resize', ensureDraggableIsVisible);
+    trySetSessionStorage(AI_DIFF_POSITION_Y, String(positionY));
+    return () => {
+      window.removeEventListener('resize', ensureDraggableIsVisible);
+    };
+  }, [positionY]);
 
   const onStopHandler: DraggableEventHandler = (e, data) => {
     setPositionX(data.x);
     setPositionY(data.y);
   };
 
+  let content;
+  if (pendingArtifactMessage) {
+    content = <AiDiffArtifactSavePage message={pendingArtifactMessage} />;
+  } else if (curriculumCourses) {
+    if (!hasCompletedAiDifferentiationWelcome && showWelcomeExperience) {
+      content = (
+        <AiDiffWelcome
+          setShowWelcomeExperience={setShowWelcomeExperience}
+          context={context}
+          scriptName={scriptName}
+          curriculumCourses={curriculumCourses}
+        />
+      );
+    } else {
+      content = (
+        <AiDiffWorkSpace
+          context={context}
+          personalizationData={personalizationData}
+          scriptName={scriptName}
+          curriculumCourses={curriculumCourses}
+          unreadNotificationCount={unreadNotificationCount}
+        />
+      );
+    }
+  }
+
   return (
     <Draggable
-      defaultPosition={{x: positionX, y: positionY}}
+      handle=".ai_diff_handle"
+      position={{x: positionX, y: positionY}}
       onStop={onStopHandler}
+      cancel={`.${AI_DIFF_CLOSE_BUTTON_CLASSNAME}`}
     >
       <div
-        className={classnames(style.aiDiffContainer, {
-          [style.hiddenAiDiffPanel]: !open,
-        })}
+        // eslint-disable-next-line react/forbid-dom-props
+        data-testid="draggable-test-id"
+        id="draggable-id"
+        className={
+          !hasCompletedAiDifferentiationWelcome && showWelcomeExperience //don't use wide container for welcome
+            ? style.aiDiffContainer
+            : style.aiDiffContainerWide
+        }
+        style={chatIsOpen ? undefined : {display: 'none'}}
       >
-        <div className={style.aiDiffHeader}>
-          <div className={style.aiDiffHeaderLeftSide}>
-            <img
-              src={aiBotOutlineIcon}
-              className={style.aiBotOutlineIcon}
-              alt={aiDiffHeaderText}
-            />
-            <span>{aiDiffHeaderText}</span>
-          </div>
-          <div className={style.aiDiffHeaderRightSide}>
-            <Button
-              color="white"
-              icon={{iconName: 'times', iconStyle: 'solid'}}
-              type="tertiary"
-              isIconOnly={true}
-              onClick={closeTutor}
-              size="s"
-            />
-          </div>
-        </div>
-
-        <div className={style.fabBackground} />
+        <FocusLock disabled={!chatIsOpen}>
+          <AiDiffHeader
+            closeTutor={closeTutor}
+            closeButtonClassName={AI_DIFF_CLOSE_BUTTON_CLASSNAME}
+          />
+          <div className={style.fabBackground}>{content}</div>
+        </FocusLock>
       </div>
     </Draggable>
   );

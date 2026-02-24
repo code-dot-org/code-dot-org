@@ -1,15 +1,18 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React from 'react';
 
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-
 import moduleStyles from './loading-overlay.module.scss';
 
-const LoadingOverlay: React.FunctionComponent<{show: boolean}> = ({show}) => (
+const LoadingOverlay: React.FunctionComponent<{
+  show: boolean;
+  delayAppearance?: boolean;
+}> = ({show, delayAppearance}) => (
   <div
     className={classNames(
       moduleStyles.loadingContainer,
-      show && moduleStyles.loadingContainerShow
+      show && moduleStyles.loadingContainerShow,
+      delayAppearance && moduleStyles.loadingContainerDelay
     )}
   >
     <FontAwesomeV6Icon

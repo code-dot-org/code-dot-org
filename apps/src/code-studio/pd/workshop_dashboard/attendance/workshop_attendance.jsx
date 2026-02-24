@@ -9,9 +9,10 @@ import React from 'react';
 import {Row, Col, ButtonToolbar, Button, Tabs, Tab} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 
+import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
 import color from '@cdo/apps/util/color';
 
-import Spinner from '../../components/spinner';
+import Spinner from '../../../../sharedComponents/Spinner';
 import SessionTime from '../components/session_time';
 import {
   PermissionPropType,
@@ -24,9 +25,7 @@ import {
 import SessionAttendance from './session_attendance';
 
 export class WorkshopAttendance extends React.Component {
-  static contextTypes = {
-    router: PropTypes.object.isRequired,
-  };
+  static contextType = RouterContext;
 
   static propTypes = {
     permission: PermissionPropType.isRequired,
@@ -99,7 +98,9 @@ export class WorkshopAttendance extends React.Component {
   };
 
   handleBackClick = () => {
-    this.context.router.push(`/workshops/${this.props.params.workshopId}`);
+    this.context.router.push(
+      `/workshops/${this.props.params.workshopId}/attendance`
+    );
   };
 
   handleDownloadCsvClick = () => {

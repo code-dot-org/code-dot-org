@@ -1,0 +1,36 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2024-10-28T15:33:07.000Z",
+  "level_num": "custom",
+  "user_id": 18914,
+  "properties": {
+    "skipUrl": "/projects/pythonlab/new",
+    "encrypted": "false",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "true",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "#Function Definition 1 \ndef draw_l(): \n  print(\"\"\"  _ \n | |\n | |\n | |\n | |\n |_|\n  \"\"\")\n\n#Function Definition 1 \ndef draw_o(): \n  print(\"\"\"\n   ___  \n  / _ \\ \n | (_) |\n  \\___/ \n  \"\"\")\n\n#Function Call\ndraw_l()",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "long_instructions": "##Add another letter! \r\n\r\nCopy-and-paste the **draw_o() function** and change it so it prints out a “z”.\r\n\r\nUse [this website](https://patorjk.com/software/taag/#p=display&f=Big&t=z%0A) to help you generate a “z” in the same style. "
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-28 15:41:16 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 15:41:22 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 15:41:35 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 15:41:37 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 15:43:51 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 17:13:27 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

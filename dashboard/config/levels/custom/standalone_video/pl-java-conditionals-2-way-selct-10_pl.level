@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2025-07-18T15:11:26.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "CSA-PL-two-way-selection",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28813,
+    "name_suffix": "_pl",
+    "encrypted": "false",
+    "long_instructions": "#### In this video you will expand on conditionals to learn about if-else statments. \r\n\r\n>### Vocabulary\r\n>- #### **logical operator:** an operator that returns a boolean value\r\n>- #### **not (`!`) operator:** returns `true` when the operand is `false`, and returns `false` when the operand is `true`\r\n\r\n## Additional resources\r\n#### Looking for more practice and resource understanding if-else statements in Java? Consider using the following resources:\r\n\r\n*  <a href=\"https://runestone.academy/ns/books/published/csawesome/Unit3-If-Statements/topic-3-3-if-else.html\" target=\"_blank\" style = \"font-size:14pt\" >CS Awesome’s chapter on if-else statements</a>\r\n\r\n* <a href=\"https://codehs.com/textbook/apcsa_textbook/3.3\" target=\"_blank\" style = \"font-size:14pt\">CodeHS's chapter on if-else statements statements</a>\r\n\r\n#### **Up next:** In the next level, we will practice reading and writing code using if-else statements.  "
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-07-18T15:11:26.001+00:00\",\"changed\":[\"cloned from \\\"pl-java-conditionals-2-way-selct-10\\\"\"],\"cloned_from\":\"pl-java-conditionals-2-way-selct-10\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

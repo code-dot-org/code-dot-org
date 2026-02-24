@@ -10,8 +10,6 @@ Feature: Updating account settings
   Scenario: Teacher wants to disable AI rubrics
     Given I create a teacher named "Haplo"
     And I give user "Haplo" authorized teacher permission
-    Given there is a pilot called "ai-rubrics"
-    And I add the current user to the "ai-rubrics" pilot
     Given I am on "http://studio.code.org/users/edit"
     Then I wait to see "#user_ai_rubrics_disabled"
     And element "#user_ai_rubrics_disabled" is not checked

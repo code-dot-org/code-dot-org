@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-03-19T15:13:24.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "title": "Hallucination Chain Warm-Up",
+    "long_instructions": "Hallucination Chain Warm-Up",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "stay_on_level_after_submit": "true"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-19T15:13:24.610+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson1-level7\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson1-level7\"},{\"changed_at\":\"2025-03-19 15:14:07 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

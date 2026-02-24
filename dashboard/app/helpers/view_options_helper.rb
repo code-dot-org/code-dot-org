@@ -41,7 +41,6 @@ module ViewOptionsHelper
     :signed_replay_log_url,
     :azure_speech_service_voices,
     :authenticity_token,
-    :blocklyVersion,
     :disallowed_html_tags,
     :backpack_channel,
     :backpack_enabled,
@@ -49,7 +48,8 @@ module ViewOptionsHelper
     :reduce_channel_updates,
     :has_open_code_review,
     :is_viewing_own_project,
-    :code_owners_name
+    :code_owners_name,
+    :stay_on_level_after_submit,
   )
   # Sets custom options to be used by the view layer. The option hash is frozen once read.
   def view_options(opts = nil)

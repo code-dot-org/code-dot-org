@@ -108,7 +108,7 @@ module Pd
 
         questions_with_form_data.
           sort_by {|d| d[:question].order}.
-          map {|d| d[:form_data]}.
+          pluck(:form_data).
           reduce({}) {|form_data, question_form_data_part| form_data.merge(question_form_data_part)}
       end
     end

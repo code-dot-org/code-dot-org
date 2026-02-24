@@ -1,0 +1,50 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-09-25T19:58:04.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Make your own function called to introduce a sidekick. \r\n\r\n## Do This: \r\n- Modify the function to create your own sidekick character with a name, health, and special power.\r\n- Add a `introduce sidekick()` function at the end of your program, then run your code. ",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "def introduce_sidekick():\n    print(\"Meet Thor\")\n    print(\"Health: \") # Add the sidekick's health stat here\n    print(\"Power: \") # Add the sidekick's superpower here\n\n# Call the function to make it run. Add introduce_sidekick() in the next line of code\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "import unittest\nimport re\n\nclass TestSidekickCode(unittest.TestCase):\n\n    def test_change_meet_thor(self):\n        try:\n            with open('main.py', 'r') as f:\n                content = f.read()\n\n            if 'print(\"Meet Thor\")' in content:\n                self.fail(\"You haven't changed the string 'Meet Thor' in the introduce_sidekick() function. Please modify it.\")\n\n        except FileNotFoundError:\n            self.fail(\"The file 'main.py' was not found. Please make sure it exists in the same directory.\")\n        except Exception as e:\n            self.fail(f\"Error running the test: {e}\")\n\n    def test_change_health(self):\n        try:\n            with open('main.py', 'r') as f:\n                content = f.read()\n\n            if 'print(\"Health: \")' in content:\n                self.fail(\"You haven't changed the string 'Health: ' in the introduce_sidekick() function. Please modify it.\")\n\n        except FileNotFoundError:\n            self.fail(\"The file 'main.py' was not found. Please make sure it exists in the same directory.\")\n        except Exception as e:\n            self.fail(f\"Error running the test: {e}\")\n\n    def test_change_power(self):\n        try:\n            with open('main.py', 'r') as f:\n                content = f.read()\n\n            if 'print(\"Power: \")' in content:\n                self.fail(\"You haven't changed the string 'Power: ' in the introduce_sidekick() function. Please modify it.\")\n\n        except FileNotFoundError:\n            self.fail(\"The file 'main.py' was not found. Please make sure it exists in the same directory.\")\n        except Exception as e:\n            self.fail(f\"Error running the test: {e}\")\n\n    def test_call_introduce_sidekick(self):\n        try:\n            with open('main.py', 'r') as f:\n                content = f.read()\n\n            # Use regex to check if 'introduce_sidekick()' appears as a function call\n            function_called = re.search(r'^\\s*introduce_sidekick\\s*\\(\\s*\\)\\s*$', content, re.MULTILINE)\n\n            if not function_called:\n                self.fail(\"You haven't called the introduce_sidekick() function. Please make sure to call it in your program.\")\n\n            print(\"Success! You've called the introduce_sidekick() function.\")\n\n        except FileNotFoundError:\n            self.fail(\"The file 'main.py' was not found. Please make sure it exists in the same directory.\")\n        except Exception as e:\n            self.fail(f\"Error running the test: {e}\")\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    },
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:58:04.845+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson15-level4_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson15-level4_2025\"}]"
+}]]></config>
+</Pythonlab>

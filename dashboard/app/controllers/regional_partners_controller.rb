@@ -1,5 +1,5 @@
 class RegionalPartnersController < ApplicationController
-  load_and_authorize_resource except: [:regional_partner_search]
+  load_and_authorize_resource
 
   # restrict the PII returned by the controller to the view by selecting only these columns from the model
   RESTRICTED_USER_ATTRIBUTES_FOR_VIEW = %w(
@@ -60,7 +60,7 @@ class RegionalPartnersController < ApplicationController
     courses.each do |course|
       roles.each do |role|
         states.each do |state|
-          key = "apps_#{state}_date_#{course}_#{role}".to_sym
+          key = :"apps_#{state}_date_#{course}_#{role}"
           # Do a date validation.  An exception will result if invalid.
           Date.parse(regional_partner_params[key]) if regional_partner_params[key].presence
         end
@@ -144,9 +144,6 @@ class RegionalPartnersController < ApplicationController
       flash[:upload_error] = parse_upload_errors(errors)
     end
     redirect_to @regional_partner
-  end
-
-  def regional_partner_search
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

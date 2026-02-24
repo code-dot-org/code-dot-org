@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Wrap Up",
-    "long_instructions": " ####Imagine you have a friend who isn’t taking this class and they say “They’re just computers and machines with a mind of their own - there’s not much we petty humans can do to influence them”.####\r\n####**What would you say in response?**",
+    "long_instructions": "#### Another student not in this class has decided to try and make their own chatbot that can discuss and recommend movies. What is one piece of bias-related advice you would you give them when curating their training data?",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -17,7 +17,7 @@
     "skip_dialog": true,
     "skip_sound": true
   },
-  "audit_log": "[{\"changed_at\":\"2024-07-16 14:17:41 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-07-16 14:17:41 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-09-26 20:06:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

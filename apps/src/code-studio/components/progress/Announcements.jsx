@@ -6,7 +6,7 @@ import {
   VisibilityType,
 } from '@cdo/apps/code-studio/announcementsRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import Notification from '@cdo/apps/templates/Notification';
+import Notification from '@cdo/apps/sharedComponents/Notification';
 import i18n from '@cdo/locale';
 
 export default class Announcements extends Component {
@@ -14,7 +14,6 @@ export default class Announcements extends Component {
     announcements: PropTypes.arrayOf(announcementShape).isRequired,
     width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    firehoseAnalyticsData: PropTypes.object,
   };
 
   /*
@@ -59,7 +58,6 @@ export default class Announcements extends Component {
                 : announcement.dismissible
             }
             width={this.props.width}
-            firehoseAnalyticsData={this.props.firehoseAnalyticsData}
           />
         ))}
       </div>

@@ -1,0 +1,9 @@
+name 'jit-pl-prompting-basics-hold-6'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Hold for level with our new tool 
+
+#### In this level, teachers will practice prompting our AI to debug code using a level aligned with the curriculum. 
+MARKDOWN

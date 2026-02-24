@@ -1,0 +1,207 @@
+{
+  "title": "Teaching {module}: Post-module survey",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "variable_panel",
+          "title": "Panel to hold variables for foorm. HIDE AFTER TESTING",
+          "visible": "false",
+          "elements": [
+            {
+              "type": "text",
+              "name": "module",
+              "startWithNewLine": false,
+              "defaultValueExpression": "{module_name}",
+              "readOnly": true
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "name": "intro",
+          "html": "<h1>Teaching {module} Self-paced Online Professional Learning</h1><h3><strong>Post-Module Survey</strong></h3>\n\n<p>Code.org relies on surveys as a crucial tool to stay connected to teachers, gather feedback about our curriculum and your teaching experience, and to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>Teaching {module}: Post-Module Survey</h2>"
+        },
+        {
+          "type": "html",
+          "name": "section1_goals",
+          "html": "\n<p><span style='font-size: 12pt;'>The questions in this section aim to understand your experience with the Teaching {module} self-paced professional learning module.</span></p>\n"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "better_understanding_concepts"
+        },
+        {
+          "type": "rating",
+          "name": "comfort_supporting_students_learn_aif_programming",
+          "visibleIf": "{module} = 'Foundations of AI Programming'",
+          "title": "After completing this module, I am more comfortable in my ability to support students in designing, analyzing, and debugging programs, including the ethical use of AI tools in their development.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Less confident",
+          "maxRateDescription": "Much more confident"
+        },
+        {
+          "type": "rating",
+          "name": "comfort_supporting_students_learn_aif_systems",
+          "visibleIf": "{module} = 'AI and the Systems that Power It'",
+          "title": "After completing this module, I am more comfortable in my ability to support students in understanding computational systems, applying human-centered design, and critically evaluating the societal and ethical implications of AI and emerging technologies.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Less confident",
+          "maxRateDescription": "Much more confident"
+        },
+        {
+          "type": "rating",
+          "name": "comfort_supporting_students_learn_aif_internet",
+          "visibleIf": "{module} = 'Fabric of the Internet and AI'",
+          "title": "After completing this module, I am more comfortable in my ability to support students in understanding Internet communication, analyzing network security challenges, and evaluating the ethical use of AI in network security.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Less confident",
+          "maxRateDescription": "Much more confident"
+        },
+        {
+          "type": "rating",
+          "name": "comfort_supporting_students_learn_aif_cybersecurity",
+          "visibleIf": "{module} = 'Cybersecurity and Global Impacts'",
+          "title": "After completing this module, I am more comfortable in my ability to support students in critically assessing computing's impact, understanding data privacy and security threats, and advocating for responsible technological advancements.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Less confident",
+          "maxRateDescription": "Much more confident"
+        },
+        {
+          "type": "rating",
+          "name": "comfort_supporting_students_learn_aif_data",
+          "visibleIf": "{module} = 'Insights from Data and AI'",
+          "title": "After completing this module, I am more comfortable in my ability to support students in understanding data science foundations, analyzing datasets, and telling ethical data stories.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Less confident",
+          "maxRateDescription": "Much more confident"
+        },
+        {
+          "type": "rating",
+          "name": "comfort_supporting_students_learn_aif_problem_solving",
+          "visibleIf": "{module} = 'Problem-Solving with AI'",
+          "title": "After completing this module, I am more comfortable in my ability to support students in understanding, critically evaluating, and responsibly utilizing AI.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Less confident",
+          "maxRateDescription": "Much more confident"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "know_what_students_learn_module",
+          "natalia_comment": "INCLUDE ONLY if module is about one UNIT (instead of one complete curriculum, if so use know_what_students_learn instead)"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "comfort_ability_to_teach"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "plan_ongoing_assessment",
+          "natalia_comment": "INCLUDE ONLY if applicable per curriculum content"
+        },
+        {
+          "type": "rating",
+          "name": "familiar_student_programming_environments",
+          "title": "After completing this module, I am more familiar with the programming environments and learning tools that students will use in the {module} curriculum.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Strongly disagree",
+          "maxRateDescription": "Strongly agree",
+          "visibleIf": "{module} <> 'Cybersecurity and Global Impacts'"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "plan_to_teach",
+          "natalia_comment": "INCLUDE ONLY IF MODULE IS ABOUT CS CURRICULUM"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "barriers_implementation_ai",
+          "natalia_comment": "INCLUDE ONLY IF MODULE IS ABOUT AI"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "barriers_implementation_teaching_cs",
+          "natalia_comment": "INCLUDE ONLY IF MODULE IS ABOUT CS CURRICULUM"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "module_supported_learning"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "module_navigation"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "how_long_to_complete_module"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "nps_self_paced_pd"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "pl_to_support_growth_teacher_cs"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "self_paced_pl_other_feedback"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "permission_to_quote"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "focus_group_panel"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "thank_you_heading"
+        }
+      ]
+    }
+  ],
+  "published": true
+}

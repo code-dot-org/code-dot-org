@@ -1,0 +1,12 @@
+name 'Data Sci U2 Pre Q12_2024-pilot'
+
+question 'You want to create a graph in python that maps time vs another variable. Which Matplotlib function would be the best to use?'
+
+wrong '`plt.bar()`'
+wrong '`plt.scatter()`'
+right '`plt.line()`'
+wrong '`plt.plot()`'
+
+
+
+allow_multiple_attempts false

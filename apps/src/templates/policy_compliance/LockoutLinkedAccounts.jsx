@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import React, {useState, useEffect, useReducer} from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import parentalPermissionRequestReducer, {
   REQUEST_PARENTAL_PERMISSION_SUCCESS,
   requestParentalPermission,
@@ -14,8 +14,8 @@ import usePrevious from '@cdo/apps/util/usePrevious';
 import {ChildAccountComplianceStates} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import Spinner from '../../code-studio/pd/components/spinner';
 import {getStore} from '../../redux';
+import Spinner from '../../sharedComponents/Spinner';
 import * as color from '../../util/color';
 import {hashString} from '../../utils';
 
@@ -27,7 +27,7 @@ import {hashString} from '../../utils';
  */
 export default function LockoutLinkedAccounts(props) {
   const reportEvent = (eventName, payload = {}) => {
-    analyticsReporter.sendEvent(eventName, payload, PLATFORMS.AMPLITUDE);
+    analyticsReporter.sendEvent(eventName, payload);
   };
 
   const validateEmail = email => {
@@ -68,6 +68,7 @@ export default function LockoutLinkedAccounts(props) {
       providers: props.providers,
       inSection: props.inSection,
       consentStatus: props.permissionStatus,
+      us_state: props.usState,
     });
   }, [props]);
 
@@ -87,18 +88,21 @@ export default function LockoutLinkedAccounts(props) {
         providers: props.providers,
         inSection: props.inSection,
         consentStatus: parentalPermissionRequest.consent_status,
+        us_state: props.usState,
       });
     } else if (parentalPermissionRequest.parent_email === prevPendingEmail) {
       reportEvent(EVENTS.CAP_SETTINGS_EMAIL_RESEND, {
         providers: props.providers,
         inSection: props.inSection,
         consentStatus: parentalPermissionRequest.consent_status,
+        us_state: props.usState,
       });
     } else {
       reportEvent(EVENTS.CAP_SETTINGS_EMAIL_UPDATED, {
         providers: props.providers,
         inSection: props.inSection,
         consentStatus: parentalPermissionRequest.consent_status,
+        us_state: props.usState,
       });
     }
   }, [action, prevPendingEmail, parentalPermissionRequest, props]);
@@ -303,6 +307,7 @@ LockoutLinkedAccounts.propTypes = {
   userEmail: PropTypes.string,
   inSection: PropTypes.bool,
   providers: PropTypes.arrayOf(PropTypes.string),
+  usState: PropTypes.string,
 };
 
 const styles = {

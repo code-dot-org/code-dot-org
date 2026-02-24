@@ -4,5 +4,7 @@ if [[ $(/usr/bin/id -u) -ne 0 ]]; then
   exit
 fi
 
+set -e
+
 # Then, perform the upgrade!
 do-release-upgrade -f DistUpgradeViewNonInteractive;

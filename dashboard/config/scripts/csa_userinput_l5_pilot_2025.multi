@@ -1,0 +1,14 @@
+name 'CSA-UserInput-L5_pilot-2025'
+title 'Check for Understanding'
+
+wrong 'The `Scanner` class can only read strings from a file.'
+wrong 'The `createScanner` method is used to obtain a `File` object for reading input.'
+right 'The `Scanner` class can be used to read different types of data from both the console and files.'
+wrong 'The `File` class is used to obtain user input from the console.'
+
+
+markdown <<MARKDOWN
+Which of the following statements is **NOT** true about using the `Scanner` class and reading from files?
+MARKDOWN
+
+allow_multiple_attempts true

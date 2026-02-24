@@ -1,0 +1,30 @@
+name 'music-lab-612-pre-q5'
+
+question '**How can Sasha update her code to follow Logan\'s advice?** Her song should sound the same, but now it will have a function that she can re-use for other parts of her code'
+
+width '200'
+height '200'
+
+right 'https://images.code.org/2b78f158f8c95d27f377334fbb2959ee-functions-E-answer-A.png'
+wrong 'https://images.code.org/2bbe8b4c5e70dfc5dcd7e762c8be795f-functions-E-answer-B.png'
+wrong 'https://images.code.org/a253ac99c1024f30be02e4e368203070-functions-E-answer-C.png'
+wrong 'https://images.code.org/2904c46fc0582df120e4c14d67eadf06-functions-E-answer-D.png'
+
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Topic: Functions
+
+Skill: Use a function multiple times in a song, such as repeating a chorus
+
+Appears in Lesson: Functions - Explore
+MARKDOWN
+
+markdown <<MARKDOWN
+Sasha is working on a remix of Espresso by Sabrina Carpetner. She's already created part of the verse and chorus and is about to start on the other parts of the song.
+
+![](https://images.code.org/45b6c68bda0a1e55e16f9dcbc95623b0-functions-E-question.png)
+
+Her friend Logan walks over and says "You can use a function for that Ad Lib vocal. That way you can re-use it in the other parts of the song".
+MARKDOWN

@@ -1,0 +1,58 @@
+import {NewFolderFunction} from '@codebridge/codebridgeContext/types';
+import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
+import {FolderId} from '@codebridge/types';
+import {validateFolderNameForModal} from '@codebridge/utils';
+
+import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {
+  DialogType,
+  DialogControlInterface,
+  extractUserInput,
+} from '@cdo/apps/lab2/views/dialogs';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+
+type OpenNewFilePromptArgsType = {
+  parentId?: FolderId;
+  dialogControl: Pick<DialogControlInterface, 'showDialog'>;
+  newFolder: NewFolderFunction;
+  projectFolders: MultiFileSource['folders'];
+  sendLab2AnalyticsEvent: (eventName: string) => unknown;
+};
+
+export const openNewFolderPrompt = async ({
+  parentId = DEFAULT_FOLDER_ID,
+  dialogControl,
+  newFolder,
+  projectFolders,
+  sendLab2AnalyticsEvent,
+}: OpenNewFilePromptArgsType) => {
+  const results = await dialogControl.showDialog({
+    type: DialogType.GenericPrompt,
+    title: 'Create a new folder',
+    message: 'Give your folder a name.',
+    textFieldProps: {
+      label: 'Folder name',
+    },
+    confirmButtonText: 'Create folder',
+    validateInput: (folderName: string) => {
+      return validateFolderNameForModal({
+        folderName,
+        parentId,
+        projectFolders,
+      });
+    },
+    useModal: true,
+  });
+  if (results.type !== 'confirm') {
+    return;
+  }
+  const folderName = extractUserInput(results);
+
+  newFolder({parentId, folderName});
+
+  const eventName =
+    parentId === DEFAULT_FOLDER_ID
+      ? EVENTS.CODEBRIDGE_NEW_FOLDER
+      : EVENTS.CODEBRIDGE_NEW_SUBFOLDER;
+  sendLab2AnalyticsEvent(eventName);
+};

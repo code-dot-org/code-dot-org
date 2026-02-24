@@ -1,0 +1,12 @@
+name 'Data Sci U2 Pre Q14_2024-pilot'
+
+question 'Why is it important to identify and address inconsistent data entries in a dataset?'
+
+wrong 'To increase the dataset\'s size for analysis.'
+right 'To ensure that the dataset accurately reflects the real-world phenomenon being studied.'
+wrong 'To make the data processing faster.'
+wrong 'To avoid unnecessary data collection.'
+
+
+
+allow_multiple_attempts false

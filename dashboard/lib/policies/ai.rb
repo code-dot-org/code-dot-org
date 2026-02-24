@@ -1,10 +1,8 @@
-require 'user'
-
 class Policies::Ai
   # Whether or not AI rubric features (AI TA) are enabled.
   def self.ai_rubrics_enabled?(user)
     return false if user.nil?
-
+    return false unless user.verified_teacher?
     !user.ai_rubrics_disabled
   end
 
@@ -23,5 +21,25 @@ class Policies::Ai
     sections.any? do |section|
       Policies::Ai.ai_rubrics_enabled?(section.user)
     end
+  end
+
+  def self.ai_differentiation_enabled?(user)
+    # Disabled unless there is an actual user (folks who are logged out)
+    return false unless user
+
+    # Must be a teacher
+    return false unless user.teacher?
+
+    # Check user preference: default to showing the AI differentiation.
+    !user.ai_differentiation_toggled_off?
+  end
+
+  def self.ai_differentiation_enabled_for_unit?(unit_or_unit_group)
+    # Documents are added to KB for all stable units.
+    !!unit_or_unit_group.stable?
+  end
+
+  def self.ai_differentiation_enabled_for_lesson?(lesson)
+    ai_differentiation_enabled_for_unit?(lesson&.script)
   end
 end

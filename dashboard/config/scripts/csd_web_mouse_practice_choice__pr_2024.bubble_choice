@@ -1,0 +1,7 @@
+name 'CSD web mouse practice choice_-pr-2024'
+display_name 'Mouse Input and If/else Practice'
+description 'Practice keyboard input and using conditional statements with these activities.'
+
+sublevels
+level 'CSD games mouse mousey_-pr-2024'
+level 'CSD games practice move with mouse_-pr-2024'

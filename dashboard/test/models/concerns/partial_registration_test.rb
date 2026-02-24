@@ -9,7 +9,7 @@ class PartialRegistrationTest < ActiveSupport::TestCase
   end
 
   test 'persist_attributes does not push empty attributes into the cache' do
-    user = build :user
+    user = build(:user)
     assert user.attributes.values.any?(&:nil?)
 
     PartialRegistration.persist_attributes @session, user
@@ -20,7 +20,7 @@ class PartialRegistrationTest < ActiveSupport::TestCase
   end
 
   test 'persist_attributes pushes less than 0.5KB into the cache for a sample user' do
-    user = build :user, :google_sso_provider
+    user = build(:user, :google_sso_provider)
     PartialRegistration.persist_attributes @session, user
 
     cache_key = PartialRegistration.cache_key(user)
@@ -39,17 +39,13 @@ class PartialRegistrationTest < ActiveSupport::TestCase
   end
 
   test 'in_progress? becomes false if attributes are lost from the cache' do
-    user = build :user
+    user = build(:user)
     PartialRegistration.persist_attributes @session, user
     CDO.shared_cache.delete(PartialRegistration.cache_key(user))
     refute PartialRegistration.in_progress? @session
   end
 
   describe 'can_finish_signup?' do
-    before do
-      DCDO.stubs(:get).with('student-email-post-enabled', false).returns(true)
-    end
-
     it 'can_finish_signup? is false when params are not present' do
       PartialRegistration.persist_attributes @session, build(:user)
       refute PartialRegistration.can_finish_signup?(nil, @session)
@@ -84,7 +80,7 @@ class PartialRegistrationTest < ActiveSupport::TestCase
   end
 
   test 'new_from_partial_registration raises on a missing cache entry' do
-    user = build :student
+    user = build(:student)
     PartialRegistration.persist_attributes @session, user
     CDO.shared_cache.delete(PartialRegistration.cache_key(user))
 
@@ -95,7 +91,7 @@ class PartialRegistrationTest < ActiveSupport::TestCase
   end
 
   test 'new_from_partial_registration raises on a malformed cache entry' do
-    user = build :student
+    user = build(:student)
     PartialRegistration.persist_attributes @session, user
     CDO.shared_cache.write(PartialRegistration.cache_key(user), '{malformed_json:')
 
@@ -109,10 +105,13 @@ class PartialRegistrationTest < ActiveSupport::TestCase
     assert_kind_of User, User.new_from_partial_registration(@session)
   end
 
-  test 'new_from_partial_registration does not save the User' do
+  test 'new_with_session does not save the User' do
     PartialRegistration.persist_attributes @session, build(:user)
 
-    user = User.new_from_partial_registration @session
+    user_params = ActionController::Parameters.new
+    user_params[:email] = 'test@code.org'
+
+    user = User.new_with_session(user_params.permit(:email), @session)
     assert user.valid?
     refute user.persisted?
   end
@@ -129,12 +128,15 @@ class PartialRegistrationTest < ActiveSupport::TestCase
   end
 
   test 'round-trip preserves important attributes (email)' do
-    user = build :student
+    user = build(:student)
     refute_nil user.email
     refute_nil user.encrypted_password
     PartialRegistration.persist_attributes @session, user
 
-    result_user = User.new_from_partial_registration @session
+    user_params = ActionController::Parameters.new
+    user_params[:email] = user.email
+
+    result_user = User.new_with_session user_params.permit(:email), @session
     assert result_user.student?
     assert_equal user.name, result_user.name
     assert_equal user.email, result_user.email
@@ -143,22 +145,24 @@ class PartialRegistrationTest < ActiveSupport::TestCase
   end
 
   test 'persist_attributes expires after TTL' do
-    DCDO.stubs(:get).with('student-email-post-enabled', false).returns(true)
-
-    user = build :student
+    user = build(:student)
     refute_nil user.email
     refute_nil user.encrypted_password
-    PartialRegistration.persist_attributes @session, user
+    Timecop.freeze do
+      PartialRegistration.persist_attributes @session, user
 
-    cache_key = PartialRegistration.cache_key(user)
-    normalized_key = CDO.shared_cache.send(:normalize_key, cache_key, {})
-    cache_entry = CDO.shared_cache.send(:read_entry, normalized_key)
+      cache_key = PartialRegistration.cache_key(user)
+      normalized_key = CDO.shared_cache.send(:normalize_key, cache_key, {})
+      cache_entry = CDO.shared_cache.send(:read_entry, normalized_key)
 
-    assert_equal 8.hours, cache_entry.instance_variable_get(:@expires_in)
+      assert_changes -> {cache_entry.expired?}, from: false, to: true do
+        Timecop.travel(8.hours)
+      end
+    end
   end
 
   test 'round-trip preserves important attributes (sso)' do
-    user = build :user, :google_sso_provider
+    user = build(:user, :google_sso_provider)
     refute_nil user.provider
     refute_nil user.uid
     refute_nil user.oauth_token
@@ -166,7 +170,10 @@ class PartialRegistrationTest < ActiveSupport::TestCase
     refute_nil user.oauth_refresh_token
     PartialRegistration.persist_attributes @session, user
 
-    result_user = User.new_from_partial_registration @session
+    user_params = ActionController::Parameters.new
+    user_params[:email] = user.email
+
+    result_user = User.new_with_session user_params.permit(:email), @session
     assert_equal user.user_type, result_user.user_type
     assert_equal user.name, result_user.name
     assert_equal user.email, result_user.email
@@ -178,7 +185,7 @@ class PartialRegistrationTest < ActiveSupport::TestCase
   end
 
   test 'delete removes the partial registration from the session and cache' do
-    user = build :user, :google_sso_provider
+    user = build(:user, :google_sso_provider)
     cache_key = PartialRegistration.cache_key user
 
     PartialRegistration.persist_attributes @session, user
@@ -210,7 +217,7 @@ class PartialRegistrationTest < ActiveSupport::TestCase
   end
 
   test 'get_provider returns the provider name when an sso registration is in progress' do
-    user = build :user, :google_sso_provider
+    user = build(:user, :google_sso_provider)
     PartialRegistration.persist_attributes @session, user
     assert_equal user.provider, PartialRegistration.get_provider(@session)
   end

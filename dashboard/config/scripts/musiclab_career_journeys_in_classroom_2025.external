@@ -1,0 +1,56 @@
+name 'musiclab_career_journeys_in_classroom_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Career Journeys in the Classroom
+
+
+
+
+## How I Can Expand on This Work in My Classroom?
+
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; width: 100%; margin: 20px auto;">
+
+<!-- Card 1 -->
+<div style="background-color: #F5F7F8; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); text-align: center;">
+<p style="font-size: 14pt; font-weight: bold;">👩🏽‍💻 Show Diverse Role Models</p>
+<ul style="font-size: 13pt; text-align: left;">
+<li>Share stories from all backgrounds</li>
+<li>Include non-traditional tech paths</li>
+</ul>
+</div>
+
+<!-- Card 2 -->
+<div style="background-color: #F5F7F8; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); text-align: center;">
+<p style="font-size: 14pt; font-weight: bold;">🎨 Link CS to Student Passions</p>
+<ul style="font-size: 13pt; text-align: left;">
+<li>Start with what they love (music, fashion, sports)</li>
+<li>Use hands-on, creative projects</li>
+</ul>
+</div>
+
+<!-- Card 3 -->
+<div style="background-color: #F5F7F8; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); text-align: center;">
+<p style="font-size: 14pt; font-weight: bold;">🧭 Explore Career Paths</p>
+<ul style="font-size: 13pt; text-align: left;">
+<li>Tech is more than coding</li>
+<li>Talk about college, bootcamps, and more</li>
+</ul>
+</div>
+
+<!-- Card 4 -->
+<div style="background-color: #F5F7F8; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); text-align: center;">
+<p style="font-size: 14pt; font-weight: bold;">🌱 Celebrate Growth</p>
+<ul style="font-size: 13pt; text-align: left;">
+<li>Normalize mistakes</li>
+<li>Share your own learning</li>
+<li>Value effort and creativity</li>
+</ul>
+</div>
+
+</div>
+
+
+MARKDOWN

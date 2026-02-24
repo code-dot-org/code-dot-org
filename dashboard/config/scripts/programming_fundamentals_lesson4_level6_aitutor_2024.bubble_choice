@@ -1,0 +1,13 @@
+name 'programming-fundamentals-lesson4-level6-aitutor-2024'
+display_name 'Variables Practice'
+description 'Pick one of the levels below. Use variables to store data and update their value. Then print out the result.'
+
+sublevels
+level 'programming-fundamentals-lesson4-level6a-aitutor-2024'
+level 'programming-fundamentals-lesson4-level6b-aitutor-2024'
+level 'programming-fundamentals-lesson4-level6c-aitutor-2024'
+
+
+
+
+

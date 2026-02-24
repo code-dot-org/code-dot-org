@@ -2,9 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
@@ -19,7 +18,6 @@ import {setCurrentView} from './sectionProgressRedux';
  */
 class SectionProgressToggle extends React.Component {
   static propTypes = {
-    showStandardsToggle: PropTypes.bool,
     // Redux provided
     currentView: PropTypes.string.isRequired,
     setCurrentView: PropTypes.func.isRequired,
@@ -28,20 +26,6 @@ class SectionProgressToggle extends React.Component {
   };
 
   onChange = selectedToggle => {
-    firehoseClient.putRecord(
-      {
-        study: 'teacher_dashboard_actions',
-        study_group: 'progress',
-        event: 'view_change_toggle',
-        data_json: JSON.stringify({
-          section_id: this.props.sectionId,
-          old_view: this.props.currentView,
-          new_view: selectedToggle,
-          script_id: this.props.scriptId,
-        }),
-      },
-      {includeUserId: true}
-    );
     analyticsReporter.sendEvent(EVENTS.PROGRESS_TOGGLE, {
       sectionId: this.props.sectionId,
       unitId: this.props.scriptId,
@@ -51,7 +35,7 @@ class SectionProgressToggle extends React.Component {
   };
 
   render() {
-    const {currentView, showStandardsToggle} = this.props;
+    const {currentView} = this.props;
     return (
       <ToggleGroup
         selected={currentView}
@@ -74,16 +58,6 @@ class SectionProgressToggle extends React.Component {
         >
           <div>{i18n.levels()}</div>
         </button>
-        {showStandardsToggle && (
-          <button
-            type="button"
-            value={ViewType.STANDARDS}
-            style={styles.toggleButton}
-            id="uitest-standards-toggle"
-          >
-            <div>{i18n.standards()}</div>
-          </button>
-        )}
       </ToggleGroup>
     );
   }

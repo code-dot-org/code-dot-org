@@ -1,0 +1,242 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import TextField, {
+  TextFieldProps,
+} from '@code-dot-org/component-library/textField';
+import classNames from 'classnames';
+import React, {
+  ChangeEvent,
+  memo,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
+
+import {useDebounce} from '@cdo/apps/util/hooks/useDebounce';
+import useOutsideClick from '@cdo/apps/util/hooks/useOutsideClick';
+
+import styles from './AutocompleteInput.module.scss';
+
+const FETCH_SUGGESTIONS_MIN_LENGTH = 3;
+
+export const AutocompleteInput = memo(
+  ({
+    label,
+    name,
+    size,
+    className,
+    onChange,
+    value,
+    fetchOptions,
+    errorMessage,
+    id,
+    onSubmit,
+    hideIcon = false,
+    compactOptions = false,
+    focusInputOnSelect = true,
+    placeholder = 'Type to see results',
+    debounceDelay = 300,
+  }: {
+    id: string;
+    label?: string;
+    name: string;
+    size: TextFieldProps['size'];
+    className: string;
+    onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+    value: string;
+    fetchOptions: (value: string) => Promise<string[]>;
+    errorMessage?: string;
+    onSubmit?: (value: string) => void;
+    hideIcon?: boolean;
+    compactOptions?: boolean;
+    focusInputOnSelect?: boolean;
+    placeholder?: string;
+    debounceDelay?: number;
+  }) => {
+    const skipApi = useRef(true);
+    const listboxId = id;
+    const [options, setOptions] = useState<string[]>([]);
+    const [activeIndex, setActiveIndex] = useState(-1);
+    const [loading, setLoading] = useState(false);
+    const isFocusedRef = useRef(false);
+    const debouncedValue = useDebounce(value, debounceDelay);
+
+    const reset = useCallback(() => {
+      // reset is called on every click outside of the input
+      // check for the need to reset component before changing state
+      if (!options.length) return;
+      setOptions([]);
+      setActiveIndex(-1);
+    }, [options]);
+
+    const containerRef = useOutsideClick<HTMLDivElement>(reset);
+
+    // Clear options when input is cleared or reduced to a length below the minimum to fetch suggestions.
+    useEffect(() => {
+      if (!value || value.length < FETCH_SUGGESTIONS_MIN_LENGTH) {
+        reset();
+      }
+    }, [reset, value]);
+
+    useEffect(() => {
+      // Skip API call when component first mounts if value already exists.
+      // Also skip when an option is selected and value updates with result
+      if (skipApi.current) {
+        skipApi.current = false;
+        return;
+      }
+
+      if (!isFocusedRef.current) {
+        return;
+      }
+
+      if (
+        debouncedValue &&
+        debouncedValue.length >= FETCH_SUGGESTIONS_MIN_LENGTH
+      ) {
+        const fetchSuggestions = async () => {
+          try {
+            setLoading(true);
+            const suggestedOptions = await fetchOptions(debouncedValue);
+            setOptions(suggestedOptions);
+            setActiveIndex(-1);
+          } catch (error) {
+            console.error(error);
+          } finally {
+            setLoading(false);
+          }
+        };
+        fetchSuggestions();
+      }
+    }, [debouncedValue, fetchOptions]);
+
+    const handleSelectOption = useCallback(
+      (option: string) => {
+        skipApi.current = true;
+        onChange({
+          target: {
+            name,
+            value: option,
+          },
+        } as ChangeEvent<HTMLInputElement>);
+        onSubmit?.(option);
+        reset();
+
+        if (focusInputOnSelect) {
+          containerRef.current?.querySelector('input')?.focus();
+        }
+      },
+      [containerRef, name, onChange, reset, onSubmit, focusInputOnSelect]
+    );
+
+    const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+      const {key} = e;
+
+      // If no option is selected from the dropdown and Enter is pressed, trigger onSubmit with current value in the input.
+      if (key === 'Enter' && onSubmit && activeIndex < 0) {
+        e.preventDefault();
+        onSubmit(value);
+        reset();
+        return;
+      }
+
+      if (options.length > 0) {
+        switch (key) {
+          case 'ArrowDown':
+            e.preventDefault();
+            setActiveIndex(prev => Math.min(prev + 1, options.length - 1));
+            break;
+          case 'ArrowUp':
+            e.preventDefault();
+            setActiveIndex(prev => Math.max(prev - 1, 0));
+            break;
+          case 'Enter':
+          case ' ':
+            if (activeIndex >= 0) {
+              e.preventDefault();
+              const selectedValue = options[activeIndex];
+              handleSelectOption(selectedValue);
+            }
+            break;
+          case 'Escape':
+          case 'Tab':
+            reset();
+            break;
+        }
+      }
+    };
+
+    // Tracking the focus state makes sure we're not accidentally showing the options when the input is not focused.
+    const handleFocus = () => {
+      isFocusedRef.current = true;
+    };
+
+    const handleBlur = () => {
+      isFocusedRef.current = false;
+    };
+
+    return (
+      <div
+        ref={containerRef}
+        className={classNames(
+          styles.autocompleteInputContainer,
+          hideIcon && styles.hideIcon,
+          compactOptions && styles.compactOptions
+        )}
+      >
+        <TextField
+          name={name}
+          label={label}
+          size={size}
+          onChange={onChange}
+          value={value}
+          className={className}
+          errorMessage={errorMessage}
+          placeholder={placeholder}
+          onKeyDown={handleKeyDown}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+          autoComplete="off"
+          role="combobox"
+          aria-autocomplete="list"
+          aria-controls={listboxId}
+          aria-expanded={options.length > 0}
+          aria-activedescendant={
+            activeIndex >= 0 ? `${listboxId}-item-${activeIndex}` : undefined
+          }
+        />
+        {!hideIcon && (
+          <FontAwesomeV6Icon
+            iconName={loading ? 'spinner' : 'magnifying-glass'}
+            animationType={loading ? 'spin' : undefined}
+            aria-hidden={true}
+          />
+        )}
+        {isFocusedRef.current && options.length > 0 && (
+          <ul
+            id={listboxId}
+            role="listbox"
+            className={classNames(styles.optionList, {
+              [styles.keyboardNav]: activeIndex >= 0,
+            })}
+          >
+            {options.map((option, index) => (
+              <li
+                key={option}
+                className={classNames(styles.optionItem, {
+                  [styles.active]: activeIndex === index,
+                })}
+                onClick={() => handleSelectOption(option)}
+                id={`${listboxId}-item-${index}`}
+                role="option"
+                aria-selected={activeIndex === index}
+              >
+                {option}
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    );
+  }
+);

@@ -8,7 +8,7 @@ import {connect} from 'react-redux';
 
 import msg from '@cdo/locale';
 
-import FontAwesome from '../../templates/FontAwesome';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import {DataView, WarningType} from '../constants';
 import {changeView, showWarning, tableType} from '../redux/data';
 import {storageBackend} from '../storage';

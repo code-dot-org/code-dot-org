@@ -1097,7 +1097,7 @@ module Pd::Application
       return if incomplete?
       response_scores = response_scores_hash[:meets_minimum_criteria_scores] || {}
 
-      scored_questions = SCOREABLE_QUESTIONS["criteria_score_questions_#{course}".to_sym]
+      scored_questions = SCOREABLE_QUESTIONS[:"criteria_score_questions_#{course}"]
 
       scores = scored_questions.map {|q| response_scores[q]}
 

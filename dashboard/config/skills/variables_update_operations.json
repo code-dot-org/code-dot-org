@@ -1,0 +1,6 @@
+{
+  "key": "variables_update_operations",
+  "concept": "variables",
+  "description": "Update variable values through operations",
+  "evaluation_criteria": "Is there evidence that a variable is being updated through operations including addition, subtraction, concatenation "
+}

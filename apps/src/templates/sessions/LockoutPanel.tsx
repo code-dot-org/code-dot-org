@@ -3,8 +3,8 @@ import React, {CSSProperties, useState, useEffect, useReducer} from 'react';
 import {useSelector} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import parentalPermissionRequestReducer, {
   REQUEST_PARENTAL_PERMISSION_SUCCESS,
   requestParentalPermission,
@@ -17,8 +17,8 @@ import i18n from '@cdo/locale';
 import headerThanksImage from '@cdo/static/common_images/penguin/dancing.png';
 import headerImage from '@cdo/static/common_images/penguin/yelling.png';
 
-import Spinner from '../../code-studio/pd/components/spinner';
 import {getStore} from '../../redux';
+import Spinner from '../../sharedComponents/Spinner';
 import * as color from '../../util/color';
 import {hashString} from '../../utils';
 
@@ -30,7 +30,7 @@ import {hashString} from '../../utils';
  */
 const LockoutPanel: React.FC<LockoutPanelProps> = props => {
   const reportEvent = (eventName: string, payload: object = {}) => {
-    analyticsReporter.sendEvent(eventName, payload, PLATFORMS.AMPLITUDE);
+    analyticsReporter.sendEvent(eventName, payload);
   };
 
   // Determine if we think the given email matches the child email
@@ -90,6 +90,7 @@ const LockoutPanel: React.FC<LockoutPanelProps> = props => {
         inSection: props.inSection,
         consentStatus: props.permissionStatus,
         requestSent: !!props.pendingEmail,
+        us_state: currentUser.usStateCode,
       });
     }
   }, [
@@ -97,6 +98,7 @@ const LockoutPanel: React.FC<LockoutPanelProps> = props => {
     props.permissionStatus,
     props.pendingEmail,
     currentUser.userId,
+    currentUser.usStateCode,
   ]);
 
   /**
@@ -114,19 +116,28 @@ const LockoutPanel: React.FC<LockoutPanelProps> = props => {
       reportEvent(EVENTS.CAP_LOCKOUT_EMAIL_SUBMITTED, {
         inSection: props.inSection,
         consentStatus: parentalPermissionRequest.consent_status,
+        us_state: currentUser.usStateCode,
       });
     } else if (parentalPermissionRequest.parent_email === prevPendingEmail) {
       reportEvent(EVENTS.CAP_LOCKOUT_EMAIL_RESEND, {
         inSection: props.inSection,
         consentStatus: parentalPermissionRequest.consent_status,
+        us_state: currentUser.usStateCode,
       });
     } else {
       reportEvent(EVENTS.CAP_LOCKOUT_EMAIL_UPDATED, {
         inSection: props.inSection,
         consentStatus: parentalPermissionRequest.consent_status,
+        us_state: currentUser.usStateCode,
       });
     }
-  }, [action, prevPendingEmail, parentalPermissionRequest, props.inSection]);
+  }, [
+    action,
+    prevPendingEmail,
+    parentalPermissionRequest,
+    props.inSection,
+    currentUser.usStateCode,
+  ]);
 
   // This will set the email to the current pending email and fire off the
   // form as though they had typed in the same email again.
@@ -158,6 +169,7 @@ const LockoutPanel: React.FC<LockoutPanelProps> = props => {
     reportEvent(EVENTS.CAP_LOCKOUT_SIGN_OUT, {
       inSection: props.inSection,
       consentStatus: status,
+      us_state: currentUser.usStateCode,
     });
   };
 
@@ -244,12 +256,14 @@ const LockoutPanel: React.FC<LockoutPanelProps> = props => {
 
         {/* The timezone is set to UTC to ensure that the exact date renders. */}
         <p>
-          {i18n.sessionLockoutNote({
-            deleteDate: props.deleteDate.toLocaleDateString(locale, {
+          {i18n.sessionLockoutByDateNote()}
+          <br />
+          <b>
+            {props.deleteDate.toLocaleDateString(locale, {
               ...dateOptions,
               timeZone: 'UTC',
-            }),
-          })}
+            })}
+          </b>
         </p>
 
         {/* This field shows the current status of the validation. */}

@@ -14,6 +14,23 @@ module Cdo
     # Match CDO_*, plus RACK_ENV and RAILS_ENV.
     ENV_PREFIX = /^(CDO|(RACK|RAILS)(?=_ENV))_/
 
+    MARKETING_SITES_HOSTS = [
+      # Contentful localhost
+      'http://localhost:3001',
+      'http://localhost.code.org:3001',
+      'http://code.marketing-sites.localhost:3001',
+      'http://preview-code.marketing-sites.localhost:3001',
+      # Contentful development
+      'https://code.marketing-sites.dev-code.org',
+      'https://preview-code.marketing-sites.dev-code.org',
+      # Contentful test
+      'https://code.marketing-sites.test-code.org',
+      'https://preview-code.marketing-sites.test-code.org',
+      # Contentful production
+      'https://code.marketing-sites.code.org',
+      'https://preview-code.marketing-sites.code.org',
+    ].freeze
+
     def initialize
       super
       root = File.expand_path('..', __dir__)
@@ -34,10 +51,16 @@ module Cdo
         "#{root}/config.yml.erb"
       )
 
-      defaults = render("#{root}/config.yml.erb").first
-      to_h.each_key do |key|
-        raise "Unknown property not in defaults: #{key}" unless defaults.key?(key.to_sym)
+      configured_properties = to_h.keys.map(&:to_sym)
+      default_properties = render("#{root}/config.yml.erb").first.keys
+      unknown_properties = configured_properties - default_properties
+      unless unknown_properties.empty?
+        raise <<~ERROR
+          Property or properties "#{unknown_properties.join(', ')}" defined in the environment without a default specified in `config.yml.erb`.
+          Likely this is a former configuration value which has been removed from `config.yml.erb` but still exists in your `locals.yml`.
+        ERROR
       end
+
       raise "'#{rack_env}' is not known environment." unless rack_envs.include?(rack_env)
       freeze_config
     end
@@ -51,7 +74,10 @@ module Cdo
     end
 
     def i18n_backend
-      CDO_I18N_BACKEND
+      @i18n_backend ||=
+        # Because loading i18n files is super-slow, lazy load them in development.
+        # To load all locales for testing, add "lazy_load_i18n: false" to +locals.yml+ config
+        CDO.lazy_load_i18n ? Cdo::I18n::LazyLoadableBackend.new(lazy_load: true) : Cdo::I18n::SimpleBackend.new
     end
 
     def canonical_hostname(domain)
@@ -64,7 +90,7 @@ module Cdo
 
       # our HTTPS wildcard certificate only supports *.code.org
       # 'env', 'studio.code.org' over https must resolve to 'env-studio.code.org' for non-prod environments
-      sep = (domain.include?('.code.org')) ? '-' : '.'
+      sep = domain.include?('.code.org') ? '-' : '.'
       # developers and CI servers use localhost
       return "localhost#{sep}#{domain}" if rack_env?(:development) || ci_webserver?
       return "translate#{sep}#{domain}" if name == 'crowdin'
@@ -75,26 +101,24 @@ module Cdo
       canonical_hostname('studio.code.org')
     end
 
-    def pegasus_hostname
-      canonical_hostname('code.org')
-    end
-
     def hourofcode_hostname
       canonical_hostname('hourofcode.com')
     end
 
     def codeprojects_hostname
-      canonical_hostname('codeprojects.org')
+      return 'codeprojects.org' if rack_env?(:production)
+      return "localhost.codeprojects.org" if rack_env?(:development) || ci_webserver?
+      return "#{stack_name}.codeprojects.org"
+    end
+
+    def preview_codeprojects_hostname
+      "preview.#{codeprojects_hostname}"
     end
 
     def hostedzone_id(domain)
       hosted_zone = Aws::Route53::Client.new.list_hosted_zones_by_name(dns_name: domain).hosted_zones.first
       raise "Could not find #{domain} in hosted zones" unless hosted_zone.name.delete_suffix('.') == domain
       return hosted_zone.id.delete_prefix("/hostedzone/")
-    end
-
-    def codeprojects_hostedzone_id
-      hostedzone_id('codeprojects.org')
     end
 
     def site_host(domain)
@@ -115,21 +139,40 @@ module Cdo
       site_host('code.org')
     end
 
-    def site_url(domain, path = '', scheme = '')
+    def marketing_sites_hosts
+      MARKETING_SITES_HOSTS
+    end
+
+    def site_url(domain, path = '', scheme = '', ge_region: nil)
       path = '/' + path unless path.empty? || path[0] == '/'
+
+      if ge_region && Cdo::GlobalEdition.target_host?(canonical_hostname(domain))
+        path = Cdo::GlobalEdition.path(ge_region, path)
+      end
+
       "#{scheme}//#{site_host(domain)}#{path}"
     end
 
-    def studio_url(path = '', scheme = '')
-      site_url('studio.code.org', path, scheme)
+    def studio_url(path = '', scheme = '', ge_region: nil)
+      site_url('studio.code.org', path, scheme, ge_region: ge_region)
     end
 
-    def code_org_url(path = '', scheme = '')
-      site_url('code.org', path, scheme)
+    def code_org_url(path = '', scheme = '', ge_region: nil)
+      site_url('code.org', path, scheme, ge_region: ge_region)
     end
 
-    def hourofcode_url(path = '', scheme = '')
+    def hourofcode_url(path = '', scheme = '', locale: nil)
+      if locale
+        language = Cdo::I18n.available_languages_by_locale[locale.to_s]
+        hoc_locale = language[:unique_language_s] if language && language[:supported_hoc_b] == 'TRUE'
+        path = File.join('/', hoc_locale, path) if hoc_locale
+      end
+
       site_url('hourofcode.com', path, scheme)
+    end
+
+    def video_url(path)
+      File.join('//videos.code.org', path)
     end
 
     def javabuilder_url(path = '', scheme = '')
@@ -144,8 +187,8 @@ module Cdo
         # deployed development instance of Javabuilder, set
         # 'local_javabuilder_stack_name: "your stack name"' in your locals.yml.
         return 'ws://localhost:8080/javabuilder' if CDO.use_localhost_javabuilder
-        stack_name = CDO.local_javabuilder_stack_name || 'javabuilder-test'
-        "wss://#{stack_name}.code.org"
+        javabuilder_stack_name = CDO.local_javabuilder_stack_name || 'javabuilder-test'
+        "wss://#{javabuilder_stack_name}.code.org"
       else
         DCDO.get("javabuilder_websocket_url", 'wss://javabuilder.code.org')
       end
@@ -159,8 +202,8 @@ module Cdo
         # deployed development instance of Javabuilder, set
         # 'local_javabuilder_stack_name: "your stack name"' in your locals.yml.
         return 'http://localhost:8080/javabuilderfiles/seedsources' if CDO.use_localhost_javabuilder
-        stack_name = CDO.local_javabuilder_stack_name || 'javabuilder-test'
-        "https://#{stack_name}-http.code.org/seedsources/sources.json"
+        javabuilder_stack_name = CDO.local_javabuilder_stack_name || 'javabuilder-test'
+        "https://#{javabuilder_stack_name}-http.code.org/seedsources/sources.json"
       else
         http_url = DCDO.get("javabuilder_http_url", 'https://javabuilder-http.code.org')
         http_url + "/seedsources/sources.json"
@@ -252,6 +295,15 @@ module Cdo
       ''
     end
 
+    # Temporary method to allow safe (exception-free) accessing of the
+    # Statsig API key.
+    def safe_statsig_api_client_key_session_replay
+      CDO.statsig_api_client_key_session_replay
+    rescue ArgumentError
+      # Return an empty string instead of raising
+      ''
+    end
+
     def dir(*dirs)
       File.join(root_dir, *dirs)
     end
@@ -260,11 +312,11 @@ module Cdo
       rack_env&.to_sym == env.to_sym
     end
 
-    # Identify whether we are executing on the managed test system (test.code.org / test-studio.code.org)
-    # to ensure that other systems (such as staging-next or Continuous Integration builds) that are operating
+    # Identify whether we are executing on the managed test system (test-studio.code.org)
+    # to ensure that other systems (such as Continuous Integration builds) that are operating
     # with RACK_ENV=test do not carry out actions on behalf of the managed test system.
     def test_system?
-      rack_env?(:test) && pegasus_hostname == 'test.code.org'
+      rack_env?(:test) && dashboard_hostname == 'test-studio.code.org' && chef_managed
     end
 
     # Identify whether we are executing within a web application server as most of our Ruby classes and modules
@@ -274,6 +326,12 @@ module Cdo
     # we use `thin`.
     def running_web_application?
       %w(puma thin).include?(File.basename($0))
+    end
+
+    # Whether we are executing within a web application server on the
+    # chef-managed test system (test.code.org / test-studio.code.org).
+    def managed_test_server?
+      test_system? && running_web_application?
     end
 
     # Is this code running in a webserver as part of our Continuous Integration
@@ -291,6 +349,7 @@ module Cdo
       @@log = log
     end
 
+    # See docs/log-formats.md - Rails Application Logs - Useful Queries/Patterns for log query patterns.
     def log
       require 'logger'
       @@log ||= Logger.new($stdout).tap do |l|

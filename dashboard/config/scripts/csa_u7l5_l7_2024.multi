@@ -20,7 +20,7 @@ public class Parent {
    }
 }
 
-public class Child {
+public class Child extends Parent {
    ...
    public String show(String name) {
       String say = "I am" + name;

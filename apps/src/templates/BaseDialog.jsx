@@ -122,7 +122,7 @@ export default class BaseDialog extends React.Component {
       modalBodyStyle = {
         background: '#fff',
         height: this.props.fixedHeight,
-        maxHeight: !this.props.fixedHeight && '80vh',
+        maxHeight: !this.props.fixedHeight && '85vh',
         overflowX: overflowX,
         overflowY: overflowY,
         borderRadius: 4,
@@ -155,7 +155,7 @@ export default class BaseDialog extends React.Component {
     xCloseStyle = {
       position: 'absolute',
       top: 0,
-      right: 0,
+      insetInlineEnd: 0,
       padding: 0,
       color: color.neutral_dark30,
       cursor: 'pointer',

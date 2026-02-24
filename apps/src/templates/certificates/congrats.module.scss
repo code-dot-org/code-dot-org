@@ -1,14 +1,15 @@
-@import 'phase1-design-system';
-@import 'color', 'font', 'typography', 'breakpoints',
-  'barlow-semi-condensed-font';
+@import '2022-rebrand-update';
+@import 'color', 'breakpoints';
+@import '@code-dot-org/component-library-styles/font';
+@import '@code-dot-org/component-library-styles/typography.module';
 
-  :root {
-    --swiper-pagination-color: #{$light_primary_500};
-    --swiper-pagination-bullet-size: 1rem;
-    --swiper-pagination-bullet-inactive-color: #{$light_primary_100};
-    --swiper-pagination-bullet-inactive-opacity: 1;
-    --swiper-pagination-bullet-horizontal-gap: 0.5rem;
-  }
+:root {
+  --swiper-pagination-color: #{$light_primary_500};
+  --swiper-pagination-bullet-size: 1rem;
+  --swiper-pagination-bullet-inactive-color: #{$light_primary_100};
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 0.5rem;
+}
 
 .headerContainer {
   margin-top: 50px;
@@ -22,6 +23,21 @@ h1.header {
   background-color: $neutral_light;
   padding: 15px;
   border-radius: 5px;
+}
+
+.userNameIsRequiredAlert {
+  margin-bottom: 2.5rem;
+
+  & > div > span {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      padding-inline-end: 0.625rem;
+    }
+  }
 }
 
 .certificateContainer {
@@ -46,7 +62,6 @@ h1.heading {
 }
 
 .container {
-  margin-bottom: 50px;
   float: left;
   width: 100%;
 }
@@ -58,6 +73,7 @@ h1.mobileHeading {
 
 .desktopHalf {
   width: 50%;
+  height: 100%;
   float: left;
 }
 
@@ -119,16 +135,14 @@ p.enterName {
 }
 
 .prevElNav {
-  background: url('//code.org/images/carousel/prev.svg')
-    no-repeat;
+  background: url('//studio.code.org/blockly/media/carousel/prev.svg') no-repeat;
   left: 1rem;
   border: 0;
   background-size: contain;
 }
 
 .nextElNav {
-  background: url('//code.org/images/carousel/next.svg')
-    no-repeat;
+  background: url('//studio.code.org/blockly/media/carousel/next.svg') no-repeat;
   right: 1rem;
   background-size: contain;
 }

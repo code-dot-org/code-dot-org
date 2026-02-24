@@ -4,6 +4,7 @@ require "services/lti"
 require "policies/lti"
 require "concerns/partial_registration"
 require "clients/lti_advantage_client"
+require "clients/lti_logger"
 require "cdo/honeybadger"
 require 'metrics/events'
 
@@ -11,6 +12,8 @@ class LtiV1Controller < ApplicationController
   # Don't require an authenticity token because LTI Platforms POST to this
   # controller.
   skip_before_action :verify_authenticity_token
+
+  NAMESPACE = 'lti_v1_controller'.freeze
 
   # [GET/POST] /lti/v1/login(/:platform_id)
   #
@@ -27,7 +30,7 @@ class LtiV1Controller < ApplicationController
       query_params = {platform_id: params[:platform_id]}
     else
       return log_unauthorized(
-        'Missing required parameters for LTI authentication',
+        'Missing required parameters in LTI login request',
         {
           client_id: params[:client_id],
           issuer: params[:iss],
@@ -44,9 +47,9 @@ class LtiV1Controller < ApplicationController
     # from the LTI Platform, and can use it to query for these values in the
     # authenticate controller action.
     begin
-      write_cache(state_and_nonce[:state], state_and_nonce)
+      write_cache(state_and_nonce[:state], state_and_nonce, 15.minutes)
     rescue => exception
-      Honeybadger.notify(exception, context: {message: 'Error writing state and nonce to cache'})
+      Clients::LtiLogger.log_event('Error writing state and nonce to cache', {lti_integration_id: lti_integration[:id], exception: exception})
       return render status: :internal_server_error
     end
 
@@ -69,33 +72,36 @@ class LtiV1Controller < ApplicationController
 
   def authenticate
     id_token = params[:id_token]
-    return log_unauthorized('Missing LTI ID token') unless id_token
+    return log_unauthorized('Missing LTI ID token in response') unless id_token
     begin
       decoded_jwt_no_auth = JSON::JWT.decode(id_token, :skip_verification)
     rescue => exception
-      return log_unauthorized(exception)
+      return log_unauthorized('Error decoding JWT', {exception: exception})
     end
     # client_id is the aud[ience] in the JWT, it can be a string or an array
     extracted_client_id = decoded_jwt_no_auth[:aud].is_a?(Array) ? decoded_jwt_no_auth[:aud].first : decoded_jwt_no_auth[:aud]
     extracted_issuer_id = decoded_jwt_no_auth[:iss]
 
-    return log_unauthorized('Missing "aud" or "iss" from ID token') unless extracted_client_id.present? && extracted_issuer_id.present?
+    return log_unauthorized('Missing aud or iss from ID token') unless extracted_client_id.present? && extracted_issuer_id.present?
     # set cache key
     integration_cache_key = "#{extracted_issuer_id}/#{extracted_client_id}"
     # 'integration' can come back as a hash from the cache or as a class instance returned by ActiveRecord. In the case of the former, we are
     # unable to access values using dot notation and instead must use brackets. This still works with the value returned by Active Record,
     # as it has a '[]' method that behaves in the same way https://api.rubyonrails.org/classes/ActiveRecord/AttributeMethods.html#method-i-5B-5D
-    integration = read_cache(integration_cache_key) || LtiIntegration.find_by({client_id: extracted_client_id, issuer: extracted_issuer_id})
+    integration = read_cache(integration_cache_key)
+    unless integration
+      integration = LtiIntegration.find_by({client_id: extracted_client_id, issuer: extracted_issuer_id})
+      # Cache integration for fast retrieval on subsequent LTI launches. Set
+      # expires_in to 1 week
+      write_cache(integration_cache_key, integration, 1.week)
+    end
     return log_unauthorized('LTI integration not found', {client_id: extracted_client_id, issuer: extracted_issuer_id}) unless integration
-    # Cache integration for fast retrieval on subsequent LTI launches. Set
-    # expires_in to 1 week
-    write_cache(integration_cache_key, integration, 1.week)
 
     # check state and nonce in response and id_token against cached values
     begin
       cached_state_and_nonce = read_cache params[:state]
     rescue => exception
-      Honeybadger.notify(exception, context: {message: 'Error reading state and nonce from cache'})
+      Clients::LtiLogger.log_event('Error reading state and nonce from cache', {exception: exception})
       return render status: :internal_server_error
     end
     if cached_state_and_nonce.nil? || (params[:state] != cached_state_and_nonce[:state]) || (decoded_jwt_no_auth[:nonce] != cached_state_and_nonce[:nonce])
@@ -114,7 +120,7 @@ class LtiV1Controller < ApplicationController
       # verify the jwt via the integration's public keyset
       decoded_jwt = get_decoded_jwt(integration, id_token)
     rescue => exception
-      return log_unauthorized(exception)
+      return log_unauthorized('Error decoding JWT', {exception: exception})
     end
 
     # Schoology has multiple contexts that will launch LTI tools in an iframe.
@@ -138,7 +144,7 @@ class LtiV1Controller < ApplicationController
 
     if jwt_verifier.verify_jwt
       message_type = decoded_jwt[Policies::Lti::MessageType::CLAIM]
-      if Policies::Lti::MessageType::SUPPORTED.exclude?(message_type)
+      unless Policies::Lti.supported_message_type?(issuer: extracted_issuer_id, message_type:)
         return render status: :not_acceptable, template: 'lti/v1/authenticate/unsupported_message_type', locals: {
           message_type: message_type,
         }
@@ -150,11 +156,24 @@ class LtiV1Controller < ApplicationController
       nrps_url = decoded_jwt[Policies::Lti::LTI_NRPS_CLAIM]&.[](:context_memberships_url)
       resource_link_id = decoded_jwt[Policies::Lti::LTI_RESOURCE_LINK_CLAIM]&.[](:id)
       deployment_id = decoded_jwt[Policies::Lti::LTI_DEPLOYMENT_ID_CLAIM]
+      deployment_name = decoded_jwt[Policies::Lti::LTI_DEPLOYMENT_PLATFORM_CLAIM]&.[](:name)
       deployment = Queries::Lti.get_deployment(integration[:id], deployment_id)
       lti_account_type = Policies::Lti.get_account_type(decoded_jwt[Policies::Lti::LTI_ROLES_KEY])
 
+      # Store deployment ID and issuer in session for later use
+      session[:external_lti_deployment_id] = deployment_id
+      session[:lti_issuer] = extracted_issuer_id
+      session[:lti_client_id] = extracted_client_id
+
+      # If deployment name is nil, update it with the name from the JWT. This
+      # could likely be removed after a period of time, as we also write the name
+      # for all new deployments in the next block. This line is necessary to
+      # backfill existing deployments that were created before we started
+      # writing the name.
+      deployment&.update(name: deployment_name) if deployment&.name.nil?
+
       if deployment.nil?
-        deployment = Services::Lti.create_lti_deployment(integration[:id], deployment_id)
+        deployment = Services::Lti.create_lti_deployment(integration[:id], deployment_id, deployment_name)
       end
       redirect_params = {
         lti_integration_id: integration[:id],
@@ -178,10 +197,11 @@ class LtiV1Controller < ApplicationController
           user: user,
           event_name: 'lti_user_signin',
           metadata: metadata,
+          session: session,
         )
 
         # If this is the user's first login, send them into the account linking flow
-        if DCDO.get('lti_account_linking_enabled', false) && !user.lms_landing_opted_out
+        unless user.lms_landing_opted_out
           Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'continue', user.user_type)
           PartialRegistration.persist_attributes(session, user)
           publish_linking_page_visit(user, integration[:platform_name])
@@ -198,27 +218,22 @@ class LtiV1Controller < ApplicationController
           render 'lti/v1/upgrade_account' and return
         end
 
+        if decoded_jwt[Policies::Lti::MessageType::CLAIM] == Policies::Lti::MessageType::DEEP_LINKING_REQUEST
+          deep_linking_settings = decoded_jwt[Policies::Lti::DEEP_LINKING_SETTINGS_CLAIM]
+          redirect_to lti_v1_deep_linking_path(deep_linking_settings:) and return
+        end
+
         redirect_to destination_url
       else
         user = Services::Lti.initialize_lti_user(decoded_jwt)
         # PartialRegistration removes the email address, so store it in a local variable first
         email_address = Services::Lti.get_claim(decoded_jwt, :email)
+        Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'new', user.user_type)
         PartialRegistration.persist_attributes(session, user)
-        if DCDO.get('lti_account_linking_enabled', false)
-          Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'new', user.user_type)
-          publish_linking_page_visit(user, integration[:platform_name])
-          render 'lti/v1/account_linking/landing', locals: {email: email_address} and return
-        end
-
-        if DCDO.get('student-email-post-enabled', false)
-          @form_data = {
-            email: email_address
-          }
-
-          render 'omniauth/redirect', {layout: false}
-        else
-          redirect_to new_user_registration_url
-        end
+        # Store the deployment ID in the session, so we can check if it's a restricted deployment later
+        session[:lti_deployment_id] = deployment.id
+        publish_linking_page_visit(user, integration[:platform_name])
+        render 'lti/v1/account_linking/landing', locals: {email: email_address} and return
       end
     else
       jwt_error_message = jwt_verifier.errors.empty? ? 'Invalid JWT' : jwt_verifier.errors.join(', ')
@@ -234,14 +249,26 @@ class LtiV1Controller < ApplicationController
   end
 
   def render_sync_course_error(reason, status, error = nil, message: nil)
-    @lti_section_sync_result = {error: error, message: message}
-    Honeybadger.notify(
+    # We want to log the error to Honeybadger, as we don't expect this to happen
+    # often.
+    honeybadger_id = Honeybadger.notify(
       'LTI roster sync error',
       context: {
-        reason: reason,
+        reason:,
         details: message,
       }
     )
+    Clients::LtiLogger.log_event(
+      message,
+      {
+        reason:,
+        status:,
+        error:,
+        honeybadger_id:,
+      }
+    )
+    @lti_section_sync_result = {error: error, message: message}
+    @lti_section_sync_result[:honeybadger_id] = honeybadger_id if honeybadger_id
     return respond_to do |format|
       format.html do
         render lti_v1_sync_course_path, status: status
@@ -265,14 +292,13 @@ class LtiV1Controller < ApplicationController
       rescue ActionController::ParameterMissing => exception
         case exception.param
         when :context_id, :nrps_url
-          return render_sync_course_error('Attempting to sync a course or section from the wrong place.', :bad_request, 'wrong_context')
+          return redirect_to home_path
         when :lti_integration_id, :deployment_id, :rlid
           return render_sync_course_error("Missing #{exception.param}.", :bad_request, 'missing_param')
         end
       end
     end
 
-    lti_course, lti_integration, deployment_id, context_id,  nrps_url = nil
     resource_link_id = params[:rlid]
 
     if params[:section_code].present?
@@ -283,14 +309,9 @@ class LtiV1Controller < ApplicationController
         return render_sync_course_error('We couldn\'t find the given section.', :bad_request, 'no_section')
       end
       lti_integration = lti_course.lti_integration
-      deployment_id = lti_course.lti_deployment_id
-      context_id = lti_course.context_id
       nrps_url = lti_course.nrps_url
-      # Prefer the resource link from the SSO parameter instead of the course one. The resource link could have changed.
-      # For example, the teacher could have had Code.org in one material/module but deleted that material/module and
-      # made a new one (deleted the old LtiResourceLink and created a brand new one). This results in a mismatch between
-      # what is stored on Code.org's LtiCourse. Therefore, when doing an SSO sync, prefer the latest RLID and update our
-      # records with that.
+      # Requests from the sync button will not include a resource link ID, so it will generally
+      # be nil at this point. Use the one from the lti_course record if present.
       resource_link_id ||= lti_course.resource_link_id
     else
       # Section code isn't present, meaning this is a sync from an LTI launch.
@@ -300,13 +321,32 @@ class LtiV1Controller < ApplicationController
       rescue
         return render_sync_course_error('LTI Integration not found', :bad_request, 'no_integration')
       end
-      deployment_id = params[:deployment_id]
-      context_id = params[:context_id]
       nrps_url = params[:nrps_url]
+
+      lti_deployment = lti_integration.lti_deployments.find_by(id: params[:deployment_id])
+      return render_sync_course_error('LTI Deployment not found', :bad_request, 'no_deployment') unless lti_deployment
+
+      # Temporary lock to prevent concurrent requests from racing past
+      # the ActiveRecord level uniqueness check and creating LtiCourse duplicates.
+      # TODO(P20-1796): Remove the lock once a DB-level unique constraint
+      #                 on (lti_integration_id, context_id) prevents duplicates.
+      lti_deployment.with_lock do
+        lti_course = lti_integration.lti_courses.find_or_create_by!(context_id: params[:context_id]) do |new_record|
+          new_record.assign_attributes(lti_deployment:, nrps_url:, resource_link_id:)
+        end
+      end
     end
 
-    lti_advantage_client = LtiAdvantageClient.new(lti_integration.client_id, lti_integration.issuer)
-    nrps_response = lti_advantage_client.get_context_membership(nrps_url, resource_link_id)
+    # The LTI course `resource_link_id` update must happen before we call NRPS,
+    # or we will get an error if the LMS platform requires an RLID (such as Canvas) and the one we have is stale.
+    lti_course.update!(resource_link_id:) if resource_link_id && lti_course.resource_link_id != resource_link_id
+
+    lti_advantage_client = Clients::LtiAdvantageClient.new(lti_integration.client_id, lti_integration.issuer)
+    begin
+      nrps_response = lti_advantage_client.get_context_membership(nrps_url, resource_link_id)
+    rescue
+      return render_sync_course_error('Error calling NRPS', :bad_request, 'nrps_error')
+    end
     if Policies::Lti.issuer_accepts_resource_link?(lti_integration.issuer)
       nrps_response_errors = Services::Lti::NRPSResponseValidator.call(nrps_response)
 
@@ -326,14 +366,6 @@ class LtiV1Controller < ApplicationController
     total_sections = 0
     total_students = 0
     ActiveRecord::Base.transaction do
-      lti_course ||= Queries::Lti.find_or_create_lti_course(
-        lti_integration_id: lti_integration.id,
-        context_id: context_id,
-        deployment_id: deployment_id,
-        nrps_url: nrps_url,
-        resource_link_id: resource_link_id
-      )
-
       result = Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: nrps_sections, current_user: current_user)
       had_changes ||= !result[:changed].empty?
 
@@ -362,6 +394,8 @@ class LtiV1Controller < ApplicationController
     respond_to do |format|
       format.html do
         if had_changes || params[:force]
+          session[:keep_flashes] = true
+          flash.keep
           render lti_v1_sync_course_path
         else
           redirect_to home_path
@@ -369,73 +403,6 @@ class LtiV1Controller < ApplicationController
       end
       format.json {render json: result}
     end
-  end
-
-  # POST /lti/v1/integrations
-  # Creates a new LtiIntegration
-  def create_integration
-    begin
-      params.require([:name, :client_id, :lms, :email])
-    rescue
-      flash.alert = I18n.t('lti.error.missing_params')
-      return redirect_to lti_v1_integrations_path
-    end
-
-    integration_name = params[:name]
-    client_id = params[:client_id]
-    platform_name = params[:lms]
-    admin_email = params[:email]
-
-    unless Policies::Lti::LMS_PLATFORMS.key?(platform_name.to_sym)
-      flash.alert = I18n.t('lti.error.unsupported_lms_type')
-      return redirect_to lti_v1_integrations_path
-    end
-
-    platform_urls = Policies::Lti::LMS_PLATFORMS[platform_name.to_sym]
-    issuer = platform_urls[:issuer]
-    auth_redirect_url = platform_urls[:auth_redirect_url]
-    jwks_url = platform_urls[:jwks_url]
-    access_token_url = platform_urls[:access_token_url]
-
-    existing_integration = Queries::Lti.get_lti_integration(issuer, client_id)
-    @integration_status = nil
-
-    if existing_integration.nil?
-      Services::Lti.create_lti_integration(
-        name: integration_name,
-        client_id: client_id,
-        issuer: issuer,
-        platform_name: platform_name,
-        auth_redirect_url: auth_redirect_url,
-        jwks_url: jwks_url,
-        access_token_url: access_token_url,
-        admin_email: admin_email
-      )
-
-      @integration_status = :created
-      LtiMailer.lti_integration_confirmation(admin_email).deliver_now
-
-      metadata = {
-        lms_name: platform_name,
-      }
-      Metrics::Events.log_event_with_session(
-        session: session,
-        event_name: 'lti_portal_registration_completed',
-        metadata: metadata,
-      )
-    end
-    render 'lti/v1/integration_status'
-  end
-
-  # GET /lti/v1/integrations
-  # Displays the onboarding portal for creating a new LTI Integration
-  def new_integration
-    @form_data = {}
-    @form_data[:lms_platforms] = Policies::Lti::LMS_PLATFORMS.map do |key, value|
-      {platform: key, name: value[:name]}
-    end
-
-    render lti_v1_integrations_path
   end
 
   # POST /lti/v1/upgrade_account
@@ -448,11 +415,9 @@ class LtiV1Controller < ApplicationController
       render(status: :bad_request, json: {error: I18n.t('lti.upgrade_to_teacher_account.error.missing_email')}) and return
     end
 
-    current_user.upgrade_to_teacher(params[:email])
+    Services::User::UpgradeToTeacher.call(user: current_user, email: params[:email])
     render status: :ok, json: {}
   end
-
-  NAMESPACE = 'lti_v1_controller'.freeze
 
   private def unauthorized_status
     render(status: :unauthorized, json: {error: 'Unauthorized'})
@@ -481,11 +446,8 @@ class LtiV1Controller < ApplicationController
     SecureRandom.alphanumeric length
   end
 
-  private def log_unauthorized(exception, context = nil)
-    Honeybadger.notify(
-      exception,
-      context: context
-    )
+  private def log_unauthorized(event, attributes = {})
+    Clients::LtiLogger.log_event(event, attributes)
     unauthorized_status
   end
 

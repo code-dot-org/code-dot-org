@@ -1,7 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import announcementReducer, {
   addAnnouncement,
 } from '@cdo/apps/code-studio/announcementsRedux';
@@ -27,7 +27,10 @@ import {
   setPageType,
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import experiments from '@cdo/apps/util/experiments';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
+import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
 $(document).ready(showCourseOverview);
 
@@ -37,7 +40,6 @@ function showCourseOverview() {
   const courseSummary = scriptData.course_summary;
   const isInstructor = scriptData.is_instructor;
   const userId = scriptData.user_id;
-
   const store = getStore();
 
   if (courseSummary.has_verified_resources) {
@@ -78,7 +80,7 @@ function showCourseOverview() {
   }
 
   // Eventually we want to do this all via redux
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <CourseOverview
         name={courseSummary.name}
@@ -89,7 +91,6 @@ function showCourseOverview() {
         courseVersionId={courseSummary.course_version_id}
         descriptionStudent={courseSummary.description_student}
         descriptionTeacher={courseSummary.description_teacher}
-        sectionsInfo={scriptData.sections}
         teacherResources={courseSummary.teacher_resources}
         studentResources={courseSummary.student_resources}
         scripts={courseSummary.scripts}
@@ -104,9 +105,32 @@ function showCourseOverview() {
         userId={userId}
         userType={scriptData.user_type}
         participantAudience={courseSummary.participant_audience}
+        aiChatToolsDependency={courseSummary.ai_chat_tools_dependency}
       />
     </Provider>,
     document.getElementById('course_overview')
   );
   tooltipifyVocabulary();
+  displayDifferentiationChat(scriptData);
+}
+
+function displayDifferentiationChat(scriptData) {
+  const aiDiffFabMountPoint = document.getElementById(
+    'ai-differentiation-fab-mount-point'
+  );
+
+  if (aiDiffFabMountPoint && experiments.isEnabled('ai-differentiation')) {
+    createReactRoot(
+      <Provider store={getStore()}>
+        <AiDiffFloatingActionButton
+          context={{
+            type: AiDiffContext.COURSE,
+            courseId: scriptData.course_summary.id,
+          }}
+          scriptName={scriptData.course_summary.name}
+        />
+      </Provider>,
+      aiDiffFabMountPoint
+    );
+  }
 }

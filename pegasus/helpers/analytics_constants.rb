@@ -1,5 +1,5 @@
 # Analytics constants used within the pegasus directory.
-# (See apps/src/lib/util/AnalyticsConstants.js for constants in the
+# (See apps/metrics/AnalyticsConstants.js for constants in the
 # apps directory)
 module AnalyticsConstants
   EVENTS = [
@@ -13,7 +13,6 @@ module AnalyticsConstants
     CSC_CURRICULUM_PAGE_VISITED_EVENT = 'CSC Curriculum Page Visited'.freeze,
     CSD_CURRICULUM_PAGE_VISITED_EVENT = 'CSD Curriculum Page Visited'.freeze,
     CSF_CURRICULUM_PAGE_VISITED_EVENT = 'CSF Curriculum Page Visited'.freeze,
-    CSF_UNPLUGGED_PAGE_VISITED_EVENT = 'CSF Unplugged Page Visited'.freeze,
     CSP_CURRICULUM_PAGE_VISITED_EVENT = 'CSP Curriculum Page Visited'.freeze,
     DISTRICT_PROGRAM_PAGE_VISITED_EVENT = 'District Program Page Visited'.freeze,
     DONATE_PAGE_VISITED_EVENT = 'Donate Page Visited'.freeze,
@@ -42,6 +41,13 @@ module AnalyticsConstants
     MUSIC_LAB_PAGE_VISITED_EVENT = 'Music Lab Tools Page Visited'.freeze,
     LMS_PAGE_VISITED_EVENT = 'LMS Page Visited'.freeze,
     CANVAS_PAGE_VISITED_EVENT = 'Canvas Page Visited'.freeze,
-    SCHOOLOGY_PAGE_VISITED_EVENT = 'Schoology Page Visited'.freeze
+    SCHOOLOGY_PAGE_VISITED_EVENT = 'Schoology Page Visited'.freeze,
+    TRANSFORMERS_PAGE_VISITED_EVENT = 'Transformers Page Visited'.freeze,
+    HELLOWORLD_PAGE_VISITED_EVENT = 'Hello World Page Visited'.freeze,
+    HOC_LANDING_PAGE_VISITED = 'Code.org Hour of Code Landing Page Visited'.freeze,
+    HOC_ACTIVITIES_PAGE_VISITED = 'Hour of Code Activities Page Visited'.freeze,
+    STUDENTS_PAGE_VISITED_EVENT = 'Students Page Visited'.freeze,
+    ELEMENTARY_STUDENT_PAGE_VISITED_EVENT = 'Elementary Student Page Visited'.freeze,
+    MIDDLE_HIGH_STUDENT_PAGE_VISITED_EVENT = 'Middle and High School Student Page Visited'.freeze,
   ].freeze
 end

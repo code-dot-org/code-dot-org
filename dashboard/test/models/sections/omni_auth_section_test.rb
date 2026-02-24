@@ -2,7 +2,7 @@ require 'test_helper'
 
 class OmniAuthSectionTest < ActiveSupport::TestCase
   test 'from omniauth' do
-    owner = create :teacher
+    owner = create(:teacher)
     students = [
       OmniAuth::AuthHash.new(
         uid: 111,
@@ -22,6 +22,7 @@ class OmniAuthSectionTest < ActiveSupport::TestCase
     section.reload
     assert_equal 'G-222222', section.code
     assert_equal User.from_omniauth(students.first, {}), section.students.first
+    assert_equal section.students.first.roster_synced, true
 
     assert_no_difference 'User.count' do
       # Should find the existing Google Classroom section.
@@ -57,8 +58,8 @@ class OmniAuthSectionTest < ActiveSupport::TestCase
     # This tests the scenario where a teacher imports a section, then deletes their account,
     # then recreates a new account and tries to reimport the same section (now with a different
     # user_id)
-    owner = create :teacher
-    new_owner = create :teacher
+    owner = create(:teacher)
+    new_owner = create(:teacher)
     students = [
       OmniAuth::AuthHash.new(
         uid: 111,
@@ -95,8 +96,8 @@ class OmniAuthSectionTest < ActiveSupport::TestCase
 
   test 'import section twice' do
     # This happens when a google classroom/clever section with multiple teachers is imported twice.
-    owner = create :teacher
-    coteacher = create :teacher
+    owner = create(:teacher)
+    coteacher = create(:teacher)
     students = [
       OmniAuth::AuthHash.new(
         uid: 111,
@@ -135,8 +136,8 @@ class OmniAuthSectionTest < ActiveSupport::TestCase
 
   test 're-establish soft deleted coteacher' do
     # This happens when a google classroom/clever section with multiple teachers is imported twice.
-    owner = create :teacher
-    coteacher = create :teacher
+    owner = create(:teacher)
+    coteacher = create(:teacher)
     students = [
       OmniAuth::AuthHash.new(
         uid: 111,
@@ -187,18 +188,18 @@ class OmniAuthSectionTest < ActiveSupport::TestCase
   end
 
   test 'set exact student list' do
-    teacher = create :teacher
-    section = create :section, user: teacher, login_type: 'clever'
+    teacher = create(:teacher)
+    section = create(:section, user: teacher, login_type: 'clever')
 
     students = (0...5).map do
-      create :student
+      create(:student)
     end
 
     section.set_exact_student_list(students)
     assert_equal students.pluck(:id).sort, section.reload.students.pluck(:id).sort
 
     added_students = (0...5).map do
-      create :student
+      create(:student)
     end
     updated_students = students[1...3] + added_students
 
@@ -207,7 +208,7 @@ class OmniAuthSectionTest < ActiveSupport::TestCase
   end
 
   test 'truncate section name when too long' do
-    owner = create :teacher
+    owner = create(:teacher)
     course_name = 'test' * 65
 
     section = OmniAuthSection.from_omniauth(
@@ -220,5 +221,19 @@ class OmniAuthSectionTest < ActiveSupport::TestCase
     section.reload
     assert_equal OmniAuthSection.column_for_attribute(:name).limit, section.name.length
     assert section.name.end_with?('...')
+  end
+
+  test 'unarchive archived sections when imported' do
+    owner = create(:teacher)
+
+    section = create(:section, user: owner, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM, hidden: true)
+
+    OmniAuthSection.from_omniauth(
+      code: section.code,
+      type: section.login_type,
+      owner_id: owner.id,
+      students: [],
+        )
+    refute section.reload.hidden
   end
 end

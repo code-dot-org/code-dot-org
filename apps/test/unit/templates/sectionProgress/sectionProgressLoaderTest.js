@@ -14,7 +14,6 @@ const serverScriptResponse = {
   isCsd: false,
   family_name: 'courseb',
   name: 'courseb-2020',
-  hasStandards: false,
   id: 123,
   path: 'test/url',
   lessons: [{id: 11, levels: [{id: '2000'}, {id: '2001'}]}],
@@ -133,7 +132,6 @@ const fullExpectedResult = {
       isCsd: false,
       family_name: 'courseb',
       name: 'courseb-2020',
-      hasStandards: false,
       id: 123,
       path: 'test/url',
       lessons: [{id: 11, levels: [{id: '2000'}, {id: '2001'}]}],
@@ -315,7 +313,7 @@ describe('sectionProgressLoader.loadScript', () => {
         }),
       });
 
-      loadUnitProgress(0, selectedSectionId);
+      loadUnitProgress(0, selectedSectionId, 0, 0);
       expect(startLoadingProgressStub).to.have.not.been.called;
       expect(startRefreshingProgressStub).to.have.been.calledOnce;
       expect(addDataByUnitStub).to.have.been.calledOnce;
@@ -363,7 +361,7 @@ describe('sectionProgressLoader.loadScript', () => {
           then: sinon.stub().callsArgWith(0, secondServerProgressResponse),
         }),
       });
-      loadUnitProgress(123, selectedSectionId);
+      loadUnitProgress(123, selectedSectionId, 1, 1);
       expect(addDataByUnitStub).to.have.been.calledWith(fullExpectedResult);
       progressHelpers.processedLevel.restore();
     });
@@ -403,7 +401,7 @@ describe('sectionProgressLoader.loadScript', () => {
           }),
         });
 
-        loadUnitProgress(0, selectedSectionId);
+        loadUnitProgress(0, selectedSectionId, 0, 0);
         expect(startLoadingProgressStub).to.have.been.calledOnce;
         expect(startRefreshingProgressStub).to.have.not.been.called;
         expect(addDataByUnitStub).to.have.been.calledOnce;
@@ -425,7 +423,6 @@ describe('sectionProgressLoader.loadScript', () => {
               isCsp: undefined,
               family_name: undefined,
               name: undefined,
-              hasStandards: undefined,
               id: undefined,
               path: undefined,
               lessons: [{levels: ['success']}],
@@ -448,7 +445,7 @@ describe('sectionProgressLoader.loadScript', () => {
             then: sinon.stub().callsArgWith(0, {}),
           }),
         });
-        loadUnitProgress(0, selectedSectionId);
+        loadUnitProgress(0, selectedSectionId, 0, 0);
         expect(addDataByUnitStub).to.have.been.calledWith(expectedResult);
         progressHelpers.processedLevel.restore();
       });
@@ -466,7 +463,7 @@ describe('sectionProgressLoader.loadScript', () => {
             then: sinon.stub().callsArgWith(0, serverProgressResponse),
           }),
         });
-        loadUnitProgress(123, selectedSectionId);
+        loadUnitProgress(123, selectedSectionId, 1, 1);
         expect(addDataByUnitStub).to.have.been.calledWith(fullExpectedResult);
         progressHelpers.processedLevel.restore();
       });
@@ -489,7 +486,7 @@ describe('sectionProgressLoader.loadScript', () => {
             then: sinon.stub().callsArgWith(0, serverProgressResponse),
           }),
         });
-        loadUnitProgress(123, selectedSectionId);
+        loadUnitProgress(123, selectedSectionId, 1, 1);
         expect(addDataByUnitStub).to.have.been.calledWith(fullExpectedResult);
         progressHelpers.processedLevel.restore();
       });
@@ -517,7 +514,7 @@ describe('sectionProgressLoader.loadScript', () => {
             then: sinon.stub().callsArgWith(0, serverProgressResponse),
           }),
         });
-        loadUnitProgress(123, selectedSectionId);
+        loadUnitProgress(123, selectedSectionId, 1, 1);
         expect(addDataByUnitStub).to.have.been.calledWith(expectedResult);
         progressHelpers.processedLevel.restore();
       });

@@ -1,0 +1,17 @@
+name 'gen-ai-outputs-launch'
+title 'Ownership Ethics and Creativity'
+
+
+markdown <<MARKDOWN
+## Outputs & Probabilities
+
+<!-- 
+**Make a copy of the [activity guide](https://docs.google.com/document/d/1Ta-zCBCP_qus_WPlyhtmqb0tg0OCG5caIPI-WvtTEqs/copy) to get started:**
+
+> * We are helping a computer design meals for an elementary school cafeteria.
+> * Follow the instructions during class to draw a neural network representing this computer model
+
+<img src="https://drive.google.com/thumbnail?sz=w640&id=1Ta-zCBCP_qus_WPlyhtmqb0tg0OCG5caIPI-WvtTEqs" alt="Document thumbnail" style="width: 200px; height: auto; margin-right: 15px; border-radius: 5px; border: solid 1px black">
+
+-->
+MARKDOWN

@@ -1,0 +1,64 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "changePropEachBy",
+    "docFunc": "gamelab_changePropBy",
+    "blockText": "change {GROUP} {PROPERTY} by {VAL}",
+    "args": [
+      {
+        "name": "GROUP",
+        "customInput": "dancerPicker",
+        "options": [
+          "\"GENERATED_DANCER\"",
+          "\"ALIEN\"",
+          "\"BEAR\"",
+          "\"CAT\"",
+          "\"DOG\"",
+          "\"DUCK\"",
+          "\"FROG\"",
+          "\"MOOSE\"",
+          "\"PINEAPPLE\"",
+          "\"ROBOT\"",
+          "\"SHARK\"",
+          "\"SLOTH\"",
+          "\"UNICORN\"",
+          "sprites"
+        ]
+      },
+      {
+        "name": "PROPERTY",
+        "options": [
+          [
+            "size",
+            "\"scale\""
+          ],
+          [
+            "width",
+            "\"width\""
+          ],
+          [
+            "height",
+            "\"height\""
+          ],
+          [
+            "rotation",
+            "\"rotation\""
+          ],
+          [
+            "horizontal position",
+            "\"x\""
+          ],
+          [
+            "vertical position",
+            "\"y\""
+          ]
+        ]
+      },
+      {
+        "name": "VAL",
+        "type": "Number",
+        "field": true
+      }
+    ]
+  }
+}

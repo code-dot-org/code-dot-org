@@ -44,3 +44,31 @@ Then /^I verify the user menu shows "([^"]*)" and "([^"]*)" are in a pairing gro
     And element ".pairing_summary" contains text "#{name2}"
   STEPS
 end
+
+Then /^I (can|could) navigate the following hamburger menu items(?: within the ([^\s]+) submenu)?:$/ do |visit, sub_menu, items|
+  items.hashes.each do |item|
+    steps <<-STEPS
+      Then I wait to see "#hamburger-icon"
+      And I click selector "#hamburger-icon"
+      Then I wait to see "#hamburger-contents"
+    STEPS
+
+    if sub_menu
+      steps <<-STEPS
+        Then I wait to see "##{sub_menu}"
+        And I click selector "##{sub_menu}"
+      STEPS
+    end
+
+    if visit == "can"
+      steps <<-STEPS
+        And I click on the link reading "#{item['text']}" within element "#hamburger-contents" to load a new page
+        Then check that I am on "#{item['url']}"
+      STEPS
+    else
+      steps <<-STEPS
+        Then the link reading "#{item['text']}" within element "#hamburger-contents" goes to "#{item['url']}"
+      STEPS
+    end
+  end
+end

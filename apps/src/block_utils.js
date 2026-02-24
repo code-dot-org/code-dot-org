@@ -1,8 +1,23 @@
+import * as BlocklyCore from 'blockly/core';
 import _ from 'lodash';
 
-import {BlockColors, BlockStyles, EMPTY_OPTION} from './blockly/constants';
-import cdoBlockStyles from './blockly/themes/cdoBlockStyles';
-import MetricsReporter from './lib/metrics/MetricsReporter';
+import {
+  updatePointerBlockImage,
+  updatePointerBlockWarning,
+} from '@cdo/apps/blockly/addons/cdoSpritePointer';
+import {
+  BlockStyles,
+  CLAMPED_NUMBER_REGEX,
+  EMPTY_OPTION,
+} from '@cdo/apps/blockly/constants';
+import cdoBlockStyles from '@cdo/apps/blockly/themes/cdoBlockStyles';
+import {
+  appendMiniToolboxToggle,
+  initializeMiniToolbox,
+} from '@cdo/apps/blockly/utils/fields/miniToolbox';
+import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
+
+import MetricsReporter from './metrics/MetricsReporter';
 import xml from './xml';
 
 const styleTypes = Object.keys(cdoBlockStyles);
@@ -66,8 +81,9 @@ exports.appendBlocksByCategory = function (toolboxXml, blocksByCategory) {
  * @param {string} values.type Type of the value input
  * @param {string} values.titleName Name of the title block
  * @param {string} values.titleValue Input value
+ * @param {string} id Block Id, primarily for tests
  */
-exports.blockOfType = function (type, titles, values) {
+exports.blockOfType = function (type, titles, values, id) {
   let inputText = '';
   if (titles) {
     for (let key in titles) {
@@ -83,7 +99,8 @@ exports.blockOfType = function (type, titles, values) {
       </value>`;
     }
   }
-  return `<block type="${type}">${inputText}</block>`;
+  const blockIdAttr = id ? ` id="${id}"` : '';
+  return `<block type="${type}"${blockIdAttr}>${inputText}</block>`;
 };
 
 /*
@@ -167,12 +184,7 @@ exports.generateSimpleBlock = function (blockly, generator, options) {
   blockly.Blocks[name] = {
     helpUrl: helpUrl,
     init: function () {
-      // Note: has a fixed HSV.  Could make this customizable if need be
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       var input = this.appendEndRowInput();
       if (title) {
         input.appendField(title);
@@ -198,7 +210,7 @@ exports.generateSimpleBlock = function (blockly, generator, options) {
  * @returns {*}
  */
 exports.domToBlock = function (blockDOM) {
-  return Blockly.Xml.domToBlock(Blockly.mainBlockSpace, blockDOM);
+  return Blockly.Xml.domToBlock(blockDOM, Blockly.mainBlockSpace);
 };
 
 /**
@@ -317,8 +329,9 @@ exports.appendNewFunctions = function (blocksXml, functionsXml) {
     const alreadyPresent =
       startBlocksDocument.evaluate(
         // Ignore namespaces. Find blocks of type e.g. behavior_definition
-        // Shared behavior name will either be in the mutation (Google Blockly)
-        // or the name field/title (CDO Blockly)
+        // Shared function/behavior identifier may appear in different places depending on
+        // serialized XML version: either on a <mutation> attribute (e.g. behaviorId)
+        // or on the NAME field/title (id attribute or text content, legacy sources).
         `//*[local-name()="block" and @type="${type}"]/*` +
           `[self::*[local-name()="mutation" and @behaviorId="${name}"] or ` +
           `self::*[(local-name()="title" or local-name()="field") and (@id="${name}" or .="${name}")]
@@ -474,7 +487,7 @@ const determineInputs = function (text, args, strictTypes = []) {
       }
       const strict = arg.strict || strictTypes.includes(arg.type);
       let mode;
-      if (arg.options) {
+      if (arg.options && !arg.customInput) {
         mode = DROPDOWN_INPUT;
       } else if (arg.field) {
         mode = FIELD_INPUT;
@@ -541,12 +554,8 @@ const STANDARD_INPUT_TYPES = {
     addInputRow(blockly, block, inputConfig) {
       const inputRow = block
         .appendValueInput(inputConfig.name)
-        .setAlign(blockly.ALIGN_RIGHT);
-      if (inputConfig.strict) {
-        inputRow.setStrictCheck(inputConfig.type);
-      } else {
-        inputRow.setCheck(inputConfig.type);
-      }
+        .setAlign(BlocklyCore.inputs.Align.RIGHT);
+      inputRow.setCheck(inputConfig.type);
       return inputRow;
     },
     generateCode(block, inputConfig) {
@@ -618,11 +627,7 @@ const STANDARD_INPUT_TYPES = {
     addInput(blockly, block, inputConfig, currentInputRow) {
       // Make sure the variable name gets declared at the top of the program
       block.getVars = function () {
-        return {
-          [Blockly.Variables.DEFAULT_CATEGORY]: [
-            block.getFieldValue(inputConfig.name),
-          ],
-        };
+        return [block.getFieldValue(inputConfig.name)];
       };
 
       // Add the variable field to the block
@@ -639,7 +644,19 @@ const STANDARD_INPUT_TYPES = {
   [FIELD_INPUT]: {
     addInput(blockly, block, inputConfig, currentInputRow) {
       const {type} = inputConfig;
-      const field = Blockly.cdoUtils.getField(type);
+      let field;
+      if (type === Blockly.BlockValueType.NUMBER) {
+        field = new Blockly.FieldNumber();
+      } else if (type.includes('ClampedNumber')) {
+        const clampedNumberMatch = type.match(CLAMPED_NUMBER_REGEX);
+        if (clampedNumberMatch) {
+          const min = parseFloat(clampedNumberMatch[1]);
+          const max = parseFloat(clampedNumberMatch[2]);
+          field = new Blockly.FieldNumber(0, min, max);
+        }
+      } else {
+        field = new Blockly.FieldTextInput();
+      }
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(field, inputConfig.name);
@@ -788,7 +805,6 @@ exports.createJsWrapperBlockCreator = function (
    */
   return (
     {
-      color,
       style,
       func,
       expression,
@@ -914,13 +930,14 @@ exports.createJsWrapperBlockCreator = function (
     blockly.Blocks[blockName] = {
       helpUrl: getHelpUrl(docFunc), // optional param
       init: function () {
-        // Apply style or color to block as needed, based on Blockly version.
-        Blockly.cdoUtils.handleColorAndStyle(this, color, style, returnType);
+        this.setStyle(style || BlockStyles.DEFAULT);
 
+        const check =
+          returnType === Blockly.BlockValueType.NONE ? null : returnType;
         if (returnType) {
           this.setOutput(
             true,
-            returnType,
+            check,
             strictOutput || strictTypes.includes(returnType)
           );
         } else if (eventLoopBlock) {
@@ -943,22 +960,53 @@ exports.createJsWrapperBlockCreator = function (
 
         let flyoutToggleButton;
         if (showMiniToolbox) {
-          flyoutToggleButton =
-            Blockly.customBlocks.initializeMiniToolbox.bind(this)(
-              miniToolboxBlocks
-            );
+          flyoutToggleButton = initializeMiniToolbox();
         }
 
-        Blockly.customBlocks.setUpBlockShadowing.bind(this)();
+        // We only set up block shadowing for blocks that have a type in spriteLabPointers.
+        if (Object.keys(spriteLabPointers).includes(this.type)) {
+          // saveExtraState is used to serialize the image source block ID.
+          this.saveExtraState = function () {
+            return {
+              imageSourceId: this.imageSourceId,
+            };
+          };
+
+          // loadExtraState is used to deserialize the image source block ID.
+          // We use this id to set the initial pointer block image.
+          this.loadExtraState = function (state) {
+            this.imageSourceId = state['imageSourceId'];
+            if (this.imageSourceId) {
+              updatePointerBlockImage(
+                this,
+                spriteLabPointers,
+                this.imageSourceId
+              );
+              const imageSourceBlock = Blockly.getMainWorkspace()?.getBlockById(
+                this.imageSourceId
+              );
+              if (imageSourceBlock) {
+                const imageSourceBlockWorkspace = imageSourceBlock.workspace;
+                imageSourceBlockWorkspace.addChangeListener(event => {
+                  onBlockImageSourceChange(event, this);
+                });
+              }
+            }
+          };
+
+          // When the block's parent workspace changes, we check to see if
+          // we need to update the shadowed block image or warning text.
+          this.onchange = function (event) {
+            onBlockImageSourceChange(event, this);
+            updatePointerBlockWarning(this, spriteLabPointers);
+          };
+        }
 
         interpolateInputs(blockly, this, inputRows, inputTypes, inline);
         this.setInputsInline(inline);
 
         if (showMiniToolbox) {
-          Blockly.customBlocks.appendMiniToolboxToggle.bind(this)(
-            miniToolboxBlocks,
-            flyoutToggleButton
-          );
+          appendMiniToolboxToggle(this, miniToolboxBlocks, flyoutToggleButton);
         }
       },
     };
@@ -1071,6 +1119,12 @@ exports.installCustomBlocks = function ({
   blockDefinitions,
   customInputTypes,
 }) {
+  // Retain information about custom blocks and input types
+  blockly.SourceCustomInputTypes = {
+    ...(blockly.SourceCustomInputTypes || {}),
+    ...(customInputTypes || {}),
+  };
+
   const createJsWrapperBlock = exports.createJsWrapperBlockCreator(
     blockly,
     [
@@ -1084,11 +1138,11 @@ exports.installCustomBlocks = function ({
   );
 
   const blocksByCategory = {};
-  blockDefinitions.forEach(({name, pool, category, config, helperCode}) => {
+  blockDefinitions.forEach(info => {
+    const {name, pool, category, config, helperCode} = info;
     const blockName = createJsWrapperBlock(config, helperCode, pool);
-    if (!blocksByCategory[category]) {
-      blocksByCategory[category] = [];
-    }
+    blockly.SourceCustomBlocks.blockDefinitionsByName[blockName] = info;
+    blocksByCategory[category] ||= [];
     blocksByCategory[category].push(blockName);
     if (name && blockName !== name) {
       console.error(
@@ -1121,3 +1175,38 @@ const getHelpUrl = function (docFunc) {
   // Documentation is only available for Sprite Lab.
   return `/docs/spritelab/${docFunc}`;
 };
+
+// On change event for a block that shadows an image source block.
+// On an event, checks if the block image should change, and update it.
+function onBlockImageSourceChange(event, block) {
+  const imagePreview =
+    block.inputList && block.inputList[0] && block.inputList[0].fieldRow[1];
+  if (!imagePreview) {
+    return;
+  }
+  if (event.type === Blockly.Events.BLOCK_DRAG && event.blockId === block.id) {
+    // If this is a start event, prevent image changes.
+    // If it is an end event, allow image changes again.
+    imagePreview.setAllowImageChange(!event.isStart);
+  }
+  if (
+    (event.type === Blockly.Events.BLOCK_CREATE &&
+      event.blockId === block.id) ||
+    (event.type === Blockly.Events.BLOCK_CHANGE && event.blockId === block.id)
+  ) {
+    // We can skip the following events:
+    // This block's create event, as we handle setting the image on block creation
+    // in src/p5lab/spritelab/blocks.
+    // This block's change event, as that means we just changed the image due to
+    // some other event.
+    return;
+  }
+  if (
+    imagePreview.shouldAllowImageChange() &&
+    (event.type === Blockly.Events.BLOCK_CREATE ||
+      event.type === Blockly.Events.BLOCK_CHANGE ||
+      event.type === Blockly.Events.BLOCK_DRAG)
+  ) {
+    updatePointerBlockImage(block, spriteLabPointers);
+  }
+}

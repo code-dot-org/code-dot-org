@@ -15,6 +15,13 @@ class BubbleChoiceDSL < ContentDSL
 
   def description(text) @hash[:description] = text end
 
+  def standalone
+    unless @hash[:uses_lab2]
+      raise "BubbleChoice standalone projects are only available with Lab2."
+    end
+    @hash[:is_project_level] = true
+  end
+
   def sublevels
     @hash[:sublevels]
   end
@@ -32,6 +39,26 @@ class BubbleChoiceDSL < ContentDSL
 
     @hash[:sublevels] << name
   end
+
+  def custom_mode(text)
+    valid_modes = SharedConstants::BUBBLE_CHOICE_CUSTOM_MODES.values
+    unless valid_modes.include?(text)
+      raise "custom_mode must be one of [#{valid_modes.join(', ')}]"
+    end
+    @hash[:custom_mode] = text
+  end
+
+  def navigation_type(type)
+    valid_types = SharedConstants::BUBBLE_CHOICE_NAVIGATION_TYPES.values
+    unless valid_types.include?(type)
+      raise "Invalid navigation_type '#{type}'. Valid types are: #{valid_types.join(', ')}"
+    end
+    @hash[:navigation_type] = type
+  end
+
+  def finish_dialog(text) @hash[:finish_dialog] = text end
+
+  def hide_share_and_remix(value) @hash[:hide_share_and_remix] = value end
 
   def self.serialize(level)
     new_dsl = "name '#{escape(level.name)}'"

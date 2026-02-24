@@ -1,0 +1,27 @@
+name 'ai-and-algorithmic-decisions-preassessment_2025'
+title 'AI and Algorithmic Decisions Pre-Assessment'
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'ai-and-algorithmic-decisions-preassessment-intro_2025'
+level 'ai-and-algorithmic-decisions-preassessment-q1_2025'
+level 'ai-and-algorithmic-decisions-preassessment-q2_2025'
+level 'ai-and-algorithmic-decisions-preassessment-q3_2025'
+level 'ai-and-algorithmic-decisions-preassessment-q4_2025'
+level 'ai-and-algorithmic-decisions-preassessment-q5_2025'
+
+page
+level 'ai-and-algorithmic-decisions-preassessment-q6_2025'
+level 'ai-and-algorithmic-decisions-preassessment-q7_2025'
+level 'ai-and-algorithmic-decisions-preassessment-q8_2025'
+level 'ai-and-algorithmic-decisions-preassessment-q9_2025'
+level 'ai-and-algorithmic-decisions-preassessment-q10_2025'
+
+page
+level 'ai-and-algorithmic-decisions-preassessment-q11_2025'
+level 'ai-and-algorithmic-decisions-preassessment-q12_2025'
+level 'ai-and-algorithmic-decisions-preassessment-q13_2025'
+level 'ai-and-algorithmic-decisions-preassessment-q14_2025'
+level 'ai-and-algorithmic-decisions-preassessment-q15_2025'

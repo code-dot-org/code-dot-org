@@ -1,10 +1,10 @@
-import GoogleBlockly, {BlockSvg, DropDownDiv, Field} from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+
 import {ChordEventValue} from '../player/interfaces/ChordEvent';
-import MusicLibrary from '../player/MusicLibrary';
-import MusicPlayer from '../player/MusicPlayer';
 import {generateGraphDataFromChord, ChordGraphNote} from '../utils/Chords';
 import {getNoteName} from '../utils/Notes';
 import ChordPanel, {ChordPanelProps} from '../views/ChordPanel';
@@ -18,25 +18,16 @@ const FIELD_HEIGHT = 18;
 const FIELD_PADDING = 2;
 
 interface FieldChordOptions {
-  getLibrary: () => MusicLibrary;
-  previewChord: MusicPlayer['previewChord'];
-  previewNote: MusicPlayer['previewNote'];
-  cancelPreviews: MusicPlayer['cancelPreviews'];
   currentValue: ChordEventValue;
-  setupSampler: MusicPlayer['setupSampler'];
-  isInstrumentLoading: MusicPlayer['isInstrumentLoading'];
-  isInstrumentLoaded: MusicPlayer['isInstrumentLoaded'];
-  registerInstrumentLoadCallback: (
-    callback: (instrumentName: string) => void
-  ) => void;
 }
 
 /**
  * A custom field that renders the chord selection UI, used in the
  * "play_chord" block. The UI is rendered by {@link ChordPanel}.
  */
-export default class FieldChord extends Field {
-  static fromJson(options: FieldChordOptions) {
+export default class FieldChord extends BlocklyCore.Field {
+  static fromJson(_options: BlocklyCore.FieldConfig) {
+    const options = _options as FieldChordOptions;
     return new FieldChord(options);
   }
 
@@ -50,7 +41,6 @@ export default class FieldChord extends Field {
     this.options = options;
     this.newDiv = null;
     this.SERIALIZABLE = true;
-    this.CURSOR = 'default';
     this.backgroundElement = null;
   }
 
@@ -70,7 +60,7 @@ export default class FieldChord extends Field {
     }
 
     this.backgroundElement =
-      GoogleBlockly.utils.dom.createSvgElement<SVGGraphicsElement>(
+      BlocklyCore.utils.dom.createSvgElement<SVGGraphicsElement>(
         'g',
         {
           transform: 'translate(1,1)',
@@ -82,7 +72,7 @@ export default class FieldChord extends Field {
   }
 
   applyColour() {
-    const style = (this.sourceBlock_ as BlockSvg).style;
+    const style = (this.sourceBlock_ as BlocklyCore.BlockSvg).style;
     if (this.borderRect_) {
       this.borderRect_.setAttribute('stroke', style.colourTertiary);
       this.borderRect_.setAttribute('fill', 'transparent');
@@ -108,7 +98,7 @@ export default class FieldChord extends Field {
       this.backgroundElement.innerHTML = '';
     }
 
-    GoogleBlockly.utils.dom.createSvgElement(
+    BlocklyCore.utils.dom.createSvgElement(
       'rect',
       {
         fill: color.neutral_dark90,
@@ -132,7 +122,7 @@ export default class FieldChord extends Field {
     });
 
     graphNotes.forEach(graphNote => {
-      GoogleBlockly.utils.dom.createSvgElement(
+      BlocklyCore.utils.dom.createSvgElement(
         'rect',
         {
           fill: color.light_cyan,
@@ -164,12 +154,18 @@ export default class FieldChord extends Field {
     super.showEditor_();
 
     const editor = this.createDropdown();
-    DropDownDiv.getContentDiv().appendChild(editor);
+    BlocklyCore.DropDownDiv.getContentDiv().appendChild(editor);
 
-    const style = (this.sourceBlock_ as BlockSvg).style;
-    DropDownDiv.setColour(style.colourPrimary, style.colourTertiary);
+    const style = (this.sourceBlock_ as BlocklyCore.BlockSvg).style;
+    BlocklyCore.DropDownDiv.setColour(
+      style.colourPrimary,
+      style.colourTertiary
+    );
 
-    DropDownDiv.showPositionedByField(this, this.disposeDropdown.bind(this));
+    BlocklyCore.DropDownDiv.showPositionedByField(
+      this,
+      this.disposeDropdown.bind(this)
+    );
   }
 
   private createDropdown(): HTMLDivElement {
@@ -190,18 +186,21 @@ export default class FieldChord extends Field {
       return;
     }
 
-    ReactDOM.render(
+    createReactRoot(
       React.createElement<ChordPanelProps>(ChordPanel, {
-        library: this.options.getLibrary(),
         initValue: this.getValue(),
         onChange: this.onValueChange,
-        ...this.options,
       }),
       this.newDiv
     );
   }
 
   private disposeDropdown() {
+    if (!this.newDiv) {
+      return;
+    }
+
+    ReactDOM.unmountComponentAtNode(this.newDiv);
     this.newDiv = null;
   }
 

@@ -1,0 +1,32 @@
+.consoleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow-y: auto;
+  height: 100%;
+  padding: 8px;
+}
+
+.consoleLogEntry {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.timestamp {
+  font-family: monospace;
+  color: var(--text-neutral-secondary);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.consoleLog {
+  span {
+    display: block;
+    width: 100%;
+  }
+}

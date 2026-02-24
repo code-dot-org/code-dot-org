@@ -1,0 +1,94 @@
+#!/usr/bin/env ruby
+
+require_relative '../../../dashboard/config/environment'
+
+CDO.log = Logger.new($stdout)
+
+SURVEY_YEAR = '2021-2022'.freeze
+
+# Override for the dry run variable using an commandline argument
+DRY_RUN = !(ARGV.find {|arg| arg.casecmp('-dryrun')}).nil?
+
+COMMUNITY_TYPE_MAP = {
+  '11' => 'city_large',
+  '12' => 'city_midsize',
+  '13' => 'city_small',
+  '21' => 'suburban_large',
+  '22' => 'suburban_midsize',
+  '23' => 'suburban_small',
+  '31' => 'town_fringe',
+  '32' => 'town_distant',
+  '33' => 'town_remote',
+  '41' => 'rural_fringe',
+  '42' => 'rural_distant',
+  '43' => 'rural_remote'
+}.freeze
+
+def get_offered_grades(row)
+  {
+    # Transitional Kindergarten also counts as Pre-Kindergarten
+    'PK' => row['P145'] == '1' || row['P165'] == '1' ? '1' : '0',
+    # Transitional 1st Grade also counts as Kindergarten
+    'KG' => row['P155'] == '1' || row['P175'] == '1' ? '1' : '0',
+    '01' => row['P185'] == '1' ? '1' : '0',
+    '02' => row['P195'] == '1' ? '1' : '0',
+    '03' => row['P205'] == '1' ? '1' : '0',
+    '04' => row['P215'] == '1' ? '1' : '0',
+    '05' => row['P225'] == '1' ? '1' : '0',
+    '06' => row['P235'] == '1' ? '1' : '0',
+    '07' => row['P245'] == '1' ? '1' : '0',
+    '08' => row['P255'] == '1' ? '1' : '0',
+    '09' => row['P265'] == '1' ? '1' : '0',
+    '10' => row['P275'] == '1' ? '1' : '0',
+    '11' => row['P285'] == '1' ? '1' : '0',
+    '12' => row['P295'] == '1' ? '1' : '0',
+  }
+end
+
+# The LOGR2022 and HIGR2022 values are incorrect so we need to manually calculate the lowest and highest grades taught.
+def get_low_high_offered_grades(offered_grades)
+  {
+    'low' => offered_grades.keys.find {|k| offered_grades[k] == '1'},
+    'high' => offered_grades.keys.reverse.find {|k| offered_grades[k] == '1'}
+  }
+end
+
+AWS::S3.process_file('cdo-nces', "2021-2022/pss/schools_private.csv") do |filename|
+  SchoolStatsByYear.merge_from_csv(filename, {col_sep: ",", headers: true, quote_char: "\x00", encoding: 'bom|utf-8'}, dry_run: DRY_RUN) do |row|
+    offered_grades = get_offered_grades(row)
+    low_high_offered_grades = get_low_high_offered_grades(offered_grades)
+    {
+      school_id:          row['PPIN'],
+      school_year:        SURVEY_YEAR,
+      grades_offered_lo:  low_high_offered_grades['low'],
+      grades_offered_hi:  low_high_offered_grades['high'],
+      grade_pk_offered:   offered_grades['PK'],
+      grade_kg_offered:   offered_grades['KG'],
+      grade_01_offered:   offered_grades['01'],
+      grade_02_offered:   offered_grades['02'],
+      grade_03_offered:   offered_grades['03'],
+      grade_04_offered:   offered_grades['04'],
+      grade_05_offered:   offered_grades['05'],
+      grade_06_offered:   offered_grades['06'],
+      grade_07_offered:   offered_grades['07'],
+      grade_08_offered:   offered_grades['08'],
+      grade_09_offered:   offered_grades['09'],
+      grade_10_offered:   offered_grades['10'],
+      grade_11_offered:   offered_grades['11'],
+      grade_12_offered:   offered_grades['12'],
+      grade_13_offered:   false,
+      virtual_status:     'MISSING',
+      students_total:     row['P305'].presence.try {|v| v.to_i <= 0 ? nil : v.to_i},
+      student_am_count:   row['P310'].presence.try {|v| v.to_i < 0 ? nil : v.to_i},
+      student_as_count:   row['P316'].presence.try {|v| v.to_i < 0 ? nil : v.to_i},
+      student_hi_count:   row['P320'].presence.try {|v| v.to_i < 0 ? nil : v.to_i},
+      student_bl_count:   row['P325'].presence.try {|v| v.to_i < 0 ? nil : v.to_i},
+      student_wh_count:   row['P330'].presence.try {|v| v.to_i < 0 ? nil : v.to_i},
+      student_hp_count:   row['P318'].presence.try {|v| v.to_i < 0 ? nil : v.to_i},
+      student_tr_count:   row['P332'].presence.try {|v| v.to_i < 0 ? nil : v.to_i},
+      title_i_status:     nil,
+      frl_eligible_total: nil,
+      community_type:     row['ULOCALE22'].presence.try {|v| COMMUNITY_TYPE_MAP[v]}
+    }
+  end
+end

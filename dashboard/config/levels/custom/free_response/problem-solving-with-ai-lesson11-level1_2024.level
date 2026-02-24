@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-03-31T01:38:15.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check Your Understanding",
+    "long_instructions": "Think back to the policy your group created during the activity.\r\n\r\nHow does your policy balance the potential benefits of AI with fairness to original creators?\r\n\r\nConsider the decisions you made about data use, attribution, opt-outs, compensation, and labeling. What values guided your group's choices?",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "stay_on_level_after_submit": "true",
+    "teacher_markdown": "**Assessment Opportunity**\r\nThis level can be used as a formative assessment to check student understanding of the lesson objectives. Here are things to look for and actions you can take:\r\n\r\n- Acknowledge at least one tradeoff between innovation and creator rights\r\n- Reference specific elements of the policy (e.g., opt-out, compensation, labeling)\r\n- Use relevant ethical vocabulary (e.g., consent, transparency, fairness)"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-31T01:38:15.704+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson11-level1\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson11-level1\"},{\"changed_at\":\"2025-03-31 01:38:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

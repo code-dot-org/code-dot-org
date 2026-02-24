@@ -6,7 +6,7 @@ import React from 'react';
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import color from '@cdo/apps/util/color';
 
-import Spinner from '../components/spinner';
+import Spinner from '../../../sharedComponents/Spinner';
 
 import WorkshopAssignmentSelect from './workshop_assignment_select';
 

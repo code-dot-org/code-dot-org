@@ -31,7 +31,7 @@ describe('AgeGatedStudentsModal', () => {
     loginType: 'google_oauth2',
     rowType: RowType.STUDENT,
     age: 10,
-    atRiskAgeGatedStudent: true,
+    atRiskAgeGatedDate: new Date('2025/01/01'),
     childAccountComplianceState: 'l',
   };
   const fakeStudents = {

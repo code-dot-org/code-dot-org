@@ -1,0 +1,23 @@
+name 'CSA U3 Assessment q11_pilot-2025'
+
+wrong '4'
+right '5'
+wrong '6'
+wrong '14'
+wrong '15'
+
+markdown <<MARKDOWN
+How many times does the body of the `for` loop below execute?
+
+```
+for (int count = 0; count < 14; count += 3) {
+  System.out.println(count + " ");
+}
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The body of the `for` loop will execute 5 times since the loop control variable `count` starts at `0` and increases by `3` up to but not including `14`. This means the body of the `for` loop will execute when `count` is `0`, `3`, `6`, `9`, and `11`. When `count` becomes `14`, the condition is `false`, so the loop ends.
+MARKDOWN
+
+allow_multiple_attempts true

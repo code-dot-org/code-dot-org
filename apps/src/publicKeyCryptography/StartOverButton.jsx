@@ -4,7 +4,7 @@ import React from 'react';
 
 import i18n from '@cdo/locale';
 
-import Dialog from '../templates/Dialog';
+import Dialog from '../legacySharedComponents/Dialog';
 
 export default class StartOverButton extends React.Component {
   static propTypes = {

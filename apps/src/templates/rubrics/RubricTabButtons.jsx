@@ -1,11 +1,12 @@
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
+import ReactTooltip from 'react-tooltip';
 
-import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
 import {RubricAiEvaluationLimits} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import {InfoAlert} from './RubricContent';
 import {TAB_NAMES} from './rubricHelpers';
 import {reportingDataShape, rubricShape} from './rubricShapes';
 import RunAIAssessmentButton, {STATUS} from './RunAIAssessmentButton';
@@ -57,16 +58,22 @@ export default function RubricTabButtons({
     }
   };
 
+  const runButtonTooltipId = _.uniqueId();
+
   return (
-    <div>
-      <div className={style.rubricTabGroup}>
+    <div className="uitest-rubric-tab-buttons">
+      <div id="tour-tab-buttons" className={style.rubricTabGroup}>
         <SegmentedButtons
-          className="uitest-rubric-tab-buttons"
           selectedButtonValue={selectedTab}
           size="s"
           buttons={[
-            {label: i18n.rubricTabStudent(), value: TAB_NAMES.RUBRIC},
             {
+              id: 'assess-a-student-button',
+              label: i18n.rubricTabStudent(),
+              value: TAB_NAMES.RUBRIC,
+            },
+            {
+              id: 'class-data-button',
               label: i18n.rubricTabClassManagement(),
               value: TAB_NAMES.SETTINGS,
               disabled: !showSettings,
@@ -75,7 +82,7 @@ export default function RubricTabButtons({
           onChange={value => tabSelectCallback(value)}
         />
         {selectedTab === TAB_NAMES.RUBRIC && teacherHasEnabledAi && (
-          <div>
+          <div data-tip data-for={runButtonTooltipId}>
             <RunAIAssessmentButton
               canProvideFeedback={canProvideFeedback}
               teacherHasEnabledAi={teacherHasEnabledAi}
@@ -87,19 +94,19 @@ export default function RubricTabButtons({
               setStatus={setStatus}
               reportingData={reportingData}
             />
+            {!!statusText() && (
+              <ReactTooltip
+                id={runButtonTooltipId}
+                role="tooltip"
+                effect="solid"
+                place="bottom"
+              >
+                {statusText()}
+              </ReactTooltip>
+            )}
           </div>
         )}
       </div>
-      {selectedTab === TAB_NAMES.RUBRIC &&
-        canProvideFeedback &&
-        teacherHasEnabledAi &&
-        !!statusText() && (
-          <InfoAlert
-            className={'uitest-eval-status-text'}
-            text={statusText() || ''}
-            dismissable={true}
-          />
-        )}
     </div>
   );
 }

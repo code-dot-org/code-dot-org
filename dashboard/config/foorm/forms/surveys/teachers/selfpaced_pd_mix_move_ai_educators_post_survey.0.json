@@ -1,0 +1,62 @@
+{
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "html",
+          "name": "intro",
+          "html": "<h1>Mix & Move with AI - Educator's Experience</h1><h2>Self-paced Online Professional Learning</h2><h3><strong>Post-Module Survey</strong></h3>\n\n<p>Code.org relies on surveys as a crucial tool to stay connected to teachers, gather feedback about your learning experience, and to improve our products.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org for product and program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>Mix & Move with AI - Educator's Experience: Post-module survey</h2>"
+        },
+        {
+          "type": "html",
+          "name": "section1_goals",
+          "html": "\n<p><span style='font-size: 12pt;'>The questions in this survey aim to understand your experience with the Mix & Move with AI - Educator's Experience, self-paced professional learning module.</span></p>\n"
+        },
+        {
+          "type": "rating",
+          "name": "better_understanding_concepts",
+          "title": "After completing this module, I have a better understanding of how AI works.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Strongly disagree",
+          "maxRateDescription": "Strongly agree"
+        },
+        {
+          "type": "rating",
+          "name": "cofidnet_teach_how_ai_works",
+          "title": "After completing this module, I feel more confident than before, in my ability to teach about how AI works.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Less confident",
+          "maxRateDescription": "Much more confident"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "self_paced_pl_other_feedback"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "permission_to_quote"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "focus_group_panel"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "thank_you_heading"
+        }
+      ]
+    }
+  ],
+  "published": true
+}

@@ -1,0 +1,9 @@
+name 'test-levelgroup-activityguide'
+title 'Activity Guide Levelgroup'
+submittable 'false'
+anonymous 'false'
+activity_guide_level 'true'
+
+page
+level 'test-single-multi-retriable-in-levelgroup'
+level 'test-free-response-retriable-in-levelgroup'

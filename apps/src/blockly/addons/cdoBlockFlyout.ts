@@ -1,19 +1,16 @@
-import GoogleBlockly, {Block, IDraggable, Options} from 'blockly/core';
-import {FlyoutItem} from 'blockly/core/flyout_base';
-import {Svg} from 'blockly/core/utils';
+import * as BlocklyCore from 'blockly/core';
 
 import {ExtendedWorkspaceSvg} from '../types';
 
-const svgPaths = GoogleBlockly.utils.svgPaths;
-interface CdoBlockFlyoutOptions extends Options {
+const svgPaths = BlocklyCore.utils.svgPaths;
+interface CdoBlockFlyoutOptions extends BlocklyCore.Options {
   minWidth: number;
   maxWidth: number;
-  parentBlock: Block | null;
+  parentBlock: BlocklyCore.Block | null;
 }
-
-export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
+export default class CdoBlockFlyout extends BlocklyCore.HorizontalFlyout {
   private svgClipPath_: SVGElement | undefined;
-  parentBlock: GoogleBlockly.Block | null;
+  parentBlock: BlocklyCore.Block | null;
 
   /**
    * This is a customized flyout class that extends the HorizontalFlyout class.
@@ -53,7 +50,12 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
    * @returns The flyout's SVG group.
    * @override
    */
-  createDom(tagName: string | Svg<SVGSVGElement> | Svg<SVGGElement>) {
+  createDom(
+    tagName:
+      | string
+      | BlocklyCore.utils.Svg<SVGSVGElement>
+      | BlocklyCore.utils.Svg<SVGGElement>
+  ) {
     // super.createDom returns this.svgGroup_. Explicitly setting it here
     // so that TypeScript knows it is not null.
     this.svgGroup_ = super.createDom(tagName) as SVGGElement;
@@ -96,17 +98,17 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
       const blockHW = block.getHeightWidth();
       this.updateHeight_(blockHW.height);
       this.updateWidth_(blockHW.width);
-
-      const rect = this.rectMap_.get(block);
-      if (rect) {
-        this.moveRectToBlock_(rect, block);
-      }
     });
     // Adjust the size of the flyout for each button.
-    this.buttons_.forEach(button => {
-      this.updateHeight_(button.height);
-      this.updateWidth_(button.width);
-    });
+    this.contents
+      .filter(flyoutItem => flyoutItem.getType() === 'button')
+      .forEach(button => {
+        const {top, bottom, left, right} = button
+          .getElement()
+          .getBoundingRectangle();
+        this.updateHeight_(bottom - top);
+        this.updateWidth_(right - left);
+      });
     this.setBackgroundPath_(this.width_, this.height_);
     this.position();
   }
@@ -196,66 +198,7 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
    *     area.
    * @override
    */
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  wouldDelete(_element: IDraggable, _couldConnect: boolean) {
+  wouldDelete(_element: BlocklyCore.IDraggable) {
     return false;
-  }
-
-  /**
-   * Lay out the blocks in the flyout.
-   *
-   * @param contents The blocks and buttons to lay out.
-   * @param gaps The visible gaps between blocks.
-   * @override
-   */
-  // This is copied from the core blockly repo to include a fix from this PR on Blockly:
-  // https://github.com/google/blockly/pull/7333
-  // This fix has since been reverted due to rtl rendering issues, but it works for this use case
-  // (and in fact fixes our rtl rendering issues).
-  // The link for the tracked issue is here:
-  // https://github.com/google/blockly/issues/6280
-  // If the issue is fixed we may be able to get rid of this override.
-  layout_(contents: FlyoutItem[], gaps: number[]) {
-    this.workspace_.scale = this.targetWorkspace?.scale;
-    const margin = this.MARGIN;
-    let cursorX = margin + this.tabWidth_;
-    const cursorY = margin;
-    if (this.RTL) {
-      contents = contents.reverse();
-    }
-
-    for (let i = 0, item; (item = contents[i]); i++) {
-      if (item.block) {
-        const block = item.block;
-        const allBlocks = block?.getDescendants(false);
-        for (let j = 0, child; (child = allBlocks[j]); j++) {
-          // Mark blocks as being inside a flyout.  This is used to detect and
-          // prevent the closure of the flyout if the user right-clicks on such
-          // a block.
-          child.isInFlyout = true;
-        }
-        const root = block?.getSvgRoot();
-        const blockHW = block?.getHeightWidth();
-        // Figure out where to place the block.
-        const tab = block?.outputConnection ? this.tabWidth_ : 0;
-        let moveX;
-        if (this.RTL) {
-          moveX = cursorX + blockHW.width;
-        } else {
-          moveX = cursorX - tab;
-        }
-        // No 'reason' provided since events are disabled.
-        block?.moveTo(new Blockly.utils.Coordinate(moveX, cursorY));
-
-        const rect = this.createRect_(block, moveX, cursorY, blockHW, i);
-        cursorX += blockHW.width + gaps[i];
-
-        this.addBlockListeners_(root, block, rect);
-      } else if (item.button) {
-        const button = item.button;
-        this.initFlyoutButton_(button, cursorX, cursorY);
-        cursorX += button.width + gaps[i];
-      }
-    }
   }
 }

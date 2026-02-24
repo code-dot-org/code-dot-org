@@ -1,0 +1,39 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2024-08-30T17:56:28.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Customizing Pie Charts: Step 3\r\n\r\nExplore and customize the parameters in `plt.pie()` to enhance the visual appeal and clarity of your pie chart. \r\n\r\n## Do This\r\n\r\n3. Add the `explode` parameter to the `plt.pit()` function to emphasize one or more slices in the chart.\r\n4. Discuss with your partner:\r\n   - How do the customizations you made (e.g. `colors`, `explode`) enhance the pie chart’s clarity and impact? Which modifications were most effective in conveying the data?\r\n\r\n\r\n\r\n\r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "project_template_level_name": "datascience-U2L8-L12-14templ_2024-pilot"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-08-30T17:56:28.646+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L8-L13_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L8-L13_2024-pilot\"},{\"changed_at\":\"2024-08-30 17:57:05 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>

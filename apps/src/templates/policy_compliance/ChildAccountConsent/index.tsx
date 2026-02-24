@@ -1,22 +1,16 @@
+import {Typography} from '@mui/material';
 import cookies from 'js-cookie';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {
-  Heading4,
-  BodyThreeText,
-  BodyTwoText,
-  EmText,
-  StrongText,
-} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 import './index.scss';
 
 const reportEvent = (eventName: string, payload: object = {}) => {
-  analyticsReporter.sendEvent(eventName, payload, PLATFORMS.AMPLITUDE);
+  analyticsReporter.sendEvent(eventName, payload);
 };
 
 const returnToCdoButton = () => {
@@ -42,15 +36,29 @@ const permissionGrantedMessage = (date: Date) => {
   });
   return (
     <div id="permission_granted_container">
-      <Heading4>{i18n.childAccountConsentValidHeader()}</Heading4>
-      <BodyTwoText className="permission-granted-date">
-        <StrongText>{i18n.childAccountConsentValidPermission()} </StrongText>
-        <StrongText className="date">{grantedDateString}</StrongText>
-      </BodyTwoText>
-      <BodyThreeText>{i18n.childAccountConsentValidMessage()}</BodyThreeText>
-      <BodyThreeText>
-        <EmText>{i18n.childAccountConsentEmailUnknown()}</EmText>
-      </BodyThreeText>
+      <Typography variant="h4" gutterBottom>
+        {i18n.childAccountConsentValidHeader()}
+      </Typography>
+      <Typography
+        className="permission-granted-date"
+        variant="body2"
+        gutterBottom
+      >
+        <Typography variant="strong">
+          {i18n.childAccountConsentValidPermission()}{' '}
+        </Typography>
+        <Typography className="date" variant="strong">
+          {grantedDateString}
+        </Typography>
+      </Typography>
+      <Typography variant="body3" gutterBottom>
+        {i18n.childAccountConsentValidMessage()}
+      </Typography>
+      <Typography variant="body3" gutterBottom>
+        <Typography variant="em">
+          {i18n.childAccountConsentEmailUnknown()}
+        </Typography>
+      </Typography>
       {returnToCdoButton()}
     </div>
   );
@@ -59,11 +67,17 @@ const permissionGrantedMessage = (date: Date) => {
 const expiredTokenMessage = () => {
   return (
     <div id="expired_token_container">
-      <Heading4>{i18n.childAccountConsentExpiredHeader()}</Heading4>
-      <BodyThreeText>{i18n.childAccountConsentExpiredMessage()}</BodyThreeText>
-      <BodyThreeText>
-        <EmText>{i18n.childAccountConsentEmailUnknown()}</EmText>
-      </BodyThreeText>
+      <Typography variant="h4" gutterBottom>
+        {i18n.childAccountConsentExpiredHeader()}
+      </Typography>
+      <Typography variant="body3" gutterBottom>
+        {i18n.childAccountConsentExpiredMessage()}
+      </Typography>
+      <Typography variant="body3" gutterBottom>
+        <Typography variant="em">
+          {i18n.childAccountConsentEmailUnknown()}
+        </Typography>
+      </Typography>
       {returnToCdoButton()}
     </div>
   );
@@ -73,18 +87,26 @@ export interface ChildAccountConsentProps {
   permissionGranted?: boolean;
   permissionGrantedDate?: Date;
   studentId?: number;
+  usState?: string;
 }
 
 const ChildAccountConsent: React.FC<ChildAccountConsentProps> = ({
   permissionGranted,
   permissionGrantedDate,
   studentId,
+  usState,
 }) => {
   if (permissionGranted && permissionGrantedDate) {
-    reportEvent(EVENTS.CAP_PARENT_CONSENT_GRANTED, {studentId: studentId});
+    reportEvent(EVENTS.CAP_PARENT_CONSENT_GRANTED, {
+      studentId,
+      us_state: usState,
+    });
     return permissionGrantedMessage(permissionGrantedDate);
   } else {
-    reportEvent(EVENTS.CAP_PARENT_CONSENT_EXPIRED);
+    reportEvent(EVENTS.CAP_PARENT_CONSENT_EXPIRED, {
+      studentId,
+      us_state: usState,
+    });
     return expiredTokenMessage();
   }
 };

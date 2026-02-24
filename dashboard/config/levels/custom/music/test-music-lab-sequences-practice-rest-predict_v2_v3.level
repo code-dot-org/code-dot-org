@@ -1,0 +1,190 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-07-02T21:16:28.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "sabrina_carpenter_espresso",
+      "sounds": {
+        "sabrina_carpenter_espresso": [
+          "vocals_now_hes",
+          "drums_intro",
+          "keys_intro",
+          "guitar_intro",
+          "reverse_vocal"
+        ]
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": true
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "play_sound_at_current_location_simple2",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "sabrina_carpenter_espresso/keys_intro"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "U(=s6lldJi%3ss++Gt`H",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "sabrina_carpenter_espresso/guitar_intro"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "*-3aIY7.23?A)RfTnKd0",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "sabrina_carpenter_espresso/drums_intro"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sounds_sequential",
+                                    "id": "m=eH-#TCHPQl{6;bNV)=",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": true
+                                    },
+                                    "inputs": {
+                                      "code": {
+                                        "block": {
+                                          "type": "play_rest_at_current_location_simple2",
+                                          "id": "[AS,3`ISLk[{ccNAFZ6v",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "fields": {
+                                            "rest_duration": "<field name=\"rest_duration\">3</field>"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "o`VM+48?YE(d*{Au]LQ5",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": true
+                                              },
+                                              "fields": {
+                                                "sound": "sabrina_carpenter_espresso/vocals_now_hes"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "blocks": {
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "validationTimeout": 1
+    },
+    "long_instructions": "### Make a Prediction \r\nNotice there is a <code style=\"background-color: rgb(116, 53, 178); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">rest</code> block in this code. When do you think the vocal track will play when you press \"Run\"?",
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "Answer Here!",
+      "freeResponseHeight": null,
+      "codeEditableAfterSubmit": false
+    },
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-practice-rest-predict_241148e4-199b-473f-a601-f78ff2a2d619",
+        "message": "Continue to the next level to learn more about rests!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-practice-rest-predict_88474a4e-5336-4f1a-9c40-8a73f2dff8f3",
+        "message": "Look! The rest made it so the shorter track is delayed and lines up at the end of the other tracks!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "name_suffix": "_v3",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-07-02T21:16:28.689+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-rest-predict_v2\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-rest-predict_v2\"}]"
+}]]></config>
+  <blocks/>
+</Music>

@@ -1,18 +1,92 @@
-import {ResponseValidator} from '@cdo/apps/util/HttpClient';
+import cloneDeep from 'lodash/cloneDeep';
 
-import {getBaseAssetUrl} from '../appConfig';
+import {getCurrentLocale} from '@cdo/apps/lab2/projects/utils';
+import HttpClient, {
+  ResponseValidator,
+  GetResponse,
+} from '@cdo/apps/util/HttpClient';
+
+import AppConfig, {getBaseAssetUrl} from '../appConfig';
 import {baseAssetUrlRestricted, DEFAULT_PACK} from '../constants';
 import {Key} from '../utils/Notes';
 
-export default class MusicLibrary {
-  private static instance: MusicLibrary;
+// This value can be modifed each time we know that there is an important new version
+// of the library on S3, to help bypass any caching of an older version.
+const requestVersion = 'launch2024-3';
 
-  static getInstance(): MusicLibrary | undefined {
+/**
+ * Loads a sound library JSON file.
+ *
+ * @param libraryName specific library to load. If a library is specified by
+ * URL param, that will take precedence.
+ * @returns the Music Library
+ */
+export async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
+  const libraryParameter = AppConfig.getValue('library') || libraryName;
+  const libraryFilename = `music-library-${libraryParameter}`;
+
+  if (AppConfig.getValue('local-library') === 'true') {
+    const localLibrary = require(`@cdo/static/music/${libraryFilename}.json`);
+    return new MusicLibrary(
+      'local-' + libraryName,
+      localLibrary as LibraryJson
+    );
+  } else {
+    const libraryJsonResponsePromise = HttpClient.fetchJson<LibraryJson>(
+      getBaseAssetUrl() +
+        libraryFilename +
+        '.json' +
+        (requestVersion ? `?version=${requestVersion}` : ''),
+      {},
+      LibraryValidator
+    );
+    const promises: Promise<GetResponse<Translations | LibraryJson>>[] = [
+      libraryJsonResponsePromise,
+    ];
+
+    const locale = getCurrentLocale().toLowerCase().replace('-', '_');
+    if (locale !== 'en_us') {
+      const translationPromise = HttpClient.fetchJson<Translations>(
+        getBaseAssetUrl() + libraryFilename + '-loc/' + locale + '.json'
+      );
+      promises.push(translationPromise);
+    }
+
+    // translations will be undefined if locale is en_us.
+    const [libraryJsonResponse, translations] = await Promise.allSettled(
+      promises
+    );
+
+    let libraryJson = {} as LibraryJson;
+    if (libraryJsonResponse.status === 'fulfilled') {
+      libraryJson = libraryJsonResponse.value.value as LibraryJson;
+    }
+
+    if (translations && translations.status === 'fulfilled') {
+      libraryJson = localizeLibrary(
+        libraryJson,
+        translations.value.value as Translations
+      );
+    }
+
+    return new MusicLibrary(libraryName, libraryJson);
+  }
+}
+
+export default class MusicLibrary {
+  private static instance: MusicLibrary | undefined;
+
+  static async loadLibrary(libraryName: string): Promise<MusicLibrary> {
+    if (this.instance?.name === libraryName) {
+      return this.instance;
+    }
+
+    this.instance = await loadLibrary(libraryName);
     return this.instance;
   }
 
-  static setCurrent(library: MusicLibrary) {
-    this.instance = library;
+  static getInstance(): MusicLibrary | undefined {
+    return this.instance;
   }
 
   name: string;
@@ -39,6 +113,15 @@ export default class MusicLibrary {
     this.name = name;
     this.libraryJson = libraryJson;
     this.allowedSounds = null;
+    this.availableSoundTypes = {};
+
+    // Add notes for drum kits based on index if they don't already have them.
+    for (const kit of libraryJson.kits) {
+      kit.sounds = kit.sounds.map((sound, i) => ({
+        ...sound,
+        note: i,
+      }));
+    }
 
     // Combine the JSON-specified folders into one flat list of folders.
     this.folders = [
@@ -51,11 +134,11 @@ export default class MusicLibrary {
     this.instruments = libraryJson.instruments;
     this.kits = libraryJson.kits;
 
-    if (libraryJson.bpm) {
+    if (libraryJson.bpm !== undefined) {
       this.bpm = libraryJson.bpm;
     }
 
-    if (libraryJson.key) {
+    if (libraryJson.key !== undefined) {
       this.key = libraryJson.key;
     }
 
@@ -64,7 +147,6 @@ export default class MusicLibrary {
     this.hasRestrictedPacks = libraryJson.packs.some(pack => pack.restricted);
 
     // Take this opportunity to determine the available sound types in this library.
-    this.availableSoundTypes = {};
     this.determineAvailableSoundTypes();
   }
 
@@ -74,6 +156,9 @@ export default class MusicLibrary {
 
   setCurrentPackId(packId: string | null) {
     this.currentPackId = packId;
+
+    // Take this opportunity to update the available sound types in this library.
+    this.determineAvailableSoundTypes();
   }
 
   getHasRestrictedPacks(): boolean {
@@ -83,7 +168,9 @@ export default class MusicLibrary {
   // Determine the available sound types available in this library.
   // Only currently-allowed sounds from packs are included.
   private determineAvailableSoundTypes() {
-    const folders = this.getAllowedSounds();
+    const folders = this.getAvailableSounds();
+
+    this.availableSoundTypes = {};
 
     folders.forEach(folder => {
       folder.sounds.forEach(sound => {
@@ -104,12 +191,9 @@ export default class MusicLibrary {
       return this.libraryJson?.defaultSound;
     }
 
-    // The fallback is the first non-instrument/kit folder's first non-preview sound.
+    // The fallback is the first available pack's first available non-preview sound.
     // We will skip restricted folders unless it's the currently selected pack.
-    const firstFolder = this.packs.find(
-      group =>
-        !group.type && (!group.restricted || group.id === this.currentPackId)
-    );
+    const firstFolder = this.getAvailableSounds()[0];
     const firstSound = firstFolder?.sounds.find(
       sound => sound.type !== 'preview'
     );
@@ -203,6 +287,23 @@ export default class MusicLibrary {
     );
   }
 
+  getImageAttributions(): ImageAttributionCopyright[] {
+    const attributions: ImageAttributionCopyright[] = [];
+
+    this.getRestrictedPacks().map(pack => {
+      const attribution = pack.imageAttribution;
+      if (pack.artist && attribution?.author) {
+        attributions.push({artist: pack.artist, ...attribution});
+      }
+    });
+
+    return attributions;
+  }
+
+  getExtraCredit(): string | undefined {
+    return this.libraryJson?.extraCredit;
+  }
+
   // Return a deep copy of the packs folders only containing folders
   // and sounds currently allowed by the level.
   private getAllowedSounds(): SoundFolder[] {
@@ -249,6 +350,30 @@ export default class MusicLibrary {
       folder?.key ?? folder?.sounds.find(sound => sound.key !== undefined)?.key
     );
   }
+
+  getCurrentPackId(): string | null {
+    return this.currentPackId;
+  }
+
+  // Returns true if the sound id is associated with an available sound; false otherwise
+  isSoundIdAvailable(id: string): boolean {
+    const lastSlashIndex = id.lastIndexOf('/');
+    const folderId = id.substring(0, lastSlashIndex);
+    const soundSrc = id.substring(lastSlashIndex + 1);
+
+    const folder = this.getFolderForFolderId(folderId);
+    if (!folder) {
+      return false;
+    }
+
+    // Check if the sound exists in the available sounds of this folder.
+    const availableSounds = this.getAvailableSounds();
+    const availableFolder = availableSounds.find(f => f.id === folderId);
+
+    return (
+      availableFolder?.sounds.some(sound => sound.src === soundSrc) || false
+    );
+  }
 }
 
 export const LibraryValidator: ResponseValidator<LibraryJson> = response => {
@@ -257,6 +382,41 @@ export const LibraryValidator: ResponseValidator<LibraryJson> = response => {
     throw new Error(`Invalid library JSON: ${response}`);
   }
   return libraryJson;
+};
+
+const localizeLibrary = (
+  library: LibraryJson,
+  translations: Translations
+): LibraryJson => {
+  const libraryJsonLocalized = cloneDeep(library);
+  libraryJsonLocalized.instruments.forEach(
+    instrument =>
+      (instrument.name = translations[instrument.id] || instrument.name)
+  );
+
+  libraryJsonLocalized.kits.forEach(kit => {
+    const kitId = kit.id;
+    kit.name = translations[kitId] || kit.name;
+    kit.sounds.forEach(sound => {
+      const soundId = `${kitId}/${sound.src}`;
+      sound.name = translations[soundId] || sound.name;
+    });
+  });
+
+  libraryJsonLocalized.packs.forEach(pack => {
+    const packId = pack.id;
+    if (!pack.skipLocalization) {
+      pack.name = translations[packId] || pack.name;
+    }
+    pack.sounds.forEach(sound => {
+      if (!sound.skipLocalization) {
+        const soundId = `${packId}/${sound.src}`;
+        sound.name = translations[soundId] || sound.name;
+      }
+    });
+  });
+
+  return libraryJsonLocalized;
 };
 
 export type SoundType = 'beat' | 'bass' | 'lead' | 'fx' | 'vocal' | 'preview';
@@ -290,12 +450,30 @@ export interface SoundData {
   path?: string;
   src: string;
   length: number;
+  pickupLength?: number;
   type: SoundType;
   note?: number;
   restricted?: boolean;
   sequence?: SampleSequence;
   bpm?: number;
   key?: Key;
+  skipLocalization?: boolean;
+}
+
+export interface ImageAttributionCopyright extends ImageAttribution {
+  artist: string;
+}
+
+// A Creative Commons (2, 3, or 4) or regular copyright license.
+export type ImageAttributionLicenseVersion = 'CC2' | 'CC3' | 'CC4' | 'C';
+
+export interface ImageAttribution {
+  author: string;
+  color?: string;
+  position?: 'left' | 'right';
+  src?: string;
+  licenseVersion: ImageAttributionLicenseVersion;
+  year?: string;
 }
 
 export type SoundFolderType = 'sound' | 'kit' | 'instrument';
@@ -312,6 +490,8 @@ export interface SoundFolder {
   sounds: SoundData[];
   bpm?: number;
   key?: Key;
+  imageAttribution?: ImageAttribution;
+  skipLocalization?: boolean;
 }
 
 export type LibraryJson = {
@@ -322,12 +502,17 @@ export type LibraryJson = {
   bpm?: number;
   key?: number;
   defaultSound?: string;
+  extraCredit?: string;
   folders: SoundFolder[];
   instruments: SoundFolder[];
   kits: SoundFolder[];
   packs: SoundFolder[];
 };
 
-interface Sounds {
-  [index: string]: [string];
+export interface Sounds {
+  [category: string]: string[];
+}
+
+interface Translations {
+  [key: string]: string;
 }

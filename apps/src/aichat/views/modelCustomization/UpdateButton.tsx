@@ -1,12 +1,10 @@
+import {Button} from '@code-dot-org/component-library/button';
 import React, {useCallback} from 'react';
 
-import {Button} from '@cdo/apps/componentLibrary/button';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {
-  selectHavePropertiesChanged,
-  updateAiCustomization,
-} from '../../redux/aichatRedux';
+import aichatI18n from '../../locale';
+import {selectHavePropertiesChanged, updateAiCustomization} from '../../redux';
 
 import styles from '../model-customization-workspace.module.scss';
 
@@ -28,7 +26,8 @@ const UpdateButton: React.FunctionComponent<UpdateButtonProps> = ({
 
   return (
     <Button
-      text="Update"
+      id="uitest-update-customizations"
+      text={aichatI18n.modelCustomization_updateButtonText()}
       disabled={isDisabledDefault || saveInProgress || !havePropertiesChanged}
       iconLeft={
         saveInProgress && currentSaveType === 'updateChatbot'

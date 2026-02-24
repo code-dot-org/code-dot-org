@@ -42,6 +42,7 @@ module LessonImportHelper
         lesson.purpose = cb_lesson_data['cs_content']
         lesson.preparation = cb_lesson_data['prep']
         lesson.creative_commons_license = cb_lesson_data['creative_commons_license']
+        lesson.background = cb_lesson_data['background']
         lesson.assessment_opportunities = cb_lesson_data['assessment'] unless cb_lesson_data['assessment'].blank?
         lesson.save!
 

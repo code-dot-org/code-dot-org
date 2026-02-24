@@ -17,6 +17,7 @@ custom_error_response: false
 javabuilder_private_key: !Secret
 javabuilder_key_password: !Secret
 properties_encryption_key: !Secret
+puma_control_server_token: !Secret
 
 # Recaptcha (used on Forgot Password page.  Especially important for this to work on the BugCrowd adhoc)
 recaptcha_site_key: !Secret
@@ -35,3 +36,7 @@ db_credential_admin: !StackSecret
 db_credential_writer: !StackSecret
 db_credential_reader: !StackSecret
 
+openai_student_learning_api_key: !Secret
+
+contentful_api_key: !Secret
+contentful_cs_for_all_access_token: !Secret

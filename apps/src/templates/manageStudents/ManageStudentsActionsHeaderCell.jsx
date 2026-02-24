@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
+import PopUpMenu, {MenuBreak} from '@cdo/apps/sharedComponents/PopUpMenu';
 import i18n from '@cdo/locale';
 
 import QuickActionsCell, {

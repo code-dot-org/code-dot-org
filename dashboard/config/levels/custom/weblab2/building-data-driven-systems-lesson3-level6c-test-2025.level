@@ -1,0 +1,37 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-11-20T21:35:26.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Variety Gaming Streamer",
+    "project_template_level_name": "building-data-driven-systems-lesson3-templateC-test-2025",
+    "long_instructions": "Use **PAIR Programming with AI** to help manage your postings:\r\n\r\n* **Prompt:** Ask AI to generate or explain a helper.\r\n\r\n* **Analyze:** Compare two possible versions or lines of code.\r\n\r\n* **Integrate:** Implement and test in the display.\r\n\r\n* **Reflect:** Write a short statement about how helper functions protect data consistency in *reflection.md*\r\n\r\n---\r\n\r\n### 🔴 Going Live Now!\r\n**Status:** Urgent Update\r\n\r\n**Details:** You just woke up feeling lucky. You decided to do a surprise speedrun attempt right now (Monday slot) to try for a World Record.\r\n\r\n**Action Required:** Add this alert to the very **start** of your feed so it's the first thing subscribers see.\r\n\r\n* **Title:** \"Surprise Speedrun\"\r\n* **Content:** \"Attempting a World Record run live!\"\r\n* **Image:** \"speedrun.jpg\"",
+    "bubble_choice_description": "Going Live Now! You just woke up feeling lucky. You decided to do a surprise speedrun attempt right now.",
+    "thumbnail_url": "https://images.code.org/93c2eabc8938ec8cadbcf6e64190ed70-streamer.jpg",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "level_system_prompt": "In this level, students will be using the PAIR Programming with AI framework--\r\n* **Prompt:** Ask AI to generate or explain a helper.\r\n* **Analyze:** Compare two possible versions or lines of code.\r\n* **Integrate:** Implement and test in the display.\r\n* **Reflect:** Write a short statement about how helper functions protect data consistency in *reflection.md*\r\n\r\nTherefore, you should propose two different methods to create the code that the user prompts you for so that they can compare, contrast, and test.",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-20T21:35:26.630+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson3-level5c-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson3-level5c-test-2025\"},{\"changed_at\":\"2025-11-20 21:36:21 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

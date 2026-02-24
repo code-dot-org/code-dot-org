@@ -1,21 +1,22 @@
+import {Typography} from '@mui/material';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {Heading1, Heading2} from '@cdo/apps/lib/ui/Headings';
+import Dialog, {Body} from '@cdo/apps/legacySharedComponents/Dialog';
 import {getStore} from '@cdo/apps/redux';
-import Dialog, {Body} from '@cdo/apps/templates/Dialog';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import PadAndCenter from '@cdo/apps/templates/teacherDashboard/PadAndCenter';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {findProfanity} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
-import Spinner from '../../pd/components/spinner';
+import Spinner from '../../../sharedComponents/Spinner';
 import {hideLibraryCreationDialog} from '../shareDialogRedux';
 
+import {extractTextFromCode} from './extractTextFromCode';
 import LibraryClientApi from './LibraryClientApi';
 import loadLibrary from './libraryLoader';
 import LibraryPublisher from './LibraryPublisher';
@@ -89,7 +90,11 @@ class LibraryCreationDialog extends React.Component {
     };
 
     try {
-      const profaneWords = await findProfanity(libraryDetails.librarySource);
+      const userCode = libraryDetails.librarySource;
+      // Extract only user-written text (strings, comments, identifiers) from the JavaScript code
+      // This avoids issues with syntax characters like parentheses interfering with profanity filtering
+      const textToTest = extractTextFromCode(userCode);
+      const profaneWords = await findProfanity(textToTest);
       if (profaneWords && profaneWords.length > 0) {
         this.setState({
           dialogState: DialogState.CODE_PROFANITY,
@@ -231,7 +236,9 @@ class LibraryCreationDialog extends React.Component {
         <Body>
           <PadAndCenter>
             <div style={styles.libraryBoundary}>
-              <Heading1>{title}</Heading1>
+              <Typography variant="h1" gutterBottom>
+                {title}
+              </Typography>
               {subtitleContent}
               {bodyContent}
             </div>
@@ -265,9 +272,9 @@ export class UnpublishSuccessDisplay extends React.Component {
   render() {
     return (
       <div>
-        <Heading2>
+        <Typography variant="h2" gutterBottom>
           <b>{i18n.libraryUnPublishTitle()}</b>
-        </Heading2>
+        </Typography>
         <p>{i18n.libraryUnPublishExplanation()}</p>
       </div>
     );

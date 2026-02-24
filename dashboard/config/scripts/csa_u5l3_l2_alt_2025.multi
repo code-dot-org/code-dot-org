@@ -1,0 +1,50 @@
+name 'CSA U5L3-L2_alt-2025'
+title 'Check for Understanding'
+
+right '`7 12 8 11 9`'
+wrong '`7 2 12 5 8 3 11 6 9`'
+wrong '`7 12 11 9`'
+wrong '`7 5 8 11 6 9`'
+wrong '`12 8 9`'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Consider the following code segment.
+
+```
+int[][] arr = {
+    {7, 2, 12},
+    {5, 8, 3},
+    {11, 6, 9}
+};
+
+String output = "";
+
+for (int i = 0; i < arr.length; i++) {
+    for (int j = 0; j < arr[i].length; j++) {
+        if (arr[i][j] > 6) {
+            output += arr[i][j] + " ";
+        }
+    }
+}
+
+System.out.println(output);
+```
+
+What will be output when this code segment is executed?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+We traverse the array in row-major order, which means we go through each row from left to right, and then proceed to the next row. The traversal order will be:
+
+`7` -> `2` -> `12` -> `5` -> `8` -> `3` -> `11` -> `6` -> `9`
+
+During the traversal, we only include the elements greater than the threshold (`6`). So, we have:
+
+`7` -> `12` -> `8` -> `11` -> `9`
+
+Finally, we concatenate these values with a space, resulting in the output:
+
+`"7 12 8 11 9"`
+MARKDOWN

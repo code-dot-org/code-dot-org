@@ -27,6 +27,10 @@ exports.makeMathNumber = function (number) {
 exports.simpleBlock = function (block_type) {
   return {
     test: function (block) {
+      // Special case for old static variable blocks. Newer parameter blocks are equivalent.
+      if (block_type.startsWith('variables_get_')) {
+        return [block_type, 'parameters_get'].includes(block.type);
+      }
       return block.type === block_type;
     },
     type: block_type,
@@ -89,11 +93,6 @@ exports.makeTestsFromBuilderRequiredBlocks = function (customRequiredBlocks) {
       case 'procedures_defnoreturn':
       case 'procedures_defreturn':
         requiredBlocksTests.push(testsFromProcedure(childNode));
-        break;
-      case 'functional_definition':
-        break;
-      case 'functional_call':
-        requiredBlocksTests.push(testsFromFunctionalCall(childNode, blocksXml));
         break;
       default:
         requiredBlocksTests.push([testFromBlock(childNode)]);
@@ -172,46 +171,6 @@ function testsFromProcedure(node) {
   ];
 }
 
-function testsFromFunctionalCall(node, blocksXml) {
-  var name = node.querySelector('mutation').getAttribute('name');
-  var argElements = node.querySelectorAll('arg');
-  var types = [];
-  for (var i = 0; i < argElements.length; i++) {
-    types.push(argElements[i].getAttribute('type'));
-  }
-
-  var definition = _.find(blocksXml.childNodes, function (sibling) {
-    if (sibling.getAttribute('type') !== 'functional_definition') {
-      return false;
-    }
-    var nameElement = sibling.querySelector('title[name="NAME"]');
-    if (!nameElement) {
-      return false;
-    }
-    return nameElement.textContent === name;
-  });
-
-  if (!definition) {
-    throw new Error('No matching definition for functional_call');
-  }
-
-  return [
-    {
-      test: function (userBlock) {
-        if (
-          userBlock.type !== 'functional_call' ||
-          userBlock.getCallName() !== name
-        ) {
-          return false;
-        }
-        var userTypes = userBlock.getParamTypes();
-        return _.isEqual(userTypes, types);
-      },
-      blockDisplayXML: xml.serialize(definition) + xml.serialize(node),
-    },
-  ];
-}
-
 /**
  * Checks two DOM elements to see whether or not they are equivalent
  * We consider them equivalent if they have the same tagName, attributes,
@@ -235,9 +194,8 @@ export function elementsEquivalent(expected, given, ignoreChildBlocks) {
       (expectedTagName === 'field' && givenTagName === 'title')
     ) {
       // titles were renamed to fields in Blockly in 2013. As of Dec 2021, all
-      // blockly code on our platform (both CdoBlockly and Google Blockly)
-      // serializes using <field> tags, but we should still treat <title> tags
-      // as equivalent for backwards compatibility.
+      // blockly code on our platform serializes using <field> tags, but we
+      // should still treat <title> tags as equivalent for backwards compatibility.
       // Test code and validation code still use <title> tags.
     } else {
       return false;
@@ -267,6 +225,7 @@ var ignoredAttributes = [
   'uservisible',
   'usercreated',
   'id',
+  'inline',
 ];
 
 /**
@@ -308,13 +267,17 @@ function attributesEquivalent(expected, given) {
  * Checks whether the children of two different elements are equivalent
  */
 function childrenEquivalent(expected, given, ignoreChildBlocks) {
-  var filterFn = function (node) {
-    // CDO Blockly returns tag names in all caps
-    var tagName = node.tagName && node.tagName.toLowerCase();
-    return ignoreChildBlocks && tagName !== 'next' && tagName !== 'statement';
+  const filterFn = function (node) {
+    const tagName = node.tagName && node.tagName.toLowerCase();
+    // Ignore mutation nodes to tolerate legacy/version differences in serialized XML.
+    const isMutation = tagName === 'mutation';
+    const isIgnorableChild =
+      ignoreChildBlocks && (tagName === 'next' || tagName === 'statement');
+
+    return !isMutation && !isIgnorableChild;
   };
-  var children1 = Array.prototype.filter.call(expected.childNodes, filterFn);
-  var children2 = Array.prototype.filter.call(given.childNodes, filterFn);
+  const children1 = Array.prototype.filter.call(expected.childNodes, filterFn);
+  const children2 = Array.prototype.filter.call(given.childNodes, filterFn);
 
   if (expected.getAttribute('inputcount') === '???') {
     // If required block ignores inputcount, allow arbitrary children
@@ -330,49 +293,3 @@ function childrenEquivalent(expected, given, ignoreChildBlocks) {
   }
   return true;
 }
-
-/**
- * Checks if two blocks are "equivalent"
- * Currently means their type and all of their fields match exactly
- * @param blockA
- * @param blockB
- */
-exports.blocksMatch = function (blockA, blockB) {
-  var typesMatch = blockA.type === blockB.type;
-  var fieldsMatch = exports.blockFieldsMatch(blockA, blockB);
-  return typesMatch && fieldsMatch;
-};
-
-/**
- * Compares two blocks' fields, returns true if they all match
- * @returns {boolean}
- * @param blockA
- * @param blockB
- */
-exports.blockFieldsMatch = function (blockA, blockB) {
-  var blockAFields = Blockly.cdoUtils.getBlockFields(blockA);
-  var blockBFields = Blockly.cdoUtils.getBlockFields(blockB);
-
-  var nameCompare = function (a, b) {
-    return a.name < b.name;
-  };
-  blockAFields.sort(nameCompare);
-  blockBFields.sort(nameCompare);
-
-  for (var i = 0; i < blockAFields.length || i < blockBFields.length; i++) {
-    var blockAField = blockAFields[i];
-    var blockBField = blockBFields[i];
-    if (
-      !blockAField ||
-      !blockBField ||
-      !fieldsMatch(blockAField, blockBField)
-    ) {
-      return false;
-    }
-  }
-  return true;
-};
-
-var fieldsMatch = function (fieldA, fieldB) {
-  return fieldB.name === fieldA.name && fieldB.getValue() === fieldA.getValue();
-};

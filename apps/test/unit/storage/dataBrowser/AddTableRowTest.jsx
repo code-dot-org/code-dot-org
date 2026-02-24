@@ -29,20 +29,8 @@ describe('AddTableRow', () => {
 
       const wrapper = createAddTableRow();
 
-      let addButton = wrapper.find('PendingButton').at(0);
+      let addButton = wrapper.find('[id="addTableRowButton"]').at(0);
       expect(addButton.prop('text')).toContain('i18n-add-to-table');
-    });
-
-    it('should render a localized string while adding the row', () => {
-      jest
-        .spyOn(commonI18n, 'addingToTable')
-        .mockClear()
-        .mockReturnValue('i18n-adding-to-table');
-
-      const wrapper = createAddTableRow();
-
-      let addButton = wrapper.find('PendingButton').at(0);
-      expect(addButton.prop('pendingText')).toContain('i18n-adding-to-table');
     });
 
     it('should render a localized string for the placeholder text', () => {

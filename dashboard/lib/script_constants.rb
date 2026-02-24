@@ -10,6 +10,13 @@ module ScriptConstants
   ALGEBRA_NAME = 'algebra'.freeze
   AIML_2021_NAME = 'aiml-2021'.freeze
 
+  # Deprecated course constants (kept for deprecated course page rendering)
+  COURSE1_NAME = 'course1'.freeze
+  COURSE2_NAME = 'course2'.freeze
+  COURSE3_NAME = 'course3'.freeze
+  COURSE4_NAME = 'course4'.freeze
+  TWENTY_HOUR_NAME = '20-hour'.freeze
+
   CSP_UNIT1_NAME = 'cspunit1'.freeze
   CSP_UNIT2_NAME = 'cspunit2'.freeze
   CSP_UNIT3_NAME = 'cspunit3'.freeze
@@ -116,6 +123,8 @@ module ScriptConstants
       # with code_s matching the script name (in quotes) in this list.
 
       nil,
+      MIX_MOVE_AI_2025 = 'mix-move-ai-2025'.freeze, # 2025 hour of ai
+      MUSIC_JAM_2024 = 'music-jam-2024'.freeze, # 2024 hour of code
       DANCE_AI_2023 = 'dance-ai-2023'.freeze, # 2023 hour of code
       POEM_ART_2021_NAME = 'poem-art-2021'.freeze, # 2021 hour of code
       HELLO_WORLD_FOOD_2021_NAME = 'hello-world-food-2021'.freeze, # 2021 hour of code
@@ -133,6 +142,8 @@ module ScriptConstants
       MINECRAFT_NAME = 'mc'.freeze,
       MINECRAFT_DESIGNER_NAME = 'minecraft'.freeze,
       MINECRAFT_AI_NAME = 'generation-ai'.freeze,
+      MINECRAFT_SHOW_NAME = 'show-must-go-on'.freeze,
+      MINECRAFT_NIGHT_NAME = 'firstnight-mc'.freeze,
       APPLAB_INTRO = 'applab-intro'.freeze,
       HOC_2013_NAME = 'Hour of Code'.freeze, # 2013 hour of code
       FROZEN_NAME = 'frozen'.freeze,
@@ -147,18 +158,11 @@ module ScriptConstants
       HOC_ENCRYPTION_NAME = 'hoc-encryption'.freeze,
       TEXT_COMPRESSION_NAME = 'text-compression'.freeze,
       BASKETBALL_NAME = 'basketball'.freeze,
-      SPORTS_NAME = 'sports'.freeze,
       HOC_NAME = 'hourofcode'.freeze, # 2014 hour of code
       DANCE_PARTY_NAME = 'dance'.freeze, # 2018 hour of code
       DANCE_PARTY_EXTRAS_NAME = 'dance-extras'.freeze, # 2018 hour of code
       HOW_AI_WORKS_2023_NAME = 'how-ai-works-2023'.freeze,
       AI_ETHICS_2023_NAME = 'ai-ethics-2023'.freeze,
-    ],
-    csf_international: [
-      COURSE1_NAME = 'course1'.freeze,
-      COURSE2_NAME = 'course2'.freeze,
-      COURSE3_NAME = 'course3'.freeze,
-      COURSE4_NAME = 'course4'.freeze,
     ],
     csd_2023: [
       CSD1_2023_NAME = 'csd1-2023'.freeze,
@@ -221,9 +225,6 @@ module ScriptConstants
       CSD5_NAME = 'csd5-2017'.freeze,
       CSD6_NAME = 'csd6-2017'.freeze,
     ],
-    twenty_hour: [
-      TWENTY_HOUR_NAME = '20-hour'.freeze,
-    ],
     flappy: [FLAPPY_NAME],
     minecraft: [
       MINECRAFT_NAME,
@@ -231,6 +232,8 @@ module ScriptConstants
       MINECRAFT_HERO_NAME,
       MINECRAFT_AQUATIC_NAME,
       MINECRAFT_AI_NAME,
+      MINECRAFT_SHOW_NAME,
+      MINECRAFT_NIGHT_NAME,
     ],
   }.freeze
 
@@ -244,18 +247,51 @@ module ScriptConstants
     CSC_MAPPINGLANDMARKS_2023_NAME = 'csc-mappinglandmarks-2023'.freeze,
   ].freeze
 
+  TRANSLATABLE_PD_PL_UNITS = [
+    ELEMENTARY_AI_2024 = 'elementaryai-2024'.freeze,
+    K5_HOW_AI_MAKES_DECISIONS = 'k5howaimakesdecisions'.freeze,
+    K5_ONLINEPD = 'K5-OnlinePD'.freeze,
+    K5_ONLINEPD_2019 = 'k5-onlinepd-2019'.freeze,
+    K5_ONLINEPD_2023 = 'k5-onlinepd-2023'.freeze,
+    K5PLGAMEDESIGN = 'k5plgamedesign'.freeze,
+    KODEA_PD_2021 = 'kodea-pd-2021'.freeze,
+    SELF_PACED_EXPLORING_GEN_AI_2024 = 'self-paced-exploring-gen-ai-2024'.freeze,
+    SELF_PACED_PL_CSD_2024 = 'self-paced-pl-csd-2024'.freeze,
+    SELF_PACED_PL_CSD1_2024 = 'self-paced-pl-csd1-2024'.freeze,
+    SELF_PACED_PL_CSD2_2024 = 'self-paced-pl-csd2-2024'.freeze,
+    SELF_PACED_PL_CSD3_2024 = 'self-paced-pl-csd3-2024'.freeze,
+    SELF_PACED_PL_CSD4_2024 = 'self-paced-pl-csd4-2024'.freeze,
+    SELF_PACED_PL_CSD5_2024 = 'self-paced-pl-csd5-2024'.freeze,
+    SELF_PACED_PL_EXPLORING_GEN_AI = 'self-paced-pl-exploring-gen-ai'.freeze,
+    SELF_PACED_PL_K5_2024_1 = 'self-paced-pl-k5-2024-1'.freeze,
+    SELF_PACED_PL_K5_2024_2 = 'self-paced-pl-k5-2024-2'.freeze,
+    SELF_PACED_PL_K5_GETTING_STARTED = 'self-paced-pl-k5-getting-started'.freeze,
+    SELF_PACED_PL_AIML_2023 = 'self-paced-pl-aiml-2023'.freeze,
+    SELF_PACED_PL_AIML1 = 'self-paced-pl-aiml1'.freeze,
+    SELF_PACED_PL_AIML2 = 'self-paced-pl-aiml2'.freeze,
+    THREE_5GAMEDESIGN_2024 = '3-5gamedesign-2024'.freeze,
+  ].freeze
+
   ADDITIONAL_I18N_UNITS = [
+    ALLTHETHINGS = 'allthethings'.freeze,
     APPLAB_1HOUR = 'applab-1hour'.freeze,
     APPLAB_2HOUR = 'applab-2hour'.freeze,
+    COMPUTER_VISION = 'computer-vision'.freeze,
+    CSD2_2024 = 'csd2-2024'.freeze,
     CSD_POST_SURVEY = 'csd-post-survey'.freeze,
     DEEPDIVE_DEBUGGING = 'deepdive-debugging'.freeze,
+    ELEM_GAME_DESIGN_2024 = 'elem-game-design-2024'.freeze,
+    EXPLORING_GEN_AI = 'exploring-gen-ai2-2024'.freeze,
+    FOUNDATIONS_GEN_AI = 'foundations-gen-ai-2024'.freeze,
     FREQUENCY_ANALYSIS = 'frequency_analysis'.freeze,
     GAMELAB = 'gamelab'.freeze,
-    HELLO_WORLD_FOOD = 'hello-world-food'.freeze,
     HELLO_WORLD_ANIMALS = 'hello-world-animals'.freeze,
     HELLO_WORLD_EMOJI = 'hello-world-emoji'.freeze,
+    HELLO_WORLD_FOOD = 'hello-world-food'.freeze,
     HELLO_WORLD_RETRO = 'hello-world-retro'.freeze,
     K1HOC_2017 = 'k1hoc2017'.freeze,
+    K5_AI_DATA_2024 = 'k5-ai-data-2024'.freeze,
+    K5_UNPLUGGED = 'k5-unplugged'.freeze,
     MUSIC_INTRO_2024 = 'music-intro-2024'.freeze,
     MUSIC_ONBOARD = 'music-onboard'.freeze,
     MUSIC_TUTORIAL_2024 = 'music-tutorial-2024'.freeze,
@@ -265,13 +301,7 @@ module ScriptConstants
     PIXELATION = 'pixelation'.freeze,
     POEM_ART = 'poem-art'.freeze,
     POETRY_HOC3 = 'poetry-hoc3'.freeze,
-    VIGENERE = 'vigenere'.freeze,
-    K5_ONLINEPD_2019 = 'k5-onlinepd-2019'.freeze,
-    K5_ONLINEPD = 'K5-OnlinePD'.freeze,
-    KODEA_PD_2021 = 'kodea-pd-2021'.freeze,
-    ALLTHETHINGS = 'allthethings'.freeze,
-    COMPUTER_VISION = 'computer-vision'.freeze,
-    CSD2_2024 = 'csd2-2024'.freeze,
+    VIGENERE = 'vigenere'.freeze
   ]
 
   DEFAULT_VERSION_YEAR = '2017'
@@ -324,27 +354,15 @@ module ScriptConstants
     *CATEGORIES[:csf_2021],
     *CATEGORIES[:csf_2022],
     *CATEGORIES[:csf_2023],
-    *CATEGORIES[:csf_international],
 
     *CATEGORIES[:hoc],
-    *CATEGORIES[:twenty_hour],
     *ADDITIONAL_I18N_UNITS,
     *TRANSLATEABLE_CSC_UNITS,
+    *TRANSLATABLE_PD_PL_UNITS,
     JIGSAW_NAME,
   ].freeze
 
   def self.csf_next_course_recommendation(course_name)
-    # These course names without years in them should be mapped statically to their recommendation.
-    static_mapping = {
-      "course1" => "course2",
-      "course2" => "course3",
-      "course3" => "course4",
-      "accelerated" => "course4",
-      "course4" => "applab-intro"
-    }
-
-    return static_mapping[course_name] if static_mapping.include?(course_name)
-
     # For CSF courses with years in their name, separate into prefix and year. Determine the recommended
     # next prefix based on constant mapping, then add the year to the recommended prefix.
     # Example: coursea-2019 becomes prefix: coursea, year: 2019.

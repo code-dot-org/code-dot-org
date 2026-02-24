@@ -1,0 +1,27 @@
+name 'csaif_pl_nets_sim_02_-rev'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Sending a Message
+
+#### In <a href='https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/4/lessons/1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 1</a>, students will send a direct message via the Internet Simulator. First, they’ll connect to a peer.
+
+<p align="center">
+<img src="https://images.code.org/8a491b2d19e6c70a0f6098453b09e9de-Screenshot 2025-04-22 at 9.44.20 AM.png" alt=" two partners connecting to chat" width="80%" style="border-radius:10px; border: 2px solid black;">
+</p>
+
+
+#### Then they can send a message using various levels of abstraction (ASCII, decimal, or binary).
+<p align="center">
+<img src="https://images.code.org/70249c604f955f59e0442c43bc71d800-Screenshot 2025-04-22 at 9.45.02 AM.png" alt="Internet Simulator screen showing the connection between partners and a message in ASCII, decimal, and binary" width="70%" style="border-radius:10px; border: 2px solid black;">
+</p>
+
+#### Students will use the logs to see the messages they have sent and received.
+
+<p align="center">
+<img src="https://images.code.org/dd0b5b7459c7fa3b6baca3058ad3f271-Screenshot 2025-12-09 at 11.35.55 AM.png" alt="sent message log" width="50%" style="border-radius:10px; border: 2px solid black;">
+</p>
+
+#### At the end of the activity, students will reflect on: *How is the Internet Simulator similar to the Internet? How is it different?*
+MARKDOWN

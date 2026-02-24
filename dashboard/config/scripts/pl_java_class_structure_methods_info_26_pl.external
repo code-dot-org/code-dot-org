@@ -1,0 +1,59 @@
+name 'pl-java-class-structure-methods-info-26_pl'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Accessor Methods
+
+
+<img src="https://images.code.org/cc6ec92f7bd8e930b3903c51aa44d5d5-image-1747852879738.png" alt="code for an accessor method called getName()" width="350px" style="border-radius:10px; float:right; margin: 40px 0 0px 40px;">
+
+## Accessor Methods (Getters)
+
+#### An **accessor method** lets you get or "access" the value that is **currently assigned to a variable.**
+
+#### Think of it like asking a question about the object.
+
+#### **In this example:**
+- #### The method is **public** so it can be accessed outside of the class.
+
+- #### `String` is the return type of the method because it returns the value of the String variable `name`.
+
+- #### The name of the method starts with the word 'get' to indicate it is an accessor method.
+
+- #### The method uses the `return` keyword to send back the value of name.
+
+## Method Heading
+
+<img src="https://images.code.org/0565008eca01424dc6668afb17e2607d-image-1747929806804.png" alt="method header labeling return type and method signature" width="550px" style="border-radius:10px;display: block; margin-left: auto; margin-right: auto;">
+
+#### ✅ **Summary**:
+#### **Accessor methods** have a return type because they give you back a value.
+#### *Whatever type of variable you're returning (like int, double, or String), that becomes the return type of the method.*
+
+#### **So:**
+
+- #### If you're returning a number → the return type might be `int` or `double`.
+
+- #### If you're returning text → the return type is `String`.
+
+- #### If you're not returning anything → you use void (like in a setter).
+
+<div style="clear:both;"></div>
+
+---
+
+
+## Methods in the Class Example 
+#### Take a look at how these methods fit into a full class. We will learn about mutator methods next.
+
+
+<img src="https://images.code.org/c9ca7ac174360e5749901e2be8fbdb22-image-1747853334028.png" alt="code for a mutator method called setName" width="550px" style="border-radius:10px;display: block; margin-left: auto; margin-right: auto;">
+
+
+
+
+## Let's practice accessor methods! 
+
+
+MARKDOWN

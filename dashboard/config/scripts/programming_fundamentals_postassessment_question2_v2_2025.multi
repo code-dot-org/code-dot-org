@@ -1,0 +1,27 @@
+name 'programming-fundamentals-postassessment-question2_v2-2025'
+title 'Programming Fundamentals Post-Assessment: Question 2'
+
+right '`"Positive"`'
+wrong '`"Greater than 2"`'
+wrong '`"Negative or zero"`'
+wrong 'No output; there is a syntax error'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A student wrote the following function but made a mistake. What will happen when calling `check_number(3)`?
+
+```
+def check_number(x):  
+    if x > 0:  
+        print("Positive")  
+    elif x > 2:  
+        print("Greater than 2")  
+    else:  
+        print("Negative or zero")
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 9: Conditional Statements
+MARKDOWN

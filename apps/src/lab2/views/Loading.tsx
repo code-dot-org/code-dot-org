@@ -1,8 +1,9 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {commonI18n} from '@cdo/apps/types/locale';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './loading.module.scss';
 
@@ -23,13 +24,24 @@ const Loading: React.FunctionComponent<LoadingProps> = ({
     ? moduleStyles.fadeLoading
     : moduleStyles.fadeLoaded;
 
+  const isShare = useAppSelector(state => state.lab.isShareView);
+
   return (
     <div
       id="fade-overlay"
-      className={classNames(moduleStyles.solidBlock, overlayStyle)}
+      className={classNames(
+        moduleStyles.solidBlock,
+        overlayStyle,
+        isShare && moduleStyles.shareViewOverlay
+      )}
     >
       {isLoading && (
-        <div className={moduleStyles.slowLoadContainer}>
+        <div
+          className={classNames(
+            moduleStyles.slowLoadContainer,
+            'uitest-is-loading-overlay'
+          )}
+        >
           <div className={moduleStyles.spinnerContainer}>
             <FontAwesome
               title={undefined}

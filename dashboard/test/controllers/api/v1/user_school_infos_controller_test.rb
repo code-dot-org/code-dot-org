@@ -4,8 +4,8 @@ require 'timecop'
 class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   setup do
     Timecop.freeze
-    @teacher = create :teacher
-    @second_teacher = create :teacher
+    @teacher = create(:teacher)
+    @second_teacher = create(:teacher)
   end
 
   teardown do
@@ -13,7 +13,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "last confirmation date in user school infos table is updated" do
-    user_school_info = create :user_school_info
+    user_school_info = create(:user_school_info)
     sign_in user_school_info.user
     original_confirmation_date = user_school_info.last_confirmation_date
     original_user_school_info_created_at = user_school_info.created_at
@@ -37,15 +37,15 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "last confirmation date will 404 if user school info id does not exist" do
-    user_school_info = create :user_school_info
+    user_school_info = create(:user_school_info)
     sign_in user_school_info.user
     patch "/api/v1/user_school_infos/-1/update_last_confirmation_date"
     assert_response 404
   end
 
   test 'update last confirmation date will 401 if given a school_info id not owned by the signed-in user' do
-    user_school_info1 = create :user_school_info
-    user_school_info2 = create :user_school_info
+    user_school_info1 = create(:user_school_info)
+    user_school_info2 = create(:user_school_info)
     sign_in user_school_info2.user
     patch "/api/v1/user_school_infos/#{user_school_info1.id}/update_last_confirmation_date"
     assert_response 403
@@ -128,7 +128,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   test 'initial, no previous, complete, drop down' do
     sign_in @teacher
 
-    school = create :school
+    school = create(:school)
 
     Timecop.travel 1.hour
 
@@ -164,7 +164,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'initial, partial previous, blank, manual' do
-    school_info = create :school_info, school_id: nil, validation_type: SchoolInfo::VALIDATION_NONE
+    school_info = create(:school_info, school_id: nil, validation_type: SchoolInfo::VALIDATION_NONE)
 
     @teacher.update school_info: school_info
     sign_in @teacher
@@ -182,7 +182,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'initial, partial previous, partial, manual' do
-    school_info = create :school_info, school_id: nil, school_name: nil, validation_type: SchoolInfo::VALIDATION_NONE
+    school_info = create(:school_info, school_id: nil, school_name: nil, validation_type: SchoolInfo::VALIDATION_NONE)
 
     @teacher.update school_info: school_info
     sign_in @teacher
@@ -204,12 +204,12 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'initial, partial previous, complete, drop down' do
-    school_info = create :school_info, school_id: nil, school_name: nil, validation_type: SchoolInfo::VALIDATION_NONE
+    school_info = create(:school_info, school_id: nil, school_name: nil, validation_type: SchoolInfo::VALIDATION_NONE)
 
     @teacher.update school_info: school_info
     sign_in @teacher
 
-    new_school = create :school
+    new_school = create(:school)
 
     Timecop.travel 1.hour
 
@@ -226,7 +226,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'initial, partial previous, complete, manual' do
-    school_info = create :school_info, school_id: nil, school_name: nil, full_address: nil, validation_type: SchoolInfo::VALIDATION_NONE
+    school_info = create(:school_info, school_id: nil, school_name: nil, full_address: nil, validation_type: SchoolInfo::VALIDATION_NONE)
 
     @teacher.update school_info: school_info
     sign_in @teacher
@@ -245,7 +245,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'confirmation, complete previous, blank, manual' do
-    school_info = create :school_info
+    school_info = create(:school_info)
 
     @teacher.update school_info: school_info
     sign_in @teacher
@@ -262,7 +262,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'confirmation, complete previous, unchanged, dropdown' do
-    school_info = create :school_info
+    school_info = create(:school_info)
 
     @teacher.update school_info: school_info
     sign_in @teacher
@@ -311,12 +311,12 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'confirmation, complete previous, complete, dropdown' do
-    school_info = create :school_info
+    school_info = create(:school_info)
 
     @teacher.update school_info: school_info
     sign_in @teacher
 
-    new_school = create :school
+    new_school = create(:school)
 
     Timecop.travel 1.year
 
@@ -423,7 +423,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'confirmation, partial previous, complete, dropdown' do
-    new_school = create :school
+    new_school = create(:school)
 
     complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_COMPLETE})
     assert @teacher.update(school_info: complete_school_info)
@@ -475,7 +475,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'confirmation, partial previous, complete, dropdown, two users with the same school info, update only one user' do
-    new_school = create :school
+    new_school = create(:school)
 
     complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_COMPLETE})
     assert @teacher.update(school_info: complete_school_info)
@@ -533,7 +533,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     # Edge case involving complete school info
 
     # Given a user with a complete (dropdown OR manual) school info `A`
-    school_info = create :school_info
+    school_info = create(:school_info)
     @teacher.update school_info: school_info
     tenure_d = @teacher.user_school_infos.first
     assert tenure_d.school_info.complete?

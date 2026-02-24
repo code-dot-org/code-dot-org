@@ -1,0 +1,9 @@
+name 'pl-java-class-design-this-choice-26_pl'
+display_name 'Practice: The this Keyword'
+description 'Write parameterized and no-argument constructors in a class using the `this` keyword.'
+
+sublevels
+level 'CSA U2L4-L6a_pilot_oo2025_pl'
+level 'CSA U2L4-L6b_pilot_oo2025_pl'
+level 'CSA U2L4-L6c_pilot_oo2025_pl'
+level 'CSA U2L4-L6d_pilot_oo2025_pl'

@@ -51,11 +51,74 @@ const optionsList = [
     ],
   },
   {
-    name: 'sounds-panel-2',
+    name: 'show-tts',
     type: 'radio',
     values: [
-      {value: 'false', description: 'Use original sounds panel (default).'},
-      {value: 'true', description: 'Use new sounds panel.'},
+      {value: 'false', description: 'Hide text to speech.'},
+      {value: 'true', description: 'Show text to speech.'},
+    ],
+  },
+  {
+    name: 'tts-play-pause',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description:
+          'Disable play/pause functionality for text to speech (default).',
+      },
+      {
+        value: 'true',
+        description: 'Enable play/pause functionality for text to speech.',
+      },
+    ],
+  },
+  {
+    name: 'tts-play-icon',
+    type: 'string',
+    description: 'Use a specific icon for text to speech play button.',
+  },
+  {
+    name: 'tts-stop-icon',
+    type: 'string',
+    description: 'Use a specific icon for text to speech stop button.',
+  },
+  {
+    name: 'play-pattern-ai-block',
+    type: 'radio',
+    values: [
+      {value: 'false', description: 'Hide play pattern AI block (default).'},
+      {value: 'true', description: 'Show play pattern AI block.'},
+    ],
+  },
+  {
+    name: 'hide-ai-temperature',
+    type: 'radio',
+    values: [
+      {value: 'false', description: 'Show AI temperature (default).'},
+      {value: 'true', description: 'Hide AI temperature.'},
+    ],
+  },
+  {
+    name: 'show-ai-temperature-explanation',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description: 'Hide AI temperature explanation (default).',
+      },
+      {value: 'true', description: 'Show AI temperature.'},
+    ],
+  },
+  {
+    name: 'show-ai-generate-again-help',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description: "Don't show AI generate again help (default).",
+      },
+      {value: 'true', description: 'Show AI generate again help.'},
     ],
   },
   {
@@ -93,6 +156,54 @@ const optionsList = [
     ],
   },
   {
+    name: 'sort-unrestricted-packs-by-type',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description:
+          'Use the default sort for sounds in the sounds panel (default).',
+      },
+      {
+        value: 'true',
+        description: 'Sort all unrestricted packs by type in the sounds panel.',
+      },
+    ],
+  },
+  {
+    name: 'allow-change-starting-playhead-position',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description: "Don't allow change starting playhead position (default).",
+      },
+      {value: 'true', description: 'Allow change starting playhead position.'},
+    ],
+  },
+  {
+    name: 'use-secondary-finish-button',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description: "Don't use secondary finish button (default).",
+      },
+      {value: 'true', description: 'Use secondary finish button.'},
+    ],
+  },
+  {
+    name: 'show-secondary-finish-button-question',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description: "Don't show secondary finish button question (default).",
+      },
+      {value: 'true', description: 'Show secondary finish button question.'},
+    ],
+  },
+  {
     name: 'advanced-controls-enabled',
     type: 'radio',
     values: [
@@ -108,11 +219,67 @@ const optionsList = [
     ],
   },
   {
-    name: 'timeline-original-layout',
+    name: 'timeline-layout',
     type: 'radio',
     values: [
-      {value: 'false', description: 'New timeline (default).'},
-      {value: 'true', description: 'Original timeline.'},
+      {value: 'default', description: 'New timeline (default).'},
+      {value: 'old', description: 'Original timeline.'},
+      {
+        value: 'blocks',
+        description: 'Sort timeline event based on block order (experimental).',
+      },
+    ],
+  },
+  {
+    name: 'js-editor',
+    type: 'radio',
+    values: [
+      {value: 'false', description: 'Blockly editor (default).'},
+      {value: 'true', description: 'JavaScript text editor.'},
+    ],
+  },
+  {
+    name: 'blockly-glow-highlight',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description:
+          'Show a yellow outline around highlighted blocks (default).',
+      },
+      {
+        value: 'true',
+        description: 'Add a light filter over highlighted blocks',
+      },
+    ],
+  },
+  {
+    name: 'exemplar-player-bottom',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description:
+          'Exemplar player appears at bottom of main instructions text (default).',
+      },
+      {
+        value: 'true',
+        description: 'Exemplar player appears at bottom of instructions panel.',
+      },
+    ],
+  },
+  {
+    name: 'log-validator-condition-changes',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description: 'Do not log validator condition changes (default).',
+      },
+      {
+        value: 'true',
+        description: 'Log validator condition changes.',
+      },
     ],
   },
 ];

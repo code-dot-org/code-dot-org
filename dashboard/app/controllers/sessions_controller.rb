@@ -9,6 +9,7 @@ class SessionsController < Devise::SessionsController
   # GET /resource/sign_in
   def new
     session[:user_return_to] ||= params[:user_return_to]
+    @user_return_to = session[:user_return_to]
     @hide_sign_in_option = true
     @is_english = request.language == 'en'
     if params[:providerNotLinked]
@@ -46,6 +47,31 @@ class SessionsController < Devise::SessionsController
     end
   end
 
+  # DELETE /resource/expire_other
+  # Expire all existing sessions for the current user, then create a new
+  # authenticated session. The ultimate resulting experience will be that the
+  # user gets signed out of their account on all browsers other than the one
+  # they initiated the request with; on that one, they will still be signed in.
+  def expire_other
+    # Identify current user and preserve any non-user-identifying data in the
+    # current session (ie, assumed_identity, callouts_seen, etc).
+    user = current_user
+    existing_session_data = session.to_hash.except("warden.user.user.key", "_csrf_token")
+
+    # Expire all existing sessions and sign user out.
+    user.expire_all_sessions!
+    sign_out
+
+    # Create a new session for the user and restore data from previous session.
+    sign_in(:user, user)
+    session.merge!(existing_session_data) if existing_session_data
+
+    # Success! Display a notice and redirect to the account settings page, from
+    # which we expect this request to have been initiated.
+    flash[:notice] = I18n.t('devise.sessions.expired_other')
+    redirect_back(fallback_location: users_edit_path)
+  end
+
   # GET /reset_session
   def reset
     client_state.reset
@@ -74,7 +100,7 @@ class SessionsController < Devise::SessionsController
     end
 
     # Determine the deletion date as the lockout date of the account + 7 days
-    @delete_date = DateTime.parse(current_user.child_account_compliance_lock_out_date).since(7.days)
+    @delete_date = current_user.cap_status_date&.since(7.days)
 
     # Find any existing permission request for this user
     # Students might have issued a few requests. We render the latest one.
@@ -86,7 +112,7 @@ class SessionsController < Devise::SessionsController
       @request_date = permission_request.updated_at
     end
 
-    @permission_status = current_user.child_account_compliance_state
+    @permission_status = current_user.cap_status
     @in_section = current_user.sections_as_student.present?
   end
 

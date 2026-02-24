@@ -180,6 +180,21 @@ module I18n
                 end
               end
 
+              # Lab2 Exemplar Settings
+              if level.uses_lab2? && level.try(:exemplar_settings)
+                exemplar = level.exemplar_settings
+                i18n_strings['exemplar'] = {} unless exemplar.empty?
+                if exemplar['validationSuccessMessage']
+                  i18n_strings['exemplar']['validationSuccessMessage'] = exemplar['validationSuccessMessage']
+                end
+                if exemplar['validationFailureMessage']
+                  i18n_strings['exemplar']['validationFailureMessage'] = exemplar['validationFailureMessage']
+                end
+                if exemplar['playerTitle']
+                  i18n_strings['exemplar']['playerTitle'] = exemplar['playerTitle']
+                end
+              end
+
               # Panels
               if level.is_a? Panels
                 panels = level.panels
@@ -198,6 +213,26 @@ module I18n
                 block_categories.each do |category|
                   name = category.attr('name')
                   i18n_strings[BLOCK_CATEGORIES_TYPE][name] = name if name
+                end
+
+                ## Lab2 Function Names.
+                ## Blockly in Lab2 uses JSON rather than XML.
+                if level.uses_lab2?
+                  functions = level.
+                    properties.
+                    dig("level_data", "startSources", "blocks", "blocks")&.
+                    filter {|block| block["type"] == "procedures_defnoreturn"}
+
+                  i18n_strings['function_definitions'] = Hash.new unless functions.nil? || functions.empty?
+
+                  functions&.each do |function|
+                    name = function.dig("fields", "NAME")
+                    # The name is used to uniquely identify the function. Skip if there is no name.
+                    next unless name
+                    function_definition = Hash.new
+                    function_definition["name"] = name
+                    i18n_strings['function_definitions'][name] = function_definition
+                  end
                 end
 
                 ## Function Names
@@ -344,10 +379,10 @@ module I18n
               script_i18n_directory =
                 if script.in_initiative?('HOC')
                   File.join(I18N_SOURCE_DIR_PATH, 'Hour of Code')
-                elsif script.unversioned?
+                elsif script.get_course_version.blank? || script.get_course_version.key == CourseVersion::UNVERSIONED
                   File.join(I18N_SOURCE_DIR_PATH, 'other')
                 else
-                  File.join(I18N_SOURCE_DIR_PATH, script.version_year)
+                  File.join(I18N_SOURCE_DIR_PATH, script.get_course_version.key)
                 end
 
               source_file_path = File.join(script_i18n_directory, "#{script.name}.json")

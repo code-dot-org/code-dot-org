@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import ReactTooltip from 'react-tooltip';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {unitCalendarLessonChunk} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
 import color from '@cdo/apps/util/color';
 
@@ -19,7 +19,7 @@ class UnitCalendarLessonChunk extends Component {
     this.props.handleHover(this.props.lessonChunk.id);
   };
 
-  handleMouseOut = () => {
+  handleMouseLeave = () => {
     this.props.handleHover('');
   };
 
@@ -66,47 +66,30 @@ class UnitCalendarLessonChunk extends Component {
         data-tip
         href={url}
         onMouseEnter={this.handleMouseEnter}
-        onMouseOut={this.handleMouseOut}
+        onMouseLeave={this.handleMouseLeave}
+        onFocus={this.handleMouseEnter}
+        onBlur={this.handleMouseLeave}
       >
         {isMajority && (
-          <div
-            style={styles.boxContent}
-            onMouseEnter={this.handleMouseEnter}
-            onMouseOut={this.handleMouseOut}
-          >
+          <div style={styles.boxContent}>
             {(assessment || unplugged) && (
-              <div
-                key={`lesson-${id}`}
-                style={styles.iconSection}
-                onMouseEnter={this.handleMouseEnter}
-                onMouseOut={this.handleMouseOut}
-              >
+              <div key={`lesson-${id}`} style={styles.iconSection}>
                 <FontAwesome
                   icon="check-circle"
                   style={{
                     color: isHover ? color.white : color.purple,
                     visibility: assessment ? 'visible' : 'hidden',
                   }}
-                  onMouseEnter={this.handleMouseEnter}
-                  onMouseOut={this.handleMouseOut}
                 />
                 <FontAwesome
                   icon="scissors"
                   style={{
                     visibility: unplugged ? 'visible' : 'hidden',
                   }}
-                  onMouseEnter={this.handleMouseEnter}
-                  onMouseOut={this.handleMouseOut}
                 />
               </div>
             )}
-            <div
-              style={styles.titleText}
-              onMouseEnter={this.handleMouseEnter}
-              onMouseOut={this.handleMouseOut}
-            >
-              {displayTitle}
-            </div>
+            <div style={styles.titleText}>{displayTitle}</div>
           </div>
         )}
         {smallChunk && (

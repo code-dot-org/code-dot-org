@@ -1,0 +1,9 @@
+name 'CSA U6L8-L6_alt-2025'
+display_name 'Practice: Debugging Errors'
+description 'These programs are getting a `ConcurrentModificationException` when removing elements from an `ArrayList`. Find and fix the error!'
+
+sublevels
+level 'CSA U6L8-L6a_alt-2025'
+level 'CSA U6L8-L6b_alt-2025'
+level 'CSA U6L8-L6c_alt-2025'
+level 'CSA U6L8-L6d_alt-2025'

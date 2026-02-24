@@ -1,0 +1,83 @@
+name 'CSA U8 Assessment q04_pilot_oo2025'
+
+wrong '`[8, 11, 12, 7, 21, 15, 1]`'
+wrong '`[11, 8, 12, 7, 1, 15, 21]`'
+right '`[12, 11, 8, 7, 21, 15, 1]`'
+wrong '`[11, 8, 12, 7, 21, 15, 1]`'
+wrong '`[7, 8, 11, 12, 21, 15, 1]`'
+
+markdown <<MARKDOWN
+Consider the following implementation of the insertion sort algorithm.
+
+```
+public static void insertionSort(ArrayList<Integer> nums) {
+
+  for (int i = 1; i < nums.size(); i ++){
+    int temp = nums.get(i);
+    int index = i;
+    
+    while (index > 0 && temp > nums.get(index - 1)) {
+      nums.set(index, nums.get(index-1));
+      index --;
+    }
+
+    nums.set(index, temp);
+  }
+}
+```
+
+An `ArrayList` containing the values `[11, 8, 12, 7, 21, 15, 1]` is sorted using the above method. What is stored in the `ArrayList` after the `for` loop has executed twice?
+MARKDOWN
+
+allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+The initial `ArrayList` is `[11, 8, 12, 7, 21, 15, 1]`.
+
+The `insertionSort` method performs a descending-order insertion sort. In each iteration, it:
+
+- Stores the value at index `i` in a temporary variable `temp`
+- Compares `temp` to the elements before it
+- Shifts smaller elements to the right while `temp > nums.get(index - 1)`
+- Inserts `temp` into its correct position
+
+Let's walk through the first two iterations of the `for` loop:
+
+---
+
+**Iteration 1 (`i = 1`)**
+- `temp = nums.get(1) = 8`
+- `index = 1`
+- Check condition: `index > 0 && temp > nums.get(index - 1)`
+  - `8 > 11` → `false`
+- No shifting occurs
+- Array remains: `[11, 8, 12, 7, 21, 15, 1]`
+
+---
+
+**Iteration 2 (`i = 2`)**
+- `temp = nums.get(2) = 12`
+- `index = 2`
+- First comparison:
+  - `12 > nums.get(1) = 8` → `true`
+  - Shift `8` to index 2 → `[11, 8, 8, 7, 21, 15, 1]`
+  - Decrement `index` to 1
+- Second comparison:
+  - `12 > nums.get(0) = 11` → `true`
+  - Shift `11` to index 1 → `[11, 11, 8, 7, 21, 15, 1]`
+  - Decrement `index` to 0
+- Insert `temp (12)` at index 0 → `[12, 11, 8, 7, 21, 15, 1]`
+
+---
+
+After the second iteration, the `ArrayList` contains:  
+**`[12, 11, 8, 7, 21, 15, 1]`**
+
+This is the correct result after two iterations of a descending-order insertion sort.
+
+
+
+
+
+
+
+MARKDOWN

@@ -4,6 +4,10 @@ class CAP::LockoutJobTest < ActiveJob::TestCase
   let(:described_class) {CAP::LockoutJob}
   let(:described_instance) {described_class.new}
 
+  it 'inherits from ApplicationJob' do
+    _(described_class.superclass).must_equal ::ApplicationJob
+  end
+
   describe '.schedule_for' do
     let(:schedule_lockout_for_user) {described_class.schedule_for(user)}
 

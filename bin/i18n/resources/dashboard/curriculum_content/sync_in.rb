@@ -45,7 +45,7 @@ module I18n
             # Eager loads Unit resources needed for Curriculum i18n data serialization,
             # see: Services::I18n::CurriculumSyncUtils::Serializers::ScriptCrowdinSerializer
             @translatable_units ||= Unit.where(name: ScriptConstants::TRANSLATEABLE_UNITS).includes(
-              :resources, :student_resources, course_version: :reference_guides,
+              :resources, :student_resources,
               lessons: [:objectives, :resources, :vocabularies, {lesson_activities: :activity_sections}],
             )
           end

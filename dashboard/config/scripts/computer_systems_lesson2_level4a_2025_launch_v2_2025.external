@@ -1,0 +1,27 @@
+name 'computer-systems-lesson2-level4a_2025-launch_v2-2025'
+title 'Game Streamer'
+description 'Explore how GPU improve gaming performance.'
+display_name 'Game Streamer'
+thumbnail_url 'https://images.code.org/2d5d288ee0f78c012f0ebd1e67fd2780-Icon%20Template%20(5).png'
+bubble_choice_description 'Explore how GPU improve gaming performance.'
+
+markdown <<MARKDOWN
+## Game Streamer
+
+Explore how GPU improve gaming performance.
+
+As you watch, be prepared to reflect on the following in the next level:
+
+* How does the hardware used in this career impact the professional's ability to work efficiently, and what would happen if they had weaker or outdated components?
+
+
+**Note:** This video opens in a new tab.
+
+<div style="text-align: center; margin-top: 20px;">
+  <a href="https://docs.google.com/presentation/d/1sMRC23R1GQJFwtyIP11jf32l8hCxvEe7Ah2pZ7xuX7k/edit?slide=id.g2694c47731d_3_332#slide=id.g2694c47731d_3_332" target="_blank" rel="noopener noreferrer">
+    <img src="https://images.code.org/141b7d5a3bf2a12267c7dec51c084508-gaming.jpg" 
+         alt="YouTube Video Thumbnail" 
+         style="width: 80%; max-width: 600px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);">
+  </a>
+</div>
+MARKDOWN

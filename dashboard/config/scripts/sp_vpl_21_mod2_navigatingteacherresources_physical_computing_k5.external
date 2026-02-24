@@ -5,16 +5,16 @@ description 'description here'
 markdown <<MARKDOWN
 # Task: Navigate to Additional Teacher Resources
 
+<img src="https://images.code.org/0d502b90a9f9fba7ccba145ad22b645a-image-1714073818864.36.46 PM.png" alt="Screenshot of the Unit 2 Overview page with an orange arrow pointing to the 'Teacher Resources' drop down menu." style="float: left; height: 395px; clear: both; margin: 0 20px 20px 0;">
 
+## Steps to Access Unit-Level Resources
 
-<img src="https://images.code.org/926c64bba39ba8849eb0db3171c1f042-image-1680222161801.png" alt="Screenshot of the Unit 2 Overview page with an orange arrow pointing to the 'Teacher Resources' drop down menu." style="float: left; height: 250px; clear: both; margin: 0 20px 20px 0;">
+#### **Step 1:** From the Unit Overview page, navigate to your unit of choice. 
 
-## Access course level resources
+#### **Step 2:** Click on the "Go to Unit" button of the Unit you would like to view. 
 
-##### From the Course Overview page, click on the blue "Teacher Resources" button. 
+#### **Step 3:** When you reach the Unit Overview page, click on the blue "Teacher Resources" button. 
 
-##### Select the resource that you would like to view from the dropdown menu.  
-
-<div style="clear:both"/>
-
+#### **Step 4:** Select the resource that you would like to view from the dropdown menu. 
+<br><Br><br><br>
 MARKDOWN

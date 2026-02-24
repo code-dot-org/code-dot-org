@@ -16,6 +16,16 @@
   margin-left: auto;
 }
 
+#oauth-side-restricted {
+  flex-grow: 0;
+  margin: auto;
+}
+
+button.oauth-sign-in.with-clever.restricted {
+  // This ensures the button is the same size as the non-restricted version
+  width: 270px;
+}
+
 #email-side {
   margin-right: auto;
 }

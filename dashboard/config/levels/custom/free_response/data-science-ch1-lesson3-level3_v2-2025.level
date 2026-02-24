@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-09-25T20:08:11.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**Directions:**  Read the student conversations presented in the scenario. Then, decide which person’s perspective you most agree with — and explain why. Be ready to share your thinking during a group discussion.\r\n\r\n\r\n\r\n<table style=\"width: 100%; border-collapse: collapse; border: 2px solid black;\">\r\n  <tr>\r\n    <td colspan=\"3\" style=\"border: 1px solid black; padding: 10px;\">\r\n      <h1 style=\"text-align: center;\">Party Planning: Entertainment Choices</h1>\r\n    </td>\r\n  </tr>\r\n <tr>\r\n    <td style=\"text-align: center; border: 1px solid black; padding: 10px;\"><img src=\"https://images.code.org/8c347af23300a25ea9cf3c7665085e42-image-1718128859467.png\" alt=\"First Image\" width=\"100\"></td>\r\n    <td style=\"text-align: center; border: 1px solid black; padding: 10px;\"><img src=\"https://images.code.org/4d3f8f96e18a5db283821aec3667fa68-image-1718128863383.png\" alt=\"Second Image\" width=\"100\"></td>\r\n    <td style=\"text-align: center; border: 1px solid black; padding: 10px;\"><img src=\"https://images.code.org/30ab6cff694a96fb8ec034abacefab27-image-1718128866336.png\" alt=\"Third Image\" width=\"100\"></td>\r\n  </tr>\r\n  <tr>\r\n    <td style=\"text-align: center; border: 1px solid black; padding: 10px;\">\r\n      <h2>Perla</h2>\r\n      <p style=\"text-align: left;\">“The DJ that we are going to hire has requested a playlist ahead of time. So how about this– today during my volleyball practice, I will ask my teammates to choose, like, 5 songs. We can rank them according to how popular they are and then order the playlist based on that. This playlist is gonna be 🔥!“</p>\r\n    </td>\r\n    <td style=\"text-align: center; border: 1px solid black; padding: 10px;\">\r\n      <h2>Raj</h2>\r\n      <p style=\"text-align: left;\">“I think we should also get a few more options; I’ve heard the songs that you all play during practice and I know that it’s they’re not for everyone. How about I ask a few people in between class and add that information to a spreadsheet that we can collect the playlist data on? I totally think that if there are songs that people suggest that are lame, we just remove them from the list, haha.“</p>\r\n    </td>\r\n    <td style=\"text-align: center; border: 1px solid black; padding: 10px;\">\r\n      <h2>Kalaya</h2>\r\n      <p style=\"text-align: left;\">“It just seems to me like there are such a wide variety of students and interests at this school that it might be difficult to put together a playlist that speaks to everyone’s hearts and minds doing what you both suggest. Can we put up a table at lunch– where everyone gathers– and try to get a better sample of responses?“</p>\r\n    </td>\r\n  </tr>\r\n</table>\r\n\r\n\r\n\r\n### Who do you agree with most in this scenario? Explain why you chose that person’s approach.\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "title": "Scenario 3",
+    "name_suffix": "_v2-2025",
+    "stay_on_level_after_submit": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:08:11.169+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson3-level3_2025\\\"\"],\"cloned_from\":\"data-science-ch1-lesson3-level3_2025\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

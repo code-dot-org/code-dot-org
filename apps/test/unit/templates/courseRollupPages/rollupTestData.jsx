@@ -4,12 +4,12 @@ export const courseData = {
   units: [
     {
       name: 'unit-1',
-      link: '/s/unit-1',
+      link: '/courses/course/units/1',
       title: 'Unit 1 - Unit One',
       lessons: [
         {
           key: 'l1',
-          link: '/s/unit-1/lessons/1',
+          link: '/courses/course/units/1/lessons/1',
           position: 1,
           displayName: 'Lesson One',
           vocabularies: [
@@ -63,7 +63,7 @@ export const courseData = {
           key: 'l2',
           position: 2,
           displayName: 'Lesson Two',
-          link: '/s/unit-1/lessons/2',
+          link: '/courses/course/units/1/lessons/2',
           vocabularies: [
             {
               key: 'key',
@@ -115,13 +115,13 @@ export const courseData = {
     },
     {
       name: 'unit-2',
-      link: '/s/unit-2',
+      link: '/courses/course/units/2',
       title: 'Unit 2 - Unit Two',
       lessons: [
         {
           key: 'l3',
           position: 1,
-          link: '/s/unit-2/lessons/1',
+          link: '/courses/course/units/2/lessons/1',
           displayName: 'Lesson One',
           vocabularies: [],
           programmingExpressions: [],
@@ -133,7 +133,7 @@ export const courseData = {
           key: 'l4',
           position: 2,
           displayName: 'Lesson Two',
-          link: '/s/unit-2/lessons/2',
+          link: '/courses/course/units/2/lessons/2',
           vocabularies: [
             {
               key: 'key',

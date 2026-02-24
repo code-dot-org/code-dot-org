@@ -1,0 +1,9 @@
+name 'test-problem-solving-with-ai-lesson9-level2'
+
+submittable 'false'
+anonymous 'false'
+
+page
+text 'test-problem-solving-with-ai-lesson9-level2-text'
+level 'test-problem-solving-with-ai-lesson9-level2a'
+level 'test-problem-solving-with-ai-lesson9-level2b'

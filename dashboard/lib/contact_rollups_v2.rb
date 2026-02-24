@@ -23,7 +23,7 @@ class ContactRollupsV2
     # to a create connection with custom query_timeout and read_timeout values.
     #
     # However, Sequel write operations to the dashboard database don't work in test environments
-    # (in local, Drone, and test machine) and Rails console sandbox. In those environments,
+    # (in local, CI, and test machine) and Rails console sandbox. In those environments,
     # all database operations are wrapped in a ActiveRecord transaction so they can be rolled
     # back later. Sequel write operations cannot acquire a lock to the dashboard database, which
     # already locked by ActiveRecord, then fail with "Lock wait timeout exceeded" error.
@@ -98,13 +98,6 @@ class ContactRollupsV2
       truncate_or_delete_table ContactRollupsProcessed
     end
 
-    # Extract pegasus data
-    unless Rails.env.test?
-      @log_collector.time!('extract_pegasus_forms') {ContactRollupsRaw.extract_pegasus_forms(@limit)}
-      @log_collector.time!('extract_pegasus_form_geos') {ContactRollupsRaw.extract_pegasus_form_geos(@limit)}
-      @log_collector.time!('extract_pegasus_contacts') {ContactRollupsRaw.extract_pegasus_contacts(@limit)}
-    end
-
     # Extract dashboard data
     @log_collector.time!('extract_email_preferences') {ContactRollupsRaw.extract_email_preferences(@limit)}
     @log_collector.time!('extract_parent_emails') {ContactRollupsRaw.extract_parent_emails(@limit)}
@@ -128,17 +121,11 @@ class ContactRollupsV2
   end
 
   # Process contacts in ContactRollupsRaw table and save the results to ContactRollupsProcessed.
-  # The results are then copied over to ContactRollupsFinal for further analysis.
   def process_contacts
     start_time = Time.now
     @log_collector.time!("Processes all extracted data with batch size #{ContactRollupsProcessed::BATCH_SIZE}") do
       results = ContactRollupsProcessed.import_from_raw_table
       @log_collector.record_metrics({ContactsWithInvalidData: results[:invalid_contacts]})
-    end
-
-    @log_collector.time!("Overwrites contact_rollups_final table") do
-      truncate_or_delete_table ContactRollupsFinal
-      ContactRollupsFinal.insert_from_processed_table
     end
   ensure
     @log_collector.record_metrics(

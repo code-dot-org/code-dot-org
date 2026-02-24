@@ -1,0 +1,25 @@
+@import 'color.scss';
+@import '../../../mixins.scss';
+
+.row {
+  display: flex;
+  align-items: baseline;
+  padding-bottom: 10px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 20px 0;
+  padding: 20px 10px;
+}
+
+.callout {
+  width: 70%;
+}
+
+.label {
+  padding-right: 10px;
+}

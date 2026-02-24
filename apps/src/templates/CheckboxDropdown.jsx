@@ -1,13 +1,13 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useCallback} from 'react';
 
-import Checkbox from '@cdo/apps/componentLibrary/checkbox';
-import Typography from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
 
-import FontAwesome from './FontAwesome';
+import FontAwesome from '../legacySharedComponents/FontAwesome';
 
 import style from './checkbox-dropdown.module.scss';
 
@@ -52,7 +52,7 @@ const CheckboxDropdown = ({
             title={i18n.filterCheckIconTitle({filter_label: label})}
           />
         )}
-        <Typography semanticTag="span" visualAppearance="body-two">
+        <Typography component="span" variant="body2">
           {label}
         </Typography>
         <FontAwesome id={'chevron-down-icon'} icon={'chevron-down'} />

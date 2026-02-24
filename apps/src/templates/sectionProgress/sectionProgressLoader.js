@@ -7,15 +7,9 @@ import {
   processServerSectionProgress,
   lessonProgressForSection,
 } from '@cdo/apps/templates/progress/progressHelpers';
-import {
-  fetchStandardsCoveredForScript,
-  fetchStudentLevelScores,
-} from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 
-import {ViewType} from './sectionProgressConstants';
 import {
   startLoadingProgress,
-  setCurrentView,
   finishLoadingProgress,
   addDataByUnit,
   startRefreshingProgress,
@@ -24,7 +18,7 @@ import {
 
 const NUM_STUDENTS_PER_PAGE = 20;
 
-export function loadUnitProgress(scriptId, sectionId) {
+export function loadUnitProgress(scriptId, sectionId, courseId, unitPosition) {
   const state = getStore().getState().sectionProgress;
   const sectionData = getStore().getState().teacherSections.sections[sectionId];
   const students = getStore().getState().teacherSections.selectedStudents;
@@ -32,12 +26,9 @@ export function loadUnitProgress(scriptId, sectionId) {
   let progressLatencyMs = -1;
   let structureLatencyMs = -1;
 
-  // TODO: Save Standards data in a way that allows us
-  // not to reload all data to get correct standards data
   if (
     state.studentLevelProgressByUnit[scriptId] &&
-    state.unitDataByUnit[scriptId] &&
-    state.currentView !== ViewType.STANDARDS
+    state.unitDataByUnit[scriptId]
   ) {
     if (state.isRefreshingProgress) {
       return;
@@ -49,6 +40,7 @@ export function loadUnitProgress(scriptId, sectionId) {
     logToCloud.addPageAction(logToCloud.PageAction.LoadScriptProgressStarted, {
       sectionId,
       scriptId,
+      courseId,
     });
   }
 
@@ -59,10 +51,12 @@ export function loadUnitProgress(scriptId, sectionId) {
     studentLastUpdateByUnit: {},
   };
 
-  // Get the script data
-  const scriptRequest = fetch(`/dashboardapi/script_structure/${scriptId}`, {
-    credentials: 'include',
-  })
+  const scriptRequest = fetch(
+    `/dashboardapi/script_structure/courses/${courseId}/units/${unitPosition}`,
+    {
+      credentials: 'include',
+    }
+  )
     .then(response => response.json())
     .then(scriptData => {
       structureLatencyMs = new Date().getTime() - startTime;
@@ -72,13 +66,6 @@ export function loadUnitProgress(scriptId, sectionId) {
           sectionData.lessonExtras
         ),
       };
-
-      if (
-        state.currentView === ViewType.STANDARDS &&
-        !scriptData.hasStandards
-      ) {
-        getStore().dispatch(setCurrentView(ViewType.SUMMARY));
-      }
     });
 
   const numPages = Math.ceil(students.length / NUM_STUDENTS_PER_PAGE);
@@ -106,7 +93,7 @@ export function loadUnitProgress(scriptId, sectionId) {
 
   // Combine and transform the data
   requests.push(scriptRequest);
-  Promise.all(requests).then(() => {
+  return Promise.all(requests).then(() => {
     logToCloud.addPageAction(logToCloud.PageAction.LoadScriptProgressFinished, {
       sectionId,
       scriptId,
@@ -117,18 +104,13 @@ export function loadUnitProgress(scriptId, sectionId) {
     sectionProgress.studentLessonProgressByUnit = {
       ...sectionProgress.studentLessonProgressByUnit,
       [scriptId]: lessonProgressForSection(
-        sectionProgress.studentLevelProgressByUnit[scriptId],
+        sectionProgress.studentLevelProgressByUnit[scriptId] || [],
         sectionProgress.unitDataByUnit[scriptId].lessons
       ),
     };
     getStore().dispatch(addDataByUnit(sectionProgress));
     getStore().dispatch(finishLoadingProgress());
     getStore().dispatch(finishRefreshingProgress());
-
-    if (sectionProgress.unitDataByUnit[scriptId].hasStandards) {
-      getStore().dispatch(fetchStandardsCoveredForScript(scriptId));
-      getStore().dispatch(fetchStudentLevelScores(scriptId, sectionId));
-    }
   });
 }
 
@@ -139,7 +121,6 @@ function postProcessDataByScript(scriptData, includeBonusLevels) {
     csf: !!scriptData.csf,
     isCsd: scriptData.isCsd,
     isCsp: scriptData.isCsp,
-    hasStandards: scriptData.hasStandards,
     title: scriptData.title,
     path: scriptData.path,
     lessons: scriptData.lessons,

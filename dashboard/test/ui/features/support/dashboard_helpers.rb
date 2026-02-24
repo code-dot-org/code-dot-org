@@ -20,7 +20,7 @@ module DashboardHelpers
   # @param value [Object] DCDO value
   # @see Rack::CookieDCDO
   # @note Navigating to the tested page before mocking DCDO is necessary to ensure it's mocked for the correct domain.
-  # @note DCDO mocked on the "studio.code.org" domain isn't available on "hourofcode.com" but is accessible on "code.org".
+  # @note DCDO mocked on the "studio.code.org" domain is also accessible on "code.org".
   def mock_dcdo(key, value)
     dcdo_cookie_value = JSON.parse(get_cookie(Rack::CookieDCDO::KEY).try(:[], :value).presence || '{}')
     dcdo_cookie_value[key] = value
@@ -28,7 +28,7 @@ module DashboardHelpers
     current_host = URI(@browser.current_url.to_s).host
     current_domain = current_host && PublicSuffix.parse(current_host).domain
 
-    dcdo_cookie = {name: Rack::CookieDCDO::KEY, value: dcdo_cookie_value.to_json}
+    dcdo_cookie = {name: Rack::CookieDCDO::KEY, value: dcdo_cookie_value.to_json, path: '/'}
     dcdo_cookie[:domain] = ".#{current_domain}" if current_domain # sets the cookie for the top-level domain
 
     @browser.manage.add_cookie(dcdo_cookie)

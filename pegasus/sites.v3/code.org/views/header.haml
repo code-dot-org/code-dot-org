@@ -12,6 +12,7 @@
   hamburger_options[:show_gallery] = true
   hamburger_options[:loc_prefix] = "header_"
   hamburger_options[:page_mode] = request.cookies['pm']
+  hamburger_options[:ge_region] = request.ge_region
 
   header_contents_options = {}
   header_contents_options[:user_type] = user_type
@@ -27,11 +28,11 @@
   .left
     -# rubocop:disable CustomCops/DashboardDbUsage
     %a{href: current_user ? CDO.studio_url("/home") : CDO.code_org_url}
-      %img.logo{src: '/images/logo.svg', alt: I18n.t(:code_org_logo_alt)}
+      %img.logo{src: '/images/logo-inverse.svg', alt: I18n.t(:code_org_logo_alt)}
     -# rubocop:enable CustomCops/DashboardDbUsage
     %ul#headerlinks
       - Hamburger.get_header_contents(header_contents_options).each do |entry|
-        %li
+        %li{class: entry[:class]}
           %a.headerlink{id: entry[:id], href: entry[:url]}= entry[:title]
   .right
     = view :sign_in_or_user

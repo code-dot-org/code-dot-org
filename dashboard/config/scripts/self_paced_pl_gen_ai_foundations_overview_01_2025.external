@@ -1,0 +1,29 @@
+name 'self-paced-pl-gen-ai-foundations-overview_01_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Foundations of Generative AI
+
+<div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="AI Bot cartoon" style="width: 20%; max-width: 120px; height: auto;">
+        <div style="flex: 1; background: #B7E0E5; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); ">
+            <h3> <b>Unit Overview</b></h3>
+            <p style = "font-size: 14pt";>This unit aims to build a foundational understanding of text-based generative AI models, focusing on core concepts over technical skills.</p>
+             <p style = "font-size: 14pt";>Students will demystify generative AI models by exploring their internal structures through the familiar lens of input, storage, process, and output.</p>
+            <p style = "font-size: 14pt";>They will gain insights into how these models represent language, the impact of training data on model performance, and the potential for bias.</p> 
+            <p style = "font-size: 14pt";>Using this knowledge they will be presented with scenarios throughout the unit where they can help educate individuals who feel powerless or lack agency in how AI is impacting their lives, or respond to individuals who have only read the hype headlines and offer feedback or criticism based on their knowledge of how these AI systems work.</p>
+        </div>
+    </div>
+    
+    </div>
+
+## **In this lesson you will:** 
+- #### Learn key concepts from the Foundations of Generative AI Unit
+- #### Preview activities from selected lessons in the Foundations of Generative AI Unit
+- #### Review pedagogical strategies for effective implementation
+- #### Learn what to do next and how to learn more
+
+### **Suggested time:** 50 minutes
+
+MARKDOWN

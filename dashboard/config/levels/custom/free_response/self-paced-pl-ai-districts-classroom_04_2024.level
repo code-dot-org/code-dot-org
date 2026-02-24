@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-10-21T14:48:45.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "# Supporting All Students\r\n\r\n#### AI can support teachers in applying Universal Design for Learning (UDL) and Culturally Responsive Teaching (CRT) practices to transform how students learn. AI can greatly assist teachers in tailoring education to fit every student's needs by...\r\n* #### Customized Learning Paths\r\n* #### Interactive and Engaging Learning Materials\r\n* #### Translation and Text Leveling Tools\r\n* #### Automated Grading and Assessment\r\n\r\n#### By integrating UDL, CRT, and AI, teachers can build a learning environment where every student finds the support and motivation they need to succeed. It's about making education flexible and inclusive, so learning becomes a positive experience for everyone.\r\n\r\n## Reflection\r\n\r\n#### What’s one way that you can use AI to support learning for all students in your district?\r\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19619,
+    "name_suffix": "_2023",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-10-21T14:48:45.659+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-ai-101-mod4-UDL_04_2024\\\"\"],\"cloned_from\":\"self-paced-pl-ai-101-mod4-UDL_04_2024\"},{\"changed_at\":\"2024-10-21 15:31:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-22 17:56:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-22 17:57:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

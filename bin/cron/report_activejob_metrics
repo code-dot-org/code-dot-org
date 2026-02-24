@@ -4,55 +4,8 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../../dashboard/config/environment'
 
-METRICS_NAMESPACE = 'code-dot-org/ActiveJob'
-
-def push_queue_length_metric
-  job_count = Delayed::Job.count
-
-  Cdo::Metrics.push(METRICS_NAMESPACE,
-    [
-      {
-        # Same metric as "dashboard/app/jobs/application_job.rb"
-        metric_name: 'JobCount',
-        value: job_count,
-        unit: 'Count',
-        timestamp: Time.now,
-        dimensions: [
-          {
-            name: 'Environment',
-            value: CDO.rack_env
-          }
-        ]
-      }
-    ]
-  )
-end
-
-def push_oldest_job_age_metric
-  oldest_job = Delayed::Job.order(:created_at).first
-  age_in_seconds = oldest_job ? Time.now.utc - oldest_job.created_at : 0
-
-  Cdo::Metrics.push(METRICS_NAMESPACE,
-    [
-      {
-        metric_name: 'OldestJobAge',
-        value: age_in_seconds,
-        unit: 'Seconds',
-        timestamp: Time.now,
-        dimensions: [
-          {
-            name: 'Environment',
-            value: CDO.rack_env
-          }
-        ]
-      }
-    ]
-  )
-end
-
 def main
-  push_queue_length_metric
-  push_oldest_job_age_metric
+  ActiveJobMetrics.report_overall_queue_metrics
 end
 
 main

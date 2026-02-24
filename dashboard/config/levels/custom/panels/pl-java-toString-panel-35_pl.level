@@ -1,0 +1,58 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-07-18T15:19:25.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/58e2fbcb95e20447e1653be3c18e7ca6-toString.png",
+        "key": "pl-java-toString-panel-35-9c63f82a-66ce-44ca-b763-91e1511d88ad"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/71711b7a722e9b240c5558a9bfaa86d9-toString (1).png",
+        "key": "hardware-components-3d887b32-d501-4032-b990-2a51ae5b4de8",
+        "layout": "text-bottom-right",
+        "typing": false,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/68f4a0db3ef68e3971f7c6b845028e25-toString (2).png",
+        "key": "hardware-components-e56bb056-0af5-475f-b8e1-7b49f9c79f82",
+        "layout": "text-bottom-right",
+        "typing": false,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/d0efc61dfa315f4ea112504abf72cfdc-toString (3).png",
+        "key": "hardware-components-ed2b07b1-278f-49d5-ba3b-02994f4bccd8",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/1ccc671f4f39da58816069653cdd2833-toString (4).png",
+        "key": "hardware-components-60bbd87e-b298-4721-8344-14ba7f84abc6",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "Now, let's practice `toString()` methods!",
+        "imageUrl": "https://images.code.org/df2b2f1a4c930be52b3f62f92a6b9cad-toString (5).png",
+        "key": "pl-java-toString-panel-35-60e19daa-c009-4c41-81a2-6d8c420dcbd0",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_pl"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-07-18T15:19:25.650+00:00\",\"changed\":[\"cloned from \\\"pl-java-toString-panel-35\\\"\"],\"cloned_from\":\"pl-java-toString-panel-35\"}]"
+}]]></config>
+</Panels>

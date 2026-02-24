@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-11-20T02:35:15.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "> Think back to the button exploration you just did.  \r\n>   \r\n> 1. **What do push, pop, shift, and unshift all have in common?**  \r\n>    (Hint: think about how they change a collection over time.)  \r\n> 2. _Imagine you have **two parallel arrays** that must stay in sync (like story names and story days)._\r\n>    * **How might these operations help keep parallel arrays in sync?** \r\n>    *  **What would go wrong if you only used the method on one array?**",
+    "stay_on_level_after_submit": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "title": "Reflection: Array Operations",
+    "teacher_markdown": "A successful reflection shows that the student:\r\n- articulate that all four methods change the size and/or order of an array by adding or removing items at the ends, and that in parallel arrays, these operations must be applied consistently to every related array to avoid desynced data.\r\n",
+    "height": "100",
+    "placeholder": "enter response here..."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-20T02:35:15.958+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson1-level4-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson1-level4-test-2025\"},{\"changed_at\":\"2025-11-20 02:39:35 +0000\",\"changed\":[\"long_instructions\",\"title\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

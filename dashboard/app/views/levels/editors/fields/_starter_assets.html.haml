@@ -1,0 +1,10 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#starter-assets-container"}}
+  Manage Starter Assets
+
+#starter-assets-container.in.collapse
+  #starter-assets-editor
+
+- content_for :body_scripts do
+  -# Including the lab2 locale bundle since the starter assets modal references a few localized strings.
+  %script{src: webpack_asset_path("js/#{js_locale}/lab2_locale.js")}
+  %script{src: webpack_asset_path('js/levels/editors/fields/_starter_assets.js'), data: {levelname: @level.name}}

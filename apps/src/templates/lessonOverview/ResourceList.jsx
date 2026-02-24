@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import localization from '@cdo/apps/localization';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {windowOpen} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
@@ -38,34 +38,23 @@ export default class ResourceList extends Component {
     }
   };
 
+  localizedURL = resource => {
+    return localization.translate(resource.url);
+  };
+
+  localizedDownloadURL = resource =>
+    resource.download_url
+      ? localization.translate(resource.download_url)
+      : resource.download_url;
+
   downloadResource = (e, resource) => {
     e.preventDefault();
 
     this.sendLinkVisitedEvent(resource, 'download');
-
-    firehoseClient.putRecord(
-      {
-        study:
-          this.props.pageType === 'resources-rollup'
-            ? 'course-rollup-pages'
-            : 'lesson-plan',
-        study_group: this.props.pageType,
-        event: 'download-resource',
-        data_int: resource.id,
-        data_json: JSON.stringify({
-          resourceId: resource.id,
-        }),
-      },
-      {
-        includeUserId: true,
-        callback: () => {
-          windowOpen(
-            this.normalizeUrl(resource.download_url),
-            'noopener',
-            'noreferrer'
-          );
-        },
-      }
+    windowOpen(
+      this.normalizeUrl(this.localizedDownloadURL(resource)),
+      'noopener',
+      'noreferrer'
     );
   };
 
@@ -74,25 +63,10 @@ export default class ResourceList extends Component {
 
     this.sendLinkVisitedEvent(resource, 'open');
 
-    firehoseClient.putRecord(
-      {
-        study:
-          this.props.pageType === 'resources-rollup'
-            ? 'rollup-pages'
-            : 'lesson-plan',
-        study_group: this.props.pageType,
-        event: 'open-resource',
-        data_int: resource.id,
-        data_json: JSON.stringify({
-          resourceId: resource.id,
-        }),
-      },
-      {
-        includeUserId: true,
-        callback: () => {
-          windowOpen(this.normalizeUrl(resource.url), 'noopener', 'noreferrer');
-        },
-      }
+    windowOpen(
+      this.normalizeUrl(this.localizedURL(resource)),
+      'noopener',
+      'noreferrer'
     );
   };
 
@@ -102,8 +76,8 @@ export default class ResourceList extends Component {
       resourceName: resource.name,
       resourceAudience: resource.audience,
       resourceType: resource.type,
-      resourceUrl: resource.url,
-      resourceDownloadUrl: resource.download_url,
+      resourceUrl: this.localizedURL(resource),
+      resourceDownloadUrl: this.localizedDownloadURL(resource),
       visitType: visitType,
       path: document.location.pathname,
     });
@@ -115,6 +89,7 @@ export default class ResourceList extends Component {
         onClick={e => {
           this.openResource(e, resource);
         }}
+        data-lz-url
         href={resource.url}
       >
         {resource.name}
@@ -127,6 +102,7 @@ export default class ResourceList extends Component {
             onClick={e => {
               this.downloadResource(e, resource);
             }}
+            data-lz-url
             href={resource.download_url}
           >{`${i18n.download()}`}</a>
           {')'}
@@ -142,7 +118,7 @@ export default class ResourceList extends Component {
             className={style.dropdownButton}
           >
             <a
-              href={gDocsPdfUrl(resource.url)}
+              href={gDocsPdfUrl(this.localizedURL(resource))}
               onClick={e => {
                 this.sendLinkVisitedEvent(resource, `copyPdf`);
               }}
@@ -150,7 +126,7 @@ export default class ResourceList extends Component {
               PDF
             </a>
             <a
-              href={gDocsMsOfficeUrl(resource.url)}
+              href={gDocsMsOfficeUrl(this.localizedURL(resource))}
               onClick={e => {
                 this.sendLinkVisitedEvent(resource, `copyMsOffice`);
               }}
@@ -158,7 +134,7 @@ export default class ResourceList extends Component {
               Microsoft Office
             </a>
             <a
-              href={gDocsCopyUrl(resource.url)}
+              href={gDocsCopyUrl(this.localizedURL(resource))}
               onClick={e => {
                 this.sendLinkVisitedEvent(resource, `copyGDocs`);
               }}

@@ -1,0 +1,62 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-10-10T13:15:53.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "###BEHIND THE SCENES\nHow does AI make **new images using words** you choose?\n",
+        "imageUrl": "https://images.code.org/8b6420bcb71cdfde2997b6575a7034c8-behind the scene.gif",
+        "key": "Generate_dancer_info-e349bed8-89d6-4efc-8a0e-29b8a1e5afb1",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "First, imagine an image covered in noise, like a screen full of tiny, randomly colored dots.",
+        "imageUrl": "https://images.code.org/5744367bcf7b79063f715cc930c1ad54-noise1.jpg",
+        "key": "Generate_dancer_info-93102ee9-aa96-4429-aafb-52f8fe7fd787",
+        "layout": "text-top-center",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "AI learned by turning noisy pictures back into clear ones again and again.",
+        "imageUrl": "https://images.code.org/9a1d25b5aa76b3a6c9b4e0fabdd11b21-scan.gif",
+        "key": "Generate_dancer_info-35731f8b-92f2-4309-954a-d8481cc58b14",
+        "layout": "text-top-center",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "After lots of practice, it became really good at spotting the hidden picture inside the noise!",
+        "imageUrl": "https://images.code.org/5744367bcf7b79063f715cc930c1ad54-noise1.jpg",
+        "key": "HoAI_pilot_5_dancer_info-0ae6fab6-0f3d-4751-bd68-31f5bc186f74"
+      },
+      {
+        "text": "It slowly cleans up the noise one little bit at a time until a picture starts to appear.",
+        "imageUrl": "https://images.code.org/f99ba1c8919dd4a405883ba98572f77b-noise2.jpg",
+        "key": "Generate_dancer_info-07287924-c7c1-45c4-86e6-1dc2621827a0",
+        "layout": "text-top-center",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "When all the noise is gone, you see a clear image that matches your words!",
+        "imageUrl": "https://images.code.org/9c60620148ebcefaca6d8e52792953ba-noise3.jpg",
+        "key": "Generate_dancer_info-54a8b63a-7ea3-4479-8c8a-170fba853898",
+        "layout": "text-top-center",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "You choose to accept the image, have AI try again or make a new prompt. ",
+        "imageUrl": "https://images.code.org/79ff55ecdac0d730326619f20bc83d81-panel 6.jpg",
+        "key": "Generate_dancer_info_2-571b0646-acfe-4ce0-804b-d73443dba600",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_4"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-10T13:15:53.365+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_5_dancer_info\\\"\"],\"cloned_from\":\"HoAI_pilot_5_dancer_info\"}]"
+}]]></config>
+</Panels>

@@ -4,16 +4,17 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import PopUpMenu, {MenuBreak} from '@cdo/apps/sharedComponents/PopUpMenu';
 import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {navigateToHref} from '@cdo/apps/utils';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import color from '../../util/color';
-import FontAwesome from '../FontAwesome';
 import QuickActionsCell from '../tables/QuickActionsCell';
 
 import ConfirmRemoveStudentDialog from './ConfirmRemoveStudentDialog';
@@ -39,6 +40,7 @@ class ManageStudentsActionsCell extends Component {
     hasEverSignedIn: PropTypes.bool,
     dependsOnThisSectionForLogin: PropTypes.bool,
     canEdit: PropTypes.bool,
+    rowData: PropTypes.object,
 
     // Provided by redux
     startEditingStudent: PropTypes.func,
@@ -54,6 +56,19 @@ class ManageStudentsActionsCell extends Component {
     requestInProgress: false,
   };
 
+  reportEvent = (eventName, payload = {}) => {
+    analyticsReporter.sendEvent(
+      eventName,
+      {
+        sectionId: this.props.sectionId,
+        sectionLoginType: this.props.loginType,
+        selectedUsState: this.props.rowData?.editingData?.usState,
+        ...payload,
+      },
+      PLATFORMS.STATSIG
+    );
+  };
+
   onConfirmDelete = () => {
     const {removeStudent, id, sectionId, loadSectionData} = this.props;
     this.setState({requestInProgress: true});
@@ -63,18 +78,6 @@ class ManageStudentsActionsCell extends Component {
     })
       .done(() => {
         removeStudent(id);
-        firehoseClient.putRecord(
-          {
-            study: 'teacher-dashboard',
-            study_group: 'manage-students-actions',
-            event: 'single-student-delete',
-            data_json: JSON.stringify({
-              sectionId: sectionId,
-              studentId: id,
-            }),
-          },
-          {includeUserId: true}
-        );
         loadSectionData(sectionId);
       })
       .fail((jqXhr, status) => {
@@ -94,96 +97,40 @@ class ManageStudentsActionsCell extends Component {
   };
 
   onEdit = () => {
-    const {id, sectionId} = this.props;
+    const {id} = this.props;
     this.props.startEditingStudent(id);
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-dashboard',
-        study_group: 'manage-students-actions',
-        event: 'single-student-start-edit',
-        data_json: JSON.stringify({
-          sectionId: sectionId,
-          studentId: id,
-        }),
-      },
-      {includeUserId: true}
-    );
   };
 
   onCancel = () => {
-    const {id, sectionId} = this.props;
+    const {id} = this.props;
     if (this.props.rowType === RowType.NEW_STUDENT) {
       this.props.removeStudent(this.props.id);
     } else {
-      firehoseClient.putRecord(
-        {
-          study: 'teacher-dashboard',
-          study_group: 'manage-students-actions',
-          event: 'single-student-cancel-edit',
-          data_json: JSON.stringify({
-            sectionId: sectionId,
-            studentId: id,
-          }),
-        },
-        {includeUserId: true}
-      );
       this.props.cancelEditingStudent(id);
     }
   };
 
   onSave = () => {
-    const {id, sectionId} = this.props;
+    const {id} = this.props;
     if (this.props.rowType === RowType.NEW_STUDENT) {
       this.onAdd();
     } else {
       this.props.saveStudent(id);
-      firehoseClient.putRecord(
-        {
-          study: 'teacher-dashboard',
-          study_group: 'manage-students-actions',
-          event: 'single-student-save',
-          data_json: JSON.stringify({
-            sectionId: sectionId,
-            studentId: id,
-          }),
-        },
-        {includeUserId: true}
-      );
+      this.reportEvent(EVENTS.SECTION_STUDENTS_TABLE_SAVE_ROW_CLICKED, {
+        studentId: this.props.id || null,
+        originalUsState: this.props.rowData?.usState,
+      });
     }
   };
 
   onAdd = () => {
-    const {id, sectionId} = this.props;
+    const {id} = this.props;
     this.props.addStudent(id);
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-dashboard',
-        study_group: 'manage-students-actions',
-        event: 'single-student-add',
-        data_json: JSON.stringify({
-          sectionId: sectionId,
-          studentId: id,
-        }),
-      },
-      {includeUserId: true}
-    );
+    this.reportEvent(EVENTS.SECTION_STUDENTS_TABLE_ADD_ROW_CLICKED);
   };
 
   onPrintLoginInfo = () => {
     const {id, sectionId} = this.props;
-
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-dashboard',
-        study_group: 'manage-students-actions',
-        event: 'single-student-print-login-card',
-        data_json: JSON.stringify({
-          sectionId: sectionId,
-          studentId: id,
-        }),
-      },
-      {includeUserId: true}
-    );
 
     const url =
       teacherDashboardUrl(sectionId, '/login_info') + `?studentId=${id}`;
@@ -195,18 +142,6 @@ class ManageStudentsActionsCell extends Component {
     const url =
       teacherDashboardUrl(sectionId, '/parent_letter') + `?studentId=${id}`;
     window.open(url, '_blank', 'noopener,noreferrer');
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-dashboard',
-        study_group: 'manage-students-actions',
-        event: 'single-student-download-parent-letter',
-        data_json: JSON.stringify({
-          sectionId: sectionId,
-          studentId: id,
-        }),
-      },
-      {includeUserId: true}
-    );
   };
 
   render() {
@@ -219,7 +154,7 @@ class ManageStudentsActionsCell extends Component {
 
     return (
       <div>
-        {!isEditing && (
+        {!isEditing && loginType !== SectionLoginType.lti_v1 && (
           <QuickActionsCell>
             {this.props.canEdit && (
               <PopUpMenu.Item onClick={this.onEdit}>

@@ -1,0 +1,36 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-08-30T17:34:13.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "###Hello, World! \nWelcome to coding with Transformers One.",
+        "imageUrl": "https://images.code.org/eba2e7d0ad729c931a222b0c1266c6d7-transformers-firstpanel.png",
+        "key": "transformers intro panel-6331cb20-de1b-4b5f-a56d-8ff3a571ea9c"
+      },
+      {
+        "text": "###Coding in Sprite Lab\n\n<p style=\"color: black;\"><span style=\"color: #8c52ba; font-weight:bold\">Instructions</span> Learn what to do on each level. <p>\n\n<p style=\"color: black;\"><span style=\"color: #1792e3ff; font-weight:bold\">Hint</span> Click the lightbulb for a hint! <p>\n\n<p style=\"color: black;\"><span style=\"color: #f2a100; font-weight:bold\">Playspace</span>  This is where the characters you code will show up. <p>\n\n<p style=\"color: black;\"><span style=\"color: #00b0bc; font-weight:bold\">Toolbox</span> New blocks of code will become available as you go through the lesson.<p>\n\n<p style=\"color: black;\"><span style=\"color: #b2353f; font-weight:bold\">Workspace</span>  Drag blocks out of the toolbox to build your program. <p>\n\n",
+        "imageUrl": "https://images.code.org/0570fad55473ef4a8780f79df4012e2d-spritelab.jpg",
+        "key": "transformers intro panel-0d6ee359-1703-4fba-b081-41e7d7024417",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "###Run your code!\nPress the Run button to activate your program. ",
+        "imageUrl": "https://images.code.org/37ebec4c3375e032a04fe8b9163eddb0-runPannel.gif",
+        "key": "transformers intro panel-da53d45e-93f6-457a-b8d1-5e8be6a8924d"
+      },
+      {
+        "text": "###Roll Out!\nWhat will you create?",
+        "imageUrl": "https://images.code.org/60fc06a3034ae7102f97cdc9a14ee385-transformers-lastpanel (1).png",
+        "key": "transformers intro panel-f0cae1fc-4489-401b-80c2-56e0b016b404"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2024-08-30 17:36:41 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-30 17:39:30 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-30 17:58:23 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-30 17:59:38 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-30 18:42:40 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-03 16:01:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-03 16:01:51 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-03 16:27:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-03 16:47:43 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-03 18:15:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-03 18:20:39 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-03 18:36:24 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-03 18:58:49 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-03 18:59:12 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-03 19:02:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-03 19:46:29 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-03 19:58:53 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-03 20:25:22 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-03 20:33:40 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-03 20:40:35 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-03 20:43:22 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

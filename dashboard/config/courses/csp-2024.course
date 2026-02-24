@@ -13,26 +13,27 @@
     "csp10-2024",
     "csp-post-survey-2024"
   ],
+  "original_script_names": [
+    "csp1-2024",
+    "csp2-2024",
+    "csp3-2024",
+    "csp4-2024",
+    "csp5-2024",
+    "csp6-2024",
+    "csp7-2024",
+    "csp8-2024",
+    "csp9-2024",
+    "csp10-2024",
+    "csp-post-survey-2024"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
-    "announcements": [
-      {
-        "key": "0c99406c-746f-4883-9593-76e566be61b7",
-        "notice": "Create PT Unit Coming This Fall",
-        "details": "We will be updating the Create PT Unit (Unit 9) based on updates from the College Board and the first round of scoring the new format implemented in the May 2024 AP CS Principles Exam. This unit will become live in the Fall. If you'd like to check out information about the updates implemented last year, click \"Learn More\"",
-        "link": "https://apcentral.collegeboard.org/courses/ap-computer-science-principles/course/frequently-asked-questions/about-create-performance-task-updates",
-        "type": "bullhorn",
-        "visibility": "Teacher-only",
-        "dismissible": true,
-        "buttonText": "Learn More"
-      }
-    ],
     "family_name": "csp",
-    "has_numbered_units": true,
     "has_verified_resources": true,
+    "numbered_units": "auto",
     "version_year": "2024"
   },
   "resources": [
@@ -214,7 +215,7 @@
     },
     {
       "name": "Syllabus",
-      "url": "\thttps://docs.google.com/document/d/1yg2L8OAKSqjtxzETYRw7G5XCinTR1wKNscyyBx3dJGk/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1w8N5Hd-URvs_xiIFNWwhw06v9PiFO2ccjJf-pp_hOYE/",
       "key": "syllabus_1",
       "properties": {
       },

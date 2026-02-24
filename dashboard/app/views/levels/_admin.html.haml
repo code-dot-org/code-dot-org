@@ -10,7 +10,7 @@
         %li= link_to 'view animation JSON', '', onclick: 'window.viewExportableAnimationList(); return false'
       -# Curriculum writers rarely need to edit STANDALONE_PROJECTS levels, and accidental edits to these levels
       -# can be quite disruptive. As a workaround you can navigate directly to the edit url for these levels.
-      - is_standalone_project = ProjectsController::STANDALONE_PROJECTS.values.map {|h| h[:name]}.include?(@level.name)
+      - is_standalone_project = ProjectsController::STANDALONE_PROJECTS.values.pluck(:name).include?(@level.name)
       - if Rails.application.config.levelbuilder_mode  && !is_standalone_project
         - if can? :edit, @level
           %li
@@ -72,8 +72,8 @@
             = link_to '[E]', edit_level_path(project_template_level)
 
       - elsif @script_level
-        %li= link_to 'edit on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", build_script_level_path(@script_level, @extra_params)).to_s
-    - if (@level.is_a? Blockly) && (!@level.uses_droplet?)
+        %li= link_to 'edit on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", build_script_level_path(@script_level, **(@extra_params || {}))).to_s
+    - if @level.is_a?(Blockly) && !@level.uses_droplet?
       %button{type: 'button', onclick: 'window.levelbuilder.copySelectedBlockToClipboard()', class: 'btn btn-default btn-sm'}
         Copy selected block
       %button{type: 'button', onclick: 'window.levelbuilder.copyWorkspaceToClipboard()', class: 'btn btn-default btn-sm'}
@@ -84,9 +84,8 @@
       %br
       %button{type: 'button', onclick: 'Blockly.mainBlockSpace.clear()', class: 'btn btn-default btn-sm'}
         Clear workspace
-      - if @level.uses_google_blockly? || (params[:blocklyVersion] == 'google') || (Experiment.enabled?(experiment_name: 'google_blockly', user: current_user))
-        %button{type: 'button', onclick: 'Blockly.getMainWorkspace().undo(false)', class: 'btn btn-default btn-sm'}
-          Undo
+      %button{type: 'button', onclick: 'Blockly.getMainWorkspace().undo(false)', class: 'btn btn-default btn-sm'}
+        Undo
       %hr
     This level is in #{@level.script_levels.count} scripts:
     %ul
@@ -117,7 +116,7 @@
       Project info:
       %ul
         - owner_storage_id, project_id = begin
-          - storage_decrypt_channel_id(params[:channel_id])
+          - get_storage_id_and_project_id(params[:channel_id])
         - rescue
           - [nil, nil]
         - sources_link = "https://s3.console.aws.amazon.com/s3/buckets/#{CDO.sources_s3_bucket}/#{CDO.sources_s3_directory}/#{owner_storage_id}/#{project_id}/"
@@ -133,7 +132,6 @@
           - project = FeaturedProject.find_by project_id: project_id
           - status = project.status
         - project = Projects.new(get_storage_id)
-        - content_moderation_disabled = project.content_moderation_disabled?(params[:channel_id])
         %li
           S3 links:
           = link_to 'sources', sources_link, target: '_blank'
@@ -163,8 +161,8 @@
         %button{id: "bookmark", class: "btn btn-default btn-sm"}
           Bookmark as a featured project
 
-      #unpublished_warning{'style' => ('display: none; margin-top: 20px; width: 250px;')}
-        * This project is currently unpublished. It can still be marked as featured, but it will not show in the gallery until the owner publishes it.
+      #unpublished_warning{'style' => 'display: none; margin-top: 20px; width: 250px;'}
+        * This project is currently unpublished. It can still be bookmarked, but it will not show in the featured projects gallery until it is published.
 
     - if current_user.project_validator?
       %br
@@ -190,19 +188,6 @@
             %span.intl-flagged-text
         %li.abusive-image{ style: 'display: none;' }
           Inappropriate image
-          .image-mod-controls{ style: 'display: none;' }
-            #disable-auto-moderation{'style' => ('display: none;' if content_moderation_disabled)}
-              %br
-              %button{id: "disable-auto-moderation", class: "btn btn-default btn-sm"}
-                Disable automated moderation
-
-            #moderation-explanation{style: 'margin-top: 20px; width: 250px;'}
-              Disabling automated moderation will prevent our content moderation service from flagging this project. Disable automated moderation if the service has inaccurately flagged this project before.
-
-            #enable-auto-moderation{'style' => ('display: none;' unless content_moderation_disabled)}
-              %br
-              %button{id: "enable-auto-moderation", class: "btn btn-default btn-sm"}
-                Enable automated moderation
         %li.reported-abuse{ style: 'display: none;' }
           Manually reported abusive
 
@@ -212,9 +197,6 @@
       %br
         %button{id: "admin-abuse-reset", class: "btn btn-default btn-sm"}
           Reset abuse score to 0
-      %br
-        %button{id: "admin-abuse-buffer", class: "btn btn-default btn-sm"}
-          Set abuse score to -50
       %br
       %br
       .admin-report-abuse

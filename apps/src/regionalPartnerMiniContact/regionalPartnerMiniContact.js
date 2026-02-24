@@ -1,19 +1,20 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import {
   RegionalPartnerMiniContact,
   RegionalPartnerMiniContactPopupLink,
 } from '@cdo/apps/code-studio/pd/regional_partner_mini_contact/RegionalPartnerMiniContact';
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 window.showRegionalPartnerMiniContact = function () {
   const regionalPartnerMiniContactElement = $(
     '#regional-partner-mini-contact-container'
   );
   const sourcePageId = regionalPartnerMiniContactElement.data('source-page-id');
-  const notes = regionalPartnerMiniContactElement.data('options-notes');
-  let options = {notes: notes};
+  let options = {};
+  const zipFromUrlParams = queryParams()['zip'];
 
   $.ajax({
     type: 'GET',
@@ -23,12 +24,11 @@ window.showRegionalPartnerMiniContact = function () {
       options = {
         user_name: results.user_name,
         email: results.email,
-        zip: results.zip,
-        notes: notes,
+        zip: zipFromUrlParams || results.zip,
       };
     })
     .complete(() => {
-      ReactDOM.render(
+      createReactRoot(
         <RegionalPartnerMiniContact
           options={options}
           apiEndpoint="/dashboardapi/v1/pd/regional_partner_mini_contacts/"
@@ -46,17 +46,12 @@ window.showRegionalPartnerMiniContactPopupLink = function () {
 
   const sourcePageId =
     regionalPartnerMiniContactPopupLinkElement.data('source-page-id');
-  const notes =
-    regionalPartnerMiniContactPopupLinkElement.data('options-notes');
   const linkText = regionalPartnerMiniContactPopupLinkElement.data('link-text');
   const isButton =
     regionalPartnerMiniContactPopupLinkElement.data('link-button');
 
-  ReactDOM.render(
-    <RegionalPartnerMiniContactPopupLink
-      notes={notes}
-      sourcePageId={sourcePageId}
-    >
+  createReactRoot(
+    <RegionalPartnerMiniContactPopupLink sourcePageId={sourcePageId}>
       {isButton && <button type="button">{linkText}</button>}
       {!isButton && linkText}
     </RegionalPartnerMiniContactPopupLink>,

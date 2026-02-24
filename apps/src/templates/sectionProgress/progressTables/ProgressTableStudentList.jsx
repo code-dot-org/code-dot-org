@@ -4,7 +4,8 @@ import * as Sticky from 'reactabular-sticky';
 import * as Table from 'reactabular-table';
 import * as Virtualized from 'reactabular-virtualized';
 
-import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import {getFullName} from '@cdo/apps/templates/manageStudents/utils.ts';
+import {nestedUnitUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
 
 import {
@@ -27,6 +28,8 @@ export default class ProgressTableStudentList extends React.Component {
     headers: PropTypes.arrayOf(PropTypes.string).isRequired,
     studentTimestamps: PropTypes.object,
     onToggleRow: PropTypes.func.isRequired,
+    courseVersionName: PropTypes.string,
+    unitPosition: PropTypes.number,
   };
 
   constructor(props) {
@@ -56,18 +59,22 @@ export default class ProgressTableStudentList extends React.Component {
   }
 
   studentNameFormatter(rowData) {
-    const {sectionId, scriptData, studentTimestamps} = this.props;
-    const studentUrl = scriptUrlForStudent(
+    const {
       sectionId,
-      scriptData.name,
+      scriptData,
+      studentTimestamps,
+      courseVersionName,
+      unitPosition,
+    } = this.props;
+    const studentUrl = nestedUnitUrlForStudent(
+      sectionId,
+      courseVersionName,
+      unitPosition,
       rowData.student.id
     );
-    const fullName = rowData.student.familyName
-      ? `${rowData.student.name} ${rowData.student.familyName}`
-      : rowData.student.name;
     return (
       <ProgressTableStudentName
-        name={fullName}
+        name={getFullName(rowData.student)}
         studentId={rowData.student.id}
         sectionId={sectionId}
         scriptId={scriptData.id}

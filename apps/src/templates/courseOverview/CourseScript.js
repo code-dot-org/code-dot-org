@@ -9,15 +9,15 @@ import {
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import AssignButton from '@cdo/apps/templates/AssignButton';
 import Assigned from '@cdo/apps/templates/Assigned';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import UnassignSectionButton from '@cdo/apps/templates/UnassignSectionButton';
+import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import color from '@cdo/apps/util/color';
+import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
+
+import MultipleAssignButton from '../MultipleAssignButton';
 
 import CourseScriptTeacherInfo from './CourseScriptTeacherInfo';
 
@@ -26,12 +26,15 @@ class CourseScript extends Component {
     title: PropTypes.string,
     name: PropTypes.string,
     id: PropTypes.number.isRequired,
+    path: PropTypes.string.isRequired,
     courseId: PropTypes.number,
     courseOfferingId: PropTypes.number,
     courseVersionId: PropTypes.number,
     description: PropTypes.string,
     assignedSectionId: PropTypes.number,
     showAssignButton: PropTypes.bool,
+    participantAudience: PropTypes.string,
+    aiChatToolsDependency: PropTypes.string,
     // redux provided
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     selectedSectionId: PropTypes.number,
@@ -59,19 +62,6 @@ class CourseScript extends Component {
   onClickHiddenToggle = value => {
     const {name, selectedSectionId, id, toggleHiddenScript} = this.props;
     toggleHiddenScript(name, selectedSectionId, id, value === 'hidden');
-    firehoseClient.putRecord(
-      {
-        study: 'hidden-units',
-        study_group: 'v0',
-        event: value,
-        script_id: id,
-        data_json: JSON.stringify({
-          script_name: name,
-          section_id: selectedSectionId,
-        }),
-      },
-      {useProgressScriptId: false}
-    );
   };
 
   render() {
@@ -79,6 +69,7 @@ class CourseScript extends Component {
       title,
       name,
       id,
+      path,
       description,
       viewAs,
       selectedSectionId,
@@ -90,7 +81,10 @@ class CourseScript extends Component {
       courseVersionId,
       sectionsForDropdown,
       showAssignButton,
+      participantAudience,
+      aiChatToolsDependency,
     } = this.props;
+    const {confirmationMessageOpen} = this.state;
 
     const isHidden = isScriptHiddenForSection(
       hiddenLessonState,
@@ -113,6 +107,14 @@ class CourseScript extends Component {
       selectedSection.unitId === id;
     const isAssigned = assignedToStudent || assignedByTeacher;
 
+    let unitPath = `${path}${location.search}`;
+    if (location.pathname.includes('/teacher_dashboard')) {
+      if (experiments.isEnabled(experiments.MODULARITY)) {
+        unitPath = `/teacher_dashboard/sections/${selectedSectionId}${path}`;
+      } else {
+        unitPath = `/teacher_dashboard/sections/${selectedSectionId}/unit/${name}`;
+      }
+    }
     return (
       <div
         style={{
@@ -131,35 +133,30 @@ class CourseScript extends Component {
             <Button
               __useDeprecatedTag
               text={i18n.goToUnit()}
-              href={`/s/${name}${location.search}`}
+              href={unitPath}
               color={Button.ButtonColor.gray}
               className="uitest-go-to-unit-button"
             />
             {isAssigned && viewAs === ViewType.Participant && <Assigned />}
-            {isAssigned &&
-              viewAs === ViewType.Instructor &&
-              selectedSectionId && (
-                <UnassignSectionButton
-                  courseName={title}
-                  sectionId={selectedSectionId}
-                  buttonLocationAnalytics={'course-overview-unit'}
-                />
-              )}
-            {!isAssigned &&
-              viewAs === ViewType.Instructor &&
-              showAssignButton &&
-              selectedSection && (
-                <AssignButton
-                  sectionId={selectedSection.id}
-                  scriptId={id}
-                  courseId={courseId}
+            {confirmationMessageOpen && (
+              <span style={styles.confirmText}>{i18n.assignSuccess()}</span>
+            )}
+            {viewAs === ViewType.Instructor && showAssignButton && (
+              <div className={styles.assignButton}>
+                <MultipleAssignButton
                   courseOfferingId={courseOfferingId}
                   courseVersionId={courseVersionId}
+                  courseId={courseId}
+                  scriptId={id}
                   assignmentName={title}
-                  sectionName={selectedSection.name}
                   reassignConfirm={this.onReassignConfirm}
+                  isAssigningCourseOnly={false}
+                  isSingleUnitCourse={false}
+                  participantAudience={participantAudience}
+                  aiChatToolsDependency={aiChatToolsDependency}
                 />
-              )}
+              </div>
+            )}
           </span>
         </div>
         {viewAs === ViewType.Instructor && !hasNoSections && (
@@ -209,6 +206,10 @@ const styles = {
   flex: {
     display: 'flex',
     alignItems: 'center',
+  },
+  confirmText: {
+    marginLeft: 5,
+    marginRight: 5,
   },
 };
 export const UnconnectedCourseScript = CourseScript;

@@ -1,0 +1,107 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-11-19T17:56:59.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Sports Magazine\r\n\r\n###Do This:\r\n\r\n1. Fill your Arrays: Create 2 arrays (`headlines`, `taglines`) with 3 items each. Ensure index 0 in all lists matches the same story.\r\n\r\n2. Pick Index: Create a variable `let index = 0;` to track the current cover.\r\n\r\n3. Update Page: Use document.querySelector and your index variable to:\r\n\t* Set `#headline` text to `headlines[index]`.\r\n    * Set `#coverImage` src to `images[index]`.\r\n    * Set `#tagline` text to `taglines[index]`.\r\n\r\n4. Show Count: Update `#count` text to display the total number of covers using `.length.`",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "images",
+          "parentId": "0",
+          "open": true
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Sports Magazine Cover</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n\n  <div class=\"magazine-wrapper\">\n    <header class=\"masthead\">\n      <h1 id=\"magTitle\">Game Time Weekly</h1>\n      <div class=\"price-tag\">$4.99 • Vol. 102</div>\n    </header>\n\n    <main class=\"cover-body\">\n      <div class=\"image-container\">\n        <img id=\"coverImage\" src=\"/images/cover1b.png\" alt=\"Sports Action Shot\">\n      </div>\n      \n      <div class=\"text-content\">\n        <h2 id=\"headline\"></h2>\n        <p id=\"tagline\"></p>\n      </div>\n    </main>\n\n    <footer>\n      <p id=\"count\"></p>\n    </footer>\n  </div>\n\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// SPORTS MAGAZINE: Parallel Arrays\n\n// Data Arrays\nconst coverImages = [\n  \"/images/cover1b.png\",\n  \"/images/cover2b.png\",\n  \"/images/cover3b.png\"\n];\nconst headlines = [];\nconst taglines = [];\n\n",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  background-color: #e0e0e0;\n  font-family: 'Verdana', sans-serif;\n  display: flex;\n  justify-content: center;\n  padding: 20px;\n}\n\n.magazine-wrapper {\n  background: white;\n  width: 380px;\n  padding: 0;\n  box-shadow: 5px 5px 15px rgba(0,0,0,0.3);\n  text-align: center;\n}\n\n.masthead {\n  background-color: #002147; /* Navy Blue */\n  color: white;\n  padding: 20px 10px;\n}\n\nh1 {\n  font-family: 'Impact', sans-serif;\n  font-style: italic;\n  font-size: 2.8rem;\n  margin: 0;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n}\n\n.price-tag {\n  font-size: 0.9rem;\n  color: #ff9800; /* Orange Accent */\n  margin-top: 5px;\n  font-weight: bold;\n}\n\n.cover-body {\n  position: relative;\n}\n\n#coverImage {\n  width: 100%;\n  height: auto;\n  display: block;\n}\n\n.text-content {\n  background: #ff9800;\n  color: #002147;\n  padding: 15px;\n  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%); /* Dynamic slant */\n  margin-top: -40px; /* Overlap effect */\n  position: relative;\n}\n\n#headline {\n  font-size: 1.8rem;\n  margin: 10px 0 5px 0;\n  text-transform: uppercase;\n  line-height: 1;\n}\n\n#tagline {\n  font-size: 1.1rem;\n  font-weight: bold;\n  margin: 0;\n}\n\nfooter {\n  padding: 10px;\n  background: #ddd;\n  font-size: 0.85rem;\n  color: #555;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "cover3b.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson1-level2b-test-2025/uuid/a30e4651-2d5d-40bb-a5ba-6dec9c000d17.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "cover1b.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson1-level2b-test-2025/uuid/a0e8491a-a69d-4006-8a97-bf811b2b392e.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "cover2b.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson1-level2b-test-2025/uuid/22d7f6ab-a20a-4a2a-9312-a98f59e8b5d6.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2",
+        "1",
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "display_name": "Sports Magazine Cover",
+    "bubble_choice_description": "Create the cover for a sports magazine using 3 parallel arrays to change the style quickly",
+    "thumbnail_url": "https://images.code.org/4213688f6d1b14a27927ad633b6a03b2-cover1b.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-19T17:56:59.783+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson1-level2a-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson1-level2a-test-2025\"},{\"changed_at\":\"2025-11-19 17:57:02 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-19 18:34:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-19 18:34:27 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-19 18:39:18 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-19 18:40:07 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-19 18:40:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-19 18:46:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-19 18:54:40 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-19 18:54:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-19 18:56:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-19 18:56:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-19 19:02:13 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

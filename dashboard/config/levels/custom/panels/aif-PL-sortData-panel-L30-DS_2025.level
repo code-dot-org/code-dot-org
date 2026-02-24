@@ -1,0 +1,42 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-04-23T16:38:59.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/9125112a009e175f3ed88df8784430f6-title_card.png",
+        "key": "data-science-lesson7-panel5-2025-launch-80ee1552-7589-4722-bcad-747eef7fc7c9"
+      },
+      {
+        "text": "### Select Your Data\n- Click the empty cell in the upper-left of your dataset\n- This will select all rows and columns",
+        "imageUrl": "https://images.code.org/c802ab890b90ef23a9b2766f3aadddaa-L7P5-1_2.gif",
+        "key": "hardware-components-3d887b32-d501-4032-b990-2a51ae5b4de8",
+        "layout": "text-bottom-right",
+        "typing": false,
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "### Open the Sorting Menu\n- Click **Data** > **Sort Range**\n- Select **Advanced range sorting options**",
+        "imageUrl": "https://images.code.org/35deb5e7acd943d4f80686379b6414a1-L7P5-2_2-ezgif.com-optimize.gif",
+        "key": "data-science-lesson7-panel5-2025-launch-109d0466-9ca3-4cc7-86b0-0af49c80e409",
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "### Sort the Data\n- Select \"**Data has header row**\"\n- Select a *column* within **Sort by...**\n- Choose the *direction* to sort (**A-Z** or **Z-A**)\n- Click **Sort**",
+        "imageUrl": "https://images.code.org/edfd140e982759a482b7c50e881b0322-L7P5-3_5-ezgif.com-optimize.gif",
+        "key": "data-science-lesson7-panel5-2025-launch-0c6eb66a-db23-45b0-ad6c-e7dced4eae49",
+        "layout": "text-bottom-left"
+      }
+    ],
+    "name_suffix": "_2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-04-23T16:38:59.014+00:00\",\"changed\":[\"cloned from \\\"aif-PL-sortData-panel-L30-DS\\\"\"],\"cloned_from\":\"aif-PL-sortData-panel-L30-DS\"}]"
+}]]></config>
+</Panels>

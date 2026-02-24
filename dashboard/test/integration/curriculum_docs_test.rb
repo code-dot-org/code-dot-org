@@ -106,11 +106,11 @@ class CurriculumDocsTest < ActionDispatch::IntegrationTest
   class CodeDocsCachingTest < CurriculumDocsTest
     def setup
       Unit.stubs(:should_cache?).returns true
-      @programming_environment = create :programming_environment
-      programming_environment_category = create :programming_environment_category, programming_environment: @programming_environment
-      @programming_expression = create :programming_expression, programming_environment: @programming_environment, programming_environment_category: programming_environment_category
-      @programming_class = create :programming_class, programming_environment: @programming_environment, programming_environment_category: programming_environment_category
-      create :programming_method, programming_class: @programming_class
+      @programming_environment = create(:programming_environment)
+      programming_environment_category = create(:programming_environment_category, programming_environment: @programming_environment)
+      @programming_expression = create(:programming_expression, programming_environment: @programming_environment, programming_environment_category: programming_environment_category)
+      @programming_class = create(:programming_class, programming_environment: @programming_environment, programming_environment_category: programming_environment_category)
+      create(:programming_method, programming_class: @programming_class)
     end
 
     test "environment index should cache all queries" do
@@ -152,11 +152,11 @@ class CurriculumDocsTest < ActionDispatch::IntegrationTest
   class CodeDocsQueryCountTest < CurriculumDocsTest
     def setup
       Unit.stubs(:should_cache?).returns false
-      @programming_environment = create :programming_environment
-      programming_environment_category = create :programming_environment_category, programming_environment: @programming_environment
-      @programming_expression = create :programming_expression, programming_environment: @programming_environment, programming_environment_category: programming_environment_category
-      @programming_class = create :programming_class, programming_environment: @programming_environment, programming_environment_category: programming_environment_category
-      create :programming_method, programming_class: @programming_class
+      @programming_environment = create(:programming_environment)
+      programming_environment_category = create(:programming_environment_category, programming_environment: @programming_environment)
+      @programming_expression = create(:programming_expression, programming_environment: @programming_environment, programming_environment_category: programming_environment_category)
+      @programming_class = create(:programming_class, programming_environment: @programming_environment, programming_environment_category: programming_environment_category)
+      create(:programming_method, programming_class: @programming_class)
     end
 
     test "signed out environment index query count" do

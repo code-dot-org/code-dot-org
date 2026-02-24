@@ -1,0 +1,39 @@
+name 'CSA U7 Assessment q10_pilot-2025'
+
+right '`10`'
+wrong '`11`'
+wrong '`12 11 10`'
+wrong '`12 11`'
+wrong '`11 12`'
+
+markdown <<MARKDOWN
+Consider the following method.
+
+```
+public static void showMe(int arg) {
+  if (arg > 10) {
+    showMe(arg - 1);
+  }
+  else {
+    System.out.println(arg + " ");
+  }
+}
+```
+
+What will be printed as a result of the call `showMe(12)`?
+MARKDOWN
+
+allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+The method `showMe(int arg)` is a recursive method that prints the value of `arg` only if it is less than or equal to `10`. If `arg` is greater than `10`, it calls itself with `arg - 1`, effectively counting down from the original `arg` until it hits `10` or less.
+
+In the case of `showMe(12)`, here is the sequence of operations:
+
+1. `showMe(12)` is called. Since `12` is greater than `10`, `showMe(11)` is called.
+
+2. `showMe(11)` is called. Since `11` is greater than `10`, `showMe(10)` is called.
+
+3. `showMe(10)` is called. Since `10` is not greater than `10`, `10` is printed.
+
+So, the output of `showMe(12)` is `10`.
+MARKDOWN

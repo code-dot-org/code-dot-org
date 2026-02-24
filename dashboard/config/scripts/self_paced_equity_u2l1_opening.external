@@ -1,0 +1,36 @@
+name 'self-paced-equity-U2L1-opening'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Welcome!
+
+## Module 2, Lesson 2: Cultivating an Inclusive Classroom Culture
+
+<div style="display: flex; align-items: flex-start; gap: 20px; margin-top: 20px;">
+    <div style="width: 70%;">
+        <p style="line-height: 1.5; font-size: 18px;">
+            In this lesson, you will:
+        </p>
+        <ul style="margin-left: 20px; line-height: 1.6;">
+            <li style="line-height: 1.5;font-size: 16px;">
+                Use a common definition of inclusion and accessibility.
+            </li>
+            <li style="line-height: 1.5;font-size: 16px;">
+                Recognize that all students can and should learn CS.
+            </li>
+            <li style="line-height: 1.5;font-size: 16px;">
+                Describe the influence you have over culture and student success in a CS classroom
+            </li>
+        </ul>
+        <p style="font-size: 16px; color: black;">
+        <br>
+        <p style="line-height: 1.5; font-size: 18px;"><strong>Suggested time for this lesson:</strong> 45 minutes
+        </p>
+    </div>
+    
+    <!-- Image on the right -->
+    <img src="https://images.code.org/00c7f48fb3dce437376d3459cbf1cadc-image-1734130376113.52.53 PM.png" alt="Two students sit in a classroom a laugh while looking at their laptops." style="width: 30%; height: auto; border-radius: 10px;">
+</div>
+<br>
+MARKDOWN

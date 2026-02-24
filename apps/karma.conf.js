@@ -73,6 +73,7 @@ module.exports = function (config) {
 
       // Serve ./build/karma/, our webpack bundle, as /webpack_output/
       '/webpack_output/': '/base/build/karma/',
+      '/assets/js/images/': '/base/build/karma/images/',
     },
 
     preprocessors: {
@@ -97,9 +98,7 @@ module.exports = function (config) {
     reporters: ['mocha'],
 
     junitReporter: {
-      outputDir: envConstants.CIRCLECI
-        ? `${envConstants.CIRCLE_TEST_REPORTS}/apps`
-        : '',
+      outputDir: envConstants.CI ? `${envConstants.CI_TEST_REPORTS}/apps` : '',
       outputFile: `${KARMA_CLI_FLAGS.testType}.xml`,
     },
 

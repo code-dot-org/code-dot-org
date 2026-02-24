@@ -1,0 +1,41 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-10-14T18:48:02.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "#Welcome to the Python!\n\n- In this unit, you'll learn the basics of Python by completing lessons that will get you one step closer to creating your own console-based **adventure game**. \n\n- Your task will be in the Instructions panel. It may ask you to predict, run, investigate, modify, or make code. \n",
+        "imageUrl": "https://images.code.org/991141cd0b98c1b9e647b60fd5202dcf-Screenshot 2025-02-19 at 1.30.27 PM.png",
+        "key": "test-intro-to-programming-lesson6-level1a-e5d1dd23-d8d1-43e7-bc7b-56f197587f67",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "#Create an object\n\nLet's get started with the basics. Imagine you want to create a virtual pet. In Python, you write:\n`pet = Pet()`\n\nBy writing this code, you're creating a new pet using something called a class.\n\n**How it works:** \n1. Pet() is a Class Constructor\n\n    - A class in Python is like a blueprint for creating objects.\n\n2. pet is an Object (Instance)\n\n    - When we write pet = Pet(), we are creating a new pet using the Pet blueprint.\n    - This means our pet now exists, and we can give it attributes (like a name) and make it do things (like pet.eat() or pet.bark() if those actions exist in the class).\n\n",
+        "imageUrl": "https://images.code.org/2ee39ca300a2f6050341ce458d8a71d8-Screenshot 2025-02-18 at 3.48.17 PM.png",
+        "key": "test-intro-to-programming-lesson6-level1a-91cac369-0d9d-46ec-a0a9-e5f5c4ac7380",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "#Attributes: Properties & Behaviors\nThink of attributes as the characteristics or abilities of an object in Python. In our Pet example, attributes can be things like bark, wag, and run, which describe what the pet can do.\n\n**Attributes in Python come in two forms:**\n\n1. Instance Variables (Properties/Characteristics) → These describe the pet (e.g., name, age, color). These are unique to each instance of the pet in your code.\n2. Methods (Behaviors/Actions) → These are functions inside the class that allow the pet to do something (e.g., bark(), wag(), run()).",
+        "imageUrl": "https://images.code.org/27fee3781efb593a8adbdb7932c48206-Screenshot 2025-02-18 at 3.35.02 PM.png",
+        "key": "test-intro-to-programming-lesson6-level1a-ad3c826c-5ace-4c82-b5b8-f60855fec0ea",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "To help you quickly get started, Code.org has written a support file so you can use objects, properties, and behaviors right away. \n\nExplore the `support.py` file in the next level. Afterwards, `support.py` will be hidden but its methods will still be accessible in `main.py`.",
+        "imageUrl": "https://images.code.org/6eb7c72314e2f65be8dc45e860d215f7-painter file.gif",
+        "key": "test-intro-to-programming-lesson6-level1a-d23a254a-f81d-4f7e-b3b7-d493c832fc1a",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "name_suffix": "_pilot-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:48:02.156+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson14-level1_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson14-level1_2025\"}]"
+}]]></config>
+</Panels>

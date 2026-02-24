@@ -1,0 +1,10 @@
+name 'sp-pl-DS-chkUnderstandingASsesandgroup'
+title 'Multiple Choice: Data Science'
+description ''
+question 'What is the purpose of the index operator in Pandas?'
+
+wrong 'Accessing rows and columns by their labels.'
+wrong 'Providing a summary of a larger set of data.'
+wrong 'Setting the primary key in a DataFrame.'
+right 'Accessing column(s) in a DataFrame.'
+allow_multiple_attempts true

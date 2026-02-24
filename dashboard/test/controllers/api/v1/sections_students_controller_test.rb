@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
-  self.use_transactional_test_case = true
-
   setup_all do
     @teacher = create(:teacher)
     @other_teacher = create(:teacher)
@@ -33,13 +31,13 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
     get :index, params: {section_id: @section.id}
     assert_response :success
     expected_summary = [
-      @student.summarize.merge(depends_on_this_section_for_login: false)
+      @student.summarize.merge(depends_on_this_section_for_login: true)
     ].to_json
     assert_equal expected_summary, @response.body
   end
 
   test "depends_on_this_section_for_login if this is sponsored student's only section" do
-    student = create :student_in_picture_section
+    student = create(:student_in_picture_section)
     assert student.teacher_managed_account?
     assert_equal 1, student.sections_as_student.size
 
@@ -52,9 +50,9 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
   end
 
   test "not depends_on_this_section_for_login if sponsored student has multiple sections" do
-    student = create :student_in_picture_section
-    second_section = create :section, login_type: Section::LOGIN_TYPE_PICTURE
-    create :follower, student_user: student, section: second_section
+    student = create(:student_in_picture_section)
+    second_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
+    create(:follower, student_user: student, section: second_section)
     student.reload
 
     assert student.teacher_managed_account?
@@ -69,7 +67,7 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
   end
 
   test "not depends_on_this_section_for_login if student is parent-managed" do
-    student = create :parent_managed_student, :in_picture_section
+    student = create(:parent_managed_student, :in_picture_section)
 
     refute student.teacher_managed_account?
     assert_equal 1, student.sections_as_student.size
@@ -83,7 +81,7 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
   end
 
   test "not depends_on_this_section_for_login if student is in an email section" do
-    student = create :student, :in_email_section
+    student = create(:student, :in_email_section)
 
     refute student.teacher_managed_account?
     assert_equal 1, student.sections_as_student.size
@@ -164,11 +162,10 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
     response = JSON.parse(@response.body)
 
     @student.reload
-    assert response['secret_picture_path'].present?
     assert response['secret_words'].present?
-    refute_equal response['secret_picture_path'], old_secret_picture_path
+    refute_equal response['secret_picture_url'], ApplicationController.helpers.image_url(old_secret_picture_path)
     refute_equal response['secret_words'], old_secret_words
-    assert_equal response['secret_picture_path'], @student.secret_picture.path
+    assert_equal response['secret_picture_url'], ApplicationController.helpers.image_url(@student.secret_picture.path)
     assert_equal response['secret_words'], @student.secret_words
   end
 
@@ -183,9 +180,8 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
     response = JSON.parse(@response.body)
 
     @student.reload
-    assert response['secret_picture_path'].present?
     assert response['secret_words'].present?
-    assert_equal response['secret_picture_path'], secret_picture_path
+    assert_equal response['secret_picture_url'], ApplicationController.helpers.image_url(secret_picture_path)
     assert_equal response['secret_words'], secret_words
     assert_equal secret_picture_path, @student.secret_picture.path
     assert_equal secret_words, @student.secret_words
@@ -220,20 +216,37 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
 
   test 'teacher can add one student to a word section' do
     sign_in @teacher
-    post :bulk_add, params: {section_id: @section.id, students: [{gender_teacher_input: 'f', age: 9, name: 'name', family_name: 'famname'}]}
+
+    expected_gender = 'f'
+    expected_age = 9
+    expected_name = 'name'
+    expected_family_name = 'famname'
+    expected_us_state = 'CO'
+
+    post :bulk_add, params: {
+      section_id: @section.id,
+      students: [
+        gender_teacher_input: expected_gender,
+        age: expected_age,
+        name: expected_name,
+        family_name: expected_family_name,
+        us_state: expected_us_state,
+      ]
+    }
     assert_response :success
 
     parsed_response = JSON.parse(@response.body)
-    assert_equal 'name', parsed_response[0]['name']
-    assert_equal 9, parsed_response[0]['age']
-    assert_equal 'f', parsed_response[0]['gender']
+    assert_equal expected_name, parsed_response[0]['name']
+    assert_equal expected_age, parsed_response[0]['age']
+    assert_equal expected_gender, parsed_response[0]['gender']
+    assert_equal expected_us_state, parsed_response[0]['us_state']
 
     new_student = User.find_by_id(parsed_response[0]['id'])
-
-    assert_equal 'name', new_student.name
-    assert_equal 'famname', new_student.family_name
-    assert_equal 9, new_student.age
-    assert_equal 'f', new_student.gender
+    assert_equal expected_name, new_student.name
+    assert_equal expected_family_name, new_student.family_name
+    assert_equal expected_age, new_student.age
+    assert_equal expected_gender, new_student.gender
+    assert_equal expected_us_state, new_student.us_state
   end
 
   test 'teacher can add multiple student to a word section' do
@@ -302,5 +315,34 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
       "full",
       json_response["result"]
     )
+  end
+
+  describe 'PATCH update' do
+    subject(:patch_update) {patch :update, params: params}
+
+    let(:teacher) {@teacher}
+    let(:section) {@section}
+    let(:student) {@student}
+
+    let(:params) {{section_id: section.id, id: student.id, student: student_params}}
+    let(:response_body) {JSON.parse(@response.body)}
+
+    before do
+      sign_in teacher
+    end
+
+    context 'when student us_state param is provided' do
+      let(:student_params) {{us_state: us_state}}
+
+      let(:us_state) {'CO'}
+
+      it 'updates student us_state' do
+        assert_changes -> {student.reload.us_state}, from: nil, to: us_state do
+          patch_update
+          assert_response :success
+          _(response_body['us_state']).must_equal us_state
+        end
+      end
+    end
   end
 end

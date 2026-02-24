@@ -3,18 +3,18 @@ require 'testing/includes_metrics'
 
 class EvaluateRubricJobTest < ActiveJob::TestCase
   setup do
-    @student = create :student
-    @teacher = create :teacher
-    @script_level = create :script_level
+    @student = create(:student)
+    @teacher = create(:teacher)
+    @script_level = create(:script_level)
     assert_equal @script_level.script, @script_level.lesson.script
 
     @fake_ip = '127.0.0.1'
     @storage_id = create_storage_id_for_user(@student.id)
 
-    @rubric = create :rubric, level: @script_level.level, lesson: @script_level.lesson
-    create :learning_goal, rubric: @rubric, learning_goal: 'learning-goal-1'
-    create :learning_goal, rubric: @rubric, learning_goal: 'learning-goal-2'
-    create :learning_goal, rubric: @rubric, learning_goal: 'learning-goal-3'
+    @rubric = create(:rubric, level: @script_level.level, lesson: @script_level.lesson)
+    create(:learning_goal, rubric: @rubric, learning_goal: 'learning-goal-1')
+    create(:learning_goal, rubric: @rubric, learning_goal: 'learning-goal-2')
+    create(:learning_goal, rubric: @rubric, learning_goal: 'learning-goal-3')
     assert_equal 3, @rubric.learning_goals.count
 
     # Don't actually talk to S3 when running SourceBucket.new
@@ -150,36 +150,6 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     assert_includes exception.message, "Couldn't find Rubric"
   end
 
-  test "job fails when the code contains profanity" do
-    AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
-
-    # create a project
-    channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
-    channel_id = channel_token.channel
-
-    violating_code = 'damn'
-
-    stub_project_source_data(channel_id, code: violating_code)
-
-    stub_lesson_s3_data
-
-    stub_get_openai_evaluations(code: violating_code)
-
-    ShareFiltering.stubs(:find_share_failure).with(violating_code, 'en', exceptions: true).raises(
-      ProfanityFilterException.new(
-        "Profanity Failure",
-        ShareFailure.new('profanity', 'damn')
-      )
-    )
-
-    # run the job
-    perform_enqueued_jobs do
-      EvaluateRubricJob.perform_later(user_id: @student.id, requester_id: @student.id, script_level_id: @script_level.id)
-    end
-
-    assert_equal SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:PROFANITY_VIOLATION], RubricAiEvaluation.where(user_id: @student.id).first.status
-  end
-
   test "job fails when the code contains PII violations" do
     AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
 
@@ -195,10 +165,10 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
     stub_get_openai_evaluations(code: violating_code)
 
-    ShareFiltering.stubs(:find_share_failure).with(violating_code, 'en', exceptions: true).raises(
+    ShareFiltering.stubs(:find_pii_failure).with(violating_code, exceptions: true).raises(
       PIIFilterException.new(
         "PII Failure",
-        ShareFailure.new('email', '123-456-7890')
+        ShareFailure.new('phone', '123-456-7890')
       )
     )
 
@@ -240,12 +210,12 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       )
     )
 
-    # ensure firehose event is logged
-    FirehoseClient.instance.expects(:put_record).with do |stream, data|
-      data[:study] == AiRubricMetrics::AI_RUBRICS_FIREHOSE_STUDY &&
-        data[:event] == 'rate-limit' &&
-        JSON.parse(data[:data_json])['agent'].nil? &&
-        stream == :analysis
+    # ensure cloudwatch event is logged
+    CDO.log.expects(:info).with do |data|
+      data = JSON.parse(data)
+      data['study'] == AiRubricMetrics::AI_RUBRICS_STUDY &&
+        data['event'] == 'rate-limit' &&
+        data['data_json']['agent'].nil?
     end
 
     # Run the job (and track attempts)
@@ -290,12 +260,12 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       )
     )
 
-    # ensure firehose event is logged
-    FirehoseClient.instance.expects(:put_record).with do |stream, data|
-      data[:study] == AiRubricMetrics::AI_RUBRICS_FIREHOSE_STUDY &&
-        data[:event] == 'timeout-error' &&
-        JSON.parse(data[:data_json])['agent'].nil? &&
-        stream == :analysis
+    # ensure cloudwatch event is logged
+    CDO.log.expects(:info).with do |data|
+      data = JSON.parse(data)
+      data['study'] == AiRubricMetrics::AI_RUBRICS_STUDY &&
+        data['event'] == 'timeout-error' &&
+        data['data_json']['agent'].nil?
     end
 
     # Run the job (and track attempts)
@@ -343,12 +313,12 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       )
     )
 
-    # ensure firehose event is logged
-    FirehoseClient.instance.expects(:put_record).with do |stream, data|
-      data[:study] == AiRubricMetrics::AI_RUBRICS_FIREHOSE_STUDY &&
-        data[:event] == 'service-unavailable' &&
-        JSON.parse(data[:data_json])['agent'] == 'openai' &&
-        stream == :analysis
+    # ensure cloudwatch event is logged
+    CDO.log.expects(:info).with do |data|
+      data = JSON.parse(data)
+      data['study'] == AiRubricMetrics::AI_RUBRICS_STUDY &&
+        data['event'] == 'service-unavailable' &&
+        data['data_json']['agent'] == 'openai'
     end
 
     # Run the job (and track attempts)
@@ -396,12 +366,12 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       )
     )
 
-    # ensure firehose event is logged
-    FirehoseClient.instance.expects(:put_record).with do |stream, data|
-      data[:study] == AiRubricMetrics::AI_RUBRICS_FIREHOSE_STUDY &&
-        data[:event] == 'gateway-timeout' &&
-        JSON.parse(data[:data_json])['agent'] == 'openai' &&
-        stream == :analysis
+    # ensure cloudwatch event is logged
+    CDO.log.expects(:info).with do |data|
+      data = JSON.parse(data)
+      data['study'] == AiRubricMetrics::AI_RUBRICS_STUDY &&
+        data['event'] == 'gateway-timeout' &&
+        data['data_json']['agent'] == 'openai'
     end
 
     # Run the job (and track attempts)
@@ -611,7 +581,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
     s3_client.stub_responses(
       :get_object,
-      ->(context) do
+      lambda do |context|
         key = context.params[:key]
         obj = bucket[key]
         raise AiRubricConfig::StubNoSuchKey.new(key) unless obj
@@ -681,7 +651,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     post_stub = HTTParty.stubs(:post).with(
       uri,
       body: URI.encode_www_form(expected_form_data),
-      headers: {'Content-Type' => 'application/x-www-form-urlencoded'},
+      headers: {'Content-Type' => 'application/x-www-form-urlencoded', 'Authorization' => CDO.aiproxy_api_key},
       timeout: EvaluateRubricJob::AIPROXY_API_TIMEOUT
     )
 
@@ -709,7 +679,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     version_id: 'fake-version-id',
     include_exact_confidence: true
   )
-    _owner_id, project_id = storage_decrypt_channel_id(channel_id)
+    _owner_id, project_id = get_storage_id_and_project_id(channel_id)
     rubric_ai_eval = RubricAiEvaluation.where(user_id: user.id).order(updated_at: :desc).first
     assert_equal project_id, rubric_ai_eval.project_id
     assert_equal version_id, rubric_ai_eval.project_version

@@ -1,0 +1,23 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-12-22T17:40:24.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Fallback Value\n\nA **fallback value** is a default shown when data is missing or null. \n\n**Example:** Filling in a `null` value with the fallback value `\"Guest\"`",
+        "imageUrl": "https://images.code.org/ef7389fabe92bd547511b16156cb61cb-fallback.png",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-top-left"
+      }
+    ],
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-22T17:40:24.523+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson5-vocab-fallback-value-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson5-vocab-fallback-value-test-2025\"}]"
+}]]></config>
+</Panels>

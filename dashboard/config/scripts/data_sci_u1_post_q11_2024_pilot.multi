@@ -1,0 +1,15 @@
+name 'Data Sci U1 Post Q11_2024-pilot'
+
+question 'An online retailer has been found to be using customer purchase data without explicit consent to create targeted marketing campaigns. Which data rights are being violated and what actions should the company take to rectify the situation?'
+
+right 'Right to privacy and consent; the company should obtain explicit consent from customers, and only use data for those who opt-in to data collection.'
+wrong 'Right to data access; the company should allow customers to view their data and ensure that they have control over how it is used.'
+wrong 'Right to data portability; the company should allow customers to transfer their data to another service provider if they choose to do so.'
+wrong 'Right to be forgotten; the company should delete all customer data immediately upon request to comply with data protection regulations.'
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

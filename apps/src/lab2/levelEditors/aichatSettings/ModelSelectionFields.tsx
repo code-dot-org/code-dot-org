@@ -1,12 +1,14 @@
-import React, {useContext, useState, useCallback} from 'react';
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
+import {Typography} from '@mui/material';
+import React, {useContext, useState, useCallback, useMemo} from 'react';
 
 import {modelDescriptions} from '@cdo/apps/aichat/constants';
 import {Visibility} from '@cdo/apps/aichat/types';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
-import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
-import {BodyFourText} from '@cdo/apps/componentLibrary/typography';
+import {ValueOf} from '@cdo/apps/types/utils';
+import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
-import FieldSection from './FieldSection';
+import CollapsibleFieldSection from './CollapsibleFieldSection';
 import {UpdateContext} from './UpdateContext';
 
 import moduleStyles from './edit-aichat-settings.module.scss';
@@ -16,30 +18,34 @@ const modelDropdownItems = modelDescriptions.map(model => {
 });
 
 const ModelSelectionFields: React.FunctionComponent = () => {
-  const {setModelSelectionValues, aichatSettings} = useContext(UpdateContext);
+  const {setModelSelectionValues, setMultimodalEnabled, aichatSettings} =
+    useContext(UpdateContext);
   const shouldDisableAdditionalModelSelection =
     aichatSettings.visibilities.selectedModelId !== Visibility.EDITABLE;
   const selectedModelId = aichatSettings.initialCustomizations.selectedModelId;
   const [additionalAvailableModelIds, setAdditionalAvailableModelIds] =
-    useState<string[]>(
+    useState<ValueOf<typeof AiChatModelIds>[]>(
       aichatSettings.availableModelIds?.filter(id => id !== selectedModelId) ||
         []
     );
 
   const onDropdownChange = useCallback(
     (e: React.ChangeEvent<HTMLSelectElement>) => {
-      setModelSelectionValues(additionalAvailableModelIds, e.target.value);
+      setModelSelectionValues(
+        additionalAvailableModelIds,
+        e.target.value as ValueOf<typeof AiChatModelIds>
+      );
     },
     [additionalAvailableModelIds, setModelSelectionValues]
   );
 
   const onCheckboxChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
-      let newAdditionalAvailableModelIds;
+      let newAdditionalAvailableModelIds: ValueOf<typeof AiChatModelIds>[];
       if (e.target.checked) {
         newAdditionalAvailableModelIds = [
           ...additionalAvailableModelIds,
-          e.target.name,
+          e.target.name as ValueOf<typeof AiChatModelIds>,
         ];
       } else {
         newAdditionalAvailableModelIds = additionalAvailableModelIds.filter(
@@ -52,8 +58,14 @@ const ModelSelectionFields: React.FunctionComponent = () => {
     [additionalAvailableModelIds, selectedModelId, setModelSelectionValues]
   );
 
+  const multimodalIncluded = useMemo(() => {
+    return aichatSettings.availableModelIds.some(
+      id => modelDescriptions.find(model => model.id === id)?.multimodal
+    );
+  }, [aichatSettings.availableModelIds]);
+
   return (
-    <FieldSection
+    <CollapsibleFieldSection
       fieldName="selectedModelId"
       labelText="Model Selection"
       description="The initial model selected for the chatbot."
@@ -69,14 +81,14 @@ const ModelSelectionFields: React.FunctionComponent = () => {
             size="s"
           />
           <br />
-          <BodyFourText>
+          <Typography variant="body4" gutterBottom>
             <i>
               Models available to the student to select from and compare to each
               other. If making this setting editable, it's best practice to
               select at least 2 models so students have something to compare -
               otherwise, consider making this read only or hidden.
             </i>
-          </BodyFourText>
+          </Typography>
           {modelDescriptions.map(model => {
             return (
               <div key={model.id} className={moduleStyles.fieldRow}>
@@ -97,6 +109,31 @@ const ModelSelectionFields: React.FunctionComponent = () => {
               </div>
             );
           })}
+          <br />
+          {multimodalIncluded && (
+            <>
+              <Typography variant="body4" gutterBottom>
+                <i>
+                  Enables multimodal chat. Note that the list of models must
+                  include a multimodal model for this feature to be available to
+                  students (currently only GPT 4o-mini).
+                </i>
+              </Typography>
+              <div className={moduleStyles.fieldRow}>
+                <label
+                  htmlFor="multimodalEnabled"
+                  className={moduleStyles.inlineLabel}
+                >
+                  Enable Multimodal Chat
+                </label>
+                <Checkbox
+                  name="multimodalEnabled"
+                  checked={aichatSettings.multimodalEnabled || false}
+                  onChange={e => setMultimodalEnabled(e.target.checked)}
+                />
+              </div>
+            </>
+          )}
         </>
       }
     />

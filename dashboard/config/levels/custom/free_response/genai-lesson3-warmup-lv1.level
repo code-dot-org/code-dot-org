@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Warm Up",
-    "long_instructions": "Imagine you are going to study abroad in a country where you don’t know the language, but you plan to learn it during your stay. You have 3 options for where to stay:\r\n\r\n- A hotel room with a bakery and restaurant on the ground floor\r\n- A barn on a farm that grows fruit and employs a mechanic that can repair farm equipment\r\n- An apartment across from a park next and to florist and their family who has lots of young children\r\n\r\n####**How do you think your choice of where to stay will affect how you will learn the new language?**",
+    "long_instructions": "Imagine you are going to study abroad in a country where you don’t know the language, but you plan to learn it during your stay. You have 3 options for where to stay:\r\n\r\n- A hotel room with a bakery and restaurant on the ground floor\r\n- A barn on a fruit farm with a shop that repairs farm equipment\r\n- An apartment across from a florist with several young children\r\n\r\n### As you try to learn the language and listen to conversations around you:\r\n#### - What are some words you think you'll learn no matter where you stay?\r\n#### - What are some specialized words you'll learn because of where you're staying?",
     "teacher_markdown": " Discussion Goal: Students should call out how they may learn the same conversational words and phrases in all three places - things like “Hello”, “goodbye”, “where is the bathroom?” - but they should call out how the secondary details in these scenarios may influence the types of words and phrases they learn. For example, in the hotel room, they are more likely to learn words associated with cooking and baking, whereas in the barn they are more likely to learn mechanical and technical terms. Emphasize how these differences are primarily due to circumstance and exposure rather than intent - whether you or not you wanted to learn certain phrases, the proximity to these situations makes it somewhat inevitable.",
     "allow_user_uploads": "false",
     "submittable": "false",
@@ -18,7 +18,7 @@
     "skip_dialog": true,
     "skip_sound": true
   },
-  "audit_log": "[{\"changed_at\":\"2024-07-16 14:00:08 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-07-16 14:00:08 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-09-26 20:05:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

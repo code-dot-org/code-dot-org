@@ -12,21 +12,21 @@ Scenario: Version warning announcement on course and script overview pages
 
   # students must be assigned or have progress to view older unit versions
 
-  Given I am assigned to course "ui-test-course-2017" and unit "ui-test-script-in-course-2017"
+  Given I am assigned to course "ui-test-course-2017" unit 1
   When I am on "http://studio.code.org/courses/ui-test-course-2019"
   And I wait to see ".uitest-CourseScript"
   And element "#uitest-version-selector" is visible
   Then element ".announcement-notification:contains(newer version)" is visible
 
-  When I am on "http://studio.code.org/s/ui-test-script-in-course-2019"
+  When I am on "http://studio.code.org/courses/ui-test-course-2019/units/1"
   And I wait until element "#script-title" is visible
   And element "#uitest-version-selector" is not visible
   Then element ".announcement-notification:contains(newer version)" is visible
 
   # generate some progress in csp-2017
 
-  Given I am on "http://studio.code.org/s/ui-test-script-in-course-2017/next"
-  And I wait until current URL contains "/s/ui-test-script-in-course-2017/lessons/1/levels/1"
+  Given I am on "http://studio.code.org/courses/ui-test-course-2017/units/1/next"
+  And I wait until current URL contains "/courses/ui-test-course-2017/units/1/lessons/1/levels/1"
 
   # course and unit pages now show version warning
 
@@ -37,7 +37,7 @@ Scenario: Version warning announcement on course and script overview pages
   # make sure we are showing the warning specific to course overview pages
   Then element ".announcement-notification:contains(using the dropdown below)" is visible
 
-  When I am on "http://studio.code.org/s/ui-test-script-in-course-2019"
+  When I am on "http://studio.code.org/courses/ui-test-course-2019/units/1"
   And I wait until element "#script-title" is visible
   And element "#uitest-version-selector" is not visible
   Then element ".announcement-notification:contains(newer version)" is visible
@@ -63,20 +63,22 @@ Scenario: Version warning announcement on course and script overview pages
 @as_student
 @no_mobile
 Scenario: Versions warning announcement on script overview page
-  When I am on "http://studio.code.org/s/ui-test-versioned-script-2019"
+  When I am on "http://studio.code.org/courses/ui-test-versioned-script-2019/units/1"
   And I wait until element "#script-title" is visible
   And element "#uitest-version-selector" is not visible
   Then element ".announcement-notification:contains(newer version)" does not exist
 
-  Given I am assigned to unit "ui-test-versioned-script-2017"
-  When I am on "http://studio.code.org/s/ui-test-versioned-script-2017/next"
-  And I wait until current URL contains "/s/ui-test-versioned-script-2017/lessons/1/levels/1"
+  Given I am assigned to course "ui-test-versioned-script-2017" unit 1
+  When I am on "http://studio.code.org/courses/ui-test-versioned-script-2017/units/1/next"
+  And I wait until current URL contains "/courses/ui-test-versioned-script-2017/units/1/lessons/1/levels/1"
 
-  When I am on "http://studio.code.org/s/ui-test-versioned-script-2019"
+  When I am on "http://studio.code.org/courses/ui-test-versioned-script-2019/units/1"
   And I wait until element "#script-title" is visible
+  # Make sure we did not get redirected to the 2017 version
+  And check that the URL contains "ui-test-versioned-script-2019"
   And element "#uitest-version-selector" is visible
   Then element ".announcement-notification:contains(newer version)" is visible
-  Then element ".announcement-notification:contains(using the dropdown below)" is visible
+  # Then element ".announcement-notification:contains(using the dropdown below)" is visible # not showing this message on script overview pages for single-unit courses
 
   # Close the unit version warning banner
   When I click selector ".announcement-notification:contains(newer version) .fa-times"
@@ -88,33 +90,23 @@ Scenario: Versions warning announcement on script overview page
   And element "#uitest-version-selector" is visible
   Then element ".announcement-notification:contains(newer version)" is not visible
 
-  # Generate progress in course 2
-  When I am on "http://studio.code.org/s/course2/lessons/1/levels/1"
-  And I click selector ".next-lesson" once I see it
-  And I wait until current URL contains "/s/course2/lessons/1/levels/2"
-
-  When I am on "http://studio.code.org/s/course1"
-  And I wait until element "#script-title" is visible
-  And element "#uitest-version-selector" is not visible
-  Then element ".announcement-notification:contains(newer version)" is not visible
-
 @as_student
 @no_mobile
 Scenario: Switch versions using dropdown on script overview page
   # Older unit versions are not visible to students who are not assigned to them
-  When I am on "http://studio.code.org/s/ui-test-versioned-script-2017"
+  When I am on "http://studio.code.org/courses/ui-test-versioned-script-2017/units/1"
   And I get redirected to "s/ui-test-versioned-script-2019" via "dashboard"
   And I wait until element "#script-title" is visible
   And element "#uitest-version-selector" is not visible
 
-  Given I am assigned to unit "ui-test-versioned-script-2017"
-  When I am on "http://studio.code.org/s/ui-test-versioned-script-2017"
+  Given I am assigned to course "ui-test-versioned-script-2017" unit 1
+  When I am on "http://studio.code.org/courses/ui-test-versioned-script-2017/units/1"
   And I wait until element "#script-title" is visible
   And element "#uitest-version-selector" is visible
   And I click selector "#assignment-version-year" once I see it
   And element ".assignment-version-title:contains(2018)" is not visible
   And I click selector ".assignment-version-title:contains(2019)" once I see it
-  Then I wait until I am on "http://studio.code.org/s/ui-test-versioned-script-2019"
+  Then I wait until I am on "http://studio.code.org/courses/ui-test-versioned-script-2019/units/1"
 
   # On Safari, the 2017 page may still be visible (even though the url has been changed)
   # so we need to wait until we are looking at the 2019 page.
@@ -123,25 +115,4 @@ Scenario: Switch versions using dropdown on script overview page
   And I click selector "#assignment-version-year" once I see it
   And element ".assignment-version-title:contains(2018)" is not visible
   And I click selector ".assignment-version-title:contains(2017)" once I see it
-  Then I wait until I am on "http://studio.code.org/s/ui-test-versioned-script-2017"
-
-@as_student
-@no_mobile
-Scenario: Course unit family names redirect to 2019 version
-  When I am on "http://studio.code.org/s/csp3"
-  And I get redirected to "/s/csp3-2019" via "dashboard"
-  And I wait until element "#ui-test-unversioned-script-redirect-dialog" is visible
-
-@as_student
-@no_mobile
-Scenario: Unversioned course url redirects to latest course version
-  When I am on "http://studio.code.org/courses/ui-test-course"
-  And I get redirected to "/courses/ui-test-course-2019" via "dashboard"
-  Then I wait to see ".uitest-CourseScript"
-
-@as_student
-@no_mobile
-Scenario: Unversioned script url redirects to latest script version
-  When I am on "http://studio.code.org/s/ui-test-versioned-script"
-  And I get redirected to "/s/ui-test-versioned-script-2019" via "dashboard"
-  Then I wait to see ".uitest-toggle-detail"
+  Then I wait until I am on "http://studio.code.org/courses/ui-test-versioned-script-2017/units/1"

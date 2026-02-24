@@ -64,7 +64,7 @@
       "downButton",
       "upButton"
     ],
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"172bc998-cd09-4c74-b131-aa213350bceb\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"172bc998-cd09-4c74-b131-aa213350bceb\": {\r\n      \"name\": \"orange_cat_1\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/DAaR1J1Y060hafOcOQ1VbjKlWiEvaqf1/category_animals/orange_cat.png\",\r\n      \"frameSize\": {\r\n        \"x\": 166,\r\n        \"y\": 300\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"DAaR1J1Y060hafOcOQ1VbjKlWiEvaqf1\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\n  \"orderedKeys\": [\n    \"172bc998-cd09-4c74-b131-aa213350bceb\"\n  ],\n  \"propsByKey\": {\n    \"172bc998-cd09-4c74-b131-aa213350bceb\": {\n      \"name\": \"orange_cat_1\",\n      \"sourceUrl\": \"/api/v1/animation-library/DAaR1J1Y060hafOcOQ1VbjKlWiEvaqf1/category_animals/orange_cat.png\",\n      \"frameSize\": {\n        \"x\": 166,\n        \"y\": 300\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"DAaR1J1Y060hafOcOQ1VbjKlWiEvaqf1\"\n    }\n  }\n}",
     "preload_asset_list": null
   },
   "published": true,

@@ -1,0 +1,39 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2024-10-30T15:13:36.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "long_instructions": "# Use and Manipulate Variables\r\n\r\n::: details [Step 1]\r\nCreate a variable `score` and set it to `0`. Add `10` to `score` using the assignment operator `=`\r\n:::\r\n\r\n::: details [Step 2]\r\nCreate an expression that calculates a `total_score` variable by multiplying `score` by `3`.\r\n:::\r\n\r\n::: details [Step 3]\r\nDisplay the final values of `score` and `total_score`.\r\n:::",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# Variables\n\n\n# Expression\n\n\n# Print Statements\n\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzielztT+bG/E+il8eWjVFCjTlnAR5Se7\nTnMKlqghD69b3qjQ4RlLY1a0wJ2u32faNNQe5evcHV6uiP7O0FdVv/ZDvM9U\nZAIjC/0qiCtfH3bcNYFRgILifdWwzvfaWgq+BY/iX0udQRx+FDwsZfY4/Hln\nzyj0Y2zXy0CALxi9cqZoWn3Ajj28OTiIZUbZj4jVnF6+Zh4GoYf+pxbG+VE1\nN50FaJuob2277fBAJ4EB4SsGjVECMAE4+O5sYBaaapKc73PICNJTrbdY34Il\nsL2mL61CPp90z7gsqainYi8VssMsYuHBXnesxQqaeB6N8UW3lQ==\n",
+    "display_name": "Use and Manipulate",
+    "bubble_choice_description": "Practice using variables to perform basic operations.",
+    "thumbnail_url": "https://images.code.org/fe4a3d35a05137959adf72170f875e35-asterisk.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-30T15:13:36.288+00:00\",\"changed\":[\"cloned from \\\"IPP_SampleProgression_UMC_Practice_1a\\\"\"],\"cloned_from\":\"IPP_SampleProgression_UMC_Practice_1a\"},{\"changed_at\":\"2024-10-30 15:16:50 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-30 15:17:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-30 15:18:05 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-30 15:25:22 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-30 15:30:59 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-31 00:37:22 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-31 00:57:00 +0000\",\"changed\":[\"predict_settings\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

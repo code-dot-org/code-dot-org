@@ -1,5 +1,9 @@
 <Gamelab>
   <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2022-09-19T22:58:01.000Z",
+  "level_num": "custom",
+  "user_id": 155,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -89,7 +93,7 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"f072be7f-da15-4100-90d3-3b47b191f023\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"f072be7f-da15-4100-90d3-3b47b191f023\": {\r\n      \"name\": \"turtle\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/gamelab/.VAoZg.mBSE5KfYeq6Q44cUk8RhGhBYN/category_animals/turtle.png\",\r\n      \"frameSize\": {\r\n        \"x\": 300,\r\n        \"y\": 146\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \".VAoZg.mBSE5KfYeq6Q44cUk8RhGhBYN\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\n  \"orderedKeys\": [\n    \"f072be7f-da15-4100-90d3-3b47b191f023\"\n  ],\n  \"propsByKey\": {\n    \"f072be7f-da15-4100-90d3-3b47b191f023\": {\n      \"name\": \"turtle\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/.VAoZg.mBSE5KfYeq6Q44cUk8RhGhBYN/category_animals/turtle.png\",\n      \"frameSize\": {\n        \"x\": 300,\n        \"y\": 146\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \".VAoZg.mBSE5KfYeq6Q44cUk8RhGhBYN\"\n    }\n  }\n}",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "start_blocks": "var turtle = createSprite(200,200);\r\nturtle.setAnimation(\"turtle\");\r\nturtle.scale = 0.5;\r\n\r\nfunction draw() {\r\n  background(\"navy\");\r\n  if (keyDown(\"up\")) {\r\n    turtle.y = turtle.y - 3;\r\n  }\r\n  if (keyDown(\"down\")) {\r\n    turtle.y = turtle.y + 3;\r\n  }\r\n  if (keyDown(\"left\")) {\r\n    turtle = turtle.x - 3;\r\n  }\r\n  if (keyDown(\"right\")) {\r\n    turtle.x = turtle.x + 3;\r\n  }\r\n  drawSprites();\r\n}",
@@ -115,14 +119,10 @@
     "libraries_enabled": "false",
     "thumbnail_url": "https://images.code.org/56406a41abcf1fbcdd68fbb52316e2cb-image-1585830582648.24.44 AM.png",
     "encrypted_examples": "ip91jxWOurvBxzRdmYPFp6CFXs7fQg1QaGL6ZEEi6bbjuaRQsjhEz0DiBjgy\n+zZ4GitnErvRm3DcDwZvw8MDwQ==\n",
-    "preload_asset_list": null,
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "preload_asset_list": null
   },
-  "game_id": 50,
   "published": true,
-  "created_at": "2022-09-19T22:58:01.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-09-19T22:58:01.620+00:00\",\"changed\":[\"cloned from \\\"CSD games input debug1_2022\\\"\"],\"cloned_from\":\"CSD games input debug1_2022\"},{\"changed_at\":\"2023-01-14 20:11:41 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>

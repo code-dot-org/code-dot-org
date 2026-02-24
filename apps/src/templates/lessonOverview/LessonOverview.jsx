@@ -6,9 +6,8 @@ import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import styleConstants from '@cdo/apps/styleConstants';
 import CopyrightInfo from '@cdo/apps/templates/CopyrightInfo';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
@@ -29,7 +28,7 @@ import {DefaultLocale} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import Announcements from '../../code-studio/components/progress/Announcements';
-import FontAwesome from '../FontAwesome';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 
 import LessonStandards from './LessonStandards';
 import StyledCodeBlock from './StyledCodeBlock';
@@ -67,35 +66,17 @@ class LessonOverview extends Component {
         unitName: props.lesson.unit.displayName,
         unitLink: props.lesson.unit.link,
       },
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   }
 
-  recordAndHandleResource = (e, firehoseKey, action, url = null) => {
+  handleResource = (e, action, url = null) => {
     e.preventDefault(); // Prevent navigation to url until callback
-    const event =
-      action === ResourceActions.NAVIGATE ? 'open-pdf' : 'print-from-browser';
-    firehoseClient.putRecord(
-      {
-        study: 'pdf-click',
-        study_group: 'lesson',
-        event: event,
-        data_json: JSON.stringify({
-          name: this.props.lesson.key,
-          pdfType: firehoseKey,
-        }),
-      },
-      {
-        includeUserId: true,
-        callback: () => {
-          if (action === ResourceActions.NAVIGATE && url) {
-            window.location.href = url; // Navigate to the URL
-          } else if (action === ResourceActions.PRINT) {
-            window.print(); // Trigger the print dialog
-          }
-        },
-      }
-    );
+    if (action === ResourceActions.NAVIGATE && url) {
+      window.location.href = url; // Navigate to the URL
+    } else if (action === ResourceActions.PRINT) {
+      window.print(); // Trigger the print dialog
+    }
     return false;
   };
 
@@ -132,12 +113,7 @@ class LessonOverview extends Component {
         <a
           key={option.key}
           onClick={e =>
-            this.recordAndHandleResource(
-              e,
-              option.key,
-              ResourceActions.NAVIGATE,
-              option.url
-            )
+            this.handleResource(e, ResourceActions.NAVIGATE, option.url)
           }
           href={option.url}
         >
@@ -149,7 +125,7 @@ class LessonOverview extends Component {
         <a
           key={WINDOW_PRINT}
           onClick={e =>
-            this.recordAndHandleResource(e, WINDOW_PRINT, ResourceActions.PRINT)
+            this.handleResource(e, WINDOW_PRINT, ResourceActions.PRINT)
           }
           href="#"
         >
@@ -209,9 +185,6 @@ class LessonOverview extends Component {
             announcements={announcements}
             width={styleConstants['content-width']}
             viewAs={viewAs}
-            firehoseAnalyticsData={{
-              lesson_id: lesson.id,
-            }}
           />
         )}
         {displayVerifiedResourcesNotification && (
@@ -220,12 +193,7 @@ class LessonOverview extends Component {
             inLesson={true}
           />
         )}
-        <h1>
-          {i18n.lessonNumbered({
-            lessonNumber: lesson.position,
-            lessonName: lesson.displayName,
-          })}
-        </h1>
+        <h1 className="uitest-lesson-title">{lesson.title}</h1>
         <h2>{i18n.minutesLabel({number: lesson.duration})}</h2>
         <div style={styles.frontPage}>
           <div style={styles.left}>

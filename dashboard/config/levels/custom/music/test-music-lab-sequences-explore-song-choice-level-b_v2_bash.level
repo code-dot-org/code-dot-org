@@ -1,0 +1,84 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-08-15T18:44:35.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### will.i.am's \"I Like to Move It\" \r\n\r\nRecreate this portion of the song using will.i.am's **algorithm** below:\r\n\r\n1) First play the Bass and the Kick together\r\n2) Then add in the Percussion Kick\r\n3) Repeat Step 2\r\n4) Then add in the Percussion Beat\r\n\r\nFollow this **algorithm** to recreate this intro! Your code should sound like the example below!\r\n\r\n![](https://images.code.org/ee7f83ef0bb1c4e3c0bc439b899e7164-image-1745350282096.png)",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "sounds": {
+        "will_i_am_i_like_to_move_it": [
+          "bass_synth",
+          "drums_kick",
+          "drums_kick_perc",
+          "drums_kick_perc_snare"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together"
+          ]
+        },
+        "type": "flyout"
+      },
+      "packId": "will_i_am_i_like_to_move_it",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true
+    },
+    "display_name": "Recreate \"Move it\" ",
+    "thumbnail_url": "https://images.code.org/68f60897bb2ab85e6cddb4ee76bd8d9c-Screenshot 2025-03-07 at 3.08.52 PM.png",
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!",
+      "playerTitle": "Intro to \"Move It\" "
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-explore-song-choice-level-b_a41180f0-e370-4450-b9c7-ee5ce144ec15",
+        "message": "auto-pass for exemplar validation",
+        "next": true,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "bubble_choice_description": "Follow will.i.am's **algorithm** to recreate the intro to Move It",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_bash",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-08-15T18:44:35.973+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-song-choice-level-b_v2\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-song-choice-level-b_v2\"}]"
+}]]></config>
+  <blocks/>
+</Music>

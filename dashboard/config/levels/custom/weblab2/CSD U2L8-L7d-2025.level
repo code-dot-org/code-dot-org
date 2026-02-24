@@ -1,0 +1,74 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-01-28T05:21:03.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Debug the missing image 3",
+    "long_instructions": "# Debug: Missing Image\r\n\r\nSomeone has submitted a bug report on this web page. Can you fix the bug?\r\n\r\nWhat I expected to happen | What happened instead\r\n----------|----------\r\nThere is a second Pikachu image | There is alt text but no image\r\n# Do This\r\n1) Find and fix the problem that is causing the bug.\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "bubble_choice_description": "Use your debugging skills to figure out why the image is not appearing.",
+    "thumbnail_url": "https://images.code.org/e818708286a179a7177388243f1043f1-image-1564093852930.jpg",
+    "submittable": "false",
+    "hide_share_and_remix": "true",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n  </head>\n  <body>\n    <!-- info on Pikachu -->\n    <h1>Pikachu</h1>\n    <p>Pikachu is a yellow, furry, electric Pokemon. Pikachu is the mascot of the Pokemon franchise and is also one of the major mascots for Nintendo. Pikachu can be seen all over the world, appearing in original Pokemon video games and trading cards, on clothing, as stuffed animals, and even as life size costumes.</p>\n    <img src=\"Costume.jpg\" alt=\"Pikachu costume\">\n    <p>Photo by mentatdgt from Pexels</p>\n    <img src=\"Gameoy.jpg\" alt=\"Pikachu Game Boy\">\n    <p>Photo by Xabi Vazquez from Wikimedia</p>\n  </body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "GameBoy.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L8-L7d-2025/uuid/61461306-07d0-4229-b6fb-7dcadd6ea300.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "Costume.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L8-L7d-2025/uuid/663c79a4-c996-4d0d-8564-d1d74d7bf65b.jpg",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMrWCAxWj7bhVJrdUvEy\nnAj9VwIfatz0cdK4+3TfWvT/p2el9FNg+dkJsyUGxLVcWnnQqx8mTVjigxYp\nSn472K7JsdrRWQSGzbWZXi13iCHHi5fcGCrG0Hfb0LzSNJb/TTBmxM3OktMc\nZeczKBprmMOtSenE71jBhsN1vo+oqEZfxiAC+L3+78VMKARr4jhvcqRlh6gO\nfH/qw3xYdOE5GVSlNY+Ja82ZdjALI3C2Eu9TI3EKciDsFV80amFUnjfPmeMA\njUkJc+koXYyrpwjY+mo7wmp8c+BWnNGwfhSmRFWDaOJHZ0dud8IjzSe9ynGd\nlvp+XoZHrpVFfNE/e3giVdi17bN71Ar11pyoE4mWZ2qSbcyIEKwTFNUP7wf+\nZspazRhUC8enBdsICkEMDCcNW1/ZQ9XOQPAltLHfg3tQoX6OCRuvTpZoGjea\nHIXKT6aS03GwTdViyLAI3CKWM5bhnZsjwxmhcbetM6OxKSFsnRHI6TQYRiQA\nWfbQGdnfpj9MycZpOIwo5Wt6YtmDp73c+23v/GkaoNYu+kWVDyNEAaEj1qRk\nzw/Fu/GHeoF44MEBkYSTCTCPyOHbNFVWh+YHC9ijTRUMghWwLP7yb55J+4WF\nwqjOB5GZd/lLL8swCPmrpgFDH9xuwl8XmEOv0qgD0ThXBezE55Ljn9pyowC0\nbJqQRI38tAEmW99zFgVgDJA7qGqtaE32yFQqDSlxY+JGGWGu0d9g0DVLBMNk\nESycBYz2hrJ/vlxiET/PXK0QkmfpS5Disa/QUJ63x7PRLeDt9S5Pvts76SP1\nplKPRUSS2oeahVI5eDBS5/9yZ0YLJ8TjzI8iz+cuRYOCx1HZMFEPFRbJ/jg5\npaDcT55DF5lkWR9kJbTzoibyrKo/Pq16499tjhgJjrFNVZsncNNu9ZIpY9yF\nUxhuFSzXPd/80s6usU48tHJ8sOfdtqfDr/Dc7Qvdf05WarOCq3jqPXZXowb5\nTkwIDNUQ9uq40qwPe5GfXzVReehiKc4WxXLTjxfYahDyg27cV/0pRg8wQyJs\nO8lI+XNZ+qrd2yjbHDoyiFR0aFkNTDYB4a9m7iEFnTwUk7ZOSFlhbJ6ALZSF\nOGB3qLW9VAx40xdHwDhr9tUbIpy/puk5JwzdaVlWhTtk6TvOjToUdguajRxx\n0svCS86B/jiAe1injo1yT3UgpXAbVULyDRIgyl5wnMpV3+2G8I7wQMkvcyR7\nOlGgnzFXY/bB2s9z3QxVogB0GR7+Rpzk6dibJfpQrfla6yeQeAQzNjz+SPc1\nWMipbZy6lC36YmUR8yZIUrLGeZaKydtuchmaa6Dy2yvhs32KpZFp2W61+hgi\nxsgaMpMMupRx+twyEM4XVnQxUc3xDkXUrEcOYatuJK7EuckuZxO1h+bStZDr\nlncB1rsiecl30dPDRnFkqkbQXauAbdwUpLBUa54vMU9FDT3bL9OvcCBaWWM2\n4IGou0seY6czwYICLqVEKLZapj4YdFJHIc/YWA2bpoBLz1Tve/xFknGglLkn\nDZ3DZippt9+hIZzVlbZofKT+aFVqod6ZT6EVzzmjCE8xxoAZkeDAYBeNcW4l\n9f66gFLXz/M0I8D5GrmUEPvUkSMnDS1waVksP/wfNmqU\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-01-28 05:25:18 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-28 05:25:37 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

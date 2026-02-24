@@ -1,0 +1,39 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2024-10-30T15:20:48.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "long_instructions": "# Combine Variables and Operators\r\n\r\n::: details [Step 1]\r\nCreate variables for `hours_worked` and `hourly_rate`. Assign values of your choosing.\r\n:::\r\n\r\n::: details [Step 2]\r\nUse these variables to calculate `total_pay` by multiplying `hours_worked` by the `hourly_rate`.\r\n:::\r\n\r\n::: details [Step 3]\r\nPrint the result for `total_pay`.\r\n:::",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# Variables\n\n\n# Expression\n\n\n# Print Statements\n\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzlHj6dnTu7uq6OIBxXb9C1B/YT+43VOx\n/N7h6UHDxEk9lQssomddQEuZV2/SzLQstYMlaa++Ho/r2eTjh13UeRn5RkyZ\n1BNZXynqtMCrWJvmyPt5O9MqEn0uUU4sUSZ44cDRs0thk7QK7O6ImQarOSxI\nk2X2KuxeN+Ov4al8rt14QsXYVN3nqyFwUoOgwMN2EVoG+hXHFWi6jeOBFxXy\nZgIY6KI8mrtgCZ6MdLrtRqc6B8utIDAQWjl3MpKLV6yFWLfNMrQiwz6R7yvg\nTZcczOJogZyt7/EBZu+UdT4J4Aqb\n",
+    "display_name": "Variables and Operators",
+    "bubble_choice_description": "Practice combining variables and operators to create expressions and display results.",
+    "thumbnail_url": "https://images.code.org/e6ceff710712611c4cbcc5fc7dbe5c66-assignment-operator.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-30T15:20:48.978+00:00\",\"changed\":[\"cloned from \\\"IPP_SampleProgression_UMC_Practice_2\\\"\"],\"cloned_from\":\"IPP_SampleProgression_UMC_Practice_2\"},{\"changed_at\":\"2024-10-30 15:23:49 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-30 15:31:13 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-31 00:39:46 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-31 00:56:24 +0000\",\"changed\":[\"predict_settings\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

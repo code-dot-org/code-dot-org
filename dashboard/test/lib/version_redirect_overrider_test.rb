@@ -1,15 +1,13 @@
 require 'test_helper'
 
 class VersionRedirectOverriderTest < ActiveSupport::TestCase
-  self.use_transactional_test_case = true
-
   setup_all do
     # stub writes so that we dont actually make updates to filesystem
     File.stubs(:write)
 
-    @script = create :script
-    @unit_group = create :unit_group
-    create :unit_group_unit, unit_group: @unit_group, script: @script, position: 1
+    @script = create(:script)
+    @unit_group = create(:unit_group)
+    create(:unit_group_unit, unit_group: @unit_group, script: @script, position: 1)
     @script.reload
     @unit_group.reload
   end

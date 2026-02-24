@@ -1,0 +1,11 @@
+name 'music-lab-loops-practice-challenge_v2'
+display_name 'Challenge'
+description 'Choose an option below to try to recreate with code.'
+
+sublevels
+level 'music-lab-loops-practice-challenge-a_v2'
+level 'music-lab-loops-practice-challenge-b_v2'
+level 'music-lab-loops-practice-challenge-c_v2'
+level 'test-music-lab-loops-practice-choice-b_v2'
+level 'music-lab-loops-practice-challenge-freeplay_v2'
+uses_lab2

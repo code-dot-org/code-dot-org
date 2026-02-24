@@ -1,0 +1,50 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-01-24T00:19:17.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**Scenario:** The hero needs to water all the plants in the magical garden. \r\n\r\n## Do This\r\n- Refactor the function to use a while loop. Use this code: \r\n\r\n`\r\n    \r\n    def water_plants():\r\n    \twhile hero.has_potion(\"watering\"):\r\n        hero.water(\"plant\")\r\n        hero.move()\r\n        \r\n    water_plants()\r\n    \r\n- Modify the code so the hero moves first, then waters the plants. ",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "from support import hero\n\ndef water_plants():\n    hero.water(\"plant\")\n    hero.move()\n    hero.water(\"plant\")\n    hero.move()\n    hero.water(\"plant\")\n    hero.move()\n    hero.water(\"plant\")\n    hero.move()\n    hero.water(\"plant\")\n    hero.move()\n    hero.water(\"plant\")\n    hero.move()\n    hero.water(\"plant\")\n    hero.move()\n    hero.water(\"plant\")\n\nwater_plants()\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "support.py",
+          "language": "py",
+          "contents": "import random\n\n# Simulated Hero class\nclass Hero:\n    def __init__(self):\n        self.potions = {\"watering\": 8}  # Initial number of watering potions\n        self.plants_watered = 0        # Total plants watered\n        self.steps = 0                 # Steps taken\n\n    # Check if hero has the specified potion\n    def has_potion(self, potion_type):\n        return self.potions.get(potion_type, 0) > 0\n\n    # Use the specified potion\n    def use_potion(self, potion_type):\n        if self.has_potion(potion_type):\n            self.potions[potion_type] -= 1\n\n    # Water a plant\n    def water(self, target):\n        if self.has_potion(\"watering\"):\n            self.use_potion(\"watering\")\n            self.plants_watered += 1\n            print(f\"💧 You watered a {target}! Total plants watered: {self.plants_watered}\")\n        else:\n            print(\"🚫 No watering potions left!\")\n\n    # Move to the next location\n    def move(self):\n        self.steps += 1\n        print(f\"➡️ Moved to step {self.steps}\")\n\n# Instantiate the hero object\nhero = Hero()\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "support"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-24T00:19:17.069+00:00\",\"changed\":[\"cloned from \\\"python-intro-console-lesson7-brew\\\"\"],\"cloned_from\":\"python-intro-console-lesson7-brew\"},{\"changed_at\":\"2025-01-24 00:20:04 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-24 00:25:52 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-24 00:28:32 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-24 00:29:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-24 00:29:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-24 00:31:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Pythonlab>

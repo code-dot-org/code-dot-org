@@ -8,6 +8,14 @@
     "csd5-2020",
     "csd6-2020"
   ],
+  "original_script_names": [
+    "csd2-2020",
+    "csd1-2020",
+    "csd4-2020",
+    "csd5-2020",
+    "csd6-2020",
+    "csd3-2020"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

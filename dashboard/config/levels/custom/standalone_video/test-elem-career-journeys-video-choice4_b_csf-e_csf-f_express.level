@@ -1,0 +1,26 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2025-05-02T00:05:36.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "uses_lab2": true,
+    "background": "music-black",
+    "encrypted": "false",
+    "video_key": "music-lab-roxanne-sound-designer",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "video_full_width": true,
+    "name_suffix": "_express",
+    "bubble_choice_description": "<i class=\"fa-solid fa-video\"></i> **A video to explore:**\n\n- Sound Designer",
+    "thumbnail_url": "https://images.code.org/e14550a6ebbf5f3e0d3efd018cd2bb18-roxanne.jpg",
+    "display_name": "Sound Designer"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-02T00:05:36.759+00:00\",\"changed\":[\"cloned from \\\"test-elem-career-journeys-video-choice4_b_csf-e_csf-f\\\"\"],\"cloned_from\":\"test-elem-career-journeys-video-choice4_b_csf-e_csf-f\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

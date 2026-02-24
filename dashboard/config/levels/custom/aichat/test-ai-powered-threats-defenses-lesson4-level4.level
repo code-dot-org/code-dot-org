@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-07-29T16:40:01.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Create a Voice or Video Deep Fake Script\r\n\r\nUse AI Chat to generate the text for a phishing phone call or video script for a social media video that might convince your partner to do something.\r\n\r\n### Do This:\r\n\r\n1. Pick a persona you'd like to write the script as. Find pieces of text that this person has written or transcripts/quotes of things this person has said.\r\n   - Celebrity\r\n      - :::details [Example: Taylor Swift]\r\n           > “It’s here. It’s yours, it’s mine, it’s ours. It’s an album I wrote alone about the whims, fantasies, heartaches, dramas and tragedies I lived out as a young woman between 18 and 20. I remember making tracklist after tracklist, obsessing over the right way to tell the story. I had to be ruthless with my choices, and I left behind some songs I am still unfailingly proud of now.”\r\n           :::\r\n   - Family member\r\n   - School staff member\r\n\r\n2. Take on a persona to create a phone call or video script for a social media video that might convince your partner to do one of the following scenarios:\r\n   - Get person to **send money**\r\n   - **Click on a link** that’s a keylogger\r\n   - **Download** a virus\r\n   - **Send on to other people** a virus or worm\r\n   \r\n3. Prompt AI Chat to make the script more effective by utilizing one or more of following tactics:\r\n   - Emotional: fear, joy, etc.\r\n   - Time-sensitive: urgency\r\n   - Social conditioning: appeal to authority\r\n\r\n\r\n**Try it out!**\r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **Need a starting prompt?**]\r\n>Based on the following [quote/piece of writing/tweet/email/etc], generate a short [phone call/video] script that would convince someone to [click on a link/send money/download a file/forward the message to others]: [include text/quote here]\r\n:::\r\n&nbsp\r\n",
+    "submittable": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a phishing voice call or video script generator, being used for educational purposes. Students should prompt you to generate a script written from the persona of someone they provide text written or transcripts of that person speaking. Students should iteratively prompt you to adapt the script based on characteristics or strategies they would like to use in this script.\n\nKeep the scripts concise.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": false
+    },
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-07-29T16:40:01.580+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson3-level2\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson3-level2\"},{\"changed_at\":\"2025-07-29 16:46:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-07-29 17:17:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-07-29 17:38:35 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+}]]></config>
+</Aichat>

@@ -1,0 +1,43 @@
+@keyframes dot-animation {
+  from {
+    transform: scale(1.4, 1.4);
+    opacity: 1;
+  }
+}
+
+.waiting {
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 12px;
+  background-color: var(--background-neutral-tertiary);
+  border-radius: 16px;
+  box-sizing: border-box;
+  gap: 4px;
+
+  .dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--background-neutral-octonary);
+    border-radius: 50%;
+    animation-name: dot-animation;
+    animation-duration: 0.6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transform: scale(1, 1);
+    opacity: 0.5;
+
+    &:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    &:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+  }
+}

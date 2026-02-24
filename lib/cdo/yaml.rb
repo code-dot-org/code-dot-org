@@ -14,8 +14,10 @@ module Cdo
     end
 
     # Return +nil+ if file not found.
+    # Also load aliases by default, to mirror pre-Ruby-3.1 behavior
+    # See: https://stackoverflow.com/a/71192990/1810460
     def load_file(path)
-      super
+      super(path, aliases: true)
     rescue Errno::ENOENT
       nil
     end
@@ -29,7 +31,7 @@ module Cdo
     # method, we need to do so.
     def load_erb_file(path, binding = nil)
       # rubocop:disable Security/YAMLLoad
-      YAML.load(erb_file_to_string(path, binding), path)
+      YAML.load(erb_file_to_string(path, binding), aliases: true)
       # rubocop:enable Security/YAMLLoad
     rescue Errno::ENOENT
       nil

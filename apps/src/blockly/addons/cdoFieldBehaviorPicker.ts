@@ -1,21 +1,19 @@
-import {
-  FieldDropdownConfig,
-  FieldDropdownValidator,
-  MenuGeneratorFunction,
-} from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import {EMPTY_OPTION} from '../constants';
 
 import CdoFieldDropdown from './cdoFieldDropdown';
 
-type CustomMenuGenerator = CustomMenuOption[] | MenuGeneratorFunction;
+type CustomMenuGenerator =
+  | CustomMenuOption[]
+  | BlocklyCore.MenuGeneratorFunction;
 type CustomMenuOption = [string, string];
 
 export default class CdoFieldBehaviorPicker extends CdoFieldDropdown {
   constructor(
     menuGenerator?: CustomMenuGenerator,
-    validator?: FieldDropdownValidator,
-    config?: FieldDropdownConfig
+    validator?: BlocklyCore.FieldDropdownValidator,
+    config?: BlocklyCore.FieldDropdownConfig
   ) {
     super(menuGenerator, validator, config);
   }

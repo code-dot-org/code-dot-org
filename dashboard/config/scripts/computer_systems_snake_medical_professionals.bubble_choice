@@ -1,0 +1,9 @@
+name 'computer-systems-snake-medical-professionals'
+display_name 'Industry Professional for AI Snake Identification'
+description 'Explore how different professionals use the AI Snake Identification App to improve safety and medical outcomes. Choose a role and conduct an AI interview to understand their responsibilities, challenges, and how technology supports their work.'
+
+sublevels
+level 'computer-systems-doctor-sudan-aichat'
+level 'computer-systems-nurse-sudan-aichat'
+level 'computer-systems-wildlife-sudan-aichat'
+level 'computer-systems-local-sudan-aichat'

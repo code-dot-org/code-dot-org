@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "Potańcówka", body: "Koduj potańcówkę! Z udziałem Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, muzyka z Disneya \"Encanto,\" i więcej!", image: "/images/hoc2022-dance-party.png", url: "https://code.org/dance" }}
-
-{{ featured_tutorial, title: "Sztuka poezji", body: "Dodaj grafikę i animację do klasycznego wiersza w tej Godzinie Kodowania!" , image: "/shared/images/courses/logo_tall_poem-art.jpg", url: "https://studio.code.org/s/poem-art-2021/reset" }}
-
-{{ featured_tutorial, title: "Artysta", body: "Rysuj fajne obrazy i projekty z Artystą!", image: "/shared/images/courses/logo_tall_artist.jpg", url: "https://studio.code.org/s/artist/reset" }}
-
-{{ featured_tutorial, title: "Infinity Play Lab", body: "Użyj Play Lab, aby stworzyć historię lub grę z postaciami Disney Infinity.", image: "/shared/images/courses/logo_tall_infinity.jpg", url: "https://studio.code.org/s/infinity/reset" }}

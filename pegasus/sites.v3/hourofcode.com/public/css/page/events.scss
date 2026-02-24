@@ -1,0 +1,27 @@
+// Styles for hourofcode.com/events
+
+section.sweepstakes {
+  background: linear-gradient(110deg, #6977CD -10.82%, #BCDEDE 43.13%, #34DFE5 68.88%, #688AED 95.85%);
+
+  p a {
+    color: var(--neutral_dark);
+  }
+
+  ul, li {
+    all: unset;
+  }
+
+  li {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+
+    &:before {
+      display: none;
+    }
+
+    p {
+      font-weight: 600;
+    }
+  }
+}

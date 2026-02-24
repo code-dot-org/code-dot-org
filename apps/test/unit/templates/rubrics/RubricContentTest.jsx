@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -10,13 +11,14 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 import RubricContent from '@cdo/apps/templates/rubrics/RubricContent';
+import teacherRubric from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 describe('RubricContent', () => {
   let store;
   beforeEach(() => {
     stubRedux();
-    registerReducers({teacherSections, teacherPanel});
+    registerReducers({teacherRubric, teacherSections, teacherPanel});
     store = getStore();
   });
 
@@ -45,6 +47,7 @@ describe('RubricContent', () => {
     lesson: {
       position: 3,
       name: 'Data Structures',
+      title: 'Data Structures',
     },
     level: {
       name: 'test_level',
@@ -136,18 +139,18 @@ describe('RubricContent', () => {
 
   it('shows level title when teacher is viewing student work', () => {
     const wrapper = shallow(<RubricContent {...defaultProps} />);
-    expect(wrapper.find('Heading3').at(0).props().children).toBe(
-      'Lesson 3: Data Structures'
-    );
+    const title = wrapper.find(Typography).at(0);
+    expect(title.props().variant).toBe('h3');
+    expect(title.props().children).toBe('Data Structures');
   });
 
   it('shows level title when teacher is not viewing student work', () => {
     const wrapper = shallow(
       <RubricContent {...defaultProps} studentLevelInfo={null} />
     );
-    expect(wrapper.find('Heading3').at(0).props().children).toBe(
-      'Lesson 3: Data Structures'
-    );
+    const title = wrapper.find(Typography).at(0);
+    expect(title.props().variant).toBe('h3');
+    expect(title.props().children).toBe('Data Structures');
   });
 
   it('shows student data if provided', () => {

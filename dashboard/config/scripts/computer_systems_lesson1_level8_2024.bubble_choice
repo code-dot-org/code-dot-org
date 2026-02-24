@@ -1,0 +1,9 @@
+name 'computer-systems-lesson1-level8-2024'
+display_name 'Industry Professional for AI Snake Identification'
+description 'Explore how different professionals use the AI Snake Identification App to improve safety and medical outcomes. Choose a role and conduct an AI interview to understand their responsibilities, challenges, and how technology supports their work.'
+
+sublevels
+level 'computer-systems-lesson1-level8a-2024'
+level 'computer-systems-lesson1-level8b-2024'
+level 'computer-systems-lesson1-level8c-2024'
+level 'computer-systems-lesson1-level8d-2024'

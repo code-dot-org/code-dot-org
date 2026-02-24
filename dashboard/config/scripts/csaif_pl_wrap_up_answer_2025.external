@@ -1,0 +1,58 @@
+name 'csaif_pl_wrap-up_answer_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+#Check for Understanding: Answer
+
+<table style="width: 100%; border-collapse: separate; border-spacing: 20px; font-family: Arial, sans-serif;">
+  <tr>
+    <td style="width: 30%; background-color: #fff; border: 3px solid #ccc; padding: 20px; text-align: center; vertical-align: middle; border-radius: 10px;">
+      Personally Identifiable Information
+    </td>
+    <td style="width: 65%; background-color: #fff; border: 3px solid #a7dff3; padding: 20px; text-align: center; vertical-align: middle; border-radius: 10px;">
+      a wireless access point that gives unauthorized access to secure networks
+    </td>
+  </tr>
+  <tr>
+    <td style="background-color: #fff; border: 3px solid #ccc; padding: 20px; text-align: center; border-radius: 10px;">
+      Phishing
+    </td>
+    <td style="background-color: #fff; border: 3px solid #a7dff3; padding: 20px; text-align: center; border-radius: 10px;">
+      a technique that attempts to trick a user into providing personal information.
+    </td>
+  </tr>
+  <tr>
+    <td style="background-color: #fff; border: 3px solid #ccc; padding: 20px; text-align: center; border-radius: 10px;">
+      Decryption
+    </td>
+    <td style="background-color: #fff; border: 3px solid #a7dff3; padding: 20px; text-align: center; border-radius: 10px;">
+      pairs a public key for encryption and a private key for decryption
+    </td>
+  </tr>
+  <tr>
+    <td style="background-color: #fff; border: 3px solid #ccc; padding: 20px; text-align: center; border-radius: 10px;">
+      Rogue Access Point
+    </td>
+    <td style="background-color: #fff; border: 3px solid #a7dff3; padding: 20px; text-align: center; border-radius: 10px;">
+      a process that takes a secret message and reproduces the original plain text
+    </td>
+  </tr>
+    <tr>
+    <td style="background-color: #fff; border: 3px solid #ccc; padding: 20px; text-align: center; border-radius: 10px;">
+      Public Key Encryption
+    </td>
+    <td style="background-color: #fff; border: 3px solid #a7dff3; padding: 20px; text-align: center; border-radius: 10px;">
+      pairs a public key for encryption and a private key for decryption
+    </td>
+  </tr>
+    <tr>
+    <td style="background-color: #fff; border: 3px solid #ccc; padding: 20px; text-align: center; border-radius: 10px;">
+      Malware
+    </td>
+    <td style="background-color: #fff; border: 3px solid #a7dff3; padding: 20px; text-align: center; border-radius: 10px;">
+      software intended to damage or to take partial control over a computing system
+    </td>
+  </tr>
+</table>
+MARKDOWN

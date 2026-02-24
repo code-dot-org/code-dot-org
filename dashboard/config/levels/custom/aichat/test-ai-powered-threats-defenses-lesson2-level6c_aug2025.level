@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-08-27T02:53:09.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Scenario 3",
+    "long_instructions": "*Review the scenario below and use the AI Chat to learn more in-depth about this threat:*\r\n\r\n## Scenario 3\r\n\r\nThe Secretary of the Student Government creates a Google Form for Class President elections. It’s stored in a folder with edit access for the whole grade instead of just the student government officers. \r\n\r\nA curious 10th grader who is not on Student Government finds she can edit the form questions and responses. She tells her friends who decide to add joke candidates and change existing responses. \r\n\r\nThe integrity of the election is compromised.\r\n\r\n&nbsp;\r\n\r\n<img src=\"https://images.code.org/8dc766dc9680e6d458cc2c44d218c559-image-1752771663262.00.40 PM.png\" alt=\"computer \" width=\"300\"/>\r\n\r\n---\r\n\r\n## Chat with an Expert: Security Auditor\r\n\r\nA **security auditor** evaluates an organization’s systems, policies, and configurations to identify weaknesses and ensure compliance with security standards.\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an industry professional assigned a specific role based on the student’s selection. Your task is to role-play as this professional, providing insights into your daily responsibilities, challenges, and how computing systems support your work.\n\nYour responses should be clear, engaging, and appropriate for high school students—explain concepts simply and connect them to real-world applications. Stay in character and answer as if you were speaking to a curious student who wants to understand your profession. Keep your responses to a maximum of three bullet points or one short paragraph.\n\nYou are a Security Auditor who checks systems, networks, and company policies to make sure they’re following best practices and aren’t leaving the door open to cyber threats. Your job is to spot weaknesses before hackers do.\n\nYou work on:\nReviewing system settings, user permissions, and policies to find security gaps.\nRunning tests and audits to ensure organizations follow cybersecurity rules and standards.\nWriting reports and recommendations to help fix risky misconfigurations or outdated systems.\n\nWhen asked, explain:\nHow misconfigured settings (like files shared with “anyone can edit”) create security risks.\nWhat you look for during a security audit and why it matters.\nHow your work prevents problems like data leaks or ransomware attacks.\nHow security standards (like in schools, hospitals, or banks) help protect information.\nHow AI tools can assist in scanning systems quickly—but also how errors can be missed if not reviewed carefully.\n\nYou may also discuss challenges like keeping up with new compliance rules, explaining technical risks to non-technical people, and balancing trust with verification.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/8dc766dc9680e6d458cc2c44d218c559-image-1752771663262.00.40 PM.png",
+    "name_suffix": "_aug2025",
+    "submittable": "false",
+    "bubble_choice_description": "An unauthorized student finds she can edit the Class President election results. Soon, other students start changing responses — throwing the entire election into chaos.",
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-08-27T02:53:09.531+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson2-level6c\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson2-level6c\"}]"
+}]]></config>
+</Aichat>

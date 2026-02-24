@@ -1,5 +1,9 @@
 <Gamelab>
   <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2022-03-30T23:40:30.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -91,7 +95,7 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
     "callout_json": "[]",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"61daa2af-1e7f-49c4-9b44-a5b48b1989db\",\r\n    \"4de26def-340a-4ef6-a4f9-0ffa8343911b\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"61daa2af-1e7f-49c4-9b44-a5b48b1989db\": {\r\n      \"name\": \"blender\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/RyJYRPyX336xINHfnjjje20ezyEHSsNV/category_generic_items/blender.png\",\r\n      \"frameSize\": {\r\n        \"x\": 89,\r\n        \"y\": 136\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"RyJYRPyX336xINHfnjjje20ezyEHSsNV\"\r\n    },\r\n    \"4de26def-340a-4ef6-a4f9-0ffa8343911b\": {\r\n      \"name\": \"mixer\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/XVFoHovR5jk1mcWw90kpNnrdFxZTyuza/category_generic_items/mixer.png\",\r\n      \"frameSize\": {\r\n        \"x\": 132,\r\n        \"y\": 109\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"XVFoHovR5jk1mcWw90kpNnrdFxZTyuza\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\n  \"orderedKeys\": [\n    \"61daa2af-1e7f-49c4-9b44-a5b48b1989db\",\n    \"4de26def-340a-4ef6-a4f9-0ffa8343911b\"\n  ],\n  \"propsByKey\": {\n    \"61daa2af-1e7f-49c4-9b44-a5b48b1989db\": {\n      \"name\": \"blender\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/RyJYRPyX336xINHfnjjje20ezyEHSsNV/category_generic_items/blender.png\",\n      \"frameSize\": {\n        \"x\": 89,\n        \"y\": 136\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"RyJYRPyX336xINHfnjjje20ezyEHSsNV\"\n    },\n    \"4de26def-340a-4ef6-a4f9-0ffa8343911b\": {\n      \"name\": \"mixer\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/XVFoHovR5jk1mcWw90kpNnrdFxZTyuza/category_generic_items/mixer.png\",\n      \"frameSize\": {\n        \"x\": 132,\n        \"y\": 109\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"XVFoHovR5jk1mcWw90kpNnrdFxZTyuza\"\n    }\n  }\n}",
     "instructions_important": "false",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
@@ -129,10 +133,6 @@
     "thumbnail_url": "https://images.code.org/6b0df2eb4a2b61ae12ded3249a4ed1ab-image-1585766972590.gif",
     "preload_asset_list": null
   },
-  "level_num": "custom",
-  "game_id": 50,
-  "created_at": "2022-03-30T23:40:30.000Z",
-  "user_id": 1,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:40:30.097+00:00\",\"changed\":[\"cloned from \\\"CSD U3 If Else_2021\\\"\"],\"cloned_from\":\"CSD U3 If Else_2021\"}]"

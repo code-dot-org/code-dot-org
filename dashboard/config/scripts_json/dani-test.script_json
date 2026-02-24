@@ -1,0 +1,500 @@
+{
+  "script": {
+    "name": "dani-test",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-02-20 19:41:51 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "dani-test"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "dani-test"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Web Lab 2 Test - October 2025",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dani-test"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Network Panel Test",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "dani-test"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Diffs Test",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "dani-test"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "e37645a8-bab8-42b3-8c8a-67e7d4772237",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e37645a8-bab8-42b3-8c8a-67e7d4772237",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dani-test"
+      }
+    },
+    {
+      "key": "4c6ed450-909d-4a01-805c-10e8b3c46ea2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4c6ed450-909d-4a01-805c-10e8b3c46ea2",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "dani-test"
+      }
+    },
+    {
+      "key": "b6f0bdb0-8d7d-4355-9db8-e3e3ebfbfdec",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b6f0bdb0-8d7d-4355-9db8-e3e3ebfbfdec",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "dani-test"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "937cf05b-9d81-451b-b22e-9d880d80591b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "937cf05b-9d81-451b-b22e-9d880d80591b",
+        "lesson_activity.key": "e37645a8-bab8-42b3-8c8a-67e7d4772237"
+      }
+    },
+    {
+      "key": "46e41883-2985-48e8-9192-17ff95378d4e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "46e41883-2985-48e8-9192-17ff95378d4e",
+        "lesson_activity.key": "4c6ed450-909d-4a01-805c-10e8b3c46ea2"
+      }
+    },
+    {
+      "key": "633081a8-1333-40f8-834d-2859935d90bb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "633081a8-1333-40f8-834d-2859935d90bb",
+        "lesson_activity.key": "b6f0bdb0-8d7d-4355-9db8-e3e3ebfbfdec"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dani Test - Sketch Lab - Oct25"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dani Test - Sketch Lab - Oct25"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dani-test",
+        "activity_section.key": "937cf05b-9d81-451b-b22e-9d880d80591b"
+      },
+      "level_keys": [
+        "Dani Test - Sketch Lab - Oct25"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dani Test - Web Lab 2 - Oct25"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dani Test - Web Lab 2 - Oct25"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dani-test",
+        "activity_section.key": "937cf05b-9d81-451b-b22e-9d880d80591b"
+      },
+      "level_keys": [
+        "Dani Test - Web Lab 2 - Oct25"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dani Test - Web Lab 2 - Oct25 -2"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dani Test - Web Lab 2 - Oct25 -2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dani-test",
+        "activity_section.key": "937cf05b-9d81-451b-b22e-9d880d80591b"
+      },
+      "level_keys": [
+        "Dani Test - Web Lab 2 - Oct25 -2"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Network Panel Test - 1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "dani-test",
+        "activity_section.key": "46e41883-2985-48e8-9192-17ff95378d4e"
+      },
+      "level_keys": [
+        "Network Panel Test - 1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Network Panel Test - 2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "dani-test",
+        "activity_section.key": "46e41883-2985-48e8-9192-17ff95378d4e"
+      },
+      "level_keys": [
+        "Network Panel Test - 2"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Network Panel Test - 3"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "dani-test",
+        "activity_section.key": "46e41883-2985-48e8-9192-17ff95378d4e"
+      },
+      "level_keys": [
+        "Network Panel Test - 3"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Diffs A - Update the Hero Section"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "dani-test",
+        "activity_section.key": "633081a8-1333-40f8-834d-2859935d90bb"
+      },
+      "level_keys": [
+        "Diffs A - Update the Hero Section"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Dani Test - Sketch Lab - Oct25",
+        "script_level.level_keys": [
+          "Dani Test - Sketch Lab - Oct25"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dani-test",
+        "activity_section.key": "937cf05b-9d81-451b-b22e-9d880d80591b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dani Test - Web Lab 2 - Oct25",
+        "script_level.level_keys": [
+          "Dani Test - Web Lab 2 - Oct25"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dani-test",
+        "activity_section.key": "937cf05b-9d81-451b-b22e-9d880d80591b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dani Test - Web Lab 2 - Oct25 -2",
+        "script_level.level_keys": [
+          "Dani Test - Web Lab 2 - Oct25 -2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dani-test",
+        "activity_section.key": "937cf05b-9d81-451b-b22e-9d880d80591b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Network Panel Test - 1",
+        "script_level.level_keys": [
+          "Network Panel Test - 1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "dani-test",
+        "activity_section.key": "46e41883-2985-48e8-9192-17ff95378d4e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Network Panel Test - 2",
+        "script_level.level_keys": [
+          "Network Panel Test - 2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "dani-test",
+        "activity_section.key": "46e41883-2985-48e8-9192-17ff95378d4e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Network Panel Test - 3",
+        "script_level.level_keys": [
+          "Network Panel Test - 3"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "dani-test",
+        "activity_section.key": "46e41883-2985-48e8-9192-17ff95378d4e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Diffs A - Update the Hero Section",
+        "script_level.level_keys": [
+          "Diffs A - Update the Hero Section"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "dani-test",
+        "activity_section.key": "633081a8-1333-40f8-834d-2859935d90bb"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+    {
+      "level_name": "Dani Test - Web Lab 2 - Oct25",
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dani-test"
+      }
+    }
+  ],
+  "learning_goals": [
+    {
+      "key": "50af102d-e36a-4c55-ae13-5c4a7ef502e4",
+      "position": 1,
+      "learning_goal": "Do what Dani asks",
+      "ai_enabled": false,
+      "tips": "You should do what I asked",
+      "seeding_key": {
+        "learning_goal.key": "50af102d-e36a-4c55-ae13-5c4a7ef502e4",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dani-test"
+      }
+    }
+  ],
+  "learning_goal_evidence_levels": [
+    {
+      "understanding": 0,
+      "teacher_description": "You did nothing",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "50af102d-e36a-4c55-ae13-5c4a7ef502e4",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dani-test"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "You did not much",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "50af102d-e36a-4c55-ae13-5c4a7ef502e4",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dani-test"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "You did it mostly",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "50af102d-e36a-4c55-ae13-5c4a7ef502e4",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dani-test"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "You did it exactly",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "50af102d-e36a-4c55-ae13-5c4a7ef502e4",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dani-test"
+      }
+    }
+  ]
+}

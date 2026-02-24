@@ -1,0 +1,140 @@
+@use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
+@import '../../../mixins.scss';
+@import '../mixins.scss';
+
+$preview-image-size: 48px;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding-top: 0.125rem;
+}
+
+%preview {
+  border-radius: variables.$default-border-radius;
+  position: relative;
+}
+
+.topRightIcon {
+  @include remove-button-styles;
+  z-index: 1;
+  font-size: 16px;
+  position: absolute;
+  right: -8px;
+  top: -8px;
+  color: var(--text-neutral-quaternary);
+  transition: opacity 0.2s ease, color 0.2s ease;
+
+  i {
+    background-color: var(--background-neutral-primary);
+    border-radius: 100%;
+  }
+
+  &Close {
+    color: var(--text-neutral-primary);
+    &:hover {
+      color: var(--text-error-primary);
+    }
+  }
+}
+
+.closeTooltipOverlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.closeTooltip {
+  @include fade-in(0.3s);
+}
+
+.preview-file {
+  @extend %preview;
+  display: flex;
+  gap: 0;
+  text-align: left;
+  align-items: center;
+
+  .fileIcon {
+    display: flex;
+    width: $preview-image-size;
+    height: $preview-image-size;
+    border-radius: variables.$default-border-radius 0 0
+      variables.$default-border-radius;
+    background-color: var(--background-brand-teal-primary);
+
+    html[dir='rtl'] & {
+      border-radius: 0 variables.$default-border-radius
+        variables.$default-border-radius 0;
+    }
+
+    i {
+      margin: auto;
+      font-size: 22px;
+      color: var(--text-neutral-white-fixed);
+    }
+  }
+
+  .filenameContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-width: 80px;
+    height: 39px;
+    color: var(--text-neutral-primary);
+    background: var(--background-neutral-primary);
+    padding: 0.22rem 0.5rem;
+    border: variables.$default-border;
+    border-inline-start: 0;
+    border-radius: 0 variables.$default-border-radius
+      variables.$default-border-radius 0;
+    line-height: 1.5;
+    text-align: initial;
+
+    html[dir='rtl'] & {
+      border-radius: variables.$default-border-radius 0 0
+        variables.$default-border-radius;
+    }
+
+    strong,
+    span {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .fileDetail {
+      font-size: 11px;
+      line-height: 1.5;
+      color: var(--text-neutral-tertiary);
+    }
+  }
+}
+
+.preview-image {
+  @extend %preview;
+  padding: 0;
+  background: var(--background-neutral-tertiary);
+
+  img {
+    height: $preview-image-size;
+    width: auto;
+    border-radius: variables.$default-border-radius;
+  }
+}
+
+.preview-image-loading {
+  width: $preview-image-size;
+  height: $preview-image-size;
+}
+
+.hide {
+  display: none;
+}

@@ -11,6 +11,7 @@
   --brand_primary_light: #abdfe5;
   --brand_primary_medium: #7bc6cf;
   --brand_primary_default: #0093a4;
+  --brand_primary_contrast: #00818f;
   --brand_primary_dark: #008291;
   --brand_secondary_light: #e0d1ec;
   --brand_secondary_default: #8c52ba;
@@ -33,10 +34,12 @@
   /* Typography */
   --barlowSemiCondensed-semibold: "Barlow Semi Condensed Semibold", sans-serif;
   --barlowSemiCondensed-medium: "Barlow Semi Condensed Medium", sans-serif;
-  --main-font: 'Metropolis', 'Noto Sans', 'Noto Sans Arabic', 'Noto Sans Armenian', 'Noto Sans Bengali', 'Noto Sans SC',
-               'Noto Sans TC', 'Noto Sans Devanagari', 'Noto Sans Georgian', 'Noto Sans Hebrew', 'Noto Sans JP',
-               'Noto Sans Kannada', 'Noto Sans Khmer', 'Noto Sans KR', 'Noto Sans Myanmar', 'Noto Sans Sinhala',
-               'Noto Sans Tamil', 'Noto Sans Telugu', 'Noto Sans Thai', 'Noto Sans Thaana', sans-serif;
+  --main-font: "Figtree", "Noto Sans", "Noto Sans Arabic",
+    "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans SC", "Noto Sans TC",
+    "Noto Sans Devanagari", "Noto Sans Georgian", "Noto Sans Hebrew",
+    "Noto Sans JP", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans KR",
+    "Noto Sans Myanmar", "Noto Sans Sinhala", "Noto Sans Tamil",
+    "Noto Sans Telugu", "Noto Sans Thai", "Noto Sans Thaana", sans-serif;
   --thin-font-weight: 100;
   --extra-light-font-weight: 200;
   --light-font-weight: 300;
@@ -121,12 +124,26 @@ h6,
   margin-bottom: 0.5em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
 
 /* Use this class on text elements to turn them white */
-h1, h2, h3, h4, h5, h6, p, figcaption, span, a:not(.link-button) {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figcaption,
+span,
+a:not(.link-button) {
   &.white {
     color: var(--neutral_white) !important;
   }
@@ -302,6 +319,18 @@ input[type="submit"] {
     }
   }
 
+  /* Black button styles */
+  &.black {
+    background: var(--neutral_dark);
+    border-color: var(--neutral_dark);
+    color: var(--neutral_white);
+
+    &:hover {
+      background: black;
+      border-color: black;
+    }
+  }
+
   /* Icon button styles */
   &.has-icon {
     .flex-wrapper {
@@ -451,6 +480,11 @@ td {
   text-wrap: pretty;
 }
 
+/* Removes border from an element */
+.no-border {
+  border: none !important;
+}
+
 /* Styles for the "OR" divider line between paragraphs
   - see code.org/afe for an example */
 .or-divider-line {
@@ -487,15 +521,16 @@ td {
 
 /* Start top navigation bar styles ------------------------ */
 nav.main {
-  background-color: var(--brand_primary_default);
+  background-color: var(--brand_primary_contrast);;
   margin: 0;
-  padding: 0.25rem 1rem;
+  padding: 0.375rem 0.875rem;
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 3rem;
+  box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
 }
 
 nav .left,
@@ -506,7 +541,7 @@ nav .right {
 }
 
 nav .left {
-  gap: 2rem;
+  gap: 1.875rem;
 }
 
 nav .right {
@@ -519,7 +554,7 @@ nav.main ul {
   padding: 0;
   display: flex;
   justify-content: start;
-  gap: 2rem;
+  gap: 2.25rem;
 }
 
 nav.main ul li {
@@ -546,7 +581,7 @@ nav.main ul li a:hover {
 }
 
 nav.main img.logo {
-  width: 42px;
+  width: 38px;
 }
 
 nav.main i.fa-fw {
@@ -557,14 +592,16 @@ nav.main .create_menu,
 nav.main .user_menu,
 nav.main .button-signin,
 nav.main .button-create-account {
-  border: 2px solid var(--neutral_white);
+  border: 1px solid var(--neutral_white);
   border-radius: 4px;
   color: var(--neutral_white);
   font-size: 0.875rem;
   font-weight: var(--regular-font-weight);
   text-decoration: none;
-  padding: 7px 12px;
+  padding: 6.5px 16px;
   margin: 0;
+  display: flex;
+  align-items: center;
 }
 
 nav.main .button-create-account {
@@ -575,33 +612,20 @@ nav.main .button-create-account {
 
 nav.main .create_menu,
 nav.main .user_menu {
-  border: 2px solid;
   margin: 0;
-  display: flex;
-  gap: 2px;
   cursor: pointer;
+  height: 35px;
 }
 
 nav.main .create_menu i,
 nav.main .user_menu i {
-  font-size: 1.5rem;
   width: auto;
-}
-
-nav.main .create_menu i.create_menu_arrow_down,
-nav.main .user_menu i.user_menu_arrow_down {
-  margin-top: -4px;
-}
-
-nav.main .create_menu i.create_menu_arrow_up,
-nav.main .user_menu i.user_menu_arrow_up {
-  margin-top: -1px;
 }
 
 nav.main .help_button {
   padding: 0;
   height: unset;
-  margin-inline-end: -6px;
+  margin-inline-end: -4px;
 }
 
 nav.main .help_button .help_icon {
@@ -610,7 +634,7 @@ nav.main .help_button .help_icon {
 }
 
 nav.main .help_button .help_contents {
-  top: 44px;
+  top: 40px;
 }
 
 nav.main #hamburger #hamburger-icon {
@@ -619,15 +643,40 @@ nav.main #hamburger #hamburger-icon {
 }
 
 nav.main #hamburger #hamburger-contents {
-  top: 51px;
+  top: 42px;
   right: -3px;
+}
+
+html[dir="rtl"] nav.main #hamburger #hamburger-contents {
+  right: unset;
+  left: -3px;
+}
+
+/* Do not show hamburger links that are hidden until the
+ * width becomes a certain size.
+ */
+@media (min-width: 1268px) {
+  nav.main #hamburger-contents > div.show-small-desktop,
+  nav.main #hamburger-contents > div.show-mobile {
+    display: none !important;
+  }
 }
 
 /* Show the hamburger on small desktop
   with appropriate links hidden */
 @media (min-width: 1024px) and (max-width: 1268px) {
-  nav.main .left ul li:nth-child(n+4),
-  nav.main #hamburger-contents > div:nth-child(-n+5) {
+  /* Hide the header link */
+  nav.main .left ul li.hide-small-desktop {
+    display: none !important;
+  }
+
+  /* But show the hamburger link */
+  nav.main #hamburger-contents > div.show-small-desktop {
+    display: flex !important;
+  }
+
+  /* But not the mobile ones */
+  nav.main #hamburger-contents > div.show-mobile {
     display: none !important;
   }
 }
@@ -635,6 +684,20 @@ nav.main #hamburger #hamburger-contents {
 /* Hide the main list of links on mobile */
 @media (max-width: 1023px) {
   nav.main .left ul {
+    display: none;
+  }
+
+  /* But show the hamburger links */
+  nav.main #hamburger-contents > div.show-mobile {
+    display: flex !important;
+  }
+}
+
+/* Hide the Sign in and Create account buttons
+  in the header on small screens */
+@media (max-width: 425px) {
+  nav.main .button-signin.desktop,
+  nav.main .button-create-account.desktop {
     display: none;
   }
 }
@@ -736,11 +799,23 @@ swiper-slide {
   background: url("/images/carousel/prev.svg") no-repeat;
   left: -4rem;
   border: 0;
+
+  html[dir="rtl"] & {
+    background: url("/images/carousel/next.svg") no-repeat;
+    left: unset;
+    right: -4rem;
+  }
 }
 
 .carousel-wrapper .swiper-nav-next {
   background: url("/images/carousel/next.svg") no-repeat;
   right: -4rem;
+
+  html[dir="rtl"] & {
+    background: url("/images/carousel/prev.svg") no-repeat;
+    right: unset;
+    left: -4rem;
+  }
 }
 
 .carousel-wrapper .swiper-button-disabled {
@@ -757,12 +832,17 @@ swiper-slide {
 /* Video carousel styles */
 .carousel-wrapper.video-carousel swiper-slide {
   display: block;
-  text-align: left;
+  text-align: initial;
 }
 
 .carousel-wrapper.video-carousel .swiper-nav-prev,
 .carousel-wrapper.video-carousel .swiper-nav-next {
   top: 28%;
+}
+
+.carousel-wrapper.one-col .swiper-nav-prev,
+.carousel-wrapper.one-col .swiper-nav-next {
+  top: 33%;
 }
 
 /* Begin legacy styles ------------------------ */

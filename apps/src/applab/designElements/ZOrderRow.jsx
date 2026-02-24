@@ -3,7 +3,7 @@ import React from 'react';
 
 import applabMsg from '@cdo/applab/locale';
 
-import FontAwesome from '../../templates/FontAwesome';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import color from '../../util/color';
 
 import * as rowStyle from './rowStyle';

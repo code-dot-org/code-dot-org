@@ -45,7 +45,9 @@ class DelivererTest < Minitest::Test
       id: 1,
       contact_id: contact[:id],
       message_id: message_id,
-      params: {}.to_json
+      params: {
+        body: 'This is a test email'
+      }.to_json
     }
     @deliverer.send(delivery)
     assert_match "To: #{email}", @fake_smtp.message

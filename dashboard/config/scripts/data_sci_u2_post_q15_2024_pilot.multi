@@ -1,0 +1,16 @@
+name 'Data Sci U2 Post Q15_2024-pilot'
+
+question 'How does the combination of logical operators (`&`, `|`, `~`) in pandas facilitate complex data queries, and what is an example of their application in filtering a dataset?'
+
+wrong 'Logical operators are mainly used for sorting data based on specific conditions, improving the organization of the DataFrame.'
+wrong 'Logical operators simplify the process of joining multiple DataFrames, making it easier to combine datasets from different sources.'
+wrong 'They automatically resolve any inconsistencies in the data, ensuring that the resulting DataFrame is error-free.'
+right 'Logical operators allow for the creation of compound conditions, enabling more precise filtering of data based on multiple criteria.'
+
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

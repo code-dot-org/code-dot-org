@@ -4,6 +4,7 @@ Feature: Looking at a few things with Applitools Eyes - Part 2
   Background:
     Given I am on "http://studio.code.org/reset_session"
 
+  @properties_encryption_key
   Scenario Outline: Logged in simple page view without instructions dialog
     Given I am on "http://studio.code.org/"
     And I am a <user_type>
@@ -20,8 +21,8 @@ Feature: Looking at a few things with Applitools Eyes - Part 2
       | http://studio.code.org/projects/applab/new               | new applab project                | none        | student   |
       | http://studio.code.org/                                  | logged in student studio homepage | css         | student   |
       | http://studio.code.org/                                  | logged in teacher studio homepage | css         | teacher   |
-      | http://studio.code.org/s/allthethings                    | logged in script progress         | css         | student   |
-      | http://studio.code.org/s/course4/lessons/1/levels/1        | unplugged video level             | css         | student   |
-      | http://studio.code.org/s/allthethings/lessons/18/levels/14 | no iframe in dsl                  | css         | student   |
-      | http://studio.code.org/s/allthethings/lessons/26/levels/1  | rich long assessment              | css         | student   |
-      | http://studio.code.org/s/allthethings/lessons/27/levels/1  | free response                     | css         | student   |
+      | http://studio.code.org/courses/allthethingscourse/units/1                    | logged in script progress         | css         | student   |
+      | http://studio.code.org/courses/allthethingscourse/units/1/lessons/34/levels/1       | unplugged video level             | css         | student   |
+      | http://studio.code.org/courses/allthethingscourse/units/1/lessons/18/levels/14 | no iframe in dsl                  | css         | student   |
+      | http://studio.code.org/courses/allthethingscourse/units/1/lessons/26/levels/1  | rich long assessment              | css         | student   |
+      | http://studio.code.org/courses/allthethingscourse/units/1/lessons/27/levels/1  | free response                     | css         | student   |

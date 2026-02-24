@@ -1,24 +1,24 @@
-import GoogleBlockly, {Block, BlockSvg, Field} from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 interface CdoFieldButtonToggleOptions {
   onClick: () => void;
   defaultIcon: SVGElement;
   alternateIcon: SVGElement;
   useDefaultIcon: boolean;
-  callback?: (block: Block) => void;
+  callback?: (block: BlocklyCore.Block) => void;
   colorOverrides?: {
     icon?: string;
     button?: string;
   };
 }
 
-export default class CdoFieldToggle extends GoogleBlockly.Field {
+export default class CdoFieldToggle extends BlocklyCore.Field {
   public useDefaultIcon: boolean;
 
   private onClick: () => void;
   private defaultIcon: SVGElement;
   private alternateIcon: SVGElement;
-  private callback?: (block: Block) => void;
+  private callback?: (block: BlocklyCore.Block) => void;
   private colorOverrides?: {
     icon?: string;
     button?: string;
@@ -45,7 +45,7 @@ export default class CdoFieldToggle extends GoogleBlockly.Field {
     callback,
     colorOverrides,
   }: CdoFieldButtonToggleOptions) {
-    super(Field.SKIP_SETUP);
+    super(BlocklyCore.Field.SKIP_SETUP);
     this.onClick = onClick;
     this.defaultIcon = defaultIcon;
     this.alternateIcon = alternateIcon;
@@ -58,10 +58,11 @@ export default class CdoFieldToggle extends GoogleBlockly.Field {
   /**
    * Construct a CdoFieldToggle from a JSON arg object.
    *
-   * @param {Object} options - A JSON object with options.
+   * @param {BlocklyCore.FieldConfig} _options - A JSON object with options.
    * @returns {CdoFieldToggle} The new field instance.
    */
-  static fromJson(options: CdoFieldButtonToggleOptions) {
+  static fromJson(_options: BlocklyCore.FieldConfig): CdoFieldToggle {
+    const options = _options as CdoFieldButtonToggleOptions;
     return new CdoFieldToggle(options);
   }
 
@@ -134,7 +135,7 @@ export default class CdoFieldToggle extends GoogleBlockly.Field {
    * @override
    */
   applyColour() {
-    const sourceBlock = this.getSourceBlock() as BlockSvg | null;
+    const sourceBlock = this.getSourceBlock() as BlocklyCore.BlockSvg | null;
     if (!sourceBlock) {
       return;
     }

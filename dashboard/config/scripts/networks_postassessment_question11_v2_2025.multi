@@ -1,0 +1,19 @@
+name 'networks-postassessment-question11_v2-2025'
+title 'Networks and the Internet Post-Assessment: Question 11'
+
+wrong 'Firewalls'
+right 'Decentralized networks with redundancy'
+wrong 'Limiting the number of users'
+wrong 'Slowing down Internet speeds for new users'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A popular social media platform suddenly experiences a surge in users. What Internet feature helps prevent the site from crashing due to high traffic?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 4: Routers and Redundancy
+
+Lesson 5: Packets
+MARKDOWN

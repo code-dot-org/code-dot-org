@@ -43,13 +43,13 @@ You can find that key by [logging in](https://eyes.applitools.com/app/sessions/)
 
 See the [UI Testing Instructions](../dashboard/test/ui/README.md) for details about running tests in Sauce Labs.
 
-## Watch for run on CircleCI and test server deploy
+## Watch for run on CI and test server deploy
 
-Both on CircleCI In `aws/build.rake`, as part of the test.code.org CI script, the eyes tests will be run (as of writing, currently only against the Chrome 33 browser and iPhone).
+Both on CI In `aws/build.rake`, as part of the test.code.org CI script, the eyes tests will be run (as of writing, currently only against the Chrome 33 browser and iPhone).
 
 Results will show up in the Selenium HTML output when changes occur. You can navigate to the reported URL from there to accept the new baseline.
  
-## CircleCI branch and merge handling
+## CI branch and merge handling
 
 Each time an Eyes UI test is run, it is run with branch set to that branch, and parent_branch set to either the target of a PR with that branch or the default base branch for that given branch (`test` -> `production`, `staging` -> `test`, `[feature branches, etc.]` -> `staging`).
 

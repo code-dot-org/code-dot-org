@@ -1,3 +1,4 @@
+require 'cdo/i18n'
 require_relative '../../lib/cdo/github'
 
 IN_UP_BRANCH = "i18n-sync-in-up-#{Date.today.strftime('%m-%d-%Y')}".freeze
@@ -9,7 +10,7 @@ class CreateI18nPullRequests
 
     I18nScriptUtils.git_add_and_commit(
       [
-        "dashboard/config/locales/*.en.yml",
+        "dashboard/config/locales/*/en.yml",
         "i18n/locales/source/dashboard"
       ],
       "dashboard i18n sync"
@@ -95,13 +96,13 @@ class CreateI18nPullRequests
 
     # Break up the dashboard changes, since they frequently end up being large
     # enough to have trouble viewing in github
-    PegasusLanguages.get_crowdin_name_and_locale.each do |prop|
+    Cdo::I18n.available_languages.each do |prop|
       locale = prop[:locale_s]
       next if locale == 'en-US'
       I18nScriptUtils.git_add_and_commit(
         [
-          "dashboard/config/locales/*#{locale}.json",
-          "dashboard/config/locales/*#{locale}.yml",
+          "dashboard/config/locales/*/#{locale}.json",
+          "dashboard/config/locales/*/#{locale}.yml",
           "i18n/locales/#{locale}/dashboard",
         ],
         "dashboard i18n updates - #{prop[:crowdin_name_s]}"

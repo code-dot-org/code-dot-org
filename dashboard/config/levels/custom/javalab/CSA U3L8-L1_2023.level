@@ -21,7 +21,7 @@
       "CSA U3L8-L1 Contained_2023"
     ],
     "project_template_level_name": "CSA U3L8-Comparing Strings PBT_2023",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-01-12T22:14:13.225+00:00\",\"changed\":[\"cloned from \\\"CSA Predict Level Template\\\"\"],\"cloned_from\":\"CSA Predict Level Template\"},{\"changed_at\":\"2023-01-12 22:14:23 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

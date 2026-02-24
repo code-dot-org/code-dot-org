@@ -1,7 +1,5 @@
+@use './layout/variables.scss' as variables;
 @import 'color.scss';
-
-// Constants
-$default-spacing: 2px;
 
 .panelContainer {
   width: 100%;
@@ -9,41 +7,46 @@ $default-spacing: 2px;
   display: flex;
   flex-direction: column;
   position: relative;
-}
 
-%panel-container-header {
-  min-height: 30px;
-  margin-bottom: $default-spacing;
-  position: relative;
-  z-index: 1;
-}
+  .panelContainerHeader {
+    height: 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    position: relative;
+    gap: 20px;
+    padding-inline: 0.5rem;
+    flex-shrink: 0;
+    background-color: var(--background-neutral-primary);
+    color: var(--text-neutral-quaternary);
+    border-bottom: variables.$default-border;
 
-.panelContainerHeader-dark {
-  @extend %panel-container-header;
-  background-color: $neutral_dark80;
-}
+    &Item {
+      display: flex;
+      align-items: center;
+      z-index: 1;
+      margin: 0;
+      font-size: 0.75rem; // 12px
+      color: var(--text-neutral-quaternary);
 
-.panelContainerHeader-light {
-  @extend %panel-container-header;
-  background-color: $neutral_dark;
-}
+      &Text {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
 
-.panelContainerHeaderItem {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+      &Center {
+        flex: 1;
+        overflow: hidden;
+        justify-content: center;
+      }
 
-  &Text {
-    color: $neutral_light;
-    width: 100%;
-    text-align: center;
-  }
+      &Left {
+        justify-content: start;
+      }
 
-  [dir="ltr"] &Right, [dir="rtl"] &Left {
-    right: 4px;
-  }
-
-  [dir="ltr"] &Left, [dir="rtl"] &Right {
-    left: 4px;
+      &Right {
+        justify-content: end;
+      }
+    }
   }
 }

@@ -1,0 +1,10 @@
+name 'datascience-U2L8-L10Prac_2024-pilot'
+display_name 'Practice Visualizations'
+description 'Choose one of the options below!'
+
+sublevels
+level 'datascience-U2L8-L10a_2024-pilot'
+level 'datascience-U2L8-L10b_2024-pilot'
+level 'datascience-U2L8-L10c_2024-pilot'
+level 'datascience-U2L8-L10d_2024-pilot'
+

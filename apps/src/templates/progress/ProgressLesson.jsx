@@ -7,11 +7,10 @@ import ReactTooltip from 'react-tooltip';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-import FontAwesome from '../FontAwesome';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 
 import FocusAreaIndicator from './FocusAreaIndicator';
 import {
@@ -42,6 +41,7 @@ class ProgressLesson extends React.Component {
     isRtl: PropTypes.bool,
     isMiniView: PropTypes.bool,
     lockStatusLoaded: PropTypes.bool.isRequired,
+    unitHasUnnumberedLessons: PropTypes.bool.isRequired,
   };
 
   constructor(props) {
@@ -71,21 +71,6 @@ class ProgressLesson extends React.Component {
       collapsed: !this.state.collapsed,
     });
 
-  onClickStudentLessonPlan = () => {
-    firehoseClient.putRecord(
-      {
-        study: 'script_overview_actions',
-        study_group: 'student_lesson_plan',
-        event: 'open_student_lesson_plan',
-        data_json: JSON.stringify({
-          lesson_id: this.props.lesson.id,
-          script_id: this.props.scriptId,
-        }),
-      },
-      {includeUserId: true}
-    );
-  };
-
   render() {
     const {
       lesson,
@@ -97,6 +82,7 @@ class ProgressLesson extends React.Component {
       isLockedForAllStudents,
       selectedSectionId,
       isRtl,
+      unitHasUnnumberedLessons,
     } = this.props;
 
     if (!isVisible) {
@@ -105,12 +91,13 @@ class ProgressLesson extends React.Component {
 
     const showAsLocked = isLockedForUser || isLockedForAllStudents;
 
-    const title = lesson.lessonNumber
-      ? i18n.lessonNumbered({
-          lessonNumber: lesson.lessonNumber,
-          lessonName: lesson.name,
-        })
-      : lesson.name;
+    const title =
+      lesson.lessonNumber && !unitHasUnnumberedLessons
+        ? i18n.lessonNumbered({
+            lessonNumber: lesson.lessonNumber,
+            lessonName: lesson.name,
+          })
+        : lesson.name;
 
     // Adjust caret style if locale is RTL
     const caretStyle = isRtl ? styles.caretRTL : styles.caret;
@@ -203,18 +190,16 @@ class ProgressLesson extends React.Component {
             </div>
             {viewAs === ViewType.Participant &&
               lesson.student_lesson_plan_html_url && (
-                <span style={styles.buttonStyle}>
-                  <Button
-                    __useDeprecatedTag
-                    className="ui-test-lesson-resources"
-                    href={lesson.student_lesson_plan_html_url}
-                    text={i18n.lessonResources()}
-                    icon="file-text"
-                    color="purple"
-                    target="_blank"
-                    onClick={this.onClickStudentLessonPlan}
-                  />
-                </span>
+                <Button
+                  __useDeprecatedTag
+                  className="ui-test-lesson-resources"
+                  href={lesson.student_lesson_plan_html_url}
+                  text={i18n.lessonResources()}
+                  icon="file-text"
+                  color="white"
+                  target="_blank"
+                  style={styles.buttonStyle}
+                />
               )}
           </div>
           {showNotAuthorizedWarning && (
@@ -239,11 +224,7 @@ class ProgressLesson extends React.Component {
           )}
         </div>
         {viewAs === ViewType.Instructor && !this.props.isMiniView && (
-          <ProgressLessonTeacherInfo
-            lesson={lesson}
-            lessonUrl={lessonUrl}
-            onClickStudentLessonPlan={this.onClickStudentLessonPlan}
-          />
+          <ProgressLessonTeacherInfo lesson={lesson} lessonUrl={lessonUrl} />
         )}
         {lesson.isFocusArea && <FocusAreaIndicator />}
       </div>
@@ -285,6 +266,7 @@ const styles = {
   },
   buttonStyle: {
     marginLeft: 'auto',
+    boxShadow: 'none',
   },
   hiddenOrLocked: {
     borderStyle: 'dashed',
@@ -351,4 +333,5 @@ export default connect((state, ownProps) => ({
   lockStatusLoaded:
     state.progress.unitProgressHasLoaded &&
     state.lessonLock.lessonsBySectionIdLoaded,
+  unitHasUnnumberedLessons: state.progress.unitHasUnnumberedLessons,
 }))(ProgressLesson);

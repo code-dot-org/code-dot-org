@@ -1,0 +1,6 @@
+{
+  "key": "musiclab-sequencing-effects",
+  "concept": "musiclab_sequencing",
+  "description": "Use effects correctly",
+  "evaluation_criteria": "{\"all_complete_correct\":\"The workspace contains multiple sets of effect blocks that change the effects for different sets of tracks\\n\\nExample:\\n```\\nplay_together\\n  set volume to low\\n  set delay to high\\n  play \\\"pack/drums_track_1\\\"\\n  play \\\"pack/drums_track_2\\\"\\n  set volume to full\\n  set delay to off\\n  play \\\"pack/drums_track_3\\\"\\n```\\n    \",\"partial_complete_correct\":\"The workspace contains one set of effect blocks that correctly change a set of tracks\\n\\nExample:\\n```\\nset volume to low\\nset delay to high\\nplay_together\\n  play \\\"pack/drums_track_1\\\"\\n  play \\\"pack/drums_track_2\\\"\\n```\",\"incomplete_incorrect\":\"The workspace contains effect blocks, but the same effect may be repeated in sequence so they overwrite each other or are sequenced so they don't impact any other blocks\\n\\nExample:\\n```\\nset volume to low\\nset volume to high\\nplay \\\"pack/drums_track_1\\\"\\n```\\n\\nExample:\\n```\\nplay \\\"pack/drums_track_1\\\"\\nset volume to full\\n```}"
+}

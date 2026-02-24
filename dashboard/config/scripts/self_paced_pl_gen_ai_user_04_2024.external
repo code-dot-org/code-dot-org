@@ -1,0 +1,16 @@
+name 'self-paced-pl-gen-ai-user_04_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lesson 24: Fine Tuning Exploration
+
+<img src="https://images.code.org/50aeef24ade3a3de1b0f8c82948ddb5d-Screenshot 2024-09-03 at 12.15.42 PM.png" alt="slide from the lesson displaying the connectoome video" width="400px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
+
+#### In this lesson, students are introduced to the **fine-tuning process** for language models, which alters the core behavior of a chatbot. They begin by reflecting on how inside jokes or slang create connections that are hard to explain to outsiders, then explore a medical expert chatbot fine-tuned with additional medical data. Students also explore other fine-tuned models to see how different data sources impact chatbot responses.
+
+## Up Next!
+#### Learn more about comparing models and try it out in chatbot lab.
+
+
+MARKDOWN

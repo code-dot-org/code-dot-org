@@ -1,0 +1,9 @@
+name 'music-lab-functions-synthesize-recap-choice-panels_v2'
+display_name 'Review Concepts about Functions'
+description 'This lesson covers loops and how to use them in your code. Before starting, review any of the concepts below to refresh your understanding.'
+
+sublevels
+level 'music-lab-functions-practice-abstract-panel_v2'
+level 'music-lab-functions-practice-reuse-panel_v2'
+level 'music-lab-functions-practice-compose-panel_v2'
+uses_lab2

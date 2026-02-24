@@ -42,7 +42,7 @@ class Video < ApplicationRecord
     video_keys = Video.all.collect(&:key)
     missing_keys = video_keys.reject {|key| I18n.t("data.video.name.#{key}", default: nil)}
     unless missing_keys.empty?
-      raise "Missing strings for video.name.#{missing_keys} in config/locales/data.en.yml, please add"
+      raise "Missing strings for video.name.#{missing_keys} in config/locales/data/en.yml, please add"
     end
   end
 
@@ -58,7 +58,7 @@ class Video < ApplicationRecord
   end
 
   def self.merge_and_write_i18n(videos_i18n)
-    data_yml = File.expand_path('config/locales/data.en.yml')
+    data_yml = File.expand_path('config/locales/data/en.yml')
     i18n = File.exist?(data_yml) ? YAML.load_file(data_yml) : {}
 
     updated_i18n = i18n.deep_merge({'en' => {'data' => {'video' => {'name' => videos_i18n}}}})

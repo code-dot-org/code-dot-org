@@ -4,18 +4,24 @@
   # use default credentials and hostname.
   MYSQL_DAEMON_DEFAULT_CREDENTIALS = '{"username":"root", "password":""}'.freeze
   MYSQL_DAEMON_HOSTNAME = 'localhost'.freeze
+  MYSQL_DAEMON_PORT = '3306'.freeze
   DATABASE_CONFIGURATION = {
     db_cluster_id: '!Ref AuroraCluster',
     db_endpoint_writer: '!GetAtt AuroraCluster.Endpoint.Address',
+    db_endpoint_writer_port: '!GetAtt AuroraCluster.Endpoint.Port',
     db_endpoint_proxy_writer: '!GetAtt DBProxy.Endpoint',
+    db_endpoint_proxy_writer_port: '3306', # RDS Proxy MySQL Endpoints only use 3306
     db_endpoint_proxy_reader: '!GetAtt ReaderDBProxyEndpoint.Endpoint',
-    db_endpoint_proxy_reporting: '!GetAtt ReportingDBProxyEndpoint.Endpoint'
+    db_endpoint_proxy_reader_port: '3306', # RDS Proxy MySQL Endpoints only use 3306
+    db_endpoint_proxy_reporting: '!GetAtt ReportingDBProxyEndpoint.Endpoint',
+    db_endpoint_proxy_reporting_port: '3306' # RDS Proxy MySQL Endpoints only use 3306
   }.tap do |hash|
     if rack_env?(:production)
       hash[:db_cluster_id] = PRODUCTION_DB_CLUSTER_ID
       # Use a placeholder string for production db cluster endpoint to avoid placing a slightly sensitive value
       # in source code. We set the value of the Secret manually in production.
       hash[:db_endpoint_writer] = 'PLACEHOLDER'
+      hash[:db_endpoint_writer_port] = '3306'
       # We haven't yet provisioned the Writer and Reader Proxy Endpoints in production.
       hash[:db_endpoint_proxy_writer] = 'PLACEHOLDER'
       hash[:db_endpoint_proxy_reader] = 'PLACEHOLDER'
@@ -23,6 +29,7 @@
     if !database
       hash[:db_cluster_id] = MYSQL_DAEMON_HOSTNAME
       hash[:db_endpoint_writer] = MYSQL_DAEMON_HOSTNAME
+      hash[:db_endpoint_writer_port] = MYSQL_DAEMON_PORT
       hash[:db_endpoint_proxy_writer] = MYSQL_DAEMON_HOSTNAME
       hash[:db_endpoint_proxy_reader] = MYSQL_DAEMON_HOSTNAME
       hash[:db_endpoint_proxy_reporting] = MYSQL_DAEMON_HOSTNAME
@@ -91,76 +98,52 @@
       Description: 'Publish Database Cluster Writer Endpoint to application configuration setting CDO.db_endpoint_writer'
       Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_writer"
       SecretString: <%=DATABASE_CONFIGURATION[:db_endpoint_writer]%>
+  DBWriterEndpointPortConfig:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: 'Publish Database Cluster Writer Endpoint Port to application configuration setting CDO.db_endpoint_writer_port'
+      Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_writer_port"
+      SecretString: <%=DATABASE_CONFIGURATION[:db_endpoint_writer_port]%>
   DBProxyWriterEndpointConfig:
     Type: AWS::SecretsManager::Secret
     Properties:
       Description: 'Publish RDS Proxy Writer Endpoint to the application configuration setting CDO.db_endpoint_proxy_writer'
       Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_proxy_writer"
       SecretString: <%=DATABASE_CONFIGURATION[:db_endpoint_proxy_writer]%>
+  DBProxyWriterEndpointPortConfig:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: 'Publish RDS Proxy Writer Endpoint Port to the application configuration setting CDO.db_endpoint_proxy_writer_port'
+      Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_proxy_writer_port"
+      SecretString: <%=DATABASE_CONFIGURATION[:db_endpoint_proxy_writer_port]%>
   DBProxyReaderEndpointConfig:
     Type: AWS::SecretsManager::Secret
     Properties:
       Description: 'Publish RDS Proxy Reader Endpoint to the application configuration setting CDO.db_endpoint_proxy_reader'
       Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_proxy_reader"
       SecretString: <%=DATABASE_CONFIGURATION[:db_endpoint_proxy_reader]%>
+  DBProxyReaderEndpointPortConfig:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: 'Publish RDS Proxy Reader Endpoint Port to the application configuration setting CDO.db_endpoint_proxy_reader_port'
+      Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_proxy_reader_port"
+      SecretString: <%=DATABASE_CONFIGURATION[:db_endpoint_proxy_reader_port]%>
   DBProxyReportingEndpointConfig:
     Type: AWS::SecretsManager::Secret
     Properties:
       Description: 'Publish RDS Proxy Reporting Endpoint to the application configuration setting CDO.db_endpoint_proxy_reporting'
       Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_proxy_reporting"
       SecretString: <%=DATABASE_CONFIGURATION[:db_endpoint_proxy_reporting]%>
-
+  DBProxyReportingEndpointPortConfig:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: 'Publish RDS Proxy Reporting Endpoint Port to the application configuration setting CDO.db_endpoint_proxy_reporting_port'
+      Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_proxy_reporting_port"
+      SecretString: <%=DATABASE_CONFIGURATION[:db_endpoint_proxy_reporting_port]%>
 <% if database-%>
 # We don't yet provision the production database cluster/instances via CloudFormation, but we're incrementally
 # working towards that. Start with provisioning the DB Instance and Cluster ParameterGroups via this template.
 
-  # Aurora Engine 2.x (MySQL 5.x) ParameterGroups
-  AuroraClusterDBParameters:
-    Type: AWS::RDS::DBClusterParameterGroup
-    Properties:
-      Description: !Sub "Aurora Cluster DB Parameters for ${AWS::StackName}."
-      Family: aurora-mysql5.7
-      Parameters:
-        # BEGIN: Static configuration settings.
-        # WARNING - Changing these settings triggers restart of each database instance in the cluster during Stack Update.
-
-        binlog_format: 'ROW'
-        gtid-mode: 'ON'
-        enforce_gtid_consistency: 'ON'
-
-        innodb_autoinc_lock_mode: 2
-        #END: Static configuration settings.
-
-        # BEGIN: Dynamic configuration settings. Changing these settings does NOT require nor trigger restart of instances.
-        slow_query_log: 1
-        innodb_monitor_enable: all
-        tx_isolation: READ-COMMITTED
-
-        # Prevent a slow query from degrading instance or cluster performance.
-        # https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_execution_time
-        max_execution_time: 30000
-
-        # Favor write performance over durability. In the event of a database server crash
-        # we could lose roughly 1 second of transactions.
-        # https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit
-        innodb_flush_log_at_trx_commit: 1
-        # END: Dynamic configuration settings.
-  AuroraWriterDBParameters:
-    Type: AWS::RDS::DBParameterGroup
-    Properties:
-      Description: !Sub "Aurora Writer DB Parameters for ${AWS::StackName}."
-      Family: aurora-mysql5.7
-      Parameters:
-        # BEGIN: Static configuration settings. Changing these settings will trigger a restart of each database instance.
-
-        # END: Static configuration settings.
-
-        # BEGIN: Dynamic configuration settings. Changing these settings does NOT require nor trigger restart of instances.
-
-        # Prevent a slow query from degrading instance or cluster performance.
-        # https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_execution_time
-        max_execution_time: 30000
-        # END: Dynamic configuration settings.
   Aurora3ClusterDBParameters:
     Type: AWS::RDS::DBClusterParameterGroup
     Properties:
@@ -174,6 +157,13 @@
         gtid-mode: 'ON'
         enforce_gtid_consistency: 'ON'
 
+        # Enable Enhanced Binary Logging to support Zero-ETL Integration with Redshift
+        aurora_enhanced_binlog: 1
+        binlog_backup: 0
+        binlog_replication_globaldb: 0
+        binlog_row_image: full # This is actually a dynamic setting, but let's keep all these settings together.
+        binlog_row_metadata: full # Also dynamic.
+
         innodb_autoinc_lock_mode: 2
         #END: Static configuration settings.
 
@@ -186,10 +176,15 @@
         # https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_execution_time
         max_execution_time: 30000
 
-        # Favor write performance over durability. In the event of a database server crash
-        # we could lose roughly 1 second of transactions.
+        # Control balance of write performance vs transaction durability.
         # https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit
-        innodb_flush_log_at_trx_commit: 1
+        # https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.BestPractices.FeatureRecommendations.html#AuroraMySQL.BestPractices.Flush
+        # Note in Aurora 3 / MySQL this setting works as follows:
+        #   0 – The database doesn't wait for confirmation that the redo log records are written to the Aurora cluster volume.
+        #   1 or 2 – The database waits for confirmation that the redo log records are written to the Aurora cluster volume.
+        # During high usage time periods (such as Hour of Code) set `innodb_flush_log_at_trx_commit=0` to reduce write
+        # latency, but potentially risk losing up to 1 second of data due to database instance crash, failover, restart.
+        innodb_flush_log_at_trx_commit: 0
         innodb_trx_commit_allow_data_loss: 1
         # END: Dynamic configuration settings.
   DBProxyRole:
@@ -233,7 +228,7 @@
 <%   if rack_env?(:production) -%>
         - Name: !Sub "db-reporting.${BaseDomainName}"
 <%   else -%>
-        - Name: !Sub "${PegasusSubdomainName}-db-reporting.${BaseDomainName}"
+        - Name: !Sub "${AWS::StackName}-db-reporting.${BaseDomainName}"
 <%   end -%>
           Type: CNAME
           TTL: <%= DNS_TTL %>
@@ -318,11 +313,27 @@
       # Credentials (username and password) for the SQL User this Resource is provisioning.
       DBCredentialSecret: !Ref DatabaseSecretReader
       Privileges: ['SELECT']
-
-# We don't provision these in production via CloudFormation ... yet!
-<%  unless rack_env?(:production)%>
+<% if rack_env?(:production) || rack_env?(:test) # Provision Zero ETL on managed test server and production. -%>
+  ZeroETLIntegration:
+    Type: AWS::RDS::Integration
+    Properties:
+      IntegrationName: !Sub "${AWS::StackName}-zero-etl"
+      Description: "Export transactional tables from MySQL to Redshift via Zero-ETL integration."
+      SourceArn: !Sub
+        - "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:${ClusterId}"
+        - ClusterId: <%=rack_env?(:production) ? PRODUCTION_DB_CLUSTER_ID : '!Ref AuroraCluster' %>
+      TargetArn: !ImportValue DATA-production-RedshiftClusterNamespace
+      DataFilter: !Sub "include: dashboard_<%=rack_env %>.levels"
+      Tags:
+        - Key: environment
+          Value: "<%=rack_env %>"
+<% end -%>
+<% # We don't provision DB Cluster and Instances in production via CloudFormation ... yet!
+  unless rack_env?(:production)
+-%>
   AuroraCluster:
     Type: AWS::RDS::DBCluster
+    DeletionPolicy: <%= rack_env?(:adhoc) ? "Delete" : "Snapshot" %> # Don't take a final Snapshot when deleting adhoc clusters.
     Properties:
       DBClusterIdentifier: !Sub "${AWS::StackName}-cluster"
       DBClusterParameterGroupName: !Ref Aurora3ClusterDBParameters
@@ -330,19 +341,22 @@
       # Updating a Stack with a change to EngineVersion causes "Some Interruption".
       # Each Database Instance in the cluster is restarted.
       # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-engineversion
-      EngineVersion: 8.0.mysql_aurora.3.05.2
+      EngineVersion: 8.0.mysql_aurora.3.11.0
       MasterUsername: !Sub "{{resolve:secretsmanager:${DatabaseSecretAdmin}:SecretString:username}}"
       MasterUserPassword: !Sub "{{resolve:secretsmanager:${DatabaseSecretAdmin}:SecretString:password}}"
       EnableIAMDatabaseAuthentication: true
       VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
+      CopyTagsToSnapshot: true
       EnableCloudwatchLogsExports:
         - general
         - audit
         - error
         - slowquery
       DeletionProtection: <%= rack_env?(:adhoc) ? false : true %>
+<%    unless rack_env?(:adhoc) -%>
       BackupRetentionPeriod: !Ref DBBackupRetention
+<%    end -%>
 <%    DB_INSTANCE_RANGE.each do |i| %>
   Aurora<%=i%>:
     Type: AWS::RDS::DBInstance

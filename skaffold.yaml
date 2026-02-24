@@ -1,0 +1,238 @@
+# Using skaffold (https://skaffold.dev/) allows us to start a kubernetes cluster
+# for code.org development with one command: `skaffold dev`
+#
+# This is currently an experimental feature, see: k8s/experimental.yaml
+
+apiVersion: skaffold/v4beta12
+kind: Config
+build:
+  artifacts:
+  - image: code-dot-org
+    sync:
+      infer:
+        # rerun watching
+        # /app/src/lib, /app/src/shared/middleware, /app/src/dashboard/legacy, /app/src/pegasus for **/*.{rb,ru,yml} (ignoring **/migrations/*.rb,test/**/*.rb)\
+        - '**/*.rb'
+        - '**/*.ru'
+        - '**/*.yml'
+        - '**/*.js'
+        - '**/*.jsx'
+        - '**/*.json'
+    custom:
+      buildCommand: |
+        k8s/bin/docker-buildx -f k8s/docker/code-dot-org.dockerfile \
+          --build-arg CODE_DOT_ORG_CORE="$CODE_DOT_ORG_CORE" \
+          --build-arg CODE_DOT_ORG_DB_SEED="$CODE_DOT_ORG_DB_SEED" \
+          --build-arg CODE_DOT_ORG_PEGASUS="$CODE_DOT_ORG_PEGASUS" \
+          --build-arg CODE_DOT_ORG_STATIC="$CODE_DOT_ORG_STATIC"
+      dependencies:
+        dockerfile:
+          path: k8s/docker/code-dot-org.dockerfile
+    requires:
+    - image: code-dot-org-core
+      alias: CODE_DOT_ORG_CORE
+    - image: code-dot-org-db-seed
+      alias: CODE_DOT_ORG_DB_SEED
+    - image: code-dot-org-pegasus
+      alias: CODE_DOT_ORG_PEGASUS
+    - image: code-dot-org-static
+      alias: CODE_DOT_ORG_STATIC
+  - image: code-dot-org-core
+    custom:
+      # skaffold sync only works when the user is root 😤:
+      # https://github.com/GoogleContainerTools/skaffold/issues/2479
+      # If we find a solution, we can drop this override:
+      buildCommand: |
+        k8s/bin/docker-buildx -f k8s/docker/code-dot-org-core.dockerfile \
+          --build-arg USERNAME=root \
+          --build-arg UID=0 \
+          --build-arg GID=0
+      dependencies:
+        dockerfile:
+          path: k8s/docker/code-dot-org-core.dockerfile
+  - image: code-dot-org-pegasus
+    custom:
+      buildCommand: k8s/bin/docker-buildx -f k8s/docker/code-dot-org-pegasus.dockerfile
+      dependencies:
+        dockerfile:
+          path: k8s/docker/code-dot-org-pegasus.dockerfile
+  - image: code-dot-org-static
+    custom:
+      buildCommand: k8s/bin/docker-buildx -f k8s/docker/code-dot-org-static.dockerfile
+      dependencies:
+        dockerfile:
+          path: k8s/docker/code-dot-org-static.dockerfile
+  - image: code-dot-org-db-seed
+    custom:
+      buildCommand: k8s/bin/docker-buildx -f k8s/docker/code-dot-org-db-seed.dockerfile
+      dependencies:
+        dockerfile:
+          path: k8s/docker/code-dot-org-db-seed.dockerfile
+
+deploy:
+  helm:
+    releases:
+      - name: cdo
+        chartPath: ./k8s/helm
+        setValueTemplates:
+          image: "{{.IMAGE_FULLY_QUALIFIED_code_dot_org}}"
+          # skaffold sync only works when the user is root 😤:
+          # https://github.com/GoogleContainerTools/skaffold/issues/2479
+          # If we find a solution, we can drop this override:
+          user.username: root
+          user.uid: 0
+          user.gid: 0
+          user.home: /home/root
+        valuesFiles:
+          # This list will be extended by skaffold profiles e.g.: k8s/helm/development.values.yml
+          - k8s/helm/values.yaml
+
+profiles:
+
+- name: production
+  patches:
+    - op: add
+      path: /deploy/helm/releases/0/valuesFiles/-
+      value: k8s/helm/production.values.yml
+
+- name: test
+  patches:
+    - op: add
+      path: /deploy/helm/releases/0/valuesFiles/-
+      value: k8s/helm/test.values.yml
+
+- name: development
+  activation:
+    - command: dev
+    - command: debug
+    - kubeContext: docker-desktop
+  patches:
+    - op: add
+      path: /deploy/helm/releases/0/valuesFiles/-
+      value: k8s/helm/development.values.yml
+    # These have to be patches vs in values.yml because they inject local env vars:
+    - op: add
+      path: /deploy/helm/releases/0/setValueTemplates/localDev.mounts.hostPaths.home
+      value: '{{ cmd "sh" "-c" "echo $HOME" }}'
+    - op: add
+      path: /deploy/helm/releases/0/setValueTemplates/localDev.mounts.hostPaths.skaffoldStorage
+      value: '{{ cmd "sh" "-c" "echo $PWD/skaffoldStorage" }}'
+    - op: add
+      path: /deploy/helm/releases/0/setValueTemplates/localDev.mounts.AWS_PROFILE
+      value: '{{ cmd "sh" "-c" "echo $AWS_PROFILE" }}'
+
+- name: setup-db
+  patches:
+      - op: add
+        path: /deploy/helm/releases/0/setValueTemplates/dashboardJob
+        value:
+          enabled: true
+          name: setup-db
+          args: ["cd dashboard && rake dashboard:setup_db && echo 'setup-db COMPLETE'"]
+
+- name: setup-s3
+  patches:
+      - op: add
+        path: /deploy/helm/releases/0/setValueTemplates/services.minio.runSetupS3Job
+        value: true
+
+# Mimic allows us to run a light-weight stubbed version of our huge repo. Its great for
+# fast iterative development of our k8s docker files and helm charts.
+#
+# To use:
+# 1. First-time: skaffold dev -p mimic --cache-artifacts=false
+# 2. Run: skaffold dev -p mimic
+#
+# For details, see: ./k8s/mimic/README.md
+- name: mimic
+  patches:
+    # Name the helm release 'mimic' instead of 'code-dot-org'
+    - op: replace
+      path: /deploy/helm/releases/0/name
+      value: mimic
+    # Create the k8s/mimic/cdo-no-symlinks dir to serve as the build context for the
+    # mimic docker build. This is just a copy of k8s/mimic/code-dot-org, but symlinks
+    # have been replaced by copies of the real files, because docker doesn't follow
+    # symlinks outside its root build context.
+    - op: add
+      path: /build/hooks
+      value:
+        before:
+          - command: ["k8s/mimic/bin/update-cdo-no-symlinks.sh"]
+    # Artifact 0 (code-dot-org)
+    - op: add
+      path: /build/artifacts/0/context
+      value: k8s/mimic/cdo-no-symlinks
+    - op: replace
+      path: /build/artifacts/0/image
+      value: mimic
+    # Artifact 1 (code-dot-org-core)
+    - op: add
+      path: /build/artifacts/1/context
+      value: k8s/mimic/cdo-no-symlinks
+    - op: replace
+      path: /build/artifacts/1/image
+      value: mimic-core
+    # Artifact 2 (code-dot-org-pegasus)
+    - op: add
+      path: /build/artifacts/2/context
+      value: k8s/mimic/cdo-no-symlinks
+    - op: replace
+      path: /build/artifacts/2/image
+      value: mimic-pegasus
+    # Artifact 3 (code-dot-org-static)
+    - op: add
+      path: /build/artifacts/3/context
+      value: k8s/mimic/cdo-no-symlinks
+    - op: replace
+      path: /build/artifacts/3/image
+      value: mimic-static
+    # Artifact 4 (code-dot-org-db-seed)
+    - op: add
+      path: /build/artifacts/4/context
+      value: k8s/mimic/cdo-no-symlinks
+    - op: replace
+      path: /build/artifacts/4/image
+      value: mimic-db-seed
+    # Update required images in artifact 0
+    - op: replace
+      path: /build/artifacts/0/requires/0/image
+      value: mimic-core
+    - op: replace
+      path: /build/artifacts/0/requires/1/image
+      value: mimic-db-seed
+    - op: replace
+      path: /build/artifacts/0/requires/2/image
+      value: mimic-pegasus
+    - op: replace
+      path: /build/artifacts/0/requires/3/image
+      value: mimic-static
+    # Update the docker image passed to helm
+    - op: replace
+      path: /deploy/helm/releases/0/setValueTemplates/image
+      value: "{{.IMAGE_FULLY_QUALIFIED_mimic}}"
+
+portForward:
+- resourceType: Service
+  resourceName: cdo-dashboard
+  port: http
+  localPort: 13000
+- resourceType: Service
+  resourceName: cdo-dashboard
+  port: http-hmr
+  localPort: 19000
+- resourceType: Service
+  resourceName: cdo-mysql
+  port: mysql
+  localPort: 16379
+- resourceType: Service
+  resourceName: cdo-redis
+  port: redis
+- resourceType: service
+  resourceName: cdo-minio
+  port: api
+  localPort: 29000
+- resourceType: service
+  resourceName: cdo-minio
+  port: console
+  localPort: 29001

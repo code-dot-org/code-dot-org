@@ -6,7 +6,7 @@ class LtiAccessTokenTest < ActiveSupport::TestCase
   include LtiAccessToken
 
   setup_all do
-    @lti_integration = create :lti_integration
+    @lti_integration = create(:lti_integration)
     fake_response_hash = {
       access_token: 'fake_access_token',
       expires_in: 3600,
@@ -62,7 +62,7 @@ class LtiAccessTokenTest < ActiveSupport::TestCase
       sub: 'foo-client-id',
       aud: 'foo-audience',
       iat: Time.now.to_i,
-      exp: (5).minutes.from_now.to_i,
+      exp: 5.minutes.from_now.to_i,
       jti: 'foo-jwt-id',
     }
     jwt = sign_jwt(test_claims)

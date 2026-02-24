@@ -1,0 +1,28 @@
+name 'computer-systems-preassessment-2024'
+title 'Computer Systems and Devices Pre-Assessment'
+
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'computer-systems-preassessment-intro-2024'
+level 'computer-systems-preassessment-question1-2024'
+level 'computer-systems-preassessment-question2-2024'
+level 'computer-systems-preassessment-question3-2024'
+level 'computer-systems-preassessment-question4-2024'
+level 'computer-systems-preassessment-question5-2024'
+
+page
+level 'computer-systems-preassessment-question6-2024'
+level 'computer-systems-preassessment-question7-2024'
+level 'computer-systems-preassessment-question8-2024'
+level 'computer-systems-preassessment-question9-2024'
+level 'computer-systems-preassessment-question10-2024'
+
+page
+level 'computer-systems-preassessment-question11-2024'
+level 'computer-systems-preassessment-question12-2024'
+level 'computer-systems-preassessment-question13-2024'
+level 'computer-systems-preassessment-question14-2024'
+level 'computer-systems-preassessment-question15-2024'

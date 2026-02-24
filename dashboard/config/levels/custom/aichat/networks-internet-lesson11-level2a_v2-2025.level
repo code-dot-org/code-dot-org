@@ -1,0 +1,59 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T20:05:29.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Real-Time Threat Detection  \r\n\r\nThis chatbot has been fine-tuned to provide insights into **Real-Time Threat Detection** and its role in cybersecurity.  \r\n\r\n## Do This:\r\n\r\n### Explore AI in Security (Activity)\r\n- Interact with the chatbot to understand how **Real-Time Threat Detection** works and how it helps prevent cyber threats.  \r\n- Use the **Conversation Starters** below to guide your exploration:  \r\n   - **Solution Overview:** *How does Real-Time Threat Detection work?*  \r\n   - **Problem Addressed:** *What network vulnerabilities does it target?*  \r\n   - **Pros & Cons:** *What are the advantages and limitations of this solution?*  \r\n   - **Project Application:** *How could this be used to mitigate risks in my chosen company scenario?*  \r\n\r\n### Risk Assessment Application\r\n- Use the chatbot’s responses to refine your **Network Security Risk Assessment** by identifying how Real-Time Threat Detection could help **prevent, detect, and respond** to network vulnerabilities.  \r\n\r\n### Tip: \r\n- If the chatbot’s response is unclear, try **rephrasing your question** with more details for a **more targeted answer**.  \r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+          "Phishing Attacks in Healthcare (MediSure Health Systems)\n\nReal-time threat detection can identify unusual login attempts on electronic health record systems.\nIt can monitor network traffic for suspicious email activity, blocking phishing attempts before they reach employees.",
+          "Social Engineering in Banking (FinTrust Banking Solutions)\n\nDetects unusual access patterns in online banking systems, flagging unauthorized attempts.\nAlerts IT staff when multiple failed login attempts occur in a short time.",
+          "IoT Security in Robotics (NovaTech Robotics)\n\nMonitors network traffic for unauthorized access attempts on industrial robots.\nUses behavior-based anomaly detection to identify tampering with robotic control systems.",
+          "Credential Stuffing in Streaming Services (StreamView Entertainment)\n\nIdentifies multiple login attempts from different locations using the same credentials.\nDetects large-scale automated attacks attempting to hijack user accounts.",
+          "Examples of Good Responses:\nHow does real-time threat detection work?\n\n\"Real-time threat detection continuously monitors a network for unusual activity. It uses AI and machine learning to identify suspicious patterns, such as an employee logging in from two locations at the same time. Once a threat is detected, it can send alerts or even take automatic action, like blocking access.\"",
+          "Examples of Good Responses:\n\nWhat vulnerabilities does it address?\n\"Real-time threat detection is especially useful against social engineering attacks, credential stuffing, and insider threats. It can flag unusual login behavior, detect unauthorized access attempts, and respond to threats before they escalate.\""
+        ],
+        "modelCardInfo": {
+          "botName": "Real-Time Threat Detection Expert",
+          "description": "This chatbot helps students explore Real-Time Threat Detection in cybersecurity. It explains how this AI-driven solution works, identifies the network vulnerabilities it mitigates, and provides insights on how to apply it in risk assessments.",
+          "intendedUse": "Educational Purposes: Designed to assist students in understanding Real-Time Threat Detection and how it can be used to improve network security.\nProject Support: Helps students apply AI-driven security solutions to their Network Security Risk Assessments.\nGuided Exploration: Encourages students to ask structured questions and think critically about cybersecurity applications.",
+          "limitationsAndWarnings": "Not a real cybersecurity tool: This chatbot provides educational insights only and should not be used for real-world security decisions.\nSimplified explanations: Responses are tailored for students and may not include full technical details used in professional cybersecurity.\nAI Limitations: The chatbot may occasionally provide overgeneralized answers or miss nuanced security concerns—students should verify information using their course materials.",
+          "testingAndEvaluation": "Tested for clarity and accuracy in explaining Real-Time Threat Detection in an educational setting.\nEvaluated using real-world cybersecurity scenarios from the student project (healthcare, banking, robotics, and streaming services).\nReviewed for student accessibility, ensuring responses are clear, relevant, and encourage critical thinking.",
+          "exampleTopics": [
+            "How does real-time threat detection work in cybersecurity?",
+            "What types of cybersecurity threats can real-time threat detection prevent?",
+            "What are the benefits of using real-time threat detection?",
+            "How could real-time threat detection help secure electronic health records in a hospital?"
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an AI security expert specializing in Real-Time Threat Detection for network security. Your goal is to help users understand how real-time threat detection works, what vulnerabilities it addresses, and how it can be applied to cybersecurity risk assessments.\n\nYour Expertise & Role:\nExplain how real-time threat detection functions, focusing on continuous monitoring, anomaly detection, and rapid response.\nIdentify which network vulnerabilities (e.g., phishing, weak passwords, social engineering, default credentials) this solution can help mitigate.\nDiscuss advantages and limitations, emphasizing real-world applications and ethical considerations.\nProvide clear, practical applications of real-time threat detection in different cybersecurity scenarios.\nHow to Respond:\nUse concise, student-friendly explanations while maintaining technical accuracy.\nWhen a user asks about a specific vulnerability, connect it to how real-time threat detection can mitigate it.\nIf asked about drawbacks, mention false positives, resource intensity, and implementation challenges.\nRelate responses to real-world cybersecurity threats without overwhelming technical jargon.\nEncourage users to think critically about how this solution could be integrated into their risk assessment projects.\nExamples of Good Responses:\nHow does real-time threat detection work?\n\n\"Real-time threat detection continuously monitors a network for unusual activity. It uses AI and machine learning to identify suspicious patterns, such as an employee logging in from two locations at the same time. Once a threat is detected, it can send alerts or even take automatic action, like blocking access.\"\nWhat vulnerabilities does it address?\n\n\"Real-time threat detection is especially useful against social engineering attacks, credential stuffing, and insider threats. It can flag unusual login behavior, detect unauthorized access attempts, and respond to threats before they escalate.\"\nHow can I apply this to my risk assessment?\n\n\"If your company scenario involves phishing attacks, real-time threat detection could monitor employee logins for unusual patterns, such as multiple failed login attempts, and automatically lock compromised accounts before an attacker can gain full access.\"\nTone & Style:\nBe engaging, clear, and professional.\nKeep responses concise but informative.\nEncourage critical thinking and application.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "bubble_choice_description": "Explore how Real-Time Threat Detection helps stop cyberattacks as they happen. Learn how AI detects threats, prevents breaches, and protects networks from phishing, hacking, and suspicious activity.",
+    "display_name": "Real-Time Threat Detection",
+    "thumbnail_url": "https://images.code.org/cfc9de9fdc6cfc5c7ee2d0bd74f8c5b0-threat-detection.png",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:05:29.275+00:00\",\"changed\":[\"cloned from \\\"networks-internet-lesson11-level2a_2025\\\"\"],\"cloned_from\":\"networks-internet-lesson11-level2a_2025\"}]"
+}]]></config>
+</Aichat>

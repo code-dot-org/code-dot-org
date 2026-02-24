@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "Привіт, світ: космос", body: "Створюйте міжгалактичні сцени з різними персонажами та звуками, зустрівшись з якими, ви вигукнете \"Привіт, світи!\"", image: "/images/hoc2022-hello-world-space.png", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
-
-{{ featured_tutorial, title: "NASA's Space Jam", body: "Створіть захопливу сонячну систему, дізнаючись нове про музику, астрономію і програмування!", image: "/images/hoc2022-nasa-space-jam.png", url: "https://chandra.si.edu/sound/code/" }}
-
-{{ featured_tutorial, title: "Зоряні війни", body: "Навчіться програмувати дроїдів і створіть власну гру "Зоряні війни" в далекій-далекій галактиці.", image: "/shared/images/courses/logo_tall_starwars.jpg", url: "https://code.org/starwars" }}
-
-{{ featured_tutorial, title: "SciGirls Code Quest", body: "У цій онлайн-пригоді з програмування ви проведете підводний човен Саббі через випробування глибоко під товщею води.", image: "/images/hoc2022-scigirls-code-quest.png", url: "https://pbskids.org/scigirls/games/code-quest" }}

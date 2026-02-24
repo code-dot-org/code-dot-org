@@ -1,0 +1,23 @@
+name ' csaif_pl_nets_interent_0'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# AI Threat Detection
+
+#### The most cutting-edge topic in cybersecurity is how AI is revolutionizing network security. Every second, massive amounts of data are moving through networks, and cyber threats are evolving just as quickly. Traditional security methods struggle to keep up, but AI is changing the game by detecting threats in real time before they cause damage. As AI-driven security tools are implemented, the humans in the loop need to think critically about whether AI is the ultimate solution, or does it have its own risks and challenges.
+
+## 📝 To Do
+
+#### Use an AI threat detection system to investigate and respond to security threats.
+
+#### Choose one scenario from <a href='https://docs.google.com/document/d/1xkXDiVCEattulslAG9ZI4TV3ejU09VNH1J1Xq7oKWSw/edit?tab=t.0#heading=h.10sosi3gwomj' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Threat Detected! Cards</a> and use the chatbot on the next level to explore how AI detected the threat and how that compared to traditional methods.
+
+#### While you're investigating think about: *How did AI detect this threat? What mitigation strategy does AI recommend? How would this threat have been handled without AI? While you’re chatting, consider what AI does well and where it struggles.*
+
+<br>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 10. You can find more details in the full <a href='https://studio.code.org/s/nati-pilot-content-2024/lessons/10' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+</p>
+MARKDOWN

@@ -20,7 +20,6 @@ theme: responsive
     <li><a class="linktag" id="self-paced-nav" href="#express">參加入門級自學課程</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">製作一款遊戲或應用</a></li>
     <li><a class="linktag" id="unplugged-nav" href="#unplugged">試聽無電腦版的電腦科學（「不插電」及手機模式）</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">向Code.org團隊和特邀嘉賓學習電腦科學</a></li>
 </ul>
 
 <br>
@@ -277,53 +276,6 @@ theme: responsive
   <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">《快樂紅寶石》</a> - 世界上最異想天開的學習電腦、技術和程式設計的方式。 關於一系列電腦科學主題的活動，例如：分解問題、發現模式、用演算法思考、調試問題以及合作的能力。 （適合4-10歲）</li>
   <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">不插電版電腦科學</a> - 一系列免費教材，使用卡片、繩子、蠟筆等物品或透過四處走動的有趣遊戲和謎題來教授電腦科學。 （適合5-14歲）</li>
 </ul>
-
-<h2>家裡沒有電腦？ 使用我們的合作夥伴提供的這些應用，在手機上嘗試電腦科學</h2>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="《盒子島》"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>一款迷人的移動編碼遊戲，帶領學習者進行激動人心的冒險，同時教授編碼的基礎知識，例如算法，模式識別，序列，循環和條件。 <i>（適合所有年齡）</i>
-</div>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">CodeSpark</h3></a>屢獲殊榮的學習編碼平台，適合 5-9 歲兒童使用。 在學習程式設計的同時，與小兔子富富一起解決謎題並創建遊戲。 <strong>注意：codeSpark目前提供3個月的免費試聽期。 註冊時需要家長的電子郵箱位址和信用卡資訊。</strong> <i>（適合5年級以前的學前兒童）</i>
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[返回頂部]</a></p>
-
-<a id="livecoding"></a>
-<h2>向Code.org團隊和特邀嘉賓學習！</h2>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="CodeBytes logo">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes 是易於摘要的，20 分鐘的互動式課程，融合了電腦科學與真實世界主題 訓練人工智慧閱讀手語、設計應用、探索《我的世界》等等！</div>        <br>        <br>        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>查看視頻</button></a>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="《代碼小憩》">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">代碼中</h3>
-        <div class="smalltext" style="">斷通過進行代碼中斷來保持計算機科學的樂趣！ 你可以與阿什頓·庫徹一起創建密碼，與亞拉·沙希迪一起了解變數，甚至可以與互聯網的實際發明者溫特·瑟夫一起探索互聯網的運行原理！</div>
-        <br>
-        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>立即加入</button></a>
-    </span>
-  </div>
-</div>
-</div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 

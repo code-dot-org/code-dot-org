@@ -1,31 +1,32 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import {Typography} from '@mui/material';
+import PropTypes from 'prop-types';
 import React, {useContext, useState} from 'react';
 
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
-import {
-  BodyFourText,
-  StrongText,
-  EmText,
-} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
-import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
+import AiAssessmentFeedbackContext, {
+  NO_FEEDBACK,
+  THUMBS_DOWN,
+} from './AiAssessmentFeedbackContext';
 import {aiEvaluationShape} from './rubricShapes';
 
 import style from './rubrics.module.scss';
 
-export function submitAiFeedback(values) {
+async function updateAiFeedback(values, aiFeedbackId) {
   const baseUrl = '/learning_goal_ai_evaluation_feedbacks';
-  HttpClient.post(baseUrl, JSON.stringify(values), true, {
-    'Content-Type': 'application/json',
-  });
+  await HttpClient.put(
+    `${baseUrl}/${aiFeedbackId}`,
+    JSON.stringify(values),
+    true,
+    {'Content-Type': 'application/json'}
+  );
 }
 
-export default function AiAssessmentFeedback({aiEvalInfo}) {
-  const thumbsdownval = 0;
-
+export default function AiAssessmentFeedback({aiEvalInfo, aiFeedbackId}) {
   const {aiFeedback, setAiFeedback} = useContext(AiAssessmentFeedbackContext);
   const [aiSubmitted, setAISubmitted] = useState(false);
   const [aiFalsePos, setAIFalsePos] = useState(false);
@@ -35,7 +36,7 @@ export default function AiAssessmentFeedback({aiEvalInfo}) {
   const [aiOtherContent, setAIOtherContent] = useState('');
   const [aiFeedbackReceived, setAIFeedbackReceived] = useState(false);
 
-  const submitAiFeedbackCallback = () => {
+  const submitAiFeedbackCallback = async () => {
     const bodyData = {
       learningGoalAiEvaluationId: aiEvalInfo.id,
       aiFeedbackApproval: aiFeedback,
@@ -48,7 +49,7 @@ export default function AiAssessmentFeedback({aiEvalInfo}) {
       otherContent: aiOtherContent,
     };
 
-    submitAiFeedback(bodyData);
+    await updateAiFeedback(bodyData, aiFeedbackId);
 
     setAISubmitted(true);
     setAIFeedbackReceived(true);
@@ -64,22 +65,24 @@ export default function AiAssessmentFeedback({aiEvalInfo}) {
     setAIOtherContent('');
 
     // Clear feedback
-    setAiFeedback(-1);
+    setAiFeedback(NO_FEEDBACK);
   };
 
   return (
     <div>
       {aiFeedbackReceived && (
-        <EmText className={style.aiFeedbackReceived}>
+        <Typography className={style.aiFeedbackReceived} variant="em">
           <FontAwesome icon="circle-check" />
           {i18n.aiFeedbackReceived()}
-        </EmText>
+        </Typography>
       )}
-      {!aiSubmitted && aiFeedback === thumbsdownval && (
+      {!aiSubmitted && aiFeedback === THUMBS_DOWN && aiFeedbackId && (
         <div className={style.aiAssessmentFeedback}>
-          <BodyFourText>
-            <StrongText>{i18n.aiFeedbackNegativeWhy()}</StrongText>
-          </BodyFourText>
+          <Typography variant="body4" gutterBottom>
+            <Typography variant="strong">
+              {i18n.aiFeedbackNegativeWhy()}
+            </Typography>
+          </Typography>
           <Checkbox
             label={i18n.aiFeedbackFalsePos()}
             size="xs"
@@ -118,13 +121,17 @@ export default function AiAssessmentFeedback({aiEvalInfo}) {
           />
           {aiFeedbackOther && (
             <div className={style.aiFeedbackOther}>
-              <StrongText>{i18n.aiFeedbackOtherDetails()} </StrongText>
+              <Typography variant="strong">
+                {i18n.aiFeedbackOtherDetails()}{' '}
+              </Typography>
               <textarea
                 className={style.aiFeedbackTextbox}
                 onChange={e => {
                   setAIOtherContent(e.target.value);
                 }}
                 type="text"
+                // eslint-disable-next-line react/forbid-dom-props
+                data-testid="ai-assessment-feedback-textarea"
               />
             </div>
           )}
@@ -152,4 +159,5 @@ export default function AiAssessmentFeedback({aiEvalInfo}) {
 
 AiAssessmentFeedback.propTypes = {
   aiEvalInfo: aiEvaluationShape,
+  aiFeedbackId: PropTypes.number,
 };

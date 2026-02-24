@@ -1,0 +1,17 @@
+name 'networks-postassessment-question15_v2-2025'
+title 'Networks and the Internet Post-Assessment: Question 15'
+
+right 'Digital divide'
+wrong 'Internet neutrality'
+wrong 'Redundancy in networks'
+wrong 'Phishing attacks'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A student relies on public libraries for Internet access because their home does not have a connection. What global issue does this situation highlight?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 7: The Internet's Hidden Barriers
+MARKDOWN

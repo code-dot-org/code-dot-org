@@ -2,7 +2,6 @@ import $ from 'jquery';
 import _ from 'lodash';
 import queryString from 'query-string';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {TestResults} from '@cdo/apps/constants';
@@ -10,11 +9,11 @@ import {
   setUserRoleInCourse,
   CourseRoles,
 } from '@cdo/apps/templates/currentUserRedux';
-import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 import clientState from './clientState';
-import DisabledBubblesAlert from './DisabledBubblesAlert';
-import DisabledBubblesModal from './DisabledBubblesModal';
+import DisabledBubblesAlert from './components/DisabledBubblesAlert';
+import DisabledBubblesModal from './components/DisabledBubblesModal';
 import {getHiddenLessons} from './hiddenLessonRedux';
 import {
   initProgress,
@@ -27,16 +26,16 @@ import {
   useDbProgress,
 } from './progressRedux';
 import {getStore} from './redux';
-import {renderTeacherPanel} from './teacherPanelHelpers';
 import {setViewType, ViewType} from './viewAsRedux';
 
 var progress = module.exports;
+export default progress;
 
 function showDisabledBubblesModal() {
   const div = $('<div>');
   $(document.body).append(div);
 
-  ReactDOM.render(<DisabledBubblesModal />, div[0]);
+  createReactRoot(<DisabledBubblesModal />, div[0]);
 }
 
 /**
@@ -58,7 +57,7 @@ progress.showDisabledBubblesAlert = function () {
   });
   $(document.body).append(div);
 
-  ReactDOM.render(<DisabledBubblesAlert />, div[0]);
+  createReactRoot(<DisabledBubblesAlert />, div[0]);
 };
 
 /**
@@ -94,7 +93,15 @@ progress.generateLessonProgress = function (
 ) {
   const store = getStore();
 
-  const {name, displayName, disablePostMilestone, age_13_required} = scriptData;
+  const {
+    name,
+    displayName,
+    disablePostMilestone,
+    age_13_required,
+    hasUnnumberedLessons,
+    course_name,
+    course_id,
+  } = scriptData;
 
   initializeStoreWithProgress(
     store,
@@ -106,6 +113,9 @@ progress.generateLessonProgress = function (
       disablePostMilestone,
       age_13_required,
       id: lessonData.script_id,
+      hasUnnumberedLessons,
+      courseName: course_name,
+      course_id: course_id,
     },
     currentLevelId,
     false,
@@ -240,17 +250,25 @@ function extractLevelResults(userProgressResponse) {
 progress.initCourseProgress = function (scriptData) {
   const store = getStore();
   initializeStoreWithProgress(store, scriptData, null, true);
-  queryUserProgress(store, scriptData, null);
+  queryUserProgress(store, scriptData, null, false);
 };
 
 /* Set our initial view type (Participant or Instructor) from current user's user_type
  * or our query string. */
 progress.initViewAs = function (store, isSignedInUser, isInstructor) {
+  progress.initViewAsWithoutStore(store.dispatch, isSignedInUser, isInstructor);
+};
+
+progress.initViewAsWithoutStore = function (
+  dispatch,
+  isSignedInUser,
+  isInstructor
+) {
   // Default to Participant, unless current user is a teacher
   let initialViewAs = ViewType.Participant;
   if (isInstructor) {
     initialViewAs = ViewType.Instructor;
-    store.dispatch(setUserRoleInCourse(CourseRoles.Instructor));
+    dispatch(setUserRoleInCourse(CourseRoles.Instructor));
   }
 
   // If current user is signed out or an instructor, allow the
@@ -260,12 +278,18 @@ progress.initViewAs = function (store, isSignedInUser, isInstructor) {
     initialViewAs = query.viewAs || initialViewAs;
   }
 
-  store.dispatch(setViewType(initialViewAs));
+  dispatch(setViewType(initialViewAs));
 };
 
 progress.retrieveProgress = function (scriptName, scriptData, currentLevelId) {
   const store = getStore();
-  return $.getJSON(`/api/script_structure/${scriptName}`, scriptData => {
+  const courseName = scriptData?.course_name;
+  const unitPosition = scriptData?.unit_position;
+  let fetchURL = `/api/script_structure/${scriptName}`;
+  if (courseName && unitPosition) {
+    fetchURL = `/api/script_structure/courses/${courseName}/units/${unitPosition}`;
+  }
+  return $.getJSON(fetchURL, scriptData => {
     initializeStoreWithProgress(store, scriptData, currentLevelId, true);
     queryUserProgress(store, scriptData, currentLevelId);
   });
@@ -297,17 +321,6 @@ function queryUserProgress(store, scriptData, currentLevelId) {
       store.getState().progress.postMilestoneDisabled;
     if (data.signedIn && postMilestoneDisabled) {
       showDisabledBubblesModal();
-    }
-
-    if (
-      (data.isInstructor || data.teacherViewingStudent) &&
-      !data.deeperLearningCourse
-    ) {
-      const pageType = currentLevelId
-        ? pageTypes.level
-        : pageTypes.scriptOverview;
-
-      renderTeacherPanel(store, scriptData.id, scriptData.name, pageType);
     }
   });
 }
@@ -356,11 +369,13 @@ function initializeStoreWithProgress(
       unitTitle: scriptData.title,
       unitDescription: scriptData.description,
       unitStudentDescription: scriptData.studentDescription,
+      unitHasUnnumberedLessons: scriptData.hasUnnumberedLessons || false,
       courseVersionId: scriptData.courseVersionId,
       courseId: scriptData.course_id,
       isFullProgress: isFullProgress,
       isLessonExtras: isLessonExtras,
       currentPageNumber: currentPageNumber,
+      courseName: scriptData.courseName,
     })
   );
 

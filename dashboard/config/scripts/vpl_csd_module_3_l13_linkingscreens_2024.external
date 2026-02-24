@@ -4,13 +4,15 @@ display_name 'Introduction to Debugging'
 
 title 'Debugging Session'
 markdown <<MARKDOWN
-#Lesson 17:  Linking Prototype Screens
+# Lesson 17:  Linking Prototype Screens
 
-##### Chapter 2, Lesson 17 has student teams merge all of their separate screens into a single app.  The "Help & Tips" tab throughout the lesson contains additional information for the process of merging screens into a single app.  This is also an opportunity to help students develop the skill of referencing resources.
+#### Chapter 2, Lesson 17 has student teams merge all of their separate screens into a single app.  The "Help & Tips" tab throughout the lesson contains additional information for the process of merging screens into a single app.  This is also an opportunity to help students develop the skill of referencing resources.
 
-##### **Optional:** Explore the project lesson plan and accompanying resources.
+#### **Optional:** Explore the project lesson plan and accompanying resources.
 
-><a href="https://studio.code.org/s/csd4-2023/lessons/17" target="blank" rel="noopener noreferrer">The Design Process - Lesson 17: Linking Prototype Screens - Lesson Plan</a>
+<div style="background-color: #F7F8FA; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
+<a href="https://studio.code.org/s/csd4-2024/lessons/17" target="blank" rel="noopener noreferrer">The Design Process - Lesson 17: Linking Prototype Screens - Lesson Plan</a></p></div>
+<br><br>
 
-![](https://images.code.org/ff7e9c9390be76c169d8e7b770d8a533-image-1597875966538.png)
+<img src="https://images.code.org/ff7e9c9390be76c169d8e7b770d8a533-image-1597875966538.png" alt="A screenshot of Web Lab with the Help & Tips pointed out">
 MARKDOWN

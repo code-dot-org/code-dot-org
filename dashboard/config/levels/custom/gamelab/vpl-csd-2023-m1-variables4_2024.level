@@ -1,5 +1,6 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 50,
   "created_at": "2024-03-25T22:41:01.000Z",
   "level_num": "custom",
@@ -51,7 +52,7 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
-    "long_instructions": "<img style=\"float: right\" src=\"https://images.code.org/f4b306422763c84bb924f4f7d3a6dca6-image-1492798058864.06.38 AM.png\">\r\n\r\n# Debug: Naming Variables\r\n\r\n##### This program has multiple errors caused by bad label names.  The errors prevent the program from being viewed in block mode, so the code is in text. Below are a few rules for naming variables. Click **\"Help & Tips\"** above to read more.\r\n\r\n* ##### Labels can't have spaces.\r\n* ##### Labels can't start with a number.\r\n* ##### Capitalization and spelling must be exactly the same.\r\n\r\n# Do This\r\n\r\n* ##### Find the rule each variable label violates.\r\n* ##### **Correct the errors by picking new names that follow the rules above.**\r\n\r\n##### If your program works it should draw the image on the right. You should also be able to switch back to blocks mode.",
+    "long_instructions": "<img style=\"float: right\" src=\"https://images.code.org/f4b306422763c84bb924f4f7d3a6dca6-image-1492798058864.06.38 AM.png\">\r\n\r\n# Debug: Naming Variables\r\n\r\n#### This program has multiple errors caused by bad label names.  The errors prevent the program from being viewed in block mode, so the code is in text. Below are a few rules for naming variables. Click **\"Help & Tips\"** above to read more.\r\n\r\n* #### Labels can't start with a number.\r\n* #### Capitalization and spelling must be exactly the same.\r\n\r\n# Do This\r\n\r\n* #### Find the rule each variable label violates.\r\n* #### **Correct the errors by picking new names that follow the rules above.**\r\n\r\n#### If your program works it should draw the image on the right. You should also be able to switch back to blocks mode.",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 24274,
@@ -70,9 +71,8 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-25T22:41:01.431+00:00\",\"changed\":[\"cloned from \\\"vpl-csd-2023-m1-variables4\\\"\"],\"cloned_from\":\"vpl-csd-2023-m1-variables4\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-03-25T22:41:01.431+00:00\",\"changed\":[\"cloned from \\\"vpl-csd-2023-m1-variables4\\\"\"],\"cloned_from\":\"vpl-csd-2023-m1-variables4\"},{\"changed_at\":\"2024-08-16 16:08:31 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

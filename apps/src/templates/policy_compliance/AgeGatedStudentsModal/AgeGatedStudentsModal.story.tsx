@@ -2,7 +2,6 @@ import {StoryFn} from '@storybook/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 
-// @ts-expect-error Typescript type declaration error
 import {reduxStore} from '@cdo/storybook/decorators';
 
 import currentUser from '../../currentUserRedux';

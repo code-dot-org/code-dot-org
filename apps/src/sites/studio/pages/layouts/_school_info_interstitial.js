@@ -7,7 +7,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import SchoolInfoInterstitial from '@cdo/apps/lib/ui/SchoolInfoInterstitial';
+import SchoolInfoInterstitial from '@cdo/apps/schoolInfo/SchoolInfoInterstitial';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -21,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.removeChild(mountPoint);
   }
 
-  ReactDOM.render(
+  createReactRoot(
     <SchoolInfoInterstitial scriptData={scriptData} onClose={unmount} />,
     mountPoint
   );

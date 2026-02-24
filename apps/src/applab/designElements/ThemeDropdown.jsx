@@ -6,7 +6,7 @@ import Select from 'react-select';
 
 import applabMsg from '@cdo/applab/locale';
 
-import FontAwesome from '../../templates/FontAwesome';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import {themeOptionsForSelect, DEFAULT_THEME_INDEX} from '../constants';
 import 'react-select/dist/react-select.css';
 

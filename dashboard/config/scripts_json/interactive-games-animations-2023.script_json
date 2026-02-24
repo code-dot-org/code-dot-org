@@ -4,26 +4,37 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "35e73080-fe66-44e1-932d-4cb623a37f5a",
+          "notice": "AI Teaching Assistant Available to Help Assess Student Projects",
+          "details": "AI Teaching Assistant is now available to support you in projects and mini-projects throughout this unit. This new tool is designed to save you time, using AI to assess student work. To learn more about how to integrate the AI Teaching Assistant into your lessons, please watch our introductory video or visit https://code.org/ai/teaching-assistant",
+          "link": "https://youtu.be/Lj7uZx-BKhw",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Learn More"
+        }
+      ],
+      "content_area": "curriculum_6_8",
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
-      "is_course": true,
       "is_migrated": true,
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
       "tts": true,
-      "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": "interactive-games-animations",
-    "serialized_at": "2024-04-01 16:25:42 UTC",
-    "published_state": "stable",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-03-28 09:30:10 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "interactive-games-animations-2023"
     }

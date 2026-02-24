@@ -1,0 +1,84 @@
+name 'PLGuide_L3_TextExample1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Title
+
+<!-- This div box wraps around all four images. Change the gap between images and margin around the whole div box here. -->
+<div style="display: flex; justify-content: center; gap: 5%; max-width: 100%; margin: 20px 0px 20px 0px;">
+	<!-- Change the image width to the percentage you need. -->
+    <img src="https://images.code.org/1bf1f9c625e1f83821e4fc9fbc7f7f19-image-1739908559016.png" alt="ADD ALT TEXT" style="width: 20%; border-radius:10px;">
+    <img src="https://images.code.org/5dfa54613ff29b4ea1ec6a66500a8a09-image-1739908567115.png" alt="ADD ALT TEXT" style="width: 20%; border-radius:10px;">
+    <img src="https://images.code.org/5a9395b2f8ba9fdd159ef52f376ebad0-image-1739908571781.png" alt="ADD ALT TEXT" style="width: 20%; border-radius:10px;">
+    <img src="https://images.code.org/a07d4c5506ceea8b4024dfc93e7e796c-image-1739908574464.png" alt="ADD ALT TEXT" style="width: 20%; border-radius:10px;">
+</div>
+
+## Subtitle
+
+#### Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec turpis lectus, finibus vel sem in, egestas ultrices eros. Nullam feugiat interdum diam id gravida. Vestibulum ornare lorem turpis, ut consequat ex tristique eu. 
+
+#### Mauris luctus massa id lectus molestie malesuada. Nullam porttitor a elit sed interdum. Nullam tellus arcu, dignissim dictum nisl ac, pellentesque vestibulum tortor. Nulla vehicula mi eu orci vulputate, eu lacinia est porta. Fusce imperdiet nunc sit amet risus condimentum, eget pulvinar nisi feugiat. 
+
+<!-- Unified container for cards -->
+<div style="display: flex; justify-content: space-between; width: 100%; gap: 10px; margin: 20px 0px 20px 0px">
+    <!-- Card 1 -->
+    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 50%; text-align: center;">
+        <p style="font-size: 14pt; font-weight: bold; margin: 0;">Card 1</p>
+        <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">Your text here.</p>
+    </div>
+    <!-- Card 2 -->
+    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 50%; text-align: center;">
+        <p style="font-size: 14pt; font-weight: bold; margin: 0;">Card 2</p>
+        <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">Your text here.</p>
+    </div>
+</div>
+
+## Subtitle
+
+#### Vivamus ac tincidunt enim. Duis sed interdum eros. Nam quis velit molestie, vestibulum ipsum vitae, hendrerit eros. Nulla venenatis, tortor in dignissim suscipit, est urna porta erat, ac pretium diam sem vel neque.
+<br>
+
+___
+
+````html
+# Title
+
+<!-- This div box wraps around all four images. Change the gap between images and margin around the whole div box here. -->
+<div style="display: flex; justify-content: center; gap: 5%; max-width: 100%; margin: 20px 0px 20px 0px;">
+	<!-- Change the image width to the percentage you need. -->
+    <img src="https://images.code.org/1bf1f9c625e1f83821e4fc9fbc7f7f19-image-1739908559016.png" alt="ADD ALT TEXT" style="width: 20%; border-radius:10px;">
+    <img src="https://images.code.org/5dfa54613ff29b4ea1ec6a66500a8a09-image-1739908567115.png" alt="ADD ALT TEXT" style="width: 20%; border-radius:10px;">
+    <img src="https://images.code.org/5a9395b2f8ba9fdd159ef52f376ebad0-image-1739908571781.png" alt="ADD ALT TEXT" style="width: 20%; border-radius:10px;">
+    <img src="https://images.code.org/a07d4c5506ceea8b4024dfc93e7e796c-image-1739908574464.png" alt="ADD ALT TEXT" style="width: 20%; border-radius:10px;">
+</div>
+
+## Subtitle
+
+#### Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec turpis lectus, finibus vel sem in, egestas ultrices eros. Nullam feugiat interdum diam id gravida. Vestibulum ornare lorem turpis, ut consequat ex tristique eu. 
+
+#### Mauris luctus massa id lectus molestie malesuada. Nullam porttitor a elit sed interdum. Nullam tellus arcu, dignissim dictum nisl ac, pellentesque vestibulum tortor. Nulla vehicula mi eu orci vulputate, eu lacinia est porta. Fusce imperdiet nunc sit amet risus condimentum, eget pulvinar nisi feugiat. 
+
+<!-- Unified container for cards -->
+<div style="display: flex; justify-content: space-between; width: 100%; gap: 10px; margin: 20px 0px 20px 0px">
+    <!-- Card 1 -->
+    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 50%; text-align: center;">
+        <p style="font-size: 14pt; font-weight: bold; margin: 0;">Card 1</p>
+        <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">Your text here.</p>
+    </div>
+    <!-- Card 2 -->
+    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 50%; text-align: center;">
+        <p style="font-size: 14pt; font-weight: bold; margin: 0;">Card 2</p>
+        <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">Your text here.</p>
+    </div>
+</div>
+
+## Subtitle
+
+#### Vivamus ac tincidunt enim. Duis sed interdum eros. Nam quis velit molestie, vestibulum ipsum vitae, hendrerit eros. Nulla venenatis, tortor in dignissim suscipit, est urna porta erat, ac pretium diam sem vel neque.
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

@@ -20,7 +20,6 @@ theme: responsive
     <li><a class="linktag" id="self-paced-nav" href="#express">Ambil kursus pengantar yang bisa diatur sendiri waktunya</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">Buat game atau aplikasi</a></li>
     <li><a class="linktag" id="unplugged-nav" href="#unplugged">Coba CS tanpa komputer (opsi 'unplugged' & seluler)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Pelajari CS dari tim Code.org dan tamu spesial</a></li>
 </ul>
 
 <br>
@@ -283,56 +282,6 @@ theme: responsive
   <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Hello Ruby</a> - Cara belajar paling nyentrik di dunia tentang komputer, teknologi, dan pemrograman. Aktivitas dengan berbagai topik CS, seperti kemampuan menguraikan masalah, menemukan pola, berpikir secara algoritme, men-debug masalah dan bekerja sama. (Untuk usia 4-10)</li>
   <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> - Kumpulan bahan ajar gratis yang mengajarkan ilmu komputer lewat game dan puzzle mengasyikkan yang menggunakan kartu, tali, krayon, dan berlarian kesana kemari. (Untuk usia 5-14)</li>
 </ul>
-
-<h2>Tidak ada komputer di rumah? Coba CS di ponsel menggunakan aplikasi berikut dari mitra kami</h2>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box Island"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>Gim pengkodean seluler yang menawan yang membawa peserta didik pada petualangan yang mengasyikkan, sambil mengajarkan dasar-dasar pengkodean, seperti algoritme, pengenalan pola, urutan, loop, dan persyaratan. <I>(untuk segala usia)</i>
-</div>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">Platform belajar-ke-kode</h3></a>pemenang Penghargaan CodeSpark untuk anak-anak usia 5-9 tahun. Pecahkan puzzle dan buat game dengan The Foos sambil belajar mengkode. <strong>Catatan: codeSpark menawarkan uji coba gratis 3 bulan. Alamat email dan informasi kartu kredit orang tua wajib dicantumkan saat mendaftar.</strong> <i>(untuk murid prabaca hingga Kelas 5)</i>
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[Kembali ke atas]</a></p>
-
-<a id="livecoding"></a>
-<h2>Belajar dari tim Code.org dan tamu spesial!</h2>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Logo CodeBytes">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes adalah pelajaran interaktif 20 menit yang mudah dicerna yang memadukan ilmu komputer dengan topik dunia nyata. Latih AI untuk membaca bahasa tanda, buat desain aplikasi untuk kebaikan, jelajahi dunia Minecraft, dan masih banyak lagi!</div>
-        <br>
-        <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Lihat episode</button></a>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Code Break">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">Code Break</h3>
-        <div class="smalltext" style="">Jaga agar ilmu komputer tetap menyenangkan dengan mengambil Code Break! Anda dapat membuat cypher bersama Ashton Kutcher, mempelajari variable bersama Yara Shahidi, dan bahkan mengeksplorasi cara kerja Internet bersama penemu asli Internet, Vint Cerf!</div>
-        <br>
-        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Jalin koneksi</button></a>
-    </span>
-  </div>
-</div>
-</div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 

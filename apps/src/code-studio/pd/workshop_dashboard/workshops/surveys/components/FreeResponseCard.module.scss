@@ -1,0 +1,66 @@
+.freeResponse {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  .cardHeaderRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  div.cardContent {
+    padding: 1.25rem;
+  }
+
+  .textCardContainer {
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+
+    .textCard {
+      background: var(--background-neutral-secondary);
+      border-radius: 0.5rem;
+      padding: 1rem;
+
+      &.success {
+        background: var(--background-success-extra-light);
+      }
+      &.warning {
+        background: var(--background-warning-light);
+      }
+    }
+
+    &.flexTextCardContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      .textCard {
+        flex: 0;
+      }
+    }
+  }
+
+  // Medium Screens: Switch to 2 columns
+  @media (min-width: 600px) {
+    .textCardContainer {
+      grid-template-columns: repeat(2, 1fr);
+      &.small {
+        grid-template-columns: unset;
+      }
+    }
+  }
+
+  // Large Screens: Switch to 3 columns
+  @media (min-width: 900px) {
+    .textCardContainer {
+      grid-template-columns: repeat(3, 1fr);
+      &.small {
+        grid-template-columns: unset;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+name 'networks-preassessment-question10_v2-2025'
+title 'Networks and the Internet Pre-Assessment: Question 10'
+
+right 'Having too many devices connected to the same network'
+wrong 'Closing unused applications'
+wrong 'Using a wired connection instead of Wi-Fi'
+wrong 'Restarting the router regularly'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What factor can slow down an Internet connection?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 5: Packets
+
+Lesson 6: HTTP and DNS
+MARKDOWN

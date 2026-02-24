@@ -1,13 +1,13 @@
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useCallback} from 'react';
 
-import {StrongText} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
-import AccessibleDialog from '../../AccessibleDialog';
+import AccessibleDialog from '../../../sharedComponents/AccessibleDialog';
 
 import styles from './coteacher-settings.module.scss';
 
@@ -55,11 +55,11 @@ export default function RemoveCoteacherDialog({
         onClose={closeRemoveDialog}
         className={styles.removeDialog}
       >
-        <StrongText className={styles.removeDialogTitle}>
+        <Typography className={styles.removeDialogTitle} variant="strong">
           {i18n.coteacherRemoveDialogHeader({
             email: coteacherToRemove.instructorEmail,
           })}
-        </StrongText>
+        </Typography>
         <div className={styles.removeDialogDescription}>
           {i18n.coteacherRemoveDialogDescription()}
         </div>

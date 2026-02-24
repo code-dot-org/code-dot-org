@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "میهمانی رقص", body: "یک میهمانی رقص را کدنویسی کنید! از ویژگی های بارز Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, موسیقی از دیزنی \",انکانتو,\" و بیشتر!", image: "/images/hoc2022-dance-party.png", url: "https://code.org/dance" }}
-
-{{ featured_tutorial, title: "شعر هنر", body: "در این ساعت کدنویسی، هنر و انیمیشن را به یک شعر کلاسیک اضافه کنید!", image: "/shared/images/courses/logo_tall_poem-art.jpg", url: "https://studio.code.org/s/poem-art-2021/reset" }}
-
-{{ featured_tutorial, title: "Artist", body: "با هنرمند تصاویر و طرح های جالب بکشید!", image: "/shared/images/courses/logo_tall_artist.jpg", url: "https://studio.code.org/s/artist/reset" }}
-
-{{ featured_tutorial, title: "Infinity Play Lab", body: "برای ایجاد داستان یا بازی با شخصیت های دیزنی بی نهایت استفاده کنید.", image: "/shared/images/courses/logo_tall_infinity.jpg", url: "https://studio.code.org/s/infinity/reset" }}

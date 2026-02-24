@@ -3,7 +3,7 @@ def hoc_dir(*dirs)
 end
 
 def hoc_load_countries
-  JSON.parse(File.read(hoc_dir('i18n/countries.json')))
+  JSON.parse(File.read(pegasus_dir('config/sites/hourofcode.com/countries.json')))
 end
 HOC_COUNTRIES = hoc_load_countries
 
@@ -71,8 +71,8 @@ def hoc_canonicalized_i18n_path(uri, query_string)
   # Expected to be in short string format (ex. 'en')
   @language = @user_language || default_language
 
-  canonical_urls = [File.join(["/#{(@company || @country)}/#{@language}", path].reject(&:nil_or_empty?))]
-  canonical_urls << File.join(["/#{(@company || @country)}", path].reject(&:nil_or_empty?)) if @language == country_language
+  canonical_urls = [File.join(["/#{@company || @country}/#{@language}", path].reject(&:nil_or_empty?))]
+  canonical_urls << File.join(["/#{@company || @country}", path].reject(&:nil_or_empty?)) if @language == country_language
   unless canonical_urls.include?(uri)
     dont_cache
     redirect canonical_urls.last + (query_string.empty? ? '' : "?#{query_string}")
@@ -184,33 +184,13 @@ def campaign_date(format)
     id = 'campaign_date_full_year'
   end
 
-  # For hoc2024, we just want campaign dates for the US
+  # For hoc2025, we just want campaign dates for the US
   # and non-US.
   if @country != "us"
     id = "nonus_#{id}"
   end
 
   return I18n.t(id, locale: language)
-end
-
-def company_count
-  return fetch_hoc_metrics['hoc_company_totals'][@company]
-end
-
-# We get counts for the individual countries in Latin America,
-#  so let's sum those up to get the total for all of Latam
-def latam_count(totals)
-  latam_totals = totals.slice(*LATAM_COUNTRY_CODES)
-  return latam_totals.inject(0) {|sum, tuple| sum + tuple[1]}
-end
-
-def country_count
-  code = HOC_COUNTRIES[@country]['country_code'] || @country
-  totals = fetch_hoc_metrics['hoc_country_totals']
-
-  # If the country is Latam, return the sum of all events in Latam.
-  #  Otherwise return the total for the given country.
-  return @country == 'la' ? latam_count(totals) : totals[code.upcase]
 end
 
 def country_full_name

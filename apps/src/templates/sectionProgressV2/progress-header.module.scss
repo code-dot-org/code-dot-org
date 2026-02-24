@@ -20,4 +20,16 @@
 
 .pageContent {
   padding: 24px 64px 64px 64px;
+
+  &.navView {
+    padding: 0;
+
+    &.v1 {
+      max-width: 970px;
+    }
+  }
+}
+
+.deprecationBanner {
+  margin-bottom: 4px;
 }

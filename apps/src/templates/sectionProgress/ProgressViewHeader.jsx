@@ -2,48 +2,39 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/unitSelectionRedux';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {
+  getSelectedScriptFriendlyName,
+  getSelectedCourseName,
+  getSelectedUnitPosition,
+} from '@cdo/apps/redux/unitSelectionRedux';
 import i18n from '@cdo/locale';
 
-import {h3Style} from '../../lib/ui/Headings';
-import firehoseClient from '../../lib/util/firehose';
+import {h3Style} from '../../legacySharedComponents/Headings';
 import color from '../../util/color';
+import {getNestedUnitUrl} from '../teacherDashboard/urlHelpers';
 
 import {ViewType, unitDataPropType} from './sectionProgressConstants';
 import {getCurrentUnitData} from './sectionProgressRedux';
-import StandardsViewHeaderButtons from './standards/StandardsViewHeaderButtons';
 
 class ProgressViewHeader extends Component {
   static propTypes = {
     scriptId: PropTypes.number,
-    //redux
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     sectionId: PropTypes.number.isRequired,
-    scriptFriendlyName: PropTypes.string.isRequired,
+    scriptFriendlyName: PropTypes.string,
     scriptData: unitDataPropType,
+    courseVersionName: PropTypes.string,
+    unitPosition: PropTypes.number,
   };
 
   getLinkToOverview() {
-    const {scriptData, sectionId} = this.props;
-    return scriptData ? `${scriptData.path}?section_id=${sectionId}` : null;
+    const {sectionId, courseVersionName, unitPosition} = this.props;
+    return getNestedUnitUrl(sectionId, courseVersionName, unitPosition, null);
   }
 
   navigateToScript = () => {
-    firehoseClient.putRecord(
-      {
-        study: 'teacher_dashboard_actions',
-        study_group: 'progress',
-        event: 'go_to_script',
-        data_json: JSON.stringify({
-          section_id: this.props.sectionId,
-          script_id: this.props.scriptId,
-        }),
-      },
-      {includeUserId: true}
-    );
-
     analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED, {
       sectionId: this.props.sectionId,
       unitId: this.props.scriptId,
@@ -58,23 +49,21 @@ class ProgressViewHeader extends Component {
     const headingText = {
       [ViewType.SUMMARY]: i18n.lessonsAttempted() + ' ',
       [ViewType.DETAIL]: i18n.levelsAttempted() + ' ',
-      [ViewType.STANDARDS]: i18n.CSTAStandardsIn() + ' ',
     };
     return (
       <div style={{...h3Style, ...styles.heading, ...styles.tableHeader}}>
         <span>
-          {headingText[currentView] + ' '}
-          <a
-            href={linkToOverview}
-            style={styles.scriptLink}
-            onClick={this.navigateToScript}
-          >
-            {scriptFriendlyName}
-          </a>
+          {headingText[currentView] + ' '}{' '}
+          {scriptFriendlyName && (
+            <a
+              href={linkToOverview}
+              style={styles.scriptLink}
+              onClick={this.navigateToScript}
+            >
+              {scriptFriendlyName}
+            </a>
+          )}
         </span>
-        {currentView === ViewType.STANDARDS && (
-          <StandardsViewHeaderButtons sectionId={this.props.sectionId} />
-        )}
       </div>
     );
   }
@@ -103,4 +92,6 @@ export default connect(state => ({
   currentView: state.sectionProgress.currentView,
   scriptData: getCurrentUnitData(state),
   scriptFriendlyName: getSelectedScriptFriendlyName(state),
+  courseVersionName: getSelectedCourseName(state),
+  unitPosition: getSelectedUnitPosition(state),
 }))(ProgressViewHeader);

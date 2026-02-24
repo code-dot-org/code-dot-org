@@ -1,0 +1,24 @@
+{
+  "name": "dani-test",
+  "script_names": [
+    "dani-test"
+  ],
+  "original_script_names": [
+    "dani-test"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "dani-test",
+    "numbered_units": "auto",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

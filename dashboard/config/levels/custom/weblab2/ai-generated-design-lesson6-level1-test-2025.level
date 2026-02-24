@@ -1,0 +1,85 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-10-14T21:23:48.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "suggest",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "sample_mood_boards",
+          "parentId": "0",
+          "open": true
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Homepage</title>\n</head>\n<body>\n  <header>\n    <h1>Welcome to My Website</h1>\n    <nav>\n      <a href=\"index.html\">Home</a> |\n      <a href=\"contact.html\">Contact</a>\n    </nav>\n  </header>\n\n  <main>\n    <section>\n      <h2>About Us</h2>\n      <p>We are a small team dedicated to building simple, elegant web experiences using modern web technologies.</p>\n    </section>\n\n    <section>\n      <h2>Our Services</h2>\n      <ul>\n        <li>Web Design</li>\n        <li>Web Development</li>\n        <li>Consulting</li>\n      </ul>\n    </section>\n\n    <section>\n      <h2>Latest News</h2>\n      <p>Check out our latest updates and projects on our blog. We regularly post about technology and design trends.</p>\n    </section>\n  </main>\n\n  <footer>\n    <p>&copy; 2025 My Website. All rights reserved.</p>\n  </footer>\n</body>\n</html>\n  ",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "contact.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Contact Us</title>\n</head>\n<body>\n  <header>\n    <h1>Contact Us</h1>\n    <nav>\n      <a href=\"index.html\">Home</a> |\n      <a href=\"contact.html\">Contact</a>\n    </nav>\n  </header>\n\n  <main>\n    <section>\n      <h2>Get in Touch</h2>\n      <p>We’d love to hear from you! Please use the form below to send us a message.</p>\n      <form action=\"#\" method=\"post\">\n        <label for=\"name\">Name:</label><br>\n        <input type=\"text\" id=\"name\" name=\"name\"><br><br>\n\n        <label for=\"email\">Email:</label><br>\n        <input type=\"email\" id=\"email\" name=\"email\"><br><br>\n\n        <label for=\"message\">Message:</label><br>\n        <textarea id=\"message\" name=\"message\" rows=\"5\" cols=\"30\"></textarea><br><br>\n\n        <input type=\"submit\" value=\"Send Message\">\n      </form>\n    </section>\n\n    <section>\n      <h2>Our Location</h2>\n      <p>123 Main Street<br>\n      Hometown, USA 12345</p>\n    </section>\n  </main>\n\n  <footer>\n    <p>&copy; 2025 My Website. All rights reserved.</p>\n  </footer>\n</body>\n</html>",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "mood_board_1.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson6-level1-test-2025/uuid/6796e678-0ead-42f5-a084-ce71b7141e2c.png",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "mood_board_2.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson6-level1-test-2025/uuid/9b5809b0-a5a9-4b32-95cc-1bf7a83b76a7.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "long_instructions": "#Apply a Consistent Style to Both Web Pages\r\n\r\nYour goal is to style both HTML pages by generating and linking a CSS file based on your chosen mood board.\r\n\r\nAdd the `html` file as context and prompt the AI to update the file with a link to the stylesheet. \r\n\r\n**Don't have your own mood board?** Attach one from the `sample_mood_boards` folder to your chat with AI.\r\n\r\n:::details [Helpful Steps]\r\n1. Use AI to generate the CSS File\r\n2. Save and Link the Stylesheet\r\n3. Preview Your Work\r\n4. Save as Version 1\r\n:::",
+    "encrypted_exemplar_sources": "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\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-14 21:23:52 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-14 21:58:19 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 22:03:51 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 22:08:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 22:12:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 22:16:24 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-14 22:56:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 16:08:21 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 16:08:46 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 21:36:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-15 21:37:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-23 01:21:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-23 01:21:27 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-23 01:22:17 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-23 01:22:48 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-23 01:22:53 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-23 01:30:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-23 01:39:36 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

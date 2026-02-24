@@ -1,0 +1,270 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2024-10-14T21:21:27.000Z",
+  "level_num": "custom",
+  "user_id": 16899,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "blockMode": "Advanced",
+      "toolbox": {
+      },
+      "startSources": {
+        "variables": [
+          {
+            "name": "x",
+            "id": ",0jW@5:jPW}_i/Z5wK;r"
+          }
+        ],
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "procedures_callnoreturn",
+                  "id": "*G=(wR7l[lC@9v9nQ|TH",
+                  "extraState": {
+                    "name": "chorus",
+                    "params": [
+                      "x"
+                    ]
+                  },
+                  "inputs": {
+                    "ARG0": {
+                      "block": {
+                        "type": "math_number",
+                        "id": "vZefncDh+~gtCp%KOtvt",
+                        "fields": {
+                          "NUM": 1
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "procedures_callnoreturn",
+                      "id": "8TaR9mgKP`I~U^Z,N-OS",
+                      "extraState": {
+                        "name": "chorus",
+                        "params": [
+                          "x"
+                        ]
+                      },
+                      "inputs": {
+                        "ARG0": {
+                          "block": {
+                            "type": "math_number",
+                            "id": "GfLG}TPLeB!Hk9*wKLYF",
+                            "fields": {
+                              "NUM": 5
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "g$+J??IAMrrF=D.THJtR",
+              "x": 370,
+              "y": 70,
+              "extraState": {
+                "params": [
+                  {
+                    "name": "x",
+                    "id": ",0jW@5:jPW}_i/Z5wK;r",
+                    "argId": "?2V?gIM@q:t:^IowTE@G"
+                  }
+                ]
+              },
+              "fields": {
+                "NAME": "chorus"
+              },
+              "inputs": {
+                "?2V?gIM@q:t:^IowTE@G": {
+                  "shadow": {
+                    "type": "argument_reporter",
+                    "id": "cQ{S$UzmAeakdkP6XtAp",
+                    "extraState": {
+                      "modelId": ",0jW@5:jPW}_i/Z5wK;r"
+                    },
+                    "fields": {
+                      "VAR": "x"
+                    }
+                  }
+                },
+                "STACK": {
+                  "block": {
+                    "type": "play_sound",
+                    "id": "VN6z!OUG6IZ=uml#sh@0",
+                    "fields": {
+                      "sound": "mc_hammer_u_cant_touch_this/main_loop"
+                    },
+                    "inputs": {
+                      "measure": {
+                        "shadow": {
+                          "type": "math_number",
+                          "id": "Z,M.5?:tl4bmwBrV)XG2",
+                          "fields": {
+                            "NUM": 1
+                          }
+                        },
+                        "block": {
+                          "type": "variables_get",
+                          "id": "C/!F]W@3Rs`M~dip|};p",
+                          "extraState": {
+                          },
+                          "fields": {
+                            "VAR": {
+                              "id": ",0jW@5:jPW}_i/Z5wK;r"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sound",
+                        "id": "v;7h@NQsp.dj|+eIT6RC",
+                        "fields": {
+                          "sound": "mc_hammer_u_cant_touch_this/cant_touch_this"
+                        },
+                        "inputs": {
+                          "measure": {
+                            "shadow": {
+                              "type": "math_number",
+                              "id": "|_0F80c:o^7[QeNxB%$:",
+                              "fields": {
+                                "NUM": 2
+                              }
+                            },
+                            "block": {
+                              "type": "math_arithmetic",
+                              "id": "DvJ.Qper6HY/zTWZvneZ",
+                              "fields": {
+                                "OP": "<field name=\"OP\">ADD</field>"
+                              },
+                              "inputs": {
+                                "A": {
+                                  "shadow": {
+                                    "type": "math_number",
+                                    "id": ":0#Pag+tc=67G{cZBT4d",
+                                    "fields": {
+                                      "NUM": 1
+                                    }
+                                  },
+                                  "block": {
+                                    "type": "variables_get",
+                                    "id": "6{/?./;90}/UxP:M;J#^",
+                                    "extraState": {
+                                    },
+                                    "fields": {
+                                      "VAR": {
+                                        "id": ",0jW@5:jPW}_i/Z5wK;r"
+                                      }
+                                    }
+                                  }
+                                },
+                                "B": {
+                                  "shadow": {
+                                    "type": "math_number",
+                                    "id": "|KOUgo9p)MT;sj))uS%i",
+                                    "fields": {
+                                      "NUM": 1
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound",
+                            "id": "=vMM}crzKQrt$SgdAr9v",
+                            "fields": {
+                              "sound": "mc_hammer_u_cant_touch_this/main_loop"
+                            },
+                            "inputs": {
+                              "measure": {
+                                "shadow": {
+                                  "type": "math_number",
+                                  "id": "Z,M.5?:tl4bmwBrV)XG2",
+                                  "fields": {
+                                    "NUM": 1
+                                  }
+                                },
+                                "block": {
+                                  "type": "math_arithmetic",
+                                  "id": "zTDTFS:geLs9LuaJ^!Aj",
+                                  "fields": {
+                                    "OP": "<field name=\"OP\">ADD</field>"
+                                  },
+                                  "inputs": {
+                                    "A": {
+                                      "shadow": {
+                                        "type": "math_number",
+                                        "id": ":0#Pag+tc=67G{cZBT4d",
+                                        "fields": {
+                                          "NUM": 1
+                                        }
+                                      },
+                                      "block": {
+                                        "type": "variables_get",
+                                        "id": "v!86eRhbp_G/9$Hz}AoT",
+                                        "extraState": {
+                                        },
+                                        "fields": {
+                                          "VAR": {
+                                            "id": ",0jW@5:jPW}_i/Z5wK;r"
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "B": {
+                                      "shadow": {
+                                        "type": "math_number",
+                                        "id": ")tWOT#JFOCK/zr2`=c`,",
+                                        "fields": {
+                                          "NUM": 2
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "library": "launch2024",
+      "packId": "mc_hammer_u_cant_touch_this"
+    },
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-10-14T21:21:27.027+00:00\",\"changed\":[\"cloned from \\\"advanced-model-sandbox-functions-1\\\"\"],\"cloned_from\":\"advanced-model-sandbox-functions-1\"},{\"changed_at\":\"2024-10-14 21:21:29 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-14 21:23:07 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

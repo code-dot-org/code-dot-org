@@ -1,13 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {getStore} from '@cdo/apps/code-studio/redux';
-import CourseEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseEditor';
+import CourseEditor from '@cdo/apps/levelbuilder/course-editor/CourseEditor';
 import createResourcesReducer, {
   initResources,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
+} from '@cdo/apps/levelbuilder/lesson-editor/resourcesEditorRedux';
 import {registerReducers} from '@cdo/apps/redux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 $(document).ready(showCourseEditor);
 
@@ -34,7 +34,7 @@ function showCourseEditor() {
   let announcements = courseEditorData.course_summary.announcements || [];
 
   // Eventually we want to do this all via redux
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <CourseEditor
         name={courseEditorData.course_summary.name}
@@ -67,13 +67,17 @@ function showCourseEditor() {
         initialUnitsInCourse={courseEditorData.course_summary.scripts.map(
           unit => unit.name
         )}
+        initialUnitPrefixes={courseEditorData.course_summary.scripts.map(
+          (unit, index) =>
+            unit.unit_prefix === null
+              ? (index + 1).toString()
+              : unit.unit_prefix
+        )}
         unitNames={courseEditorData.script_names.sort()}
         initialHasVerifiedResources={
           courseEditorData.course_summary.has_verified_resources
         }
-        initialHasNumberedUnits={
-          courseEditorData.course_summary.has_numbered_units
-        }
+        initialNumberedUnits={courseEditorData.course_summary.numbered_units}
         courseFamilies={courseEditorData.course_families}
         versionYearOptions={courseEditorData.version_year_options}
         initialAnnouncements={announcements}

@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "Petrecere Dansantă", body: "Codifică o Petrecere Dansantă! Participă artiștii Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, muzică de la Disney \"Encanto,\" și multe altele!", image: "/images/hoc2022-dance-party.png", url: "https://code.org/dance" }}
-
-{{ featured_tutorial, title: "Arta Poeziei", body: "Adaugă artă și animație unei poezii clasice în această activitate Hour of Code!", image: "/shared/images/courses/logo_tall_poem-art.jpg", url: "https://studio.code.org/s/poem-art-2021/reset" }}
-
-{{ featured_tutorial, title: "Artist", body: "Desenează fotografii și desene fantastice cu Artist!", image: "/shared/images/courses/logo_tall_artist.jpg", url: "https://studio.code.org/s/artist/reset" }}
-
-{{ featured_tutorial, title: "Laboratorul de Joacă Infinity", body: "Folosește Laboratorul de Joacă pentru a crea o poveste sau un joc cu personaje din Disney Infinity.", image: "/shared/images/courses/logo_tall_infinity.jpg", url: "https://studio.code.org/s/infinity/reset" }}

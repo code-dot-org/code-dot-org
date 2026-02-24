@@ -1,0 +1,68 @@
+import Dialog from '@code-dot-org/component-library/dialog';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography} from '@mui/material';
+import React from 'react';
+
+export type dialogCallback = (args?: unknown) => void;
+
+type PendingDialogTitleProps = {
+  title?: string;
+};
+
+type PendingDialogBodyProps =
+  | {
+      message?: never;
+      bodyComponent?: React.ReactNode;
+    }
+  | {
+      message?: string;
+      bodyComponent?: never;
+    };
+export type PendingDialogProps = PendingDialogTitleProps &
+  PendingDialogBodyProps;
+
+import moduleStyles from './generic-dialog.module.scss';
+
+/**
+ * Pending dialog UI used in Lab2 labs.
+ */
+
+const PendingDialog: React.FunctionComponent<PendingDialogProps> = ({
+  title,
+  message,
+  bodyComponent,
+}) => {
+  const customContent = (
+    <>
+      {bodyComponent ||
+        (message && (
+          <Typography variant="body2" gutterBottom>
+            {message}
+          </Typography>
+        ))}
+      <div className={moduleStyles.spinnerContainer}>
+        <FontAwesomeV6Icon
+          iconName="spinner"
+          animationType="spin"
+          className={moduleStyles.spinnerIcon}
+        />
+      </div>
+    </>
+  );
+
+  return (
+    <Dialog
+      title={title}
+      customContent={<div id="dsco-dialog-description">{customContent}</div>}
+      className={moduleStyles.genericDialog}
+      primaryButtonProps={{
+        disabled: true,
+        isPending: true,
+        text: 'Loading',
+        onClick: () => {},
+      }}
+    />
+  );
+};
+
+export default PendingDialog;

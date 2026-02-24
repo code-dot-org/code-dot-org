@@ -1,0 +1,8 @@
+name 'testB-elem-career-journeys-explore-panels'
+display_name 'Career Exploration'
+description '###First choose one theme. Then learn about the three careers in the theme. Tap Finish to move on.'
+
+sublevels
+level 'test-elem-career-journeys-explore-panels'
+level 'test-elem-career-journeys-explore-panels3'
+level 'test-elem-career-journeys-explore-panels4'

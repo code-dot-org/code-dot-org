@@ -11,6 +11,6 @@ export const sectionLoginFactory = Factory.define('sectionLogin')
     loginType: 'email',
     secretWords: 'wizard',
     secretPictureName: 'wizard',
-    secretPicturePath: '/wizard.jpg',
+    secretPictureUrl: '/wizard.jpg',
     sharingDisabled: true,
   });

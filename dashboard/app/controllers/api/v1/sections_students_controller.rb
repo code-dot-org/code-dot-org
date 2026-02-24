@@ -93,6 +93,7 @@ class Api::V1::SectionsStudentsController < Api::V1::JSONApiController
           gender: student["gender"],
           gender_teacher_input: student["gender_teacher_input"],
           sharing_disabled: !!student["sharing_disabled"],
+          us_state: student['us_state'].presence,
         )
         @section.add_student(new_student, current_user)
         new_students.push(new_student.summarize)
@@ -133,6 +134,7 @@ class Api::V1::SectionsStudentsController < Api::V1::JSONApiController
       :name,
       :sharing_disabled,
       :password,
+      :us_state,
     )
   end
 end

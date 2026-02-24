@@ -1,0 +1,57 @@
+<Javalab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2024-10-09T19:11:55.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "SalaryDataRunner.java": {
+        "text": "import java.io.IOException;\n\npublic class SalaryDataRunner{\n  public static void main(String[] args) throws IOException{\n    \n    \n    SalaryData salaryStudy = new SalaryData();\n    double averageSalary = salaryStudy.findAverageSalary(\"annual_salary.txt\");\n\n    System.out.println(\"The average salary is: $\" + averageSalary);\n\n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "SalaryData.java": {
+        "text": "import java.io.File;\nimport java.io.IOException;\nimport java.util.Scanner;\n\npublic class SalaryData {\n  \n    /**\n     * Calculates average salary\n     */\n    public double findAverageSalary(String salaryData) throws IOException {\n        File salaryFile = new File(salaryData);\n      \n        Scanner salaryScanner = new Scanner(salaryFile);\n\n        int total = 0;\n        int count = 0;\n      \n        while (salaryScanner.hasNext()) {\n            total += salaryScanner.nextInt();\n            count++;\n        }\n        salaryScanner.close();\n\n        double average = 0.0;\n        if(count > 0){\n          average = (double) total / count;\n        }\n        return average;\n    }\n\n}",
+        "isVisible": true,
+        "tabOrder": 1
+      },
+      "annual_salary.txt": {
+        "text": "120000\n95000\n135000\n110000\n125000\n98000\n140000\n102000\n115000\n108000\n130000\n99000\n145000\n112000\n123000\n107000\n128000\n97000\n139000\n104000",
+        "isVisible": true,
+        "tabOrder": 2
+      },
+      "profession.txt": {
+        "text": "Software Engineer\nLawyer\nDoctor\nFinancial Analyst\nArchitect\nEngineer\nConsultant\nData Scientist\nManager\nPharmacist\nDentist\nBusiness Executive\nSurgeon\nAttorney\nMarketing Director\nSoftware Developer\nInvestment Banker\nAccountant\nProduct Manager\nEngineer",
+        "isVisible": true,
+        "tabOrder": 3
+      },
+      "employment_type.txt": {
+        "text": "Full-Time\nFull-Time\nFull-Time\nFull-Time\nFull-Time\nFull-Time\nFull-Time\nFull-Time\nFull-Time\nFull-Time\nFull-Time\nFull-Time\nFull-Time\nFull-Time\nFull-Time\nFull-Time\nFull-Time\nFull-Time\nFull-Time\nFull-Time",
+        "isVisible": true,
+        "tabOrder": 4
+      },
+      "city.txt": {
+        "text": "San Francisco\nNew York\nLos Angeles\nSeattle\nChicago\nBoston\nWashington, D.C.\nAustin\nSan Diego\nDallas\nSan Francisco\nNew York\nLos Angeles\nSeattle\nChicago\nBoston\nWashington, D.C.\nAustin\nSan Diego\nDallas",
+        "isVisible": true,
+        "tabOrder": 5
+      }
+    },
+    "encrypted_examples": [
+
+    ],
+    "display_name": "Salary Data Set",
+    "bubble_choice_description": "Annual salary data for various jobs, used to assess income distribution and job market trends.",
+    "long_instructions": "Investigate the bias in this data set and explore its impact on the conclusions drawn from the data.",
+    "thumbnail_url": "https://images.code.org/9f5041b054bd717413926bdb843876b6-salary.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-09T19:11:55.446+00:00\",\"changed\":[\"cloned from \\\"csa-u3l8-l1c_2024\\\"\"],\"cloned_from\":\"csa-u3l8-l1c_2024\"},{\"changed_at\":\"2024-10-09 19:12:01 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-10-09 19:17:23 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-10-09 19:17:24 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-10-09 19:17:26 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-10-09 19:17:27 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-10-13 18:51:46 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-10-13 19:15:15 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-10-13 19:18:50 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

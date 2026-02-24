@@ -1,0 +1,64 @@
+# Default configuration, overridden by:
+# - development.values.yml
+# - production.values.yml
+
+image: code-dot-org:latest
+command: ["bin/dashboard-server"]
+args:
+
+# Override to set RAILS_ENV
+RAILS_ENV:
+
+locals.yml:
+
+healthChecks:
+  enabled: false
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 1
+  replicasWhenAutoscaleDisabled: 1
+
+dashboardJob:
+  enabled: false
+  name: zsh
+  command: ["zsh", "-c"]
+  args: []
+  restartPolicy: Never
+  backoffLimit: 1
+  ttlSecondsAfterFinished: 3600 # cleanup job an hour after it completes
+
+services:
+  redis:
+    enabled: false
+  mysql:
+    enabled: false
+  minio:
+    enabled: false
+    username:
+    password:
+    runSetupS3Job: false # seed the minio buckets, runs a one-time job
+
+# These should match the docker image's USERNAME, UID and GID args
+#
+# NOTE: these currently have no effect because they are overridden to root
+# in skaffold.yaml due to a bug in skaffold sync
+user:
+  username: code-dot-org
+  uid: 1000
+  gid: 1000
+  home: /home/code-dot-org
+  allowSudo: false
+
+localDev:
+  mounts:
+    mountDotAWS: false
+    mountDotConfigGcloud: false
+
+    # These are set in the skaffold development profile so we can
+    # use dynamic values appropriate to your particular system
+    AWS_PROFILE: # for mountDotAWS: match AWS_PROFILE on your local system
+    hostPaths:
+      home: # ~ on  your local dev box, set automatically by skaffold
+      skaffoldStorage: # code-dot-org/skaffoldStorage on your local dev box, set automatically by skaffold

@@ -1,0 +1,52 @@
+@import 'breakpoints';
+
+// FAQs
+details {
+  padding: 1.5rem 1rem 1rem;
+  border-bottom: 1px solid var(--neutral_dark80);
+  transition: background ease-in-out 0.2s;
+
+  &:hover {
+    background: var(--neutral_light);
+  }
+
+  summary {
+    font-family: var(--main-font);
+    font-weight: var(--semi-bold-font-weight);
+    font-size: 1rem;
+    line-height: 1.48;
+    margin-bottom: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    @media screen and (max-width: $width-sm) {
+      align-items: baseline;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  & summary::marker {
+    content: "";
+  }
+
+  // Hides the default arrow on Safari
+  & summary::-webkit-details-marker {
+    display: none;
+  }
+
+  // Uses FontAwesome arrow icons to
+  // denote open and close states
+  & summary::after {
+    font: var(--fa-font-solid);
+    content: "\f107";
+  }
+
+  &[open] summary::after {
+    font: var(--fa-font-solid);
+    content: "\f106";
+  }
+}

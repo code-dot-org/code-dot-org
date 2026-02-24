@@ -9,7 +9,7 @@ body {
   height: 28px;
   padding: 5px 20px;
   overflow: hidden;
-  background-color: #e7e8ea;
+  background-color: #292f36;
   box-sizing: border-box;
   position: fixed;
   left: 0;
@@ -27,8 +27,8 @@ body {
 
 #codeprojects_pagefooter div.codeprojects_pagefooter_dim {
   all: initial; /* blocking inheritance for all properties */
-  font-size: 12px;
-  font-family: "Metropolis", sans-serif;
+  font-size: 14px;
+  font-family: "Figtree", sans-serif;
   font-weight: 400;
   font-style: normal;
   line-height: 18px;
@@ -39,8 +39,8 @@ body {
 
 #codeprojects_pagefooter a.codeprojects_pagefooter_link {
   all: initial; /* blocking inheritance for all properties */
-  font-size: 12px;
-  font-family: "Metropolis", sans-serif;
+  font-size: 14px;
+  font-family: "Figtree", sans-serif;
   font-weight: 400;
   font-style: normal;  line-height: 18px;
   color: #c6cacd;

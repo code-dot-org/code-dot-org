@@ -1,0 +1,15 @@
+:ruby
+  sections = [
+    {id: "handouts", icon: "person-chalkboard"},
+    {id: "stickers", icon: "certificate"},
+    {id: "videos", icon: "film-simple"},
+    {id: "posters", icon: "image"},
+    {id: "emails", icon: "envelope-open"},
+    {id: "logos", icon: "arrow-down-to-square"}
+  ]
+
+%nav.section-nav
+  - sections.each do |section|
+    %a.link-button{href: section[:id] == "emails" ? "#sample-emails" : "#" + section[:id]}
+      %i{class: "fa-solid fa-#{section[:icon]}"}
+      = hoc_s("hoc_resources.sections.#{section[:id]}")

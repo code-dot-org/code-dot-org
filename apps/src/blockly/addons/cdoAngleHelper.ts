@@ -10,7 +10,7 @@
  * - Animating angle changes when a new value is set (via text input or dropdown menu option selection).
  */
 
-import * as Blockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import color from '@cdo/apps/util/color';
 
@@ -165,7 +165,7 @@ class CdoAngleHelper {
 
   init(svgContainer: HTMLElement): void {
     // Create the SVG container for the angle helper
-    this.svg_ = Blockly.utils.dom.createSvgElement(
+    this.svg_ = BlocklyCore.utils.dom.createSvgElement(
       'svg',
       {
         version: '1.1',
@@ -193,7 +193,7 @@ class CdoAngleHelper {
       this.mouseDownWrapper_ as EventListener
     );
 
-    this.background_.line = Blockly.utils.dom.createSvgElement(
+    this.background_.line = BlocklyCore.utils.dom.createSvgElement(
       'line',
       {
         stroke: this.lineColour_,
@@ -210,7 +210,7 @@ class CdoAngleHelper {
     ) as SVGLineElement;
 
     if (this.enableBackgroundRotation_) {
-      this.background_.handle = Blockly.utils.dom.createSvgElement(
+      this.background_.handle = BlocklyCore.utils.dom.createSvgElement(
         'circle',
         {
           cx: this.background_.handleCenter!.x,
@@ -225,7 +225,7 @@ class CdoAngleHelper {
       ) as SVGCircleElement;
     }
 
-    this.arc_ = Blockly.utils.dom.createSvgElement(
+    this.arc_ = BlocklyCore.utils.dom.createSvgElement(
       'path',
       {
         stroke: this.arcColour_,
@@ -251,7 +251,7 @@ class CdoAngleHelper {
         markerSize = 5;
       }
       this.background_.ticks.push(
-        Blockly.utils.dom.createSvgElement(
+        BlocklyCore.utils.dom.createSvgElement(
           'line',
           {
             'stroke-linecap': 'round',
@@ -269,7 +269,7 @@ class CdoAngleHelper {
       );
     }
 
-    this.picker_.line = Blockly.utils.dom.createSvgElement(
+    this.picker_.line = BlocklyCore.utils.dom.createSvgElement(
       'line',
       {
         stroke: this.lineColour_,
@@ -283,7 +283,7 @@ class CdoAngleHelper {
       this.svg_
     ) as SVGLineElement;
 
-    this.picker_.handle = Blockly.utils.dom.createSvgElement(
+    this.picker_.handle = BlocklyCore.utils.dom.createSvgElement(
       'circle',
       {
         cx: this.picker_.handleCenter!.x,
@@ -389,6 +389,10 @@ class CdoAngleHelper {
   }
 
   private updateDrag_(e: MouseEvent): void {
+    // Recalculate bounding rect in case the SVG has moved or resized.
+    if (this.svg_) {
+      this.rect_ = this.svg_.getBoundingClientRect();
+    }
     const x = e.clientX - this.rect_!.left;
     const y = e.clientY - this.rect_!.top;
     let angle = this.calculateAngle(this.center_.x, this.center_.y, x, y);
@@ -466,8 +470,11 @@ class CdoAngleHelper {
     startAngle: number,
     endAngle: number
   ): string {
-    startAngle %= 360;
-    endAngle %= 360;
+    // Normalize endAngle to ensure it's within 360º of startAngle, to prevent visual glitches.
+    // Examples:
+    // - If startAngle = 0 and endAngle = 450, the result will be startAngle = 0 and endAngle = 90.
+    // - If startAngle = 270 and endAngle = 360, the result will be unchanged (startAngle = 270 and endAngle = 360).
+    endAngle = ((endAngle - startAngle) % 360) + startAngle;
     const vector = center.clone().add(new Vector(radius, 0));
     const start = Vector.rotateAroundPoint(vector, center, startAngle);
     const end = Vector.rotateAroundPoint(vector, center, endAngle);

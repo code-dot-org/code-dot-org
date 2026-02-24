@@ -1,0 +1,19 @@
+name 'gen-ai-demystifying-launch'
+title 'Ownership Ethics and Creativity'
+
+
+markdown <<MARKDOWN
+## Demystifying Generative AI
+
+
+**Make a copy of the [project guide](https://docs.google.com/document/d/17KY7ewQfVZY9qApboAJpxzi9QRpVs6TOSas-MzMRGGU/copy) to get started:**
+
+> * Choose one of the following articles to complete the project:
+>   * <a href="https://docs.google.com/document/d/1FIZimuU8V2PcfDur9nVmpCRTqPIHZg47oyxYM1RZGu4/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">Generative AI Opinion 1</a>
+>   * <a href="https://docs.google.com/document/d/1VwMG12vIehflz8t___XTTB2QvQYIsRmeuPXNiPQ7TWU/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">Generative AI Opinion 2</a>
+>   * <a href="https://docs.google.com/document/d/1FmgWivspL9ZwHACa7D9UcLEUUMgKSwMZaPrSl7OeFcs/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">Generative AI Opinion 3</a>
+>   * <a href="https://docs.google.com/document/d/1ky3Wz5sqZQwDfoHRxl-gUWC6qVElR7lQVnp4w8NQp_I/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">Generative AI Opinion 4</a>
+> * Follow the steps in the activity guide to complete the project
+
+<img src="https://drive.google.com/thumbnail?sz=w640&id=17KY7ewQfVZY9qApboAJpxzi9QRpVs6TOSas-MzMRGGU" alt="Document thumbnail" style="width: 200px; height: auto; margin-right: 15px; border-radius: 5px; border: solid 1px black">
+MARKDOWN

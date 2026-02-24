@@ -6,7 +6,7 @@
 
 - data = {}
 - data[:course_summary] = unit_group.summarize(@current_user, for_edit: false, locale_code: @locale_code)
-- data[:sections] = @sections_with_assigned_info || []
+- data[:sections] = @sections || []
 - data[:is_instructor] = unit_group.can_be_instructor?(@current_user)
 - data[:is_verified_instructor] = @current_user.try(:verified_instructor?) || false
 - data[:hidden_scripts] = @current_user.try(:get_hidden_unit_ids, unit_group)
@@ -17,6 +17,7 @@
 - data[:user_type] = @current_user.try(:user_type)
 
 - content_for(:head) do
+  %script{src: webpack_asset_path("js/#{js_locale}/aichat_locale.js")}
   %script{ src: webpack_asset_path('js/courses/show.js'), data: {courses_show: data.to_json}}
 
 #course_overview
@@ -30,3 +31,7 @@
       - else
         - lb_path = "https://levelbuilder-studio.code.org#{course_path(unit_group)}"
         %li= link_to "View on levelbuilder", lb_path
+
+/ Supply the FAB mount-point for the differentiation if allowed by the current user and this lesson
+- if Policies::Ai.ai_differentiation_enabled?(current_user) && Policies::Ai.ai_differentiation_enabled_for_unit?(unit_group)
+  %div#ai-differentiation-fab-mount-point

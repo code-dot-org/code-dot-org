@@ -1,19 +1,251 @@
-import {render, screen, fireEvent} from '@testing-library/react';
+import {render, screen, fireEvent, waitFor} from '@testing-library/react';
 import React from 'react';
+import {Provider} from 'react-redux';
 
+import {aichatReducer, setChatIsOpen} from '@cdo/apps/aichat/redux/slice';
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux,
+} from '@cdo/apps/redux';
+import currentUser, {
+  setInitialData,
+} from '@cdo/apps/templates/currentUserRedux';
+import teacherSections, {
+  setSections,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import i18n from '@cdo/locale';
 
-import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+jest.mock('@react-pdf/renderer', () => {
+  return {
+    PDFDownloadLink: () => null,
+    StyleSheet: {
+      create: () => null,
+    },
+  };
+});
+
+const DEFAULT_PROPS = {
+  context: {
+    scriptId: 1,
+  },
+  scriptName: 'test_lesson',
+};
+
+const defaultCoursesResponse = {
+  courses: ['dummy_course_2025', 'dummy_course'],
+};
+
+const defaultThreadListResponse = [
+  {
+    id: 1,
+    title: 'blah thread one',
+    updatedAt: Date(),
+    contextType: 'lesson',
+  },
+];
 
 describe('AIDiffFloatingActionButton', () => {
-  it('begins closed', () => {
-    render(<AiDiffFloatingActionButton />);
-    expect(screen.getByText('AI Teaching Assistant')).not.be.visible;
+  let fetchStub;
+  let fetchJsonStub;
+
+  beforeEach(() => {
+    stubRedux();
+    window.HTMLElement.prototype.scrollIntoView = () => {};
+    sessionStorage.clear();
+    localStorage.clear();
+    fetchStub = jest
+      .spyOn(HttpClient, 'post')
+      .mockResolvedValue(
+        Promise.resolve(new Response(JSON.stringify(defaultCoursesResponse)))
+      );
+    fetchJsonStub = jest.fn();
+    fetchJsonStub.mockResolvedValue({
+      value: defaultThreadListResponse,
+      response: new Response(),
+    });
+    HttpClient.fetchJson = fetchJsonStub;
   });
 
-  it('opens on click', () => {
-    render(<AiDiffFloatingActionButton />);
-    fireEvent.click(screen.getByRole('button', {name: 'AI bot'}));
-    expect(screen.getByText('AI Teaching Assistant')).to.be.visible;
+  afterEach(() => {
+    sessionStorage.clear();
+    localStorage.clear();
+    jest.restoreAllMocks();
+    restoreRedux();
+  });
+
+  function renderDefault(propOverrides = {}) {
+    const store = getStore();
+
+    registerReducers({
+      currentUser,
+      teacherSections,
+      aichat: aichatReducer,
+    });
+    store.dispatch(
+      setInitialData({
+        id: 1,
+        name: 'test_user',
+        has_completed_ai_differentiation_welcome: true,
+      })
+    );
+    store.dispatch(setSections([]));
+    store.dispatch(setChatIsOpen(false));
+
+    render(
+      <Provider store={store}>
+        <AiDiffFloatingActionButton {...DEFAULT_PROPS} {...propOverrides} />
+      </Provider>
+    );
+  }
+
+  it('begins closed if has been opened before', async () => {
+    localStorage.setItem('AiDiffHasOpenedKey', 'true');
+    renderDefault();
+    await waitFor(() => {
+      expect(fetchStub).toHaveBeenCalledWith(
+        '/aidiff_threads/curriculum_courses',
+        JSON.stringify({
+          context: DEFAULT_PROPS.context,
+        }),
+        true,
+        {
+          'Content-Type': 'application/json',
+        }
+      );
+    });
+    expect(screen.getByText('AI Teaching Assistant')).not.toBeVisible();
+  });
+
+  it('begins closed if has been closed before', async () => {
+    localStorage.setItem('AiDiffHasClosedKey', 'true');
+    renderDefault();
+    await waitFor(() => {
+      expect(fetchStub).toHaveBeenCalledWith(
+        '/aidiff_threads/curriculum_courses',
+        JSON.stringify({
+          context: DEFAULT_PROPS.context,
+        }),
+        true,
+        {
+          'Content-Type': 'application/json',
+        }
+      );
+    });
+    expect(screen.getByText('AI Teaching Assistant')).not.toBeVisible();
+  });
+
+  it('begins open if no session or local storage and has not been opened before', async () => {
+    renderDefault({});
+    await waitFor(() => {
+      expect(fetchStub).toHaveBeenCalledWith(
+        '/aidiff_threads/curriculum_courses',
+        JSON.stringify({
+          context: DEFAULT_PROPS.context,
+        }),
+        true,
+        {
+          'Content-Type': 'application/json',
+        }
+      );
+    });
+    expect(screen.getByText('AI Teaching Assistant')).toBeVisible();
+  });
+
+  it('begins open if open set in session storage', async () => {
+    sessionStorage.setItem('AiDiffFabOpenStateKey', 'true');
+    renderDefault();
+    await waitFor(() => {
+      expect(fetchStub).toHaveBeenCalledWith(
+        '/aidiff_threads/curriculum_courses',
+        JSON.stringify({
+          context: DEFAULT_PROPS.context,
+        }),
+        true,
+        {
+          'Content-Type': 'application/json',
+        }
+      );
+    });
+    expect(screen.getByText('AI Teaching Assistant')).toBeVisible();
+  });
+
+  it('opens on click', async () => {
+    localStorage.setItem('AiDiffHasOpenedKey', 'true');
+    renderDefault();
+    await waitFor(() => {
+      expect(fetchStub).toHaveBeenCalledWith(
+        '/aidiff_threads/curriculum_courses',
+        JSON.stringify({
+          context: DEFAULT_PROPS.context,
+        }),
+        true,
+        {
+          'Content-Type': 'application/json',
+        }
+      );
+    });
+    fireEvent.click(
+      screen.getByRole('button', {name: i18n.openOrCloseTeachingAssistant()})
+    );
+    expect(screen.getByText('AI Teaching Assistant')).toBeVisible();
+  });
+
+  describe('pulse animation', () => {
+    it('renders pulse animation when hasOpenedDiff is false and window is closed', async () => {
+      sessionStorage.setItem('AiDiffFabOpenStateKey', 'false');
+      renderDefault({});
+      await waitFor(() => {
+        expect(fetchStub).toHaveBeenCalledWith(
+          '/aidiff_threads/curriculum_courses',
+          JSON.stringify({
+            context: DEFAULT_PROPS.context,
+          }),
+          true,
+          {
+            'Content-Type': 'application/json',
+          }
+        );
+      });
+      const fab = screen.getByRole('button', {
+        name: i18n.openOrCloseTeachingAssistant(),
+      });
+      expect(fab.classList.contains('unittest-fab-pulse')).toBe(false);
+
+      const fabImage = screen.getByRole('img', {
+        name: 'AI bot - unread notifications',
+      });
+      fireEvent.load(fabImage);
+      expect(fab.classList.contains('unittest-fab-pulse')).toBe(true);
+    });
+
+    it('does not render pulse animation when hasOpenedDiff is true', async () => {
+      sessionStorage.setItem('AiDiffFabOpenStateKey', 'false');
+      localStorage.setItem('AiDiffHasOpenedKey', 'true');
+      renderDefault();
+      await waitFor(() => {
+        expect(fetchStub).toHaveBeenCalledWith(
+          '/aidiff_threads/curriculum_courses',
+          JSON.stringify({
+            context: DEFAULT_PROPS.context,
+          }),
+          true,
+          {
+            'Content-Type': 'application/json',
+          }
+        );
+      });
+      const image = screen.getByRole('img', {
+        name: 'AI bot - unread notifications',
+      });
+      fireEvent.load(image);
+      const fab = screen.getByRole('button', {
+        name: i18n.openOrCloseTeachingAssistant(),
+      });
+      expect(fab.classList.contains('unittest-fab-pulse')).toBe(false);
+    });
   });
 });

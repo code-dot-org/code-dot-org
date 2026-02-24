@@ -1,0 +1,148 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-12-31T20:24:29.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Template A",
+    "long_instructions": "Use your Web Design for Users activity guide in order to determine which user this website might be a match for. ",
+    "teacher_markdown": "**Answer Keys & Exemplars:** An answer key or exemplar is provided for verified teachers as part of the resources in this lesson plan. If you do not see an answer key or exemplar listed as a resource, [follow these steps](https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-) to become a verified teacher.\r\n",
+    "thumbnail_url": "https://images.code.org/301502f3280461ed7b9f16bf5ed11bb8-image-1677189841902.png",
+    "submittable": "false",
+    "hide_share_and_remix": "true",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "true",
+    "initial_view_mode": "preview",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <!-- Import the webpage's stylesheet -->\n    <link rel=\"stylesheet\" href=\"style.css\" />\n\n  </head>\n  <body>\n\n    <h1 class=\"title\">\n      Photo Gallery!\n    </h1>\n\n    <img class=\"galleryImg\" src=\"field.jpg\" />\n    <img class=\"galleryImg\" src=\"forest.jpg\" />\n    <img class=\"galleryImg\" src=\"mountain.jpg\" />\n    <img class=\"galleryImg\" src=\"path.jpg\" />\n    <img class=\"galleryImg\" src=\"road.jpg\" />\n    <img class=\"galleryImg\" src=\"sunset.jpg\" />\n    <img class=\"galleryImg\" src=\"morning.png\" />\n    <img class=\"galleryImg\" src=\"night.png\" />\n    \n    <p>\n      All images from Pixabay provided under a Pixabay license\n    </p>\n\n\n\n  </body>\n</html>\n",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "field.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CS%20U2L1-L1a-2025/uuid/a83f67e7-e436-4c29-a59d-5f6878bdf6ac.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "sunset.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CS%20U2L1-L1a-2025/uuid/94cbd9cd-878f-417f-86a3-bf0815a0e192.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "road.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CS%20U2L1-L1a-2025/uuid/9125a05a-119e-44d1-8269-463439025b58.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "forest.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CS%20U2L1-L1a-2025/uuid/3e637eb0-f772-48c9-b996-82a4dcc74bed.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "mountain.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CS%20U2L1-L1a-2025/uuid/67b1f747-ab3a-4094-93f4-4e46c2d87082.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "path.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CS%20U2L1-L1a-2025/uuid/22fec716-cede-463d-a34c-9cac799c9a08.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "morning.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CS%20U2L1-L1a-2025/uuid/cb726002-1606-4797-bef6-33fa407cd965.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "night.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CS%20U2L1-L1a-2025/uuid/6db02e7e-a8f8-44aa-965c-bcf79d4f459b.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "style.css",
+          "language": "css",
+          "contents": ".galleryImg {\n  float: left;\n  width: 25%;\n}\n\n.title {\n  font-family: Helvetica;\n  color: blue;\n  text-align: center;\n  font-size: 50px;\n  text-decoration: underline;\n}\n\nbody {\n  background: orange;\n}\n\np {\n  clear:both;\n  color: #252525;\n  font-family: Consolas;\n  font-size: 10px;\n  text-align: center;\n}",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-12-31 20:26:12 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 20:34:42 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 20:36:20 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 20:36:32 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 20:40:59 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\",\"bubble_choice_description\",\"hide_share_and_remix\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

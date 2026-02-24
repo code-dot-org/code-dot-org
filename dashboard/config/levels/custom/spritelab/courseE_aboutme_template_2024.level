@@ -38,7 +38,7 @@
     "pause_animations_by_default": "false",
     "parent_level_id": 21505,
     "long_instructions": "Template level for \"About Me 2019\".",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"e00738dd-7b8a-4c43-9f17-e4967080893f\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"e00738dd-7b8a-4c43-9f17-e4967080893f\": {\r\n      \"name\": \"kid_outline_1\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/wzaShBj3E3JC6ynAQTv56K3MIRlpF19i/category_characters/kid_outline.png\",\r\n      \"frameSize\": {\r\n        \"x\": 180,\r\n        \"y\": 250\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"wzaShBj3E3JC6ynAQTv56K3MIRlpF19i\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\n  \"orderedKeys\": [\n    \"e00738dd-7b8a-4c43-9f17-e4967080893f\"\n  ],\n  \"propsByKey\": {\n    \"e00738dd-7b8a-4c43-9f17-e4967080893f\": {\n      \"name\": \"kid_outline_1\",\n      \"sourceUrl\": \"/api/v1/animation-library/wzaShBj3E3JC6ynAQTv56K3MIRlpF19i/category_characters/kid_outline.png\",\n      \"frameSize\": {\n        \"x\": 180,\n        \"y\": 250\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"wzaShBj3E3JC6ynAQTv56K3MIRlpF19i\"\n    }\n  }\n}",
     "auto_run_setup": "DRAW_LOOP",
     "mini_rubric": "false",
     "encrypted": "false",

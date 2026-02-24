@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2024-03-25T22:42:26.000Z",
   "level_num": "custom",
@@ -13,7 +14,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "###### **Note**: This level is the same across the Circuit Playground and micro:bit versions of Getting Screen Inputs. This level does not require you to use a device to complete it.\r\n\r\n* ###### **Circuit Playground Level:** Lesson 9, Level 2\r\n* ###### **micro:bit Level:** Lesson 8, Level 2\r\n\r\n___\r\n\r\n# Get and Set Text\r\n\r\nThis app simulates a temperature sensor in certain rooms of the house. You can customize the welcome screen by entering your name and the room of the house that the sensor is in. This app uses a variable and [`getText()`(#fff176)](/docs/applab/getText/) block to get the users name, then a [`setText()`(#fff176)](/docs/applab/setText/) block to update the screen. However, the second input box isn't setup correctly.\r\n\r\n## Do This\r\n\r\n1) Update the `roomLabel` element with what the user typed in\r\n\t- Add a [`var x`(#BB77C7)](/docs/applab/declareAssign_x/) and [`getText`(#fff176)](/docs/applab/getText/) block to get the input from the `roomInput` element\r\n\t- Add a [`setText`(#fff176)](/docs/applab/setText/) block to update the `roomLabel` element\r\n\r\n**Run your code!** Type in your name and a room, then press the button to see the welcome screen update",
+    "long_instructions": "##### **Note**: This level is the same across the Circuit Playground and micro:bit versions of Getting Screen Inputs. This level does not require you to use a device to complete it.\r\n\r\n* ##### **Circuit Playground Level:** Lesson 9, Level 2\r\n* ##### **micro:bit Level:** Lesson 8, Level 2\r\n___\r\n\r\n# Get and Set Text\r\n\r\n#### This app simulates a temperature sensor in certain rooms of the house. You can customize the welcome screen by entering your name and the room of the house that the sensor is in. This app uses a variable and [`getText()`(#fff176)](/docs/applab/getText/) block to get the users name, then a [`setText()`(#fff176)](/docs/applab/setText/) block to update the screen. However, the second input box isn't setup correctly.\r\n\r\n## Do This\r\n\r\n### Update the `roomLabel` element with what the user typed in:\r\n\r\n* #### Add a [`var x`(#BB77C7)](/docs/applab/declareAssign_x/) and [`getText`(#fff176)](/docs/applab/getText/) block to get the input from the `roomInput` element\r\n* #### Add a [`setText`(#fff176)](/docs/applab/setText/) block to update the `roomLabel` element\r\n<br>\r\n\r\n#### **Run your code!** Type in your name and a room, then press the button to see the welcome screen update",
     "instructions_important": "false",
     "submittable": "false",
     "start_blocks": "onEvent(\"startButton\", \"click\", function() {\r\n  var name = getText(\"nameInput\");\r\n  setText(\"nameLabel\", name);\r\n  //1) Update the roomLabel element with what the user typed in\r\n\r\n  \r\n});\r\n",
@@ -64,9 +65,8 @@
     "ai_enabled": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-25T22:42:26.101+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD - Module 8 - U6L6 Lesson 2_2023\\\"\"],\"cloned_from\":\"VPL - CSD - Module 8 - U6L6 Lesson 2_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-03-25T22:42:26.101+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD - Module 8 - U6L6 Lesson 2_2023\\\"\"],\"cloned_from\":\"VPL - CSD - Module 8 - U6L6 Lesson 2_2023\"},{\"changed_at\":\"2024-08-29 18:45:19 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

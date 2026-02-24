@@ -1,5 +1,6 @@
 <Karel>
   <config><![CDATA[{
+  "published": true,
   "game_id": 25,
   "created_at": "2014-07-09T19:06:00.000Z",
   "level_num": "custom",
@@ -33,12 +34,17 @@
     "never_autoplay_video": "false",
     "examples_required": "false",
     "fast_get_nectar_animation": "true",
-    "hint_prompt_attempts_threshold": 10,
+    "hint_prompt_attempts_threshold": "10",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "shape_shift": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-09-23 15:14:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-09-23 15:14:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2024-08-09 11:17:28 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"hint_prompt_attempts_threshold\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 2,
@@ -50,12 +56,12 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="procedures_callnoreturn">
+            <block type="procedures_callnoreturn" id="workspaceCallBlock">
               <mutation name="get 5"/>
             </block>
           </next>
         </block>
-        <block type="procedures_defnoreturn" deletable="false" editable="false">
+        <block type="procedures_defnoreturn" deletable="false" editable="false" id="definitionBlock">
           <mutation/>
           <title name="NAME">get 5</title>
           <statement name="STACK">
@@ -85,7 +91,7 @@
         <block type="controls_repeat">
           <title name="TIMES">???</title>
         </block>
-        <block type="procedures_callnoreturn">
+        <block type="procedures_callnoreturn" id="toolboxCallBlock">
           <mutation name="get 5"/>
         </block>
       </xml>

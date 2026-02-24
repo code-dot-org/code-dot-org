@@ -138,7 +138,7 @@
           "type": "text",
           "name": "module_goals_other_comment",
           "visibleIf": "{module_goals} anyOf ['other']",
-          "title": "Please describe what other goal do you have for this unit?"
+          "title": "Please describe what other goal do you have for this unit."
         },
         {
           "type": "checkbox",
@@ -172,7 +172,7 @@
           "type": "text",
           "name": "module_challenges_other_comment",
           "visibleIf": "{module_challenges} anyOf ['other']",
-          "title": "Please describe what other goal do you have for this unit?"
+          "title": "Please describe what other challenges you anticipate for this unit."
         },
         {
           "type": "checkbox",

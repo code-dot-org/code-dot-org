@@ -1,0 +1,39 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2024-10-30T15:40:17.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "long_instructions": "# Using the input() Function\r\n\r\n::: details [Step 1]\r\nAdd questions for the user to answer, such as choosing their weapon and special ability.\r\n:::\r\n\r\n::: details [Step 2]\r\nUse the inputs to dynamically update the character's profile and stats \r\n\r\n(_For example, based on the weapon chosen, adjust the character's attack power_).\r\n:::\r\n",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# Gather user input to customize the character\ncharacter_name = input(\"Enter your character's name: \")\ncharacter_age = input(\"Enter your character's age: \")\ncharacter_role = input(\"Choose a role for your character (e.g., Warrior, Mage, Archer): \")\n\n\n# Display the personalized character profile\nprint(\"\\nCharacter Profile:\")\nprint(\"Name:\", character_name)\nprint(\"Age:\", character_age)\nprint(\"Role:\", character_role)",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzjeN79sMlWVZZ3h9Kzhd4rcO9pqVY2I/\nJhkgXx6NH3V98auevuS1U7yVoDtxuyQl2GAkznUEn0vUDW37KuFbjJAISz5A\n+RIBO9JHqmkPp3yowvchPQXpLL8ijmsAMmoEPOgEuOt9tGmBbee84hO8VsAJ\n0eZ+19TmD8go2XG0+INJM4ONs6ynROp/xIh7o6ndj2+vHOlGafjr+23kX7gg\niVoGOsGz3vE7MFr+N7AuDHNCvPv/ocPz535EC4iM4zKvJiEFKQjd6mXer/m7\nJTnpvM4j+QSSK3nCrLDwFgYsbpDKU+DzXSHYlYrNbsxu6NKVp5eM1Upefg4q\nceeE7HJUf5aVRXV3WG9xIMqOeA2obEirQnYW7ZD03ORmcbmoOrssQVATpWxH\nWqN1jb9KaUJ59LrsCgHiq0lGAxbVht3iS1q9cWoPdOJHKPOmuE8Bu4Y8DYa6\nOHbN03QvPSIdpYQRcYL6zYAqnSPkUKwtlpB2uORlr0t0JP7IG9ZFFVC5eKIk\nnQ==\n",
+    "display_name": "Getting User Input",
+    "bubble_choice_description": "Learn how to use the `input()` function to gather information from the user.",
+    "thumbnail_url": "https://images.code.org/8eaf297df9f630bf90b1e39b8401627a-text.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-30T15:40:17.087+00:00\",\"changed\":[\"cloned from \\\"IPP_SampleProgression_UMC_Inspiration_2\\\"\"],\"cloned_from\":\"IPP_SampleProgression_UMC_Inspiration_2\"},{\"changed_at\":\"2024-10-30 15:41:32 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-30 15:42:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-31 00:48:28 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

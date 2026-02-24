@@ -4,12 +4,14 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "pl_workshop_activities",
+      "curriculum_umbrella": "PD for Facilitators",
       "is_migrated": true,
       "professional_learning_course": "CS Principles Support"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-22 19:56:30 UTC",
+    "serialized_at": "2024-11-19 01:17:11 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -651,6 +653,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

@@ -10,17 +10,20 @@ class ResourcesController < ApplicationController
 
   # PUT /resources
   def create
+    new_resource_params = resource_params
     resource = Resource.new(
-      name: resource_params.require(:name),
-      url: resource_params.require(:url),
-      download_url: resource_params[:download_url],
-      assessment: resource_params[:assessment],
-      type: resource_params[:type],
-      audience: resource_params[:audience],
-      include_in_pdf: resource_params[:include_in_pdf]
+      name: new_resource_params.require(:name),
+      url: new_resource_params.require(:url),
+      download_url: new_resource_params[:download_url],
+      assessment: new_resource_params[:assessment],
+      type: new_resource_params[:type],
+      audience: new_resource_params[:audience],
+      embeddability_type: new_resource_params[:embeddability_type],
+      curriculum_category: new_resource_params[:curriculum_category],
+      include_in_pdf: new_resource_params[:include_in_pdf]
     )
-    if resource_params[:course_version_id]
-      course_version = CourseVersion.find_by_id(resource_params[:course_version_id])
+    if new_resource_params[:course_version_id]
+      course_version = CourseVersion.find_by_id(new_resource_params[:course_version_id])
       unless course_version
         render status: :bad_request, json: {error: "course version not found"}
         return
@@ -49,7 +52,7 @@ class ResourcesController < ApplicationController
 
   private def resource_params
     rp = params.transform_keys(&:underscore)
-    rp = rp.permit(:id, :name, :url, :download_url, :assessment, :type, :audience, :include_in_pdf, :course_version_id)
+    rp = rp.permit(:id, :name, :url, :download_url, :assessment, :type, :audience, :embeddability_type, :curriculum_category, :include_in_pdf, :course_version_id)
     rp[:include_in_pdf] = rp[:include_in_pdf] == 'true'
     rp[:assessment] = rp[:assessment] == 'true'
     rp

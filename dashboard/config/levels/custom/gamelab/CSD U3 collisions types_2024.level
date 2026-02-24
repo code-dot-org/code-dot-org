@@ -1,5 +1,6 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 50,
   "created_at": "2023-11-28T21:13:20.000Z",
   "level_num": "custom",
@@ -59,7 +60,7 @@
     "instructions_important": "false",
     "show_debug_watch": "true",
     "start_in_animation_tab": "false",
-    "encrypted_examples": "afuHeCXmOgW/+8Ob/aUPBLwWCKf32jdWkmSIxkONqMwcQEH1DAjtXgQc5/eA\nGoyP21lC+mmP+pLYBB1k6pI5DRpA2IA2dEvoLpawfdB17AI=\n",
+    "encrypted_examples": "favPSw2izRVOicthxO3Lqyd9+w0cYI6f5jLB7lZzbnMohV9n/YiuKeu6h3vS\nt8Hx5LuH8sVIS9lIc6JdVS73fA==\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
@@ -79,9 +80,8 @@
     "validation_enabled": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T21:13:20.228+00:00\",\"changed\":[\"cloned from \\\"CSD U3 collisions types_2023\\\"\"],\"cloned_from\":\"CSD U3 collisions types_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T21:13:20.228+00:00\",\"changed\":[\"cloned from \\\"CSD U3 collisions types_2023\\\"\"],\"cloned_from\":\"CSD U3 collisions types_2023\"},{\"changed_at\":\"2024-10-01 15:56:39 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-01 15:58:07 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

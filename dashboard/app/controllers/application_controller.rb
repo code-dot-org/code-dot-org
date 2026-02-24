@@ -3,7 +3,6 @@ require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/page_mode'
 require 'cdo/shared_constants'
-require 'cpa'
 require 'policies/child_account'
 
 class ApplicationController < ActionController::Base
@@ -29,7 +28,9 @@ class ApplicationController < ActionController::Base
 
   before_action :clear_sign_up_session_vars
 
-  before_action :initialize_statsig_session
+  before_action :initialize_statsig_stable_id
+
+  around_action :with_global_current_user
 
   def fix_crawlers_with_bad_accept_headers
     # append text/html as an acceptable response type for Edmodo and weebly-agent's malformed HTTP_ACCEPT header.
@@ -64,12 +65,17 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  rescue_from CanCan::AccessDenied do
+  rescue_from CanCan::AccessDenied do |exception|
     if !current_user && request.format == :html
       # we don't know who you are, you can try to sign in
       authenticate_user!
     elsif rack_env?(:development, :adhoc)
-      raise
+      # log the error and its full stack trace
+      message = "CanCan::AccessDenied: #{exception.message}"
+      stack = exception.backtrace.join("\n")
+      error_with_stack = "#{message}\n#{stack}"
+      Rails.logger.error(error_with_stack)
+      render plain: error_with_stack, status: :forbidden
     else
       # we know who you are, you shouldn't be here
       head :forbidden
@@ -107,6 +113,19 @@ class ApplicationController < ActionController::Base
     response.headers["Cache-Control"] = "no-store"
     response.headers["Pragma"] = "no-cache"
     response.headers["Expires"] = "Fri, 01 Jan 1990 00:00:00 GMT"
+  end
+
+  # Allow cross-origin requests from code.org
+  def allow_cdo_cors
+    allowed_origin = CDO.code_org_url('', request.protocol.chomp('//'))
+
+    request_origin = request.headers['Origin']
+    allowed_origin = request_origin if CDO.marketing_sites_hosts.include?(request_origin)
+
+    response.headers['Access-Control-Allow-Origin']      = allowed_origin
+    response.headers['Access-Control-Allow-Methods']     = request.request_method
+    response.headers['Access-Control-Allow-Headers']     = '*'
+    response.headers['Access-Control-Allow-Credentials'] = 'true'
   end
 
   # These are sometimes updated from the registration form
@@ -201,8 +220,9 @@ class ApplicationController < ActionController::Base
       # if they solved it, figure out next level
       if options[:solved?]
         response[:new_level_completed] = options[:new_level_completed]
-        response[:level_path] = build_script_level_path(script_level)
-        script_level_solved_response(response, script_level)
+        unit_group_unit = Queries::Courses.unit_group_unit(script_level.script, options[:unit_group])
+        response[:level_path] = build_script_level_path(script_level, unit_group_unit: unit_group_unit)
+        script_level_solved_response(response, script_level, unit_group_unit: unit_group_unit)
       else # not solved
         response[:message] = 'try again'
       end
@@ -229,8 +249,6 @@ class ApplicationController < ActionController::Base
     if PuzzleRating.enabled?
       response[:puzzle_ratings_enabled] = script_level && PuzzleRating.can_rate?(script_level.script, level, current_user)
     end
-
-    response[:activity_id] = options[:activity] && options[:activity].id
 
     response
   end
@@ -265,6 +283,10 @@ class ApplicationController < ActionController::Base
     unless Rails.application.config.levelbuilder_mode || rack_env?(:test)
       raise CanCan::AccessDenied.new('Cannot create or modify levels from this environment.')
     end
+  end
+
+  protected def authorize_teacher!
+    authorize! :access, :teacher_only
   end
 
   protected def require_admin
@@ -325,19 +347,15 @@ class ApplicationController < ActionController::Base
   end
 
   protected def clear_sign_up_session_vars
-    if session[:sign_up_uid] || session[:sign_up_type] || session[:sign_up_tracking_expiration]
+    if session[:sign_up_uid] || session[:sign_up_type]
       session.delete(:sign_up_uid)
       session.delete(:sign_up_type)
-      session.delete(:sign_up_tracking_expiration)
     end
   end
 
   # Check that the user is compliant with the Child Account Policy. If they
   # are not compliant, then we need to send them to the lockout page.
   protected def handle_cap_lockout
-    # Check that the child account policy is currently enabled.
-    return unless ::Cpa.cpa_experience(request)
-
     # Transits the user to the CAP grace period if they are eligible.
     Services::ChildAccount::GracePeriodHandler.call(user: current_user)
 
@@ -360,7 +378,11 @@ class ApplicationController < ActionController::Base
       policy_compliance_child_account_consent_path,
       # The age interstitial when the age isn't known will block the lockout page
       users_set_student_information_path,
-    ].include?(request.path)
+      # Allow students to join sections while locked out
+      student_user_new_path,
+      student_register_path,
+      reset_session_path,
+    ].any? {|path| request.path.include?(path)}
 
     redirect_to lockout_path
   rescue StandardError => exception
@@ -397,13 +419,29 @@ class ApplicationController < ActionController::Base
     redirect_to lti_v1_account_linking_landing_path
   end
 
-  # Creates a stable statsig id for use of session tracking (whether the user is logged in or not)
-  # Use this session variable when you want to track the user journey when the user is not logged in.
-  protected def initialize_statsig_session
+  # Creates a statsig stable id for use of signed-out user tracking.
+  # This cookie is used by the Statsig SDK for both JS and Ruby.
+  protected def initialize_statsig_stable_id
+    existing_stable_id = cookies[:statsig_stable_id]
+    session[:statsig_stable_id] = existing_stable_id if existing_stable_id.present?
     session[:statsig_stable_id] ||= SecureRandom.uuid
   end
 
   private def pairing_still_enabled
     session[:pairing_section_id] && Section.find(session[:pairing_section_id]).pairing_allowed
+  end
+
+  # Makes `current_user` accessible everywhere within an HTTP request.
+  private def with_global_current_user
+    RequestStore.store[:current_user] = current_user
+    yield
+  ensure
+    RequestStore.store[:current_user] = nil
+  end
+
+  private def append_info_to_payload(payload)
+    super
+    payload[:user_id] = current_user&.id
+    payload[:admin_id] = session[:admin_id] if session[:assumed_identity]
   end
 end

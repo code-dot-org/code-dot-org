@@ -1,0 +1,44 @@
+name 'SP-VPL-21-CSA-mod1-csa-framework_2025'
+title 'The AP CSA Framework and Code.org\’s Approach'
+description 'description here'
+
+markdown <<MARKDOWN
+# The AP CSA Course Framework
+
+#### The AP CSA CSA Course Framework developed by the College Board includes two essential components:
+
+- #### **<span style="color:#00adbc"><b>Course Content</b></span>** - The course content is organized into commonly taught units of study that provide a suggested sequence for the course. These units comprise the content and conceptual understandings that colleges and universities typically expect students to be proficient in to qualify for college credit and/or placement.
+
+- #### **<span style="color:#00adbc"><b>Computational Thinking Practices</b></span>** - The computational thinking practices are central to the study and practice of computer science. Students should develop and apply the described practices on a regular basis over the span of the course. 
+
+
+
+## Units of Study
+#### The framework identifies four commonly taught units of study that provide a sequence and comprise the content and conceptual understandings that colleges and universities expect students to master. These units are:
+
+<span style="color:#00adbc">
+<ol><li style="font-size: 14pt;">Using Objects and Methods</li>
+<li style="font-size: 14pt;">Selection and Iteration</li>
+<li style="font-size: 14pt;">Class Creation</li>
+<li style="font-size: 14pt;">Data Collections</li>
+</ol>
+</span>
+
+## The Computational Thinking Practices
+#### The framework identifies five **<span style="color:#00adbc">Computational Thinking Practices</span>**, each outlining skills that students should develop throughout the course. The Computational Thinking Practices are:
+
+<span style="color:#00adbc">
+<ol><li style="font-size: 14pt;">Design Code</li>
+<li style="font-size: 14pt;">Develop Code</li>
+<li style="font-size: 14pt;">Analyze Code</li>
+<li style="font-size: 14pt;">Document Code and Computing Systems</li>
+<li style="font-size: 14pt;">Use Computers Responsibly</li>
+</ol>
+</span>
+
+#### These Computational Thinking Practices form the basis of tasks on the AP Exam. You can read more about these Computational Thinking Practices in the <a href="https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-course-and-exam-description-effective-fall-2025.pdf" target="_blank">Course and Exam Description from the College Board</a>.
+
+---
+
+#### **Up next:** We will look at Code.org's Approach to the AP CSA Framework.
+MARKDOWN

@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require_relative '../deployment'
+require 'cdo/active_job_backend'
+
+# (Re)start dashboard workers with a rolling deploy.
+Cdo::ActiveJobBackend.restart_workers

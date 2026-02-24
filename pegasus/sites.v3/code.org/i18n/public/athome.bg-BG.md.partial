@@ -20,7 +20,6 @@ theme: responsive
     <li><a class="linktag" id="self-paced-nav" href="#express">Вземете въвеждащ, самоопитен курс</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">Създаване на игра или приложение</a></li>
     <li><a class="linktag" id="unplugged-nav" href="#unplugged">Опитайте CS без компютър („изключени“ и мобилни опции)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Научете CS от екипа на Code.org и специалните гости</a></li>
 </ul>
 
 <br>
@@ -283,56 +282,6 @@ theme: responsive
   <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Hello Ruby</a> - Най-причудлив начин в света да научите повече за компютри, технологии и програмиране. Дейности по редица теми на CS, като способността за разлагане на проблем, точкови модели, мисля алгоритмично, проблеми с отстраняването на грешки и работа заедно. (за възраст 4-10 години)</li>
   <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> - Колекция от безплатни учебни материали, които преподава компютърни науки чрез ангажиращи игри и пъзели, които използват карти, низ, пастели и много тичане наоколо. (за възраст 5-14 години)</li>
 </ul>
-
-<h2>Няма компютър у дома? Опитайте CS на телефона си с тези приложения от нашите партньори</h2>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Кутиения остров"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>Очарователна мобилна игра за кодиране, която отвежда учащите на вълнуващо приключение, докато преподава основите на кодирането, като алгоритми, разпознаване на шаблони, последователности, контури и условности. <i>(за всички възрасти)</i>
-</div>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="КодовеПарк"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">CodeSpark</h3></a>Наградена платформа за обучение към код за деца на възраст 5-9 години. Решавайте пъзели и създавайте игри с The Foos, докато се научите да кодирате. <strong>Забележка: CodeSpark предлага безплатен 3-месечен пробен период. Имейл адресът на родителя и информацията за кредитната карта се изискват при регистрация.</strong> <i>(за предварителни читатели чрез степен 5)</i>
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[Обратно към върха]</a></p>
-
-<a id="livecoding"></a>
-<h2>Учете се от екипа на Code.org и специалните гости!</h2>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Лого на CodeBytes">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes са лесни за смилане, 20-минутни интерактивни уроци, съчетаващи компютърни науки с реални теми. Тренирайте AI, за да четете жестомимичен език, да проектирате приложение за добро, да изследвате света на Minecraft и други!</div>
-        <br>
-        <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Преглед на епизоди</button></a>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Прекъсване на кода">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">Код Break</h3>
-        <div class="smalltext" style="">Дръжте компютърни науки забавно, като се Code Break! Можете да създадете шифър с Аштън Къчър, да научите за променливите с Яра Шахиди и дори да проучите как Интернет работи с действителния изобретател на Интернет, Винт Серф!</div>
-        <br>
-        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Свързани</button></a>
-    </span>
-  </div>
-</div>
-</div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 

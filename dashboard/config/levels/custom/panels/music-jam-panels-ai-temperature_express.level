@@ -1,0 +1,42 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-04-30T17:04:58.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "name_suffix": "_express",
+    "panels": [
+      {
+        "text": "You can now change A.I.'s temperature to make its predictions more adventurous. ",
+        "imageUrl": "https://images.code.org/3c00bbf0b268c3f84819ce6fccd76b2e-AI Temp Panel_1.jpeg",
+        "key": "music_ai_panels_aibeatblock_temperature_1-217131e9-522c-4f14-8fd4-0873ac2c1c75",
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "A low temperature will make A.I. stay close to what you started with. ",
+        "imageUrl": "https://images.code.org/8a7978d2f7ee428b65717debb24f58fc-music-panels-10-2-b.gif",
+        "key": "music_ai_panels_aibeatblock_temperature_3-4a5ea7cb-f73e-4ee8-9cf0-7c6681166f71",
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "A high temperature will make A.I. generate more surprising sounds.",
+        "imageUrl": "https://images.code.org/b8bcf8ce4a930b29f639befa6b6e6032-music-panels-10-3-b.gif",
+        "key": "music_ai_panels_aibeatblock-d2ba442b-68e2-47f1-abd5-15c49f5d243c",
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "Try different temperatures and see what happens!",
+        "imageUrl": "https://images.code.org/8a88710511104a1214316c42094ed92e-AI Temp Panel_4.jpeg",
+        "key": "music_ai_panels_aibeatblock_temperature_1-10253ec1-46f6-4286-a421-f54b336a2489",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "offer_browser_tts": "true"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-04-30T17:04:58.027+00:00\",\"changed\":[\"cloned from \\\"music-jam-panels-ai-temperature\\\"\"],\"cloned_from\":\"music-jam-panels-ai-temperature\"}]"
+}]]></config>
+</Panels>

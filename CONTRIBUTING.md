@@ -12,6 +12,10 @@ You can start setting up with these next steps:
 
 2. Get your local development build working by following our [SETUP](SETUP.md). Fork our repo and make sure to merge our staging branch into yours **WEEKLY** as we do update frequently.
 
+## Architectural Tenets
+
+Please review and adhere to our [Architectural Tenets](ARCHITECTURE.md#architectural-tenets). This is not intended to be a full or current list of technical choices you should follow, instead its a small set of core decisions that you should be familiar with and should not change frequently.
+
 ## Code Style
 
 Please make sure your code conforms to our [style guide](STYLEGUIDE.md).  We have implemented linting to help you with this:

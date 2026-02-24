@@ -1,0 +1,14 @@
+name 'problem-solving-with-ai-preassessment-q9_2025-pilot_v2-2025'
+
+question 'What is a potential real-world consequence of AI hallucinations in journalism?'
+
+right 'AI-generated news articles can introduce false information that spreads misinformation. '
+wrong 'AI always improves the accuracy of reporting by pulling from the best sources.'
+wrong 'AI-generated news is more objective than human-written news because AI has no biases.'
+wrong 'AI prevents misinformation by filtering out unverified facts before publishing content.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 7: AI's Wild Imagination
+MARKDOWN

@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 import i18n from '@cdo/locale';
 
-import FontAwesome from '../FontAwesome';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import {removeExpandedLesson} from '../sectionProgress/sectionProgressRedux';
 
 import LessonTitleTooltip, {getTooltipId} from './LessonTitleTooltip';

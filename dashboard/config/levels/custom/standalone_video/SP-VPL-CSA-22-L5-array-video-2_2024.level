@@ -1,5 +1,6 @@
 <StandaloneVideo>
   <config><![CDATA[{
+  "published": true,
   "game_id": 54,
   "created_at": "2024-03-25T22:51:36.000Z",
   "level_num": "custom",
@@ -12,11 +13,10 @@
     "parent_level_id": 28813,
     "name_suffix": "_2024",
     "encrypted": "false",
-    "long_instructions": "In this video you will learn another way to initialize a 1D array. \r\n\r\n\r\n**Up next:** In the next level, we will practice reading code that uses arrays. \r\n"
+    "long_instructions": "#### In this video you will learn another way to initialize a 1D array. \r\n\r\n\r\n#### **Up next:** In the next level, we will practice reading code that uses arrays. \r\n"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-25T22:51:36.652+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSA-22-L5-array-video-2_2023\\\"\"],\"cloned_from\":\"SP-VPL-CSA-22-L5-array-video-2_2023\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-25T22:51:36.652+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSA-22-L5-array-video-2_2023\\\"\"],\"cloned_from\":\"SP-VPL-CSA-22-L5-array-video-2_2023\"},{\"changed_at\":\"2024-10-31 15:03:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

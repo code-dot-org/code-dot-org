@@ -4,6 +4,10 @@
     "self-paced-pl-aiml1",
     "self-paced-pl-aiml2"
   ],
+  "original_script_names": [
+    "self-paced-pl-aiml1",
+    "self-paced-pl-aiml2"
+  ],
   "published_state": "stable",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",

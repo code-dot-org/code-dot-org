@@ -1,0 +1,16 @@
+name 'Data Sci U1 Pre Q9_2024-pilot'
+
+question 'Explain how data science integrates multiple disciplines to solve complex problems. Provide an example illustrating this interdisciplinary approach.'
+
+wrong 'By focusing solely on computer programming to automate tasks.'
+wrong 'By using theoretical mathematics to model abstract concepts.'
+right 'By combining statistics, computer science, and domain-specific knowledge to extract insights.'
+wrong 'By employing literary analysis to interpret data trends.'
+
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

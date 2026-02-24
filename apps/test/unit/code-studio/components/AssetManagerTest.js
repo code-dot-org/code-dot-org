@@ -19,10 +19,19 @@ describe('AssetManager', () => {
     xhr.onCreate = function (xhr) {
       requests.push(xhr);
     };
+    global.appOptions = {
+      app: 'applab',
+      level: {
+        projectType: 'applab',
+        name: 'test-level',
+        isProjectLevel: true,
+      },
+    };
   });
 
   afterEach(() => {
     xhr.restore();
+    delete global.appOptions;
   });
 
   describe('componentDidMount', () => {

@@ -1,17 +1,17 @@
+import Button, {buttonColors} from '@code-dot-org/component-library/button';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import {getStore} from '@cdo/apps/redux';
 import i18n from '@cdo/locale';
 
-import color from '../util/color';
-
 import BackToFrontConfetti from './BackToFrontConfetti';
 import BaseDialog from './BaseDialog';
-import LegacyButton from './LegacyButton';
 import PuzzleRatingButtons from './PuzzleRatingButtons';
+
+import styles from './ChallengeDialog.module.scss';
 
 class ChallengeDialog extends React.Component {
   static propTypes = {
@@ -31,6 +31,8 @@ class ChallengeDialog extends React.Component {
     showPuzzleRatingButtons: PropTypes.bool,
     text: PropTypes.string,
     title: PropTypes.string,
+    levelId: PropTypes.number,
+    unitId: PropTypes.number,
   };
 
   constructor(props) {
@@ -61,14 +63,23 @@ class ChallengeDialog extends React.Component {
 
   render() {
     const isRtl = getStore().getState().isRtl;
+    const bannerImage = this.props.complete
+      ? assetUrl('media/dialog/challenge_target_complete.svg')
+      : assetUrl('media/dialog/challenge_target.svg');
+    const bannerClassName = classNames(styles.banner, {
+      [styles.bannerComplete]: this.props.complete,
+    });
+    const dialogStyle = {top: '20%'};
+    const confettiStyle = {top: 150};
 
     return (
       <BaseDialog
         isOpen={this.state.isOpen}
-        style={styles.dialog}
+        style={dialogStyle}
         handleClose={this.handlePrimary}
         hideCloseButton={true}
         hideBackdrop={this.props.hideBackdrop}
+        bodyClassName={styles.dialogBody}
       >
         <img
           className="modal-image"
@@ -76,41 +87,45 @@ class ChallengeDialog extends React.Component {
           alt={i18n.cheeringInstructorAltText()}
         />
         <div
-          style={{
-            ...styles.banner,
-            ...(this.props.complete ? styles.bannerComplete : {}),
-          }}
+          className={bannerClassName}
+          style={{backgroundImage: `url(${bannerImage})`}}
         >
-          <h1 style={styles.title} id="uitest-challenge-title">
+          <h1 className={styles.title} id="uitest-challenge-title">
             {this.props.title}
           </h1>
           <BackToFrontConfetti
             active={this.state.confettiActive}
-            style={styles.confetti}
+            style={confettiStyle}
           />
         </div>
-        <div style={styles.content}>
-          {this.props.text && <div style={styles.text}>{this.props.text}</div>}
+        <div className={styles.content}>
+          {this.props.text && (
+            <div className={styles.text}>{this.props.text}</div>
+          )}
           {this.props.children}
         </div>
-        <LegacyButton
-          type="cancel"
-          onClick={this.handleCancel}
+        <Button
           id="challengeCancelButton"
-        >
-          {this.props.cancelButtonLabel}
-        </LegacyButton>
-        <LegacyButton
-          type="primary"
-          style={isRtl ? styles.primaryButtonRtl : styles.primaryButton}
-          onClick={this.handlePrimary}
+          onClick={this.handleCancel}
+          text={this.props.cancelButtonLabel}
+          type="secondary"
+          color={buttonColors.gray}
+        />
+        <Button
           id="challengePrimaryButton"
-        >
-          {this.props.primaryButtonLabel}
-        </LegacyButton>
+          onClick={this.handlePrimary}
+          text={this.props.primaryButtonLabel}
+          type="primary"
+          color={buttonColors.purple}
+          className={isRtl ? styles.primaryButtonRtl : styles.primaryButton}
+        />
         {this.props.showPuzzleRatingButtons && (
-          <div style={styles.footer}>
-            <PuzzleRatingButtons useLegacyStyles />
+          <div className={styles.footer}>
+            <PuzzleRatingButtons
+              useLegacyStyles
+              levelId={this.props.levelId}
+              unitId={this.props.unitId}
+            />
           </div>
         )}
       </BaseDialog>
@@ -118,65 +133,4 @@ class ChallengeDialog extends React.Component {
   }
 }
 
-const styles = {
-  dialog: {
-    top: '20%',
-    border: `5px solid ${color.purple}`,
-    borderRadius: 10,
-  },
-  banner: {
-    backgroundPosition: 'top center',
-    backgroundRepeat: 'no-repeat',
-    backgroundImage: `url(${assetUrl('media/dialog/challenge_target.svg')})`,
-    position: 'relative',
-    marginTop: -85,
-    height: 135,
-  },
-  bannerComplete: {
-    backgroundImage: `url(${assetUrl(
-      'media/dialog/challenge_target_complete.svg'
-    )})`,
-    marginTop: -99,
-    height: 149,
-  },
-  content: {
-    color: color.purple,
-    position: 'relative',
-    textAlign: 'center',
-    marginBottom: 30,
-  },
-  text: {
-    margin: '0px 40px 20px',
-    textAlign: 'center',
-    fontSize: 18,
-  },
-  title: {
-    textAlign: 'center',
-    position: 'absolute',
-    bottom: 0,
-    color: '#fff',
-    backgroundColor: color.purple,
-    border: '3px solid white',
-    minWidth: '50%',
-    left: '25%',
-    fontSize: '150%',
-    height: 30,
-    lineHeight: '30px',
-  },
-  confetti: {
-    top: 150,
-  },
-  primaryButton: {
-    float: 'right',
-  },
-  primaryButtonRtl: {
-    float: 'left',
-  },
-  footer: {
-    marginTop: 20,
-    paddingTop: 20,
-    borderTop: '2px solid #ccc',
-  },
-};
-
-export default Radium(ChallengeDialog);
+export default ChallengeDialog;

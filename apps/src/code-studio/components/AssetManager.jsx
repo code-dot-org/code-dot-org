@@ -1,4 +1,3 @@
-/* eslint-disable react/no-is-mounted */
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -8,7 +7,8 @@ import {
   starterAssets as starterAssetsApi,
   files as filesApi,
 } from '@cdo/apps/clientApi';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
 import assetListStore from '../assets/assetListStore';
@@ -79,6 +79,7 @@ export default class AssetManager extends React.Component {
       statusMessage: props.uploadsEnabled ? '' : errorUploadDisabled,
       recordingAudio: false,
       audioErrorType: AudioErrorType.NONE,
+      projectType: '',
     };
   }
 
@@ -104,6 +105,10 @@ export default class AssetManager extends React.Component {
       api.getFiles(this.onAssetListReceived, this.onAssetListFailure);
     } else {
       this.setState({assets: []});
+    }
+    const projectType = api.getProjectType();
+    if (projectType) {
+      this.setState({projectType: api.getProjectType()});
     }
   }
 
@@ -149,7 +154,33 @@ export default class AssetManager extends React.Component {
     });
   };
 
+  /**
+   * Called when user initiates an upload.
+   * If the file is an image, log event.
+   * @param data - Upload data from jquery.fileupload
+   */
   onUploadStart = data => {
+    const file = data?.files?.[0];
+    if (!file) {
+      console.error('No file found in upload data.');
+      this.setState({statusMessage: 'Error: No file selected for upload.'});
+      return;
+    }
+    const isImage = [
+      'image/png',
+      'image/jpeg',
+      'image/jpg',
+      'image/gif',
+    ].includes(file.type);
+
+    if (isImage) {
+      analyticsReporter.sendEvent(
+        EVENTS.UPLOAD_CUSTOM_IMAGE,
+        {UploaderType: 'Asset Uploader', ProjectType: this.state.projectType},
+        PLATFORMS.STATSIG
+      );
+    }
+
     this.setState({statusMessage: 'Uploading...'});
     data.submit();
   };
@@ -176,13 +207,6 @@ export default class AssetManager extends React.Component {
     this.setState({
       statusMessage: 'Error uploading file: ' + getErrorMessage(status),
     });
-    firehoseClient.putRecord({
-      study: 'project-data-integrity',
-      study_group: 'v4',
-      event: 'asset-upload-error',
-      project_id: this.props.projectId,
-      data_int: status,
-    });
   };
 
   onSelectRecord = () => {
@@ -194,19 +218,6 @@ export default class AssetManager extends React.Component {
     if (this.props.assetsChanged) {
       this.props.assetsChanged();
     }
-    firehoseClient.putRecord({
-      study: 'delete-asset',
-      study_group:
-        this.props.assetChosen && typeof this.props.assetChosen === 'function'
-          ? 'choose-assets'
-          : 'manage-assets',
-      event: 'confirm',
-      project_id: this.props.projectId,
-      data_json: JSON.stringify({
-        assetName: name,
-        elementId: this.props.elementId,
-      }),
-    });
 
     this.setState({
       assets: assetListStore.list(this.props.allowedExtensions),
@@ -333,6 +344,7 @@ export default class AssetManager extends React.Component {
           statusMessage={this.state.statusMessage}
           recordDisabled={this.state.recordingAudio}
           hideAudioRecording={this.props.disableAudioRecording}
+          projectType={this.state.projectType}
         />
       </div>
     );

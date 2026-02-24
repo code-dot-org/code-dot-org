@@ -29,6 +29,48 @@ class AnimationLibraryTest < Minitest::Test
     AWS::S3.s3 = nil
   end
 
+  # POST endpoints require elevated privileges.
+  def test_post_level_animations_forbidden_without_authorization
+    post '/api/v1/animation-library/level_animations/test.png', 'DATA', 'CONTENT_TYPE' => 'image/png'
+    assert last_response.forbidden?
+  end
+
+  # Only users with levelbuilder permission may POST level_animations
+  def test_post_level_animations_success_when_levelbuilder
+    AnimationLibraryApi.any_instance.stubs(:has_permission?).with('levelbuilder').returns(true)
+    Aws::S3::Bucket.any_instance.stubs(:put_object)
+    post '/api/v1/animation-library/level_animations/test.png', 'DATA', 'CONTENT_TYPE' => 'image/png'
+    assert last_response.ok?
+  end
+
+  def test_post_spritelab_forbidden_without_authorization
+    post '/api/v1/animation-library/spritelab/cat/test.png', 'DATA', 'CONTENT_TYPE' => 'image/png'
+    assert last_response.forbidden?
+  end
+
+  # Only users with levelbuilder permission may POST spritelab uploads
+  def test_post_spritelab_success_when_levelbuilder
+    AnimationLibraryApi.any_instance.stubs(:has_permission?).with('levelbuilder').returns(true)
+    Aws::S3::Bucket.any_instance.stubs(:put_object)
+    post '/api/v1/animation-library/spritelab/cat/test.png', 'DATA', 'CONTENT_TYPE' => 'image/png'
+    assert last_response.ok?
+  end
+
+  def test_post_default_spritelab_metadata_forbidden_without_authorization
+    post '/api/v1/animation-library/default-spritelab-metadata/production',
+         '{"foo":"bar"}', 'CONTENT_TYPE' => 'application/json'
+    assert last_response.forbidden?
+  end
+
+  # Only users with levelbuilder permission may POST default-spritelab-metadata
+  def test_post_default_spritelab_metadata_success_when_levelbuilder
+    AnimationLibraryApi.any_instance.stubs(:has_permission?).with('levelbuilder').returns(true)
+    Aws::S3::Bucket.any_instance.stubs(:put_object)
+    post '/api/v1/animation-library/default-spritelab-metadata/levelbuilder',
+         '{"foo":"bar"}', 'CONTENT_TYPE' => 'application/json'
+    assert last_response.ok?
+  end
+
   def test_get_gamelab_animation
     contents = 'TEST_ANIMATION'
     # Ensure the shared S3 client is used by stubbing the client with the expected response.

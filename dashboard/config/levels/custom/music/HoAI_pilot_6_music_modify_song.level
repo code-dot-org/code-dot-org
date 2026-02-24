@@ -1,0 +1,124 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-10-10T13:20:34.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "offerTts": "true",
+    "encrypted": "false",
+    "background": "music-black",
+    "instructions_important": "false",
+    "long_instructions": "#### Make the code your own\r\n\r\n1. **Try changing a few sounds.**\r\n2. You can make other changes if you want to. \r\n3. When you are happy with your remix, press **Continue**.\r\n\r\n---\r\n\r\n***Up next: start coding your dance party.***\r\n\r\n",
+    "hide_share_and_remix": "true",
+    "validations": [
+      {
+        "key": "music-ai-skill-sequence_d6a47c71-67df-4b83-950a-71b503c6cdb6",
+        "message": "**Nice work!**\n\nWhen you are done with your song, press continue to code a dance party!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 8
+          }
+        ]
+      }
+    ],
+    "level_data": {
+      "library": "launch2024",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when_run_simple2",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "id": "play_sound_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "electro/drum_beat_cowbell"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "id": "play_sounds_together",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "repeat_simple2",
+            "id": "repeat_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "times": 1
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "set_effect_at_current_location_simple2",
+            "id": "set_effect_at_current_location_simple2",
+            "fields": {
+              "effects_name": "<field name=\"effects_name\">volume</field>",
+              "effects_value": "<field name=\"effects_value\">normal</field>"
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      },
+      "allowChangeStartingPlayheadPosition": true
+    },
+    "name_suffix": "_4",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "project_template_level_name": "HoAI_pilot_5_template2",
+    "display_name": "Regenerate the music",
+    "thumbnail_url": "https://images.code.org/dec7f10131962bf7a646aa26d4f4f9a3-botmusic.jpg",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-10T13:20:34.955+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_5_music_modify_song\\\"\"],\"cloned_from\":\"HoAI_pilot_5_music_modify_song\"},{\"changed_at\":\"2025-10-11 12:57:34 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

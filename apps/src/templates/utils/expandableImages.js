@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 import {ImagePreview} from '../instructions/AniGifPreview';
 
@@ -28,17 +29,18 @@ export function renderExpandableImages(node, showImageDialog) {
      * > Replacing React-rendered children with a new root component. If you
      * > intended to update the children of this node, you should instead have
      * > the existing children update their state and render the new components
-     * > instead of calling ReactDOM.render.
+     * > instead of calling createReactRoot -> ReactDOM.render.
      *
      * We should probably rebuild this in such a way as to not violate React's
      * expectations like this.
      */
-    ReactDOM.render(
+    createReactRoot(
       <ImagePreview
         url={expandableImg.dataset.url}
+        alt={expandableImg.textContent}
         noVisualization={false}
         showInstructionsDialog={() =>
-          showImageDialog(expandableImg.dataset.url)
+          showImageDialog(expandableImg.dataset.url, expandableImg.textContent)
         }
       />,
       expandableImg

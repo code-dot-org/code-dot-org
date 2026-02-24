@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 require 'cdo/shared_constants'
@@ -94,10 +95,6 @@ class Gamelab < Blockly
   end
 
   def uses_droplet?
-    true
-  end
-
-  def uses_google_blockly?
     true
   end
 

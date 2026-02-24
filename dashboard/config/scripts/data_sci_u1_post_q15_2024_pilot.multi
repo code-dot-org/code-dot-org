@@ -1,0 +1,15 @@
+name 'Data Sci U1 Post Q15_2024-pilot'
+
+question 'Explain how you would handle outliers in a dataset and the potential effects of different methods on the analysis results.'
+
+wrong 'Ignore outliers entirely to avoid any potential skewing of results, ensuring the analysis focuses only on typical data points.'
+wrong 'Remove all outliers from the dataset to achieve a more accurate analysis, but risk losing significant data that could indicate important trends.'
+right 'Analyze the cause of outliers and decide whether to transform, remove, or keep them based on their impact and relevance to the overall data analysis.'
+wrong 'Replace outliers with average values to standardize the dataset, minimizing their impact but potentially masking important variations.'
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

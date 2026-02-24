@@ -1,0 +1,26 @@
+name 'CSA Unit 2 Assessment q02_pilot-2025'
+
+wrong '`"Wednesday"`'
+right '`68`'
+wrong '`"Monday"`'
+wrong '`72`'
+wrong '`"Sunday"`'
+
+markdown <<MARKDOWN
+What is the final value of `temperature`?
+
+```
+1  int temperature  = 72;
+2  String dayOfWeek = "Sunday";
+3  dayOfWeek = "Monday";
+4  temperature = 68;
+5  dayOfWeek = "Tuesday";
+6  dayOfWeek = "Wednesday";
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The `temperature` variable is first assigned the value `72` on **Line 1**. It is then assigned the value `68` on **Line 4** and is not assigned a new value after this.
+MARKDOWN
+
+allow_multiple_attempts true

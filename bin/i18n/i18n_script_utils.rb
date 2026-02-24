@@ -1,7 +1,7 @@
 require File.expand_path('../../../dashboard/config/environment', __FILE__)
-require File.expand_path('../../../pegasus/helpers/pegasus_languages', __FILE__)
 
 require 'cdo/honeybadger'
+require 'cdo/i18n'
 require 'cgi'
 require 'fileutils'
 require 'psych'
@@ -46,10 +46,9 @@ class I18nScriptUtils
   end
 
   # List of supported CDO Languages
-  # @see https://docs.google.com/spreadsheets/d/10dS5PJKRt846ol9f9L3pKh03JfZkN7UIEcwMmiGS4i0 Supported CDO languages doc
-  # @return [Array<CdoLanguage>] Supported CDO languages
+  # @return [Array<Hash>] Supported CDO languages
   def self.cdo_languages
-    @cdo_languages ||= PegasusLanguages.all
+    @cdo_languages ||= Cdo::I18n.available_languages
   end
 
   # Because we log many of the i18n operations to slack, we often want to
@@ -321,10 +320,18 @@ class I18nScriptUtils
   end
 
   def self.parse_file(file_path)
-    return JSON.load_file(file_path) if json_file?(file_path)
-    return YAML.load_file(file_path) if yaml_file?(file_path)
+    file_content = File.read(file_path)
+
+    return JSON.parse(file_content) if json_file?(file_path)
+    return YAML.safe_load(file_content) if yaml_file?(file_path)
 
     raise "do not know how to parse file #{file_path.inspect}"
+  rescue Errno::ENOENT => exception
+    raise "File not found: #{file_path.inspect} - #{exception.message}"
+  rescue JSON::ParserError => exception
+    raise "JSON parsing error in file #{file_path.inspect} - #{exception.message}"
+  rescue Psych::SyntaxError => exception
+    raise "YAML parsing error in file #{file_path.inspect} - #{exception.message}"
   end
 
   def self.sanitize_file_and_write(loc_path, dest_path)

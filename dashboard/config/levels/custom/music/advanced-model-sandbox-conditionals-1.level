@@ -1,0 +1,191 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2024-09-19T21:24:08.000Z",
+  "level_num": "custom",
+  "user_id": 16899,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "blockMode": "Advanced",
+      "toolbox": {
+      },
+      "library": "launch2024",
+      "startSources": {
+        "variables": [
+          {
+            "name": "i",
+            "id": "Jzt-l.ao[tU*jVezANa#"
+          }
+        ],
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "for_loop",
+                  "id": "W8U21{D[Lt3xCG/vUJS)",
+                  "fields": {
+                    "VAR": {
+                      "id": "Jzt-l.ao[tU*jVezANa#"
+                    }
+                  },
+                  "inputs": {
+                    "FROM": {
+                      "shadow": {
+                        "type": "math_number",
+                        "id": "8`dHRIW7N):uG^G+k`vY",
+                        "fields": {
+                          "NUM": 1
+                        }
+                      }
+                    },
+                    "TO": {
+                      "shadow": {
+                        "type": "math_number",
+                        "id": "BuwP^c/976._,-q/niZr",
+                        "fields": {
+                          "NUM": 6
+                        }
+                      }
+                    },
+                    "BY": {
+                      "shadow": {
+                        "type": "math_number",
+                        "id": "F#,oB1YTYU#_`Ws[gR-b",
+                        "fields": {
+                          "NUM": 2
+                        }
+                      }
+                    },
+                    "DO": {
+                      "block": {
+                        "type": "controls_if",
+                        "id": "2CB{F($}f;SaAt:h6${N",
+                        "extraState": {
+                          "hasElse": true
+                        },
+                        "inputs": {
+                          "IF0": {
+                            "block": {
+                              "type": "logic_compare",
+                              "id": "A+i6bH]SpEvLcQhwxY;5",
+                              "fields": {
+                                "OP": "<field name=\"OP\">LTE</field>"
+                              },
+                              "inputs": {
+                                "A": {
+                                  "block": {
+                                    "type": "variables_get",
+                                    "id": "-%~iuf*ap`l=Arw$^~VW",
+                                    "extraState": {
+                                    },
+                                    "fields": {
+                                      "VAR": {
+                                        "id": "Jzt-l.ao[tU*jVezANa#"
+                                      }
+                                    }
+                                  }
+                                },
+                                "B": {
+                                  "block": {
+                                    "type": "math_number",
+                                    "id": "|OEI~t@nmh^k[]tevG4L",
+                                    "fields": {
+                                      "NUM": 3
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "DO0": {
+                            "block": {
+                              "type": "play_sound",
+                              "id": "eKB9R{x^x,WNG-}hEBj1",
+                              "fields": {
+                                "sound": "shakira_maluma_chantaje/kick_build_1"
+                              },
+                              "inputs": {
+                                "measure": {
+                                  "shadow": {
+                                    "type": "math_number",
+                                    "id": "a2RVYk_X^~.+UTl8eQE/",
+                                    "fields": {
+                                      "NUM": 1
+                                    }
+                                  },
+                                  "block": {
+                                    "type": "variables_get",
+                                    "id": "Q#1Va`*[`FQ8~J@VV5-;",
+                                    "extraState": {
+                                    },
+                                    "fields": {
+                                      "VAR": {
+                                        "id": "Jzt-l.ao[tU*jVezANa#"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "ELSE": {
+                            "block": {
+                              "type": "play_sound",
+                              "id": "td%`WRKUud|lX.d+?GvM",
+                              "fields": {
+                                "sound": "shakira_maluma_chantaje/kick_build_2"
+                              },
+                              "inputs": {
+                                "measure": {
+                                  "shadow": {
+                                    "type": "math_number",
+                                    "id": "a2RVYk_X^~.+UTl8eQE/",
+                                    "fields": {
+                                      "NUM": 1
+                                    }
+                                  },
+                                  "block": {
+                                    "type": "variables_get",
+                                    "id": "yON1WDhXV5+J3Wri.8sn",
+                                    "extraState": {
+                                    },
+                                    "fields": {
+                                      "VAR": {
+                                        "id": "Jzt-l.ao[tU*jVezANa#"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "packId": "shakira_maluma_chantaje"
+    },
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2024-09-19T21:24:08.787+00:00\",\"changed\":[\"cloned from \\\"advanced-model-sandbox-functions-1\\\"\"],\"cloned_from\":\"advanced-model-sandbox-functions-1\"},{\"changed_at\":\"2024-09-19 21:24:14 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-10-10 15:17:42 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 15:19:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 15:21:10 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 15:22:40 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 15:23:18 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 15:24:14 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 15:24:59 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 15:25:59 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 15:27:57 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 15:28:26 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 15:28:40 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-14 21:40:12 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-14 21:40:24 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

@@ -253,6 +253,7 @@ class Homepage
           text_overline: action["text_overline"],
           external_link: action["external_link"],
           button_color_white: action["button_color_white"],
+          button_color_black: action["button_color_black"],
           button_link: action["button_link"],
           studio_button_link: action["studio_button_link"],
           button_label_primary: action["button_label_primary"],
@@ -537,8 +538,8 @@ class Homepage
   def self.get_dance_stars
     [
       "Beyoncé", "BTS", "Harry Styles", "Lizzo", "Post Malone", "Disney's \"Encanto\"", "Rosalía", "Nicky Youre",
-      "Katy Perry", "Lil Nas X", "Jonas Brothers", "FIFTY FIFTY", "Steve Lacy", "Panic! At The Disco",
-      "Shawn Mendes", "Nicki Minaj", "Pedro Capó", "Francesco Gabbani", "Sia",
+      "Lil Nas X", "Jonas Brothers", "FIFTY FIFTY", "Steve Lacy",
+      "Shawn Mendes", "Sia",
       "Ariana Grande", "Avicii and Aloe Blacc", "Calvin Harris",
       "Carly Rae Jepsen", "Coldplay", "Ed Sheeran", "Imagine Dragons",
       "J Balvin and Willy William", "Justin Bieber", "Lady Gaga",

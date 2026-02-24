@@ -1,0 +1,19 @@
+name 'computer-systems-postassessment-question8_v2-2025'
+title 'Computer Systems and Devices Post-Assessment: Question 8'
+
+wrong 'Environmental data'
+wrong 'Text data'
+right 'Visual data'
+wrong 'Sensor data'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which type of data would a security camera recording motion collect?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 7: Data in Computer Systems
+
+Lesson 8: Processing Data in a System
+MARKDOWN

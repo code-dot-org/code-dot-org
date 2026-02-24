@@ -1,0 +1,518 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-08-15T18:44:50.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "### Add More Layers \r\n\r\nYou don't have to use just single tracks in <code style=\"background-color: rgb(0, 148, 202); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">play sequential</code> blocks - you can also layer multiple tracks to play together after each other. Let's try that with this Espresso remix:\r\n\r\n**Try this:** \r\n- Choose one of the `play together` chunks in the workspace and add it to the `play sequential` block. [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id:play_together_workspace_1---id-up-inside:play_sequential_workspace)\r\n- Keep adding `play together` blocks to your song. Each chunk should play one after the other. You can decide the order!\r\n\r\nPress <code style=\"background-color: #fca401; color: white; border: none; box-shadow: inset -1px -1px 1px1 rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">Run</code> and listen to your song! You should hear four backing tracks underneath the lead vocals!",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "sabrina_carpenter_espresso",
+      "sounds": {
+        "sabrina_carpenter_espresso": [
+          "vocals_chorus_1",
+          "vocals_chorus_2"
+        ],
+        "electro": [
+          "bass_synth_blocks",
+          "bass_synth_candy",
+          "bass_synth_chips",
+          "bass_synth_duct_tape",
+          "bass_synth_foam",
+          "synth_cave",
+          "synth_wiggle",
+          "guitar_code",
+          "guitar_melody",
+          "guitar_shimmy",
+          "boom_impact",
+          "spring_lift",
+          "wormhole",
+          "drum_beat_cowbell",
+          "drum_beat_club",
+          "drum_beat_edm",
+          "drum_beat_hyper",
+          "drum_beat_fashion",
+          "drum_beat_noise",
+          "drum_beat_pause",
+          "drum_beat_shake",
+          "drum_beat_strobe",
+          "drum_beat_sharp",
+          "drum_beat_swirl",
+          "drum_beat_sync",
+          "drum_beat_tom",
+          "crackle"
+        ],
+        "groove": [
+          "boom_bass",
+          "funky_bass",
+          "reggaeton_bass",
+          "bass_sub_bus",
+          "bass_sub_saunter",
+          "bass_sub_snowshoe",
+          "guitar_bird",
+          "clav_bounce",
+          "guitar_cloud",
+          "guitar_rainbow",
+          "rhodes_bounce",
+          "synth_funk",
+          "blart",
+          "crash_reverse",
+          "strings",
+          "laser"
+        ],
+        "indie": [
+          "bass_home_coast",
+          "bass_home_sway_down",
+          "bass_lifted_coast_down",
+          "acoustic_bass",
+          "rhythm_guitar",
+          "synth_hook",
+          "synth_theme",
+          "guitar_lick",
+          "crash_build",
+          "guitar_clean_phrase",
+          "hey"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+        },
+        "type": "flyout"
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": true
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sounds_sequential",
+                        "id": "010m/OE}$(l]sJg99Mp(",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "play_sound_at_current_location_simple2",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "sabrina_carpenter_espresso/vocals_chorus_1"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "p8JqPBAO-/94cqcO,$ru",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": true
+                                  },
+                                  "fields": {
+                                    "sound": "sabrina_carpenter_espresso/vocals_chorus_2"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sounds_sequential",
+                            "id": "play_sequential_workspace",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": true
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "play_sounds_together",
+              "id": "play_together_workspace_1",
+              "x": 310,
+              "y": 90,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "inputs": {
+                "code": {
+                  "block": {
+                    "type": "play_sound_at_current_location_simple2",
+                    "id": "Tk,Kq~Y2kwe7.Vr51ugB",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "fields": {
+                      "sound": "electro/drum_beat_pause"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "b6^%3uLWZAix%_-?Kn]u",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "electro/bass_synth_chips"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "_g-b@~siK}(DGSA,fD`Z",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": true
+                            },
+                            "fields": {
+                              "sound": "groove/blart"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "play_sounds_together",
+              "id": "play_together_workspace_2",
+              "x": 590,
+              "y": 70,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "inputs": {
+                "code": {
+                  "block": {
+                    "type": "play_sound_at_current_location_simple2",
+                    "id": "_vDalYWN[=@#2T3x/K=9",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "fields": {
+                      "sound": "electro/drum_beat_pause"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "]a`B)Iqf-:CVe#%)^VA~",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "electro/bass_synth_chips"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "URK)q(P*`dm,?RIKC~2;",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": true
+                            },
+                            "fields": {
+                              "sound": "groove/clav_bounce"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "play_sounds_together",
+              "id": "play_together_workspace_3",
+              "x": 310,
+              "y": 290,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "inputs": {
+                "code": {
+                  "block": {
+                    "type": "play_sound_at_current_location_simple2",
+                    "id": "b.D4G#ht9e//$uP-Bd%[",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "fields": {
+                      "sound": "electro/drum_beat_pause"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "j{s:~s6sEt%*syanqh}j",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "electro/bass_synth_chips"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "gKd8KwB_i]J68TX#/saH",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": true
+                            },
+                            "fields": {
+                              "sound": "groove/clav_bounce"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "play_sounds_together",
+              "id": "play_together_workspace_4",
+              "x": 590,
+              "y": 290,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "inputs": {
+                "code": {
+                  "block": {
+                    "type": "play_sound_at_current_location_simple2",
+                    "id": "waQ`-_9PpEk4T_kV=7(J",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "fields": {
+                      "sound": "electro/drum_beat_pause"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "RD%Ty@qw*w*/8Bc1~902",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "electro/bass_synth_chips"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "{!dH(.53iO8+T2Y*8;#L",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": true
+                            },
+                            "fields": {
+                              "sound": "groove/crash_reverse"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "validationTimeout": 1
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "playerTitle": "Example"
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-practice-play-sequential-2_4e341279-c5be-4906-b9b8-6cf2ff5d3af1",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says: \"You Did It!\"",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 12
+          },
+          {
+            "name": "played_different_sounds_together_multiple_times",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-practice-play-sequential-2_919fa389-6064-46a2-b690-513490d4a080",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is REALLY dancing!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sounds_together:5"
+          },
+          {
+            "name": "played_sounds",
+            "value": 8
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-practice-play-sequential-2_f9c13c2e-c7a4-4e52-90ad-5faaf23f1d60",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is starting to dance...",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sounds_together:5"
+          },
+          {
+            "name": "played_sounds",
+            "value": 5
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-practice-play-sequential-2_a2cd8747-249b-4474-852f-ee7e4a319fd7",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening to your song...",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sounds_together:5"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-practice-play-sequential-2_a23b5e73-ee8e-4875-b72a-7a4f086b901f",
+        "message": "Nice job adding a play together block! Make sure to add all of the play together chunks to your song!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sounds_together:2"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-practice-play-sequential-2_af4f53b9-569b-4e29-ae22-36ca2bc41a51",
+        "message": "Choose a play together block to add to your song! [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id:play_together_workspace_1---id-up-inside:play_sequential_workspace)",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sounds_together:1"
+          }
+        ],
+        "callout": "id:play_together_workspace_1---id-up-inside:play_sequential_workspace"
+      }
+    ],
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6lfe2BzN4biKVeTvfD80/YL+3G5Bj3YmNK3/UM/xNlM4UFpxqaM8r0Ju1\nAECRzcycDraxxDvwhRR3E1WGqwBVYl2igtUE+clNUhMch5zn39NedMm86QQD\nSNE/vqliphrufSGnbbJ7q2y+Nx6eM5RXJ+lZZk4sqapSH+vKD0pDXXdgOc+W\nOubeIkjQXgAlbS41Zryd0OBtFrr6KBsLWVi2pFWmfWGL+SqWwfPA9yl3s8fF\nP82w3iwd2TI5hv7nXrKCCCdcIC1Gsr76K3reAXTwhLnoSYxA+Y0s+ldrfTsK\nwa6E8t98HD9Hkmnig6JhAqa6AUKg0Fz0CgxxS4a9jSLwQLBFEghMFE1FSjpi\n3FZ35ANBK42ZYAGEo3jbxzoNsL2IlRi4jqvVGii8hsBTneBJ8R1XyG2NeMr9\nSd8NKKvk0Bp4AevFT5+KLZ+n4kJ8zdmA5ZW4yWVFQGG/UBCu3F2D1tAZNscz\nrCOBfvZ1qXlPDPwv+LuOqIGk37Cn7A0Qg5E73tJQjMk6+Qj6z6nqZadVtfKx\nahdpJ+x6vHnBE7K3QJm6tGknYtkhyxrokVPiwU21B24I+CUWx2Mmk0JMkbih\nMW2qts3qN8KzNe/b//I1ND4JIDFvRWYfeb3heD+8yBXWMhA/YQaHtOr5UJSc\ng427E47qqa8aggSHy+Fk7Z9F2HXrbokiEqaLeYSJq2F60IsTIbu/ZCJo12uM\natNX7QLrfSFAygIqpk/fn1n0rIEDvtxqbM1Q27jwtqc+6CEfMxNklVBddFfr\nzaE6CmZTlzEHHQ9IjQyeZaaKkjOr9t6YQ/40YJb19DbIo+VPzNE/U1Gx/xSj\nsC6/SGyBL48TtSVL0ybNl59fBKKiSBuWohf0N2ObK+eqkFVljYavCDSsLSYy\ncd38CbFNoQ7zvVE67GK8W3McYZ/63mayGhKVS1ymDjvitX0PUzZ+XU/WhZ86\n3LEGV50FYveiGjrMCn8scK2kmVUFVPubY69/5PYSnLG5jl0BPigffWL+xXq8\nF3MSsKUgVLJ/9SvbTnQ6u0KrzqL4iDxCLVwqc937Vczs6WXttccVW6snIKdt\nYJBmZO/+zzyhSTr9zBoy5JLrSZItq8BGMZXNJjTMPJJ6XMKy+hmpIpSQZcR2\nLtkGzfYwnokPY0GX1UniJRQ0d2P8vHOR0JoD2YZoUi+S+e9METklWFWpgJku\nK4zu44PJDgY3uS0KETCi2ezfw6IYq6Jw4vEL7k7vGZ1xqoHEGPSwq6a4si8u\nDt71ZnGzIjDE4etyYEgDnK8OVWyv3Xh+0MdeEu535G/dg4dNGH+BjDDKnEk0\nbL2hAc/S18qV10qg5gsIHgyEeBZRsUfFg8+GQv2D8wCx75oUVQpo0s5wIeyH\n1SLqHiJxdQTj53DvkJviPUsC7HtxVPx5O4XLZZKHebcfgDr2Vp/lUny+hD/6\niibQu5xZMXO2mwcZbUQC+aYuTRgcSvg6BxdkOG+TXKpGFt7x6K8G8bsBvdSV\nLSnG/CRWyfvnPXdrHiZ5M2SpfxDjYGTDPs+oPquKcKEMF3/GFkqM8zgcELE9\nuFJ1N3MHX/KNDElfOCOgznJBogHlqAA4c9Y/n6o2zI3JZ3Hij74e6FhV56eC\nZNh4l2bEO4CfUXfUW47zTPkCafFHAkS4Z9vqe6cOczGuIMxU7M6zvh6NFndL\ng5TnQi+tVncs2Lvm5BRqwPD5zsdHvuPp4bM7ZfWFjDd5vjhjsoHFz11rNCCG\n6HnH1ykdiB3fMTixHc31O7/g7xa7ZX0ySDqMvV6RduwxxHcUvFbYn+pi7IKF\nv24eo/RHC33qCSGsX/tOR9oMovEgFyOvyswvGUjdavoZEd5yyD8TyEz4F2ac\nrK2VqkQHKGTk04rWb0rQkuMgCe8rchB2BVfZo2ft8f8xn+mDe/g5u9fjvl+8\nEG/UwqJSMdenKCyDk8Qs5DQ3aKjJbsUgZ7SjlNSZ0MzL5hYHTAf1TrYGgCVY\nmWZ1pOn/Y31NGI1NorKti1l+aj2jNfmPRJ33qyo/RN9yMBxFQ8MjdXVGzedD\neg8Jdx1mRoT83D8eI2k5vBqhlsMMD59pz8eaRJ3QgcR1zPI9puGQbeBOvQu0\nFUUVS4eNM56ZIyepZqRFSp0+e9ik86iTeZLHN6j69R11wNiSry8abCxVPGvf\nB9ZckW2TLZfx5dBflPKJe+cw89iW2uNJ8/1XAmDT/wfc6Xv5tx5mEXlSWkfr\nI6JIbu4ZkKUlJ+8ZAd8v2KOcP+ymHvkgGheTpDCnzOGNga57z+Hg9AHib/Sz\niDFXzX7ii9Fn/egwX+WvCCqxnBo9lXTqcq80Z81JD9xVFrlYehsJ/+HUaraq\nhkTYT9y1gY/KoaUfI34XaoYiYbc8NNQ8x5OECUI/YWTW1XFQAAUmaRcOJbc8\niNLK+putAzNpZoz8D2IAfrE5+yCkf4oHB+yudp3FuThBtY/pKBb6Uy0MxB1H\n7/MCjHLLJPZS64TzJQLjqycoGak07JGx/+RK+92/pdYKQ5/qVXXOtbRcq8+T\ng3aRGg2dPmk2DsxNyW/6ajPgxWu9vB7dC8999Ek2HfWWdbEnxmeXVesEmrtJ\nWTryg18U55GFp9pE3ziFdGzS3JpW35G7d0zuoinsSJr4RFBUJp6AZQui7qDI\nfekn2Wc0M4p6BdwVpedMcjqxecwYq2qcIs63N6r5qV3dZ8qe7kk+Hwlq2nYj\nMfq/xJaoHvDJ/Es5bjvhUBVzuE4ESVytJvcBszALY/Vm/yB0G6/NrSK2XHco\n31Phgnm4+LeSNK1QLs954csUI3bz1uOQPE0skvJbazhz3IfCYvAA9353GqtF\nu6yHJJAuNr0z7A2WxP0Qs0SP1Ywubgw17VPHBSCIxGjkWG27HM+soTJl/syj\n0/m76BUZa6GLLJdqS7IyTrn8M2Whr2XLDuSt6fM0CEPUP5E5G40+AC+Eg+/A\nL1Im+s09IXPrq8Iqpk4KqA4sTs28VHs8EcxJCnXMd+fYqP2Q0j/n3vqaQGP2\npp3LSvaQYqVqb9ezA0Y4iALa+B686f0S8vFou2jChsUrJSk6nsT5TWriQCXd\nIUCqMW0+bGmR75WHVVidW3rAJI6WXjee1miiyqUDLjIwF/5hZ3JCSeDL7xDB\npZoEktw6tVuSA3dotZ2Lxs1BdENMBMCuyD2dJx7OOM1l2+eFd0dSJdiIdYHr\nW6erBFQEO56mhQXhcDALYKUpY2v0Xkh9+Y5gajpVQWvmKRsN7uywFt8cQNXU\nXXwaKJxiZSXhGc+zzK12W+9VcDvUc8/7cSht8ydtENK4gdAjbuA8ceCOAIr7\n+8ZtRzMfdK2V9IBwKsTfNC3JwK7/oLMRMEERK6X3/I7kydV4CE8BOv7ebbuL\nKtFDY65eAPbL5tzkNM58q3+/6MQHVTfj1ays/px2S8e355A+/qgo+OM6guBE\nvM3gF3hEmibEREdmVwTvrFOUrksmnwOgBjSKFuABbEA0kcHEbQkdW7qcTlaO\nC78VuZcnTtSnlFcBwdbhRmnwBfINw0sqN9iZpZPQrTIPo7sN6F2KPBwZEv1e\nMBCYsqeNBpO0B4gtaqvteE2AdJ9h1/BSDYlyKGAnEbSAFNBg2lb4PzaEVvTv\nK5NJXE2ai42RVHajJz/bX+cBGWhcXf77KxTCHG3UO7rG5neB09sbefDm+bhz\njjFdHiryaV+fpA//cF5127V5bLiyxxsA7Z6xYFchBsqm6ZhyfTEzd+va\n",
+    "name_suffix": "_bash",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-08-15T18:44:50.135+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-play-sequential-2_v2\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-play-sequential-2_v2\"}]"
+}]]></config>
+  <blocks/>
+</Music>

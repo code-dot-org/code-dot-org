@@ -1,3 +1,4 @@
+import * as BlocklyCore from 'blockly/core';
 import {EventEmitter} from 'events';
 import $ from 'jquery';
 import _ from 'lodash';
@@ -12,12 +13,19 @@ import {
   stringIsXml,
   stripUserCreated,
 } from '@cdo/apps/blockly/constants';
+import {
+  loadBlocksToWorkspace,
+  highlightBlock,
+  appendSharedFunctions,
+  processToolboxXml,
+} from '@cdo/apps/blockly/utils';
 import {addCallouts} from '@cdo/apps/code-studio/callouts';
 import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import localization from '@cdo/apps/localization';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 import {
@@ -26,6 +34,7 @@ import {
 } from '@cdo/apps/templates/currentUserRedux';
 import InstructionsDialog from '@cdo/apps/templates/instructions/InstructionsDialog';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 import msg from '@cdo/locale';
 
@@ -35,11 +44,14 @@ import getAchievements from './achievements';
 import * as assetPrefix from './assetManagement/assetPrefix';
 import AuthoredHints from './authoredHints';
 import * as blockUtils from './block_utils';
+import * as BlocklyUtils from './blockly/utils';
 import DropletTooltipManager from './blockTooltips/DropletTooltipManager';
 import {assets as assetsApi} from './clientApi';
 import * as assets from './code-studio/assets';
 import AbuseError from './code-studio/components/AbuseError';
 import SmallFooter from './code-studio/components/SmallFooter';
+import {RESIZE_VISUALIZATION_EVENT} from './code-studio/components/VisualizationResizeBar';
+import WireframeButtons from './code-studio/components/WireframeButtons';
 import project from './code-studio/initApp/project';
 import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
 import {closeWorkspaceAlert} from './code-studio/projectRedux';
@@ -54,14 +66,9 @@ import {getValidatedResult, initializeContainedLevel} from './containedLevels';
 import * as dom from './dom';
 import * as dropletUtils from './dropletUtils';
 import FeedbackUtils from './feedback';
-import {
-  configCircuitPlayground,
-  configMicrobit,
-} from './lib/kits/maker/dropletConfig';
+import Alert from './legacySharedComponents/alert';
 import {isEditWhileRun} from './lib/tools/jsdebugger/redux';
-import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
-import WireframeButtons from './lib/ui/WireframeButtons';
-import firehoseClient from './lib/util/firehose';
+import {configCircuitPlayground, configMicrobit} from './maker/dropletConfig';
 import puzzleRatingUtils from './puzzleRatingUtils';
 import {getStore} from './redux';
 import {
@@ -84,8 +91,8 @@ import {
 } from './redux/studioAppActivity';
 import * as shareWarnings from './shareWarnings';
 import Sounds from './Sounds';
-import Alert from './templates/alert';
 import ChallengeDialog from './templates/ChallengeDialog';
+import SettingsModal from './templates/Settings';
 import VersionHistory from './templates/VersionHistory';
 import color from './util/color';
 import KeyHandler from './util/KeyHandler';
@@ -95,18 +102,31 @@ import {parseElement as parseXmlElement} from './xml';
 
 var codegen = require('./lib/tools/jsinterpreter/codegen');
 
-var copyrightStrings;
+/**
+ * If the bigPlayspace is enabled, either by experiment or by level property,
+ * then the padding can be configured via query param as well.
+ */
+const bigPlaySpacePadding = queryParams('bigPlayspacePadding') || 160;
 
 /**
- * The minimum width of a playable whole blockly game.
+ * Track whether the run button was clicked, which we log an event for. We
+ * only want to log this event once for the first click but not subsequent clicks
  */
+let runButtonWasClicked = false;
+
+/**
+ * Get the maximum resizable width of the playspace.
+ */
+const getMaxResizableVisualizationWidth = isBigPlayspaceEnabled => {
+  return isBigPlayspaceEnabled
+    ? Math.min(window.innerHeight - bigPlaySpacePadding, window.innerWidth / 2)
+    : 400;
+};
+
 const MIN_WIDTH = 1400;
 const DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
-export const MAX_VISUALIZATION_WIDTH = experiments.isEnabled(
-  experiments.BIG_PLAYSPACE
-)
-  ? 0.75 * window.innerHeight
-  : 400;
+const DEFAULT_VISUALIZATION_WIDTH = 400;
+export const MAX_VISUALIZATION_WIDTH = 400;
 export const MIN_VISUALIZATION_WIDTH = 200;
 
 /**
@@ -254,6 +274,12 @@ class StudioApp extends EventEmitter {
      * Global key handler for the app.
      */
     this.keyHandler = new KeyHandler(document);
+
+    /**
+     * Last window dimensions when a resize was handled.
+     */
+    this.lastWindowInnerWidth = undefined;
+    this.lastWindowInnerHeight = undefined;
   }
 }
 /**
@@ -275,8 +301,13 @@ StudioApp.prototype.configure = function (options) {
   // binding correctly as they pass this function around.
   this.assetUrl = _.bind(this.assetUrl_, this);
 
+  this.isBigPlayspaceEnabled =
+    experiments.isEnabledAllowingQueryString(experiments.BIG_PLAYSPACE) ||
+    options.level.enableBigPlayspace;
+
   this.maxVisualizationWidth =
-    options.maxVisualizationWidth || MAX_VISUALIZATION_WIDTH;
+    options.maxVisualizationWidth ||
+    getMaxResizableVisualizationWidth(this.isBigPlayspaceEnabled);
   this.minVisualizationWidth =
     options.minVisualizationWidth || MIN_VISUALIZATION_WIDTH;
 
@@ -324,7 +355,6 @@ StudioApp.prototype.init = function (config) {
   this.config = config;
 
   config.getCode = this.getCode.bind(this);
-  copyrightStrings = config.copyrightStrings;
 
   if (config.legacyShareStyle && config.hideSource) {
     $('body').addClass('legacy-share-view');
@@ -339,7 +369,7 @@ StudioApp.prototype.init = function (config) {
   this.configureDom(config);
 
   if (!config.level.iframeEmbedAppAndCode) {
-    ReactDOM.render(
+    createReactRoot(
       <Provider store={getStore()}>
         <InstructionsDialog
           title={msg.puzzleTitle({
@@ -516,9 +546,12 @@ StudioApp.prototype.init = function (config) {
 
   // TODO (cpirich): implement block count for droplet (for now, blockly only)
   if (this.isUsingBlockly()) {
-    Blockly.mainBlockSpaceEditor.addUnusedBlocksHelpListener(function (e) {
-      utils.showUnusedBlockQtip(e.target);
-    });
+    // Hook the blockly environment into the localization engine
+    if (experiments.isEnabledAllowingQueryString(experiments.LOCALIZEJS)) {
+      localization.on('change', info => {
+        BlocklyUtils.updateLocale(info.rtl);
+      });
+    }
     // Store result so that we can cleanup later in tests
     this.changeListener = Blockly.mainBlockSpaceEditor.addChangeListener(
       _.bind(function () {
@@ -526,14 +559,20 @@ StudioApp.prototype.init = function (config) {
       }, this)
     );
 
-    if (Blockly.getHiddenDefinitionWorkspace()) {
-      this.hiddenWorkspaceChangeListener =
-        Blockly.getHiddenDefinitionWorkspace().addChangeListener(
-          _.bind(function () {
-            this.updateBlockCount();
-          }, this)
-        );
-    }
+    this.hiddenWorkspaceChangeListener =
+      Blockly.getHiddenDefinitionWorkspace()?.addChangeListener(
+        _.bind(function () {
+          this.updateBlockCount();
+        }, this)
+      );
+
+    this.mainWorkspaceChangeListener =
+      Blockly.getMainWorkspace()?.addChangeListener(
+        _.bind(function () {
+          project.projectChanged();
+        }, this)
+      );
+
     if (config.level.openFunctionDefinition) {
       this.openFunctionDefinition_(config);
     }
@@ -556,28 +595,8 @@ StudioApp.prototype.init = function (config) {
     );
   }
 
+  this.initSettingsUI();
   this.initVersionHistoryUI(config);
-
-  if (this.isUsingBlockly() && Blockly.contractEditor) {
-    Blockly.contractEditor.registerTestsFailedOnCloseHandler(
-      function () {
-        this.feedback_.showSimpleDialog({
-          headerText: undefined,
-          bodyText: msg.examplesFailedOnClose(),
-          cancelText: msg.ignore(),
-          confirmText: msg.tryAgain(),
-          onConfirm: null,
-          onCancel: function () {
-            Blockly.contractEditor.hideIfOpen();
-          },
-        });
-
-        // return true to indicate to blockly-core that we'll own closing the
-        // contract editor
-        return true;
-      }.bind(this)
-    );
-  }
 
   if (config.legacyShareStyle && config.hideSource) {
     this.setupLegacyShareView();
@@ -590,7 +609,7 @@ StudioApp.prototype.init = function (config) {
     const isComplete =
       progress.levelResults[progress.currentLevelId] >=
       TestResults.MINIMUM_OPTIMAL_RESULT;
-    ReactDOM.render(
+    createReactRoot(
       <ChallengeDialog
         isOpen={true}
         avatar={this.icon || this.skin.staticAvatar}
@@ -603,6 +622,8 @@ StudioApp.prototype.init = function (config) {
         primaryButtonLabel={msg.challengeLevelStart()}
         text={msg.challengeLevelIntro()}
         title={msg.challengeLevelTitle()}
+        levelId={config.serverLevelId}
+        unitId={config.serverScriptId}
       />,
       startDialogDiv
     );
@@ -726,6 +747,19 @@ StudioApp.prototype.alertIfCompletedWhilePairing = function (config) {
   }
 };
 
+StudioApp.prototype.getSettingsHandler = function () {
+  return () => {
+    const contentDiv = document.createElement('div');
+    const dialog = this.createModalDialog({
+      contentDiv: contentDiv,
+      id: 'settings-modal',
+    });
+
+    createReactRoot(React.createElement(SettingsModal), contentDiv);
+    dialog.show();
+  };
+};
+
 StudioApp.prototype.getVersionHistoryHandler = function (config) {
   return () => {
     var contentDiv = document.createElement('div');
@@ -734,7 +768,7 @@ StudioApp.prototype.getVersionHistoryHandler = function (config) {
       defaultBtnSelector: 'again-button',
       id: 'showVersionsModal',
     });
-    ReactDOM.render(
+    createReactRoot(
       React.createElement(VersionHistory, {
         handleClearPuzzle: this.handleClearPuzzle.bind(this, config),
         isProjectTemplateLevel: !!config.level.projectTemplateLevelName,
@@ -755,6 +789,13 @@ StudioApp.prototype.initTimeSpent = function () {
     this.silentlyReport.bind(this),
     1000
   );
+};
+
+StudioApp.prototype.initSettingsUI = function () {
+  const settingsButton = document.getElementById('settings-header');
+  if (settingsButton) {
+    dom.addClickTouchEvent(settingsButton, this.getSettingsHandler());
+  }
 };
 
 StudioApp.prototype.initVersionHistoryUI = function (config) {
@@ -862,7 +903,7 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
     if (Blockly.functionEditor) {
       Blockly.functionEditor.hideIfOpen();
     }
-    Blockly.clearAllStudentWorkspaces();
+    BlocklyUtils.clearAllStudentWorkspaces();
     this.setStartBlocks_(config, false);
     if (config.level.openFunctionDefinition) {
       this.openFunctionDefinition_(config);
@@ -1010,10 +1051,9 @@ StudioApp.prototype.renderShareFooter_ = function (container) {
   container.appendChild(footerDiv);
 
   var reactProps = {
-    i18nDropdown: '',
+    i18nDropdownInBase: false,
     privacyPolicyInBase: false,
     copyrightInBase: false,
-    copyrightStrings: copyrightStrings,
     baseMoreMenuString: msg.builtOnCodeStudio(),
     baseStyle: {
       paddingLeft: 0,
@@ -1025,7 +1065,7 @@ StudioApp.prototype.renderShareFooter_ = function (container) {
     channel: project.getCurrentId(),
   };
 
-  ReactDOM.render(<SmallFooter {...reactProps} />, footerDiv);
+  createReactRoot(<SmallFooter {...reactProps} />, footerDiv);
 };
 
 /**
@@ -1072,14 +1112,11 @@ StudioApp.prototype.runChangeHandlers = function (e) {
 StudioApp.prototype.setupChangeHandlers = function () {
   const runAllHandlers = this.runChangeHandlers.bind(this);
   if (this.isUsingBlockly()) {
-    Blockly.addChangeListener(Blockly.mainBlockSpace, runAllHandlers);
+    Blockly.mainBlockSpace.addChangeListener(runAllHandlers);
     if (Blockly.getHiddenDefinitionWorkspace()) {
       // If we have a hidden definition workspace, run change listeners on it too.
       // This ensures code changes in the hidden workspace trigger updates.
-      Blockly.addChangeListener(
-        Blockly.getHiddenDefinitionWorkspace(),
-        runAllHandlers
-      );
+      Blockly.getHiddenDefinitionWorkspace().addChangeListener(runAllHandlers);
     }
   } else {
     this.editor.on('change', runAllHandlers);
@@ -1243,7 +1280,7 @@ StudioApp.prototype.inject = function (div, options) {
     customSimpleDialog: this.feedback_.showSimpleDialog.bind(this.feedback_),
   };
 
-  // Allows Google Blockly labs to use the Zelos or legacy Geras renderer instead of the default Thrasos.
+  // Allows Blockly labs to use the Zelos or legacy Geras renderer instead of the default Thrasos.
   if (experiments.isEnabled('zelos')) {
     options.renderer = Renderers.ZELOS;
   } else if (experiments.isEnabled('geras')) {
@@ -1251,6 +1288,7 @@ StudioApp.prototype.inject = function (div, options) {
   }
 
   options.levelBlockIds = utils.findExplicitlySetBlockIds(window.appOptions);
+  options.showBlockHelp = experiments.isEnabled(experiments.BLOCKLY_DOCS);
   Blockly.inject(div, utils.extend(defaults, options), Sounds.getSingleton());
 };
 
@@ -1278,7 +1316,7 @@ StudioApp.prototype.initReadonly = function (options) {
  * @param {string} source Text representation of blocks (XML or JSON).
  */
 StudioApp.prototype.loadBlocks = function (source) {
-  Blockly.cdoUtils.loadBlocksToWorkspace(Blockly.mainBlockSpace, source);
+  loadBlocksToWorkspace(Blockly.mainBlockSpace, source);
 };
 
 /**
@@ -1355,18 +1393,11 @@ StudioApp.prototype.onReportComplete = function (response) {
   }
   this.lastShareUrl = response.level_source;
 
-  // Track GA events
   if (response.new_level_completed) {
-    trackEvent(
-      'Puzzle',
-      'Completed',
-      response.level_path,
-      response.level_attempts
-    );
-  }
-
-  if (response.share_failure) {
-    trackEvent('Share', 'Failure', response.share_failure.type);
+    trackEvent('puzzle', 'puzzle_completed', {
+      path: response.level_path,
+      value: response.level_attempts,
+    });
   }
 };
 
@@ -1397,6 +1428,27 @@ StudioApp.prototype.onResize = function () {
 
     // Content below visualization is a resizing scroll area in pinned mode
     onResizeSmallFooter();
+  }
+
+  if (this.isBigPlayspaceEnabled) {
+    // Let's avoid an infinite recursion by making sure this is a genuine resize.
+    if (
+      window.innerWidth !== this.lastWindowInnerWidth ||
+      window.innerHeight !== this.lastWindowInnerHeight
+    ) {
+      this.maxVisualizationWidth = getMaxResizableVisualizationWidth(
+        this.isBigPlayspaceEnabled
+      );
+
+      const visualizationColumn = document.getElementById(
+        'visualizationColumn'
+      );
+      const visualizationColumnWidth = $(visualizationColumn).width();
+      this.resizeVisualization(visualizationColumnWidth, true);
+
+      this.lastWindowInnerWidth = window.innerWidth;
+      this.lastWindowInnerHeight = window.innerHeight;
+    }
   }
 };
 
@@ -1497,7 +1549,7 @@ function applyTransformOrigin(element, origin) {
  * Resize the visualization to the given width. If no width is provided, the
  * scale of child elements is updated to the current width.
  */
-StudioApp.prototype.resizeVisualization = function (width) {
+StudioApp.prototype.resizeVisualization = function (width, skipFire = false) {
   if ($('#visualizationColumn').hasClass('wireframeShare')) {
     return;
   }
@@ -1539,8 +1591,10 @@ StudioApp.prototype.resizeVisualization = function (width) {
   visualizationColumn.style.maxWidth = newVizWidth + vizSideBorderWidth + 'px';
   visualization.style.maxWidth = newVizWidthString;
   visualization.style.maxHeight = newVizHeightString;
-  if (experiments.isEnabled(experiments.BIG_PLAYSPACE)) {
-    visualization.style.width = newVizWidthString;
+  if (this.isBigPlayspaceEnabled) {
+    // Override the max visualization column width.
+    visualizationColumn.style.width = visualizationColumn.style.maxWidth;
+    // Override the visualization height.
     visualization.style.height = newVizHeightString;
   }
 
@@ -1567,8 +1621,10 @@ StudioApp.prototype.resizeVisualization = function (width) {
     smallFooter.style.maxWidth = newVizWidthString;
   }
 
-  // Fire resize so blockly and droplet handle this type of resize properly:
-  utils.fireResizeEvent();
+  if (!skipFire) {
+    // Fire resize so blockly and droplet handle this type of resize properly:
+    utils.fireResizeEvent();
+  }
 };
 
 /**
@@ -1593,7 +1649,7 @@ StudioApp.prototype.resizeToolboxHeader = function () {
       toolboxWidth = categories.getBoundingClientRect().width;
     }
   } else if (this.isUsingBlockly()) {
-    toolboxWidth = Blockly.cdoUtils.getToolboxWidth();
+    toolboxWidth = BlocklyUtils.getToolboxWidth();
   }
   document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
 };
@@ -1610,7 +1666,7 @@ StudioApp.prototype.highlight = function (id, spotlight) {
       id = id.replace(/^block_id_/, '');
     }
 
-    Blockly.cdoUtils.highlightBlock(id, spotlight);
+    highlightBlock(id, spotlight);
   }
 };
 
@@ -1638,13 +1694,6 @@ StudioApp.prototype.displayFeedback = function (options) {
   }
 
   if (experiments.isEnabled(experiments.BUBBLE_DIALOG)) {
-    // Track whether this experiment is in use. If not, delete this and similar
-    // sections of code. If it is, create a non-experiment flag.
-    trackEvent(
-      'experiment',
-      'Feedback bubbleDialog',
-      `AppType ${this.config.app}. Level ${this.config.serverLevelId}`
-    );
     const {response, preventDialog, feedbackType, feedbackImage} = options;
 
     const newFinishDialogApps = {
@@ -1867,10 +1916,6 @@ StudioApp.prototype.resetButtonClick = function () {
   this.toggleRunReset('run');
   this.clearHighlighting();
   getStore().dispatch(setFeedback(null));
-  if (this.isUsingBlockly()) {
-    Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
-    Blockly.mainBlockSpace.traceOn(false);
-  }
   this.reset(false);
 };
 
@@ -2023,10 +2068,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.startBlocks_ =
     config.level.lastAttempt || config.level.startBlocks || '';
   this.vizAspectRatio = config.vizAspectRatio || 1.0;
-  this.nativeVizWidth = config.nativeVizWidth || this.maxVisualizationWidth;
-  if (experiments.isEnabled(experiments.BIG_PLAYSPACE)) {
-    this.nativeVizWidth = 400;
-  }
+  this.nativeVizWidth = config.nativeVizWidth || DEFAULT_VISUALIZATION_WIDTH;
 
   if (config.level.initializationBlocks) {
     var xml = parseXmlElement(config.level.initializationBlocks);
@@ -2122,9 +2164,6 @@ StudioApp.prototype.configureDom = function (config) {
   var container = document.getElementById(config.containerId);
   var codeWorkspace = container.querySelector('#codeWorkspace');
 
-  const isSignedOut = !config.isSignedIn;
-  const isStandaloneProject = config.level.isProjectLevel;
-
   var runButton = container.querySelector('#runButton');
   var resetButton = container.querySelector('#resetButton');
   var runClick = this.runButtonClick.bind(this);
@@ -2134,22 +2173,33 @@ StudioApp.prototype.configureDom = function (config) {
     trailing: false,
   });
 
-  function handleRunButtonClick() {
-    throttledRunClick.call(this);
-    // Sends a Statsig event when the Run button is pressed by a signed out user
-    // This is related to the Create Account Button A/B Test; see Jira ticket:
-    // https://codedotorg.atlassian.net/browse/ACQ-1938
-    if (isSignedOut && isStandaloneProject) {
-      analyticsReporter.sendEvent(
-        EVENTS.RUN_BUTTON_PRESSED_SIGNED_OUT,
-        {},
-        PLATFORMS.STATSIG
-      );
+  // Modify throttledRunClick to include metrics logging
+  const originalThrottledRunClick = throttledRunClick;
+  throttledRunClick = () => {
+    originalThrottledRunClick();
+    let eventName;
+    if (!!config.level.isProjectLevel) {
+      eventName = EVENTS.PROJECT_ACTIVITY;
+    } else {
+      eventName = EVENTS.LEVEL_ACTIVITY;
     }
-  }
+    if (!runButtonWasClicked) {
+      analyticsReporter.sendEvent(
+        eventName,
+        {
+          signedIn: config.isSignedIn,
+          unitName: config.scriptName,
+          levelId: config.serverLevelId,
+          levelName: config.level.name,
+        },
+        PLATFORMS.BOTH
+      );
+      runButtonWasClicked = true;
+    }
+  };
 
   if (runButton && resetButton) {
-    dom.addClickTouchEvent(runButton, _.bind(handleRunButtonClick, this));
+    dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
     dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
     this.keyHandler.registerEvent(['Control', 'Enter'], () => {
       if (this.isRunning()) {
@@ -2159,6 +2209,7 @@ StudioApp.prototype.configureDom = function (config) {
       }
     });
   }
+
   var skipButton = container.querySelector('#skipButton');
   if (skipButton) {
     dom.addClickTouchEvent(skipButton, this.skipLevel.bind(this));
@@ -2276,7 +2327,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
         div.className = 'WireframeButtons_containerRight';
         document.body.appendChild(div);
         if (!options.level.iframeEmbed) {
-          ReactDOM.render(
+          createReactRoot(
             React.createElement(WireframeButtons, {
               channelId: project.getCurrentId(),
               appType: project.getStandaloneApp(),
@@ -2474,7 +2525,7 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     var filtered =
       editor.completer.completions && editor.completer.completions.filtered;
     for (var i = 0; i < (filtered && filtered.length); i++) {
-      // If we have any exact maches in our filtered completions that include
+      // If we have any exact matches in our filtered completions that include
       // this period, allow the completer to stay active:
       if (filtered[i].exactMatch) {
         return;
@@ -2731,31 +2782,6 @@ StudioApp.prototype.enableBreakpoints = function () {
       } else {
         this.editor.setBreakpoint(e.line);
       }
-
-      // Log breakpoints usage to firehose. This is part of the work to add
-      // inline teacher comments; we want to get a sense of how much
-      // breakpoints are used and in what scenarios, so we can reason about the
-      // feasibility of repurposing line number clicks for this feature.
-      const currentUser = getStore().getState().currentUser;
-      const userType = currentUser && currentUser.userType;
-      firehoseClient.putRecord(
-        {
-          study: 'droplet-breakpoints',
-          study_group: userType,
-          event: 'guttermousedown',
-          data_json: JSON.stringify({
-            levelId: this.config.serverLevelId,
-            lineNumber: e.line,
-            activeBreakpoint,
-            projectLevelId: this.config.serverProjectLevelId,
-            scriptId: this.config.scriptId,
-            scriptName: this.config.scriptName,
-            studentUserId: queryParams('user_id'),
-            url: window.location.toString(),
-          }),
-        },
-        {includeUserId: true}
-      );
     }.bind(this)
   );
 };
@@ -2772,6 +2798,13 @@ StudioApp.prototype.validateCodeChanged = function () {
   }
 
   return project.isCurrentCodeDifferent(level.startBlocks);
+};
+
+StudioApp.prototype.analyticsData = function () {
+  return {
+    levelId: this.config.serverLevelId,
+    scriptId: this.config.scriptId,
+  };
 };
 
 /**
@@ -2806,7 +2839,7 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
 
   // Only used in Sprite Lab.
   if (config.level.sharedFunctions) {
-    startBlocks = Blockly.cdoUtils.appendSharedFunctions(
+    startBlocks = appendSharedFunctions(
       startBlocks,
       config.level.sharedFunctions
     );
@@ -2833,7 +2866,7 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
   } catch (e) {
     if (loadLastAttempt) {
       try {
-        Blockly.clearAllStudentWorkspaces();
+        BlocklyUtils.clearAllStudentWorkspaces();
         // Try loading the default start blocks instead.
         this.setStartBlocks_(config, false);
       } catch (otherException) {
@@ -2851,21 +2884,7 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
  * @param {AppOptionsConfig}
  */
 StudioApp.prototype.openFunctionDefinition_ = function (config) {
-  if (Blockly.contractEditor) {
-    Blockly.contractEditor.autoOpenWithLevelConfiguration({
-      autoOpenFunction: config.level.openFunctionDefinition,
-      contractCollapse: config.level.contractCollapse,
-      contractHighlight: config.level.contractHighlight,
-      examplesCollapse: config.level.examplesCollapse,
-      examplesHighlight: config.level.examplesHighlight,
-      definitionCollapse: config.level.definitionCollapse,
-      definitionHighlight: config.level.definitionHighlight,
-    });
-  } else {
-    Blockly.functionEditor.autoOpenFunction(
-      config.level.openFunctionDefinition
-    );
-  }
+  Blockly.functionEditor.autoOpenFunction(config.level.openFunctionDefinition);
 };
 
 /**
@@ -2888,13 +2907,11 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   // If levelbuilder provides an empty toolbox, some apps (like artist)
   // replace it with a full toolbox. I think some levels may depend on this
   // behavior. We want a way to specify no toolbox, which is <xml></xml>.
-  // Google Blockly may also add a xmlns attribute to this xml.
+  // Blockly may also add a xmlns attribute to this xml.
   if (config.level.toolbox) {
-    // Update CDO Blockly XML so it is compatible with mainline Google Blockly
+    // Update legacy Blockly XML so it is compatible with mainline Blockly
     // (Nothing is changed if we are using CDO Blockly.)
-    config.level.toolbox = Blockly.cdoUtils.processToolboxXml(
-      config.level.toolbox
-    );
+    config.level.toolbox = processToolboxXml(config.level.toolbox);
 
     const toolboxWithoutWhitespace = config.level.toolbox.replace(/\s/g, '');
     const emptyToolboxOptionsWithoutWhitespace = [
@@ -2911,6 +2928,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   }
 
   var div = document.getElementById('codeWorkspace');
+  var isJigsaw = config.levelGameName === 'Jigsaw';
   // TODO: How many of these options apply to modal function editor?
   var options = {
     toolbox: config.level.toolbox,
@@ -2951,8 +2969,14 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     showExampleTestButtons: utils.valueOr(config.showExampleTestButtons, false),
     valueTypeTabShapeMap: utils.valueOr(config.valueTypeTabShapeMap, {}),
     typeHints: utils.valueOr(config.level.showTypeHints, false),
-    isBlocklyRtl:
-      getStore().getState().isRtl && config.levelGameName !== 'Jigsaw', // disable RTL for blockly on jigsaw
+    isBlocklyRtl: getStore().getState().isRtl && !isJigsaw, // disable RTL for blockly on jigsaw
+    isJigsaw,
+    analyticsData: {
+      appType: config.app,
+      scriptName: config.scriptName,
+      scriptId: config.scriptId,
+      levelId: config.serverLevelId,
+    },
   };
 
   // Never show unused blocks in edit mode. Procedure autopopulate should always
@@ -2988,7 +3012,12 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   // https://openradar.appspot.com/31725316
   // Resize the Blockly workspace after 500ms when clientWidth/Height
   // should be correct.
-  window.setTimeout(() => Blockly.fireUiEvent(window, 'resize'), 500);
+  window.setTimeout(() => {
+    const workspace = BlocklyCore.getMainWorkspace();
+    if (workspace) {
+      BlocklyCore.svgResize(workspace);
+    }
+  }, 500);
 };
 
 /**
@@ -3024,173 +3053,6 @@ StudioApp.prototype.hasUnwantedExtraTopBlocks = function () {
  */
 StudioApp.prototype.hasQuestionMarksInNumberField = function () {
   return this.feedback_.hasQuestionMarksInNumberField();
-};
-
-/**
- * @returns true if any non-example block in the workspace has an unfilled input
- */
-StudioApp.prototype.hasUnfilledFunctionalBlock = function () {
-  return !!this.getUnfilledFunctionalBlock();
-};
-
-/**
- * @returns {Block} The first block that has an unfilled input, or undefined
- *   if there isn't one.
- */
-StudioApp.prototype.getUnfilledFunctionalBlock = function () {
-  return this.getFilteredUnfilledFunctionalBlock_(function (rootBlock) {
-    return rootBlock.type !== 'functional_example';
-  });
-};
-
-/**
- * @returns {Block} The first example block that has an unfilled input, or
- *   undefined if there isn't one. Ignores example blocks that don't have a
- *   call portion, as these are considered invalid.
- */
-StudioApp.prototype.getUnfilledFunctionalExample = function () {
-  return this.getFilteredUnfilledFunctionalBlock_(function (rootBlock) {
-    if (rootBlock.type !== 'functional_example') {
-      return false;
-    }
-    var actual = rootBlock.getInputTargetBlock('ACTUAL');
-    return actual && actual.getFieldValue('NAME');
-  });
-};
-
-/**
- * @param {function} filter Run against root block in chain. Returns true if
- *   this is a block we care about
- */
-StudioApp.prototype.getFilteredUnfilledFunctionalBlock_ = function (filter) {
-  var unfilledBlock;
-  Blockly.mainBlockSpace.getAllUsedBlocks().some(function (block) {
-    // Get the root block in the chain
-    var rootBlock = block.getRootBlock();
-    if (!filter(rootBlock)) {
-      return false;
-    }
-  });
-
-  return unfilledBlock;
-};
-
-/**
- * @returns {string} The name of a function that doesn't have any examples, or
- *   undefined if all have at least one.
- */
-StudioApp.prototype.getFunctionWithoutTwoExamples = function () {
-  var definitionNames = Blockly.mainBlockSpace
-    .getTopBlocks()
-    .filter(function (block) {
-      return block.type === 'functional_definition' && !block.isVariable();
-    })
-    .map(function (definitionBlock) {
-      return definitionBlock.getProcedureInfo().name;
-    });
-
-  var exampleNames = Blockly.mainBlockSpace
-    .getTopBlocks()
-    .filter(function (block) {
-      if (block.type !== 'functional_example') {
-        return false;
-      }
-
-      // Only care about functional_examples that have an ACTUAL input (i.e. it's
-      // clear which function they're for
-      var actual = block.getInputTargetBlock('ACTUAL');
-      return actual && actual.getFieldValue('NAME');
-    })
-    .map(function (exampleBlock) {
-      return exampleBlock.getInputTargetBlock('ACTUAL').getFieldValue('NAME');
-    });
-
-  var definitionWithLessThanTwoExamples;
-  definitionNames.forEach(function (def) {
-    var definitionExamples = exampleNames.filter(function (example) {
-      return def === example;
-    });
-
-    if (definitionExamples.length < 2) {
-      definitionWithLessThanTwoExamples = def;
-    }
-  });
-  return definitionWithLessThanTwoExamples;
-};
-
-/**
- * Get the error message when we have an unfilled block
- * @param {string} topLevelType The block.type For our expected top level block
- */
-StudioApp.prototype.getUnfilledFunctionalBlockError = function (topLevelType) {
-  var unfilled = this.getUnfilledFunctionalBlock();
-
-  if (!unfilled) {
-    return null;
-  }
-
-  var topParent = unfilled;
-  while (topParent.getParent()) {
-    topParent = topParent.getParent();
-  }
-
-  if (unfilled.type === topLevelType) {
-    return msg.emptyTopLevelBlock({
-      topLevelBlockName: unfilled.getFieldValue(),
-    });
-  }
-
-  if (topParent.type !== 'functional_definition') {
-    return msg.emptyFunctionalBlock();
-  }
-
-  var procedureInfo = topParent.getProcedureInfo();
-  if (topParent.isVariable()) {
-    return msg.emptyBlockInVariable({name: procedureInfo.name});
-  } else {
-    return msg.emptyBlockInFunction({name: procedureInfo.name});
-  }
-};
-
-/**
- * Looks for failing examples, and updates the result text for them if they're
- * open in the contract editor
- * @param {function} failureChecker Apps example tester that takes in an example
- *   block, and outputs a failure string (or null if success)
- * @returns {string} Name of block containing first failing example we found, or
- *   empty string if no failures.
- */
-StudioApp.prototype.checkForFailingExamples = function (failureChecker) {
-  var failingBlockName = '';
-  Blockly.mainBlockSpace
-    .findFunctionExamples()
-    .forEach(function (exampleBlock) {
-      var failure = failureChecker(exampleBlock, false);
-
-      // Update the example result. No-op if we're not currently editing this
-      // function.
-      Blockly.contractEditor.updateExampleResult(exampleBlock, failure);
-
-      if (failure) {
-        failingBlockName = exampleBlock
-          .getInputTargetBlock('ACTUAL')
-          .getFieldValue('NAME');
-      }
-    });
-  return failingBlockName;
-};
-
-/**
- * @returns {boolean} True if we have a function or variable named "" (empty string)
- */
-StudioApp.prototype.hasEmptyFunctionOrVariableName = function () {
-  return Blockly.mainBlockSpace.getTopBlocks().some(function (block) {
-    if (block.type !== 'functional_definition') {
-      return false;
-    }
-
-    return !block.getProcedureInfo().name;
-  });
 };
 
 StudioApp.prototype.createCoordinateGridBackground = function (options) {
@@ -3272,7 +3134,7 @@ StudioApp.prototype.displayWorkspaceAlert = function (
     },
     alertContents
   );
-  ReactDOM.render(workspaceAlert, container[0]);
+  createReactRoot(workspaceAlert, container[0]);
 
   return container[0];
 };
@@ -3311,7 +3173,7 @@ StudioApp.prototype.displayPlayspaceAlert = function (type, alertContents) {
   }
 
   const playspaceAlert = React.createElement(Alert, alertProps, alertContents);
-  ReactDOM.render(playspaceAlert, renderElement);
+  createReactRoot(playspaceAlert, renderElement);
 
   return renderElement;
 };
@@ -3376,9 +3238,9 @@ StudioApp.prototype.hasDuplicateVariablesInForLoops = function () {
   if (this.editCode) {
     return false;
   }
-  return Blockly.mainBlockSpace
-    .getAllUsedBlocks()
-    .some(this.forLoopHasDuplicatedNestedVariables_);
+  return BlocklyUtils.getAllUsedBlocks(Blockly.getMainWorkspace()).some(
+    this.forLoopHasDuplicatedNestedVariables_
+  );
 };
 
 /**
@@ -3582,10 +3444,17 @@ if (IN_UNIT_TEST) {
     instance.removeAllListeners();
     instance.libraries = {};
     if (instance.changeListener) {
-      Blockly.removeChangeListener(instance.changeListener);
+      Blockly.getMainWorkspace().removeChangeListener(instance.changeListener);
     }
     if (instance.hiddenWorkspaceChangeListener) {
-      Blockly.removeChangeListener(instance.hiddenWorkspaceChangeListener);
+      Blockly.getHiddenDefinitionWorkspace().removeChangeListener(
+        instance.hiddenWorkspaceChangeListener
+      );
+    }
+    if (instance.mainWorkspaceChangeListener) {
+      Blockly.getMainWorkspace().removeChangeListener(
+        instance.mainWorkspaceChangeListener
+      );
     }
     instance = __oldInstance;
     __oldInstance = null;

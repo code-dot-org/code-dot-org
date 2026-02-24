@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-08-01T15:19:14.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### Crypto Code Review Checklist\r\n\r\nUse this list to spot common mistakes in code that handles secrets or encrypted data:\r\n\r\n---\r\n\r\n**1. Hardcoded Secret Keys**: *Storing a password or encryption key directly in the code makes it easy for attackers to find.*\r\n\r\n**Example:**  `var secret = \"password123!\";`\r\n\r\n\r\n**2. Weak or No Encryption**: *Sensitive data should be encrypted before it’s stored or sent — not left in plain text.*\r\n\r\n**Example:**  `save(\"user_password\", userInput); // no encryption applied`\r\n\r\n**3. Secrets Printed in Output**: *SIf a secret (like a key or token) is shown in the console or logs, anyone watching can steal it.*\r\n\r\n**Example:**  `console.log(\"Token: \" + accessToken);`\r\n\r\n**4. Confusing or Vague Variable Names**: *If a variable stores something sensitive, it should have a clear name so developers understand its purpose.*\r\n\r\n**Example:**  `var x = \"abc123\"; // What is x? A password? A note?`\r\n\r\n---\r\n\r\nLook at the [sample code snippet \"Save My Notes\"](https://docs.google.com/document/d/1W2NfrJdXMhX-v71OJQiVDxiNGT9QoR2CdQEMm55WC5k/edit?usp=sharing) and check for security issues.\r\n\r\n::: details [**Sample Code Snippet: “Save My Notes” App**]\r\n```javascript\r\nfunction saveNote(title, content) {\r\n  var t = title;\r\n  var c = content;\r\n\r\n  var z = \"MySuperSecretKey123\";\r\n\r\n  console.log(\"Saving note with key: \" + z);\r\n\r\n  //  Note formatting\r\n  var noteObject = {\r\n    heading: t,\r\n    body: c,\r\n    timestamp: new Date().toISOString()\r\n  };\r\n\r\n  var toStore = JSON.stringify(noteObject);\r\n\r\n  saveToDatabase(\"user_note\", toStore);\r\n}\r\n\r\nfunction saveToDatabase(key, data) {\r\n  // Pretend this saves to cloud\r\n  console.log(\"Database updated at \" + new Date());\r\n  console.log(\"Data Key: \" + key);\r\n  console.log(\"Data: \" + data);\r\n}\r\n\r\n// User action\r\nvar userTitle = \"Shopping List\";\r\nvar userContent = \"Eggs, milk, bread\";\r\n\r\nsaveNote(userTitle, userContent);\r\n```\r\n:::\r\n\r\n\r\nList as many security issues as you can find. Use your checklist and annotate the code with what you find.",
+    "stay_on_level_after_submit": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2025-08-01 15:23:48 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-08-01 15:28:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-08-01 15:34:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-08-01 15:34:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

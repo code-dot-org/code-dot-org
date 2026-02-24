@@ -1,5 +1,7 @@
 import React from 'react';
 
+import dancePartyActivityAiEditionImg from '@cdo/static/dance/hoc/dance-party-activity-ai-edition.png';
+
 import ActionBlocksWrapper from './ActionBlocksWrapper';
 
 export default {
@@ -11,8 +13,7 @@ const generateActionBlocks = tileCount => {
   for (let i = 0; i < tileCount; i++) {
     actionBlocks.push({
       overline: `Overline ${i + 1}`,
-      imageUrl:
-        'https://code.org/images/dance-hoc/dance-party-activity-ai-edition.png',
+      imageUrl: dancePartyActivityAiEditionImg,
       heading: `Heading ${i + 1}`,
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam. Morbi vitae tortor tempus, placerat leo et, suscipit.',

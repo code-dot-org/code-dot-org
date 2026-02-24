@@ -210,6 +210,16 @@ describe('EditorAnnotator', () => {
       dropletStub.getValue = sinon.stub().returns(code);
     });
 
+    it('returns undefined if the annotator is not yet available', () => {
+      EditorAnnotator.reset();
+      restoreDroplet();
+
+      let snippet = 'var y = 6;';
+      const result = EditorAnnotator.findCodeRegion(snippet);
+      expect(result.firstLine).to.be.undefined;
+      expect(result.lastLine).to.be.undefined;
+    });
+
     it('returns undefined for both lines when the snippet is not found', () => {
       let snippet = 'var a = 0;';
       const result = EditorAnnotator.findCodeRegion(snippet);

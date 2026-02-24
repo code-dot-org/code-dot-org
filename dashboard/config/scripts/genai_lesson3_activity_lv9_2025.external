@@ -1,0 +1,21 @@
+name 'genai-lesson3-activity-lv9_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Identifying Bias
+
+## Overview
+
+#### Our new job is to identify potential sources of bias in these resources.
+
+<!-- Quote 1 (image left, bubble right) -->
+<div style="margin-top: 20px; display: flex; align-items: center; gap: 15px; margin-bottom: 30px;">
+  <img src="https://images.code.org/a942243d06b9f31b8f02c90417206fc5-image-1746467688812.png" alt="Teacher avatar" style="width: 70px; border-radius: 20%;">
+  <div style="background-color: #B7E0E5; padding: 15px; font-size: 17px; max-width: 600px; border-radius: 20px 20px 20px 0;">
+  What's the big deal? Let's just include everything we can find on the internet and not leave anything out. That won't be biased then, right?
+  </div>
+</div>
+
+## Discuss
+MARKDOWN

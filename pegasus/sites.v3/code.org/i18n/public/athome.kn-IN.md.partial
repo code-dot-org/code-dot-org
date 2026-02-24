@@ -20,7 +20,6 @@ theme: responsive
     <li><a class="linktag" id="self-paced-nav" href="#express">ಪರಿಚಯಾತ್ಮಕ, ಸ್ವಯಂ ವೇಗದ ಕೋರ್ಸ್‌ ತೆಗೆದುಕೊಳ್ಳಿ</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">ಒಂದು ಗೇಮ್ ಅಥವಾ ಒಂದು ಆಪ್‌ ರಚಿಸಿ</a></li>
     <li><a class="linktag" id="unplugged-nav" href="#unplugged">ಕಂಪ್ಯೂಟರ್ ಇಲ್ಲದೇ ಸಿಎಸ್‌ ಪ್ರಯತ್ನಿಸಿ ('ಅನ್‌ಪ್ಲಗ್ಡ್‌' ಮತ್ತು ಮೊಬೈಲ್ ಆಯ್ಕೆಗಳು)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Code.org ತಂಡ ಮತ್ತು ವಿಶೇಷ ಅತಿಥಿಗಳಿಂದ ಸಿಎಸ್ ಕಲಿಯಿರಿ</a></li>
 </ul>
 
 <br>
@@ -283,56 +282,6 @@ theme: responsive
   <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">ಹಲೋ ರೂಬಿ</a> - ಕಂಪ್ಯೂಟರ್‌ಗಳು, ತಂತ್ರಜ್ಞಾನ ಮತ್ತು ಪ್ರೋಗ್ರಾಮಿಂಗ್‌ ಬಗ್ಗೆ ಕಲಿಯುವ ಅತ್ಯಂತ ವಿಶಿಷ್ಟ ವಿಧಾನ ಇದಾಗಿದೆ. ಸಮಸ್ಯೆಯನ್ನು ಡಿಕಂಪೋಸ್ ಮಾಡುವುದು, ಪ್ಯಾಟರ್ನ್‌ಗಳನ್ನು ಗುರುತು ಮಾಡುವುದು, ಅಲ್ಗೊರಿಥಂ ರೂಪದಲ್ಲಿ ಯೋಚಿಸುವುದು, ಸಮಸ್ಯೆಗಳನ್ನು ಡಿಬಗ್ ಮಾಡುವುದು ಮತ್ತು ಒಟ್ಟಾಗಿ ಕೆಲಸ ಮಾಡುವಂತಹ ವಿವಿಧ ಸಿಎಸ್ ವಿಷಯಗಳ ಮೇಲೆ ಚಟುವಟಿಕೆಗಳು. (4-10 ವಯಸ್ಸಿಗೆ)</li>
   <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">ಸಿಎಸ್ ಅನ್‌ಪ್ಲಗ್ಡ್</a> - ಕಾರ್ಡ್‌ಗಳು, ಸ್ಟ್ರಿಂಗ್‌, ಕ್ರೇಯಾನ್‌ಗಳು ಮತ್ತು ಹಲವು ಇತರೆ ಸುತ್ತಲಿನ ಅಂಶಗಳನ್ನು ಬಳಸಿ ತೊಡಗಿಸಿಕೊಳ್ಳುವ ಗೇಮ್ಸ್ ಮತ್ತು ಪಝಲ್‌ಗಳ ಮೂಲಕ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ ಬೋಧಿಸುವ ಉಚಿತ ಬೋಧನೆ ಸಾಮಗ್ರಿಯ ಸಂಗ್ರಹ. (5-14 ವಯಸ್ಸಿಗೆ)</li>
 </ul>
-
-<h2>ಮನೆಯಲ್ಲಿ ಕಂಪ್ಯೂಟರ್ ಇಲ್ಲವೇ? ನಮ್ಮ ಪಾಲುದಾರರುಗಳಿಂದ ಈ ಆಪ್‌ಗಳೊಂದಿಗೆ ನಿಮ್ಮ ಫೋನ್‌ನಲ್ಲಿ ಸಿಎಸ್‌ ಟ್ರೈ ಮಾಡಿ</h2>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="ಬಾಕ್ಸ್ ಐಸ್‌ಲ್ಯಾಂಡ್"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">ಬಾಕ್ಸ್ ಐಲ್ಯಾಂಡ್</h3></a>ಆಕರ್ಷಕ ಮೊಬೈಲ್ ಕೋಡಿಂಗ್ ಆಟವು ಕಲಿಯುವವರನ್ನು ಅತ್ಯಾಕರ್ಷಕ ಸಾಹಸಕ್ಕೆ ಕರೆದೊಯ್ಯುತ್ತದೆ, ಆದರೆ ಕ್ರಮಾವಳಿಗಳು, ಮಾದರಿ ಗುರುತಿಸುವಿಕೆ, ಅನುಕ್ರಮಗಳು, ಕುಣಿಕೆಗಳು ಮತ್ತು ಷರತ್ತುಗಳಂತಹ ಕೋಡಿಂಗ್ನ ಮೂಲಭೂತ ಅಂಶಗಳನ್ನು ಕಲಿಸುತ್ತದೆ. <i>(ಎಲ್ಲ ವಯಸ್ಸುಗಳಿಗೆ)</i>
-</div>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="ಕೋಡ್‌ಸ್ಪಾರ್ಕ್‌"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">ಕೋಡ್ಸ್ಪಾರ್ಕ್</h3></a>ಪ್ರಶಸ್ತಿ ವಿಜೇತ 5-9 ವಯಸ್ಸಿನ ಮಕ್ಕಳಿಗಾಗಿ ಕಲಿಕೆ-ಟು-ಕೋಡ್ ಪ್ಲಾಟ್ಫಾರ್ಮ್. ಕೋಡ್‌ ಮಾಡಲು ಕಲಿಯುತ್ತಲೇ ದಿ ಫೂಸ್‌ ಜೊತೆಗೆ ಪಝಲ್‌ಗಳನ್ನು ಪರಿಹರಿಸಿ ಮತ್ತು ಗೇಮ್‌ಗಳನ್ನು ರಚಿಸಿ. <strong>ಟಿಪ್ಪಣಿ: ಕೋಡ್‌ಸ್ಪಾರ್ಕ್‌ ಉಚಿತ 3 ತಿಂಗಳ ಟ್ರಯಲ್ ಅನ್ನು ಒದಗಿಸುತ್ತಿದೆ. ಸೈನಪ್ ಮಾಡುವಾಗ ಪಾಲಕರ ಇಮೇಲ್ ವಿಳಾಸ ಮತ್ತು ಕ್ರೆಡಿಟ್ ಕಾರ್ಡ್‌ ಮಾಹಿತಿ ಅಗತ್ಯವಿದೆ.</strong> <i>(ಗ್ರೇಡ್‌ 5 ಮೂಲಕ ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗೆ)</i>
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[ಪುನಃ ಮೇಲಕ್ಕೆ]</a></p>
-
-<a id="livecoding"></a>
-<h2>Code.org ತಂಡ ಮತ್ತು ವಿಶೇಷ ಅತಿಥಿಗಳಿಂದ ಕಲಿಯಿರಿ!</h2>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="ಕೋಡ್‌ಬೈಟ್ಸ್ ಲೋಗೋ">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">CodebBytes</h3>
-        <div class="smalltext" style="color: dimgray;">CodebBytes ಜೀರ್ಣಿಸಿಕೊಳ್ಳಲು ಸುಲಭವಾದ, 20 ನಿಮಿಷಗಳ ಸಂವಾದಾತ್ಮಕ ಪಾಠಗಳು ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನವನ್ನು ನೈಜ-ಪ್ರಪಂಚದ ವಿಷಯಗಳೊಂದಿಗೆ ಸಂಯೋಜಿಸುತ್ತವೆ. ಆಂಗಿಕ ಭಾಷೆಯನ್ನು ಓದಲು ಎಐ ಗೆ ತರಬೇತಿ ನೀಡಿ, ಒಳ್ಳೆಯದಕ್ಕಾಗಿ ಒಂದು ಆಪ್‌ ವಿನ್ಯಾಸ ಮಾಡಿ, ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ವಿಶ್ವವನ್ನು ಎಕ್ಸ್‌ಪ್ಲೋರ್ ಮಾಡಿ ಮತ್ತು ಇನ್ನಷ್ಟನ್ನು ಮಾಡಿ!</div>
-        <br>
-        <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>ಎಪಿಸೋಡ್‌ಗಳನ್ನು ವೀಕ್ಷಿಸಿ</button></a>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="ಕೋಡ್‌ ಬ್ರೇಕ್">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">ಕೋಡ್ ಬ್ರೇಕ್ ಕೋಡ್ ಬ್ರೇಕ್</h3>
-        <div class="smalltext" style="">ತೆಗೆದುಕೊಳ್ಳುವ ಮೂಲಕ ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನವನ್ನು ಮೋಜು ಮಾಡಿ! ಆಶ್ಟನ್ ಕಚರ್ ಜೊತೆಗೆ ನೀವು ಸೈಫರ್ ರಚನೆ ಮಾಡಬಹುದು, ಯಾರಾ ಶಹೀದಿ ಜೊತೆಗೆ ವೇರಿಯಬಲ್‌ಗಳ ಬಗ್ಗೆ ಕಲಯಬಹುದು ಮತ್ತು ಇಂಟರ್ನೆಟ್‌ನ ನಿಜವಾದ ಶೋಧಕ ವಿಂಟ್‌ ಸೆರ್ಫ್‌ ಮೂಲಕ ಇಂಟರ್ನೆಟ್‌ ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ ಎಂದು ಕೂಡಾ ತಿಳಿದುಕೊಳ್ಳಿ!</div>
-        <br>
-        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>ಸಂಪರ್ಕ ಹೊಂದಿರಿ</button></a>
-    </span>
-  </div>
-</div>
-</div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 

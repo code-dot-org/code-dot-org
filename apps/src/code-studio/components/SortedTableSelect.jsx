@@ -1,10 +1,10 @@
+import {Typography} from '@mui/material';
 import {orderBy} from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
-import {Heading1} from '@cdo/apps/lib/ui/Headings';
 import {
   tableLayoutStyles,
   sortableOptions,
@@ -184,7 +184,11 @@ export default class SortedTableSelect extends React.Component {
     })(rowData);
     return (
       <div className="ui-test-sortable-table-select">
-        {titleText && <Heading1>{titleText}</Heading1>}
+        {titleText && (
+          <Typography variant="h1" gutterBottom>
+            {titleText}
+          </Typography>
+        )}
         <div style={styles.container}>
           <div style={styles.leftColumn}>
             <Table.Provider columns={columns} style={styles.table}>

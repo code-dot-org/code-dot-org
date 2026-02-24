@@ -5,11 +5,11 @@ module I18n
   module Resources
     module Pegasus
       module Mobile
-        FILE_NAME = 'mobile.yml'
+        FILE_NAME = 'mobile.json'
         FILE_PATH = File.join(DIR_NAME, FILE_NAME).freeze
         ORIGIN_I18N_DIR_PATH = CDO.dir('pegasus/cache/i18n').freeze
 
-        ORIGINAL_I18N_FILE_PATH = File.join(ORIGIN_I18N_DIR_PATH, 'en-US.yml').freeze
+        ORIGINAL_I18N_FILE_PATH = File.join(ORIGIN_I18N_DIR_PATH, 'en-US.json').freeze
         I18N_SOURCE_FILE_PATH = CDO.dir(I18N_SOURCE_DIR, FILE_PATH).freeze
 
         def self.sync_in

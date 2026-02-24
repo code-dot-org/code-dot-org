@@ -25,6 +25,7 @@ const createRubricContainerStore = () => {
 const rubricLevelName = 'free_play_level';
 
 const defaultRubric = {
+  id: 1,
   lesson: {
     position: 3,
     name: 'Testing',
@@ -111,7 +112,7 @@ const Template = args => (
       rubric={defaultRubric}
       teacherHasEnabledAi={false}
       studentLevelInfo={defaultStudentLevelInfo}
-      currentLevelName={rubricLevelName}
+      onLevelForEvaluation={true}
       open
       {...args}
     />
@@ -136,7 +137,7 @@ export const ViewingStudentWorkOnNonAssessmentLevelAiEnabled = Template.bind(
 ViewingStudentWorkOnNonAssessmentLevelAiEnabled.args = {
   studentLevelInfo: {...defaultStudentLevelInfo, submitted: true},
   teacherHasEnabledAi: true,
-  currentLevelName: 'not_free_play_level',
+  onLevelForEvaluation: false,
 };
 
 export const ViewingStudentWorkOnNonAssessmentLevelAiDisabled = Template.bind(
@@ -145,7 +146,7 @@ export const ViewingStudentWorkOnNonAssessmentLevelAiDisabled = Template.bind(
 ViewingStudentWorkOnNonAssessmentLevelAiDisabled.args = {
   studentLevelInfo: {...defaultStudentLevelInfo, submitted: true},
   teacherHasEnabledAi: false,
-  currentLevelName: 'not_free_play_level',
+  onLevelForEvaluation: false,
 };
 
 export const ViewingStudentWorkOnAssessmentLevelAiEnabled = Template.bind({});

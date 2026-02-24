@@ -1,18 +1,153 @@
-@import 'color';
-@import 'font';
-@import '@cdo/apps/componentLibrary/common/styles/mixins';
+@import 'color', 'font';
+@import '@code-dot-org/component-library-styles/font';
+@import '@code-dot-org/component-library-styles/typography.module';
+@import '@code-dot-org/component-library-styles/mixins';
 
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 50px rgba(90 153 212 / 0);
+  }
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(90 153 212 / 0);
+  }
+}
+
+$container-width: 512;
+$header-height: 40;
+$body-height: 612;
+$fab-left: 11;
+$fab-bottom: 35;
+$fab-height: 48;
+$sidebar-tooltip-z-index: 2010;
+
+:export {
+  containerHeight: $header-height + $body-height;
+  containerWidth: $container-width;
+  fabOriginX: $fab-left;
+  // magic number 16 seems to correct for borders/margins/etc.
+  fabOriginY: $fab-bottom + $fab-height + 16;
+}
 
 .aiDiffContainer {
   position: fixed;
   left: 10px;
-  bottom: 120px;
+  bottom: 106px;
   z-index: 2000;
-  width: 760px;
+  width: $container-width * 1px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+// Used to accomodate the sidebar in the AI Differentiation workspace.
+.aiDiffContainerWide {
+  position: fixed;
+  left: 10px;
+  bottom: 106px;
+  z-index: 2000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 712px;
+}
+
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1 1 0;
+
+  .chatHeader {
+    display: flex;
+    padding: 0.5rem 1rem;
+    align-items: center;
+    gap: 0.75rem;
+    align-self: stretch;
+    border-bottom: 1px solid var(--borders-neutral-primary, #d4dae1);
+    background: var(--background-neutral-primary, #fff);
+
+    .chatHeaderTitle {
+      flex: 1 0 0;
+      max-width: 180px;
+
+      p {
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .chatHeaderButtons {
+      display: flex;
+      width: 15.2188rem;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
 }
 
 .hiddenAiDiffPanel {
   display: none;
+}
+
+.pulse {
+  animation: pulse 1.5s 1.7;
+  box-shadow: 0 0 0 0 rgba(90 153 212 / 0.5);
+}
+
+.taOverlay {
+  position: fixed;
+  left: 51px;
+  bottom: 97px;
+
+  height: 18px;
+  width: 28px;
+  background-size: 28px;
+  padding: 0;
+
+  border-width: 2px;
+  border-color: $background_gray;
+  border-radius: 15px;
+  border-style: solid;
+}
+
+.aiBotHeader {
+  position: relative;
+  padding-right: 12px;
+  padding-top: 3px;
+}
+
+.taOverlayHeader {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  padding: 2px 3px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 58px;
+  background: $ai_rubric_cyan;
+
+  span {
+    @include main-font-medium;
+    color: $light-black;
+    font-size: 8px;
+    font-style: normal;
+    line-height: 100%;
+    text-transform: uppercase;
+    p {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .aiDiffHeader {
@@ -27,7 +162,7 @@
   padding-inline-start: 0.75rem;
 
   display: flex;
-  height: 40px;
+  height: $header-height * 1px;
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
@@ -43,10 +178,22 @@
     height: 1.5rem;
   }
 
-  span {
-    @include label-two;
-    margin: 0;
+  .headerTag {
+    margin-left: 4px;
+
+    div {
+      background-color: $neutral_dark80;
+
+      span {
+        color: $neutral_white;
+      }
+    }
   }
+}
+
+.aiDiffHeaderText {
+  @include label-two;
+  margin: 0;
 }
 
 .aiDiffHeaderRightSide {
@@ -58,13 +205,11 @@
 .fabBackground {
   display: flex;
   flex-direction: column;
-  gap: 28px;
-  padding: 1rem;
   border-right: 0.125rem solid $neutral_dark;
   border-left: 0.125rem solid $neutral_dark;
   background: $neutral_white;
   box-shadow: 0.25rem 0.25rem 0.375rem 0 rgba(0 0 0 / 0.25);
-  height: 408px;
+  height: $body-height * 1px;
   overflow-x: hidden;
   overflow-y: auto;
 
@@ -78,22 +223,93 @@
   }
 }
 
+.chat {
+  &Content {
+    padding: 20px 16px;
+    overflow-y: scroll;
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 1rem;
+  }
+
+  &Footer {
+    display: flex;
+    padding: 1rem 1.25rem 0.875rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    border-top: 2px solid $neutral_gray10;
+  }
+}
+
+// Necessary to prevent "Was this helpful?..." message footer from being wider
+// than the message box for short messages.
+.message-assistant {
+  min-width: 270px;
+}
+
+.message-user {
+  margin-inline-start: 48px;
+}
+
+.messageFeedback {
+  &Container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    color: var(--text-neutral-quaternary);
+  }
+  &Left {
+    display: flex;
+    align-items: center;
+  }
+  &Right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+  }
+  &Button i {
+    color: var(--text-neutral-quaternary);
+  }
+  &Confirm i {
+    color: var(--text-success-primary);
+  }
+  &Negative i {
+    color: var(--text-error-primary);
+  }
+}
+
+.chips fieldset div {
+  justify-content: flex-end;
+}
+
 .floatingActionButton {
   position: fixed;
-  left: 10px;
-  bottom: 48px;
-
-  height: 55px;
-  width: 55px;
-  background-size: 55px;
+  left: $fab-left * 1px;
+  bottom: $fab-bottom * 1px;
+  height: $fab-height * 1px;
+  width: 48px;
+  background-size: 60px;
   padding: 0;
-
+  background-color: transparent;
   border-width: 0;
-  border-radius: 30px;
+  border-radius: 50%;
+  z-index: 1000;
 
   img {
     opacity: 1;
-    border-radius: 30px;
+  }
+
+  .floatingActionButtonTag {
+    position: absolute;
+    width: 25px;
+    left: 33px;
+    top: -8px;
   }
 }
 
@@ -102,4 +318,514 @@
   height: 68px;
   margin: 20px;
   float: left;
+}
+
+.hideWaitingForResponse {
+  display: none;
+}
+
+.waitingForResponse {
+  width: 50px;
+}
+
+// Sidebar styles
+.aiDiffWorkspace {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.sidebarContainer {
+  width: 242px;
+  flex: 0 0 242px;
+  background-color: var(--background-neutral-secondary);
+  height: auto;
+  display: flex;
+  border-right: 1px solid $neutral_dark;
+  transition: all 0.2s ease-in-out;
+
+  &.sidebarContainerCollapsed {
+    width: 64px;
+    flex: 0 0 64px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .expandedNewChatButton {
+    flex-grow: 1;
+  }
+}
+
+.sidebarBox {
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebarActions {
+  display: flex;
+  padding: 8px 16px 0;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.buttonWithUnreadDot {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    left: 16px;
+    top: 3px;
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--background-error-primary);
+    border-radius: 50%;
+    margin-left: 4px;
+  }
+}
+
+.sidebarBoxCollapsed {
+  .sidebarActions {
+    flex-direction: column;
+  }
+}
+
+html body .sidebarActionTooltip {
+  z-index: $sidebar-tooltip-z-index;
+}
+
+.sidebarContent {
+  display: flex;
+  overflow-y: scroll;
+  width: inherit;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  flex-direction: column;
+}
+
+.sidebarSectionTitle {
+  margin: 0 !important;
+  padding: 8px 16px;
+  color: var(--text-neutral-tertiary) !important;
+}
+
+.sidebarChatItem {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+:global(.Mui-selected).sidebarChatButton {
+  background-color: var(--background-neutral-tertiary) !important;
+}
+
+//body text three
+.sidebarChatItemPrimary {
+  color: var(--text-neutral-primary) !important;
+  font-family: Figtree, sans-serif !important;
+  font-size: var(--font-size-body-sm) !important;
+  line-height: 1.54 !important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.sidebarChatItemPrimarySelected {
+  font-weight: 600 !important;
+  color: var(--text-neutral-primary) !important;
+  font-family: Figtree, sans-serif !important;
+  font-size: var(--font-size-body-sm) !important;
+  line-height: 1.54 !important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.sidebarArtifactIconContainer {
+  justify-content: space-between;
+  display: flex;
+}
+
+.sidebarChatItemSecondary {
+  color: var(--text-neutral-tertiary) !important;
+  font-family: Figtree, sans-serif !important;
+  font-size: 0.688rem !important;
+  line-height: 1.64 !important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.sidebarManageLink {
+  margin-left: 8px;
+}
+
+.sidebarCategories {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+
+  &:not(:empty) {
+    margin-top: 1rem;
+  }
+}
+
+.categoryActionButton {
+  background-color: inherit;
+  display: flex;
+  height: 32px;
+  align-items: center;
+  gap: 12px;
+  padding-left: 16px;
+  text-decoration: none;
+  color: var(--text-neutral-black-fixed);
+  border: 0;
+  font-size: var(--font-size-body-sm, 14px);
+  margin: 0;
+  min-height: 32px;
+  border-radius: 0;
+
+  & span {
+    flex-grow: 1;
+    text-align: start;
+  }
+
+  &.selected {
+    border-left: 4px solid var(--borders-brand-teal-primary);
+    background-color: var(--background-neutral-quaternary);
+    padding-left: 12px;
+    text-decoration: none;
+    color: var(--text-neutral-primary);
+    font-weight: 600;
+  }
+
+  &:active {
+    // !important necessary to override application.css
+    border: 0 !important;
+    border-left: 4px solid var(--borders-brand-teal-primary) !important;
+    background-color: var(--background-neutral-quaternary);
+    padding-left: 12px;
+    text-decoration: none;
+    color: var(--text-neutral-primary);
+  }
+
+  &:hover {
+    background-color: var(--background-neutral-tertiary);
+    text-decoration: none;
+  }
+
+  .readAt {
+    color: var(--background-error-primary);
+    font-size: 8px;
+    min-width: 8px;
+    margin-inline-start: 8px;
+    width: 8px;
+    line-height: var(--font-line-height-body-xxs, 17.6px);
+  }
+}
+
+.artifactButtons {
+  button {
+    margin-inline-end: 8px;
+    margin-bottom: 8px;
+  }
+
+  a {
+    color: var(--text-neutral-tertiary);
+    font-weight: 600;
+    text-decoration: underline;
+
+    i {
+      margin-inline-start: 4px;
+    }
+  }
+}
+
+.artifactShowButtons {
+  display: flex;
+  margin-top: 12px;
+
+  button {
+    margin-inline-end: 8px;
+    margin-bottom: 8px;
+  }
+
+  a {
+    color: var(--text-neutral-tertiary);
+    font-weight: 600;
+    text-decoration: underline;
+    align-self: center;
+    width: 100%;
+    justify-content: flex-start;
+
+    i {
+      padding: 4px;
+      margin-inline-start: 4px;
+      border-radius: 4px;
+      background: var(--background-brand-aqua-light, #BFFFFC);
+      color: var(--text-brand-aqua-secondary);
+    }
+  }
+}
+
+.artifactConfiguration {
+  &Section {
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--background-neutral-secondary);
+
+    h6 {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    &Header {
+      border-bottom: 1px solid var(--borders-neutral-primary);
+      padding-bottom: 12px;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      align-self: stretch;
+
+      a {
+        color: #9660bf;
+        text-decoration: underline;
+        font-weight: 600;
+        font-size: 14px;
+      }
+    }
+  }
+
+  &TitleSection {
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--background-neutral-secondary);
+    flex-direction: row;
+    display: flex;
+    gap: 12px;
+    align-items: end;
+  }
+
+  &Dropdowns {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+
+    label {
+      width: 294px;
+    }
+  }
+
+  &Checkboxes {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    label {
+      width: 294px;
+    }
+  }
+
+  &FAQLink {
+    margin-left: 20px;
+    color: var(--text-neutral-primary);
+    text-decoration: underline;
+    font-weight: 600;
+
+    i {
+      margin-inline-start: 4px;
+      text-decoration: none;
+    }
+  }
+
+  &SaveButtons {
+    margin: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--borders-neutral-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+  }
+
+  h3 {
+    color: var(--text-neutral-primary);
+    font-size: 24px;
+    line-height: 31.68px;
+    font-family: $barlowSemiCondensed-semibold;
+    margin: 0 0 8px 0;
+  }
+
+  h4 {
+    color: var(--text-neutral-primary);
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
+.artifactContainer {
+  display: flex;
+  padding-top: 60px;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+.artifactHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  align-self: stretch;
+
+  h1 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.artifactContentBlocksContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  margin-bottom: 64px;
+}
+
+.artifactContentBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.artifactContent {
+  display: flex;
+  width: 800px;
+  padding: 50px 40px 40px 40px;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: -16px;
+  border-radius: 4px;
+
+  p{
+    white-space: pre-line;
+  }
+
+  &Blue {
+    border: 1px solid var(--borders-brand-teal-primary, #0093A4);
+    background: var(--background-brand-teal-extra-light, #E0F8F9);
+  }
+
+  &Red {
+    border: 1px solid var(--accent-strawberry-50, #ED6060);
+    background: var(--accent-strawberry-10, #FFE3E3);
+  }
+
+  &Purple {
+    border: 1px solid var(--borders-brand-purple-primary, #8C52BA);
+    background: var(--background-brand-purple-extra-light, #F6EDFD);
+  }
+}
+
+.artifactContentLabel {
+  display: inline-flex;
+  padding: 8px 16px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+  background: var(--background-brand-teal-primary, #0093A4);
+  z-index: 1;
+  p{
+    color: $neutral_white;
+    margin: 0;
+  }
+  &Blue {
+    background: var(--background-brand-teal-primary, #0093A4);
+  }
+
+  &Red {
+    background: var(--accent-strawberry-50, #ED6060);
+  }
+
+  &Purple {
+    background: var(--borders-brand-purple-primary, #8C52BA);
+  }
+}
+
+.artifactIcon {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  color: $neutral_white;
+}
+
+.markdownStyle {
+  p {
+  color: var(--text-neutral-primary, #292F36);
+  text-align: center;
+  font-feature-settings: 'liga' off, 'clig' off;
+
+  /* Body/Body 1 - ExtraStrong */
+  font-family: var(--font-family-body, Figtree);
+  font-size: var(--font-size-body-lg, 20px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--font-line-height-body-lg, 28px); /* 140% */
+  }
+}
+
+.answerKeyContainer {
+  display: flex;
+  flex-direction: column;
+  width: 840px;
+  padding: 12px 20px;
+  gap: 20px;
+  border-radius: 4px;
+  border: 1px solid var(--borders-neutral-primary, #D4DAE1);
+  background: var(--background-neutral-secondary, #F0F2F5);
+}
+
+.answerKeyHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 0 0;
+}
+
+.answerIcon {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  color: $neutral_dark;
+}
+
+.artifactThreadIcon {
+  color: var(--background-neutral-octonary);
+  align-self: center;
+}
+
+.artifactTitleInput {
+  min-height: 24px;
+  max-height: 24px;
+  box-sizing: border-box;
+  resize: none;
+  margin: 0;
+  width: 100%;
+
+  &:disabled {
+    opacity: 0.5;
+    background: none;
+  }
 }

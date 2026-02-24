@@ -1,7 +1,7 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import LoadableComponent from '@cdo/apps/templates/LoadableComponent';
 
 describe('LoadableComponent', () => {

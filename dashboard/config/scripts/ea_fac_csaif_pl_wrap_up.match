@@ -1,0 +1,17 @@
+name 'ea_fac_csaif_pl_wrap-up'
+title 'Check for Understanding'
+description 'Match the vocabulary term with the definition'
+question 'Personally Identifiable Information'
+question 'Phishing'
+question 'Decryption'
+question 'Rogue Access Point'
+question 'Public Key Encryption'
+question 'Malware'
+answer 'information about an individual that identifies or describes them'
+answer 'a technique that attempts to trick a user into providing personal information.'
+answer 'a process that takes a secret message and reproduces the original plain text'
+answer 'a wireless access point that gives unauthorized access to secure networks'
+answer 'pairs a public key for encryption and a private key for decryption'
+answer 'software intended to damage or to take partial control over a computing system'
+
+allow_multiple_attempts true

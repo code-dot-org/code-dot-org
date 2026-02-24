@@ -1,0 +1,91 @@
+name 'aif_pl_umpire-L18-2-python'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# UMPIRE Strategy
+
+#### The **UMPIRE** strategy is a simple way to help students (or anyone new to coding) think through their code step by step—just like an umpire watches carefully and makes decisions. 
+
+#### It’s especially useful when writing or debugging Python code.
+
+
+## UPMIRE Steps: 
+
+<br>
+
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: auto;">
+
+  <div style="display: flex; align-items: center; gap: 25px;">
+    <div style="background: #dccbea; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 100px; text-align: center;">
+      <h1 style="margin: 0;">U</h1>
+    </div>
+    <div style="flex: 1; background: #f7f8fa; padding: 8px 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); font-size: 14pt;">
+      <h3><b>🧠 Understand</b></h3>
+      <p style = "font-size: 14pt";>What's the goal?<br><br>First, figure out what the code is supposed to do.</p>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: center; gap: 25px;">
+    <div style="background: #dccbea; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 100px; text-align: center;">
+      <h1 style="margin: 0;">M</h1>
+    </div>
+    <div style="flex: 1; background: #f7f8fa; padding: 8px 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+      <h3><b>🧩 Make a plan</b></h3>
+      <p style = "font-size: 14pt";>What will go in the code?<br><br>Think through the steps before writing anything.</p>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: center; gap: 25px;">
+    <div style="background: #dccbea; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 100px; text-align: center;">
+      <h1 style="margin: 0;">P</h1>
+    </div>
+    <div style="flex: 1; background: #f7f8fa; padding: 8px 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+      <h3><b>💻 Produce</b></h3>
+      <p style = "font-size: 14pt";>Now, write the code.</p>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: center; gap: 25px;">
+    <div style="background: #dccbea; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 100px; text-align: center;">
+      <h1 style="margin: 0;">I</h1>
+    </div>
+    <div style="flex: 1; background: #f7f8fa; padding: 8px 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+      <h3><b>✅ Inspect</b></h3>
+      <p style = "font-size: 14pt";>Run the code. Does it do what it’s supposed to?</p>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: center; gap: 25px;">
+    <div style="background: #dccbea; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 100px; text-align: center;">
+      <h1 style="margin: 0;">R</h1>
+    </div>
+    <div style="flex: 1; background: #f7f8fa; padding: 8px 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+      <h3><b>🔍 Review</b></h3>
+      <p style = "font-size: 14pt";>Look back at your code. Can anything be improved or simplified?</p>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: center; gap: 25px;">
+    <div style="background: #dccbea; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 100px; text-align: center;">
+      <h1 style="margin: 0;">E</h1>
+    </div>
+    <div style="flex: 1; background: #f7f8fa; padding: 8px 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+      <h3><b>🗣 Explain</b></h3>
+      <p style = "font-size: 14pt";>How did it work? Think or talk about what each line did.</p>
+    </div>
+  </div>
+
+</div>
+
+---
+
+
+#### As you plan out your code in the next level, try using the **UMPIRE** strategy!
+
+
+
+ 
+
+
+MARKDOWN

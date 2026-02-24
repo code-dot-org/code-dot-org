@@ -18,9 +18,11 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 The truth table for this Boolean expression is as follows:
 
-![](https://images.code.org/869fcb69443792c253ddc9d6c73661f5-image-1677702114629.png)
+![](https://images.code.org/b610535a253c2d7af37a0c63e25479be-image-1733333232636.png)
 
 This shows that there is only one instance where the resulting truth value is `false`.
+
+
 MARKDOWN
 
 allow_multiple_attempts true

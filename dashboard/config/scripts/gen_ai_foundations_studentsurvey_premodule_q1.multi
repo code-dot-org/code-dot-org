@@ -1,0 +1,6 @@
+name 'gen-ai-foundations-studentsurvey-premodule-q1'
+question 'What prior experiences have you had learning about Generative AI?'
+right 'This is the first I am learning about Generative AI'
+right 'I have done smaller Generative AI activities (for example: an hour of code), but this is my first longer class'
+right 'I have already taken a class or done longer online tutorials on Generative AI (for example: the Foundations of Generative AI unit in Code.org)'
+allow_multiple_attempts true

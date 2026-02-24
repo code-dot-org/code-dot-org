@@ -7,10 +7,9 @@ import Hammer from 'hammerjs';
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-import {getCodeBlocks} from '@cdo/apps/blockly/utils';
+import {getCodeBlocks, getCode} from '@cdo/apps/blockly/utils';
 import PlayerSelectionDialog from '@cdo/apps/craft/PlayerSelectionDialog';
 import reducers from '@cdo/apps/craft/redux';
 import {ARROW_KEY_NAMES, handlePlayerSelection} from '@cdo/apps/craft/utils';
@@ -20,6 +19,7 @@ import {
   dismissSwipeOverlay,
 } from '@cdo/apps/templates/arrowDisplayRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import {trySetLocalStorage} from '@cdo/apps/utils';
 
 import {TestResults} from '../../constants';
@@ -32,7 +32,6 @@ import {singleton as studioApp} from '../../StudioApp';
 import AppView from '../../templates/AppView';
 import {muteCookieWithLevel} from '../../util/muteCookieHelpers';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
-import trackEvent from '../../util/trackEvent';
 import craftMsg from '../locale';
 
 import {ENTITY_ACTION_BLOCKS, ENTITY_TARGET_ACTION_BLOCKS} from './blocks';
@@ -450,7 +449,7 @@ Craft.init = function (config) {
     isMinecraft: true,
   });
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <div>
         <AppView
@@ -524,7 +523,6 @@ Craft.getCurrentCharacter = function () {
 };
 
 Craft.setCurrentCharacter = function (name = DEFAULT_CHARACTER) {
-  trackEvent('MinecraftDesigner', 'ChoseCharacter', name);
   Craft.clearPlayerState();
   trySetLocalStorage('craftSelectedPlayer', name);
   Craft.updateUIForCharacter(name);
@@ -680,12 +678,7 @@ Craft.reset = function (first) {
 };
 
 Craft.phaserLoaded = function () {
-  return (
-    Craft.gameController &&
-    Craft.gameController.game &&
-    Craft.gameController.game.load &&
-    !Craft.gameController.game.load.isLoading
-  );
+  return !!Craft.gameController?.game?.load;
 };
 
 Craft.levelInitialized = function () {
@@ -724,7 +717,6 @@ Craft.runButtonClick = function () {
   }
 
   studioApp().toggleRunReset('reset');
-  Blockly.mainBlockSpace.traceOn(true);
   studioApp().attempts++;
 
   Craft.executeUserCode();
@@ -760,9 +752,6 @@ Craft.executeUserCode = function () {
   }
 
   studioApp().playAudio('start');
-
-  // Start tracing calls.
-  Blockly.mainBlockSpace.traceOn(true);
 
   var appCodeOrgAPI = Craft.gameController.codeOrgAPI;
   appCodeOrgAPI.startCommandCollection();
@@ -992,9 +981,7 @@ Craft.reportResult = function (success) {
     result: Craft.initialConfig.level.freePlay ? true : success,
     testResult: testResultType,
     image: encodedImage,
-    program: encodeURIComponent(
-      Blockly.cdoUtils.getCode(Blockly.mainBlockSpace)
-    ),
+    program: encodeURIComponent(getCode(Blockly.mainBlockSpace)),
     // typically delay feedback until response back
     // for things like e.g. crowdsourced hints & hint blocks
     onComplete: function (response) {

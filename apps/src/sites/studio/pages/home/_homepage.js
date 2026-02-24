@@ -1,9 +1,9 @@
 import $ from 'jquery';
 import queryString from 'query-string';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+import {displayDifferentiationChat} from '@cdo/apps/aiDifferentiation/aiDiffUtils';
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {getStore, registerReducers} from '@cdo/apps/redux';
@@ -18,8 +18,8 @@ import {
   setAuthProviders,
   setPageType,
   beginCreatingSection,
-  setShowLockSectionField, // DCDO Flag - show/hide Lock Section field
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import i18n from '@cdo/locale';
 
 $(document).ready(showHomepage);
@@ -39,9 +39,6 @@ function showHomepage() {
   store.dispatch(initializeHiddenScripts(homepageData.hiddenScripts));
   store.dispatch(setPageType(pageTypes.homepage));
   store.dispatch(setLocaleCode(homepageData.localeCode));
-
-  // DCDO Flag - show/hide Lock Section field
-  store.dispatch(setShowLockSectionField(homepageData.showLockSectionField));
 
   if (homepageData.mapboxAccessToken) {
     store.dispatch(setMapboxAccessToken(homepageData.mapboxAccessToken));
@@ -89,10 +86,10 @@ function showHomepage() {
     />
   );
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <div>
-        {isTeacher && (
+        {isTeacher ? (
           <TeacherHomepage
             announcement={announcement}
             hocLaunch={homepageData.hocLaunch}
@@ -104,16 +101,9 @@ function showHomepage() {
             topPlCourse={homepageData.topPlCourse}
             queryStringOpen={query['open']}
             canViewAdvancedTools={homepageData.canViewAdvancedTools}
-            ncesSchoolId={homepageData.ncesSchoolId}
+            existingSchoolInfo={homepageData.existingSchoolInfo}
             censusQuestion={homepageData.censusQuestion}
             showCensusBanner={homepageData.showCensusBanner}
-            showNpsSurvey={homepageData.showNpsSurvey}
-            showFinishTeacherApplication={
-              homepageData.showFinishTeacherApplication
-            }
-            showReturnToReopenedTeacherApplication={
-              homepageData.showReturnToReopenedTeacherApplication
-            }
             afeEligible={homepageData.afeEligible}
             teacherName={homepageData.teacherName}
             teacherId={homepageData.teacherId}
@@ -124,8 +114,7 @@ function showHomepage() {
             showIncubatorBanner={homepageData.showIncubatorBanner}
             currentUserId={homepageData.currentUserId}
           />
-        )}
-        {!isTeacher && (
+        ) : (
           <StudentHomepage
             courses={homepageData.courses}
             topCourse={homepageData.topCourse}
@@ -145,6 +134,7 @@ function showHomepage() {
     </Provider>,
     document.getElementById('homepage-container')
   );
+  displayDifferentiationChat();
 }
 
 /**

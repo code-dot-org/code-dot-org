@@ -20,7 +20,6 @@ theme: responsive
     <li><a class="linktag" id="self-paced-nav" href="#express">Absolvuj úvodný kurz, ktorý môžeš robiť vlastným tempom</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">Vytvor hru alebo aplikáciu</a></li>
     <li><a class="linktag" id="unplugged-nav" href="#unplugged">Vyskúšaj si informatiku bez počítača (aktivity bez počítača alebo s mobilom)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Uč sa informatiku od tímu Code.org a špeciálnych hostí</a></li>
 </ul>
 
 <br>
@@ -283,56 +282,6 @@ theme: responsive
   <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Hello Ruby</a> – Najzábavnejší spôsob, ako sa učiť o počítačoch, technológiách a programovaní. Ponúka aktivity venované rôznym informatickým témam, napríklad schopnostiam rozložiť problém na menšie časti, pozorovať vzory, myslieť algoritmicky, odstraňovať chyby a spolupracovať s inými. (odporúčaný vek: 4 – 10 rokov)</li>
   <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> – Táto zbierka bezplatných výučbových materiálov učí informatiku prostredníctvom zábavných hier a úloh, pri ktorých sa využívajú karty, šnúrky či voskovky a človek sa veľa hýbe. (odporúčaný vek: 5 – 14 rokov)</li>
 </ul>
-
-<h2>Nemáš doma počítač? S týmito aplikáciami od našich partnerov si môžeš vyskúšať informatiku aj na telefóne</h2>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box island"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island Očarujúca</h3></a>mobilná kódovacia hra, ktorá vezme študentov na vzrušujúce dobrodružstvo a zároveň učí základy kódovania, ako sú algoritmy, rozpoznávanie vzorov, sekvencie, slučky a kondicionály. <i>(pre všetky vekové kategórie)</i>
-</div>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">CodeSpark</h3></a>Ocenená platforma pre učenie kódu pre deti vo veku 5-9 rokov. Pri riešení úloh a vytváraní hier s postavičkami Foos sa naučíš programovať. <strong>Poznámka: codeSpark ponúka možnosť vyskúšať si platformu bezplatne na 3 mesiace. Pri registrácii je potrebné zadať e‑mailovú adresu rodiča a platobné údaje.</strong> <i>(od predškolákov až po 5. triedu)</i>
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[Naspäť hore]</a></p>
-
-<a id="livecoding"></a>
-<h2>Uč sa informatiku od tímu Code.org a špeciálnych hostí!</h2>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Logo CodeBytes">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes sú ľahko stráviteľné, 20-minútové interaktívne lekcie spájajúce informatiku s témami z reálneho sveta. Nauč umelú inteligenciu AI čítať posunkovú reč, navrhni prospešnú aplikáciu, objav svet Minecraftu a zaži si mnoho ďalšieho!</div>
-        <br>
-        <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Pozri si videá</button></a>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Code Break">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">Code Break</h3>
-        <div class="smalltext" style="">Zachovajte informatiku zábavou tým, že si urobíte prestávku v kóde! Môžeš vytvoriť šifru s Ashtonom Kutcherom, naučiť sa viac o premenných s Yarou Shahidi či dokonca zistiť viac o tom, ako funguje internet, s jeho vynálezcom Vintom Cerfom!</div>
-        <br>
-        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Pridať sa</button></a>
-    </span>
-  </div>
-</div>
-</div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 

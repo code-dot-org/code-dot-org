@@ -1,0 +1,12 @@
+table.attendanceTable {
+  width: unset;
+  margin-top: 0.5rem;
+
+  td,
+  th {
+    background-color: var(--background-neutral-primary);
+    border: none;
+    padding: 0.5rem 0;
+    padding-right: 1.5rem;
+  }
+}

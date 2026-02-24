@@ -2,9 +2,9 @@ require "test_helper"
 
 class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   setup_all do
-    @student = create :student
+    @student = create(:student)
 
-    project = create :project, owner: @student
+    project = create(:project, owner: @student)
     project.project_type = 'applab'
     project.save!
     @channel_id = project.channel_id
@@ -12,6 +12,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
 
   setup do
     sign_in @student
+    Cdo::Throttle.stubs(:throttle).returns(false)
   end
 
   def _url(action)
@@ -794,5 +795,17 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     get _url(:get_key_values)
     assert_response :success
     assert_equal({}, JSON.parse(@response.body))
+  end
+
+  test 'create_record returns student facing error when request is throttled' do
+    Cdo::Throttle.stubs(:throttle).returns(true)
+    post _url(:create_record), params: {
+      table_name: 'mytable',
+      record_json: {"name" => 'bob', "age" => 8}.to_json,
+    }
+    assert_response :bad_request
+
+    error = JSON.parse(@response.body)
+    assert_equal 'THROTTLED', error['type']
   end
 end

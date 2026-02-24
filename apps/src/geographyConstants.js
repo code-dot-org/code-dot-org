@@ -1,3 +1,7 @@
+import {UsStates} from '@cdo/generated-scripts/sharedConstants';
+
+export const STATE_CODES = Object.keys(UsStates).sort();
+
 export const STATES = [
   '',
   'Alabama',

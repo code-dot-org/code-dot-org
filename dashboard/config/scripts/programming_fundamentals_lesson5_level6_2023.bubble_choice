@@ -1,0 +1,9 @@
+name 'programming-fundamentals-lesson5-level6-2023'
+display_name 'Practice with Moving'
+description 'Choose one of the options below!'
+
+sublevels
+level 'programming-fundamentals-lesson5-level6a-2023'
+level 'programming-fundamentals-lesson5-level6b-2023'
+
+

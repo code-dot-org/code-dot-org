@@ -1,52 +1,40 @@
 import React, {createContext, useContext} from 'react';
 
-import {setFileType} from '../FileBrowser/types';
+import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
+import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
+import {ProjectSources} from '@cdo/apps/lab2/types';
+
 import {
-  ProjectType,
   ConfigType,
-  SetProjectFunction,
   SetConfigFunction,
   OnRunFunction,
-  ResetProjectFunction,
+  OnStopFunction,
+  SendConsoleInputFunction,
+  CodebridgeLevelProperties,
+  ProjectPickerSettings,
 } from '../types';
 
-import {
-  SaveFileFunction,
-  CloseFileFunction,
-  SetActiveFileFunction,
-  NewFolderFunction,
-  ToggleOpenFolderFunction,
-  DeleteFolderFunction,
-  OpenFileFunction,
-  DeleteFileFunction,
-  NewFileFunction,
-  RenameFileFunction,
-  MoveFileFunction,
-  RenameFolderFunction,
-  RearrangeFilesFunction,
-} from './types';
-
-type CodebridgeContextType = {
-  project: ProjectType;
+export type CodebridgeContextType = {
   config: ConfigType;
-  setProject: SetProjectFunction;
   setConfig: SetConfigFunction;
   onRun?: OnRunFunction;
-  saveFile: SaveFileFunction;
-  closeFile: CloseFileFunction;
-  setActiveFile: SetActiveFileFunction;
-  newFolder: NewFolderFunction;
-  toggleOpenFolder: ToggleOpenFolderFunction;
-  deleteFolder: DeleteFolderFunction;
-  openFile: OpenFileFunction;
-  deleteFile: DeleteFileFunction;
-  newFile: NewFileFunction;
-  renameFile: RenameFileFunction;
-  moveFile: MoveFileFunction;
-  renameFolder: RenameFolderFunction;
-  resetProject: ResetProjectFunction;
-  setFileType: setFileType;
-  rearrangeFiles: RearrangeFilesFunction;
+  onStop?: OnStopFunction;
+  startSources: ProjectSources;
+  sendConsoleInput?: SendConsoleInputFunction;
+  levelProperties: CodebridgeLevelProperties;
+  projectPickerSettings?: ProjectPickerSettings;
+  hiddenContextCallback?: () => Promise<string>;
+  AiTutorResponseView?: React.ReactNode;
+  onImageFlagged?: (
+    file: File,
+    fileType: string,
+    uploadFunction: () => Promise<void>
+  ) => void;
+  aiTutorMultimodalEnabled?: boolean;
+  aiTutorChatButtonData?: ChatButtonData[];
+  aiTutorContextHelper?: AiTutorContextHelper<object>;
+  aiTutorSystemPromptName?: string;
+  aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
 };
 
 export const CodebridgeContext = createContext<CodebridgeContextType | null>(
@@ -56,7 +44,7 @@ export const CodebridgeContext = createContext<CodebridgeContextType | null>(
 export const useCodebridgeContext = () => {
   const context = useContext(CodebridgeContext);
   if (context === null) {
-    throw new Error('CDO IDE Context has not been provided!');
+    throw new Error('Codebridge Context has not been provided!');
   }
   return context;
 };

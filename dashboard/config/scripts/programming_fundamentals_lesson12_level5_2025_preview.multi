@@ -1,0 +1,23 @@
+name 'programming-fundamentals-lesson12-level5_2025-preview'
+title 'Check for Understanding'
+
+wrong 'Red background'
+wrong 'Red line'
+wrong 'Green star'
+right 'Green line'
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What will the `Painter` paint if the `user_number` is `5` and the `user_color` is `green`?
+```
+if user_number == 5:
+   if user_color == "red":
+      paint_background(user_color)
+   else:
+      paint_line(user_color) 
+else:
+    paint_star(user_color)
+
+
+``` 
+MARKDOWN

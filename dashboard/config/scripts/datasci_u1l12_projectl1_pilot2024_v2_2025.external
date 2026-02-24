@@ -1,0 +1,46 @@
+name 'datasci-U1L12-projectL1_pilot2024_v2-2025'
+title 'Three Reads'
+description 'Explore the datasets below.'
+
+markdown <<MARKDOWN
+## Three Reads of Data
+
+# Do This:
+1. Take a minute to look at the data sets provided below. 
+2. Pick one that interests you and fill in the Three Reads of Data on Day 1 of your Project Guide.
+
+::: details [**Mammals**]
+This dataset has information about 27 different mammals! Check it out here: <a href="https://docs.google.com/spreadsheets/d/1mHvH79skBmACsHKlfNidoDL6afpRgCSuuwumCZgC51U/edit?usp=drivesdk" target="_blank">Mammals Dataset</a>
+
+:::
+
+::: details [**PISA Dataset**]
+This dataset has information from students who took a survey about themselves and how they feel about school. Check it out here: <a href="https://docs.google.com/spreadsheets/d/1WVXj1SYdGSjEuxhetVNOoBZqTh6NQjSeMWJA4MA5Kt8/edit?usp=drivesdk" target="_blank">PISA Dataset</a>
+
+:::
+
+::: details [**Movie Characters**]
+This dataset looks at 2000 movies and popular characters in the movies, scraped from IMDB. Check it out here: <a href="https://docs.google.com/spreadsheets/d/1n5yyx0hbIKZuKMgF7UcTvRulhyAhRmJF41DJ415BK04/edit?usp=drivesdk" target="_blank">Movie Characters Dataset</a>
+
+:::
+
+::: details [**Data Science Salaries**]
+This dataset has information about salaries in the data science field, capturing various aspects such as experience level, employment type, and remote work ratio. Check it out here: <a href="https://docs.google.com/spreadsheets/d/19EuxGfPonPTrRxU35kiikW3rvyFmbucNUMp1wh48QXI/edit?usp=drivesdk" target="_blank">Data Science Salaries Dataset</a>
+
+:::
+
+::: details [**States' Education**]
+This dataset has information about information for each state such as average years of schooling for the different levels of education, female and male percentages, and more. Check it out here: <a href="https://docs.google.com/spreadsheets/d/1D3jlwnWnFVdKX_59d2nRMNdxuTx5qqDV7z4XidvR9uY/edit?usp=drivesdk" target="_blank">States' Education Dataset</a>
+
+:::
+
+::: details [**Four Elephant Seals**]
+This dataset has information about four elephant seals and their locations during various times of the year. Check it out here: <a href="https://docs.google.com/spreadsheets/d/1Mbba0hrRMipDTOHpYCwPwVhmvgnu6BcshhhO61E_lBw/edit?usp=drivesdk" target="_blank">Four Elephant Seals Dataset</a>
+
+:::
+
+::: details [**Earthquakes**]
+This dataset has information about earthquakes from 2016-2017. It contains data ranging from the Magnitude of earthquakes to the type of earthquake. Check it out here: <a href="https://docs.google.com/spreadsheets/d/1R8mvoEGtJYkF9Xy4qyJ4goHwvuL7i20vqLVoZAPtTCE/edit?usp=drivesdk" target="_blank">Earthquakes Dataset</a>
+
+:::
+MARKDOWN

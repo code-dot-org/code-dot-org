@@ -1,0 +1,10 @@
+name 'music-lab-walkup-examples-choice'
+display_name 'Walkup Song Examples'
+description 'Walkup Song Examples'
+
+sublevels
+level 'music-lab-walkup-example-1'
+level 'music-lab-walkup-example-2'
+level 'music-lab-walkup-example-3'
+level 'music-lab-walkup-example-4'
+uses_lab2

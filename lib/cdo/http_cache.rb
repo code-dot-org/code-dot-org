@@ -50,66 +50,39 @@ class HttpCache
   # Header which lets a client request a response format.
   ACCEPT_HEADER = %w(Accept).freeze
   ALLOWLISTED_HEADERS = LANGUAGE_HEADER + COUNTRY_HEADER + ACCEPT_HEADER
+  S3_FORWARD_HEADERS = %w(
+    Access-Control-Request-Headers
+    Access-Control-Request-Method
+    Origin
+  ).freeze
 
   DEFAULT_COOKIES = [
     # Language drop-down selection.
     'language_',
     # Experiment flag used to debug the onetrust cookie experience.
     'onetrust_cookie_scripts',
-    # Feature flag for the Colorado Privacy Act (CPA)
-    'cpa_experience',
     # Page mode, for A/B experiments and feature-flag rollouts.
     'pm'
   ].freeze
 
   # A list of script levels that should not be cached, even though they are
-  # in a cacheable script
+  # in a cacheable script. prediction levels are not cacheable.
   UNCACHED_UNIT_LEVEL_PATHS = [
-    '/s/dance-2019/lessons/1/levels/10',
-    '/s/dance-ai-2023/lessons/1/levels/10',
-    '/s/poem-art-2021/lessons/1/levels/9',
-    '/s/poem-art-2021/lessons/1/levels/2', # prediction levels are not cacheable
-    '/s/poem-art-2021/lessons/1/levels/5', # prediction levels are not cacheable
-    '/s/hello-world-food-2021/lessons/1/levels/11',
-    '/s/hello-world-animals-2021/lessons/1/levels/11',
-    '/s/hello-world-retro-2021/lessons/1/levels/11',
-    '/s/hello-world-emoji-2021/lessons/1/levels/11',
-    '/s/hello-world-space-2022/lessons/1/levels/11',
-    '/s/hello-world-soccer-2022/lessons/1/levels/11',
-    '/s/outbreak/lessons/1/levels/10'
+    '/courses/dance-ai-2023/units/1/lessons/1/levels/10',
   ]
 
   # A map from script name to script level URL pattern.
   CACHED_UNITS_MAP = %w(
     aquatic
-    starwars
-    starwarsblocks
-    mc
-    frozen
-    gumball
-    minecraft
-    hero
-    sports
-    basketball
-    dance-2019
     dance-ai-2023
     oceans
-    poem-art-2021
-    hello-world-food-2021
-    hello-world-animals-2021
-    hello-world-retro-2021
-    hello-world-emoji-2021
-    hello-world-space-2022
-    hello-world-soccer-2022
-    outbreak
+    mc
+    music-jam-2024
+    mix-move-ai-2025
   ).map do |script_name|
-    # Most scripts use the default route pattern.
-    [script_name, "/s/#{script_name}/lessons/*"]
-  end.to_h.merge(
-    # Add the "special case" routes here.
-    'hourofcode' => '/hoc/*',
-    'flappy' => '/flappy/*'
-  ).freeze
+    # Assume all cached units are in single unit courses.
+    [script_name, "/courses/#{script_name}/units/1/lessons/*"]
+  end.to_h.freeze
 
   def self.cached_scripts
     CACHED_UNITS_MAP.keys
@@ -143,6 +116,16 @@ class HttpCache
       default_cookies << Rack::CookieDCDO::KEY
     end
 
+    # Allows Geolocation to be altered via cookies. See: Rack::GeolocationOverride
+    if CDO.use_geolocation_override
+      require 'cdo/rack/geolocation_override'
+      default_cookies << Rack::GeolocationOverride::KEY
+    end
+
+    # Allows setting of Global Edition Region via cookies. See: Rack::GlobalEdition
+    require 'cdo/rack/global_edition'
+    default_cookies << Rack::GlobalEdition::REGION_KEY
+
     # These cookies are allowlisted on all session-specific (not cached) pages.
     allowlisted_cookies = [
       'hour_of_code',
@@ -154,32 +137,53 @@ class HttpCache
       'rack.session',
       'remember_user_token',
       '__profilin', # Used by rack-mini-profiler
+      'statsig_stable_id',
       session_key,
       storage_id,
+      'sign_up_user_type',
     ].concat(default_cookies)
 
     {
       pegasus: {
         behaviors: [
+          # NextJS assets path for the marketing app
+          {
+            path: '/_next/static/*',
+            proxy: 'marketing',
+            headers: [],
+            cookies: default_cookies,
+            include_marketing_router_lambda: true,
+          },
+          # NextJS dynamic image api
+          {
+            path: '/_next/image',
+            proxy: 'marketing',
+            headers: ALLOWLISTED_HEADERS,
+            cookies: 'none',
+            include_marketing_router_lambda: true,
+          },
           {
             # Serve Sprockets-bundled assets directly from the S3 bucket synced via `assets:precompile`.
             #
             path: '/assets/*',
             proxy: 'cdo-assets',
-            headers: [],
-            cookies: 'none'
+            headers: S3_FORWARD_HEADERS,
+            cookies: 'none',
+            include_marketing_router_lambda: true,
           },
+          # For .png images, don't forward any cookies or additional headers.
           {
-            path: '/api/hour/*',
-            headers: ALLOWLISTED_HEADERS,
-            # Allow the company cookie to be read and set to track company users for tutorials.
-            cookies: allowlisted_cookies + ['company']
+            path: '/*.png',
+            headers: [],
+            cookies: 'none',
+            include_marketing_router_lambda: true,
           },
           # For static-asset paths, don't forward any cookies or additional headers.
           {
-            path: STATIC_ASSET_EXTENSION_PATHS + %w(/files/* /images/* /fonts/*),
+            path: STATIC_ASSET_EXTENSION_PATHS - %w(/*.png) + %w(/files/* /images/* /fonts/*),
             headers: [],
-            cookies: 'none'
+            cookies: 'none',
+            include_marketing_router_lambda: true,
           },
           # Dashboard-based API paths in Pegasus are session-specific, allowlist all cookies.
           {
@@ -191,26 +195,28 @@ class HttpCache
               # TODO: Collapse these paths into /private to simplify Pegasus caching config.
               %w(
                 /amazon-future-engineer*
-                /review-hociyskvuwa*
                 /manage-professional-development-workshops*
                 /professional-development-workshop-surveys*
                 /pd-program-registration*
                 /poste*
               ),
             headers: ALLOWLISTED_HEADERS,
-            cookies: allowlisted_cookies
+            cookies: allowlisted_cookies,
+            include_marketing_router_lambda: true,
           },
           {
             path: '/dashboardapi/*',
             proxy: 'dashboard',
             headers: ALLOWLISTED_HEADERS,
-            cookies: allowlisted_cookies
+            cookies: allowlisted_cookies,
+            include_marketing_router_lambda: true,
           },
           {
             path: '/i18n/track_string_usage',
             proxy: 'dashboard',
             headers: ALLOWLISTED_HEADERS,
-            cookies: allowlisted_cookies
+            cookies: allowlisted_cookies,
+            include_marketing_router_lambda: true,
           },
           # Cached paths that specifically filter query-parameters.
           {
@@ -219,13 +225,15 @@ class HttpCache
             ),
             query: false,
             headers: ALLOWLISTED_HEADERS,
-            cookies: default_cookies
-          }
+            cookies: default_cookies,
+            include_marketing_router_lambda: true,
+          },
         ],
         # Remaining Pegasus paths are cached, and vary only on language, country, and default cookies.
         default: {
           headers: LANGUAGE_HEADER + COUNTRY_HEADER,
-          cookies: default_cookies
+          cookies: default_cookies,
+          include_marketing_router_lambda: true,
         }
       },
       dashboard: {
@@ -235,13 +243,13 @@ class HttpCache
             #
             path: '/assets/*',
             proxy: 'cdo-assets',
-            headers: [],
+            headers: S3_FORWARD_HEADERS,
             cookies: 'none'
           },
           {
             path: '/restricted/*',
             proxy: 'cdo-restricted',
-            headers: [],
+            headers: S3_FORWARD_HEADERS,
             cookies: 'none',
             trusted_signer: true,
           },
@@ -332,7 +340,14 @@ class HttpCache
             path: '/curriculum_tracking_pixel',
             headers: [],
             cookies: allowlisted_cookies
-          }
+          },
+          {
+            # ActionCable Websocket path:
+            path: '/cable',
+            # pass all headers, which disables caching, and also passes essential websocket upgrade headers:
+            headers: ['*'],
+            cookies: allowlisted_cookies,
+          },
         ],
         # Default Dashboard paths are session-specific, allowlist all session cookies and language header.
         default: {

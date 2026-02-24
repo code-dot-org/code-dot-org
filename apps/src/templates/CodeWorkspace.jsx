@@ -11,10 +11,10 @@ import styleConstants from '@cdo/apps/styleConstants';
 import * as utils from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
+import SettingsCog from '../code-studio/components/SettingsCog';
 import {closeWorkspaceAlert} from '../code-studio/projectRedux';
 import {queryParams} from '../code-studio/utils';
 import commonStyles from '../commonStyles';
-import SettingsCog from '../lib/ui/SettingsCog';
 import {shouldUseRunModeIndicators} from '../redux/selectors';
 import {singleton as studioApp} from '../StudioApp';
 import color from '../util/color';
@@ -232,6 +232,14 @@ class CodeWorkspace extends React.Component {
               headerHasFocus={hasFocus}
               iconClass="fa fa-clock-o"
               label={i18n.showVersionsHeader()}
+              isRtl={isRtl}
+              isMinecraft={props.isMinecraft}
+            />
+            <PaneButton
+              id="settings-header"
+              headerHasFocus={hasFocus}
+              iconClass="fa fa-cog"
+              label={'Settings'}
               isRtl={isRtl}
               isMinecraft={props.isMinecraft}
             />

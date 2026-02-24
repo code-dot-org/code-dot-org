@@ -108,7 +108,7 @@
     }
   },
   "https://studio.code.org/s/coursef-2018/lessons/3/levels/1": {
-    "title": "translation missing: en-US.data.unplugged.BuildingAFoundation_2018.title"
+    "title": "translation missing: en.data.unplugged.BuildingAFoundation_2018.title"
   },
   "https://studio.code.org/s/coursef-2018/lessons/4/levels/1": {
     "dsls": {
@@ -347,7 +347,7 @@
     }
   },
   "https://studio.code.org/s/coursef-2018/lessons/6/levels/1": {
-    "title": "translation missing: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title"
+    "title": "translation missing: en.data.unplugged.courseB_unplugged_loopyMRF_2018.title"
   },
   "https://studio.code.org/s/coursef-2018/lessons/7/levels/1": {
     "dsls": {
@@ -866,10 +866,10 @@
     }
   },
   "https://studio.code.org/s/coursef-2018/lessons/13/levels/1": {
-    "title": "translation missing: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title"
+    "title": "translation missing: en.data.unplugged.courseF_unplugged_powerOfWords_2018.title"
   },
   "https://studio.code.org/s/coursef-2018/lessons/14/levels/1": {
-    "title": "translation missing: en-US.data.unplugged.EnvelopeVariables_2018.title"
+    "title": "translation missing: en.data.unplugged.EnvelopeVariables_2018.title"
   },
   "https://studio.code.org/s/coursef-2018/lessons/15/levels/1": {
     "long_instructions": "Let's draw an equilateral triangle. \n\nIt has to be exactly 50 pixels long on each side.",
@@ -1166,7 +1166,7 @@
     }
   },
   "https://studio.code.org/s/coursef-2018/lessons/18/levels/1": {
-    "title": "translation missing: en-US.data.unplugged.ForLoopFun_2018.title"
+    "title": "translation missing: en.data.unplugged.ForLoopFun_2018.title"
   },
   "https://studio.code.org/s/coursef-2018/lessons/19/levels/1": {
     "short_instructions": "Collect the nectar from each flower using the fewest blocks possible.",

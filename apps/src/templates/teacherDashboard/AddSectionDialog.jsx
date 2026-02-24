@@ -2,25 +2,28 @@ import PropTypes from 'prop-types';
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {navigateToHref} from '@cdo/apps/utils';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import BaseDialog from '../BaseDialog';
 
+import {NON_LMS_LOGIN_TYPES} from './LoginTypeConstants';
 import LoginTypePicker from './LoginTypePicker';
 import PadAndCenter from './PadAndCenter';
 import ParticipantTypePicker from './ParticipantTypePicker';
 import {sectionShape} from './shapes';
 import {
-  isAddingSection,
   beginImportRosterFlow,
   setRosterProvider,
   editSectionProperties,
   cancelEditingSection,
-  assignedCourseOffering,
 } from './teacherSectionsRedux';
+import {
+  isAddingSection,
+  assignedCourseOffering,
+} from './teacherSectionsReduxSelectors';
 
 // Navigates to the new section setup page if both params are non-null.
 const redirectToNewSectionPage = (participantType, loginType) => {
@@ -71,13 +74,7 @@ const AddSectionDialog = ({
 
   const onLoginTypeSelection = loginType => {
     // Oauth section types should use the roster dialog, not the section setup page
-    if (
-      [
-        SectionLoginType.picture,
-        SectionLoginType.word,
-        SectionLoginType.email,
-      ].includes(loginType)
-    ) {
+    if (NON_LMS_LOGIN_TYPES.includes(loginType)) {
       redirectToNewSectionPage(participantType, loginType);
     }
     setLoginType(loginType);
@@ -122,8 +119,9 @@ const AddSectionDialog = ({
         useUpdatedStyles
         fixedWidth={1010}
         isOpen={isOpen}
-        overflow="hidden"
+        overflow="auto"
         uncloseable
+        style={{overflow: 'hidden'}}
       >
         <PadAndCenter>{getDialogContent()}</PadAndCenter>
       </BaseDialog>

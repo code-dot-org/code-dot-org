@@ -1,0 +1,17 @@
+name 'CSA U2L9-L5_pilot_alt-2025'
+title 'Check for Understanding'
+description 'Match each term to its correct definition.'
+height '100'
+
+question 'accessor method'
+answer 'gives the value that is currently assigned to an instance variable'
+
+question 'mutator method'
+answer 'changes the value assigned to an instance variable'
+
+question 'Boolean expression'
+answer 'a logical statement that gives either a `true` or `false` value'
+
+question 'compound expression'
+answer 'a combination of expressions'
+allow_multiple_attempts true

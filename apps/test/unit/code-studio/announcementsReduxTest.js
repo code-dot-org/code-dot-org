@@ -1,8 +1,8 @@
 import reducer, {
   addAnnouncement,
   VisibilityType,
-} from '@cdo/apps/code-studio/announcementsRedux'; // eslint-disable-line no-restricted-imports
-import {NotificationType} from '@cdo/apps/templates/Notification';
+} from '@cdo/apps/code-studio/announcementsRedux';
+import {NotificationType} from '@cdo/apps/sharedComponents/Notification';
 
 describe('announcementsRedux', () => {
   it('can add a single teacher announcement', () => {

@@ -4,17 +4,20 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_course": true,
+      "content_area": "curriculum_k_5",
+      "curriculum_umbrella": "CSF",
       "is_migrated": true,
-      "version_year": "2024"
+      "topic_tags": [
+        "maker"
+      ]
     },
     "new_name": null,
-    "family_name": "coursed-maker",
-    "serialized_at": "2024-05-01 18:54:10 UTC",
-    "published_state": "in_development",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-04-03 01:06:30 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "coursed-maker-2024"
     }
@@ -2935,6 +2938,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_d_maker_rock_paper_scissors"
+        ],
         "progression": "Rock, paper, scissors with micro:bit"
       },
       "bonus": false,
@@ -3182,6 +3188,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_d_maker_activity_picker"
+        ],
         "progression": "Activity picker with micro:bit"
       },
       "bonus": false,

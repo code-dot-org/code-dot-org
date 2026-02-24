@@ -36,7 +36,10 @@
     }
   },
   "https://studio.code.org/s/allthethings/lessons/2/levels/7": {
-    "short_instructions": "Move me East to get me to the pig!"
+    "short_instructions": "Move me East to get me to the pig!",
+    "callouts": {
+      "grade2_CaringForNewPet_0_1": "Click here to see the code for the program you're making"
+    }
   },
   "https://studio.code.org/s/allthethings/lessons/3/levels/1": {
     "short_instructions": "Draw the foot of the man with one line"
@@ -89,6 +92,11 @@
       }
     }
   },
+  "https://studio.code.org/s/allthethings/lessons/3/levels/7": {
+    "callouts": {
+      "grade2_CaringForNewPet_0_1": "You have all the same blocks but they've now been arranged in categories"
+    }
+  },
   "https://studio.code.org/s/allthethings/lessons/3/levels/9": {
     "short_instructions": "Now, put the function inside of a loop to draw these three squares.",
     "long_instructions": "Now, put the function inside of a loop to draw these three squares.",
@@ -116,6 +124,15 @@
   },
   "https://studio.code.org/s/allthethings/lessons/4/levels/5": {
     "short_instructions": "Purple flowers may have either 1 or 0 nectar, but you don't know which one! Be careful not to collect nectar from a purple flower if it doesn't have any. Check if the nectar is equal to 1 by using the if block."
+  },
+  "https://studio.code.org/s/allthethings/lessons/4/levels/6": {
+    "short_instructions": "Functions are blocks of code that perform a task.  \n\nUse the `get 5` function to get 5 nectars at a time.",
+    "long_instructions": "Functions are blocks of code that perform a task.  \n\nUse the `get 5` function to get 5 nectars at a time.",
+    "function_definitions": {
+      "get 5": {
+        "name": "get 5"
+      }
+    }
   },
   "https://studio.code.org/s/allthethings/lessons/5/levels/3": {
     "short_instructions": "Let's make the dog speak every number from 1 to 100. Use a `for` loop and the counter block to speak the counter variable each time the loop is run.",
@@ -392,6 +409,40 @@
       "title": "Matching"
     }
   },
+  "https://studio.code.org/s/allthethings/lessons/11/levels/2": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "**Set Player 1 score to 0**"
+        },
+        {
+          "text": "**Player 1 rolls die**"
+        },
+        {
+          "text": "**Add Player 1 roll to total score**"
+        },
+        {
+          "text": "**Compare player scores to see who wins**"
+        }
+      ],
+      "content1": "Match the steps in the Dice Race game to the order that they should appear in the algorithm.",
+      "questions": [
+        {
+          "text": "**1)**"
+        },
+        {
+          "text": "**2)**"
+        },
+        {
+          "text": "**3)**"
+        },
+        {
+          "text": "**4)**"
+        }
+      ],
+      "title": "Matching"
+    }
+  },
   "https://studio.code.org/s/allthethings/lessons/12/levels/2": {
     "long_instructions": "Is teaching _computer science_ different than teaching other subjects like math or reading? Read this list of strategies and comment below on some of the differences you think you'll encounter when teaching computer science versus other subjects.\n\n[This worksheet][0] is also available in the Teacher Dashboard in the \"Lesson Plans and Resources\" tile. \n\n[image][1]\n\n</br>",
     "placeholder": "I think teaching computer science will be different than teaching other subjects in these ways: ...",
@@ -400,7 +451,7 @@
   "https://studio.code.org/s/allthethings/lessons/13/levels/1": {
     "dsls": {
       "content1": "description here",
-      "markdown": "\n## Today you're going to learn how to use and create: **functions**\n\nCreating a function lets you make your own blocks! There are two parts to a function: \n\n* Making a newly named block that has all of the code you want to run inside of it.  \n <xml>\n <block type=\"procedures_defnoreturn\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">get only nectar</title>\n    <statement name=\"STACK\">\n      <block type=\"bee_ifFlower\">\n        <title name=\"LOC\">atFlower</title>\n        <statement name=\"DO\">\n          <block type=\"maze_nectar\" deletable=\"false\"/>\n        </statement>\n      </block>\n    </statement>\n  </block>\n  </xml>\n\n* The single green block itself that you use, or call, to run the function you created.  \n<xml>  \n<block type=\"when_run\" deletable=\"false\" movable=\"false\"/>\n  <block type=\"procedures_callnoreturn\" id=\"callMe\">\n    <mutation name=\"get only nectar\"/>\n  </block>\n  </xml>\n\nPrepare to get familiar with functions, learn how to edit them, and create your own!\n"
+      "markdown": "\n## Today you're going to learn how to use and create: **functions**\n\nCreating a function lets you make your own blocks! There are two parts to a function: \n\n* Making a newly named block that has all of the code you want to run inside of it.  \n\n* The single green block itself that you use, or call, to run the function you created.  \n\nPrepare to get familiar with functions, learn how to edit them, and create your own!\n\n*Note: This level used to include embedded Blockly blocks, but support for that feature was [deprecated](https://github.com/code-dot-org/code-dot-org/pull/63723) in 2025.* \n"
     }
   },
   "https://studio.code.org/s/allthethings/lessons/14/levels/1": {
@@ -426,7 +477,7 @@
   },
   "https://studio.code.org/s/allthethings/lessons/17/levels/1": {
     "short_instructions": "Make a 3x5 letter 'A'. The widget is setup with the incorrect dimensions. Your first task is to set the second byte to the 8-bit binary code for 5: 0000 0101. Then start entering pixel data.",
-    "long_instructions": "<img style=\"float:right; margin:0 20px\" src=\"https://code.org/images/cspunit1/letterA.png\" width=\"150\">\n            # Task 1: Make a 3x5 letter 'A'\n            Start by trying to recreate the 3x5 letter \"A\" depicted (at right) using the pixelation widget. \n          \n            The image is intially setup with the *incorrect* dimensions. Your first task is to set the second byte to the 8-bit binary code for 5: 0000 0101. Then you can start entering pixel data to make the A.\n            "
+    "long_instructions": "<img style=\"float:right; margin:0 20px\" src=\"/blockly/media/cspunit1/letterA.png\" width=\"150\">\n            # Task 1: Make a 3x5 letter 'A'\n            Start by trying to recreate the 3x5 letter \"A\" depicted (at right) using the pixelation widget. \n          \n            The image is intially setup with the *incorrect* dimensions. Your first task is to set the second byte to the 8-bit binary code for 5: 0000 0101. Then you can start entering pixel data to make the A.\n            "
   },
   "https://studio.code.org/s/allthethings/lessons/17/levels/2": {
     "short_instructions": "We start you with the 4x2 image Maddie was creating, but we've left out the last two squares. Finish off the image by figuring out which two colors are missing and encode them.",
@@ -434,7 +485,7 @@
   },
   "https://studio.code.org/s/allthethings/lessons/17/levels/3": {
     "short_instructions": "We start you out with the 4x4 image Maddie created in the video. Your task is to fill a 4x4 grid with colors using 12-bits per pixel. Here are the requirements: Row 1 - fill with shades of red. Row 2 - shades of green. Row 3 - shades of blue. Row 4 - shades of gray.",
-    "long_instructions": "# Pixelation: Task 3\n\n<img src = \"https://code.org/images/cspunit1/ColorTask3.png\" style=\"float:right; margin:0 20px\" width=200>\n**Directions:**\nWe start you out with the 4x4 image Maddie created in the video.\n\nYour task is to fill a 4x4 grid with colors using _12-bits per pixel_. The result should look something like (but not exactly) the image shown at right.  \n\nHere are the requirements:\n\n-   Row 1 - fill with shades of red. \n-   Row 2 - shades of green. \n-   Row 3 - shades of blue. \n-   Row 4 - shades of gray."
+    "long_instructions": "# Pixelation: Task 3\n\n<img src = \"/blockly/media/cspunit1/ColorTask3.png\" style=\"float:right; margin:0 20px\" width=200>\n**Directions:**\nWe start you out with the 4x4 image Maddie created in the video.\n\nYour task is to fill a 4x4 grid with colors using _12-bits per pixel_. The result should look something like (but not exactly) the image shown at right.  \n\nHere are the requirements:\n\n-   Row 1 - fill with shades of red. \n-   Row 2 - shades of green. \n-   Row 3 - shades of blue. \n-   Row 4 - shades of gray."
   },
   "https://studio.code.org/s/allthethings/lessons/17/levels/4": {
     "short_instructions": "This pixelation level demonstrates the use of the `hide_encoding_controls` option.  Notice that the level displays the image data in hexadecimal and does not let you change it back to binary.",
@@ -544,7 +595,7 @@
   },
   "https://studio.code.org/s/allthethings/lessons/20/levels/1": {
     "dsls": {
-      "markdown": "## Welcome!\n\n<img style=\"float:left; margin:0 20px\" src=\"//code.org/images/edquote1.png\" height=\"910\" width=\"400\">\n\n<p><strong>Welcome to Code.org&#39;s K-5 Intro to Computer Science Online Professional Development Course.</strong> </p>\n\n<p>Code.org&#39;s professional development program prepares you to integrate computer science into your classroom and supports your growth as a teacher. This online course may be sufficient for some teachers to start using our materials in their classrooms, but if you are looking for further professional development, please see our workshops hosted in the United States for K-5 Educators. These are high-quality workshops taught by seasoned computer science educators. </p>\n\n<p><a href=\"http://code.org/professional-development-workshops\">Sign up for a workshop here</a>.</p>\n\n<p>During this online course, you&#39;ll watch videos, read articles, do online activities, and discuss with other teachers about the basics of computer science and how to use Code.org&#39;s online learning system. We want to let you explore writing computer programs on your own so that you can experience the excitement of teaching computer science.</p>\n\n<p>During the PD program and anytime afterward, Code.org and our community of engaged educators will always be around for support at <a href=\"http://support.code.org\">http://support.code.org</a>.</p>\n\n</br>\n\n\n"
+      "markdown": "## Welcome!\n\n<img style=\"float:left; margin:0 20px\" src=\"/blockly/media/edquote1.png\" height=\"910\" width=\"400\">\n\n<p><strong>Welcome to Code.org&#39;s K-5 Intro to Computer Science Online Professional Development Course.</strong> </p>\n\n<p>Code.org&#39;s professional development program prepares you to integrate computer science into your classroom and supports your growth as a teacher. This online course may be sufficient for some teachers to start using our materials in their classrooms, but if you are looking for further professional development, please see our workshops hosted in the United States for K-5 Educators. These are high-quality workshops taught by seasoned computer science educators. </p>\n\n<p><a href=\"http://code.org/professional-development-workshops\">Sign up for a workshop here</a>.</p>\n\n<p>During this online course, you&#39;ll watch videos, read articles, do online activities, and discuss with other teachers about the basics of computer science and how to use Code.org&#39;s online learning system. We want to let you explore writing computer programs on your own so that you can experience the excitement of teaching computer science.</p>\n\n<p>During the PD program and anytime afterward, Code.org and our community of engaged educators will always be around for support at <a href=\"http://support.code.org\">http://support.code.org</a>.</p>\n\n</br>\n\n\n"
     }
   },
   "https://studio.code.org/s/allthethings/lessons/20/levels/2": {
@@ -2474,6 +2525,33 @@
   },
   "https://studio.code.org/s/allthethings/lessons/36/levels/3": {
     "long_instructions": "This is an allthethings level used to test the modal function editor.",
+    "function_definitions": {
+      "set background": {
+        "name": "set background"
+      }
+    },
+    "behavior_names": {
+      "spinning left": "spinning left",
+      "growing": "growing",
+      "jittering": "jittering",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "swimming left and right": "swimming left and right",
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "patrolling": "patrolling",
+      "moving with arrow keys": "moving with arrow keys",
+      "wobbling": "wobbling",
+      "driving with arrow keys": "driving with arrow keys",
+      "moving east and looping": "moving east and looping",
+      "fluttering": "fluttering",
+      "moving west and looping": "moving west and looping",
+      "moving north and looping": "moving north and looping",
+      "moving south and looping": "moving south and looping"
+    },
     "behavior_descriptions": {
       "rotate a sprite to its left": "rotate a sprite to its left",
       "change the size of a sprite": "change the size of a sprite",
@@ -2496,6 +2574,28 @@
   },
   "https://studio.code.org/s/allthethings/lessons/36/levels/4": {
     "long_instructions": "This is an allthethings Sprite Lab level that uses a variety of blocks",
+    "behavior_names": {
+      "spinning left": "spinning left",
+      "growing": "growing",
+      "jittering": "jittering",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "swimming left and right": "swimming left and right",
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "patrolling": "patrolling",
+      "moving with arrow keys": "moving with arrow keys",
+      "wobbling": "wobbling",
+      "driving with arrow keys": "driving with arrow keys",
+      "moving east and looping": "moving east and looping",
+      "fluttering": "fluttering",
+      "moving west and looping": "moving west and looping",
+      "moving north and looping": "moving north and looping",
+      "moving south and looping": "moving south and looping"
+    },
     "behavior_descriptions": {
       "rotate a sprite to its left": "rotate a sprite to its left",
       "change the size of a sprite": "change the size of a sprite",
@@ -2919,11 +3019,40 @@
   "https://studio.code.org/s/allthethings/lessons/46/levels/4": {
     "long_instructions": "Try everything!"
   },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/5": {
+    "long_instructions": "This is an advanced music level. Try everything!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/6": {
+    "long_instructions": "This level shares a project with the next level in the progression."
+  },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/7": {
+    "long_instructions": "This level shares a project with the previous level in the progression.\n\nThis is a template-backed submittable level with validation.",
+    "validations": {
+      "Music Project Level 2_9b072f97-fd3a-496d-966e-1e82ddc3ad7a": "You played one sound!",
+      "Music Project Level 2_add0a56d-b34f-4d66-9159-b386e97cb8c1": "Please play one sound."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/8": {
+    "long_instructions": "## Predict and Run\n\n**What do you think this program does?**\n\nTake a look at the code in this program. Write down what you think this program will do. There are no wrong answers!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/9": {
+    "long_instructions": "## Predict and Run\n\n**What do you think this program does?**\n\nTake a look at the code in this program. Which of the following do you expect to hear?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/10": {
+    "long_instructions": "### Assessment\n\nCreate a song using multiple sounds! Each part of your song should include a different type of sound.\n\nExperiment and have fun!\n\n_Tips_:\n\n-   Try using blocks from different packs.\n-   Try using the Play Together and repeat blocks.\n-   Try factoring your song using functions."
+  },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/11": {
+    "long_instructions": "### Assessment 2\n\n-   _This level does **not** require you to edit and run your code before submitting._\n-   _This level does have validation._\n\nCreate a song using multiple sounds! Each part of your song should include a different type of sound.\n\nExperiment and have fun!\n\n_Tips_:\n\n-   Try using blocks from different packs.\n-   Try using the Play Together and repeat blocks.\n-   Try factoring your song using functions.",
+    "validations": {
+      "Submittable Music Level 2_2b74745f-e210-45fa-9a07-4f6698b68850": "You played one sound!",
+      "Submittable Music Level 2_5594a84f-c061-4811-af8d-e380c7cb0345": "Please play a sound."
+    }
+  },
   "https://studio.code.org/s/allthethings/lessons/47/levels/1": {
-    "long_instructions": "## Sample Instructions\n\nThis is a chat bot which allows you to talk to historical figures.\n\n### Do This\n\nType in a question and press the `Submit`(#7435b2) button. What can you learn about Ada Lovelace?"
+    "long_instructions": "## Sample Instructions\n\nThis is a chat bot which allows you to talk to historical figures.\n\n### Do This\n\nType in a question and press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button. What can you learn about Ada Lovelace?"
   },
   "https://studio.code.org/s/allthethings/lessons/47/levels/2": {
-    "long_instructions": "# AI Chat 2\n\n## Sample Instructions\n\nThis is a chat bot which helps you with grammar and punctuation to improve your writing.\n\n### Do This\n\nType in a paragraph that you'd like to revise and press the `Submit`(#7435b2) button."
+    "long_instructions": "# AI Chat 2\n\n## Sample Instructions\n\nThis is a chat bot which helps you with grammar and punctuation to improve your writing.\n\n### Do This\n\nType in a paragraph that you'd like to revise and press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button."
   },
   "https://studio.code.org/s/allthethings/lessons/47/levels/3": {
     "long_instructions": "Project Template Backed Level #1"
@@ -2933,6 +3062,12 @@
   },
   "https://studio.code.org/s/allthethings/lessons/47/levels/5": {
     "long_instructions": "Project Template Backed Level #3"
+  },
+  "https://studio.code.org/s/allthethings/lessons/47/levels/6": {
+    "long_instructions": "This level allows multimodal (ie, images, PDFs) inputs to gpt-4o-mini as a base model. It is used in UI tests."
+  },
+  "https://studio.code.org/s/allthethings/lessons/47/levels/7": {
+    "long_instructions": "# Assessment\n\nCreate a chatbot that only responds with movie quotes. If asked to respond with anything else, it should say \"I can't do that\".\n\n_Do This_:\n\n-   Use retrieval to include movie quotes.\n-   Experiment with temperature.\n-   Experiment with model selection."
   },
   "https://studio.code.org/s/allthethings/lessons/48/levels/1": {
     "long_instructions": "# Create Your Scene - Sprites\n\nWith your background in place, it's time to add your sprites.\n\n# Do This\n\n1.  Add or draw at least 2 sprite animations in the Animation Tab.\n2.  Create at least 2 sprites and assign each one an animation.\n3.  Set the value for any sprite properties you'd like to use.\n    -   _Try to use at least 1 sprite property (such as rotation, scale, tint or any others in the Toolbox) with each sprite._\n4.  Draw all of your sprites to the screen."
@@ -2971,11 +3106,58 @@
     "long_instructions": "## Submittable Level\n\nHere's a sample submittable level!",
     "teacher_markdown": "Teachers should see this extra info."
   },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/8": {
+    "long_instructions": "## Python Lab with micro:bit enabled\n\nConnect your micro:bit, write a MicroPython program in the workspace, then click on the 'Send to micro:bit' button.\n\nIf you open your dev console, you will see a log of the percent completion and also when the flashing of the micro:bit is completed.",
+    "teacher_markdown": "Teachers should see this extra info."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/9": {
+    "long_instructions": "## Neighborhood level with validation",
+    "teacher_markdown": "Teachers should see this extra info."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/10": {
+    "long_instructions": "## Neighborhood level",
+    "teacher_markdown": "Teachers should see this extra info."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/11": {
+    "long_instructions": "## Python Lab Console Widget View\n\nPress the Run button and see what happens.\nThis is an example of the widget view.",
+    "teacher_markdown": "Teachers should see this extra info."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/12": {
+    "long_instructions": "## Python Lab Neighborhood Widget View\n\nPress the Run button and see what happens.\nThis is an example of the widget view.",
+    "teacher_markdown": "Teachers should see this extra info."
+  },
   "https://studio.code.org/s/allthethings/lessons/51/levels/1": {
-    "long_instructions": "Add **html** pages and preview them in the right pane.\n\nAdd **css** pages (and link them to your html).\n\nUse the file browser to add/rename/delete files, or to add/rename/delete folders (including hierarchically!)"
+    "long_instructions": "Add **html** pages and preview them in the right pane.\n\nAdd **css** pages (and link them to your html).\n\nUse the file browser to add/rename/delete files, or to add/rename/delete folders (including hierarchically!)\n\nThis level uses AI Tutor \"Outline\" mode and is configured to end all responses with \"Have a good day!\""
   },
   "https://studio.code.org/s/allthethings/lessons/51/levels/2": {
-    "long_instructions": "## Web Lab 2 Basics\n\nCreate your own web page!"
+    "long_instructions": "## Web Lab 2 Basics\n\nCreate your own web page!\n\nThis uses AI Tutor \"Produce\" mode."
+  },
+  "https://studio.code.org/s/allthethings/lessons/51/levels/3": {
+    "long_instructions": "This level shares a template level with Level 4 in this script. It uses AI Tutor \"Suggest\" mode."
+  },
+  "https://studio.code.org/s/allthethings/lessons/51/levels/4": {
+    "long_instructions": "This level shares a template level with Level 3 in this script. It uses AI tutor mode \"guide\"."
+  },
+  "https://studio.code.org/s/allthethings/lessons/51/levels/5": {
+    "long_instructions": "## Web Lab 2 Lab Widget View\n\nThis is an example of widget view without toggle to view/hide code so workspace is always hidden."
+  },
+  "https://studio.code.org/s/allthethings/lessons/51/levels/6": {
+    "long_instructions": "## Web Lab 2 with Initial View Mode Set to Preview\n\nThis is an example of setting the initial \"view mode\" to preview, with the option to switch to see code."
+  },
+  "https://studio.code.org/s/allthethings/lessons/51/levels/7": {
+    "long_instructions": "## Web Lab 2 Predict Level\n\nThis is an example of a predict level with free response.\n\nWhat will happen when you click on the 'Click me' button? Submit your answer and then try it out!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/51/levels/8": {
+    "long_instructions": "## Web Lab 2 Predict Level\n\nThis is an example of a predict level with multiple choice options.\n\nWhat will happen when you click on the 'Click me' button? Submit your answer and then try it out!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/51/levels/9": {
+    "long_instructions": "### Assessment\n\nThis is a submittable level! Create a web page that shares an interest of yours.\n\nAdd an HTML and CSS file to your project."
+  },
+  "https://studio.code.org/s/allthethings/lessons/51/levels/10": {
+    "long_instructions": "Add **html** pages and preview them in the right pane.\n\nAdd **css** pages (and link them to your html).\n\nUse the file browser to add/rename/delete files, or to add/rename/delete folders (including hierarchically!)\n\nThis level uses all of AI Tutor modes. For now, it is the last level of the progression. "
+  },
+  "https://studio.code.org/s/allthethings/lessons/51/levels/11": {
+    "long_instructions": "This is the level for a basic Web Lab 2 UI Test.\nPlease do not change the start code for this level without changing the UI test!"
   },
   "https://studio.code.org/s/allthethings/lessons/52/levels/1": {
     "long_instructions": "Try everything!"
@@ -2999,25 +3181,178 @@
   },
   "https://studio.code.org/s/allthethings/lessons/52/levels/8": {
     "dsls": {
-      "description": "This Bubble Choice level is currently NOT on lab2, but all the sublevels here should be Lab2 levels",
-      "display_name": "Lab2 BubbleChoice Showcase"
+      "description": "This Bubble Choice level and all sublevels use Lab2.",
+      "display_name": "Lab2 Bubble Choice"
     },
     "sublevels": {
       "AI Chat Sublevel": {
+        "bubble_choice_description": "This is an AI Chat sublevel. ",
         "long_instructions": "# AI Chat 2\r\n\r\n## Sample Instructions\r\n\r\nThis is a chat bot which helps you with grammar and punctuation to improve your writing.\r\n\r\n### Do This\r\n\r\nType in a paragraph that you'd like to revise and press the `Submit`(#7435b2) button."
       },
       "Music Sublevel": {
+        "bubble_choice_description": "This is a Music Lab sublevel.",
         "validations": {
           "Music Sublevel_20cb71d4-b13c-4494-8ca0-a234414ec12d": "Nice work.",
           "Music Sublevel_e826dcbb-1947-42a8-b66f-aa676119b013": "Please play one sound."
         }
       },
       "Python Lab Sublevel": {
+        "bubble_choice_description": "This is a Python Lab sublevel.",
         "long_instructions": "## Python Lab Basics\r\n\r\nTry adding some new code."
       },
       "Weblab2 Sublevel": {
+        "bubble_choice_description": "This is a Weblab2 sublevel.",
         "long_instructions": "## Web Lab 2 Basics\r\n\r\nCreate your own web page!"
       }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/53/levels/1": {
+    "dsls": {
+      "title": "Activity Guide Levelgroup"
+    },
+    "sublevels": {
+      "test-single-multi-retriable-in-levelgroup": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Nothing will happen.",
+              "correct": false,
+              "feedback": "Incorrect. The tumbleweed will begin tumbling."
+            },
+            {
+              "text": "The tumbleweed will float to the top of the screen.",
+              "correct": false,
+              "feedback": "Incorrect. The tumbleweed will begin tumbling."
+            },
+            {
+              "text": "The tumbleweed will begin tumbling.",
+              "correct": true,
+              "feedback": "Correct!"
+            },
+            {
+              "text": "The tumbleweed will blink on and off.",
+              "correct": false,
+              "feedback": "Incorrect. The tumbleweed will begin tumbling."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. What will happen after you click \"Run\"?"
+            }
+          ]
+        }
+      },
+      "test-free-response-retriable-in-levelgroup": {
+        "long_instructions": "What do you think this program does?"
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/53/levels/2": {
+    "dsls": {
+      "title": "Activity Guide Levelgroup"
+    },
+    "sublevels": {
+      "test-single-multi-retriable-in-levelgroup": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Nothing will happen.",
+              "correct": false,
+              "feedback": "Incorrect. The tumbleweed will begin tumbling."
+            },
+            {
+              "text": "The tumbleweed will float to the top of the screen.",
+              "correct": false,
+              "feedback": "Incorrect. The tumbleweed will begin tumbling."
+            },
+            {
+              "text": "The tumbleweed will begin tumbling.",
+              "correct": true,
+              "feedback": "Correct!"
+            },
+            {
+              "text": "The tumbleweed will blink on and off.",
+              "correct": false,
+              "feedback": "Incorrect. The tumbleweed will begin tumbling."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. What will happen after you click \"Run\"?"
+            }
+          ]
+        }
+      },
+      "test-free-response-retriable-in-levelgroup": {
+        "long_instructions": "What do you think this program does?"
+      },
+      "K-1 Plant a Seed Multi 1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/poke-hole.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/dirty-teeth.png",
+              "correct": true
+            }
+          ],
+          "content1": "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png",
+          "questions": [
+            {
+              "text": "Which step should go at the beginning of this algorithm?"
+            }
+          ],
+          "title": "Multiple Choice"
+        }
+      },
+      "K-1 Plant a Seed Multi 2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/brush-teeth.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/cover-seed.png",
+              "correct": true
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/water-pot.png",
+              "correct": false
+            }
+          ],
+          "content1": "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png",
+          "questions": [
+            {
+              "text": "Which step should fill in the blank for this algorithm?"
+            }
+          ],
+          "title": "Multiple Choice"
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/54/levels/1": {
+    "long_instructions": "This is the first allthethings level for Sketch Lab!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/54/levels/2": {
+    "long_instructions": "This level has some starter \"code\" (ie, an image, text, and a shape) as well as an exemplar solution."
+  },
+  "https://studio.code.org/s/allthethings/lessons/54/levels/3": {
+    "long_instructions": "This is a template-backed level, and it shares a template with the fourth level in this progression."
+  },
+  "https://studio.code.org/s/allthethings/lessons/54/levels/4": {
+    "long_instructions": "This is a template-backed level, and it shares a template with the third level in this progression."
+  },
+  "https://studio.code.org/s/allthethings/lessons/55/levels/1": {
+    "dsls": {
+      "markdown": "# My Online Neighborhood\n\n## How do you go places safely online?\n"
     }
   }
 }

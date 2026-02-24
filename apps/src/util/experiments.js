@@ -12,15 +12,12 @@ import DCDO from '@cdo/apps/dcdo';
 
 import {trySetLocalStorage} from '../utils';
 
-import trackEvent from './trackEvent';
-
 const queryString = require('query-string');
 
 const experiments = module.exports;
 // Needed to support TypeScript usage.
 export default experiments;
 const STORAGE_KEY = 'experimentsList';
-const GA_EVENT = 'experiments';
 const EXPERIMENT_LIFESPAN_HOURS = 12;
 
 // Specific experiment names
@@ -37,35 +34,48 @@ experiments.I18N_TRACKING = 'frontend-i18n-tracking';
 experiments.TIME_SPENT = 'time-spent';
 experiments.BYPASS_DIALOG_POPUP = 'bypass-dialog-popup';
 experiments.SPECIAL_TOPIC = 'special-topic';
-experiments.OPT_IN_EMAIL_REG_PARTNER = 'optInEmailRegPartner';
 // Experiment for showing a backgrounds tab and enabling student upload
 // for Sprite Lab animations
 experiments.BACKGROUNDS_AND_UPLOAD = 'backgroundsTab';
 experiments.SECTION_SETUP_REFRESH = 'sectionSetupRefresh';
 // Experiment for showing the gender field
 experiments.GENDER_FEATURE_ENABLED = 'gender';
-// Experiment for enabling the CPA lockout
-experiments.CPA_EXPERIENCE = 'cpa_experience';
 // Experiment for enabling the AI-TA differentiation chat
 experiments.AI_DIFFERENTIATION = 'ai-differentiation';
-experiments.AI_RUBRICS = 'ai-rubrics';
-experiments.NON_AI_RUBRICS = 'non-ai-rubrics';
-// Experiment for showing the toggle a teacher can use to turn on AI Tutor for their section
-experiments.AI_TUTOR_ACCESS = 'ai-tutor';
-// Uses Google Blockly for a given user across labs/levels until the experiment is disabled
-experiments.GOOGLE_BLOCKLY = 'google_blockly';
-// Adds documentation links to block context menus in Sprite Lab (supported with Google Blockly only)
-experiments.SPRITE_LAB_DOCS = 'sl_docs';
-// Adds a keyboard navigation toggle to the workspace header in Google Blockly labs
-experiments.KEYBOARD_NAVIGATION = 'blockly_keyboard';
-// Adds the ability to toggle between v1 and v2 of the section progress page of the teacher dashboard
-experiments.SECTION_PROGRESS_V2 = 'section_progress_v2';
+// Experiment for enabling the AI-TA differentiation artifacts
+experiments.AI_ARTIFACT = 'ai-artifact';
+// Experiment for showing the ai chat new permissions page and enabling permissions to take effect
+experiments.AI_CHAT_NEW_PERMISSIONS = 'ai-chat-new-permissions';
+// Adds a "Get help with this block" option to block context menus if docs exist (e.g. Sprite Lab)
+experiments.BLOCKLY_DOCS = 'blockly_docs';
 // Allows the playspace to be dragged to take up a larger portion of the screen
 experiments.BIG_PLAYSPACE = 'bigPlayspace';
-// Shows the new sign-up flow
-experiments.NEW_SIGN_UP_FLOW = 'new_sign_up_flow';
-// Allows teacher view of student chat history in aichat workspace
-experiments.VIEW_CHAT_HISTORY = 'view_chat_history';
+// Use glow effect for Blockly block highlighting
+experiments.BLOCKLY_GLOW_HIGHLIGHT = 'blockly-glow-highlight';
+// Turn on Blockly Keyboard Navigation
+experiments.BLOCKLY_KEYBOARD_NAVIGATION = 'blockly-keyboard-navigation';
+// Use nested course URLs like /courses/csd-2024/units/1/...
+experiments.MODULARITY = 'modularity';
+// LocalizeJS
+experiments.LOCALIZEJS = 'localizejs';
+// Show AI Tutor in legacy labs
+experiments.LEGACY_LAB_AI_TUTOR = 'legacy-lab-ai-tutor';
+// Enable ActionCable load testing
+experiments.ACTIONCABLE_LOAD_TESTING = 'actioncable-load-testing';
+// Use AI Tutor system prompts from Langfuse
+experiments.USE_LANGFUSE_PROMPT = 'use-langfuse-prompt';
+// Enable AI lesson podcasts
+experiments.AI_LESSON_PODCASTS = 'ai-lesson-podcasts';
+// Use channel-id based preview urls on localhost for Web Lab 2
+experiments.WEBLAB2_FULL_URLS = 'weblab2-full-urls';
+// Show unified diff view in Code Editor.
+experiments.ACCEPT_REJECT_UNIFIED_DIFF = 'accept-reject-unified-diff';
+// Show split diff view in Code Editor.
+experiments.ACCEPT_REJECT_SPLIT_DIFF = 'accept-reject-split-diff';
+// Show debug panel in Web Lab 2
+experiments.WEBLAB2_DEBUG_PANEL = 'weblab2-show-debug';
+// Enable the new teacher dashboard student snapshot page and features
+experiments.STUDENT_SNAPSHOT = 'student-snapshot';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,
@@ -122,13 +132,11 @@ experiments.setEnabled = function (key, shouldEnable, expiration = undefined) {
   if (shouldEnable) {
     if (experimentIndex < 0) {
       allEnabled.push({key, expiration});
-      trackEvent(GA_EVENT, 'enable', key);
     } else {
       allEnabled[experimentIndex].expiration = expiration;
     }
   } else if (experimentIndex >= 0) {
     allEnabled.splice(experimentIndex, 1);
-    trackEvent(GA_EVENT, 'disable', key);
   } else {
     return;
   }

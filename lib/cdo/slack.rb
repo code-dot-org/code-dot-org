@@ -33,6 +33,10 @@ class Slack
     'server-operations' => 'C0CCSS3PX'
   }.freeze
 
+  USER_GROUP_ID_MAP = {
+    'teacher-tools-on-call': 'S07FB3XSAR5'
+  }.freeze
+
   SLACK_TOKEN = CDO.methods.include?(:slack_token) ? CDO.slack_token.freeze : nil
   SLACK_BOT_TOKEN = CDO.methods.include?(:slack_bot_token) ? CDO.slack_bot_token.freeze : nil
 
@@ -47,6 +51,18 @@ class Slack
     user = members.find {|member| email == member['profile']['email']}
     raise "Slack email #{email} not found" unless user
     user['name']
+  end
+
+  # Returns a mention tag '<@id>' for a user based on their email.
+  # @param email [String] The email of the Slack user.
+  # @raise [ArgumentError] If the email does not correspond to a Slack user.
+  # @return [nil | String] The user (mention) tag for the Slack user.
+  def self.user_mention_tag(email)
+    members = post_to_slack("https://slack.com/api/users.list")['members']
+    raise "Failed to query users.list" unless members
+    user = members.find {|member| email == member['profile']['email']}
+    raise "Slack email #{email} not found" unless user
+    "<@#{user['id']}>"
   end
 
   def self.user_id(name)
@@ -163,21 +179,18 @@ class Slack
     return !!result
   end
 
-  # @param room [String] Channel name or id to post the snippet.
-  # @param text [String] Snippet text.
-  def self.snippet(room, text)
-    # omit leading '#' when passing channel names to this API
-    channel = CHANNEL_MAP[room] || room
-    result = post_to_slack("https://slack.com/api/files.upload?channels=#{channel}&content=#{URI.encode_www_form_component(text)}")
-    return !!result
-  end
-
   # @param name [String] Name of the Slack channel to join.
   def self.join_room(name)
     channel = get_channel_id(name)
     return false unless channel
     result = post_to_slack("https://slack.com/api/conversations.join", {"channel" => channel})
     return !!result
+  end
+
+  # @param message [String] the message to update to tag the user_group
+  # @param user_group [String] slack user group to be tagged for notification
+  def self.tag_user_group(message, user_group)
+    "<!subteam^#{USER_GROUP_ID_MAP[user_group&.to_sym]}> #{message}"
   end
 
   # Returns the channel ID for the channel with the requested channel_name.

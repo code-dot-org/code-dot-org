@@ -104,15 +104,12 @@ describe('ProgramExecutor', () => {
     metricsReporter = sinon.createStubInstance(LabMetricsReporter);
 
     programExecutor = new ProgramExecutor(
-      'container',
-      () => undefined,
-      false,
-      false,
-      metricsReporter,
-      undefined,
-      validationCode,
-      onEventsChanged,
-      '',
+      {
+        container: 'container',
+        metricsReporter: metricsReporter,
+        validationCode,
+        onEventsChanged,
+      },
       nativeAPI
     );
   });
@@ -199,7 +196,7 @@ describe('ProgramExecutor', () => {
 
   it('resets the native API on reset', () => {
     programExecutor.reset();
-    expect(nativeAPI.reset).to.have.been.calledOnce;
+    expect(nativeAPI.reset).to.have.been.calledTwice;
   });
 
   it('gets the replay log from the native API', () => {

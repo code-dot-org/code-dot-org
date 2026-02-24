@@ -6,7 +6,7 @@ theme: responsive
 # Privacy Policy
 Date of Last Revision: April 4, 2024
 
-You can review the previous Privacy Policy [here](/privacy-jun2023).
+To see previous privacy policies [click here](/privacy/archive).
 
 [<img src="/shared/images/student_privacy_pledge.png" width="120" target="_blank" style="margin-top: 1rem">](http://studentprivacypledge.org/)
 

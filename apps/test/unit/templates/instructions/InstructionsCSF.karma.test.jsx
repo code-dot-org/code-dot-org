@@ -17,6 +17,7 @@ import instructions, {
 } from '@cdo/apps/redux/instructions';
 import pageConstants, {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import InstructionsCSF from '@cdo/apps/templates/instructions/InstructionsCSF';
+import {convertXmlToBlockly} from '@cdo/apps/templates/instructions/utils';
 
 describe('InstructionsCSF', () => {
   beforeEach(() => {
@@ -39,7 +40,7 @@ describe('InstructionsCSF', () => {
     restoreRedux();
   });
 
-  it('can change feedback when rendering different blockly blocks', () => {
+  it('can change feedback when rendering different blockly blocks', async () => {
     const wrapper = mount(
       <Provider store={getStore()}>
         <InstructionsCSF {...DEFAULT_PROPS} />
@@ -49,22 +50,26 @@ describe('InstructionsCSF', () => {
 
     failWithMessage('Repeat block: <xml><block type="controls_repeat"/></xml>');
     wrapper.update();
-    assertFeedbackContainsText(wrapper, '>repeat</text>');
+    await assertFeedbackContainsText(wrapper, '>repeat</text>');
 
     failWithMessage('If block: <xml><block type="controls_if"/></xml>');
     wrapper.update();
-    assertFeedbackContainsText(wrapper, '>if</text>');
+    await assertFeedbackContainsText(wrapper, '>if</text>');
   });
 
   function failWithMessage(message) {
     getStore().dispatch(setFeedback({message, isFailure: true}));
   }
 
-  function assertFeedbackContainsText(wrapper, text) {
-    const html = wrapper
+  async function assertFeedbackContainsText(wrapper, text) {
+    const containerNode = wrapper
       .find('.uitest-topInstructions-inline-feedback')
       .first()
-      .html();
+      .getDOMNode();
+    // Ensure embedded workspaces are fully created before we inspect the HTML.
+    // convertXmlToBlockly returns a Promise when it does async theme lookup.
+    await Promise.resolve(convertXmlToBlockly(containerNode));
+    const html = containerNode.innerHTML;
     assert.include(html, text);
   }
 });

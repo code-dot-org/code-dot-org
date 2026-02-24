@@ -1,0 +1,34 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-04-03T03:41:51.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "##Python Lab\nYour students will start with Python Lab, a browser-based editor for programming in Python, for their initial lessons.\n \nClick **'Next'** to get acquainted with the features of Python Lab. ",
+        "imageUrl": "https://images.code.org/6bf1a5f608347bd2c9985ba978e9349f-pythonLab.png",
+        "key": "sp-pl-DS-SpreadsheetVocab-23803e7b-4230-4c32-ac36-59aaf29309ce"
+      },
+      {
+        "text": "**Toggle File Icon:** Switches between different files in your project, like your main code file or extra resources.\n\n**Version History:** Lets you go back to an earlier version of your code or reset it if something goes wrong.\n\n**Erase Console:** Clears the console so you can more easily see new output without old messages in the way.",
+        "imageUrl": "https://images.code.org/01164bfed85955f212624c224dcc74a2-pythonLab (3).png",
+        "key": "sp-pl-DS-pythonLab_tour-e31a5299-fb7b-4695-ac1f-5a80498a9378",
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "**Resize Handle:**  Drag up or down to make the code area or console bigger, depending on what you want to focus on.\n\n**Layout Window:** Change how the panels are arranged so it’s easier for you to work the way you like.\n\n## What's Next?\nYou will learn about variable types and then try some coding in Python lab. ",
+        "imageUrl": "https://images.code.org/909f56584d19be899b4e045733a86e42-pythonLab (5).png",
+        "key": "sp-pl-DS-pythonLab_tour-62a7ff61-8b6a-4901-8cb3-26fcd990f873",
+        "layout": "text-bottom-left"
+      }
+    ],
+    "name_suffix": "_2024",
+    "offer_browser_tts": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-04-03T03:41:51.798+00:00\",\"changed\":[\"cloned from \\\"csaif-PL-pythonLab_tour-L1-5_python\\\"\"],\"cloned_from\":\"csaif-PL-pythonLab_tour-L1-5_python\"}]"
+}]]></config>
+</Panels>

@@ -2,10 +2,8 @@ import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {NotificationType} from '@cdo/apps/sharedComponents/Notification';
 import {UnconnectedCourseOverview as CourseOverview} from '@cdo/apps/templates/courseOverview/CourseOverview';
-import {NotificationType} from '@cdo/apps/templates/Notification';
-import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
-import * as utils from '@cdo/apps/utils';
 
 import {VisibilityType} from '../../../../src/code-studio/announcementsRedux';
 
@@ -27,6 +25,7 @@ const defaultProps = {
       title: 'CSP Unit 1',
       name: 'csp1',
       description: 'desc',
+      path: '/courses/csp/units/1',
     },
     {
       course_id: 30,
@@ -34,6 +33,7 @@ const defaultProps = {
       title: 'CSP Unit 2',
       name: 'csp2',
       description: 'desc',
+      path: '/courses/csp/units/2',
     },
   ],
   isVerifiedInstructor: true,
@@ -115,13 +115,6 @@ describe('CourseOverview', () => {
     );
   });
 
-  it('renders a top row for instructors', () => {
-    const wrapper = shallow(
-      <CourseOverview {...defaultProps} isInstructor={true} />
-    );
-    expect(wrapper.find('CourseOverviewTopRow').length).toEqual(1);
-  });
-
   it('renders a CourseScript for each script', () => {
     const wrapper = shallow(<CourseOverview {...defaultProps} />);
     expect(wrapper.find('Connect(CourseScript)').length).toEqual(2);
@@ -158,49 +151,6 @@ describe('CourseOverview', () => {
         <CourseOverview {...propsToShow} viewAs={ViewType.Participant} />
       );
       expect(wrapper.find('VerifiedResourcesNotification').length).toEqual(0);
-    });
-  });
-
-  describe('versions dropdown', () => {
-    beforeEach(() => {
-      jest.spyOn(utils, 'navigateToHref').mockClear().mockImplementation();
-    });
-
-    afterEach(() => {
-      utils.navigateToHref.mockRestore();
-    });
-
-    it('appears when two versions are present and viewable', () => {
-      const wrapper = shallow(
-        <CourseOverview
-          {...defaultProps}
-          versions={courseOfferings['2'].course_versions}
-          isInstructor={true}
-        />
-      );
-
-      const versionSelector = wrapper.find('AssignmentVersionSelector');
-      expect(versionSelector.length).toBe(1);
-      const renderedVersions = versionSelector.props().courseVersions;
-      expect(2).toEqual(Object.values(renderedVersions).length);
-    });
-
-    it('does not appear when only one version is viewable', () => {
-      const wrapper = shallow(
-        <CourseOverview
-          {...defaultProps}
-          versions={courseOfferings['3'].course_versions}
-          isInstructor={true}
-        />
-      );
-      expect(wrapper.find('AssignmentVersionSelector').length).toBe(0);
-    });
-
-    it('does not appear when no versions are present', () => {
-      const wrapper = shallow(
-        <CourseOverview {...defaultProps} isInstructor={true} />
-      );
-      expect(wrapper.find('AssignmentVersionSelector').length).toBe(0);
     });
   });
 });

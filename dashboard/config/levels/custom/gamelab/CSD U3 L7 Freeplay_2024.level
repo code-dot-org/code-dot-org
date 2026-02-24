@@ -91,12 +91,12 @@
     "validation_enabled": "false",
     "teacher_markdown": "This level does not contain an exemplar because of how open-ended the directions are. Instead, we encourage you to consider this as a focused free-play level: students are free to design a scene based on their own interests and creative expression, but focused in a particular area to give some initial guidance. This can be an opportunity to gain insights and offer feedback on the skills students demonstrate while building their scene, even if they do not finish the level completely. This type of level can also reinforce the Problem Solving Process as students ideate and develop a web page of their own choosing (Define - Prepare - Try - Reflect).\r\n\r\nAs students develop more skills throughout the unit, they may decide to use an idea from this level as the basis for one of their projects or to continue developing on their own time.",
     "bubble_choice_description": "Create a scene with your favorite animal doing your favorite activity!",
-    "start_blocks": "//1) Add or draw your sprites in the Animation Tab.\r\n\r\n//2) Create your sprites and set it's animation.\r\n\r\n//3) Add a draw loop and add the code needed to animate your favorite animal.",
+    "start_blocks": "//1) Add or draw your sprites in the Animation Tab.\n\n//2) Create your sprites and set its animation.\n\n//3) Add a draw loop and add the code needed to animate your favorite animal.\n",
     "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T21:11:47.103+00:00\",\"changed\":[\"cloned from \\\"CSD U3 L7 Freeplay_2023\\\"\"],\"cloned_from\":\"CSD U3 L7 Freeplay_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T21:11:47.103+00:00\",\"changed\":[\"cloned from \\\"CSD U3 L7 Freeplay_2023\\\"\"],\"cloned_from\":\"CSD U3 L7 Freeplay_2023\"},{\"changed_at\":\"2024-08-15 15:00:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-15 15:02:50 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-15 15:04:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-15 15:04:27 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-15 15:05:31 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

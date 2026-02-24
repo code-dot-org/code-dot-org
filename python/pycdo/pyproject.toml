@@ -1,0 +1,25 @@
+[project]
+name = 'pycdo'
+version = '0.1.0'
+description = 'python equivalent of lib/cdo'
+authors = [
+    { name = 'Code.org Python Devs', email = 'python-devs@code.org' }
+]
+requires-python = '>=3.12'
+dependencies = [
+  'boto3 >=1',
+  'numpy >=2',
+  'openai >=1',
+]
+
+[dependency-groups]
+dev = [
+  'pytest >=8',
+]
+
+[tool.pytest.ini_options]
+testpaths = ['tests']
+
+[build-system]
+requires = ['hatchling']
+build-backend = 'hatchling.build'

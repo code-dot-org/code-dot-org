@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2024-08-30T16:49:59.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "PL-genAI-Embeddings",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28811,
+    "name_suffix": "_23",
+    "encrypted": "false",
+    "long_instructions": "## Embeddings\r\n\r\n## Lesson 4: Understanding Embeddings\r\n#### In this lesson, students **explore** how language models use **embeddings** to represent word meanings. Through activities, they learn that similar words are numerically close in these embeddings. They update the **storage section** of their graphic organizer with this concept.\r\n\r\n## Lesson 5: Embeddings: How They're Created\r\n#### In this lesson, students **create embeddings** by interpreting a made-up language and analyzing word relationships. They learn how different contexts create different embeddings, setting the stage for understanding how language models use context to determine word meanings.\r\n\r\n## To Do:\r\n#### Watch the video below to learn more about the input step.\r\n"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-08-30T16:49:59.557+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-gen-ai-foundations_04b_2024\\\"\"],\"cloned_from\":\"self-paced-pl-gen-ai-foundations_04b_2024\"},{\"changed_at\":\"2024-08-30 16:51:48 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-30 16:52:07 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

@@ -24,13 +24,17 @@ Parameters:
   RDSPassword:
     Type: String
     NoEcho: true
-  # Production MySQL database servername to use for exporting data to Redshift. Typically set to production Reporting
-  # RDS Proxy endpoint.
+  # Typically set to the reader endpoint of the production Aurora MySQL cluster because exports from the production
+  # Reporting RDS Proxy are often interrupted with database connection errors.
   RDSHost:
     Type: String
+    Description: Production MySQL database servername to use for exporting data to Redshift.
   # Typically in the form: `cluster-[random-AWS-assigned-string].[region].rds.amazonaws.com` without leading dot.
   RDSClusterEndpointRootDomain:
     Type: String
+  ProductionAuroraClusterARN:
+    Type: String
+    Description: The ARN of the production Aurora cluster so we can authorize it as a Redshift source for Zero-ETL.
   ReportingCluster:
     Type: String
   RedshiftDatabase:
@@ -57,6 +61,8 @@ Resources:
   Tableau:
     Type: AWS::Redshift::Cluster
     DeletionPolicy: Retain
+    Metadata:
+      UpdateTrigger: "Force output export - 2026-01-26"
     Properties:
       AllowVersionUpgrade: true
       AutomatedSnapshotRetentionPeriod: 5
@@ -75,16 +81,37 @@ Resources:
       PreferredMaintenanceWindow: 'Tue:01:00-Tue:01:30'
       PubliclyAccessible: true
       VpcSecurityGroupIds: [!ImportValue VPC-RedshiftSecurityGroup]
+#  Redshift does not yet support configuring a Resource Policy on a Provisioned Cluster. We configure this one policy
+#  manually.
+#  TODO: Move our Redshift datawarehouse to a Serverless and/or implement this via CloudFormation when Provisioned
+#  cluster Resources are supported.
+#  RedshiftZeroETLResourcePolicy:
+#    Type: AWS::RedshiftServerless::ResourcePolicy
+#    Properties:
+#      ResourceArn: !GetAtt Tableau.ClusterNamespaceArn
+#      Policy:
+#        Version: "2012-10-17"
+#        Statement:
+#          - Sid: AllowZeroETLFromProductionAurora
+#            Effect: Allow
+#            Principal:
+#              Service: "redshift.amazonaws.com"
+#            Action:
+#              - "redshift:AuthorizeInboundIntegration"
+#            Resource: !GetAtt Tableau.ClusterNamespaceArn
+#            Condition:
+#              ArnEquals:
+#                "redshift:SourceArn": !Ref ProductionAuroraClusterARN
   DMSReplicationInstance:
     Type: AWS::DMS::ReplicationInstance
     Properties:
       ReplicationInstanceIdentifier: export-mysql-to-redshift
       AllowMajorVersionUpgrade: true
       AllocatedStorage: 250
-      EngineVersion: 3.5.1
+      EngineVersion: 3.6.1
       MultiAZ: true
       PubliclyAccessible: false
-      ReplicationInstanceClass: dms.r4.4xlarge
+      ReplicationInstanceClass: dms.r5.4xlarge
       ReplicationSubnetGroupIdentifier: !ImportValue VPC-DMSSubnetGroup
       VpcSecurityGroupIds: [!ImportValue VPC-DMSSecurityGroup]
       # This maintenance can interfere with the daily export from MySQL to Redshift which starts at 02:00 UTC, so set it
@@ -110,15 +137,29 @@ Resources:
   MySQLDatabaseSourceEndpoint:
     Type: AWS::DMS::Endpoint
     Properties:
-      EndpointIdentifier: !Sub "MySQLReportingEndpoint-${AWS::StackName}"
+      EndpointIdentifier: !Sub "MySQL-${AWS::StackName}"
       EndpointType: source
       EngineName: aurora
       ServerName: !Ref RDSHost
       Port: 3306
-      # The RDSUsername and RDSPassword Stack Parameters must be set to a read only user that can authenticate on the
-      # production RDS Proxy Reporting endpoint.
       Username: !Ref RDSUsername
       Password: !Ref RDSPassword
+      MySqlSettings:
+        # Initialize MySQL client to execute SELECT statements without negatively impacting transaction isolation on the
+        # cluster and increase several client connection timeouts to ensure that pauses during the export don't result
+        # in prematurely terminated connections. The first three settings are the same as what the Reporting RDS Proxy uses:
+        # https://github.com/code-dot-org/code-dot-org/blob/5ffbfc6909a6d1b4e97497db247aeb5f1eba0847/aws/cloudformation/components/database.yml.erb#L265
+        # Use extended timeouts (86400s / 24h) to prevent server-side disconnects because the DMS ODBC driver reconnects
+        # without executing the AfterConnectScript.
+        AfterConnectScript:  >-
+          SET SESSION aurora_read_replica_read_committed=ON;
+          SET SESSION transaction_isolation="READ-COMMITTED";
+          SET SESSION max_execution_time = 0;
+          SET SESSION autocommit=1;
+          SET SESSION net_read_timeout=86400;
+          SET SESSION net_write_timeout=86400;
+          SET SESSION wait_timeout = 86400;
+          SET SESSION interactive_timeout = 86400;
       ExtraConnectionAttributes: ResumeFetchForXRows=0;UnloadTimeout=86400
   RedshiftEndpoint:
     Type: AWS::DMS::Endpoint
@@ -298,6 +339,42 @@ Resources:
     Properties:
       AliasName: !Sub "alias/snapshot-${AWS::StackName}"
       TargetKeyId: !Ref DBSnapshotKey
+  # Monitor storage utilization and access patterns for Student Projects buckets to help reduce S3 costs and to aid in
+  # improving student projects backup strategy.
+  StudentProjectsStorageLensDashboard:
+    Type: AWS::S3::StorageLens
+    Properties:
+      StorageLensConfiguration:
+        Id: student-projects-dashboard
+        IsEnabled: true
+        AccountLevel:
+          ActivityMetrics:
+            IsEnabled: true
+          AdvancedCostOptimizationMetrics:
+            IsEnabled: true
+          BucketLevel:
+            ActivityMetrics:
+              IsEnabled: true
+            AdvancedCostOptimizationMetrics:
+              IsEnabled: true
+        Include:
+          Buckets:
+            - !Sub 'arn:aws:s3:::cdo-v3-sources'
+            - !Sub 'arn:aws:s3:::cdo-v3-files'
+            - !Sub 'arn:aws:s3:::cdo-v3-animations'
+            - !Sub 'arn:aws:s3:::cdo-v3-assets'
+            - !Sub 'arn:aws:s3:::cdo-v3-libraries'
+            - !Sub 'arn:aws:s3:::cdo-v3-trained-ml-models'
+            - !Sub 'arn:aws:s3:::cdo-art'
+        DataExport:
+          S3BucketDestination:
+            AccountId: !Ref 'AWS::AccountId'
+            Arn: !Sub 'arn:aws:s3:::cdo-logs'
+            Format: CSV
+            OutputSchemaVersion: V_1
+            Prefix: 'S3StorageLens/student-projects-metrics-export'
+          CloudWatchMetrics:
+            IsEnabled: true
 # ELB Access Logs tables defined in Glue Data Catalog.
   ELBLogsDatabase:
     Type: AWS::Glue::Database
@@ -610,3 +687,91 @@ Resources:
     Properties:
       AliasName: alias/auditlogs
       TargetKeyId: !Ref AuditLogsKey
+  # WAF WebACL Logs S3 Bucket
+  WebApplicationFirewallAccessControlListLogsBucket:
+    Type: "AWS::S3::Bucket"
+    DeletionPolicy: Retain
+    Properties:
+      BucketName: "aws-waf-logs-cdo"
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: "AES256"
+      VersioningConfiguration:
+        Status: "Enabled"
+      LifecycleConfiguration:
+        Rules:
+          - Id: "Expire old Versions after 15 months"
+            NoncurrentVersionExpirationInDays: 455
+            Status: "Enabled"
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+  WAFLogsDatabase:
+    Type: "AWS::Glue::Database"
+    Properties:
+      CatalogId: !Ref "AWS::AccountId"
+      DatabaseInput:
+        Name: "waf_logs_db"
+        Description: "Database for WAF WebACL logs"
+  GlobalWebACLLogsTable:
+    Type: AWS::Glue::Table
+    Properties:
+      DatabaseName: !Ref WAFLogsDatabase
+      CatalogId: !Ref "AWS::AccountId"
+      TableInput:
+        Name: waf_logs_code_dot_org
+        Description: WAF WebACL logs table for code-dot-org Global WebACL
+        TableType: EXTERNAL_TABLE
+        Parameters:
+          classification: json
+          projection.enabled: "true"
+          projection.timestamp_folder.format: "yyyy/MM/dd/HH/mm"
+          projection.timestamp_folder.interval: "1"
+          projection.timestamp_folder.interval.unit: "MINUTES"
+          projection.timestamp_folder.range: "2024/01/01/00/00,NOW"
+          projection.timestamp_folder.type: "date"
+          storage.location.template: !Sub "s3://${WebApplicationFirewallAccessControlListLogsBucket}/AWSLogs/${AWS::AccountId}/WAFLogs/cloudfront/code-dot-org/${!timestamp_folder}"
+          transient_lastDdlTime: "1733787890"
+        PartitionKeys:
+          - Name: timestamp_folder
+            Type: string
+        StorageDescriptor:
+          Location: !Sub "s3://${WebApplicationFirewallAccessControlListLogsBucket}/AWSLogs/${AWS::AccountId}/WAFLogs/cloudfront/code-dot-org"
+          Columns:
+            - Name: timestamp
+              Type: bigint
+            - Name: formatversion
+              Type: int
+            - Name: webaclid
+              Type: string
+            - Name: terminatingruleid
+              Type: string
+            - Name: terminatingruletype
+              Type: string
+            - Name: action
+              Type: string
+            - Name: httpsourcename
+              Type: string
+            - Name: httpsourceid
+              Type: string
+            - Name: responsecodesent
+              Type: string
+            - Name: httprequest
+              Type: struct<clientip:string,country:string,headers:array<struct<name:string,value:string>>,uri:string,args:string,httpmethod:string,requestid:string>
+            - Name: nonterminatingmatchingrules
+              Type: array<struct<ruleid:string,action:string,rulematchdetails:array<struct<conditiontype:string,sensitivitylevel:string,location:string,matchedelements:array<string>>>,captcharesponse:struct<responsecode:int,solvetimestamp:bigint>,challengeresponse:struct<responsecode:int,solvetimestamp:bigint>>>
+            - Name: ja3fingerprint
+              Type: string
+          OutputFormat: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
+          InputFormat: org.apache.hadoop.mapred.TextInputFormat
+          SerdeInfo:
+            SerializationLibrary: org.openx.data.jsonserde.JsonSerDe
+Outputs:
+  RedshiftClusterNamespace:
+    Value: !GetAtt Tableau.ClusterNamespaceArn
+    Description: "Redshift Cluster Namespace for Zero-ETL targeting."
+    Export:
+      Name: !Sub "${AWS::StackName}-RedshiftClusterNamespace"

@@ -1,0 +1,19 @@
+name 'networks-postassessment-question7_v2-2025'
+title 'Networks and the Internet Post-Assessment: Question 7'
+
+wrong 'It speeds up Internet connections'
+wrong 'It prevents cyberattacks'
+right 'It translates human-friendly website names into numerical IP addresses'
+wrong 'It creates new websites'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which of the following best explains the role of DNS (Domain Name System)?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 3: IP Addresses
+
+Lesson 6: HTTP and DNS
+MARKDOWN

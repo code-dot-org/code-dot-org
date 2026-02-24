@@ -3,7 +3,7 @@ import {
   showDialog,
   processResults,
 } from '@cdo/apps/code-studio/levels/dialogHelper';
-import {LegacyUnsubmitDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
+import {LegacyUnsubmitDialog} from '@cdo/apps/legacySharedComponents/LegacyDialogContents';
 
 /**
  * This file does some handling of submit button interactions.
@@ -69,7 +69,10 @@ $(document).ready(() => {
       submitButton.attr('disabled', true);
 
       var onComplete = function (willRedirect) {
-        if (!willRedirect) {
+        if (appOptions.stayOnLevelAfterSubmit) {
+          $('.response').attr('disabled', true);
+          $('.nextLevelButton').show();
+        } else if (!willRedirect) {
           $('.submitButton').attr('disabled', false);
         }
       };

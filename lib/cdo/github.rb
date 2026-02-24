@@ -11,11 +11,9 @@ module GitHub
   DASHBOARD_DB_DIR = 'dashboard/db/'.freeze
   PEGASUS_DB_DIR = 'pegasus/migrations/'.freeze
   STAGING_BRANCH = 'staging'.freeze
-  STAGING_NEXT_BRANCH = 'staging-next'.freeze
   STATUS_SUCCESS = 'success'.freeze
   STATUS_FAILURE = 'failure'.freeze
   STATUS_CONTEXT = 'DTS'.freeze
-  STATUS_CONTEXT_DTSN = 'DTSN'.freeze
 
   # Configures Octokit with our GitHub access token.
   # @raise [RuntimeError] If CDO.github_access_token is not defined.
@@ -75,26 +73,28 @@ module GitHub
       'git fetch',
       "git checkout -b #{branch_name} #{base_branch}",
     ].join(' && ')
-    return false unless created_branch
+    raise "GitHub.create_branch_from_commit: Failed to create branch #{branch_name}" unless created_branch
 
     # merge the commit into the branch
-    system "#{prefix_command} && git merge #{commit} --no-edit"
+    merge_success = system "#{prefix_command} && git merge #{commit} --no-edit"
 
-    # check for conflicts
-    conflicts = `#{prefix_command} && git ls-files -u | wc -l`.to_i
-    if conflicts > 0
-      # if there are conflicts, abort the merge and cleanup
+    if merge_success
+      # if the merge succeeds push the new branch
+      push_success = system "#{prefix_command} && git push origin #{branch_name}"
+      raise "GitHub.create_branch_from_commit: Failed to push to #{branch_name}" unless push_success
+    else
+      # check for conflicts
+      conflicts = `#{prefix_command} && git ls-files -u | wc -l`.to_i
+
+      # if the merge fails or there are conflicts, abort the merge and cleanup
       system [
         prefix_command,
         'git merge --abort',
         "git checkout #{base_branch}",
         "git branch -D #{branch_name}"
       ].join(' && ')
-      return false
-    else
-      # otherwise, push the new branch!
-      system "#{prefix_command} && git push origin #{branch_name}"
-      return true
+
+      raise "GitHub.create_branch_from_commit: Failed to merge; #{conflicts} conflicts detected"
     end
   end
 
@@ -124,7 +124,7 @@ module GitHub
     configure_octokit
     response = Octokit.create_pull_request(REPO, base, head, title, body)
 
-    response['number']
+    response['number'] || raise("GitHub.create_pull_request failed.")
   end
 
   # Octokit Documentation: https://octokit.github.io/octokit.rb/Octokit/Client/PullRequests.html#pull_requests-instance_method
@@ -335,42 +335,6 @@ module GitHub
     Octokit.pulls(REPO, base: STAGING_BRANCH)
     paged_for_each(Octokit.last_response) do |pull|
       set_dts_check_fail(pull)
-    end
-  end
-
-  def self.set_dtsn_check_pass(pull)
-    Octokit.create_status(
-      pull['base']['repo']['full_name'],
-      pull['head']['sha'],
-      STATUS_SUCCESS,
-      context: STATUS_CONTEXT_DTSN,
-      description: 'The staging-next branch is open.'
-    )
-  end
-
-  def self.set_all_dtsn_check_pass
-    configure_octokit
-    Octokit.pulls(REPO, base: STAGING_NEXT_BRANCH)
-    paged_for_each(Octokit.last_response) do |pull|
-      set_dtsn_check_pass(pull)
-    end
-  end
-
-  def self.set_dtsn_check_fail(pull)
-    Octokit.create_status(
-      pull['base']['repo']['full_name'],
-      pull['head']['sha'],
-      STATUS_FAILURE,
-      context: STATUS_CONTEXT_DTSN,
-      description: 'The staging-next branch is closed. Check #developers.'
-    )
-  end
-
-  def self.set_all_dtsn_check_fail
-    configure_octokit
-    Octokit.pulls(REPO, base: STAGING_NEXT_BRANCH)
-    paged_for_each(Octokit.last_response) do |pull|
-      set_dtsn_check_fail(pull)
     end
   end
 

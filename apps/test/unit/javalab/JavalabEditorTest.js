@@ -5,7 +5,6 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
 import JavalabEditor from '@cdo/apps/javalab/JavalabEditor';
 import javalabEditor, {
@@ -40,9 +39,10 @@ import {
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
+import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import javalabMsg from '@cdo/javalab/locale';
 
-import {BackpackAPIContext} from '../../../src/javalab/BackpackAPIContext';
 import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {allowConsoleWarnings} from '../../util/throwOnConsole';
 

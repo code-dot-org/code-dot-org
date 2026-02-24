@@ -4,6 +4,8 @@
  * Copyright 2013 Code.org
  *
  */
+import '@cdo/apps/blockly/addons/extensions/jigsawFillPatternMixin';
+
 var levels = require('./levels');
 
 var patternCache = {
@@ -99,7 +101,7 @@ var addPattern = function (id, imagePath, width, height, offsetX, offsetY) {
     // add the pattern
     x = typeof offsetX === 'function' ? -offsetX() : -offsetX;
     y = typeof offsetY === 'function' ? -offsetY() : -offsetY;
-    pattern = Blockly.createSvgElement(
+    pattern = Blockly.utils.dom.createSvgElement(
       'pattern',
       {
         id: id,
@@ -111,7 +113,7 @@ var addPattern = function (id, imagePath, width, height, offsetX, offsetY) {
       },
       svgDefs
     );
-    patternImage = Blockly.createSvgElement(
+    patternImage = Blockly.utils.dom.createSvgElement(
       'image',
       {
         width: width,
@@ -206,7 +208,8 @@ function generateBlankBlock(blockly, skin, name, hsv, width, label) {
     helpUrl: '',
     init: function () {
       // Jigsaw blocks use a hard-coded HSV color and are not compatible with themes.
-      Blockly.cdoUtils.handleColorAndStyle(this, hsv);
+      const [h, s, v] = hsv;
+      this.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
       this.appendDummyInput()
         .appendField(new blockly.FieldImage(skin.blank, width, 54))
         .appendField(
@@ -243,8 +246,7 @@ function generateJigsawBlocksForLevel(blockly, skin, options) {
     blockly.Blocks[blockName] = {
       helpUrl: '',
       init: function () {
-        // Jigsaw blocks use a hard-coded HSV color and are not compatible with themes.
-        Blockly.cdoUtils.handleColorAndStyle(this, HSV);
+        Blockly.Extensions.apply('jigsaw_fill_pattern_mixin', this, false);
         this.appendDummyInput().appendField(
           new blockly.FieldImage(skin.blank, titleWidth, titleHeight)
         );
@@ -260,6 +262,9 @@ function generateJigsawBlocksForLevel(blockly, skin, options) {
             blockHeight * (blockNum - 1)
           )
         );
+        // Jigsaw blocks use a hard-coded HSV color and are not compatible with themes.
+        const [h, s, v] = HSV;
+        this.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
       },
     };
   }

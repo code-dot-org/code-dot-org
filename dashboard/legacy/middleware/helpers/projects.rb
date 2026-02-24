@@ -22,14 +22,6 @@ class Projects
     @table = Projects.table
   end
 
-  #### NOTE: This references the Rails model (Project, singular)
-  #### rather than this middleware class (Projects, plural)
-  #### such that we can make use of model associations managed by Rails.
-  def get_rails_project(project_id)
-    return @rails_project if @rails_project
-    @rails_project = Project.find(project_id)
-  end
-
   def create(value, ip:, type: nil, published_at: nil, remix_parent_id: nil, standalone: true, level: nil)
     validate_thumbnail_url(nil, value['thumbnailUrl'])
 
@@ -47,17 +39,22 @@ class Projects
       remix_parent_id: remix_parent_id,
       skip_content_moderation: false,
       standalone: standalone,
+      uuid: SecureRandom.uuid,
     }
     row[:id] = @table.insert(row)
 
-    storage_encrypt_channel_id(row[:storage_id], row[:id])
+    if DCDO.get('project-uuid-in-url', false)
+      row[:uuid]
+    else
+      storage_encrypt_channel_id(row[:storage_id], row[:id])
+    end
   end
 
   def delete(channel_id)
-    owner, project_id = storage_decrypt_channel_id(channel_id)
+    owner, project_id = get_storage_id_and_project_id(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
 
-    delete_count = @table.where(id: project_id).update(state: 'deleted')
+    delete_count = @table.where(id: project_id).update(state: 'deleted', updated_at: DateTime.now)
     raise NotFound, "channel `#{channel_id}` not found" if delete_count == 0
 
     # TODO: Delete all storage associated with this channel (e.g. properties and tables and assets)
@@ -66,17 +63,17 @@ class Projects
   end
 
   def restore(channel_id)
-    owner, project_id = storage_decrypt_channel_id(channel_id)
+    owner, project_id = get_storage_id_and_project_id(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
 
-    update_count = @table.where(id: project_id).update(state: 'active')
+    update_count = @table.where(id: project_id).update(state: 'active', updated_at: DateTime.now)
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
 
     true
   end
 
   def get(channel_id)
-    owner, project_id = storage_decrypt_channel_id(channel_id)
+    owner, project_id = get_storage_id_and_project_id(channel_id)
     row = @table.where(id: project_id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
 
@@ -98,7 +95,7 @@ class Projects
   end
 
   def update(channel_id, value, ip_address, project_type: nil, locale: 'en')
-    owner, project_id = storage_decrypt_channel_id(channel_id)
+    owner, project_id = get_storage_id_and_project_id(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
 
     new_name = value['name']
@@ -118,6 +115,10 @@ class Projects
       updated_ip: ip_address,
     }
     row[:project_type] = project_type if project_type
+
+    # Add uuid if the project doesn't have one yet
+    row[:uuid] = SecureRandom.uuid if project[:uuid].nil?
+
     update_count = @table.where(id: project_id).exclude(state: 'deleted').update(row)
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
 
@@ -126,7 +127,7 @@ class Projects
   end
 
   def publish(channel_id, type, user)
-    owner, project_id = storage_decrypt_channel_id(channel_id)
+    owner, project_id = get_storage_id_and_project_id(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
     row = {
       project_type: type,
@@ -136,20 +137,7 @@ class Projects
     project_query_result = @table.where(id: project_id).exclude(state: 'deleted')
     raise NotFound, "channel `#{channel_id}` not found" if project_query_result.empty?
 
-    rails_project = get_rails_project(project_id)
-    if rails_project.apply_project_age_publish_limits?
-      raise PublishError, "User too new to publish channel `#{channel_id}`" unless rails_project.owner_existed_long_enough_to_publish?
-      raise PublishError, "Project too new to publish channel `#{channel_id}`" unless rails_project.existed_long_enough_to_publish?
-    end
-
     project_query_result.update(row)
-
-    project = @table.where(id: project_id).first
-    Projects.get_published_project_data(project, channel_id).merge(
-      # For privacy reasons, include only the first initial of the student's name.
-      studentName: user && UserHelpers.initial(user[:name]),
-      studentAgeRange: user && UserHelpers.age_range_from_birthday(user[:birthday]),
-    )
   end
 
   def get_active_projects
@@ -189,27 +177,13 @@ class Projects
       update(state: 'active', updated_at: Time.now)
   end
 
-  # extracts published project data from a project (aka projects table row).
-  def self.get_published_project_data(project, channel_id)
-    project_value = JSON.parse(project[:value])
-    {
-      channel: channel_id,
-      name: project_value['name'],
-      thumbnailUrl: Projects.make_thumbnail_url_cacheable(project_value['thumbnailUrl']),
-      # Note that we are using the new :project_type field rather than extracting
-      # it from :value. :project_type might not be present in unpublished projects.
-      type: project[:project_type],
-      publishedAt: project[:published_at],
-    }
-  end
-
   # This method can be removed once thumbnails are being served with s3 version ids.
   def self.make_thumbnail_url_cacheable(url)
     url&.sub('/v3/files/', '/v3/files-public/')
   end
 
   def unpublish(channel_id)
-    owner, project_id = storage_decrypt_channel_id(channel_id)
+    owner, project_id = get_storage_id_and_project_id(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
     row = {
       published_at: nil,
@@ -220,7 +194,7 @@ class Projects
 
   # Determine if the current user can view the project
   def get_sharing_disabled(channel_id, current_user_id)
-    owner_storage_id, project_id = storage_decrypt_channel_id(channel_id)
+    owner_storage_id, project_id = get_storage_id_and_project_id(channel_id)
     owner_user_id = user_id_for_storage_id(owner_storage_id)
 
     # Sharing of a project is not disabled for the project owner
@@ -240,6 +214,13 @@ class Projects
     true
   end
 
+  # Determine if the current user is teacher of project owner.
+  def get_is_teacher_of_project_owner(channel_id, current_user_id)
+    owner_storage_id, __ = get_storage_id_and_project_id(channel_id)
+    owner_user_id = user_id_for_storage_id(owner_storage_id)
+    teaches_student?(owner_user_id, current_user_id)
+  end
+
   def users_paired_on_level?(project_id, current_user_id, owner_user_id, owner_storage_id)
     channel_tokens_table = DASHBOARD_DB[:channel_tokens]
     level_id_row = channel_tokens_table.where(storage_app_id: project_id, storage_id: owner_storage_id).first
@@ -257,13 +238,23 @@ class Projects
     return true
   end
 
-  def increment_abuse(channel_id, amount = 10)
-    _owner, project_id = storage_decrypt_channel_id(channel_id)
+  def increment_abuse(channel_id, amount, override_frozen = false)
+    _owner, project_id = get_storage_id_and_project_id(channel_id)
 
     row = @table.where(id: project_id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
+    # If the project is frozen then it is an active featured project or a curriculum exemplar.
+    # Do not update the abuse score of a frozen project unless override_frozen is true.
+    # This flag is set to true if the current_user is a project validator or if the project's
+    # thumbnail image was flagged by image moderation.
+    increment_amount =
+      if JSON.parse(row[:value])['frozen'] && !override_frozen
+        0
+      else
+        amount
+      end
 
-    new_score = row[:abuse_score] + (JSON.parse(row[:value])['frozen'] ? 0 : amount)
+    new_score = row[:abuse_score] + increment_amount
 
     update_count = @table.where(id: project_id).exclude(state: 'deleted').update({abuse_score: new_score})
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
@@ -272,7 +263,7 @@ class Projects
   end
 
   def reset_abuse(channel_id)
-    _owner, project_id = storage_decrypt_channel_id(channel_id)
+    _owner, project_id = get_storage_id_and_project_id(channel_id)
 
     row = @table.where(id: project_id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
@@ -283,47 +274,9 @@ class Projects
     0
   end
 
-  def buffer_abuse_score(channel_id)
-    buffered_abuse_score = -50
-    # Reset to 0 first so projects that are featured,
-    # unfeatured, then re-featured don't have super low
-    # abuse scores.
-    reset_abuse(channel_id)
-    increment_abuse(channel_id, buffered_abuse_score)
-  end
-
-  def content_moderation_disabled?(channel_id)
-    _owner, project_id = storage_decrypt_channel_id(channel_id)
-
-    row = @table.where(id: project_id).exclude(state: 'deleted').first
-    return false unless row
-
-    row[:skip_content_moderation]
-  end
-
-  #
-  # Disables or enables automated content moderation for this project by
-  # altering the value for content_moderation_disabled.
-  # @param [String] channel_id - an encrypted channel id
-  # @param [Boolean] disable, whether the content moderation should be
-  # skipped or not for this project.
-  # @raise [NotFound] if the channel does not exist or already has the desired
-  # value for content_moderation_disabled.
-  #
-  def set_content_moderation(channel_id, disable)
-    _owner, project_id = storage_decrypt_channel_id(channel_id)
-    rows_changed = @table.
-      where(id: project_id).
-      exclude(state: 'deleted').
-      update({skip_content_moderation: disable})
-    raise NotFound, "channel `#{channel_id}` not found" unless rows_changed > 0
-
-    disable
-  end
-
   def to_a
     @table.where(storage_id: @storage_id).exclude(state: 'deleted').filter_map do |row|
-      channel_id = storage_encrypt_channel_id(row[:storage_id], row[:id])
+      channel_id = get_project_channel_id(row[:storage_id], row[:id])
       begin
         Projects.merged_row_value(
           row,
@@ -345,7 +298,7 @@ class Projects
       # Malformed channel, or missing level.
     end
 
-    storage_encrypt_channel_id(row[:storage_id], row[:id]) if row
+    get_project_channel_id(row[:storage_id], row[:id]) if row
   end
 
   # Find the encrypted channel token for most recent project of the given project_type.
@@ -407,11 +360,11 @@ class Projects
   #
   def self.remix_ancestry(channel_id, depth: 1)
     [].tap do |ancestors|
-      _, project_id = storage_decrypt_channel_id(channel_id)
+      _, project_id = get_storage_id_and_project_id(channel_id)
       next_row = Projects.table.where(id: project_id).first
       while next_row&.[](:remix_parent_id)
         next_row = Projects.table.where(id: next_row[:remix_parent_id]).first
-        ancestors.push storage_encrypt_channel_id(next_row[:storage_id], next_row[:id]) if next_row
+        ancestors.push get_project_channel_id(next_row[:storage_id], next_row[:id]) if next_row
         break if ancestors.size >= depth
       end
     end
@@ -420,7 +373,7 @@ class Projects
   end
 
   def self.get_abuse(channel_id)
-    _, project_id = storage_decrypt_channel_id(channel_id)
+    _, project_id = get_storage_id_and_project_id(channel_id)
     project_info = Projects.table.where(id: project_id).first
     project_info[:abuse_score]
   end

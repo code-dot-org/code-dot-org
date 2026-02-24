@@ -1,0 +1,29 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-06-06T14:41:17.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "##🎊You got this!🎊\n## One more to go!",
+        "imageUrl": "https://images.code.org/c4c1807968905d45bdd981a10daa05b1-Neighborhood Python (8).jpg",
+        "key": "sp-pl-DS-pythonLab_tour-e31a5299-fb7b-4695-ac1f-5a80498a9378",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/d387604b422732319d4eefe9c31f920d-Neighborhood Python (9).jpg",
+        "key": "sp-pl-DS-pythonLab_tour-62a7ff61-8b6a-4901-8cb3-26fcd990f873",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_2024",
+    "offer_browser_tts": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-06-06T14:41:17.000+00:00\",\"changed\":[\"cloned from \\\"pl-game-python-panel-print-12\\\"\"],\"cloned_from\":\"pl-game-python-panel-print-12\"},{\"changed_at\":\"2025-06-06 15:18:15 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Panels>

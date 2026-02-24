@@ -1,0 +1,50 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-11-19T20:48:20.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "documentation.md",
+          "language": "md",
+          "contents": "Add your changes to documentation.md",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "encrypted": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "code",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "tutor",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "long_instructions": "## Turn Your Flowchart into Pseudocode\r\n\r\nDownload either your **for loop** (Level 3) or **while loop** (Level 6) flowchart. Upload it to the AI chat with a prompt to turn your flowchart into pseudocode that represents a loop. \r\n\r\nPaste the pseudocode into the `documentation.md` file and make any necessary edits. Double check the AI output, making sure there are clear start, stop, and step values. ",
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMrWt2HFvH/UaEd1Aw6m\nH7NPCh2Lr52063tDqEoStRSedjwyQvWACJWSDBaXO+ac4wtXWtucQasJ1pXh\neqljCYDSek//9+d3Q0NsquO3TRgcEdXlcnQzzVCqIu4fpadupAlALAPUi4G9\nNG+43yYyFIQQ6PNO6LXh0frGFw5BedPQswrvVQ2DsYEz8yzHIvVhOjOxoLJV\nqfNgHVXROd2f7HHJtCwZ902nIfNCJiDwEv/sGycyqw/6iItS2KOJqMVSysWm\nwQNqJmSvUImy0MqiLlRuUDqqnPjdwHe3Up+cL6x3c1Av7dkuU1DGUYFUWR8I\n5gUa2tTZY6GgIWpmTi5KOY8JV9kvjCpCieEegQLoRyof6dkV4qCgM3St51DP\nXEj3X/4ji9t5+Y9H0Oy9akfHXqJBZww6YHXPYMEqtr997qd1mH4QTcTGQ3w6\n2UVv1JI3Gi+IBwNEkHD8LZOedjc2DSwECrmX0xyyBgmPA6AUAVIU9rTJpnLD\nZb7RdOVMcUgZwz1Y1WfHM6z4sh6hL4iidEe+MGJw5ry2z18IoZ8lrQQjfrDk\nv0I0Sw9GKenSSeP8JDx+7KHVTf6dEq93gxbFeKuxM2OzIRfKXMYh6e0+4gZr\nPXxiBKEtPQw5OrVpcyfChGk=\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-19 20:59:18 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-19 20:59:26 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-19 21:04:28 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-19 21:54:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-19 22:01:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-19 22:09:02 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-19 22:19:49 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-19 22:21:32 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

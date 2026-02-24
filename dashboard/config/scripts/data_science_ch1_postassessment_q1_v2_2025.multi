@@ -1,0 +1,17 @@
+name 'data-science-ch1-postassessment-q1_v2-2025'
+
+question 'Analyzing sales data, a retail company noticed a decline in sales during certain months. What should be the first step in using data science to address this issue?'
+
+wrong 'Increase advertising budget without analyzing the data.'
+right 'Perform a time series analysis to identify any seasonal trends or patterns in the sales data.'
+wrong 'Change the store layout based on management\’s intuition.'
+wrong 'Hire more sales staff without considering the underlying data.'
+
+
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

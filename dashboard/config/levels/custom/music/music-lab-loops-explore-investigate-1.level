@@ -1,0 +1,331 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-03-27T17:54:56.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "level_data": {
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "repeat_simple2",
+                  "id": "oQB1lk=[I5o|!^il/V[0",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "fields": {
+                    "times": 3
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sounds_together",
+                        "id": "XmX,FeR`+Dub#SNXP09_",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": true
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "{pB!N|c2+PO)1rOix)R@",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "acoustic_arcade/drum_beat_cabana"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "YLbvNv^2*RdZ-`CY%ri0",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "acoustic_arcade/bass_elevator"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "_[?NZ#w|B+|?xZauD#G[",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": true
+                                      },
+                                      "fields": {
+                                        "sound": "acoustic_arcade/synth_rubber"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together",
+                      "id": "play_together_workspace",
+                      "deletable": false,
+                      "movable": false,
+                      "editable": false,
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "inputs": {
+                        "code": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "gQt56PggI*+5sdm:iAV8",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "indie/drum_kit_indie"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "s,pQ|aLw:/KeEY=~HO^]",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "indie/bass_lifted_coast_down"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sounds_sequential",
+                                    "id": "play_sounds_sequential",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": true
+                                    },
+                                    "inputs": {
+                                      "code": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "V(-$|k$C[W0?%p9/i[IN",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "acoustic_arcade/ukulele_slide"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "%MmPGxcNJ[SfL%FqCk~H",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": true
+                                              },
+                                              "fields": {
+                                                "sound": "acoustic_arcade/ukulele_slide"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "chimes_workspace",
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "sound": "acoustic_arcade/chimes"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": ",%%1`{FEC%9$|Jh2p-Ys",
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "acoustic_arcade/chimes"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "*o]HY8sBNTr4qm0l{Pih",
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "acoustic_arcade/chimes"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "YTvlHRtTiz~!Nyv!EW0.",
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "acoustic_arcade/chimes"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "library": "launch2024",
+      "packId": "default",
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "repeat_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "sounds": {
+        "acoustic_arcade": [
+          "drum_beat_cabana",
+          "bass_elevator",
+          "synth_rubber",
+          "ukulele_slide",
+          "chimes",
+          "waterfall"
+        ],
+        "indie": [
+          "drum_kit_indie",
+          "bass_lifted_coast_down"
+        ]
+      },
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "editable": false,
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "acoustic_arcade/chimes"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "repeat_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "times": 1
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      }
+    },
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Investigate\r\n\r\nEmily noticed that there are four <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-waveform\" style=\"color: #F3DF55; margin-right: 2px\"></i> Chimes </span> effects at the end of the song. She wondered if we can replace those with a loop like this:\r\n\r\n![](https://images.code.org/0ca638db04117b561dc9a02b80ea7555-image-1743108548820.png)\r\n\r\nTry to recreate the code above on your own, or follow the step-by-step instructions below:\r\n\r\n1) Delete the four <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-waveform\" style=\"color: #F3DF55; margin-right: 2px\"></i> Chimes </span> blocks at the end of the code [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id:chimes_workspace)\r\n2) Drag out a <code style=\"background-color: rgb(242, 24, 162); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">repeat</code> block and set it to repeat 4 times [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-second-block---id:play_together_workspace)\r\n3) Put a <code style=\"background-color: rgb(116, 53, 178); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">play</code> block inside the repeat [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-first-block)\r\n\r\nPress the <code style=\"background-color: #fca401; color: white; border: none; box-shadow: inset -1px -1px 1px1 rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">Run</code> button! The song should sound the same, but use less blocks in total!\r\n\r\n> If you're stuck, try clicking the <i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i> icons for hints!",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "validations": [
+      {
+        "key": "music-lab-loops-explore-investigate-1_cbf5d7ac-189f-4b0c-8b6c-e8172c2d4e80",
+        "message": "<i class=\"fa-solid fa-square-check\"></i> You Did It!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 4
+          }
+        ]
+      }
+    ],
+    "encrypted_exemplar_sources": "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\nLLW1S+p3NCEJk48=\n",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-27T17:54:56.018+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-explore-predict\\\"\"],\"cloned_from\":\"music-lab-loops-explore-predict\"},{\"changed_at\":\"2025-03-27 17:57:22 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-27 18:05:36 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-27 18:06:22 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-27 18:17:02 +0000\",\"changed\":[\"level_data\",\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-27 18:19:08 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-27 18:21:21 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-27 18:22:03 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-27 18:24:02 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-27 18:26:25 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-27 19:19:13 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-27 19:20:59 +0000\",\"changed\":[\"predict_settings\",\"project_template_level_name\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-27 19:22:36 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-27 19:23:25 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-27 19:23:35 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-27 19:24:46 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-27 20:47:37 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-27 20:49:22 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-27 21:07:54 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

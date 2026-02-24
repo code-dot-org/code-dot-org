@@ -15,7 +15,7 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "given valid token, updates user and sends email" do
-    permission = create :parental_permission_request
+    permission = create(:parental_permission_request)
     user = permission.user
     assert_emails 1 do
       get '/policy_compliance/child_account_consent', params:
@@ -25,13 +25,13 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
     end
     user.reload
     assert_response :ok
-    assert_equal Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED, user.child_account_compliance_state
-    refute_empty user.child_account_compliance_state_last_updated
+    assert_equal Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED, user.cap_status
+    refute_nil user.cap_status_date
   end
 
   test "making the same request twice is ok and email is sent once" do
     # We want to make sure an email isn't sent every time the URL is visited.
-    permission = create :parental_permission_request
+    permission = create(:parental_permission_request)
     assert_emails 1 do
       get '/policy_compliance/child_account_consent', params:
         {
@@ -63,9 +63,9 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "given a user already has parental permission, should just redirect back" do
-    permission = create :parental_permission_request, :granted
+    permission = create(:parental_permission_request, :granted)
     user = permission.user
-    user.child_account_compliance_state = Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED
+    user.cap_status = Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED
 
     sign_in user
 
@@ -129,7 +129,7 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "given a user already has sent a parental permission, should resend if specifying the same email" do
-    permission = create :parental_permission_request
+    permission = create(:parental_permission_request)
     user = permission.user
 
     sign_in user
@@ -144,7 +144,7 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "given a user already has sent a parental permission, should still send if child specifies a different one" do
-    permission = create :parental_permission_request
+    permission = create(:parental_permission_request)
     user = permission.user
 
     sign_in user
@@ -159,8 +159,8 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "given a user already has sent a parental permission, should just redirect and not send email after the third time" do
-    user = create(:young_student, :without_parent_permission
-)
+    user = create(:young_student, :without_parent_permission)
+
     sign_in user
 
     assert_emails 3 do
@@ -175,8 +175,8 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "a user should not be able to send more than 3 unique parental request emails per day" do
-    user = create(:young_student, :without_parent_permission
-)
+    user = create(:young_student, :without_parent_permission)
+
     sign_in user
 
     assert_emails 3 do
@@ -192,9 +192,9 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
 
   test "a user should be able to send a new request the following day" do
     # Create existing permission requests
-    permission = create :parental_permission_request, :old
-    create :parental_permission_request, :old, parent_email: 'parent_second@example.com', user: permission.user
-    create :parental_permission_request, :old, parent_email: 'parent_third@example.com', user: permission.user
+    permission = create(:parental_permission_request, :old)
+    create(:parental_permission_request, :old, parent_email: 'parent_second@example.com', user: permission.user)
+    create(:parental_permission_request, :old, parent_email: 'parent_third@example.com', user: permission.user)
 
     # Sign in
     user = permission.user
@@ -232,8 +232,8 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
 
   class PendingPermissionRequestTest < ActionDispatch::IntegrationTest
     test 'json format - returns pending permission request data when exists' do
-      consent_status = 'expected_consent_status'
-      user = create(:young_student, child_account_compliance_state: consent_status)
+      consent_status = 'p'
+      user = create(:young_student, cap_status: consent_status)
       parent_email = 'parent@example.com'
       requested_at = DateTime.now.utc.iso8601(3)
       resends_sent = 999
@@ -274,8 +274,8 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
 
   class ChildAccountConsentRequest < ActionDispatch::IntegrationTest
     test 'json format - returns permission request data on success' do
-      consent_status = 'expected_consent_status'
-      child_account = create(:young_student, child_account_compliance_state: consent_status)
+      consent_status = 'p'
+      child_account = create(:young_student, cap_status: consent_status)
       parent_email = 'parent@example.com'
       requested_at = DateTime.now.utc.iso8601(3)
       resends_sent = 999

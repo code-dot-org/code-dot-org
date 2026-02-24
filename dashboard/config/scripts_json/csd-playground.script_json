@@ -4,17 +4,19 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_course": true,
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "is_migrated": true,
       "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": "csd-playground",
-    "serialized_at": "2024-05-21 22:52:19 UTC",
-    "published_state": "in_development",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-07-02 16:12:00 UTC",
+    "hide_within_course": false,
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csd-playground"
     }
@@ -341,6 +343,69 @@
       },
       "seeding_key": {
         "lesson.key": "Option A",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "Sequences - Explore",
+      "name": "Sequences - Explore",
+      "absolute_position": 20,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 20,
+      "properties": {
+        "background": "dark"
+      },
+      "seeding_key": {
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "lesson-21",
+      "name": "Script Experiment Lesson",
+      "absolute_position": 21,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 21,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "lesson-22",
+      "name": "Script Experiment Paste",
+      "absolute_position": 22,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 22,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "Project: Genre Mash-Up",
+      "name": "Project: Genre Mash-Up",
+      "absolute_position": 23,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 23,
+      "properties": {
+        "overview": "In this end-of-unit project, students select an existing song and remix it into a new genre using the structure of functions. They draw on skills from the entire unit to define musical sections, apply abstraction, and shift tone or style, just like real-world remix artists.",
+        "preparation": "- Review the levels from the curriculum and their example solutions. [Click here to see how to access example solutions](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be)."
+      },
+      "seeding_key": {
+        "lesson.key": "Project: Genre Mash-Up",
         "lesson_group.key": "",
         "script.name": "csd-playground"
       }
@@ -1007,6 +1072,183 @@
       "seeding_key": {
         "lesson_activity.key": "8cb88de1-0881-4d25-8fa9-620d9842ee8e",
         "lesson.key": "Option A",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "9995d5cb-11e1-41dd-979a-9c2865786202",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9995d5cb-11e1-41dd-979a-9c2865786202",
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "75b72915-ac93-49b3-b8a5-26af24147aa1",
+      "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "75b72915-ac93-49b3-b8a5-26af24147aa1",
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "c09a1f04-e986-4301-b1d8-e029b4c0b975",
+      "position": 2,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c09a1f04-e986-4301-b1d8-e029b4c0b975",
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "0ef2540c-2256-4265-8918-cca448db77df",
+      "position": 3,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0ef2540c-2256-4265-8918-cca448db77df",
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "96b2b653-f8b2-4adb-9f01-98a4b0f570c4",
+      "position": 4,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "96b2b653-f8b2-4adb-9f01-98a4b0f570c4",
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "ef41ea0d-a5f0-479b-ac6d-9c771bb974c1",
+      "position": 5,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ef41ea0d-a5f0-479b-ac6d-9c771bb974c1",
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "2aabad39-0459-4d84-a71f-eae8f8b2f40f",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2aabad39-0459-4d84-a71f-eae8f8b2f40f",
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "6bb6381c-622b-465a-b634-2afe798888e1",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6bb6381c-622b-465a-b634-2afe798888e1",
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "619f2862-83c5-4b54-853a-125fa98172b7",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "619f2862-83c5-4b54-853a-125fa98172b7",
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "d9861093-3acd-4f74-870e-faa6a7e1bb92",
+      "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d9861093-3acd-4f74-870e-faa6a7e1bb92",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "dd0a8e18-6eac-4934-bbb9-29876c1f447e",
+      "position": 2,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dd0a8e18-6eac-4934-bbb9-29876c1f447e",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "ba16db8d-cc13-40ac-9e84-2b1ce3b7a09c",
+      "position": 3,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ba16db8d-cc13-40ac-9e84-2b1ce3b7a09c",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "228b6b16-1270-4d0f-9ea4-5336a9300989",
+      "position": 4,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "228b6b16-1270-4d0f-9ea4-5336a9300989",
+        "lesson.key": "Project: Genre Mash-Up",
         "lesson_group.key": "",
         "script.name": "csd-playground"
       }
@@ -2437,6 +2679,28 @@
       }
     },
     {
+      "key": "c21d0ea2-19ed-4407-8037-1f349ea28c14",
+      "position": 2,
+      "properties": {
+        "description": "\n\n![expandable](https://images.code.org/8af3c1808b1a032735e26fefa773a480-IMG_7529.jpg)"
+      },
+      "seeding_key": {
+        "activity_section.key": "c21d0ea2-19ed-4407-8037-1f349ea28c14",
+        "lesson_activity.key": "bd22b255-6fbc-4ac9-97f6-565f7b9ab30d"
+      }
+    },
+    {
+      "key": "1db2dccb-00c4-4d00-afbd-02a753c9d4fc",
+      "position": 3,
+      "properties": {
+        "description": "<span data-url=\"https://images.code.org/8af3c1808b1a032735e26fefa773a480-IMG_7529.jpg\" class=\"expandable-image\"></span>"
+      },
+      "seeding_key": {
+        "activity_section.key": "1db2dccb-00c4-4d00-afbd-02a753c9d4fc",
+        "lesson_activity.key": "bd22b255-6fbc-4ac9-97f6-565f7b9ab30d"
+      }
+    },
+    {
       "key": "c4d4c3db-9ced-433c-890e-e275012ac184",
       "position": 1,
       "properties": {
@@ -2825,6 +3089,490 @@
       "seeding_key": {
         "activity_section.key": "19c2600d-bcd9-488a-a078-8774ed7a5343",
         "lesson_activity.key": "8cb88de1-0881-4d25-8fa9-620d9842ee8e"
+      }
+    },
+    {
+      "key": "ee4c5662-48e7-40d2-8dc4-95891c23556e",
+      "position": 1,
+      "properties": {
+        "progression_name": "Explore"
+      },
+      "seeding_key": {
+        "activity_section.key": "ee4c5662-48e7-40d2-8dc4-95891c23556e",
+        "lesson_activity.key": "9995d5cb-11e1-41dd-979a-9c2865786202"
+      }
+    },
+    {
+      "key": "73b86b85-5835-4a2a-b33d-51186afd946b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Predict"
+      },
+      "seeding_key": {
+        "activity_section.key": "73b86b85-5835-4a2a-b33d-51186afd946b",
+        "lesson_activity.key": "9995d5cb-11e1-41dd-979a-9c2865786202"
+      }
+    },
+    {
+      "key": "3260509f-9c18-4595-b0e9-f765826dd763",
+      "position": 3,
+      "properties": {
+        "progression_name": "Investigate"
+      },
+      "seeding_key": {
+        "activity_section.key": "3260509f-9c18-4595-b0e9-f765826dd763",
+        "lesson_activity.key": "9995d5cb-11e1-41dd-979a-9c2865786202"
+      }
+    },
+    {
+      "key": "a56670a9-271a-4ba6-a2e4-f03ef2647c46",
+      "position": 4,
+      "properties": {
+        "progression_name": "Check-In"
+      },
+      "seeding_key": {
+        "activity_section.key": "a56670a9-271a-4ba6-a2e4-f03ef2647c46",
+        "lesson_activity.key": "9995d5cb-11e1-41dd-979a-9c2865786202"
+      }
+    },
+    {
+      "key": "bceeb240-2ac1-4813-86c4-c72031dbae14",
+      "position": 5,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "bceeb240-2ac1-4813-86c4-c72031dbae14",
+        "lesson_activity.key": "9995d5cb-11e1-41dd-979a-9c2865786202"
+      }
+    },
+    {
+      "key": "bcd32ce8-4faf-4d7a-9bfc-6447a225b236",
+      "position": 6,
+      "properties": {
+        "progression_name": "Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "bcd32ce8-4faf-4d7a-9bfc-6447a225b236",
+        "lesson_activity.key": "9995d5cb-11e1-41dd-979a-9c2865786202"
+      }
+    },
+    {
+      "key": "97343e94-13a8-4835-ad66-7cba4540a786",
+      "position": 7,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "97343e94-13a8-4835-ad66-7cba4540a786",
+        "lesson_activity.key": "9995d5cb-11e1-41dd-979a-9c2865786202"
+      }
+    },
+    {
+      "key": "26323725-2e09-4bfc-93e6-ca81299797cb",
+      "position": 1,
+      "properties": {
+        "description": "Coolio!"
+      },
+      "seeding_key": {
+        "activity_section.key": "26323725-2e09-4bfc-93e6-ca81299797cb",
+        "lesson_activity.key": "75b72915-ac93-49b3-b8a5-26af24147aa1"
+      }
+    },
+    {
+      "key": "c48d7bb0-18c9-4f33-93c8-6235e68bf26e",
+      "position": 1,
+      "properties": {
+        "description": "found and replaced",
+        "name": "Activity Title",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "callout 2"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c48d7bb0-18c9-4f33-93c8-6235e68bf26e",
+        "lesson_activity.key": "c09a1f04-e986-4301-b1d8-e029b4c0b975"
+      }
+    },
+    {
+      "key": "8b9c7759-feba-4dd5-8033-01203261bafb",
+      "position": 2,
+      "properties": {
+        "description": "activity section 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "8b9c7759-feba-4dd5-8033-01203261bafb",
+        "lesson_activity.key": "c09a1f04-e986-4301-b1d8-e029b4c0b975"
+      }
+    },
+    {
+      "key": "dc38bbde-d7fe-4d03-bb4a-6d73d37fd65a",
+      "position": 3,
+      "properties": {
+        "description": "activity section with callout",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "teaching tip 1"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "dc38bbde-d7fe-4d03-bb4a-6d73d37fd65a",
+        "lesson_activity.key": "c09a1f04-e986-4301-b1d8-e029b4c0b975"
+      }
+    },
+    {
+      "key": "c76389f1-69c7-4dc9-add6-8d86d565f519",
+      "position": 1,
+      "properties": {
+        "description": "activity section 4",
+        "name": "Activity Title"
+      },
+      "seeding_key": {
+        "activity_section.key": "c76389f1-69c7-4dc9-add6-8d86d565f519",
+        "lesson_activity.key": "0ef2540c-2256-4265-8918-cca448db77df"
+      }
+    },
+    {
+      "key": "9a05a6ad-2f43-48ad-99e8-693f7adcc042",
+      "position": 2,
+      "properties": {
+        "description": "activity section with assessment opportunity",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": ""
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9a05a6ad-2f43-48ad-99e8-693f7adcc042",
+        "lesson_activity.key": "0ef2540c-2256-4265-8918-cca448db77df"
+      }
+    },
+    {
+      "key": "060865be-4c40-49c3-a2f2-90eaa4bd01ea",
+      "position": 3,
+      "properties": {
+        "description": "activity section with another callout",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "teaching tip 2"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "060865be-4c40-49c3-a2f2-90eaa4bd01ea",
+        "lesson_activity.key": "0ef2540c-2256-4265-8918-cca448db77df"
+      }
+    },
+    {
+      "key": "19908ffe-fa93-42ad-9ff9-fe371a27bfdf",
+      "position": 1,
+      "properties": {
+        "description": "activity section"
+      },
+      "seeding_key": {
+        "activity_section.key": "19908ffe-fa93-42ad-9ff9-fe371a27bfdf",
+        "lesson_activity.key": "96b2b653-f8b2-4adb-9f01-98a4b0f570c4"
+      }
+    },
+    {
+      "key": "27829f19-5a81-4e97-911b-ff34a0442f1f",
+      "position": 2,
+      "properties": {
+        "description": "activity section"
+      },
+      "seeding_key": {
+        "activity_section.key": "27829f19-5a81-4e97-911b-ff34a0442f1f",
+        "lesson_activity.key": "96b2b653-f8b2-4adb-9f01-98a4b0f570c4"
+      }
+    },
+    {
+      "key": "1e49b20f-e191-4ce1-9eb1-2dcd88e4541b",
+      "position": 1,
+      "properties": {
+        "description": "activity section"
+      },
+      "seeding_key": {
+        "activity_section.key": "1e49b20f-e191-4ce1-9eb1-2dcd88e4541b",
+        "lesson_activity.key": "ef41ea0d-a5f0-479b-ac6d-9c771bb974c1"
+      }
+    },
+    {
+      "key": "f592636c-b34c-4af0-9a9c-8b2a597df071",
+      "position": 1,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g2694c47731d_0_16\"></td>\n    <td style=\"width: 75%\">\n      <br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Group students in pairs or groups of three and read aloud the sentence on the board. Have students take turns one-by-one building on the conversation by starting their next sentence with \"Yes, and..\"\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n",
+        "duration": "10",
+        "name": "Yes, and…",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip:** - For example:\nOpening Statement: \"A mysterious talking cat started showing up to math class.\"\n- Student 1: \"Yes, and he said his name is Whiskers.\"\n- Student 2: \"Yes, and he happens to be very good at multiplication.\"\n- Student 1: \"Yes, and he has a sister who started showing up to English class.\"\n\n\n(Optional) If you have time to play multiple rounds of the game, here are some additional opening statements:\n- \"The class down the hall just discovered a hidden tunnel beneath the school.\"\n- \"The principal announced that prom will be held on a spaceship this year.\"\n- \"Every locker in the main hallway suddenly started playing music.\""
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f592636c-b34c-4af0-9a9c-8b2a597df071",
+        "lesson_activity.key": "2aabad39-0459-4d84-a71f-eae8f8b2f40f"
+      }
+    },
+    {
+      "key": "dc5003f8-5b1a-4365-846c-72a573e9360d",
+      "position": 2,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g341232c2a83_0_6\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Summarize the story you came up with. What were the last two sentences of your conversation?\n\t\t<br />Have several groups summarize where their conversation went. Then have them share out their last sentence or two that they came up with.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should recognize that all groups started with the same sentence starter but may have ended up with very different conversations. Have students note any patterns between the stories as well as any differences. This game leads into the main activity by explaining how AI generates content.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g1b0012b9552_0_230\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the lesson objectives.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g1b0012b9552_0_235\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the Question of the Day.\n    </td>\n  </tr>\n\n</table>"
+      },
+      "seeding_key": {
+        "activity_section.key": "dc5003f8-5b1a-4365-846c-72a573e9360d",
+        "lesson_activity.key": "2aabad39-0459-4d84-a71f-eae8f8b2f40f"
+      }
+    },
+    {
+      "key": "8a526eb5-f3b2-484e-93bd-c19ad67e2556",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8a526eb5-f3b2-484e-93bd-c19ad67e2556",
+        "lesson_activity.key": "2aabad39-0459-4d84-a71f-eae8f8b2f40f"
+      }
+    },
+    {
+      "key": "ea940e90-dbf6-4289-ac23-c33905bf7a84",
+      "position": 1,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g338b488f2e8_1_0\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Give each student a copy of the Problem Solving with AI Unit Guide.\n    </td>\n  </tr>\n\n</table>"
+      },
+      "seeding_key": {
+        "activity_section.key": "ea940e90-dbf6-4289-ac23-c33905bf7a84",
+        "lesson_activity.key": "6bb6381c-622b-465a-b634-2afe798888e1"
+      }
+    },
+    {
+      "key": "61adc198-36b3-4a7f-9a44-14ddfea9c3a5",
+      "position": 2,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g341232c2a83_0_19\"></td>\n    <td style=\"width: 75%\">\n      <br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Define artificial intelligence.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g341232c2a83_0_55\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Predict the word that you think will probably come next in the following sentence: The dog barked at the...\n\t\t<br />Ask students to predict the word that they think will probably come next (i.e. the most common word) and provide a reason for why they chose that word. Have all students raise their hand when they think of an answer. Start calling on students and have other students put down their hand if someone is called on who has the same answer.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students will see that there are several common possibilities that are chosen. Common words might include squirrel, mailman, stranger, etc. However, there will also be outliers that might not be as common (e.g. my aunt Lucy). Having students recognize that there are more and less common responses is a first step towards understanding how probability works while making this sort of prediction.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g341232c2a83_0_40\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Model the AI Chat in Lesson 1, Level 1 for students. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Have students experiment with using the AI Chat to complete the sentence.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n   ",
+        "duration": "10",
+        "name": "AI Predictions",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip:** - Have AI generate several outcomes to complete the sentence. You can keep prompting AI Chat using the same prompt or follow up by prompting it to \"generate three more answers\". You may also want to have students try out the prompt on their devices and compare responses."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "61adc198-36b3-4a7f-9a44-14ddfea9c3a5",
+        "lesson_activity.key": "6bb6381c-622b-465a-b634-2afe798888e1"
+      }
+    },
+    {
+      "key": "309bd928-94be-4ee6-9659-7b373adfe305",
+      "position": 3,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g341232c2a83_0_64\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> How does AI's output compare to the word you predicted?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should start to see how AI selects words based on probability. It tends to choose the most likely next word, which often mirrors our own prediction of the most-likely next word.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g341232c2a83_0_25\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Define probability.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g2694c47731d_3_332\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through this scenario of probability-driven predictions that make sense and are successful. Make sure students understand that the grey box represents the user input, and the blue box below represents the AI Chat response.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> AI uses the computational skill of pattern recognition to generate its most likely response. For example, it reads over thousands of sentences that contain the different phrases above (e.g. \"heard the knock at the…\") and starts to recognize a pattern.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g341232c2a83_0_87\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Examine this scenario where probability-driven predictions fail because they don't rely on meaning.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g341a65f858a_0_13\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Explain that AI focused on the words \"key\", \"on\", and \"table\" and abstracted away unnecessary details of the prompt.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Since AI doesn't understand meaning, it drew a single key resting on the table in an unrealistic way. It prioritized the literal meaning of the essential details of the sentence rather than considering the sentence as a whole.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g341a65f858a_0_27\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Define abstraction.\n    </td>\n  </tr>\n\n</table>"
+      },
+      "seeding_key": {
+        "activity_section.key": "309bd928-94be-4ee6-9659-7b373adfe305",
+        "lesson_activity.key": "6bb6381c-622b-465a-b634-2afe798888e1"
+      }
+    },
+    {
+      "key": "29ade772-3584-4a8f-8e35-e6b74cd29e3c",
+      "position": 4,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g341232c2a83_0_104\"></td>\n    <td style=\"width: 75%\">\n      <br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Define prompt.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g341232c2a83_0_111\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Direct students to Lesson 1, Level 2 to complete Levels 2 through 4.\n\t\t<br />Level 2: Students input \"Give me 3 gift ideas\" into AI Chat.\n\t\t<br />Level 3: Students input a more specific prompt that defines the person who is getting the gift.\n\t\t<br />Level 4: Students upload an image to accompany the specific prompt that they reuse from Level 3.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g341232c2a83_0_77\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Show the \"Plan a Perfect Trip with ChatGPT\" video.\n\t\t<br />\n\t\t<br />Questions to consider with the video:\n\t\t<br />What tips might you give to someone else who is looking to improve their prompts?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students might point out that they should include both information that they are interested in getting, but also information that they are not. They might also mention that including demographic information and specific numbers are helpful for more useful responses.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n",
+        "duration": "20",
+        "name": "Prompting AI",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip:** - Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science. While interacting with the video, turn on closed captioning so students can also read along as they watch. To encourage active engagement and reflection, use one or more of the strategies discussed in the <a href=\"https://docs.google.com/document/d/1Y-kGl_pc2afuSBKhKkdulu53X50mc7T-RQZA4vGLpY4/edit?usp=sharing\" target=\"_blank\">Guide to Curriculum Videos</a>."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "29ade772-3584-4a8f-8e35-e6b74cd29e3c",
+        "lesson_activity.key": "6bb6381c-622b-465a-b634-2afe798888e1"
+      }
+    },
+    {
+      "key": "7f08b56c-1054-4d1f-bd6d-a164b4ac67bf",
+      "position": 5,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g341232c2a83_0_100\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Direct students to Lesson 1, Level 5. Students choose one of the AI Chat levels that is configured for a specific task. They start by giving the AI Chat a generic prompt first (such as \"Help me plan a trip to Disney World\"), then make it more specific, then make it more specific and add an image. Students should update their prompt or interact with the AI Chat in at least three back and forth interactions.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip:** - This is a choice level, so students only need to complete one of the levels. However, if students finish early or are looking for an additional challenge, they can choose Option D: Debate an AI Partner level. This option is more challenging because it requires students to engage in a back-and-forth exchange with AI, refine their arguments, and adapt their reasoning based on AI's responses. Unlike other choices that focus on planning tasks, this level encourages students to critically analyze AI-generated arguments and practice constructing persuasive responses."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7f08b56c-1054-4d1f-bd6d-a164b4ac67bf",
+        "lesson_activity.key": "6bb6381c-622b-465a-b634-2afe798888e1"
+      }
+    },
+    {
+      "key": "3bf48bd9-292a-43e3-bc4a-7b09a9affeb2",
+      "position": 6,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g338936f2b73_0_0\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Direct students to Lesson 1, Level 6 to complete the formative assessment. Display students' anonymous responses.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "3bf48bd9-292a-43e3-bc4a-7b09a9affeb2",
+        "lesson_activity.key": "6bb6381c-622b-465a-b634-2afe798888e1"
+      }
+    },
+    {
+      "key": "61fbfaf5-51c6-4f19-a74d-82223e563d0a",
+      "position": 7,
+      "properties": {
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Assessment Opportunity:** - This level can be used as a formative assessment to check student understanding of the lesson objectives. Here are things to look for and actions you can take:\n- If students are only describing what happened rather than why it happened, prompt them to revisit earlier lesson segments on probability-driven outputs. Consider a quick group discussion where students share examples of prompts that worked well and why those prompts influenced AI's response.\n- If students seem uncertain about constructing high-quality prompts, have them re-examine Level 5 where best prompting strategies are summarized. They can also do a brief pair activity—each student provides a vague prompt, then a specific prompt, and compares the results.\n- If many students need more help, provide short demos or additional videos showing how multimodal inputs can change the AI's outputs. Or point them to the optional video about planning a family trip to emphasize how refining prompts improves results. Encourage a follow-up activity where students generate multiple answers to the same prompt, then analyze and explain what changed."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "61fbfaf5-51c6-4f19-a74d-82223e563d0a",
+        "lesson_activity.key": "6bb6381c-622b-465a-b634-2afe798888e1"
+      }
+    },
+    {
+      "key": "57867549-3678-4a2e-96f4-2abda69bcab5",
+      "position": 1,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g111726a1132_0_199\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the lesson objectives.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g1b0012b9552_0_737\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the Question of the Day.\n    </td>\n  </tr>\n\n</table>"
+      },
+      "seeding_key": {
+        "activity_section.key": "57867549-3678-4a2e-96f4-2abda69bcab5",
+        "lesson_activity.key": "619f2862-83c5-4b54-853a-125fa98172b7"
+      }
+    },
+    {
+      "key": "3405d565-31e0-4c8c-98e2-4a566641ea88",
+      "position": 2,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g2694c47731d_3_41\"></td>\n    <td style=\"width: 75%\">\n      <br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students sit in a circle or small groups. Pose the Question of the Day to students. One by one, they quickly state their answer to the Question of the Day. Responses should be brief (one sentence or key phrase). They should see how many unique answers they can come up with. \n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n",
+        "duration": "5",
+        "name": "Rapid Roundtable",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip:** - If students are struggling to answer the Question of the Day, have them think about which prompting strategies got them the most helpful AI Chat outputs. For example, ask students what details they included in their prompts or how they selected an image to add to their prompt."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3405d565-31e0-4c8c-98e2-4a566641ea88",
+        "lesson_activity.key": "619f2862-83c5-4b54-853a-125fa98172b7"
+      }
+    },
+    {
+      "key": "6da81283-a763-4bd7-b8ea-f3b3b3e3f5c4",
+      "position": 3,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g2694c47731d_3_56\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the Key Vocabulary.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g2669c93d226_0_77\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Direct students to Lesson 1, Level 7 to complete the End of Lesson Survey.\n    </td>\n  </tr>\n\n</table>"
+      },
+      "seeding_key": {
+        "activity_section.key": "6da81283-a763-4bd7-b8ea-f3b3b3e3f5c4",
+        "lesson_activity.key": "619f2862-83c5-4b54-853a-125fa98172b7"
+      }
+    },
+    {
+      "key": "4af3b831-e3fb-44d9-94de-b96881f95cc9",
+      "position": 1,
+      "properties": {
+        "description": "After reviewing the project guide and rubric, you can view an exemplar for this project in our self-paced professional learning course. [**Click here to view the exemplar**](https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/4/levels/18)",
+        "name": "Project Exemplar"
+      },
+      "seeding_key": {
+        "activity_section.key": "4af3b831-e3fb-44d9-94de-b96881f95cc9",
+        "lesson_activity.key": "d9861093-3acd-4f74-870e-faa6a7e1bb92"
+      }
+    },
+    {
+      "key": "30416d94-6595-40c2-881d-be444cf1fe4e",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Try to create a definitive list of the different genres that the songs in Music Lab fall into. For example: Fireworks by Katy Perry and Espresso by Sabrina Carpenter are pop songs, but Karma by Denzel Kennedy is a hip-hop song and Beethoven's Symphony is a classical song. Try to come up with as many genres as you can!\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Have students share their ideas as a class. If students struggle coming up with genres, consider sharing the [list of genres and categories used by the Grammy's](https://en.wikipedia.org/wiki/List_of_Grammy_Award_categories). Don't aim for consensus amongst the class, but instead surface the idea that there are many different genres that a song can fall into and these genres can have distinct styles or feelings. Once a large list has been generated, transition to the next activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "30416d94-6595-40c2-881d-be444cf1fe4e",
+        "lesson_activity.key": "dd0a8e18-6eac-4934-bbb9-29876c1f447e"
+      }
+    },
+    {
+      "key": "7152a13f-bd3c-400c-a15e-f36e65c9991a",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Every song has a genre or two that it belongs to, and one exciting thing a musical artist can do is remix or re-record a song in a different genre. This is the focus of our next project - taking an existing song and remixing it to a different genre. For example: taking a pop song and making it sound like a heavy rock song, or taking a hip-hop song and making it sound like an indie song.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Real-World Examples:** Depending on how much time you have in class and the interests of your students, consider sharing some real-world examples of this:\n- [The Vitamin String Quartet](https://www.youtube.com/channel/UCC9h6FtIb58ZQCRPJ2ZQtKg) creates string quartet versions of pop music, which are often used in commercials or television shows.\n- The Australian radio program Triple J hosts a series called [Like a Version](https://www.youtube.com/playlist?list=PLFqO_oqoHHMznB9S1bAJa5hOp9_U9ud1h) where artists cover songs often mixing genres. Consider comparing the song [Love](https://www.youtube.com/watch?v=ox7RsX1Ee34) by Kendrick Lamar to the [cover by Chvrches](https://www.youtube.com/watch?v=msgimk3mV6g), which replaces the backing hip-hop drums and beats with synths and bass to create a poppy transformation. Or compare the song [Hide and Seek](https://www.youtube.com/watch?v=UYIAfiVGluk) by Imogen Heap to the [cover by Ball Park Music](https://www.youtube.com/watch?v=VdX8ZfMB02k), which replaces the electronic backing and vocals with a more indie sound using guitars and drums."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7152a13f-bd3c-400c-a15e-f36e65c9991a",
+        "lesson_activity.key": "dd0a8e18-6eac-4934-bbb9-29876c1f447e"
+      }
+    },
+    {
+      "key": "d5d1a6db-d9dd-4e7a-93f2-4a32d0a00674",
+      "position": 1,
+      "properties": {
+        "progression_name": "Examples"
+      },
+      "seeding_key": {
+        "activity_section.key": "d5d1a6db-d9dd-4e7a-93f2-4a32d0a00674",
+        "lesson_activity.key": "ba16db8d-cc13-40ac-9e84-2b1ce3b7a09c"
+      }
+    },
+    {
+      "key": "f4a53927-b72e-4240-bfd2-202db871ff96",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the [Genre Mashup Activity Guide](https://docs.google.com/document/d/12HPEKHdaWP7EG4m84TnoNppAu1eqeYBF6rUEmIFcyLU/edit) to each student\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the Overview as a class\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Define portion of the activity guide\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students login to Music Lab to complete the Prepare portion of the activity guide",
+        "progression_name": "Prepare"
+      },
+      "seeding_key": {
+        "activity_section.key": "f4a53927-b72e-4240-bfd2-202db871ff96",
+        "lesson_activity.key": "ba16db8d-cc13-40ac-9e84-2b1ce3b7a09c"
+      }
+    },
+    {
+      "key": "61ece8f0-11d3-4957-b99e-f4977c8d3adb",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check in with students as they complete the Prepare steps. They should check in with you before continuing to try and code their genre mashups.\n\nOnce you've approved students progress so far, pass out the [Genre Mashup Rubric](https://docs.google.com/document/d/1FQAtWffIufswEhLG6LwZnyKSfnP7KG1nhthJi5w65bM/edit?tab=t.0). Then they can continue to the next levels.",
+        "progression_name": "Genre Mashup"
+      },
+      "seeding_key": {
+        "activity_section.key": "61ece8f0-11d3-4957-b99e-f4977c8d3adb",
+        "lesson_activity.key": "ba16db8d-cc13-40ac-9e84-2b1ce3b7a09c"
+      }
+    },
+    {
+      "key": "427aba4c-887b-4c1a-89eb-29ae695028d9",
+      "position": 1,
+      "properties": {
+        "description": "**Share Out:** Have students share their work with their peers in some way. Their peers can provide feedback using \"I like...\" and \"What if...\" sentence stems to provide positive constructive feedback. Some options could be:\n- **Class Shareout:** Ask for volunteers and let them share their songs with the whole class, then choose 2-3 students to provide feedback\n- **Pair Networking:** Have students pair up and share their songs and provide feedback, then swap to a new pair\n- **Gallery Walk:** Have students leave their song open on their computer, then walk around and visit other songs. Students carry post-it notes with them and leave feedback on any students they visit."
+      },
+      "seeding_key": {
+        "activity_section.key": "427aba4c-887b-4c1a-89eb-29ae695028d9",
+        "lesson_activity.key": "228b6b16-1270-4d0f-9ea4-5336a9300989"
       }
     }
   ],
@@ -5003,6 +5751,321 @@
       "level_keys": [
         "course_e_maker_juicemind_bridging_activity_stretch_test"
       ]
+    },
+    {
+      "chapter": 88,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project-L0_2024_TEST"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-project-L0_2024_TEST"
+        ],
+        "lesson.key": "Option A",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "34c52b0d-fd00-42da-98b3-83465bb2bbf1"
+      },
+      "level_keys": [
+        "gen-ai-customizing-project-L0_2024_TEST"
+      ]
+    },
+    {
+      "chapter": 89,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-explore-investigate_testing"
+        ],
+        "progression": "Explore"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-investigate_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "ee4c5662-48e7-40d2-8dc4-95891c23556e"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-explore-investigate_testing"
+      ]
+    },
+    {
+      "chapter": 90,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-explore-predict_testing"
+        ],
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-predict_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "73b86b85-5835-4a2a-b33d-51186afd946b"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-explore-predict_testing"
+      ]
+    },
+    {
+      "chapter": 91,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-explore-play-together-1_testing"
+        ],
+        "progression": "Investigate"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-play-together-1_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "3260509f-9c18-4595-b0e9-f765826dd763"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-explore-play-together-1_testing"
+      ]
+    },
+    {
+      "chapter": 92,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-explore-play-together-2_testing"
+        ],
+        "progression": "Investigate"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-play-together-2_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "3260509f-9c18-4595-b0e9-f765826dd763"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-explore-play-together-2_testing"
+      ]
+    },
+    {
+      "chapter": 93,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-explore-play-together-3_testing"
+        ],
+        "progression": "Investigate"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-play-together-3_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "3260509f-9c18-4595-b0e9-f765826dd763"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-explore-play-together-3_testing"
+      ]
+    },
+    {
+      "chapter": 94,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-music-lab-sequence-explore-formative_testing"
+        ],
+        "progression": "Check-In"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequence-explore-formative_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "a56670a9-271a-4ba6-a2e4-f03ef2647c46"
+      },
+      "level_keys": [
+        "test-music-lab-sequence-explore-formative_testing"
+      ]
+    },
+    {
+      "chapter": 95,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-explore-choice-level_testing"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-choice-level_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "bceeb240-2ac1-4813-86c4-c72031dbae14"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-explore-choice-level_testing"
+      ]
+    },
+    {
+      "chapter": 96,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "test-music-lab-sequence-explore-evaluative_testing"
+        ],
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequence-explore-evaluative_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "bcd32ce8-4faf-4d7a-9bfc-6447a225b236"
+      },
+      "level_keys": [
+        "test-music-lab-sequence-explore-evaluative_testing"
+      ]
+    },
+    {
+      "chapter": 97,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-explore-song-choice-level_testing"
+        ],
+        "progression": "Challenge"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-song-choice-level_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "97343e94-13a8-4835-ad66-7cba4540a786"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-explore-song-choice-level_testing"
+      ]
+    },
+    {
+      "chapter": 98,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Examples"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-genre-examples-choice"
+        ],
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "d5d1a6db-d9dd-4e7a-93f2-4a32d0a00674"
+      },
+      "level_keys": [
+        "music-lab-genre-examples-choice"
+      ]
+    },
+    {
+      "chapter": 99,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Prepare"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-functions-project-prepare_v2"
+        ],
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "f4a53927-b72e-4240-bfd2-202db871ff96"
+      },
+      "level_keys": [
+        "music-lab-functions-project-prepare_v2"
+      ]
+    },
+    {
+      "chapter": 100,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Genre Mashup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-genre-project_v2"
+        ],
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "61ece8f0-11d3-4957-b99e-f4977c8d3adb"
+      },
+      "level_keys": [
+        "music-lab-genre-project_v2"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -6049,6 +7112,162 @@
         "script.name": "csd-playground",
         "activity_section.key": "60274cbe-4bbb-4bc2-953e-3715b3994d62"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-project-L0_2024_TEST",
+        "script_level.level_keys": [
+          "gen-ai-customizing-project-L0_2024_TEST"
+        ],
+        "lesson.key": "Option A",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "34c52b0d-fd00-42da-98b3-83465bb2bbf1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-explore-investigate_testing",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-investigate_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "ee4c5662-48e7-40d2-8dc4-95891c23556e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-explore-predict_testing",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-predict_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "73b86b85-5835-4a2a-b33d-51186afd946b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-explore-play-together-1_testing",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-play-together-1_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "3260509f-9c18-4595-b0e9-f765826dd763"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-explore-play-together-2_testing",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-play-together-2_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "3260509f-9c18-4595-b0e9-f765826dd763"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-explore-play-together-3_testing",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-play-together-3_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "3260509f-9c18-4595-b0e9-f765826dd763"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequence-explore-formative_testing",
+        "script_level.level_keys": [
+          "test-music-lab-sequence-explore-formative_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "a56670a9-271a-4ba6-a2e4-f03ef2647c46"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-explore-choice-level_testing",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-choice-level_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "bceeb240-2ac1-4813-86c4-c72031dbae14"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequence-explore-evaluative_testing",
+        "script_level.level_keys": [
+          "test-music-lab-sequence-explore-evaluative_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "bcd32ce8-4faf-4d7a-9bfc-6447a225b236"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-explore-song-choice-level_testing",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-song-choice-level_testing"
+        ],
+        "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "97343e94-13a8-4835-ad66-7cba4540a786"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-genre-examples-choice",
+        "script_level.level_keys": [
+          "music-lab-genre-examples-choice"
+        ],
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "d5d1a6db-d9dd-4e7a-93f2-4a32d0a00674"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-functions-project-prepare_v2",
+        "script_level.level_keys": [
+          "music-lab-functions-project-prepare_v2"
+        ],
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "f4a53927-b72e-4240-bfd2-202db871ff96"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-genre-project_v2",
+        "script_level.level_keys": [
+          "music-lab-genre-project_v2"
+        ],
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "61ece8f0-11d3-4957-b99e-f4977c8d3adb"
+      }
     }
   ],
   "resources": [
@@ -6178,6 +7397,31 @@
       }
     },
     {
+      "name": "Genre Mashup",
+      "url": "https://docs.google.com/document/d/12HPEKHdaWP7EG4m84TnoNppAu1eqeYBF6rUEmIFcyLU/edit",
+      "key": "genre_mashup",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "genre_mashup"
+      }
+    },
+    {
+      "name": "Genre Mashup Rubric",
+      "url": "https://docs.google.com/document/d/1FQAtWffIufswEhLG6LwZnyKSfnP7KG1nhthJi5w65bM/edit?tab=t.0",
+      "key": "genre_mashup_rubric",
+      "properties": {
+        "audience": "Student",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "genre_mashup_rubric"
+      }
+    },
+    {
       "name": "Innovations in Computing",
       "url": "https://docs.google.com/presentation/d/1GGS8st8d149AdXSgBxLrYHc1i8TXvLfo8nHCOhjLMXg/template/preview",
       "key": "innovations_in_computing",
@@ -6213,6 +7457,18 @@
       },
       "seeding_key": {
         "resource.key": "lesson_slides"
+      }
+    },
+    {
+      "name": "Project - Genre Mash Up",
+      "url": "https://docs.google.com/presentation/d/13sI-kHNF7fvgy0ThzjmhtIQhE5d0Otg4yx_kEoHDFT8/template/preview",
+      "key": "project_-_genre_mash_up",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "project_-_genre_mash_up"
       }
     },
     {
@@ -6361,6 +7617,24 @@
       "seeding_key": {
         "lesson.key": "Physical Changes",
         "resource.key": "lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Genre Mash-Up",
+        "resource.key": "genre_mashup"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Genre Mash-Up",
+        "resource.key": "genre_mashup_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Genre Mash-Up",
+        "resource.key": "project_-_genre_mash_up"
       }
     },
     {
@@ -6759,6 +8033,20 @@
         "lesson.key": "Physical Changes",
         "framework.shortcode": "ngss",
         "standard.shortcode": "5-PS1-4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Genre Mash-Up",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Genre Mash-Up",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
       }
     },
     {

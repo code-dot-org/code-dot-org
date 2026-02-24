@@ -1,0 +1,28 @@
+name 'programming-fundamentals-lesson5-level5-aitutor-2023'
+title 'Check for Understanding'
+description ''
+height '50'
+width '100'
+
+question 'move()'
+answer 'Example of a **method**'
+
+question 'turn_left()'
+answer 'Example of a **method**'
+
+question 'paint("green")'
+answer 'Example of a **method**'
+
+question 'facing east'
+answer 'Example of an **attribute**'
+
+question 'location'
+answer 'Example of an **attribute**'
+allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+###Match each term to its correct definition.
+MARKDOWN

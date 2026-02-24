@@ -1,0 +1,17 @@
+name 'networks-postassessment-question9_v2-2025'
+title 'Networks and the Internet Post-Assessment: Question 9'
+
+wrong 'HTTP'
+wrong 'TCP'
+wrong 'DNS'
+right 'UDP '
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+An online video call lags and has interruptions. Which protocol is likely being used that prioritizes speed over guaranteed delivery?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 6: HTTP and DNS
+MARKDOWN

@@ -1,0 +1,96 @@
+name 'csp-post-survey-levelgroup_csa_pilot-2025'
+title 'CSA Student Course Survey'
+submittable 'true'
+anonymous 'true'
+
+page
+text 'CSA Post-Survey Preamble_pilot-2025'
+level 'CSA Pre-Survey q01_copy1_pilot-2025'
+level 'CSA Pre-Survey q02_copy1_pilot-2025'
+level 'CSA Pre-Survey q03_copy1_pilot-2025'
+
+page
+text 'CSA Pre-Survey Feelings About CS Preamble_copy1_pilot-2025'
+level 'CSA Pre-Survey q04_copy1_pilot-2025'
+level 'CSA Pre-Survey q05_copy1_pilot-2025'
+level 'CSA Pre-Survey q06_copy1_pilot-2025'
+level 'CSA Pre-Survey q07_copy1_pilot-2025'
+level 'CSA Post-Survey q08_pilot-2025'
+
+page
+text 'CSA Pre-Survey Role in CS Preamble_copy1_pilot-2025'
+level 'CSA Pre-Survey q09_copy1_pilot-2025'
+level 'CSA Pre-Survey q10_copy1_pilot-2025'
+level 'CSA Pre-Survey q11_copy1_pilot-2025'
+level 'CSA Pre-Survey q12_copy1_pilot-2025'
+
+page
+text 'CSA Pre-Survey Previous Experience Preamble_copy1_pilot-2025'
+level 'CSA Pre-Survey q15_copy1_pilot-2025'
+level 'CSA Pre-Survey q16_copy1_pilot-2025'
+level 'CSA Post-Survey q17_pilot-2025'
+level 'CSA Post-Survey q18_pilot-2025'
+level 'CSA Pre-Survey q19_copy1_pilot-2025'
+
+page
+text 'CSA Pre-Survey Feelings About This Class Preamble_copy1_pilot-2025'
+level 'CSA Post-Survey q20_pilot-2025'
+level 'CSA Post-Survey q21_pilot-2025'
+level 'CSA Post-Survey q22_pilot-2025'
+level 'CSA Post-Survey q23_pilot-2025'
+level 'CSA Post-Survey q24_pilot-2025'
+level 'CSA Post-Survey q25_pilot-2025'
+level 'CSA Post-Survey q26_pilot-2025'
+
+page
+text 'CSA Pre-Survey Course Selection Preamble_copy1_pilot-2025'
+level 'CSA Pre-Survey q25_copy1_pilot-2025'
+level 'CSA Pre-Survey q26_copy1_pilot-2025'
+level 'CSA Pre-Survey q27_copy1_pilot-2025'
+level 'CSA Pre-Survey q28_copy1_pilot-2025'
+level 'CSA Pre-Survey q29_copy1_pilot-2025'
+level 'CSA Pre-Survey q30_copy1_pilot-2025'
+level 'CSA Post-Survey q31_pilot-2025'
+level 'CSA Post-Survey q32_pilot-2025'
+level 'CSA Post-Survey q33_pilot-2025'
+
+page
+text 'CSA Post-Survey Teacher Actions Preamble_pilot-2025'
+level 'CSA Post-Survey q39_pilot-2025'
+level 'CSA Post-Survey q40_pilot-2025'
+level 'CSA Post-Survey q41_pilot-2025'
+level 'CSA Post-Survey q42_pilot-2025'
+level 'CSA Post-Survey q43_pilot-2025'
+level 'CSA Post-Survey q44_pilot-2025'
+level 'CSA Post-Survey q45_pilot-2025'
+level 'CSA Post-Survey q46_pilot-2025'
+level 'CSA Post-Survey q47_pilot-2025'
+
+page
+text 'CSA Post-Survey Student Actions Preamble_pilot-2025'
+level 'CSA Post-Survey q48_pilot-2025'
+level 'CSA Post-Survey q49_pilot-2025'
+level 'CSA Post-Survey q50_pilot-2025'
+level 'CSA Post-Survey q51_pilot-2025'
+level 'CSA Post-Survey q52_pilot-2025'
+level 'CSA Post-Survey q53_pilot-2025'
+level 'CSA Post-Survey q54_pilot-2025'
+
+page
+text 'CSA Post-Survey Course Objectives Preamble_pilot-2025'
+level 'CSA Post-Survey q55_pilot-2025'
+level 'CSA Post-Survey q56_pilot-2025'
+level 'CSA Post-Survey q57_pilot-2025'
+level 'CSA Post-Survey q58_pilot-2025'
+level 'CSA Post-Survey q59_pilot-2025'
+level 'CSA Post-Survey q60_pilot-2025'
+level 'CSA Post-Survey q61_pilot-2025'
+level 'CSA Post-Survey q62_pilot-2025'
+level 'CSA Post-Survey q63_pilot-2025'
+level 'CSA Post-Survey q64_pilot-2025'
+level 'CSA Post-Survey q65_pilot-2025'
+level 'CSA Post-Survey q66_pilot-2025'
+level 'CSA Post-Survey q67_pilot-2025'
+level 'CSA Post-Survey q68_pilot-2025'
+level 'CSA Post-Survey q69_pilot-2025'
+level 'CSA Post-Survey q70_pilot-2025'

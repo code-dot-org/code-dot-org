@@ -1,24 +1,19 @@
+import Link from '@code-dot-org/component-library/link';
+import Toggle from '@code-dot-org/component-library/toggle';
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useMemo, useCallback} from 'react';
 import {CSVLink} from 'react-csv';
 import {connect} from 'react-redux';
 
-import Link from '@cdo/apps/componentLibrary/link/Link';
-import Toggle from '@cdo/apps/componentLibrary/toggle/Toggle';
-import {
-  BodyTwoText,
-  BodyThreeText,
-  Heading3,
-  Heading4,
-  StrongText,
-} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {setAiRubricsDisabled} from '@cdo/apps/templates/currentUserRedux';
+import {setAiEvalStatusMap} from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 import i18n from '@cdo/locale';
 
 import {UNDERSTANDING_LEVEL_STRINGS_V2, TAB_NAMES} from './rubricHelpers';
@@ -43,6 +38,7 @@ const STATUS_ALL = {
 };
 
 function RubricSettings({
+  teacherHasEnabledAi,
   visible,
   refreshAiEvaluations,
   rubric,
@@ -51,6 +47,9 @@ function RubricSettings({
   reportingData,
   aiRubricsDisabled,
   setAiRubricsDisabled,
+  allTeacherEvaluationData,
+  aiEvalStatusCounters,
+  setAiEvalStatusMap,
 }) {
   const rubricId = rubric.id;
   const {lesson} = rubric;
@@ -63,13 +62,17 @@ function RubricSettings({
   const [teacherEval, setTeacherEval] = useState(null);
   const [teacherEvalCount, setTeacherEvalCount] = useState(0);
   const polling = statusAll === STATUS_ALL.EVALUATION_PENDING;
-  const headers = [
-    {label: i18n.studentName(), key: 'user_name'},
-    {label: i18n.familyName(), key: 'user_family_name'},
-  ].concat(
-    ..._.sortBy(rubric.learningGoals, 'id').map(lg => {
-      return {label: String(lg.learningGoal), key: String(lg.id)};
-    })
+  const headers = useMemo(
+    () =>
+      [
+        {label: i18n.studentName(), key: 'user_name'},
+        {label: i18n.familyName(), key: 'user_family_name'},
+      ].concat(
+        ..._.sortBy(rubric.learningGoals, 'id').map(lg => {
+          return {label: String(lg.learningGoal), key: String(lg.id)};
+        })
+      ),
+    [rubric.learningGoals]
   );
 
   const updateAiRubricsDisabled = () => {
@@ -83,15 +86,9 @@ function RubricSettings({
     );
   };
 
-  const fetchTeacherEvaluationAll = (rubricId, sectionId) => {
-    return fetch(
-      `/rubrics/${rubricId}/get_teacher_evaluations_for_all?section_id=${sectionId}`
-    );
-  };
-
-  const getHeadersSlice = () => {
+  const getHeadersSlice = useCallback(() => {
     return headers.slice(2, headers.length);
-  };
+  }, [headers]);
 
   const statusAllText = () => {
     switch (statusAll) {
@@ -125,80 +122,71 @@ function RubricSettings({
     setDisplayDetails(!displayDetails);
   };
 
-  // load initial ai evaluation status
+  const parseAiEvalStatusCounters = useCallback(data => {
+    // we can't fetch the csrf token from the DOM because CSRF protection
+    // is disabled on script level pages.
+    setCsrfToken(data.csrfToken);
+    setUnevaluatedCount(data.attemptedUnevaluatedCount);
+    setTotalCount(data.attemptedCount + data.notAttemptedCount);
+    setEvaluatedCount(data.lastAttemptEvaluatedCount);
+    if (data.attemptedCount === 0) {
+      setStatusAll(STATUS_ALL.NOT_ATTEMPTED);
+    } else if (data.attemptedUnevaluatedCount === 0) {
+      setStatusAll(STATUS_ALL.ALREADY_EVALUATED);
+    } else {
+      setStatusAll(STATUS_ALL.READY);
+    }
+  }, []);
+
+  // parse initial ai evaluation status
   useEffect(() => {
-    const abort = new AbortController();
-    if (!!rubricId && !!sectionId) {
-      fetchAiEvaluationStatusAll(rubricId, sectionId).then(response => {
-        if (!response.ok) {
-          setStatusAll(STATUS_ALL.ERROR);
+    if (aiEvalStatusCounters) {
+      parseAiEvalStatusCounters(aiEvalStatusCounters);
+    }
+  }, [aiEvalStatusCounters, parseAiEvalStatusCounters]);
+
+  const parseTeacherEvaluationData = useCallback(
+    data => {
+      const teachEvalArr = [];
+      let count = 0;
+      data.forEach(student => {
+        var teachEvalRow = {
+          user_name: student.user_name,
+          user_family_name: !!student.user_family_name
+            ? student.user_family_name
+            : '',
+        };
+        if (student.eval.length > 0) {
+          count++;
+          student.eval.forEach(e => {
+            teachEvalRow[String(e.learning_goal_id)] =
+              e.understanding !== null
+                ? UNDERSTANDING_LEVEL_STRINGS_V2[e.understanding]
+                : '';
+          });
         } else {
-          response.json().then(data => {
-            // we can't fetch the csrf token from the DOM because CSRF protection
-            // is disabled on script level pages.
-            setCsrfToken(data.csrfToken);
-            setUnevaluatedCount(data.attemptedUnevaluatedCount);
-            setTotalCount(data.attemptedCount + data.notAttemptedCount);
-            setEvaluatedCount(data.lastAttemptEvaluatedCount);
-            if (data.attemptedCount === 0) {
-              setStatusAll(STATUS_ALL.NOT_ATTEMPTED);
-            } else if (data.attemptedUnevaluatedCount === 0) {
-              setStatusAll(STATUS_ALL.ALREADY_EVALUATED);
-            } else {
-              setStatusAll(STATUS_ALL.READY);
-            }
+          // add dummy values to keep the shape for students
+          // with no evaluations
+          getHeadersSlice().forEach(h => {
+            teachEvalRow[String(h.key)] = '';
           });
         }
+        teachEvalArr.push(teachEvalRow);
       });
-    }
-    return () => abort.abort();
-  }, [rubricId, sectionId]);
+      setTeacherEval(teachEvalArr);
+      setTeacherEvalCount(count);
+    },
+    [getHeadersSlice]
+  );
 
   useEffect(() => {
-    const abort = new AbortController();
-    if (!!rubricId && !!sectionId) {
-      fetchTeacherEvaluationAll(rubricId, sectionId).then(response => {
-        if (response.ok) {
-          response.json().then(data => {
-            var teachEvalArr = [];
-            var count = 0;
-            data.forEach(student => {
-              var teachEvalRow = {
-                user_name: student.user_name,
-                user_family_name: !!student.user_family_name
-                  ? student.user_family_name
-                  : '',
-              };
-              if (student.eval.length > 0) {
-                count++;
-                student.eval.forEach(e => {
-                  teachEvalRow[String(e.learning_goal_id)] =
-                    e.understanding !== null
-                      ? UNDERSTANDING_LEVEL_STRINGS_V2[e.understanding]
-                      : '';
-                });
-              } else {
-                // add dummy values to keep the shape for students
-                // with no evaluations
-                getHeadersSlice().forEach(h => {
-                  teachEvalRow[String(h.key)] = '';
-                });
-              }
-              teachEvalArr.push(teachEvalRow);
-            });
-            setTeacherEval(teachEvalArr);
-            setTeacherEvalCount(count);
-          });
-        }
-      });
+    if (allTeacherEvaluationData && allTeacherEvaluationData.length > 0) {
+      parseTeacherEvaluationData(allTeacherEvaluationData);
     }
-    return () => abort.abort();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [rubricId, sectionId]);
+  }, [allTeacherEvaluationData, parseTeacherEvaluationData]);
 
   // after ai eval is requested, poll for status changes
   useEffect(() => {
-    const abort = new AbortController();
     if (polling && !!rubricId && !!sectionId) {
       const intervalId = setInterval(() => {
         refreshAiEvaluations();
@@ -217,6 +205,7 @@ function RubricSettings({
                 setStatusAll(STATUS_ALL.EVALUATION_PENDING);
               } else {
                 setStatusAll(STATUS_ALL.SUCCESS);
+                setAiEvalStatusMap(data.aiEvalStatusMap);
               }
             });
           }
@@ -224,8 +213,14 @@ function RubricSettings({
       }, 5000);
       return () => clearInterval(intervalId);
     }
-    return () => abort.abort();
-  }, [rubricId, polling, sectionId, statusAll, refreshAiEvaluations]);
+  }, [
+    rubricId,
+    polling,
+    sectionId,
+    statusAll,
+    refreshAiEvaluations,
+    setAiEvalStatusMap,
+  ]);
 
   const handleRunAiAssessmentAll = () => {
     setStatusAll(STATUS_ALL.EVALUATION_PENDING);
@@ -239,7 +234,7 @@ function RubricSettings({
         rubricId: rubricId,
         sectionId: sectionId,
       },
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
     fetch(url, {
       method: 'POST',
@@ -274,71 +269,81 @@ function RubricSettings({
       })}
     >
       <div className={style.studentInfoGroup}>
-        <Heading3>
-          {i18n.lessonNumbered({
-            lessonNumber: lesson.position,
-            lessonName: lesson.name,
-          })}
-        </Heading3>
+        <Typography variant="h3" gutterBottom>
+          {lesson.title}
+        </Typography>
         <div className={style.selectors}>
           <SectionSelector reloadOnChange={true} />
         </div>
       </div>
-
       <div className={style.settingsContent}>
-        <div className={style.settingsGroup}>
-          <Heading4>{i18n.aiAssessment()}</Heading4>
-          <div className={style.settingsContainers}>
-            <div className={style.runAiAllStatuses}>
-              <BodyTwoText>
-                <StrongText>{summaryText()}</StrongText>
-              </BodyTwoText>
-              {statusAllText() && (
-                <BodyTwoText className="uitest-eval-status-all-text">
-                  {statusAllText()}
-                </BodyTwoText>
-              )}
-            </div>
-            <Button
-              className="uitest-run-ai-assessment-all"
-              text={i18n.runAiAssessmentClass()}
-              color={Button.ButtonColor.brandSecondaryDefault}
-              onClick={handleRunAiAssessmentAll}
-              style={{margin: 0}}
-              disabled={statusAll !== STATUS_ALL.READY}
-            >
-              {statusAll === STATUS_ALL.EVALUATION_PENDING && (
-                <i className="fa fa-spinner fa-spin" />
-              )}
-            </Button>
-            <div className={style.detailsGroup}>
-              <BodyTwoText
-                className={
-                  displayDetails ? style.detailsVisible : style.detailsHidden
-                }
+        {teacherHasEnabledAi && (
+          <div className={style.settingsGroup}>
+            <Typography variant="h4" gutterBottom>
+              {i18n.aiAssessment()}
+            </Typography>
+            <div className={style.settingsContainers}>
+              <div className={style.runAiAllStatuses}>
+                <Typography variant="body2" gutterBottom>
+                  <Typography variant="strong">{summaryText()}</Typography>
+                </Typography>
+                {statusAllText() && (
+                  <Typography
+                    className="uitest-eval-status-all-text"
+                    variant="body2"
+                    gutterBottom
+                  >
+                    {statusAllText()}
+                  </Typography>
+                )}
+              </div>
+              <Button
+                className="uitest-run-ai-assessment-all"
+                text={i18n.runAiAssessmentClass()}
+                color={Button.ButtonColor.brandSecondaryDefault}
+                onClick={handleRunAiAssessmentAll}
+                style={{margin: 0}}
+                disabled={statusAll !== STATUS_ALL.READY}
               >
-                {i18n.aiEvaluationDetails()}
-              </BodyTwoText>
-              <Link onClick={showHideDetails}>
-                {displayDetails ? i18n.hideDetails() : i18n.showDetails()}
-              </Link>
+                {statusAll === STATUS_ALL.EVALUATION_PENDING && (
+                  <i className="fa fa-spinner fa-spin" />
+                )}
+              </Button>
+              <div className={style.detailsGroup}>
+                <Typography
+                  className={
+                    displayDetails ? style.detailsVisible : style.detailsHidden
+                  }
+                  variant="body2"
+                  gutterBottom
+                >
+                  {i18n.aiEvaluationDetails()}
+                </Typography>
+                <Link onClick={showHideDetails}>
+                  {displayDetails ? i18n.hideDetails() : i18n.showDetails()}
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
+        )}
 
         <div className={style.settingsGroup}>
-          <Heading4>{i18n.rubricSummaryClassScore()}</Heading4>
+          <Typography variant="h4" gutterBottom>
+            {i18n.rubricSummaryClassScore()}
+          </Typography>
           <div className={style.settingsContainers}>
             <div className={style.runAiAllStatuses}>
               {teacherEvalCount === 0 && (
-                <BodyTwoText>{i18n.rubricNoStudentEvals()}</BodyTwoText>
+                <Typography variant="body2" gutterBottom>
+                  {i18n.rubricNoStudentEvals()}
+                </Typography>
               )}
               {teacherEvalCount > 0 && (
-                <BodyTwoText>
+                <Typography variant="body2" gutterBottom>
                   {i18n.rubricNumberStudentEvals({
                     teacherEvalCount: teacherEvalCount,
                   })}
-                </BodyTwoText>
+                </Typography>
               )}
             </div>
             {teacherEvalCount === 0 && (
@@ -368,33 +373,39 @@ function RubricSettings({
           </div>
         </div>
 
-        <div className={style.settingsGroup}>
-          <Heading4>{i18n.aiSettings()}</Heading4>
-          <div
-            className={classnames(
-              'uitest-rubric-ai-enable',
-              style.settingsContainers,
-              style.aiSettingsContainer
-            )}
-          >
-            <BodyThreeText>
-              <StrongText>{i18n.useAiFeaturesOnCodeOrg()}</StrongText>
-            </BodyThreeText>
-            <Toggle
-              label={i18n.useAiFeatures()}
-              checked={!aiRubricsDisabled}
-              onChange={updateAiRubricsDisabled}
-              size="s"
-            />
+        {teacherHasEnabledAi && (
+          <div className={style.settingsGroup}>
+            <Typography variant="h4" gutterBottom>
+              {i18n.aiSettings()}
+            </Typography>
+            <div
+              className={classnames(
+                'uitest-rubric-ai-enable',
+                style.settingsContainers,
+                style.aiSettingsContainer
+              )}
+            >
+              <Typography variant="body3" gutterBottom>
+                <Typography variant="strong">
+                  {i18n.useAiFeaturesOnCodeOrg()}
+                </Typography>
+              </Typography>
+              <Toggle
+                label={i18n.useAiFeatures()}
+                checked={!aiRubricsDisabled}
+                onChange={updateAiRubricsDisabled}
+                size="s"
+              />
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
 }
 
 RubricSettings.propTypes = {
-  teacherHasEnabledAi: PropTypes.bool,
+  teacherHasEnabledAi: PropTypes.bool.isRequired,
   updateTeacherAiSetting: PropTypes.func,
   visible: PropTypes.bool,
   refreshAiEvaluations: PropTypes.func,
@@ -404,6 +415,11 @@ RubricSettings.propTypes = {
   reportingData: reportingDataShape,
   aiRubricsDisabled: PropTypes.bool,
   setAiRubricsDisabled: PropTypes.func.isRequired,
+
+  // Redux provided
+  allTeacherEvaluationData: PropTypes.array,
+  aiEvalStatusCounters: PropTypes.object,
+  setAiEvalStatusMap: PropTypes.func,
 };
 
 export const UnconnectedRubricSettings = RubricSettings;
@@ -411,9 +427,12 @@ export const UnconnectedRubricSettings = RubricSettings;
 export default connect(
   state => ({
     aiRubricsDisabled: state.currentUser.aiRubricsDisabled,
+    allTeacherEvaluationData: state.teacherRubric.allTeacherEvaluationData,
+    aiEvalStatusCounters: state.teacherRubric.aiEvalStatusCounters,
   }),
   dispatch => ({
     setAiRubricsDisabled: aiRubricsDisabled =>
       dispatch(setAiRubricsDisabled(aiRubricsDisabled)),
+    setAiEvalStatusMap: statusMap => dispatch(setAiEvalStatusMap(statusMap)),
   })
 )(RubricSettings);

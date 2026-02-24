@@ -13,6 +13,10 @@ end
 class HocI18nTest < Minitest::Test
   include Rack::Test::Methods
 
+  def setup
+    skip unless CDO.has_pegasus_content
+  end
+
   def app
     @app ||= TestDocuments.new
   end

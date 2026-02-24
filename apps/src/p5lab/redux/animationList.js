@@ -6,18 +6,12 @@ import {combineReducers} from 'redux';
 
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import {animations as animationsApi} from '@cdo/apps/clientApi';
-import {
-  projectChanged,
-  isOwner,
-  getCurrentId,
-} from '@cdo/apps/code-studio/initApp/project';
+import {projectChanged, isOwner} from '@cdo/apps/code-studio/initApp/project';
 import {
   fetchURLAsBlob,
   blobToDataURI,
   dataURIToSourceSize,
 } from '@cdo/apps/imageUtils';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import trackEvent from '@cdo/apps/util/trackEvent';
 import {createUuid} from '@cdo/apps/utils';
 
 import {P5LabInterfaceMode} from '../constants';
@@ -283,7 +277,6 @@ export function setInitialAnimationList(
 
   // TODO (from 2015): Tear out this migration when it hasn't been used for at least 3 consecutive non-summer months.
   if (Array.isArray(serializedAnimationList)) {
-    trackEvent('Research', 'RanMigration', '2015-animation-migration');
     // We got old animation data that needs to be migrated.
     serializedAnimationList = {
       orderedKeys: serializedAnimationList.map(a => a.key),
@@ -309,15 +302,10 @@ export function setInitialAnimationList(
 
       if (animation.sourceUrl.includes('/v3/')) {
         // We want to replace this sprite with the /v1/ sprite
-        let details = `name=${animation.name};key=${loadedKey}`;
         if (animationsForV3Migration.propsByKey[loadedKey]) {
           // The key is the same in the main.json and in default sprites. Do a simple replacement.
           serializedAnimationList.propsByKey[loadedKey] =
             animationsForV3Migration.propsByKey[loadedKey];
-          trackEvent('Research', 'ReplacedSpriteByKey', details);
-        } else {
-          // We were unable to find a replacement for the /v3/ sprite
-          trackEvent('Research', 'CouldNotReplaceSprite', details);
         }
       }
     });
@@ -739,26 +727,6 @@ function loadAnimationFromSource(key, callback) {
         // Brute-force recovery step: Remove the animation from our redux state;
         // it looks like it's already gone from the server.
 
-        // Log data about when this scenario occurs
-        firehoseClient.putRecord(
-          {
-            study: 'animation_no_load',
-            study_group: 'animation_no_load_v4',
-            event: isOwner()
-              ? 'animation_not_loaded_owner'
-              : 'animation_not_loaded_viewer',
-            project_id: getCurrentId(),
-            data_json: JSON.stringify({
-              sourceUrl: sourceUrl,
-              mainJsonSourceUrl: state.animationList.propsByKey[key].sourceUrl,
-              version: state.animationList.propsByKey[key].version,
-              animationName: state.animationList.propsByKey[key].name,
-              error: err.message,
-            }),
-          },
-          {includeUserId: true}
-        );
-
         if (isOwner()) {
           // Display error dialog
           dispatch(
@@ -948,12 +916,28 @@ export function animationSourceUrl(key, props, channelId) {
 export function withAbsoluteSourceUrls(serializedList, channelId) {
   let list = _.cloneDeep(serializedList);
   list.orderedKeys.forEach(key => {
-    let props = list.propsByKey[key];
+    const props = list.propsByKey[key];
 
-    const relativeUrl = animationSourceUrl(key, props, channelId);
-    const sourceLocation = document.createElement('a');
-    sourceLocation.href = relativeUrl;
-    props.sourceUrl = sourceLocation.href;
+    const rawUrl = props.sourceUrl || animationSourceUrl(key, props, channelId);
+    let updatedUrl = rawUrl;
+
+    // Unwrap proxy if present
+    const proxyPrefix = '/media?u=';
+    if (rawUrl?.includes(proxyPrefix)) {
+      const encoded = rawUrl.split(proxyPrefix)[1];
+      updatedUrl = decodeURIComponent(encoded);
+    }
+
+    // Use relative URL for animation library URLs
+    if (updatedUrl.includes('v1/animation-library/')) {
+      props.sourceUrl = updatedUrl.split('code.org')[1] || updatedUrl;
+      return;
+    }
+
+    // Convert others to absolute URL (retaining original host)
+    const url = document.createElement('a');
+    url.href = updatedUrl;
+    props.sourceUrl = url.href;
   });
   return list;
 }

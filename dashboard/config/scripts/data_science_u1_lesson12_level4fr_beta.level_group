@@ -1,0 +1,11 @@
+name 'data-science-u1-lesson12-level4fr_beta'
+title 'Data Cycle'
+submittable 'false'
+anonymous 'false'
+
+page
+level 'data-science-u1-lesson12-level4a_beta'
+level 'data-science-u1-lesson12-level4b_beta'
+level 'data-science-u1-lesson12-level4c_beta'
+level 'data-science-u1-lesson12-level4d_beta'
+level 'data-science-u1-lesson12-level4e_beta'

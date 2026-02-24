@@ -1,0 +1,58 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-10-17T19:19:47.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Accessibility Pass\n\nYou are a UX researcher doing an **accessibility pass**.\n\n\n\n**Your job**: \n1. Spot what is hard for users.\n2. Describe the **benefit** of fixing it.\n3. Name the **small DOM or JS hook** that would make it better",
+        "imageUrl": "https://images.code.org/41c60fb2da559442da1acb21476b704c-website-accessibility.jpg",
+        "key": "ai-and-algorithmic-decisions-lesson7-level1-test-2025-62746289-aa4d-4587-9ecf-3bbcc9a05a71",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "# Contrast\n\nWhen contrast is low, words disappear in bright light or for users with low vision.\nStrong contrast makes content readable in all conditions.",
+        "imageUrl": "https://images.code.org/0d4bbdae12c1d9e886c5137dbffb1e8e-contrast.png",
+        "key": "ai-and-algorithmic-decisions-lesson7-level1-test-2025-73394c5e-5053-4ff3-bade-fd5d6263fc5b",
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "# Font Size\n\nTight, small text causes eye strain and slows reading.\nLarger type and more spacing help readers move smoothly through content.",
+        "imageUrl": "https://images.code.org/34beee1be4991fc10e27f64d0d26a554-font.png",
+        "key": "ai-and-algorithmic-decisions-lesson7-level1-test-2025-972b485a-5438-4354-bd18-f09885a2725f",
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "# Legibility\n\nTight, small text causes eye strain and slows reading.\nLarger type and more spacing help readers move smoothly through content.",
+        "imageUrl": "https://images.code.org/965452c4649d7a7b30144d0dd63cd1ac-legible.png",
+        "key": "ai-and-algorithmic-decisions-lesson7-level1-test-2025-6b442f56-f709-4479-852b-7d4de81166f1",
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "# Image Alternatives\n\nUsers who can’t see images need another way to get the information.\nAdding short text descriptions keeps visuals meaningful for everyone.",
+        "imageUrl": "https://images.code.org/6625b19ab10263526a21bf87bd8f30c9-alt-text.png",
+        "key": "ai-and-algorithmic-decisions-lesson7-level1-test-2025-513158fb-015c-485f-80aa-2bd32508e1a8",
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "# Show or Hide Information\n\nToo much information at once can be confusing.\nRevealing details only when needed keeps pages clear and focused.",
+        "imageUrl": "https://images.code.org/4129abd5647e693a08e9a10a32ee5f02-show_hide.png",
+        "key": "ai-and-algorithmic-decisions-lesson7-level1-test-2025-52d8b983-35bf-41a8-9adb-591f84d96f52",
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "# Keyboard Focus\n\nSome users navigate only with a keyboard.\nA clear focus highlight shows exactly where they are on the page.",
+        "imageUrl": "https://images.code.org/00b8f601bf58f7be69ce091386f7bd76-keyboard.png",
+        "key": "ai-and-algorithmic-decisions-lesson7-level1-test-2025-b2a9f1f9-e7fe-4f8c-b633-ab4e99849c07",
+        "layout": "text-bottom-center"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-17 19:19:50 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-20 11:17:07 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-20 11:20:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-20 11:20:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-20 11:30:35 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-20 11:31:13 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-20 11:32:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-20 11:53:55 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-20 12:24:13 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-20 12:37:57 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-20 12:39:01 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-20 12:41:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-20 13:04:06 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-20 13:46:26 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-20 14:06:38 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-20 14:08:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-20 14:28:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Panels>

@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-05-29T11:50:32.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Create a Comic or Joke",
+    "long_instructions": "## Create a Comic or Joke\r\n\r\n\r\n**Before You Start:**\r\n\r\nMake sure you have filled in the **K** and **W** columns of your KWL chart for this task.\r\n\r\n**Do:**\r\n\r\nAsk AI to write a short comic strip idea or joke based on a school-related topic.\r\n\r\n**Try:**\r\n\r\nAsk for different formats-like a knock-knock joke, a 3-panel comic, or something pun-based.\r\n\r\n**Check:**\r\n\r\nIs it actually funny? Does the humor make sense and fit your topic?\r\n\r\n**After You Try It:**\r\n\r\n1. Fill in the **L** column of your KWL chart\r\n2. Press **Continue** to return to the task menu\r\n",
+    "bubble_choice_description": "Ask AI to come up with a one-panel comic idea or school-related joke.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/470b18e3980c747c59c41caa59bcc7c8-comedy.png",
+    "name_suffix": "_2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-29T11:50:32.433+00:00\",\"changed\":[\"cloned from \\\"exploring_generative_ai_newsroom_choice_b\\\"\"],\"cloned_from\":\"exploring_generative_ai_newsroom_choice_b\"}]"
+}]]></config>
+</Aichat>

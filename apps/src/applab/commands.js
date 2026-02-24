@@ -2,10 +2,10 @@ import $ from 'jquery';
 
 import i18n from '@cdo/applab/locale';
 import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
-import * as makerCommands from '@cdo/apps/lib/kits/maker/commands';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 import {commands as mlCommands} from '@cdo/apps/lib/util/mlApi';
 import {commands as timeoutCommands} from '@cdo/apps/lib/util/timeoutApi';
+import * as makerCommands from '@cdo/apps/maker/commands';
 import {rateLimit} from '@cdo/apps/storage/rateLimit';
 
 import * as assetPrefix from '../assetManagement/assetPrefix';

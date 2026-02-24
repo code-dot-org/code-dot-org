@@ -18,7 +18,11 @@ class Pd::SessionAttendanceController < ApplicationController
     end
 
     enrollments = @session.workshop.enrollments
-    enrollment = enrollments.find_by(user: current_user) || enrollments.find_by(email: current_user.email_for_enrollments)
+    enrollment = enrollments.find_by(user: current_user) || enrollments.find_by(email: current_user.email)
+    alternate_email = current_user.alternate_email
+    if enrollment.nil? && alternate_email.present?
+      enrollment = enrollments.find_by(email: alternate_email)
+    end
 
     unless enrollment
       # If signed out, user must sign in then is redirected back. If signed in to an account not associated
@@ -55,7 +59,7 @@ class Pd::SessionAttendanceController < ApplicationController
     if current_user.student?
       if User.hash_email(enrollment.email) == current_user.hashed_email
         # Email matches user's hashed email. Upgrade to teacher and set email.
-        current_user.upgrade_to_teacher(enrollment.email)
+        Services::User::UpgradeToTeacher.call(user: current_user, email: enrollment.email)
       else
         # No email match. Redirect to upgrade page.
         redirect_to action: 'upgrade_account'
@@ -80,7 +84,7 @@ class Pd::SessionAttendanceController < ApplicationController
       return
     end
 
-    current_user.upgrade_to_teacher(@email)
+    Services::User::UpgradeToTeacher.call(user: current_user, email: @email)
     redirect_to action: :attend
   end
 

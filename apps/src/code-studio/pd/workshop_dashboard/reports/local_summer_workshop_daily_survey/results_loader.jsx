@@ -4,11 +4,11 @@ import React from 'react';
 
 import color from '@cdo/apps/util/color';
 
-import Spinner from '../../../components/spinner';
+import Spinner from '../../../../../sharedComponents/Spinner';
 
 import Results from './results';
 
-export class ResultsLoader extends React.Component {
+export default class ResultsLoader extends React.Component {
   static propTypes = {
     params: PropTypes.shape({
       workshopId: PropTypes.string.isRequired,

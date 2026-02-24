@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2025-07-18T15:19:07.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "csa_instance_variables_and_attributes",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28813,
+    "name_suffix": "_pl",
+    "encrypted": "false",
+    "long_instructions": "#### Now that you have explored using multiple Java files, let's dive into how to create a class starting with **instance variables.** \r\n\r\n> #### An **instance variable** is an attribute whose value is unique to each instance of the class. \r\n\r\n### **As you watch the video:**\r\n\r\n- #### Take note of what an instance variable is. How do attributes help create an object?\r\n\r\n\r\n\r\n\r\n"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-07-18T15:19:07.256+00:00\",\"changed\":[\"cloned from \\\"pl-java-class-design-instance-variable-video-7\\\"\"],\"cloned_from\":\"pl-java-class-design-instance-variable-video-7\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

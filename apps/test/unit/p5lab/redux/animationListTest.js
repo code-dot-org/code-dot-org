@@ -715,7 +715,7 @@ describe('animationList', function () {
       });
     });
 
-    it('Uses media proxy for non-curriculum.code.org absolute URLs', function () {
+    it('Does not use media proxy for absolute URLs', function () {
       const serializedList = {
         orderedKeys: ['foo'],
         propsByKey: {
@@ -728,7 +728,7 @@ describe('animationList', function () {
         orderedKeys: ['foo'],
         propsByKey: {
           foo: {
-            sourceUrl: `${document.location.origin}/media?u=http%3A%2F%2Fhost.com%2Fsome-absolute-url`,
+            sourceUrl: `http://host.com/some-absolute-url`,
           },
         },
       });

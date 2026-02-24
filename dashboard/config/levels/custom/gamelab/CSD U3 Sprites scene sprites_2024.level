@@ -1,5 +1,6 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 50,
   "created_at": "2023-11-28T21:11:38.000Z",
   "level_num": "custom",
@@ -51,6 +52,7 @@
       "text": null,
       "textSize": null,
       "declareAssign_x": null,
+      "assign_x": null,
       "comment_Drawing": null,
       "comment_Math": null,
       "comment_GameLab": null,
@@ -105,9 +107,8 @@
     "encrypted_examples": "P/8extejJamXGsVppOCOLJaYjcmpf3kbPwZBNWOmUikRVMvniVKhrdSlsyCr\nmMqOueOvtaQCXz64JlhpwA62qA==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T21:11:38.627+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Sprites scene sprites_2023\\\"\"],\"cloned_from\":\"CSD U3 Sprites scene sprites_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T21:11:38.627+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Sprites scene sprites_2023\\\"\"],\"cloned_from\":\"CSD U3 Sprites scene sprites_2023\"},{\"changed_at\":\"2025-02-12 16:28:54 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

@@ -1,0 +1,115 @@
+name 'pl-sandbox-aif2-u2-logic-27'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Logic in Conditionals 
+
+#### Sometimes, one condition isn’t enough.
+#### We can combine conditions to make our programs smarter and add deeper logic to web apps.
+
+<div style="background-color:#e3f2fd; padding:10px; border-left:5px solid #1976d2; margin-bottom:20px; font-size:16px; border-radius:8px;">
+  <strong>🧢 Examples</strong><br><br>
+  <p style = "font-size:14pt;"><b>You are hip</b>: if you’re wearing sneakers <b>AND</b> sunglasses.<br></p>
+  <p style = "font-size:14pt;"><b>You are winter-ready</b>: if you have a scarf <b>OR</b> a hat.</p>
+</div>
+
+
+
+<div style="width:90%; margin:auto; font-family:sans-serif;">
+
+## AND (&&)
+
+  <!-- Row 1 -->
+  <div style="display:flex; margin-bottom:10px;">
+    <!-- Left Box -->
+    <div style="flex:2; background-color:#f0f0f0; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); padding:10px; margin-right:10px;font-size:14pt;">
+      <strong>Definition:</strong>
+      <p style = "font-size:14pt;">AND (&&) is a logical operator used in conditional statements. For a condition using AND to be true, all parts of the condition must be true. 
+</p>
+      <strong>Example:</strong>
+      <p style = "font-size:14pt;"> To get a student discount, you must be a student AND have a valid ID.
+</p>
+    </div>
+    <!-- Right Box -->
+    <div style="flex:1; background-color:#fff; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); padding:10px; text-align:center;">
+      <img src="https://images.code.org/9b212fc40b86a4b9e0a276a8ea01d5c0-image-1762453987967.png" alt="truth table for AND" style="width:100%; border-radius:10px;">
+    </div>
+  </div>
+
+
+## OR (||)
+
+  <!-- Row 2 -->
+<div style="display:flex; margin-bottom:10px;">
+    <div style="flex:2; background-color:#f0f0f0; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); padding:10px; margin-right:10px;font-size:14pt;">
+      <strong>Definition:</strong>
+      <p style = "font-size:14pt;">OR (||) is a logical operator used in conditional statements. For a condition using OR to be true, at least one part of the condition must be true.</p>
+      <strong>Example:</strong>
+      <p style = "font-size:14pt;">To get free shipping, spend over $50 OR use a special coupon.
+</p>
+    </div>
+    <div style="flex:1; background-color:#fff; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); padding:10px; text-align:center;">
+      <img src="https://images.code.org/3bcaad59ca67943619fb6f982d62170b-image-1762454060146.png" alt="Truth table for OR" style="width:100%; border-radius:10px;">
+    </div>
+  </div>
+
+## NOT (!)
+
+  <!-- Row 3 -->
+  <div style="display:flex;">
+    <div style="flex:2; background-color:#f0f0f0; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); padding:10px; margin-right:10px; font-size:14pt;">
+      <strong>Definition:</strong>
+      <p style = "font-size:14pt;">NOT (!) is a logical operator that reverses the truth value of a Boolean expression. If an expression is true, NOT makes it false, and if it is false, NOT makes it true.
+</p>
+      <strong>Example:</strong>
+      <p style = "font-size:14pt;">To see member-only content, you must NOT be logged out.
+</p>
+    </div>
+    <div style="flex:1; background-color:#fff; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); padding:10px; text-align:center;">
+      <img src="https://images.code.org/ca3d3a543226180fbe07319e0676e0f8-image-1762453688074.png" alt="truth table for not" style="width:100%; border-radius:10px;">
+    </div>
+  </div>
+
+</div>
+
+    
+<br>  
+
+ <div style="clear:both;"></div>
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>A Truth Table</strong> shows all possible combinations of true and false values for one or more conditions and the result of each combination.
+
+</p>
+</div>
+
+---
+
+## Let's see what this looks like in code:
+
+#### Here’s a code snippet that uses a logical operator to connect two conditions: 
+
+<p style="text-align:center;">
+  <img src="https://images.code.org/423f0d5bfcdbe8665866087560772e34-image-1762454506325.png" 
+       alt="JavaScript logic conditional example" 
+       style="width:400px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.3);">
+</p>
+
+
+
+#### **In this example:**
+
+- #### The && symbol stands for AND, meaning both isStudent and hasValidID must be true.
+
+- #### The operator connects the two Boolean expressions (isStudent AND hasValidID).
+
+- #### The code inside the braces runs only when the combined condition is true.
+
+
+## Let's practice! 
+
+#### We will start with creating a flowchart in Sketch Lab and then use that chart to create logic flows within our conditional statements. 
+
+
+MARKDOWN

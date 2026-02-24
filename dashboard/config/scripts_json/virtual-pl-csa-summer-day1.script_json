@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "pl_workshop_activities",
       "curriculum_umbrella": "PD Workshop Activity CSA",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -13,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-09 19:00:38 UTC",
+    "serialized_at": "2025-04-08 17:09:28 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -121,14 +122,14 @@
     },
     {
       "key": "lesson-5",
-      "name": "Access and Diversity in CSA",
+      "name": "Understanding AP CSA",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
-        "overview": "**Purpose:**\nTo put equity at the center of our workshop, we want participants to understand the current landscape of access and diversity in CSA and how that reality led to the development of this course.   This also serves as a space to give participants a better idea of what the course is about.  The goal of putting these two topics together (equity and CSA content) is to model for participants our belief that equity and CSA content are equally as important to keep in mind in this workshop. \n\n\n**Objectives**\n* Participants can explain how the curriculum framework is organized (i.e., big ideas, enduring understandings, learning objectives, essential knowledge, practices / skills)\n* Participants can describe the skills and the “big ideas” of the course (as provided by the College Board) .\n* Participants are aware that this professional development is NOT a College Board sponsored AP workshop.  Make participants aware that the College Board offers AP Summer Institutes and 1-day workshops that support teaching and pedagogy.\n* Teachers are informed that Code.org is  one of several College Board endorsed providers.\n* Teachers can describe the College Board’s recommendation of open enrollment policy for willing and academically prepared students\n* Participants can recognize disparities by race and gender in access, diversity, and inclusion in CS education nationally \n\n**Suggested time:** 40 minutes\n",
-        "student_overview": "**You will:**\n\n* Explain how the curriculum framework is organized (i.e., big ideas, enduring understandings, learning objectives, essential knowledge, practices / skills)\n*Describe the skills and the “big ideas” of the course (as provided by the College Board) \n* Understand that this professional development is NOT a College Board sponsored AP workshop. \n* Describe the College Board’s recommendation of open enrollment policy for willing and academically prepared students\n* Recognize disparities by race and gender in access, diversity, and inclusion in CS education nationally \n"
+        "overview": "**Objectives**\n* Participants can explain how the curriculum framework is organized (i.e., big ideas, enduring understandings, learning objectives, essential knowledge, practices / skills)\n* Participants can describe the skills and the “big ideas” of the course (as provided by the College Board) .\n* Participants are aware that this professional development is NOT a College Board sponsored AP workshop.  Make participants aware that the College Board offers AP Summer Institutes and 1-day workshops that support teaching and pedagogy.\n* Teachers are informed that Code.org is  one of several College Board endorsed providers.\n* Teachers can describe the College Board’s recommendation of open enrollment policy for willing and academically prepared students\n\n\n**Suggested time:** 40 minutes\n",
+        "student_overview": "**You will:**\n\n* Explain how the curriculum framework is organized (i.e., big ideas, enduring understandings, learning objectives, essential knowledge, practices / skills)\n*Describe the skills and the “big ideas” of the course (as provided by the College Board) \n* Understand that this professional development is NOT a College Board sponsored AP workshop. \n* Describe the College Board’s recommendation of open enrollment policy for willing and academically prepared students\n\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -210,8 +211,8 @@
       "has_lesson_plan": false,
       "relative_position": 8,
       "properties": {
-        "overview": "**Purpose:**\nIn this section, facilitators debrief the asynchronous activity, going through the slides participants worked on and highlighting important points.\n\n\n**Objectives**\n\n* Participants can recognize disparities by race and gender in access, diversity, and inclusion in CS education nationally. \n\n**Suggested Time:** 10 minutes \n",
-        "student_overview": "\n\n**You will**\n\n* Recognize disparities by race and gender in access, diversity, and inclusion in CS education nationally "
+        "overview": "**Purpose:**\nIn this section, facilitators debrief the asynchronous activity, going through the slides participants worked on and highlighting important points.\n\n\n**Objectives**\n\n* Participants can understand conditionals and the structure of the lesson plan for Lesson 5.\n\n**Suggested Time:** 10 minutes \n",
+        "student_overview": "\n\n**You will**\n\n* Understand conditionals and the structure of the lesson plan for Lesson 5."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",

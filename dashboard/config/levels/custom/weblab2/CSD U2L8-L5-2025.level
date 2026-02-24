@@ -1,0 +1,113 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-01-26T02:04:00.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Choosing a Good Name\r\n\r\nIt's important for images to have good names, ones that are easy to understand and use characters that are good for links.  This project's image names have some problems.\r\n\r\n# Do This\r\n\r\n1) For each image, fix the name according to the following rules:\r\n   * Avoid special characters such as `&`, `?`, `%`, `/`, `(`, etc.\r\n   * Make sure the name has a specific meaning that helps you know what the image is.\r\n   * Use dashes (`-`) or underscores (`_`) instead of spaces.\r\n   * Keep the names as short as possible and still have a clear meaning.\r\n* Choose your favorite image and add it to the web page.\r\n   * Don't forget the attribution!\r\n\r\nImage        |     Amphibian    |     Attribution   \r\n-----|-------|------\r\n![](https://images.code.org/31687e55efb5efae6bb9826261c7cd82-image-1565125236060.jpg) | &nbsp; &nbsp;**kani bushfrog**&nbsp; &nbsp; | Rison Thumboor - Wikimedia Commons - CC-BY-SA\r\n![](https://images.code.org/8414d11eb143e3ef2a8fd3f67922774e-image-1565124534341.png) | &nbsp; &nbsp;**paedophryne amauensis**&nbsp; &nbsp; |Rittmeyer EN, Allison A, Gründler MC, Thompson DK, Austin CC - Wikimedia Commons - CC-BY\r\n![](https://images.code.org/695749afb3107d506c340b2e6b215307-image-1565124851451.jpg) | &nbsp; &nbsp;**red eyed tree frog**&nbsp; &nbsp; | Carey James Balboa - Wikimedia Commons - Public Domain\r\n![](https://images.code.org/9ba9eee1e7eb7e706dcab14714401207-image-1565124855000.jpg) | &nbsp; &nbsp;**fire salamander**&nbsp; &nbsp; | Cristo Vlahos - Wikimedia Commons - CC-BY\r\n![](https://images.code.org/512a972eb6d9ef431e648d01a0efc6cc-image-1565124857450.jpg) | &nbsp; &nbsp;**axolotl**&nbsp; &nbsp; | th1098 - Wikimedia Commons - CC-BY-SA\r\n\r\n<br>\r\n<br>\r\n\r\n::: details [🔎 **Show Me How** 🔍]\r\n\r\n![](https://images.code.org/58dad1ddaa62ca2347bc9210d3f502e6-image-1769393635995.5.gif):::\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html> \n<html> \n \t<head>\n    <link rel=\"stylesheet\" href=\"amphibian.css\">\n\t</head>\n\t<body>\n\t\t<h1>My Favorite Amphibian!</h1>\n    <!-- 1) Fix each image name according to the rules -->\n    <!-- 2) Choose your favorite image and add it to the web page -->\n    \n    \n\t</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "KaNiBuShFrOg.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L8-L5-2025/uuid/fc15a2a4-18d8-442e-bf5b-475f7c60e7d8.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "1565124851451.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L8-L5-2025/uuid/49a7cd22-eec7-4f45-a0cd-1d29bee97190.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "fire-salamanderrrrrrrrrrr.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L8-L5-2025/uuid/74011e38-c3e5-4b36-9e75-ba56da455b96.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "Paratype-of-a-Paedophryne-amauensis-smallest-vertabrate.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L8-L5-2025/uuid/066efb2f-749b-49fa-a3b8-bde6de3e8556.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "axolotl-walking-fish.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L8-L5-2025/uuid/b0306d35-cca4-4278-a3f7-a6793ded2a8d.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "amphibian.css",
+          "language": "css",
+          "contents": "p {\n  color: black;\n}\nh1 {\n  color: green;\n  font-family: courior, monospace;\n}",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-01-26 02:05:57 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-26 02:06:03 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-26 02:08:44 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-26 02:14:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

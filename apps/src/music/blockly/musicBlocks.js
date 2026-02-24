@@ -1,4 +1,9 @@
-import {playSound} from './blocks/advanced';
+import {
+  playSound,
+  playPatternAtMeasure,
+  playChordAtMeasure,
+  setEffect,
+} from './blocks/advanced';
 import {forLoop} from './blocks/control';
 import {whenRun, triggeredAt, triggeredAtSimple} from './blocks/events';
 import {valueSample} from './blocks/samples';
@@ -11,14 +16,18 @@ import {
   triggeredAtSimple2,
   playSoundAtCurrentLocationSimple2,
   playPatternAtCurrentLocationSimple2,
+  playPatternAiAtCurrentLocationSimple2,
   playRestAtCurrentLocationSimple2,
   setEffectAtCurrentLocationSimple2,
   playSoundsTogether,
+  playSoundsTogetherNoNext,
   playSoundsSequential,
   playSoundsRandom,
   repeatSimple2,
   playChordAtCurrentLocationSimple2,
+  playTuneAtCurrentLocationSimple2,
 } from './blocks/simple2';
+import {dynamicCategoryBlock, staticCategoryBlock} from './blocks/toolboxMode';
 import {
   newTrackAtMeasure,
   newTrackAtStart,
@@ -36,13 +45,19 @@ const blockList = [
   triggeredAtSimple2,
   playSound,
   playSoundAtCurrentLocation,
+  playPatternAtMeasure,
+  playChordAtMeasure,
+  setEffect,
   setCurrentLocationNextMeasure,
   playSoundAtCurrentLocationSimple2,
   playPatternAtCurrentLocationSimple2,
+  playPatternAiAtCurrentLocationSimple2,
   playRestAtCurrentLocationSimple2,
   setEffectAtCurrentLocationSimple2,
   playChordAtCurrentLocationSimple2,
+  playTuneAtCurrentLocationSimple2,
   playSoundsTogether,
+  playSoundsTogetherNoNext,
   playSoundsSequential,
   playSoundsRandom,
   repeatSimple2,
@@ -53,6 +68,8 @@ const blockList = [
   playSoundInTrack,
   restInTrack,
   valueSample,
+  staticCategoryBlock,
+  dynamicCategoryBlock,
 ];
 
 const MUSIC_BLOCKS = {};

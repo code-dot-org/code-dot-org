@@ -1,0 +1,26 @@
+name 'csaif_pl_2_aithreats_06'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Phishing Scams
+
+## 📝 To Do
+
+#### Choose one of the following phising scams to learn more about. Then, search for a real-world example and answer questions about it in your unit guide.
+
+
+#### <a href='https://studio.code.org/courses/6-12-dev-playground/units/7/lessons/4/levels/1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Smishing</a>
+
+#### <a href='https://studio.code.org/courses/6-12-dev-playground/units/7/lessons/4/levels/2' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Vishing</a>
+
+#### <a href='https://studio.code.org/courses/6-12-dev-playground/units/7/lessons/4/levels/3' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Deepfake</a>
+
+<br>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 4. You can find more details in the full <a href='https://studio.code.org/s/aif5-2025/lessons/4' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+</p>
+
+
+MARKDOWN

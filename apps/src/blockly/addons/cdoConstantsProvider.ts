@@ -1,13 +1,12 @@
-import GoogleBlockly, {Connection} from 'blockly/core';
-import {PuzzleTab} from 'blockly/core/renderers/common/constants';
+import * as BlocklyCore from 'blockly/core';
 
 import {customConnectionBlockTypes} from './cdoConstants';
 
-export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
+export default class CdoConstantsProvider extends BlocklyCore.blockRendering
   .ConstantProvider {
-  private RECT_INPUT_OUTPUT: PuzzleTab | undefined;
-  private TRI_INPUT_OUTPUT: PuzzleTab | undefined;
-  private ROUND_INPUT_OUTPUT: PuzzleTab | undefined;
+  private RECT_INPUT_OUTPUT: BlocklyCore.blockRendering.PuzzleTab | undefined;
+  private TRI_INPUT_OUTPUT: BlocklyCore.blockRendering.PuzzleTab | undefined;
+  private ROUND_INPUT_OUTPUT: BlocklyCore.blockRendering.PuzzleTab | undefined;
 
   // Override the shapes constant to include the custom shapes.
   override SHAPES = {
@@ -26,7 +25,7 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
    * @returns The shape object for the connection.
    * @override
    */
-  shapeFor(connection: Connection) {
+  shapeFor(connection: BlocklyCore.Connection) {
     const blockTypeShapeMap = {
       [customConnectionBlockTypes.SPRITE]: this.TRI_INPUT_OUTPUT,
       [customConnectionBlockTypes.BEHAVIOR]: this.ROUND_INPUT_OUTPUT,
@@ -40,15 +39,15 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
     const connectionCheck = connection.getCheck();
     const connectorType = connectionCheck ? connectionCheck[0] : null;
     switch (connection.type) {
-      case GoogleBlockly.ConnectionType.INPUT_VALUE:
-      case GoogleBlockly.ConnectionType.OUTPUT_VALUE:
+      case BlocklyCore.ConnectionType.INPUT_VALUE:
+      case BlocklyCore.ConnectionType.OUTPUT_VALUE:
         // PUZZLE_TAB is the default shape for the connector if the value type is not
         // included in `blockTypeShapeMap`
         return (
           (connectorType && blockTypeShapeMap[connectorType]) || this.PUZZLE_TAB
         );
-      case GoogleBlockly.ConnectionType.PREVIOUS_STATEMENT:
-      case GoogleBlockly.ConnectionType.NEXT_STATEMENT:
+      case BlocklyCore.ConnectionType.PREVIOUS_STATEMENT:
+      case BlocklyCore.ConnectionType.NEXT_STATEMENT:
         return this.NOTCH;
       default:
         throw Error('Unknown connection type');
@@ -64,9 +63,9 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
      * define a function to generate the path for both.
      */
     function makeMainPath(up: number) {
-      return GoogleBlockly.utils.svgPaths.line([
-        GoogleBlockly.utils.svgPaths.point(-width, (-1 * up * height) / 2),
-        GoogleBlockly.utils.svgPaths.point(width, (-1 * up * height) / 2),
+      return BlocklyCore.utils.svgPaths.line([
+        BlocklyCore.utils.svgPaths.point(-width, (-1 * up * height) / 2),
+        BlocklyCore.utils.svgPaths.point(width, (-1 * up * height) / 2),
       ]);
     }
 
@@ -91,10 +90,10 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
      * define a function to generate the path for both.
      */
     function makeMainPath(up: number) {
-      return GoogleBlockly.utils.svgPaths.line([
-        GoogleBlockly.utils.svgPaths.point(-width, 0),
-        GoogleBlockly.utils.svgPaths.point(0, -1 * up * height),
-        GoogleBlockly.utils.svgPaths.point(width, 0),
+      return BlocklyCore.utils.svgPaths.line([
+        BlocklyCore.utils.svgPaths.point(-width, 0),
+        BlocklyCore.utils.svgPaths.point(0, -1 * up * height),
+        BlocklyCore.utils.svgPaths.point(width, 0),
       ]);
     }
 
@@ -115,7 +114,7 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
     const height = this.TAB_HEIGHT;
     function makeMainPath(up: number) {
       // Definition of curve function at https://github.com/google/blockly/blob/2bbb3aa1fcc1cc2df1a75bfbdefa42ab56182872/core/utils/svg_paths.ts#L26-L40
-      const path = GoogleBlockly.utils.svgPaths.curve('c', [
+      const path = BlocklyCore.utils.svgPaths.curve('c', [
         -width * 1.5 + ', 0 ',
         -width * 1.5 + ', ' + -1 * up * height + ' ',
         '0, ' + -1 * up * height + ' ',
@@ -140,5 +139,14 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
     this.RECT_INPUT_OUTPUT = this.makeRectangularInputConn();
     this.TRI_INPUT_OUTPUT = this.makeTriangularInputConn();
     this.ROUND_INPUT_OUTPUT = this.makeRoundInputConn();
+  }
+
+  protected generateSecondaryColour_(inputColour: string): string {
+    if (Blockly.isDarkTheme) {
+      return (
+        Blockly.utils.colour.blend('#000', inputColour, 0.4) || inputColour
+      );
+    }
+    return super.generateSecondaryColour_(inputColour);
   }
 }

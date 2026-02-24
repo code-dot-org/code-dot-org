@@ -1,0 +1,41 @@
+name 'CSA U3 Assessment q12_pilot-2025'
+
+wrong 'Changing `int index = 0;` to `int index = 1;`'
+wrong 'Changing `index < numbers.length;` to `index <= numbers.length;`'
+wrong 'Changing `index < numbers.length;` to `index < numbers.length-1;`'
+wrong 'Changing `index++` to `index += 3`'
+right 'No change is necessary, the method works correctly as is.'
+
+markdown <<MARKDOWN
+The method `countEvens` below is intended to return the number of times an even number appears in the 1D array `numbers`. The method may not work as intended.
+
+```
+public int countEvens(int[] numbers) {
+  int count = 0;
+  
+  for (int index = 0; index < numbers.length; index++) {   // Line 4
+    if (numbers[index] % 2 == 0) {
+      count++;
+    }
+  }
+
+  return count;
+}
+```
+
+Which of the following changes, if any, can be made to **Line 4** so that the method will work as intended?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+This code segment performs the expected behavior as is.
+
+1. Changing the loop control variable to `int index = 1` will result in skipping the first element in the 1D array `numbers` when counting all even numbers. If the first element is an even number, it would not be included in the count.
+
+2. Changing the condition to `index <= numbers.length` will result in an `ArrayIndexOutOfBoundsException` since the length of a 1D array is one more than its last index.
+
+3. Changing the condition to `i < numbers.length-1` will result in skipping the last element in the 1D array `numbers` when counting all even numbers. If the last element is an even number, it would not be included in the count.
+
+4. Changing how the loop control variable is incremented to `index += 3` will result in skipping multiple elements in the 1D array `numbers` when counting all even numbers. The `if` statement would then only check every third element, so multiple values would not be included in the count.
+MARKDOWN
+
+allow_multiple_attempts true

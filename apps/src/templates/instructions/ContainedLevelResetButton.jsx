@@ -1,12 +1,11 @@
+import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
 import {resetContainedLevel} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
-import Button from '@cdo/apps/legacySharedComponents/Button';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
 import {CourseRoles} from '@cdo/apps/templates/currentUserRedux';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
@@ -23,16 +22,6 @@ export const UnconnectedContainedLevelResetButton = ({
 }) => {
   const [resetFailed, setResetFailed] = useState(false);
 
-  const logButtonClick = () => {
-    firehoseClient.putRecord({
-      study: 'reset-predict-level',
-      event: 'level-reset',
-      user_id: userId,
-      script_id: serverScriptId,
-      level_id: serverLevelId,
-    });
-  };
-
   if (
     userRoleInCourse !== CourseRoles.Instructor ||
     teacherViewingStudentWork
@@ -42,6 +31,7 @@ export const UnconnectedContainedLevelResetButton = ({
   return (
     <div>
       <Button
+        name="containedLevelResetButton"
         text={i18n.deleteAnswer()}
         onClick={() => {
           resetContainedLevel().then(
@@ -51,10 +41,12 @@ export const UnconnectedContainedLevelResetButton = ({
             },
             () => setResetFailed(true)
           );
-          logButtonClick();
         }}
-        color={Button.ButtonColor.red}
+        size={'s'}
         disabled={!hasLevelResults || !!codeIsRunning}
+        color={buttonColors.destructive}
+        iconLeft={{iconStyle: 'solid', iconName: 'trash'}}
+        type={'secondary'}
       />
       <HelpTip>{i18n.deleteAnswerHelpTip()}</HelpTip>
       {resetFailed && (

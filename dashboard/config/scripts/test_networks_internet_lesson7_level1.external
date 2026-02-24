@@ -1,0 +1,16 @@
+name 'test-networks-internet-lesson7-level1'
+title 'Internet Fact Sheet'
+description 'Internet Usage 2025 Pew Research Center Report'
+
+markdown <<MARKDOWN
+## Internet use over time
+
+"When the Center began systematically tracking Americans’ internet usage in early 2000, about half of all adults were already online. Today, 96% of U.S. adults say they use the internet." - Pew Research Center, "Internet, Broadband Fact Sheet.", November 2024
+
+**For an interactive version of this chart, go to this [link](https://www.pewresearch.org/internet/fact-sheet/internet-broadband/)**
+
+![](https://images.code.org/cd97cdb0892883854609463d367d4eb1-image-1740087382347.36.18 PM.png)
+
+Pew Research Center. "Internet, Broadband Fact Sheet." Pew Research Center: Internet, Science & Tech, 13 Nov. 2024, www.pewresearch.org/internet/fact-sheet/internet-broadband/. Accessed 10 Feb. 2025.
+
+MARKDOWN

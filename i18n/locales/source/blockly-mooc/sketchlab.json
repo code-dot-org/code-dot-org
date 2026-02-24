@@ -1,0 +1,20 @@
+{
+    "tour_grabAndSelectTitle": "Grab and Select Tools",
+    "tour_grabAndSelectText": "Use the hand tool to move around the canvas. Switch to the pointer (1) tool to select elements or drag to select multiple.",
+    "tour_shapeToolsTitle": "Shape Tools",
+    "tour_shapeToolsText": "This square (2) tool and the icons next to it - diamond (3) and circle (4) - let you draw basic shapes for diagrams and layouts.",
+    "tour_lineAndPenToolsTitle": "Line and Pen Tools",
+    "tour_lineAndPenToolsText": "The arrow (5) tool connects ideas, the line (6) adds straight connectors, and the pen (7) lets you sketch freeform lines or notes.",
+    "tour_contentToolsTitle": "Content Tools",
+    "tour_contentToolsText": "The text (8) tool lets you label your sketch, and the image (9) tool next to it lets you insert pictures or references onto the canvas.",
+    "tour_eraserToolTitle": "Eraser Tool",
+    "tour_eraserToolText": "Click the eraser (0) once on any element to remove it. You can't drag to erase — one click per item.",
+    "tour_openMenuTitle": "Open the menu",
+    "tour_openMenuText": "Click the hamburger menu icon to access extra options like exporting your work.",
+    "tour_exportingYourSketchesTitle": "Exporting your sketches",
+    "tour_exportingYourSketchesText": "From the menu, select Export image (or press Cmd + Shift + E) to open export options. Click Next to continue.",
+    "tour_saveAsAnImageTitle": "Save as an image",
+    "tour_saveAsAnImageText": "Choose the PNG option to save your canvas as an image. You'll use this later to share with the AI Tutor.",
+    "tour_moveOnToNextLevelTitle": "Move on to the next level",
+    "tour_moveOnToNextLevelText": "When you're done with your Sketch Lab creation, click Continue to move on to the next level."
+}

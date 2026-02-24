@@ -1,0 +1,8 @@
+name 'music-intro-coding-remix-choices'
+display_name 'Remix the Beat'
+description 'Choose a song to explore the code and then make it your own!'
+
+sublevels
+level 'music-coding-intro-drop'
+level 'music-coding-intro-drop2'
+level 'music-coding-intro-drop3'

@@ -1,12 +1,7 @@
+import {LinkButton} from '@code-dot-org/component-library/button';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
-
-import {LinkButton} from '@cdo/apps/componentLibrary/button';
-import {
-  Heading2,
-  OverlineTwoText,
-  BodyThreeText,
-} from '@cdo/apps/componentLibrary/typography';
 
 import styles from './actionBlocksWrapper.module.scss';
 
@@ -21,15 +16,25 @@ const OneColumnActionBlock = ({
     <div className={styles.oneColumnActionBlock}>
       <div className={styles.contentWrapper}>
         {overline && (
-          <OverlineTwoText className={styles.overline}>
+          <Typography
+            className={styles.overline}
+            variant="overline2"
+            gutterBottom
+          >
             {overline}
-          </OverlineTwoText>
+          </Typography>
         )}
         {heading && (
-          <Heading2 visualAppearance="heading-md">{heading}</Heading2>
+          <Typography component="h2" variant="h4" gutterBottom>
+            {heading}
+          </Typography>
         )}
         {imageUrl && <img src={imageUrl} alt="" />}
-        {description && <BodyThreeText>{description}</BodyThreeText>}
+        {description && (
+          <Typography variant="body3" gutterBottom>
+            {description}
+          </Typography>
+        )}
       </div>
       <div className={styles.buttonWrapper}>
         {buttons &&

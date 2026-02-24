@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-05-29T11:50:33.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "# How Smart Is It, Really?\r\n\r\n#### **Share what worked, what did not work, and what you learned** in the reflection box at the bottom of this level.\r\n\r\n<div style=\"display: flex; align-items: left; margin:20px 0px 30px 0px\">\r\n\r\n<a href=\"https://forum.code.org/t/student-logins-reflection/40539\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n<img src=\"https://images.code.org/7dbe63a051fbad4ef262d6ab710e2966-image-1731959037460.png\" style=\"width: auto; height: 100px;\"  alt=\"A browser with two text boxes, both including an avatar and lines of text.\"></a>\r\n\r\n<div style=\"background-color: #007786; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 5%; margin-right: 5%; padding: 10px 10px 5px 10px;\">\r\n\r\n<p style=\"color: white; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px\"><b>Post to the Code.org Forum</b></p>\r\n\r\n<p style=\"color: white; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px\">Share what you learned and read other educators' findings on the forum! Click on the icon to the left to direct to our forum post.\r\n</p>\r\n\r\n\r\n</div></div>\r\n\r\n<p style=\"font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;\">\r\n    ➡️ This activity is from Lesson 2. You can find more details in the full <a href='https://studio.code.org/courses/exploring-gen-ai-2025/units/1/lessons/2' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.\r\n</p>\r\n\r\n\r\n## Reflection",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19619,
+    "name_suffix": "_2025",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "stay_on_level_after_submit": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-05-29T11:50:33.941+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-gen-ai-foundations-preview-01d_2024\\\"\"],\"cloned_from\":\"self-paced-pl-gen-ai-foundations-preview-01d_2024\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

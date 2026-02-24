@@ -17,7 +17,7 @@ theme: responsive
 
 ## Minimum Supported Browsers and Platforms
 
-2024 წლის ივლისიდან ჩვენ განვაახლებთ ბრაუზერებისა და ოპერაციული სისტემებისთვის საჭირო მინიმალურ ვერსიებს. მიუხედავად იმისა, რომ ძველი ვერსიები კვლავ შეიძლება მუშაობდეს, ძველ ვერსიებში შეცდომების გამოსწორების მოთხოვნების მხარდაჭერ
+ყოველწლიურად ჩვენ განვაახლებთ ბრაუზერებისა და ოპერაციული სისტემებისთვის საჭირო მინიმალურ მიუხედავად იმისა, რომ ძველი ვერსიები კვლავ შეიძლება მუშაობდეს, ძველ ვერსიებში შეცდომების გამოსწორების მოთხოვნების მხარდაჭერ
 
 <table>
   <tr>
@@ -25,28 +25,6 @@ theme: responsive
       <table>
         <th>
           Browser
-        </th>
-        <tr>
-          <td>Chrome 96.x</td>
-        </tr>
-        <tr>
-          <td>Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Mobile Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Edge 94.x</td>
-        </tr>
-        <tr>
-          <td>Firefox 91.x</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
-      <table>
-        <th>
-          ბრაუზერი ივლისი '24
         </th>
         <tr>
           <td>ქრომი 103.x</td>
@@ -71,28 +49,6 @@ theme: responsive
           პლატფორმა
         </th>
         <tr>
-          <td>macOS 10.13</td>
-        </tr>
-        <tr>
-          <td>iOS 11.x</td>
-        </tr>
-        <tr>
-          <td>Windows 7</td>
-        </tr>
-        <tr>
-          <td>Android 6</td>
-        </tr>
-        <tr>
-          <td>ChromeOS (Chromebooks)</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
-      <table>
-        <th>
-          პლატფორმა ივლისი '24
-        </th>
-        <tr>
           <td>მაკოსი 10.15</td>
         </tr>
         <tr>
@@ -103,6 +59,51 @@ theme: responsive
         </tr>
         <tr>
           <td>ანდროიდი 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+    <!-- "coming soon" system requirements, to be updated and made live from March through July. -->
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          ბრაუზერი ივლისი '25
+        </th>
+        <tr>
+          <td>ქრომი 109</td>
+        </tr>
+        <tr>
+          <td>საფარი 16.6</td>
+        </tr>
+        <tr>
+          <td>მობილური საფარი 16</td>
+        </tr>
+        <tr>
+          <td>ეჯი 128</td>
+        </tr>
+        <tr>
+          <td>ფიერფოქსი 115</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          პლატფორმა ივლისი '25
+        </th>
+        <tr>
+          <td>მაკოსი 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 16.x</td>
+        </tr>
+        <tr>
+          <td>ვინდოუზი 10</td>
+        </tr>
+        <tr>
+          <td>ანდროიდი 8</td>
         </tr>
         <tr>
           <td>ChromeOS (Chromebooks)</td>
@@ -126,7 +127,6 @@ Code.org— ის ყველა შინაარსთან დაკა�
 | **ინტერნეტ სიმულატორის გამოყენება**                                                                                 | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **ვებ ლაბორატორიის გამოყენება**                                                                                     | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Google Classroom გაზიარების ღილაკის გამოყენება**                                                                  | `https://apis.google.com`                                                                                  |
-| **App Lab მონაცემთა ნაკრების გამოყენება**                                                                           | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Mobile and Tablet Support Details
 
@@ -148,7 +148,6 @@ Code.org— ის ყველა შინაარსთან დაკა�
 ### Can you play this video?
 
 სანამ დაიწყებთ Code.org ონლაინ კურსებს, შეამოწმეთ ქვემოთ მოცემული ვიდეოს დაკვრა, რათა დარწმუნდეთ, რომ კარგად ხართ
-
 
 <!--
 The following HTML is a copy of video_with_fallback.haml. once this file can be converted to

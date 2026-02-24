@@ -1,5 +1,6 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2024-03-25T22:41:41.000Z",
   "level_num": "custom",
@@ -9,7 +10,7 @@
     "tts_short_instructions_override": "How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
     "tts_long_instructions_override": "Congratulations! You just wrote some code. You are officially a programmer!\r\n\r\nDid you notice that the last puzzle was a little more difficult? It was a challenge puzzle. Challenge puzzles are meant to stretch the boundaries of what students will do. We make it clear that they should be attempted, but do not require that they be completed for students to succeed for the lesson.\r\n\r\nNow take a moment to reflect. How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
     "instructions_important": "false",
-    "long_instructions": "# Reflection\r\n\r\n\r\n## Problem Solving Process for **Design**\r\n\r\n##### Think about the problem solving process shown below. Are these steps already familiar to you and your students? \r\n\r\n<img src=\"https://images.code.org/88ecc0e62341a8a57cf836d9f32d85d8-image-1630104655074.png\" alt=\"All four steps of the Problem Solving Process in a diagram\" style=\"display: block; margin-left: auto; margin-right: auto; height:30%; width:30%\">\r\n\r\n\r\n\r\n##### Respond to the following questions:\r\n\r\n* ##### How is this \"Problem Solving Process\" similar to a process students may have used in class before to solve a problem?\r\n* ##### How is this application of the \"Problem Solving Process\" for design different from the process students have used in previous unit?\r\n* ##### How can the \"Problem Solving Process\" help students prioritize the needs of a user?\r\n\r\n<span style=\"font-size:12px;\">If more space is needed, click and drag the bottom-right corner to adjust the size of the text box.</span>",
+    "long_instructions": "# Reflection\r\n\r\n\r\n## Problem Solving Process for **Design**\r\n\r\n#### Think about the problem solving process shown below. Are these steps already familiar to you and your students? \r\n\r\n<img src=\"https://images.code.org/4a9b9a52af739de87ffaf11dfd615204-image-1724366962977.49.19 PM.png\" alt=\"All four steps of the Problem Solving Process in a diagram: define, prepare, try, and reflect around the word empathy\" style=\"display: block; margin-left: auto; margin-right: auto; height:30%; width:30%\">\r\n\r\n\r\n#### **Respond to the following questions:**\r\n\r\n* #### How is this \"Problem Solving Process\" similar to a process students may have used in class before to solve a problem?\r\n* #### How is this application of the \"Problem Solving Process\" for design different from the process students have used in previous unit?\r\n* #### How can the \"Problem Solving Process\" help students prioritize the needs of a user?\r\n<br>\r\n\r\n##### **Note**: You can change the size of the text box by clicking and dragging the bottom-right corner of the text box.",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -20,9 +21,8 @@
     "name_suffix": "_2024",
     "allow_multiple_attempts": "true"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-25T22:41:41.482+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD Module 3 Problem Solving Process_2023\\\"\"],\"cloned_from\":\"VPL - CSD Module 3 Problem Solving Process_2023\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-25T22:41:41.482+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD Module 3 Problem Solving Process_2023\\\"\"],\"cloned_from\":\"VPL - CSD Module 3 Problem Solving Process_2023\"},{\"changed_at\":\"2024-08-22 22:50:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2024-08-22 22:50:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 class Match < DSLDefined
@@ -54,6 +55,10 @@ class Match < DSLDefined
 
   def question
     properties['content1'] || properties['content2'] || properties['content3'] || properties['markdown'] || ''
+  end
+
+  def get_question_text
+    question
   end
 
   def question_content_class

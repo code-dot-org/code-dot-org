@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-03-10T15:20:43.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Predicting Conditional Statements",
+    "long_instructions": "\r\n#### Look at the following code. \r\n\r\n- #### What do you notice?\r\n- #### What do you predict will happen? \r\n\r\n![](https://images.code.org/bbe985c95a447aa15076789a1a912e6b-image-1741628911673.png)",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "stay_on_level_after_submit": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-10T15:20:43.208+00:00\",\"changed\":[\"cloned from \\\"csaif-pl-_python-basics-forem_L26_python\\\"\"],\"cloned_from\":\"csaif-pl-_python-basics-forem_L26_python\"},{\"changed_at\":\"2025-03-10 17:48:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-03-10 17:49:48 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

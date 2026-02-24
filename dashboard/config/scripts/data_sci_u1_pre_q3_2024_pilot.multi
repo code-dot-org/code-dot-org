@@ -1,0 +1,18 @@
+name 'Data Sci U1 Pre Q3_2024-pilot'
+
+question 'Given a dataset of student grades in a spreadsheet, how would you organize the data to make it easier to analyze?'
+
+wrong 'Enter all grades in a single, continuous text field.'
+right 'Separate the data into columns for student names, subjects, and grades, and use rows for individual records.'
+wrong 'Create an individual sheet for each student and their data.'
+wrong 'Store all the data in the form of images.'
+
+
+
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

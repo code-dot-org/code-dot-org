@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 # Levels defined using a text-based ruby DSL syntax.
@@ -241,7 +242,3 @@ class DSLDefined < Level
     FileUtils.rm_f(file_path)
   end
 end
-
-# The following capitalization variant is needed so that annotate_models
-# is able to find the model class.
-DslDefined = DSLDefined

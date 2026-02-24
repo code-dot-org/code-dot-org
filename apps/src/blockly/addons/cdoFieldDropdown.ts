@@ -1,8 +1,4 @@
-import GoogleBlockly, {
-  FieldDropdownConfig,
-  FieldDropdownValidator,
-  MenuGeneratorFunction,
-} from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import {
   printerStyleNumberRangeToList,
@@ -11,20 +7,22 @@ import {
 
 import {EMPTY_OPTION} from '../constants';
 
-export type CustomMenuGenerator = CustomMenuOption[] | MenuGeneratorFunction;
+export type CustomMenuGenerator =
+  | CustomMenuOption[]
+  | BlocklyCore.MenuGeneratorFunction;
 // Blockly's MenuOption can either be [string, string] or [ImageProperties, string]. We
 // will always use [string, string].
 type CustomMenuOption = [string, string];
 
-export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
+export default class CdoFieldDropdown extends BlocklyCore.FieldDropdown {
   private config: string | null | undefined;
 
   // Blockly expects a menu generator, but some of our older blocks skip this and use
   // the field element's config attribute to specify a range of menu options.
   constructor(
     menuGenerator?: CustomMenuGenerator,
-    validator?: FieldDropdownValidator,
-    config?: FieldDropdownConfig
+    validator?: BlocklyCore.FieldDropdownValidator,
+    config?: BlocklyCore.FieldDropdownConfig
   ) {
     if (!menuGenerator) {
       menuGenerator = [['', '']];
@@ -102,7 +100,7 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
       this.setValue(state);
       return;
     }
-    const field = GoogleBlockly.utils.xml.textToDom(state);
+    const field = BlocklyCore.utils.xml.textToDom(state);
     // Currently, we support the `config` attribute if `config` is stored in xml, but not in json.
     // The config is handled by `fromXml`.
     this.fromXml(field);
@@ -153,48 +151,28 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
   }
 
   /**
-   * We override createTextArrow_ to skip creating the arrow for uneditable blocks.
-   *
-   * Additionally, we need fix the arrow position on Safari, but only until
-   * upgrading to Blockly v11. After this, we should be able to just call
-   * super.createTextArrow_() after the early return.
-   *  @override */
-  createTextArrow_() {
-    if (!this.getSourceBlock()?.isEditable()) {
-      return;
+   * Get the text from this field to display on the block. May differ from
+   * `getText` due to ellipsis, and other formatting.
+   * @override Handling of text for RTL blocks is customized.
+   * See: https://github.com/google/blockly/issues/8645
+   * @returns Text to display.
+   */
+  protected getDisplayText_(): string {
+    let text = this.getText();
+    if (text.length > this.maxDisplayLength) {
+      // Truncate displayed string and add an ellipsis ('...').
+      text = text.substring(0, this.maxDisplayLength - 2) + '…';
     }
-
-    // Once we are on v11, we should be able to use the parent class method
-    // for everything below this point.
-    const arrow = Blockly.utils.dom.createSvgElement(
-      Blockly.utils.Svg.TSPAN,
-      {},
-      this.textElement_
-    );
-    arrow.appendChild(
-      document.createTextNode(
-        this.getSourceBlock()?.RTL
-          ? Blockly.FieldDropdown.ARROW_CHAR + ' '
-          : ' ' + Blockly.FieldDropdown.ARROW_CHAR
-      )
-    );
-
-    /**
-     * Begin CDO customization
-     */
-    arrow.setAttribute('dominant-baseline', 'central');
-    /**
-     * End CDO customization
-     */
-
-    if (this.getSourceBlock()?.RTL) {
-      this.getTextElement().insertBefore(arrow, this.textContent_);
-    } else {
-      this.getTextElement().appendChild(arrow);
+    if (this.sourceBlock_ && this.sourceBlock_.RTL) {
+      // Begin CDO Customization:
+      // Add RTL override '\u202E' and then a pop directional formatting '\u202C'.
+      // This approach enforces the RTL direction for the entire text consistently.
+      // The PDF mark ensures the override is localized to this field's text.
+      // Core Blockly instead adds a RTL Mark (text += '\u200F').
+      text = '\u202E' + text + '\u202C';
+      // End CDO Customization
     }
-    // this.arrow is private in the parent.
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (this as any).arrow = arrow;
+    return text;
   }
 }
 

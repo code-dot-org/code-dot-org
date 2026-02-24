@@ -1,0 +1,626 @@
+import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
+import {Button} from '@code-dot-org/component-library/button';
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import FormFieldWrapper from '@code-dot-org/component-library/formFieldWrapper';
+import Link from '@code-dot-org/component-library/link';
+import TextField from '@code-dot-org/component-library/textField';
+import {Typography} from '@mui/material';
+import classNames from 'classnames';
+import React, {ChangeEvent, useEffect, useMemo, useState} from 'react';
+
+import {hashEmail} from '@cdo/apps/code-studio/hashEmail';
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import {roleItemGroups} from '@cdo/apps/signUpFlow/FinishTeacherAccount';
+import locale from '@cdo/apps/signUpFlow/locale';
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+import {navigateToHref} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
+import {
+  AccountSettingsSectionUrlParams,
+  handleUpdateUrlOnSettingsSave,
+} from '../accountUpdateConstants';
+import ChangeEmailModal from '../ChangeEmail/ChangeEmailModal';
+
+import {AccountInformationProps} from './types';
+
+import styles from './style.module.scss';
+import commonStyles from '../common/common.styles.module.scss';
+
+export const ACCOUNT_UPDATE_SUCCESS = 'account-update-success';
+
+export const AccountInformation: React.FC<AccountInformationProps> = ({
+  verifiedTeacher,
+  secretPictureAccountOnly,
+  teacherManagedAccount,
+  parentManagedAccount,
+  shouldSeeEditEmailLink,
+  isPasswordRequired,
+  isStudent,
+  isFacilitator,
+  migrated,
+  userType,
+  userAge,
+  userUsername,
+  userDisplayName,
+  userGivenName,
+  userFamilyName,
+  userProperties,
+  userEmail,
+  userFacilitatorBio,
+  hashedEmail,
+  encryptedPasswordPresent,
+  canEditPassword,
+  sponsored,
+  ageDropdownOptions,
+  studentInLockoutFlow,
+  showGenderInput,
+  usStateDropdownOptions,
+  countryCode,
+  isUSA,
+}) => {
+  const [name, setName] = useState(userDisplayName ?? '');
+  const [username, setUsername] = useState(userUsername ?? '');
+  const [givenName, setGivenName] = useState(userGivenName ?? '');
+  const [familyName, setFamilyName] = useState(userFamilyName ?? '');
+  const [email, setEmail] = useState(userEmail ?? '');
+  const [facilitatorBio, setFacilitatorBio] = useState(
+    userFacilitatorBio ?? ''
+  );
+  const [gender, setGender] = useState(
+    userProperties?.gender_student_input ?? ''
+  );
+  const [age, setAge] = useState(userAge ?? '');
+  const [usState, setUsState] = useState(userProperties?.us_state ?? '');
+  const [educatorRole, setEducatorRole] = useState(
+    userProperties?.educator_role ?? ''
+  );
+  const [password, setPassword] = useState('');
+  const [passwordConfirmation, setPasswordConfirmation] = useState('');
+  const [currentPassword, setCurrentPassword] = useState('');
+  const [showChangeEmailModal, setShowChangeEmailModal] = useState(false);
+  const [showAccountUpdateSuccess, setShowAccountUpdateSuccess] =
+    useState(false);
+  const [showEmailUpdateSuccess, setShowEmailUpdateSuccess] = useState(false);
+  const [errors, setErrors] = useState<Record<string, string[]>>({});
+
+  const displayNameHelperMessage = useMemo(
+    () =>
+      isStudent ? undefined : i18n.accountInformation_displayNameHintTeacher(),
+    [isStudent]
+  );
+
+  const emailValue = useMemo(
+    () => (isStudent ? `***${i18n.encrypted()}***` : email ?? ''),
+    [isStudent, email]
+  );
+
+  const usStateOptions = useMemo(
+    () =>
+      [[i18n.accountInformation_selectState(), '']]
+        .concat(usStateDropdownOptions)
+        .map(([text, value]) => ({text, value})),
+    [usStateDropdownOptions]
+  );
+
+  const lockedOutStudentMessage = useMemo(
+    () =>
+      studentInLockoutFlow
+        ? i18n.accountInformation_updateFieldParentPermissionRequired()
+        : undefined,
+    [studentInLockoutFlow]
+  );
+
+  useEffect(() => {
+    const accountUpdateSuccess =
+      sessionStorage.getItem(ACCOUNT_UPDATE_SUCCESS) === String(true);
+    if (accountUpdateSuccess) {
+      setShowAccountUpdateSuccess(true);
+      sessionStorage.removeItem(ACCOUNT_UPDATE_SUCCESS);
+    }
+  }, []);
+
+  const handleRoleChange = (e: ChangeEvent<HTMLSelectElement>) => {
+    if (educatorRole && !e.target.value) {
+      setErrors(prevErrors => ({
+        ...prevErrors,
+        educator_role: [
+          ...(prevErrors.educator_role ?? []),
+          i18n.accountInformation_educatorRoleCannotBeRemoved(),
+        ],
+      }));
+    } else {
+      setEducatorRole(e.target.value);
+      setErrors(prevErrors => {
+        const updatedErrors = {...prevErrors};
+        delete updatedErrors.educator_role;
+        return updatedErrors;
+      });
+    }
+  };
+
+  const handleSubmitAccountSettingsUpdate = async () => {
+    resetMessages();
+    setErrors({});
+
+    const userUpdates: {[key: string]: unknown} = {
+      name,
+      password,
+      password_confirmation: passwordConfirmation,
+      current_password: currentPassword,
+      age: isStudent ? age : '21+',
+    };
+    if (userUsername) {
+      userUpdates['username'] = username;
+    }
+    if (isStudent) {
+      userUpdates['country_code'] = countryCode;
+      if (showGenderInput) {
+        userUpdates['gender_student_input'] = gender;
+      }
+      if (isUSA) {
+        userUpdates['us_state'] = usState;
+      }
+    } else {
+      userUpdates['given_name'] = givenName;
+      userUpdates['family_name'] = familyName;
+      if (educatorRole) {
+        userUpdates['educator_role'] = educatorRole;
+      }
+    }
+    if (isFacilitator) {
+      userUpdates['facilitator_info_attributes'] = {bio: facilitatorBio};
+    }
+
+    const response = await fetch('/users', {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        'X-CSRF-Token': await getAuthenticityToken(),
+      },
+      body: JSON.stringify({
+        user: userUpdates,
+      }),
+    });
+
+    if (response.ok) {
+      setShowAccountUpdateSuccess(true);
+
+      // If sent here with a user_return_to param and there are no
+      // more Accoutn Settings sections the user is meant to update
+      // (tracked in the URL params), then redirect the user to
+      // user_return_to, otherwise handle reload.
+      const returnToHref = decodeURIComponent(
+        (queryParams('user_return_to') || '') as string
+      );
+      const hasFinishedAccountUpdates = handleUpdateUrlOnSettingsSave(
+        AccountSettingsSectionUrlParams.AccountInformation
+      );
+      if (returnToHref && hasFinishedAccountUpdates) {
+        navigateToHref(returnToHref);
+      } else {
+        handleReload();
+      }
+    } else {
+      const validationErrors = await response.json();
+      setErrors(validationErrors);
+    }
+  };
+
+  /**
+   * Page must be reloaded if student updates their age or state.
+   * These values affect whether or not the student is locked out,
+   * which is passed down to the account settings page components
+   * through script data.
+   */
+  const handleReload = () => {
+    if (
+      isStudent &&
+      (age !== userAge || usState !== userProperties?.us_state)
+    ) {
+      sessionStorage.setItem(ACCOUNT_UPDATE_SUCCESS, String(true));
+      window.location.reload();
+    }
+  };
+
+  const handleSubmitEmailUpdate = async ({
+    newEmail,
+    currentPassword,
+    emailOptIn,
+  }: {
+    newEmail: string;
+    currentPassword: string;
+    emailOptIn: string;
+  }) => {
+    resetMessages();
+    const hashedEmail = hashEmail(newEmail);
+    const response = await fetch('/users/email', {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        'X-CSRF-Token': await getAuthenticityToken(),
+      },
+      body: JSON.stringify({
+        user: {
+          email: newEmail,
+          current_password: currentPassword,
+          hashed_email: hashedEmail,
+          email_preference_opt_in: emailOptIn,
+        },
+      }),
+    });
+
+    if (!response.ok) {
+      const validationErrors = await response.json();
+      let error;
+      if (validationErrors) {
+        error = {
+          serverErrors: {
+            newEmail: validationErrors.email?.[0],
+            currentPassword: validationErrors.current_password?.[0],
+          },
+        };
+      } else {
+        error = new Error('Unexpected failure: ' + response.status);
+      }
+      // error is handled in ChangeEmailModal
+      throw error;
+    }
+
+    // update succeeded, hide modal and update email state with the new email
+    setShowChangeEmailModal(false);
+    setEmail(newEmail);
+    setShowEmailUpdateSuccess(true);
+  };
+
+  const resetMessages = () => {
+    setShowAccountUpdateSuccess(false);
+    setShowEmailUpdateSuccess(false);
+  };
+
+  const getError = (key: string): string | undefined => errors[key]?.[0];
+
+  const clearError = (key: string) => {
+    if (errors[key]) {
+      const errorsCopy = {...errors};
+      delete errorsCopy[key];
+      setErrors(errorsCopy);
+    }
+  };
+
+  return (
+    <>
+      <hr />
+      <Typography
+        className={commonStyles.sectionHeader}
+        component="h2"
+        variant="h5"
+        gutterBottom
+      >
+        {i18n.accountInformation_accountInformation()}
+      </Typography>
+      <form name="account-information-form" className={styles.accountForm}>
+        <div className={commonStyles.inputContainer}>
+          {/* verified teacher account */}
+          {verifiedTeacher && (
+            <div className="field">
+              <label className={styles.verifiedTeacher}>
+                ✔ {i18n.accountInformation_verifiedTeacher()}
+              </label>
+            </div>
+          )}
+
+          {/* display name */}
+          <TextField
+            id="user_name"
+            className={commonStyles.input}
+            label={i18n.displayName()}
+            onChange={e => {
+              setName(e.target.value);
+              clearError('name');
+            }}
+            value={name}
+            name="user[name]"
+            readOnly={secretPictureAccountOnly}
+            maxLength={255}
+            helperMessage={displayNameHelperMessage}
+            errorMessage={getError('name')}
+          />
+
+          {!isStudent && (
+            <>
+              {/* given name */}
+              <TextField
+                id="given_name"
+                className={commonStyles.input}
+                label={i18n.firstName()}
+                onChange={e => {
+                  setGivenName(e.target.value);
+                  clearError('given_name');
+                }}
+                value={givenName}
+                name="user[given_name]"
+                maxLength={255}
+                errorMessage={getError('given_name')}
+              />
+            </>
+          )}
+
+          {!isStudent && (
+            <>
+              {/* family name */}
+              <TextField
+                id="family_name"
+                className={commonStyles.input}
+                label={i18n.lastName()}
+                onChange={e => {
+                  setFamilyName(e.target.value);
+                  clearError('family_name');
+                }}
+                value={familyName}
+                name="user[family_name]"
+                maxLength={255}
+                errorMessage={getError('family_name')}
+              />
+            </>
+          )}
+
+          {/* username */}
+          {userUsername && (
+            <TextField
+              id="user_username"
+              className={commonStyles.input}
+              label={i18n.username()}
+              onChange={e => {
+                setUsername(e.target.value);
+                clearError('username');
+              }}
+              value={username}
+              name="user[username]"
+              maxLength={20}
+              minLength={5}
+              errorMessage={getError('username')}
+            />
+          )}
+
+          {/* educator_role */}
+          {!isStudent && (
+            <SimpleDropdown
+              id="educator_role"
+              className={classNames(styles.dropdownContainer)}
+              labelText={locale.what_is_your_role()}
+              name="educator_role"
+              selectedValue={educatorRole}
+              onChange={handleRoleChange}
+              itemGroups={roleItemGroups}
+              dropdownTextThickness="thin"
+              errorMessage={getError('educator_role')}
+            />
+          )}
+
+          {/* facilitator bio */}
+          {isFacilitator && (
+            <FormFieldWrapper
+              label={i18n.facilitatorBio()}
+              errorMessage={
+                getError('facilitator_info.bio') ||
+                getError('facilitator_info.base') ||
+                getError('facilitator_info.user')
+              }
+            >
+              <textarea
+                name="user[facilitator_bio]"
+                value={facilitatorBio}
+                onChange={e => {
+                  setFacilitatorBio(e.target.value);
+                  clearError('facilitator_info.bio');
+                }}
+              />
+            </FormFieldWrapper>
+          )}
+
+          {/* email */}
+          {!teacherManagedAccount && !parentManagedAccount && (
+            <div>
+              <TextField
+                id="user_email"
+                className={classNames(commonStyles.input, styles.emailInput)}
+                label={i18n.emailAddress()}
+                helperMessage={
+                  migrated && !isStudent
+                    ? i18n.accountInformation_emailHint()
+                    : undefined
+                }
+                readOnly={true}
+                onChange={() => {}}
+                value={emailValue}
+                name="user[email]"
+                errorMessage={getError('email')}
+              />
+              {/* TODO: replace Link with design system semantic button styled as an inline link when it exists */}
+              {shouldSeeEditEmailLink && (
+                <Link
+                  role="button"
+                  href="#"
+                  text={i18n.accountInformation_updateEmail()}
+                  onClick={e => {
+                    e.preventDefault();
+                    setShowChangeEmailModal(true);
+                  }}
+                  size="s"
+                />
+              )}
+              {showEmailUpdateSuccess && (
+                <Alert
+                  text={i18n.accountInformation_emailUpdateSuccess()}
+                  type={alertTypes.success}
+                  className={styles.alert}
+                  onClose={() => setShowEmailUpdateSuccess(false)}
+                />
+              )}
+              {showChangeEmailModal && (
+                <ChangeEmailModal
+                  handleSubmit={handleSubmitEmailUpdate}
+                  handleCancel={() => setShowChangeEmailModal(false)}
+                  userType={userType}
+                  isPasswordRequired={isPasswordRequired}
+                  currentHashedEmail={hashedEmail}
+                />
+              )}
+            </div>
+          )}
+
+          {/* no password because sponsored hint text */}
+          {sponsored && (
+            <div className="field">
+              <label className="label-bold">
+                {i18n.accountInformation_noPasswordBecauseSponsored()}
+              </label>
+            </div>
+          )}
+
+          {canEditPassword && encryptedPasswordPresent && (
+            <>
+              {/* new password */}
+              <TextField
+                id="user_password"
+                className={commonStyles.input}
+                label={i18n.password()}
+                onChange={e => {
+                  setPassword(e.target.value);
+                  clearError('password');
+                }}
+                value={password}
+                name="user[password]"
+                inputType="password"
+                autoComplete="off"
+                maxLength={255}
+                errorMessage={getError('password')}
+              />
+
+              {/* new password confirmation */}
+              <TextField
+                id="user_password_confirmation"
+                className={commonStyles.input}
+                label={i18n.passwordConfirmation()}
+                onChange={e => {
+                  setPasswordConfirmation(e.target.value);
+                  clearError('password_confirmation');
+                }}
+                value={passwordConfirmation}
+                name="user[password_confirmation]"
+                inputType="password"
+                autoComplete="off"
+                maxLength={255}
+                errorMessage={getError('password_confirmation')}
+              />
+            </>
+          )}
+
+          {/* current password */}
+          {encryptedPasswordPresent && (
+            <TextField
+              id="user_current_password"
+              className={commonStyles.input}
+              label={i18n.accountInformation_currentPassword()}
+              helperMessage={i18n.accountInformation_currentPasswordHint()}
+              onChange={e => {
+                setCurrentPassword(e.target.value);
+                clearError('current_password');
+              }}
+              value={currentPassword}
+              name="user[current_password]"
+              inputType="password"
+              maxLength={255}
+              errorMessage={getError('current_password')}
+            />
+          )}
+
+          {isStudent && (
+            <>
+              {/* student age */}
+              <SimpleDropdown
+                id="user_age"
+                labelText={i18n.age()}
+                name="user[age]"
+                selectedValue={age}
+                onChange={e => {
+                  setAge(e.target.value);
+                  clearError('age');
+                }}
+                items={ageDropdownOptions.map((value: string | number) => ({
+                  value: String(value),
+                  text: String(value),
+                }))}
+                disabled={studentInLockoutFlow}
+                dropdownTextThickness="thin"
+                className={commonStyles.input}
+                helperMessage={lockedOutStudentMessage}
+                errorMessage={getError('age')}
+              />
+
+              {/* student gender */}
+              {showGenderInput && (
+                <TextField
+                  id="user_gender_student_input"
+                  className={commonStyles.input}
+                  label={i18n.genderOptional()}
+                  onChange={e => setGender(e.target.value)}
+                  value={gender}
+                  name="user[gender_student_input]"
+                  maxLength={50}
+                />
+              )}
+
+              {/* US state */}
+              {isUSA && (
+                <SimpleDropdown
+                  id="user_us_state"
+                  labelText={i18n.usState()}
+                  name="user[us_state]"
+                  selectedValue={usState}
+                  onChange={e => {
+                    setUsState(e.target.value);
+                    clearError('us_state');
+                  }}
+                  items={usStateOptions}
+                  disabled={studentInLockoutFlow}
+                  dropdownTextThickness="thin"
+                  className={commonStyles.input}
+                  helperMessage={lockedOutStudentMessage}
+                  errorMessage={getError('us_state')}
+                />
+              )}
+            </>
+          )}
+          {Object.keys(errors).length > 0 && (
+            <Alert
+              text={i18n.accountInformation_reviewErrors()}
+              type={alertTypes.danger}
+              className={commonStyles.alert}
+            />
+          )}
+          {showAccountUpdateSuccess && (
+            <Alert
+              id="account-update-success"
+              text={i18n.accountInformation_updateSuccess()}
+              type={alertTypes.success}
+              onClose={() => setShowAccountUpdateSuccess(false)}
+              className={commonStyles.alert}
+            />
+          )}
+        </div>
+        <div>
+          <Button
+            id="submit-update"
+            className={commonStyles.submit}
+            text={i18n.accountInformation_updateAccountInformation()}
+            onClick={handleSubmitAccountSettingsUpdate}
+          />
+        </div>
+      </form>
+    </>
+  );
+};

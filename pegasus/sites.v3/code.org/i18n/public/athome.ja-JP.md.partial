@@ -20,7 +20,6 @@ theme: responsive
     <li><a class="linktag" id="self-paced-nav" href="#express">入門レベルで自分のペースで進められるコースを履修</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">ゲームまたはアプリを開発</a></li>
     <li><a class="linktag" id="unplugged-nav" href="#unplugged">コンピューターを使わずにコンピューターサイエンスを試す (「アンプラグド」& モバイルオプション)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Code.org チームおよびスペシャルゲストからコンピューターサイエンスを学ぶ</a></li>
 </ul>
 
 <br>
@@ -283,56 +282,6 @@ theme: responsive
   <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Hello Ruby</a> - コンピューター、テクノロジーおよびプログラミングについて学ぶ世界で最も滑稽な方法。 問題の分解、パターンの発見、アルゴリズム的思考、問題のデバッグ、共同作業など、CSのトピックにまつわるさまざまなアクティビティ。 (4～10歳向け)</li>
   <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> - カード、紐、クレヨンを使ってたくさん走り回る魅力的なゲームとパズルによるコンピューターサイエンスを教える無料教材のコレクション。 (5～14歳向け)</li>
 </ul>
-
-<h2>家にコンピューターがありませんか? 本校のパートナーからのアプリを使って CS をお使いの電話で試して見ましょう </h2>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="ボックスアイランド"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>アルゴリズム、パターン認識、シーケンス、ループ、条件などのコーディングの基礎を教えながら、学習者をエキサイティングな冒険に連れて行ってくれる魅力的なモバイルコーディングゲームです。 <i>(全年齢向き)</i>
-</div>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;"></h3></a>CodeSpark賞を受賞した5歳から9歳の子供向けのコーディング学習プラットフォーム。 コーディングを学びながら、The Foos でパズルを解いてゲームを作成します。 <strong>注: codeSpark は無料の 3ヶ月トライアルを提供します。 ご父兄のメールアドレスおよびクレジットカード情報がサインアップの際に必要です。</strong> <i>(第5学年を通した予習者向け)</i>
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[トップに戻る]</a></p>
-
-<a id="livecoding"></a>
-<h2>Code.org チームとスペシャルゲストから学びましょう!</h2>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="CodeBytes ロゴ">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes は、コンピューターサイエンスと現実世界のトピックを融合させた、わかりやすい20分のインタラクティブなレッスンです。 AI をトレーニングして手話を読み取る、便利なアプリをデザインする、explore the world of Minecraft, and more!</div>
-        <br>
-        <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>エピソードを見る</button></a>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="暗号解読">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">Code Break</h3>
-        <div class="smalltext" style="">コードブレイクをしてコンピュータサイエンスを楽しくしましょう！ Ashton Kutcherと暗号を作成、Yara Shahidiと変数について学び、インターネットの実際の発明者、Vint Cerfとインターネットがどのように機能するかを探索します!</div>
-        <br>
-        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>接続</button></a>
-    </span>
-  </div>
-</div>
-</div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 

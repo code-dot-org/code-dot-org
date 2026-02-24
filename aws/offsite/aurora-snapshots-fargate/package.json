@@ -9,12 +9,13 @@
   "author": "",
   "license": "apache-2.0",
   "dependencies": {
-    "aws-sdk": "latest",
-    "promise-mysql": "latest",
-    "honeybadger": "latest"
+    "@aws-sdk/client-rds": "^3.725.0",
+    "@aws-sdk/client-s3": "^3.723.0",
+    "honeybadger": "latest",
+    "promise-mysql": "latest"
   },
   "devDependencies": {
-    "mocha": "latest",
-    "sinon": "latest"
+    "mocha": "^10.2.0",
+    "sinon": "^17.0.1"
   }
 }

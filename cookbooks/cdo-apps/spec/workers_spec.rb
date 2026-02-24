@@ -15,7 +15,7 @@ end
 describe 'cdo-apps::workers' do
   let :chef_run do
     ChefSpec::SoloRunner.new(platform: 'ubuntu', version: '14.04') do |node|
-      node.automatic['memory']['total'] = "#{(memory * 1024 * 1024)}kB"
+      node.automatic['memory']['total'] = "#{memory * 1024 * 1024}kB"
       node.automatic['cpu']['total'] = cpu
     end.converge(described_recipe)
   end

@@ -4,10 +4,10 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "curriculum_k_5",
       "curriculum_umbrella": "CSF",
       "has_lesson_plan": true,
       "hideable_lessons": true,
-      "is_course": true,
       "is_migrated": true,
       "lesson_extras_available": true,
       "project_widget_types": [
@@ -15,17 +15,17 @@
         "artist"
       ],
       "project_widget_visible": true,
+      "show_calendar": true,
       "tts": true,
-      "version_year": "2024",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": "coursec",
-    "serialized_at": "2024-07-11 16:06:01 UTC",
-    "published_state": "stable",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-04-03 01:05:11 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "coursec-2024"
     }
@@ -117,7 +117,8 @@
         "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nThe internet is filled with all kinds of interesting people, but sometimes, some of them can be mean to each other. With this role play, help your students understand why it's often easier to be mean online than in person, and how to deal with online meanness when they see it.",
         "preparation": "- Review instructional materials.\r\n- Print handout(s) for each student.\r\n- Bring a stuffed animal or toy to class.",
         "purpose": "Common Sense’s Digital Citizenship Curriculum addresses six core topics, based on the latest research on children, media, and technology. This lesson focuses on Cyberbullying, Digital Drama & Hate Speech. Students take on these tough topics and play the active role of upstanders to build positive, supportive online communities and combat online cruelty.\n",
-        "student_overview": "In this lesson, you'll learn about meanness and what to do if you encounter it online."
+        "student_overview": "In this lesson, you'll learn about meanness and what to do if you encounter it online.",
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Putting a STOP to Online Meanness",
@@ -137,7 +138,8 @@
         "overview": "In this **context-setting** lesson, students will use a set of symbols to instruct a \"robot\" to stack cups in different patterns. Students will take turns participating as the robot, responding only to the algorithm defined by their peers.",
         "preparation": " - Prepare a stack of 20 paper cups (or paper trapezoids) for each group of 2-3 students.\n - Display the symbols from ***Symbol Key** where students can reference throughout the lesson.\n - (Optional) Print out one ***Cup Stacking Ideas** per group of 2-3 students.\n",
         "purpose": "This unplugged lesson brings the class together as a team with a simple task to complete: get a \"robot\" to stack cups in a specific design. This activity lays the groundwork for the programming that students will do throughout the course as they learn the importance of defining a clearly communicated algorithm.",
-        "student_overview": "In this lesson, you'll pretend your classmates are robots and program them to build patterns of stacked cups."
+        "student_overview": "In this lesson, you'll pretend your classmates are robots and program them to build patterns of stacked cups.",
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "My Robotic Friends Jr",
@@ -237,7 +239,8 @@
         "overview": "This **context-setting** lesson builds on the initial \"My Robotic Friends\" activity, featuring larger and more complicated designs. ",
         "preparation": "\n - Prepare a stack of 20 paper cups (or ***paper trapezoids**) for each group of 4 students.\n - Display the ***symbols** where students can reference throughout the lesson.\n - (Optional) Print out one ***Cup Stacking Ideas** per group of 4 students.",
         "purpose": "This lesson serves as a reintroduction to loops, using the now familiar set of \"robot\" programming instructions. Students will develop critical thinking skills by looking for patterns of repetition in the movements of classmates and determining how to simplify those repeated patterns using loops.",
-        "student_overview": "In this lesson, you'll program your classmates again, but using loops you'll be able to solve bigger and more complicated problems."
+        "student_overview": "In this lesson, you'll program your classmates again, but using loops you'll be able to solve bigger and more complicated problems.",
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "My Loopy Robotic Friends Jr",
@@ -317,7 +320,8 @@
         "overview": "In this **context-setting** lesson, students will learn that events are a great way to add flexibility to a pre-written algorithm.",
         "preparation": "- Print or display the ***Event Controller**.\n- Print one ***assessment** for each student.\n",
         "purpose": "Today, students will learn to distinguish events and actions. The students will see activities interrupted by having a \"button\" pressed on a paper remote. When seeing this event, the class will react with a unique action. Events are widely used in programming and should be easily recognizable after this lesson.",
-        "student_overview": "Play a fun game to learn about events. "
+        "student_overview": "Play a fun game to learn about events. ",
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "The Big Event",
@@ -395,7 +399,8 @@
       "properties": {
         "overview": "In this unplugged lesson, students will practice storing, searching, retrieving, modifying and deleting the pattern blocks to simulate what computers do with data. ",
         "preparation": "The data analogy can be made with various objects. Select an alternate from the list below if you don’t have pattern blocks:\n- Toy cars\n- Toy animals\n- Letter tiles\n- Counting bears\n- Unifix cubes\n- Buttons or beads\n- Other small items with sortable attributes\n\n",
-        "purpose": "In this Unplugged lesson, students will use pattern blocks inside a box as an analogy for data inside a computer. Students will practice storing, searching, retrieving, modifying and deleting the (data) pattern blocks. At the end of the lesson, students will create various bar graphs based on the attributes of their (data) pattern blocks. \n"
+        "purpose": "In this Unplugged lesson, students will use pattern blocks inside a box as an analogy for data inside a computer. Students will practice storing, searching, retrieving, modifying and deleting the (data) pattern blocks. At the end of the lesson, students will create various bar graphs based on the attributes of their (data) pattern blocks. \n",
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -415,7 +420,8 @@
         "overview": "This **exploratory** lesson introduces the concept of binary which is how computers today store all sorts of information.",
         "preparation": "- (Optional) Watch the ***Lesson in Action** video.\n- Gather markers for the bracelets. Other decorations like beads and pipecleaners are optional.\n- Print one ***worksheet** and one ***assessment** per student.\n- (Optional) Write a short message on the board in binary.",
         "purpose": "In this lesson students will learn how information is represented in a way such that a computer can interpret and store it. When learning binary, students will have the opportunity to write codes and share them with peers as secret messages. This can then be related back to how computers read a program, translate it to binary, use the information in some way, then reply back in a way humans can understand. For example, when we type a sentence into a document then press save, a computer translates the sentence into binary, stores the information, then posts a message indicating the document has been saved.",
-        "student_overview": "Create your very own binary bracelet and learn how computers remember information!"
+        "student_overview": "Create your very own binary bracelet and learn how computers remember information!",
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Binary Bracelets",
@@ -3229,7 +3235,7 @@
       "key": "1eaa774f-a530-4011-90ba-43898ac49f0d",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Event Controller” slide\n\n\n**Directions:**\n\n- Project the ***Event Controller** onto your classroom screen.\n\n![](https://code.org/curriculum/docs/csf/c2_TheBigEvent1.png)\n\n- Decide with your class what each button does. We suggest:\n\t- Green Star -> Clap\n\t- Orange Triangle -> Hands in the air\n\t- Blue Hexagon -> Hands on hips\n\t- Purple Circle -> Twist\n\t- Pink Rectangle -> Stomp\n- Practice tapping the buttons on the screen and having your class react.\n- Add some button sequences into the mix and have the students try to keep up with their actions.\n- Let your class know that every time you push a button, it is an event that lets them know what they are expected to do next.\n- Have students practice working backwards. Give them 3-4 sounds and ask what buttons they would need to press to get the sounds to play in that order. For example:\n    - What buttons would you need to press to get \"Twist, Twist, Clap, Stomp\"?\n- To make things more challenging, get the class started on a separate task, then begin interrupting them again with the buttons. We suggest:\n\t- Counting to 10\n\t- Singing “Old MacDonald”\n- Practice until students seem comfortable with the idea that each button press causes them to perform an action."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Event Controller” slide\n\n\n**Directions:**\n\n- Project the ***Event Controller** onto your classroom screen.\n\n![](/blockly/media/curriculum/docs/csf/c2_TheBigEvent1.png)\n\n- Decide with your class what each button does. We suggest:\n\t- Green Star -> Clap\n\t- Orange Triangle -> Hands in the air\n\t- Blue Hexagon -> Hands on hips\n\t- Purple Circle -> Twist\n\t- Pink Rectangle -> Stomp\n- Practice tapping the buttons on the screen and having your class react.\n- Add some button sequences into the mix and have the students try to keep up with their actions.\n- Let your class know that every time you push a button, it is an event that lets them know what they are expected to do next.\n- Have students practice working backwards. Give them 3-4 sounds and ask what buttons they would need to press to get the sounds to play in that order. For example:\n    - What buttons would you need to press to get \"Twist, Twist, Clap, Stomp\"?\n- To make things more challenging, get the class started on a separate task, then begin interrupting them again with the buttons. We suggest:\n\t- Counting to 10\n\t- Singing “Old MacDonald”\n- Practice until students seem comfortable with the idea that each button press causes them to perform an action."
       },
       "seeding_key": {
         "activity_section.key": "1eaa774f-a530-4011-90ba-43898ac49f0d",
@@ -4147,7 +4153,7 @@
       "key": "0db2f78c-6b06-409d-ba5c-d53e71963edb",
       "position": 2,
       "properties": {
-        "description": "\n####Binary Bracelets - Worksheet\nYou do not need to cover the whole of binary, like counting and converting numbers back and forth from decimal. This lesson is intended to be a fun introduction to how computers store information, not a frustrating lesson in bases.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Binary Bracelets” slide\n\n\nDirections:\n\n- _Find the first letter of your first name on the activity sheet._\n- _Fill in the squares of a bracelet to match the pattern of the squares next to the letter that you selected._\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide\n- _Cut the bracelet out._\n- _Tape the bracelet around your wrist to wear it!_\n- _Share your bracelet with your classmates to see if they can figure out your letter._\n\n![](https://code.org/curriculum/course2/14/key.png)"
+        "description": "\n####Binary Bracelets - Worksheet\nYou do not need to cover the whole of binary, like counting and converting numbers back and forth from decimal. This lesson is intended to be a fun introduction to how computers store information, not a frustrating lesson in bases.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Binary Bracelets” slide\n\n\nDirections:\n\n- _Find the first letter of your first name on the activity sheet._\n- _Fill in the squares of a bracelet to match the pattern of the squares next to the letter that you selected._\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide\n- _Cut the bracelet out._\n- _Tape the bracelet around your wrist to wear it!_\n- _Share your bracelet with your classmates to see if they can figure out your letter._\n\n![](/blockly/media/curriculum/course2/14/key.png)"
       },
       "seeding_key": {
         "activity_section.key": "0db2f78c-6b06-409d-ba5c-d53e71963edb",

@@ -1,71 +1,66 @@
-@import 'color.scss';
-@import '../../mixins.scss';
+@use '../../lab2/views/components/layout/variables.scss' as variables;
+@use '../../mixins.scss' as mixins;
 
 .container {
   display: flex;
+  min-width: 190px;
+  max-width: calc(100vw - 270px);
+  margin-top: 1px;
+  justify-content: end;
+  align-items: center;
+  gap: 0.125rem;
+}
 
-  .subContainer {
-    display: flex;
+.currentPack {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  margin-inline-end: 0.5rem;
+
+  img {
+    height: 21px;
+    border-radius: 0.125rem;
+  }
+
+  p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: default;
   }
 }
 
-.button {
-  @include remove-button-styles;
-  background-color: $neutral_dark;
-  color: $neutral_light;
+.startOverButton {
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
   display: flex;
-  height: 24px;
-  width: 24px;
-  font-size: 13px;
   justify-content: center;
   align-items: center;
-  border-radius: 3px;
-  margin: 2px;
-  transition: opacity 0.2s ease;
+  gap: 0.125rem;
+  height: 26.25px;
+  padding-block: 0.1875rem;
+  padding-inline:  0.5rem;
+  border: variables.$default-border;
+  border-color: var(--borders-neutral-strong);
+  border-radius: 0.25rem;
+  transition: all 0.2s ease;
 
-  &Disabled {
-    opacity: 50%;
-    cursor: default;
+  &WithPack {
+    padding-inline: 0.125rem 0.5rem;
   }
 
-  &InteractionDisabled {
-    cursor: default;
-    background-color: $neutral_dark90;
+  &:hover {
+    background-color: var(--background-neutral-tertiary);
   }
 
-  &Wide {
-    width: initial;
-    padding: 0 6px 0 2px;
+  // Add focus-visible styles
+  @include mixins.focus-styles;
 
-    html[dir="rtl"] & {
-      padding: 0 2px 0 6px;
-    }
-
-    &Image {
-      height: 20px;
-      border-radius: 2px;
-    }
-
-    &Content {
-      padding: 0 16px 0 8px;
-
-      html[dir="rtl"] & {
-        padding: 0 8px 0 16px;
-      }
-
-      &NoRightPadding {
-        padding-right: 0;
-      }
-    }
+  p {
+    cursor: pointer;
   }
 
-  .currentPack {
-    display: contents;
-  }
-
-  &Skip {
-    width: initial;
-    padding: 0 11px;
-    gap: 9px;
+  i {
+    font-size: 0.8125rem;
   }
 }

@@ -206,7 +206,11 @@ module AWS
       # supported by safe_load
       #
       # rubocop:disable Security/YAMLLoad
-      params = YAML.load(template)['Parameters']
+      params = if RUBY_VERSION >= '3.1'
+                 YAML.load(template, permitted_classes: [Date])['Parameters']
+               else
+                 YAML.load(template)['Parameters']
+               end
       # rubocop:enable Security/YAMLLoad
       return [] unless params
       params.filter_map do |key, properties|
@@ -333,7 +337,7 @@ module AWS
         nil
       end
       begin
-        cfn.wait_until("stack_#{action}_complete".to_sym, stack_name: @stack_id) do |w|
+        cfn.wait_until(:"stack_#{action}_complete", stack_name: @stack_id) do |w|
           w.delay = 5 # seconds
           # TODO: lower this back to 1.5 hours once we're no longer building
           # Node.js from source as part of adhoc creation, which right now is

@@ -1,0 +1,16 @@
+name 'HoAI_choice_template_backed'
+display_name 'Time to Party!'
+description 'You get to choose the order you work on each part. After you finish one, come back here to pick up the next part.'
+
+sublevels
+
+level 'pilot_generate_dancer_choice'
+
+level 'length_prompt_choice'
+
+level 'dance_moves_choice'
+
+uses_lab2
+markdown <<MARKDOWN
+
+MARKDOWN

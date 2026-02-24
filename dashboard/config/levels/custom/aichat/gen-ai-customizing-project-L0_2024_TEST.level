@@ -1,0 +1,64 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2024-10-25T17:55:36.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Cats - Your Feline Friends\r\n\r\nClick into \"User View\" to view the model card for this project and interact with the chatbot.",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": 1,
+        "systemPrompt": "Your goal  is to teach more people about how wonderful cats are as pets.  Act as if you are a manager of a animal shelter. To give advice and information on how to take care of a cat. Only answer questions about cats and animal shelters.  If a question is asked about something other than cats, respond with \"That's interesting, but let's talk more about cats.\"  Respond positive and passionate.  Respond in a conversational manner. ",
+        "retrievalContexts": [
+          "A cat’s hearing is better than a dog’s. And a cat can hear high-frequency sounds up to two octaves higher than a human",
+          "A group of cats is called a “clowder.”",
+          "There are more than 500 million domestic cats in the world, with approximately 40 recognized breeds",
+          "Cats are North America’s most popular pets: there are 73 million cats compared to 63 million dogs. Over 30% of households in North America own a cat.",
+          "A cat rubs against people not only to be affectionate but also to mark out its territory with scent glands around its face. The tail area and paws also carry the cat’s scent",
+          "A cat’s brain is biologically more similar to a human brain than it is to a dog’s. Both humans and cats have identical regions in their brains that are responsible for emotions",
+          "On average, cats spend 2/3 of every day sleeping. That means a nine-year-old cat has been awake for only three years of its life",
+          "A cat’s eyesight is both better and worse than humans. It is better because cats can see in much dimmer light and they have a wider peripheral view. It’s worse because they don’t see color as well as humans do. Scientists believe grass appears red to cats",
+          "Wallingford Animal Control is a shelter where the goal is to adopt all the animals out to permanent, loving, and suitable homes. The Adoption Process Are you interested in adopting a dog or cat from our shelter? If so, please have a look at the adoption process and get in touch if you have any questions at all! View Our Pets - Our adoptable pets can be viewed on Petfinder.com. Here you will find the most up to date information on our available animals. Submit an Application - An adoption application needs to be filled out in its entirety, incomplete applications may be denied. Please contact your veterinarian (if applicable) and give them permission to speak with us, prior to submitting. Completed applications may be e-mailed, or faxed to 203-294-2181. Adoption Appointment - If an application is approved, a member of the staff will reach out to schedule an appointment. All members of the household will have to meet the pet, this is necessary to help determine compatibility. Once an adoption is finalized, the pet will be spayed or neutered prior to going to their new home. We're Your Matchmaker Our job and focus is to keep the public and our shelter animals safe and happy! Each animal is temperament tested, and we interact with these animals on a daily basis. We realize that the shelter environment can be stressful, and may cause an animal's behavior to differ than how they may behave in a home setting. We do our very best in making sure we are matching adopters up with the most suitable pet for their family and home. We ask that you please keep in mind that although we may decline your application for a specific pet, it is possible that we found that animal to be unsuitable for your particular situation, and may suggest you consider adopting a different animal. Adoption Fees Unaltered Cats and Dogs: $150. All pets will be spayed, neutered, and vaccinated against rabies and distemper. Cats will be tested for FeLV and FIV. Dogs will be tested for heartworm and tick borne diseases. All pets will receive a microchip implant courtesy of Friends of the Wallingford Animal Shelter. Altered Cats and Dogs: $100. Altered pets will receive the same vaccinations, testing, and microchip implant as listed above.",
+          "The Animal Haven, a no-kill animal shelter located in North Haven, CT, provides humane refuge to homeless, abandoned and surrendered cats and dogs, while they strive to find them loving, permanent homes."
+        ],
+        "modelCardInfo": {
+          "botName": "Cats - your feline friends",
+          "description": "Teach more people about how wonderful cats are as pets. To give advice and information on how to take care of a cat.",
+          "intendedUse": "To respond to users and give them information about cats.",
+          "limitationsAndWarnings": "It is limited to the last time the model was updated. Will only answer questions about cats.",
+          "testingAndEvaluation": "Tested asking chatbot about subjects other than cats. Tested asking chatbot about animal shelters.",
+          "exampleTopics": [
+            "What would be a good cat for someone with allergies.",
+            "Why do you think cats are good pets.",
+            "Is there a good cat if you are allergic to some cats?"
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "readonly",
+        "systemPrompt": "readonly",
+        "retrievalContexts": "readonly",
+        "modelCardInfo": "readonly"
+      },
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gen-ai-mistral-7b-inst-v01"
+      ]
+    },
+    "name_suffix": "_2024",
+    "display_name": "Cats - Your Feline Friend",
+    "bubble_choice_description": "This chatbot teaches people about how wonderful cats are as pets and gives advice and information on how to take care of a cat."
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-25T17:55:36.162+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project-L0A_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-project-L0A_2024\"},{\"changed_at\":\"2024-10-25 17:56:22 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Aichat>

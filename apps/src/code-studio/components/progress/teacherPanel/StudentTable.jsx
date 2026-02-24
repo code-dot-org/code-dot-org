@@ -4,7 +4,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import color from '@cdo/apps/util/color';
 import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
@@ -24,6 +24,11 @@ class StudentTable extends React.Component {
     // provided by redux
     isSortedByFamilyName: PropTypes.bool,
   };
+
+  constructor(props) {
+    super(props);
+    this.state = {sortedStudents: []};
+  }
 
   getRowLink = studentId => {
     const queryStr = `?section_id=${this.props.sectionId}&user_id=${studentId}`;
@@ -46,26 +51,25 @@ class StudentTable extends React.Component {
   };
 
   componentDidMount() {
-    this.sortStudents();
+    this.setState({sortedStudents: this.sortStudents()});
   }
 
   componentDidUpdate(prevProps) {
     if (prevProps.isSortedByFamilyName !== this.props.isSortedByFamilyName) {
-      this.sortStudents();
+      this.setState({sortedStudents: this.sortStudents()});
     }
   }
 
   sortStudents() {
     const {students, isSortedByFamilyName} = this.props;
-    isSortedByFamilyName
-      ? students.sort(stringKeyComparator(['familyName', 'name']))
-      : students.sort(stringKeyComparator(['name', 'familyName']));
-    this.setState({students});
+    return isSortedByFamilyName
+      ? [...students].sort(stringKeyComparator(['familyName', 'name']))
+      : [...students].sort(stringKeyComparator(['name', 'familyName']));
   }
 
   render() {
-    const {students, onSelectUser, selectedUserId, levelsWithProgress} =
-      this.props;
+    const {onSelectUser, selectedUserId, levelsWithProgress} = this.props;
+    const {sortedStudents} = this.state;
 
     return (
       <table style={styles.table} className="student-table">
@@ -76,7 +80,7 @@ class StudentTable extends React.Component {
           >
             <td style={styles.meRow}>{i18n.studentTableTeacherDemo()}</td>
           </tr>
-          {students.map(student => (
+          {sortedStudents.map(student => (
             <tr
               key={`tr-${student.id}`}
               style={this.getRowStyle(selectedUserId, student.id)}

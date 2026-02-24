@@ -1,0 +1,64 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2024-10-24T21:55:58.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Activity Helper 5000\r\n\r\nClick into \"User View\" to view the model card for this project and interact with the chatbot.",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": 1,
+        "systemPrompt": "Your job is to help people plan their day with activities that are good for them. The topic is about starting the day. Make sure to always be kind and respectful to the user. Ask them questions about what they are good at to get an idea of what they should do. Respond only to questions about starting the day. If the user says something off topic respond with \"I don't know\". \n1. Do not respond to off topic questions such as i like waffles or something.\n2. Make sure the list of activities to start the day does not involve electronics.\n3. Make sure this list is for adults about the age of 30-50 years old.\n4. if \"starting the day\" is not the topic respond saying  \"I don't know.\" and don't talk to the user.",
+        "retrievalContexts": [
+          "Wind down: Avoid strenuous activities before bed, opt for relaxing routines like a warm bath or reading.",
+          "Avoid snooze: Get up immediately by counting to five, using slippers, or presetting your coffee machine.",
+          "Allow enough time for work: Ensure you wake up early enough for your routine and personal activities.",
+          "Drink water: Start the day hydrated with a full glass of water before coffee or tea.",
+          "Enjoy coffee/tea: Make your morning beverage enjoyable and pair it with moments of mindfulness or time with loved ones.",
+          "Healthy breakfast: Choose quick, nutritious options like oatmeal or smoothies. Meal prep if possible.",
+          "Self-care: Engage in relaxing activities like skincare, reading, or bathing to reduce burnout.",
+          "Exercise: Incorporate a short workout to boost energy and mood.",
+          "Positive affirmations: Start with affirmations like \"I am excited for the day\" to foster confidence.",
+          "Meditation: Pair affirmations with deep breathing for stress relief.",
+          "Prioritize tasks: Use a to-do list to organize your workday."
+        ],
+        "modelCardInfo": {
+          "botName": "Activity helper 5000",
+          "description": "This chatbot is meant to help adults who don't know how to get their day started by asking them certain questions about what they like and want to accomplish today.",
+          "intendedUse": "This chatbot is meant to be used to help peope get through their day with a list of activities.",
+          "limitationsAndWarnings": "If this chatbot is used for anything else you will be temporarily banned from the chatbot of one day. You can only use the chatbot for a maximum of 2 hours.",
+          "testingAndEvaluation": "I tested the chatbot by first making sure it wouldn't respond to off topic questions such as I like waffles. Then I asked it how should I start my day.",
+          "exampleTopics": [
+            "Im stressed how should i start my day."
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "readonly",
+        "temperature": "readonly",
+        "systemPrompt": "readonly",
+        "retrievalContexts": "readonly",
+        "modelCardInfo": "readonly"
+      },
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gen-ai-mistral-7b-inst-v01"
+      ],
+      "levelSystemPrompt": ""
+    },
+    "name_suffix": "_2024",
+    "display_name": "Activity Helper 5000",
+    "bubble_choice_description": "This chatbot is meant to help adults who don't know how to get their day started by asking them certain questions about what they like and want to accomplish today."
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-24T21:55:58.739+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project-L0C_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-project-L0C_2024\"},{\"changed_at\":\"2024-10-24 22:00:04 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-10-24 22:02:09 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Aichat>

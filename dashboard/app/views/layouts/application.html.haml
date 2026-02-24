@@ -1,14 +1,20 @@
 !!! 5
--require 'cpa'
 -require '../shared/middleware/helpers/experiments'
-%html{dir: locale_dir}
+%html{dir: locale_dir, lang: locale}
   %head
+    %script{src: webpack_asset_path("js/localization.js"), 'data-ot-ignore' => ''}
     = render partial: 'i18n/crowdin_in_context_tool'
     = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'onetrust_cookie_scripts.haml')), type: :haml, locals: {dashboard: true, domain: 'code.org'}
     - appname = Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]"
-    - managed_test_server = "#{CDO.running_web_application? && CDO.test_system?}"
     - title = @page_title ? "#{@page_title} - #{appname}" : appname
     %title= title
+    -# make sure robots do not index non production environments or disallowed routes
+    -if !rack_env?(:production) || SharedConstants::DISALLOWED_ROUTES.any? {|r| request.fullpath.start_with?(r)}
+      = tag 'meta', name: 'robots', content: 'noindex'
+    - if @page_description
+      = tag 'meta', property: 'description', content: @page_description
+    - if @canonical_url
+      = tag 'link', rel: 'canonical', href: @canonical_url
     - begin
       = ::NewRelic::Agent.browser_timing_header
     - rescue
@@ -20,18 +26,21 @@
     /[if IE 9]
       %meta{'http-equiv' => 'X-UA-Compatible', content: 'IE=Edge'}
     = stylesheet_link_tag    'css/code-studio', media: 'all'
-    = stylesheet_link_tag    'font-awesome', media: 'all'
     = stylesheet_link_tag    'application', media: 'all'
     = render partial: 'layouts/google_analytics'
     -# data needed for dcdo.js. This tag is needed on every page because our translation code is
     -# making use of the dcdo feature.
     %script{data: {'dcdo': DCDO.frontend_config.to_json}}
+    -# current Global Edition region
+    %script{'data-ge-region' => request.ge_region.to_s}
     -# auth key needed for amplitude analytics.
     %script{data: {'amplitude-api-key': CDO.safe_amplitude_api_key}}
     -# auth key needed for statsig analytics
     %script{data: {'statsig-api-client-key': CDO.safe_statsig_api_client_key}}
+    -# auth key needed for statsig analytics
+    %script{data: {'statsig-api-client-key-session-replay': CDO.safe_statsig_api_client_key_session_replay}}
     -# for statsig to recognized managed test server
-    %script{data: {'managed-test-server': managed_test_server}}
+    %script{data: {'managed-test-server': CDO.managed_test_server?.to_s}}
     -# user id and type for analytics logging- may not work for cached pages
     %script{data: {'user-id': current_user&.id}}
     %script{data: {'user-type': current_user&.user_type}}
@@ -50,6 +59,8 @@
     -# which we only use when optimizing our webpack build (ie, non-development environments).
     - if CDO.optimize_webpack_assets
       %script{src: webpack_asset_path('js/code-studio-common.js'), 'data-ot-ignore' => ''}
+    - if load_web_analytics?(request)
+      %script{src: webpack_asset_path('js/statsigWebAnalytics.js'), 'data-ot-ignore' => ''}
     = csrf_meta_tags
     = yield :head
     - if content_for? :og
@@ -67,7 +78,7 @@
     - else
       - unless Rails.env.production?
         = render partial: 'layouts/environment_tag'
-    - if current_user&.student?
+    - if current_user&.student? && !current_user.sponsored?
       - forceStudentInterstitial = params[:forceStudentInterstitial]
       - if current_user.age.nil? || lti_user_info_required?(current_user) || cap_user_info_required?(current_user, request.country) || forceStudentInterstitial
         = render partial: 'layouts/student_information_interstitial', locals: {student: current_user, country: request.country, forceStudentInterstitial: forceStudentInterstitial}
@@ -90,7 +101,10 @@
 
     %script{src: webpack_asset_path('js/code-studio.js'), data: {gdpr: gdpr_data.to_json, usertype: user_type.to_json, under13: under_13.to_json}, 'data-ot-ignore' => ''}
 
+    = render_shared_haml('global_edition/region_switch_confirm')
+
     .wrapper{style: ('background-color: #ffffff' if view_options[:white_background])}
+      %a.skip_link{href: "#main_content"}=t('nav.skip_to_main_content')
       - unless view_options[:no_header]
         = render partial: 'layouts/header', locals: {script: @script, script_level: @script_level, level: @level, lesson: @lesson, full_width: view_options[:full_width]}
       - if view_options[:code_studio_logo]
@@ -100,17 +114,18 @@
 
       - page = yield
 
-      - if view_options[:full_width]
-        - if view_options[:responsive_content]
-          .responsive_full_container{style: ('padding: 0' if view_options[:no_padding_container])}
-            = page
+      %main#main_content
+        - if view_options[:full_width]
+          - if view_options[:responsive_content]
+            .responsive_full_container{style: ('padding: 0' if view_options[:no_padding_container])}
+              = page
+          - else
+            .full_container{style: ('padding: 0' if view_options[:no_padding_container])}
+              = page
         - else
-          .full_container{style: ('padding: 0' if view_options[:no_padding_container])}
+          .container.main
+            = show_flashes.html_safe
             = page
-      - else
-        .container.main
-          = show_flashes.html_safe
-          = page
 
       - if view_options[:responsive_content]
         .responsive-content-desktop-footer

@@ -3,14 +3,13 @@ require 'test_helper'
 class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
   setup do
     @user = create(:teacher, email: 'test@lti.com')
-    @admin = create :admin
-    @lti_integration = create :lti_integration
+    @admin = create(:admin)
+    @lti_integration = create(:lti_integration)
     DCDO.stubs(:get)
-    DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
   end
 
   test 'links an LTI login to an existing account' do
-    partial_lti_teacher = create :teacher
+    partial_lti_teacher = create(:teacher)
     fake_id_token = {iss: @lti_integration.issuer, aud: @lti_integration.client_id, sub: 'foo'}
     auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
     ao = AuthenticationOption.new(
@@ -37,12 +36,49 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
       )
     )
     post :link_email, params: {email: @user.email, password: 'password'}
+    assert_equal I18n.t('lti.account_linking.successfully_linked'), flash[:notice]
     assert_redirected_to target_url
+    @user.reload
+    assert Policies::Lti.lti?(@user)
+  end
+
+  test 'links a roster-synced LTI account to an existing account' do
+    roster_synced_teacher = create(:teacher)
+    fake_id_token = {iss: @lti_integration.issuer, aud: @lti_integration.client_id, sub: 'foo'}
+    auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
+    ao = AuthenticationOption.new(
+      authentication_id: auth_id,
+      credential_type: AuthenticationOption::LTI_V1,
+      email: @user.email,
+      )
+    target_url = "some/test/path"
+    session[:user_return_to] = target_url
+    roster_synced_teacher.authentication_options = [ao]
+    Services::Lti.create_lti_user_identity(roster_synced_teacher)
+    PartialRegistration.persist_attributes session, roster_synced_teacher
+    User.any_instance.stubs(:valid_password?).returns(true)
+
+    Metrics::Events.expects(:log_event).with(
+      has_entries(
+        user: @user,
+        event_name: 'lti_account_linked'
+      )
+    )
+    Metrics::Events.expects(:log_event).with(
+      has_entries(
+        user: @user,
+        event_name: 'lti_user_signin'
+      )
+    )
+    post :link_email, params: {email: @user.email, password: 'password'}
+    assert_equal I18n.t('lti.account_linking.successfully_linked'), flash[:notice]
+    assert_redirected_to target_url
+    @user.reload
     assert Policies::Lti.lti?(@user)
   end
 
   test 'disallow account linking for admin users' do
-    partial_lti_teacher = create :teacher
+    partial_lti_teacher = create(:teacher)
     fake_id_token = {iss: @lti_integration.issuer, aud: @lti_integration.client_id, sub: 'bar'}
     auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
     ao = AuthenticationOption.new(
@@ -65,47 +101,123 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
     post :link_email, params: {email: @user.email, password: 'password'}
   end
 
-  test 'blocks access if lti_account_linking_enabled is false' do
-    sign_in @user
-    DCDO.expects(:get).with('lti_account_linking_enabled', false).times(3).returns(false)
-    get :existing_account
-    assert_response :not_found
-    get :landing
-    assert_response :not_found
-    post :link_email, params: {email: @user.email, password: 'password'}
-    assert_response :not_found
+  describe '#new_account' do
+    subject(:new_account_request) {post :new_account}
+    let(:user) {create(:teacher, :with_lti_authentication_option)}
+
+    context 'when user is not logged and not in-progress with registration' do
+      it 'returns bad request' do
+        new_account_request
+        assert_response :bad_request
+      end
+    end
+
+    context 'when signed in' do
+      before do
+        sign_in user
+      end
+
+      it 'opts the user out of lms landing' do
+        new_account_request
+
+        user.reload
+        _(user.lms_landing_opted_out).must_equal true
+      end
+
+      it 'verifies the teacher' do
+        new_account_request
+
+        user.reload
+        _(user.verified_teacher?).must_equal true
+      end
+    end
+
+    context 'when partial registration' do
+      it 'opts the user out of lms landing' do
+        PartialRegistration.persist_attributes(session, user)
+        new_account_request
+
+        partial_user = User.new_with_session(ActionController::Parameters.new, session)
+        _(partial_user.lms_landing_opted_out).must_equal true
+      end
+    end
+
+    context 'when student' do
+      let(:user) {create(:student, :with_lti_authentication_option)}
+
+      it 'does not verify the student' do
+        sign_in user
+        new_account_request
+
+        _(user.verified_teacher?).must_equal false
+      end
+    end
+
+    context 'when non-LTI user' do
+      let(:user) {create(:teacher)}
+
+      before do
+        sign_in user
+      end
+
+      it 'does not opt the user out of lms landing' do
+        new_account_request
+
+        _(user.lms_landing_opted_out).must_be_nil
+      end
+
+      it 'does not verify the teacher' do
+        new_account_request
+
+        _(user.verified_teacher?).must_equal false
+      end
+    end
   end
 
-  test 'allows access if lti_account_linking_enabled is true' do
-    get :existing_account
-    assert_response :ok
-  end
+  describe '#unlink' do
+    let(:user) {create(:teacher)}
+    let(:auth_option) {create(:lti_authentication_option, user: user)}
 
-  test 'returns bad request if not logged in' do
-    post :new_account
+    context 'valid request' do
+      it 'calls the AccountUnlinker service and returns 200' do
+        sign_in user
+        Services::Lti::AccountUnlinker.expects(:call).with(user: user, auth_option: auth_option).once
+        post :unlink, params: {authentication_option_id: auth_option.id}
+        assert_response :ok
+      end
+    end
 
-    assert_response :bad_request
-  end
+    context 'when logged out' do
+      it 'redirects to sign in page' do
+        post :unlink, params: {authentication_option_id: 'fake-id'}
+        assert_redirected_to new_user_session_path
+      end
+    end
 
-  test 'opts out of lms landing for a signed in user' do
-    lti_user = create :student
-    sign_in lti_user
+    context 'when auth option not found' do
+      it 'returns 404' do
+        sign_in user
+        post :unlink, params: {authentication_option_id: 'fake-id'}
+        assert_response :not_found
+      end
+    end
 
-    post :new_account
+    context 'when caller does not own the auth option' do
+      let(:non_owned_auth_option) {create(:lti_authentication_option)}
 
-    lti_user.reload
+      it 'returns 404' do
+        sign_in user
+        post :unlink, params: {authentication_option_id: non_owned_auth_option.id}
+        assert_response :not_found
+      end
+    end
 
-    assert_equal true, lti_user.lms_landing_opted_out
-  end
-
-  test 'opts out of lms landing for a partial registration user' do
-    lti_user = create :student
-    PartialRegistration.persist_attributes(session, lti_user)
-
-    post :new_account
-
-    partial_user = User.new_with_session(ActionController::Parameters.new, session)
-
-    assert_equal true, partial_user.lms_landing_opted_out
+    context 'when nil input' do
+      it 'returns 404' do
+        sign_in user
+        post :unlink
+        assert_response :not_found
+      end
+    end
   end
 end

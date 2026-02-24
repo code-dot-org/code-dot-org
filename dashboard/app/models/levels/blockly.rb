@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 require 'nokogiri'
@@ -78,6 +79,7 @@ class Blockly < Level
     skip_autosave
     skip_run_save
     goal_override
+    hide_version_history
   )
 
   before_save :update_ideal_level_source
@@ -89,27 +91,10 @@ class Blockly < Level
   # DCDO key for turning this feature on or off.
   BLOCKLY_I18N_IN_TEXT_DCDO_KEY = 'blockly_i18n_in_text'.freeze
 
-  def self.migrated_skins
-    [
-      # Star Wars
-      "hoc2015", "hoc2015x",
-      # Maze
-      "birds", "pvz", "scrat",
-      # Karel
-      "farmer", "farmer_night", "bee", "bee_night", "collector", "harvester", "planter",
-      # Spelling Bee
-      "letters"
-    ]
-  end
-
-  def uses_google_blockly?
-    skin = properties['skin']
-    self.class.migrated_skins.include?(skin) && DCDO.get('maze_sw_google_blockly', true)
-  end
-
-  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil)
+  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
     level_properties = super
     level_properties[:sharedBlocks] = localized_blockly_level_options(script)["sharedBlocks"]
+    level_properties[:levelData] = localized_blockly_level_options_for_lab2(script)["levelData"]
     level_properties
   end
 
@@ -370,6 +355,33 @@ class Blockly < Level
             set_unless_nil(level_options, xml_block_prop, localized_remaining_variable_blocks(level_options[xml_block_prop]))
           end
         end
+      end
+
+      level_options
+    end
+    options.freeze
+  end
+
+  def localized_blockly_level_options_for_lab2(script)
+    options = Rails.cache.fetch("#{cache_key}/#{script.try(:cache_key)}/#{I18n.locale}/localized_blockly_level_options_for_lab2", force: !Unit.should_cache?) do
+      level_options = blockly_level_options.dup
+
+      functions = level_options.
+        dig("levelData", "startSources", "blocks", "blocks")&.
+        filter {|block| block["type"] == "procedures_defnoreturn"}
+
+      functions&.each do |function|
+        function_name = function.dig("fields", "NAME")
+        next unless function_name
+
+        localized_name = I18n.t(
+          "name",
+          scope: [:data, :function_definitions, name, function_name],
+          default: function_name,
+          smart: true
+        )
+
+        function["fields"]["NAME"] = localized_name
       end
 
       level_options
@@ -867,7 +879,7 @@ class Blockly < Level
 
   def self.asset_host_prefix
     host = ActionController::Base.asset_host
-    (host.blank?) ? "" : "//#{host}"
+    host.blank? ? "" : "//#{host}"
   end
 
   # If true, don't autoplay videos before this level (but do keep them in the

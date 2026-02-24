@@ -1,4 +1,4 @@
-import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
+import {setUnit} from '@cdo/apps/redux/unitSelectionRedux';
 import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import sectionProgress, {
   setCurrentView,
@@ -23,7 +23,6 @@ const fakeUnitData789 = {
     [789]: {
       id: 789,
       csf: true,
-      hasStandards: false,
       title: 'Title 789',
       path: '/',
       lessons: [
@@ -41,7 +40,6 @@ const fakeUnitData456 = {
     [456]: {
       id: 456,
       csf: true,
-      hasStandards: false,
       title: 'Title 456',
       path: '/',
       lessons: [
@@ -59,13 +57,13 @@ const lessonOfInterest = 16;
 describe('sectionProgressRedux', () => {
   const initialState = sectionProgress(undefined, {});
 
-  describe('setScriptId', () => {
+  describe('setUnit', () => {
     it('setting the unit id resets the lesson of interest', () => {
       const action = setLessonOfInterest(lessonOfInterest);
       const nextState = sectionProgress(initialState, action);
 
       // This action is from unitSelectionRedux but affects sectionProgress
-      const action2 = setScriptId(130);
+      const action2 = setUnit(130, 99);
       const nextState2 = sectionProgress(nextState, action2);
       assert.deepEqual(nextState2.lessonOfInterest, 1);
     });

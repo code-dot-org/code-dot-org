@@ -1,46 +1,59 @@
 /**
  * Main landing page and router for the workshop dashboard.
  */
-import {createHistory} from 'history';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {useContext, useEffect} from 'react';
 import {Provider} from 'react-redux';
-import {Router, Route, IndexRedirect, useRouterHistory} from 'react-router';
-import {createStore, combineReducers} from 'redux';
+import {BrowserRouter, Navigate, Outlet, Route, Routes} from 'react-router-dom';
+import {combineReducers, createStore} from 'redux';
 
+import {
+  RouterContext,
+  RouterProvider,
+  WithRouterProps,
+} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
+import {WorkshopCourseConfigs} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
 
 import Header from '../components/header';
 import {
-  RegionalPartnerShape,
   ALL_PARTNERS_OPTION,
+  RegionalPartnerShape,
 } from '../components/regional_partner_dropdown';
 import regionalPartnerReducers, {
-  setRegionalPartners,
-  setRegionalPartnerFilter,
   getInitialRegionalPartnerFilter,
+  setRegionalPartnerFilter,
+  setRegionalPartners,
 } from '../components/regional_partners_reducers';
 
-import WorkshopAttendance from './attendance/workshop_attendance';
+import TakeAttendance from './attendance/workshop_attendance';
 import LegacySurveySummaries from './legacy_survey_summaries.jsx';
-import NewWorkshop from './new_workshop';
 import {WorkshopAdmin} from './permission';
 import workshopDashboardReducers, {
-  setPermission,
   setFacilitatorCourses,
+  setPermission,
 } from './reducers';
 import FoormDailySurveyResultsLoader from './reports/foorm/results_loader';
-import {ResultsLoader as DailySurveyResultsLoader} from './reports/local_summer_workshop_daily_survey/results_loader';
+import DailySurveyResultsLoader from './reports/local_summer_workshop_daily_survey/results_loader';
 import ReportView from './reports/report_view';
-import Workshop from './workshop';
 import WorkshopFilter from './workshop_filter';
+import {WorkshopForm} from './workshop_form/WorkshopForm';
 import WorkshopIndex from './workshop_index';
+import {WorkshopAttendance} from './workshops/attendance/WorkshopAttendance';
+import {WorkshopEnrollments} from './workshops/enrollments/WorkshopEnrollments';
+import {WorkshopOverview} from './workshops/overview/WorkshopOverview';
+import {Engagement} from './workshops/surveys/post/components/Engagement';
+import {FacilitatorFeedback} from './workshops/surveys/post/components/FacilitatorFeedback';
+import {Implementation} from './workshops/surveys/post/components/Implementation';
+import {Logistics} from './workshops/surveys/post/components/Logistics';
+import {Other} from './workshops/surveys/post/components/Other';
+import CohortProfile from './workshops/surveys/pre/components/CohortProfile';
+import ReadinessAndExpectations from './workshops/surveys/pre/components/ReadinessAndExpectations';
+import {workshopLabel} from './workshops/utils';
+import {WorkshopLayout} from './workshops/WorkshopLayout';
 
-const ROOT_PATH = '/pd/workshop_dashboard';
-// eslint-disable-next-line react-hooks/rules-of-hooks
-const browserHistory = useRouterHistory(createHistory)({
-  basename: ROOT_PATH,
-});
+export const ROOT_PATH = '/pd/workshop_dashboard';
+
 const store = createStore(
   combineReducers({
     workshopDashboard: workshopDashboardReducers,
@@ -49,106 +62,314 @@ const store = createStore(
   })
 );
 
-const WorkshopDashboardHeader = props => (
-  <Header baseName="Workshop Dashboard" {...props} />
+const preSurveyCategoryChildRoutes = [
+  {
+    label: 'Readiness & Expectations',
+    icon: 'gauge',
+    component: ReadinessAndExpectations,
+    path: 'readiness-and-expectations',
+    breadcrumbs: 'Workshops,Workshop,Surveys,Pre,Readiness and expectations',
+  },
+  {
+    label: 'Cohort Profile',
+    icon: 'users',
+    component: CohortProfile,
+    path: 'cohort-profile',
+    breadcrumbs: 'Workshops,Workshop,Surveys,Pre,Cohort profile',
+  },
+];
+
+const postSurveyCategoryChildRoutes = [
+  {
+    label: 'Implementation',
+    path: 'implementation',
+    icon: 'rocket',
+    component: Implementation,
+    breadcrumbs: 'Workshops,Workshop,Surveys,Post,Implementation',
+  },
+  {
+    label: 'Engagement',
+    path: 'engagement',
+    icon: 'heart',
+    component: Engagement,
+    breadcrumbs: 'Workshops,Workshop,Surveys,Post,Engagement',
+  },
+  {
+    label: 'Logistics',
+    path: 'logistics',
+    icon: 'calendar-check',
+    component: Logistics,
+    breadcrumbs: 'Workshops,Workshop,Surveys,Post,Logistics',
+  },
+  {
+    label: 'Facilitator Feedback',
+    path: 'facilitators',
+    icon: 'star',
+    component: Outlet,
+    breadcrumbs: 'Workshops,Workshop,Surveys,Post,Facilitators',
+    childRoutes: [
+      {
+        path: ':facilitatorId',
+        component: FacilitatorFeedback,
+        breadcrumbs: 'Workshops,Workshop,Surveys,Post,Facilitators,Facilitator',
+      },
+    ],
+  },
+  {
+    label: 'Other',
+    path: 'other',
+    icon: 'ellipsis',
+    component: Other,
+    breadcrumbs: 'Workshops,Workshop,Surveys,Post,Other',
+  },
+];
+
+const surveyTypeChildRoutes = [
+  {
+    label: 'Pre-workshop survey',
+    path: 'pre',
+    component: Outlet,
+    breadcrumbs: 'Workshops,Workshop,Surveys,Pre',
+    childRoutes: [
+      // this makes "readiness-and-expectations" the default
+      {
+        index: true,
+        component: () => <Navigate to="readiness-and-expectations" replace />,
+      },
+      ...preSurveyCategoryChildRoutes,
+    ],
+  },
+  {
+    label: 'Post-workshop survey',
+    path: 'post',
+    component: Outlet,
+    breadcrumbs: 'Workshops,Workshop,Surveys,Post',
+    childRoutes: [
+      // this makes "implementation" the default
+      {
+        index: true,
+        component: () => <Navigate to="implementation" replace />,
+      },
+      ...postSurveyCategoryChildRoutes,
+    ],
+  },
+];
+
+const workshopChildRouteConfigs = [
+  {
+    label: 'Overview',
+    index: true,
+    component: WorkshopOverview,
+  },
+  {
+    label: 'Enrollment',
+    path: 'enrollments',
+    component: WorkshopEnrollments,
+    breadcrumbs: 'Workshops,Workshop,Enrollments',
+  },
+  {
+    label: 'Attendance',
+    path: 'attendance',
+    component: WorkshopAttendance,
+    breadcrumbs: 'Workshops,Workshop,Attendance',
+  },
+  {
+    label: 'Surveys',
+    path: 'surveys',
+    component: Outlet,
+    breadcrumbs: 'Workshops,Workshop,Surveys',
+    childRoutes: [
+      // this makes "pre" the default
+      {
+        index: true,
+        component: () => <Navigate to="pre" replace />,
+      },
+      ...surveyTypeChildRoutes,
+    ],
+  },
+];
+
+const routeConfigs = [
+  {
+    path: 'reports',
+    breadcrumbs: 'Reports',
+    component: ReportView,
+    withRouter: true,
+  },
+  {
+    path: 'workshops',
+    breadcrumbs: 'Workshops',
+    component: WorkshopIndex,
+    withRouter: true,
+  },
+  {
+    path: 'workshops/filter',
+    breadcrumbs: 'Workshops,Filter',
+    component: WorkshopFilter,
+    withRouter: true,
+  },
+  ...WorkshopCourseConfigs.map(config => ({
+    path: `workshops/new/${config.slug}`,
+    breadcrumbs: `Workshops,${workshopLabel(`New ${config.label}`)}`,
+    component: WorkshopForm,
+    props: {config},
+  })),
+  {
+    path: 'workshops/:workshopId',
+    breadcrumbs: 'Workshops,Workshop',
+    component: WorkshopLayout,
+    props: {
+      tabList: workshopChildRouteConfigs.map(({label, path}) => ({
+        label,
+        path,
+      })),
+      surveyTypeOptions: surveyTypeChildRoutes.map(({label, path}) => ({
+        text: label,
+        value: `surveys/${path}`,
+      })),
+      questionCategoryButtons: {
+        preWorkshopSurvey: preSurveyCategoryChildRoutes.map(
+          ({label, path, icon}) => ({
+            label,
+            value: `surveys/pre/${path}`,
+            iconLeft: {iconName: icon},
+          })
+        ),
+        postWorkshopSurvey: postSurveyCategoryChildRoutes.map(
+          ({label, path, icon}) => ({
+            label,
+            value: `surveys/post/${path}`,
+            iconLeft: {iconName: icon},
+          })
+        ),
+      },
+    },
+    childRoutes: [
+      ...workshopChildRouteConfigs,
+      {
+        path: 'edit',
+        breadcrumbs: 'Workshops,Workshop,Edit',
+        component: WorkshopForm,
+      },
+    ],
+  },
+  {
+    path: 'workshops/:workshopId/attendance/:sessionId',
+    breadcrumbs: 'Workshops,Workshop,Attendance,Take Attendance',
+    component: TakeAttendance,
+    withRouter: true,
+  },
+  {
+    path: 'daily_survey_results/:workshopId',
+    breadcrumbs: 'Survey Results',
+    component: DailySurveyResultsLoader,
+    withRouter: true,
+  },
+  {
+    path: 'workshop_daily_survey_results/:workshopId',
+    breadcrumbs: 'Survey Results',
+    component: FoormDailySurveyResultsLoader,
+    withRouter: true,
+  },
+  {
+    path: 'legacy_survey_summaries',
+    breadcrumbs: 'Legacy Facilitator Survey Summaries',
+    component: LegacySurveySummaries,
+    withRouter: true,
+  },
+];
+
+const HeaderWrapper = () => {
+  const {router} = useContext(RouterContext);
+  return (
+    <>
+      <WithRouterProps
+        component={Header}
+        routeConfigs={routeConfigs}
+        baseName="Workshop Dashboard"
+        router={router}
+      />
+      <Outlet />
+    </>
+  );
+};
+
+const renderRoute = ({
+  path,
+  index,
+  component: Component,
+  withRouter,
+  childRoutes,
+  props = {},
+}) => (
+  <Route
+    key={index ? 'index-route' : path}
+    path={path}
+    index={index}
+    element={
+      withRouter ? (
+        <WithRouterProps component={Component} {...props} />
+      ) : (
+        <Component {...props} />
+      )
+    }
+  >
+    {childRoutes?.map(renderRoute)}
+  </Route>
 );
 
-export default class WorkshopDashboard extends React.Component {
-  static propTypes = {
-    permissionList: PropTypes.arrayOf(PropTypes.string).isRequired,
-    facilitatorCourses: PropTypes.arrayOf(PropTypes.string).isRequired,
-    regionalPartners: PropTypes.arrayOf(RegionalPartnerShape),
-    mapboxAccessToken: PropTypes.string,
-  };
-
-  constructor(props) {
-    super(props);
-
-    if (props.permissionList) {
-      store.dispatch(setPermission(props.permissionList));
+const WorkshopDashboard = ({
+  permissionList,
+  facilitatorCourses,
+  mapboxAccessToken,
+  regionalPartners,
+}) => {
+  useEffect(() => {
+    if (permissionList) {
+      store.dispatch(setPermission(permissionList));
     }
 
-    if (props.facilitatorCourses) {
-      store.dispatch(setFacilitatorCourses(props.facilitatorCourses));
+    if (facilitatorCourses) {
+      store.dispatch(setFacilitatorCourses(facilitatorCourses));
     }
 
-    if (props.mapboxAccessToken) {
-      store.dispatch(setMapboxAccessToken(props.mapboxAccessToken));
+    if (mapboxAccessToken) {
+      store.dispatch(setMapboxAccessToken(mapboxAccessToken));
     }
 
-    store.dispatch(setRegionalPartners(this.props.regionalPartners));
+    store.dispatch(setRegionalPartners(regionalPartners));
     store.dispatch(
       setRegionalPartnerFilter(
         getInitialRegionalPartnerFilter(
-          props.permissionList.includes(WorkshopAdmin),
-          this.props.regionalPartners,
+          permissionList.includes(WorkshopAdmin),
+          regionalPartners,
           ALL_PARTNERS_OPTION
         )
       )
     );
-  }
+  }, [permissionList, facilitatorCourses, mapboxAccessToken, regionalPartners]);
 
-  render() {
-    return (
-      <Provider store={store}>
-        <Router history={browserHistory}>
-          <Route path="/" component={WorkshopDashboardHeader}>
-            <IndexRedirect to="/workshops" />
-            <Route
-              path="reports"
-              breadcrumbs="Reports"
-              component={ReportView}
-            />
-            <Route
-              path="workshops"
-              breadcrumbs="Workshops"
-              component={WorkshopIndex}
-            />
-            <Route
-              path="workshops/filter"
-              breadcrumbs="Workshops,Filter"
-              component={WorkshopFilter}
-            />
-            <Route
-              path="daily_survey_results(/:workshopId)"
-              breadcrumbs="Survey Results"
-              component={DailySurveyResultsLoader}
-            />
-            <Route
-              path="workshop_daily_survey_results(/:workshopId)"
-              breadcrumbs="Survey Results"
-              component={FoormDailySurveyResultsLoader}
-            />
-            <Route
-              path="legacy_survey_summaries"
-              breadcrumbs="Legacy Facilitator Survey Summaries"
-              component={LegacySurveySummaries}
-            />
-            <Route
-              path="workshops/new"
-              breadcrumbs="Workshops,New Workshop"
-              component={NewWorkshop}
-            />
-            <Route
-              path="workshops/:workshopId"
-              breadcrumbs="Workshops,View Workshop"
-              component={Workshop}
-              view="show"
-            />
-            <Route
-              path="workshops/:workshopId/edit"
-              breadcrumbs="Workshops,Edit Workshop"
-              component={Workshop}
-              view="edit"
-            />
-            <Route
-              path="workshops/:workshopId/attendance(/:sessionId)"
-              breadcrumbs="Workshops,Workshop,Take Attendance"
-              component={WorkshopAttendance}
-            />
-          </Route>
-        </Router>
-      </Provider>
-    );
-  }
-}
+  return (
+    <Provider store={store}>
+      <BrowserRouter basename={ROOT_PATH}>
+        <RouterProvider basename={ROOT_PATH}>
+          <Routes>
+            <Route path="/" element={<HeaderWrapper />}>
+              <Route index element={<Navigate to="/workshops" replace />} />
+              {routeConfigs.map(renderRoute)}
+            </Route>
+          </Routes>
+        </RouterProvider>
+      </BrowserRouter>
+    </Provider>
+  );
+};
+
+WorkshopDashboard.propTypes = {
+  permissionList: PropTypes.arrayOf(PropTypes.string).isRequired,
+  facilitatorCourses: PropTypes.arrayOf(PropTypes.string).isRequired,
+  regionalPartners: PropTypes.arrayOf(RegionalPartnerShape),
+  mapboxAccessToken: PropTypes.string,
+};
+
+export default WorkshopDashboard;

@@ -3,7 +3,7 @@ import React from 'react';
 
 import Announcements from '@cdo/apps/code-studio/components/progress/Announcements';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import Notification from '@cdo/apps/templates/Notification';
+import Notification from '@cdo/apps/sharedComponents/Notification';
 
 import {
   fakeStudentAnnouncement,

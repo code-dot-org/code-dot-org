@@ -1,6 +1,5 @@
 import _ from 'lodash';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
@@ -14,7 +13,7 @@ import {
   setVerifiedResources,
 } from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import CloneLessonDialogButton from '@cdo/apps/lib/levelbuilder/CloneLessonDialogButton';
+import CloneLessonDialogButton from '@cdo/apps/levelbuilder/CloneLessonDialogButton';
 import {registerReducers} from '@cdo/apps/redux';
 import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
 import {
@@ -23,27 +22,21 @@ import {
 } from '@cdo/apps/templates/currentUserRedux';
 import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
 import LessonOverview from '@cdo/apps/templates/lessonOverview/LessonOverview';
-import {prepareBlocklyForEmbedding} from '@cdo/apps/templates/utils/embeddedBlocklyUtils';
+import {prepareBlocklyForEmbeddingAllEnvironments} from '@cdo/apps/templates/utils/embeddedBlocklyUtils';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
+import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
 $(document).ready(function () {
-  prepareBlockly();
+  prepareBlocklyForEmbeddingAllEnvironments();
   displayLessonOverview();
   prepareExpandableImageDialog();
   tooltipifyVocabulary();
   displayDifferentiationChat();
   renderCopyLessonButton();
 });
-
-function prepareBlockly() {
-  const customBlocksConfig = getScriptData('customBlocksConfig');
-  if (!customBlocksConfig) {
-    return;
-  }
-  prepareBlocklyForEmbedding(customBlocksConfig);
-}
 
 /**
  * Collect and preprocess all data for the lesson and its activities, and
@@ -113,7 +106,7 @@ function displayLessonOverview() {
     );
   }
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <LessonOverview lesson={lessonData} activities={activities} />
     </Provider>,
@@ -133,7 +126,7 @@ function prepareExpandableImageDialog() {
   const container = document.createElement('div');
   document.body.appendChild(container);
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <ExpandableImageDialog />
     </Provider>,
@@ -145,8 +138,23 @@ function displayDifferentiationChat() {
   const aiDiffFabMountPoint = document.getElementById(
     'ai-differentiation-fab-mount-point'
   );
+  const lessonData = getScriptData('lesson');
+  const lessonId = lessonData['id'];
+  const lessonName = lessonData['displayName'];
+
   if (aiDiffFabMountPoint && experiments.isEnabled('ai-differentiation')) {
-    ReactDOM.render(<AiDiffFloatingActionButton />, aiDiffFabMountPoint);
+    createReactRoot(
+      <Provider store={getStore()}>
+        <AiDiffFloatingActionButton
+          context={{
+            type: AiDiffContext.LESSON,
+            lessonId: lessonId,
+          }}
+          scriptName={lessonName}
+        />
+      </Provider>,
+      aiDiffFabMountPoint
+    );
   }
 }
 
@@ -159,7 +167,7 @@ const renderCopyLessonButton = () => {
     const lessonId = lessonData['id'];
     const lessonName = lessonData['displayName'];
 
-    ReactDOM.render(
+    createReactRoot(
       <CloneLessonDialogButton
         lessonId={lessonId}
         lessonName={lessonName}

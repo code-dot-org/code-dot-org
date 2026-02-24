@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "Dansfeest", body: "Programmeer een dansfeest! Met Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, muziek van \"Encanto,\" van Disney en meer!", image: "/images/hoc2022-dance-party.png", url: "https://code.org/dance" }}
-
-{{ featured_tutorial, title: "Dichtkunst", body: "Voeg kunst en animatie toe aan een klassiek gedicht in deze activiteit van Hour of Code!", image: "/shared/images/courses/logo_tall_poem-art.jpg", url: "https://studio.code.org/s/poem-art-2021/reset" }}
-
-{{ featured_tutorial, title: "Kunstenaar", body: "Maak samen met de kunstenaar prachtige tekeningen en ontwerpen!", image: "/shared/images/courses/logo_tall_artist.jpg", url: "https://studio.code.org/s/artist/reset" }}
-
-{{ featured_tutorial, title: "Infinity Play Lab", body: "Gebruik Play Lab om een verhaal of spel te creëren waarin de personages uit Infinity van Disney spelen.", image: "/shared/images/courses/logo_tall_infinity.jpg", url: "https://studio.code.org/s/infinity/reset" }}

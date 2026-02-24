@@ -1,0 +1,125 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-07-02T21:16:29.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Henry Moodie's \"Pick Up The Phone\" \r\n\r\nRecreate this portion of the song using what you know about sequencing sounds and playing them together. \r\n\r\n**Prepare:**\r\n1) Listen to the song in the music player. \r\n2) Use the timeline image below as reference. \r\n\r\n**Try:**\r\n- Build the song with code. \r\n\r\n![](https://images.code.org/d9231c5a5d1014855405315f7a555bdc-image-1741977992340.46.26 AM.png)",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "sounds": {
+        "henry_moodie_pick_up_the_phone": [
+          "drums_main_beat",
+          "guitar_chorus",
+          "vocals_chorus_1"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential"
+          ]
+        },
+        "type": "flyout"
+      },
+      "packId": "henry_moodie_pick_up_the_phone",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "henry_moodie_pick_up_the_phone/vocals_chorus_1"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_rest_at_current_location_simple2",
+            "fields": {
+              "rest_duration": "<field name=\"rest_duration\">1</field>"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_sequential",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      }
+    },
+    "display_name": "Create \"Pick Up the Phone\"",
+    "thumbnail_url": "https://images.code.org/b670f6aac5a760a2d384a67b6c9ea435-henry-moodie.png",
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHor/cwejr3U15rWOIkH8dDTLeaAYtCh7rvJ4qD5+CIxST/M\nKcKET2BXjPSzgsj4vEPimRw60pGInB6rV5fMMX6hhwMIDB/wWGDi0Uim+eQY\ndohrM9z9HTHVugFaWEp0771ePHyEt95yP7+EOTOPZV1diVnMbs9/2135knGd\n9s1YpuRWKDoN/mgAnRW28sSXbRoSi5/qfR4hECOM+iaC22fJdytqzOpH7Rb1\nfVezfUgyRbhAwbadoBgZslLzLfolYgW26MtzkJKOvzobGO8VkIuRvqxmxIYH\nwffbU66u+4yYcvJXHIHenhaEwNyWAhZnr6e2RLVPv8INVaISxBp7SyTKmCN8\nmobTtfNw23IDzEWtFxRSEn729ia9HmP7KZ7QuEAY5AUmR2EH67SFIAqiIM8I\n4E8BvtmCDwaxMLiv9AiI3gB+IoBsyQ4HeT37UMXXj/gGKTbP51lVb9Bzzdq2\nzUzmN8u2YDIOHvJBHd09mN6B/QytaZVwTJLg3x8C30bfKV5rFzupdpIWf+pC\nTcRZ/Y/6oLaOc7E72e65+cs9atZQ8KaJ7LlhP42fcBIybpuCrt9TE3Hl2C2c\naGCZ1WT3XGLaYgCwjKTWZs7cZfAuHJXGncxNeR2eM6ogzgsj6AB8mLeJiHmA\nQGpbKEpv9AZuZp7PaR7Yztp2rwO8bDa+30jFSHT+52WKmxf6EfYzYIJigj2r\no5IBRyDvr7UE6ygL1LpBeoLkzBYZDHXIooNexlEAz+Z37zX4ywi3Jo/O6wkU\nDAp9LyN0hm/fWhzfJWiz8e2ROGbhYK7LEyLKKPB+ky+JpgotD6D3wtLsd/Uv\nnkwuTV0WMQkv3yEn67I5PGQCpF5WY7Im1Z5KFlK3e2x3xAIjeGn+rVmIgRM6\n3667CDYMY9PE+A17bdghZKNgdO7nxHxU3mSY+qkTiALJYRqYC45egN1Apc09\nKvg8DcX+XKnH5wUHPpPdNsKs8A/Uxor7vohxffsnLxBHhHXStHRxz5lEC+qa\n7NWflzoxos5ET6CcTrFZtGl/LcBvPbc/v28kDhPA4uRtGdQU5j27ZF65gH/W\nYJKZ69W09iVaLAAt8sSzJ6GJwBIq/aNFgPmawlgHuSkDxyUIS/xny3SnWiej\nmSOYFJ5gvQXCO5mBYc4UNX4nMFXIZrbQOEpnUHHY4+1bB6WNuoJB5ElKi1uF\nc9avPq6wa5e78C+IUt0SbW2klbCQnXEIZpzZGWDG5CsZsfzRmDvH4P5LzQnx\nZ/6Vq1T3bb/qp1154nYr2IWE4914yPG1MoFMhg0XT4C8VAtKqFGkiW2kN8Rk\njFePPJh5CNp8uGDB7zXrZkpxUTmM74oQKpfNgWZtZ5KhaBJtVEwui4QFWTvK\nRSv6U/HT52Z1MjCDZRc8IsziB87pNybVYLrS6hzhe0MhnpiuJ6TkDhP6w9AV\ngilKB7YQkKtahWwKLWKiffbVXhDGhVJ2bBKnTGhkUkUg9zzWDcxL9iroXvKV\nJMPF8GHxp4ShffZc7lCBsli9OXnzjk5RjUjT4Psod0ftt3aT1hNC28mCN3Uk\nLxZXv8avVwfl3h7/PHvsYRmA5iDfnEpWrF4aVsDRrfpdySZthflxGm2j+U+p\nKHxM2t1hrNooFuh7CvfiGnxDuAFD61mDhzmKaU0=\n",
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-practice-artist-choice-b_0c18145e-7596-408e-996d-37ba162afc80",
+        "message": "[auto-pass for exemplar validation]",
+        "next": true,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "That was tricky! Good work using the rests with `play sequential` to get the timing just right. ",
+      "validationFailureMessage": "Notice how the Vocals start at measure 1, but the rest of the sounds start at measure 2. What do you need to make the other sounds start at measure 2? ",
+      "playerTitle": "Henry's Chorus"
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_v3",
+    "bubble_choice_description": "Use what you know about sequencing to create this portion of Henry Moodie's \"Pick Up the Phone\".",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-07-02T21:16:29.938+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-artist-choice-b_v2\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-artist-choice-b_v2\"}]"
+}]]></config>
+  <blocks/>
+</Music>

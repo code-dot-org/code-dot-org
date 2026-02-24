@@ -1,0 +1,41 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-02T22:19:51.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "A country tracks the top baby names each year. The <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Names</code> class stores a few of the most popular names.\r\n\r\n✅ **TO DO:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Names.java</code>, complete the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">rankedList()</code> method to return a string that shows each name on a new line, numbered in order (like a ranked list). Use a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">for</code> loop to generate the result string.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> You can use a loop to count from 1 to 5, and use an <code style=\"background-color: #ececec; color: black; font-weight: bold;\">if</code> statement to pick the right name for each line.\r\n</div>\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)\r\n",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "reference_links": [
+      "/courses/csa-2023/guides/for-loops"
+    ],
+    "display_name": "Popular Names",
+    "bubble_choice_description": "Convert the `while` loop to a `for` loop to return a `String` containing information about the most popular names in a country.",
+    "thumbnail_url": "https://images.code.org/1b4a2c38a2b2b4ec70c3650a48be762d-badge.png",
+    "encrypted_validation": "sKS/DcbvzaMdx9TLkK1ZBfme6MMRyrQd0I+bCf/zAuVduxk2MmCML5mQeeo2\nxJKqVifLVTM+N6aOoy2pcIfmubOoDS+8D9V0iv+wF4fPGaT8RN3SPY50or7C\nHmEwjR9cADTQ+2q2JQnldqlyjGkzmsy74pD8nDp7GmCw2Aq7Ddjk/vpZAP6P\njVV/2nFCCpY6tfoCKndb3S9d71Nn4Edgzt++BXX6MqbZ67gk80p2Fn+GPhdT\nWA6DNUgcf7VH6CO9tm7wE+MDtfB8hk0yao5zWBKIr2ToBTYzubx1iPiEWrdL\nSBrj4wqHjTjX7EpNrSTCW77yKaqoGiLcPaD0TaDsEN2jxl6HnwnwMW6scXYC\n/RpJJ6gdG1TehOtBo0pSqi2Oa3rZ4szW4+9jtIngqOo8eeDQlCiwurUcdTrE\n5Feb46NeZbw+hX/iwmZZbkT4l8/X2NvReNWKxnG6MxB0ideiNm9GteUOACeV\nOPVcvF42NGYkdcQ9DR/HaEpPu0jk9An3TTqpHcyAKu90HvxB0bsNpLSD9PCm\nsQIX5rtbDUKk4qlVDHW7c8ufANYHaboBmdFaotEK7EHULJILEgjOeK8I6QVF\n5UCBcugi0uSoNdAXuQ9DWQDB3QigApC4B3f4XR9LUQ5RUVo5ir+Obwkr4NKZ\nTaicfBUgBkhh/+3QaenjoQDkKJro073WzqiUftXWyLk49uH74SDz80F4kldD\nEyBybFDd//7M9GdkKmHA0vJmX9Pg6waBcFLkI57nCy2ec5TaxnmK0nsbT4on\nQsABKSkasV0vbb4EF1Qr5vaLeJ96dzRUspJwIa3gK9o5Jz63yG7KvDbnbOfY\noCYAzt45JmWtUyHNCYwUisyEszCemjjDnjP9BSGh2lzMzwo4Khc2YznkISkv\n45TkoR0gJq5y7Mc5ET/HXRZTvj0SmGMRmu+rFHwIc6abD8M+BNMvPwsio4ec\ngWXjCsVgFYFkBIuo8tLcwdvOb9xywp3l1cKncG9kGkSuBZW2o2DprccI4iLC\nPncxcF38WLpWRGCoH9s6xWf2Lhl+uY1h+FsJBisNV7qrDcXDgZGUSITWs49y\nFHOmp3zz+EIgTj6WK71x5mvWeoQaP+0WoBuTDoDP3W1vXrW/fQoBPsfT9tTQ\ntvQvpSGTCpX7pLsNzF4Vor+yZecikN+yhdOCcXRKusVcR9M+jbw9JBPvLUlj\n34zRhdaH9T0N1WPYB8lBCiGUraNZk3TIYdRTOgNV+KRJBGr/ySNoggJiSNxU\n4pgpwUuibWOeM+efIpBLNwrmRCoa69iqywqlMycEpoDrlqKMuo+/ahhlUoDj\nZchrk3C3AiI7WAy7A5p/jOwzIT+r2d2x2jDyTCcA6tog9/o4BBmVUcQELn1l\nh7yu/CWwl6ZWM3orZcK+dbxXL1Ov1YMQyKUYMgq24CN+EZHRXTB27AP8IXPx\n9E4r/8lgs9UdEYQSN/bwHqk8ViKCa9zA2I34CWwIOJu5pRlu/z152xWnBd4+\n0FyVhvJUAxgoKjDlQBnbIlSM2yJtJD4s0wNjfD0ojZFmvOMJ1XCsW0EbJZVl\nvNRdsTk8EcKjL+cXLWI7m1HLYjAIjeFaB8IRBCNY3ThSACVhLg1EG3NAGZSB\nSQ==\n",
+    "encrypted_exemplar_sources": "ine8M7yj0LRw1b6qfyqcWph8vnHQbbYTBQmlmPyXgpziCRV00+L2SmrKlufB\nZhkbEdElfUsgGytBEUc36Nn1YUVwNGA2QlBbI3v5wO+wOIN+QAoNP4zL48Mm\nsLgQ74GLrKxVQrI/gENqhIZY/zs1Q4dlBFTL4+HBrcN6us8IPOA8CRkl7In1\np3N6BUgswWOMY5419Gg0evr663vS90NhL7b635xiVl7qPWjpL+vrgpO2n71N\noJC51b/Sne3GFnVgIU87aHW5IDjjRxK9iJw/oTr03RRS2zx/mWwFuUvQDrEJ\ngBPmhpQzh9Gd8WxH01FQ+b/4+5KQTY7K7ws5mgcHcCAi2WRMRKzLMUa6m4b5\nMaRGMqgtYhZTIQaWGCxUBF7MoReSvK2pafdB+xGINxg3vrM+ZGcCOVKOvGAs\nmHggI5YPtmkUCRvFJXPdRIecZMjnWOcnaEHMjbEWWntEbtXnwjpqPZVbLnPE\nAtzbKiZ9oBE79Miw2U+iF+dwtAB53FXmW0vU6fhhHqboG57h7pOA0poMsiO0\nsCuw+OGkzjf0k0zYxtZ5D29KCoXcJANZTUIuWg2Vjzi6mVAG1y63O7vfqZF7\nbwl6dBzWXvXTLV4dgAvgNZgnP/QbOosmHB244aFt0KzSW7QkM5saS8T9bh2I\nmedK7Ygq/tGgqMtrLxgVfabgzlGpE+TUu/zetew2ec1z6lYk/gdrlkiVEAs9\nkmmX5/qJNTk4W4uFLX6NQfIlTSJPhbPDoGWLRjqkDXhQ4MBiPTvZlY6LXmYr\niMnkdhW4Cz1GwxoKdK7Gq+Km5TogUWaS2tiHFJTg9YS5seW6GO1uJD9lZUwM\nsi3hqIsD0MzMMnBDapEV4UFzuxQUpxV3GS9kniT9IAeJEAng4mlDZ44uAxcQ\nY+CubCV3zBCBbPo2tSAasrrZYhHMdq6xB7UYcEXAwJ/g9FGG4qjfIFLIg5lX\nX1WnXTMM7YHP3pD75Pa6N7n4YAW4jWL1VxFb47Eid12AhA3m2UX0BqAo3h/F\nGEtwCTEj0z2UM3yZxU/sWKx5YW4KGIV3QSFHk7td4e3SwVjGSNsjVu9nUNGr\nNJwafnt3t2IArldByyKQSlihwiCvOBq5qoPsBwc56iv1rU3Sst8MG2vlK7sj\nE2mcGB+wE2USrP9/M+HyC9Vd00ms8WeEuxQbUTh66Pk7mOVgW62FQKLpBLcW\nal5KP4DpcyNglxGdIzPAtl6Vksw4Q4o0g9Ne7WDerqYJ8v5+3xt7fPYirJ84\nJ+w6LtPRWY3qqsraYDdT37dt18ruMniymyCi0l7klf/7r2pmxQ2hSA8jL8IE\n2bPtQITjsh9/Fk8gmxjE9+wb8zdKC258hZgsuqCdzMttJIS2Tc92GQ5FjJ4J\ne+eI5uFjOp1QDGq929DI8i/ShzP+MO3XIJWxpQYqsKI2Apl0RiWcZblzJT15\nTS7agzZA85wXJB0s8qCvDbpYUaf4MEqqH6gLD/dZmnxWpe65JfEib3xjy1/3\niKnSviK+A5PYWtqgtiyJHslX+jOAKoH9+2BfyeNHi9aDtQYUG4D+hZEdxT0w\nQLZnllELWWvDxoSYywmcZcTDFRfmEL4PEwQjQGdiieQYtNLa9XSmd+Kft+Uc\nCQ==\n",
+    "video_key": "csa_for_loops",
+    "name_suffix": "_alt-2025",
+    "ai_tutor_available": "false",
+    "start_sources": {
+      "NamesRunner.java": {
+        "text": "public class NamesRunner {\n  public static void main(String[] args) {\n\n    Names topNames = new Names(\"Jayden\", \"Aiden\", \"Joshua\", \"Daniel\", \"Nathaniel\");\n\n    System.out.println(\"Top Baby Names:\");\n    System.out.println(topNames.rankedList());\n\n  }\n}\n",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "Names.java": {
+        "text": "/*\n * Stores popular name data\n */\npublic class Names {\n\n  private String name1, name2, name3, name4, name5;\n\n  /*\n   * Initializes five name values\n   */\n  public Names(String n1, String n2, String n3, String n4, String n5) {\n    name1 = n1;\n    name2 = n2;\n    name3 = n3;\n    name4 = n4;\n    name5 = n5;\n  }\n\n  /*\n   * Returns a ranked list of the names (e.g., \"1. Jayden\")\n   */\n  public String rankedList() {\n    String result = \"\";\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Use a for loop to build a string that looks like:\n     *    1. Jayden\n     *    2. Aiden\n     *    ...\n     * -----------------------------------------------------------------------------\n     */\n\n    return result;\n  }\n}\n",
+        "isVisible": true,
+        "tabOrder": 1
+      }
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:19:51.730+00:00\",\"changed\":[\"cloned from \\\"CSA U3L4-L6a_pilot-2025\\\"\"],\"cloned_from\":\"CSA U3L4-L6a_pilot-2025\"},{\"changed_at\":\"2025-05-27 16:33:49 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-27 16:34:07 +0000\",\"changed\":[\"encrypted_validation\",\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-27 16:34:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-27 17:17:24 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-27 18:37:06 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-27 18:38:24 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-27 18:38:27 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-27 18:39:20 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

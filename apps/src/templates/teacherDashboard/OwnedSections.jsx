@@ -6,16 +6,12 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import LtiFeedbackBanner from '@cdo/apps/lib/ui/simpleSignUp/lti/feedback/LtiFeedbackBanner';
 import styleConstants from '@cdo/apps/styleConstants';
 import color from '@cdo/apps/util/color';
-import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
-import {recordImpression} from './impressionHelpers';
 import OwnedPlSectionsTable from './OwnedPlSectionsTable';
 import OwnedSectionsTable from './OwnedSectionsTable';
-import {recordOpenEditSectionDetails} from './sectionHelpers';
 import {beginEditingSection} from './teacherSectionsRedux';
 
 class OwnedSections extends React.Component {
@@ -35,26 +31,10 @@ class OwnedSections extends React.Component {
   constructor(props) {
     super(props);
     this.onEditSection = this.onEditSection.bind(this);
-    if (experiments.isEnabled(experiments.TEACHER_DASHBOARD_SECTION_BUTTONS)) {
-      recordImpression('owned_sections_table_with_dashboard_header_buttons');
-    } else {
-      recordImpression('owned_sections_table_without_dashboard_header_buttons');
-    }
   }
 
   onEditSection(id) {
     this.props.beginEditingSection(id);
-    if (experiments.isEnabled(experiments.TEACHER_DASHBOARD_SECTION_BUTTONS)) {
-      recordOpenEditSectionDetails(
-        id,
-        'owned_sections_table_with_dashboard_header_buttons'
-      );
-    } else {
-      recordOpenEditSectionDetails(
-        id,
-        'owned_sections_table_without_dashboard_header_buttons'
-      );
-    }
   }
 
   // Wrapped to avoid passing event args
@@ -86,20 +66,15 @@ class OwnedSections extends React.Component {
   };
 
   render() {
-    const {isPlSections, sectionIds, hiddenSectionIds} = this.props;
+    const {sectionIds, hiddenSectionIds} = this.props;
     const {viewHidden} = this.state;
 
     const hasSections = sectionIds.length > 0;
 
     return (
-      <div
-        className={
-          isPlSections ? 'uitest-owned-pl-sections' : 'uitest-owned-sections'
-        }
-      >
+      <div>
         {hasSections && (
           <div>
-            <LtiFeedbackBanner />
             {this.ownedSectionsTable(false)}
             <div style={styles.buttonContainer}>
               {hiddenSectionIds.length > 0 && (

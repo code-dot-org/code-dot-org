@@ -1,0 +1,56 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-03-12T20:43:41.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Step 4: Create your Chatbot\r\n\r\nFollow the instructions on your activity guide to create your chatbot! Be sure to test it as you make it.\r\n\r\nOnce you're done, continue to the next level to create your model card.",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": "0.5",
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "editable",
+        "systemPrompt": "editable",
+        "retrievalContexts": "editable",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gen-ai-mistral-7b-inst-v01"
+      ],
+      "multimodalEnabled": false
+    },
+    "project_template_level_name": "gen-ai-customizing-project2-template_2025",
+    "name_suffix": "_2025",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-12T20:43:41.664+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project2-L1_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-project2-L1_2024\"},{\"changed_at\":\"2025-09-11 19:22:10 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-11 19:23:55 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-13 23:11:32 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Aichat>

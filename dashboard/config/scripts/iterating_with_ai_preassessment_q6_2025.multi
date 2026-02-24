@@ -1,0 +1,16 @@
+name 'iterating-with-ai-preassessment-q6_2025'
+
+question 'If an app tries to render an array of data that is currently empty, what is a "Human-Centered Design" best practice?'
+
+wrong 'Show a blank white screen so the user isn\'t distracted.'
+right 'Show an "empty state" message (e.g., "No items found") to provide transparency and build trust.'
+wrong 'Automatically generate random data so the screen isn\'t empty.'
+wrong 'Trigger an error message that tells the user the code is broken.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 4
+
+Providing an empty state or a count of 0 results is more transparent. It informs the user that the system is working correctly but simply has no data to show at the moment.
+MARKDOWN

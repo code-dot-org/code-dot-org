@@ -1,5 +1,6 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2024-03-25T22:42:01.000Z",
   "level_num": "custom",
@@ -9,7 +10,7 @@
     "tts_short_instructions_override": "How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
     "tts_long_instructions_override": "Congratulations! You just wrote some code. You are officially a programmer!\r\n\r\nDid you notice that the last puzzle was a little more difficult? It was a challenge puzzle. Challenge puzzles are meant to stretch the boundaries of what students will do. We make it clear that they should be attempted, but do not require that they be completed for students to succeed for the lesson.\r\n\r\nNow take a moment to reflect. How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
     "instructions_important": "false",
-    "long_instructions": "# Reflection\r\n\r\n## Active Learning: Data and Society\r\n\r\nLet's review what we explored:\r\n\r\n* ##### **Lesson 1**: Representation Matters\r\n\t* ##### provides an overview of what data is and how it is used to solve problems\r\n* ##### **Lesson 2**:  Patterns and Representation\r\n\t* ##### looks at what is needed to create a system of representation\r\n    \r\n##### In the synchronous portion of this module, you will observe a Model Lesson for **Lesson 3: ASCII and Binary Representation**.\r\n    \r\n\r\n##### Consider what was explored and write a response to the following question:\r\n* ##### How can you ensure that students are actively participating in the learning process during these lessons? Consider different modes of engagement you can encourage students to take.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+    "long_instructions": "# Reflection\r\n\r\n## Active Learning: Data and Society\r\n\r\n#### Let's review what we explored:\r\n\r\n* #### **Lesson 1 - Representation Matters**: Provides an overview of what data is and how it is used to solve problems.\r\n* #### **Lesson 2 - Patterns and Representation**: Looks at what is needed to create a system of representation.\r\n    \r\n#### In the synchronous portion of this module, you will observe a Model Lesson for **<a href=\"https://studio.code.org/s/csd5-2024/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lesson 3: ASCII and Binary Representation</a>**.\r\n\r\n## Reflection\r\n\r\n#### Consider what was explored and write a response to the following question:\r\n* #### How can you ensure that students are actively participating in the learning process during these lessons? Consider different modes of engagement you can encourage students to take.\r\n<br>\r\n\r\n##### **Note**: You can change the size of the text box by clicking and dragging the bottom-right corner of the text box.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -20,9 +21,8 @@
     "name_suffix": "_2024",
     "allow_multiple_attempts": "true"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-25T22:42:01.323+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD M4 Reflection_2023\\\"\"],\"cloned_from\":\"VPL - CSD M4 Reflection_2023\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-25T22:42:01.323+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD M4 Reflection_2023\\\"\"],\"cloned_from\":\"VPL - CSD M4 Reflection_2023\"},{\"changed_at\":\"2024-08-23 21:11:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2024-08-23 21:12:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2024-08-23 21:12:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2024-08-23 21:13:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

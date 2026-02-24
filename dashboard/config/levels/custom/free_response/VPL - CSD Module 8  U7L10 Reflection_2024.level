@@ -1,5 +1,6 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2024-03-25T22:46:09.000Z",
   "level_num": "custom",
@@ -9,7 +10,7 @@
     "tts_short_instructions_override": "How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
     "tts_long_instructions_override": "Congratulations! You just wrote some code. You are officially a programmer!\r\n\r\nDid you notice that the last puzzle was a little more difficult? It was a challenge puzzle. Challenge puzzles are meant to stretch the boundaries of what students will do. We make it clear that they should be attempted, but do not require that they be completed for students to succeed for the lesson.\r\n\r\nNow take a moment to reflect. How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
     "instructions_important": "false",
-    "long_instructions": "# Reflection \r\n\r\n## Lesson 10: Saving Models in AI Lab\r\n\r\n**Prompt:** \r\n\r\n##### What moments in this lesson connect back to prior lessons in Unit 7? What moments connect back to lessons from prior units? How can you leverage these moments to support student learning?\r\n___\r\n\r\n<span style=\"font-size:12px;\"> If more space is needed, click and drag the bottom-right corner to adjust the size of the text box.</span>\r\n",
+    "long_instructions": "# Reflection \r\n\r\n## Lesson 10: Saving Models in AI Lab\r\n\r\n#### **Prompts:** \r\n\r\n* #### What moments in this lesson connect back to prior lessons in Unit 7? \r\n* #### What moments connect back to lessons from prior units? \r\n* #### How can you leverage these moments to support student learning?\r\n<br>\r\n\r\n##### **Note:** You can change the size of the text box by clicking and dragging the bottom-right corner of the text box.\r\n\r\n",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -20,8 +21,9 @@
     "name_suffix": "_2024",
     "allow_multiple_attempts": "true"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-25T22:46:09.364+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD Module 8  U7L10 Reflection_2023\\\"\"],\"cloned_from\":\"VPL - CSD Module 8  U7L10 Reflection_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-03-25T22:46:09.364+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD Module 8  U7L10 Reflection_2023\\\"\"],\"cloned_from\":\"VPL - CSD Module 8  U7L10 Reflection_2023\"},{\"changed_at\":\"2024-09-04 21:13:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

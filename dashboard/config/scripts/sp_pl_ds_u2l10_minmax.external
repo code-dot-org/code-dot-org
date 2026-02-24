@@ -1,0 +1,53 @@
+name 'SP-PL-DS-U2L10_minMax'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Analyzing Outliers
+
+
+
+## Why we analyze extremes
+
+#### Looking at extremes such as the minimum and maximum values helps us identify the range of our data and find outliers - values that are much lower or higher than the rest. 
+
+#### These outliers can tell us a lot about unusual events or conditions in our data.
+
+![](https://images.code.org/cdc3e2f188c1aa0eb9a8041317d2e436-image-1728919649535.png)
+
+## **min()**, **max()**, and **sum()**
+
+#### The **min()**, **max()**, and **sum()** functions are performed on a column of the dataset.
+
+   <table border="1" width="100%" cellpadding="10">
+        <tr>
+            <td width="55%">
+                <img src="https://images.code.org/0c0334f72bf2d51f7c65f94d523a1dda-image-1728919780027.png" alt="min value" width="100%">
+            </td>
+            <td width="45%" style="font-size:14pt;">
+             <b>min() </b> finds the smallest value in a column
+            </td>
+        </tr>
+        <tr>
+            <td width="35%">
+                <img src="https://images.code.org/ef614bec974bbbf992647f9a66b63d22-image-1728919879577.png" alt="max" width="100%">
+            </td>
+            <td width="65%" style="font-size:14pt;">
+                <b>max() </b> finds the largest value in a column
+            </td>
+        </tr>
+                <tr>
+            <td width="35%">
+                <img src="https://images.code.org/1ba82f527fed26b31dec9a729bdf0276-image-1728920097535.png" alt="sum" width="100%">
+            </td>
+            <td width="65%" style="font-size:14pt;">
+                <b>sum() </b> adds up the values in a column to give the total
+            </td>
+        </tr>
+                
+    </table>
+
+
+ 
+
+MARKDOWN

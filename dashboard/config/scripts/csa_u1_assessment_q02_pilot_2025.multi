@@ -1,0 +1,16 @@
+name 'CSA U1 Assessment q02_pilot-2025'
+
+wrong 'Performing a task in a program requires a method.'
+wrong 'A method contains the statements that actually performs its task.'
+wrong 'The algorithm that the method represents can consist of a combination of sequencing, selection, and iteration.'
+right 'All of the above.'
+
+markdown <<MARKDOWN
+Which of the following statements is true?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Methods represent a behavior for an object and are intended to perform a specific task. Methods are called to perform the task and contain statements for executing its task. The statements in a method are an algorithm, which can consist of a combination of sequencing, selection, and iteration statements.
+MARKDOWN
+
+allow_multiple_attempts true

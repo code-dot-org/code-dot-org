@@ -4,16 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "pl_workshop_activities",
       "curriculum_umbrella": "PD Workshop Activity CSA",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
-      "tts": true
+      "tts": true,
+      "version_year": "2024"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-09 19:01:39 UTC",
+    "serialized_at": "2025-04-08 18:26:23 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -92,7 +94,7 @@
     },
     {
       "key": "lesson-5",
-      "name": "Lesson Exploration: U1L8 - Inheritance",
+      "name": "Lesson Exploration: U1L9 - Inheritance",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": false,
@@ -126,14 +128,14 @@
     },
     {
       "key": "lesson-7",
-      "name": "Identity as a Software Engineer",
+      "name": "",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
-        "overview": "**Purpose:**\nDeveloping an identity as a software engineer is one of the ways the Code.org Curriculum for CSA seeks to set itself apart from other approaches to CSA.  This session makes this explicit to participants.  This is also an opportunity to spend some time in the “Understanding Self” portion of the equity cycle. \n\n\n**Objectives**\n* Participants can generate examples of how aspects of their identity and experiences may have shaped their views on CS\n\n**Suggested time:** 40 minutes",
-        "student_overview": "**You will**\n* Generate examples of how aspects of their identity and experiences may have shaped their views on CS"
+        "overview": "This lesson was removed.",
+        "student_overview": "This lesson was removed. "
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -143,7 +145,7 @@
     },
     {
       "key": "lesson-8",
-      "name": "Model Lesson 3: U1L10 - Programming Style and Feedback",
+      "name": "Model Lesson 3: U1L11 - Programming Style and Feedback",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": false,
@@ -209,7 +211,7 @@
     },
     {
       "key": "lesson-3",
-      "name": "Model Lesson 4: U1L16 - SpiralPainter FRQ",
+      "name": "Model Lesson 4: U1L17 - SpiralPainter FRQ",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": false,

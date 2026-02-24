@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-09-25T19:59:56.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Which of these types of software (operating systems, application software, and utility software) do you use most often, and why?",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:59:56.854+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson4-level1b_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson4-level1b_2025\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

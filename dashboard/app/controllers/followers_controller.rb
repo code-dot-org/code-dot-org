@@ -11,7 +11,15 @@ class FollowersController < ApplicationController
 
   # GET /join/:section_code (section_code is optional)
   def student_user_new
-    @user = current_user || User.new
+    if current_user
+      render 'student_user_new', formats: [:html]
+    else
+      @section_code = params[:section_code]
+      source_page = ERB::Util.url_encode('join section')
+      return_to = ERB::Util.url_encode(@section_code.present? ? "/join/#{@section_code}" : "/join")
+
+      redirect_to "/logged_out?source_page=#{source_page}&return_to=#{return_to}"
+    end
   end
 
   # POST /join/:section_code
@@ -21,11 +29,16 @@ class FollowersController < ApplicationController
       @user = current_user
     elsif params[:user]
       user_type = params[:user][:user_type] == User::TYPE_TEACHER ? User::TYPE_TEACHER : User::TYPE_STUDENT
-      @user = User.new(followers_params(user_type))
-      @user.user_type = user_type
+      @user = User.new(user_type: user_type).tap do |user|
+        user.assign_attributes followers_params(user_type)
+      end
     else
-      @user = User.new(user_type: User::TYPE_STUDENT)
-      return render 'student_user_new', formats: [:html]
+      @section_code = params[:section_code]
+      source_page = ERB::Util.url_encode('join section')
+      return_to = ERB::Util.url_encode(@section_code.present? ? "/join/#{@section_code}" : "/join")
+
+      redirect_to "/logged_out?source_page=#{source_page}&return_to=#{return_to}"
+      return
     end
 
     # Create boolean to confirm if a user already actively exists on a section roster
@@ -47,8 +60,16 @@ class FollowersController < ApplicationController
           if is_existing_follower
             redirect_to root_path, notice: I18n.t('follower.already_exists', section_name: @section.name)
           elsif !@section.can_join_section_as_participant?(@user)
-            redirect_to root_path, alert: I18n.t('follower.error.not_participant_type', section_code: params[:section_code])
-          # Check if section is restricted, and redirect with restricted error if true
+            # check if student is joining a teacher section
+            if @section.student_joining_teacher_course?(@user)
+              @section_code = params[:section_code]
+              source_page = ERB::Util.url_encode('join section')
+              return_to = ERB::Util.url_encode(@section_code.present? ? "/join/#{@section_code}" : "/join")
+              redirect_to "/teacher_account_required?source_page=#{source_page}&return_to=#{return_to}"
+            else
+              redirect_to root_path, alert: I18n.t('follower.error.not_participant_type', section_code: params[:section_code])
+            end
+            # Check if section is restricted, and redirect with restricted error if true
           elsif @section.restricted?
             redirect_to root_path, alert: I18n.t('follower.error.restricted_section', section_code: params[:section_code])
           # Check if the section is already at capacity
@@ -79,7 +100,14 @@ class FollowersController < ApplicationController
   end
 
   private def redirect_url
-    params[:redirect] || student_user_new_path
+    uri = URI.parse(params[:redirect])
+    if (uri.host.nil? && uri.path.present? && uri.path.start_with?('/')) || (uri.host == CDO.dashboard_site_host)
+      uri.to_s
+    else
+      student_user_new_path
+    end
+  rescue URI::InvalidURIError
+    student_user_new_path
   end
 
   private def load_section

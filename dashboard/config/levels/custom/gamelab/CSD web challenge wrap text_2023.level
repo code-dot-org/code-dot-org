@@ -1,5 +1,9 @@
 <Gamelab>
   <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2022-09-19T22:54:25.000Z",
+  "level_num": "custom",
+  "user_id": 155,
   "properties": {
     "skin": "gamelab",
     "edit_code": true,
@@ -94,16 +98,12 @@
     "start_blocks": "//1) Read the code to see how it works.\r\ntextSize(50);\r\nfill(\"black\");\r\n//2) In Block Mode, use the arrow button on the `text` block to add the optional parameters.\r\n//3) Enter values into the optional parameters that will make the text fit on the screen.\r\ntext(\"Four score and seven years ago...\", 30, 200);",
     "display_name": "Wrap Text",
     "bubble_choice_description": "Learn how to make big text fit inside a text box.",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"17d36055-4e2e-4813-abc6-17b46dffd2fa\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"17d36055-4e2e-4813-abc6-17b46dffd2fa\": {\r\n      \"name\": \"rainbow\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/gamelab/oxL0ak8K0_DZMb1sQi0VfaI8XrHTF6Jd/category_backgrounds/background_rainbow.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"oxL0ak8K0_DZMb1sQi0VfaI8XrHTF6Jd\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\n  \"orderedKeys\": [\n    \"17d36055-4e2e-4813-abc6-17b46dffd2fa\"\n  ],\n  \"propsByKey\": {\n    \"17d36055-4e2e-4813-abc6-17b46dffd2fa\": {\n      \"name\": \"rainbow\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/oxL0ak8K0_DZMb1sQi0VfaI8XrHTF6Jd/category_backgrounds/background_rainbow.png\",\n      \"frameSize\": {\n        \"x\": 400,\n        \"y\": 400\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"oxL0ak8K0_DZMb1sQi0VfaI8XrHTF6Jd\"\n    }\n  }\n}",
     "thumbnail_url": "https://images.code.org/fa2ff3ab86764a3afd9f262c25c76d40-image-1592428480087.png",
     "validation_enabled": "false",
     "preload_asset_list": null
   },
-  "game_id": 50,
   "published": true,
-  "created_at": "2022-09-19T22:54:25.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-09-19T22:54:25.037+00:00\",\"changed\":[\"cloned from \\\"CSD web challenge wrap text_2022\\\"\"],\"cloned_from\":\"CSD web challenge wrap text_2022\"},{\"changed_at\":\"2023-01-11 01:31:35 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-11 01:32:24 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>

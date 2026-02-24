@@ -4,14 +4,19 @@ import musicI18n from '../locale';
 
 export const DEFAULT_TRACK_NAME_EXTENSION = 'default_track_name_extension';
 export const FIELD_EFFECTS_EXTENSION = 'field_effects_extension';
+export const FIELD_PATTERNS_VALIDATOR = 'field_patterns_extensions';
+export const FIELD_SOUNDS_VALIDATOR = 'field_sounds_validator';
 export const PLAY_MULTI_MUTATOR = 'play_multi_mutator';
+export const NEXT_CONNECTION_MUTATOR = 'next_connection_mutator';
 
 // Field / Input Names
 
 export const TRACK_NAME_FIELD = 'track_name';
 export const FIELD_SOUNDS_NAME = 'sound';
 export const FIELD_PATTERN_NAME = 'pattern';
+export const FIELD_PATTERN_AI_NAME = 'pattern_ai';
 export const FIELD_CHORD_NAME = 'chord';
+export const FIELD_TUNE_NAME = 'tune';
 export const EXTRA_SOUND_INPUT_PREFIX = 'extra_sound_input_';
 export const EXTRA_SAMPLE_FIELD_PREFIX = 'extra_sample';
 export const TRIGGER_FIELD = 'trigger';
@@ -27,8 +32,11 @@ export const FIELD_SOUNDS_TYPE = 'field_sounds';
 export const SOUND_VALUE_TYPE = 'sound_value_type';
 export const FIELD_PATTERN_TYPE = 'field_pattern';
 export const PATTERN_VALUE_TYPE = 'pattern_value_type';
+export const FIELD_PATTERN_AI_TYPE = 'field_pattern_ai';
 export const FIELD_CHORD_TYPE = 'field_chord';
 export const CHORD_VALUE_TYPE = 'chord_value_type';
+export const FIELD_TUNE_TYPE = 'field_tune';
+export const TUNE_VALUE_TYPE = 'tune_value_type';
 
 // SVG
 
@@ -48,7 +56,7 @@ export const MINUS_IMAGE =
 
 // Other
 
-export const DOCS_BASE_URL = '/docs/ide/projectbeats/expressions/';
+export const DOCS_BASE_URL = '/docs/ide/music/expressions/';
 
 export const TriggerStart = {
   IMMEDIATELY: 'immediately',

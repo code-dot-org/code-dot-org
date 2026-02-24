@@ -1,10 +1,10 @@
+import path from 'path';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import fontConstants from '@cdo/apps/fontConstants';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {PrintLoginCardsButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import PrintLoginCards from '@cdo/apps/templates/manageStudents/PrintLoginCards';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -34,7 +34,7 @@ class SectionLoginInfo extends React.Component {
     // Provided by redux.
     section: PropTypes.shape({
       id: PropTypes.number.isRequired,
-      loginType: PropTypes.string.isRequired,
+      loginType: PropTypes.string,
       code: PropTypes.string,
     }).isRequired,
     students: PropTypes.array.isRequired,
@@ -51,7 +51,7 @@ class SectionLoginInfo extends React.Component {
       : this.props.students;
 
     return (
-      <div>
+      <div id="ui-test-section-login-info">
         {[SectionLoginType.word, SectionLoginType.picture].includes(
           section.loginType
         ) && (
@@ -181,7 +181,7 @@ class EmailLogins extends React.Component {
         <ol>
           <li>
             {i18n.loginInfo_joinStep1({
-              url: `${studioUrlPrefix}/users/sign_up`,
+              url: `${studioUrlPrefix}/users/sign_up/account_type`,
             })}
             <br />
             <img
@@ -191,10 +191,12 @@ class EmailLogins extends React.Component {
           </li>
           <li>{i18n.loginInfo_joinStep2()}</li>
           <li>
-            {i18n.loginInfo_joinStep3({
-              url: `${studioUrlPrefix}/join`,
-              code: sectionCode,
-            })}
+            <SafeMarkdown
+              markdown={i18n.loginInfo_join_navigateToLink({
+                url: new URL(path.join('/join', sectionCode), studioUrlPrefix)
+                  .href,
+              })}
+            />
           </li>
           <li>{i18n.loginInfo_joinStep4()}</li>
         </ol>
@@ -375,7 +377,7 @@ class LoginCard extends React.Component {
             {i18n.loginCardForPrint3Picture()}
             <br />
             <img
-              src={pegasus(`/images/${student.secretPicturePath}`)}
+              src={student.secretPictureUrl}
               alt={student.secretPictureName}
               style={styles.img}
             />

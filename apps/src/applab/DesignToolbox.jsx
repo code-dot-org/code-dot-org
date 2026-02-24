@@ -12,6 +12,7 @@ export default class DesignToolbox extends React.Component {
   static propTypes = {
     handleDragStart: PropTypes.func.isRequired,
     isToolboxVisible: PropTypes.bool.isRequired,
+    isRtl: PropTypes.bool.isRequired,
     handleScreenChange: PropTypes.func.isRequired,
     themeValue: PropTypes.string.isRequired,
   };
@@ -24,10 +25,13 @@ export default class DesignToolbox extends React.Component {
       bottom: 0,
       width: 270,
       boxSizing: 'border-box',
-      borderRight: '1px solid gray',
+      borderRight: this.props.isRtl ? '' : '1px solid gray',
+      borderLeft: this.props.isRtl ? '1px solid gray' : '',
       overflowY: 'auto',
       padding: 10,
-      paddingRight: 0, // setting this to 0 allows 2 columns with the potential scrollbar on Windows
+      // setting this to 0 allows 2 columns with the potential scrollbar on Windows
+      paddingRight: this.props.isRtl ? 10 : 0,
+      paddingLeft: this.props.isRtl ? 0 : 10,
     };
 
     return (

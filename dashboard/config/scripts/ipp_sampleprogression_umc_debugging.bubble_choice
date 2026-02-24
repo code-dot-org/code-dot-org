@@ -1,0 +1,10 @@
+name 'IPP_SampleProgression_UMC_Debugging'
+display_name 'Debugging Variables'
+description 'Did you run into a bug in your code? These levels feature code with common bugs for you to troubleshoot, fix, and learn from! Do as many of the activities below as you want.'
+
+sublevels
+level 'IPP_SampleProgression_UMC_Debugging_1'
+level 'IPP_SampleProgression_UMC_Debugging_2'
+level 'IPP_SampleProgression_UMC_Debugging_3'
+
+

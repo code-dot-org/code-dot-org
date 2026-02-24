@@ -1,0 +1,27 @@
+name 'computer-systems-postassessment_v2-2025'
+title 'AI and the Systems That Power It End-of-Unit Assessment'
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'computer-systems-postassessment-intro_v2-2025'
+level 'computer-systems-postassessment-question1_v2-2025'
+level 'computer-systems-postassessment-question2_v2-2025'
+level 'computer-systems-postassessment-question3_v2-2025'
+level 'computer-systems-postassessment-question4_v2-2025'
+level 'computer-systems-postassessment-question5_v2-2025'
+
+page
+level 'computer-systems-postassessment-question6_v2-2025'
+level 'computer-systems-postassessment-question7_v2-2025'
+level 'computer-systems-postassessment-question8_v2-2025'
+level 'computer-systems-postassessment-question9_v2-2025'
+level 'computer-systems-postassessment-question10_v2-2025'
+
+page
+level 'computer-systems-postassessment-question11_v2-2025'
+level 'computer-systems-postassessment-question12_v2-2025'
+level 'computer-systems-postassessment-question13_v2-2025'
+level 'computer-systems-postassessment-question14_v2-2025'
+level 'computer-systems-postassessment-question15_v2-2025'

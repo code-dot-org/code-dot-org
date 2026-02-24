@@ -4,7 +4,7 @@ import React from 'react';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-import FontAwesome from '../FontAwesome';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 
 import StudentGroup from './StudentGroup';
 

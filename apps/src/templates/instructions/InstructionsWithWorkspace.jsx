@@ -3,7 +3,17 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {TEACHER_DISABLED_AI_CHAT_MESSAGE} from '@cdo/apps/aichat/constants';
+import {AiChatDisabledProvider} from '@cdo/apps/aichat/context/aiChatDisabledContext';
+import {
+  areAiChatToolsEnabled,
+  shouldShowAiTutor,
+} from '@cdo/apps/aichat/helpers/aiChatAccess';
+import {AI_TUTOR_LEGACY_LABS} from '@cdo/apps/aiTutor/views/legacyLabs/constants';
+
+import {AiTutorContainer} from '../../aiTutor/views/legacyLabs/AiTutorContainer';
 import {setInstructionsMaxHeightAvailable} from '../../redux/instructions';
+import experiments from '../../util/experiments';
 import CodeWorkspaceContainer from '../CodeWorkspaceContainer';
 
 import TopInstructions from './TopInstructions';
@@ -24,12 +34,16 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     // Provided by redux
     instructionsHeight: PropTypes.number.isRequired,
     setInstructionsMaxHeightAvailable: PropTypes.func.isRequired,
+    labType: PropTypes.string,
+    aiTutorEnabledForPilot: PropTypes.bool,
+    aiChatAccessLevel: PropTypes.string,
   };
 
   // only used so that we can rerender when resized
   state = {
     windowWidth: undefined,
     windowHeight: undefined,
+    aiChatOpen: true,
   };
 
   setCodeWorkspaceContainerRef = element => {
@@ -86,6 +100,10 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     setInstructionsMaxHeightAvailable(maxInstructionsHeight);
   };
 
+  toggleAiChat = () => {
+    this.setState(prevState => ({aiChatOpen: !prevState.aiChatOpen}));
+  };
+
   componentDidMount() {
     window.addEventListener('resize', this.onResize);
   }
@@ -95,18 +113,71 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
   }
 
   render() {
-    const {instructionsStyle, workspaceStyle, instructionsHeight, children} =
-      this.props;
+    let {
+      instructionsStyle,
+      workspaceStyle,
+      instructionsHeight,
+      labType,
+      aiTutorEnabledForPilot,
+      aiChatAccessLevel,
+      children,
+    } = this.props;
+
+    const aiTutorAvailableForLevel =
+      window?.appOptions?.level?.aiTutorAvailable ?? false;
+
+    const aiChatAccessDisabled = !areAiChatToolsEnabled({
+      appName: labType,
+      aiChatAccessLevel,
+    });
+
+    const showAiTutor =
+      AI_TUTOR_LEGACY_LABS.includes(labType) &&
+      (experiments.isEnabled(experiments.LEGACY_LAB_AI_TUTOR) ||
+        shouldShowAiTutor({
+          appName: labType,
+          tutorPilot: aiTutorEnabledForPilot,
+          tutorLevel: aiTutorAvailableForLevel,
+        }));
+
+    const chatContainerSpace = 335; // 325px chat container + 10px margin = 335px
+    const sidebarSpace = 55; // 45px sidebar + 10px margin = 55px
+    const tutorSpace = this.state.aiChatOpen
+      ? chatContainerSpace
+      : sidebarSpace;
+
+    if (showAiTutor) {
+      instructionsStyle = {...instructionsStyle, right: tutorSpace};
+      workspaceStyle = {...workspaceStyle, right: tutorSpace};
+    }
 
     return (
       <span>
         <TopInstructions mainStyle={instructionsStyle} />
         <CodeWorkspaceContainer
           ref={this.setCodeWorkspaceContainerRef}
-          style={{...workspaceStyle, top: instructionsHeight}}
+          style={{
+            ...workspaceStyle,
+            top: instructionsHeight,
+          }}
         >
           {children}
         </CodeWorkspaceContainer>
+        {showAiTutor && (
+          <AiChatDisabledProvider
+            chatDisabled={aiChatAccessDisabled}
+            chatDisabledMessage={
+              aiChatAccessDisabled
+                ? TEACHER_DISABLED_AI_CHAT_MESSAGE
+                : undefined
+            }
+          >
+            <AiTutorContainer
+              toggleAiChat={this.toggleAiChat}
+              aiChatOpen={this.state.aiChatOpen}
+            />
+          </AiChatDisabledProvider>
+        )}
       </span>
     );
   }
@@ -115,6 +186,9 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
 export default connect(
   state => ({
     instructionsHeight: state.instructions.renderedHeight,
+    labType: state.pageConstants.appType,
+    aiTutorEnabledForPilot: state.currentUser.aiTutorEnabledForPilot,
+    aiChatAccessLevel: state.currentUser.aiChatAccessLevel,
   }),
   dispatch => ({
     setInstructionsMaxHeightAvailable(maxHeight) {

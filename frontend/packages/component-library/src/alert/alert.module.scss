@@ -1,0 +1,160 @@
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
+
+$alert-span-vertical-top-spacing: 2px;
+
+.alert {
+  display: flex;
+  align-items: center;
+  border-radius: 0.25rem;
+  gap: 1rem;
+
+  .alertContentContainer {
+    display: flex;
+    flex: 1 0 0;
+    align-items: baseline;
+
+    i {
+      text-align: center;
+      color: var(--text-neutral-primary);
+    }
+
+    a {
+      color: var(--text-neutral-primary);
+    }
+  }
+}
+
+// Types (colors)
+.alert-primary {
+  background-color: var(--background-brand-purple-light);
+
+  .alertContentContainer i {
+    color: var(--text-brand-purple-primary-fixed);
+  }
+}
+
+.alert-success {
+  background-color: var(--background-success-extra-light);
+
+  .alertContentContainer i {
+    color: var(--text-success-primary-fixed);
+  }
+}
+
+.alert-danger {
+  background-color: var(--background-error-extra-light);
+
+  .alertContentContainer i {
+    color: var(--text-error-primary-fixed);
+  }
+}
+
+.alert-warning {
+  background-color: var(--background-warning-extra-light);
+
+  .alertContentContainer i {
+    color: var(--text-warning-primary-fixed);
+  }
+}
+
+.alert-info {
+  background-color: var(--background-info-extra-light);
+
+  .alertContentContainer i {
+    color: var(--text-info-primary-fixed);
+  }
+}
+
+.alert-gray {
+  background-color: var(--background-neutral-tertiary);
+}
+
+.alert-aqua {
+  background-color: var(--background-brand-aqua-extra-light);
+
+  .alertContentContainer i {
+    color: var(--text-brand-aqua-primary-fixed);
+  }
+}
+
+// Sizes
+.alert-l {
+  padding: 0.875rem 1.125rem;
+
+  .alertContentContainer {
+    gap: 0.75rem;
+
+    i {
+      font-size: 1.1875rem;
+      line-height: 125%;
+      width: 1.5rem;
+    }
+
+    span {
+      @include typography.body-one;
+      margin-top: $alert-span-vertical-top-spacing;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.alert-m {
+  padding: 0.75rem 1rem;
+
+  .alertContentContainer {
+    gap: 0.625rem;
+
+    i {
+      font-size: 1rem;
+      line-height: 125%;
+      width: 1.25rem;
+    }
+
+    span {
+      @include typography.body-two;
+      margin-top: $alert-span-vertical-top-spacing;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.alert-s {
+  padding: 0.625rem 0.875rem;
+
+  .alertContentContainer {
+    gap: 0.5rem;
+
+    i {
+      font-size: 0.875rem;
+      line-height: 125%;
+      width: 1.125rem;
+    }
+
+    span {
+      @include typography.body-three;
+      margin-top: $alert-span-vertical-top-spacing;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.alert-xs {
+  padding: 0.5rem 0.75rem;
+
+  .alertContentContainer {
+    gap: 0.5rem;
+
+    i {
+      font-size: 0.8125rem;
+      line-height: 125%;
+      width: 1rem;
+    }
+
+    span {
+      @include typography.body-four;
+      margin-top: $alert-span-vertical-top-spacing;
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+name 'Data Sci U2 Pre Q13_2024-pilot'
+
+question 'How does pandas determine the data type for each column in a DataFrame?'
+
+wrong 'It always assigns the same data type to all columns.'
+wrong 'It guesses the data type based on the first value in each column.'
+right 'It analyzes the values in each column and assigns a data type automatically.'
+wrong 'The user must specify the data type when creating the DataFrame.'
+
+
+allow_multiple_attempts false

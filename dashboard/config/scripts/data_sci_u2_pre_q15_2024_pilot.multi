@@ -1,0 +1,13 @@
+name 'Data Sci U2 Pre Q15_2024-pilot'
+
+question 'Which of the following parameters for the `plt.pie()`  allows you to make one of the wedges of a pie chart stand out?'
+
+right '`explode`'
+wrong '`labels`'
+wrong '`startangle`'
+wrong '`shadow`'
+
+
+
+
+allow_multiple_attempts false

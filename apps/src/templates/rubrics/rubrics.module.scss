@@ -1,6 +1,8 @@
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
 @import 'color';
-@import 'font';
-@import '@cdo/apps/componentLibrary/common/styles/mixins';
+@import '@code-dot-org/component-library-styles/font';
+@import '@code-dot-org/component-library-styles/mixins';
 
 @keyframes pulse {
   0% {
@@ -56,16 +58,104 @@
   border-style: solid;
 }
 
+.countOverlay {
+  position: fixed;
+  left: 51px;
+  bottom: 97px;
+
+  border-radius: 100px;
+  border-width: 2px;
+  border-color: $background_gray;
+  border-style: solid;
+
+  display: inline-flex;
+  height: 18px;
+  min-width: 18px;
+  padding: 2px 2px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+
+  background: var(--sentiment-error-50, #e5311a);
+}
+
+p.countText {
+  margin-top: 1px;
+  margin-bottom: 0 !important;
+  padding: 0 2px;
+
+  strong {
+    span {
+      color: var(--text-neutral-white-fixed, #fff);
+    }
+  }
+  font-variant-ligatures: no-common-ligatures;
+}
+
+.dismissableAlert {
+  position: fixed;
+  left: 86px;
+  bottom: 55px;
+  z-index: 2000;
+
+  display: flex;
+  width: 300px;
+  max-width: 300px;
+  padding: 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+
+  border-radius: 4px;
+  border: 1px solid var(--neutral-gray-20, #d1d4d8);
+  background: var(--neutral-base-white, #fff);
+
+  box-shadow: 0 4px 4px 0 rgb(0 0 0 / 0.25);
+}
+
+.dismissableAlertText {
+  max-width: 266px;
+  margin-top: 4px;
+  margin-left: 4px;
+  margin-bottom: -24px;
+
+  color: var(--text-neutral-primary, #292f36);
+  font-variant-ligatures: no-common-ligatures;
+}
+
+.viewScoresButton {
+  min-height: 35px;
+  width: 286px;
+
+  display: flex;
+  padding: 5px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+
+  border-radius: 4px;
+  background: var(--brand-aqua-50, #3cfff7) !important;
+}
+
+.viewScoresText {
+  color: var(--light-black, #292f36);
+  font-variant-ligatures: no-common-ligatures;
+
+  /* Button/Button 3 */
+  font-family: Figtree, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 154%; /* 21.56px */
+}
+
 .rubricContainer {
   position: fixed;
   left: 10px;
-  bottom: 120px;
+  bottom: 123px;
   z-index: 2000;
   width: 760px;
-}
-
-.hiddenRubricContainer {
-  display: none;
 }
 
 .settings {
@@ -359,7 +449,7 @@ button.rubricHeaderTab {
     height: 40px;
     padding: 0 1rem 0 2rem;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     align-self: stretch;
     line-height: 154%;
     position: relative;
@@ -402,6 +492,7 @@ button.rubricHeaderTab {
   gap: 16px;
   font-size: 14px;
   padding-left: 10px;
+  padding-top: 0.5rem;
 }
 
 .learningGoalHeaderRightSide {
@@ -446,6 +537,7 @@ h2.studentName {
 
   .tipsDetailsSummary {
     font-size: 0.875rem;
+    margin-top: 20px;
 
     &:hover {
       background-color: unset;
@@ -474,7 +566,6 @@ h2.studentName {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 100px;
   gap: 8px;
   min-height: 92px;
 }
@@ -524,6 +615,7 @@ h2.studentName {
 
 .evidenceLevelLabel {
   @include main-font-semi-bold;
+  color: var(--text-neutral-primary);
   font-size: 0.875rem;
   line-height: 154%;
   margin-bottom: 0;
@@ -571,19 +663,18 @@ p.errorMessage {
   border: 1px solid $neutral_dark20;
   background: $neutral_white;
   position: relative;
+}
 
-  &::after {
-    content: '';
-    position: absolute;
-    top: calc(-0.5rem * sqrt(2) + 0.125rem);
-    left: calc(50% - 0.5rem);
-    width: 1rem;
-    height: 1rem;
-    background: $neutral_white;
-    transform: rotate(45deg);
-    border-top: 1px solid $neutral_dark20;
-    border-left: 1px solid $neutral_dark20;
-  }
+.aiAssessmentArrow {
+  position: absolute;
+  top: calc(-0.5rem * sqrt(2) + 0.125rem);
+  left: calc(50% - 0.5rem);
+  width: 1rem;
+  height: 1rem;
+  background: $neutral_white;
+  transform: rotate(45deg);
+  border-top: 1px solid $neutral_dark20;
+  border-left: 1px solid $neutral_dark20;
 }
 
 .aiAssessmentBlock {
@@ -615,6 +706,9 @@ p.aiAssessmentScoreText {
   strong::after {
     content: ' ';
   }
+  max-width: 280px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 p.aiAssessmentEvidenceBlock {
@@ -867,8 +961,7 @@ em.aiFeedbackReceived {
   border-radius: 4px;
   border: 1px solid $neutral_dark20;
   background: $neutral_light;
-  width: 100%;
-  min-width: 100%;
+  width: auto;
 }
 
 .learningGoalRing {
@@ -1026,8 +1119,13 @@ p.evidenceLevelHeaderText {
 .evidenceLevelSetHorizontalV2 {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
   gap: 8px;
+
+  p {
+    margin-bottom: 0;
+  }
 }
 
 .evidenceLevelOptionV2 {
@@ -1092,7 +1190,6 @@ p.evidenceLevelHeaderText {
   border: 1px solid $light_black;
   background: $neutral_white;
   gap: 10px;
-  padding: 3px 16px 0;
   font-size: 0.875rem;
   height: 32px;
   box-shadow: 0 0 0 0.125rem $ai_rubric_cyan;
@@ -1135,6 +1232,11 @@ p.evidenceLevelHeaderText {
   h2 {
     margin-bottom: 0;
   }
+}
+
+.fabErrorBackground {
+  background: $bootstrap_error_background !important;
+  color: $bootstrap_error_text !important;
 }
 
 .sectionSelector {
@@ -1237,55 +1339,132 @@ p.detailsHidden {
   justify-content: space-between;
 }
 
-.studentDropdownOption {
+.dropdownOption {
+  /* Reset's every elements apperance */
+  background: none repeat scroll 0 0 transparent;
+  border: none !important;
+  border-radius: 0;
+  border-spacing: 0;
+  list-style: none outside none;
+  margin: 0;
+  text-decoration: none;
+  text-indent: 0;
+  box-shadow: none;
+  flex-grow: 1;
+
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 5px;
-  margin-top: 3px;
+  align-items: center;
+  cursor: pointer;
+  color: var(--neutral-base-black);
+
+  padding: 0.3125rem 1rem;
+  gap: 16px;
+
+  span {
+    @include typography.body-three;
+    color: inherit;
+    margin-bottom: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &:active {
+    border: 0 !important;
+  }
+
+  &:hover {
+    color: var(--neutral-base-black);
+    text-decoration: none;
+    box-shadow: none;
+  }
+}
+
+.unselectableDropdownOption {
+  div {
+    cursor: default !important;
+    span {
+      font-style: italic;
+    }
+  }
+
+  &:hover {
+    background-color: inherit !important;
+  }
+
+  &:active {
+    background-color: inherit !important;
+    span {
+      color: inherit !important;
+    }
+  }
+}
+
+.statusBlob {
+  border-radius: 20px;
+  padding: 0 10px;
   height: 26px;
+  min-height: 26px;
+  min-width: 82px;
+  max-width: 82px;
+  display: flex;
+  align-items: center;
 }
 
 .greenStatusBlob {
   background-color: $light_affirmative_100;
-  border-radius: 20px;
-  padding: 4px 10px 0;
-  height: 22px;
-  min-width: 80px;
-  display: inline;
-  p {
-    margin-bottom: 0;
-  }
 }
 
 .yellowStatusBlob {
   background-color: $lighter_yellow;
-  border-radius: 20px;
-  padding: 5px 10px 0;
-  height: 22px;
-  min-width: 80px;
-  display: inline;
-  p {
-    margin: 0, 0, 0, 0;
-  }
+}
+
+.purpleStatusBlob {
+  background-color: var(--background-brand-purple-light);
+}
+
+.redStatusBlob {
+  background-color: $light_negative_100;
 }
 
 .grayStatusBlob {
   background-color: $light_gray_100;
-  border-radius: 20px;
-  padding: 5px 10px 0;
-  height: 22px;
-  min-width: 80px;
-  display: inline;
-  p {
-    margin: 0, 0, 0, 0;
+}
+
+.announcementDialog {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  max-width: 670px;
+  margin: 12px;
+
+  h2 {
+    margin: 8px 0 20px 0;
   }
 }
 
-.submitStatusText {
-  display: inline;
-  padding-top: 3px;
-  p {
-    margin-bottom: 0;
+.announcementModal {
+  max-width: 682px !important;
+  max-height: 90% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 980px) {
+  .announcementModal {
+    width: 90% !important; /* Set width to 90% of the viewport width */
   }
+}
+
+.announcementImage {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 400px;
+  max-height: 218px;
+  border-radius: 4px;
+}
+
+.announcementBody {
+  max-width: 551px;
 }

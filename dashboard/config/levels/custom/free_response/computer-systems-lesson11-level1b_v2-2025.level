@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-09-25T20:00:19.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# **User Testing Results**\r\n<div markdown=\"1\" style=\"float: right; margin: 20px; width:150px;\">\r\n\r\n![](https://images.code.org/4d322af5e2fae854097c5dbf178aad61-bikehelmet.png)\r\n\r\n</div>\r\n\r\n## **Smart Bike Helmet**\r\n\r\n### **Observations from Testing**\r\n- **User 1:** The built-in turn signals were not bright enough in daylight.\r\n- **User 2:** The voice navigation system was distracting while riding.\r\n- **User 3:** The helmet felt too tight, even in the largest adjustable setting.\r\n- **User 4:** Battery life lasted only 4 hours instead of the advertised 8 hours.\r\n- **User 5:** The helmet’s emergency alert feature falsely triggered after a hard stop.\r\n\r\n### **Survey Results**\r\n| Question                                  | User 1 | User 2 | User 3 | User 4 | User 5 | Avg. |\r\n|------------------------------------------|--------|--------|--------|--------|--------|------|\r\n| The helmet was comfortable to wear.      | 3      | 3      | 2      | 4      | 4      | 3.2  |\r\n| The turn signals were visible to others. | 2      | 3      | 4      | 3      | 4      | 3.2  |\r\n| The navigation system was helpful.       | 4      | 2      | 3      | 3      | 4      | 3.2  |\r\n| The emergency alert system worked correctly. | 3  | 3  | 3  | 3  | 2  | 2.8  |\r\n\r\n### **Quotes from User Interviews**\r\n- **User 1:** *\"The turn signals looked fine at night but weren’t visible enough during the day.\"*\r\n- **User 2:** *\"I got distracted by the voice navigation—it felt like it took my focus off the road.\"*\r\n- **User 3:** *\"Even when adjusted, the helmet felt too tight for long rides.\"*\r\n- **User 4:** *\"The battery died before my afternoon ride. It didn’t last nearly as long as I expected.\"*\r\n- **User 5:** *\"I braked hard at an intersection, and the helmet thought I crashed. My emergency contact got a false alert.\"*\r\n\r\n---\r\n\r\nBased on the results above, what are the top 3 pain points and/or themes about the product?",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "display_name": "Smart Bike Helmet",
+    "thumbnail_url": "https://images.code.org/4d322af5e2fae854097c5dbf178aad61-bikehelmet.png",
+    "bubble_choice_description": "A new smart helmet for cyclists includes built-in turn signals and safety features, but early adopters have raised concerns about visibility, battery life, and false emergency alerts.",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:00:19.453+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson11-level1b_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson11-level1b_2025\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -1,0 +1,17 @@
+name 'Data Sci U2 Post Q11_2024-pilot'
+
+question 'When creating visualizations for a data science report, why is it important to customize plots in Matplotlib, and how can this enhance the communication of your findings?'
+
+right 'Customizing plots with titles, axis labels, and legends ensures that the visualizations are self-explanatory, making it easier for the audience to understand the context and significance of the data without needing additional explanations.'
+wrong 'Customizing plots helps to hide any anomalies or outliers in the data, presenting a cleaner and more consistent narrative.'
+wrong 'Customized plots can be more visually appealing, which increases the likelihood of the report being well-received by stakeholders, regardless of the accuracy of the data presented.'
+wrong 'Customization allows for the inclusion of interactive elements in the plots, enabling the audience to explore the data in real time.'
+
+
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

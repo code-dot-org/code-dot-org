@@ -1,0 +1,48 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T20:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Optimization Helper \r\n\r\nThis chatbot is meant to help you understand how to optimize troubleshooting strategies for a given scenario.\r\n\r\n#### Do This:\r\n1. **Choose one** of the scenarios below.\r\n\r\n::: details [**Scenario 1: Graphic Design**]\r\n**User Profile**: \r\n\r\nA **graphic designer** notices their image editing software becomes slower the longer it runs, and eventually, it crashes after working on a large file for several hours. \r\n\r\n**Possible Actions:**\r\n1. Save the project and restart the application periodically to free up memory.\r\n2.\tCheck for updates or patches for the image editing software.\r\n3.\tMonitor memory usage with Task Manager while using the software.\r\n4.\tReduce the number of open projects or layers in the software.\r\n5.\tAllocate more virtual memory (swap space) on the computer.\r\n6.\tClose unnecessary background applications to free up system resources.\r\n7.\tUse a different image editing application optimized for large files.\r\n8.\tIncrease the resolution of the project file for better quality.\t\r\n9.\tInstall an older version of the software to see if the issue persists.\r\n10.\tDisable auto-save or other memory-intensive features in the software.\r\n11.\tInstall an antivirus program and run a full system scan.\r\n12.\tMove the project file to an external drive to free up internal storage.\r\n13.\tDisconnect the computer from the internet while working.\r\n14.\tOpen additional applications to “balance” the system resources.\r\n15.\tIncrease the priority of the editing software in Task Manager.\r\n:::\r\n\r\n::: details [**Scenario 2: Gaming Lag**]\r\n**User Profile**: \r\n\r\nA **gamer** experiences frequent lag during online multiplayer matches despite having a fast internet connection.\r\n\r\n**Possible Actions:**\r\n1. Reduce the graphics settings in the game.\r\n2.\tClose background applications or downloads using the internet.\r\n3.\tRestart the router or modem.\r\n4.\tUpdate the game to the latest version.\r\n5.\tCheck for graphics card driver updates.\r\n6.\tEnable “Performance Mode” in the game settings.\r\n7.\tSwitch from Wi-Fi to a wired Ethernet connection.\r\n8.\tPlay on a higher-resolution monitor to improve visuals.\r\n9.\tDisable firewall and antivirus software temporarily.\r\n10.\tClear the game’s cache files or temporary data.\r\n11.\tDisable other devices using the same network.\r\n12.\tIncrease the field of view (FOV) in the game settings.\r\n13.\tIncrease the priority of the game in Task Manager.\r\n14.\tInstall the game on an external drive for more storage space.\r\n15.\tLower the resolution of the game for less system strain.\r\n:::\r\n\r\n\r\n::: details [**Scenario 3: Laptop Battery Drain**]\r\n**User Profile**: \r\n\r\nA **student** attending back-to-back virtual classes on a laptop notices the battery draining quickly.\r\n\r\n**Possible Actions:**\r\n1. Lower the screen brightness.\r\n2.\tClose unnecessary tabs in the web browser.\r\n3.\tTurn off Bluetooth if not in use.\r\n4.\tReduce the number of open applications.\r\n5.\tSwitch to power-saving mode in the system settings.\r\n6.\tUse an external monitor for a better experience.\r\n7.\tDisconnect unused peripherals like USB devices.\r\n8.\tCharge the laptop while in class to keep it at full power.\r\n9.\tRestart the laptop before class to free up resources.\r\n10.\tUpdate the video conferencing application.\r\n11.\tDim the backlight on the keyboard (if available).\r\n12.\tDisconnect from Wi-Fi during breaks to save power.\r\n13.\tReplace the battery with a higher-capacity one.\r\n14.\tStream the class on your phone instead of the laptop.\r\n15.\tRun a full system scan for viruses during class.\r\n:::\r\n\r\n\r\n::: details [**Scenario 4: Video Rendering**]\r\n**User Profile**: \r\n\r\nA **video editor** rendering a high-resolution project on their laptop notices the system slowing down.\r\n\r\n**Possible Actions:**\r\n1. Close all unnecessary background applications.\r\n2.\tReduce the resolution or frame rate of the project.\t\r\n3.\tEnable GPU acceleration in the video editing software.\r\n4.\tIncrease the size of virtual memory (swap space).\r\n5.\tUse an external SSD to store and render files.\r\n6.\tDisable preview rendering during the editing process.\r\n7.\tUpdate the video editing software to the latest version.\r\n8.\tRestart the laptop before beginning the render.\r\n9.\tKeep additional tabs open in the browser to “balance” system resources.\r\n10.\tDisconnect from the internet during the rendering process.\r\n11.\tLower the playback quality in the editing timeline.\r\n12.\tUse an older version of the video editing software.\r\n13.\tInstall and run an antivirus scan before rendering.\r\n14.\tOpen additional applications to spread CPU usage evenly.\r\n15.\tEnable background rendering to work on other tasks simultaneously.\r\n:::\r\n&nbsp;\r\n2. Choose 2 or 3 actions from the list of **Possible Actions** that you think will optimize the system.\r\n3. **Use AI Chat** to compare the actions you selected and explain which is best. Make sure to give context for the scenario. \r\n\r\n::: details [**Not sure what prompt to use?**]\r\nTry using a prompt like this one:\r\n> Someone using an old desktop computer is experiencing significant lag when switching between different applications. Should they **check for software updates**, **reduce the number of applications open**, or **install an antivirus program**? Explain which action is the best choice for them.\r\n:::\r\n\r\n\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a knowledgeable and approachable assistant designed to help students evaluate potential actions to optimize a computer system’s performance. Students are working on an activity where they are presented with a specific system performance scenario from the following: graphic design application crashing, gaming lag, slow software, or battery drain. They are presented with a list of possible actions to solve the scenario. Your role is to help students compare different possible actions. \n\nMake sure the student has provided one of the four scenarios: graphic design application crashing, gaming lag, slow software, or battery drain. If they don't provide a scenario, prompt them to provide their scenario.\n\nMake sure the student has provided at least two possible optimization strategies. If they don't provide strategies, prompt them to provide at least two optimization strategies.\n\nProvide only the best troubleshooting option as a short summary. Your output should be no more than 3 sentences. Do not list multiple solutions or explanations—just give the most effective fix in a concise manner. For example: \"The best approach is to save the project and restart the application periodically to free up memory. This is the most immediate and practical solution to prevent crashes caused by memory leaks or excessive resource usage.\"",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:00:00.506+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson5-level3_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson5-level3_2025\"}]"
+}]]></config>
+</Aichat>

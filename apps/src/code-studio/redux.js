@@ -1,23 +1,27 @@
 /* eslint no-unused-vars: "error" */
-import codebridgeConsole from '@codebridge/redux/consoleRedux';
+import codebridgeWorkspace from '@codebridge/redux/workspaceRedux';
 
 import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
 import javalabEditor from '@cdo/apps/javalab/redux/editorRedux';
 import javalab from '@cdo/apps/javalab/redux/javalabRedux';
 import lab from '@cdo/apps/lab2/lab2Redux';
 import lab2Project from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import lab2View from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import predictLevel from '@cdo/apps/lab2/redux/predictLevelRedux';
+import lab2System from '@cdo/apps/lab2/redux/systemRedux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import layout from '@cdo/apps/redux/layout';
 import arrowDisplay from '@cdo/apps/templates/arrowDisplayRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
+import teacherRubric from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-import microBit from '../lib/kits/maker/microBitRedux';
+import microBit from '../maker/microBitRedux';
 import frozenProjectInfoDialog from '../templates/projects/frozenProjectInfoDialog/frozenProjectInfoDialogRedux';
 import projects from '../templates/projects/projectsRedux';
-import publishDialog from '../templates/projects/publishDialog/publishDialogRedux';
 
 import app from './appRedux';
+import calendar from './calendarRedux';
 import shareDialog from './components/shareDialogRedux';
 import header from './headerRedux';
 import hiddenLesson from './hiddenLessonRedux';
@@ -42,7 +46,6 @@ registerReducers({
   hiddenLesson,
   isRtl,
   responsive,
-  publishDialog,
   frozenProjectInfoDialog,
   projects,
   verifiedInstructor,
@@ -51,10 +54,15 @@ registerReducers({
   microBit,
   lab,
   lab2Project,
+  lab2View,
   javalabEditor,
   javalab,
-  codebridgeConsole,
   predictLevel,
+  lab2System,
+  codebridgeWorkspace,
+  calendar,
+  teacherRubric,
+  layout,
 });
 
 export {getStore};

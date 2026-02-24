@@ -13,19 +13,20 @@
 version: "3"
 services:
   site:
-    image: codedotorg/code-dot-org:1.9.4
+    image: codedotorg/cdo-ci:1.18
     user: ${FIXUID:-1000}:${FIXGID:-1000}
     volumes:
-      - ../:/home/circleci/code-dot-org:delegated
-      - rbenv:/home/circleci/.rbenv
+      - ../:/home/ci/code-dot-org:delegated
+      - rbenv:/home/ci/.rbenv
       - mysqldata:/var/lib/mysql
-      - yarncache:/home/circleci/.cache
-      - gcloud_config:/home/circleci/.config/gcloud
-      - $HOME/.aws:/home/circleci/.aws
+      - yarncache:/home/ci/.cache
+      - gcloud_config:/home/ci/.config/gcloud
+      - $HOME/.aws:/home/ci/.aws
     tty: true
     stdin_open: true
     environment:
       - AWS_PROFILE
+      - FIXUID
     command: bash -c "docker/dev_setup.sh"
 
 volumes:

@@ -1,0 +1,9 @@
+name 'computer-systems-lesson5-level3_2025-launch'
+display_name 'Optimization Chat'
+description 'You are an IT Help Desk agent helping customers optimize their device.'
+
+sublevels
+level 'computer-systems-lesson5-level3-choiceA_2025'
+level 'computer-systems-lesson5-level3-choiceB_2025'
+level 'computer-systems-lesson5-level3-choiceC_2025'
+level 'computer-systems-lesson5-level3-choiceD_2025'

@@ -1,0 +1,17 @@
+name 'programming-fundamentals-postassessment-question11_v2-2025'
+title 'Programming Fundamentals Post-Assessment: Question 11'
+
+wrong '`while x > 10:`'
+right '`while True:`'
+wrong '`while x != 5:`'
+wrong '`while x == 0:`'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which of the following loop conditions is most likely to result in an infinite loop if no additional logic is added to stop it?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 8: Introduction to Loops
+MARKDOWN

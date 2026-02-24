@@ -1,0 +1,101 @@
+:ruby
+  block_items = [
+    {
+      overline: hoc_s("tools_page.labs.musiclab.overline"),
+      title: hoc_s("tools_page.labs.musiclab.title"),
+      what_you_can_make: hoc_s("tools_page.labs.musiclab.what_you_can_make"),
+      experience: hoc_s("tools_page.labs.musiclab.experience"),
+      img: "images/action-blocks/action-block-music-lab.png",
+      primary_label: hoc_s("tools_page.labs.musiclab.call_to_action_learn_more"),
+      primary_url: "/music",
+      primary_aria_label: hoc_s("tools_page.labs.musiclab.aria_label_learn_more"),
+      secondary_label: hoc_s("tools_page.labs.musiclab.call_to_action_try"),
+      secondary_url: CDO.studio_url("/s/music-intro-2024/reset"),
+      secondary_aria_label: hoc_s("tools_page.labs.musiclab.call_to_action_try"),
+    },
+    {
+      overline: hoc_s("tools_page.labs.spritelab.overline"),
+      title: hoc_s("tools_page.labs.spritelab.title"),
+      what_you_can_make: hoc_s("tools_page.labs.spritelab.what_you_can_make"),
+      experience: hoc_s("tools_page.labs.spritelab.experience"),
+      img: "images/build-your-way-spritelab.png",
+      primary_label: hoc_s("tools_page.labs.spritelab.call_to_action_learn_more"),
+      primary_url: "/educate/spritelab",
+      primary_aria_label: hoc_s("tools_page.labs.spritelab.aria_label_learn_more"),
+      secondary_label: hoc_s("tools_page.labs.spritelab.call_to_action_try"),
+      secondary_url: CDO.studio_url("/projects/spritelab/new"),
+      secondary_aria_label: hoc_s("tools_page.labs.spritelab.call_to_action_try"),
+    },
+    {
+      overline: hoc_s("tools_page.labs.gamelab.overline"),
+      title: hoc_s("tools_page.labs.gamelab.title"),
+      what_you_can_make: hoc_s("tools_page.labs.gamelab.what_you_can_make"),
+      experience: hoc_s("tools_page.labs.gamelab.experience"),
+      img: "images/game-lab-banner.png",
+      primary_label: hoc_s("tools_page.labs.gamelab.call_to_action_learn_more"),
+      primary_url: "/educate/gamelab",
+      primary_aria_label: hoc_s("tools_page.labs.gamelab.aria_label_learn_more"),
+      secondary_label: hoc_s("tools_page.labs.gamelab.call_to_action_try"),
+      secondary_url: CDO.studio_url("/projects/gamelab/new"),
+      secondary_aria_label: hoc_s("tools_page.labs.gamelab.call_to_action_try"),
+    },
+    {
+      overline: hoc_s("tools_page.labs.applab.overline"),
+      title: hoc_s("tools_page.labs.applab.title"),
+      what_you_can_make: hoc_s("tools_page.labs.applab.what_you_can_make"),
+      experience: hoc_s("tools_page.labs.applab.experience"),
+      img: "/images/build-your-way-applab.png",
+      primary_label: hoc_s("tools_page.labs.applab.call_to_action_learn_more"),
+      primary_url: "/educate/applab",
+      primary_aria_label: hoc_s("tools_page.labs.applab.aria_label_learn_more"),
+      secondary_label: hoc_s("tools_page.labs.applab.call_to_action_try"),
+      secondary_url: CDO.studio_url("/projects/applab/new"),
+      secondary_aria_label: hoc_s("tools_page.labs.applab.call_to_action_try"),
+    },
+    {
+      overline: hoc_s("tools_page.labs.weblab.overline"),
+      title: hoc_s("tools_page.labs.weblab.title"),
+      what_you_can_make: hoc_s("tools_page.labs.weblab.what_you_can_make"),
+      experience: hoc_s("tools_page.labs.weblab.experience"),
+      img: "images/web-lab-banner.png",
+      primary_label: hoc_s("tools_page.labs.weblab.call_to_action_learn_more"),
+      primary_url: "/educate/weblab",
+      primary_aria_label: hoc_s("tools_page.labs.weblab.aria_label_learn_more"),
+      secondary_label: hoc_s("tools_page.labs.weblab.call_to_action_try"),
+      secondary_url: CDO.studio_url("/p/weblab"),
+      secondary_aria_label: hoc_s("tools_page.labs.weblab.call_to_action_try"),
+    },
+  ]
+
+.carousel-wrapper
+  %swiper-container.swiper-lab-list{navigation: "true", "navigation-next-el": ".nav-next-lab-list", "navigation-prev-el": ".nav-prev-lab-list", init: "false", pagination: "true"}
+    - block_items.each do |block_item|
+      %swiper-slide
+        .action-block.action-block--one-col.flex-space-between
+          .content-wrapper
+            - if block_item[:new]
+              .flex-container.justify-space-between.align-items-start
+                %p.overline
+                  = block_item[:overline]
+                %p.new
+                  =hoc_s(:new)
+            - else
+              %p.overline
+                = block_item[:overline]
+            %h3
+              = block_item[:title]
+            %img{src: block_item[:img], alt: ""}
+            %p 
+              %strong=hoc_s(:"tools_page.labs.label_what_you_can_make")
+              = block_item[:what_you_can_make]
+            %p 
+              %strong=hoc_s(:"tools_page.labs.label_experience")
+              = block_item[:experience]
+          .content-footer
+            %a.link-button{href: block_item[:primary_url], aria:{label: block_item[:primary_aria_label]}}
+              = block_item[:primary_label]
+            %a.link-button.secondary{href: block_item[:secondary_url], aria:{label: block_item[:secondary_aria_label]}}
+              = block_item[:secondary_label]
+
+  %button.swiper-nav-prev.nav-prev-lab-list
+  %button.swiper-nav-next.nav-next-lab-list

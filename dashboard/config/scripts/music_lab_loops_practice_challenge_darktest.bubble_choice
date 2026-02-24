@@ -1,0 +1,10 @@
+name 'music-lab-loops-practice-challenge_darktest'
+display_name 'Challenge'
+description 'Choose an option below to try to recreate with code.'
+uses_lab2
+
+sublevels
+level 'music-lab-loops-practice-challenge-a_darktest'
+level 'music-lab-loops-practice-challenge-b_darktest'
+level 'test-music-lab-loops-practice-choice-b_darktest'
+level 'music-lab-loops-practice-challenge-freeplay_darktest'

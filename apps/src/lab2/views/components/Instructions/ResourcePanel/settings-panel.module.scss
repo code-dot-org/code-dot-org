@@ -1,0 +1,35 @@
+@use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
+
+.settingsPanel {
+  border-top: variables.$default-border;
+  background: var(--background-neutral-secondary);
+  flex: 1;
+
+  .settingsHeader {
+    background-color: var(--background-neutral-secondary);
+  }
+}
+
+.settingsList {
+  display: flex;
+  padding: 0.625rem 0.625rem 1rem 0.625rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  align-self: stretch;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dropdown {
+  width: 100%;
+
+  > div,
+  select {
+    width: 100%;
+  }
+}
+
+.languageForm {
+  width: 100%;
+}

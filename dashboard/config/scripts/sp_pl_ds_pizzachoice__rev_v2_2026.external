@@ -1,0 +1,34 @@
+name 'sp-pl-DS-PizzaChoice_-rev_v2_2026'
+title 'Check for Understanding'
+
+
+markdown <<MARKDOWN
+# Cleaning Data
+
+#### In this check for understanding level, students will practice **cleaning data** in Google Sheets.
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+<p style = "font-size:14pt;"><strong>How to Clean Data:</strong></p>
+  <ul style = "font-size:14pt;">
+    <li>Fix errors such as misspelled words</li><br>
+    <li>Create clearn categories such as "other"</li><br>
+    <li>Delete unnecessary data such as "I don't know"</li>
+</ul>
+</div>
+
+## 📝 To Do
+
+#### Try out cleaning data in Google Sheets.
+
+#### 1. Open the <a href="https://docs.google.com/spreadsheets/d/1MMsZwVwDaGNSol6RMsQk9NklsYBtgQyiEIxuSwmykIA/edit?usp=drive_link">Pizza Choice - Google Sheets</a>.
+#### 2. For each response, decide if you want to:
+- #### Keep it the same
+- #### Delete it
+- #### Change it
+
+#### 3. Put your cleaned data in the second column--and graph it! See the sample below:
+
+<br>
+
+<img src="https://images.code.org/e18f3f41255f3b529344dba9dcb86677-image-1744731350249.png" alt="Data set showing topping preferences and a sample bar chart" alt="chatbot lab level" width="90%" style="border: 2px solid black; border-radius: 8px; display: block; margin: auto">
+MARKDOWN

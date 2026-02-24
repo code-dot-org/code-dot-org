@@ -1,0 +1,25 @@
+:ruby
+  news_item = [
+    {
+      slug: "education_week",
+      url: "https://www.edweek.org/technology/this-ai-tool-cut-one-teachers-grading-time-in-half-how-it-works/2024/04",
+    },
+    {
+      slug: "blog",
+      url: "https://codeorg.medium.com/code-org-wins-2024-best-of-stem-award-155e55bde866",
+    },
+  ]
+
+%h2.white=hoc_s("ai_ta_page.in_the_news.header")
+.action-block__wrapper.action-block__wrapper--two-col
+  - news_item.each do |news_item|
+    .action-block.action-block--one-col.flex-space-between
+      .content-wrapper
+        %p.overline
+          =hoc_s("ai_ta_page.in_the_news.#{news_item[:slug]}_label")
+        %h3
+          =hoc_s("ai_ta_page.in_the_news.#{news_item[:slug]}_headline")
+        %img{src: "/images/ai/page/teaching-assistant/#{news_item[:slug]}-image.png", alt: ""}
+      .content-footer
+        %a.link-button{href: news_item[:url]}
+          =hoc_s("ai_ta_page.in_the_news.#{news_item[:slug]}_button")

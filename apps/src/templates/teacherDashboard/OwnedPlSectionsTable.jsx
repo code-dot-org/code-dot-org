@@ -5,8 +5,8 @@ import {connect} from 'react-redux';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
+import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
@@ -17,9 +17,9 @@ import wrappedSortable from '../tables/wrapped_sortable';
 
 import SectionActionDropdown from './SectionActionDropdown';
 import {sortableSectionShape} from './shapes';
-import {getSectionRows} from './teacherSectionsRedux';
+import {getSectionRows} from './teacherSectionsReduxSelectors';
 
-import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
+import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 
 /** @enum {number} */
 export const COLUMNS = {
@@ -47,7 +47,12 @@ export const sectionLinkFormatter = function (name, {rowData}) {
 };
 
 export const courseLinkFormatter = function (course, {rowData}) {
-  const {assignmentNames, assignmentPaths, courseOfferingsAreLoaded} = rowData;
+  const {
+    assignmentNames,
+    assignmentPaths,
+    courseOfferingsAreLoaded,
+    isAssignedSingleUnitCourse,
+  } = rowData;
   return (
     <div>
       {courseOfferingsAreLoaded ? (
@@ -60,7 +65,7 @@ export const courseLinkFormatter = function (course, {rowData}) {
           >
             {assignmentNames[0]}
           </a>
-          {assignmentPaths.length > 1 && (
+          {assignmentPaths.length > 1 && !isAssignedSingleUnitCourse && (
             <div style={plTableLayoutStyles.currentUnit}>
               <div>{i18n.currentUnit()}</div>
               <a
@@ -285,7 +290,7 @@ class OwnedPlSectionsTable extends Component {
     })(this.props.sectionRows);
 
     return (
-      <Table.Provider columns={columns}>
+      <Table.Provider className="uitest-owned-pl-sections" columns={columns}>
         <Table.Header />
         <Table.Body
           className="uitest-sorted-rows"

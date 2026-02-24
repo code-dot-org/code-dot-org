@@ -863,6 +863,55 @@ en:
         PL_ProgressFeedbackAssessment2024: 'Getting Started: Progress Feedback & Assessment'
         PL_LMSIntegrations_2024: 'Getting Started: Integrations for Learning Management Systems'
         game_design_intro: Intro to Game Design
+        llms-intro-gen-ai: Introduction to Large Language Models (Exploring Gen AI)
+        gen-ai-input-pretraining: 'Generative AI: Input & Pre-training'
+        gen-ai-storage-embeddings: 'Generative AI: Storage & Embeddings'
+        gen-ai-processing-neuralnets: 'Generative AI: Processing & Neural Networks'
+        gen-ai-attention: 'Generative AI: Attention'
+        gen-ai-output-probabilities: 'Generative AI: Output & Probabilities'
+        PL-genAI-input: 'Generative AI: Input & Pre-training'
+        PL-genAI-Embeddings: 'Generative AI: Storage & Embeddings'
+        PL-genAI-neuralnetworks: 'Generative AI: Processing & Neural Networks'
+        PL-genAI-attention: 'Generative AI: Attention'
+        PL-genAI-output: 'Generative AI: Output & Probabilities'
+        gen-ai-understanding-embeddings-overview: Activity Overview - Understanding Embeddings
+        gen-ai-how-embeddings-work-overview: Activity Overview - How Embeddings Work
+        gen-ai-neural-networks-overview: Activity Overview - How Neural Networks Work
+        gen-ai-attention-overview: Activity Overview - Attention is All You Need
+        self-paced-gen-ai-retrieval-example: Retrieval Example
+        music_jam_intro: 'Music Lab: Jam Session Intro'
+        self-paced-pl-data-science: CODAP Tutorial
+        PL_equitymod_identity: 'Chimamanda Ngozi Adichie: The Danger of a Single Story'
+        PL-equitymod-belongingvid: Building a Belonging Classroom
+        PL_equitymod_implicitbias: 'Implicit Bias: Peanut Butter, Jelly and Racism'
+        PL_equitymod_access: 'How to bring computer science to your elementary school: Be a changemaker'
+        bias-deb-raji: Algorithmic Bias with Dr Deborah Raji
+        ai-auditing-deb-raji: AI Auditing with Dr Deborah Raji
+        csaif-pilot-game-streamer: 'Game Streamer '
+        csaif-pilot-music-producer: Music Producer CPU
+        csaif-pilot-content-creator: Content Creator
+        csaif-pilot-graphic-designer: Graphic Designer
+        convenience_v_privacy: Convenience vs Privacy - Facial Recognition
+        cs_is_everything: Computer Science is Everything
+        musiclab_shakira: Shakira Singer Songwriter
+        musiclab_rosa_linn: Rosa Linn, Singer Songwriter
+        musiclab_henny: Henny tha Bizness, Record Producer
+        musiclab_aloe_blacc: Aloe Blacc, Singer Songwriter
+        career_pharmacist_hold: Career Journey - Pharmacist
+        career_data_security_hold: Career Journey - Data Security
+        career_data_tech_hold: Career Journey - Data Operations Technician
+        ai-and-ethics-privacy-and-the-future: 'Ethics and AI: Privacy and the Future'
+        music-lab-roxanne-sequencing: 'Music Lab: Timing and Sequencing'
+        music-lab-roxanne-triggers: 'Music Lab: Triggers'
+        music-lab-roxanne-interview-6-12: 'Music Lab Spotlight: Roxanne Harris (6-12)'
+        music-lab-roxanne-interview-k-5: 'Music Lab Spotlight: Roxanne Harris (K-5)'
+        music-lab-roxanne-sound-designer: 'Music Lab: Sound Designer'
+        music-lab-henny-career-spotlight: 'Music Lab Spotlight: Henny Tha Bizness'
+        PL_LMSIntegrations_2025_Updated: 'Getting Started: Integrating Learning Management Systems'
+        problem-solving-with-ai-1: Problem Solving with AI
+        gen-ai-careers: Careers in Exploring Generative AI
+        zz-testing-video-upload: zzTesting Video Upload
+        mix_move_ai_intro: Mix & Move with AI Intro
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

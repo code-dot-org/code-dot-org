@@ -4,17 +4,6 @@ CDO.cdo_secrets&.required! unless rack_env?(:development) || CDO.unit_test
 
 require File.expand_path('../router', __FILE__)
 
-unless rack_env?(:development)
-  require 'cdo/app_server_metrics'
-  listener = CDO.pegasus_sock || "0.0.0.0:#{CDO.pegasus_port}"
-  use Cdo::AppServerMetrics,
-    listeners: [listener],
-    dimensions: {
-      Environment: CDO.rack_env,
-      Host: CDO.pegasus_hostname
-    }
-end
-
 use Rack::Session::Cookie, secret: (CDO.sinatra_session_secret || 'dev_mode')
 
 require 'rack/ssl-enforcer'
@@ -25,7 +14,22 @@ use Rack::SslEnforcer,
   # The only exception is in :development, where no HTTP-cache layer is present.
   only_environments: 'development',
   # Only HTTPS-redirect in development when `https_development` is true.
-  ignore: lambda {|request| !request.ssl? && !CDO.https_development}
+  ignore: ->(request) {!request.ssl? && !CDO.https_development}
+
+if CDO.use_cookie_dcdo
+  # Enables the setting of DCDO via cookies for testing purposes.
+  require 'cdo/rack/cookie_dcdo'
+  use Rack::CookieDCDO
+end
+
+if CDO.use_geolocation_override
+  # Apply the remote_addr middleware to allow pretending to be at a particular IP
+  require 'cdo/rack/geolocation_override'
+  use Rack::GeolocationOverride
+end
+
+require 'cdo/rack/global_edition'
+use Rack::GlobalEdition
 
 require 'varnish_environment'
 use VarnishEnvironment
@@ -48,12 +52,6 @@ end
 if CDO.image_optim
   require 'cdo/rack/optimize'
   use Rack::Optimize
-end
-
-if CDO.use_cookie_dcdo
-  # Enables the setting of DCDO via cookies for testing purposes.
-  require 'cdo/rack/cookie_dcdo'
-  use Rack::CookieDCDO
 end
 
 # Disable Sinatra auto-initialization.

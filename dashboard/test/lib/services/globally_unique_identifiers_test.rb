@@ -20,30 +20,34 @@ class Services::GloballyUniqueIdentifiersTest < ActiveSupport::TestCase
   end
 
   test 'build_vocab_key' do
-    course_offering = create :course_offering, key: 'test-course'
-    course_version = create :course_version,
+    course_offering = create(:course_offering, key: 'test-course')
+    course_version = create(:course_version,
       course_offering: course_offering,
       key: '1999'
-    vocabulary = create :vocabulary,
+)
+    vocabulary = create(:vocabulary,
       key: 'example_vocab',
       word: "Example Vocabulary",
       definition: "An example vocabulary entry for testing",
       course_version: course_version
+)
 
     assert_equal 'example_vocab/test-course/1999',
       Services::GloballyUniqueIdentifiers.build_vocab_key(vocabulary)
   end
 
   test 'build_resource_key' do
-    course_offering = create :course_offering, key: 'test-course'
-    course_version = create :course_version,
+    course_offering = create(:course_offering, key: 'test-course')
+    course_version = create(:course_version,
       course_offering: course_offering,
       key: '1999'
-    resource = create :resource,
+)
+    resource = create(:resource,
       key: 'example-resource',
       name: "Example Resource",
       url: "example.com",
       course_version: course_version
+)
 
     assert_equal 'example-resource/test-course/1999',
       Services::GloballyUniqueIdentifiers.build_resource_key(resource)

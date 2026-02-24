@@ -1,0 +1,36 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-02-21T04:08:19.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Ordered Steps",
+    "project_template_level_name": "CSD U2L13-L6b-template-2025",
+    "long_instructions": "<img src=\"https://images.code.org/7678fb60183ec04054c5f5eb9a9c41a6-orderedSteps.png\" style=\"float: right; width: 300px;\">\r\n\r\n# Ordered Steps\r\n\r\nLet's practice ordering our items by changing the order of the steps from the previous practice level b so that they look like the image to the right!\r\n\r\n_You should make sure you have completed the previous practice level b before completing this practice level._\r\n\r\nDon't forget, a value of `0` is the default. Giving a negative value, like `-1` will move the item to the left of the other items and giving a value greater than 0, like `1`, will move the item to the right of the other items. \r\n\r\nAnd of course, we can always give our items a specific number value to order our items in the order we want, like `1`, `2`, `3`, etc.\r\n\r\n# Do This\r\n\r\n**In the CSS file:**\r\n1. Add the `order` property to each of the paragraph child elements to match the image to the right!\r\n\r\n\r\n<br>\r\n\r\n::: details [🔎 **Show Me How To Get Started** 🔍]\r\n\r\n<img src=\"https://images.code.org/b382ff5c92c673cb41539d187033b689-image-1708196235525.gif\" style=\"width:500px\">\r\n\r\n:::\r\n\r\n<br>\r\n\r\n\r\n\r\n**Don't forget to refer back to your <a href=\"https://docs.google.com/document/d/1lrkMGcPwjKo4g5uyvVfaXpFb7kRUfdtqcsqLRtaDWYM/edit?usp=sharing\">Flexbox Children Cheat Sheet</a> when needed!**\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Flex Children](https://studio.code.org/courses/csd-2024/guides/flex-children)\r\n- [<i class=\"fa-solid fa-book\"></i> Flexbox](https://studio.code.org/courses/csd-2024/guides/flexbox)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Selectors](https://studio.code.org/courses/csd-2024/guides/html-selectors)\r\n- [<i class=\"fa-solid fa-book\"></i> Div Tags](https://studio.code.org/courses/csd-2024/guides/div)\r\n- [<i class=\"fa-solid fa-book\"></i> Classes](https://studio.code.org/courses/csd-2024/guides/classes)\r\n- [<i class=\"fa-solid fa-book\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "bubble_choice_description": "Practice setting the `order` property to order the steps from practice level b!",
+    "thumbnail_url": "https://images.code.org/7678fb60183ec04054c5f5eb9a9c41a6-orderedSteps.png",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMq6axOHbZCY2Ot6j2ta\nc2xUssWeFgyQik6LW5d9KjvGXB0WNtSc6Aew3gFAHiWxOPOkXODL1KEHdyrC\n197vfOvUyempysyXw77NCjviYRUdHKAC/uKseWjOSd/luHbWryZc9iBMHMte\nHk6nqUJ6FIxUZW91dEZAVOD6d5Nnt8JE6cDhMmGH1Qa1uQsXNZ7A/sXGNI6S\nMuoyQSQOP2IvGZFPWS7H+seWPxBtZ6Y/cISo3IqH2iB9QG1tcDLeVSbZQoJj\nG7brlWQ05zM9dYgJy0/8YP//T6QwXhwPeHp5u9O9nDKrp6rK0zDv4TM4UigI\n6yUaalkWetuMGjdZ9Waii6kgyPJyrOfkAo0ykKr9mbXpNeKTFOR60pqcM++5\n2PPs3N74GHJK7VAMpAI7vN9FrjMVwCgwWagNv2BNAsZqqiNx+1OPimxcNa01\nekkcBRJi2/ZTFmZEDCP8mfL8aH6gWaX59vkXc+YwEazsqMoU5Zl1ijDjKDvh\nTMO9KVYb6jVgfHkIpV7gXMGBq2KCfClReUXy0t3gflJZ6/c4o0xHmPVNTN7f\nZcfTRJBpQySHVkGuuld1nKYCslmf1U7Wou/w7jqAUqE5T7uQHvn0gRXZhOrc\nDe9oUm+zs/xeNTPOXOs06vJt3s00UavQ95emhnTASGRfZM8PP3QxhkwVMGX9\nEsoHz07/ZKV8/ZHFr8ZeesGpkgbSIi2Yz1SoTornKQDZ6zdLEU6eIARJ1X0R\njzpZ18jg07B3+plfcC6/OpH7jC5xbTBnnGnBxIN73IHQVduiNRNZYjULTEvF\nXjfrbaDqqUHLsPSPcw10n/Fm52IB+vUf70/x6Y3mB2RoOs6pAOzMttnSCfC5\nZfGZHUnWk3V4BMHM0lNMClkCNbZAP/hDLxJeykQwhScI5y1LuV8IvRm0Wagc\nAFjnRGW6D/flDJffwFoehGfDc5hoJaw50g6iUddhRPczqliVDrH0nhEL5To7\nnEgGZbGwr4+sEoF5P4Q0+xd4MEI1+lK/KetXOwzMtinFhuAskBsBnkx8uuKm\na0rKrSDB+VHhR25MWJY96R7wuMtp9+oGVZ6Dcmu3rJz6QNkGl/M4wokajTCM\ne5DeBFoaZ5WQPEu2D1ifvZyct3F8Nrt2FTJvOpBGo03OY8mhFhJDva6+unVu\ndcSbVd+Xbz4k97i8aWmsGDJykLGsNQhSonbxGPTaHrm7oz5jXaQAR9tAEFSp\nyZFiBrOA6Dn6LWP9akBxO5YndEWDHtnRScNtj25OGbIHPv/QvXRgyuHz3bmY\nqY941DX4DBDsqu7IwEUw3LF+FOoWGKwiL1AZ98S8zyRHEsliszgW+8gcfUUT\n2kb9mqutgT10FPFnkmbMUXUrmvfGUFOM0ngLMKl+GyksoZC27MypUV3s+A34\nVSY9bfgoFAa8UkPGmv/30E4m2tRn7KOIm5FHmbDHgJIdIg6xvSUfZ487nrb+\n84VvDfT7kygUogrAw66JR50bqN9dcTid4vKD90O9AmMOzGuziaAYp3vgV0E6\nbOGhjl2D/8RqF737v48lM2+SPxCtVERW4e4yq3EkjGlfH5BjZY2eJRhSkm2h\nEhhi5ELsV4kJcvfOaR8yjldILBbENxnRrRlTt4yJ5jrnMKA0LlfhuftYMT9j\n1qelNQ==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-21 04:09:00 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

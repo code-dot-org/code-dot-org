@@ -1,0 +1,53 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-09-25T20:08:25.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/a725584a2c7bff7f38734cd9631535f5-Panel Levels Slide Deck (3).png",
+        "key": "hardware-components-e56bb056-0af5-475f-b8e1-7b49f9c79f82",
+        "layout": "text-bottom-right",
+        "typing": false,
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "### Examine the Row\n- Decide if anything needs to be changed.\n- If not, copy over the original data as it is.\n",
+        "imageUrl": "https://images.code.org/6b5e33ef7143bee9a7fe822a29da243c-Screenshot 2025-04-16 at 12.51.42 PM.png",
+        "key": "hardware-components-60bbd87e-b298-4721-8344-14ba7f84abc6",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "### Clean the Data\n- If the data needs to be cleaned, decide if you will:\n    - Change it\n    - Delete it",
+        "imageUrl": "https://images.code.org/c2c4beb4b9e10375aa468e90320c3824-Screenshot 2025-04-16 at 12.53.19 PM.png",
+        "key": "data-science-ch1-lesson8-cleaning-data-panel_2025_launch-63dc953b-1d36-47b0-aad4-ceade3d5d1a9"
+      },
+      {
+        "text": "###Sort the Data\n- Click the drop-down to sort the column either A -> Z or Z -> A\n- Sorting groups similar responses together.\n   - Makes it easier to spot misspellings, off-topic answers, etc.\n   - Can help you clean your data more efficiently",
+        "imageUrl": "https://images.code.org/9edee676683f7dc902bf2d9ef3c14afd-sorting1.gif",
+        "key": "data-science-ch1-lesson8-cleaning-data-panel_2025_launch-b29bb984-152f-4abc-9c4c-678b7cdc939c",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "###Use Copy and Paste\n- Use Ctrl + C to copy a clean value you've already typed.\n- Use Ctrl + V to paste it into other matching cells.\n- Why it helps:\n   - Saves time when cleaning lots of similar answers.\n   - Prevents typos or inconsistent spelling (like “BBQ Chicken” vs. “Bbq chicken”).",
+        "imageUrl": "https://images.code.org/6ca8c08f6dbb3580c682e5480fb2d4b6-copy and paste.gif",
+        "key": "data-science-ch1-lesson8-cleaning-data-panel_2025_launch-6685d17c-4e27-4c1b-a20f-4d859b9029a4"
+      },
+      {
+        "text": "###Drag to Duplicate\n- Hover over the bottom right corner of a cell until you see a small blue square.\n- Click and drag down to fill the same cleaned value into multiple cells.\n- Why it helps:\n   - Speeds up cleaning when the same correction applies to several rows in a row.\n   - Works best when your data is sorted so similar values are grouped together.",
+        "imageUrl": "https://images.code.org/597de639595196b3588325b154437f77-duplicating.gif",
+        "key": "data-science-ch1-lesson8-cleaning-data-panel_2025_launch-024425c6-e53f-436f-be9f-c00e644d0985"
+      }
+    ],
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:08:25.375+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson8-cleaning-data-panel_2025_launch\\\"\"],\"cloned_from\":\"data-science-ch1-lesson8-cleaning-data-panel_2025_launch\"}]"
+}]]></config>
+</Panels>

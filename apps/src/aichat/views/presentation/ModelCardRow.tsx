@@ -1,7 +1,7 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography} from '@mui/material';
 import React, {useMemo} from 'react';
 
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-import {BodyThreeText, Heading6} from '@cdo/apps/componentLibrary/typography';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
 import InfoTooltipIcon from '../InfoTooltipIcon';
@@ -45,8 +45,6 @@ const ModelCardRow: React.FunctionComponent<ModelCardRowProps> = ({
     <>
       <div className={moduleStyles.modelCardAttributes}>
         <CollapsibleSection
-          collapsedIcon="caret-right"
-          expandedIcon="caret-down"
           headerContent={
             <div className={moduleStyles.sectionHeader}>
               {titleIcon && (
@@ -55,12 +53,13 @@ const ModelCardRow: React.FunctionComponent<ModelCardRowProps> = ({
                   className={moduleStyles.titleIcon}
                 />
               )}
-              <Heading6
-                visualAppearance="heading-xs"
+              <Typography
                 className={moduleStyles.sectionTitle}
+                variant="h6"
+                gutterBottom
               >
                 {title}
-              </Heading6>
+              </Typography>
               <InfoTooltipIcon
                 id={title}
                 tooltipText={tooltipText}
@@ -69,9 +68,13 @@ const ModelCardRow: React.FunctionComponent<ModelCardRowProps> = ({
             </div>
           }
         >
-          <BodyThreeText className={moduleStyles.expandedContent}>
+          <Typography
+            className={moduleStyles.expandedContent}
+            variant="body3"
+            gutterBottom
+          >
             <div>{expandedContentToDisplay}</div>
-          </BodyThreeText>
+          </Typography>
         </CollapsibleSection>
       </div>
       <hr className={moduleStyles.borderLine} />

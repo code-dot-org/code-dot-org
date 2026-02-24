@@ -1,6 +1,7 @@
 require_relative '../../deployment'
 require 'cdo/chat_client'
 require 'cdo/rake_utils'
+require 'cdo/python_venv'
 require lib_dir 'cdo/data/logging/rake_task_event_logger'
 include TimedTaskWithLogging
 
@@ -39,7 +40,22 @@ namespace :lint do
     end
   end
 
-  timed_task_with_logging all: [:ruby, :haml, :scss, :javascript]
+  # lint python:
+  desc 'Lints Python code.'
+  timed_task_with_logging :python do
+    Dir.chdir(python_dir) do
+      PythonVenv.lint
+    end
+  end
+
+  desc 'Check for Rails code loader errors.'
+  timed_task_with_logging :zeitwerk do
+    Dir.chdir(dashboard_dir) do
+      RakeUtils.rake_stream_output('zeitwerk:check')
+    end
+  end
+
+  timed_task_with_logging all: [:ruby, :haml, :scss, :javascript, :python, :zeitwerk]
 end
 desc 'Lints all code.'
 timed_task_with_logging lint: ['lint:all']

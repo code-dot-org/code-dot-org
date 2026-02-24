@@ -1,0 +1,17 @@
+name 'networks-preassessment-question7_v2-2025'
+title 'Networks and the Internet Pre-Assessment: Question 7'
+
+wrong 'It encrypts data for secure communication'
+right 'It manages the transmission of web pages from servers to browsers'
+wrong 'It controls network traffic between routers'
+wrong 'It translates domain names into IP addresses'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which of the following best describes the function of HTTP (HyperText Transfer Protocol)?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 6: HTTP and DNS
+MARKDOWN

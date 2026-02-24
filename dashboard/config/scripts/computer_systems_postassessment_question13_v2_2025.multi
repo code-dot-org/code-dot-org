@@ -1,0 +1,17 @@
+name 'computer-systems-postassessment-question13_v2-2025'
+title 'Computer Systems and Devices Post-Assessment: Question 13'
+
+wrong 'AI will stop evolving after a certain point'
+right 'AI may cause job displacement in certain industries'
+wrong 'AI will eliminate the need for programming'
+wrong 'AI will only be used in scientific research'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which statement best describes a potential challenge of AI and automation in the future?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 12: Just Because We Can, Should We?
+MARKDOWN

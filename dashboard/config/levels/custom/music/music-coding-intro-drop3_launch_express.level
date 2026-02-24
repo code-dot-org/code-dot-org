@@ -1,0 +1,283 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-04-30T20:39:31.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "level_data": {
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "oG~wmPtW6bbNmv[*-6?e",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "ArKMz1@GoqVsk+~x=p1/",
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "chainsmokers_coldplay_something_just_like_this/drums_tom_build"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "q#fzceb}@j}*_q.qmGG]",
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "chainsmokers_coldplay_something_just_like_this/piano_build"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sounds_sequential",
+                                "id": "4va!0Q`U_3)$Q1iF![+=",
+                                "extraState": {
+                                  "disableNextConnection": true
+                                },
+                                "inputs": {
+                                  "code": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": ";*UwE:0E?G9hIuLBvM;X",
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "chainsmokers_coldplay_something_just_like_this/vocals_prechorus_3"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": ":X(~,hry{?#:R3%S/55Y",
+                                          "extraState": {
+                                            "disableNextConnection": true
+                                          },
+                                          "fields": {
+                                            "sound": "chainsmokers_coldplay_something_just_like_this/vocals_prechorus_4"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together",
+                      "id": "U[TROR#1T/kkdIGvhR55",
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "inputs": {
+                        "code": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "^C8YoI!oXY:N|Xv9-EHs",
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "chainsmokers_coldplay_something_just_like_this/drums_drop_beat"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "4)gmJEN=hUbEt:gGKUoi",
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "chainsmokers_coldplay_something_just_like_this/synth_drop_1"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "BBI=3cBb`%(e#0yM.1Eu",
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "chainsmokers_coldplay_something_just_like_this/vocals_hook_high"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "library": "launch2024",
+      "packId": "chainsmokers_coldplay_something_just_like_this",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Functions": [
+
+          ],
+          "Control": [
+            "play_sounds_together",
+            "repeat_simple2",
+            "play_sounds_sequential"
+          ],
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ]
+        }
+      },
+      "sounds": {
+        "chainsmokers_coldplay_something_just_like_this": [
+          "vocals_prechorus_4",
+          "vocals_prechorus_3",
+          "drums_tom_build",
+          "piano_build",
+          "drums_drop_beat",
+          "synth_drop_1",
+          "synth_drop_2",
+          "drums_crash",
+          "piano_full_1",
+          "vocals_hook_high",
+          "vocals_hook_low"
+        ]
+      },
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "id": "w`@T?q/eD5YPshpz3BSR",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "chainsmokers_coldplay_something_just_like_this/drums_drop_beat"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_rest_at_current_location_simple2",
+            "id": "Sn#zCXvzwKusNEaxNOxe",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "rest_duration": "<field name=\"rest_duration\">1</field>"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "id": "PwQW[U[#a9(0XxV-P?2?",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_sequential",
+            "id": "iPn8PY=De}SehQ|#5D7d",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "repeat_simple2",
+            "id": ".+Q(|wX8]{cD$pi8!imf",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "times": 1
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      }
+    },
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "long_instructions": "####<i class=\"fa-solid fa-sparkles\"></i> Get inspired!\r\n\r\n1. Play this song\r\n2. Explore and tinker with the code\r\n3. Press Continue when you are done ",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "display_name": "Something Just Like This",
+    "bubble_choice_description": "By The Chainsmokers & Coldplay",
+    "validations": [
+      {
+        "key": "music-coding-intro-drop3_cbf812aa-8ab3-445b-be68-04ea24aba753",
+        "message": "Change a few sounds and tinker with the code. When you're done, click Continue.",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 6
+          }
+        ]
+      },
+      {
+        "key": "music-coding-intro-drop3_launch_c8d747ac-31a6-4a12-a2a7-61fa6414130d",
+        "message": "Change a few sounds and tinker with the code.",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_chord_at_current_location_simple2:1"
+          }
+        ]
+      }
+    ],
+    "name_suffix": "_express",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "thumbnail_url": "https://images.code.org/fc8e61fefda453ad380281775c5fb053-The_Chainsmokers_Grandoozy_2018_(45208197432).jpg",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-04-30T20:39:31.923+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-drop3_launch\\\"\"],\"cloned_from\":\"music-coding-intro-drop3_launch\"},{\"changed_at\":\"2025-05-09 15:42:59 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

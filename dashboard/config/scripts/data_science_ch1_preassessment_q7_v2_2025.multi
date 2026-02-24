@@ -1,0 +1,17 @@
+name 'data-science-ch1-preassessment-q7_v2-2025'
+
+question 'Which of the following is an example of an ethical issue in data collection?'
+
+wrong 'Creating a bar chart instead of a line graph.'
+right 'Using a dataset without verifying its source or accuracy.'
+wrong 'Using open-ended survey questions.'
+wrong 'Organizing data by categories.'
+
+
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

@@ -1,13 +1,21 @@
+import Button, {buttonColors} from '@code-dot-org/component-library/button';
+import {Typography} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
-import {Heading3, StrongText} from '@cdo/apps/componentLibrary/typography';
-import Button from '@cdo/apps/legacySharedComponents/Button';
-import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
+import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import * as utils from '@cdo/apps/utils';
 import {FeaturedProjectStatus} from '@cdo/generated-scripts/sharedConstants';
 
-import {ExtraLinksLevelData, ExtraLinksProjectData} from '../types';
+import {
+  ExtraLinksLevelData,
+  ExtraLinksProjectData,
+  ParentLevelPathLink,
+  ScriptLevelPathLink,
+} from '../types';
+
+import {useLevelProperties} from './LevelPropertiesWrapper';
 
 import moduleStyles from './extra-links.module.scss';
 
@@ -36,15 +44,17 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
   const [deleteError, setDeleteError] = useState('');
   const [featuredProjectStatus, setFeaturedProjectStatus] = useState<
     string | undefined
-  >('');
+  >(projectLinkData?.project_info?.featured_status);
+  const [abuseScore, setAbuseScore] = useState<number | undefined>(
+    projectLinkData?.project_info?.abuse_score
+  );
 
   const channelId: string | undefined = useAppSelector(
     state => state.lab.channel && state.lab.channel.id
   );
 
-  const isStandaloneProject: boolean = useAppSelector(
-    state => !!state.lab.levelProperties?.isProjectLevel
-  );
+  const isStandaloneProject =
+    useLevelProperties().levelProperties.isProjectLevel || false;
 
   useEffect(() => {
     setClonedLevelName(levelLinkData.level_name);
@@ -53,6 +63,12 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
   useEffect(() => {
     if (projectLinkData?.project_info) {
       setFeaturedProjectStatus(projectLinkData?.project_info.featured_status);
+    }
+  }, [projectLinkData]);
+
+  useEffect(() => {
+    if (projectLinkData?.project_info?.abuse_score) {
+      setAbuseScore(projectLinkData.project_info.abuse_score);
     }
   }, [projectLinkData]);
 
@@ -121,14 +137,33 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
     }
   };
 
+  const onResetAbuseScore = async () => {
+    try {
+      await HttpClient.post(
+        `/v3/channels/${channelId}/abuse/delete`,
+        '',
+        true,
+        {contentType: 'application/json;charset=UTF-8'}
+      );
+      setAbuseScore(0);
+    } catch (e) {
+      // Set abuse score to number < 0 so that error message will be displayed to the admin user.
+      setAbuseScore(-1);
+    }
+  };
+
   return isOpen ? (
-    <AccessibleDialog onClose={onClose}>
-      <Heading3>Extra links</Heading3>
+    <AccessibleDialog onClose={onClose} theme="Light">
+      <Typography variant="h3" gutterBottom>
+        Extra links
+      </Typography>
       {Object.entries(levelLinkData.links).map(([listTitle, links]) => (
         // Levels can be part of level groups (sublevels) and/or can be a template level
         // so we list these here as well.
         <div key={`${listTitle}-div`}>
-          <StrongText key={`${listTitle}-title`}>{listTitle}</StrongText>
+          <Typography key={`${listTitle}-title`} variant="strong">
+            {listTitle}
+          </Typography>
           <ul key={`${listTitle}-list`}>
             {links.map(link => (
               <li key={link.url}>
@@ -167,11 +202,16 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
       <ScriptLevelPathLinks
         scriptLevelPathLinks={levelLinkData.script_level_path_links}
       />
+      <ParentLevelPathLinks
+        parentLevelPathLinks={levelLinkData.parent_level_path_links}
+      />
       <ProjectLinkData
         isStandaloneProject={isStandaloneProject}
         projectLinkData={projectLinkData}
         featuredProjectStatus={featuredProjectStatus}
         onBookmark={onBookmark}
+        onResetAbuseScore={onResetAbuseScore}
+        abuseScore={abuseScore}
       />
     </AccessibleDialog>
   ) : null;
@@ -204,8 +244,7 @@ const CloneLevelButton: React.FunctionComponent<CloneLevelButtonProps> = ({
   return (
     <div>
       <Button
-        size={Button.ButtonSize.small}
-        color={Button.ButtonColor.purple}
+        size="xs"
         onClick={() => setShowCloneField(!showCloneField)}
         text={showCloneField ? 'Cancel Clone' : 'Clone'}
       />
@@ -217,11 +256,7 @@ const CloneLevelButton: React.FunctionComponent<CloneLevelButtonProps> = ({
             value={clonedLevelName}
             onChange={event => setClonedLevelName(event.target.value)}
           />
-          <Button
-            onClick={handleClone}
-            text={'Clone'}
-            size={Button.ButtonSize.small}
-          />
+          <Button onClick={handleClone} text={'Clone'} size="xs" />
           {cloneError && (
             <p className={moduleStyles.errorMessage}>{cloneError}</p>
           )}
@@ -253,19 +288,16 @@ const DeleteLevelButton: React.FunctionComponent<DeleteLevelButtonProps> = ({
   return (
     <div>
       <Button
-        size={Button.ButtonSize.small}
+        size="xs"
         text={showDeleteConfirm ? 'Cancel Delete' : 'Delete'}
-        color={Button.ButtonColor.red}
+        color={buttonColors.destructive}
         onClick={() => setShowDeleteConfirm(!showDeleteConfirm)}
+        className={moduleStyles.bottomButton}
       />
       {showDeleteConfirm && (
         <div>
           {'Are you sure you want to delete this level? '}
-          <Button
-            onClick={handleDelete}
-            text={'Confirm Delete'}
-            size={Button.ButtonSize.small}
-          />
+          <Button onClick={handleDelete} text={'Confirm Delete'} size="xs" />
           {deleteError && (
             <p className={moduleStyles.errorMessage}>{deleteError}</p>
           )}
@@ -286,12 +318,7 @@ const FeaturedProjectInfo: React.FunctionComponent<
     return (
       <>
         <div>Not a featured project</div>
-        <Button
-          size={Button.ButtonSize.small}
-          color={Button.ButtonColor.purple}
-          onClick={onBookmark}
-          text={'Bookmark as featured'}
-        />
+        <Button size="xs" onClick={onBookmark} text={'Bookmark as featured'} />
       </>
     );
   }
@@ -315,11 +342,54 @@ const RemixAncestry: React.FunctionComponent<{
   );
 };
 
+const AbuseScoreInfo: React.FunctionComponent<{
+  abuseScore: number;
+  onResetAbuseScore: () => void;
+}> = ({abuseScore, onResetAbuseScore}) => {
+  let msg = '';
+  if (abuseScore < 0) {
+    msg = 'There was an error resetting abuse score to 0. Please try again.';
+  } else if (abuseScore < 15) {
+    msg = 'Safe to share project.';
+  } else {
+    msg = 'This project is blocked from sharing';
+  }
+  const onReportAbuse = async () => {
+    utils.navigateToHref('/report_abuse');
+  };
+
+  return (
+    <>
+      Abuse score: {abuseScore >= 0 ? abuseScore : ''}
+      <ul>
+        <li>{msg}</li>
+      </ul>
+      <div>
+        <Button
+          size="xs"
+          text={'Reset abuse score to 0'}
+          onClick={onResetAbuseScore}
+        />
+      </div>
+      <div>
+        <Button
+          size="xs"
+          text={'Report abuse'}
+          onClick={onReportAbuse}
+          className={moduleStyles.bottomButton}
+        />
+      </div>
+    </>
+  );
+};
+
 interface ProjectLinkDataProps {
   projectLinkData?: ExtraLinksProjectData;
   isStandaloneProject: boolean;
   featuredProjectStatus?: string;
   onBookmark: () => void;
+  onResetAbuseScore: () => void;
+  abuseScore?: number;
 }
 
 const ProjectLinkData: React.FunctionComponent<ProjectLinkDataProps> = ({
@@ -327,6 +397,8 @@ const ProjectLinkData: React.FunctionComponent<ProjectLinkDataProps> = ({
   isStandaloneProject,
   featuredProjectStatus,
   onBookmark,
+  onResetAbuseScore,
+  abuseScore,
 }) => {
   if (!projectLinkData) {
     return null;
@@ -336,11 +408,9 @@ const ProjectLinkData: React.FunctionComponent<ProjectLinkDataProps> = ({
   if (!ownerInfo || !projectInfo) {
     return null;
   }
-  const remixList = projectInfo.remix_ancestry;
-
   return (
     <>
-      <StrongText>Project Info</StrongText>
+      <Typography variant="strong">Project Info</Typography>
       <ul>
         <li>Project owner: {ownerInfo.name}</li>
         <li>Owner storage id: {ownerInfo.storage_id}</li>
@@ -353,15 +423,24 @@ const ProjectLinkData: React.FunctionComponent<ProjectLinkDataProps> = ({
             <li>
               Remix ancestry:
               <ul>
-                <RemixAncestry remixList={remixList} />
+                <RemixAncestry remixList={projectInfo.remix_ancestry} />
               </ul>
             </li>
+            <li>Project submitted: {projectInfo.is_published_project}</li>
             <li>
               <FeaturedProjectInfo
                 featuredProjectStatus={featuredProjectStatus}
                 onBookmark={onBookmark}
               />
             </li>
+            {abuseScore !== undefined && (
+              <li>
+                <AbuseScoreInfo
+                  abuseScore={abuseScore}
+                  onResetAbuseScore={onResetAbuseScore}
+                />
+              </li>
+            )}
           </>
         )}
       </ul>
@@ -370,10 +449,7 @@ const ProjectLinkData: React.FunctionComponent<ProjectLinkDataProps> = ({
 };
 
 interface ScriptLevelPathLinksProps {
-  scriptLevelPathLinks?: {
-    script: string;
-    path: string;
-  }[];
+  scriptLevelPathLinks?: ScriptLevelPathLink[];
 }
 
 const ScriptLevelPathLinks: React.FunctionComponent<
@@ -384,14 +460,42 @@ const ScriptLevelPathLinks: React.FunctionComponent<
   }
   return (
     <>
-      <StrongText>
+      <Typography variant="strong">
         This level is in {Object.entries(scriptLevelPathLinks).length} scripts:
-      </StrongText>
+      </Typography>
       <ul>
         {scriptLevelPathLinks.map(link => (
           <li key={link.path}>
             <a href={'/s/' + link.script}>{link.script}</a> as{' '}
             <a href={link.path}>{link.path}</a>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+};
+
+interface ParentLevelPathLinksProps {
+  parentLevelPathLinks?: ParentLevelPathLink[];
+}
+
+const ParentLevelPathLinks: React.FunctionComponent<
+  ParentLevelPathLinksProps
+> = ({parentLevelPathLinks}) => {
+  if (!parentLevelPathLinks) {
+    return null;
+  }
+  return (
+    <>
+      <Typography variant="strong">
+        This level is in {Object.entries(parentLevelPathLinks).length} other
+        levels:
+      </Typography>
+      <ul>
+        {parentLevelPathLinks.map(link => (
+          <li key={link.path}>
+            {link.kind} in <a href={link.path}>{link.level_name}</a> (position{' '}
+            {link.position})
           </li>
         ))}
       </ul>

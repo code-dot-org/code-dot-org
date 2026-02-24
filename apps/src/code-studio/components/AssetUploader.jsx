@@ -19,13 +19,16 @@ export default class AssetUploader extends React.Component {
     allowedExtensions: PropTypes.string,
     uploadsEnabled: PropTypes.bool.isRequired,
     api: PropTypes.object.isRequired,
+    projectType: PropTypes.string.isRequired,
   };
 
   /**
    * We've hidden the <input type="file"/> and replaced it with a big button.
    * Forward clicks on the button to the hidden file input.
    */
-  fileUploadClicked = () => this.refs.uploader.openFileChooser();
+  fileUploadClicked = () => {
+    this.refs.uploader.openFileChooser();
+  };
 
   render() {
     const {api} = this.props;

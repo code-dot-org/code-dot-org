@@ -14,9 +14,7 @@ export default class ProjectShare extends React.Component {
     if (Lab2Registry.hasEnabledProjects()) {
       // If we are using Lab2, share using the project manager and
       // shareLab2Project.
-      shareLab2Project(
-        Lab2Registry.getInstance().getProjectManager().getShareUrl()
-      );
+      shareLab2Project();
     } else {
       // Otherwise, we are using the legacy labs system, get the share url from that system
       // and share using shareProject.

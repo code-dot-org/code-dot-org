@@ -1,0 +1,23 @@
+name 'virtual-pl-csa-summer-day1_async1crp2_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# CSA Pedagogical Threads
+
+#### Our approach to implementing student-centered learning CSA consists of four main threads:
+
+* #### **CS Identity:** Affirm that all students belong in Computer Science.
+
+* #### **Personally Relevant Practice:** Provide opportunities for students to practice what they are learning in a meaningful way.
+* #### **Processing and Meaning Making:** Ensure students interact with content and process new information in a way that works best for them.
+* #### **Software Engineering for All:** Expose students to the skills and common practices used in the industry by taking on the role of software engineers.
+
+<hr style="clear:both">
+
+
+
+
+
+
+MARKDOWN

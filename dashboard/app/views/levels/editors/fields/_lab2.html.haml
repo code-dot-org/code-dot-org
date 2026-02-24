@@ -1,0 +1,9 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#lab2_area"}}
+  [EXPERIMENTAL] Lab 2
+
+#lab2_area.in.collapse
+  - if @level.respond_to? :uses_lab2
+    %p If enabled, this level will use the Lab2 version of #{level_type}.
+    Note that the Lab2 version of #{level_type} is still in development so some features may not be available.
+    Contact the Student Learning team for more information.
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :uses_lab2, description: "Enable Lab 2"}

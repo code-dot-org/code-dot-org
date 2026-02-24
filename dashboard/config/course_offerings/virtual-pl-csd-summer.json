@@ -1,6 +1,6 @@
 {
   "key": "virtual-pl-csd-summer",
-  "display_name": "CSD Virtual PL Workshop Course",
+  "display_name": "'25 - '26 CSD Virtual PL Workshop Course",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Professional Learning",
@@ -15,5 +15,7 @@
   "professional_learning_program": "https://code.org/apply",
   "video": null,
   "published_date": null,
-  "self_paced_pl_course_offering_key": null
+  "self_paced_pl_course_offering_key": null,
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": null
 }

@@ -1,8 +1,6 @@
 // TODO: The client API should be instantiated with the channel ID, instead of grabbing it from the `dashboard.project` global.
 import queryString from 'query-string';
 
-import firehoseClient from './lib/util/firehose';
-
 function project() {
   return require('./code-studio/initApp/project');
 }
@@ -45,6 +43,10 @@ class CollectionsApi {
 
   getProjectId() {
     return this.projectId || project().getCurrentId();
+  }
+
+  getProjectType() {
+    return project().getStandaloneApp();
   }
 
   // NOTE: path parameter as supplied should not be URI encoded, as it will be
@@ -111,15 +113,6 @@ class CollectionsApi {
     if (this._shouldCallBeforeFirstWriteHook && this._beforeFirstWriteHook) {
       this._beforeFirstWriteHook((err, success) => {
         if (err) {
-          firehoseClient.putRecord(
-            {
-              study: 'weblab_loading_investigation',
-              study_group: 'empty_manifest',
-              event: 'error_uploading_starter_files',
-              project_id: this.getProjectId(),
-            },
-            {includeUserId: true}
-          );
           this._shouldCallBeforeFirstWriteHook = true;
           this._errorAction();
         } else if (success) {

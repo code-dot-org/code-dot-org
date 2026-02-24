@@ -10,7 +10,7 @@ const DEFAULT_SUBLEVEL = {
   display_name: 'Choice 1',
   description: 'Sublevel 1 is lots of fun',
   thumbnail_url: 'some-fake.url/kittens.png',
-  url: '/s/script/lessons/1/levels/2/sublevel/1',
+  url: '/courses/course/units/1/lessons/1/levels/2/sublevel/1',
   position: 1,
   letter: 'a',
   perfect: true,
@@ -30,7 +30,8 @@ describe('SublevelCard', () => {
   it('renders level information', () => {
     const wrapper = setUp();
     expect(DEFAULT_SUBLEVEL.display_name).toEqual(
-      wrapper.find('.sublevel-card-title-uitest').text()
+      // Filter out React wrappers to get only DOM nodes
+      wrapper.find('.sublevel-card-title-uitest').hostNodes().text()
     );
     expect(DEFAULT_SUBLEVEL.description).toEqual(
       wrapper.find('.sublevel-card-description-uitest').text()
@@ -63,7 +64,8 @@ describe('SublevelCard', () => {
     const wrapper = setUp(true);
     expect(1).toEqual(wrapper.find('LessonExtrasFlagIcon').length);
     expect(DEFAULT_SUBLEVEL.display_name).toEqual(
-      wrapper.find('.sublevel-card-title-uitest').text()
+      // Filter out React wrappers to get only DOM nodes
+      wrapper.find('.sublevel-card-title-uitest').hostNodes().text()
     );
     expect(DEFAULT_SUBLEVEL.description).toEqual(
       wrapper.find('.sublevel-card-description-uitest').text()

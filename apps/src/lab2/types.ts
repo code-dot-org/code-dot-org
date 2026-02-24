@@ -7,15 +7,30 @@
 // live elsewhere.
 // The library data should definitely live elsewhere.
 
+import {Theme} from '@code-dot-org/component-library/common/contexts';
+import {ExcalidrawElement} from '@excalidraw/excalidraw/types/element/types';
+import {
+  ExcalidrawInitialDataState,
+  BinaryFileData,
+  DataURL,
+} from '@excalidraw/excalidraw/types/types';
+import type * as BlocklyCore from 'blockly/core';
 import {ComponentType, LazyExoticComponent} from 'react';
 
 import {BlockDefinition} from '@cdo/apps/blockly/types';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
-import {Theme} from '@cdo/apps/lab2/views/ThemeWrapper';
 
 import {lab2EntryPoints} from '../../lab2EntryPoints';
 
 export {Theme};
+
+/// ------ USER APP OPTIONS ------ ///
+
+// Partial definition of the UserAppOptions structure, only defining the
+// pieces we need at the moment.
+export interface PartialUserAppOptions {
+  isInstructor: boolean;
+}
 
 /// ------ PROJECTS ------ ///
 
@@ -31,6 +46,8 @@ export interface Channel {
   hidden?: boolean;
   thumbnailUrl?: string;
   frozen?: boolean;
+  // Certain project types (like bubble choice standalone projects) can have subprojects.
+  subprojects?: {level_id: number; channel_id: string}[];
   // Optional lab-specific configuration for this project.  If provided, this will be saved
   // to the Project model in the database along with the other entries in this interface,
   // inside the value field JSON.
@@ -44,54 +61,78 @@ export interface ProjectAndSources {
   // When projects are loaded for the first time, sources may not be present
   sources?: ProjectSources;
   channel: Channel;
+  abuseScore?: number;
+  sharingDisabled?: boolean;
+  isTeacherOfProjectOwner?: boolean;
 }
 
 /// ------ SOURCES ------ ///
 
 // Represents the structure of the full project sources object (i.e. the main.json file)
 export interface ProjectSources {
-  // Source code can either be a string or a nested JSON object (for multi-file).
-  source: string | MultiFileSource;
+  // Source code can either be a string, Blockly JSON, or a nested JSON object (for multi-file).
+  source: string | Source;
   // Optional lab-specific configuration for this project
-  labConfig?: {[key: string]: {[key: string]: string}};
+  labConfig?: LabConfig;
   // Add other properties (animations, html, etc) as needed.
 }
 
-// We will eventually make this a union type to include other source types.
-export type Source = BlocklySource | MultiFileSource;
+export type LabConfig = {[key: string]: {[key: string]: string}};
 
-export interface SourceUpdateOptions {
+export type Source =
+  | BlocklySource
+  | MultiFileSource
+  | ExcalidrawSourceWithExternalFiles;
+
+export interface SaveSourceOptions {
+  projectType?: string;
+}
+
+export interface UpdateSourceOptions extends SaveSourceOptions {
   currentVersion: string;
   replace: boolean;
   firstSaveTimestamp: string;
   tabId: string | null;
-  projectType?: ProjectType;
 }
 
 // -- BLOCKLY -- //
 
-export interface BlocklySource {
-  blocks: {
-    languageVersion: number;
-    blocks: BlocklyBlock[];
-  };
-  variables: BlocklyVariable[];
-}
+// Blockly JSON is currently typed as a generic object
+export type BlocklySource = {[key: string]: unknown};
 
-export interface BlocklyBlock {
-  type: string;
-  id: string;
-  x: number;
-  y: number;
-  next: {
-    block: BlocklyBlock;
-  };
-}
+// -- SKETCH LAB -- //
 
-export interface BlocklyVariable {
-  name: string;
-  id: string;
-}
+export type SketchlabExternalFiles = Record<FileId, SketchlabProjectFile>;
+
+// By default, Excalidraw file entries require a dataURL field that has a
+// base64 encoding of the file. As we move to store images in S3, this field
+// is now optional.
+type ExcalidrawFileWithOptionalData = Omit<BinaryFileData, 'dataURL'> & {
+  dataURL?: DataURL;
+};
+
+export type ExcalidrawFilesWithOptionalData = Record<
+  ExcalidrawElement['id'],
+  ExcalidrawFileWithOptionalData
+>;
+
+// We add the externalFiles property to Excalidraw's default state
+// to map each file to an external URL (a location in S3) where we store the image.
+// We override the files property with a version of their file type where the dataURL
+// is not required (ie, since we're storing the image in S3 instead of as a base64 encoded string).
+export type ExcalidrawSourceWithExternalFiles = Omit<
+  ExcalidrawInitialDataState,
+  'files'
+> & {
+  files?: ExcalidrawFilesWithOptionalData;
+  externalFiles?: SketchlabExternalFiles;
+};
+
+export type SketchlabProjectFile = Pick<ProjectFile, 'id' | 'url'> & {
+  uploaded?: boolean;
+  starterAsset?: boolean;
+  filenameWithExtension?: string;
+};
 
 // -- MULTI-FILE -- //
 
@@ -112,18 +153,37 @@ export interface MultiFileSource {
 export interface ProjectFile {
   id: FileId;
   name: string;
-  language: string;
   contents: string;
-  open?: boolean;
   active?: boolean;
   folderId: string;
   type?: ProjectFileType;
+  url?: string;
+  flagged?: boolean;
+  isAiTutorVersionUpdated?: boolean;
+  isAiTutorVersionCreated?: boolean;
 }
 
+/**
+ * Project file types are as follows:
+ * Starter: Files that come from level start code that are editable by the user.
+ * Support: Files that come from level start code that are hidden and not editable by the user.
+ * Validation: The file that contain the level's validation code, which is a code file that will be
+ * run by the lab. This file is hidden from users.
+ * Locked Starter: Files that come from level start code that are editable by the user, but cannot be
+ *  deleted or renamed.
+ * System Support: Files that are used for running code and for share/remix, but are hidden from the user.
+ *  For example, the serialized maze for a neighborhood level.
+ *
+ *  NOTE: we have some logic that assumes that if a file has been assigned one of these types,
+ *  that it was uploaded by a levelbuilder. If that changes, we should update the logic that decides whether to
+ *  delete a file from S3 in multiFileSourceEditUtils.
+ */
 export enum ProjectFileType {
   STARTER = 'starter',
   SUPPORT = 'support',
   VALIDATION = 'validation',
+  LOCKED_STARTER = 'locked_starter',
+  SYSTEM_SUPPORT = 'system_support',
 }
 
 export interface ProjectFolder {
@@ -141,6 +201,7 @@ export interface ProjectFolder {
 export interface LevelProperties {
   // Not a complete list; add properties as needed.
   id: number;
+  name: string;
   isProjectLevel?: boolean;
   hideShareAndRemix?: boolean;
   usesProjects?: boolean;
@@ -151,11 +212,12 @@ export interface LevelProperties {
   edit_blocks?: string;
   isK1?: boolean;
   skin?: string;
-  toolboxBlocks?: string;
-  startSources?: MultiFileSource;
-  templateSources?: MultiFileSource;
-  sharedBlocks?: BlockDefinition[];
+  // Dance stores the full main.json source structure (ProjectSources) in start/template/exemplar sources,
+  // while PythonLab/Weblab2 stores just the source code (MultiFileSource). TODO: Can we reconcile these?
+  startSources?: ProjectSources | MultiFileSource;
+  templateSources?: ProjectSources | MultiFileSource;
   validations?: Validation[];
+  baseAssetUrl?: string;
   // An optional URL that allows the user to skip the progression.
   skipUrl?: string;
   // Project Template level name for the level if it exists.
@@ -163,13 +225,47 @@ export interface LevelProperties {
   // Help and Tips values
   mapReference?: string;
   referenceLinks?: string[];
+  helpVideos?: VideoData[];
   // Exemplars
-  exampleSolutions?: string[];
-  exemplarSources?: MultiFileSource;
+  showExemplarLink?: boolean;
+  exemplarSources?: ProjectSources | MultiFileSource;
+  exemplarSettings?: ExemplarSettings;
   // For Teachers Only value
   teacherMarkdown?: string;
   predictSettings?: LevelPredictSettings;
   submittable?: boolean;
+  disableEditRunForSubmission?: boolean;
+  finishUrl?: string;
+  finishDialog?: ShareDialogId;
+  offerBrowserTts?: boolean;
+  useSecondaryFinishButton?: boolean;
+  // Python Lab/Codebridge specific properties
+  validationFile?: ProjectFile;
+  enableMicroBit?: boolean;
+  miniApp?: string;
+  serializedMaze?: MazeCell[][];
+  startDirection?: number;
+  widgetView?: boolean;
+  widgetViewAllowShowCode?: boolean;
+  aiTutorMode?: string;
+  levelSystemPrompt?: string;
+  // Properties added for parity with non-lab2 AI Tutor levels
+  aiTutorAvailable?: boolean;
+  isAssessment?: boolean;
+  type?: string;
+  starterAssets?: {[key: string]: string};
+  showRubric?: boolean;
+  customHelperLibrary?: string;
+  validationCode?: string;
+  hideVersionHistory?: boolean;
+  parentLevelName?: string;
+}
+
+export type LevelPropertiesMap = {[levelId: string]: LevelProperties};
+
+export interface BlocklyLevelProperties extends LevelProperties {
+  toolboxDefinition?: BlocklyCore.utils.toolbox.ToolboxInfo;
+  sharedBlocks?: BlockDefinition[];
 }
 
 // Level configuration data used by project-backed labs that don't require
@@ -183,61 +279,69 @@ export interface ProjectLevelData {
 export interface VideoLevelData {
   src: string;
   download: string;
+  thumbnail: string;
 }
 
-export enum OptionsToAvoid {
-  /**
-   * @deprecated: using this option will result in hardcoding this lab into the
-   * downloaded bundle for ALL other lab2 labs, slowing down their loading and
-   * consuming excessive school internet bandwidth.
-   *
-   * See `pythonlab/entrypoint.tsx` for an example that doesn't use this option.
-   *
-   * Please only use this option if there's a good reason you can't lazy load
-   * your lab. With this option set, you must also specify `hardcodedEntryPoint`.
-   */
-  UseHardcodedView_WARNING_Bloats_Lab2_Bundle,
+// The level data for a bubble_choice level that doesn't require
+// reloads between levels.
+export interface BubbleChoiceLevelData {
+  displayName: string;
+  description: string;
+  sublevels: BubbleChoiceSublevel[];
+  hideLetters: boolean;
+}
+
+// Bubble Choice specific property
+export interface BubbleChoiceSublevel {
+  display_name: string;
+  description?: string;
+  level_id: string;
+  thumbnail_url: string;
+  url: string;
+  position: number;
+}
+
+// Addtional fields for videos that are linked as references in the
+// Help & Tips tab of Instructions.
+interface VideoData extends VideoLevelData {
+  name?: string;
+  key?: string;
+  enable_fallback?: boolean;
+  autoplay?: boolean;
+}
+
+// Exemplar settings for a level.
+export interface ExemplarSettings {
+  validationEnabled: boolean;
+  validationSuccessMessage: string;
+  validationFailureMessage: string;
+}
+
+// Python Lab specific property
+export interface MazeCell {
+  tileType: number;
+  value: number;
+  assetId: number;
 }
 
 // Configuration for how a Lab should be rendered
 export interface Lab2EntryPoint {
   /**
-   * Whether this lab should remain rendered in the background once mounted.
-   * If true, the lab will always be present in the tree, but will be hidden
-   * via visibility: hidden when not active. If false, the lab will only
-   * be rendered in the tree when active.
-   */
-  backgroundMode: boolean;
-  /**
    * A lazy loaded view for the lab. This should be a lazy-loaded react
    * component using a dynamic import. See `pythonlab/entrypoint.tsx` for an
    * example.
    */
-  view: LazyExoticComponent<ComponentType> | OptionsToAvoid;
+  view: LazyExoticComponent<ComponentType<LabProps>>;
   /**
-   * Using this option will result in hardcoding this lab into the downloaded
-   * bundle for ALL other lab2 labs, slowing down their loading and consuming
-   * excessive school internet bandwidth. Please use `view` instead,
-   * which lazy loads you lab on demand, unless you have a really good reason
-   * you can't lazy load.
-   *
-   * See `pythonlab/entrypoint.tsx` for an example that doesn't use this option.
+   * An array of themes that the lab supports.
    */
-  hardcodedView?: ComponentType;
-  /**
-   * Display theme for this lab. This will likely be configured by user
-   * preferences eventually, but for now this is fixed for each lab. Defaults
-   * to the default theme if not specified.
-   */
-  theme?: Theme;
-  /**
-   * Optional function to run when the lab is first mounted. This is useful
-   * for any one-time setup actions such as setting up Blockly.
-   */
-  setupFunction?: () => void;
+  themes: Theme[];
 }
 
-export type LevelData = ProjectLevelData | VideoLevelData;
+export type LevelData =
+  | ProjectLevelData
+  | VideoLevelData
+  | BubbleChoiceLevelData;
 
 export type ProjectType =
   | AppName
@@ -259,7 +363,8 @@ export type ProjectType =
   | 'playlab'
   | 'playlab_k1'
   | 'sports'
-  | 'basketball';
+  | 'basketball'
+  | 'music_dance_ai';
 
 export type AppName = keyof typeof lab2EntryPoints;
 
@@ -280,35 +385,34 @@ export interface Condition {
   value?: string | number;
 }
 
+type ValueType = 'string' | 'number';
+type ConditionValueType = `${ValueType}:${ValueType}` | ValueType;
 export interface ConditionType {
   name: string;
-  valueType?: 'string' | 'number';
+  valueType?: ConditionValueType;
+  description: string;
+  valueOptions?: string[];
 }
 
 // Validation in the level.
 export interface Validation {
   conditions: Condition[];
   message: string;
+  callout?: string;
   next: boolean;
   key: string;
+  comment?: string;
 }
 
 /// ------ MISC ------ ///
-
-export enum ProjectManagerStorageType {
-  LOCAL = 'LOCAL',
-  REMOTE = 'REMOTE',
-}
 
 export interface ExtraLinksLevelData {
   links: {[key: string]: {text: string; url: string; access_key?: string}[]};
   can_clone: boolean;
   can_delete: boolean;
   level_name: string;
-  script_level_path_links: {
-    script: string;
-    path: string;
-  }[];
+  script_level_path_links: ScriptLevelPathLink[];
+  parent_level_path_links: ParentLevelPathLink[];
   is_standalone_project: boolean;
 }
 export interface ExtraLinksProjectData {
@@ -319,6 +423,38 @@ export interface ExtraLinksProjectData {
     is_featured_project: boolean;
     featured_status: string;
     remix_ancestry: string[];
+    is_published_project: 'yes' | 'no';
+    abuse_score: number;
   };
   meesage?: string;
 }
+
+export interface ProjectVersion {
+  versionId: string;
+  lastModified: string;
+  isLatest: boolean;
+  comment?: string;
+}
+
+export interface ScriptLevelPathLink {
+  script: string;
+  path: string;
+}
+
+export interface ParentLevelPathLink {
+  level_name: string;
+  path: string;
+  kind: string;
+  position: string;
+}
+
+export interface LabProps<
+  T extends LevelProperties = LevelProperties,
+  U extends ProjectSources = ProjectSources
+> {
+  levelProperties: T;
+  initialSources?: U;
+  channel?: Channel;
+}
+
+export type ShareDialogId = 'hoc2024' | 'hoai2025';

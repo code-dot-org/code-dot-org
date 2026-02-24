@@ -12,6 +12,7 @@
 #  user_id           :integer          not null
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
+#  version           :string(64)
 #
 # Indexes
 #
@@ -39,17 +40,14 @@ class AuthenticationOption < ApplicationRecord
 
   after_create :set_primary_contact_info
 
-  # Powerschool note: the Powerschool plugin lives at https://github.com/code-dot-org/powerschool
   OAUTH_CREDENTIAL_TYPES = [
     CLEVER = 'clever',
     FACEBOOK = 'facebook',
     GOOGLE = 'google_oauth2',
-    POWERSCHOOL = 'powerschool',
     QWIKLABS = 'lti_lti_prod_kids.qwikcamps.com',
-    THE_SCHOOL_PROJECT = 'the_school_project',
     TWITTER = 'twitter',
-    WINDOWS_LIVE = 'windowslive',
     MICROSOFT = 'microsoft_v2_auth',
+    CLASSLINK = 'classlink'
   ].freeze
 
   CREDENTIAL_TYPES = [
@@ -72,7 +70,7 @@ class AuthenticationOption < ApplicationRecord
   # user, and instead to rely exclusively on authentication_id
   UNTRUSTED_EMAIL_CREDENTIAL_TYPES = [
     CLEVER,
-    POWERSCHOOL,
+    CLASSLINK,
     LTI_V1,
   ].freeze
 
@@ -83,15 +81,24 @@ class AuthenticationOption < ApplicationRecord
   SILENT_TAKEOVER_CREDENTIAL_TYPES = [
     FACEBOOK,
     GOOGLE,
-    # TODO: (madelynkasula) Remove once we are sure users are no longer logging in via windowslive.
-    WINDOWS_LIVE,
     MICROSOFT
   ].freeze
+
+  module Clever
+    VERSION = {
+      v3: 'v3',
+      v2: 'v2',
+    }.freeze
+  end
 
   scope :trusted_email, -> {where(credential_type: TRUSTED_EMAIL_CREDENTIAL_TYPES)}
 
   def google?
     credential_type == GOOGLE
+  end
+
+  def email?
+    credential_type == EMAIL
   end
 
   def codeorg_email?
@@ -178,6 +185,7 @@ class AuthenticationOption < ApplicationRecord
 
     other = User.find_by_email_or_hashed_email(email)
     if other && other != user
+      return if Policies::Lti.only_lti_auth?(other)
       errors.add :email, I18n.t('errors.messages.taken')
     end
   end
@@ -188,6 +196,7 @@ class AuthenticationOption < ApplicationRecord
 
     other = User.find_by_hashed_email(hashed_email)
     if other && other != user
+      return if Policies::Lti.only_lti_auth?(other)
       errors.add :email, I18n.t('errors.messages.taken')
     end
   end

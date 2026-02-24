@@ -1,0 +1,14 @@
+name 'problem-solving-with-ai-postassessment-q3_2025-pilot_v2-2025'
+
+question 'Why is it important to be cautious when using AI, even after it has been fine-tuned?'
+
+wrong 'AI will always give the same answer no matter the input.'
+wrong 'AI understands language perfectly like a human.'
+right 'AI can still produce biased or inaccurate responses.'
+wrong 'AI has built-in rules to avoid all mistakes.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 3: The AI's Brain
+MARKDOWN

@@ -1,0 +1,33 @@
+name 'SP-PL-DS-U2L10_agg'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Aggregating Data 
+
+
+## Why We Aggregate Data 
+
+#### Aggregation is a powerful way to summarize our data. By grouping data and applying multiple functions like sum, mean, min, and max, we can get a comprehensive view of our dataset.
+
+
+<img src="https://images.code.org/0b2fb2385980f71c82e78dc1c1d3dd36-image-1728920305994.png" alt="chart of aggregated sea level data" width="650px" style="display: block; margin-left: auto; margin-right: auto;">
+
+<br>
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 15px; "><strong>Teaching Tip:</strong> You might need to explain that "aggregation" is a fancy word for combining lots of pieces of data into a summary that helps us see the big picture.  
+</p>
+</div>
+
+## Using **agg()**
+
+
+<img src="https://images.code.org/76c1eded766f5c9135ad52647160f7b8-image-1728920567831.png" alt="code for using agg()" width="650px" style="display: block; margin-left: auto; margin-right: auto;">
+
+- #### **agg()** provides a table of aggregated values.
+- #### You provide the **agg()** function with the list of calculations you want to perform.
+
+## Let's practice! 
+MARKDOWN

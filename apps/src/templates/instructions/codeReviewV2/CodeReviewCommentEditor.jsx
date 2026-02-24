@@ -10,7 +10,7 @@ import {
 import {Editable, withReact, Slate} from 'slate-react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import color from '@cdo/apps/util/color';
 import javalabMsg from '@cdo/javalab/locale';
 

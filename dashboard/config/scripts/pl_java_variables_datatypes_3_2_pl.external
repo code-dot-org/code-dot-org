@@ -1,0 +1,74 @@
+name 'pl-java-variables-datatypes-3-2_pl'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Variables
+
+#### In the previous level, we observed how computers sort and store data. Let's take a look at how we can declare and define variables in Java.
+
+<img src="https://images.code.org/051f1d57020960bc5c4374e4691379d2-image-1727203669873.png" alt="pandas logo" width="150px" style="border-radius:20px; float:right; margin: 0 0 10px 0px;">
+
+## Variables
+#### A **variable** is a container that stores a value in memory. 
+#### A variable can only hold **one value** at a time. 
+
+
+
+## Data Type
+#### A **data type** is the format of the data that can be stored in a variable.
+
+<img src="https://images.code.org/129ea4c5768110e1250b1f9db2036d39-image-1747324714983.png" alt="variable types: int, double, string, boolean" width="650px" style="display: block; margin-left: auto; margin-right: auto;">
+
+
+#### In Java, you need to say what kind of data you're using when you create a variable.
+
+#### For example, if you write `int age = 12;`, it shows Java that age is a number, and if you write `String name = "Alex";`, it signals that name is text.
+
+## Creating a Variable 
+
+   <table border="1" width="100%" cellpadding="10">
+        <tr>
+            <td width="33%">
+                <img src="https://images.code.org/17bc7eb75c242792b5c3b3ca10375482-image-1747324779875.png" alt="int score = 125" width="100%">
+            </td>
+            <td width="67%" style="font-size:14pt;">
+            When we want to create a variable, we write the <b>data type</b> and then the <b>name</b> we want to use for the information we store. 
+            </td>
+        </tr>
+        <tr>
+            <td width="33%">
+                <img src="https://images.code.org/9e1c5ef31aa7df32a2b8e6bbc73b731c-image-1747324836645.png" alt="int score = 125;" width="100%">
+            </td>
+            <td width="67%" style="font-size:14pt;">
+                We use the <b>assignment operator</b> (=) to set or change the value assigned to the variable.
+            </td>
+        </tr>
+        <tr>
+            <td width="33%">
+                <img src="https://images.code.org/83d91cd6113d5627495b12df689a4155-image-1747324894064.png" alt="int score = 125; " width="100%">
+            </td>
+            <td width="67%" style="font-size:14pt;">
+                Then we can specify the <b>starting value</b> to what we want the variable to store and end the statement with a semi-colon <code>;</code>.
+            </td>
+        </tr>
+    </table>
+    
+<br>  
+
+## Declaring Different Variable Types 
+
+#### Variable types are not named when creating variables, however, how you input the value determines the variable type.
+
+<img src="https://images.code.org/71635f4c12a0634325422d955ef60a66-image-1747324184467.png" alt="sample code of declaring variable types in Java" width="450px" style="display: block; margin-left: auto; margin-right: auto;">
+
+#### **Notice:**
+
+- #### **String**, or text, the keyword `String` is capitalized *(remember Java is case sensitive)* and variables are defined using quotation marks.
+- #### **Booleans** are defined using the words true or false.
+
+
+##Let's practice!  
+
+
+MARKDOWN

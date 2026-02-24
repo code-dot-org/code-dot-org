@@ -9,17 +9,25 @@
   elsif local_assigns[:level]
     # Only show the create menu on project levels (and not on levels in units)
     show_create_menu = local_assigns[:level].try(:is_project_level)
+  elsif request.path_info.start_with?('/users/sign_up')
+    # Do not show create menu within sign up flow
+    show_create_menu = false
   else
     # Show the create menu on non-level pages
     show_create_menu = true
   end
 
+  ge_region = local_assigns[:ge_region]
+  ge_region ||= request.ge_region if request.respond_to?(:ge_region)
+
   if show_create_menu
     limit_project_types = request.cookies["_limit_project_types_#{rack_env}"]
 
     options = {
+      ge_region: ge_region,
       limit_project_types: limit_project_types,
-      project_type: (request.path_info.include? '/projects/') && params && params[:key]
+      project_type: (request.path_info.include? '/projects/') && params && params[:key],
+      loc_prefix: loc_prefix,
     }
     create_drop_down_items = CreateHeader.get_create_dropdown_contents(options)
   end
@@ -29,23 +37,25 @@
 
 %script{data: {"amplitude-api-key": CDO.safe_amplitude_api_key}}
 %script{data: {'statsig-api-client-key': CDO.safe_statsig_api_client_key}}
-%script{data: {'managed-test-server': "#{CDO.running_web_application? && CDO.test_system?}"}}
-= render inline: File.read(shared_dir('haml/user_header_statsig_reporter.haml')), type: :haml
+%script{data: {'managed-test-server': CDO.managed_test_server?.to_s}}
 
-- if show_create_menu
+= render inline: File.read(shared_dir('haml/user_header_event_logger.haml')), type: :haml, locals: {is_signed_out: user_type.nil?, user_type: user_type, page_controller_name: params[:controller], page_action_name: params[:action], create_menu_options: create_drop_down_items&.map{|entry| entry[:title]}&.append("view_all")}
+
+- if show_create_menu && !(request.path_info.include? '/global/')
   .header_button.create_menu{id: "header_create_menu", tabindex: 0, role: "button", class: user_type ? "hide-mobile" : "show-small-desktop"}
     %span.create_button
       = I18n.t("#{loc_prefix}new_project_low_cap")
     &nbsp;
-    %i.create_menu_arrow_down{class: "fa fa-caret-down"}
-    %i.create_menu_arrow_up{class: "fa fa-caret-up", style: "display: none"}
+    %i.create_menu_arrow_down{class: "fa fa-plus"}
+    %i.create_menu_arrow_up{class: "fa fa-plus", style: "display: none"}
     .create_options{style: 'display: none', dir: language_dir_class}
       - create_drop_down_items.each do |entry|
         %a.project_link_box{id: "create_menu_option_#{entry[:title]}", href: entry[:url]}
           %img{src: "/shared/images/fill-70x70/courses/#{entry[:image]}"}
           .project_link{ id: entry[:id]}
             .text= I18n.t("#{loc_prefix}#{entry[:title]}")
-      %a.project_link_box{id: "create_menu_option_view_all", href: CDO.studio_url('projects')}
+      %a.project_link_box{id: "create_menu_option_view_all", href: CDO.studio_url('projects', ge_region: ge_region)}
+        %img{src: "/shared/images/courses/header-all-projects-icon.png"}
         .project_link#view_all_projects
           = I18n.t("#{loc_prefix}view_all")
 
@@ -61,13 +71,13 @@
     - else
       -# rubocop:disable CustomCops/DashboardDbUsage
       - short_name = ERB::Util.h(current_user.short_name)
-      %span.display_name{id: 'header_display_name', 'data-id': current_user.id, 'data-shortname': short_name}= short_name
+      %span.display_name{id: 'header_display_name', data: {id: current_user.id, shortname: short_name, notranslate: ''}}= short_name
       -# rubocop:enable CustomCops/DashboardDbUsage
     &nbsp;
-    %i.user_menu_arrow_down{class: "fa fa-caret-down"}
-    %i.user_menu_arrow_up{class: "fa fa-caret-up", style: "display: none"}
+    %i.user_menu_arrow_down{class: "fa fa-chevron-down"}
+    %i.user_menu_arrow_up{class: "fa fa-chevron-up", style: "display: none"}
     .user_options{style: 'display: none', dir: language_dir_class}
-      %a.linktag#my-projects{href: CDO.studio_url('projects')}= I18n.t("#{loc_prefix}my_projects")
+      %a.linktag#my-projects{href: CDO.studio_url('projects', ge_region: ge_region)}= I18n.t("#{loc_prefix}my_projects")
       -# rubocop:disable CustomCops/DashboardDbUsage
       - if current_user.can_pair?
         -# rubocop:enable CustomCops/DashboardDbUsage
@@ -86,19 +96,18 @@
         - else
           = link_to '#', {id: 'pairing_link', style: 'display: none'} do
             = I18n.t("#{loc_prefix}pair_programming")
-      %a.linktag#user-edit{href: CDO.studio_url('users/edit')}= I18n.t("#{loc_prefix}settings")
-      %a.linktag#user-signout{href: CDO.studio_url('users/sign_out')}= I18n.t("#{loc_prefix}logout")
+      %a.linktag#user-edit{href: CDO.studio_url('users/edit', ge_region: ge_region)}= I18n.t("#{loc_prefix}settings")
+      %a.linktag#user-signout{href: CDO.studio_url('users/sign_out', ge_region: ge_region)}= I18n.t("#{loc_prefix}logout")
 - else
-  %a.linktag{href: CDO.studio_url('users/sign_in'), class: 'button-signin desktop', id: 'signin_button'}
+  %a.linktag{href: CDO.studio_url('users/sign_in', ge_region: ge_region), class: 'button-signin desktop', id: 'signin_button'}
     .header_button.header_user#header_user_signin
       %span= I18n.t("#{loc_prefix}signin")
-      .signin_callout_wrapper
-  -# Create Acount button for the A/B test
-  %a.linktag{href: CDO.studio_url('users/sign_up'), class: 'button-create-account desktop', id: 'create_account_button', style: "display:none"}
-    .header_button.header_user#header_user_create_account
-      %span= I18n.t("#{loc_prefix}create_account_low_cap")
-
-= render inline: File.read(shared_dir('haml/user_header_event_logger.haml')), type: :haml, locals: {is_signed_out: user_type.nil?, create_menu_options: create_drop_down_items&.map{|entry| entry[:title]}&.append("view_all")}
+  -# Hides the Create account button on the sign up page
+  - if !request.path_info.start_with?('/users/sign_up')
+    %a.linktag{href: CDO.studio_url('users/sign_up/account_type', ge_region: ge_region), class: 'button-create-account desktop', id: 'create_account_button'}
+      .header_button.header_user#header_user_create_account
+        %span= I18n.t("#{loc_prefix}create_account_low_cap")
+        .signin_callout_wrapper
 
 :javascript
   window.cookieEnvSuffix = '#{rack_env?(:production) ? '' : "_#{rack_env}"}';

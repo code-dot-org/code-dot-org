@@ -6,7 +6,7 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "long_instructions": "# Add to your Webpage\r\n\r\nUse your new knowledge to add to the web page about something you enjoy in Lesson 6. The webpage you created in Level 11, challenge f has been transferred below - add some images to it!",
+    "long_instructions": "# Add to your Webpage\r\n\r\nUse your new knowledge to add to the web page about something you enjoy in Lesson 6. The webpage you created in Level 12, challenge f has been transferred below - add some images to it!",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "parent_level_id": 18346,
@@ -35,6 +35,6 @@
     ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T16:58:49.127+00:00\",\"changed\":[\"cloned from \\\"CSD U2 images freeplay_2023\\\"\"],\"cloned_from\":\"CSD U2 images freeplay_2023\"},{\"changed_at\":\"2024-02-15 18:49:38 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\",\"thumbnail_url\",\"project_template_level_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T16:58:49.127+00:00\",\"changed\":[\"cloned from \\\"CSD U2 images freeplay_2023\\\"\"],\"cloned_from\":\"CSD U2 images freeplay_2023\"},{\"changed_at\":\"2024-02-15 18:49:38 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\",\"thumbnail_url\",\"project_template_level_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-04 16:02:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

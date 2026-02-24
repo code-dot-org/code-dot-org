@@ -1,3 +1,6 @@
+import '@testing-library/jest-dom';
+import Chips from '@code-dot-org/component-library/chips';
+import {fireEvent, render, screen} from '@testing-library/react';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -5,6 +8,34 @@ import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseCo
 import SingleSectionSetUp from '@cdo/apps/templates/sectionsRefresh/SingleSectionSetUp';
 
 describe('SingleSectionSetUp', () => {
+  const renderComponent = (
+    updateSection = () => {},
+    batchUpdateSection = () => {}
+  ) => {
+    return render(
+      <SingleSectionSetUp
+        sectionNum={1}
+        section={{}}
+        updateSection={updateSection}
+        batchUpdateSection={batchUpdateSection}
+        isNewSection={false}
+        isLoading={false}
+      />
+    );
+  };
+
+  let updateSectionSpy;
+  let batchUpdateSectionSpy;
+
+  beforeEach(() => {
+    updateSectionSpy = jest.fn();
+    batchUpdateSectionSpy = jest.fn();
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   it('calls updateSection when name is updated', () => {
     const updateSectionSpy = jest.fn();
     const wrapper = shallow(
@@ -33,7 +64,7 @@ describe('SingleSectionSetUp', () => {
       />
     );
 
-    const chips = wrapper.find('Chips');
+    const chips = wrapper.find(Chips);
     expect(chips.length).toBe(1);
     expect(chips.prop('name')).toBe('grades');
     expect(chips.prop('required')).toBe(true);
@@ -70,5 +101,28 @@ describe('SingleSectionSetUp', () => {
       target: {setCustomValidity: () => {}, checked: true},
     });
     expect(updateSectionSpy).toHaveBeenCalledTimes(1);
+  });
+
+  it('renders section avatar and button', () => {
+    renderComponent();
+    screen.getByText('Avatar');
+    screen.getByText('Edit avatar');
+  });
+
+  it('displays avatar edit dialog when Edit Avatar is clicked', () => {
+    renderComponent();
+    const dialogButton = screen.getByText('Edit avatar');
+    fireEvent.click(dialogButton);
+    screen.getByText('Choose an emoji');
+    screen.getByText('Choose a background color');
+  });
+
+  it('calls batchUpdateSection when avatar is updated', () => {
+    renderComponent(updateSectionSpy, batchUpdateSectionSpy);
+    const dialogButton = screen.getByText('Edit avatar');
+    fireEvent.click(dialogButton);
+    const avatarSelectButton = screen.getByText('Select avatar');
+    fireEvent.click(avatarSelectButton);
+    expect(batchUpdateSectionSpy).toHaveBeenCalled();
   });
 });

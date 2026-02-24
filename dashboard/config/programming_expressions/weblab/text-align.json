@@ -3,8 +3,31 @@
   "name": "Text Align",
   "category": "CSS Properties",
   "category_key": "css_properties",
-  "content": "# Text Align",
+  "content": "# Text Align\nThe [`text-align`(#d3e965)](/docs/weblab/text-align/) property specifies the horizontal alignment of text inside an element. This property is used to align inline content such as text within a block-level element.",
+  "examples": [
+    {
+      "name": "Centering Text in a Paragraph",
+      "description": "This centers all the text inside the paragraph.",
+      "code": "```\np {\n  text-align: center;\n}\n```",
+      "embed_app_with_code_height": "310"
+    },
+    {
+      "name": "Justifying Text in a Block of Content",
+      "description": "This spreads the text out so both the left and right edges are aligned.",
+      "code": "```\ndiv {\n  text-align: justify;\n}\n```",
+      "embed_app_with_code_height": "310"
+    }
+  ],
   "external_documentation": "http://www.w3schools.com/cssref/pr_text_text-align.asp",
-  "short_description": "Text Align",
-  "syntax": "text-align: value;"
+  "palette_params": [
+    {
+      "name": "value",
+      "type": "String",
+      "required": true,
+      "description": "Possible values include:\n\n- **`left`** – Aligns text to the left. *(Default for left-to-right languages)*\n- **`right`** – Aligns text to the right.\n- **`center`** – Centers the text.\n- **`justify`** – Stretches the lines so that each line has equal width (like in newspapers).\n"
+    }
+  ],
+  "short_description": "Text Align\nThe text-align property specifies the horizontal alignment of text in an element. It is used to align text to the left, right, center, or justify it within its containing element.",
+  "syntax": "text-align: value;",
+  "tips": "- [`text-align`(#d3e965)](/docs/weblab/text-align/) is used to align **text inside a container**, like a paragraph (`<p>`) or heading (`<h1>`).\n\n- `justify` spreads text evenly across a line, creating a clean, newspaper-style look.\n\n- The default alignment is usually `left` (in English and other left-to-right languages).\n\n- If you're writing in a right-to-left language (like Arabic or Hebrew), the default may be `right`."
 }

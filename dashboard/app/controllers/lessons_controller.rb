@@ -1,9 +1,12 @@
 class LessonsController < ApplicationController
   load_and_authorize_resource
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :student_lesson_plan]
+  skip_authorize_resource only: :level_properties_by_id
+
+  before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show, :student_lesson_plan, :level_properties, :level_properties_by_id]
   before_action :disallow_legacy_script_levels, only: [:edit, :update]
   before_action :disable_session_for_cached_pages, only: [:show]
+  before_action :redirect_to_canonical_path, only: [:show, :student_lesson_plan]
 
   include LevelsHelper
   include CachedUnitHelper
@@ -18,12 +21,33 @@ class LessonsController < ApplicationController
     return render :forbidden
   end
 
-  # GET /s/script-name/lessons/1
+  # GET /s/:script_name_or_id/lessons
+  # GET /courses/:course_course_name/units/:unit_position/lessons
+  def index
+    unit_context = get_unit_context(params)
+    script = unit_context[:unit]
+
+    lesson_info = script.lessons.map do |lesson|
+      {
+        id: lesson.id,
+        name: lesson.localized_name
+      }
+    end
+
+    render json: lesson_info
+  end
+
+  # GET /s/:script_name_or_id/lessons/:position
+  # GET /courses/:course_course_name/units/:unit_position/lessons/:position
   def show
-    script = Unit.get_from_cache(params[:script_id])
+    unit_context = get_unit_context(params)
+    script = unit_context[:unit]
+    unit_group_unit = unit_context[:unit_group_unit]
+    unit_group = unit_context[:unit_group]
     return render :forbidden unless script.is_migrated
 
     if script.is_deprecated
+      @deprecated_curriculum_name = script.name
       return render 'errors/deprecated_course'
     end
 
@@ -31,35 +55,45 @@ class LessonsController < ApplicationController
       l.has_lesson_plan && l.relative_position == params[:position].to_i
     end
     raise ActiveRecord::RecordNotFound unless @lesson
-    return render :forbidden unless can?(:read, @lesson)
+    return render :forbidden unless can?(:read, @lesson, unit_group)
+    lesson_data = @lesson.summarize_for_lesson_show(@current_user, Policies::InlineAnswer.visible_for_unit?(@current_user, @script), unit_group_unit: unit_group_unit)
 
-    @lesson_data = @lesson.summarize_for_lesson_show(@current_user, Policies::InlineAnswer.visible_for_unit?(@current_user, @script))
+    @page_title = "#{t('lesson_plan')}: #{lesson_data[:displayName]}"
+    @page_description = lesson_data[:overview].truncate(200, separator: '.', omission: '.')
+
+    @lesson_data = lesson_data
   end
 
-  # GET /lessons/2345
+  # GET /lessons/:id
   def show_by_id
     @lesson_data = @lesson.summarize_for_lesson_show(@current_user, Policies::InlineAnswer.visible_for_unit?(@current_user, @script))
     render :show
   end
 
-  # GET /s/script-name/lessons/1/student
+  # GET /s/:script_name_or_id/lessons/:lesson_position/student
+  # GET /courses/:course_course_name/units/:unit_position/lessons/:lesson_position/student
   def student_lesson_plan
-    script = Unit.get_from_cache(params[:script_id])
+    unit_context = get_unit_context(params)
+    script = unit_context[:unit]
+    unit_group_unit = unit_context[:unit_group_unit]
+    unit_group = unit_context[:unit_group]
     return render :forbidden unless script.is_migrated && script.include_student_lesson_plans
 
     @lesson = script.lessons.find do |l|
       l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
     end
     raise ActiveRecord::RecordNotFound unless @lesson
-    return render :forbidden unless can?(:read, @lesson)
+    return render :forbidden unless can?(:read, @lesson, unit_group)
 
-    @lesson_data = @lesson.summarize_for_student_lesson_plan
+    @lesson_data = @lesson.summarize_for_student_lesson_plan(unit_group_unit: unit_group_unit)
     @script_name = script.name
   end
 
-  # GET /s/csd1-2021/lessons/1/edit where 1 is the relative position of the lesson in the script
+  # GET /s/:script_name_or_id/lessons/:lesson_position/edit
+  # GET /courses/:course_course_name/units/:unit_position/lessons/:lesson_position/edit
   def edit_with_lesson_position
-    script = Unit.get_from_cache(params[:script_id])
+    unit_context = get_unit_context(params)
+    script = unit_context[:unit]
     @lesson = script.lessons.find do |l|
       l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
     end
@@ -69,12 +103,12 @@ class LessonsController < ApplicationController
     render :edit
   end
 
-  # GET /lessons/1/edit where 1 is the ID of the lesson
+  # GET /lessons/:id/edit
   def edit
     setup_edit
   end
 
-  # PATCH/PUT /lessons/1
+  # PATCH/PUT /lessons/:id
   def update
     if params[:originalLessonData]
       current_lesson_data = @lesson.summarize_for_lesson_edit
@@ -148,6 +182,7 @@ class LessonsController < ApplicationController
     render(status: :not_acceptable, plain: exception.message)
   end
 
+  # POST /lessons/:id/clone
   def clone
     destination_script = Unit.find_by_name(params[:destinationUnitName])
     raise "Cannot find script #{params[:destinationUnitName]}" unless destination_script
@@ -164,9 +199,36 @@ class LessonsController < ApplicationController
 
   # Return true if request is one that can be publicly cached.
   def cachable_request?(request)
-    script = Unit.get_from_cache(request.params[:script_id])
+    unit_context = get_unit_context(request.params)
+    script = unit_context[:unit]
     script && ScriptConfig.allows_public_caching_for_script(script.name) &&
       !ScriptConfig.uncached_script_level_path?(request.path)
+  end
+
+  # GET /s/:script_name_or_id/lessons/:lesson_position/level_properties
+  # GET /courses/:course_course_name/units/:unit_position/lessons/:lesson_position/level_properties
+  # Get a JSON summary of a each level's information in the lesson, used in modern labs that don't
+  # reload the page between level views. Note that, ideally, this could be cached for a relatively
+  # long amount of time, including by the CDN, but will require us to remove user-specific data.
+  def level_properties
+    unit_context = get_unit_context(params)
+    script = unit_context[:unit]
+    unit_group_unit = unit_context[:unit_group_unit]
+    @lesson = script.lessons.find do |l|
+      l.absolute_position == params[:lesson_position].to_i
+    end
+    raise ActiveRecord::RecordNotFound unless @lesson
+
+    render json: @lesson.summarize_for_lab2_properties(@current_user, unit_group_unit: unit_group_unit)
+  end
+
+  # GET /lessons/:id/level_properties
+  def level_properties_by_id
+    unit_context = Queries::Courses.get_course_context(@lesson.script_id)
+    # TODO: unit_group_unit is only used here for a couple user-specific properties in level.rb,
+    # which should be moved to a different user-specific API, after which we can remove this parameter.
+    unit_group_unit = unit_context[:unit_group_unit]
+    render json: @lesson.summarize_for_lab2_properties(@current_user, unit_group_unit: unit_group_unit)
   end
 
   # We have two urls you can use to edit a lesson with a lesson plan. This does the
@@ -198,6 +260,7 @@ class LessonsController < ApplicationController
       :assessment,
       :unplugged,
       :creative_commons_license,
+      :background,
       :lockable,
       :has_lesson_plan,
       :purpose,
@@ -231,5 +294,29 @@ class LessonsController < ApplicationController
       environment = ProgrammingEnvironment.find_by!(name: e['programmingEnvironmentName'])
       ProgrammingExpression.find_by!(programming_environment: environment, key: e['key'])
     end
+  end
+
+  private def get_unit_context(params)
+    # /s/.../lessons/... URL
+    if params[:script_id]
+      context = Queries::Courses.get_course_context(params[:script_id])
+      raise ActiveRecord::RecordNotFound unless context && context[:unit]
+      return context
+    end
+    # /courses/.../unit/.../lessons/...
+    course_name = params[:course_course_name]
+    unit_position = params[:unit_position]
+    if course_name && unit_position
+      context = Queries::Courses.get_unit_context(course_name, unit_position)
+      raise ActiveRecord::RecordNotFound unless context && context[:unit]
+      return context
+    end
+    raise ActiveRecord::RecordNotFound
+  end
+
+  private def redirect_to_canonical_path
+    unit_name_or_id = params[:script_id]
+    canonical_path = Services::Courses.canonical_path(request.fullpath, unit_name_or_id)
+    redirect_to canonical_path unless canonical_path == request.fullpath
   end
 end

@@ -1,0 +1,10 @@
+name 'Data Sci U2 Pre Q8_2024-pilot'
+
+question 'Which of the following correctly demonstrates how to use logical operators to filter a DataFrame for rows where the "Age" column is greater than 30 and the "Salary" column is less than 50000?'
+
+wrong '`df[(df["Age"] > 30) or (df["Salary"] < 50000)]`'
+right '`df[(df["Age"] > 30) & (df["Salary"] < 50000)]`'
+wrong '`df[(df["Age"] > 30) | (df["Salary"] < 50000)]`'
+wrong '`df[(df["Age"] > 30) and (df["Salary"] < 50000)]`'
+
+allow_multiple_attempts false

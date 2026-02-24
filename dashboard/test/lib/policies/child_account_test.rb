@@ -9,19 +9,19 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
 
     test 'grace_period?' do
       assert_changes -> {Policies::ChildAccount::ComplianceState.grace_period?(@student)}, from: false, to: true do
-        @student.child_account_compliance_state = 'p'
+        @student.cap_status = 'p'
       end
     end
 
     test 'locked_out?' do
       assert_changes -> {Policies::ChildAccount::ComplianceState.locked_out?(@student)}, from: false, to: true do
-        @student.child_account_compliance_state = 'l'
+        @student.cap_status = 'l'
       end
     end
 
     test 'permission_granted?' do
       assert_changes -> {Policies::ChildAccount::ComplianceState.permission_granted?(@student)}, from: false, to: true do
-        @student.child_account_compliance_state = 'g'
+        @student.cap_status = 'g'
       end
     end
   end
@@ -36,40 +36,22 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       [[:non_compliant_child, :unknown_us_region], true],
       [[:non_compliant_child, :not_U13], true],
       [[:non_compliant_child, :migrated_imported_from_clever], true],
-      [[:non_compliant_child, :with_lti_auth], true],
+      [[:non_compliant_child, :with_lti_auth], false],
+      [[:non_compliant_child, :with_lti_auth, :without_encrypted_password], true],
       [[:non_compliant_child, {created_at: '2023-06-30T23:59:59MST'}], false],
       [[:non_compliant_child, :skip_validation, {birthday: nil}], true],
       [[:non_compliant_child, :with_interpolated_co], true],
       [[:non_compliant_child, :with_interpolated_colorado], true],
       [[:non_compliant_child, :with_interpolated_wa], true],
     ]
+    failures = []
     test_matrix.each do |traits, compliance|
       user = create(*traits)
       actual = Policies::ChildAccount.compliant?(user)
       failure_msg = "Expected compliant?(#{traits}) to be #{compliance} but it was #{actual}"
-      assert_equal compliance, actual, failure_msg
+      failures.append(failure_msg) if compliance != actual
     end
-  end
-
-  test 'show_cap_state_modal?' do
-    test_matrix = [
-      {rollout: 10, user_id: 9, expected: true},
-      {rollout: 10, user_id: 101, expected: true},
-      {rollout: 10, user_id: 109, expected: true},
-      {rollout: 10, user_id: 110, expected: false},
-      {rollout: 10, user_id: 199, expected: false},
-      {rollout: 20, user_id: 119, expected: true},
-      {rollout: 99, user_id: 198, expected: true},
-      {rollout: 99, user_id: 199, expected: false},
-      {rollout: 100, user_id: 99, expected: true},
-      {rollout: 100, user_id: 1099, expected: true},
-    ]
-    test_matrix.each do |test_case|
-      user = OpenStruct.new({id: test_case[:user_id]})
-      DCDO.stubs(:get).with('cap-state-modal-rollout', 0).returns(test_case[:rollout])
-      actual = Policies::ChildAccount.show_cap_state_modal? user
-      assert_equal test_case[:expected], actual, "Testcase #{test_case} failed"
-    end
+    assert failures.empty?, failures.join("\n")
   end
 
   test 'user_predates_policy?' do
@@ -81,20 +63,13 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       [[:non_compliant_child, {created_at: '2023-06-29T23:59:59MDT'}], true],
       [[:non_compliant_child, {created_at: '2024-06-29T23:59:59MDT'}], false],
       [[:non_compliant_child, {created_at: '2024-07-01T00:00:00MDT'}], false],
-      [[:non_compliant_child, :migrated_imported_from_clever, {created_at: '2023-06-29T23:59:59MDT'}], false],
-      [[:non_compliant_child, :migrated_imported_from_clever, {created_at: '2024-06-29T23:59:59MDT'}], false],
-      [[:non_compliant_child, :migrated_imported_from_google_classroom, {created_at: '2023-06-29T23:59:59MDT'}], true],
-      [[:non_compliant_child, :migrated_imported_from_google_classroom, {created_at: '2024-06-29T23:59:59MDT'}], true],
-      [[:non_compliant_child, :migrated_imported_from_google_classroom, {created_at: '2024-07-01T00:00:00MDT'}], false],
-      [[:non_compliant_child, :with_google_authentication_option, {created_at: '2024-06-29T23:59:59MDT'}], true],
-      [[:non_compliant_child, :with_google_authentication_option, {created_at: '2024-07-01T00:00:00MDT'}], false],
-      # The following test cases address P20-937
-      [[:non_compliant_child, :before_p20_937_exception_date], true],
-      [[:non_compliant_child, :microsoft_v2_sso_provider, :before_p20_937_exception_date], true],
-      [[:non_compliant_child, :facebook_sso_provider, :before_p20_937_exception_date], true],
-      [[:non_compliant_child, :p20_937_exception_date], false],
-      [[:non_compliant_child, :microsoft_v2_sso_provider, :p20_937_exception_date], false],
-      [[:non_compliant_child, :facebook_sso_provider, :p20_937_exception_date], false],
+      [[:non_compliant_child, :migrated_imported_from_clever, :without_email_auth_option, :without_encrypted_password, {created_at: '2023-06-29T23:59:59MDT'}], false],
+      [[:non_compliant_child, :migrated_imported_from_clever, :without_email_auth_option, :without_encrypted_password, {created_at: '2024-06-29T23:59:59MDT'}], false],
+      [[:non_compliant_child, :migrated_imported_from_google_classroom, :without_email_auth_option, :without_encrypted_password, {created_at: '2023-06-29T23:59:59MDT'}], false],
+      [[:non_compliant_child, :migrated_imported_from_google_classroom, :without_email_auth_option, :without_encrypted_password, {created_at: '2024-06-29T23:59:59MDT'}], false],
+      [[:non_compliant_child, :migrated_imported_from_google_classroom, :without_email_auth_option, :without_encrypted_password, {created_at: '2024-07-01T00:00:00MDT'}], false],
+      [[:non_compliant_child, :with_google_authentication_option, :without_email_auth_option, :without_encrypted_password, {created_at: '2024-06-29T23:59:59MDT'}], true],
+      [[:non_compliant_child, :with_google_authentication_option, :without_email_auth_option, :without_encrypted_password, {created_at: '2024-07-01T00:00:00MDT'}], false],
     ]
     failures = []
     test_matrix.each do |traits, compliance|
@@ -104,73 +79,6 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       failures << failure_msg if actual != compliance
     end
     assert failures.empty?, failures.join("\n")
-  end
-
-  describe 'state_policies' do
-    let(:state_policies) {Policies::ChildAccount.state_policies}
-    let(:dcdo_cpa_grace_period_duration) {99.days}
-    let(:dcdo_cpa_schedule) {{}}
-
-    around do |test|
-      Timecop.freeze {test.call}
-    end
-
-    before do
-      DCDO.stubs(:get).with('cpa_grace_period_duration', 14.days).returns(dcdo_cpa_grace_period_duration)
-      DCDO.stubs(:get).with('cpa_schedule', {}).returns(dcdo_cpa_schedule)
-    end
-
-    describe 'for Colorado' do
-      let(:co_state_policy) {state_policies['CO']}
-      let(:default_start_date) {DateTime.parse('2023-07-01T00:00:00MDT')}
-      let(:default_lockout_date) {DateTime.parse('2024-07-01T00:00:00MDT')}
-
-      it 'contains expected max age' do
-        _(co_state_policy[:max_age]).must_equal 12
-      end
-
-      it 'contains expected name' do
-        _(co_state_policy[:name]).must_equal 'CPA'
-      end
-
-      it 'contains expected grace_period_duration' do
-        _(co_state_policy[:grace_period_duration]).must_equal dcdo_cpa_grace_period_duration
-      end
-
-      it 'contains expected default start_date' do
-        _(co_state_policy[:start_date]).must_equal default_start_date
-      end
-
-      it 'contains expected default lockout_date' do
-        _(co_state_policy[:lockout_date]).must_equal default_lockout_date
-      end
-
-      context 'when DCDO cpa_schedule with only cpa_new_user_lockout is configured' do
-        let(:dcdo_cpa_schedule) do
-          {
-            'cpa_new_user_lockout' => cpa_new_user_lockout.iso8601
-          }
-        end
-        let(:cpa_new_user_lockout) {default_start_date.ago(100.days)}
-
-        it 'contains DCDO configured start_date' do
-          _(co_state_policy[:start_date]).must_equal cpa_new_user_lockout
-        end
-      end
-
-      context 'when DCDO cpa_schedule with only cpa_all_user_lockout is configured' do
-        let(:dcdo_cpa_schedule) do
-          {
-            'cpa_all_user_lockout' => cpa_all_user_lockout.iso8601
-          }
-        end
-        let(:cpa_all_user_lockout) {default_lockout_date.ago(21.days)}
-
-        it 'contains DCDO configured lockout_date' do
-          _(co_state_policy[:lockout_date]).must_equal cpa_all_user_lockout
-        end
-      end
-    end
   end
 
   describe '.grace_period_end_date' do
@@ -191,13 +99,13 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     let(:user) do
       build_stubbed(
         :non_compliant_child,
-        child_account_compliance_state: user_cap_compliance_state,
-        child_account_compliance_state_last_updated: user_cap_compliance_state_updated_at
+        cap_status: user_cap_compliance_state,
+        cap_status_date: user_cap_compliance_state_updated_at
       )
     end
 
     before do
-      Policies::ChildAccount.stubs(:state_policy).with(user).returns(user_state_policy)
+      Policies::ChildAccount::StatePolicies.stubs(:state_policy).with(user).returns(user_state_policy)
     end
 
     it 'returns end date of user grace period based on its start time' do
@@ -269,7 +177,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
 
     before do
-      Policies::ChildAccount.stubs(:state_policy).with(user).returns(user_state_policy)
+      Policies::ChildAccount::StatePolicies.stubs(:state_policy).with(user).returns(user_state_policy)
     end
 
     context 'the user is a teacher' do
@@ -326,6 +234,8 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
 
     let(:user) {build_stubbed(:student)}
     let(:approximate) {true}
+    # Use default value
+    let(:future) {nil}
 
     let(:user_cap_compliant?) {false}
     let(:user_grace_period_end_date) {14.days.since}
@@ -339,10 +249,10 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
 
     before do
-      Policies::ChildAccount.stubs(:compliant?).with(user).returns(user_cap_compliant?)
+      Policies::ChildAccount.stubs(:compliant?).with(user, future: !!future).returns(user_cap_compliant?)
       Policies::ChildAccount.stubs(:grace_period_end_date).with(user, approximate: approximate).returns(user_grace_period_end_date)
       Policies::ChildAccount.stubs(:user_predates_policy?).with(user).returns(user_predates_cap_policy?)
-      Policies::ChildAccount.stubs(:state_policy).with(user).returns(user_state_policy)
+      Policies::ChildAccount::StatePolicies.stubs(:state_policy).with(user).returns(user_state_policy)
     end
 
     it 'returns state policy start date' do
@@ -449,34 +359,42 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
 
     context 'when the user does not have a state' do
-      let(:user) {build_stubbed(:student, birthday: user_birthday, us_state: nil)}
+      let(:user) {build_stubbed(:student, birthday: user_birthday, us_state: nil, country_code: 'US')}
 
       it 'returns false' do
         _(can_link_new_personal_account?).must_equal false
+      end
+    end
+
+    context 'when the user is outside the US' do
+      let(:user) {build_stubbed(:student, birthday: user_birthday, us_state: nil, country_code: 'CA')}
+
+      it 'returns true' do
+        _(can_link_new_personal_account?).must_equal true
       end
     end
 
     context 'when the user does not have a country' do
       let(:user) {build_stubbed(:student, birthday: user_birthday, country_code: nil)}
 
-      it 'returns false' do
-        _(can_link_new_personal_account?).must_equal false
+      it 'returns true' do
+        _(can_link_new_personal_account?).must_equal true
       end
     end
 
     context 'when the user does not have a state nor country' do
       let(:user) {build_stubbed(:student, birthday: user_birthday, us_state: nil, country_code: nil)}
 
-      it 'returns false' do
-        _(can_link_new_personal_account?).must_equal false
+      it 'returns true' do
+        _(can_link_new_personal_account?).must_equal true
       end
     end
 
     context 'when the user is a student without a birthday' do
       let(:user_birthday) {nil}
 
-      it 'returns true' do
-        _(can_link_new_personal_account?).must_equal true
+      it 'returns false' do
+        _(can_link_new_personal_account?).must_equal false
       end
     end
 
@@ -503,77 +421,8 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
   end
 
-  describe '.personal_account?' do
-    let(:personal_account?) {Policies::ChildAccount.personal_account?(user)}
-
-    let(:user_sponsored?) {false}
-    let(:user_migrated?) {false}
-    let(:user_provider) {'email'}
-    let(:user_auth_option_credential_type) {'email'}
-    let(:user_auth_option) {build_stubbed(:authentication_option, credential_type: user_auth_option_credential_type)}
-    let(:user) {build_stubbed(:user, provider: user_provider, authentication_options: [user_auth_option])}
-
-    before do
-      user.stubs(:sponsored?).returns(user_sponsored?)
-      user.stubs(:migrated?).returns(user_migrated?)
-    end
-
-    it 'returns true' do
-      _(personal_account?).must_equal true
-    end
-
-    context 'when user provider is Clever' do
-      let(:user_provider) {'clever'}
-
-      it 'returns false' do
-        _(personal_account?).must_equal false
-      end
-    end
-
-    context 'when user provider is LTI v1' do
-      let(:user_provider) {'lti_v1'}
-
-      it 'returns false' do
-        _(personal_account?).must_equal false
-      end
-    end
-
-    context 'when user is migrated' do
-      let(:user_migrated?) {true}
-      let(:user_provider) {'clever'}
-
-      it 'returns true' do
-        _(personal_account?).must_equal true
-      end
-
-      context 'when credential type of user auth option is Clever' do
-        let(:user_auth_option_credential_type) {'clever'}
-
-        it 'returns false' do
-          _(personal_account?).must_equal false
-        end
-      end
-
-      context 'when credential type of user auth option is LTI v1' do
-        let(:user_auth_option_credential_type) {'lti_v1'}
-
-        it 'returns false' do
-          _(personal_account?).must_equal false
-        end
-      end
-    end
-
-    context 'when user is sponsored' do
-      let(:user_sponsored?) {true}
-
-      it 'returns false' do
-        _(personal_account?).must_equal false
-      end
-    end
-  end
-
   describe '.parent_permission_required?' do
-    let(:parent_permission_required?) {Policies::ChildAccount.parent_permission_required?(user)}
+    let(:parent_permission_required?) {Policies::ChildAccount.parent_permission_required?(user, future: future)}
 
     # Create, initially, a student that does require parent permission
     let(:user_type) {'student'}
@@ -584,18 +433,22 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     let(:user) {build_stubbed(:user, user_type: user_type, birthday: user_age&.year&.ago)}
 
     # This is the policy: max age of 12 with a lockout date 1 year after the start date
-    let(:user_state_policy_start_date) {DateTime.now}
+    let(:user_state_policy_start_date) {1.second.ago}
     let(:user_state_policy_max_age) {12}
     let(:user_lockout_date) {user_state_policy_start_date + 1.year}
     let(:user_state_policy) {{start_date: user_state_policy_start_date, lockout_date: user_lockout_date, max_age: user_state_policy_max_age}}
+
+    # Use the default `future` flag if we want to know if the student will need
+    # parent permission in the future.
+    let(:future) {nil}
 
     around do |test|
       Timecop.freeze {test.call}
     end
 
     before do
-      Policies::ChildAccount.stubs(:state_policy).with(user).returns(user_state_policy)
-      Policies::ChildAccount.stubs(:personal_account?).with(user).returns(user_account_is_personal?)
+      Policies::ChildAccount::StatePolicies.stubs(:state_policy).with(user).returns(user_state_policy)
+      Policies::User.stubs(:personal_account?).with(user).returns(user_account_is_personal?)
     end
 
     it 'returns true' do
@@ -632,6 +485,20 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       it 'returns false' do
         _(parent_permission_required?).must_equal false
       end
+
+      context 'do they need permission now?' do
+        let(:future) {false}
+        it 'returns false' do
+          _(parent_permission_required?).must_equal false
+        end
+      end
+
+      context 'do they need permission in the future?' do
+        let(:future) {true}
+        it 'returns true' do
+          _(parent_permission_required?).must_equal true
+        end
+      end
     end
 
     context 'when user is not covered by a US State child account policy' do
@@ -647,6 +514,46 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
 
       it 'returns false' do
         _(parent_permission_required?).must_equal false
+      end
+    end
+  end
+
+  describe '.compliant?' do
+    let(:user) {create(:student)}
+    let(:future) {nil}
+
+    let(:parent_permission_required) {false}
+    let(:compliant) {Policies::ChildAccount.compliant?(user, future: !!future)}
+
+    before do
+      Policies::ChildAccount.stubs(:parent_permission_required?).with(user, future: !!future).returns(parent_permission_required)
+    end
+
+    it 'returns true' do
+      _(compliant).must_equal true
+    end
+
+    context 'permission is required' do
+      let(:parent_permission_required) {true}
+
+      it 'returns false' do
+        _(compliant).must_equal false
+      end
+    end
+
+    context 'in the future' do
+      let(:future) {true}
+
+      it 'returns true' do
+        _(compliant).must_equal true
+      end
+
+      context 'permission is required' do
+        let(:parent_permission_required) {true}
+
+        it 'returns false' do
+          _(compliant).must_equal false
+        end
       end
     end
   end

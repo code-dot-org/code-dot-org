@@ -15,7 +15,7 @@ describe I18n::Resources::Dashboard::Docs::SyncOut do
 
   let(:crowdin_file_path) {CDO.dir('i18n/crowdin', i18n_locale, "docs/#{programming_env}.json")}
   let(:i18n_original_file_path) {CDO.dir("i18n/locales/original/docs/#{programming_env}.json")}
-  let(:target_i18n_file_path) {CDO.dir('dashboard/config/locales', "programming_environments.#{i18n_locale}.json")}
+  let(:target_i18n_file_path) {CDO.dir('dashboard/config/locales/programming_environments', "#{i18n_locale}.json")}
 
   around do |test|
     DatabaseCleaner.start

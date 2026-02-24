@@ -1,0 +1,10 @@
+name 'CSD U2 Image challenge_pilot_csd-vpl-m1-2024'
+display_name 'Adding Images'
+description 'Find an extra challenge or a new type of code here.'
+
+sublevels
+level 'CSD U2 Image Tag Height Width Attributes_csd-vpl-m1-2024'
+level 'CSD U2 Image Tag Illustrated Story_csd-vpl-m1-2024'
+level 'CSD U2 Image Tag How-To_csd-vpl-m1-2024'
+level 'CSD U2 Image Tag Recipe_csd-vpl-m1-2024'
+level 'CSD U2 images freeplay_csd-vpl-m1-2024'

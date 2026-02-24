@@ -7,10 +7,9 @@ import {
 import Hammer from 'hammerjs';
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-import {getCodeBlocks} from '@cdo/apps/blockly/utils';
+import {getCodeBlocks, getCode} from '@cdo/apps/blockly/utils';
 import PlayerSelectionDialog from '@cdo/apps/craft/PlayerSelectionDialog';
 import reducers from '@cdo/apps/craft/redux';
 import {ARROW_KEY_NAMES, handlePlayerSelection} from '@cdo/apps/craft/utils';
@@ -19,6 +18,7 @@ import {
   dismissSwipeOverlay,
 } from '@cdo/apps/templates/arrowDisplayRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 import {TestResults} from '../../constants';
@@ -31,7 +31,6 @@ import {singleton as studioApp} from '../../StudioApp';
 import AppView from '../../templates/AppView';
 import {muteCookieWithLevel} from '../../util/muteCookieHelpers';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
-import trackEvent from '../../util/trackEvent';
 import craftMsg from '../locale';
 
 import CraftVisualizationColumn from './CraftVisualizationColumn';
@@ -400,7 +399,7 @@ export default class Craft {
       hideRunButton: config.level.specialLevelType === 'agentSpawn',
     });
 
-    ReactDOM.render(
+    createReactRoot(
       <Provider store={getStore()}>
         <div>
           <AppView
@@ -456,7 +455,6 @@ export default class Craft {
   }
 
   static setCurrentCharacter(name = DEFAULT_CHARACTER) {
-    trackEvent('Minecraft', 'ChoseCharacter', name);
     Craft.clearPlayerState();
     trySetLocalStorage('craftSelectedPlayer', name);
   }
@@ -610,12 +608,7 @@ export default class Craft {
   }
 
   static phaserLoaded() {
-    return (
-      Craft.gameController &&
-      Craft.gameController.game &&
-      Craft.gameController.game.load &&
-      !Craft.gameController.game.load.isLoading
-    );
+    return !!Craft.gameController?.game?.load;
   }
 
   static levelInitialized() {
@@ -655,7 +648,6 @@ export default class Craft {
     }
 
     studioApp().toggleRunReset('reset');
-    Blockly.mainBlockSpace.traceOn(true);
     studioApp().attempts++;
 
     Craft.executeUserCode();
@@ -691,9 +683,6 @@ export default class Craft {
     }
 
     studioApp().playAudio('start');
-
-    // Start tracing calls.
-    Blockly.mainBlockSpace.traceOn(true);
 
     const appCodeOrgAPI = Craft.gameController.codeOrgAPI;
     appCodeOrgAPI.startCommandCollection();
@@ -848,9 +837,7 @@ export default class Craft {
       result: Craft.initialConfig.level.freePlay ? true : success,
       testResult: testResultType,
       image: encodedImage,
-      program: encodeURIComponent(
-        Blockly.cdoUtils.getCode(Blockly.mainBlockSpace)
-      ),
+      program: encodeURIComponent(getCode(Blockly.mainBlockSpace)),
       // typically delay feedback until response back
       // for things like e.g. crowdsourced hints & hint blocks
       onComplete: function (response) {

@@ -1,0 +1,227 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-06-27T22:34:27.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Musical Conversation\r\n\r\n**Define:** You're creating a song inspired by musical conversations, where one sound makes a statement and another replies. This technique, called *call and response*, is used in jazz, hip-hop, and Afro-Caribbean music to create rhythm and dialogue.\r\n\r\n**Prepare:** Pick two different sound packs to pull from (ie: Groove or Pop or Electro). Plan how one will act as the \"call\" and the other as the \"response.\" Consider how you can use different combinations of beat, bass, and lead tracks from each pack.\r\n\r\n**Try:** Create at least 3 sections where one sound makes a musical \"call\" and another responds. Use sequencing and rests to alternate between them. Each section should sound unique and easy to tell which pack it came from.\r\n\r\n**Reflect:** Does your remix feel like a conversation? In order to complete this level, your remix must include:\r\n\r\n- At least 3 unique beat tracks\r\n- At least 3 unique bass tracks\r\n- At least 3 unique lead tracks\r\n- A musical dialogue created by offsetting and varying tracks",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential"
+          ]
+        },
+        "type": "flyout"
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "showSoundFilters": true,
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundsPanelInSoundsMode": false,
+      "sortUnrestrictedPacksByType": false,
+      "validationTimeout": 1,
+      "packId": "default"
+    },
+    "display_name": "Musical Conversation",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/pop/pop.png",
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "validationSuccessMessage": "That was tricky! Good work using the rests with `play sequential` to get the timing just right. ",
+      "validationFailureMessage": "Something's not quite right! Try reading the requirements again!",
+      "validationMode": "type",
+      "playerTitle": "Example"
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHorpleEeoerSvfZ2JHZpm1GhsSDwCOxBL+fVO3bL+jSF8lL\nW/SyrxeYBOE22MW62zzXxl7ZWtb3HROyH4RPTHsAcBBPo4PK1usYOsBDZKBO\nSB45w5QfTSl1PV+PTL2tu7L/zOMVsZ+3oATtBDd7H5bIlKixaN0iRSXfBQfO\nUP3iAZsT8Eyuhbmx+/+7bQ0+D5ozC1BLzE/l6Sxl0cp7JVy55SPCJdw6h7Bg\nd/njIZRIfi0Hfd0LgeBlY+FXFjmymE9DlvTMyePgxoF3AZOqstijiVVWBc4I\n47L3KqsFIAMIdnd+D8+wY1UHCJLB3++QJ+1FPXMZfGoLYy1RSqV/YdMI7cuP\nTSFJzpj7ueh0ITXlAOWHaSOnO9aaJ+3mRz/FfuJbMriHzJQnt+5cJTjvhwNB\nCJlBZYNdxzoARt6h8rR4pYHSfzT0HtB+LAtypGMg28t308n0/7GlVziacS8f\nD884DY2k6RJtJVkwd74P++zkOIr073RzIqfuQVtokq4x1lN6bCH+QkzNePB5\npDLS3dTCHTW65bAMxE6JbOFyQT6ClFJVcwyiAdxwDPY2yJDVTuSYE2eyefd/\nUk1GaxyZ8bXB1joePVIOt23T3N8OUXCOU7UM00wLGqewKpOFDaJ5LMPsNC0/\nJG7h/GVx4MB3KsvO/ckQgUZCWl0PTtlpzuGH5GsMZiRei8KLgDgspa6KCmbC\nYLJhzyDiBckJsLI4EYjP0BC3Us3eGYdGeUY8HmU5XXOjOuElg+mTHcwfbXAB\nBxScOsgAhsupauopRPPu9PbxZUswmw6rERSn9QAglTWUfj6fRenOlowyEyKt\nqoKdojZh7A6D07jMyJF12lLjWJ/4LTl5YqjYVeg7SVGNpwBqhRjITtllcZC4\nqzYHRrMY/kkOUVk1GxMWGbZ2QBCJ9pKCIRa+Cr5QQkBjROyAK5W/xu+1eL9l\nla1koJqsEjDb5q3MXPBuZcISAPRVFbTeGRB3xdiv17Meh8u57l/gtxoVJj1/\nYYsyL1QaTz/5IFuOMyr6GG5wHuIyQE61lDhBsLhna2n79PIGEPp+txLYEgt9\ndeSsP1Gp6B8jZP5mbd9rz/wGSjkxXvg5gOZ0/BZmuEJ95c9ntWdV0yZb5l1i\nqWR06hU82WIeyTJUGxkEaZkgWaUij55ulSSK3nD15bm6TTmJUzmFUa1LqMYf\nLSH8v4mgwifnIiUuqfYLoW7OUDBVrILYFayCosZ+mD26RPAiOr9eopjCa3N+\nf4Lol2k708G1lFcVtsyYf2HyggFrOADZzL4Fhd+kAQG7GYIzPXdZlSTyyzC/\n+sAIJn6O21RnqgD9p+w=\n",
+    "bubble_choice_description": "You're creating a song inspired by musical conversations, where one sound makes a statement and another replies.",
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-practice-choice-c_v2_8c2e7a54-9dd1-41cd-9819-ef78bd6538bc",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says \"You Did It!\"\n✅ 3 unique beat tracks\n✅ 3 unique bass tracks\n✅ 3 unique lead tracks",
+        "next": true,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:9"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "bass:3"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "lead:3"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "beat:3"
+          }
+        ],
+        "comment": ""
+      },
+      {
+        "key": "test-music-lab-sequences-practice-choice-c_v2_39b4a41f-9661-40b2-844e-c0709b56a342",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for:\n❌ 3 unique beat tracks\n✅ 3 unique bass tracks\n✅ 3 unique lead tracks",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:9"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "bass:3"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "lead:3"
+          }
+        ],
+        "comment": "At least enough blocks are in the workspace"
+      },
+      {
+        "key": "test-music-lab-sequences-practice-choice-c_v2_02c08774-49c9-42f8-bc14-2474457dbd2c",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for:\n✅ 3 unique beat tracks\n❌ 3 unique bass tracks\n✅ 3 unique lead tracks",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:9"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "beat:3"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "lead:3"
+          }
+        ],
+        "comment": "At least enough blocks are in the workspace"
+      },
+      {
+        "key": "test-music-lab-sequences-practice-choice-c_v2_e232c5e8-9d25-4b94-a025-ae1f718fa1a2",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for:\n✅ 3 unique beat tracks\n✅ 3 unique bass tracks\n❌ 3 unique lead tracks",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:9"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "beat:3"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "bass:3"
+          }
+        ],
+        "comment": "At least enough blocks are in the workspace"
+      },
+      {
+        "key": "test-music-lab-sequences-practice-choice-c_v2_3d7c2273-8c91-48a8-889d-4c0c4a218a9b",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for:\n❌ 3 unique beat tracks\n❌ 3 unique bass tracks\n✅ 3 unique lead tracks",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:9"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "lead:3"
+          }
+        ],
+        "comment": "At least enough blocks are in the workspace"
+      },
+      {
+        "key": "test-music-lab-sequences-practice-choice-c_v2_ff49621c-ed1b-4efa-a503-65c74fc27753",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for:\n❌ 3 unique beat tracks\n✅ 3 unique bass tracks\n❌ 3 unique lead tracks",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:9"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "bass:3"
+          }
+        ],
+        "comment": "At least enough blocks are in the workspace"
+      },
+      {
+        "key": "test-music-lab-sequences-practice-choice-c_v2_9b730208-d29c-4bb8-bbb7-f8448c4dfe54",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for:\n✅ 3 unique beat tracks\n❌ 3 unique bass tracks\n❌ 3 unique lead tracks",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:9"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "beat:3"
+          }
+        ],
+        "comment": "At least enough blocks are in the workspace"
+      },
+      {
+        "key": "test-music-lab-sequences-practice-choice-c_v2_217b3df5-10a2-455f-a74f-66ff9c601edf",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for:\n❌ 3 unique beat tracks\n❌ 3 unique bass tracks\n❌ 3 unique lead tracks",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:9"
+          }
+        ],
+        "comment": "At least enough blocks are in the workspace"
+      },
+      {
+        "key": "test-music-lab-sequences-practice-choice-c_v2_75726dd2-7dab-4a76-9135-8d0437cbf48f",
+        "message": "Make sure you have your beat, bass, and lead tracks!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-06-27T22:34:27.225+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-choice-c_v2\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-choice-c_v2\"},{\"changed_at\":\"2025-06-27 22:40:48 +0000\",\"changed\":[\"long_instructions\",\"level_data\",\"display_name\",\"thumbnail_url\",\"exemplar_settings\",\"predict_settings\",\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-27 22:44:18 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

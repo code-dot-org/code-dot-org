@@ -1,0 +1,19 @@
+name 'computer-systems-preassessment-question13_v2-2025'
+title 'Computer Systems and Devices Pre-Assessment: Question 13'
+
+wrong 'Closing unused applications'
+wrong 'Restarting the device'
+wrong 'Adding more RAM'
+right 'Installing random software'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which action will **NOT** improve a slow computer?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 5: Troubleshooting and Optimizing Software
+
+Lesson 6: Build a Computer System
+MARKDOWN

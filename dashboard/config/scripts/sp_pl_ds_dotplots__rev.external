@@ -1,0 +1,49 @@
+name 'sp-pl-DS-DotPlots_-rev'
+title 'Dot Plot'
+
+
+markdown <<MARKDOWN
+# Creating Visualizations
+
+## 📝 To Do
+#### Practice building graphs in Google Sheets. Start by making a copy of the data so you can edit it:
+
+#### 1. Open the <a href="https://docs.google.com/spreadsheets/d/1AlVNpxzypX82fNlPDxDEa5ww72J_G2kyfZ2sFJedBJA/edit?usp=sharing" target="blank" rel="noopener noreferrer">School Party Survey Data - Google Sheets</a></p>
+#### 2. Create a Copy of the dataset before creating a data visualization.
+
+#### Now that you have the data, create at least one of the following charts. If you have time and want to explore, try creating both a bar chart and pie chart.
+
+---
+
+<img src="https://images.code.org/fc0d828145861e665d2b0f0eabfc1dc1-image-1744901010152.png" alt="bar chart created in Google Sheets" width="250px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+## Bar Chart
+#### Using the pizza party data, create a bar chart by:
+#### 1. Go to the "Bar Chart Workspace Tab"
+#### 2. Highlight the column of data you want to use.
+#### 3. Select 'insert' graph from the drop down menu.
+#### 4. Select 'bar chart' from the side menu.
+
+<details><summary style="font-size: 18px;"><strong>🔎 Show Me How 🔎</strong></summary> <img src="https://images.code.org/b6042703403f38487c31c55e8e9f238b-makechart.gif">
+</details>
+
+<div style="clear:both;"></div>
+
+---
+
+<img src="https://images.code.org/1614544f27bed480f32d75c583ac4b19-image-1744901246487.png" alt="pie chart created in Google Sheets" width="250px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+## Pie Chart
+
+#### Using the pizza party data, create a bar chart by:
+#### 1. Go to the "Pie Chart Workspace"
+#### 2. Highlight the column of data you want to use.
+#### 3. Select 'insert' graph from the drop down menu.
+#### 4. Select 'pie chart' from the side menu.
+
+<details><summary style="font-size: 18px;"><strong>🔎 Show Me How 🔎</strong></summary> <img src="https://images.code.org/b6042703403f38487c31c55e8e9f238b-makechart.gif">
+</details>
+
+<div style="clear:both;"></div>
+
+MARKDOWN

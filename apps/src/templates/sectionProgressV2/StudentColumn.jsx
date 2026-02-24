@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import DCDO from '@cdo/apps/dcdo';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {getFullName} from '@cdo/apps/templates/manageStudents/utils.ts';
 import i18n from '@cdo/locale';
 
-import FontAwesome from '../FontAwesome';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import {
   collapseMetadataForStudents,
   expandMetadataForStudents,
@@ -17,18 +17,26 @@ import {
 import SortByNameDropdown from '../SortByNameDropdown';
 
 import styles from './progress-table-v2.module.scss';
-import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
+import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 
 const SECTION_PROGRESS_V2 = 'SectionProgressV2';
 
-const skeletonCell = key => (
-  <div className={classNames(styles.gridBox, styles.gridBoxStudent)} key={key}>
+const skeletonCell = index => (
+  <div
+    className={classNames(
+      styles.gridBox,
+      styles.gridBoxStudent,
+      index % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
+    )}
+    key={index}
+  >
     <span
       className={classNames(
         skeletonizeContent.skeletonizeContent,
         styles.gridBoxSkeleton
       )}
       style={{width: _.random(30, 90) + '%'}}
+      // eslint-disable-next-line react/forbid-dom-props
       data-testid="skeleton-cell"
     />
   </div>
@@ -43,23 +51,6 @@ function StudentColumn({
   expandMetadataForStudents,
   collapseMetadataForStudents,
 }) {
-  const expandedMetadataEnabled = React.useMemo(
-    () => DCDO.get('progress-v2-metadata-enabled', false),
-    []
-  );
-
-  const getFullName = student =>
-    student.familyName ? `${student.name} ${student.familyName}` : student.name;
-
-  const getUnexpandableRow = (student, ind) => (
-    <div
-      className={classNames(styles.gridBox, styles.gridBoxStudent)}
-      key={ind}
-    >
-      {getFullName(student)}
-    </div>
-  );
-
   const collapseRow = studentId => {
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_ONE_ROW_COLLAPSED, {
       sectionId: sectionId,
@@ -76,7 +67,10 @@ function StudentColumn({
 
   const getUnexpandedRow = (student, ind) => (
     <button
-      className={styles.studentColumnName}
+      className={classNames(
+        styles.studentColumnName,
+        ind % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
+      )}
       key={ind}
       onClick={() => expandRow(student.id)}
       type="button"
@@ -95,7 +89,10 @@ function StudentColumn({
   const getExpandedRow = (student, ind) => (
     <div className={styles.studentColumnExpandedHeader} key={ind}>
       <button
-        className={styles.studentColumnName}
+        className={classNames(
+          styles.studentColumnName,
+          ind % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
+        )}
         onClick={() => collapseRow(student.id)}
         type="button"
         aria-expanded={true}
@@ -110,7 +107,8 @@ function StudentColumn({
       <div
         className={classNames(
           styles.gridBox,
-          styles.studentColumnExpandedHeaderText
+          styles.studentColumnExpandedHeaderText,
+          ind % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
         )}
       >
         {i18n.timeSpentMins()}
@@ -118,7 +116,8 @@ function StudentColumn({
       <div
         className={classNames(
           styles.gridBox,
-          styles.studentColumnExpandedHeaderText
+          styles.studentColumnExpandedHeaderText,
+          ind % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
         )}
       >
         {i18n.lastUpdatedTitle()}
@@ -129,10 +128,6 @@ function StudentColumn({
   const studentColumnBox = (student, ind) => {
     if (isSkeleton) {
       return skeletonCell(ind);
-    }
-
-    if (!expandedMetadataEnabled) {
-      return getUnexpandableRow(student, ind);
     }
 
     if (expandedMetadataStudentIds.includes(student.id)) {

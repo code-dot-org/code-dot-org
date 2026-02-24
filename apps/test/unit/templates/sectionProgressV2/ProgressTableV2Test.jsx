@@ -29,6 +29,8 @@ const SECTION_ID = 11;
 const UNIT_DATA = getScriptData(5);
 const DEFAULT_PROPS = {
   isSkeleton: false,
+  courseId: 2,
+  unitPositon: 3,
 };
 
 const LESSON_ID_1 = UNIT_DATA.lessons[0].id;
@@ -79,9 +81,11 @@ describe('ProgressTableV2', () => {
       Node.DOCUMENT_POSITION_FOLLOWING
     );
 
+    // eslint-disable-next-line no-restricted-properties
     const cell1 = screen.getByTestId(
       'lesson-data-cell-' + LESSON_ID_1 + '-' + STUDENT_1.id
     );
+    // eslint-disable-next-line no-restricted-properties
     const cell2 = screen.getByTestId(
       'lesson-data-cell-' + LESSON_ID_1 + '-' + STUDENT_2.id
     );
@@ -99,12 +103,14 @@ describe('ProgressTableV2', () => {
       Node.DOCUMENT_POSITION_PRECEDING
     );
 
+    // eslint-disable-next-line no-restricted-properties
     const cell1 = screen.getByTestId(
       'lesson-data-cell-' + LESSON_ID_1 + '-' + STUDENT_1.id,
       {
         exact: false,
       }
     );
+    // eslint-disable-next-line no-restricted-properties
     const cell2 = screen.getByTestId(
       'lesson-data-cell-' + LESSON_ID_1 + '-' + STUDENT_2.id,
       {

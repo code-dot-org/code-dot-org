@@ -1,0 +1,51 @@
+name 'sp-pl-DS_Python-Expressions'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Expressions
+
+## Expressions
+
+#### An **expression** is a combination of data and operators that evaluates a to a single value.
+
+![](https://images.code.org/57475ec41c652afa5db079b72fc99945-image-1727211392306.png)
+
+## Python Operators 
+#### A **Python operator** is a special symbol or keyword that performs a specific operation on one or more operands (values or variables).
+
+#### **Operands** are the inputs (such as numbers, strings, or variables) that the operator acts upon to produce a result.
+
+#### **Common operators:** 
+
+
+   <table border="1" width="100%" cellpadding="10" style="table-layout: fixed;">
+        <tr>
+            <th style="font-size: 14pt; text-align: center; width: 20%;">Operator</th>
+            <th style="font-size: 14pt; width: 80%;">Description</th>
+        </tr>
+        <tr style="height: 50px;">
+            <td style="font-size: 14pt; font-weight: bold; text-align: center;">+</td>
+            <td style="font-size: 14pt;">Addition (for numbers) / String concatenation (for strings)</td>
+        </tr>
+        <tr style="height: 50px;">
+            <td style="font-size: 14pt; font-weight: bold; text-align: center;">-</td>
+            <td style="font-size: 14pt;">Subtraction</td>
+        </tr>
+        <tr style="height: 50px;">
+            <td style="font-size: 14pt; font-weight: bold; text-align: center;">*</td>
+            <td style="font-size: 14pt;">Multiplication</td>
+        </tr>
+        <tr style="height: 50px;">
+            <td style="font-size: 14pt; font-weight: bold; text-align: center;">/</td>
+            <td style="font-size: 14pt;">Division</td>
+        </tr>
+        <tr style="height: 50px;">
+            <td style="font-size: 14pt; font-weight: bold; text-align: center;">%</td>
+            <td style="font-size: 14pt;">Modulus (remainder of division)</td>
+        </tr>
+    </table>
+    <div style="clear:both;"></div>
+
+## Next up, a *Modify* level using expressions!
+MARKDOWN

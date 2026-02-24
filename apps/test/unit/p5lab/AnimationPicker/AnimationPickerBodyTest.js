@@ -41,6 +41,7 @@ describe('AnimationPickerBody', function () {
     refreshTeacherHasConfirmedUploadWarning: emptyFunction,
     showingUploadWarning: false,
     exitedUploadWarning: emptyFunction,
+    uploadsEnabled: true,
   };
 
   describe('upload warning', function () {

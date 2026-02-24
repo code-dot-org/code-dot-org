@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2024-08-29T22:02:05.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "csd_debugging",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28494,
+    "name_suffix": "_2023",
+    "encrypted": "false",
+    "long_instructions": "#Use External Resources Code-Along Video (Placeholder)\r\n\r\n\r\n\r\n##Great job! You just debugged a program!\r\n#### Watch the video below to learn more about debugging. "
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-08-29T22:02:05.338+00:00\",\"changed\":[\"cloned from \\\"Debugging by Comparison Code Along Video\\\"\"],\"cloned_from\":\"Debugging by Comparison Code Along Video\"},{\"changed_at\":\"2024-08-29 22:02:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

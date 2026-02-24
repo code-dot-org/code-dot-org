@@ -1,0 +1,25 @@
+name 'networks-internet-lesson7-level2_v2-2025'
+title 'Internet Fact Sheet'
+description 'Internet Usage 2025 Pew Research Center Report'
+
+markdown <<MARKDOWN
+# Home Broadband Use By Income
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">Not everyone has the same access to high-speed Internet at home. This graph shows how much household income affects whether people can afford broadband. Families with higher incomes almost always have home Internet, while lower-income families are much less likely to have it. Think about what this means for school, work, and daily life.
+
+</p></div>
+
+## Discuss & Record: 
+- What types of jobs might be harder to apply for or do without reliable Internet?
+- How might differences in income affect the quality of Internet access people have, and what role do laws like net neutrality play in ensuring fair access for everyone?
+
+**For an interactive version of this chart, go to this [link](https://www.pewresearch.org/internet/fact-sheet/internet-broadband/)**
+
+![](https://images.code.org/e08aa3895701fcfcb2b0b95df813ff16-image-1740088858004.00.54 PM.png)
+
+Pew Research Center. "Internet, Broadband Fact Sheet." Pew Research Center: Internet, Science & Tech, 13 Nov. 2024, www.pewresearch.org/internet/fact-sheet/internet-broadband/. Accessed 10 Feb. 2025.
+
+
+MARKDOWN

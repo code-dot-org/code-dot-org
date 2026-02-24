@@ -1,0 +1,19 @@
+name 'networks-postassessment-question2_v2-2025'
+title 'Networks and the Internet Post-Assessment: Question 1'
+
+wrong 'Click the link and claim the prize quickly'
+wrong 'Reply to confirm the sender\'s identity'
+right 'Ignore the email and report it as phishing'
+wrong 'Forward it to a friend to see if they received the same email'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A student receives an email claiming they won a prize, but the email asks for personal details before claiming it. What is the best course of action?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 9: Network Security
+
+Lesson 10: Emerging Technologies
+MARKDOWN

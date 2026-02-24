@@ -4,8 +4,8 @@ import React, {Component} from 'react';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import {nestedUnitUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
 
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
@@ -28,16 +28,18 @@ class TextResponsesTable extends Component {
     responses: PropTypes.arrayOf(textResponsePropType),
     sectionId: PropTypes.number.isRequired,
     isLoading: PropTypes.bool,
-    scriptName: PropTypes.string,
+    courseVersionName: PropTypes.string,
+    unitPosition: PropTypes.number,
   };
 
   state = {};
 
   studentNameFormatter = (name, {rowData}) => {
-    const {sectionId, scriptName} = this.props;
-    const studentUrl = scriptUrlForStudent(
+    const {sectionId, courseVersionName, unitPosition} = this.props;
+    const studentUrl = nestedUnitUrlForStudent(
       sectionId,
-      scriptName,
+      courseVersionName,
+      unitPosition,
       rowData.studentId
     );
 

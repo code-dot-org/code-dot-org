@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 class LevelGroup < DSLDefined
@@ -35,6 +36,7 @@ class LevelGroup < DSLDefined
       title 'title of the assessment here'
       submittable 'true'
       anonymous 'false'
+      activity_guide_level 'false'
 
       page
       level 'level1'

@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "Táncos buli", body: "Kódolj egy Táncos bulit! Közreműködik Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, zene Disney \"Encanto,\" és még mások!", image: "/images/hoc2022-dance-party.png", url: "https://code.org/dance" }}
-
-{{ featured_tutorial, title: "Versművészet", body: "Készíts egy művészi alkotást a vershez, és egészítsd ki egy animációval ebben a tevékenységben a Kódolás óráján!", image: "/shared/images/courses/logo_tall_poem-art.jpg", url: "https://studio.code.org/s/poem-art-2021/reset" }}
-
-{{ featured_tutorial, title: "Művész", body: "Rajzolj szuper képeket és készíts rajzokat a Művész segítségével!", image: "/shared/images/courses/logo_tall_artist.jpg", url: "https://studio.code.org/s/artist/reset" }}
-
-{{ featured_tutorial, title: "Infinity játéklabor", body: "Írj egy történetet vagy készíts egy játékot a Disney Infinity figurák szereplésével az Infinity játéklabor segítségével.", image: "/shared/images/courses/logo_tall_infinity.jpg", url: "https://studio.code.org/s/infinity/reset" }}

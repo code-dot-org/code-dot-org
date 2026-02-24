@@ -1,20 +1,21 @@
 // The following styles are imported in a very specific order to preserve UI consistency.
-// `HeaderBanner` imports `typography.scss`
-// `CurriculumCatalogCard` imports `phase1-design-system.scss`
-// `typography.scss` has conflicting styles with `phase1-design-system.scss` (specifically for `h4` and `p` elements)
+// `CurriculumCatalogCard` imports `2022-rebrand-update.scss`
+// `typography.scss` has conflicting styles with `2022-rebrand-update.scss` (specifically for `h4` and `p` elements)
 // We are importing them in the specific order they were imported before adding import/order in order to preserve the UI.
 // These are very small changes so this can likely be removed with no issues.
 /* eslint-disable import/order */
-import HeaderBanner from '../HeaderBanner';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 /* eslint-enable import/order */
 
+import HeroBanner from '@code-dot-org/component-library/heroBanner';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect} from 'react';
 
-import {Heading5, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import NoMatchingSearchResultsFound from '@cdo/apps/templates/courseOfferings/noMatchingSearchResultsFound/NoMatchingSearchResultsFound';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import {
   getSimilarRecommendations,
   getStretchRecommendations,
@@ -23,7 +24,7 @@ import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import CourseCatalogBannerBackground from '../../../static/curriculum_catalog/course-catalog-banner-bg.png';
-import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.png';
+import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.svg';
 import CourseCatalogNoSearchResultPenguin from '../../../static/curriculum_catalog/course-catalog-no-search-result-penguin.png';
 
 import {curriculumDataShape} from './curriculumCatalogConstants';
@@ -39,6 +40,7 @@ const CurriculumCatalog = ({
   isSignedOut,
   isTeacher,
   curriculaTaught,
+  forceTranslated,
   ...props
 }) => {
   const [filteredCurricula, setFilteredCurricula] = useState(curriculaData);
@@ -75,7 +77,8 @@ const CurriculumCatalog = ({
       EVENTS.CURRICULUM_CATALOG_ASSIGN_COMPLETED_EVENT,
       {
         curriculum_offering: assignmentData.assignedTitle,
-      }
+      },
+      PLATFORMS.STATSIG
     );
   };
 
@@ -210,12 +213,12 @@ const CurriculumCatalog = ({
                 duration,
                 school_subject,
                 cs_topic,
+                ai_chat_tools_dependency,
                 course_version_path,
                 course_version_id,
                 course_id,
                 course_offering_id,
                 script_id,
-                is_standalone_unit,
                 is_translated,
                 //Expanded Card Props
                 device_compatibility,
@@ -238,6 +241,7 @@ const CurriculumCatalog = ({
                   gradesArray={grade_levels.split(',')}
                   subjects={school_subject?.split(',')}
                   topics={cs_topic?.split(',')}
+                  aiChatToolsDependency={ai_chat_tools_dependency}
                   isTranslated={is_translated}
                   isEnglish={isEnglish}
                   pathToCourse={course_version_path}
@@ -245,7 +249,6 @@ const CurriculumCatalog = ({
                   courseId={course_id}
                   courseOfferingId={course_offering_id}
                   scriptId={script_id}
-                  isStandAloneUnit={is_standalone_unit}
                   onAssignSuccess={response => handleAssignSuccess(response)}
                   deviceCompatibility={device_compatibility}
                   description={description}
@@ -272,27 +275,36 @@ const CurriculumCatalog = ({
       );
     } else {
       return (
-        <div className={style.catalogContentNoResults}>
-          <img src={CourseCatalogNoSearchResultPenguin} alt="" />
-          <Heading5>{i18n.noCurriculumSearchResultsHeader()}</Heading5>
-          <BodyTwoText>{i18n.noCurriculumSearchResultsBody()}</BodyTwoText>
-        </div>
+        <NoMatchingSearchResultsFound
+          illustrationImageProps={{
+            src: CourseCatalogNoSearchResultPenguin,
+            style: {width: '5em'},
+          }}
+          noResultsHeadingText={i18n.noCurriculumSearchResultsHeader()}
+          noResultsSubHeadingText={i18n.noCurriculumSearchResultsBody()}
+        />
       );
     }
   };
 
   return (
     <>
-      <HeaderBanner
-        headingText={i18n.curriculumCatalogHeaderTitle()}
-        subHeadingText={i18n.curriculumCatalogHeaderSubtitle()}
-        backgroundUrl={CourseCatalogBannerBackground}
-        imageUrl={CourseCatalogIllustration01}
+      <HeroBanner
+        className={style.curriculumCatalogHeroBanner}
+        data-theme="Dark"
+        heading={i18n.curriculumCatalogHeaderTitle()}
+        subHeading={i18n.curriculumCatalogHeaderSubtitle()}
+        imageProps={{src: CourseCatalogIllustration01}}
+        backgroundImageUrl={CourseCatalogBannerBackground}
+        withWideText
+        hideImageOnSmallScreen
       />
       {showAssignSuccessMessage && (
         <div className={style.assignSuccessMessageCenter}>
           <div className={style.assignSuccessMessageContainer}>
-            <BodyTwoText>{assignSuccessMessage}</BodyTwoText>
+            <Typography variant="body2" gutterBottom>
+              {assignSuccessMessage}
+            </Typography>
             <button
               aria-label="close success message"
               onClick={handleCloseAssignSuccessMessage}
@@ -308,6 +320,7 @@ const CurriculumCatalog = ({
         filteredCurricula={filteredCurricula}
         setFilteredCurricula={setFilteredCurricula}
         isEnglish={isEnglish}
+        forceTranslated={forceTranslated}
         languageNativeName={languageNativeName}
       />
       <div className={style.catalogContentContainer}>
@@ -325,6 +338,31 @@ CurriculumCatalog.propTypes = {
   isSignedOut: PropTypes.bool.isRequired,
   isTeacher: PropTypes.bool.isRequired,
   curriculaTaught: PropTypes.arrayOf(PropTypes.number),
+  forceTranslated: PropTypes.bool,
 };
 
-export default CurriculumCatalog;
+/**
+ * This is a version of the curriculum catalog that is overridable by a regional
+ * configuration.
+ *
+ * This is done via a configuration in, for instance, /config/global_editions/fa.yml
+ * via a paths rule such as:
+ *
+ * ```
+ * pages:
+ *   # Home dashboards
+ *   - path: /
+ *     components:
+ *       CurriculumCatalog:
+ *         forceTranslated: true
+ * ```
+ */
+const RegionalCurriculumCatalog = props => (
+  <GlobalEditionWrapper
+    component={CurriculumCatalog}
+    componentId="CurriculumCatalog"
+    props={props}
+  />
+);
+
+export default RegionalCurriculumCatalog;

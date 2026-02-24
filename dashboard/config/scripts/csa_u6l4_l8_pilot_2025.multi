@@ -1,0 +1,26 @@
+name 'CSA U6L4-L8_pilot-2025'
+title 'Check for Understanding'
+
+wrong '`population.length();`'
+wrong '`population.total();`'
+right '`population.size();`'
+wrong '`size(population);`'
+wrong '`length(population);`'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which of the following correctly returns the total number of elements in the `ArrayList` `population`?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Option A is not correct because `length` is not a method of the `ArrayList` class.
+
+Option B is not correct because there is no `total()` method in the `ArrayList` class.
+
+Option C is **correct** because `size()` is the method in the `ArrayList` class that returns the number of elements in the list.
+
+Option D is not correct because `size()` is a method of the `ArrayList` class, and must be called on an instance of the ArrayList class.
+
+Option E is not correct because `length` is not a method of the `ArrayList` class. It is a property of arrays in Java.
+MARKDOWN

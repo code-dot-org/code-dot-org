@@ -1,19 +1,17 @@
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useContext} from 'react';
 
-import {
-  EmText,
-  StrongText,
-  BodyFourText,
-} from '@cdo/apps/componentLibrary/typography';
 import EditorAnnotator from '@cdo/apps/EditorAnnotator';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import AiAssessmentFeedback from './AiAssessmentFeedback';
-import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
+import AiAssessmentFeedbackContext, {
+  THUMBS_DOWN,
+} from './AiAssessmentFeedbackContext';
 import AiAssessmentFeedbackRadio from './AiAssessmentFeedbackRadio';
 import AiConfidenceBox from './AiConfidenceBox';
 import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
@@ -39,8 +37,6 @@ export default function AiAssessmentBox({
   aiEvalInfo,
   aiEvidence,
 }) {
-  const thumbsdownval = 0;
-
   const studentAchievement = () => {
     const assessment = getStudentAssessmentString();
     return i18n.aiStudentAssessment({
@@ -136,33 +132,49 @@ export default function AiAssessmentBox({
     );
   };
 
-  const {aiFeedback, setAiFeedback} = useContext(AiAssessmentFeedbackContext);
+  const {aiFeedback, setAiFeedback, aiFeedbackId, setAiFeedbackId} = useContext(
+    AiAssessmentFeedbackContext
+  );
 
   return (
     <div className={style.aiAssessmentInfoBlock}>
       {isAiAssessed && (
         <div className={style.aiAssessmentInfoRow}>
-          <BodyFourText className={style.aiAssessmentScoreText}>
+          <Typography
+            className={style.aiAssessmentScoreText}
+            variant="body4"
+            gutterBottom
+          >
             {/* Score: */}
-            <StrongText>{i18n.aiAssessmentScore()}</StrongText>
+            <Typography variant="strong">{i18n.aiAssessmentScore()}</Typography>
             <span>{studentAchievement()}</span>
-          </BodyFourText>
+          </Typography>
           {aiConfidence && <AiConfidenceBox aiConfidence={aiConfidence} />}
           <AiAssessmentFeedbackRadio
             onChosen={val => setAiFeedback(val)}
             aiEvalId={aiEvalInfo.id}
+            setAiFeedbackId={setAiFeedbackId}
           />
         </div>
       )}
-      {isAiAssessed && aiFeedback === thumbsdownval && (
-        <AiAssessmentFeedback aiEvalInfo={aiEvalInfo} />
+      {isAiAssessed && aiFeedback === THUMBS_DOWN && (
+        <AiAssessmentFeedback
+          aiEvalInfo={aiEvalInfo}
+          aiFeedbackId={aiFeedbackId}
+        />
       )}
       {isAiAssessed && aiEvidence && aiEvidence.length > 0 && (
         <div id="tour-ai-evidence">
-          <BodyFourText className={style.aiAssessmentEvidenceBlock}>
+          <Typography
+            className={style.aiAssessmentEvidenceBlock}
+            variant="body4"
+            gutterBottom
+          >
             {/* Evidence: */}
-            <StrongText>{i18n.aiAssessmentEvidence()}</StrongText>
-          </BodyFourText>
+            <Typography variant="strong">
+              {i18n.aiAssessmentEvidence()}
+            </Typography>
+          </Typography>
           <ul>
             {aiEvidence.map((info, i) => (
               <li key={i}>{renderEvidenceItem(info, i)}</li>
@@ -170,7 +182,9 @@ export default function AiAssessmentBox({
           </ul>
         </div>
       )}
-      {!isAiAssessed && <EmText>{i18n.aiCannotAssess()}</EmText>}
+      {!isAiAssessed && (
+        <Typography variant="em">{i18n.aiCannotAssess()}</Typography>
+      )}
     </div>
   );
 }

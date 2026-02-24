@@ -1,8 +1,8 @@
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import PropTypes from 'prop-types';
 import React, {useCallback} from 'react';
 import {connect} from 'react-redux';
 
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {setSortByFamilyName} from '@cdo/apps/templates/currentUserRedux';
 import i18n from '@cdo/locale';

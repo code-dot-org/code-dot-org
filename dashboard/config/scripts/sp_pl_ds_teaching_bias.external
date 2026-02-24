@@ -1,0 +1,56 @@
+name 'sp-pl_DS_teaching_bias'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Teaching about Bias
+
+#### Several lessons in this unit address biases in datasets and data analysis. Teaching about biases in data science can be a sensitive subject for your students. These action items will help you feel more comfortable discussing these issues in your class. 
+
+## Bias
+#### Bias occurs when a decision favors some things and de-prioritizes or excludes others. Bias within data science is often a reflection of the data that is collected, how it is processed, and the way analyses are conducted.
+
+## Action Items
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;"> 🖥️Assume all data has bias</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style = "font-size: 16px;">
+   Even datasets that seem neutral or objective are likely to have biases, whether those are deeply harmful or just subtle distortions of reality. <br><br> Before using a dataset for analysis in your classroom, examine the ways it might be biased. Start by trying to understand the historical and contextual biases in the data you plan to use.
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🚦Approach discussions about data bias carefully</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style = "font-size: 16px;">
+   Many students have had personal experiences with bias, but may not have used that specific word to explain it. Approach discussions of data bias with an understanding that students may need time to process such an emotionally difficult concept.
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🌍 Emphasize the importance of team diversity</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style = "font-size: 16px;">
+    Talk with students about how team diversity can help in developing fair and representative data analyses. Use this fact as a motivator to encourage students to design studies that consider the needs of their community. Avoid positioning students as the ones to fix others' mistakes, but rather as innovators with valuable perspectives that can contribute to more equitable data practices.
+ </p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">✅ Support companies committed to reducing bias</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style = "font-size: 16px;">
+   Encourage students to seek out methodologies and tools that are specifically designed to reduce bias in data collection and analysis. Discuss the importance of transparency and accountability in data science, including the value of independent audits and partnerships with reputable community organizations.
+
+</p></div>
+</details>
+
+---
+
+## Supportive Scripts 
+#### Addressing concerns about AI bias from administrators, parents, or fellow teachers can be challenging. To facilitate these conversations, utilize the range of **scripts** provided in this link (<a href="https://docs.google.com/document/d/1N2C5ymAYQ2JR0NKoPQ2v5IK9Ig77t-1-juVfnWMpNYw/copy" target="blank" rel="noopener noreferrer">🔗link</a>). These resources are designed to help **clarify issues and foster understanding**. Additionally, there is a specific script available for students to help them express their experiences when affected by AI bias.
+
+
+MARKDOWN

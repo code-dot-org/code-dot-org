@@ -1,0 +1,17 @@
+name 'PLStyleGuide_L1_Citations'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Citations
+
+## Guidelines
+
+#### Any content borrowed from an external source (like images, text, or videos) should be cited for transparency and legal coverage.
+
+#### For a full explanation of professional learning citation guidelines, refer to the <a href="https://docs.google.com/document/d/17911NCZjjKASXo7GJadbbZ2DzPiqZtabvtPBwmSGpP8/edit?usp=sharing" target="blank" rel="noopener noreferrer">External Resources in PL Content Playbook</a>.
+
+## Formatting Citations
+
+#### The most important thing to consider is that your citations are **consistent within the scope of a professional learning experience**. You may choose to include parenthetical citations with a dedicated reference page at the end of a lesson or module. You may instead choose to include footnote citations throughout. The choice is yours.
+MARKDOWN

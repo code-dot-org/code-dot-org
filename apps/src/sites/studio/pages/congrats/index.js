@@ -1,13 +1,14 @@
 import $ from 'jquery';
 import queryString from 'query-string';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import Congrats from '@cdo/apps/templates/certificates/Congrats';
+import {setSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import {tryGetLocalStorage} from '@cdo/apps/utils';
 
 $(document).ready(function () {
@@ -17,6 +18,11 @@ $(document).ready(function () {
   const userType = congratsData.current_user
     ? congratsData.current_user.user_type
     : 'signedOut';
+
+  const givenName = congratsData.current_user?.properties?.given_name;
+  const familyName = congratsData.current_user?.properties?.family_name;
+  const userName = givenName && familyName ? `${givenName} ${familyName}` : '';
+
   const language = congratsData.language;
   const under13 = congratsData.under_13;
   const nextCourseScriptName = congratsData.next_course_script_name;
@@ -33,6 +39,13 @@ $(document).ready(function () {
   const isPlCourse = congratsData.is_pl_course;
   const isK5PlCourse = congratsData.is_k5_pl_course;
   const courseName = congratsData.course_name || 'hourofcode';
+  const assignableCourseSuggestions =
+    congratsData.assignable_course_suggestions;
+  const isEnglish = congratsData.is_english;
+
+  if (congratsData.sections) {
+    store.dispatch(setSections(congratsData.sections));
+  }
 
   let certificateId = '';
   try {
@@ -50,12 +63,14 @@ $(document).ready(function () {
       courseNames: certificateData.map(data => data.courseName),
     });
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <Congrats
+        congratsData={congratsData}
         certificateId={certificateId}
         tutorial={courseName}
         userType={userType}
+        userName={userName}
         under13={under13}
         language={language}
         MCShareLink={mcShareLink}
@@ -70,6 +85,8 @@ $(document).ready(function () {
         nextCourseTitle={nextCourseTitle}
         nextCourseDesc={nextCourseDesc}
         curriculumUrl={curriculumUrl}
+        assignableCourseSuggestions={assignableCourseSuggestions}
+        isEnglish={isEnglish}
       />
     </Provider>,
     document.getElementById('congrats-container')

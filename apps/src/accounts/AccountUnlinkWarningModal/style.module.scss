@@ -1,0 +1,23 @@
+@import 'color';
+
+.warningTitle {
+  color: $charcoal;
+}
+
+.warningText {
+  color: $red;
+  font-weight: 700;
+}
+
+.warningFooter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.line {
+  color: $light_gray;
+}
+
+.cancelButton {
+  border: 1px solid $light_gray;
+}

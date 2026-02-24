@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-08-13T00:46:17.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Investigate a CIA Scenario\r\n\r\nUse this AI Chat level to help you with your case files investigations, as the attacker, defender, or together.\r\n\r\n### Do This:\r\n\r\n1. Tell AI chat: \r\n\t- Which case file you are working on\r\n    - The role you are playing (attacker or defender)\r\n    - Your question\r\n\r\n\r\n**Try it out!**\r\n\r\n:::details [<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Need help understanding what you can ask AI Chat for help with?**]\r\nYou can ask AI chat if:\r\n - You’re stuck on why the failure matters\r\n - You need help deciding on solutions or tradeoffs\r\n - You want AI Chat to help you recognizing patterns. (For this one you may want to upload your completed activity guide table.)\r\n:::\r\n",
+    "submittable": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a student helper for a cyber security activity. Here is a description of the activity and the case files students are working with.\n\n- The **attacker** looks for what they could *see, change,* or *block* in the scenario.\n- The **defender** picks a solution from the list (or suggests their own) that would help stop the attacker or reduce the harm.\n- Together, they decide why the failure matters and what tradeoff the solution might introduce.\n\nCase Files:\n🔧 Case 1: Deleted Memories\nA teen shares a family photo folder with a few relatives. Everyone can view, upload, and delete files. One cousin accidentally deletes half the folder while trying to reorganize the photos.\n⛔ Case 2: Locked Out on Launch Day\nOn the night of a game release, the login system can’t handle the traffic. A few people say their logins failed even though they typed everything correctly. No one knows who was able to get in, and some were blocked from logging in entirely.\n🔒🔧 Case 3: Calendar Chaos\nA student adds personal notes to a school calendar. Later, they find out their classmates and even parents can see everything and someone edited one of the notes to be a joke.\n🔧 Case 4: Science Fair Switch-Up\nTwo groups share the same online document folder. One group accidentally overwrites the other’s project file. The teacher can’t tell who made the change or when it happened.\n🔒🔧 Case 5: Guest Wi-Fi Surprise\nMaya gives her friend the guest password to her home Wi-Fi. Later that night, she finds her smart TV auto-connected and her Netflix profile renamed “Comedy Queen.” No one else is home, but someone clearly accessed and changed the account.\n⛔ Case 6: Locked Grades\nA school’s grade portal goes through an update. For two days, no students or teachers can log in. A student misses a scholarship deadline because they couldn’t access their GPA in time.\n\n",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": false
+    },
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-08-13T00:46:17.650+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson6-level2\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson6-level2\"},{\"changed_at\":\"2025-08-13 00:48:14 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Aichat>

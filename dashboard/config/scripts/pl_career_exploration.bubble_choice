@@ -1,0 +1,8 @@
+name 'pl_career_exploration'
+display_name 'Career Exploration'
+description ' **Teacher Tip:** This is a great opportunity to highlight careers. Take time to help students connect their own interests to the people and professions being introduced. Learn how these singer/songwriters use computer science in their careers!'
+
+sublevels
+level 'music-coding-intro-songwriter-shakira-video'
+level 'music-coding-intro-songwriter-aloe-blacc-video'
+level 'music-coding-intro-songwriter-rosa-linn-video'

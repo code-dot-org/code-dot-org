@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 import i18n from '@cdo/locale';
 
-import {h3Style} from '../../lib/ui/Headings';
+import {h3Style} from '../../legacySharedComponents/Headings';
 
 class LessonSelector extends Component {
   static propTypes = {

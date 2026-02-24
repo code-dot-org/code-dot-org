@@ -1,0 +1,9 @@
+name 'datascience-U2L7-L7Prac_2024-pilot'
+display_name 'Extend Your Cleaning Data Knowledge'
+description 'Choose one of the options below!'
+
+sublevels
+level 'datascience-U2L7-L7a_2024-pilot'
+level 'datascience-U2L7-L7b_2024-pilot'
+level 'datascience-U2L7-L7c_2024-pilot'
+

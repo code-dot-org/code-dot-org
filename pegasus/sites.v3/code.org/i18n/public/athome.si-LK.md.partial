@@ -20,7 +20,6 @@ theme: responsive
     <li><a class="linktag" id="self-paced-nav" href="#express">හඳුන්වාදීමේ, ස්වයං-වේගවත් පා course මාලාවක් ගන්න</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">ක්රීඩාවක් හෝ යෙදුමක් සාදන්න</a></li>
     <li><a class="linktag" id="unplugged-nav" href="#unplugged">පරිගණකයක් නොමැතිව CS උත්සාහ කරන්න ('unplugged' & ජංගම විකල්ප)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Code.org කණ්ඩායමෙන් සහ විශේෂ අමුත්තන්ගෙන් CS ඉගෙන ගන්න</a></li>
 </ul>
 
 <br>
@@ -283,56 +282,6 @@ theme: responsive
   <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">හෙලෝ රූබි</a> - පරිගණක, තාක්ෂණය සහ ක්රමලේඛනය ගැන ඉගෙන ගැනීමට ලොව වඩාත්ම විස්මය ජනක ක්රමය. ගැටලුවක් දිරාපත් කිරීමේ හැකියාව, ස්ථාන රටා, ඇල්ගොරිතම ලෙස සිතීම, ගැටළු නිදොස් කිරීම සහ එකට වැඩ කිරීම වැනි CS මාතෘකා පරාසයක් පිළිබඳ ක්රියාකාරකම්. (වයස අවුරුදු 4-10 සඳහා)</li>
   <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> - කාඩ්පත්, නූල්, ක්රෙයොන්ස් සහ වටා ධාවනය වන ගොඩක් භාවිතා කරන ක්රීඩා සහ ප්රහේලිකා හරහා පරිගණක විද්යාව උගන්වන නොමිලේ ඉගැන්වීමේ ද්රව්ය එකතුවකි. (වයස අවුරුදු 5-14 සඳහා)</li>
 </ul>
-
-<h2>නිවසේ පරිගණකයක් නැද්ද? අපගේ හවුල්කරුවන්ගෙන් මෙම යෙදුම් සමඟ ඔබගේ දුරකථනයෙන් CS උත්සාහ කරන්න</h2>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="කොටුව දූපත"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">බොක්ස් අයිලන්ඩ්</h3></a>ආකර්ශනීය ජංගම කේතීකරණ ක්රීඩාවක් වන අතර ඇල්ගොරිතම, රටා හඳුනාගැනීම, අනුපිළිවෙලවල්, ලූප සහ කොන්දේසි වැනි කේතීකරණයේ මූලධර්ම උගන්වන අතරම ඉගෙන ගන්නන් සිත් ඇදගන්නාසුළු වික්රමාන්විතයකට ගෙන යයි. <i>(සියලුම වයස් කාණ්ඩ සඳහා)</i>
-</div>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="කෝඩ්පාක්"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">වයස අවුරුදු 5-9 ළමයින් සඳහා කේත පාක්</h3></a>සම්මානලාභී ඉගෙනුම්-සිට-කේත වේදිකාව. කේත කිරීමට ඉගෙන ගන්නා අතරතුර ප්රහේලිකා විසඳන්න සහ ෆෝස් සමඟ ක්රීඩා සාදන්න. <strong>සටහන: කෝඩ්ස්පාර්ක් විසින් මාස 3 ක නොමිලේ අත්හදා බැලීමක් ලබා දෙයි. දෙමාපියන්ගේ විද්යුත් තැපැල් ලිපිනය සහ ක්රෙඩිට් කාඩ් තොරතුරු ලියාපදිංචි වීමේ දී අවශ්ය වේ.</strong> <i>(5 ශ්රේණිය හරහා පෙර පාඨකයින් සඳහා)</i>
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[ආපසු මුලට]</a></p>
-
-<a id="livecoding"></a>
-<h2>Code.org කණ්ඩායමෙන් සහ විශේෂ අමුත්තන්ගෙන් ඉගෙන ගන්න!</h2>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="කෝඩෙබයිට් ලාංඡනය">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes පහසුවෙන් ජීර්ණය කළ හැකි, 20 විනාඩි අන්තර්ක්රියාකාරී පාඩම් පරිගණක විද්යාව තථ්ය-ලෝක මාතෘකා සමඟ මුසු කිරීම. සං sign ා භාෂාව කියවීමට AI පුහුණු කරන්න, යහපත සඳහා යෙදුමක් සැලසුම් කරන්න, Minecraft ලෝකය ගවේෂණය කරන්න, සහ තවත් බොහෝ දේ!</div>
-        <br>
-        <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>කථාංග බලන්න</button></a>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="කේත බිඳීම">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">Code Break එකක් ගැනීමෙන් පරිගණක විද්යාව විනෝදයෙන්</h3>
-        <div class="smalltext" style="">තබා ගන්න! ඔබට ඇෂ්ටන් කුචර් සමඟ සයිෆර් එකක් නිර්මාණය කළ හැකිය, යාරා ෂහීඩි සමඟ විචල්යයන් ගැන ඉගෙන ගන්න, සහ අන්තර්ජාලයේ සැබෑ නව නිපැයුම්කරු වන වින්ට් සර්ෆ් සමඟ අන්තර්ජාලය ක්රියා කරන ආකාරය ගවේෂණය කිරීමට පවා හැකිය!</div>
-        <br>
-        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>සම්බන්ධ වන්න</button></a>
-    </span>
-  </div>
-</div>
-</div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 

@@ -3,7 +3,7 @@
 - if ! @header['set_dir']
   - dir = language_dir_class
 
-%html{dir: dir}
+%html{dir: dir, lang: request.locale}
   %head
     = render inline: File.read(deploy_dir('shared/haml/onetrust_cookie_scripts.haml')), type: :haml, locals: {domain: 'code.org'}
 
@@ -22,5 +22,6 @@
 
     =view :theme_common_head_after
   %body
+    =view :theme_common_google_tag_manager
     =body
     =view :theme_common_body_after

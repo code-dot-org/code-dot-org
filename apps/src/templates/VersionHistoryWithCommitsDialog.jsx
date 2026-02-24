@@ -2,9 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import project from '@cdo/apps/code-studio/initApp/project';
-import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
@@ -108,22 +107,6 @@ export default class VersionHistoryWithCommitsDialog extends React.Component {
 
   onClearPuzzle = () => {
     this.setState({showSpinner: true});
-    firehoseClient.putRecord(
-      {
-        study: 'project-data-integrity',
-        study_group: 'v4',
-        event: 'clear-puzzle',
-        project_id: project.getCurrentId(),
-        data_json: JSON.stringify({
-          isOwner: project.isOwner(),
-          currentUrl: window.location.href,
-          shareUrl: project.getShareUrl(),
-          isProjectTemplateLevel: this.props.isProjectTemplateLevel,
-          currentSourceVersionId: project.getCurrentSourceVersionId(),
-        }),
-      },
-      {includeUserId: true}
-    );
 
     this.props
       .handleClearPuzzle()

@@ -34,9 +34,3 @@ SummaryView.args = {currentView: ViewType.SUMMARY};
 
 export const DetailsView = Template.bind({});
 DetailsView.args = {currentView: ViewType.DETAIL};
-
-export const StandardsView = Template.bind({});
-StandardsView.args = {
-  currentView: ViewType.STANDARDS,
-  showStandardsToggle: true,
-};

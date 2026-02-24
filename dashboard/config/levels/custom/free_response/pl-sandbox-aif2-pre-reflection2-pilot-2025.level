@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-10-23T16:13:01.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Reflection:",
+    "placeholder": "Enter your reflection here.",
+    "long_instructions": "\r\n\r\n#### Take a moment to gather your thoughts on the potential of this unit:\r\n\r\n>#### After seeing how students will be able to use AI to build web apps, how do you feel about guiding that kind of creative, open-ended work? What opportunities do you see for deeper learning—and what challenges might come with helping students balance AI support with their own coding decisions?",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "instructions_important": "false",
+    "parent_level_id": 18982,
+    "name_suffix": "_2023",
+    "encrypted": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "stay_on_level_after_submit": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-10-23T16:13:01.164+00:00\",\"changed\":[\"cloned from \\\"pl-sandbox-aif2-pre-reflection2\\\"\"],\"cloned_from\":\"pl-sandbox-aif2-pre-reflection2\"}]"
+}]]></config>
+</FreeResponse>

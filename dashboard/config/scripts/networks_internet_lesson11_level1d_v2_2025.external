@@ -1,0 +1,27 @@
+name 'networks-internet-lesson11-level1d_v2-2025'
+title 'StreamView Entertainment'
+display_name 'StreamView Entertainment'
+bubble_choice_description 'StreamView Entertainment has noticed many users reuse passwords across multiple online services, making them vulnerable to exploitation from hackers.'
+thumbnail_url 'https://images.code.org/a73b746b1d5b38aaedd42496b2f00995-image-1740388493881.jpg'
+
+markdown <<MARKDOWN
+# StreamView Entertainment  
+
+## Scenario
+StreamView Entertainment is a **leading video streaming platform**, serving millions of subscribers worldwide with on-demand content, live events, and exclusive original programming. With an ever-growing user base, the company is under pressure to maintain **fast, secure, and uninterrupted service**. However, in recent months, **credential stuffing attacks** have become a major problem, as hackers exploit weak passwords to hijack customer accounts.  
+
+Many users **reuse passwords** across multiple online services, making them vulnerable when credentials from past data breaches are leaked on the dark web. Hackers use automated scripts to test stolen username-password pairs against StreamView’s login system, **gaining unauthorized access to premium accounts**. Stolen accounts are then sold online at a fraction of the subscription cost, costing the company revenue and frustrating legitimate customers.  
+
+Internally, IT staff struggle to **detect compromised accounts in real time**, and some employees **still use weak passwords** for admin-level access to backend systems. If an attacker gains internal access, they could **leak unreleased content, manipulate billing systems, or disrupt streaming services**. The company is now facing **customer trust issues** and **pressure to improve security** without making login procedures too cumbersome.  
+
+## Key Facts 
+- **Credential stuffing attacks** allow hackers to **hijack user accounts** using leaked passwords.  
+- Many **users and employees** rely on **weak or reused passwords**.  
+- Stolen accounts are **sold illegally**, leading to **lost revenue and customer complaints**.  
+- If an internal breach occurs, attackers could **leak unreleased content or disrupt services**.  
+- IT staff **struggle to detect compromised accounts** before they are misused.  
+
+![](https://images.code.org/a73b746b1d5b38aaedd42496b2f00995-image-1740388493881.jpg)
+
+
+MARKDOWN

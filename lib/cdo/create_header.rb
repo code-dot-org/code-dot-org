@@ -5,7 +5,7 @@ class CreateHeader
   PROJECT_INFO_OVERRIDES = {
     minecraft_designer: {
       id: "create_dropdown_minecraft",
-      image: "logo_minecraft.png",
+      image: "header-minecraft-icon.png",
     },
     minecraft_adventurer: {
       image: "logo_mc.png",
@@ -16,55 +16,76 @@ class CreateHeader
     minecraft_aquatic: {
       image: "logo_minecraft_aquatic_square.jpg"
     },
+    spritelab: {
+      image: "header-sprite-lab-icon.png"
+    },
+    artist: {
+      image: "header-artist-icon.png"
+    },
     applab: {
-      image: "logo_applab_square.png"
+      image: "header-app-lab-icon.png"
     },
     gamelab: {
-      image: "logo_gamelab_square.png"
+      image: "header-game-lab-icon.png"
     },
     playlab_k1: {
       image: "logo_playlab.png"
     },
     artist_k1: {
-      image: "logo_artist.png"
+      image: "header-artist-icon.png"
     },
     poetry_hoc: {
       image: "logo_poetry.png"
     },
     music: {
-      url: CDO.studio_url("/s/music-intro-2024/reset")
+      image: "header-music-lab-icon.png",
+      url: CDO.code_org_url("/music")
+    },
+    dance: {
+      image: "header-dance-party-icon.png"
+    },
+    music_dance_ai: {
+      image: "header-music-dance-ai-icon.png",
+      url: CDO.code_org_url("/mix-move-ai")
     },
   }.freeze
 
   # project info data can be inferred from the key, except when otherwise
   # specified
-  def self.get_project_info(key)
+  def self.get_project_info(key, ge_region: nil)
     info = {
       id: "create_dropdown_#{key}",
       image: "logo_#{key}.png",
       title: key,
-      url: CDO.studio_url("projects/#{key}/new"),
+      url: CDO.studio_url("projects/#{key}/new", ge_region: ge_region),
     }
 
     info.merge(PROJECT_INFO_OVERRIDES[key.to_sym] || {})
   end
 
   def self.get_create_dropdown_contents(options)
-    everyone_entries = %w(spritelab artist)
-
-    applab_gamelab = %w(applab gamelab)
-
     entries = options[:limit_project_types] == "true" ?
-      everyone_entries + ["minecraft_designer"] :
-      everyone_entries + applab_gamelab
+      %w(spritelab minecraft_designer music artist dance) :
+      %w(music_dance_ai spritelab applab gamelab music pythonlab artist dance)
 
-    entries << "dance"
-    entries << "music"
-
-    if options[:project_type] && !(entries.include? options[:project_type])
+    if options[:project_type] &&
+        !entries.include?(options[:project_type]) &&
+        renderable_project_type?(
+          options[:project_type],
+          loc_prefix: options[:loc_prefix],
+          ge_region: options[:ge_region]
+        )
       entries.unshift(options[:project_type])
     end
 
-    entries.map {|entry| get_project_info(entry)}
+    available_entries = Cdo::GlobalEdition.region_project_types(options[:ge_region])
+    entries &= available_entries if available_entries
+
+    entries.map {|entry| get_project_info(entry, ge_region: options[:ge_region])}
+  end
+
+  def self.renderable_project_type?(key, loc_prefix:, ge_region: nil)
+    info = get_project_info(key, ge_region: ge_region)
+    I18n.exists?("#{loc_prefix}#{info[:title]}")
   end
 end

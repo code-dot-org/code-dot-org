@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "Танцювальна вечірка", body: "Напиши код танцювальної вечірки! За участі Бейонсе, Гаррі Стайлза, Lizzo, Lil Nas X, Селени Гомес, музики від Disney \ "Енканто,\" та багато іншого!", image: "/images/hoc2022-dance-party.png", url: "https://code.org/dance" }}
-
-{{ featured_tutorial, title: "Мистецтво віршів", body: "У цьому занятті "Година коду" доповніть класичний вірш мистецтвом та анімацією!", image: "/shared/images/courses/logo_tall_poem-art.jpg", url: "https://studio.code.org/s/poem-art-2021/reset" }}
-
-{{ featured_tutorial, title: "Художник", body: "Малюємо класні малюнки й дизайни разом з Художником!", image: "/shared/images/courses/logo_tall_artist.jpg", url: "https://studio.code.org/s/artist/reset" }}
-
-{{ featured_tutorial, title: "Ігрова лабораторія Infinity", body: "Створіть історію або гру з героями Disney Infinity за допомогою ігрової лабораторії.", image: "/shared/images/courses/logo_tall_infinity.jpg", url: "https://studio.code.org/s/infinity/reset" }}

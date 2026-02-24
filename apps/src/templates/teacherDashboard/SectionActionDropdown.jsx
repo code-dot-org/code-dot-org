@@ -2,32 +2,31 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
+import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
+import PopUpMenu from '@cdo/apps/sharedComponents/PopUpMenu';
 import QuickActionsCell from '@cdo/apps/templates/tables/QuickActionsCell';
 import {setRosterProvider} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import color from '../../util/color';
 import BaseDialog from '../BaseDialog';
-import FontAwesome from '../FontAwesome';
 
 import DialogFooter from './DialogFooter';
 import PrintCertificates from './PrintCertificates';
 import {sortableSectionShape} from './shapes.jsx';
 import {
-  sectionCode,
-  sectionName,
-  removeSection,
+  removeSectionOrThrow,
   toggleSectionHidden,
   importOrUpdateRoster,
 } from './teacherSectionsRedux';
+import {sectionCode, sectionName} from './teacherSectionsReduxSelectors';
 
 class SectionActionDropdown extends Component {
   static propTypes = {
@@ -35,7 +34,7 @@ class SectionActionDropdown extends Component {
     sectionData: sortableSectionShape.isRequired,
 
     //Provided by redux
-    removeSection: PropTypes.func.isRequired,
+    removeSectionOrThrow: PropTypes.func.isRequired,
     toggleSectionHidden: PropTypes.func.isRequired,
     sectionCode: PropTypes.string,
     sectionName: PropTypes.string,
@@ -59,14 +58,14 @@ class SectionActionDropdown extends Component {
   }
 
   onConfirmDelete = () => {
-    const {removeSection} = this.props;
+    const {removeSectionOrThrow} = this.props;
     const section = this.props.sectionData;
     $.ajax({
       url: `/dashboardapi/sections/${section.id}`,
       method: 'DELETE',
     })
       .done(() => {
-        removeSection(section.id);
+        removeSectionOrThrow(section.id);
       })
       .fail((jqXhr, status) => {
         // We may want to handle this more cleanly in the future, but for now this
@@ -80,9 +79,8 @@ class SectionActionDropdown extends Component {
    * Returns the URL to the correct section to be edited
    */
   editRedirectUrl = (sectionId, isPl) => {
-    let editSectionUrl = '/sections/' + sectionId + '/edit';
-    editSectionUrl += isPl ? '?redirectToPage=my-professional-learning' : '';
-    return editSectionUrl;
+    const append = isPl ? '?redirectToPage=my-professional-learning' : '';
+    return teacherDashboardUrl(sectionId, '/settings') + append;
   };
 
   /**
@@ -96,7 +94,7 @@ class SectionActionDropdown extends Component {
     const hideShowEvent = this.props.sectionData.hidden
       ? EVENTS.SECTION_TABLE_RESTORE_SECTION_CLICKED
       : EVENTS.SECTION_TABLE_ARCHIVE_SECTION_CLICKED;
-    analyticsReporter.sendEvent(hideShowEvent, {}, PLATFORMS.BOTH);
+    analyticsReporter.sendEvent(hideShowEvent, {}, PLATFORMS.STATSIG);
     this.props.toggleSectionHidden(this.props.sectionData.id);
   };
 
@@ -108,14 +106,14 @@ class SectionActionDropdown extends Component {
         analyticsReporter.sendEvent(
           EVENTS.SECTION_TABLE_SYNC_GOOGLE_CLASSROOM_CLICKED,
           {},
-          PLATFORMS.BOTH
+          PLATFORMS.STATSIG
         );
         break;
       case OAuthSectionTypes.clever:
         analyticsReporter.sendEvent(
           EVENTS.SECTION_TABLE_SYNC_CLEVER_CLICKED,
           {},
-          PLATFORMS.BOTH
+          PLATFORMS.STATSIG
         );
         break;
     }
@@ -128,7 +126,7 @@ class SectionActionDropdown extends Component {
     analyticsReporter.sendEvent(
       EVENTS.SECTION_TABLE_DELETE_SECTION_CLICKED,
       {},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
     this.setState({deleting: true});
   };
@@ -153,7 +151,7 @@ class SectionActionDropdown extends Component {
               analyticsReporter.sendEvent(
                 EVENTS.SECTION_TABLE_EDIT_SECTION_DETAILS_CLICKED,
                 {},
-                PLATFORMS.BOTH
+                PLATFORMS.STATSIG
               );
             }}
           >
@@ -166,20 +164,20 @@ class SectionActionDropdown extends Component {
               analyticsReporter.sendEvent(
                 EVENTS.SECTION_TABLE_VIEW_PROGRESS_CLICKED,
                 {},
-                PLATFORMS.BOTH
+                PLATFORMS.STATSIG
               );
             }}
           >
             {i18n.sectionViewProgress()}
           </PopUpMenu.Item>
           <PopUpMenu.Item
-            href={teacherDashboardUrl(sectionData.id, '/manage_students')}
+            href={teacherDashboardUrl(sectionData.id, '/roster')}
             className="manage-students-link"
             hrefOnClick={() => {
               analyticsReporter.sendEvent(
                 EVENTS.SECTION_TABLE_MANAGE_STUDENTS_CLICKED,
                 {},
-                PLATFORMS.BOTH
+                PLATFORMS.STATSIG
               );
             }}
           >
@@ -198,7 +196,7 @@ class SectionActionDropdown extends Component {
                   analyticsReporter.sendEvent(
                     loginInstructionsEvent,
                     {},
-                    PLATFORMS.BOTH
+                    PLATFORMS.STATSIG
                   );
                 }}
               >
@@ -289,7 +287,7 @@ export default connect(
     sectionName: sectionName(state, props.sectionData.id),
   }),
   {
-    removeSection,
+    removeSectionOrThrow,
     toggleSectionHidden,
     updateRoster: importOrUpdateRoster,
     setRosterProvider,

@@ -20,7 +20,8 @@ module Pd
       SUBJECT_WORKSHOP_4 => 'surveys/pd/ayw_workshop_post_survey',
       SUBJECT_WORKSHOP_1_2 => 'surveys/pd/ayw_workshop_post_survey',
       SUBJECT_WORKSHOP_3_4 => 'surveys/pd/ayw_workshop_post_survey',
-      SUBJECT_VIRTUAL_KICKOFF => 'surveys/pd/ayw_kickoff_call'
+      SUBJECT_VIRTUAL_KICKOFF => 'surveys/pd/ayw_kickoff_call',
+      COURSE_BUILD_YOUR_OWN => 'surveys/pd/build_your_own_workshop_teachers_post_survey'
     }
 
     PRE_SURVEY_CONFIG_PATHS = {
@@ -31,13 +32,15 @@ module Pd
       SUBJECT_WORKSHOP_3 => 'surveys/pd/ayw_workshop_pre_survey',
       SUBJECT_WORKSHOP_4 => 'surveys/pd/ayw_workshop_pre_survey',
       SUBJECT_WORKSHOP_1_2 => 'surveys/pd/ayw_workshop_pre_survey',
-      SUBJECT_WORKSHOP_3_4 => 'surveys/pd/ayw_workshop_pre_survey'
+      SUBJECT_WORKSHOP_3_4 => 'surveys/pd/ayw_workshop_pre_survey',
+      COURSE_BUILD_YOUR_OWN => 'surveys/pd/build_your_own_workshop_teachers_pre_survey'
     }
 
     TEST_PARTICIPANT_SURVEY_CONFIG_PATHS = [
       'surveys/pd/workshop_csf_intro_post_test',
       'surveys/pd/summer_workshop_pre_survey_test',
-      'surveys/pd/summer_workshop_post_survey_test'
+      'surveys/pd/summer_workshop_post_survey_test',
+      'surveys/pd/build_your_own_workshop_teachers_post_survey_test'
     ]
 
     ALL_PARTICIPANT_SURVEY_CONFIG_PATHS = [

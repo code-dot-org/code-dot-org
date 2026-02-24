@@ -1,15 +1,12 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-import {setLevel, setScriptId} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
-import AITutorFloatingActionButton from '@cdo/apps/aiTutor/views/AITutorFloatingActionButton';
+import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import ScriptLevelRedirectDialog from '@cdo/apps/code-studio/components/ScriptLevelRedirectDialog';
-import UnversionedScriptRedirectDialog from '@cdo/apps/code-studio/components/UnversionedScriptRedirectDialog';
 import {setIsMiniView} from '@cdo/apps/code-studio/progressRedux';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import instructions, {
   setTtsAutoplayEnabledForLevel,
@@ -17,8 +14,10 @@ import instructions, {
   setTaRubric,
 } from '@cdo/apps/redux/instructions';
 import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
+import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
 $(document).ready(initPage);
 
@@ -40,11 +39,8 @@ function initPage() {
   getStore().dispatch(setIsMiniView(true));
 
   const redirectDialogMountPoint = document.getElementById('redirect-dialog');
-  const unversionedRedirectDialogMountPoint = document.getElementById(
-    'unversioned-redirect-dialog'
-  );
   if (redirectDialogMountPoint && config.redirect_script_url) {
-    ReactDOM.render(
+    createReactRoot(
       <ScriptLevelRedirectDialog
         redirectUrl={config.redirect_script_url}
         scriptName={config.script_name}
@@ -52,48 +48,52 @@ function initPage() {
       />,
       redirectDialogMountPoint
     );
-  } else if (
-    unversionedRedirectDialogMountPoint &&
-    config.show_unversioned_redirect_warning
-  ) {
-    ReactDOM.render(
-      <UnversionedScriptRedirectDialog />,
-      unversionedRedirectDialogMountPoint
-    );
   }
 
-  if (hasScriptData('script[data-aitutordata]')) {
-    const aiTutorData = getScriptData('aitutordata');
-    const {levelId, type, hasValidation, aiTutorAvailable, isAssessment} =
-      aiTutorData;
-    const level = {
-      id: levelId,
-      type,
-      hasValidation,
-      aiTutorAvailable,
-      isAssessment,
+  // AI Differentiation FAB to be shown only if rubric FAB is not.
+  const renderAiDiffButton = () => {
+    const reportingData = {
+      unitName: config.script_name,
+      courseName: config.course_name,
+      levelName: config.level_name,
     };
-    getStore().dispatch(setLevel(level));
-    getStore().dispatch(setScriptId(aiTutorData.scriptId));
-    const aiTutorFabMountPoint = document.getElementById(
-      'ai-tutor-fab-mount-point'
+    const differentiationContext = {type: AiDiffContext.LEVEL};
+    if (hasScriptData('script[data-aiDiffData]')) {
+      const aiDiffData = getScriptData('aiDiffData');
+      const {levelId, scriptId} = aiDiffData;
+      differentiationContext.levelId = levelId;
+      differentiationContext.unitId = scriptId;
+    }
+
+    const aiDiffFabMountPoint = document.getElementById(
+      'ai-differentiation-fab-mount-point'
     );
-    if (aiTutorFabMountPoint) {
-      ReactDOM.render(
+    if (aiDiffFabMountPoint && experiments.isEnabled('ai-diff-levels')) {
+      createReactRoot(
         <Provider store={getStore()}>
-          <AITutorFloatingActionButton />
+          <AiDiffFloatingActionButton
+            context={differentiationContext}
+            scriptId={reportingData.unitName}
+            scriptName={reportingData.unitName}
+            canStartOpen={false}
+            canDefaultOpen={false}
+          />
         </Provider>,
-        aiTutorFabMountPoint
+        aiDiffFabMountPoint
       );
     }
-  }
+  };
 
-  const inRubricsPilot =
-    experiments.isEnabled('ai-rubrics') ||
-    experiments.isEnabled('non-ai-rubrics');
-  if (inRubricsPilot && hasScriptData('script[data-rubricdata]')) {
+  if (hasScriptData('script[data-rubricdata]')) {
     const rubricData = getScriptData('rubricdata');
-    const {rubric, studentLevelInfo} = rubricData;
+    const {
+      rubric,
+      studentLevelInfo,
+      canShowTaScoresAlert,
+      parentLevelName,
+      levelType,
+    } = rubricData;
+
     const reportingData = {
       unitName: config.script_name,
       courseName: config.course_name,
@@ -107,7 +107,6 @@ function initPage() {
     if (rubricFabMountPoint) {
       //rubric fab mount point is only true for teachers
       if (
-        experiments.isEnabled('ai-rubrics') &&
         !!rubric &&
         rubric.learningGoals.some(lg => lg.aiEnabled) &&
         config.level_name === rubric.level.name
@@ -118,24 +117,28 @@ function initPage() {
             ...reportingData,
             studentId: !!studentLevelInfo ? studentLevelInfo.user_id : '',
           },
-          PLATFORMS.BOTH
+          PLATFORMS.STATSIG
         );
       }
-      ReactDOM.render(
+      createReactRoot(
         <Provider store={getStore()}>
           <RubricFloatingActionButton
             rubric={rubric}
             studentLevelInfo={studentLevelInfo}
             reportingData={reportingData}
             currentLevelName={config.level_name}
-            aiEnabled={
-              experiments.isEnabled('ai-rubrics') &&
-              rubric.learningGoals.some(lg => lg.aiEnabled)
-            }
+            aiEnabled={rubric.learningGoals.some(lg => lg.aiEnabled)}
+            parentLevelName={parentLevelName}
+            canShowTaScoresAlert={canShowTaScoresAlert}
+            levelType={levelType}
           />
         </Provider>,
         rubricFabMountPoint
       );
+    } else {
+      renderAiDiffButton();
     }
+  } else {
+    renderAiDiffButton();
   }
 }

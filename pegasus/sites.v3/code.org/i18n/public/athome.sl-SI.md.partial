@@ -20,7 +20,6 @@ theme: responsive
     <li><a class="linktag" id="self-paced-nav" href="#express">Opravite uvodni tečaj s samodejnim tempom</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">Ustvarjanje igre ali aplikacije</a></li>
     <li><a class="linktag" id="unplugged-nav" href="#unplugged">Preizkusite CS brez računalnika (»unplugged« in mobilne možnosti)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Naučite se CS iz ekipe Code.org in posebnih gostov</a></li>
 </ul>
 
 <br>
@@ -283,56 +282,6 @@ theme: responsive
   <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Hello Ruby</a> - Najbolj muhast način na svetu za spoznavanje računalnikov, tehnologije in programiranja. Dejavnosti na različnih temah CS, kot so sposobnost razgradnje problema, vzorci na kraju samem, algoritmično razmišljanje, odpravljanje napak in skupno delo. (za starosti od 4 do 10 let)</li>
   <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> - Zbirka brezplačnega učnega gradiva, ki uči računalništvo z vključevanjem iger in ugank, ki uporabljajo kartice, niz, barvice in veliko teče okoli. (za 5-14 let)</li>
 </ul>
-
-<h2>Ni računalnika doma? Preizkusite CS v telefonu s temi aplikacijami naših partnerjev</h2>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Otok Box"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>Očarljiva mobilna igra kodiranja, ki učence popelje na razburljivo pustolovščino, hkrati pa poučuje osnove kodiranja, kot so algoritmi, prepoznavanje vzorcev, zaporedij, zank in pogojnosti. <i>(za vse starosti)</i>
-</div>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="CodeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">CodeSpark</h3></a>Nagrajena platforma za učenje do kode za otroke, stare od 5 do 9 let. Rešite uganke in ustvarite igre z The Foos, medtem ko se učite kodiranja. <strong>Opomba: CodeSpark ponuja brezplačno 3-mesečno preskusno različico. Ob prijavi so potrebni e-poštni naslov staršev in podatki o kreditni kartici.</strong> <i>(za predbralce do 5. stopnje)</i>
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[Nazaj na vrh]</a></p>
-
-<a id="livecoding"></a>
-<h2>Učite se od ekipe Code.org in posebnih gostov!</h2>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Logotip CodeBytes">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes so enostavno prebavljive, 20-minutne interaktivne lekcije, ki mešajo računalništvo z resničnimi temami. Vadite AI za branje znakovnega jezika, oblikujte aplikacijo za dobro, raziščite svet Minecrafta in še več!</div>
-        <br>
-        <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Oglejte si epizode</button></a>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Koda Break">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">Koda Break</h3>
-        <div class="smalltext" style="">Naj računalništvo zabavno ob kodo Break! Z Ashtonom Kutcherjem lahko ustvarite šifro, spoznate spremenljivke z Yara Shahidi in celo raziščete, kako internet deluje z dejanskim izumiteljem interneta, Vint Cerfom!</div>
-        <br>
-        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Povežite se</button></a>
-    </span>
-  </div>
-</div>
-</div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 

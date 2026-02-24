@@ -1,0 +1,49 @@
+name 'sp-pl-DS_L3andL4B'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Data and Ethics
+
+
+#### In lesson 3 and 4, students examine the ethical considerations of data collection and the complexities of data rights, gaining hands-on experience with data handling and exploring diverse perspectives through role-playing activities.
+
+---
+
+## Ethical Data Collection 
+
+<img src="https://images.code.org/cd2f8aadb676061a688ffc2f84a732ae-image-1724339345439.png" alt="judicial scale icon" width="250px"  style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
+
+#### Ethical data collection requires an understanding of how data is gathered, stored, and used. It's essential to consider the impact of different types of data and the ethical implications behind data choices. 
+
+#### Recognizing the responsibility involved in collecting and storing information, learners explore how ethical considerations shape the process, ensuring data is handled with care and integrity.
+
+
+## Data Rights
+
+<img src="https://images.code.org/296fb994c0502d16f96bda2d08e5ba05-image-1724339525656.png" alt="scale icon" width="250px" style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
+
+#### Data rights focus on the fundamental principles of who controls, accesses, and uses data. By examining the perspectives of various stakeholders, learners develop a nuanced understanding of the complex debates surrounding data ownership, privacy, and control. 
+
+#### This exploration fosters empathy and critical thinking around the rights and responsibilities involved in data usage.
+
+## Key Concepts
+- #### **bias** - when our data or the way we analyze it favors certain outcomes over others
+- #### **data collection** - the process of gathering and recording information from different sources
+- #### **data ethics** - the set of guidelines that ensure the responsible use, collection, and - sharing of data while respecting privacy, consent, and fairness
+- #### **data rights** - rules that make sure a person's information is used safely and fairly
+
+## Lesson Plans
+
+#### This professional learning module hightlights key activites and concepts from the Data Science course. For more detail, check out the full lesson plans: 
+
+- ### <a href="LINK" rel="noopener noreferrer">Lesson Three: Ethical Data Collection</a>
+
+- ### <a href="LINK" target="blank" rel="noopener noreferrer">Lesson Four: Data Rights</a>
+
+<br>
+
+#### Let’s dive into an activity from lesson 3 where students provide ethical guidelines for data collection while planning a party. 
+
+
+MARKDOWN

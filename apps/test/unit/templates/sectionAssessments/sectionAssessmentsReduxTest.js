@@ -1,4 +1,4 @@
-import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
+import {setUnit} from '@cdo/apps/redux/unitSelectionRedux';
 import sectionAssessments, {
   setAssessmentResponses,
   setSurveys,
@@ -44,7 +44,7 @@ describe('sectionAssessmentsRedux', () => {
           1: [{question: 'a question', puzzle: 2}],
         },
       };
-      const action = setScriptId(2);
+      const action = setUnit(2, 99);
       const nextState = sectionAssessments(currentState, action);
       expect(nextState.studentId).toEqual(0);
       expect(nextState.assessmentResponsesByScript).toEqual(
@@ -55,12 +55,17 @@ describe('sectionAssessmentsRedux', () => {
 
   describe('setAssessmentResponses', () => {
     it('associates the assessment data to the correct script', () => {
+      const courseVersionId = 1;
       const scriptId = 2;
       const assessmentData = [{question: 'a question', puzzle: 1}];
-      const action = setAssessmentResponses(scriptId, assessmentData);
+      const action = setAssessmentResponses(
+        courseVersionId,
+        scriptId,
+        assessmentData
+      );
       const nextState = sectionAssessments(initialState, action);
       const actualAssessmentData =
-        nextState.assessmentResponsesByScript[scriptId];
+        nextState.assessmentResponsesByScript[courseVersionId][scriptId];
       expect(actualAssessmentData).toEqual(assessmentData);
     });
   });
@@ -183,6 +188,7 @@ describe('sectionAssessmentsRedux', () => {
       const rootState = {
         unitSelection: {
           scriptId: 123,
+          courseVersionId: 321,
           coursesWithProgress: [
             {
               id: 321,
@@ -221,6 +227,7 @@ describe('sectionAssessmentsRedux', () => {
       const rootState = {
         unitSelection: {
           scriptId: 123,
+          courseVersionId: 321,
           coursesWithProgress: [
             {
               id: 321,
@@ -286,6 +293,7 @@ describe('sectionAssessmentsRedux', () => {
         sectionAssessments: initialState,
         unitSelection: {
           scriptId: 3,
+          courseVersionId: 321,
         },
       };
     });
@@ -402,23 +410,25 @@ describe('sectionAssessmentsRedux', () => {
             studentId: 1,
             assessmentId: 123,
             assessmentResponsesByScript: {
-              3: {
-                1: {
-                  student_name: 'Saira',
-                  responses_by_assessment: {
-                    123: {
-                      level_results: [
-                        {
-                          student_result: [3],
-                          status: 'incorrect',
-                          type: 'Multi',
-                        },
-                        {
-                          student_result: 'Hi',
-                          status: '',
-                          type: 'FreeResponse',
-                        },
-                      ],
+              321: {
+                3: {
+                  1: {
+                    student_name: 'Saira',
+                    responses_by_assessment: {
+                      123: {
+                        level_results: [
+                          {
+                            student_result: [3],
+                            status: 'incorrect',
+                            type: 'Multi',
+                          },
+                          {
+                            student_result: 'Hi',
+                            status: '',
+                            type: 'FreeResponse',
+                          },
+                        ],
+                      },
                     },
                   },
                 },
@@ -450,28 +460,30 @@ describe('sectionAssessmentsRedux', () => {
             studentId: 1,
             assessmentId: 123,
             assessmentResponsesByScript: {
-              3: {
-                1: {
-                  student_name: 'Saira',
-                  responses_by_assessment: {
-                    123: {
-                      level_results: [
-                        {
-                          student_result: [3],
-                          status: 'incorrect',
-                          type: 'Multi',
-                        },
-                        {
-                          student_result: 'Hi',
-                          status: '',
-                          type: 'FreeResponse',
-                        },
-                        {
-                          student_result: [0, 1],
-                          status: ['submitted', 'submitted'],
-                          type: 'Match',
-                        },
-                      ],
+              321: {
+                3: {
+                  1: {
+                    student_name: 'Saira',
+                    responses_by_assessment: {
+                      123: {
+                        level_results: [
+                          {
+                            student_result: [3],
+                            status: 'incorrect',
+                            type: 'Multi',
+                          },
+                          {
+                            student_result: 'Hi',
+                            status: '',
+                            type: 'FreeResponse',
+                          },
+                          {
+                            student_result: [0, 1],
+                            status: ['submitted', 'submitted'],
+                            type: 'Match',
+                          },
+                        ],
+                      },
                     },
                   },
                 },
@@ -515,18 +527,20 @@ describe('sectionAssessmentsRedux', () => {
               },
             },
             assessmentResponsesByScript: {
-              3: {
-                1: {
-                  student_name: 'Saira',
-                  responses_by_assessment: {
-                    123: {
-                      level_results: [
-                        {
-                          student_result: 'Hello world',
-                          status: '',
-                          type: 'FreeResponse',
-                        },
-                      ],
+              321: {
+                3: {
+                  1: {
+                    student_name: 'Saira',
+                    responses_by_assessment: {
+                      123: {
+                        level_results: [
+                          {
+                            student_result: 'Hello world',
+                            status: '',
+                            type: 'FreeResponse',
+                          },
+                        ],
+                      },
                     },
                   },
                 },
@@ -565,32 +579,34 @@ describe('sectionAssessmentsRedux', () => {
               },
             },
             assessmentResponsesByScript: {
-              3: {
-                1: {
-                  student_name: 'Saira',
-                  responses_by_assessment: {
-                    123: {
-                      level_results: [
-                        {
-                          student_result: 'Hello world',
-                          status: '',
-                          type: 'FreeResponse',
-                        },
-                      ],
+              321: {
+                3: {
+                  1: {
+                    student_name: 'Saira',
+                    responses_by_assessment: {
+                      123: {
+                        level_results: [
+                          {
+                            student_result: 'Hello world',
+                            status: '',
+                            type: 'FreeResponse',
+                          },
+                        ],
+                      },
                     },
                   },
-                },
-                2: {
-                  student_name: 'Sarah',
-                  responses_by_assessment: {
-                    123: {
-                      level_results: [
-                        {
-                          student_result: 'Hi',
-                          status: '',
-                          type: 'FreeResponse',
-                        },
-                      ],
+                  2: {
+                    student_name: 'Sarah',
+                    responses_by_assessment: {
+                      123: {
+                        level_results: [
+                          {
+                            student_result: 'Hi',
+                            status: '',
+                            type: 'FreeResponse',
+                          },
+                        ],
+                      },
                     },
                   },
                 },
@@ -735,6 +751,7 @@ describe('sectionAssessmentsRedux', () => {
           ...rootState,
           unitSelection: {
             scriptId: 2,
+            courseVersionId: 321,
             coursesWithProgress: [
               {id: 321, name: 'fake-name', units: [{id: 2, key: 'csd'}]},
             ],
@@ -749,6 +766,7 @@ describe('sectionAssessmentsRedux', () => {
           ...rootState,
           unitSelection: {
             scriptId: 2,
+            courseVersionId: 321,
             coursesWithProgress: [
               {id: 321, name: 'fake-name', units: [{id: 2, key: 'csf'}]},
             ],
@@ -848,36 +866,54 @@ describe('sectionAssessmentsRedux', () => {
               },
             },
             assessmentResponsesByScript: {
-              3: {
-                1: {
-                  student_name: 'Saira',
-                  responses_by_assessment: {
-                    123: {
-                      level_results: [
-                        {student_result: [0], status: 'correct', type: 'Multi'},
-                        {
-                          student_result: [0],
-                          status: 'incorrect',
-                          type: 'Multi',
-                        },
-                        {student_result: [1], status: 'correct', type: 'Multi'},
-                      ],
+              321: {
+                3: {
+                  1: {
+                    student_name: 'Saira',
+                    responses_by_assessment: {
+                      123: {
+                        level_results: [
+                          {
+                            student_result: [0],
+                            status: 'correct',
+                            type: 'Multi',
+                          },
+                          {
+                            student_result: [0],
+                            status: 'incorrect',
+                            type: 'Multi',
+                          },
+                          {
+                            student_result: [1],
+                            status: 'correct',
+                            type: 'Multi',
+                          },
+                        ],
+                      },
                     },
                   },
-                },
-                2: {
-                  student_name: 'Rebecca',
-                  responses_by_assessment: {
-                    123: {
-                      level_results: [
-                        {student_result: [0], status: 'correct', type: 'Multi'},
-                        {student_result: [1], status: 'correct', type: 'Multi'},
-                        {
-                          student_result: [],
-                          status: 'unsubmitted',
-                          type: 'Multi',
-                        },
-                      ],
+                  2: {
+                    student_name: 'Rebecca',
+                    responses_by_assessment: {
+                      123: {
+                        level_results: [
+                          {
+                            student_result: [0],
+                            status: 'correct',
+                            type: 'Multi',
+                          },
+                          {
+                            student_result: [1],
+                            status: 'correct',
+                            type: 'Multi',
+                          },
+                          {
+                            student_result: [],
+                            status: 'unsubmitted',
+                            type: 'Multi',
+                          },
+                        ],
+                      },
                     },
                   },
                 },
@@ -995,52 +1031,54 @@ describe('sectionAssessmentsRedux', () => {
               },
             },
             assessmentResponsesByScript: {
-              3: {
-                1: {
-                  student_name: 'Saira',
-                  responses_by_assessment: {
-                    123: {
-                      level_results: [
-                        {
-                          student_result: [0, 1],
-                          status: ['submitted', 'submitted'],
-                          type: 'Match',
-                        },
-                        {
-                          student_result: [null, null],
-                          status: ['unsubmitted', 'unsubmitted'],
-                          type: 'Match',
-                        },
-                        {
-                          student_result: [null, 1],
-                          status: ['unsubmitted', 'submitted'],
-                          type: 'Match',
-                        },
-                      ],
+              321: {
+                3: {
+                  1: {
+                    student_name: 'Saira',
+                    responses_by_assessment: {
+                      123: {
+                        level_results: [
+                          {
+                            student_result: [0, 1],
+                            status: ['submitted', 'submitted'],
+                            type: 'Match',
+                          },
+                          {
+                            student_result: [null, null],
+                            status: ['unsubmitted', 'unsubmitted'],
+                            type: 'Match',
+                          },
+                          {
+                            student_result: [null, 1],
+                            status: ['unsubmitted', 'submitted'],
+                            type: 'Match',
+                          },
+                        ],
+                      },
                     },
                   },
-                },
-                2: {
-                  student_name: 'Rebecca',
-                  responses_by_assessment: {
-                    123: {
-                      level_results: [
-                        {
-                          student_result: [0, 1],
-                          status: ['submitted', 'submitted'],
-                          type: 'Match',
-                        },
-                        {
-                          student_result: [1, 0],
-                          status: ['submitted', 'submitted'],
-                          type: 'Match',
-                        },
-                        {
-                          student_result: [null, 1],
-                          status: ['unsubmitted', 'submitted'],
-                          type: 'Match',
-                        },
-                      ],
+                  2: {
+                    student_name: 'Rebecca',
+                    responses_by_assessment: {
+                      123: {
+                        level_results: [
+                          {
+                            student_result: [0, 1],
+                            status: ['submitted', 'submitted'],
+                            type: 'Match',
+                          },
+                          {
+                            student_result: [1, 0],
+                            status: ['submitted', 'submitted'],
+                            type: 'Match',
+                          },
+                          {
+                            student_result: [null, 1],
+                            status: ['unsubmitted', 'submitted'],
+                            type: 'Match',
+                          },
+                        ],
+                      },
                     },
                   },
                 },
@@ -1209,20 +1247,22 @@ describe('sectionAssessmentsRedux', () => {
               },
             },
             assessmentResponsesByScript: {
-              3: {
-                1: {
-                  student_name: 'Saira',
-                  responses_by_assessment: {
-                    123: {
-                      level_results: [],
+              321: {
+                3: {
+                  1: {
+                    student_name: 'Saira',
+                    responses_by_assessment: {
+                      123: {
+                        level_results: [],
+                      },
                     },
                   },
-                },
-                2: {
-                  student_name: 'Rebecca',
-                  responses_by_assessment: {
-                    123: {
-                      level_results: [],
+                  2: {
+                    student_name: 'Rebecca',
+                    responses_by_assessment: {
+                      123: {
+                        level_results: [],
+                      },
                     },
                   },
                 },
@@ -1380,40 +1420,58 @@ describe('sectionAssessmentsRedux', () => {
               },
             },
             assessmentResponsesByScript: {
-              3: {
-                1: {
-                  student_name: 'Saira',
-                  responses_by_assessment: {
-                    123: {
-                      level_results: [
-                        {student_result: [0], status: 'correct', type: 'Multi'},
-                        {student_result: [1], status: 'correct', type: 'Multi'},
-                        {
-                          student_result: [],
-                          status: 'unsubmitted',
-                          type: 'Multi',
-                        },
-                      ],
-                      lesson: 'lesson 1',
-                      timestamp: '1',
+              321: {
+                3: {
+                  1: {
+                    student_name: 'Saira',
+                    responses_by_assessment: {
+                      123: {
+                        level_results: [
+                          {
+                            student_result: [0],
+                            status: 'correct',
+                            type: 'Multi',
+                          },
+                          {
+                            student_result: [1],
+                            status: 'correct',
+                            type: 'Multi',
+                          },
+                          {
+                            student_result: [],
+                            status: 'unsubmitted',
+                            type: 'Multi',
+                          },
+                        ],
+                        lesson: 'lesson 1',
+                        timestamp: '1',
+                      },
                     },
                   },
-                },
-                2: {
-                  student_name: 'Rebecca',
-                  responses_by_assessment: {
-                    123: {
-                      level_results: [
-                        {student_result: [0], status: 'correct', type: 'Multi'},
-                        {student_result: [1], status: 'correct', type: 'Multi'},
-                        {
-                          student_result: [1],
-                          status: 'incorrect',
-                          type: 'Multi',
-                        },
-                      ],
-                      lesson: 'lesson 1',
-                      timestamp: '1',
+                  2: {
+                    student_name: 'Rebecca',
+                    responses_by_assessment: {
+                      123: {
+                        level_results: [
+                          {
+                            student_result: [0],
+                            status: 'correct',
+                            type: 'Multi',
+                          },
+                          {
+                            student_result: [1],
+                            status: 'correct',
+                            type: 'Multi',
+                          },
+                          {
+                            student_result: [1],
+                            status: 'incorrect',
+                            type: 'Multi',
+                          },
+                        ],
+                        lesson: 'lesson 1',
+                        timestamp: '1',
+                      },
                     },
                   },
                 },
@@ -1482,6 +1540,7 @@ describe('sectionAssessmentsRedux', () => {
           ...rootState,
           unitSelection: {
             scriptId: 2,
+            courseVersionId: 321,
           },
           sectionAssessments: {
             ...rootState.sectionAssessments,
@@ -1616,18 +1675,20 @@ describe('sectionAssessmentsRedux', () => {
             ...rootState.sectionAssessments,
             assessmentId: 123,
             assessmentResponsesByScript: {
-              3: {
-                2: {
-                  student_name: 'Ilulia',
-                  responses_by_assessment: {
-                    123: {
-                      multi_correct: 4,
-                      multi_count: 10,
-                      match_correct: 2,
-                      match_count: 4,
-                      submitted: true,
-                      timestamp: date,
-                      url: 'code.org',
+              321: {
+                3: {
+                  2: {
+                    student_name: 'Ilulia',
+                    responses_by_assessment: {
+                      123: {
+                        multi_correct: 4,
+                        multi_count: 10,
+                        match_correct: 2,
+                        match_count: 4,
+                        submitted: true,
+                        timestamp: date,
+                        url: 'code.org',
+                      },
                     },
                   },
                 },
@@ -1883,23 +1944,25 @@ describe('sectionAssessmentsRedux', () => {
             questionIndex: 0,
             assessmentId: 123,
             assessmentResponsesByScript: {
-              3: {
-                1: {
-                  student_name: 'Saira',
-                  responses_by_assessment: {
-                    123: {
-                      level_results: [
-                        {
-                          student_result: [3],
-                          status: 'incorrect',
-                          type: 'Multi',
-                        },
-                        {
-                          student_result: 'Hi',
-                          status: '',
-                          type: 'FreeResponse',
-                        },
-                      ],
+              321: {
+                3: {
+                  1: {
+                    student_name: 'Saira',
+                    responses_by_assessment: {
+                      123: {
+                        level_results: [
+                          {
+                            student_result: [3],
+                            status: 'incorrect',
+                            type: 'Multi',
+                          },
+                          {
+                            student_result: 'Hi',
+                            status: '',
+                            type: 'FreeResponse',
+                          },
+                        ],
+                      },
                     },
                   },
                 },

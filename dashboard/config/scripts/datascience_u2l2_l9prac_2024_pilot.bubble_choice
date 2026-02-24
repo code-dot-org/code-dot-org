@@ -1,0 +1,8 @@
+name 'datascience-U2L2-L9Prac_2024-pilot'
+display_name 'Practice with Python'
+description 'Choose one of the options below!'
+
+sublevels
+level 'datascience-U2L2-L9a_2024-pilot'
+level 'datascience-U2L2-L9b_2024-pilot'
+level 'datascience-U2L2-L9c_2024-pilot'

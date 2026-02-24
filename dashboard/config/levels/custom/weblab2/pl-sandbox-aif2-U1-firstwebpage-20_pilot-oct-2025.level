@@ -1,0 +1,50 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-10-24T17:30:01.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Exploring design\r\n\r\n1. Prompt the AI to create an HTML site on the topic of your choice that includes: a navigation bar, a hero, a row of cards, and a footer. \r\n\r\n2. Save this version.\r\n\r\n3. Next prompt the AI to style your website with CSS. Be as specific as you like and go back and forth as many times as  you like. Remember to save each version along the way. \r\n\r\n>This level is designed for you to get comfortable designing with AI. Spend as little or as much time here as you like. Move on when you are ready. \r\n\r\n:::details [**Why go back to an old version?**]\r\nSometimes new code breaks things that used to work. In that case, developers “revert” — they go back to a previous version that worked correctly. It’s important to save your changes with short, clear messages, so you can easily find and restore the right version later.\r\n:::",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "suggest",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <body>\n    Content goes here!\n  </body>\n</html>\n  ",
+          "active": true,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "name_suffix": "_pilot-oct-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-24T17:30:01.859+00:00\",\"changed\":[\"cloned from \\\"pl-sandbox-aif2-U1-firstwebpage-20\\\"\"],\"cloned_from\":\"pl-sandbox-aif2-U1-firstwebpage-20\"}]"
+}]]></config>
+</Weblab2>

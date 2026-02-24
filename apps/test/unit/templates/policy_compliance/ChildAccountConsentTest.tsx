@@ -2,7 +2,7 @@ import {render, screen} from '@testing-library/react';
 import React from 'react';
 import sinon, {SinonStub} from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import ChildAccountConsent, {
   ChildAccountConsentProps,
 } from '@cdo/apps/templates/policy_compliance/ChildAccountConsent';
@@ -45,6 +45,7 @@ describe('ChildAccountConsent', () => {
       permissionGranted: true,
       permissionGrantedDate: permissionGrantedDate,
       studentId: 12345,
+      usState: 'CA',
     };
     const dateOptions: Intl.DateTimeFormatOptions = {
       year: 'numeric',
@@ -68,6 +69,7 @@ describe('ChildAccountConsent', () => {
       expect(sendEventSpy).to.be.calledOnce;
       expect(sendEventSpy).calledWith('CAP Parent Consent Granted', {
         studentId: props.studentId,
+        us_state: props.usState,
       });
     });
   });

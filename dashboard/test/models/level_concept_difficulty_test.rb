@@ -2,7 +2,7 @@ require 'test_helper'
 
 class LevelConceptDifficultyTest < ActiveSupport::TestCase
   setup do
-    @level_concept_difficulty = create :level_concept_difficulty
+    @level_concept_difficulty = create(:level_concept_difficulty)
   end
 
   test 'serializes to hash of just concepts' do
@@ -19,7 +19,7 @@ class LevelConceptDifficultyTest < ActiveSupport::TestCase
 
   test 'gets attributes when created as part of Level' do
     # Newly-created level has no LevelConceptDifficulty by default.
-    level = create :level
+    level = create(:level)
     assert_nil level.level_concept_difficulty
 
     # Assigning a level_concept_difficulty hash to a Level without one
@@ -37,7 +37,7 @@ class LevelConceptDifficultyTest < ActiveSupport::TestCase
   end
 
   test 'gets attributes when updated as part of Level' do
-    lcd = create :level_concept_difficulty, sequencing: 4
+    lcd = create(:level_concept_difficulty, sequencing: 4)
     level = lcd.level
     assert_equal 4, level.level_concept_difficulty.sequencing
     assert_nil level.level_concept_difficulty.debugging

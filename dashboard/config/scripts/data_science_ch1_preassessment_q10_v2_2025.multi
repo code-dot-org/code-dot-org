@@ -1,0 +1,14 @@
+name 'data-science-ch1-preassessment-q10_v2-2025'
+
+question 'What is the primary purpose of visualizing data in storytelling?'
+
+wrong 'To summarize numerical values for computational purposes.'
+right 'To identify relationships and trends within data for clearer communication.'
+wrong 'To ensure all data types are represented equally.'
+wrong 'To validate data through graphical comparisons.'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

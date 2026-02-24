@@ -1,6 +1,9 @@
 # Run two local mysql services in a read-write setup.
 
-include_recipe 'cdo-mysql::repo'
+# MySQL switch to Ubuntu Repo:
+# This cleans up the old mysql apt repository, which is no longer used.
+# We can remove this after transition back to the ubuntu repo:
+include_recipe 'cdo-mysql::remove-mysql-package-repo'
 
 mysql_client 'default' do
   package_name %w(mysql-client libmysqlclient-dev)

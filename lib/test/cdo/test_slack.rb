@@ -111,4 +111,21 @@ class SlackTest < Minitest::Test
     Net::HTTP.expects(:post_form).returns(stub(code: 400))
     refute Slack.message(FAKE_MESSAGE, channel: FAKE_CHANNEL)
   end
+
+  def test_tag_user_group_with_valid_group
+    message = "test message"
+    user_group = "teacher-tools-on-call"
+    assert_equal "<!subteam^S07FB3XSAR5> test message", Slack.tag_user_group(message, user_group)
+  end
+
+  def test_tag_user_group_with_invalid_group
+    message = "test message"
+    user_group = "invalid-group"
+    assert_equal "<!subteam^> test message", Slack.tag_user_group(message, user_group)
+  end
+
+  def test_tag_user_group_with_null_group
+    message = "test message"
+    assert_equal "<!subteam^> test message", Slack.tag_user_group(message, nil)
+  end
 end

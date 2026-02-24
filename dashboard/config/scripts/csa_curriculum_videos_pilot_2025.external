@@ -1,0 +1,107 @@
+name 'CSA Curriculum Videos_pilot-2025'
+title 'CSA Videos'
+description 'Rewatch concept videos and record your thoughts in a note catcher before, during, and after.'
+
+markdown <<MARKDOWN
+## Unit 1: Object-Oriented Programming
+
+* [**Object-Oriented Programming**](https://youtu.be/Wok4Xw_5cyY)
+
+* [**Creating Objects**](https://youtu.be/C5Ks_u87Ltg)
+
+* [**Calling Methods**](https://youtu.be/CPE_lYGCw3A)
+
+* [**While Loops**](https://youtu.be/qnz0LVpUr88)
+
+* [**Inheritance**](https://youtu.be/H0htNTwNvrY)
+
+* [**Writing a Method**](https://youtu.be/pdNf1O9BTYM)
+
+* [**Conditional Statements**](https://youtu.be/2rQmLwYVYpw)
+
+* [**Printing in Java**](https://youtu.be/XjswJsUj2wQ)
+
+* [**Two-Way Selection and NOT**](https://youtu.be/EjypsirssII)
+
+## Unit 2: Class Structure and Design
+
+* [**Instance Variables and Attributes**](https://youtu.be/49XzLCs8wgU)
+
+* [**Constructors**](https://youtu.be/1vXP8R2i-wg)
+
+* [**Overloaded Constructors**](https://youtu.be/rYTRK8R9ZM8)
+
+* [**Creating Variables**](https://youtu.be/VHwlxlqrquM)
+
+* [**Accessor Methods**](https://youtu.be/F5plZ3f5B3c)
+
+* [**Mutator Methods**](https://youtu.be/unh7__NcIS8)
+
+* [**The toString() Method**](https://youtu.be/WF7prjPzl98)
+
+## Unit 3: Arrays and Algorithms
+
+* [**One-Dimensional (1D) Arrays**](https://youtu.be/MgRMA_qZxZ4)
+
+* [**Modifying Values in a 1D Array**](https://youtu.be/AGp_5hB6dBE)
+
+* [**For Loops**](https://youtu.be/EF3laugNVCI)
+
+* [**Polymorphism**](https://youtu.be/Sx8NRbuAJNQ)
+
+* [**Enhanced For Loops**](https://youtu.be/b3Uf7anzr-k)
+
+* [**Nested Loops**](https://youtu.be/xFJoqfqVEbg)
+
+## Unit 4: Conditions and Logic
+
+* [**Static Variables**](https://youtu.be/4dffzoEfufA)
+
+* [**Static Methods**](https://youtu.be/k3QLkzascYI)
+
+* [**Constants**](https://youtu.be/1lpARsAtV08)
+
+* [**Casting**](https://youtu.be/Xy1lVNguW3s)
+
+* [**Random Numbers**](https://youtu.be/sbH9lixzL34)
+
+* [**Aliasing**](https://youtu.be/9GLT7oQnW4I)
+
+* [**The equals() Method**](https://youtu.be/F1WhwH4abX4)
+
+* [**Multi-Selection Statements**](https://youtu.be/sGYm7fojjXA)
+
+## Unit 5: Two-Dimensional Arrays
+
+* [**Two-Dimensional (2D) Arrays**](https://youtu.be/QIPNA3p6FBo)
+
+* [**Working with 2D Array Elements**](https://youtu.be/t0ZyG6uWSLE)
+
+* [**Row-Major Traversal**](https://youtu.be/vS_yPc-2Eb8)
+
+* [**Column-Major Traversal**](https://youtu.be/wgYqBhDDNEc)
+
+## Unit 6: ArrayLists and String Methods
+
+* [**Wrapper Classes - Part 1**](https://youtu.be/PrhYsHlqxMs)
+
+* [**Wrapper Classes - Part 2**](https://youtu.be/kog78g2fvqU)
+
+* [**The ArrayList Class**](https://youtu.be/Wqk9PrPIkXs)
+
+* [**Working with ArrayList Data**](https://youtu.be/C8i8q-07OUI)
+
+* [**Removing Data from an ArrayList**](https://youtu.be/XXARwZLpAVI)
+
+## Unit 7: Method Decomposition and Recursion
+
+* [**Private Methods**](https://youtu.be/o9ucV54SzL8)
+
+* [**Recursion**](https://youtu.be/W-nqR8NwaMs)
+
+## Unit 8: Searching and Sorting
+
+* [**Searching Algorithms**](https://youtu.be/gRK5BUw7TCk)
+
+* [**Sorting Algorithms**](https://youtu.be/b7iasi3MfLw)
+MARKDOWN

@@ -1,36 +1,21 @@
+- require 'cdo/footer'
+
+- options = {}
+- options[:ge_region] = request.ge_region
+- options[:site] = :code_org
+- options[:loc_prefix] = 'footer_'
+- footer_contents = Cdo::Footer.get_footer_contents(options)
+
 %footer#pagefooter
   .content
     .left{:style=>"float:left; max-width: 80%;"}
-      %a.whitefooterlink{:href=>"/privacy", :style=>"color: #ffa400;"}
-        - @privacy_updated = DCDO.get('recent_privacy_policy_update', nil)
-        - if @privacy_updated
-          !=I18n.t(:footer_privacy_policy_updated)
-        - else
-          !=I18n.t(:footer_privacy_policy)
-      .dim &nbsp; | &nbsp;
-      %a.whitefooterlink{:href=>"/cookies"}
-        !=I18n.t(:footer_cookie_notice)
-      .dim &nbsp; | &nbsp;
-      %a.whitefooterlink{:href=>"/about"}
-        !=I18n.t(:footer_about)
-      .dim &nbsp; | &nbsp;
-      %a.whitefooterlink{:href=>"/partners"}
-        !=I18n.t(:footer_partners)
-      .dim &nbsp; | &nbsp;
-      %a.whitefooterlink{:href=>"https://medium.com/@codeorg", :target=>"_blank"}
-        !=I18n.t(:footer_blog)
-      .dim &nbsp; | &nbsp;
-      %a.whitefooterlink{:href=>"/donate"}
-        !=I18n.t(:footer_donate)
-      .dim &nbsp; | &nbsp;
-      %a.whitefooterlink{:href=>"/shop"}
-        !=I18n.t(:footer_store)
-      .dim &nbsp; | &nbsp;
-      %a#support.whitefooterlink{:href=>"http://support.code.org/", :target=>"_blank"}
-        !=I18n.t(:footer_support)
-      .dim &nbsp; | &nbsp;
-      %a.whitefooterlink{:href=>"/tos"}
-        !=I18n.t(:footer_terms)
+      - footer_contents.each_with_index do |link, index|
+        - link[:href] = link[:url]
+        %a.whitefooterlink{link.except(:title, :url, :domain)}
+          != link[:title]
+        - unless index == footer_contents.length - 1
+          .dim &nbsp; | &nbsp;
+
       %small.dim
         !=I18n.t(:footer_trademark, current_year: Time.now.year, cs_discoveries: "CS Discoveries&reg;")
         %br

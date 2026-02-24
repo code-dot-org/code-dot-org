@@ -1,0 +1,11 @@
+name 'sp-pl-DS-ScatterPlots'
+title 'Scatter Plots'
+
+markdown <<MARKDOWN
+#Scatter Plots
+###Using the same CODAP link and bar chart you've previously created, form a scatter plot by:
+###1. Selecting a unique attribute not currently used in your graph.
+###2. Drag the new attribute onto the graph axis, replacing "Count".
+
+###[School Party Survey Data - CODAP](https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FbmRtgGWIm4yEfQjEOp9c%2Ffile.json)
+MARKDOWN

@@ -1,0 +1,7 @@
+apiVersion: v2
+name: cdo
+description: Helm chart for the code-dot-org dashboard
+type: application
+
+# Chart version, increment when changing helm templates, follow semver
+version: 0.1.0

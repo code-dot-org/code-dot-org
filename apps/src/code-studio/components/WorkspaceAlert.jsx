@@ -2,7 +2,7 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Alert from '@cdo/apps/templates/alert';
+import Alert from '@cdo/apps/legacySharedComponents/alert';
 
 export default class WorkspaceAlert extends React.Component {
   static propTypes = {
@@ -18,7 +18,8 @@ export default class WorkspaceAlert extends React.Component {
     var toolbarWidth;
     if (isBlockly) {
       // use the toolbox header's width to get the width of the actual toolbox.
-      toolbarWidth = $('#toolbox-header').width();
+      toolbarWidth =
+        document.getElementById('toolbox-header')?.offsetWidth || 0;
     } else {
       toolbarWidth =
         $('.droplet-palette-element').width() + $('.droplet-gutter').width();

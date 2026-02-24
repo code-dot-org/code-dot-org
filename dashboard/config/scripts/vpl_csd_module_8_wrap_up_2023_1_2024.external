@@ -4,15 +4,15 @@ display_name 'Introduction to Debugging'
 
 title 'Debugging Session'
 markdown <<MARKDOWN
-# Module 6 Asynchronous Wrap Up
+# Module 8 Asynchronous Wrap Up
 
 ## Engage with the Code.org Community
 
-##### Check out the <a href="https://forum.code.org/" target="blank" rel="noopener noreferrer">Code.org forum</a>  for ideas on implementing the AI and Machine Learning unit. The forum is a great place to go when you are looking for additional resources, ideas, and templates to use with Code.org lessons - created and shared by teachers within the community. Share your ideas and resources too!
+#### Check out the <a href="https://forum.code.org/" target="blank" rel="noopener noreferrer">Code.org forum</a>  for ideas on implementing the AI and Machine Learning unit. The forum is a great place to go when you are looking for additional resources, ideas, and templates to use with Code.org lessons - created and shared by teachers within the community. Share your ideas and resources too!
 
 ## Next Steps
 
-##### 1. Return to your cohort's shared slide deck for Module 8. 
-##### 2. Add any questions you have to the "Questions from Asynchronous Work" slide. 
-##### 3. Join the Module 8 Synchronous Workshop. 
+#### 1. Return to your cohort's shared slide deck for Module 8. 
+#### 2. Add any questions you have to the "Questions from Asynchronous Work" slide. 
+#### 3. Join the Module 8 Synchronous Workshop. 
 MARKDOWN

@@ -42,6 +42,88 @@ module ActiveSupport
 
           name
         end
+
+        # This method is used to define a memoized assertion helper method for the test subject within the example scope.
+        #
+        # @see https://rspec.info/features/3-13/rspec-core/subject/explicit-subject
+        # @example Defining the subject of the test
+        #   class FooTest < ActiveSupport::TestCase
+        #     describe '.bar' do
+        #       subject(:bar) { Foo.bar }
+        #
+        #       it 'returns bar' do
+        #         _bar.must_equal 'bar'
+        #       end
+        #     end
+        #   end
+        #
+        # @param name [Symbol] The name of the tested subject
+        # @param block [Proc] The block that defines the subject
+        # @return [void]
+        def subject(name = :subject, &block)
+          subject(:subject, &block) unless name == :subject
+
+          already_initialized = respond_to?(name)
+
+          let name, &block
+
+          let("_#{name}") {_ public_send(name)} unless already_initialized
+        end
+
+        # This method is used to define a memoized helper method and ensures its invocation before each example.
+        #
+        # @see https://rspec.info/features/3-13/rspec-core/helper-methods/let/
+        #
+        # @param name [Symbol] The name of the memoized helper method
+        # @param block [Proc] The block that defines the helper method
+        # @return [void]
+        def let!(name, &block)
+          already_initialized = respond_to?(name)
+
+          let name, &block
+
+          before {public_send(name)} unless already_initialized
+        end
+
+        # Provides class-level storage for shared examples with ancestor fallback.
+        #
+        # @return [Hash{String,Symbol=>Proc}] A hash of shared example blocks.
+        def shared_examples
+          @shared_examples ||= {}
+        end
+
+        # Defines a shared example group with a given description.
+        #
+        # @param desc [String, Symbol] The description of the shared example group.
+        # @param block [Proc] The block containing the shared example group.
+        # @return [void]
+        def shared_examples_for(desc, &block)
+          shared_examples[desc] = block
+        end
+
+        # Executes a shared example group with the given description, falling back to parent contexts.
+        #
+        # @param desc [String, Symbol] The description of the shared example group to execute.
+        # @param kwargs [Hash{Symbol => Object}] Keyword arguments passed to the shared example block.
+        #
+        # @return [void]
+        def it_behaves_like(desc, **kwargs)
+          describe_block = self
+
+          while describe_block.respond_to?(:shared_examples)
+            block = describe_block.shared_examples[desc]
+            break if block
+            describe_block = describe_block.superclass
+          end
+
+          raise KeyError, "shared examples not found: #{desc.inspect}" unless block
+
+          instance_exec(**kwargs, &block)
+        end
+      end
+
+      def described_class
+        @described_class ||= class_name[/^(.*)Test::/, 1]&.constantize
       end
     end
   end

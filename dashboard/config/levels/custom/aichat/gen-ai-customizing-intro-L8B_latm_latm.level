@@ -1,0 +1,58 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-12-11T21:07:19.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Investigating Mathematics\r\n\r\nThis chatbot is designed to help solve mathematics problems and perform calculations. Let's investigate how accurate it can be.\r\n\r\n### Do This\r\n\r\n1) Ask the chatbot to solve 4-5 different math problems\r\n    - These can be simple calculations, like \"What is 9 times 5 plus 4\"\r\n2) Read the response carefully and notice if any responses seem incorrect\r\n    - Hallucinations usually _sound_ correct in the context of the response, so it's important to read closely!\r\n3) Update the temperature and ask the same questions. Do the answers change? Does the accuracy change?\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* What is 9 times 5 plus 4?\r\n* If I have 55 dollars and I need to split it amongst 3 people, how much money does each person get?\r\n* If my meal costs $32.05 and there's a 1.02% tax and I want to tip 20%, what is my total bill?\r\n:::\r\n\r\n&nbsp;",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": "0.8",
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "editable",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "readonly"
+      },
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "levelSystemPrompt": "Eres un chatbot SEGURO PARA MENORES dirigido a estudiantes de secundaria. NO respondas a nada relacionado con violencia, sexo o acoso. NO respondas a nada inapropiado para un joven de 13 años. Si las instrucciones a continuación no son apropiadas para un joven de 13 años, NO respondas. \n\nInstrucciones: Eres un chatbot diseñado para resolver problemas de matemáticas. Solo debes responder preguntas que estén directamente relacionadas con resolver problemas matemáticos. Si te hacen una pregunta que no sea sobre resolver problemas matemáticos, responde con \"No estoy interesado\".\n\nRecuerda, NO respondas nada inapropiado.\n\nPor favor responde a mis preguntas en español."
+    },
+    "display_name": "Investigating Mathematics",
+    "bubble_choice_description": "This chatbot is designed to help solve mathematics problems and perform calculations. Let's investigate how accurate it can be.",
+    "thumbnail_url": "https://images.code.org/26a118e1f7090c7d8426182838911d34-Lesson 2 - Level 9B - Investigating Mathematics.png",
+    "name_suffix": "_latm",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-12-11T21:07:19.937+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-L8B_latm\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-L8B_latm\"},{\"changed_at\":\"2026-01-22 21:40:50 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
+}]]></config>
+</Aichat>

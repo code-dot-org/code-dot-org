@@ -1,9 +1,9 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import {Typography} from '@mui/material';
 import React, {useState} from 'react';
 
-import Checkbox from '@cdo/apps/componentLibrary/checkbox';
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
-
+import {PREDICT_FREE_RESPONSE_DEFAULT_HEIGHT} from '../../constants';
 import {LevelPredictSettings, PredictQuestionType} from '../types';
 
 import FreeResponseFields from './FreeResponseFields';
@@ -23,10 +23,9 @@ const EditPredictSettings: React.FunctionComponent<
     isPredictLevel: false,
     solution: '',
     questionType: PredictQuestionType.FreeResponse,
-    allowMultipleAttempts: false,
     placeholderText: '',
     multipleChoiceOptions: [''],
-    freeResponseHeight: 20,
+    freeResponseHeight: PREDICT_FREE_RESPONSE_DEFAULT_HEIGHT,
     codeEditableAfterSubmit: false,
   };
 
@@ -64,12 +63,12 @@ const EditPredictSettings: React.FunctionComponent<
 
   return (
     <div>
-      <BodyThreeText>
+      <Typography variant="body3" gutterBottom>
         Predict levels are read only for students. Either a free response or
         multiple choice question is shown to students in the instructions panel.
         The student must answer the question before they can run the code.
         Specify the question in the long instructions.
-      </BodyThreeText>
+      </Typography>
       <input
         id="level_predict_settings"
         name={'level[predict_settings]'}
@@ -109,17 +108,6 @@ const EditPredictSettings: React.FunctionComponent<
           ) : (
             renderMultipleChoiceOptions()
           )}
-          <Checkbox
-            label="Allow multiple tries"
-            checked={predictSettings.allowMultipleAttempts || false}
-            onChange={e =>
-              setPredictSettings({
-                ...predictSettings,
-                allowMultipleAttempts: e.target.checked,
-              })
-            }
-            name="allow_multiple_tries"
-          />
           <Checkbox
             label="Allow user to edit code after submitting a response"
             checked={predictSettings.codeEditableAfterSubmit || false}

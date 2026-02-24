@@ -1,15 +1,6 @@
 @import 'color.scss';
 @import 'font.scss';
-@import '@cdo/apps/componentLibrary/common/styles/mixins';
-
-// In order to make typography work correctly with em units. (Design system is build for 16px default font size)
-body {
-  font-size: 16px;
-}
-
-.containerWithMarginTop {
-  margin-top: 40px;
-}
+@import '@code-dot-org/component-library-styles/mixins';
 
 .withBorderTop {
   border-top: 1px solid $neutral_dark20;
@@ -38,6 +29,14 @@ input.classNameTextField {
     box-shadow: unset;
     color: $neutral_dark;
   }
+}
+
+.skeletonTextField {
+  width: 100%;
+  box-sizing: border-box;
+  height: 31px;
+  border-radius: 4px;
+  margin-bottom: 4px;
 }
 
 label.typographyLabelTwo {
@@ -162,19 +161,20 @@ label.typographyLabelTwo {
 
 .courseOption {
   margin-top: 20px;
-  align-items: baseline;
+  align-items: center;
 }
 
 .flexDisplay .radio {
-  margin: 0 0 0 0;
+  margin: -2px 0 0 0;
 }
 
 .courseOptionLabel {
-  margin: 0 10px 0 5px;
+  margin: 0 0 0 5px;
 }
 
 .unitDropdown {
   @include main-font-semi-bold;
+  font-size: 16px;
   margin: 4px 0 0 10px;
   padding: 0.3em;
 }
@@ -196,7 +196,7 @@ button.advancedSettingsButton {
 
 .celebrationDialogBody {
   padding: 36px;
-  font: $barlowSemiCondensed-medium;
+  font-family: var(--font-family-barlow-semi-condensed-medium);
 
   h1 {
     margin-bottom: 0;
@@ -223,10 +223,20 @@ button.advancedSettingsButton {
 .toolTipContainer {
   display: flex;
   align-items: center;
+  margin-bottom: 8px;
 
   button {
     .toggle-display {
       margin-left: 5px;
     }
   }
+}
+
+.taImage {
+  margin-left: 5px;
+  margin-top: -5px;
+}
+
+.loadingSpinner {
+  margin-bottom: 16px;
 }

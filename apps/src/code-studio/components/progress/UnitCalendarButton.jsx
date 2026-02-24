@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
 import i18n from '@cdo/locale';
 
@@ -24,17 +23,6 @@ export default class UnitCalendarButton extends React.Component {
 
   openDialog = () => {
     this.setState({isDialogOpen: true});
-    firehoseClient.putRecord(
-      {
-        study: 'script_overview_actions',
-        study_group: 'unit_calendar',
-        event: 'open_unit_calendar',
-        data_json: JSON.stringify({
-          script_id: this.props.scriptId,
-        }),
-      },
-      {includeUserId: true}
-    );
   };
 
   closeDialog = () => {
@@ -69,7 +57,7 @@ export default class UnitCalendarButton extends React.Component {
 
 const styles = {
   button: {
-    margin: 0,
-    boxShadow: 'inset 0 2px 0 0 rgb(255 255 255 / 40%)',
+    margin: '5px 0px 0px',
+    boxShadow: 'none',
   },
 };

@@ -1,0 +1,47 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-08-27T02:53:19.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "##Elijah\n\nElijah is a student who lives in a busy, multi-generational household where background noise is common. \n\nHe’s resourceful and stays on top of assignments, often working in shared spaces while editing music or creating short videos. \n\nThese environments make it hard to use voice-based features reliably.",
+        "imageUrl": "https://images.code.org/af40250518bc303f221a0d728d43e4f4-Screenshot 2025-08-05 141901.png",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-6ea9678a-ce7e-41b9-abb2-d878eb87ac30",
+        "typing": false,
+        "fadeInOverPrevious": true,
+        "layout": "text-top-right"
+      },
+      {
+        "text": "##Voice ID \n\nElijah’s login system uses voice recognition with a simple spoken phrase. It sometimes doesn’t recognize him, and worse — someone else in his house can say the same phrase and get in.",
+        "imageUrl": "https://images.code.org/90cd6693d846da46a7e180b9cd8f35cf-elijah_1.png",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-91f6e938-059e-4b97-b572-350b4fa8bbb8",
+        "fadeInOverPrevious": true,
+        "layout": "text-top-right"
+      },
+      {
+        "text": "##Security Questions with Long Typing\n\nSome platforms ask Elijah to answer security questions like \"What’s your pet’s name?\" He can usually answer them, but they take time to type on a small screen and don’t feel very secure.",
+        "imageUrl": "https://images.code.org/4109bc560343a5255bf17828b6ebb9b4-elijah_2.png",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-79557c5a-46fd-42a9-8bcd-652ea77a7ed0",
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "##Push Notification Verification\n\nWhen logging in from his laptop, Elijah gets a push notification on his phone asking him to verify. He taps “Yes” and is logged in right away—it’s quick and reliable, even in a noisy environment.",
+        "imageUrl": "https://images.code.org/787eccf0ca217a61bbf817880946c27e-elijah_3.png",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-10f16dff-0ead-45fb-8aaf-e7607fe82cca",
+        "layout": "text-top-right"
+      }
+    ],
+    "display_name": "Elijah",
+    "thumbnail_url": "https://images.code.org/71d9ee54388fb5edb83bb5d3fe9be644-Screenshot 2025-08-05 145214.png",
+    "bubble_choice_description": "A creative student who makes music and videos in a busy, shared home. Elijah often struggles with voice-based security in noisy environments.",
+    "name_suffix": "_aug2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-08-27T02:53:19.499+00:00\",\"changed\":[\"cloned from \\\"ai-powered-threats-defenses-lesson11-level1c_2025-pilot\\\"\"],\"cloned_from\":\"ai-powered-threats-defenses-lesson11-level1c_2025-pilot\"}]"
+}]]></config>
+</Panels>

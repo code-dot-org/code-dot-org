@@ -1,0 +1,52 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-01-01T00:47:10.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Creating Paragraphs",
+    "long_instructions": "# Create your own Paragraphs\r\n\r\nNow that we know how to add `<p>` tags to our code, let's re-do the first level from this lesson and write our name, favorite color, and favorite animal on separate lines\r\n\r\n# Do This\r\n\r\n1) Use `<p>` and `</p>` tags to write your name, your favorite color, and your favorite animal on separate lines\r\n\t- Don't forget to type these in between the `<body>` and `</body>` tags!\r\n- Use the Inspector tool to verify that each line appears on its own\r\n\r\n::: details [🔎 **Show Me How** 🔍]\r\n\r\n![](https://images.code.org/77eb29fd0f890f5cf42673d3c11491f9-image-1767228794428.gif)\r\n\r\n**More resources are in the \"Help and Tips\" tab**\r\n:::\r\n",
+    "bubble_choice_description": "Revisit the first level from this lesson to write your name, favorite color, and favorite animal using paragraph tags",
+    "submittable": "false",
+    "hide_share_and_remix": "true",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <body>\n    \n  </body>\n</html>\n  ",
+          "active": true,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMrWt2HFvH/UaEd1Aw6m\nH7NPCh2Lr52063tDqEoStRSedn5LQYmzKopHnMdxEddzMa1ry9pfnBII8zb7\nMD3Gw+QxEX86iJuKhBFDqXvjC26WIR0dnDES221G1n9EocbLnjZ74lU4GqVR\n2yVtkkyQxfGanPgjBAAl8O/sgeFg62qYZMbfnZ1K+KO0LQkvDpBO/lIG6Ra2\n4SdwNVhkKPIKAEhdRPz5Dlcm0tCbrHZitd0NXZpBrY/U10Y+D3rohqwkEzFY\nWJBAuUcCfsNxjGDY9XT+dSl43I94ygOBOsIwzFxpk4nH0Xwt0fwDFeZa3lNK\ngjTGKH9asNgnlf6ozbbBrif5PrdNsKuKwMaMWR/8oF4nW8T7J4XZCbJYVufl\ngVZS+HKzsRDinbFftUOEyZKz2Hvpe3Am+PtY0uKdx7LrL4qunCI+V3Ct9M5C\nEd1M2rOYPRWPZhNFhTrSKbGRt1APa+j7CZ+aZjJIgk4g6pfgsS6bBQUhpFnM\nFbMB40biMW0qviI=\n",
+    "thumbnail_url": "https://images.code.org/8b0d98cfcf275fcb9333e047b788fc16-U2L2-L6a-cover.gif"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-01-01 00:47:44 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-01 00:52:14 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-01 00:53:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-01 00:59:04 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

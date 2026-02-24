@@ -5,18 +5,16 @@ import 'jquery-ui/ui/widgets/droppable';
 import 'jquery-ui/ui/widgets/resizable';
 import objectFitImages from 'object-fit-images';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import RGBColor from 'rgbcolor';
 
 import autogenerateML from '@cdo/apps/applab/ai';
-import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
+import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 import * as assetPrefix from '../assetManagement/assetPrefix';
 import {ImageMode} from '../code-studio/components/AssetManager';
-import project from '../code-studio/initApp/project';
 import {KeyCodes, NOTIFICATION_ALERT_TYPE} from '../constants';
-import firehoseClient from '../lib/util/firehose';
 import logToCloud from '../logToCloud';
 import {getStore} from '../redux';
 import {singleton as studioApp} from '../StudioApp';
@@ -615,27 +613,12 @@ designMode.readProperty = function (element, name) {
   }
 };
 
-const FIREHOSE_STUDY = 'applab';
-const FIREHOSE_GROUP = 'design_mode';
-
 designMode.onDuplicate = function (element, prevThemeName, event) {
   let isScreen = $(element).hasClass('screen');
   if (isScreen) {
     const newScreenId = duplicateScreen(element);
     return elementUtils.getPrefixedElementById(newScreenId);
   }
-
-  firehoseClient.putRecord({
-    study: FIREHOSE_STUDY,
-    study_group: FIREHOSE_GROUP,
-    event: 'duplicate_element',
-    project_id: project.getCurrentId(),
-    data_json: JSON.stringify({
-      elementId: element.id,
-      elementTag: element.tagName,
-      elementClass: element.className,
-    }),
-  });
   var duplicateElement = $(element).clone()[0];
   var dupLeft = parseInt(element.style.left, 10) + 10;
   var dupTop = parseInt(element.style.top, 10) + 10;
@@ -702,18 +685,6 @@ designMode.hasCustomizedThemeProperties = function (element) {
 var batchChangeId = 1;
 
 designMode.onRestoreThemeDefaults = function (element) {
-  firehoseClient.putRecord({
-    study: FIREHOSE_STUDY,
-    study_group: FIREHOSE_GROUP,
-    event: 'restore_theme_defaults',
-    project_id: project.getCurrentId(),
-    data_json: JSON.stringify({
-      elementId: element.id,
-      elementTag: element.tagName,
-      elementClass: element.className,
-    }),
-  });
-
   const currentThemeValue = elementLibrary.getCurrentTheme(
     designMode.activeScreen()
   );
@@ -844,16 +815,6 @@ designMode.changeThemeForScreen = function (screenElement, themeValue) {
 };
 
 function duplicateScreen(element) {
-  firehoseClient.putRecord({
-    study: FIREHOSE_STUDY,
-    study_group: FIREHOSE_GROUP,
-    event: 'duplicate_screen',
-    project_id: project.getCurrentId(),
-    data_json: JSON.stringify({
-      elementId: element.id,
-    }),
-  });
-
   const sourceScreen = $(element);
   const sourceScreenId = elementUtils.getId(element);
   const newScreenId = designMode.createScreen();
@@ -906,19 +867,6 @@ function duplicateScreen(element) {
 }
 
 designMode.onCopyElementToScreen = function (element, destScreen) {
-  firehoseClient.putRecord({
-    study: FIREHOSE_STUDY,
-    study_group: FIREHOSE_GROUP,
-    event: 'copy_to_screen',
-    project_id: project.getCurrentId(),
-    data_json: JSON.stringify({
-      elementId: element.id,
-      elementTag: element.tagName,
-      elementClass: element.className,
-      destinationScreen: destScreen,
-    }),
-  });
-
   const sourceElement = $(element);
   const prevThemeName = elementLibrary.getCurrentTheme(
     designMode.activeScreen()
@@ -962,17 +910,6 @@ designMode.onDeletePropertiesButton = function (element, event) {
 };
 
 function deleteElement(element) {
-  firehoseClient.putRecord({
-    study: FIREHOSE_STUDY,
-    study_group: FIREHOSE_GROUP,
-    event: 'delete_element',
-    project_id: project.getCurrentId(),
-    data_json: JSON.stringify({
-      elementId: element.id,
-      elementTag: element.tagName,
-      elementClass: element.className,
-    }),
-  });
   var isScreen = $(element).hasClass('screen');
   if ($(element.parentNode).is('.ui-resizable')) {
     element = element.parentNode;
@@ -1757,7 +1694,7 @@ designMode.renderDesignWorkspace = function (element) {
     ),
     autogenerateML,
   };
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <DesignWorkspace {...props} />
     </Provider>,

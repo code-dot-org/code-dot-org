@@ -1,12 +1,3 @@
-milestone:
-  - rule: Turn off for all users
-    value: false
-  - rule: Turn on for Trevor
-    where:
-      script_id: 38
-    value: true
-
-feature2:
-  - rule: Turn on for all users
-    value: true
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:3f59cddeceb5cea530d3c4ba8884c3a1ea22c3ea12cd7a4ccf0e9478ab7518eb
+size 197

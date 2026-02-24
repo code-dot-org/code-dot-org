@@ -1,0 +1,4 @@
+# This configuration file only applies to the root workspace
+apps
+packages
+*.lock

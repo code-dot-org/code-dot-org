@@ -1,14 +1,14 @@
+import Link from '@code-dot-org/component-library/link';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
-import Link from '@cdo/apps/componentLibrary/link';
-import {Heading6} from '@cdo/apps/componentLibrary/typography';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
-import FontAwesome from '../FontAwesome';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 
 import AssignmentCompletionStatesBox from './AssignmentCompletionStatesBox';
 import LevelTypesBox from './LevelTypesBox';
@@ -67,15 +67,16 @@ export default function IconKey({sectionId}) {
         <div
           onClick={clickListener}
           className={styles.iconKeyTitle}
+          // eslint-disable-next-line react/forbid-dom-props
           data-testid="expandable-container"
           role="button"
           aria-expanded={isOpen}
           tabIndex="0"
         >
-          <Heading6>
+          <Typography variant="h6" gutterBottom>
             <FontAwesome className={styles.iconKeyCaret} icon={caret(isOpen)} />
             {i18n.iconKey()}
-          </Heading6>
+          </Typography>
         </div>
         <Link
           type="primary"

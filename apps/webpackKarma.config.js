@@ -31,8 +31,8 @@ const karmaConfig = {
             localeDoNotImportTest('@cdo/locale'),
             localeDoNotImportTest('@cdo/music/locale'),
             localeDoNotImportTest('@cdo/netsim/locale'),
-            localeDoNotImportTest('@cdo/tutorialExplorer/locale'),
             localeDoNotImportTest('@cdo/weblab/locale'),
+            localeDoNotImportTest('@cdo/signup/locale'),
           ]),
           ...{
             // Use mock-firmata to unit test playground-io maker components
@@ -42,8 +42,6 @@ const karmaConfig = {
       },
     },
     externals: {
-      blockly: 'this Blockly',
-
       // The below are necessary for enzyme to work.
       // See https://github.com/airbnb/enzyme/blob/master/docs/guides/webpack.md
       cheerio: 'window',

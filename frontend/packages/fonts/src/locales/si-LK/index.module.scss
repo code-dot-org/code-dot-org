@@ -1,0 +1,6 @@
+@use '@fontsource-variable/noto-sans-sinhala/scss/mixins' as NotoSansSinhala;
+@include NotoSansSinhala.faces($family: 'Noto Sans Sinhala');
+
+.className {
+  font-family: 'Noto Sans Sinhala', sans-serif;
+}

@@ -2,8 +2,6 @@ class Ability
   include CanCan::Ability
   include Pd::Application::ActiveApplicationModels
 
-  GENAI_PILOT = 'gen-ai-lab-v1'
-
   # Define abilities for the passed in user here. For more information, see the
   # wiki at https://github.com/ryanb/cancan/wiki/Defining-Abilities.
   def initialize(user)
@@ -39,7 +37,6 @@ class Ability
       Pd::Workshop,
       Pd::Session,
       Pd::Enrollment,
-      Pd::DistrictPaymentTerm,
       :pd_teacher_attendance_report,
       :pd_workshop_summary_report,
       Pd::CourseFacilitator,
@@ -62,7 +59,10 @@ class Ability
       Foorm::LibraryQuestion,
       :javabuilder_session,
       CodeReview,
-      LearningGoalTeacherEvaluation
+      LearningGoalTeacherEvaluation,
+      AidiffThread,
+      AidiffMessage,
+      AidiffArtifact,
     ]
     cannot :index, Level
 
@@ -79,10 +79,10 @@ class Ability
     end
 
     can [:read, :docs_show, :docs_index, :get_summary_by_name], ProgrammingEnvironment do |environment|
-      environment.published || user.permission?(UserPermission::LEVELBUILDER)
+      environment.published || user.levelbuilder?
     end
 
-    can [:read, :show_by_keys], ProgrammingClass do |programming_class|
+    can [:read, :show_by_keys, :get_serialized], ProgrammingClass do |programming_class|
       can? :read, programming_class.programming_environment
     end
 
@@ -97,6 +97,9 @@ class Ability
       can :create, Activity, user_id: user.id
       can :create, UserLevel, user_id: user.id
       can :update, UserLevel, user_id: user.id
+      can :create, StudentWorkEvaluation, user_id: user.id
+      can :create, StudentWorkEvaluationSummary
+      can :create, UserLevelInteraction, user_id: user.id
       can :create, Follower, student_user_id: user.id
       can :destroy, Follower do |follower|
         follower.student_user_id == user.id && !user.student?
@@ -105,6 +108,14 @@ class Ability
       can [:show, :pull_review, :update], PeerReview, reviewer_id: user.id
       can :view_project_commits, User do |project_owner|
         project_owner.id == user.id || can?(:code_review, project_owner)
+      end
+
+      can :submission_status, Project do |project|
+        project.owner_id == user.id
+      end
+
+      can :submit, Project do |project|
+        project.owner_id == user.id && project.submission_status == SharedConstants::PROJECT_SUBMISSION_STATUS[:CAN_SUBMIT]
       end
 
       can :create, CodeReview do |code_review, project|
@@ -117,7 +128,7 @@ class Ability
         # 1) the user is the project owner
         # 2) the user is the teacher of the project owner
         # 3) the user and the project owner are in the same code reivew group
-        project.owner.id == user.id || can?(:code_review, project.owner)
+        project.owner&.id == user&.id || can?(:code_review, project.owner)
       end
 
       # A user can review the code of other_user if they are the other_user's teacher or if
@@ -159,7 +170,17 @@ class Ability
       # all signed in users can get their level source
       can :get_level_source, UserLevel
 
+      can :evaluate, :openai_evaluate
+      can :evaluate_section, :openai_evaluate
+      can :match_teaching_profile, :openai_personalization
+
+      # all signed in users can access the aichat_request and aichat_events endpoints
+      # additional permission logic lives in the controllers themselves
+      can [:start_chat_completion, :chat_request], :aichat_request
+      can [:log_chat_event, :chat_history, :submit_teacher_feedback], :aichat_event
+
       if user.teacher?
+        can :access, :teacher_only
         can :manage, Section do |s|
           s.instructors.include?(user)
         end
@@ -171,10 +192,15 @@ class Ability
         can :manage, User do |u|
           user.students.include?(u)
         end
-        can [:create, :get_feedback_from_teacher], TeacherFeedback, student_sections: {user_id: user.id}
+        can [:create, :get_feedback_from_teacher], TeacherFeedback do |feedback|
+          user.students.exists?(id: feedback.student_id)
+        end
         can :manage, Follower
         can :manage, UserLevel do |user_level|
           !user.students.where(id: user_level.user_id).empty?
+        end
+        can :create, UserLevelEvaluation do |ule|
+          !user.students.where(id: ule.user_id).empty?
         end
         can :read, Plc::UserCourseEnrollment, user_id: user.id
         can :view_level_solutions, Unit do |script|
@@ -187,6 +213,21 @@ class Ability
         can [:score_lessons_for_section, :get_teacher_scores_for_script], TeacherScore, user_id: user.id
         can :manage, LearningGoalTeacherEvaluation, teacher_id: user.id
         can :manage, LearningGoalAiEvaluationFeedback, teacher_id: user.id
+        can :get_most_recent_user_level_evaluation, StudentWorkEvaluation do |evaluation|
+          user.students.exists?(id: evaluation.student_id)
+        end
+        can :get_feedbacks, TeacherFeedback do |feedback|
+          user.students.exists?(id: feedback.student_id)
+        end
+
+        # LessonFeedback abilities - teachers can manage lesson feedback for their students
+        can :create, LessonFeedback do |feedback|
+          user.students.exists?(id: feedback.student_id)
+        end
+        can :update, LessonFeedback do |feedback|
+          user.students.exists?(id: feedback.student_id) && feedback.teacher_id == user.id
+        end
+
       end
 
       if user.facilitator?
@@ -194,12 +235,6 @@ class Ability
         can [:read, :update], Pd::Workshop, organizer_id: user.id
         can :manage_attendance, Pd::Workshop, facilitators: {id: user.id}
         can :read, Pd::CourseFacilitator, facilitator_id: user.id
-
-        if Pd::CourseFacilitator.exists?(facilitator: user, course: Pd::Workshop::COURSE_CSF)
-          can :create, Pd::Workshop, course: Pd::Workshop::COURSE_CSF
-          can :update, Pd::Workshop, facilitators: {id: user.id}
-          can :destroy, Pd::Workshop, organizer_id: user.id
-        end
       end
 
       if user.workshop_organizer? || user.program_manager?
@@ -259,15 +294,25 @@ class Ability
         can :report_csv, :peer_review_submissions
       end
 
-      if user.has_ai_tutor_access?
-        can :chat_completion, :openai_chat
-        can :create, AiTutorInteraction, user_id: user.id
-        can :index, AiTutorInteraction
+      if Experiment.enabled?(user: user, experiment_name: 'ai-differentiation') && user.teacher?
+        can :submit_feedback, AidiffMessage
+        can :create, AidiffThread
+        can :manage, AidiffThread, user_id: user.id
+        can :manage, AidiffMessage do |message|
+          can?(:manage, message.aidiff_thread)
+        end
+        can [:index, :show, :chat_completion, :curriculum_courses], AidiffThread, user_id: user.id
+        if Experiment.enabled?(user: user, experiment_name: 'ai-artifact')
+          can :create, AidiffArtifact
+          can :create, AidiffExitTicket
+          can :create, AidiffLessonHook
+          can [:index], AidiffArtifact, user_id: user.id
+          can [:index, :update, :show], AidiffExitTicket, user_id: user.id
+          can [:index, :update, :show], AidiffLessonHook, user_id: user.id
+        end
       end
 
-      if user.can_view_student_ai_chat_messages?
-        can :index, AiTutorInteraction
-      end
+      can :show, Rubric
     end
 
     # Override UnitGroup, Unit, Lesson and ScriptLevel.
@@ -276,14 +321,14 @@ class Ability
       unit_group.default_units[0].is_migrated && !unit_group.plc_course && can?(:read, unit_group)
     end
 
-    can [:vocab, :resources, :code, :standards, :get_rollup_resources], Unit do |script|
-      script.is_migrated && can?(:read, script)
+    can [:vocab, :resources, :code, :standards, :get_rollup_resources], Unit do |script, context_unit_group|
+      script.is_migrated && can?(:read, script, context_unit_group)
     end
 
     can :read, UnitGroup do |unit_group|
       if unit_group.can_be_participant?(user) || unit_group.can_be_instructor?(user)
         if unit_group.in_development?
-          user.permission?(UserPermission::LEVELBUILDER)
+          user.levelbuilder?
         elsif unit_group.pilot?
           unit_group.has_pilot_access?(user)
         else
@@ -294,23 +339,20 @@ class Ability
       end
     end
 
-    can :read, Unit do |script|
-      if script.can_be_participant?(user) || script.can_be_instructor?(user)
-        if script.in_development?
-          user.permission?(UserPermission::LEVELBUILDER)
-        elsif script.pilot?
-          script.has_pilot_access?(user)
-        else
-          true
-        end
+    can :read, Unit do |script, context_unit_group|
+      unit_group = context_unit_group || script.original_unit_group
+      unit_group ||= script.get_professional_learning_course if script.old_professional_learning_course?
+      if unit_group
+        can?(:read, unit_group)
       else
-        false
+        user.levelbuilder?
       end
     end
 
     can :read, ScriptLevel do |script_level, params|
       script = script_level.script
-      if can?(:read, script)
+      unit_group = params&.[](:context_unit_group) || script.original_unit_group
+      if can?(:read, script, unit_group)
         # login is required if this script always requires it or if request
         # params were passed to authorize! and includes login_required=true
         login_required = script.login_required? || (!params.nil? && params[:login_required] == "true")
@@ -320,9 +362,10 @@ class Ability
       end
     end
 
-    can [:read, :show_by_id, :student_lesson_plan], Lesson do |lesson|
+    can [:read, :show_by_id, :student_lesson_plan, :level_properties, :level_properties_by_id], Lesson do |lesson, context_unit_group|
       script = lesson.script
-      can?(:read, script)
+      unit_group = context_unit_group || script.original_unit_group
+      can?(:read, script, unit_group)
     end
 
     can :read, ReferenceGuide do |guide|
@@ -336,7 +379,7 @@ class Ability
     # there.
     ProjectsController::STANDALONE_PROJECTS.each_pair do |project_type_key, project_type_props|
       if project_type_props[:levelbuilder_required]
-        can :load_project, project_type_key if user.persisted? && user.permission?(UserPermission::LEVELBUILDER)
+        can :load_project, project_type_key if user.persisted? && user.levelbuilder?
       elsif project_type_props[:login_required]
         can :load_project, project_type_key if user.persisted?
       else
@@ -345,12 +388,25 @@ class Ability
     end
 
     # We allow loading extra links on non-levelbuilder environments (such as prod)
-    if user.persisted? && (user.permission?(UserPermission::LEVELBUILDER) || user.permission?(UserPermission::PROJECT_VALIDATOR))
+    if user.persisted? && (user.levelbuilder? || user.permission?(UserPermission::PROJECT_VALIDATOR))
       can :extra_links, Level
     end
 
-    if user.persisted? && (user.permission?(UserPermission::PROJECT_VALIDATOR))
+    if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)
       can :extra_links, ProjectsController
+    end
+
+    if user.persisted? && (user.can_use_ai_iteration_tools? || user.can_access_student_work?)
+      can [:tools], :ai_iteration
+    end
+
+    if user.persisted? && user.can_access_student_work?
+      can [:fetch_student_code_samples], :student_work_sample
+      can [:fetch_free_response_answers], :student_work_sample
+    end
+
+    if user.persisted? && user.levelbuilder?
+      can [:add_internal_ai_tutor_dataset_item], :ai_observability
     end
 
     # In order to accommodate the possibility of there being no database, we
@@ -366,7 +422,7 @@ class Ability
     # levelbuilder permission will mimic levelbuilder_mode instead of production
     # by default.
     if user.persisted? &&
-        user.permission?(UserPermission::LEVELBUILDER) &&
+        user.levelbuilder? &&
         (Rails.application.config.levelbuilder_mode || rack_env?(:test))
       can :manage, [
         Block,
@@ -389,6 +445,8 @@ class Ability
         ScriptLevel,
         Video,
         Vocabulary,
+        Skill,
+        LevelsSkill,
         :foorm_editor,
         Foorm::Form,
         Foorm::Library,
@@ -402,7 +460,7 @@ class Ability
 
       # Ability for LevelStarterAssetsController. Since the controller does not have
       # a corresponding model, use lower/snake-case symbol instead of class name.
-      can [:upload, :destroy], :level_starter_asset
+      can [:upload, :upload_by_uuid, :destroy], :level_starter_asset
 
       can [:edit_manifest, :update_manifest, :index, :show, :update, :destroy], :dataset
 
@@ -470,18 +528,18 @@ class Ability
       end
 
       can :access_token_with_override_validation, :javabuilder_session do
-        user.permission?(UserPermission::LEVELBUILDER)
+        user.levelbuilder?
       end
 
       can :use_unrestricted_javabuilder, :javabuilder_session do
         user.verified_instructor? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
       end
 
-      if user.has_pilot_experiment?(GENAI_PILOT) ||
-          (!user.teachers.empty? &&
-          user.teachers.any? {|teacher| teacher.has_pilot_experiment?(GENAI_PILOT)})
-        can :chat_completion, :aichat
+      can :find_toxicity, :aichat do
+        user.teacher_can_access_ai_chat_lab? || user.student_can_access_ai_chat_lab?
       end
+
+      can :user_has_access, :aichat
     end
 
     if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)
@@ -505,6 +563,7 @@ class Ability
         Lesson,
         ReferenceGuide,
         ScriptLevel,
+        TeacherFeedback,
         UserLevel,
         UserScript,
         DataDoc,

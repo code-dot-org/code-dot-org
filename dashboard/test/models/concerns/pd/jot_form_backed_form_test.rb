@@ -30,8 +30,6 @@ module Pd
       field2: 'answer2'
     }.stringify_keys.freeze
 
-    self.use_transactional_test_case = true
-
     setup_all do
       # Creating a temporary table within a transaction is not permitted when MySQL binary logging is enabled and is
       # configured to use Global Transaction IDentifiers (GTID). JotForms likely aren't used anymore, so safe to skip

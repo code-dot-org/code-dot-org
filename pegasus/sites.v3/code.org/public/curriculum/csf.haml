@@ -37,7 +37,7 @@ theme: responsive_full_width
     .clear
 
 %section.bg-neutral-light
-  - languages = "العربية, Bahasa Indonesia, Català, 简体字, 繁體字, Čeština, Français, Deutsch, हिन्दी, Italiano, 日本語, 한국어, ಕನ್ನಡ, بهاس ملايو, Монгол хэл, Polski, Português (Brasil), Română, Русский, Slovenčina, Filipino, தமிழ், ภาษาไทย, Türkçe, Українська, Español (España), Español (LATAM), اردو, O'zbekcha, Tiếng Việt"
+  - languages = "فارسی ,العربية , Bahasa Indonesia, Català, 简体字, 繁體字, Čeština, Français, Deutsch, हिन्दी, Italiano, 日本語, 한국어, ಕನ್ನಡ, بهاس ملايو, Монгол хэл, English, Polski, Português (Brasil), Română, Русский, Slovenčina, Filipino, தமிழ், ภาษาไทย, Türkçe, Українська, Español (España), Español (LATAM), اردو, O'zbekcha, Tiếng Việt"
   .wrapper
     = view :curriculum_glance_section, heading: hoc_s(:heading_curricula_at_a_glance), grades: hoc_s(:module_grade_k_5), duration: hoc_s(:module_duration_month_quarter), level: hoc_s(:module_level_beginner), tools: hoc_s(:csf_page_curriculum_glance_tools), devices: hoc_s(:csf_page_curriculum_glance_devices), professional_learning: hoc_s(:csf_page_curriculum_glance_professional_learning), topics: hoc_s(:csf_page_curriculum_glance_topics), accessibility_features: hoc_s(:csf_page_curriculum_glance_accessibility_features), languages: languages
 
@@ -96,7 +96,7 @@ theme: responsive_full_width
 
 %section.bg-neutral-light
   .wrapper
-    = view :"tabs_section/resources/resources_tabs", resources_heading: hoc_s(:resources_tabs_heading), resources_desc: hoc_s(:resources_tabs_desc, markdown: :inline, locals: {sign_up_url: CDO.studio_url("/users/sign_up")})
+    = view :"tabs_section/resources/resources_tabs", resources_heading: hoc_s(:resources_tabs_heading), resources_desc: hoc_s(:resources_tabs_desc, markdown: :inline, locals: {sign_up_url: CDO.studio_url("/users/sign_up/account_type")})
 
 %section
   .wrapper

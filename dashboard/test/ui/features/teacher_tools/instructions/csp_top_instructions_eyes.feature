@@ -4,7 +4,7 @@ Feature: Eyes Tests for Top Instructions CSP
 
 Scenario: CSD and CSP Top Instructions
   When I open my eyes to test "top instructions in CSP"
-  And I am on "http://studio.code.org/s/allthethings/lessons/38/levels/1"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/38/levels/1"
   And I wait for the lab page to fully load
   Then I see no difference for "teacher in applab level with rubric"
   Then I click selector ".uitest-feedback"
@@ -12,7 +12,7 @@ Scenario: CSD and CSP Top Instructions
   Then I click selector ".uitest-instructionsTab"
   Then I see no difference for "teacher in applab level with rubric after viewing rubric"
 
-  And I am on "http://studio.code.org/s/allthethings/lessons/38/levels/2"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/38/levels/2"
   And I wait until element ".user_menu" is visible
   And I wait until element "iframe" is visible
   And I switch to the first iframe
@@ -33,15 +33,15 @@ Scenario: Resizing CSD and CSP Top Instructions
   When I open my eyes to test "resizing top instructions in CSP"
   Given I create an authorized teacher-associated student named "Sally"
   When I sign in as "Teacher_Sally" and go home
-  And I wait until element ".uitest-owned-sections" is visible
+  And I wait until element "#ui-test-section-list" is visible
   Then I save the section id from row 0 of the section table
 
-  And I am on "http://studio.code.org/s/allthethings/lessons/18/levels/1"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/18/levels/1"
   And I wait for the lab page to fully load
   And I wait until element "#teacher-panel-container" is visible
   And I wait until element ".uitest-sectionselect:contains(Untitled Section)" is visible
   And I wait until element ".student-table" is visible
-  And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
+  And I click selector "#teacher-panel-container tr:eq(1)" to load a new page
   And I wait for the lab page to fully load
 
   Then I see no difference for "teacher in feedback tab"

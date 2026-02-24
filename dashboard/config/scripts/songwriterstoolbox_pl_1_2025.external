@@ -1,0 +1,26 @@
+name 'songwriterstoolbox-pl_1_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Songwriter's Toolbox
+
+#### This lesson teaches you how to layer sounds with sequencing and loops.
+
+
+
+
+## In this lesson, you will:
+
+* #### Sequence code to make a song.
+* #### Learn how to apply the Use/Modify/Create pedagogical approach.
+* #### Create a new song from scratch.
+
+
+
+
+### **Suggested time:** 20 minutes
+## Let's get started!
+
+<div style="clear:both"/>
+MARKDOWN

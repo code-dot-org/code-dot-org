@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "Tanečná party", body: "Nakóduj tanečnú párty! Účinkujú Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, hudba z Disney \"Encanto\" a ďalšie!", image: "/images/hoc2022-dance-party.png", url: "https://code.org/dance" }}
-
-{{ featured_tutorial, title: "Písanie básní", body: "Dodaj klasickej básni umenie a animáciu v tejto aktivite Hodina kódu!", image: "/shared/images/courses/logo_tall_poem-art.jpg", url: "https://studio.code.org/s/poem-art-2021/reset" }}
-
-{{ featured_tutorial, title: "Maliar", body: "Nakresli skvelé obrázky a návrhy pomocou funkcie Maliar!", image: "/shared/images/courses/logo_tall_artist.jpg", url: "https://studio.code.org/s/artist/reset" }}
-
-{{ featured_tutorial, title: "Laboratórium nekonečnej hry", body: "Pomomocou Laboratória hry vytvor príbeh alebo hru s postavičkami Disney Infinity.", image: "/shared/images/courses/logo_tall_infinity.jpg", url: "https://studio.code.org/s/infinity/reset" }}

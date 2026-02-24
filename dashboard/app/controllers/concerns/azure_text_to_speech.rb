@@ -2,7 +2,7 @@ require 'cdo/honeybadger'
 require 'net/http'
 require 'dynamic_config/gatekeeper'
 require 'cdo/throttle'
-require 'dashboard_languages'
+require 'cdo/i18n'
 
 module AzureTextToSpeech
   # Azure authentication token is valid for 10 minutes, so cache it for 9.
@@ -85,9 +85,9 @@ module AzureTextToSpeech
 
       voice_dictionary = {}
       voices.each do |voice|
-        native_locale_name = DashboardLanguages.get_native_name_by_locale(voice["Locale"])
-        next if native_locale_name.empty?
-        native_name_s = native_locale_name[0][:native_name_s]
+        native_name_s = Cdo::I18n.language_name(voice['Locale'])
+        next unless native_name_s
+
         voice_dictionary[native_name_s] ||= {}
         voice_dictionary[native_name_s][voice["Gender"].downcase] ||= voice["ShortName"]
         voice_dictionary[native_name_s]["locale"] ||= voice["Locale"]

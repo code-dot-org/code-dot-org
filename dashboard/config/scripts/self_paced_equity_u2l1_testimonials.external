@@ -1,0 +1,27 @@
+name 'self-paced-equity-U2L1-testimonials'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Inclusive Pedagogy
+
+#### One of the ways to make students feel included in the computer science is by employing asset-based pedagogy. Read the definitions below, and while you do so, brainstorm an example of asset- and deficit-based pedagogy to connect to your existing knowledge. 
+
+## Key Terms
+
+<div style="background-color: #F7F8FA; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px; margin: 20px 0px 20px 0px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
+
+* #### **Deficit-based pedagogy**: the notion that students (particularly those of low income, racial/ethnic minority background) fail in school because such students and their families have internal defects (deficits) that thwart the learning process.
+
+* #### **Asset-based pedagogy**: the belief that students possess unique life experiences and abilities which can be leveraged to foster effective and meaningful learning experiences.
+</p></div>
+
+
+#### **Asset-based instruction** allows teachers to celebrate students' existing knowledge (from their home lives, culture, traditions) while adding to their formal learning through instruction. In the next level, we'll provide you with some computer-science specific examples of each of these terms.
+
+___
+
+##### **Sources:**
+* ##### <a href="https://www.researchgate.net/publication/382598758_ASSET-BASED_COMPUTATIONAL_THINKING_PEDAGOGY_Early_Childhood_Teachers%27_Use_of_Asset-based_Computational_Thinking_Pedagogy_Centering_Students%27_Expertise_and_Life_Experiences" target="blank" rel="noopener noreferrer">ASSET-BASED COMPUTATIONAL THINKING PEDAGOGY Early Childhood Teachers' Use of Asset-based Computational Thinking Pedagogy: Centering Students' Expertise and Life Experiences</a>
+* ##### <a href="https://www.icsequity.org/asset-based-language-over-deficit-based-language/" target="blank" rel="noopener noreferrer">Why Schools Should Embrace Asset-Based Language Over Deficit-Based Language</a>
+MARKDOWN

@@ -1,0 +1,50 @@
+name 'pl_sandbox_aif_2_U2-projectOverview_5_pilot-2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Final Project Overview
+
+## Interactive Customizer
+#### For their final project, students act as Front-End Developers and QA Engineers to design and implement a badge-awarding system in a web app of their choice (e.g., sports, music, art, gaming, or school life).
+
+#### They first plan their logic with a flowchart that defines badge criteria, then translate it into JavaScript functions, variables, and conditionals that dynamically update the app’s interface.
+
+#### Throughout the process, students test and refine their code, document their debugging journey, and reflect on how AI supported their brainstorming and problem-solving. The result is a personalized, interactive app that demonstrates how developer choices and values shape user experience.
+ 
+
+---
+
+### **When Project Begins:** Final lesson of the unit
+
+### The project extends over three class periods. Beginning in Lesson 11.
+
+## Sample
+
+#### In this early example, the student designed a web app to order an ultimate burrito bowl. 
+
+#### This is the initial output based on the wireframe uploaded by the student. 
+
+
+<img src="https://images.code.org/dd0375181a9514f1c7d869d5e559480a-image-1762461029754.png" alt="Sample student project of a website giving informaiton about events happening locally in their community" width="850px" style="display: block; margin-left: auto; margin-right: auto; border: 3pt solid black; box-shadow: 5px 5px 15px rgba(0,0,0,0.4); border-radius: 2px;">
+
+---
+
+<img src="https://images.code.org/4a704dbe4c2eca2de133f85f99c89ba4-image-1762460521416.png" alt="Sample student project of a website giving informaiton about events happening locally in their community" width="350px" style="display: block; float:right; margin: 0 0 10px 10px;">
+
+## What success looks like
+- #### Their flowchart logic maps cleanly to their JavaScript code, and each badge is awarded deterministically based on the user’s inputs.
+- #### The app uses variables to accurately track both user selections and a calculated numerical value, like the total price.
+- #### The JavaScript is organized into clear, readable functions, and the UI updates correctly to match the program’s internal state.
+- #### The student provides evidence of their testing and iteration process.
+
+---
+
+#### This project lets students apply their design and coding skills in a creative, authentic way while learning how AI can support the web development process.
+
+##Now, let’s see how we get here! 
+
+![]()
+
+![]()
+MARKDOWN

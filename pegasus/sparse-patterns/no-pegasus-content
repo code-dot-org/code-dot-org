@@ -1,0 +1,16 @@
+/*
+/**/*
+!pegasus/sites/*
+!pegasus/sites/**/*
+!pegasus/sites.v3/*
+!pegasus/sites.v3/**/*
+
+# TODO: move pegasus/test/test_optimize.rb to lib/test or dashboard/test
+pegasus/sites.v3/code.org/public/images/animated-examples/flappy-game-space.gif
+pegasus/sites.v3/code.org/public/images/logo.png
+
+# TODO: move pegasus/test/test_graphics.rb to lib/test or dashboard/test
+pegasus/sites.v3/code.org/public/images/avatars/flag_sphere.png
+pegasus/sites.v3/code.org/public/images/homepage
+pegasus/sites.v3/code.org/public/images/homepage/kids4_2x.jpg
+pegasus/sites.v3/hourofcode.com/public/images/hour-of-code-logo.png

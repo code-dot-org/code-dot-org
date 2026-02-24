@@ -1,9 +1,10 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {UnconnectedRosterDialog as RosterDialog} from '@cdo/apps/templates/teacherDashboard/RosterDialog';
 import locale from '@cdo/locale';
 
@@ -19,6 +20,14 @@ const fakeClassroom = {
   name: 'myClassroom',
   section: '1st Pd',
   enrollment_code: '12345',
+};
+
+const archivedClassroom = {
+  id: '3',
+  name: 'archivedClassroom',
+  section: '1st Pd',
+  enrollment_code: '12345',
+  course_state: 'ARCHIVED',
 };
 
 describe('RosterDialog', () => {
@@ -75,9 +84,10 @@ describe('RosterDialog', () => {
     );
     expect(wrapper.text()).contains('myClassroom');
     expect(wrapper.text()).contains('12345');
+    expect(wrapper.text()).not.contains('ARCHIVED');
   });
 
-  it('sends section set up completed analytics event when import is called', () => {
+  it('sends section set up completed analytics event when import is called', async () => {
     const rosterDialog = mount(
       <RosterDialog
         handleImport={() => {}}
@@ -90,8 +100,13 @@ describe('RosterDialog', () => {
     );
     const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
 
-    rosterDialog.instance().setState({selectedId: '2'});
-    rosterDialog.instance().importClassroom();
+    await act(async () => {
+      rosterDialog.instance().setState({selectedId: '2'});
+    });
+    rosterDialog.update();
+    await act(async () => {
+      rosterDialog.instance().importClassroom();
+    });
     assert(analyticsSpy.calledOnce);
     assert.equal(analyticsSpy.getCall(0).firstArg, 'Section Setup Completed');
     assert.deepEqual(
@@ -117,5 +132,49 @@ describe('RosterDialog', () => {
       />
     );
     expect(wrapper.find('#import-button-and-redirect')).to.have.lengthOf(1);
+  });
+
+  it('should dispatch handleImportFailure when the redirect ajax fails', async () => {
+    const handleImportFailureMock = jest.fn();
+
+    const rosterDialog = shallow(
+      <RosterDialog
+        handleImport={() => {}}
+        handleCancel={() => {}}
+        handleImportFailure={handleImportFailureMock}
+        isOpen={true}
+        classrooms={[
+          {
+            id: '2',
+            name: 'Test',
+          },
+        ]}
+        loadError={failedLoadError}
+        rosterProvider={OAuthSectionTypes.google_classroom}
+      />
+    );
+
+    rosterDialog.instance().setState({selectedId: '2'});
+    await rosterDialog
+      .instance()
+      .handleRedirect()
+      .catch(error => {
+        expect(handleImportFailureMock.mock.calls.length).to.equal(1);
+      });
+  });
+
+  it('should label archived sections as archived ', () => {
+    const wrapper = mount(
+      <RosterDialog
+        handleImport={() => {}}
+        handleCancel={() => {}}
+        isOpen={true}
+        classrooms={[archivedClassroom]}
+        loadError={null}
+        rosterProvider={OAuthSectionTypes.google_classroom}
+        userId={90}
+      />
+    );
+    expect(wrapper.text()).contains('ARCHIVED');
   });
 });

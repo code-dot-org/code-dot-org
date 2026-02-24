@@ -1,0 +1,26 @@
+name 'networks-internet-lesson3-level1_v2-2025'
+title 'Basic Routing'
+description 'description here'
+
+markdown <<MARKDOWN
+## Level 1: Basic Routing – Sending a File on a Local Network
+
+![Jordan sending file to Mia](https://images.code.org/23162efdb6de6962245690ca497b894c-image-1740206800357.jpg)
+
+**Scenario:**  
+Jordan is working on a group project for school and needs to send a presentation file from their **Laptop (192.168.1.1)** to **Mia’s Tablet (192.168.1.2)** so she can review it before their big presentation.
+
+**Goal:**  
+Use the routing table to determine the shortest path from **Jordan’s Laptop** to **Mia’s Tablet**. Draw the flow of data on the network diagram.
+
+**Discussion:**  
+- How does the router use IP addresses to determine the shortest path for sending the file?  
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Diagram Instructions:**  
+Connect **Jordan’s Laptop (192.168.1.1) → Router A → Mia’s Tablet (192.168.1.2)** with arrows to show the data flow.  
+
+**Discussion Goal:**  
+Students explain how **routers use IP addresses to determine the shortest path** and that **devices on the same network still rely on a router for communication rather than sending data directly**. 
+MARKDOWN

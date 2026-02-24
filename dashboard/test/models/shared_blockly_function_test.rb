@@ -6,7 +6,7 @@ class SharedBlocklyFunctionTest < ActiveSupport::TestCase
   end
 
   test 'Function writes to and loads back from file' do
-    function = create :shared_blockly_function
+    function = create(:shared_blockly_function)
     xml_before = function.file_content
     function.delete
     SharedBlocklyFunction.load_records
@@ -19,7 +19,7 @@ class SharedBlocklyFunctionTest < ActiveSupport::TestCase
   end
 
   test 'Function deletes file after being destroyed' do
-    function = create :shared_blockly_function
+    function = create(:shared_blockly_function)
     assert File.exist? "config/shared_functions/fakeLevelType/#{function.name}.xml"
     function.destroy
     refute File.exist? "config/shared_functions/fakeLevelType/#{function.name}.xml"

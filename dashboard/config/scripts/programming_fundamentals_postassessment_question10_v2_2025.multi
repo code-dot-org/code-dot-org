@@ -1,0 +1,17 @@
+name 'programming-fundamentals-postassessment-question10_v2-2025'
+title 'Programming Fundamentals Post-Assessment: Question 10'
+
+wrong 'AI is always biased against humans'
+wrong 'AI cannot analyze data effectively'
+wrong 'AI can never make mistakes'
+right 'The algorithm might favor certain groups based on biased training data'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Why might an AI-powered hiring algorithm be considered unfair?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 10: Algorithms IRL
+MARKDOWN

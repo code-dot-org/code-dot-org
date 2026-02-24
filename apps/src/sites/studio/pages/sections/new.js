@@ -1,20 +1,32 @@
+import {Typography} from '@mui/material';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
+import {displayDifferentiationChat} from '@cdo/apps/aiDifferentiation/aiDiffUtils';
 import SectionsSetUpContainer from '@cdo/apps/templates/sectionsRefresh/SectionsSetUpContainer';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
+import i18n from '@cdo/locale';
+
+import moduleStyles from './sections.module.scss';
 
 $(document).ready(() => {
   const isUsersFirstSection = getScriptData('isUsersFirstSection');
-  const canEnableAITutor = getScriptData('canEnableAITutor');
   const userCountry = getScriptData('userCountry');
 
-  ReactDOM.render(
-    <SectionsSetUpContainer
-      isUsersFirstSection={isUsersFirstSection}
-      canEnableAITutor={canEnableAITutor}
-      userCountry={userCountry}
-    />,
+  const defaultRedirectUrl = '/teacher_dashboard/home';
+
+  createReactRoot(
+    <div className={moduleStyles.containerWithMarginTop}>
+      <Typography variant="h1" gutterBottom>
+        {i18n.setUpClassSectionsHeader()}
+      </Typography>
+      <SectionsSetUpContainer
+        isUsersFirstSection={isUsersFirstSection}
+        userCountry={userCountry}
+        defaultRedirectUrl={defaultRedirectUrl}
+      />
+    </div>,
     document.getElementById('form')
   );
+  displayDifferentiationChat();
 });

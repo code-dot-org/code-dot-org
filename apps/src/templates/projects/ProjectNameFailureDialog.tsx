@@ -1,7 +1,7 @@
+import {Button, buttonColors} from '@code-dot-org/component-library/button';
+import {Typography} from '@mui/material';
 import React from 'react';
 
-import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
-import {Heading3} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
 
 import BaseDialog from '../BaseDialog';
@@ -24,7 +24,9 @@ const ProjectNameFailureDialog: React.FunctionComponent<
       isOpen={isOpen}
       handleClose={handleClose}
     >
-      <Heading3>{i18n.nameFailureDialogTitle()}</Heading3>
+      <Typography variant="h3" gutterBottom>
+        {i18n.nameFailureDialogTitle()}
+      </Typography>
       <div className={styles.contents}>
         <p>{i18n.nameFailureDialogBody({text: flaggedText})}</p>
       </div>

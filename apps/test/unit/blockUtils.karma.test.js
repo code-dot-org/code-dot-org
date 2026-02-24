@@ -686,7 +686,7 @@ describe('block utils', () => {
         Blockly.BlockValueType.SPRITE,
         []
       );
-      generator = Blockly.Generator.get('JavaScript');
+      generator = Blockly.JavaScript;
     });
     describe('assignment', () => {
       it('generates code for a single assignment', () => {

@@ -1,0 +1,40 @@
+name 'csaif_pl_2_aithreats_15'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Security vs Usability
+
+#### You can use the security vs usability matrix to analyze a feature’s tradeoffs.
+
+<p align="center">
+<img src="https://images.code.org/7c5a64cf4d445b925b4e90be97a9f002-Screenshot 2025-08-26 at 11.04.19 AM.png" alt="Security vs Usability matrix" width="90%" style="border-radius:10px; border: 5px solid black;">
+</p>
+
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px"><strong>Teacher Tip:</strong> This lesson explores the tension between strong security and usable design through real-world case studies. Students will revisit the Security vs Usability Matrix during the final project of this unit.
+</p>
+</div>
+
+
+#### In the upcoming activity, you will think about how secure a feature is and how easy it is to use. Then determine which box or section of the table that feature best represents its balance of security and usability. Here are some guiding questions to keep in mind when using the security vs. usability matrix. 
+
+#### Usability
+* #### Could your user complete the task on their first try?
+* #### Did the feature block or frustrate your user?
+* #### Would a typical person understand how to use it without training?
+
+#### Security
+* #### Would this stop someone who shouldn’t get in?
+* #### Does it protect users without making them remember tricky rules?
+* #### Could someone trick or bypass this feature?
+
+<br>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ Security vs Usability Matrix is introduced in Lesson 11. You can find more details in the full <a href='https://studio.code.org/courses/ai-powered-threats-and-defenses-2025/units/1/lessons/11' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+</p>
+
+MARKDOWN

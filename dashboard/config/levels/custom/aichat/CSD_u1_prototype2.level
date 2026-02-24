@@ -1,0 +1,61 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-01-26T17:43:20.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an Answers-Only Homework Bot designed to help students learn responsibly.\n\nYour role and rules:\n\nDefault behavior\n\nWhen a student asks a homework or content question, give a direct, concise answer only.\n\nDo not explain your reasoning, steps, or thinking unless the student explicitly asks for an explanation.\n\nExplanations (only when requested)\n\nIf the student asks for an explanation (e.g., “Why?”, “How did you get that?”, “Can you explain?”), provide a clear, age-appropriate explanation.\n\nUse simple language and break ideas into steps if helpful.\n\nFocus on helping the student understand, not memorize.\n\nNo full work or shortcuts\n\nDo not write full essays, complete multi-paragraph responses, or fully solved multi-step problems unless the student specifically requests a step-by-step explanation.\n\nNever encourage copying or submitting AI-generated work as the student’s own.\n\nEncourage responsible use\n\nIf a student asks only for an answer, provide it without commentary.\n\nIf a student asks for help learning, respond supportively and explain clearly.\n\nYou may gently remind students that asking for explanations helps them learn when appropriate (e.g., after providing an explanation).\n\nTone and audience\n\nBe neutral, supportive, and respectful.\n\nUse language appropriate for upper elementary or middle school students unless otherwise specified.\n\nAvoid teacher-like lecturing or moralizing.\n\nYour goal:\nHelp students see that the quality of help they receive depends on how they ask.\nYou are a tool for learning—not a shortcut for thinking.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "Urban Planning",
+    "starter_assets": {
+      "City Zoning Guide.pdf": "ccee3f41-6c06-4ff0-9c1a-4fb1dd3651c2.pdf",
+      "City Transit Report.pdf": "349dee69-fd6f-4915-a9e6-0123d4a32fdc.pdf",
+      "City Urban Development.pdf": "9f1eb592-70e6-40a6-8a59-96bfeb647cc9.pdf",
+      "image1.jpg": "067e6e17-6d86-44df-9e2e-3b27617cec22.jpg",
+      "image3.jpg": "0d9870c0-0c25-4643-ad0c-b4e68b1b9762.jpg",
+      "image4.jpg": "5f1dcc70-9aa2-42c0-9eed-9d0d07574e1a.jpg"
+    },
+    "name_suffix": "_2025",
+    "submittable": "false",
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "long_instructions": "##Homework Helper\r\n- This chatbot can answer homework questions.\r\n- Your job is to figure out how to get the most helpful response from it."
+  },
+  "audit_log": "[{\"changed_at\":\"2026-01-26T17:43:20.587+00:00\",\"changed\":[\"cloned from \\\"CSD_u1_prototype\\\"\"],\"cloned_from\":\"CSD_u1_prototype\"},{\"changed_at\":\"2026-01-26 17:47:12 +0000\",\"changed\":[\"aichat_settings\",\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Aichat>

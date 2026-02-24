@@ -4,6 +4,7 @@ require 'cdo/rake_utils'
 require 'cdo/git_utils'
 require lib_dir 'cdo/data/logging/rake_task_event_logger'
 require 'dynamic_config/dcdo'
+require 'cdo/active_job_backend'
 
 include TimedTaskWithLogging
 
@@ -25,22 +26,19 @@ namespace :build do
       RakeUtils.yarn_install
 
       ChatClient.log 'Building <b>apps</b>...'
-      npm_target = CDO.optimize_webpack_assets ? 'build:dist' : 'build'
-      RakeUtils.system "npm run #{npm_target}"
+      js_build_command = get_js_build_command
+      if ENV['PROFILE_APPS_BUILD']
+        RakeUtils.system_stream_output js_build_command
+      else
+        RakeUtils.system js_build_command
+      end
+
       File.write(commit_hash, calculate_apps_commit_hash)
 
       if rack_env?(:staging) && DCDO.get('deploy_storybook', true)
         ChatClient.log 'Deploying <b>storybook</b>...'
         RakeUtils.system 'npm run storybook:deploy'
       end
-    end
-  end
-
-  desc 'Builds broken link checker.'
-  timed_task_with_logging :tools do
-    Dir.chdir(File.join(tools_dir, "scripts", "brokenLinkChecker")) do
-      ChatClient.log 'Installing <b>broken link checker</b> dependencies...'
-      RakeUtils.yarn_install
     end
   end
 
@@ -55,12 +53,20 @@ namespace :build do
       ChatClient.log 'Installing <b>dashboard</b> bundle...'
       RakeUtils.bundle_install
 
+      ChatClient.log 'Installing <b>dashboard</b> python dependencies'
+      RakeUtils.python_venv_install
+
       if CDO.daemon
         ChatClient.log 'Migrating <b>dashboard</b> database...'
         RakeUtils.rake 'db:setup_or_migrate'
 
-        # Update the schema cache file, except for production which always uses the cache.
-        unless rack_env?(:production)
+        # Update the schema cache file only on the staging branch, because the
+        # staging system's Rails database is the source of truth for dashboard's
+        # schema. In the future we could also generate it on the test machine,
+        # but that is not practical as of April 2025 because the database schema
+        # on test differs from other environments due to utf8mb3 vs utf8mb4
+        # issues.
+        if rack_env?(:staging)
           schema_cache_file = dashboard_dir('db/schema_cache.yml')
           RakeUtils.rake 'db:schema:cache:dump'
           # NOTE: Temporarily commenting the `else` check below (and ignoring
@@ -84,7 +90,7 @@ namespace :build do
         end
 
         # Allow developers to skip the time-consuming step of seeding the dashboard DB.
-        # Additionally allow skipping when running in CircleCI, as it will be seeded during `rake install`
+        # Additionally allow skipping when running in CI, as it will be seeded during `rake install`
         if (rack_env?(:development) || ENV.fetch('CI', nil)) && CDO.skip_seed_all
           ChatClient.log "Not seeding <b>dashboard</b> due to CDO.skip_seed_all...\n" \
               "Until you manually run 'rake seed:all' or disable this flag, you won't\n" \
@@ -94,6 +100,22 @@ namespace :build do
           ChatClient.log 'Seeding <b>dashboard</b>...'
           ChatClient.log 'consider setting "skip_seed_all" in locals.yml if this is taking too long' if rack_env?(:development)
           RakeUtils.rake_stream_output 'seed:default', (rack_env?(:test) ? '--trace' : nil)
+        end
+
+        # Commit dsls/en.yml changes on staging
+        dsls_file = dashboard_dir('config/locales/dsls/en.yml')
+        if rack_env?(:staging) && GitUtils.file_changed_from_git?(dsls_file)
+          RakeUtils.system 'git', 'add', dsls_file
+          ChatClient.log 'Committing updated dsls/en.yml file...', color: 'purple'
+          RakeUtils.system 'git', 'commit', '-m', '"Update dsls/en.yml"', dsls_file
+          RakeUtils.git_push
+        end
+
+        if rack_env?(:staging)
+          # This step will only complete successfully if we succeed in
+          # generating all curriculum PDFs.
+          ChatClient.log "Generating missing pdfs..."
+          RakeUtils.rake_stream_output 'curriculum_pdfs:generate_missing_pdfs'
         end
 
         # Restart Active Job workers before restarting dashboard server so that:
@@ -110,30 +132,9 @@ namespace :build do
         #
         # The sequencing described here is the best for mitigating any issues
         # that may arise when that best practice is not followed.
-        ChatClient.log 'Restarting <b>dashboard</b> Active Job worker(s).'
-        # Issue a stop command to all workers. Will kill if not stopped within ~20 seconds.
-        RakeUtils.system 'bin/delayed_job', 'stop'
-        # Start new workers
-        if rack_env?(:production)
-          RakeUtils.system 'bin/delayed_job', '-n', '10', 'start'
-        elsif !rack_env?(:development)
-          RakeUtils.system 'bin/delayed_job', 'start'
-        end
-
-        # Commit dsls.en.yml changes on staging
-        dsls_file = dashboard_dir('config/locales/dsls.en.yml')
-        if rack_env?(:staging) && GitUtils.file_changed_from_git?(dsls_file)
-          RakeUtils.system 'git', 'add', dsls_file
-          ChatClient.log 'Committing updated dsls.en.yml file...', color: 'purple'
-          RakeUtils.system 'git', 'commit', '-m', '"Update dsls.en.yml"', dsls_file
-          RakeUtils.git_push
-        end
-
-        if rack_env?(:staging)
-          # This step will only complete successfully if we succeed in
-          # generating all curriculum PDFs.
-          ChatClient.log "Generating missing pdfs..."
-          RakeUtils.rake_stream_output 'curriculum_pdfs:generate_missing_pdfs'
+        if CDO.active_job_queue_adapter == :delayed_job
+          ChatClient.log 'Restarting <b>dashboard</b> Active Job worker(s).'
+          RakeUtils.system_stream_output 'bundle', 'exec', bin_dir('restart-active-job-workers')
         end
       end
 
@@ -144,8 +145,30 @@ namespace :build do
         # will be unable to find them.
         raise "do not optimize rails assets without optimized webpack assets" unless CDO.optimize_webpack_assets
 
-        ChatClient.log 'Cleaning <b>dashboard</b> assets...'
-        RakeUtils.rake 'assets:clean'
+        # Quick check to see if there are old assets to clean.
+        # This saves about 60 seconds during UI test setup in CI.
+        #
+        # We use webpack manifest files as a proxy because a new one is added
+        # any time any js file changes, thus it is very likely to change on
+        # every build. If there are fewer than 2 manifest files, we can safely
+        # guess that there are no old asset versions to clean, so we can skip
+        # the expensive assets:clean task.
+        #
+        # This assumption is "safe" because if we are wrong and there are old
+        # assets to clean, the problem will be corrected by the next run of
+        # assets:clean after the next js file is modified.
+        manifest_count = Dir.glob(dashboard_dir('public/assets/js/manifest-*.json')).size
+
+        # rake assets:clean keeps 2 copies of rails assets by default. To future
+        # proof against this default changing, set the number explicitly here.
+        ASSETS_TO_KEEP = 2
+
+        if manifest_count < ASSETS_TO_KEEP
+          ChatClient.log "Skipping assets:clean - only #{manifest_count} webpack manifest(s) found"
+        else
+          ChatClient.log 'Cleaning <b>dashboard</b> assets...'
+          RakeUtils.rake "assets:clean[#{ASSETS_TO_KEEP}]"
+        end
         ChatClient.log 'Precompiling <b>dashboard</b> assets...'
         RakeUtils.rake 'assets:precompile', '--quiet'
       end
@@ -191,7 +214,6 @@ namespace :build do
   tasks << :apps if CDO.build_apps
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
-  tasks << :tools if rack_env?(:staging)
   tasks << :i18n if CDO.build_i18n
   timed_task_with_logging all: tasks
 end
@@ -208,10 +230,25 @@ def apps_build_trigger_paths
   [
     apps_dir,
     shared_constants_file,
-    shared_constants_dir
+    shared_constants_dir,
+    frontend_dir
   ]
 end
 
 def calculate_apps_commit_hash
   RakeUtils.git_folder_hash(*apps_build_trigger_paths)
+end
+
+def get_js_build_command
+  if CDO.optimize_webpack_assets
+    # Skip clean step in CI to take advantage of cached build artifacts
+    if ENV['CI']
+      'yarn build:dist'
+    else
+      # Run npm commands separately to ensure NODE_OPTIONS are set correctly for the build step.
+      'yarn clean && yarn build:dist'
+    end
+  else
+    'yarn build'
+  end
 end

@@ -1,0 +1,722 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2025-04-14T15:48:49.000Z",
+  "level_num": "custom",
+  "user_id": 9,
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "true",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "true",
+    "hide_animation_mode": "true",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "pause_animations_by_default": "false",
+    "edit_code": "false",
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zBehaviorWatcherPrototype"
+    ],
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "hide_custom_blocks": "true",
+    "use_default_sprites": "false",
+    "auto_run_setup": "DRAW_LOOP",
+    "parent_level_id": 27352,
+    "show_type_hints": "true",
+    "include_shared_functions": "false",
+    "block_pool": "gamelab",
+    "name_suffix": "_2025",
+    "block_pools": [
+      "GamelabJr"
+    ],
+    "mini_rubric": "false",
+    "encrypted": "false",
+    "long_instructions": "# Free Play - Make a Scene\r\n\r\nNow it's your turn to create whatever you want!\r\n\r\n## Do This\r\n* Add sprites. Give them costumes and locations.\r\n* Set the size of your sprites so they look the way you want.\r\n* Bring your sprites to life with behaviors!",
+    "start_animations": "{\n  \"orderedKeys\": [\n    \"fa09a3d5-6997-4822-bcd9-4ee73223d51d\",\n    \"faefec04-9af1-4382-82cc-99cb144ddb8c\",\n    \"1eca8ad9-9a55-4d77-9f63-23025c347875\",\n    \"9fc3d8bc-6b1e-4a47-bb55-37461ce1fae1\",\n    \"5b033894-96c7-4133-bfa2-ac374e1fe3cf\",\n    \"77bbcb59-51a7-4ab9-833c-919b6462bb62\",\n    \"7faf134b-aff6-4152-8493-e97f310170e2\",\n    \"8245f4cd-c771-4a90-95a6-29fe3a7d3e9b\",\n    \"421f3144-40fe-4828-92e5-e578043a5b1d\",\n    \"1abb4c9e-a2ca-4980-8fdf-cd5384def2ce\",\n    \"cb425c1d-75d6-406b-bf5f-b58088a6bb59\",\n    \"9bd2e342-18cc-498d-afac-9546835d9a7c\",\n    \"7748f72b-76bc-4039-8241-696063f546d0\",\n    \"63bc3231-b857-42e3-a700-54a1ce7b1c9a\"\n  ],\n  \"propsByKey\": {\n    \"fa09a3d5-6997-4822-bcd9-4ee73223d51d\": {\n      \"name\": \"cuteanimals_bunny_1\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/BaBhTMgCAJP8j1hdaqVVhT6JJs4Wmmva/category_animals/cuteanimals_bunny.png\",\n      \"frameSize\": {\n        \"x\": 344,\n        \"y\": 399\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"BaBhTMgCAJP8j1hdaqVVhT6JJs4Wmmva\",\n      \"categories\": [\n        \"animals\"\n      ]\n    },\n    \"faefec04-9af1-4382-82cc-99cb144ddb8c\": {\n      \"name\": \"cuteanimals_chick_1\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/SZlS28Te5aLxq55_80ObJlXbnbf5R3zi/category_animals/cuteanimals_chick.png\",\n      \"frameSize\": {\n        \"x\": 398,\n        \"y\": 365\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"SZlS28Te5aLxq55_80ObJlXbnbf5R3zi\",\n      \"categories\": [\n        \"animals\"\n      ]\n    },\n    \"1eca8ad9-9a55-4d77-9f63-23025c347875\": {\n      \"name\": \"cuteanimals_donkey_1\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/sSWRaf.GC2RrC5NIZy9rR8XpIFyyLC17/category_animals/cuteanimals_donkey.png\",\n      \"frameSize\": {\n        \"x\": 398,\n        \"y\": 399\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"sSWRaf.GC2RrC5NIZy9rR8XpIFyyLC17\",\n      \"categories\": [\n        \"animals\"\n      ]\n    },\n    \"9fc3d8bc-6b1e-4a47-bb55-37461ce1fae1\": {\n      \"name\": \"cuteanimals_fox_1\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/oBVab82Jmd5wod9DzCjNRnpG_.p1jjEC/category_animals/cuteanimals_fox.png\",\n      \"frameSize\": {\n        \"x\": 398,\n        \"y\": 387\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"oBVab82Jmd5wod9DzCjNRnpG_.p1jjEC\",\n      \"categories\": [\n        \"animals\"\n      ]\n    },\n    \"5b033894-96c7-4133-bfa2-ac374e1fe3cf\": {\n      \"name\": \"cuteanimals_lion_1\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/9TUSBPP4Q9Clkr8VSMoB9BdxMdnXUWDW/category_animals/cuteanimals_lion.png\",\n      \"frameSize\": {\n        \"x\": 400,\n        \"y\": 307\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"9TUSBPP4Q9Clkr8VSMoB9BdxMdnXUWDW\",\n      \"categories\": [\n        \"animals\"\n      ]\n    },\n    \"77bbcb59-51a7-4ab9-833c-919b6462bb62\": {\n      \"name\": \"ant_1\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/By_jfDjDMLkyZpc_75pJ.7_M.7f2tLT./category_animals/ant.png\",\n      \"frameSize\": {\n        \"x\": 399,\n        \"y\": 378\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"By_jfDjDMLkyZpc_75pJ.7_M.7f2tLT.\",\n      \"categories\": [\n        \"animals\"\n      ]\n    },\n    \"7faf134b-aff6-4152-8493-e97f310170e2\": {\n      \"name\": \"dragonfly_1\",\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/Q4bHVNh9jsa9-dncSf8Q8ZeWG80Et6rZUtCq0s4NIrg/7faf134b-aff6-4152-8493-e97f310170e2.png?version=90hwWT9atsJvGtOWgBpNkGVeT2bjqeUq\",\n      \"frameSize\": {\n        \"x\": 399,\n        \"y\": 209\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 12,\n      \"version\": \"90hwWT9atsJvGtOWgBpNkGVeT2bjqeUq\",\n      \"categories\": [\n        \"animals\"\n      ]\n    },\n    \"8245f4cd-c771-4a90-95a6-29fe3a7d3e9b\": {\n      \"name\": \"gradient_26_1\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/BDdWjZHPKhFwodpIrtl.5OwB5pUxbWwA/category_backgrounds/gradient_26.png\",\n      \"frameSize\": {\n        \"x\": 400,\n        \"y\": 287\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"BDdWjZHPKhFwodpIrtl.5OwB5pUxbWwA\",\n      \"categories\": [\n        \"backgrounds\"\n      ]\n    },\n    \"421f3144-40fe-4828-92e5-e578043a5b1d\": {\n      \"name\": \"gradient_2\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/G3QUkZJLzAaDQWW4w_4.lj3NzFAn2qFi/category_backgrounds/gradient.png\",\n      \"frameSize\": {\n        \"x\": 400,\n        \"y\": 354\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"G3QUkZJLzAaDQWW4w_4.lj3NzFAn2qFi\",\n      \"categories\": [\n        \"backgrounds\"\n      ]\n    },\n    \"1abb4c9e-a2ca-4980-8fdf-cd5384def2ce\": {\n      \"name\": \"gradient_22_1\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/ZLljgNrZwKF805dQl1x6hKUmBVMIfqeu/category_backgrounds/gradient_22.png\",\n      \"frameSize\": {\n        \"x\": 400,\n        \"y\": 339\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"ZLljgNrZwKF805dQl1x6hKUmBVMIfqeu\",\n      \"categories\": [\n        \"backgrounds\"\n      ]\n    },\n    \"cb425c1d-75d6-406b-bf5f-b58088a6bb59\": {\n      \"name\": \"gradient_28_1\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/enWGECW5uPlWC2XY2f_ZfRTB75zL_Dhc/category_backgrounds/gradient_28.png\",\n      \"frameSize\": {\n        \"x\": 400,\n        \"y\": 237\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"enWGECW5uPlWC2XY2f_ZfRTB75zL_Dhc\",\n      \"categories\": [\n        \"backgrounds\"\n      ]\n    },\n    \"9bd2e342-18cc-498d-afac-9546835d9a7c\": {\n      \"name\": \"gradient_23_1\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/ISE_IJMV70UcL_QP6r8mHALHaOwKuOba/category_backgrounds/gradient_23.png\",\n      \"frameSize\": {\n        \"x\": 400,\n        \"y\": 350\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"ISE_IJMV70UcL_QP6r8mHALHaOwKuOba\",\n      \"categories\": [\n        \"backgrounds\"\n      ]\n    },\n    \"7748f72b-76bc-4039-8241-696063f546d0\": {\n      \"name\": \"abstract_08_1\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/.g_fM0jG5YHeQCetPtAd_H9pyzUfaVjK/category_backgrounds/abstract_08.png\",\n      \"frameSize\": {\n        \"x\": 400,\n        \"y\": 400\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \".g_fM0jG5YHeQCetPtAd_H9pyzUfaVjK\",\n      \"categories\": [\n        \"backgrounds\"\n      ]\n    },\n    \"63bc3231-b857-42e3-a700-54a1ce7b1c9a\": {\n      \"name\": \"abstract_31_1\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/G6zNSPyV_J5FTDqy5pnctbs5uLBuNMUv/category_backgrounds/abstract_31.png\",\n      \"frameSize\": {\n        \"x\": 400,\n        \"y\": 400\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"G6zNSPyV_J5FTDqy5pnctbs5uLBuNMUv\",\n      \"categories\": [\n        \"backgrounds\"\n      ]\n    }\n  }\n}",
+    "validation_enabled": "true",
+    "mini_toolbox": "true",
+    "display_name": "Cute Animals",
+    "bubble_choice_description": "Create a fun scene with cute animal and critters.",
+    "thumbnail_url": "https://images.code.org/485f69152577523d8536a088fa90769a-image-1610568247368.png",
+    "project_template_level_name": "courseF_sprites_freeplay_animals_template_2025",
+    "hide_pause_button": "false",
+    "encrypted_examples": "k8kshoHo1e8BimRRA8i20idbb7I5iNstYCXbayhjgPd9x3JTjiqV22Lk3WpN\nOrbgZs6ACc9+U2ov2j3qANTykv3Rpftgq/HGeiO6azHaqOOb3w2Jhher+5gS\nK2z/6rtjt/ZfWJTBTdJylH6tT9E01A==\n",
+    "short_instructions": "Now it's your turn to create whatever you want!",
+    "instructions_icon": "dog",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-04-14T15:48:49.195+00:00\",\"changed\":[\"cloned from \\\"courseF_sprites_freeplay_animals_2024\\\"\"],\"cloned_from\":\"courseF_sprites_freeplay_animals_2024\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "debugging": 1
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" movable="false">
+          <next>
+            <block type="gamelab_setBackgroundImageAs">
+              <title name="IMG">"background_landscape26_1"</title>
+            </block>
+          </next>
+        </block>
+        <block type="behavior_definition" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.</description>
+          </mutation>
+          <title name="NAME" id="moving west and looping">moving west and looping</title>
+          <statement name="STACK">
+            <block type="gamelab_mirrorSprite">
+              <title name="DIRECTION">"left"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_moveInDirection">
+                  <title name="DIRECTION">"West"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="math_number">
+                      <title name="NUM">5</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_if">
+                      <value name="IF0">
+                        <block type="logic_compare">
+                          <title name="OP">LT</title>
+                          <value name="A">
+                            <block type="gamelab_getProp">
+                              <title name="PROPERTY">"x"</title>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get">
+                                  <title name="VAR">this sprite</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="math_number">
+                              <title name="NUM">-50</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="gamelab_setProp">
+                          <title name="PROPERTY">"x"</title>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                          <value name="VAL">
+                            <block type="math_number">
+                              <title name="NUM">450</title>
+                            </block>
+                          </value>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite to the right across the screen</description>
+          </mutation>
+          <title name="NAME" id="moving east">moving east</title>
+          <statement name="STACK">
+            <block type="gamelab_mirrorSprite">
+              <title name="DIRECTION">"left"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_moveInDirection">
+                  <title name="DIRECTION">"East"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="math_number">
+                      <title name="NUM">5</title>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.</description>
+          </mutation>
+          <title name="NAME" id="moving east and looping">moving east and looping</title>
+          <statement name="STACK">
+            <block type="gamelab_mirrorSprite">
+              <title name="DIRECTION">"right"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_moveInDirection">
+                  <title name="DIRECTION">"East"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="math_number">
+                      <title name="NUM">5</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_if">
+                      <value name="IF0">
+                        <block type="logic_compare">
+                          <title name="OP">GT</title>
+                          <value name="A">
+                            <block type="gamelab_getProp">
+                              <title name="PROPERTY">"x"</title>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get">
+                                  <title name="VAR">this sprite</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="math_number">
+                              <title name="NUM">450</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="gamelab_setProp">
+                          <title name="PROPERTY">"x"</title>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                          <value name="VAL">
+                            <block type="math_number">
+                              <title name="NUM">-50</title>
+                            </block>
+                          </value>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite to the left across the screen</description>
+          </mutation>
+          <title name="NAME" id="moving west">moving west</title>
+          <statement name="STACK">
+            <block type="gamelab_mirrorSprite">
+              <title name="DIRECTION">"left"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_moveInDirection">
+                  <title name="DIRECTION">"West"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="math_number">
+                      <title name="NUM">5</title>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite, changing its direction randomly</description>
+          </mutation>
+          <title name="NAME" id="wandering">wandering</title>
+          <statement name="STACK">
+            <block type="controls_if">
+              <value name="IF0">
+                <block type="logic_compare">
+                  <title name="OP">EQ</title>
+                  <value name="A">
+                    <block type="math_random_int">
+                      <value name="FROM">
+                        <block type="math_number">
+                          <title name="NUM">0</title>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number">
+                          <title name="NUM">5</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number">
+                      <title name="NUM">0</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="gamelab_changePropBy">
+                  <title name="PROPERTY">"direction"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="VAL">
+                    <block type="math_random_int">
+                      <value name="FROM">
+                        <block type="math_number">
+                          <title name="NUM">-25</title>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number">
+                          <title name="NUM">25</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <next>
+                <block type="gamelab_moveForward">
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="math_number">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_if">
+                      <value name="IF0">
+                        <block type="gamelab_isTouchingEdges">
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="gamelab_edgesDisplace">
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="gamelab_changePropBy">
+                              <title name="PROPERTY">"direction"</title>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get">
+                                  <title name="VAR">this sprite</title>
+                                </block>
+                              </value>
+                              <value name="VAL">
+                                <block type="math_random_int">
+                                  <value name="FROM">
+                                    <block type="math_number">
+                                      <title name="NUM">135</title>
+                                    </block>
+                                  </value>
+                                  <value name="TO">
+                                    <block type="math_number">
+                                      <title name="NUM">225</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>rotate a sprite to its left</description>
+          </mutation>
+          <title name="NAME" id="spinning left">spinning left</title>
+          <statement name="STACK">
+            <block type="gamelab_turn">
+              <title name="DIRECTION">"left"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="N">
+                <block type="math_number">
+                  <title name="NUM">6</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>rotate a sprite to its right</description>
+          </mutation>
+          <title name="NAME" id="spinning right">spinning right</title>
+          <statement name="STACK">
+            <block type="gamelab_turn">
+              <title name="DIRECTION">"right"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="N">
+                <block type="math_number">
+                  <title name="NUM">6</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>change the size of a sprite</description>
+          </mutation>
+          <title name="NAME" id="shrinking">shrinking</title>
+          <statement name="STACK">
+            <block type="gamelab_changePropBy">
+              <title name="PROPERTY">"scale"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="VAL">
+                <block type="math_number">
+                  <title name="NUM">-1</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>change the size of a sprite</description>
+          </mutation>
+          <title name="NAME" id="growing">growing</title>
+          <statement name="STACK">
+            <block type="gamelab_changePropBy">
+              <title name="PROPERTY">"scale"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="VAL">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite downwards across the screen</description>
+          </mutation>
+          <title name="NAME" id="moving south">moving south</title>
+          <statement name="STACK">
+            <block type="gamelab_moveInDirection">
+              <title name="DIRECTION">"South"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number">
+                  <title name="NUM">5</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite upwards across the screen</description>
+          </mutation>
+          <title name="NAME" id="moving north">moving north</title>
+          <statement name="STACK">
+            <block type="gamelab_moveInDirection">
+              <title name="DIRECTION">"North"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number">
+                  <title name="NUM">5</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>randomly change the size of a sprite</description>
+          </mutation>
+          <title name="NAME" id="jittering">jittering</title>
+          <statement name="STACK">
+            <block type="gamelab_changePropBy">
+              <title name="PROPERTY">"scale"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="VAL">
+                <block type="math_random_int">
+                  <value name="FROM">
+                    <block type="math_number">
+                      <title name="NUM">-1</title>
+                    </block>
+                  </value>
+                  <value name="TO">
+                    <block type="math_number">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>randomly change the vertical position of a sprite</description>
+          </mutation>
+          <title name="NAME" id="fluttering">fluttering</title>
+          <statement name="STACK">
+            <block type="gamelab_changePropBy">
+              <title name="PROPERTY">"y"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="VAL">
+                <block type="math_random_int">
+                  <value name="FROM">
+                    <block type="math_number">
+                      <title name="NUM">-1</title>
+                    </block>
+                  </value>
+                  <value name="TO">
+                    <block type="math_number">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>randomly set the rotation of a sprite</description>
+          </mutation>
+          <title name="NAME" id="wobbling">wobbling</title>
+          <statement name="STACK">
+            <block type="gamelab_withPercentChance">
+              <value name="NUM">
+                <block type="math_number">
+                  <title name="NUM">50</title>
+                </block>
+              </value>
+              <statement name="STATEMENT">
+                <block type="gamelab_setProp">
+                  <title name="PROPERTY">"rotation"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="VAL">
+                    <block type="math_random_int">
+                      <value name="FROM">
+                        <block type="math_number">
+                          <title name="NUM">-1</title>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number">
+                          <title name="NUM">1</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <category name="World">
+          <block type="gamelab_setBackgroundImageAs">
+            <field name="IMG">"gradient_26_1"</field>
+          </block>
+          <block type="gamelab_setBackground">
+            <value name="COLOR">
+              <block type="colour_picker">
+                <field name="COLOUR">#66ffff</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_playSound">
+            <field name="SOUND">Choose</field>
+          </block>
+        </category>
+        <category name="Sprites">
+          <block type="gamelab_makeNewSpriteAnon">
+            <field name="ANIMATION_NAME">"cuteanimals_bunny_1"</field>
+            <value name="LOCATION">
+              <block type="gamelab_location_picker">
+                <field name="LOCATION">{"x":200,"y":200}</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_setProp">
+            <field name="PROPERTY">"scale"</field>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <field name="ANIMATION">"cuteanimals_bunny_1"</field>
+              </block>
+            </value>
+            <value name="VAL">
+              <block type="math_number">
+                <field name="NUM">50</field>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Locations">
+          <block type="gamelab_location_picker">
+            <field name="LOCATION">{"x":200,"y":200}</field>
+          </block>
+          <block type="gamelab_locationAt">
+            <value name="X">
+              <block type="math_number">
+                <field name="NUM">200</field>
+              </block>
+            </value>
+            <value name="Y">
+              <block type="math_number">
+                <field name="NUM">200</field>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Behaviors" custom="Behavior">
+          <block type="gamelab_addBehaviorSimple">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <field name="ANIMATION">"cuteanimals_bunny_1"</field>
+              </block>
+            </value>
+          </block>
+        </category>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>

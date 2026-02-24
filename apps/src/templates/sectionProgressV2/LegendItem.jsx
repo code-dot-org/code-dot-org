@@ -1,7 +1,6 @@
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
-
-import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
 
 import {ITEM_TYPE_SHAPE} from './ItemType';
 import ProgressIcon from './ProgressIcon';
@@ -14,7 +13,9 @@ export default function LegendItem({itemType, labelText}) {
       <div className={styles.legendIcon}>
         <ProgressIcon itemType={itemType} />
       </div>
-      <BodyThreeText className={styles.labelText}>{labelText}</BodyThreeText>
+      <Typography className={styles.labelText} variant="body3" gutterBottom>
+        {labelText}
+      </Typography>
     </div>
   );
 }

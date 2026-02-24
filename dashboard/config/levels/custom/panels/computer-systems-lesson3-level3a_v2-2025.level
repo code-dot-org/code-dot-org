@@ -1,0 +1,53 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-09-25T19:59:48.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/d8058e22acaf3f2da5a5290b57a064cc-scenario2_a.png",
+        "key": "computer-systems-lesson3-onlineresources-1-5c25ddab-c99a-4b94-8628-1e8d9bc30c38",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/504eee966ede377a856da88f0b46b464-scenario2_b.png",
+        "key": "computer-systems-lesson3-onlineresources-1-c4575f2c-89c4-4fea-9958-6e355e5676f0"
+      },
+      {
+        "text": "**Manufacturer’s FAQ– GenX Graphics Cards”** \n\n“Ensure you have the latest GPU software installed to avoid game stuttering.\nMonitor GPU temps; the card automatically reduces performance if temperatures exceed safe limits.”\n",
+        "imageUrl": "https://images.code.org/f579e64c0ffd1fd2f495781456a5c816-scenario1_c.png",
+        "key": "undefined-6f520c00-abc2-4c6f-83cb-59fc2fee94bf",
+        "typing": false,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "*Community Forum Post*\n\n**Subject**: “High Ping and FPS Drops Over Wi-Fi?” \n**Username**: GamerGuru42 \n\n**Message**:\n“I was constantly lagging over Wi-Fi until I changed to a 5 GHz band router and limited how many devices were streaming at once. My FPS improved a lot after I updated my GPU driver as well.”",
+        "imageUrl": "https://images.code.org/f579e64c0ffd1fd2f495781456a5c816-scenario1_c.png",
+        "key": "undefined-cdf9bada-48d5-443f-8edb-b133acbf4dd2",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "*Social Media “Tips & Tricks” Thread*\n\n**Platform**: GameX \n\n**Chat User**: @TechNoob \n\n**Post**: “If your gaming PC is crashing mid‐match, it could be a power supply issue. Under heavy GPU load, a cheap/under‐rated PSU can’t keep up, causing random shutdowns or reboots!”",
+        "imageUrl": "https://images.code.org/f579e64c0ffd1fd2f495781456a5c816-scenario1_c.png",
+        "key": "undefined-91f68b3a-8101-4f9c-861a-555ac85b7c47"
+      },
+      {
+        "text": "*Excerpt from* “**Custom PC Builder’s Manual**”\n\n**Networking Chapter:**\n\n“When gaming over Wi-Fi, test speeds via a site like SpeedTest. If your download/upload speeds are well below your ISP’s advertised rates, suspect router issues or Wi-Fi interference.”",
+        "imageUrl": "https://images.code.org/f579e64c0ffd1fd2f495781456a5c816-scenario1_c.png",
+        "key": "undefined-9989f337-5219-42f9-86d6-9204105e8673"
+      }
+    ],
+    "display_name": "Custom Gaming PC",
+    "thumbnail_url": "https://images.code.org/6a7f0438899e3dac825fef76a4b2690d-gaming.png",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:59:48.126+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson3-level3a_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson3-level3a_2025\"}]"
+}]]></config>
+</Panels>

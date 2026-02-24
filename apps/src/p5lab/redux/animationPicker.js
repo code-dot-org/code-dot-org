@@ -2,7 +2,6 @@
 import _ from 'lodash';
 
 import {animations as animationsApi} from '@cdo/apps/clientApi';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {makeEnum} from '@cdo/apps/utils';
 
 import {changeInterfaceMode} from '../actions';
@@ -34,6 +33,7 @@ const SELECT_ANIMATION = 'AnimationPicker/SELECT_ANIMATION';
 const REMOVE_ANIMATION = 'AnimationPicker/REMOVE_ANIMATION';
 const SHOWING_UPLOAD_WARNING = 'AnimationPicker/SHOWING_UPLOAD_WARNING';
 const EXITED_UPLOAD_WARNING = 'AnimationPicker/EXITED_UPLOAD_WARNING';
+const SET_UPLOADS_ENABLED = 'AnimationPicker/SET_UPLOADS_ENABLED';
 
 // Default state, which we reset to any time we hide the animation picker.
 const initialState = {
@@ -47,6 +47,7 @@ const initialState = {
   // List of animations selected to be added through multiselect
   selectedAnimations: {},
   uploadWarningShowing: false,
+  uploadsEnabled: true,
 };
 
 export default function reducer(state, action) {
@@ -58,6 +59,7 @@ export default function reducer(state, action) {
         goal: action.goal,
         isBackground: false,
         isSpriteLab: action.isSpriteLab,
+        uploadsEnabled: state.uploadsEnabled,
       });
     }
     return state;
@@ -69,12 +71,22 @@ export default function reducer(state, action) {
         goal: action.goal,
         isBackground: true,
         isSpriteLab: true,
+        uploadsEnabled: state.uploadsEnabled,
       });
     }
     return state;
   }
+  if (action.type === SET_UPLOADS_ENABLED) {
+    return {
+      ...state,
+      uploadsEnabled: action.uploadsEnabled,
+    };
+  }
   if (action.type === HIDE) {
-    return initialState;
+    return {
+      ...initialState,
+      uploadsEnabled: state.uploadsEnabled,
+    };
   }
   if (action.type === SHOWING_UPLOAD_WARNING) {
     return {
@@ -172,6 +184,14 @@ export function showingUploadWarning() {
 }
 
 /**
+ * We are setting uploads enabled.
+ * @returns  {{type: string}}
+ */
+export function setUploadsEnabled(uploadsEnabled) {
+  return {type: SET_UPLOADS_ENABLED, uploadsEnabled};
+}
+
+/**
  * The user exited the upload warning.
  * @returns  {{type: string}}
  */
@@ -189,15 +209,6 @@ export function exitedUploadWarning() {
  * @returns {function}
  */
 export function handleUploadComplete(result) {
-  firehoseClient.putRecord({
-    study: 'animation-library',
-    study_group: 'control-2020',
-    event: 'upload',
-    data_json: JSON.stringify({
-      size: result.size,
-    }),
-  });
-
   return function (dispatch, getState) {
     const isBackgroundMode =
       getState().interfaceMode === P5LabInterfaceMode.BACKGROUND;
@@ -320,15 +331,6 @@ export function pickNewAnimation() {
  * @returns {function}
  */
 export function pickLibraryAnimation(animation) {
-  firehoseClient.putRecord({
-    study: 'sprite-use',
-    study_group: 'before-update-v2',
-    event: 'select-sprite',
-    data_json: JSON.stringify({
-      name: animation.name,
-      sourceUrl: animation.sourceUrl,
-    }),
-  });
   return (dispatch, getState) => {
     const goal = getState().animationPicker.goal;
     const selectedAnimations = getState().animationPicker.selectedAnimations;

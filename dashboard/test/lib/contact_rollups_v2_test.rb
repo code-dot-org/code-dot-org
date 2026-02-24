@@ -4,8 +4,8 @@ require 'cdo/contact_rollups/v2/pardot'
 class ContactRollupsV2Test < ActiveSupport::TestCase
   test 'sync new contact' do
     # Create seed data in a source table
-    email_preference = create :email_preference, email: 'test@domain.com', opt_in: true
-    student_with_parent_email = create :student, parent_email: 'caring@parent.com'
+    email_preference = create(:email_preference, email: 'test@domain.com', opt_in: true)
+    student_with_parent_email = create(:student, parent_email: 'caring@parent.com')
 
     # We use retrieve_prospects twice in the pipeline
     # to get the most current email-Pardot ID mappings.
@@ -36,7 +36,7 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     refute_nil pardot_memory_record
     assert_equal({'db_Opt_In' => 'Yes'}, pardot_memory_record[:data_synced])
 
-    contact_record = ContactRollupsFinal.find_by_email(email_preference.email)
+    contact_record = ContactRollupsProcessed.find_by_email(email_preference.email)
     refute_nil contact_record
     assert_equal 1, contact_record.data['opt_in']
 
@@ -45,7 +45,7 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     refute_nil pardot_memory_record
     assert_equal({'db_Roles_0' => 'Parent'}, pardot_memory_record[:data_synced])
 
-    contact_record = ContactRollupsFinal.find_by_email(student_with_parent_email.parent_email)
+    contact_record = ContactRollupsProcessed.find_by_email(student_with_parent_email.parent_email)
     refute_nil contact_record
   end
 
@@ -53,14 +53,15 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     # Create seed data
     email = 'test@domain.com'
     base_time = Time.now.utc
-    create :email_preference, email: email, opt_in: false, updated_at: base_time
+    create(:email_preference, email: email, opt_in: false, updated_at: base_time)
 
     pardot_id = 1
-    create :contact_rollups_pardot_memory,
+    create(:contact_rollups_pardot_memory,
       email: email,
       pardot_id: pardot_id,
       data_synced: {db_Opt_In: 'Yes'},
       data_synced_at: base_time - 1.day
+)
 
     # We use retrieve_prospects twice in the pipeline
     # to get the most current email-Pardot ID mappings.
@@ -83,7 +84,7 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     refute_nil pardot_memory_record
     assert_equal({'db_Opt_In' => 'No'}, pardot_memory_record[:data_synced])
 
-    contact_record = ContactRollupsFinal.find_by_email(email)
+    contact_record = ContactRollupsProcessed.find_by_email(email)
     refute_nil contact_record
     assert_equal 0, contact_record.data['opt_in']
   end

@@ -1,0 +1,17 @@
+name 'student-end-of-unit-survey-q18_-networks_v2-2025'
+
+question 'Thinking about what I learned in this unit, I feel like I understand . . .'
+
+right 'Very few or none of the concepts'
+right 'A few of the concepts'
+right 'Slightly less than half of the concepts'
+right 'About half of the concepts'
+right 'Slightly more than half of the concepts'
+right 'Most of the concepts but not all of them'
+right 'All of the concepts'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+
+MARKDOWN

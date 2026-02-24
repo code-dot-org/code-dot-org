@@ -1,0 +1,786 @@
+import {fireEvent, render, screen, within} from '@testing-library/react';
+import React from 'react';
+import {act} from 'react-dom/test-utils';
+import {Provider} from 'react-redux';
+import {Store} from 'redux';
+
+import DCDO from '@cdo/apps/dcdo';
+import {
+  getStore,
+  stubRedux,
+  registerReducers,
+  restoreRedux,
+} from '@cdo/apps/redux';
+import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
+import currentUser, {
+  setShowAITALessonSummary,
+  setShowAITAPodcasts,
+  setHasCompletedPersonalizationQuiz,
+  setAudioSummaryTranscript,
+} from '@cdo/apps/templates/currentUserRedux';
+import teacherSections, {
+  selectSection,
+  setSections,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import LessonMaterialsContainer from '@cdo/apps/templates/teacherNavigation/lessonMaterials/LessonMaterialsContainer';
+import {RESOURCE_ICONS} from '@cdo/apps/templates/teacherNavigation/lessonMaterials/ResourceIconType';
+import experiments from '@cdo/apps/util/experiments';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import * as utils from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
+const SECTIONS = [
+  {
+    id: 1,
+    name: 'Period 2',
+    course_offering_id: 123,
+    courseVersionId: 2023,
+    unitName: 'csd1-2024',
+    unit_id: 100,
+    unitSelection: {
+      unitName: 'csd1-2024',
+    },
+  },
+  {
+    id: 2,
+    name: 'Period 2',
+    course_offering_id: 123,
+    courseVersionId: 2023,
+    unitName: 'csd1-2024',
+    unit_id: 300,
+    unitSelection: {
+      unitName: 'csd1-2024',
+    },
+  },
+  {
+    id: 3,
+    name: 'Period 2',
+    course_offering_id: 123,
+    courseVersionId: 2023,
+    unitName: 'csd1-2024',
+    unit_id: 400,
+    unitSelection: {
+      unitName: 'csd1-2024',
+    },
+  },
+  {
+    id: 10,
+    name: 'Period 10',
+    course_offering_id: 123,
+    courseVersionId: 2023,
+    courseVersionName: 'csd-2024',
+    unitName: null,
+    unitSelection: null,
+    course_display_name: 'CSD',
+  },
+  {
+    id: 11,
+    name: 'Period 11',
+    course_offering_id: 1234,
+    courseVersionId: 20234,
+    courseVersionName: 'csd1-2020',
+    unitName: 'csd1-2020',
+    unitSelection: {
+      unitName: 'csd1-2020',
+    },
+    course_display_name: 'CSD1-2020',
+  },
+  {
+    id: 12,
+    name: 'Period 12',
+    course_offering_id: null,
+    courseVersionId: null,
+    courseVersionName: null,
+    unitName: null,
+    unitSelection: null,
+    course_display_name: null,
+  },
+  {
+    id: 13,
+    name: 'Period 13',
+    course_offering_id: 123,
+    courseVersionId: 2023,
+    unitName: 'csd1-2024',
+    unit_id: 100,
+    unitSelection: {
+      unitName: 'csd1-2024',
+    },
+  },
+];
+
+const COURSES_WITH_PROGRESS = [
+  {
+    id: 123,
+    display_name: 'CSD',
+    units: [
+      {
+        id: 1,
+        version_year: 2023,
+        key: 'csd1-2024',
+        name: 'CSD unit 1',
+        position: null,
+      },
+    ],
+  },
+  {
+    id: 1234,
+    display_name: 'CSD1-2020',
+    units: [
+      {
+        id: 2,
+        version_year: 2020,
+        key: 'csd1-2020',
+        name: 'CSD1-2020 unit 1',
+        position: null,
+      },
+    ],
+  },
+];
+
+const LESSON_SUMMARY = {
+  learning_objective: 'Sample learning objective info.',
+  lesson_beats: ['Beat 1', 'Beat 2', 'Beat 3'],
+  misconceptions: ['Misconception 1', 'Misconception 2'],
+  tips: ['Tip 1', 'Tip 2', 'Tip 3'],
+};
+
+describe('LessonMaterialsContainer', () => {
+  let store: Store;
+  let fetchSpy: jest.SpyInstance;
+
+  const mockLessonData = {
+    title: 'Unit 3',
+    unitNumber: 3,
+    hasNumberedUnits: true,
+    versionYear: 2023,
+    unitId: 1,
+    lessons: [
+      {
+        name: 'First lesson',
+        id: 1,
+        position: 1,
+        lessonPlanHtmlUrl: '/courses/course/units/1/lessons/1',
+        lessonPlanPdfUrl: 'https://lesson-plans.code.org/lesson-plan.pdf',
+        standardsUrl: 'studio.code.org/standards',
+        vocabularyUrl: 'studio.code.org/vocab',
+        hasLessonPlan: true,
+        isLockable: false,
+        resources: {
+          Teacher: [
+            {
+              type: 'Handout',
+              key: 'resourceKey',
+              name: 'my link resource',
+              url: 'https://google.com/resource',
+              downloadUrl: 'https://google.com/resource.pdf',
+              audience: 'Teacher',
+            },
+            {
+              type: 'Slides',
+              key: 'teacherSlides',
+              name: 'my slides',
+              url: 'https://docs.google.com/presentation/d/ABC/edit',
+              audience: 'Teacher',
+            },
+          ],
+          Student: [
+            {
+              type: 'Video',
+              key: 'videoKey1',
+              name: 'my linked video',
+              url: 'https://youtu.be/WsXNpY3SXe8',
+              downloadUrl: 'https://videos.code.org/video.mp4',
+              audience: 'Student',
+            },
+          ],
+        },
+      },
+      {
+        name: 'Second lesson',
+        id: 2,
+        position: 2,
+        lessonPlanHtmlUrl: 'studio.code.org/lesson2',
+        hasLessonPlan: true,
+        isLockable: false,
+        resources: {
+          Teacher: [
+            {
+              type: 'Video',
+              key: 'videoKey2',
+              name: 'my video resource',
+              url: 'google.com',
+              downloadUrl: 'google.com',
+              audience: 'Teacher',
+            },
+          ],
+        },
+      },
+      {
+        name: 'Third lesson',
+        id: 3,
+        position: 3,
+        lessonPlanHtmlUrl: 'studio.code.org/lesson2',
+        hasLessonPlan: false,
+        isLockable: true,
+        resources: {
+          Teacher: [],
+          Student: [],
+        },
+      },
+    ],
+  };
+
+  const mockLessonDataNoLessonPlans = {
+    title: 'Unit 3',
+    unitNumber: 3,
+    hasNumberedUnits: true,
+    versionYear: 2023,
+    lessons: [
+      {
+        name: 'First lesson',
+        id: 1,
+        position: 1,
+        lessonPlanHtmlUrl: '/courses/course/units/1/lessons/1',
+        lessonPlanPdfUrl: 'https://lesson-plans.code.org/lesson-plan.pdf',
+        standardsUrl: 'studio.code.org/standards',
+        vocabularyUrl: 'studio.code.org/vocab',
+        hasLessonPlan: false,
+        isLockable: false,
+        resources: {
+          Teacher: [],
+          Student: [],
+        },
+      },
+      {
+        name: 'Second lesson',
+        id: 2,
+        position: 2,
+        lessonPlanHtmlUrl: 'studio.code.org/lesson2',
+        hasLessonPlan: false,
+        isLockable: false,
+        resources: {
+          Teacher: [],
+        },
+      },
+    ],
+  };
+
+  const renderDefault = async (
+    showNoCurriculumAssigned = false,
+    lessonData: object = mockLessonData,
+    lessonSummary: object = LESSON_SUMMARY,
+    aif = false
+  ) => {
+    mockSpy(lessonData, lessonSummary, aif);
+    await act(async () =>
+      render(
+        <Provider store={store}>
+          <LessonMaterialsContainer
+            showNoCurriculumAssigned={showNoCurriculumAssigned}
+          />
+        </Provider>
+      )
+    );
+  };
+  const realIsEnabled = experiments.isEnabled;
+
+  beforeEach(() => {
+    experiments.isEnabled = jest.fn(() => true);
+    stubRedux();
+
+    registerReducers({
+      unitSelection,
+      teacherSections,
+      currentUser,
+    });
+
+    store = getStore();
+
+    store.dispatch(setSections(SECTIONS));
+    store.dispatch(selectSection(1));
+    store.dispatch(setShowAITALessonSummary(true));
+
+    fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
+  });
+
+  afterEach(async () => {
+    jest.resetAllMocks();
+    restoreRedux();
+    fetchSpy.mockReset();
+    experiments.isEnabled = realIsEnabled;
+  });
+
+  const mockSpy = (
+    lessonData: object,
+    lessonSummary: object,
+    aif_unit: boolean
+  ) => {
+    fetchSpy.mockReset();
+    fetchSpy.mockImplementation((path: string) => {
+      if (path.includes('lesson_materials')) {
+        return Promise.resolve({
+          value: lessonData,
+          response: new Response(),
+        });
+      } else if (path.includes('section_courses')) {
+        return Promise.resolve({
+          value: COURSES_WITH_PROGRESS,
+          response: new Response(),
+        });
+      } else if (path.includes('ai_lesson_summaries')) {
+        return Promise.resolve({
+          value: {lesson_summary: JSON.stringify(lessonSummary)},
+          response: new Response(),
+        });
+      }
+    });
+  };
+
+  it('renders the component and dropdown with lessons', async () => {
+    await renderDefault();
+
+    // check for unit resources dropdown
+    screen.getByRole('button', {name: 'View unit options dropdown'});
+    screen.getByText(
+      i18n.downloadUnitXLessonPlans({unitNumber: mockLessonData.unitNumber})
+    );
+    screen.getByText(
+      i18n.downloadUnitXHandouts({unitNumber: mockLessonData.unitNumber})
+    );
+
+    // Check for unit selector
+    screen.getByRole('combobox', {name: 'Select a unit'});
+
+    // Check for lesson dropdowns
+    screen.getByRole('combobox', {name: 'Choose a lesson'});
+    screen.getByRole('option', {name: 'Lesson 1 — First lesson'});
+    screen.getByRole('option', {name: 'Lesson 2 — Second lesson'});
+  });
+
+  it('renders the student and teacher resources for the first lesson on render', async () => {
+    await renderDefault();
+
+    // Teacher resources, including lesson plan, unit vocab and unit standards
+    screen.getByText('Teacher Resources');
+    // eslint-disable-next-line no-restricted-properties
+    screen.getByTestId('resource-icon-' + RESOURCE_ICONS.SLIDES.icon);
+    screen.getByText('Slides: my slides');
+    // eslint-disable-next-line no-restricted-properties
+    screen.getByTestId('resource-icon-' + RESOURCE_ICONS.LESSON_PLAN.icon);
+    screen.getByText('Lesson Plan: First lesson');
+    // checks that standards and vocab are rendered only once and not rendred in the "student resoruces section"
+    screen.getByText('Unit 3 Standards');
+    screen.getByText('Unit 3 Vocabulary');
+
+    // Student resources
+    screen.getByText('Student Resources');
+    // eslint-disable-next-line no-restricted-properties
+    screen.getByTestId('resource-icon-' + RESOURCE_ICONS.VIDEO.icon);
+    screen.getByText('Video: my linked video');
+  });
+
+  it('renders "Unit Standards" and "Unit Vocabulary" when hasNumberedUnits is false', async () => {
+    const lessonDataWithoutNumberedUnits = {
+      ...mockLessonData,
+      hasNumberedUnits: false,
+    };
+
+    store.dispatch(selectSection(2));
+
+    await renderDefault(false, lessonDataWithoutNumberedUnits);
+
+    await screen.findByText('Unit Standards');
+    screen.getByText('Unit Vocabulary');
+    screen.getByText(i18n.downloadUnitLessonPlans());
+    screen.getByText(i18n.downloadUnitHandouts());
+  });
+
+  it('shows no student resources if no student resources are provided', async () => {
+    await renderDefault();
+
+    // check for unit resources dropdown
+    screen.getByRole('button', {name: 'View unit options dropdown'});
+    screen.getByText(
+      i18n.downloadUnitXLessonPlans({unitNumber: mockLessonData.unitNumber})
+    );
+    screen.getByText(
+      i18n.downloadUnitXHandouts({unitNumber: mockLessonData.unitNumber})
+    );
+
+    // Check for lesson dropdowns
+    const lessonDropdown = screen.getByRole('combobox', {
+      name: 'Choose a lesson',
+    });
+    screen.getByRole('option', {name: 'Lesson 1 — First lesson'});
+    screen.getByRole('option', {name: 'Lesson 2 — Second lesson'});
+
+    fireEvent.change(lessonDropdown, {
+      target: {value: '2'},
+    });
+
+    screen.getByText('Lesson Plan: Second lesson');
+    screen.getByText(i18n.noStudentResources());
+  });
+
+  it('notifies users if no curriculum is assigned.', async () => {
+    store.dispatch(selectSection(12));
+    await renderDefault(true);
+
+    screen.getByAltText('blank screen');
+    screen.getByText(i18n.emptySectionHeadline());
+    screen.getByText(i18n.noCurriculumAssigned());
+    screen.getByText(i18n.browseCurriculum());
+  });
+
+  it('tells users to select a unit when no unit assigned', async () => {
+    store.dispatch(selectSection(10));
+
+    await renderDefault();
+
+    screen.getByAltText(i18n.almostThere());
+    screen.getByText(i18n.almostThere());
+    screen.getByText(
+      i18n.noUnitAssigned({page: 'Lesson Materials', courseName: 'CSD'})
+    );
+    screen.getByText(i18n.assignAUnit());
+  });
+
+  it('notifies users that the assigned curriculum is pre-2020', async () => {
+    store.dispatch(selectSection(11));
+
+    await renderDefault();
+
+    screen.getByAltText(i18n.almostThere());
+    screen.getByText(i18n.lessonMaterialsAreNotAvailable());
+    screen.getByText(
+      i18n.lessonMaterialsLegacyMessage({courseName: 'CSD1-2020'})
+    );
+  });
+
+  it('renders the resources for the new lesson when lesson is changed', async () => {
+    await renderDefault();
+
+    const selectedLessonInput = screen.getByRole('combobox', {
+      name: 'Choose a lesson',
+    });
+
+    fireEvent.change(selectedLessonInput, {target: {value: '2'}});
+
+    // eslint-disable-next-line no-restricted-properties
+    screen.getByTestId('resource-icon-' + RESOURCE_ICONS.LESSON_PLAN.icon);
+    screen.getByText('Lesson Plan: Second lesson');
+
+    // eslint-disable-next-line no-restricted-properties
+    screen.getByTestId('resource-icon-' + RESOURCE_ICONS.VIDEO.icon);
+    screen.getByText('Video: my video resource');
+    expect(
+      // eslint-disable-next-line no-restricted-properties
+      screen.queryAllByTestId('resource-icon-' + RESOURCE_ICONS.SLIDES.icon)
+        .length === 0
+    );
+  });
+
+  it('renders the first lesson for the assigned unit when a new section is selected', async () => {
+    await renderDefault();
+
+    const selectedLessonInput = screen.getByRole('combobox', {
+      name: 'Choose a lesson',
+    });
+
+    fireEvent.change(selectedLessonInput, {target: {value: '2'}});
+
+    screen.getByText('Lesson Plan: Second lesson');
+
+    store.dispatch(selectSection(13));
+    await act(async () => await new Promise(process.nextTick));
+    screen.getByText('Lesson Plan: First lesson');
+  });
+
+  it('renders will render message when there is no lesson plan', async () => {
+    await renderDefault();
+
+    const selectedLessonInput = screen.getByRole('combobox', {
+      name: 'Choose a lesson',
+    });
+
+    fireEvent.change(selectedLessonInput, {target: {value: '3'}});
+
+    screen.getByText('No teacher resources available for this lesson');
+  });
+
+  it('renders empty state when there are no lesson plans in the whole unit', async () => {
+    store.dispatch(selectSection(3));
+    await renderDefault(false, mockLessonDataNoLessonPlans);
+
+    screen.getByText('There are no lesson materials for this unit.');
+  });
+
+  describe('resource links', () => {
+    let windowOpenMock: jest.SpyInstance<
+      Window | null,
+      Parameters<typeof utils.windowOpen>
+    >;
+
+    beforeEach(() => {
+      windowOpenMock = jest
+        .spyOn(utils, 'windowOpen')
+        .mockImplementation(() => null);
+    });
+
+    afterEach(() => {
+      windowOpenMock.mockRestore();
+      jest.resetAllMocks();
+    });
+
+    function viewResource(resourceName: string, resourceAction: string) {
+      const label = screen.getByText(resourceName);
+      const resourceRow = label.closest(
+        '[data-testid="resource-row"]'
+      ) as HTMLElement;
+      expect(resourceRow).toBeDefined();
+      const menuButton = within(resourceRow).getByLabelText(
+        'View options dropdown'
+      ) as HTMLElement;
+      fireEvent.click(menuButton);
+
+      const actionButton = within(resourceRow).getByText(resourceAction);
+      fireEvent.click(actionButton);
+    }
+
+    it('opens lesson plan', async () => {
+      await renderDefault();
+      viewResource('Lesson Plan: First lesson', 'View');
+      expect(windowOpenMock).toHaveBeenCalledWith(
+        '/courses/course/units/1/lessons/1',
+        '_blank',
+        'noopener,noreferrer'
+      );
+    });
+
+    it('downloads lesson plan pdf', async () => {
+      await renderDefault();
+      viewResource('Lesson Plan: First lesson', 'Download (PDF)');
+      expect(windowOpenMock).toHaveBeenCalledWith(
+        'https://lesson-plans.code.org/lesson-plan.pdf',
+        '_self'
+      );
+    });
+
+    it('opens handout', async () => {
+      await renderDefault();
+      viewResource('Handout: my link resource', 'View');
+      expect(windowOpenMock).toHaveBeenCalledWith(
+        'https://google.com/resource',
+        '_blank',
+        'noopener,noreferrer'
+      );
+    });
+
+    it('downloads handout', async () => {
+      await renderDefault();
+      viewResource('Handout: my link resource', 'Download');
+      expect(windowOpenMock).toHaveBeenCalledWith(
+        'https://google.com/resource.pdf',
+        '_self'
+      );
+    });
+
+    it('opens slides', async () => {
+      await renderDefault();
+      viewResource('Slides: my slides', 'View');
+      expect(windowOpenMock).toHaveBeenCalledWith(
+        'https://docs.google.com/presentation/d/ABC/edit',
+        '_blank',
+        'noopener,noreferrer'
+      );
+    });
+
+    it('downloads slides as pdf', async () => {
+      await renderDefault();
+      viewResource('Slides: my slides', 'Download (PDF)');
+      expect(windowOpenMock).toHaveBeenCalledWith(
+        'https://docs.google.com/presentation/d/ABC/export?format=pdf',
+        '_self'
+      );
+    });
+
+    it('downloads slides as microsoft office', async () => {
+      await renderDefault();
+      viewResource('Slides: my slides', 'Download (Microsoft Office)');
+      expect(windowOpenMock).toHaveBeenCalledWith(
+        'https://docs.google.com/presentation/d/ABC/export?format=pptx',
+        '_self'
+      );
+    });
+
+    it('makes a copy of slides in google docs', async () => {
+      await renderDefault();
+      viewResource('Slides: my slides', 'Make a copy (Google Docs)');
+      expect(windowOpenMock).toHaveBeenCalledWith(
+        'https://docs.google.com/presentation/d/ABC/copy',
+        '_blank',
+        'noopener,noreferrer'
+      );
+    });
+
+    it('opens unit vocabulary', async () => {
+      await renderDefault();
+      viewResource('Unit 3 Vocabulary', 'View');
+      expect(windowOpenMock).toHaveBeenCalledWith(
+        'https://studio.code.org/vocab',
+        '_blank',
+        'noopener,noreferrer'
+      );
+    });
+
+    it('opens unit standards', async () => {
+      await renderDefault();
+      viewResource('Unit 3 Standards', 'View');
+      expect(windowOpenMock).toHaveBeenCalledWith(
+        'https://studio.code.org/standards',
+        '_blank',
+        'noopener,noreferrer'
+      );
+    });
+
+    it('opens video', async () => {
+      await renderDefault();
+      viewResource('Video: my linked video', 'Watch');
+      expect(windowOpenMock).toHaveBeenCalledWith(
+        'https://youtu.be/WsXNpY3SXe8',
+        '_blank',
+        'noopener,noreferrer'
+      );
+    });
+
+    it('downloads video', async () => {
+      await renderDefault();
+      viewResource('Video: my linked video', 'Download');
+      expect(windowOpenMock).toHaveBeenCalledWith(
+        'https://videos.code.org/video.mp4',
+        '_self'
+      );
+    });
+  });
+
+  describe('lesson summary', () => {
+    beforeEach(() => {
+      store.dispatch(setShowAITALessonSummary(true));
+    });
+
+    it('does not render lesson summary when showAITALessonSummary is false', async () => {
+      store.dispatch(setShowAITALessonSummary(false));
+      await renderDefault();
+
+      expect(screen.queryByText(i18n.audioSummary())).toBe(null);
+      expect(screen.queryByText(i18n.teachingTips())).toBe(null);
+      expect(screen.queryByText(LESSON_SUMMARY.learning_objective)).toBe(null);
+      LESSON_SUMMARY.lesson_beats.forEach(beat =>
+        expect(screen.queryByText(beat)).toBe(null)
+      );
+      LESSON_SUMMARY.misconceptions.forEach(misconception =>
+        expect(screen.queryByText(misconception)).toBe(null)
+      );
+      LESSON_SUMMARY.tips.forEach(tip =>
+        expect(screen.queryByText(tip)).toBe(null)
+      );
+    });
+
+    it('does not render lesson summary when lesson summary has not been generated', async () => {
+      await renderDefault(true, mockLessonData, {});
+
+      expect(screen.queryByText(i18n.audioSummary())).toBe(null);
+      expect(screen.queryByText(i18n.teachingTips())).toBe(null);
+      expect(screen.queryByText(LESSON_SUMMARY.learning_objective)).toBe(null);
+      LESSON_SUMMARY.lesson_beats.forEach(beat =>
+        expect(screen.queryByText(beat)).toBe(null)
+      );
+      LESSON_SUMMARY.misconceptions.forEach(misconception =>
+        expect(screen.queryByText(misconception)).toBe(null)
+      );
+      LESSON_SUMMARY.tips.forEach(tip =>
+        expect(screen.queryByText(tip)).toBe(null)
+      );
+    });
+
+    it('renders lesson summary when showAITALessonSummary is true and lesson summary has been generated', async () => {
+      await renderDefault();
+
+      screen.getByText(i18n.audioSummary());
+      screen.getByText(i18n.teachingTips());
+      screen.getByText(LESSON_SUMMARY.learning_objective);
+      LESSON_SUMMARY.lesson_beats.forEach(beat => screen.getByText(beat));
+      LESSON_SUMMARY.misconceptions.forEach(misconception =>
+        screen.getByText(misconception)
+      );
+      LESSON_SUMMARY.tips.forEach(tip => screen.getByText(tip));
+    });
+
+    it('renders audio summary transcript dialog when transcript data is present', async () => {
+      const audioTranscript = [
+        {timeStamp: '0:00', text: 'First line of dialogue.'},
+        {timeStamp: '0:30', text: 'Second line of dialogue.'},
+        {timeStamp: '1:00', text: 'Third line of dialogue.'},
+      ];
+      store.dispatch(setAudioSummaryTranscript(audioTranscript));
+
+      await renderDefault();
+
+      screen.getByText(i18n.audioSummary());
+
+      // Audio summary transcript dialog is present as well
+      fireEvent.click(screen.getByText(i18n.transcript()));
+      screen.getByText(i18n.audioTranscript());
+      audioTranscript.forEach(transcriptLine => {
+        screen.getByText(transcriptLine.timeStamp);
+        screen.getByText(transcriptLine.text);
+      });
+    });
+
+    it('does not render audio component when experiment and DCDO flag are false', async () => {
+      DCDO.set('ai-lesson-summary-podcasts', false);
+      experiments.isEnabled = jest.fn((key: string) => {
+        if (key === 'ai-lesson-podcasts') {
+          return false;
+        } else {
+          return true;
+        }
+      });
+      await renderDefault();
+
+      expect(screen.queryByText(i18n.audioSummary())).toBe(null);
+    });
+
+    it('renders audio component when experiment is true and DCDO flag is false', async () => {
+      DCDO.set('ai-lesson-summary-podcasts', false);
+      await renderDefault();
+
+      screen.getByText(i18n.audioSummary());
+    });
+
+    it('renders audio component when experiment is false and DCDO flag is true', async () => {
+      store.dispatch(setShowAITAPodcasts(true));
+      experiments.isEnabled = jest.fn(() => false);
+      await renderDefault();
+
+      screen.getByText(i18n.audioSummary());
+    });
+
+    it('does not render Personalization Quiz note if user has completed the quiz', async () => {
+      store.dispatch(setHasCompletedPersonalizationQuiz(true));
+      await renderDefault();
+
+      expect(screen.queryByText(i18n.wantToSeeDifferentInformation())).toBe(
+        null
+      );
+    });
+
+    it('renders Personalization Quiz note if user has not completed the quiz', async () => {
+      store.dispatch(setHasCompletedPersonalizationQuiz(false));
+
+      await renderDefault();
+
+      screen.getByText(i18n.wantToSeeDifferentInformation());
+    });
+  });
+});

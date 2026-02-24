@@ -1,0 +1,117 @@
+name 'pl_sandbox_aif_2_U1-CSS-13'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Introducing CSS 
+
+####  Now that we have the structure of a website, let’s add some style!
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <b>CSS</b> (Cascading Style Sheets) is the language that controls the look and feel of a webpage.
+</p>
+</div>
+
+#### If HTML is the structure, CSS is the design—it handles colors, fonts, spacing, and layout.
+
+<div style="text-align: center; width: 80%; margin: 0 auto;">
+  <p style="
+    font-size: 18px; 
+    background-color: #F5F7F8; 
+    padding: 10px; 
+    border-left: 5px solid #8148B2; 
+    border-right: 5px solid #8148B2;
+    display: inline-block;
+  ">
+    HTML builds the page. <br>CSS styles it.
+  </p>
+</div>
+
+#### With CSS you can...
+- #### Changes colors, fonts, and text sizes
+- #### Controls spacing (margins, padding, alignment)
+- #### Adds borders, backgrounds, and styles
+- #### Defines layout (how sections of a page are arranged)
+
+<div style="clear:both;"></div>
+
+---
+
+## How it Works 
+#### To apply CSS to a webpage, you link a CSS file inside the `<head>` section of your HTML: 
+
+<img src="https://images.code.org/25a94e1abb5764272bb756bd05e472bf-image-1763399640046.png" alt="link code to connect html to css file" width="450px" style="display: block;  float:left ;border-radius:10px; ">
+
+<div style="clear:both;"></div>
+
+#### That line tells the computer: *“Use the style rules in this file to decorate and arrange my HTML content.”*
+
+####  Once the file is linked, the browser looks at each CSS rule and applies it to the matching HTML elements.
+
+---
+
+## CSS Selectors and Properties
+
+#### Each CSS rule has three parts:
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; font-family: Arial, sans-serif; font-size: 14pt; margin: 20px 0;">
+
+  <!-- 🎯 Selectors Card -->
+  <div style="flex: 1; background-color: #F5F7F8; border-radius: 12px; padding: 20px; box-shadow: 2px 2px 6px rgba(0,0,0,0.1);">
+    <h4 style="margin-top: 0; color: #005b6b;">🎯 <strong>Selectors</strong></h4>
+    <p style="margin-bottom: 12px;font-size: 14pt">
+     Tell the browser <strong>which HTML elements</strong> to style (like <code>body</code>, <code>header</code>, or <code>h1</code>).
+    </p>
+  </div>
+
+  <!-- 🎨 Properties Card -->
+  <div style="flex: 1; background-color: #F5F7F8; border-radius: 12px; padding: 20px; box-shadow: 2px 2px 6px rgba(0,0,0,0.1);">
+    <h4 style="margin-top: 0; color: #005b6b;">🎨 <strong>Properties</strong></h4>
+    <p style="margin-bottom: 12px;font-size: 14pt">
+      Name <strong>what you want to change</strong> about an element, such as <code>color</code>, <code>margin</code>, or <code>background-color</code>.
+      </p>
+</div>
+
+  <!-- ＃ Values Card -->
+  <div style="flex: 1; background-color: #F5F7F8; border-radius: 12px; padding: 20px; box-shadow: 2px 2px 6px rgba(0,0,0,0.1);">
+    <h4 style="margin-top: 0; color: #005b6b;">＃ <strong>Values</strong></h4>
+    <p style="margin-bottom: 12px;font-size: 14pt">
+      Set <strong>how the property changes</strong>, like <code>blue</code>, <code>20px</code>, or <code>center</code>.
+      </p>
+</div>
+</div>
+
+<div style="
+  border:3px solid #ccc;
+  border-radius:16px;
+  padding:12px;
+  margin:24px 0;
+  background:#fff;
+">
+
+> #### Review the CSS below and try to identify the selectors, properties, and values. 
+
+
+<div style="clear:both;"></div>
+
+<img src="https://images.code.org/d661e83194c3820b2be249901b728d9b-image-1763399381136.png" alt="sample css code with header, body, h1 and h2 selectors labeled" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+
+<br>
+
+<details style="text-align:center;">
+<summary style="cursor:pointer;display:inline-block; background:#8148B2; color:white; padding:14px 22px; font-size:18px; font-weight:600; border-radius:999px; list-style:none; margin:0 auto;">
+Click to show example how this might look on a webpage.
+</summary>
+
+<div style="margin-top:16px;display:flex;justify-content:center;gap:20px;">
+<img src="https://images.code.org/249cab55a1e216d7653998ffb88ba016-Screenshot%202026-01-16%20at%2012.54.52%20PM.png" alt="annotated html structure" width="400" style="border-radius:10px;">
+<img src="https://images.code.org/a546b33c4184dc532d0e59c7e15f6104-Screenshot%202026-01-16%20at%2012.52.29%20PM.png" alt="annotated html structure" width="450" style="border-radius:10px;">
+</div>
+</details>
+</div>
+
+<br>
+
+## Up Next: let's take a look at some common CSS tags and see what they do. 
+
+MARKDOWN

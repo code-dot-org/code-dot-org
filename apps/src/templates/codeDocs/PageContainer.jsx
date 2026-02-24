@@ -42,6 +42,7 @@ export default function PageContainer({
                   indentLevel={1}
                   href={doc.link}
                   isActive={doc.id === currentDocId}
+                  blockName={doc.blockName}
                 />
               ))}
             </NavigationCategory>

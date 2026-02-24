@@ -1,0 +1,372 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-05-23T11:31:55.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "category",
+        "blocks": {
+        }
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "set_effect_at_current_location_simple2",
+                        "id": "set_effect_at_current_location_simple2",
+                        "fields": {
+                          "effects_name": "<field name=\"effects_name\">volume</field>",
+                          "effects_value": "<field name=\"effects_value\">low</field>"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "play_sound_at_current_location_simple2",
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "will_i_am_i_like_to_move_it/vocals_chorus_1"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "],}V720pg|A*e|tHH4;=",
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "will_i_am_i_like_to_move_it/drums_main_beat"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "repeat_simple2",
+                                    "id": "repeat_simple2",
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "times": 2
+                                    },
+                                    "inputs": {
+                                      "code": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "(:.Y-]e7[Oj{j,jIsj_:",
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "will_i_am_i_like_to_move_it/guitar_upbeats"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together",
+                      "id": "^U4KB}Jd-`G-]$Rs3~`;",
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "inputs": {
+                        "code": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "I^HU*UA_.mZ}x;{8c:o#",
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "will_i_am_i_like_to_move_it/vocals_chorus_2"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "T#z_`p)G4{FL[wwi+AXx",
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "will_i_am_i_like_to_move_it/drums_main_beat"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "repeat_simple2",
+                                    "id": "F36jN@M}5D`xr_?,mwN?",
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "times": 2
+                                    },
+                                    "inputs": {
+                                      "code": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "svtnV$Y5Xp[b6eK)V|Xo",
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "will_i_am_i_like_to_move_it/synth_stutter"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "triggered_at_simple2",
+              "id": "triggerone",
+              "x": 310,
+              "y": 30,
+              "fields": {
+                "trigger": "<field name=\"trigger\">trigger1</field>",
+                "trigger_start": "<field name=\"trigger_start\">immediately</field>"
+              },
+              "next": {
+                "block": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "id": "c3AAL,0@oITcyL,bX%4p",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "fields": {
+                    "sound": "will_i_am_i_like_to_move_it/laser"
+                  }
+                }
+              }
+            },
+            {
+              "type": "triggered_at_simple2",
+              "id": "vOYkhHJ9!))q1i*=/=Vw",
+              "x": 310,
+              "y": 170,
+              "fields": {
+                "trigger": "<field name=\"trigger\">trigger2</field>",
+                "trigger_start": "<field name=\"trigger_start\">immediately</field>"
+              },
+              "next": {
+                "block": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "id": "|/r-URS/NTDASKm=vdus",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "fields": {
+                    "sound": "electro/wormhole"
+                  }
+                }
+              }
+            },
+            {
+              "type": "triggered_at_simple2",
+              "id": "ZJ+:^BSJ%a^;tKx6K=xS",
+              "x": 310,
+              "y": 290,
+              "fields": {
+                "trigger": "<field name=\"trigger\">trigger3</field>",
+                "trigger_start": "<field name=\"trigger_start\">immediately</field>"
+              },
+              "next": {
+                "block": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "id": "mGvj;IUn5GQ$C4VWt=CW",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "fields": {
+                    "sound": "acoustic_arcade/vibra_verb"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "sounds": {
+        "acoustic_arcade": [
+          "drum_beat_cabana",
+          "drum_beat_conga",
+          "drum_beat_hands",
+          "drum_beat_sweep",
+          "drum_beat_trees",
+          "drum_beat_wobble",
+          "bass_elevator",
+          "bass_float",
+          "bass_giant",
+          "bass_seesaw",
+          "bass_bounce",
+          "bass_stamp",
+          "synth_castle",
+          "synth_cloud",
+          "synth_cosmic",
+          "synth_round",
+          "synth_rubber",
+          "synth_tines",
+          "ukulele_knot",
+          "ukulele_shine",
+          "ukulele_slide",
+          "ukulele_knock",
+          "guitar_handle",
+          "guitar_path",
+          "guitar_window",
+          "guitar_flower",
+          "lead_zaps",
+          "lead_swoop",
+          "lead_violins",
+          "waterfall",
+          "bongo_roll",
+          "chimes",
+          "vibra_verb",
+          "sleigh_bells",
+          "wheel_spoke"
+        ],
+        "will_i_am_i_like_to_move_it": [
+          "vocals_chorus_1",
+          "vocals_chorus_2",
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_verse_3",
+          "vocals_verse_4",
+          "vocals_move_it",
+          "vocals_little_dance",
+          "vocals_ants_pants",
+          "drums_kick_perc_snare",
+          "drums_kick_perc",
+          "drums_kick",
+          "drums_main_beat",
+          "bass_guitar_slap",
+          "bass_guitar_stutter",
+          "bass_guitar",
+          "bass_synth",
+          "guitar_delay",
+          "guitar_upbeats",
+          "synth_stutter",
+          "camera",
+          "laser"
+        ],
+        "electro": [
+          "boom_impact",
+          "whua",
+          "wormhole"
+        ]
+      },
+      "packId": "will_i_am_i_like_to_move_it"
+    },
+    "long_instructions": "#### <i class=\"fa-solid fa-person-chalkboard\"></i> **Teacher Tip:**\r\n\r\n##### During the Use step, let students interact with existing code to see how event triggers work. Ask, “What made the sound start?” to help them connect events to actions.\r\n\r\n\r\n##### Students can use the keypad or click on the numbers underneath the [Run](#clickable=run-button) button to trigger the events. \r\n##### **Teacher Note**: This is Lesson 3, Level 2 from the curriculum.\r\n___\r\n###<i class=\"fa-solid fa-play\"></i> Try it out! \r\n\r\nLook closely at the code to answer the question below. Then press Run and try the triggers. [<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=id-left:triggerone)\r\n\r\n--- \r\n \r\n**What will play when the <code style=\"background-color: #64d25a; color: white; border: none; box-shadow: inset -1px -1px 1px1 rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">1</code> button is pressed?** \r\n\r\n",
+    "validations": [
+      {
+        "key": "music-coding-intro-event-try_4819c55f-caa5-40b0-b2bc-0b2ee4635777",
+        "message": "Nice! When the 1 button is triggered the laser effect plays! ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sound_id",
+            "value": "will_i_am_i_like_to_move_it/laser"
+          }
+        ]
+      },
+      {
+        "key": "music-coding-intro-event-try_c7fdc4c5-9325-4baa-97ef-8a2e507de0db",
+        "message": "You triggered two different sound effects. Now try to trigger the final sound. ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_triggered_multiple_times",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "key": "music-coding-intro-event-try_9686e2c3-43e7-41a4-b7aa-59b90e9763b2",
+        "message": "You triggered one sound. Now use the numbers 1, 2, and 3 to trigger the other sound effects. ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_triggered_multiple_times",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "music-coding-intro-event-try_e25bac1b-aaba-435f-b04e-6efba42da93c",
+        "message": "Press the number 1, 2, or 3 to trigger a sound effect. ",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "name_suffix": "_2025",
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "Laser",
+      "questionType": "multipleChoice",
+      "allowMultipleAttempts": false,
+      "multipleChoiceOptions": [
+        "Wormhole",
+        "Laser",
+        "Drums",
+        "Bass"
+      ],
+      "codeEditableAfterSubmit": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-23T11:31:55.063+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-event-try_launch_1\\\"\"],\"cloned_from\":\"music-coding-intro-event-try_launch_1\"}]"
+}]]></config>
+  <blocks/>
+</Music>

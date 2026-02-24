@@ -1,0 +1,65 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-09-23T17:50:24.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "name_suffix": "_2",
+    "panels": [
+      {
+        "text": "###Hi, I’m Orlando. I’m a Software Engineer at Amazon Music. ",
+        "imageUrl": "https://images.code.org/96d3db917ff632010b55c2529741f13e-Frame1.gif",
+        "key": "music_ai_panels_function-973d8506-2906-4bdf-96c6-e08d64b1e677",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "###When I was a kid, I loved playing video games. I knew I wanted to make video games when I grew up.\n",
+        "imageUrl": "https://images.code.org/780f8762e54a098f9c96451fe4082879-Frame2.gif",
+        "key": "music_ai_panels_function-c72da2a5-cee8-4254-b1e7-6d487a2ebcde",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "###When I went to college, I majored in Computer Science. ",
+        "imageUrl": "https://images.code.org/9db00dc6b50a350ff980079463e57bb4-Frame3.gif",
+        "key": "music_ai_panels_function-61c3fe3c-2dfa-4fca-bf57-f0e750e7b9d4",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "###Today, coding is my superpower. ",
+        "imageUrl": "https://images.code.org/3d55709a1ffa33d61937e6e79a1836d0-Frame4.gif",
+        "key": "music_ai_panels_function-f164a0ad-f4a0-4fb7-a4a4-a0269980b587",
+        "layout": "text-bottom-right"
+      },
+      {
+        "imageUrl": "https://images.code.org/63ec4cafcddc7c35559c03d0e8c22eae-Frame5.gif",
+        "text": "###In my job, I write thousands of lines of code. Sometimes I want to reuse the same chunk of code that I already wrote, so I use **FUNCTIONS.**",
+        "key": "musiclab_intro_panels_function_pdx-f1f658c0-64a9-471c-9f2a-399ba1ea8538",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "###You write a function once and reuse it throughout your code, just like a musician will bring back the chorus multiple times in a song.",
+        "imageUrl": "https://images.code.org/755086805eb7dcb21837f8218e05b74c-Frame6.gif",
+        "key": "music_ai_panels_function_2-dd6a1fce-61e8-4c5a-bb6f-ebb13a465042",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "###In the next level, you'll find a function in your workspace.\nNotice that it stands on its own.",
+        "imageUrl": "https://images.code.org/4b445a8955ab411f81792fc7b40b7a3b-functions (1).gif",
+        "key": "music_ai_panels_function_2-c8877cb4-6e4a-4df6-8f35-d07d428a37ed",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "###To use the code in the function, you need to \"call\" it:\n- Find the block with the function's name in your Toolbox.\n- Add it under 'when run.'\n- You can use it multiple times!\n\nThen press 'Run.'\"\n",
+        "imageUrl": "https://images.code.org/40333fce057d1c45297ff7d1ecfce1b3-call function (2).gif",
+        "key": "music_ai_panels_function_2-4c0067c6-4389-4f22-9bb1-9e80df2d3cf6",
+        "layout": "text-bottom-right"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2024-09-23T17:50:24.384+00:00\",\"changed\":[\"cloned from \\\"music_ai_panels_function\\\"\"],\"cloned_from\":\"music_ai_panels_function\"},{\"changed_at\":\"2024-09-24 22:22:43 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-24 22:25:36 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-25 04:26:24 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-25 04:30:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-25 04:32:50 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Panels>

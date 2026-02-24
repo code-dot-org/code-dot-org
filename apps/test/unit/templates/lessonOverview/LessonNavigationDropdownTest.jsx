@@ -2,7 +2,6 @@ import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonNavigationDropdown';
 import * as utils from '@cdo/apps/utils';
@@ -97,7 +96,7 @@ const twoLessonGroups = [
 let lesson = {
   unit: {
     displayName: 'Unit 1',
-    link: '/s/unit-1',
+    link: '/courses/course/units/1',
     lessonGroups: [],
   },
   id: 3,
@@ -190,7 +189,6 @@ describe('LessonNavigationDropdown', () => {
   });
 
   it('navigates when click lesson', () => {
-    sinon.stub(firehoseClient, 'putRecord');
     sinon.stub(utils, 'navigateToHref');
 
     lesson.unit.lessonGroups = twoLessonGroups;
@@ -200,10 +198,7 @@ describe('LessonNavigationDropdown', () => {
     expect(wrapper.find('a').at(1).contains('1 - Lesson 1')).to.be.true;
     lesson1.simulate('click', {preventDefault: () => {}});
 
-    expect(firehoseClient.putRecord).to.have.been.calledOnce;
-    firehoseClient.putRecord.yieldTo('callback');
     expect(utils.navigateToHref).to.have.been.calledOnce;
     utils.navigateToHref.restore();
-    firehoseClient.putRecord.restore();
   });
 });

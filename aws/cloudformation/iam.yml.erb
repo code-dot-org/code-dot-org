@@ -17,6 +17,11 @@ Parameters:
     Type: AWS::SSM::Parameter::Value<List<String>>
     Default: /IAM/GoogleBillingIDs
     Description: SSM Parameter with a list of Google ID's for users granted Billing access.
+  # https://github.blog/changelog/2023-06-27-github-actions-update-on-oidc-integration-with-aws/
+  GitHubIntermediateCertificateThumbprintList:
+    Type: CommaDelimitedList
+    Default: 6938fd4d98bab03faadb97b34396831e3780aea1, 1c58a3a8518e8759bf075b76b750d4f2df264fcd
+    Description: List of thumbprints of GitHub intermediate certificates that sign the certificates used by GitHub Actions.
 Resources:
   # Admin Service Role for managing all resources in CloudFormation stacks.
   # Only admins can update stacks using this service role.
@@ -66,6 +71,7 @@ Resources:
                   # AWS::IAM::Role
                   - iam:CreateRole
                   - iam:PutRolePermissionsBoundary
+                  - iam:TagRole
                   # Managed policies attached to a Role
                   - iam:AttachRolePolicy
                   - iam:DetachRolePolicy
@@ -103,6 +109,7 @@ Resources:
               - iam:*
               - organizations:*
               - secretsmanager:*
+              - ecs:ExecuteCommand
             Resource: '*'
           - Sid: IAMReadOnlyAccess
             Effect: Allow
@@ -117,7 +124,7 @@ Resources:
           - Effect: Allow
             Action: iam:PassRole
             Resource: '*'
-          # Require CloudFormation Service Role on all stack operations.
+          # Require a CloudFormation Service Role on all stack operations.
           - Effect: Deny
             Action:
               - cloudformation:CreateStack
@@ -127,11 +134,23 @@ Resources:
             NotResource: "arn:aws:cloudformation:*:aws:transform/Serverless-2016-10-31"
             Condition:
               StringNotEquals:
-                cloudformation:RoleARN: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"
+                cloudformation:RoleARN:
+                  - !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"
+                  - !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationMarketingSitesDevelopmentRole"
+                  - !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationMarketingSitesTestRole"
           # Read-only access to secrets.
           - Effect: Allow
             Action: secretsmanager:GetSecretValue
             Resource: '*'
+          # Allow ECS ExecuteCommand on test environment resources only
+          - Sid: AllowECSExecuteCommandOnTestResources
+            Effect: Allow
+            Action:
+              - ecs:ExecuteCommand
+            Resource: '*'
+            Condition:
+              StringEquals:
+                aws:ResourceTag/environment-type: test
   # Permissions which grant the CurriculumBuilder project read-only acces to
   # the DCDO database, so select configuration variables can be shared between
   # the two projects.
@@ -214,7 +233,10 @@ Resources:
         - Key: sqlworkbench-team
           Value: codedotorg
 
-# TODO: Migrate to REDTeam_Analyst
+  # TODO: Migrate to REDTeam_Analyst
+  # These permissions also require applying the following SQL permissions on the Redshift cluster:
+  # GRANT ROLE sys:monitor TO "IAM:DataAnalyst";
+  # GRANT ROLE sys:operator TO "IAM:DataAnalyst";
   DataAnalystRole:
     Type: AWS::IAM::Role
     Properties:
@@ -267,6 +289,8 @@ Resources:
         - arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess
 
 # Console & CLI Roles
+# The term 'FullAccess' means the role has the highest access for it's type, not
+# full access to all resources. It's in comparison to similar 'ReadOnly' roles.
 
 <%
 roles = {
@@ -286,6 +310,7 @@ roles = {
       'arn:aws:iam::aws:policy/PowerUserAccess',
       'arn:aws:iam::aws:policy/IAMReadOnlyAccess',
       '!Ref EngineerSecretsPolicy',
+      '!Ref EngineerDataPolicy',
       '!Ref CloudformationPassRolePolicy',
     ]
   },
@@ -335,6 +360,24 @@ roles = {
     GoogleIdsSSMParameter: 'BillingGoogleIDs',
     ManagedPolicyArns: [
       'arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess',
+    ]
+  },
+  ProductManagerFullAccessRole: {
+    RoleName: 'ProductManager_FullAccess',
+    GoogleIdsSSMParameter: 'ProductGoogleIDs',
+    ManagedPolicyArns: [
+      'arn:aws:iam::aws:policy/ReadOnlyAccess',
+      'arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess',
+      '!Ref BedrockKnowledgeBaseInvocationPolicy',
+      '!Ref CloudwatchDashboardViewerPolicy',
+      '!Ref PromptLibraryS3ReadWritePolicy'
+    ]
+  },
+  CurriculumFullAccessRole: {
+    RoleName: 'Curriculum_FullAccess',
+    ManagedPolicyArns: [
+      'arn:aws:iam::aws:policy/ReadOnlyAccess',
+      '!Ref PromptLibraryS3ReadWritePolicy'
     ]
   }
 }
@@ -497,6 +540,10 @@ roles.each do |name, config| %>
               - 'redshift:DescribeClusterSubnetGroups'
               - 'redshift:ViewQueriesInConsole'
               - 'redshift:ViewQueriesFromConsole'
+              - 'redshift:DescribeClusters'
+              - 'redshift:DescribeQuery'
+              - 'redshift:CancelQuery'
+              - 'redshift:GetClusterCredentialsWithIAM'
               - 'events:ListRules'
             Resource: '*'
 
@@ -616,6 +663,95 @@ roles.each do |name, config| %>
               - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:development/cdo/*
               - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:adhoc/cdo/*
 
+  EngineerDataPolicy:
+      Type: AWS::IAM::ManagedPolicy
+      Properties:
+        ManagedPolicyName: EngineersDataPolicy
+        Path: /engineering/
+        Description: Prevent accidental or malicious deletion of production data in S3, Aurora databases, etc.
+        PolicyDocument:
+          Version: 2012-10-17
+          Statement:
+            - Sid: DenyS3BucketDestructiveOperations
+              Effect: Deny
+              Action:
+                - s3:DeleteBucket
+                - s3:DeleteBucketPolicy
+                - s3:DeleteBucketWebsite
+                - s3:PutBucketAcl
+                - s3:PutBucketPolicy
+                - s3:PutBucketPublicAccessBlock
+                - s3:PutLifecycleConfiguration
+
+                # S3 Batch Operations - prevent mass operations
+                - s3:CreateJob
+                - s3:UpdateJobPriority
+                - s3:UpdateJobStatus
+
+                - s3:PutBucketVersioning
+                - s3:PutReplicationConfiguration
+                - s3:PutBucketCORS
+                - s3:PutBucketLogging
+                - s3:PutEncryptionConfiguration
+                - s3:BypassGovernanceRetention
+                - s3:DeleteObjectVersionTagging
+                - s3:PutObjectLegalHold
+                - s3:PutObjectRetention
+              NotResource:
+                - arn:aws:s3:::org.cdn-code.adhoc-*.*
+                - arn:aws:s3:::org.cdn-code.adhoc-*.*/*
+            - Sid: DenyDestructiveRDSOperationsOnProduction
+              Effect: Deny
+              Action:
+                - rds:DeleteDBInstance
+                - rds:DeleteDBCluster
+                - rds:DeleteDBSnapshot
+                - rds:DeleteDBClusterSnapshot
+                - rds:DeleteDBInstanceAutomatedBackup
+
+                - rds:StopDBInstance
+                - rds:StopDBCluster
+                - rds:RebootDBInstance
+                - rds:RebootDBCluster
+
+                - rds:ModifyDBInstance
+                - rds:ModifyDBCluster
+                - rds:ModifyDBParameterGroup
+                - rds:ModifyDBClusterParameterGroup
+                - rds:ResetDBParameterGroup
+                - rds:ResetDBClusterParameterGroup
+
+                - rds:RestoreDBInstanceFromDBSnapshot
+                - rds:RestoreDBClusterFromSnapshot
+                - rds:RestoreDBInstanceToPointInTime
+                - rds:RestoreDBClusterToPointInTime
+
+                - rds:FailoverDBCluster
+                - rds:BacktrackDBCluster
+                - rds:ModifyCurrentDBClusterCapacity
+
+              Resource:
+                - !Sub 'arn:aws:rds:*:${AWS::AccountId}:db:*'
+                - !Sub 'arn:aws:rds:*:${AWS::AccountId}:cluster:*'
+                - !Sub 'arn:aws:rds:*:${AWS::AccountId}:snapshot:*'
+                - !Sub 'arn:aws:rds:*:${AWS::AccountId}:cluster-snapshot:*'
+              Condition:
+                StringEquals:
+                  'aws:ResourceTag/environment': 'production'
+            - Sid: DenyTagModificationOnProductionRDS
+              Effect: Deny
+              Action:
+                - rds:RemoveTagsFromResource
+                - rds:AddTagsToResource
+              Resource:
+                - !Sub 'arn:aws:rds:*:${AWS::AccountId}:db:*'
+                - !Sub 'arn:aws:rds:*:${AWS::AccountId}:cluster:*'
+                - !Sub 'arn:aws:rds:*:${AWS::AccountId}:snapshot:*'
+                - !Sub 'arn:aws:rds:*:${AWS::AccountId}:cluster-snapshot:*'
+              Condition:
+                StringEquals:
+                  'aws:ResourceTag/environment': 'production'
+
   ContributorSecretsPolicy:
     Type: AWS::IAM::ManagedPolicy
     Properties:
@@ -667,6 +803,43 @@ roles.each do |name, config| %>
             Resource:
               - arn:aws:s3:::cdo-curriculum/media/musiclab/*
 
+  PromptLibraryS3ReadWritePolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: PromptLibraryS3ReadWritePolicy
+      Path: /engineering/
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Action:
+              - s3:ListAllMyBuckets
+            Resource: '*'
+          - Effect: 'Allow'
+            Action:
+              - s3:ListBucket
+              - s3:GetBucketLocation
+              - s3:GetBucketPublicAccessBlock
+              - s3:GetBucketPolicyStatus
+              - s3:GetBucketAcl
+              - s3:ListAccessPoints
+            Resource:
+              - arn:aws:s3:::cdo-curriculum
+          - Effect: Allow
+            Action:
+              - s3:AbortMultipartUpload
+              - s3:DeleteObject
+              - s3:DeleteObjectVersion
+              - s3:GetObject
+              - s3:GetObjectAcl
+              - s3:GetObjectVersion
+              - s3:GetObjectVersionAcl
+              - s3:PutObject
+              - s3:PutObjectAcl
+              - s3:PutObjectVersionAcl
+            Resource:
+              - arn:aws:s3:::cdo-curriculum/media/prompt-library/*
+
   GoogleBillingIDs:
     Type: AWS::SSM::Parameter
     Properties:
@@ -695,6 +868,43 @@ roles.each do |name, config| %>
             Resource: 
               - !Sub "arn:aws:s3:::aws-athena-query-results-${AWS::AccountId}-${AWS::Region}/*"
               - !Sub "arn:aws:s3:::aws-athena-query-results-${AWS::AccountId}-${AWS::Region}"
+  
+  ProductGoogleIDs:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: /IAM/ProductGoogleIDs
+      Type: StringList
+      Value: initial,value
+      Description: List of Google IDs of people being granted product access.
+  
+  BedrockKnowledgeBaseInvocationPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: BedrockKnowledgeBaseInvocationPolicy
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Action:
+              - bedrock:InvokeModel
+              - bedrock:Retrieve
+              - bedrock:RetrieveAndGenerate
+            Resource:
+              - !Sub 'arn:aws:bedrock:${AWS::Region}:${AWS::AccountId}:knowledge-base/*'
+
+  CloudwatchDashboardViewerPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: CloudwatchDashboardViewerPolicy
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Action:
+              - cloudwatch:GetDashboard
+              - cloudwatch:ListDashboards
+              - cloudwatch:GetMetricData
+            Resource: '*'
 
   # Used by FirehoseMicroservice Lambda function.
   # TODO move to Data stack
@@ -721,45 +931,6 @@ roles.each do |name, config| %>
             - !Sub "arn:aws:firehose:${AWS::Region}:${AWS::AccountId}:deliverystream/analysis-events"
       ManagedPolicyArns:
       - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
-  # Percona Monitoring and Management RDS access role.
-  # See: https://www.percona.com/doc/percona-monitoring-and-management/amazon-rds.html#creating-a-policy
-  # TODO: Move to Data stack
-  PMMRole:
-    Type: AWS::IAM::Role
-    Properties:
-      AssumeRolePolicyDocument:
-        Statement:
-          - Effect: Allow
-            Principal:
-              Service: [ec2.amazonaws.com, ecs-tasks.amazonaws.com]
-            Action: ['sts:AssumeRole']
-      Policies:
-        - PolicyName: PMMRolePolicy
-          PolicyDocument:
-            Version: "2012-10-17"
-            Statement:
-              - Sid: Stmt1508404837000
-                Effect: Allow
-                Action:
-                  - 'rds:DescribeDBInstances'
-                  - 'cloudwatch:GetMetricStatistics'
-                  - 'cloudwatch:ListMetrics'
-                Resource: '*'
-              - Sid: Stmt1508410723001
-                Effect: Allow
-                Action:
-                  - 'logs:DescribeLogStreams'
-                  - 'logs:GetLogEvents'
-                  - 'logs:FilterLogEvents'
-                Resource:
-                  - "arn:aws:logs:*:*:log-group:RDSOSMetrics:*"
-  # TODO: Move to Data stack
-  PMMInstanceProfile:
-    Type: AWS::IAM::InstanceProfile
-    Properties:
-      InstanceProfileName: Percona-Monitoring-Management
-      Path: '/'
-      Roles: [!Ref PMMRole]
   # Global managed-policy named role used by ECS.
   # Ref: https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html
   EcsTaskExecutionRole:
@@ -774,6 +945,21 @@ roles.each do |name, config| %>
       Path: /
       ManagedPolicyArns:
         - 'arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy'
+  # TODO: Move this to gen_ai_curriculum.yml.erb
+  # Execution role for GenAI Sagemaker Models
+  SagemakerModelExecutionRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      RoleName: SagemakerModelExecutionRole
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: sagemaker.amazonaws.com
+            Action: 'sts:AssumeRole'
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/AmazonSageMakerFullAccess'
   SessionPermissions:
     Type: AWS::IAM::ManagedPolicy
     Properties:
@@ -811,6 +997,7 @@ roles.each do |name, config| %>
     Type: AWS::IAM::ServiceLinkedRole
     Properties: 
       AWSServiceName: logger.cloudfront.amazonaws.com
+
 Outputs:
   DevPermissions:
     Description: Developer Permissions
@@ -820,11 +1007,12 @@ Outputs:
     Description: Firehose Lambda Role ARN
     Value: !GetAtt FirehoseLambdaRole.Arn
     Export: {Name: !Sub "${AWS::StackName}-FirehoseLambdaRoleARN"}
-  PerconaMonitoringRoleARN:
-    Description: Percona Monitoring Role ARN
-    Value: !GetAtt PMMRole.Arn
-    Export: {Name: !Sub "${AWS::StackName}-PerconaMonitoringRoleARN"}
   SessionPermissions:
     Description: Session Permissions
     Value: !Ref SessionPermissions
     Export: {Name: !Sub "${AWS::StackName}-SessionPermissions"}
+  SagemakerModelExecutionRoleARN:
+    Description: Execution Role for GenAI Sagemaker Models
+    Value: !GetAtt SagemakerModelExecutionRole.Arn
+    Export: {Name: !Sub "${AWS::StackName}-SagemakerExecutionRoleARN"}
+

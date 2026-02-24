@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React, {useCallback} from 'react';
 import {connect} from 'react-redux';
 
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
 import styles from './summary.module.scss';
@@ -24,11 +24,11 @@ const SummaryTopLinks = ({
 
   const logEvent = useCallback(
     eventName => {
-      const {level} = scriptData;
+      const {levels} = scriptData;
       analyticsReporter.sendEvent(eventName, {
-        levelId: level.id,
-        levelName: level.name,
-        levelType: level.type,
+        levelId: levels[0].id,
+        levelName: levels[0].name,
+        levelType: levels[0].type,
         ...scriptData.reportingData,
       });
     },

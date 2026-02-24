@@ -1,48 +1,102 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import React, {Component} from 'react';
+import React from 'react';
+import {connect} from 'react-redux';
 
-export const dropdownStyles = {
-  dropdown: {
-    display: 'block',
-    boxSizing: 'border-box',
-    fontSize: 'medium',
-    height: 34,
-    paddingLeft: 5,
-    paddingRight: 5,
-    width: 300,
-  },
-};
+import {asyncLoadCoursesWithProgress} from '@cdo/apps/redux/unitSelectionRedux';
 
-export default class UnitSelector extends Component {
-  static propTypes = {
-    coursesWithProgress: PropTypes.array.isRequired,
-    scriptId: PropTypes.number,
-    onChange: PropTypes.func.isRequired,
-    style: PropTypes.object,
+import styles from './unit-selector.module.scss';
+import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
+
+function UnitSelector({
+  sectionId,
+  scriptId,
+  courseVersionId,
+  onChange,
+  coursesWithProgress,
+  asyncLoadCoursesWithProgress,
+  isLoadingCourses,
+  isLoadingSectionData,
+}) {
+  // Reload courses with progress when selected section changes.
+  React.useEffect(() => {
+    if (sectionId) {
+      asyncLoadCoursesWithProgress();
+    }
+  }, [sectionId, asyncLoadCoursesWithProgress]);
+
+  const loadingSkeleton = () => (
+    <div>
+      <div
+        className={classNames(
+          styles.dropdown,
+          styles.skeletonDropdown,
+          skeletonizeContent.skeletonizeContent
+        )}
+        disabled={true}
+      />
+    </div>
+  );
+  const onSelectUnit = e => {
+    const value = e.target.value;
+    const [newCourseVersionId, newUnitId] = value.includes('-')
+      ? value.split('-').map(id => parseInt(id))
+      : [undefined, parseInt(value)];
+    onChange(newUnitId, newCourseVersionId);
   };
 
-  render() {
-    const {scriptId, onChange, coursesWithProgress} = this.props;
-
-    return (
-      <div>
-        <select
-          value={scriptId || undefined}
-          onChange={event => onChange(parseInt(event.target.value))}
-          style={dropdownStyles.dropdown}
-          id="uitest-course-dropdown"
-        >
-          {coursesWithProgress.map((version, index) => (
-            <optgroup key={index} label={version.display_name}>
-              {version.units.map(unit => (
-                <option key={unit.id} value={unit.id}>
-                  {unit.name}
-                </option>
-              ))}
-            </optgroup>
-          ))}
-        </select>
-      </div>
-    );
-  }
+  const selectedValue =
+    scriptId && courseVersionId ? `${courseVersionId}-${scriptId}` : undefined;
+  return isLoadingSectionData ||
+    isLoadingCourses ||
+    !coursesWithProgress ||
+    coursesWithProgress.length === 0 ? (
+    loadingSkeleton()
+  ) : (
+    <div>
+      <select
+        value={selectedValue}
+        onChange={onSelectUnit}
+        className={styles.dropdown}
+        id="uitest-course-dropdown"
+      >
+        {coursesWithProgress.map((version, index) => (
+          <optgroup key={index} label={version.display_name}>
+            {version.units.map(unit => (
+              <option key={unit.id} value={`${version.id}-${unit.id}`}>
+                {unit.name}
+              </option>
+            ))}
+          </optgroup>
+        ))}
+      </select>
+    </div>
+  );
 }
+
+UnitSelector.propTypes = {
+  coursesWithProgress: PropTypes.array.isRequired,
+  scriptId: PropTypes.number,
+  courseVersionId: PropTypes.number,
+  sectionId: PropTypes.number,
+  onChange: PropTypes.func.isRequired,
+  asyncLoadCoursesWithProgress: PropTypes.func.isRequired,
+  isLoadingCourses: PropTypes.bool,
+  isLoadingSectionData: PropTypes.bool.isRequired,
+};
+
+export const UnconnectedUnitSelector = UnitSelector;
+
+export default connect(
+  state => ({
+    coursesWithProgress: state.unitSelection.coursesWithProgress,
+    sectionId: state.teacherSections.selectedSectionId,
+    isLoadingCourses: state.unitSelection.isLoadingCoursesWithProgress,
+    isLoadingSectionData: state.teacherSections.isLoadingSectionData,
+  }),
+  dispatch => ({
+    asyncLoadCoursesWithProgress() {
+      dispatch(asyncLoadCoursesWithProgress());
+    },
+  })
+)(UnitSelector);

@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 import React, {useState, useEffect, useCallback, useMemo} from 'react';
 import {Button, Alert, FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import usePrevious from '@cdo/apps/util/usePrevious';
 import i18n from '@cdo/locale';
 
@@ -723,7 +723,7 @@ const FormController = props => {
         style={styles.pageButtons}
         items={pageComponents.length}
         activePage={currentPage + 1}
-        onSelect={i => setPage(i - 1)} // eslint-disable-line react/jsx-no-bind
+        onSelect={i => setPage(i - 1)}
       />
     );
 

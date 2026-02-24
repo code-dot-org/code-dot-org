@@ -1,7 +1,7 @@
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {Heading4} from '@cdo/apps/componentLibrary/typography';
 import {assignmentCourseOfferingShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import i18n from '@cdo/locale';
 
@@ -44,7 +44,9 @@ export default function QuickAssignTableHocPl({
         <thead>
           <tr className={moduleStyles.headerRow}>
             <td className={moduleStyles.headerCell}>
-              <Heading4>{title}</Heading4>
+              <Typography variant="h4" gutterBottom>
+                {title}
+              </Typography>
             </td>
           </tr>
         </thead>
@@ -89,6 +91,9 @@ export default function QuickAssignTableHocPl({
     <div>
       {marketingAudience === MARKETING_AUDIENCE.HOC && (
         <div>{allTables(i18n.teacherCourseHoc())}</div>
+      )}
+      {marketingAudience === MARKETING_AUDIENCE.HOAI && (
+        <div>{allTables(i18n.marketingInitiativeHOAI())}</div>
       )}
       {marketingAudience === MARKETING_AUDIENCE.PL && (
         <div>{allTables(i18n.professionalLearning())}</div>

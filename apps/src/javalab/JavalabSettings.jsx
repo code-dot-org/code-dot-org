@@ -4,8 +4,8 @@ import React, {Component} from 'react';
 import onClickOutside from 'react-onclickoutside';
 import {connect} from 'react-redux';
 
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import javalabMsg from '@cdo/javalab/locale';
 import msg from '@cdo/locale';
 

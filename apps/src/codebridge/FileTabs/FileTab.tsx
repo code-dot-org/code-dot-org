@@ -1,9 +1,23 @@
-import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import CloseButton from '@code-dot-org/component-library/closeButton';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {ProjectFile} from '@codebridge/types';
-import {getFileIcon} from '@codebridge/utils';
-import React from 'react';
+import {getFileIconNameAndStyle} from '@codebridge/utils';
+import {Typography} from '@mui/material';
+import classNames from 'classnames';
+import {throttle} from 'lodash';
+import React, {useEffect, useMemo, useRef} from 'react';
 
-import {getActiveFileForProject} from '@cdo/apps/lab2/projects/utils';
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
+import {
+  closeFileThunk,
+  setActiveFileThunk,
+} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
+import {getFileExtension} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './styles/fileTabs.module.scss';
 
@@ -12,28 +26,81 @@ type FileTabProps = {
 };
 
 const FileTab = ({file}: FileTabProps) => {
-  const {project, closeFile, setActiveFile} = useCodebridgeContext();
-  const activeFile = getActiveFileForProject(project);
+  const activeFile = useAppSelector(state => {
+    const source = state.lab2Project.projectSources?.source as MultiFileSource;
+    return getActiveFileForSource(source);
+  });
+  const dispatch = useAppDispatch();
+  const {iconName, iconStyle, isBrand} = getFileIconNameAndStyle(file);
+  const iconClassName = isBrand ? 'fa-brands' : undefined;
+  const isActive = file.active || file === activeFile;
+  const isAiTutorVersionFile =
+    file.isAiTutorVersionUpdated || file.isAiTutorVersionCreated || false;
+  const isAiTutorVersion = useAppSelector(
+    state => state.lab2Project.viewingAiTutorVersion
+  );
+  const className = classNames(moduleStyles.fileTab, {
+    [moduleStyles.aiTutorVersionActive]: isActive && isAiTutorVersionFile,
+    [moduleStyles.aiTutorVersionInactive]: !isActive && isAiTutorVersionFile,
+    [moduleStyles.active]: isActive && !isAiTutorVersionFile,
+  });
+  const tabRef = useRef<HTMLDivElement>(null);
 
+  const scrollTabIntoView = () =>
+    tabRef.current?.scrollIntoView({block: 'end', inline: 'start'});
+
+  const throttledScrollTabIntoView = useMemo(
+    () => throttle(scrollTabIntoView, 30),
+    []
+  );
+
+  useEffect(() => {
+    if (isActive) {
+      scrollTabIntoView();
+      window.addEventListener('resize', throttledScrollTabIntoView);
+    } else {
+      window.removeEventListener('resize', throttledScrollTabIntoView);
+    }
+    return () =>
+      window.removeEventListener('resize', throttledScrollTabIntoView);
+  }, [isActive, throttledScrollTabIntoView]);
+
+  const handleOnClick = (id: string) => {
+    dispatch(setActiveFileThunk(file.id));
+    if (isAiTutorVersion) {
+      sendLab2AnalyticsEvent(EVENTS.AI_TUTOR_VERSION_VIEW_FILE_CLICKED, {
+        fileName: file.name,
+        fileType: getFileExtension(file.name),
+        aiTutorVersionFileUpdated: file.isAiTutorVersionUpdated
+          ? 'true'
+          : 'false',
+        aiTutorVersionFileCreated: file.isAiTutorVersionCreated
+          ? 'true'
+          : 'false',
+      });
+    }
+  };
   return (
-    <div
-      className={`${moduleStyles.fileTab} ${
-        file.active || file === activeFile ? moduleStyles.active : ''
-      }`}
-      key={file.id}
-    >
-      <span onClick={() => setActiveFile(file.id)}>
-        <i className={getFileIcon(file)} />
-        &nbsp;
-        {file.name}
-      </span>
-      <button
-        type="button"
-        className={moduleStyles.inlineButton}
-        onClick={() => closeFile(file.id)}
+    <div className={className} key={file.id}>
+      <div
+        className={moduleStyles.label}
+        onClick={() => handleOnClick(file.id)}
+        ref={tabRef}
       >
-        <i className="fa-solid fa-x" />
-      </button>
+        <FontAwesomeV6Icon
+          iconName={iconName}
+          iconStyle={iconStyle}
+          className={iconClassName}
+        />
+        <Typography variant="body4">{file.name}</Typography>
+      </div>
+      <CloseButton
+        onClick={() => dispatch(closeFileThunk(file.id))}
+        color={'light'}
+        aria-label={codebridgeI18n.closeFile({filename: file.name})}
+        className={moduleStyles.closeButton}
+        size="s"
+      />
     </div>
   );
 };

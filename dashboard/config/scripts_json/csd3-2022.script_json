@@ -25,6 +25,7 @@
           "key": "028e71f9-ebae-48ab-9c69-d616fa7d8165"
         }
       ],
+      "content_area": "curriculum_6_8",
       "curriculum_umbrella": "CSD",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -39,12 +40,11 @@
         "az-AZ"
       ],
       "tts": true,
-      "version_year": "2022",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-04-15 20:52:55 UTC",
+    "serialized_at": "2025-01-22 18:59:30 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

@@ -1,0 +1,14 @@
+name 'problem-solving-with-ai-lesson6-level5_2024-pilot'
+title 'Careers In or Using Computer Science'
+
+question 'How much are you interested in computer science connected careers, like the ones you learned about in this lesson?'
+
+right 'Not at all interested'
+right 'Slightly interested'
+right 'Somewhat interested'
+right 'Neutral'
+right 'Moderately interested'
+right 'Very interested'
+right 'Extremely interested'
+
+allow_multiple_attempts true

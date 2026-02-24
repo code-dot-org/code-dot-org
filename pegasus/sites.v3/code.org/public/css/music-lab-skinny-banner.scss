@@ -1,18 +1,32 @@
 $width-sm: 640px;
 
 .music-lab-skinny-banner {
-  background: url('/images/music-lab/music-lab-homepage-banner-bg.png') center top;
-  background-size: cover;
-  padding: 1rem 2rem;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 16, 125, 1) 0%,
+    rgba(11, 28, 66, 1) 33%,
+    rgba(8, 18, 49, 1) 71%,
+    rgba(52, 28, 101, 1) 100%
+  );
+  padding: 2rem;
+  @media (max-width: $width-sm) {
+    background: linear-gradient(
+      130deg,
+      rgba(2, 16, 125, 1) 0%,
+      rgba(11, 28, 66, 1) 33%,
+      rgba(8, 18, 49, 1) 71%,
+      rgba(52, 28, 101, 1) 100%
+    );
+  }
 
   .wrapper {
     max-width: 960px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 5rem;
+    gap: 4rem;
+
+    p.desc {
+      margin-bottom: 10px;
+    }
 
     @media (max-width: 900px) {
       gap: 2rem;
@@ -32,31 +46,33 @@ $width-sm: 640px;
     @media (max-width: $width-sm) {
       text-align: center;
     }
+  }
 
-    .afe {
-      margin-bottom: 0.15rem;
-      justify-content: start;
-      gap: 0.25rem 0.5rem;
+  .partner {
+    p {
+      white-space: nowrap;
+    }
 
-      @media (max-width: $width-sm) {
-        justify-content: center;
-      }
+    img {
+      max-width: 12rem;
+      margin-left: 0.5rem;
+    }
 
-      & > figure {
-        width: 180px;
+    @media (max-width: $width-sm) {
+      justify-content: center;
+      flex-direction: column;
 
-        img {
-          width: 100%;
-        }
+      img {
+        margin: 0;
       }
     }
   }
 
   img {
-    max-width: 12rem;
+    max-width: 18rem;
+  }
 
-    @media (max-width: $width-sm) {
-      align-self: center;
-    }
+  a.link-button {
+    max-width: 15rem;
   }
 }

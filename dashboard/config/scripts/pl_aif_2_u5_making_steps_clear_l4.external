@@ -1,0 +1,54 @@
+name 'pl-aif-2-U5-making-steps-clear-L4'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# A clearer way to write Promise code
+
+  
+#### You just learned how to use a promise chain with <code>.then()</code> to handle asynchronous code (like <code>fetch</code>).
+
+####  Now, you’ll learn a different way to write the *same* logic so it reads more like normal, step-by-step code: **async** and **await**.
+  
+
+## Key Vocabulary 
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>async</strong> marks a function as asynchronous. An <code>async</code> function automatically returns a <strong>Promise</strong> and allows you to use <code>await</code> inside it.
+</p>
+</div>
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>await</strong> is used inside an <code>async</code> function. It pauses <em>that function</em> until a Promise resolves, then gives you the resolved value so the next line can run.
+</p>
+</div>
+
+
+
+#### **Important:** async/await does *not* make the code “less asynchronous.”
+#### It’s a cleaner way to write Promise logic you already understand.
+
+---
+## Quick Check 
+#### (answer in your own words)
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 14pt; font-weight: bold;">1️⃣ Where are you allowed to use <code>await</code>?</summary>
+<div style="margin-top: 15px; margin-left: 20px; margin-right: 20px; margin-bottom:20px; font-size: 14pt;">
+    <p style = "font-size: 14pt;">
+You are allowed to use <code>await</code> inside an <code>async</code> function.
+    </p>
+</div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 14pt; font-weight: bold;">2️⃣ Does <code>await</code> pause the whole program, or just one function?</summary>
+<div style="margin-top: 15px; margin-left: 20px; margin-right: 20px; margin-bottom:20px;font-size: 14pt;">
+    <p style = "font-size: 14pt;">
+<code>await</code> pauses only the function it is inside of, not the entire program.
+    </p>
+</div>
+</details>
+
+
+MARKDOWN

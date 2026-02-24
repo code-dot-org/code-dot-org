@@ -2,16 +2,13 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
 import {beginEditingSection} from '../teacherDashboard/teacherSectionsRedux';
 
 import BorderedCallToAction from './BorderedCallToAction';
-
-// Amplitude analytics events.
-const STARTED_EVENT = 'Section Setup Started';
 
 class SetUpSections extends Component {
   static propTypes = {
@@ -19,6 +16,7 @@ class SetUpSections extends Component {
     headingText: PropTypes.string,
     descriptionText: PropTypes.string,
     solidBorder: PropTypes.bool,
+    asyncLoadComplete: PropTypes.bool,
   };
 
   // Wrapped to avoid passing event args
@@ -28,7 +26,11 @@ class SetUpSections extends Component {
   };
 
   recordSectionSetupStartedEvent = () => {
-    analyticsReporter.sendEvent(STARTED_EVENT, {}, PLATFORMS.BOTH);
+    analyticsReporter.sendEvent(
+      EVENTS.SECTION_SETUP_STARTED,
+      {},
+      PLATFORMS.STATSIG
+    );
   };
 
   render() {
@@ -42,6 +44,7 @@ class SetUpSections extends Component {
         buttonText={i18n.createSection()}
         className="uitest-set-up-sections"
         buttonClass="uitest-newsection"
+        buttonDisabled={!this.props.asyncLoadComplete}
         onClick={this.beginEditingSection}
         solidBorder={this.props.solidBorder || false}
       />
@@ -49,6 +52,11 @@ class SetUpSections extends Component {
   }
 }
 export const UnconnectedSetUpSections = SetUpSections;
-export default connect(undefined, {
-  beginEditingSection,
-})(SetUpSections);
+export default connect(
+  state => ({
+    asyncLoadComplete: state.teacherSections.asyncLoadComplete,
+  }),
+  {
+    beginEditingSection,
+  }
+)(SetUpSections);

@@ -1,0 +1,17 @@
+name 'programming-fundamentals-lesson10-level1_v2-2025'
+title 'Algorithms in Real Life'
+
+
+markdown <<MARKDOWN
+##Algorithms in Real Life
+
+Let's take a look at how algorithms work in real life! 
+
+**Make a copy of the [activity guide](https://docs.google.com/document/d/1gB6BxtGC6NIR-gimvJXH4xAcoVbYMXy4VojhjWlxNHI/edit?usp=drivesdk) to get started:**
+
+1. In Part 1, you will debug a music recommendation algorithm.
+
+2. In Part 2, you will explore ethical considerations for a self-driving car algorithm.  The video link can be found [here](https://drive.google.com/file/d/1yxxJ_YiA2CiEt1V82Nl3HfcK7IoK9xol/view).
+
+![](https://images.code.org/1945ab4da490d179048dc5fe0735da41-image-1745342323747.18.36 AM.png)
+MARKDOWN

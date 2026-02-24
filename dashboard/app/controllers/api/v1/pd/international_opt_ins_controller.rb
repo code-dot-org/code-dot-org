@@ -15,5 +15,7 @@ class Api::V1::Pd::InternationalOptInsController < Api::V1::Pd::FormsController
       source: EmailPreference::FORM_PD_INTERNATIONAL_OPT_IN,
       form_kind: "0"
     )
+
+    current_user.verify_teacher! if current_user.teacher? && !current_user.verified_teacher?
   end
 end

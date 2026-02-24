@@ -2,8 +2,7 @@ require 'test_helper'
 
 class ApiControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
-
-  self.use_transactional_test_case = true
+  include Minitest::RSpecMocks
 
   setup_all do
     @teacher = create(:teacher)
@@ -14,7 +13,7 @@ class ApiControllerTest < ActionController::TestCase
     @section = create(:section, user: @section_owner, login_type: 'word')
     create(:section_instructor, instructor: @teacher, section: @section, status: :active)
 
-    @script = create(:script, :with_levels, levels_count: 1)
+    @script = create(:script, :in_single_unit_course, :with_levels, levels_count: 1)
     @script_level = @script.script_levels[0]
     @level = @script_level.level
 
@@ -28,12 +27,14 @@ class ApiControllerTest < ActionController::TestCase
     @student_1, @student_2, @student_3, @student_4, @student_5, @student_6, @student_7 = @students
 
     @flappy = create(:text_match, :with_script).script_levels.first.script
-    @flappy_section = create(:section, user: @teacher, script_id: @flappy.id)
+    @flappy_course = create(:single_unit_course, unit: @flappy)
+    @flappy_section = create(:section, user: @teacher, script_id: @flappy.id, course_id: @flappy_course.id)
     @student_flappy_1 = create(:follower, section: @flappy_section).student_user
     @student_flappy_1.reload
 
     @allthings = create(:text_match, :with_script).script_levels.first.script
-    @allthings_section = create(:section, user: @teacher, script_id: @allthings.id)
+    @allthingscourse = create(:single_unit_course, unit: @allthings)
+    @allthings_section = create(:section, user: @teacher, script_id: @allthings.id, course_id: @allthings.original_unit_group_id)
     @student_allthings = create(:student, name: 'student_allthings')
     create(:follower, section: @allthings_section, student_user: @student_allthings)
     @allthings_section.reload
@@ -48,12 +49,13 @@ class ApiControllerTest < ActionController::TestCase
     STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
     CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
 
-    teacher = create :authorized_teacher
+    teacher = create(:authorized_teacher)
     sign_in teacher
 
-    section = create :section
-    level = create :dance, :with_example_solutions
-    script_level = create :script_level, levels: [level]
+    section = create(:section)
+    level = create(:dance, :with_example_solutions)
+    script = create(:unit, :in_single_unit_course)
+    script_level = create(:script_level, script: script, levels: [level])
 
     get :example_solutions, params: {script_level_id: script_level.id, level_id: level.id, section_id: section.id}
 
@@ -65,11 +67,12 @@ class ApiControllerTest < ActionController::TestCase
     STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
     CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
 
-    teacher = create :authorized_teacher
+    teacher = create(:authorized_teacher)
     sign_in teacher
 
     level = create(:level, :blockly, :with_ideal_level_source)
-    script_level = create :script_level, levels: [level]
+    script = create(:unit, :in_single_unit_course)
+    script_level = create(:script_level, script: script, levels: [level])
 
     get :example_solutions, params: {script_level_id: script_level.id, level_id: level.id, section_id: ""}
 
@@ -81,12 +84,13 @@ class ApiControllerTest < ActionController::TestCase
     STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
     CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
 
-    teacher = create :authorized_teacher
+    teacher = create(:authorized_teacher)
     sign_in teacher
 
-    section = create :section
+    section = create(:section)
     level = create(:level, :blockly, :with_ideal_level_source)
-    script_level = create :script_level, levels: [level]
+    script = create(:unit, :in_single_unit_course)
+    script_level = create(:script_level, script: script, levels: [level])
 
     get :example_solutions, params: {script_level_id: script_level.id, level_id: level.id, section_id: section.id}
 
@@ -98,7 +102,7 @@ class ApiControllerTest < ActionController::TestCase
     get :section_text_responses, params: {section_id: @section.id}
     assert_response :success
 
-    # we fall back to twenty_hour_unit, which has no text_response levels
+    # we fall back to hoc_2014_unit, which has no text_response levels
     assert_equal '[]', @response.body
   end
 
@@ -111,13 +115,13 @@ class ApiControllerTest < ActionController::TestCase
     response = JSON.parse(@response.body)
 
     # make sure our response has lesson from the specified script
-    assert /\/s\/#{@allthings.name}\// =~ response[0]['url']
+    assert /\/courses\/#{@allthings.original_unit_group.name}\// =~ response[0]['url']
   end
 
   test "should get text_responses for section with assigned course" do
-    unit_group = create :unit_group
-    create :unit_group_unit, unit_group: unit_group, script: @allthings, position: 1
-    create :unit_group_unit, unit_group: unit_group, script: @flappy, position: 2
+    unit_group = create(:unit_group)
+    create(:unit_group_unit, unit_group: unit_group, script: @allthings, position: 1)
+    create(:unit_group_unit, unit_group: unit_group, script: @flappy, position: 2)
     unit_group.reload
 
     section = create(:section, user: @teacher, login_type: 'word', unit_group: unit_group)
@@ -134,7 +138,7 @@ class ApiControllerTest < ActionController::TestCase
     response = JSON.parse(@response.body)
 
     # make sure our response has lesson from allthethings
-    assert /\/s\/#{@allthings.name}\// =~ response[0]['url']
+    assert /\/courses\/#{unit_group.name}\/units\// =~ response[0]['url']
   end
 
   test "should get text_responses for section with specific script" do
@@ -157,43 +161,48 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get text_responses for section with script with text response" do
-    script = create :script, name: 'text-response-script'
-    lesson_group = create :lesson_group, script: script
-    lesson1 = create :lesson, script: script, name: 'First Lesson', key: 'First Lesson', lesson_group: lesson_group
-    lesson2 = create :lesson, script: script, name: 'Second Lesson', key: 'Second Lesson', lesson_group: lesson_group
+    script = create(:script, :in_single_unit_course, name: 'text-response-script')
+    lesson_group = create(:lesson_group, script: script)
+    lesson1 = create(:lesson, script: script, name: 'First Lesson', key: 'First Lesson', lesson_group: lesson_group)
+    lesson2 = create(:lesson, script: script, name: 'Second Lesson', key: 'Second Lesson', lesson_group: lesson_group)
 
     # create 2 text_match levels
-    level1 = create :text_match
+    level1 = create(:text_match)
     level1.properties['title'] = 'Text Match 1'
     level1.save!
-    create :script_level, script: script, levels: [level1], lesson: lesson1
+    create(:script_level, script: script, levels: [level1], lesson: lesson1)
 
-    level2 = create :text_match
+    level2 = create(:text_match)
     level2.properties['title'] = 'Text Match 2'
     level2.save!
-    create :script_level, script: script, levels: [level2], lesson: lesson2
+    create(:script_level, script: script, levels: [level2], lesson: lesson2)
     # create some other random levels
     7.times do
-      create :script_level, script: script
+      create(:script_level, script: script)
     end
 
     # student_1 has two answers
-    level_source1a = create :level_source, level: level1,
+    level_source1a = create(:level_source, level: level1,
       data: 'Here is the answer 1a'
-    level_source1b = create :level_source, level: level2,
+)
+    level_source1b = create(:level_source, level: level2,
       data: 'Here is the answer 1b'
-    create :activity, user: @student_1, level: level1, level_source: level_source1a
-    create :activity, user: @student_1, level: level2, level_source: level_source1b
-    create :user_level, user: @student_1, level: level1, script: script,
+)
+    create(:activity, user: @student_1, level: level1, level_source: level_source1a)
+    create(:activity, user: @student_1, level: level2, level_source: level_source1b)
+    create(:user_level, user: @student_1, level: level1, script: script,
       attempts: 1, level_source: level_source1a
-    create :user_level, user: @student_1, level: level2, script: script,
+)
+    create(:user_level, user: @student_1, level: level2, script: script,
       attempts: 1, level_source: level_source1b
+)
 
     # student_2 has one answer
-    level_source2 = create :level_source, level: level2, data: 'Here is the answer 2'
-    create :activity, user: @student_2, level: level1, level_source: level_source2
-    create :user_level, user: @student_2, level: level1, script: script,
+    level_source2 = create(:level_source, level: level2, data: 'Here is the answer 2')
+    create(:activity, user: @student_2, level: level1, level_source: level_source2)
+    create(:user_level, user: @student_2, level: level1, script: script,
       attempts: 1, level_source: level_source2
+)
 
     get :section_text_responses, params: {
       section_id: @section.id,
@@ -231,7 +240,25 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get no text_responses results for section with script without text response" do
-    script = Unit.find_by_name('course1')
+    script = create(:script, :in_single_unit_course, name: 'text-response-script')
+    lesson_group = create(:lesson_group, script: script)
+    lesson1 = create(:lesson, script: script, name: 'First Lesson', key: 'First Lesson', lesson_group: lesson_group)
+    lesson2 = create(:lesson, script: script, name: 'Second Lesson', key: 'Second Lesson', lesson_group: lesson_group)
+
+    # create 2 text_match levels
+    level1 = create(:text_match)
+    level1.properties['title'] = 'Text Match 1'
+    level1.save!
+    create(:script_level, script: script, levels: [level1], lesson: lesson1)
+
+    level2 = create(:text_match)
+    level2.properties['title'] = 'Text Match 2'
+    level2.save!
+    create(:script_level, script: script, levels: [level2], lesson: lesson2)
+    # create some other random levels
+    7.times do
+      create(:script_level, script: script)
+    end
 
     get :section_text_responses, params: {
       section_id: @section.id,
@@ -303,7 +330,7 @@ class ApiControllerTest < ActionController::TestCase
   test "student should show unlocked and not readonly" do
     # student_1 is unlocked
     script, level, lesson = create_script_with_lockable_lesson
-    create :user_level, user: @student_1, script: script, level: level, submitted: false, locked: false
+    create(:user_level, user: @student_1, script: script, level: level, submitted: false, locked: false)
 
     student_1_response = get_student_response(script, level, lesson, 1)
 
@@ -322,7 +349,7 @@ class ApiControllerTest < ActionController::TestCase
   test "student was autolocked while in readonly state" do
     # student_1 is autolocked during readonly
     script, level, lesson = create_script_with_lockable_lesson
-    create :user_level, user: @student_1, script: script, level: level, submitted: true, readonly_answers: true
+    create(:user_level, user: @student_1, script: script, level: level, submitted: true, readonly_answers: true)
 
     student_1_response = get_student_response(script, level, lesson, 1)
     user_level_data = student_1_response['user_level_data']
@@ -344,7 +371,7 @@ class ApiControllerTest < ActionController::TestCase
   test "student should show unlocked and readonly" do
     # student_2 is unlocked and can view answers
     script, level, lesson = create_script_with_lockable_lesson
-    create :user_level, user: @student_2, script: script, level: level, submitted: true, locked: false, readonly_answers: true
+    create(:user_level, user: @student_2, script: script, level: level, submitted: true, locked: false, readonly_answers: true)
 
     student_2_response = get_student_response(script, level, lesson, 2)
     assert_equal(
@@ -365,7 +392,7 @@ class ApiControllerTest < ActionController::TestCase
   test "student should show locked and not readonly" do
     # student_3 has a user level, but has submitted so is locked
     script, level, lesson = create_script_with_lockable_lesson
-    create :user_level, user: @student_3, script: script, level: level, submitted: true, readonly_answers: false
+    create(:user_level, user: @student_3, script: script, level: level, submitted: true, readonly_answers: false)
 
     student_3_response = get_student_response(script, level, lesson, 3)
     assert_equal(
@@ -401,7 +428,7 @@ class ApiControllerTest < ActionController::TestCase
   test "student has been autolocked" do
     # student_4 got autolocked while editing
     script, level, lesson = create_script_with_lockable_lesson
-    create :user_level, user: @student_4, script: script, level: level, submitted: false
+    create(:user_level, user: @student_4, script: script, level: level, submitted: false)
 
     student_4_response = get_student_response(script, level, lesson, 4)
     user_level_data = student_4_response['user_level_data']
@@ -423,7 +450,7 @@ class ApiControllerTest < ActionController::TestCase
   test "readonly answers is overridden by lock value" do
     # student_5 is locked even though readonly is set as true
     script, level, lesson = create_script_with_lockable_lesson
-    create :user_level, user: @student_5, script: script, level: level, submitted: false, locked: true, readonly_answers: true
+    create(:user_level, user: @student_5, script: script, level: level, submitted: false, locked: true, readonly_answers: true)
 
     student_5_response = get_student_response(script, level, lesson, 5)
     user_level_data = student_5_response['user_level_data']
@@ -479,7 +506,7 @@ class ApiControllerTest < ActionController::TestCase
   test "student hasn't opened the assessment, assessment still locked" do
     # student_6 has never opened the assessment, assessment not yet unlocked
     script, level, lesson = create_script_with_lockable_lesson
-    create :user_level, user: @student_6, script: script, level: level, submitted: false
+    create(:user_level, user: @student_6, script: script, level: level, submitted: false)
 
     student_6_response = get_student_response(script, level, lesson, 6)
     user_level_data = student_6_response['user_level_data']
@@ -500,7 +527,7 @@ class ApiControllerTest < ActionController::TestCase
   test "student never opened, though assessment was unlocked and has autolocked" do
     # student_7 has never opened the assessment
     script, level, lesson = create_script_with_lockable_lesson
-    create :user_level, user: @student_7, script: script, level: level, submitted: false
+    create(:user_level, user: @student_7, script: script, level: level, submitted: false)
 
     student_7_response = get_student_response(script, level, lesson, 7)
     user_level_data = student_7_response['user_level_data']
@@ -611,7 +638,7 @@ class ApiControllerTest < ActionController::TestCase
       script, level, _ = create_script_with_lockable_lesson
 
       user_level_data = {user_id: @student_1.id, level_id: level.id, script_id: script.id}
-      user_level = create :user_level, user_level_data
+      user_level = create(:user_level, user_level_data)
 
       # update from editable to locked - does not auto-submit
       user_level.update!(submitted: false, readonly_answers: false)
@@ -705,7 +732,7 @@ class ApiControllerTest < ActionController::TestCase
     script, level, _ = create_script_with_lockable_lesson
 
     user_level_data = {user_id: @student_1.id, level_id: level.id, script_id: script.id}
-    create :user_level, user_level_data
+    create(:user_level, user_level_data)
 
     # fails if we don't provide all user_level_data
     updates = [
@@ -762,7 +789,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_response 400
 
     # can't update students that dont belong to teacher
-    other_student = create :student
+    other_student = create(:student)
     updates = [
       {
         user_level_data: {
@@ -779,10 +806,10 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get signed-in user's user progress" do
-    user = create :user
+    user = create(:user)
     sign_in user
 
-    create :user_level, user: user, best_result: 100, script: @script, level: @level
+    create(:user_level, user: user, best_result: 100, script: @script, level: @level)
 
     get :user_progress, params: {script: @script.name}
     assert_response :success
@@ -799,7 +826,7 @@ class ApiControllerTest < ActionController::TestCase
   test "should get student's user progress if teacher of student" do
     sign_in @teacher
 
-    create :user_level, user: @student_1, best_result: 100, script: @script, level: @level
+    create(:user_level, user: @student_1, best_result: 100, script: @script, level: @level)
 
     get :user_progress, params: {script: @script.name, user_id: @student_1.id}
     assert_response :success
@@ -813,7 +840,7 @@ class ApiControllerTest < ActionController::TestCase
   test "should not return student's user progress if not signed in" do
     sign_out @teacher
 
-    create :user_level, user: @student_1, best_result: 100, script: @script, level: @level
+    create(:user_level, user: @student_1, best_result: 100, script: @script, level: @level)
 
     get :user_progress, params: {script: @script.name, user_id: @student_1.id}
     assert_response :success
@@ -824,22 +851,23 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should fail to get student's user progress if not teacher of student" do
-    user = create :user
+    user = create(:user)
     sign_in user
 
-    create :user_level, user: @student_1, best_result: 100, script: @script, level: @level
+    create(:user_level, user: @student_1, best_result: 100, script: @script, level: @level)
 
     get :user_progress, params: {script: @script.name, user_id: @student_1.id}
     assert_response :forbidden
   end
 
   test "should get signed-in user's user app_options" do
-    user = create :user
+    user = create(:user)
     sign_in user
 
-    level_source = create :level_source, level: @level, data: 'level source'
-    create :user_level, user: user, best_result: 100, script: @script,
+    level_source = create(:level_source, level: @level, data: 'level source')
+    create(:user_level, user: user, best_result: 100, script: @script,
       level: @level, level_source: level_source
+)
 
     get :user_app_options, params: {
       script: @script.name,
@@ -860,9 +888,10 @@ class ApiControllerTest < ActionController::TestCase
   test "should get student's user app_options if teacher of student" do
     sign_in @teacher
 
-    level_source = create :level_source, level: @level, data: 'level source'
-    create :user_level, user: @student_1, best_result: 100, script: @script,
+    level_source = create(:level_source, level: @level, data: 'level source')
+    create(:user_level, user: @student_1, best_result: 100, script: @script,
       level: @level, level_source: level_source
+)
 
     get :user_app_options, params: {
       script: @script.name,
@@ -883,9 +912,10 @@ class ApiControllerTest < ActionController::TestCase
   test "should not return student's user app_options if not signed in" do
     sign_out @teacher
 
-    level_source = create :level_source, level: @level, data: 'level source'
-    create :user_level, user: @student_1, best_result: 100, script: @script,
+    level_source = create(:level_source, level: @level, data: 'level source')
+    create(:user_level, user: @student_1, best_result: 100, script: @script,
       level: @level, level_source: level_source
+)
 
     get :user_app_options, params: {
       script: @script.name,
@@ -901,12 +931,13 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should fail to get student's user app_options if not teacher of student" do
-    user = create :user
+    user = create(:user)
     sign_in user
 
-    level_source = create :level_source, level: @level, data: 'level source'
-    create :user_level, user: @student_1, best_result: 100, script: @script,
+    level_source = create(:level_source, level: @level, data: 'level source')
+    create(:user_level, user: @student_1, best_result: 100, script: @script,
       level: @level, level_source: level_source
+)
 
     get :user_app_options, params: {
       script: @script.name,
@@ -958,7 +989,7 @@ class ApiControllerTest < ActionController::TestCase
     storage_id = fake_storage_id_for_user_id(@student_1.id)
     ApiController.any_instance.stubs(:get_storage_id).returns(storage_id)
 
-    channel_token = create :channel_token, level: @level, script_id: @script.id, storage_id: storage_id
+    channel_token = create(:channel_token, level: @level, script_id: @script.id, storage_id: storage_id)
     expected_channel = channel_token.channel
 
     get :user_app_options, params: {
@@ -1024,7 +1055,7 @@ class ApiControllerTest < ActionController::TestCase
     sign_in user
     stub_get_storage_id(user.id)
 
-    create :channel_token, level: @level, script_id: @script.id, storage_id: fake_storage_id_for_user_id(user.id)
+    create(:channel_token, level: @level, script_id: @script.id, storage_id: fake_storage_id_for_user_id(user.id))
 
     get :user_app_options, params: {
       script: @script.name,
@@ -1072,7 +1103,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "user_app_options should return disableSocialShare true for young student" do
-    young_student = create :young_student
+    young_student = create(:young_student)
     sign_in young_student
 
     get :user_app_options, params: {
@@ -1088,14 +1119,14 @@ class ApiControllerTest < ActionController::TestCase
 
   test "user_app_options should return previous attempt with swapped level" do
     sign_in @student_1
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, script: script, lesson_group: lesson_group
-    level1a = create :maze, name: 'maze 1'
-    level1b = create :maze, name: 'maze 1 new'
-    level_source = create :level_source, level: level1a, data: 'level source'
-    create :script_level, script: script, lesson: lesson, levels: [level1a, level1b], properties: {'maze 1': {active: false}}
-    create :user_level, user: @student_1, script: script, level: level1a, level_source: level_source
+    script = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    level1a = create(:maze, name: 'maze 1')
+    level1b = create(:maze, name: 'maze 1 new')
+    level_source = create(:level_source, level: level1a, data: 'level source')
+    create(:script_level, script: script, lesson: lesson, levels: [level1a, level1b], properties: {'maze 1': {active: false}})
+    create(:user_level, user: @student_1, script: script, level: level1a, level_source: level_source)
 
     get :user_app_options, params: {
       script: script.name,
@@ -1241,6 +1272,30 @@ class ApiControllerTest < ActionController::TestCase
     assert_response 416
   end
 
+  test "section with duplicated students loads all data when per is equal to the number of unique students" do
+    duplicated_section_owner = create(:teacher)
+
+    # section will contain 7 unique students, but 8 followers - one of whom is a "duplicate"
+    duplicated_section = create(:section, user: duplicated_section_owner, login_type: 'word')
+
+    # add students in section
+    duplicated_students = []
+    7.times do |i|
+      student = create(:student, name: "duplicated_student_#{i}")
+      duplicated_students << student
+      create(:follower, section: duplicated_section, student_user: student)
+    end
+
+    # Create a duplicate follower for student_2 in duplicated_section
+    create(:follower, section: duplicated_section, student_user: duplicated_students[2])
+
+    sign_in duplicated_section_owner
+    get :section_level_progress, params: {section_id: duplicated_section.id, page: 1, per: 7}
+    assert_response :success
+    data = JSON.parse(@response.body)
+    assert_equal 7, data['student_progress'].keys.length
+  end
+
   test "should get section level progress with specific script" do
     script = Unit.find_by_name('algebra')
     get :section_level_progress, params: {
@@ -1275,10 +1330,10 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get paired icons for paired user levels" do
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, script: script, lesson_group: lesson_group
-    sl = create :script_level, lesson: lesson, script: script
+    script = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    sl = create(:script_level, lesson: lesson, script: script)
     driver_ul = create(
       :user_level,
       user: @student_4,
@@ -1293,7 +1348,7 @@ class ApiControllerTest < ActionController::TestCase
       script: sl.script,
       best_result: 100
     )
-    create :paired_user_level, driver_user_level: driver_ul, navigator_user_level: navigator_ul
+    create(:paired_user_level, driver_user_level: driver_ul, navigator_user_level: navigator_ul)
 
     get :section_progress, params: {
       section_id: @section.id,
@@ -1317,11 +1372,11 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should not return progress for bonus levels" do
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, script: script, lesson_group: lesson_group
-    create :script_level, script: script, lesson: lesson
-    create :script_level, script: script, lesson: lesson, bonus: true
+    script = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    create(:script_level, script: script, lesson: lesson)
+    create(:script_level, script: script, lesson: lesson, bonus: true)
 
     get :section_progress, params: {
       section_id: @flappy_section.id,
@@ -1340,8 +1395,8 @@ class ApiControllerTest < ActionController::TestCase
     script, _, regular_level, _ = create_script_with_bonus_levels
 
     # create progress for student_1 on regular_level
-    create :user_level, user: @student_1, script: script, level: regular_level, best_result: ActivityConstants::BEST_PASS_RESULT
-    create :user_level, user: @teacher, script: script, level: regular_level, best_result: ActivityConstants::MINIMUM_PASS_RESULT
+    create(:user_level, user: @student_1, script: script, level: regular_level, best_result: ActivityConstants::BEST_PASS_RESULT)
+    create(:user_level, user: @teacher, script: script, level: regular_level, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
 
     get :teacher_panel_progress, params: {
       section_id: @section.id,
@@ -1374,8 +1429,8 @@ class ApiControllerTest < ActionController::TestCase
     script, lesson, _, bonus_level = create_script_with_bonus_levels
 
     # create progress for student_1 on bonus_level
-    create :user_level, user: @student_1, script: script, level: bonus_level, best_result: ActivityConstants::BEST_PASS_RESULT
-    create :user_level, user: @teacher, script: script, level: bonus_level, best_result: ActivityConstants::MINIMUM_PASS_RESULT
+    create(:user_level, user: @student_1, script: script, level: bonus_level, best_result: ActivityConstants::BEST_PASS_RESULT)
+    create(:user_level, user: @teacher, script: script, level: bonus_level, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
 
     get :teacher_panel_progress, params: {
       section_id: @section.id,
@@ -1432,7 +1487,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "teacher_panel_section returns teacher's section when no section id is passed and teacher has 1 visible section" do
-    teacher = create :teacher
+    teacher = create(:teacher)
     sign_in teacher
     section = create(:section, user: teacher, login_type: 'word')
     create(:section, user: teacher, login_type: 'word', hidden: true)
@@ -1448,7 +1503,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "teacher_panel_section returns no_content when passed section id not owned by logged in teacher" do
-    teacher = create :teacher
+    teacher = create(:teacher)
     sign_in teacher
 
     get :teacher_panel_section, params: {
@@ -1459,7 +1514,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "teacher_panel_section returns teacher's section when no section id is passed and teacher has 1 section" do
-    teacher = create :teacher
+    teacher = create(:teacher)
     sign_in teacher
     section = create(:section, user: teacher, login_type: 'word')
 
@@ -1482,7 +1537,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "teacher_panel_section returns no_content when teacher has no sections" do
-    teacher = create :teacher
+    teacher = create(:teacher)
     sign_in teacher
 
     get :teacher_panel_section
@@ -1501,7 +1556,7 @@ class ApiControllerTest < ActionController::TestCase
     CDO.stubs(:studio_url).returns(overview_path)
     script = create(:script)
 
-    user = create :user
+    user = create(:user)
     sign_in user
 
     get :script_structure, params: {script: script.id}
@@ -1564,7 +1619,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test 'should show sign out link for signed in user' do
-    student = create :student
+    student = create(:student)
     sign_in student
 
     get :user_menu
@@ -1626,7 +1681,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test 'clever_classrooms queries clever with user uid for unmigrated user' do
-    teacher = create :teacher, :sso_provider, :demigrated, provider: AuthenticationOption::CLEVER
+    teacher = create(:teacher, :sso_provider, :demigrated, provider: AuthenticationOption::CLEVER)
     sign_in teacher
 
     expected_uri = "https://api.clever.com/v2.1/teachers/#{teacher.uid}/sections"
@@ -1637,7 +1692,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test 'clever_classrooms queries clever with clever authentication_id for migrated user' do
-    teacher = create :teacher, :with_clever_authentication_option
+    teacher = create(:teacher, :with_clever_authentication_option)
     auth_option = teacher.authentication_options.find_by(credential_type: AuthenticationOption::CLEVER)
     sign_in teacher
     assert_nil teacher.uid
@@ -1647,12 +1702,6 @@ class ApiControllerTest < ActionController::TestCase
     mock_response = {data: []}.to_json
     RestClient.expects(:get).with(expected_uri, auth).returns(mock_response)
     get :clever_classrooms
-  end
-
-  test 'import_clever_classroom is Forbidden when not signed in' do
-    sign_out :user
-    get :import_clever_classroom
-    assert_response :forbidden
   end
 
   test 'google_classrooms is Forbidden when not signed in' do
@@ -1665,6 +1714,51 @@ class ApiControllerTest < ActionController::TestCase
     sign_out :user
     get :import_google_classroom
     assert_response :forbidden
+  end
+
+  test 'import_google_classroom upgrades eligible teacher to verified' do
+    mock_service = mock('Google::Apis::ClassroomV1::ClassroomService')
+    mock_students = Google::Apis::ClassroomV1::ListStudentsResponse.from_json(
+      {
+        students: (1..5).map do |i|
+          {
+            userId: i,
+            profile: {
+              name: {
+                fullName: "Sample User #{i}",
+                givenName: "Sample",
+                familyName: "User #{i}"
+              }
+            }
+          }
+        end
+      }.to_json
+    ).students
+    mock_response = mock('Google::Apis::ClassroomV1::ListStudentsResponse')
+    mock_response.stubs(:students).returns(mock_students)
+    mock_response.stubs(:next_page_token).returns(nil)
+
+    mock_section = mock('GoogleClassroomSection')
+    mock_section.stubs(:summarize).returns({section_id: @section.id})
+
+    ApiController.any_instance.stubs(:query_google_classroom_service).yields(mock_service)
+    mock_service.stubs(:list_course_students).returns(mock_response)
+    GoogleClassroomSection.any_instance.stubs(:from_service).returns(mock_section)
+
+    teacher = create(:teacher, :with_google_authentication_option)
+    # change teacher email to @gmail.com, which will the teacher ineligible for verified
+    teacher.authentication_options.find_by(credential_type: AuthenticationOption::GOOGLE).update(email: 'test@gmail.com')
+    @controller.stubs(:current_user).returns(teacher)
+    section = create(:section, user: teacher)
+    assert_equal false, teacher.verified_teacher?
+    sign_in teacher
+    get :import_google_classroom, params: {courseId: section.course_id, courseName: section.name}
+    assert_response :ok
+    assert_equal false, teacher.verified_teacher?
+    # change email to non google/gmail email, teacher should now be eligible for verified
+    teacher.authentication_options.find_by(credential_type: AuthenticationOption::GOOGLE).update(email: 'test@test.com')
+    get :import_google_classroom, params: {courseId: section.course_id, courseName: section.name}
+    assert_equal true, teacher.verified_teacher?
   end
 
   #
@@ -1747,42 +1841,373 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal "max-age=3600, private", @response.headers["Cache-Control"]
   end
 
+  describe '#unit_summary' do
+    let!(:user) {create(:teacher)}
+    let(:course) {create(:unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)}
+    let(:unit) {create(:unit, :with_levels)}
+    let!(:unit_name) {unit.name}
+    let(:unit_position) {1}
+    let!(:unit_group_unit) {create(:unit_group_unit, unit_group: course, script: unit, position: unit_position)}
+    let(:lesson) {unit.lessons.first}
+    let(:lesson_position) {lesson.relative_position}
+    let(:level) {unit.lessons.first.script_levels.first}
+    let(:response) {JSON.parse(@response.body)}
+    let(:unit_data) {response['unitData']}
+
+    before do
+      sign_in user
+    end
+
+    context 'params not defined' do
+      let(:params) do
+        {}
+      end
+
+      before do
+        get :unit_summary, params: params
+      end
+
+      it 'returns a 400 response' do
+        assert_response :bad_request
+      end
+
+      context 'only course_name defined' do
+        let(:params) do
+          {
+            course_name: 'course_name',
+          }
+        end
+
+        it 'returns a 400 response' do
+          assert_response :bad_request
+        end
+      end
+
+      context 'only unit_position defined' do
+        let(:unit_position) {'1'}
+        let(:params) do
+          {
+            unit_position: '1',
+          }
+        end
+
+        it 'returns a 400 response' do
+          assert_response :bad_request
+        end
+      end
+    end
+
+    context 'unit_name defined' do
+      before do
+        get :unit_summary, params: {
+          unit_name: unit_name
+        }
+      end
+
+      it 'returns a 200 response' do
+        assert_response :success
+      end
+
+      it 'has unitData' do
+        _(response.keys).must_include 'unitData'
+        _(response['unitData']).wont_be_nil
+      end
+
+      it 'has course info' do
+        _(unit_data).wont_be_nil
+        _(unit_data.keys).must_include 'course_name'
+        _(unit_data['course_name']).must_equal course.name
+      end
+
+      it 'has unit info' do
+        _(unit_data).wont_be_nil
+        _(unit_data.keys).must_include 'unit_position'
+        _(unit_data['unit_position']).must_equal unit_position
+        _(unit_data.keys).must_include 'name'
+        _(unit_data['name']).must_equal unit.name
+        _(unit_data.keys).must_include 'id'
+        _(unit_data['id'].to_i).must_equal unit.id
+      end
+    end
+
+    context 'course_name defined' do
+      before do
+        get :unit_summary, params: {
+          course_name: course.name,
+          unit_position: unit_position,
+        }
+      end
+
+      it 'returns a 200 response' do
+        assert_response :success
+      end
+
+      it 'has unitData' do
+        _(response.keys).must_include 'unitData'
+        _(response['unitData']).wont_be_nil
+      end
+
+      it 'has course info' do
+        _(unit_data).wont_be_nil
+        _(unit_data.keys).must_include 'course_name'
+        _(unit_data['course_name']).must_equal course.name
+      end
+
+      it 'has unit info' do
+        _(unit_data).wont_be_nil
+        _(unit_data.keys).must_include 'unit_position'
+        _(unit_data['unit_position']).must_equal unit_position
+        _(unit_data.keys).must_include 'name'
+        _(unit_data['name']).must_equal unit.name
+        _(unit_data.keys).must_include 'id'
+        _(unit_data['id'].to_i).must_equal unit.id
+      end
+    end
+  end
+
+  describe '#show_courses_with_progress' do
+    let(:call_api) do
+      get :show_courses_with_progress, params: {section_id: section.id}
+    end
+    let(:response) do
+      call_api
+      JSON.parse(@response.body, symbolize_names: true)
+    end
+    let(:context) {create(:modular_course_context)}
+    let(:new_unit_group) {context[:new_unit_group]}
+    let(:original_unit_group) {context[:original_unit_group]}
+    let(:teacher) {create(:teacher)}
+    let(:user) {teacher}
+    let(:section) {create(:section, user: teacher, course_id: new_unit_group.id)}
+
+    before do
+      sign_in user if user
+    end
+
+    context 'user is not signed in' do
+      let(:user) {nil}
+
+      it 'returns a 302 response' do
+        call_api
+        assert_response :forbidden
+      end
+    end
+
+    context 'user is unaffiliated student' do
+      let(:user) {create(:student)}
+
+      it 'returns a 403 response' do
+        call_api
+        assert_response :forbidden
+      end
+    end
+
+    context 'user is unaffiliated teacher' do
+      let(:user) {create(:teacher)}
+
+      it 'returns a 403 response' do
+        call_api
+        assert_response :forbidden
+      end
+    end
+
+    context 'section.course_id defined' do
+      let(:section) {create(:section, user: user, course_id: new_unit_group.id)}
+
+      it 'returns a 200 response' do
+        assert_response :success
+      end
+
+      it 'returns a list of course summaries' do
+        _(response).must_be_instance_of Array
+        response.each do |course|
+          _(course).must_be_instance_of Hash
+        end
+      end
+
+      it 'returns the original_unit_group' do
+        _(response.find {|cv| cv[:id] == original_unit_group.course_version.id}).must_be_instance_of Hash
+      end
+
+      it 'returns the new_unit_group' do
+        _(response.find {|cv| cv[:id] == new_unit_group.course_version.id}).must_be_instance_of Hash
+      end
+    end
+
+    context 'student in section' do
+      let(:student) {create(:student)}
+
+      before do
+        section.add_student(student)
+      end
+
+      it 'returns a 200 response' do
+        assert_response :success
+      end
+
+      it 'returns a list of course summaries' do
+        _(response).must_be_instance_of Array
+        response.each do |course|
+          _(course).must_be_instance_of Hash
+        end
+      end
+
+      it 'returns the original_unit_group' do
+        _(response.find {|cv| cv[:id] == original_unit_group.course_version.id}).must_be_instance_of Hash
+      end
+
+      it 'returns the new_unit_group' do
+        _(response.find {|cv| cv[:id] == new_unit_group.course_version.id}).must_be_instance_of Hash
+      end
+
+      context 'student has progress in an unrelated course' do
+        let(:outside_unit_group) {create(:single_unit_course, :stable)}
+        let!(:outside_course_version) {create(:course_version, content_root: outside_unit_group)}
+
+        before do
+          # add progress for User in outside course
+          create(:user_script, user: student, script: outside_unit_group.default_units.first)
+        end
+
+        it 'returns the outside_unit_group' do
+          _(response.find {|cv| cv[:id] == outside_course_version.id}).must_be_instance_of Hash
+        end
+      end
+    end
+  end
+
+  describe 'GET /api/import_clever_classroom' do
+    subject(:get_import_clever_classroom) do
+      get :import_clever_classroom, params: {courseId: course_id, courseName: course_name}
+    end
+
+    let(:course_id) {'expected_course_id'}
+    let(:course_name) {'expected_course_name'}
+
+    let!(:teacher) {create(:teacher, :with_clever_authentication_option)}
+
+    before do
+      sign_in teacher
+    end
+
+    context 'when teacher is not signed in' do
+      before do
+        sign_out teacher
+      end
+
+      it 'forbids request' do
+        get_import_clever_classroom
+        assert_response :forbidden
+      end
+    end
+
+    context 'when provider oauth_token has expired' do
+      around do |test|
+        VCR.use_cassette('api/get_import_clever_classroom/with_expired_oauth_token') {test.call}
+      end
+
+      it 'renders error message instructing to re-login using provider type' do
+        get_import_clever_classroom
+        assert_response :unauthorized
+        _(response.body).must_equal(
+          'Your sign-in with Clever has expired. ' \
+          "Please sign out of Code.org and sign back in using your Clever account to continue.\n"
+        )
+      end
+    end
+  end
+
+  describe 'GET /api/clever_classrooms' do
+    subject(:get_clever_classrooms) {get :clever_classrooms}
+    let(:teacher) {create(:teacher, :with_clever_authentication_option)}
+    let(:oauth_token) {teacher.oauth_tokens_for_provider(AuthenticationOption::CLEVER)[:oauth_token]}
+    let(:clever_auth_option) {teacher.authentication_options.find_by(credential_type: AuthenticationOption::CLEVER)}
+
+    before do
+      sign_in teacher
+    end
+
+    context 'when v2.1 auth option' do
+      it 'creates REST client for v2.1' do
+        clever_client = mock('clever_client')
+        Clients::CleverRest.expects(:new).with(oauth_token:, api_version: AuthenticationOption::Clever::VERSION[:v2]).returns(clever_client)
+        clever_client.stubs(:get).returns({'data' => []})
+
+        get_clever_classrooms
+        assert_response :ok
+      end
+
+      it 'calls /teachers/:id/sections endpoint' do
+        clever_client = mock('clever_client')
+        expected_uid = teacher.uid_for_provider(AuthenticationOption::CLEVER)
+        Clients::CleverRest.expects(:new).with(oauth_token:, api_version: AuthenticationOption::Clever::VERSION[:v2]).returns(clever_client)
+        clever_client.expects(:get).with("teachers/#{expected_uid}/sections").returns({'data' => []})
+
+        get_clever_classrooms
+        assert_response :ok
+      end
+    end
+
+    context 'when v3 auth option' do
+      let(:teacher) {create(:teacher, :with_clever_authentication_option, auth_option_version: AuthenticationOption::Clever::VERSION[:v3])}
+
+      it 'creates REST client for v3' do
+        clever_client = mock('clever_client')
+        Clients::CleverRest.expects(:new).with(oauth_token:, api_version: AuthenticationOption::Clever::VERSION[:v3]).returns(clever_client)
+        clever_client.stubs(:get).returns({'data' => []})
+
+        get_clever_classrooms
+        assert_response :ok
+      end
+
+      it 'calls /users/:id/sections endpoint' do
+        clever_client = mock('clever_client')
+        expected_uid = clever_auth_option.authentication_id
+        Clients::CleverRest.expects(:new).with(oauth_token:, api_version: AuthenticationOption::Clever::VERSION[:v3]).returns(clever_client)
+        clever_client.expects(:get).with("users/#{expected_uid}/sections").returns({'data' => []})
+
+        get_clever_classrooms
+        assert_response :ok
+      end
+    end
+  end
+
   private def create_script_with_bonus_levels
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, script: script, lesson_group: lesson_group
+    script = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
 
-    regular_level = create :maze
-    create :script_level, script: script, levels: [regular_level], lesson: lesson
+    regular_level = create(:maze)
+    create(:script_level, script: script, levels: [regular_level], lesson: lesson)
 
-    bonus_level = create :maze
-    create :script_level, script: script, levels: [bonus_level], lesson: lesson, bonus: true
+    bonus_level = create(:maze)
+    create(:script_level, script: script, levels: [bonus_level], lesson: lesson, bonus: true)
 
     [script, lesson, regular_level, bonus_level]
   end
 
   private def create_script_with_lockable_lesson
-    script = create :script
-    lesson_group = create :lesson_group, script: script
+    script = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: script)
 
     # Create a LevelGroup level.
-    level = create :level_group, :with_sublevels, name: 'LevelGroupLevel1'
+    level = create(:level_group, :with_sublevels, name: 'LevelGroupLevel1')
     level.properties['title'] =  'Long assessment 1'
     level.properties['submittable'] = true
     level.save!
 
-    lesson = create :lesson, name: 'Lesson1', script: script, lockable: true, lesson_group: lesson_group
+    lesson = create(:lesson, name: 'Lesson1', script: script, lockable: true, lesson_group: lesson_group)
 
     # Create a ScriptLevel joining this level to the script.
-    create :script_level, script: script, levels: [level], assessment: true, lesson: lesson
+    create(:script_level, script: script, levels: [level], assessment: true, lesson: lesson)
 
     [script, level, lesson]
   end
 
   private def make_text_progress_in_script(script, student)
     level = script.script_levels.map(&:oldest_active_level).find {|l| l.is_a? TextMatch}
-    level_source = create :level_source
-    create :user_level, level: level, user: student, script: script, level_source: level_source
+    level_source = create(:level_source)
+    create(:user_level, level: level, user: student, script: script, level_source: level_source)
     # UserLevel.create!(level_id: level.id, user_id: student.id, script_id: script.id, level_source: level_source)
   end
 end

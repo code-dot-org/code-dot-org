@@ -1,5 +1,6 @@
 <StandaloneVideo>
   <config><![CDATA[{
+  "published": true,
   "game_id": 54,
   "created_at": "2024-03-25T22:41:28.000Z",
   "level_num": "custom",
@@ -13,11 +14,10 @@
     "parent_level_id": 20745,
     "name_suffix": "_2024",
     "encrypted": "false",
-    "long_instructions": "## Instructions\r\n##### Students will watch this video as a part of Interactive Animations and Games, <a href=\"https://studio.code.org/s/csd3-2023/lessons/15\" target=\"blank\">Lesson 15: Conditionals</a>. Watch this video to get an overview of how conditionals work.\r\n\r\n## Important Takeaways\r\n\r\n* ##### Students should be able to explain that a Boolean expression is something that is either true or false, similar to a yes or no question.  \r\n* ##### When the computer processes a Boolean expression, it checks to see whether the expression describes a situation that is true or false, and then uses the value of either true or false wherever the expression is found.\r\n"
+    "long_instructions": "## Instructions\r\n#### Students will watch this video as a part of Interactive Animations and Games, <a href=\"https://studio.code.org/s/csd3-2024/lessons/15\" target=\"blank\">Lesson 15: Conditionals</a>. Watch this video to get an overview of how conditionals work.\r\n\r\n## Important Takeaways\r\n\r\n* #### Students should be able to explain that a Boolean expression is something that is either true or false, similar to a yes or no question.  \r\n* #### When the computer processes a Boolean expression, it checks to see whether the expression describes a situation that is true or false, and then uses the value of either true or false wherever the expression is found.\r\n"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-25T22:41:28.894+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD U3 - Booleans Video_2023\\\"\"],\"cloned_from\":\"VPL - CSD U3 - Booleans Video_2023\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-25T22:41:28.894+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD U3 - Booleans Video_2023\\\"\"],\"cloned_from\":\"VPL - CSD U3 - Booleans Video_2023\"},{\"changed_at\":\"2024-08-16 17:29:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

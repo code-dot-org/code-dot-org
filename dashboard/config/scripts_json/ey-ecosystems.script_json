@@ -4,17 +4,17 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_course": true,
-      "is_migrated": true,
-      "version_year": "unversioned"
+      "content_area": "curriculum_k_5",
+      "curriculum_umbrella": "CSC K-5",
+      "is_migrated": true
     },
     "new_name": null,
-    "family_name": "ey-ecosystems",
-    "serialized_at": "2023-05-11 15:25:42 UTC",
-    "published_state": "stable",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-03-28 09:29:17 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "ey-ecosystems"
     }
@@ -806,6 +806,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_intro video_2023"
+        ],
         "progression": "Ecosystems Video"
       },
       "bonus": false,
@@ -828,6 +831,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_fish_2023"
+        ],
         "progression": "Ecosystems Simulation"
       },
       "bonus": false,
@@ -850,6 +856,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_algae_2023"
+        ],
         "progression": "Food Chain Setup"
       },
       "bonus": false,
@@ -872,6 +881,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_boat_2023"
+        ],
         "progression": "Food Chain Setup"
       },
       "bonus": false,
@@ -894,6 +906,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_matching_events"
+        ],
         "progression": "Food Chain Setup"
       },
       "bonus": false,
@@ -916,6 +931,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_conditionals_overview"
+        ],
         "progression": "If... then... Conditional Statements"
       },
       "bonus": false,
@@ -938,6 +956,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_coral_2023"
+        ],
         "progression": "If... then... Conditional Statements"
       },
       "bonus": false,
@@ -960,6 +981,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_coral_health_2023"
+        ],
         "progression": "If... then... Conditional Statements"
       },
       "bonus": false,
@@ -982,6 +1006,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_justright_algae"
+        ],
         "progression": "If... then... Conditional Statements"
       },
       "bonus": false,
@@ -1004,6 +1031,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_matching_conditionals"
+        ],
         "progression": "If... then... Conditional Statements"
       },
       "bonus": false,
@@ -1026,6 +1056,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_algae_freeplay_2023"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -1048,6 +1081,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_overfishing_solutions_overview"
+        ],
         "progression": "Solution 1 - Fishing Zone"
       },
       "bonus": false,
@@ -1070,6 +1106,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_solution2_2023"
+        ],
         "progression": "Solution 1 - Fishing Zone"
       },
       "bonus": false,
@@ -1092,6 +1131,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_overfishing_solution2_overview"
+        ],
         "progression": "Solution 2 - Fishing Season"
       },
       "bonus": false,
@@ -1114,6 +1156,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_solution3A_2023"
+        ],
         "progression": "Solution 2 - Fishing Season"
       },
       "bonus": false,
@@ -1136,6 +1181,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_solution3B_2023"
+        ],
         "progression": "Solution 2 - Fishing Season"
       },
       "bonus": false,
@@ -1158,6 +1206,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_overfishing_solution3_overview"
+        ],
         "progression": "Solution 3 - Fishing Limits"
       },
       "bonus": false,
@@ -1180,6 +1231,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_solution1_2023"
+        ],
         "progression": "Solution 3 - Fishing Limits"
       },
       "bonus": false,
@@ -1202,6 +1256,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_solution1b_2023"
+        ],
         "progression": "Solution 3 - Fishing Limits"
       },
       "bonus": false,
@@ -1224,6 +1281,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_matching_cfu"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1246,6 +1306,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystemes_foodchain_info"
+        ],
         "progression": "The Food Chain"
       },
       "bonus": false,
@@ -1268,6 +1331,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_choice_freeplay_2023"
+        ],
         "progression": "Choice Level: Ecosystems"
       },
       "bonus": false,
@@ -1290,6 +1356,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_planning"
+        ],
         "progression": "Share Your Simulation"
       },
       "bonus": false,
@@ -2088,5 +2157,14 @@
         "opportunity_standard.shortcode": "3-LS4-4"
       }
     }
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
   ]
 }

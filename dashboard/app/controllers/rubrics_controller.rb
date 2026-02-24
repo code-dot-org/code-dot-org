@@ -2,9 +2,9 @@ class RubricsController < ApplicationController
   include Rails.application.routes.url_helpers
   include SharedConstants
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all, :get_ai_rubrics_tour_seen, :update_ai_rubrics_tour_seen]
-  load_resource only: [:get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all, :get_ai_rubrics_tour_seen, :update_ai_rubrics_tour_seen]
-  load_and_authorize_resource except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all, :get_ai_rubrics_tour_seen, :update_ai_rubrics_tour_seen]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :find, :submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all, :get_ai_rubrics_tour_seen, :update_ai_rubrics_tour_seen]
+  load_resource only: [:show, :get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all, :get_ai_rubrics_tour_seen, :update_ai_rubrics_tour_seen]
+  load_and_authorize_resource except: [:find, :submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all, :get_ai_rubrics_tour_seen, :update_ai_rubrics_tour_seen]
 
   # GET /rubrics/:rubric_id/edit
   def edit
@@ -43,6 +43,40 @@ class RubricsController < ApplicationController
     end
   end
 
+  # GET /rubrics/:id
+  def show
+    render json: {rubric: @rubric.summarize, canShowTaScoresAlert: can_show_ta_scores_alert?(@rubric.lesson)}
+  end
+
+  # GET /rubrics/find?lesson_id=X&level_id=Y (level_id optional)
+  def find
+    lesson_id = params[:lesson_id]
+    level_id = params[:level_id]
+
+    return render json: {error: 'lesson_id is required'}, status: :bad_request unless lesson_id
+
+    lesson = Lesson.find_by(id: lesson_id)
+    return render json: {error: 'Lesson not found'}, status: :not_found unless lesson
+
+    # If level_id is provided, find specific rubric for (lesson_id, level_id)
+    # Otherwise, use lesson.rubric (which returns the first rubric via has_one association)
+    rubric = if level_id
+               Rubric.find_by(lesson_id: lesson_id, level_id: level_id)
+             else
+               lesson.rubric
+             end
+
+    if rubric
+      render json: {
+        rubricId: rubric.id,
+        rubric: rubric.summarize,
+        levelId: rubric.level_id
+      }
+    else
+      render json: {error: 'Rubric not found'}, status: :not_found
+    end
+  end
+
   # POST /rubrics/:id/submit_evaluations
   def submit_evaluations
     return head :forbidden unless current_user&.teacher?
@@ -62,7 +96,7 @@ class RubricsController < ApplicationController
     project_id = nil
     version_id = nil
     if channel_token
-      _owner_id, project_id = storage_decrypt_channel_id(channel_token.channel)
+      _owner_id, project_id = get_storage_id_and_project_id(channel_token.channel)
       source_data = SourceBucket.new.get(channel_token.channel, "main.json")
       if source_data[:status] == 'FOUND'
         version_id = source_data[:version_id]
@@ -142,8 +176,8 @@ class RubricsController < ApplicationController
 
     script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
 
-    is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: script_level.script, experiment_name: 'ai-rubrics')
-    return head :forbidden unless is_ai_experiment_enabled
+    is_teacher_verified = current_user&.verified_teacher?
+    return head :forbidden unless is_teacher_verified
 
     is_level_ai_enabled = AiRubricConfig.ai_enabled?(script_level)
     return head :bad_request unless is_level_ai_enabled
@@ -169,8 +203,8 @@ class RubricsController < ApplicationController
 
     script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
 
-    is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: script_level.script, experiment_name: 'ai-rubrics')
-    return head :forbidden unless is_ai_experiment_enabled
+    is_teacher_verified = current_user&.verified_teacher?
+    return head :forbidden unless is_teacher_verified
 
     is_level_ai_enabled = AiRubricConfig.ai_enabled?(script_level)
     return head :bad_request unless is_level_ai_enabled
@@ -220,8 +254,8 @@ class RubricsController < ApplicationController
 
     script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
 
-    is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: script_level&.script, experiment_name: 'ai-rubrics')
-    return head :forbidden unless is_ai_experiment_enabled
+    is_teacher_verified = current_user&.verified_teacher?
+    return head :forbidden unless is_teacher_verified
 
     is_level_ai_enabled = AiRubricConfig.ai_enabled?(script_level)
     return head :bad_request unless is_level_ai_enabled
@@ -251,8 +285,8 @@ class RubricsController < ApplicationController
 
     script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
 
-    is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: script_level&.script, experiment_name: 'ai-rubrics')
-    return head :forbidden unless is_ai_experiment_enabled
+    is_teacher_verified = current_user&.verified_teacher?
+    return head :forbidden unless is_teacher_verified
 
     is_level_ai_enabled = AiRubricConfig.ai_enabled?(script_level)
     return head :bad_request unless is_level_ai_enabled
@@ -260,6 +294,9 @@ class RubricsController < ApplicationController
     attempted_unevaluated_count = 0
     last_attempt_evaluated_count = 0
     pending_count = 0
+
+    # map from user to evaluation status
+    student_to_ai_status_map = {}
 
     user_ids = Section.find_by(id: section_id).followers.pluck(:student_user_id)
     user_ids.each do |user_id|
@@ -280,6 +317,11 @@ class RubricsController < ApplicationController
       attempted_count += 1 if !!attempted
       last_attempt_evaluated_count += 1 if last_attempt_evaluated
       pending_count += 1 if is_pending
+
+      student_to_ai_status_map[user_id] = compute_student_ai_status(
+        attempted: attempted,
+        last_attempt_evaluated: last_attempt_evaluated,
+      )
     end
     render json: {
       notAttemptedCount: user_ids.length - attempted_count,
@@ -287,7 +329,8 @@ class RubricsController < ApplicationController
       attemptedUnevaluatedCount: attempted_unevaluated_count,
       lastAttemptEvaluatedCount: last_attempt_evaluated_count,
       pendingCount: pending_count,
-      csrfToken: form_authenticity_token
+      csrfToken: form_authenticity_token,
+      aiEvalStatusMap: student_to_ai_status_map
     }
   end
 
@@ -360,5 +403,17 @@ class RubricsController < ApplicationController
     )
     return nil unless channel_token
     channel_token.channel
+  end
+
+  private def compute_student_ai_status(attempted:, last_attempt_evaluated:)
+    if attempted
+      if last_attempt_evaluated
+        return 'READY_TO_REVIEW'
+      else
+        return 'IN_PROGRESS'
+      end
+    else
+      'NOT_STARTED'
+    end
   end
 end

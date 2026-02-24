@@ -1,0 +1,84 @@
+{
+  "title": "Code.org Schoology Integration Feedback",
+  "description": "Thanks for taking the time to share your experience with us!",
+  "logoPosition": "right",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "enjoy_passthrough",
+          "defaultValueExpression": "{survey_variable}",
+          "startWithNewLine": false,
+          "readOnly": true,
+          "visible": false,
+          "choices": [
+            {
+              "value": "Terrible",
+              "text": "&#128544;"
+            },
+            {
+              "value": "Bad",
+              "text": "&#128543;"
+            },
+            {
+              "value": "Neutral",
+              "text": "&#128528;"
+            },
+            {
+              "value": "Good",
+              "text": "&#128515;"
+            },
+            {
+              "value": "Great",
+              "text": "&#129321;"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "enjoy_decoded",
+          "defaultValueExpression": "{survey_variable}",
+          "startWithNewLine": false,
+          "readOnly": true,
+          "visible": false,
+          "choices": [
+            {
+              "value": "Terrible",
+              "text": "Terrible"
+            },
+            {
+              "value": "Bad",
+              "text": "Bad"
+            },
+            {
+              "value": "Neutral",
+              "text": "Neutral"
+            },
+            {
+              "value": "Good",
+              "text": "Good"
+            },
+            {
+              "value": "Great",
+              "text": "Great"
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "name": "customer_feedback",
+          "html": "<h3>Your LMS Integration experience was {enjoy_passthrough}</h3>"
+        },
+        {
+          "type": "comment",
+          "name": "enjoy_comment",
+          "title": "Can you tell us more about your experience (optional)?",
+          "rows": 3
+        }
+      ]
+    }
+  ],
+  "published": true
+}

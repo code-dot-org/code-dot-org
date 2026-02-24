@@ -1,7 +1,7 @@
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {Heading4} from '@cdo/apps/componentLibrary/typography';
 import {CourseOfferingCurriculumTypes as curriculumTypes} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {assignmentCourseOfferingShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import i18n from '@cdo/locale';
@@ -30,7 +30,9 @@ export default function QuickAssignTable({
         <thead>
           <tr className={moduleStyles.headerRow}>
             <td className={moduleStyles.headerCell}>
-              <Heading4>{title}</Heading4>
+              <Typography variant="h4" gutterBottom>
+                {title}
+              </Typography>
             </td>
           </tr>
         </thead>

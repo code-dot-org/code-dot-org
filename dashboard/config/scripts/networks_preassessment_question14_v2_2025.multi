@@ -1,0 +1,17 @@
+name 'networks-preassessment-question14_v2-2025'
+title 'Networks and the Internet Pre-Assessment: Question 14'
+
+wrong 'Using common words like "password" or "12345"'
+right 'Creating a long, unique password with a mix of letters, numbers, and symbols'
+wrong 'Using the same password for all accounts'
+wrong 'Writing down passwords on a sticky note'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which is the most effective way to create a strong password?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 9: Network Security
+MARKDOWN

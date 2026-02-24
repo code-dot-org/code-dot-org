@@ -1,0 +1,15 @@
+.pickerContainer {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 600px;
+}
+
+.pickerDialog {
+  padding: 24px 32px;
+  border-radius: 4px;
+}
+
+.boldWarning {
+  font-weight: bold;
+}

@@ -6,13 +6,19 @@
     "self-paced-pl-csp3-2022",
     "self-paced-pl-csp4-2022"
   ],
+  "original_script_names": [
+    "self-paced-pl-csp1-2022",
+    "self-paced-pl-csp2-2022",
+    "self-paced-pl-csp3-2022",
+    "self-paced-pl-csp4-2022"
+  ],
   "published_state": "stable",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",
   "instructor_audience": "universal_instructor",
   "properties": {
     "family_name": "self-paced-pl-csp-2021",
-    "has_numbered_units": true,
+    "numbered_units": "auto",
     "version_year": "2022"
   },
   "resources": [

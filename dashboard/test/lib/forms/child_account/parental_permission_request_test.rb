@@ -113,6 +113,21 @@ class Forms::ChildAccount::ParentalPermissionRequestTest < ActiveSupport::TestCa
       assert_equal ["A request cannot be sent to your own email address"], permission_request_form.errors.full_messages
     end
 
+    test 'validates that provided parent email can be child email if parent created' do
+      child_email = 'child@email.com'
+
+      @child_account.update!(email: child_email, parent_email: child_email)
+      @parent_email = child_email
+
+      permission_request_form = Forms::ChildAccount::ParentalPermissionRequest.new(
+        child_account: @child_account,
+        parent_email: @parent_email,
+      )
+
+      assert permission_request_form.request
+      assert_equal [], permission_request_form.errors.full_messages
+    end
+
     test 'validates whether limit for resend requests has not been reached' do
       create(
         :parental_permission_request,
@@ -186,7 +201,7 @@ class Forms::ChildAccount::ParentalPermissionRequestTest < ActiveSupport::TestCa
       expected_mail_error = 'expected_mail_error'
       ParentMailer.expects(:parent_permission_request).raises(expected_mail_error)
 
-      assert_no_change -> {@child_account.reload.child_account_compliance_state}  do
+      assert_no_change -> {@child_account.reload.cap_status}  do
         assert_raises(expected_mail_error) {@permission_request_form.request}
       end
     end

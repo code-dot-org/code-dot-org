@@ -47,21 +47,62 @@ module Curriculum
         CSD: 'CSD',
         CSP: 'CSP',
         CSA: 'CSA',
-        CSC: 'CSC',
         HOC: 'HOC',
-        AI: 'AI',
-        CSA_self_paced_pl: 'CSA Self Paced PL',
-        CSP_self_paced_pl: 'CSP Self Paced PL',
-        CSD_self_paced_pl: 'CSD Self Paced PL',
-        CSF_self_paced_pl: 'CSF Self Paced PL',
-        CSC_self_paced_pl: 'CSC Self Paced PL',
-        student_self_paced: 'Student Self Paced Courses',
+        HOAI: 'HOAI',
+        foundations_of_cs: 'AIF',
+        foundations_of_programming: 'Foundations of Programming',
+        CSC_K_5: 'CSC K-5',
+        CSC_6_8: 'CSC 6-8',
+        CSC_9_12: 'CSC 9-12',
+        special_topics_k_5: 'K-5 Special topics',
+        special_topics_6_8: '6-8 Special topics',
+        special_topics_9_12: '9-12 Special topics',
+        pd_for_facilitators: 'PD for Facilitators',
         pd_workshop_activity_csf: 'PD Workshop Activity CSF',
         pd_workshop_activity_csd: 'PD Workshop Activity CSD',
         pd_workshop_activity_csp: 'PD Workshop Activity CSP',
         pd_workshop_activity_csa: 'PD Workshop Activity CSA',
-        foundations_of_cs: 'Foundations of CS',
-        foundations_of_programming: 'Foundations of Programming'
+        CSA_self_paced_pl: 'Self-paced PL - CSA',
+        CSP_self_paced_pl: 'Self-paced PL - CSP',
+        CSD_self_paced_pl: 'Self-paced PL - CSD',
+        CSF_self_paced_pl: 'Self-paced PL - CSF',
+        CSC_k_5_self_paced_pl: 'Self-paced PL - CSC K-5',
+        foundations_of_cs_selfpaced_pl: 'Self-paced PL - AIF',
+        ai_for_teachers_selfpaced_pl: 'Self-paced PL - AI for teachers',
+        special_topics_curriculum_selfpaced_pl_k_5: 'Self-paced PL - K-5 special topics',
+        special_topics_curriculum_selfpaced_pl_6_8: 'Self-paced PL - 6-8 special topics',
+        special_topics_curriculum_selfpaced_pl_9_12: 'Self-paced PL - 9-12 special topics',
+        pedagogy_special_topics_selfpaced_pl: 'Self-paced PL - Pedagogy special topics',
+        cs_basics_selfpaced_pl: 'Self-paced PL - CS Basics',
+        other: 'Other'
+      }
+    ).freeze
+
+    # An allowlist of all topic tags that can be applied for units.
+    CURRICULUM_TOPIC_TAGS = OpenStruct.new(
+      {
+        ai: 'AI',
+        maker: 'Maker',
+        music_lab: 'Music lab',
+        survey: 'Survey',
+        data_science: 'Data Science'
+      }
+    ).freeze
+
+    # A list of all content area categories that can be set to units.
+    CURRICULUM_CONTENT_AREA = OpenStruct.new(
+      {
+        curriculum_k_5: 'K-5 Curriculum',
+        curriculum_6_8: '6-8 Curriculum',
+        curriculum_9_12: '9-12 Curriculum',
+        hoc: 'HOC',
+        pl_workshop_activities: 'PL Workshop activities',
+        self_paced_pl_k_5: 'K-5 self-paced PL',
+        self_paced_pl_6_8: '6-8 self-paced PL',
+        self_paced_pl_9_12: '9-12 self-paced PL',
+        skills_focused_self_paced_pl: 'Skills-focused self-paced PL',
+        pd_for_facilitators: 'PD for Facilitators',
+        other: 'Other'
       }
     ).freeze
 
@@ -104,11 +145,13 @@ module Curriculum
     COURSE_OFFERING_MARKETING_INITIATIVES = OpenStruct.new(
       {
         hoc: 'HOC',
+        hoai: 'HOAI',
         csc: 'CSC',
         csf: 'CSF',
         csa: 'CSA',
         csp: 'CSP',
-        csd: 'CSD'
+        csd: 'CSD',
+        aif: 'AIF'
       }
     )
 
@@ -121,7 +164,9 @@ module Curriculum
       data
       digital_literacy
       games_and_animations
+      hardware
       internet
+      music
       physical_computing
       web_design
       programming
@@ -160,6 +205,14 @@ module Curriculum
         student: ['student'],
         teacher: ['student', 'teacher'],
         facilitator: ['student', 'teacher', 'facilitator']
+      }
+    ).freeze
+
+    NUMBERED_UNITS_TYPE = OpenStruct.new(
+      {
+        none: nil,
+        auto: "auto",
+        custom: "custom"
       }
     ).freeze
   end

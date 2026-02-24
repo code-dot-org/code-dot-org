@@ -1,0 +1,50 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-04-28T18:19:01.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "##Use a function!\n- A **function** is a set of blocks you can use again and again.\n- They help make your code quicker and easier to build!\n",
+        "imageUrl": "https://images.code.org/02490f5bf6068547eeba5c2610b9434f-paneCompare.jpg",
+        "key": "music-coding-intro-functions-panel_launch-74f7ebef-5a9e-48eb-88a7-25b2ea7a3cec"
+      },
+      {
+        "text": "##<i class=\"fa-duotone fa-solid fa-file-signature\"></i> **Name** you function. \n**Step 1:** Use a name that describes the code.",
+        "imageUrl": "https://images.code.org/acd51a1368d85cdf97e9ddad37913e6f-PanelName.gif",
+        "key": "music-coding-intro-functions-panel-c494188a-95c3-4c6a-bee1-130500907756",
+        "typing": false,
+        "fadeInOverPrevious": true,
+        "layout": "text-top-right"
+      },
+      {
+        "text": "##<i class=\"fa-duotone fa-regular fa-file-music\"></i> **Define** your function \n**Step 2:** Add code into the function.",
+        "imageUrl": "https://images.code.org/972eb301fbc69115388e210928a6ba2b-panelDefine.gif",
+        "key": "music-coding-intro-functions-panel_launch-6ebd9013-d02c-483f-a300-c05e21121582",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "##<i class=\"fa-duotone fa-solid fa-bullhorn\"></i> **Call** your function!\n\n**Step 3** Add it to your main program. \n\nEvery time the function is called in the main program, it plays the code you defined it with.",
+        "imageUrl": "https://images.code.org/9fe19e63ab3a6977f0cfb6b99df5848f-panelCall.gif",
+        "key": "music-coding-intro-functions-panel_launch-1effe82f-f674-4edd-b3bb-d4b2726cbe4d",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "###<i class=\"fa-duotone fa-solid fa-list-music\"></i> **Music is made of patterns that play again and again.** \n\n\nYou can use **functions** to reuse sections of code and build songs!\n\nLet's practice with functions!\n",
+        "imageUrl": "https://images.code.org/f2f927bbadf095ec28e7f1d6643632a2-Lesson 3 Level 9.png",
+        "key": "music-coding-intro-functions-panel-dd6ade9d-4ac1-4787-89e4-4fa347cf3c12",
+        "layout": "text-top-center",
+        "fadeInOverPrevious": true,
+        "typing": false
+      }
+    ],
+    "name_suffix": "_1"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-04-28T18:19:01.275+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-panel_launch\\\"\"],\"cloned_from\":\"music-coding-intro-functions-panel_launch\"}]"
+}]]></config>
+</Panels>

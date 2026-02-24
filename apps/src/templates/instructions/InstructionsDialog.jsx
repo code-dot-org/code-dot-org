@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {closeDialog} from '@cdo/apps/redux/instructionsDialog';
 import StylizedBaseDialog, {
   FooterButton,
-} from '@cdo/apps/componentLibrary/StylizedBaseDialog';
-import {closeDialog} from '@cdo/apps/redux/instructionsDialog';
+} from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import ExampleImage from '@cdo/apps/templates/instructions/ExampleImage';
 import Instructions from '@cdo/apps/templates/instructions/Instructions';
 import i18n from '@cdo/locale';
@@ -15,7 +15,7 @@ export function InstructionsDialog(props) {
     if (props.imgOnly && props.imgUrl) {
       return (
         <div style={styles.imgContainer}>
-          <ExampleImage src={props.imgUrl} />
+          <ExampleImage src={props.imgUrl} alt={props.imgAlt} />
         </div>
       );
     }
@@ -24,6 +24,7 @@ export function InstructionsDialog(props) {
       <Instructions
         instructions={props.instructions}
         imgURL={props.imgUrl}
+        imgAlt={props.imgAlt}
         isBlockly={props.isBlockly}
         inTopPane={false}
       />
@@ -55,6 +56,7 @@ InstructionsDialog.propTypes = {
   isOpen: PropTypes.bool,
   imgOnly: PropTypes.bool,
   imgUrl: PropTypes.string,
+  imgAlt: PropTypes.string,
   instructions: PropTypes.string,
   isBlockly: PropTypes.bool,
   handleClose: PropTypes.func.isRequired,
@@ -65,6 +67,7 @@ export default connect(
     isOpen: state.instructionsDialog.open,
     imgOnly: state.instructionsDialog.imgOnly,
     imgUrl: state.instructionsDialog.imgUrl || state.pageConstants.aniGifURL,
+    imgAlt: state.instructionsDialog.imgAlt,
     instructions:
       state.instructions.longInstructions ||
       state.instructions.shortInstructions,

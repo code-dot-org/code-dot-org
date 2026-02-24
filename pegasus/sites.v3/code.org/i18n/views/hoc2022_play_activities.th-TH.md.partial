@@ -1,7 +1,0 @@
-{{featured_tutorial, title: “สวัสดีชาวโลก: ฟุตบอล”, body: “เธอกลายเป็นกัปตันทีมเพราะเธอเขียนโค้ดที่ใช้โต้ตอบกันในสนามฟุตบอล เข้าประตูไปแล้วววว!”, image: "/images/hoc2022-hello-world-soccer.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
-
-{{featured_tutorial, title: “กีฬา”, body: “มาทำเกมบาสเกตบอลหรือเกมการแข่งขันกีฬาแบบผสมกัน“, image: "/shared/images/courses/logo_tall_sports.jpg", url: "https://code.org/athletes" }}
-
-{{featured_tutorial, title: “Flappy Code”, body: “อยากลองเขียนเกมของเธอเองโดยใช้เวลาน้อยกว่า 10 นาทีไหมล่ะ? ลองทำตามคู่มือ Flappy Code ของเราดูสิ!”, image: "/shared/images/courses/logo_tall_flappy.jpg", url: "https://studio.code.org/s/flappy/reset" }}
-
-{{ featured_tutorial, title: “Minecraft Hour of Code”, body: “Minecraft กลับมาพร้อมกับ Hour of Code และกิจกรรมใหม่! มาร่วมผจญภัยใน Minecraft กับการเขียนโค้ด.“, image: "/images/hoc2022-mc-escape.png", url: "https://aka.ms/HourofCode2022" }}

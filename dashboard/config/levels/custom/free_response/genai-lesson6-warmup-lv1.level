@@ -8,8 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Warm Up",
-    "long_instructions": "####**Complete this mad-lib:** The __________ was dancing in rain",
-    "teacher_markdown": "Discussion Goal: Notice that most answers are likely nouns, like “dog” or “firefly” or “leaf”",
+    "long_instructions": "####**1) Complete this mad-lib:** The __________ was dancing in rain\r\n\r\n####**2) Complete this mad-lib:** Dancing was ___________ in the rain",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -18,7 +17,7 @@
     "skip_dialog": true,
     "skip_sound": true
   },
-  "audit_log": "[{\"changed_at\":\"2024-07-16 14:24:43 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-07-16 14:24:43 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-09-26 20:14:29 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

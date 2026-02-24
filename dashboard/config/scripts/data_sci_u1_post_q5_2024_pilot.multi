@@ -1,0 +1,14 @@
+name 'Data Sci U1 Post Q5_2024-pilot'
+
+question 'A company wants to evaluate the effectiveness of its new advertising campaign. Which data collection method should be used, and why?'
+
+wrong 'Surveys, to gather feedback from a broad audience about the campaign.'
+wrong 'Interviews, to get detailed opinions from a few select individuals.'
+right 'Online tracking, to compare sales data before and after the campaign launch.'
+wrong 'Web scraping, to collect data on social media mentions.'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

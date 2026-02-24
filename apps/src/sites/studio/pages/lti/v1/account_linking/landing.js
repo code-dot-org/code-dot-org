@@ -5,10 +5,10 @@
  * @see landing.html.haml.
  */
 import React from 'react';
-import ReactDOM from 'react-dom';
 
-import LtiLinkAccountPage from '@cdo/apps/lib/ui/simpleSignUp/lti/link/LtiLinkAccountPage';
-import {LtiProviderContext} from '@cdo/apps/lib/ui/simpleSignUp/lti/link/LtiLinkAccountPage/context';
+import LtiLinkAccountPage from '@cdo/apps/simpleSignUp/lti/link/LtiLinkAccountPage';
+import {LtiProviderContext} from '@cdo/apps/simpleSignUp/lti/link/LtiLinkAccountPage/context';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const scriptData = getScriptData('json');
   const ltiProvider = scriptData['lti_provider'];
   const ltiProviderName = scriptData['lti_provider_name'];
-  const newAccountUrl = scriptData['new_account_url'];
+  const finishSignUpUrl = scriptData['finish_sign_up_url'];
+  const newAccountUrl = new URL(scriptData['new_account_url']);
   const existingAccountUrl = new URL(scriptData['existing_account_url']);
   const emailAddress = scriptData['email'];
   const newCtaType = scriptData['new_cta_type'];
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ltiProvider,
     ltiProviderName,
     newAccountUrl,
+    finishSignUpUrl,
     existingAccountUrl,
     emailAddress,
     newCtaType,
@@ -34,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     userType,
   };
 
-  ReactDOM.render(
+  createReactRoot(
     <LtiProviderContext.Provider value={ltiProviderContext}>
       <LtiLinkAccountPage />
     </LtiProviderContext.Provider>,

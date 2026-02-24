@@ -1,12 +1,13 @@
 import moment from 'moment';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider, useSelector} from 'react-redux';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {findOrCreateStableId} from '@cdo/apps/metrics/statsigHelpers';
 import {getStore} from '@cdo/apps/redux';
 import ParentalPermissionModal from '@cdo/apps/templates/policy_compliance/ParentalPermissionModal';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
@@ -16,40 +17,50 @@ document.addEventListener('DOMContentLoaded', () => {
   const renderModal = () => {
     // eslint-disable-next-line react/prop-types
     const Modal = ({lockoutDate, inSection}) => {
-      const reportEvent = (eventName, payload = {}) => {
-        payload.inSection = inSection;
-        analyticsReporter.sendEvent(eventName, payload, PLATFORMS.AMPLITUDE);
-      };
-
-      const handleClose = parentalPermissionRequest => {
-        reportEvent(EVENTS.CAP_PARENT_EMAIL_MODAL_CLOSED, {
-          consentStatus: parentalPermissionRequest?.consent_status,
-        });
-      };
-
-      const handleSubmit = parentalPermissionRequest => {
-        reportEvent(EVENTS.CAP_PARENT_EMAIL_SUBMITTED, {
-          consentStatus: parentalPermissionRequest.consent_status,
-        });
-      };
-
-      const handleResend = parentalPermissionRequest => {
-        reportEvent(EVENTS.CAP_PARENT_EMAIL_RESEND, {
-          consentStatus: parentalPermissionRequest.consent_status,
-        });
-      };
-
-      const handleUpdate = parentalPermissionRequest => {
-        reportEvent(EVENTS.CAP_PARENT_EMAIL_UPDATED, {
-          consentStatus: parentalPermissionRequest.consent_status,
-        });
-      };
-
       const currentUser = useSelector(state => state.currentUser);
       if (!currentUser?.userId) return null;
 
+      const defaultEventParams = (parentalPermissionRequest = {}) => ({
+        consentStatus: parentalPermissionRequest?.consent_status,
+        us_state: currentUser?.usStateCode,
+      });
+
+      const reportEvent = (eventName, payload = {}) => {
+        payload.inSection = inSection;
+        analyticsReporter.sendEvent(eventName, payload);
+      };
+
+      const handleClose = parentalPermissionRequest => {
+        reportEvent(
+          EVENTS.CAP_PARENT_EMAIL_MODAL_CLOSED,
+          defaultEventParams(parentalPermissionRequest)
+        );
+      };
+
+      const handleSubmit = parentalPermissionRequest => {
+        reportEvent(
+          EVENTS.CAP_PARENT_EMAIL_SUBMITTED,
+          defaultEventParams(parentalPermissionRequest)
+        );
+      };
+
+      const handleResend = parentalPermissionRequest => {
+        reportEvent(
+          EVENTS.CAP_PARENT_EMAIL_RESEND,
+          defaultEventParams(parentalPermissionRequest)
+        );
+      };
+
+      const handleUpdate = parentalPermissionRequest => {
+        reportEvent(
+          EVENTS.CAP_PARENT_EMAIL_UPDATED,
+          defaultEventParams(parentalPermissionRequest)
+        );
+      };
+
       reportEvent(EVENTS.CAP_PARENT_EMAIL_MODAL_SHOWN, {
         consentStatus: currentUser?.childAccountComplianceState,
+        us_state: currentUser?.usStateCode,
       });
 
       return (
@@ -63,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
       );
     };
 
-    ReactDOM.render(
+    createReactRoot(
       <Provider store={getStore()}>
         <Modal
           lockoutDate={getScriptData('lockoutDate')}
@@ -77,8 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (getScriptData('forceDisplay')) {
     renderModal();
   } else {
-    const studentUuid = getScriptData('studentUuid');
-    const modalKey = `cap-ppm-last-shown-at-${studentUuid}`;
+    const studentStableId = findOrCreateStableId();
+    const modalKey = `cap-ppm-last-shown-at-${studentStableId}`;
     const lastShownAt = moment(tryGetLocalStorage(modalKey, ''));
 
     // If the modal has been shown in the last 24 hours, don't show it again.

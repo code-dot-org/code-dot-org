@@ -1,0 +1,31 @@
+#!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+require_relative '../../dashboard/config/environment'
+require 'cdo/chat_client'
+
+# Use five minute timeout to allow long delete queries to complete.
+DASHBOARD_DB_LONG_TIMEOUT = Cdo::Sequel.database_connection_pool(
+  CDO.dashboard_db_writer,
+  CDO.dashboard_db_reader,
+  query_timeout: 300
+)
+
+# We want to avoid storing student chat messages any longer than
+# is necessary for analysis to prevent storing excess student PII. This deletes
+# any AichatEvent or AichatRequest older than 90 days.
+#
+# Log the number of records deleted for each table to #cron-daily Slack channel
+# so we can easily monitor the deletion process.
+def main
+  ninety_days_ago = Time.now - 90.days
+
+  deleted_event_count = DASHBOARD_DB_LONG_TIMEOUT[:aichat_events].where {created_at < ninety_days_ago}.delete
+  ChatClient.message('cron-daily', "Deleted #{deleted_event_count} AichatEvent records")
+
+  deleted_request_count = DASHBOARD_DB_LONG_TIMEOUT[:aichat_requests].where {created_at < ninety_days_ago}.delete
+  ChatClient.message('cron-daily', "Deleted #{deleted_request_count} AichatRequest records")
+end
+
+main

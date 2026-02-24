@@ -6,27 +6,24 @@ title 'Debugging Session'
 markdown <<MARKDOWN
 # Creating Apps with Devices - Lesson 2: Physical Designs
 
+<div style="background-color: #F7F8FA; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px;">
 
-> ##### <a href="https://studio.code.org/s/csd6a-2023/lessons/2" target="blank">U6L2 Lesson Plan: Physical Designs</a> <br /> **Note:** This lesson does not require students to use a device. Therefore, the lesson is the same across Unit 6A (Circuit Playground) and Unit 6B (micro:bit). We've linked to the Unit 6A version of the lesson plan for you here.
+#### <a href="https://studio.code.org/s/csd6a-2024/lessons/2" target="blank">U6L2 Lesson Plan: Physical Designs</a>
 
-## Investigation Goal
+##### **Note:** This lesson does not require students to use a device. Therefore, the lesson is the same across Unit 6A (Circuit Playground) and Unit 6B (micro:bit). We've linked to the Unit 6A version of the lesson plan for you here.
 
-##### Investigate the design of different physical devices and their apps
+</p></div>
 
-## Investigation Tasks
+## 🎯 Investigation Goal
 
-* ##### Review the "Recommending Physical Designs" section in the Activity of the Lesson Plan
-* ##### Open up the Activity Guide and read through the "Choosing The Physical Design" section
-* ##### Take a look at the prototypes in Level 1 of the lesson. Which prototypes would you recommend to which user?
+#### Investigate the design of different physical devices and their apps.
 
-##### If you'd like, you can read through the Activity Guide exemplar (linked in the "For the teachers" section of the Lesson Plan) to get an idea of which prototypes can be assigned to which user
+## 📋 Investigation Tasks
 
+* #### Review the "Recommending Physical Designs" section in the **Activity** of the Lesson Plan.
+* #### Open up the <a href="https://docs.google.com/document/d/1eZfDCPovs0MMUeR4B6ZFSyC6fmCa9yRY2CtvKvZgP1k/edit?usp=sharing" target="blank" rel="noopener noreferrer">Physical Designs Activity Guide</a> and read through the "Choosing The Physical Design" section.
+* #### Take a look at the prototypes in <a href="https://studio.code.org/s/csd6a-2024/lessons/2/levels/1" target="blank" rel="noopener noreferrer">Level 1</a> of the lesson. Which prototypes would you recommend to which user?
+<br>
 
-
-
-
-
-
-
-
+#### If you'd like, you can read through the <a href="https://docs.google.com/document/d/1COKnyGNlEBpB8giiVDPGl-ubK1OEUU3fxYjNIhzpQT4/edit" target="blank" rel="noopener noreferrer">Physical Designs Activity Guide exemplar</a> (also linked in the "For the teachers" section of the Lesson Plan) to get an idea of which prototypes can be assigned to which user.
 MARKDOWN

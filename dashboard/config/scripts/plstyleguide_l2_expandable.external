@@ -1,0 +1,39 @@
+name 'PLStyleGuide_L2_Expandable'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+## Expandable Text
+
+##### Click on the arrows below to expand each section.
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 16px; font-weight: bold;">Title</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 16px;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Donec scelerisque nisi ut convallis tincidunt.
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 16px; font-weight: bold;">Title</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 16px;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Donec scelerisque nisi ut convallis tincidunt.
+</p></div>
+</details>
+
+```html
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 16px; font-weight: bold;">Title</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 16px;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Donec scelerisque nisi ut convallis tincidunt.
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 16px; font-weight: bold;">Title</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 16px;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Donec scelerisque nisi ut convallis tincidunt.
+</p></div>
+</details>
+```
+MARKDOWN

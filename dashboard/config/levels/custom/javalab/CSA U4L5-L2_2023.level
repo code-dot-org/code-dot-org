@@ -20,7 +20,7 @@
     },
     "project_template_level_name": "CSA U4L5-Random PBT_2023",
     "teacher_markdown": "1. When the program is run several times, the only numbers generated are between `0` and `9`. The reason for this is because `Math.random()` method will only return a `double` value greater than or equal to `0` and less than `1.0`. When we cast this `double` as an integer, the fractional portion of the `double` value gets discarded, and therefore, the output will never round up to `10`.\r\n\r\n2. Multiplying the result from `Math.random()` changes the range of values for `firstNumber` to an integer between `1` and `10`.",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-02-17T18:38:53.523+00:00\",\"changed\":[\"cloned from \\\"CSA U4L3-L2_2023\\\"\"],\"cloned_from\":\"CSA U4L3-L2_2023\"},{\"changed_at\":\"2023-02-17 18:38:55 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-07 16:08:21 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-07 16:17:41 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

@@ -1,3 +1,5 @@
+import Alert from '@code-dot-org/component-library/alert';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
@@ -7,13 +9,8 @@ import {connect} from 'react-redux';
 import {register} from 'swiper/element/bundle';
 
 import {ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
-import {
-  BodyTwoText,
-  BodyThreeText,
-  Heading1,
-  Heading2,
-  Heading3,
-} from '@cdo/apps/componentLibrary/typography';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
 
 import BackToFrontConfetti from '../BackToFrontConfetti';
@@ -56,14 +53,16 @@ function Certificate(props) {
     }
   };
 
-  const personalizeHocCertificate = session => {
+  const personalizeHocCertificate = async session => {
     $.ajax({
-      url: '/v2/certificate',
-      type: 'post',
+      url: studio(`/api/hour/certificates/${session}`),
+      type: 'patch',
       dataType: 'json',
+      headers: {
+        'X-CSRF-Token': await getAuthenticityToken(),
+      },
       data: {
-        session_s: session,
-        name_s: nameInputRef.current.value,
+        name: nameInputRef.current.value,
       },
     }).done(response => {
       if (response.certificate_sent) {
@@ -123,11 +122,21 @@ function Certificate(props) {
     isHocTutorial,
     isPlCourse,
     userType,
+    userName,
   } = props;
 
   const swiperRef = useRef(null);
 
   const [currentCertificateIndex, setCurrentImageIndex] = useState(0);
+  useEffect(() => {
+    if (isPlCourse && !personalized) {
+      // Auto personalize using userName (if available)
+      if (userName) {
+        setStudentName(userName);
+        setPersonalized(true);
+      }
+    }
+  }, [isPlCourse, personalized, userName]);
   useEffect(() => {
     if (swiperRef.current) {
       const swiperParams = {
@@ -195,15 +204,56 @@ function Certificate(props) {
 
   const print = getPrintPath(courseName);
 
+  const renderCertificateImage = certificateObj => {
+    return (
+      <>
+        <a href={getCertificateSharePath(certificateObj.courseName)}>
+          <img
+            src={getCertificateImagePath(certificateObj.courseName)}
+            alt={
+              studentName
+                ? i18n.certificateAltTextWithName({
+                    studentName,
+                    courseTitle: certificateObj.courseTitle,
+                  })
+                : i18n.certificateAltTextNoName({
+                    courseTitle: certificateObj.courseTitle,
+                  })
+            }
+            className={style.certificateImage}
+          />
+        </a>
+      </>
+    );
+  };
+
+  const userNameIsRequiredError = isPlCourse && !userName;
+  const [showNameIsRequiredAlert, setShowNameIsRequiredAlert] = useState(
+    userNameIsRequiredError
+  );
+
   return (
     <div className={style.container}>
       <div className={style.headerContainer}>
-        <Heading1 className={`${headingStyle} ${style.header}`}>
+        <Typography
+          className={`${headingStyle} ${style.header}`}
+          variant="h1"
+          gutterBottom
+        >
           {i18n.congratsCertificateHeading()}
-        </Heading1>
+        </Typography>
       </div>
       {courseName && (
         <LargeChevronLink link={coursePath} linkText={i18n.backToActivity()} />
+      )}
+      {showNameIsRequiredAlert && (
+        <Alert
+          className={style.userNameIsRequiredAlert}
+          type="warning"
+          text="You need to add your full name to your account to download or share this certificate"
+          link={{text: 'Go to account settings', href: '/users/edit'}}
+          onClose={() => setShowNameIsRequiredAlert(false)}
+        />
       )}
       <div className={style.certificateContainer}>
         <div
@@ -216,92 +266,101 @@ function Certificate(props) {
               className={style.confetti}
             />
           }
-          <swiper-container
-            init="false"
-            ref={swiperRef}
-            class={style.swiperContainer}
-            navigation-next-el="#certificate-swiper-next-el"
-            navigation-prev-el="#certificate-swiper-prev-el"
-          >
-            {certificateData.map(image => (
-              <swiper-slide key={image.courseName}>
-                <a href={getCertificateSharePath(image.courseName)}>
-                  <img
-                    src={getCertificateImagePath(image.courseName)}
-                    alt={
-                      studentName
-                        ? i18n.certificateAltTextWithName({
-                            studentName,
-                            courseTitle: image.courseTitle,
-                          })
-                        : i18n.certificateAltTextNoName({
-                            courseTitle: image.courseTitle,
-                          })
-                    }
-                    className={style.certificateImage}
-                  />
-                </a>
-              </swiper-slide>
-            ))}
-          </swiper-container>
-          <button
-            id="certificate-swiper-prev-el"
-            className={classNames(style.navButton, style.prevElNav)}
-            type="button"
-          />
-          <button
-            id="certificate-swiper-next-el"
-            className={classNames(style.navButton, style.nextElNav)}
-            type="button"
-          />
+          {certificateData.length > 1 && (
+            <>
+              <swiper-container
+                init="false"
+                ref={swiperRef}
+                class={style.swiperContainer}
+                navigation-next-el="#certificate-swiper-next-el"
+                navigation-prev-el="#certificate-swiper-prev-el"
+              >
+                {certificateData.map(image => (
+                  <swiper-slide key={image.courseName}>
+                    {renderCertificateImage(image)}
+                  </swiper-slide>
+                ))}
+              </swiper-container>
+              <button
+                id="certificate-swiper-prev-el"
+                className={classNames(style.navButton, style.prevElNav)}
+                type="button"
+              />
+              <button
+                id="certificate-swiper-next-el"
+                className={classNames(style.navButton, style.nextElNav)}
+                type="button"
+              />
+            </>
+          )}
+          {certificateData.length === 1 &&
+            renderCertificateImage(certificateData[0])}
         </div>
         <div className={`${certificateStyle} ${style.inputContainer}`}>
-          {courseName && !personalized && (
-            <div>
-              <Heading3>{i18n.congratsCertificatePersonalize()}</Heading3>
-              <BodyThreeText className={style.enterName}>
-                {i18n.enterYourName()}
-              </BodyThreeText>
-              <div className={style.inputButtonContainer}>
-                <input
-                  id="name"
-                  type="text"
-                  className={style.nameInput}
-                  placeholder={i18n.yourName()}
-                  ref={nameInputRef}
-                />
-                <button
-                  type="button"
-                  className={style.submit}
-                  onClick={personalizeCertificate.bind(this, certificateId)}
-                >
-                  {i18n.submit()}
-                </button>
-              </div>
-            </div>
+          {!isPlCourse && (
+            <>
+              {courseName && !personalized && (
+                <div>
+                  <Typography variant="h3" gutterBottom>
+                    {i18n.congratsCertificatePersonalize()}
+                  </Typography>
+                  <Typography
+                    className={style.enterName}
+                    variant="body3"
+                    gutterBottom
+                  >
+                    {i18n.enterYourName()}
+                  </Typography>
+                  <div className={style.inputButtonContainer}>
+                    <input
+                      id="name"
+                      type="text"
+                      className={style.nameInput}
+                      placeholder={i18n.yourName()}
+                      ref={nameInputRef}
+                    />
+                    <button
+                      type="button"
+                      className={style.submit}
+                      onClick={personalizeCertificate.bind(this, certificateId)}
+                    >
+                      {i18n.submit()}
+                    </button>
+                  </div>
+                </div>
+              )}
+              {courseName && personalized && (
+                <div>
+                  <Typography variant="h2" gutterBottom>
+                    <div id="uitest-thanks">
+                      {i18n.congratsCertificateThanks()}
+                    </div>
+                  </Typography>
+                  <Typography variant="body2" gutterBottom>
+                    {i18n.congratsCertificateContinue()}
+                  </Typography>
+                </div>
+              )}
+              <hr />
+            </>
           )}
-          {courseName && personalized && (
-            <div>
-              <Heading2>
-                <div id="uitest-thanks">{i18n.congratsCertificateThanks()}</div>
-              </Heading2>
-              <BodyTwoText>{i18n.congratsCertificateContinue()}</BodyTwoText>
-            </div>
-          )}
-          <hr />
-          <Heading3>{i18n.congratsCertificateShare()}</Heading3>
-          <BodyThreeText>
+          <Typography variant="h3" gutterBottom>
+            {i18n.congratsCertificateShare()}
+          </Typography>
+          <Typography variant="body3" gutterBottom>
             {i18n.congratsCertificateShareMessage()}
-          </BodyThreeText>
-          <SocialShare
-            facebook={facebook}
-            twitter={twitter}
-            linkedin={linkedin}
-            print={print}
-            under13={under13}
-            isPlCourse={isPlCourse}
-            userType={userType}
-          />
+          </Typography>
+          {!userNameIsRequiredError && (
+            <SocialShare
+              facebook={facebook}
+              twitter={twitter}
+              linkedin={linkedin}
+              print={print}
+              under13={under13}
+              isPlCourse={isPlCourse}
+              userType={userType}
+            />
+          )}
         </div>
       </div>
       {children}
@@ -320,6 +379,7 @@ Certificate.propTypes = {
   isHocTutorial: PropTypes.bool,
   isPlCourse: PropTypes.bool,
   userType: PropTypes.string,
+  userName: PropTypes.string,
 };
 
 export default connect(state => ({

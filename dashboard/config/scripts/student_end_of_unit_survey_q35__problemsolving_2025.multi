@@ -1,0 +1,17 @@
+name 'student-end-of-unit-survey-q35_-problemsolving_2025'
+
+question 'I felt supported by the teacher and resources provided throughout this unit.'
+
+right 'Strongly agree'
+right 'Agree'
+right 'Slightly agree'
+right 'Neither'
+right 'Slightly disagree'
+right 'Disagree'
+right 'Strongly disagree'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+
+MARKDOWN

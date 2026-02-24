@@ -1,0 +1,152 @@
+import i18n from '@cdo/locale';
+
+export const TEACHER_NAVIGATION_BASE_URL = `/teacher_dashboard`;
+
+export const TEACHER_NAVIGATION_SECTIONS_URL = '/sections';
+export const SPECIFIC_SECTION_BASE_URL = `:sectionId`;
+
+export const TEACHER_NAVIGATION_PATHS = {
+  progress: 'progress',
+  textResponses: 'text_responses',
+  assessments: 'assessments',
+  projects: 'projects',
+  stats: 'stats',
+  roster: 'roster',
+  loginInfo: 'login_info',
+  lessonMaterials: 'materials',
+  calendar: 'calendar',
+  courseOverview: 'courses/:courseVersionName?',
+  nestedUnitOverview: 'courses/:courseVersionName/units/:unitPosition',
+  unitOverview: 'unit/:unitName?',
+  settings: 'settings',
+  aiChatSettings: 'ai_chat_settings',
+  home: 'home',
+  skills: 'skills_in_dev',
+  studentSnapshot: 'student_snapshot',
+};
+
+const getAbsolutePath = (name: string) =>
+  `${TEACHER_NAVIGATION_SECTIONS_URL}/${SPECIFIC_SECTION_BASE_URL}/${name}`;
+
+/**
+ * Get the path starting from the TeacherNavigation Base URL for the given
+ * Path name.
+ * For example:
+ *   Given: 'courses/:courseVersionName?'
+ *   Returns: '/teacher_dashboard/sections/:section_id/courses/:courseVersionName?'
+ * These paths use the React Router path syntax.
+ * @param {string} name - The TEACHER_NAVIGATION_PATHS path
+ * @returns {string} The full base path in React Router syntax for the given name.
+ */
+export const getBasePath = (name: string): string =>
+  `${TEACHER_NAVIGATION_BASE_URL}/${getAbsolutePath(name)}`;
+
+export const TEACHER_NAVIGATION_PATH_NAMES = Object.fromEntries(
+  Object.keys(TEACHER_NAVIGATION_PATHS).map(key => [key, key])
+);
+
+export const LABELED_TEACHER_NAVIGATION_PATHS = {
+  home: {
+    url: TEACHER_NAVIGATION_PATHS.home,
+    absoluteUrl: TEACHER_NAVIGATION_PATHS.home,
+    label: i18n.teacherHomePage(),
+    icon: null,
+  },
+  progress: {
+    url: TEACHER_NAVIGATION_PATHS.progress,
+    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.progress),
+    label: i18n.progress(),
+    icon: 'chart-line',
+  },
+  textResponses: {
+    url: TEACHER_NAVIGATION_PATHS.textResponses,
+    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.textResponses),
+    label: i18n.teacherTabStatsTextResponses(),
+    icon: 'pen-line',
+  },
+  assessments: {
+    url: TEACHER_NAVIGATION_PATHS.assessments,
+    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.assessments),
+    label: i18n.assessments(),
+    icon: 'star',
+  },
+  projects: {
+    url: TEACHER_NAVIGATION_PATHS.projects,
+    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.projects),
+    label: i18n.studentProjects(),
+    icon: 'code',
+  },
+  stats: {
+    url: TEACHER_NAVIGATION_PATHS.stats,
+    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.stats),
+    label: i18n.teacherTabStats(),
+    icon: 'chart-simple',
+  },
+  roster: {
+    url: TEACHER_NAVIGATION_PATHS.roster,
+    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.roster),
+    label: i18n.roster(),
+    icon: 'users',
+  },
+  loginInfo: {
+    url: TEACHER_NAVIGATION_PATHS.loginInfo,
+    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.loginInfo),
+    // this is not part of the navigation sidebar so it doesn't need a label or icon
+    label: i18n.loginInfo(),
+    icon: null,
+  },
+  lessonMaterials: {
+    url: TEACHER_NAVIGATION_PATHS.lessonMaterials,
+    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.lessonMaterials),
+    label: i18n.lessonMaterials(),
+    icon: 'folder-open',
+  },
+  calendar: {
+    url: TEACHER_NAVIGATION_PATHS.calendar,
+    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.calendar),
+    label: i18n.calendar(),
+    icon: 'calendar',
+  },
+  courseOverview: {
+    url: TEACHER_NAVIGATION_PATHS.courseOverview,
+    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.courseOverview),
+    label: i18n.course(),
+    icon: 'desktop',
+  },
+  nestedUnitOverview: {
+    url: TEACHER_NAVIGATION_PATHS.nestedUnitOverview,
+    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.nestedUnitOverview),
+    label: i18n.course(),
+    icon: 'desktop',
+  },
+  unitOverview: {
+    url: TEACHER_NAVIGATION_PATHS.unitOverview,
+    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.unitOverview),
+    label: i18n.course(),
+    icon: 'desktop',
+  },
+  settings: {
+    url: TEACHER_NAVIGATION_PATHS.settings,
+    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.settings),
+    label: i18n.settings(),
+    icon: 'gear',
+  },
+  aiChatSettings: {
+    url: TEACHER_NAVIGATION_PATHS.aiChatSettings,
+    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.aiChatSettings),
+    label: i18n.aiSettings(),
+    icon: 'ai-head-solid',
+  },
+  skills: {
+    url: TEACHER_NAVIGATION_PATHS.skills,
+    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.skills),
+    label: 'Skills (In Development)',
+    icon: 'brain',
+  },
+  studentSnapshot: {
+    url: TEACHER_NAVIGATION_PATHS.studentSnapshot,
+    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.studentSnapshot),
+    label: 'Student Snapshot',
+    icon: 'screen-users',
+  },
+};

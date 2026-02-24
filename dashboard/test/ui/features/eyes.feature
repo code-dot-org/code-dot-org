@@ -6,7 +6,7 @@ Background:
 
 Scenario:
   When I open my eyes to test "multi"
-  Given I am on "http://studio.code.org/s/course1/lessons/2/levels/2?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/9/levels/1?noautoplay=true"
   And The header is finished animating
   Then element ".submitButton" is visible
   And I see no difference for "level load"
@@ -14,15 +14,18 @@ Scenario:
 
 Scenario:
   When I open my eyes to test "match"
-  Given I am on "http://studio.code.org/s/course1/lessons/14/levels/13?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/11/levels/1?noautoplay=true"
   And The header is finished animating
   Then element ".submitButton" is visible
+  And I wait to see a dialog titled "Instructions"
+  And I close the dialog
+  And I wait for 3 seconds
   And I see no difference for "level load"
   And I close my eyes
 
 Scenario:
   When I open my eyes to test "text-only match"
-  Given I am on "http://studio.code.org/s/course3/lessons/10/levels/2?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/11/levels/2?noautoplay=true"
   And The header is finished animating
   Then element ".submitButton" is visible
   And I see no difference for "level load"
@@ -30,7 +33,7 @@ Scenario:
 
 Scenario:
   When I open my eyes to test "text compression"
-  Given I am on "http://studio.code.org/s/allthethings/lessons/16/levels/1?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/16/levels/1?noautoplay=true"
   And The header is finished animating
   And I see no difference for "level load"
   And I set text compression dictionary to "pitter\npatter\n"
@@ -39,21 +42,21 @@ Scenario:
 
 Scenario:
   When I open my eyes to test "pixelation with range"
-  Given I am on "http://studio.code.org/s/allthethings/lessons/17/levels/2?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/17/levels/2?noautoplay=true"
   And The header is finished animating
   And I see no difference for "level load"
   And I close my eyes
 
 Scenario:
   When I open my eyes to test "maze"
-  Given I am on "http://studio.code.org/s/allthethings/lessons/2/levels/1?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1?noautoplay=true"
   And I wait for the lab page to fully load
   And I press "runButton"
   And I wait until element ".uitest-topInstructions-inline-feedback" is visible
   And element ".uitest-topInstructions-inline-feedback" is visible
   And I see no difference for "maze feedback with blocks"
 
-  Then I am on "http://studio.code.org/s/allthethings/lessons/2/levels/1/lang/ar-sa"
+  Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1/lang/ar-sa"
   And I wait for the lab page to fully load
   And The header is finished animating
   And I see no difference for "maze RTL"
@@ -63,7 +66,7 @@ Scenario:
 
 Scenario:
   When I open my eyes to test "star wars RTL"
-  Given I am on "http://studio.code.org/s/starwars/lessons/1/levels/15/lang/ar-sa?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/starwars/units/1/lessons/1/levels/15/lang/ar-sa?noautoplay=true"
   And The header is finished animating
   And I wait to see ".header_user"
   And I wait to see "#runButton"

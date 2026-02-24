@@ -1,0 +1,62 @@
+name 'PLStyleGuide_L1_Structure2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Organization
+
+#### Some professional learning pages may include multiple chunks of information. Making these chunks visually distinct will allow our users to scan the page effectively.
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 100%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+	<p style="font-size: 14pt; font-weight: bold; margin: 0;">💡 Design Tip</p>
+	<p style="font-size: 12pt; margin-top: 12px; line-height: 120%;">A good visual hierarchy saves us work by preprocessing the page for us, organizing and prioritizing its contents in a way that we can grasp almost instantly.</p>
+	<p style="font-size: 12pt; margin-top: 12px; line-height: 120%;">But when a page doesn't have a clear visual hierarchy - if everything looks equally important, for instance - we're reduced to the much slower process of scanning the page for revealing words and phrases and then try to form our own sense of what's important and how things are organized. It's a lot more work.</p>
+<hr>
+
+##### Krug, Steve. <i>Don't Make Me Think, Revisited: A Common Sense Approach to Web Usability.</i> 3rd ed., New Riders, 2014.
+</div>
+
+## Strategies for Organization
+
+### **Headings**
+
+#### Headings help to break a page into multiple sections. Whether or not you decide to use other strategies for organization, you should *always* use headings.
+
+#### The following example uses both headings and horizontal lines to separate the page into three distinct sections.
+
+<div style="text-align:center;">
+    <img src="https://images.code.org/d83ac63fd17065f91fc8f71aacb2da5b-image-1739489778073.png" width=90%; alt="A LevelBuilder page split into three sections" style="display:block;margin:auto;">
+</div>
+
+___
+
+### **Color**
+
+#### Adding a colored background to a div box - according to brand guidelines - can help break the page into different parts.
+
+<div style="text-align:center; margin: 20px;">
+    <img src="https://images.code.org/cd92a15f395a363834a0cf2c8ae717ef-image-1739489501236.31.36 PM.png" width=90%; alt="A LevelBuilder page with introductory text and a div box with vocabulary and a light teal background." style="display:block;margin:auto;">
+</div>
+
+___
+
+### **Shape**
+
+#### Humans see groupings of objects based on several factors. One factor is shape; objects of the same shape will be seen as belonging to the same group.
+
+#### In the following example, the cards below the text are visually grouped and distinct from the preceeding text via shape and color.
+
+<div style="text-align:center; margin: 20px;">
+    <img src="https://images.code.org/d2c1e70a6edee4adb27133889fcacdf0-image-1739490470131.47.47 PM.png" width=90%; alt="A LevelBuilder page with introductory text and a row of cards." style="display:block;margin:auto;">
+</div>
+
+___
+
+### **White Space**
+
+#### White space can help create divisions on a page. Text that relates to a heading should be grouped closely to that heading. Distinct sections should have more white space between them. Heading formatting on Level Builder automatically does this for you.
+
+<div style="text-align:center; margin: 20px;">
+    <img src="https://images.code.org/260252c0d2c5de6f231e25cdf93e0764-image-1739490325713.png" width=95%; alt="A LevelBuilder with two different sizes of white space between elements." style="display:block;margin:auto;">
+</div>
+MARKDOWN

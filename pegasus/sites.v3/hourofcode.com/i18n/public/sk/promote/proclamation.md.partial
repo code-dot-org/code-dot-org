@@ -1,7 +1,6 @@
 ---
 title: Vzorové uznesenie napísané na podporu Týždňa informatiky a Hodiny kódu
 layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

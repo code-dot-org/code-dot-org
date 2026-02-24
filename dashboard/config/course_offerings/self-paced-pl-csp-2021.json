@@ -2,7 +2,7 @@
   "key": "self-paced-pl-csp-2021",
   "display_name": "Teaching CS Principles (2021)",
   "is_featured": false,
-  "assignable": true,
+  "assignable": false,
   "curriculum_type": null,
   "marketing_initiative": null,
   "grade_levels": null,
@@ -15,5 +15,9 @@
   "professional_learning_program": null,
   "video": null,
   "published_date": null,
-  "self_paced_pl_course_offering_key": null
+  "self_paced_pl_course_offering_key": null,
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": [
+
+  ]
 }

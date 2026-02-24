@@ -1,0 +1,23 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-12-15T17:07:13.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Property\n\nA **property** is a named piece of information inside an object.\n\nIt tells you a specific fact about that object that your program can read or update.\n\nFor example, a backpack object includes properties such as `type: \"canvas\"`, `color: \"blue\"`, or `size: 30`.",
+        "imageUrl": "https://images.code.org/a1b719b9580b3aeb04c6dd8574d7a680-Screenshot 2025-12-11 105058.png",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-top-right"
+      }
+    ],
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-15T17:07:13.082+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson4-level5-property-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson4-level5-property-test-2025\"}]"
+}]]></config>
+</Panels>

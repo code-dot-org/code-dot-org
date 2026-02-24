@@ -4,12 +4,14 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "is_migrated": true,
       "professional_learning_course": "CSP Support"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-22 19:56:41 UTC",
+    "serialized_at": "2024-11-19 01:17:01 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -64,6 +66,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

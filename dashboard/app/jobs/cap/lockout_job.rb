@@ -32,17 +32,5 @@ module CAP
       # in case the reason is a re-estimation of the user's lockout date.
       self.class.schedule_for(user, reschedules: reschedules.pred) unless user_is_locked_out || reschedules <= 0
     end
-
-    private def report_exception(exception)
-      Honeybadger.notify(
-        exception,
-        error_message: '[CAP::LockoutJob] Runtime error',
-        context: {
-          job: as_json,
-        }
-      )
-    ensure
-      raise exception
-    end
   end
 end

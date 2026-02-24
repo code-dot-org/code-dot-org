@@ -3,7 +3,7 @@
 # Recipe:: default
 #
 
-# Sync repo via SSH if key is provided.
+# Chef Managed environments (staging/test/levelbuilder/production) use SSH to authenticate as the user `deploy-code-org` to GitHub.
 include_recipe 'cdo-github-access'
 has_ssh_key = node['cdo-github-access'] && node['cdo-github-access']['id_rsa'] != ''
 if has_ssh_key

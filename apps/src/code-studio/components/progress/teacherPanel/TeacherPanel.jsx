@@ -26,9 +26,9 @@ import {loadLevelsWithProgress} from '@cdo/apps/code-studio/teacherPanelRedux';
 import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import fontConstants from '@cdo/apps/fontConstants';
+import {getExampleSolutionLink} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
 import {
   pageTypes,
@@ -72,6 +72,7 @@ class TeacherPanel extends React.Component {
     levelsWithProgress: PropTypes.arrayOf(levelWithProgress),
     loadLevelsWithProgress: PropTypes.func.isRequired,
     teacherId: PropTypes.number,
+    isSortedByFamilyName: PropTypes.bool,
     exampleSolutions: PropTypes.array,
     currentLevelId: PropTypes.string,
     selectUser: PropTypes.func.isRequired,
@@ -81,7 +82,7 @@ class TeacherPanel extends React.Component {
     setSectionLockStatus: PropTypes.func.isRequired,
     selectSection: PropTypes.func.isRequired,
     setViewType: PropTypes.func.isRequired,
-    isCurrentLevelLab2: PropTypes.bool.isRequired,
+    isCurrentLevelLab2: PropTypes.bool,
     lab2ExampleSolutions: PropTypes.array,
   };
 
@@ -131,25 +132,7 @@ class TeacherPanel extends React.Component {
     });
   };
 
-  logToFirehose = (eventName, overrideData = {}) => {
-    const sectionId =
-      this.props.selectedSection && this.props.selectedSection.id;
-    const data = {
-      section_id: sectionId,
-      page_type: this.props.pageType,
-      ...overrideData,
-    };
-
-    firehoseClient.putRecord({
-      study: 'teacher_panel',
-      event: eventName,
-      data_json: JSON.stringify(data),
-    });
-  };
-
-  onSelectUser = (id, selectType) => {
-    this.logToFirehose('select_student', {select_type: selectType});
-
+  onSelectUser = id => {
     const isAsync =
       this.props.isCurrentLevelLab2 ||
       this.props.pageType === pageTypes.scriptOverview;
@@ -174,6 +157,7 @@ class TeacherPanel extends React.Component {
       levelsWithProgress,
       pageType,
       teacherId,
+      isSortedByFamilyName,
       exampleSolutions,
       isCurrentLevelLab2,
       lab2ExampleSolutions,
@@ -199,13 +183,10 @@ class TeacherPanel extends React.Component {
       hasSections && unitHasLockableLessons && viewAs === ViewType.Instructor;
 
     return (
-      <TeacherPanelContainer logToFirehose={this.logToFirehose}>
+      <TeacherPanelContainer className={moduleStyles.teacherPanelContainer}>
         <h3>{i18n.teacherPanel()}</h3>
         <div style={styles.scrollable}>
-          <ViewAsToggle
-            isAsync={this.props.isCurrentLevelLab2}
-            logToFirehose={this.logToFirehose}
-          />
+          <ViewAsToggle isAsync={this.props.isCurrentLevelLab2} />
           {displaySelectedStudentInfo && (
             <SelectedStudentInfo
               students={students}
@@ -213,6 +194,7 @@ class TeacherPanel extends React.Component {
               selectedUserId={selectedUserId}
               teacherId={teacherId}
               levelsWithProgress={levelsWithProgress}
+              isSortedByFamilyName={isSortedByFamilyName}
             />
           )}
           {displayLevelExamples && (
@@ -239,7 +221,6 @@ class TeacherPanel extends React.Component {
               <SectionSelector
                 style={{margin: '0px 10px'}}
                 reloadOnChange={true}
-                logToFirehose={() => this.logToFirehose('select_section')}
               />
               {selectedSection && (
                 <a
@@ -247,7 +228,6 @@ class TeacherPanel extends React.Component {
                   target="_blank"
                   rel="noopener noreferrer"
                   style={styles.teacherDashboardLink}
-                  onClick={() => this.logToFirehose('select_teacher_dashboard')}
                 >
                   {i18n.teacherDashboard()}
                 </a>
@@ -378,9 +358,10 @@ export default connect(
       isLoadingLevelsWithProgress:
         state.teacherPanel.isLoadingLevelsWithProgress,
       teacherId: state.currentUser.userId,
+      isSortedByFamilyName: state.currentUser.isSortedByFamilyName,
       exampleSolutions: state.pageConstants?.exampleSolutions,
       currentLevelId: state.progress.currentLevelId,
-      lab2ExampleSolutions: state.lab?.levelProperties?.exampleSolutions,
+      lab2ExampleSolutions: getExampleSolutionLink(state),
       isCurrentLevelLab2: getCurrentLevel(state)?.usesLab2,
     };
   },

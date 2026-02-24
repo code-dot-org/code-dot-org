@@ -1,0 +1,8 @@
+name 'SP-PL-datascience-U2L2-L8Prac'
+display_name 'Practice with Python'
+description 'This is the **Choice Level** for Lesson 3. Take a look at the different options and think about how you will use choice levels in your class.'
+
+sublevels
+level 'datascience-U2L2-L8a_2024-pd'
+level 'datascience-U2L2-L8b_2024-pd'
+level 'datascience-U2L2-L8c_2024-pd'

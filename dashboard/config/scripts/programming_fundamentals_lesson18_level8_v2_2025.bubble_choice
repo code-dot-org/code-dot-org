@@ -1,0 +1,8 @@
+name 'programming-fundamentals-lesson18-level8_v2-2025'
+display_name 'Conditionals Practice'
+description 'Pick one of the levels below to keep practicing conditionals.'
+
+sublevels
+level 'python-intro-console-lesson10-choiceA_v2-2025'
+level 'python-intro-console-lesson10-choiceB_v2-2025'
+level 'python-intro-console-lesson10-choiceC_v2-2025'

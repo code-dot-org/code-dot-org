@@ -4,13 +4,13 @@
  */
 
 import React from 'react';
-import ReactDOM from 'react-dom';
 
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import commonMsg from '@cdo/locale';
 
 import {getLastServerResponse} from './code-studio/reporting';
 import dom from './dom';
-import DialogButtons from './templates/DialogButtons';
+import DialogButtons from './legacySharedComponents/DialogButtons';
 
 // Parameters provided by the calling app.
 let studioApp, onPuzzleComplete, unsubmitUrl;
@@ -59,11 +59,15 @@ export function onSubmitComplete(response) {
  * When submit button is pressed, confirm, and then do it.
  */
 function onPuzzleSubmit() {
-  showConfirmationDialog({
-    title: commonMsg.submitYourProject(),
-    text: commonMsg.submitYourProjectConfirm(),
-    onConfirm: () => onPuzzleComplete(true),
-  });
+  if (studioApp.skin.id === 'gamelab') {
+    onPuzzleComplete(true);
+  } else {
+    showConfirmationDialog({
+      title: commonMsg.submitYourProject(),
+      text: commonMsg.submitYourProjectConfirm(),
+      onConfirm: () => onPuzzleComplete(true),
+    });
+  }
 }
 
 /**
@@ -111,7 +115,7 @@ function showConfirmationDialog(config) {
     '</p>';
 
   const buttons = document.createElement('div');
-  ReactDOM.render(
+  createReactRoot(
     <DialogButtons
       confirmText={commonMsg.dialogOK()}
       cancelText={commonMsg.dialogCancel()}

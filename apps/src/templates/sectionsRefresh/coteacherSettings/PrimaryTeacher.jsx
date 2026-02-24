@@ -1,7 +1,7 @@
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
-import {StrongText} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
 
 import styles from './coteacher-settings.module.scss';
@@ -19,10 +19,12 @@ export default function PrimaryTeacher({primaryTeacher, numCoteachers}) {
   return shouldDisplayTeacher ? (
     <div>
       <label className={styles.label}>
-        <StrongText>{i18n.coteacherPrimaryTeacher()}</StrongText>
+        <Typography variant="strong">
+          {i18n.coteacherPrimaryTeacher()}
+        </Typography>
       </label>
       <div className={styles.primaryTeacher}>
-        <StrongText>{primaryTeacher.name}</StrongText>
+        <Typography variant="strong">{primaryTeacher.name}</Typography>
         <br />
         {primaryTeacher.email}
       </div>

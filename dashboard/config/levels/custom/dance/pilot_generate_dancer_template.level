@@ -1,0 +1,43 @@
+<Dancelab>
+  <config><![CDATA[{
+  "game_id": 63,
+  "created_at": "2025-09-23T16:40:57.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "dance",
+    "block_pools": [
+      "Dancelab"
+    ],
+    "helper_libraries": [
+      "DanceLab"
+    ],
+    "hide_animation_mode": true,
+    "show_type_hints": true,
+    "encrypted": "false",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "use_modal_function_editor": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "validation_enabled": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "hide_pause_button": "false",
+    "default_song": "introtoshamstep_47SOUL",
+    "uses_lab2": "true",
+    "generate_dancer_mode": "true",
+    "display_name": "Regenerate the dancer",
+    "thumbnail_url": "https://images.code.org/fee53ded35d6598a66212e175e51e83d-Group 87 (4).png",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-23T16:40:57.953+00:00\",\"changed\":[\"cloned from \\\"pilot_generate_dancer\\\"\"],\"cloned_from\":\"pilot_generate_dancer\"}]"
+}]]></config>
+  <blocks/>
+</Dancelab>

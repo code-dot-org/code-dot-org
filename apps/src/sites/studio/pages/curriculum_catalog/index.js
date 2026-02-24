@@ -1,12 +1,13 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {displayDifferentiationChat} from '@cdo/apps/aiDifferentiation/aiDiffUtils';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {setSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 import CurriculumCatalog from '../../../../templates/curriculumCatalog/CurriculumCatalog';
@@ -32,7 +33,7 @@ $(document).ready(function () {
     language: languageEnglishName,
   });
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <CurriculumCatalog
         curriculaData={curriculaData}
@@ -46,4 +47,5 @@ $(document).ready(function () {
     </Provider>,
     document.getElementById('curriculum-catalog-container')
   );
+  displayDifferentiationChat();
 });

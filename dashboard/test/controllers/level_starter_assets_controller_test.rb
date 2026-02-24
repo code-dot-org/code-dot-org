@@ -9,7 +9,8 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     FileUtils.touch(@filename)
 
     # Mocks file object received from S3.
-    @uuid_name = "#{SecureRandom.uuid}.png"
+    @uuid = SecureRandom.uuid
+    @uuid_name = "#{@uuid}.png"
     @file_obj = MockS3ObjectSummary.new(@uuid_name, 123, 1.day.ago)
     # Mocks file sent to server for upload.
     @file = fixture_file_upload(@filename, 'image/jpg')
@@ -25,29 +26,39 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     key_1 = "starter_assets/#{uuid_name_1}"
     uuid_name_2 = "#{SecureRandom.uuid}.jpg"
     key_2 = "starter_assets/#{uuid_name_2}"
+    uuid_name_3 = "#{SecureRandom.uuid}.pdf"
+    key_3 = "starter_assets/#{uuid_name_2}"
     file_objs = [
       MockS3ObjectSummary.new(key_1, 123, 1.day.ago),
-      MockS3ObjectSummary.new(key_2, 321, 2.days.ago)
+      MockS3ObjectSummary.new(key_2, 321, 2.days.ago),
+      MockS3ObjectSummary.new(key_3, 111, 3.days.ago)
     ]
-    LevelStarterAssetsController.any_instance.
-      expects(:get_object).twice.
-      returns(file_objs[0], file_objs[1])
+    LevelStarterAssetsHelper.
+      expects(:get_object).times(3).
+      returns(file_objs[0], file_objs[1], file_objs[2])
     level_starter_assets = {
       'ty.png' => uuid_name_1,
-      'welcome.jpg' => uuid_name_2
+      'welcome.jpg' => uuid_name_2,
+      'document.pdf' => uuid_name_3
     }
     level = create(:applab, starter_assets: level_starter_assets)
 
     get :show, params: {level_name: level.name}
     starter_assets = JSON.parse(response.body)['starter_assets']
 
-    assert_equal 2, starter_assets.count
+    assert_equal 3, starter_assets.count
+
     assert_equal 'ty.png', starter_assets[0]['filename']
     assert_equal 'image', starter_assets[0]['category']
     assert_equal file_objs[0].size, starter_assets[0]['size']
+
     assert_equal 'welcome.jpg', starter_assets[1]['filename']
     assert_equal 'image', starter_assets[1]['category']
     assert_equal file_objs[1].size, starter_assets[1]['size']
+
+    assert_equal 'document.pdf', starter_assets[2]['filename']
+    assert_equal 'pdf', starter_assets[2]['category']
+    assert_equal file_objs[2].size, starter_assets[2]['size']
   end
 
   test 'show: returns template level starter_assets when defined' do
@@ -57,7 +68,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     file_objs = [
       MockS3ObjectSummary.new(key_1, 123, 1.day.ago)
     ]
-    LevelStarterAssetsController.any_instance.
+    LevelStarterAssetsHelper.
       expects(:get_object).once.
       returns(file_objs[0])
     level_starter_asset_1 = {
@@ -83,11 +94,11 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
   end
 
   test 'file: returns requested file' do
-    LevelStarterAssetsController.any_instance.
+    LevelStarterAssetsHelper.
       expects(:get_object).
       with(@uuid_name).
       returns(@file_obj)
-    LevelStarterAssetsController.any_instance.
+    LevelStarterAssetsHelper.
       expects(:read_file).
       with(@file_obj).
       returns('hello, world!')
@@ -104,12 +115,71 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
   end
 
   test 'file: returns 404 if level has no starter assets' do
-    LevelStarterAssetsController.any_instance.expects(:get_object).never
+    LevelStarterAssetsHelper.expects(:get_object).never
     level = create(:applab, starter_assets: nil)
 
     get :file, params: {level_name: level.name, filename: 'ty', format: 'png'}
 
     assert_response :not_found
+  end
+
+  test 'file_by_uuid: returns requested file' do
+    LevelStarterAssetsHelper.
+      expects(:get_object).
+      with(@uuid_name).
+      returns(@file_obj)
+    LevelStarterAssetsHelper.
+      expects(:read_file).
+      with(@file_obj).
+      returns('hello, world!')
+    level = create(:weblab2)
+
+    get :file_by_uuid, params: {level_name: level.name, uuid: @uuid, format: 'png'}
+
+    assert_equal 'hello, world!', response.body
+    assert_equal 'image/png', response.headers['Content-Type']
+    assert_equal 'inline', response.headers['Content-Disposition']
+  end
+
+  test 'file_by_uuid: returns file and CORS header for allowed origin' do
+    allowed_origin = "https://test.#{CDO.preview_codeprojects_hostname}"
+    @request.headers['Origin'] = allowed_origin
+
+    LevelStarterAssetsHelper.
+      expects(:get_object).
+      with(@uuid_name).
+      returns(@file_obj)
+    LevelStarterAssetsHelper.
+      expects(:read_file).
+      with(@file_obj).
+      returns('hello, world!')
+
+    level = create(:weblab2)
+    get :file_by_uuid, params: {level_name: level.name, uuid: @uuid, format: 'png'}
+
+    assert_response :success
+    assert_equal 'hello, world!', response.body
+    assert_equal 'image/png', response.headers['Content-Type']
+    assert_equal allowed_origin, response.headers['Access-Control-Allow-Origin']
+  end
+
+  test 'file_by_uuid: no CORS header provided for disallowed origin' do
+    @request.headers['Origin'] = 'https://evil.example'
+
+    LevelStarterAssetsHelper.
+      expects(:get_object).
+      with(@uuid_name).
+      returns(@file_obj)
+    LevelStarterAssetsHelper.
+      expects(:read_file).
+      with(@file_obj).
+      returns('hello, world!')
+
+    level = create(:weblab2)
+    get :file_by_uuid, params: {level_name: level.name, uuid: @uuid, format: 'png'}
+
+    # Expect to see a missing CORS header for the disallowed origin.
+    assert_nil response.headers['Access-Control-Allow-Origin']
   end
 
   test 'upload: forbidden for non-levelbuilders' do
@@ -125,17 +195,30 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test 'upload_by_uuid: forbidden for non-levelbuilders' do
+    sign_in create(:student)
+    post :upload, params: {level_name: create(:weblab2).name, uuid: @uuid, files: []}
+    assert_response :forbidden
+  end
+
+  test 'upload_by_uuid: forbidden if not in levelbuilder_mode' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns(false)
+    sign_in create(:levelbuilder)
+    post :upload_by_uuid, params: {level_name: create(:weblab2).name, uuid: @uuid, files: []}
+    assert_response :forbidden
+  end
+
   test 'upload: raises an error if 2+ files are uploaded' do
     sign_in create(:levelbuilder)
 
     e = assert_raises do
-      post :upload, params: {level_name: create(:applab).name, files: ['file-1', 'file-2']}
+      post :upload, params: {level_name: create(:weblab2).name, uuid: @uuid, files: ['file-1', 'file-2']}
     end
     assert_equal 'One file upload expected. Actual: 2', e.message
   end
 
   test 'upload: returns unprocessable_entity if file extension is invalid' do
-    LevelStarterAssetsController.any_instance.expects(:get_object).never
+    LevelStarterAssetsHelper.expects(:get_object).never
 
     # File must exist in order to use fixture_file_upload.
     invalid_filename = 'invalid.exe'
@@ -152,9 +235,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
   end
 
   test 'upload: returns unprocessable_entity if file fails to upload' do
-    LevelStarterAssetsController.any_instance.
-      expects(:get_object).
-      returns(@file_obj)
+    LevelStarterAssetsHelper.expects(:get_object).returns(@file_obj)
     @file_obj.expects(:upload_file).returns(false)
 
     sign_in create(:levelbuilder)
@@ -164,9 +245,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
   end
 
   test 'upload: raises if file uploads but starter asset is not added' do
-    LevelStarterAssetsController.any_instance.
-      expects(:get_object).
-      returns(@file_obj)
+    LevelStarterAssetsHelper.expects(:get_object).returns(@file_obj)
     @file_obj.expects(:upload_file).returns(true)
     Level.any_instance.expects(:valid?).twice.returns(true, false)
 
@@ -177,13 +256,11 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
   end
 
   test 'upload: returns summary if file uploads and starter asset is added' do
-    LevelStarterAssetsController.any_instance.
-      expects(:get_object).
-      returns(@file_obj)
+    LevelStarterAssetsHelper.expects(:get_object).returns(@file_obj)
     @file_obj.expects(:upload_file).returns(true)
 
     sign_in create(:levelbuilder)
-    level = create :applab
+    level = create(:applab)
     post :upload, params: {level_name: level.name, files: [@file]}
 
     level.reload
@@ -195,13 +272,26 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     assert_equal 123, summary['size']
   end
 
+  test 'upload_by_uuid: returns summary if file uploads' do
+    LevelStarterAssetsHelper.expects(:get_object).returns(@file_obj)
+    @file_obj.expects(:upload_file).returns(true)
+
+    sign_in create(:levelbuilder)
+    level = create(:weblab2)
+    post :upload_by_uuid, params: {level_name: level.name, uuid: @uuid, files: [@file]}
+
+    assert_response :success
+    summary = JSON.parse(response.body)
+    assert_equal @filename, summary['filename']
+    assert_equal 'image', summary['category']
+    assert_equal 123, summary['size']
+  end
+
   test 'upload: can successfully upload files with single- and double- quotes in filenames' do
-    LevelStarterAssetsController.any_instance.
-      expects(:get_object).twice.
-      returns(@file_obj)
+    LevelStarterAssetsHelper.expects(:get_object).twice.returns(@file_obj)
     @file_obj.expects(:upload_file).twice.returns(true)
     sign_in create(:levelbuilder)
-    level = create :applab
+    level = create(:applab)
 
     single_quote_filename = "my-'file'.jpg"
     FileUtils.touch(single_quote_filename)
@@ -224,7 +314,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
 
   test 'destroy: forbidden for non-levelbuilders' do
     sign_in create(:student)
-    delete :destroy, params: {level_name: create(:applab).name, filename: 'my-file.png'}
+    delete :destroy, params: {level_name: create(:applab).name, filename: 'my-file', format: 'png'}
 
     assert_response :forbidden
   end
@@ -233,27 +323,29 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns(false)
 
     sign_in create(:levelbuilder)
-    delete :destroy, params: {level_name: create(:applab).name, filename: 'my-file.png'}
+    delete :destroy, params: {level_name: create(:applab).name, filename: 'my-file', format: 'png'}
 
     assert_response :forbidden
   end
 
   test 'destroy: returns no_content if starter asset successfully deleted' do
-    level = create :applab, starter_assets: {'my-file.png' => '123-abc.png'}
+    level = create(:applab, starter_assets: {'my-file.png' => '123-abc.png'})
 
     sign_in create(:levelbuilder)
-    delete :destroy, params: {level_name: level.name, filename: 'my-file.png'}
+    delete :destroy, params: {level_name: level.name, filename: 'my-file', format: 'png'}
 
     assert_response :no_content
+    assert_nil level.reload.starter_assets
   end
 
   test 'destroy: returns no_content if starter asset does not exist' do
-    level = create :applab, starter_assets: {'my-file.png' => '123-abc.png'}
+    level = create(:applab, starter_assets: {'my-file.png' => '123-abc.png'})
 
     sign_in create(:levelbuilder)
-    delete :destroy, params: {level_name: level.name, filename: 'my-other-file.png'}
+    delete :destroy, params: {level_name: level.name, filename: 'my-other-file', format: 'png'}
 
     assert_response :no_content
+    assert level.reload.starter_assets.key?('my-file.png')
   end
 
   test 'destroy: raises if starter asset fails to be deleted' do
@@ -261,7 +353,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
 
     sign_in create(:levelbuilder)
     assert_raises ActiveRecord::RecordInvalid do
-      delete :destroy, params: {level_name: create(:applab).name, filename: 'my-file.png'}
+      delete :destroy, params: {level_name: create(:applab).name, filename: 'my-file', format: 'png'}
     end
   end
 end

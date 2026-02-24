@@ -1,27 +1,16 @@
-const menuButton = document.querySelector("ul.how-to-nav button.menu-button");
-const menuList = document.querySelector("ul.how-to-nav ul.menu-list");
-
-// Dropdown menu in hero banner
-menuButton.onclick = () => {
-  if (menuList.style.display !== "none") {
-    menuList.style.display = "none";
-    menuButton.classList.remove("rotate");
-  } else {
-    menuList.style.display = "block";
-    menuButton.classList.add("rotate");
-  }
-};
-
-document.body.addEventListener("click", (event) => {
-  const pageArea = event.target;
-  if (pageArea !== menuButton && pageArea !== menuList) {
-    menuList.style.display = "none";
-    menuButton.classList.remove("rotate");
-  }
-});
-
-// Sticky scroller styles on steps section navigation
 window.addEventListener("DOMContentLoaded", () => {
+  // Add active state styles to guide navigation
+  const buttonTeachers = document.querySelector("nav.choose-guide a.teachers");
+  const buttonEvents = document.querySelector("nav.choose-guide a.events");
+  const pathname = window.location.pathname;
+
+  if (pathname.includes("/how-to/events")) {
+    buttonEvents.classList.add("active");
+  } else if (pathname.includes("/how-to")) {
+    buttonTeachers.classList.add("active");
+  }
+
+  // Sticky scroller styles on steps section navigation
   const options = {
     rootMargin: "-10% 0px -90%",
   };

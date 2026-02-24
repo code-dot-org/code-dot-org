@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: “Hola Món: Espai”, body: “Crea escenes intergalàctiques amb personatges i sons que et tindran dient, \"Hola mons!\"”, image: "/images/hoc2022-hello-world-space.png“, url:" https://studio.code.org/s/hello-world-space-2022/reset" }}
-
-{{ featured_tutorial, title: “Jam espacial de la NASA”, body: “Crear un sistema solar que realment roques, aprendre sobre música, astronomia, i la codificació en el procés!”, image: "/images/hoc2022-nasa-space-jam.png“, url:" https://chandra.si.edu/sound/code/" }}
-
-{{featured_tutorial, title: “Star Wars”, body: “Aprèn a programar droides, i crea el teu propi joc de Star Wars en una galàxia molt, molt llunyana. “, image:" /shared/images/courses/logo_tall_starwars.jpg“, url:" https://code.org/starwars" }}
-
-{{ featured_tutorial, title: “SciGirls Code Quest”, body: “En aquesta aventura de codificació en línia, portareu Subby el submarí a través de desafiaments submarins.“, image: "/images/hoc2022-scigirls-code-quest.png“, url:" https://pbskids.org/scigirls/games/code-quest" }}

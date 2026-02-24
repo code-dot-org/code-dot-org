@@ -18,4 +18,4 @@
           - if script_level
             %td= link_to 'Play', script_next_path(script)
           %td= link_to(t('crud.edit'), edit_script_path(script))
-          %td= link_to t('crud.destroy'), script_path(script), method: :delete, data: { confirm: "Deleting [#{script.name}], #{t('crud.confirm')}" }
+          %td= link_to t('crud.destroy'), script_path(script), method: :delete, data: { confirm: "Deleting [#{script.name}], #{t('crud.confirm')} \n\nIf the unit is part of an unit group, delete the unit in staging and production environments before the content is seeded." }

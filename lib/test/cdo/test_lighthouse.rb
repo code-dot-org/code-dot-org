@@ -36,7 +36,7 @@ class LighthouseTest < Minitest::Test
   def test_lighthouse_errors
     skip
     ensure_lighthouse
-    mount = ->(req, resp) do
+    mount = lambda do |req, resp|
       if req.path == '/'
         resp.content_type = 'text/html'
         resp.body = '<html><body><img src="/error1"/><img src="/error2"/></body></html>'

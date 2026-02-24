@@ -1,0 +1,26 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2024-08-27T20:58:53.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "####<i class=\"fa-solid fa-sparkles\"></i> Make Music!\r\n\r\n1. Start with connecting one sound under [when run](#clickable=when-run-block).\r\n2. Then drag another sound block under the first one.\r\n3. Add as many as you like!\r\n4. Press [Run](#clickable=run-button) to hear your song.\r\n",
+    "hide_share_and_remix": "false",
+    "display_name": "Make your own melody",
+    "level_data": {
+      "library": "launch2024"
+    },
+    "bubble_choice_description": "Code your own music with the sound blocks from the toolbox. ",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "thumbnail_url": "https://images.code.org/56431a8318da69ef5ae80e4401015c12-party.png",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2024-08-29 20:42:13 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-10-08 18:29:34 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-13 19:35:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-13 20:09:53 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

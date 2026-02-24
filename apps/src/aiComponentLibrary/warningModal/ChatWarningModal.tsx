@@ -1,12 +1,8 @@
+import Button, {buttonColors} from '@code-dot-org/component-library/button';
+import {Typography} from '@mui/material';
 import React from 'react';
 
-import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
-import {
-  BodyTwoText,
-  Heading3,
-  StrongText,
-} from '@cdo/apps/componentLibrary/typography';
-import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
+import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import i18n from '@cdo/locale';
 
 import moduleStyles from './warning-modal.module.scss';
@@ -23,14 +19,26 @@ const ChatWarningModal: React.FunctionComponent<ChatWarningModalProps> = ({
   onClose,
 }) => (
   <AccessibleDialog onClose={onClose} className={moduleStyles.chatWarningModal}>
-    <Heading3>{i18n.aiWarningModalHeader()}</Heading3>
+    <div className={moduleStyles.headerContainer}>
+      <Typography variant="h3" gutterBottom>
+        {i18n.aiWarningModalHeader()}
+      </Typography>
+    </div>
     <hr />
-    <BodyTwoText>
-      <StrongText>{i18n.aiWarningModalMessagesAreRecorded()}</StrongText>
-    </BodyTwoText>
-    <BodyTwoText>{i18n.aiWarningModalInappropriateFlagged()}</BodyTwoText>
-    <br />
-    <BodyTwoText>{i18n.aiWarningModalPersonalNotSubmitted()}</BodyTwoText>
+    <div className={moduleStyles.warningModuleTextContainer}>
+      <Typography variant="body2" gutterBottom>
+        <strong>{i18n.aiWarningModalMessagesAreRecorded()}</strong>
+      </Typography>
+      <Typography variant="body2" gutterBottom>
+        {i18n.aiWarningModalInappropriateFlagged()}
+      </Typography>
+      <Typography variant="body2" gutterBottom>
+        {i18n.aiWarningUnsaved()}
+      </Typography>
+      <Typography variant="body2" gutterBottom>
+        {i18n.aiWarningModalPersonalNotSubmitted()}
+      </Typography>
+    </div>
     <hr />
     <div className={moduleStyles.bottomSection}>
       <Button

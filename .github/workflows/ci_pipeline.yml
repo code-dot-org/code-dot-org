@@ -57,13 +57,13 @@ jobs:
       - name: Set up Docker Environment
         run: docker build -t code-dot-org-testing-docker-image -f ./code-dot-org/docker/dockerfiles/Dockerfile ./code-dot-org
 
-      - name: Debugging Directories and Files in Docker as User CircleCI
+      - name: Debugging Directories and Files in Docker as User ci
         run: |        
-          echo "Searching for ui_tests.sh in /home/circleci as circleci"
-          docker run --user circleci code-dot-org-testing-docker-image /bin/bash -c "find /home/circleci -type f -name 'ui_tests.sh'"
+          echo "Searching for ui_tests.sh in /home/ci as ci"
+          docker run --user ci code-dot-org-testing-docker-image /bin/bash -c "find /home/ci -type f -name 'ui_tests.sh'"
           
-          echo "Displaying Environment Variables as circleci"
-          docker run --user circleci code-dot-org-testing-docker-image /bin/bash -c "printenv"
+          echo "Displaying Environment Variables as ci"
+          docker run --user ci code-dot-org-testing-docker-image /bin/bash -c "printenv"
 
       - name: Update Cache
         uses: actions/cache@v2

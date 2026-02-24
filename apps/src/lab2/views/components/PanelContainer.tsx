@@ -1,7 +1,6 @@
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
-import React, {useContext} from 'react';
-
-import {ThemeContext} from '../ThemeWrapper';
+import React from 'react';
 
 import moduleStyles from './panelContainer.module.scss';
 
@@ -17,7 +16,7 @@ interface PanelContainerProps {
 }
 
 /**
- * A container for a top-level panel with a header.  The content of the panel
+ * A container for a top-level panel, typically with a header.  The content of the panel
  * is provided as children.  Whether the header is shown is determined by an
  * external state value.  The panel container always occupies the full size of
  * its parent; this means that the main scene is responsible for allocating
@@ -33,8 +32,6 @@ const PanelContainer: React.FunctionComponent<PanelContainerProps> = ({
   className,
   headerClassName,
 }) => {
-  const {theme} = useContext(ThemeContext);
-
   return (
     <div
       className={classNames(
@@ -48,41 +45,44 @@ const PanelContainer: React.FunctionComponent<PanelContainerProps> = ({
         <div
           className={classNames(
             'panelContainerHeader',
-            moduleStyles['panelContainerHeader-' + theme],
+            moduleStyles.panelContainerHeader,
             headerClassName
           )}
         >
-          {leftHeaderContent && (
-            <div
-              className={classNames(
-                'panelContainerHeaderItemLeft',
-                moduleStyles.panelContainerHeaderItem,
-                moduleStyles.panelContainerHeaderItemLeft
-              )}
-            >
-              {leftHeaderContent}
-            </div>
-          )}
           <div
+            className={classNames(
+              'panelContainerHeaderItemLeft',
+              moduleStyles.panelContainerHeaderItem,
+              moduleStyles.panelContainerHeaderItemLeft
+            )}
+          >
+            {leftHeaderContent}
+          </div>
+          <Typography
             className={classNames(
               'panelContainerHeaderItemText',
               moduleStyles.panelContainerHeaderItem,
-              moduleStyles.panelContainerHeaderItemText
+              moduleStyles.panelContainerHeaderItemCenter
+            )}
+            component="h2"
+            variant="overline2"
+            gutterBottom
+          >
+            <span
+              className={classNames(moduleStyles.panelContainerHeaderItemText)}
+            >
+              {headerContent}
+            </span>
+          </Typography>
+          <div
+            className={classNames(
+              'panelContainerHeaderItemRight',
+              moduleStyles.panelContainerHeaderItem,
+              moduleStyles.panelContainerHeaderItemRight
             )}
           >
-            {headerContent}
+            {rightHeaderContent}
           </div>
-          {rightHeaderContent && (
-            <div
-              className={classNames(
-                'panelContainerHeaderItemRight',
-                moduleStyles.panelContainerHeaderItem,
-                moduleStyles.panelContainerHeaderItemRight
-              )}
-            >
-              {rightHeaderContent}
-            </div>
-          )}
         </div>
       )}
       {children}

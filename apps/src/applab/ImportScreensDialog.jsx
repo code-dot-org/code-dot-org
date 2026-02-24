@@ -1,14 +1,18 @@
 /* eslint-disable react/no-danger */
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
 
 import AssetThumbnail, {
   styles as assetThumbnailStyles,
 } from '../code-studio/components/AssetThumbnail';
+import Dialog, {
+  Body,
+  Buttons,
+  Confirm,
+  Cancel,
+} from '../legacySharedComponents/Dialog';
 import Sounds from '../Sounds';
-import Dialog, {Body, Buttons, Confirm, Cancel} from '../templates/Dialog';
 import MultiCheckboxSelector, {
   styles as multiCheckboxStyles,
 } from '../templates/MultiCheckboxSelector';
@@ -54,7 +58,7 @@ class AssetListItemUnwrapped extends React.Component {
           projectId={projectId}
           soundPlayer={soundPlayer}
         />
-        <div style={[styles.assetListItemText, styles.subtext]}>
+        <div style={combineStyles(styles.assetListItemText, styles.subtext)}>
           {asset.filename}
           {asset.willReplace && (
             <p style={styles.warning}>
@@ -67,7 +71,7 @@ class AssetListItemUnwrapped extends React.Component {
     );
   }
 }
-export const AssetListItem = Radium(AssetListItemUnwrapped);
+export const AssetListItem = AssetListItemUnwrapped;
 
 function quotedCommaJoin(strings) {
   return strings.map(s => `"${s}"`).join(', ');
@@ -82,10 +86,10 @@ class ScreenListItemUnwrapped extends React.Component {
     const {screen} = this.props;
     return (
       <div
-        style={[
+        style={combineStyles(
           styles.screenListItem,
-          !screen.canBeImported && styles.disabledScreenListItem,
-        ]}
+          !screen.canBeImported && styles.disabledScreenListItem
+        )}
       >
         <div style={styles.miniScreenWrapper}>
           <div
@@ -118,7 +122,7 @@ class ScreenListItemUnwrapped extends React.Component {
     );
   }
 }
-export const ScreenListItem = Radium(ScreenListItemUnwrapped);
+export const ScreenListItem = ScreenListItemUnwrapped;
 
 export class ImportScreensDialog extends React.Component {
   static propTypes = {
@@ -231,6 +235,9 @@ export class ImportScreensDialog extends React.Component {
     );
   }
 }
+
+const combineStyles = (...styles) =>
+  Object.assign({}, ...styles.filter(Boolean));
 
 // TODO: ditch color and fontSize in favor of more unified style components when they exist.
 const styles = {

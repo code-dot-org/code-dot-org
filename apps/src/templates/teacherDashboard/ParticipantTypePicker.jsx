@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 /**
  * View shown to an instructor if they can create sections with different participant types
  * (students, teachers, facilitators). Allows user to pick participant type for this section
@@ -8,7 +9,6 @@ import React, {Component} from 'react';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
 
-import {Heading3} from '../../lib/ui/Headings';
 import styleConstants from '../../styleConstants';
 import color from '../../util/color';
 
@@ -47,7 +47,9 @@ export default class ParticipantTypePicker extends Component {
 
     return (
       <div style={style.container} className="uitest-participant-type-picker">
-        <Heading3 isRebranded>{title}</Heading3>
+        <Typography variant="h3" gutterBottom>
+          {title}
+        </Typography>
         <p style={style.bodyText}>
           {i18n.professionalLearningParticipantQuestion()}
         </p>

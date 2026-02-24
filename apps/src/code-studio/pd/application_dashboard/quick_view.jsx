@@ -15,10 +15,10 @@ import {connect} from 'react-redux';
 import Select from 'react-select';
 
 import 'react-select/dist/react-select.css';
+import Spinner from '../../../sharedComponents/Spinner';
 import RegionalPartnerDropdown, {
   RegionalPartnerPropType,
 } from '../components/regional_partner_dropdown';
-import Spinner from '../components/spinner';
 import {SelectStyleProps} from '../constants';
 
 import CohortCalculator, {countAcceptedApplications} from './cohort_calculator';

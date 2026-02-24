@@ -1,0 +1,18 @@
+name 'test-intro-to-programming-lesson4-level2c0'
+title 'Designing an Algorithm - Access to Laptops'
+description 'description here'
+
+markdown <<MARKDOWN
+# Prioritizing Emergency Responses
+
+## Scenario Introduction
+
+##### You are designing an algorithm to prioritize emergency response resources (e.g., ambulances or firefighters) when there are multiple incidents at the same time.
+
+## Background Information:
+
+- Resources are limited, and not all emergencies can be addressed simultaneously.
+- Some incidents may require immediate attention (e.g., life-threatening situations).
+
+
+MARKDOWN

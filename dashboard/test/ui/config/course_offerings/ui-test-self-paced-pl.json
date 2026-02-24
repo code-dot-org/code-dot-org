@@ -1,0 +1,10 @@
+{
+  "key": "ui-test-self-paced-pl",
+  "display_name": "Self Paced PL Course",
+  "is_featured": false,
+  "assignable": true,
+  "curriculum_type": null,
+  "marketing_initiative": null,
+  "grade_levels": null,
+  "header": "self_paced"
+}

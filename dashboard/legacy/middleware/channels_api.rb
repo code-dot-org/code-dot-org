@@ -74,7 +74,7 @@ class ChannelsApi < Sinatra::Base
     project = Projects.new(get_storage_id)
 
     begin
-      _, remix_parent_id = storage_decrypt_channel_id(request.GET['parent']) if request.GET['parent']
+      _, remix_parent_id = get_storage_id_and_project_id(request.GET['parent']) if request.GET['parent']
     rescue ArgumentError, OpenSSL::Cipher::CipherError, Projects::ValidationError
       bad_request
     end
@@ -88,26 +88,12 @@ class ChannelsApi < Sinatra::Base
 
     timestamp = Time.now
 
-    published_at = nil
-
-    if data['shouldPublish']
-      project_type = data['projectType']
-      bad_request unless ALL_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
-      forbidden if sharing_disabled? && !ALWAYS_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
-
-      # The client decides whether to publish the project, but we rely on the
-      # server to generate the timestamp. Remove shouldPublish from the project
-      # data because it doesn't make sense to persist it.
-      published_at = timestamp
-      data.delete('shouldPublish')
-    end
-
     begin
       id = project.create(
         data.merge('createdAt' => timestamp, 'updatedAt' => timestamp),
         ip: request.ip,
         type: data['projectType'],
-        published_at: published_at,
+        published_at: nil,
         remix_parent_id: remix_parent_id,
         )
     rescue Projects::ValidationError
@@ -200,71 +186,6 @@ class ChannelsApi < Sinatra::Base
   end
 
   #
-  # POST /v3/channels/<channel-id>/publish/<project-type>
-  #
-  # Marks the specified channel as published.
-  #
-  post %r{/v3/channels/([^/]+)/publish/([^/]+)} do |channel_id, project_type|
-    not_authorized unless owns_channel?(channel_id)
-    bad_request unless ALL_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
-    forbidden('Sharing disabled for user account') if sharing_disabled? && CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
-    forbidden('Project in restricted share mode') if Projects.in_restricted_share_mode(channel_id, project_type)
-
-    begin
-      # Once we have back-filled the project_type column for all channels,
-      # it will no longer be necessary to specify the project type here.
-      Projects.new(get_storage_id).publish(channel_id, project_type, current_user).to_json
-    rescue Projects::PublishError => exception
-      forbidden(exception.message)
-    end
-  end
-
-  #
-  # POST /v3/channels/<channel-id>/unpublish
-  #
-  # Marks the specified channel as no longer published.
-  #
-  post %r{/v3/channels/([^/]+)/unpublish} do |channel_id|
-    not_authorized unless owns_channel?(channel_id)
-    Projects.new(get_storage_id).unpublish(channel_id)
-    {publishedAt: nil}.to_json
-  end
-
-  #
-  # POST /v3/channels/<channel-id>/disable_content_moderation
-  #
-  # Disables automatic content moderation.
-  #
-  post %r{/v3/channels/([^/]+)/disable-content-moderation} do |channel_id|
-    not_authorized unless project_validator?
-    dont_cache
-    content_type :json
-    begin
-      value = Projects.new(get_storage_id).set_content_moderation(channel_id, true)
-    rescue ArgumentError, OpenSSL::Cipher::CipherError
-      bad_request
-    end
-    {skip_content_moderation: value}.to_json
-  end
-
-  #
-  # POST /v3/channels/<channel-id>/enable_content_moderation
-  #
-  # Enables automatic content moderation.
-  #
-  post %r{/v3/channels/([^/]+)/enable-content-moderation} do |channel_id|
-    not_authorized unless project_validator?
-    dont_cache
-    content_type :json
-    begin
-      value = Projects.new(get_storage_id).set_content_moderation(channel_id, false)
-    rescue ArgumentError, OpenSSL::Cipher::CipherError
-      bad_request
-    end
-    {skip_content_moderation: value}.to_json
-  end
-
-  #
   # GET /v3/channels/<channel-id>/privacy-profanity
   #
   # Get an indication of privacy/profanity violation.
@@ -301,7 +222,7 @@ class ChannelsApi < Sinatra::Base
   #
   # GET /v3/channels/<channel-id>/sharing_disabled
   #
-  # Get the ability to share a project based on it's owner's share setting.
+  # Get the ability to share a project based on its owner's share setting.
   #
   get %r{/v3/channels/([^/]+)/sharing_disabled} do |id|
     dont_cache
@@ -312,6 +233,22 @@ class ChannelsApi < Sinatra::Base
       bad_request
     end
     {sharing_disabled: value}.to_json
+  end
+
+  #
+  # GET /v3/channels/<channel-id>/is_teacher_of_project_owner
+  #
+  # Get if the current user is a teacher of the project owner.
+  #
+  get %r{/v3/channels/([^/]+)/is_teacher_of_project_owner} do |id|
+    dont_cache
+    content_type :json
+    begin
+      value = Projects.new(get_storage_id).get_is_teacher_of_project_owner(id, current_user_id)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      bad_request
+    end
+    {is_teacher_of_project_owner: value}.to_json
   end
 
   #
@@ -329,26 +266,6 @@ class ChannelsApi < Sinatra::Base
   #
   # API endpoint removed. Functionality moved to ReportAbuseController.
   #
-
-  #
-  # POST /v3/channels/<channel-id>/buffer_abuse_score
-  #
-  # Set an abuse score to -50 to buffer against false
-  # reporting. Used for featured projects.
-  #
-  post %r{/v3/channels/([^/]+)/buffer_abuse_score$} do |id|
-    # UserPermission::PROJECT_VALIDATOR
-    not_authorized unless project_validator?
-
-    dont_cache
-    content_type :json
-    begin
-      value = Projects.new(get_storage_id).buffer_abuse_score(id)
-    rescue ArgumentError, OpenSSL::Cipher::CipherError
-      bad_request
-    end
-    {abuse_score: value}.to_json
-  end
 
   #
   # DELETE /v3/channels/<channel-id>/abuse

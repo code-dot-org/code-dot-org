@@ -2,24 +2,27 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
+import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import locale from '@cdo/locale';
 
-import RailsAuthenticityToken from '../../lib/util/RailsAuthenticityToken';
 import color from '../../util/color';
 import BaseDialog from '../BaseDialog';
 
+import ReauthorizeGoogleClassroom from './ReauthorizeGoogleClassroom';
 import {classroomShape, loadErrorShape} from './shapes';
 import {
   cancelImportRosterFlow,
   importOrUpdateRoster,
-  isRosterDialogOpen,
+  rosterImportFailed,
 } from './teacherSectionsRedux';
+import {isRosterDialogOpen} from './teacherSectionsReduxSelectors';
 
 const COMPLETED_EVENT = 'Section Setup Completed';
 const CANCELLED_EVENT = 'Section Setup Cancelled';
+
+const ARCHIVED_STATE = 'ARCHIVED';
 
 const ctaButtonStyle = {
   background: color.orange,
@@ -47,6 +50,12 @@ const ClassroomList = ({classrooms, onSelect, selectedId, rosterProvider}) =>
           {classroom.name}
           {classroom.section && (
             <span style={{color: '#aaa'}}> ({classroom.section})</span>
+          )}
+          {classroom.course_state === ARCHIVED_STATE && (
+            <span id="course-state" style={{color: color.bootstrap_error_text}}>
+              {' '}
+              - {classroom.course_state}
+            </span>
           )}
           <span style={{float: 'right'}}>
             {locale.code()}
@@ -92,8 +101,10 @@ NoClassroomsFound.propTypes = {
   rosterProvider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
 };
 
-const ROSTERED_SECTIONS_SUPPORT_URL =
+const GOOGLE_CLASSROOMS_SYNC_SUPPORT_URL =
   'https://support.code.org/hc/en-us/articles/115001319312';
+const ROSTERED_SECTIONS_SUPPORT_URL =
+  'https://support.code.org/hc/en-us/articles/6496495212557';
 
 const LoadError = ({rosterProvider, loginType}) => {
   switch (rosterProvider) {
@@ -104,7 +115,7 @@ const LoadError = ({rosterProvider, loginType}) => {
           <ReauthorizeGoogleClassroom />
           <p>
             <a
-              href={ROSTERED_SECTIONS_SUPPORT_URL}
+              href={GOOGLE_CLASSROOMS_SYNC_SUPPORT_URL}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -133,24 +144,12 @@ LoadError.propTypes = {
   loginType: PropTypes.string,
 };
 
-const REAUTHORIZE_URL =
-  '/users/auth/google_oauth2?scope=userinfo.email,userinfo.profile,classroom.courses.readonly,classroom.rosters.readonly';
-function ReauthorizeGoogleClassroom() {
-  return (
-    <form method="POST" action={REAUTHORIZE_URL}>
-      <RailsAuthenticityToken />
-      <button type="submit" style={ctaButtonStyle}>
-        {locale.authorizeGoogleClassrooms()}
-      </button>
-    </form>
-  );
-}
-
 class RosterDialog extends React.Component {
   static propTypes = {
     // Provided by Redux
     handleImport: PropTypes.func,
     handleCancel: PropTypes.func,
+    handleImportFailure: PropTypes.func,
     isOpen: PropTypes.bool,
     classrooms: PropTypes.arrayOf(classroomShape),
     loadError: loadErrorShape,
@@ -199,7 +198,8 @@ class RosterDialog extends React.Component {
         courseName,
       })
         .done(resolve)
-        .fail(jqxhr =>
+        .fail(jqxhr => {
+          this.props.handleImportFailure(jqxhr);
           reject(
             new Error(`
             url: ${importSectionUrl}
@@ -207,8 +207,8 @@ class RosterDialog extends React.Component {
             statusText: ${jqxhr.statusText}
             responseText: ${jqxhr.responseText}
           `)
-          )
-        );
+          );
+        });
     }).then(newSection => this.redirectToEditSectionPage(newSection.id));
   };
 
@@ -230,7 +230,7 @@ class RosterDialog extends React.Component {
       {
         oauthSource: rosterProvider,
       },
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   };
 
@@ -353,5 +353,6 @@ export default connect(
   {
     handleImport: importOrUpdateRoster,
     handleCancel: cancelImportRosterFlow,
+    handleImportFailure: rosterImportFailed,
   }
 )(RosterDialog);

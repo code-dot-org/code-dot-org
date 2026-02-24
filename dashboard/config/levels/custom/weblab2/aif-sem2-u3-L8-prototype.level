@@ -1,0 +1,75 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-11-12T19:42:58.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "suggest",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\" />\n  <title>Lesson 8 · Student Film Festival Organizer</title>\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n  <link rel=\"stylesheet\" href=\"style.css\" />\n  <script defer src=\"script.js\"></script>\n</head>\n<body>\n  <div class=\"wrap\">\n    <header>\n      <h1>Student Film Festival · Search Organizer</h1>\n      <p>Search through student film submissions. Explore how inclusive and user-friendly your search logic can be.</p>\n      <div class=\"toolbar\" role=\"group\" aria-label=\"Display options\">\n        <label><input type=\"checkbox\" id=\"toggle-contrast\" /> High contrast</label>\n        <label><input type=\"checkbox\" id=\"big-text\" /> Larger text</label>\n      </div>\n    </header>\n\n    <div class=\"grid\">\n      <main class=\"panel\" id=\"left\">\n        <h2>Film Submissions</h2>\n\n        <div class=\"controls\" aria-label=\"Search controls\">\n          <label for=\"searchInput\">Search by title</label>\n          <input id=\"searchInput\" type=\"text\" placeholder=\"Type to search...\" />\n          <button id=\"clearSearch\" class=\"secondary\">Clear</button>\n        </div>\n\n        <section id=\"feed\" class=\"feed\" aria-label=\"Film cards\">\n          <!-- Cards injected by script.js -->\n        </section>\n      </main>\n\n      <aside class=\"panel\" id=\"right\">\n        <h2>Search Results</h2>\n        <div class=\"meter\">\n          <p><span id=\"result-count\" class=\"pill\">0 results</span></p>\n          <p id=\"search-summary\" class=\"muted\">Type a search term to begin.</p>\n        </div>\n\n        <hr />\n        <section>\n          <h3>Highlights for Strong Search Functions</h3>\n          <ul class=\"small\">\n            <li>Search should be case-insensitive.</li>\n            <li>Handle empty queries gracefully (show all films).</li>\n            <li>Use clear conditionals to avoid missing matches.</li>\n            <li>Ensure results are readable and accessible.</li>\n          </ul>\n        </section>\n      </aside>\n    </div>\n\n    <section class=\"panel\" style=\"margin-top:1rem\">\n      <h2>Notes for Analysis</h2>\n      <ul class=\"small\">\n        <li>Try mixed-case queries to test case-insensitivity.</li>\n        <li>Clear the field to check if all items reappear.</li>\n        <li>Watch how the result count and summary respond dynamically.</li>\n      </ul>\n    </section>\n  </div>\n</body>\n</html>\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "L8.md",
+          "language": "md",
+          "contents": "# Lesson 8 · Student Film Festival Organizer\n\n## Searching\n\n**Question of the Day:**\\\nHow can search functions help users find what they need in a web app?\n\n**Objectives:**\\\n- Write a search function that retrieves dataset items by schema\nfields.\\\n- Debug a search function.\\\n- Validate a search function using AI-generated test cases and refine\nthem for edge cases.\n\n------------------------------------------------------------------------\n\n## 🎬 Scenario\n\nYou're part of the **Student Film Festival Organizer** team. Your web\napp lists festival submissions --- each with a title, genre, director,\nand rating. Your job is to design a search bar that helps users\ninstantly find what they're looking for.\n\n### Sample Dataset\n\n``` js\nconst FILMS = [\n  { title: \"Echoes of the City\", genre: \"Drama\", director: \"Leila Tran\", rating: 8.2 },\n  { title: \"Chasing Light\", genre: \"Documentary\", director: \"Max Rivera\", rating: 7.5 },\n  { title: \"Midnight Lens\", genre: \"Thriller\", director: \"Amira Patel\", rating: 8.9 },\n  { title: \"Blue Horizon\", genre: \"Romance\", director: \"Jon Park\", rating: 6.8 },\n  { title: \"Static Signal\", genre: \"Sci-Fi\", director: \"Kai Lopez\", rating: 7.9 }\n];\n```\n\n------------------------------------------------------------------------\n\n## 🧭 ECHO Framework Cycle\n\n### **E · Explore**\n\nStudents prompt AI: \\> \"Show me two different ways to write a search\nfunction that finds films by title using .map() and conditionals.\"\n\nAI might produce two examples, such as:\\\n1. A case-insensitive search using `toLowerCase()`.\\\n2. A version that returns all items when the query is empty.\n\nStudents run both and observe how each handles blank inputs and\ncapitalization differences.\n\n------------------------------------------------------------------------\n\n### **C · Co-Create**\n\nStudents refine the AI outputs by asking:\\\n\\> \"Why did you use toLowerCase()?\"\\\n\\> \"What happens if the query is empty?\"\\\n\\> \"Can you adjust this so it shows all items when there's no search\nterm?\"\n\nThey merge the best parts into a single improved function and test it\nlive in the app.\n\n------------------------------------------------------------------------\n\n### **H · Highlights**\n\nStudents extract \"rules of thumb\" for strong search functions: - Always\nmake search **case-insensitive**.\\\n- Handle **empty queries** gracefully.\\\n- Use **clear conditionals** that don't miss matches.\\\n- Keep the logic **readable and aligned with schema** fields.\n\nThese highlighted patterns and best practices are captured in a reflection card inside the prototype.\n\n------------------------------------------------------------------------\n\n### **O · Own**\n\nStudents write their own version from scratch:\n\n``` js\nfunction searchFilms(query) {\n  return FILMS.map(film => {\n    if (!query || film.title.toLowerCase().includes(query.toLowerCase())) {\n      return film;\n    }\n  }).filter(Boolean);\n}\n```\n\nThey then validate it using AI-generated test cases such as:\n\n    [\"blue\", \"Blue\", \"\", \"blurple\"]\n\nand record how each performs --- identifying edge cases where logic\nfails or unexpected matches occur.\n\n------------------------------------------------------------------------\n\n## ✅ Debug & Validation Step\n\nStudents use AI to:\\\n- Generate new test cases (\"make five slightly tricky film titles to\ntest capitalization or spacing\").\\\n- Predict expected results for each.\\\n- Compare predicted vs. actual output and fix bugs accordingly.\n\n------------------------------------------------------------------------\n\n## 💼 Career Connection\n\n**QA / Test Engineer** --- Students act as testers validating input\nbehavior and identifying reliability issues.\\\n**Information Architect** --- Students ensure search logic supports\ninclusive access to content (anyone can find what they need).\n\n------------------------------------------------------------------------\n\n## 🧠 Reflection Prompts\n\n-   \"How does handling edge cases improve accessibility?\"\\\n-   \"If your app were multilingual, what new search challenges might\n    arise?\"\\\n-   \"How could AI help automate future search tests?\"\n",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": ":root {\n  --bg: #fafafa;\n  --text: #222;\n  --muted: #666;\n  --accent: #0077cc;\n  --border: #ddd;\n  --pill-bg: #e0f0ff;\n  --pill-text: #004b80;\n}\n\nbody {\n  font-family: system-ui, sans-serif;\n  margin: 0;\n  background: var(--bg);\n  color: var(--text);\n  line-height: 1.5;\n}\n\n.wrap {\n  padding: 1rem 2rem;\n}\n\nheader {\n  margin-bottom: 1rem;\n}\n\nh1 {\n  margin: 0;\n  font-size: 1.75rem;\n}\n\n.grid {\n  display: grid;\n  grid-template-columns: 2fr 1fr;\n  gap: 1rem;\n}\n\n.panel {\n  border: 1px solid var(--border);\n  border-radius: 8px;\n  padding: 1rem;\n  background: white;\n}\n\n.feed {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));\n  gap: 0.75rem;\n  margin-top: 1rem;\n}\n\n.card {\n  border: 1px solid var(--border);\n  border-radius: 8px;\n  padding: 0.75rem;\n  background: #fff;\n  transition: box-shadow 0.2s;\n}\n.card:hover {\n  box-shadow: 0 2px 6px rgba(0,0,0,0.1);\n}\n\nh3 {\n  margin-top: 0;\n}\n\n.muted {\n  color: var(--muted);\n}\n\nbutton {\n  background: var(--accent);\n  color: white;\n  border: none;\n  border-radius: 4px;\n  padding: 0.4rem 0.75rem;\n  cursor: pointer;\n}\n\nbutton.secondary {\n  background: #eee;\n  color: #333;\n}\n\n.toolbar {\n  margin-top: 0.5rem;\n}\n\n.pill {\n  background: var(--pill-bg);\n  color: var(--pill-text);\n  border-radius: 999px;\n  padding: 0.25rem 0.6rem;\n  font-weight: 500;\n}\n\n.high-contrast body {\n  background: black;\n  color: white;\n}\n\n.big-text {\n  font-size: 1.2em;\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// --- DATASET ---\nconst FILMS = [\n  { title: \"Echoes of the City\", genre: \"Drama\", director: \"Leila Tran\", rating: 8.2 },\n  { title: \"Chasing Light\", genre: \"Documentary\", director: \"Max Rivera\", rating: 7.5 },\n  { title: \"Midnight Lens\", genre: \"Thriller\", director: \"Amira Patel\", rating: 8.9 },\n  { title: \"Blue Horizon\", genre: \"Romance\", director: \"Jon Park\", rating: 6.8 },\n  { title: \"Static Signal\", genre: \"Sci-Fi\", director: \"Kai Lopez\", rating: 7.9 },\n  { title: \"Blinding Blue\", genre: \"Drama\", director: \"Marin Ko\", rating: 7.2 },\n];\n\n// --- ELEMENTS ---\nconst feed = document.getElementById(\"feed\");\nconst searchInput = document.getElementById(\"searchInput\");\nconst clearBtn = document.getElementById(\"clearSearch\");\nconst resultCount = document.getElementById(\"result-count\");\nconst summary = document.getElementById(\"search-summary\");\n\n// --- INITIAL RENDER ---\nrenderFilms(FILMS);\n\n// --- SEARCH LOGIC ---\nfunction searchFilms(query) {\n  return FILMS.filter(film => {\n    if (!query) return true;\n    return film.title.toLowerCase().includes(query.toLowerCase());\n  });\n}\n\n// --- RENDER FUNCTION ---\nfunction renderFilms(films) {\n  feed.innerHTML = \"\";\n  if (films.length === 0) {\n    feed.innerHTML = `<p class=\"muted\">No results found.</p>`;\n  } else {\n    films.forEach(film => {\n      const card = document.createElement(\"div\");\n      card.className = \"card\";\n      card.innerHTML = `\n        <h3>${film.title}</h3>\n        <p><strong>Genre:</strong> ${film.genre}</p>\n        <p><strong>Director:</strong> ${film.director}</p>\n        <p><strong>Rating:</strong> ${film.rating}</p>\n      `;\n      feed.appendChild(card);\n    });\n  }\n  resultCount.textContent = `${films.length} result${films.length !== 1 ? \"s\" : \"\"}`;\n  summary.textContent = films.length === FILMS.length && !searchInput.value\n    ? \"Showing all films.\"\n    : `Showing results for “${searchInput.value}”`;\n}\n\n// --- EVENT LISTENERS ---\nsearchInput.addEventListener(\"input\", () => {\n  const results = searchFilms(searchInput.value);\n  renderFilms(results);\n});\n\nclearBtn.addEventListener(\"click\", () => {\n  searchInput.value = \"\";\n  renderFilms(FILMS);\n});\n\n// --- ACCESSIBILITY TOGGLES ---\ndocument.getElementById(\"toggle-contrast\").addEventListener(\"change\", e => {\n  document.body.classList.toggle(\"high-contrast\", e.target.checked);\n});\ndocument.getElementById(\"big-text\").addEventListener(\"change\", e => {\n  document.body.classList.toggle(\"big-text\", e.target.checked);\n});\n",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-11-12T19:42:58.444+00:00\",\"changed\":[\"cloned from \\\"aif-sem2-u3-L7-practice-prototype\\\"\"],\"cloned_from\":\"aif-sem2-u3-L7-practice-prototype\"},{\"changed_at\":\"2025-11-12 19:43:01 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-12 19:47:29 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-12 19:50:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-12 19:51:29 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-12 19:53:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

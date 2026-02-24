@@ -12,6 +12,7 @@ export const MARKETING_AUDIENCE = {
   MIDDLE: 'middle',
   HIGH: 'high',
   HOC: 'hoc',
+  HOAI: 'hoai',
   PL: 'pl',
 };
 
@@ -98,7 +99,12 @@ export default function CurriculumQuickAssignTopRow({
           determineMarketingAudience={determineMarketingAudience}
           text={i18n.teacherCourseHoc()}
         />
-
+        <MarketingAudienceButton
+          selectedMarketingAudience={marketingAudience}
+          audience={MARKETING_AUDIENCE.HOAI}
+          determineMarketingAudience={determineMarketingAudience}
+          text={i18n.marketingInitiativeHOAI()}
+        />
         {showPlOfferings && (
           <MarketingAudienceButton
             selectedMarketingAudience={marketingAudience}

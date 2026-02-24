@@ -17,22 +17,11 @@ Dashboard::Application.configure do
   config.public_file_server.enabled = true
   config.public_file_server.headers = {'Cache-Control' => "public, max-age=3600, s-maxage=1800"}
 
-  # test environment should use precompiled, minified, digested assets like production,
-  # unless it's being used for unit tests.
-  ci_test = !!(ENV['UNIT_TEST'] || ENV.fetch('CI', nil))
-
-  unless ci_test
-    # Compress JavaScripts and CSS.
-    # webpack handles js compression for us
-    # config.assets.js_compressor = :uglifier
-    # config.assets.css_compressor = :sass
-
-    # Version of your assets, change this if you want to expire all your assets.
-    config.assets.version = '1.0'
-
-    # Avoid loading all i18n files up front, which can significantly slow down initialization.
-    # Instead, it only loads i18n files that belong to the current locale.
-    config.i18n.backend = Cdo::I18n::LazyLoadableBackend.new(lazy_load: true)
+  # In CI environments (ie, Drone), stub relevant third-party services
+  # (currently SageMaker, our safety check via OpenAI, and currently unused AWS Comprehend safety check)
+  # so we can run UI tests for our AI Chat (ie, Generative AI) lab.
+  if CI::Utils.ci_job_ui_tests?
+    config.stub_aichat_external_services = true
   end
 
   config.assets.quiet = true
@@ -41,8 +30,8 @@ Dashboard::Application.configure do
   config.consider_all_requests_local = true
   config.action_controller.perform_caching = false
 
-  # Disable Rails.cache when running unit tests.
-  config.cache_store = :memory_store, {size: 64.megabytes} if ci_test
+  # Use smaller cache size when running unit tests.
+  config.cache_store = :memory_store, {size: 64.megabytes} if CDO.unit_test
 
   # config.action_mailer.raise_delivery_errors = true
   # config.action_mailer.delivery_method = :smtp
@@ -91,4 +80,9 @@ Dashboard::Application.configure do
   end
 
   config.experiment_cache_time_seconds = 0
+
+  # Prevent merge conflicts on schema.rb by skipping regeneration of schema.rb
+  # on the test machine. this is necessary because as of April 2025 the test DB
+  # schema differs from other environments due to utf8mb3 vs utf8mb4 issues.
+  config.active_record.dump_schema_after_migration = !CDO.test_system?
 end

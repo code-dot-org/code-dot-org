@@ -1,5 +1,10 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2022-02-15T23:30:04.000Z",
+  "level_num": "custom",
+  "user_id": 6959,
   "properties": {
     "encrypted": "false",
     "long_instructions": "This is a sample Java Lab level with validation tests.",
@@ -13,13 +18,12 @@
         "text": "import java.io.*;\nimport org.code.theater.*;\n\npublic class MyClass {\n  public static void main(String[] args) {\n    \n  }\n\n  public int returnsANumber() {\n    return 5;\n  }\n  \n  public int returnsAnotherNumber() {\n    return 3;\n  }\n\n  public void throwsAnException() throws Exception {\n    throw new FileNotFoundException();\n  }\n\n  public void triggersError() {\n    Theater.stage.play();\n    Theater.stage.play();\n  }\n}",
         "isVisible": true
       }
-    }
+    },
+    "encrypted_examples": [
+
+    ],
+    "ai_tutor_available": "true"
   },
-  "game_id": 68,
-  "created_at": "2022-02-12T06:25:32.000Z",
-  "level_num": "custom",
-  "user_id": 6959,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-02-11 14:26:26 -0800\",\"changed\":[\"published\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2022-02-11 14:29:43 -0800\",\"changed\":[],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2022-02-11 17:01:39 -0800\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2022-02-14 14:23:12 -0800\",\"changed\":[\"encrypted_validation\",\"start_sources\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2022-03-23 15:17:59 -0700\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2022-03-23 15:18:26 -0700\",\"changed\":[\"long_instructions\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2022-03-25 09:48:45 -0700\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-02-11 14:26:26 -0800\",\"changed\":[\"published\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2022-02-11 14:29:43 -0800\",\"changed\":[],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2022-02-11 17:01:39 -0800\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2022-02-14 14:23:12 -0800\",\"changed\":[\"encrypted_validation\",\"start_sources\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2022-03-23 15:17:59 -0700\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2022-03-23 15:18:26 -0700\",\"changed\":[\"long_instructions\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2022-03-25 09:48:45 -0700\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-06 00:24:30 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":781,\"changed_by_email\":\"erin.bond@code.org\"}]"
 }]]></config>
 </Javalab>

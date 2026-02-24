@@ -10,12 +10,13 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
 
   setup_all do
-    @integration = create :lti_integration
+    @integration = create(:lti_integration)
     @deployment_id = SecureRandom.uuid
     @key = SecureRandom.alphanumeric 10
     # create arbitary state and nonce values
     @state = 'state'
     @nonce = 'nonce'
+    @subject = SecureRandom.uuid
     @parsed_nrps_sections = {
       "1" =>
       {
@@ -277,6 +278,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     LtiV1Controller.any_instance.stubs(:read_cache).with(@state).returns({state: @state, nonce: @nonce})
     LtiV1Controller.any_instance.stubs(:read_cache).with("#{@integration.issuer}/#{@integration.client_id}").returns(@integration)
     Honeybadger.stubs(:notify)
+    Policies::Lti.stubs(:supported_message_type?).returns(true)
   end
 
   def create_jwt(payload)
@@ -301,7 +303,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
             @integration.client_id
           end
     roles_key = Policies::Lti::LTI_ROLES_KEY
-    custom_claims_key = Policies::Lti::LTI_CUSTOM_CLAIMS
+    custom_claims_key = Policies::Lti::LTI_CUSTOM_CLAIMS.to_sym
     teacher_roles = Policies::Lti::STAFF_ROLES
     nrps_url_key = Policies::Lti::LTI_NRPS_CLAIM
     resource_link_key = Policies::Lti::LTI_RESOURCE_LINK_CLAIM
@@ -313,10 +315,13 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
       exp: 7.days.from_now.to_i,
       iat: 1.day.ago.to_i,
       iss: @integration.issuer,
-      sub: 'LTI-AUTH',
+      sub: @subject,
       nonce: @nonce,
       'https://purl.imsglobal.org/spec/lti/claim/target_link_uri': target_link_uri,
       'https://purl.imsglobal.org/spec/lti/claim/message_type': 'LtiResourceLinkRequest',
+      'https://purl.imsglobal.org/spec/lti/claim/tool_platform' => {
+        name: 'test_platform'
+      },
       custom_claims_key => {
         display_name: 'hansolo',
         full_name: 'Han Solo',
@@ -451,6 +456,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'auth - LTI Resource Type wrong' do
+    Policies::Lti.unstub(:supported_message_type?)
     payload = get_valid_payload
     payload[:'https://purl.imsglobal.org/spec/lti/claim/message_type'] = 'file'
     LtiV1Controller.any_instance.stubs(:get_decoded_jwt).returns payload
@@ -478,14 +484,19 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
   test 'auth - given a valid jwt with the audience as an array, redirect to target_link_url' do
     aud_is_array = true
-    jwt = create_valid_jwt(aud_is_array)
+    payload = get_valid_payload(aud_is_array)
+    jwt = create_jwt_and_stub(payload)
+    create_preexisting_user(payload)
+
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
     assert_response :redirect
   end
 
   test 'auth - given a valid jwt, redirect to target_link_url' do
-    aud_is_array = false
-    jwt = create_valid_jwt(aud_is_array)
+    payload = get_valid_payload
+    jwt = create_jwt_and_stub(payload)
+    create_preexisting_user(payload)
+
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
     assert_response :redirect
     # could confirm more things here
@@ -497,31 +508,48 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
     deployment = LtiDeployment.find_by(deployment_id: @deployment_id)
     assert deployment
+    assert deployment.name
     assert_equal deployment, @integration.lti_deployments.first
   end
 
   test 'auth - given an existing deployment_id in our system, do not create a new LtiDeployment' do
     payload = get_valid_payload
     jwt = create_jwt_and_stub(payload)
-    deployment = LtiDeployment.create(deployment_id: @deployment_id, lti_integration_id: @integration.id)
+    deployment = create(:lti_deployment, deployment_id: @deployment_id, lti_integration: @integration)
     assert deployment
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
     assert_equal deployment, @integration.lti_deployments.first
     assert_equal @integration.lti_deployments.count, 1
   end
 
+  test 'auth - given an existing LTI deployment in our system, update deployment with name if empty' do
+    payload = get_valid_payload
+    jwt = create_jwt_and_stub(payload)
+    deployment = create(:lti_deployment, deployment_id: @deployment_id, lti_integration: @integration)
+    assert deployment
+    assert_nil deployment.name
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
+    assert_equal deployment, @integration.lti_deployments.first
+    assert_equal @integration.lti_deployments.count, 1
+    deployment.reload
+    assert deployment.name
+  end
+
+  test 'auth - do not link lti_user_identity with lti_deployment if already linked' do
+    payload = get_valid_payload
+    jwt = create_jwt_and_stub(payload)
+    user = create_preexisting_user(payload)
+    deployment = create(:lti_deployment, deployment_id: @deployment_id, lti_integration: @integration)
+    deployment.lti_user_identities << user.lti_user_identities.first
+    assert_equal deployment.lti_user_identities.count, 1
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
+    assert_equal deployment.lti_user_identities.count, 1
+  end
+
   test 'auth - should render the upgrade account page if the LTI has the same user as an instructor' do
     payload = get_valid_payload
     jwt = create_jwt_and_stub(payload)
-
-    user = create :student
-    ao = AuthenticationOption.new(
-      user: user,
-      email: Services::Lti.get_claim(payload, :email),
-      credential_type: AuthenticationOption::LTI_V1,
-      authentication_id: Services::Lti::AuthIdGenerator.new(payload).call
-    )
-    ao.save!
+    create_preexisting_user(payload, User::TYPE_STUDENT)
 
     deployment = LtiDeployment.create(deployment_id: @deployment_id, lti_integration_id: @integration.id)
     assert deployment
@@ -534,15 +562,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   test 'auth - should NOT upgrade if student and LTI informs that this is a learner' do
     payload = {**get_valid_payload, Policies::Lti::LTI_ROLES_KEY => [Policies::Lti::CONTEXT_LEARNER_ROLE]}
     jwt = create_jwt_and_stub(payload)
-
-    user = create :student
-    ao = AuthenticationOption.new(
-      user: user,
-      email: Services::Lti.get_claim(payload, :email),
-      credential_type: AuthenticationOption::LTI_V1,
-      authentication_id: Services::Lti::AuthIdGenerator.new(payload).call
-    )
-    ao.save!
+    create_preexisting_user(payload, User::TYPE_STUDENT)
 
     deployment = LtiDeployment.create(deployment_id: @deployment_id, lti_integration_id: @integration.id)
     assert deployment
@@ -553,7 +573,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
   test 'auth - should redirect to iframe route if LMS caller is Schoology AND new_tab=true param is missing' do
     issuer = Policies::Lti::LMS_PLATFORMS[:schoology][:issuer]
-    integration = create :lti_integration, issuer: issuer
+    integration = create(:lti_integration, issuer: issuer)
     # Override read_cache stub with this integration
     LtiV1Controller.any_instance.stubs(:read_cache).with("#{integration.issuer}/#{integration.client_id}").returns(integration)
     payload = {**get_valid_payload, iss: issuer, aud: integration.client_id}
@@ -564,40 +584,18 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
   test 'auth - should NOT redirect to iframe route if LMS caller is Schoology AND new_tab=true param is present' do
     issuer = Policies::Lti::LMS_PLATFORMS[:schoology][:issuer]
-    integration = create :lti_integration, issuer: issuer
+    integration = create(:lti_integration, issuer: issuer)
+    integration.update(platform_name: 'schoology')
     # Override read_cache stub with this integration
     LtiV1Controller.any_instance.stubs(:read_cache).with("#{integration.issuer}/#{integration.client_id}").returns(integration)
     payload = {**get_valid_payload, iss: issuer, aud: integration.client_id, azp: integration.client_id}
     jwt = create_jwt_and_stub(payload)
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state, new_tab: true}
-    assert_response :redirect
-    assert_redirected_to '/users/sign_up'
-  end
-
-  test 'auth - should render oauth redirector if student-email-post-enabled' do
-    DCDO.stubs(:get)
-    Cpa.stubs(:cpa_experience).with(any_parameters).returns(false)
-    SignUpTracking.stubs(:begin_sign_up_tracking).returns(false)
-    DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
-    DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(false)
-    DCDO.stubs(:get).with('student-email-post-enabled', false).returns(true)
-    payload = {**get_valid_payload, Policies::Lti::LTI_ROLES_KEY => [Policies::Lti::CONTEXT_LEARNER_ROLE]}
-    jwt = create_jwt_and_stub(payload)
-
-    deployment = LtiDeployment.create(deployment_id: @deployment_id, lti_integration_id: @integration.id)
-    assert deployment
-    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
-
-    assert_template 'omniauth/redirect'
+    assert_response :ok
+    assert_template 'lti/v1/account_linking/landing'
   end
 
   test 'auth - should render the landing page and store session state' do
-    DCDO.stubs(:get)
-    Cpa.stubs(:cpa_experience).with(any_parameters).returns(false)
-    SignUpTracking.stubs(:begin_sign_up_tracking).returns(false)
-    DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
-    DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
-    DCDO.stubs(:get).with('student-email-post-enabled', false).returns(true)
     payload = {**get_valid_payload, Policies::Lti::LTI_ROLES_KEY => [Policies::Lti::CONTEXT_LEARNER_ROLE]}
     jwt = create_jwt_and_stub(payload)
 
@@ -606,7 +604,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
 
     expected = {
-      lti_provider_name: "platform_name",
+      lti_provider_name: "canvas_cloud",
       new_cta_type: "new",
       user_type: "student",
     }
@@ -615,8 +613,23 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_template 'lti/v1/account_linking/landing'
   end
 
+  test 'auth - should create teacher account if user is both teacher and student' do
+    payload = {**get_valid_payload, Policies::Lti::LTI_ROLES_KEY => [Policies::Lti::CONTEXT_LEARNER_ROLE, Policies::Lti::TEACHER_ROLES.first]}
+    jwt = create_jwt_and_stub(payload)
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
+
+    expected = {
+      lti_provider_name: "canvas_cloud",
+      new_cta_type: "new",
+      user_type: "teacher",
+    }
+
+    assert_equal expected, session[:lms_landing]
+    assert_template 'lti/v1/account_linking/landing'
+  end
+
   test 'sync - should redirect students to homepage without syncing' do
-    user = create :student
+    user = create(:student)
     sign_in user
     get '/lti/v1/sync_course', params: {lti_integration_id: 'foo', deployment_id: 'bar', context_id: 'baz', rlid: 'qux', nrps_url: 'quux'}
     assert_response :redirect
@@ -624,50 +637,64 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'sync - should not sync when section code is blank and required param missing' do
-    user = create :teacher, :with_lti_auth
+    user = create(:teacher, :with_lti_auth)
     sign_in user
     get '/lti/v1/sync_course', params: {lti_integration_id: nil, deployment_id: nil, context_id: nil, rlid: nil, nrps_url: nil}
     assert_response :bad_request
   end
 
-  test 'sync - should not sync when launching from wrong context' do
-    user = create :teacher, :with_lti_auth
+  test 'sync - should redirect to homepage when context or nrps_url is missing' do
+    user = create(:teacher, :with_lti_auth)
     sign_in user
-    LtiV1Controller.any_instance.expects(:render_sync_course_error).with('Attempting to sync a course or section from the wrong place.', :bad_request, 'wrong_context')
     get '/lti/v1/sync_course', params: {lti_integration_id: 'foo', deployment_id: 'bar', context_id: nil, rlid: 'qux', nrps_url: nil}
+    assert_response :redirect
+    assert_equal '/home', '/' + @response.redirect_url.split('/').last
   end
 
   test 'sync - should not sync and render sync course error when missing a param' do
-    user = create :teacher, :with_lti_auth
+    user = create(:teacher, :with_lti_auth)
     sign_in user
     LtiV1Controller.any_instance.expects(:render_sync_course_error).with("Missing lti_integration_id.", :bad_request, 'missing_param')
     get '/lti/v1/sync_course', params: {lti_integration_id: nil, deployment_id: 'qux', context_id: 'foo', rlid: 'quux', nrps_url: 'bar'}
   end
 
   test 'sync - should sync and show the confirmation page' do
-    user = create :teacher, :with_lti_auth
+    user = create(:teacher, :with_lti_auth)
     sign_in user
-    lti_integration = create :lti_integration
-    lti_course = create :lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps'
-    LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, lti_course.resource_link_id).returns({})
+    lti_integration = create(:lti_integration)
+    lti_course = create(:lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps')
+    Clients::LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, lti_course.resource_link_id).returns({})
     Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
     Services::Lti.expects(:sync_course_roster).returns(@sync_course_result_with_changes)
 
-    get '/lti/v1/sync_course', params: {lti_integration_id: lti_integration.id, deployment_id: 'foo', context_id: lti_course.context_id, rlid: lti_course.resource_link_id, nrps_url: lti_course.nrps_url}
+    get '/lti/v1/sync_course', params: {
+      lti_integration_id: lti_integration.id,
+      deployment_id: lti_course.lti_deployment_id,
+      context_id: lti_course.context_id,
+      rlid: lti_course.resource_link_id,
+      nrps_url: lti_course.nrps_url,
+    }
+
     assert_response :ok
   end
 
   test 'sync - should update the LtiCourse resource link id if the params rlid has changed' do
-    user = create :teacher, :with_lti_auth
+    user = create(:teacher, :with_lti_auth)
     sign_in user
-    lti_integration = create :lti_integration
-    lti_course = create :lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps'
+    lti_integration = create(:lti_integration)
+    lti_course = create(:lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps')
     new_resource_id = SecureRandom.uuid
-    LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, new_resource_id).returns({})
+    Clients::LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, new_resource_id).returns({})
     Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
     Services::Lti.expects(:sync_course_roster).returns(@sync_course_result_with_changes)
 
-    get '/lti/v1/sync_course', params: {lti_integration_id: lti_integration.id, deployment_id: 'foo', context_id: lti_course.context_id, rlid: new_resource_id, nrps_url: lti_course.nrps_url}
+    get '/lti/v1/sync_course', params: {
+      lti_integration_id: lti_integration.id,
+      deployment_id: lti_course.lti_deployment_id,
+      context_id: lti_course.context_id,
+      rlid: new_resource_id,
+      nrps_url: lti_course.nrps_url,
+    }
 
     lti_course.reload
     assert_response :ok
@@ -679,17 +706,19 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     lti_course_resource_link_id = SecureRandom.uuid
     lti_course_nrps_url = 'https://example.com/nrps'
 
-    user = create :teacher, :with_lti_auth
-    lti_integration = create :lti_integration
+    user = create(:teacher, :with_lti_auth)
+    lti_integration = create(:lti_integration)
+    lti_deployment = create(:lti_deployment, lti_integration:)
     create(
       :lti_course,
       lti_integration: lti_integration,
+      lti_deployment:,
       context_id: lti_course_context_id,
       resource_link_id: lti_course_resource_link_id,
       nrps_url: lti_course_nrps_url
     )
 
-    LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course_nrps_url, lti_course_resource_link_id).returns({})
+    Clients::LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course_nrps_url, lti_course_resource_link_id).returns({})
     Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
     Services::Lti.expects(:sync_course_roster).returns(@sync_course_result_no_changes)
 
@@ -698,7 +727,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_no_difference 'LtiCourse.count' do
       get '/lti/v1/sync_course', params: {
         lti_integration_id: lti_integration.id,
-        deployment_id: 'foo',
+        deployment_id: lti_deployment.id,
         context_id: lti_course_context_id,
         rlid: lti_course_resource_link_id,
         nrps_url: lti_course_nrps_url
@@ -717,10 +746,11 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     lti_course_resource_link_id = SecureRandom.uuid
     lti_course_nrps_url = 'https://example.com/nrps'
 
-    user = create :teacher, :with_lti_auth
-    lti_integration = create :lti_integration
+    user = create(:teacher, :with_lti_auth)
+    lti_integration = create(:lti_integration)
+    lti_deployment = create(:lti_deployment, lti_integration:)
 
-    LtiAdvantageClient.
+    Clients::LtiAdvantageClient.
       any_instance.
       expects(:get_context_membership).
       with(lti_course_nrps_url, lti_course_resource_link_id).
@@ -738,10 +768,10 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
     sign_in user
 
-    assert_no_difference 'LtiCourse.count' do
+    assert_difference 'LtiCourse.count' do
       get '/lti/v1/sync_course', params: {
         lti_integration_id: lti_integration.id,
-        deployment_id: 'foo',
+        deployment_id: lti_deployment.id,
         context_id: lti_course_context_id,
         rlid: lti_course_resource_link_id,
         nrps_url: lti_course_nrps_url
@@ -762,10 +792,11 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     lti_course_resource_link_id = SecureRandom.uuid
     lti_course_nrps_url = 'https://example.com/nrps'
 
-    user = create :teacher, :with_lti_auth
-    lti_integration = create :lti_integration
+    user = create(:teacher, :with_lti_auth)
+    lti_integration = create(:lti_integration)
+    lti_deployment = create(:lti_deployment, lti_integration:)
 
-    LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course_nrps_url, lti_course_resource_link_id).returns({})
+    Clients::LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course_nrps_url, lti_course_resource_link_id).returns({})
     Policies::Lti.expects(:issuer_accepts_resource_link?).with(lti_integration.issuer).returns(false)
     Services::Lti::NRPSResponseValidator.expects(:call).never
     Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
@@ -773,10 +804,10 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
     sign_in user
 
-    assert_no_difference 'LtiCourse.count' do
+    assert_difference 'LtiCourse.count' do
       get '/lti/v1/sync_course', params: {
         lti_integration_id: lti_integration.id,
-        deployment_id: 'foo',
+        deployment_id: lti_deployment.id,
         context_id: lti_course_context_id,
         rlid: lti_course_resource_link_id,
         nrps_url: lti_course_nrps_url
@@ -787,25 +818,32 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'sync - should not sync given no changes' do
-    user = create :teacher, :with_lti_auth
+    user = create(:teacher, :with_lti_auth)
     sign_in user
-    lti_integration = create :lti_integration
-    lti_course = create :lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps'
-    LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, lti_course.resource_link_id).returns({})
+    lti_integration = create(:lti_integration)
+    lti_course = create(:lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps')
+    Clients::LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, lti_course.resource_link_id).returns({})
     Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
     Services::Lti.expects(:sync_course_roster).returns(@sync_course_result_no_changes)
 
-    get '/lti/v1/sync_course', params: {lti_integration_id: lti_integration.id, deployment_id: 'foo', context_id: lti_course.context_id, rlid: lti_course.resource_link_id, nrps_url: lti_course.nrps_url}
+    get '/lti/v1/sync_course', params: {
+      lti_integration_id: lti_integration.id,
+      deployment_id: lti_course.lti_deployment_id,
+      context_id: lti_course.context_id,
+      rlid: lti_course.resource_link_id,
+      nrps_url: lti_course.nrps_url,
+    }
+
     assert_response :redirect
   end
 
   test 'sync - should be able to sync from a section code' do
-    user = create :teacher, :with_lti_auth
+    user = create(:teacher, :with_lti_auth)
     sign_in user
-    lti_integration = create :lti_integration
-    lti_course = create :lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps'
-    lti_section = create :lti_section, lti_course: lti_course
-    LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, lti_course.resource_link_id).returns({})
+    lti_integration = create(:lti_integration)
+    lti_course = create(:lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps')
+    lti_section = create(:lti_section, lti_course: lti_course)
+    Clients::LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, lti_course.resource_link_id).returns({})
     Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
     Services::Lti.expects(:sync_course_roster).returns(@sync_course_result_with_changes)
 
@@ -814,13 +852,13 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'transaction prevents partial sync from creating a partially-synced state' do
-    user = create :teacher, :with_lti_auth
+    user = create(:teacher, :with_lti_auth)
     sign_in user
-    lti_integration = create :lti_integration
-    lti_course = create :lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps'
-    create :lti_user_identity, lti_integration: lti_integration, user: user, subject: 'f2a16942-ed81-4c98-96dc-5cac16e354ec'
+    lti_integration = create(:lti_integration)
+    lti_course = create(:lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps')
+    create(:lti_user_identity, lti_integration: lti_integration, user: user, subject: 'f2a16942-ed81-4c98-96dc-5cac16e354ec')
 
-    LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, lti_course.resource_link_id)
+    Clients::LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, lti_course.resource_link_id)
     Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
 
     # Set up a situation where a sync has partially progressed, including saving some objects, but then
@@ -828,68 +866,20 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     # creating the first Section and LtiSection in the course sync method.
     Services::Lti.expects(:sync_section_roster).raises(Exception, 'sync error')
 
-    get '/lti/v1/sync_course', params: {lti_integration_id: lti_integration.id, deployment_id: 'foo', context_id: lti_course.context_id, rlid: lti_course.resource_link_id, nrps_url: lti_course.nrps_url}
+    get '/lti/v1/sync_course', params: {
+      lti_integration_id: lti_integration.id,
+      deployment_id: lti_course.lti_deployment_id,
+      context_id: lti_course.context_id,
+      rlid: lti_course.resource_link_id,
+      nrps_url: lti_course.nrps_url
+    }
+
     assert_empty lti_course.lti_sections
     assert_response :internal_server_error
   end
 
-  test 'integration - given valid inputs, creates a new integration if one does not exist' do
-    name = "Fake School"
-    client_id = "1234canvas"
-    lms = "canvas_cloud"
-    email = "fake@email.com"
-
-    post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: lms, email: email}
-    assert_response :ok
-
-    client_id = "5678schoology"
-    lms = "schoology"
-
-    post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: lms, email: email}
-    assert_response :ok
-  end
-
-  test 'integration - given missing inputs, does not create a new integration' do
-    name = "Fake School"
-    client_id = "1234canvas"
-    lms = "canvas_cloud"
-    email = "fake@email.com"
-
-    # missing client_id
-    post '/lti/v1/integrations', params: {name: name, lms: lms, email: email}
-    assert_equal I18n.t('lti.error.missing_params'), flash[:alert]
-
-    # missing lms
-    post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: '', email: email}
-    assert_equal I18n.t('lti.error.missing_params'), flash[:alert]
-
-    # missing email
-    post '/lti/v1/integrations', params: {name: name, client_id: client_id}
-    assert_equal I18n.t('lti.error.missing_params'), flash[:alert]
-
-    # unsupported lms type
-    post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: 'unsupported', email: email}
-    assert_equal I18n.t('lti.error.unsupported_lms_type'), flash[:alert]
-
-    # missing name
-    post '/lti/v1/integrations', params: {client_id: client_id, lms: lms, email: email}
-    assert_equal I18n.t('lti.error.missing_params'), flash[:alert]
-  end
-
-  test 'integration - if existing integration, does not create a new one' do
-    name = "Fake School"
-    client_id = "1234canvas"
-    lms = "canvas_cloud"
-    email = "fake@email.com"
-
-    post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: lms, email: email}
-    assert_template 'lti/v1/integration_status'
-    post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: lms, email: email}
-    assert_template 'lti/v1/integration_status'
-  end
-
   test 'attempting to sync a section with no LTI course should return a 400' do
-    user = create :teacher, :with_lti_auth
+    user = create(:teacher, :with_lti_auth)
     sign_in user
 
     get '/lti/v1/sync_course', params: {section_code: 'bad-section-code'}
@@ -897,7 +887,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'attempting to sync a section with a missing LTI integration should return a 400' do
-    user = create :teacher, :with_lti_auth
+    user = create(:teacher, :with_lti_auth)
     sign_in user
     bad_params = {lti_integration_id: 'foo', deployment_id: 'bar', context_id: 'baz', rlid: 'qux', nrps_url: 'quux'}
     get '/lti/v1/sync_course', params: bad_params
@@ -911,7 +901,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'upgrade_account - throws bad request if missing email' do
-    user = create :student
+    user = create(:student)
     sign_in user
 
     post '/lti/v1/upgrade_account'
@@ -919,28 +909,57 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'upgrade_account - upgrades current user to teacher' do
-    user = create :student, :with_lti_auth
+    user = create(:student, :with_lti_auth)
     sign_in user
     post '/lti/v1/upgrade_account', params: {email: 'test-teacher@code.org'}
 
     assert_response :ok
-    user.reload
+    user = User.find(user.id)
     assert_equal User::TYPE_TEACHER, user.user_type
     assert_equal true, user.lti_roster_sync_enabled
   end
 
   test 'should not sync if the user has roster sync disabled' do
-    user = create :teacher, :with_lti_auth
+    user = create(:teacher, :with_lti_auth)
     user.lti_roster_sync_enabled = false
     user.save!
     sign_in user
-    lti_integration = create :lti_integration
-    lti_course = create :lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps'
-    LtiAdvantageClient.any_instance.expects(:get_context_membership).never
+    lti_integration = create(:lti_integration)
+    lti_course = create(:lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps')
+    Clients::LtiAdvantageClient.any_instance.expects(:get_context_membership).never
     Services::Lti.expects(:parse_nrps_response).never
     Services::Lti.expects(:sync_course_roster).never
 
-    get '/lti/v1/sync_course', params: {lti_integration_id: lti_integration.id, deployment_id: 'foo', context_id: lti_course.context_id, rlid: lti_course.resource_link_id, nrps_url: lti_course.nrps_url}
+    get '/lti/v1/sync_course', params: {
+      lti_integration_id: lti_integration.id,
+      deployment_id: lti_course.lti_deployment_id,
+      context_id: lti_course.context_id,
+      rlid: lti_course.resource_link_id,
+      nrps_url: lti_course.nrps_url,
+    }
+
     assert_response :redirect
+  end
+
+  # Create a user with an auth option matching the given JWT.
+  # Useful for bypassing the landing/linking flow.
+  private def create_preexisting_user(jwt_payload, user_type = User::TYPE_TEACHER)
+    user = user_type == User::TYPE_TEACHER ? create(:teacher) : create(:student)
+    user.update(lms_landing_opted_out: true)
+    ao = AuthenticationOption.new(
+      user: user,
+      email: Services::Lti.get_claim(jwt_payload, :email),
+      credential_type: AuthenticationOption::LTI_V1,
+      authentication_id: Services::Lti::AuthIdGenerator.new(jwt_payload).call
+    )
+    ao.save!
+    user_identity = LtiUserIdentity.new(
+      user_id: user.id,
+      lti_integration_id: @integration.id,
+      subject: @subject,
+    )
+    user_identity.save!
+
+    user
   end
 end

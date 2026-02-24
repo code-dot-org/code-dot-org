@@ -1,0 +1,66 @@
+name 'pl-sandbox-aif2-u2-truthTables-28'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Introducing Functions in Java Script
+
+#### When you build web apps, you often want something to happen — like showing a message when a button is clicked. But what if you want that same behavior in more than one place, or want to trigger it from different events?
+
+#### That’s where **functions** come in.
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Function</strong> is a named set of reusable instructions that tells your program what to do.</p>
+</div>
+
+## Stop Repeating Actions!
+
+
+#### Functions in JavaScript are especially powerful because they’re what make interactive behavior possible. You can define one function and connect it to different events — clicks, key presses, even timers — without rewriting the same code each time.
+
+#### **Functions help you:**
+
+- #### Reuse code without repeating it
+
+- #### Organize logic into clear, named steps
+
+- #### Make interactive apps easier to update and debug
+
+## Before Functions: Repeating Code
+
+
+#### When you start adding actions to buttons, it’s tempting to copy and paste the same lines again and again.
+
+#### Here’s what the code might look like before using a function: 
+
+<img src="https://images.code.org/2b5ecd2e31f5f7a8e97324b524050f2d-image-1762379600072.png" alt="javascript code without function" width="650px" style="display: block; margin-left: auto; margin-right: auto; border-radius:10px;">
+
+#### This works fine—but notice the repetition?
+
+#### Each **event handler** repeats the same steps: add to `total` and update the display. If you ever want to change how the display looks, you’d have to fix it in multiple places.
+
+
+
+## After Functions: Cleaner, Reusable Code
+
+#### By moving that repeated logic into a function, we can call it whenever we need it — no copy-pasting required.
+
+<img src="https://images.code.org/d880c69ab976c30456ce071ca1dfcc08-image-1762379438457.png" alt="javascript code with function" width="650px" style="display: block; margin-left: auto; margin-right: auto; border-radius:10px;">
+
+
+
+
+#### Now the code for the event handers are shorter, easier to update, and easier for students to understand.
+#### If you ever want to change how the total appears, you only need to edit one place — inside the `updateTotal()` function.
+
+
+---
+
+## Next up
+#### Let's look at how to create functions!
+
+
+
+
+
+MARKDOWN

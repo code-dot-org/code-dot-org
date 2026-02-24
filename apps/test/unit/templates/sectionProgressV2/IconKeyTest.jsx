@@ -33,6 +33,7 @@ describe('IconKey Component', () => {
   it('expands collapses on click', () => {
     jest.spyOn(utils, 'tryGetLocalStorage').mockClear().mockReturnValue('true');
     render(<IconKey />);
+    // eslint-disable-next-line no-restricted-properties
     const containerDiv = screen.getByTestId('expandable-container');
     fireEvent.click(containerDiv);
     expect(screen.queryByText('Assignment Completion States')).to.be.null;

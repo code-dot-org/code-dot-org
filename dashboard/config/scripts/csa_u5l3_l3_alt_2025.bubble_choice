@@ -1,0 +1,9 @@
+name 'CSA U5L3-L3_alt-2025'
+display_name 'Practice: Traversing 2D Arrays'
+description 'Implement your algorithm to find the sum of all the values in a 2D array.'
+
+sublevels
+level 'CSA U5L3-L3a_alt-2025'
+level 'CSA U5L3-L3b_alt-2025'
+level 'CSA U5L3-L3c_alt-2025'
+level 'CSA U5L3-L3d_alt-2025'

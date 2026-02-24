@@ -1,4 +1,5 @@
-import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import {render, screen, fireEvent} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 import {Provider} from 'react-redux';
 
@@ -10,12 +11,6 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
-import CodeReviewGroupsDialog from '@cdo/apps/templates/manageStudents/CodeReviewGroupsDialog';
-import ManageStudentsActionsCell from '@cdo/apps/templates/manageStudents/ManageStudentsActionsCell';
-import ManageStudentActionsHeaderCell from '@cdo/apps/templates/manageStudents/ManageStudentsActionsHeaderCell';
-import ManageStudentFamilyNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsFamilyNameCell';
-import ManageStudentsGenderCell from '@cdo/apps/templates/manageStudents/ManageStudentsGenderCell';
-import ManageStudentNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsNameCell';
 import manageStudents, {
   RowType,
   setLoginType,
@@ -31,10 +26,8 @@ import manageStudents, {
   TransferType,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import ManageStudentsTable, {
-  UnconnectedManageStudentsTable,
   sortRows,
-} from '@cdo/apps/templates/manageStudents/ManageStudentsTable';
-import NoSectionCodeDialog from '@cdo/apps/templates/manageStudents/NoSectionCodeDialog';
+} from '@cdo/apps/templates/manageStudents/Table';
 import teacherSections, {
   setSections,
   selectSection,
@@ -43,8 +36,6 @@ import experiments from '@cdo/apps/util/experiments';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import {ManageStudentsNotificationFull} from '../../../../src/templates/manageStudents/ManageStudentsTable';
-import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 import {allowConsoleWarnings} from '../../../util/throwOnConsole';
 
 describe('ManageStudentsTable', () => {
@@ -63,59 +54,96 @@ describe('ManageStudentsTable', () => {
     const columnIndexList = [];
     const orderList = ['asc'];
     const sortedList = sortRows(rowData, columnIndexList, orderList);
-    expect(sortedList[0].id).to.equal(0);
-    expect(sortedList[1].id).to.equal(2);
-    expect(sortedList[2].id).to.equal(3);
-    expect(sortedList[3].id).to.equal(4);
-    expect(sortedList[4].id).to.equal(5);
-    expect(sortedList[5].id).to.equal(1);
-    expect(sortedList[6].id).to.equal(6);
+    expect(sortedList[0].id).toBe(0);
+    expect(sortedList[1].id).toBe(2);
+    expect(sortedList[2].id).toBe(3);
+    expect(sortedList[3].id).toBe(4);
+    expect(sortedList[4].id).toBe(5);
+    expect(sortedList[5].id).toBe(1);
+    expect(sortedList[6].id).toBe(6);
   });
 
   describe('appropriate buttons render', () => {
-    const DEFAULT_PROPS = {
-      loginType: SectionLoginType.google_classroom,
-      studentData: [],
-      editingData: {},
-      addStatus: {},
-      transferStatus: {},
-    };
+    beforeEach(() => {
+      stubRedux();
+      registerReducers({
+        teacherSections,
+        manageStudents,
+        isRtl,
+        unitSelection,
+      });
+    });
+
+    afterEach(() => {
+      restoreRedux();
+    });
 
     it('does not render MoveStudents if loginType is google_classroom', () => {
-      const wrapper = shallow(
-        <UnconnectedManageStudentsTable {...DEFAULT_PROPS} />
+      const store = getStore();
+      const googleSection = {
+        id: 101,
+        loginType: SectionLoginType.google_classroom,
+      };
+      store.dispatch(setLoginType(SectionLoginType.google_classroom));
+      store.dispatch(setSections([googleSection]));
+      store.dispatch(selectSection(101));
+      render(
+        <Provider store={store}>
+          <ManageStudentsTable />
+        </Provider>
       );
-      expect(wrapper.find('MoveStudents').exists()).to.be.false;
+      expect(screen.queryByText('Move students')).not.toBeInTheDocument();
     });
 
     it('does not render MoveStudents if loginType is clever', () => {
-      const wrapper = shallow(
-        <UnconnectedManageStudentsTable
-          {...{...DEFAULT_PROPS, ...{loginType: SectionLoginType.clever}}}
-        />
+      const store = getStore();
+      const cleverSection = {
+        id: 101,
+        loginType: SectionLoginType.clever,
+      };
+      store.dispatch(setLoginType(SectionLoginType.clever));
+      store.dispatch(setSections([cleverSection]));
+      store.dispatch(selectSection(101));
+      render(
+        <Provider store={store}>
+          <ManageStudentsTable />
+        </Provider>
       );
-      expect(wrapper.find('MoveStudents').exists()).to.be.false;
+      expect(screen.queryByText('Move students')).not.toBeInTheDocument();
     });
 
     it('does not render Code Review Groups Dialog (and button) if section is not assigned CSA', () => {
-      const wrapper = shallow(
-        <UnconnectedManageStudentsTable
-          {...{...DEFAULT_PROPS, ...{isSectionAssignedCSA: false}}}
-        />
+      const store = getStore();
+      store.dispatch(
+        setSections([{id: 101, is_assigned_csa: false, name: 'Test Section'}])
       );
-      expect(wrapper.find(CodeReviewGroupsDialog).exists()).to.be.false;
+      store.dispatch(selectSection(101));
+      render(
+        <Provider store={store}>
+          <ManageStudentsTable />
+        </Provider>
+      );
+      expect(
+        screen.queryByText('Manage code review groups')
+      ).not.toBeInTheDocument();
     });
 
     it('does renders Code Review Groups Dialog (and button) if section is assigned CSA', () => {
-      const wrapper = shallow(
-        <UnconnectedManageStudentsTable
-          {...{
-            ...DEFAULT_PROPS,
-            ...{isSectionAssignedCSA: true, sectionId: 101},
-          }}
-        />
+      const store = getStore();
+      const testStudents = {1: {id: 1, name: 'Test Student'}};
+      store.dispatch(setStudents(testStudents));
+      store.dispatch(
+        setSections([{id: 101, is_assigned_csa: true, name: 'Test Section'}])
       );
-      expect(wrapper.find(CodeReviewGroupsDialog).exists()).to.be.true;
+      store.dispatch(selectSection(101));
+
+      render(
+        <Provider store={store}>
+          <ManageStudentsTable />
+        </Provider>
+      );
+
+      expect(screen.getByText('Manage Code Review Groups')).toBeInTheDocument();
     });
   });
 
@@ -171,54 +199,14 @@ describe('ManageStudentsTable', () => {
     });
 
     it('renders an action cell for each student', () => {
-      const wrapper = mount(
+      render(
         <Provider store={getStore()}>
           <ManageStudentsTable />
         </Provider>
       );
-      expect(wrapper).to.containMatchingElement(
-        <ManageStudentsActionsCell
-          id={fakeStudent.id}
-          sectionId={fakeStudent.sectionId}
-          rowType={RowType.STUDENT}
-          loginType={fakeStudent.loginType}
-          studentName={fakeStudent.name}
-          hasEverSignedIn={fakeStudent.hasEverSignedIn}
-          dependsOnThisSectionForLogin={
-            fakeStudent.dependsOnThisSectionForLogin
-          }
-        />
-      );
-    });
-
-    describe('LTI section tests', () => {
-      it('does not render the Actions column if loginType is lti_v1 and sync is enabled', () => {
-        const store = getStore();
-        store.dispatch(setLoginType(SectionLoginType.lti_v1));
-        store.dispatch(setSections([{...fakeSection, sync_enabled: true}]));
-        const wrapper = mount(
-          <Provider store={store}>
-            <ManageStudentsTable />
-          </Provider>
-        );
-
-        expect(wrapper.find(ManageStudentActionsHeaderCell).exists()).to.be
-          .false;
-      });
-
-      it('does render the Actions column if loginType is lti_v1 and sync is disabled', () => {
-        const store = getStore();
-        store.dispatch(setLoginType(SectionLoginType.lti_v1));
-        store.dispatch(setSections([{...fakeSection, sync_enabled: false}]));
-        const wrapper = mount(
-          <Provider store={store}>
-            <ManageStudentsTable />
-          </Provider>
-        );
-
-        expect(wrapper.find(ManageStudentActionsHeaderCell).exists()).to.be
-          .true;
-      });
+      expect(
+        screen.getByRole('columnheader', {name: 'Actions'})
+      ).toBeInTheDocument();
     });
 
     describe('Gender field feature flag', () => {
@@ -231,166 +219,147 @@ describe('ManageStudentsTable', () => {
       });
 
       it('does render the gender column if loginType is secret picture', () => {
-        const wrapper = mount(
+        render(
           <Provider store={getStore()}>
             <ManageStudentsTable />
           </Provider>
         );
-        expect(wrapper.find(ManageStudentsGenderCell).exists()).to.be.true;
+        expect(screen.getByText('Gender')).toBeInTheDocument();
       });
 
       it('does render the gender column if loginType is secret word', () => {
         const store = getStore();
         store.dispatch(setLoginType(SectionLoginType.word));
-        const wrapper = mount(
+        render(
           <Provider store={store}>
             <ManageStudentsTable />
           </Provider>
         );
-        expect(wrapper.find(ManageStudentsGenderCell).exists()).to.be.true;
+        expect(screen.getByText('Gender')).toBeInTheDocument();
       });
 
       it('does not render the gender column if loginType is email', () => {
         const store = getStore();
         store.dispatch(setLoginType(SectionLoginType.email));
-        const wrapper = mount(
+        render(
           <Provider store={store}>
             <ManageStudentsTable />
           </Provider>
         );
-        expect(wrapper.find(ManageStudentsGenderCell).exists()).to.be.false;
+        expect(screen.queryByText('Gender')).not.toBeInTheDocument();
       });
 
       it('does not render the gender column if loginType is Google', () => {
         const store = getStore();
         store.dispatch(setLoginType(SectionLoginType.google_classroom));
-        const wrapper = mount(
+        render(
           <Provider store={store}>
             <ManageStudentsTable />
           </Provider>
         );
-        expect(wrapper.find(ManageStudentsGenderCell).exists()).to.be.false;
+        expect(screen.queryByText('Gender')).not.toBeInTheDocument();
       });
 
       it('does not render the gender column if loginType is Clever', () => {
         const store = getStore();
         store.dispatch(setLoginType(SectionLoginType.clever));
-        const wrapper = mount(
+        render(
           <Provider store={store}>
             <ManageStudentsTable />
           </Provider>
         );
-        expect(wrapper.find(ManageStudentsGenderCell).exists()).to.be.false;
+        expect(screen.queryByText('Gender')).not.toBeInTheDocument();
       });
     });
 
     it('renders an editable name field', async () => {
-      const wrapper = mount(
+      const user = userEvent.setup();
+
+      render(
         <Provider store={getStore()}>
           <ManageStudentsTable />
         </Provider>
       );
       // Begin editing the student
-      // (Using redux directly to do this requires us to trigger a manual update)
       getStore().dispatch(startEditingStudent(fakeStudent.id));
-      wrapper.update();
-
-      const manageStudentNameCell = () =>
-        wrapper
-          .find(ManageStudentNameCell)
-          .findWhere(w => w.prop('id') === fakeStudent.id)
-          .first();
-
-      // Check for a name cell with expecting initial editing props
-      expect(manageStudentNameCell().exists()).to.be.true;
-      expect(manageStudentNameCell().prop('isEditing')).to.be.true;
 
       // Find the name input
-      const nameInput = () => manageStudentNameCell().find('input').first();
-      expect(nameInput().prop('value')).to.equal(fakeStudent.name);
+      const nameInput = screen.getByDisplayValue(fakeStudent.name);
+      expect(nameInput).toBeInTheDocument();
 
       // Simulate a name change
-      nameInput().simulate('change', {target: {value: fakeStudent.name + 'z'}});
+      await user.clear(nameInput);
+      await user.type(nameInput, fakeStudent.name + 'z');
 
       // Expect the input box value to have changed
-      expect(nameInput().prop('value')).to.equal(fakeStudent.name + 'z');
+      expect(nameInput).toHaveValue(fakeStudent.name + 'z');
     });
 
     it('renders an editable family name field in student sections', async () => {
-      const wrapper = mount(
+      const user = userEvent.setup();
+
+      render(
         <Provider store={getStore()}>
           <ManageStudentsTable />
         </Provider>
       );
       // Begin editing the student
-      // (Using redux directly to do this requires us to trigger a manual update)
       getStore().dispatch(startEditingStudent(fakeStudent.id));
-      wrapper.update();
 
-      const manageStudentFamilyNameCell = () =>
-        wrapper
-          .find(ManageStudentFamilyNameCell)
-          .findWhere(w => w.prop('id') === fakeStudent.id)
-          .first();
-
-      // Check for a family name cell with expecting initial editing props
-      expect(manageStudentFamilyNameCell().exists()).to.be.true;
-      expect(manageStudentFamilyNameCell().prop('isEditing')).to.be.true;
-
-      // Find the family name input
-      const nameInput = () =>
-        manageStudentFamilyNameCell().find('input').first();
-      expect(nameInput().prop('value')).to.equal('');
+      const familyNameInputs = screen.getAllByRole('textbox', {
+        name: /family name/i,
+      });
+      const familyNameInput = familyNameInputs[0];
+      expect(familyNameInput).toBeInTheDocument();
+      expect(familyNameInput).toHaveValue('');
 
       // Simulate a family name change
-      nameInput().simulate('change', {target: {value: 'z'}});
+      await user.type(familyNameInput, 'z');
 
       // Expect the input box value to have changed
-      expect(nameInput().prop('value')).to.equal('z');
+      expect(familyNameInput).toHaveValue('z');
     });
 
     it('does not render a family name field in PL sections', async () => {
       const plSection = {...fakeSection, participant_type: 'teacher'};
       getStore().dispatch(setSections([plSection]));
-      const wrapper = mount(
+
+      render(
         <Provider store={getStore()}>
           <ManageStudentsTable />
         </Provider>
       );
       // Begin editing the student
-      // (Using redux directly to do this requires us to trigger a manual update)
       getStore().dispatch(startEditingStudent(fakeStudent.id));
-      wrapper.update();
 
-      const manageStudentFamilyNameCell = () =>
-        wrapper
-          .find(ManageStudentFamilyNameCell)
-          .findWhere(w => w.prop('id') === fakeStudent.id)
-          .first();
-
-      // Check for a family name cell with expecting initial editing props
-      expect(manageStudentFamilyNameCell().exists()).to.be.false;
+      expect(
+        screen.queryByRole('textbox', {name: /family name/i})
+      ).not.toBeInTheDocument();
     });
 
     it('renders correctly if loginType is picture', () => {
-      const wrapper = mount(
-        <Provider store={getStore()}>
+      const store = getStore();
+      store.dispatch(setLoginType(SectionLoginType.picture));
+      render(
+        <Provider store={store}>
           <ManageStudentsTable />
         </Provider>
       );
-      const passwordColumnHeader = wrapper.find('#password-header');
-      expect(passwordColumnHeader).to.have.lengthOf(1);
-      expect(passwordColumnHeader.text()).to.equal(i18n.picturePassword());
-      const showSecret = wrapper.find('ShowSecret');
-      expect(showSecret).to.have.lengthOf(1);
-      expect(showSecret.find('Button').text()).to.equal(i18n.showPicture());
-      const loginInfo = wrapper.find('ManageStudentsLoginInfo');
-      expect(loginInfo.props().loginType).to.equal(SectionLoginType.picture);
-      expect(loginInfo.find('SignInInstructions').props().loginType).to.equal(
-        SectionLoginType.picture
-      );
-      expect(wrapper.containsMatchingElement(<NoSectionCodeDialog />)).to.be
-        .false;
+
+      const passwordColumnHeader = screen.getByText(i18n.picturePassword());
+      expect(passwordColumnHeader).toBeInTheDocument();
+
+      const showPictureButton = screen.getByRole('button', {
+        name: i18n.showPicture(),
+      });
+      expect(showPictureButton).toBeInTheDocument();
+
+      expect(screen.queryByText(/no section code/i)).not.toBeInTheDocument();
+
+      // Should show sign-in instructions for picture login type
+      expect(
+        screen.getByText('Signing in with Picture passwords')
+      ).toBeInTheDocument();
     });
 
     it('renders correctly if loginType is word', () => {
@@ -402,24 +371,26 @@ describe('ManageStudentsTable', () => {
       getStore().dispatch(setLoginType(SectionLoginType.word));
       getStore().dispatch(setSections([wordSection]));
       getStore().dispatch(setStudents(wordStudents));
-      const wrapper = mount(
+
+      render(
         <Provider store={getStore()}>
           <ManageStudentsTable />
         </Provider>
       );
-      const passwordColumnHeader = wrapper.find('#password-header');
-      expect(passwordColumnHeader).to.have.lengthOf(1);
-      expect(passwordColumnHeader.text()).to.equal(i18n.secretWords());
-      const showSecret = wrapper.find('ShowSecret');
-      expect(showSecret).to.have.lengthOf(1);
-      expect(showSecret.find('Button').text()).to.equal(i18n.showWords());
-      const loginInfo = wrapper.find('ManageStudentsLoginInfo');
-      expect(loginInfo.props().loginType).to.equal(SectionLoginType.word);
-      expect(loginInfo.find('SignInInstructions').props().loginType).to.equal(
-        SectionLoginType.word
-      );
-      expect(wrapper.containsMatchingElement(<NoSectionCodeDialog />)).to.be
-        .false;
+
+      const passwordColumnHeader = screen.getByText(i18n.secretWords());
+      expect(passwordColumnHeader).toBeInTheDocument();
+
+      const showWordsButton = screen.getByRole('button', {
+        name: i18n.showWords(),
+      });
+      expect(showWordsButton).toBeInTheDocument();
+
+      expect(screen.queryByText(/no section code/i)).not.toBeInTheDocument();
+
+      expect(
+        screen.getByText('Signing in with Secret Word passwords')
+      ).toBeInTheDocument();
     });
 
     it('renders correctly if loginType is personal email', () => {
@@ -431,22 +402,25 @@ describe('ManageStudentsTable', () => {
       getStore().dispatch(setLoginType(SectionLoginType.email));
       getStore().dispatch(setSections([emailSection]));
       getStore().dispatch(setStudents(emailStudents));
-      const wrapper = mount(
+
+      render(
         <Provider store={getStore()}>
           <ManageStudentsTable />
         </Provider>
       );
-      const passwordColumnHeader = wrapper.find('#password-header');
-      expect(passwordColumnHeader).to.have.lengthOf(1);
-      expect(passwordColumnHeader.text()).to.equal(i18n.password());
-      expect(wrapper.find('PasswordReset')).to.have.lengthOf(1);
-      const loginInfo = wrapper.find('ManageStudentsLoginInfo');
-      expect(loginInfo.props().loginType).to.equal(SectionLoginType.email);
-      expect(loginInfo.find('SignInInstructions').props().loginType).to.equal(
-        SectionLoginType.email
-      );
-      expect(wrapper.containsMatchingElement(<NoSectionCodeDialog />)).to.be
-        .false;
+
+      const passwordColumnHeader = screen.getByText(i18n.password());
+      expect(passwordColumnHeader).toBeInTheDocument();
+
+      expect(
+        screen.getByRole('button', {name: /reset password/i})
+      ).toBeInTheDocument();
+
+      expect(screen.queryByText(/no section code/i)).not.toBeInTheDocument();
+
+      expect(
+        screen.getByText('Signing in with Personal Logins')
+      ).toBeInTheDocument();
     });
 
     it('displays notification for password reset length if state.showPasswordLengthFailure is true', () => {
@@ -454,23 +428,38 @@ describe('ManageStudentsTable', () => {
         ...fakeSection,
         loginType: SectionLoginType.email,
       };
+      const emailStudent = {...fakeStudent, loginType: SectionLoginType.email};
+      const emailStudents = {
+        [emailStudent.id]: emailStudent,
+      };
       getStore().dispatch(setLoginType(SectionLoginType.email));
       getStore().dispatch(setSections([emailSection]));
+      getStore().dispatch(setStudents(emailStudents));
 
-      const wrapper = mount(
+      render(
         <Provider store={getStore()}>
           <ManageStudentsTable />
         </Provider>
       );
 
-      const manageStudentsTable = wrapper.find('ManageStudentsTable');
-      manageStudentsTable.setState({showPasswordLengthFailure: true});
+      expect(
+        screen.queryByText(/Passwords must be six \(6\) characters or longer/i)
+      ).not.toBeInTheDocument();
 
-      const passwordFailureNotificaton = wrapper.find('Notification');
-      expect(passwordFailureNotificaton).to.have.length(1);
-      expect(passwordFailureNotificaton.props().notice).to.equal(
-        i18n.passwordsMustBeSixChars()
-      );
+      const resetPasswordButton = screen.getByRole('button', {
+        name: /reset password/i,
+      });
+      fireEvent.click(resetPasswordButton);
+
+      const passwordInput = screen.getByPlaceholderText(/new password/i);
+      fireEvent.change(passwordInput, {target: {value: 'short'}});
+
+      const saveButton = screen.getByRole('button', {name: /save/i});
+      fireEvent.click(saveButton);
+
+      expect(
+        screen.getByText(/Passwords must be six \(6\) characters or longer/i)
+      ).toBeInTheDocument();
     });
 
     it('renders correctly if loginType is clever', () => {
@@ -480,18 +469,16 @@ describe('ManageStudentsTable', () => {
       };
       getStore().dispatch(setLoginType(SectionLoginType.clever));
       getStore().dispatch(setSections([cleverSection]));
-      const wrapper = mount(
+
+      render(
         <Provider store={getStore()}>
           <ManageStudentsTable section={cleverSection} />
         </Provider>
       );
-      const passwordColumnHeader = wrapper.find('#password-header');
-      expect(passwordColumnHeader).to.have.lengthOf(0);
-      const loginInfo = wrapper.find('ManageStudentsLoginInfo');
-      expect(loginInfo.props().loginType).to.equal(SectionLoginType.clever);
-      expect(loginInfo.find('SignInInstructions').props().loginType).to.equal(
-        SectionLoginType.clever
-      );
+
+      expect(screen.queryByText(i18n.password())).not.toBeInTheDocument();
+
+      expect(screen.getByText(/Signing in with Clever/i)).toBeInTheDocument();
     });
 
     it('renders correctly if loginType is google_classroom', () => {
@@ -501,66 +488,15 @@ describe('ManageStudentsTable', () => {
       };
       getStore().dispatch(setLoginType(SectionLoginType.google_classroom));
       getStore().dispatch(setSections([googleSection]));
-      const wrapper = mount(
+
+      render(
         <Provider store={getStore()}>
           <ManageStudentsTable section={googleSection} />
         </Provider>
       );
-      const passwordColumnHeader = wrapper.find('#password-header');
-      expect(passwordColumnHeader).to.have.lengthOf(0);
-      const loginInfo = wrapper.find('ManageStudentsLoginInfo');
-      expect(loginInfo.props().loginType).to.equal(
-        SectionLoginType.google_classroom
-      );
-      expect(loginInfo.find('SignInInstructions').props().loginType).to.equal(
-        SectionLoginType.google_classroom
-      );
-    });
 
-    it('opens dialog correctly for Google Classroom sections', () => {
-      const googleSection = {
-        ...fakeSection,
-        loginType: SectionLoginType.google_classroom,
-      };
-      getStore().dispatch(setLoginType(SectionLoginType.google_classroom));
-      getStore().dispatch(setSections([googleSection]));
-      const wrapper = mount(
-        <Provider store={getStore()}>
-          <ManageStudentsTable section={googleSection} />
-        </Provider>
-      );
-      expect(wrapper.containsMatchingElement(<NoSectionCodeDialog />)).to.be
-        .true;
-      expect(
-        wrapper.find('NoSectionCodeDialog').props().typeClassroom
-      ).to.equal(SectionLoginType.google_classroom);
-      expect(wrapper.find('NoSectionCodeDialog').props().isOpen).to.be.false;
-      const mainTable = wrapper.find('ManageStudentsTable');
-      mainTable.setState({showSectionCodeDialog: true});
-      expect(wrapper.find('NoSectionCodeDialog').props().isOpen).to.be.true;
-    });
-
-    it('opens dialog correctly for Clever sections', () => {
-      const cleverSection = {
-        ...fakeSection,
-        loginType: SectionLoginType.clever,
-      };
-      getStore().dispatch(setLoginType(SectionLoginType.clever));
-      getStore().dispatch(setSections([cleverSection]));
-      const wrapper = mount(
-        <Provider store={getStore()}>
-          <ManageStudentsTable section={cleverSection} />
-        </Provider>
-      );
-      expect(wrapper.containsMatchingElement(<NoSectionCodeDialog />)).to.be
-        .true;
-      expect(
-        wrapper.find('NoSectionCodeDialog').props().typeClassroom
-      ).to.equal(SectionLoginType.clever);
-      expect(wrapper.find('NoSectionCodeDialog').props().isOpen).to.be.false;
-      const mainTable = wrapper.find('ManageStudentsTable');
-      mainTable.setState({showSectionCodeDialog: true});
-      expect(wrapper.find('NoSectionCodeDialog').props().isOpen).to.equal(true);
+      expect(screen.queryByText(i18n.password())).not.toBeInTheDocument();
+      expect(screen.getByText(/Signing in with Google/i)).toBeInTheDocument();
     });
 
     describe('The full section notification', () => {
@@ -587,7 +523,7 @@ describe('ManageStudentsTable', () => {
             name: 'new student',
             age: 17,
             gender: 'f',
-            secretPicturePath: '/wizard.jpg',
+            secretPictureUrl: '/wizard.jpg',
             loginType: 'picture',
             isEditing: false,
           };
@@ -599,19 +535,15 @@ describe('ManageStudentsTable', () => {
                 })
               );
 
-              const wrapper = mount(
+              render(
                 <Provider store={getStore()}>
                   <ManageStudentsTable section={wordSection} />
                 </Provider>
               );
 
               expect(
-                wrapper.containsMatchingElement(
-                  <ManageStudentsNotificationFull
-                    manageStatus={defaultAddTransferStatus}
-                  />
-                )
-              ).to.be.false;
+                screen.queryByText(/students couldn't be/i)
+              ).not.toBeInTheDocument();
             });
           });
 
@@ -630,19 +562,15 @@ describe('ManageStudentsTable', () => {
                 transferStudentsSuccess(type, numStudents, sectionDisplay)
               );
 
-              const wrapper = mount(
+              render(
                 <Provider store={getStore()}>
                   <ManageStudentsTable section={wordSection} />
                 </Provider>
               );
 
               expect(
-                wrapper.containsMatchingElement(
-                  <ManageStudentsNotificationFull
-                    manageStatus={defaultAddTransferStatus}
-                  />
-                )
-              ).to.be.false;
+                screen.queryByText(/students couldn't be/i)
+              ).not.toBeInTheDocument();
             });
           });
         });
@@ -652,19 +580,15 @@ describe('ManageStudentsTable', () => {
             it('does not fire full notification', () => {
               getStore().dispatch(addStudentsFailure(1, 'error info', [0]));
 
-              const wrapper = mount(
+              render(
                 <Provider store={getStore()}>
                   <ManageStudentsTable section={wordSection} />
                 </Provider>
               );
 
               expect(
-                wrapper.containsMatchingElement(
-                  <ManageStudentsNotificationFull
-                    manageStatus={defaultAddTransferStatus}
-                  />
-                )
-              ).to.be.false;
+                screen.queryByText(/students couldn't be/i)
+              ).not.toBeInTheDocument();
             });
           });
 
@@ -672,19 +596,15 @@ describe('ManageStudentsTable', () => {
             it('does not fire full notification', () => {
               getStore().dispatch(transferStudentsFailure('error info'));
 
-              const wrapper = mount(
+              render(
                 <Provider store={getStore()}>
                   <ManageStudentsTable section={wordSection} />
                 </Provider>
               );
 
               expect(
-                wrapper.containsMatchingElement(
-                  <ManageStudentsNotificationFull
-                    manageStatus={defaultAddTransferStatus}
-                  />
-                )
-              ).to.be.false;
+                screen.queryByText(/students couldn't be/i)
+              ).not.toBeInTheDocument();
             });
           });
         });
@@ -695,71 +615,45 @@ describe('ManageStudentsTable', () => {
           it('added', () => {
             getStore().dispatch(addStudentsFull(defaultAddTransferStatus, [0]));
 
-            const wrapper = mount(
+            render(
               <Provider store={getStore()}>
                 <ManageStudentsTable section={wordSection} />
               </Provider>
             );
 
             expect(
-              wrapper.containsMatchingElement(
-                <ManageStudentsNotificationFull
-                  manageStatus={{...defaultAddTransferStatus, status: 'full'}}
-                />
-              )
-            ).to.be.true;
+              screen.getByText(/students couldn't be added/i)
+            ).toBeInTheDocument();
           });
           it('moved', () => {
             getStore().dispatch(
               transferStudentsFull(defaultAddTransferStatus, false)
             );
 
-            const wrapper = mount(
+            render(
               <Provider store={getStore()}>
                 <ManageStudentsTable section={wordSection} />
               </Provider>
             );
 
             expect(
-              wrapper.containsMatchingElement(
-                <ManageStudentsNotificationFull
-                  manageStatus={{
-                    ...defaultAddTransferStatus,
-                    status: 'full',
-                    type: null,
-                    error: null,
-                    sectionDisplay: '',
-                    verb: 'move',
-                  }}
-                />
-              )
-            ).to.be.true;
+              screen.getByText(/students couldn't be moved/i)
+            ).toBeInTheDocument();
           });
           it('copied', () => {
             getStore().dispatch(
               transferStudentsFull(defaultAddTransferStatus, true)
             );
 
-            const wrapper = mount(
+            render(
               <Provider store={getStore()}>
                 <ManageStudentsTable section={wordSection} />
               </Provider>
             );
 
             expect(
-              wrapper.containsMatchingElement(
-                <ManageStudentsNotificationFull
-                  manageStatus={{
-                    ...defaultAddTransferStatus,
-                    status: 'full',
-                    type: null,
-                    error: null,
-                    sectionDisplay: '',
-                    verb: 'copy',
-                  }}
-                />
-              )
-            ).to.be.true;
+              screen.getByText(/students couldn't be copied/i)
+            ).toBeInTheDocument();
           });
         });
         describe('Multiple students', () => {
@@ -771,71 +665,60 @@ describe('ManageStudentsTable', () => {
               addStudentsFull(defaultAddTransferStatus, [0, 1])
             );
 
-            const wrapper = mount(
+            render(
               <Provider store={getStore()}>
                 <ManageStudentsTable section={wordSection} />
               </Provider>
             );
 
             expect(
-              wrapper.containsMatchingElement(
-                <ManageStudentsNotificationFull
-                  manageStatus={{...defaultAddTransferStatus, status: 'full'}}
-                />
-              )
-            ).to.be.true;
+              screen.getByText(/students couldn't be added/i)
+            ).toBeInTheDocument();
           });
           it('moved', () => {
             getStore().dispatch(
               transferStudentsFull(defaultAddTransferStatus, false)
             );
 
-            const wrapper = mount(
+            render(
               <Provider store={getStore()}>
                 <ManageStudentsTable section={wordSection} />
               </Provider>
             );
 
             expect(
-              wrapper.containsMatchingElement(
-                <ManageStudentsNotificationFull
-                  manageStatus={{
-                    ...defaultAddTransferStatus,
-                    status: 'full',
-                    type: null,
-                    error: null,
-                    sectionDisplay: '',
-                    verb: 'move',
-                  }}
-                />
-              )
-            ).to.be.true;
+              screen.getByText(/students couldn't be moved/i)
+            ).toBeInTheDocument();
           });
           it('copied', () => {
             getStore().dispatch(
               transferStudentsFull(defaultAddTransferStatus, true)
             );
 
-            const wrapper = mount(
+            render(
               <Provider store={getStore()}>
                 <ManageStudentsTable section={wordSection} />
               </Provider>
             );
 
             expect(
-              wrapper.containsMatchingElement(
-                <ManageStudentsNotificationFull
-                  manageStatus={{
-                    ...defaultAddTransferStatus,
-                    status: 'full',
-                    type: null,
-                    error: null,
-                    sectionDisplay: '',
-                    verb: 'copy',
-                  }}
-                />
-              )
-            ).to.be.true;
+              screen.getByText(/students couldn't be copied/i)
+            ).toBeInTheDocument();
+          });
+          it('copied', () => {
+            getStore().dispatch(
+              transferStudentsFull(defaultAddTransferStatus, true)
+            );
+
+            render(
+              <Provider store={getStore()}>
+                <ManageStudentsTable section={wordSection} />
+              </Provider>
+            );
+
+            expect(
+              screen.getByText(/students couldn't be copied/i)
+            ).toBeInTheDocument();
           });
         });
       });

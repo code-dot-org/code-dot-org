@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-09-25T20:08:31.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Data Interpretation",
+    "long_instructions": "![](https://images.code.org/5175faee0aadb0645ac8ca852be4a184-image-1744841657645.11.14 PM.png)\r\n\r\n**Do This:**\r\n\r\nUse the graph above to answer the following questions:\r\n\r\n- What are the outliers, patterns or trends found in this data? What insights do they provide?\r\n\r\n- What do you think is the story this data tells, and what are the potential causes?\r\n\r\n- Why is it important to recognize outliers, patterns, and trends in data?\r\n\r\n",
+    "teacher_markdown": "What are the outliers, patterns or trends found in this data? What insights do they provide?\r\n\r\nThe goal of this question is to assess students' abilities to identify and interpret significant data features such as outliers, trends, and patterns. Students should point out specific outliers, such \"fleek\" rising to popularity. They might notice that other words such as \"lowkey\" and \"shook\" are not nearly as popular and maintain a relatively constant popularity. \r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_v2-2025",
+    "stay_on_level_after_submit": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:08:31.314+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson9-level5_2025\\\"\"],\"cloned_from\":\"data-science-ch1-lesson9-level5_2025\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

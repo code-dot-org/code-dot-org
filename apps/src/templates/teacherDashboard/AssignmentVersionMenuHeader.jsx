@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import i18n from '@cdo/locale';
 
-import PopUpMenu from '../../lib/ui/PopUpMenu';
+import PopUpMenu from '../../sharedComponents/PopUpMenu';
 import color from '../../util/color';
 
 import {columnWidths, rowHeight, cellStyle} from './AssignmentVersionMenuItem';

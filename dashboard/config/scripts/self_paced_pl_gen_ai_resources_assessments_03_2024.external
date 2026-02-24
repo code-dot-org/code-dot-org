@@ -1,0 +1,12 @@
+name 'self-paced-pl-gen-ai-resources-assessments_03_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Assessment Opportunities
+
+<img src="https://images.code.org/32f12b55340da9bb65fade11a9fb9234-Screenshot 2024-09-04 at 3.20.27 PM.png" alt="AI bot and a model card" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
+
+#### Assessment opportunities, like the one above, are flagged in lesson plans through out this unit. These allow teachers to gauge students' understanding at critical points. For example, a specific level might be used to assess students' grasp of system prompting, providing insights into how well they comprehend the material so far. Additionally, formative assessments are embedded where students are encouraged to suggest more precise prompting ideas, helping teachers identify areas where further clarification or direct instruction may be needed. These assessment checkpoints are designed to inform instruction and ensure that students are progressing as expected.
+
+MARKDOWN

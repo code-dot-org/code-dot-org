@@ -1,17 +1,12 @@
-import GoogleBlockly, {
-  FieldNumberConfig,
-  FieldNumberValidator,
-} from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
-import {
-  ExtendedBlockSvg,
-  ExtendedConnection,
-  FieldHelperOptions,
-} from '../types';
+import {EMPTY_OPTION} from '../constants';
+import {ExtendedBlockSvg, AngleHelperOptions} from '../types';
 
 import CdoAngleHelper from './cdoAngleHelper';
+import {AngleHelperConnection} from './cdoAngleHelperOptions';
 
-export default class CdoFieldNumber extends GoogleBlockly.FieldNumber {
+export default class CdoFieldNumber extends BlocklyCore.FieldNumber {
   private config: string | null | undefined;
   angleHelper: CdoAngleHelper | null;
   direction: string | undefined;
@@ -41,8 +36,8 @@ export default class CdoFieldNumber extends GoogleBlockly.FieldNumber {
     min?: string | number | null,
     max?: string | number | null,
     precision?: string | number | null,
-    validator?: FieldNumberValidator | null,
-    config?: FieldNumberConfig
+    validator?: BlocklyCore.FieldNumberValidator | null,
+    config?: BlocklyCore.FieldNumberConfig
   ) {
     super(value, min, max, precision, validator, config);
     this.angleHelper = null;
@@ -50,28 +45,25 @@ export default class CdoFieldNumber extends GoogleBlockly.FieldNumber {
 
   /**
    * If this field is attached to a block whose output connection is attached to a
-   * connection that has the specified field helper, get the options for that
-   * field helper.
+   * connection that has an angle helper, get the options for it.
    * For example, with a math_number block containing this field, we will look at
-   * the input connection of parent block. A draw_turn block will have field helper
+   * the input connection of parent block. A draw_turn block will have angle helper
    * options whereas other blocks, like draw_move, will not. These options are found
    * on the connection of the parent block's input.
-   * @param {string} fieldHelper - the field helper to retrieve. One of
-   *        Blockly.BlockFieldHelper
    * @return {Object|undefined} the options object if it exists
    */
-  getFieldHelperOptions(fieldHelper: string) {
+  getAngleHelperOptions() {
     return (this.sourceBlock_ &&
       this.sourceBlock_.outputConnection &&
       this.sourceBlock_.outputConnection.targetConnection &&
       (
         this.sourceBlock_.outputConnection
-          .targetConnection as ExtendedConnection
-      ).getFieldHelperOptions(fieldHelper)) as FieldHelperOptions | undefined;
+          .targetConnection as AngleHelperConnection
+      ).angleHelperOptions) as AngleHelperOptions | undefined;
   }
 
   shouldShowAngleHelper() {
-    return this.getFieldHelperOptions(Blockly.BlockFieldHelper.ANGLE_HELPER);
+    return this.getAngleHelperOptions();
   }
 
   protected showEditor_(e?: Event, quietInput?: boolean): void {
@@ -107,9 +99,7 @@ export default class CdoFieldNumber extends GoogleBlockly.FieldNumber {
    */
   getAnglePickerDirection(): string {
     const defaultDirection = 'turnRight';
-    const options = this.getFieldHelperOptions(
-      Blockly.BlockFieldHelper.ANGLE_HELPER
-    );
+    const options = this.getAngleHelperOptions();
 
     if (!options) {
       return defaultDirection;
@@ -165,5 +155,21 @@ export default class CdoFieldNumber extends GoogleBlockly.FieldNumber {
   doValueUpdate_(newValue: number) {
     super.doValueUpdate_(newValue);
     this.angleHelper?.animateAngleChange(newValue);
+  }
+
+  /**
+   * Ensure that the input value is a valid number (must fulfill the
+   * constraints placed on the field).
+   *
+   * @param newValue The input value.
+   * @returns A valid number, our special case '???' value, or null if invalid
+   */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  protected override doClassValidation_(newValue: any): number | null {
+    if (newValue === EMPTY_OPTION) {
+      return newValue; // Return the original value if it's our special case "???"
+    }
+
+    return super.doClassValidation_(newValue);
   }
 }

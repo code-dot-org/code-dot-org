@@ -1,0 +1,37 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2025-01-22T21:30:58.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Combine Multiple Functions\r\n\r\n### Plan your game setup\r\n- Think about your game's story\r\n\t- Who is the main character? \r\n\t- Who is their sidekick? \r\n    - What is the story's setting? \r\n    - What task or action do they perform to win? \r\n\r\n### Write your program\r\n- Use at least three functions.\r\n- Call each function more than once to create a story that introduces the main character, sidekick, and world.\r\n\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px; color: black;\">\r\n<br>\r\n📝 <strong>TAG Feedback</strong>  \r\n<br>\r\n\r\n<br>\r\n\r\nSwap programs with a partner and provide TAG feedback on a sticky note\r\n   - T (Tell): Tell something you liked about their program\r\n   - A (Ask): Ask a question about their program\r\n   - G (Give): Give a suggestion for improvement.\r\n\r\n::: details [**See TAG Feedback Example Here**]\r\n   - T: *I liked how you alternated the colors red and blue.*\r\n   - A: *Why did you decide to move forward twice before turning right?*\r\n   - G: *You could try adding another color to your pattern.*\r\n:::\r\n</div>",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# Main character function \ndef introduce_character(): \n  print()\n  print() \n  print() \n\n# Sidekick function \n\n\n# Action function like planting a garden, dropping items off for villagers, leaving a trail a breadcrumbs, fighting bad guys, etc. \n\n\n# Custom function: Introduce the world and challenge ",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzuj4wvKl/PYXtA1u/nVF1aH+PiG+QcWx\nt4Kz0GTg8y/twu2sS6dFQ1BVQk/7yjpNXawheE69p6lm9wvQwA5zXHKKZP9w\nV+BD5qcVvi1FQHP5WbWjMi8SZam9nhLd5Kv4yBGtIuBnkhag5McqmGixoBl7\nxaf7Dl/NBubMRTEAK2alhjl30cApUUbH5V2reqs/ArB7Cne2/IDO8JDZaOEk\nnyr3zwuieuQtx8vwvmymSU2cS1OAzx/7ovz2eqQRP2RVOTZETf4kzfNW96PL\nL0GIzen4Gfucwkl9yOZQiEdI8q8o68F7vccslfWy+Cgku7Z4X9FNA2hWtCSv\ns2u6keem7stnpN1cRlLfxuR/OVVZV2RRh2ozxBLxUfysf358QIqNkbf2JJa3\ngwKZj4EB1YXGyON8SPOb067t3t1z4l4NXWMcpjxuuRmcHiCVh9TAfgud2kzL\nZJwbYtPAzERtcYGX0arms865VdP+coNG0ia5FZ5nJkMDrmMmXTu4cYmTqWnv\noXujsz2FEwQtptICtjguLA8V92QTZph8wsLuL9Rd+GuXxHhDQRFmsYFZxYnu\nlW7D+SYRhYsnSfvhXeJFrx4OinwFATxDOKcUXfaF2rwIeBnPS12PvpL3A7ip\nA5yliDtDHusuaCIQ44NCawBWXrFZZcX2Ag6noJ1/EoJQQHZ2xjNl7/j3zmCl\nRMGMs1+vXFV3QHmb5ulk7+QPsWcQ5lcX/Og=\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-01-22T21:30:58.072+00:00\",\"changed\":[\"cloned from \\\"python-intro-console-lesson7-parameters\\\"\"],\"cloned_from\":\"python-intro-console-lesson7-parameters\"},{\"changed_at\":\"2025-01-22 21:53:40 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 21:54:18 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 22:00:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 22:05:40 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 22:06:08 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Pythonlab>

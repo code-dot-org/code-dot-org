@@ -1,0 +1,61 @@
+name 'pl_sandbox_aif_2_what is GenAI_5'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# What is Generative AI
+
+
+#### Generative AI is one of the most talked-about technologies today, reshaping how we create, work, and learn.
+
+<div style="background-color: #DECEEA; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 95%; margin: 20px auto;">
+    <p style="font-size: 16pt; font-weight: bold; margin: 0; text-align: center;">What is Generative AI?</p>
+    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">Generative AI refers to artificial intelligence systems that can create new content—such as text, images, code, music, or even video—based on patterns they’ve learned from large datasets. </p>
+    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">Instead of simply retrieving information, generative AI models can produce original outputs that resemble human-created work. Tools like ChatGPT, DALL·E, and GitHub Copilot are popular examples.</p>
+</div>
+
+## **How It’s Growing and Shaping Workflows**
+
+<div style="display: flex; justify-content: center; gap: 20px; max-width: 1100px; margin: auto;">
+
+  <div style="flex: 1; background: #f2f4f7; border-radius: 14px; box-shadow: 0 6px 16px rgba(0,0,0,0.08); padding: 18px 20px; display: flex; flex-direction: column; text-align: left; align-items: center;">
+    <img src="https://emojiapi.dev/api/v1/rocket/128.png" alt="Rocket Emoji" style="width: 50px; height: 50px; margin-bottom: 10px;">
+    <h3 style="margin: 0 0 10px 0; font-weight: bold; text-align: center; font-size: 1.15rem; line-height: 1.3; width: 100%;">Rapid adoption</h3>
+    <p style="margin: 0; font-size: 1rem; line-height: 1.5; width: 100%;">Since 2022, generative AI tools have become some of the <b>fastest-growing</b> technologies ever.<br><br>
+    ChatGPT reached <i>100 million</i> users in just two months, making it one of the quickest tech adoptions in history.</p>
+  </div>
+
+  <div style="flex: 1; background: #f2f4f7; border-radius: 14px; box-shadow: 0 6px 16px rgba(0,0,0,0.08); padding: 18px 20px; display: flex; flex-direction: column; text-align: left; align-items: center;">
+    <img src="https://emojiapi.dev/api/v1/laptop/128.png" alt="laptop emoji" style="width: 50px; height: 50px; margin-bottom: 10px;">
+    <h3 style="margin: 0 0 10px 0; font-weight: bold; text-align: center; font-size: 1.15rem; line-height: 1.3; width: 100%;">Workplace integration</h3>
+    <p style="margin: 0; font-size: 1rem; line-height: 1.5; width: 100%;">By 2025, studies show that more than 75% of companies are experimenting with or <b>actively deploying generative AI</b> in their operations.<br><br> It’s being used to draft emails, generate marketing copy, analyze data, design prototypes, and even help <i>write code.</i></p>
+  </div>
+
+  <div style="flex: 1; background: #f2f4f7; border-radius: 14px; box-shadow: 0 6px 16px rgba(0,0,0,0.08); padding: 18px 20px; display: flex; flex-direction: column; text-align: left; align-items: center;">
+    <img src="https://emojiapi.dev/api/v1/books/128.png" alt="Books Emoji" style="width: 50px; height: 50px; margin-bottom: 10px;">
+    <h3 style="margin: 0 0 10px 0; font-weight: bold; text-align: center; font-size: 1.15rem; line-height: 1.3; width: 100%;">Shifting skills</h3>
+    <p style="margin: 0; font-size: 1rem; line-height: 1.5; width: 100%;">Generative AI is no longer just a niche tool—it’s becoming <b>embedded in everyday productivity platforms</b> (like Microsoft 365, Google Workspace, and coding environments). <br><br>This means students’ future workplaces will expect <i>fluency</i> in both <b>collaborating with AI</b> and <b> evaluating its outputs critically</b>.</p>
+  </div>
+
+</div>
+
+
+
+## Why It Matters for Students
+
+<img src="https://images.code.org/9c09f72265dedb02c7f2fe39ab0da859-image-1744838232658.17.10 PM.png" 
+     alt="" 
+     style="width: 25%; border-radius: 5px; margin: 0px 0px 20px 20px; float: right;">
+     
+#### Generative AI is already transforming how professionals design, write, problem-solve, and build. By learning to use it responsibly and intentionally, students build **future-ready skills:**
+- #### They save time on routine tasks.
+- #### They expand creativity and explore new ideas.
+- #### They develop the judgment to critique and improve AI outputs, ensuring they stay in control of the process.
+
+
+<div style="clear:both;"></div>
+
+
+---
+McKinsey & Company. [The State of AI: How Organizations Are Rewiring to Capture Value.](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/the%20state%20of%20ai/2025/the-state-of-ai-how-organizations-are-rewiring-to-capture-value_final.pdf?utm_source=chatgpt.com) October 2025.
+MARKDOWN

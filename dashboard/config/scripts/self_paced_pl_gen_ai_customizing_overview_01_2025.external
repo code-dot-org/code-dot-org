@@ -1,0 +1,28 @@
+name 'self-paced-pl-gen-ai-customizing-overview_01_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Customizing Large Language Models
+
+
+<div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="AI Bot cartoon" style="width: 20%; max-width: 120px; height: auto;">
+        <div style="flex: 1; background: #B7E0E5; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); ">
+            <h3> <b>Unit Overview</b></h3>
+            <p style = "font-size: 14pt";>This unit focuses on practical skills for tailoring AI models using techniques like prompt engineering and retrieval, while promoting transparency through model cards.</p>
+            <p style = "font-size: 14pt";>Students explore how to customize AI chatbots to fit specific use-cases, then create their own chatbot to address a problem they care about.</p>
+        </div>
+    </div>
+    
+    </div>
+
+## **In this lesson you will:** 
+- #### Learn key concepts from the Customizing Large Language Models Unit
+- #### Preview activities from selected lessons in the Customizing Large Language Models Unit
+- #### Review pedagogical strategies for effective implementation
+- #### Learn what to do next and how to learn more
+
+### **Suggested time:** 60 minutes
+
+MARKDOWN

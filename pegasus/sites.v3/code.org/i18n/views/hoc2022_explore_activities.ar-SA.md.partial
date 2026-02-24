@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "مرحبًا أيها العالم: الفضاء"، body: "أنشيء مشاهد بين المجرات مع شخصيات وأصوات تقول، \"مرحبًا بالعوالم!\"", image: "/images/hoc2022-hello-world-space.png", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
-
-{{ featured_tutorial, title: "NASA's Space Jam", body: "أنشئ نظامًا شمسيًا مذهلًا حقًا، وتعلم عن الموسيقى وعلم الفلك والبرمجة في هذه العملية!"، image: "/images/hoc2022-nasa-space-jam.png", url: "https://chandra.si.edu/sound/code/" }}
-
-{{ featured_tutorial, title: "حرب النجوم"، body: "تعلم كيفية برمجة الروبوتات وإنشاء لعبة حرب النجوم الخاصة بك في مجرة ​​بعيدة.", image: "/shared/images/courses/logo_tall_starwars.jpg", url: "https://code.org/starwars" }}
-
-{{ featured_tutorial, title: "SciGirls Code Quest", body: "في مغامرة البرمجة هذه عبر الإنترنت، ستأخذ الغواصة "سابي" عبر تحديات تحت الماء.", image: "/images/hoc2022-scigirls-code-quest.png", url: "https://pbskids.org/scigirls/games/code-quest" }}

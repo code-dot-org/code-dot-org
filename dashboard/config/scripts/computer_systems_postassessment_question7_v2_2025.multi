@@ -1,0 +1,19 @@
+name 'computer-systems-postassessment-question7_v2-2025'
+title 'Computer Systems and Devices Post-Assessment: Question 7'
+
+wrong 'Move the device to another room'
+right 'Disable voice recognition features when not in use'
+wrong 'Install more smart devices'
+wrong 'Turn off the Wi-Fi'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A user notices their smart home assistant is responding to conversations even when not addressed. What is the best action to improve privacy?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 10: IoT and Emerging Technologies
+
+Lesson 12: Just Because We Can, Should We?
+MARKDOWN

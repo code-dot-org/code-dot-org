@@ -3,7 +3,7 @@
 Feature: Personal Project Gallery
 
 Background:
-  Given I create a teacher-associated student named "Project_Creator"
+  Given I create a teacher-associated student named "Lillian"
 
 Scenario: Can Toggle to the Public Project Gallery
   Given I am on "http://studio.code.org/projects"
@@ -28,6 +28,7 @@ Scenario: Can Rename a Project
   And I wait until element "#ui-projects-rename-save" is not visible
   And the first project in the table is named "New Name"
 
+@no_safari
 Scenario: Can Remix a Project
   Given I make a "playlab" project named "Remix Template"
   Given I am on "http://studio.code.org/projects"

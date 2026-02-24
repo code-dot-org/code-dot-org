@@ -1,0 +1,89 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-10-23T19:17:08.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "1. **Prompt and Refine**  \r\n   Ask AI to recreate your chosen feature from Level 1. If it’s off, ask for a fix.\r\n   &nbsp\r\n   \r\n   - _Example Initial Prompt_: “Create a nav bar with a logo left and 3 links right.”\r\n   - _Example Revision Prompt_: “Add more spacing between the links.”\r\n\r\n2. **Save Version 1 (v1)**  \r\n   When it looks right, open Version History and describe your changes with a short message. For example, *“v1 – working nav bar.”* Then click Save version.\r\n\r\n:::details [**(Optional) Break It On Purpose**]\r\n   Try a risky prompt (e.g., “Rebuild layout with CSS Grid everywhere”).  \r\n   Observe what breaks, then **Revert** to your saved v1.\r\n:::\r\n\r\n",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "designer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <body>\n    Content goes here!\n  </body>\n</html>\n  ",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "styles.css",
+          "language": "css",
+          "contents": "Add your changes to styles.css",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "stainless_steel_bottle.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level2-test-2025/uuid/10ecea80-7e9b-4058-aaab-84e4ac0ddb49.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "collapsible_cup.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level2-test-2025/uuid/ffd265be-122d-42e8-844a-c2cc37f23f35.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "glass_tumbler.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level2-test-2025/uuid/9f715de5-aa90-4d5c-b0f6-387cd4f5dd77.jpg",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMq6axOHbZCY2Ot6j2ta\nc2xUssWeFgyQik6LW5d9KjvGXB0WNtSc6Aew3gFAHiWxOPOkXODL1KEHdyrC\n197vfOvUyempysyXw77NCjviYRUdHKAC/uKseWjOSd/luHbWryZdQXxfD7z9\nokjk2ZoJgIn0RmH7MQyBfBRo712t2rVGvMzGUGBWJezz+P1nZNSkE+MKb3lQ\nVL6GabeoJcLoT6nBisCPR8ivDC3JWcTUMZbKwKubpziZwVWL+cpBX0EHkw03\nmhpRXForCi4z/sXzgUfcgQcaDwP+3y4Bm+l4HqfT+ymhzgWcYaYZXTe8RatI\nECHrtQVlocAECKCxrZizta4i7+uH7TUnQ9j4SgeQ2AWcki+dINAC8U1ePjPm\nlZfEQ0h2e+51fJiAlLi/ahyiJyq2gM/9qVIb4sIzAzG91vI3JlH6cqDm79Iw\n59UHPLR/IWIanyfR4ut3AJrtQnrY3/3naGRopJ2m5h50oarJ7gPO/Nu3JppB\nHU6fnuDcd9ht+rH8o4d2lM0Wn3Vy6e6c2NAiXx8qoArcgdRq7nc1b+vTu6a7\n7dQPDqtQzdL08zx6qSZiTrrx0OU6qVB1QtXq2QwnwQjyLKDgm2HGrTJ+m4UP\nWo/hBm0rO0vXqy//9gk1/UppoS1Iuw5G08yKE6y4WeVXuMBvBBJphEZHi+h3\nnzM+OxJg6Mw3AlHfqRYPpJOlHSD2iPeKGvOr5c5RiVTI5TCsQqfEQHkPpA4A\nRu8Put6R+is/svhw/Dx+daG4xcd96mpcNwZVUPXsLgW3gsZEVIuF9ZDlQAbX\nFfPKAnzFAzgaqi4GOHU0OuIrP7rW7dQoBOL4NGjL+XiNlUHkT3YsjIDg5lOa\nzB/IEnmYCtdj2dTR7rx9enfBdAMBb8HBggd02r0gHDpKbKrWzT2OhrJHHV7a\neavyCc/LOpqWHq7adiZToV61RmK5AGIqyrSeEKy7B4vjfcl+LMve5IfamyZ7\nlsGWDiwZSY08jldXdOFNoUw5JaUH94iIwBUzq2wpUnUVBI7psePJZAwW/OsB\nCy0WmuWwGfVmmUWHB8eGjD+zPSD3FWuUWfOadO+tNA3JJzklnLtA3h9Wuwod\n/Kw2JXiJ7KMsbM4nlUwKR4lOktH855KEEm5uMCBtlcNC671Z5wE0nXShImWR\nPSGRPNkGLHPEncpu9tvgeYDh3Tz5xwMjkDCSy3Wfp1Z8x+bZWU95AulF7OpE\nsMShNWlCqwoqM2xp52dDyLhi17Ttq/cn2gpHbbbdZzYtdcvDw4eQdk5wKWC4\n1RhsqfzsESsYC2ScNqZUNRovwFNSAVqSN2OW83V+xEXvBodp5O9eK16hoNcE\nYcq/CS3P6s3KsvoANz7dgu+ir0Ay17wI/RPqj0DtT/k1BrUcND/Faoh2stdE\ncMbVXPDzqGQYVgjmbQagS75wGnJ/xOObDli0UZ1+xtScUM9C5lGMA3vw8Qg6\nHCCL6uvkxoXU8lFAvzyRBHsGir5KUE7haWDQp+1QuGhiurcllYOEmLT70kGe\nfq16UBtqbMZnfKdiOaRZ+FokC1Z9Xv55ysmwQKlNucmnT57dScPWfJdSMwVF\nazTtIbHXKQbmxFMKuVchdn+QSU0804FFaQwXWnwaYx2Y8AlLprBSwThXHfcD\nOgnphIVuUSlRnI7UpN2TXdYmnY8sZNuXmfcc8XOa9r5gNEPj9MDvib5dzqZx\nZ310fpjeor4UlmVzL5LG08377O5nPYUcLzIOoYH6WGSBb6EoUOHkaIJT9Og2\nJmOOHirFr476BUdKvQAnsU0i4cszD/yz6Gi1CqsJFFT3B/vGSAPM5KGuHJb0\nUp83IB+FPAG03veMktGHMMzbhSBET0aoKb6iZBhFJ02mmD7kD++qXdopB0Eq\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-23T19:17:08.534+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson3-level2-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson3-level2-test-2025\"},{\"changed_at\":\"2025-10-23 19:22:00 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-10-23 19:39:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-12-19 14:19:29 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2025-12-19 14:20:25 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+}]]></config>
+</Weblab2>

@@ -4,7 +4,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {
+  getSelectedCourseName,
+  getSelectedUnitPosition,
+} from '@cdo/apps/redux/unitSelectionRedux';
 import {shouldShowReviewStates} from '@cdo/apps/templates/progress/progressHelpers';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import {
@@ -20,7 +23,7 @@ import {
   getCurrentUnitData,
   jumpToLessonDetails,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
 import i18n from '@cdo/locale';
 
@@ -87,13 +90,14 @@ class ProgressTableView extends React.Component {
     studentTimestamps: PropTypes.object.isRequired,
     localeCode: PropTypes.string,
     isSortedByFamilyName: PropTypes.bool,
+    courseVersionName: PropTypes.string,
+    unitPosition: PropTypes.number,
   };
 
   constructor(props) {
     super(props);
     this.onScroll = this.onScroll.bind(this);
     this.onToggleRow = this.onToggleRow.bind(this);
-    this.recordToggleRow = this.recordToggleRow.bind(this);
 
     this.summaryCellFormatters = getSummaryCellFormatters(
       props.lessonProgressByStudent,
@@ -113,8 +117,8 @@ class ProgressTableView extends React.Component {
 
     // Sort students, in-place.
     const sortedStudents = props.isSortedByFamilyName
-      ? props.students.sort(stringKeyComparator(['familyName', 'name']))
-      : props.students.sort(stringKeyComparator(['name', 'familyName']));
+      ? [...props.students].sort(stringKeyComparator(['familyName', 'name']))
+      : [...props.students].sort(stringKeyComparator(['name', 'familyName']));
 
     this.state = {
       rows: sortedStudents.map((student, index) => {
@@ -257,24 +261,7 @@ class ProgressTableView extends React.Component {
     } else {
       this.collapseDetailRows(rowData, rowIndex);
     }
-    this.recordToggleRow(!rowData.isExpanded, rowData.student.id);
     this.syncScrollTop();
-  }
-
-  recordToggleRow(expanding, studentId) {
-    firehoseClient.putRecord(
-      {
-        study: 'teacher_dashboard_actions',
-        study_group: 'time_spent',
-        event: 'toggle_details',
-        data_json: JSON.stringify({
-          student_id: studentId,
-          section_id: this.props.sectionId,
-          visible: expanding,
-        }),
-      },
-      {includeUserId: true}
-    );
   }
 
   expandDetailRows(rowData, rowIndex) {
@@ -373,6 +360,8 @@ class ProgressTableView extends React.Component {
               studentTimestamps={this.props.studentTimestamps}
               localeCode={this.props.localeCode}
               onToggleRow={this.onToggleRow}
+              courseVersionName={this.props.courseVersionName}
+              unitPosition={this.props.unitPosition}
             />
           </div>
           <div style={styles.contentView} className="content-view">
@@ -440,6 +429,8 @@ export default connect(
         state.unitSelection.scriptId
       ],
     localeCode: state.locales.localeCode,
+    courseVersionName: getSelectedCourseName(state),
+    unitPosition: getSelectedUnitPosition(state),
   }),
   dispatch => ({
     onClickLesson(lessonPosition) {

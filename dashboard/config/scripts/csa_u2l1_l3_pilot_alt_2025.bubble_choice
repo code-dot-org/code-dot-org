@@ -1,0 +1,9 @@
+name 'CSA U2L1-L3_pilot_alt-2025'
+display_name 'Skill Building: Declaring Instance Variables'
+description 'Declare instance variables in a class for the specified attributes.'
+
+sublevels
+level 'CSA U2L1-L3a_alt-2025'
+level 'CSA U2L1-L3b_alt-2025'
+level 'CSA U2L1-L3c_alt-2025'
+level 'CSA U2L1-L3d_alt-2025'

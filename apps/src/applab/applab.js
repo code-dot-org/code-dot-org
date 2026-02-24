@@ -7,7 +7,6 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import applabMsg from '@cdo/applab/locale';
@@ -15,7 +14,10 @@ import autogenerateML from '@cdo/apps/applab/ai';
 import * as aiConfig from '@cdo/apps/applab/ai/dropletConfig';
 import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
+import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 import commonMsg from '@cdo/locale';
 
 import annotationList from '../acemode/annotationList';
@@ -34,14 +36,14 @@ import {makeDisabledConfig} from '../dropletUtils';
 import executionLog from '../executionLog';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import JsInterpreterLogger from '../JsInterpreterLogger';
-import {MB_API} from '../lib/kits/maker/boards/microBit/MicroBitConstants';
-import * as makerToolkitRedux from '../lib/kits/maker/redux';
-import * as makerToolkit from '../lib/kits/maker/toolkit';
 import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
 import JSInterpreter from '../lib/tools/jsinterpreter/JSInterpreter';
 import {outputError, injectErrorHandler} from '../lib/util/javascriptMode';
 import * as apiTimeoutList from '../lib/util/timeoutList';
 import logToCloud from '../logToCloud';
+import {MB_API} from '../maker/boards/microBit/MicroBitConstants';
+import * as makerToolkitRedux from '../maker/redux';
+import * as makerToolkit from '../maker/toolkit';
 import {getStore} from '../redux';
 import {setStepSpeed} from '../redux/runState';
 import {add as addWatcher} from '../redux/watchedExpressions';
@@ -116,7 +118,6 @@ consoleApi.setClearMethod(Applab.clear);
 
 var level;
 var skin;
-var copyrightStrings;
 
 //TODO: Make configurable.
 studioApp().setCheckForEmptyBlocks(true);
@@ -229,12 +230,11 @@ function renderFooterInSharedGame() {
 
   const menuItems = Applab.makeFooterMenuItems(isIframeEmbed);
 
-  ReactDOM.render(
+  createReactRoot(
     <SmallFooter
-      i18nDropdown={''}
+      i18nDropdownInBase={false}
       privacyPolicyInBase={false}
       copyrightInBase={false}
-      copyrightStrings={copyrightStrings}
       baseMoreMenuString={commonMsg.builtOnCodeStudio()}
       rowHeight={applabConstants.FOOTER_HEIGHT}
       style={{fontSize: 18}}
@@ -286,7 +286,22 @@ function queueOnTick() {
 function handleExecutionError(err, lineNumber, outputString, libraryName) {
   outputError(outputString, lineNumber, libraryName);
   Applab.executionError = {err: err, lineNumber: lineNumber};
-
+  const analyticsData = studioApp().analyticsData();
+  // We don't want to log a User Level Interaction if we don't have a scriptId, which is the case
+  // for users working on App Lab standalone projects outside of the curriculum.
+  if (analyticsData.scriptId) {
+    logUserLevelInteraction({
+      levelId: analyticsData.levelId,
+      scriptId: analyticsData.scriptId,
+      interaction: UserLevelInteractions.code_execution_error,
+      metadata: JSON.stringify({
+        error: err,
+        lineNumber: lineNumber,
+        outputString: outputString,
+        libraryName: libraryName,
+      }),
+    });
+  }
   // prevent further execution
   Applab.clearEventHandlersKillTickLoop();
 
@@ -368,7 +383,6 @@ Applab.initReadonly = function (config) {
   // we can ensure that the blocks are appropriately modified for this level
   skin = config.skin;
   level = config.level;
-  copyrightStrings = config.copyrightStrings;
   config.appMsg = applabMsg;
   loadLevel();
 
@@ -432,7 +446,6 @@ Applab.init = function (config) {
   skin.winAvatar = null;
   skin.failureAvatar = null;
   level = config.level;
-  copyrightStrings = config.copyrightStrings;
   Applab.user = {
     labUserId: config.labUserId,
     isSignedIn: config.isSignedIn,
@@ -924,7 +937,7 @@ Applab.render = function () {
     handleVersionHistory: Applab.handleVersionHistory,
     autogenerateML: autogenerateML,
   });
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <AppLabView {...nextProps} />
     </Provider>,
@@ -985,11 +998,11 @@ Applab.isRunning = function () {
  */
 Applab.toggleDivApplab = function (isVisible) {
   if (isVisible) {
-    $('#divApplab').show();
-    $('#designModeViz').hide();
+    $('#divApplab').css('display', 'block');
+    $('#designModeViz').css('display', 'none');
   } else {
-    $('#divApplab').hide();
-    $('#designModeViz').show();
+    $('#divApplab').css('display', 'none');
+    $('#designModeViz').css('display', 'block');
   }
 };
 
@@ -1106,10 +1119,17 @@ Applab.serializeAndSave = function (callback) {
 Applab.runButtonClick = function () {
   Sounds.getSingleton().unmuteURLs();
   studioApp().toggleRunReset('reset');
-  if (studioApp().isUsingBlockly()) {
-    Blockly.mainBlockSpace.traceOn(true);
-  }
   Applab.execute();
+  const analyticsData = studioApp().analyticsData();
+  // We don't want to log a User Level Interaction if we don't have a scriptId, which is the case
+  // for users working on App Lab standalone projects outside of the curriculum.
+  if (analyticsData.scriptId) {
+    logUserLevelInteraction({
+      levelId: analyticsData.levelId,
+      scriptId: analyticsData.scriptId,
+      interaction: UserLevelInteractions.click_run,
+    });
+  }
 
   // Enable the Finish button if is present:
   var shareCell = document.getElementById('share-cell');
@@ -1294,6 +1314,16 @@ function onInterfaceModeChange(mode) {
 }
 
 Applab.onPuzzleFinish = function () {
+  const analyticsData = studioApp().analyticsData();
+  // We don't want to log a User Level Interaction if we don't have a scriptId, which is the case
+  // for users working on App Lab standalone projects outside of the curriculum.
+  if (analyticsData.scriptId) {
+    logUserLevelInteraction({
+      levelId: analyticsData.levelId,
+      scriptId: analyticsData.scriptId,
+      interaction: UserLevelInteractions.click_finish,
+    });
+  }
   Applab.onPuzzleComplete(false); // complete without submitting
 };
 

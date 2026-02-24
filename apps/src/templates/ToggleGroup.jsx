@@ -49,7 +49,11 @@ class ToggleGroup extends Component {
       ? styles.flexButtonReverse
       : flex && styles.flexButtons;
 
-    return <span style={spanStyle}>{this.renderChildren()}</span>;
+    return (
+      <span role="tablist" style={spanStyle}>
+        {this.renderChildren()}
+      </span>
+    );
   }
 
   renderChildren() {

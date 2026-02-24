@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "ಹಲೋ ವರ್ಲ್ಡ್‌: ಸ್ಪೇಸ್‌", body: "\"ಹಲೋ ವರ್ಲ್ಡ್ಸ್‌!\" ಎಂದು ನೀವು ಹೇಳುವ ಪಾತ್ರಗಳು ಮತ್ತು ಧ್ವನಿಗಳ ಜೊತೆಗೆ ಇಂಟರ್‌ಗ್ಯಾಲಾಕ್ಟಿಕ್ ದೃಶ್ಯಗಳನ್ನು ರಚಿಸಿ", image: "/images/hoc2022-hello-world-space.png", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
-
-{{featured_tutorial, title: “NASA's Space Jam", body: "ನಿಜವಾಗಿಯೂ ಮೆಚ್ಚುಗೆಯಾಗುವ ಸೌರಮಂಡಲವನ್ನು ರಚಿಸಿ, ಸಂಗೀತ, ಖಗೋಳವಿಜ್ಞಾನ ಮತ್ತು ಕೋಡಿಂಗ್ ಬಗ್ಗೆ ಕಲಿಯುವುದು ಚಾಲ್ತಿಯಲ್ಲಿದೆ!", image: "/images/hoc2022-nasa-space-jam.png", url: "https://chandra.si.edu/sound/code/" }}
-
-{{ featured_tutorial, title: "ಸ್ಟಾರ್ ವಾರ್ಸ್", body: "ಡ್ರಾಯಿಡ್‌ಗಳನ್ನು ಪ್ರೋಗ್ರಾಂ ಮಾಡಲು ಕಲಿಯಿರಿ ಮತ್ತು ನಿಮ್ಮ ಸ್ವಂತ ಸ್ಟಾರ್ ವಾರ್ಸ್ ಆಟವನ್ನು ದೂರದಲ್ಲಿರುವ ಗ್ಯಾಲಕ್ಸಿಯಲ್ಲಿ ರಚಿಸಿ.", image: "/shared/images/courses/logo_tall_starwars.jpg", url: "https://code.org/starwars" }}
-
-{{ featured_tutorial, title: "SciGirls Code Quest", body: "ಈ ಆನ್ಲೈನ್ ಕೋಡಿಂಗ್ ಸಾಹಸದಲ್ಲಿ, ನೀವು ಸಬ್ಬಿ ಜಲಾಂತರ್ಗಾಮಿಯನ್ನು ನೀರೊಳಗಿನ ಸವಾಲಿಗೆ ಕರೆದೊಯ್ಯುತ್ತೀರಿ.", image: "/images/hoc2022-scigirls-code-quest.png", url: "https://pbskids.org/scigirls/games/code-quest" }}

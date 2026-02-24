@@ -1,11 +1,10 @@
 import _ from 'lodash';
 
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {SET_SCRIPT} from '@cdo/apps/redux/unitSelectionRedux';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {SET_UNIT} from '@cdo/apps/redux/unitSelectionRedux';
 import {trySetLocalStorage, tryGetLocalStorage} from '@cdo/apps/utils';
 
-import firehoseClient from '../../lib/util/firehose';
 import {lessonHasLevels} from '../progress/progressHelpers';
 
 import {ViewType} from './sectionProgressConstants';
@@ -103,7 +102,7 @@ const initialState = {
 };
 
 export default function sectionProgress(state = initialState, action) {
-  if (action.type === SET_SCRIPT) {
+  if (action.type === SET_UNIT) {
     return {
       ...state,
       lessonOfInterest: INITIAL_LESSON_OF_INTEREST,
@@ -276,24 +275,9 @@ export default function sectionProgress(state = initialState, action) {
 }
 
 export const jumpToLessonDetails = lessonOfInterest => {
-  return (dispatch, getState) => {
-    const state = getState();
+  return dispatch => {
     dispatch(setLessonOfInterest(lessonOfInterest));
     dispatch(setCurrentView(ViewType.DETAIL));
-    firehoseClient.putRecord(
-      {
-        study: 'teacher_dashboard_actions',
-        study_group: 'progress',
-        event: 'view_change_toggle',
-        data_json: JSON.stringify({
-          section_id: state.teacherSections.selectedSectionId,
-          old_view: ViewType.SUMMARY,
-          new_view: ViewType.DETAIL,
-          script_id: state.unitSelection.scriptId,
-        }),
-      },
-      {includeUserId: true}
-    );
   };
 };
 

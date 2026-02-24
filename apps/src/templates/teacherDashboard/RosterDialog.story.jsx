@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
+import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
 
 import {stubRailsAuthenticityToken} from '../../../test/util/stubRailsAuthenticityToken';
 
@@ -27,6 +27,7 @@ const SelectSectionTemplate = args => (
         name: 'Other Test Classroom',
         section: 'Section 3A',
         enrollment_code: 't108sh5',
+        course_state: 'ARCHIVED',
       },
       {
         id: '101',

@@ -1,6 +1,5 @@
+import {Typography} from '@mui/material';
 import React, {useEffect, useState} from 'react';
-
-import {Heading3} from '@cdo/apps/componentLibrary/typography';
 
 import moduleStyles from './navigation.module.scss';
 
@@ -91,7 +90,9 @@ const NavigationSidebar = () => {
 
   return (
     <div className={moduleStyles.navBarContainer}>
-      <Heading3>Navigation</Heading3>
+      <Typography variant="h3" gutterBottom>
+        Navigation
+      </Typography>
       <ul className={moduleStyles.narrowList} key={'navigation-list'}>
         {organizedHeadings.map((menuItem, index) =>
           createMenuItemHtml(menuItem, index)

@@ -1,7 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import {AllPublishableProjectTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {getStore} from '../redux';
@@ -41,7 +41,7 @@ export function shareProject(shareUrl) {
     const canPublish =
       !!appOptions.isSignedIn && AllPublishableProjectTypes.includes(appType);
 
-    ReactDOM.render(
+    createReactRoot(
       <Provider store={getStore()}>
         <ShareDialog
           isProjectLevel={!!dashboard.project.isProjectLevel()}
@@ -52,7 +52,6 @@ export function shareProject(shareUrl) {
           isAbusive={dashboard.project.exceedsAbuseThreshold()}
           canPrint={appType === 'artist'}
           canPublish={canPublish}
-          isPublished={dashboard.project.isPublished()}
           channelId={dashboard.project.getCurrentId()}
           appType={appType}
           onClickPopup={popupWindow}

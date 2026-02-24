@@ -1,12 +1,13 @@
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useCallback, useEffect, useState, useRef} from 'react';
 import Draggable from 'react-draggable';
+import {connect} from 'react-redux';
 
-import {Heading6} from '@cdo/apps/componentLibrary/typography';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
@@ -22,6 +23,10 @@ import {
 } from './rubricShapes';
 import RubricSubmitFooter from './RubricSubmitFooter';
 import RubricTabButtons from './RubricTabButtons';
+import {
+  loadAllTeacherEvaluationData,
+  loadAiEvalStatusForAll,
+} from './teacherRubricRedux';
 
 import style from './rubrics.module.scss';
 
@@ -33,21 +38,24 @@ import {Steps} from 'intro.js-react';
 import {INITIAL_STEP, STEPS, DUMMY_PROPS} from './productTourHelpers';
 /* eslint-enable import/order */
 
-export default function RubricContainer({
+function RubricContainer({
   rubric,
   studentLevelInfo,
   teacherHasEnabledAi,
-  currentLevelName,
+  onLevelForEvaluation,
   reportingData,
   open,
   closeRubric,
   sectionId,
+  loadAllTeacherEvaluationData,
+  loadAiEvalStatusForAll,
+  reloadOnStudentChange = true,
 }) {
-  const onLevelForEvaluation = currentLevelName === rubric.level.name;
   const canProvideFeedback = !!studentLevelInfo && onLevelForEvaluation;
   const rubricTabSessionKey = 'rubricFABTabSessionKey';
   const rubricPositionX = 'rubricFABPositionX';
   const rubricPositionY = 'rubricFABPositionY';
+  const rubricId = rubric.id;
 
   const [selectedTab, setSelectedTab] = useState(
     tryGetSessionStorage(rubricTabSessionKey, TAB_NAMES.RUBRIC) ||
@@ -104,6 +112,18 @@ export default function RubricContainer({
   }, [fetchAiEvaluations]);
 
   useEffect(() => {
+    if (!!rubricId && !!sectionId) {
+      loadAllTeacherEvaluationData({rubricId, sectionId});
+    }
+  }, [rubricId, sectionId, loadAllTeacherEvaluationData]);
+
+  useEffect(() => {
+    if (!!rubricId && !!sectionId) {
+      loadAiEvalStatusForAll({rubricId, sectionId});
+    }
+  }, [rubricId, sectionId, loadAiEvalStatusForAll]);
+
+  useEffect(() => {
     trySetSessionStorage(rubricTabSessionKey, selectedTab);
   }, [selectedTab]);
 
@@ -136,26 +156,21 @@ export default function RubricContainer({
   // Currently the settings tab only provides a way to manually run AI.
   // In the future, we should update or remove this conditional when we
   // add more functionality to the settings tab.
-  const showSettings = onLevelForEvaluation && teacherHasEnabledAi;
+  const showSettings = onLevelForEvaluation;
 
-  const updateTourStatus = useCallback(() => {
-    const bodyData = JSON.stringify({seen: productTour});
-    const rubricId = rubric.id;
-    const url = `/rubrics/${rubricId}/update_ai_rubrics_tour_seen`;
-    HttpClient.post(url, bodyData, true, {
-      'Content-Type': 'application/json',
-    })
-      .then(response => {
-        return response.json();
-      })
-      .then(json => {
-        if (json['seen']) {
-          setProductTour(false);
-        } else {
-          setProductTour(true);
-        }
+  // Update the server to indicate that the product tour has been seen.
+  const updateTourStatus = useCallback(
+    visible => {
+      setProductTour(visible);
+      const bodyData = JSON.stringify({seen: !visible});
+      const rubricId = rubric.id;
+      const url = `/rubrics/${rubricId}/update_ai_rubrics_tour_seen`;
+      HttpClient.post(url, bodyData, true, {
+        'Content-Type': 'application/json',
       });
-  }, [rubric.id, productTour]);
+    },
+    [rubric.id]
+  );
 
   const getTourStatus = useCallback(() => {
     const rubricId = rubric.id;
@@ -179,7 +194,7 @@ export default function RubricContainer({
 
   const tourRestartHandler = () => {
     tourRestarted.current = true;
-    updateTourStatus();
+    updateTourStatus(true);
     analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_TOUR_RESTARTED, {
       ...(reportingData || {}),
     });
@@ -197,7 +212,7 @@ export default function RubricContainer({
   };
 
   const onTourExit = stepIndex => {
-    updateTourStatus();
+    updateTourStatus(false);
     analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_TOUR_CLOSED, {
       ...(reportingData || {}),
       step: stepIndex,
@@ -205,7 +220,7 @@ export default function RubricContainer({
   };
 
   const onTourComplete = () => {
-    updateTourStatus();
+    updateTourStatus(false);
     analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_TOUR_COMPLETE, {
       ...(reportingData || {}),
     });
@@ -228,6 +243,9 @@ export default function RubricContainer({
       }
       tourStep.current = nextStepIndex;
       if (nextStepIndex === 1) {
+        document.getElementById('tour-fab-bg').scrollBy(0, -1000);
+      }
+      if (nextStepIndex === 2) {
         document.getElementById('tour-fab-bg').scrollBy(0, 1000);
       }
     }
@@ -241,18 +259,36 @@ export default function RubricContainer({
     }
   };
 
+  const headerLeft = React.useMemo(
+    () =>
+      teacherHasEnabledAi ? (
+        <>
+          <img
+            src={aiBotOutlineIcon}
+            className={style.aiBotOutlineIcon}
+            alt={i18n.rubricAiHeaderText()}
+          />
+          <span>{i18n.rubricAiHeaderText()}</span>
+        </>
+      ) : (
+        i18n.rubric()
+      ),
+    [teacherHasEnabledAi]
+  );
+
   return (
     <Draggable
       defaultPosition={{x: positionX, y: positionY}}
       onStart={onStartHandler}
       onStop={onStopHandler}
+      handle=".ai-rubric-handle"
     >
       <div
+        // eslint-disable-next-line react/forbid-dom-props
         data-testid="draggable-test-id"
         id="draggable-id"
-        className={classnames(style.rubricContainer, {
-          [style.hiddenRubricContainer]: !open,
-        })}
+        className={style.rubricContainer}
+        style={open ? null : {display: 'none'}}
       >
         <Steps
           enabled={canProvideFeedback && productTour && teacherHasEnabledAi}
@@ -274,15 +310,12 @@ export default function RubricContainer({
             showStepNumbers: true,
           }}
         />
-        <div className={style.rubricHeaderRedesign}>
-          <div className={style.rubricHeaderLeftSide}>
-            <img
-              src={aiBotOutlineIcon}
-              className={style.aiBotOutlineIcon}
-              alt={i18n.rubricAiHeaderText()}
-            />
-            <span>{i18n.rubricAiHeaderText()}</span>
-          </div>
+        <div
+          className={classnames(style.rubricHeaderRedesign, 'ai-rubric-handle')}
+          // eslint-disable-next-line react/forbid-dom-props
+          data-testid="ai-rubric-handle-test-id"
+        >
+          <div className={style.rubricHeaderLeftSide}>{headerLeft}</div>
           <div className={style.rubricHeaderRightSide}>
             {canProvideFeedback && teacherHasEnabledAi && (
               <button
@@ -343,6 +376,7 @@ export default function RubricContainer({
             feedbackAdded={feedbackAdded}
             setFeedbackAdded={setFeedbackAdded}
             sectionId={sectionId}
+            reloadOnStudentChange={reloadOnStudentChange}
           />
           {showSettings && (
             <RubricSettings
@@ -352,6 +386,7 @@ export default function RubricContainer({
               sectionId={sectionId}
               tabSelectCallback={tabSelectCallback}
               reportingData={reportingData}
+              teacherHasEnabledAi={teacherHasEnabledAi}
             />
           )}
         </div>
@@ -375,11 +410,25 @@ RubricContainer.propTypes = {
   reportingData: reportingDataShape,
   studentLevelInfo: studentLevelInfoShape,
   teacherHasEnabledAi: PropTypes.bool,
-  currentLevelName: PropTypes.string,
+  onLevelForEvaluation: PropTypes.bool,
   closeRubric: PropTypes.func,
   open: PropTypes.bool,
   sectionId: PropTypes.number,
+  reloadOnStudentChange: PropTypes.bool,
+
+  // Redux provided
+  loadAllTeacherEvaluationData: PropTypes.func,
+  loadAiEvalStatusForAll: PropTypes.func,
 };
+
+export default connect(null, dispatch => ({
+  loadAllTeacherEvaluationData(params) {
+    dispatch(loadAllTeacherEvaluationData(params));
+  },
+  loadAiEvalStatusForAll(params) {
+    dispatch(loadAiEvalStatusForAll(params));
+  },
+}))(RubricContainer);
 
 const HeaderTab = ({text, isSelected, onClick}) => {
   return (
@@ -396,7 +445,9 @@ const HeaderTab = ({text, isSelected, onClick}) => {
       onClick={onClick}
       type="button"
     >
-      <Heading6>{text}</Heading6>
+      <Typography variant="h6" gutterBottom>
+        {text}
+      </Typography>
     </button>
   );
 };

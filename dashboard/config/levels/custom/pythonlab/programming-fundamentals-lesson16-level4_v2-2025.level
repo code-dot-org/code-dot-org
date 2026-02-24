@@ -1,0 +1,51 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-09-25T19:58:10.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### Do This: \r\n\r\n- Run the code and observe how it works. \r\n- Modify the prompt to ask for the user's favorite color, and print it in the message. ",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "def collect_user_data():\n    name = input(\"What is your name? \")\n    color = input(\"\") # Change this prompt to ask for the user's favorite color\n    print(\"Hello, \" + name + \"! Your favorite color is \" + age + \".\")\n    \ncollect_user_data()",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "validation_file": {
+      "id": "1",
+      "name": "test_main.py",
+      "language": "py",
+      "contents": "import unittest\nimport ast\n\nclass TestCollectUserData(unittest.TestCase):\n\n    def test_input_prompt_modified(self):\n        try:\n            with open('main.py', 'r') as f:\n                content = f.read()\n\n            # Parse the file into an AST (Abstract Syntax Tree)\n            tree = ast.parse(content)\n\n            # Find all function calls\n            input_statements = [\n                node for node in ast.walk(tree)\n                if isinstance(node, ast.Call) and\n                isinstance(node.func, ast.Name) and node.func.id == \"input\"\n            ]\n\n            # Ensure there are at least two input() calls (one for name, one for color)\n            if len(input_statements) < 2:\n                self.fail(\n                    \"The function `collect_user_data()` must contain two `input()` statements. \"\n                    \"Ensure one asks for the user's name and the other for their favorite color.\"\n                )\n\n            # Extract the second input() function's argument (color prompt)\n            second_input_prompt = input_statements[1].args[0] if input_statements[1].args else None\n\n            # Ensure the prompt is a non-empty string\n            if not isinstance(second_input_prompt, ast.Str) or second_input_prompt.s.strip() == \"\":\n                self.fail(\n                    \"The second `input()` prompt is still empty. \"\n                    \"Please modify it to ask for the user's favorite color.\"\n                )\n\n        except FileNotFoundError:\n            self.fail(\"The file 'main.py' was not found. Please make sure it exists in the same directory.\")\n        except Exception as e:\n            self.fail(f\"Error running the test: {e}\")\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFWGIY/ZrAXtyOB9uL563fB2CeYUHsCowFfREC6Jt\n7I8mJPJwO2e3tZlmhfOVYqGnrsiJe4kD8WeBo2LVTk4o21rxZjTUQRjLk9ak\nwpBJQlFe0GO46YrkqBG/U5JjXneF3Sfu0Ilr6BIRK5nd1pHLAMntMGk9NiYB\nshYVpkziLJWk4N/pBxhCInRXawIQ0+MJf3rPSlh8A9Q/K0Sfxyhm7+vXlXIc\niDBYRmM4yb/PYtglfMVG45Ev1YRoVnMf4+CrcdyjEZtQHvBzrLbbtY777pPG\n0X87k9yA36VQ9CMOpsS8meIIn+n2G0VtRVoplZ4DHTHkC3uquzajvXYwd6yB\ndpIJqABNxSpezdEQnYyyoe8If7nMnmbG5Lr48BJoWaby4jXZuD5vC0MInFQ+\n76j7ry0Hcr9EM3xOGcOVWNwYmKCrFS1GEJ3cXvKQSbJdtrGSb6H8Emym4v4K\nHlT+pJlQ1Z/ivThD3pphxjLv6ufpYkj5YSIjP8zwg2AnLgwIIEetAE6FVGlm\nBKfcmB1gzsSzAnTc96wP0vaXeYhSTSGLQqdjYdkDzHpOELlB9msS01ebn6l0\n4pFpcXrdod4I+xFIeysCt0fLwra0lPFHAALkP2Eo\n",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:58:10.574+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson16-level4_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson16-level4_2025\"}]"
+}]]></config>
+</Pythonlab>

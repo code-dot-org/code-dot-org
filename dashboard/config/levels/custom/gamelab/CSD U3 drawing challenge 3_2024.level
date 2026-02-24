@@ -1,5 +1,6 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 50,
   "created_at": "2023-11-28T21:10:49.000Z",
   "level_num": "custom",
@@ -79,16 +80,15 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "start_blocks": "//2) Use the strokeWeight() block to finish the code so it matches the picture.\r\nfill(\"ivory\");\r\nrect(160, 180);\r\npoint(170, 190);\r\npoint(185, 205);\r\npoint(200, 220);\r\n",
-    "display_name": "Points: Draw a Dice",
+    "display_name": "Points: Draw Dice",
     "thumbnail_url": "https://images.code.org/bc25e630542bb55629a855850df75748-image-1561834242717.49.46 AM.png",
     "bubble_choice_description": "Learn how to draw points and use them to create a dice",
     "libraries_enabled": "false",
     "validation_enabled": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T21:10:49.738+00:00\",\"changed\":[\"cloned from \\\"CSD U3 drawing challenge 3_2023\\\"\"],\"cloned_from\":\"CSD U3 drawing challenge 3_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T21:10:49.738+00:00\",\"changed\":[\"cloned from \\\"CSD U3 drawing challenge 3_2023\\\"\"],\"cloned_from\":\"CSD U3 drawing challenge 3_2023\"},{\"changed_at\":\"2024-12-19 19:50:40 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"display_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

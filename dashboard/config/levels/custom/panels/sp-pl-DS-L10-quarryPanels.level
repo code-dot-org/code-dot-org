@@ -1,0 +1,59 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-08-28T16:03:11.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/aab8ade348d305c5cb0a86322112d29d-dataVis.png",
+        "key": "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/bb4ff7db26f872c9f134211c93f5a9d5-dataVis (1).png",
+        "key": "game_design_spr_types-53c92e2f-0462-48a7-8070-e1224840f013"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/f375b3c047e84958ef1fe24469164b09-dataVis (2).png",
+        "key": "game_design_spr_types-4936be88-574e-4dd8-a31f-e671e54e482b",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/45db619598c308f0945c527454c792db-dataVis (3).png",
+        "key": "gen-ai-panels-test-L1-a74895ac-5363-4d66-9831-a3d899ea8ed7",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/24b8727fd661ba5faac91876cff31919-dataVis (4).png",
+        "key": "sp-pl-DS-SpreadsheetVocab-643a23e5-54c4-4eb0-a0bb-bde8f986587c"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/0ad092405b256613399ca5bfff3a4e45-dataVis (5).png",
+        "key": "sp-pl-DS-SpreadsheetVocab-79e6faa9-6b7f-4aab-a8d7-c91fdc3ca442"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/145dc4ed4e81509ebb7b2ae103f75ab2-dataVis (6).png",
+        "key": "sp-pl-DS-L10-quarryPanels-f4ea7abe-f9bf-405f-9112-92d4590243d6"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/68aad4821f8de2298795d21e41c1ea86-dataVis (7).png",
+        "key": "sp-pl-DS-L10-quarryPanels-48040c87-3e99-4310-8902-c313272791a5"
+      }
+    ],
+    "name_suffix": "_2024",
+    "offer_browser_tts": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-08-28T16:03:11.463+00:00\",\"changed\":[\"cloned from \\\"sp-pl-DS-L8-visualPanels\\\"\"],\"cloned_from\":\"sp-pl-DS-L8-visualPanels\"},{\"changed_at\":\"2024-08-28 16:45:22 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-11-26 21:15:58 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-11-26 21:16:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Panels>

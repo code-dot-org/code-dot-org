@@ -4,18 +4,20 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "is_course": true,
+      "content_area": "curriculum_k_5",
+      "curriculum_umbrella": "CSF",
       "is_migrated": true,
-      "pilot_experiment": "musiclab-pilot",
-      "version_year": "unversioned"
+      "topic_tags": [
+        "music_lab"
+      ]
     },
     "new_name": null,
-    "family_name": "musiclab-pilot",
-    "serialized_at": "2023-08-01 21:04:19 UTC",
-    "published_state": "pilot",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-04-03 01:06:29 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "musiclab-pilot"
     }
@@ -84,6 +86,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_pilot_intro_video"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -105,6 +110,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_add_play_to_sequence"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -126,6 +134,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_play_sound"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -147,6 +158,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_use_repeat"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -168,6 +182,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_call_existing_function"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -189,6 +206,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_play_functions_together"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -210,6 +230,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_make_a_mix"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -231,6 +254,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_use_trigger"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -252,6 +278,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_mid_video"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -273,6 +302,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_freeplay"
+        ]
       },
       "bonus": false,
       "seeding_key": {

@@ -2,10 +2,10 @@ import {render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 
-import DCDO from '@cdo/apps/dcdo';
 import {registerReducers, restoreRedux, stubRedux} from '@cdo/apps/redux';
-import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
+import unitSelection, {setUnit} from '@cdo/apps/redux/unitSelectionRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
+import * as sectionProgressLoader from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 import sectionProgress, {
   startLoadingProgress,
   finishLoadingProgress,
@@ -36,13 +36,23 @@ describe('SectionProgressV2', () => {
     });
 
     store = createStore(5, 5);
-    store.dispatch(setScriptId(1));
+    store.dispatch(setUnit(1, 99));
     store.dispatch(finishLoadingProgress());
-    DCDO.set('progress-v2-metadata-enabled', false);
+    jest
+      .spyOn(sectionProgressLoader, 'loadUnitProgress')
+      .mockResolvedValue(Promise.resolve());
+
+    global.fetch = jest.fn(() =>
+      Promise.resolve({
+        json: () => Promise.resolve({}),
+      })
+    );
   });
 
   afterEach(() => {
     restoreRedux();
+
+    jest.resetAllMocks();
   });
 
   function renderDefault(propOverrides = {}) {
@@ -54,7 +64,6 @@ describe('SectionProgressV2', () => {
   }
 
   it('shows expand and collapse dropdown', () => {
-    DCDO.set('progress-v2-metadata-enabled', true);
     renderDefault();
 
     store.dispatch(setStudentsForCurrentSection(1, STUDENTS));
@@ -65,8 +74,9 @@ describe('SectionProgressV2', () => {
     renderDefault();
     store.dispatch(startLoadingProgress());
 
-    screen.getByText('Progress (beta)');
+    screen.getByText('Icon Key');
     screen.getByText('Students');
+    // eslint-disable-next-line no-restricted-properties
     screen.getAllByTestId('skeleton-cell');
     expect(screen.queryAllByText(/Student [1-9]/)).toHaveLength(0);
   });
@@ -76,7 +86,7 @@ describe('SectionProgressV2', () => {
 
     store.dispatch(setStudentsForCurrentSection(1, STUDENTS));
 
-    screen.getByText('Progress (beta)');
+    screen.getByText('Icon Key');
     screen.getByText('Students');
 
     expect(screen.getAllByText(/Student [1-9]/).length).toBe(STUDENTS.length);

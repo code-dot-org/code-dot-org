@@ -2,7 +2,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Dialog, {Buttons, Cancel, Confirm} from '@cdo/apps/templates/Dialog';
+import Dialog, {
+  Buttons,
+  Cancel,
+  Confirm,
+} from '@cdo/apps/legacySharedComponents/Dialog';
 import i18n from '@cdo/locale';
 
 import {P5LabType} from '../constants';

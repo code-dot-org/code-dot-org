@@ -16,5 +16,5 @@
   = f.select :video_key, options_for_select(video_key_choices, @level.video_key), {include_blank: true}, {class: 'video-dropdown'}
   .video-preview{style: 'display: block'}
 
-  - if (@level.uses_droplet?) || @level.is_a?(Blockly)
+  - if @level.uses_droplet? || @level.is_a?(Blockly)
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :never_autoplay_video, description: "Never autoplay video"}

@@ -54,12 +54,8 @@ const PetitionForm = ({tutorial}) => {
         setErrorMessage('');
         // Do not send email or name server-side for under sixteen users to protect privacy.
         sendDataToEndpoint(getAgeSafeData(sanitizedData));
-        ga('send', 'event', 'studio_petition', 'click', {
-          tutorial: tutorial,
-        });
       }
     },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     [data]
   );
 

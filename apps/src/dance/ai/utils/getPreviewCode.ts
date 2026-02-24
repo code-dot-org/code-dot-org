@@ -1,4 +1,4 @@
-import {Workspace} from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import {GeneratedEffect} from '../types';
 
@@ -12,7 +12,7 @@ export const getPreviewCode = (
     return '';
   }
 
-  const tempWorkspace = new Workspace();
+  const tempWorkspace = new BlocklyCore.Workspace();
   const previewCode = generatePreviewCode(
     tempWorkspace,
     currentGeneratedEffect

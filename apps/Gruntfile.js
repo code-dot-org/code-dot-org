@@ -13,9 +13,14 @@ const {createWebpackConfig} = require('./webpack.config');
 const {ALL_APPS, appsEntriesFor} = require('./webpackEntryPoints');
 
 // Review every couple of years to see if an increase improves test performance
-const MEM_PER_KARMA_PROCESS_MB = 4300;
+const MEM_PER_TEST_PROCESS_MB = 4300;
 
 module.exports = function (grunt) {
+  // Enable time-grunt for detailed task timing if profiling is enabled
+  if (envConstants.PROFILE_APPS_BUILD) {
+    require('time-grunt')(grunt);
+  }
+
   var config = {};
 
   /**
@@ -363,6 +368,9 @@ module.exports = function (grunt) {
   config.exec = {
     convertScssVars: './script/convert-scss-variables.js',
     generateSharedConstants: 'bundle exec ./script/generateSharedConstants.rb',
+    generateRegionConfigurations:
+      'bundle exec ./script/generateRegionConfigurations.rb',
+    buildFrontendDependencies: './script/build-frontend-dependencies.sh',
   };
 
   grunt.registerTask('karma', ['preconcatForKarma', 'karma start']);
@@ -377,7 +385,7 @@ module.exports = function (grunt) {
       stdio: 'inherit',
       env: {
         ...process.env,
-        NODE_OPTIONS: `--max-old-space-size=${MEM_PER_KARMA_PROCESS_MB}`,
+        NODE_OPTIONS: `--max-old-space-size=${MEM_PER_TEST_PROCESS_MB}`,
       },
     });
   });
@@ -386,6 +394,7 @@ module.exports = function (grunt) {
     'newer:messages',
     'exec:convertScssVars',
     'exec:generateSharedConstants',
+    'exec:generateRegionConfigurations',
     'newer:copy:static',
   ]);
 
@@ -506,12 +515,7 @@ module.exports = function (grunt) {
     var current = path.resolve('build/locale/current');
     child_process.execSync('mkdir -p ' + current);
     appsToBuild
-      .concat(
-        'common',
-        'tutorialExplorer',
-        'regionalPartnerSearch',
-        'regionalPartnerMiniContact'
-      )
+      .concat('common', 'regionalPartnerSearch', 'regionalPartnerMiniContact')
       .map(function (item) {
         var localeType = item === 'common' ? 'locale' : 'appLocale';
         var localeString =
@@ -541,11 +545,13 @@ module.exports = function (grunt) {
     'newer:messages',
     'exec:convertScssVars',
     'exec:generateSharedConstants',
+    'exec:generateRegionConfigurations',
     'newer:copy:src',
     'newer:copy:lib',
     'locales',
     'ejs',
     'detect-production-webpack-chunks',
+    'exec:buildFrontendDependencies',
   ]);
 
   grunt.registerTask('check-entry-points', function () {
@@ -624,4 +630,4 @@ module.exports = function (grunt) {
 };
 
 // Exported for matching use in `run-tests-in-parallel.sh`
-module.exports.MEM_PER_KARMA_PROCESS_MB = MEM_PER_KARMA_PROCESS_MB;
+module.exports.MEM_PER_TEST_PROCESS_MB = MEM_PER_TEST_PROCESS_MB;

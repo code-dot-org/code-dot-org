@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "حفلة رقص"، body: "قم ببرمجة حفلة رقص! يضم الحفل بيونسيه وهاري ستايلز وليزو وليل ناس إكس وسيلينا جوميز وموسيقى من ديزني \"إنكانتو\" والمزيد!", image: "/images/hoc2022-dance-party.png", url: "https://code.org/dance" }}
-
-{{ featured_tutorial, title: "فن القصيدة"، body: "أضف الفن والرسوم المتحركة إلى قصيدة كلاسيكية في هذا النشاط من أنشطة ساعة البرمجة!", image: "/shared/images/courses/logo_tall_poem-art.jpg", url: "https://studio.code.org/s/poem-art-2021/reset" }}
-
-{{ featured_tutorial, title: "الفنان", body: "ارسم صورًا وتصميمات رائعة مع الفنان!", image: "/shared/images/courses/logo_tall_artist.jpg", url: "https://studio.code.org/s/artist/reset" }}
-
-{{ featured_tutorial, title: "إنفينيتي بلاي لاب", body: "استخدم بلاي لاب لإنشاء قصة أو لعبة من بطولة شخصيات ديزني إنفينتي.", image: "/shared/images/courses/logo_tall_infinity.jpg", url: "https://studio.code.org/s/infinity/reset" }}

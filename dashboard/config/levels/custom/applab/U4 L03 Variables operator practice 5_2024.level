@@ -60,7 +60,8 @@
     "libraries_enabled": "false",
     "encrypted_examples": "7ANQVbuCLwFxy+sRPRE2KL1M2oSKjKbswp85qxnYoX9qXt/dMvcDqZIX0S08\nwn8odXB02oSKI1aQSiDddMcFFA==\n",
     "name_suffix": "_2024",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "skill_keys": "[\"variables_increment\"]"
   },
   "published": true,
   "notes": "",

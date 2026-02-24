@@ -317,6 +317,37 @@ class DatablockStorageTable < ApplicationRecord
   end
 
   ##########################################################
+  #   Levelbuilder seeding stuff                           #
+  ##########################################################
+  def table_filename(table_name)
+    table_name.tr(' ', '-').gsub(/[^0-9a-zA-Z\-_]/, '').downcase
+  end
+
+  def shared_table_file(table_name)
+    Rails.root.join("config/datablock_storage/datasets/#{table_filename(table_name)}.json")
+  end
+
+  def write_serialization
+    return unless Rails.application.config.levelbuilder_mode
+    return unless project_id == SHARED_TABLE_PROJECT_ID
+
+    dataset_json = JSON.pretty_generate(
+      {
+        table_name: table_name,
+        csv: export_csv
+      }
+    )
+    File.write(shared_table_file(table_name), dataset_json)
+  end
+
+  def remove_serialization
+    return unless Rails.application.config.levelbuilder_mode
+    return unless project_id == SHARED_TABLE_PROJECT_ID
+
+    FileUtils.rm_f(shared_table_file(table_name))
+  end
+
+  ##########################################################
   #   Private                                              #
   ##########################################################
 

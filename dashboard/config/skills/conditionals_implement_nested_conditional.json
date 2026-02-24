@@ -1,0 +1,6 @@
+{
+  "key": "conditionals_implement_nested_conditional",
+  "concept": "conditional",
+  "description": "Implement nested conditionals to control the flow of a program",
+  "evaluation_criteria": "Is efficiency increased through the use of a nested conditional statement?"
+}

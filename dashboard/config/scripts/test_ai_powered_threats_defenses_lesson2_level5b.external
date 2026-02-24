@@ -1,0 +1,20 @@
+name 'test-ai-powered-threats-defenses-lesson2-level5b'
+title 'Scenario 2'
+bubble_choice_description 'A hospital suddenly can\'t access its patient records. They must pay up or risking losing access forever.'
+display_name 'Scenario 2'
+thumbnail_url 'https://images.code.org/7f7c45f9618af548e64b467692217094-image-1752764777618.05.51 AM.png'
+
+markdown <<MARKDOWN
+## Scenario 2
+
+A large hospital network’s IT department notices unusual activity late at night. 
+
+When doctors arrive in the morning, they can’t access patient records, lab results, or appointment systems. 
+
+All hospital monitors display the same note: 
+“Your files have been encrypted. Pay $5 million in Bitcoin within 72 hours or all data will be lost.”
+
+&nbsp;
+
+<img src="https://images.code.org/b16c76b9403264fc2940faf2fab6b73b-image-1752764768757.05.25 AM.png" alt="computer monitor locked with a price tag" width="300"/>
+MARKDOWN

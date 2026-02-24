@@ -181,29 +181,39 @@ class EvaluateRubricJob < ApplicationJob
   # Retry on any reported rate limit (429 status). With 3 attempts, 'exponentially_longer' waits 3s, then 18s.
   retry_on TooManyRequestsError, wait: :exponentially_longer, attempts: ATTEMPTS_ON_RATE_LIMIT do |job, error|
     AiRubricMetrics.log_metric(metric_name: :RateLimit)
-    AiRubricMetrics.log_to_firehose(job: job, error: error, event_name: 'rate-limit')
+    AiRubricMetrics.log_to_cloudwatch(job: job, error: error, event_name: 'rate-limit')
   end
 
   # Retry just once on a timeout. It is likely to timeout again.
   retry_on Net::ReadTimeout, Timeout::Error, wait: 10.seconds, attempts: ATTEMPTS_ON_TIMEOUT_ERROR do |job, error|
     AiRubricMetrics.log_metric(metric_name: :TimeoutError)
-    AiRubricMetrics.log_to_firehose(job: job, error: error, event_name: 'timeout-error')
+    AiRubricMetrics.log_to_cloudwatch(job: job, error: error, event_name: 'timeout-error')
   end
 
   # Retry on a 503 Service Unavailable error, including those returned by aiproxy
   # when openai returns 500.
   retry_on ServiceUnavailableError, wait: :exponentially_longer, attempts: ATTEMPTS_ON_SERVICE_UNAVAILABLE do |job, error|
-    agent = error.message.downcase.include?('openai') ? 'openai' : 'none'
+    agent = 'none'
+    if error.message.downcase.include?('openai')
+      agent = 'openai'
+    elsif error.message.downcase.include?('bedrock')
+      agent = 'bedrock'
+    end
     AiRubricMetrics.log_metric(metric_name: :ServiceUnavailable, agent: agent)
-    AiRubricMetrics.log_to_firehose(job: job, error: error, event_name: 'service-unavailable', agent: agent)
+    AiRubricMetrics.log_to_cloudwatch(job: job, error: error, event_name: 'service-unavailable', agent: agent)
   end
 
   # Retry on a 504 Gateway Timeout error, including those returned by aiproxy
   # when openai request times out.
   retry_on GatewayTimeoutError, wait: :exponentially_longer, attempts: ATTEMPTS_ON_GATEWAY_TIMEOUT do |job, error|
-    agent = error.message.downcase.include?('openai') ? 'openai' : 'none'
+    agent = 'none'
+    if error.message.downcase.include?('openai')
+      agent = 'openai'
+    elsif error.message.downcase.include?('bedrock')
+      agent = 'bedrock'
+    end
     AiRubricMetrics.log_metric(metric_name: :GatewayTimeout, agent: agent)
-    AiRubricMetrics.log_to_firehose(job: job, error: error, event_name: 'gateway-timeout', agent: agent)
+    AiRubricMetrics.log_to_cloudwatch(job: job, error: error, event_name: 'gateway-timeout', agent: agent)
   end
 
   def perform(user_id:, requester_id:, script_level_id:, rubric_ai_evaluation_id: nil)
@@ -227,10 +237,7 @@ class EvaluateRubricJob < ApplicationJob
     channel_id = get_channel_id(user, script_level)
     code, project_version = read_user_code(channel_id)
 
-    # Check for PII / sharing failures
-    # Get the 2-character language code from the user's preferred locale
-    locale = (user.locale || 'en')[0...2]
-    ShareFiltering.find_share_failure(code, locale, exceptions: true)
+    ShareFiltering.find_pii_failure(code, exceptions: true)
 
     openai_params = AiRubricConfig.get_openai_params(lesson_s3_name, code)
     response = get_openai_evaluations(openai_params)
@@ -263,7 +270,7 @@ class EvaluateRubricJob < ApplicationJob
 
     user = User.find(options[:user_id])
     channel_id = get_channel_id(user, script_level)
-    _owner_id, project_id = storage_decrypt_channel_id(channel_id)
+    _owner_id, project_id = get_storage_id_and_project_id(channel_id)
 
     # Create a queued record of this work request (if none were given)
     rubric_ai_evaluation_id = options[:rubric_ai_evaluation_id]
@@ -330,7 +337,7 @@ class EvaluateRubricJob < ApplicationJob
     response = HTTParty.post(
       uri,
       body: URI.encode_www_form(openai_params),
-      headers: {'Content-Type' => 'application/x-www-form-urlencoded'},
+      headers: {'Content-Type' => 'application/x-www-form-urlencoded', 'Authorization' => CDO.aiproxy_api_key},
       timeout: AIPROXY_API_TIMEOUT
     )
 

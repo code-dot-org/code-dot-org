@@ -1,0 +1,146 @@
+# Executes `skaffold build` on multiple architectures (e.g. amd64, arm64) in parallel
+# and pushes the per-architecture images to the GitHub Container Registry:
+# https://github.com/code-dot-org/code-dot-org/pkgs/container/code-dot-org)
+#
+# In theory skaffold can do multiple arc cross-platform builds using QEMU via the
+# `skaffold build --platform` flag. However, using QEMU results in 5x slower builds,
+# and a full docker build is already quite slow. Therefore, we add the complexity
+# of forking out to native runners and merging back into a single final multi-platform image
+# as a later step.
+#
+# Per-architecture images are tagged with the branch name and architecture, e.g.:
+# - code-dot-org:my-branch-amd64
+# - code-dot-org:my-branch-arm64
+#
+# In a later step (see: ./k8s_stitch_multiplatform_image.yml) we stitch the per-architecture
+# images together into a single multi-platform image, e.g.:
+# - code-dot-org:my-branch
+#
+# The "real action" in this file is the final `skaffold build` command which does the
+# actual docker build and push, see /skaffold.yaml for details on what images are built
+# by this command.
+
+name: k8s-skaffold-build
+
+on:
+  workflow_call:
+    outputs:
+      docker_tag_amd64:
+        description: "Docker tag for amd64 architecture"
+        value: ${{ jobs.build.outputs.docker_tag_amd64 }}
+      docker_tag_arm64:
+        description: "Docker tag for arm64 architecture"
+        value: ${{ jobs.build.outputs.docker_tag_arm64 }}
+      docker_tag:
+        description: "Docker tag"
+        value: ${{ jobs.build.outputs.docker_tag }}
+
+jobs:
+  # Step 1: build platform specific docker images: amd64, arm64
+  build:
+    name: skaffold build
+
+    # while we're experimental, we /never/ want to block a normal PR:
+    continue-on-error: true
+
+    runs-on: ${{ matrix.runs-on }}
+    strategy:
+      matrix:
+        runs-on: [ubuntu-latest, skaffold-arm64]
+    env:
+      SKAFFOLD_DEFAULT_REPO: ghcr.io/${{ github.repository_owner }}
+      BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
+      # build docker images with -amd64 or -arm64 suffix, we'll stitch them together later:
+      APPEND_ARCHITECTURE_TO_DOCKER_TAG: true
+    outputs:
+      docker_tag_amd64: ${{ steps.docker_tags.outputs.docker_tag_amd64 }}
+      docker_tag_arm64: ${{ steps.docker_tags.outputs.docker_tag_arm64 }}
+      docker_tag: ${{ steps.docker_tags.outputs.docker_tag }}
+    defaults:
+      run:
+        shell: bash -ex {0}
+    steps:
+
+      # We run this job multiple times in parallel, once for each architecture.
+      # This step computes the correct per-architecture docker tag for this runner.
+      #
+      # For example, on the arm64 runner, this will set:
+      # outputs.docker_tag_arm64=code-dot-org:my-branch-arm64
+      #
+      # Additionally, it computes the docker tag for the final multi-platform image e.g.:
+      # outputs.docker_tag=amd64=code-dot-org:my-branch
+      - name: Setup Docker Tags
+        id: docker_tags
+        run: |
+          DOCKER_TAG="${BRANCH_NAME//[^a-zA-Z0-9_.-]/-}"
+          echo "docker_tag=$DOCKER_TAG" >> "$GITHUB_OUTPUT"
+
+          if [[ "$APPEND_ARCHITECTURE_TO_DOCKER_TAG" == "true" ]]; then
+            ARCH=$(uname -m | sed -e 's/x86_64/amd64/' -e 's/aarch64/arm64/')
+            DOCKER_TAG="${DOCKER_TAG}-${ARCH}"
+            echo "docker_tag_${ARCH}=$DOCKER_TAG" >> "$GITHUB_OUTPUT"
+          fi
+          
+          echo "DOCKER_TAG=$DOCKER_TAG" >> $GITHUB_ENV
+
+      # GitHub Runners didn't have a big enough disk for our giant Docker images
+      # but fortunately they have an empty tmp disk mounted at /mnt, we just need
+      # to symlink it into /var/lib/docker.
+      - name: Put /var/lib/docker on the big empty temp disk
+        run: |
+          echo "Docker had `sudo df -h /var/lib/docker | awk 'NR==2 {print $4}'` available"
+          echo
+          sudo systemctl stop docker
+          sudo mkdir /mnt/docker
+          sudo chmod --reference=/var/lib/docker /mnt/docker
+          sudo chown --reference=/var/lib/docker /mnt/docker
+          # `rm -rf docker` saves 4GB on the same disk as code-dot-org source,
+          # but `mv docker docker.old` is ~5s faster
+          sudo rm -rf /var/lib/docker /var/lib/docker.old
+          sudo ln -s /mnt/docker /var/lib/docker
+          sudo systemctl start docker
+          echo
+          echo "Docker now has `sudo df -h /var/lib/docker | awk 'NR==2 {print $4}'` available"
+          echo "Workspace has `sudo df -h $GITHUB_WORKSPACE | awk 'NR==2 {print $4}'` available"
+
+      - name: install skaffold
+        run: |
+          ARCH=$(uname -m)
+          if [[ "$ARCH" == "aarch64" ]]; then
+            curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-arm64
+          else
+            curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64
+          fi
+          sudo install skaffold /usr/local/bin/
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      # Login to GitHub Container Registry
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Checkout sources
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+          # only fetch the last 100 commits, same as drone:
+          fetch-depth: 100
+
+      # - name: ssh into the runner
+      #   uses: mxschmitt/action-tmate@v3
+
+      # Run `skaffold build` to build the docker image for the current runner's architecture
+      - name: skaffold build
+        run: |
+          skaffold \
+            build \
+            -v info \
+            --tag $DOCKER_TAG \
+            --push
+
+          echo "Done w/ skaffold build"

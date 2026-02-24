@@ -20,7 +20,6 @@ theme: responsive
     <li><a class="linktag" id="self-paced-nav" href="#express">Վերցրեք ներածական, ինքնուրույն ուսման տեմպը որոշող դասընթաց</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">Ստեղծեք խաղ կամ ծրագիր</a></li>
     <li><a class="linktag" id="unplugged-nav" href="#unplugged">Փորձեք CS առանց համակարգչի (“unplugged” & բջջային ընտրանքներ)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Իմացեք CS- ը Code.org թիմից և հատուկ հյուրերից</a></li>
 </ul>
 
 <br>
@@ -283,56 +282,6 @@ theme: responsive
   <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Բարեւ Ruby</a> - Աշխարհի առավել քմահաճ միջոց է սովորել համակարգիչների, տեխնոլոգիաների եւ ծրագրավորման. Գործունեություն մի շարք CS թեմաների, ինչպիսիք են կարողությունը տարրալուծվել մի խնդիր, տեղում նախշերով, կարծում եմ, ալգորիթմական, debug խնդիրները եւ աշխատել միասին. (4-10 տարեկան)</li>
   <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> - Անվճար դասավանդման նյութերի հավաքածու, որը համակարգչային գիտություն է սովորեցնում գրավիչ խաղերի և հանելուկների միջոցով, որոնք օգտագործում են քարտեր, լարային, խեցգետիններ և շատ վազք: (5-14 տարեկանների համար)</li>
 </ul>
-
-<h2>Ոչ համակարգիչ տանը? Փորձեք CS- ը ձեր հեռախոսում `մեր գործընկերների այս հավելվածներով</h2>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Տուփի կղզի"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>Հմայիչ բջջային կոդավորման խաղ, որը սովորողներին տանում է հետաքրքիր արկածախնդրության վրա, միաժամանակ սովորեցնելով կոդավորման հիմունքները, ինչպիսիք են ալգորիթմները, օրինակների ճանաչումը, հաջորդականությունները, հանգույցները և պայմանները: <i>(բոլոր տարիքի համար)</i>
-</div>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="ԿոդեՊարկ"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">CodesPark</h3></a>մրցանակակիր ուսումնական կոդով հարթակ 5-9 տարեկան երեխաների համար: Լուծել հանելուկներ եւ ստեղծել խաղեր հետ The Foos, իսկ սովորում է կոդ. <strong>Նշում: CodeSpark առաջարկում է անվճար 3-ամսյա դատավարությունը. Ծնողի էլ. Փոստի հասցեն և վարկային քարտի տվյալները պահանջվում են գրանցման ժամանակ:</strong> <i>(5-րդ դասարանի միջոցով նախնական ընթերցողների համար)</i>
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[Վերադառնալ վերեւում]</a></p>
-
-<a id="livecoding"></a>
-<h2>Իմացեք Code.org թիմի եւ հատուկ հյուրերի!</h2>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="CodeBytes լոգոն">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes- ը հեշտ մարսվող է, 20 րոպեանոց ինտերակտիվ դասեր, որոնք համակարգչային գիտությունը խառնվում են իրական աշխարհի թեմաների հետ: Ընթերցեք AI- ին ՝ ժեստերի լեզուն կարդալու, լավ ծրագիր մշակելու, Minecraft- ի աշխարհը ուսումնասիրելու և ավելին:</div>
-        <br>
-        <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Դիտել դրվագներ</button></a>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Կոդ ընդմիջում">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">Code Break</h3>
-        <div class="smalltext" style="">Պահպանեք համակարգչային գիտությունը զվարճալի վերցնելով Code Break! Դուք կարող եք ստեղծել մի cypher հետ Էշթոն Քաթչերի, իմանալ փոփոխականների հետ Yara Shahidi, եւ նույնիսկ ուսումնասիրել, թե ինչպես է ինտերնետը աշխատում փաստացի գյուտարար Ինտերնետում, Vint Cerf!</div>
-        <br>
-        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Ստացեք միացված</button></a>
-    </span>
-  </div>
-</div>
-</div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 

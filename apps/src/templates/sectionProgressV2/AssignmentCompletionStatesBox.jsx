@@ -1,6 +1,6 @@
+import {Typography} from '@mui/material';
 import React from 'react';
 
-import {StrongText} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
 
 import {ITEM_TYPE} from './ItemType';
@@ -38,9 +38,9 @@ export default function AssignmentCompletionStatesBox() {
 
   return (
     <div className={styles.legend}>
-      <StrongText className={styles.headerContainer}>
+      <Typography className={styles.headerContainer} variant="strong">
         {i18n.assignmentCompletionStates()}
-      </StrongText>
+      </Typography>
       {legendIcons()}
     </div>
   );

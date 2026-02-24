@@ -27,13 +27,11 @@ const AiVisualizationPreview: React.FunctionComponent<
   const executorRef = useRef<ProgramExecutor | null>(null);
   // Create the executor on mount to make sure the preview div exists.
   useEffect(() => {
-    executorRef.current = new ProgramExecutor(
-      id,
-      () => undefined, // no-op on puzzle complete
-      true, // treat this as a readonly workspace
-      false, // no replay log
-      danceMetricsReporter
-    );
+    executorRef.current = new ProgramExecutor({
+      container: id,
+      isReadOnlyWorkspace: true,
+      metricsReporter: danceMetricsReporter,
+    });
   }, [id]);
 
   useEffect(() => {

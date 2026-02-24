@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import applabMsg from '@cdo/applab/locale';
 
 import commonStyles from '../../commonStyles';
-import PopUpMenu from '../../lib/ui/PopUpMenu';
+import PopUpMenu from '../../sharedComponents/PopUpMenu';
 
 import style from './copy-element-to-screen-button.module.scss';
 

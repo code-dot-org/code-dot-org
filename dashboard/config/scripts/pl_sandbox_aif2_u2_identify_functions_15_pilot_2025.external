@@ -1,0 +1,57 @@
+name 'pl-sandbox-aif2-u2-identify-functions-15_pilot-2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Creating and Using Functions in JavaScript
+
+#### Now that we know why functions are useful, let’s look at how to make one in JavaScript.
+
+#### There are a few key steps:
+
+## 🧩 **1. Give your function a name**
+#### A function needs a name so you can refer to it later. Pick something that describes what the function does, like `showMessage` or `calculate_total`. In this example, we will use `addFive`.
+#### *Remember in JavaScript we usually use camelCase for function names (like `addScore` or `changeColor`).
+---
+
+
+
+## 🔧 **2. Use the function keyword to define the function**
+#### In JavaScript, a basic function starts with the word **function**, followed by the function’s name and parentheses `()` and curly braces `{}`.
+
+#### The curly braces hold the code that will run when the function is called.
+
+<img src="https://images.code.org/2ff33eae19cb46b985d53e915d6a41b0-image-1762380222918.png" alt="javascript creating a function called addfive" width="350px" style="border-radius:10px; float:left; margin: 0 0 40px 10px;">
+
+<div style="clear:both;"></div>
+
+---
+
+## 🧱 **3. Write the code you want to run (inside the braces)**
+#### The code inside the braces `{}` runs each time a function is called. 
+#### You can put one line or many lines of code inside your function. 
+
+<img src="https://images.code.org/9fa02e35402e2c0255a9e1ae638d4e3a-image-1762380282582.png" alt="Javascript code writing a function to add five and adjusting the total" width="350px" style="border-radius:10px; float:left; margin: 0 0 40px 10px;">
+
+<div style="clear:both;"></div>
+
+
+---
+
+## ▶️ **4. Call the function to make it run**
+#### Just defining a function doesn’t run it. You have to call it by typing its name with parentheses:
+
+<img src="https://images.code.org/f23a8f9a41cc12b056ce8e9e245df2cc-image-1762380345396.png" alt="Python code defining a function reading def greet with an indented print statement saying hello world and then the function greet being called" width="450px" style="border-radius:10px; float:left; margin: 0 0 40px 10px;">
+
+
+ 
+<div style="clear:both;"></div>
+
+#### This code is calling the function in the **event listener**.
+
+---
+
+## Next up
+#### In the next level, you will practice working with AI to debug the existing functions. 
+
+MARKDOWN

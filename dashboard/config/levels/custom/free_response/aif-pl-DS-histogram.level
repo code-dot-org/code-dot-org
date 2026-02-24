@@ -1,0 +1,30 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-04-18T17:42:33.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Skill Building",
+    "long_instructions": "##Histograms\r\n\r\n#### Sometimes, if we put our data into buckets, we can get some clearer insights.\r\n\r\n#### Need a new copy of the dataset? <a href=\"https://docs.google.com/spreadsheets/d/1lg67vrIpnXaCe7P-XjqLmf6x91UcEvB-Ikw_rpqJDG8/edit?usp=sharing\" target=\"blank\" rel=\"noopener noreferrer\">Google Sheets Link</a>\r\n\r\n<img src=\"https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png\" alt=\"A clipboard with the words TO DO on it. This icon is used to signal an action item for participants.\" width=\"35px\" style=\"border-radius:10px; float:left; margin: 0px 10px 0px 0px;\">\r\n\r\n\r\n###**Do This:**\r\n>#### 1. Sort the data by \"Type\"\r\n>#### 2. Make two histograms based on the \"Top_Speed\" column: one for wooden and one for steel.\r\n>#### 3. Do wooden coasters have higher top speeds than steel coasters? How can you tell?\r\n---\r\n\r\n::: details [🔎 **How to make a Histogram** ]\r\n#### 1. Select the numerical data you want to turn into a histogram.\r\n#### 2. Highlight a column or data range on the spreadsheet.\r\n#### 3. Click **Chart type** --> Under **Other** select **Histogram chart**\r\n#### 4. Click **Customize**. Open the toggle **Chart & axis titles** Add your title.\r\n#### 5. Click **Customize**. Open the toggle **Histogram**. Click **Show item dividers.**\r\n#### 6. Click **Customize**. Open the toggle **Histogram**. Play around with different sizes from the **Bucket size** dropdown until you find one that suits your data set.\r\n:::\r\n\r\n<br>",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_2025",
+    "stay_on_level_after_submit": "false",
+    "encrypted_solution": "sgXjN/J9d98Aa/YhTJWOvgjxhyUgAXhbMNxwCivSxa7rzjSNpu1eyPbjGPdD\new6TAw7Pcs3wVRoBp1eu5FlbBeY0dlyk/gLhZAiAvG5XWtvNBVrao+CI0PvZ\nhznw5kXmFUU01yu2hGs0mqN63UvW1oq07CXFAEoaLg0ansRSsD7LVD/NNs7X\njZWTHK0URtKg+KdRsh8bMa+9wjjNsULru+YGbESuNahDeIx1FC1FAGOLC4X4\nAY0gkhpNT5xqCgJ1DweqgBI6fYVulyWVBS3gSq/lVke7QtYVNdGerZoeVhOd\nizpV6V0n1Gm3i7dEgx9bbb5mDX63bUslxRoLzzJKrbO+2yPC3Hv0HLPSZZEN\n6sFmDm2AHcJkrJoqBAH5cJLPxZD9XCDUAPRLgRREB3rZTJUxsTHlBUcrKskk\nHK99T8nIdJIG/YfPO3R54K2PQD9WDSdFn9y0zOGjLNMPQCRvkAbGaoQDJ4uZ\n4pk91pVFjEetYTVAN1diTAhD1IqFfKn3YCjeV1SPYx0zjQCx6zNuWz/uh0IA\noT41qtlSmA644ErabKENOEJD/6NydXGebdjqVgSqKfk63pzB28gTT/+9DZCO\nWdBka/oX1Dg6OYb672p2v2hkfA8cYXyvM8ixVQa+JpwstDutO1z3O5R2Nmrr\nzXirf8LW0H4wtoBrryKINolzhBHZDUEm2wDFHnwliCoVfJkq6FOqyBn4NPwS\nqWHEzsFghMSZDNj6ZS/seLr5fuvbc6W6l0l2Bi5ddM+Ask7LFwMsHyPQT/Sx\nn7QPkX1U91gnsToegK7o8oU4JcKGEAcDJaMkeEE0rgFgbPRkhSvMpJHE2+Cu\nItRFymIK8pwlwl93mLAz+cDh+MrtRBfKbb2qiCIinSpTVoYErz/xl9YbzL0h\nzU6Q1+DFuohPxSSYfuc0/QprXl2nae0INEKAPKsoyZpXBUj0gnwfy/T3fgTr\nMzkb9CvTgex8QeqBHe2y2i5mQiHzbIskvA5L7fLTh7ImTJpIHv6GAjfuMZcq\n5P7RUTcgMCaFE3q2JpRM9NIv4viSfX1Bf4Xv18BV8nacHYmw1Yo6wsPMGnBz\nlmcnm3x7TCh9MexcYXaPWpIgSObOvfAkoHl4MvSrT2kMBM4PD3TJsLQa9bcE\njksw6UOGw9sy\n",
+    "bubble_choice_description": "Sometimes, if we put our data into buckets, we can get some clearer insights.",
+    "thumbnail_url": "https://images.code.org/86b7dab31e98ba82fdecdf0ef0a4f550-aahistogram.png",
+    "display_name": "Histogram"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-04-18T17:42:33.513+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson10-level6_2025\\\"\"],\"cloned_from\":\"data-science-ch1-lesson10-level6_2025\"},{\"changed_at\":\"2025-04-18 20:28:16 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-04-18 20:29:23 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-04-18 20:29:29 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-04-18 20:30:21 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-04-18 20:42:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-04-18 20:45:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-04-18 20:46:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-04-18 20:46:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-04-18 21:06:38 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

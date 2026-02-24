@@ -27,6 +27,8 @@ class ActivitiesController < ApplicationController
     solved = (params[:result] == 'true')
     script_name = ''
 
+    @unit_group = UnitGroup.get_from_cache(params[:course_id]) if params[:course_id]
+
     if params[:script_level_id]
       @script_level = ScriptLevel.cache_find(params[:script_level_id].to_i)
       @level = params[:level_id] ? Unit.cache_find_level(params[:level_id].to_i) : @script_level.oldest_active_level
@@ -54,9 +56,13 @@ class ActivitiesController < ApplicationController
     sharing_allowed = Gatekeeper.allows('shareEnabled', where: {script_name: script_name}, default: true)
     if params[:program] && sharing_allowed
       share_failure = nil
+      # True if STUDIO game. The other open-ended 'game's geared for young users
+      # are channel-backed and filtered in loadProjectBackedLevel_ in project.js.
+      # Note that STUDIO games also include Star Wars (droplet) which is not a Blockly lab.
       if @level.game.sharing_filtered?
+        project_type = 'playlab'
         begin
-          share_failure = ShareFiltering.find_share_failure(params[:program], locale)
+          share_failure = ShareFiltering.find_share_failure(params[:program], locale, project_type)
         rescue WebPurify::TextTooLongError, OpenURI::HTTPError, IO::EAGAINWaitReadable => exception
           # If WebPurify or Geocoder fail, the program will be allowed, and we
           # retain the share_filtering_error to log it alongside the level_source
@@ -122,10 +128,10 @@ class ActivitiesController < ApplicationController
         track_progress_in_session
       end
 
-      # If a student in the pilot is submitting work on an AI-enabled level, and their teachers haven't opted-out, trigger the AI evaluation job.
-      is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: @script_level&.script, experiment_name: 'ai-rubrics') && Policies::Ai.ai_rubrics_enabled_for_script_level?(current_user, @script_level)
+      # If a student is submitting work on an AI-enabled level, and their teachers haven't opted-out, trigger the AI evaluation job.
+      is_ai_enabled = current_user && Policies::Ai.ai_rubrics_enabled_for_script_level?(current_user, @script_level)
       is_level_ai_enabled = AiRubricConfig.ai_enabled?(@script_level)
-      if is_ai_experiment_enabled && is_level_ai_enabled && params[:submitted] == 'true'
+      if is_ai_enabled && is_level_ai_enabled && params[:submitted] == 'true'
         metadata = {
           'studentId' => current_user.id,
           'unitName' => @script_level.script.name,
@@ -144,20 +150,13 @@ class ActivitiesController < ApplicationController
       script_level: @script_level,
       level: @level,
       solved?: solved,
+      unit_group: @unit_group,
       level_source: @level_source.try(:hidden) ? nil : @level_source,
       level_source_image: @level_source_image,
-      activity: @activity,
       new_level_completed: @new_level_completed,
       share_failure: share_failure,
       user_level: @user_level
     )
-
-    # log this at the end so that server errors (which might be caused by invalid input) prevent logging
-    log_milestone(@level_source, params)
-  end
-
-  private def milestone_logger
-    @@milestone_logger ||= Logger.new("#{Rails.root}/log/milestone.log")
   end
 
   private def track_progress_for_user
@@ -165,26 +164,7 @@ class ActivitiesController < ApplicationController
     authorize! :create, UserLevel
 
     test_result = params[:testResult].to_i
-    solved = (params[:result] == 'true')
 
-    lines = params[:lines].to_i
-
-    # Create the activity.
-    attributes = {
-      user: current_user,
-      level: @level,
-      action: solved, # TODO: I think we don't actually use this. (maybe in a report?)
-      test_result: test_result,
-      attempt: params[:attempt].to_i,
-      lines: lines,
-      time: params[:time].to_i.clamp(0, MAX_INT_MILESTONE),
-      level_source_id: @level_source.try(:id)
-    }
-
-    allow_activity_writes = Gatekeeper.allows('activities', where: {script_name: @script_level.script.name}, default: true)
-    if allow_activity_writes
-      @activity = Activity.new(attributes).tap(&:atomic_save!)
-    end
     if @script_level
       # convert milliseconds to seconds
       time_since_last_milestone = [(params[:timeSinceLastMilestone].to_f / 1000).ceil.to_i, MAX_INT_TIME_SPENT].min
@@ -196,7 +176,9 @@ class ActivitiesController < ApplicationController
         submitted: params[:submitted] == 'true',
         level_source_id: @level_source.try(:id),
         pairing_user_ids: pairing_user_ids,
-        time_spent: time_since_last_milestone
+        locale: locale,
+        time_spent: time_since_last_milestone,
+        unit_group: @unit_group
       )
 
       is_sublevel = @script_level.levels.exclude?(@level)
@@ -215,7 +197,9 @@ class ActivitiesController < ApplicationController
           submitted: false,
           level_source_id: nil,
           pairing_user_ids: pairing_user_ids,
-          time_spent: time_since_last_milestone
+          locale: locale,
+          time_spent: time_since_last_milestone,
+          unit_group: @unit_group
         )
       end
 
@@ -246,21 +230,5 @@ class ActivitiesController < ApplicationController
 
       client_state.add_script(@script_level.script_id)
     end
-  end
-
-  private def log_milestone(level_source, params)
-    log_string = 'Milestone Report:'
-    log_string +=
-      if current_user || session.id
-        "\t#{(current_user ? current_user.id.to_s : ('s:' + session.id.to_s))}"
-      else
-        "\tanon"
-      end
-    log_string += "\t#{request.remote_ip}\t#{params[:app]}\t#{params[:level]}\t#{params[:result]}" \
-                  "\t#{params[:testResult]}\t#{params[:time]}\t#{params[:attempt]}\t#{params[:lines]}"
-    log_string += level_source.try(:id) ? "\t#{level_source.id}" : "\t"
-    log_string += "\t#{request.user_agent}"
-
-    milestone_logger.info log_string
   end
 end

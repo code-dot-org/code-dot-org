@@ -61,6 +61,7 @@ class DesignWorkspace extends React.Component {
           handleDragStart={this.props.handleDragStart}
           isDimmed={this.props.isDimmed}
           isToolboxVisible={this.state.isToolboxVisible}
+          isRtl={this.props.isRtl}
           onCopyElementToScreen={this.props.onCopyElementToScreen}
           onChangeElement={this.props.onChangeElement}
           onDelete={this.props.onDelete}

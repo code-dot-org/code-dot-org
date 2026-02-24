@@ -1,0 +1,46 @@
+name 'csaif_pl_checkreview-functions-22-2_Python'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Reviewing Check for Understanding 
+
+#### The previous level asked you to **identify which option correctly defines a function for the painter to turn right**. 
+
+####Let's take a look. 
+<table style="width: 100%; border-collapse: separate; border-spacing: 0 20px;">
+  <tr>
+    <td style="width: 33%;"><img src="https://images.code.org/b03c44dfc0415554771e2d9a0af9e7ec-image-1741367712750.png" alt="Image 1" style="width: 100%;"></td>
+    <td style="text-align: left; padding: 10px; border: 1px solid transparent; font-size:14pt;">
+      In this option, the function is being <i>called</i>, not defined.
+    </td>
+  </tr>
+  <tr>
+    <td style="width: 33%;"><img src="https://images.code.org/2ad023d82e02f96faf142deb4d1eff65-image-1743531295580.png" alt="Image 2" style="width: 100%;"></td>
+    <td style="text-align: left; padding: 10px; border: 1px solid transparent; font-size:14pt;">
+      In this option, the colon <code>:</code> is left off the header which will result in an error.
+    </td>
+  </tr>
+  <tr>
+    <td style="width: 33%;"><img src="https://images.code.org/296a16ee9f7567389edb1a1a276aaa33-image-1741367136048.png" alt="Image 3" style="width: 100%;"></td>
+    <td style="text-align: left; padding: 10px; border: 1px solid transparent; font-size:14pt;">
+      The use of the <i> number 3</i> is incorrect syntax in this option.
+    </td>
+  </tr>
+  <tr>
+    <td style="width: 33%;"><img src="https://images.code.org/56b9f8d346e9508128573385ca208559-image-1741367476173.png" alt="Image 4" style="width: 100%;"></td>
+    <td style="text-align: left; padding: 10px; border: 1px solid transparent; font-size:14pt;">
+      This is the correct option. The function is correctly defined.
+    </td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+## Let's continue! 
+
+MARKDOWN

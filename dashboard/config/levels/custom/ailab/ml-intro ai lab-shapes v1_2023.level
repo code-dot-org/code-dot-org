@@ -1,5 +1,6 @@
 <Ailab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 67,
   "created_at": "2022-09-21T13:25:26.000Z",
   "level_num": "custom",
@@ -15,14 +16,13 @@
       "/courses/csd-2022/guides/using-data-with-categorical-features",
       "/courses/csd-2022/guides/accuracy-in-ai-lab"
     ],
-    "mode": "{\r\n  \"datasets\": [\r\n    \"shapes_v1_toy\"\r\n  ],\r\n  \"hideSelectLabel\": true,\r\n  \"hideSave\": true,\r\n  \"requireAccuracy\": 100\r\n}",
+    "mode": "{\r\n  \"datasets\": [\r\n    \"shapes_v1_toy\"\r\n  ],\r\n  \"hideSelectLabel\": true,\r\n  \"hideSave\": true,\r\n  \"requireAccuracy\": 90\r\n}",
     "long_instructions": "This level has dynamic instructions that change as you interact with AI Lab.\r\n\r\n- _The instructions for the **Select Feature** screen say:_ Now you can decide what **features** you want to use to train your model. These are the inputs of your machine learning model - it's where AI Bot will look for patterns to help make its decision. **Do This:** Choose a column to investigate as a potential feature.\r\n\r\n\t- _The instructions when you click a categorical feature say:_ When you select a column, additional information appears on the right panel. This can help you decide if this is a useful feature for predicting your label. You can learn more in the Help and Tips section of these instructions. **Do This:** Decide if you would like to use this column as a feature. If so, press the \"Add Feature\" button. If not, select a new column to explore. Repeat this until you've chosen several columns to use as features.\r\n\r\n- _The instructions for the **Results** screen say:_ On this screen, you can see how accurate AI Bot when comparing its predictions to the testing data that we already know the answers to.  **Do This:** Keep training your model until you have at least 100% accuracy\r\n\r\n\t- _The instructions when you click the details panel say:_ This screen shows you the individual rows AI Bot got correct or incorrect. This can help explain why this model earned the accuracy score that it did. You can learn more about how accuracy is calculated in the Help and Tips panel.\r\n\r\n",
     "video_key": "csd_ml_intro_ai_lab_july2021",
     "teacher_markdown": "**Additional Resources:** This level is _not_ intended to be completed independently by students or in a self-paced manner - students should be following along with instructions from a teacher and completing information in an activity guide. [See the lesson plan](.././) for more information about how to support students in completing this level.",
     "name_suffix": "_2023"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:25:26.020+00:00\",\"changed\":[\"cloned from \\\"ml-intro ai lab-shapes v1_2022\\\"\"],\"cloned_from\":\"ml-intro ai lab-shapes v1_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:25:26.020+00:00\",\"changed\":[\"cloned from \\\"ml-intro ai lab-shapes v1_2022\\\"\"],\"cloned_from\":\"ml-intro ai lab-shapes v1_2022\"},{\"changed_at\":\"2025-03-18 21:53:59 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Ailab>

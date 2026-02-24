@@ -1,0 +1,7 @@
+name 'test-ai-powered-threats-defenses-lesson7-level1text'
+title 'title'
+
+
+markdown <<MARKDOWN
+#### Imagine you're logging into your school's grading system to check your grades. First, you enter your username and password. Once logged in, you're only allowed to view your own grades—not other students'.
+MARKDOWN

@@ -1,0 +1,275 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-07-02T21:16:29.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "### Help William Make his Song\r\nWilliam wants to add a laser sound in the last measure of this 6-measure song. You can do this by using a rest to delay when the effect starts.\r\n\r\nHelp William create this song! All the blocks you need are already in the workspace.\r\n\r\n![](https://images.code.org/cf37b1aaca52a847b847a444ba6628bb-image-1741912960354.png)",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "will_i_am_i_like_to_move_it",
+      "sounds": {
+        "will_i_am_i_like_to_move_it": [
+          "vocals_chorus_1",
+          "vocals_chorus_2",
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_verse_3",
+          "vocals_verse_4",
+          "vocals_move_it",
+          "vocals_little_dance",
+          "vocals_ants_pants",
+          "drums_kick_perc_snare",
+          "drums_kick_perc",
+          "drums_kick",
+          "drums_main_beat",
+          "bass_guitar_slap",
+          "bass_guitar_stutter",
+          "bass_guitar",
+          "bass_synth",
+          "guitar_delay",
+          "guitar_upbeats",
+          "synth_stutter",
+          "camera",
+          "laser"
+        ]
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "play_sound_at_current_location_simple2",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "will_i_am_i_like_to_move_it/vocals_chorus_1"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sounds_sequential",
+                            "id": "jlyRJe*=E?6/PL,e`d$L",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": true
+                            },
+                            "inputs": {
+                              "code": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "RAUOYYFACgg[vyEj9(wv",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "will_i_am_i_like_to_move_it/drums_kick_perc_snare"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "IGBK~7nB_80d;`p)=j~r",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": true
+                                      },
+                                      "fields": {
+                                        "sound": "will_i_am_i_like_to_move_it/drums_kick_perc_snare"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together",
+                      "id": "XdzVOq.UbuB;CNI`EA*:",
+                      "deletable": false,
+                      "movable": false,
+                      "editable": false,
+                      "extraState": {
+                        "disableNextConnection": true
+                      },
+                      "inputs": {
+                        "code": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "u6~nmAxT1MNmJG:FqozG",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "will_i_am_i_like_to_move_it/vocals_little_dance"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "HIn`QTjwRtOyJ%;qtdyL",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "will_i_am_i_like_to_move_it/drums_kick_perc_snare"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "play_sounds_sequential",
+              "id": ",wxvm|ZVP!u#i1_}siQK",
+              "x": 470,
+              "y": 210,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              }
+            },
+            {
+              "type": "play_rest_at_current_location_simple2",
+              "id": "]z9hEU`ICih-OJ/rh[lD",
+              "x": 470,
+              "y": 50,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "fields": {
+                "rest_duration": "<field name=\"rest_duration\">1</field>"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "XEE0wCF?g^4^sTq63P.W",
+              "x": 470,
+              "y": 130,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "will_i_am_i_like_to_move_it/laser"
+              }
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true
+    },
+    "encrypted_exemplar_sources": "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\nN8X1ZMw=\n",
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-practice-rest-1_0dbf1bea-8e57-4877-b6bf-23890246c6f3",
+        "message": "exemplar validation",
+        "next": true,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sounds_sequential:2"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_rest_at_current_location_simple2:1"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:6"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-practice-rest-1_0ec51605-e245-4235-9ab8-84074c03ed18",
+        "message": "Make sure you use all the blocks in the workspace to complete this level!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!",
+      "playerTitle": "Where is the Laser?"
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_v3",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-07-02T21:16:29.078+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-rest-1_v2\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-rest-1_v2\"}]"
+}]]></config>
+  <blocks/>
+</Music>

@@ -21,7 +21,7 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
     @module_practice_1 = create(:plc_learning_module, name: 'Answering questions honestly', plc_course_unit: @course_unit, module_type: Plc::LearningModule::PRACTICE_MODULE)
     @module_practice_2 = create(:plc_learning_module, name: 'Not revealing your embarassing nickname', plc_course_unit: @course_unit, module_type: Plc::LearningModule::PRACTICE_MODULE)
 
-    @user = create :teacher
+    @user = create(:teacher)
     sign_in(@user)
 
     @enrollment = create(:plc_user_course_enrollment, user: @user, plc_course: @plc_course)
@@ -67,6 +67,6 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
     get :preview_assignments, params: {script_id: @course_unit.script.name}
 
     #In spite of the fact that the user answered stuff for content1 and practice1, their enrollment should still be 1, 1
-    assert_equal (Set.new([@module_required, @module_content_1, @module_practice_1])), @unit_assignment.plc_module_assignments.to_set(&:plc_learning_module)
+    assert_equal Set.new([@module_required, @module_content_1, @module_practice_1]), @unit_assignment.plc_module_assignments.to_set(&:plc_learning_module)
   end
 end

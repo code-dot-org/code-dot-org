@@ -1,0 +1,13 @@
+name 'self-paced-pl-gen-ai-foundations_04_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lesson 2: Input & Training Data
+
+<img src="https://images.code.org/d84e29dc1d036a5fd755e0f1ca039ffa-image-1715268406186.png" alt="cat from the pixel activity" width="300px" style="border-radius:20px; float:right; margin: 0 0 40px 40px; transform: scaleX(-1);">
+
+#### In this lesson, students explore how AI systems recognize and categorize words using data. They discuss the vast data sources needed for language models and update their graphic organizer to reflect the Input step of generative AI.
+
+
+MARKDOWN

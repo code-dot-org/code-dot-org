@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2024-07-10T18:57:54.000Z",
   "level_num": "custom",
@@ -45,7 +46,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "microbit",
-    "long_instructions": "# Using Functions for Repeated Code\r\n\r\nThis app has the same aliens from before, but they are easily frightened - even pressing buttons on the micro:bit will cause the to aliens jump around on the screen. In the code, this is accomplished with two [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) blocks.\r\n\r\nWhen we look at those two blocks, a lot of the code is repeated in both places. This is really inefficient! It would be much clearer if all of this code was **defined** in its own function in one place, and then we **call** that function every place we want to use it. This makes our code shorter and easier to read.\r\n\r\n## Do This\r\n\r\n<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/42f15b108e5afddc8916d1d73ec6d8f8-image-1649886617478.gif)\r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\n**1) Defining Your Functions**\r\n\r\n- At the bottom of the code, **define** a new function called `moveAliens` [(**Show Me Where**)](#triggercallout=define)\r\n- Find the sections of the code that is repeated in multiple places. Move that code into the function you just created\r\n\r\n**2) Calling Your Functions**\r\n\r\n- Replace the original code by **calling** the `moveAliens` function\r\n\r\n**Check Yourself:** By now, your code should be _shorter_ and still work the same as before. You can run your code and make sure the aliens scatter when either button is pressed.",
+    "long_instructions": "# Using Functions for Repeated Code\r\n\r\nThis app has the same aliens from before, but they are easily frightened - even pressing buttons on the micro:bit will cause the aliens to jump around on the screen. In the code, this is accomplished with two [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) blocks.\r\n\r\nWhen we look at those two blocks, a lot of the code is repeated in both places. This is really inefficient! It would be much clearer if all of this code was **defined** in its own function in one place, and then we **call** that function every place we want to use it. This makes our code shorter and easier to read.\r\n\r\n## Do This\r\n\r\n<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/42f15b108e5afddc8916d1d73ec6d8f8-image-1649886617478.gif)\r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\n**1) Defining Your Functions**\r\n\r\n- At the bottom of the code, **define** a new function called `moveAliens` [(**Show Me Where**)](#triggercallout=define)\r\n- Find the sections of the code that is repeated in multiple places. Move that code into the function you just created\r\n\r\n**2) Calling Your Functions**\r\n\r\n- Replace the original code by **calling** the `moveAliens` function\r\n\r\n**Check Yourself:** By now, your code should be _shorter_ and still work the same as before. You can run your code and make sure the aliens scatter when either button is pressed.",
     "parent_level_id": 20595,
     "mini_rubric": "false",
     "text_mode_at_start": "false",
@@ -74,9 +75,8 @@
     "encrypted_examples": "vT2+xpQEnm98X0aWHyP/3bWEXmy+iQKjTU8mqn9h1kTL2Fsez/QaVadSTlYk\ng2tsLyysxjeNKtDPisDh9nPc8g==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-07-10T18:57:54.736+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - SB3_mb2022\\\"\"],\"cloned_from\":\"CSD U6 - Functions - SB3_mb2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-07-10T18:57:54.736+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - SB3_mb2022\\\"\"],\"cloned_from\":\"CSD U6 - Functions - SB3_mb2022\"},{\"changed_at\":\"2024-12-06 21:21:58 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

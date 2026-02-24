@@ -1,22 +1,19 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import noteImage from '@cdo/static/music/music-note.png';
+import MusicAnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
+import {ValueOf} from '@cdo/apps/types/utils';
 
 import Lab2Registry from '../../lab2/Lab2Registry';
-import {
-  RemoteSourcesStore,
-  SourcesStore,
-} from '../../lab2/projects/SourcesStore';
+import {SourcesStore} from '../../lab2/projects/SourcesStore';
 import {Channel} from '../../lab2/types';
+import {installFunctionBlocks} from '../blockly/blockUtils';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import {setUpBlocklyForMusicLab} from '../blockly/setup';
+import {BlockMode} from '../constants';
 import MusicLibrary from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
-import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
-import {loadLibrary} from '../utils/Loader';
 
 import moduleStyles from './MiniMusicPlayer.module.scss';
 
@@ -29,38 +26,35 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   projects,
   libraryName,
 }) => {
-  const playerRef = useRef<MusicPlayer>(new MusicPlayer());
+  const playerRef = useRef<MusicPlayer | null>(null);
+  if (playerRef.current === null) {
+    playerRef.current = new MusicPlayer();
+  }
   const workspaceRef = useRef<MusicBlocklyWorkspace>(
     new MusicBlocklyWorkspace()
   );
-  const sequencerRef = useRef<Simple2Sequencer>(new Simple2Sequencer());
-  const sourcesStoreRef = useRef<SourcesStore>(new RemoteSourcesStore());
-  const analyticsReporter = useRef<AnalyticsReporter>(new AnalyticsReporter());
+
+  const sourcesStoreRef = useRef<SourcesStore>(new SourcesStore());
+  const analyticsReporter = useRef<MusicAnalyticsReporter>(
+    new MusicAnalyticsReporter()
+  );
   const [isLoading, setIsLoading] = useState(true);
   const [currentProjectId, setCurrentProjectId] = useState<string | undefined>(
     undefined
-  );
-  const {userId, userType, signInState} = useAppSelector(
-    state => state.currentUser
   );
 
   // Setup library and workspace, and analyticsReporter on mount
   const onMount = useCallback(async () => {
     setUpBlocklyForMusicLab();
     workspaceRef.current.initHeadless();
-    const library = await loadLibrary(libraryName);
-    MusicLibrary.setCurrent(library);
+    await MusicLibrary.loadLibrary(libraryName);
     setIsLoading(false);
-    await analyticsReporter.current.startSession();
+    analyticsReporter.current.startSession();
   }, [analyticsReporter, libraryName]);
 
   useEffect(() => {
     onMount();
   }, [onMount]);
-
-  useEffect(() => {
-    analyticsReporter.current.setUserProperties(userId, userType, signInState);
-  }, [userId, userType, signInState]);
 
   // This is the main function that is called when a song is played in the mini player
   // Loads code from the server, compiles the song, executes it to generate events,
@@ -68,7 +62,25 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   // Optimization: cache code and/or compiled song after played once.
   const onPlaySong = useCallback(
     async (project: Channel) => {
-      playerRef.current.stopSong();
+      const blockMode =
+        (project.labConfig?.music?.blockMode as ValueOf<typeof BlockMode>) ||
+        BlockMode.SIMPLE2;
+
+      installFunctionBlocks(blockMode);
+
+      playerRef.current?.stopSong();
+
+      // If there is a pack ID, give the player its BPM and key.
+      const currentLibrary = MusicLibrary.getInstance();
+      const packId = project.labConfig?.music.packId || null;
+      if (currentLibrary) {
+        currentLibrary.setCurrentPackId(packId);
+        playerRef.current?.updateConfiguration(
+          currentLibrary.getBPM(),
+          currentLibrary.getKey()
+        );
+      }
+
       // Load code
       const projectSources = await sourcesStoreRef.current.load(project.id);
       workspaceRef.current.loadCode(
@@ -76,31 +88,17 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
       );
 
       // Compile song
-      workspaceRef.current.compileSong({Sequencer: sequencerRef.current});
+      workspaceRef.current.compileSong(blockMode);
 
       // Execute compiled song
       // Sequence out all possible trigger events to preload sounds if necessary.
-      sequencerRef.current.clear();
-      workspaceRef.current.executeAllTriggers();
-      const allTriggerEvents = sequencerRef.current.getPlaybackEvents();
+      const allTriggerEvents = workspaceRef.current.executeAllTriggers();
 
-      sequencerRef.current.clear();
-      workspaceRef.current.executeCompiledSong();
-
-      // If there is a pack ID, give the player its BPM and key.
-      const currentLibrary = MusicLibrary.getInstance();
-      const packId = project.labConfig?.music.packId || null;
-      if (currentLibrary) {
-        currentLibrary.setCurrentPackId(packId);
-        playerRef.current.updateConfiguration(
-          currentLibrary.getBPM(),
-          currentLibrary.getKey()
-        );
-      }
+      const {playbackEvents} = workspaceRef.current.executeCompiledSong();
 
       // Preload sounds in player
-      await playerRef.current.preloadSounds(
-        [...allTriggerEvents, ...sequencerRef.current.getPlaybackEvents()],
+      await playerRef.current?.preloadSounds(
+        [...allTriggerEvents, ...playbackEvents],
         (loadTimeMs, soundsLoaded) => {
           if (soundsLoaded > 0) {
             Lab2Registry.getInstance()
@@ -117,7 +115,7 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
       );
 
       // Play sounds
-      playerRef.current.playSong(sequencerRef.current.getPlaybackEvents());
+      playerRef.current?.playSong(playbackEvents);
       setCurrentProjectId(project.id);
 
       // Report analytics on play button.
@@ -129,7 +127,7 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   );
 
   const onStopSong = useCallback(async () => {
-    playerRef.current.stopSong();
+    playerRef.current?.stopSong();
     setCurrentProjectId(undefined);
   }, []);
 
@@ -149,6 +147,7 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
       name: packFolder.name,
       artist: packFolder.artist,
       color: packFolder.color,
+      image: MusicLibrary.getInstance()?.getPackImageUrl(packId),
     };
   };
 
@@ -168,17 +167,18 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
                 : onPlaySong(project);
             }}
           >
-            <div className={moduleStyles.pack}>
-              {packId && (
+            <div
+              className={classNames(
+                moduleStyles.pack,
+                project.id === currentProjectId && moduleStyles.packPlaying
+              )}
+            >
+              {packId && packDetails?.image && (
                 <img
-                  src={noteImage}
                   className={moduleStyles.packImage}
-                  style={{
-                    background:
-                      packDetails?.color &&
-                      `radial-gradient(${packDetails.color}, #000`,
-                  }}
+                  src={packDetails.image}
                   alt=""
+                  draggable={false}
                 />
               )}
             </div>

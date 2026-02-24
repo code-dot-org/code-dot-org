@@ -1,0 +1,33 @@
+name 'CSA U4L3-L3_pilot-2025'
+title 'Check for Understanding'
+
+wrong '`30.0`'
+wrong '`31.0`'
+wrong '`33.0`'
+right '`32.0`'
+wrong '`34.0`'
+
+markdown <<MARKDOWN
+Consider the following code segment.
+
+```
+double num1 = 25.0;
+double num2 = 2.0;
+double result = Math.abs(num1 - num2) + Math.sqrt(num1) + Math.pow(num2, 2);
+System.out.println(result);
+```
+
+What will be printed when this code segment is executed?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+This code segment first computes the absolute difference between `num1` and `num2` using `Math.abs(num1 - num2)`, which gives `23.0`.
+
+Then, it adds the square root of `num1` using `Math.sqrt(num1)`, which gives `5.0`.
+
+Finally, it adds `num2` raised to the power of `2` using `Math.pow(num2, 2)`, which gives `4.0`.
+
+The final result is the sum of these three values, which is `23.0` + `5.0` + `4.0` = `32.0`.
+MARKDOWN
+
+allow_multiple_attempts true

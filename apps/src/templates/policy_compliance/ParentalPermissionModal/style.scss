@@ -1,5 +1,5 @@
 @import 'color';
-@import 'font';
+@import '@code-dot-org/component-library-styles/font';
 
 #parental-permission-modal {
   $icon-font-path: 'bootstrap-sass/assets/fonts/bootstrap/';
@@ -41,7 +41,7 @@
         position: fixed;
         top: 12px;
         right: 10px;
-        font-weight: $extra-light-font-weight;
+        font-weight: var(--font-weight-extra-light);
         font-size: 40px;
         line-height: unset;
       }
@@ -87,7 +87,7 @@
 
         & .form-group-lg {
           $font-size: 16px;
-          $font-weight: $semi-bold-font-weight;
+          $font-weight: var(--font-weight-semi-bold);
           $padding-top: 13px;
 
           margin: 0 0 8px 0;

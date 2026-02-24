@@ -1,15 +1,13 @@
+require 'cdo/i18n'
+
 module LocaleHelper
   # Symbol of best valid locale code to be used for I18n.locale.
   def locale
-    current = request.env['cdo.locale']
-    # if(current_user && current_user.locale != current)
-    #   TODO: Set language cookie and reload the page.
-    # end
-    current.to_sym
+    request.locale.to_sym
   end
 
   def locale_dir
-    Dashboard::Application::LOCALES[locale.to_s][:dir] || 'ltr'
+    Cdo::I18n.locale_direction(locale)
   end
 
   # String representing the 2 letter language code.
@@ -20,18 +18,11 @@ module LocaleHelper
 
   # String representing the Locale code for the Blockly client code.
   def js_locale(locale_code = locale)
-    locale_code.to_s.downcase.tr('-', '_')
+    Cdo::I18n.js_locale(locale_code)
   end
 
-  def options_for_locale_select
-    options = []
-    Dashboard::Application::LOCALES.each do |locale, data|
-      next unless I18n.available_locales.include?(locale.to_sym) && data.is_a?(Hash)
-      name = data[:native]
-      name = (data[:debug] ? "#{name} DBG" : name)
-      options << [name, locale]
-    end
-    options
+  def locale_options
+    request.ge_region ? Cdo::GlobalEdition.region_locale_options(request.ge_region) : Cdo::I18n.locale_options
   end
 
   def options_for_locale_code_select
@@ -55,7 +46,7 @@ module LocaleHelper
   end
 
   # Looks up a localized string driven by a database value.
-  # See config/locales/data.en.yml for details.
+  # See config/locales/data/en.yml for details.
   def data_t(dotted_path, key, default = nil)
     # Escape separator in provided key to support keys containing dot characters.
     try_t(
@@ -67,23 +58,15 @@ module LocaleHelper
   end
 
   # Looks up a localized string driven by a database value.
-  # See config/locales/data.en.yml for details.
+  # See config/locales/data/en.yml for details.
   def data_t_suffix(dotted_path, key, suffix, options = {})
     I18n.t("data.#{dotted_path}.#{key}.#{suffix}", **options)
   end
 
   # Tries to access translation, returning nil if not found
   def try_t(dotted_path, params = {})
-    I18n.t(dotted_path, **({raise: true}.merge(params)))
+    I18n.t(dotted_path, **{raise: true}.merge(params))
   rescue
     nil
-  end
-
-  def i18n_dropdown
-    # NOTE UTF-8 is not being enforced for this form. Do not modify it to accept
-    # user input or to persist data without also updating it to enforce UTF-8
-    form_tag(locale_url, method: :post, id: 'localeForm', style: 'margin-bottom: 0px;', enforce_utf8: false) do
-      (hidden_field_tag :user_return_to, request.url) + (select_tag :locale, options_for_select(options_for_locale_select, locale), onchange: 'this.form.submit();')
-    end
   end
 end

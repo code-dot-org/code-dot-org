@@ -1,7 +1,12 @@
-import {BlockColors, BlockStyles} from '@cdo/apps/blockly/constants';
+import FunctionEditor from '@cdo/apps/blockly/addons/functionEditor';
+import {BlockStyles} from '@cdo/apps/blockly/constants';
+import {registerCustomProcedureBlocks} from '@cdo/apps/blockly/utils';
 import i18n from '@cdo/locale';
 
 import CdoFieldDanceAi from '../ai/cdoFieldDanceAi';
+import {GENERATED_DANCER_STORAGE_KEY} from '../ai/constants';
+import {GENERATED_DANCER} from '../constants';
+import {resolveDancerAssets} from '../lottie/LottieDancerUtils';
 
 // This color palette is limited to colors which have different hues, therefore
 // it should not contain different shades of the same color such as
@@ -23,15 +28,22 @@ const limitedColours = [
   '#00ff88', // LIME
 ];
 
+function getGeneratedDancerHeadUrl() {
+  // We avoid using the head of the default dancer as it a simple gray ellipse
+  // which doesn't "read" as a dancer.
+  let headUrl = '/blockly/media/skins/dance/default_dancer.png';
+  if (sessionStorage.getItem(GENERATED_DANCER_STORAGE_KEY)) {
+    const {urls} = resolveDancerAssets({sourceTag: 'blockly'});
+    headUrl = urls.headUrl;
+  }
+  return headUrl;
+}
+
 const customInputTypes = {
   spritePicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
       block.getVars = function () {
-        return {
-          [Blockly.BlockValueType.SPRITE]: [
-            block.getFieldValue(inputConfig.name),
-          ],
-        };
+        return [block.getFieldValue(inputConfig.name)];
       };
 
       currentInputRow
@@ -79,16 +91,54 @@ const customInputTypes = {
       return block.getFieldValue(arg.name);
     },
   },
+  dancerPicker: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      const options = inputConfig.options.map(option => {
+        let name = option;
+        // Options may be JSON-encoded strings (ex. "/"BEAR/"") or simple strings (ex. "sprites").
+        // Blockly needs the full option for code generation, but we just want the name for the head image URL.
+        try {
+          name = JSON.parse(name);
+        } catch {}
+        if (name === GENERATED_DANCER) {
+          return [getGeneratedDancerHeadUrl(), option];
+        }
+        return [`/blockly/media/skins/dance/${name.toLowerCase()}.png`, option];
+      });
+      currentInputRow
+        .appendField(inputConfig.label)
+        .appendField(
+          new Blockly.FieldImageDropdown(options, 40, 40),
+          inputConfig.name
+        );
+    },
+    generateCode(block, arg) {
+      return block.getFieldValue(arg.name);
+    },
+  },
+  generatedDancerImage: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      currentInputRow
+        .appendField(inputConfig.label)
+        .appendField(
+          new Blockly.FieldImage(getGeneratedDancerHeadUrl(), 40, 40),
+          inputConfig.name
+        );
+    },
+    generateCode(block, arg) {
+      return `"${GENERATED_DANCER}"`;
+    },
+  },
 };
 
 export default {
   customInputTypes,
   install(blockly) {
-    Blockly.cdoUtils.registerCustomProcedureBlocks();
+    registerCustomProcedureBlocks();
     // Legacy style block definitions :(
     const generator = blockly.getGenerator();
 
-    const behaviorEditor = (Blockly.behaviorEditor = new Blockly.FunctionEditor(
+    const behaviorEditor = (Blockly.behaviorEditor = new FunctionEditor(
       {
         FUNCTION_HEADER: i18n.behaviorEditorHeader(),
         FUNCTION_NAME_LABEL: i18n.behaviorEditorLabel(),
@@ -131,7 +181,7 @@ export default {
             'VAR'
           )
           .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
-        this.setStrictOutput(true, Blockly.BlockValueType.SPRITE);
+        this.setOutput(true, Blockly.BlockValueType.SPRITE);
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
       },
       getVars: function () {
@@ -141,7 +191,7 @@ export default {
       },
       renameVar: function (oldName, newName) {
         if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
-          this.setTitleValue(newName, 'VAR');
+          this.setFieldValue(newName, 'VAR');
         }
       },
       removeVar: Blockly.Blocks.variables_get.removeVar,
@@ -167,7 +217,7 @@ export default {
           .appendField(Blockly.Msg.VARIABLES_GET_TITLE)
           .appendField(fieldLabel, 'VAR')
           .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
-        this.setStrictOutput(true, Blockly.BlockValueType.SPRITE);
+        this.setOutput(true, Blockly.BlockValueType.SPRITE);
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
       },
       renameVar(oldName, newName) {
@@ -186,18 +236,14 @@ export default {
         // Must be marked EDITABLE so that cloned blocks share the same var name
         fieldLabel.EDITABLE = true;
         this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
-        Blockly.cdoUtils.handleColorAndStyle(
-          this,
-          BlockColors.BEHAVIOR,
-          BlockStyles.BEHAVIOR
-        );
+        this.setStyle(BlockStyles.BEHAVIOR);
         const mainTitle = this.appendDummyInput()
           .appendField(fieldLabel, 'VAR')
           .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
 
         if (Blockly.useModalFunctionEditor) {
           var editLabel = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
-          Blockly.cdoUtils.bindBrowserEvent(
+          Blockly.browserEvents.bind(
             editLabel.fieldGroup_,
             'mousedown',
             this,
@@ -206,7 +252,7 @@ export default {
           mainTitle.appendField(editLabel);
         }
 
-        this.setStrictOutput(true, Blockly.BlockValueType.BEHAVIOR);
+        this.setOutput(true, Blockly.BlockValueType.BEHAVIOR);
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
         this.currentParameterNames_ = [];
       },
@@ -224,13 +270,13 @@ export default {
 
       renameVar(oldName, newName) {
         if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
-          this.setTitleValue(newName, 'VAR');
+          this.setFieldValue(newName, 'VAR');
         }
       },
 
       renameProcedure(oldName, newName) {
         if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
-          this.setTitleValue(newName, 'VAR');
+          this.setFieldValue(newName, 'VAR');
         }
       },
 

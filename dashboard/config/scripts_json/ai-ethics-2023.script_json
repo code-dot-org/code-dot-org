@@ -4,25 +4,29 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "curriculum_umbrella": "AI",
+      "content_area": "curriculum_9_12",
+      "curriculum_umbrella": "9-12 Special topics",
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
-      "is_course": true,
       "is_migrated": true,
+      "show_calendar": true,
       "supported_locales": [
         "es-MX",
         "fa-IR"
       ],
+      "topic_tags": [
+        "ai"
+      ],
       "tts": true,
-      "version_year": "2023"
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": "ai-ethics",
-    "serialized_at": "2024-07-22 20:57:37 UTC",
-    "published_state": "stable",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-03-28 09:29:20 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "ai-ethics-2023"
     }

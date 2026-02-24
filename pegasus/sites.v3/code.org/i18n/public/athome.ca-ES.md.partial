@@ -20,7 +20,6 @@ theme: responsive
     <li><a class="linktag" id="self-paced-nav" href="#express">Feu un curs introductori i auto-ritme</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">Crear un joc o una aplicació</a></li>
     <li><a class="linktag" id="unplugged-nav" href="#unplugged">Proveu CS sense ordinador ('unplugged' & opcions mòbils)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Aprendre CS de l'equip de Code.org i convidats especials</a></li>
 </ul>
 
 <br>
@@ -283,56 +282,6 @@ theme: responsive
   <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Hello Ruby</a> - La forma més capritxosa del món d'aprendre sobre ordinadors, tecnologia i programació. Activitats sobre una gamma de temes de CS, com la capacitat de descompondre un problema, patrons puntuals, pensar algorítmicament, depurar problemes i treballar junts. (per a edats 4-10)</li>
   <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> - Una col·lecció de material didàctic gratuït que ensenya informàtica a través de jocs atractius i trencaclosques que utilitzen cartes, cordes, llapis de colors i un munt de córrer. (entre 5 i 14 anys)</li>
 </ul>
-
-<h2>No hi ha ordinador a casa? Proveu CS al vostre telèfon amb aquestes aplicacions dels nostres socis</h2>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box Island"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>Un encantador joc de codificació mòbil que porta els estudiants en una aventura emocionant, mentre ensenya els fonaments de la codificació, com algoritmes, reconeixement de patrons, seqüències, bucles i condicionals. <i>(per a tots els públics)</i>
-</div>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="CodesPark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">Plataforma d'aprenentatge a codi</h3></a>premiada CodesPark per a nens entre 5 i 9 anys. Resol puzles i crea jocs amb The Foos mentre aprens a codificar. <strong>Nota: CodesPark ofereix una prova gratuïta de 3 mesos. L'adreça de correu electrònic dels pares i la informació de la targeta de crèdit són necessàries al registre.</strong> <i>(per a pre-lectors a través del grau 5)</i>
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[Tornar a dalt]</a></p>
-
-<a id="livecoding"></a>
-<h2>Aprèn de l'equip de Code.org i convidats especials!</h2>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Logotip CodeBytes">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes són lliçons interactives de 20 minuts fàcils de digerir que barregen ciències de la computació amb temes del món real. Entrena una IA per llegir llenguatge de signes, dissenya una aplicació per a bé, explora el món de Minecraft, i molt més!</div>
-        <br>
-        <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Veure els episodis</button></a>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Code Break">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">Code Break</h3>
-        <div class="smalltext" style="">Mantenir la informàtica divertida prenent un Code Break! Podeu crear un cypher amb Ashton Kutcher, aprendre sobre variables amb Yara Shahidi i fins i tot explorar com funciona Internet amb l'inventor real d'Internet, Vint Cerf!</div>
-        <br>
-        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Connecta't</button></a>
-    </span>
-  </div>
-</div>
-</div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 

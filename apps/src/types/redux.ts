@@ -1,24 +1,34 @@
-import {CodeBridgeConsoleState} from '@codebridge/redux/consoleRedux';
+import {CodebridgeWorkspaceState} from '@codebridge/redux/workspaceRedux';
 
-import {AichatState} from '@cdo/apps/aichat/redux/aichatRedux';
-import {AITutorState} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
+import {AichatState} from '@cdo/apps/aichat/redux';
+import {CalendarState} from '@cdo/apps/code-studio/calendarRedux';
 import {HeaderReduxState} from '@cdo/apps/code-studio/headerRedux';
 import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
+import {TeacherPanelState} from '@cdo/apps/code-studio/teacherPanelTypes';
 import {JavalabConsoleState} from '@cdo/apps/javalab/redux/consoleRedux';
 import {JavalabEditorState} from '@cdo/apps/javalab/redux/editorRedux';
 import {JavalabState} from '@cdo/apps/javalab/redux/javalabRedux';
 import {JavalabViewState} from '@cdo/apps/javalab/redux/viewRedux';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import {Lab2ProjectState} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {Lab2ViewState} from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import {PredictLevelState} from '@cdo/apps/lab2/redux/predictLevelRedux';
+import {Lab2SystemState} from '@cdo/apps/lab2/redux/systemRedux';
 import {MazeState} from '@cdo/apps/maze/redux';
 import {MusicState} from '@cdo/apps/music/redux/musicRedux';
 import {LayoutState} from '@cdo/apps/redux/layout';
 import {LocaleState} from '@cdo/apps/redux/localesRedux';
 import {MapboxState} from '@cdo/apps/redux/mapbox';
 import {CurrentUserState} from '@cdo/apps/templates/CurrentUserState';
+import {TeacherRubricState} from '@cdo/apps/templates/rubrics/teacherRubricRedux';
+import {TeacherSectionState} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {Weblab2ConsoleState} from '@cdo/apps/weblab2/redux/consoleRedux';
+import {Weblab2NetworkState} from '@cdo/apps/weblab2/redux/networkRedux';
+import {Weblab2State} from '@cdo/apps/weblab2/weblab2Redux';
 
+import {DanceState} from '../dance/danceRedux';
 import {BlocklyState} from '../redux/blockly';
+import {LegacyLabsState} from '../redux/legacyLabs';
 
 // The type for our global redux store. This is incomplete until we type every slice
 // of our redux store. When converting a slice to typescript, add it to this object
@@ -26,11 +36,13 @@ import {BlocklyState} from '../redux/blockly';
 // We cannot infer the type of our store because we programmatically add to the store
 // with registerReducers.
 export interface RootState {
-  aiTutor: AITutorState;
+  manageStudents: ManageStudentsState;
   aichat: AichatState;
   blockly: BlocklyState;
-  codebridgeConsole: CodeBridgeConsoleState;
+  calendar: CalendarState;
+  codebridgeWorkspace: CodebridgeWorkspaceState;
   currentUser: CurrentUserState;
+  dance: DanceState;
   header: HeaderReduxState;
   javalab: JavalabState;
   javalabConsole: JavalabConsoleState;
@@ -38,11 +50,106 @@ export interface RootState {
   javalabView: JavalabViewState;
   lab: LabState;
   lab2Project: Lab2ProjectState;
+  lab2System: Lab2SystemState;
+  lab2View: Lab2ViewState;
   layout: LayoutState;
   locales: LocaleState;
   mapbox: MapboxState;
   maze: MazeState;
   music: MusicState;
+  pageConstants: LegacyLabsState;
   predictLevel: PredictLevelState;
   progress: ProgressState;
+  sectionProgress: SectionProgressState;
+  teacherPanel: TeacherPanelState;
+  teacherRubric: TeacherRubricState;
+  teacherSections: TeacherSectionState;
+  weblab2: Weblab2State;
+  weblab2Console: Weblab2ConsoleState;
+  weblab2Network: Weblab2NetworkState;
+}
+
+// Temporary type definition for the result of
+// manageStudentsRedux.js:convertStudentServerData
+export interface Student {
+  id: number;
+  name: string;
+  familyName?: string;
+  username: string;
+  email?: string;
+  age?: string;
+  gender?: string;
+  genderTeacherInput?: string;
+  secretWords: string;
+  secretPictureUrl: string;
+  loginType: string;
+  sectionId?: number;
+  sharingDisabled: boolean;
+  hasEverSignedIn: boolean;
+  dependsOnThisSectionForLogin: boolean;
+  isEditing: boolean;
+  isSaving: boolean;
+  rowType: string;
+  userType: string;
+  atRiskAgeGatedDate?: Date;
+  childAccountComplianceState?: string;
+  latestPermissionRequestSentAt?: Date;
+  usState?: string;
+}
+
+// Temporary type definition for manageStudentsRedux.js:initialState
+// `state.manageStudents`
+interface ManageStudentsState {
+  studentData: Student[];
+  isLoadingStudents: boolean;
+}
+
+interface SectionProgressState {
+  isLoadingProgress: boolean;
+  unitDataByUnit?: {
+    [unitId: number]: {
+      id: number;
+      lessons: {
+        [index: number]: {
+          id: number;
+          script_id: number;
+          relative_position: number;
+          levels: {
+            [index: number]: {
+              id: string;
+              isValidated: boolean;
+            };
+          };
+        };
+      };
+      [userId: number]: {
+        [lessonId: number]: {
+          incompletePercent: number;
+          imperfectPercent: number;
+          completedPercent: number;
+          timeSpent: number;
+          lastTimestamp: number;
+        };
+      };
+    };
+  };
+  studentLessonProgressByUnit?: {
+    [unitId: number]: {
+      [userId: number]: {
+        [lessonId: number]: {
+          completedPercent: number;
+          timeSpent: number;
+        };
+      };
+    };
+  };
+  studentLevelProgressByUnit?: {
+    [unitId: string]: {
+      [userId: string]: {
+        [levelId: string]: {
+          status: string;
+        };
+      };
+    };
+  };
 }

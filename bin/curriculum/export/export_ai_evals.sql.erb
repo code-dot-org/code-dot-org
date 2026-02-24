@@ -1,0 +1,59 @@
+--
+-- this is an analytics query, to be run against the redshift database.
+--
+UNLOAD ($$
+  WITH
+    ai_evals AS (
+      SELECT
+        rae.id rubric_ai_evaluation_id
+        , rae.user_id
+        , r.lesson_id
+        , r.level_id
+        , r.id rubric_id
+        , lg.id learning_goal_id
+        , lg.position learning_goal_position
+        , lg.learning_goal learning_goal_text
+        , lg.tips learning_goal_tips
+        , rae.project_id
+        , rae.project_version
+        , lgae.created_at
+        , lgae.understanding ai_understanding
+        , lgae.ai_confidence ai_confidence_pass_fail
+        , lgae.ai_confidence_exact_match
+        , lgae.evidence ai_evidence
+        , lgae.observations ai_observations
+        , lgaef.ai_feedback_approval
+        , lgaef.false_positive ai_feedback_false_positive
+        , lgaef.false_negative ai_feedback_false_negative
+        , lgaef.vague ai_feedback_too_vague
+        , lgaef.feedback_other ai_feedback_other
+        , lgaef.other_content ai_feedback_other_content
+      FROM dashboard_production.rubrics r
+        JOIN dashboard_production.rubric_ai_evaluations rae ON r.id = rae.rubric_id
+        JOIN dashboard_production.learning_goals lg ON r.id = lg.rubric_id
+        JOIN dashboard_production_pii.learning_goal_ai_evaluations lgae
+          -- must join against both lg and rae to avoid a huge number of duplicate rows
+          ON lg.id = lgae.learning_goal_id AND rae.id = lgae.rubric_ai_evaluation_id
+        LEFT JOIN dashboard_production_pii.learning_goal_ai_evaluation_feedbacks lgaef ON lgae.id = lgaef.learning_goal_ai_evaluation_id
+      WHERE
+        rae.status = 2 -- SUCCESS
+    )
+  SELECT
+    ul.id user_level_id
+    , cs.script_name
+    , cs.relative_position lesson_position
+    , cs.level_number
+    , ai_evals.*
+  FROM ai_evals
+    JOIN analysis.course_structure cs ON cs.level_id = ai_evals.level_id AND cs.stage_id = ai_evals.lesson_id
+    JOIN dashboard_production.user_levels ul ON ai_evals.user_id = ul.user_id AND cs.level_id = ul.level_id AND cs.script_id = ul.script_id
+  WHERE
+    <%= "cs.script_name = '#{unit_name}'" %>
+    <%= level_id && "and cs.level_id = #{level_id}" %>
+$$)
+TO 's3://cdo-data-sharing-internal/unloaded-unit-progress/<%=output_dir%>/evals/<%=unit_name%>_ai_evals_'
+FORMAT JSON
+EXTENSION 'jsonl'
+IAM_ROLE 'arn:aws:iam::475661607190:role/redshift-s3'
+PARALLEL OFF
+;

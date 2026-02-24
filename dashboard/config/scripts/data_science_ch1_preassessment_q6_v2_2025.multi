@@ -1,0 +1,15 @@
+name 'data-science-ch1-preassessment-q6_v2-2025'
+
+question 'When analyzing data from a class survey, which of the following visualization types would be most appropriate to show the distribution of favorite ice cream flavors?'
+
+wrong 'Line graph'
+wrong 'Box plot'
+right 'Pie chart'
+wrong 'Histogram'
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

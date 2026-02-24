@@ -1,0 +1,16 @@
+name 'iterating-with-ai-preassessment-q8_2025'
+
+question 'What is the primary benefit of displaying "active filters" (e.g., showing a bubble that says "Category: Shoes") to a user?'
+
+right 'It allows the user to see and control the logic currently being applied to the data.'
+wrong 'It makes the website\'s background colors change.'
+wrong 'It prevents the user from clicking on other items in the list.'
+wrong 'It is a required security feature for all web apps.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 6
+
+Displaying active filters increases transparency. It allows users to understand why they are seeing a specific subset of data and gives them an easy way to reset or change their view.
+MARKDOWN

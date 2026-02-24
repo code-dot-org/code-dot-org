@@ -1,0 +1,9 @@
+name 'aif-pl-choice-math-L11-Python_2025'
+display_name 'Do the Math!'
+description '#### Choose **ONE** of the scenarios, where you\'ll use math operations on two numbers stored in variables. Try out addition, subtraction, multiplication, and division — and use `print()` to show each result.'
+
+sublevels
+level 'aif-pl-math-choice-score1_2025'
+level 'aif-pl-math-choice-soccer2_2025'
+level 'aif-pl-math-choice-study3_2025'
+level 'aif-pl-math-choice-meal4_2025'

@@ -309,7 +309,7 @@ describe I18n::Resources::Dashboard::CourseContent::SyncOut do
     let(:expected_target_i18n_file_format) {'json'}
 
     let(:crowdin_locale_dir) {CDO.dir('i18n/crowdin', i18n_locale, 'course_content')}
-    let(:target_i18n_file_path) {CDO.dir("dashboard/config/locales/#{level_type}.#{i18n_locale}.#{expected_target_i18n_file_format}")}
+    let(:target_i18n_file_path) {CDO.dir("dashboard/config/locales/#{level_type}/#{i18n_locale}.#{expected_target_i18n_file_format}")}
 
     let(:expect_i18n_data_collecting) do
       described_instance.expects(:i18n_data_of).with(language, crowdin_locale_dir)
@@ -418,7 +418,7 @@ describe I18n::Resources::Dashboard::CourseContent::SyncOut do
 
     let(:crowdin_file_path) {CDO.dir('i18n/crowdin', i18n_locale, "dashboard/#{type}.yml")}
     let(:i18n_file_path) {CDO.dir('i18n/locales', i18n_locale, "dashboard/#{type}.yml")}
-    let(:target_i18n_file_path) {CDO.dir("dashboard/config/locales/#{type}.#{i18n_locale}.yml")}
+    let(:target_i18n_file_path) {CDO.dir("dashboard/config/locales/#{type}/#{i18n_locale}.yml")}
 
     let(:expect_localization_distribution) do
       I18nScriptUtils.expects(:sanitize_file_and_write).with(crowdin_file_path, target_i18n_file_path)

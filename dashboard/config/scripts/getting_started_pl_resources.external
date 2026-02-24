@@ -1,0 +1,17 @@
+name 'Getting-Started_PL-Resources'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Additional Support: Self-Paced Professional Learning
+
+
+#### Looking for more support? Code.org offers free self-paced professional learning modules for many of our courses. Click <a href="https://code.org/professional-learning/self-paced" target="_blank">here</a> to browse options.
+
+
+
+
+<div style="clear:both"/>
+
+![](https://images.code.org/68c19006c275ba71a6e03163df6fa1c2-image-1734038122627.15.17 PM.png)
+MARKDOWN

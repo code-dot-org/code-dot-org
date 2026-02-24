@@ -1,4 +1,7 @@
-import GoogleBlockly, {Connection} from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
+
+import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
+import {isFunctionBlock} from '@cdo/apps/blockly/utils';
 
 import {customConnectionBlockTypes} from './cdoConstants';
 
@@ -9,10 +12,14 @@ import {customConnectionBlockTypes} from './cdoConstants';
  * type checks, and still looks for intersections in the arrays. Unlike the
  * default checker, check arrays that contain a custom connection type are
  * only compatible with other check arrays with the same connection type.
+ *
+ * This implementation also includes an additional check to prevent
+ * connections to inputs of function definitions that include argument_reporter
+ * shadow block.
  * @implements {Blockly.IConnectionChecker}
  */
 
-export default class CdoConnectionChecker extends GoogleBlockly.ConnectionChecker {
+export default class CdoConnectionChecker extends BlocklyCore.ConnectionChecker {
   /**
    * Check whether this connection is compatible with another connection with
    * respect to the value type system.  E.g. square_root("Hello") is not
@@ -22,7 +29,7 @@ export default class CdoConnectionChecker extends GoogleBlockly.ConnectionChecke
    * @param b Connection to compare against.
    * @returns True if the connections share a type.
    */
-  doTypeChecks(a: Connection, b: Connection) {
+  doTypeChecks(a: BlocklyCore.Connection, b: BlocklyCore.Connection) {
     const checkArrayOne = a.getCheck(); // An array of strings or null
     const checkArrayTwo = b.getCheck(); // An array of strings or null
 
@@ -37,6 +44,19 @@ export default class CdoConnectionChecker extends GoogleBlockly.ConnectionChecke
       customConnectionChecks.includes(check)
     );
     if (checkArrayOneContainsCustomType !== checkArrayTwoContainsCustomType) {
+      return false;
+    }
+
+    // Prevent connection if a shadow argument_reporter block is connected to
+    // the value input of a function definition block. This connection represents
+    // a function parameter, which should not be displaced by another block.
+    if (
+      isFunctionBlock(b.getSourceBlock()) &&
+      b.type === Blockly.ConnectionType.INPUT_VALUE &&
+      b.isConnected() &&
+      b.targetConnection?.getSourceBlock().isShadow() &&
+      b.targetConnection?.getSourceBlock().type === BLOCK_TYPES.argumentReporter
+    ) {
       return false;
     }
 

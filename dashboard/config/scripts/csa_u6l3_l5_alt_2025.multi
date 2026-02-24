@@ -1,0 +1,38 @@
+name 'CSA U6L3-L5_alt-2025'
+title 'Check for Understanding'
+
+wrong '`0.8`'
+right '`1.25`'
+wrong '`1.0`'
+wrong '`1.5`'
+wrong '`2.0`'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Consider the following code segment.
+
+```
+Integer a = new Integer(3);
+Integer b = new Integer(2);
+Double c = new Double(1.5);
+Double d = new Double(2.5);
+Double result = (a + b) / (c + d);
+
+System.out.println(result);
+```
+
+What will be output when this code segment is executed?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The variables `a` and `b` are both `Integer` objects, so `a + b` will automatically unbox the values of `a` and `b` to integers, compute the sum using integer arithmetic, and then box the result into a new `Integer` object with the value `5`.
+
+The variables `c` and `d` are both `Double` objects, so `c + d` will automatically unbox the values of `c` and `d` to `double` values, compute the sum using floating-point arithmetic, and then box the result into a new `Double` object with the value `4.0`.
+
+Dividing the `Integer` object with the value `5` by the `Double` object with the value `4.0` using floating-point arithmetic will result in the `double` value `1.25`.
+
+The variable `result` is a `Double` object, so the value `1.25` will be automatically boxed into a new `Double` object and assigned to `result`.
+
+The print statement will then output the value of `result`, which is `1.25`.
+MARKDOWN

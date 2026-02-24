@@ -89,9 +89,9 @@
 
   $(document).ready(function() {
     var options = #{existing_school_info.to_json};
-    var suppressScrolling = #{!!(local_assigns[:suppress_scrolling])};
+    var suppressScrolling = #{!!local_assigns[:suppress_scrolling]};
     options['suppressScrolling'] = suppressScrolling;
-    options['assumeUsa'] = #{!!(local_assigns[:assume_usa])};
+    options['assumeUsa'] = #{!!local_assigns[:assume_usa]};
 
     // Send through some values that the JavaScript will need.
     window.schoolInfoManager = new SchoolInfoManager(options);
