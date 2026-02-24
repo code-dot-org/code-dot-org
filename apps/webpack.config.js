@@ -815,9 +815,6 @@ function createWebpackConfig({
           host: '0.0.0.0',
           hot: envConstants.HOT,
           liveReload: envConstants.HOT,
-          devMiddleware: {
-            writeToDisk: true,
-          },
         }
       : undefined,
   };
