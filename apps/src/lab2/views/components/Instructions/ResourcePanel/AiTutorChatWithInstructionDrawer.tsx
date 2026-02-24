@@ -27,7 +27,7 @@ interface AiTutorChatWithInstructionDrawerProps {
 
 const MIN_CHAT_HEIGHT = 133; // Minimum so that user message editor is always visible + some chat.
 const MIN_INSTRUCTIONS_HEIGHT = 150;
-const DEFAULT_INITIAL_INSTRUCTIONS_HEIGHT = 250;
+const DEFAULT_INITIAL_INSTRUCTIONS_HEIGHT = 250; // Initial height needed before instructions content is measured.
 
 const TOGGLE_BUTTON_ICONS = {
   left: {iconName: 'info-circle', iconStyle: 'solid'} as const,
@@ -51,6 +51,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   const containerRef = useRef<HTMLDivElement>(null);
   const instructionsContentRef = useRef<HTMLDivElement>(null);
   const instructionsHeightAtDragStartRef = useRef<number | null>(null);
+  const hasSetInitialHeightFromContentRef = useRef(false);
   const rawInstructionsHeightRef = useRef<number>(
     DEFAULT_INITIAL_INSTRUCTIONS_HEIGHT
   );
@@ -130,7 +131,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
     return () => throttledAdjustChatHeight.cancel();
   }, [throttledAdjustChatHeight]);
 
-  // Listen for window resize events
+  // Listen for window resize events.
   useEffect(() => {
     window.addEventListener('resize', throttledAdjustChatHeight);
     return () => {
@@ -141,6 +142,13 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   useEffect(() => {
     setIsCollapsed(isCollapsedByDefault);
   }, [isCollapsedByDefault]);
+
+  // Reset so that when drawer is expanded again we set height from content.
+  useEffect(() => {
+    if (isCollapsed) {
+      hasSetInitialHeightFromContentRef.current = false;
+    }
+  }, [isCollapsed]);
 
   // Keep ref in sync with current height.
   useEffect(() => {
@@ -166,13 +174,16 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
 
       setMaxInstructionsHeight(contentHeight);
 
+      // Set initial drawer height to full content height (maxInstructionsHeight).
+      if (!hasSetInitialHeightFromContentRef.current) {
+        hasSetInitialHeightFromContentRef.current = true;
+        setRawInstructionsHeight(contentHeight);
+        return;
+      }
+
       // Auto-adjust drawer height when new content height is less than the current drawer height.
       // This will remove a gap between instructions and drawer's edge.
       if (contentHeight < currentHeight) {
-        setRawInstructionsHeight(contentHeight);
-      }
-      // If content is smaller than initial height, adjust to fit content.
-      else if (contentHeight < DEFAULT_INITIAL_INSTRUCTIONS_HEIGHT) {
         setRawInstructionsHeight(contentHeight);
       }
     };
