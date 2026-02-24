@@ -20,19 +20,20 @@ export const isEditable = (visibility: Visibility) =>
 // If not, returns the first available model ID.
 export const validateModelId = (
   modelId: ModelId,
-  allowedModelIds?: ModelId[],
+  allowedModelIds: ModelId[] = [],
   supportedModelIds = SUPPORTED_MODEL_IDS // For testing
 ) => {
   if (
     supportedModelIds.includes(modelId) &&
-    (!allowedModelIds || allowedModelIds.includes(modelId))
+    (allowedModelIds.length === 0 || allowedModelIds.includes(modelId))
   ) {
     return {isValid: true, modelId};
   }
 
-  const supportedAndAllowed = allowedModelIds
-    ? supportedModelIds.filter(id => allowedModelIds.includes(id))
-    : supportedModelIds;
+  const supportedAndAllowed =
+    allowedModelIds.length > 0
+      ? supportedModelIds.filter(id => allowedModelIds.includes(id))
+      : supportedModelIds;
 
   if (supportedAndAllowed.length === 0) {
     Lab2Registry.getInstance()
