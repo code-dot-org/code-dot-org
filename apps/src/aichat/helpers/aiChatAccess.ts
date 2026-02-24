@@ -1,5 +1,4 @@
 import {AiChatAccessLevel} from '@cdo/apps/aichat/types/accessControls';
-import experiments from '@cdo/apps/util/experiments';
 import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
 
 // A list of app names for which AI Chat tools (tutor or chat in ai chat lab) are considered essential to the app experience.
@@ -49,10 +48,6 @@ export const areAiChatToolsEnabled = ({
   appName: string;
   aiChatAccessLevel: AiChatAccessLevel;
 }): boolean => {
-  if (!experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS)) {
-    // only disable AI Chat tools based on AiChatAccessLevel if the new permissions experiment is enabled!
-    return true;
-  }
   if (APPS_WITH_ESSENTIAL_AI_CHAT.includes(appName)) {
     // either ESSENTIAL_ONLY or ENABLED access level permits AI Chat tools for apps that consider AI Chat essential
     return aiChatAccessLevel !== AiChatAccessLevels.DISABLED;
