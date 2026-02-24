@@ -3,7 +3,11 @@ import {Typography} from '@mui/material';
 import React, {useState} from 'react';
 
 import {TUTOR_MODE_TO_ANSWER_TYPE} from '@cdo/apps/weblab2/constants';
-import {AiTutorAnswerType, AiTutorMode} from '@cdo/apps/weblab2/types';
+import {
+  AiTutorAnswerType,
+  AiTutorMode,
+  DEFAULT_AI_TUTOR_MODE,
+} from '@cdo/apps/weblab2/types';
 
 import moduleStyles from './edit-ai-tutor-prompt-settings.module.scss';
 
@@ -51,7 +55,7 @@ const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
       } else if (legacyMode) {
         return new Set(TUTOR_MODE_TO_ANSWER_TYPE[legacyMode]);
       } else {
-        return new Set();
+        return new Set(TUTOR_MODE_TO_ANSWER_TYPE[DEFAULT_AI_TUTOR_MODE]);
       }
     }
   );

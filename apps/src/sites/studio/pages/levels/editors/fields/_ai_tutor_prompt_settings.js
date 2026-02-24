@@ -7,7 +7,7 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(function () {
   const answerTypes = getScriptData('answertypes');
-  const legacyMode = document.querySelector('script[data-legacymode').dataset
+  const legacyMode = document.querySelector('script[data-legacymode]').dataset
     .legacymode;
 
   createReactRoot(

@@ -57,8 +57,7 @@ export const useAiTutorModelParameters = (
   const [systemPrompt, setSystemPrompt] = useState<string | undefined>();
 
   useEffect(() => {
-    const promptString =
-      options?.aiTutorSystemPromptName ?? defaultSystemPrompt;
+    const promptString = options?.aiTutorSystemPrompt ?? defaultSystemPrompt;
 
     let mounted = true;
 
@@ -124,13 +123,8 @@ export const useAiTutorModelParameters = (
         `🤖: systemPrompt: ${options?.aiTutorSystemPromptName}`,
         systemPrompt
       );
-    } else if (options?.aiTutorSystemPrompt) {
-      console.log(
-        `🤖: systemPrompt: custom prompt`,
-        options?.aiTutorSystemPrompt
-      );
     } else if (systemPrompt !== undefined) {
-      console.log(`🤖: systemPrompt: default`);
+      console.log(`🤖: systemPrompt: ${systemPrompt}`);
     }
   }, [
     systemPrompt,

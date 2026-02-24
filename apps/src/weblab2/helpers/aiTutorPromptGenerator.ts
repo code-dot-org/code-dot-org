@@ -117,7 +117,7 @@ const generateFinalModeList = (
   );
   // If the mode list includes buildJavaScript, we will use the refusal mode that allows JavaScript,
   // otherwise we block JavaScript from being generated.
-  const hasBuildJavaScript = modes.includes('buildJavaScript');
+  const hasBuildJavaScript = finalModes.includes('buildJavaScript');
   const refusalMode = hasBuildJavaScript
     ? 'refusal'
     : 'refusalJavaScriptSnippets';
