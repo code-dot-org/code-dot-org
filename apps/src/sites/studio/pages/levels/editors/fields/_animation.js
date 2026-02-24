@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
+import initializeCodeMirror6 from '@cdo/apps/code-studio/initializeCodeMirror6';
 import {
   throwIfDisallowedAnimationSourceUrl,
   throwIfSerializedAnimationListIsInvalid,
@@ -33,13 +33,13 @@ $(document).ready(function () {
   validateAnimationJSON(
     document.getElementById('level_start_animations').value
   );
-  initializeCodeMirror('level_start_animations', 'application/json', {
+  initializeCodeMirror6('level_start_animations', 'json', {
     callback: codeMirror => {
       validateAnimationJSON(codeMirror.getValue());
     },
   });
 
   if (document.getElementById('level_custom_helper_library')) {
-    initializeCodeMirror('level_custom_helper_library', 'javascript');
+    initializeCodeMirror6('level_custom_helper_library');
   }
 });
