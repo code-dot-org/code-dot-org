@@ -43,7 +43,7 @@ steps:
   - name: get-cached-staging-build
     image: plugins/s3-cache
     settings:
-      filename: cache-staging-ci-build-rails-7.tar.gz
+      filename: cache-staging-ci-build.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
@@ -164,7 +164,7 @@ steps:
       - name: mysql
         path: /drone/src/var/lib/mysql
     settings:
-      filename: cache-staging-ci-build-rails-7.tar.gz
+      filename: cache-staging-ci-build.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
@@ -289,7 +289,7 @@ steps:
       # DRONE_REPO_OWNER = organization name (e.g., "code-dot-org")
       # DRONE_REPO_NAME = repository name (e.g., "code-dot-org")
       - AUTHENTICATED_GITHUB_URL="https://$GITHUB_TOKEN@github.com/$DRONE_REPO_OWNER/$DRONE_REPO_NAME.git"
-      - git clone --branch $DRONE_SOURCE_BRANCH $AUTHENTICATED_GITHUB_URL .
+      - git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .
 
   # Do all the work necessary to run UI tests so we can capture a complete
   # snapshot of the fully-built project and resulting database, but don't
@@ -314,13 +314,13 @@ steps:
       - "find . -type f -not -path './.git/*' | wc -l > .cached-staging-build-file-count"
       - 'printf "Baseline file count: %s\n" "$(cat .cached-staging-build-file-count)"'
 
-  - name: cache-staging-ci-build-rails-7
+  - name: cache-staging-ci-build
     image: plugins/s3-cache
     volumes:
       - name: mysql
         path: /var/lib/mysql
     settings:
-      filename: cache-staging-ci-build-rails-7.tar.gz
+      filename: cache-staging-ci-build.tar.gz
       endpoint: s3://cdo-drone
       rebuild: true
       debug: true
@@ -335,11 +335,10 @@ volumes:
 
 trigger:
   branch:
-    exclude:
-      - "production"
-      - "levelbuilder"
+    - "staging"
+    - "staging-next"
   event:
-    - pull_request
+    - push
 
 ---
 kind: signature
