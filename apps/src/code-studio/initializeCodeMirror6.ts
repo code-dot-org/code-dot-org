@@ -59,6 +59,7 @@ function initializeCodeMirror6(
 
   const extensions: Extension[] = [
     ...editorConfig,
+    getLanguageExtension(mode),
     levelbuilderEditorTheme,
     EditorView.lineWrapping,
     EditorView.updateListener.of(update => {
@@ -71,8 +72,6 @@ function initializeCodeMirror6(
       }
     }),
   ];
-
-  extensions.push(getLanguageExtension(mode));
 
   const editor = new EditorView({
     state: EditorState.create({
