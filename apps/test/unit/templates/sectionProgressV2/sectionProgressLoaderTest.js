@@ -3,8 +3,8 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import * as redux from '@cdo/apps/redux';
 import * as progressHelpers from '@cdo/apps/templates/progress/progressHelpers';
-import {loadUnitProgress} from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
-import * as sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import {loadUnitProgress} from '@cdo/apps/templates/sectionProgressV2/sectionProgressLoader';
+import * as sectionProgress from '@cdo/apps/templates/sectionProgressV2/sectionProgressRedux';
 
 import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
@@ -250,7 +250,6 @@ describe('sectionProgressLoader.loadScript', () => {
             isRefreshingProgress: true,
             studentLevelProgressByUnit: [true],
             unitDataByUnit: [true],
-            currentView: 0,
           },
           teacherSections: {
             sections: {},
@@ -294,7 +293,6 @@ describe('sectionProgressLoader.loadScript', () => {
             sectionProgress: {
               studentLevelProgressByUnit: [true],
               unitDataByUnit: [true],
-              currentView: 0,
             },
             teacherSections: {
               selectedSectionId: selectedSectionId,
@@ -330,7 +328,6 @@ describe('sectionProgressLoader.loadScript', () => {
               studentLevelProgressByUnit: [],
               studentLessonProgressByUnit: [],
               unitDataByUnit: [],
-              currentView: 0,
             },
             teacherSections: {
               selectedSectionId: selectedSectionId,
@@ -376,7 +373,6 @@ describe('sectionProgressLoader.loadScript', () => {
               sectionProgress: {
                 studentLevelProgressByUnit: [],
                 unitDataByUnit: [],
-                currentView: 0,
               },
               teacherSections: {
                 selectedSectionId: selectedSectionId,

@@ -19,7 +19,7 @@ import currentUser, {
 } from '@cdo/apps/templates/currentUserRedux';
 import manageStudents from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
-import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import sectionProgress from '@cdo/apps/templates/sectionProgressV2/sectionProgressRedux';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/TeacherHomepage';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import teacherSections, {

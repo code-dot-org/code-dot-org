@@ -4,19 +4,17 @@ import {Provider} from 'react-redux';
 
 import {registerReducers, restoreRedux, stubRedux} from '@cdo/apps/redux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
+import FloatingHeader from '@cdo/apps/templates/sectionProgressV2/floatingHeader/FloatingHeader.jsx';
 import sectionProgress, {
   addExpandedLesson,
-} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import {
-  createStore,
-  getScriptData,
-} from '@cdo/apps/templates/sectionProgress/sectionProgressTestHelpers';
-import FloatingHeader from '@cdo/apps/templates/sectionProgressV2/floatingHeader/FloatingHeader.jsx';
+} from '@cdo/apps/templates/sectionProgressV2/sectionProgressRedux';
 import teacherSections, {
   setStudentsForCurrentSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
+import {createStore, getScriptData} from './sectionProgressTestHelpers';
 
 const STUDENT_1 = {id: 1, name: 'Student 1', familyName: 'FamNameB'};
 const STUDENT_2 = {id: 2, name: 'Student 2', familyName: 'FamNameA'};
