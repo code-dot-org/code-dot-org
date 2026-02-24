@@ -36,7 +36,11 @@ module AiLessonSummariesHelper
       return summary_record
     end
 
-    new_lesson_summary = generate_lesson_summary(lesson_id, user_id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])[:json]
+    new_lesson_summary = if summary_record.lesson_summary.nil?
+                           generate_lesson_summary(lesson_id, user_id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])[:json]
+                         else
+                           summary_record.lesson_summary
+                         end
 
     new_script = nil
     if generate_script
