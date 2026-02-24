@@ -1,6 +1,5 @@
 module Widget2Helper
   WIDGET2_BASE_DIRECTORY = "#{Rails.root}/config/widget2".freeze
-  NEW_WEBLAB2_PROJECT_LEVEL_ID = Level.find_by_name("New Web Lab 2 Project")&.id
 
   # Retrieve widget2 sources from the file system.
   def get_widget2_sources(widget2_id)
@@ -63,7 +62,8 @@ module Widget2Helper
 
   # Returns the edit URL for a widget2.
   private def get_widget2_edit_url(widget2_id)
-    "/levels/#{NEW_WEBLAB2_PROJECT_LEVEL_ID}/edit_blocks/widget2_sources?widget2=#{widget2_id}"
+    new_weblab2_project_level_id = Level.find_by_name("New Web Lab 2 Project")&.id
+    "/levels/#{new_weblab2_project_level_id}/edit_blocks/widget2_sources?widget2=#{widget2_id}"
   end
 
   private def get_widget2_directory(widget2_id)
