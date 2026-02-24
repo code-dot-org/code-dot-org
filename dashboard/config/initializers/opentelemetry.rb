@@ -15,6 +15,9 @@ if CDO.enable_opentelemetry
           # Don't trace requests for static assets. They are very high volume and noisy and not applicable for most application performance monitoring use cases.
           path.start_with?('/assets/', '/onetrust/', '/fonts/') || path.starts_with?('/shared/') || path.end_with?('.js') || path.ends_with?('.css')
         },
+      },
+      'OpenTelemetry::Instrumentation::ActionPack' => {
+        span_naming: :class,
       }
     )
 
