@@ -200,7 +200,9 @@ const ProfessionalLearningProgramRequirements = props => {
           )}
         </div>
 
-        <label className="control-label">Submit your application</label>
+        <p className="control-label" style={styles.smallMarginBottom}>
+          Submit your application
+        </p>
         <LabeledSingleCheckbox
           name="agree"
           label={
@@ -295,5 +297,8 @@ const styles = {
   },
   marginBottom: {
     marginBottom: 30,
+  },
+  smallMarginBottom: {
+    marginBottom: 5,
   },
 };
