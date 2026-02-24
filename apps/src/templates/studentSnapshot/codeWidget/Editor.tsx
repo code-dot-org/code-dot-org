@@ -3,7 +3,7 @@ import {EditorView} from '@codemirror/view';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
 
-import {editorConfig} from '@cdo/apps/lab2/views/components/editor/editorConfig';
+import {editorConfig} from '@cdo/apps/codemirror/editorConfig';
 import {
   darkMode as darkModeTheme,
   lightMode as lightModeTheme,

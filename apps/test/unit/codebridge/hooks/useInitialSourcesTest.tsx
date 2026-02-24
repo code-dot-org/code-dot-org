@@ -55,7 +55,6 @@ const generateMazeFile = (
     name: MAZE_FILE_NAME,
     contents: JSON.stringify(mazeContents),
     type: ProjectFileType.SYSTEM_SUPPORT,
-    language: 'txt',
     folderId: DEFAULT_FOLDER_ID,
   };
 };

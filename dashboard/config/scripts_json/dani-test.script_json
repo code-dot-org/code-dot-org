@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-02-20 19:41:51 UTC",
+    "serialized_at": "2026-02-23 17:44:09 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -304,6 +304,27 @@
       "level_keys": [
         "Diffs A - Update the Hero Section"
       ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Diffs A - Deep Dive: Find the AI Changes"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "dani-test",
+        "activity_section.key": "633081a8-1333-40f8-834d-2859935d90bb"
+      },
+      "level_keys": [
+        "Diffs A - Deep Dive: Find the AI Changes"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -384,6 +405,18 @@
         "level.key": "Diffs A - Update the Hero Section",
         "script_level.level_keys": [
           "Diffs A - Update the Hero Section"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "dani-test",
+        "activity_section.key": "633081a8-1333-40f8-834d-2859935d90bb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Diffs A - Deep Dive: Find the AI Changes",
+        "script_level.level_keys": [
+          "Diffs A - Deep Dive: Find the AI Changes"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
