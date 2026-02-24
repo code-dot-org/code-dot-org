@@ -399,7 +399,8 @@
     "web-streams-polyfill": "^4.2.0",
     "wgxpath": "^1.2.0",
     "whatwg-fetch": "^2.0.3",
-    "zod": "^4.3.6"
+    "zod": "^4.3.6",
+    "zod-to-json-schema": "^3.25.1"
   },
   "packageManager": "yarn@4.12.0"
 }

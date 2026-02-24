@@ -1,6 +1,7 @@
-import {generateText, Output} from 'ai';
+import {Output} from 'ai';
 import z from 'zod/v3';
 
+import {generateText} from '@cdo/apps/aiGateway/generateTextThroughProxyOrGateway';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 

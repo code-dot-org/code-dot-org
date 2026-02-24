@@ -11,6 +11,7 @@ import {
 } from '@cdo/apps/aichat/redux/slice';
 import {getAssetUrl} from '@cdo/apps/aichat/utils';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {isAiGatewayEnabled} from '@cdo/apps/aiGateway/isAiGatewayEnabled';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {TestResults} from '@cdo/apps/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -172,8 +173,9 @@ export const submitChatContents = createAsyncThunk(
       );
 
       if (
+        isAiGatewayEnabled ||
         modelParameters.selectedModelId ===
-        AiChatModelIds.GEMINI_2_5_FLASH_IMAGE
+          AiChatModelIds.GEMINI_2_5_FLASH_IMAGE
       ) {
         const levelProperties = state.lab.levelProperties;
         const levelName = levelProperties?.name;
@@ -182,11 +184,21 @@ export const submitChatContents = createAsyncThunk(
           (levelProperties as AichatLevelProperties)?.aichatSettings
             ?.levelSystemPrompt;
 
+        let filteredChatEvents: CompletedChatMessage[] =
+          chatEventsCurrent.filter(isCompletedChatMessage);
+
+        if (
+          modelParameters.selectedModelId ===
+          AiChatModelIds.GEMINI_2_5_FLASH_IMAGE
+        ) {
+          filteredChatEvents = filteredChatEvents.filter(
+            message => message.status === Status.OK
+          );
+        }
+
         messages = await performChatCompletion(
           newUserMessage,
-          chatEventsCurrent
-            .filter(isCompletedChatMessage)
-            .filter(message => message.status === Status.OK),
+          filteredChatEvents,
           modelParameters,
           aichatContext,
           (asset: ChatAsset) =>
@@ -201,7 +213,6 @@ export const submitChatContents = createAsyncThunk(
           aichatContext
         );
       }
-
       // In milliseconds
       const responseTime = Date.now() - startTime;
       dispatch(
