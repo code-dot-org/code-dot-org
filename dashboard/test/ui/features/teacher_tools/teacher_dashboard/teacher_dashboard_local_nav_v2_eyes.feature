@@ -3,7 +3,6 @@
 Feature: Using the V2 teacher dashboard local navigation - Eyes
   Background:
     Given I am on "http://studio.code.org/home"
-    Given I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
 
   @properties_encryption_key
   Scenario: Local navigation on Progress v2

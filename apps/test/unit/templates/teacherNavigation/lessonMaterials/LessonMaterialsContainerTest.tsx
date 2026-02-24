@@ -14,6 +14,7 @@ import {
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import currentUser, {
   setShowAITALessonSummary,
+  setShowAITAPodcasts,
   setHasCompletedPersonalizationQuiz,
   setAudioSummaryTranscript,
 } from '@cdo/apps/templates/currentUserRedux';
@@ -93,6 +94,17 @@ const SECTIONS = [
     unitName: null,
     unitSelection: null,
     course_display_name: null,
+  },
+  {
+    id: 13,
+    name: 'Period 13',
+    course_offering_id: 123,
+    courseVersionId: 2023,
+    unitName: 'csd1-2024',
+    unit_id: 100,
+    unitSelection: {
+      unitName: 'csd1-2024',
+    },
   },
 ];
 
@@ -468,6 +480,22 @@ describe('LessonMaterialsContainer', () => {
     );
   });
 
+  it('renders the first lesson for the assigned unit when a new section is selected', async () => {
+    await renderDefault();
+
+    const selectedLessonInput = screen.getByRole('combobox', {
+      name: 'Choose a lesson',
+    });
+
+    fireEvent.change(selectedLessonInput, {target: {value: '2'}});
+
+    screen.getByText('Lesson Plan: Second lesson');
+
+    store.dispatch(selectSection(13));
+    await act(async () => await new Promise(process.nextTick));
+    screen.getByText('Lesson Plan: First lesson');
+  });
+
   it('renders will render message when there is no lesson plan', async () => {
     await renderDefault();
 
@@ -711,7 +739,13 @@ describe('LessonMaterialsContainer', () => {
 
     it('does not render audio component when experiment and DCDO flag are false', async () => {
       DCDO.set('ai-lesson-summary-podcasts', false);
-      experiments.isEnabled = jest.fn(() => false);
+      experiments.isEnabled = jest.fn((key: string) => {
+        if (key === 'ai-lesson-podcasts') {
+          return false;
+        } else {
+          return true;
+        }
+      });
       await renderDefault();
 
       expect(screen.queryByText(i18n.audioSummary())).toBe(null);
@@ -725,7 +759,7 @@ describe('LessonMaterialsContainer', () => {
     });
 
     it('renders audio component when experiment is false and DCDO flag is true', async () => {
-      DCDO.set('ai-lesson-summary-podcasts', true);
+      store.dispatch(setShowAITAPodcasts(true));
       experiments.isEnabled = jest.fn(() => false);
       await renderDefault();
 

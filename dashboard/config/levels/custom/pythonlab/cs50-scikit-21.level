@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-02-18T16:59:52.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# CIW AI Associate Standards: 3.1 & 3.2\n# Standard Descriptions: \n#   3.1: Define main algorithms of different machine learning methods.\n#   3.2: Describe classification, approximation, inference optimization, recognition, search families of reasoning algorithms.\n#\n# Rationale: AI is a big family of different \"tools\". Just like a carpenter \n# uses a hammer for nails and a saw for wood, an AI engineer chooses the \n# \"family\" of algorithm that fits the task. This tutorial provides a map \n# of these families.\n\n\"\"\"\nWelcome! AI isn't just one thing—it's a collection of families.\n1. Classification: Sorting things into bins (Is it a Cat or Dog?).\n2. Approximation (Regression): Guessing a number (What is the price?).\n3. Recognition: Identifying patterns (Face ID or Voice ID).\n4. Search/Optimization: Finding the best path or settings.\n\nLet's look at a few of these families in scikit-learn!\n\"\"\"\n\nimport pandas as pd\nfrom sklearn.linear_model import LogisticRegression, LinearRegression\nfrom sklearn.cluster import KMeans\nfrom sklearn.neighbors import NearestNeighbors\nimport numpy as np\n\n# --- FAMILY 1: CLASSIFICATION (Categorization) ---\nprint(\"--- Family 1: Classification ---\")\n# Task: Identify the species of a flower.\n# Common Algorithm: Logistic Regression.\nprint(\"Used for: Yes/No questions or 'Which bin?' questions.\")\n\n# --- FAMILY 2: APPROXIMATION (Regression) ---\nprint(\"\\n--- Family 2: Approximation ---\")\n# Task: Guess the value of a house.\n# Common Algorithm: Linear Regression.\nprint(\"Used for: 'How much?' or 'How many?' questions.\")\n\n# --- FAMILY 3: SEARCH & RECOGNITION ---\nprint(\"\\n--- Family 3: Search/Recognition ---\")\n# Task: Find the closest match to a fingerprint.\n# Common Algorithm: K-Nearest Neighbors (KNN).\nprint(\"Used for: Finding similarities or patterns in data.\")\n\n# --- FAMILY 4: OPTIMIZATION ---\nprint(\"\\n--- Family 4: Optimization ---\")\n# Task: Find the best way to group these dots together.\n# Common Algorithm: KMeans.\nprint(\"Used for: Finding the most efficient 'best' grouping or path.\")\n\n\"\"\"\n--- YOUR TURN ---\nWe've listed 4 scenarios below. For each one, identify which \"Family\" it \nbelongs to (Classification, Approximation, Recognition, or Search).\n\nScenario A: A self-driving car identifying a \"Stop Sign\".\nScenario B: A bank predicting exactly how many dollars you will spend next month.\nScenario C: A website suggesting a \"New Friend\" based on who you already know.\nScenario D: A factory finding the fastest way to pack 1,000 boxes.\n\"\"\"\n\n# STARTING CODE FOR STUDENT:\n# TODO: Match the families!\n# Scenario_A = \"___\"\n# Scenario_B = \"___\"\n# Scenario_C = \"___\"\n# Scenario_D = \"___\"\n\nprint(\"\\nThink about how each family solves a different kind of problem!\")\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFTDG6jyYgtI/CEUE/82dEkG4hlI8OLsdjJD0In8S\n03BB+jPkGgyYB0/9C3zqHMHEFpKeCsugYbpGMxzBNwrd7qASagJaFzMnVUyM\n2TXS7Hau9lj7JpZIHXn9fmxXRRANWbvGTlVNoGJ3COfF4HkyWWo9DUkievxP\nmwZt9P6Oq1+ZBeXkGdfNWLicOj6cZDoSIgcIAZA0NqcZIJ23UicLHL883XEl\nFo1eQgeCOj5tDw3QWZ628zoeK5kcmDbLLTiz17gPu96qdUGuPnAtfcodD4LV\nU/fiYd57/N6/PNtulqJLjLAL8tR0KfcmrD4ekA2M2hNnudo4HidueVDGjBXi\nJXmDXMlNYRLtKpvOwWybS6LB943cAGwzBWRsN74+Tt2jvk45z98zvU9uLWRv\nxQOl5ofjvxn71kU3Y8AlUzLI7fXI5/K7uESwZxQ5VY+TV9cs0kz6cdS2wx8l\nV3JK9cbd8P9G+BuNMlgns43aoBZzfkCimpCFL04aBx2TxdoJSL32BGyCyKl1\n90AsMHX49Q83Iv/0F9gPXH7HutX9nJkal6DYvgZnVON9aK60CwzMCA1jO11q\n9s7Q0PRreypZEEqoIehIWIpBikxld39ogRtuxukoP3YmF3WaMob/3I3BdiBR\nyHNxiPcjEn6GpRxNlMVhW3WbeDLG4znX0mA/E3l+nmmdrhlSIlGFmONuoIVY\ntT9etDXOTfGgK8ofp6190CL7DyPPYB0ncNOyu00zvE1nHb5De67oXilN2j4E\nd7QO5L8VY++djUs/sXKz1ScqxicIpkb+qhU3Gt0QNxg6a2mFtdzM+jFf6ujH\nM3vAV8ES9MKeINA2WkSv4wRFIejcVjmTtMOSzyoCdmDtS9Lo4TOrOTn8n62Y\nQRb8WzpTSEJqz0kh2eXVr/s90hqiLJyJtSTDqUUcRA6gBQCSy0cCmFGDFvar\nKciBu/9qf2Zz/xvNOvNWKF7bE+L9Mq0xq/ZPxEsSQUaPjlTae3DXjIpE7Hqy\nPP6wHfnZ97v8vHdoybV+7RHWHEetVjDIbnY2H+K2TjJdGW+UqJ54ijYcXw+g\nzQa1nLNQY9WJyvTJo0OShS2YcA3dOTCXYjQDqn384rf7uZtTMb5a94DorLRW\nrhzMwDpLa7da4gM9Vb02nyWzhKgEx+tkrCFth+IiwISGnvlTuy2kRwKm9Cg7\n3NnWASbPQ5gWJTwm+bhlkg2acI/v1R6BJrT//NN/wYW+XpVdpogbS9HcQfd0\nxsVmze0dvUc6nu9MBkzCzVArHrEzW4RaL5mMNmSFaEztcenVOh3RQEFKgYgR\nWEv+zQhoDpfcR+Ok3xBQMFL/MBF83hPQ7j7/CnogOcj0ma6X3SKbE2xfxnJ5\nY820wxyqBBXxP7w1TH8oSHsbfRZQ1j63dYqauBIJtB9ned8Pbjg00UR6+6W4\nxc6O2RswND288S5lkP6Y8PHJpSmNZqSuy2Bty+m8a++ma0zFy5XXvHEa4PdT\nO2o7doOUW4j4ckZ8SSmp9bWOt+Qwev81zE1uEuB5Fu3mGTddG3VX6/Nu4g+j\nTq8I1DQplLhejjgo17Q=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-18T16:59:52.549+00:00\",\"changed\":[\"cloned from \\\"cs50-scikit-20\\\"\"],\"cloned_from\":\"cs50-scikit-20\"},{\"changed_at\":\"2026-02-18 16:59:54 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:41:20 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:41:33 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>

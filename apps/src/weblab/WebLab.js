@@ -1,9 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import project from '@cdo/apps/code-studio/initApp/project';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import {FatalErrorType} from '@cdo/apps/weblab/constants';
 import {
   DisallowedHtmlWarningDialog,
@@ -28,8 +28,6 @@ import WebLabView from './WebLabView';
 var filesApi = require('@cdo/apps/clientApi').files;
 
 var assetListStore = require('../code-studio/assets/assetListStore');
-
-export const WEBLAB_FOOTER_HEIGHT = 30;
 
 /**
  * An instantiable WebLab class
@@ -226,7 +224,7 @@ WebLab.prototype.init = function (config) {
     }
   }
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <WebLabView
         onAddFileHTML={onAddFileHTML.bind(this)}

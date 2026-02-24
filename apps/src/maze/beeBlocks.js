@@ -2,7 +2,7 @@
  * Blocks specific to Bee
  */
 
-import {numberValidator} from '@cdo/apps/blockly/utils';
+import {interpolateMsg, numberValidator} from '@cdo/apps/blockly/utils';
 
 var blockUtils = require('../block_utils');
 var BlockStyles = require('../blockly/constants').BlockStyles;
@@ -253,10 +253,11 @@ function addRepeatedActionBlock(
     helpUrl: '',
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
-      this.interpolateMsg(
+      interpolateMsg(
+        this,
         blockMsg,
-        ['NUM', 'Number', Blockly.ALIGN_RIGHT],
-        Blockly.ALIGN_RIGHT
+        ['NUM', 'Number', Blockly.inputs.Align.RIGHT],
+        Blockly.inputs.Align.RIGHT
       );
 
       this.setInputsInline(true);

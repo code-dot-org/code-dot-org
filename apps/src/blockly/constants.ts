@@ -264,6 +264,7 @@ export const SETTABLE_PROPERTIES = [
   'JavaScript',
   'readOnly',
   'showUnusedBlocks',
+  'SNAP_RADIUS',
   'Trashcan',
   'typeHints',
   'valueTypeTabShapeMap',

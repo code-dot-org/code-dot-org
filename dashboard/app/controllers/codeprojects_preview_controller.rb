@@ -103,7 +103,8 @@ class CodeprojectsPreviewController < ApplicationController
       "script-src #{script_src}",
       "style-src #{style_src}",
       "img-src #{img_src}",
-      "font-src #{font_src}"
+      "font-src #{font_src}",
+      "form-action 'none'",
     ]
 
     unless rack_env?(:development) || rack_env?(:test)

@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import color from '@cdo/apps/util/color';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 
 import {PATTERN_AI_NUM_SEED_EVENTS} from '../constants';
@@ -110,7 +111,7 @@ class FieldPatternAi extends BlocklyCore.Field {
       return;
     }
 
-    ReactDOM.render(
+    createReactRoot(
       <PatternAiPanel
         initValue={this.getValue()}
         onChange={value => {

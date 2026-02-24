@@ -1,0 +1,10 @@
+name 'designing-reliable-apps-lesson7-sketchlab-choice-2025-pilot'
+display_name 'Design for a Failure State'
+description 'Use Sketch Lab to design for a failure state.'
+
+sublevels
+level 'designing-reliable-apps-lesson7-sketchlab-choiceA-2025-pilot'
+level 'designing-reliable-apps-lesson7-sketchlab-choiceB-2025-pilot'
+level 'designing-reliable-apps-lesson7-sketchlab-choiceC-2025-pilot'
+
+uses_lab2

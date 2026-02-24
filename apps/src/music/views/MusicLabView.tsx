@@ -30,7 +30,7 @@ import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import AnalyticsReporter from '../analytics/AnalyticsReporter';
+import MusicAnalyticsReporter from '../analytics/AnalyticsReporter';
 import AppConfig from '../appConfig';
 import {installFunctionBlocks} from '../blockly/blockUtils';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
@@ -77,7 +77,7 @@ interface MusicLabViewProps {
   validator: MusicValidator;
   player: MusicPlayer;
   allowPackSelection: boolean;
-  analyticsReporter: AnalyticsReporter;
+  analyticsReporter: MusicAnalyticsReporter;
   blocklyWorkspace: MusicBlocklyWorkspace;
   exemplarPlaybackEvents: PlaybackEvent[];
   executeCode: (code: string) => void;
@@ -474,7 +474,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               {AppConfig.getValue('js-editor') === 'true' && (
                 <CodeEditor
                   onCodeChange={executeCode}
-                  startCode={''}
+                  initialCode={''}
                   editorConfigExtensions={[javascript()]}
                   appName="music"
                 />

@@ -1,0 +1,79 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-02-22T22:35:18.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Navigation Bar",
+    "long_instructions": "# Navigation Bar\r\n\r\nMost web sites use navigation bars to help you find your way around a site.  They should be the same on every page.\r\n\r\n# Do This\r\n1) Look over the navigation bar on \"index.html\".\r\n* Add the same navigation bar to the other three pages.\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Hyperlinks](https://studio.code.org/courses/csd-2024/guides/hyperlinks)\r\n- [<i class=\"fa-solid fa-book\"></i> Flex Children](https://studio.code.org/courses/csd-2024/guides/flex-children)\r\n- [<i class=\"fa-solid fa-book\"></i> Flexbox](https://studio.code.org/courses/csd-2024/guides/flexbox)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Selectors](https://studio.code.org/courses/csd-2024/guides/html-selectors)\r\n- [<i class=\"fa-solid fa-book\"></i> Div Tags](https://studio.code.org/courses/csd-2024/guides/div)\r\n- [<i class=\"fa-solid fa-book\"></i> Classes](https://studio.code.org/courses/csd-2024/guides/classes)\r\n- [<i class=\"fa-solid fa-book\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::\r\n\r\n",
+    "bubble_choice_description": "Add a navigation bar to all of the web pages.",
+    "thumbnail_url": "https://images.code.org/019391a6ee2a5fda8ae6f21e3f513a3e-lists.png",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<html>\n  <head>\n  </head>\n  <body>\n    <h1>All the Lists</h1>\n    <a href=\"unicycle.html\">Unicycle</a>\n    <a href=\"bicycle.html\">Bicycle</a>\n    <a href=\"tricycle.html\">Tricycle</a>\n    <p> These are all the pages that I have made about Bicycles!  You can go to the pages by clicking on the links at the top of the page.</p>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "bicycle.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n  </head>\n  <body>\n    <h1>\n      Bicycle\n    </h1>\n    <p>\n      A familiar vehicle to people, a bicycle, also known as bike or cycle, is a two wheeled vehicle that is human powered. They were first introduced in Europe in the 19th century (1800-1899) and by now there are more bikes used than cars in the world. For many parts of the world, bicycle are the main form of transportation and for many people, they are used for fitness and recreation. The creation of the bicycle forever changed society.\n    </p>\n  </body>\n</html>",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "tricycle.html",
+          "language": "html",
+          "contents": "<html>\n  <head>\n  </head>\n  <body>\n    <h1>Tricycle</h1>\n    <h2> They're For Adults Too! </h2>\n    <p> When many people think of tricycles, or trikes, they think of smaller children riding them so they don't fall. </p>\n    <p>And while that may be true, that is not their only use. In Asia, tricycles are quite common as  they can have larger baskets on the back two wheels to carry things. </p>\n    <p> It is a favorable vehicle for children and older adults because of their stability. It can naturally stand upright rather than the rider having to keep the balance. </p>\n  </body>\n</html>",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "unicycle.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n  </head>\n<body>\n  <h1>Unicycle</h1>\n  <p> A one wheeled vehicle powered by a person, unicycles have gained a lot of popularity over the past couple of years. Typically known to be in circuses, the unicycle has now become used in a variety of different ways. With normally just a wheel, a frame, a seat, and pedals, unicycles are known to be more difficult to ride </p>\n  <p> Here are some more fun facts about unicycles </p>\n  <ul>\n    <li>Many different types of sports have been created using unicycles (unicycle basketball. unicycle hockey, etc.)</li>\n    <li>There are different kinds of unicycles now too (mountain unicycles, indoor unicycles, touring unicycles, etc.)  </li>\n    <li>Rupert Grint, who plays Ron Weasley in the Harry Potter movies, is an avid fan of unicycling</li>\n  </ul>\n</body>\n</html>",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n0/8WV6GUv1phqsfKk+js5R99\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-22 22:36:15 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-22 22:36:40 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

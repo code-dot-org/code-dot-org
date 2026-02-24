@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {AccountInformation} from '@cdo/apps/accounts/AccountInformation';
@@ -19,6 +18,7 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import LockoutLinkedAccounts from '@cdo/apps/templates/policy_compliance/LockoutLinkedAccounts';
 import color from '@cdo/apps/util/color';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
@@ -45,7 +45,7 @@ $(document).ready(() => {
     document.getElementById('migrate-multi-auth');
   if (migrateMultiAuthMountPoint) {
     const store = getStore();
-    ReactDOM.render(
+    createReactRoot(
       <Provider store={store}>
         <MigrateToMultiAuth />
       </Provider>,
@@ -57,7 +57,7 @@ $(document).ready(() => {
     'account-information'
   );
   if (accountInformationMountPoint) {
-    ReactDOM.render(
+    createReactRoot(
       <AccountInformation {...scriptData} />,
       accountInformationMountPoint
     );
@@ -66,7 +66,7 @@ $(document).ready(() => {
   const schoolInformationMountPoint =
     document.getElementById('school-information');
   if (schoolInformationMountPoint) {
-    ReactDOM.render(
+    createReactRoot(
       <SchoolInformation {...scriptData} />,
       schoolInformationMountPoint
     );
@@ -110,7 +110,7 @@ $(document).ready(() => {
   const ltiSyncSettingsMountPoint =
     document.getElementById('lti-sync-settings');
   if (ltiSyncSettingsMountPoint) {
-    ReactDOM.render(
+    createReactRoot(
       <LtiRosterSyncSettings
         ltiRosterSyncEnabled={
           ltiSyncSettingsMountPoint.getAttribute(
@@ -128,7 +128,7 @@ $(document).ready(() => {
     'lockout-linked-accounts'
   );
   if (lockoutLinkedAccountsMountPoint) {
-    ReactDOM.render(
+    createReactRoot(
       <LockoutLinkedAccounts
         pendingEmail={lockoutLinkedAccountsMountPoint.getAttribute(
           'data-pending-email'
@@ -162,7 +162,7 @@ $(document).ready(() => {
 
   if (turnOffAiDiffMountPoint && experiments.isEnabled('ai-differentiation')) {
     const store = getStore();
-    ReactDOM.render(
+    createReactRoot(
       <Provider store={store}>
         <TurnOffAiDiff />
       </Provider>,
@@ -187,7 +187,7 @@ $(document).ready(() => {
 
   const deleteAccountMountPoint = document.getElementById('delete-account');
   if (deleteAccountMountPoint) {
-    ReactDOM.render(
+    createReactRoot(
       <DeleteAccount
         isPasswordRequired={isPasswordRequired}
         isTeacher={userType === 'teacher'}

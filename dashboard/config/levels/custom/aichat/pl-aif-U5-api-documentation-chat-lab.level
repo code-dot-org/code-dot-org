@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-02-09T16:27:05.000Z",
   "level_num": "custom",
@@ -9,7 +10,7 @@
       "weather-data.pdf": "dd8e2e30-4bf7-4a4a-8015-0ccd94a475d1.pdf"
     },
     "encrypted": "false",
-    "long_instructions": "## Understanding API Documentation\r\n\r\nSkim the documentation for the Open Weather app [here](https://drive.google.com/file/d/14YM40Rev-of7TaPwllaDE7-QvJMI-AgM/view?usp=drive_link). \r\n\r\nUpload the PDF of the API documentation to AI Chat from the library. Then use AI to answer the questions in your activity guide.\r\n\r\n:::details [Not sure what to ask?]\r\nTry one of the following prompts:\r\n- What data does this API provide?\r\n- What parameters do I need to set to get weather for a specific city?\r\n- What units is \"temp\" in?\r\n:::",
+    "long_instructions": "## Understanding API Documentation\r\n\r\nSkim the documentation for the Open Weather app [here](https://drive.google.com/file/d/14YM40Rev-of7TaPwllaDE7-QvJMI-AgM/view?usp=drive_link). \r\n\r\nUpload the PDF of the API documentation to AI Chat from the library by clicking the `add file` button in the prompt box. Then use AI to answer the questions below.\r\n\r\n---\r\n\r\n1️⃣ What kinds of information does this API provide about the weather?\r\n\r\nList at least three different types of data you notice.\r\n\r\n<div style=\"clear:both;\"></div> <details style=\"background-color: #4f5b68; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\"> <summary style=\"font-size: 12pt; font-weight: bold; color: #ffffff;\">💡 Quick check</summary> <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;\"> <p style=\"font-size: 12pt; color: #ffffff;\"> This API provides multiple types of weather data, including <strong>temperature</strong>, <strong>humidity</strong>, <strong>wind</strong>, <strong>weather conditions</strong> (like rain or clouds), and <strong>location information</strong>. Not all of this data needs to be shown in an app, but it’s available if needed. </p> </div> </details>\r\n\r\n\r\n2️⃣ What parameters do you need to set to get weather for a specific location?\r\n\r\nWhich ones are required, and what are they used for?\r\n\r\n<div style=\"clear:both;\"></div> <details style=\"background-color: #4f5b68; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\"> <summary style=\"font-size: 12pt; font-weight: bold; color: #ffffff;\">💡 Quick check</summary> <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;\"> <p style=\"font-size: 12pt; color: #ffffff;\"> To get weather for a specific location, the API requires <strong>latitude (lat)</strong> and <strong>longitude (lon)</strong>. These coordinates tell the API exactly where to look. The request also requires an <strong>API key (appid)</strong> to identify who is making the request. </p> </div> </details>\r\n\r\n3️⃣ What unit is the <code>temp</code> value in by default, and how could you change it?\r\n<div style=\"clear:both;\"></div> <details style=\"background-color: #4f5b68; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\"> <summary style=\"font-size: 12pt; font-weight: bold; color: #ffffff;\">💡 Quick check</summary> <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;\"> <p style=\"font-size: 12pt; color: #ffffff;\"> By default, <strong>temperature values are in Kelvin</strong>. You can change the unit by using the optional <strong>units</strong> parameter, such as <strong>metric</strong> for Celsius or <strong>imperial</strong> for Fahrenheit. </p> </div> </details>",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -48,7 +49,6 @@
       "multimodalEnabled": true
     }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-02-09T16:27:05.021+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson1-level2-test-2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson1-level2-test-2025-pilot\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-09T16:27:05.021+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson1-level2-test-2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson1-level2-test-2025-pilot\"},{\"changed_at\":\"2026-02-10 19:24:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Aichat>

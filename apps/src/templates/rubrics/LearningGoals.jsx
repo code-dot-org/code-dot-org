@@ -1,9 +1,4 @@
-import {
-  BodyThreeText,
-  OverlineThreeText,
-  Heading5,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useEffect, useState, useRef, useMemo} from 'react';
@@ -440,11 +435,13 @@ export default function LearningGoals({
             loaded={doneLoading}
           />
           <div className={style.learningGoalsHeaderText}>
-            <Heading5
+            <Typography
               className={[
                 style.learningGoalsHeaderTextBody,
                 'uitest-learning-goal-title',
               ]}
+              variant="h5"
+              gutterBottom
             >
               <span>
                 {currentLearningGoal === learningGoals.length
@@ -454,28 +451,36 @@ export default function LearningGoals({
               {aiEnabled && displayUnderstanding === INVALID_UNDERSTANDING && (
                 <AiToken />
               )}
-            </Heading5>
-            <BodyThreeText className={style.learningGoalsHeaderTextBody}>
+            </Typography>
+            <Typography
+              className={style.learningGoalsHeaderTextBody}
+              variant="body3"
+              gutterBottom
+            >
               {i18n.next()}:{' '}
               {currentLearningGoal + 1 === learningGoals.length
                 ? i18n.rubricLearningGoalSummary()
                 : learningGoals[
                     (currentLearningGoal + 1) % learningGoals.length
                   ].learningGoal}
-            </BodyThreeText>
+            </Typography>
           </div>
         </div>
         <div className={style.learningGoalsHeaderRightSideV2}>
           {submittedEvaluation && (
             <div className={style.submittedEvaluation}>
               {submittedEvaluation.understanding !== null && (
-                <BodyThreeText className={style.feedbackIndicatorText}>
+                <Typography
+                  className={style.feedbackIndicatorText}
+                  variant="body3"
+                  gutterBottom
+                >
                   {
                     UNDERSTANDING_LEVEL_STRINGS[
                       submittedEvaluation.understanding
                     ]
                   }
-                </BodyThreeText>
+                </Typography>
               )}
               {submittedEvaluation.feedback && (
                 <FontAwesome
@@ -500,7 +505,6 @@ export default function LearningGoals({
           </button>
         </div>
       </div>
-
       <div className={style.learningGoalOuterBlock}>
         {currentLearningGoal !== learningGoals.length && (
           <div className={style.learningGoalExpanded}>
@@ -579,12 +583,12 @@ export default function LearningGoals({
           <div>
             {learningGoals.map((lg, i) => (
               <div className={style.learningGoalSummary} key={i}>
-                <BodyThreeText>
-                  <StrongText>{lg.learningGoal}</StrongText>
-                </BodyThreeText>
-                <BodyThreeText>
+                <Typography variant="body3" gutterBottom>
+                  <Typography variant="strong">{lg.learningGoal}</Typography>
+                </Typography>
+                <Typography variant="body3" gutterBottom>
                   {UNDERSTANDING_LEVEL_STRINGS[understandingLevels.current[i]]}
-                </BodyThreeText>
+                </Typography>
               </div>
             ))}
           </div>
@@ -613,11 +617,13 @@ const AiToken = () => {
   return (
     <div className={classnames('uitest-uses-ai', style.aiTokenContainer)}>
       {' '}
-      <OverlineThreeText
+      <Typography
         className={classnames(style.aiToken, style.aiTokenText)}
+        variant="overline3"
+        gutterBottom
       >
         {i18n.usesAi()}
-      </OverlineThreeText>
+      </Typography>
     </div>
   );
 };

@@ -7,7 +7,6 @@ import {
 import Hammer from 'hammerjs';
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {getCodeBlocks, getCode} from '@cdo/apps/blockly/utils';
@@ -19,6 +18,7 @@ import {
   dismissSwipeOverlay,
 } from '@cdo/apps/templates/arrowDisplayRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 import {TestResults} from '../../constants';
@@ -399,7 +399,7 @@ export default class Craft {
       hideRunButton: config.level.specialLevelType === 'agentSpawn',
     });
 
-    ReactDOM.render(
+    createReactRoot(
       <Provider store={getStore()}>
         <div>
           <AppView
@@ -648,7 +648,6 @@ export default class Craft {
     }
 
     studioApp().toggleRunReset('reset');
-    Blockly.mainBlockSpace.traceOn(true);
     studioApp().attempts++;
 
     Craft.executeUserCode();
@@ -684,9 +683,6 @@ export default class Craft {
     }
 
     studioApp().playAudio('start');
-
-    // Start tracing calls.
-    Blockly.mainBlockSpace.traceOn(true);
 
     const appCodeOrgAPI = Craft.gameController.codeOrgAPI;
     appCodeOrgAPI.startCommandCollection();

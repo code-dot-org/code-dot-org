@@ -9,10 +9,28 @@ import {ResponseValidator} from '../util/HttpClient';
 
 import {EXIT_TICKET_PROMPT, LESSON_HOOK_PROMPT} from './predefinedPrompts';
 
+export type LessonHook = {
+  comment: string;
+  introduction: string;
+  activity: string;
+  wrap_up: string;
+};
+
+export type ExitTicket = {
+  comment: string;
+  exit_ticket_items: ExitTicketItem[];
+};
+
+export type ExitTicketItem = {
+  type: string;
+  question: string;
+  answer: string;
+};
+
 export type ChatTextMessage = {
   role: Role;
   chatMessageText: string;
-  status: string;
+  status: (typeof AiInteractionStatus)[keyof typeof AiInteractionStatus];
   id?: number;
   isArtifactCandidate?: boolean;
   artifactCandidateType?: (typeof AiDiffArtifactType)[keyof typeof AiDiffArtifactType];
@@ -40,6 +58,7 @@ type ServerChatThread = {
 
 type ServerChatMessage = {
   id: number;
+  status: string;
   role: string;
   content: string;
   updated_at: Date;
@@ -101,7 +120,10 @@ function messageValidatorHelper(
       serverMsg.is_preset && serverMsg.preset_chip_text
         ? serverMsg.preset_chip_text
         : serverMsg.content,
-    status: AiInteractionStatus.OK,
+    status:
+      serverMsg.status === undefined
+        ? AiInteractionStatus.OK
+        : serverMsg.status,
     id: serverMsg.id,
     isArtifactCandidate: serverMsg.is_artifact_candidate,
     artifactCandidateType:

@@ -21,14 +21,11 @@ export interface CurrentUserState {
   userType: 'unknown' | 'teacher' | 'student';
   userRoleInCourse: CourseRole;
   signInState: SignInState;
-  hasSeenStandardsReportInfo: boolean;
   isBackgroundMusicMuted: boolean;
   isSortedByFamilyName: boolean;
   under13: boolean;
   over21: boolean;
   isTeacher: boolean | undefined;
-  showProgressTableV2: string;
-  progressTableV2ClosedBeta: boolean;
   childAccountComplianceState: string | null;
   inSection: boolean | null;
   usStateCode: string | null;
@@ -37,10 +34,12 @@ export interface CurrentUserState {
   aiDifferentiationEnabled: boolean;
   hasCompletedAiDifferentiationWelcome: boolean;
   showAITALessonSummary: boolean;
+  showAITAPodcasts: boolean;
   hasCompletedPersonalizationQuiz: boolean;
   audioSummaryTranscript: AudioSummaryTranscriptLine[];
   userSharingDisabled: boolean;
   hasSeenHomepageWelcome: boolean;
   inUSA: boolean;
+  isLevelbuilder: boolean;
   aiTutorEnabledForPilot: boolean;
 }

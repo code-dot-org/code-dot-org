@@ -612,7 +612,7 @@ describe('teacherSectionsRedux', () => {
         atRiskAgeGatedUsState: undefined,
         avatar_color: 1,
         avatar_emoji: 1,
-        isAssignedEssentialAiChat: undefined,
+        assignedAiChatToolsDependency: undefined,
         aiChatAccessLevel: undefined,
       });
     });
@@ -972,7 +972,7 @@ describe('teacherSectionsRedux', () => {
           atRiskAgeGatedUsState: undefined,
           avatar_color: undefined,
           avatar_emoji: undefined,
-          isAssignedEssentialAiChat: undefined,
+          assignedAiChatToolsDependency: undefined,
           aiChatAccessLevel: undefined,
         },
       });

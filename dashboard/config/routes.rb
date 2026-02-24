@@ -170,6 +170,9 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    # Custom route to get lesson feedback for current student
+    get 'lesson_feedbacks/by_student', to: 'lesson_feedbacks#show_by_student'
+
     # Data docs are off of curriculum builder as of fall 2022.
     get 'docs/concepts/data-library', to: 'data_docs#index'
     get 'docs/concepts/data-library/:key', param: :key, constraints: {data_doc_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, to: 'data_docs#show'
@@ -469,7 +472,7 @@ Dashboard::Application.routes.draw do
         get 'get_rollup_resources'
       end
 
-      resources :lessons, only: [:show], param: 'position', format: false do
+      resources :lessons, only: [:show, :index], param: 'position', format: false do
         get 'student', to: 'lessons#student_lesson_plan'
         get 'extras', to: 'script_levels#lesson_extras', format: false
         get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
@@ -1178,8 +1181,7 @@ Dashboard::Application.routes.draw do
       collection do
         get :show # GET /ai_lesson_summaries/show?lesson_id=2
         get :ai_lesson_summary_podcast_script, controller: :ai_lesson_summaries, action: :ai_lesson_summary_podcast_script # GET /ai_lesson_summaries/ai_lesson_summary_podcast_script?lesson_id=2
-        get :perform_ai_lesson_summaries_by_unit, controller: :ai_lesson_summaries, action: :perform_ai_lesson_summaries_by_unit # GET ai_lesson_summaries/perform_ai_lesson_summaries_by_unit?unit_id=1
-        get :perform_ai_lesson_summary_by_lesson, controller: :ai_lesson_summaries, action: :perform_ai_lesson_summary_by_lesson # GET ai_lesson_summaries/perform_ai_lesson_summary_by_lesson?lesson_id=1
+        get :request_ai_lesson_summaries, controller: :ai_lesson_summaries, action: :request_ai_lesson_summaries # GET ai_lesson_summaries/request_ai_lesson_summaries?unit_id=1 [optional: &lesson_id=1]
       end
     end
 
@@ -1220,9 +1222,6 @@ Dashboard::Application.routes.draw do
 
     # Routes used by donor teacher banner
     post '/dashboardapi/v1/users/:user_id/dismiss_donor_teacher_banner', to: 'api/v1/users#dismiss_donor_teacher_banner'
-
-    # Routes used by standards info dialog
-    post '/dashboardapi/v1/users/:user_id/set_standards_report_info_to_seen', to: 'api/v1/users#set_standards_report_info_to_seen'
 
     # Routes used by teacher scores
     post '/dashboardapi/v1/teacher_scores', to: 'api/v1/teacher_scores#score_lessons_for_section'
@@ -1352,7 +1351,8 @@ Dashboard::Application.routes.draw do
     post '/openai/evaluate_section', to: 'openai_evaluate#evaluate_section'
     post '/openai/match_teaching_profile', to: 'openai_personalization#match_teaching_profile'
 
-    get '/langfuse/get_prompt', to: 'langfuse#get_prompt'
+    get '/ai_prompt_management/get_prompt', to: 'ai_prompt_management#get_prompt'
+    post '/ai_observability/add_internal_ai_tutor_dataset_item', to: 'ai_observability#add_internal_ai_tutor_dataset_item'
 
     resources :aichat_requests, only: [:create, :update]
     post '/aichat_request/start_chat_completion', to: 'aichat_requests#start_chat_completion'
@@ -1364,6 +1364,8 @@ Dashboard::Application.routes.draw do
 
     get '/aichat/user_has_access', to: 'aichat#user_has_access'
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
+
+    post '/ai_api_proxy/:provider', to: 'ai_api_proxy#proxy_request'
 
     resources :ai_interaction_feedback, only: [:create]
     resource :teaching_profile_data, only: [:show, :create, :update]
@@ -1377,10 +1379,10 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    resources :aidiff_artifacts, only: [:index]
+    resources :aidiff_artifacts, only: [:index, :create]
 
-    resources :aidiff_exit_tickets, only: [:index, :update, :create]
-    resources :aidiff_lesson_hooks, only: [:index, :update, :create]
+    resources :aidiff_exit_tickets, only: [:index, :update, :create, :show]
+    resources :aidiff_lesson_hooks, only: [:index, :update, :create, :show]
 
     resources :aidiff_messages, only: [] do
       member do

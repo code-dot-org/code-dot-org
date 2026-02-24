@@ -173,7 +173,6 @@ export function getScriptData(numLessons) {
   return {
     id: 2,
     csf: true,
-    hasStandards: false,
     title: "CSD Unit 3 - Interactive Animations and Games ('20-'21)",
     path: '//localhost-studio.code.org:3000/s/csd3-2020',
     lessons: [

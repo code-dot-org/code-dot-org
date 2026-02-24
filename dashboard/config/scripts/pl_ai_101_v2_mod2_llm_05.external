@@ -3,5 +3,45 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Prompt Engineering
+# Prompting Large Language Models
+
+#### You may be familiar with one or more of the following AI tools:
+
+<div style="display:flex;justify-content:space-between;align-items:center;width:95%;margin:20pt auto;padding:0 5px;">
+<div style="width:20%;text-align:center;">
+<img src="https://images.code.org/c22ec02e808ca32157566d9fb91efbe0-Screenshot%202026-01-29%20at%2011.40.54%20AM.png" alt="ChatGPT Logo" style="display:block;width:100%;height:auto !important;max-height:90px;object-fit:contain;border-radius:5pt;margin:0 auto;">
+</div>
+<div style="width:20%;text-align:center;">
+<img src="https://images.code.org/c2897744ec844dadc387c770574cbefb-Screenshot%202026-01-29%20at%2011.39.33%20AM.png" alt="Gemini Logo" style="display:block;width:100%;height:auto !important;max-height:90px;object-fit:contain;border-radius:5pt;margin:0 auto;">
+</div>
+<div style="width:20%;text-align:center;">
+<img src="https://images.code.org/4ac56eafff87360544c03cc012c9bd4a-Screenshot%202026-01-29%20at%2011.40.17%20AM.png" alt="Claude Logo" style="display:block;width:100%;height:auto !important;max-height:90px;object-fit:contain;border-radius:5pt;margin:0 auto;">
+</div>
+<div style="width:20%;text-align:center;">
+<img src="https://images.code.org/bbfada5f0e117d70f873c77c7271e7eb-images.jpg" alt="Copilot Logo" style="display:block;width:100%;height:auto !important;max-height:90px;object-fit:contain;border-radius:5pt;margin:0 auto;">
+</div>
+</div>
+
+#### All of these are:
+* #### Generative AI tools
+* #### Built using Large Language Models
+* #### Accessed through an AI chatbot interface
+
+#### Most consumer AI tools, including all of the above, are now **multimodal**, meaning they can work with more than just text. They can understand and create content using text, images, audio, and sometimes video.
+
+#### Users interact with these tools using prompts, usually through a AI chat interface.
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Prompt Engineering:</strong> A technique that involves refining and adjusting the inputs given to AI models to achieve more accurate or desired outputs.</p>
+</div>
+
+#### There are a number of ways to format prompts to get better outputs from LLMs. One simple prompt engineering structure you can use is **TaCo FoRT**.
+
+<p align="center">
+<img src="https://images.code.org/a9b6ae8f94bfa64afbf2af4a60ec6609-Screenshot 2025-04-07 at 2.01.43 PM.png" alt="lesson plan diagram" width="70%" style="border-radius:10px; border: 5px solid black;">
+</p>
+
+#### Click **Continue** to learn more about the **TaCo FoRT** prompt structure.
+
+
 MARKDOWN

@@ -33,7 +33,7 @@ class AidiffMessage < ApplicationRecord
     {
       id: id,
       role: role,
-      content: content,
+      content: AidiffArtifact.to_markdown(content, artifact_candidate_type),
       updated_at: updated_at,
       is_preset: is_preset,
       preset_chip_text: preset_chip_text,

@@ -1,9 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {getStore} from '@cdo/apps/redux';
 import InitialSectionCreationInterstitial from '@cdo/apps/templates/sectionSetup/InitialSectionCreationInterstitial';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import {trySetLocalStorage, tryGetLocalStorage} from '@cdo/apps/utils';
 
 const INITIAL_DIALOG_DISMISSED = 'initial_section_creation_dialog_dismissed';
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.appendChild(mountPoint);
   const store = getStore();
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <InitialSectionCreationInterstitial />
     </Provider>,

@@ -1,8 +1,8 @@
 import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import {getFolderPath} from '@codebridge/utils';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -91,9 +91,9 @@ const AiTutorVersionFileChip: React.FC<AiTutorVersionFileChipProps> = ({
             iconStyle="solid"
           />
         </div>
-        <BodyThreeText className={moduleStyles.fileName} noMargin>
+        <Typography className={moduleStyles.fileName} variant="body3">
           {file.name}
-        </BodyThreeText>
+        </Typography>
         {!isInReview && isAccepted && (
           <FontAwesomeV6Icon
             iconName="check"

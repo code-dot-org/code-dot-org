@@ -1,7 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import ProjectCardRow from '@cdo/apps/templates/projects/ProjectCardRow';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import cscpoetryAfternoonImg from '@cdo/static/csc/poetry/cscpoetry_afternoon.gif';
 import cscpoetryCloudImg from '@cdo/static/csc/poetry/cscpoetry_cloud.gif';
 import cscpoetrySingImg from '@cdo/static/csc/poetry/cscpoetry_sing.gif';
@@ -47,7 +47,7 @@ const POETRY_PROJECTS = [
 
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.getElementById('student_poetry_projects');
-  ReactDOM.render(
+  createReactRoot(
     <ProjectCardRow
       galleryType="public"
       showFullThumbnail={true}
