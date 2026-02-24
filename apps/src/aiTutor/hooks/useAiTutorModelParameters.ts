@@ -124,6 +124,11 @@ export const useAiTutorModelParameters = (
         `🤖: systemPrompt: ${options?.aiTutorSystemPromptName}`,
         systemPrompt
       );
+    } else if (options?.aiTutorSystemPrompt) {
+      console.log(
+        `🤖: systemPrompt: custom prompt`,
+        options?.aiTutorSystemPrompt
+      );
     } else if (systemPrompt !== undefined) {
       console.log(`🤖: systemPrompt: default`);
     }
