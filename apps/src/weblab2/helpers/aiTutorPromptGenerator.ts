@@ -1,3 +1,4 @@
+import {TUTOR_MODE_TO_ANSWER_TYPE} from '@cdo/apps/weblab2/constants';
 import basePrompt from '@cdo/apps/weblab2/prompts/basePrompt.md';
 import askContract from '@cdo/apps/weblab2/prompts/modeContracts/ask.md';
 import buildCSSContract from '@cdo/apps/weblab2/prompts/modeContracts/buildCSS.md';
@@ -28,8 +29,6 @@ import testCaseTrigger from '@cdo/apps/weblab2/prompts/modeTriggers/testCase.md'
 import preReplyCheckAllowJs from '@cdo/apps/weblab2/prompts/preReplyCheckAllowJs.md';
 import preReplyCheckNoJs from '@cdo/apps/weblab2/prompts/preReplyCheckNoJs.md';
 import {AiTutorAnswerType} from '@cdo/apps/weblab2/types';
-
-import {TUTOR_MODE_TO_ANSWER_TYPE} from '../constants';
 
 const MODE_TRIGGERS: Record<AiTutorAnswerType, string> = {
   ask: askTrigger,
