@@ -34,10 +34,10 @@ csv_data.each do |row|
   legacy_id = row['role_id']
   v3_user_id = row['user_id']
   next if legacy_id.nil? || v3_user_id.nil?
-  auth_option = Services::Clever::V3AuthOptionBuilder.new(
+  auth_option = Services::Clever::V3AuthOptionBuilder.call(
     clever_v2_id: legacy_id,
     clever_v3_id: v3_user_id
-  ).call
+  )
   if auth_option
     auth_option.save! unless do_dry_run
     migrated_count += 1
