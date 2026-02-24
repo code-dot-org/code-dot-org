@@ -13,7 +13,7 @@ class AiLessonSummaryPodcastsController < ApplicationController
       unit = Unit.find(params[:unit_id])
 
       # AI Podcasts are currently only available in AIF sections
-      if unit.name.include?('aif')
+      if unit.curriculum_umbrella == 'AIF'
         lesson_ids = []
         unit.lessons.each do |lesson|
           if lesson.has_lesson_plan
