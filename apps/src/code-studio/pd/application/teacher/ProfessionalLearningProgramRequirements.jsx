@@ -298,7 +298,4 @@ const styles = {
   marginBottom: {
     marginBottom: 30,
   },
-  smallMarginBottom: {
-    marginBottom: 5,
-  },
 };
