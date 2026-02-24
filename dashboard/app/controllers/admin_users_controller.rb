@@ -441,18 +441,20 @@ class AdminUsersController < ApplicationController
       return
     end
 
+    csv_data = params[:csv_data]
+    teacher_id = params[:teacher_id]
+    dry_run = params[:dry_run]
+
+    if csv_data.blank? || teacher_id.blank?
+      render json: {error: 'CSV data and teacher ID are required'}, status: :bad_request
+      return
+    end
+
+    # Create temporary files
+    temp_file = Tempfile.new(['delete_progress', '.csv'])
+    output_file = Tempfile.new('script_output')
+
     begin
-      csv_data = params[:csv_data]
-      teacher_id = params[:teacher_id]
-      dry_run = params[:dry_run]
-
-      if csv_data.blank? || teacher_id.blank?
-        render json: {error: 'CSV data and teacher ID are required'}, status: :bad_request
-        return
-      end
-
-      # Create a temporary file for the CSV content with student_id,unit_name format
-      temp_file = Tempfile.new(['delete_progress', '.csv'])
       CSV.open(temp_file.path, 'w', headers: true) do |csv|
         csv << ['student_id', 'unit_name']
         csv_data.each do |row|
@@ -460,19 +462,35 @@ class AdminUsersController < ApplicationController
         end
       end
 
+      # Determine which script based on data structure
+      script_name = csv_data.first&.key?('unit_name') ?
+        'delete_user_progress_by_unit.rb' :
+        'delete_user_progress_all_units.rb'
+
       # Path to the delete script
       repo_root = File.expand_path('..', Rails.root)
-      script_path = File.join(repo_root, 'bin', 'oneoff', 'reset_student_progress_in_bulk', 'delete_user_progress_by_unit.rb')
+      script_path = File.join(repo_root, 'bin', 'oneoff', 'reset_student_progress_in_bulk', script_name)
+
+      unless File.exist?(script_path) && script_path.start_with?(repo_root)
+        Rails.logger.error "Invalid script path: #{script_path}"
+        render json: {error: 'Script not found'}, status: :internal_server_error
+        return
+      end
 
       commit_flag = dry_run == true ? '' : 'for-real'
 
-      output = `cd #{repo_root} && ruby #{script_path} #{teacher_id} #{temp_file.path} #{commit_flag} 2>&1`
-      exit_status = $?.exitstatus
+      # Use system() with array arguments to prevent command injection
+      success = system(
+        'ruby', script_path, teacher_id, temp_file.path, commit_flag,
+        out: output_file.path,
+        err: [:child, :out],
+        chdir: repo_root
+      )
 
-      temp_file.unlink
+      output = File.read(output_file.path)
 
-      if exit_status != 0
-        Rails.logger.error "Delete progress script failed with exit status #{exit_status}: #{output}"
+      unless success
+        Rails.logger.error "Delete progress script failed: #{output}"
         render json: {error: 'Delete progress script failed', details: output}, status: :internal_server_error
         return
       end
@@ -487,6 +505,9 @@ class AdminUsersController < ApplicationController
       Rails.logger.error "Error in delete_user_progress: #{exception.message}"
       Rails.logger.error exception.backtrace.join("\n")
       render json: {error: 'Internal server error', details: exception.message}, status: :internal_server_error
+    ensure
+      output_file&.unlink
+      temp_file&.unlink
     end
   end
 
