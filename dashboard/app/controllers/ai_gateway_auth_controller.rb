@@ -2,7 +2,6 @@ require 'jwt'
 require 'securerandom' unless defined?(SecureRandom)
 
 class AiGatewayAuthController < ApplicationController
-
   PRIVATE_KEY = CDO.ai_gateway_auth_key
   PASSPHRASE = CDO.ai_gateway_auth_key_passphrase
 
@@ -14,7 +13,6 @@ class AiGatewayAuthController < ApplicationController
   # ----------------------------
 
   def get_access_token
-
     unless can_access_aichat_chat_completion? || can_access_ai_tutor_chat_completion?(params[:aichatContext][:clientType])
       return render status: :forbidden, json: {user_type: current_user.user_type}
     end
@@ -39,7 +37,7 @@ class AiGatewayAuthController < ApplicationController
       OpenSSL::PKey::RSA.new(PRIVATE_KEY, PASSPHRASE),
       'RS256'
     )
-    render json: { token: token }
+    render json: {token: token}
   end
 
   private def can_access_ai_tutor_chat_completion?(client_type)
