@@ -16,7 +16,7 @@ import {
   setStudentId,
   ASSESSMENT_FEEDBACK_OPTION_ID,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
-import UnitSelector from '@cdo/apps/templates/sectionProgress/UnitSelector';
+import UnitSelectorV2 from '@cdo/apps/templates/teacherDashboardShared/UnitSelectorV2';
 import i18n from '@cdo/locale';
 
 import {h3Style} from '../../legacySharedComponents/Headings';
@@ -87,11 +87,20 @@ class SectionAssessments extends Component {
     asyncLoadAssessments(sectionId, scriptId, courseVersionId);
   }
 
-  onSelectScript = (newScriptId, newCourseVersionId) => {
-    const {setUnit, asyncLoadAssessments, sectionId} = this.props;
-    asyncLoadAssessments(sectionId, newScriptId, newCourseVersionId);
-    setUnit(newScriptId, newCourseVersionId);
-  };
+  componentDidUpdate(prevProps) {
+    const {scriptId, courseVersionId, asyncLoadAssessments, sectionId} =
+      this.props;
+
+    // If the unit selection changed, reload assessments
+    if (
+      (prevProps.scriptId !== scriptId ||
+        prevProps.courseVersionId !== courseVersionId) &&
+      scriptId &&
+      courseVersionId
+    ) {
+      asyncLoadAssessments(sectionId, scriptId, courseVersionId);
+    }
+  }
 
   onSelectAssessment = newAssessmentId => {
     const {setAssessmentId} = this.props;
@@ -142,8 +151,6 @@ class SectionAssessments extends Component {
   render() {
     const {
       sectionName,
-      scriptId,
-      courseVersionId,
       assessmentList,
       assessmentId,
       isLoading,
@@ -165,11 +172,7 @@ class SectionAssessments extends Component {
             <div style={{...h3Style, ...styles.header}}>
               {i18n.selectACourse()}
             </div>
-            <UnitSelector
-              scriptId={scriptId}
-              courseVersionId={courseVersionId}
-              onChange={this.onSelectScript}
-            />
+            <UnitSelectorV2 v1Styles />
           </div>
           {!isLoading && assessmentList.length > 0 && (
             <div style={styles.assessmentSelection}>
