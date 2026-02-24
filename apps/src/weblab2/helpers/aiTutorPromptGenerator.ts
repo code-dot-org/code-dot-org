@@ -110,7 +110,7 @@ const generateFinalModeList = (
   if (modes.length === 0) {
     finalModes = TUTOR_MODE_TO_ANSWER_TYPE['engineer'];
   }
-  // remove any hard-coded refusal modes since we derive the refusal mode
+  // Remove any hard-coded refusal modes since we derive the refusal mode
   // based on whether buildJavaScript is included.
   finalModes = finalModes.filter(
     mode => mode !== 'refusal' && mode !== 'refusalJavaScriptSnippets'
