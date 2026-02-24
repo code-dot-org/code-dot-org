@@ -1,5 +1,4 @@
 require 'cdo/throttle'
-require_relative '../../../shared/middleware/helpers/experiments'
 
 class AichatRequestsController < ApplicationController
   authorize_resource class: false
@@ -103,7 +102,7 @@ class AichatRequestsController < ApplicationController
 
   private def can_access_aichat_lab_chat_completion?
     return false if DCDO.get("block_aichat_lab_chat_completion", false)
-    ai_chat_new_permissions = experiment_value('ai-chat-new-permissions', request).present?
+    ai_chat_new_permissions = params[:'ai-chat-new-permissions'].present?
     current_user.has_aichat_lab_access?(new_permissions_enabled: ai_chat_new_permissions)
   end
 
