@@ -21,7 +21,7 @@ module Widget2Helper
         name: source_file[:name],
         contents: source_file[:contents],
         active: use_index == 1,
-        folderId: 0
+        folderId: "0"
       }
     end
 
@@ -41,7 +41,6 @@ module Widget2Helper
     files_hash = start_sources && start_sources[:files]
     if files_hash.present?
       files_hash.each do |_id, file|
-        puts file
         name = file[:name]
         contents = file[:contents]
         next unless name && contents
