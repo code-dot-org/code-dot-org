@@ -137,7 +137,6 @@ const Weblab2View: React.FC<
     } else if (!answerTypes) {
       answerTypes = TUTOR_MODE_TO_ANSWER_TYPE['engineer'];
     }
-    console.log({answerTypes});
     return generateAiTutorPrompt(answerTypes);
   }, [levelProperties.aiTutorMode, levelProperties.aiTutorPromptAnswerTypes]);
 

@@ -25,6 +25,8 @@
 #  index_levels_on_type       (type)
 #
 class Weblab2 < Level
+  validate :validate_ai_tutor_prompt_answer_types
+
   serialized_attrs %w(
     start_sources
     hide_share_and_remix
@@ -65,5 +67,14 @@ class Weblab2 < Level
 
   def add_starter_asset!(_, _)
     true
+  end
+
+  private def validate_ai_tutor_prompt_answer_types
+    return if ai_tutor_prompt_answer_types.nil?
+    unless ai_tutor_prompt_answer_types.is_a?(Array) &&
+        ai_tutor_prompt_answer_types.length >= 1 &&
+        ai_tutor_prompt_answer_types.all?(String)
+      errors.add(:ai_tutor_prompt_answer_types, 'must contain at least one answer type.')
+    end
   end
 end
