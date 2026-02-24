@@ -1,0 +1,123 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-02-21T01:04:35.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Div + Flex\r\n\r\nThe HTML division tag, called \"div\" for short, is a special element that lets you group similar sets of content together on a web page inside a container. It is a multi-purpose tag that you can use to do several things including helping with web layouts and CSS. Ultimately, you'll almost always use it to style whatever it contains.\r\n\r\nFlexbox gives us a more efficient way to align and distribute space among items in a `div` container, even when their size is unknown and/or dynamic (thus the word \"flex\"). \r\n\r\n## Do This\r\n\r\n1) Take a look at the web page below and notice the `div` container around the images.\r\n2) Go look at the CSS file and notice the flex properites applied to the `div`.\r\n3) Discuss with your neighbor: What do you think each of the properties applied to the `div` tag does to the webpage layout?\r\n    - Try using the CSS comment out code `/*   */` to comment out one line at a time to see what happens to the layout.\r\n      - **For example:**\r\n          - _Add CSS comments to the first property which will look like this: `/* display: flex; */`_\r\n          - _Then delete those comments and add CSS comments to the next line:  `/* flex-direction: row-reverse; */`_\r\n          - _Then delete those comments and continue adding CSS comments to each line, one at a time._",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    \n    <!-- Page title -->\n    <h1>Cute Animals</h1>\n    \n    <!-- intro -->\n    <p>Baby animals are the cutest type of animal! It doesn't matter what type of animal it is ... if it is a baby, then it is adorable! I dare you to find a baby animal that is not the most adorable and huggable little cutie pie!</p>\n    \n    <!-- container div -->\n    <div class =\"container\">\n      \n      <!-- gallery images -->\n        <img src=\"turtle.jpg\" alt=\"turtle pic\">    \n     \n        <img src=\"kitty.jpg\" alt=\"kitty pic\">    \n   \n        <img src=\"hedgehog.jpg\" alt=\"hedgehog pic\">      \n    \n        <img src=\"penguin.jpg\" alt=\"penguin pic\">      \n    \n        <img src=\"horse.jpg\" alt=\"horse pic\">\n     \n        <img src=\"redPanda.jpg\" alt=\"panda pic\">\n    \n    </div>\n  \n     \n    <!-- footer image citation -->\n    <h4>All images from Pixabay stock images</h4>\n \n    \n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  background: lightblue;\n}\n\nh1 {\n  font-weight: bold;\n  font-family: fantasy;\n  text-shadow: #ffffff 1px 1px 0px;\n  font-size: 56px;\n  text-align: center;\n}\n\np {\n  font-family: Verdana;\n  font-size: 24px;\n  text-align: center;\n}\n\nimg {\n  width: 300px;\n  border-style: solid;\n  border-color: #00bcff;\n  border-radius: 20px;\n  margin: 5px;\n}\n\n\n.container {\n  display: flex;\n  flex-direction: row-reverse;\n  flex-wrap: wrap;\n  justify-content: center;\n}\n\nh4 {\n  font-family: monospace;\n  font-style: italic;\n  text-align: center;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "penguin.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L1-2025/uuid/7f239f1a-be8a-4125-a732-8a21c60e6a64.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "hedgehog.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L1-2025/uuid/2e70ed8d-50c1-4cac-be11-3e3f687ba0d2.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "kitty.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L1-2025/uuid/33fdfc17-afd6-4d68-b7d5-b85db91f3e84.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "horse.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L1-2025/uuid/c092c5b9-fbba-4822-9958-8e480b5a1d60.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "turtle.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L1-2025/uuid/b8cdb519-d746-4458-85be-d85284acd332.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "redPanda.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L1-2025/uuid/12d44fd4-1c89-46be-b926-327e460781be.jpg",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-21 01:06:03 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

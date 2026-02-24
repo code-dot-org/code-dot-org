@@ -1,0 +1,58 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-02-20T17:39:42.000Z",
+  "level_num": "custom",
+  "user_id": 21019,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "<h1>\r\nReviewing Code Changes\r\n</h1>\r\n<p>\r\n<ol>\r\n<li>Prompt AI Tutor to update the hero section with:</li>\r\n<ul>\r\n<li>A dark background</li>\r\n<li>White text</li>\r\n<li>More padding</li>\r\n</ul>\r\n<li>After AI Tutor finishes generating, review the code to see what changed, and accept the changes.</li>\r\n<li>In the description box that appears after you accept changes, type in the new values AI Tutor used for:</li>\r\n<ul>\r\n<li>The hero <span style=\"font-family:monospace;font-size:12px;\">background-color</span></li>\r\n<li>The hero text <span style=\"font-family:monospace;font-size:12px;\">color</span></li>\r\n<li>The hero <span style=\"font-family:monospace;font-size:12px;\">padding</span></li>\r\n</ul>\r\n</ol>",
+    "submittable": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "produce",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Warm-Up</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <section class=\"hero\">\n    <h1>Welcome to My Site</h1>\n    <p>This is my first webpage.</p>\n    <button class=\"primaryButton\">Learn More</button>\n  </section>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  margin: 0;\n  font-family: Arial, sans-serif;\n}\n\n.hero {\n  background-color: #f4f4f4;\n  padding: 20px;\n  text-align: center;\n}\n\n.primaryButton {\n  padding: 8px 16px;\n  font-size: 16px;\n}",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "level_system_prompt": "The purpose of this level is to test different \"diff\" views in the code editor to see which makes more sense for students. After following the instructions to ask AI Tutor to generate a change to the code, we need to see if they can identify which lines were changed. The instructions will tell students to message the Tutor afterwards with what changed. After they do so, please validate their changes against what is actually in the code and tell them whether they identified the changes correctly or not."
+  },
+  "audit_log": "[{\"changed_at\":\"2026-02-20 17:46:29 +0000\",\"changed\":[\"name\"],\"changed_by_id\":21019,\"changed_by_email\":\"moshe.bari@code.org\"},{\"changed_at\":\"2026-02-20 17:48:02 +0000\",\"changed\":[],\"changed_by_id\":21019,\"changed_by_email\":\"moshe.bari@code.org\"},{\"changed_at\":\"2026-02-20 17:48:20 +0000\",\"changed\":[],\"changed_by_id\":21019,\"changed_by_email\":\"moshe.bari@code.org\"},{\"changed_at\":\"2026-02-20 17:48:39 +0000\",\"changed\":[],\"changed_by_id\":21019,\"changed_by_email\":\"moshe.bari@code.org\"},{\"changed_at\":\"2026-02-20 17:48:40 +0000\",\"changed\":[],\"changed_by_id\":21019,\"changed_by_email\":\"moshe.bari@code.org\"},{\"changed_at\":\"2026-02-20 18:49:51 +0000\",\"changed\":[],\"changed_by_id\":21019,\"changed_by_email\":\"moshe.bari@code.org\"},{\"changed_at\":\"2026-02-20 19:09:08 +0000\",\"changed\":[],\"changed_by_id\":21019,\"changed_by_email\":\"moshe.bari@code.org\"},{\"changed_at\":\"2026-02-20 19:35:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":21019,\"changed_by_email\":\"moshe.bari@code.org\"},{\"changed_at\":\"2026-02-20 19:37:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":21019,\"changed_by_email\":\"moshe.bari@code.org\"},{\"changed_at\":\"2026-02-20 19:38:22 +0000\",\"changed\":[],\"changed_by_id\":21019,\"changed_by_email\":\"moshe.bari@code.org\"},{\"changed_at\":\"2026-02-23 15:32:10 +0000\",\"changed\":[],\"changed_by_id\":21019,\"changed_by_email\":\"moshe.bari@code.org\"},{\"changed_at\":\"2026-02-23 15:34:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":21019,\"changed_by_email\":\"moshe.bari@code.org\"},{\"changed_at\":\"2026-02-23 15:39:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":21019,\"changed_by_email\":\"moshe.bari@code.org\"},{\"changed_at\":\"2026-02-23 17:33:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":21019,\"changed_by_email\":\"moshe.bari@code.org\"},{\"changed_at\":\"2026-02-23 17:34:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":21019,\"changed_by_email\":\"moshe.bari@code.org\"},{\"changed_at\":\"2026-02-23 17:42:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":21019,\"changed_by_email\":\"moshe.bari@code.org\"}]"
+}]]></config>
+</Weblab2>

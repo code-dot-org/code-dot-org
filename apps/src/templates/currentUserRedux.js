@@ -269,6 +269,7 @@ export default function currentUser(state = initialState, action) {
       sharing_disabled,
       has_seen_homepage_welcome,
       ai_tutor_enabled_for_pilot,
+      ai_chat_access_level,
     } = action.serverUser;
     // TODO: Once Amplitude is fully removed, the StatsigReporter class should be
     // renamed to AnalyticsReporter.
@@ -306,6 +307,7 @@ export default function currentUser(state = initialState, action) {
       userSharingDisabled: sharing_disabled,
       hasSeenHomepageWelcome: has_seen_homepage_welcome,
       aiTutorEnabledForPilot: ai_tutor_enabled_for_pilot,
+      aiChatAccessLevel: ai_chat_access_level,
     };
   }
 

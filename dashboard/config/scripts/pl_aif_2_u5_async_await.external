@@ -3,93 +3,182 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# How Does an App Get Live Data? Intro to APIs
+<div style="font-size:14pt; line-height:1.4;">
 
-<img src="https://images.code.org/ec00814b3780812d00fe6876a97daedc-image-1770743841734.png" alt="partly cloudy weather icon" width="250px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+# Promise chain vs. async/await
+  
+#### You already know how to use a Promise chain with <code style="font-size:12pt;">.then()</code>.
 
-#### Many apps show information that doesn’t come from their own code.
-#### Weather apps, maps, music apps, and sports apps often pull data from somewhere else.
-#### So how does an app “ask” another service for information?
+#### In this level, you’ll compare two versions of the *same* logic: one written with a Promise chain and one written with <code style="font-size:12pt;">async</code>/<code style="font-size:12pt;">await</code>.
 
-#### In this level, you’ll learn what an API is and how it helps apps communicate with other systems.
+#### Your job is to explain what looks different and why the behavior stays the same.
+ 
 
-<div style="clear:both;"></div>
+<div style="background:#f7f8fa; border-radius:10px; padding:14px; margin:12px 0; box-sizing:border-box;">
+    <p style="margin:0; font-size:14pt;">
+      💡 <strong>Key idea:</strong> <code style="font-size:12pt;">async</code>/<code style="font-size:12pt;">await</code> does not replace Promises — it’s a cleaner way to write
+      Promise logic so it reads like step-by-step code.
+    </p>
+  </div>
 
----
 
-#### **Think about:**
 
-- #### What might an app need to “ask for” instead of storing itself?
-- #### Why might an app use another service instead of building everything on its own?
+<hr style="margin:12px 0;" />
 
-#### 👉 **What kinds of apps do you use that rely on live, changing information?**
+## Let's Compare
 
-<div style="clear:both;"></div>
+<div style="font-size:14pt; line-height:1.4;">
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">💡 Check your thinking:</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
-    <p style="font-size: 14pt;">
-Many apps don’t store all the information they show. Instead, they pull live data from another service, like weather forecasts, maps, or movie times. That means the app has to communicate with another system to request the data and receive it back.
-</p>
+<div style="display:flex; gap:16px; flex-wrap:wrap; justify-content:center; align-items:flex-start; margin-top:10px;">
+
+<!-- LEFT CARD -->
+ <div style="background:#ffffff; border:1px solid #ddd; border-radius:12px; padding:14px; width:440px; height:550px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+
+<div style="font-size:14pt; font-weight:bold; margin-bottom:10px;">
+      Version A: Promise Chain (.then())
+    </div>
+
+<!-- BLACK CODE BOX -->
+<div style="background-color:#000000; border-radius:12px; padding:18px; margin-bottom:14px; overflow-x:auto;">
+
+<pre style="margin:0; background-color:#000000; font-family:Consolas, Monaco, 'Courier New', monospace; font-size:14px; line-height:1.5; color:#f8f8f2;">
+
+<span style="color:#4dabf7;">fetch</span>(<span style="color:#69db7c;">url</span>)
+  .<span style="color:#ffd43b;">then</span>((response) => {
+    <span style="color:#ff6b6b;">return</span> response.<span style="color:#4dabf7;">json</span>();
+  })
+  .<span style="color:#ffd43b;">then</span>((data) => {
+    <span style="color:#4dabf7;">console</span>.<span style="color:#4dabf7;">log</span>(data);
+  });
+
+</pre>
+ </div>
+
+<!-- HOW TO READ -->
+<div style="font-size:14pt;">
+ <strong>How to read it:</strong>
+  <ul style="margin-top:8px;">
+        <li style="font-size:14pt;"><code style="font-size:12pt;">fetch(url)</code> starts a request and returns a <strong>Promise</strong>.</li>
+        <li style="font-size:14pt;">The first <code style="font-size:12pt;">.then()</code> runs after the response is ready and returns <code>response.json()</code>.</li>
+        <li style="font-size:14pt;">The second <code style="font-size:12pt;">.then()</code> runs after the JSON is ready and gives you <code style="font-size:12pt;">data</code>.</li>
+      </ul>
+    </div>
+
+  </div>
+
+<!-- RIGHT CARD -->
+<div style="background:#ffffff; border:1px solid #ddd; border-radius:12px; padding:14px; width:440px;height:550px;  box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+
+<div style="font-size:14pt; font-weight:bold; margin-bottom:10px;">
+      Version B: async / await
+    </div>
+
+<!-- BLACK CODE BOX -->
+<div style="background-color:#000000; border-radius:12px; padding:18px; margin-bottom:14px; overflow-x:auto;">
+
+<pre style="margin:0; background-color:#000000; font-family:Consolas, Monaco, 'Courier New', monospace; font-size:14px; line-height:1.5; color:#f8f8f2;">
+
+<span style="color:#ff6b6b;">async</span> <span style="color:#ff6b6b;">function</span> <span style="color:#4dabf7;">getData</span>() {
+
+  <span style="color:#ff6b6b;">const</span> response =
+    <span style="color:#ff6b6b;">await</span> <span style="color:#4dabf7;">fetch</span>(<span style="color:#69db7c;">url</span>);
+
+  <span style="color:#ff6b6b;">const</span> data =
+    <span style="color:#ff6b6b;">await</span> response.<span style="color:#4dabf7;">json</span>();
+
+  <span style="color:#4dabf7;">console</span>.<span style="color:#4dabf7;">log</span>(data);
+
+}
+
+</pre>
 </div>
-</details>
 
+<!-- HOW TO READ -->
+<div style="font-size:14pt;">
+<strong>How to read it:</strong>
+<ul style="margin-top:8px;">
+        <li style="font-size:14pt;"><code style="font-size:12pt;">await fetch(url)</code> pauses <em>this async function</em> until the Promise resolves.</li>
+        <li style="font-size:14pt;"><code style="font-size:12pt;">await response.json()</code> pauses again because JSON parsing also returns a Promise.</li>
+        <li style="font-size:14pt;">Then the next line runs, using <code style="font-size:12pt;">data</code> like normal step-by-step code.</li>
+      </ul>
+    </div>
 
-<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
-<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">
-📖 An <strong>API (Application Programming Interface)</strong> is a set of rules that allows software applications to communicate with each other.
-</p>
+  </div>
+
 </div>
 
----
-
-##  “Asking for Data”
-
-<img src="https://images.code.org/5f49c06b5874c513ec0055162e10b53c-image-1770743675458.png" alt="simple diagram showing client app sending request to server and receiving response" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
-
----
-
-
-## What Happens When an App Uses an API?
-
-#### When an app uses an API, it’s usually doing something like this:
-
-- #### The **client app** sends a **request** asking for data  
-- #### A **server** receives the request  
-- #### The server sends back a **response** with the data  
-
-#### This is how apps can show **live, up-to-date information** that changes over time.
-
-<div style="clear:both;"></div>
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">💡 Check your thinking:</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
-    <p style="font-size: 14pt;">
-The app doesn’t “grab” data magically—it follows a predictable pattern: a <strong>request</strong> goes out, and a <strong>response</strong> comes back. The app is the <strong>client</strong>, and the service providing the data is the <strong>server</strong>.
-</p>
-</div>
-</details>
-
----
-
-<div style="background-color: #dccbea; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
-<p style="font-size: 14pt; margin-top: 12px; line-height: 120%; margin-bottom: 8px;">
-<strong>🧠 Terms to know:</strong>
-</p>
-<p style="font-size: 14pt; line-height: 135%; margin: 0;">
-<strong>Client:</strong> The app asking for data<br>
-<strong>Server:</strong> The service that stores and sends data<br>
-<strong>Request:</strong> A message asking for data<br>
-<strong>Response:</strong> A message that sends data back
-</p>
 </div>
 
+  </div>
+
+  <hr style="margin:12px 0;" />
+
+## What’s different (and what stays the same)?
+
+<ul style="margin:0 0 12px 20px; padding:0;">
+    <li style="margin:0 0 6px 0; font-size:14pt;">
+      <strong>Different structure:</strong> The Promise chain uses nested callback functions inside <code style="font-size:12pt;">.then(...)</code>.
+      The <code style="font-size:12pt;">async</code>/<code>await</code> version removes most nesting and reads top-to-bottom.
+    </li>
+    <li style="margin:0 0 6px 0;font-size:14pt;">
+      <strong>Same timing:</strong> Both versions still rely on Promises and still run asynchronously. Nothing “became synchronous.”
+    </li>
+    <li style="margin:0 0 6px 0; font-size:14pt;">
+      <strong>Same steps:</strong> (1) request data, (2) wait for the response, (3) convert to JSON, (4) use the data.
+    </li>
+  </ul>
+
+  <div style="background:#B2dee3; border-radius:10px; padding:14px; margin:12px 0; box-sizing:border-box;">
+    <p style="margin:0; font-size:14pt;">
+      ⭐ <strong>Teacher Tip:</strong> There are <strong>two</strong> waits in both versions.
+      <code style="font-size:12pt;">fetch(url)</code> returns a Promise, and <code style="font-size:12pt;">response.json()</code> also returns a Promise.
+      That’s why you see either <strong>two <code style="font-size:12pt;">.then()</code></strong> calls or <strong>two <code style="font-size:12pt;">await</code></strong> lines.
+    </p>
+  </div>
+
+## Quick Check
+
+<ol style="margin:0 0 0 20px; padding:0;">
+<li style="margin:0 0 8px 0; font-size:14pt;">
+      What replaced <code style="font-size:12pt;">.then()</code> in Version B?
+    </li>
+    <li style="margin:0 0 8px 0; font-size:14pt;">
+      Why are there still two <code style="font-size:12pt;">await</code> lines?
+    </li>
+    <li style="margin:0 0 8px 0; font-size:14pt;">
+      Does Version B change what the program does, or only how it’s written? Explain.
+    </li>
+  </ol>
+
+  <details style="background-color:#ececec; padding:10px; margin-top:12px; border:1px solid transparent; border-radius:8px;">
+    <summary style="font-size:14pt; font-weight:bold;">💡 Check your thinking (click to reveal)</summary>
+<div style="margin-top:12px; margin-left:14px; margin-right:14px; margin-bottom:10px; font-size:14pt; line-height:1.4;">
+
+<ul style="margin:0 0 0 20px; padding:0;">
+<li style="margin:0 0 8px 0; font-size:14pt;">
+          <strong>What replaced <code style="font-size:12pt;">.then()</code>?</strong><br />
+          Each <code style="font-size:12pt;">await</code> is doing the same job as a <code>.then()</code>: “wait for this Promise to finish, then continue.”
+        </li>
+        <li style="margin:0 0 8px 0; font-size:14pt;">
+          <strong>Why two awaits?</strong><br />
+          Because there are two Promises: one from <code>fetch(url)</code> (wait for the response) and one from <code style="font-size:12pt;">response.json()</code> (wait for the data).
+        </li>
+        <li style="margin:0 0 8px 0; font-size:14pt;">
+          <strong>Did the behavior change?</strong><br />
+          No — both versions do the same steps in the same order and still run asynchronously. The difference is readability.
+        </li>
+      </ul>
+ </div>
+  </details>
+
+</div>
+
+
+
 ---
 
-## Next up
 
-#### Next, you’ll look at what kind of data APIs often return (like JSON) and why using APIs means your app becomes part of a larger system.
+## Next 
 
+#### Change a Promise chain to an async/ await function in Web Lab. 
 MARKDOWN

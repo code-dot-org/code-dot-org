@@ -88,6 +88,14 @@ GIT
   specs:
     full-name-splitter (0.1.2)
 
+GIT
+  remote: https://github.com/puma/puma.git
+  revision: 42161dd0fc3f3ad9d51359e4037c75b351b18219
+  ref: 42161dd0fc3f3ad9d51359e4037c75b351b18219
+  specs:
+    puma (7.2.0)
+      nio4r (~> 2.0)
+
 PATH
   remote: .
   glob: **/engines/*/*.gemspec
@@ -702,8 +710,6 @@ GEM
       coderay (~> 1.1)
       method_source (~> 1.0)
     public_suffix (6.0.1)
-    puma (7.2.0)
-      nio4r (~> 2.0)
     puma_worker_killer (0.3.1)
       get_process_mem (~> 0.2)
       puma (>= 2.7)
@@ -1133,7 +1139,7 @@ DEPENDENCIES
   pg (~> 1.3.0)
   phantomjs (~> 1.9.7.1)
   pry (~> 0.14.0)
-  puma (~> 7.2)
+  puma!
   puma_worker_killer
   pusher (~> 1.3.1)
   pycall (>= 1.5.2)

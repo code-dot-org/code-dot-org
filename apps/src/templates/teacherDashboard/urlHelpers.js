@@ -12,7 +12,7 @@ export const teacherDashboardUrl = (sectionId, path = '') => {
   return dashboardPrefix + sectionId + path;
 };
 
-export const getNestedUnitUrl = (
+const getNestedUnitUrl = (
   sectionId,
   courseVersionName,
   unitPosition,

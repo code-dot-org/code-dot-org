@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-01-09 17:56:25 UTC",
+    "serialized_at": "2026-02-20 16:02:03 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -56,7 +56,7 @@
       "key": "2f7c648e-6bde-405a-bb0b-96891e751f55",
       "position": 1,
       "properties": {
-        "duration": 60
+        "duration": 75
       },
       "seeding_key": {
         "lesson_activity.key": "2f7c648e-6bde-405a-bb0b-96891e751f55",

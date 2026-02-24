@@ -1089,16 +1089,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_01_28_232147) do
     t.index ["lti_user_identity_id"], name: "index_lti_deployments_user_identities_on_lti_user_identity_id"
   end
 
-  create_table "lti_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.boolean "satisfied", null: false
-    t.string "locale"
-    t.boolean "early_access"
-    t.datetime "created_at", precision: nil, null: false
-    t.index ["satisfied"], name: "index_lti_feedbacks_on_satisfied"
-    t.index ["user_id"], name: "index_lti_feedbacks_on_user_id", unique: true
-  end
-
   create_table "lti_integrations", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.string "name"
     t.string "platform_id", limit: 36, null: false
@@ -2746,7 +2736,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_01_28_232147) do
   add_foreign_key "lti_courses", "lti_deployments"
   add_foreign_key "lti_courses", "lti_integrations"
   add_foreign_key "lti_deployments", "lti_integrations"
-  add_foreign_key "lti_feedbacks", "users"
   add_foreign_key "lti_sections", "lti_courses"
   add_foreign_key "lti_sections", "sections"
   add_foreign_key "lti_user_identities", "lti_integrations"

@@ -155,9 +155,18 @@ gem 'open_uri_redirections', require: false
 gem 'nakayoshi_fork'
 
 gem 'jmespath', '~> 1.4' # Used by our pumactl wrapper shell script to filter JSON output.
-gem 'puma', '~> 7.2'
 gem 'puma_worker_killer'
 gem 'sd_notify' # required for Puma to support systemd's Type=notify
+
+# We are using Puma just 2 commits past Puma 7.2 release, but crucially this includes a PR
+# that enables Puma to dump backtraces when it receives SIGPWR on Linux. We need this
+# PR for debugging and it is not included in a release (yet).
+#
+# Backtrace PR: https://github.com/puma/puma/pull/3829
+#
+# We should switch to Puma 7.3 as soon as it is released and remove this comment, (expected ~Mar-May 2026)
+gem 'puma', git: 'https://github.com/puma/puma.git', ref: '42161dd0fc3f3ad9d51359e4037c75b351b18219'
+# gem 'puma', '~> 7.2'
 
 gem 'chronic', '~> 0.10.2'
 

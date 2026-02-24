@@ -1,9 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import Typography, {
-  Heading1,
-  Heading4,
-  OverlineOneText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useState} from 'react';
 
@@ -64,7 +60,7 @@ const AiDiffExitTicket: React.FC<AiDiffExitTicketProps> = ({
             iconName={iconName}
             className={style.artifactIcon}
           />
-          <OverlineOneText>{label}</OverlineOneText>
+          <Typography variant="overline1">{label}</Typography>
         </div>
         <div
           className={classNames(
@@ -73,7 +69,7 @@ const AiDiffExitTicket: React.FC<AiDiffExitTicketProps> = ({
           )}
           key={id}
         >
-          <Typography semanticTag="div" visualAppearance="body-two">
+          <Typography component="div" variant="body2" gutterBottom>
             <SafeMarkdown
               unwrapped
               markdown={`**Question ${id + 1}:** ${question}`}
@@ -87,14 +83,14 @@ const AiDiffExitTicket: React.FC<AiDiffExitTicketProps> = ({
   return (
     <div className={style.artifactContainer}>
       <div className={style.artifactHeader}>
-        <Heading1>{title}</Heading1>
-        <OverlineOneText>
+        <Typography variant="h1">{title}</Typography>
+        <Typography variant="overline1">
           {updated.toLocaleDateString(undefined, {
             month: 'long',
             day: 'numeric',
             year: 'numeric',
           })}
-        </OverlineOneText>
+        </Typography>
       </div>
       <div className={style.artifactContentBlocksContainer}>
         {items.map((item: ExitTicketItem, id: number) =>
@@ -102,7 +98,9 @@ const AiDiffExitTicket: React.FC<AiDiffExitTicketProps> = ({
         )}
         <div className={style.answerKeyContainer}>
           <div className={style.answerKeyHeader}>
-            <Heading4>{'Answer Key'}</Heading4>
+            <Typography variant="h4" gutterBottom>
+              {'Answer Key'}
+            </Typography>
             <button
               type="button"
               onClick={toggleCollapsed}
@@ -117,7 +115,7 @@ const AiDiffExitTicket: React.FC<AiDiffExitTicketProps> = ({
           </div>
           {!collapsed &&
             items.map((item: ExitTicketItem, id: number) => (
-              <Typography semanticTag="div" visualAppearance="body-two">
+              <Typography component="div" variant="body2" gutterBottom>
                 <SafeMarkdown
                   unwrapped
                   markdown={`**Question ${id + 1}:**\n${item.answer}`}

@@ -110,7 +110,6 @@ function updateAndDeleteSourceWithContents(
   skippedFilenames: string[] = []
 ) {
   contents.forEach(content => {
-    const fileExtension = content.name.split('.').pop();
     const fullPath = currentPath + content.name;
     if (pyodide.FS.isFile(content.mode)) {
       // Only update the source with files that are not skipped.
@@ -129,7 +128,6 @@ function updateAndDeleteSourceWithContents(
               id: newFileId,
               folderId,
               name: content.name,
-              language: fileExtension || '',
               contents: newContents,
             };
           } else {
