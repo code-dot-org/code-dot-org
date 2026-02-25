@@ -6,7 +6,7 @@ Feature: AI chat tools permissions
     Given I clear all session cookies
 
   # Teacher assigns a course that does not have AI chat tools
-  Scenario: Section with AI chat tools disabled by course
+  Scenario: Section with AI chat tools disabled
     Given I create a teacher named "Teacher_NoAI"
     And I create a new student section assigned to course "allthethingscourse" unit 1 and save the section
     And I create a student named "Student_NoAI"
@@ -26,7 +26,7 @@ Feature: AI chat tools permissions
     Then I wait until element "#uitest-chat-textarea" is not visible
 
   # Teacher assigns a course that has AI chat tools optional
-  Scenario: Section with AI chat tools optional and teacher later disables them
+  Scenario: Section with AI chat tools enabled and teacher later disables them
     Given I create a teacher named "Teacher_Optional"
     And I create a new student section assigned to course "allthethingscourse" unit 1 and save the section
     And I create a student named "Student_Optional"
