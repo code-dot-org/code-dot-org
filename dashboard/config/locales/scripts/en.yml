@@ -26881,3 +26881,46 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        ai-generated-design-2026:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment
+          name: ai-generated-design-2026
+          title: AI-Generated Design
+          description_audience: ''
+          description_short: ''
+          description: |-
+            Students learn that effective digital experiences begin not with code, but with empathy for a user. They take on the roles of professional UX and UI designers, first defining a specific user's problem with a user persona and problem statement. They then plan a multi-page solution using a site map and wireframes. Students collaborate with an AI partner throughout this process, using it for ideation and content generation before directing it in Guide mode to build their app piece-by-piece. This unit establishes a design-first mindset, lays the groundwork for computational thinking, and introduces responsible AI collaboration.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, students will be able to . . .
+
+            - Define a problem from a specific user’s perspective.
+            - Apply computational thinking concepts of decomposition, pattern recognition, and abstraction to plan a web app’s structure.
+            - Create a visual representation (e.g., wireframe) of a multi-page web app that responds to a defined user need.
+            - Plan a cohesive, multi-page user journey by designing for consistent navigation and visual style.
+            - Write descriptive prompts to generate individual, responsive, and accessible HTML/CSS components.
+            - Evaluate an AI-generated layout for its clarity, purpose, responsiveness, and accessibility.
+            - Develop strategies for debugging AI-generated outputs, including refining prompts and reverting to previous versions, to overcome challenges and persevere in achieving a design goal.
+            - Explain the difference between HTML for structure and CSS for styling.
+            - Describe how design tasks relate to the professional roles of UX and UI designers.
+          student_description: |-
+            In this unit, you think like a real UX and UI designer by starting with a user, not with code. You create a persona, write a clear problem statement, and plan a multi-page web app using tools like site maps and wireframes. Throughout the process, you work with an AI partner to brainstorm ideas, generate content, and build your app piece by piece. You stay in control of the creative decisions while the AI supports your vision, giving you practice with empathy-driven design, computational thinking, and responsible AI collaboration.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, you will be able to . . .
+
+            - Define a problem from a specific user’s perspective.
+            - Apply computational thinking concepts of decomposition, pattern recognition, and abstraction to plan a web app’s structure.
+            - Create a visual representation (e.g., wireframe) of a multi-page web app that responds to a defined user need.
+            - Plan a cohesive, multi-page user journey by designing for consistent navigation and visual style.
+            - Write descriptive prompts to generate individual, responsive, and accessible HTML/CSS components.
+            - Evaluate an AI-generated layout for its clarity, purpose, responsiveness, and accessibility.
+            - Develop strategies for debugging AI-generated outputs, including refining prompts and reverting to previous versions, to overcome challenges and persevere in achieving a design goal.
+            - Explain the difference between HTML for structure and CSS for styling.
+            - Describe how design tasks relate to the professional roles of UX and UI designers.
