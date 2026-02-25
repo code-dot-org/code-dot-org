@@ -43,9 +43,6 @@ function main() {
       filesData = files || {};
       broadcastChannel.postMessage({type: RECEIVED_SOURCE});
       contentSecurityPolicyValue = contentSecurityPolicy;
-      console.log(
-        'service worker received file update, stored files in cache?'
-      );
     }
   });
 
