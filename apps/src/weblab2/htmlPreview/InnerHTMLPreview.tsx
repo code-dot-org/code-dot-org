@@ -25,6 +25,7 @@ const InnerHTMLPreview = () => {
   );
   // Numerical key used to trigger re-fetches when we need to refresh the preview.
   const [previewKey, setPreviewKey] = useState(0);
+  const [renderKey, setRenderKey] = useState(0);
   const [serviceWorkerReady, setServiceWorkerReady] = useState(false);
   const [allowScripts, setAllowScripts] = useState(false);
   const [isLevelLoading, setIsLevelLoading] = useState(false);
@@ -58,6 +59,7 @@ const InnerHTMLPreview = () => {
         setCurrentFile(data.fileName);
       } else if (data.type === IframeMessageType.SET_ALLOW_SCRIPTS) {
         setAllowScripts(!!data.allow);
+        setRenderKey(prevKey => prevKey + 1);
       } else if (data.type === IframeMessageType.REFRESH) {
         setPreviewKey(prevKey => prevKey + 1);
       } else if (data.type === IframeMessageType.LEVEL_LOADING) {
@@ -178,6 +180,7 @@ const InnerHTMLPreview = () => {
       .then(html => {
         if (!cancelled) {
           setSrcDoc(html);
+          setRenderKey(prevKey => prevKey + 1);
         }
       })
       .catch(err => {
@@ -199,7 +202,7 @@ const InnerHTMLPreview = () => {
           allow="self"
           title="Inner HTML Preview"
           id="inner-preview"
-          key={allowScripts ? 1 : 0} // This forces a re-render when allowScripts changes.
+          key={renderKey}
           srcDoc={srcDoc}
           className={moduleStyles.fileIframe}
         />
@@ -220,7 +223,7 @@ const InnerHTMLPreview = () => {
         </div>
       );
     }
-  }, [allowScripts, srcDoc, serviceWorkerUnavailable]);
+  }, [allowScripts, srcDoc, serviceWorkerUnavailable, renderKey]);
 
   return getPreview();
 };
