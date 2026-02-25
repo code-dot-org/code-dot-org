@@ -23,8 +23,10 @@ const InnerHTMLPreview = () => {
   const [currentFile, setCurrentFile] = React.useState<string | undefined>(
     undefined
   );
-  // Numerical key used to trigger re-fetches when we need to refresh the preview.
+  // Numerical key used to trigger re-fetches when we need to refresh the preview source.
   const [previewKey, setPreviewKey] = useState(0);
+  // Numerical key used to force a re-render of the iframe when we need to refresh the iframe, such as
+  // when toggling script permissions or when the source doc (or a dependent file) is updated.
   const [renderKey, setRenderKey] = useState(0);
   const [serviceWorkerReady, setServiceWorkerReady] = useState(false);
   const [allowScripts, setAllowScripts] = useState(false);
@@ -123,9 +125,6 @@ const InnerHTMLPreview = () => {
       } else if (
         event.data.type === ProjectServiceWorkerMessageType.RECEIVED_SOURCE
       ) {
-        console.log(
-          'got received source message from service worker, setting ready to true'
-        );
         setServiceWorkerReady(true);
         setPreviewKey(prevKey => prevKey + 1);
       } else if (

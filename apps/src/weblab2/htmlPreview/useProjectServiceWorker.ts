@@ -42,10 +42,6 @@ function useProjectServiceWorker(
         .register('/weblab2_project_service_worker.js')
         .then(registration => {
           if (registration.active) {
-            console.log(
-              'setting already active service worker, navigator.serviceWorker.controller:',
-              navigator.serviceWorker.controller
-            );
             setServiceWorker(registration.active);
           }
           registration.addEventListener('updatefound', () => {
@@ -53,10 +49,6 @@ function useProjectServiceWorker(
             if (installingWorker) {
               installingWorker.addEventListener('statechange', () => {
                 if (installingWorker.state === 'activated') {
-                  console.log(
-                    'setting activated service worker, navigator.serviceWorker.controller:',
-                    navigator.serviceWorker.controller
-                  );
                   // Wait for the service worker to be fully activated (and call clients.claim())
                   // before updating our reference. Safari requires the worker to be controlling
                   // the page before it will intercept fetch requests from iframes.
@@ -73,7 +65,6 @@ function useProjectServiceWorker(
       setServiceWorkerUnavailable(true);
     }
     return () => {
-      console.log('unregistering service worker');
       serviceWorkerRegistration?.unregister();
     };
   }, []);
@@ -121,7 +112,6 @@ function useProjectServiceWorker(
 
         filesData[fullFileName] = {content, mimeType, url};
       });
-      console.log('Sending file update to service worker');
       // Send files data to service worker
       serviceWorker.postMessage({
         type: ProjectServiceWorkerMessageType.UPDATE_FILES,

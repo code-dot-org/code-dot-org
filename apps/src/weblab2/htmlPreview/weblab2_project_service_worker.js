@@ -48,9 +48,6 @@ function main() {
 
   // Intercept fetch requests
   self.addEventListener('fetch', async event => {
-    console.log(
-      `service worker intercepted fetch request for ${event.request.url} from referrer ${event.request.referrer}`
-    );
     const url = new URL(event.request.url);
     let requestedFile = getFilenameFromUrl(url);
     if (url.origin === location.origin && requestedFile === '') {
@@ -59,17 +56,12 @@ function main() {
       requestedFile = 'index.html';
     }
     if (url.origin === location.origin && filesData[requestedFile]) {
-      console.log('found file in filesData, serving:', requestedFile);
       event.respondWith(
         handleProjectRequest(requestedFile, filesData[requestedFile])
       );
     } else {
       // Still send SERVING_HTML_FILE message for non-project files.
       // This allows the URL bar to update correctly when an invalid url is requested.
-      console.log(
-        'file not found in filesData, fetching from network:',
-        requestedFile
-      );
       if (requestedFile.endsWith('.html')) {
         broadcastChannel.postMessage({
           type: SERVING_HTML_FILE,
