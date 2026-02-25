@@ -24,7 +24,6 @@ const SET_SHOW_AI_TA_LESSON_SUMMARY =
 const SET_SHOW_AI_TA_PODCASTS = 'currentUser/SET_SHOW_AI_TA_PODCASTS';
 const SET_HAS_COMPLETED_PERSONALIZATION_QUIZ =
   'currentUser/SET_HAS_COMPLETED_PERSONALIZATION_QUIZ';
-const SET_AUDIO_SUMMARY_TRANSCRIPT = 'currentUser/SET_AUDIO_SUMMARY_TRANSCRIPT';
 const SET_USER_CREATED_AT = 'currentUser/SET_USER_CREATED_AT';
 
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
@@ -94,10 +93,6 @@ export const setHasCompletedPersonalizationQuiz =
     type: SET_HAS_COMPLETED_PERSONALIZATION_QUIZ,
     hasCompletedPersonalizationQuiz,
   });
-export const setAudioSummaryTranscript = audioSummaryTranscript => ({
-  type: SET_AUDIO_SUMMARY_TRANSCRIPT,
-  audioSummaryTranscript,
-});
 export const setUserCreatedAt = userCreatedAt => ({
   type: SET_USER_CREATED_AT,
   userCreatedAt,
@@ -117,7 +112,6 @@ const initialState = {
   showAITALessonSummary: false,
   showAITAPodcasts: false,
   hasCompletedPersonalizationQuiz: false,
-  audioSummaryTranscript: [],
   isBackgroundMusicMuted: false,
   isSortedByFamilyName: false,
   isLti: undefined,
@@ -222,12 +216,6 @@ export default function currentUser(state = initialState, action) {
     return {
       ...state,
       hasCompletedPersonalizationQuiz: action.hasCompletedPersonalizationQuiz,
-    };
-  }
-  if (action.type === SET_AUDIO_SUMMARY_TRANSCRIPT) {
-    return {
-      ...state,
-      audioSummaryTranscript: action.audioSummaryTranscript,
     };
   }
   if (action.type === SET_USER_CREATED_AT) {
