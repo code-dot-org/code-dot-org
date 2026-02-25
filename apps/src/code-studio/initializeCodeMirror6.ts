@@ -1,5 +1,6 @@
 import {javascript} from '@codemirror/lang-javascript';
 import {json} from '@codemirror/lang-json';
+import {markdown} from '@codemirror/lang-markdown';
 import {EditorState, Extension} from '@codemirror/state';
 import {EditorView, ViewUpdate} from '@codemirror/view';
 
@@ -14,17 +15,20 @@ const levelbuilderEditorTheme = EditorView.theme({
 // CodeMirror5-compatible adapter used to migrate existing usages of initializeCodeMirror (which uses CM5).
 interface CodeMirrorLegacyAdapter {
   getValue: () => string;
+  setValue: (value: string) => void;
+  on: (event: string, listener: () => void) => void;
 }
 
 interface Options {
   callback?: (editor: CodeMirrorLegacyAdapter, update: ViewUpdate) => void;
 }
 
-type EditorMode = 'javascript' | 'json';
+type EditorMode = 'javascript' | 'json' | 'markdown';
 
 const languageExtensionMap: Record<EditorMode, Extension> = {
   javascript: javascript(),
   json: json(),
+  markdown: markdown(),
 };
 
 function getLanguageExtension(mode: EditorMode): Extension {
@@ -47,6 +51,7 @@ function initializeCodeMirror6(
 ): CodeMirrorLegacyAdapter {
   const node = resolveTarget(target);
   const {callback} = options;
+  const changeListeners: Array<() => void> = [];
   const editorContainer = document.createElement('div');
   node.style.display = 'none';
   node.insertAdjacentElement('afterend', editorContainer);
@@ -54,6 +59,16 @@ function initializeCodeMirror6(
   const adapter: CodeMirrorLegacyAdapter = {
     getValue() {
       return editor.state.doc.toString();
+    },
+    setValue(value) {
+      editor.dispatch({
+        changes: {from: 0, to: editor.state.doc.length, insert: value},
+      });
+    },
+    on(event, listener) {
+      if (event === 'change') {
+        changeListeners.push(listener);
+      }
     },
   };
 
@@ -67,6 +82,7 @@ function initializeCodeMirror6(
         return;
       }
       node.value = update.state.doc.toString();
+      changeListeners.forEach(listener => listener());
       if (callback) {
         callback(adapter, update);
       }
