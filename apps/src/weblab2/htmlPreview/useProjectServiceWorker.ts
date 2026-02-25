@@ -73,6 +73,7 @@ function useProjectServiceWorker(
       setServiceWorkerUnavailable(true);
     }
     return () => {
+      console.log('unregistering service worker');
       serviceWorkerRegistration?.unregister();
     };
   }, []);

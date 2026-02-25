@@ -80,7 +80,9 @@ function main() {
       // Use event.waitUntil to keep the SW alive until the cache write completes,
       // preventing Safari from terminating the SW before files are persisted.
       event.waitUntil(storeFilesInCache(filesData, contentSecurityPolicyValue));
-      console.log('service worker received file update');
+      console.log(
+        'service worker received file update, stored files in cache?'
+      );
     }
   });
 
@@ -99,45 +101,50 @@ function main() {
       requestedFile = 'index.html';
     }
     if (url.origin === location.origin && filesData[requestedFile]) {
+      console.log('found file in filesData, serving:', requestedFile);
       event.respondWith(
         handleProjectRequest(requestedFile, filesData[requestedFile])
       );
-    } else if (url.origin === location.origin) {
-      // filesData doesn't have this file. This can happen when Safari has terminated
-      // and restarted the service worker, losing in-memory state. Fall back to the
-      // Cache API where we persisted the files on the last UPDATE_FILES message.
-      event.respondWith(
-        caches
-          .open(CACHE_NAME)
-          .then(cache => {
-            return cache.match(event.request.url);
-          })
-          .then(cachedResponse => {
-            if (cachedResponse) {
-              if (requestedFile.endsWith('.html')) {
-                broadcastChannel.postMessage({
-                  type: SERVING_HTML_FILE,
-                  filePath: requestedFile,
-                });
-              }
-              return cachedResponse;
-            }
-            // File not found in cache either — genuinely missing file.
-            if (requestedFile.endsWith('.html')) {
-              broadcastChannel.postMessage({
-                type: SERVING_HTML_FILE,
-                filePath: requestedFile,
-              });
-            }
-            return new Response('Not found', {
-              status: 404,
-              headers: {'Content-Type': 'text/plain'},
-            });
-          })
-      );
+      // } else if (url.origin === location.origin) {
+      //   // filesData doesn't have this file. This can happen when Safari has terminated
+      //   // and restarted the service worker, losing in-memory state. Fall back to the
+      //   // Cache API where we persisted the files on the last UPDATE_FILES message.
+      //   event.respondWith(
+      //     caches
+      //       .open(CACHE_NAME)
+      //       .then(cache => {
+      //         return cache.match(event.request.url);
+      //       })
+      //       .then(cachedResponse => {
+      //         if (cachedResponse) {
+      //           if (requestedFile.endsWith('.html')) {
+      //             broadcastChannel.postMessage({
+      //               type: SERVING_HTML_FILE,
+      //               filePath: requestedFile,
+      //             });
+      //           }
+      //           return cachedResponse;
+      //         }
+      //         // File not found in cache either — genuinely missing file.
+      //         if (requestedFile.endsWith('.html')) {
+      //           broadcastChannel.postMessage({
+      //             type: SERVING_HTML_FILE,
+      //             filePath: requestedFile,
+      //           });
+      //         }
+      //         return new Response('Not found', {
+      //           status: 404,
+      //           headers: {'Content-Type': 'text/plain'},
+      //         });
+      //       })
+      //   );
     } else {
       // Still send SERVING_HTML_FILE message for non-project files.
       // This allows the URL bar to update correctly when an invalid url is requested.
+      console.log(
+        'file not found in filesData, fetching from network:',
+        requestedFile
+      );
       if (requestedFile.endsWith('.html')) {
         broadcastChannel.postMessage({
           type: SERVING_HTML_FILE,
