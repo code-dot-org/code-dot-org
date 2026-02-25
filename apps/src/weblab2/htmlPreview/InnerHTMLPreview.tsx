@@ -174,6 +174,7 @@ const InnerHTMLPreview = () => {
   useEffect(() => {
     if (!serviceWorkerReady || !currentFile || isLevelLoading) {
       setSrcDoc(undefined);
+      setSrcDocFetchError(undefined);
       return;
     }
     let cancelled = false;
@@ -183,6 +184,7 @@ const InnerHTMLPreview = () => {
         if (!cancelled) {
           setSrcDoc(html);
           setRenderKey(prevKey => prevKey + 1);
+          setSrcDocFetchError(undefined);
         }
       })
       .catch(err => {
