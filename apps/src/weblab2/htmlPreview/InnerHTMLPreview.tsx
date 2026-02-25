@@ -172,9 +172,9 @@ const InnerHTMLPreview = () => {
       return (
         <iframe
           ref={iframeRef}
-          sandbox={`${
-            allowScripts ? 'allow-scripts ' : ''
-          }allow-same-origin allow-forms`}
+          // sandbox={`${
+          //   allowScripts ? 'allow-scripts ' : ''
+          // }allow-same-origin allow-forms`}
           allow="self"
           title="Inner HTML Preview"
           id="inner-preview"
