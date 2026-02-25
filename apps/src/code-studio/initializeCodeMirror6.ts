@@ -1,5 +1,6 @@
 import {javascript} from '@codemirror/lang-javascript';
 import {json} from '@codemirror/lang-json';
+import {markdown} from '@codemirror/lang-markdown';
 import {EditorState, Extension} from '@codemirror/state';
 import {EditorView, ViewUpdate} from '@codemirror/view';
 
@@ -21,11 +22,12 @@ interface Options {
   callback?: (editor: CodeMirrorLegacyAdapter, update: ViewUpdate) => void;
 }
 
-type EditorMode = 'javascript' | 'json';
+type EditorMode = 'javascript' | 'json' | 'markdown';
 
 const languageExtensionMap: Record<EditorMode, Extension> = {
   javascript: javascript(),
   json: json(),
+  markdown: markdown(),
 };
 
 function getLanguageExtension(mode: EditorMode): Extension {
