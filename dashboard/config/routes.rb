@@ -1367,8 +1367,6 @@ Dashboard::Application.routes.draw do
     get '/aichat/user_has_access', to: 'aichat#user_has_access'
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
 
-    post '/ai_api_proxy/:provider', to: 'ai_api_proxy#proxy_request'
-
     resources :ai_interaction_feedback, only: [:create]
     resource :teaching_profile_data, only: [:show, :create, :update]
 
