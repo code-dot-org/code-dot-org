@@ -179,7 +179,6 @@ class PasswordField extends React.Component {
         <input
           type="password"
           value={value}
-          tabIndex="1"
           onChange={onChange}
           maxLength="255"
           size="255"

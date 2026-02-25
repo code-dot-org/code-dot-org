@@ -36,7 +36,7 @@ const renderNoResourcesRow = (
     <Typography className={styles.resourceLabel} variant="body2" gutterBottom>
       <em>
         {
-          'You have not created any custom resources for this lesson. You can use AI TA to help you!'
+          'You have not created any custom resources for this lesson. You can use the AI Teaching Assistant to help you!'
         }
       </em>
     </Typography>

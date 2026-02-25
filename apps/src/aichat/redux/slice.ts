@@ -7,6 +7,7 @@ import {
 } from '@cdo/apps/aiDifferentiation/constants';
 import {SUGGESTED_PROMPTS_FOR_SELECTION} from '@cdo/apps/aiDifferentiation/predefinedPrompts';
 import {
+  AiArtifact,
   ChatItem,
   ChatPrompt,
   ChatTextMessage,
@@ -70,7 +71,7 @@ const initialState: AichatState = {
   viewMode: ViewMode.EDIT,
   saveInProgress: false,
   currentSaveType: undefined,
-  userHasAichatAccess: false,
+  userHasAichatLabAccess: false,
   stagedFiles: [],
   stagedFilesAlert: undefined,
   hasSentMessage: false,
@@ -82,6 +83,7 @@ const initialState: AichatState = {
   chatWorkspaceSelectedTab: null,
   userAddedSelectionContext: {},
   artifactType: undefined,
+  artifact: undefined,
   pendingArtifactMessage: undefined,
 };
 
@@ -133,8 +135,8 @@ const aichatSlice = createSlice({
         state.chatEventsCurrent = events;
       }
     },
-    setUserHasAichatAccess: (state, action: PayloadAction<boolean>) => {
-      state.userHasAichatAccess = action.payload;
+    setUserHasAichatLabAccess: (state, action: PayloadAction<boolean>) => {
+      state.userHasAichatLabAccess = action.payload;
     },
     setClientType(state, action: PayloadAction<AiChatClientType>) {
       state.clientType = action.payload;
@@ -165,6 +167,9 @@ const aichatSlice = createSlice({
     },
     setArtifactType(state, action: PayloadAction<string | undefined>) {
       state.artifactType = action.payload;
+    },
+    setArtifact(state, action: PayloadAction<AiArtifact | undefined>) {
+      state.artifact = action.payload;
     },
     setPendingArtifactMessage(state, action: PayloadAction<ChatTextMessage>) {
       state.pendingArtifactMessage = action.payload;
@@ -464,7 +469,7 @@ export const {
   setInitialConfiguration,
   setStudentChatHistory,
   setOwnChatHistory,
-  setUserHasAichatAccess,
+  setUserHasAichatLabAccess,
   setClientType,
   setThreadId,
   setThreadTitle,
@@ -475,6 +480,7 @@ export const {
   addThreadMessage,
   setThreadKeyId,
   setArtifactType,
+  setArtifact,
   setPendingArtifactMessage,
   clearPendingArtifactMessage,
   setViewMode,
