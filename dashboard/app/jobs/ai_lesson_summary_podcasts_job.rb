@@ -1,7 +1,7 @@
 require 'cdo/aws/metrics'
 
-class AiLessonSummariesJob < ApplicationJob
-  queue_as :low_priority
+class AiLessonSummaryPodcastsJob < ApplicationJob
+  queue_as :default
 
   after_perform do |job|
     next unless DCDO.get('ai-lesson-summaries-notifications-enabled', false)
@@ -24,8 +24,8 @@ class AiLessonSummariesJob < ApplicationJob
     if section
       TeacherNotification.create!(
         user_id: user_id,
-        title: 'AI Lesson Summaries ready to view',
-        description: "Your personalized lesson summaries for #{lesson_ids.length} lessons #{unit_text} are live — prepare for your next class in minutes!",
+        title: 'Your AI Lesson Summary Podcasts are ready',
+        description: "Your lesson summary podcasts for #{lesson_ids.length} lessons #{unit_text} are live — prepare for your next class in minutes!",
         icon_name: 'solid-flask-sparkle',
         icon_color: 'Aqua',
         href_links: [{text: 'View lesson materials',
@@ -38,19 +38,18 @@ class AiLessonSummariesJob < ApplicationJob
   rescue_from StandardError do |exception|
     request = arguments.first[:request]
     Honeybadger.notify(
-      "AiLessonSummariesJob failed with unexpected error: #{exception.message}",
+      "AiLessonSummaryPodcastsJob failed with unexpected error: #{exception.message}",
       context: {
         request: request.to_json
       }
     )
-
     # Re-raise error to notify our system of the failed job.
     raise exception
   end
 
   def perform(request:)
     request[:lesson_ids].each do |lesson_id|
-      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(lesson_id, request[:user_id], false)
+      AiLessonSummaryPodcastsHelper.create_and_save_to_s3(lesson_id, request[:user_id])
     end
   end
 end

@@ -1181,6 +1181,14 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    # AI Lesson Summary Podcasts routes
+    resources :ai_lesson_summary_podcasts, only: [:show] do
+      collection do
+        get :show # GET /ai_lesson_summary_podcasts/show?lesson_id=2
+        get :generate_podcasts_by_unit, controller: :ai_lesson_summary_podcasts, action: :generate_podcasts_by_unit # GET ai_lesson_summary_podcasts/generate_podcasts_by_unit?unit_id=1
+      end
+    end
+
     # Routes used for the Student Snapshot page on the teacher dashboard
     resources :student_snapshots, only: [] do
       collection do

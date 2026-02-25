@@ -15,6 +15,7 @@ import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseCo
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {RootState} from '@cdo/apps/types/redux';
+import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {
   PlGradeValue,
@@ -981,6 +982,7 @@ export const assignToSection = (
 ): SectionThunkAction => {
   return (dispatch, getState) => {
     const section = getState().teacherSections.sections[sectionId];
+    // Generate AI lesson summaries
     if (
       unitId &&
       section.unitId !== unitId &&
@@ -991,6 +993,18 @@ export const assignToSection = (
       ).catch(error => {
         console.error(error);
       });
+      // Generate AI podcasts
+
+      if (
+        DCDO.get('ai-lesson-summary-podcasts', false) ||
+        experiments.isEnabled('ai-lesson-podcasts')
+      ) {
+        HttpClient.get(
+          `/ai_lesson_summary_podcasts/generate_podcasts_by_unit?unit_id=${unitId}`
+        ).catch(error => {
+          console.error(error);
+        });
+      }
     }
     // Only log if the assignment is changing.
     if (
