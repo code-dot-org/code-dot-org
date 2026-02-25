@@ -9,7 +9,7 @@ class AiLessonSummaryPodcastsController < ApplicationController
   end
 
   def generate_podcasts_by_unit
-    if current_user
+    if current_user && DCDO.get('ai-lesson-summary-podcasts', false)
       unit = Unit.find(params[:unit_id])
 
       # AI Podcasts are currently only available in AIF sections
