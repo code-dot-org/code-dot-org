@@ -86,7 +86,7 @@ markdown <<MARKDOWN
 
 
 <p style="text-align:center;">
-  <img src="https://images.code.org/0c92bf9c223b25e95f34a943d8f26407-image-1762198022750.png" 
+  <img src="https://images.code.org/642d6e6839a3abde291b95a4ae7258f1-image-1771971228529.png" 
        alt="Event handler example" 
        style="width:600px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.3);">
 </p>
@@ -103,4 +103,6 @@ markdown <<MARKDOWN
 ## Let's practice! 
 
 #### In the next level, you will use AI to help debug a program with variables. 
+
+
 MARKDOWN
