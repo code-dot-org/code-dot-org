@@ -42,8 +42,6 @@ experiments.SECTION_SETUP_REFRESH = 'sectionSetupRefresh';
 experiments.GENDER_FEATURE_ENABLED = 'gender';
 // Experiment for enabling the AI-TA differentiation chat
 experiments.AI_DIFFERENTIATION = 'ai-differentiation';
-// Experiment for enabling the AI-TA differentiation artifacts
-experiments.AI_ARTIFACT = 'ai-artifact';
 // Experiment for showing the ai chat new permissions page and enabling permissions to take effect
 experiments.AI_CHAT_NEW_PERMISSIONS = 'ai-chat-new-permissions';
 // Adds a "Get help with this block" option to block context menus if docs exist (e.g. Sprite Lab)
