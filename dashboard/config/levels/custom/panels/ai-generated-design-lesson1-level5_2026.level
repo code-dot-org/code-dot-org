@@ -1,0 +1,23 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-02-24T18:10:01.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# CSS\n\n**CSS (Cascading Style Sheets)** is a style sheet language used for describing the presentation of a document written in a markup language like HTML. It controls the layout, colors, fonts, and overall style.",
+        "imageUrl": "https://images.code.org/e3a9ea351ab82421f0b5bbfd78bd2dd3-1_R9vfWQrF0c223dm3wTTnGQ.jpg",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:10:01.727+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson1-level5_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson1-level5_2025\"}]"
+}]]></config>
+</Panels>
