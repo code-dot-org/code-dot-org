@@ -12,19 +12,15 @@ export const APPS_WITH_ESSENTIAL_AI_CHAT = [
 export const shouldShowAiTutor = ({
   appName,
   tutorLevel,
-  tutorPilot,
   aiChatAccessLevel,
 }: {
   appName: string;
   tutorLevel?: boolean;
-  tutorPilot?: boolean;
   aiChatAccessLevel: AiChatAccessLevel;
 }) => {
   return (
     APPS_WHERE_AI_TUTOR_IS_ESSENTIAL.includes(appName) ||
-    // user is in ai tutor pilot and it's a tutor enabled level
-    (tutorPilot &&
-      tutorLevel &&
+    (tutorLevel &&
       // For now, we are going to fully hide optional tutor rather than showing the disabled ui,
       // to avoid disrupting classrooms that are in the middle of the school year working on
       // courses where optional tutor is available.
