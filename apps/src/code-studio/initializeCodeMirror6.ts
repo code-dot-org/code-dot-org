@@ -16,6 +16,7 @@ const levelbuilderEditorTheme = EditorView.theme({
 interface CodeMirrorLegacyAdapter {
   getValue: () => string;
   setValue: (value: string) => void;
+  on: (event: string, listener: () => void) => void;
 }
 
 interface Options {
@@ -50,6 +51,7 @@ function initializeCodeMirror6(
 ): CodeMirrorLegacyAdapter {
   const node = resolveTarget(target);
   const {callback} = options;
+  const changeListeners: Array<() => void> = [];
   const editorContainer = document.createElement('div');
   node.style.display = 'none';
   node.insertAdjacentElement('afterend', editorContainer);
@@ -63,6 +65,11 @@ function initializeCodeMirror6(
         changes: {from: 0, to: editor.state.doc.length, insert: value},
       });
     },
+    on(event, listener) {
+      if (event === 'change') {
+        changeListeners.push(listener);
+      }
+    },
   };
 
   const extensions: Extension[] = [
@@ -75,6 +82,7 @@ function initializeCodeMirror6(
         return;
       }
       node.value = update.state.doc.toString();
+      changeListeners.forEach(listener => listener());
       if (callback) {
         callback(adapter, update);
       }

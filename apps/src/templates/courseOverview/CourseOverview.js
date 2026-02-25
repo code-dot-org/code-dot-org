@@ -160,6 +160,12 @@ class CourseOverview extends Component {
     const showNotification =
       viewAsTeacher && !isVerifiedInstructor && hasVerifiedResources;
 
+    const determineUnitDescription = script => {
+      return viewAs === ViewType.Participant
+        ? script.studentDescription
+        : script.description;
+    };
+
     return (
       <div style={styles.main}>
         {redirectToCourseUrl && !dismissedRedirectDialog(name) && (
@@ -239,7 +245,7 @@ class CourseOverview extends Component {
             name={script.name}
             id={script.id}
             path={script.scriptPath}
-            description={script.description}
+            description={determineUnitDescription(script)}
             assignedSectionId={script.assigned_section_id}
             courseId={id}
             courseOfferingId={courseOfferingId}
