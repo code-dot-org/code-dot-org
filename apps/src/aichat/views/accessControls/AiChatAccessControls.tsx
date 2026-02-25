@@ -22,7 +22,6 @@ import {AiChatAccessLevel} from '../../types';
 import InfoTooltipIcon from '../InfoTooltipIcon';
 
 import style from './ai-chat-access-controls.module.scss';
-import {assign} from 'lodash';
 
 /**
  * Renders toggles to control student access to AI chat features.
