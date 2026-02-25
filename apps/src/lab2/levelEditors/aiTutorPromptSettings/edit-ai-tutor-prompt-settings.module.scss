@@ -7,3 +7,22 @@
 .instructions.instructions {
   margin-bottom: 8px;
 }
+
+.contractDetails {
+  margin-top: 4px;
+  margin-left: 16px;
+}
+
+.contractSummary {
+  cursor: pointer;
+  font-size: 12px;
+  user-select: none;
+}
+
+.contractContent {
+  margin-top: 4px;
+  padding: 0 8px;
+  background-color: var(--background-neutral-tertiary);
+  border-radius: 4px;
+  font-size: 12px;
+}
