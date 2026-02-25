@@ -8,7 +8,6 @@ import {
 import $ from 'jquery';
 import React from 'react';
 import {Provider} from 'react-redux';
-import '@testing-library/jest-dom';
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
