@@ -237,10 +237,6 @@ module Dashboard
     # See http://edgeguides.rubyonrails.org/upgrading_ruby_on_rails.html#autoloading-is-disabled-after-booting-in-the-production-environment
     config.enable_dependency_loading = true
 
-    if CDO.newrelic_logging
-      require 'newrelic_rpm'
-    end
-
     # Webpack handles js compression for us, so don't compress by default.
     # config.assets.js_compressor = :uglifier
     # config.assets.css_compressor = :sass
