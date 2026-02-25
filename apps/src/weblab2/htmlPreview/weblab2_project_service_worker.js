@@ -25,9 +25,6 @@ function main() {
   // Generate a cache bust suffix for this service worker instance.
   const cacheBustSuffix = Date.now().toString();
   let contentSecurityPolicyValue = null;
-  // Cache name for persisting project files across service worker restarts.
-  // Safari aggressively terminates service workers, losing in-memory filesData.
-  const CACHE_NAME = 'weblab2-project-files-v1';
 
   addEventListener('install', () => {
     // Ensure this service worker is activated immediately.
@@ -39,37 +36,6 @@ function main() {
     event.waitUntil(self.clients.claim());
   });
 
-  // Persist project files to the Cache API so they survive service worker restarts.
-  // Safari aggressively terminates service workers, losing in-memory filesData between events.
-  async function storeFilesInCache(files, csp) {
-    try {
-      await caches.delete(CACHE_NAME);
-      const cache = await caches.open(CACHE_NAME);
-      const putPromises = [];
-      for (const filename in files) {
-        const fileData = files[filename];
-        if (!fileData.url) {
-          const response = new Response(fileData.content, {
-            status: 200,
-            headers: {
-              'Content-Type': fileData.mimeType,
-              'Cache-Control': 'no-cache, no-store, must-revalidate',
-              Pragma: 'no-cache',
-              Expires: '0',
-              'Content-Security-Policy': csp || '',
-            },
-          });
-          putPromises.push(
-            cache.put(`${location.origin}/${filename}`, response)
-          );
-        }
-      }
-      await Promise.all(putPromises);
-    } catch (e) {
-      console.error('Failed to store files in cache:', e);
-    }
-  }
-
   // Listen for messages from the main thread
   addEventListener('message', event => {
     const {type, files, contentSecurityPolicy} = event.data;
@@ -77,9 +43,6 @@ function main() {
       filesData = files || {};
       broadcastChannel.postMessage({type: RECEIVED_SOURCE});
       contentSecurityPolicyValue = contentSecurityPolicy;
-      // Use event.waitUntil to keep the SW alive until the cache write completes,
-      // preventing Safari from terminating the SW before files are persisted.
-      event.waitUntil(storeFilesInCache(filesData, contentSecurityPolicyValue));
       console.log(
         'service worker received file update, stored files in cache?'
       );
@@ -105,39 +68,6 @@ function main() {
       event.respondWith(
         handleProjectRequest(requestedFile, filesData[requestedFile])
       );
-      // } else if (url.origin === location.origin) {
-      //   // filesData doesn't have this file. This can happen when Safari has terminated
-      //   // and restarted the service worker, losing in-memory state. Fall back to the
-      //   // Cache API where we persisted the files on the last UPDATE_FILES message.
-      //   event.respondWith(
-      //     caches
-      //       .open(CACHE_NAME)
-      //       .then(cache => {
-      //         return cache.match(event.request.url);
-      //       })
-      //       .then(cachedResponse => {
-      //         if (cachedResponse) {
-      //           if (requestedFile.endsWith('.html')) {
-      //             broadcastChannel.postMessage({
-      //               type: SERVING_HTML_FILE,
-      //               filePath: requestedFile,
-      //             });
-      //           }
-      //           return cachedResponse;
-      //         }
-      //         // File not found in cache either — genuinely missing file.
-      //         if (requestedFile.endsWith('.html')) {
-      //           broadcastChannel.postMessage({
-      //             type: SERVING_HTML_FILE,
-      //             filePath: requestedFile,
-      //           });
-      //         }
-      //         return new Response('Not found', {
-      //           status: 404,
-      //           headers: {'Content-Type': 'text/plain'},
-      //         });
-      //       })
-      //   );
     } else {
       // Still send SERVING_HTML_FILE message for non-project files.
       // This allows the URL bar to update correctly when an invalid url is requested.
