@@ -414,7 +414,7 @@ class AdminUsersControllerTest < ActionController::TestCase
 
     assert_response :success
     response_json = JSON.parse(response.body)
-    assert_equal "false", response_json['dry_run']
+    assert_equal false, response_json['dry_run']
     assert_equal "Progress deletion completed successfully", response_json['message']
   end
 
