@@ -18,6 +18,8 @@ type SerializableAIResponse<
   files?: {mediaType: string; base64: string}[];
 };
 
+const AI_GATEWAY_URL = `https://ai-gateway.code.org`;
+
 const base64ToUint8Array = (base64: string): Uint8Array => {
   const binaryString = atob(base64);
   return Uint8Array.from(binaryString, char => char.charCodeAt(0));
@@ -119,14 +121,11 @@ const generateTextThroughGateway = async <
     const {token} = await (tokenResponse.json() as Promise<{token: string}>);
     payload.token = token;
 
-    const response = await fetch(
-      'https://code-org-ai-gateway-test.edward-baafi.workers.dev',
-      {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify(payload),
-      }
-    );
+    const response = await fetch(AI_GATEWAY_URL, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(payload),
+    });
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
