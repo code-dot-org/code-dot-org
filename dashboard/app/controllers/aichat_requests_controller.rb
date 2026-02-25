@@ -97,7 +97,7 @@ class AichatRequestsController < ApplicationController
 
   private def can_access_ai_tutor_chat_completion?(client_type)
     return false if DCDO.get("block_ai_tutor_chat_completion", false)
-    current_user.trust_chat_client?(client_type)
+    current_user.can_access_ai_tutor?
   end
 
   private def can_access_aichat_lab_chat_completion?

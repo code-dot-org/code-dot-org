@@ -358,9 +358,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     return previous_access_level if previous_access_level != SharedConstants::AI_CHAT_ACCESS_LEVELS[:DISABLED]
 
     # Auto-enable access if the course needs it.
-    # TODO: Once pilot goes GA, we can enable for any @course&.has_ai_chat_tools?
-    return SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED] if @course&.requires_ai_chat_tools?
-    return SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED] if @course&.has_ai_chat_tools? && current_user.ai_tutor_enabled_for_pilot?
+    return SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED] if @course&.has_ai_chat_tools?
 
     SharedConstants::AI_CHAT_ACCESS_LEVELS[:DISABLED]
   end

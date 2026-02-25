@@ -306,7 +306,6 @@ export default function currentUser(state = initialState, action) {
       userCreatedAt: created_at,
       userSharingDisabled: sharing_disabled,
       hasSeenHomepageWelcome: has_seen_homepage_welcome,
-      aiTutorEnabledForPilot: ai_tutor_enabled_for_pilot,
       aiChatAccessLevel: ai_chat_access_level,
     };
   }

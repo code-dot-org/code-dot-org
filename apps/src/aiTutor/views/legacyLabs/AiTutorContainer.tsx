@@ -89,6 +89,7 @@ export const AiTutorContainer: FC<{
         className={classNames(styles.container, {
           [styles.displayNone]: !aiChatOpen,
         })}
+        id="uitest-ai-tutor-container-legacy-labs"
       >
         <div className={styles.header}>
           <img

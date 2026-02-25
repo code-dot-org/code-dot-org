@@ -10,7 +10,6 @@ describe('shouldShowAiTutor', () => {
         const result = shouldShowAiTutor({
           appName,
           tutorLevel: false,
-          tutorPilot: false,
         });
         expect(result).toBe(true);
       });
@@ -22,7 +21,6 @@ describe('shouldShowAiTutor', () => {
       const result = shouldShowAiTutor({
         appName: 'applab',
         tutorLevel: true,
-        tutorPilot: true,
       });
       expect(result).toBe(true);
     });
@@ -31,7 +29,6 @@ describe('shouldShowAiTutor', () => {
       const result = shouldShowAiTutor({
         appName: 'applab',
         tutorLevel: false,
-        tutorPilot: true,
       });
       expect(result).toBe(false);
     });
@@ -42,7 +39,6 @@ describe('shouldShowAiTutor', () => {
       const result = shouldShowAiTutor({
         appName: 'applab',
         tutorLevel: true,
-        tutorPilot: false,
       });
       expect(result).toBe(false);
     });
@@ -51,7 +47,6 @@ describe('shouldShowAiTutor', () => {
       const result = shouldShowAiTutor({
         appName: 'applab',
         tutorLevel: false,
-        tutorPilot: false,
       });
       expect(result).toBe(false);
     });

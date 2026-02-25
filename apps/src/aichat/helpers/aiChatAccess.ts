@@ -1,5 +1,4 @@
 import {AiChatAccessLevel} from '@cdo/apps/aichat/types/accessControls';
-import experiments from '@cdo/apps/util/experiments';
 import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
 
 // A list of app names for which AI Chat tools (tutor or chat in ai chat lab) are considered essential to the app experience.
@@ -9,16 +8,14 @@ export const APPS_WITH_ESSENTIAL_AI_CHAT = ['weblab2', 'aichat'];
 export const shouldShowAiTutor = ({
   appName,
   tutorLevel,
-  tutorPilot,
 }: {
   appName: string;
   tutorLevel?: boolean;
-  tutorPilot?: boolean;
 }) => {
   return (
     APPS_WITH_ESSENTIAL_AI_CHAT.includes(appName) ||
     // user is in ai tutor pilot and it's a tutor enabled level
-    (tutorPilot && tutorLevel)
+    tutorLevel
   );
 };
 

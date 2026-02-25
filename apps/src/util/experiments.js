@@ -56,8 +56,6 @@ experiments.BLOCKLY_KEYBOARD_NAVIGATION = 'blockly-keyboard-navigation';
 experiments.MODULARITY = 'modularity';
 // LocalizeJS
 experiments.LOCALIZEJS = 'localizejs';
-// Show AI Tutor in legacy labs
-experiments.LEGACY_LAB_AI_TUTOR = 'legacy-lab-ai-tutor';
 // Enable ActionCable load testing
 experiments.ACTIONCABLE_LOAD_TESTING = 'actioncable-load-testing';
 // Use AI Tutor system prompts from Langfuse
