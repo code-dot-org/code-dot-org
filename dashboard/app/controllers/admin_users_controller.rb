@@ -477,9 +477,7 @@ class AdminUsersController < ApplicationController
         return
       end
 
-      # Fix: Properly handle string/boolean conversion
-      is_dry_run = dry_run == true || dry_run == 'true'
-      commit_flag = is_dry_run ? '' : 'for-real'
+      commit_flag = dry_run == 'true' ? '' : 'for-real'
 
       success = execute_delete_script(script_path, teacher_id, temp_file.path, commit_flag, output_file.path, repo_root)
 
@@ -494,8 +492,8 @@ class AdminUsersController < ApplicationController
       render json: {
         success: true,
         output: output,
-        dry_run: is_dry_run,
-        message: is_dry_run ? "Dry run completed successfully" : "Progress deletion completed successfully"
+        dry_run: dry_run == 'true',
+        message: dry_run == 'true' ? "Dry run completed successfully" : "Progress deletion completed successfully"
       }
     rescue => exception
       Rails.logger.error "Error in delete_user_progress: #{exception.message}"
