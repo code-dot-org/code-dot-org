@@ -25,19 +25,12 @@ experiments.REDUX_LOGGING = 'reduxLogging';
 experiments.SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH =
   'schoolAutocompleteDropdownNewSearch';
 experiments.SHOW_UNPUBLISHED_DATASET_TABLES = 'showUnpublishedDatasetTables';
-experiments.TEACHER_DASHBOARD_SECTION_BUTTONS =
-  'teacher-dashboard-section-buttons';
-experiments.TEACHER_DASHBOARD_SECTION_BUTTONS_ALTERNATE_TEXT =
-  'teacher-dashboard-section-buttons-alternate-text';
-experiments.FINISH_DIALOG_METRICS = 'finish-dialog-metrics';
 experiments.I18N_TRACKING = 'frontend-i18n-tracking';
-experiments.TIME_SPENT = 'time-spent';
 experiments.BYPASS_DIALOG_POPUP = 'bypass-dialog-popup';
 experiments.SPECIAL_TOPIC = 'special-topic';
 // Experiment for showing a backgrounds tab and enabling student upload
 // for Sprite Lab animations
 experiments.BACKGROUNDS_AND_UPLOAD = 'backgroundsTab';
-experiments.SECTION_SETUP_REFRESH = 'sectionSetupRefresh';
 // Experiment for showing the gender field
 experiments.GENDER_FEATURE_ENABLED = 'gender';
 // Experiment for enabling the AI-TA differentiation chat
