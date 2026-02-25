@@ -25,7 +25,7 @@ module Config
       model_id: SharedConstants::AI_CHAT_MODEL_IDS[:BIOMISTRAL],
       model_name: "BioMistral",
       instance_type: "ml.g5.2xlarge",
-      min_num_instances: 2,
+      min_num_instances: 1,
       max_num_instances: 2,
       autoscaling_target_value: 150
     },
@@ -34,7 +34,7 @@ module Config
       model_id: SharedConstants::AI_CHAT_MODEL_IDS[:ARITHMO],
       model_name: "Arithmo",
       instance_type: "ml.g5.xlarge",
-      min_num_instances: 2,
+      min_num_instances: 1,
       max_num_instances: 2,
       autoscaling_target_value: 150
     },
@@ -43,7 +43,7 @@ module Config
       model_id: SharedConstants::AI_CHAT_MODEL_IDS[:PIRATE],
       model_name: "Pirate",
       instance_type: "ml.g5.xlarge",
-      min_num_instances: 2,
+      min_num_instances: 1,
       max_num_instances: 2,
       autoscaling_target_value: 150
     },
@@ -52,7 +52,7 @@ module Config
       model_id: SharedConstants::AI_CHAT_MODEL_IDS[:KAREN],
       model_name: "Karen",
       instance_type: "ml.g5.xlarge",
-      min_num_instances: 2,
+      min_num_instances: 1,
       max_num_instances: 2,
       autoscaling_target_value: 150
     }
