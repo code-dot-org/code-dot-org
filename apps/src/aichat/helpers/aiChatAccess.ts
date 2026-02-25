@@ -38,10 +38,6 @@ export const areAiChatToolsEnabled = ({
   appName: string;
   aiChatAccessLevel: AiChatAccessLevel;
 }): boolean => {
-  if (!experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS)) {
-    // only disable AI Chat tools based on AiChatAccessLevel if the new permissions experiment is enabled!
-    return true;
-  }
   if (APPS_WITH_ESSENTIAL_AI_CHAT.includes(appName)) {
     // either ESSENTIAL_ONLY or ENABLED access level permits AI Chat tools for apps that consider AI Chat essential
     return aiChatAccessLevel !== AiChatAccessLevels.DISABLED;

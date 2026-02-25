@@ -12,7 +12,6 @@ import React, {useEffect, useRef} from 'react';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import experiments from '@cdo/apps/util/experiments';
 import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -275,19 +274,18 @@ const ExpandedCurriculumCatalogCard = ({
                       </div>
                     )
                 )}
-                {experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
-                  aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
-                    <div className={style.iconWithDescription}>
-                      <FontAwesomeV6Icon
-                        iconName="ai-bot-solid"
-                        iconFamily="kit"
-                        className={style.aiBotIcon}
-                      />
-                      <Typography variant="body2" gutterBottom>
-                        Requires AI chat tools
-                      </Typography>
-                    </div>
-                  )}
+                {aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
+                  <div className={style.iconWithDescription}>
+                    <FontAwesomeV6Icon
+                      iconName="ai-bot-solid"
+                      iconFamily="kit"
+                      className={style.aiBotIcon}
+                    />
+                    <Typography variant="body2" gutterBottom>
+                      Requires AI chat tools
+                    </Typography>
+                  </div>
+                )}
               </div>
               <hr className={style.horizontalDivider} />
               <div className={style.buttonsContainer}>

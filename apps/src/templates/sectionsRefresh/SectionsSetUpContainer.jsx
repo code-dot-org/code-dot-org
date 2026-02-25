@@ -17,7 +17,6 @@ import Notification, {
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
-import experiments from '@cdo/apps/util/experiments';
 import {navigateToHref} from '@cdo/apps/utils';
 import {
   CapLinks,
@@ -376,10 +375,7 @@ export default function SectionsSetUpContainer({
     ].includes(section?.course?.displayName);
 
   const renderAdvancedSettings = () => {
-    const aiTutorAvailable =
-      experiments.isEnabledAllowingQueryString(
-        experiments.AI_CHAT_NEW_PERMISSIONS
-      ) && aiTutorAllowedForCourse(sections[0]);
+    const aiTutorAvailable = aiTutorAllowedForCourse(sections[0]);
 
     return renderExpandableSection(
       'uitest-expandable-settings',

@@ -26,7 +26,6 @@ import {
   onDismissRedirectWarning,
   dismissedRedirectWarning,
 } from '@cdo/apps/util/dismissVersionRedirect';
-import experiments from '@cdo/apps/util/experiments';
 import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -224,8 +223,7 @@ class CourseOverview extends Component {
           participantAudience={participantAudience}
           aiChatToolsDependency={aiChatToolsDependency}
         />
-        {experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
-          viewAsTeacher &&
+        {viewAsTeacher &&
           aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
             <RequiresAiChatToolsAlert />
           )}
