@@ -127,7 +127,7 @@ export const useAiTutorModelParameters = (
       if (systemPrompt === defaultSystemPrompt) {
         console.log(`🤖: systemPrompt: default`);
       } else {
-        console.log(`🤖: custom systemPrompt: ${systemPrompt}`);
+        console.log(`🤖: provided systemPrompt: ${systemPrompt}`);
       }
     }
   }, [systemPrompt, options?.aiTutorSystemPromptName]);

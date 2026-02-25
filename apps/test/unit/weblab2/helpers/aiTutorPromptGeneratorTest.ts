@@ -1,16 +1,16 @@
 import {generateAiTutorPrompt} from '@cdo/apps/weblab2/helpers/aiTutorPromptGenerator';
+import askContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/ask.md';
+import buildCSSContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/buildCSS.md';
+import buildHTMLContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/buildHTML.md';
+import askTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/ask.md';
+import buildCSSTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/buildCSS.md';
+import buildHTMLTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/buildHTML.md';
 import basePrompt from '@cdo/apps/weblab2/prompts/basePrompt.md';
-import askContract from '@cdo/apps/weblab2/prompts/modeContracts/ask.md';
-import buildCSSContract from '@cdo/apps/weblab2/prompts/modeContracts/buildCSS.md';
-import buildHTMLContract from '@cdo/apps/weblab2/prompts/modeContracts/buildHTML.md';
-import askTrigger from '@cdo/apps/weblab2/prompts/modeTriggers/ask.md';
-import buildCSSTrigger from '@cdo/apps/weblab2/prompts/modeTriggers/buildCSS.md';
-import buildHTMLTrigger from '@cdo/apps/weblab2/prompts/modeTriggers/buildHTML.md';
 import preReplyCheckAllowJs from '@cdo/apps/weblab2/prompts/preReplyCheckAllowJs.md';
 import preReplyCheckNoJs from '@cdo/apps/weblab2/prompts/preReplyCheckNoJs.md';
 import {AiTutorAnswerType} from '@cdo/apps/weblab2/types';
 
-const ALL_MODES: AiTutorAnswerType[] = [
+const ALL_ANSWER_TYPES: AiTutorAnswerType[] = [
   'buildHTML',
   'buildCSS',
   'buildJavaScript',
@@ -27,22 +27,22 @@ const ALL_MODES: AiTutorAnswerType[] = [
 describe('generateAiTutorPrompt', () => {
   describe('fixed sections', () => {
     it('starts with basePrompt content', () => {
-      const result = generateAiTutorPrompt(ALL_MODES);
+      const result = generateAiTutorPrompt(ALL_ANSWER_TYPES);
       expect(result.startsWith(basePrompt.trim())).toBe(true);
     });
 
-    it('ends with preReplyCheckAllowJs content if buildJavaScript mode is included', () => {
-      const result = generateAiTutorPrompt(ALL_MODES);
+    it('ends with preReplyCheckAllowJs content if buildJavaScript answer type is included', () => {
+      const result = generateAiTutorPrompt(ALL_ANSWER_TYPES);
       expect(result.endsWith(preReplyCheckAllowJs.trim())).toBe(true);
     });
 
-    it('ends with preReplyCheckNoJs content if buildJavaScript mode is not included', () => {
+    it('ends with preReplyCheckNoJs content if buildJavaScript answer type is not included', () => {
       const result = generateAiTutorPrompt(['buildHTML', 'buildCSS', 'ask']);
       expect(result.endsWith(preReplyCheckNoJs.trim())).toBe(true);
     });
 
     it('includes the Mode Router header', () => {
-      const result = generateAiTutorPrompt(ALL_MODES);
+      const result = generateAiTutorPrompt(ALL_ANSWER_TYPES);
       expect(result).toContain('## Mode Router (deterministic)');
       expect(result).toContain(
         'Choose exactly one mode per reply using these rules:'
@@ -50,12 +50,12 @@ describe('generateAiTutorPrompt', () => {
     });
 
     it('includes the Mode Answer Contracts header', () => {
-      const result = generateAiTutorPrompt(ALL_MODES);
+      const result = generateAiTutorPrompt(ALL_ANSWER_TYPES);
       expect(result).toContain('## Mode Answer Contracts');
     });
 
     it('places the Mode Router section before Mode Answer Contracts', () => {
-      const result = generateAiTutorPrompt(ALL_MODES);
+      const result = generateAiTutorPrompt(ALL_ANSWER_TYPES);
       expect(result.indexOf('## Mode Router')).toBeLessThan(
         result.indexOf('## Mode Answer Contracts')
       );
@@ -63,19 +63,19 @@ describe('generateAiTutorPrompt', () => {
   });
 
   describe('mode router group headings', () => {
-    it('includes all three group headings when all modes are present', () => {
-      const result = generateAiTutorPrompt(ALL_MODES);
+    it('includes all three group headings when all answer types are present', () => {
+      const result = generateAiTutorPrompt(ALL_ANSWER_TYPES);
       expect(result).toContain('### Build Modes (produce code now)');
       expect(result).toContain('### Tutoring Modes (no runnable JS)');
       expect(result).toContain('### Refusal Modes');
     });
 
-    it('omits Build Modes heading when no build modes are included', () => {
+    it('omits Build Modes heading when no build answer types are included', () => {
       const result = generateAiTutorPrompt(['ask', 'hint']);
       expect(result).not.toContain('### Build Modes (produce code now)');
     });
 
-    it('omits Tutoring Modes heading when no tutoring modes are included', () => {
+    it('omits Tutoring Modes heading when no tutoring answer types are included', () => {
       const result = generateAiTutorPrompt(['buildHTML']);
       expect(result).not.toContain('### Tutoring Modes (no runnable JS)');
     });
@@ -87,14 +87,14 @@ describe('generateAiTutorPrompt', () => {
   });
 
   describe('triggers', () => {
-    it('includes trigger content for each requested mode', () => {
+    it('includes trigger content for each requested answer type', () => {
       const result = generateAiTutorPrompt(['buildHTML', 'buildCSS', 'ask']);
       expect(result).toContain(buildHTMLTrigger.trim());
       expect(result).toContain(buildCSSTrigger.trim());
       expect(result).toContain(askTrigger.trim());
     });
 
-    it('excludes trigger content for modes not in the list', () => {
+    it('excludes trigger content for answer types not in the list', () => {
       const result = generateAiTutorPrompt(['buildHTML']);
       expect(result).not.toContain(askTrigger.trim());
     });
@@ -118,14 +118,14 @@ describe('generateAiTutorPrompt', () => {
   });
 
   describe('contracts', () => {
-    it('includes contract content for each requested mode', () => {
+    it('includes contract content for each requested answer type', () => {
       const result = generateAiTutorPrompt(['buildHTML', 'buildCSS', 'ask']);
       expect(result).toContain(buildHTMLContract.trim());
       expect(result).toContain(buildCSSContract.trim());
       expect(result).toContain(askContract.trim());
     });
 
-    it('excludes contract content for modes not in the list', () => {
+    it('excludes contract content for answer types not in the list', () => {
       const result = generateAiTutorPrompt(['buildHTML']);
       expect(result).not.toContain(buildCSSContract.trim());
     });
@@ -143,8 +143,8 @@ describe('generateAiTutorPrompt', () => {
     });
   });
 
-  describe('empty modes list', () => {
-    it('falls back to default modes when modes list is empty', () => {
+  describe('empty answer types list', () => {
+    it('falls back to default answer types when answer types list is empty', () => {
       const result = generateAiTutorPrompt([]);
       expect(result).toContain(basePrompt.trim());
       expect(result).toContain(buildHTMLTrigger.trim());

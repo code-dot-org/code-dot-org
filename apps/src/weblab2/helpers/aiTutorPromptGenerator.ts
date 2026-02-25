@@ -2,38 +2,38 @@ import {
   DEFAULT_AI_TUTOR_MODE,
   TUTOR_MODE_TO_ANSWER_TYPE,
 } from '@cdo/apps/weblab2/constants';
+import askContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/ask.md';
+import buildCSSContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/buildCSS.md';
+import buildHTMLContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/buildHTML.md';
+import buildJavaScriptContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/buildJavaScript.md';
+import debugContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/debug.md';
+import documentationContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/documentation.md';
+import exampleContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/example.md';
+import explainCodeContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/explainCode.md';
+import hintContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/hint.md';
+import pseudocodeContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/pseudocode.md';
+import refusalContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/refusal.md';
+import refusalJavaScriptSnippetsContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/refusalJavaScriptSnippets.md';
+import testCaseContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/testCase.md';
+import askTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/ask.md';
+import buildCSSTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/buildCSS.md';
+import buildHTMLTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/buildHTML.md';
+import buildJavaScriptTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/buildJavaScript.md';
+import debugTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/debug.md';
+import documentationTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/documentation.md';
+import exampleTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/example.md';
+import explainCodeTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/explainCode.md';
+import hintTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/hint.md';
+import pseudocodeTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/pseudocode.md';
+import refusalTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/refusal.md';
+import refusalJavaScriptSnippetsTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/refusalJavaScriptSnippets.md';
+import testCaseTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/testCase.md';
 import basePrompt from '@cdo/apps/weblab2/prompts/basePrompt.md';
-import askContract from '@cdo/apps/weblab2/prompts/modeContracts/ask.md';
-import buildCSSContract from '@cdo/apps/weblab2/prompts/modeContracts/buildCSS.md';
-import buildHTMLContract from '@cdo/apps/weblab2/prompts/modeContracts/buildHTML.md';
-import buildJavaScriptContract from '@cdo/apps/weblab2/prompts/modeContracts/buildJavaScript.md';
-import debugContract from '@cdo/apps/weblab2/prompts/modeContracts/debug.md';
-import documentationContract from '@cdo/apps/weblab2/prompts/modeContracts/documentation.md';
-import exampleContract from '@cdo/apps/weblab2/prompts/modeContracts/example.md';
-import explainCodeContract from '@cdo/apps/weblab2/prompts/modeContracts/explainCode.md';
-import hintContract from '@cdo/apps/weblab2/prompts/modeContracts/hint.md';
-import pseudocodeContract from '@cdo/apps/weblab2/prompts/modeContracts/pseudocode.md';
-import refusalContract from '@cdo/apps/weblab2/prompts/modeContracts/refusal.md';
-import refusalJavaScriptSnippetsContract from '@cdo/apps/weblab2/prompts/modeContracts/refusalJavaScriptSnippets.md';
-import testCaseContract from '@cdo/apps/weblab2/prompts/modeContracts/testCase.md';
-import askTrigger from '@cdo/apps/weblab2/prompts/modeTriggers/ask.md';
-import buildCSSTrigger from '@cdo/apps/weblab2/prompts/modeTriggers/buildCSS.md';
-import buildHTMLTrigger from '@cdo/apps/weblab2/prompts/modeTriggers/buildHTML.md';
-import buildJavaScriptTrigger from '@cdo/apps/weblab2/prompts/modeTriggers/buildJavaScript.md';
-import debugTrigger from '@cdo/apps/weblab2/prompts/modeTriggers/debug.md';
-import documentationTrigger from '@cdo/apps/weblab2/prompts/modeTriggers/documentation.md';
-import exampleTrigger from '@cdo/apps/weblab2/prompts/modeTriggers/example.md';
-import explainCodeTrigger from '@cdo/apps/weblab2/prompts/modeTriggers/explainCode.md';
-import hintTrigger from '@cdo/apps/weblab2/prompts/modeTriggers/hint.md';
-import pseudocodeTrigger from '@cdo/apps/weblab2/prompts/modeTriggers/pseudocode.md';
-import refusalTrigger from '@cdo/apps/weblab2/prompts/modeTriggers/refusal.md';
-import refusalJavaScriptSnippetsTrigger from '@cdo/apps/weblab2/prompts/modeTriggers/refusalJavaScriptSnippets.md';
-import testCaseTrigger from '@cdo/apps/weblab2/prompts/modeTriggers/testCase.md';
 import preReplyCheckAllowJs from '@cdo/apps/weblab2/prompts/preReplyCheckAllowJs.md';
 import preReplyCheckNoJs from '@cdo/apps/weblab2/prompts/preReplyCheckNoJs.md';
 import {AiTutorAnswerType} from '@cdo/apps/weblab2/types';
 
-const MODE_TRIGGERS: Record<AiTutorAnswerType, string> = {
+const ANSWER_TYPE_TRIGGERS: Record<AiTutorAnswerType, string> = {
   ask: askTrigger,
   buildCSS: buildCSSTrigger,
   buildHTML: buildHTMLTrigger,
@@ -49,7 +49,7 @@ const MODE_TRIGGERS: Record<AiTutorAnswerType, string> = {
   testCase: testCaseTrigger,
 };
 
-const MODE_CONTRACTS: Record<AiTutorAnswerType, string> = {
+const ANSWER_TYPE_CONTRACTS: Record<AiTutorAnswerType, string> = {
   ask: askContract,
   buildCSS: buildCSSContract,
   buildHTML: buildHTMLContract,
@@ -65,19 +65,19 @@ const MODE_CONTRACTS: Record<AiTutorAnswerType, string> = {
   testCase: testCaseContract,
 };
 
-type ModeGroup = {
+type AnswerTypeGroup = {
   heading: string;
-  modes: AiTutorAnswerType[];
+  answerTypes: AiTutorAnswerType[];
 };
 
-const MODE_GROUPS: ModeGroup[] = [
+const ANSWER_TYPE_GROUPS: AnswerTypeGroup[] = [
   {
     heading: '### Build Modes (produce code now)',
-    modes: ['buildCSS', 'buildHTML', 'buildJavaScript'],
+    answerTypes: ['buildCSS', 'buildHTML', 'buildJavaScript'],
   },
   {
     heading: '### Tutoring Modes (no runnable JS)',
-    modes: [
+    answerTypes: [
       'ask',
       'debug',
       'documentation',
@@ -90,50 +90,59 @@ const MODE_GROUPS: ModeGroup[] = [
   },
   {
     heading: '### Refusal Modes',
-    modes: ['refusal', 'refusalJavaScriptSnippets'],
+    answerTypes: ['refusal', 'refusalJavaScriptSnippets'],
   },
 ];
 
-const buildModeRouterSection = (modes: AiTutorAnswerType[]): string => {
-  return MODE_GROUPS.flatMap(group => {
-    const groupModes = group.modes.filter(mode => modes.includes(mode));
-    if (groupModes.length === 0) return [];
+const buildAnswerTypeRouterSection = (
+  answerTypes: AiTutorAnswerType[]
+): string => {
+  return ANSWER_TYPE_GROUPS.flatMap(group => {
+    const groupAnswerTypes = group.answerTypes.filter(answerType =>
+      answerTypes.includes(answerType)
+    );
+    if (groupAnswerTypes.length === 0) return [];
     return [
       group.heading,
-      ...groupModes.map(mode => `- ${MODE_TRIGGERS[mode].trim()}`),
+      ...groupAnswerTypes.map(
+        answerType => `- ${ANSWER_TYPE_TRIGGERS[answerType].trim()}`
+      ),
       '',
     ];
   }).join('\n');
 };
 
-const generateFinalModeList = (
-  modes: AiTutorAnswerType[]
+const generateFinalAnswerTypeList = (
+  answerTypes: AiTutorAnswerType[]
 ): AiTutorAnswerType[] => {
-  let finalModes = [...modes];
-  if (modes.length === 0) {
-    finalModes = TUTOR_MODE_TO_ANSWER_TYPE[DEFAULT_AI_TUTOR_MODE];
+  let finalAnswerTypes = [...answerTypes];
+  if (answerTypes.length === 0) {
+    finalAnswerTypes = TUTOR_MODE_TO_ANSWER_TYPE[DEFAULT_AI_TUTOR_MODE];
   }
   // Remove any hard-coded refusal modes since we derive the refusal mode
   // based on whether buildJavaScript is included.
-  finalModes = finalModes.filter(
-    mode => mode !== 'refusal' && mode !== 'refusalJavaScriptSnippets'
+  finalAnswerTypes = finalAnswerTypes.filter(
+    answerType =>
+      answerType !== 'refusal' && answerType !== 'refusalJavaScriptSnippets'
   );
-  // If the mode list includes buildJavaScript, we will use the refusal mode that allows JavaScript,
+  // If the answer type list includes buildJavaScript, we will use the refusal mode that allows JavaScript,
   // otherwise we block JavaScript from being generated.
-  const hasBuildJavaScript = finalModes.includes('buildJavaScript');
+  const hasBuildJavaScript = finalAnswerTypes.includes('buildJavaScript');
   const refusalMode = hasBuildJavaScript
     ? 'refusal'
     : 'refusalJavaScriptSnippets';
-  finalModes.push(refusalMode);
-  return finalModes;
+  finalAnswerTypes.push(refusalMode);
+  return finalAnswerTypes;
 };
 
-export const generateAiTutorPrompt = (modes: AiTutorAnswerType[]): string => {
-  const parsedModes = generateFinalModeList(modes);
-  const contracts = parsedModes
-    .map(mode => MODE_CONTRACTS[mode].trim())
+export const generateAiTutorPrompt = (
+  answerTypes: AiTutorAnswerType[]
+): string => {
+  const parsedAnswerTypes = generateFinalAnswerTypeList(answerTypes);
+  const contracts = parsedAnswerTypes
+    .map(answerType => ANSWER_TYPE_CONTRACTS[answerType].trim())
     .join('\n\n');
-  const allowJs = parsedModes.includes('buildJavaScript');
+  const allowJs = parsedAnswerTypes.includes('buildJavaScript');
 
   return [
     basePrompt.trim(),
@@ -143,7 +152,7 @@ export const generateAiTutorPrompt = (modes: AiTutorAnswerType[]): string => {
     '## Mode Router (deterministic)',
     'Choose exactly one mode per reply using these rules:',
     '',
-    buildModeRouterSection(parsedModes),
+    buildAnswerTypeRouterSection(parsedAnswerTypes),
     '',
     '--------',
     '## Mode Answer Contracts',
