@@ -205,7 +205,7 @@ development:
   <<: *default_settings
   # NOTE: for initial evaluation purposes, you may want to temporarily
   # turn the agent on in development mode.
-  app_name: Dashboard (Development - Suresh)
+  app_name: Dashboard (Development)
 
   # Rails Only - when running in Developer Mode, the New Relic Agent will
   # present performance information on the last 100 transactions you have
