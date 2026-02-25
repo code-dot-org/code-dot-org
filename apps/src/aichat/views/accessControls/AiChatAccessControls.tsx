@@ -84,7 +84,9 @@ const AiChatAccessControls: React.FC = () => {
     );
     analyticsReporter.sendEvent(EVENTS.AI_CHAT_SECTION_ACCESS_LEVEL_UPDATED, {
       sectionId: section.id,
+      oldAccessLevel: section.aiChatAccessLevel,
       newAccessLevel: newAccessLevel,
+      courseAssigned: section.courseVersionName,
       uiLocation: 'aiSettingsTeacherDashboardTab',
     });
   };
