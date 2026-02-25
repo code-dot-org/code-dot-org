@@ -23,11 +23,14 @@ const InnerHTMLPreview = () => {
   const [currentFile, setCurrentFile] = React.useState<string | undefined>(
     undefined
   );
-  // Numerical key used to trigger iframe reloads when we have updates.
+  // Numerical key used to trigger re-fetches when we need to refresh the preview.
   const [previewKey, setPreviewKey] = useState(0);
   const [serviceWorkerReady, setServiceWorkerReady] = useState(false);
   const [allowScripts, setAllowScripts] = useState(false);
   const [isLevelLoading, setIsLevelLoading] = useState(false);
+  // HTML content fetched from the service worker, injected via srcdoc to avoid
+  // Safari's restriction on intercepting navigate-type fetches from nested iframes.
+  const [srcDoc, setSrcDoc] = useState<string | undefined>(undefined);
 
   const parentOrigin = useMemo(() => {
     const regex = /[^.]+\.preview\.([^.]+)\.codeprojects\.org/;
@@ -56,7 +59,7 @@ const InnerHTMLPreview = () => {
       } else if (data.type === IframeMessageType.SET_ALLOW_SCRIPTS) {
         setAllowScripts(!!data.allow);
       } else if (data.type === IframeMessageType.REFRESH) {
-        iframeRef.current?.contentWindow?.location.reload();
+        setPreviewKey(prevKey => prevKey + 1);
       } else if (data.type === IframeMessageType.LEVEL_LOADING) {
         setIsLevelLoading(data.isLoading);
         if (data.isLoading) {
@@ -161,14 +164,32 @@ const InnerHTMLPreview = () => {
     };
   }, [parentOrigin]);
 
+  // Fetch the current HTML file directly from InnerHTMLPreview (a controlled SW client),
+  // then inject it via srcdoc. This bypasses Safari's restriction on the SW intercepting
+  // navigate-type fetches from iframes nested inside cross-origin iframes.
   useEffect(() => {
-    if (iframeRef.current) {
-      iframeRef.current.contentWindow?.location.reload();
+    if (!serviceWorkerReady || !currentFile || isLevelLoading) {
+      setSrcDoc(undefined);
+      return;
     }
-  }, [previewKey]);
+    let cancelled = false;
+    fetch(`${window.location.origin}/${currentFile}`)
+      .then(response => response.text())
+      .then(html => {
+        if (!cancelled) {
+          setSrcDoc(html);
+        }
+      })
+      .catch(err => {
+        console.error('Failed to fetch preview content:', err);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [serviceWorkerReady, currentFile, isLevelLoading, previewKey]);
 
   const getPreview = useCallback(() => {
-    if (serviceWorkerReady && currentFile && !isLevelLoading) {
+    if (srcDoc !== undefined) {
       return (
         <iframe
           ref={iframeRef}
@@ -179,7 +200,7 @@ const InnerHTMLPreview = () => {
           title="Inner HTML Preview"
           id="inner-preview"
           key={allowScripts ? 1 : 0} // This forces a re-render when allowScripts changes.
-          src={`${window.location.origin}/${currentFile}`}
+          srcDoc={srcDoc}
           className={moduleStyles.fileIframe}
         />
       );
@@ -199,13 +220,7 @@ const InnerHTMLPreview = () => {
         </div>
       );
     }
-  }, [
-    allowScripts,
-    currentFile,
-    isLevelLoading,
-    serviceWorkerReady,
-    serviceWorkerUnavailable,
-  ]);
+  }, [allowScripts, srcDoc, serviceWorkerUnavailable]);
 
   return getPreview();
 };
