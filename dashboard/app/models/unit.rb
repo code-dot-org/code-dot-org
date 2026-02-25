@@ -278,6 +278,7 @@ class Unit < ApplicationRecord
     content_area
     topic_tags
     enable_blockly_keyboard_navigation
+    ai_rubric_s3_config
   )
 
   def self.hoc_2014_unit
@@ -1607,7 +1608,8 @@ class Unit < ApplicationRecord
       :curriculum_umbrella,
       :weekly_instructional_minutes,
       :content_area,
-      :topic_tags
+      :topic_tags,
+      :ai_rubric_s3_config
     ]
     boolean_keys = [
       :has_unnumbered_lessons,
