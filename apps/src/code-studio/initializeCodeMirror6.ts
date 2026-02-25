@@ -14,6 +14,7 @@ const levelbuilderEditorTheme = EditorView.theme({
 // CodeMirror5-compatible adapter used to migrate existing usages of initializeCodeMirror (which uses CM5).
 interface CodeMirrorLegacyAdapter {
   getValue: () => string;
+  setValue: (value: string) => void;
 }
 
 interface Options {
@@ -54,6 +55,11 @@ function initializeCodeMirror6(
   const adapter: CodeMirrorLegacyAdapter = {
     getValue() {
       return editor.state.doc.toString();
+    },
+    setValue(value) {
+      editor.dispatch({
+        changes: {from: 0, to: editor.state.doc.length, insert: value},
+      });
     },
   };
 
