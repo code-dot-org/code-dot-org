@@ -23,3 +23,6 @@
       As in the above Original Widget View, the code editor workspace is hidden.
       To see/edit the list of available widgets2s, go to the
       = link_to('Widget2 Library', '/widget2', target: '_blank') + '.'
+    %p
+      = f.label :widget2_parameters, 'Widget2 Parameters (JSON)'
+      = f.text_area :widget2_parameters, rows: 4

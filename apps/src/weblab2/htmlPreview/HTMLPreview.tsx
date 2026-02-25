@@ -60,6 +60,7 @@ export const HTMLPreview: React.FC = () => {
   const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
   const {levelProperties} = useCodebridgeContext();
   const levelId = levelProperties.id;
+  const widget2Parameters = levelProperties.widget2Parameters;
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const previewContainerRef = useRef<HTMLDivElement | null>(null);
   const previewUrl = useMemo(() => {
@@ -322,7 +323,11 @@ export const HTMLPreview: React.FC = () => {
         // Send the source immediately when iframe is ready
         if (debouncedSource) {
           iframeRef.current?.contentWindow?.postMessage(
-            {type: IframeMessageType.SET_SOURCE, source: debouncedSource},
+            {
+              type: IframeMessageType.SET_SOURCE,
+              source: debouncedSource,
+              parameters: widget2Parameters,
+            },
             previewUrl
           );
         }
@@ -369,6 +374,7 @@ export const HTMLPreview: React.FC = () => {
     navigationHistoryIndex,
     debouncedSource,
     dispatch,
+    widget2Parameters,
   ]);
 
   useEffect(() => {

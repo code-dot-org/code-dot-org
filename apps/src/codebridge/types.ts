@@ -73,6 +73,8 @@ export interface CodebridgeLevelProperties extends LevelProperties {
   startDirection?: number;
   widgetView?: boolean;
   widgetViewAllowShowCode?: boolean;
+  widget2?: string;
+  widget2Parameters?: Record<string, string>;
 }
 
 // Python Lab specific property

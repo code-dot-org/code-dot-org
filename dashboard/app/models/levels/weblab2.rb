@@ -39,6 +39,7 @@ class Weblab2 < Level
     ai_tutor_mode
     level_system_prompt
     widget2
+    widget2_parameters
   )
 
   def self.create_from_level_builder(params, level_params)

@@ -10,13 +10,15 @@ import {generateContentSecurityPolicyForPreview} from './contentSecurityPolicyHe
 import {
   addBaseTagToDocument,
   addConsoleOverrideToDocument,
+  addParametersToDocument,
   addCSPViolationListenerToDocument,
 } from './htmlParsingHelpers';
 
 // Hook that handles registering and communicating with the project service worker.
 function useProjectServiceWorker(
   source: MultiFileSource | undefined,
-  codeStudioUrl: string
+  codeStudioUrl: string,
+  parameters?: Record<string, string>
 ) {
   const [serviceWorker, setServiceWorker] = useState<ServiceWorker | null>(
     null
@@ -103,6 +105,9 @@ function useProjectServiceWorker(
           addBaseTagToDocument(doc, `${window.location.origin}/${urlSuffix}`);
           addConsoleOverrideToDocument(doc);
           addCSPViolationListenerToDocument(doc);
+          if (parameters) {
+            addParametersToDocument(parameters, doc);
+          }
           content = doc.documentElement.outerHTML;
         } else if (fileExt === 'css') {
           mimeType = 'text/css';
@@ -120,7 +125,7 @@ function useProjectServiceWorker(
         contentSecurityPolicy,
       });
     }
-  }, [contentSecurityPolicy, serviceWorker, source]);
+  }, [contentSecurityPolicy, parameters, serviceWorker, source]);
 
   // Send an intermittent keep-alive message to the service worker to ensure it stays active.
   useEffect(() => {

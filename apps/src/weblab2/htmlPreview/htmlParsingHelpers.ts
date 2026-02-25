@@ -71,6 +71,29 @@ export const addConsoleOverrideToDocument = (doc: Document) => {
   }
 };
 
+const parametersScript = `
+(function() {
+  window._parameters = {parameters};
+})();
+`;
+
+export const addParametersToDocument = (
+  parameters: Record<string, string>,
+  doc: Document
+) => {
+  const script = doc.createElement('script');
+  script.textContent = parametersScript.replace(
+    '{parameters}',
+    JSON.stringify(parameters)
+  );
+  const head = doc.querySelector('head');
+  if (head) {
+    head.insertBefore(script, head.firstChild);
+  } else {
+    doc.documentElement.insertBefore(script, doc.documentElement.firstChild);
+  }
+};
+
 // This adds a base tag to the header of the given document, setting its href to the provided baseHref.
 // If a base tag already exists, its href is updated.
 export const addBaseTagToDocument = (doc: Document, baseHref: string) => {
