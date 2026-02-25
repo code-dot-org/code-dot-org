@@ -116,3 +116,4 @@ skaffold-build-tags.json
 
 # ai
 .claude/worktrees
+CLAUDE.local.md
