@@ -3913,6 +3913,16 @@ __metadata:
   languageName: node
   linkType: soft
 
+"@code-dot-org/core@portal:../frontend/packages/core/::locator=blockly-mooc%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/core@portal:../frontend/packages/core/::locator=blockly-mooc%40workspace%3A."
+  dependencies:
+    tldts: "npm:^7.0.23"
+  peerDependencies:
+    react: ^17.0.0 || ^18.0.0 || ^19.0.0
+  languageName: node
+  linkType: soft
+
 "@code-dot-org/craft@npm:0.2.2":
   version: 0.2.2
   resolution: "@code-dot-org/craft@npm:0.2.2"
@@ -11263,6 +11273,7 @@ __metadata:
     "@code-dot-org/artist": "npm:0.2.1"
     "@code-dot-org/component-library": "portal:../frontend/packages/component-library/"
     "@code-dot-org/component-library-styles": "portal:../frontend/packages/component-library-styles/"
+    "@code-dot-org/core": "portal:../frontend/packages/core/"
     "@code-dot-org/craft": "npm:0.2.2"
     "@code-dot-org/dance-party": "npm:2.0.4"
     "@code-dot-org/fonts": "portal:../frontend/packages/fonts/"
@@ -29720,6 +29731,13 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"tldts-core@npm:^7.0.23":
+  version: 7.0.23
+  resolution: "tldts-core@npm:7.0.23"
+  checksum: 10/e6e19d6cab67defd93c7f7e8d63eb2dd90a3ef45ab15087d9fa1aa2ddedc1430709146dff0535f9672aa36b874843e6b540417280059960e0b88bbbb8c932e68
+  languageName: node
+  linkType: hard
+
 "tldts@npm:^6.1.32":
   version: 6.1.85
   resolution: "tldts@npm:6.1.85"
@@ -29728,6 +29746,17 @@ canvg@gabelerner/canvg:
   bin:
     tldts: bin/cli.js
   checksum: 10/f3270f24ed57efcbb34364e827dc1cace9b5b95a2668051e69e21ad75df49466cfeaef47e7e9b56541ef633eff1e083a43b006b6306a9d2d24e5c36a038cb400
+  languageName: node
+  linkType: hard
+
+"tldts@npm:^7.0.23":
+  version: 7.0.23
+  resolution: "tldts@npm:7.0.23"
+  dependencies:
+    tldts-core: "npm:^7.0.23"
+  bin:
+    tldts: bin/cli.js
+  checksum: 10/752da855c98fc5dd9601e9ec0090b80d5ac83f2b31027756f0acc79e05dc280539b3aa3583da73559ce8d4bcc328ebab84c4c7600a3e44dfc7cda099cc96fcb0
   languageName: node
   linkType: hard
 
