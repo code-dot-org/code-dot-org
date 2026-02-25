@@ -7,16 +7,13 @@ if CDO.enable_opentelemetry
   OpenTelemetry::SDK.configure do |c|
     c.service_name = 'dashboard'
 
-    # Enable all ruby instrumentation, with a custom configuration for Rack.
+    # Enable all ruby instrumentation
     c.use_all(
-      'OpenTelemetry::Instrumentation::Rack' => {
-        untraced_requests: lambda {|env|
-          path = env['PATH_INFO']
-          # Don't trace requests for static assets. They are very high volume and noisy and not applicable for most application performance monitoring use cases.
-          path.start_with?('/assets/', '/onetrust/', '/fonts/') || path.starts_with?('/shared/') || path.end_with?('.js') || path.ends_with?('.css')
-        },
-      },
       'OpenTelemetry::Instrumentation::ActionPack' => {
+        # TODO: Once we are on Rails 7.1, remove this override.
+        # This is needed to set low cardinality span names using Rails controller class names such as Controller#Method
+        # This naming scheme does not adhere to OpenTelemetry semantic conventions, but is necessary because the instrumentation
+        # does not support it until Rails 7.1.
         span_naming: :class,
       }
     )
