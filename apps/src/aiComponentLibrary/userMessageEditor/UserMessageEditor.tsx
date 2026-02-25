@@ -4,6 +4,8 @@ import React, {useState, useMemo, useEffect, useRef} from 'react';
 
 import {commonI18n} from '@cdo/apps/types/locale';
 
+import TranscribeButton from './transcribeButton/TranscribeButton';
+
 import moduleStyles from './user-message-editor.module.scss';
 
 const MAX_MESSAGE_LENGTH = 10000;
@@ -69,6 +71,8 @@ const UserMessageEditor = React.forwardRef<
 
     const icon = {iconName: 'arrow-up'};
 
+    const [isRecording, setIsRecording] = useState(false);
+
     return (
       <div
         className={classnames(
@@ -96,7 +100,7 @@ const UserMessageEditor = React.forwardRef<
           }
           onChange={e => onChange(e.target.value)}
           value={userMessage}
-          disabled={disabled}
+          disabled={disabled || isRecording}
           onKeyDown={e => handleKeyPress(e, userMessage)}
           maxLength={MAX_MESSAGE_LENGTH}
           rows={1}
@@ -106,19 +110,30 @@ const UserMessageEditor = React.forwardRef<
         />
         <div className={moduleStyles.chatActionsContainer}>
           {children}
-          <Button
-            aria-label={commonI18n.submit()}
-            id="uitest-chat-submit"
-            isIconOnly={!showSubmitLabel}
-            size="xs"
-            onClick={e => {
-              e.stopPropagation();
-              onSubmit(userMessage);
-            }}
-            disabled={disabled || !userMessage || userMessageIsEmpty}
-            text={showSubmitLabel ? commonI18n.submit() : undefined}
-            {...{[showSubmitLabel ? 'iconLeft' : 'icon']: icon}}
-          />
+          <div className={moduleStyles.actionButtons}>
+            <TranscribeButton
+              onTranscribed={text =>
+                onChange(`${userMessage && userMessage + ' '}${text}`)
+              }
+              onRecordStart={() => setIsRecording(true)}
+              onRecordEnd={() => setIsRecording(false)}
+            />
+            <Button
+              aria-label={commonI18n.submit()}
+              id="uitest-chat-submit"
+              isIconOnly={!showSubmitLabel}
+              size="xs"
+              onClick={e => {
+                e.stopPropagation();
+                onSubmit(userMessage);
+              }}
+              disabled={
+                disabled || !userMessage || userMessageIsEmpty || isRecording
+              }
+              text={showSubmitLabel ? commonI18n.submit() : undefined}
+              {...{[showSubmitLabel ? 'iconLeft' : 'icon']: icon}}
+            />
+          </div>
         </div>
       </div>
     );

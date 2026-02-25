@@ -47,5 +47,10 @@
     & > *:only-child {
       margin-left: auto;
     }
+
+    .actionButtons {
+      display: flex;
+      gap: 8px;
+    }
   }
 }
