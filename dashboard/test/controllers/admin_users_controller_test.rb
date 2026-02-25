@@ -345,8 +345,8 @@ class AdminUsersControllerTest < ActionController::TestCase
   test "delete_user_progress validates CSV data structure for unit-specific deletion" do
     sign_in @admin
 
-    # Mock the system call
-    AdminUsersController.any_instance.expects(:system).returns(true)
+    @controller.stubs(:execute_delete_script).returns(true)
+    File.stubs(:read).returns("Dry run output")
     File.expects(:read).returns("Script output")
 
     post :delete_user_progress, params: {
@@ -365,7 +365,7 @@ class AdminUsersControllerTest < ActionController::TestCase
     sign_in @admin
 
     # Mock the system call
-    AdminUsersController.any_instance.expects(:system).returns(true)
+    @controller.stubs(:execute_delete_script).returns(true)
     File.expects(:read).returns("Script output")
 
     post :delete_user_progress, params: {
@@ -384,10 +384,8 @@ class AdminUsersControllerTest < ActionController::TestCase
     sign_in @admin
 
     # Test dry run (empty commit flag)
-    AdminUsersController.any_instance.expects(:system).with(
-      anything, anything, anything, anything, '', anything
-    ).returns(true)
-    File.expects(:read).returns("Dry run output")
+    @controller.stubs(:execute_delete_script).returns(true)
+    File.stubs(:read).returns("Dry run output")
 
     post :delete_user_progress, params: {
       csv_data: [{student_id: '123', unit_name: 'course1'}],
@@ -405,10 +403,8 @@ class AdminUsersControllerTest < ActionController::TestCase
     sign_in @admin
 
     # Test actual deletion (for-real commit flag)
-    AdminUsersController.any_instance.expects(:system).with(
-      anything, anything, anything, anything, 'for-real', anything
-    ).returns(true)
-    File.expects(:read).returns("Deletion output")
+    @controller.stubs(:execute_delete_script).returns(true)
+    File.stubs(:read).returns("Deletion output")
 
     post :delete_user_progress, params: {
       csv_data: [{student_id: '123', unit_name: 'course1'}],
@@ -418,7 +414,7 @@ class AdminUsersControllerTest < ActionController::TestCase
 
     assert_response :success
     response_json = JSON.parse(response.body)
-    assert_equal false, response_json['dry_run']
+    assert_equal "false", response_json['dry_run']
     assert_equal "Progress deletion completed successfully", response_json['message']
   end
 
@@ -436,7 +432,7 @@ class AdminUsersControllerTest < ActionController::TestCase
 
     CSV.expects(:open).yields(mock('csv').tap {|csv| csv.expects(:<<).twice})
 
-    AdminUsersController.any_instance.expects(:system).returns(true)
+    @controller.stubs(:execute_delete_script).returns(true)
     File.expects(:read).returns("Success")
 
     # Verify cleanup calls

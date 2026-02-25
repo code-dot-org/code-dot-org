@@ -479,13 +479,7 @@ class AdminUsersController < ApplicationController
 
       commit_flag = dry_run == true ? '' : 'for-real'
 
-      # Use system() with array arguments to prevent command injection
-      success = system(
-        'ruby', script_path, teacher_id, temp_file.path, commit_flag,
-        out: output_file.path,
-        err: [:child, :out],
-        chdir: repo_root
-      )
+      success = execute_delete_script(script_path, teacher_id, temp_file.path, commit_flag, output_file.path, repo_root)
 
       output = File.read(output_file.path)
 
@@ -509,6 +503,15 @@ class AdminUsersController < ApplicationController
       output_file&.unlink
       temp_file&.unlink
     end
+  end
+
+  private def execute_delete_script(script_path, teacher_id, csv_file, commit_flag, output_file, repo_root)
+    system(
+      'ruby', script_path, teacher_id, csv_file, commit_flag,
+      out: output_file,
+      err: [:child, :out],
+      chdir: repo_root
+    )
   end
 
   private def restricted_users
