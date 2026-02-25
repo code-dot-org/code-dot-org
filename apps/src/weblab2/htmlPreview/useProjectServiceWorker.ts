@@ -112,6 +112,7 @@ function useProjectServiceWorker(
 
         filesData[fullFileName] = {content, mimeType, url};
       });
+
       // Send files data to service worker
       serviceWorker.postMessage({
         type: ProjectServiceWorkerMessageType.UPDATE_FILES,

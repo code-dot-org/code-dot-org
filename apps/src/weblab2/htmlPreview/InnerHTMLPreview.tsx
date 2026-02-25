@@ -34,6 +34,9 @@ const InnerHTMLPreview = () => {
   // HTML content fetched from the service worker, injected via srcdoc to avoid
   // Safari's restriction on intercepting navigate-type fetches from nested iframes.
   const [srcDoc, setSrcDoc] = useState<string | undefined>(undefined);
+  const [srcDocFetchError, setSrcDocFetchError] = useState<string | undefined>(
+    undefined
+  );
 
   const parentOrigin = useMemo(() => {
     const regex = /[^.]+\.preview\.([^.]+)\.codeprojects\.org/;
@@ -183,6 +186,7 @@ const InnerHTMLPreview = () => {
         }
       })
       .catch(err => {
+        setSrcDocFetchError(`Failed to fetch preview content: ${err.message}`);
         console.error('Failed to fetch preview content:', err);
       });
     return () => {
@@ -206,6 +210,15 @@ const InnerHTMLPreview = () => {
           className={moduleStyles.fileIframe}
         />
       );
+    } else if (srcDocFetchError) {
+      return (
+        <div className={moduleStyles.placeholderContainer}>
+          <CodebridgeEmptyState
+            title="Error Loading Preview"
+            description="We encountered an error while loading the preview. Please reload your browser, and if the problem persists, contact support@code.org for assistance."
+          />
+        </div>
+      );
     } else if (serviceWorkerUnavailable) {
       return (
         <div className={moduleStyles.placeholderContainer}>
@@ -222,7 +235,13 @@ const InnerHTMLPreview = () => {
         </div>
       );
     }
-  }, [allowScripts, srcDoc, serviceWorkerUnavailable, renderKey]);
+  }, [
+    srcDoc,
+    srcDocFetchError,
+    serviceWorkerUnavailable,
+    allowScripts,
+    renderKey,
+  ]);
 
   return getPreview();
 };
