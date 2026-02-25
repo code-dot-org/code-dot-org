@@ -1,0 +1,23 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-02-24T18:10:01.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# HTML\n\n**HTML (HyperText Markup Language)** is the standard markup language for documents designed to be displayed in a web browser. It provides the structure and content of a webpage.",
+        "imageUrl": "https://images.code.org/c2c19024e8a991f66cdcfc572080c577-Adobe Express - 452_UDEwNjAwNTQ (5).gif",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:10:01.340+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson1-level3_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson1-level3_2025\"}]"
+}]]></config>
+</Panels>
