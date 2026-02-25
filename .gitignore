@@ -115,4 +115,4 @@ dashboard/brakeman_security_report.htm
 skaffold-build-tags.json
 
 # ai
-.claude
+.claude/worktrees
