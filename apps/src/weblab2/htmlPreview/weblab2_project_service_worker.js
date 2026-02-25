@@ -52,14 +52,12 @@ function main() {
   // Intercept fetch requests
   self.addEventListener('fetch', async event => {
     console.log(
-      'service worker intercepted fetch request for:',
-      event.request.url
+      `service worker intercepted fetch request for ${event.request.url} from referrer ${event.request.referrer}`
     );
     const url = new URL(event.request.url);
     let requestedFile = getFilenameFromUrl(url);
-    const referrerFile = getFilenameFromUrl(new URL(event.request.referrer));
-    if (filesData[referrerFile] && requestedFile === '') {
-      // If the request is for the root of the project and it's coming from a file in the project,
+    if (url.origin === location.origin && requestedFile === '') {
+      // If the request is for the root of the project,
       // return index.html instead of trying to fetch a non-existent root file.
       requestedFile = 'index.html';
     }
