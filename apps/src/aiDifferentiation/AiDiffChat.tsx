@@ -10,7 +10,6 @@ import {
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {PersonalizationData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
-import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {
   AiInteractionStatus as Status,
@@ -158,11 +157,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
         presetChipText,
         ...(threadId === 0 ? {context} : {}),
         ...(context.type === AiDiffContext.LEVEL ? {viewAsUserId} : {}),
-        ...(artifactType &&
-        experiments.isEnabled(experiments.AI_ARTIFACT) &&
-        !isPreset
-          ? {artifactType}
-          : {}),
+        ...(artifactType && !isPreset ? {artifactType} : {}),
       });
 
       HttpClient.post(endpoint, body, true, {
