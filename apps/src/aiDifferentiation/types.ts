@@ -49,6 +49,7 @@ export type ChatTextMessage = {
 export type ChatPrompt = {
   label: string;
   prompt: string;
+  artifactCandidateType?: (typeof AiDiffArtifactType)[keyof typeof AiDiffArtifactType];
   response?: string;
   followUpPrompts?: ChatPrompt[];
 };
