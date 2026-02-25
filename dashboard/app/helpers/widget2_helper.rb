@@ -34,7 +34,7 @@ module Widget2Helper
 
   # Save widget2 sources to the file system.
   def set_widget2_sources(widget2_id, start_sources)
-    widget2_directory = File.join(WIDGET2_BASE_DIRECTORY, widget2_id.to_s)
+    widget2_directory = get_widget2_directory(widget2_id)
 
     FileUtils.mkdir_p(widget2_directory)
 
