@@ -1,10 +1,4 @@
 # Adds methods for determining and enforcing AI access rules.
-# Relies on these serialized attributes:
-# - ai_tutor_access_denied
-# - ai_rubrics_disabled
-# - ai_rubrics_tour_seen
-# - ai_differentiation_toggled_off
-# - has_completed_ai_differentiation_welcome
 module User::AiAccessible
   extend ActiveSupport::Concern
   include SharedConstants
