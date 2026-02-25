@@ -134,6 +134,7 @@ type ResourcePanelProps = InstructionsProps & {
   isValidationTourEnabled?: boolean;
   isOnboardingTourEnabled?: boolean;
   aiTutorSystemPromptName?: string;
+  aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   documentationUrl?: string;
   /** Only display the sidebar and hide all tabs. */
@@ -166,6 +167,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   isValidationTourEnabled,
   isOnboardingTourEnabled,
   aiTutorSystemPromptName,
+  aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
   documentationUrl,
   sidebarOnly = false,
@@ -271,6 +273,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             channelId={channelId}
             aiTutorChatButtonData={aiTutorChatButtonData}
             aiTutorSystemPromptName={aiTutorSystemPromptName}
+            aiTutorSystemPrompt={aiTutorSystemPrompt}
             aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
           />
         );
@@ -283,6 +286,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             channelId={channelId}
             aiTutorChatButtonData={aiTutorChatButtonData}
             aiTutorSystemPromptName={aiTutorSystemPromptName}
+            aiTutorSystemPrompt={aiTutorSystemPrompt}
             aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
             instructionsContent={instructionsContent}
             isCollapsedByDefault={!!viewAsUserId}
@@ -364,6 +368,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     channelId,
     aiTutorChatButtonData,
     aiTutorSystemPromptName,
+    aiTutorSystemPrompt,
     aiTutorResponseSchemaSettings,
     selectedVersion,
     levelId,
