@@ -1,0 +1,27 @@
+name 'ai-generated-design-postassessment_2026'
+title 'AI-Generated Design Pre-Assessment'
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'ai-generated-design-postassessment-intro_2026'
+level 'ai-generated-design-postassessment-q1_2026'
+level 'ai-generated-design-postassessment-q2_2026'
+level 'ai-generated-design-postassessment-q3_2026'
+level 'ai-generated-design-postassessment-q4_2026'
+level 'ai-generated-design-postassessment-q5_2026'
+
+page
+level 'ai-generated-design-postassessment-q6_2026'
+level 'ai-generated-design-postassessment-q7_2026'
+level 'ai-generated-design-postassessment-q8_2026'
+level 'ai-generated-design-postassessment-q9_2026'
+level 'ai-generated-design-postassessment-q10_2026'
+
+page
+level 'ai-generated-design-postassessment-q11_2026'
+level 'ai-generated-design-postassessment-q12_2026'
+level 'ai-generated-design-postassessment-q13_2026'
+level 'ai-generated-design-postassessment-q14_2026'
+level 'ai-generated-design-postassessment-q15_2026'
