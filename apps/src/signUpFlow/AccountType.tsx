@@ -4,7 +4,7 @@ import {Typography} from '@mui/material';
 import React, {useState, useEffect} from 'react';
 
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import locale from '@cdo/apps/signUpFlow/locale';
 import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
@@ -33,11 +33,7 @@ const AccountType: React.FunctionComponent<{
     if (isSignedOut) {
       setUserReturnToUrl();
 
-      analyticsReporter.sendEvent(
-        EVENTS.SIGN_UP_STARTED_EVENT,
-        {},
-        PLATFORMS.STATSIG
-      );
+      analyticsReporter.sendEvent(EVENTS.SIGN_UP_STARTED_EVENT, {});
 
       // If sent here from trying to log in with OAuth without an account, log the OAuth type and have this page
       // send to the final signup page instead of having them pick login type again.
@@ -53,25 +49,17 @@ const AccountType: React.FunctionComponent<{
           oauthType = 'microsoft';
         }
 
-        analyticsReporter.sendEvent(
-          EVENTS.SIGN_UP_LOGIN_TYPE_PICKED_EVENT,
-          {
-            'user login type': oauthType,
-          },
-          PLATFORMS.STATSIG
-        );
+        analyticsReporter.sendEvent(EVENTS.SIGN_UP_LOGIN_TYPE_PICKED_EVENT, {
+          'user login type': oauthType,
+        });
       }
     }
   }, [isSignedOut]);
 
   const selectAccountType = (accountType: string) => {
-    analyticsReporter.sendEvent(
-      EVENTS.ACCOUNT_TYPE_PICKED_EVENT,
-      {
-        'account type': accountType,
-      },
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.ACCOUNT_TYPE_PICKED_EVENT, {
+      'account type': accountType,
+    });
     sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, accountType);
 
     // By default, navigate the user to the login type page after selecting their user
@@ -94,8 +82,7 @@ const AccountType: React.FunctionComponent<{
   const sendCurriculumAnalyticsEvent = () => {
     analyticsReporter.sendEvent(
       EVENTS.CURRICULUM_FREE_DIALOG_BUTTON_CLICKED,
-      {},
-      PLATFORMS.STATSIG
+      {}
     );
   };
 

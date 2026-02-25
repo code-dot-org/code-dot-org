@@ -4,7 +4,7 @@ import {Typography} from '@mui/material';
 import React, {useCallback, useState, useEffect} from 'react';
 import {Fade} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -28,7 +28,7 @@ const RegionSwitchConfirm: React.FC<RegionSwitchConfirmProps> = ({
 
   const reportEvent = useCallback(
     (eventName: string) => {
-      analyticsReporter.sendEvent(eventName, {region: code}, PLATFORMS.STATSIG);
+      analyticsReporter.sendEvent(eventName, {region: code});
     },
     [code]
   );

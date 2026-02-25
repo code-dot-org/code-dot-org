@@ -8,7 +8,7 @@ import React, {useState, useEffect} from 'react';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import OldButton from '@cdo/apps/legacySharedComponents/Button';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import canvas from '@cdo/apps/signUpFlow/images/canvas.png';
 import schoology from '@cdo/apps/signUpFlow/images/schoology.png';
@@ -94,8 +94,7 @@ const LoginTypeSelection: React.FunctionComponent<{
             : {};
           analyticsReporter.sendEvent(
             EVENTS.SIGN_UP_STARTED_EVENT,
-            sourceParam,
-            PLATFORMS.STATSIG
+            sourceParam
           );
           sessionStorage.setItem(
             ACCOUNT_TYPE_SESSION_KEY,
@@ -206,21 +205,13 @@ const LoginTypeSelection: React.FunctionComponent<{
   };
 
   const sendLMSAnalyticsEvent = () => {
-    analyticsReporter.sendEvent(
-      EVENTS.LMS_INFORMATION_BUTTON_CLICKED,
-      {},
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.LMS_INFORMATION_BUTTON_CLICKED, {});
   };
 
   function logUserLoginType(loginType: string) {
-    analyticsReporter.sendEvent(
-      EVENTS.SIGN_UP_LOGIN_TYPE_PICKED_EVENT,
-      {
-        'user login type': loginType,
-      },
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.SIGN_UP_LOGIN_TYPE_PICKED_EVENT, {
+      'user login type': loginType,
+    });
   }
 
   function selectOauthLoginType(loginType: string) {
