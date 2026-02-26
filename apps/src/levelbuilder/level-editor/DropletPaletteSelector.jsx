@@ -1,4 +1,3 @@
-import CodeMirror from 'codemirror';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -9,7 +8,11 @@ import React from 'react';
  */
 export default class DropletPaletteSelector extends React.Component {
   static propTypes = {
-    editor: PropTypes.instanceOf(CodeMirror).isRequired,
+    editor: PropTypes.shape({
+      getValue: PropTypes.func.isRequired,
+      setValue: PropTypes.func.isRequired,
+      on: PropTypes.func.isRequired,
+    }).isRequired,
     palette: PropTypes.object.isRequired,
   };
 

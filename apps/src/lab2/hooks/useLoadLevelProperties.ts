@@ -16,6 +16,9 @@ const useLessonIdPath = DCDO.get(
   true
 );
 
+const isWidget2SourcesMode = getAppOptionsEditBlocks() === WIDGET2_SOURCES;
+const widget2Id = isWidget2SourcesMode ? queryParams('widget2') : null;
+
 async function loadLevelProperties(path: string) {
   const response = await HttpClient.fetchJson<LevelPropertiesMap>(
     path,
@@ -32,8 +35,7 @@ async function loadLevelProperties(path: string) {
 export default function useLoadLevelProperties() {
   const dispatch = useAppDispatch();
   const [propertiesMap, setPropertiesMap] = useState<LevelPropertiesMap>();
-  const isWidget2SourcesMode = getAppOptionsEditBlocks() === WIDGET2_SOURCES;
-  const widget2Id = isWidget2SourcesMode ? queryParams('widget2') : null;
+
   const path = useAppSelector(({progress}) => {
     const {scriptName, currentLevelId, lessons, currentLessonId} = progress;
     const lessonPosition = lessons?.find(

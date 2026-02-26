@@ -12,21 +12,14 @@ import {
   setUnit,
 } from '@cdo/apps/redux/unitSelectionRedux';
 import ProgressTableView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableView';
-import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
 import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
 import i18n from '@cdo/locale';
 
 import {h3Style} from '../../legacySharedComponents/Headings';
 
-import LessonSelector from './LessonSelector';
-import ProgressViewHeader from './ProgressViewHeader';
 import {ViewType, unitDataPropType} from './sectionProgressConstants';
 import {loadUnitProgress} from './sectionProgressLoader';
-import {
-  getCurrentUnitData,
-  setLessonOfInterest,
-  setCurrentView,
-} from './sectionProgressRedux';
+import {getCurrentUnitData, setLessonOfInterest} from './sectionProgressRedux';
 import UnitSelector from './UnitSelector';
 
 import styleConstants from './progressTables/progress-table-constants.module.scss';
@@ -49,7 +42,6 @@ class SectionProgress extends Component {
     unitPosition: PropTypes.number,
     sectionId: PropTypes.number,
     currentView: PropTypes.oneOf(Object.values(ViewType)),
-    setCurrentView: PropTypes.func.isRequired,
     scriptData: unitDataPropType,
     setUnit: PropTypes.func.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
@@ -183,7 +175,6 @@ class SectionProgress extends Component {
     const {currentView, scriptId, courseVersionId, scriptData, sectionId} =
       this.props;
     const levelDataInitialized = this.levelDataInitialized();
-    const lessons = scriptData ? scriptData.lessons : [];
     const showProgressTable =
       levelDataInitialized &&
       (currentView === ViewType.SUMMARY || currentView === ViewType.DETAIL);
@@ -205,15 +196,6 @@ class SectionProgress extends Component {
               onChange={this.onChangeScript}
             />
           </div>
-          {levelDataInitialized && (
-            <div style={styles.toggle}>
-              <div style={{...h3Style, ...styles.heading}}>{i18n.viewBy()}</div>
-              <SectionProgressToggle />
-            </div>
-          )}
-          {currentView === ViewType.DETAIL && lessons.length !== 0 && (
-            <LessonSelector lessons={lessons} onChange={this.onChangeLevel} />
-          )}
         </div>
         <div style={styles.topRowContainer}>
           {showProgressTable && (
@@ -225,7 +207,6 @@ class SectionProgress extends Component {
               />
             </div>
           )}
-          {levelDataInitialized && <ProgressViewHeader />}
         </div>
 
         <div style={{clear: 'both'}}>
@@ -303,9 +284,6 @@ export default connect(
     },
     setLessonOfInterest(lessonOfInterest) {
       dispatch(setLessonOfInterest(lessonOfInterest));
-    },
-    setCurrentView(viewType) {
-      dispatch(setCurrentView(viewType));
     },
   })
 )(SectionProgress);

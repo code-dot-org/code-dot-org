@@ -4,7 +4,6 @@ import currentUser, {
   setUserType,
   setShowAITALessonSummary,
   setHasCompletedPersonalizationQuiz,
-  setAudioSummaryTranscript,
   setCurrentUserName,
   setInitialData,
   setUserRoleInCourse,
@@ -79,18 +78,6 @@ describe('currentUserRedux', () => {
       const nextState = currentUser(initialState, action);
 
       expect(nextState.hasCompletedPersonalizationQuiz).toEqual(true);
-    });
-  });
-
-  describe('setAudioSummaryTranscript', () => {
-    it('can set the users lesson summary transcript', () => {
-      const summaryTranscript = [
-        {timeStamp: '00:00', text: 'Sample transcript text.'},
-      ];
-      const action = setAudioSummaryTranscript(summaryTranscript);
-      const nextState = currentUser(initialState, action);
-
-      expect(nextState.audioSummaryTranscript).toEqual(summaryTranscript);
     });
   });
 
