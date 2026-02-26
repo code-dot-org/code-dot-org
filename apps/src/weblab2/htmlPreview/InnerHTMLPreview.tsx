@@ -29,14 +29,12 @@ const InnerHTMLPreview = () => {
   // when toggling script permissions or when the source doc (or a dependent file) is updated.
   const [renderKey, setRenderKey] = useState(0);
   const [serviceWorkerReady, setServiceWorkerReady] = useState(false);
+  // True once we've made a warmup fetch to the SW immediately before showing the iframe.
+  // Safari aggressively idles SWs; if the SW is idle when the iframe navigate happens,
+  // Safari won't intercept it. The warmup fetch ensures the SW is awake.
+  const [swWarmedUp, setSwWarmedUp] = useState(false);
   const [allowScripts, setAllowScripts] = useState(false);
   const [isLevelLoading, setIsLevelLoading] = useState(false);
-  // HTML content fetched from the service worker, injected via srcdoc to avoid
-  // Safari's restriction on intercepting navigate-type fetches from nested iframes.
-  //const [srcDoc, setSrcDoc] = useState<string | undefined>(undefined);
-  const [srcDocFetchError, setSrcDocFetchError] = useState<string | undefined>(
-    undefined
-  );
 
   const parentOrigin = useMemo(() => {
     const regex = /[^.]+\.preview\.([^.]+)\.codeprojects\.org/;
@@ -169,39 +167,32 @@ const InnerHTMLPreview = () => {
     };
   }, [parentOrigin]);
 
-  // Fetch the current HTML file directly from InnerHTMLPreview (a controlled SW client),
-  // then inject it via srcdoc. This bypasses Safari's restriction on the SW intercepting
-  // navigate-type fetches from iframes nested inside cross-origin iframes.
+  // Warm up the SW before the iframe navigates. We fetch the current file from
+  // InnerHTMLPreview (a controlled SW client) to ensure the SW is awake immediately
+  // before the iframe src is set. currentFile is intentionally omitted from deps:
+  // we only re-warmup on source updates (previewKey) or state changes, not on every
+  // link navigation since the SW is already awake after serving those requests.
   useEffect(() => {
-    if (iframeRef.current) {
-      iframeRef.current.contentWindow?.location.reload();
+    if (!serviceWorkerReady || !currentFile || isLevelLoading) {
+      setSwWarmedUp(false);
+      return;
     }
-    // if (!serviceWorkerReady || !currentFile || isLevelLoading) {
-    //   setSrcDoc(undefined);
-    //   setSrcDocFetchError(undefined);
-    //   return;
-    // }
-    // let cancelled = false;
-    // fetch(`${window.location.origin}/${currentFile}`)
-    //   .then(response => response.text())
-    //   .then(html => {
-    //     if (!cancelled) {
-    //       setSrcDoc(html);
-    //       setRenderKey(prevKey => prevKey + 1);
-    //       setSrcDocFetchError(undefined);
-    //     }
-    //   })
-    //   .catch(err => {
-    //     setSrcDocFetchError(`Failed to fetch preview content: ${err.message}`);
-    //     console.error('Failed to fetch preview content:', err);
-    //   });
-    // return () => {
-    //   cancelled = true;
-    // };
-  }, [/*serviceWorkerReady, currentFile, isLevelLoading,*/ previewKey]);
+    let cancelled = false;
+    setSwWarmedUp(false);
+    fetch(`${window.location.origin}/${currentFile}`)
+      .then(() => {
+        if (!cancelled) setSwWarmedUp(true);
+      })
+      .catch(() => {
+        if (!cancelled) setSwWarmedUp(true);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [serviceWorkerReady, isLevelLoading, previewKey]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const getPreview = useCallback(() => {
-    if (serviceWorkerReady && currentFile && !isLevelLoading) {
+    if (swWarmedUp && currentFile && !isLevelLoading) {
       return (
         <iframe
           ref={iframeRef}
@@ -211,20 +202,10 @@ const InnerHTMLPreview = () => {
           allow="self"
           title="Inner HTML Preview"
           id="inner-preview"
-          key={renderKey}
-          //srcDoc={srcDoc}
+          key={`${renderKey}-${previewKey}`}
           src={`${window.location.origin}/${currentFile}`}
           className={moduleStyles.fileIframe}
         />
-      );
-    } else if (srcDocFetchError) {
-      return (
-        <div className={moduleStyles.placeholderContainer}>
-          <CodebridgeEmptyState
-            title="Error Loading Preview"
-            description="We encountered an error while loading the preview. Please reload your browser, and if the problem persists, contact support@code.org for assistance."
-          />
-        </div>
       );
     } else if (serviceWorkerUnavailable) {
       return (
@@ -243,10 +224,10 @@ const InnerHTMLPreview = () => {
       );
     }
   }, [
-    serviceWorkerReady,
+    swWarmedUp,
     currentFile,
     isLevelLoading,
-    srcDocFetchError,
+    previewKey,
     serviceWorkerUnavailable,
     allowScripts,
     renderKey,
