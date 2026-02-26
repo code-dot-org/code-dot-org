@@ -17,6 +17,6 @@
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2026-02-10T18:29:51.870+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson6-vocab1-2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson6-vocab1-2025-pilot\"},{\"changed_at\":\"2026-02-10 18:30:27 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-10 19:41:57 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-10T18:29:51.870+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson6-vocab1-2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson6-vocab1-2025-pilot\"},{\"changed_at\":\"2026-02-10 18:30:27 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-10 19:41:57 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-25 19:22:43 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

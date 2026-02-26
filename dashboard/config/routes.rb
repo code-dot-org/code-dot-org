@@ -1181,6 +1181,14 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    # AI Lesson Summary Podcasts routes
+    resources :ai_lesson_summary_podcasts, only: [:show] do
+      collection do
+        get :show # GET /ai_lesson_summary_podcasts/show?lesson_id=2
+        get :generate_podcasts_by_unit, controller: :ai_lesson_summary_podcasts, action: :generate_podcasts_by_unit # GET ai_lesson_summary_podcasts/generate_podcasts_by_unit?unit_id=1
+      end
+    end
+
     # Routes used for the Student Snapshot page on the teacher dashboard
     resources :student_snapshots, only: [] do
       collection do
@@ -1267,6 +1275,10 @@ Dashboard::Application.routes.draw do
     # but we leave them outside so that we can easily use the simple "/form" paths.
     get '/form/:path/configuration', to: 'foorm/simple_survey_forms#configuration'
     get '/form/:path', to: 'foorm/simple_survey_forms#show'
+
+    get 'widget2', to: 'widget2#index'
+    post 'widget2/:widget2_id/update_code', to: 'widget2#update_code'
+    post 'widget2/new', to: 'widget2#new'
 
     namespace :foorm do
       resources :simple_survey_forms, only: [:index, :new, :create]

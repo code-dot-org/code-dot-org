@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-02-24 21:49:09 UTC",
+    "serialized_at": "2026-02-25 21:19:19 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -298,6 +298,17 @@
         "activity_section.key": "6ce2b614-1368-4385-adad-e0b4ee583689",
         "lesson_activity.key": "d09a3aa0-d7e4-40f8-845b-9a3ba8481d0b"
       }
+    },
+    {
+      "key": "96233bf4-8cac-453a-a98b-8ad08529b7a4",
+      "position": 3,
+      "properties": {
+        "progression_name": "Mini-Lessons: Co-Creation with AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "96233bf4-8cac-453a-a98b-8ad08529b7a4",
+        "lesson_activity.key": "d09a3aa0-d7e4-40f8-845b-9a3ba8481d0b"
+      }
     }
   ],
   "script_levels": [
@@ -476,6 +487,28 @@
       "level_keys": [
         "aid-thinking-critically-lesson3-level1_2026-test"
       ]
+    },
+    {
+      "chapter": 9,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Mini-Lessons: Co-Creation with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aid-thinking-critically-lesson3-level3_2026-test"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-thinking-critically-about-ai-2026",
+        "activity_section.key": "96233bf4-8cac-453a-a98b-8ad08529b7a4"
+      },
+      "level_keys": [
+        "aid-thinking-critically-lesson3-level3_2026-test"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -573,6 +606,18 @@
         "lesson_group.key": "",
         "script.name": "6-12-aid-thinking-critically-about-ai-2026",
         "activity_section.key": "6ce2b614-1368-4385-adad-e0b4ee583689"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aid-thinking-critically-lesson3-level3_2026-test",
+        "script_level.level_keys": [
+          "aid-thinking-critically-lesson3-level3_2026-test"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-thinking-critically-about-ai-2026",
+        "activity_section.key": "96233bf4-8cac-453a-a98b-8ad08529b7a4"
       }
     }
   ],

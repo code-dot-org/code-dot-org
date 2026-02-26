@@ -11,18 +11,20 @@ markdown <<MARKDOWN
 
 ---
 
-<img src="https://images.code.org/c0123c345ec6c97b12ecfd2c29f89d47-image-1771349104095.png" alt="icon of an open mailbox with a package inside" width="200px" style="border-radius:10px; float:right; margin: 0 0 0px 20px;">
+<img src="https://images.code.org/c0123c345ec6c97b12ecfd2c29f89d47-image-1771349104095.png" alt="icon of an open mailbox with a package inside" width="100px" style="border-radius:10px; float:right; margin: 0 100px 0px 20px;">
 
 ## Scenario: The Mystery Mailbox
 
 #### Imagine you ordered a **mystery box** online.  
 #### You walk to the mailbox to check it.
 
-<span style="display:inline-block; padding:10px 12px; border-left:4px solid #6c63ff; background:#f6f6ff; border-radius:8px; margin:10px 0; font-size: 14pt;">
-<strong>Question:</strong> What could be happening with your package right now?
-</span>
 
 <div style="clear:both;"></div>
+
+
+> #### **Question:** What could be happening with your package right now?
+
+
 
 ---
 
@@ -43,7 +45,7 @@ markdown <<MARKDOWN
       <tbody>
         <tr>
           <td style="padding:10px; border-bottom:1px solid #f0f2f5;">
-            <span style="display:inline-block; padding:4px 10px; border-radius:999px; background:#fff7ed; border:1px solid #fed7aa;font-size: 14pt;">
+            <span style="display:inline-block; padding:4px 10px; border-radius:999px; background:#dccbea; font-size: 14pt;">
               <strong>Pending</strong>
             </span>
           </td>
@@ -53,7 +55,7 @@ markdown <<MARKDOWN
         </tr>
         <tr>
           <td style="padding:10px; border-bottom:1px solid #f0f2f5;font-size: 14pt;">
-            <span style="display:inline-block; padding:4px 10px; border-radius:999px; background:#f0fdf4; border:1px solid #bbf7d0;font-size: 14pt;">
+            <span style="display:inline-block; padding:4px 10px; border-radius:999px; background:#b2dee3; font-size: 14pt;">
               <strong>Fulfilled</strong>
             </span>
           </td>
@@ -63,7 +65,7 @@ markdown <<MARKDOWN
         </tr>
         <tr>
           <td style="padding:10px;">
-            <span style="display:inline-block; padding:4px 10px; border-radius:999px; background:#fef2f2; border:1px solid #fecaca;font-size: 14pt;">
+            <span style="display:inline-block; padding:4px 10px; border-radius:999px; background:#f7bfbf; font-size: 14pt;">
               <strong>Rejected</strong>
             </span>
           </td>
@@ -119,9 +121,7 @@ markdown <<MARKDOWN
   </div>
 </div>
 
-<span style="display:inline-block; padding:10px 12px; border-left:4px solid #10b981; background:#f0fdf4; border-radius:8px;font-size: 14pt;">
-<strong>Big idea:</strong> A Promise tracks the “delivery status” of an online request your code made.
-</span>
+
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 A <strong>promise</strong> an object that represents a value that is not available yet but will be resolved in the future. It's a placeholder for the result of an asynchronous operation. <br><br> It has three states: <strong>pending, fulfilled, or rejected.</strong>
@@ -129,5 +129,5 @@ markdown <<MARKDOWN
 </p>
 </div>
 
-![]()
+
 MARKDOWN
