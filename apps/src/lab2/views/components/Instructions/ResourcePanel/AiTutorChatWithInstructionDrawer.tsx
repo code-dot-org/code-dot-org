@@ -20,7 +20,6 @@ interface AiTutorChatWithInstructionDrawerProps {
   levelName?: string;
   channelId?: string;
   aiTutorChatButtonData?: ChatButtonData[];
-  aiTutorSystemPromptName?: string;
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   instructionsContent?: React.ReactNode;
@@ -47,7 +46,6 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   levelName,
   channelId,
   aiTutorChatButtonData,
-  aiTutorSystemPromptName,
   aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
   instructionsContent,
@@ -242,7 +240,6 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
             levelName={levelName}
             channelId={channelId}
             aiTutorChatButtonData={aiTutorChatButtonData}
-            aiTutorSystemPromptName={aiTutorSystemPromptName}
             aiTutorSystemPrompt={aiTutorSystemPrompt}
             aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
             hasInstructionsDrawer={true}

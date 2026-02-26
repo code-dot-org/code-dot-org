@@ -133,7 +133,6 @@ type ResourcePanelProps = InstructionsProps & {
   styleNavigationAsBubble?: boolean;
   isValidationTourEnabled?: boolean;
   isOnboardingTourEnabled?: boolean;
-  aiTutorSystemPromptName?: string;
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   documentationUrl?: string;
@@ -166,7 +165,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   styleNavigationAsBubble = false,
   isValidationTourEnabled,
   isOnboardingTourEnabled,
-  aiTutorSystemPromptName,
   aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
   documentationUrl,
@@ -272,7 +270,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             levelName={levelName}
             channelId={channelId}
             aiTutorChatButtonData={aiTutorChatButtonData}
-            aiTutorSystemPromptName={aiTutorSystemPromptName}
             aiTutorSystemPrompt={aiTutorSystemPrompt}
             aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
           />
@@ -285,7 +282,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             levelName={levelName}
             channelId={channelId}
             aiTutorChatButtonData={aiTutorChatButtonData}
-            aiTutorSystemPromptName={aiTutorSystemPromptName}
             aiTutorSystemPrompt={aiTutorSystemPrompt}
             aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
             instructionsContent={instructionsContent}
@@ -367,7 +363,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     levelName,
     channelId,
     aiTutorChatButtonData,
-    aiTutorSystemPromptName,
     aiTutorSystemPrompt,
     aiTutorResponseSchemaSettings,
     selectedVersion,
