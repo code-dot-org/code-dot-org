@@ -421,6 +421,7 @@ class User < ApplicationRecord
   end
 
   after_create :migrate_to_multi_auth
+  after_create :create_demo_section, if: :teacher?
 
   after_update if: -> {cap_status? && property_previously_changed?(:us_state)} do
     Services::ChildAccount.remove_compliance(self)
@@ -1193,6 +1194,10 @@ class User < ApplicationRecord
 
   def within_united_states?
     user_geos.first&.country == 'United States'
+  end
+
+  def create_demo_section
+    DemoSectionUtils.create_demo_section(self)
   end
 
   def associate_with_potential_pd_enrollments
