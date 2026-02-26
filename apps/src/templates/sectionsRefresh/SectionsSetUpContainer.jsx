@@ -7,7 +7,7 @@ import {Provider} from 'react-redux';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {showVideoDialog} from '@cdo/apps/code-studio/videos';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import InfoHelpTip from '@cdo/apps/sharedComponents/InfoHelpTip';
@@ -141,22 +141,18 @@ export default function SectionsSetUpContainer({
     course offerings controller function to populate previousVersionYear and newVersionYear.
     */
     if (isNewSection) {
-      analyticsReporter.sendEvent(
-        EVENTS.SECTION_SETUP_COMPLETED,
-        {
-          sectionUnitId: section.course?.unitId,
-          sectionCurriculumLocalizedName: section.course?.displayName,
-          sectionCurriculum: section.course?.courseOfferingId, //this is course Offering id
-          sectionCurriculumVersionYear: section.course?.versionYear,
-          sectionGrade: section.grade ? section.grade[0] : null,
-          sectionLockSelection: section.restrictSection,
-          sectionName: section.name,
-          sectionPairProgramSelection: section.pairingAllowed,
-          flowVersion: NEW,
-          isOnTeacherDashboard: location.pathname.includes('teacher_dashboard'),
-        },
-        PLATFORMS.STATSIG
-      );
+      analyticsReporter.sendEvent(EVENTS.SECTION_SETUP_COMPLETED, {
+        sectionUnitId: section.course?.unitId,
+        sectionCurriculumLocalizedName: section.course?.displayName,
+        sectionCurriculum: section.course?.courseOfferingId, //this is course Offering id
+        sectionCurriculumVersionYear: section.course?.versionYear,
+        sectionGrade: section.grade ? section.grade[0] : null,
+        sectionLockSelection: section.restrictSection,
+        sectionName: section.name,
+        sectionPairProgramSelection: section.pairingAllowed,
+        flowVersion: NEW,
+        isOnTeacherDashboard: location.pathname.includes('teacher_dashboard'),
+      });
     }
     /*
     We want to send a 'curriculum assigned' event if this is not a new section
@@ -172,25 +168,21 @@ export default function SectionsSetUpContainer({
         initialSection &&
         section.course?.unitId !== initialSection.course?.unitId)
     ) {
-      analyticsReporter.sendEvent(
-        EVENTS.CURRICULUM_ASSIGNED,
-        {
-          sectionName: section.name,
-          sectionId: section.id,
-          sectionLoginType: section.loginType,
-          previousUnitId: initialSection.course?.unitId,
-          previousCourseId: initialSection.course?.courseOfferingId,
-          previousCourseVersionId: initialSection.course?.versionId,
-          previousVersionYear: null,
-          newUnitId: section.course?.unitId,
-          newCourseId: section.course?.courseOfferingId,
-          newCourseVersionId: section.course?.courseVersionId,
-          newVersionYear: null,
-          flowVersion: NEW,
-          isOnTeacherDashboard: location.pathname.includes('teacher_dashboard'),
-        },
-        PLATFORMS.STATSIG
-      );
+      analyticsReporter.sendEvent(EVENTS.CURRICULUM_ASSIGNED, {
+        sectionName: section.name,
+        sectionId: section.id,
+        sectionLoginType: section.loginType,
+        previousUnitId: initialSection.course?.unitId,
+        previousCourseId: initialSection.course?.courseOfferingId,
+        previousCourseVersionId: initialSection.course?.versionId,
+        previousVersionYear: null,
+        newUnitId: section.course?.unitId,
+        newCourseId: section.course?.courseOfferingId,
+        newCourseVersionId: section.course?.courseVersionId,
+        newVersionYear: null,
+        flowVersion: NEW,
+        isOnTeacherDashboard: location.pathname.includes('teacher_dashboard'),
+      });
     }
   };
 
