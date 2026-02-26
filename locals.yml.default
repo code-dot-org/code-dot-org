@@ -12,11 +12,6 @@
 #langfuse_secret_key: localoverride
 #langfuse_public_key: localoverride
 
-# Causes dashboard-server to run pegasus as middleware, starting both in a
-# single command.  This is preferred (and default) in development mode.
-dashboard_enable_pegasus: true
-
-
 # Run dashboard-server with the level editing interface enabled (for admins)
 #levelbuilder_mode: true
 
