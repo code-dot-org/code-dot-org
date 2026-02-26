@@ -429,6 +429,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     legacy_id = SecureRandom.alphanumeric(10)
     user = create(:teacher, :with_clever_authentication_option)
     auth_option = user.authentication_options.find_by(credential_type: AuthenticationOption::CLEVER)
+    refute_equal AuthenticationOption::Clever::VERSION[:v3], auth_option.version
     auth_option.update!(authentication_id: legacy_id)
 
     auth = generate_auth_user_hash \

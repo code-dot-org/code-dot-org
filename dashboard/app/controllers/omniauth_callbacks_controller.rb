@@ -355,15 +355,11 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     if user
       ao = user.authentication_options.find_by(credential_type: auth_hash.provider, authentication_id: legacy_id)
-      ao.update(authentication_id: auth_hash.uid, version: AuthenticationOption::Clever::VERSION[:v3]) if ao
+      ao.update!(authentication_id: auth_hash.uid, version: AuthenticationOption::Clever::VERSION[:v3]) if ao
 
       Metrics::Events.log_event(
         user: user,
         event_name: 'clever_legacy_id_migration',
-        metadata: {
-          legacy_id: legacy_id,
-          new_id: auth_hash.uid
-        }
       )
     end
 
