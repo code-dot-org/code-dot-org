@@ -39,7 +39,10 @@ const {
   LOCALIZATION_ENTRIES,
 } = require('./webpackEntryPoints');
 
-const WEBPACK_DEV_SERVER_PORT = 9000;
+const WEBPACK_DEV_SERVER_PORT = parseInt(
+  process.env.WEBPACK_DEV_SERVER_PORT || '9000',
+  10
+);
 
 const p = (...paths) => path.resolve(__dirname, ...paths);
 
