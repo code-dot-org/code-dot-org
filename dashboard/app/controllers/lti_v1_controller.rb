@@ -158,9 +158,7 @@ class LtiV1Controller < ApplicationController
       deployment_id = decoded_jwt[Policies::Lti::LTI_DEPLOYMENT_ID_CLAIM]
       deployment_name = decoded_jwt[Policies::Lti::LTI_DEPLOYMENT_PLATFORM_CLAIM]&.[](:name)
       deployment = Queries::Lti.get_deployment(integration[:id], deployment_id)
-      # ClassLink uses a non-standard role claim key
-      role_key = decoded_jwt[Policies::Lti::CLASSLINK_ROLE_KEY].present? ? Policies::Lti::CLASSLINK_ROLE_KEY : Policies::Lti::LTI_ROLES_KEY
-      lti_account_type = Policies::Lti.get_account_type(decoded_jwt[role_key])
+      lti_account_type = Policies::Lti.get_account_type(decoded_jwt[Policies::Lti::LTI_ROLES_KEY])
 
       # Store deployment ID and issuer in session for later use
       session[:external_lti_deployment_id] = deployment_id

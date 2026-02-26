@@ -1,0 +1,35 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-02-18T06:35:10.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Add to your Web Page!",
+    "project_template_level_name": "CSD U2L6-L3-template-2025",
+    "long_instructions": "# Add to your CSS Webpage\r\n\r\nUse your new knowledge and skills to add to the page you started in Lesson 6. The webpage you created about something you enjoy in Level 11, challenge f has been transferred below - add some style to your images!",
+    "bubble_choice_description": "Add images to the web page you started in a previous challenge level!",
+    "thumbnail_url": "https://images.code.org/d73491f57c18795a0676793a00465124-wish-list.png",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-02-18 06:35:15 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

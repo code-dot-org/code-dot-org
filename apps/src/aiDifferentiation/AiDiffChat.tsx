@@ -1,3 +1,4 @@
+import {LinkButton} from '@code-dot-org/component-library/button';
 import React, {useEffect, useRef, useState} from 'react';
 
 import {
@@ -15,6 +16,7 @@ import {
   AiInteractionStatus as Status,
   AiDiffContext,
   AiDiffArtifactType,
+  AiInteractionStatus,
 } from '@cdo/generated-scripts/sharedConstants';
 
 import {EVENTS, PLATFORMS} from '../metrics/AnalyticsConstants';
@@ -24,14 +26,17 @@ import HttpClient from '../util/HttpClient';
 import AiDiffBotMessageFooter from './AiDiffBotMessageFooter';
 import AiDiffChatFooter from './AiDiffChatFooter';
 import AiDiffChatHeader from './AiDiffChatHeader';
+import AiDiffCreateArtifactButtons from './AiDiffCreateArtifactButtons';
 import AiDiffSuggestedPrompts from './AiDiffSuggestedPrompts';
 import {DEFAULT_THREAD_TITLE} from './constants';
+import {SUGGESTED_PROMPTS_FOR_SELECTION} from './predefinedPrompts';
 import {
-  EXIT_TICKET_PROMPT,
-  LESSON_HOOK_PROMPT,
-  SUGGESTED_PROMPTS_FOR_SELECTION,
-} from './predefinedPrompts';
-import {ChatItem, ChatPrompt, Context, SuggestPromptsType} from './types';
+  AiArtifact,
+  ChatItem,
+  ChatPrompt,
+  Context,
+  SuggestPromptsType,
+} from './types';
 
 import style from './ai-differentiation.module.scss';
 
@@ -46,6 +51,34 @@ interface AiDiffChatProps {
   threadFetchCallback?: () => void;
   personalizationData?: PersonalizationData;
 }
+
+const AiDiffArtifactLink: React.FC<{artifact: AiArtifact | undefined}> = ({
+  artifact,
+}) => {
+  if (artifact) {
+    const title = artifact.title
+      ? artifact.title
+      : artifact.type === AiDiffArtifactType.EXIT_TICKET
+      ? `Exit Ticket`
+      : `Lesson Hook`;
+    return (
+      <div className={style.artifactShowButtons}>
+        <LinkButton
+          color="gray"
+          size="s"
+          type="secondary"
+          target="_blank"
+          href={artifact.url}
+          aria-label={'Open artifact'}
+          iconLeft={{iconName: 'shapes'}}
+          text={title}
+        />
+      </div>
+    );
+  } else {
+    return null;
+  }
+};
 
 const AiDiffChat: React.FC<AiDiffChatProps> = ({
   context,
@@ -69,9 +102,9 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
     };
   }, [context, scriptName]);
 
-  const viewAsUserId = useAppSelector(
-    state => state.progress?.viewAsUserId || undefined
-  );
+  const viewAsUserId = useAppSelector(state => {
+    return state.progress?.viewAsUserId || undefined;
+  });
   const threadId = useAppSelector(state => state.aichat.threadId);
   const threadTitle = useAppSelector(state => state.aichat.threadTitle);
   const initialThreadPrompt = useAppSelector(
@@ -79,6 +112,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   );
   const threadMessages = useAppSelector(state => state.aichat.threadMessages);
   const artifactType = useAppSelector(state => state.aichat.artifactType);
+  const artifact = useAppSelector(state => state.aichat.artifact);
 
   const dispatch = useAppDispatch();
 
@@ -137,6 +171,8 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
             chatMessageText: json.chat_message_text,
             status: json.status,
             id: json.message_id,
+            isArtifactCandidate: json.is_artifact_candidate,
+            artifactCandidateType: json.artifact_candidate_type,
           };
 
           // logging here because on the first user message the threadID is 0
@@ -223,11 +259,8 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
       if (!prompt.followUpPrompts && !prompt.response) {
         getAIResponse(prompt.prompt, true, prompt.label);
       }
-      if (prompt === EXIT_TICKET_PROMPT) {
-        dispatch(setArtifactType(AiDiffArtifactType.EXIT_TICKET));
-      }
-      if (prompt === LESSON_HOOK_PROMPT) {
-        dispatch(setArtifactType(AiDiffArtifactType.LESSON_HOOK));
+      if (prompt.artifactCandidateType) {
+        dispatch(setArtifactType(prompt.artifactCandidateType));
       }
     },
     [dispatch, getAIResponse, threadTitle]
@@ -284,10 +317,19 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
           ) : (
             <ChatMessage
               text={item.chatMessageText}
+              postText={
+                (item.isArtifactCandidate && (
+                  <AiDiffCreateArtifactButtons message={item} />
+                )) ||
+                (item.isArtifact && <AiDiffArtifactLink artifact={artifact} />)
+              }
               role={item.role}
               customStyles={style}
               key={id}
               isTA={true}
+              messageStyle={
+                item.status !== AiInteractionStatus.OK ? 'danger' : 'default'
+              }
               footer={
                 item.role === Role.ASSISTANT && (
                   <AiDiffBotMessageFooter

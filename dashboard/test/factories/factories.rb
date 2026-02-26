@@ -1499,6 +1499,16 @@ FactoryBot.define do
     lesson
   end
 
+  factory :lesson_feedback do
+    association(:teacher, factory: :teacher)
+    association(:student, factory: :student)
+    lesson
+    saved_feedback {"Generic saved feedback"}
+    submitted_feedback {nil}
+    submitted_at {nil}
+    resources {nil}
+  end
+
   factory :activity_section do
     sequence(:key) {|n| "activity-section-#{n}"}
     sequence(:position)

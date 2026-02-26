@@ -2,7 +2,7 @@ import Alert from '@code-dot-org/component-library/alert';
 import {Button, LinkButton} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Modal from '@code-dot-org/component-library/modal';
-import Typography from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import QRCode from 'qrcode.react';
 import React, {useCallback} from 'react';
@@ -37,9 +37,10 @@ const AfeCareerTourBlock: React.FunctionComponent = () => {
   return (
     <div className={classNames(moduleStyles.block, moduleStyles.blockAfe)}>
       <Typography
-        semanticTag="h2"
-        visualAppearance="heading-md"
         className={moduleStyles.heading}
+        component="h2"
+        variant="h4"
+        gutterBottom
       >
         {i18n.careerTourTitle()}
       </Typography>
@@ -181,9 +182,10 @@ const ShareDialog: React.FunctionComponent<{
       <div className={moduleStyles.dialogContainer} data-theme={theme}>
         <div id="share-dialog" className={moduleStyles.shareDialog}>
           <Typography
-            semanticTag="h1"
-            visualAppearance="heading-lg"
             className={moduleStyles.heading}
+            component="h1"
+            variant="h3"
+            gutterBottom
           >
             {dialogId === 'hoc2024'
               ? i18n.congratulations()
@@ -195,9 +197,10 @@ const ShareDialog: React.FunctionComponent<{
               <div className={moduleStyles.block}>
                 {dialogId === 'hoc2024' && (
                   <Typography
-                    semanticTag="h2"
-                    visualAppearance="heading-md"
                     className={moduleStyles.heading}
+                    component="h2"
+                    variant="h4"
+                    gutterBottom
                   >
                     {i18n.shareTitle()}
                   </Typography>

@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-02-18T16:31:10.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# CIW AI Associate Standard: 5.1\n# Standard Description: Identify supervised, unsupervised, reinforcement, and transfer learning types.\n#\n# Rationale: This tutorial focuses on the distinction between Supervised Learning (learning with labels) \n# and Unsupervised Learning (finding patterns in unlabeled data). By using a classifier vs. a \n# clustering algorithm on the same data, students see how the presence or absence of \"answers\" \n# changes the AI's task.\n\n\"\"\"\nWelcome back! Today we're looking at two different \"styles\" of learning:\n1. Supervised Learning: Like a student with a teacher who provides the correct answers.\n2. Unsupervised Learning: Like a detective trying to find groups or patterns without any clues.\n\nWe'll use scikit-learn to see both in action!\n\"\"\"\n\nfrom sklearn.datasets import make_blobs\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.cluster import KMeans\nimport matplotlib.pyplot as plt\n\n# --- PREPARING OUR DATA ---\n# We'll create some \"blobs\" of data points.\n# X contains the coordinates (location) of the points.\n# y contains the \"true\" group each point belongs to (our labels).\nX, y = make_blobs(n_samples=300, centers=3, cluster_std=0.60, random_state=0)\n\n# --- PART 1: SUPERVISED LEARNING (Classification) ---\nprint(\"--- Part 1: Supervised Learning ---\")\n# In supervised learning, we give the AI the \"answers\" (y).\n# It learns to associate locations (X) with groups (y).\nsupervised_model = LogisticRegression()\nsupervised_model.fit(X, y) \n\n# --- PART 2: UNSUPERVISED LEARNING (Clustering) ---\nprint(\"--- Part 2: Unsupervised Learning ---\")\n# In unsupervised learning, we DON'T give the AI the answers.\n# It only sees the locations (X) and has to find patterns on its own.\nunsupervised_model = KMeans(n_clusters=3)\nunsupervised_model.fit(X) # Notice we ONLY pass X here, no 'y'!\nclusters = unsupervised_model.predict(X)\n\n# --- VISUALIZATION ---\nplt.figure(figsize=(12, 5))\n\n# Plot Supervised Results\nplt.subplot(1, 2, 1)\nplt.scatter(X[:, 0], X[:, 1], c=y, cmap='viridis', edgecolors='k')\nplt.title(\"Supervised Learning\\n(The AI was told the groups)\")\n\n# Plot Unsupervised Results\nplt.subplot(1, 2, 2)\nplt.scatter(X[:, 0], X[:, 1], c=clusters, cmap='plasma', edgecolors='k')\nplt.title(\"Unsupervised Learning\\n(The AI found these groups on its own)\")\n\nprint(\"Look at the graphs! One uses known labels, the other finds clusters.\")\nplt.show()\n\n\"\"\"\n--- YOUR TURN ---\nWe've set up a new dataset for you. Your job is to apply Unsupervised Learning \n(Clustering) to see if the AI can group these points.\n\n1. We've created 'X_mystery' for you.\n2. Create a KMeans model with n_clusters=2.\n3. Fit the model using ONLY X_mystery.\n4. Use plt.scatter to see what the AI found!\n\"\"\"\n\n# STARTING CODE FOR STUDENT:\nX_mystery, _ = make_blobs(n_samples=200, centers=2, random_state=42)\n\n# TODO: Create a KMeans model with 2 clusters\n# TODO: Fit the model to X_mystery\n# TODO: Get the predictions (labels) using .predict(X_mystery)\n\n# We've provided the plotting code for you below!\n# plt.scatter(X_mystery[:, 0], X_mystery[:, 1], c=YOUR_PREDICTIONS_HERE)\n# plt.title(\"Mystery Clusters\")\n# plt.show()\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFTDG6jyYgtI/CEUE/82dEkG4hlI8OLsdjJD0In8S\n03BB+jPkGgyYB0/9C3zqHMHEFpKeCsugYbpGMxzBNwrd7qASagJaFzMnVUyM\n2TXS7Hau9lj7JpZIHXn9fmxXRRANWeQzCkjD4IE5IHthhJxZdOez/zLX921r\nGupFeDLh8eUHvAKNKPkiENq6rhi22TmZGGRwXusIfDXTc6dx/lGFqWqrxd5w\nDC726P20MQ0KQWVO4FPPJpv/9etHkL8ldk7B49BbFzjJOWESzwDJKyNa24Oy\nzeIa4Qmxbzlp+LcvCWjiZGXnc8+25Iwj2EwhGvXyu3jjGiWJx/eiTbMlaxC7\nrK3X9TfCJks1NPRpfZ4GUErLQ3ev/iSO10r2PQrJCXFLeDNSi37iUDh6/Mfj\nlh8lvTIj4abDdxPkiZcAjdqSYDoAyWuarII5SQsOKuZBErE2z2AhGvo1bHla\nlFTvmdGH+rc7C6mjDaPKfc6VJrq+vIP6V/pCJnSWJzSHD6euTjbK1azjD3bF\nRV2UD/gjPhsqFdBWNAns5LR2ka6Db0vIdpL3F1+vkHyM1NrSxUL5WgzbaXDm\nEU683W7SBtKn6H/iWrNI97KNkXgkPwxTW+mfCLSpfVBcaZaPLullQ2cY41FS\ng3qOyWX1Un3UqxjlSof2OKqnu+Y3gkJ96g8ohejnvwYbsb15pEd9OozPt5mB\nia0MLSM12Ca0+Yoi9kFxJPKbb0QKG0MUyH1z0jQ3iXqZvWPRnzONpw/wE91K\nymGpe/yFo5AojpgcEzkWcWlwOlRWioeaEp+OwXQT1ogFWUmefI4t1XEdKvH0\nY+Iqkl/sBYNHX2+enmaGjzAnv2IcOGYb4j0VLjnkoOwzQ4jkVjIa8TOlhiXL\nbC8Nq7N9h82SUD450evKsrghEvEwf+ipoOxGhkVuxZbGSLL29OFJHnPbC0bD\n9zt+zsJFTPnshiZiWT2csYmze+Gbi+TYd7SHv7BRDpVWdybS5v5q6lP2Bala\nSTTB6t1HwS5VXPNBrFwSMpup2+0JfTw5N5wO9pGE1OFvPix2ZhIrESyOUSlh\nHlRs6NGJ/zzeVwhZHOUKd+/Ccp67gCfOGRhrEx5PEs/WxTg2mMell/BUJsn6\nxTq8Ciug0ayuF4kqS+khHX/uzMRDNTnFREUA0DWIDP/W6oILDom7M9oW41GE\nsZt9B+ZQ9nGeRwYzdPooJmpoYKbVxp0KcSw+1+h77HPz/5jxeRcU/VfCQ6cH\nqreobFr7gG3QvAp+6m/qQBReYJk79wZKofktwu1TmFx/Pl1iNa5qsiAnvk6o\nv+Z3Ixh4r6auRfnMDIO0IoZ/oGIP1yuQc7nuZ8rVUdPbei+S+lUa/aIV8YqJ\ndzeMw4k=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-18 16:55:40 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:13:30 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:13:38 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>

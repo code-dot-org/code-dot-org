@@ -6,6 +6,7 @@ import {
   clearUserAddedSelectionContext,
   setChatMessageSent,
   updateChatMessageStatus,
+  updateRequestId,
 } from '@cdo/apps/aichat/redux/slice';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
@@ -14,6 +15,7 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {RootState} from '@cdo/apps/types/redux';
+import experiments from '@cdo/apps/util/experiments';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
@@ -38,6 +40,14 @@ import {getNewRemoveId} from '../utils';
 import {addChatEvent} from './addChatEvent';
 import {notifyErrorUnauthorized} from './helpers/notifyErrorUnauthorized';
 import {sendAnalytics} from './sendAnalytics';
+
+// We currently default to using the legacy Gemini API unless use vertex query param set.
+// This will be removed once we switch over to Vertex completely.
+const useVertex =
+  experiments.isEnabledAllowingQueryString('aitutor-use-vertex');
+
+// Log whether using Vertex API or not in case query param entered incorrectly.
+console.log(`🤖: Tutor set to use Vertex API? ${useVertex ? 'YES' : 'NO'}`);
 
 // This thunk's callback function submits a user's chat content and AI customizations to
 // the chat completion endpoint, then waits for a chat completion response, and updates
@@ -166,7 +176,7 @@ export const submitChatContents = createAsyncThunk(
       messages = await postAichatCompletionMessage(
         newUserMessage,
         chatEventsCurrent.filter(isCompletedChatMessage),
-        modelParameters,
+        {...modelParameters, useVertex},
         aichatContext
       );
 
@@ -212,6 +222,12 @@ export const submitChatContents = createAsyncThunk(
           updateChatMessageStatus({
             updateId: newUserMessage.updateId,
             status: message.status,
+          })
+        );
+        dispatch(
+          updateRequestId({
+            updateId: newUserMessage.updateId,
+            requestId: message.requestId,
           })
         );
         logChatEvent(message, state.progress.viewAsUserId);

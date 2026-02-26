@@ -404,6 +404,7 @@ module.exports = function (grunt) {
       options: {force: true},
       src: ['build/karma'],
     },
+    package: ['build/package'],
   };
 
   const piskelDevMode = PISKEL_DEVELOPMENT_MODE;
@@ -616,7 +617,13 @@ module.exports = function (grunt) {
     // Unless explicitly overridden, set HOT=1 and DEV=1 when running `grunt dev`
     process.env.HOT ||= 1;
     process.env.DEV ||= 1;
-    grunt.task.run(['prebuild', 'newer:sass', 'concurrent:watch', 'postbuild']);
+    grunt.task.run([
+      'clean:package',
+      'prebuild',
+      'newer:sass',
+      'concurrent:watch',
+      'postbuild',
+    ]);
   });
 
   grunt.registerTask('default', ['rebuild', 'test']);

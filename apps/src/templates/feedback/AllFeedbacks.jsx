@@ -1,30 +1,54 @@
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import LevelFeedback from '@cdo/apps/templates/feedback/LevelFeedback';
+import LessonFeedbackContainer from '@cdo/apps/templates/feedback/LessonFeedbackContainer';
+import LevelFeedbackContainer from '@cdo/apps/templates/feedback/LevelFeedbackContainer';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import {levelFeedbackShape} from './types';
 
+import styles from './LessonFeedback.module.scss';
 function AllFeedbacks({feedbacksByLevel}) {
-  const noFeedback = feedbacksByLevel.length === 0;
+  const [showLessonFeedback, setShowLessonFeedback] = React.useState(false);
+
+  const selectedTab = showLessonFeedback ? 'lesson' : 'level';
+
+  const studentId = useAppSelector(state => state.currentUser.userId);
+
+  const handleChange = value => {
+    setShowLessonFeedback(value === 'lesson');
+  };
 
   return (
     <div>
-      <h1 style={styles.header}>{i18n.feedbackAll()}</h1>
-      {noFeedback && <div>{i18n.feedbackNoneYet()}</div>}
-      {feedbacksByLevel.map((levelFeedback, i) => {
-        return <LevelFeedback key={i} {...levelFeedback} />;
-      })}
+      <h1 className={styles.pageHeader}>{i18n.feedbackAll()}</h1>
+      <SegmentedButtons
+        selectedButtonValue={selectedTab}
+        size="s"
+        buttons={[
+          {
+            id: 'assess-a-student-button',
+            label: 'Level Feedback',
+            value: 'level',
+          },
+          {
+            id: 'class-data-button',
+            label: 'Lesson Feedback',
+            value: 'lesson',
+          },
+        ]}
+        onChange={handleChange}
+        className={styles.segmentedButtons}
+      />
+      {!showLessonFeedback && (
+        <LevelFeedbackContainer feedbacksByLevel={feedbacksByLevel} />
+      )}
+      {showLessonFeedback && <LessonFeedbackContainer studentId={studentId} />}
     </div>
   );
 }
-
-const styles = {
-  header: {
-    marginBottom: 20,
-  },
-};
 
 AllFeedbacks.propTypes = {
   feedbacksByLevel: PropTypes.arrayOf(levelFeedbackShape),

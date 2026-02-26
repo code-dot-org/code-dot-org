@@ -1,4 +1,4 @@
-import {Heading3} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
@@ -131,13 +131,13 @@ export default class SublevelCard extends React.Component {
           >
             <div style={styles.bubbleAndTitle}>
               {this.renderBubble()}
-              <Heading3
+              <Typography
                 className="sublevel-card-title-uitest"
-                visualAppearance="heading-xs"
-                noMargin
+                component="h3"
+                variant="h6"
               >
                 {sublevel.display_name}
-              </Heading3>
+              </Typography>
             </div>
             {sublevel.description && (
               <div

@@ -1,6 +1,6 @@
 import {Theme} from '@code-dot-org/component-library/common/contexts';
 import Modal from '@code-dot-org/component-library/modal';
-import Typography from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import QRCode from 'qrcode.react';
 import React from 'react';
 
@@ -46,7 +46,7 @@ const HoaiCongrats: React.FC<Props> = ({
         shareEnabled && (
           <div className={styles.shareContainer}>
             <div className={styles.block}>
-              <Typography semanticTag="h2" visualAppearance="heading-md">
+              <Typography component="h2" variant="h4" gutterBottom>
                 Share your project
               </Typography>
               <div className={styles.qrCode} id="share-qrcode-container">

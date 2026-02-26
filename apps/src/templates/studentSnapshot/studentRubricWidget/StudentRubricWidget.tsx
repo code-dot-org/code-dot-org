@@ -1,4 +1,4 @@
-import {BodyThreeText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import type {InferProps} from 'prop-types';
 import React, {useEffect, useState} from 'react';
 
@@ -101,11 +101,11 @@ const StudentRubricWidget: React.FC<StudentRubricWidgetProps> = ({
         if (rubricResponse.value?.rubric) {
           setRubric(rubricResponse.value.rubric);
         } else {
-          setError('No rubric data found');
+          setError("This lesson doesn't have a rubric.");
         }
       } catch (err) {
         console.error('Failed to fetch rubric data:', err);
-        setError('No rubric found');
+        setError("This lesson doesn't have a rubric.");
       } finally {
         setIsLoading(false);
       }
@@ -119,15 +119,27 @@ const StudentRubricWidget: React.FC<StudentRubricWidgetProps> = ({
   let scrollable = false;
 
   if (isLoading) {
-    widgetContent = <BodyThreeText>Loading rubric...</BodyThreeText>;
+    widgetContent = (
+      <Typography variant="body3" gutterBottom>
+        Loading rubric...
+      </Typography>
+    );
   } else if (error) {
-    widgetContent = <BodyThreeText>{error}</BodyThreeText>;
+    widgetContent = (
+      <Typography variant="body3" gutterBottom>
+        {error}
+      </Typography>
+    );
   } else if (
     !rubric ||
     !rubric.learningGoals ||
     rubric.learningGoals.length === 0
   ) {
-    widgetContent = <BodyThreeText>No rubric data available.</BodyThreeText>;
+    widgetContent = (
+      <Typography variant="body3" gutterBottom>
+        This lesson doesn't have a rubric.
+      </Typography>
+    );
   } else {
     scrollable = true;
     widgetContent = (

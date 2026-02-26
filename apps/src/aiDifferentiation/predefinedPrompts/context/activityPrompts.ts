@@ -12,6 +12,7 @@
  */
 
 import {ChatPrompt} from '@cdo/apps/aiDifferentiation/types';
+import {AiDiffArtifactType} from '@cdo/generated-scripts/sharedConstants';
 
 export const FINISH_EARLY_PROMPT: ChatPrompt = {
   label: 'Write an extension activity for students who finish early',
@@ -29,6 +30,7 @@ export const EXIT_TICKET_PROMPT: ChatPrompt = {
   label: 'Write an exit ticket',
   prompt:
     'I need an exit ticket to quickly assess if my class understood a concept. You can ask me a follow-up question to find out what concept needs to be assessed and if they have a preference in question type.',
+  artifactCandidateType: AiDiffArtifactType.EXIT_TICKET,
 };
 
 export const MINI_LESSON_PROMPT: ChatPrompt = {
@@ -56,4 +58,5 @@ export const LESSON_HOOK_PROMPT: ChatPrompt = {
     Use this information to create a relevant, 1-2 minute hook that connects to students' experiences and creates curiosity about the new concept.
 
     Format the questions as a clear, easy-to-read list`,
+  artifactCandidateType: AiDiffArtifactType.LESSON_HOOK,
 };

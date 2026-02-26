@@ -5,83 +5,103 @@ description 'description here'
 markdown <<MARKDOWN
 # Practice
 
-#### Let’s try it out! You may have used one or more of the following LLMs already. If so, try to choose something new or try a different prompt.
+#### Let’s try it out!
 
-#### We’ll dive into how to use these tools as an educator in a later module. For now, your primary goal should be getting an account made and getting familiar with at least one of these tools.
+#### We’ll dive into how to use these tools as an educator in Module 3, Transforming Teaching with AI. For now, your primary goal should be getting started using an LLM and practicing good prompting strategies.
 
 
 ## Educator’s Choice
 
-#### Choose one of the following LLMs to try.
+#### **1. Choose an LLM.** Click on the image to open the link in a new tab.
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">But my school/district uses another LLM...</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
-    <p>
+#### If your school/district uses a particular LLM (even if it's not on the list below), we recommend that you practice using that one.
 
-#### Not a problem! The prompting practice that you develop in these activities will help you develop skills that are transferable to any LLM. Or, feel free to do these activities using the LLM your school or district uses, just know that not all LLMs have the same functionality so you may not be able to complete the activity as written.
-</p></div>
-</details>
 
-#### A few quick notes before you get started:
-* #### Bard is now Gemini! Google has rebranded their AI as Gemini. It’ll look a bit different from the videos, but it has similar functionality.
-* #### Bing AI is now Copilot! (Things change quickly in the world of AI) Bing has also rebranded their AI as Copilot. It’ll also look a bit different from the videos.
-* #### We’ve also given you the opportunity to try out MagicSchool AI. While not an open ended LLM like ChatGPT, it’s an AI platform for educators built on a LLM.
+<div style="display:flex;justify-content:space-between;align-items:center;width:95%;margin:20pt auto;padding:0 5px;">
+  <div style="width:20%;text-align:center;">
+    <a href="https://chatgpt.com/" target="_blank">
+      <img src="https://images.code.org/c22ec02e808ca32157566d9fb91efbe0-Screenshot%202026-01-29%20at%2011.40.54%20AM.png" alt="ChatGPT Logo" style="display:block;width:100%;height:auto !important;max-height:90px;object-fit:contain;border-radius:5pt;margin:0 auto;">
+    </a>
+  </div>
+  <div style="width:20%;text-align:center;">
+    <a href="https://gemini.google.com/" target="_blank">
+      <img src="https://images.code.org/c2897744ec844dadc387c770574cbefb-Screenshot%202026-01-29%20at%2011.39.33%20AM.png" alt="Gemini Logo" style="display:block;width:100%;height:auto !important;max-height:90px;object-fit:contain;border-radius:5pt;margin:0 auto;">
+    </a>
+  </div>
+  <div style="width:20%;text-align:center;">
+    <a href="https://claude.ai/login" target="_blank">
+      <img src="https://images.code.org/4ac56eafff87360544c03cc012c9bd4a-Screenshot%202026-01-29%20at%2011.40.17%20AM.png" alt="Claude Logo" style="display:block;width:100%;height:auto !important;max-height:90px;object-fit:contain;border-radius:5pt;margin:0 auto;">
+    </a>
+  </div>
+  <div style="width:20%;text-align:center;">
+    <a href="https://copilot.microsoft.com/" target="_blank">
+      <img src="https://images.code.org/bbfada5f0e117d70f873c77c7271e7eb-images.jpg" alt="Copilot Logo" style="display:block;width:100%;height:auto !important;max-height:90px;object-fit:contain;border-radius:5pt;margin:0 auto;">
+    </a>
+  </div>
+</div>
+
+#### <i>As of the writing of this module, **Claude** is the only LLM on this list that requires you to create an account.</i>
 
 <br>
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">ChatGPT</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
-    <p>
+#### **2. Choose a topic.** It can be anything you wish to explore, such as:
 
-#### **To Do:** 
-* #### Go to <a href="https://chat.openai.com/" target="_blank">https://chat.openai.com/</a>.
-* #### Sign-up to make a free account.
-* #### Feel free to explore as you wish, but we recommend you take this time to use the tool as if you were one of your students. What might you want to learn more about? What recent assignment would you ask for help on? How might you try to break it?
+* #### *How do I make a taco?*
+* #### *What is the environmental impact of AI technology?*
+* #### *How is AI being integrated into everyday technology?*
+* #### *What materials do I need to make the best pillow fort?*
 
-</p></div>
-</details>
+<br>
+
+#### **3. Try a simple prompt**. Start with something open-ended such as:
+
+<div style="width:80%; margin:0 auto 18px auto;">
+  <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:18px;">
+    <div style="font-size:16px;">
+      How do you make the best pillow fort?
+    </div>
+  </div>
+</div>
+
+<br>
+
+#### **4. Add detail.** For example, you can add some context and a tone to your prompt:
 
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">Copilot (formerly Bing AI)</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
-    <p>
+<div style="width:80%; margin:0 auto 18px auto;">
+  <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:18px;">
+    <div style="font-size:16px;">
+      Using fun and silly language, describe the materials needed to make the best pillow fort. Assume that the builders have access to supplies that might generally be found in a three bedroom house in Vermont.
+    </div>
+  </div>
+</div>
 
-#### **To Do:** 
-* #### Open Microsoft’s Edge Browser.
-* #### Go to <a href="https://www.bing.com/chat" target="_blank">https://www.bing.com/chat</a>.
-* #### Sign-up to make a free account. 
-* #### Feel free to explore as you wish, but we recommend you take this time to use the tool as if you were one of your students. What might you want to learn more about? What recent assignment would you ask for help on? How might you try to break it?
-</p></div>
-</details>
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">Gemini (formerly Bard)</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
-    <p>
+#### You don't have to, but you may choose to use the TaCo FoRT prompting structure. 
 
-#### **To Do:** 
-* #### Go to <a href="https://gemini.google.com/" target="_blank">https://gemini.google.com/</a>. 
-* #### Sign-up to make a free account.
-* #### Feel free to explore as you wish, but we recommend you take this time to use the tool as if you were one of your students. What might you want to learn more about? What recent assignment would you ask for help on? How might you try to break it?
+<p align="center">
+<img src="https://images.code.org/a9b6ae8f94bfa64afbf2af4a60ec6609-Screenshot 2025-04-07 at 2.01.43 PM.png" alt="lesson plan diagram" width="70%" style="border-radius:10px; border: 5px solid black;">
+</p>
 
-</p></div>
-</details>
+<br>
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">MagicSchool AI</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
-    <p>
+#### **5. Keep exploring.** Continue to practice prompting. Explore with different prompting techniques, amount of detail, or even try multimodal prompting.
 
-#### **To Do:** 
-* #### Go to <a href="https://www.magicschool.ai/" target="_blank">Magic School AI</a>.
-* #### Sign-up to make a free account.
-* #### Explore on your own! We recommend you explore the Reading Quiz Generator, Restorative Reflection Generator, or the Clear Directions tools.
+<div style="width:80%; margin:0 auto 18px auto;">
+  <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:18px;">
+    <div style="font-size:16px;">
+      Give me an image of the ultimate pillow fort. Make it as warm and cozy as possible.
+    </div>
+  </div>
+</div>
 
-</p></div>
-</details>
 
+<br>
+
+#### **6. Take it further.** If you have time, try prompting in two or more LLMs to see how the responses differ.
+
+<br>
+
+>#### **💬 Quick Reflection:** How successful where different prompting techniques? What were some aspects of a good prompt? What were some aspects of a bad prompt?
 
 MARKDOWN

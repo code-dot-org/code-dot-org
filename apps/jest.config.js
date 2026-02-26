@@ -23,7 +23,8 @@ const jestAliases = {
  * Imports the application level aliases from webpack
  */
 Object.entries(APPLICATION_ALIASES).forEach(([alias, localPath]) => {
-  jestAliases[`${alias}/(.*)`] = `${localPath}/$1`;
+  // Anchor to avoid matching unrelated packages that merely contain `${alias}/`
+  jestAliases[`^${alias}/(.*)$`] = `${localPath}/$1`;
 });
 
 /**
@@ -222,6 +223,7 @@ const config = {
     ],
     '^.+\\.scss$': '<rootDir>/test/jest-scss.transformer.js',
     '\\.(ejs)$': '<rootDir>/test/jest-ejs.transformer.js',
+    '\\.md$': '<rootDir>/test/jest-md.transformer.js',
     '^.+\\.tsx?$': [
       'ts-jest',
       {

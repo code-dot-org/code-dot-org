@@ -29,7 +29,9 @@ interface AiTutorChatProps {
   channelId?: string;
   aiTutorChatButtonData?: ChatButtonData[];
   aiTutorSystemPromptName?: string;
+  aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
+  hasInstructionsDrawer?: boolean;
 }
 
 // A free chat with lab-supplied context added to each question.
@@ -40,10 +42,13 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   channelId,
   aiTutorChatButtonData,
   aiTutorSystemPromptName,
+  aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
+  hasInstructionsDrawer,
 }) => {
   const {modelParameters, loading} = useAiTutorModelParameters({
     aiTutorSystemPromptName,
+    aiTutorSystemPrompt,
     aiTutorJsonSchema: aiTutorResponseSchemaSettings?.jsonSchema,
   });
 
@@ -94,6 +99,7 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
         channelId={channelId}
         hideModelChangeMessage={true}
         responseCallback={aiTutorResponseSchemaSettings?.responseCallback}
+        hasInstructionsDrawer={hasInstructionsDrawer}
       />
     </div>
   );

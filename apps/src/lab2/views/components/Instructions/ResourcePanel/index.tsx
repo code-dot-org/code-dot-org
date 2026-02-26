@@ -5,9 +5,9 @@ import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useState, useCallback, useRef} from 'react';
 
+import {shouldShowAiTutor} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
-import {shouldShowAiTutor} from '@cdo/apps/aiTutor/helpers/shouldShowAiTutor';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
 import lab2I18n from '@cdo/apps/lab2/locale';
@@ -37,6 +37,7 @@ import ForTeachersOnly from '../ForTeachersOnly';
 import Instructions, {InstructionsProps} from '../InstructionsV2';
 import NavigationArea from '../NavigationArea';
 
+import AiTutorChatWithInstructionDrawer from './AiTutorChatWithInstructionDrawer';
 import BackpackHeaderButtons from './Backpack/BackpackHeaderButtons';
 import BackpackPanel from './Backpack/BackpackPanel';
 import {
@@ -133,6 +134,7 @@ type ResourcePanelProps = InstructionsProps & {
   isValidationTourEnabled?: boolean;
   isOnboardingTourEnabled?: boolean;
   aiTutorSystemPromptName?: string;
+  aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   documentationUrl?: string;
   /** Only display the sidebar and hide all tabs. */
@@ -143,6 +145,7 @@ type ResourcePanelProps = InstructionsProps & {
     fileType: string,
     uploadFunction: () => Promise<void>
   ) => void;
+  hasInstructionsDrawer?: boolean;
 };
 
 /**
@@ -164,11 +167,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   isValidationTourEnabled,
   isOnboardingTourEnabled,
   aiTutorSystemPromptName,
+  aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
   documentationUrl,
   sidebarOnly = false,
   backpackProps,
   onImageFlagged,
+  hasInstructionsDrawer,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -219,11 +224,15 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const isTemporarilyReadOnly = !isPermanentlyReadOnly && isReadOnly;
 
   const levelProperties = instructionsProps.levelProperties;
+  const aiChatAccessLevel = useAppSelector(
+    state => state.currentUser.aiChatAccessLevel
+  );
   const aiTutorVisible =
     shouldShowAiTutor({
       appName,
       tutorPilot: aiTutorEnabledForPilot,
       tutorLevel: levelProperties.aiTutorAvailable,
+      aiChatAccessLevel: aiChatAccessLevel,
     }) ||
     queryParams('show-ai-tutor2') === 'true' ||
     queryParams('show-ai-tutor') === 'true';
@@ -237,13 +246,15 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
     const tabMap: {[key in Tabs]?: React.ReactNode} = {};
 
+    const instructionsContent = levelProperties.longInstructions ? (
+      <Instructions
+        {...instructionsProps}
+        hideNavigation={hideInstructionsNavigation}
+      />
+    ) : null;
+
     if (levelProperties.longInstructions) {
-      tabMap[Tabs.Instructions] = (
-        <Instructions
-          {...instructionsProps}
-          hideNavigation={hideInstructionsNavigation}
-        />
-      );
+      tabMap[Tabs.Instructions] = instructionsContent;
     }
 
     if (instructionsProps.validationSettings && hasValidationConditions) {
@@ -253,17 +264,35 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
 
     if (hiddenContextCallback && aiTutorVisible) {
-      tabMap[Tabs.AiTutor] = (
-        <AiTutorChat
-          hiddenContextCallback={hiddenContextCallback}
-          aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
-          levelName={levelName}
-          channelId={channelId}
-          aiTutorChatButtonData={aiTutorChatButtonData}
-          aiTutorSystemPromptName={aiTutorSystemPromptName}
-          aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
-        />
-      );
+      if (!hasInstructionsDrawer || !levelProperties.longInstructions) {
+        tabMap[Tabs.AiTutor] = (
+          <AiTutorChat
+            hiddenContextCallback={hiddenContextCallback}
+            aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
+            levelName={levelName}
+            channelId={channelId}
+            aiTutorChatButtonData={aiTutorChatButtonData}
+            aiTutorSystemPromptName={aiTutorSystemPromptName}
+            aiTutorSystemPrompt={aiTutorSystemPrompt}
+            aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
+          />
+        );
+      } else {
+        tabMap[Tabs.AiTutor] = (
+          <AiTutorChatWithInstructionDrawer
+            hiddenContextCallback={hiddenContextCallback}
+            aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
+            levelName={levelName}
+            channelId={channelId}
+            aiTutorChatButtonData={aiTutorChatButtonData}
+            aiTutorSystemPromptName={aiTutorSystemPromptName}
+            aiTutorSystemPrompt={aiTutorSystemPrompt}
+            aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
+            instructionsContent={instructionsContent}
+            isCollapsedByDefault={!!viewAsUserId}
+          />
+        );
+      }
     }
 
     // The version history tab is hidden in permanently read-only mode with the following exception:
@@ -339,6 +368,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     channelId,
     aiTutorChatButtonData,
     aiTutorSystemPromptName,
+    aiTutorSystemPrompt,
     aiTutorResponseSchemaSettings,
     selectedVersion,
     levelId,
@@ -349,6 +379,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     setBackpackTabAsActive,
     backpackRefreshKey,
     onImageFlagged,
+    hasInstructionsDrawer,
   ]);
 
   const hasTabs = useMemo(() => {
@@ -380,9 +411,14 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   }, [currentTab, availableTabs]);
 
   useEffect(() => {
-    // Reset current tab to instructions when switching levels or viewAsUserId.
-    setCurrentTab(Tabs.Instructions);
-  }, [levelId, viewAsUserId]);
+    // Reset current tab to instructions when switching levels or viewAsUserId unless there is an AI tutor tab with instructions drawer.
+    // If there is, then we set initial tab to the AI Tutor tab.
+    if (hasInstructionsDrawer && aiTutorVisible) {
+      setCurrentTab(Tabs.AiTutor);
+    } else {
+      setCurrentTab(Tabs.Instructions);
+    }
+  }, [levelId, viewAsUserId, hasInstructionsDrawer, aiTutorVisible]);
 
   // Move focus to panel content when AI Tutor or Version History tab is selected via keyboard.
   useEffect(() => {

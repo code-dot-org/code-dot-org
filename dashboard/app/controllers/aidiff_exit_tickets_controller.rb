@@ -25,13 +25,14 @@ class AidiffExitTicketsController <ApplicationController
       section_reln = @aidiff_exit_tickets.joins(:aidiff_artifact_associations).where(aidiff_artifact_associations: {section_id: params[:section_ids]})
       render json: unit_group_reln.or(unit_reln).or(lesson_reln).or(section_reln).distinct&.map(&:summarize)
     else
+
       render json: @aidiff_exit_tickets&.map(&:summarize)
     end
   end
 
-  # def show
-  #   #TODO: render the projection page
-  # end
+  def show
+    @aidiff_exit_ticket
+  end
 
   #TODO actually validate here
   private def validate_json(content)

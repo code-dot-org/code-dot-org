@@ -42,6 +42,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     hiddenContextCallback,
     startSources,
     aiTutorSystemPromptName,
+    aiTutorSystemPrompt,
     aiTutorMultimodalEnabled,
     aiTutorChatButtonData,
     aiTutorResponseSchemaSettings,
@@ -150,6 +151,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
         requireRun={appName === 'pythonlab'}
         hiddenContextCallback={hiddenContextCallback}
         settings={settings}
+        aiTutorSystemPrompt={aiTutorSystemPrompt}
         versionHistoryProps={{startSources}}
         aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
         aiTutorChatButtonData={aiTutorChatButtonData}
@@ -162,6 +164,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
         }
         backpackProps={backpackProps}
         onImageFlagged={onImageFlagged}
+        hasInstructionsDrawer={appName === 'weblab2'}
       />
     </div>
   );

@@ -1,10 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import PersonalizationCollectorContainer from '@cdo/apps/aiDifferentiation/personalization/PersonalizationCollectorContainer';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 $(document).ready(() => {
-  ReactDOM.render(
+  createReactRoot(
     <PersonalizationCollectorContainer />,
     document.getElementById('personalization-information')
   );

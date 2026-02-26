@@ -1,0 +1,56 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-02-21T03:59:54.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    \n    <!-- parent container with 3 child paragraph tags -->\n    <div class=\"steps\">\n      <p class=\"one\">Step 1</p>\n      <p class=\"two\">Step 2</p>\n      <p class=\"three\">Step 3</p>\n    </div>\n\n\n    \n  </body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* LEVEL 6B - 1) Add a rule to set all child paragraph elements to take up an equal portion of the parent container */\n\n\n\n/* LEVEL 6B - 2) Add a rule set for each of the paragraph elements to look like steps */\n\n\n\n/* LEVEL 6C - 1) Add the order property to each of the paragraph child elements to match the image in the instructions */\n\n\n\n\n/* styled parent container */\n.steps {\n  background: #b691d6;\n  display: flex;\n  padding: 5px;\n  margin: 10px;\n  height: 225px;\n}\n\n/* styled paragraphs */\np {\n  background-color: aliceblue;\n  margin: 0px;\n  padding: 10px;\n  text-align: center;\n  font-size: 20px;\n  border-style: solid;\n  font-family: sans-serif; \n  height: 50px;\n}",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-21 04:00:34 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

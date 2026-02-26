@@ -4,7 +4,7 @@ class AichatGeminiClientTest < AichatAiClientTest
   let(:internal_model_id) {'gemini-2.0-flash'}
   let(:endpoint_model_id) {internal_model_id}
 
-  let(:endpoint_url) {"https://generativelanguage.googleapis.com/v1beta/models/#{endpoint_model_id}:generateContent?key="}
+  let(:endpoint_url) {"https://aiplatform.googleapis.com/v1/projects/#{@vertex_project_id}/locations/global/publishers/google/models/#{endpoint_model_id}:generateContent"}
 
   let(:json_schema) {nil}
 

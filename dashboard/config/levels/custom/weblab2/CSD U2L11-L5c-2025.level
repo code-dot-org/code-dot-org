@@ -1,0 +1,160 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-02-20T05:51:53.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Debug Image Classes",
+    "long_instructions": "# Debug Image Classes\r\n\r\nEach group of images should have a slightly different style for their borders. It looks like there are multiple bugs with the classes for these images preventing this from happening.\r\n\r\n# Do This\r\n\r\n1) Look through both the html and the stylesheet to find and fix all the bugs.\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Classes](https://studio.code.org/courses/csd-2024/guides/classes)\r\n- [<i class=\"fa-solid fa-book\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "bubble_choice_description": "Use your debugging skills to figure out why the images aren't being styled correctly on this web page.",
+    "thumbnail_url": "https://images.code.org/dc09b7789b974ed9487f7966c7c836df-travel.png",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <h1>Favorite Places To Travel</h1>\n    \n    <p>These are pictures of some of my favorite places to travel.</p>\n    \n    <h2>Egypt</h2>\n    \n    <img class=\"Egypt\" src=\"Egypt.jpg\" alt=\"Egypt\">\n    <img class=\"Egypt\" src=\"sphinx.jpg\" alt=\"the sphinx\">\n    <img class=\"Egypt\" src=\"pyramids.jpg\" alt=\"the pyramids\">\n    \n    \n    <h2>Greece</h2>\n    \n    <img class=\"grece\" src=\"greece.jpg\" alt=\"Greece\">\n    <img class=\"grece\" src=\"Hephaistos.jpg\" alt=\"Hephaistos Temple\">\n    <img class=\"grece\" src=\"parthenon.jpg\" alt=\"Parthenon\">\n   \n    \n    <h2>Japan</h2>\n    \n    <img class=\"Japan\" src=\"Fuji.jpg\" alt=\"Mt. Fuji\">\n    <img class=\"Japan\" src=\"garden.jpg\" alt=\"Japanese garden\">\n    <img class=\"Japan\" src=\"cherry-blossom.jpg\" alt=\"cherry blossoms\">\n   \n  \n    \n  </body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  background: rgba(179, 248, 168, 0.18);\n  text-align: center;\n  font-family: monospace;\n}\n\n\nh2 {\n  font-size: 30px;\n}\n\nimg {\n  margin: 20px;\n  width: 300px;\n  border-radius:10px;\n}\n\n.egypt {\n  border-style: solid;\n  border-width: 8px;\n  border-color:darkgoldenrod;\n}\n\n.Greece {\n  border-style:dashed;\n  border-width: 3px;\n  border-color:darkseagreen;\n}\n\njapan {\n  border-style:dotted;\n  border-width: 5px;\n  border-color: crimson;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "pyramids.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L11-L5c-2025/uuid/5483c263-035c-4885-9316-f4f3e4a17289.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "sphinx.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L11-L5c-2025/uuid/5c5957b1-9a1a-4754-993d-c8fa2ace811a.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "garden.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L11-L5c-2025/uuid/52bf7924-f787-483c-83c5-f8b0bccae8a0.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "greece.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L11-L5c-2025/uuid/e2619951-bed4-412f-a049-b904e2baae7e.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "parthenon.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L11-L5c-2025/uuid/13f522e2-1ec4-4c65-9351-4e8614e9787c.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "cherry-blossom.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L11-L5c-2025/uuid/67504592-1e15-409b-8012-cd9bdac282b1.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "Hephaistos.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L11-L5c-2025/uuid/9afd9265-8971-496c-be79-f01b7741d38a.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "Fuji.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L11-L5c-2025/uuid/b0011fc0-31cb-4793-80cd-ec64779e2835.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "11": {
+          "id": "11",
+          "name": "Egypt.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L11-L5c-2025/uuid/d0cd2bb9-4e94-45ec-ab8a-970c8bd009a6.jpg",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-20 05:53:37 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-20 05:54:14 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-20 05:54:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>
