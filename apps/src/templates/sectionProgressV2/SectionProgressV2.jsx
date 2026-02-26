@@ -12,18 +12,18 @@ import {
 } from '@cdo/apps/redux/unitSelectionRedux';
 import i18n from '@cdo/locale';
 
-import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
-import {loadUnitProgress} from '../sectionProgress/sectionProgressLoader';
-import {
-  getCurrentUnitData,
-  loadExpandedLessonsFromLocalStorage,
-} from '../sectionProgress/sectionProgressRedux';
 import UnitSelectorV2 from '../teacherDashboardShared/UnitSelectorV2';
 
 import DownloadProgressCsv from './DownloadProgressCsv';
 import IconKey from './IconKey';
 import MoreOptionsDropdown from './MoreOptionsDropdown';
 import ProgressTableV2 from './ProgressTableV2';
+import {unitDataPropType} from './sectionProgressConstants';
+import {loadUnitProgress} from './sectionProgressLoader';
+import {
+  getCurrentUnitData,
+  loadExpandedLessonsFromLocalStorage,
+} from './sectionProgressRedux';
 
 import styles from './progress-table-v2.module.scss';
 

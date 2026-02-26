@@ -47,6 +47,7 @@ type CodebridgeProps = {
   aiTutorChatButtonData?: ChatButtonData[];
   aiTutorContextHelper?: AiTutorContextHelper<object>;
   aiTutorSystemPromptName?: string;
+  aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   secondaryBackpackAppNames?: AppName[];
 };
@@ -66,6 +67,7 @@ export const Codebridge = React.memo(
     aiTutorChatButtonData,
     aiTutorContextHelper,
     aiTutorSystemPromptName,
+    aiTutorSystemPrompt,
     aiTutorResponseSchemaSettings,
     secondaryBackpackAppNames,
   }: CodebridgeProps) => {
@@ -208,6 +210,7 @@ export const Codebridge = React.memo(
           aiTutorContextHelper,
           aiTutorSystemPromptName,
           aiTutorResponseSchemaSettings,
+          aiTutorSystemPrompt,
         }}
       >
         <BackpackAPIContext.Provider value={backpackContext}>

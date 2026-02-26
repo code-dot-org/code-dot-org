@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2026_01_28_232147) do
+ActiveRecord::Schema.define(version: 2026_02_11_145245) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1066,7 +1066,7 @@ ActiveRecord::Schema.define(version: 2026_01_28_232147) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.datetime "deleted_at"
-    t.index ["context_id", "lti_integration_id"], name: "index_on_context_id_and_lti_integration_id"
+    t.index "`context_id`, `lti_integration_id`, (if((`deleted_at` is null),true,NULL))", name: "index_lti_courses_on_context_integration_active", unique: true
     t.index ["course_id", "lti_integration_id"], name: "index_on_course_id_and_lti_integration_id"
     t.index ["deleted_at"], name: "index_lti_courses_on_deleted_at"
     t.index ["lti_deployment_id"], name: "fk_rails_19886eb632"
@@ -1088,16 +1088,6 @@ ActiveRecord::Schema.define(version: 2026_01_28_232147) do
     t.bigint "lti_user_identity_id", null: false
     t.index ["lti_deployment_id"], name: "index_lti_deployments_user_identities_on_lti_deployment_id"
     t.index ["lti_user_identity_id"], name: "index_lti_deployments_user_identities_on_lti_user_identity_id"
-  end
-
-  create_table "lti_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.boolean "satisfied", null: false
-    t.string "locale"
-    t.boolean "early_access"
-    t.datetime "created_at", null: false
-    t.index ["satisfied"], name: "index_lti_feedbacks_on_satisfied"
-    t.index ["user_id"], name: "index_lti_feedbacks_on_user_id", unique: true
   end
 
   create_table "lti_integrations", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2747,7 +2737,6 @@ ActiveRecord::Schema.define(version: 2026_01_28_232147) do
   add_foreign_key "lti_courses", "lti_deployments"
   add_foreign_key "lti_courses", "lti_integrations"
   add_foreign_key "lti_deployments", "lti_integrations"
-  add_foreign_key "lti_feedbacks", "users"
   add_foreign_key "lti_sections", "lti_courses"
   add_foreign_key "lti_sections", "sections"
   add_foreign_key "lti_user_identities", "lti_integrations"

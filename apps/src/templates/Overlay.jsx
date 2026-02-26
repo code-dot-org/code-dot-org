@@ -1,28 +1,15 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
 
 import {hideOverlay} from '../redux/instructions';
 
+import styles from './overlay.module.scss';
+
 // 1020 puts this halfway between the small footer (at 1000) and the
 // video modal backdrop (at 1040)
 export const Z_INDEX = 1020;
-
-const style = {
-  position: 'fixed',
-  top: 0,
-  left: 0,
-  height: '100%',
-  width: '100%',
-  opacity: 0.4,
-  backgroundColor: 'black',
-  zIndex: Z_INDEX,
-};
-
-const craftStyle = {
-  opacity: 0.8,
-};
 
 class Overlay extends React.Component {
   static propTypes = {
@@ -32,13 +19,19 @@ class Overlay extends React.Component {
   };
 
   render() {
-    return this.props.visible ? (
+    const {visible, hide, isMinecraft} = this.props;
+
+    if (!visible) {
+      return null;
+    }
+
+    return (
       <div
         id="overlay"
-        onClick={this.props.hide}
-        style={[style, this.props.isMinecraft && craftStyle]}
+        onClick={hide}
+        className={classNames(styles.overlay, isMinecraft && styles.minecraft)}
       />
-    ) : null;
+    );
   }
 }
 
@@ -56,4 +49,4 @@ export default connect(
       },
     };
   }
-)(Radium(Overlay));
+)(Overlay);

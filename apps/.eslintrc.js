@@ -11,7 +11,6 @@ const rulesToEventuallyReenable = {
   'jsx-a11y/label-has-associated-control': 'off',
   'jsx-a11y/no-noninteractive-element-interactions': 'off',
   'jsx-a11y/no-static-element-interactions': 'off',
-  'jsx-a11y/tabindex-no-positive': 'off',
 };
 
 const accessibilityTestingMessage =

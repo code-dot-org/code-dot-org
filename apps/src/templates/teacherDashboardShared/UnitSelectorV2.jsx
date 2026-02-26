@@ -13,7 +13,7 @@ import {
   getSelectedCourseId,
   getSelectedUnitPosition,
 } from '@cdo/apps/redux/unitSelectionRedux';
-import {loadUnitProgress} from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
+import {loadUnitProgress} from '@cdo/apps/templates/sectionProgressV2/sectionProgressLoader';
 import i18n from '@cdo/locale';
 
 import styles from './unit-selector-v2.module.scss';

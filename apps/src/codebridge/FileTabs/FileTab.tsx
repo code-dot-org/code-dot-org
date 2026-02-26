@@ -15,6 +15,7 @@ import {
 } from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
+import {getFileExtension} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -69,7 +70,7 @@ const FileTab = ({file}: FileTabProps) => {
     if (isAiTutorVersion) {
       sendLab2AnalyticsEvent(EVENTS.AI_TUTOR_VERSION_VIEW_FILE_CLICKED, {
         fileName: file.name,
-        fileType: file.language,
+        fileType: getFileExtension(file.name),
         aiTutorVersionFileUpdated: file.isAiTutorVersionUpdated
           ? 'true'
           : 'false',

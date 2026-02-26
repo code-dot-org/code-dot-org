@@ -1,0 +1,23 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-02-24T18:12:02.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "**POUR Principles**: A framework for thinking about accessibility:\n* Perceivable\n* Operable\n* Understandable\n* Robust",
+        "imageUrl": "https://images.code.org/1decd979d2e2b5ea93353181fe1752bd-pexels-asphotography-230544.jpg",
+        "key": "ai-generated-design-lesson5-vocab-panel-brandkit-test-2025-d32755b0-a47a-4875-862a-5558f4694b63",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:12:02.437+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson9-level1_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson9-level1_2025\"}]"
+}]]></config>
+</Panels>

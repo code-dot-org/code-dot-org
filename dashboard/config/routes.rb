@@ -1078,10 +1078,6 @@ Dashboard::Application.routes.draw do
 
         post 'users/sort_by_family_name', to: 'users#post_sort_by_family_name'
 
-        post 'users/show_progress_table_v2', to: 'users#post_show_progress_table_v2'
-        post 'users/date_progress_table_invitation_last_delayed', to: 'users#post_date_progress_table_invitation_last_delayed'
-        post 'users/has_seen_progress_table_v2_invitation', to: 'users#post_has_seen_progress_table_v2_invitation'
-        post 'users/has_seen_homepage_welcome', to: 'users#post_has_seen_homepage_welcome'
         post 'users/ai_rubrics_disabled', to: 'users#post_ai_rubrics_disabled'
         post 'users/ai_differentiation_enabled', to: 'users#post_ai_differentiation_enabled'
         post 'users/has_seen_ai_assessments_announcement', to: 'users#post_has_seen_ai_assessments_announcement'
@@ -1185,6 +1181,14 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    # AI Lesson Summary Podcasts routes
+    resources :ai_lesson_summary_podcasts, only: [:show] do
+      collection do
+        get :show # GET /ai_lesson_summary_podcasts/show?lesson_id=2
+        get :generate_podcasts_by_unit, controller: :ai_lesson_summary_podcasts, action: :generate_podcasts_by_unit # GET ai_lesson_summary_podcasts/generate_podcasts_by_unit?unit_id=1
+      end
+    end
+
     # Routes used for the Student Snapshot page on the teacher dashboard
     resources :student_snapshots, only: [] do
       collection do
@@ -1271,6 +1275,10 @@ Dashboard::Application.routes.draw do
     # but we leave them outside so that we can easily use the simple "/form" paths.
     get '/form/:path/configuration', to: 'foorm/simple_survey_forms#configuration'
     get '/form/:path', to: 'foorm/simple_survey_forms#show'
+
+    get 'widget2', to: 'widget2#index'
+    post 'widget2/:widget2_id/update_code', to: 'widget2#update_code'
+    post 'widget2/new', to: 'widget2#new'
 
     namespace :foorm do
       resources :simple_survey_forms, only: [:index, :new, :create]

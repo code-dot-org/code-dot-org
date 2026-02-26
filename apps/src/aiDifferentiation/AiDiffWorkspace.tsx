@@ -56,8 +56,8 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
 
   useEffect(() => {
     fetchThreads();
-    asyncLoadSectionData();
-  }, [fetchThreads]);
+    dispatch(asyncLoadSectionData());
+  }, [fetchThreads, dispatch]);
 
   const aiPromptOutsideChatClicked = useCallback(
     (label: string, prompt: string) => {
