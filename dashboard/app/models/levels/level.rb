@@ -896,7 +896,7 @@ class Level < ApplicationRecord
   # These properties are usually just the serialized properties for
   # the level, which usually include levelData.  If this level is a
   # StandaloneVideo then we put its properties into levelData.
-  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil, widget2_start_sources: nil)
+  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
     video = specified_autoplay_video&.summarize(false)&.camelize_keys
     properties_camelized = properties.camelize_keys
     properties_camelized[:name] = name
@@ -960,19 +960,6 @@ class Level < ApplicationRecord
           properties_camelized[:showRubric] = (rubric_template_level && rubric_template_level == project_template_level) || rubric_templates_for_sublevels.include?(project_template_level)
         end
       end
-    end
-
-    # If this is a widget2 level or we are editing widget2 starter sources,
-    # then startSources will come from the files in the repo, rather than
-    # that serialized into the level file.
-    widget2_id = properties["widget2"] || widget2_start_sources
-    if widget2_id
-      properties_camelized[:startSources] = get_widget2_sources(widget2_id)
-    end
-
-    # And if this is a widget2 level, then show it as a widget.
-    if properties["widget2"]
-      properties_camelized[:widgetView] = true
     end
 
     properties_camelized
