@@ -1,5 +1,4 @@
-import {Button} from '@code-dot-org/component-library/button';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -34,17 +33,17 @@ const BorderedCallToAction = ({
           {descriptionText}
         </Typography>
       </div>
-      <Button
-        onClick={onClick}
+      <MuiButton
+        variant="contained"
+        color="primary"
+        size="small"
         className={buttonClass}
-        color={buttonColor}
-        size={'s'}
-        type={buttonType}
-        text={buttonText}
+        onClick={onClick}
         href={buttonUrl}
-        useAsLink={!!buttonUrl}
         disabled={buttonDisabled}
-      />
+      >
+        {buttonText}
+      </MuiButton>
     </div>
   );
 };

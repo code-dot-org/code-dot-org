@@ -1,5 +1,4 @@
-import Button, {buttonColors} from '@code-dot-org/component-library/button';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React, {useState} from 'react';
 import {ControlLabel, Fade, FormControl, FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
@@ -92,19 +91,24 @@ const BulkSetModal: React.FC<BulkSetModalProps> = ({
         <hr aria-hidden="true" />
 
         <div id="us-state-column-bulk-set-modal-footer">
-          <Button
-            text={i18n.cancel()}
-            type="secondary"
-            size="s"
-            color={buttonColors.gray}
+          <MuiButton
+            variant="outlined"
+            color="tertiary"
+            size="small"
             onClick={onClose}
-          />
-          <Button
-            text={i18n.add()}
-            type="primary"
-            size="s"
+            type="button"
+          >
+            {i18n.cancel()}
+          </MuiButton>
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="small"
             onClick={bulkSetUsState}
-          />
+            type="button"
+          >
+            {i18n.add()}
+          </MuiButton>
         </div>
       </AccessibleDialog>
     </Fade>
