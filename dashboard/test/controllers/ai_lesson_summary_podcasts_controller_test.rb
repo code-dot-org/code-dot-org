@@ -1,12 +1,13 @@
 require 'test_helper'
 
 class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
+  include ActiveJob::TestHelper
   setup_all do
     @teacher = create(:teacher)
-    @lesson = create(:lesson)
-    @unit = create(:script)
-    @test_script = "[energetic] You're listening to AI Teaching Assistant's Daily Byte, your quick check-in before class."
-    @test_script_response = {json: "{\"podcast_script\": \"#{@test_script}\"}"}
+    @lesson = create(:lesson, has_lesson_plan: true)
+    @unit = create(:script, :with_lessons)
+    @unit.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.foundations_of_cs
+    @unit.save!
     @test_audio_data = "fake_audio_data_mp3_content"
   end
 
@@ -14,8 +15,8 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
   # Authentication tests
   # *****
 
-  test 'unauthenticated user cannot access generate_podcast' do
-    post :generate_podcast
+  test 'unauthenticated user cannot access generate_podcasts_by_unit' do
+    post :generate_podcasts_by_unit
     assert_response :redirect
   end
 
@@ -23,121 +24,107 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
   # Feature flag and experiment tests
   # *****
 
-  test 'generate_podcast returns forbidden when experiment is disabled and DCDO flag is false' do
+  test 'generate_podcasts_by_unit returns forbidden when DCDO flag is false' do
     sign_in @teacher
 
-    # Mock the experiment and DCDO checks
-    SingleUserExperiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai_lesson_summaries').returns(false)
+    # Mock the DCDO check
     DCDO.stubs(:get).with('ai-lesson-summary-podcasts', false).returns(false)
 
-    post :generate_podcast
+    post :generate_podcasts_by_unit
 
     assert_response :forbidden
   end
 
-  test 'generate_podcast works when DCDO flag is enabled' do
+  test 'generate_podcasts_by_unit enqueues job when DCDO flag is enabled and unit is AIF' do
     sign_in @teacher
 
     # Mock the DCDO flag enabled
     DCDO.stubs(:get).with('ai-lesson-summary-podcasts', false).returns(true)
 
-    # Mock the helper methods
-    AiLessonSummariesHelper.stubs(:generate_lesson_summary).returns(@test_script_response)
-    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).returns(@test_audio_data)
-
-    post :generate_podcast, params: {
-      lesson_id: @lesson.id,
-      unit_id: @unit.id,
-      lesson_summary: "Test summary",
-    }
+    assert_enqueued_with(job: AiLessonSummaryPodcastsJob) do
+      post :generate_podcasts_by_unit, params: {
+        unit_id: @unit.id
+      }
+    end
 
     assert_response :success
-    assert_equal 'audio/mpeg', response.content_type
-    assert_equal "attachment; filename=\"podcast.mp3\"; filename*=UTF-8''podcast.mp3", response.headers['Content-Disposition']
-    assert_equal @test_audio_data, response.body
+    assert_nil response.content_type
   end
 
   # *****
   # Helper integration tests
   # *****
 
-  test 'generate_podcast calls helper with correct script' do
+  test 'generate_podcasts_by_unit returns forbidden for non-AIF units' do
     sign_in @teacher
+
+    # Change unit to non-AIF
+    @unit.curriculum_umbrella = 'foundations_of_cs'
+    @unit.save!
 
     # Enable access
     DCDO.stubs(:get).with('ai-lesson-summary-podcasts', false).returns(true)
 
-    # Expect the helpers
-    AiLessonSummariesHelper.stubs(:generate_lesson_summary).returns(@test_script_response)
-    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).returns(@test_audio_data)
-
-    post :generate_podcast, params: {
-      lesson_id: @lesson.id,
+    post :generate_podcasts_by_unit, params: {
       unit_id: @unit.id
     }
+
+    assert_response :forbidden
+  end
+
+  test 'generate_podcasts_by_unit only includes lessons with lesson plans' do
+    sign_in @teacher
+
+    # Create a unit with lessons that have and don't have lesson plans
+    unit_with_mixed_lessons = create(:script)
+    unit_with_mixed_lessons.curriculum_umbrella = 'AIF'
+    unit_with_mixed_lessons.save!
+
+    lesson_group = create(:lesson_group, script: unit_with_mixed_lessons)
+    create(:lesson, lesson_group: lesson_group, has_lesson_plan: true)
+    create(:lesson, lesson_group: lesson_group, has_lesson_plan: false)
+
+    # Enable access
+    DCDO.stubs(:get).with('ai-lesson-summary-podcasts', false).returns(true)
+
+    assert_enqueued_with(job: AiLessonSummaryPodcastsJob) do
+      post :generate_podcasts_by_unit, params: {
+        unit_id: unit_with_mixed_lessons.id
+      }
+    end
 
     assert_response :success
   end
 
-  test 'generate_podcast handles helper errors gracefully' do
-    sign_in @teacher
-
-    # Enable access
-    DCDO.stubs(:get).with('ai-lesson-summary-podcasts', false).returns(true)
-
-    # Mock the helpers to raise an error
-    AiLessonSummariesHelper.stubs(:generate_lesson_summary).returns(@test_script_response)
-    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).raises(StandardError.new("API Error"))
-
-    # The controller should let the error bubble up (no explicit error handling)
-    assert_raises(StandardError) do
-      post :generate_podcast, params: {
-        lesson_id: @lesson.id,
-        unit_id: @unit.id
-      }
-    end
-  end
-
   # *****
-  # Response format tests
+  # S3 serving tests (show method)
   # *****
 
-  test 'generate_podcast returns correct content type and headers' do
+  test 'show returns correct content type and headers for podcast from S3' do
     sign_in @teacher
 
-    # Enable access
-    DCDO.stubs(:get).with('ai-lesson-summary-podcasts', false).returns(true)
+    # Mock S3 download
+    AWS::S3.stubs(:download_from_bucket).with('org.code.autoscale-prod-studio.user-content', 'podcasts/lesson_123_podcast.mp3').returns(@test_audio_data)
 
-    # Mock the helper methods
-    AiLessonSummariesHelper.stubs(:generate_lesson_summary).returns(@test_script_response)
-    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).returns(@test_audio_data)
-
-    post :generate_podcast, params: {
-      lesson_id: @lesson.id,
-      unit_id: @unit.id
+    get :show, params: {
+      lesson_id: '123'
     }
 
     assert_response :success
     assert_equal 'audio/mpeg', response.content_type
-    assert_equal 'attachment', response.headers['Content-Disposition'].split(';').first.strip
-    assert_includes response.headers['Content-Disposition'], 'filename="podcast.mp3"'
+    assert_equal 'inline', response.headers['Content-Disposition']
     assert_equal @test_audio_data, response.body
   end
 
-  test 'generate_podcast returns audio data as response body' do
+  test 'show returns audio data from S3 as response body' do
     sign_in @teacher
-
-    # Enable access
-    DCDO.stubs(:get).with('ai-lesson-summary-podcasts', false).returns(true)
 
     # Mock with different audio data
     different_audio_data = "different_mp3_binary_content"
-    AiLessonSummariesHelper.stubs(:generate_lesson_summary).returns(@test_script_response)
-    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).returns(different_audio_data)
+    AWS::S3.stubs(:download_from_bucket).with('org.code.autoscale-prod-studio.user-content', 'podcasts/lesson_456_podcast.mp3').returns(different_audio_data)
 
-    post :generate_podcast, params: {
-      lesson_id: @lesson.id,
-      unit_id: @unit.id
+    get :show, params: {
+      lesson_id: '456'
     }
 
     assert_response :success
@@ -153,18 +140,15 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
 
     # Enable access
     DCDO.stubs(:get).with('ai-lesson-summary-podcasts', false).returns(true)
-    AiLessonSummariesHelper.stubs(:generate_lesson_summary).returns(@test_script_response)
-    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).returns(@test_audio_data)
 
-    # Test with parameters
-    post :generate_podcast, params: {
-      lesson_id: @lesson.id,
-      unit_id: @unit.id,
-      lesson_summary: "Test summary",
-      unauthorized_param: "should_be_filtered"
-    }
+    # Test with parameters - should still work despite extra params
+    assert_enqueued_with(job: AiLessonSummaryPodcastsJob) do
+      post :generate_podcasts_by_unit, params: {
+        unit_id: @unit.id,
+        unauthorized_param: "should_be_filtered"
+      }
+    end
 
-    # Should still work despite extra params
     assert_response :success
   end
 
