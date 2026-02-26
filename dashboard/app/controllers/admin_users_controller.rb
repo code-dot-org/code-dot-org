@@ -450,6 +450,12 @@ class AdminUsersController < ApplicationController
       return
     end
 
+    # Validate teacher_id is numeric to prevent injection
+    unless teacher_id.to_s.match?(/\A\d+\z/)
+      render json: {error: 'Invalid teacher ID'}, status: :bad_request
+      return
+    end
+
     # Create temporary files
     temp_file = Tempfile.new(['delete_progress', '.csv'])
     output_file = Tempfile.new('script_output')
