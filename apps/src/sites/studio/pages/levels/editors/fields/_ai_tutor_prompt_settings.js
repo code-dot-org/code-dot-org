@@ -6,16 +6,14 @@ import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(function () {
-  const answerTypes = getScriptData('answertypes');
+  const promptSettings = getScriptData('promptsettings');
   const legacyMode = document.querySelector('script[data-legacymode]').dataset
     .legacymode;
-  const answerTypeCustomizations = getScriptData('answertypecustomizations');
 
   createReactRoot(
     <EditAiTutorPromptSettings
-      answerTypes={answerTypes}
+      promptSettings={promptSettings}
       legacyMode={legacyMode}
-      answerTypeCustomizations={answerTypeCustomizations}
     />,
     document.getElementById('ai-tutor-prompt-settings-editor')
   );

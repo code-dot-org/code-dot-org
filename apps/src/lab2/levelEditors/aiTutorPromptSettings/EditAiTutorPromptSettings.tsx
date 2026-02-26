@@ -18,7 +18,11 @@ import explainCodeContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/e
 import hintContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/hint.md';
 import pseudocodeContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/pseudocode.md';
 import testCaseContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/testCase.md';
-import {AiTutorAnswerType, AiTutorMode} from '@cdo/apps/weblab2/types';
+import {
+  AiTutorAnswerType,
+  AiTutorMode,
+  AiTutorPromptSettings,
+} from '@cdo/apps/weblab2/types';
 
 import moduleStyles from './edit-ai-tutor-prompt-settings.module.scss';
 
@@ -65,21 +69,19 @@ const ANSWER_TYPE_TO_LABEL = {
 };
 
 interface EditAiTutorPromptSettingsProps {
-  answerTypes?: AiTutorAnswerType[];
+  promptSettings?: AiTutorPromptSettings;
   legacyMode?: AiTutorMode;
-  answerTypeCustomizations?: Partial<Record<AiTutorAnswerType, string>>;
 }
 
 const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
-  answerTypes,
+  promptSettings,
   legacyMode,
-  answerTypeCustomizations: initialAnswerTypeCustomizations,
 }) => {
   const [enabledAnswerTypes, setEnabledAnswerTypes] = useState<
     Set<AiTutorAnswerType>
   >(() => {
-    if (answerTypes && answerTypes.length > 0) {
-      return new Set(answerTypes);
+    if (promptSettings?.answerTypes && promptSettings.answerTypes.length > 0) {
+      return new Set(promptSettings.answerTypes);
     } else if (legacyMode) {
       return new Set(TUTOR_MODE_TO_ANSWER_TYPE[legacyMode]);
     } else {
@@ -89,7 +91,7 @@ const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
 
   const [answerTypeCustomizations, setAnswerTypeCustomizations] = useState<
     Partial<Record<AiTutorAnswerType, string>>
-  >(initialAnswerTypeCustomizations ?? {});
+  >(promptSettings?.answerTypeCustomizations ?? {});
 
   const handleToggle = (answerType: AiTutorAnswerType, checked: boolean) => {
     setEnabledAnswerTypes(prev => {
@@ -120,16 +122,13 @@ const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
         respond with. You must specify at least one.
       </Typography>
       <input
-        id="level_ai_tutor_prompt_answer_types"
+        id="level_ai_tutor_prompt_settings"
         type="hidden"
-        value={JSON.stringify(Array.from(enabledAnswerTypes))}
-        name={'level[ai_tutor_prompt_answer_types]'}
-      />
-      <input
-        id="level_ai_tutor_answer_type_customizations"
-        type="hidden"
-        value={JSON.stringify(answerTypeCustomizations)}
-        name={'level[ai_tutor_answer_type_customizations]'}
+        value={JSON.stringify({
+          answerTypes: Array.from(enabledAnswerTypes),
+          answerTypeCustomizations: answerTypeCustomizations,
+        })}
+        name={'level[ai_tutor_prompt_settings]'}
       />
       <div className={moduleStyles.togglesContainer}>
         {TOGGLEABLE_TUTOR_ANSWER_TYPES.map(answerType => (

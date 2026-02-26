@@ -125,9 +125,9 @@ const Weblab2View: React.FC<
 
   const systemPrompt = useMemo(() => {
     let answerTypes: AiTutorAnswerType[] | undefined =
-      levelProperties.aiTutorPromptAnswerTypes;
+      levelProperties.aiTutorPromptSettings?.answerTypes;
     if (
-      !levelProperties.aiTutorPromptAnswerTypes &&
+      !levelProperties.aiTutorPromptSettings?.answerTypes &&
       levelProperties.aiTutorMode
     ) {
       answerTypes =
@@ -139,13 +139,9 @@ const Weblab2View: React.FC<
     }
     return generateAiTutorPrompt(
       answerTypes,
-      levelProperties.aiTutorAnswerTypeCustomizations
+      levelProperties.aiTutorPromptSettings?.answerTypeCustomizations
     );
-  }, [
-    levelProperties.aiTutorMode,
-    levelProperties.aiTutorPromptAnswerTypes,
-    levelProperties.aiTutorAnswerTypeCustomizations,
-  ]);
+  }, [levelProperties.aiTutorMode, levelProperties.aiTutorPromptSettings]);
 
   // Since there's no run button in Weblab2, set it to true by default
   // to enable the Submit button on edit on submittable levels.
