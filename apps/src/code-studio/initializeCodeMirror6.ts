@@ -3,8 +3,13 @@ import {json} from '@codemirror/lang-json';
 import {markdown} from '@codemirror/lang-markdown';
 import {EditorState, Extension} from '@codemirror/state';
 import {EditorView, ViewUpdate} from '@codemirror/view';
+import React from 'react';
 
 import {editorConfig} from '@cdo/apps/codemirror/editorConfig';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+
+import MainInstructionsPreview from '../lab2/views/components/Instructions/MainInstructionsPreview';
+import SafeMarkdown from '../templates/SafeMarkdown';
 
 const levelbuilderEditorTheme = EditorView.theme({
   '&': {
@@ -21,6 +26,8 @@ interface CodeMirrorLegacyAdapter {
 
 interface Options {
   callback?: (editor: CodeMirrorLegacyAdapter, update: ViewUpdate) => void;
+  preview?: string | Element;
+  game?: string;
 }
 
 type EditorMode = 'javascript' | 'json' | 'markdown';
@@ -44,17 +51,31 @@ function resolveTarget(target: string | Element): HTMLTextAreaElement {
   return node;
 }
 
+function resolvePreviewElement(
+  preview: string | Element | undefined,
+  node: HTMLTextAreaElement
+): Element | null {
+  if (preview instanceof Element) {
+    return preview;
+  }
+
+  const selector = preview || (node.id ? `#${node.id}_preview` : undefined);
+  return selector ? document.querySelector(selector) : null;
+}
+
 function initializeCodeMirror6(
   target: string | Element,
   mode: EditorMode,
   options: Options = {}
 ): CodeMirrorLegacyAdapter {
   const node = resolveTarget(target);
-  const {callback} = options;
+  const {callback, preview, game} = options;
   const changeListeners: Array<() => void> = [];
   const editorContainer = document.createElement('div');
   node.style.display = 'none';
   node.insertAdjacentElement('afterend', editorContainer);
+  const previewElement =
+    mode === 'markdown' ? resolvePreviewElement(preview, node) : null;
 
   const adapter: CodeMirrorLegacyAdapter = {
     getValue() {
@@ -72,6 +93,37 @@ function initializeCodeMirror6(
     },
   };
 
+  const updatePreview = () => {
+    if (!previewElement) {
+      return;
+    }
+
+    if (game === 'Pythonlab' || game === 'Weblab2') {
+      createReactRoot(
+        React.createElement(MainInstructionsPreview, {
+          instructionsText: adapter.getValue(),
+          theme: 'Dark',
+        }),
+        previewElement
+      );
+    } else if (game === 'Aichat' || game === 'Music') {
+      createReactRoot(
+        React.createElement(MainInstructionsPreview, {
+          instructionsText: adapter.getValue(),
+          theme: 'Light',
+        }),
+        previewElement
+      );
+    } else {
+      createReactRoot(
+        React.createElement(SafeMarkdown, {
+          markdown: adapter.getValue(),
+        }),
+        previewElement
+      );
+    }
+  };
+
   const extensions: Extension[] = [
     ...editorConfig,
     getLanguageExtension(mode),
@@ -86,6 +138,7 @@ function initializeCodeMirror6(
       if (callback) {
         callback(adapter, update);
       }
+      updatePreview();
     }),
   ];
 
@@ -96,6 +149,8 @@ function initializeCodeMirror6(
     }),
     parent: editorContainer,
   });
+
+  updatePreview();
 
   return adapter;
 }
