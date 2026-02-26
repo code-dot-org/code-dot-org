@@ -11,6 +11,13 @@
 #openai_measures_of_learning_api_key: localoverride
 #langfuse_secret_key: localoverride
 #langfuse_public_key: localoverride
+#google_gemini_ai_chat_lab_api_key: localoverride
+#google_gemini_ai_tutor_api_key: localoverride
+#ai_gateway_auth_key: localoverride
+#ai_gateway_auth_public_key: localoverride
+#ai_gateway_auth_key_passphrase: localoverride
+#google_vertex_ai_tutor_service_account_key: localoverride
+#google_vertex_ai_chat_service_account_key: localoverride
 
 # Causes dashboard-server to run pegasus as middleware, starting both in a
 # single command.  This is preferred (and default) in development mode.
