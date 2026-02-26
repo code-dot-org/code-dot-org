@@ -41,6 +41,7 @@ class Weblab2 < Level
     ai_tutor_mode
     level_system_prompt
     ai_tutor_prompt_answer_types
+    ai_tutor_answer_type_customizations
   )
 
   def self.create_from_level_builder(params, level_params)

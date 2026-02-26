@@ -67,11 +67,13 @@ const ANSWER_TYPE_TO_LABEL = {
 interface EditAiTutorPromptSettingsProps {
   answerTypes?: AiTutorAnswerType[];
   legacyMode?: AiTutorMode;
+  answerTypeCustomizations?: Partial<Record<AiTutorAnswerType, string>>;
 }
 
 const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
   answerTypes,
   legacyMode,
+  answerTypeCustomizations: initialAnswerTypeCustomizations,
 }) => {
   const [enabledAnswerTypes, setEnabledAnswerTypes] = useState<
     Set<AiTutorAnswerType>
@@ -85,6 +87,10 @@ const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
     }
   });
 
+  const [answerTypeCustomizations, setAnswerTypeCustomizations] = useState<
+    Partial<Record<AiTutorAnswerType, string>>
+  >(initialAnswerTypeCustomizations ?? {});
+
   const handleToggle = (answerType: AiTutorAnswerType, checked: boolean) => {
     setEnabledAnswerTypes(prev => {
       const updatedAnswerTypes = new Set(prev);
@@ -95,6 +101,16 @@ const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
       }
       return updatedAnswerTypes;
     });
+  };
+
+  const handleCustomizationChange = (
+    answerType: AiTutorAnswerType,
+    value: string
+  ) => {
+    setAnswerTypeCustomizations(prev => ({
+      ...prev,
+      [answerType]: value,
+    }));
   };
 
   return (
@@ -109,6 +125,12 @@ const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
         value={JSON.stringify(Array.from(enabledAnswerTypes))}
         name={'level[ai_tutor_prompt_answer_types]'}
       />
+      <input
+        id="level_ai_tutor_answer_type_customizations"
+        type="hidden"
+        value={JSON.stringify(answerTypeCustomizations)}
+        name={'level[ai_tutor_answer_type_customizations]'}
+      />
       <div className={moduleStyles.togglesContainer}>
         {TOGGLEABLE_TUTOR_ANSWER_TYPES.map(answerType => (
           <div key={answerType}>
@@ -120,13 +142,22 @@ const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
             />
             <details className={moduleStyles.contractDetails}>
               <summary className={moduleStyles.contractSummary}>
-                View contract
+                View/modify contract
               </summary>
               <div className={moduleStyles.contractContent}>
                 <EnhancedSafeMarkdown
                   markdown={ANSWER_TYPE_TO_CONTRACT[answerType]}
                 />
               </div>
+              <textarea
+                className={moduleStyles.customizationTextarea}
+                disabled={!enabledAnswerTypes.has(answerType)}
+                placeholder="Add to contract (optional). Write additional instructions in markdown."
+                value={answerTypeCustomizations[answerType] ?? ''}
+                onChange={e =>
+                  handleCustomizationChange(answerType, e.target.value)
+                }
+              />
             </details>
           </div>
         ))}

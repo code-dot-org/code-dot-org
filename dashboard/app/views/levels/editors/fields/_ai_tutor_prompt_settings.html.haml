@@ -6,4 +6,4 @@
 
 - content_for :body_scripts do
   %script{src: webpack_asset_path('js/levels/editors/fields/_ai_tutor_prompt_settings.js'),
-        data: {answertypes: @level.properties["ai_tutor_prompt_answer_types"] || "[]", legacymode: @level.properties["ai_tutor_mode"] || ''}}
+        data: {answertypes: @level.properties["ai_tutor_prompt_answer_types"] || "[]", legacymode: @level.properties["ai_tutor_mode"] || '', answertypecustomizations: @level.properties["ai_tutor_answer_type_customizations"].to_json || "{}"}}

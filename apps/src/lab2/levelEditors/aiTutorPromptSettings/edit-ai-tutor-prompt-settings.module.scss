@@ -26,3 +26,18 @@
   border-radius: 4px;
   font-size: 12px;
 }
+
+.customizationTextarea {
+  display: block;
+  margin-top: 4px;
+  margin-left: 16px;
+  width: calc(100% - 16px);
+  min-height: 60px;
+  font-size: 12px;
+  resize: vertical;
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
