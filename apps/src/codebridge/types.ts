@@ -74,7 +74,7 @@ export interface CodebridgeLevelProperties extends LevelProperties {
   widgetView?: boolean;
   widgetViewAllowShowCode?: boolean;
   widget2?: string;
-  widget2Parameters?: Record<string, string>;
+  widget2Parameters?: object;
 }
 
 // Python Lab specific property

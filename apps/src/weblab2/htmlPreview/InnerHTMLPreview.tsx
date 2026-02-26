@@ -20,9 +20,9 @@ const InnerHTMLPreview = () => {
   const [source, setSource] = React.useState<MultiFileSource | undefined>(
     undefined
   );
-  const [parameters, setParameters] = React.useState<
-    Record<string, string> | undefined
-  >(undefined);
+  const [parameters, setParameters] = React.useState<object | undefined>(
+    undefined
+  );
   const [currentFile, setCurrentFile] = React.useState<string | undefined>(
     undefined
   );

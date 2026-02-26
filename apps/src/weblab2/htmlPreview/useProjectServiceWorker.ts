@@ -18,7 +18,7 @@ import {
 function useProjectServiceWorker(
   source: MultiFileSource | undefined,
   codeStudioUrl: string,
-  parameters?: Record<string, string>
+  parameters?: object
 ) {
   const [serviceWorker, setServiceWorker] = useState<ServiceWorker | null>(
     null

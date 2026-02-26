@@ -77,10 +77,7 @@ const parametersScript = `
 })();
 `;
 
-export const addParametersToDocument = (
-  parameters: Record<string, string>,
-  doc: Document
-) => {
+export const addParametersToDocument = (parameters: object, doc: Document) => {
   const script = doc.createElement('script');
   script.textContent = parametersScript.replace(
     '{parameters}',
