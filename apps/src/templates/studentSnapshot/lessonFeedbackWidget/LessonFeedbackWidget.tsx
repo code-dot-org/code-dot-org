@@ -307,25 +307,21 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
   };
 
   const getFormattedTimestamp = () => {
-    return (
-      <div className={styles.submittedAtText}>
-        Last{' '}
-        {existingFeedbackData?.submitted_at
-          ? 'submitted to student on '
-          : 'saved on '}
-        {savedOrSubmittedTimestamp?.toLocaleDateString(undefined, {
-          year: 'numeric',
-          month: 'short',
-          day: 'numeric',
-        })}{' '}
-        at{' '}
-        {savedOrSubmittedTimestamp?.toLocaleTimeString(undefined, {
-          hour: 'numeric',
-          minute: '2-digit',
-          hour12: true,
-        })}
-      </div>
-    );
+    if (!savedOrSubmittedTimestamp) return '';
+    const dateStr = savedOrSubmittedTimestamp.toLocaleDateString(undefined, {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    });
+    const timeStr = savedOrSubmittedTimestamp.toLocaleTimeString(undefined, {
+      hour: 'numeric',
+      minute: '2-digit',
+      hour12: true,
+    });
+    const action = existingFeedbackData?.submitted_at
+      ? 'submitted to student on'
+      : 'saved on';
+    return `Last ${action} ${dateStr} at ${timeStr}`;
   };
 
   // TO DO: Use Loading widget when needed here.
@@ -350,7 +346,11 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
         setResourceData={setResourceData}
       />
       <div className={styles.footerWrapper}>
-        {savedOrSubmittedTimestamp && getFormattedTimestamp()}
+        {savedOrSubmittedTimestamp && (
+          <div className={styles.submittedAtText}>
+            {getFormattedTimestamp()}
+          </div>
+        )}
         <ActionButtons
           onSaveAsDraft={handleSaveAsDraft}
           onSendToStudent={handleSendToStudent}
