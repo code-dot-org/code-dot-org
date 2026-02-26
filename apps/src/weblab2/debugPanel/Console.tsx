@@ -1,4 +1,5 @@
 import Alert from '@code-dot-org/component-library/alert';
+import type {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   BodyFourText,
   BodyThreeText,
@@ -14,6 +15,14 @@ import {
 import EmptyPanelPlaceholder from './EmptyPanelPlaceholder';
 
 import moduleStyles from './console.module.scss';
+
+// Icons are aria-hidden so VoiceOver reads the aria-label on the Alert instead
+// of announcing child elements. Must stay in sync with Alert's getDefaultAlertIconFromType.
+const LEVEL_ICONS: Partial<Record<ConsoleLogLevel, FontAwesomeV6IconProps>> = {
+  warn: {iconName: 'exclamation-circle', 'aria-hidden': true},
+  error: {iconName: 'circle-xmark', 'aria-hidden': true},
+  info: {iconName: 'circle-info', 'aria-hidden': true},
+};
 
 const Console: React.FunctionComponent = () => {
   const consoleLogs = useAppSelector(state => state.weblab2Console.logs);
@@ -64,9 +73,14 @@ const Console: React.FunctionComponent = () => {
             <Alert
               key={index}
               type={mapLogLevelToAlertType(log.level)}
-              text={formatLogWithTimestamp(log)}
+              icon={LEVEL_ICONS[log.level]}
+              text={
+                <span aria-hidden="true">{formatLogWithTimestamp(log)}</span>
+              }
               size={'s'}
+              aria-label={`${log.level}: ${log.message}, ${log.timestamp}`}
               className={moduleStyles.consoleLog}
+              tabIndex={0}
             />
           ))}
           <div ref={bottomRef} />
