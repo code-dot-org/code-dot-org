@@ -425,15 +425,11 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal user.id, signed_in_user_id
   end
 
-  test 'clever: signs in user if user is found by legacy_id' do
+  test 'clever: signs in user and updates auth option if user is found by legacy_id' do
     legacy_id = SecureRandom.alphanumeric(10)
-    user = create(:teacher)
-    create(
-      :authentication_option,
-      user: user,
-      credential_type: AuthenticationOption::CLEVER,
-      authentication_id: legacy_id
-    )
+    user = create(:teacher, :with_clever_authentication_option)
+    auth_option = user.authentication_options.find_by(credential_type: AuthenticationOption::CLEVER)
+    auth_option.update!(authentication_id: legacy_id)
 
     auth = generate_auth_user_hash \
       provider: AuthenticationOption::CLEVER,
@@ -442,12 +438,17 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
-    assert_does_not_create(User) do
-      get :clever
+    assert_no_difference('AuthenticationOption.count') do
+      assert_does_not_create(User) do
+        get :clever
+      end
     end
 
     user.reload
+    auth_option.reload
     assert_equal user.id, signed_in_user_id
+    assert_equal auth[:uid], auth_option.authentication_id
+    assert_equal AuthenticationOption::Clever::VERSION[:v3], auth_option.version
   end
 
   test 'clever: updates tokens when unmigrated user is found by credentials' do

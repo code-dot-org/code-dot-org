@@ -329,7 +329,12 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       id: auth_hash.uid
   end
 
-  # Temporary method to find existing Clever users by their legacy_id field
+  # Temporary method to find existing Clever users by their legacy_id field. This
+  # method also updates the user's credentials to use the new Clever v3 id and logs a metric for the migration.
+  # This is here to handle the edge case where an existing user's Clever auth option wasn't updated to the new v3 id
+  # during the migration, due to a district disabling the Clever integration, and then re-enabling it after the migration
+  # was complete. We want to make sure these users can still sign in without losing access to their account,
+  # and we also want to log a metric so we can understand how many users this is impacting and when it's no longer needed.
   private def find_clever_user_by_legacy_id
     return nil unless auth_hash
     # Teacher and staff users in Clever have a legacy_id field in the v3 API response.
@@ -344,9 +349,25 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
     return nil unless legacy_id
 
-    User.find_by_credential \
+    user = User.find_by_credential \
       type: auth_hash.provider,
       id: legacy_id
+
+    if user
+      ao = user.authentication_options.find_by(credential_type: auth_hash.provider, authentication_id: legacy_id)
+      ao.update(authentication_id: auth_hash.uid, version: AuthenticationOption::Clever::VERSION[:v3]) if ao
+
+      Metrics::Events.log_event(
+        user: user,
+        event_name: 'clever_legacy_id_migration',
+        metadata: {
+          legacy_id: legacy_id,
+          new_id: auth_hash.uid
+        }
+      )
+    end
+
+    return user
   end
 
   private def auth_hash
