@@ -9,7 +9,7 @@ import {isScriptHiddenForSection} from '@cdo/apps/code-studio/hiddenLessonRedux'
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import EndOfLessonDialog from '@cdo/apps/templates/EndOfLessonDialog';
 import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/GoogleClassroomAttributionLabel';
@@ -95,24 +95,21 @@ class UnitOverview extends React.Component {
         EVENTS.UNIT_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT,
         {
           'unit name': props.scriptName,
-        },
-        PLATFORMS.STATSIG
+        }
       );
     } else if (props.userType === 'student') {
       analyticsReporter.sendEvent(
         EVENTS.UNIT_OVERVIEW_PAGE_VISITED_BY_STUDENT_EVENT,
         {
           'unit name': props.scriptName,
-        },
-        PLATFORMS.STATSIG
+        }
       );
     } else {
       analyticsReporter.sendEvent(
         EVENTS.UNIT_OVERVIEW_PAGE_VISITED_BY_SIGNED_OUT_USER_EVENT,
         {
           'unit name': props.scriptName,
-        },
-        PLATFORMS.STATSIG
+        }
       );
     }
   }

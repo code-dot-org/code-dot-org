@@ -1,7 +1,7 @@
 import Alert from '@code-dot-org/component-library/alert';
 import React from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import WidgetTemplate from '@cdo/apps/templates/studentSnapshot/widgetTemplate';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
@@ -131,13 +131,11 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
             );
             analyticsReporter.sendEvent(
               EVENTS.LESSON_SNAPSHOT_AI_FEEDBACK_GENERATED,
-              {},
-              PLATFORMS.STATSIG
+              {}
             );
             analyticsReporter.sendEvent(
               EVENTS.LESSON_SNAPSHOT_FEEDBACK_WIDGET_LOADED,
-              {},
-              PLATFORMS.STATSIG
+              {}
             );
           }
         } else {
@@ -146,8 +144,7 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
             setFeedbackText(data.saved_feedback);
             analyticsReporter.sendEvent(
               EVENTS.LESSON_SNAPSHOT_FEEDBACK_WIDGET_LOADED,
-              {},
-              PLATFORMS.STATSIG
+              {}
             );
           }
           setExistingFeedbackData(data);
@@ -266,8 +263,7 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
       );
       analyticsReporter.sendEvent(
         EVENTS.LESSON_SNAPSHOT_SAVE_AS_DRAFT_CLICKED,
-        getCommonAnalyticsProperties(),
-        PLATFORMS.STATSIG
+        getCommonAnalyticsProperties()
       );
 
       setExistingFeedbackData(savedData);
@@ -282,8 +278,7 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
 
     analyticsReporter.sendEvent(
       EVENTS.LESSON_SNAPSHOT_SEND_FEEDBACK_TO_STUDENT_CLICKED,
-      analyticsProperties,
-      PLATFORMS.STATSIG
+      analyticsProperties
     );
     // Create the new feedback data
     const newFeedbackData = {

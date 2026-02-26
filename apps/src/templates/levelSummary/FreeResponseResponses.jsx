@@ -7,7 +7,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useEffect} from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getFullName} from '@cdo/apps/templates/manageStudents/utils.ts';
 import i18n from '@cdo/locale';
@@ -35,11 +35,7 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
   }, [responses]);
 
   const hideResponse = userId => {
-    analyticsReporter.sendEvent(
-      EVENTS.CFU_RESPONSE_HIDDEN,
-      eventData,
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.CFU_RESPONSE_HIDDEN, eventData);
     setHiddenResponses(prevHidden => [...prevHidden, userId]);
   };
 
@@ -128,8 +124,7 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
               onClick={() => {
                 analyticsReporter.sendEvent(
                   EVENTS.CFU_RESPONSE_ALL_UNPINNED,
-                  eventData,
-                  PLATFORMS.STATSIG
+                  eventData
                 );
                 setPinnedResponseIds([]);
               }}
@@ -148,8 +143,7 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
                   userId => {
                     analyticsReporter.sendEvent(
                       EVENTS.CFU_RESPONSE_UNPINNED,
-                      eventData,
-                      PLATFORMS.STATSIG
+                      eventData
                     );
                     setPinnedResponseIds(prevPinned =>
                       prevPinned.filter(id => id !== userId)
@@ -174,8 +168,7 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
               userId => {
                 analyticsReporter.sendEvent(
                   EVENTS.CFU_RESPONSE_PINNED,
-                  eventData,
-                  PLATFORMS.STATSIG
+                  eventData
                 );
                 setPinnedResponseIds(prevPinned => [...prevPinned, userId]);
               },
@@ -193,8 +186,7 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
               e.preventDefault();
               analyticsReporter.sendEvent(
                 EVENTS.CFU_RESPONSE_ALL_UNHID,
-                eventData,
-                PLATFORMS.STATSIG
+                eventData
               );
               setHiddenResponses([]);
             },
