@@ -1,5 +1,7 @@
 import type {IconButtonProps} from '@mui/material/IconButton';
 
+import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
+
 /**
  * MUI IconButton style overrides to match icon-only button design.
  * Extends MUI's size system to support custom sizes: xs, s, m, l
@@ -124,6 +126,10 @@ const iconButtonVariants = [
         backgroundColor: 'var(--background-neutral-disabled)',
         color: 'var(--text-neutral-disabled-inverse)',
       },
+      '&.MuiIconButton-loading': {
+        backgroundColor: 'var(--background-brand-purple-primary)',
+        color: 'var(--text-neutral-white-fixed)',
+      },
     },
   },
   {
@@ -144,6 +150,10 @@ const iconButtonVariants = [
       '&.Mui-disabled': {
         backgroundColor: 'var(--background-neutral-disabled)',
         color: 'var(--text-neutral-disabled-inverse)',
+      },
+      '&.MuiIconButton-loading': {
+        backgroundColor: 'var(--background-neutral-primary-inverse)',
+        color: 'var(--text-neutral-inverse)',
       },
     },
   },
@@ -166,6 +176,10 @@ const iconButtonVariants = [
         backgroundColor: 'var(--background-neutral-octonary)',
         color: 'var(--text-neutral-primary)',
       },
+      '&.MuiIconButton-loading': {
+        backgroundColor: 'var(--background-neutral-white-fixed)',
+        color: 'var(--text-neutral-primary)',
+      },
     },
   },
   {
@@ -186,6 +200,10 @@ const iconButtonVariants = [
       '&.Mui-disabled': {
         backgroundColor: 'var(--background-neutral-disabled)',
         color: 'var(--text-neutral-disabled-inverse)',
+      },
+      '&.MuiIconButton-loading': {
+        backgroundColor: 'var(--background-error-primary)',
+        color: 'var(--text-neutral-white-fixed)',
       },
     },
   },
@@ -214,6 +232,11 @@ const iconButtonVariants = [
         color: 'var(--text-neutral-disabled)',
         backgroundColor: 'var(--background-neutral-primary)',
       },
+      '&.MuiIconButton-loading': {
+        border: '1px solid var(--borders-brand-purple-primary)',
+        backgroundColor: 'transparent',
+        color: 'var(--text-brand-purple-primary)',
+      },
     },
   },
   {
@@ -238,6 +261,11 @@ const iconButtonVariants = [
         borderColor: 'var(--borders-neutral-disabled)',
         color: 'var(--text-neutral-disabled)',
         backgroundColor: 'var(--background-neutral-primary)',
+      },
+      '&.MuiIconButton-loading': {
+        border: '1px solid var(--borders-neutral-solid)',
+        backgroundColor: 'var(--background-neutral-primary)',
+        color: 'var(--text-neutral-primary)',
       },
     },
   },
@@ -264,6 +292,11 @@ const iconButtonVariants = [
         color: 'var(--text-neutral-disabled)',
         backgroundColor: 'var(--background-neutral-primary)',
       },
+      '&.MuiIconButton-loading': {
+        border: '1px solid var(--borders-neutral-strong)',
+        backgroundColor: 'var(--background-neutral-primary)',
+        color: 'var(--text-neutral-primary)',
+      },
     },
   },
   {
@@ -288,6 +321,11 @@ const iconButtonVariants = [
         borderColor: 'var(--neutral-gray-80)',
         color: 'var(--neutral-gray-80)',
         backgroundColor: 'unset',
+      },
+      '&.MuiIconButton-loading': {
+        border: '1px solid var(--neutral-base-white)',
+        backgroundColor: 'var(--neutral-base-black)',
+        color: 'var(--neutral-base-white)',
       },
     },
   },
@@ -314,6 +352,11 @@ const iconButtonVariants = [
         color: 'var(--text-neutral-disabled)',
         backgroundColor: 'var(--background-neutral-primary)',
       },
+      '&.MuiIconButton-loading': {
+        border: '1px solid var(--borders-error-primary)',
+        backgroundColor: 'var(--background-neutral-primary)',
+        color: 'var(--text-error-primary)',
+      },
     },
   },
 
@@ -338,6 +381,10 @@ const iconButtonVariants = [
         color: 'var(--text-neutral-disabled)',
         backgroundColor: 'transparent',
       },
+      '&.MuiIconButton-loading': {
+        backgroundColor: 'transparent',
+        color: 'var(--text-brand-purple-primary)',
+      },
     },
   },
   {
@@ -359,6 +406,10 @@ const iconButtonVariants = [
       '&.Mui-disabled': {
         color: 'var(--text-neutral-disabled)',
         backgroundColor: 'transparent',
+      },
+      '&.MuiIconButton-loading': {
+        backgroundColor: 'transparent',
+        color: 'var(--text-neutral-primary)',
       },
     },
   },
@@ -382,6 +433,10 @@ const iconButtonVariants = [
         color: 'var(--text-neutral-disabled)',
         backgroundColor: 'transparent',
       },
+      '&.MuiIconButton-loading': {
+        backgroundColor: 'transparent',
+        color: 'var(--text-neutral-quaternary)',
+      },
     },
   },
   {
@@ -403,6 +458,10 @@ const iconButtonVariants = [
       '&.Mui-disabled': {
         color: 'var(--text-neutral-tertiary)',
         backgroundColor: 'transparent',
+      },
+      '&.MuiIconButton-loading': {
+        backgroundColor: 'transparent',
+        color: 'var(--neutral-base-white)',
       },
     },
   },
@@ -426,6 +485,10 @@ const iconButtonVariants = [
         color: 'var(--text-neutral-disabled)',
         backgroundColor: 'transparent',
       },
+      '&.MuiIconButton-loading': {
+        backgroundColor: 'transparent',
+        color: 'var(--text-error-primary)',
+      },
     },
   },
 ] satisfies Array<{
@@ -434,6 +497,16 @@ const iconButtonVariants = [
 }>;
 
 export const ICON_BUTTON_OVERRIDES = {
+  defaultProps: {
+    disableRipple: true,
+    loadingIndicator: (
+      <FontAwesomeV6Icon
+        iconName="spinner"
+        iconStyle="solid"
+        animationType="spin"
+      />
+    ),
+  },
   variants: iconButtonVariants,
   styleOverrides: {
     root: () => {
@@ -483,6 +556,10 @@ export const ICON_BUTTON_OVERRIDES = {
         '& .MuiTouchRipple-root': {
           display: 'none',
         },
+
+        // '.MuiIconButton-loadingIndicator': {
+        //   color: 'inherit', // Ensure spinner inherits text color
+        // }
       };
     },
   },
