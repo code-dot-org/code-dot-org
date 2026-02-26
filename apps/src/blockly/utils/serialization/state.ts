@@ -149,14 +149,14 @@ function blockExists(behaviorId: string, projectBlocks: JsonBlockConfig[]) {
 }
 
 /**
- * Combines shared functions (XML) with a starting block source (XML or JSON).
+ * Combines shared functions (XML) with a starting block source (JSON).
  * Used in levels where shared functions and behaviors are enabled.
  *
- * @param {string} startBlocksSource - The source of starting blocks (XML or JSON).
+ * @param {string} startBlocksSource - The source of starting blocks (JSON).
  * @param {string} functionsXml - The XML representation of functions to append.
  * @returns {string} - Updated starting blocks in JSON format.
  */
-export function appendSharedFunctions(
+export function appendSharedFunctionsToState(
   startBlocksSource: string,
   functionsXml: string
 ) {

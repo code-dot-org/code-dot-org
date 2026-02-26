@@ -12,7 +12,7 @@ import {
   stripUserCreated,
 } from '@cdo/apps/blockly/constants';
 import {
-  appendSharedFunctions,
+  appendSharedFunctionsToState,
   highlightBlock,
   loadBlocksToWorkspace,
   processToolboxXml,
@@ -2847,12 +2847,12 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
   // Only used in Sprite Lab.
   if (config.level.sharedFunctions) {
     if (stringIsXml(startBlocks)) {
-      startBlocks = blockUtils.appendNewFunctions(
+      startBlocks = blockUtils.appendNewFunctionsXml(
         startBlocks,
         config.level.sharedFunctions
       );
     } else {
-      startBlocks = appendSharedFunctions(
+      startBlocks = appendSharedFunctionsToState(
         startBlocks,
         config.level.sharedFunctions
       );
