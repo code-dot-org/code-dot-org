@@ -1,4 +1,5 @@
-import {LinkButton} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
 
 import {
@@ -67,16 +68,17 @@ const AiDiffArtifactLink: React.FC<{artifact: AiArtifact | undefined}> = ({
       : `Lesson Hook`;
     return (
       <div className={style.artifactShowButtons}>
-        <LinkButton
-          color="gray"
-          size="s"
-          type="secondary"
-          target="_blank"
+        <MuiButton
+          variant="outlined"
+          color="tertiary"
+          size="small"
+          aria-label="Open artifact"
           href={artifact.url}
-          aria-label={'Open artifact'}
-          iconLeft={{iconName: 'shapes'}}
-          text={title}
-        />
+          target="_blank"
+          startIcon={<FontAwesomeV6Icon iconName="shapes" />}
+        >
+          {title}
+        </MuiButton>
       </div>
     );
   } else {
