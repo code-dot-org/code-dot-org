@@ -15,7 +15,6 @@ import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import currentUser, {
   setShowAITALessonSummary,
   setHasCompletedPersonalizationQuiz,
-  setAudioSummaryTranscript,
 } from '@cdo/apps/templates/currentUserRedux';
 import manageStudents from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
@@ -71,7 +70,6 @@ $(document).ready(function () {
     store.dispatch(
       setHasCompletedPersonalizationQuiz(hasCompletedPersonalizationQuiz)
     );
-    store.dispatch(setAudioSummaryTranscript([]));
   }
   store.dispatch(setSections(sections, false, sectionOrder));
   store.dispatch(setLocaleCode(localeCode));

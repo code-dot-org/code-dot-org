@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2024-06-28T19:59:02.000Z",
   "level_num": "custom",
@@ -41,14 +42,17 @@
       "availableModelIds": [
         "gen-ai-mistral-7b-inst-v01",
         "gen-ai-karen-creative-mistral-7b"
-      ]
+      ],
+      "multimodalEnabled": false
     },
     "long_instructions": "## Switching Between Models\r\n\r\nThis tool has two base models: _Karen the Editor_ and _Mistral Instruct_. We can use the Compare Models button to view the differences between them.\r\n\r\nTo change a base model, use the dropdown to update the model and then press the Update button to save the configuration.\r\n\r\n### Do This\r\n\r\n1) Ask _Karen the Editor_ for advice on how to make a sentence more creative, then change to the _Mistral Instruct_ model and have the same conversation\r\n    - Was one model more helpful than the other?\r\n2) Ask a **question about a book or movie** to the _Mistral Instruct_ model, then change to the _Karen the Editor_ model and ask the same question\r\n    - How were the responses different? Was one better than the other?",
     "display_name": "Karen the Editor",
     "bubble_choice_description": "Exiperiment with Karen the Editor, a base model fine-tuned for providing feedback on sentence structure and grammar, and helping to write more creatively.",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-06-28T19:59:02.671+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-finetuning-explore-karen\\\"\"],\"cloned_from\":\"gen-ai-customizing-finetuning-explore-karen\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-06-28T19:59:02.671+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-finetuning-explore-karen\\\"\"],\"cloned_from\":\"gen-ai-customizing-finetuning-explore-karen\"},{\"changed_at\":\"2026-02-24 16:54:21 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-24 16:54:44 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-24 16:54:57 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

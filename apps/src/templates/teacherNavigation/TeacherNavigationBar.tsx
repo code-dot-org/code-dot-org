@@ -1,5 +1,4 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
-import Tags from '@code-dot-org/component-library/tags';
 import {Typography} from '@mui/material';
 import _ from 'lodash';
 import React, {useState, useEffect} from 'react';
@@ -135,19 +134,14 @@ const TeacherNavigationBar: React.FC<{
     {
       title: coursecontentSectionTitle,
       keys: courseContentKeys,
-      sectionTag: (
-        <Tags tagsList={[{label: 'New'}]} className={styles.sidebarNewTags} />
-      ),
     },
     {
       title: performanceSectionTitle,
       keys: performanceContentKeys,
-      sectionTag: null,
     },
     {
       title: classroomContentSectionTitle,
       keys: classroomContentKeys,
-      sectionTag: null,
     },
   ];
 
@@ -244,15 +238,12 @@ const TeacherNavigationBar: React.FC<{
   };
 
   const navbarComponents = teacherNavigationBarContent.map(
-    ({title, keys, sectionTag}, index) => {
+    ({title, keys}, index) => {
       const sidebarOptions = getSidebarOptionsForSection(keys);
 
       return (
         <div key={`section-${index}`}>
-          <div className={styles.sidebarSectionHeader}>
-            {title}
-            {sectionTag}
-          </div>
+          <div className={styles.sidebarSectionHeader}>{title}</div>
           {sidebarOptions}
         </div>
       );

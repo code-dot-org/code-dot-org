@@ -19,6 +19,8 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {RootState} from '@cdo/apps/types/redux';
+import {ValueOf} from '@cdo/apps/types/utils';
+import experiments from '@cdo/apps/util/experiments';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
@@ -55,6 +57,11 @@ const useVertex = queryParams('aitutor-use-vertex') === 'true' ? true : false;
 
 // Log whether using Vertex API or not in case query param entered incorrectly.
 console.log(`🤖: Tutor set to use Vertex API? ${useVertex ? 'YES' : 'NO'}`);
+
+const useClientApi = (modelId: ValueOf<typeof AiChatModelIds>) =>
+  isAiGatewayEnabled || 
+  (modelId === AiChatModelIds.GEMINI_2_5_FLASH_IMAGE &&
+   experiments.isEnabledAllowingQueryString('use-aichat-client-api'));
 
 // This thunk's callback function submits a user's chat content and AI customizations to
 // the chat completion endpoint, then waits for a chat completion response, and updates
@@ -180,11 +187,7 @@ export const submitChatContents = createAsyncThunk(
         sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_INITIATED, eventData)
       );
 
-      if (
-        isAiGatewayEnabled ||
-        modelParameters.selectedModelId ===
-          AiChatModelIds.GEMINI_2_5_FLASH_IMAGE
-      ) {
+      if (useClientApi(modelParameters.selectedModelId)) {
         const levelProperties = state.lab.levelProperties;
         const levelName = levelProperties?.name;
         const levelSystemPrompt =

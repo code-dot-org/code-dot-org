@@ -55,12 +55,7 @@ export default class ChangeUserTypeForm extends React.Component {
     return (
       <span>
         {i18n.changeUserTypeModal_emailOptIn_description()}{' '}
-        <a
-          href={pegasus('/privacy')}
-          tabIndex="3"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href={pegasus('/privacy')} target="_blank" rel="noopener noreferrer">
           {i18n.changeUserTypeModal_emailOptIn_privacyPolicy()}
         </a>
       </span>
@@ -81,7 +76,6 @@ export default class ChangeUserTypeForm extends React.Component {
             type="email"
             value={values.email}
             disabled={disabled}
-            tabIndex="1"
             onKeyDown={this.onKeyDown}
             onChange={this.onEmailChange}
             autoComplete="off"
@@ -98,7 +92,6 @@ export default class ChangeUserTypeForm extends React.Component {
           <select
             value={values.emailOptIn}
             disabled={disabled}
-            tabIndex="1"
             onKeyDown={this.onKeyDown}
             onChange={this.onEmailOptInChange}
             style={{

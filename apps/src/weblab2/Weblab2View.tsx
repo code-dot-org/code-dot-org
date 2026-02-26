@@ -63,7 +63,6 @@ const defaultSource: MultiFileSource = {
     '1': {
       id: '1',
       name: DEFAULT_START_HTML_FILE,
-      language: 'html',
       contents: `<!DOCTYPE html>
 <html>
   <body>
