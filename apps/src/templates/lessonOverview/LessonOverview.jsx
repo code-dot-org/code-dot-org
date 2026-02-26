@@ -6,7 +6,7 @@ import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import styleConstants from '@cdo/apps/styleConstants';
 import CopyrightInfo from '@cdo/apps/templates/CopyrightInfo';
@@ -56,18 +56,14 @@ class LessonOverview extends Component {
   constructor(props) {
     super(props);
 
-    analyticsReporter.sendEvent(
-      EVENTS.LESSON_OVERVIEW_PAGE_VISITED_EVENT,
-      {
-        lessonId: props.lesson.id,
-        lessonName: props.lesson.displayName,
-        lessonLink: document.location.pathname,
-        referrer: document.referrer,
-        unitName: props.lesson.unit.displayName,
-        unitLink: props.lesson.unit.link,
-      },
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.LESSON_OVERVIEW_PAGE_VISITED_EVENT, {
+      lessonId: props.lesson.id,
+      lessonName: props.lesson.displayName,
+      lessonLink: document.location.pathname,
+      referrer: document.referrer,
+      unitName: props.lesson.unit.displayName,
+      unitLink: props.lesson.unit.link,
+    });
   }
 
   handleResource = (e, action, url = null) => {

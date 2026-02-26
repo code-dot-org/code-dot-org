@@ -34,7 +34,6 @@ class DCDOBase < DynamicConfigBase
       'curriculum-launch-2024': DCDO.get('curriculum-launch-2024', false),
       'csta-form-extension': DCDO.get('csta-form-extension', false),
       gender: DCDO.get('gender', false),
-      'amplitude-event-sample-rates': DCDO.get('amplitude-event-sample-rates', {}),
       # Whether the scholarship dropdown is locked on the application dashboard.
       'scholarship-dropdown-locked': DCDO.get('scholarship-dropdown-locked', true),
       hoc_mode: DCDO.get('hoc_mode', false),

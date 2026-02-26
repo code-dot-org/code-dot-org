@@ -7,7 +7,7 @@ import {
   starterAssets as starterAssetsApi,
   files as filesApi,
 } from '@cdo/apps/clientApi';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
@@ -174,11 +174,10 @@ export default class AssetManager extends React.Component {
     ].includes(file.type);
 
     if (isImage) {
-      analyticsReporter.sendEvent(
-        EVENTS.UPLOAD_CUSTOM_IMAGE,
-        {UploaderType: 'Asset Uploader', ProjectType: this.state.projectType},
-        PLATFORMS.STATSIG
-      );
+      analyticsReporter.sendEvent(EVENTS.UPLOAD_CUSTOM_IMAGE, {
+        UploaderType: 'Asset Uploader',
+        ProjectType: this.state.projectType,
+      });
     }
 
     this.setState({statusMessage: 'Uploading...'});
