@@ -71,7 +71,7 @@
   - Therefore: THE BEST WAY TO LINT is to run (from the repo root): `./tools/hooks/pre-commit`. This will run the pre-commit git hooks which lint both ruby and js/ts/jsx/tsx files, but only those that have been changed. Do this regularly after you make changes, its usually very quick.
 - IGNORE the pegasus/ directory unless explicitly instructed, it is big and mostly deprecated
 - Because the repo started in 2013, there's a wide range of styles and versions of tech in use. Generally, match your style to the current project/directory you are working in. When in doubt lean toward a more modern approach but don't push it either (e.g. if the directory currently uses JS, probably default to writing JS not TS)
-- In local development, the app is most commonly available as http://localhost:9000 (try this first, webpack dev server proxy with react hmr) or http://localhost:3000 (direct to rails)
+- In local development, dashboard+apps is most commonly available as http://localhost:9000 (try this first, webpack dev server proxy with react hmr, i.e. `yarn start` is running) or if port :9000 isn't available, try http://localhost:3000 (direct to rails, a static `yarn build`, just dashboard)
   - Sometimes the dashboard will already be started by the user and will be already running, as it takes a while to start and stop
   - However, if dashboard has not been started you may want to ask the user if you should start it when appropriate/useful:
     - To start the rails backend: run `bin/dashboard-server` from the repo root (aka "start dashboard")
