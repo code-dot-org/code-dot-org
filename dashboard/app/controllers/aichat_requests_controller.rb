@@ -94,7 +94,7 @@ class AichatRequestsController < ApplicationController
     unless chat_completion_has_required_params?
       return render status: :bad_request, json: {}
     end
-    unless can_access_aichat_chat_completion? || can_access_ai_tutor_chat_completion?(params[:aichatContext][:clientType])
+    unless can_access_aichat_lab_chat_completion? || can_access_ai_tutor_chat_completion?(params[:aichatContext][:clientType])
       return render status: :forbidden, json: {user_type: current_user.user_type}
     end
 
