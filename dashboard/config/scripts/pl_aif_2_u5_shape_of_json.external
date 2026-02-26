@@ -1,0 +1,195 @@
+name 'pl-aif-2-U5-shape-of-JSON'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# The Shape of JSON
+
+#### Before you write any code, you need to **see the shape** of the data.
+
+---
+
+## Scan the JSON
+
+#### Don’t try to understand *everything* yet.
+#### First, look for the **patterns**:
+
+- ####  **Arrays**: ordered lists of items (look for **[ ]**)
+- ####  **Objects**: key–value pairs (look for **{ }**)
+- ####  **Values**: can be primitive (**string, number, boolean**) or nested inside objects/arrays
+
+<div style="background-color:#B7E0E5; border-radius:10px; padding:14px; margin:18px auto; max-width:85%; box-sizing:border-box;">
+  <p style="font-size:14pt; margin:0; line-height:130%;">💡 <strong>Tip:</strong> JSON isn’t random text. It has a structure. Your job is to spot the structure first.</p>
+</div>
+
+---
+
+## JSON Sample 
+
+<div style="background:#111; color:#f1f1f1; border-radius:12px; padding:16px; font-size:14pt; line-height:1.35; overflow:auto; max-height:520px; white-space:pre; border:1px solid #222;">
+{
+  "app": {
+    "name": "WeatherSnap",
+    "version": "1.3.2",
+    "request_id": "req_8f19b2",
+    "last_updated": "2026-02-25T10:32:00Z"
+  },
+  "location": {
+    "city": "Indianapolis",
+    "state": "IN",
+    "zip": "46204",
+    "latitude": 39.7684,
+    "longitude": -86.1581,
+    "timezone": "America/Indiana/Indianapolis"
+  },
+  "current": {
+    "temperature": 72,
+    "condition": "Partly Cloudy",
+    "feels_like": 74,
+    "humidity": 56,
+    "wind": {
+      "speed_mph": 8,
+      "direction": "NW",
+      "gust_mph": 12
+    },
+    "uv_index": 3,
+    "precipitation": {
+      "chance_percent": 10,
+      "amount_inches": 0.00
+    },
+    "alerts": []
+  },
+  "forecast": [
+    {
+      "day": "Monday",
+      "date": "2026-02-25",
+      "high": 75,
+      "low": 60,
+      "condition": "Sunny",
+      "hourly": [
+        { "time": "08:00", "temp": 63, "condition": "Sunny" },
+        { "time": "12:00", "temp": 71, "condition": "Sunny" },
+        { "time": "16:00", "temp": 74, "condition": "Breezy" },
+        { "time": "20:00", "temp": 66, "condition": "Clear" }
+      ]
+    },
+    {
+      "day": "Tuesday",
+      "date": "2026-02-26",
+      "high": 70,
+      "low": 58,
+      "condition": "Rain",
+      "hourly": [
+        { "time": "08:00", "temp": 60, "condition": "Cloudy" },
+        { "time": "12:00", "temp": 66, "condition": "Light Rain" },
+        { "time": "16:00", "temp": 69, "condition": "Rain" },
+        { "time": "20:00", "temp": 61, "condition": "Showers" }
+      ]
+    }
+  ],
+  "meta": {
+    "units": {
+      "temperature": "F",
+      "wind_speed": "mph",
+      "precipitation": "inches"
+    },
+    "data_sources": [
+      { "name": "National Weather Service", "type": "government" },
+      { "name": "Local Radar Blend", "type": "commercial" }
+    ],
+    "disclaimer": "For educational use only. Data may be delayed.",
+    "debug": {
+      "cache_hit": true,
+      "latency_ms": 182,
+      "notes": [
+        "Forecast normalized",
+        "Alerts list empty",
+        "Hourly sampled every 4 hours"
+      ]
+    }
+  }
+}
+</div>
+
+---
+
+## Call to Action: Find the Patterns
+
+#### In the JSON above, try to find:
+
+#### 1. **One array** (look for **[ ]**)  
+#### 2. **One object inside an object** (nested **{ }**)  
+#### 3. **Two primitive values** (string / number / boolean)  
+#### 4. **One place where an array contains objects** (a list of `{ ... }` items)
+
+<details style="background-color:#ececec; padding:10px; margin-bottom:10px; border:1px solid transparent; border-radius:8px;">
+<summary style="font-size:1.4em; font-weight:bold;">🎨 Check your answers </summary>
+
+<div style="margin-top:12px; margin-left:14px; margin-right:14px; margin-bottom:10px; font-size:13pt; line-height:145%;">
+
+<div style="background:#ffffff; border-radius:10px; padding:12px; border:1px solid #ddd;">
+  <div style="font-size:13pt; font-weight:bold; margin-bottom:8px;">Color Key</div>
+  <div style="font-size:12pt; line-height:150%;">
+    <span style="background:#fff2a8; padding:2px 6px; border-radius:6px;"><strong>Arrays</strong> [ ]</span>
+    <span style="background:#d6f5d6; padding:2px 6px; border-radius:6px; margin-left:8px;"><strong>Objects</strong> { }</span>
+    <span style="background:#ffd6e7; padding:2px 6px; border-radius:6px; margin-left:8px;"><strong>Primitive values</strong> (string/number/boolean)</span>
+  </div>
+</div>
+
+<div style="margin-top:12px; font-size:12pt;">
+  Below is the same JSON with highlighted examples. You don’t need to memorize this — use it to check your pattern-finding.
+</div>
+
+<div style="background:#111; color:#f1f1f1; border-radius:12px; padding:16px; font-size:14pt; line-height:1.35; overflow:auto; max-height:520px; white-space:pre; border:1px solid #222; margin-top:10px;">
+{
+  "app": <span style="background:#d6f5d6; color:#111; padding:1px 6px; border-radius:6px;">{ ... }</span>,
+  "location": <span style="background:#d6f5d6; color:#111; padding:1px 6px; border-radius:6px;">{ ... }</span>,
+  "current": {
+    "temperature": <span style="background:#ffd6e7; color:#111; padding:1px 6px; border-radius:6px;">72</span>,
+    "condition": <span style="background:#ffd6e7; color:#111; padding:1px 6px; border-radius:6px;">"Partly Cloudy"</span>,
+    "wind": <span style="background:#d6f5d6; color:#111; padding:1px 6px; border-radius:6px;">{ "speed_mph": 8, "direction": "NW", ... }</span>,
+    "alerts": <span style="background:#fff2a8; color:#111; padding:1px 6px; border-radius:6px;">[ ]</span>
+  },
+  "forecast": <span style="background:#fff2a8; color:#111; padding:1px 6px; border-radius:6px;">[
+    { "day": "Monday", "hourly": [ { ... }, { ... } ] },
+    { "day": "Tuesday", "hourly": [ { ... }, { ... } ] }
+  ]</span>,
+  "meta": {
+    "data_sources": <span style="background:#fff2a8; color:#111; padding:1px 6px; border-radius:6px;">[
+      { "name": "National Weather Service", "type": "government" },
+      { "name": "Local Radar Blend", "type": "commercial" }
+    ]</span>,
+    "debug": {
+      "cache_hit": <span style="background:#ffd6e7; color:#111; padding:1px 6px; border-radius:6px;">true</span>,
+      "latency_ms": <span style="background:#ffd6e7; color:#111; padding:1px 6px; border-radius:6px;">182</span>,
+      "notes": <span style="background:#fff2a8; color:#111; padding:1px 6px; border-radius:6px;">[ "Forecast normalized", "Alerts list empty", "Hourly sampled every 4 hours" ]</span>
+    }
+  }
+}
+</div>
+
+<div style="background:#ffffff; border-radius:10px; padding:12px; margin-top:12px; border:1px solid #ddd;">
+  <strong>What this means for code:</strong><br>
+  Once you recognize the shape, you can decide:
+  <ul style="margin-top:8px;">
+    <li><strong>Objects</strong> → you access fields using dot notation (e.g., <code>data.location.city</code>)</li>
+    <li><strong>Arrays</strong> → you usually loop through them (e.g., <code>for</code> loops) to display multiple items</li>
+    <li><strong>Nested data</strong> → you combine both: access into objects and loop through arrays inside them</li>
+  </ul>
+</div>
+
+</div>
+</details>
+
+---
+
+## Why “seeing the shape” helps
+
+#### When you can spot arrays, objects, and values, you can write code more confidently:
+
+- #### You know **what can be looped over** (arrays)
+- ####  You know **what can be accessed by name** (objects)
+- #### You know **what values you can display** (strings / numbers / booleans)
+
+#### Next, we’ll practice pulling out a few key fields and using them to build a small UI card.
+MARKDOWN
