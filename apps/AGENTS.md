@@ -74,7 +74,7 @@
 - In local development, the app is most commonly available as http://localhost:9000 (try this first, webpack dev server proxy with react hmr) or http://localhost:3000 (direct to rails)
   - Sometimes the dashboard will already be started by the user and will be already running, as it takes a while to start and stop
   - However, if dashboard has not been started you may want to ask the user if you should start it when appropriate/useful:
-    - To start the rails backend: run `bin/dashboard-server` from the repo root
-    - To start the react devserver: run `yarn start` from apps/
+    - To start the rails backend: run `bin/dashboard-server` from the repo root (aka "start dashboard")
+    - To start the react devserver: run `yarn start` from apps/ (aka "start apps")
     - These will not return
     - For frontend work both will need to be running. Some backend work can be done only with Rails running.
