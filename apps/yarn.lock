@@ -11510,6 +11510,7 @@ __metadata:
     ts-jest: "npm:^29.1.2"
     ts-loader: "npm:^9.5.1"
     ts-sinon: "npm:^2.0.2"
+    tsc-files: "npm:^1.1.4"
     typescript: "npm:^5.9.3"
     uglify-js: "npm:^3.18.0"
     unified: "npm:~9.2.0"
@@ -30010,6 +30011,17 @@ canvg@gabelerner/canvg:
     "@types/sinon-chai": "npm:^3.2.4"
     sinon: "npm:^9.0.3"
   checksum: 10/187a998431b138538b55f6c32594675137f73545976baf5b12c7894f4d8ece6079c7a68ca0bce5a6367305c79a42b1d4810344059c6b1f2cf7b6ecec41c24009
+  languageName: node
+  linkType: hard
+
+"tsc-files@npm:^1.1.4":
+  version: 1.1.4
+  resolution: "tsc-files@npm:1.1.4"
+  peerDependencies:
+    typescript: ">=3"
+  bin:
+    tsc-files: cli.js
+  checksum: 10/4acae1dcfe635f3153051707ed747acd095f7fb67ebb767133f80fe6a9bad572eecb062ac2077e06fcfff547e4bbc4eb9e04b64305f0dd11d62ff1d3eb638601
   languageName: node
   linkType: hard
 

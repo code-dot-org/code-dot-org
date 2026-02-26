@@ -24,7 +24,7 @@
 - `config/*.yml.erb` (e.g. `config/development.yml.erb`) contains per-rails-env configuration, also related to local config keys settable in locals.yml. API keys, passwords, etc are often set using this system.
 - Running all rails tests takes about 15 minutes, probably don't do it unless the user asks you to.
 - Testing: for a fast iteration dev/feedback loop, consider using e.g. `bundle exec spring testunit ./test/lib/image_lib_test.rb` (run from dashboard/) to run individual ruby tests
-- Linting: run `./tools/hooks/pre-commit` which only lints modified files (=fast)
+- Linting: run `./tools/hooks/pre-commit` which only lints modified files (=fast, run frequently). You should definitely run this before reporting success to the user if you've changed any js/ts/jsx/tsx/ruby.
 
 ## React Tips and Tricks:
 - As previously mentioned, see `apps/` for most (but not all) of our existing JS/TS/JSX/TSX code
@@ -38,10 +38,12 @@
   - There are MANY more labs we haven't mentioned in `apps/src/[labnamehere]`, and many of the sub-directory also relate to interfaces for teachers ("teacher tools")
   - Testing: for a fast iteration dev/feedback loop, consider using e.g. `yarn test:unit test/unit/gridUtilsTest.js` (run from apps/) to run individual js tests
     - Running all tests: running `yarn test` in `apps/` runs the full JS suite, which takes ~5 minutes, maybe don't run it unless the user asks you to.
-  - Linting: run `./tools/hooks/pre-commit` which only lints modified files (=fast)
-  - Linting does not typecheck typescript
-    - the fastest way to type check typescript is to watch the output from `yarn start` (webpack hmr devserver, never returns)
-    - a slow but reliable way to type check typescript is to run `yarn build` (in apps/) also works, but fyi that takes ~2 minutes.
+  - Linting: run `./tools/hooks/pre-commit` which only lints modified files (=fast, run frequently). You should definitely run this before reporting success to the user if you've changed any js/ts/jsx/tsx/ruby.
+  - Type Checking Typescript: run `yarn run typecheck` in `apps/`.
+    - Note that linting does not check ts/tsx types, so you may frequently run both typecheck and lint in combo.
+    - If you're modifying ts/tsx, you should typecheck regularly
+    - It takes ~10s to typecheck, so it can be run too frequently too.
+    - A good litmus test is if you've made a batch of changes, or before reporting success to the user, run `yarn run typecheck` first.
 
 ## Levelbuilder
 - An important part of dashboard conceptually is "levelbuilder", which is used by curriculum authors to, well, write curriculum also called "levels".
