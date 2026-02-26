@@ -35,6 +35,7 @@ export type CodebridgeContextType = {
   aiTutorContextHelper?: AiTutorContextHelper<object>;
   aiTutorSystemPromptName?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
+  aiTutorSystemPrompt?: string;
 };
 
 export const CodebridgeContext = createContext<CodebridgeContextType | null>(

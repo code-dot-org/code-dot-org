@@ -5,7 +5,60 @@
   "level_num": "custom",
   "user_id": 22366,
   "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Design a Mapped Object\r\n\r\n**Goal:** You're helping the city shelter redesign its pet listings so lost animals can be reunited with their families and adopted more quickly by displaying clear, focused information on each pet card.\r\n\r\n\r\n### Do This:\r\n\r\nUse `.map()` to transform the original API data into a UI-ready object for your card layout.\r\n\r\n1. Select only the fields your UI will display.\r\n\r\n2. Rename keys to match your interface labels.\r\n\r\n3. Reformat values if needed (add units, combine text, simplify).\r\n",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  \n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n\n    <div class=\"container\">\n\n        <button id=\"fetch-button\">\n            ▶ Run Code\n        </button>\n\n        <div id=\"data-output\" class=\"output-box\">\n            <p class=\"placeholder\"></p>\n        </div>\n    </div>\n\n    <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "contents": "/* General Page Layout */\nbody {\n    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n    background-color: #f4f4f9;\n    color: #333;\n    display: flex;\n    justify-content: center;\n    padding-top: 50px;\n    margin: 0;\n}\n\n.container {\n    background: white;\n    width: 250px;\n    height: 400px;\n    padding: 30px;\n    border-radius: 8px;\n    box-shadow: 0 4px 15px rgba(0,0,0,0.1);\n}\n\nh1 {\n    font-size: 1.5rem;\n    margin-top: 0;\n    text-align: center;\n}\n\n/* Status Text */\n.status-text {\n    font-weight: bold;\n    margin-bottom: 15px;\n    color: #555;\n    font-size: 0.9rem;\n    text-align: center;\n}\n\n/* Button Styling */\n#fetch-button {\n    width: 100%;\n    padding: 12px;\n    background-color: #00ad2b; /* Blue */\n    color: white;\n    border: none;\n    border-radius: 5px;\n    font-size: 1rem;\n    cursor: pointer;\n    transition: background 0.3s;\n}\n\n#fetch-button:hover {\n    background-color: #0056b3; /* Darker Blue */\n}\n\n/* Output Box Styling */\n.output-box {\n    margin-top: 20px;\n    border: 1px solid #e1e1e1;\n    border-radius: 5px;\n    padding: 15px;\n    background-color: #fafafa;\n    min-height: 300px;\n    max-height: 600px; /* Limits height */\n    overflow-y: auto;  /* Adds scrollbar if list is long */\n}\n\n.placeholder {\n    color: #999;\n    text-align: center;\n    font-style: italic;\n}\n\n/* Dynamic List Items (Created by JS) */\nul {\n    list-style-type: none;\n    padding: 0;\n    margin: 0;\n}\n\nli {\n    padding: 8px 0;\n    border-bottom: 1px solid #eee;\n    font-size: 0.95rem;\n    display: flex;\n    justify-content: space-between;\n}\n\nli:last-child {\n    border-bottom: none;\n}\n\n/* Error Message Class */\n.error-msg {\n    color: #dc3545; /* Red */\n    background-color: #ffe6e6;\n    padding: 10px;\n    border-radius: 4px;\n    border: 1px solid #ffcccc;\n    text-align: center;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "contents": "const dataOutput = document.getElementById('data-output');\n\nconst fetchPets = async () => {\n    const API_URL = \"https://data.austintexas.gov/resource/kz4x-q9k5.json\";\n\n    const response = await fetch(API_URL);\n    const data = await response.json();\n\n\n};\n\ndocument.getElementById('fetch-button').addEventListener('click', fetchPets);",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMrDkWcSmhQ0RYyRmOkq\nwhWTBCWgVYhRz1+78oVOQAo/g4F0QYn1j8rOG4plIsy147GZ4rqTZtSJvl9a\nuN4T1Dl7eww4O+tY7UA5vJz3gQGdiHK6cKFt+lXPLklZ6Gv6bY3z4HNcgja/\nFsFVjLVxg3ueJ2754ODSTV1K2mg/bclBNiQp2ofLr9qb3wrfcHVwQIchkxf0\na6iW8u/RGuT7AnpVFZfeMvbN1YZbVVukSuqISfJlrUTI+yznxzdZwJZ5Mh00\nTW5ssGDLTst0fKw4dPUm+NofIdGQqpwl8w3S8/pwkAKqVvPDD44L0Ws7skjY\nuyFDM+upCfy5Oq80dTCQaUvl24wDSAPy4w1/28AlO0aklQGiiispgU50sRJ9\n4i6xqjuGX7gLmY/LnGtDJjGT/Pd5gqGCJeKPLR1P3KddHSzX7S8cV3T2cf9n\n/8SbiV2tl7o7FRhHOIebNogMzf4NzdUuhyVCllk3lqs1qLBCmSMHtDv6CD2B\nUyQnxSEe609AhownOEs9OJuyh4GbQ6J/qY0SWkVWdaCyxh+H4oRlwzbK1Aom\nbhw+nyGK814R8cjSsjFHadQd+/o6dqJNmGgM+n3FuyJq+Nr4g+IHqbitdRmi\nXZomZhEg59j3cwD8gqyy+KK4w+Brg3SiVvOWmtXuxXbVS5klV03x9W26gzDQ\nVpIccyoQlNVqGlCAGUXvDc8JOj1O1JSM32y70Lv9bdYrC5/msRsjSjW05bAm\nkBgkHcZnFIS9cfjq/WQI6hQeNYxxs4WiOlQ9hxv/5RcnVxNLWBfVKEU3P5qS\ns30nOdJMMgramxnLUTU6kKZN4/5HNF9aJEY84lN0QqzkArKAnbQi7+wYOnMZ\nn31ZGBMO9409ygRoKO7iIEzt17G1PUs7Uh0P1XFL7+uZJurWcjh8a1U71uPS\nzQ4tTejz/6w2laVjIIY7yVjhoQiUbBYLJeAk6Zkdd1L+VfaZdPttjsZ+UK7j\n/MdZtkBdSRehHxWGbxCrETzi3qt90n4GJy1ok9C44GhOO91xyQkXVC5mhC43\ng3FL/6nVH7ENDm4Aqrd/K7b4bn5wiLTWdvpD0Y9O2bvfbxdfBf/3rHnPNibQ\nhNNalH0O0SgoiDQgzMMD3pDgFt8lcEH/mNvl9FwNaksmYwYRRPp6vmWyuCBQ\n4PlA97AslWXbELaG/IgOS9d1M8fCwz3KhCKl4WOawgajWfJkcD5K97eikGGf\n4VJrQrHDGjpaIL6sqauRXvT4b6Lvx+HLO/11y7VUIU5kUMPlFk/P2x5awepX\neEVsDHwUigg6u0J/xzKv1hcq3vpeLxLtGOODzF6ctZAw+7Jbr7WC04yJDjOT\nJ7hmakrEIJ0E+amwakt3sq5ZwKt1eVvyHvOMlJPbkdaEZIOGp2e9N4yH8SON\n/5hWfibLmnAi07rKzh8m2+ZAVKgOAXv3W75SFUNbbYSg8y/OArprbLAfcQst\nz1H56Bij/onl5KH+/sQc3/6SVMXJ9lq4iOOMujmltDah2JjAO62PkJk0KyuA\n22ZtgK5ELhZJBCTJySHySSbtDBsICBppsA8icpEgulDf1OQvRA4ulrn1lsAr\nQSrxiO9y+xi3quHBew0QN+Uo/SPasE6t1HMcE6q20/EEGsTEW3krOyIaLSoq\njmICr7Y76A4K8mtmwf7EgHhPNnO5T0wX3ywV/vO9WYDdJLrV5vuhKDsXn6PM\ngR5wmhfdL96QepVfyRwXoxbPcciGIBWdGRSN8vjTjTd6CqmyV6VUG6Gb7r/6\nnnXLG2jl7oObkcZ4d3Ch2KY/IpxxGXEPxPW9j/pfiMDdzMP3MPT9HDUyYtc0\nfue04ek3Qyz7KmSZ0OIu/A6Xuh5YFG9MbMLb5VdoM7dY14WTQJxQvzTzAFrw\nqeuXuTZ2l/CYFWljHKTMaWgV5rbhLEW+FnPWFXkN4rLJdn7Y/yaFPbmMp7kH\nQy3YBxfyYQbj+IYm+ThilajrEsixBq3g6hghFUkw0RC63sqshq7wzm5u9QQw\n8MyrX7U9T0Iv3eLGSQBsN27z7T/PqDUWpwoC+hqJDLofNF5n8J2ykeuX+uRD\nhdW4UF4DVSBpvUHG94XtfUCOXxi1LHt+KT4JCMyxelTd71Q8On2AJRV7kxFM\nArehuHb0xm/viMO8EV7RBDNCPqFxXz74ydNkrlUVESKkqVWu7wZS8nZgUMJH\nDyQQ9WpcosO7A7Nz9sBSdLsI5u6KQeJjKo6FfrlFTRNuY7vy977bTxsJ0H3/\nIY7yOsJs+CktFvoXkCvytVKxFRfmNjEEE2Vg9wUBSDOTn2GGbvSJxx1JkTfm\n8uALHhMDsLxMHHMGv10GDXdqVCoGkjOzEmOT7eRzio8KSkPdljHqaR2+89Sz\nrPws/PjxValKI7CAkEIvwlvCLh3/F6JP6C5VXzbAd87jlioZ4/Pfgny0efm8\nIAL3EaMN25r1wEZngnBpuPMwN9OZgLxDgaxQOQjsb3KGwQ5tzDEHRbibycTW\nZNjoaeUSzftAbzTZqJRlOJOOD44CSFyadJckvBonV8+SOzZrrSFXngVqvMwZ\n6Vyc/vApvNSHIYDn0Ji6q7d/e8QlfQ/MKjwLXFDTd1xRTs3jt9SupDFpL+7h\nrw31fIRY4/yaB2GrTe91zSz+caXZDPdth7hIuiNK7CuvfgXqOWK8hZ5xX4+Q\nvOk6lYSzmGMAvOSPz1rVqdXl1rdvAT4yVqc6WyZ7OwnGqt/VLz+ddies/VwD\nrihPwAdr75TGV/aihEuOCGkm9jAYYFfR2NNXAocND6WTyzddby3iM89ymNaB\n7ECB/x0rBKnh+TMoexOig0+DxhJdiJ55C8oMX394BUKnP7ESyyfApEhJg6pk\nb3OFaw8mFMIuD2htv+GrtaAfEIO/LJNBsFpiENrPtLdTDppHI1VopseVQ9MX\n8GyUyGvCOJ4t2ZISQjJXa+nUlcqE39jUI3EHFmiNurEqHStFAx3UB7PcmwGW\nLNFm3HumMET++B4XwST4OMU566IK1sdiK5ap+nTO7gno6LrEiVGXSX5Pzmbh\nw3iJS56b6C08TPsHX9MJmenXySuCIgIMKG1f+D18bt2NqU6E+caZrxFztvBH\n0HaWYp9faD+C1eafL8SeKf1pHKy/Km85xd6nQvx20pyMW+5SEax1tANfnj81\nCcX5nknu7cNPcdxyBaUw5WzWshAYDMcp8/jJcKSPeR1fee4wBznD/6lRsOtY\nP2V6OqkRIWrI6XfAHf172GEIc2ExhXmt7ImY8qhYUGAauyLE8JqapdO05aK/\n2+H5odmQD1RRXScEygRnR1lr0oScZPLqxfs1SOT55TAsPiDi3aTQDBy6Re8l\nRxsJWHTlEgtVrg2OIZ5lKGjEhK9jSuPmllls3eZHHd+T9FQV/TR7MAToHZmR\nt8yNvQTlC0MqEeQMOC66hvpL9VOJqqxuqgqiWAewqH0VIDVLfYyu2AqHLFd+\nhfHi5mbpFLf9EorR85TBFWvSR7KK3BOhqF9eb2req7rdZsaBBO1wlp7jB+sF\nPyN66xiU5d/DNS3VOHl8cAa5UzjBLlO2ygq/00rXVzHeP2tXB+e7nKj5WQNa\ntRXRE9gazQOQ3VO8NTUi37IYLreu4Qi0gwN8NuhFDMkq8krHSSJ5yuL1Jfgx\nQ93WjTCujBGS4eDvFLPei8fnSB3YAzRQf2nkS4ilOmpMsmSG5yoafFijpfE8\n8FA6ccA4vsoXJ5FL00XSJXRJCs3JVoPe+IlVXC4QAIBOgHTcyUeZ0cNI4vsL\nopocYnlH/2+DXr5NcoqdzzaNs1VNWq3LdrnThWQMS/kaE2Y0RLWd+WsfD+JJ\nMkzsi2OL7e0gvc8CwXJvZeL4ag3rNHNtFhyBH27cnWvmOvnGbLmrgrLCGBni\n3CYPMnRR93bJQtPma/Oyi9/KNe4cXZBa0OWHfT1Bmswl91j/zMossVcFgIGE\nstsz/J4sjToRvkUL2iSBQSIU5GHjiwQnt+7pSc0zkpr6mIEy8DBDcW9M5xHc\nFMgaBhZT4GBJX0kA1eNYVBzEl2Iu84vQht4wQ80h6w4VXkhzy+H0Ohv+Eu8m\njRglZCy9mJoH/mX/0/V8Qk6R0+f0D9uJ2eKsyqT4PtDQpIb1bg95PCmOt6AL\ndf/ax1NrcKKzf2xoTMb/9aNEHWC/0Xbx65BjSpAK/riadSQU0OPVg5XIglbG\n5gFhhev9C7/WFe9kJITxZAj9\n"
   },
-  "published": true
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-25 16:12:24 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-02-25 16:13:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-02-25 16:22:19 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-02-25 16:22:28 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-02-25 16:22:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-02-25 16:23:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-02-25 16:44:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-02-25 16:44:51 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-02-25 16:45:17 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Weblab2>

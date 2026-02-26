@@ -1,4 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
+import classNames from 'classnames';
 import {throttle} from 'lodash';
 import React, {useState, useCallback, useMemo, useEffect, useRef} from 'react';
 import {useResizable} from 'react-resizable-layout';
@@ -20,6 +21,7 @@ interface AiTutorChatWithInstructionDrawerProps {
   channelId?: string;
   aiTutorChatButtonData?: ChatButtonData[];
   aiTutorSystemPromptName?: string;
+  aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   instructionsContent?: React.ReactNode;
   isCollapsedByDefault: boolean;
@@ -46,6 +48,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   channelId,
   aiTutorChatButtonData,
   aiTutorSystemPromptName,
+  aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
   instructionsContent,
   isCollapsedByDefault,
@@ -222,6 +225,10 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
       </div>
       {!isCollapsed && (
         <ResizeBar
+          className={classNames(
+            styles.resizeBar,
+            isDragging && styles.resizeBarDragging
+          )}
           isVertical={false}
           separatorProps={separatorProps}
           isDragging={isDragging}
@@ -236,6 +243,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
             channelId={channelId}
             aiTutorChatButtonData={aiTutorChatButtonData}
             aiTutorSystemPromptName={aiTutorSystemPromptName}
+            aiTutorSystemPrompt={aiTutorSystemPrompt}
             aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
             hasInstructionsDrawer={true}
           />
