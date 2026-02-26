@@ -8,10 +8,9 @@ import {getStore} from '@cdo/apps/redux';
 import {getFullName} from '@cdo/apps/templates/manageStudents/utils';
 import i18n from '@cdo/locale';
 
-import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
-
 import {ITEM_TYPE} from './ItemType';
 import {getLevelCellValue} from './LevelDataCell';
+import {getCurrentUnitData} from './sectionProgressRedux';
 
 import styles from './progress-table-v2.module.scss';
 
