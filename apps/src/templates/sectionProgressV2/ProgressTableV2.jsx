@@ -11,14 +11,14 @@ import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSections
 import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
 
 import {studentLevelProgressType} from '../progress/progressTypes';
-import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
-import {loadUnitProgress} from '../sectionProgress/sectionProgressLoader';
-import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
 
 import ExpandedProgressDataColumn from './ExpandedProgressDataColumn';
 import FloatingHeader from './floatingHeader/FloatingHeader';
 import FloatingScrollbar from './floatingScrollbar/FloatingScrollbar';
 import LessonProgressDataColumn from './LessonProgressDataColumn';
+import {unitDataPropType} from './sectionProgressConstants';
+import {loadUnitProgress} from './sectionProgressLoader';
+import {getCurrentUnitData} from './sectionProgressRedux';
 import SkeletonProgressDataColumn from './SkeletonProgressDataColumn';
 import StudentColumn from './StudentColumn';
 

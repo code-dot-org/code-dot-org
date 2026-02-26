@@ -84,10 +84,10 @@ class TeacherDashboardController < ApplicationController
   def unit_in_aif
     unit = Unit.find(params[:unit_id])
     if unit
-      aif_status = unit.name.include?('aif')
+      aif_status = unit.curriculum_umbrella == 'AIF'
       render json: {aif: aif_status}
     else
-      return false
+      render json: {aif: false}
     end
   end
 end

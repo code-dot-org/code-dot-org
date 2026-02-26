@@ -28,7 +28,7 @@ Feature: Using the assessments tab in the teacher dashboard to get feedback for 
 
     # Assessments tab
     And I click selector "#ui-test-teacher-sidebar a:contains(Assessments)" once I see it
-    And I wait until element "#uitest-course-dropdown" is visible
+    And I wait until element "#unit-selector-v2" is visible
     Then I wait until element "#assessment-selector" is visible
     And I select the "All teacher feedback in this unit" option in dropdown "assessment-selector"
     Then I wait until element "div:contains(Download CSV of Feedback)" is visible

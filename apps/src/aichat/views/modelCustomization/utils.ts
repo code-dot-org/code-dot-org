@@ -16,23 +16,29 @@ export const isDisabled = (visibility: Visibility) =>
 export const isEditable = (visibility: Visibility) =>
   visibility === Visibility.EDITABLE;
 
-// Ensures that the given model ID is part of the available models.
-// If not, returns the first available model ID.
+/**
+ * Ensures that the given model ID is supported and allowed on this level (if applicable).
+ * If not, returns the first supported model ID.
+ * @param modelId model ID to check
+ * @param allowedModelIds list of model IDs allowed on this level
+ * @param supportedModelIds for testing only; override list of model IDs our system supports
+ */
 export const validateModelId = (
   modelId: ModelId,
-  allowedModelIds?: ModelId[],
+  allowedModelIds: ModelId[] = [],
   supportedModelIds = SUPPORTED_MODEL_IDS // For testing
 ) => {
   if (
     supportedModelIds.includes(modelId) &&
-    (!allowedModelIds || allowedModelIds.includes(modelId))
+    (allowedModelIds.length === 0 || allowedModelIds.includes(modelId))
   ) {
     return {isValid: true, modelId};
   }
 
-  const supportedAndAllowed = allowedModelIds
-    ? supportedModelIds.filter(id => allowedModelIds.includes(id))
-    : supportedModelIds;
+  const supportedAndAllowed =
+    allowedModelIds.length > 0
+      ? supportedModelIds.filter(id => allowedModelIds.includes(id))
+      : supportedModelIds;
 
   if (supportedAndAllowed.length === 0) {
     Lab2Registry.getInstance()
