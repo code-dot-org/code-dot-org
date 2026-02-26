@@ -656,9 +656,7 @@ namespace :seed do
   UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :reseed_scripts_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :datablock_storage].freeze
   ADHOC_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_adhoc, :scripts_adhoc, :courses_adhoc, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :datablock_storage].freeze
 
-  # THIS CHANGE IS FOR ADHOC TO SEED THE FULL CURRICULUM CATALOG.
-  # ************ UNDO BEFORE MERGING!!!!!!!!!!!!!!!!!!! *******
-  DEFAULT_SEED_TASKS = FULL_SEED_TASKS
+  DEFAULT_SEED_TASKS = if rack_env == :test then UI_TEST_SEED_TASKS elsif rack_env == :adhoc then ADHOC_SEED_TASKS else FULL_SEED_TASKS end
 
   desc "seed the data needed for this type of environment by default"
   timed_task_with_logging default: DEFAULT_SEED_TASKS
