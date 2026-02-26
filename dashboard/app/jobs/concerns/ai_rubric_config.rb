@@ -16,8 +16,12 @@ class AiRubricConfig
     !!get_lesson_s3_name(script_level)
   end
 
-  # returns the path suffix of the location in S3 which contains the config
+  # Returns the path suffix of the location in S3 which contains the config
   # needed to evaluate the rubric for the given script level.
+  #
+  # Each unit's `ai_rubric_s3_config` property is a map from level name to the
+  # name of the lesson directory within the S3 release dir used for AI evaluation.
+  # For example: {"CSD U3 Sprites scene challenge_2024" => "csd3-2023-L11"}
   def self.get_lesson_s3_name(script_level)
     script_level&.script&.ai_rubric_s3_config.try(:[], script_level&.level&.name)
   end
