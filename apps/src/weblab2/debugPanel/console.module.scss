@@ -7,18 +7,13 @@
   padding: 8px;
 }
 
-.consoleLogContainer {
-  max-width: 100%;
-  min-width: 0; // Allow shrinking in flex parent so content can wrap.
-}
-
 .consoleLogEntry {
   display: flex;
   justify-content: space-between;
   width: 100%;
   min-width: 0; // Allow flex item to shrink so long text wraps.
 
-  > *:first-child {
+  .consoleLogMessage {
     min-width: 0;
     overflow-wrap: break-word;
     word-break: break-word;
@@ -37,6 +32,9 @@
 }
 
 .consoleLog {
+  max-width: 100%;
+  min-width: 0; // Allow this flex child to shrink so content inside can wrap within panel width.
+
   span {
     display: block;
     width: 100%;

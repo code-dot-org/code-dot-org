@@ -33,7 +33,9 @@ const Console: React.FunctionComponent = () => {
   const formatLogWithTimestamp = (log: ConsoleEntry) => {
     return (
       <div className={moduleStyles.consoleLogEntry}>
-        <BodyThreeText>{log.message}</BodyThreeText>
+        <BodyThreeText className={moduleStyles.consoleLogMessage}>
+          {log.message}
+        </BodyThreeText>
         <BodyFourText className={moduleStyles.timestamp}>
           {log.timestamp}
         </BodyFourText>
@@ -61,15 +63,13 @@ const Console: React.FunctionComponent = () => {
       ) : (
         <>
           {consoleLogs.map((log, index) => (
-            <div key={index} className={moduleStyles.consoleLogContainer}>
-              <Alert
-                key={index}
-                type={mapLogLevelToAlertType(log.level)}
-                text={formatLogWithTimestamp(log)}
-                size={'s'}
-                className={moduleStyles.consoleLog}
-              />
-            </div>
+            <Alert
+              key={index}
+              type={mapLogLevelToAlertType(log.level)}
+              text={formatLogWithTimestamp(log)}
+              size={'s'}
+              className={moduleStyles.consoleLog}
+            />
           ))}
           <div ref={bottomRef} />
         </>
