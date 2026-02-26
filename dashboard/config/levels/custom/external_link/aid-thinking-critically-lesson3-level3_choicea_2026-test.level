@@ -1,0 +1,19 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 55,
+  "created_at": "2026-02-25T20:47:49.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Environmental Impact\r\n\r\nAI feels invisible on your phone, but it uses real electricity, water, and machines. \r\nWhat is the environmental cost?\r\n\r\nExplore this mini-lesson to learn more. Let curiosity be your guide. \r\n",
+    "link_title": "AI's Environmental Impact Mini-Lesson ",
+    "url": "https://docs.google.com/presentation/d/1JRp6CHdtLWTkBeYWGzIRlB0XQrbxFZ2-TRop7ZJamew/present",
+    "name_suffix": "_2025",
+    "thumbnail_url": "https://images.code.org/721a471b91fcafea49c3ef7363511a8d-choice1.png",
+    "display_name": "Impact on the Environment"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-02-25T20:47:49.752+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson6-level1_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson6-level1_2025\"},{\"changed_at\":\"2026-02-25 20:55:31 +0000\",\"changed\":[\"long_instructions\",\"link_title\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-02-25 20:56:53 +0000\",\"changed\":[\"link_title\",\"url\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-02-25 21:01:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-02-25 21:10:59 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-02-25 21:11:31 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-02-25 21:17:36 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</ExternalLink>
