@@ -66,7 +66,7 @@
 - This is a fairly large monorepo, so be mindful about getting lost and filling your context with unrelated files
 - Testing:
   - Running our whole test suite (backend, frontend, and especially UI tests) can take quite a while, so running targeted test subsets is recommended in dev loops
-  - When a commit is pushed to a GitHub PR, our CI "drone" runs on it. A full drone run takes about an hour.
+  - When a commit is pushed to a GitHub PR, our CI "drone" runs on it. A drone run takes about 30 minutes to an hour.
 - Linting:
   - Because this is a fairly large monorepo, running full lint of all files can be really slow (e.g. `yarn lint` in apps/ takes about a minute ).
   - Therefore: THE BEST WAY TO LINT is to run (from the repo root): `./tools/hooks/pre-commit`. This will run the pre-commit git hooks which lint both ruby and js/ts/jsx/tsx files, but only those that have been changed. Do this regularly after you make changes, its usually very quick.
