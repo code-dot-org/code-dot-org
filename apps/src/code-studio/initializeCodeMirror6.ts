@@ -9,12 +9,11 @@ import {
 } from '@codemirror/lint';
 import {EditorState, Extension} from '@codemirror/state';
 import {EditorView, ViewUpdate} from '@codemirror/view';
+import js from '@eslint/js';
 import * as eslint from 'eslint-linter-browserify';
+import globals from 'globals';
 
-import {
-  editorConfig,
-  javascriptLintConfig,
-} from '@cdo/apps/codemirror/editorConfig';
+import {editorConfig} from '@cdo/apps/codemirror/editorConfig';
 
 const levelbuilderEditorTheme = EditorView.theme({
   '&': {
@@ -51,7 +50,16 @@ function getLanguageExtension(mode: EditorMode): Extension {
 }
 
 const lintExtensionMap: Partial<Record<EditorMode, Extension>> = {
-  javascript: linter(esLint(new eslint.Linter(), javascriptLintConfig)),
+  javascript: linter(
+    esLint(new eslint.Linter(), {
+      ...js.configs.recommended,
+      languageOptions: {
+        globals: {
+          ...globals.browser,
+        },
+      },
+    })
+  ),
   json: linter(jsonParseLinter()),
 };
 

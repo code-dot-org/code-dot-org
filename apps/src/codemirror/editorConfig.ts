@@ -26,8 +26,6 @@ import {
   lineNumbers,
   rectangularSelection,
 } from '@codemirror/view';
-import js from '@eslint/js';
-import globals from 'globals';
 
 // We use default keybindings for autocomplete, but we add 'Tab' to also accept completion.
 // 'Enter' accepts completion by default: https://github.com/codemirror/autocomplete/blob/ab0a89942b237bbc13735604b018d10c0101b5ea/src/index.ts#L39-L48
@@ -64,13 +62,4 @@ const editorConfig = [
   EditorState.tabSize.of(2),
 ];
 
-const javascriptLintConfig = {
-  ...js.configs.recommended,
-  languageOptions: {
-    globals: {
-      ...globals.browser,
-    },
-  },
-};
-
-export {editorConfig, javascriptLintConfig};
+export {editorConfig};
