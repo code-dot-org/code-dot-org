@@ -70,6 +70,9 @@ export interface ButtonPropsToMuiCoreOutput {
   color: MuiButtonProps['color'];
   size: 'extraSmall' | 'small' | 'medium' | 'large';
   disabled: boolean;
+  loading?: MuiButtonProps['loading'];
+  loadingPosition?: MuiButtonProps['loadingPosition'];
+  loadingIndicator?: MuiButtonProps['loadingIndicator'];
   className?: string;
   id?: string;
   onClick?: (
@@ -148,12 +151,20 @@ export function transformButtonPropsCore(
       }
     : onClick;
 
+  const loadingPosition: MuiButtonProps['loadingPosition'] = iconLeft
+    ? 'start'
+    : iconRight
+      ? 'end'
+      : undefined;
+
   // Base props (without icons and children, which are handled separately)
   const baseProps: ButtonPropsToMuiCoreOutput = {
     variant,
     color: muiColor,
     size: muiSize,
     disabled: disabled,
+    loading: isPending,
+    loadingPosition,
     className: forceHover ? `${className || ''} force-hover`.trim() : className,
     id,
     onClick: handleClick,
