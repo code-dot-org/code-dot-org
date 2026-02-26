@@ -59,9 +59,9 @@ const useVertex = queryParams('aitutor-use-vertex') === 'true' ? true : false;
 console.log(`🤖: Tutor set to use Vertex API? ${useVertex ? 'YES' : 'NO'}`);
 
 const useClientApi = (modelId: ValueOf<typeof AiChatModelIds>) =>
-  isAiGatewayEnabled || 
+  isAiGatewayEnabled ||
   (modelId === AiChatModelIds.GEMINI_2_5_FLASH_IMAGE &&
-   experiments.isEnabledAllowingQueryString('use-aichat-client-api'));
+    experiments.isEnabledAllowingQueryString('use-aichat-client-api'));
 
 // This thunk's callback function submits a user's chat content and AI customizations to
 // the chat completion endpoint, then waits for a chat completion response, and updates
