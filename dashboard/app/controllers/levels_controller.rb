@@ -148,7 +148,9 @@ class LevelsController < ApplicationController
   def level_properties
     # TODO: TEACH-1864 pass in unit_group_unit
     properties = {}
-    properties[@level.id] = @level.summarize_for_lab2_properties(nil, nil, current_user, widget2_start_sources: params[:widget2])
+    additional_parameters = {}
+    additional_parameters[:widget2_start_sources] = params[:widget2] if params[:widget2].present?
+    properties[@level.id] = @level.summarize_for_lab2_properties(nil, nil, current_user, **additional_parameters)
     if @level.is_a?(BubbleChoice)
       @level.sublevels.each do |sublevel|
         properties[sublevel.id] = sublevel.summarize_for_lab2_properties(nil, nil, current_user)
