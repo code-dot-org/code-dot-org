@@ -34,7 +34,7 @@
     "start:statsig": "STATSIG_LOCAL_MODE_OFF=1 yarn grunt dev",
     "storybook": "./script/start-storybook.sh",
     "storybook:deploy": "./script/deploy-storybook.sh",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc -p tsconfig.build.json --noEmit"
   },
   "resolutions": {
     "firmata": "^2.2.0",
@@ -177,7 +177,6 @@
     "ts-jest": "^29.1.2",
     "ts-loader": "^9.5.1",
     "ts-sinon": "^2.0.2",
-    "tsc-files": "^1.1.4",
     "typescript": "^5.9.3",
     "unminified-webpack-plugin": "^3.0.0",
     "unplugin": "^1.7.1",
