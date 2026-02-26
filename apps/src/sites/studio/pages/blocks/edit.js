@@ -5,7 +5,7 @@ import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibrary
 import {installCustomBlocks} from '@cdo/apps/block_utils';
 import {loadBlocksToWorkspace} from '@cdo/apps/blockly/utils';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
-import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
+import initializeCodeMirror6 from '@cdo/apps/code-studio/initializeCodeMirror6';
 import {customInputTypes as dancelabCustomInputTypes} from '@cdo/apps/dance/blockly/blocks';
 import animationList, {
   setInitialAnimationList,
@@ -65,12 +65,12 @@ function initializeEditPage(defaultSprites) {
   );
 
   const helperCodeElement = document.getElementById('block_helper_code');
-  configEditor = initializeCodeMirror(blockConfigElement, 'application/json', {
+  configEditor = initializeCodeMirror6(blockConfigElement, 'json', {
     callback: validateBlockConfig,
     onUpdateLinting: onUpdateLinting,
   });
 
-  helperEditor = initializeCodeMirror(helperCodeElement, 'javascript', {
+  helperEditor = initializeCodeMirror6(helperCodeElement, 'javascript', {
     callback: _ => validateBlockConfig(),
     onUpdateLinting: onUpdateLinting,
   });

@@ -1,10 +1,20 @@
-import {javascript} from '@codemirror/lang-javascript';
-import {json} from '@codemirror/lang-json';
+import {esLint, javascript} from '@codemirror/lang-javascript';
+import {json, jsonParseLinter} from '@codemirror/lang-json';
 import {markdown} from '@codemirror/lang-markdown';
+import {
+  Diagnostic,
+  forEachDiagnostic,
+  lintGutter,
+  linter,
+} from '@codemirror/lint';
 import {EditorState, Extension} from '@codemirror/state';
 import {EditorView, ViewUpdate} from '@codemirror/view';
+import * as eslint from 'eslint-linter-browserify';
 
-import {editorConfig} from '@cdo/apps/codemirror/editorConfig';
+import {
+  editorConfig,
+  javascriptLintConfig,
+} from '@cdo/apps/codemirror/editorConfig';
 
 const levelbuilderEditorTheme = EditorView.theme({
   '&': {
@@ -21,6 +31,11 @@ interface CodeMirrorLegacyAdapter {
 
 interface Options {
   callback?: (editor: CodeMirrorLegacyAdapter, update: ViewUpdate) => void;
+  // Kept for CodeMirror 5 callback compatibility; current callers only use errors.
+  onUpdateLinting?: (
+    _editor: CodeMirrorLegacyAdapter,
+    errors: Array<{message: string}>
+  ) => void;
 }
 
 type EditorMode = 'javascript' | 'json' | 'markdown';
@@ -35,13 +50,34 @@ function getLanguageExtension(mode: EditorMode): Extension {
   return languageExtensionMap[mode];
 }
 
-function resolveTarget(target: string | Element): HTMLTextAreaElement {
+const lintExtensionMap: Partial<Record<EditorMode, Extension>> = {
+  javascript: linter(esLint(new eslint.Linter(), javascriptLintConfig)),
+  json: linter(jsonParseLinter()),
+};
+
+const resolveTarget = (target: string | Element): HTMLTextAreaElement => {
   const node =
     typeof target === 'string' ? document.getElementById(target) : target;
   if (!(node instanceof HTMLTextAreaElement)) {
     throw new Error('initializeCodeMirror6 target must resolve to a textarea');
   }
   return node;
+};
+
+function getLintDiagnostics(state: EditorState): Diagnostic[] {
+  const diagnostics: Diagnostic[] = [];
+  forEachDiagnostic(state, diagnostic => {
+    diagnostics.push(diagnostic);
+  });
+  return diagnostics;
+}
+
+function getErrorMessages(diagnostics: Diagnostic[]): Array<{message: string}> {
+  return diagnostics
+    .filter(
+      diagnostic => !diagnostic.severity || diagnostic.severity === 'error'
+    )
+    .map(diagnostic => ({message: diagnostic.message}));
 }
 
 function initializeCodeMirror6(
@@ -50,8 +86,9 @@ function initializeCodeMirror6(
   options: Options = {}
 ): CodeMirrorLegacyAdapter {
   const node = resolveTarget(target);
-  const {callback} = options;
+  const {callback, onUpdateLinting} = options;
   const changeListeners: Array<() => void> = [];
+  const lintExtension = lintExtensionMap[mode];
   const editorContainer = document.createElement('div');
   node.style.display = 'none';
   node.insertAdjacentElement('afterend', editorContainer);
@@ -77,14 +114,18 @@ function initializeCodeMirror6(
     getLanguageExtension(mode),
     levelbuilderEditorTheme,
     EditorView.lineWrapping,
+    ...(onUpdateLinting && lintExtension ? [lintExtension, lintGutter()] : []),
     EditorView.updateListener.of(update => {
-      if (!update.docChanged) {
-        return;
+      if (update.docChanged) {
+        node.value = update.state.doc.toString();
+        changeListeners.forEach(listener => listener());
+        if (callback) {
+          callback(adapter, update);
+        }
       }
-      node.value = update.state.doc.toString();
-      changeListeners.forEach(listener => listener());
-      if (callback) {
-        callback(adapter, update);
+      if (onUpdateLinting) {
+        const diagnostics = getLintDiagnostics(update.state);
+        onUpdateLinting(adapter, getErrorMessages(diagnostics));
       }
     }),
   ];

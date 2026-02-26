@@ -5,18 +5,17 @@ import {linter, lintGutter} from '@codemirror/lint';
 import {unifiedMergeView} from '@codemirror/merge';
 import {Extension} from '@codemirror/state';
 import {EditorView} from '@codemirror/view';
-import js from '@eslint/js';
 import {
   colorPicker,
   wrapperClassName,
 } from '@replit/codemirror-css-color-picker';
 import * as eslint from 'eslint-linter-browserify';
-import globals from 'globals';
 import React, {useCallback, useMemo} from 'react';
 
 import {CodebridgeEmptyState} from '@cdo/apps/codebridge/components/CodebridgeEmptyState';
 import emptyFilesPlaceholderImage from '@cdo/apps/codebridge/images/empty-files-placeholder.svg';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {javascriptLintConfig} from '@cdo/apps/codemirror/editorConfig';
 import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
 import {saveFileThunk} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
@@ -140,17 +139,9 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     if (fileExt && langMapping[fileExt]) {
       extensions.push(langMapping[fileExt]);
       if (fileExt === 'js') {
-        // eslint configuration
-        const config = {
-          ...js.configs.recommended,
-          languageOptions: {
-            globals: {
-              ...globals.browser,
-            },
-          },
-        };
-
-        extensions.push(linter(esLint(new eslint.Linter(), config)));
+        extensions.push(
+          linter(esLint(new eslint.Linter(), javascriptLintConfig))
+        );
         extensions.push(lintGutter());
       } else if (fileExt === 'css') {
         // Add css color picker and remove white outline from color indicator.
