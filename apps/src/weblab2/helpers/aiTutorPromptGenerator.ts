@@ -122,13 +122,13 @@ const generateFinalAnswerTypeList = (
     answerType =>
       answerType !== 'refusal' && answerType !== 'refusalJavaScriptSnippets'
   );
-  // If the answer type list includes buildJavaScript, we will use the refusal mode that allows JavaScript,
-  // otherwise we block JavaScript from being generated.
+  // If the answer type list includes buildJavaScript, we will only include the generic
+  // refusal answer type. Otherwise, we also include the refusal answer type to reject JavaScript snippets.
   const hasBuildJavaScript = finalAnswerTypes.includes('buildJavaScript');
-  const refusalMode = hasBuildJavaScript
-    ? 'refusal'
-    : 'refusalJavaScriptSnippets';
-  finalAnswerTypes.push(refusalMode);
+  const refusalAnswerTypes: AiTutorAnswerType[] = hasBuildJavaScript
+    ? ['refusal']
+    : ['refusal', 'refusalJavaScriptSnippets'];
+  finalAnswerTypes.push(...refusalAnswerTypes);
   return finalAnswerTypes;
 };
 

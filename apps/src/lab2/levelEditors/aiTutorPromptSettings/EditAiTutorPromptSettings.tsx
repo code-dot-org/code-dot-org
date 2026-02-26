@@ -141,7 +141,7 @@ const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
             />
             <details className={moduleStyles.contractDetails}>
               <summary className={moduleStyles.contractSummary}>
-                View/modify contract
+                View/add to contract
               </summary>
               <div className={moduleStyles.contractContent}>
                 <EnhancedSafeMarkdown
