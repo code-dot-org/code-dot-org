@@ -33,7 +33,7 @@ const InnerHTMLPreview = () => {
   const [isLevelLoading, setIsLevelLoading] = useState(false);
   // HTML content fetched from the service worker, injected via srcdoc to avoid
   // Safari's restriction on intercepting navigate-type fetches from nested iframes.
-  const [srcDoc, setSrcDoc] = useState<string | undefined>(undefined);
+  //const [srcDoc, setSrcDoc] = useState<string | undefined>(undefined);
   const [srcDocFetchError, setSrcDocFetchError] = useState<string | undefined>(
     undefined
   );
@@ -67,6 +67,7 @@ const InnerHTMLPreview = () => {
         setRenderKey(prevKey => prevKey + 1);
       } else if (data.type === IframeMessageType.REFRESH) {
         setPreviewKey(prevKey => prevKey + 1);
+        iframeRef.current?.contentWindow?.location.reload();
       } else if (data.type === IframeMessageType.LEVEL_LOADING) {
         setIsLevelLoading(data.isLoading);
         if (data.isLoading) {
@@ -172,32 +173,35 @@ const InnerHTMLPreview = () => {
   // then inject it via srcdoc. This bypasses Safari's restriction on the SW intercepting
   // navigate-type fetches from iframes nested inside cross-origin iframes.
   useEffect(() => {
-    if (!serviceWorkerReady || !currentFile || isLevelLoading) {
-      setSrcDoc(undefined);
-      setSrcDocFetchError(undefined);
-      return;
+    if (iframeRef.current) {
+      iframeRef.current.contentWindow?.location.reload();
     }
-    let cancelled = false;
-    fetch(`${window.location.origin}/${currentFile}`)
-      .then(response => response.text())
-      .then(html => {
-        if (!cancelled) {
-          setSrcDoc(html);
-          setRenderKey(prevKey => prevKey + 1);
-          setSrcDocFetchError(undefined);
-        }
-      })
-      .catch(err => {
-        setSrcDocFetchError(`Failed to fetch preview content: ${err.message}`);
-        console.error('Failed to fetch preview content:', err);
-      });
-    return () => {
-      cancelled = true;
-    };
-  }, [serviceWorkerReady, currentFile, isLevelLoading, previewKey]);
+    // if (!serviceWorkerReady || !currentFile || isLevelLoading) {
+    //   setSrcDoc(undefined);
+    //   setSrcDocFetchError(undefined);
+    //   return;
+    // }
+    // let cancelled = false;
+    // fetch(`${window.location.origin}/${currentFile}`)
+    //   .then(response => response.text())
+    //   .then(html => {
+    //     if (!cancelled) {
+    //       setSrcDoc(html);
+    //       setRenderKey(prevKey => prevKey + 1);
+    //       setSrcDocFetchError(undefined);
+    //     }
+    //   })
+    //   .catch(err => {
+    //     setSrcDocFetchError(`Failed to fetch preview content: ${err.message}`);
+    //     console.error('Failed to fetch preview content:', err);
+    //   });
+    // return () => {
+    //   cancelled = true;
+    // };
+  }, [/*serviceWorkerReady, currentFile, isLevelLoading,*/ previewKey]);
 
   const getPreview = useCallback(() => {
-    if (srcDoc !== undefined) {
+    if (serviceWorkerReady && currentFile && !isLevelLoading) {
       return (
         <iframe
           ref={iframeRef}
@@ -208,7 +212,8 @@ const InnerHTMLPreview = () => {
           title="Inner HTML Preview"
           id="inner-preview"
           key={renderKey}
-          srcDoc={srcDoc}
+          //srcDoc={srcDoc}
+          src={`${window.location.origin}/${currentFile}`}
           className={moduleStyles.fileIframe}
         />
       );
@@ -238,7 +243,9 @@ const InnerHTMLPreview = () => {
       );
     }
   }, [
-    srcDoc,
+    serviceWorkerReady,
+    currentFile,
+    isLevelLoading,
     srcDocFetchError,
     serviceWorkerUnavailable,
     allowScripts,

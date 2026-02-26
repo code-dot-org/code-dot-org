@@ -38,6 +38,12 @@ function useProjectServiceWorker(
     if ('serviceWorker' in navigator) {
       setServiceWorker(null);
       setServiceWorkerUnavailable(false);
+      navigator.serviceWorker.oncontrollerchange = () => {
+        console.log(
+          'This page is now controlled by',
+          navigator.serviceWorker.controller
+        );
+      };
       navigator.serviceWorker
         .register('/weblab2_project_service_worker.js')
         .then(registration => {
@@ -49,6 +55,10 @@ function useProjectServiceWorker(
             if (installingWorker) {
               installingWorker.addEventListener('statechange', () => {
                 if (installingWorker.state === 'activated') {
+                  console.log({
+                    serviceWorkerController: navigator.serviceWorker.controller,
+                    serviceWorkerReady: navigator.serviceWorker.ready,
+                  });
                   // Wait for the service worker to be fully activated (and call clients.claim())
                   // before updating our reference. Safari requires the worker to be controlling
                   // the page before it will intercept fetch requests from iframes.
