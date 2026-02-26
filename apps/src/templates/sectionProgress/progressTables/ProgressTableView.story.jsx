@@ -8,7 +8,6 @@ import currentUser from '@cdo/apps/templates/currentUserRedux';
 import ProgressTableView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableView';
 import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
 import {fakeCoursesWithProgress} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {reduxStore} from '@cdo/storybook/decorators';
@@ -34,7 +33,6 @@ class _TableWrapper extends React.Component {
           backgroundColor: '#ffffff',
         }}
       >
-        <SectionProgressToggle />
         <ProgressTableView currentView={this.props.currentView} />
       </div>
     );

@@ -1,6 +1,15 @@
+import {json} from '@codemirror/lang-json';
+import {EditorState} from '@codemirror/state';
+import {EditorView} from '@codemirror/view';
 import $ from 'jquery';
 
-var CodeMirror = require('codemirror');
+import {editorConfig} from '@cdo/apps/codemirror/editorConfig';
+
+const jsonEditorTheme = EditorView.theme({
+  '&': {
+    border: '1px solid #eee',
+  },
+});
 
 /**
  * "Factory" function to transform a container into an interface for
@@ -19,15 +28,43 @@ var CodeMirror = require('codemirror');
  */
 module.exports = function (container, options) {
   container = $(container);
+  const textarea = container.find(options.json_textarea).get(0);
+  const editorContainer = document.createElement('div');
+  textarea.style.display = 'none';
+  textarea.insertAdjacentElement('afterend', editorContainer);
 
-  var jsonEditor = CodeMirror.fromTextArea(
-    container.find(options.json_textarea).get(0),
-    {
-      mode: 'javascript',
-      viewportMargin: Infinity,
-      matchBrackets: true,
-    }
-  );
+  const editorView = new EditorView({
+    state: EditorState.create({
+      doc: textarea.value || '',
+      extensions: [
+        ...editorConfig,
+        json(),
+        jsonEditorTheme,
+        EditorView.lineWrapping,
+        EditorView.updateListener.of(update => {
+          if (update.docChanged) {
+            textarea.value = update.state.doc.toString();
+          }
+        }),
+      ],
+    }),
+    parent: editorContainer,
+  });
+
+  const jsonEditor = {
+    getValue() {
+      return editorView.state.doc.toString();
+    },
+    setValue(value) {
+      editorView.dispatch({
+        changes: {
+          from: 0,
+          to: editorView.state.doc.length,
+          insert: value,
+        },
+      });
+    },
+  };
 
   // Create spaces for each element in the original JSON
   var jsonContent = jsonEditor.getValue();

@@ -29,6 +29,7 @@ interface AiTutorChatProps {
   channelId?: string;
   aiTutorChatButtonData?: ChatButtonData[];
   aiTutorSystemPromptName?: string;
+  aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   hasInstructionsDrawer?: boolean;
 }
@@ -41,11 +42,13 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   channelId,
   aiTutorChatButtonData,
   aiTutorSystemPromptName,
+  aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
   hasInstructionsDrawer,
 }) => {
   const {modelParameters, loading} = useAiTutorModelParameters({
     aiTutorSystemPromptName,
+    aiTutorSystemPrompt,
     aiTutorJsonSchema: aiTutorResponseSchemaSettings?.jsonSchema,
   });
 
