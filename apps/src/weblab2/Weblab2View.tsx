@@ -137,8 +137,15 @@ const Weblab2View: React.FC<
     } else if (!answerTypes) {
       answerTypes = TUTOR_MODE_TO_ANSWER_TYPE[DEFAULT_AI_TUTOR_MODE];
     }
-    return generateAiTutorPrompt(answerTypes);
-  }, [levelProperties.aiTutorMode, levelProperties.aiTutorPromptAnswerTypes]);
+    return generateAiTutorPrompt(
+      answerTypes,
+      levelProperties.aiTutorAnswerTypeCustomizations
+    );
+  }, [
+    levelProperties.aiTutorMode,
+    levelProperties.aiTutorPromptAnswerTypes,
+    levelProperties.aiTutorAnswerTypeCustomizations,
+  ]);
 
   // Since there's no run button in Weblab2, set it to true by default
   // to enable the Submit button on edit on submittable levels.
