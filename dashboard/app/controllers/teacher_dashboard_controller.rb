@@ -87,7 +87,7 @@ class TeacherDashboardController < ApplicationController
       aif_status = unit.curriculum_umbrella == 'AIF'
       render json: {aif: aif_status}
     else
-      return false
+      render json: {aif: false}
     end
   end
 end

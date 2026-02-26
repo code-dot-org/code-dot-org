@@ -224,7 +224,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
         });
       if (showAITAPodcasts || experiments.isEnabled('ai-lesson-podcasts')) {
         HttpClient.fetchJson<AIFStatus>(
-          `teacher_dashboard/unit_in_aif?unit_id=${selectedSection.unitId}`
+          `/teacher_dashboard/unit_in_aif?unit_id=${selectedSection.unitId}`
         )
           .then(data => setCanShowPodcasts(data.value.aif))
           .catch(error => console.error(error));
