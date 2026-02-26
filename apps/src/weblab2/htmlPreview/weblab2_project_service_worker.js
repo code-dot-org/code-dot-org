@@ -50,6 +50,7 @@ function main() {
   self.addEventListener('fetch', async event => {
     const url = new URL(event.request.url);
     let requestedFile = getFilenameFromUrl(url);
+    console.log('Service worker fetch for ', requestedFile);
     if (url.origin === location.origin && requestedFile === '') {
       // If the request is for the root of the project,
       // return index.html instead of trying to fetch a non-existent root file.
@@ -138,8 +139,10 @@ function main() {
   }
 
   async function handleProjectRequest(requestedFile, fileData) {
+    console.log('handling project request for ', requestedFile);
     try {
       const {content, mimeType, url} = fileData;
+      console.log({content, mimeType, url});
       if (requestedFile.endsWith('.html')) {
         broadcastChannel.postMessage({
           type: SERVING_HTML_FILE,
