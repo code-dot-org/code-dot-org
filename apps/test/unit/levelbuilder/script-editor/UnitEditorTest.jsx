@@ -121,6 +121,9 @@ describe('UnitEditor', () => {
       expect(
         screen.getAllByRole('checkbox').filter(c => c.name && c.checked)
       ).toHaveLength(2);
+      expect(screen.getAllByRole('checkbox').filter(c => c.name)).toHaveLength(
+        5
+      );
     });
 
     it('selecting topic tag chips updates input element selection state', () => {
@@ -271,12 +274,14 @@ describe('UnitEditor', () => {
       expect(checkbox).not.toBeDisabled();
     });
 
-    it('uses new resource editor for migrated units', () => {
-      renderDefault({
-        isMigrated: true,
-      });
+    describe('Teacher Resources', () => {
+      it('uses new resource editor for migrated units', () => {
+        renderDefault({
+          isMigrated: true,
+        });
 
-      screen.getByText('Resources Dropdowns');
+        screen.getByText('Resources Dropdowns');
+      });
     });
 
     it('has correct markdown for preview of unit description', () => {
@@ -426,6 +431,28 @@ describe('UnitEditor', () => {
       screen.getByText(
         'Error Saving: Please provide a positive number of instructional minutes per week in Unit Calendar Settings.'
       );
+    });
+
+    it('saves successfully if unit is not a course and only version year is set', async () => {
+      const deferred = mockAjax();
+      renderDefault({});
+
+      const saveAndKeepEditingButton = screen.getByRole('button', {
+        name: 'Save and Keep Editing',
+      });
+      fireEvent.click(saveAndKeepEditingButton);
+
+      expect(document.querySelector('.fa-spinner')).toBeInTheDocument();
+      expect(screen.queryByText(/Last saved at:/)).not.toBeInTheDocument();
+
+      deferred.resolve({scriptPath: '/s/test-unit'});
+
+      await waitFor(() => {
+        screen.getByText(/Last saved at:/);
+      });
+
+      expect(document.querySelector('.fa-spinner')).not.toBeInTheDocument();
+      expect(navigateToHref).not.toHaveBeenCalled();
     });
 
     it('can save and close', async () => {
