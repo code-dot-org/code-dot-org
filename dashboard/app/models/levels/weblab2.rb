@@ -25,6 +25,7 @@
 #  index_levels_on_type       (type)
 #
 class Weblab2 < Level
+  include Widget2Helper
   validate :validate_ai_tutor_prompt_answer_types
 
   serialized_attrs %w(

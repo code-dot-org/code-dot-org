@@ -499,6 +499,7 @@ class LevelsController < ApplicationController
         @game = Game.panels
       elsif @type_class == Weblab2
         @game = Game.weblab2
+        @widget2_ids = get_widget2_ids
       end
       @level = @type_class.new
       render :edit

@@ -167,6 +167,7 @@ const INTERNAL_ENTRIES = {
   'levels/editors/fields/_validation_code': './src/sites/studio/pages/levels/editors/fields/_validation_code.js',
   'levels/editors/fields/_validations': './src/sites/studio/pages/levels/editors/fields/_validations.js',
   'levels/editors/fields/_video': './src/sites/studio/pages/levels/editors/fields/_video.js',
+  'levels/editors/fields/_widget2_parameters': './src/sites/studio/pages/levels/editors/fields/_widget2_parameters.js',
   'levels/editors/_gamelab': './src/sites/studio/pages/levels/editors/_gamelab.js',
   'levels/editors/_navigation_sidebar': './src/sites/studio/pages/levels/editors/_navigation_sidebar.js',
   'levels/editors/_pixelation': './src/sites/studio/pages/levels/editors/_pixelation.js',

@@ -17,7 +17,7 @@
 
   - if @level.is_a?(Weblab2) && @widget2_ids.present?
     %h2 Widget2 View
-    = f.select :widget2, options_for_select(@widget2_ids), {include_blank: true}
+    = f.select :widget2, options_for_select(@widget2_ids, @level.properties["widget2"]), {include_blank: true}
     %p
       If one is selected, the level will be in Widget2 View.
       As in the above Original Widget View, the code editor workspace is hidden.
@@ -25,4 +25,4 @@
       = link_to('Widget2 Library', '/widget2', target: '_blank') + '.'
     %p
       = f.label :widget2_parameters, 'Widget2 Parameters (JSON)'
-      = f.text_area :widget2_parameters, rows: 4
+      = render partial: 'levels/editors/fields/widget2_parameters', locals: {f: f}

@@ -423,11 +423,12 @@ export const HTMLPreview: React.FC = () => {
         {
           type: IframeMessageType.SET_SOURCE,
           source: debouncedSource,
+          parameters: widget2Parameters,
         },
         previewUrl
       );
     }
-  }, [previewUrl, debouncedSource, isIframeLoaded]);
+  }, [previewUrl, debouncedSource, isIframeLoaded, widget2Parameters]);
 
   // Inform the inner preview when we start/finish loading the level,
   // so it can avoid showing outdated content while we are loading.
