@@ -11020,6 +11020,18 @@ indexes:
   lti_courses:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lti_courses
+    name: index_lti_courses_on_context_integration_active
+    unique: true
+    columns: "`context_id`, `lti_integration_id`, (if((`deleted_at` is null),true,NULL))"
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: lti_courses
     name: index_lti_courses_on_lti_integration_id
     unique: false
     columns:
@@ -11037,20 +11049,6 @@ indexes:
     unique: false
     columns:
     - lti_deployment_id
-    lengths: {}
-    orders: {}
-    opclasses: {}
-    where: 
-    type: 
-    using: :btree
-    comment: 
-  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: lti_courses
-    name: index_on_context_id_and_lti_integration_id
-    unique: false
-    columns:
-    - context_id
-    - lti_integration_id
     lengths: {}
     orders: {}
     opclasses: {}
@@ -15017,7 +15015,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20260128232147
+version: 20260211145245
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

@@ -29,11 +29,7 @@ import AiDiffChatHeader from './AiDiffChatHeader';
 import AiDiffCreateArtifactButtons from './AiDiffCreateArtifactButtons';
 import AiDiffSuggestedPrompts from './AiDiffSuggestedPrompts';
 import {DEFAULT_THREAD_TITLE} from './constants';
-import {
-  EXIT_TICKET_PROMPT,
-  LESSON_HOOK_PROMPT,
-  SUGGESTED_PROMPTS_FOR_SELECTION,
-} from './predefinedPrompts';
+import {SUGGESTED_PROMPTS_FOR_SELECTION} from './predefinedPrompts';
 import {
   AiArtifact,
   ChatItem,
@@ -263,11 +259,8 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
       if (!prompt.followUpPrompts && !prompt.response) {
         getAIResponse(prompt.prompt, true, prompt.label);
       }
-      if (prompt === EXIT_TICKET_PROMPT) {
-        dispatch(setArtifactType(AiDiffArtifactType.EXIT_TICKET));
-      }
-      if (prompt === LESSON_HOOK_PROMPT) {
-        dispatch(setArtifactType(AiDiffArtifactType.LESSON_HOOK));
+      if (prompt.artifactCandidateType) {
+        dispatch(setArtifactType(prompt.artifactCandidateType));
       }
     },
     [dispatch, getAIResponse, threadTitle]
