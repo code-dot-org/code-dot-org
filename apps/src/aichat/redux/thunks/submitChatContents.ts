@@ -13,7 +13,6 @@ import {getAssetUrl} from '@cdo/apps/aichat/utils';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {isAiGatewayEnabled} from '@cdo/apps/aiGateway/isAiGatewayEnabled';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
-import {queryParams} from '@cdo/apps/code-studio/utils';
 import {TestResults} from '@cdo/apps/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -53,7 +52,8 @@ import {sendAnalytics} from './sendAnalytics';
 
 // We currently default to using the legacy Gemini API unless use vertex query param set.
 // This will be removed once we switch over to Vertex completely.
-const useVertex = queryParams('aitutor-use-vertex') === 'true' ? true : false;
+const useVertex =
+  experiments.isEnabledAllowingQueryString('aitutor-use-vertex');
 
 // Log whether using Vertex API or not in case query param entered incorrectly.
 console.log(`🤖: Tutor set to use Vertex API? ${useVertex ? 'YES' : 'NO'}`);

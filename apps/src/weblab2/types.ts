@@ -5,6 +5,7 @@ export interface Weblab2LevelProperties extends LevelProperties {
   initialViewMode?: ViewMode;
   aiTutorMode?: string;
   levelSystemPrompt?: string;
+  aiTutorPromptAnswerTypes?: AiTutorAnswerType[];
 }
 
 export enum ViewMode {
@@ -12,3 +13,28 @@ export enum ViewMode {
   CODE = 'code',
   PREVIEW = 'preview',
 }
+
+export type AiTutorAnswerType =
+  | 'ask'
+  | 'buildCSS'
+  | 'buildHTML'
+  | 'buildJavaScript'
+  | 'debug'
+  | 'documentation'
+  | 'example'
+  | 'explainCode'
+  | 'hint'
+  | 'pseudocode'
+  | 'refusal'
+  | 'refusalJavaScriptSnippets'
+  | 'testCase';
+
+export type AiTutorMode =
+  | 'suggest'
+  | 'outline'
+  | 'guide'
+  | 'produce'
+  | 'designer'
+  | 'tutor'
+  | 'engineer'
+  | 'qa';
