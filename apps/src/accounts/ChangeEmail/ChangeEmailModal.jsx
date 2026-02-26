@@ -1,7 +1,7 @@
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
+import {Button} from '@code-dot-org/component-library/button';
 import CloseButton from '@code-dot-org/component-library/closeButton';
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography, Button as MuiButton} from '@mui/material';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -168,35 +168,19 @@ export default class ChangeEmailModal extends React.Component {
             />
           )}
           <div className={styles.buttonContainer}>
-            <MuiButton
-              variant="outlined"
-              color="tertiary"
-              size="medium"
+            <Button
+              text={i18n.cancel()}
               onClick={this.cancel}
-              type="button"
+              type="secondary"
+              color="gray"
               disabled={STATE_SAVING === saveState}
-            >
-              {i18n.cancel()}
-            </MuiButton>
-            <MuiButton
-              variant="contained"
-              color="primary"
-              size="medium"
+            />
+            <Button
+              text={i18n.changeEmailModal_save()}
               onClick={this.save}
+              isPending={STATE_SAVING === saveState}
               disabled={STATE_SAVING === saveState || !isFormValid}
-              type="button"
-              startIcon={
-                STATE_SAVING === saveState ? (
-                  <FontAwesomeV6Icon
-                    iconName="spinner"
-                    iconStyle="solid"
-                    animationType="spin"
-                  />
-                ) : null
-              }
-            >
-              {i18n.changeEmailModal_save()}
-            </MuiButton>
+            />
           </div>
         </div>
       </BaseDialog>
