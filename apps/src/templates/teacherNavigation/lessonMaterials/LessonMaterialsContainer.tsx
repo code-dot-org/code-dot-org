@@ -60,6 +60,10 @@ interface LessonSummaryInfoResponse {
   script: string;
 }
 
+interface AIFStatus {
+  aif: boolean;
+}
+
 const lessonMaterialsApiCall = (unitId: number) =>
   HttpClient.fetchJson<LessonMaterialsData>(
     `/dashboardapi/lesson_materials/${unitId}`
@@ -81,6 +85,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   const [finishedListeningToSummary, setFinishedListeningToSummary] =
     useState(false);
   const [canShowLessonSummaries, setCanShowLessonSummaries] = useState(false);
+  const [canShowPodcasts, setCanShowPodcasts] = useState(false);
   const [audioSummaryTranscript, setAudioSummaryTranscript] =
     useState<string>('');
 
@@ -126,9 +131,9 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     state => state.currentUser.showAITALessonSummary
   );
 
-  const showAITAPodcasts =
-    useAppSelector(state => state.currentUser.showAITAPodcasts) ||
-    experiments.isEnabled('ai-lesson-podcasts');
+  const showAITAPodcasts = useAppSelector(
+    state => state.currentUser.showAITAPodcasts
+  );
 
   React.useEffect(() => {
     const selectedSectionId = selectedSection.id;
@@ -217,8 +222,21 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           setCanShowLessonSummaries(false);
           console.log(`Error: ${error}`);
         });
+      if (showAITAPodcasts || experiments.isEnabled('ai-lesson-podcasts')) {
+        HttpClient.fetchJson<AIFStatus>(
+          `teacher_dashboard/unit_in_aif?unit_id=${selectedSection.unitId}`
+        )
+          .then(data => setCanShowPodcasts(data.value.aif))
+          .catch(error => console.error(error));
+      }
     }
-  }, [userId, selectedLesson, showAITALessonSummary, showAITAPodcasts]);
+  }, [
+    userId,
+    selectedLesson,
+    showAITALessonSummary,
+    showAITAPodcasts,
+    selectedSection.unitId,
+  ]);
 
   const handleLessonSummaryAskAITAClick = () => {
     dispatch(
@@ -334,7 +352,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           />
         )}
         <div className={styles.lessonSummaryContainer}>
-          {showAITAPodcasts && (
+          {canShowPodcasts && (
             <div className={styles.lessonSummarySection}>
               <div className={styles.lessonSummarySectionHeader}>
                 <div className={styles.lessonSummarySectionTitle}>
