@@ -1,9 +1,5 @@
-import {setUnit} from '@cdo/apps/redux/unitSelectionRedux';
-import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import sectionProgress, {
-  setCurrentView,
   addDataByUnit,
-  setLessonOfInterest,
   startLoadingProgress,
   finishLoadingProgress,
   getCurrentUnitData,
@@ -14,7 +10,7 @@ import sectionProgress, {
   toggleExpandedChoiceLevel,
   addExpandedLesson,
   removeExpandedLesson,
-} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+} from '@cdo/apps/templates/sectionProgressV2/sectionProgressRedux';
 
 import {assert, expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
@@ -52,22 +48,8 @@ const fakeUnitData456 = {
   },
 };
 
-const lessonOfInterest = 16;
-
 describe('sectionProgressRedux', () => {
   const initialState = sectionProgress(undefined, {});
-
-  describe('setUnit', () => {
-    it('setting the unit id resets the lesson of interest', () => {
-      const action = setLessonOfInterest(lessonOfInterest);
-      const nextState = sectionProgress(initialState, action);
-
-      // This action is from unitSelectionRedux but affects sectionProgress
-      const action2 = setUnit(130, 99);
-      const nextState2 = sectionProgress(nextState, action2);
-      assert.deepEqual(nextState2.lessonOfInterest, 1);
-    });
-  });
 
   describe('isLoadingProgress', () => {
     it('startLoadingProgress sets isLoadingProgress to true', () => {
@@ -102,20 +84,6 @@ describe('sectionProgressRedux', () => {
     });
   });
 
-  describe('setCurrentView', () => {
-    it('sets the current view to summary', () => {
-      const action = setCurrentView(ViewType.SUMMARY);
-      const nextState = sectionProgress(initialState, action);
-      assert.deepEqual(nextState.currentView, ViewType.SUMMARY);
-    });
-
-    it('sets the current view to detail', () => {
-      const action = setCurrentView(ViewType.DETAIL);
-      const nextState = sectionProgress(initialState, action);
-      assert.deepEqual(nextState.currentView, ViewType.DETAIL);
-    });
-  });
-
   describe('addDataByUnit', () => {
     it('adds multiple scriptData info', () => {
       const action = addDataByUnit(fakeUnitData456);
@@ -128,14 +96,6 @@ describe('sectionProgressRedux', () => {
       const expected789 = fakeUnitData789.unitDataByUnit[789];
       assert.deepEqual(nextState2.unitDataByUnit[456], expected456);
       assert.deepEqual(nextState2.unitDataByUnit[789], expected789);
-    });
-  });
-
-  describe('setLessonOfInterest', () => {
-    it('sets the lesson of interest', () => {
-      const action = setLessonOfInterest(lessonOfInterest);
-      const nextState = sectionProgress(initialState, action);
-      assert.deepEqual(nextState.lessonOfInterest, lessonOfInterest);
     });
   });
 

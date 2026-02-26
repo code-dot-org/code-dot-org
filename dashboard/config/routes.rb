@@ -1276,6 +1276,10 @@ Dashboard::Application.routes.draw do
     get '/form/:path/configuration', to: 'foorm/simple_survey_forms#configuration'
     get '/form/:path', to: 'foorm/simple_survey_forms#show'
 
+    get 'widget2', to: 'widget2#index'
+    post 'widget2/:widget2_id/update_code', to: 'widget2#update_code'
+    post 'widget2/new', to: 'widget2#new'
+
     namespace :foorm do
       resources :simple_survey_forms, only: [:index, :new, :create]
 

@@ -2,13 +2,13 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {getCurrentUnitData} from '../../sectionProgress/sectionProgressRedux';
 import ExpandedProgressColumnHeader from '../ExpandedProgressColumnHeader';
 import LessonProgressColumnHeader from '../LessonProgressColumnHeader';
 import {
   areAllLevelsLocked,
   getLockedStatusPerStudent,
 } from '../LockedLessonUtils';
+import {getCurrentUnitData} from '../sectionProgressRedux';
 
 import styles from './floating-header.module.scss';
 import progressStyles from '../progress-table-v2.module.scss';

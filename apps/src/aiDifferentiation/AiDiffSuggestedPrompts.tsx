@@ -43,6 +43,7 @@ const AiDiffSuggestedPrompts: React.FC<ComponentProps> = ({
         selected: prompt === selectedPrompt,
         onClick: onClick(prompt),
         show: true,
+        icon: prompt.artifactCandidateType ? 'shapes' : undefined,
       };
     });
 

@@ -113,3 +113,8 @@ dashboard/brakeman_security_report.htm
 .pdm-python
 
 skaffold-build-tags.json
+
+# ai
+.claude/worktrees
+CLAUDE.local.md
+.claude/*.local.*
