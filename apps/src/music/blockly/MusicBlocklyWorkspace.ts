@@ -78,10 +78,6 @@ export default class MusicBlocklyWorkspace {
     }
     setUpBlocklyForMusicLab();
 
-    if (blockMode !== BlockMode.SIMPLE2) {
-      Blockly.setInfiniteLoopTrap();
-    }
-
     this.isBlocklyEnvironmentSetup = true;
   }
 

@@ -7,7 +7,7 @@ import {python} from '@codemirror/lang-python';
 import {LanguageSupport} from '@codemirror/language';
 import React, {useContext, useEffect, useMemo, useState} from 'react';
 
-import {shouldShowAiTutor} from '@cdo/apps/aiTutor/helpers/shouldShowAiTutor';
+import {shouldShowAiTutor} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -117,6 +117,9 @@ const PythonlabView: React.FunctionComponent<
   const aiTutorEnabledForPilot = useAppSelector(
     state => state.currentUser.aiTutorEnabledForPilot
   );
+  const aiChatAccessLevel = useAppSelector(
+    state => state.currentUser.aiChatAccessLevel
+  );
 
   const hasSource = !!source;
 
@@ -125,6 +128,7 @@ const PythonlabView: React.FunctionComponent<
       tutorPilot: aiTutorEnabledForPilot,
       appName: levelProperties.appName,
       tutorLevel: levelProperties.aiTutorAvailable,
+      aiChatAccessLevel: aiChatAccessLevel,
     }) ||
     queryParams('show-ai-tutor2') === 'true' ||
     queryParams('show-ai-tutor') === 'true';

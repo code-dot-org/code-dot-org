@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-21 19:26:22 UTC",
+    "serialized_at": "2026-02-12 16:31:37 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -971,6 +971,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 Multiple Choice Creative Commons2022_-digital-literacy_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -993,6 +996,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L12 CFU Copyright_-digital-literacy_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,

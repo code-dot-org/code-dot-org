@@ -26,6 +26,8 @@ const ALL_APPS = [
 // prettier-ignore
 const CODE_STUDIO_ENTRIES = {
   'admin_users/mass_delete_student_progress': './src/sites/studio/pages/admin_users/mass_delete_student_progress.js',
+  'aidiff_exit_tickets/show': './src/sites/studio/pages/aidiff_exit_tickets/show.js',
+  'aidiff_lesson_hooks/show': './src/sites/studio/pages/aidiff_lesson_hooks/show.js',
   'certificates/batch': './src/sites/studio/pages/certificates/batch.js',
   'certificates/show': './src/sites/studio/pages/certificates/show.js',
   'code-studio': './src/sites/studio/pages/code-studio.js',
@@ -144,6 +146,7 @@ const INTERNAL_ENTRIES = {
   'levels/editors/_craft': './src/sites/studio/pages/levels/editors/_craft.js',
   'levels/editors/_dsl': './src/sites/studio/pages/levels/editors/_dsl.js',
   'levels/editors/fields/_aichat_settings': './src/sites/studio/pages/levels/editors/fields/_aichat_settings.js',
+  'levels/editors/fields/_ai_tutor_prompt_settings': './src/sites/studio/pages/levels/editors/fields/_ai_tutor_prompt_settings.js',
   'levels/editors/fields/_animation': './src/sites/studio/pages/levels/editors/fields/_animation.js',
   'levels/editors/fields/_bubble_choice_sublevel': './src/sites/studio/pages/levels/editors/fields/_bubble_choice_sublevel.js',
   'levels/editors/fields/_blockly': './src/sites/studio/pages/levels/editors/fields/_blockly.js',

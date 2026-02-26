@@ -70,7 +70,7 @@ const LessonInsightWidget: React.FC<LessonInsightWidgetProps> = ({
             setInsightData(parsedData);
           } catch (parseError) {
             console.error('Error parsing insight JSON:', parseError);
-            setError('Failed to parse insight data');
+            setError('Error loading insight data');
           }
         }
       })
@@ -78,7 +78,7 @@ const LessonInsightWidget: React.FC<LessonInsightWidgetProps> = ({
         // Only update state if this request is still current
         if (currentRequestRef.current === requestId) {
           console.error('Error fetching insight prompt:', error);
-          setError('Failed to fetch insight data');
+          setError('Error loading insight data');
         }
       })
       .finally(() => {
@@ -107,8 +107,19 @@ const LessonInsightWidget: React.FC<LessonInsightWidgetProps> = ({
         },
       ]}
     >
-      {error && <Typography color="error">{error}</Typography>}
-      {insightData && (
+      {error && (
+        <div className={styles.widgetBody}>
+          <div className={styles.errorContainer}>
+            <FontAwesomeV6Icon
+              iconName="triangle-exclamation"
+              iconStyle="regular"
+              aria-label="Error"
+            />
+            <Typography color="error">{error}</Typography>
+          </div>
+        </div>
+      )}
+      {insightData && !error && (
         <div className={styles.widgetBody}>
           <div>
             <div className={styles.insightText}>

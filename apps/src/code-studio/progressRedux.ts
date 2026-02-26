@@ -36,7 +36,7 @@ import {getBubbleUrl} from '../templates/progress/BubbleFactory';
 import {AppDispatch} from '../util/reduxHooks';
 import {navigateToHref} from '../utils';
 
-import {mergeActivityResult} from './activityUtils';
+import {activityCssClass, mergeActivityResult} from './activityUtils';
 import {
   canChangeLevelInPage,
   updateBrowserForLevelNavigation,
@@ -221,6 +221,33 @@ const progressSlice = createSlice({
         );
       });
       state.levelResults = newLevelResults;
+    },
+    mergeUnitProgress(
+      state,
+      action: PayloadAction<{levelId: number; result: number}>
+    ) {
+      const {levelId, result} = action.payload;
+      const status = activityCssClass(result);
+      const existing = state.unitProgress[levelId];
+      if (existing) {
+        state.unitProgress[levelId] = {
+          ...existing,
+          result: mergeActivityResult(existing.result, result),
+          status,
+        };
+      } else {
+        state.unitProgress[levelId] = {
+          lastTimestamp: undefined,
+          locked: false,
+          pages: null,
+          paired: false,
+          result,
+          status,
+          teacherFeedbackReviewState: undefined,
+          teacherFeedbackNew: false,
+          timeSpent: undefined,
+        };
+      }
     },
     overwriteResults(state, action: PayloadAction<LevelResults>) {
       state.levelResults = action.payload;
@@ -523,10 +550,13 @@ function sendReportForLevel(
       // Update the progress store by merging in this
       // particular result immediately.
       dispatch(mergeResults({[levelId]: result}));
+      dispatch(mergeUnitProgress({levelId: parseInt(levelId), result}));
       // If the level is the sublevel of a bubble level,
       // also update the status of the parent level.
       if (currentLevel.parentLevelId) {
         dispatch(mergeResults({[currentLevel.parentLevelId]: result}));
+        const parentId = parseInt(currentLevel.parentLevelId);
+        dispatch(mergeUnitProgress({levelId: parentId, result}));
       }
 
       // After we log the reported time we should update the start time of the milestone
@@ -647,6 +677,7 @@ export const {
   clearResults,
   useDbProgress,
   mergeResults,
+  mergeUnitProgress,
   overwriteResults,
   mergePeerReviewProgress,
   updateFocusArea,

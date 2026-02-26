@@ -14,7 +14,6 @@ export function setupBlocklyEnvironment() {
   registerCustomProcedureBlocks();
   delete Blockly.Blocks.procedures_defreturn;
   delete Blockly.Blocks.procedures_ifreturn;
-  Blockly.setInfiniteLoopTrap();
 
   for (const {definition, generator, extendedOptions} of blockDefinitions) {
     Blockly.Blocks[definition.type] = {

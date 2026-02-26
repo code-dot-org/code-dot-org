@@ -1,15 +1,11 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
-import {
-  Heading3,
-  Heading5,
-  BodyTwoText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
-import AiChatToolsAvailableAlert from '@cdo/apps/aiComponentLibrary/sectionAssignmentAlerts/AiChatToolsAvailableAlert';
-import AiChatToolsRequiredAlert from '@cdo/apps/aiComponentLibrary/sectionAssignmentAlerts/AiChatToolsRequiredAlert';
+import AssigningAvailableAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/AssigningAvailableAiChatToolsAlert';
+import AssigningEssentialAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/AssigningEssentialAiChatToolsAlert';
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
@@ -215,13 +211,15 @@ const MultipleSectionsAssigner = ({
         className={moduleStyle.information}
       >
         <div className={moduleStyle.modalHeader}>
-          <Heading3>{i18n.chooseSectionsPrompt({assignmentName})}</Heading3>
+          <Typography variant="h3">
+            {i18n.chooseSectionsPrompt({assignmentName})}
+          </Typography>
         </div>
         <div className={moduleStyle.sectionsDirections}>
-          <BodyTwoText>{sectionDirections}</BodyTwoText>
+          <Typography variant="body2">{sectionDirections}</Typography>
         </div>
         <div className={moduleStyle.sectionList}>
-          <Heading5>{i18n.yourSectionsList()}</Heading5>
+          <Typography variant="h5">{i18n.yourSectionsList()}</Typography>
           <div className={moduleStyle.sectionListOptionsContainer}>
             {sections &&
               sections.map(
@@ -250,11 +248,11 @@ const MultipleSectionsAssigner = ({
           />
           {experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
             aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
-              <AiChatToolsRequiredAlert />
+              <AssigningEssentialAiChatToolsAlert />
             )}
           {experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
             aiChatToolsDependency === AiChatToolsDependency.AVAILABLE && (
-              <AiChatToolsAvailableAlert />
+              <AssigningAvailableAiChatToolsAlert />
             )}
         </div>
       </div>

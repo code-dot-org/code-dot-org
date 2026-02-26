@@ -15,12 +15,12 @@ export const sendAnalytics =
     const labState = state.lab;
     const progressState = state.progress;
     const clientType = aichatState.clientType;
-    const userHasAichatAccess = aichatState.userHasAichatAccess;
+    const userHasAichatLabAccess = aichatState.userHasAichatLabAccess;
 
-    // Only check `userHasAichatAccess` for AI Chat.
+    // Only check `userHasAichatLabAccess` for AI Chat Lab.
     if (
       clientType !== AiChatClientTypes.AI_CHAT_LAB ||
-      userHasAichatAccess ||
+      userHasAichatLabAccess ||
       skipAccessCheck
     ) {
       const allProperties = {

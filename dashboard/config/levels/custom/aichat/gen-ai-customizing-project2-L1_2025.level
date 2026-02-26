@@ -33,7 +33,7 @@
         }
       },
       "visibilities": {
-        "selectedModelId": "editable",
+        "selectedModelId": "hidden",
         "temperature": "editable",
         "systemPrompt": "editable",
         "retrievalContexts": "editable",
@@ -41,10 +41,6 @@
       },
       "hidePresentationPanel": true,
       "availableModelIds": [
-        "gen-ai-biomistral-7b",
-        "gen-ai-mistral-pirate-7b",
-        "gen-ai-karen-creative-mistral-7b",
-        "gen-ai-arithmo2-mistral-7b",
         "gen-ai-mistral-7b-inst-v01"
       ],
       "multimodalEnabled": false
@@ -55,6 +51,6 @@
     "submittable": "false",
     "disable_edit_run_for_submission": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-12T20:43:41.664+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project2-L1_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-project2-L1_2024\"},{\"changed_at\":\"2025-09-11 19:22:10 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-11 19:23:55 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-12T20:43:41.664+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project2-L1_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-project2-L1_2024\"},{\"changed_at\":\"2025-09-11 19:22:10 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-11 19:23:55 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-13 23:11:32 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

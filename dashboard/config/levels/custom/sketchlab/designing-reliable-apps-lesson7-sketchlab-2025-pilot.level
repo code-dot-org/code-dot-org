@@ -1,12 +1,13 @@
 <Sketchlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 75,
   "created_at": "2026-02-10T18:35:08.000Z",
   "level_num": "custom",
   "user_id": 18762,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# Designing for the \"Oops\"\r\n\r\nChoose one of the following user complaints from the Concert App bug report:\r\n\r\n- **The Infinite Spinner:** “I clicked buy, and it just spun forever.” (Network or Server Error)\r\n\r\n- **The Ghost Map:** “The page loaded, but the seat map is blank.” (Missing Data)\r\n\r\n- **The Code Crash:** “It says ‘Object Reference Null’ when I click my profile.” (Invalid Data)\r\n\r\nDesign the UI for what should appear on screen when this error happens. Use simple boxes and labels to show your layout.\r\n\r\nYour sketch must include three elements:\r\n\r\n1. **The Message:** Explain what happened in plain English. Avoid using \"Error 404\" or \"Null\".\r\n2. **The Action:** Give the user a clear next step, e.g., a \"Retry\" button, a \"Contact Support\" link, or a \"Return to Home\" option.\r\n3. **The Vibe Check:** Ensure the tone is calm and helpful. Avoid scary icons or blaming the user.",
+    "long_instructions": "# Designing for the \"Oops\"\r\n\r\nChoose one of the following user complaints from the Concert App bug report:\r\n\r\n- **The Infinite Spinner:** “I clicked buy, and it just spun forever.” (Network Failure)\r\n\r\n- **The Ghost Map:** “The page loaded, but the seat map is blank.” (Missing Data)\r\n\r\n- **The Code Crash:** “It says ‘Object Reference Null’ when I click my profile.” (Invalid Data)\r\n\r\nDesign the UI for what should appear on screen when this error happens. Use simple boxes and labels to show your layout.\r\n\r\nYour sketch must include three elements:\r\n\r\n1. **The Message:** Explain what happened in plain English. Avoid using \"Error 404\" or \"Null\".\r\n2. **The Action:** Give the user a clear next step, e.g., a \"Retry\" button, a \"Contact Support\" link, or a \"Return to Home\" option.\r\n3. **The Tone Check:** Ensure the tone is calm and helpful. Avoid scary icons or blaming the user.",
     "start_sources": {
       "source": {
         "type": "excalidraw",
@@ -15,8 +16,8 @@
         "elements": [
           {
             "type": "rectangle",
-            "version": 1012,
-            "versionNonce": 1206780327,
+            "version": 1013,
+            "versionNonce": 265700037,
             "isDeleted": false,
             "id": "V29L9wujj4e7u_7C34J3A",
             "fillStyle": "solid",
@@ -42,14 +43,14 @@
             "boundElements": [
 
             ],
-            "updated": 1770758378489,
+            "updated": 1770831050709,
             "link": null,
-            "locked": true
+            "locked": false
           },
           {
             "type": "rectangle",
-            "version": 942,
-            "versionNonce": 1999212617,
+            "version": 943,
+            "versionNonce": 834140171,
             "isDeleted": false,
             "id": "ngMpTMAOddjHz1JAPno5_",
             "fillStyle": "solid",
@@ -75,14 +76,14 @@
             "boundElements": [
 
             ],
-            "updated": 1770758378490,
+            "updated": 1770831050709,
             "link": null,
-            "locked": true
+            "locked": false
           },
           {
             "type": "text",
-            "version": 1600,
-            "versionNonce": 372061383,
+            "version": 1602,
+            "versionNonce": 1609277989,
             "isDeleted": false,
             "id": "JucVLJAin0j1LMt6msMEZ",
             "fillStyle": "hachure",
@@ -106,9 +107,9 @@
             "boundElements": [
 
             ],
-            "updated": 1770758378490,
+            "updated": 1770831050709,
             "link": null,
-            "locked": true,
+            "locked": false,
             "fontSize": 30.861259036605265,
             "fontFamily": 1,
             "text": "Message: What will the user see?",
@@ -121,8 +122,8 @@
           },
           {
             "type": "text",
-            "version": 1133,
-            "versionNonce": 369270569,
+            "version": 1135,
+            "versionNonce": 531807915,
             "isDeleted": false,
             "id": "tJAZKd_1uGRvY3P0KQP8T",
             "fillStyle": "hachure",
@@ -146,9 +147,9 @@
             "boundElements": [
 
             ],
-            "updated": 1770758378490,
+            "updated": 1770831050709,
             "link": null,
-            "locked": true,
+            "locked": false,
             "fontSize": 34.97686368015933,
             "fontFamily": 1,
             "text": "Action: What should the user do next?",
@@ -161,8 +162,8 @@
           },
           {
             "type": "text",
-            "version": 1180,
-            "versionNonce": 945357799,
+            "version": 1182,
+            "versionNonce": 2027820421,
             "isDeleted": false,
             "id": "UB3_DVlBFUV71Hxn5fAQH",
             "fillStyle": "hachure",
@@ -186,9 +187,9 @@
             "boundElements": [
 
             ],
-            "updated": 1770758378490,
+            "updated": 1770831050709,
             "link": null,
-            "locked": true,
+            "locked": false,
             "fontSize": 44.367128648582465,
             "fontFamily": 1,
             "text": "Plan Your Design",
@@ -201,8 +202,8 @@
           },
           {
             "type": "text",
-            "version": 1331,
-            "versionNonce": 1486279177,
+            "version": 1333,
+            "versionNonce": 467382603,
             "isDeleted": false,
             "id": "fBy4xyYgrrqcZ-APMfeKb",
             "fillStyle": "hachure",
@@ -226,9 +227,9 @@
             "boundElements": [
 
             ],
-            "updated": 1770758378490,
+            "updated": 1770831050709,
             "link": null,
-            "locked": true,
+            "locked": false,
             "fontSize": 43.346254566445204,
             "fontFamily": 1,
             "text": "User's View",
@@ -241,8 +242,8 @@
           },
           {
             "type": "rectangle",
-            "version": 1128,
-            "versionNonce": 1048440583,
+            "version": 1129,
+            "versionNonce": 1709907173,
             "isDeleted": false,
             "id": "-kslNR-1WviAOdfBvO4IM",
             "fillStyle": "solid",
@@ -268,14 +269,14 @@
             "boundElements": [
 
             ],
-            "updated": 1770758378490,
+            "updated": 1770831050709,
             "link": null,
-            "locked": true
+            "locked": false
           },
           {
             "type": "rectangle",
-            "version": 1167,
-            "versionNonce": 1675733225,
+            "version": 1168,
+            "versionNonce": 395137003,
             "isDeleted": false,
             "id": "VEhkyD4LGr1McA5KAUYOg",
             "fillStyle": "solid",
@@ -301,298 +302,16 @@
             "boundElements": [
 
             ],
-            "updated": 1770758378490,
+            "updated": 1770831050709,
             "link": null,
-            "locked": true
-          },
-          {
-            "type": "rectangle",
-            "version": 1204,
-            "versionNonce": 51934759,
-            "isDeleted": false,
-            "id": "07HRlrFlgdRSKU6c2HtaR",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 10,
-            "angle": 0,
-            "x": -678.4124115971485,
-            "y": -1264.2733451078657,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 381.783095884937,
-            "height": 471.54997680845304,
-            "seed": 806294921,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": {
-              "type": 3
-            },
-            "boundElements": [
-
-            ],
-            "updated": 1770758378490,
-            "link": null,
-            "locked": true
-          },
-          {
-            "type": "text",
-            "version": 1400,
-            "versionNonce": 829334473,
-            "isDeleted": false,
-            "id": "PgBY-Nkr3BKU5cI8IkVOu",
-            "fillStyle": "hachure",
-            "strokeWidth": 1,
-            "strokeStyle": "solid",
-            "roughness": 1,
-            "opacity": 100,
-            "angle": 0,
-            "x": -628.8115203570037,
-            "y": -1231.055800287425,
-            "strokeColor": "#000000",
-            "backgroundColor": "transparent",
-            "width": 184.8016815185547,
-            "height": 55.13842492918674,
-            "seed": 349358503,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1770758378490,
-            "link": null,
-            "locked": true,
-            "fontSize": 43.346254566445204,
-            "fontFamily": 1,
-            "text": "Checklist",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "Checklist",
-            "lineHeight": 1.2720458891013384,
-            "baseline": 39
-          },
-          {
-            "id": "prk_PKFkMN8KpLFZmLbrx",
-            "type": "rectangle",
-            "x": -643.920201563866,
-            "y": -1127.2265706930011,
-            "width": 41.47554564747178,
-            "height": 40.604163105901534,
-            "angle": 0,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 100,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "seed": 1093828809,
-            "version": 121,
-            "versionNonce": 1561663815,
-            "isDeleted": false,
-            "boundElements": null,
-            "updated": 1770758378490,
-            "link": null,
-            "locked": true
-          },
-          {
-            "id": "-5uxJOMdGUltNlc6x1thY",
-            "type": "text",
-            "x": -574.354762633504,
-            "y": -1142.0138758994322,
-            "width": 250.08595275878906,
-            "height": 66.76905887790038,
-            "angle": 0,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 100,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "seed": 195345993,
-            "version": 167,
-            "versionNonce": 2103001769,
-            "isDeleted": false,
-            "boundElements": null,
-            "updated": 1770758378490,
-            "link": null,
-            "locked": true,
-            "text": "Message written in \nplain language",
-            "fontSize": 29.030025599087125,
-            "fontFamily": 2,
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "baseline": 60,
-            "containerId": null,
-            "originalText": "Message written in \nplain language",
-            "lineHeight": 1.15
-          },
-          {
-            "type": "rectangle",
-            "version": 191,
-            "versionNonce": 298866791,
-            "isDeleted": false,
-            "id": "0xW5ZpV3A_JyNtUI66z4O",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": -642.5527207464892,
-            "y": -1004.804017166543,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 41.47554564747178,
-            "height": 40.604163105901534,
-            "seed": 1100696233,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1770758378490,
-            "link": null,
-            "locked": true
-          },
-          {
-            "type": "rectangle",
-            "version": 223,
-            "versionNonce": 1951204745,
-            "isDeleted": false,
-            "id": "rF-6p-v-0VnFmDaL2Tou5",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": -641.8208268069737,
-            "y": -891.2935405243574,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 41.47554564747178,
-            "height": 40.604163105901534,
-            "seed": 853898345,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1770758378490,
-            "link": null,
-            "locked": true
-          },
-          {
-            "type": "text",
-            "version": 231,
-            "versionNonce": 118928263,
-            "isDeleted": false,
-            "id": "_Vp35u6g4nqY6tyM-tgGs",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": -575.9802419323112,
-            "y": -1001.6049615866409,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 254.94793701171875,
-            "height": 33.38452943895019,
-            "seed": 1691382151,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1770758378490,
-            "link": null,
-            "locked": true,
-            "fontSize": 29.030025599087125,
-            "fontFamily": 2,
-            "text": "Action or next steps",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "Action or next steps",
-            "lineHeight": 1.15,
-            "baseline": 27
-          },
-          {
-            "type": "text",
-            "version": 268,
-            "versionNonce": 562392169,
-            "isDeleted": false,
-            "id": "Mq2PYBaV6ZqAWt6V7VhY9",
-            "fillStyle": "solid",
-            "strokeWidth": 4,
-            "strokeStyle": "solid",
-            "roughness": 0,
-            "opacity": 100,
-            "angle": 0,
-            "x": -571.0744614120179,
-            "y": -902.9163827824091,
-            "strokeColor": "#1e1e1e",
-            "backgroundColor": "transparent",
-            "width": 225.9037628173828,
-            "height": 66.76905887790038,
-            "seed": 371948135,
-            "groupIds": [
-
-            ],
-            "frameId": null,
-            "roundness": null,
-            "boundElements": [
-
-            ],
-            "updated": 1770758378490,
-            "link": null,
-            "locked": true,
-            "fontSize": 29.030025599087125,
-            "fontFamily": 2,
-            "text": "Tone is calm and \nhelpful",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "containerId": null,
-            "originalText": "Tone is calm and \nhelpful",
-            "lineHeight": 1.15,
-            "baseline": 60
+            "locked": false
           }
         ],
         "appState": {
           "gridSize": null,
           "viewBackgroundColor": "#ffffff",
           "scrollX": 3321.861225302117,
-          "scrollY": 1963.1756751733396,
+          "scrollY": 1841.5880746548721,
           "zoom": {
             "value": 0.3100610983371733
           }
@@ -1616,7 +1335,6 @@
       }
     }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-02-10 20:50:41 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-10 20:54:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-10 20:57:47 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-10 21:02:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-10 21:14:26 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-10 21:15:36 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-10 21:15:46 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-10 21:19:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-10 21:19:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-10 21:19:49 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-10 20:50:41 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-10 20:54:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-10 20:57:47 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-10 21:02:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-10 21:14:26 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-10 21:15:36 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-10 21:15:46 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-10 21:19:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-10 21:19:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-10 21:19:49 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-11 17:09:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-11 17:31:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-11 17:31:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

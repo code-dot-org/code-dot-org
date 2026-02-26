@@ -23,7 +23,6 @@ const fakeUnitData789 = {
     [789]: {
       id: 789,
       csf: true,
-      hasStandards: false,
       title: 'Title 789',
       path: '/',
       lessons: [
@@ -41,7 +40,6 @@ const fakeUnitData456 = {
     [456]: {
       id: 456,
       csf: true,
-      hasStandards: false,
       title: 'Title 456',
       path: '/',
       lessons: [

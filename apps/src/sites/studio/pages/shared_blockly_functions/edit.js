@@ -56,7 +56,7 @@ const block = Blockly.mainBlockSpace.getTopBlocks()[0];
 const name = getInput('name').value || DEFAULT_NAME;
 
 if (name) {
-  block.setTitleValue(name, 'NAME');
+  block.setFieldValue(name, 'NAME');
 }
 const [names, types] = unzip(JSON.parse(getInput('arguments').value || '[]'));
 if (names && types) {

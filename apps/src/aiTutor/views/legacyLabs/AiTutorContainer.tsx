@@ -1,5 +1,5 @@
 import Button from '@code-dot-org/component-library/button';
-import {BodyThreeText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {FC} from 'react';
 
@@ -96,9 +96,9 @@ export const AiTutorContainer: FC<{
             alt=""
             className={styles['mini-bot-icon']}
           />
-          <BodyThreeText noMargin className={styles['header-text']}>
+          <Typography className={styles['header-text']} variant="body3">
             AI Tutor
-          </BodyThreeText>
+          </Typography>
           <Button
             aria-label="Close AI tutor"
             isIconOnly

@@ -43,6 +43,7 @@ export function generateContentSecurityPolicyForPreview(codeStudioUrl: string) {
     `style-src ${style_src}`,
     `img-src ${img_src}`,
     `font-src ${font_src}`,
+    "form-action 'none'",
   ];
 
   if (!isDevelopmentEnvironment() || !isTestEnvironment()) {

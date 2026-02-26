@@ -9,7 +9,9 @@ import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 const fetchLangfusePrompt = async (promptName: string) => {
-  const url = `/langfuse/get_prompt?name=${encodeURIComponent(promptName)}`;
+  const url = `/ai_prompt_management/get_prompt?name=${encodeURIComponent(
+    promptName
+  )}`;
   const response = await HttpClient.get(url);
   const prompt = await response.json();
   const promptText = prompt.prompt;
@@ -45,6 +47,7 @@ export const baseModelParameters: ModelParameters = {
 
 interface UseAiTutorModelParametersOptions {
   aiTutorSystemPromptName?: string;
+  aiTutorSystemPrompt?: string;
   aiTutorJsonSchema?: object;
 }
 
@@ -54,32 +57,34 @@ export const useAiTutorModelParameters = (
   const [systemPrompt, setSystemPrompt] = useState<string | undefined>();
 
   useEffect(() => {
+    const promptString = options?.aiTutorSystemPrompt ?? defaultSystemPrompt;
+
     let mounted = true;
 
     const promptName = customPromptName ?? options?.aiTutorSystemPromptName;
 
     const fetchPrompt = async () => {
       if (!promptName) {
-        setSystemPrompt(defaultSystemPrompt);
+        setSystemPrompt(promptString);
         return;
       }
 
       try {
         const prompt = await fetchCustomPrompt(promptName);
         if (mounted) {
-          setSystemPrompt(prompt || defaultSystemPrompt);
+          setSystemPrompt(prompt || promptString);
         }
       } catch (error) {
         console.error('Error fetching custom prompt', error);
         if (mounted) {
-          setSystemPrompt(defaultSystemPrompt);
+          setSystemPrompt(promptString);
         }
       }
     };
 
     const fetchLangfusePromptAndSet = async () => {
       if (!promptName) {
-        setSystemPrompt(defaultSystemPrompt);
+        setSystemPrompt(promptString);
         return;
       }
 
@@ -91,7 +96,7 @@ export const useAiTutorModelParameters = (
       } catch (error) {
         console.error('Error fetching Langfuse prompt:', error);
         if (mounted) {
-          setSystemPrompt(defaultSystemPrompt);
+          setSystemPrompt(promptString);
         }
       }
     };
@@ -107,7 +112,7 @@ export const useAiTutorModelParameters = (
     return () => {
       mounted = false;
     };
-  }, [options?.aiTutorSystemPromptName]);
+  }, [options?.aiTutorSystemPrompt, options?.aiTutorSystemPromptName]);
 
   useEffect(() => {
     // Log which system prompt we end up using.
@@ -119,7 +124,11 @@ export const useAiTutorModelParameters = (
         systemPrompt
       );
     } else if (systemPrompt !== undefined) {
-      console.log(`🤖: systemPrompt: default`);
+      if (systemPrompt === defaultSystemPrompt) {
+        console.log(`🤖: systemPrompt: default`);
+      } else {
+        console.log(`🤖: provided systemPrompt: ${systemPrompt}`);
+      }
     }
   }, [systemPrompt, options?.aiTutorSystemPromptName]);
 

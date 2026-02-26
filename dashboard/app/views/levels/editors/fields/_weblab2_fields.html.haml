@@ -19,13 +19,6 @@
     %p Students can switch between modes using buttons in the header.
 
   .field
-    = f.label :ai_tutor_mode, 'AI Tutor Mode'
-
-    - current_mode = @level.ai_tutor_mode ? @level.ai_tutor_mode : 'engineer'
-    = f.select :ai_tutor_mode, options_for_select(@level.class.ai_tutor_modes, current_mode)
-    %p Set the AI Tutor mode for the level. The default mode is "Engineer".
-
-  .field
     = f.label :level_system_prompt, 'Level System Prompt'
-    %p Optional addition to the system prompt for AI Tutor.
+    %p Optional addition to the system prompt for AI Tutor. This will be deprecated at the end of the AIF Semester 2 pilot!
     = f.text_area :level_system_prompt, placeholder: 'Level system prompt', rows: 4, style: 'width: 50%', value: @level.level_system_prompt

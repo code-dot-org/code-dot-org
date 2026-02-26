@@ -1,11 +1,7 @@
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import Toggle from '@code-dot-org/component-library/toggle';
-import {
-  Heading4,
-  BodyThreeText,
-  BodyTwoText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
@@ -15,7 +11,10 @@ import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {updateSectionAiChatAccessLevel} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiChatAccessLevels,
+  AiChatToolsDependency,
+} from '@cdo/generated-scripts/sharedConstants';
 
 import {handleUpdateSectionAiChatAccessLevel} from '../../accessControlsApi';
 import {AI_SETTINGS_SUPPORT_LINK} from '../../constants';
@@ -69,7 +68,7 @@ const AiChatAccessControls: React.FC = () => {
   );
 
   const shouldShowAlert =
-    section.isAssignedEssentialAiChat &&
+    section.assignedAiChatToolsDependency === AiChatToolsDependency.ESSENTIAL &&
     calculateAccessLevel(accessToggle, essentialOnlyCheckbox) ===
       AiChatAccessLevels.DISABLED;
 
@@ -85,7 +84,10 @@ const AiChatAccessControls: React.FC = () => {
     );
     analyticsReporter.sendEvent(EVENTS.AI_CHAT_SECTION_ACCESS_LEVEL_UPDATED, {
       sectionId: section.id,
+      oldAccessLevel: section.aiChatAccessLevel,
       newAccessLevel: newAccessLevel,
+      courseAssigned: section.courseVersionName,
+      assignedAiAccessDependency: section.assignedAiChatToolsDependency,
       uiLocation: 'aiSettingsTeacherDashboardTab',
     });
   };
@@ -124,10 +126,10 @@ const AiChatAccessControls: React.FC = () => {
   return (
     <div className={style.container}>
       <div className={style.interactionsElement}>
-        <Heading4 noMargin={true}>Class Section Settings</Heading4>
-        <BodyThreeText className={style.subHeader}>
+        <Typography variant="h4">Class Section Settings</Typography>
+        <Typography className={style.subHeader} variant="body3" gutterBottom>
           Control access to AI features and tools for the entire class section.
-        </BodyThreeText>
+        </Typography>
         {isLoadingSectionData ? (
           <Spinner />
         ) : (
@@ -140,15 +142,16 @@ const AiChatAccessControls: React.FC = () => {
                   href: AI_SETTINGS_SUPPORT_LINK,
                   text: 'Learn more',
                 }}
+                icon={{iconName: 'triangle-exclamation', iconStyle: 'solid'}}
                 className={style.alert}
               />
             )}
             <div
               className={classNames(style.rowContainer, style.withBorderTop)}
             >
-              <BodyTwoText noMargin className={style.semiBold}>
+              <Typography className={style.semiBold} variant="body2">
                 AI Chat Tools
-              </BodyTwoText>
+              </Typography>
               {!accessToggle && (
                 <div className={style.toolTipContainer}>
                   <Checkbox
@@ -159,7 +162,7 @@ const AiChatAccessControls: React.FC = () => {
                   />
                   <InfoTooltipIcon
                     id="section-essential-ai-checkbox-info"
-                    tooltipText="The assigned course requires the use of AI tools. This option will give students access to only the AI tools needed to complete the assigned course."
+                    tooltipText="If the course you have assigned requires AI tools, this option will give students access to only the AI tools needed to complete the course."
                   />
                 </div>
               )}
