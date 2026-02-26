@@ -17,7 +17,8 @@ import EmptyPanelPlaceholder from './EmptyPanelPlaceholder';
 import moduleStyles from './console.module.scss';
 
 // Icons are aria-hidden so VoiceOver reads the aria-label on the Alert instead
-// of announcing child elements. Must stay in sync with Alert's getDefaultAlertIconFromType.
+// of announcing child elements.
+// TODO: Remove once Alert is updated to support aria-hidden icons.
 const LEVEL_ICONS: Partial<Record<ConsoleLogLevel, FontAwesomeV6IconProps>> = {
   warn: {iconName: 'exclamation-circle', 'aria-hidden': true},
   error: {iconName: 'circle-xmark', 'aria-hidden': true},
