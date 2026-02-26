@@ -11,10 +11,10 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  min-width: 0; // Allow flex item to shrink so long text wraps.
+  max-width: 100%;
 
   .consoleLogMessage {
-    min-width: 0;
+    min-width: 0; // Allow flex item to shrink so long text wraps.
     overflow-wrap: break-word;
     word-break: break-word;
   }
