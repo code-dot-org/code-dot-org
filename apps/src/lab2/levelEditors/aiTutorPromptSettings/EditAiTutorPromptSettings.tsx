@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {
-  DEFAULT_AI_TUTOR_MODE,
+  DEFAULT_ANSWER_TYPES,
   TUTOR_MODE_TO_ANSWER_TYPE,
 } from '@cdo/apps/weblab2/constants';
 import askContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/ask.md';
@@ -85,7 +85,7 @@ const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
     } else if (legacyMode) {
       return new Set(TUTOR_MODE_TO_ANSWER_TYPE[legacyMode]);
     } else {
-      return new Set(TUTOR_MODE_TO_ANSWER_TYPE[DEFAULT_AI_TUTOR_MODE]);
+      return new Set(DEFAULT_ANSWER_TYPES);
     }
   });
 
