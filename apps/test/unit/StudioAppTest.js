@@ -5,6 +5,7 @@ import {assets as assetsApi} from '@cdo/apps/clientApi';
 import {listStore} from '@cdo/apps/code-studio/assets';
 import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import project from '@cdo/apps/code-studio/initApp/project';
+import localization from '@cdo/apps/localization';
 import * as redux from '@cdo/apps/redux';
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
 import {resetIdleTime} from '@cdo/apps/redux/studioAppActivity';
@@ -392,6 +393,103 @@ describe('StudioApp', () => {
       var footItems = makeFooterMenuItems();
       var itemKeys = footItems.map(item => item.key);
       expect(itemKeys).to.include('try-hoc');
+    });
+  });
+
+  describe('The StudioApp.localizeCode function', () => {
+    let stubLocalization;
+
+    beforeEach(() => {
+      stubLocalization = sinon.stub(localization, 'translate');
+      stubLocalization.returns('translated');
+      stubStudioApp();
+    });
+    afterEach(() => {
+      restoreStudioApp();
+      stubLocalization.restore();
+    });
+
+    it('returns the code untouched when it has no comments', () => {
+      const code = `
+        dosomething("ok");
+      `;
+      const result = studioApp().localizeCode(code);
+      expect(result).to.equal(code);
+    });
+
+    it('returns translated code for comments within the given string', () => {
+      const code = `
+        // hello
+      `;
+      const result = studioApp().localizeCode(code);
+      expect(result).to.equal(`
+        // translated
+      `);
+    });
+
+    it('returns translated code for comments that happen after code', () => {
+      const code = `
+        dosomething("ok");
+        somethingelse(); // hello
+      `;
+      const result = studioApp().localizeCode(code);
+      expect(result).to.equal(`
+        dosomething("ok");
+        somethingelse(); // translated
+      `);
+    });
+
+    it('returns code with URLs unaffected', () => {
+      const code = `
+        dosomething("ok");
+        image("http://studio.code.org/blockly/media/logo.png");
+      `;
+      const result = studioApp().localizeCode(code);
+      expect(result).to.equal(code);
+    });
+
+    it('returns code with comments not preceded with spaces unaffected', () => {
+      const code = `
+        dosomething("ok");// untranslated
+      `;
+      const result = studioApp().localizeCode(code);
+      expect(result).to.equal(code);
+    });
+
+    it('returns code with URLs unaffected but comments afterward translated', () => {
+      const code = `
+        dosomething("ok");
+        image("http://studio.code.org/blockly/media/logo.png"); // comment
+      `;
+      const result = studioApp().localizeCode(code);
+      expect(result).to.equal(`
+        dosomething("ok");
+        image("http://studio.code.org/blockly/media/logo.png"); // translated
+      `);
+    });
+
+    it('handles code that starts with a comment', () => {
+      const code = '// comment';
+      const result = studioApp().localizeCode(code);
+      expect(result).to.equal('// translated');
+    });
+
+    it('handles being passed an empty string', () => {
+      const code = '';
+      const result = studioApp().localizeCode(code);
+      expect(result).to.equal('');
+    });
+
+    it('handles being passed an undefined', () => {
+      const code = undefined;
+      const result = studioApp().localizeCode(code);
+      expect(result).to.equal(undefined);
+    });
+
+    it('handles being passed a null', () => {
+      const code = null;
+      const result = studioApp().localizeCode(code);
+      expect(result).to.equal(null);
     });
   });
 

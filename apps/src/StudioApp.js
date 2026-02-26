@@ -2046,7 +2046,15 @@ StudioApp.prototype.setConfigValues_ = function (config) {
     config.level.minWorkspaceHeight = config.level.minWorkspaceHeight || 1250;
   }
 
-  this.appMsg = config.appMsg;
+  // Localize the app messages
+  const msg = config.appMsg
+    ? Object.entries(config.appMsg).reduce((acc, [key, msgFunction]) => {
+        acc[key] = (...args) => localization.translate(msgFunction(...args));
+        return acc;
+      }, {})
+    : config.appMsg;
+  this.appMsg = msg;
+
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
   if (experiments.isEnabled(experiments.BUBBLE_DIALOG)) {
     // This seems to break levels that start in the animation/costume tab.
@@ -2441,6 +2449,28 @@ StudioApp.prototype.currentlyUsingBlocks = function () {
   );
 };
 
+/**
+ * Localize comments within the starting code.
+ */
+StudioApp.prototype.localizeCode = function (code) {
+  if (!code) {
+    return code;
+  }
+
+  return code
+    .split('\n')
+    .map(line =>
+      // Find comments, but not urls. So look for "// ..." or "... //..."
+      line
+        .split(/^\/\/|\s\/\//)
+        .map((part, i) =>
+          i === 1 ? ' ' + localization.translate(part.trim()) : part
+        )
+        .join(`${line.startsWith('//') ? '' : ' '}//`)
+    )
+    .join('\n');
+};
+
 StudioApp.prototype.handleEditCode_ = function (config) {
   if (this.hideSource) {
     // In hide source mode, just call afterInject and exit immediately
@@ -2479,7 +2509,24 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   const codeTextbox = document.getElementById('codeTextbox');
   const dropletCodeTextbox = document.createElement('div');
   dropletCodeTextbox.setAttribute('id', 'dropletCodeTextbox');
+  dropletCodeTextbox.setAttribute('data-notranslate', '');
   codeTextbox.appendChild(dropletCodeTextbox);
+
+  // Localize the droplet palette
+  fullDropletPalette.forEach(paletteInfo => {
+    if (paletteInfo.name) {
+      paletteInfo.name = localization.translate(paletteInfo.name);
+    }
+  });
+
+  // Localize the palette block parameters
+  for (const blockInfo of config.dropletConfig?.blocks || []) {
+    if (blockInfo.paletteParams) {
+      blockInfo.paletteParams = blockInfo.paletteParams.map(param =>
+        localization.translate(param)
+      );
+    }
+  }
 
   this.editor = new droplet.Editor(dropletCodeTextbox, {
     mode: 'javascript',
@@ -2609,6 +2656,11 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   }
 
   this.resizeToolboxHeader();
+
+  // Localize the start code
+  config.level.startBlocks = config.level.startBlocks
+    ? this.localizeCode(config.level.startBlocks)
+    : config.level.startBlocks;
 
   var startBlocks = config.level.lastAttempt || config.level.startBlocks;
   if (startBlocks) {
