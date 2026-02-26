@@ -20,7 +20,8 @@
 - We use CanCanCan for authorization and Devise for authentication
 - Use `bundle exec` to run ruby commands (exception: most ./bin/* commands automatically load the rails environment)
 - `./bin/dashboard-console-skip-reload` can be used to launch `rails console` / `./bin/dashboard-console` in a way that loads much quicker, but fyi it still takes ~15s to load so don't overuse it
-- `./bin/mysql-client-dashboard-reader` can be used to query the local db with SQL commands (also `./bin/mysql-client-dashboard-reader`, but maybe ask the user first before doing write access?)
+- `./bin/mysql-client-dashboard-reader` can be used to safely query the local db with SQL commands
+- `./bin/mysql-client-dashboard-writer` is also available, but is not safe and usage should be approved by the user first
 - `config/*.yml.erb` (e.g. `config/development.yml.erb`) contains per-rails-env configuration, also related to local config keys settable in locals.yml. API keys, passwords, etc are often set using this system.
 - Running all rails tests takes about 15 minutes, probably don't do it unless the user asks you to.
 - Testing: for a fast iteration dev/feedback loop, consider using e.g. `bundle exec spring testunit ./test/lib/image_lib_test.rb` (run from dashboard/) to run individual ruby tests
