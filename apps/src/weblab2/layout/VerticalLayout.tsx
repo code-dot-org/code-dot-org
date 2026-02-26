@@ -6,12 +6,13 @@ import {LayoutProps} from '@codebridge/types';
 import HeaderButtons from '@codebridge/Workspace/HeaderButtons';
 import Workspace from '@codebridge/Workspace/Workspace';
 import classNames from 'classnames';
-import React, {useEffect} from 'react';
+import React, {useEffect, useMemo} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
 import AiTutorVersionAlert from '@cdo/apps/aiComponentLibrary/aiTutorVersionAlert/AiTutorVersionAlert';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {logOnResize} from '@cdo/apps/lab2/utils/resizeUtils';
+import {useResourcePanelShepherdTour} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/useResourcePanelShepherdTour';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
@@ -57,6 +58,13 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
   const debugPanelOpen = useAppSelector(state => state.weblab2.debugPanelOpen);
 
   const dispatch = useAppDispatch();
+  const isShepherdTourEnabled = useMemo(
+    () =>
+      experiments.isEnabledAllowingQueryString(
+        experiments.WEBLAB2_SHEPHERD_TOUR
+      ),
+    []
+  );
 
   const infoPanelInitialWidth = isStandaloneCollapsed
     ? INITIAL_INFO_PANEL_WIDTH_COLLAPSED
@@ -176,12 +184,17 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
     experiments.isEnabledAllowingQueryString(experiments.WEBLAB2_DEBUG_PANEL) &&
     debugPanelOpen;
 
+  useResourcePanelShepherdTour({
+    enabled: !isWidgetView && isShepherdTourEnabled,
+  });
+
   return (
     <div className={lab2Styles.defaultContainer}>
       <div className={lab2Styles.layoutContainer}>
         <InfoPanel
           style={{width: leftPanelWidth}}
           className={classNames(lab2Styles.flexShrink0, panelClassName)}
+          isOnboardingTourEnabled={!isShepherdTourEnabled}
         />
         <ResizeBar
           isVertical={true}
@@ -218,15 +231,20 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
             >
               {!isWidgetView && viewMode !== ViewMode.PREVIEW && (
                 <>
-                  <Workspace
+                  <div
                     style={{width: middlePanelWidth}}
                     className={classNames(
                       lab2Styles.shrinkAndGrow,
                       panelClassName,
                       debugPanelDragging && lab2Styles.resizingPanel
                     )}
-                    hideHeaders
-                  />
+                  >
+                    <Workspace
+                      style={{width: '100%', height: '100%'}}
+                      className={lab2Styles.shrinkAndGrow}
+                      hideHeaders
+                    />
+                  </div>
                   <ResizeBar
                     isVertical={true}
                     separatorProps={rightPanelSeparatorProps}
