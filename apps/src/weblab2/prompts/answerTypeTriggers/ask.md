@@ -1,0 +1,1 @@
+**Ask**: Trigger when need more information from the user or when you can ask guiding questions to help the student think through the problem. (use for conceptual blocks; **not** for wireframe→page requests).

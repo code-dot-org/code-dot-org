@@ -77,6 +77,8 @@ const SetupCustomization: React.FunctionComponent = () => {
     !readOnlyWorkspace;
 
   const renderChooseAndCompareModels = () => {
+    const canCompare =
+      isEditable(selectedModelId) && availableModels.length > 1;
     return (
       <div>
         <FieldLabel
@@ -104,7 +106,7 @@ const SetupCustomization: React.FunctionComponent = () => {
           className={styles.selectedModelDropdown}
           disabled={isDisabled(selectedModelId) || readOnlyWorkspace}
         />
-        {isEditable(selectedModelId) && (
+        {canCompare && (
           <Button
             text={aichatI18n.modelCustomization_compareButtonText()}
             onClick={() => setIsShowingModelDialog(true)}

@@ -1,0 +1,19 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2026-02-24T18:11:51.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "School Shop",
+    "long_instructions": "## **Do This**\r\n\r\n<br/> 1. **Choose a key user task.**\r\nThink about something a visitor might do on a city explorer web app, such as:\r\n\r\n* Browse local events or attractions\r\n* View details about a specific place or activity\r\n* Save something to their favorites list\r\n\r\n<br/> 2. **Trace the path.**\r\nOn your site map, show the pages a user would move through to complete that task.\r\n\r\n* Use **arrows or labels** to mark each click or page change.\r\n* Or write out the steps as a short list (e.g., *Home → Events → Event Details → Favorites*).\r\n\r\n<br/> 3. **Peer-test it.**\r\nPair up with another student:\r\n\r\n* One person plays the **user**, describing what they'd click.\r\n* The other follows along on the site map.\r\n* Notice where the user gets lost or repeats steps.\r\n\r\n",
+    "bubble_choice_description": "Create a site map for a web app used by students to buy, sell, or trade books and school supplies.",
+    "thumbnail_url": "https://images.code.org/77a36f8df5ca214c768e78a0f829b3b4-Pasted Graphic 11.png",
+    "project_template_level_name": "ai-generated-design-lesson8-level1-level1b-template_2026",
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:11:51.313+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson8-level2b_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson8-level2b_2025\"}]"
+}]]></config>
+</Sketchlab>

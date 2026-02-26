@@ -61,8 +61,6 @@ Resources:
   Tableau:
     Type: AWS::Redshift::Cluster
     DeletionPolicy: Retain
-    Metadata:
-      UpdateTrigger: "Force output export - 2026-01-26"
     Properties:
       AllowVersionUpgrade: true
       AutomatedSnapshotRetentionPeriod: 5
@@ -76,9 +74,10 @@ Resources:
       MasterUsername: {Ref: RedshiftAdminUsername}
       MasterUserPassword: {Ref: RedshiftAdminPassword}
       NodeType: dc1.large
-      # This maintenance can interfere with the daily export from MySQL to Redshift which starts at 02:00 UTC, so set it
-      # to start at least 1 hour before the export begins (it typically takes 15 minutes).
-      PreferredMaintenanceWindow: 'Tue:01:00-Tue:01:30'
+      # This maintenance can interfere with analytics batch routines that execute a sequence of long duration SQL
+      # statements over an extended period, such as the daily export from MySQL to Redshift by Database Migration
+      # Service or the daily dbt model runs. Currently, those start at 23:00 UTC, so schedule Maintenance to end by then.
+      PreferredMaintenanceWindow: 'Mon:22:30-Mon:23:00'
       PubliclyAccessible: true
       VpcSecurityGroupIds: [!ImportValue VPC-RedshiftSecurityGroup]
 #  Redshift does not yet support configuring a Resource Policy on a Provisioned Cluster. We configure this one policy

@@ -54,7 +54,7 @@ describe('aichatApi', () => {
     ];
 
     modelParameters = {
-      selectedModelId: AiChatModelIds.ARITHMO,
+      selectedModelId: AiChatModelIds.MISTRAL,
       temperature: 0.5,
       retrievalContexts: ['123'],
       systemPrompt: 'hello',

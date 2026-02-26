@@ -1,3 +1,4 @@
+import {LinkButton} from '@code-dot-org/component-library/button';
 import React, {useEffect, useRef, useState} from 'react';
 
 import {
@@ -28,12 +29,14 @@ import AiDiffChatHeader from './AiDiffChatHeader';
 import AiDiffCreateArtifactButtons from './AiDiffCreateArtifactButtons';
 import AiDiffSuggestedPrompts from './AiDiffSuggestedPrompts';
 import {DEFAULT_THREAD_TITLE} from './constants';
+import {SUGGESTED_PROMPTS_FOR_SELECTION} from './predefinedPrompts';
 import {
-  EXIT_TICKET_PROMPT,
-  LESSON_HOOK_PROMPT,
-  SUGGESTED_PROMPTS_FOR_SELECTION,
-} from './predefinedPrompts';
-import {ChatItem, ChatPrompt, Context, SuggestPromptsType} from './types';
+  AiArtifact,
+  ChatItem,
+  ChatPrompt,
+  Context,
+  SuggestPromptsType,
+} from './types';
 
 import style from './ai-differentiation.module.scss';
 
@@ -48,6 +51,34 @@ interface AiDiffChatProps {
   threadFetchCallback?: () => void;
   personalizationData?: PersonalizationData;
 }
+
+const AiDiffArtifactLink: React.FC<{artifact: AiArtifact | undefined}> = ({
+  artifact,
+}) => {
+  if (artifact) {
+    const title = artifact.title
+      ? artifact.title
+      : artifact.type === AiDiffArtifactType.EXIT_TICKET
+      ? `Exit Ticket`
+      : `Lesson Hook`;
+    return (
+      <div className={style.artifactShowButtons}>
+        <LinkButton
+          color="gray"
+          size="s"
+          type="secondary"
+          target="_blank"
+          href={artifact.url}
+          aria-label={'Open artifact'}
+          iconLeft={{iconName: 'shapes'}}
+          text={title}
+        />
+      </div>
+    );
+  } else {
+    return null;
+  }
+};
 
 const AiDiffChat: React.FC<AiDiffChatProps> = ({
   context,
@@ -81,6 +112,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   );
   const threadMessages = useAppSelector(state => state.aichat.threadMessages);
   const artifactType = useAppSelector(state => state.aichat.artifactType);
+  const artifact = useAppSelector(state => state.aichat.artifact);
 
   const dispatch = useAppDispatch();
 
@@ -227,11 +259,8 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
       if (!prompt.followUpPrompts && !prompt.response) {
         getAIResponse(prompt.prompt, true, prompt.label);
       }
-      if (prompt === EXIT_TICKET_PROMPT) {
-        dispatch(setArtifactType(AiDiffArtifactType.EXIT_TICKET));
-      }
-      if (prompt === LESSON_HOOK_PROMPT) {
-        dispatch(setArtifactType(AiDiffArtifactType.LESSON_HOOK));
+      if (prompt.artifactCandidateType) {
+        dispatch(setArtifactType(prompt.artifactCandidateType));
       }
     },
     [dispatch, getAIResponse, threadTitle]
@@ -289,9 +318,10 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
             <ChatMessage
               text={item.chatMessageText}
               postText={
-                item.isArtifactCandidate && (
+                (item.isArtifactCandidate && (
                   <AiDiffCreateArtifactButtons message={item} />
-                )
+                )) ||
+                (item.isArtifact && <AiDiffArtifactLink artifact={artifact} />)
               }
               role={item.role}
               customStyles={style}
