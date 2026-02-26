@@ -1,5 +1,6 @@
-import {generateText, ModelMessage} from 'ai';
+import {ModelMessage} from 'ai';
 
+import {generateText} from '@cdo/apps/aiGateway/generateTextThroughProxyOrGateway';
 import {AiRequestExecutionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {

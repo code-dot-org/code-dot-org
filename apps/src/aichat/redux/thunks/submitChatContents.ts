@@ -11,6 +11,7 @@ import {
 } from '@cdo/apps/aichat/redux/slice';
 import {getAssetUrl} from '@cdo/apps/aichat/utils';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {isAiGatewayEnabled} from '@cdo/apps/aiGateway/isAiGatewayEnabled';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {TestResults} from '@cdo/apps/constants';
@@ -58,8 +59,9 @@ const useVertex = queryParams('aitutor-use-vertex') === 'true' ? true : false;
 console.log(`🤖: Tutor set to use Vertex API? ${useVertex ? 'YES' : 'NO'}`);
 
 const useClientApi = (modelId: ValueOf<typeof AiChatModelIds>) =>
-  modelId === AiChatModelIds.GEMINI_2_5_FLASH_IMAGE &&
-  experiments.isEnabledAllowingQueryString('use-aichat-client-api');
+  isAiGatewayEnabled ||
+  (modelId === AiChatModelIds.GEMINI_2_5_FLASH_IMAGE &&
+    experiments.isEnabledAllowingQueryString('use-aichat-client-api'));
 
 // This thunk's callback function submits a user's chat content and AI customizations to
 // the chat completion endpoint, then waits for a chat completion response, and updates
@@ -193,11 +195,21 @@ export const submitChatContents = createAsyncThunk(
           (levelProperties as AichatLevelProperties)?.aichatSettings
             ?.levelSystemPrompt;
 
+        let filteredChatEvents: CompletedChatMessage[] =
+          chatEventsCurrent.filter(isCompletedChatMessage);
+
+        if (
+          modelParameters.selectedModelId ===
+          AiChatModelIds.GEMINI_2_5_FLASH_IMAGE
+        ) {
+          filteredChatEvents = filteredChatEvents.filter(
+            message => message.status === Status.OK
+          );
+        }
+
         messages = await performChatCompletion(
           newUserMessage,
-          chatEventsCurrent
-            .filter(isCompletedChatMessage)
-            .filter(message => message.status === Status.OK),
+          filteredChatEvents,
           modelParameters,
           aichatContext,
           (asset: ChatAsset) =>
@@ -212,7 +224,6 @@ export const submitChatContents = createAsyncThunk(
           aichatContext
         );
       }
-
       // In milliseconds
       const responseTime = Date.now() - startTime;
       dispatch(

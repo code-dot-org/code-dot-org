@@ -1260,6 +1260,8 @@ Dashboard::Application.routes.draw do
     post '/javabuilder/access_token_with_override_sources', to: 'javabuilder_sessions#access_token_with_override_sources'
     post '/javabuilder/access_token_with_override_validation', to: 'javabuilder_sessions#access_token_with_override_validation'
 
+    get '/ai_gateway/access_token', to: 'ai_gateway_auth#get_access_token'
+
     resources :sprites, only: [:index], controller: 'sprite_management' do
       collection do
         get 'sprite_upload'
