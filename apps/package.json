@@ -380,6 +380,7 @@
     "rosie": "^2.0.1",
     "sanitize-html": "^1.11.3",
     "seedrandom": "2.4.2",
+    "shepherd.js": "^15.2.1",
     "slate": "^0.81.0",
     "slate-react": "^0.81.0",
     "sortabular": "^1.6.0",
