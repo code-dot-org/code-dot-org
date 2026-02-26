@@ -124,7 +124,7 @@ class School < ApplicationRecord
   # Gets the seeding file name.
   # @param stub_school_data [Boolean] True for stub file.
   def self.get_seed_filename(stub_school_data)
-    stub_school_data ? 'test/fixtures/schools.tsv' : 'config/schools.tsv'
+    stub_school_data ? 'test/fixtures/files/schools.tsv' : 'config/schools.tsv'
   end
 
   # @param unsanitized [String, nil] the unsanitized string
