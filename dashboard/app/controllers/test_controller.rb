@@ -79,7 +79,7 @@ class TestController < ApplicationController
     raise "Unit not found for course #{unit_group.name} at position #{unit_position}" unless unit_group_unit
     unit = unit_group_unit.script
 
-    ai_chat_access_level = params[:ai_chat_access_level] || SharedConstants::AI_CHAT_ACCESS_LEVELS[:DISABLED]
+    ai_chat_access_level = params[:ai_chat_access_level] || Section::AI_CHAT_ACCESS_LEVELS[:DISABLED]
     section = Section.create!(name: "New Section", user: user, script: unit, unit_group: unit_group, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student, ai_chat_access_level: ai_chat_access_level)
 
     render json: {section_code: section.code}
