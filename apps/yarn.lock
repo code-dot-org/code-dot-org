@@ -100,64 +100,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@amplitude/analytics-browser@npm:^1.5.4":
-  version: 1.5.4
-  resolution: "@amplitude/analytics-browser@npm:1.5.4"
-  dependencies:
-    "@amplitude/analytics-client-common": "npm:^0.3.0"
-    "@amplitude/analytics-core": "npm:^0.9.5"
-    "@amplitude/analytics-types": "npm:^0.11.0"
-    "@amplitude/ua-parser-js": "npm:^0.7.31"
-    tslib: "npm:^2.3.1"
-  checksum: 10/aeaf9f5ec110fcccdaae2cc9f07737bb33fee4bf405ec8de621fac44305ef12680d26d722d17118f65519b2cfce2099c5d1096c86ec4f4daeba7f3ed477f5036
-  languageName: node
-  linkType: hard
-
-"@amplitude/analytics-client-common@npm:^0.3.0":
-  version: 0.3.0
-  resolution: "@amplitude/analytics-client-common@npm:0.3.0"
-  dependencies:
-    "@amplitude/analytics-connector": "npm:^1.4.5"
-    "@amplitude/analytics-core": "npm:^0.9.5"
-    "@amplitude/analytics-types": "npm:^0.11.0"
-    tslib: "npm:^2.3.1"
-  checksum: 10/29ba664a86864378d1b1a03a1dfe9be389155261bb707ef46e8cdea9c852fa21c5bc3fc2b97340827420fe4b68c74d504aec3d2effd3ca7b52f4e22591ce9b9b
-  languageName: node
-  linkType: hard
-
-"@amplitude/analytics-connector@npm:^1.4.5":
-  version: 1.4.5
-  resolution: "@amplitude/analytics-connector@npm:1.4.5"
-  dependencies:
-    "@amplitude/ua-parser-js": "npm:0.7.31"
-  checksum: 10/34f1b4d681fdb6ca7d21ab4fa9cf4a436be6673eecf4cbd9b9fb9c2b72599ccba79bdb73fcdf5c4c7e2a13ddf2b3b77a82f06bcc1ef157c04b69cc25d6c5040f
-  languageName: node
-  linkType: hard
-
-"@amplitude/analytics-core@npm:^0.9.5":
-  version: 0.9.5
-  resolution: "@amplitude/analytics-core@npm:0.9.5"
-  dependencies:
-    "@amplitude/analytics-types": "npm:^0.11.0"
-    tslib: "npm:^2.3.1"
-  checksum: 10/0a7cafb66790ab67721e1231eb97d2ce11507db8b97f7c20282ba593a721652ac043294deae4240214b4bb82f57cacd88f91a635f7c1707b359fff4056df4813
-  languageName: node
-  linkType: hard
-
-"@amplitude/analytics-types@npm:^0.11.0":
-  version: 0.11.0
-  resolution: "@amplitude/analytics-types@npm:0.11.0"
-  checksum: 10/eb87bdfeecb75dd03f400030a9f4c65c111d3edecc902a32a1f6ff546165743d94b1cf43bd634123f716f8573564241a3053ddce5f73eb9352421484d9a4f79e
-  languageName: node
-  linkType: hard
-
-"@amplitude/ua-parser-js@npm:^0.7.33":
-  version: 0.7.33
-  resolution: "@amplitude/ua-parser-js@npm:0.7.33"
-  checksum: 10/54e0344746cb1fe556f008464599c72de17ebeba012c577137c2a90c9e0915a18588704c60c5ac4138cb3d89973e95132d014ff0896062c98f4e9b3547dda2fe
-  languageName: node
-  linkType: hard
-
 "@ampproject/remapping@npm:^2.2.0":
   version: 2.2.1
   resolution: "@ampproject/remapping@npm:2.2.1"
@@ -11297,7 +11239,6 @@ __metadata:
   dependencies:
     "@ai-sdk/google": "npm:^3.0.21"
     "@ai-sdk/openai": "npm:^3.0.26"
-    "@amplitude/analytics-browser": "npm:^1.5.4"
     "@babel/core": "npm:^7.26.0"
     "@babel/eslint-parser": "npm:7.25.9"
     "@babel/plugin-proposal-object-rest-spread": "npm:^7.20.7"

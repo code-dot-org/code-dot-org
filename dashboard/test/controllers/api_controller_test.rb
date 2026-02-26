@@ -1138,103 +1138,6 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal('level source', body['lastAttempt']['source'])
   end
 
-  test "should get progress for section with section script" do
-    Unit.stubs(:should_cache?).returns true
-
-    assert_queries 8 do
-      get :section_progress, params: {section_id: @flappy_section.id}
-    end
-    assert_response :success
-    assert_match "no-store", response.headers["Cache-Control"]
-
-    data = JSON.parse(@response.body)
-    expected = {
-      'script' => {
-        'id' => @flappy.id,
-        'name' => I18n.t("data.script.name.#{@flappy.name}.title"),
-        'levels_count' => 1,
-        'lessons' => [{
-          'length' => 1,
-          'title' => @flappy.name
-        }]
-      },
-      'students' => [{
-        'id' => @student_flappy_1.id,
-        'levels' => [['not_tried', 1, "/s/#{@flappy.name}/lessons/1/levels/1"]]
-      }]
-    }
-
-    assert_equal expected, data
-  end
-
-  test "should get paginated progress" do
-    get :section_progress, params: {section_id: @section.id, page: 1, per: 2}
-    assert_response :success
-    data = JSON.parse(@response.body)
-    assert_equal 2, data['students'].length
-
-    get :section_progress, params: {section_id: @section.id, page: 2, per: 2}
-    assert_response :success
-    data = JSON.parse(@response.body)
-    assert_equal 2, data['students'].length
-
-    get :section_progress, params: {section_id: @section.id, page: 3, per: 2}
-    assert_response :success
-    data = JSON.parse(@response.body)
-    assert_equal 2, data['students'].length
-
-    # fourth page has only one student (of 7 total)
-    get :section_progress, params: {section_id: @section.id, page: 4, per: 2}
-    assert_response :success
-    data = JSON.parse(@response.body)
-    assert_equal 1, data['students'].length
-
-    # if we request 1 per page, page 8 should still work (because page 7 gave
-    # us a full page of data), but page 9 should fail
-    get :section_progress, params: {section_id: @section.id, page: 8, per: 1}
-    assert_response :success
-    get :section_progress, params: {section_id: @section.id, page: 9, per: 1}
-    assert_response 416
-  end
-
-  test "should get progress for section with specific script" do
-    script = Unit.find_by_name('algebra')
-
-    get :section_progress, params: {
-      section_id: @section.id,
-      script_id: script.id
-    }
-    assert_response :success
-
-    assert_equal script.id, JSON.parse(@response.body)['script']['id']
-  end
-
-  test "should get paginated progress with specific script" do
-    script = Unit.find_by_name('algebra')
-
-    get :section_progress, params: {section_id: @section.id, script_id: script.id, page: 1, per: 2}
-    assert_response :success
-    data = JSON.parse(@response.body)
-    assert_equal 2, data['students'].length
-    assert_equal script.id, data['script']['id']
-
-    get :section_progress, params: {section_id: @section.id, script_id: script.id, page: 2, per: 2}
-    assert_response :success
-    data = JSON.parse(@response.body)
-    assert_equal 2, data['students'].length
-
-    get :section_progress, params: {section_id: @section.id, script_id: script.id, page: 3, per: 2}
-    assert_response :success
-    data = JSON.parse(@response.body)
-    assert_equal 2, data['students'].length
-
-    # fourth page has only one student (of 7 total)
-    get :section_progress, params: {section_id: @section.id, script_id: script.id, page: 4, per: 2}
-    assert_response :success
-    data = JSON.parse(@response.body)
-    assert_equal 1, data['students'].length
-  end
-
   test 'section_level_progress response should not be cached by the browser' do
     get :section_level_progress, params: {section_id: @section.id, page: 1, per: 2}
     assert_response :success
@@ -1327,68 +1230,6 @@ class ApiControllerTest < ActionController::TestCase
     data = JSON.parse(@response.body)
     assert_equal 1, data['student_progress'].keys.length
     assert_equal 1, data['student_last_updates'].keys.length
-  end
-
-  test "should get paired icons for paired user levels" do
-    script = create(:script, :in_single_unit_course)
-    lesson_group = create(:lesson_group, script: script)
-    lesson = create(:lesson, script: script, lesson_group: lesson_group)
-    sl = create(:script_level, lesson: lesson, script: script)
-    driver_ul = create(
-      :user_level,
-      user: @student_4,
-      level: sl.level,
-      script: sl.script,
-      best_result: 100
-    )
-    navigator_ul = create(
-      :user_level,
-      user: @student_5,
-      level: sl.level,
-      script: sl.script,
-      best_result: 100
-    )
-    create(:paired_user_level, driver_user_level: driver_ul, navigator_user_level: navigator_ul)
-
-    get :section_progress, params: {
-      section_id: @section.id,
-      script_id: sl.script.id
-    }
-    assert_response :success
-    parsed = JSON.parse(response.body)
-
-    assert_match /paired/, parsed['students'][3]['levels'].first[0]
-    assert_match /paired/, parsed['students'][4]['levels'].first[0]
-  end
-
-  test "should get progress for section with section script when blank script is specified" do
-    get :section_progress, params: {
-      section_id: @flappy_section.id,
-      script_id: ''
-    }
-    assert_response :success
-
-    assert_equal @flappy.id, JSON.parse(@response.body)['script']['id']
-  end
-
-  test "should not return progress for bonus levels" do
-    script = create(:script, :in_single_unit_course)
-    lesson_group = create(:lesson_group, script: script)
-    lesson = create(:lesson, script: script, lesson_group: lesson_group)
-    create(:script_level, script: script, lesson: lesson)
-    create(:script_level, script: script, lesson: lesson, bonus: true)
-
-    get :section_progress, params: {
-      section_id: @flappy_section.id,
-      script_id: script.id
-    }
-
-    assert_response :success
-
-    response = JSON.parse(@response.body)
-    assert_equal 1, response["students"][0]["levels"].length
-    assert_equal 1, response["script"]["levels_count"]
-    assert_equal 1, response["script"]["lessons"][0]["length"]
   end
 
   test "teacher_panel_progress returns progress when called with script and level" do
@@ -1657,20 +1498,10 @@ class ApiControllerTest < ActionController::TestCase
       {controller: "api", action: "user_menu"}
     )
 
-    assert_routing(
-      {method: "get", path: "http://#{CDO.dashboard_hostname}/dashboardapi/section_progress/2"},
-      {controller: "api", action: "section_progress", section_id: '2'}
-    )
-
     # /api urls
     assert_recognizes(
       {controller: "api", action: "user_menu"},
       {method: "get", path: "http://#{CDO.dashboard_hostname}/api/user_menu"}
-    )
-
-    assert_recognizes(
-      {controller: "api", action: "section_progress", section_id: '2'},
-      {method: "get", path: "http://#{CDO.dashboard_hostname}/api/section_progress/2"}
     )
   end
 

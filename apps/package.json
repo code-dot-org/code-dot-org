@@ -40,7 +40,6 @@
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "ua-parser-js": "^0.7.40",
-    "@amplitude/ua-parser-js": "^0.7.33",
     "serialport": "^13.0.0"
   },
   "devDependencies": {
@@ -191,7 +190,6 @@
   "dependencies": {
     "@ai-sdk/google": "^3.0.21",
     "@ai-sdk/openai": "^3.0.26",
-    "@amplitude/analytics-browser": "^1.5.4",
     "@blockly/block-shareable-procedures": "^6.0.0",
     "@blockly/field-bitmap": "^6.0.0",
     "@blockly/field-colour": "^6.0.0",

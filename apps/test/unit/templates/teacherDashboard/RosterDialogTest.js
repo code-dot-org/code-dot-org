@@ -61,12 +61,9 @@ describe('RosterDialog', () => {
     wrapper.find('button[id="cancel-button"]').simulate('click');
     assert(analyticsSpy.calledOnce);
     assert.equal(analyticsSpy.getCall(0).firstArg, 'Section Setup Cancelled');
-    assert.deepEqual(
-      analyticsSpy.getCall(0).args[analyticsSpy.getCall(0).args.length - 2],
-      {
-        oauthSource: OAuthSectionTypes.google_classroom,
-      }
-    );
+    assert.deepEqual(analyticsSpy.getCall(0).args[1], {
+      oauthSource: OAuthSectionTypes.google_classroom,
+    });
 
     analyticsSpy.restore();
   });
@@ -109,12 +106,9 @@ describe('RosterDialog', () => {
     });
     assert(analyticsSpy.calledOnce);
     assert.equal(analyticsSpy.getCall(0).firstArg, 'Section Setup Completed');
-    assert.deepEqual(
-      analyticsSpy.getCall(0).args[analyticsSpy.getCall(0).args.length - 2],
-      {
-        oauthSource: OAuthSectionTypes.google_classroom,
-      }
-    );
+    assert.deepEqual(analyticsSpy.getCall(0).args[1], {
+      oauthSource: OAuthSectionTypes.google_classroom,
+    });
 
     analyticsSpy.restore();
   });
