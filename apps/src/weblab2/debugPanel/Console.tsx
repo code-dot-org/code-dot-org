@@ -61,13 +61,15 @@ const Console: React.FunctionComponent = () => {
       ) : (
         <>
           {consoleLogs.map((log, index) => (
-            <Alert
-              key={index}
-              type={mapLogLevelToAlertType(log.level)}
-              text={formatLogWithTimestamp(log)}
-              size={'s'}
-              className={moduleStyles.consoleLog}
-            />
+            <div key={index} className={moduleStyles.consoleLogContainer}>
+              <Alert
+                key={index}
+                type={mapLogLevelToAlertType(log.level)}
+                text={formatLogWithTimestamp(log)}
+                size={'s'}
+                className={moduleStyles.consoleLog}
+              />
+            </div>
           ))}
           <div ref={bottomRef} />
         </>

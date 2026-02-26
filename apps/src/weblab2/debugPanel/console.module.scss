@@ -7,10 +7,22 @@
   padding: 8px;
 }
 
+.consoleLogContainer {
+  max-width: 100%;
+  min-width: 0; // Allow shrinking in flex parent so content can wrap.
+}
+
 .consoleLogEntry {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  min-width: 0; // Allow flex item to shrink so long text wraps.
+
+  > *:first-child {
+    min-width: 0;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
 
   p {
     margin-bottom: 0;
