@@ -76,11 +76,17 @@ $min-viz-height: 280px;
 
     :global(button.blocklyLaunch) {
       min-width: 0;
-      padding: 0 4px;
+      padding: 3px 4px;
+      font-size: 14px;
+
+      div {
+        margin-top: 0;
+      }
 
       img {
+        float: none;
         transform: scale(0.6);
-        margin: 0 -4px;
+        margin: -5px;
       }
     }
 

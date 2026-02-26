@@ -114,6 +114,8 @@ export default class PhoneFrame extends React.Component {
                 PAUSED
               </div>
             )}
+            {/* Top run/reset button only renders when user is so zoomed in
+            that the bottom run button is hidden*/}
             <ProtectedStatefulDiv className={style.topButtons} canUnmount>
               <RunButton id="topRunButton" />
               <ResetButton id="topResetButton" />
