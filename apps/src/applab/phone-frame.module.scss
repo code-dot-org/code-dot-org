@@ -66,7 +66,7 @@ $min-viz-height: 280px;
 
 @media screen and (max-height: #{$chrome-above-frame + 2 * $frame-height + $min-viz-height}) {
   .phoneFrameTop {
-    padding: 0 16px;
+    padding: 0 8px 0 16px;
     gap: 8px;
     justify-content: flex-end;
   }
