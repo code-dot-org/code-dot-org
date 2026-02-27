@@ -407,6 +407,39 @@ function transformer(file: FileInfo, api: API) {
     };
   };
 
+  // Props that are DSCo-specific or already handled explicitly in propsToJSXAttributes.
+  // Any prop NOT in this set will be passed through to the MUI component as-is.
+  const DSCO_HANDLED_PROPS = new Set([
+    // DSCo props transformed to MUI equivalents (must not pass through)
+    'type',
+    'color',
+    'size',
+    'text',
+    'iconLeft',
+    'iconRight',
+    'icon',
+    'isIconOnly',
+    'isPending',
+    'ariaLabel',
+    'forceHover',
+    'useAsLink',
+    'analyticsCallback',
+    'buttonTagTypeAttribute',
+    // Props with explicit handlers inside propsToJSXAttributes
+    'disabled',
+    'onClick',
+    'className',
+    'id',
+    'href',
+    'target',
+    'download',
+    'title',
+    'style',
+    'aria-label',
+    'data-force-hover',
+    'rel',
+  ]);
+
   // Convert buttonPropsToMui result to JSX attributes
   const propsToJSXAttributes = (
     muiProps: Record<string, unknown>,
@@ -691,6 +724,29 @@ function transformer(file: FileInfo, api: API) {
         j.jsxAttribute(j.jsxIdentifier('type'), j.literal(muiProps.type)),
       );
     }
+
+    // Pass through any props not specifically handled above
+    // (e.g. aria-expanded, data-testid, tabIndex, role, ref)
+    originalProps.forEach(attr => {
+      if (attr.type === 'JSXSpreadAttribute') return;
+      const key = attr.name?.name;
+      if (!key || DSCO_HANDLED_PROPS.has(key)) return;
+
+      if (attr.value === null) {
+        // Boolean shorthand like aria-expanded (no value)
+        jsxAttributes.push(j.jsxAttribute(j.jsxIdentifier(key)));
+      } else {
+        const value = getPropValue(attr);
+        if (value) {
+          jsxAttributes.push(
+            j.jsxAttribute(
+              j.jsxIdentifier(key),
+              createJSXAttributeValue(value),
+            ),
+          );
+        }
+      }
+    });
 
     // icons & children
     const children: unknown[] = [];
