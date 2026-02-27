@@ -28,7 +28,6 @@ import enzyme from 'enzyme'; // eslint-disable-line no-restricted-imports
 import mockFetch from 'jest-fetch-mock';
 import $ from 'jquery';
 import {TextEncoder, TextDecoder} from 'util';
-import {TransformStream} from 'web-streams-polyfill';
 
 enzyme.configure({adapter: new Adapter()});
 window.IN_UNIT_TEST = true;
@@ -91,7 +90,6 @@ global.$ = global.jQuery = $;
 global.IN_UNIT_TEST = true;
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
-global.TransformStream = TransformStream;
 global.PISKEL_DEVELOPMENT_MODE = 'false';
 
 jest.mock('@cdo/apps/metrics/firehose', () => ({
