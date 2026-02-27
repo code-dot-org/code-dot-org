@@ -24,11 +24,23 @@ module UserMultiAuthHelper
     end
   end
 
-  def uid_for_provider(provider)
+  # Returns the authentication_id (uid) for the given provider.
+  # If a version is provided, returns the authentication_id for the latest
+  # authentication option matching that version. Otherwise, simply returns the uid
+  # from the most recently created authentication option for the provider.
+  # If no matching authentication option is found, returns nil.
+  # Backwards compatible with pre-multi-auth users by returning the user's uid property.
+  def uid_for_provider(provider, version = nil)
     if migrated?
-      authentication_options.find_by(
-        credential_type: provider
-      )&.authentication_id
+      auth_options = authentication_options.where(credential_type: provider).order(created_at: :desc)
+      authentication_option =
+        if version.nil?
+          auth_options.first
+        else
+          auth_options.find {|ao| ao.version == version}
+        end
+
+      authentication_option&.authentication_id
     else
       uid
     end
