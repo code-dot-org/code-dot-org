@@ -705,16 +705,6 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
           marginRight: 0,
         },
 
-        // Pending state with hidden text - center the spinner
-        '&.buttonPendingWithHiddenText': {
-          position: 'relative',
-        },
-        '&.buttonPendingWithHiddenText .MuiButton-startIcon': {
-          position: 'absolute',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          margin: 0,
-        },
         '.MuiButton-loadingIndicator': {
           color: 'inherit', // Ensure spinner inherits text color
         },

@@ -378,52 +378,19 @@ function transformer(file: FileInfo, api: API) {
     const iconLeft = propsObj.iconLeft as IconProps | undefined;
     const iconRight = propsObj.iconRight as IconProps | undefined;
     const icon = propsObj.icon as IconProps | undefined;
-    const spinnerIcon = core.spinnerIcon;
-    const spinnerPosition = core.spinnerPosition;
-    const addPendingButtonWithHiddenTextClass =
-      core.addPendingButtonWithHiddenTextClass;
 
     let iconOnlyIcon: IconProps | undefined;
 
     if (!isIconButton) {
-      if (isPending) {
-        if (addPendingButtonWithHiddenTextClass) {
-          // Pending with only text: spinner centered, text hidden
-          muiProps.startIcon = spinnerIcon;
-          muiProps._pendingWithHiddenText = true;
-        } else {
-          if (spinnerPosition === 'left') {
-            muiProps.startIcon = spinnerIcon;
-          }
-          if (iconRight && iconLeft) {
-            muiProps.endIcon = iconRight;
-          } else if (spinnerPosition === 'right') {
-            muiProps.endIcon = spinnerIcon;
-          }
-        }
-      } else {
-        if (iconLeft) {
-          muiProps.startIcon = iconLeft;
-        }
-        if (iconRight) {
-          muiProps.endIcon = iconRight;
-        }
+      if (iconLeft) {
+        muiProps.startIcon = iconLeft;
+      }
+      if (iconRight) {
+        muiProps.endIcon = iconRight;
       }
 
       if (propsObj.text) {
-        if (addPendingButtonWithHiddenTextClass) {
-          muiProps.children = propsObj.text;
-          muiProps._hiddenText = true;
-        } else {
-          muiProps.children = propsObj.text;
-        }
-      }
-
-      if (addPendingButtonWithHiddenTextClass) {
-        const existingClassName = (muiProps.className as string) || '';
-        muiProps.className = existingClassName
-          ? `${existingClassName} buttonPendingWithHiddenText`
-          : 'buttonPendingWithHiddenText';
+        muiProps.children = propsObj.text;
       }
     } else if (icon && typeof icon === 'object' && 'iconName' in icon) {
       iconOnlyIcon = icon as IconProps;
@@ -463,31 +430,65 @@ function transformer(file: FileInfo, api: API) {
         j.jsxAttribute(j.jsxIdentifier('size'), j.literal(muiProps.size)),
       );
     }
-    // disabled prop - check both muiProps and original props
-    const disabledAttr = originalProps.find(p => p.name?.name === 'disabled');
-    if (muiProps.disabled || disabledAttr) {
-      const isDisabled =
-        muiProps.disabled ||
-        (disabledAttr &&
-          (disabledAttr.value === null ||
-            (disabledAttr.value &&
-              disabledAttr.value.type === 'Literal' &&
-              disabledAttr.value.value === true)));
-      if (isDisabled) {
+    // loading prop - preserve original isPending expression so dynamic values like
+    // isPending={a || b} or isPending={someVar} are not silently dropped
+    const isPendingAttr = originalProps.find(p => p.name?.name === 'isPending');
+    if (isPendingAttr) {
+      if (isPendingAttr.value === null) {
+        // bare `isPending` prop (boolean shorthand)
         jsxAttributes.push(
-          j.jsxAttribute(j.jsxIdentifier('disabled'), j.literal(true)),
+          j.jsxAttribute(j.jsxIdentifier('loading'), j.literal(true)),
         );
+      } else {
+        const isPendingValue = getPropValue(isPendingAttr);
+        if (isPendingValue) {
+          jsxAttributes.push(
+            j.jsxAttribute(
+              j.jsxIdentifier('loading'),
+              createJSXAttributeValue(isPendingValue),
+            ),
+          );
+        }
       }
     }
 
-    // className + force-hover + pending class
+    // loadingPosition prop (when there are icons, computed from static analysis)
+    if (muiProps.loadingPosition) {
+      jsxAttributes.push(
+        j.jsxAttribute(
+          j.jsxIdentifier('loadingPosition'),
+          j.literal(muiProps.loadingPosition),
+        ),
+      );
+    }
+
+    // disabled prop - preserve original expression so dynamic values like
+    // disabled={a || b} or disabled={someVar} are not silently dropped
+    const disabledAttr = originalProps.find(p => p.name?.name === 'disabled');
+    if (disabledAttr) {
+      if (disabledAttr.value === null) {
+        // bare `disabled` prop (boolean shorthand)
+        jsxAttributes.push(j.jsxAttribute(j.jsxIdentifier('disabled')));
+      } else {
+        const disabledValue = getPropValue(disabledAttr);
+        if (disabledValue) {
+          jsxAttributes.push(
+            j.jsxAttribute(
+              j.jsxIdentifier('disabled'),
+              createJSXAttributeValue(disabledValue),
+            ),
+          );
+        }
+      }
+    }
+
+    // className + force-hover
     const classNameAttr = originalProps.find(p => p.name?.name === 'className');
     const forceHoverAttr = originalProps.find(
       p => p.name?.name === 'forceHover',
     );
-    const pendingWithHiddenText = muiProps._pendingWithHiddenText;
 
-    if (classNameAttr || forceHoverAttr || pendingWithHiddenText) {
+    if (classNameAttr || forceHoverAttr) {
       const classNameExpr = classNameAttr
         ? getPropValue(classNameAttr)
         : j.literal('');
@@ -496,10 +497,6 @@ function transformer(file: FileInfo, api: API) {
 
       if (forceHoverAttr) {
         suffixParts.push(' force-hover');
-        needsTemplateLiteral = true;
-      }
-      if (pendingWithHiddenText) {
-        suffixParts.push(' buttonPendingWithHiddenText');
         needsTemplateLiteral = true;
       }
 
@@ -790,33 +787,7 @@ function transformer(file: FileInfo, api: API) {
             ? textValue
             : j.jsxExpressionContainer(textValue);
 
-        if (muiProps._hiddenText) {
-          const hiddenSpan = j.jsxElement(
-            j.jsxOpeningElement(
-              j.jsxIdentifier('span'),
-              [
-                j.jsxAttribute(
-                  j.jsxIdentifier('style'),
-                  j.jsxExpressionContainer(
-                    j.objectExpression([
-                      j.property(
-                        'init',
-                        j.identifier('visibility'),
-                        j.literal('hidden'),
-                      ),
-                    ]),
-                  ),
-                ),
-              ],
-              false,
-            ),
-            j.jsxClosingElement(j.jsxIdentifier('span')),
-            [textChild],
-          );
-          children.push(hiddenSpan);
-        } else {
-          children.push(textChild);
-        }
+        children.push(textChild);
       }
     }
 
