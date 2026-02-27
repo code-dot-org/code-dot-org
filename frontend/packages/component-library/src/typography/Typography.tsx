@@ -22,9 +22,6 @@ export interface TypographyProps {
   noMargin?: boolean;
 }
 
-/**
- * @deprecated Use MUI `Typography` from `@mui/material` instead.
- */
 const Typography: React.FunctionComponent<TypographyProps> = ({
   semanticTag,
   visualAppearance,
@@ -56,7 +53,4 @@ const Typography: React.FunctionComponent<TypographyProps> = ({
   );
 };
 
-/**
- * @deprecated Use MUI `Typography` from `@mui/material` instead.
- */
 export default memo(Typography);

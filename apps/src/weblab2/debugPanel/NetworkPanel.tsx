@@ -1,6 +1,10 @@
 import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography} from '@mui/material';
+import {
+  BodyFourText,
+  StrongText,
+  BodyThreeText,
+} from '@code-dot-org/component-library/typography';
 import {isEqual} from 'lodash';
 import React, {useEffect, useMemo, useState} from 'react';
 
@@ -190,9 +194,9 @@ const NetworkPanel: React.FC = () => {
         <div className={moduleStyles.networkPanelContainer}>
           <div className={moduleStyles.networkSummary}>
             <div className={moduleStyles.networkSummaryHeader}>
-              <Typography variant="body4" gutterBottom>
-                <Typography variant="strong">Activity</Typography>
-              </Typography>
+              <BodyFourText>
+                <StrongText>Activity</StrongText>
+              </BodyFourText>
               <Button
                 onClick={() => setNewestFirst(!newestFirst)}
                 size="xs"
@@ -259,9 +263,7 @@ const NetworkPanel: React.FC = () => {
               />
             ) : (
               <div className={moduleStyles.responsePlaceholder}>
-                <Typography variant="body3" gutterBottom>
-                  Response
-                </Typography>
+                <BodyThreeText>Response</BodyThreeText>
                 <FontAwesomeV6Icon
                   iconName="circle"
                   className={moduleStyles.placeholderIcon}
