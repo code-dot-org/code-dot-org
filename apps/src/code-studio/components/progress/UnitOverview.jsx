@@ -23,7 +23,6 @@ import {
   onDismissRedirectDialog,
   dismissedRedirectDialog,
 } from '@cdo/apps/util/dismissVersionRedirect';
-import experiments from '@cdo/apps/util/experiments';
 import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -221,8 +220,7 @@ class UnitOverview extends React.Component {
               isMigrated={isMigrated}
               aiChatToolsDependency={aiChatToolsDependency}
             />
-            {experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
-              viewAs === ViewType.Instructor &&
+            {viewAs === ViewType.Instructor &&
               aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
                 <RequiresAiChatToolsAlert />
               )}
