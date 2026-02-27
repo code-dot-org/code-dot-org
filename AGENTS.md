@@ -80,3 +80,9 @@
     - These will not return
     - For frontend work both will need to be running. Some backend work can be done only with Rails running.
 - the main branch of this repo is named `staging`. to see what work exists in a feature branch, assume `staging` is the base branch for that work unless otherwise noted.
+
+## Test strategy during the dev loop
+- find and run all the unit tests you can identify as relevant before running any full test suites
+- next, test as much as you can with rails runner, mysql commands, in the browser, etc (as relevant)
+- finally, if there's a relevant test suite, run it
+- once you've done all that, if you need any testing that requires the UI or secrets, or you're ready for a full drone run, let the user know what you'd like tested that you could not test on your own
