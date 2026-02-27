@@ -81,6 +81,10 @@ class Weblab2 < Level
     widget2_id = properties.dig("widget2", "id") || widget2_start_sources
     if widget2_id
       properties_camelized[:startSources] = get_widget2_sources(widget2_id)
+
+      # Also, don't attempt to load project sources, since we always want to use
+      # startSources.
+      properties_camelized[:usesProjects] = false
     end
 
     # And if this is a widget2 level, then show it as a widget.
