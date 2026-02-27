@@ -74,7 +74,8 @@ class AiRubricConfig
   end
 
   def self.validate_ai_config
-    units_with_ai_config = Unit.all.select {|u| u.ai_rubric_s3_config.present?}
+    # use SQL query to effeciently narrow down the set of units we need to check, then verify the presence of the property to confirm.
+    units_with_ai_config = Unit.where('properties like ?', '%ai_rubric_s3_config%').select {|u| u.ai_rubric_s3_config.present?}
     lesson_s3_names = units_with_ai_config.flat_map {|u| u.ai_rubric_s3_config.values}.uniq
     code = 'hello world'
     lesson_s3_names.each do |lesson_s3_name|
@@ -101,8 +102,7 @@ class AiRubricConfig
   # For each unit with ai_rubric_s3_config, validate that every ai-enabled
   # learning goal in its rubric in the database has a corresponding learning
   # goal in the rubric in S3.
-  private_class_method def self.validate_learning_goals(units = nil)
-    units ||= Unit.all.select {|u| u.ai_rubric_s3_config.present?}
+  private_class_method def self.validate_learning_goals(units)
     units.each do |unit|
       unit.ai_rubric_s3_config.each_key do |level_name|
         level = Level.find_by_name!(level_name)
