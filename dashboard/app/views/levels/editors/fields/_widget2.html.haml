@@ -2,4 +2,4 @@
 
 - content_for :body_scripts do
   %script{src: webpack_asset_path('js/levels/editors/fields/_widget2.js'),
-    data: {widget2: (@level.properties['widget2'] || {}).to_json, widget2ids: @widget2_ids.to_json}}
+    data: {widget2: (@level.properties['widget2']).to_json, widget2ids: @widget2_ids.to_json}}
