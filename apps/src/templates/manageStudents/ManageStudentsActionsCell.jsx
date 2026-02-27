@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import PopUpMenu, {MenuBreak} from '@cdo/apps/sharedComponents/PopUpMenu';
 import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -57,16 +57,12 @@ class ManageStudentsActionsCell extends Component {
   };
 
   reportEvent = (eventName, payload = {}) => {
-    analyticsReporter.sendEvent(
-      eventName,
-      {
-        sectionId: this.props.sectionId,
-        sectionLoginType: this.props.loginType,
-        selectedUsState: this.props.rowData?.editingData?.usState,
-        ...payload,
-      },
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(eventName, {
+      sectionId: this.props.sectionId,
+      sectionLoginType: this.props.loginType,
+      selectedUsState: this.props.rowData?.editingData?.usState,
+      ...payload,
+    });
   };
 
   onConfirmDelete = () => {

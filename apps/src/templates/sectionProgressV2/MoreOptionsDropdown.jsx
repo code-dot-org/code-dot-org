@@ -10,10 +10,11 @@ import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSections
 import i18n from '@cdo/locale';
 
 import FontAwesome from '../../legacySharedComponents/FontAwesome';
+
 import {
   collapseMetadataForStudents,
   expandMetadataForStudents,
-} from '../sectionProgress/sectionProgressRedux';
+} from './sectionProgressRedux';
 
 import style from './expand-all-rows-dropdown.module.scss';
 

@@ -7,10 +7,6 @@ import {trySetLocalStorage, tryGetLocalStorage} from '@cdo/apps/utils';
 
 import {lessonHasLevels} from '../progress/progressHelpers';
 
-import {ViewType} from './sectionProgressConstants';
-
-const SET_CURRENT_VIEW = 'sectionProgress/SET_CURRENT_VIEW';
-const SET_LESSON_OF_INTEREST = 'sectionProgress/SET_LESSON_OF_INTEREST';
 const START_LOADING_PROGRESS = 'sectionProgress/START_LOADING_PROGRESS';
 const FINISH_LOADING_PROGRESS = 'sectionProgress/FINISH_LOADING_PROGRESS';
 const START_REFRESHING_PROGRESS = 'sectionProgress/START_REFRESHING_PROGRESS';
@@ -39,11 +35,6 @@ export const startRefreshingProgress = () => ({
 export const finishRefreshingProgress = () => ({
   type: FINISH_REFRESHING_PROGRESS,
 });
-export const setLessonOfInterest = lessonOfInterest => ({
-  type: SET_LESSON_OF_INTEREST,
-  lessonOfInterest,
-});
-export const setCurrentView = viewType => ({type: SET_CURRENT_VIEW, viewType});
 export const addDataByUnit = data => ({
   type: ADD_DATA_BY_UNIT,
   data,
@@ -84,16 +75,12 @@ export const collapseMetadataForStudents = studentIds => ({
   studentIds,
 });
 
-const INITIAL_LESSON_OF_INTEREST = 1;
-
 const initialState = {
   section: {},
-  currentView: ViewType.SUMMARY,
   unitDataByUnit: {},
   studentLevelProgressByUnit: {},
   studentLessonProgressByUnit: {},
   studentLastUpdateByUnit: {},
-  lessonOfInterest: INITIAL_LESSON_OF_INTEREST,
   isLoadingProgress: false,
   isRefreshingProgress: false,
   expandedLessonIds: {},
@@ -105,13 +92,6 @@ export default function sectionProgress(state = initialState, action) {
   if (action.type === SET_UNIT) {
     return {
       ...state,
-      lessonOfInterest: INITIAL_LESSON_OF_INTEREST,
-    };
-  }
-  if (action.type === SET_CURRENT_VIEW) {
-    return {
-      ...state,
-      currentView: action.viewType,
     };
   }
   if (action.type === START_LOADING_PROGRESS) {
@@ -136,12 +116,6 @@ export default function sectionProgress(state = initialState, action) {
     return {
       ...state,
       isRefreshingProgress: false,
-    };
-  }
-  if (action.type === SET_LESSON_OF_INTEREST) {
-    return {
-      ...state,
-      lessonOfInterest: action.lessonOfInterest,
     };
   }
   if (action.type === ADD_DATA_BY_UNIT) {
@@ -273,13 +247,6 @@ export default function sectionProgress(state = initialState, action) {
 
   return state;
 }
-
-export const jumpToLessonDetails = lessonOfInterest => {
-  return dispatch => {
-    dispatch(setLessonOfInterest(lessonOfInterest));
-    dispatch(setCurrentView(ViewType.DETAIL));
-  };
-};
 
 // Selector functions
 

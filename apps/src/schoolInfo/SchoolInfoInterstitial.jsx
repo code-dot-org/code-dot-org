@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
@@ -42,11 +42,7 @@ export default function SchoolInfoInterstitial({
   const [isOpen, setIsOpen] = useState(true);
 
   useEffect(() => {
-    analyticsReporter.sendEvent(
-      EVENTS.SCHOOL_INTERSTITIAL_SHOW,
-      {},
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.SCHOOL_INTERSTITIAL_SHOW, {});
   }, []);
 
   const saveDisabled = useMemo(
@@ -71,14 +67,10 @@ export default function SchoolInfoInterstitial({
     const hasNcesId =
       schoolInfo.schoolId &&
       !Object.values(NonSchoolOptions).includes(schoolInfo.schoolId);
-    analyticsReporter.sendEvent(
-      EVENTS.SCHOOL_INTERSTITIAL_SUBMIT,
-      {
-        hasNcesId: hasNcesId.toString(),
-        attempt: showSchoolInfoUnknownError ? 2 : 1,
-      },
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.SCHOOL_INTERSTITIAL_SUBMIT, {
+      hasNcesId: hasNcesId.toString(),
+      attempt: showSchoolInfoUnknownError ? 2 : 1,
+    });
 
     try {
       await updateSchoolInfo({
@@ -88,23 +80,15 @@ export default function SchoolInfoInterstitial({
         schoolZip: schoolInfo.schoolZip,
       });
 
-      analyticsReporter.sendEvent(
-        EVENTS.SCHOOL_INTERSTITIAL_SAVE_SUCCESS,
-        {
-          attempt: showSchoolInfoUnknownError ? 2 : 1,
-        },
-        PLATFORMS.STATSIG
-      );
+      analyticsReporter.sendEvent(EVENTS.SCHOOL_INTERSTITIAL_SAVE_SUCCESS, {
+        attempt: showSchoolInfoUnknownError ? 2 : 1,
+      });
 
       onClose();
     } catch (error) {
-      analyticsReporter.sendEvent(
-        EVENTS.SCHOOL_INTERSTITIAL_SAVE_FAILURE,
-        {
-          attempt: showSchoolInfoUnknownError ? 2 : 1,
-        },
-        PLATFORMS.STATSIG
-      );
+      analyticsReporter.sendEvent(EVENTS.SCHOOL_INTERSTITIAL_SAVE_FAILURE, {
+        attempt: showSchoolInfoUnknownError ? 2 : 1,
+      });
 
       if (!showSchoolInfoUnknownError) {
         // First failure, display error message and give the teacher a chance
@@ -118,11 +102,7 @@ export default function SchoolInfoInterstitial({
   };
 
   const dismissSchoolInfoForm = () => {
-    analyticsReporter.sendEvent(
-      EVENTS.SCHOOL_INTERSTITIAL_DISMISS,
-      {},
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.SCHOOL_INTERSTITIAL_DISMISS, {});
     setIsOpen(false);
     onClose();
   };

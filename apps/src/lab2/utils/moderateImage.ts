@@ -1,5 +1,5 @@
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {WEBLAB2_IMAGE_FILE_TYPES} from '@cdo/apps/weblab2/constants';
@@ -16,14 +16,10 @@ export const moderateImage = async (
   metricsReporter.incrementCounter('ModerateCustomImage.Attempt', [
     {name: 'UploaderType', value: 'Lab2FileUploader'},
   ]);
-  analyticsReporter.sendEvent(
-    EVENTS.MODERATE_CUSTOM_IMAGE,
-    {
-      UploaderType: 'Lab2 File Uploader',
-      ProjectType: appName,
-    },
-    PLATFORMS.STATSIG
-  );
+  analyticsReporter.sendEvent(EVENTS.MODERATE_CUSTOM_IMAGE, {
+    UploaderType: 'Lab2 File Uploader',
+    ProjectType: appName,
+  });
   try {
     const response = await HttpClient.post(`/v3/images/moderate`, file, true, {
       'Content-Type': file.type || 'application/octet-stream',
@@ -45,14 +41,10 @@ export const moderateImage = async (
     metricsReporter.incrementCounter('ModerateCustomImage.Flagged', [
       {name: 'UploaderType', value: 'Lab2FileUploader'},
     ]);
-    analyticsReporter.sendEvent(
-      EVENTS.FLAGGED_CUSTOM_IMAGE,
-      {
-        UploaderType: 'Lab2 File Uploader',
-        ProjectType: appName,
-      },
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.FLAGGED_CUSTOM_IMAGE, {
+      UploaderType: 'Lab2 File Uploader',
+      ProjectType: appName,
+    });
     return 'flagged';
   } catch (error) {
     metricsReporter.logError('Error with image moderation: ' + error);

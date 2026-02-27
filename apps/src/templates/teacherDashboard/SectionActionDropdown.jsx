@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import PopUpMenu from '@cdo/apps/sharedComponents/PopUpMenu';
@@ -94,7 +94,7 @@ class SectionActionDropdown extends Component {
     const hideShowEvent = this.props.sectionData.hidden
       ? EVENTS.SECTION_TABLE_RESTORE_SECTION_CLICKED
       : EVENTS.SECTION_TABLE_ARCHIVE_SECTION_CLICKED;
-    analyticsReporter.sendEvent(hideShowEvent, {}, PLATFORMS.STATSIG);
+    analyticsReporter.sendEvent(hideShowEvent, {});
     this.props.toggleSectionHidden(this.props.sectionData.id);
   };
 
@@ -105,15 +105,13 @@ class SectionActionDropdown extends Component {
       case OAuthSectionTypes.google_classroom:
         analyticsReporter.sendEvent(
           EVENTS.SECTION_TABLE_SYNC_GOOGLE_CLASSROOM_CLICKED,
-          {},
-          PLATFORMS.STATSIG
+          {}
         );
         break;
       case OAuthSectionTypes.clever:
         analyticsReporter.sendEvent(
           EVENTS.SECTION_TABLE_SYNC_CLEVER_CLICKED,
-          {},
-          PLATFORMS.STATSIG
+          {}
         );
         break;
     }
@@ -125,8 +123,7 @@ class SectionActionDropdown extends Component {
   onRequestDelete = () => {
     analyticsReporter.sendEvent(
       EVENTS.SECTION_TABLE_DELETE_SECTION_CLICKED,
-      {},
-      PLATFORMS.STATSIG
+      {}
     );
     this.setState({deleting: true});
   };
@@ -150,8 +147,7 @@ class SectionActionDropdown extends Component {
             hrefOnClick={() => {
               analyticsReporter.sendEvent(
                 EVENTS.SECTION_TABLE_EDIT_SECTION_DETAILS_CLICKED,
-                {},
-                PLATFORMS.STATSIG
+                {}
               );
             }}
           >
@@ -163,8 +159,7 @@ class SectionActionDropdown extends Component {
             hrefOnClick={() => {
               analyticsReporter.sendEvent(
                 EVENTS.SECTION_TABLE_VIEW_PROGRESS_CLICKED,
-                {},
-                PLATFORMS.STATSIG
+                {}
               );
             }}
           >
@@ -176,8 +171,7 @@ class SectionActionDropdown extends Component {
             hrefOnClick={() => {
               analyticsReporter.sendEvent(
                 EVENTS.SECTION_TABLE_MANAGE_STUDENTS_CLICKED,
-                {},
-                PLATFORMS.STATSIG
+                {}
               );
             }}
           >
@@ -193,11 +187,7 @@ class SectionActionDropdown extends Component {
                     sectionData.loginType === SectionLoginType.email
                       ? EVENTS.SECTION_TABLE_JOIN_INSTRUCTIONS_CLICKED
                       : EVENTS.SECTION_TABLE_PRINT_LOGIN_CARDS_CLICKED;
-                  analyticsReporter.sendEvent(
-                    loginInstructionsEvent,
-                    {},
-                    PLATFORMS.STATSIG
-                  );
+                  analyticsReporter.sendEvent(loginInstructionsEvent, {});
                 }}
               >
                 {sectionData.loginType === SectionLoginType.email

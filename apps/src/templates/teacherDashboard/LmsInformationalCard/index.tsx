@@ -2,7 +2,6 @@ import Link from '@code-dot-org/component-library/link';
 import {Typography} from '@mui/material';
 import React from 'react';
 
-import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
@@ -16,11 +15,9 @@ const LmsInformationalCard = ({
   lmsLogo,
 }: LmsInformationalCardProps) => {
   const publishClickEvent = () => {
-    analyticsReporter.sendEvent(
-      'section_create_lms_tile_click',
-      {lms_name: lmsName},
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent('section_create_lms_tile_click', {
+      lms_name: lmsName,
+    });
   };
 
   return (

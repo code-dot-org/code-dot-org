@@ -25,6 +25,7 @@
 #  index_levels_on_type       (type)
 #
 class Weblab2 < Level
+  include Widget2Helper
   validate :validate_ai_tutor_prompt_answer_types
 
   serialized_attrs %w(
@@ -41,6 +42,7 @@ class Weblab2 < Level
     ai_tutor_mode
     level_system_prompt
     ai_tutor_prompt_answer_types
+    widget2
   )
 
   def self.create_from_level_builder(params, level_params)
@@ -67,6 +69,25 @@ class Weblab2 < Level
 
   def add_starter_asset!(_, _)
     true
+  end
+
+  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil, widget2_start_sources: nil)
+    properties_camelized = super(script, script_level, current_user, unit_group_unit: unit_group_unit)
+
+    # If this is a widget2 level or we are editing widget2 starter sources,
+    # then startSources will come from the files in the repo, rather than
+    # that serialized into the level file.
+    widget2_id = properties["widget2"] || widget2_start_sources
+    if widget2_id
+      properties_camelized[:startSources] = get_widget2_sources(widget2_id)
+    end
+
+    # And if this is a widget2 level, then show it as a widget.
+    if properties["widget2"]
+      properties_camelized[:widgetView] = true
+    end
+
+    properties_camelized
   end
 
   private def validate_ai_tutor_prompt_answer_types
