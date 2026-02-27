@@ -9,7 +9,7 @@
     "skip_dialog": true,
     "skip_sound": true,
     "encrypted": "false",
-    "title": "Remote Data",
+    "title": "Live Data",
     "long_instructions": "Define the term in your own words. Use examples from the lesson to explain your thinking and take notes on anything that helps you remember how it works.",
     "stay_on_level_after_submit": "false",
     "height": "200",
@@ -19,7 +19,7 @@
     "optional": "false",
     "allow_multiple_attempts": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-02-18 15:43:01 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-02-18 15:43:01 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-02-26 13:09:59 +0000\",\"changed\":[\"title\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
