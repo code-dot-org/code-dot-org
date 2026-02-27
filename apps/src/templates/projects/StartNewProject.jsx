@@ -22,9 +22,10 @@ const DEFAULT_PROJECT_TYPES_BASIC = ['spritelab', 'artist', 'dance', 'playlab'];
 const OPEN_ENDED_PROJECT_TYPES = [
   'music_dance_ai',
   'music',
-  'dance',
   'spritelab',
-  'poetry',
+  'game_design',
+  'dance',
+  'poetry_hoc',
 ];
 
 const DRAWING_PROJECT_TYPES = ['artist', 'frozen'];
@@ -49,9 +50,9 @@ const PLAYLAB_PROJECT_TYPES = ['playlab', 'infinity', 'gumball', 'iceage'];
 const ADVANCED_PROJECT_TYPES = [
   'applab',
   'gamelab',
+  'pythonlab',
   'weblab',
   'starwars',
-  'pythonlab',
 ];
 
 const PREREADER_PROJECT_TYPES = ['playlab_k1', 'artist_k1'];
