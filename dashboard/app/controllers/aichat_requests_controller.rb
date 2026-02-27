@@ -139,8 +139,7 @@ class AichatRequestsController < ApplicationController
 
   private def can_access_aichat_lab_chat_completion?
     return false if DCDO.get("block_aichat_lab_chat_completion", false)
-    ai_chat_new_permissions = params[:'ai-chat-new-permissions'].present?
-    current_user.has_aichat_lab_access?(new_permissions_enabled: ai_chat_new_permissions)
+    current_user.has_aichat_lab_access?
   end
 
   private def should_throttle_request_count?

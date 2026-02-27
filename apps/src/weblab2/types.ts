@@ -1,11 +1,16 @@
 import {LevelProperties} from '@cdo/apps/lab2/types';
 
+export interface AiTutorPromptSettings {
+  answerTypes: AiTutorAnswerType[];
+  answerTypeCustomizations?: Partial<Record<AiTutorAnswerType, string>>;
+}
+
 export interface Weblab2LevelProperties extends LevelProperties {
   widgetView?: boolean;
   initialViewMode?: ViewMode;
   aiTutorMode?: string;
   levelSystemPrompt?: string;
-  aiTutorPromptAnswerTypes?: AiTutorAnswerType[];
+  aiTutorPromptSettings?: AiTutorPromptSettings;
 }
 
 export enum ViewMode {
