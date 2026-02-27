@@ -1,4 +1,3 @@
-import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {RootState} from '@cdo/apps/types/redux';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -37,6 +36,6 @@ export const sendAnalytics =
         levelPath: window.location.pathname,
       };
 
-      analyticsReporter.sendEvent(event, allProperties, PLATFORMS.STATSIG);
+      analyticsReporter.sendEvent(event, allProperties);
     }
   };

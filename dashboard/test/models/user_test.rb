@@ -4456,10 +4456,9 @@ class UserTest < ActiveSupport::TestCase
       end
     end
 
-    context 'when user is a student with verified teacher and in appropriate section' do
-      let(:unit_group) {create(:unit_group, name: 'exploring-gen-ai-2024')}
+    context 'when user is a student with verified teacher in a section with ESSENTIAL_ONLY access' do
       let(:teacher) {create(:authorized_teacher)}
-      let(:section) {create(:section, teacher: teacher, unit_group: unit_group)}
+      let(:section) {create(:section, teacher: teacher, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY])}
       let(:student) {create(:student)}
       let!(:follower) {create(:follower, section: section, student_user: student, user: teacher)}
 
@@ -4468,7 +4467,29 @@ class UserTest < ActiveSupport::TestCase
       end
     end
 
-    context 'when user is a student with verified teacher but not in appropriate section' do
+    context 'when user is a student with verified teacher in a section with ENABLED access' do
+      let(:teacher) {create(:authorized_teacher)}
+      let(:section) {create(:section, teacher: teacher, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ENABLED])}
+      let(:student) {create(:student)}
+      let!(:follower) {create(:follower, section: section, student_user: student, user: teacher)}
+
+      it 'can access AI Chat Lab' do
+        _(student.student_can_access_ai_chat_lab?).must_equal true
+      end
+    end
+
+    context 'when user is a student with verified teacher in a section with DISABLED access' do
+      let(:teacher) {create(:authorized_teacher)}
+      let(:section) {create(:section, teacher: teacher, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:DISABLED])}
+      let(:student) {create(:student)}
+      let!(:follower) {create(:follower, section: section, student_user: student, user: teacher)}
+
+      it 'cannot access AI Chat Lab' do
+        _(student.student_can_access_ai_chat_lab?).must_equal false
+      end
+    end
+
+    context 'when user is a student with verified teacher but no section configured' do
       let(:teacher) {create(:authorized_teacher)}
       let(:section) {create(:section, teacher: teacher)}
       let(:student) {create(:student)}
@@ -4481,12 +4502,76 @@ class UserTest < ActiveSupport::TestCase
 
     context 'when user is a student with regular teacher' do
       let(:teacher) {create(:teacher)}
-      let(:section) {create(:section, teacher: teacher)}
+      let(:section) {create(:section, teacher: teacher, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ENABLED])}
       let(:student) {create(:student)}
       let!(:follower) {create(:follower, section: section, student_user: student, user: teacher)}
 
       it 'does not have access' do
         _(student.student_can_access_ai_chat_lab?).must_equal false
+      end
+    end
+  end
+
+  describe '#ai_chat_access_level' do
+    context 'when user is a teacher' do
+      let(:teacher) {create(:teacher)}
+
+      it 'returns ENABLED' do
+        _(teacher.ai_chat_access_level).must_equal Section::AI_CHAT_ACCESS_LEVELS[:ENABLED]
+      end
+    end
+
+    context 'when user is a student in a section with ENABLED access' do
+      let(:teacher) {create(:authorized_teacher)}
+      let(:section) {create(:section, teacher: teacher, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ENABLED])}
+      let(:student) {create(:student)}
+      let!(:follower) {create(:follower, section: section, student_user: student, user: teacher)}
+
+      it 'returns ENABLED' do
+        _(student.ai_chat_access_level).must_equal Section::AI_CHAT_ACCESS_LEVELS[:ENABLED]
+      end
+    end
+
+    context 'when user is a student in a section with ESSENTIAL_ONLY access' do
+      let(:teacher) {create(:authorized_teacher)}
+      let(:section) {create(:section, teacher: teacher, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY])}
+      let(:student) {create(:student)}
+      let!(:follower) {create(:follower, section: section, student_user: student, user: teacher)}
+
+      it 'returns ESSENTIAL_ONLY' do
+        _(student.ai_chat_access_level).must_equal Section::AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY]
+      end
+    end
+
+    context 'when user is a student in a section with DISABLED access' do
+      let(:teacher) {create(:authorized_teacher)}
+      let(:section) {create(:section, teacher: teacher, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:DISABLED])}
+      let(:student) {create(:student)}
+      let!(:follower) {create(:follower, section: section, student_user: student, user: teacher)}
+
+      it 'returns DISABLED' do
+        _(student.ai_chat_access_level).must_equal Section::AI_CHAT_ACCESS_LEVELS[:DISABLED]
+      end
+    end
+
+    context 'when user is a student with no sections' do
+      let(:student) {create(:student)}
+
+      it 'returns DISABLED' do
+        _(student.ai_chat_access_level).must_equal Section::AI_CHAT_ACCESS_LEVELS[:DISABLED]
+      end
+    end
+
+    context 'when student is in multiple sections and one has ENABLED access' do
+      let(:teacher) {create(:authorized_teacher)}
+      let(:section_disabled) {create(:section, teacher: teacher, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:DISABLED])}
+      let(:section_enabled) {create(:section, teacher: teacher, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ENABLED])}
+      let(:student) {create(:student)}
+      let!(:follower_disabled) {create(:follower, section: section_disabled, student_user: student, user: teacher)}
+      let!(:follower_enabled) {create(:follower, section: section_enabled, student_user: student, user: teacher)}
+
+      it 'returns ENABLED' do
+        _(student.ai_chat_access_level).must_equal Section::AI_CHAT_ACCESS_LEVELS[:ENABLED]
       end
     end
   end

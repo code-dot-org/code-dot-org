@@ -7,7 +7,7 @@ import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
 import Notification, {
@@ -379,8 +379,7 @@ class ManageStudentsTable extends Component {
       {
         sectionId: this.props.sectionId,
         sectionLoginType: this.props.loginType,
-      },
-      PLATFORMS.STATSIG
+      }
     );
   }
 

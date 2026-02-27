@@ -2,7 +2,9 @@
 
 # This script deletes duplicate LTI course records
 # See: https://codedotorg.atlassian.net/browse/P20-1796
+# Note: Manually review any duplicate records before running this script to ensure that the correct record is retained.
 
+require_relative '../../../dashboard/config/environment'
 require 'optparse'
 options = {dry_run: false, limit: 10_000, batch_size: 1000}
 OptionParser.new do |opts|
@@ -37,7 +39,6 @@ print "Proceed with options #{options} (y/N): "
 abort unless $stdin.gets&.strip&.downcase == 'y'
 
 require 'ruby-progressbar'
-require_relative '../../../dashboard/config/environment'
 
 duplicate_pairs_query = LtiCourse.group(:lti_integration_id, :context_id).having('COUNT(*) > 1').limit(options[:limit])
 duplicate_pairs_count = LtiCourse.unscoped.from(duplicate_pairs_query.select('1'), :dupes).count
@@ -51,7 +52,7 @@ while progress_bar.progress < options[:limit]
     duplicate_pair_query = LtiCourse.where(lti_integration_id:, context_id:)
     progress_bar.log "\n[Duplicate data] lti_integration_id: #{lti_integration_id}, context_id: #{context_id}".bold.cyan
 
-    relevant_record = duplicate_pair_query.order(updated_at: :desc, created_at: :desc).first
+    relevant_record = duplicate_pair_query.order(:updated_at, :created_at).first
     progress_bar.log "[Relevant record] #{relevant_record.inspect}".green
 
     duplicate_pair_query.where.not(id: relevant_record.id).find_each do |duplicate_record|

@@ -1,9 +1,6 @@
 import Alert from '@code-dot-org/component-library/alert';
 import type {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  BodyFourText,
-  BodyThreeText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -94,10 +91,20 @@ const Console: React.FunctionComponent = () => {
   const formatLogWithTimestamp = (log: ConsoleEntry) => {
     return (
       <div className={moduleStyles.consoleLogEntry}>
-        <BodyThreeText>{log.message}</BodyThreeText>
-        <BodyFourText className={moduleStyles.timestamp}>
+        <Typography
+          variant="body3"
+          gutterBottom
+          className={moduleStyles.consoleLogMessage}
+        >
+          {log.message}
+        </Typography>
+        <Typography
+          className={moduleStyles.timestamp}
+          variant="body4"
+          gutterBottom
+        >
           {log.timestamp}
-        </BodyFourText>
+        </Typography>
       </div>
     );
   };
