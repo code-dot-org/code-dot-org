@@ -27,6 +27,7 @@
 class Weblab2 < Level
   include Widget2Helper
   validate :validate_ai_tutor_prompt_settings
+  validate :validate_widget2
 
   serialized_attrs %w(
     start_sources
@@ -97,6 +98,16 @@ class Weblab2 < Level
         answer_types.length >= 1 &&
         answer_types.all?(String)
       errors.add(:ai_tutor_prompt_settings, 'must contain at least one answer type.')
+    end
+  end
+
+  private def validate_widget2
+    return if widget2.nil?
+    unless widget2.is_a?(Hash) && widget2['id'].is_a?(String)
+      errors.add(:widget2, 'must be a hash containing an id string.')
+    end
+    if widget2['parameters'] && !widget2['parameters'].is_a?(Hash)
+      errors.add(:widget2, 'parameters must be a hash if present.')
     end
   end
 end
