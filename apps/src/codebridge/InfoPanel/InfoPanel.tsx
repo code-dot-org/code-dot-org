@@ -28,11 +28,15 @@ import moduleStyles from './styles/info-panel.module.scss';
 interface InfoPanelProps {
   style?: React.CSSProperties;
   className?: string;
+  'data-tour-target'?: string;
+  isOnboardingTourEnabled?: boolean;
 }
 
 export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
   style,
   className,
+  'data-tour-target': dataTourTarget,
+  isOnboardingTourEnabled = true,
 }) => {
   const {
     levelProperties,
@@ -133,7 +137,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
   };
 
   return (
-    <div style={style} className={className}>
+    <div style={style} className={className} data-tour-target={dataTourTarget}>
       <ResourcePanel
         isRunning={isRunning}
         hasRun={hasRun}
@@ -156,7 +160,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
         aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
         aiTutorChatButtonData={aiTutorChatButtonData}
         isValidationTourEnabled={appName === 'pythonlab'}
-        isOnboardingTourEnabled={true}
+        isOnboardingTourEnabled={isOnboardingTourEnabled}
         aiTutorSystemPromptName={aiTutorSystemPromptName}
         aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
         documentationUrl={

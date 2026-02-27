@@ -65,6 +65,8 @@ experiments.ACCEPT_REJECT_UNIFIED_DIFF = 'accept-reject-unified-diff';
 experiments.ACCEPT_REJECT_SPLIT_DIFF = 'accept-reject-split-diff';
 // Show debug panel in Web Lab 2
 experiments.WEBLAB2_DEBUG_PANEL = 'weblab2-show-debug';
+// Run Shepherd.js walkthrough in Web Lab 2
+experiments.WEBLAB2_SHEPHERD_TOUR = 'weblab2-shepherd-tour';
 // Enable the new teacher dashboard student snapshot page and features
 experiments.STUDENT_SNAPSHOT = 'student-snapshot';
 
