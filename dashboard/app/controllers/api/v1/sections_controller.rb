@@ -112,7 +112,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
 
     # If assigning a new course, derive the new ai_chat_access_level, otherwise leave it as-is.
     is_updating_course = @course && @course.id != section.course_id
-    ai_chat_access_level = is_updating_course ? AichatAccessHelper.get_ai_chat_access_level(@course, section.ai_chat_access_level) : params[:ai_chat_access_level]
+    ai_chat_access_level = is_updating_course ? AichatAccessHelper.compute_ai_chat_access_level(@course, section.ai_chat_access_level) : params[:ai_chat_access_level]
 
     # TODO: (madelynkasula) refactor to use strong params
     fields = {}
