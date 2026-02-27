@@ -137,7 +137,8 @@ export const HTMLPreview: React.FC = () => {
   const hasSubmittedPredictResponse = useAppSelector(
     isPredictResponseSubmitted
   );
-  const allowUserScripts = !isPredictLevel || hasSubmittedPredictResponse;
+  const allowUserScripts =
+    !isPredictLevel || hasSubmittedPredictResponse || isStartMode;
   const canNavigateBack = navigationHistoryIndex > 0;
   const canNavigateForward =
     navigationHistoryIndex < navigationHistory.length - 1;
