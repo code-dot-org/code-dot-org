@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 import RawJsonEditor from './RawJsonEditor';
 
 interface EditWidget2Props {
-  initialValue: Widget2;
+  initialValue: Widget2 | undefined;
   widget2Ids: string[];
 }
 
