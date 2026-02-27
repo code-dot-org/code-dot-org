@@ -24,7 +24,7 @@
           %br/
           = sanitize(t('footer.art_from_html_old', current_year: Time.now.year), tags: %w(a br), attributes: %w(href))
           %br/
-          = Cdo::Brand.trademark_html(current_year: Time.now.year)
+          = Cdo::Brand.trademark_html
           %br/
           = sanitize(t('footer.built_on_github'), tags: %w(a br), attributes: %w(href))
         %div.powered-by-aws

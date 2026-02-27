@@ -63,9 +63,9 @@ module Cdo
     end
 
     # Get the trademark HTML for the current brand.
-    # @param current_year [Integer]
     # @return [String] HTML-safe trademark string with placeholders filled
-    def self.trademark_html(current_year:)
+    def self.trademark_html
+      current_year = Time.now.year
       template = current_brand_configuration[:trademark_html]
       html = format(template, current_year: current_year)
       ActionController::Base.helpers.sanitize(
