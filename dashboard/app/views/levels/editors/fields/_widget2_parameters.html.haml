@@ -1,5 +1,0 @@
-#widget2_parameters_editor
-
-- content_for :body_scripts do
-  %script{src: webpack_asset_path('js/levels/editors/fields/_widget2_parameters.js'),
-    data: {widget2parameters: (@level.properties['widget2_parameters'] || {}).to_json}}

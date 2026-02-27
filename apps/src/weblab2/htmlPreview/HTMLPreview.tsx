@@ -60,7 +60,7 @@ export const HTMLPreview: React.FC = () => {
   const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
   const {levelProperties} = useCodebridgeContext();
   const levelId = levelProperties.id;
-  const widget2Parameters = levelProperties.widget2Parameters;
+  const widget2 = levelProperties.widget2;
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const previewContainerRef = useRef<HTMLDivElement | null>(null);
   const previewUrl = useMemo(() => {
@@ -326,7 +326,7 @@ export const HTMLPreview: React.FC = () => {
             {
               type: IframeMessageType.SET_SOURCE,
               source: debouncedSource,
-              parameters: widget2Parameters,
+              parameters: widget2?.parameters,
             },
             previewUrl
           );
@@ -374,7 +374,7 @@ export const HTMLPreview: React.FC = () => {
     navigationHistoryIndex,
     debouncedSource,
     dispatch,
-    widget2Parameters,
+    widget2?.parameters,
   ]);
 
   useEffect(() => {
@@ -423,12 +423,12 @@ export const HTMLPreview: React.FC = () => {
         {
           type: IframeMessageType.SET_SOURCE,
           source: debouncedSource,
-          parameters: widget2Parameters,
+          parameters: widget2?.parameters,
         },
         previewUrl
       );
     }
-  }, [previewUrl, debouncedSource, isIframeLoaded, widget2Parameters]);
+  }, [previewUrl, debouncedSource, isIframeLoaded, widget2?.parameters]);
 
   // Inform the inner preview when we start/finish loading the level,
   // so it can avoid showing outdated content while we are loading.

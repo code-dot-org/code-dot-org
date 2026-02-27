@@ -43,7 +43,6 @@ class Weblab2 < Level
     level_system_prompt
     ai_tutor_prompt_answer_types
     widget2
-    widget2_parameters
   )
 
   def self.create_from_level_builder(params, level_params)
@@ -78,13 +77,13 @@ class Weblab2 < Level
     # If this is a widget2 level or we are editing widget2 starter sources,
     # then startSources will come from the files in the repo, rather than
     # that serialized into the level file.
-    widget2_id = properties["widget2"] || widget2_start_sources
+    widget2_id = properties.dig("widget2", "id") || widget2_start_sources
     if widget2_id
       properties_camelized[:startSources] = get_widget2_sources(widget2_id)
     end
 
     # And if this is a widget2 level, then show it as a widget.
-    if properties["widget2"]
+    if properties.dig("widget2", "id")
       properties_camelized[:widgetView] = true
     end
 
