@@ -1,7 +1,4 @@
-import {
-  BodyTwoText,
-  Heading3,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useState, useCallback, useRef} from 'react';
@@ -10,7 +7,7 @@ import {Provider} from 'react-redux';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {showVideoDialog} from '@cdo/apps/code-studio/videos';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import InfoHelpTip from '@cdo/apps/sharedComponents/InfoHelpTip';
@@ -20,7 +17,6 @@ import Notification, {
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
-import experiments from '@cdo/apps/util/experiments';
 import {navigateToHref} from '@cdo/apps/utils';
 import {
   CapLinks,
@@ -145,22 +141,18 @@ export default function SectionsSetUpContainer({
     course offerings controller function to populate previousVersionYear and newVersionYear.
     */
     if (isNewSection) {
-      analyticsReporter.sendEvent(
-        EVENTS.SECTION_SETUP_COMPLETED,
-        {
-          sectionUnitId: section.course?.unitId,
-          sectionCurriculumLocalizedName: section.course?.displayName,
-          sectionCurriculum: section.course?.courseOfferingId, //this is course Offering id
-          sectionCurriculumVersionYear: section.course?.versionYear,
-          sectionGrade: section.grade ? section.grade[0] : null,
-          sectionLockSelection: section.restrictSection,
-          sectionName: section.name,
-          sectionPairProgramSelection: section.pairingAllowed,
-          flowVersion: NEW,
-          isOnTeacherDashboard: location.pathname.includes('teacher_dashboard'),
-        },
-        PLATFORMS.STATSIG
-      );
+      analyticsReporter.sendEvent(EVENTS.SECTION_SETUP_COMPLETED, {
+        sectionUnitId: section.course?.unitId,
+        sectionCurriculumLocalizedName: section.course?.displayName,
+        sectionCurriculum: section.course?.courseOfferingId, //this is course Offering id
+        sectionCurriculumVersionYear: section.course?.versionYear,
+        sectionGrade: section.grade ? section.grade[0] : null,
+        sectionLockSelection: section.restrictSection,
+        sectionName: section.name,
+        sectionPairProgramSelection: section.pairingAllowed,
+        flowVersion: NEW,
+        isOnTeacherDashboard: location.pathname.includes('teacher_dashboard'),
+      });
     }
     /*
     We want to send a 'curriculum assigned' event if this is not a new section
@@ -176,25 +168,21 @@ export default function SectionsSetUpContainer({
         initialSection &&
         section.course?.unitId !== initialSection.course?.unitId)
     ) {
-      analyticsReporter.sendEvent(
-        EVENTS.CURRICULUM_ASSIGNED,
-        {
-          sectionName: section.name,
-          sectionId: section.id,
-          sectionLoginType: section.loginType,
-          previousUnitId: initialSection.course?.unitId,
-          previousCourseId: initialSection.course?.courseOfferingId,
-          previousCourseVersionId: initialSection.course?.versionId,
-          previousVersionYear: null,
-          newUnitId: section.course?.unitId,
-          newCourseId: section.course?.courseOfferingId,
-          newCourseVersionId: section.course?.courseVersionId,
-          newVersionYear: null,
-          flowVersion: NEW,
-          isOnTeacherDashboard: location.pathname.includes('teacher_dashboard'),
-        },
-        PLATFORMS.STATSIG
-      );
+      analyticsReporter.sendEvent(EVENTS.CURRICULUM_ASSIGNED, {
+        sectionName: section.name,
+        sectionId: section.id,
+        sectionLoginType: section.loginType,
+        previousUnitId: initialSection.course?.unitId,
+        previousCourseId: initialSection.course?.courseOfferingId,
+        previousCourseVersionId: initialSection.course?.versionId,
+        previousVersionYear: null,
+        newUnitId: section.course?.unitId,
+        newCourseId: section.course?.courseOfferingId,
+        newCourseVersionId: section.course?.courseVersionId,
+        newVersionYear: null,
+        flowVersion: NEW,
+        isOnTeacherDashboard: location.pathname.includes('teacher_dashboard'),
+      });
     }
   };
 
@@ -360,28 +348,16 @@ export default function SectionsSetUpContainer({
           icon={caret(isOpen)}
           onClick={toggleIsOpen}
         >
-          <Heading3>{sectionTitle()}</Heading3>
+          <Typography variant="h3" gutterBottom>
+            {sectionTitle()}
+          </Typography>
         </Button>
         <div>{isOpen && sectionContent()}</div>
       </div>
     );
   };
 
-  // TODO-AITUTOR: can we allow this for any course that has a unit with Unit.has_ai_tutor_level?
-  // TODO: This will probably eventually be a setting on the course similar to textToSpeechEnabled
-  // The ticket to track that work is https://codedotorg.atlassian.net/browse/CT-1063
-  const aiTutorAllowedForCourse = section =>
-    [
-      '[PILOT] Programming Fundamentals (AI Tutor)',
-      'Computer Science A',
-    ].includes(section?.course?.displayName);
-
   const renderAdvancedSettings = () => {
-    const aiTutorAvailable =
-      experiments.isEnabledAllowingQueryString(
-        experiments.AI_CHAT_NEW_PERMISSIONS
-      ) && aiTutorAllowedForCourse(sections[0]);
-
     return renderExpandableSection(
       'uitest-expandable-settings',
       () => i18n.advancedSettings(),
@@ -391,7 +367,6 @@ export default function SectionsSetUpContainer({
             updateSectionAndSetEditInProgress(0, key, val)
           }
           section={sections[0]}
-          aiTutorAvailable={aiTutorAvailable}
           label={i18n.pairProgramming()}
         />
       ),
@@ -441,19 +416,21 @@ export default function SectionsSetUpContainer({
     <form id={FORM_ID}>
       {isNewSection && (
         <>
-          <BodyTwoText className={moduleStyles.noMarginBottomParagraph}>
+          <Typography
+            className={moduleStyles.noMarginBottomParagraph}
+            variant="body2"
+            gutterBottom
+          >
             {i18n.setUpClassSectionsSubheader()}
-          </BodyTwoText>
-          <BodyTwoText>
+          </Typography>
+          <Typography variant="body2" gutterBottom>
             <a onClick={onURLClick} className={moduleStyles.textPopUp}>
               {i18n.setUpClassSectionsSubheaderLink()}
             </a>
-          </BodyTwoText>
+          </Typography>
         </>
       )}
-
       {renderChildAccountPolicyNotification()}
-
       <SingleSectionSetUp
         sectionNum={1}
         section={sections[0]}
@@ -466,10 +443,11 @@ export default function SectionsSetUpContainer({
         isNewSection={isNewSection}
         isLoading={isLoading}
       />
-
       {isLoading ? (
         <>
-          <Heading3>{i18n.assignCurriculum()}</Heading3>
+          <Typography variant="h3" gutterBottom>
+            {i18n.assignCurriculum()}
+          </Typography>
           <div className={moduleStyles.loadingSpinner}>
             <Spinner />
           </div>

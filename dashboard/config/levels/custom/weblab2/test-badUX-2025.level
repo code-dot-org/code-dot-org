@@ -1,0 +1,230 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-02-27T05:14:47.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "true",
+    "initial_view_mode": "preview",
+    "ai_tutor_prompt_answer_types": [
+      "ask"
+    ],
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "assets",
+          "parentId": "0",
+          "open": false
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <title>Adopt-a-Pet</title>\n  <link rel=\"stylesheet\" href=\"styles.css\" />\n  <script defer src=\"controls.js\"></script>\n</head>\n\n<body>\n\n  <div class=\"layout\">\n    <!-- CONTROL PANEL -->\n    <aside class=\"controls\" aria-label=\"Design controls\">\n      <h2>Redesign Controls</h2>\n\n      <div class=\"control-group\">\n        <h3>Navigation</h3>\n\n        <label for=\"navPosition\">Nav position</label>\n        <select id=\"navPosition\">\n          <option value=\"bottom\">Bottom</option>\n          <option value=\"top\">Top</option>\n        </select>\n\n        <label for=\"navSize\">Nav size</label>\n        <input id=\"navSize\" type=\"range\" min=\"10\" max=\"20\" value=\"9\" />\n        <label>\n          <input id=\"showBack\" type=\"checkbox\" checked />\n          Show “Back”\n        </label>\n      </div>\n\n      <div class=\"control-group\">\n        <h3>Readability</h3>\n\n        <label for=\"textSize\">Text size</label>\n        <input id=\"textSize\" type=\"range\" min=\"12\" max=\"20\" value=\"12\" />\n\n        <label for=\"lineHeight\">Line spacing</label>\n        <input id=\"lineHeight\" type=\"range\" min=\"11\" max=\"18\" value=\"11\" />\n        \n        <label for=\"spacing\">Spacing</label>\n        <input id=\"spacing\" type=\"range\" min=\"6\" max=\"28\" value=\"6\" />\n\n        <label>\n        <input id=\"portraitFit\" type=\"checkbox\" />\n        Gallery Card Orientation\n        </label>\n      </div>\n\n      <div class=\"control-group\">\n        <h3>Color Contrast</h3>\n\n        <label for=\"contrast\">Contrast</label>\n        <input id=\"contrast\" type=\"range\" min=\"0\" max=\"100\" value=\"0\" />\n\n      </div>\n\n      <div class=\"control-group\">\n        <button id=\"reset\" type=\"button\">Reset to Bad</button>\n      </div>\n    </aside>\n\n    <!-- APP PREVIEW -->\n    <div class=\"app\" aria-label=\"Adopt a Pet App\">\n\n      <!-- Header -->\n      <header>\n        <div>\n          <img src=\"assets/logo.png\" alt=\"PawPrint Shelter Logo\">\n          <span>PawPrint Shelter</span>\n        </div>\n        <div>\n          <a href=\"#contact\">Contact</a>\n        </div>\n      </header>\n\n      <!-- Hero Section -->\n      <section>\n        <img src=\"assets/hero-dog.jpg\" alt=\"Happy dog ready for adoption\">\n        <div>\n          <h1>Adopt a Pet Today</h1>\n          <p>Find your new best friend. Browse our available dogs and cats below.</p>\n        </div>\n      </section>\n\n      <!-- Filters -->\n      <section>\n        <h2>Search</h2>\n        <input type=\"text\" placeholder=\"Search by name\">\n        <select>\n          <option>All Animals</option>\n          <option>Dogs</option>\n          <option>Cats</option>\n        </select>\n        <select>\n          <option>All Ages</option>\n          <option>Puppy / Kitten</option>\n          <option>Young</option>\n          <option>Adult</option>\n          <option>Senior</option>\n        </select>\n        <button>Apply</button>\n      </section>\n\n      <!-- Pet Grid -->\n      <main>\n        <article>\n          <img src=\"assets/adopt-dog-1.jpg\" alt=\"Rocky the dog\">\n          <h3>Rocky</h3>\n          <p>Breed: Labrador Mix</p>\n          <p>Age: 2 years</p>\n          <p>\n            Rocky is energetic and loves long walks, squeaky toys, meeting new people,\n            playing fetch endlessly, and sitting right in the middle of wherever you\n            are trying to walk because he thinks he is much smaller than he actually is.\n          </p>\n          <button>Adopt Me</button>\n          <button>Learn More</button>\n        </article>\n\n        <article>\n          <img src=\"assets/adopt-dog-2.jpg\" alt=\"Bella the dog\">\n          <h3>Bella</h3>\n          <p>Breed: Golden Retriever</p>\n          <p>Age: 4 years</p>\n          <p>\n            Bella is calm, affectionate, and enjoys being around families. She loves\n            belly rubs, gentle walks, and will happily follow you from room to room\n            just to make sure she is included in absolutely everything.\n          </p>\n          <button>Adopt Me</button>\n          <button>Learn More</button>\n        </article>\n\n        <article>\n          <img src=\"assets/adopt-dog-3.jpg\" alt=\"Max the dog\">\n          <h3>Max</h3>\n          <p>Breed: German Shepherd</p>\n          <p>Age: 1 year</p>\n          <p>\n            Max is smart and highly trainable. He needs an active home where he can\n            learn new skills, play outside, and burn off energy throughout the day.\n            He thrives with structure and clear expectations.\n          </p>\n          <button>Adopt Me</button>\n          <button>Learn More</button>\n        </article>\n\n        <article>\n          <img src=\"assets/adopt-cat-1.jpg\" alt=\"Luna the cat\">\n          <h3>Luna</h3>\n          <p>Breed: Domestic Short Hair</p>\n          <p>Age: 3 years</p>\n          <p>\n            Luna is quiet and observant. She enjoys sunny windowsills, gentle pets,\n            and curling up next to you in the evenings. She would do best in a calm\n            home where she can relax at her own pace.\n          </p>\n          <button>Adopt Me</button>\n          <button>Learn More</button>\n        </article>\n\n        <article>\n          <img src=\"assets/adopt-cat-2.jpg\" alt=\"Milo the cat\">\n          <h3>Milo</h3>\n          <p>Breed: Tabby</p>\n          <p>Age: 6 months</p>\n          <p>\n            Milo is playful, curious, and always exploring. He loves chasing toy mice,\n            climbing onto shelves he probably should not be on, and investigating\n            every bag that enters the house.\n          </p>\n          <button>Adopt Me</button>\n          <button>Learn More</button>\n        </article>\n\n        <article>\n          <img src=\"assets/adopt-cat-3.jpg\" alt=\"Chloe the cat\">\n          <h3>Chloe</h3>\n          <p>Breed: Siamese Mix</p>\n          <p>Age: 5 years</p>\n          <p>\n            Chloe is affectionate and talkative. She enjoys interactive play and will\n            happily keep you company throughout the day. She bonds closely with her\n            person and loves attention.\n          </p>\n          <button>Adopt Me</button>\n          <button>Learn More</button>\n        </article>\n      </main>\n\n      <!-- Navigation -->\n      <nav>\n        <a href=\"#\">\n          <img src=\"assets/home.png\" alt=\"Home icon\">\n          <div>Home</div>\n        </a>\n        <a href=\"#\">\n          <img src=\"assets/dogs.png\" alt=\"Dogs icon\">\n          <div>Dogs</div>\n        </a>\n        <a href=\"#\">\n          <img src=\"assets/cats.png\" alt=\"Cats icon\">\n          <div>Cats</div>\n        </a>\n        <a href=\"#\">\n          <img src=\"assets/small-pets.png\" alt=\"Small pets icon\">\n          <div>Small Pets</div>\n        </a>\n        <a class=\"nav-back\" href=\"#\">\n          <img src=\"assets/back.png\" alt=\"Back icon\">\n          <div>Back</div>\n        </a>\n      </nav>\n\n      <!-- Footer -->\n      <footer id=\"contact\">\n        <p>PawPrint Shelter</p>\n        <p>123 Rescue Lane</p>\n        <p>Open 7 Days a Week</p>\n        <p>Email: adopt@pawprint.org</p>\n      </footer>\n\n    </div>\n  </div>\n\n</body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "back.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX-2025/uuid/09491530-0ed9-42c0-98a7-3c936b2a3c4d.png",
+          "type": "starter",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "dogs.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX-2025/uuid/6d38837c-ab18-42ac-8726-ed66dc82850d.png",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "cats.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX-2025/uuid/c32d3773-54b2-48e6-9915-363e4ce339a8.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "contact.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX-2025/uuid/463dfe93-8829-4050-8501-a152a16d683e.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "home.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX-2025/uuid/89763957-9eba-4b9b-8bbc-8f14f033fa46.png",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "logo.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX-2025/uuid/3c332b20-c0d4-40d2-bac3-b0f36e9ca674.png",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "dog1.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX-2025/uuid/7a48461f-6435-42c2-8f71-aa29c5434639.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "cat1.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX-2025/uuid/8d42a77f-d473-46cb-96a1-fc2a6dc61d7d.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "11": {
+          "id": "11",
+          "name": "hero-dog.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX-2025/uuid/8f326ffd-a951-434b-9b48-590b6dd949ef.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "12": {
+          "id": "12",
+          "name": "adopt-cat-3.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX-2025/uuid/e86bc369-2fe4-45f1-a480-61a34642da37.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "13": {
+          "id": "13",
+          "name": "adopt-dog-2.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX-2025/uuid/418d93c0-a406-410d-9efc-0ee7f3a03726.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "14": {
+          "id": "14",
+          "name": "adopt-dog-1.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX-2025/uuid/58958465-3e64-418d-90f9-3ccbe40598b4.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "15": {
+          "id": "15",
+          "name": "adopt-cat-2.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX-2025/uuid/2ba657cd-63b2-4905-8dc6-4005c0e61843.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "16": {
+          "id": "16",
+          "name": "controls.js",
+          "contents": "// controls.js\n// Baseline BAD = slider midpoint.\n// Left = worse, Right = better.\n// Applies changes only to .app.\n\nconst $ = (id) => document.getElementById(id);\n\nconst app = document.querySelector(\".app\");\nconst nav = document.querySelector(\".app nav\");\nconst backItem = document.querySelector(\".app .nav-back\");\n\n// Remember where nav originally lived so we can restore it.\nconst navPlaceholder = document.createComment(\"nav-placeholder\");\nif (app && nav) {\n  nav.parentNode.insertBefore(navPlaceholder, nav);\n} else {\n  console.error(\"Missing .app or .app nav in HTML.\");\n}\n\nfunction setVar(name, value) {\n  if (!app) return;\n  app.style.setProperty(name, value);\n}\n\nfunction setBackVisibility(isVisible) {\n  if (!backItem) return;\n  backItem.style.display = isVisible ? \"\" : \"none\";\n}\n\nfunction moveNavToTop() {\n  if (!app || !nav) return;\n  const header = app.querySelector(\"header\");\n  if (header) header.after(nav); // nav right under header\n}\n\nfunction moveNavToBottom() {\n  if (!navPlaceholder || !nav) return;\n  navPlaceholder.parentNode.insertBefore(nav, navPlaceholder);\n}\n\nfunction setNavPosition(position) {\n  if (!nav || !app) return;\n\n  nav.classList.remove(\"nav-top\", \"nav-bottom\");\n\n  if (position === \"top\") {\n    moveNavToTop();\n    nav.classList.add(\"nav-top\");\n    app.classList.add(\"nav-is-top\");\n  } else {\n    moveNavToBottom();\n    nav.classList.add(\"nav-bottom\");\n    app.classList.remove(\"nav-is-top\");\n  }\n}\n\n/* ============\n   Helpers\n   ============ */\nfunction clamp(n, min, max) {\n  return Math.min(max, Math.max(min, n));\n}\n\nfunction lerp(a, b, t) {\n  return a + (b - a) * t;\n}\n\n// Map slider value to left/right of midpoint.\n// Returns t in [-1, +1], where 0 = midpoint\nfunction signedT(value, min, max) {\n  const mid = (min + max) / 2;\n  if (value === mid) return 0;\n\n  if (value < mid) {\n    // left half => 0..-1\n    return -((mid - value) / (mid - min));\n  }\n  // right half => 0..+1\n  return (value - mid) / (max - mid);\n}\n\n/* ============\n   Baselines (your current \"bad\" state)\n   These are the values at slider midpoint.\n   ============ */\nconst BASE_BAD = {\n  cardTextPx: 11,\n  cardLineHeight: 1.10,\n  gapPx: 6,\n\n  // contrast \"bad palette\"\n  bg: [246, 246, 246],\n  text: [207, 207, 207],\n  muted: [215, 215, 215],\n  btnBg: [233, 233, 233],\n  btnText: [216, 216, 216],\n\n  navFontPx: 9,\n  navIconPx: 16,\n};\n\n// Worse (left end) + Better (right end) targets\nconst TARGETS = {\n  cardTextPx: { worse: 8, better: 18 },\n  cardLineHeight: { worse: 1.00, better: 1.80 },\n  gapPx: { worse: 0, better: 28 },\n\n  // Contrast: left end = even LOWER contrast than baseline,\n  // right end = clear contrast.\n  paletteWorse: {\n    bg: [242, 242, 242],\n    text: [225, 225, 225],\n    muted: [230, 230, 230],\n    btnBg: [238, 238, 238],\n    btnText: [228, 228, 228],\n  },\n  paletteBetter: {\n    bg: [255, 255, 255],\n    text: [34, 34, 34],\n    muted: [68, 68, 68],\n    btnBg: [31, 31, 31],\n    btnText: [255, 255, 255],\n  },\n\n  navFontPx: { worse: 7, better: 16 },\n  navIconPx: { worse: 12, better: 32 },\n};\n\nfunction rgb(arr) {\n  return `rgb(${arr[0]}, ${arr[1]}, ${arr[2]})`;\n}\n\nfunction mixRGB(from, to, t) {\n  return [\n    Math.round(lerp(from[0], to[0], t)),\n    Math.round(lerp(from[1], to[1], t)),\n    Math.round(lerp(from[2], to[2], t)),\n  ];\n}\n\n/* ============\n   Apply functions (midpoint = bad baseline)\n   Slider min/max are taken from the HTML attributes.\n   ============ */\nfunction applyTextSize() {\n  const el = $(\"textSize\");\n  const v = Number(el.value);\n  const min = Number(el.min);\n  const max = Number(el.max);\n  const t = signedT(v, min, max);\n\n  let px;\n  if (t < 0) px = lerp(BASE_BAD.cardTextPx, TARGETS.cardTextPx.worse, -t);\n  else px = lerp(BASE_BAD.cardTextPx, TARGETS.cardTextPx.better, t);\n\n  setVar(\"--card-text\", `${px.toFixed(0)}px`);\n}\n\nfunction applyLineHeight() {\n  const el = $(\"lineHeight\");\n  const v = Number(el.value);\n  const min = Number(el.min);\n  const max = Number(el.max);\n  const t = signedT(v, min, max);\n\n  let lh;\n  if (t < 0) lh = lerp(BASE_BAD.cardLineHeight, TARGETS.cardLineHeight.worse, -t);\n  else lh = lerp(BASE_BAD.cardLineHeight, TARGETS.cardLineHeight.better, t);\n\n  setVar(\"--card-lh\", lh.toFixed(2));\n}\n\nfunction applySpacing() {\n  const el = $(\"spacing\");\n  const v = Number(el.value);\n  const min = Number(el.min);\n  const max = Number(el.max);\n  const t = signedT(v, min, max);\n\n  let gap;\n  if (t < 0) gap = lerp(BASE_BAD.gapPx, TARGETS.gapPx.worse, -t);\n  else gap = lerp(BASE_BAD.gapPx, TARGETS.gapPx.better, t);\n\n  setVar(\"--gap\", `${gap.toFixed(0)}px`);\n}\n\nfunction applyContrast() {\n  const el = $(\"contrast\");\n  const v = Number(el.value);\n  const min = Number(el.min);\n  const max = Number(el.max);\n  const t = signedT(v, min, max);\n\n  // Convert t (-1..+1) to blend from:\n  // worse -> baseline -> better\n  // We’ll blend baseline toward worse or better based on sign.\n  const worse = TARGETS.paletteWorse;\n  const better = TARGETS.paletteBetter;\n\n  const blendToward = (baseArr, targetArr, amt) => mixRGB(baseArr, targetArr, amt);\n\n  const bg = t < 0 ? blendToward(BASE_BAD.bg, worse.bg, -t) : blendToward(BASE_BAD.bg, better.bg, t);\n  const text = t < 0 ? blendToward(BASE_BAD.text, worse.text, -t) : blendToward(BASE_BAD.text, better.text, t);\n  const muted = t < 0 ? blendToward(BASE_BAD.muted, worse.muted, -t) : blendToward(BASE_BAD.muted, better.muted, t);\n  const btnBg = t < 0 ? blendToward(BASE_BAD.btnBg, worse.btnBg, -t) : blendToward(BASE_BAD.btnBg, better.btnBg, t);\n  const btnText = t < 0 ? blendToward(BASE_BAD.btnText, worse.btnText, -t) : blendToward(BASE_BAD.btnText, better.btnText, t);\n\n  setVar(\"--bg\", rgb(bg));\n  setVar(\"--text\", rgb(text));\n  setVar(\"--muted\", rgb(muted));\n  setVar(\"--btn-bg\", rgb(btnBg));\n  setVar(\"--btn-text\", rgb(btnText));\n}\n\nfunction applyNavSize() {\n  const el = $(\"navSize\");\n  const v = Number(el.value);\n  const min = Number(el.min);\n  const max = Number(el.max);\n  const t = signedT(v, min, max);\n\n  let fontPx, iconPx;\n  if (t < 0) {\n    fontPx = lerp(BASE_BAD.navFontPx, TARGETS.navFontPx.worse, -t);\n    iconPx = lerp(BASE_BAD.navIconPx, TARGETS.navIconPx.worse, -t);\n  } else {\n    fontPx = lerp(BASE_BAD.navFontPx, TARGETS.navFontPx.better, t);\n    iconPx = lerp(BASE_BAD.navIconPx, TARGETS.navIconPx.better, t);\n  }\n\n  setVar(\"--nav-font\", `${fontPx.toFixed(0)}px`);\n  setVar(\"--nav-icon\", `${iconPx.toFixed(0)}px`);\n}\n\nfunction applyAll() {\n  applyTextSize();\n  applyLineHeight();\n  applySpacing();\n  applyContrast();\n  applyNavSize();\n}\n\n/* ============\n   Reset + Initialization\n   ============ */\nfunction applyBadBaseline() {\n  // Force the app into the BAD baseline values (not slider ends)\n  setVar(\"--card-text\", `${BASE_BAD.cardTextPx}px`);\n  setVar(\"--card-lh\", `${BASE_BAD.cardLineHeight.toFixed(2)}`);\n  setVar(\"--gap\", `${BASE_BAD.gapPx}px`);\n\n  setVar(\"--bg\", rgb(BASE_BAD.bg));\n  setVar(\"--text\", rgb(BASE_BAD.text));\n  setVar(\"--muted\", rgb(BASE_BAD.muted));\n  setVar(\"--btn-bg\", rgb(BASE_BAD.btnBg));\n  setVar(\"--btn-text\", rgb(BASE_BAD.btnText));\n\n  setVar(\"--nav-font\", `${BASE_BAD.navFontPx}px`);\n  setVar(\"--nav-icon\", `${BASE_BAD.navIconPx}px`);\n\n  setNavPosition(\"bottom\");\n  setBackVisibility(true);\n}\n\nfunction setSlidersToMidpoints() {\n  const mids = (id) => {\n    const el = $(id);\n    const min = Number(el.min);\n    const max = Number(el.max);\n    el.value = String((min + max) / 2);\n  };\n\n  // Put sliders at midpoint (which represents BAD baseline)\n  mids(\"navSize\");\n  mids(\"textSize\");\n  mids(\"lineHeight\");\n  mids(\"spacing\");\n  mids(\"contrast\");\n\n  // Nav position baseline = bottom (bad)\n  $(\"navPosition\").value = \"bottom\";\n  $(\"showBack\").checked = true;\n}\n\nfunction wireControls() {\n  $(\"textSize\").addEventListener(\"input\", applyTextSize);\n  $(\"lineHeight\").addEventListener(\"input\", applyLineHeight);\n  $(\"spacing\").addEventListener(\"input\", applySpacing);\n  $(\"contrast\").addEventListener(\"input\", applyContrast);\n\n  $(\"navPosition\").addEventListener(\"change\", (e) => \n    setNavPosition(e.target.value)\n  );\n\n  $(\"navSize\").addEventListener(\"input\", applyNavSize);\n\n  $(\"showBack\").addEventListener(\"change\", (e) => \n    setBackVisibility(e.target.checked)\n  );\n\n  /* ===== NEW: Portrait image toggle ===== */\n  $(\"portraitFit\").addEventListener(\"change\", (e) => {\n    app.classList.toggle(\"fit-portrait\", e.target.checked);\n  });\n\n  $(\"reset\").addEventListener(\"click\", () => {\n    setSlidersToMidpoints();\n    applyBadBaseline();\n\n    // Make sure portrait toggle resets to BAD baseline (cropped)\n    if ($(\"portraitFit\")) $(\"portraitFit\").checked = false;\n    app.classList.remove(\"fit-portrait\");\n  });\n}\n\nwireControls();\n\n// Initialize: sliders at midpoint (represents BAD baseline), and app is BAD baseline.\nsetSlidersToMidpoints();\napplyBadBaseline();\n\n// After baseline is applied, re-apply mapping so midpoint truly equals baseline (no drift)\napplyAll();",
+          "folderId": "0",
+          "active": false
+        },
+        "17": {
+          "id": "17",
+          "name": "adopt-dog-3.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX-2025/uuid/f7826af0-fb4a-4208-9c1d-647666292c53.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "18": {
+          "id": "18",
+          "name": "adopt-cat-1.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX-2025/uuid/f6f2a9d5-db14-4349-a40d-a535b392040a.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "19": {
+          "id": "19",
+          "name": "styles.css",
+          "contents": "/* styles.css\n   Intentionally BAD UX defaults (for the APP preview only):\n   - Low contrast\n   - Tiny text + poor font choice\n   - Cramped spacing\n   - Awkward nav placement + tiny tap targets\n\n   NOTE: The control panel is intentionally styled to be clean/readable\n   so students can use it without fighting it.\n*/\n\n/* ================= */\n/* App Theme Defaults */\n/* ================= */\n:root{\n  --bg:#f6f6f6;\n  --text:#cfcfcf;\n  --muted:#d7d7d7;\n\n  --border:#efefef;\n  --card:#f7f7f7;\n\n  --btn-bg:#e9e9e9;\n  --btn-text:#d8d8d8;\n  --btn-border:#ededed;\n\n  --base:12px;\n  --lh:1.1;\n  --gap:6px;\n\n  /* nav sizing vars (JS can update these) */\n  --nav-font:9px;\n  --nav-icon:16px;\n\n  --card-text: 11px;\n  --card-lh: 1.10;\n}\n\n*{box-sizing:border-box;}\n\nbody{\n  margin:0;\n  background:#fff;\n}\n\n/* ======================= */\n/* Split Layout (Controls | App) */\n/* ======================= */\n.layout{\n  display:grid;\n  grid-template-columns: 340px 1fr;\n  min-height:100vh;\n}\n\n/* ======================= */\n/* CONTROL PANEL (GOOD UI) */\n/* ======================= */\n.controls{\n  background:#0f172a;\n  color:#e5e7eb;\n  padding:16px;\n  border-right:1px solid #0b1220;\n  position:sticky;\n  top:0;\n  height:100vh;\n  overflow:auto;\n\n  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, \"Noto Sans\", \"Liberation Sans\", sans-serif;\n  line-height:1.4;\n}\n\n.controls h2{\n  margin:0 0 12px 0;\n  font-size:16px;\n  font-weight:650;\n  letter-spacing:0.2px;\n}\n\n.control-group{\n  background:#111c34;\n  border:1px solid rgba(255,255,255,0.08);\n  border-radius:10px;\n  padding:12px;\n  margin-bottom:12px;\n}\n\n.control-group h3{\n  margin:0 0 10px 0;\n  font-size:13px;\n  font-weight:650;\n  color:#f3f4f6;\n}\n\n.controls label{\n  display:block;\n  margin:10px 0 6px 0;\n  font-size:12px;\n  color:#d1d5db;\n}\n\n.controls select{\n  width:100%;\n  padding:8px 10px;\n  border-radius:8px;\n  border:1px solid rgba(255,255,255,0.12);\n  background:#0b1220;\n  color:#f3f4f6;\n  outline:none;\n}\n\n.controls input[type=\"range\"]{\n  width:100%;\n}\n\n.controls input[type=\"checkbox\"]{\n  transform: translateY(1px);\n  margin-right:8px;\n}\n\n.controls button{\n  width:100%;\n  padding:9px 10px;\n  border-radius:10px;\n  border:1px solid rgba(255,255,255,0.14);\n  background:#111827;\n  color:#f3f4f6;\n  font-size:13px;\n  font-weight:600;\n  cursor:pointer;\n  margin-top:8px;\n}\n\n.controls button:hover{\n  background:#0b1220;\n}\n\n.controls button:active{\n  transform: translateY(1px);\n}\n\n/* ======================= */\n/* APP PREVIEW WRAPPER */\n/* (Bad UX styles scoped here) */\n/* ======================= */\n.app{\n  background:var(--bg);\n  color:var(--text);\n  font-family:\"Times New Roman\", Times, serif;\n  font-size:var(--base);\n  line-height:var(--lh);\n  min-height:100vh;\n}\n\n/* =============== */\n/* Header (cramped) */\n/* =============== */\n.app header{\n  display:flex;\n  justify-content:space-between;\n  align-items:center;\n  padding:6px 6px 2px 6px;\n  border-bottom:1px solid var(--border);\n  background:transparent;\n}\n\n.app header img{\n  width:28px;\n  height:28px;\n}\n\n.app header span{\n  font-size:12px;\n  font-weight:400;\n  margin-left:4px;\n}\n\n.app header a{\n  color:var(--muted);\n  text-decoration:none;\n  font-size:10px;\n}\n\n/* ===== */\n/* Hero  */\n/* ===== */\n.app section{\n  padding:8px;\n}\n\n.app section img{\n  width:100%;\n  height:auto;\n  display:block;\n  border:1px solid var(--border);\n}\n\n.app section h1{\n  margin:6px 0 4px 0;\n  font-size:16px;\n  font-weight:400;\n}\n\n.app section p{\n  margin:0;\n  font-size:12px;\n  color:var(--muted);\n}\n\n/* Make hero text hard to read on top of the image */\n.app section:nth-of-type(1){\n  position:relative;\n  padding:0;\n}\n\n.app section:nth-of-type(1) img{\n  height:280px;\n  object-fit:cover;\n  filter:contrast(0.9) brightness(1.05);\n}\n\n.app section:nth-of-type(1) div{\n  position:absolute;\n  top:18px;\n  left:10px;\n  max-width:280px;\n  padding:6px 8px;\n  background:rgba(255,255,255,0.25);\n  border:1px solid rgba(255,255,255,0.25);\n}\n\n/* ========= */\n/* Filters   */\n/* ========= */\n.app section:nth-of-type(2){\n  border:1px solid var(--border);\n  background:var(--card);\n  margin:6px;\n  padding:6px;\n}\n\n.app section:nth-of-type(2) h2{\n  margin:0 0 6px 0;\n  font-size:12px;\n  font-weight:400;\n}\n\n.app section:nth-of-type(2) input,\n.app section:nth-of-type(2) select{\n  font-size:11px;\n  padding:3px 4px;\n  border:1px solid var(--border);\n  background:#fafafa;\n  color:#bdbdbd;\n  width:120px;\n  margin-right:4px;\n  margin-bottom:4px;\n}\n\n.app section:nth-of-type(2) button{\n  border:1px solid var(--btn-border);\n  background:var(--btn-bg);\n  color:var(--btn-text);\n  font-size:11px;\n  padding:4px 6px;\n  cursor:pointer;\n}\n\n/* ========= */\n/* Pet Grid  */\n/* ========= */\n.app main{\n  padding:8px;\n  padding-bottom:80px;\n  display:grid;\n  grid-template-columns:repeat(3, 1fr);\n  gap:var(--gap);\n}\n\n.app article{\n  background:var(--card);\n  border:1px solid var(--border);\n  padding:6px;\n}\n\n.app article img{\n  width:100%;\n  height:160px;\n  object-fit:cover;\n  border:1px solid var(--border);\n}\n\n/* Toggle: show full portrait photos (no cropping) */\n.app.fit-portrait article img{\n  height:260px;        /* taller so portraits can fit */\n  object-fit:contain;  /* no cropping */\n  background:#fff;     /* letterbox */\n}\n\n.app article h3{\n  margin:6px 0 2px 0;\n  font-size: calc(var(--card-text) + 2px);\n  font-weight:400;\n}\n\n.app article p{\n  margin:0 0 4px 0;\n  font-size: var(--card-text);\n  line-height: var(--card-lh);\n  color:var(--muted);\n}\n\n.app article button{\n  border:1px solid var(--btn-border);\n  background:var(--btn-bg);\n  color:var(--btn-text);\n  font-size:11px;\n  padding:4px 6px;\n  cursor:pointer;\n  margin-right:4px;\n}\n\n.app article button:active{\n  transform:translateY(1px);\n}\n\n/* ======= */\n/* Footer  */\n/* ======= */\n.app footer{\n  padding:10px 8px;\n  border-top:1px solid var(--border);\n  color:var(--muted);\n  font-size:11px;\n}\n\n/* ======================= */\n/* NAV (base not fixed; class controls position) */\n/* ======================= */\n.app nav{\n  height:54px;\n  background:#f2f2f2;\n  border-top:1px solid var(--border);\n  display:flex;\n  justify-content:space-around;\n  align-items:center;\n  padding:2px 4px;\n}\n\n.app nav.nav-bottom{\n  position:fixed;\n  left:0;\n  right:0;\n  bottom:0;\n}\n\n.app nav.nav-top{\n  position:sticky;\n  top:0;\n  z-index:10;\n}\n\n.app nav a{\n  width:54px;\n  text-align:center;\n  text-decoration:none;\n  color:var(--text);\n  font-size:var(--nav-font);\n  line-height:1.0;\n}\n\n.app nav img{\n  width:var(--nav-icon);\n  height:var(--nav-icon);\n  display:block;\n  margin:0 auto 2px auto;\n  opacity:0.55;\n}\n\n.app.nav-is-top main{\n  padding-bottom:8px;\n}\n\n/* ======================= */\n/* Optional: simple responsive fallback */\n/* ======================= */\n@media (max-width: 900px){\n  .layout{\n    grid-template-columns: 1fr;\n  }\n  .controls{\n    position:static;\n    height:auto;\n  }\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "20": {
+          "id": "20",
+          "name": "small-pets.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX-2025/uuid/8a9b7821-f318-402c-994e-cb4f3424d7c3.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-27 05:48:20 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-27 06:25:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-27 06:26:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-27 06:28:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-27 06:32:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-27 06:34:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-27 06:35:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-27 06:36:23 +0000\",\"changed\":[\"hide_share_and_remix\",\"widget_view\",\"initial_view_mode\",\"ai_tutor_prompt_answer_types\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-27 06:55:49 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

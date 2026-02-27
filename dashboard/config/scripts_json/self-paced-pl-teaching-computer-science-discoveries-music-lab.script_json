@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-08 19:08:44 UTC",
+    "serialized_at": "2026-02-26 19:54:39 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1205,6 +1205,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-CSDMusicLab-L2-playtogether5"
+        ],
         "progression": "Sequencing & Play Together"
       },
       "bonus": false,
@@ -2402,6 +2405,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-CSDMusicLab-L4-remixes2v2"
+        ],
         "progression": "Functions & Remixes"
       },
       "bonus": false,
@@ -2424,6 +2430,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-CSDMusicLab-L4-remixes3v2"
+        ],
         "progression": "Functions & Remixes"
       },
       "bonus": false,

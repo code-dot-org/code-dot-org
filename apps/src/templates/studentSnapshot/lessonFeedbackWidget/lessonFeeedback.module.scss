@@ -93,9 +93,23 @@ label.typographyLabelTwo {
 
 .actionButtons {
   display: flex;
-  justify-content: flex-end;
   gap: 8px;
+}
+
+.footerWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
+}
+
+.submittedAtText {
+  color: var(--text-neutral-primary, #292f36);
+  font-family: var(--font-family-body, Figtree);
+  font-size: 10px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: var(--font-line-height-body-xs, 19.68px);
 }
 
 .fileTab {

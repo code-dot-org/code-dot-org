@@ -1,0 +1,157 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-02-19T03:53:17.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    \n  </head>\n  <body>\n    \n    <!-- Page Title -->\n    <h1>Willow Grove Animal Shelter</h1>\n    \n    <!-- Shelter information -->\n    <p>At Willow Grove Animal Shelter, we are dedicated to rescuing, rehabilitating, and rehoming animals in need. Our mission is to provide a safe haven for homeless pets and to work tirelessly towards a world where every animal is loved and cared for. Through community engagement, education, and compassion, we strive to create lasting bonds between people and pets.</p>\n    \n  \n    <hr>\n    \n    <!-- Animals up for adoption with name and bulleted list of their information -->\n    <h2>Adoption Showcase</h2>\n    \n    <h3>Bella</h3>\n    \n    <ul>\n      <li>Age: 2 years</li>\n      <li>Breed: Labrador Retriever</li>\n      <li>Personality: Engergetic, friendly, great with kids</li>\n    </ul>\n    \n    \n    <h3>Smoke</h3>\n\n    <ul>\n      <li>Age: 3 years</li>\n      <li>Breed: Russian Blue</li>\n      <li>Personality: Independent, intelligent, loves sunbathing</li>\n    </ul>\n\n    \n    <h3>Max</h3>\n\n    <ul>\n      <li>Age: 5 years</li>\n      <li>Breed: German Shepherd</li>\n      <li>Personality: Loyal, protective, enjoys long walks</li>\n    </ul>\n\n    \n    <h3>Daisy</h3>\n\n    <ul>\n      <li>Age: 6 months</li>\n      <li>Breed: Mixed Breed</li>\n      <li>Personality: Playful, curious, good with other pets</li>\n    </ul>\n\n    \n    <h3>Puck</h3>\n\n    <ul>\n      <li>Age: 4 years</li>\n      <li>Breed: Tuxedo Cat</li>\n      <li>Personality: Calm, affectionate, loves attention</li>\n    </ul>\n\n    \n    <h3>Rocky</h3>\n\n    <ul>\n      <li>Age: 1 year</li>\n      <li>Breed: Beagle</li>\n      <li>Personality: Adventurous, friendly, great sense of smell</li>\n    </ul>\n\n  \n    <hr>\n    \n    <!-- Volunteer Information Section -->\n    <h2>Volunteer Information</h2>\n    \n    <h3>Introduction to Volunteering</h3>\n    \n    <p>Join our dedicated team of volunteers at Willow Grove Animal Shelter and make a difference in the lives of animals. Whether you have a few hours a week or can commit more time, your help is invaluable.</p>\n    \n    <!-- Numbered list of roles available at the shelter for volunteers, bulleted list within numbered list of role responsibilities  -->\n    <h3>Roles and Responsibilities</h3>\n    \n    <ol>\n      <li>Animal Care</li>\n        <ul>\n          <li>Feeding</li>\n          <li>Grooming</li>\n          <li>Exercising pets</li>\n        </ul>\n      <br>\n      <li>Event Assistance</li>\n        <ul>\n          <li>Helping with fundraising events and adoption drives</li>\n        </ul>\n      <br>\n      <li>Shelter Maintenance</li>\n        <ul>\n          <li>Assisting with cleaning and upkeep of the shelter</li>\n        </ul>\n    </ol>\n    \n    <h3>Time Commitment</h3>\n    \n    <p>Flexible schedules available, ranging from a few hours per week to full-time volunteer work.</p>\n    \n    <h3>Contact for Interest</h3>\n    \n    <p>Email: volunteer@willowgroveshelter.org <br>\n      Phone: (555) 123-4567 ext. 2</p>\n    \n    <hr>\n    \n    <!-- Bulleted list of educational information within bulleted list of topic -->\n    <h2>Educational Resources</h2>\n    \n    <h3>Pet Nutrition Guide</h3>\n    \n    <ul>\n      <li>Balanced Diet:</li>\n        <ul>\n          <li>Dogs: High-quality dog food with a balance of protein, carbohydrates, fats, vitamins, and minerals.</li>\n          <li>Cats: Nutrient-rich cat food, high in protein with moderate fat levels, and low carbohydrates.</li>\n        </ul>\n      <br>\n      <li>Feeding Schedule:</li>\n        <ul>\n          <li>Puppies/Kittens: Feed 3-4 times a day.</li>\n          <li>Adult Dogs/Cats: Feed 1-2 times a day.</li>\n        </ul>\n      <br>\n      <li>Special Diets:</li>\n        <ul>\n          <li>Consult a veterinarian for pets with specific dietary needs such as allergies, obesity, or health conditions.</li>\n        </ul>\n      <br>\n      <li>Hydration:</li>\n        <ul>\n          <li>Ensure fresh water is available at all times.</li>\n        </ul>\n    </ul>\n    \n    <h3>Training Information</h3>\n    \n    <ul>\n      <li>Basic Commands:</li>\n        <ul>\n          <li>Teach basic commands like sit, stay, come, and heel through positive reinforcement.</li>\n        </ul>\n      <br>\n      <li>Socialization:</li>\n        <ul>\n          <li>Expose pets to different people, animals, and environments to develop well-adjusted behavior.</li>\n        </ul>\n      <br>\n      <li>Behavioral Training:</li>\n        <ul>\n          <li>Address issues like excessive barking, chewing, or scratching through consistent training and professional advice if needed.</li>\n        </ul>\n      <br>\n      <li>Training Resources:</li>\n        <ul>\n          <li>Recommend professional trainers or training classes for more in-depth guidance</li>\n        </ul>\n    </ul>\n\n    <h3>Grooming Information</h3>\n    \n    <ul>\n      <li>Coat Care:</li>\n        <ul>\n          <li>Dogs: Regular brushing, depending on the breed. Bathing as needed.</li>\n          <li>Cats: Regular brushing to reduce hairballs, especially for long-haired breeds.</li>\n        </ul>\n      <br>\n      <li>Nail Trimming:</li>\n        <ul>\n          <li>Regular nail trims to prevent discomfort and health issues.</li>\n        </ul>\n      <br>\n      <li>Ear and Teeth Cleaning:</li>\n        <ul>\n          <li>Clean ears to prevent infections and brush teeth to promote dental health.</li>\n        </ul>\n      <br>\n      <li>Professional Grooming:</li>\n        <ul>\n          <li>Some pets may require professional grooming, especially those with longer coats</li>\n        </ul>\n    </ul>\n    \n\n\n\n\n    \n    \n\n      \n\n    \n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "CoatCare.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20Savannah%20template_2025/uuid/feb02672-d8b5-4621-827b-15698af9f348.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "Banner.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20Savannah%20template_2025/uuid/963868da-9e61-4c43-87fa-b41879d4dd9b.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "Smoke.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20Savannah%20template_2025/uuid/314ce826-c0f2-4003-8b27-b17d1a388bac.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "Puck.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20Savannah%20template_2025/uuid/ea69ac83-465f-4f63-a450-4a3b143bc4b6.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "Bella.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20Savannah%20template_2025/uuid/69ffdfe5-dee6-4494-a1e2-7acbf3b13e7c.png",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "PetSocialization.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20Savannah%20template_2025/uuid/754dd01e-6fd9-42d8-99e0-26a00c83fa16.png",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "PetNutritionGuide.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20Savannah%20template_2025/uuid/569536e7-e11c-43c1-b2f5-d90f55ff00fc.png",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "Rocky.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20Savannah%20template_2025/uuid/90e50b23-2c9b-45f6-9b40-a0151cb6bc9e.png",
+          "type": "starter",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "Daisy.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20Savannah%20template_2025/uuid/4ad5a66c-a9f7-4d7f-9fb5-f7c2b9755795.png",
+          "type": "starter",
+          "active": false
+        },
+        "11": {
+          "id": "11",
+          "name": "Max.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20Savannah%20template_2025/uuid/22c67c9f-26e5-44e4-abc2-3a7e801378b1.png",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-19 03:54:02 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

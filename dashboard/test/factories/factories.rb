@@ -1499,6 +1499,16 @@ FactoryBot.define do
     lesson
   end
 
+  factory :lesson_feedback do
+    association(:teacher, factory: :teacher)
+    association(:student, factory: :student)
+    lesson
+    saved_feedback {"Generic saved feedback"}
+    submitted_feedback {nil}
+    submitted_at {nil}
+    resources {nil}
+  end
+
   factory :activity_section do
     sequence(:key) {|n| "activity-section-#{n}"}
     sequence(:position)
@@ -2125,8 +2135,8 @@ FactoryBot.define do
   end
 
   factory :lti_course do
-    lti_integration {create(:lti_integration)}
-    lti_deployment {create(:lti_deployment, lti_integration: lti_integration)}
+    association :lti_integration
+    lti_deployment {build(:lti_deployment, lti_integration:)}
     context_id {SecureRandom.uuid}
     course_id {SecureRandom.uuid}
     nrps_url {"http://test.org/api/names_and_roles"}

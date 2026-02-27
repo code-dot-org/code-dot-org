@@ -1,8 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
-import {
-  BodyFourText,
-  Heading5,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import LessonRecommendedAction from './LessonRecommendedAction';
@@ -16,6 +13,11 @@ interface LessonFeedbackProps {
   submittedAtDate: string | Date;
   lessonTitle?: string;
   lessonStartUrl?: string;
+  resource?: {
+    recommended_action?: string;
+    resource_name?: string;
+    resource_link?: string;
+  };
 }
 
 function LessonFeedback({
@@ -24,6 +26,7 @@ function LessonFeedback({
   teacherName,
   lessonTitle,
   lessonStartUrl,
+  resource,
 }: LessonFeedbackProps) {
   const formattedDate = new Date(submittedAtDate).toLocaleDateString('en-US', {
     year: 'numeric',
@@ -37,17 +40,22 @@ function LessonFeedback({
     }
   };
 
+  const showRecommendedAction =
+    resource &&
+    (!!resource.recommended_action ||
+      (resource.resource_name && resource.resource_link));
+
   return (
     <div className={styles.lessonFeedbackContainer}>
       <div className={styles.lessonFeedbackHeader}>
         <div className={styles.lessonFeedbackContent}>
-          <Heading5 className={styles.lessonFeedbackHeading}>
+          <Typography className={styles.lessonFeedbackHeading} variant="h5">
             {lessonTitle}
-          </Heading5>
+          </Typography>
 
-          <BodyFourText className={styles.lessonFeedbackDetails}>
+          <Typography className={styles.lessonFeedbackDetails} variant="body4">
             Sent by {teacherName || 'Your teacher'} on {formattedDate}
-          </BodyFourText>
+          </Typography>
         </div>
 
         <Button
@@ -62,12 +70,12 @@ function LessonFeedback({
       </div>
       <hr className={styles.lessonFeedbackDivider} />
       <div className={styles.lessonFeedbackBox}>{feedbackText}</div>
-      <hr className={styles.lessonFeedbackDivider} />
-      {/* TODO: Add in real data here */}
-      <LessonRecommendedAction
-        resourceComment="Review the lesson and complete the exercises to improve your understanding."
-        resourceLink={lessonStartUrl || ''}
-      />
+      {showRecommendedAction && (
+        <>
+          <hr className={styles.lessonFeedbackDivider} />
+          <LessonRecommendedAction resource={resource} />
+        </>
+      )}
     </div>
   );
 }

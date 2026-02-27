@@ -141,7 +141,8 @@ class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
     HTTParty.expects(:post).with(
       @expected_url,
       headers: @expected_headers,
-      body: @expected_body
+      body: @expected_body,
+      timeout: 180
     ).returns(mock_response)
 
     result = client.request_podcast(@test_script)
@@ -207,7 +208,8 @@ class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
     HTTParty.expects(:post).with(
       @expected_url,
       headers: @expected_headers,
-      body: @expected_body
+      body: @expected_body,
+      timeout: 180
     ).returns(mock_response)
 
     result = AiLessonSummaryPodcastsHelper.get_podcast_from_script(@test_script)
@@ -293,7 +295,8 @@ class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
     HTTParty.expects(:post).with(
       @expected_url,
       headers: @expected_headers,
-      body: expected_body
+      body: expected_body,
+      timeout: 180
     ).returns(mock_response)
 
     client.request_podcast(special_script)

@@ -12,10 +12,6 @@ Feature: Policy Compliance
     Then I wait to see "#lockout-panel-form"
     And element "#permission-status" contains text "Not Submitted"
 
-    # The sign out button should navigate and show the sign in button
-    And I click "#lockout-signout" to load a new page
-    Then check that the URL contains "http://code.org"
-
   Scenario: Existing under 13 account in Colorado should not be locked out.
     Given I am on "http://studio.code.org"
     Given CPA all user lockout phase

@@ -2,7 +2,7 @@ import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {RadioButton} from '@code-dot-org/component-library/radioButton';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {BodyFourText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
@@ -158,9 +158,12 @@ const VersionHistoryRow: React.FunctionComponent<
         {children}
         {comment !== AI_SAVED_COMMENT && // Display comment only if user description is included.
           (aiSavedComment || comment) && (
-            <BodyFourText className={moduleStyles.commitDescription} noMargin>
+            <Typography
+              className={moduleStyles.commitDescription}
+              variant="body4"
+            >
               {aiSavedComment || comment}
-            </BodyFourText>
+            </Typography>
           )}
       </div>
     </div>

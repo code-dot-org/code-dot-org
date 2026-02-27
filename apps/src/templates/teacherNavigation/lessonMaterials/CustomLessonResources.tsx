@@ -1,7 +1,4 @@
-import {
-  BodyTwoText,
-  Heading6,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -36,13 +33,13 @@ async function asyncFetchCustomResources(
 
 const renderNoResourcesRow = (
   <div className={styles.rowContainer}>
-    <BodyTwoText className={styles.resourceLabel}>
+    <Typography className={styles.resourceLabel} variant="body2" gutterBottom>
       <em>
         {
-          'You have not created any custom resources for this lesson. You can use AI TA to help you!'
+          'You have not created any custom resources for this lesson. You can use the AI Teaching Assistant to help you!'
         }
       </em>
-    </BodyTwoText>
+    </Typography>
   </div>
 );
 
@@ -89,7 +86,9 @@ const CustomLessonResources: React.FC<CustomResourcesProps> = ({
   return (
     <div className={styles.resourcesTable}>
       <div className={styles.topRowForResourcesTable}>
-        <Heading6 className={styles.headerText}>{'Custom Resources'}</Heading6>
+        <Typography className={styles.headerText} variant="h6" gutterBottom>
+          {'Custom Resources'}
+        </Typography>
       </div>
       {resources.length === 0 && renderNoResourcesRow}
       {resources.map(resource => (

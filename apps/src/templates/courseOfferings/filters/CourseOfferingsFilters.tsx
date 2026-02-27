@@ -1,6 +1,5 @@
 import {CheckboxDropdown} from '@code-dot-org/component-library/dropdown';
-import {Heading6} from '@code-dot-org/component-library/typography';
-import {Button as MuiButton} from '@mui/material';
+import {Button as MuiButton, Typography} from '@mui/material';
 import React, {useCallback, ChangeEvent} from 'react';
 
 import {FilterTypeConfig} from '@cdo/apps/templates/courseOfferings/filters/helpers';
@@ -57,9 +56,13 @@ const CourseOfferingsFilters = <TFilterKey extends string = string>({
   return (
     <div className={style.catalogFiltersContainer}>
       <div className={style.catalogDropdownFiltersTopRow}>
-        <Heading6 className={style.catalogFiltersRowLabel}>
+        <Typography
+          className={style.catalogFiltersRowLabel}
+          variant="h6"
+          gutterBottom
+        >
           {i18n.filterBy()}
-        </Heading6>
+        </Typography>
         <MuiButton
           variant="text"
           color="primary"

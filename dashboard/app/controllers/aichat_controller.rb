@@ -3,7 +3,7 @@ class AichatController < ApplicationController
 
   # GET /aichat/user_has_access
   def user_has_access
-    render(status: :ok, json: {userHasAccess: current_user&.has_aichat_access?})
+    render(status: :ok, json: {userHasAccess: current_user&.has_aichat_lab_access?})
   end
 
   # POST /aichat/find_toxicity

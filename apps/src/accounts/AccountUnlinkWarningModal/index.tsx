@@ -3,7 +3,7 @@ import {Typography} from '@mui/material';
 import React from 'react';
 import {Fade} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
@@ -21,11 +21,7 @@ const AccountUnlinkWarningModal = ({
   onClose,
 }: AccountUnlinkWarningModalProps) => {
   const handleSubmit = async () => {
-    analyticsReporter.sendEvent(
-      EVENTS.LTI_UNLINK_CLICK,
-      {lms_name: lmsName},
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.LTI_UNLINK_CLICK, {lms_name: lmsName});
 
     await fetch('/lti/v1/account_linking/unlink', {
       method: 'POST',
@@ -40,11 +36,7 @@ const AccountUnlinkWarningModal = ({
   };
 
   const handleCancel = () => {
-    analyticsReporter.sendEvent(
-      EVENTS.LTI_UNLINK_CANCEL,
-      {lms_name: lmsName},
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.LTI_UNLINK_CANCEL, {lms_name: lmsName});
     onClose();
   };
 

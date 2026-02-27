@@ -32,6 +32,9 @@ Parameters:
   # Typically in the form: `cluster-[random-AWS-assigned-string].[region].rds.amazonaws.com` without leading dot.
   RDSClusterEndpointRootDomain:
     Type: String
+  ProductionAuroraClusterARN:
+    Type: String
+    Description: The ARN of the production Aurora cluster so we can authorize it as a Redshift source for Zero-ETL.
   ReportingCluster:
     Type: String
   RedshiftDatabase:
@@ -71,11 +74,33 @@ Resources:
       MasterUsername: {Ref: RedshiftAdminUsername}
       MasterUserPassword: {Ref: RedshiftAdminPassword}
       NodeType: dc1.large
-      # This maintenance can interfere with the daily export from MySQL to Redshift which starts at 02:00 UTC, so set it
-      # to start at least 1 hour before the export begins (it typically takes 15 minutes).
-      PreferredMaintenanceWindow: 'Tue:01:00-Tue:01:30'
+      # This maintenance can interfere with analytics batch routines that execute a sequence of long duration SQL
+      # statements over an extended period, such as the daily export from MySQL to Redshift by Database Migration
+      # Service or the daily dbt model runs. Currently, those start at 23:00 UTC, so schedule Maintenance to end by then.
+      PreferredMaintenanceWindow: 'Mon:22:30-Mon:23:00'
       PubliclyAccessible: true
       VpcSecurityGroupIds: [!ImportValue VPC-RedshiftSecurityGroup]
+#  Redshift does not yet support configuring a Resource Policy on a Provisioned Cluster. We configure this one policy
+#  manually.
+#  TODO: Move our Redshift datawarehouse to a Serverless and/or implement this via CloudFormation when Provisioned
+#  cluster Resources are supported.
+#  RedshiftZeroETLResourcePolicy:
+#    Type: AWS::RedshiftServerless::ResourcePolicy
+#    Properties:
+#      ResourceArn: !GetAtt Tableau.ClusterNamespaceArn
+#      Policy:
+#        Version: "2012-10-17"
+#        Statement:
+#          - Sid: AllowZeroETLFromProductionAurora
+#            Effect: Allow
+#            Principal:
+#              Service: "redshift.amazonaws.com"
+#            Action:
+#              - "redshift:AuthorizeInboundIntegration"
+#            Resource: !GetAtt Tableau.ClusterNamespaceArn
+#            Condition:
+#              ArnEquals:
+#                "redshift:SourceArn": !Ref ProductionAuroraClusterARN
   DMSReplicationInstance:
     Type: AWS::DMS::ReplicationInstance
     Properties:
@@ -743,3 +768,9 @@ Resources:
           InputFormat: org.apache.hadoop.mapred.TextInputFormat
           SerdeInfo:
             SerializationLibrary: org.openx.data.jsonserde.JsonSerDe
+Outputs:
+  RedshiftClusterNamespace:
+    Value: !GetAtt Tableau.ClusterNamespaceArn
+    Description: "Redshift Cluster Namespace for Zero-ETL targeting."
+    Export:
+      Name: !Sub "${AWS::StackName}-RedshiftClusterNamespace"

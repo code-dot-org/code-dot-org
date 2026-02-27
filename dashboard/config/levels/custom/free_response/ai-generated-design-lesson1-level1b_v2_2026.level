@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-02-25T18:26:03.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "title": "AI Generated Design, Lesson 1, Level 3a",
+    "long_instructions": "Explain how each feature supports user interaction.",
+    "stay_on_level_after_submit": "false",
+    "height": "50",
+    "placeholder": "enter response here...",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-02-25T18:26:03.857+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson1-level1a_v2_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson1-level1a_v2_2026\"},{\"changed_at\":\"2026-02-25 18:26:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

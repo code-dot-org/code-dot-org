@@ -1,0 +1,128 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-02-22T22:02:08.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Making a Multi-page Site\r\n\r\n\r\n\r\nA web site should include more than one web page, and they should connect to each other.   Here's an example of a project with multiple pages that are connected by hyperlinks (the blue underlined words that take you to another page when you click on them).\r\n\r\n# Do This\r\n1) Use the inspector tool to see the code that creates the hyperlinks on the top of index.html.\r\n* Discuss with your partner how you think that code works.\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n   <head>\n     <link rel=\"stylesheet\" href=\"style-sheet.css\">\n     <link href=\"https://fonts.googleapis.com/css?family=Rock Salt&display=swap\" rel=\"stylesheet\">\n   </head>\n  <body>\n    <!-- website header -->\n    <a href=\"index.html\">Home</a>\n    <a href=\"facts.html\">Fun Facts</a>\n    <a href=\"need.html\">Why Do We Need Them?</a>\n    <a href=\"remedies.html\">Bite Remedies</a>\n     <h1>Mosquitoes</h1>\n    <img src=\"mosquito_leaf.jpg\" class=\"pictures\" alt=\"mosquito on a leaf\">\n    <h6> Jurgen, Pexels, Pexels License </h6>\n     <p>Mosquitoes. Most people know them as the bug that gives them the itchiest bites. Many times we may wonder why we even need mosquitoes on this world. But like an animal, there are still a lot of cool things about mosquitoes that many times we don't care to learn or think about..<p>\n     <hr>\n     <a rel=\"license\" href=\"http://creativecommons.org/licenses/by/4.0/\"><img alt=\"Creative Commons License\" style=\"border-width:0\" src=\"https://i.creativecommons.org/l/by/4.0/88x31.png\" /></a><br />This work is licensed under a <a rel=\"license\" href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution 4.0 International License</a>.\n   </body>\n\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "facts.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style-sheet.css\">\n    <link href=\"https://fonts.googleapis.com/css?family=Rock Salt&display=swap\" rel=\"stylesheet\">\n  </head>\n  <body>\n    <!-- website header -->\n    <a href=\"index.html\">Home</a>\n    <a href=\"facts.html\">Fun Facts</a>\n    <a href=\"need.html\">Why Do We Need Them?</a>\n    <a href=\"remedies.html\">Bite Remedies</a>\n    <h1>\n      Fun Facts About Mosquitoes\n    </h1>  \n    <img src=\"tiger_mosquito.jpg\" class=\"pictures\" alt=\"a tiger mosquito\">\n    <h6> WikiImages, Pixabay, Pixabay License </h6>\n   <ol> \n     <li> Only female mosquitoes bite people </li>\n     <h6> Male mosquitoes can live off of plants, but females need to proteins in blood to help them prohduce eggs.</h6>\n     <li> Their spit causes us to itch </li>\n     <h6> The saliva from the mosquito when it draws our blood triggers a response from out immune system, giving us bump on our skin that's really itchy. </h6> \n     <li> They LOVE carbon dioxide </li>\n     <h6> Mosquitoes are attracted to carbon dioxide. It is how they locate more bodies to bite. </h6>\n     <li> There's a lot of them </li>\n     <h6> There are 3000+ species of mosquitoes out in the world. But don't worry, only a couple hundred bite humans. Other species may bite other animals. </h6>\n     <li> The CDC lists 6 chemicals that can be used to prevent mosquito bites </li>\n     <h6> When getting insect repellent, make sure it contains one of these chemicals: DEET, Picaridin, IR3535, Oil of lemon eucalyptus (OLE), Para-menthane-diol (PMD), 2-undecanone </h6>\n    </ol>\n\n<hr>\n    <a rel=\"license\" href=\"http://creativecommons.org/licenses/by/4.0/\"><img alt=\"Creative Commons License\" style=\"border-width:0\" src=\"https://i.creativecommons.org/l/by/4.0/88x31.png\" /></a><br />This work is licensed under a <a rel=\"license\" href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution 4.0 International License</a>.\n  </body>\n</html>  ",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "need.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style-sheet.css\">\n    <link href=\"https://fonts.googleapis.com/css?family=Rock Salt&display=swap\" rel=\"stylesheet\">\n  </head>\n  <body>\n    <!-- website header -->\n    <a href=\"index.html\">Home</a>\n    <a href=\"facts.html\">Fun Facts</a>\n    <a href=\"need.html\">Why Do We Need Them?</a>\n    <a href=\"remedies.html\">Bite Remedies</a>  \n    <h1> Why Mosquitoes? </h1>   \n    <img src=\"mosquitoes.jpg\" class=\"pictures\" alt=\"group of mosquitoes\">\n    <h6> Petra Boekhoff, Pixabay, Pixabay License </h6>\n    <p>\n      There seems to be a debate about if mosquitoes are really needed on this earth. On one hand, they carry A LOT of diseases which cause the death of over 1 million people per year. The bites cause itchy bumps, people just don't really like them. But at the same time, not every mosquito like that. Most mosquitoes don't bite humans, and they serve as the food for many different animal species across the world. And most of them leave us alone. </p>\n  \n    <hr>\n    <a rel=\"license\" href=\"http://creativecommons.org/licenses/by/4.0/\"><img alt=\"Creative Commons License\" style=\"border-width:0\" src=\"https://i.creativecommons.org/l/by/4.0/88x31.png\" /></a><br />This work is licensed under a <a rel=\"license\" href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution 4.0 International License</a>.\n\n  </body>\n\n</html>\n\n",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "remedies.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style-sheet.css\">\n    <link href=\"https://fonts.googleapis.com/css?family=Rock Salt&display=swap\" rel=\"stylesheet\">\n  </head>\n  <body>\n    <!-- website header -->\n    <a href=\"index.html\">Home</a>\n    <a href=\"facts.html\">Fun Facts</a>\n    <a href=\"need.html\">Why Do We Need Them?</a>\n    <a href=\"remedies.html\">Bite Remedies</a>\n    <h1>\n      Remedies for Bites\n    </h1>  \n    <img src=\"mosquito_blood.jpg\" class=\"pictures\" alt=\"mosquito biting\"> \n    <h6> Skeeze, Pixabay, Pixabay License </h6>\n      <ol>\n        <li> DON'T SCRATCH </li>\n        <h6> Scratching will only make the bite worse </h6>\n        <li> Apply a lotion </li>\n        <h6> Use an anti-itch cream or a calamine lotion to help </h6>\n        <li> Use an ice pack </li>\n        <h6> Something cold with help sooth the bite and itchitness       </h6>\n        <li> Use an over the counter anti-histamine </li>\n        <li> If symptoms are really bad, go to the doctor </li>\n        <h6> If you are vomiting, have a high fever, or vision loss please go to a doctor to receive help. </h6>\n    </ol>\n  \n    <hr>\n    <a rel=\"license\" href=\"http://creativecommons.org/licenses/by/4.0/\"><img alt=\"Creative Commons License\" style=\"border-width:0\" src=\"https://i.creativecommons.org/l/by/4.0/88x31.png\" /></a><br />This work is licensed under a <a rel=\"license\" href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution 4.0 International License</a>.\n    \n  </body>\n    \n</html>\n  \n",
+          "folderId": "0",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "style-sheet.css",
+          "language": "css",
+          "contents": "body {\n  color: black;\n  font-family: Rock Salt;\n  font-size: 20px;\n  background-color:deeppink;\n  color: aliceblue;\n}\n\n.pictures { \n  border-color: purple;\n  border-radius: 10px;\n  border-style: solid;\n  width: 400px;\n  \n}\n\nh6 {\n  margin:0; \n}\n\n ",
+          "folderId": "0",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "mosquitoes.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L17-L1-2025/uuid/ac1dc224-e0b7-4b15-b5c4-40fa20994585.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "mosquito_leaf.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L17-L1-2025/uuid/f2a74e3c-109a-4b52-824e-ee9e12e309fe.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "mosquito_blood.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L17-L1-2025/uuid/553962d5-cfe9-4f31-b7d0-83428fc4bcc3.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "tiger_mosquito.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L17-L1-2025/uuid/e4ab8ebd-db81-4f82-b291-5d54adc15b06.jpg",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-22 22:06:04 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

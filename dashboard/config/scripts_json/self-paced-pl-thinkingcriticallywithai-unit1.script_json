@@ -1,0 +1,459 @@
+{
+  "script": {
+    "name": "self-paced-pl-thinkingcriticallywithai-unit1",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "has_unnumbered_lessons": true,
+      "is_migrated": true,
+      "project_sharing": true,
+      "topic_tags": [
+        "ai"
+      ]
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-02-26 22:42:47 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "self-paced-pl-thinkingcriticallywithai-unit1"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-thinkingcriticallywithai-unit1"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Introduction to Thinking Critically About AI",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-thinkingcriticallywithai-unit1"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Milestone 1: AI in My World (Lessons 1-2)",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-thinkingcriticallywithai-unit1"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Milestone 2: Responsible Creation & Impact (Lessons 3-4)",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-thinkingcriticallywithai-unit1"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Milestone 3: Truth & Credibility (Lessons 5-6)",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-thinkingcriticallywithai-unit1"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Milestone 4: Safety & Privacy (Lessons 7-8)",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-thinkingcriticallywithai-unit1"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Milestone 5: Synthesis & Sharing (Lessons 9-10)",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-thinkingcriticallywithai-unit1"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "f9889d4e-2b0f-4d94-ba1b-217c562e4e53",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f9889d4e-2b0f-4d94-ba1b-217c562e4e53",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-thinkingcriticallywithai-unit1"
+      }
+    },
+    {
+      "key": "ef13ad71-0da7-4e7a-b082-5b9590082cd1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ef13ad71-0da7-4e7a-b082-5b9590082cd1",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-thinkingcriticallywithai-unit1"
+      }
+    },
+    {
+      "key": "3e07045e-9dc3-4f55-be8e-426a1fe04f64",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3e07045e-9dc3-4f55-be8e-426a1fe04f64",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-thinkingcriticallywithai-unit1"
+      }
+    },
+    {
+      "key": "fede9231-64c7-467d-a7b5-fc0f964b520a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fede9231-64c7-467d-a7b5-fc0f964b520a",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-thinkingcriticallywithai-unit1"
+      }
+    },
+    {
+      "key": "bddfd8e3-bf1c-4583-8100-61c50b05c69f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bddfd8e3-bf1c-4583-8100-61c50b05c69f",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-thinkingcriticallywithai-unit1"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "1968a388-5e94-406b-8c3d-b025f48b266b",
+      "position": 1,
+      "properties": {
+        "progression_name": "Professional Learning Module Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "1968a388-5e94-406b-8c3d-b025f48b266b",
+        "lesson_activity.key": "f9889d4e-2b0f-4d94-ba1b-217c562e4e53"
+      }
+    },
+    {
+      "key": "69ab25e6-1d7b-42e7-8fbd-43ddd678ade8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "69ab25e6-1d7b-42e7-8fbd-43ddd678ade8",
+        "lesson_activity.key": "ef13ad71-0da7-4e7a-b082-5b9590082cd1"
+      }
+    },
+    {
+      "key": "dabd6dcb-581f-4513-aeb5-3708ee0a909c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "dabd6dcb-581f-4513-aeb5-3708ee0a909c",
+        "lesson_activity.key": "3e07045e-9dc3-4f55-be8e-426a1fe04f64"
+      }
+    },
+    {
+      "key": "60aab82d-a133-4ab2-ab14-cbc71517e3e5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "60aab82d-a133-4ab2-ab14-cbc71517e3e5",
+        "lesson_activity.key": "fede9231-64c7-467d-a7b5-fc0f964b520a"
+      }
+    },
+    {
+      "key": "4b8aec49-2e39-4bcd-8d00-18aab161ad57",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4b8aec49-2e39-4bcd-8d00-18aab161ad57",
+        "lesson_activity.key": "bddfd8e3-bf1c-4583-8100-61c50b05c69f"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Professional Learning Module Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-TCaAI-L1-Welcome"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-thinkingcriticallywithai-unit1",
+        "activity_section.key": "1968a388-5e94-406b-8c3d-b025f48b266b"
+      },
+      "level_keys": [
+        "self-paced-TCaAI-L1-Welcome"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Professional Learning Module Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-TCaAI-L1-GettingStarted"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-thinkingcriticallywithai-unit1",
+        "activity_section.key": "1968a388-5e94-406b-8c3d-b025f48b266b"
+      },
+      "level_keys": [
+        "self-paced-TCaAI-L1-GettingStarted"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Professional Learning Module Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-TCaAI-L1-UnitOverview1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-thinkingcriticallywithai-unit1",
+        "activity_section.key": "1968a388-5e94-406b-8c3d-b025f48b266b"
+      },
+      "level_keys": [
+        "self-paced-TCaAI-L1-UnitOverview1"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Professional Learning Module Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-TCaAI-L1-ModuleRoadmap"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-thinkingcriticallywithai-unit1",
+        "activity_section.key": "1968a388-5e94-406b-8c3d-b025f48b266b"
+      },
+      "level_keys": [
+        "self-paced-TCaAI-L1-ModuleRoadmap"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Professional Learning Module Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-TCaAI-L1-CertificateOverview"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-thinkingcriticallywithai-unit1",
+        "activity_section.key": "1968a388-5e94-406b-8c3d-b025f48b266b"
+      },
+      "level_keys": [
+        "self-paced-TCaAI-L1-CertificateOverview"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "self-paced-TCaAI-L1-Welcome",
+        "script_level.level_keys": [
+          "self-paced-TCaAI-L1-Welcome"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-thinkingcriticallywithai-unit1",
+        "activity_section.key": "1968a388-5e94-406b-8c3d-b025f48b266b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-TCaAI-L1-GettingStarted",
+        "script_level.level_keys": [
+          "self-paced-TCaAI-L1-GettingStarted"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-thinkingcriticallywithai-unit1",
+        "activity_section.key": "1968a388-5e94-406b-8c3d-b025f48b266b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-TCaAI-L1-UnitOverview1",
+        "script_level.level_keys": [
+          "self-paced-TCaAI-L1-UnitOverview1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-thinkingcriticallywithai-unit1",
+        "activity_section.key": "1968a388-5e94-406b-8c3d-b025f48b266b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-TCaAI-L1-ModuleRoadmap",
+        "script_level.level_keys": [
+          "self-paced-TCaAI-L1-ModuleRoadmap"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-thinkingcriticallywithai-unit1",
+        "activity_section.key": "1968a388-5e94-406b-8c3d-b025f48b266b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-TCaAI-L1-CertificateOverview",
+        "script_level.level_keys": [
+          "self-paced-TCaAI-L1-CertificateOverview"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-thinkingcriticallywithai-unit1",
+        "activity_section.key": "1968a388-5e94-406b-8c3d-b025f48b266b"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

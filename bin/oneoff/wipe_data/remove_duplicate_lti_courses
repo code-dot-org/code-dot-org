@@ -1,0 +1,75 @@
+#!/usr/bin/env ruby
+
+# This script deletes duplicate LTI course records
+# See: https://codedotorg.atlassian.net/browse/P20-1796
+# Note: Manually review any duplicate records before running this script to ensure that the correct record is retained.
+
+require_relative '../../../dashboard/config/environment'
+require 'optparse'
+options = {dry_run: false, limit: 10_000, batch_size: 1000}
+OptionParser.new do |opts|
+  opts.banner = <<~BANNER
+    Usage: #{File.basename(__FILE__)} [options]
+
+    This script deletes duplicate LTI course records.
+    See: https://codedotorg.atlassian.net/browse/P20-1796
+
+    Options:
+  BANNER
+
+  opts.on('-d', '--dry-run', 'Enables read-only mode where no changes are written to the database') do
+    options[:dry_run] = true
+  end
+
+  opts.on('-l', '--limit COUNT', Integer, "Stop after processing COUNT records (default: #{options[:limit]})") do |limit|
+    options[:limit] = limit
+  end
+
+  opts.on('-b', '--batch-size SIZE', Integer, "Number of records to process per batch (default: #{options[:batch_size]})") do |batch_size|
+    options[:batch_size] = batch_size
+  end
+
+  opts.on('-h', '--help') do
+    puts opts
+    exit
+  end
+end.parse!
+
+print "Proceed with options #{options} (y/N): "
+abort unless $stdin.gets&.strip&.downcase == 'y'
+
+require 'ruby-progressbar'
+
+duplicate_pairs_query = LtiCourse.group(:lti_integration_id, :context_id).having('COUNT(*) > 1').limit(options[:limit])
+duplicate_pairs_count = LtiCourse.unscoped.from(duplicate_pairs_query.select('1'), :dupes).count
+
+progress_bar = ProgressBar.create(total: duplicate_pairs_count, format: 'Deleted duplicate pairs[%c/%C]: |%W| %a')
+while progress_bar.progress < options[:limit]
+  batch_size = [options[:batch_size], options[:limit] - progress_bar.progress].min
+  duplicate_data_batch = duplicate_pairs_query.limit(batch_size).pluck(:lti_integration_id, :context_id)
+
+  duplicate_data_batch.each do |lti_integration_id, context_id|
+    duplicate_pair_query = LtiCourse.where(lti_integration_id:, context_id:)
+    progress_bar.log "\n[Duplicate data] lti_integration_id: #{lti_integration_id}, context_id: #{context_id}".bold.cyan
+
+    relevant_record = duplicate_pair_query.order(:updated_at, :created_at).first
+    progress_bar.log "[Relevant record] #{relevant_record.inspect}".green
+
+    duplicate_pair_query.where.not(id: relevant_record.id).find_each do |duplicate_record|
+      if options[:dry_run]
+        progress_bar.log "[Duplicate record] #{duplicate_record.inspect}".yellow
+      else
+        duplicate_record.destroy!
+        progress_bar.log "[Deleted duplicate] #{duplicate_record.inspect}".red
+      end
+    rescue StandardError => exception
+      progress_bar.log "[Error deleting duplicate] #{duplicate_record.inspect}".red
+      progress_bar.log exception.message
+    end
+  ensure
+    progress_bar.increment
+  end
+
+  break if duplicate_data_batch.size < batch_size
+end
+progress_bar.finish

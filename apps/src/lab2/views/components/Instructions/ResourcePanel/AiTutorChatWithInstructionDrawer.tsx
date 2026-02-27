@@ -1,4 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
+import classNames from 'classnames';
 import {throttle} from 'lodash';
 import React, {useState, useCallback, useMemo, useEffect, useRef} from 'react';
 import {useResizable} from 'react-resizable-layout';
@@ -20,6 +21,7 @@ interface AiTutorChatWithInstructionDrawerProps {
   channelId?: string;
   aiTutorChatButtonData?: ChatButtonData[];
   aiTutorSystemPromptName?: string;
+  aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   instructionsContent?: React.ReactNode;
   isCollapsedByDefault: boolean;
@@ -27,7 +29,9 @@ interface AiTutorChatWithInstructionDrawerProps {
 
 const MIN_CHAT_HEIGHT = 133; // Minimum so that user message editor is always visible + some chat.
 const MIN_INSTRUCTIONS_HEIGHT = 150;
-const DEFAULT_INITIAL_INSTRUCTIONS_HEIGHT = 250;
+const DEFAULT_INITIAL_INSTRUCTIONS_HEIGHT = 250; // Initial height needed before instructions content is measured.
+// Matches .instructionsDrawer padding (8px top + 8px bottom).
+const INSTRUCTIONS_DRAWER_VERTICAL_PADDING_PX = 16;
 
 const TOGGLE_BUTTON_ICONS = {
   left: {iconName: 'info-circle', iconStyle: 'solid'} as const,
@@ -44,6 +48,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   channelId,
   aiTutorChatButtonData,
   aiTutorSystemPromptName,
+  aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
   instructionsContent,
   isCollapsedByDefault,
@@ -127,7 +132,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
     return () => throttledAdjustChatHeight.cancel();
   }, [throttledAdjustChatHeight]);
 
-  // Listen for window resize events
+  // Listen for window resize events.
   useEffect(() => {
     window.addEventListener('resize', throttledAdjustChatHeight);
     return () => {
@@ -139,22 +144,44 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
     setIsCollapsed(isCollapsedByDefault);
   }, [isCollapsedByDefault]);
 
-  // Measure the instructions content height once when loaded
-  // and adjust the initial height if content is smaller.
+  // Measure the instructions content height on load and when it changes,
+  // (e.g., details elements expanded/collapsed), and set the drawer height to match.
   useEffect(() => {
+    // Skip if instructions drawer is collapsed (unmounted).
+    if (isCollapsed) {
+      return;
+    }
+
     const instructionsContentElement = instructionsContentRef.current;
     if (!instructionsContentElement) {
       return;
     }
 
-    const contentHeight = instructionsContentElement.scrollHeight;
-    setMaxInstructionsHeight(contentHeight);
+    const updateMaxHeight = () => {
+      const contentHeight = instructionsContentElement.scrollHeight;
 
-    // If content is smaller than initial height, adjust to fit content.
-    if (contentHeight < DEFAULT_INITIAL_INSTRUCTIONS_HEIGHT) {
-      setRawInstructionsHeight(contentHeight);
-    }
-  }, [instructionsContent, setRawInstructionsHeight]);
+      if (contentHeight > 0) {
+        // Include drawer padding so the scroll area height matches content (no extra scroll).
+        const drawerHeight =
+          contentHeight + INSTRUCTIONS_DRAWER_VERTICAL_PADDING_PX;
+        setMaxInstructionsHeight(drawerHeight);
+        setRawInstructionsHeight(drawerHeight);
+      }
+    };
+
+    updateMaxHeight();
+
+    // Watch for size changes (e.g., when details elements expand/collapse).
+    const resizeObserver = new ResizeObserver(() => {
+      updateMaxHeight();
+    });
+
+    resizeObserver.observe(instructionsContentElement);
+
+    return () => {
+      resizeObserver.disconnect();
+    };
+  }, [setRawInstructionsHeight, isCollapsed]);
 
   const toggleInstructions = useCallback(() => {
     const eventToReport = isCollapsed
@@ -198,6 +225,10 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
       </div>
       {!isCollapsed && (
         <ResizeBar
+          className={classNames(
+            styles.resizeBar,
+            isDragging && styles.resizeBarDragging
+          )}
           isVertical={false}
           separatorProps={separatorProps}
           isDragging={isDragging}
@@ -212,6 +243,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
             channelId={channelId}
             aiTutorChatButtonData={aiTutorChatButtonData}
             aiTutorSystemPromptName={aiTutorSystemPromptName}
+            aiTutorSystemPrompt={aiTutorSystemPrompt}
             aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
             hasInstructionsDrawer={true}
           />

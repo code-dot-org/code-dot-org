@@ -3,36 +3,60 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Event - State - Response
+<h1>Event → State → Response</h1>
 
-####  Now that you've explored how interactive features feel as a user, let’s consider about how they work behind the scenes in code. 
+<img src="https://images.code.org/917f3d8daa6b66a5a7eedf298da49e85-image-1761849785790.png" 
+     alt="icon of hand pressing a button" 
+     width="125px" 
+     style="border-radius:10px; float:right; margin: 0 20px 10px 0px;">
+     
+#### Now that you’ve experienced interactive features as a user, let’s zoom in on what’s happening behind the scenes in the code.
+
+#### Most interactive apps follow a simple pattern: a user <strong>does something</strong>, the program <strong>tracks what changed</strong>, and the interface <strong>updates</strong>.
+</p>
 
 <br>
 
-<img src="https://images.code.org/917f3d8daa6b66a5a7eedf298da49e85-image-1761849785790.png" alt="icon of hand pressing a button" width="150px" style="border-radius:10px; float:left; margin: 0 20px 10px 0px;">
-
-#### Every interactive moment on a webpage follows a simple pattern:
 
 
-<ul>
-  <li style="font-size: 14pt;"><strong>Event:</strong> Something the user does.</li>
-  <li style="font-size: 14pt;"><strong>State:</strong> The app’s current setup or information it’s tracking.</li>
-  <li style="font-size: 14pt;"><strong>Response:</strong> What the app does because of the event.</li>
-</ul>
-<br>
-<blockquote style="border-left: 4px solid #ccc; padding-left: 10px; margin-left: 0;">
-<p><em><b>Example:</b></em> When you tap the button (<strong>event</strong>), the app knows the button is “on” (<strong>state</strong>), and the color changes to show it’s active (<strong>response</strong>).</p>
-</blockquote>
+<h2>Chain of Events</h2>
 
-## Chain of Events 
+<p style="font-size:14pt;">
+This is the core logic behind interactivity in web apps:
+</p>
 
-#### This sequence represents a simple cause-and-effect chain: **Event → State → Response**. 
+<div style="display:flex; align-items:stretch; justify-content:center; gap:14px; flex-wrap:wrap; margin:18px 0;">
 
-#### It illustrates how user actions trigger changes within a program and how those changes produce visible responses thus, forming the core logic behind interactivity in web apps.
+  <div style="background:#0093a4; color:white; border-radius:10px; padding:14px 18px; min-width:160px; text-align:center; box-shadow:0 3px 6px rgba(0,0,0,0.12);">
+    <div style="font-size:18pt; font-weight:bold;">Event</div>
+    <div style="font-size:14pt; margin-top:6px;">A user action occurs</div>
+    <div style="font-size:14pt; margin-top:8px; opacity:0.95;">(click, type, hover)</div>
+  </div>
+
+  <div style="font-size:26pt; font-weight:bold; color:#0093a4; display:flex; align-items:center;">→</div>
+
+  <div style="background:#0093a4; color:white; border-radius:10px; padding:14px 18px; min-width:160px; text-align:center; box-shadow:0 3px 6px rgba(0,0,0,0.12);">
+    <div style="font-size:18pt; font-weight:bold;">State</div>
+    <div style="font-size:14pt; margin-top:6px;">The program updates data</div>
+    <div style="font-size:14pt; margin-top:8px; opacity:0.95;">(variables change)</div>
+  </div>
+
+  <div style="font-size:26pt; font-weight:bold; color:#0093a4; display:flex; align-items:center;">→</div>
+
+  <div style="background:#0093a4; color:white; border-radius:10px; padding:14px 18px; min-width:160px; text-align:center; box-shadow:0 3px 6px rgba(0,0,0,0.12);">
+    <div style="font-size:18pt; font-weight:bold;">Response</div>
+    <div style="font-size:14pt; margin-top:6px;">The UI reflects the change</div>
+    <div style="font-size:14pt; margin-top:8px; opacity:0.95;">(text, color, layout)</div>
+  </div>
+
+</div>
+
+<p style="font-size:14pt; clear:both;">
+In other words: <strong>users interact</strong>, the program <strong>updates its internal “memory”</strong>, and the app <strong>shows the result</strong>.
+That loop is what makes a web app feel responsive and “alive.”
+</p>
 
 
 
-## What's Next?
 
-#### Let's check out how these interactive features look in code!
 MARKDOWN
