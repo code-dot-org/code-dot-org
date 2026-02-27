@@ -4,6 +4,14 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "ai_rubric_s3_config": {
+        "CSD U3 Sprites scene challenge_2023": "csd3-2023-L11",
+        "CSD web project animated review_2023": "csd3-2023-L14",
+        "CSD U3 Interactive Card Final_2023": "csd3-2023-L18",
+        "CSD games sidescroll review_2023": "csd3-2023-L21",
+        "CSD U3 collisions flyman bounceOff_2023": "csd3-2023-L24",
+        "CSD games project review_2023": "csd3-2023-L28"
+      },
       "announcements": [
         {
           "key": "7c0b3b50-62ba-43c3-bd32-37a58e1622fc",
@@ -36,14 +44,6 @@
           "buttonText": "Get free resources"
         }
       ],
-      "ai_rubric_s3_config": {
-        "CSD U3 Sprites scene challenge_2023": "csd3-2023-L11",
-        "CSD web project animated review_2023": "csd3-2023-L14",
-        "CSD U3 Interactive Card Final_2023": "csd3-2023-L18",
-        "CSD games sidescroll review_2023": "csd3-2023-L21",
-        "CSD U3 collisions flyman bounceOff_2023": "csd3-2023-L24",
-        "CSD games project review_2023": "csd3-2023-L28"
-      },
       "content_area": "curriculum_6_8",
       "curriculum_umbrella": "CSD",
       "hideable_lessons": true,
