@@ -1313,6 +1313,7 @@ class Unit < ApplicationRecord
         scriptPath: unit_path,
         showCalendar: is_migrated ? show_calendar : false, #prevent calendar from showing for non-migrated units for now
         weeklyInstructionalMinutes: weekly_instructional_minutes,
+        aiRubricS3Config: ai_rubric_s3_config,
         includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false,
         useLegacyLessonPlans: is_migrated && use_legacy_lesson_plans,
         courseVersionId: unit_group_unit&.cached_unit_group&.course_version&.id,
