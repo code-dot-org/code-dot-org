@@ -65,11 +65,6 @@ export type ReducerAction = {
 
 export type EditorTheme = 'light' | 'dark';
 
-export type Widget2 = {
-  id: string;
-  parameters?: object;
-};
-
 export interface CodebridgeLevelProperties extends LevelProperties {
   validationFile?: ProjectFile;
   enableMicroBit?: boolean;
@@ -78,7 +73,6 @@ export interface CodebridgeLevelProperties extends LevelProperties {
   startDirection?: number;
   widgetView?: boolean;
   widgetViewAllowShowCode?: boolean;
-  widget2?: Widget2;
 }
 
 // Python Lab specific property

@@ -1,5 +1,6 @@
-import {Widget2} from '@codebridge/types';
 import React, {useState} from 'react';
+
+import {Widget2} from '@cdo/apps/weblab2/types';
 
 import RawJsonEditor from './RawJsonEditor';
 

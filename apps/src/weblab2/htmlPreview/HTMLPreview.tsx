@@ -34,6 +34,8 @@ import {
   clearRequests,
 } from '@cdo/apps/weblab2/redux/networkRedux';
 
+import {Weblab2LevelProperties} from '../types';
+
 import {
   IframeMessageType,
   PreviewViewMode,
@@ -58,7 +60,9 @@ export const HTMLPreview: React.FC = () => {
   const isEditingExemplar = getAppOptionsEditingExemplar();
   const isStartMode = getIsStartMode();
   const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
-  const {levelProperties} = useCodebridgeContext();
+  const codebridgeContext = useCodebridgeContext();
+  const levelProperties =
+    codebridgeContext.levelProperties as Weblab2LevelProperties;
   const levelId = levelProperties.id;
   const widget2 = levelProperties.widget2;
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
