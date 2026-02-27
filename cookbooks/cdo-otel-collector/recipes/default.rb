@@ -25,7 +25,8 @@ script 'install_datadog_agent_with_otel' do
     'DD_SITE' => node['cdo-otel-collector']['site'],
     'DD_OTELCOLLECTOR_ENABLED' => 'true',
     'DD_AGENT_MAJOR_VERSION' => '7',
-    'DD_AGENT_MINOR_VERSION' => '75.0-1'
+    'DD_AGENT_MINOR_VERSION' => '75.0-1',
+    'DD_API_KEY' => datadog_api_key
   )
   code <<-EOH
     bash #{install_script_path}
