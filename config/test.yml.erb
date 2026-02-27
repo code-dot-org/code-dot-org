@@ -126,11 +126,8 @@ saucelabs_username: <%= ENV['SAUCE_USERNAME'] %>
 properties_encryption_key: <%= ENV['PROPERTIES_ENCRYPTION_KEY'] %>
 
 # customize rails server to run on localhost
-dashboard_enable_pegasus: true
 override_dashboard: localhost-studio.code.org
-override_pegasus: localhost.code.org
 dashboard_port: 3000
-pegasus_port: 3000
 no_https_store: true
 
 # custom redis config for CI

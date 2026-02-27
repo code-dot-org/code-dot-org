@@ -3,7 +3,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import React, {useMemo} from 'react';
 
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {toggleSectionHidden} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
@@ -31,7 +31,7 @@ const onArchiveClick = (dispatch: AppDispatch, section: Section) => {
   const hideShowEvent = section.hidden
     ? EVENTS.SECTION_CARD_RESTORE_CLICKED
     : EVENTS.SECTION_CARD_ARCHIVE_CLICKED;
-  analyticsReporter.sendEvent(hideShowEvent, {}, PLATFORMS.STATSIG);
+  analyticsReporter.sendEvent(hideShowEvent, {});
   dispatch(toggleSectionHidden(section.id));
 };
 
@@ -39,11 +39,7 @@ const onDeleteClick = (
   onDeleteClickCallback: (sectionId: number) => void,
   sectionId: number
 ) => {
-  analyticsReporter.sendEvent(
-    EVENTS.SECTION_CARD_DELETE_CLICKED,
-    {},
-    PLATFORMS.STATSIG
-  );
+  analyticsReporter.sendEvent(EVENTS.SECTION_CARD_DELETE_CLICKED, {});
   onDeleteClickCallback(sectionId);
 };
 
@@ -60,8 +56,7 @@ const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
   const onClickPrintCerts = React.useCallback(() => {
     analyticsReporter.sendEvent(
       EVENTS.SECTION_TABLE_PRINT_CERTIFICATES_CLICKED,
-      {},
-      PLATFORMS.STATSIG
+      {}
     );
     HttpClient.fetchJson<Student[]>(
       `/dashboardapi/sections/${section.id}/students`

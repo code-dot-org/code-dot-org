@@ -12,7 +12,6 @@ import {
   ParticipantAudience,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
-import experiments from '@cdo/apps/util/experiments';
 import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -359,14 +358,12 @@ export default function CurriculumQuickAssign({
               isNewSection={isNewSection}
             />
           )}
-          {experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
-            aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
-              <AssigningEssentialAiChatToolsAlert />
-            )}
-          {experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
-            aiChatToolsDependency === AiChatToolsDependency.AVAILABLE && (
-              <AssigningAvailableAiChatToolsAlert />
-            )}
+          {aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
+            <AssigningEssentialAiChatToolsAlert />
+          )}
+          {aiChatToolsDependency === AiChatToolsDependency.AVAILABLE && (
+            <AssigningAvailableAiChatToolsAlert />
+          )}
         </>
       )}
     </div>

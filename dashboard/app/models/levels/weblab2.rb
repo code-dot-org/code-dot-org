@@ -26,7 +26,7 @@
 #
 class Weblab2 < Level
   include Widget2Helper
-  validate :validate_ai_tutor_prompt_answer_types
+  validate :validate_ai_tutor_prompt_settings
 
   serialized_attrs %w(
     start_sources
@@ -41,7 +41,7 @@ class Weblab2 < Level
     predict_settings
     ai_tutor_mode
     level_system_prompt
-    ai_tutor_prompt_answer_types
+    ai_tutor_prompt_settings
     widget2
   )
 
@@ -90,12 +90,13 @@ class Weblab2 < Level
     properties_camelized
   end
 
-  private def validate_ai_tutor_prompt_answer_types
-    return if ai_tutor_prompt_answer_types.nil?
-    unless ai_tutor_prompt_answer_types.is_a?(Array) &&
-        ai_tutor_prompt_answer_types.length >= 1 &&
-        ai_tutor_prompt_answer_types.all?(String)
-      errors.add(:ai_tutor_prompt_answer_types, 'must contain at least one answer type.')
+  private def validate_ai_tutor_prompt_settings
+    return if ai_tutor_prompt_settings.nil?
+    answer_types = ai_tutor_prompt_settings['answerTypes']
+    unless answer_types.is_a?(Array) &&
+        answer_types.length >= 1 &&
+        answer_types.all?(String)
+      errors.add(:ai_tutor_prompt_settings, 'must contain at least one answer type.')
     end
   end
 end
