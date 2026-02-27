@@ -24,7 +24,7 @@ const EditWidget2: React.FunctionComponent<EditWidget2Props> = ({
       />
 
       <select
-        value={widget2?.id ?? ''}
+        value={widget2?.id || ''}
         onChange={e =>
           e.target.value
             ? setWidget2({...widget2, id: e.target.value} as Widget2)
