@@ -1,6 +1,6 @@
 import Alert from '@code-dot-org/component-library/alert';
 import {Typography} from '@mui/material';
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {
@@ -14,6 +14,22 @@ import moduleStyles from './console.module.scss';
 
 const Console: React.FunctionComponent = () => {
   const consoleLogs = useAppSelector(state => state.weblab2Console.logs);
+  const [isInConsoleNavigationMode, setIsInConsoleNavigationMode] =
+    useState(false);
+  const parentRef = useRef<HTMLDivElement>(null);
+  const lastLogRef = useRef<HTMLDivElement>(null);
+
+  const handleParentKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (
+      e.target === e.currentTarget &&
+      e.key === 'Enter' &&
+      consoleLogs.length > 0
+    ) {
+      setIsInConsoleNavigationMode(true);
+      lastLogRef.current?.focus();
+    }
+  };
+
   const mapLogLevelToAlertType = (level: ConsoleLogLevel) => {
     switch (level) {
       case 'log':
@@ -58,7 +74,17 @@ const Console: React.FunctionComponent = () => {
   }, [consoleLogs]);
 
   return (
-    <div className={moduleStyles.consoleContainer}>
+    <div
+      ref={parentRef}
+      className={moduleStyles.consoleContainer}
+      tabIndex={consoleLogs.length > 0 ? 0 : -1}
+      aria-label={
+        isInConsoleNavigationMode
+          ? ''
+          : 'Console output: press Enter to navigate logs, Escape to exit'
+      }
+      onKeyDown={handleParentKeyDown}
+    >
       {consoleLogs.length === 0 ? (
         <EmptyPanelPlaceholder
           iconName="terminal"
@@ -68,13 +94,25 @@ const Console: React.FunctionComponent = () => {
       ) : (
         <>
           {consoleLogs.map((log, index) => (
-            <Alert
+            <div
               key={index}
-              type={mapLogLevelToAlertType(log.level)}
-              text={formatLogWithTimestamp(log)}
-              size={'s'}
-              className={moduleStyles.consoleLog}
-            />
+              ref={index === consoleLogs.length - 1 ? lastLogRef : undefined}
+              // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+              tabIndex={isInConsoleNavigationMode ? 0 : -1}
+              onKeyDown={e => {
+                if (e.key === 'Escape' && e.target === e.currentTarget) {
+                  setIsInConsoleNavigationMode(false);
+                  parentRef.current?.focus();
+                }
+              }}
+            >
+              <Alert
+                type={mapLogLevelToAlertType(log.level)}
+                text={formatLogWithTimestamp(log)}
+                size={'s'}
+                className={moduleStyles.consoleLog}
+              />
+            </div>
           ))}
           <div ref={bottomRef} />
         </>
