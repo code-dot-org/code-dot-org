@@ -334,6 +334,11 @@ describe('LessonMaterialsContainer', () => {
           value: lessonSummary,
           response: new Response(),
         });
+      } else if (path.includes('unit_in_aif')) {
+        return Promise.resolve({
+          value: {aif: true},
+          response: new Response(),
+        });
       }
     });
   };

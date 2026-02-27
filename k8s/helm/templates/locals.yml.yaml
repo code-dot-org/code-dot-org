@@ -24,7 +24,6 @@ data:
     aws_s3_emulated: true
     {{- end }}
 
-    dashboard_enable_pegasus: false
     build_apps: true
     use_my_apps: true
 

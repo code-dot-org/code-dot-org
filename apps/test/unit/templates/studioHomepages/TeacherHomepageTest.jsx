@@ -187,11 +187,7 @@ describe('TeacherHomepage', () => {
       call => call[0] === EVENTS.TEACHER_LOGIN_EVENT
     );
     expect(calls).toHaveLength(1);
-    expect(calls[0]).toEqual([
-      EVENTS.TEACHER_LOGIN_EVENT,
-      {'user id': 42},
-      'Statsig',
-    ]);
+    expect(calls[0]).toEqual([EVENTS.TEACHER_LOGIN_EVENT, {'user id': 42}]);
 
     // After setting the session value to true, we should not see sessionStorage.setItem or analyticsSpy called again.
     sessionStorage.setItem('logged_teacher_session', 'true');

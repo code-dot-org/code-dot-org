@@ -7,7 +7,7 @@ import {
 } from '../alarmHelpers';
 import {SL_HANDBOOK_LINK, SNS_TOPIC} from "../../constants";
 
-export const sagemakerModelIds = ['gen-ai-mistral-7b-inst-v01', 'gen-ai-biomistral-7b', 'gen-ai-mistral-pirate-7b', 'gen-ai-karen-creative-mistral-7b', 'gen-ai-arithmo2-mistral-7b'];
+export const sagemakerModelIds = ['gen-ai-mistral-7b-inst-v01'];
 
 const failureMetrics = createFailureMetricsConfig(sagemakerModelIds);
 const startMetrics = createStartMetricsConfig(sagemakerModelIds);

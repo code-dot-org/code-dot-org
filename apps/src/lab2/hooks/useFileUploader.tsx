@@ -2,7 +2,7 @@ import React, {useCallback, useMemo, useRef, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {moderateImage} from '@cdo/apps/lab2/utils';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import UploadsDisabledModal from '@cdo/apps/sharedComponents/UploadsDisabledModal';
 
@@ -173,11 +173,10 @@ export const useFileUploader = ({
           }
         };
       } else {
-        analyticsReporter.sendEvent(
-          EVENTS.UPLOAD_CUSTOM_IMAGE,
-          {UploaderType: 'Lab2 File Uploader', ProjectType: appName},
-          PLATFORMS.STATSIG
-        );
+        analyticsReporter.sendEvent(EVENTS.UPLOAD_CUSTOM_IMAGE, {
+          UploaderType: 'Lab2 File Uploader',
+          ProjectType: appName,
+        });
         try {
           if (onImageFlagged) {
             const ext = file.name.split('.').pop()?.toLowerCase() || '';
