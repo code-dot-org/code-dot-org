@@ -23,11 +23,6 @@ const InnerHTMLPreview = () => {
   const [currentFile, setCurrentFile] = React.useState<string | undefined>(
     undefined
   );
-  // Numerical key used to trigger re-fetches when we need to refresh the preview source.
-  const [previewKey, setPreviewKey] = useState(0);
-  // Numerical key used to force a re-render of the iframe when we need to refresh the iframe, such as
-  // when toggling script permissions or when the source doc (or a dependent file) is updated.
-  const [renderKey, setRenderKey] = useState(0);
   const [serviceWorkerReady, setServiceWorkerReady] = useState(false);
   // True once we've made a warmup fetch to the SW immediately before showing the iframe.
   // Safari aggressively idles SWs; if the SW is idle when the iframe navigate happens,
@@ -62,9 +57,7 @@ const InnerHTMLPreview = () => {
         setCurrentFile(data.fileName);
       } else if (data.type === IframeMessageType.SET_ALLOW_SCRIPTS) {
         setAllowScripts(!!data.allow);
-        setRenderKey(prevKey => prevKey + 1);
       } else if (data.type === IframeMessageType.REFRESH) {
-        setPreviewKey(prevKey => prevKey + 1);
         iframeRef.current?.contentWindow?.location.reload();
       } else if (data.type === IframeMessageType.LEVEL_LOADING) {
         setIsLevelLoading(data.isLoading);
@@ -128,7 +121,6 @@ const InnerHTMLPreview = () => {
         event.data.type === ProjectServiceWorkerMessageType.RECEIVED_SOURCE
       ) {
         setServiceWorkerReady(true);
-        setPreviewKey(prevKey => prevKey + 1);
       } else if (
         event.data.type === ProjectServiceWorkerMessageType.NETWORK_REQUEST
       ) {
@@ -170,7 +162,7 @@ const InnerHTMLPreview = () => {
   // Warm up the SW before the iframe navigates. We fetch the current file from
   // InnerHTMLPreview (a controlled SW client) to ensure the SW is awake immediately
   // before the iframe src is set. currentFile is intentionally omitted from deps:
-  // we only re-warmup on source updates (previewKey) or state changes, not on every
+  // we only re-warmup when the service worker is initially ready, not on every
   // link navigation since the SW is already awake after serving those requests.
   useEffect(() => {
     if (!serviceWorkerReady || !currentFile || isLevelLoading) {
@@ -189,7 +181,7 @@ const InnerHTMLPreview = () => {
     return () => {
       cancelled = true;
     };
-  }, [serviceWorkerReady, isLevelLoading, previewKey]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [serviceWorkerReady, isLevelLoading]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const getPreview = useCallback(() => {
     if (swWarmedUp && currentFile && !isLevelLoading) {
@@ -202,7 +194,7 @@ const InnerHTMLPreview = () => {
           allow="self"
           title="Inner HTML Preview"
           id="inner-preview"
-          key={`${renderKey}-${previewKey}`}
+          key={allowScripts ? 1 : 0} // This forces a re-render when allowScripts changes.
           src={`${window.location.origin}/${currentFile}`}
           className={moduleStyles.fileIframe}
         />
@@ -227,10 +219,8 @@ const InnerHTMLPreview = () => {
     swWarmedUp,
     currentFile,
     isLevelLoading,
-    previewKey,
     serviceWorkerUnavailable,
     allowScripts,
-    renderKey,
   ]);
 
   return getPreview();
