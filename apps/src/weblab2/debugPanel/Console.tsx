@@ -30,7 +30,11 @@ const Console: React.FunctionComponent = () => {
   const formatLogWithTimestamp = (log: ConsoleEntry) => {
     return (
       <div className={moduleStyles.consoleLogEntry}>
-        <Typography variant="body3" gutterBottom>
+        <Typography
+          variant="body3"
+          gutterBottom
+          className={moduleStyles.consoleLogMessage}
+        >
           {log.message}
         </Typography>
         <Typography
