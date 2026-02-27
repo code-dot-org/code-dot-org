@@ -70,7 +70,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
         restrict_section: params[:restrict_section].nil? ? false : params[:restrict_section],
         avatar_color: params[:avatar_color].nil? ? 0 : params[:avatar_color],
         avatar_emoji: params[:avatar_emoji].nil? ? 0 : params[:avatar_emoji],
-        ai_chat_access_level: get_ai_chat_access_level,
+        ai_chat_access_level: AichatAccessHelper.compute_ai_chat_access_level(@course),
       }
     )
     return head :bad_request unless section.persisted?
@@ -112,7 +112,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
 
     # If assigning a new course, derive the new ai_chat_access_level, otherwise leave it as-is.
     is_updating_course = @course && @course.id != section.course_id
-    ai_chat_access_level = is_updating_course ? get_ai_chat_access_level(section.ai_chat_access_level) : params[:ai_chat_access_level]
+    ai_chat_access_level = is_updating_course ? AichatAccessHelper.get_ai_chat_access_level(@course, section.ai_chat_access_level) : params[:ai_chat_access_level]
 
     # TODO: (madelynkasula) refactor to use strong params
     fields = {}
@@ -349,17 +349,5 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       # Should not get a unit_id unless also get a course version which is course
       return head :bad_request if params[:unit_id]
     end
-  end
-
-  private def get_ai_chat_access_level(previous_access_level = nil)
-    previous_access_level ||= SharedConstants::AI_CHAT_ACCESS_LEVELS[:DISABLED]
-
-    # Leave it as is if it was already turned on or to essential_only
-    return previous_access_level if previous_access_level != SharedConstants::AI_CHAT_ACCESS_LEVELS[:DISABLED]
-
-    # Auto-enable access if the course needs it.
-    return SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED] if @course&.has_ai_chat_tools?
-
-    SharedConstants::AI_CHAT_ACCESS_LEVELS[:DISABLED]
   end
 end
