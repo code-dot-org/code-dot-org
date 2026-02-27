@@ -27,6 +27,7 @@ The following ports must be accessible:
 ### Optional Attributes
 
 - `node['cdo-otel-collector']['site']` - DataDog site (default: `datadoghq.com`)
+- `node['cdo-otel-collector']['logs_enabled']` - Whether to send logs to DataDog (default: `true`)
 
 Standard values like ports, service names, and file paths are hardcoded for consistency.
 
@@ -37,7 +38,8 @@ Standard values like ports, service names, and file paths are hardcoded for cons
 Include the cookbook in your run list or recipe:
 
 ```ruby
-include_recipe 'cdo-otel-collector'```
+include_recipe 'cdo-otel-collector'
+```
 
 ### With cdo-apps
 
@@ -45,11 +47,7 @@ This cookbook is automatically included when using the `cdo-apps` cookbook. The 
 
 ### Secret Configuration
 
-The DataDog API key must be provided via the secrets management system:
-
-```ruby
-node.override['cdo-otel-collector']['api_key'] = 'your_api_key_here'
-```
+The DataDog API Key is retrieved via AWS Secrets Manager using the standard secret naming convention.
 
 ## Configuration Files
 

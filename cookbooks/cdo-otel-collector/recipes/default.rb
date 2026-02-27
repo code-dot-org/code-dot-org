@@ -62,7 +62,7 @@ template '/etc/datadog-agent/otel-config.yaml' do
   source 'otel-config.yaml.erb'
   owner 'dd-agent'
   group 'dd-agent'
-  mode '0644'
+  mode '0600'
   variables({
               site: node['cdo-otel-collector']['site'],
               datadog_api_key: datadog_api_key

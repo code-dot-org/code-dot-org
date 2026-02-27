@@ -44,8 +44,8 @@ apm_config:
   non_local_traffic: false
 
 # Logs configuration
+logs_enabled: <%= @logs_enabled %>
 logs_config:
-  enabled: true
   logs_dd_url: https://http-intake.logs.<%= @site %>
 
 # Enable additional integrations as needed
