@@ -17,7 +17,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     assert_nil garbage_token
   end
 
-  test 'oauth_tokens_for_provider returns most recently updated tokens for migrated teacher' do
+  test 'oauth_tokens_for_provider returns most recently created tokens for migrated teacher' do
     Timecop.freeze do
       user = create(:teacher)
       create(:authentication_option,
