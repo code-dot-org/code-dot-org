@@ -227,6 +227,7 @@ const InnerHTMLPreview = () => {
     isLevelLoading,
     serviceWorkerUnavailable,
     allowScripts,
+    renderKey,
   ]);
 
   return getPreview();
