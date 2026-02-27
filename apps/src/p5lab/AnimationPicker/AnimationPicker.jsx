@@ -3,7 +3,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import HiddenUploader from '@cdo/apps/code-studio/components/HiddenUploader';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
@@ -230,14 +230,10 @@ class AnimationPicker extends React.Component {
           {name: 'AppName', value: this.props.projectType || 'unknown'},
           {name: 'UploaderType', value: 'AnimationPicker'},
         ]);
-        analyticsReporter.sendEvent(
-          EVENTS.MODERATE_CUSTOM_IMAGE,
-          {
-            UploaderType: 'Animation Picker',
-            ProjectType: this.props.projectType,
-          },
-          PLATFORMS.STATSIG
-        );
+        analyticsReporter.sendEvent(EVENTS.MODERATE_CUSTOM_IMAGE, {
+          UploaderType: 'Animation Picker',
+          ProjectType: this.props.projectType,
+        });
 
         HttpClient.post(`/v3/images/moderate`, file, true, {
           'Content-Type': file.type,
@@ -268,14 +264,10 @@ class AnimationPicker extends React.Component {
               this.setState({
                 showFlaggedModal: true,
               });
-              analyticsReporter.sendEvent(
-                EVENTS.FLAGGED_CUSTOM_IMAGE,
-                {
-                  UploaderType: 'Animation Picker',
-                  ProjectType: this.props.projectType,
-                },
-                PLATFORMS.STATSIG
-              );
+              analyticsReporter.sendEvent(EVENTS.FLAGGED_CUSTOM_IMAGE, {
+                UploaderType: 'Animation Picker',
+                ProjectType: this.props.projectType,
+              });
               MetricsReporter.incrementCounter('ModerateCustomImage.Flagged', [
                 {name: 'AppName', value: this.props.projectType || 'unknown'},
                 {name: 'UploaderType', value: 'AnimationPicker'},
@@ -319,14 +311,10 @@ class AnimationPicker extends React.Component {
           pendingUploadData: null,
         });
         this.props.disableUploads();
-        analyticsReporter.sendEvent(
-          EVENTS.ACCEPT_FLAGGED_CUSTOM_IMAGE,
-          {
-            UploaderType: 'Animation Picker',
-            ProjectType: this.props.projectType,
-          },
-          PLATFORMS.STATSIG
-        );
+        analyticsReporter.sendEvent(EVENTS.ACCEPT_FLAGGED_CUSTOM_IMAGE, {
+          UploaderType: 'Animation Picker',
+          ProjectType: this.props.projectType,
+        });
       })
       .catch(err => {
         this.setState({
@@ -343,11 +331,10 @@ class AnimationPicker extends React.Component {
       pendingUploadData: null,
       flaggedModalError: null,
     });
-    analyticsReporter.sendEvent(
-      EVENTS.CANCEL_FLAGGED_CUSTOM_IMAGE,
-      {UploaderType: 'Animation Picker', ProjectType: this.props.projectType},
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.CANCEL_FLAGGED_CUSTOM_IMAGE, {
+      UploaderType: 'Animation Picker',
+      ProjectType: this.props.projectType,
+    });
     this.props.onClose(); // Close the entire AnimationPicker
   };
 

@@ -13,10 +13,6 @@ export const LATENCY_GAUGE_MAX_SECONDS = 30;
 
 export const MODEL_COLORS: {[id: string]: string} = {
   'gen-ai-mistral-7b-inst-v01': '#ff7f0e',
-  'gen-ai-biomistral-7b': '#2ca02c',
-  'gen-ai-arithmo2-mistral-7b': '#17becf',
-  'gen-ai-mistral-pirate-7b': '#1f77b4',
-  'gen-ai-karen-creative-mistral-7b': '#9467bd',
 };
 
 export const BROWSER_COLORS: {[id: string]: string} = {

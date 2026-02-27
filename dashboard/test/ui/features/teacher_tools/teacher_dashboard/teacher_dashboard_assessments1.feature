@@ -25,5 +25,5 @@ Feature: Using the assessments tab in the teacher dashboard
 
     # Assessments tab
     And I click selector "#ui-test-teacher-sidebar a:contains(Assessments)" once I see it
-    And I wait until element "#uitest-course-dropdown" is visible
+    And I wait until element "#unit-selector-v2" is visible
     Then I wait until element "div:contains(this survey is anonymous)" is visible

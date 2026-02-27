@@ -24,7 +24,7 @@ import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/l
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import localization from '@cdo/apps/localization';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
@@ -2184,16 +2184,12 @@ StudioApp.prototype.configureDom = function (config) {
       eventName = EVENTS.LEVEL_ACTIVITY;
     }
     if (!runButtonWasClicked) {
-      analyticsReporter.sendEvent(
-        eventName,
-        {
-          signedIn: config.isSignedIn,
-          unitName: config.scriptName,
-          levelId: config.serverLevelId,
-          levelName: config.level.name,
-        },
-        PLATFORMS.BOTH
-      );
+      analyticsReporter.sendEvent(eventName, {
+        signedIn: config.isSignedIn,
+        unitName: config.scriptName,
+        levelId: config.serverLevelId,
+        levelName: config.level.name,
+      });
       runButtonWasClicked = true;
     }
   };

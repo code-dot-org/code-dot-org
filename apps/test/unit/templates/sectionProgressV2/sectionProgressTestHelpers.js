@@ -8,8 +8,7 @@ import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import {lessonProgressForSection} from '@cdo/apps/templates/progress/progressHelpers';
 import sectionProgress, {
   addDataByUnit,
-  setLessonOfInterest,
-} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+} from '@cdo/apps/templates/sectionProgressV2/sectionProgressRedux';
 import {fakeCoursesWithProgress} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 import teacherSections, {
   setSections,
@@ -19,26 +18,6 @@ import {
   LevelStatus,
   SectionLoginType,
 } from '@cdo/generated-scripts/sharedConstants';
-
-export function fakeRowsForStudents(students) {
-  const rows = [];
-  students.forEach(student => {
-    rows.push({
-      id: `${student.id}.0`,
-      student: student,
-      expansionIndex: 0,
-      isExpanded: false,
-    });
-  });
-  return rows;
-}
-
-export function fakeDetailRowsForStudent(student) {
-  return [
-    {id: `${student.id}.1`, student: student, expansionIndex: 1},
-    {id: `${student.id}.2`, student: student, expansionIndex: 2},
-  ];
-}
 
 export function createStore(numStudents, numLessons, studentList = null) {
   const scriptData = getScriptData(numLessons);
@@ -76,12 +55,11 @@ export function createStore(numStudents, numLessons, studentList = null) {
   store.dispatch(
     addDataByUnit(buildSectionProgress(section.students, scriptData))
   );
-  store.dispatch(setLessonOfInterest(0));
   store.dispatch(setCoursesWithProgress(fakeCoursesWithProgress));
   return store;
 }
 
-export function buildSectionProgress(students, scriptData) {
+function buildSectionProgress(students, scriptData) {
   const lastUpdates = {[scriptData.id]: {}};
   const progress = {};
 
