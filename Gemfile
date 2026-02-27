@@ -416,10 +416,8 @@ gem "webrick", "~> 1.9"
 
 gem 'rubyzip'
 
-# pinned due to rails 6.1, upgrade on rails 7
-gem "opentelemetry-exporter-otlp", "~> 0.30.0"
-gem "opentelemetry-instrumentation-all", "0.71.1"
-gem "opentelemetry-sdk", "~> 1.8"
+# pinned due to rails 7, upgrade on rails 7.1
+gem "opentelemetry-instrumentation-all", "0.85.0"
 
 # Automatically include all rails engines
 Dir[Bundler.root.join('**/engines/*/*.gemspec')].sort.each do |gemspec_path|
