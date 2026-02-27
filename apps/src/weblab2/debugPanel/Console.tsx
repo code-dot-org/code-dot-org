@@ -44,6 +44,40 @@ const Console: React.FunctionComponent = () => {
     }
   };
 
+  const getLogWrapperRef = (isFirst: boolean, isLast: boolean) => {
+    return (el: HTMLDivElement | null) => {
+      if (isFirst) {
+        (firstLogRef as React.MutableRefObject<HTMLDivElement | null>).current =
+          el;
+      }
+      if (isLast) {
+        (lastLogRef as React.MutableRefObject<HTMLDivElement | null>).current =
+          el;
+      }
+    };
+  };
+
+  const handleLogKeyDown = (
+    e: React.KeyboardEvent<HTMLDivElement>,
+    isFirst: boolean,
+    isLast: boolean
+  ) => {
+    if (e.key === 'Escape' && e.target === e.currentTarget) {
+      setIsInConsoleNavigationMode(false);
+      parentRef.current?.focus();
+    }
+    if (!isInConsoleNavigationMode || e.key !== 'Tab') {
+      return;
+    }
+    if (isLast && !e.shiftKey) {
+      e.preventDefault();
+      firstLogRef.current?.focus();
+    } else if (isFirst && e.shiftKey) {
+      e.preventDefault();
+      lastLogRef.current?.focus();
+    }
+  };
+
   const mapLogLevelToAlertType = (level: ConsoleLogLevel) => {
     switch (level) {
       case 'log':
@@ -103,7 +137,7 @@ const Console: React.FunctionComponent = () => {
             const logLabel = `${log.level}: ${log.message}, ${log.timestamp}`;
             const positionLabel =
               isFirstLog && isLastLog
-                ? 'Only log entry. '
+                ? 'The only log entry. '
                 : isFirstLog
                 ? 'Least recent log entry. '
                 : isLastLog
@@ -113,39 +147,13 @@ const Console: React.FunctionComponent = () => {
             return (
               <div
                 key={index}
-                ref={el => {
-                  if (isFirstLog) {
-                    (
-                      firstLogRef as React.MutableRefObject<HTMLDivElement | null>
-                    ).current = el;
-                  }
-                  if (isLastLog) {
-                    (
-                      lastLogRef as React.MutableRefObject<HTMLDivElement | null>
-                    ).current = el;
-                  }
-                }}
+                ref={getLogWrapperRef(isFirstLog, isLastLog)}
                 // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
                 tabIndex={isInConsoleNavigationMode ? 0 : -1}
                 aria-label={
                   isInConsoleNavigationMode ? wrapperAriaLabel : undefined
                 }
-                onKeyDown={e => {
-                  if (e.key === 'Escape' && e.target === e.currentTarget) {
-                    setIsInConsoleNavigationMode(false);
-                    parentRef.current?.focus();
-                  }
-                  if (!isInConsoleNavigationMode || e.key !== 'Tab') {
-                    return;
-                  }
-                  if (isLastLog && !e.shiftKey) {
-                    e.preventDefault();
-                    firstLogRef.current?.focus();
-                  } else if (isFirstLog && e.shiftKey) {
-                    e.preventDefault();
-                    lastLogRef.current?.focus();
-                  }
-                }}
+                onKeyDown={e => handleLogKeyDown(e, isFirstLog, isLastLog)}
               >
                 <Alert
                   type={mapLogLevelToAlertType(log.level)}
