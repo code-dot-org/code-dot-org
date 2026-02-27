@@ -106,7 +106,7 @@ class Weblab2 < Level
   end
 
   private def validate_widget2
-    return if widget2.nil?
+    return if widget2.blank?
     unless widget2.is_a?(Hash) && widget2['id'].is_a?(String)
       errors.add(:widget2, 'must be a hash containing an id string.')
     end

@@ -20,7 +20,7 @@ const EditWidget2: React.FunctionComponent<EditWidget2Props> = ({
         type="hidden"
         id="widget2"
         name="level[widget2]"
-        value={JSON.stringify(widget2)}
+        value={JSON.stringify(widget2 || {})}
       />
 
       <select
@@ -49,10 +49,9 @@ const EditWidget2: React.FunctionComponent<EditWidget2Props> = ({
         .
       </p>
 
-      <label>Parameters (JSON)</label>
-
       {widget2 && (
         <>
+          <label>Parameters (JSON)</label>
           <RawJsonEditor
             currentValue={widget2?.parameters}
             fieldName="widget2"
