@@ -207,7 +207,6 @@ const TeacherNavigationBar: React.FC<{
   const shouldShowErrorIcon = React.useCallback(
     (key: string) => {
       return (
-        experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
         key === TEACHER_NAVIGATION_PATH_NAMES.aiChatSettings &&
         selectedSection?.assignedAiChatToolsDependency ===
           AiChatToolsDependency.ESSENTIAL &&

@@ -1,5 +1,6 @@
 import {createAsyncThunk} from '@reduxjs/toolkit';
 
+import {performChatCompletion} from '@cdo/apps/aichat/api/client';
 import {
   addEventToChatEventsCurrent,
   clearStagedFiles,
@@ -8,18 +9,25 @@ import {
   updateChatMessageStatus,
   updateRequestId,
 } from '@cdo/apps/aichat/redux/slice';
+import {getAssetUrl} from '@cdo/apps/aichat/utils';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {isAiGatewayEnabled} from '@cdo/apps/aiGateway/isAiGatewayEnabled';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {TestResults} from '@cdo/apps/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {RootState} from '@cdo/apps/types/redux';
+import {ValueOf} from '@cdo/apps/types/utils';
 import experiments from '@cdo/apps/util/experiments';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
-import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
+import {Weblab2LevelProperties} from '@cdo/apps/weblab2/types';
+import {
+  AiChatModelIds,
+  AiInteractionStatus as Status,
+} from '@cdo/generated-scripts/sharedConstants';
 
 import {postAichatCompletionMessage} from '../../aichatApi';
 import {logChatEvent} from '../../helpers/logChatEvent';
@@ -34,6 +42,7 @@ import {
   AiChatClientType,
   AnalyticsProperties,
   UserAddedSelectionContextItem,
+  AichatLevelProperties,
 } from '../../types';
 import {getNewRemoveId} from '../utils';
 
@@ -48,6 +57,9 @@ const useVertex =
 
 // Log whether using Vertex API or not in case query param entered incorrectly.
 console.log(`🤖: Tutor set to use Vertex API? ${useVertex ? 'YES' : 'NO'}`);
+
+const useClientApi = (modelId: ValueOf<typeof AiChatModelIds>) =>
+  isAiGatewayEnabled && modelId === AiChatModelIds.GEMINI_2_5_FLASH_IMAGE;
 
 // This thunk's callback function submits a user's chat content and AI customizations to
 // the chat completion endpoint, then waits for a chat completion response, and updates
@@ -173,13 +185,43 @@ export const submitChatContents = createAsyncThunk(
         sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_INITIATED, eventData)
       );
 
-      messages = await postAichatCompletionMessage(
-        newUserMessage,
-        chatEventsCurrent.filter(isCompletedChatMessage),
-        {...modelParameters, useVertex},
-        aichatContext
-      );
+      if (useClientApi(modelParameters.selectedModelId)) {
+        const levelProperties = state.lab.levelProperties;
+        const levelName = levelProperties?.name;
+        const levelSystemPrompt =
+          (levelProperties as Weblab2LevelProperties)?.levelSystemPrompt ||
+          (levelProperties as AichatLevelProperties)?.aichatSettings
+            ?.levelSystemPrompt;
 
+        let filteredChatEvents: CompletedChatMessage[] =
+          chatEventsCurrent.filter(isCompletedChatMessage);
+
+        if (
+          modelParameters.selectedModelId ===
+          AiChatModelIds.GEMINI_2_5_FLASH_IMAGE
+        ) {
+          filteredChatEvents = filteredChatEvents.filter(
+            message => message.status === Status.OK
+          );
+        }
+
+        messages = await performChatCompletion(
+          newUserMessage,
+          filteredChatEvents,
+          modelParameters,
+          aichatContext,
+          (asset: ChatAsset) =>
+            getAssetUrl(asset, aichatContext.channelId, levelName),
+          levelSystemPrompt
+        );
+      } else {
+        messages = await postAichatCompletionMessage(
+          newUserMessage,
+          chatEventsCurrent.filter(isCompletedChatMessage),
+          {...modelParameters, useVertex},
+          aichatContext
+        );
+      }
       // In milliseconds
       const responseTime = Date.now() - startTime;
       dispatch(

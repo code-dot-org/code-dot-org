@@ -10,7 +10,6 @@ import {
 } from '@cdo/apps/accounts/constants';
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
@@ -63,13 +62,9 @@ class LoginTypePicker extends Component {
   };
 
   recordSectionSetupExitEvent = eventName => {
-    analyticsReporter.sendEvent(
-      eventName,
-      {
-        source: SELECT_LOGIN_TYPE,
-      },
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(eventName, {
+      source: SELECT_LOGIN_TYPE,
+    });
   };
 
   openImportDialog = provider => {

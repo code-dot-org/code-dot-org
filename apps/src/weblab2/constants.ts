@@ -18,11 +18,22 @@ export const WEBLAB2_SUPPORTED_FILE_TYPES = WEBLAB2_EDITABLE_FILE_TYPES.concat(
 
 export const AI_SAVED_COMMENT = 'AI***SAVE';
 
-export const DEFAULT_AI_TUTOR_MODE = 'engineer';
+// The default set of answer types is all except buildJavaScript.
+export const DEFAULT_ANSWER_TYPES: AiTutorAnswerType[] = [
+  'buildHTML',
+  'buildCSS',
+  'ask',
+  'hint',
+  'debug',
+  'example',
+  'explainCode',
+  'documentation',
+  'pseudocode',
+  'testCase',
+];
 
 // Map of our legacy modes to their corresponding answer types. This is used to populate the answer types for levels
-// that were created with a legacy mode before we had answer types, and to provide a default set (engineer) of answer types for new levels
-// or levels that don't have either a legacy mode or answer types specified.
+// that were created with a legacy mode before we had answer types.
 export const TUTOR_MODE_TO_ANSWER_TYPE: Record<
   AiTutorMode,
   AiTutorAnswerType[]

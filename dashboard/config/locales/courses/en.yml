@@ -6762,3 +6762,25 @@ en:
 
             No specific prior coursework is required, and all necessary concepts are introduced and reinforced through guided activities, collaborative learning, and hands-on projects.
           version_title: Fall 2026
+        self-paced-pl-thinkingcriticallywithai-2026:
+          title: 'Educator Module: Thinking Critically About AI'
+          description_short: ''
+          description_student: |-
+            ## Welcome!
+
+            ##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, you'll be ready to get started teaching AI Discoveries' **Thinking Critically About AI** unit with your students.
+
+            ##### Find the learning that works for you:
+
+            ##### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+            ##### **Pick your content:** The content is organized in the suggested progression for teachers new to Thinking Critically About AI. However, you can engage with the content in the order that best meets your needs.
+          description_teacher: |-
+            ## Welcome!
+
+            ##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, you'll be ready to get started teaching AI Discoveries' **Thinking Critically About AI** unit with your students.
+
+            ##### Find the learning that works for you:
+
+            ##### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+            ##### **Pick your content:** The content is organized in the suggested progression for teachers new to Thinking Critically About AI. However, you can engage with the content in the order that best meets your needs.
+          version_title: ''

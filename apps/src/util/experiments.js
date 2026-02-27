@@ -25,27 +25,18 @@ experiments.REDUX_LOGGING = 'reduxLogging';
 experiments.SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH =
   'schoolAutocompleteDropdownNewSearch';
 experiments.SHOW_UNPUBLISHED_DATASET_TABLES = 'showUnpublishedDatasetTables';
-experiments.TEACHER_DASHBOARD_SECTION_BUTTONS =
-  'teacher-dashboard-section-buttons';
-experiments.TEACHER_DASHBOARD_SECTION_BUTTONS_ALTERNATE_TEXT =
-  'teacher-dashboard-section-buttons-alternate-text';
-experiments.FINISH_DIALOG_METRICS = 'finish-dialog-metrics';
 experiments.I18N_TRACKING = 'frontend-i18n-tracking';
-experiments.TIME_SPENT = 'time-spent';
 experiments.BYPASS_DIALOG_POPUP = 'bypass-dialog-popup';
 experiments.SPECIAL_TOPIC = 'special-topic';
 // Experiment for showing a backgrounds tab and enabling student upload
 // for Sprite Lab animations
 experiments.BACKGROUNDS_AND_UPLOAD = 'backgroundsTab';
-experiments.SECTION_SETUP_REFRESH = 'sectionSetupRefresh';
 // Experiment for showing the gender field
 experiments.GENDER_FEATURE_ENABLED = 'gender';
 // Experiment for enabling the AI-TA differentiation chat
 experiments.AI_DIFFERENTIATION = 'ai-differentiation';
 // Experiment for enabling the AI-TA differentiation artifacts
 experiments.AI_ARTIFACT = 'ai-artifact';
-// Experiment for showing the ai chat new permissions page and enabling permissions to take effect
-experiments.AI_CHAT_NEW_PERMISSIONS = 'ai-chat-new-permissions';
 // Adds a "Get help with this block" option to block context menus if docs exist (e.g. Sprite Lab)
 experiments.BLOCKLY_DOCS = 'blockly_docs';
 // Allows the playspace to be dragged to take up a larger portion of the screen
