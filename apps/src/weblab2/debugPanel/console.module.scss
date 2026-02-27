@@ -15,7 +15,6 @@
 
   .consoleLogMessage {
     min-width: 0; // Allow flex item to shrink so long text wraps.
-    overflow-wrap: break-word;
     word-break: break-word;
   }
 
