@@ -79,3 +79,4 @@
     - To start the react devserver: run `yarn start` from apps/ (aka "start apps")
     - These will not return
     - For frontend work both will need to be running. Some backend work can be done only with Rails running.
+- the main branch of this repo is named `staging`. to see what work exists in a feature branch, assume `staging` is the base branch for that work unless otherwise noted.
