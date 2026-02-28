@@ -46,7 +46,6 @@ type CodebridgeProps = {
   aiTutorMultimodalEnabled?: boolean;
   aiTutorChatButtonData?: ChatButtonData[];
   aiTutorContextHelper?: AiTutorContextHelper<object>;
-  aiTutorSystemPromptName?: string;
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   secondaryBackpackAppNames?: AppName[];
@@ -66,7 +65,6 @@ export const Codebridge = React.memo(
     aiTutorMultimodalEnabled,
     aiTutorChatButtonData,
     aiTutorContextHelper,
-    aiTutorSystemPromptName,
     aiTutorSystemPrompt,
     aiTutorResponseSchemaSettings,
     secondaryBackpackAppNames,
@@ -208,7 +206,6 @@ export const Codebridge = React.memo(
           aiTutorMultimodalEnabled,
           aiTutorChatButtonData,
           aiTutorContextHelper,
-          aiTutorSystemPromptName,
           aiTutorResponseSchemaSettings,
           aiTutorSystemPrompt,
         }}
