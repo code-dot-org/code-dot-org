@@ -141,7 +141,9 @@ const NetworkPanel: React.FC = () => {
     } else if (selectedRequest?.response?.contentType?.startsWith('text')) {
       responseDataValue = selectedRequest.response.body;
     } else if (
-      selectedRequest?.response?.contentType?.startsWith('application/json')
+      /^application\/([\w.-]+\+)?json/.test(
+        selectedRequest?.response?.contentType ?? ''
+      )
     ) {
       try {
         responseDataValue = JSON.stringify(
