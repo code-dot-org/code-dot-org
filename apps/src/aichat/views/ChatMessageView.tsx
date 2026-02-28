@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import React, {memo, useState} from 'react';
 
 import {getLineReferenceText} from '@cdo/apps/aichat/utils';
@@ -136,11 +135,9 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   }
 
   let header;
-  if (hasAssets || hasUserAddedSelectionContext) {
+  if (!isAssistant && (hasAssets || hasUserAddedSelectionContext)) {
     header = (
-      <div
-        className={classNames(styles.assetCol, isAssistant && styles.assistant)}
-      >
+      <div className={styles.assetCol}>
         {hasAssets &&
           assets.map(asset => {
             const filename = asset.filename;
@@ -155,14 +152,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
                 {filename.endsWith('.pdf') ? (
                   <FilePreview type="pdf" filename={filename} url={url} />
                 ) : (
-                  <img
-                    alt=""
-                    className={classNames(
-                      styles.imagePreview,
-                      isAssistant && styles.assistant
-                    )}
-                    src={url}
-                  />
+                  <img alt="" className={styles.imagePreview} src={url} />
                 )}
               </button>
             );

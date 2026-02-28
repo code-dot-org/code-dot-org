@@ -253,6 +253,9 @@ acapela_ephemeral_password:
 new_relic_license_key:
 newrelic_logging: false
 
+# Enables OpenTelemetry instrumentation and exporting to the OpenTelemetry Collector. See `dashboard/config/initializers/opentelemetry.rb` for more details.
+enable_opentelemetry: false
+
 # Credentials for Google-federated AWS access.
 # (Deprecated: move these configuration values to AWS config file)
 aws_role:
@@ -657,11 +660,6 @@ langfuse_public_key: !Secret
 # Credentials for Google Gemini API
 google_gemini_ai_chat_lab_api_key: !Secret
 google_gemini_ai_tutor_api_key: !Secret
-
-# AI Gateway
-ai_gateway_auth_key: !Secret
-ai_gateway_auth_public_key: !Secret
-ai_gateway_auth_key_passphrase: !Secret
 
 # Credentials for Google Vertex API
 google_vertex_ai_tutor_service_account_key: !Secret
