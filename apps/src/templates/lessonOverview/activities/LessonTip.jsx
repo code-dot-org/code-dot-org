@@ -1,11 +1,12 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import classNames from 'classnames';
 
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
+
 import styles from './lesson-tip.module.scss';
 
 export const tipTypes = {
