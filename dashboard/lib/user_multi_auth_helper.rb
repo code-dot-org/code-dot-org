@@ -26,9 +26,9 @@ module UserMultiAuthHelper
 
   def uid_for_provider(provider)
     if migrated?
-      authentication_options.find_by(
+      authentication_options.where(
         credential_type: provider
-      )&.authentication_id
+      ).order(updated_at: :desc).first&.authentication_id
     else
       uid
     end
