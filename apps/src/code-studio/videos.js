@@ -165,6 +165,8 @@ videos.showVideoDialog = function (options, forceShowVideo) {
     options.key,
     function (data) {
       notesDiv.children('#notes').html(data);
+      // Ensure all <img> elements inside #notes default to empty alt text
+      notesDiv.children('#notes').find('img').attr('alt', '');
     },
     function () {
       openVideoTab();
