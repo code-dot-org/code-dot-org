@@ -1,6 +1,5 @@
 import $ from 'jquery';
 
-import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 import initializeCodeMirror6 from '@cdo/apps/code-studio/initializeCodeMirror6';
 import {
   throwIfDisallowedAnimationSourceUrl,
@@ -39,9 +38,4 @@ $(document).ready(function () {
       validateAnimationJSON(codeMirror.getValue());
     },
   });
-
-  if (document.getElementById('level_custom_helper_library')) {
-    // Leaving legacy CodeMirror here for now because I haven't verified this, but I don't think this is actually used.
-    initializeCodeMirror('level_custom_helper_library', 'javascript');
-  }
 });
