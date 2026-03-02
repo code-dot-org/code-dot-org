@@ -63,6 +63,18 @@ function resolvePreviewElement(
   return selector ? document.querySelector(selector) : null;
 }
 
+/**
+ * initializeCodeMirror6 replaces a textarea on the page with a full-featured
+ * CodeMirror6 editor.
+ * @param {!string|!Element} target - element or id of element to replace.
+ * @param {!string} mode - editor syntax mode
+ * @param {Object} options - misc optional arguments
+ * @param {function} [options.callback] - onChange callback for editor
+ * @param {(string|Element)} [options.preview] - element or id of element to
+ *        populate with a preview. If none specified, will look for an element
+ *        by appending "_preview" to the id of the target element. Only supported for markdown mode.
+ * @param {string} [options.game] optional game name, used to determine which preview to use.
+ */
 function initializeCodeMirror6(
   target: string | Element,
   mode: EditorMode,
