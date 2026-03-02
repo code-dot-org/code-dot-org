@@ -1,4 +1,3 @@
-import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {
   AiInteractionStatus,
@@ -80,9 +79,8 @@ export async function postLogChatEvent(
     newChatEvent,
     aichatContext,
   };
-  // REMOVE getAiChatNewPermissionsParam hack after experiment ships!!!
   const response = await HttpClient.post(
-    paths.LOG_CHAT_EVENT_URL + getAiChatNewPermissionsParam(),
+    paths.LOG_CHAT_EVENT_URL,
     JSON.stringify(payload),
     true,
     {
@@ -174,9 +172,8 @@ export async function postAichatCompletionMessage(
   maxPollingTimeMs =
     maxPollingTimeMs || AiChatReadTimeouts[aichatContext.clientType] * 1500;
 
-  // REMOVE getAiChatNewPermissionsParam hack after experiment ships!!!
   const response = await HttpClient.post(
-    paths.START_CHAT_COMPLETION_URL + getAiChatNewPermissionsParam(),
+    paths.START_CHAT_COMPLETION_URL,
     JSON.stringify(payload),
     true,
     {
@@ -319,23 +316,12 @@ function getUpdatedMessages(
 }
 
 /**
- * *** REMOVE THIS AND ALL CALLERS AFTER THE EXPERIMENT ENDS ***
- * This is a temporary method to pass on the experiment flag to the backend until we remove the experiment.
- */
-function getAiChatNewPermissionsParam(): string {
-  if (!experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS)) {
-    return '';
-  }
-  return '?' + new URLSearchParams({'ai-chat-new-permissions': '1'});
-}
-
-/**
  * This function sends a GET request to the aichat's userHasAichatLabAccess backend controller action,
  * then returns true if the user has aichat lab access and false otherwise.
  */
 export async function getUserHasAichatLabAccess(): Promise<boolean> {
   const response = await HttpClient.fetchJson<UserHasAichatLabAccessResponse>(
-    `${paths.USER_HAS_AICHAT_LAB_ACCESS_URL}${getAiChatNewPermissionsParam()}`
+    `${paths.USER_HAS_AICHAT_LAB_ACCESS_URL}`
   );
   return response.value.userHasAccess;
 }

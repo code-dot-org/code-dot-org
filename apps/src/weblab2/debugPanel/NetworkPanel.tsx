@@ -1,10 +1,6 @@
 import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  BodyFourText,
-  StrongText,
-  BodyThreeText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import {isEqual} from 'lodash';
 import React, {useEffect, useMemo, useState} from 'react';
 
@@ -145,7 +141,9 @@ const NetworkPanel: React.FC = () => {
     } else if (selectedRequest?.response?.contentType?.startsWith('text')) {
       responseDataValue = selectedRequest.response.body;
     } else if (
-      selectedRequest?.response?.contentType?.startsWith('application/json')
+      /^application\/([\w.-]+\+)?json/.test(
+        selectedRequest?.response?.contentType ?? ''
+      )
     ) {
       try {
         responseDataValue = JSON.stringify(
@@ -194,9 +192,9 @@ const NetworkPanel: React.FC = () => {
         <div className={moduleStyles.networkPanelContainer}>
           <div className={moduleStyles.networkSummary}>
             <div className={moduleStyles.networkSummaryHeader}>
-              <BodyFourText>
-                <StrongText>Activity</StrongText>
-              </BodyFourText>
+              <Typography variant="body4" gutterBottom>
+                <Typography variant="strong">Activity</Typography>
+              </Typography>
               <Button
                 onClick={() => setNewestFirst(!newestFirst)}
                 size="xs"
@@ -263,7 +261,9 @@ const NetworkPanel: React.FC = () => {
               />
             ) : (
               <div className={moduleStyles.responsePlaceholder}>
-                <BodyThreeText>Response</BodyThreeText>
+                <Typography variant="body3" gutterBottom>
+                  Response
+                </Typography>
                 <FontAwesomeV6Icon
                   iconName="circle"
                   className={moduleStyles.placeholderIcon}

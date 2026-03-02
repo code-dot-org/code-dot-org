@@ -7,7 +7,7 @@
   "user_id": 6959,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "This level shares a template level with Level 4 in this script. It uses AI Tutor \"Suggest\" mode.",
+    "long_instructions": "This level shares a template level with Level 4 in this script. \r\nThe AI tutor will not provide JavaScript or Test Code.",
     "project_template_level_name": "Allthethings Weblab2 template",
     "hide_share_and_remix": "false",
     "submittable": "false",
@@ -18,16 +18,31 @@
       "isPredictLevel": false,
       "solution": "",
       "questionType": "freeResponse",
-      "allowMultipleAttempts": false,
       "placeholderText": "",
       "multipleChoiceOptions": [
         ""
       ],
       "freeResponseHeight": 50,
-      "codeEditableAfterSubmit": false
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
     },
-    "ai_tutor_mode": "suggest"
+    "ai_tutor_mode": "suggest",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
   },
-  "audit_log": "[{\"changed_at\":\"2025-07-30T11:27:18.734-07:00\",\"changed\":[\"cloned from \\\"Allthethings Weblab2 1\\\"\"],\"cloned_from\":\"Allthethings Weblab2 1\"},{\"changed_at\":\"2025-07-30 11:30:34 -0700\",\"changed\":[\"long_instructions\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-31 15:45:48 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"ben+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-11 10:09:11 -0700\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-11 10:09:25 -0700\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-11 10:11:20 -0700\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-11 10:13:19 -0700\",\"changed\":[\"available_ai_tutor_modes\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-11 10:22:24 -0700\",\"changed\":[\"long_instructions\",\"available_ai_tutor_modes\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-07-30T11:27:18.734-07:00\",\"changed\":[\"cloned from \\\"Allthethings Weblab2 1\\\"\"],\"cloned_from\":\"Allthethings Weblab2 1\"},{\"changed_at\":\"2025-07-30 11:30:34 -0700\",\"changed\":[\"long_instructions\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-31 15:45:48 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"ben+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-11 10:09:11 -0700\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-11 10:09:25 -0700\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-11 10:11:20 -0700\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-11 10:13:19 -0700\",\"changed\":[\"available_ai_tutor_modes\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-11 10:22:24 -0700\",\"changed\":[\"long_instructions\",\"available_ai_tutor_modes\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-02 14:06:00 -0800\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-02 14:06:33 -0800\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-02 14:06:49 -0800\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-02 14:07:08 -0800\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-26 09:14:35 -0800\",\"changed\":[\"long_instructions\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

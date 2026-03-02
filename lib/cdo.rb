@@ -278,15 +278,6 @@ module Cdo
     end
 
     # Temporary method to allow safe (exception-free) accessing of the
-    # Amplitude API key.
-    def safe_amplitude_api_key
-      CDO.cdo_amplitude_api_key
-    rescue ArgumentError
-      # Return an empty string, instead of raising.
-      ''
-    end
-
-    # Temporary method to allow safe (exception-free) accessing of the
     # Statsig API key.
     def safe_statsig_api_client_key
       CDO.statsig_api_client_key

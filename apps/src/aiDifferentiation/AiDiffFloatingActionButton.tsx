@@ -16,7 +16,7 @@ import {
 import i18n from '@cdo/locale';
 import aiFabWithoutText from '@cdo/static/ai-bot-ta-no-text.png';
 
-import {EVENTS, PLATFORMS} from '../metrics/AnalyticsConstants';
+import {EVENTS} from '../metrics/AnalyticsConstants';
 import analyticsReporter from '../metrics/AnalyticsReporter';
 import {createTeacherNotificationSubscription} from '../templates/teacherDashboardShared/WebSocketUtils';
 import HttpClient from '../util/HttpClient';
@@ -185,7 +185,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     const eventName = chatIsOpen
       ? EVENTS.AI_DIFF_CHAT_CLOSED
       : EVENTS.AI_DIFF_CHAT_OPENED;
-    analyticsReporter.sendEvent(eventName, eventData, PLATFORMS.STATSIG);
+    analyticsReporter.sendEvent(eventName, eventData);
     if (eventName === EVENTS.AI_DIFF_CHAT_OPENED) {
       trySetLocalStorage(LOCAL_STORAGE_OPENED_KEY, true.toString());
     } else {

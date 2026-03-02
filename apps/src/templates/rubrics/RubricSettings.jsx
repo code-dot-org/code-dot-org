@@ -10,7 +10,7 @@ import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {setAiRubricsDisabled} from '@cdo/apps/templates/currentUserRedux';
 import {setAiEvalStatusMap} from '@cdo/apps/templates/rubrics/teacherRubricRedux';
@@ -227,15 +227,11 @@ function RubricSettings({
     const url = `/rubrics/${rubricId}/run_ai_evaluations_for_all`;
     const params = {section_id: sectionId};
     const eventName = EVENTS.TA_RUBRIC_SECTION_AI_EVAL;
-    analyticsReporter.sendEvent(
-      eventName,
-      {
-        ...(reportingData || {}),
-        rubricId: rubricId,
-        sectionId: sectionId,
-      },
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(eventName, {
+      ...(reportingData || {}),
+      rubricId: rubricId,
+      sectionId: sectionId,
+    });
     fetch(url, {
       method: 'POST',
       headers: {

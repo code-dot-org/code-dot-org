@@ -11,6 +11,7 @@ import {useResizable} from 'react-resizable-layout';
 
 import AiTutorVersionAlert from '@cdo/apps/aiComponentLibrary/aiTutorVersionAlert/AiTutorVersionAlert';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
+import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {logOnResize} from '@cdo/apps/lab2/utils/resizeUtils';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -43,6 +44,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
   isWidgetView,
 }) => {
   const viewMode = useAppSelector(state => state.weblab2.viewMode);
+  const hideWorkspaceForWidgetView = !getIsStartMode() && isWidgetView;
   const isStandaloneCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
   );
@@ -60,14 +62,14 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
 
   const infoPanelInitialWidth = isStandaloneCollapsed
     ? INITIAL_INFO_PANEL_WIDTH_COLLAPSED
-    : isWidgetView
+    : hideWorkspaceForWidgetView
     ? INITIAL_INFO_PANEL_WIDTH_WIDGET
     : INITIAL_INFO_PANEL_WIDTH;
 
-  const editorMinWidth = isWidgetView ? 0 : MIN_EDITOR_WIDTH;
+  const editorMinWidth = hideWorkspaceForWidgetView ? 0 : MIN_EDITOR_WIDTH;
   const previewInitialWidth = isStandaloneCollapsed
     ? INITIAL_PREVIEW_WIDTH_COLLAPSED
-    : isWidgetView
+    : hideWorkspaceForWidgetView
     ? INITIAL_PREVIEW_WIDTH_WIDGET
     : INITIAL_PREVIEW_WIDTH;
 
@@ -156,21 +158,21 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
     setRightPanelSize(
       isStandaloneCollapsed
         ? INITIAL_PREVIEW_WIDTH_COLLAPSED
-        : isWidgetView
+        : hideWorkspaceForWidgetView
         ? INITIAL_PREVIEW_WIDTH_WIDGET
         : INITIAL_PREVIEW_WIDTH
     );
-  }, [setRightPanelSize, isWidgetView, isStandaloneCollapsed]);
+  }, [setRightPanelSize, hideWorkspaceForWidgetView, isStandaloneCollapsed]);
 
   useEffect(() => {
     setLeftPanelSize(
       isStandaloneCollapsed
         ? INITIAL_INFO_PANEL_WIDTH_COLLAPSED
-        : isWidgetView
+        : hideWorkspaceForWidgetView
         ? INITIAL_INFO_PANEL_WIDTH_WIDGET
         : INITIAL_INFO_PANEL_WIDTH
     );
-  }, [setLeftPanelSize, isWidgetView, isStandaloneCollapsed]);
+  }, [setLeftPanelSize, hideWorkspaceForWidgetView, isStandaloneCollapsed]);
 
   const showDebugPanel =
     experiments.isEnabledAllowingQueryString(experiments.WEBLAB2_DEBUG_PANEL) &&
@@ -200,7 +202,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
             className={weblab2Styles.headerContainer}
             headerContent={<WorkspaceHeader />}
             leftHeaderContent={
-              isWidgetView ? undefined : (
+              hideWorkspaceForWidgetView ? undefined : (
                 <SegmentedButtons {...viewModeButtonsProps} />
               )
             }
@@ -216,7 +218,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
                 isAiTutorVersion && weblab2Styles.aiTutorVersionContainer
               )}
             >
-              {!isWidgetView && viewMode !== ViewMode.PREVIEW && (
+              {!hideWorkspaceForWidgetView && viewMode !== ViewMode.PREVIEW && (
                 <>
                   <Workspace
                     style={{width: middlePanelWidth}}

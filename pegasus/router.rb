@@ -40,6 +40,7 @@ if CDO.has_pegasus_content
   require src_dir 'homepage'
 end
 require 'cdo/hamburger'
+require 'cdo/brand'
 
 require pegasus_dir 'helper_modules/multiple_extname_file_utils'
 

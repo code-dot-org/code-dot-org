@@ -1,0 +1,72 @@
+name 'self-paced-TCaAI-L1-UnitOverview1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# What is Thinking Critically About AI?
+
+<div style="float: right; width: 35%; margin: 15px; text-align: center;">
+  <img 
+    src="https://images.code.org/6e19a70736b159abc9a076639e58e5be-image-1772146558282.jpg"
+    alt="Insert alt text here"
+    style="width: 100%; height: auto; border-radius: 10px;">
+</div>
+
+<div style="background-color: #F5F7F8; padding: 18px; border-radius: 10px; margin: 10px 0px 20px 0px;">
+  <p style="font-size: 14pt; margin: 0;">
+    <strong>Thinking Critically About AI</strong> is a ten-lesson, project-based unit that introduces students to how artificial intelligence systems shape the world around us. Through hands-on investigations and structured inquiry, students explore how AI generates output, AI's impact on their lives, and how human decisions likewise influence AI behavior.
+  </p>
+  <br>
+  <p style="font-size: 14pt; margin: 0;">
+  At the end of the unit, students create an <strong>AI Safety Report</strong> that synthesizes their findings into evidence-based recommendations for responsible use.
+  </p>
+  <br>
+  <p style="font-size: 14pt; margin: 0;">
+  This unit is the opening experience in the AI Discoveries curriculum. However, it can also stand alone as an introduction to responsible and thoughtful engagement with AI systems.
+  </p>
+</div>
+
+<div style="margin: 20px auto"> <a class="btn btn-large btn-primary" href="https://studio.code.org" target="blank" rel="noopener noreferrer">Access the Thinking Critically About AI Curriculum</a> </div>
+
+## Quick Facts
+<table style="width: 90%; margin: 20pt auto; border-collapse: collapse;">
+  <tr>
+    <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;"><strong>Unit Length</strong></td>
+    <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;">10 lessons, or approximately 2 weeks</td>
+  </tr>
+  <tr>
+    <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;"><strong>Grades</strong></td>
+    <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;">6th through 10th grade</td>
+  </tr>
+  <tr>
+    <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;"><strong>Concepts Covered</strong></td>
+    <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;">Pattern-based prediction, data and bias, privacy and data, credibility and misinformation, ethical AI use, human responsibility in AI systems</td>
+  </tr>
+  <tr>
+    <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;"><strong>Devices</strong></td>
+    <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;">Desktops and laptops</td>
+  </tr>
+  <tr>
+    <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;"><strong>Student & Teacher Prerequisites</strong></td>
+    <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;">None</td>
+  </tr>
+  <tr>
+    <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;"><strong>Projects</strong></td>
+    <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;">1 milestone-based project culminating in an AI Safety or Guidance Report</td>
+  </tr>
+</table>
+
+### **Do I need to be an AI expert to teach this curriculum?**
+
+#### Thinking Critically About AI is designed to build conceptual understanding, not technical expertise. Teachers do not need a background in AI or programming to successfully teach this unit. The focus is on helping students develop accurate mental models of how AI systems work at a high level.
+
+### **Do I need prior experience with Project Based Learning (PBL) to teach this unit?**
+
+#### This unit is intentionally structured to guide both teachers and students through the Project Based Learning process. While the unit models core elements of high-quality PBL, teachers are supported with clear pacing, discussion prompts, and milestone checkpoints throughout. Later levels in this module will elaborate on these structures.
+
+### **Will students use tools like ChatGPT or other public AI systems?**
+
+#### Students will interact with AI as part of this unit, but they will do so within a classroom-appropriate environment. AI Discoveries uses a secure, Code.org–managed AI chat interface designed specifically for educational use. Students are not required to create personal accounts on external platforms. 
+
+
+MARKDOWN

@@ -63,7 +63,7 @@ class Pd::Enrollment < ApplicationRecord
   before_validation :autoupdate_user_field
   before_save :set_application_id
   after_create :set_default_scholarship_info
-  after_save :authorize_teacher_account
+  after_save :authorize_teacher_account, unless: :deleted?
 
   serialized_attrs %w(
     role
@@ -296,7 +296,7 @@ class Pd::Enrollment < ApplicationRecord
   end
 
   protected def authorize_teacher_account
-    user.permission = UserPermission::AUTHORIZED_TEACHER if user&.teacher? && [COURSE_CSD, COURSE_CSP, COURSE_CSA, COURSE_BUILD_YOUR_OWN].include?(workshop.course)
+    user.permission = UserPermission::AUTHORIZED_TEACHER if user&.teacher? && [COURSE_CSD, COURSE_CSP, COURSE_CSA, COURSE_BUILD_YOUR_OWN].include?(workshop&.course)
   end
 
   # Returns true if the given workshop is an Admin or Admin/Counselor workshop
