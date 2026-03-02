@@ -11,9 +11,8 @@ export {
   setModelCardProperty,
   setNewChatSession,
   setShowModalType,
-  setStartingAiCustomizations,
   setStudentChatHistory,
-  setUserHasAichatAccess,
+  setUserHasAichatLabAccess,
   setClientType,
   setViewMode,
   addStagedFile,
@@ -22,6 +21,6 @@ export {
   stagedFilesLimitExceeded,
   clearStagedFilesAlert,
   clearStagedFiles,
-  clearHasSetStartingCustomizations,
+  clearHasSetInitialCustomizations,
   setChatWorkspaceSelectedTab,
 } from './slice';

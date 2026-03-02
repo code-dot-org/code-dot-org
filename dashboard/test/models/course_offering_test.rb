@@ -975,6 +975,30 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert new_course_offering.ai_teaching_assistant_available
   end
 
+  test "seed_all does not destroy ui-test- offerings" do
+    create(:course_offering, key: 'ui-test-example')
+
+    Dir.mktmpdir do |tmpdir|
+      # Call seed_all with an empty directory (no JSON files)
+      CourseOffering.seed_all(root_dir: Pathname.new(tmpdir), glob: "*.json")
+
+      # The ui-test- offering should still exist
+      assert CourseOffering.exists?(key: 'ui-test-example'), "ui-test- offerings should not be destroyed by seed_all"
+    end
+  end
+
+  test "seed_all destroys regular offerings without JSON files" do
+    create(:course_offering, key: 'regular-offering')
+
+    Dir.mktmpdir do |tmpdir|
+      # Call seed_all with an empty directory (no JSON files)
+      CourseOffering.seed_all(root_dir: Pathname.new(tmpdir), glob: "*.json")
+
+      # The regular offering should be destroyed
+      refute CourseOffering.exists?(key: 'regular-offering'), "regular offerings without JSON files should be destroyed by seed_all"
+    end
+  end
+
   test "validates grade_levels" do
     assert_raises ActiveRecord::RecordInvalid do
       CourseOffering.create!(key: 'test-key', display_name: 'Test', grade_levels: '1,2,3, 4')
@@ -1119,6 +1143,33 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
     refute non_pl_course_offering.elementary_school_level?
     refute pl_course_offering.pl_for_elementary_school?
+  end
+
+  test 'file_path returns UI test directory for ui-test- prefixed course offerings' do
+    expected = Rails.root.join('test/ui/config/course_offerings/ui-test-example.json')
+    assert_equal expected, CourseOffering.file_path('ui-test-example')
+  end
+
+  test 'file_path returns normal directory for non-ui-test course offerings' do
+    expected = Rails.root.join('config/course_offerings/regular-offering.json')
+    assert_equal expected, CourseOffering.file_path('regular-offering')
+  end
+
+  test 'file_path returns normal directory when ui-test is not a prefix' do
+    expected = Rails.root.join('config/course_offerings/my-ui-test-offering.json')
+    assert_equal expected, CourseOffering.file_path('my-ui-test-offering')
+  end
+
+  test 'file_path respects custom root_path for UI test course offerings' do
+    custom_root = Pathname.new('/custom/path')
+    expected = custom_root.join('test/ui/config/course_offerings/ui-test-example.json')
+    assert_equal expected, CourseOffering.file_path('ui-test-example', custom_root)
+  end
+
+  test 'file_path respects custom root_path for normal course offerings' do
+    custom_root = Pathname.new('/custom/path')
+    expected = custom_root.join('config/course_offerings/regular-offering.json')
+    assert_equal expected, CourseOffering.file_path('regular-offering', custom_root)
   end
 
   def course_offering_with_versions(num_versions, content_root_trait = :with_unit_group)

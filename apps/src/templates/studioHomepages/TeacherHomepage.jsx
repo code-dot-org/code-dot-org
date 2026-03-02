@@ -5,7 +5,7 @@ import React, {useState, useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
 
 import DCDO from '@cdo/apps/dcdo';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Notification from '@cdo/apps/sharedComponents/Notification';
 import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
@@ -158,13 +158,9 @@ export const UnconnectedTeacherHomepage = ({
   ) {
     trySetSessionStorage(LOGGED_TEACHER_SESSION, 'true');
 
-    analyticsReporter.sendEvent(
-      EVENTS.TEACHER_LOGIN_EVENT,
-      {
-        'user id': currentUserId,
-      },
-      PLATFORMS.BOTH
-    );
+    analyticsReporter.sendEvent(EVENTS.TEACHER_LOGIN_EVENT, {
+      'user id': currentUserId,
+    });
   }
 
   return (

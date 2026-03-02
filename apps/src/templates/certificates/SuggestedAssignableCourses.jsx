@@ -1,8 +1,5 @@
 import Alert from '@code-dot-org/component-library/alert';
-import {
-  BodyTwoText,
-  Heading2,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useEffect, useState} from 'react';
 
@@ -51,6 +48,7 @@ function SuggestedAssignableCourses({assignableCourseSuggestions, isEnglish}) {
         display_name_with_latest_year,
         grade_levels,
         duration,
+        ai_chat_tools_dependency,
         school_subject,
         cs_topic,
         course_version_path,
@@ -79,6 +77,7 @@ function SuggestedAssignableCourses({assignableCourseSuggestions, isEnglish}) {
           gradesArray={grade_levels.split(',')}
           subjects={school_subject?.split(',')}
           topics={cs_topic?.split(',')}
+          aiChatToolsDependency={ai_chat_tools_dependency}
           isTranslated={is_translated}
           isEnglish={isEnglish}
           pathToCourse={course_version_path}
@@ -116,8 +115,12 @@ function SuggestedAssignableCourses({assignableCourseSuggestions, isEnglish}) {
   return (
     <div className={style.container}>
       <div className={style.heading}>
-        <Heading2>{headingText}</Heading2>
-        <BodyTwoText>{i18n.congratsSuggestedCoursesDescription()}</BodyTwoText>
+        <Typography variant="h2" gutterBottom>
+          {headingText}
+        </Typography>
+        <Typography variant="body2" gutterBottom>
+          {i18n.congratsSuggestedCoursesDescription()}
+        </Typography>
       </div>
       {assignableCourseComponent()}
       {assignSuccess && (

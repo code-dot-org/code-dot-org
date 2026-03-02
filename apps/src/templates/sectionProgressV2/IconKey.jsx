@@ -1,5 +1,5 @@
 import Link from '@code-dot-org/component-library/link';
-import {Heading6} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
@@ -73,10 +73,10 @@ export default function IconKey({sectionId}) {
           aria-expanded={isOpen}
           tabIndex="0"
         >
-          <Heading6>
+          <Typography variant="h6" gutterBottom>
             <FontAwesome className={styles.iconKeyCaret} icon={caret(isOpen)} />
             {i18n.iconKey()}
-          </Heading6>
+          </Typography>
         </div>
         <Link
           type="primary"

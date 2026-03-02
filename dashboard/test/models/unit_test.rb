@@ -1745,11 +1745,6 @@ class UnitTest < ActiveSupport::TestCase
     refute @hoc_unit.show_unit_overview_between_lessons?
   end
 
-  test "has_standards_associations?" do
-    assert @csf_unit_2019.has_standards_associations?
-    refute @csp_unit.has_standards_associations?
-  end
-
   test 'all_descendant_levels returns nested levels of all types' do
     # simple level
     level1 = create(:level, name: 'level1')
@@ -2283,6 +2278,58 @@ class UnitTest < ActiveSupport::TestCase
     assert unit_with_ai_tutor.has_ai_tutor_level?
   end
 
+  test 'with_ai_chat_tools returns units with essential or optional AI chat tools' do
+    essential_ai_level = create(:aichat)
+    optional_ai_level = create(:level, properties: {'ai_tutor_available' => true})
+    normal_level = create(:level)
+
+    unit_with_essential_ai = create(:script, name: 'unit-with-ai')
+    lesson_with_essential_ai = create(:lesson, :with_lesson_group, script: unit_with_essential_ai)
+    create(:script_level, script: unit_with_essential_ai, lesson: lesson_with_essential_ai, levels: [essential_ai_level])
+
+    unit_with_optional_ai = create(:script, name: 'unit-with-tutor')
+    lesson_with_optional_ai = create(:lesson, :with_lesson_group, script: unit_with_optional_ai)
+    create(:script_level, script: unit_with_optional_ai, lesson: lesson_with_optional_ai, levels: [optional_ai_level])
+
+    unit_without_ai = create(:script, name: 'unit-without-ai')
+    lesson_without_ai = create(:lesson, :with_lesson_group, script: unit_without_ai)
+    create(:script_level, script: unit_without_ai, lesson: lesson_without_ai, levels: [normal_level])
+
+    result = Unit.with_ai_chat_tools
+    assert_includes result, unit_with_essential_ai
+    assert_includes result, unit_with_optional_ai
+    refute_includes result, unit_without_ai
+
+    assert unit_with_essential_ai.requires_ai_chat_tools?
+    assert unit_with_essential_ai.has_ai_chat_tools?
+    refute unit_with_optional_ai.requires_ai_chat_tools?
+    assert unit_with_optional_ai.has_ai_chat_tools?
+    refute unit_without_ai.requires_ai_chat_tools?
+    refute unit_without_ai.has_ai_chat_tools?
+  end
+
+  test 'with_essential_ai_chat_tools returns only units with essential AI chat tools' do
+    essential_ai_level = create(:weblab2)
+    normal_level = create(:level)
+
+    unit_with_essential_ai = create(:script, name: 'unit-with-ai')
+    lesson_with_essential_ai = create(:lesson, :with_lesson_group, script: unit_with_essential_ai)
+    create(:script_level, script: unit_with_essential_ai, lesson: lesson_with_essential_ai, levels: [essential_ai_level])
+
+    unit_without_ai = create(:script, name: 'unit-without-ai')
+    lesson_without_ai = create(:lesson, :with_lesson_group, script: unit_without_ai)
+    create(:script_level, script: unit_without_ai, lesson: lesson_without_ai, levels: [normal_level])
+
+    result = Unit.with_essential_ai_chat_tools
+    assert_includes result, unit_with_essential_ai
+    refute_includes result, unit_without_ai
+
+    assert unit_with_essential_ai.requires_ai_chat_tools?
+    assert unit_with_essential_ai.has_ai_chat_tools?
+    refute unit_without_ai.requires_ai_chat_tools?
+    refute unit_without_ai.has_ai_chat_tools?
+  end
+
   describe '#title_for_display' do
     let(:numbered_units) {nil}
     let(:unit_group) {create(:unit_group, numbered_units: numbered_units)}
@@ -2393,6 +2440,21 @@ class UnitTest < ActiveSupport::TestCase
         end
       end
     end
+  end
+
+  test 'script_json_filepath returns UI test directory for ui-test- prefixed units' do
+    expected = "#{Rails.root}/test/ui/config/scripts_json/ui-test-example.script_json"
+    assert_equal expected, Unit.script_json_filepath('ui-test-example')
+  end
+
+  test 'script_json_filepath returns normal directory for non-ui-test units' do
+    expected = "#{Rails.root}/config/scripts_json/regular-script.script_json"
+    assert_equal expected, Unit.script_json_filepath('regular-script')
+  end
+
+  test 'script_json_filepath returns normal directory when ui-test is not a prefix' do
+    expected = "#{Rails.root}/config/scripts_json/my-ui-test-script.script_json"
+    assert_equal expected, Unit.script_json_filepath('my-ui-test-script')
   end
 
   test 'write_script_json updates md5 in levelbuilder mode' do

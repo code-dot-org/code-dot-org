@@ -135,7 +135,7 @@ const styles = {
   },
   header: {
     padding: 20,
-    backgroundColor: color.purple,
+    backgroundColor: color.dark_charcoal,
     fontSize: 18,
     ...fontConstants['main-font-semi-bold'],
     color: 'white',
@@ -153,7 +153,7 @@ const styles = {
     marginRight: 10,
   },
   contents: {
-    backgroundColor: color.lighter_purple,
+    backgroundColor: color.lighter_gray,
     padding: 20,
   },
   contentsBlue: {

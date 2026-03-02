@@ -3,7 +3,6 @@ import React, {useMemo} from 'react';
 // import {useNavigate, NavigateFunction, Link} from 'react-router-dom';
 import {Link} from 'react-router-dom';
 
-import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 
@@ -41,12 +40,7 @@ const LinkOption: React.FC<LinkElementProps> = ({
           to={url}
           className={styles.dropdownMenuItem}
           onClick={() => {
-            if (eventName)
-              analyticsReporter.sendEvent(
-                eventName,
-                eventOptions,
-                PLATFORMS.BOTH
-              );
+            if (eventName) analyticsReporter.sendEvent(eventName, eventOptions);
           }}
         >
           {iconName && (
@@ -64,12 +58,7 @@ const LinkOption: React.FC<LinkElementProps> = ({
           className={styles.dropdownMenuItem}
           href={url}
           onClick={() => {
-            if (eventName)
-              analyticsReporter.sendEvent(
-                eventName,
-                eventOptions,
-                PLATFORMS.BOTH
-              );
+            if (eventName) analyticsReporter.sendEvent(eventName, eventOptions);
           }}
         >
           {labelStyle === 'b' ? (

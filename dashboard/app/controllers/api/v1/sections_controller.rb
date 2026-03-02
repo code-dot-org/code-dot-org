@@ -70,6 +70,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
         restrict_section: params[:restrict_section].nil? ? false : params[:restrict_section],
         avatar_color: params[:avatar_color].nil? ? 0 : params[:avatar_color],
         avatar_emoji: params[:avatar_emoji].nil? ? 0 : params[:avatar_emoji],
+        ai_chat_access_level: get_ai_chat_access_level,
       }
     )
     return head :bad_request unless section.persisted?
@@ -88,6 +89,10 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     # TODO: Move to an after_create step on Section model when old API is fully deprecated
     current_user.assign_script(@unit, @course) if @unit
 
+    if @unit
+      AiLessonSummariesHelper.perform_ai_lesson_summaries_by_unit(@unit, current_user.id)
+    end
+
     render json: section.summarize
   end
 
@@ -104,6 +109,10 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       participant_audience = @course ? @course.participant_audience : @unit.participant_audience
       return head :forbidden unless Section.can_be_assigned_course?(participant_audience, section.participant_type)
     end
+
+    # If assigning a new course, derive the new ai_chat_access_level, otherwise leave it as-is.
+    is_updating_course = @course && @course.id != section.course_id
+    ai_chat_access_level = is_updating_course ? get_ai_chat_access_level(section.ai_chat_access_level) : params[:ai_chat_access_level]
 
     # TODO: (madelynkasula) refactor to use strong params
     fields = {}
@@ -122,6 +131,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     fields[:ai_tutor_enabled] = params[:ai_tutor_enabled] unless params[:ai_tutor_enabled].nil?
     fields[:avatar_color] = params[:avatar_color].nil? ? 0 : params[:avatar_color]
     fields[:avatar_emoji] = params[:avatar_emoji].nil? ? 0 : params[:avatar_emoji]
+    fields[:ai_chat_access_level] = ai_chat_access_level unless ai_chat_access_level.nil?
 
     section.update!(fields)
     if @unit
@@ -302,6 +312,14 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     render json: {result: 'success'}
   end
 
+  # POST /api/v1/sections/<id>/ai_chat_access_level
+  def set_ai_chat_access_level
+    @section.update!(ai_chat_access_level: params[:ai_chat_access_level])
+    render json: {result: 'success'}
+  rescue ActiveRecord::RecordInvalid
+    render json: {result: 'invalid ai_chat_access_level'}, status: :bad_request
+  end
+
   private def find_follower
     unless current_user
       render_404
@@ -331,5 +349,17 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       # Should not get a unit_id unless also get a course version which is course
       return head :bad_request if params[:unit_id]
     end
+  end
+
+  private def get_ai_chat_access_level(previous_access_level = nil)
+    previous_access_level ||= SharedConstants::AI_CHAT_ACCESS_LEVELS[:DISABLED]
+
+    # Leave it as is if it was already turned on or to essential_only
+    return previous_access_level if previous_access_level != SharedConstants::AI_CHAT_ACCESS_LEVELS[:DISABLED]
+
+    # Auto-enable access if the course needs it.
+    return SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED] if @course&.has_ai_chat_tools?
+
+    SharedConstants::AI_CHAT_ACCESS_LEVELS[:DISABLED]
   end
 end

@@ -1,0 +1,72 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-02-18T05:41:09.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Debug the Heading",
+    "long_instructions": "# Debug the Headings\r\n\r\nThe preview for this page looks fine and all of the HTML and CSS elements are being displayed correctly. But if you look in the code, something isn't quite right that could cause problems later on. \r\n\r\n# Do This\r\n1) Can you spot what code is in the wrong area and fix it?\r\n\r\n*Note: Fixing the code won't cause any changes in the preview, but your code will be better organized*\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "bubble_choice_description": "Figure out what's wrong with the code even though the preview looks like it is correct.",
+    "thumbnail_url": "https://images.code.org/57434a2575273b043bd7fc729c61ebfb-image-1566335277938.PNG",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html> \n<html> \n<head>\n   <link rel=\"stylesheet\" href=\"style.css\">\n  <h1> Spam Musubi </h1>\n  <h3> What is it? </h3>\n</head>\n<body>\n  <img src=\"spam_musubi.jpg\" alt=\"Plate of spam musubis\">\n  <p> Spam musubi originates from Hawaii and is an incredibly popular food. For a little bit of history, spam, canned cooked pork, became incredibly popular in Hawaii after the second world war and the Japanese Americans there created spam musubi because of it. </p>\n  <h6> Chris Hackmann, Wikimedia Commons, <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0 </a></h6>\n  <h3> Making it </h3>\n  <p> To make it, spam musubi is a pretty simple recipe. It begins with frying or grilling sliced spam which is then put on top of rice and then wrapped with nori, or dried seaweed. </p>\n  <h3> Variations </h3>\n  <p> There are many variations spam musubi. The type of rice can differ, sometimes egg is added to it, and sometimes you don't even use spam. You can make musubi with any protein (chicken, shrimp, hot dog, tofu, etc.). </p>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  color: lavender;\n  background: black; \n}\n\nh6 {\n  text-align: right;\n}\n\nimg {\n  float: right;\n  width: 200px;\n  margin: 10px;\n  border-radius: 20px;\n}\n\np {\n    text-align: left;\n    font-size: 17px;\n}\n\na {\n color: lavender;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "spam_musubi.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L9-L7c-2025/uuid/eaf3e264-6c30-4ceb-b6c3-7c534a0433fc.jpg",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n9Kg4JkpxlBKhY4Hql2Q=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-18 05:41:57 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-18 05:42:17 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

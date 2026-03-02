@@ -19,64 +19,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@amplitude/analytics-browser@npm:^1.5.4":
-  version: 1.5.4
-  resolution: "@amplitude/analytics-browser@npm:1.5.4"
-  dependencies:
-    "@amplitude/analytics-client-common": "npm:^0.3.0"
-    "@amplitude/analytics-core": "npm:^0.9.5"
-    "@amplitude/analytics-types": "npm:^0.11.0"
-    "@amplitude/ua-parser-js": "npm:^0.7.31"
-    tslib: "npm:^2.3.1"
-  checksum: 10/aeaf9f5ec110fcccdaae2cc9f07737bb33fee4bf405ec8de621fac44305ef12680d26d722d17118f65519b2cfce2099c5d1096c86ec4f4daeba7f3ed477f5036
-  languageName: node
-  linkType: hard
-
-"@amplitude/analytics-client-common@npm:^0.3.0":
-  version: 0.3.0
-  resolution: "@amplitude/analytics-client-common@npm:0.3.0"
-  dependencies:
-    "@amplitude/analytics-connector": "npm:^1.4.5"
-    "@amplitude/analytics-core": "npm:^0.9.5"
-    "@amplitude/analytics-types": "npm:^0.11.0"
-    tslib: "npm:^2.3.1"
-  checksum: 10/29ba664a86864378d1b1a03a1dfe9be389155261bb707ef46e8cdea9c852fa21c5bc3fc2b97340827420fe4b68c74d504aec3d2effd3ca7b52f4e22591ce9b9b
-  languageName: node
-  linkType: hard
-
-"@amplitude/analytics-connector@npm:^1.4.5":
-  version: 1.4.5
-  resolution: "@amplitude/analytics-connector@npm:1.4.5"
-  dependencies:
-    "@amplitude/ua-parser-js": "npm:0.7.31"
-  checksum: 10/34f1b4d681fdb6ca7d21ab4fa9cf4a436be6673eecf4cbd9b9fb9c2b72599ccba79bdb73fcdf5c4c7e2a13ddf2b3b77a82f06bcc1ef157c04b69cc25d6c5040f
-  languageName: node
-  linkType: hard
-
-"@amplitude/analytics-core@npm:^0.9.5":
-  version: 0.9.5
-  resolution: "@amplitude/analytics-core@npm:0.9.5"
-  dependencies:
-    "@amplitude/analytics-types": "npm:^0.11.0"
-    tslib: "npm:^2.3.1"
-  checksum: 10/0a7cafb66790ab67721e1231eb97d2ce11507db8b97f7c20282ba593a721652ac043294deae4240214b4bb82f57cacd88f91a635f7c1707b359fff4056df4813
-  languageName: node
-  linkType: hard
-
-"@amplitude/analytics-types@npm:^0.11.0":
-  version: 0.11.0
-  resolution: "@amplitude/analytics-types@npm:0.11.0"
-  checksum: 10/eb87bdfeecb75dd03f400030a9f4c65c111d3edecc902a32a1f6ff546165743d94b1cf43bd634123f716f8573564241a3053ddce5f73eb9352421484d9a4f79e
-  languageName: node
-  linkType: hard
-
-"@amplitude/ua-parser-js@npm:^0.7.33":
-  version: 0.7.33
-  resolution: "@amplitude/ua-parser-js@npm:0.7.33"
-  checksum: 10/54e0344746cb1fe556f008464599c72de17ebeba012c577137c2a90c9e0915a18588704c60c5ac4138cb3d89973e95132d014ff0896062c98f4e9b3547dda2fe
-  languageName: node
-  linkType: hard
-
 "@ampproject/remapping@npm:^2.2.0":
   version: 2.2.1
   resolution: "@ampproject/remapping@npm:2.2.1"
@@ -3979,9 +3921,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/ml-activities@npm:0.0.29":
-  version: 0.0.29
-  resolution: "@code-dot-org/ml-activities@npm:0.0.29"
+"@code-dot-org/ml-activities@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "@code-dot-org/ml-activities@npm:0.1.1"
   dependencies:
     "@fortawesome/fontawesome-svg-core": "npm:^1.2.25"
     "@fortawesome/free-solid-svg-icons": "npm:^5.11.2"
@@ -3993,7 +3935,7 @@ __metadata:
     radium: ^0.25.2
     react: ~16.14.0
     react-dom: ~16.14.0
-  checksum: 10/e6e6b5db37a42dbf95d77b8a0765ce1d1b2b45d5aba357a22d6fc8718e44ad20ecf1f99aa1d887382b967086f2100765e5a277a144fc1b7eaeab7d932c094f27
+  checksum: 10/2edc163d0438392b7a86ffafdd927cdc80031f514af0a086ecd49d868c010ccf32085b0debe5b44675a45bf7295192fdf675eab54b5e432874c12348b7a32271
   languageName: node
   linkType: hard
 
@@ -4199,6 +4141,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@codemirror/lang-xml@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "@codemirror/lang-xml@npm:6.1.0"
+  dependencies:
+    "@codemirror/autocomplete": "npm:^6.0.0"
+    "@codemirror/language": "npm:^6.4.0"
+    "@codemirror/state": "npm:^6.0.0"
+    "@codemirror/view": "npm:^6.0.0"
+    "@lezer/common": "npm:^1.0.0"
+    "@lezer/xml": "npm:^1.0.0"
+  checksum: 10/f5e54668c30efbb8a78a51e49ccec92a06931f2b98dce35c90be94ded30da02dac525124ce3c40f65c7b071f8db72d16b10a5a1795ccbf10e69939c0a9c1cac8
+  languageName: node
+  linkType: hard
+
 "@codemirror/language@npm:^6.0.0, @codemirror/language@npm:^6.11.0, @codemirror/language@npm:^6.3.0, @codemirror/language@npm:^6.4.0, @codemirror/language@npm:^6.6.0, @codemirror/language@npm:^6.8.0":
   version: 6.11.3
   resolution: "@codemirror/language@npm:6.11.3"
@@ -4221,6 +4177,19 @@ __metadata:
     "@codemirror/view": "npm:^6.35.0"
     crelt: "npm:^1.0.5"
   checksum: 10/9eddfea1dd0615431d57687c2a0d4de510d725aac6f6bbc2eba4bc934963371304dfa4c49398b3043372ef34cead3ebc0ec3f652632a87f5d8a458fa911a309a
+  languageName: node
+  linkType: hard
+
+"@codemirror/merge@npm:^6.11.2":
+  version: 6.11.2
+  resolution: "@codemirror/merge@npm:6.11.2"
+  dependencies:
+    "@codemirror/language": "npm:^6.0.0"
+    "@codemirror/state": "npm:^6.0.0"
+    "@codemirror/view": "npm:^6.17.0"
+    "@lezer/highlight": "npm:^1.0.0"
+    style-mod: "npm:^4.1.0"
+  checksum: 10/17a3ddcf70bbac7fb29ec7c6866a64a12af9f131ced3ac4ac91c9cc2db5066ea957bfab00c795111323b56a80b0c784c718588803c8dd5f2c8d1d5aa83c3db34
   languageName: node
   linkType: hard
 
@@ -5597,6 +5566,17 @@ __metadata:
     "@lezer/highlight": "npm:^1.0.0"
     "@lezer/lr": "npm:^1.0.0"
   checksum: 10/51c75546fc47917a5fdb57abdae47923f2b0dc35e1f65f9a9558939fc0c21e23984b7fa9aafbd41df11b7acffe8bba22e3cddc31abe222dc7f8aac598c16e93c
+  languageName: node
+  linkType: hard
+
+"@lezer/xml@npm:^1.0.0":
+  version: 1.0.6
+  resolution: "@lezer/xml@npm:1.0.6"
+  dependencies:
+    "@lezer/common": "npm:^1.2.0"
+    "@lezer/highlight": "npm:^1.0.0"
+    "@lezer/lr": "npm:^1.0.0"
+  checksum: 10/ffdc3fd587c992f86de84bd828e1d92216484a571423b6edb7b0b1f2eb495ff14e9a234ce5fcba4bce1cb00683af50c0e7f5dfb017a0d3da77607b42e77548a2
   languageName: node
   linkType: hard
 
@@ -11151,7 +11131,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "blockly-mooc@workspace:."
   dependencies:
-    "@amplitude/analytics-browser": "npm:^1.5.4"
     "@babel/core": "npm:^7.26.0"
     "@babel/eslint-parser": "npm:7.25.9"
     "@babel/plugin-proposal-object-rest-spread": "npm:^7.20.7"
@@ -11184,7 +11163,7 @@ __metadata:
     "@code-dot-org/js-interpreter": "npm:1.3.13"
     "@code-dot-org/js-numbers": "npm:0.1.0-cdo.0"
     "@code-dot-org/maze": "npm:2.16.0"
-    "@code-dot-org/ml-activities": "npm:0.0.29"
+    "@code-dot-org/ml-activities": "npm:^0.1.1"
     "@code-dot-org/ml-playground": "npm:0.0.47"
     "@code-dot-org/p5.play": "npm:1.3.21-cdo"
     "@code-dot-org/piskel": "npm:0.13.0-cdo.13"
@@ -11199,8 +11178,10 @@ __metadata:
     "@codemirror/lang-json": "npm:^6.0.2"
     "@codemirror/lang-markdown": "npm:^6.3.4"
     "@codemirror/lang-python": "npm:^6.1.7"
+    "@codemirror/lang-xml": "npm:^6.1.0"
     "@codemirror/language": "npm:^6.11.0"
     "@codemirror/lint": "npm:^6.8.5"
+    "@codemirror/merge": "npm:^6.11.2"
     "@codemirror/search": "npm:^6.5.10"
     "@codemirror/state": "npm:^6.5.2"
     "@codemirror/view": "npm:^6.36.5"

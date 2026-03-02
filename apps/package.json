@@ -33,14 +33,14 @@
     "start:craft": "yarn grunt dev --app=craft",
     "start:statsig": "STATSIG_LOCAL_MODE_OFF=1 yarn grunt dev",
     "storybook": "./script/start-storybook.sh",
-    "storybook:deploy": "./script/deploy-storybook.sh"
+    "storybook:deploy": "./script/deploy-storybook.sh",
+    "typecheck": "tsc -p tsconfig.build.json --noEmit"
   },
   "resolutions": {
     "firmata": "^2.2.0",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "ua-parser-js": "^0.7.40",
-    "@amplitude/ua-parser-js": "^0.7.33",
     "serialport": "^13.0.0"
   },
   "devDependencies": {
@@ -189,7 +189,6 @@
     "webpack-stats-plugin": "^1.1.3"
   },
   "dependencies": {
-    "@amplitude/analytics-browser": "^1.5.4",
     "@blockly/block-shareable-procedures": "^6.0.0",
     "@blockly/field-bitmap": "^6.0.0",
     "@blockly/field-colour": "^6.0.0",
@@ -210,7 +209,7 @@
     "@code-dot-org/js-interpreter": "1.3.13",
     "@code-dot-org/js-numbers": "0.1.0-cdo.0",
     "@code-dot-org/maze": "2.16.0",
-    "@code-dot-org/ml-activities": "0.0.29",
+    "@code-dot-org/ml-activities": "^0.1.1",
     "@code-dot-org/ml-playground": "0.0.47",
     "@code-dot-org/p5.play": "1.3.21-cdo",
     "@code-dot-org/piskel": "0.13.0-cdo.13",
@@ -225,8 +224,10 @@
     "@codemirror/lang-json": "^6.0.2",
     "@codemirror/lang-markdown": "^6.3.4",
     "@codemirror/lang-python": "^6.1.7",
+    "@codemirror/lang-xml": "^6.1.0",
     "@codemirror/language": "^6.11.0",
     "@codemirror/lint": "^6.8.5",
+    "@codemirror/merge": "^6.11.2",
     "@codemirror/search": "^6.5.10",
     "@codemirror/state": "^6.5.2",
     "@codemirror/view": "^6.36.5",

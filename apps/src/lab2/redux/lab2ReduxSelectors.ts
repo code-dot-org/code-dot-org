@@ -51,6 +51,14 @@ export const isReadOnlyWorkspace = (state: RootState) => {
   // Start with the permanently read-only check.
   const isPermanentlyReadOnly = isPermanentlyReadOnlyWorkspace(state);
 
+  const isEditMode = !!getAppOptionsEditBlocks();
+  const isEditingExemplar = getAppOptionsEditingExemplar();
+
+  // Edit modes should always be editable.
+  if (isEditMode || isEditingExemplar) {
+    return false;
+  }
+
   const hasSubmitted = getCurrentLevel(state)?.status === LevelStatus.submitted;
   const isViewingOldVersion = state.lab2Project.viewingOldVersion;
   const isAiTutorVersion = state.lab2Project.viewingAiTutorVersion;
@@ -69,6 +77,17 @@ export const isReadOnlyWorkspace = (state: RootState) => {
     isAiTutorVersion ||
     readOnlyPredictLevel
   );
+};
+
+// If the level should show an exemplar link, the exemplar link is the current url
+// with the query parameter exemplar=true at the end.
+export const getExampleSolutionLink = (state: RootState) => {
+  if (state.lab.levelProperties?.showExemplarLink) {
+    const url = new URL(window.location.href);
+    url.searchParams.set('exemplar', 'true');
+    return [url.toString()];
+  }
+  return [];
 };
 
 // Helper functions

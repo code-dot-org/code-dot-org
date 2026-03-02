@@ -8,6 +8,7 @@ import {
   useSearchParams,
 } from 'react-router-dom';
 
+import {AiChatToolsDependencyValue} from '@cdo/apps/aichat/types';
 import {
   addAnnouncement,
   VisibilityType,
@@ -78,6 +79,7 @@ interface CourseSummary {
   course_versions: {[id: string]: Version};
   announcements: Announcement[];
   has_verified_resources: boolean;
+  ai_chat_tools_dependency: AiChatToolsDependencyValue;
 }
 
 interface Response {
@@ -242,6 +244,7 @@ const TeacherCourseOverview: React.FC = () => {
       title={courseSummary.title}
       assignmentFamilyTitle={courseSummary.assignment_family_title}
       id={courseSummary.id}
+      aiChatToolsDependency={courseSummary.ai_chat_tools_dependency}
       courseOfferingId={courseSummary.course_offering_id}
       courseVersionId={courseSummary.course_version_id}
       descriptionStudent={courseSummary.description_student}

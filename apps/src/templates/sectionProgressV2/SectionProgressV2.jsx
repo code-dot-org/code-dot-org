@@ -1,4 +1,4 @@
-import {Heading6} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -12,18 +12,18 @@ import {
 } from '@cdo/apps/redux/unitSelectionRedux';
 import i18n from '@cdo/locale';
 
-import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
-import {loadUnitProgress} from '../sectionProgress/sectionProgressLoader';
-import {
-  getCurrentUnitData,
-  loadExpandedLessonsFromLocalStorage,
-} from '../sectionProgress/sectionProgressRedux';
 import UnitSelectorV2 from '../teacherDashboardShared/UnitSelectorV2';
 
 import DownloadProgressCsv from './DownloadProgressCsv';
 import IconKey from './IconKey';
 import MoreOptionsDropdown from './MoreOptionsDropdown';
 import ProgressTableV2 from './ProgressTableV2';
+import {unitDataPropType} from './sectionProgressConstants';
+import {loadUnitProgress} from './sectionProgressLoader';
+import {
+  getCurrentUnitData,
+  loadExpandedLessonsFromLocalStorage,
+} from './sectionProgressRedux';
 
 import styles from './progress-table-v2.module.scss';
 
@@ -131,14 +131,20 @@ function SectionProgressV2({
         sectionId={sectionId}
       />
       <div className={styles.title}>
-        <Heading6 className={styles.titleStudents}>{i18n.students()}</Heading6>
-        <Heading6 className={styles.titleUnitSelector}>
+        <Typography className={styles.titleStudents} variant="h6" gutterBottom>
+          {i18n.students()}
+        </Typography>
+        <Typography
+          className={styles.titleUnitSelector}
+          variant="h6"
+          gutterBottom
+        >
           {i18n.lessonsIn()}
 
           <UnitSelectorV2 className={styles.titleUnitSelectorDropdown} />
           <DownloadProgressCsv isLoading={isLoading} />
           <MoreOptionsDropdown />
-        </Heading6>
+        </Typography>
       </div>
       <ProgressTableV2 isSkeleton={isLoading} />
     </div>

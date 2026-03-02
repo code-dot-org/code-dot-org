@@ -6,7 +6,7 @@ import React from 'react';
 import {useSelector} from 'react-redux';
 
 import {FlashHandler, Flash} from '@cdo/apps/flashes/FlashHandler';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {rosterProvider as rosterProviderSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
@@ -49,11 +49,7 @@ export const Header: React.FC<HeaderProps> = ({
   }, [dispatch]);
 
   const onSectionCreateButtonClick = () => {
-    analyticsReporter.sendEvent(
-      EVENTS.SECTION_SETUP_STARTED,
-      {},
-      PLATFORMS.BOTH
-    );
+    analyticsReporter.sendEvent(EVENTS.SECTION_SETUP_STARTED, {});
     dispatch(beginEditingSection());
   };
 

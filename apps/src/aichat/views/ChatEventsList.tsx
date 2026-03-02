@@ -1,35 +1,42 @@
 import Button from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
-import React, {useEffect, useRef, useState, useCallback} from 'react';
+import React, {useEffect, useRef, useState, useCallback, useMemo} from 'react';
 
 import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {selectIsWaitingForChatResponse} from '../redux';
-import {ChatAsset, ChatEvent, isChatMessage} from '../types';
+import {ChatAsset, ChatEvent, isChatMessage, ModelParameters} from '../types';
 
 import {ChatDisabled} from './ChatDisabled';
 import ChatEventView from './ChatEventView';
+import EmptyStudentChatHistory from './EmptyStudentChatHistory';
 import WaitingAnimation from './WaitingAnimation';
 
 import moduleStyles from './chatWorkspace.module.scss';
 
 interface ChatEventsListProps {
+  clientType?: string;
+  modelParameters?: ModelParameters;
   events: ChatEvent[];
   isTeacherView?: boolean;
   buildAssetUrl?: (asset: ChatAsset) => string;
   isAiTutorVersion?: boolean;
+  hasInstructionsDrawer?: boolean;
 }
 
 /**
  * Renders AI Chat {@link ChatEvent}s using common AI design components.
  */
 const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
+  clientType,
+  modelParameters,
   events,
   isTeacherView,
   buildAssetUrl,
   isAiTutorVersion,
+  hasInstructionsDrawer,
 }) => {
   const {chatDisabled, chatDisabledMessage} = useAiChatDisabled();
   const [isInChatNavigationMode, setIsInChatNavigationMode] = useState(false);
@@ -83,6 +90,10 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
       finalEventRef.current?.focus();
     }
   };
+
+  const isTeacherViewEmptyStudentChatHistory = useMemo(() => {
+    return isTeacherView && events.length === 0;
+  }, [isTeacherView, events]);
 
   useEffect(() => {
     const container = conversationContainerRef.current;
@@ -179,26 +190,17 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
         moduleStyles.scrollToBottomContainer
       )}
     >
-      {showScrollToBottom && (
-        <div className={moduleStyles.floatingScrollToBottomButtonContainer}>
-          <Button
-            isIconOnly
-            icon={{iconName: 'arrow-down'}}
-            size="xs"
-            color="black"
-            type="secondary"
-            onClick={() => scrollToLastMessage()}
-            className={moduleStyles.scrollToBottomButton}
-            ariaLabel="Scroll to bottom of messages"
-            aria-controls="chat-workspace-conversation"
-          />
-        </div>
-      )}
       <div className={moduleStyles.messageArea} ref={conversationContainerRef}>
         {chatDisabled ? (
           <ChatDisabled message={chatDisabledMessage} />
         ) : (
           <>
+            {hasInstructionsDrawer && (
+              <div className={moduleStyles.instructionsDrawerInset} />
+            )}
+            {isTeacherViewEmptyStudentChatHistory && (
+              <EmptyStudentChatHistory />
+            )}
             {events.map((event, index) => {
               const isLastMessage = index === events.length - 1;
               return (
@@ -208,6 +210,8 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
                   isTeacherView={isTeacherView}
                   buildAssetUrl={buildAssetUrl}
                   isAiTutorVersion={isAiTutorVersion}
+                  clientType={clientType}
+                  modelParameters={modelParameters}
                   isLastMessage={isLastMessage}
                   ref={isLastMessage ? finalEventRef : undefined}
                   tabIndex={isInChatNavigationMode ? 0 : -1}
@@ -224,6 +228,21 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
           </>
         )}
       </div>
+      {showScrollToBottom && (
+        <div className={moduleStyles.floatingScrollToBottomButtonContainer}>
+          <Button
+            isIconOnly
+            icon={{iconName: 'arrow-down'}}
+            size="xs"
+            color="black"
+            type="secondary"
+            onClick={() => scrollToLastMessage()}
+            className={moduleStyles.scrollToBottomButton}
+            ariaLabel="Scroll to bottom of messages"
+            aria-controls="chat-workspace-conversation"
+          />
+        </div>
+      )}
     </div>
   );
 };

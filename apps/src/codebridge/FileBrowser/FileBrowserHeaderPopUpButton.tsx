@@ -5,6 +5,8 @@ import {PopUpButtonOption} from '@codebridge/PopUpButton/PopUpButtonOption';
 import React from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {WIDGET2_SOURCES} from '@cdo/apps/lab2/constants';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -18,18 +20,15 @@ import {
 export const FileBrowserHeaderPopUpButton = () => {
   const {openNewFilePrompt, openNewFolderPrompt} = usePrompts();
   const {
-    config: {validMimeTypes, supportedFileTypes, editableFileTypes},
+    config: {validMimeTypes, supportedFileTypes},
     levelProperties,
   } = useCodebridgeContext();
   const {appName} = levelProperties;
   const isBlockedAbuse = useAppSelector(state => state.lab.isBlockedAbuse);
-  const openNewFilePromptArgs = {
-    folderId: DEFAULT_FOLDER_ID,
-    validFileTypes: editableFileTypes,
-  };
   const files = useAppSelector(
     state => (state.lab2Project.projectSources?.source as MultiFileSource).files
   );
+  const isWidget2SourcesMode = getAppOptionsEditBlocks() === WIDGET2_SOURCES;
 
   const uploadErrorCallback = useFileUploadErrorCallback();
   const handleFileUpload = useHandleFileUpload(files);
@@ -55,17 +54,19 @@ export const FileBrowserHeaderPopUpButton = () => {
         id="uitest-files-plus"
         ariaLabel={codebridgeI18n.manageFiles()}
       >
-        <PopUpButtonOption
-          iconName="plus"
-          labelText={codebridgeI18n.newFolder()}
-          clickHandler={() =>
-            openNewFolderPrompt({parentId: DEFAULT_FOLDER_ID})
-          }
-        />
+        {!isWidget2SourcesMode && (
+          <PopUpButtonOption
+            iconName="plus"
+            labelText={codebridgeI18n.newFolder()}
+            clickHandler={() =>
+              openNewFolderPrompt({parentId: DEFAULT_FOLDER_ID})
+            }
+          />
+        )}
         <PopUpButtonOption
           iconName="plus"
           labelText={codebridgeI18n.newFile()}
-          clickHandler={() => openNewFilePrompt(openNewFilePromptArgs)}
+          clickHandler={() => openNewFilePrompt({folderId: DEFAULT_FOLDER_ID})}
           id="uitest-new-file"
         />
         <PopUpButtonOption

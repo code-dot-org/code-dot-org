@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -5,7 +6,6 @@ import ReactTooltip from 'react-tooltip';
 
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {Heading1} from '@cdo/apps/legacySharedComponents/Headings';
 import LtiSectionSyncDialog, {
   LtiSectionSyncResultShape,
 } from '@cdo/apps/simpleSignUp/lti/sync/LtiSectionSyncDialog';
@@ -164,7 +164,9 @@ class SyncOmniAuthSectionControl extends React.Component {
           style={styles.dialog}
           handleClose={this.closeDialog}
         >
-          <Heading1>{i18n.loginTypeSyncButtonDialogHeader()}</Heading1>
+          <Typography variant="h1" gutterBottom>
+            {i18n.loginTypeSyncButtonDialogHeader()}
+          </Typography>
           <p>{i18n.loginTypeSyncButtonDialogHeaderSub()}</p>
           {this.state.needsGoogleReauth && (
             <div style={{margin: '12px 0'}}>

@@ -9,9 +9,10 @@ import $ from 'jquery';
 import _ from 'lodash';
 
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
+import {AiChatAccessLevel} from '@cdo/apps/aichat/types/accessControls';
 import DCDO from '@cdo/apps/dcdo';
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {RootState} from '@cdo/apps/types/redux';
 import experiments from '@cdo/apps/util/experiments';
@@ -34,8 +35,8 @@ import {
   USER_EDITABLE_SECTION_PROPS,
 } from './teacherSectionsReduxSelectors';
 import {
-  AssignmentCourseOffering,
   Classroom,
+  CourseOffering,
   LtiSectionSyncResult,
   OAuthSectionTypeName,
   Section,
@@ -61,8 +62,8 @@ type AssignmentData = {
   unitName?: string | null;
 };
 
-interface AifInfo {
-  aif: boolean;
+interface CourseOfferingSet {
+  [courseOfferingId: number]: CourseOffering;
 }
 
 export interface TeacherSectionState {
@@ -82,7 +83,7 @@ export interface TeacherSectionState {
   // Array of course offerings, to populate the assignment dropdown
   // with options like "CSD", "Course A", or "Frozen". See the
   // assignmentCourseOfferingShape PropType.
-  courseOfferings: AssignmentCourseOffering[];
+  courseOfferings: CourseOfferingSet;
   courseOfferingsAreLoaded: boolean;
   // The participant types the user can create sections for
   availableParticipantTypes: string[];
@@ -381,10 +382,18 @@ const sectionSlice = createSlice({
 
       state.sections[sectionId].aiTutorEnabled = aiTutorEnabled;
     },
-    setCourseOfferings(
+    updateSectionAiChatAccessLevel(
       state,
-      action: PayloadAction<AssignmentCourseOffering[]>
+      action: PayloadAction<{
+        sectionId: number;
+        aiChatAccessLevel: AiChatAccessLevel;
+      }>
     ) {
+      const {sectionId, aiChatAccessLevel} = action.payload;
+
+      state.sections[sectionId].aiChatAccessLevel = aiChatAccessLevel;
+    },
+    setCourseOfferings(state, action: PayloadAction<CourseOfferingSet>) {
       state.courseOfferings = action.payload;
       state.courseOfferingsAreLoaded = true;
     },
@@ -831,7 +840,7 @@ export const asyncLoadTeacherHomepageSectionData =
     dispatch(beginAsyncLoad());
 
     const promises: Promise<object>[] = [
-      HttpClient.fetchJson<AssignmentCourseOffering[]>(
+      HttpClient.fetchJson<CourseOfferingSet>(
         '/dashboardapi/sections/valid_course_offerings'
       ).then(response => dispatch(setCourseOfferings(response.value))),
       HttpClient.fetchJson<ParticipantTypesResponse>(
@@ -876,7 +885,7 @@ export const asyncLoadSectionData =
       ),
       fetchJSON('/dashboardapi/sections/valid_course_offerings').then(
         offerings =>
-          dispatch(setCourseOfferings(offerings as AssignmentCourseOffering[]))
+          dispatch(setCourseOfferings(offerings as CourseOfferingSet))
       ),
       fetchJSON('/dashboardapi/sections/available_participant_types').then(
         participantTypes =>
@@ -973,32 +982,27 @@ export const assignToSection = (
 ): SectionThunkAction => {
   return (dispatch, getState) => {
     const section = getState().teacherSections.sections[sectionId];
-    if (unitId && section.unitId !== unitId) {
+    // Generate AI lesson summaries
+    if (
+      unitId &&
+      section.unitId !== unitId &&
+      DCDO.get('show-aita-lesson-summaries', false)
+    ) {
+      HttpClient.get(
+        `/ai_lesson_summaries/request_ai_lesson_summaries?unit_id=${unitId}`
+      ).catch(error => {
+        console.error(error);
+      });
+      // Generate AI podcasts
+
       if (
-        DCDO.get('show-aita-lesson-summaries', false) ||
-        experiments.isEnabled('ai_lesson_summaries')
+        DCDO.get('ai-lesson-summary-podcasts', false) ||
+        experiments.isEnabled('ai-lesson-podcasts')
       ) {
         HttpClient.get(
-          `/ai_lesson_summaries/perform_ai_lesson_summaries_by_unit?unit_id=${unitId}`
+          `/ai_lesson_summary_podcasts/generate_podcasts_by_unit?unit_id=${unitId}`
         ).catch(error => {
           console.error(error);
-        });
-      } else {
-        HttpClient.fetchJson<AifInfo>(
-          `/teacher_dashboard/unit_in_aif?unit_id=${unitId}`
-        ).then(response => {
-          const aif = response.value.aif;
-          if (
-            DCDO.get('show-aita-lesson-summaries', false) ||
-            experiments.isEnabled('ai_lesson_summaries') ||
-            aif
-          ) {
-            HttpClient.get(
-              `/ai_lesson_summaries/perform_ai_lesson_summaries_by_unit?unit_id=${unitId}`
-            ).catch(error => {
-              console.error(error);
-            });
-          }
         });
       }
     }
@@ -1008,21 +1012,17 @@ export const assignToSection = (
       (courseVersionId && section.courseVersionId !== courseVersionId) ||
       (unitId && section.unitId !== unitId)
     ) {
-      analyticsReporter.sendEvent(
-        EVENTS.CURRICULUM_ASSIGNED,
-        {
-          sectionName: section.name,
-          sectionId,
-          sectionLoginType: section.loginType,
-          previousUnitId: section.unitId,
-          previousCourseId: section.courseOfferingId,
-          previousCourseVersionId: section.courseVersionId,
-          newUnitId: unitId,
-          newCourseId: courseOfferingId,
-          newCourseVersionId: courseVersionId,
-        },
-        PLATFORMS.BOTH
-      );
+      analyticsReporter.sendEvent(EVENTS.CURRICULUM_ASSIGNED, {
+        sectionName: section.name,
+        sectionId,
+        sectionLoginType: section.loginType,
+        previousUnitId: section.unitId,
+        previousCourseId: section.courseOfferingId,
+        previousCourseVersionId: section.courseVersionId,
+        newUnitId: unitId,
+        newCourseId: courseOfferingId,
+        newCourseVersionId: courseVersionId,
+      });
     }
 
     dispatch(beginEditingSection(sectionId, true));
@@ -1207,6 +1207,7 @@ export const {
   setAvailableParticipantTypes,
   startLoadingSectionData,
   updateSectionAiTutorEnabled,
+  updateSectionAiChatAccessLevel,
   updateSelectedSection,
   sectionHasNewData,
   sectionDoesNotHaveNewData,

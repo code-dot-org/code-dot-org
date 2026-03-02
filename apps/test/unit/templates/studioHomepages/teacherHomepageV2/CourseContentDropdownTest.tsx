@@ -9,7 +9,7 @@ import {
 } from 'react-router-dom';
 import {Store} from 'redux';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {CourseContentDropdown} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/CourseContentDropdown';
@@ -164,8 +164,7 @@ describe('CourseContentDropdown', () => {
     fireEvent.click(courseButton);
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_CARD_GO_TO_COURSE_BUTTON_CLICKED,
-      {},
-      PLATFORMS.BOTH
+      {}
     );
   });
 
@@ -179,8 +178,7 @@ describe('CourseContentDropdown', () => {
       EVENTS.SECTION_CARD_JUMP_TO_LESSON_CLICKED,
       {
         lesson: '/courses/csd-2024/units/3/lessons/4/levels/1',
-      },
-      PLATFORMS.BOTH
+      }
     );
     const unit = screen.getByText(
       "Unit 3 - Interactive Animations and Games ('24-'25)"
@@ -191,8 +189,7 @@ describe('CourseContentDropdown', () => {
       EVENTS.SECTION_CARD_JUMP_TO_UNIT_OVERVIEW_CLICKED,
       {
         lesson: '/courses/csd-2024/units/3',
-      },
-      PLATFORMS.BOTH
+      }
     );
   });
 });

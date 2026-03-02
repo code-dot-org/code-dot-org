@@ -11,7 +11,7 @@ import {
 } from 'react-router-dom';
 import {Store} from 'redux';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import SectionOptionsDropdown from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/SectionOptionsDropdown';
@@ -272,8 +272,7 @@ describe('SectionOptionsDropdown', () => {
     screen.getByText('/sections/11/settings');
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_CARD_SETTINGS_CLICKED,
-      {},
-      PLATFORMS.BOTH
+      {}
     );
   });
 
@@ -284,8 +283,7 @@ describe('SectionOptionsDropdown', () => {
     screen.getByText('/sections/11/roster');
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_CARD_ROSTER_CLICKED,
-      {},
-      PLATFORMS.BOTH
+      {}
     );
   });
 
@@ -296,8 +294,7 @@ describe('SectionOptionsDropdown', () => {
     screen.getByText('/sections/11/login_info');
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_CARD_LOGIN_CARDS_CLICKED,
-      {},
-      PLATFORMS.BOTH
+      {}
     );
   });
 
@@ -308,8 +305,7 @@ describe('SectionOptionsDropdown', () => {
     await act(async () => await new Promise(process.nextTick));
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_TABLE_PRINT_CERTIFICATES_CLICKED,
-      {},
-      PLATFORMS.BOTH
+      {}
     );
     expect(fetchSpy).toHaveBeenCalledWith('/dashboardapi/sections/11/students');
   });
@@ -320,8 +316,7 @@ describe('SectionOptionsDropdown', () => {
     fireEvent.click(archiveLink);
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_CARD_ARCHIVE_CLICKED,
-      {},
-      PLATFORMS.BOTH
+      {}
     );
   });
 
@@ -332,8 +327,7 @@ describe('SectionOptionsDropdown', () => {
     fireEvent.click(link);
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_CARD_DELETE_CLICKED,
-      {},
-      PLATFORMS.BOTH
+      {}
     );
   });
 

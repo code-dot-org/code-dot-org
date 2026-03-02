@@ -12,14 +12,16 @@ import React, {
   useState,
 } from 'react';
 
+import * as BlockUtils from '@cdo/apps/block_utils';
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 import cdoDark from '@cdo/apps/blockly/themes/cdoDark';
 import cdoTheme from '@cdo/apps/blockly/themes/cdoTheme';
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {
   applyBlockIdOverrides,
+  getBlockDefinitionsForUpdatedLocale,
   loadBlocksToWorkspace,
-  updateLocale,
+  refreshWorkspacesForUpdatedLocale,
   validateBlockCategories,
 } from '@cdo/apps/blockly/utils';
 import {
@@ -90,7 +92,6 @@ import GenerateDance from './GenerateDance';
 import GenerateDancer from './GenerateDancer';
 
 import moduleStyles from './dance-view.module.scss';
-
 const DANCE_VISUALIZATION_ID = 'dance-visualization';
 const BLOCKLY_DIV_ID = 'dance-blockly-div';
 
@@ -399,7 +400,15 @@ const DanceView: React.FunctionComponent<{
 
     // Ensure that Blockly localizes when the locale changes
     localization.on('change', info => {
-      updateLocale(localization.rtl);
+      const blockDefinitions = getBlockDefinitionsForUpdatedLocale(
+        localization.rtl
+      );
+      BlockUtils.installCustomBlocks({
+        blockly: Blockly,
+        blockDefinitions,
+        customInputTypes: Blockly.SourceCustomInputTypes,
+      });
+      refreshWorkspacesForUpdatedLocale(localization.rtl);
     });
 
     if (isShareView) {

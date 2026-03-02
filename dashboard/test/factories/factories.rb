@@ -209,6 +209,10 @@ FactoryBot.define do
       after(:create, &:demigrate_from_multi_auth)
     end
 
+    transient do
+      auth_option_version {nil}
+    end
+
     factory :teacher, class: Teacher do
       user_type {User::TYPE_TEACHER}
       birthday {Date.new(1980, 3, 14)}
@@ -719,7 +723,7 @@ FactoryBot.define do
     end
 
     trait :with_clever_authentication_option do
-      after(:create) do |user|
+      after(:create) do |user, evaluator|
         create(
           :authentication_option,
           user: user,
@@ -727,6 +731,7 @@ FactoryBot.define do
           hashed_email: user.hashed_email,
           credential_type: AuthenticationOption::CLEVER,
           authentication_id: SecureRandom.uuid,
+          version: evaluator.auth_option_version,
           data: {
             oauth_token: 'some-clever-token'
           }.to_json
@@ -1494,6 +1499,16 @@ FactoryBot.define do
     lesson
   end
 
+  factory :lesson_feedback do
+    association(:teacher, factory: :teacher)
+    association(:student, factory: :student)
+    lesson
+    saved_feedback {"Generic saved feedback"}
+    submitted_feedback {nil}
+    submitted_at {nil}
+    resources {nil}
+  end
+
   factory :activity_section do
     sequence(:key) {|n| "activity-section-#{n}"}
     sequence(:position)
@@ -2120,8 +2135,8 @@ FactoryBot.define do
   end
 
   factory :lti_course do
-    lti_integration {create(:lti_integration)}
-    lti_deployment {create(:lti_deployment, lti_integration: lti_integration)}
+    association :lti_integration
+    lti_deployment {build(:lti_deployment, lti_integration:)}
     context_id {SecureRandom.uuid}
     course_id {SecureRandom.uuid}
     nrps_url {"http://test.org/api/names_and_roles"}

@@ -1,13 +1,27 @@
+import Alert from '@code-dot-org/component-library/alert';
 import {Typography} from '@mui/material';
 import _ from 'lodash';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 
+import DCDO from '@cdo/apps/dcdo';
 import {getSelectedUnitId} from '@cdo/apps/redux/unitSelectionRedux';
-import {loadUnitProgress} from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
+import {loadUnitProgress} from '@cdo/apps/templates/sectionProgressV2/sectionProgressLoader';
 import {LessonOption} from '@cdo/apps/templates/teacherDashboardShared/LessonSelector';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+const canParseUrl = (urlString: string | object | boolean): boolean => {
+  if (urlString && typeof urlString === 'string') {
+    try {
+      new URL(urlString);
+      return true;
+    } catch {
+      return false;
+    }
+  }
+  return false;
+};
 
 import {getFullName} from '../manageStudents/utils';
 
@@ -15,6 +29,7 @@ import ExemplarCodeWidget from './codeWidget/ExemplarCodeWidget';
 import StudentCodeWidget from './codeWidget/StudentCodeWidget';
 import Header from './header';
 import LessonFeedbackWidget from './lessonFeedbackWidget/LessonFeedbackWidget';
+import LessonInsightWidget from './lessonInsightWidget';
 import StudentCFUWidget from './studentCFUWidget';
 import StudentLessonProgressDetailsWidget from './studentLessonProgressDetailsWidget';
 import StudentRubricWidget from './studentRubricWidget/StudentRubricWidget';
@@ -33,20 +48,6 @@ const getLessons = (unitId: number) =>
 
 const lessonsCachedLoader = _.memoize(getLessons);
 
-interface StudentCodeData {
-  studentCode: Record<string, string>;
-}
-
-const getStudentCode = (
-  unitId: number,
-  lessonId: number,
-  studentId: number
-): Promise<Record<string, string>> => {
-  return HttpClient.fetchJson<StudentCodeData>(
-    `/student_snapshots/units/${unitId}/lessons/${lessonId}/students/${studentId}/code`
-  ).then(response => response?.value?.studentCode || {});
-};
-
 const StudentSnapshot: React.FC = () => {
   const [selectedStudentId, setSelectedStudentId] = React.useState<
     number | null
@@ -56,9 +57,6 @@ const StudentSnapshot: React.FC = () => {
   const [isLessonsLoading, setIsLessonsLoading] = useState<boolean>(false);
   const [hasUnnumberedLessons, setHasUnnumberedLessons] =
     useState<boolean>(false);
-  const [isStudentCodeLoading, setIsStudentCodeLoading] =
-    useState<boolean>(false);
-  const [studentCode, setStudentCode] = useState<Record<string, string>>({});
 
   const sectionId = useAppSelector(
     state => state.teacherSections.selectedSectionId
@@ -87,7 +85,9 @@ const StudentSnapshot: React.FC = () => {
     [selectedStudentId, selectedStudents]
   );
 
-  React.useEffect(() => {
+  const feedbackLink = DCDO.get('student-snapshot-feedback-link', undefined);
+
+  useEffect(() => {
     if (selectedUnitId) {
       setIsLessonsLoading(true);
       lessonsCachedLoader(selectedUnitId)
@@ -107,32 +107,6 @@ const StudentSnapshot: React.FC = () => {
     }
   }, [sectionId, selectedUnitId, sectionCourseId, selectedUnitPosition]);
 
-  // Fetch Student Code when student or lesson changes
-  React.useEffect(() => {
-    if (selectedUnitId && selectedLessonId && selectedStudentId) {
-      setIsStudentCodeLoading(true);
-      getStudentCode(selectedUnitId, selectedLessonId, selectedStudentId)
-        .then(code => {
-          setStudentCode(code);
-        })
-        .catch(error => {
-          console.error('Error fetching student code:', error);
-          setStudentCode({});
-        })
-        .finally(() => {
-          setIsStudentCodeLoading(false);
-        });
-    } else {
-      setStudentCode({});
-    }
-  }, [selectedUnitId, selectedLessonId, selectedStudentId]);
-
-  console.log(isStudentCodeLoading);
-
-  // TODO: replace with actual values from URL/Redux later
-  const HARDCODED_STUDENT_ID = 8; // Replace with actual student ID
-  const HARDCODED_STUDENT_NAME = 'Student Name'; // Replace with actual student name
-
   return (
     <div className={styles.snapshotContainer}>
       <Header
@@ -144,6 +118,22 @@ const StudentSnapshot: React.FC = () => {
         setSelectedStudentId={setSelectedStudentId}
         hasUnnumberedLessons={hasUnnumberedLessons}
       />
+
+      {canParseUrl(feedbackLink) && (
+        <Alert
+          type={'primary'}
+          size={'s'}
+          text={
+            "We'd love your feedback on the new Student Snapshot page. Just a few minutes will help us improve!"
+          }
+          link={{
+            text: 'Feedback form',
+            href: String(feedbackLink),
+            openInNewTab: true,
+          }}
+          icon={{iconName: 'comment-dots', iconStyle: 'regular'}}
+        />
+      )}
 
       {selectedStudent && (
         <Typography
@@ -163,28 +153,39 @@ const StudentSnapshot: React.FC = () => {
             selectedStudentId={selectedStudentId}
           />
         )}
+        <LessonInsightWidget
+          selectedUnitId={selectedUnitId}
+          selectedLessonId={selectedLessonId}
+          selectedStudentId={selectedStudentId}
+        />
         <LessonFeedbackWidget
           lessonId={selectedLessonId}
-          studentId={HARDCODED_STUDENT_ID}
           teacherHasEnabledAi={aiTaEnabled}
+          studentId={selectedStudentId}
+          unitId={selectedUnitId}
+          sectionId={sectionId}
         />
-        <StudentCodeWidget studentCode={studentCode} />
         <StudentCFUWidget
           gridWidth={2}
           gridHeight={2}
           lessonId={selectedLessonId}
           studentId={selectedStudentId}
         />
-        <ExemplarCodeWidget lessonId={selectedLessonId} />
+        <StudentCodeWidget
+          selectedUnitId={selectedUnitId}
+          selectedLessonId={selectedLessonId}
+          selectedStudentId={selectedStudentId}
+        />
         <StudentRubricWidget
           gridWidth={2}
           gridHeight={2}
           lessonId={selectedLessonId}
-          studentId={HARDCODED_STUDENT_ID}
-          studentName={HARDCODED_STUDENT_NAME}
+          studentId={selectedStudentId}
+          studentName={selectedStudent ? getFullName(selectedStudent) : ''}
           teacherHasEnabledAi={false}
           canProvideFeedback={true}
         />
+        <ExemplarCodeWidget lessonId={selectedLessonId} />
       </div>
     </div>
   );

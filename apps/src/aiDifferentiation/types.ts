@@ -9,18 +9,47 @@ import {ResponseValidator} from '../util/HttpClient';
 
 import {EXIT_TICKET_PROMPT, LESSON_HOOK_PROMPT} from './predefinedPrompts';
 
+export type LessonHook = {
+  comment: string;
+  introduction: string;
+  activity: string;
+  wrap_up: string;
+};
+
+export type ExitTicket = {
+  comment: string;
+  exit_ticket_items: ExitTicketItem[];
+};
+
+export type ExitTicketItem = {
+  type: string;
+  question: string;
+  answer: string;
+};
+
+export type AiArtifact = {
+  id: number;
+  title: string;
+  updatedAt: Date;
+  type: (typeof AiDiffArtifactType)[keyof typeof AiDiffArtifactType];
+  content: object;
+  url: string;
+};
+
 export type ChatTextMessage = {
   role: Role;
   chatMessageText: string;
-  status: string;
+  status: (typeof AiInteractionStatus)[keyof typeof AiInteractionStatus];
   id?: number;
   isArtifactCandidate?: boolean;
   artifactCandidateType?: (typeof AiDiffArtifactType)[keyof typeof AiDiffArtifactType];
+  isArtifact?: boolean;
 };
 
 export type ChatPrompt = {
   label: string;
   prompt: string;
+  artifactCandidateType?: (typeof AiDiffArtifactType)[keyof typeof AiDiffArtifactType];
   response?: string;
   followUpPrompts?: ChatPrompt[];
 };
@@ -35,11 +64,14 @@ type ServerChatThread = {
   title: string;
   updated_at: Date;
   context_type: (typeof AiDiffContext)[keyof typeof AiDiffContext];
+  has_artifact: boolean;
   messages?: [ChatItem];
+  artifact?: ServerAiArtifact;
 };
 
 type ServerChatMessage = {
   id: number;
+  status: string;
   role: string;
   content: string;
   updated_at: Date;
@@ -49,12 +81,23 @@ type ServerChatMessage = {
   artifact_candidate_type: string;
 };
 
+type ServerAiArtifact = {
+  id: number;
+  title: string;
+  updated_at: Date;
+  type: (typeof AiDiffArtifactType)[keyof typeof AiDiffArtifactType];
+  content: object;
+  url: string;
+};
+
 export type ChatThread = {
   id: number;
   title: string;
   updatedAt: Date;
   contextType: (typeof AiDiffContext)[keyof typeof AiDiffContext];
+  hasArtifact: boolean;
   messages?: [ChatItem];
+  artifact?: AiArtifact;
 };
 
 export type ChatItem = ChatTextMessage | ChatPrompt[];
@@ -101,12 +144,29 @@ function messageValidatorHelper(
       serverMsg.is_preset && serverMsg.preset_chip_text
         ? serverMsg.preset_chip_text
         : serverMsg.content,
-    status: AiInteractionStatus.OK,
+    status:
+      serverMsg.status === undefined
+        ? AiInteractionStatus.OK
+        : serverMsg.status,
     id: serverMsg.id,
     isArtifactCandidate: serverMsg.is_artifact_candidate,
     artifactCandidateType:
       serverMsg.artifact_candidate_type || inferredArtifactType,
   } as ChatTextMessage;
+}
+
+function artifactValidatorHelper(
+  response: Record<string, unknown>
+): AiArtifact {
+  const serverMsg = response as ServerAiArtifact;
+  return {
+    id: serverMsg.id,
+    title: serverMsg.title,
+    updatedAt: new Date(serverMsg.updated_at),
+    type: serverMsg.type,
+    content: serverMsg.content,
+    url: serverMsg.url,
+  } as AiArtifact;
 }
 
 const chatThreadValidator: ResponseValidator<ChatThread[]> = bodyJson => {
@@ -131,7 +191,9 @@ const chatThreadValidator: ResponseValidator<ChatThread[]> = bodyJson => {
       title: serverThread.title,
       updatedAt: new Date(serverThread.updated_at),
       contextType: serverThread.context_type,
+      hasArtifact: serverThread.has_artifact,
       messages: serverThread.messages,
+      artifact: serverThread.artifact,
     } as ChatThread;
   });
 
@@ -146,14 +208,20 @@ const chatThreadMessagesValidator: ResponseValidator<ChatThread> = bodyJson => {
     return messageValidatorHelper(serverMessage);
   });
 
+  const artifact: AiArtifact | undefined = serverThread.artifact
+    ? artifactValidatorHelper(serverThread.artifact)
+    : undefined;
+
   return {
     id: serverThread.id,
     title: serverThread.title,
     updatedAt: new Date(serverThread.updated_at),
     contextType: serverThread.context_type,
     messages: messages,
+    artifact: artifact,
   } as ChatThread;
 };
 
+export {artifactValidatorHelper};
 export {chatThreadValidator};
 export {chatThreadMessagesValidator};

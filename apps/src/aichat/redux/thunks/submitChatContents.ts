@@ -6,6 +6,7 @@ import {
   clearUserAddedSelectionContext,
   setChatMessageSent,
   updateChatMessageStatus,
+  updateRequestId,
 } from '@cdo/apps/aichat/redux/slice';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
@@ -166,7 +167,7 @@ export const submitChatContents = createAsyncThunk(
       messages = await postAichatCompletionMessage(
         newUserMessage,
         chatEventsCurrent.filter(isCompletedChatMessage),
-        modelParameters,
+        {...modelParameters},
         aichatContext
       );
 
@@ -212,6 +213,12 @@ export const submitChatContents = createAsyncThunk(
           updateChatMessageStatus({
             updateId: newUserMessage.updateId,
             status: message.status,
+          })
+        );
+        dispatch(
+          updateRequestId({
+            updateId: newUserMessage.updateId,
+            requestId: message.requestId,
           })
         );
         logChatEvent(message, state.progress.viewAsUserId);

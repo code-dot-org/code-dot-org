@@ -1,11 +1,11 @@
 import Button, {buttonColors} from '@code-dot-org/component-library/button';
-import {Heading4} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useState} from 'react';
 import {ControlLabel, Fade, FormControl, FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 
 import {STATE_CODES} from '@cdo/apps/geographyConstants';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import {bulkSet} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
@@ -43,8 +43,7 @@ const BulkSetModal: React.FC<BulkSetModalProps> = ({
         sectionLoginType: section.loginType,
         teacherUsState: currentUser?.usStateCode,
         selectedUsState,
-      },
-      PLATFORMS.STATSIG
+      }
     );
 
     onClose();
@@ -53,9 +52,13 @@ const BulkSetModal: React.FC<BulkSetModalProps> = ({
   return (
     <Fade in={isOpen} mountOnEnter unmountOnExit>
       <AccessibleDialog id="us-state-column-bulk-set-modal" onClose={onClose}>
-        <Heading4 id="us-state-column-bulk-set-modal-title">
+        <Typography
+          id="us-state-column-bulk-set-modal-title"
+          variant="h4"
+          gutterBottom
+        >
           {i18n.studentUsStateUpdatesModal_title()}
-        </Heading4>
+        </Typography>
 
         <hr aria-hidden="true" />
 

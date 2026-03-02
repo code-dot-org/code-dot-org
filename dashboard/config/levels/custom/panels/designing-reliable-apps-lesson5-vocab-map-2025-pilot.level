@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-02-11T21:40:09.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# .map()\n\n`.map()` is a method that creates a new array by running a function once for each item in the original array.",
+        "imageUrl": "",
+        "key": "designing-reliable-apps-lesson5-vocab-map-2025-pilot-0e00effd-46bb-4419-968d-394aee8e5344",
+        "layout": "text-bottom-center"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2026-02-25 01:37:36 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Panels>

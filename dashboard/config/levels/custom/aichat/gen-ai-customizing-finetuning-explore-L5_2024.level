@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2024-06-28T19:59:03.000Z",
   "level_num": "custom",
@@ -39,17 +40,20 @@
       },
       "hidePresentationPanel": true,
       "availableModelIds": [
-        "gen-ai-mistral-7b-inst-v01",
+        "gen-ai-biomistral-7b",
         "gen-ai-mistral-pirate-7b",
         "gen-ai-karen-creative-mistral-7b",
         "gen-ai-arithmo2-mistral-7b",
-        "gen-ai-biomistral-7b"
-      ]
+        "gen-ai-mistral-7b-inst-v01"
+      ],
+      "multimodalEnabled": false
     },
     "long_instructions": "## Explore Multiple Models\r\n\r\nThis level has _every_ base model available to experiment with and compare.\r\n\r\n### Do This\r\n1) Choose a model _other than the default one_ and try to create a chatbot with it.\r\n    - Come up with your own system prompt or retrieval and see if you can make a simple chatbot with it.",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-06-28T19:59:03.566+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-finetuning-explore-L5\\\"\"],\"cloned_from\":\"gen-ai-customizing-finetuning-explore-L5\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-06-28T19:59:03.566+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-finetuning-explore-L5\\\"\"],\"cloned_from\":\"gen-ai-customizing-finetuning-explore-L5\"},{\"changed_at\":\"2026-02-23 19:21:38 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":13506,\"changed_by_email\":\"sanchit+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-23 19:33:24 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":13506,\"changed_by_email\":\"sanchit+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-23 19:34:40 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":13506,\"changed_by_email\":\"sanchit+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-23 19:35:11 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":13506,\"changed_by_email\":\"sanchit+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

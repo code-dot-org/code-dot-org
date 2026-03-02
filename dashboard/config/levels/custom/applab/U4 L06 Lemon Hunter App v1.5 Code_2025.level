@@ -68,6 +68,7 @@
     "name_suffix": "_2025",
     "ai_enabled": "false",
     "video_key": "csp_applab_conditionals_2B",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

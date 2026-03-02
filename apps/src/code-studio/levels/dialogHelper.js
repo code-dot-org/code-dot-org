@@ -1,12 +1,12 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import {
   LegacyErrorDialog,
   LegacySuccessDialog,
 } from '@cdo/apps/legacySharedComponents/LegacyDialogContents';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
@@ -31,7 +31,7 @@ export function showDialog(component, callback, onHidden) {
     return;
   }
   const div = document.createElement('div');
-  ReactDOM.render(component, div);
+  createReactRoot(component, div);
   const content = div.childNodes[0];
   const dialog = new LegacyDialog({
     // Content is a div with a specific expected structure. See LegacyDialog.
@@ -159,7 +159,7 @@ export function processResults(onComplete, beforeHook) {
           const lessonName = `${i18n.lesson()} ${lessonInfo.position}: ${
             lessonInfo.name
           }`;
-          ReactDOM.render(
+          createReactRoot(
             <PlayZone
               lessonName={lessonName}
               onContinue={() => {

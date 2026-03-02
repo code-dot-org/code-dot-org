@@ -1,18 +1,18 @@
-import {
-  BodyTwoText,
-  Heading3,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useCallback} from 'react';
 
+import AssigningAvailableAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/AssigningAvailableAiChatToolsAlert';
+import AssigningEssentialAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/AssigningEssentialAiChatToolsAlert';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {
   CourseOfferingCurriculumTypes as curriculumTypes,
   ParticipantAudience,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import CurriculumQuickAssignTopRow from './CurriculumQuickAssignTopRow';
@@ -280,11 +280,17 @@ export default function CurriculumQuickAssign({
       ? QuickAssignTableHocPl
       : QuickAssignTable;
 
+  const aiChatToolsDependency = selectedCourseOffering
+    ? selectedCourseOffering.ai_chat_tools_dependency
+    : AiChatToolsDependency.NONE;
+
   return (
     <div className={moduleStyles.containerWithMarginTop}>
       {isLoading && !isNewSection ? (
         <>
-          <Heading3>{i18n.assignCurriculum()}</Heading3>
+          <Typography variant="h3" gutterBottom>
+            {i18n.assignCurriculum()}
+          </Typography>
           <div className={moduleStyles.loadingSpinner}>
             <Spinner />
           </div>
@@ -313,8 +319,12 @@ export default function CurriculumQuickAssign({
               id="decide-later"
               onChange={toggleDecideLater}
             />
-            <Heading3>{i18n.assignCurriculum()}</Heading3>
-            <BodyTwoText>{i18n.useDropdownMessage()}</BodyTwoText>
+            <Typography variant="h3" gutterBottom>
+              {i18n.assignCurriculum()}
+            </Typography>
+            <Typography variant="body2" gutterBottom>
+              {i18n.useDropdownMessage()}
+            </Typography>
           </div>
           <CurriculumQuickAssignTopRow
             showPlOfferings={showPlOfferings}
@@ -347,6 +357,12 @@ export default function CurriculumQuickAssign({
               sectionCourse={sectionCourse}
               isNewSection={isNewSection}
             />
+          )}
+          {aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
+            <AssigningEssentialAiChatToolsAlert />
+          )}
+          {aiChatToolsDependency === AiChatToolsDependency.AVAILABLE && (
+            <AssigningAvailableAiChatToolsAlert />
           )}
         </>
       )}

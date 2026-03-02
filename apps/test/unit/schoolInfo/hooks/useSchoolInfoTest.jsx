@@ -1,6 +1,6 @@
 import {act, renderHook} from '@testing-library/react-hooks';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useSchoolInfo} from '@cdo/apps/schoolInfo/hooks/useSchoolInfo';
 import {
   SCHOOL_COUNTRY_SESSION_KEY,
@@ -207,8 +207,7 @@ describe('useSchoolInfo', () => {
 
         expect(sendAnalyticsEventSpy).toHaveBeenCalledWith(
           EVENTS.COUNTRY_SELECTED,
-          {country: 'CA'},
-          PLATFORMS.BOTH
+          {country: 'CA'}
         );
       });
     });
@@ -278,8 +277,7 @@ describe('useSchoolInfo', () => {
 
         expect(sendAnalyticsEventSpy).toHaveBeenCalledWith(
           EVENTS.ZIP_CODE_ENTERED,
-          {country: 'US', zip: '90210'},
-          PLATFORMS.BOTH
+          {country: 'US', zip: '90210'}
         );
       });
 
@@ -320,8 +318,7 @@ describe('useSchoolInfo', () => {
 
         expect(sendAnalyticsEventSpy).toHaveBeenCalledWith(
           EVENTS.DO_NOT_TEACH_AT_SCHOOL_CLICKED,
-          {country: 'US'},
-          PLATFORMS.BOTH
+          {country: 'US'}
         );
 
         act(() => {
@@ -330,8 +327,7 @@ describe('useSchoolInfo', () => {
 
         expect(sendAnalyticsEventSpy).toHaveBeenCalledWith(
           EVENTS.ADD_MANUALLY_CLICKED,
-          {country: 'US'},
-          PLATFORMS.BOTH
+          {country: 'US'}
         );
 
         act(() => {
@@ -340,8 +336,7 @@ describe('useSchoolInfo', () => {
 
         expect(sendAnalyticsEventSpy).toHaveBeenCalledWith(
           EVENTS.SCHOOL_SELECTED_FROM_LIST,
-          {'nces Id': '2', country: 'US'},
-          PLATFORMS.BOTH
+          {'nces Id': '2', country: 'US'}
         );
       });
     });

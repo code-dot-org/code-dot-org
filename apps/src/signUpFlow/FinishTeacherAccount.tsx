@@ -7,21 +7,12 @@ import {
 } from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
-import {
-  BodyThreeText,
-  BodyFourText,
-  BodyTwoText,
-  Heading2,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import cookies from 'js-cookie';
 import React, {useState, useEffect, useMemo} from 'react';
 
-import {
-  EVENTS,
-  PLATFORMS,
-  EXPERIMENTS,
-} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS, EXPERIMENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
 import {schoolInfoInvalid} from '@cdo/apps/schoolInfo/utils/schoolInfoInvalid';
@@ -145,11 +136,10 @@ const FinishTeacherAccount: React.FunctionComponent<{
     if (prepopulatedGivenName) setGivenName(prepopulatedGivenName);
     if (prepopulatedFamilyName) setFamilyName(prepopulatedFamilyName);
 
-    analyticsReporter.sendEvent(
-      EVENTS.FINISH_ACCOUNT_PAGE_LOADED,
-      {'user type': 'teacher', country: countryCode},
-      PLATFORMS.BOTH
-    );
+    analyticsReporter.sendEvent(EVENTS.FINISH_ACCOUNT_PAGE_LOADED, {
+      'user type': 'teacher',
+      country: countryCode,
+    });
 
     const fetchGdprData = async () => {
       const urlParams = new URLSearchParams(window.location.search);
@@ -360,18 +350,14 @@ const FinishTeacherAccount: React.FunctionComponent<{
     // schoolData would be undefined if not valid, and the only
     // school_type sent is 'noSchoolSetting', which is not a school
     const hasSchool = schoolData && !schoolData.school_type;
-    analyticsReporter.sendEvent(
-      EVENTS.SIGN_UP_FINISHED_EVENT,
-      {
-        'user type': 'teacher',
-        'has school': hasSchool,
-        'has marketing value selected': true,
-        'has display name': !displayNameErrorMessage,
-        'educator role': educatorRole,
-        country: countryCode,
-      },
-      PLATFORMS.BOTH
-    );
+    analyticsReporter.sendEvent(EVENTS.SIGN_UP_FINISHED_EVENT, {
+      'user type': 'teacher',
+      'has school': hasSchool,
+      'has marketing value selected': true,
+      'has display name': !displayNameErrorMessage,
+      'educator role': educatorRole,
+      country: countryCode,
+    });
 
     // Log to Google Analytics
     trackEvent('sign_up', 'sign_up_success', {
@@ -383,8 +369,12 @@ const FinishTeacherAccount: React.FunctionComponent<{
     <div>
       <div className={style.finishAccountContainer}>
         <div className={style.headerTextContainer}>
-          <Heading2>{locale.finish_creating_teacher_account()}</Heading2>
-          <BodyTwoText>{locale.tailor_experience()}</BodyTwoText>
+          <Typography variant="h2" gutterBottom>
+            {locale.finish_creating_teacher_account()}
+          </Typography>
+          <Typography variant="body2" gutterBottom>
+            {locale.tailor_experience()}
+          </Typography>
         </div>
         {errorCreatingAccountMessage && (
           <div className={style.errorSigningUpMessage}>
@@ -437,12 +427,18 @@ const FinishTeacherAccount: React.FunctionComponent<{
               onChange={e => onNameChange(e, NAME_TYPES.DisplayName)}
               errorMessage={displayNameErrorMessage}
             />
-            <BodyThreeText className={style.displayNameSubtext}>
+            <Typography
+              className={style.displayNameSubtext}
+              variant="body3"
+              gutterBottom
+            >
               {locale.this_is_what_your_students_will_see()}
-            </BodyThreeText>
+            </Typography>
           </div>
           <div className={style.signupSourcesContainer}>
-            <BodyThreeText>{locale.how_did_you_hear_about_us()}</BodyThreeText>
+            <Typography variant="body3" gutterBottom>
+              {locale.how_did_you_hear_about_us()}
+            </Typography>
             <CheckboxDropdown
               name="signupSources"
               labelText={locale.select_all_that_apply()}
@@ -485,14 +481,16 @@ const FinishTeacherAccount: React.FunctionComponent<{
           <SchoolDataInputs {...schoolInfo} includeHeaders={false} />
           {showGDPR && (
             <div>
-              <BodyThreeText
+              <Typography
                 className={classNames(
                   style.teacherKeepMeUpdated,
                   style.required
                 )}
+                variant="body3"
+                gutterBottom
               >
                 <strong>{locale.data_transfer_notice()}</strong>
-              </BodyThreeText>
+              </Typography>
               <Checkbox
                 name="gdprAcknowledge"
                 label={locale.data_transfer_agreement_teacher()}
@@ -510,9 +508,13 @@ const FinishTeacherAccount: React.FunctionComponent<{
             </div>
           )}
           <div>
-            <BodyThreeText className={style.teacherKeepMeUpdated}>
+            <Typography
+              className={style.teacherKeepMeUpdated}
+              variant="body3"
+              gutterBottom
+            >
               <strong>{locale.keep_me_updated()}</strong>
-            </BodyThreeText>
+            </Typography>
             <Checkbox
               name="userEmailOptIn"
               label={locale.get_informational_emails()}
@@ -520,10 +522,14 @@ const FinishTeacherAccount: React.FunctionComponent<{
               onChange={e => setEmailOptInChecked(e.target.checked)}
               size="s"
             />
-            <BodyFourText className={style.emailOptInFootnote}>
+            <Typography
+              className={style.emailOptInFootnote}
+              variant="body4"
+              gutterBottom
+            >
               <strong>{locale.note()}</strong>{' '}
               {locale.after_creating_your_account()}
-            </BodyFourText>
+            </Typography>
           </div>
         </fieldset>
         <div className={style.finishSignUpButtonContainer}>

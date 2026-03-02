@@ -5,10 +5,17 @@
 .topContainer {
   display: flex;
   width: 100%;
-  padding: 8px;
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
+}
+
+.resourceRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
 }
 
 label.typographyLabelTwo {
@@ -22,6 +29,14 @@ label.typographyLabelTwo {
   input {
     width: 100%;
   }
+}
+
+.feedbackTextBoxWrapper {
+  width: 100%;
+}
+
+.alertBox {
+  width: calc(100% - 30px);
 }
 
 .inputWrapper {
@@ -51,6 +66,12 @@ label.typographyLabelTwo {
   }
 }
 
+.feedbackInputBox {
+  width: calc(100% - 10px) !important;
+  font-size: 14px;
+  resize: none !important;
+}
+
 .resourcePopUpDivider {
   margin: 16px 0 !important;
 }
@@ -72,9 +93,23 @@ label.typographyLabelTwo {
 
 .actionButtons {
   display: flex;
-  justify-content: flex-end;
   gap: 8px;
+}
+
+.footerWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
+}
+
+.submittedAtText {
+  color: var(--text-neutral-primary, #292f36);
+  font-family: var(--font-family-body, Figtree);
+  font-size: 10px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: var(--font-line-height-body-xs, 19.68px);
 }
 
 .fileTab {

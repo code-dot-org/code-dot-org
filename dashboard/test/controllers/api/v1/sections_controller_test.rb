@@ -308,6 +308,48 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       returned_json.with_indifferent_access
   end
 
+  test 'create: enables ai_chat_access_level for courses requiring ai chat tools' do
+    sign_in @teacher
+    unit_group = create_unit_group_with_essential_ai_chat_tools
+
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      course_version_id: unit_group.course_version.id,
+    }
+
+    assert_response :success
+    assert_equal SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED], returned_section.ai_chat_access_level
+  end
+
+  test 'create: enables ai_chat_access_level for courses with optional ai chat tools when teacher is in pilot' do
+    sign_in @teacher
+    SingleUserExperiment.stubs(:enabled?).returns(true)
+    unit_group = create_unit_group_with_optional_ai_chat_tools
+
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      course_version_id: unit_group.course_version.id,
+    }
+
+    assert_response :success
+    assert_equal SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED], returned_section.ai_chat_access_level
+  end
+
+  test 'create: does not enable ai_chat_access_level for courses without ai chat tools' do
+    sign_in @teacher
+    unit_group = @csp_unit_group
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      course_version_id: unit_group.course_version.id,
+    }
+
+    assert_response :success
+    assert_equal SharedConstants::AI_CHAT_ACCESS_LEVELS[:DISABLED], returned_section.ai_chat_access_level
+  end
+
   test 'invalid params does not create section and returns an error' do
     sign_in @facilitator
 
@@ -1032,6 +1074,72 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_nil section.script_id
   end
 
+  test "update: enables ai_chat_access_level when assigning a course that requires ai chat tools" do
+    sign_in @teacher
+    unit_group = create_unit_group_with_essential_ai_chat_tools
+    section = create(:section, user: @teacher, ai_chat_access_level: SharedConstants::AI_CHAT_ACCESS_LEVELS[:DISABLED])
+
+    post :update, params: {
+      id: section.id,
+      course_version_id: unit_group.course_version.id,
+    }
+
+    assert_response :success
+    section.reload
+    assert_equal SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED], section.ai_chat_access_level
+  end
+
+  test "update: preserves ai_chat_access_level when already enabled and course changes" do
+    sign_in @teacher
+    unit_group = create(:unit_group, :stable)
+    CourseOffering.add_course_offering(unit_group)
+    unit_group.reload
+    section = create(:section, user: @teacher, course_id: nil, ai_chat_access_level: SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED])
+
+    post :update, params: {
+      id: section.id,
+      course_version_id: unit_group.course_version.id,
+    }
+
+    assert_response :success
+    section.reload
+    assert_equal SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED], section.ai_chat_access_level
+  end
+
+  test "update: preserves ai_chat_access_level when set to essential_only and course changes" do
+    sign_in @teacher
+    unit_group = create(:unit_group, :stable)
+    CourseOffering.add_course_offering(unit_group)
+    unit_group.reload
+    section = create(:section, user: @teacher, course_id: nil, ai_chat_access_level: SharedConstants::AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY])
+
+    post :update, params: {
+      id: section.id,
+      course_version_id: unit_group.course_version.id,
+    }
+
+    assert_response :success
+    section.reload
+    assert_equal SharedConstants::AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY], section.ai_chat_access_level
+  end
+
+  test "update: preserves ai_chat_access_level when course does not change" do
+    sign_in @teacher
+    unit_group = create(:unit_group, :stable)
+    CourseOffering.add_course_offering(unit_group)
+    unit_group.reload
+    section = create(:section, user: @teacher, course_id: unit_group.id, ai_chat_access_level: SharedConstants::AI_CHAT_ACCESS_LEVELS[:DISABLED])
+
+    post :update, params: {
+      id: section.id,
+      course_version_id: unit_group.course_version.id,
+    }
+
+    assert_response :success
+    section.reload
+    assert_equal SharedConstants::AI_CHAT_ACCESS_LEVELS[:DISABLED], section.ai_chat_access_level
+  end
+
   test "update: course_id is not updated if invalid" do
     UnitGroup.stubs(:course_assignable?).returns(false)
 
@@ -1505,6 +1613,43 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test 'can set ai_chat_access_level by the section teacher' do
+    sign_in @teacher
+    post :set_ai_chat_access_level, params: {id: @section.id, ai_chat_access_level: SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED]}
+    assert_response :success
+    @section.reload
+    assert_equal SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED], @section.ai_chat_access_level
+  end
+
+  test 'cannot set ai_chat_access_level by a different teacher' do
+    sign_in @following_teacher
+    post :set_ai_chat_access_level, params: {id: @section.id, ai_chat_access_level: SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED]}
+    assert_response :forbidden
+  end
+
+  test 'set ai_chat_access_level returns 403 for unauthorized access' do
+    post :set_ai_chat_access_level, params: {id: @section.id, ai_chat_access_level: SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED]}
+    assert_response :forbidden
+  end
+
+  test 'set ai_chat_access_level fails when section does not exist' do
+    sign_in @teacher
+    post :set_ai_chat_access_level, params: {id: -1, ai_chat_access_level: SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED]}
+    assert_response :forbidden
+  end
+
+  test 'set ai_chat_access_level fails for invalid value' do
+    sign_in @teacher
+    post :set_ai_chat_access_level, params: {id: @section.id, ai_chat_access_level: 'invalid_value'}
+    assert_response :bad_request
+  end
+
+  test 'set ai_chat_access_level fails when passed nil' do
+    sign_in @teacher
+    post :set_ai_chat_access_level, params: {id: @section.id, ai_chat_access_level: nil}
+    assert_response :bad_request
+  end
+
   test 'valid_course_offerings includes only published courses' do
     sign_in @teacher
     get :valid_course_offerings, params: {login_type: Section::LOGIN_TYPE_EMAIL}
@@ -1559,5 +1704,27 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     create(:code_review_group_member, follower: @followers[0], code_review_group: @group1)
     create(:code_review_group_member, follower: @followers[1], code_review_group: @group1)
     create(:code_review_group_member, follower: @followers[2], code_review_group: @group2)
+  end
+
+  private def create_unit_group_with_essential_ai_chat_tools
+    unit = create(:unit, :with_lessons, lessons_count: 1)
+    lesson = unit.lessons.first
+    activity_section = lesson.activity_sections.first
+    create(:script_level, levels: [create(:aichat)], activity_section: activity_section)
+    unit_group = create(:unit_group, :stable)
+    create(:unit_group_unit, unit_group: unit_group, script: unit, position: 1)
+    CourseOffering.add_course_offering(unit_group)
+    unit_group.reload
+    unit_group
+  end
+
+  private def create_unit_group_with_optional_ai_chat_tools
+    unit = create(:unit, :with_levels, lessons_count: 1, levels_count: 1)
+    unit.levels.first.update!(ai_tutor_available: true)
+    unit_group = create(:unit_group, :stable)
+    create(:unit_group_unit, unit_group: unit_group, script: unit, position: 1)
+    CourseOffering.add_course_offering(unit_group)
+    unit_group.reload
+    unit_group
   end
 end

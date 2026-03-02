@@ -81,6 +81,13 @@ markdown <<MARKDOWN
 </div>
 </div>
 
+<div style="
+  border:3px solid #ccc;
+  border-radius:16px;
+  padding:12px;
+  margin:24px 0;
+  background:#fff;
+">
 
 > #### Review the CSS below and try to identify the selectors, properties, and values. 
 
@@ -101,6 +108,7 @@ Click to show example how this might look on a webpage.
 <img src="https://images.code.org/a546b33c4184dc532d0e59c7e15f6104-Screenshot%202026-01-16%20at%2012.52.29%20PM.png" alt="annotated html structure" width="450" style="border-radius:10px;">
 </div>
 </details>
+</div>
 
 <br>
 

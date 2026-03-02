@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+
 import AddParentEmailModal from './AddParentEmailModal';
 
 /**
@@ -49,7 +51,7 @@ export default class AddParentEmailController {
       this.submitParentEmailChange(values).then(this.onParentEmailChanged);
     this.mountPoint = document.createElement('div');
     document.body.appendChild(this.mountPoint);
-    ReactDOM.render(
+    createReactRoot(
       <AddParentEmailModal
         handleSubmit={handleSubmit}
         handleCancel={this.hideAddParentEmailModal}

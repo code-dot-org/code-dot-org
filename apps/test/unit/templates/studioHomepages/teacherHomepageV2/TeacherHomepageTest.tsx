@@ -9,7 +9,7 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   getStore,
@@ -186,13 +186,9 @@ describe('TeacherHomepage', () => {
   it('sends analytics event when logging in', async () => {
     renderComponent();
     await act(async () => await new Promise(process.nextTick));
-    expect(sendEventSpy).toHaveBeenCalledWith(
-      EVENTS.TEACHER_LOGIN_EVENT,
-      {
-        'user id': 1,
-      },
-      PLATFORMS.BOTH
-    );
+    expect(sendEventSpy).toHaveBeenCalledWith(EVENTS.TEACHER_LOGIN_EVENT, {
+      'user id': 1,
+    });
   });
 
   it('sends analytics event when visiting page after login', async () => {
@@ -201,8 +197,7 @@ describe('TeacherHomepage', () => {
     await act(async () => await new Promise(process.nextTick));
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.NEW_TEACHER_HOMEPAGE_VISITED,
-      {},
-      PLATFORMS.BOTH
+      {}
     );
   });
 
@@ -246,8 +241,7 @@ describe('TeacherHomepage', () => {
     expect(screen.queryByText('Period 1')).toBeNull();
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_LIST_ARCHIVE_TOGGLE_CLICKED,
-      {},
-      PLATFORMS.BOTH
+      {}
     );
 
     fireEvent.click(teachingButton);
@@ -255,8 +249,7 @@ describe('TeacherHomepage', () => {
     expect(screen.queryByText('hidden')).toBeNull();
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_LIST_TEACHING_TOGGLE_CLICKED,
-      {},
-      PLATFORMS.BOTH
+      {}
     );
   });
 

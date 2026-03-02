@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-20 02:47:30 UTC",
+    "serialized_at": "2026-02-13 22:00:48 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -5972,6 +5972,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_-cyber_2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -8464,6 +8467,13 @@
         "lesson.key": "Lesson 1: Introduction to Cybersecurity",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Cybersecurity Threats",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
       }
     },
     {

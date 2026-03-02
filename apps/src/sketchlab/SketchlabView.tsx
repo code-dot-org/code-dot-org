@@ -12,8 +12,10 @@ import {
   ExcalidrawInitialDataState,
   DataURL,
 } from '@excalidraw/excalidraw/types/types';
+import cloneDeep from 'lodash/cloneDeep';
 import React, {useEffect, useCallback, useRef, useState, useMemo} from 'react';
 
+import DCDO from '@cdo/apps/dcdo';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
@@ -22,6 +24,7 @@ import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
+import IntroJSTourWrapper from '@cdo/apps/lab2/views/components/IntroJSTourWrapper';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
@@ -29,7 +32,6 @@ import SourcesContainer, {
   useSources,
 } from '@cdo/apps/lab2/views/SourcesContainer';
 import {commonI18n} from '@cdo/apps/types/locale';
-import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useDialogControl} from '../lab2/views/dialogs';
@@ -57,11 +59,9 @@ const INITIAL_INFO_PANEL_WIDTH = 290;
 const MIN_WORKSPACE_WIDTH = 400;
 const INITIAL_WORKSPACE_WIDTH = 800;
 
-const DEBOUNCED_WORKSPACE_SERIALIZATION_MS = 500;
+const DEBOUNCED_WORKSPACE_SERIALIZATION_MS = 200;
 
 const DEFAULT_SOURCES = {source: {}};
-
-const S3_IMAGE_EXPERIMENT = 's3-images';
 
 const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   levelProperties,
@@ -79,6 +79,8 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   // Keeps track of files that we are in the process of uploading, so that we don't attempt to reupload
   // while a request is in flight.
   const filesBeingUploadedRef = useRef<Set<string>>(new Set());
+
+  const initialErrors = useRef<Error[]>([]);
 
   // Keeps a cache of files that we already have downloaded, so that we don't request them repeatedly.
   const downloadedFilesDataRef = useRef<
@@ -100,6 +102,49 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   // We remount (ie, reset) Excalidraw any time we observe
   // sources being initialized (eg, when level changes, teacher views a student's project, etc).
   const [excalidrawMountKey, setExcalidrawMountKey] = useState(0);
+
+  const onLoad = useCallback(
+    (api: ExcalidrawImperativeAPI) => {
+      // Retain the API reference
+      excalidrawApiRef.current = api;
+
+      // Signal any loading errors
+      if (initialErrors.current.length > 0) {
+        api.setToast({
+          message: `\u{2757} ${initialErrors.current[0].message}`,
+        });
+      }
+    },
+    [excalidrawApiRef]
+  );
+
+  const onError = useCallback((error: Error) => {
+    const api = excalidrawApiRef.current;
+    if (api) {
+      // The app is loaded, so just pop up the error
+      api.setToast({
+        message: `\u{2757} ${error.message}`,
+      });
+    } else {
+      // Defer the error until the application loads
+      initialErrors.current.push(error);
+    }
+    console.error(error);
+  }, []);
+
+  const initialData = useMemo(() => {
+    // Clone the sources to ensure we don't accidentally mutate the original object (which is frozen/immutable),
+    // since Excalidraw mutates the initial data object that is passed in.
+    const clonedSource = cloneDeep(
+      currentSources.source
+    ) as ExcalidrawInitialDataState;
+
+    return populateInitialExcalidrawState(
+      clonedSource,
+      downloadedFilesDataRef.current,
+      onError
+    );
+  }, [currentSources.source, onError]);
 
   const currentUserId = useAppSelector(state => state.currentUser.userId);
   const backpackContext = useMemo(() => {
@@ -192,22 +237,44 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           channelId
         );
 
-        updateSources({
+        // We remove base64 encoded images from the serialized data before storing them to a student's project.
+        // The images are instead uploaded to/retrieved from S3.
+        // Including an experiment flag as well in case we observe issues and need to turn this off quickly.
+        Object.entries(serializedData.files).forEach(([id, file]) => {
+          if (
+            savedFiles[id]?.uploaded &&
+            DCDO.get('sketchlab-s3-image-storage', true)
+          ) {
+            delete file.dataURL;
+          }
+        });
+
+        updateSources(prevSources => ({
           source: {
             ...serializedData,
             externalFiles: {
-              ...currentSources.source.externalFiles,
+              ...prevSources.source.externalFiles,
               ...newFiles,
             },
           },
-        });
+        }));
 
         if (newFiles && !readonlyWorkspace) {
-          uploadExternalFiles(
+          const newFilesWithUploadStatus = await uploadExternalFiles(
             newFiles,
             serializedData.files,
             filesBeingUploadedRef
           );
+
+          updateSources(prevSources => ({
+            source: {
+              ...prevSources.source,
+              externalFiles: {
+                ...prevSources.source.externalFiles,
+                ...newFilesWithUploadStatus,
+              },
+            },
+          }));
         }
       }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
     },
@@ -265,7 +332,9 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   return (
     <BackpackAPIContext.Provider value={backpackContext}>
       <div className={moduleStyles.sketchlabContainer}>
-        <SketchlabTourSteps />
+        <IntroJSTourWrapper>
+          <SketchlabTourSteps />
+        </IntroJSTourWrapper>
         <div style={{width: leftPanelWidth}} className={panelClassName}>
           <ResourcePanel
             levelProperties={levelProperties}
@@ -339,16 +408,9 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
               <TeacherViewingStudentProjectAlert inWorkspaceContainer />
             )}
             <Excalidraw
-              initialData={
-                experiments.isEnabledAllowingQueryString(S3_IMAGE_EXPERIMENT)
-                  ? populateInitialExcalidrawState(
-                      currentSources.source,
-                      downloadedFilesDataRef.current
-                    )
-                  : (currentSources.source as ExcalidrawInitialDataState)
-              }
+              initialData={initialData}
               onChange={debouncedSerializeAndSaveWorkspace}
-              excalidrawAPI={api => (excalidrawApiRef.current = api)}
+              excalidrawAPI={onLoad}
               key={excalidrawMountKey}
               theme={theme.toLowerCase() as ExcalidrawTheme}
               viewModeEnabled={readonlyWorkspace}

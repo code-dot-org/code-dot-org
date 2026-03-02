@@ -8,7 +8,7 @@ import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {LOGIN_TYPES_WITH_PASSWORD_COLUMN} from '@cdo/apps/templates/teacherDashboard/LoginTypeConstants';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
@@ -49,11 +49,9 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
   const handleCopySectionCode = () => {
     const joinLink = `${studioUrlPrefix}/join/${sectionCode}`;
     copyToClipboard(joinLink);
-    analyticsReporter.sendEvent(
-      EVENTS.SECTION_CARD_CLASS_CODE_CLICKED,
-      {source: sourceName},
-      PLATFORMS.BOTH
-    );
+    analyticsReporter.sendEvent(EVENTS.SECTION_CARD_CLASS_CODE_CLICKED, {
+      source: sourceName,
+    });
     setShowCopiedMsg(true);
     setTimeout(() => {
       setShowCopiedMsg(false);

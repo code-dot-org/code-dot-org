@@ -1,0 +1,71 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-02-03T18:30:03.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "capstone-project-lesson1-project-template-test-2025",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "long_instructions": "# App Build & Test\r\n\r\nUse Web Lab to build, test, and refine your app as it evolves throughout the milestones.\r\n\r\nThis is the primary workspace for your app. You will return to this level multiple times as you develop new functionality, respond to feedback, and improve how your app behaves.\r\n\r\nAs you work here:\r\n- Make sure there is always at least one meaningful user action you can test.\r\n- Interact with your app to observe how it behaves in different situations.\r\n- Revise your code to improve clarity, reliability, usability, or correctness.\r\n- Use what you learn here to inform your explanations, reflections, and decisions in other milestones.\r\n\r\nYou can return to this level whenever you need to test or iterate on your app.\r\n\r\n**Don't forget** to use AI Tutor to help you understand or debug your code when needed.\r\n\r\n",
+    "bubble_choice_description": "Use Web Lab to build and test a working version of your app. Return to this level whenever you need to test or iterate on your app as it evolves. ***(supports completing Milestone 3)***.",
+    "display_name": "App Build & Test",
+    "thumbnail_url": "https://images.code.org/5494ca590188877825b06cfa6593af39-dashboard.png",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <body>\n    Content goes here!\n  </body>\n</html>\n  ",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "Add your changes to style.css.css",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "Add your changes to script.js",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-02-03T18:30:03.764+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson11-level4-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson11-level4-test-2025\"},{\"changed_at\":\"2026-02-03 18:32:11 +0000\",\"changed\":[\"project_template_level_name\",\"long_instructions\",\"bubble_choice_description\",\"display_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-03 21:01:24 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-03 21:05:55 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-03 21:06:44 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-03 21:08:19 +0000\",\"changed\":[\"bubble_choice_description\",\"display_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-03 21:11:04 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-04 02:07:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-04 02:38:26 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-04 02:38:37 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

@@ -19,7 +19,8 @@
     "encrypted_solution": "RWuRKIaFNBn1GOelG6OtIL1laVC3VYk6TCUbtxdwc3i7YfIlC1pjOnFE0oCd\nLZ8UeCD20CYXj7l2LY0r+yYL36FPcWvgELkaVZPX+GkSuMVuY2r5HdGOC5NI\n7ouAg2Lxo7zEf/Y+hBS1ubyNUpKH9JBEwmi/dS3Pq6frodYiStd6019Q3nTP\ndlBazEBXA4ihkCXes33pdTHCJ0zzN0J3hP1KQ6gYbq3/EJf3I+Y468q9nxFn\nGvrrjm91eqKZQtMkXExCWmKqK3yPwUXy/AaSwQ==\n",
     "encrypted": "false",
     "optional": "false",
-    "allow_multiple_attempts": "true"
+    "allow_multiple_attempts": "true",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

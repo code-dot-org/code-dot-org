@@ -12,7 +12,7 @@ import unitSelection, {setUnit} from '@cdo/apps/redux/unitSelectionRedux';
 import {fakeLessonWithLevels} from '@cdo/apps/templates/progress/progressTestHelpers';
 import sectionProgress, {
   expandMetadataForStudents,
-} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+} from '@cdo/apps/templates/sectionProgressV2/sectionProgressRedux';
 import SkeletonProgressDataColumn from '@cdo/apps/templates/sectionProgressV2/SkeletonProgressDataColumn.jsx';
 import teacherSections, {
   selectSection,

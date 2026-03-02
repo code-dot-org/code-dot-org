@@ -253,6 +253,9 @@ acapela_ephemeral_password:
 new_relic_license_key:
 newrelic_logging: false
 
+# Enables OpenTelemetry instrumentation and exporting to the OpenTelemetry Collector. See `dashboard/config/initializers/opentelemetry.rb` for more details.
+enable_opentelemetry: false
+
 # Credentials for Google-federated AWS access.
 # (Deprecated: move these configuration values to AWS config file)
 aws_role:
@@ -427,19 +430,18 @@ dashboard_port: 3000
 dashboard_workers: 8
 dashboard_web_server_name: dashboard
 dashboard_sock:
-
-# Causes dashboard-server to run pegasus as middleware, starting both in a
-# single command.  This is preferred (and default) in development mode.
-dashboard_enable_pegasus: false
+puma_control_server_relative_socket_path: tmp/pumactl.sock
+puma_control_server_token: !Secret
 
 # Session timeout in days. Controls both the Devise timeout and the Rails session store (Redis) TTL.
 dashboard_session_ttl_days: 40
 
 # Pegasus
-override_pegasus:
+override_pegasus: 'code.org' # All deployments link to the production corporate site, now that Pegasus is deprecated.
+pegasus_hostname: 'code.org'
 pegasus_host:
 pegasus_sock:
-pegasus_port: 3000
+pegasus_port:
 pegasus_web_server_name: pegasus
 pegasus_workers: 8
 sinatra_session_secret:
@@ -475,8 +477,6 @@ default_hoc_mode: false  # overridden by 'hoc_mode' DCDO param, except in :test
 default_teacher_application_mode: 'closed' # overridden by 'teacher_application_mode' DCDO param, except in :test
 
 default_courses_show_ai: false # overridden by 'courses_show_ai' DCDO param, except in :test
-
-localize_apps: false
 
 partners: []
 
@@ -632,13 +632,6 @@ open_weather_api_key: !Secret
 use_localhost_javabuilder:
 local_javabuilder_stack_name:
 
-# Amplitude keys
-
-# Music lab key
-amplitude_api_key: !Secret
-# General CDO key
-cdo_amplitude_api_key:
-
 # API Key for doublethedonation.com
 ddconf_api_key: !Secret
 
@@ -667,6 +660,10 @@ langfuse_public_key: !Secret
 # Credentials for Google Gemini API
 google_gemini_ai_chat_lab_api_key: !Secret
 google_gemini_ai_tutor_api_key: !Secret
+
+# Credentials for Google Vertex API
+google_vertex_ai_tutor_service_account_key: !Secret
+google_vertex_ai_chat_service_account_key: !Secret
 
 # AI Proxy for OpenAI API
 ai_proxy_origin: https://aiproxy-test.code.org

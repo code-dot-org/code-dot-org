@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
 import {loadLevelsWithProgress} from '@cdo/apps/code-studio/teacherPanelRedux';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import Comment from '@cdo/apps/templates/instructions/teacherFeedback/Comment';
@@ -91,15 +91,11 @@ export class EditableTeacherFeedback extends Component {
   componentDidMount = () => {
     window.addEventListener('beforeunload', this.onUnload);
     if (this.props.rubric) {
-      analyticsReporter.sendEvent(
-        EVENTS.RUBRIC_LEVEL_VIEWED_EVENT,
-        {
-          sectionId: this.props.selectedSectionId,
-          unitId: this.props.serverScriptId,
-          levelId: this.props.serverLevelId,
-        },
-        PLATFORMS.BOTH
-      );
+      analyticsReporter.sendEvent(EVENTS.RUBRIC_LEVEL_VIEWED_EVENT, {
+        sectionId: this.props.selectedSectionId,
+        unitId: this.props.serverScriptId,
+        levelId: this.props.serverLevelId,
+      });
     }
   };
 
@@ -138,15 +134,11 @@ export class EditableTeacherFeedback extends Component {
     } else {
       this.setState({performance: value});
     }
-    analyticsReporter.sendEvent(
-      EVENTS.RUBRIC_ACTIVITY,
-      {
-        sectionId: this.props.selectedSectionId,
-        unitId: this.props.serverScriptId,
-        levelId: this.props.serverLevelId,
-      },
-      PLATFORMS.BOTH
-    );
+    analyticsReporter.sendEvent(EVENTS.RUBRIC_ACTIVITY, {
+      sectionId: this.props.selectedSectionId,
+      unitId: this.props.serverScriptId,
+      levelId: this.props.serverLevelId,
+    });
   };
 
   onSubmitFeedback = () => {
@@ -183,17 +175,13 @@ export class EditableTeacherFeedback extends Component {
           submitting: false,
         });
       });
-    analyticsReporter.sendEvent(
-      EVENTS.FEEDBACK_SUBMITTED,
-      {
-        sectionId: this.props.selectedSectionId,
-        unitId: this.props.serverScriptId,
-        levelId: this.props.serverLevelId,
-        isRubric: this.props.rubric,
-        curriculumUmbrella: this.determineCurriculumUmbrella(),
-      },
-      PLATFORMS.BOTH
-    );
+    analyticsReporter.sendEvent(EVENTS.FEEDBACK_SUBMITTED, {
+      sectionId: this.props.selectedSectionId,
+      unitId: this.props.serverScriptId,
+      levelId: this.props.serverLevelId,
+      isRubric: this.props.rubric,
+      curriculumUmbrella: this.determineCurriculumUmbrella(),
+    });
   };
 
   didFeedbackChange = () => {

@@ -51,16 +51,7 @@ module AichatSagemakerHelper
   end
 
   def self.get_model_processor(selected_model_id)
-    case selected_model_id
-    when SharedConstants::AI_CHAT_MODEL_IDS[:PIRATE]
-      return AiModelProcessors::PirateProcessor.new
-    when SharedConstants::AI_CHAT_MODEL_IDS[:KAREN]
-      return AiModelProcessors::KarenProcessor.new
-    when SharedConstants::AI_CHAT_MODEL_IDS[:ARITHMO]
-      return AiModelProcessors::ArithmoProcessor.new
-    else
-      return AiModelProcessors::MistralProcessor.new
-    end
+    AiModelProcessors::MistralProcessor.new
   end
 
   def self.request_sagemaker_chat_completion(inputs, selected_model_id)
@@ -72,7 +63,7 @@ module AichatSagemakerHelper
   end
 
   def self.get_endpoint_name(model_id)
-    "#{model_id}-#{rack_env?(:production) ? 'production' : 'test'}"
+    "#{model_id}-production"
   end
 end
 

@@ -280,10 +280,7 @@ const WEBPACK_BASE_CONFIG = {
             loader: 'css-loader',
             options: {
               modules: {
-                auto: resourcePath => {
-                  // Do not treat CSS files in node_modules as CSS modules
-                  return !/node_modules/.test(resourcePath);
-                },
+                auto: true,
                 localIdentName: process.env.DEV
                   ? '[path][name]__[local]'
                   : '[hash:base64]',
@@ -304,6 +301,7 @@ const WEBPACK_BASE_CONFIG = {
       },
 
       {test: /\.interpreted.js$/, type: 'asset/source'},
+      {test: /\.md$/, type: 'asset/source'},
       {
         test: /\.(png|jpg|jpeg|gif|svg|ico)$/,
         include: [
@@ -796,6 +794,7 @@ function createWebpackConfig({
             'localhost.code.org',
             'localhost.hourofcode.com',
             '.preview.localhost.codeprojects.org',
+            'localhost.codeprojects.org',
           ],
           client: {overlay: false},
           port: WEBPACK_DEV_SERVER_PORT,

@@ -173,7 +173,6 @@ class User < ApplicationRecord
     display_theme
     mute_music
     last_seen_school_info_interstitial
-    has_seen_standards_report_info_dialog
     oauth_refresh_token
     oauth_token
     oauth_token_expiration
@@ -204,14 +203,8 @@ class User < ApplicationRecord
     has_seen_ai_assessments_announcement
     has_completed_ai_differentiation_welcome
     sort_by_family_name
-    show_progress_table_v2
     has_seen_homepage_welcome
-    progress_table_v2_closed_beta
     lti_roster_sync_enabled
-    progress_table_v2_timestamp
-    progress_table_v1_timestamp
-    has_seen_progress_table_v2_invitation
-    date_progress_table_invitation_last_delayed
     user_provided_us_state
     lms_landing_opted_out
     failed_attempts
@@ -356,12 +349,16 @@ class User < ApplicationRecord
   # check that we handle validation errors from AuthenticationOption everywhere.
   validate if: :migrated? do |user|
     if user.primary_contact_info && !user.primary_contact_info.valid?
-      user.primary_contact_info.errors.each {|k, v| user.errors.add k, v}
+      user.primary_contact_info.errors.each do |error|
+        user.errors.add(error.attribute, error.message)
+      end
     end
 
     user.authentication_options.each do |ao|
       unless ao.valid?
-        ao.errors.each {|k, v| user.errors.add k, v}
+        ao.errors.each do |error|
+          user.errors.add(error.attribute, error.message)
+        end
       end
     end
   end
@@ -386,8 +383,6 @@ class User < ApplicationRecord
   end
 
   before_create :update_default_share_setting
-
-  before_create :save_show_progress_table_v2
 
   before_validation :enforce_age_or_state_update, on: :update, if: :should_check_age_or_state_update?
 
@@ -449,13 +444,6 @@ class User < ApplicationRecord
   include Devise::Models::CustomTimeoutable
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
-
-  # Puts teachers directly into the progress table v2 view when new account is created.
-  def save_show_progress_table_v2
-    if teacher?
-      self.show_progress_table_v2 = true
-    end
-  end
 
   # Set validation type to VALIDATION_NONE, and deduplicate the school_info object
   # based on the passed attributes.
@@ -654,7 +642,7 @@ class User < ApplicationRecord
     # For this step, we only care about email, password, and password confirmation.
     # Remove any other validation errors for now.
     required_fields = [:email, :password, :password_confirmation]
-    errors.each do |attribute, _|
+    errors.attribute_names.each do |attribute|
       errors.delete(attribute) unless required_fields.include?(attribute)
     end
 
