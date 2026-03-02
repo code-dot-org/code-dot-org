@@ -71,6 +71,7 @@ const AiDiffArtifactLink: React.FC<{artifact: AiArtifact | undefined}> = ({
           aria-label="Open artifact"
           href={artifact.url}
           target="_blank"
+          rel="noopener noreferrer"
           startIcon={<FontAwesomeV6Icon iconName="shapes" />}
         >
           {title}

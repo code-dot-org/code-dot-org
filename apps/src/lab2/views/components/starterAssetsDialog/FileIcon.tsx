@@ -78,6 +78,7 @@ const FileIcon: React.FC<FileIconProps> = ({
           size="extraSmall"
           onClick={() => onDelete(filename)}
           type="button"
+          aria-label={`Delete ${filename}`}
         >
           <FontAwesomeV6Icon iconName="trash" />
         </MuiIconButton>
