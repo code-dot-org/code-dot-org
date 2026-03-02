@@ -39,7 +39,7 @@
     = link_to 'Edit Predraw Blocks', edit_blocks_level_path(@level, :predraw_blocks) unless @level.new_record?
     = render partial: 'levels/editors/fields/collapsible_block_editor', locals: {f: f, xml_id: 'predraw'}
     :javascript
-      levelbuilder.initializeCodeMirror('level_predraw_blocks', '#{@level.uses_droplet? ? 'javascript' : 'xml'}');
+      levelbuilder.initializeCodeMirror6('level_predraw_blocks', '#{@level.uses_droplet? ? 'javascript' : 'xml'}');
   .field
     = f.label :images, 'Image field in JSON array format, e.g.:'
     %div

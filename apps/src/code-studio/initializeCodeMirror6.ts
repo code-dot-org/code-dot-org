@@ -1,6 +1,8 @@
+import {html} from '@codemirror/lang-html';
 import {javascript} from '@codemirror/lang-javascript';
 import {json} from '@codemirror/lang-json';
 import {markdown} from '@codemirror/lang-markdown';
+import {xml} from '@codemirror/lang-xml';
 import {EditorState, Extension} from '@codemirror/state';
 import {EditorView, ViewUpdate} from '@codemirror/view';
 import React from 'react';
@@ -30,12 +32,14 @@ interface Options {
   game?: string;
 }
 
-type EditorMode = 'javascript' | 'json' | 'markdown';
+type EditorMode = 'javascript' | 'json' | 'markdown' | 'xml' | 'html';
 
 const languageExtensionMap: Record<EditorMode, Extension> = {
   javascript: javascript(),
   json: json(),
   markdown: markdown(),
+  xml: xml(),
+  html: html(),
 };
 
 function getLanguageExtension(mode: EditorMode): Extension {
