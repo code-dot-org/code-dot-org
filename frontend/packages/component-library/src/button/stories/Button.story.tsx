@@ -37,15 +37,7 @@ const SingleTemplate: StoryFn<ButtonProps> = args => {
     //     {
     muiProps.isIconButton ? (
       <MuiIconButton {...muiProps.iconButtonProps}>
-        {muiProps.isPending ? (
-          <FontAwesomeV6Icon
-            iconName="spinner"
-            iconStyle="solid"
-            animationType="spin"
-          />
-        ) : (
-          args.icon && <FontAwesomeV6Icon {...args.icon} />
-        )}
+        {args.icon && <FontAwesomeV6Icon {...args.icon} />}
       </MuiIconButton>
     ) : (
       <MuiButton {...muiProps.buttonProps} />
@@ -97,16 +89,8 @@ const MultipleTemplate: StoryFn<{
           //   {
           muiProps.isIconButton ? (
             <MuiIconButton {...muiProps.iconButtonProps}>
-              {muiProps.isPending ? (
-                <FontAwesomeV6Icon
-                  iconName="spinner"
-                  iconStyle="solid"
-                  animationType="spin"
-                />
-              ) : (
-                componentArg.icon && (
-                  <FontAwesomeV6Icon {...componentArg.icon} />
-                )
+              {componentArg.icon && (
+                <FontAwesomeV6Icon {...componentArg.icon} />
               )}
             </MuiIconButton>
           ) : (
