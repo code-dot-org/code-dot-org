@@ -91,6 +91,9 @@ const SILENCED = [
   'brambleHost',
   'levelbuilder',
 
+  // Sentry entrypoint
+  'sentry',
+
   // needed to initialize the locales before all other app code loads
   'localization',
 
