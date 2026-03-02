@@ -224,6 +224,7 @@
     "@codemirror/lang-json": "^6.0.2",
     "@codemirror/lang-markdown": "^6.3.4",
     "@codemirror/lang-python": "^6.1.7",
+    "@codemirror/lang-xml": "^6.1.0",
     "@codemirror/language": "^6.11.0",
     "@codemirror/lint": "^6.8.5",
     "@codemirror/merge": "^6.11.2",
