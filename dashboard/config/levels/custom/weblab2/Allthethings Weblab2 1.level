@@ -27,20 +27,25 @@
       "allowMultipleAttempts": false
     },
     "level_system_prompt": "End all your responses with \"Have a good day!\"",
-    "ai_tutor_prompt_answer_types": [
-      "ask",
-      "buildCSS",
-      "buildHTML",
-      "buildJavaScript",
-      "debug",
-      "documentation",
-      "example",
-      "explainCode",
-      "hint",
-      "pseudocode",
-      "testCase"
-    ]
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "buildJavaScript",
+        "debug",
+        "documentation",
+        "example",
+        "explainCode",
+        "hint",
+        "pseudocode",
+        "testCase",
+        "buildCSS",
+        "buildHTML"
+      ],
+      "answerTypeCustomizations": {
+        "ask": "- Be nice"
+      }
+    }
   },
-  "audit_log": "[{\"changed_at\":\"2025-07-31 13:47:44 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"ben+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-11 12:30:41 -0700\",\"changed\":[\"long_instructions\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-15 11:04:16 -0700\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-16 13:54:36 -0700\",\"changed\":[\"long_instructions\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-23 15:37:10 -0800\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-23 15:40:49 -0800\",\"changed\":[\"ai_tutor_prompt_answer_types\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-23 15:42:36 -0800\",\"changed\":[\"ai_tutor_prompt_answer_types\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-23 15:49:17 -0800\",\"changed\":[\"ai_tutor_prompt_answer_types\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-24 09:43:45 -0800\",\"changed\":[\"ai_tutor_prompt_answer_types\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-24 13:38:34 -0800\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_answer_types\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-07-31 13:47:44 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"ben+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-11 12:30:41 -0700\",\"changed\":[\"long_instructions\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-15 11:04:16 -0700\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-16 13:54:36 -0700\",\"changed\":[\"long_instructions\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-23 15:37:10 -0800\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-23 15:40:49 -0800\",\"changed\":[\"ai_tutor_prompt_answer_types\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-23 15:42:36 -0800\",\"changed\":[\"ai_tutor_prompt_answer_types\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-23 15:49:17 -0800\",\"changed\":[\"ai_tutor_prompt_answer_types\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-24 09:43:45 -0800\",\"changed\":[\"ai_tutor_prompt_answer_types\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-24 13:38:34 -0800\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_answer_types\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-25 15:57:46 -0800\",\"changed\":[\"ai_tutor_prompt_answer_types\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-25 16:14:15 -0800\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-25 16:47:34 -0800\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-26 09:09:22 -0800\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>
