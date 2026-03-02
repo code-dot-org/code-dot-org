@@ -3,12 +3,12 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {
   appendBlocksByCategory,
-  appendNewFunctions,
+  appendNewFunctionsXml,
   cleanBlocks,
-  determineInputs,
-  interpolateInputs,
-  groupInputsByRow,
   createJsWrapperBlockCreator,
+  determineInputs,
+  groupInputsByRow,
+  interpolateInputs,
 } from '@cdo/apps/block_utils';
 import {parseElement, serialize} from '@cdo/apps/xml.js';
 
@@ -167,7 +167,7 @@ describe('block utils', () => {
     });
   });
 
-  describe('appendNewFunctions', () => {
+  describe('appendNewFunctionsXml', () => {
     it('appends functions to starter code', () => {
       const startCode = `
         <xml>
@@ -194,7 +194,7 @@ describe('block utils', () => {
         </block>
       `;
 
-      const newCode = appendNewFunctions(startCode, functions);
+      const newCode = appendNewFunctionsXml(startCode, functions);
 
       expect(newCode).to.xml.equal(`
         <xml>
@@ -271,7 +271,7 @@ describe('block utils', () => {
         </block>
       `;
 
-    const newCode = appendNewFunctions(startCode, functions);
+    const newCode = appendNewFunctionsXml(startCode, functions);
 
     expect(newCode).to.xml.equal(startCode);
   });
@@ -319,7 +319,7 @@ describe('block utils', () => {
         </block>
       `;
 
-    const newCode = appendNewFunctions(startCode, functions);
+    const newCode = appendNewFunctionsXml(startCode, functions);
 
     expect(newCode).to.xml.equal(`
         <xml>
