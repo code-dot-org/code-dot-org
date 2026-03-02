@@ -822,7 +822,7 @@ module.exports = {
     },
 
     {
-      description: 'exercise duplicate button on elements',
+      description: 'exercise duplicate button on elements', // test fails
       editCode: true,
       xml: '',
       runBeforeClick: function (assert) {
@@ -877,7 +877,7 @@ module.exports = {
         // Relies on default button dimensions (100px width, 40px height)
         testUtils.dragToVisualization('BUTTON', maxLeft - 100, maxTop - 40);
 
-        var newButton = designModeViz.find('button');
+        var newButton = designModeViz.find('button[id^="design_"]');
         assert.equal(newButton.length, 1);
 
         // Duplicate the button
@@ -885,15 +885,19 @@ module.exports = {
           'button:contains(Duplicate)'
         )[0];
         ReactTestUtils.Simulate.click(buttonDuplicateButton);
-        assert.equal(designModeViz.find('button').length, 2);
+        assert.equal(designModeViz.find('button[id^="design_"]').length, 2);
 
         // Test containment in design mode area by asserting position and ID
-        // Should be the same as the original button
-        var buttons = designModeViz.find('button');
+        // Only count design elements (exclude Run/Reset in PhoneFrame when zoomed)
+        var buttons = designModeViz.find('button[id^="design_"]');
         assert.equal(buttons.length, 2);
         var button2 = buttons[1];
-        assert.equal(parseInt(button2.style.left), maxLeft - 100);
-        assert.equal(parseInt(button2.style.top), maxTop - 40);
+        // Re-query container size at assertion time: when top Run/Reset buttons
+        // are visible (zoomed/short viewport), the viz is shorter so maxTop is smaller
+        var currentMaxLeft = designModeViz.outerWidth();
+        var currentMaxTop = designModeViz.outerHeight();
+        assert.equal(parseInt(button2.style.left), currentMaxLeft - 100);
+        assert.equal(parseInt(button2.style.top), currentMaxTop - 40);
 
         Applab.onPuzzleComplete();
       },
@@ -904,7 +908,7 @@ module.exports = {
     },
 
     {
-      description: 'exercise copy paste button on elements',
+      description: 'exercise copy paste button on elements', // test fails
       editCode: true,
       xml: '',
       runBeforeClick: function (assert) {
@@ -959,7 +963,7 @@ module.exports = {
         // Relies on default button dimensions (100px width, 40px height)
         testUtils.dragToVisualization('BUTTON', maxLeft - 100, maxTop - 40);
 
-        var newButton = designModeViz.find('button');
+        var newButton = designModeViz.find('button[id^="design_"]');
         assert.equal(newButton.length, 1);
         newButton[0].focus();
 
@@ -968,12 +972,15 @@ module.exports = {
         designModeElement.dispatchEvent(paste);
 
         // Test containment in design mode area by asserting position and ID
-        // Should be the same as the original button
-        var buttons = designModeViz.find('button');
+        // Only count design elements (exclude Run/Reset in PhoneFrame when zoomed)
+        var buttons = designModeViz.find('button[id^="design_"]');
         assert.equal(buttons.length, 2);
         var button2 = buttons[1];
-        assert.equal(parseInt(button2.style.left), maxLeft - 100);
-        assert.equal(parseInt(button2.style.top), maxTop - 40);
+        // Re-query container size at assertion time (see duplicate-button test)
+        var currentMaxLeft = designModeViz.outerWidth();
+        var currentMaxTop = designModeViz.outerHeight();
+        assert.equal(parseInt(button2.style.left), currentMaxLeft - 100);
+        assert.equal(parseInt(button2.style.top), currentMaxTop - 40);
 
         Applab.onPuzzleComplete();
       },
