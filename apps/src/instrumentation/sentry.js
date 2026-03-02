@@ -17,7 +17,14 @@ Sentry.init({
   // Setting this option to true will send default PII data to Sentry.
   // For example, automatic IP address collection on events
   sendDefaultPii: false,
-  integrations: [Sentry.browserTracingIntegration()],
+  propagateTraceparent: true,
+  integrations: [
+    Sentry.browserTracingIntegration(),
+    Sentry.replayIntegration(),
+  ],
   tracesSampleRate: 1.0,
   tracePropagationTargets: [getAllowedTracingUrls()],
+  enableLogs: true,
+  replaysSessionSampleRate: 1.0,
+  replaysOnErrorSampleRate: 1.0,
 });
