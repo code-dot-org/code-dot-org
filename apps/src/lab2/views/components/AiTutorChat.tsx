@@ -14,6 +14,8 @@ import {defaultPrompts, levelPrompts} from '@cdo/apps/aiTutor/suggestedPrompts';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
+import TeacherDisableAiChatEffect from './TeacherDisableAiChatEffect';
+
 import moduleStyles from './AiTutorChat.module.scss';
 
 // Some pre-canned chat buttons.
@@ -86,6 +88,7 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
 
   return (
     <div className={moduleStyles.container}>
+      <TeacherDisableAiChatEffect />
       <ChatWorkspace
         clientType={AiChatClientTypes.AI_TUTOR}
         modelParameters={modelParameters}
