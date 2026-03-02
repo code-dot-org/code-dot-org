@@ -13,7 +13,10 @@ import {PERMISSIONS} from '@cdo/apps/lab2/constants';
 import {useInitialLabTheme} from '@cdo/apps/lab2/hooks/useInitialLabTheme';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import ProgressContainer from '@cdo/apps/lab2/progress/ProgressContainer';
-import {getAppOptionsViewingExemplar} from '@cdo/apps/lab2/projects/utils';
+import {
+  getAppOptionsViewingExemplar,
+  getIsStartMode,
+} from '@cdo/apps/lab2/projects/utils';
 import {getLabViewPageAction, getIsLabViewBlocked} from '@cdo/apps/lab2/utils';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import useRequiredContext from '@cdo/apps/util/hooks/useRequiredContext';
@@ -93,7 +96,11 @@ const LabViewsRenderer: React.FunctionComponent = () => {
         chatDisabled: true,
         chatDisabledMessage: TEACHER_DISABLED_AI_CHAT_MESSAGE,
       });
-    } else if (isPredictLevel && !hasSubmittedPredictResponse) {
+    } else if (
+      isPredictLevel &&
+      !hasSubmittedPredictResponse &&
+      !getIsStartMode()
+    ) {
       setChatDisabledState({
         chatDisabled: true,
         chatDisabledMessage: lab2I18n.predictTutorDisabledMessage(),

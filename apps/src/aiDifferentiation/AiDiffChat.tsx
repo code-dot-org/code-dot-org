@@ -20,7 +20,7 @@ import {
   AiInteractionStatus,
 } from '@cdo/generated-scripts/sharedConstants';
 
-import {EVENTS, PLATFORMS} from '../metrics/AnalyticsConstants';
+import {EVENTS} from '../metrics/AnalyticsConstants';
 import analyticsReporter from '../metrics/AnalyticsReporter';
 import HttpClient from '../util/HttpClient';
 
@@ -30,11 +30,7 @@ import AiDiffChatHeader from './AiDiffChatHeader';
 import AiDiffCreateArtifactButtons from './AiDiffCreateArtifactButtons';
 import AiDiffSuggestedPrompts from './AiDiffSuggestedPrompts';
 import {DEFAULT_THREAD_TITLE} from './constants';
-import {
-  EXIT_TICKET_PROMPT,
-  LESSON_HOOK_PROMPT,
-  SUGGESTED_PROMPTS_FOR_SELECTION,
-} from './predefinedPrompts';
+import {SUGGESTED_PROMPTS_FOR_SELECTION} from './predefinedPrompts';
 import {
   AiArtifact,
   ChatItem,
@@ -132,11 +128,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
         threadId: thread,
         url: window.location.href,
       };
-      analyticsReporter.sendEvent(
-        EVENTS.AI_DIFF_CHAT_EVENT,
-        responseEventData,
-        PLATFORMS.STATSIG
-      );
+      analyticsReporter.sendEvent(EVENTS.AI_DIFF_CHAT_EVENT, responseEventData);
     },
     [reportingData]
   );
@@ -265,11 +257,8 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
       if (!prompt.followUpPrompts && !prompt.response) {
         getAIResponse(prompt.prompt, true, prompt.label);
       }
-      if (prompt === EXIT_TICKET_PROMPT) {
-        dispatch(setArtifactType(AiDiffArtifactType.EXIT_TICKET));
-      }
-      if (prompt === LESSON_HOOK_PROMPT) {
-        dispatch(setArtifactType(AiDiffArtifactType.LESSON_HOOK));
+      if (prompt.artifactCandidateType) {
+        dispatch(setArtifactType(prompt.artifactCandidateType));
       }
     },
     [dispatch, getAIResponse, threadTitle]

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
@@ -23,8 +23,7 @@ class PrintCertificates extends Component {
   onClickPrintCerts = () => {
     analyticsReporter.sendEvent(
       EVENTS.SECTION_TABLE_PRINT_CERTIFICATES_CLICKED,
-      {},
-      PLATFORMS.STATSIG
+      {}
     );
     $.ajax(`/dashboardapi/sections/${this.props.sectionId}/students`).done(
       result => {

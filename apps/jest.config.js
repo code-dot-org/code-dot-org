@@ -223,6 +223,7 @@ const config = {
     ],
     '^.+\\.scss$': '<rootDir>/test/jest-scss.transformer.js',
     '\\.(ejs)$': '<rootDir>/test/jest-ejs.transformer.js',
+    '\\.md$': '<rootDir>/test/jest-md.transformer.js',
     '^.+\\.tsx?$': [
       'ts-jest',
       {

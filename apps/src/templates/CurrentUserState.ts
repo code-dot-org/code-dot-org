@@ -43,6 +43,5 @@ export interface CurrentUserState {
   hasSeenHomepageWelcome: boolean;
   inUSA: boolean;
   isLevelbuilder: boolean;
-  aiTutorEnabledForPilot: boolean;
   aiChatAccessLevel: AiChatAccessLevel;
 }

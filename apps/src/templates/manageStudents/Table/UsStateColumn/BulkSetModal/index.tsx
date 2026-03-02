@@ -4,7 +4,7 @@ import {ControlLabel, Fade, FormControl, FormGroup} from 'react-bootstrap'; // e
 import {connect} from 'react-redux';
 
 import {STATE_CODES} from '@cdo/apps/geographyConstants';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import {bulkSet} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
@@ -42,8 +42,7 @@ const BulkSetModal: React.FC<BulkSetModalProps> = ({
         sectionLoginType: section.loginType,
         teacherUsState: currentUser?.usStateCode,
         selectedUsState,
-      },
-      PLATFORMS.STATSIG
+      }
     );
 
     onClose();

@@ -2,7 +2,7 @@ import {KeyboardNavigation} from '@blockly/keyboard-navigation';
 import * as BlocklyCore from 'blockly/core';
 import './shortcutMenuStyles.scss';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 
 import {
@@ -121,11 +121,7 @@ function reorderContextMenu() {
  */
 function handleSlashKeyPress(event: KeyboardEvent) {
   if (event.key === '/') {
-    analyticsReporter.sendEvent(
-      EVENTS.BLOCKLY_SLASH_KEY_PRESSED,
-      {},
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.BLOCKLY_SLASH_KEY_PRESSED, {});
   }
 }
 

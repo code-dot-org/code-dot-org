@@ -10,14 +10,14 @@ describe('aichatRedux utils', () => {
   let aiCustomizations4: AiCustomizations;
   beforeEach(() => {
     aiCustomizations1 = {
-      selectedModelId: AiChatModelIds.ARITHMO,
+      selectedModelId: AiChatModelIds.MISTRAL,
       temperature: 0.5,
       retrievalContexts: ['123'],
       systemPrompt: 'hello',
       modelCardInfo: EMPTY_MODEL_CARD_INFO,
     };
     aiCustomizations2 = {...aiCustomizations1};
-    aiCustomizations2.selectedModelId = AiChatModelIds.KAREN;
+    aiCustomizations2.selectedModelId = AiChatModelIds.CHATGPT;
     aiCustomizations3 = {...aiCustomizations1};
     aiCustomizations4 = {...aiCustomizations2};
     aiCustomizations4.systemPrompt = 'hi';

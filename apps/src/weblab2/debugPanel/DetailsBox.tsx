@@ -1,6 +1,7 @@
 import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
+import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
 import CopyButton from './CopyButton';
@@ -64,7 +65,13 @@ const DetailsBox: React.FunctionComponent<DetailsBoxProps> = ({
         {errorMessage && <Alert text={errorMessage} type="danger" size="xs" />}
         {rows.map((row, rowIndex) => {
           const content = row.map(field => (
-            <div key={field.label} className={moduleStyles.detailsField}>
+            <div
+              key={field.label}
+              className={classNames(
+                moduleStyles.detailsField,
+                'ui-test-details-field'
+              )}
+            >
               <div className={moduleStyles.detailsFieldLabelRow}>
                 <Typography
                   className={moduleStyles.detailsFieldLabel}

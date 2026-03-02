@@ -133,7 +133,7 @@ type ResourcePanelProps = InstructionsProps & {
   styleNavigationAsBubble?: boolean;
   isValidationTourEnabled?: boolean;
   isOnboardingTourEnabled?: boolean;
-  aiTutorSystemPromptName?: string;
+  aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   documentationUrl?: string;
   /** Only display the sidebar and hide all tabs. */
@@ -165,7 +165,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   styleNavigationAsBubble = false,
   isValidationTourEnabled,
   isOnboardingTourEnabled,
-  aiTutorSystemPromptName,
+  aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
   documentationUrl,
   sidebarOnly = false,
@@ -184,9 +184,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const floatingPanelRef = useRef<HTMLDivElement | null>(null);
   const tabContentRefs = useRef<{[key in Tabs]?: HTMLDivElement | null}>({});
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
-  const aiTutorEnabledForPilot = useAppSelector(
-    state => state.currentUser.aiTutorEnabledForPilot
-  );
   const [selectedVersion, setSelectedVersion] = useState<string>('');
   const isViewingOldVersion = useAppSelector(
     state => state.lab2Project.viewingOldVersion
@@ -222,11 +219,14 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const isTemporarilyReadOnly = !isPermanentlyReadOnly && isReadOnly;
 
   const levelProperties = instructionsProps.levelProperties;
+  const aiChatAccessLevel = useAppSelector(
+    state => state.currentUser.aiChatAccessLevel
+  );
   const aiTutorVisible =
     shouldShowAiTutor({
       appName,
-      tutorPilot: aiTutorEnabledForPilot,
       tutorLevel: levelProperties.aiTutorAvailable,
+      aiChatAccessLevel: aiChatAccessLevel,
     }) ||
     queryParams('show-ai-tutor2') === 'true' ||
     queryParams('show-ai-tutor') === 'true';
@@ -266,7 +266,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             levelName={levelName}
             channelId={channelId}
             aiTutorChatButtonData={aiTutorChatButtonData}
-            aiTutorSystemPromptName={aiTutorSystemPromptName}
+            aiTutorSystemPrompt={aiTutorSystemPrompt}
             aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
           />
         );
@@ -278,7 +278,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             levelName={levelName}
             channelId={channelId}
             aiTutorChatButtonData={aiTutorChatButtonData}
-            aiTutorSystemPromptName={aiTutorSystemPromptName}
+            aiTutorSystemPrompt={aiTutorSystemPrompt}
             aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
             instructionsContent={instructionsContent}
             isCollapsedByDefault={!!viewAsUserId}
@@ -359,7 +359,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     levelName,
     channelId,
     aiTutorChatButtonData,
-    aiTutorSystemPromptName,
+    aiTutorSystemPrompt,
     aiTutorResponseSchemaSettings,
     selectedVersion,
     levelId,

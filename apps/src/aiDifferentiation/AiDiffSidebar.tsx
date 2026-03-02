@@ -78,7 +78,7 @@ const TitleAndIcon: React.FC<{
   title: string;
 }> = ({title}) => (
   <div className={styles.sidebarArtifactIconContainer}>
-    <text>{title}</text>
+    <Typography variant="body3">{title}</Typography>
     <FontAwesomeV6Icon
       iconName="shapes"
       className={styles.artifactThreadIcon}

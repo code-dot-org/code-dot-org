@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-02-24 21:49:09 UTC",
+    "serialized_at": "2026-02-27 21:02:08 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -219,6 +219,30 @@
         "lesson_group.key": "",
         "script.name": "6-12-aid-thinking-critically-about-ai-2026"
       }
+    },
+    {
+      "key": "f9175d8e-20e3-4520-9ea2-2cdf2bdf51e1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f9175d8e-20e3-4520-9ea2-2cdf2bdf51e1",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-thinking-critically-about-ai-2026"
+      }
+    },
+    {
+      "key": "435eb98c-f591-457c-96d7-9bf83ddb04ed",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "435eb98c-f591-457c-96d7-9bf83ddb04ed",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-thinking-critically-about-ai-2026"
+      }
     }
   ],
   "activity_sections": [
@@ -297,6 +321,61 @@
       "seeding_key": {
         "activity_section.key": "6ce2b614-1368-4385-adad-e0b4ee583689",
         "lesson_activity.key": "d09a3aa0-d7e4-40f8-845b-9a3ba8481d0b"
+      }
+    },
+    {
+      "key": "96233bf4-8cac-453a-a98b-8ad08529b7a4",
+      "position": 3,
+      "properties": {
+        "progression_name": "Mini-Lessons: Co-Creation with AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "96233bf4-8cac-453a-a98b-8ad08529b7a4",
+        "lesson_activity.key": "d09a3aa0-d7e4-40f8-845b-9a3ba8481d0b"
+      }
+    },
+    {
+      "key": "9eae2e08-257f-4124-97ae-1d6aa863e082",
+      "position": 1,
+      "properties": {
+        "progression_name": "Project - Milestone 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "9eae2e08-257f-4124-97ae-1d6aa863e082",
+        "lesson_activity.key": "f9175d8e-20e3-4520-9ea2-2cdf2bdf51e1"
+      }
+    },
+    {
+      "key": "8ada3f71-0ff6-4c98-9938-e7e74f5a0cde",
+      "position": 1,
+      "properties": {
+        "progression_name": "Sketch Lab: Safety & Privacy"
+      },
+      "seeding_key": {
+        "activity_section.key": "8ada3f71-0ff6-4c98-9938-e7e74f5a0cde",
+        "lesson_activity.key": "435eb98c-f591-457c-96d7-9bf83ddb04ed"
+      }
+    },
+    {
+      "key": "562409a5-8949-4346-8882-3ee1c1632e33",
+      "position": 2,
+      "properties": {
+        "progression_name": "AI Chat: Safety & Privacy"
+      },
+      "seeding_key": {
+        "activity_section.key": "562409a5-8949-4346-8882-3ee1c1632e33",
+        "lesson_activity.key": "435eb98c-f591-457c-96d7-9bf83ddb04ed"
+      }
+    },
+    {
+      "key": "cf7495fe-ae7c-4932-a83c-17348039ca47",
+      "position": 3,
+      "properties": {
+        "progression_name": "Mini-Lessons: Safety & Privacy"
+      },
+      "seeding_key": {
+        "activity_section.key": "cf7495fe-ae7c-4932-a83c-17348039ca47",
+        "lesson_activity.key": "435eb98c-f591-457c-96d7-9bf83ddb04ed"
       }
     }
   ],
@@ -476,6 +555,116 @@
       "level_keys": [
         "aid-thinking-critically-lesson3-level1_2026-test"
       ]
+    },
+    {
+      "chapter": 9,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Mini-Lessons: Co-Creation with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aid-thinking-critically-lesson3-level3_2026-test"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-thinking-critically-about-ai-2026",
+        "activity_section.key": "96233bf4-8cac-453a-a98b-8ad08529b7a4"
+      },
+      "level_keys": [
+        "aid-thinking-critically-lesson3-level3_2026-test"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Project - Milestone 2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aid-thinking-critically-lesson4-level1_2026-test"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-thinking-critically-about-ai-2026",
+        "activity_section.key": "9eae2e08-257f-4124-97ae-1d6aa863e082"
+      },
+      "level_keys": [
+        "aid-thinking-critically-lesson4-level1_2026-test"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Sketch Lab: Safety & Privacy"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aid-thinking-critically-lesson7-level1_2026-test"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-thinking-critically-about-ai-2026",
+        "activity_section.key": "8ada3f71-0ff6-4c98-9938-e7e74f5a0cde"
+      },
+      "level_keys": [
+        "aid-thinking-critically-lesson7-level1_2026-test"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Chat: Safety & Privacy"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aid-thinking-critically-lesson7-level2_2026-test"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-thinking-critically-about-ai-2026",
+        "activity_section.key": "562409a5-8949-4346-8882-3ee1c1632e33"
+      },
+      "level_keys": [
+        "aid-thinking-critically-lesson7-level2_2026-test"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Mini-Lessons: Safety & Privacy"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aid-thinking-critically-lesson7-level3_2026-test"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-thinking-critically-about-ai-2026",
+        "activity_section.key": "cf7495fe-ae7c-4932-a83c-17348039ca47"
+      },
+      "level_keys": [
+        "aid-thinking-critically-lesson7-level3_2026-test"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -573,6 +762,66 @@
         "lesson_group.key": "",
         "script.name": "6-12-aid-thinking-critically-about-ai-2026",
         "activity_section.key": "6ce2b614-1368-4385-adad-e0b4ee583689"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aid-thinking-critically-lesson3-level3_2026-test",
+        "script_level.level_keys": [
+          "aid-thinking-critically-lesson3-level3_2026-test"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-thinking-critically-about-ai-2026",
+        "activity_section.key": "96233bf4-8cac-453a-a98b-8ad08529b7a4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aid-thinking-critically-lesson4-level1_2026-test",
+        "script_level.level_keys": [
+          "aid-thinking-critically-lesson4-level1_2026-test"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-thinking-critically-about-ai-2026",
+        "activity_section.key": "9eae2e08-257f-4124-97ae-1d6aa863e082"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aid-thinking-critically-lesson7-level1_2026-test",
+        "script_level.level_keys": [
+          "aid-thinking-critically-lesson7-level1_2026-test"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-thinking-critically-about-ai-2026",
+        "activity_section.key": "8ada3f71-0ff6-4c98-9938-e7e74f5a0cde"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aid-thinking-critically-lesson7-level2_2026-test",
+        "script_level.level_keys": [
+          "aid-thinking-critically-lesson7-level2_2026-test"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-thinking-critically-about-ai-2026",
+        "activity_section.key": "562409a5-8949-4346-8882-3ee1c1632e33"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aid-thinking-critically-lesson7-level3_2026-test",
+        "script_level.level_keys": [
+          "aid-thinking-critically-lesson7-level3_2026-test"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-thinking-critically-about-ai-2026",
+        "activity_section.key": "cf7495fe-ae7c-4932-a83c-17348039ca47"
       }
     }
   ],
