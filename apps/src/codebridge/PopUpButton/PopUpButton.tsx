@@ -132,12 +132,29 @@ export const PopUpButton = ({
         if (buttonRef && dropdownRef.current) {
           const dropdownRect = dropdownRef.current.getBoundingClientRect();
           const buttonRect = buttonRef.getBoundingClientRect();
-          const top =
-            buttonRect.top + buttonRect.height + TOP_PADDING + window.scrollY;
-          const left =
+          // Flip above the button if the dropdown would extend below the viewport
+          const wouldGoOffscreenBelow =
+            buttonRect.bottom + TOP_PADDING + dropdownRect.height >
+            window.innerHeight;
+          const top = wouldGoOffscreenBelow
+            ? buttonRect.top -
+              dropdownRect.height -
+              TOP_PADDING +
+              window.scrollY
+            : buttonRect.bottom + TOP_PADDING + window.scrollY;
+
+          // Clamp horizontally within viewport bounds to prevent side overflow
+          let left =
             alignment === 'right'
               ? buttonRect.right - dropdownRect.width + window.scrollX
               : buttonRect.left + window.scrollX;
+          left = Math.max(
+            window.scrollX,
+            Math.min(
+              left,
+              window.innerWidth - dropdownRect.width + window.scrollX
+            )
+          );
           // Defer all state updates to avoid updating during render
           const timeoutId = setTimeout(() => {
             setDropdownStyles({
