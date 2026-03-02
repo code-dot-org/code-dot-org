@@ -146,7 +146,7 @@ const Console: React.FunctionComponent = () => {
               isFirstLog && isLastLog
                 ? 'The only log entry. '
                 : isFirstLog
-                ? 'Least recent log entry. '
+                ? 'Oldest log entry. '
                 : isLastLog
                 ? 'Most recent log entry. '
                 : '';
