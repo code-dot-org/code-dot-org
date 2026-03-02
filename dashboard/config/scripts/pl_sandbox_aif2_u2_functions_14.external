@@ -5,62 +5,71 @@ description 'description here'
 markdown <<MARKDOWN
 # Introducing Functions in JavaScript
 
-#### When you build web apps, you often want something to happen — like showing a message when a button is clicked. But what if you want that same behavior in more than one place, or want to trigger it from different events?
+#### When building web apps, you often want the same action to happen in multiple places, such as updating a score when different buttons are clicked.
 
-#### That’s where **functions** come in.
+#### Instead of rewriting the same code each time, we can use a function.
 
-<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box;">
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Function</strong> is a named set of reusable instructions that tells your program what to do.</p>
 </div>
 
-## Stop Repeating Actions!
+---
 
+<img src="https://images.code.org/f32fe913796b205f37f92bc782e5d0f0-image-1772209777254.png" alt="javascript code without function" width="275px" style="border-radius:10px; float:right; margin: 0px 40px 10px 20px;">
 
-#### Functions in JavaScript are especially powerful because they’re what make interactive behavior possible. You can define one function and connect it to different events — clicks, key presses, even timers — without rewriting the same code each time.
+## Before: Repeating Code
 
-#### **Functions help you:**
+#### This code works. But look closely.
 
-- #### Reuse code without repeating it
+#### In both button actions, we:
+- ####  Change the value of `total`
+- #### Update the display
 
-- #### Organize logic into clear, named steps
+#### The same steps appear more than once. If we wanted to change how the total is shown, we would need to update it in multiple places.
 
-- #### Make interactive apps easier to update and debug
-
-## Before Functions: Repeating Code
-
-
-#### When you start adding actions to buttons, it’s tempting to copy and paste the same lines again and again.
-
-#### Here’s what the code might look like before using a function: 
-
-<img src="https://images.code.org/2b5ecd2e31f5f7a8e97324b524050f2d-image-1762379600072.png" alt="javascript code without function" width="650px" style="display: block; margin-left: auto; margin-right: auto; border-radius:10px;">
-
-#### This works fine—but notice the repetition?
-
-#### Each **event listener** repeats the same steps: add to `total` and update the display. If you ever want to change how the display looks, you’d have to fix it in multiple places.
-
-
-
-## After Functions: Cleaner, Reusable Code
-
-#### By moving that repeated logic into a function, we can call it whenever we need it — no copy-pasting required.
-
-<img src="https://images.code.org/d880c69ab976c30456ce071ca1dfcc08-image-1762379438457.png" alt="javascript code with function" width="650px" style="display: block; margin-left: auto; margin-right: auto; border-radius:10px;">
-
-
-
-
-#### Now the code for the event listeners are shorter, easier to update, and easier for students to understand.
-#### If you ever want to change how the total appears, you only need to edit one place — inside the `updateTotal()` function.
-
+<div style="clear:both;"></div>
 
 ---
 
-## Next up
-#### Let's look at how to create functions!
+<img src="https://images.code.org/41b9f258f08f7f541b34b220550be557-image-1772209834211.png" alt="javascript code with function" width="275px" style="border-radius:10px; float:right; margin: 40px 40px 10px 20px;">
 
 
+## After: Using a Function
 
+#### We moved the repeated steps into a function called `updateTotal()`.
 
+#### Now each button simply calls the function.
 
+#### The shared logic lives in one place, which makes the code:
+- #### Shorter
+- #### Easier to read
+- #### Easier to update
+
+#### If we change how the total is displayed, we only edit the function.
+
+<div style="clear:both;"></div>
+
+---
+
+## Quick Check 
+
+<p style="font-size: 14pt;"><strong>Question:</strong><br>
+If you wanted to change how the total is displayed, where would you make the change?</p>
+
+<details>
+  <summary style="font-size:16pt; font-weight:bold; cursor:pointer; background-color:#f7f8fa; padding:10px; border-radius:6px;">
+    🔎 Check your Answer
+  </summary>
+
+  <div style="margin-top:12px; font-size:14pt; background-color:#f7f8fa; padding:12px; border-radius:6px;">
+    <p style ="font-size: 14pt;" ><strong>Answer:</strong><br>
+    Inside the <code style="font-size:12pt;">updateTotal()</code> function, because that is where the display logic is defined. 
+    Since all buttons call this function, we only need to update the code in one place.</p>
+  </div>
+
+</details>
+
+## Next Up
+
+#### Let’s create our own functions.
 MARKDOWN
