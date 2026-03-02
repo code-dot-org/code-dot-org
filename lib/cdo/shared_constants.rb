@@ -1001,6 +1001,7 @@ module SharedConstants
     'rejseplanen.dk',             # Denmark public transport
     'transitchicago.com',         # Chicago transit - API key required 🔑
     'vpic.nhtsa.dot.gov',         # Vehicle data - Public API
+    'api.congress.gov',           # Congress data - API key required 🔑
 
     # === SPACE ===
     'api.nasa.gov',               # NASA content - API key required 🔑
