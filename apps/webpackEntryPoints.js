@@ -269,6 +269,7 @@ const OTHER_ENTRIES = {
 
   regionalPartnerMiniContact: './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
   dataDog: './src/instrumentation/dataDog.js',
+  sentry: './src/instrumentation/sentry.js',
 };
 
 const LOCALIZATION_ENTRIES = {
