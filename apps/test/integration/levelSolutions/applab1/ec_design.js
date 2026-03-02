@@ -822,7 +822,7 @@ module.exports = {
     },
 
     {
-      description: 'exercise duplicate button on elements', // test fails
+      description: 'exercise duplicate button on elements',
       editCode: true,
       xml: '',
       runBeforeClick: function (assert) {
@@ -870,7 +870,7 @@ module.exports = {
         assert.equal(parseInt(chart2.style.top), 10);
         assert.equal(chart2.id, 'design_chart2');
 
-        // Add a button at the bottom-right corner of the container
+        // Add a button at the bottom-right corner of the container.
         var maxRight = designModeViz.outerWidth();
         var maxBottom = designModeViz.outerHeight();
 
@@ -893,16 +893,17 @@ module.exports = {
         assert.equal(buttons.length, 2);
         var button1 = buttons[0];
         var button2 = buttons[1];
-        // Duplicate should be at same position as original since it is contained within the visualization.
-        // Can be clamped to 315 while original was placed at 410; both are valid.
         var currentMaxRight = designModeViz.outerWidth();
         var currentMaxBottom = designModeViz.outerHeight();
+        // Because the original button is at the bottom-right corner of the container,
+        // the duplicate button should be at the same position so that is contained within the visualization.
         assert.equal(
           parseInt(button2.style.left, 10),
           parseInt(button1.style.left, 10),
           'duplicate same left as original'
         );
         assert.equal(parseInt(button2.style.left, 10), currentMaxRight - 100);
+        // Confirm that duplicate button is contained within the visualization container.
         assert.isAtLeast(
           parseInt(button2.style.top, 10),
           0,
@@ -923,7 +924,7 @@ module.exports = {
     },
 
     {
-      description: 'exercise copy paste button on elements', // test fails
+      description: 'exercise copy paste button on elements',
       editCode: true,
       xml: '',
       runBeforeClick: function (assert) {
@@ -994,12 +995,15 @@ module.exports = {
         var button2 = buttons[1];
         var currentMaxRight = designModeViz.outerWidth();
         var currentMaxBottom = designModeViz.outerHeight();
+        // Because the original button is at the bottom-right corner of the container,
+        // the duplicate button should be at the same position so that is contained within the visualization.
         assert.equal(
           parseInt(button2.style.left, 10),
           parseInt(button1.style.left, 10),
           'duplicate same left as original'
         );
         assert.equal(parseInt(button2.style.left, 10), currentMaxRight - 100);
+        // Confirm that duplicate button is contained within the visualization container.
         assert.isAtLeast(parseInt(button2.style.top, 10), 0);
         assert.isAtMost(
           parseInt(button2.style.top, 10),
