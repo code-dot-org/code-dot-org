@@ -18,7 +18,6 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {RootState} from '@cdo/apps/types/redux';
 import {ValueOf} from '@cdo/apps/types/utils';
-import experiments from '@cdo/apps/util/experiments';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
@@ -49,14 +48,6 @@ import {getNewRemoveId} from '../utils';
 import {addChatEvent} from './addChatEvent';
 import {notifyErrorUnauthorized} from './helpers/notifyErrorUnauthorized';
 import {sendAnalytics} from './sendAnalytics';
-
-// We currently default to using the legacy Gemini API unless use vertex query param set.
-// This will be removed once we switch over to Vertex completely.
-const useVertex =
-  experiments.isEnabledAllowingQueryString('aitutor-use-vertex');
-
-// Log whether using Vertex API or not in case query param entered incorrectly.
-console.log(`🤖: Tutor set to use Vertex API? ${useVertex ? 'YES' : 'NO'}`);
 
 const useClientApi = (modelId: ValueOf<typeof AiChatModelIds>) =>
   isAiGatewayEnabled && modelId === AiChatModelIds.GEMINI_2_5_FLASH_IMAGE;
@@ -218,7 +209,7 @@ export const submitChatContents = createAsyncThunk(
         messages = await postAichatCompletionMessage(
           newUserMessage,
           chatEventsCurrent.filter(isCompletedChatMessage),
-          {...modelParameters, useVertex},
+          {...modelParameters},
           aichatContext
         );
       }

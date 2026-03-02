@@ -5,12 +5,18 @@ export interface AiTutorPromptSettings {
   answerTypeCustomizations?: Partial<Record<AiTutorAnswerType, string>>;
 }
 
+export type Widget2 = {
+  id: string;
+  parameters?: object;
+};
+
 export interface Weblab2LevelProperties extends LevelProperties {
   widgetView?: boolean;
   initialViewMode?: ViewMode;
   aiTutorMode?: string;
   levelSystemPrompt?: string;
   aiTutorPromptSettings?: AiTutorPromptSettings;
+  widget2?: Widget2;
 }
 
 export enum ViewMode {

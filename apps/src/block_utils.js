@@ -300,7 +300,7 @@ exports.cleanBlocks = function (blocksDom) {
  * Adds any functions from functionsXml to blocksXml. If a function with the
  * same id is already present in blocksXml, it won't be added again.
  */
-exports.appendNewFunctions = function (blocksXml, functionsXml) {
+exports.appendNewFunctionsXml = function (blocksXml, functionsXml) {
   const startBlocksDom = xml.parseElement(blocksXml);
   const sharedFunctionsDom = xml.parseElement(functionsXml);
   const functions = [...sharedFunctionsDom.ownerDocument.firstChild.childNodes];
