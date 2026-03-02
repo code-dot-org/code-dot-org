@@ -1,0 +1,238 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-02-27T06:56:57.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_prompt_answer_types": [
+      "buildHTML",
+      "buildCSS",
+      "buildJavaScript",
+      "ask",
+      "hint",
+      "debug",
+      "example",
+      "explainCode",
+      "documentation",
+      "pseudocode"
+    ],
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "assets",
+          "parentId": "0"
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Paws & Friends Adoption</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n\n  <body>\n    <nav class=\"nav\">\n      <div class=\"nav-left\">\n        <span class=\"brand\">Paws & Friends</span>\n      </div>\n\n      <div class=\"nav-links\" aria-label=\"Primary\">\n        <a class=\"nav-link\" href=\"#home\">\n          <img src=\"assets/home.png\" alt=\"\" />\n          <span>Home</span>\n        </a>\n        <a class=\"nav-link\" href=\"#dogs\">\n          <img src=\"assets/dogs.png\" alt=\"\" />\n          <span>Dogs</span>\n        </a>\n        <a class=\"nav-link\" href=\"#cats\">\n          <img src=\"assets/cats.png\" alt=\"\" />\n          <span>Cats</span>\n        </a>\n        <a class=\"nav-link\" href=\"#small-pets\">\n          <img src=\"assets/small-pets.png\" alt=\"\" />\n          <span>Small Pets</span>\n        </a>\n        <a class=\"nav-link\" href=\"#contact\">\n          <img src=\"assets/contact.png\" alt=\"\" />\n          <span>Contact</span>\n        </a>\n      </div>\n    </nav>\n\n    <header id=\"home\" class=\"hero\">\n      <div class=\"hero-content\">\n        <p class=\"hero-eyebrow\">Adopt • Foster • Volunteer</p>\n        <h1>Find your next best friend.</h1>\n        <p class=\"hero-sub\">Browse adoptable pets and start an application in minutes.</p>\n        <div class=\"hero-actions\">\n          <a class=\"btn primary\" href=\"#dogs\">Browse Dogs</a>\n          <a class=\"btn ghost\" href=\"#contact\">Contact</a>\n        </div>\n      </div>\n    </header>\n\n    <main>\n      <section id=\"dogs\" class=\"section\">\n        <div class=\"section-head\">\n          <div>\n            <h2>Dogs Available</h2>\n          </div>\n\n          <!-- Polished-looking filters -->\n          <div class=\"filters\" aria-label=\"Filters\">\n            <button class=\"filter-btn\" data-filter=\"small\" type=\"button\">Small</button>\n            <button class=\"filter-btn\" data-filter=\"kids\" type=\"button\">Good with Kids</button>\n            <button class=\"filter-btn\" data-filter=\"under2\" type=\"button\">Under 2</button>\n          </div>\n        </div>\n\n        <!-- No results count on purpose -->\n        <div class=\"cards\" aria-label=\"Dog cards\">\n          <!-- Card 1 -->\n          <article\n            class=\"card\"\n            data-small=\"true\"\n            data-kids=\"true\"\n            data-under2=\"false\"\n          >\n            <img src=\"assets/adopt-dog-1.jpg\" alt=\"Milo, a dog available for adoption\" />\n            <div class=\"card-body\">\n              <div class=\"card-top\">\n                <h3>Milo</h3>\n                <span class=\"pill\">Small</span>\n              </div>\n\n              <!-- Inconsistency: short tidy meta -->\n              <p class=\"meta\">Age: 2 years • Temperament: calm</p>\n\n              <div class=\"badges\">\n                <span class=\"badge ok\">Good w/ kids</span>\n                <span class=\"badge meh\">Low shed?</span>\n              </div>\n\n              <p class=\"desc\">\n                Milo loves short walks and quiet evenings. He’s friendly and does well with children.\n              </p>\n\n              <div class=\"card-actions\">\n                <button class=\"btn small primary adopt-btn\" type=\"button\">Adopt</button>\n                <button class=\"btn small ghost details-btn\" type=\"button\">Details</button>\n              </div>\n\n              <div class=\"details hidden\">\n                <p class=\"details-text\">\n                  Notes: calm indoors • Enjoys routines • Has lived with children before\n                </p>\n              </div>\n            </div>\n          </article>\n\n          <!-- Card 2 -->\n          <article\n            class=\"card\"\n            data-small=\"false\"\n            data-kids=\"true\"\n            data-under2=\"true\"\n          >\n            <img src=\"assets/adopt-dog-2.jpg\" alt=\"Luna, a dog available for adoption\" />\n            <div class=\"card-body\">\n              <div class=\"card-top\">\n                <h3>Luna</h3>\n                <!-- Inconsistency: size as weight -->\n                <span class=\"pill\">22 lbs</span>\n              </div>\n\n              <!-- Inconsistency: different meta style + order -->\n              <ul class=\"meta-list\">\n                <li>Young</li>\n                <li>High energy</li>\n                <li>Kid-friendly</li>\n              </ul>\n\n              <!-- Inconsistency: kids info only implied here -->\n              <p class=\"desc\">\n                Luna is playful and loves people. Great fit if you like an active companion.\n              </p>\n\n              <div class=\"card-actions\">\n                <button class=\"btn small primary adopt-btn\" type=\"button\">Adopt</button>\n                <button class=\"btn small ghost details-btn\" type=\"button\">Details</button>\n              </div>\n  \n              <div class=\"details hidden\">\n                <p class=\"details-text\">\n                  Notes: high energy • Learns fast • Has done well around kids in foster care\n                </p>\n              </div>\n            </div>\n          </article>\n\n          <!-- Card 3 -->\n          <article\n            class=\"card\"\n            data-small=\"true\"\n            data-kids=\"false\"\n            data-under2=\"true\"\n          >\n            <img src=\"assets/adopt-dog-3.jpg\" alt=\"Pepper, a dog available for adoption\" />\n            <div class=\"card-body\">\n              <div class=\"card-top\">\n                <h3>Pepper</h3>\n                <!-- Inconsistency: vague size label -->\n                <span class=\"pill\">Compact</span>\n              </div>\n\n              <!-- Inconsistency: missing obvious “kids” label on the surface -->\n              <p class=\"meta\">\n                Age: 1 • Traits: curious, bold, learns fast\n              </p>\n\n              <p class=\"desc\">\n                Pepper is energetic and loves attention. Very smart and eager to learn new tricks.\n              </p>\n\n              <div class=\"card-actions\">\n                <button class=\"btn small primary adopt-btn\" type=\"button\">Adopt</button>\n                <button class=\"btn small ghost details-btn\" type=\"button\">Details</button>\n              </div>\n\n              <div class=\"details hidden\">\n                <p class=\"details-text\">\n                  Notes: very curious • Working on leash manners • Best with confident handlers\n                </p>\n              </div>\n            </div>\n          </article>\n        </div>\n        \n      </section>\n\n      <section id=\"cats\" class=\"section muted-section\">\n        <h2>Cats</h2>\n        <p class=\"muted\">Cats are currently being updated. Check back soon.</p>\n      </section>\n\n      <section id=\"small-pets\" class=\"section muted-section\">\n        <h2>Small Pets</h2>\n        <p class=\"muted\">Small pets are currently being updated. Check back soon.</p>\n      </section>\n\n      <section id=\"contact\" class=\"section contact\">\n        <h2>Contact</h2>\n        <p class=\"muted\">\n          Questions? Email the shelter. Adoption appointments available weekdays.\n        </p>\n\n        <!-- Deceptive: looks like the next step, but doesn't actually help -->\n        <div class=\"contact-card\">\n          <p class=\"contact-title\">Start Adoption</p>\n          <p class=\"contact-sub\">We’ll get back to you in 1–3 business days.</p>\n          <button id=\"contactStart\" class=\"btn primary\" type=\"button\">Start Adoption Process</button>\n          <p class=\"tiny\">\n            Tip: If you already picked a dog, click “Adopt” on their card first.\n          </p>\n        </div>\n      </section>\n    </main>\n\n    <footer class=\"footer\">\n      <p class=\"footer-text\">© Paws & Friends Shelter • Hours vary</p>\n    </footer>\n\n    <script src=\"script.js\"></script>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "logo.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX2-2025/uuid/1122df75-0651-4004-bbe3-7ffd8ab0367e.png",
+          "type": "starter",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "home.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX2-2025/uuid/30b8e952-1351-4ca8-924a-5e35633a1f0e.png",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "cats.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX2-2025/uuid/e42e6198-6ba4-4aa4-a3a5-346bc0e5d092.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "dogs.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX2-2025/uuid/50677855-93e1-4209-bd10-85745e4aa9ac.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "back.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX2-2025/uuid/37ea4816-531d-428a-86f4-b9083a5e7e9b.png",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "contact.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX2-2025/uuid/4d0c0320-f60b-4f03-b46c-09da63686f2a.png",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "small-pets.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX2-2025/uuid/93823b72-9c2d-4347-890d-010a0eda967b.png",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "cat1.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX2-2025/uuid/8280f070-c84b-4a4e-9d8e-0b32cb8b1e8e.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "dog1.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX2-2025/uuid/ab327e40-abe2-472c-babe-f75969a8fe55.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "11": {
+          "id": "11",
+          "name": "hero-dog.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX2-2025/uuid/e97a59d2-a70b-4292-a1ed-e518f8f49361.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "12": {
+          "id": "12",
+          "name": "adopt-cat-3.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX2-2025/uuid/b48bdc82-cd5f-4fa5-b523-d1a2266161ee.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "13": {
+          "id": "13",
+          "name": "adopt-dog-2.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX2-2025/uuid/a2a78ffa-5635-4056-9e51-0ca570f2867a.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "14": {
+          "id": "14",
+          "name": "adopt-dog-1.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX2-2025/uuid/348de630-9d3f-4bec-9b2e-303043a4cd33.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "15": {
+          "id": "15",
+          "name": "adopt-cat-2.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX2-2025/uuid/338c179a-5409-4019-9ceb-3c4384e4df20.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "16": {
+          "id": "16",
+          "name": "adopt-dog-3.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX2-2025/uuid/d3ec28e9-5cad-4526-bb9c-d960f9073c65.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "17": {
+          "id": "17",
+          "name": "adopt-cat-1.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX2-2025/uuid/b7e73bd4-8c6f-4e48-9017-0c1348660314.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "18": {
+          "id": "18",
+          "name": "style.css",
+          "contents": ":root {\n  --bg: #0b1220;\n  --panel: #111a2c;\n  --card: #0f172a;\n  --text: #e8eefc;\n  --muted: #a8b3d6;\n  --border: rgba(255, 255, 255, 0.12);\n  --primary: #3b82f6;\n  --primary-2: #2563eb;\n  --ghost: rgba(255, 255, 255, 0.08);\n}\n\n* { box-sizing: border-box; }\n\nbody {\n  margin: 0;\n  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, Helvetica, sans-serif;\n  background: radial-gradient(1200px 600px at 20% 0%, #122040, #070b14);\n  color: var(--text);\n}\n\n/* NAV */\n.nav {\n  position: sticky;\n  top: 0;\n  z-index: 10;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 14px;\n  padding: 10px 14px;\n  background: rgba(10, 14, 26, 0.78);\n  backdrop-filter: blur(10px);\n  border-bottom: 1px solid var(--border);\n}\n\n.brand {\n  font-weight: 700;\n  letter-spacing: 0.2px;\n}\n\n.nav-links {\n  display: flex;\n  gap: 10px;\n  align-items: center;\n}\n\n.nav-link {\n  display: inline-flex;\n  align-items: center;\n  gap: 8px;\n  padding: 8px 10px;\n  border-radius: 10px;\n  color: var(--text);\n  text-decoration: none;\n  border: 1px solid transparent;\n}\n\n.nav-link:hover {\n  background: rgba(255,255,255,0.06);\n  border-color: rgba(255,255,255,0.10);\n}\n\n.nav-link img {\n  width: 18px;\n  height: 18px;\n  opacity: 0.9;\n}\n\n.nav-link span {\n  font-size: 13px;\n}\n\n/* HERO */\n.hero {\n  min-height: 68vh;\n  display: grid;\n  place-items: end start;\n  background:\n    linear-gradient(180deg, rgba(0,0,0,0.10), rgba(0,0,0,0.75)),\n    url(\"assets/hero-dog.jpg\");\n  background-size: cover;\n  background-position: center;\n  padding: 22px 14px 34px 14px;\n  border-bottom: 1px solid var(--border);\n}\n\n.hero-content {\n  max-width: 720px;\n  background: rgba(17, 26, 44, 0.62);\n  border: 1px solid rgba(255,255,255,0.12);\n  border-radius: 18px;\n  padding: 16px 16px 14px 16px;\n}\n\n.hero-eyebrow {\n  margin: 0 0 6px 0;\n  color: var(--muted);\n  font-size: 12px;\n  letter-spacing: 0.3px;\n}\n\n.hero h1 {\n  margin: 0 0 8px 0;\n  font-size: 34px;\n  line-height: 1.05;\n}\n\n.hero-sub {\n  margin: 0 0 14px 0;\n  color: #c8d2f0;\n  font-size: 14px;\n}\n\n.hero-actions {\n  display: flex;\n  gap: 10px;\n  flex-wrap: wrap;\n}\n\n/* SECTIONS */\n.section {\n  padding: 18px 14px 22px 14px;\n  max-width: 1100px;\n  margin: 0 auto;\n}\n\n.section-head {\n  display: flex;\n  align-items: end;\n  justify-content: space-between;\n  gap: 16px;\n  flex-wrap: wrap;\n  margin-bottom: 14px;\n}\n\nh2 { margin: 0; font-size: 22px; }\n.section-sub { margin: 6px 0 0 0; color: #c8d2f0; font-size: 14px; }\n\n.muted { color: var(--muted); }\n\n/* FILTERS (polished look) */\n.filters {\n  display: flex;\n  gap: 10px;\n  flex-wrap: wrap;\n}\n\n.filter-btn {\n  border: 1px solid rgba(255,255,255,0.14);\n  background: rgba(255,255,255,0.06);\n  color: var(--text);\n  padding: 10px 12px;\n  border-radius: 999px;\n  font-size: 13px;\n  cursor: pointer;\n}\n\n.filter-btn:hover {\n  background: rgba(255,255,255,0.10);\n}\n\n/* IMPORTANT: active LOOK is strong (deceptive), even though JS won't stack logic */\n.filter-btn.active {\n  background: linear-gradient(180deg, var(--primary), var(--primary-2));\n  border-color: rgba(255,255,255,0.20);\n}\n\n/* CARDS */\n.cards {\n  display: grid;\n  grid-template-columns: repeat(3, minmax(0, 1fr));\n  gap: 14px;\n}\n\n.card {\n  background: rgba(17, 26, 44, 0.65);\n  border: 1px solid rgba(255,255,255,0.12);\n  border-radius: 18px;\n  overflow: hidden;\n}\n\n.card img {\n  width: 100%;\n  height: 180px;\n  object-fit: cover;\n  display: block;\n}\n\n.card-body {\n  padding: 12px 12px 14px 12px;\n}\n\n.card-top {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 10px;\n}\n\n.card h3 {\n  margin: 0;\n  font-size: 18px;\n}\n\n.pill {\n  font-size: 12px;\n  padding: 6px 10px;\n  border-radius: 999px;\n  border: 1px solid rgba(255,255,255,0.14);\n  background: rgba(255,255,255,0.06);\n  color: #dbe6ff;\n}\n\n/* Inconsistent meta styles intentionally */\n.meta {\n  margin: 8px 0 8px 0;\n  color: #c8d2f0;\n  font-size: 13px;\n}\n\n.meta-list {\n  margin: 10px 0 10px 18px;\n  padding: 0;\n  color: #c8d2f0;\n  font-size: 13px;\n}\n\n.badges {\n  display: flex;\n  gap: 8px;\n  flex-wrap: wrap;\n  margin: 8px 0 10px 0;\n}\n\n.badge {\n  font-size: 12px;\n  padding: 6px 10px;\n  border-radius: 999px;\n  border: 1px solid rgba(255,255,255,0.12);\n  background: rgba(255,255,255,0.05);\n}\n\n.badge.ok { border-color: rgba(59,130,246,0.5); }\n.badge.meh { border-color: rgba(255,255,255,0.16); color: #b8c3e7; }\n\n.desc {\n  margin: 0 0 12px 0;\n  color: #dbe6ff;\n  font-size: 13px;\n  line-height: 1.3;\n}\n\n.card-actions {\n  display: flex;\n  gap: 10px;\n}\n\n.btn {\n  border: 1px solid rgba(255,255,255,0.14);\n  background: rgba(255,255,255,0.06);\n  color: var(--text);\n  padding: 10px 12px;\n  border-radius: 12px;\n  text-decoration: none;\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  gap: 8px;\n  cursor: pointer;\n}\n\n.btn.small {\n  padding: 9px 10px;\n  border-radius: 12px;\n  font-size: 13px;\n}\n\n.btn.primary {\n  background: linear-gradient(180deg, var(--primary), var(--primary-2));\n  border-color: rgba(255,255,255,0.18);\n}\n\n.btn.ghost {\n  background: rgba(255,255,255,0.04);\n}\n\n.details {\n  margin-top: 10px;\n  padding-top: 10px;\n  border-top: 1px solid rgba(255,255,255,0.10);\n}\n\n.details-text {\n  margin: 0;\n  color: #c8d2f0;\n  font-size: 13px;\n}\n\n.hidden { display: none; }\n\n/* status area: intentionally vague */\n.status {\n  min-height: 22px;\n  margin-top: 12px;\n  color: rgba(232, 238, 252, 0.78);\n  font-size: 13px;\n}\n\n/* contact */\n.contact-card {\n  margin-top: 10px;\n  max-width: 520px;\n  background: rgba(17, 26, 44, 0.55);\n  border: 1px solid rgba(255,255,255,0.12);\n  border-radius: 18px;\n  padding: 14px;\n}\n\n.contact-title { margin: 0 0 4px 0; font-weight: 700; }\n.contact-sub { margin: 0 0 12px 0; color: #c8d2f0; font-size: 13px; }\n.tiny { margin: 10px 0 0 0; color: rgba(168, 179, 214, 0.85); font-size: 12px; }\n\n.footer {\n  border-top: 1px solid rgba(255,255,255,0.10);\n  padding: 16px 14px;\n  color: rgba(168, 179, 214, 0.9);\n  text-align: center;\n}\n\n/* Make it usable on small screens */\n@media (max-width: 900px) {\n  .cards { grid-template-columns: 1fr; }\n  .nav-link span { display: none; } /* polished app vibe, but also slightly annoying */\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "19": {
+          "id": "19",
+          "name": "script.js",
+          "contents": "// Deceptive UX behaviors for Lesson 2:\n// 1) Filters LOOK stacked (multiple appear active) but LOGIC is single-filter.\n// 2) Adopt button gives ambiguous feedback (no real confirmation).\n// 3) Details toggles add click-work.\n// 4) Nav annoyance: \"Dogs\" scroll lands slightly off.\n\nconst filterButtons = Array.from(document.querySelectorAll(\".filter-btn\"));\nconst cards = Array.from(document.querySelectorAll(\".card\"));\nconst adoptButtons = Array.from(document.querySelectorAll(\".adopt-btn\"));\nconst detailsButtons = Array.from(document.querySelectorAll(\".details-btn\"));\n\nlet currentFilter = null;\n\n// --- Helper: apply ONLY ONE filter at a time (even if multiple buttons look active) ---\nfunction applyFilter(filterName) {\n  currentFilter = filterName;\n\n  cards.forEach((card) => {\n    const isMatch =\n      filterName === null ||\n      card.dataset[filterName] === \"true\"; // data-small / data-kids / data-under2\n\n    card.style.display = isMatch ? \"\" : \"none\";\n  });\n\n}\n\n// --- Filters: buttons can LOOK active together, but filter logic replaces silently ---\nfilterButtons.forEach((btn) => {\n  btn.addEventListener(\"click\", () => {\n    const filterName = btn.dataset.filter;\n\n    // Visual lie: toggle active class on THIS button only (others stay active too).\n    btn.classList.toggle(\"active\");\n\n    // Logic truth: replace currentFilter with the last clicked filter.\n    applyFilter(filterName);\n\n    // Mild disorientation: sometimes nudge scroll a bit\n    if (Math.random() < 0.35) {\n      window.scrollBy(0, -40);\n    }\n  });\n});\n\n// --- Details toggles: adds click work to find info ---\ndetailsButtons.forEach((btn) => {\n  btn.addEventListener(\"click\", () => {\n    const card = btn.closest(\".card\");\n    const details = card.querySelector(\".details\");\n    details.classList.toggle(\"hidden\");\n    // No label change on purpose (slightly annoying)\n  });\n});\n\n// --- Adopt buttons: ambiguous feedback ---\nadoptButtons.forEach((btn) => {\n  btn.addEventListener(\"click\", () => {\n    btn.textContent = \"Submitted\";\n    btn.disabled = true;\n\n    // Feels like it did something, but doesn't clarify next step\n    if (Math.random() < 0.5) {\n      document.getElementById(\"contact\").scrollIntoView({ behavior: \"smooth\" });\n    }\n  });\n});\n\n// --- Nav annoyance: \"Dogs\" anchor lands slightly off ---\nconst dogsLink = document.querySelector('a[href=\"#dogs\"]');\ndogsLink.addEventListener(\"click\", (e) => {\n  e.preventDefault();\n  const dogsSection = document.getElementById(\"dogs\");\n  const y = dogsSection.getBoundingClientRect().top + window.scrollY - 120; // slightly too high\n  window.scrollTo({ top: y, behavior: \"smooth\" });\n});\n\n// Contact CTA: looks helpful but doesn't really progress\ndocument.getElementById(\"contactStart\").addEventListener(\"click\", () => {\n  // do nothing visible on purpose\n});",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-27 07:08:09 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-27 07:08:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-27 07:16:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

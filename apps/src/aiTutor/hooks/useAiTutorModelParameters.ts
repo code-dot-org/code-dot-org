@@ -46,7 +46,6 @@ export const baseModelParameters: ModelParameters = {
 } as const;
 
 interface UseAiTutorModelParametersOptions {
-  aiTutorSystemPromptName?: string;
   aiTutorSystemPrompt?: string;
   aiTutorJsonSchema?: object;
 }
@@ -61,7 +60,7 @@ export const useAiTutorModelParameters = (
 
     let mounted = true;
 
-    const promptName = customPromptName ?? options?.aiTutorSystemPromptName;
+    const promptName = customPromptName;
 
     const fetchPrompt = async () => {
       if (!promptName) {
@@ -112,17 +111,12 @@ export const useAiTutorModelParameters = (
     return () => {
       mounted = false;
     };
-  }, [options?.aiTutorSystemPrompt, options?.aiTutorSystemPromptName]);
+  }, [options?.aiTutorSystemPrompt]);
 
   useEffect(() => {
     // Log which system prompt we end up using.
     if (customPromptName) {
       console.log(`🤖: systemPrompt: ${customPromptName}`, systemPrompt);
-    } else if (options?.aiTutorSystemPromptName) {
-      console.log(
-        `🤖: systemPrompt: ${options?.aiTutorSystemPromptName}`,
-        systemPrompt
-      );
     } else if (systemPrompt !== undefined) {
       if (systemPrompt === defaultSystemPrompt) {
         console.log(`🤖: systemPrompt: default`);
@@ -130,7 +124,7 @@ export const useAiTutorModelParameters = (
         console.log(`🤖: provided systemPrompt: ${systemPrompt}`);
       }
     }
-  }, [systemPrompt, options?.aiTutorSystemPromptName]);
+  }, [systemPrompt]);
 
   useEffect(() => {
     // We currently use query params to allow AI model selection but otherwise do not provide any user

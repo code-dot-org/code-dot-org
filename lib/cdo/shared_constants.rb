@@ -820,11 +820,7 @@ module SharedConstants
   }
 
   AI_CHAT_MODEL_IDS = {
-    ARITHMO: "gen-ai-arithmo2-mistral-7b",
-    BIOMISTRAL: "gen-ai-biomistral-7b",
     MISTRAL: "gen-ai-mistral-7b-inst-v01",
-    KAREN: "gen-ai-karen-creative-mistral-7b",
-    PIRATE: "gen-ai-mistral-pirate-7b",
     CHATGPT: "gpt-4o-mini",
     LEARNLM: "learnlm-2.0-flash-experimental",
     GEMINI_2_0_FLASH: "gemini-2.0-flash",

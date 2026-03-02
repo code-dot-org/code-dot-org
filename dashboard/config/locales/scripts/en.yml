@@ -21256,8 +21256,8 @@ en:
           title: Teaching Programming with Music Lab
           description_audience: ''
           description_short: ''
-          description: "## Welcome\n##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, you'll be ready to get started teaching Programming with Music Lab with your students.\n\n##### Find the learning that works for you:\n\n* ##### **Go at your own pace**: This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n* ##### **Pick your content:** The content is organized in the suggested progression for teachers new to Progarmming with Music Lab. However, you can engage with the content in the order that best meets your needs. "
-          student_description: "## Welcome\n##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, you'll be ready to get started teaching Programming with Music Lab with your students.\n\n##### Find the learning that works for you:\n\n* ##### **Go at your own pace**: This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n* ##### **Pick your content:** The content is organized in the suggested progression for teachers new to Progarmming with Music Lab. However, you can engage with the content in the order that best meets your needs. "
+          description: "## Welcome\n##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, you'll be ready to get started teaching **Programming with Music Lab** with your students.\n\n##### Find the learning that works for you:\n\n* ##### **Go at your own pace**: This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n* ##### **Pick your content:** The content is organized in the suggested progression for teachers new to Programming with Music Lab. However, you can engage with the content in the order that best meets your needs. "
+          student_description: "## Welcome\n##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, you'll be ready to get started teaching **Programming with Music Lab** with your students.\n\n##### Find the learning that works for you:\n\n* ##### **Go at your own pace**: This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n* ##### **Pick your content:** The content is organized in the suggested progression for teachers new to Programming with Music Lab. However, you can engage with the content in the order that best meets your needs. "
         csp1-2025:
           lesson_groups:
             cspSurvey:
@@ -26924,3 +26924,40 @@ en:
             - Develop strategies for debugging AI-generated outputs, including refining prompts and reverting to previous versions, to overcome challenges and persevere in achieving a design goal.
             - Explain the difference between HTML for structure and CSS for styling.
             - Describe how design tasks relate to the professional roles of UX and UI designers.
+        self-paced-pl-thinkingcriticallywithai-unit1:
+          lessons:
+            lesson-1:
+              name: Introduction to Thinking Critically with AI
+            lesson-2:
+              name: Milestone 1
+            lesson-3:
+              name: Milestone 2
+            lesson-4:
+              name: Milestone 3
+            lesson-5:
+              name: Final Project
+            lesson-6:
+              name: 'Milestone 5: Synthesis & Sharing (Lessons 9-10)'
+          lesson_groups: {}
+          name: self-paced-pl-thinkingcriticallywithai-unit1
+          title: 'Educator Module: Thinking Critically About AI'
+          description_audience: ''
+          description_short: ''
+          description: |-
+            ## Welcome!
+
+            ##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, you'll be ready to get started teaching AI Discoveries' **Thinking Critically About AI** unit with your students.
+
+            ##### Find the learning that works for you:
+
+            * ##### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+            * ##### **Pick your content:** The content is organized in the suggested progression for teachers new to Thinking Critically About AI. However, you can engage with the content in the order that best meets your needs.
+          student_description: |-
+            ## Welcome!
+
+            ##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, you'll be ready to get started teaching AI Discoveries' **Thinking Critically About AI** unit with your students.
+
+            ##### Find the learning that works for you:
+
+            * ##### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+            * ##### **Pick your content:** The content is organized in the suggested progression for teachers new to Thinking Critically About AI. However, you can engage with the content in the order that best meets your needs.

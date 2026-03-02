@@ -1,11 +1,6 @@
 // Analytics constants used within the apps directory.
 // (See pegasus/helpers/analytics_constants.rb for constants in the
 // pegasus directory)
-const PLATFORMS = {
-  AMPLITUDE: 'Amplitude',
-  STATSIG: 'Statsig',
-  BOTH: 'Both',
-};
 
 const EVENTS = {
   // Sign-up flow
@@ -763,4 +758,4 @@ const EXPERIMENTS = {
   ENABLE_SELECTING_GRADES: 'enable_selecting_grades',
 };
 
-export {EVENTS, EVENT_GROUP_NAMES, EVENT_GROUPS, PLATFORMS, EXPERIMENTS};
+export {EVENTS, EVENT_GROUP_NAMES, EVENT_GROUPS, EXPERIMENTS};
