@@ -5,27 +5,7 @@ receivers:
         endpoint: 127.0.0.1:4318
       grpc:
         endpoint: 127.0.0.1:4317
-  # The hostmetrics receiver is required to get correct infrastructure metrics.
-  hostmetrics:
-    collection_interval: 10s
-    scrapers:
-      paging:
-        metrics:
-          system.paging.utilization:
-            enabled: true
-      cpu:
-        metrics:
-          system.cpu.utilization:
-            enabled: true
-      disk:
-      filesystem:
-        metrics:
-          system.filesystem.utilization:
-            enabled: true
-      load:
-      memory:
-      network:
-      processes:
+
   # The prometheus receiver scrapes metrics needed for the OpenTelemetry Collector Dashboard.
   prometheus:
     config:
@@ -57,10 +37,6 @@ exporters:
 
 service:
   pipelines:
-    metrics:
-      receivers: [hostmetrics, prometheus, otlp]
-      processors: [batch]
-      exporters: [otlphttp/sentry]
     traces:
       receivers: [otlp]
       processors: [batch]
