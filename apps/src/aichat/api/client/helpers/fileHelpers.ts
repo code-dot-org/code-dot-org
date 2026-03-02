@@ -1,4 +1,4 @@
-import {FilePart, GeneratedFile} from 'ai';
+import {type FilePart, type GeneratedFile} from 'ai';
 
 import {AssetSource, ChatAsset} from '@cdo/apps/aichat/types';
 import HttpClient from '@cdo/apps/util/HttpClient';

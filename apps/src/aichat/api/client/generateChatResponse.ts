@@ -1,4 +1,4 @@
-import {ModelMessage} from 'ai';
+import {type ModelMessage} from 'ai';
 
 import {generateText} from '@cdo/apps/aiGateway/generateTextThroughProxyOrGateway';
 import {AiRequestExecutionStatus} from '@cdo/generated-scripts/sharedConstants';
@@ -29,7 +29,7 @@ import {isTextSafe} from './helpers/safetyHelpers';
  * @returns the final status of the request execution, generated response text, and any generated assets.
  * If profanity was detected in the user input, only the status will be returned as the model is never invoked.
  */
-export default async function generateChatResponse(
+export async function generateChatResponse(
   newMessage: PendingChatMessage,
   storedMessages: CompletedChatMessage[],
   modelParameters: ModelParameters,

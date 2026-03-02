@@ -1,6 +1,5 @@
 import {createAsyncThunk} from '@reduxjs/toolkit';
 
-import {performChatCompletion} from '@cdo/apps/aichat/api/client';
 import {
   addEventToChatEventsCurrent,
   clearStagedFiles,
@@ -30,6 +29,7 @@ import {
 } from '@cdo/generated-scripts/sharedConstants';
 
 import {postAichatCompletionMessage} from '../../aichatApi';
+import {performChatCompletionClientApi} from '../../api/performChatCompletionClientApi';
 import {logChatEvent} from '../../helpers/logChatEvent';
 import {formatUserAddedSelectionContextForPrompt} from '../../helpers/userAddedSelectionContextFormatter';
 import {
@@ -205,7 +205,7 @@ export const submitChatContents = createAsyncThunk(
           );
         }
 
-        messages = await performChatCompletion(
+        messages = await performChatCompletionClientApi(
           newUserMessage,
           filteredChatEvents,
           modelParameters,

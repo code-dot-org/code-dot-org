@@ -1,6 +1,6 @@
 import {createGoogleGenerativeAI} from '@ai-sdk/google';
 import {createOpenAI} from '@ai-sdk/openai';
-import {LanguageModel} from 'ai';
+import {type LanguageModel} from 'ai';
 
 import {ValueOf} from '@cdo/apps/types/utils';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';

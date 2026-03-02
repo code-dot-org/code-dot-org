@@ -1,4 +1,4 @@
-import {FilePart, ModelMessage, TextPart} from 'ai';
+import {type FilePart, type ModelMessage, type TextPart} from 'ai';
 
 import {ChatAsset, ChatMessage, ModelParameters} from '@cdo/apps/aichat/types';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
