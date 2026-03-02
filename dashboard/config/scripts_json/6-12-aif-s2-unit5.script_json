@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-02-26 23:23:44 UTC",
+    "serialized_at": "2026-02-27 21:36:47 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -432,7 +432,7 @@
       "key": "316341f5-03de-4e9b-92b5-5c85fedf27f3",
       "position": 3,
       "properties": {
-        "progression_name": "Navigate a Weather App"
+        "progression_name": "Exploring the Network Panel"
       },
       "seeding_key": {
         "activity_section.key": "316341f5-03de-4e9b-92b5-5c85fedf27f3",
@@ -443,7 +443,7 @@
       "key": "f12d905d-faf2-4da1-bb6a-b1f27ad90442",
       "position": 4,
       "properties": {
-        "progression_name": "Navigate a Weather App - Networks "
+        "progression_name": "Navigate a Weather App"
       },
       "seeding_key": {
         "activity_section.key": "f12d905d-faf2-4da1-bb6a-b1f27ad90442",
@@ -1083,15 +1083,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "designing-reliable-apps-lesson1-level1-test-2025-pilot"
-        ],
-        "progression": "Navigate a Weather App"
+        "progression": "Exploring the Network Panel"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "designing-reliable-apps-lesson1-level1-test-2025-pilot"
+          "designing-reliable-apps-lesson1-level1-networks-panel-2025-pilot"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1099,7 +1096,7 @@
         "activity_section.key": "316341f5-03de-4e9b-92b5-5c85fedf27f3"
       },
       "level_keys": [
-        "designing-reliable-apps-lesson1-level1-test-2025-pilot"
+        "designing-reliable-apps-lesson1-level1-networks-panel-2025-pilot"
       ]
     },
     {
@@ -1108,7 +1105,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Navigate a Weather App - Networks "
+        "progression": "Navigate a Weather App"
       },
       "bonus": false,
       "seeding_key": {
@@ -2745,9 +2742,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson1-level1-test-2025-pilot",
+        "level.key": "designing-reliable-apps-lesson1-level1-networks-panel-2025-pilot",
         "script_level.level_keys": [
-          "designing-reliable-apps-lesson1-level1-test-2025-pilot"
+          "designing-reliable-apps-lesson1-level1-networks-panel-2025-pilot"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

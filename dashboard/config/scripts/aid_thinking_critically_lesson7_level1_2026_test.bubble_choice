@@ -1,0 +1,10 @@
+name 'aid-thinking-critically-lesson7-level1_2026-test'
+display_name 'Sketch Lab - Safety and Privacy Explorations'
+description 'Select one of the explorations below in order to examine how to maintain safety and privacy in an age of AI'
+
+sublevels
+level 'aid-thinking-critically-lesson7-level1a_2026-test'
+level 'aid-thinking-critically-lesson7-level1b_2026-test'
+level 'aid-thinking-critically-lesson7-level1c_2026-test'
+
+uses_lab2
