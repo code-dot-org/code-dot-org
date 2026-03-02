@@ -114,7 +114,13 @@ export function addCallouts(callouts) {
       content: {
         text: callout.localized_text,
         title: {
-          button: $('<div class="tooltip-x-close"/>'),
+          button: $(
+            '<div class="tooltip-x-close" tabindex="0" role="button" aria-label="Close tooltip"/>'
+          ).on('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+              $(this).trigger('click'); // Simulate a click when Enter or Space is pressed
+            }
+          }),
         },
       },
       style: {
