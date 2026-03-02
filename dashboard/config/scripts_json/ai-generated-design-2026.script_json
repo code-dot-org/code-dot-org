@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-02-25 18:37:31 UTC",
+    "serialized_at": "2026-03-01 22:42:02 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -100,15 +100,15 @@
     },
     {
       "key": "Lesson 1: Introduction to Web Apps",
-      "name": "Lesson 1: Introduction to Web Apps",
+      "name": "Lesson 1: Welcome to Web Apps",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "**How do web apps shape our daily lives?**\n\nIn this lesson, students explore what makes web apps unique and begin distinguishing between structure and style in webpage design. Through guided observation and AI-supported exploration, they see how HTML provides content and structure while CSS controls appearance and layout. Students connect these technical roles to human decision-making, recognizing that web apps—and AI tools that generate them—depend on human creativity, structure, and design choices",
-        "preparation": "- Print copies of the Welcome to Web Apps (one for each student)",
-        "student_overview": "**How do web apps shape our daily lives?**\n\nIn this lesson, you explore what makes web apps unique and how people design them. You experiment with AI to see how HTML builds structure and CSS adds style, and discover how human decisions shape what web apps look and feel like."
+        "overview": "**How do web apps shape our daily lives?**\n\nIn this lesson, students explore how web apps shape daily life by building and testing a paper prototype. Through hands-on design and peer testing, they discover common structural components of web apps and recognize that layout decisions are intentional, not random. Students connect these patterns to how web apps guide user behavior and interaction.",
+        "preparation": "- Print copies of the Paper App Prototype Activity Guides (1 per student)\n- Print and cut mystery component sets (1 per pair)\n- Print copies of the Unit Guides (1 per student)\n- Provide tape or glue (1 per pair)",
+        "student_overview": "**How do web apps shape our daily lives?**\n\nIn this lesson, you design and test your own paper web app. You discover that web apps follow shared design patterns and that their structure shapes how people interact online."
       },
       "seeding_key": {
         "lesson.key": "Lesson 1: Introduction to Web Apps",
@@ -934,11 +934,12 @@
       "key": "4aa92abe-6e2f-479e-afe7-317589295b8f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Activate students' real-world experiences with apps and build a shared list that will be used to identify patterns in how different apps function in a browser versus on a phone and begin forming an informal definition of a web app.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students list two or three apps they use every day, then turn to a partner to share why one is their favorite. Call on a few volunteers to share with the class and record their responses on the board to reference in the next slide.",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** The goal is to help students recognize that Web Apps are interactive systems defined by their structure and response, regardless of how they are accessed. It shifts their focus from \"software icons\" to the design patterns (like menus and buttons) that make those apps usable across different devices.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the scenario on the slide aloud. Give students a moment to jot down their responses. Have students share with a partner and then call on a few volunteers to share with the class. As students respond, write key verbs on the board (e.g., message, buy, upload, search, post, edit).\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen for students mentioning specific actions like \"ordering food,\" \"checking grades,\" or messaging friends\" rather than app names. If students get stuck, prompt with: \"Could you still search? Still message? Still buy something?\" ",
+        "name": "The App-Less Day",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Encourage students to include a mix of app types, such as tools, games, or utilities, not just social media apps. This creates a more diverse list for later discussion."
+            "markdown": "If students focus on the app itself, redirect with: \"What are you actually doing in that app?\" or \"What action are you trying to complete.\" "
           }
         ]
       },
@@ -951,6 +952,8 @@
       "key": "b706a40d-79da-435e-90dc-54d87dcc0f3f",
       "position": 2,
       "properties": {
+        "description": "Notice that even without installing an app, you still expect to message, search, post, or buy. That’s because what matters isn’t the icon, it’s the interaction.",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "b706a40d-79da-435e-90dc-54d87dcc0f3f",
@@ -958,19 +961,13 @@
       }
     },
     {
-      "key": "b329ec1e-02a2-44aa-a75d-8c88bbb46c8e",
+      "key": "d42b80f7-5d66-4545-890e-20cb242f331a",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *What do you notice about how they look or work in a browser?*\n- *What makes them web apps instead of just apps you install on your phone?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that web apps are accessed through a browser rather than installed on a device and begin to notice patterns such as needing internet access, working across devices, and being updated automatically. The key takeaway is that web apps live online and can be used anywhere, which connects to how design choices affect accessibility and usability.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If students struggle, display or describe examples (e.g., YouTube, Google Docs) and prompt with: \"Can you use it without downloading anything?\" or \"What happens when you open it on a computer?\" to lead them toward the idea that web apps run inside browsers."
-          }
-        ]
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the slide to define web apps. Emphasize the word respond and connect it to the verbs students just shared. "
       },
       "seeding_key": {
-        "activity_section.key": "b329ec1e-02a2-44aa-a75d-8c88bbb46c8e",
+        "activity_section.key": "d42b80f7-5d66-4545-890e-20cb242f331a",
         "lesson_activity.key": "77f2e3b0-a9b5-48fe-8c4f-45254dc374de"
       }
     },
@@ -978,6 +975,8 @@
       "key": "a7ca34b0-73c5-4623-9ac4-29b354078d34",
       "position": 4,
       "properties": {
+        "description": "Notice, you didn’t say ‘open Instagram.’ You said things like message, search, and post. A web app isn’t just information. It responds to your actions. Today, we’re going to look at how those responses are intentionally designed and how web apps affect our lives.",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "a7ca34b0-73c5-4623-9ac4-29b354078d34",
@@ -999,13 +998,13 @@
       "key": "8f000551-af23-461f-a83c-06a50b3d9b99",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Guide students to recognize what makes a web app distinct from an installed app through hands-on observation, discussion, and AI-supported exploration of how HTML and CSS shape web experiences.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the apps on the slide. Ask students to consider how they use or access them: Which open in a browser, and which only work when downloaded? Have a few volunteers share examples.",
-        "duration": "10",
-        "name": "Basics of Web Apps",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Help students discover that web pages are intentionally structured and that visible parts work together to support user interaction.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the Paper App Prototype activity guide and one set of the mystery components.",
+        "name": "Paper App Prototype",
+        "progression_name": "Paper App Prototype Activity Guide",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If students mention both versions (e.g., \"Spotify can do both\"), use that to emphasize overlap—some apps exist as both installed and web versions."
+            "markdown": "For best results, provide printed copies so students can physically build and test their paper prototypes. If needed, students may use the digital activity guide linked in Level 1 instead."
           }
         ]
       },
@@ -1029,11 +1028,11 @@
       "key": "c86b7686-8964-4b10-9502-007f531a3304",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *Which of these web apps let you do things instead of just look at or read content?*\n- *What kinds of actions do you take in those web apps?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students deepen their understanding of what makes web apps unique by comparing how different apps are accessed and used. They recognize that while some apps are installed and device-specific, others run in a browser and let users interact—create, post, comment, or edit—directly online. Through this comparison, students identify that web apps allow users to interact and create, not just view content. They begin connecting this interactivity to design and coding concepts, setting up how HTML and CSS combine to make web apps dynamic.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the expectations for Steps 1 and 2. Clarify that students must choose one app purpose and arrange all four mystery components on the back of their activity guide to create a \"working\" app layout. Give students approximately 10 minutes to complete these two steps before moving on to Step 3. Remind students that their goal is to not make the app look good and perfect. Their goal is to make the app \"work\" for users. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As you walk around, pay attention to how students are using the components to build their app and commonalities among placements. Listen for reasoning about user actions. Also encourage students to think through different actions a user might do in their app. If students focus only on visuals, redirect with: “What can the user actually do here?” or “What happens after they click that?” Encourage them to think in actions and responses.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If students give generic answers (\"You can post on all of them\"), ask: \"How does the app show that it's responding to you?\" or  \"What makes that interaction possible?\""
+            "markdown": "If students finish early, ask them to double-check that each component supports the app’s purpose and is placed intentionally.\n"
           }
         ]
       },
@@ -1056,11 +1055,11 @@
       "key": "60080836-5176-431f-acd1-617a56ff88ec",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Welcome to Web Apps activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Tell students they'll use the guide to record what they notice about how web pages are built as they explore examples.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define HTML and CSS. Explain that HTML provides the structure and content of a page, while CSS adds the style and visual design. Direct students to look closely at the two versions of the page on the slide. Have them record in their activity guide what they think HTML is controlling and what CSS is controlling based on what they notice in each image.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that students will now “user test” each other’s paper apps. Pair each group with another pair. Instruct one group to act as users while the other acts as their app. Give them 4-5 minutes to test, then switch roles.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Watch for whether students are thinking in actions and responses. Listen for moments where a tester says, “What happens when I click this?” If an app has no clear response, prompt designers to add one. Encourage students to think in terms of: User action → App response.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Encourage students to share a few observations before you confirm or elaborate. Use simple analogies to keep it intuitive:\n- HTML is the skeleton or blueprint that shapes the page.\n- CSS is the paint, layout, and personality that make it visually appealing.\n\nRemind students that they don't need to know any code yet—just focus on what seems to belong to structure versus style."
+            "markdown": "If groups finish early, ask: “Did the app actually help you complete the goal?”, “Where did you get stuck?”, or “What did you expect to happen that didn’t?”\n\nKeep this step tight, spending 8-10 minutes total including the role switch.\n"
           }
         ]
       },
@@ -1083,7 +1082,17 @@
       "key": "25e26507-2ff9-48e5-bf81-d7eb51a9399e",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Help students see that HTML and CSS each serve different roles, and that both are needed to make a webpage functional and visually appealing."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that students will now compare their designs with two other groups. Have pairs first meet with a group that chose the same app and discuss the questions in their activity guide for 2-3 minutes. Then have them meet with a group that chose a different app and discuss the same questions. After about 5 minutes total, bring the class back together.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As you walk around, listen for students noticing similar component placement, especially elements placed at the top or grouped together. Pay attention to moments where a “user” taps something and the “app” doesn’t respond. If groups get stuck, prompt them by asking what surprised them, whether they noticed anything showing up in similar locations, or what happened when someone tried to use the layout.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time is limited, prioritize the same-app comparison — that’s where pattern recognition is strongest and the “design is intentional” insight usually emerges.\n"
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Paper App Prototype could be collected and used as a formative assessment of the learning objectives. \n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "25e26507-2ff9-48e5-bf81-d7eb51a9399e",
@@ -1094,8 +1103,6 @@
       "key": "51573734-b6d1-4490-9341-99567fa3f66b",
       "position": 8,
       "properties": {
-        "description": "Now you'll test what happens when a web page has only HTML or only CSS. This will help you see how each one contributes to the final page design.",
-        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "51573734-b6d1-4490-9341-99567fa3f66b",
@@ -1106,16 +1113,8 @@
       "key": "71b32b33-6cc1-4a5e-bbf6-dde0b8d7204a",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 and 2.\n- Level 1: Students prompt AI to create a webpage with only HTML.\n- Level 2: Students prompt AI to create a webpage with only CSS.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Remind students to add any new observations to their activity guide as they notice what each language controls or lacks. Check that students are noticing the limitations at each level. Ask questions like: \"What’s missing from this page when it’s only HTML?\" \"What’s missing when it’s only CSS?\"",
-        "duration": "25",
-        "name": "Generating Web Pages",
-        "progression_name": "Producing HTML and CSS",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Some students may think CSS can create an entire webpage by itself. Reinforce that CSS depends on HTML's structure—CSS tells the browser how to display content, but HTML provides what to display."
-          }
-        ]
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- What did you notice about where most groups placed their components?\n- Why do you think so many layouts looked similar?\n- When testing, what happened if a “User” clicked something the “App” hadn't planned for?\n\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to recognize that their layouts were not random. Even without instructions, many groups placed components in similar locations and expected certain parts to respond when clicked. Students should begin to realize that web app structure follows shared design patterns and that interaction only works when those parts are intentionally planned.",
+        "progression_name": "Producing HTML and CSS"
       },
       "seeding_key": {
         "activity_section.key": "71b32b33-6cc1-4a5e-bbf6-dde0b8d7204a",
@@ -1136,13 +1135,8 @@
       "key": "3a7f491d-ba1e-4873-97ad-91d3304346e8",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *What did you notice about each page’s look and feel?*\n- *Which human decisions made one easier to use?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that both HTML and CSS contribute to a webpage's usability and overall experience—HTML defines the structure and content, while CSS adds design and visual hierarchy. They also begin connecting these technical roles to human-centered design decisions, understanding that choices like color, spacing, and readability all affect how users experience a page.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If students struggle to articulate the differences, project the HTML-only and CSS-only outputs side by side and ask: \"What’s missing here?\" \"Which one shows content? Which one shows style?\""
-          }
-        ]
+        "description": "You just discovered that these parts of a web app aren’t random. Now let’s put names to the components you’ve already been using so you can record them in your Unit Guide.",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "3a7f491d-ba1e-4873-97ad-91d3304346e8",
@@ -1153,6 +1147,7 @@
       "key": "ece4f081-d0ff-4009-aa6d-6b7edaf0d6cb",
       "position": 12,
       "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the AI-Generated Design Unit Guide."
       },
       "seeding_key": {
         "activity_section.key": "ece4f081-d0ff-4009-aa6d-6b7edaf0d6cb",
@@ -1163,13 +1158,6 @@
       "key": "24730a0b-114d-437b-9055-5225eb60a32e",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How do you think the AI knew what to write?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students begin to wonder about how AI systems produce responses and form initial hypotheses about where the AI's \"knowledge\" comes from. The goal is to surface students' prior ideas. Some may assume the AI is programmed with all the answers, while others may guess it has learned from examples. This primes curiosity for the next slide, where they'll explore how AI actually learns from patterns in data.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Validate all ideas shared, emphasizing that this is about thinking like investigators, not knowing the right answer. If discussion stalls, prompt with:\n- Do you think someone taught it what to write?\n- Does it have rules built in, or did it learn from examples?\n- How is that similar or different from how you learn to code or design?\n\nLet students' reasoning stay open-ended. You'll connect it to how AI really works on the following slide."
-          }
-        ]
       },
       "seeding_key": {
         "activity_section.key": "24730a0b-114d-437b-9055-5225eb60a32e",
@@ -1180,6 +1168,8 @@
       "key": "9292d4aa-58d8-4155-973a-d86c9479bd1f",
       "position": 14,
       "properties": {
+        "description": "Many of you placed this strip across the top in very similar ways. No one told you to do that. That’s because you’ve already learned how web apps are structured just by using them. You’ve been thinking like designers — even if you didn’t know the technical terms yet.",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "9292d4aa-58d8-4155-973a-d86c9479bd1f",
@@ -1190,8 +1180,13 @@
       "key": "fca0e9fd-bb22-4c1e-b408-2864492d6ba6",
       "position": 15,
       "properties": {
-        "description": "We just guessed how the AI might have known what to write for us. This short video will help explain how AI tools actually learn to make predictions and generate things like HTML and CSS.",
-        "remarks": true
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click to reveal the first component name: Navigation Bar. Point to where it appeared in student prototypes and on the example page. Then transition directly to the definition slide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define navigation bar. Direct students to fill in the vocab definition in their Unit Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Keep the pace brisk. Students already used these components in their prototypes — this moment is about naming and sharpening their understanding, not introducing something entirely new.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "fca0e9fd-bb22-4c1e-b408-2864492d6ba6",
@@ -1202,13 +1197,7 @@
       "key": "fdadf88b-d6b1-44f8-899b-6ede933dc882",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \"How AI Works - Machine Learning\" video.\n\n**Questions to consider with the video:** \n\n- What kind of data do you think our AI tool was trained on to make your HTML and CSS code?\n- How might that training data affect what the AI creates?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students begin to understand that AI tools learn by recognizing patterns in large sets of existing examples—in this case, examples of HTML and CSS code written by humans. They realize that the AI doesn't \"think\" or \"know\" how to code; instead, it generates code by predicting what comes next based on patterns it has seen before. Students also connect this idea to the earlier activity: just as CSS depends on HTML for structure, the AI depends on human-created data for guidance and context.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Point out that even though the AI can generate both structure (HTML) and style (CSS), the content and purpose still come from human decisions. This reinforces that AI is a tool that extends human creativity, not a replacement for it."
-          }
-        ]
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click to reveal the next component name: Hero Section. Point to where it appeared in student prototypes and on the example page. Then transition directly to the definition slide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define hero section. Direct students to fill in the vocab definition in their Unit Guide."
       },
       "seeding_key": {
         "activity_section.key": "fdadf88b-d6b1-44f8-899b-6ede933dc882",
@@ -1219,6 +1208,7 @@
       "key": "895b45c3-a1b3-4737-8b67-cfc305119ba1",
       "position": 17,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click to reveal the next component name: Gallery Cards. Point to where it appeared in student prototypes and on the example page. Then transition directly to the definition slide.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define gallery cards. Direct students to fill in the vocab definition in their Unit Guide."
       },
       "seeding_key": {
         "activity_section.key": "895b45c3-a1b3-4737-8b67-cfc305119ba1",
@@ -1229,7 +1219,7 @@
       "key": "08c27455-3fe6-48aa-b98f-ece988f9475f",
       "position": 18,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 3 through 7.\n- Level 3: Students will read the official definition for HTML.\n- Level 4: Students will add their own notes or examples that help them remember what HTML does.\n- Level 5: Students will read the official definition for CSS.\n- Level 6: Students will add their own notes or examples that help them remember what CSS controls.\n- Level 7: Students answer a Check for Understanding question.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, look for evidence that they understand the difference between structure/content (HTML) and style/appearance (CSS). Encourage students to use their own language and examples when adding context.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click to reveal the final component name: Footer. Point to where it appeared in student prototypes and on the example page. Then transition directly to the definition slide.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define footer. Direct students to fill in the vocab definition in their Unit Guide.",
         "progression_name": "Vocab: HTML"
       },
       "seeding_key": {
@@ -1252,17 +1242,8 @@
       "key": "74c1ceda-5847-455f-847d-b74422818bf7",
       "position": 20,
       "properties": {
-        "progression_name": "Check for Understanding",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "- For the Vocabulary levels, if students restate definitions word-for-word, prompt them to personalize their responses: \"What's an example from the app you just explored that shows HTML's role?”\"or \"How could you explain CSS to a friend using an analogy?\"\n- For the Check for Understanding level, if students give vague responses to the Check for Understanding questions (\"HTML is important\" / \"CSS makes it look better\"), push them to be specific with sentence frames like: \"HTML contributes by ___.\" or \"CSS contributes by ___.\""
-          },
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Use student responses to gauge whether they can clearly explain the complementary roles of HTML and CSS and how both are essential to building usable, visually appealing web pages."
-          }
-        ]
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the slide aloud. Pause after the first sentence and emphasize that Unit 1 focuses on planning and design decisions before building. Briefly clarify that later units will focus more on coding.",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "74c1ceda-5847-455f-847d-b74422818bf7",
@@ -1270,14 +1251,26 @@
       }
     },
     {
+      "key": "4b9a04ba-b82c-4b04-b71c-81c03dffa88e",
+      "position": 21,
+      "properties": {
+        "description": "You just made intentional layout decisions. That’s design. You didn’t need code to do it. This is what Unit 1 is about, learning to think and plan like designers before writing code.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4b9a04ba-b82c-4b04-b71c-81c03dffa88e",
+        "lesson_activity.key": "5d9dcce1-b6ee-4c6a-a93b-5431f75f936f"
+      }
+    },
+    {
       "key": "9020fd0e-91fc-422a-afc2-bf0a1bec01f6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *How do web apps shape our daily lives?*\n- *Who builds these apps?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Student should share their responses to Level 7 Check for Understanding question which has them connect today's lesson to their own experiences with technology. They should recognize that web apps shape how people communicate, learn, and create by being accessible on any device and designed for interaction. Students also acknowledge that web apps are built by teams of humans—designers, developers, and problem-solvers—who make decisions about how apps look, feel, and function. This reinforces that web apps are human-built systems that combine both technical structure and human-centered design choices that shape user experience.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the Question of the Day in their Unit Guide. Give them 2–3 minutes to write independently. Then invite a few volunteers to share. As students respond, press for connections to today’s activity (patterns, interaction, intentional placement).\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that web apps shape our daily lives because they are interactive systems built around shared design patterns. These patterns allow us to quickly understand how to navigate, search, buy, post, and communicate. Students should understand that web apps are intentionally structured by designers to support specific actions and responses — and that this structure influences how we think, move, and make decisions online.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "As the discussion wraps up, make sure to reinforce the connection between today’s technical and design ideas. Emphasize:\n- HTML is the structure—it controls what the page does.\n- CSS is the style—it controls how the page feels.\n- Together, they shape our experience with web apps.\n\nUse this as a final talking point to help students see how both code and human design decisions contribute to the apps they use every day."
+            "markdown": "As students share, reinforce these connections explicitly:\n- Web apps shape our lives because they respond to what we do — they aren’t just pages, they are systems.\n- We navigate quickly because designers use shared layout patterns (like navigation at the top and grouped content).\n- When structure changes, our experience changes.\n- Behind every web app is a team of humans making decisions about how it should look, feel, and function\n"
           }
         ]
       },
@@ -1300,7 +1293,7 @@
       "key": "0ed74220-8a9d-4041-8fea-21c8a16b6382",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
       },
       "seeding_key": {
         "activity_section.key": "0ed74220-8a9d-4041-8fea-21c8a16b6382",
@@ -1311,8 +1304,6 @@
       "key": "5706f26d-3f92-4387-bf49-c932affbf79e",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 8 to complete the End of Lesson Survey.",
-        "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
       "seeding_key": {
@@ -4353,178 +4344,24 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Web App Features"
+        "progression": "Paper App Prototype Activity Guide"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-generated-design-lesson1-level1_v2_2026"
+          "ai-generated-design-lesson1-level1_v3_2026"
         ],
         "lesson.key": "Lesson 1: Introduction to Web Apps",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "cbf2ede8-a5d5-4969-bf08-5bc0f05ad14a"
+        "activity_section.key": "8f000551-af23-461f-a83c-06a50b3d9b99"
       },
       "level_keys": [
-        "ai-generated-design-lesson1-level1_v2_2026"
+        "ai-generated-design-lesson1-level1_v3_2026"
       ]
     },
     {
       "chapter": 3,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Web App Features"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson1-level2_v2_2026"
-        ],
-        "lesson.key": "Lesson 1: Introduction to Web Apps",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "cbf2ede8-a5d5-4969-bf08-5bc0f05ad14a"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson1-level2_v2_2026"
-      ]
-    },
-    {
-      "chapter": 4,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: HTML"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson1-level3_2026"
-        ],
-        "lesson.key": "Lesson 1: Introduction to Web Apps",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "08c27455-3fe6-48aa-b98f-ece988f9475f"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson1-level3_2026"
-      ]
-    },
-    {
-      "chapter": 5,
-      "position": 4,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: HTML"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson1-level4_2026"
-        ],
-        "lesson.key": "Lesson 1: Introduction to Web Apps",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "08c27455-3fe6-48aa-b98f-ece988f9475f"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson1-level4_2026"
-      ]
-    },
-    {
-      "chapter": 6,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: CSS"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson1-level5_2026"
-        ],
-        "lesson.key": "Lesson 1: Introduction to Web Apps",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "94da7696-f8bc-43f9-98a4-4e20fa4eae6e"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson1-level5_2026"
-      ]
-    },
-    {
-      "chapter": 7,
-      "position": 6,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: CSS"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson1-level6_2026"
-        ],
-        "lesson.key": "Lesson 1: Introduction to Web Apps",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "94da7696-f8bc-43f9-98a4-4e20fa4eae6e"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson1-level6_2026"
-      ]
-    },
-    {
-      "chapter": 8,
-      "position": 7,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "Check for Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson1-level7_2026"
-        ],
-        "lesson.key": "Lesson 1: Introduction to Web Apps",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "74c1ceda-5847-455f-847d-b74422818bf7"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson1-level7_2026"
-      ]
-    },
-    {
-      "chapter": 9,
-      "position": 8,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "End of Lesson Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson1-level8_2026"
-        ],
-        "lesson.key": "Lesson 1: Introduction to Web Apps",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "5706f26d-3f92-4387-bf49-c932affbf79e"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson1-level8_2026"
-      ]
-    },
-    {
-      "chapter": 10,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4546,7 +4383,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 4,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4568,7 +4405,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 5,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4590,7 +4427,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 6,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -4612,7 +4449,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 7,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4634,7 +4471,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 8,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -4656,7 +4493,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 9,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -4678,7 +4515,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 10,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4700,7 +4537,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4722,7 +4559,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4744,7 +4581,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 13,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4766,7 +4603,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 14,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4788,7 +4625,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 15,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -4810,7 +4647,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 16,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4832,7 +4669,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 17,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -4854,7 +4691,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 18,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4876,7 +4713,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 19,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -4898,7 +4735,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4920,7 +4757,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4942,7 +4779,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 22,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4964,7 +4801,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 23,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4986,7 +4823,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5008,7 +4845,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5030,7 +4867,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5052,7 +4889,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 27,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -5074,7 +4911,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 28,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5096,7 +4933,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 29,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5118,7 +4955,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5140,7 +4977,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5162,7 +4999,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 32,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5184,7 +5021,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 33,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5206,7 +5043,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 34,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -5228,7 +5065,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 35,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5250,7 +5087,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 36,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -5272,7 +5109,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 37,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5294,7 +5131,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 38,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -5316,7 +5153,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5338,7 +5175,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5360,7 +5197,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 41,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5382,7 +5219,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 42,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5404,7 +5241,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 43,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -5426,7 +5263,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 44,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5448,7 +5285,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 45,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5470,7 +5307,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 46,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5492,7 +5329,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 47,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5514,7 +5351,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 48,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -5536,7 +5373,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 49,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5558,7 +5395,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 50,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5580,7 +5417,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 51,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -5602,7 +5439,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 52,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5624,7 +5461,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 53,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -5646,7 +5483,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 54,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5668,7 +5505,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 55,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5690,7 +5527,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 56,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5712,7 +5549,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 57,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5734,7 +5571,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 58,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5756,7 +5593,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 59,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5778,7 +5615,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5800,7 +5637,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 61,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5822,7 +5659,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 62,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5844,7 +5681,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 63,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5866,7 +5703,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5888,7 +5725,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 65,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5910,7 +5747,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 66,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -5932,7 +5769,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 67,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5954,7 +5791,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 68,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5976,7 +5813,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 69,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5998,7 +5835,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 70,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6020,7 +5857,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 71,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -6042,7 +5879,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 72,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6064,7 +5901,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 73,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6086,7 +5923,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 74,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6108,7 +5945,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 75,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6130,7 +5967,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 76,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6152,7 +5989,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 77,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6174,7 +6011,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 78,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6211,98 +6048,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-generated-design-lesson1-level1_v2_2026",
+        "level.key": "ai-generated-design-lesson1-level1_v3_2026",
         "script_level.level_keys": [
-          "ai-generated-design-lesson1-level1_v2_2026"
+          "ai-generated-design-lesson1-level1_v3_2026"
         ],
         "lesson.key": "Lesson 1: Introduction to Web Apps",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "cbf2ede8-a5d5-4969-bf08-5bc0f05ad14a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson1-level2_v2_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson1-level2_v2_2026"
-        ],
-        "lesson.key": "Lesson 1: Introduction to Web Apps",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "cbf2ede8-a5d5-4969-bf08-5bc0f05ad14a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson1-level3_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson1-level3_2026"
-        ],
-        "lesson.key": "Lesson 1: Introduction to Web Apps",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "08c27455-3fe6-48aa-b98f-ece988f9475f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson1-level4_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson1-level4_2026"
-        ],
-        "lesson.key": "Lesson 1: Introduction to Web Apps",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "08c27455-3fe6-48aa-b98f-ece988f9475f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson1-level5_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson1-level5_2026"
-        ],
-        "lesson.key": "Lesson 1: Introduction to Web Apps",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "94da7696-f8bc-43f9-98a4-4e20fa4eae6e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson1-level6_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson1-level6_2026"
-        ],
-        "lesson.key": "Lesson 1: Introduction to Web Apps",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "94da7696-f8bc-43f9-98a4-4e20fa4eae6e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson1-level7_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson1-level7_2026"
-        ],
-        "lesson.key": "Lesson 1: Introduction to Web Apps",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "74c1ceda-5847-455f-847d-b74422818bf7"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson1-level8_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson1-level8_2026"
-        ],
-        "lesson.key": "Lesson 1: Introduction to Web Apps",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "5706f26d-3f92-4387-bf49-c932affbf79e"
+        "activity_section.key": "8f000551-af23-461f-a83c-06a50b3d9b99"
       }
     },
     {
@@ -7346,20 +7099,6 @@
       }
     },
     {
-      "name": "[KEY] Welcome to Web Apps",
-      "url": "https://docs.google.com/document/d/1FQbQF4-9zF2mlStG0Ngc7m4YN5mfU6PxIGBcmJkr_oA/edit?usp=sharing",
-      "key": "_key_welcome_to_web_apps",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_welcome_to_web_apps"
-      }
-    },
-    {
       "name": "[KEY] Wireframes (Optional)",
       "url": "https://docs.google.com/document/d/15XU5Dann9rwYwjrZ3g6r1v0LNzRoFha7feHpjXr_NsA/edit?tab=t.0#heading=h.mhs0fprrl5av",
       "key": "_key_wireframes_optional_",
@@ -7649,6 +7388,19 @@
       }
     },
     {
+      "name": "Paper App Prototype Mystery Components",
+      "url": "https://docs.google.com/presentation/d/1xtYFEWOOm06tpjkvQXtLUT8BREPlFQBuigkgroeS3iU/edit?usp=sharing",
+      "key": "paper_app_prototype_mystery_components",
+      "properties": {
+        "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "paper_app_prototype_mystery_components"
+      }
+    },
+    {
       "name": "Site Maps",
       "url": "https://docs.google.com/presentation/d/1J6VydPSSQrAdynwSYd8zTEJFLRfkGtqIFG5j3SB3TF0/edit?usp=sharing",
       "key": "site_maps",
@@ -7768,7 +7520,7 @@
     },
     {
       "name": "Welcome to Web Apps",
-      "url": "https://docs.google.com/presentation/d/1hdGmCC0VR4ZSDJ63p4dJckohiuVz3Rb8TjMmUItUpn8/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1nThSKLKPussNxR2UupIklnzL7dvOK73boUKlWKKM_uw/",
       "key": "welcome_to_web_apps",
       "properties": {
         "audience": "Teacher",
@@ -7781,8 +7533,8 @@
       }
     },
     {
-      "name": "Welcome to Web Apps",
-      "url": "https://docs.google.com/document/d/1_0wIjJNtV3rHUFs6LXsPfhtv61bom_JivnNotWXIgBg/edit?usp=sharing",
+      "name": "Paper App Prototype Activity Guide",
+      "url": "https://docs.google.com/document/d/1kv-nXmavQp-dQmp5prubQ8sDeduV_iJrIhLSlculVCo/edit?usp=sharing",
       "key": "welcome_to_web_apps_1",
       "properties": {
         "audience": "Student",
@@ -7907,7 +7659,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 1: Introduction to Web Apps",
-        "resource.key": "_key_welcome_to_web_apps"
+        "resource.key": "paper_app_prototype_mystery_components"
       }
     },
     {
@@ -8097,23 +7849,33 @@
       }
     },
     {
-      "key": "css_cascading_style_sheets_",
-      "word": "CSS (Cascading Style Sheets)",
-      "definition": "controls the layout, colors, fonts, and overall style",
+      "key": "footer",
+      "word": "Footer",
+      "definition": "The strip at the bottom that often includes contact info or copyright details.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "css_cascading_style_sheets_"
+        "vocabulary.key": "footer"
       }
     },
     {
-      "key": "html_hypertext_markup_language_",
-      "word": "HTML (HyperText Markup Language)",
-      "definition": "provides the structure and content of a web page",
+      "key": "gallery_cards",
+      "word": "Gallery cards",
+      "definition": "The boxes that group related information, each with a picture, title, and short description.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "html_hypertext_markup_language_"
+        "vocabulary.key": "gallery_cards"
+      }
+    },
+    {
+      "key": "hero_section",
+      "word": "Hero section",
+      "definition": "The large banner near the top that introduces the main idea, with a heading, short text, and usually a button.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "hero_section"
       }
     },
     {
@@ -8134,6 +7896,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "mood_boarding"
+      }
+    },
+    {
+      "key": "navigation_bar",
+      "word": "Navigation bar",
+      "definition": "Tthe menu across the top of a webpage that helps users move between pages or sections.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "navigation_bar"
       }
     },
     {
@@ -8237,6 +8009,16 @@
       }
     },
     {
+      "key": "web_app",
+      "word": "Web app",
+      "definition": "Interactive tools that connect to the internet and respond to your actions. ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "web_app"
+      }
+    },
+    {
       "key": "wireframe",
       "word": "wireframe",
       "definition": "a low-fidelity, structural layout showing content and functionality, without visual design",
@@ -8263,13 +8045,31 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 1: Introduction to Web Apps",
-        "vocabulary.key": "css_cascading_style_sheets_"
+        "vocabulary.key": "footer"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 1: Introduction to Web Apps",
-        "vocabulary.key": "html_hypertext_markup_language_"
+        "vocabulary.key": "gallery_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Introduction to Web Apps",
+        "vocabulary.key": "hero_section"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Introduction to Web Apps",
+        "vocabulary.key": "navigation_bar"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Introduction to Web Apps",
+        "vocabulary.key": "web_app"
       }
     },
     {
@@ -8532,7 +8332,7 @@
     {
       "key": "5354c4f1-8e71-4462-8410-d8fded124d91",
       "properties": {
-        "description": "Explain the difference between HTML (structure) and CSS (styling)."
+        "description": "Recognize common structural design patterns in web apps you use daily."
       },
       "seeding_key": {
         "lesson.key": "Lesson 1: Introduction to Web Apps",
@@ -8662,7 +8462,7 @@
     {
       "key": "c55f909f-f9e1-40af-9eee-127a23f48882",
       "properties": {
-        "description": "Identify examples of web apps they use daily."
+        "description": "Explain how intentional layout decisions shape user behavior and interaction."
       },
       "seeding_key": {
         "lesson.key": "Lesson 1: Introduction to Web Apps",

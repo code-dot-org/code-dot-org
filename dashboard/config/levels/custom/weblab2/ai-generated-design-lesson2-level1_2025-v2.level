@@ -1,0 +1,263 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-02-28T22:28:35.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "true",
+    "initial_view_mode": "preview",
+    "ai_tutor_prompt_answer_types": [
+      "ask"
+    ],
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "assets",
+          "parentId": "0",
+          "open": false
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <title>Adopt-a-Pet</title>\n  <link rel=\"stylesheet\" href=\"styles.css\" />\n</head>\n\n<body>\n  <div class=\"app\" aria-label=\"Adopt a Pet App (Level 1)\">\n\n    <!-- Header -->\n    <header>\n      <div class=\"brand\">\n        <img src=\"assets/logo.png\" alt=\"PawPrint Shelter Logo\" />\n        <span>PawPrint Shelter</span>\n      </div>\n      <div class=\"header-links\">\n        <a href=\"#contact\">Contact</a>\n      </div>\n    </header>\n\n    <!-- Hero Section -->\n    <section class=\"hero\" aria-label=\"Hero\">\n      <img src=\"assets/hero-dog.jpg\" alt=\"Happy dog ready for adoption\" />\n      <div class=\"hero-copy\">\n        <h1>Adopt a Pet Today</h1>\n        <p>Find your new best friend. Browse our available pets below.</p>\n      </div>\n    </section>\n\n    <!-- Pet Grid (NO FILTERS) -->\n    <main aria-label=\"Pet listings\">\n      <!-- 1 -->\n      <article class=\"pet-card\" aria-label=\"Pet card: Rocky\">\n        <img src=\"assets/adopt-dog-1.jpg\" alt=\"Rocky the dog\" />\n        <h3>Rocky</h3>\n\n        <p class=\"meta\">Age: <span class=\"value\">2 years</span></p>\n        <p class=\"meta\"><span class=\"label\">Size</span>: <span class=\"value\">Large</span></p>\n        <p class=\"meta\">Good with kids: <span class=\"value\">Sometimes</span></p>\n\n        <p class=\"desc\">\n          Rocky is energetic and loves long walks, squeaky toys, meeting new people, playing fetch endlessly, and sitting right in the middle of wherever you are trying to walk because he thinks he is much smaller than he actually is and because he is convinced that being directly underfoot is the best possible way to stay close to you at all times even when you are clearly trying to do something else.\n        </p>\n\n        <div class=\"actions\" aria-label=\"Actions for Rocky\">\n          <details class=\"details\">\n            <summary>Details</summary>\n            <div class=\"details-body\">\n              <p><strong>Confirm:</strong> Rocky — Age: 2 years — Size: Large — Good with kids: Sometimes</p>\n              <p>\n                Rocky is enthusiastic and friendly but can be bouncy and forgets his size, so he may do best with older kids who can handle a playful, energetic dog and who like being followed everywhere including the kitchen, hallway, and anywhere else you try to walk.\n              </p>\n            </div>\n          </details>\n          <button class=\"adopt\" type=\"button\" aria-label=\"Adopt Rocky\">Adopt</button>\n        </div>\n      </article>\n\n      <!-- 2 -->\n      <article class=\"pet-card\" aria-label=\"Pet card: Milo\">\n        <img src=\"assets/adopt-cat-2.jpg\" alt=\"Milo the cat\" />\n        <h3>Milo</h3>\n\n        <p class=\"meta\">Age: <span class=\"value\">6 months</span></p>\n        <p class=\"meta\"><span class=\"label\">Size</span>: <span class=\"value\">Small</span></p>\n        <p class=\"meta\">Good with kids: <span class=\"value\">Yes</span></p>\n\n        <p class=\"desc\">\n          Milo is playful, curious, and always exploring, he loves chasing toy mice, climbing onto shelves he probably should not be on, investigating every bag that enters the house, sprinting down hallways for no obvious reason, and then suddenly flopping down like nothing happened, and because he is still young he learns quickly and enjoys interactive play that keeps his brain busy even when you are just trying to sit down for a minute.\n        </p>\n\n        <div class=\"actions\" aria-label=\"Actions for Milo\">\n          <details class=\"details\">\n            <summary>Details</summary>\n            <div class=\"details-body\">\n              <p><strong>Confirm:</strong> Milo — Age: 6 months — Size: Small — Good with kids: Yes</p>\n              <p>\n                Milo enjoys gentle attention and does well with respectful kids who like to play using wand toys and who understand that kittens need breaks, naps, and a calm approach even when they are being silly and zooming around the room.\n              </p>\n            </div>\n          </details>\n          <button class=\"adopt\" type=\"button\" aria-label=\"Adopt Milo\">Adopt</button>\n        </div>\n      </article>\n\n      <!-- 3 -->\n      <article class=\"pet-card\" aria-label=\"Pet card: Bella\">\n        <img src=\"assets/adopt-dog-2.jpg\" alt=\"Bella the dog\" />\n        <h3>Bella</h3>\n\n        <p class=\"meta\">Age: <span class=\"value\">4 years</span></p>\n        <p class=\"meta\"><span class=\"label\">Size</span>: <span class=\"value\">Small</span></p>\n        <p class=\"meta\">Good with kids: <span class=\"value\">Yes</span></p>\n\n        <p class=\"desc\">\n          Bella is calm, affectionate, and enjoys being around families, she loves belly rubs, gentle walks, and will happily follow you from room to room just to make sure she is included in absolutely everything, and if you sit down she will quietly appear next to you like she has always been there and like it is her job to supervise the entire household in the sweetest possible way.\n        </p>\n\n        <div class=\"actions\" aria-label=\"Actions for Bella\">\n          <details class=\"details\">\n            <summary>Details</summary>\n            <div class=\"details-body\">\n              <p><strong>Confirm:</strong> Bella — Age: 4 years — Size: Small — Good with kids: Yes</p>\n              <p>\n                Bella is gentle and patient and tends to settle quickly after a walk, making her a good fit for families who want a steady companion that enjoys routine, calm attention, and being near people without needing constant excitement.\n              </p>\n            </div>\n          </details>\n          <button class=\"adopt\" type=\"button\" aria-label=\"Adopt Bella\">Adopt</button>\n        </div>\n      </article>\n\n      <!-- 4 -->\n      <article class=\"pet-card\" aria-label=\"Pet card: Luna\">\n        <img src=\"assets/adopt-cat-1.jpg\" alt=\"Luna the cat\" />\n        <h3>Luna</h3>\n\n        <p class=\"meta\">Age: <span class=\"value\">3 years</span></p>\n        <p class=\"meta\"><span class=\"label\">Size</span>: <span class=\"value\">Small</span></p>\n        <p class=\"meta\">Good with kids: <span class=\"value\">No</span></p>\n\n        <p class=\"desc\">\n          Luna is quiet and observant and prefers a predictable environment, she enjoys sunny windowsills, gentle pets, and curling up next to you in the evenings, and she would do best in a calm home where she can relax at her own pace without a lot of sudden noise or fast movement, because she likes to choose when she interacts and when she simply watches everything from a comfortable spot.\n        </p>\n\n        <div class=\"actions\" aria-label=\"Actions for Luna\">\n          <details class=\"details\">\n            <summary>Details</summary>\n            <div class=\"details-body\">\n              <p><strong>Confirm:</strong> Luna — Age: 3 years — Size: Small — Good with kids: No</p>\n              <p>\n                Luna bonds slowly but deeply and would love an adult or teen household that understands cat body language, appreciates a calm companion, and can offer a quiet routine with cozy places to perch and nap.\n              </p>\n            </div>\n          </details>\n          <button class=\"adopt\" type=\"button\" aria-label=\"Adopt Luna\">Adopt</button>\n        </div>\n      </article>\n\n      <!-- 5 -->\n      <article class=\"pet-card\" aria-label=\"Pet card: Max\">\n        <img src=\"assets/adopt-dog-3.jpg\" alt=\"Max the dog\" />\n        <h3>Max</h3>\n\n        <p class=\"meta\">Age: <span class=\"value\">1 year</span></p>\n        <p class=\"meta\"><span class=\"label\">Size</span>: <span class=\"value\">Large</span></p>\n        <p class=\"meta\">Good with kids: <span class=\"value\">Yes</span></p>\n\n        <p class=\"desc\">\n          Max is smart and highly trainable and needs an active home where he can learn new skills, play outside, and burn off energy throughout the day, he thrives with structure and clear expectations and likes having a job to do, and when he is bored he invents his own activities which may include reorganizing your shoes, investigating every corner of the yard, and following you closely to see what happens next.\n        </p>\n\n        <div class=\"actions\" aria-label=\"Actions for Max\">\n          <details class=\"details\">\n            <summary>Details</summary>\n            <div class=\"details-body\">\n              <p><strong>Confirm:</strong> Max — Age: 1 year — Size: Large — Good with kids: Yes</p>\n              <p>\n                Max does best with families who like training games and daily exercise, and he can be a great match for kids who enjoy helping with routines like practicing basic cues, going on walks, and playing structured fetch.\n              </p>\n            </div>\n          </details>\n          <button class=\"adopt\" type=\"button\" aria-label=\"Adopt Max\">Adopt</button>\n        </div>\n      </article>\n\n      <!-- 6 -->\n      <article class=\"pet-card\" aria-label=\"Pet card: Chloe\">\n        <img src=\"assets/adopt-cat-3.jpg\" alt=\"Chloe the cat\" />\n        <h3>Chloe</h3>\n\n        <p class=\"meta\">Age: <span class=\"value\">5 years</span></p>\n        <p class=\"meta\"><span class=\"label\">Size</span>: <span class=\"value\">Small</span></p>\n        <p class=\"meta\">Good with kids: <span class=\"value\">Yes</span></p>\n\n        <p class=\"desc\">\n          Chloe is affectionate and talkative and enjoys interactive play and will happily keep you company throughout the day, she bonds closely with her person and loves attention and will remind you that it is time to focus on her by politely speaking up, and because she likes engagement she enjoys routines that include play, brushing, and a place to sit where she can watch what you are doing and comment on it.\n        </p>\n\n        <div class=\"actions\" aria-label=\"Actions for Chloe\">\n          <details class=\"details\">\n            <summary>Details</summary>\n            <div class=\"details-body\">\n              <p><strong>Confirm:</strong> Chloe — Age: 5 years — Size: Small — Good with kids: Yes</p>\n              <p>\n                Chloe is social and does well with kids who enjoy gentle interaction and can respect when she steps away, and she tends to thrive when there are predictable daily moments for play and attention.\n              </p>\n            </div>\n          </details>\n          <button class=\"adopt\" type=\"button\" aria-label=\"Adopt Chloe\">Adopt</button>\n        </div>\n      </article>\n\n      <!-- 7 -->\n      <article class=\"pet-card\" aria-label=\"Pet card: Poppy\">\n        <img src=\"assets/dog4-adoption.jpg\" alt=\"Poppy the dog\" />\n        <h3>Poppy</h3>\n\n        <p class=\"meta\">Age: <span class=\"value\">10 months</span></p>\n        <p class=\"meta\"><span class=\"label\">Size</span>: <span class=\"value\">Small</span></p>\n        <p class=\"meta\">Good with kids: <span class=\"value\">Yes</span></p>\n\n        <p class=\"desc\">\n          Poppy is bright and bouncy and loves sniffing every single thing on a walk, she enjoys learning tricks, chasing soft toys, and then curling up the moment she decides the fun is over, and because she is small she fits nicely into apartments as long as she gets daily play and a chance to explore, and she tends to greet new people with a wag and a quick little hop that makes everyone laugh.\n        </p>\n\n        <div class=\"actions\" aria-label=\"Actions for Poppy\">\n          <details class=\"details\">\n            <summary>Details</summary>\n            <div class=\"details-body\">\n              <p><strong>Confirm:</strong> Poppy — Age: 10 months — Size: Small — Good with kids: Yes</p>\n              <p>\n                Poppy is a great match for families who want a small, young pet and who can offer gentle play and short training sessions, and she does best with kids who understand that even small dogs need calm handling and breaks.\n              </p>\n            </div>\n          </details>\n          <button class=\"adopt\" type=\"button\" aria-label=\"Adopt Poppy\">Adopt</button>\n        </div>\n      </article>\n\n      <!-- 8 -->\n      <article class=\"pet-card\" aria-label=\"Pet card: Duke\">\n        <img src=\"assets/dog5-adoption.jpg\" alt=\"Duke the dog\" />\n        <h3>Duke</h3>\n\n        <p class=\"meta\">Age: <span class=\"value\">7 years</span></p>\n        <p class=\"meta\"><span class=\"label\">Size</span>: <span class=\"value\">Medium</span></p>\n        <p class=\"meta\">Good with kids: <span class=\"value\">Yes</span></p>\n\n        <p class=\"desc\">\n          Duke is steady and sweet and enjoys routine more than surprises, he likes slow walks, comfortable naps, and being near people without needing to be the center of attention every second, and he is the kind of dog who will quietly sit next to you while you do homework or watch a movie and then follow you to the kitchen just in case something interesting happens, and he responds well to calm voices and predictable schedules.\n        </p>\n\n        <div class=\"actions\" aria-label=\"Actions for Duke\">\n          <details class=\"details\">\n            <summary>Details</summary>\n            <div class=\"details-body\">\n              <p><strong>Confirm:</strong> Duke — Age: 7 years — Size: Medium — Good with kids: Yes</p>\n              <p>\n                Duke is a good fit for families who want a calmer companion and can offer a stable home, and he tends to do well with kids who like a gentle dog that enjoys relaxed play and quiet time.\n              </p>\n            </div>\n          </details>\n          <button class=\"adopt\" type=\"button\" aria-label=\"Adopt Duke\">Adopt</button>\n        </div>\n      </article>\n\n      <!-- 9 -->\n      <article class=\"pet-card\" aria-label=\"Pet card: Nori\">\n        <img src=\"assets/dog6-adoption.jpg\" alt=\"Nori the dog\" />\n        <h3>Nori</h3>\n\n        <p class=\"meta\">Age: <span class=\"value\">18 months</span></p>\n        <p class=\"meta\"><span class=\"label\">Size</span>: <span class=\"value\">Medium</span></p>\n        <p class=\"meta\">Good with kids: <span class=\"value\">No</span></p>\n\n        <p class=\"desc\">\n          Nori is sensitive and prefers a quieter environment and can be cautious in busy spaces, she enjoys gentle routines, sniffy walks, and having a safe spot where she can relax, and she does best when people move slowly and give her time to warm up, and while she bonds strongly once she trusts you she can get overwhelmed by sudden noises and quick movement which is why she would prefer an adult household or a home with older teens.\n        </p>\n\n        <div class=\"actions\" aria-label=\"Actions for Nori\">\n          <details class=\"details\">\n            <summary>Details</summary>\n            <div class=\"details-body\">\n              <p><strong>Confirm:</strong> Nori — Age: 18 months — Size: Medium — Good with kids: No</p>\n              <p>\n                Nori thrives with patient handling and calm spaces, and she would love a home that values a gentle approach, slow introductions, and predictable daily rhythms that help her feel secure.\n              </p>\n            </div>\n          </details>\n          <button class=\"adopt\" type=\"button\" aria-label=\"Adopt Nori\">Adopt</button>\n        </div>\n      </article>\n    </main>\n\n    <!-- Navigation -->\n    <nav aria-label=\"Bottom navigation\">\n      <a href=\"#\">\n        <img src=\"assets/home.png\" alt=\"Home icon\" />\n        <div>Home</div>\n      </a>\n      <a href=\"#\">\n        <img src=\"assets/dogs.png\" alt=\"Dogs icon\" />\n        <div>Dogs</div>\n      </a>\n      <a href=\"#\">\n        <img src=\"assets/cats.png\" alt=\"Cats icon\" />\n        <div>Cats</div>\n      </a>\n      <a href=\"#\">\n        <img src=\"assets/small-pets.png\" alt=\"Small pets icon\" />\n        <div>Small Pets</div>\n      </a>\n      <a class=\"nav-back\" href=\"#\">\n        <img src=\"assets/back.png\" alt=\"Back icon\" />\n        <div>Back</div>\n      </a>\n    </nav>\n\n    <!-- Footer -->\n    <footer id=\"contact\" aria-label=\"Contact\">\n      <p>PawPrint Shelter</p>\n      <p>123 Rescue Lane</p>\n      <p>Open 7 Days a Week</p>\n      <p>Email: adopt@pawprint.org</p>\n    </footer>\n\n  </div>\n</body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "back.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX-2025/uuid/09491530-0ed9-42c0-98a7-3c936b2a3c4d.png",
+          "type": "starter",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "dogs.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX-2025/uuid/6d38837c-ab18-42ac-8726-ed66dc82850d.png",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "cats.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX-2025/uuid/c32d3773-54b2-48e6-9915-363e4ce339a8.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "contact.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX-2025/uuid/463dfe93-8829-4050-8501-a152a16d683e.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "home.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX-2025/uuid/89763957-9eba-4b9b-8bbc-8f14f033fa46.png",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "logo.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX-2025/uuid/3c332b20-c0d4-40d2-bac3-b0f36e9ca674.png",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "dog1.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX-2025/uuid/7a48461f-6435-42c2-8f71-aa29c5434639.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "adopt-cat-1.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX-2025/uuid/8d42a77f-d473-46cb-96a1-fc2a6dc61d7d.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "11": {
+          "id": "11",
+          "name": "hero-dog.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX-2025/uuid/8f326ffd-a951-434b-9b48-590b6dd949ef.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "13": {
+          "id": "13",
+          "name": "dog6-adoption.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX-2025/uuid/418d93c0-a406-410d-9efc-0ee7f3a03726.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "14": {
+          "id": "14",
+          "name": "adopt-dog-1.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX-2025/uuid/58958465-3e64-418d-90f9-3ccbe40598b4.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "19": {
+          "id": "19",
+          "name": "styles.css",
+          "contents": "/* styles.css — LEVEL 1 (Bad UX only)\n   Goal: frustrating due to VISUAL/UI issues only (no missing info, no logic tricks)\n\n   Intentional friction:\n   - Tiny text + tight line spacing\n   - Low contrast metadata + weak hierarchy\n   - Dense cards with minimal spacing\n   - Buttons tiny + too close together\n   - Bottom nav overlaps content slightly + low contrast\n*/\n\n/* ================= */\n/* Bad UX Theme Defaults */\n/* ================= */\n:root{\n  --bg:#f6f6f6;\n  --text:#cfcfcf;\n  --muted:#d7d7d7;\n  --border:#efefef;\n  --card:#f7f7f7;\n\n  --btn-bg:#e9e9e9;\n  --btn-text:#d8d8d8;\n  --btn-border:#ededed;\n\n  --base:12px;\n  --lh:1.05;\n\n  --gap:2px;              /* minimal spacing between cards */\n  --card-pad:6px;         /* cramped padding */\n  --card-text:10px;       /* very small baseline */\n  --card-lh:1.05;         /* tight lines */\n\n  --nav-font:9px;\n  --nav-icon:16px;\n  --nav-height:34px;      /* small nav */\n}\n\n*{ box-sizing:border-box; }\n\nbody{\n  margin:0;\n  background:#fff;\n}\n\n/* ======================= */\n/* APP WRAPPER (Bad UX scoped) */\n/* ======================= */\n.app{\n  background:var(--bg);\n  color:var(--text);\n  font-family:\"Times New Roman\", Times, serif;\n  font-size:var(--base);\n  line-height:var(--lh);\n  min-height:100vh;\n}\n\n/* =============== */\n/* Header (cramped) */\n/* =============== */\n.app header{\n  display:flex;\n  justify-content:space-between;\n  align-items:center;\n  padding:6px 6px 2px 6px;\n  border-bottom:1px solid var(--border);\n  background:transparent;\n}\n\n.app .brand{\n  display:flex;\n  align-items:center;\n}\n\n.app header img{\n  width:28px;\n  height:28px;\n}\n\n.app header span{\n  font-size:12px;\n  font-weight:400;\n  margin-left:4px;\n}\n\n.app header a{\n  color:var(--muted);\n  text-decoration:none;\n  font-size:10px;\n}\n\n/* ===== */\n/* Hero  */\n/* ===== */\n.app section{\n  padding:8px;\n}\n\n.app section img{\n  width:100%;\n  height:auto;\n  display:block;\n  border:1px solid var(--border);\n}\n\n/* Make hero text hard to read on top of the image */\n.app .hero{\n  position:relative;\n  padding:0;\n}\n\n.app .hero img{\n  height:280px;\n  object-fit:cover;\n  filter:contrast(0.9) brightness(1.05);\n}\n\n.app .hero .hero-copy{\n  position:absolute;\n  top:18px;\n  left:10px;\n  max-width:280px;\n  padding:6px 8px;\n  background:rgba(255,255,255,0.25);\n  border:1px solid rgba(255,255,255,0.25);\n}\n\n.app .hero h1{\n  margin:6px 0 4px 0;\n  font-size:16px;\n  font-weight:400;\n}\n\n.app .hero p{\n  margin:0;\n  font-size:12px;\n  color:var(--muted);\n}\n\n/* ========= */\n/* Pet Grid  */\n/* ========= */\n.app main{\n  padding:8px;\n\n  /* Intentionally NOT enough padding for the fixed nav:\n     nav overlaps content slightly (visual-only friction). */\n  padding-bottom:22px;\n\n  display:grid;\n  grid-template-columns:repeat(3, 1fr);\n  gap:var(--gap);\n}\n\n.app article{\n  background:var(--card);\n  border:1px solid var(--border);\n  padding:var(--card-pad);\n}\n\n/* Dense, slightly overwhelming photos */\n.app article img{\n  width:100%;\n  height:160px;\n  object-fit:cover;\n  border:1px solid var(--border);\n}\n\n/* Weak / inconsistent hierarchy */\n.app article h3{\n  margin:6px 0 2px 0;\n  font-size: calc(var(--card-text) + 2px);\n  font-weight:400;\n}\n\n/* Random bolding to break consistency (intentional) */\n.app article:nth-child(2) h3,\n.app article:nth-child(6) .meta .value,\n.app article:nth-child(7) .meta .label{\n  font-weight:700;\n}\n\n.app .meta,\n.app .desc{\n  margin:0 0 4px 0;\n  font-size:var(--card-text);\n  line-height:var(--card-lh);\n  color:var(--muted);\n}\n\n/* Make labels and values feel equally “flat” (hard to scan) */\n.app .meta .label{\n  color:var(--muted);\n  font-weight:400;\n}\n.app .meta .value{\n  color:var(--muted);\n  font-weight:400;\n}\n\n/* Dense description blocks — unbroken and hard to scan */\n.app .desc{\n  margin-top:2px;\n}\n\n/* Actions: tiny, close together */\n.app .actions{\n  display:flex;\n  align-items:flex-start;\n  gap:2px; /* too close */\n  margin-top:2px;\n}\n\n/* DETAILS control styled to be annoying */\n.app details{\n  border:1px solid var(--btn-border);\n  background:var(--btn-bg);\n  color:var(--btn-text);\n  padding:1px 2px;  /* tiny tap target */\n  font-size:10px;\n  line-height:1.0;\n  width:auto;\n}\n\n.app summary{\n  cursor:pointer;\n  list-style:none; /* removes marker in some browsers */\n  padding:2px 3px; /* tiny */\n}\n.app summary::-webkit-details-marker{ display:none; }\n\n/* Details content: still low contrast and dense */\n.app .details-body{\n  padding:2px 3px;\n  border-top:1px solid var(--btn-border);\n}\n\n.app .details-body p{\n  margin:0 0 4px 0;\n  font-size:10px;\n  line-height:1.05;\n  color:var(--muted);\n}\n\n/* Adopt button intentionally tiny */\n.app button.adopt{\n  border:1px solid var(--btn-border);\n  background:var(--btn-bg);\n  color:var(--btn-text);\n  font-size:10px;\n  padding:2px 3px; /* tiny */\n  cursor:pointer;\n}\n\n.app button.adopt:active{\n  transform:translateY(1px);\n}\n\n/* ======= */\n/* Footer  */\n/* ======= */\n.app footer{\n  padding:10px 8px;\n  border-top:1px solid var(--border);\n  color:var(--muted);\n  font-size:11px;\n}\n\n/* ======================= */\n/* NAV (bottom-fixed, small, low contrast, overlaps) */\n/* ======================= */\n.app nav{\n  height:var(--nav-height);\n  background:rgba(242,242,242,0.65);  /* low contrast */\n  border-top:1px solid var(--border);\n\n  display:flex;\n  justify-content:space-around;\n  align-items:center;\n\n  padding:0 2px;\n\n  position:fixed;\n  left:0;\n  right:0;\n  bottom:0;\n  z-index:10;\n}\n\n.app nav a{\n  width:46px; /* small tap target */\n  text-align:center;\n  text-decoration:none;\n  color:var(--text);\n  font-size:var(--nav-font);\n  line-height:1.0;\n}\n\n.app nav img{\n  width:var(--nav-icon);\n  height:var(--nav-icon);\n  display:block;\n  margin:0 auto 1px auto;\n  opacity:0.55;\n}\n\n/* ======================= */\n/* Responsive: still frustrating but not “broken” */\n/* ======================= */\n@media (max-width: 900px){\n  .app main{\n    grid-template-columns:repeat(2, 1fr);\n  }\n}\n@media (max-width: 520px){\n  .app main{\n    grid-template-columns:1fr; /* still long scroll, but readable enough to complete */\n  }\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "20": {
+          "id": "20",
+          "name": "small-pets.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/test-badUX-2025/uuid/8a9b7821-f318-402c-994e-cb4f3424d7c3.png",
+          "type": "starter",
+          "active": false
+        },
+        "21": {
+          "id": "21",
+          "name": "dog2-adoption.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson2-level1_2025-v2/uuid/db4ba1bc-90b3-466d-8142-60e247a17123.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "22": {
+          "id": "22",
+          "name": "adopt-dog-3.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson2-level1_2025-v2/uuid/6d989cf0-0cad-4d6a-bd4c-c1a3178d67ad.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "23": {
+          "id": "23",
+          "name": "adopt-dog-2.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson2-level1_2025-v2/uuid/87ffa363-2983-470e-8b27-86c20453648a.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "24": {
+          "id": "24",
+          "name": "dog1-adoption.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson2-level1_2025-v2/uuid/ff63e17e-6e36-496e-a7d1-0e1d422d3cb6.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "25": {
+          "id": "25",
+          "name": "dog4-adoption.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson2-level1_2025-v2/uuid/c5a834dc-c3ba-44de-a2cd-d9d9b2ffbbce.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "26": {
+          "id": "26",
+          "name": "dog5-adoption.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson2-level1_2025-v2/uuid/b60f20ae-7401-4a5b-89bb-aa428fb26100.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "27": {
+          "id": "27",
+          "name": "adopt-cat-3.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson2-level1_2025-v2/uuid/07db9edd-812c-45ff-ba6a-86ed4e1fc862.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "28": {
+          "id": "28",
+          "name": "adopt-cat-2.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson2-level1_2025-v2/uuid/059f5239-0ce0-4cee-923b-c7a7d156bd1a.jpg",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "8",
+        "9",
+        "10",
+        "11",
+        "13",
+        "14",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28"
+      ]
+    },
+    "long_instructions": "# Do This:\r\nComplete this task from your persona’s perspective.\r\n\r\nAs you work, notice what feels frustrating or harder than it should.\r\n\r\n### Task\r\n\r\nFind one **dog** that is:\r\n\r\n- Under 2 years old  \r\n- Good with kids  \r\n- Small  \r\n\r\nOpen **Details** to confirm.  \r\nClick **Adopt**.\r\n\r\nWhen you’re done, move to the critique guide."
+  },
+  "audit_log": "[{\"changed_at\":\"2026-02-28T22:28:35.073+00:00\",\"changed\":[\"cloned from \\\"test-badUX-2025\\\"\"],\"cloned_from\":\"test-badUX-2025\"},{\"changed_at\":\"2026-02-28 22:29:14 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-28 22:29:28 +0000\",\"changed\":[\"initial_view_mode\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-28 22:30:24 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-28 22:33:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-28 22:38:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-28 22:39:13 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-28 22:43:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-28 22:45:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-28 22:46:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-28 22:46:31 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-28 22:50:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-28 22:51:59 +0000\",\"changed\":[\"widget_view\",\"initial_view_mode\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-28 22:53:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>
