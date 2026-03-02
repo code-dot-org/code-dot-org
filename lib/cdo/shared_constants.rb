@@ -1099,7 +1099,8 @@ module SharedConstants
   ].freeze
 
   ALLOWED_IMAGE_HOSTNAME_SUFFIXES = [
-    'picsum.photos' # Placeholder images - Public API
+    'picsum.photos', # Placeholder images - Public API
+    'images.code.org' # Code.org hosted images - Public API
   ].freeze
 
   ALLOWED_FONT_HOSTNAMES = [
