@@ -41,7 +41,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     AiTutorResponseView,
     hiddenContextCallback,
     startSources,
-    aiTutorSystemPromptName,
+    aiTutorSystemPrompt,
     aiTutorMultimodalEnabled,
     aiTutorChatButtonData,
     aiTutorResponseSchemaSettings,
@@ -150,12 +150,12 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
         requireRun={appName === 'pythonlab'}
         hiddenContextCallback={hiddenContextCallback}
         settings={settings}
+        aiTutorSystemPrompt={aiTutorSystemPrompt}
         versionHistoryProps={{startSources}}
         aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
         aiTutorChatButtonData={aiTutorChatButtonData}
         isValidationTourEnabled={appName === 'pythonlab'}
         isOnboardingTourEnabled={true}
-        aiTutorSystemPromptName={aiTutorSystemPromptName}
         aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
         documentationUrl={
           appName === 'pythonlab' ? '/docs/ide/pythonlab' : undefined // For now, only python lab supports documentation.

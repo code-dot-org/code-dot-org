@@ -3,7 +3,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
-import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import locale from '@cdo/locale';
 
@@ -225,13 +224,9 @@ class RosterDialog extends React.Component {
   recordSectionSetupExitEvent = eventName => {
     const {rosterProvider} = this.props;
 
-    analyticsReporter.sendEvent(
-      eventName,
-      {
-        oauthSource: rosterProvider,
-      },
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(eventName, {
+      oauthSource: rosterProvider,
+    });
   };
 
   render() {

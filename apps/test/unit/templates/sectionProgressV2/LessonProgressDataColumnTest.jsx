@@ -13,10 +13,10 @@ import {
   fakeLessonWithLevels,
   fakeLesson,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
+import LessonProgressDataColumn from '@cdo/apps/templates/sectionProgressV2/LessonProgressDataColumn.jsx';
 import sectionProgress, {
   addDataByUnit,
-} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import LessonProgressDataColumn from '@cdo/apps/templates/sectionProgressV2/LessonProgressDataColumn.jsx';
+} from '@cdo/apps/templates/sectionProgressV2/sectionProgressRedux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const STUDENT_1 = {id: 1, name: 'Student 1', familyName: 'FamNameB'};

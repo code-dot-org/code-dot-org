@@ -2,7 +2,7 @@ import React from 'react';
 import {Provider} from 'react-redux';
 
 import {showShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
@@ -44,15 +44,11 @@ export function shareLab2Project(dialogId, finishUrl) {
 
     getStore().dispatch(showShareDialog());
     const projectType = projectManager.getProjectType();
-    analyticsReporter.sendEvent(
-      EVENTS.SHARING_DIALOG_OPEN,
-      {
-        lab_type: projectType,
-        channel_id: projectManager.getChannelId(),
-        dialog_id: dialogId,
-      },
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.SHARING_DIALOG_OPEN, {
+      lab_type: projectType,
+      channel_id: projectManager.getChannelId(),
+      dialog_id: dialogId,
+    });
     trackEvent('share', 'share_open_dialog', {
       value:
         dialogId === 'hoc2024'

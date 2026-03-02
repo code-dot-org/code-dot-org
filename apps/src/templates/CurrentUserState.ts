@@ -1,4 +1,6 @@
 /** TODO: Merge these with currentUserRedux when it has been updated to TypeScript/redux-toolkit **/
+import {AiChatAccessLevel} from '@cdo/apps/aichat/types/accessControls';
+
 import {AudioSummaryTranscriptLine} from './teacherNavigation/lessonMaterials/LessonMaterialTypes';
 
 enum CourseRole {
@@ -41,5 +43,5 @@ export interface CurrentUserState {
   hasSeenHomepageWelcome: boolean;
   inUSA: boolean;
   isLevelbuilder: boolean;
-  aiTutorEnabledForPilot: boolean;
+  aiChatAccessLevel: AiChatAccessLevel;
 }

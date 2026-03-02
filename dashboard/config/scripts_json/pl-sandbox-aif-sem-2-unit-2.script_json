@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-02-20 16:02:03 UTC",
+    "serialized_at": "2026-02-27 17:30:06 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -217,31 +217,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "pl_sandbox_aif-2-U2-Instructional-commitments_3"
-        ],
-        "progression": "Introduction"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "pl_sandbox_aif-2-U2-Instructional-commitments_3"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-sandbox-aif-sem-2-unit-2",
-        "activity_section.key": "7a613a47-0f5d-4b63-bcc4-ba616199c0db"
-      },
-      "level_keys": [
-        "pl_sandbox_aif-2-U2-Instructional-commitments_3"
-      ]
-    },
-    {
-      "chapter": 5,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "pl_sandbox_aif_2_U2-projectOverview_5"
         ],
         "progression": "Introduction"
@@ -261,9 +236,9 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 6,
-      "activity_section_position": 6,
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -286,8 +261,8 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 7,
+      "chapter": 6,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -311,8 +286,8 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 8,
+      "chapter": 7,
+      "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -336,8 +311,8 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 9,
+      "chapter": 8,
+      "position": 8,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -361,8 +336,8 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 10,
+      "chapter": 9,
+      "position": 9,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -386,8 +361,8 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 11,
+      "chapter": 10,
+      "position": 10,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -411,8 +386,8 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 12,
+      "chapter": 11,
+      "position": 11,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
@@ -436,8 +411,8 @@
       ]
     },
     {
-      "chapter": 13,
-      "position": 13,
+      "chapter": 12,
+      "position": 12,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -461,9 +436,31 @@
       ]
     },
     {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Variables in JavaScript"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U2-variable-debugging-video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-2",
+        "activity_section.key": "da9cdaba-18ce-43a7-aec3-86729af614e5"
+      },
+      "level_keys": [
+        "pl-aif-2-U2-variable-debugging-video"
+      ]
+    },
+    {
       "chapter": 14,
       "position": 14,
-      "activity_section_position": 2,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -516,15 +513,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "pl-sandbox-aif2-u2-identify-functions-15"
-        ],
         "progression": "Functions in JavaScript"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "pl-sandbox-aif2-u2-identify-functions-15"
+          "pl-aif-2-U2-functions-panel"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -532,7 +526,7 @@
         "activity_section.key": "fac4da79-8679-42d5-ac3c-39b5d9d69a16"
       },
       "level_keys": [
-        "pl-sandbox-aif2-u2-identify-functions-15"
+        "pl-aif-2-U2-functions-panel"
       ]
     },
     {
@@ -1025,18 +1019,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl_sandbox_aif-2-U2-Instructional-commitments_3",
-        "script_level.level_keys": [
-          "pl_sandbox_aif-2-U2-Instructional-commitments_3"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-sandbox-aif-sem-2-unit-2",
-        "activity_section.key": "7a613a47-0f5d-4b63-bcc4-ba616199c0db"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "pl_sandbox_aif_2_U2-projectOverview_5",
         "script_level.level_keys": [
           "pl_sandbox_aif_2_U2-projectOverview_5"
@@ -1145,6 +1127,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "pl-aif-2-U2-variable-debugging-video",
+        "script_level.level_keys": [
+          "pl-aif-2-U2-variable-debugging-video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-2",
+        "activity_section.key": "da9cdaba-18ce-43a7-aec3-86729af614e5"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "pl-sandbox-aif2-u2-debug-variable-lab-13",
         "script_level.level_keys": [
           "pl-sandbox-aif2-u2-debug-variable-lab-13"
@@ -1169,9 +1163,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-sandbox-aif2-u2-identify-functions-15",
+        "level.key": "pl-aif-2-U2-functions-panel",
         "script_level.level_keys": [
-          "pl-sandbox-aif2-u2-identify-functions-15"
+          "pl-aif-2-U2-functions-panel"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
