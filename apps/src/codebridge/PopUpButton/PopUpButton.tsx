@@ -52,27 +52,6 @@ export const PopUpButton = ({
   // rendered in a portal, outside of the main lab container.
   const {theme} = useTheme();
 
-  // Listen for close events from other dropdowns
-  useEffect(() => {
-    const handleCloseOthers = (e: Event) => {
-      const customEvent = e as CustomEvent<{sourceId: string}>;
-      if (customEvent.detail.sourceId !== instanceId.current) {
-        // Defer state update to avoid updating during render
-        const timeoutId = setTimeout(() => {
-          setIsOpen(false);
-          timeoutsRef.current.delete(timeoutId);
-        }, 0);
-        timeoutsRef.current.add(timeoutId);
-      }
-    };
-    document.addEventListener(CLOSE_OTHER_DROPDOWNS_EVENT, handleCloseOthers);
-    return () =>
-      document.removeEventListener(
-        CLOSE_OTHER_DROPDOWNS_EVENT,
-        handleCloseOthers
-      );
-  }, []);
-
   // Handler to close the dropdown.
   const setIsOpenFalse = useCallback(() => {
     setIsOpen(false);
@@ -87,7 +66,28 @@ export const PopUpButton = ({
       timeoutsRef.current.delete(timeoutId);
     }, 0);
     timeoutsRef.current.add(timeoutId);
-  }, [setIsOpen, className]);
+  }, [className]);
+
+  // Listen for close events from other dropdowns
+  useEffect(() => {
+    const handleCloseOthers = (e: Event) => {
+      const customEvent = e as CustomEvent<{sourceId: string}>;
+      if (customEvent.detail.sourceId !== instanceId.current) {
+        // Defer state update to avoid updating during render
+        const timeoutId = setTimeout(() => {
+          setIsOpenFalse();
+          timeoutsRef.current.delete(timeoutId);
+        }, 0);
+        timeoutsRef.current.add(timeoutId);
+      }
+    };
+    document.addEventListener(CLOSE_OTHER_DROPDOWNS_EVENT, handleCloseOthers);
+    return () =>
+      document.removeEventListener(
+        CLOSE_OTHER_DROPDOWNS_EVENT,
+        handleCloseOthers
+      );
+  }, [setIsOpenFalse]);
 
   // Handler to show the dropdown.
   const clickHandler = useCallback(
@@ -99,30 +99,28 @@ export const PopUpButton = ({
       e.stopPropagation();
       setUpdatedStyles(false);
       setButtonRef(e.target as HTMLElement);
-      setIsOpen(oldIsOpen => {
-        const newIsOpen = !oldIsOpen;
-        if (newIsOpen) {
-          // Tell other dropdowns to close
-          document.dispatchEvent(
-            new CustomEvent(CLOSE_OTHER_DROPDOWNS_EVENT, {
-              detail: {sourceId: instanceId.current},
-            })
-          );
+      if (isOpen) {
+        document.removeEventListener('click', setIsOpenFalse);
+        setIsOpenFalse();
+      } else {
+        // Tell other dropdowns to close
+        document.dispatchEvent(
+          new CustomEvent(CLOSE_OTHER_DROPDOWNS_EVENT, {
+            detail: {sourceId: instanceId.current},
+          })
+        );
 
-          // Defer adding the close handler until the next tick of the event
-          // loop, otherwise it'll fire immediately and re-close the pop up.
-          const timeoutId = setTimeout(() => {
-            document.addEventListener('click', setIsOpenFalse);
-            timeoutsRef.current.delete(timeoutId);
-          }, 0);
-          timeoutsRef.current.add(timeoutId);
-        } else {
-          document.removeEventListener('click', setIsOpenFalse);
-        }
-        return newIsOpen;
-      });
+        // Defer adding the close handler until the next tick of the event
+        // loop, otherwise it'll fire immediately and re-close the pop up.
+        const timeoutId = setTimeout(() => {
+          document.addEventListener('click', setIsOpenFalse);
+          timeoutsRef.current.delete(timeoutId);
+        }, 0);
+        timeoutsRef.current.add(timeoutId);
+        setIsOpen(true);
+      }
     },
-    [setIsOpenFalse]
+    [isOpen, setIsOpenFalse]
   );
 
   // Effect to update dropdown position when it is shown.
