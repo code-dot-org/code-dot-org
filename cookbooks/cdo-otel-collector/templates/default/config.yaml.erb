@@ -5,7 +5,7 @@ receivers:
         endpoint: 127.0.0.1:4318
       grpc:
         endpoint: 127.0.0.1:4317
-  # The hostmetrics receiver is required to get correct infrastructure metrics in Datadog.
+  # The hostmetrics receiver is required to get correct infrastructure metrics.
   hostmetrics:
     collection_interval: 10s
     scrapers:
@@ -47,26 +47,25 @@ processors:
     send_batch_size: 10
     timeout: 10s
 
-connectors:
-  datadog/connector:
-
 exporters:
-  datadog/exporter:
-    api:
-      site: us5.datadoghq.com
-      key: 
+  otlphttp/sentry:
+    endpoint: https://o4510795595317248.ingest.us.sentry.io/api/4510976102629376/integration/otlp
+    headers:
+      x-sentry-auth: "sentry sentry_key=<%= @sentry_api_key %>"
+    compression: gzip
+    encoding: proto
 
 service:
   pipelines:
     metrics:
-      receivers: [hostmetrics, prometheus, otlp, datadog/connector]
+      receivers: [hostmetrics, prometheus, otlp]
       processors: [batch]
-      exporters: [datadog/exporter]
+      exporters: [otlphttp/sentry]
     traces:
       receivers: [otlp]
       processors: [batch]
-      exporters: [datadog/connector, datadog/exporter]
+      exporters: [otlphttp/sentry]
     logs:
       receivers: [otlp]
       processors: [batch]
-      exporters: [datadog/exporter]
+      exporters: [otlphttp/sentry]
