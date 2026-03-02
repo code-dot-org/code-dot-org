@@ -28,7 +28,7 @@ import {
 } from '@cdo/generated-scripts/sharedConstants';
 
 import {postAichatCompletionMessage} from '../../aichatApi';
-import {performChatCompletionClientApi} from '../../api/performChatCompletionClientApi';
+import {performClientApiChatCompletion} from '../../api/performClientApiChatCompletion';
 import {logChatEvent} from '../../helpers/logChatEvent';
 import {formatUserAddedSelectionContextForPrompt} from '../../helpers/userAddedSelectionContextFormatter';
 import {
@@ -196,7 +196,7 @@ export const submitChatContents = createAsyncThunk(
           );
         }
 
-        messages = await performChatCompletionClientApi(
+        messages = await performClientApiChatCompletion(
           newUserMessage,
           filteredChatEvents,
           modelParameters,

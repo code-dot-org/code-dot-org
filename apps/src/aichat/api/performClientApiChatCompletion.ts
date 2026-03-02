@@ -12,6 +12,7 @@ import {
   PendingChatMessage,
 } from '../types';
 
+import {getClientApi} from './client';
 import {
   createAichatRequest,
   updateAichatRequest,
@@ -23,7 +24,7 @@ import {
  *
  * @returns an array of {@link CompletedChatMessage}s representing the updated user message and the assistant response.
  */
-export async function performChatCompletionClientApi(
+export async function performClientApiChatCompletion(
   newMessage: PendingChatMessage,
   storedMessages: CompletedChatMessage[],
   modelParameters: ModelParameters,
@@ -40,11 +41,9 @@ export async function performChatCompletionClientApi(
     aichatContext
   );
 
-  const {generateChatResponse} = await import(
-    /* webpackChunkName: "aichat-client-api" */ './client/index.js'
-  );
+  const clientApi = await getClientApi();
 
-  const {response, assets, status} = await generateChatResponse(
+  const {response, assets, status} = await clientApi.generateChatResponse(
     newMessage,
     storedMessages,
     modelParameters,
