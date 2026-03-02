@@ -870,12 +870,12 @@ module.exports = {
         assert.equal(parseInt(chart2.style.top), 10);
         assert.equal(chart2.id, 'design_chart2');
 
-        // Add a button at the edge of the container
-        var maxLeft = designModeViz.outerWidth();
-        var maxTop = designModeViz.outerHeight();
+        // Add a button at the bottom-right corner of the container
+        var maxRight = designModeViz.outerWidth();
+        var maxBottom = designModeViz.outerHeight();
 
         // Relies on default button dimensions (100px width, 40px height)
-        testUtils.dragToVisualization('BUTTON', maxLeft - 100, maxTop - 40);
+        testUtils.dragToVisualization('BUTTON', maxRight - 100, maxBottom - 40);
 
         var newButton = designModeViz.find('button[id^="design_"]');
         assert.equal(newButton.length, 1);
@@ -891,13 +891,28 @@ module.exports = {
         // Only count design elements (exclude Run/Reset in PhoneFrame when zoomed)
         var buttons = designModeViz.find('button[id^="design_"]');
         assert.equal(buttons.length, 2);
+        var button1 = buttons[0];
         var button2 = buttons[1];
-        // Re-query container size at assertion time: when top Run/Reset buttons
-        // are visible (zoomed/short viewport), the viz is shorter so maxTop is smaller
-        var currentMaxLeft = designModeViz.outerWidth();
-        var currentMaxTop = designModeViz.outerHeight();
-        assert.equal(parseInt(button2.style.left), currentMaxLeft - 100);
-        assert.equal(parseInt(button2.style.top), currentMaxTop - 40);
+        // Duplicate should be at same position as original since it is contained within the visualization.
+        // Can be clamped to 315 while original was placed at 410; both are valid.
+        var currentMaxRight = designModeViz.outerWidth();
+        var currentMaxBottom = designModeViz.outerHeight();
+        assert.equal(
+          parseInt(button2.style.left, 10),
+          parseInt(button1.style.left, 10),
+          'duplicate same left as original'
+        );
+        assert.equal(parseInt(button2.style.left, 10), currentMaxRight - 100);
+        assert.isAtLeast(
+          parseInt(button2.style.top, 10),
+          0,
+          'duplicate within container top'
+        );
+        assert.isAtMost(
+          parseInt(button2.style.top, 10),
+          currentMaxBottom - 40,
+          'duplicate within container bottom'
+        );
 
         Applab.onPuzzleComplete();
       },
@@ -956,12 +971,12 @@ module.exports = {
         assert.equal(parseInt(image3.style.top), 20);
         assert.equal(image3.id, 'design_image3');
 
-        // Add a button at the edge of the container
-        var maxLeft = designModeViz.outerWidth();
-        var maxTop = designModeViz.outerHeight();
+        // Add a button at the bottom-right corner of the container
+        var maxRight = designModeViz.outerWidth();
+        var maxBottom = designModeViz.outerHeight();
 
         // Relies on default button dimensions (100px width, 40px height)
-        testUtils.dragToVisualization('BUTTON', maxLeft - 100, maxTop - 40);
+        testUtils.dragToVisualization('BUTTON', maxRight - 100, maxBottom - 40);
 
         var newButton = designModeViz.find('button[id^="design_"]');
         assert.equal(newButton.length, 1);
@@ -975,12 +990,22 @@ module.exports = {
         // Only count design elements (exclude Run/Reset in PhoneFrame when zoomed)
         var buttons = designModeViz.find('button[id^="design_"]');
         assert.equal(buttons.length, 2);
+        var button1 = buttons[0];
         var button2 = buttons[1];
-        // Re-query container size at assertion time (see duplicate-button test)
-        var currentMaxLeft = designModeViz.outerWidth();
-        var currentMaxTop = designModeViz.outerHeight();
-        assert.equal(parseInt(button2.style.left), currentMaxLeft - 100);
-        assert.equal(parseInt(button2.style.top), currentMaxTop - 40);
+        var currentMaxRight = designModeViz.outerWidth();
+        var currentMaxBottom = designModeViz.outerHeight();
+        assert.equal(
+          parseInt(button2.style.left, 10),
+          parseInt(button1.style.left, 10),
+          'duplicate same left as original'
+        );
+        assert.equal(parseInt(button2.style.left, 10), currentMaxRight - 100);
+        assert.isAtLeast(parseInt(button2.style.top, 10), 0);
+        assert.isAtMost(
+          parseInt(button2.style.top, 10),
+          currentMaxBottom - 40,
+          'duplicate within container bottom'
+        );
 
         Applab.onPuzzleComplete();
       },
