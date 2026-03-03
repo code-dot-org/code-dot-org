@@ -1,0 +1,54 @@
+#!/usr/bin/env ruby
+
+require_relative 'only_one'
+require_relative '../../dashboard/config/environment'
+require 'cdo/aws/redshift'
+require 'cdo/chat_client'
+
+NOTIFY_CHANNEL = 'data-alerts'
+ENVIRONMENT_TYPE = CDO.rack_env.to_s
+TARGET_DB = "#{ENVIRONMENT_TYPE}_learningplatform_mysql_zeroetl"
+REDSHIFT_SQL_USER = 'etl_client'
+
+# @param message [String] the (base) error message to log.
+def alert(message)
+  CDO.log.warn message
+  ChatClient.message(NOTIFY_CHANNEL, message, color: 'red') if ENVIRONMENT_TYPE == 'production'
+end
+
+def main
+  redshift = Cdo::Redshift.new(db_user: REDSHIFT_SQL_USER)
+
+  # Check Integration-level status
+  # Expected healthy states are 'Active' or temporarily 'Syncing'
+  integration_query = <<~SQL
+    SELECT integration_id, state, error_message
+    FROM SVV_INTEGRATION
+    WHERE target_database = '#{TARGET_DB}'
+      AND state NOT IN ('Active', 'Syncing');
+  SQL
+
+  integrations = redshift.execute(integration_query)
+  integrations.each do |integration|
+    alert("🚨 *Zero-ETL Integration Alert (#{ENVIRONMENT_TYPE})*\nIntegration `#{integration['integration_id']}` is in state `#{integration['state']}`.\nError: #{integration['error_message']}")
+  end
+
+  # Check Table-level sync status
+  # We specifically look for the 'Failed' state to avoid alerting on tables actively backfilling
+  table_query = <<~SQL
+    SELECT schema_name, table_name, state, error_message, last_refresh_time
+    FROM SVV_INTEGRATION_TABLE_STATE
+    WHERE database_name = '#{TARGET_DB}'
+      AND state = 'Failed';
+  SQL
+
+  tables = redshift.execute(table_query)
+  tables.each do |table|
+    alert("🚨 *Zero-ETL Table Sync Alert (#{ENVIRONMENT_TYPE})*\nTable `#{table['schema_name']}.#{table['table_name']}` failed to sync.\nError: #{table['error_message']}\nLast Refresh: #{table['last_refresh_time']}")
+  end
+rescue => exception
+  alert("💥 *Zero-ETL Monitor Script Failed (#{ENVIRONMENT_TYPE})*\nException: #{exception.message}")
+  raise exception
+end
+
+main
