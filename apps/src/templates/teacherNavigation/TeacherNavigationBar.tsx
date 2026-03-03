@@ -1,6 +1,5 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
-import Tags from '@code-dot-org/component-library/tags';
-import Typography from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import _ from 'lodash';
 import React, {useState, useEffect} from 'react';
 import {
@@ -72,9 +71,10 @@ const TeacherNavigationBar: React.FC<{
   const getSectionHeader = (label: string) => {
     return (
       <Typography
-        semanticTag={'h2'}
-        visualAppearance={'overline-two'}
         className={styles.sectionHeader}
+        component="h2"
+        variant="overline2"
+        gutterBottom
       >
         {label}
       </Typography>
@@ -134,19 +134,14 @@ const TeacherNavigationBar: React.FC<{
     {
       title: coursecontentSectionTitle,
       keys: courseContentKeys,
-      sectionTag: (
-        <Tags tagsList={[{label: 'New'}]} className={styles.sidebarNewTags} />
-      ),
     },
     {
       title: performanceSectionTitle,
       keys: performanceContentKeys,
-      sectionTag: null,
     },
     {
       title: classroomContentSectionTitle,
       keys: classroomContentKeys,
-      sectionTag: null,
     },
   ];
 
@@ -212,7 +207,6 @@ const TeacherNavigationBar: React.FC<{
   const shouldShowErrorIcon = React.useCallback(
     (key: string) => {
       return (
-        experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
         key === TEACHER_NAVIGATION_PATH_NAMES.aiChatSettings &&
         selectedSection?.assignedAiChatToolsDependency ===
           AiChatToolsDependency.ESSENTIAL &&
@@ -243,15 +237,12 @@ const TeacherNavigationBar: React.FC<{
   };
 
   const navbarComponents = teacherNavigationBarContent.map(
-    ({title, keys, sectionTag}, index) => {
+    ({title, keys}, index) => {
       const sidebarOptions = getSidebarOptionsForSection(keys);
 
       return (
         <div key={`section-${index}`}>
-          <div className={styles.sidebarSectionHeader}>
-            {title}
-            {sectionTag}
-          </div>
+          <div className={styles.sidebarSectionHeader}>{title}</div>
           {sidebarOptions}
         </div>
       );
@@ -290,9 +281,10 @@ const TeacherNavigationBar: React.FC<{
     <nav className={styles.sidebarContainer} id="ui-test-teacher-sidebar">
       <div className={styles.sidebarContent}>
         <Typography
-          semanticTag={'h2'}
-          visualAppearance={'overline-two'}
           className={styles.sectionHeader}
+          component="h2"
+          variant="overline2"
+          gutterBottom
         >
           {i18n.classSections()}
         </Typography>

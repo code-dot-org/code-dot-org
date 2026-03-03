@@ -1,57 +1,99 @@
 import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  BodyThreeText,
-  OverlineThreeText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
-import React from 'react';
+import {Typography} from '@mui/material';
+import classNames from 'classnames';
+import React, {useMemo} from 'react';
 
-import parentStyles from './debug-panel.module.scss';
+import CopyButton from './CopyButton';
+
 import moduleStyles from './details-box.module.scss';
+import parentStyles from './network-panel.module.scss';
 
-interface DetailsField {
+export interface DetailsField {
   label: string;
   value?: string | number;
+  copyable?: boolean;
 }
 
 interface DetailsBoxProps {
   title: string;
-  success: boolean;
+  status: 'success' | 'error' | 'pending';
   rows: DetailsField[][];
   errorMessage?: string;
 }
 
 const DetailsBox: React.FunctionComponent<DetailsBoxProps> = ({
   title,
-  success,
+  status,
   rows,
   errorMessage,
 }) => {
+  const {iconName, iconClassName, animationType} = useMemo(() => {
+    switch (status) {
+      case 'success':
+        return {
+          iconName: 'check-circle',
+          iconClassName: parentStyles.successIcon,
+        };
+      case 'error':
+        return {
+          iconName: 'xmark-circle',
+          iconClassName: parentStyles.errorIcon,
+        };
+      case 'pending':
+        return {
+          iconName: 'spinner',
+          iconClassName: parentStyles.loadingIcon,
+          animationType: 'spin' as const,
+        };
+    }
+  }, [status]);
+
   return (
     <div className={moduleStyles.detailsBox}>
       <div className={moduleStyles.detailsHeader}>
-        <BodyThreeText className={moduleStyles.detailsHeaderText}>
-          <StrongText>{title}</StrongText>
-        </BodyThreeText>
+        <Typography className={moduleStyles.detailsHeaderText} variant="body3">
+          <Typography variant="strong">{title}</Typography>
+        </Typography>
         <FontAwesomeV6Icon
-          iconName={success ? 'check-circle' : 'xmark-circle'}
-          className={
-            success ? parentStyles.successIcon : parentStyles.errorIcon
-          }
+          iconName={iconName}
+          className={iconClassName}
+          animationType={animationType}
         />
       </div>
       <div className={moduleStyles.detailsBody}>
         {errorMessage && <Alert text={errorMessage} type="danger" size="xs" />}
         {rows.map((row, rowIndex) => {
           const content = row.map(field => (
-            <div key={field.label} className={moduleStyles.detailsField}>
-              <OverlineThreeText className={moduleStyles.detailsFieldLabel}>
-                {field.label}
-              </OverlineThreeText>
-              <BodyThreeText className={moduleStyles.detailsFieldValue}>
-                {field.value}
-              </BodyThreeText>
+            <div
+              key={field.label}
+              className={classNames(
+                moduleStyles.detailsField,
+                'ui-test-details-field'
+              )}
+            >
+              <div className={moduleStyles.detailsFieldLabelRow}>
+                <Typography
+                  className={moduleStyles.detailsFieldLabel}
+                  variant="overline3"
+                >
+                  {field.label}
+                </Typography>
+                {field.copyable && (
+                  <CopyButton
+                    label={field.label}
+                    value={String(field.value ?? '')}
+                  />
+                )}
+              </div>
+              <pre className={moduleStyles.detailsFieldValueContainer}>
+                <Typography
+                  className={moduleStyles.detailsFieldValue}
+                  variant="body3"
+                >
+                  {field.value}
+                </Typography>
+              </pre>
             </div>
           ));
 

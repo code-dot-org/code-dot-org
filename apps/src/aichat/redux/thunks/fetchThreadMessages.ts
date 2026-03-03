@@ -34,6 +34,7 @@ import {
 import {RootState} from '@cdo/apps/types/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {
+  AiDiffArtifactType,
   AiDiffContext,
   AiInteractionStatus as Status,
 } from '@cdo/generated-scripts/sharedConstants';
@@ -48,6 +49,8 @@ import {
   setInitialThreadPrompt,
   setSelectedPrompt,
   setArtifactType,
+  setArtifact,
+  addThreadMessage,
 } from '../slice';
 
 interface FetchThreadMessagesParams {
@@ -166,6 +169,7 @@ export const fetchThreadMessages = createAsyncThunk(
       thunkAPI.dispatch(setInitialChatMessage(threadType.initialMessage));
       thunkAPI.dispatch(setSelectedPrompt(null));
       thunkAPI.dispatch(setArtifactType(undefined));
+      thunkAPI.dispatch(setArtifact(undefined));
 
       if (initialThreadPrompt) {
         thunkAPI.dispatch(setInitialThreadPrompt(initialThreadPrompt));
@@ -210,6 +214,7 @@ export const fetchThreadMessages = createAsyncThunk(
         thunkAPI.dispatch(setThreadTitle(response.title));
         thunkAPI.dispatch(setThreadKeyId(thread));
         thunkAPI.dispatch(setArtifactType(undefined));
+        thunkAPI.dispatch(setArtifact(response.artifact));
         const thread_messages = response.messages || [];
         if (thread_messages.length > 1) {
           const last_msg = thread_messages[
@@ -223,6 +228,20 @@ export const fetchThreadMessages = createAsyncThunk(
           } else {
             thunkAPI.dispatch(
               setArtifactType(second_last_msg.artifactCandidateType)
+            );
+          }
+          if (response.artifact) {
+            thunkAPI.dispatch(
+              addThreadMessage({
+                role: Role.ASSISTANT,
+                chatMessageText: `I've created an artifact for this ${
+                  response.artifact.type === AiDiffArtifactType.EXIT_TICKET
+                    ? 'exit ticket'
+                    : 'lesson hook'
+                }. Click the button below for a projection view to share with your students.`,
+                status: Status.OK,
+                isArtifact: true,
+              })
             );
           }
         }

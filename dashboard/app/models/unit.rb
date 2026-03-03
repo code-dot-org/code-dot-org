@@ -629,10 +629,6 @@ class Unit < ApplicationRecord
     Unit.where("properties -> '$.curriculum_umbrella' = ?", curriculum_umbrella).pluck(:name)
   end
 
-  def has_standards_associations?
-    curriculum_umbrella == 'CSF' && (get_original_unit_group&.version_year && get_original_unit_group.version_year >= '2019')
-  end
-
   def standards
     standards = lessons.map(&:standards).flatten.uniq
     standards_with_lessons = []
@@ -1310,7 +1306,6 @@ class Unit < ApplicationRecord
         curriculum_umbrella: curriculum_umbrella,
         version_year: unit_group_unit&.cached_unit_group&.version_year,
         assigned_section_id: assigned_section_id,
-        hasStandards: has_standards_associations?,
         tts: tts?,
         deprecated: deprecated?,
         is_migrated: is_migrated?,

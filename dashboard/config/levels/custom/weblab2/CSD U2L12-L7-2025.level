@@ -1,0 +1,223 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-02-21T01:51:52.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "<img src=\"https://images.code.org/c23e6ee57283f815bfe70987365ca8c3-image-1706114255476.png\" style=\"float: right; width: 400px; margin-left: 10px;\">\r\n\r\n# Wonders of the World\r\n\r\nBrodie is making a web page of the ancient and new Wonders of the World. He would like the user to be able to test their knowledge by looking at the gallery of images to guess what each wonder is and then scroll down to the bottom of the page to check the answers and see if they were right. Can you help him make sure the order of the images match the answers?\r\n\r\n# Do This\r\n1. Put all of the images inside a container.\r\n2. Style the container's layout so that the layout of the images matches the order of the answers.\r\n   - _An example of the what layout should look like is provided to the right._\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Flexbox](https://studio.code.org/courses/csd-2024/guides/flexbox)\r\n- [<i class=\"fa-solid fa-book\"></i> Div Tags](https://studio.code.org/courses/csd-2024/guides/div)\r\n- [<i class=\"fa-solid fa-book\"></i> Classes](https://studio.code.org/courses/csd-2024/guides/classes)\r\n- [<i class=\"fa-solid fa-book\"></i> Layout Properties](https://studio.code.org/courses/csd-2024/guides/layout-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Body Styling](https://studio.code.org/courses/csd-2024/guides/body-styling)\r\n- [<i class=\"fa-solid fa-book\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "submittable": "true",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    \n    <!-- Title -->\n    <h1>How Well Do You Know The Wonders Of The World?</h1>\n    \n    <!-- User Instructions -->\n    <p>Take a look through the images below and see how many of them you can name. Scroll to the bottom of the page to see the answers</p>\n    \n    <!-- Image gallery --> <!-- 1) Put all of the images inside a container -->\n\n      <img src=\"acropolis_athens.jpg\" alt=\"Acropolis\">\n      <img src=\"victoria_falls.jpg\" alt=\"Victoria Falls\">\n      <img src=\"angkor_wat.jpg\" alt=\"Angkor Wat\">\n      <img src=\"taj_mahal.jpg\" alt=\"Taj Mahal\">\n      <img src=\"aurora_borealis.jpg\" alt=\"Aurora Borealis\">\n      <img src=\"roman_coliseum.jpg\" alt=\"Coliseum\">\n      <img src=\"chichen_itza.jpg\" alt=\"Chichen Itza\">\n      <img src=\"petra.jpg\" alt=\"Petra\">\n      <img src=\"giza_pyramid.jpg\" alt=\"Pyramid of Giza\">\n      <img src=\"moai_statues.jpg\" alt=\"Moai Statues\">\n      <img src=\"grand_canyon.jpg\" alt=\"Grand Canyon\">\n      <img src=\"machu_picchu.jpg\" alt=\"Machu Picchu\">\n      <img src=\"great_barrier_reef.jpg\" alt=\"Great Barrier Reef\">\n      <img src=\"library_of_celsus.jpg\" alt=\"Library of Celsus\">\n      <img src=\"great_wall_china.jpg\" alt=\"Great Wall of China\"> \n\n    \n   <!-- image citation -->\n    <p class=\"citations\">All images CC0 from free-images.com</p>\n    \n    <!-- Answers -->\n    <div class=\"answers\">\n      <p class=\"answers\">The answers below match the images moving left to right, row by row:</p>\n      <p class=\"answers\">Angkor Wat - Roman Coliseum - Pyramid of Giza - Machu Picchu - Great Wall of China</p>\n      <p class=\"answers\">Victoria Falls - Aurora Borealis -  Petra - Grand Canyon - Library of Celsus</p>\n      <p class=\"answers\">Acropolis - Taj Mahal - Chichen Itza - Moai Statues - Great Barrier Reef</p>\n    </div>\n    \n    \n\n    \n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* background color */\nbody {\n  background: #edfcff;\n}\n\n/* paragraph styling */\np {\n  font-family: sans-serif;\n  font-size: 24px;\n  text-align: center;\n}\n\n/* title style */\nh1 {\n  font-family: sans-serif;\n  font-size: 42px;\n  text-align: center;\n}\n\n/* image border style */\nimg {\n  border-style: solid;\n  border-radius: 10px;\n}\n\n/* height expanded for all divs to help with image layout as well as ensuring user will have to scroll to see the answers */\ndiv {\n  height: 500px;\n}\n\n/* 2) Style the container's layout so that the layout of the images matches the order of the answers */\n/* image container style */\n\n\n\n/* citation style */\n.citations {\n  font-size: 10px;\n  font-style: italic;\n  margin: 50px;\n}\n\n/* answers style */\n.answers {\n  display: flex;\n  flex-direction: column;\n  flex-wrap: nowrap;\n  align-items: center;\n  justify-content: flex-end;\n  font-size: 12px;\n  font-family: monospace;\n  \n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "victoria_falls.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L7-2025/uuid/ddcf69b7-7b4c-4d44-92e0-1a19a80d3d58.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "roman_coliseum.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L7-2025/uuid/8b4225d0-f65a-41c2-8cfa-67dcad28c382.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "taj_mahal.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L7-2025/uuid/d51a8718-8741-4f02-99b7-e7c3709a16ef.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "petra.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L7-2025/uuid/1eaf8a41-2c41-44bc-aea1-afaf8aeebf09.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "library_of_celsus.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L7-2025/uuid/e48007cb-2993-4f6d-80aa-20124003cec5.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "moai_statues.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L7-2025/uuid/fbdbfeef-8050-4485-b1d7-a8d23d9da955.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "great_barrier_reef.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L7-2025/uuid/45887706-9696-4667-8aab-d9fc10fa1dbf.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "grand_canyon.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L7-2025/uuid/4c577701-48ca-4a8c-a851-a8a7300bbc37.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "11": {
+          "id": "11",
+          "name": "machu_picchu.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L7-2025/uuid/4fa88fee-135e-4ead-b2f5-2a850f71fb61.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "12": {
+          "id": "12",
+          "name": "chichen_itza.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L7-2025/uuid/aceb6e1f-a7d6-4eb2-af0f-56e3348bab29.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "13": {
+          "id": "13",
+          "name": "giza_pyramid.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L7-2025/uuid/ae539080-74e6-45e7-a3f1-f9d9909a2545.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "14": {
+          "id": "14",
+          "name": "great_wall_china.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L7-2025/uuid/1edecbbe-89d5-4ac9-9b0c-14d362110711.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "15": {
+          "id": "15",
+          "name": "aurora_borealis.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L7-2025/uuid/6ed80fef-6a93-4b9a-adf1-58635a12ba00.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "16": {
+          "id": "16",
+          "name": "angkor_wat.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L7-2025/uuid/dc48cfce-6391-4a12-b46d-17b862974a9d.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "17": {
+          "id": "17",
+          "name": "acropolis_athens.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L12-L7-2025/uuid/d0c79d59-aad6-4e1d-b252-f4c6e8e4b32b.jpg",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nz5iqxk4FuL7WK6F4nE0QLLLd6mJK3OU5sc2taw==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-21 01:52:29 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-02-21 01:52:48 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

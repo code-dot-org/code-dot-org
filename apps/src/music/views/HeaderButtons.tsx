@@ -1,6 +1,6 @@
 import {Button} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import Typography from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {memo, useCallback, useContext} from 'react';
 import {useSelector} from 'react-redux';
@@ -47,7 +47,7 @@ const CurrentPack: React.FunctionComponent<CurrentPackProps> = ({
           alt=""
         />
       )}
-      <Typography semanticTag="p" visualAppearance="body-four" noMargin>
+      <Typography variant="body4">
         {packFolder.name} &bull; {packFolder.artist}
       </Typography>
     </div>

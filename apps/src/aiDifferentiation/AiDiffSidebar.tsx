@@ -54,7 +54,9 @@ const ThreadItem: React.FC<{
       className={styles.sidebarChatButton}
     >
       <ListItemText
-        primary={chat.title}
+        primary={
+          chat.hasArtifact ? <TitleAndIcon title={chat.title} /> : chat.title
+        }
         secondary={chat.updatedAt.toLocaleString([], {
           dateStyle: 'medium',
           timeStyle: 'short',
@@ -69,6 +71,18 @@ const ThreadItem: React.FC<{
       />
     </ListItemButton>
   </ListItem>
+);
+
+const TitleAndIcon: React.FC<{
+  title: string;
+}> = ({title}) => (
+  <div className={styles.sidebarArtifactIconContainer}>
+    <Typography variant="body3">{title}</Typography>
+    <FontAwesomeV6Icon
+      iconName="shapes"
+      className={styles.artifactThreadIcon}
+    />
+  </div>
 );
 
 const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({

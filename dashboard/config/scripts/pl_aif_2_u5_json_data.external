@@ -1,0 +1,146 @@
+name 'pl-aif-2-U5-JSON-data'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Reading JSON: Finding What the UI Needs
+
+#### When an app shows information on the screen, it usually **doesn’t use every piece of data** it receives.
+
+#### Often, the app gets a *big* response (like JSON from an API) and then **picks only the fields it needs** to display.
+
+---
+
+## Scenario: The App Gets “Too Much” Data
+
+#### Imagine you’re building a simple classroom weather app for teachers.
+
+#### The app should display a small card with:
+- #### a **title**
+- #### a **subtitle**
+- #### **one key stat**
+
+#### But the API returns *way more* than that.
+
+> #### Your job: scan the UI card and the raw JSON below and notice how much data from the API that the app actually used.
+
+<div style="display:flex; gap:16px; flex-wrap:wrap; justify-content:center; margin-top:10px; align-items:stretch;">
+
+  <!-- UI CARD -->
+<div style="background:#ffffff; border:1px solid #ddd; border-radius:12px; padding:14px; width:340px; box-shadow:0 2px 8px rgba(0,0,0,0.08); box-sizing:border-box;">
+    <div style="font-size:14pt; font-weight:bold; margin-bottom:8px;">UI Card (What the user sees)</div>
+<div style="font-size:13pt; color:#555; margin-bottom:12px;">A simple weather snapshot</div>
+
+<div style="background:#f7f7f7; border-radius:10px; padding:12px; margin-bottom:10px;">
+<div style="font-weight:bold; font-size:13pt;">🌤 City Weather</div>
+<div style="font-size:12.5pt; color:#444; margin-top:6px;">Indianapolis, IN</div>
+<div style="font-size:12.5pt; color:#666; margin-top:2px;">Partly Cloudy</div>
+
+<div style="margin-top:10px; background:#ffffff; border:1px solid #ddd; border-radius:10px; padding:10px; font-size:12.5pt;">
+        <strong>Key stat:</strong> 72°F
+      </div>
+    </div>
+
+<div style="font-size:12pt; color:#444;">
+      Notice: the card is small, but the data the app receives might be large.
+</div>
+  </div>
+
+  <!-- JSON BOX -->
+<div style="background:#ffffff; border:1px solid #ddd; border-radius:12px; padding:14px; width:340px; box-shadow:0 2px 8px rgba(0,0,0,0.08); box-sizing:border-box;">
+<div style="font-size:14pt; font-weight:bold; margin-bottom:8px;">Raw JSON (What the app receives)</div>
+ <div style="font-size:13pt; color:#555; margin-bottom:12px;">Unfiltered response from an API</div>
+
+<div style="background:#111; color:#f1f1f1; border-radius:10px; padding:12px; font-size:10.5pt; line-height:1.35; overflow:auto; max-height:260px; white-space:pre;">
+{
+  "location": {
+    "city": "Indianapolis",
+    "state": "IN",
+    "zip": "46204",
+    "latitude": 39.7684,
+    "longitude": -86.1581,
+    "timezone": "America/Indiana/Indianapolis"
+  },
+  "current": {
+    "temperature": 72,
+    "condition": "Partly Cloudy",
+    "feels_like": 74,
+    "humidity": 56,
+    "wind_speed": 8,
+    "wind_direction": "NW",
+    "uv_index": 3
+  },
+  "forecast": [
+    { "day": "Monday", "high": 75, "low": 60, "condition": "Sunny" },
+    { "day": "Tuesday", "high": 70, "low": 58, "condition": "Rain" }
+  ],
+  "data_source": "National Weather Service",
+  "last_updated": "2026-02-25T10:32:00Z"
+}
+</div>
+
+<div style="font-size:12pt; color:#444; margin-top:10px;">
+      This data is structured — but not all of it will be used for this screen.
+</div>
+</div>
+
+</div>
+
+<div style="background-color:#B7E0E5; border-radius:10px; padding:14px; margin:18px auto; max-width:85%; box-sizing:border-box;">
+  <p style="font-size:14pt; margin:0; line-height:130%;">💡 <strong>Key idea:</strong> Apps pick out only the pieces of JSON they need to display in the UI — the rest may be “nice to have” or “extra.”</p>
+</div>
+
+---
+
+## Reflect: What would you pull from the JSON?
+
+#### Take a moment to compare the UI card and the JSON.
+#### 👉 If you were building this app, which **three pieces of information** would you want from this JSON?
+#### 👉 What looks **useful** vs **extra** for *this specific* UI card?
+
+<details style="background-color:#ececec; padding:10px; margin-bottom:10px; border:1px solid transparent; border-radius:8px;">
+<summary style="font-size:1.4em; font-weight:bold;">💡 Check your thinking (click to reveal)</summary>
+
+<div style="margin-top:12px; margin-left:14px; margin-right:14px; margin-bottom:10px; font-size:13pt; line-height:145%;">
+
+<p style="margin-top:0; font-size:14pt;">
+Your answers might include ideas like these:
+</p>
+
+<ul>
+  <li style="font-size:14pt;">
+    <strong>Match the UI card first.</strong><br>
+    The card shows a location name, a condition, and one number. So you’d likely grab:
+    <ul>
+      <li style="font-size:14pt;"><code style="font-size:12pt;">location.city</code></li>
+      <li style="font-size:14pt;"><code style="font-size:12pt;">location.state</code></li>
+      <li style="font-size:14pt;"><code style="font-size:12pt;">current.condition</code></li>
+      <li style="font-size:14pt;"><code style="font-size:12pt;">current.temperature</code></li>
+    </ul>
+  </li>
+
+  <li style="margin-top:10px; font-size:14pt;">
+    <strong>Useful vs extra depends on the screen.</strong><br>
+    Things like <code style="font-size:12pt;">humidity</code> or <code style="font-size:12pt;">wind_speed</code> might be useful in a different version of the app, but they are not shown on this card.
+  </li>
+
+  <li style="margin-top:10px; font-size:14pt;">
+    <strong>Extra fields aren’t “bad.”</strong><br>
+    They’re just not needed <em>right now</em> for the UI being displayed.
+  </li>
+</ul>
+
+<div style="background:#ffffff; border-radius:10px; padding:12px; margin-top:12px; border:1px solid #ddd;">
+  <strong>Takeaway:</strong> JSON is organized data. Your app reads the structure and pulls only the fields that match what the user sees.
+</div>
+
+</div>
+</details>
+
+
+---
+
+## Next
+
+#### Next, we’ll practice reading the “shape” of JSON so we can grab exactly what our app needs.
+MARKDOWN

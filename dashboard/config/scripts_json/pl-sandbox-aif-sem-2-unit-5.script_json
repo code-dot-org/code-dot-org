@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-02-17 17:07:21 UTC",
+    "serialized_at": "2026-03-02 16:27:11 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -95,6 +95,28 @@
       },
       "seeding_key": {
         "activity_section.key": "bf61b007-61d0-4778-90fc-930cbec114bc",
+        "lesson_activity.key": "6cb0d829-446a-42be-ad42-ec07a58a64cd"
+      }
+    },
+    {
+      "key": "f75738cd-ac40-478a-aade-eca00a07dac0",
+      "position": 4,
+      "properties": {
+        "progression_name": "Making Sense of Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "f75738cd-ac40-478a-aade-eca00a07dac0",
+        "lesson_activity.key": "6cb0d829-446a-42be-ad42-ec07a58a64cd"
+      }
+    },
+    {
+      "key": "a259e062-4bdd-43ac-ad2f-676a806ef188",
+      "position": 5,
+      "properties": {
+        "progression_name": "Displaying Data "
+      },
+      "seeding_key": {
+        "activity_section.key": "a259e062-4bdd-43ac-ad2f-676a806ef188",
         "lesson_activity.key": "6cb0d829-446a-42be-ad42-ec07a58a64cd"
       }
     }
@@ -406,6 +428,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U5-mailbox-promise"
+        ],
         "progression": "Getting Data Online"
       },
       "bonus": false,
@@ -428,6 +453,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U5-fetch"
+        ],
         "progression": "Getting Data Online"
       },
       "bonus": false,
@@ -450,6 +478,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U5-promise-chain"
+        ],
         "progression": "Getting Data Online"
       },
       "bonus": false,
@@ -472,6 +503,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U5-trace-a-promise-weblab"
+        ],
         "progression": "Getting Data Online"
       },
       "bonus": false,
@@ -486,6 +520,273 @@
       },
       "level_keys": [
         "pl-aif-2-U5-trace-a-promise-weblab"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 17,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-aif-2-U5-making-steps-clear-L4"
+        ],
+        "progression": "Getting Data Online"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-making-steps-clear-L4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "bf61b007-61d0-4778-90fc-930cbec114bc"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-making-steps-clear-L4"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 18,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Getting Data Online"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-async-await"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "bf61b007-61d0-4778-90fc-930cbec114bc"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-async-await"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 19,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Getting Data Online"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif2-U5-async-await-weblab"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "bf61b007-61d0-4778-90fc-930cbec114bc"
+      },
+      "level_keys": [
+        "pl-aif2-U5-async-await-weblab"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 20,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Making Sense of Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-JSON-data"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "f75738cd-ac40-478a-aade-eca00a07dac0"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-JSON-data"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 21,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Making Sense of Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-shape-of-JSON"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "f75738cd-ac40-478a-aade-eca00a07dac0"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-shape-of-JSON"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 22,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Making Sense of Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif2-U5-dotnotation-video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "f75738cd-ac40-478a-aade-eca00a07dac0"
+      },
+      "level_keys": [
+        "pl-aif2-U5-dotnotation-video"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 23,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Making Sense of Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif2-U5-dotnotaion-weblab"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "f75738cd-ac40-478a-aade-eca00a07dac0"
+      },
+      "level_keys": [
+        "pl-aif2-U5-dotnotaion-weblab"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 24,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Displaying Data "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-displaying-data"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "a259e062-4bdd-43ac-ad2f-676a806ef188"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-displaying-data"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 25,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Displaying Data "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-parsing-JSON"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "a259e062-4bdd-43ac-ad2f-676a806ef188"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-parsing-JSON"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 26,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Displaying Data "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-weblab-music-app-design"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "a259e062-4bdd-43ac-ad2f-676a806ef188"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-weblab-music-app-design"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 27,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Displaying Data "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-steps-music-app-panal"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "a259e062-4bdd-43ac-ad2f-676a806ef188"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-steps-music-app-panal"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 28,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Displaying Data "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "plaif-2-U5-music-app-weblab"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "a259e062-4bdd-43ac-ad2f-676a806ef188"
+      },
+      "level_keys": [
+        "plaif-2-U5-music-app-weblab"
       ]
     }
   ],
@@ -680,6 +981,150 @@
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-5",
         "activity_section.key": "bf61b007-61d0-4778-90fc-930cbec114bc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-making-steps-clear-L4",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-making-steps-clear-L4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "bf61b007-61d0-4778-90fc-930cbec114bc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-async-await",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-async-await"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "bf61b007-61d0-4778-90fc-930cbec114bc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif2-U5-async-await-weblab",
+        "script_level.level_keys": [
+          "pl-aif2-U5-async-await-weblab"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "bf61b007-61d0-4778-90fc-930cbec114bc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-JSON-data",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-JSON-data"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "f75738cd-ac40-478a-aade-eca00a07dac0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-shape-of-JSON",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-shape-of-JSON"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "f75738cd-ac40-478a-aade-eca00a07dac0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif2-U5-dotnotation-video",
+        "script_level.level_keys": [
+          "pl-aif2-U5-dotnotation-video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "f75738cd-ac40-478a-aade-eca00a07dac0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif2-U5-dotnotaion-weblab",
+        "script_level.level_keys": [
+          "pl-aif2-U5-dotnotaion-weblab"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "f75738cd-ac40-478a-aade-eca00a07dac0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-displaying-data",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-displaying-data"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "a259e062-4bdd-43ac-ad2f-676a806ef188"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-parsing-JSON",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-parsing-JSON"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "a259e062-4bdd-43ac-ad2f-676a806ef188"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-weblab-music-app-design",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-weblab-music-app-design"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "a259e062-4bdd-43ac-ad2f-676a806ef188"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-steps-music-app-panal",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-steps-music-app-panal"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "a259e062-4bdd-43ac-ad2f-676a806ef188"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "plaif-2-U5-music-app-weblab",
+        "script_level.level_keys": [
+          "plaif-2-U5-music-app-weblab"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "a259e062-4bdd-43ac-ad2f-676a806ef188"
       }
     }
   ],

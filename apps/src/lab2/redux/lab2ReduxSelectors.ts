@@ -51,6 +51,14 @@ export const isReadOnlyWorkspace = (state: RootState) => {
   // Start with the permanently read-only check.
   const isPermanentlyReadOnly = isPermanentlyReadOnlyWorkspace(state);
 
+  const isEditMode = !!getAppOptionsEditBlocks();
+  const isEditingExemplar = getAppOptionsEditingExemplar();
+
+  // Edit modes should always be editable.
+  if (isEditMode || isEditingExemplar) {
+    return false;
+  }
+
   const hasSubmitted = getCurrentLevel(state)?.status === LevelStatus.submitted;
   const isViewingOldVersion = state.lab2Project.viewingOldVersion;
   const isAiTutorVersion = state.lab2Project.viewingAiTutorVersion;

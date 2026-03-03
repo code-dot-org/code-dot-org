@@ -33,6 +33,10 @@ class Policies::ChildAccount
   # The maximum number of times a student can resend a request to a parent.
   MAX_PARENT_PERMISSION_RESENDS = 3
 
+  # Cutoff date when `us_state` capture began during sign-up and is considered trusted.
+  # @note This date matches the initial CPA launch (for the state of Colorado).
+  US_STATE_TRUST_CUTOFF_AT = DateTime.parse('2023-07-05T23:15:00+00:00').freeze
+
   # Is this user compliant with our Child Account Policy(cap)?
   # For students under-13, in Colorado, with a personal email login: we require
   # parent permission before the student can start using their account.
@@ -42,15 +46,6 @@ class Policies::ChildAccount
   def self.compliant?(user, future: false)
     return true unless parent_permission_required?(user, future: future)
     ComplianceState.permission_granted?(user)
-  end
-
-  # Checks if a user predates the us_state collection that occurs during the sign up
-  # flow. We want to make sure we retrieve the state for those older accounts which have their
-  # state missing
-  # We use Colorado as it is the only start date we have for now
-  def self.user_predates_state_collection?(user)
-    # The date is the same as when CPA first started.
-    user.created_at < StatePolicies.state_policies['CO'][:start_date]
   end
 
   # Checks if a user is affected by a state policy but was created prior to the
@@ -67,7 +62,7 @@ class Policies::ChildAccount
       user.created_at < user_state_policy[:lockout_date] &&
       user.authentication_options.any?(&:google?)
 
-    user.created_at < user_state_policy[:start_date]
+    user.created_at < user_state_policy[:lockout_date]
   end
 
   # The date on which the student's grace period ends.
@@ -99,7 +94,7 @@ class Policies::ChildAccount
     return grace_period_end_date(user, approximate: approximate) if user_predates_policy?(user)
 
     # CAP non-compliant "post-policy" created students should be locked out immediately after the policy goes into effect.
-    StatePolicies.state_policy(user)&.dig(:start_date)
+    StatePolicies.state_policy(user)&.dig(:lockout_date)
   end
 
   # Checks if the user is partially locked out due to current non-compliance with CAP, even
@@ -170,7 +165,7 @@ class Policies::ChildAccount
     # Parental permission is not required until the policy is in effect.
     # Skip the date check if we want to know if the student will need parent
     # permission in the future.
-    return false if !future && policy[:start_date] > DateTime.now
+    return false if !future && policy[:lockout_date] > DateTime.now
 
     # Parental permission is not required for students
     # whose age cannot be identified or who are older than the maximum age covered by the policy.

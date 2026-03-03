@@ -4,7 +4,7 @@ import React from 'react';
 import {fakeCoursesWithProgress} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 import {UnconnectedUnitSelectorV2} from '@cdo/apps/templates/teacherDashboardShared/UnitSelectorV2';
 
-jest.mock('@cdo/apps/templates/sectionProgress/sectionProgressLoader');
+jest.mock('@cdo/apps/templates/sectionProgressV2/sectionProgressLoader');
 jest.mock('@cdo/apps/redux/unitSelectionRedux', () => ({
   ...jest.requireActual('@cdo/apps/redux/unitSelectionRedux'),
   getSelectedCourseId: jest.fn(() => 123),

@@ -301,6 +301,7 @@ const WEBPACK_BASE_CONFIG = {
       },
 
       {test: /\.interpreted.js$/, type: 'asset/source'},
+      {test: /\.md$/, type: 'asset/source'},
       {
         test: /\.(png|jpg|jpeg|gif|svg|ico)$/,
         include: [
@@ -793,6 +794,7 @@ function createWebpackConfig({
             'localhost.code.org',
             'localhost.hourofcode.com',
             '.preview.localhost.codeprojects.org',
+            'localhost.codeprojects.org',
           ],
           client: {overlay: false},
           port: WEBPACK_DEV_SERVER_PORT,

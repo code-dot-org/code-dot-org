@@ -1,17 +1,14 @@
 import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
-import {
-  Heading3,
-  BodyThreeText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import cookies from 'js-cookie';
 import React, {useState, useEffect} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import OldButton from '@cdo/apps/legacySharedComponents/Button';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import canvas from '@cdo/apps/signUpFlow/images/canvas.png';
 import schoology from '@cdo/apps/signUpFlow/images/schoology.png';
@@ -97,8 +94,7 @@ const LoginTypeSelection: React.FunctionComponent<{
             : {};
           analyticsReporter.sendEvent(
             EVENTS.SIGN_UP_STARTED_EVENT,
-            sourceParam,
-            PLATFORMS.STATSIG
+            sourceParam
           );
           sessionStorage.setItem(
             ACCOUNT_TYPE_SESSION_KEY,
@@ -209,21 +205,13 @@ const LoginTypeSelection: React.FunctionComponent<{
   };
 
   const sendLMSAnalyticsEvent = () => {
-    analyticsReporter.sendEvent(
-      EVENTS.LMS_INFORMATION_BUTTON_CLICKED,
-      {},
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.LMS_INFORMATION_BUTTON_CLICKED, {});
   };
 
   function logUserLoginType(loginType: string) {
-    analyticsReporter.sendEvent(
-      EVENTS.SIGN_UP_LOGIN_TYPE_PICKED_EVENT,
-      {
-        'user login type': loginType,
-      },
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.SIGN_UP_LOGIN_TYPE_PICKED_EVENT, {
+      'user login type': loginType,
+    });
   }
 
   function selectOauthLoginType(loginType: string) {
@@ -242,12 +230,20 @@ const LoginTypeSelection: React.FunctionComponent<{
       <div className={style.containerWrapper}>
         <div className={style.container}>
           <div className={style.headers}>
-            <Heading3 className={style.signUpWithTitle}>
+            <Typography
+              className={style.signUpWithTitle}
+              variant="h3"
+              gutterBottom
+            >
               {locale.sign_up_with()}
-            </Heading3>
-            <BodyThreeText className={style.signUpWithDesc}>
+            </Typography>
+            <Typography
+              className={style.signUpWithDesc}
+              variant="body3"
+              gutterBottom
+            >
               {locale.streamline_your_sign_in()}
-            </BodyThreeText>
+            </Typography>
           </div>
           <form action="/users/auth/google_oauth2" method="POST">
             <Button
@@ -310,16 +306,20 @@ const LoginTypeSelection: React.FunctionComponent<{
                 <img src={schoology} alt="Schoology logo" />
               </div>
             )}
-            <BodyThreeText className={style.subheader}>
+            <Typography
+              className={style.subheader}
+              variant="body3"
+              gutterBottom
+            >
               {isTeacher
                 ? locale.using_lms_platforms()
                 : locale.does_your_school_use_an_lms()}
-            </BodyThreeText>
-            <BodyThreeText>
+            </Typography>
+            <Typography variant="body3" gutterBottom>
               {isTeacher
                 ? locale.access_detailed_instructions()
                 : locale.ask_your_teacher_lms()}
-            </BodyThreeText>
+            </Typography>
             {isTeacher && (
               <div className={style.buttonContainer}>
                 <OldButton
@@ -352,9 +352,9 @@ const LoginTypeSelection: React.FunctionComponent<{
           <div className={style.verticalDividerBottom} />
         </div>
         <div className={style.container}>
-          <Heading3 className={style.headers}>
+          <Typography className={style.headers} variant="h3" gutterBottom>
             {locale.or_sign_up_with_email()}
-          </Heading3>
+          </Typography>
           <div className={style.inputContainer}>
             <div>
               <TextField
@@ -371,9 +371,13 @@ const LoginTypeSelection: React.FunctionComponent<{
                     className={style.red}
                     iconName={EXCLAMATION_ICON}
                   />
-                  <BodyThreeText className={style.red}>
+                  <Typography
+                    className={style.red}
+                    variant="body3"
+                    gutterBottom
+                  >
                     {emailErrorMessage}
-                  </BodyThreeText>
+                  </Typography>
                 </div>
               )}
             </div>
@@ -392,9 +396,9 @@ const LoginTypeSelection: React.FunctionComponent<{
                   className={passwordIconClass}
                   iconName={passwordIcon}
                 />
-                <BodyThreeText>
+                <Typography variant="body3" gutterBottom>
                   {locale.minimum_num_chars({minChars: passwordMinLength})}
-                </BodyThreeText>
+                </Typography>
               </div>
             </div>
             <div>
@@ -413,9 +417,13 @@ const LoginTypeSelection: React.FunctionComponent<{
                     className={style.red}
                     iconName={EXCLAMATION_ICON}
                   />
-                  <BodyThreeText className={style.red}>
+                  <Typography
+                    className={style.red}
+                    variant="body3"
+                    gutterBottom
+                  >
                     {i18n.passwordsMustMatch()}
-                  </BodyThreeText>
+                  </Typography>
                 </div>
               )}
             </div>

@@ -67,7 +67,6 @@ export class PersonalLoginDialog extends React.Component {
                 color={Button.ButtonColor.blue}
                 size={Button.ButtonSize.large}
                 style={styles.button}
-                tabIndex="1"
               />
               <p>{i18n.personalLoginDialog_body6()}</p>
             </>

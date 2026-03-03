@@ -170,8 +170,6 @@ const projectSlice = createSlice({
               [action.payload.fileId]: {
                 ...source.files[action.payload.fileId],
                 name: action.payload.newName,
-                language:
-                  action.payload.newName.split('.').pop()?.toLowerCase() || '',
               },
             },
           },

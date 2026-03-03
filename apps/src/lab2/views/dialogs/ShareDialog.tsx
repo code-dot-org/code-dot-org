@@ -12,7 +12,7 @@ import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux
 import DCDO from '@cdo/apps/dcdo';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProjectType, ShareDialogId} from '@cdo/apps/lab2/types';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {SubmissionStatusType} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectApi';
@@ -130,14 +130,10 @@ const ShareDialog: React.FunctionComponent<{
 
   const handleClose = useCallback(() => {
     dispatch(hideShareDialog());
-    analyticsReporter.sendEvent(
-      EVENTS.SHARING_CLOSE_ESCAPE,
-      {
-        lab_type: projectType,
-        channel_id: channelId,
-      },
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.SHARING_CLOSE_ESCAPE, {
+      lab_type: projectType,
+      channel_id: channelId,
+    });
   }, [channelId, dispatch, projectType]);
 
   const feedbackLink = useAppSelector(state => {

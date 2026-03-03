@@ -1,8 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
-import {
-  Heading2,
-  BodyTwoText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {memo, useCallback, useContext, useMemo} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -94,10 +91,20 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
         />
         <div className={moduleStyles.card}>
           <div className={moduleStyles.infoSection}>
-            <Heading2 className={moduleStyles.infoText}>{projectName}</Heading2>
-            <BodyTwoText className={moduleStyles.infoText}>
+            <Typography
+              className={moduleStyles.infoText}
+              variant="h2"
+              gutterBottom
+            >
+              {projectName}
+            </Typography>
+            <Typography
+              className={moduleStyles.infoText}
+              variant="body2"
+              gutterBottom
+            >
               {musicI18n.builtWithMusicLab()}
-            </BodyTwoText>
+            </Typography>
           </div>
           <div className={moduleStyles.playSection}>
             <Button

@@ -20,6 +20,7 @@ import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
+import {getFileExtension} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -34,7 +35,10 @@ import {useStartModeFileRowOptions} from './useStartModeFileRowOptions';
  */
 const handleFileDownload = async (file: ProjectFile) => {
   try {
-    if (WEBLAB2_IMAGE_FILE_TYPES.includes(file.language) && file.url) {
+    if (
+      WEBLAB2_IMAGE_FILE_TYPES.includes(getFileExtension(file.name)) &&
+      file.url
+    ) {
       // File is an image and has a url, so download from browser
       const image = await fetch(file.url);
       if (!image.ok) {
@@ -49,7 +53,7 @@ const handleFileDownload = async (file: ProjectFile) => {
       fileDownload(file.contents, file.name);
     }
     sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_DOWNLOAD_FILE, {
-      fileType: file.language?.toLowerCase() || '',
+      fileType: getFileExtension(file.name),
     });
   } catch (error) {
     console.error('File download failed:', error);
@@ -170,7 +174,7 @@ export const useFileRowOptions = (
         },
       },
       {
-        condition: supportedFileTypes.includes(file.language),
+        condition: supportedFileTypes.includes(getFileExtension(file.name)),
         iconName: 'download',
         labelText: codebridgeI18n.downloadFile(),
         clickHandler: () => handleFileDownload(file),

@@ -23,12 +23,16 @@ const AiDiffCreateArtifactButtons: React.FC<Props> = ({message}) => {
         size="s"
         type="secondary"
         onClick={() => dispatch(setPendingArtifactMessage(message))}
-        aria-label={'fnord'}
+        aria-label={'Create artifact'}
         iconLeft={{iconName: 'shapes'}}
         text="Create artifact"
       />
       <br />
-      <a href="#">
+      <a
+        href="https://support.code.org/hc/en-us/articles/43794573137805-Artifacts-in-AI-Teaching-Assistant"
+        target="_blank"
+        rel="noreferrer"
+      >
         What is an artifact?
         <FontAwesomeV6Icon iconName="arrow-up-right-from-square" />
       </a>

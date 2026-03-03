@@ -1,11 +1,7 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {Dialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  BodyTwoText,
-  BodyThreeText,
-  BodyFourText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import _ from 'lodash';
 import React, {useState, useMemo} from 'react';
 import {useSelector} from 'react-redux';
@@ -61,6 +57,11 @@ interface LessonSummaryInfo {
 
 interface LessonSummaryInfoResponse {
   lesson_summary: string;
+  script: string;
+}
+
+interface AIFStatus {
+  aif: boolean;
 }
 
 const lessonMaterialsApiCall = (unitId: number) =>
@@ -84,6 +85,9 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   const [finishedListeningToSummary, setFinishedListeningToSummary] =
     useState(false);
   const [canShowLessonSummaries, setCanShowLessonSummaries] = useState(false);
+  const [canShowPodcasts, setCanShowPodcasts] = useState(false);
+  const [audioSummaryTranscript, setAudioSummaryTranscript] =
+    useState<string>('');
 
   const userId = useAppSelector(state => state.currentUser.userId);
 
@@ -95,10 +99,6 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
 
   const hasCompletedPersonalizationQuiz = useAppSelector(
     state => state.currentUser.hasCompletedPersonalizationQuiz
-  );
-
-  const audioSummaryTranscript = useAppSelector(
-    state => state.currentUser.audioSummaryTranscript
   );
 
   const selectedUnitId = useSelector(getSelectedUnitId);
@@ -202,9 +202,15 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
         `/ai_lesson_summaries/show?lesson_id=${selectedLesson?.id}`
       )
         .then(response => {
-          const preParsedResponse = response.value?.lesson_summary;
-          if (response.response.ok && preParsedResponse) {
-            setAITALessonSummaryInfo(JSON.parse(preParsedResponse));
+          if (response.response.ok) {
+            if (response.value?.lesson_summary) {
+              setAITALessonSummaryInfo(
+                JSON.parse(response.value.lesson_summary)
+              );
+            }
+            if (response.value?.script) {
+              setAudioSummaryTranscript(response.value.script);
+            }
             setCanShowLessonSummaries(true);
           } else {
             setAITALessonSummaryInfo(null);
@@ -216,8 +222,21 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           setCanShowLessonSummaries(false);
           console.log(`Error: ${error}`);
         });
+      if (showAITAPodcasts || experiments.isEnabled('ai-lesson-podcasts')) {
+        HttpClient.fetchJson<AIFStatus>(
+          `/teacher_dashboard/unit_in_aif?unit_id=${selectedSection.unitId}`
+        )
+          .then(data => setCanShowPodcasts(data.value.aif))
+          .catch(error => console.error(error));
+      }
     }
-  }, [userId, selectedLesson, showAITALessonSummary]);
+  }, [
+    userId,
+    selectedLesson,
+    showAITALessonSummary,
+    showAITAPodcasts,
+    selectedSection.unitId,
+  ]);
 
   const handleLessonSummaryAskAITAClick = () => {
     dispatch(
@@ -326,30 +345,24 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
             closeLabel={i18n.closeTranscript()}
             customContent={
               <div className={styles.transcriptDialogContent}>
-                {audioSummaryTranscript.map(({timeStamp, text}) => (
-                  <div
-                    key={`transcript-line-${timeStamp}`}
-                    className={styles.transcriptLine}
-                  >
-                    <BodyTwoText className={styles.transcriptLineTimeStamp}>
-                      {timeStamp}
-                    </BodyTwoText>
-                    <BodyTwoText>{text}</BodyTwoText>
-                  </div>
-                ))}
+                {audioSummaryTranscript}
               </div>
             }
             className={styles.transcriptDialog}
           />
         )}
         <div className={styles.lessonSummaryContainer}>
-          {(showAITAPodcasts ||
-            experiments.isEnabled('ai-lesson-podcasts')) && (
+          {canShowPodcasts && (
             <div className={styles.lessonSummarySection}>
               <div className={styles.lessonSummarySectionHeader}>
                 <div className={styles.lessonSummarySectionTitle}>
-                  <FontAwesomeV6Icon iconName="headphones" iconStyle="solid" />
-                  <BodyTwoText>{i18n.audioSummary()}</BodyTwoText>
+                  <FontAwesomeV6Icon
+                    iconFamily="kit"
+                    iconName="solid-flask-sparkle"
+                  />
+                  <Typography variant="body2" gutterBottom>
+                    {i18n.audioSummary()}
+                  </Typography>
                 </div>
                 <Button
                   type="secondary"
@@ -365,7 +378,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
                 {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
                 <audio
                   id="lesson-summary-audio"
-                  src="https://tts.code.org/sharon22k/180/100/e91c9a88c669b0aeba648353cc478452/courseC_maze_programming9.mp3"
+                  src={`/ai_lesson_summary_podcasts/show?lesson_id=${selectedLesson?.id}`}
                   preload="auto"
                   controls
                   onEnded={() => setFinishedListeningToSummary(true)}
@@ -383,44 +396,60 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           <div className={styles.lessonSummarySection}>
             <div className={styles.lessonSummarySectionTitle}>
               <FontAwesomeV6Icon iconName="lightbulb" iconStyle="solid" />
-              <BodyTwoText>{i18n.teachingTips()}</BodyTwoText>
+              <Typography variant="body2" gutterBottom>
+                {i18n.teachingTips()}
+              </Typography>
             </div>
             <div className={styles.lessonSummaryInfo}>
               <div className={styles.lessonSummaryInfoBlock}>
-                <BodyThreeText>{i18n.learningObjective()}</BodyThreeText>
-                <BodyThreeText>
+                <Typography variant="body3" gutterBottom>
+                  {i18n.learningObjective()}
+                </Typography>
+                <Typography variant="body3" gutterBottom>
                   {aiTALessonSummaryInfo?.learning_objective}
-                </BodyThreeText>
+                </Typography>
               </div>
               <div className={styles.lessonSummaryInfoBlock}>
-                <BodyThreeText>{i18n.keyLessonBeats()}</BodyThreeText>
+                <Typography variant="body3" gutterBottom>
+                  {i18n.keyLessonBeats()}
+                </Typography>
                 <ol>
                   {aiTALessonSummaryInfo?.lesson_beats.map(
                     (lessonBeat, index) => (
                       <li key={`lessonBeat-${index}`}>
-                        <BodyThreeText>{lessonBeat}</BodyThreeText>
+                        <Typography variant="body3" gutterBottom>
+                          {lessonBeat}
+                        </Typography>
                       </li>
                     )
                   )}
                 </ol>
               </div>
               <div className={styles.lessonSummaryInfoBlock}>
-                <BodyThreeText>{i18n.tipsHeader()}</BodyThreeText>
+                <Typography variant="body3" gutterBottom>
+                  {i18n.tipsHeader()}
+                </Typography>
                 <ol>
                   {aiTALessonSummaryInfo?.tips.map((tip, index) => (
                     <li key={`tip-${index}`}>
-                      <BodyThreeText>{tip}</BodyThreeText>
+                      <Typography variant="body3" gutterBottom>
+                        {tip}
+                      </Typography>
                     </li>
                   ))}
                 </ol>
               </div>
               <div className={styles.lessonSummaryInfoBlock}>
-                <BodyThreeText>{i18n.commonMisconceptions()}</BodyThreeText>
+                <Typography variant="body3" gutterBottom>
+                  {i18n.commonMisconceptions()}
+                </Typography>
                 <ul>
                   {aiTALessonSummaryInfo?.misconceptions.map(
                     (misconception, index) => (
                       <li key={`misconception-${index}`}>
-                        <BodyThreeText>{misconception}</BodyThreeText>
+                        <Typography variant="body3" gutterBottom>
+                          {misconception}
+                        </Typography>
                       </li>
                     )
                   )}
@@ -438,13 +467,13 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
               <div className={styles.personalizationQuizSection}>
                 <div className={styles.horizontalLine} />
                 <div className={styles.personalizationQuizPrompt}>
-                  <BodyThreeText>
+                  <Typography variant="body3" gutterBottom>
                     {i18n.wantToSeeDifferentInformation()}
-                  </BodyThreeText>
+                  </Typography>
                   <a href="/users/personalization_information">
-                    <BodyThreeText>
+                    <Typography variant="body3" gutterBottom>
                       {i18n.customizeForYourClassroom()}
-                    </BodyThreeText>
+                    </Typography>
                   </a>
                 </div>
               </div>
@@ -452,7 +481,9 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           </div>
           <div className={styles.poweredByAITANote}>
             <img src={AIBotTAIcon} alt="" />
-            <BodyFourText>{i18n.poweredByAITA()}</BodyFourText>
+            <Typography variant="body4" gutterBottom>
+              {i18n.poweredByAITA()}
+            </Typography>
           </div>
         </div>
       </>

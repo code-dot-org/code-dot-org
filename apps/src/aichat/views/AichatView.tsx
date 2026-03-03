@@ -29,7 +29,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import {getUserHasAichatAccess} from '../aichatApi';
+import {getUserHasAichatLabAccess} from '../aichatApi';
 import ChatEventLogger from '../chatEventLogger';
 import {ModalTypes} from '../constants';
 import {LevelPropertiesContext} from '../levelPropertiesContext';
@@ -40,15 +40,15 @@ import {
   onSaveComplete,
   onSaveFail,
   onSaveNoop,
-  clearHasSetStartingCustomizations,
+  clearHasSetInitialCustomizations,
   resetToDefaultAiCustomizations,
   selectAllFieldsHidden,
   sendAnalytics,
   setShowModalType,
-  setStartingAiCustomizations,
-  setUserHasAichatAccess,
+  setUserHasAichatLabAccess,
   setViewMode,
   updateAiCustomization,
+  initializeAiCustomizations,
 } from '../redux';
 import {AichatLevelProperties, ModelParameters, ViewMode} from '../types';
 
@@ -106,8 +106,8 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     state.lab.permissions?.includes(PERMISSIONS.LEVELBUILDER)
   );
 
-  const hasSetStartingCustomizations = useAppSelector(
-    state => state.aichat.hasSetStartingCustomizations
+  const hasSetInitialCustomizations = useAppSelector(
+    state => state.aichat.hasSetInitialCustomizations
   );
 
   const projectManager = Lab2Registry.getInstance().getProjectManager();
@@ -144,10 +144,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
       (initialSources?.source as string) || '{}'
     );
     dispatch(
-      setStartingAiCustomizations({
-        levelAichatSettings,
-        studentAiCustomizations,
-      })
+      initializeAiCustomizations(studentAiCustomizations, levelAichatSettings)
     );
     dispatch(
       addChatEvent({
@@ -159,15 +156,18 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
 
   useEffect(() => {
     if (signInState === SignInState.SignedIn) {
-      getUserHasAichatAccess()
-        .then(hasAccess => dispatch(setUserHasAichatAccess(hasAccess)))
+      getUserHasAichatLabAccess()
+        .then(hasAccess => dispatch(setUserHasAichatLabAccess(hasAccess)))
         .catch(error => {
           if (
             !(error instanceof NetworkError && error.response.status === 403)
           ) {
             Lab2Registry.getInstance()
               .getMetricsReporter()
-              .logError('Error in fetching user aichat access', error as Error);
+              .logError(
+                'Error in fetching user aichat lab access',
+                error as Error
+              );
           }
         });
     }
@@ -285,7 +285,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
   }, [dialogControl, resetProject]);
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
-    dispatch(clearHasSetStartingCustomizations());
+    dispatch(clearHasSetInitialCustomizations());
   });
 
   // Only recreate modelParameters when relevant customizations are updated.
@@ -384,7 +384,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
               headerClassName={moduleStyles.panelHeader}
               rightHeaderContent={<AiChatHeaderButtons />}
             >
-              {hasSetStartingCustomizations && (
+              {hasSetInitialCustomizations && (
                 <ChatWorkspace
                   modelParameters={modelParameters}
                   clientType={AiChatClientTypes.AI_CHAT_LAB}

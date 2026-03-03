@@ -324,7 +324,7 @@ export const MultiSelectInput: React.FC<{
                       className={classNames(styles.option, {
                         [styles.focused]: optionFocused,
                       })}
-                      onMouseDown={e => {
+                      onClick={e => {
                         e.preventDefault();
                         handleToggleOption(option);
                         inputRef.current?.focus();

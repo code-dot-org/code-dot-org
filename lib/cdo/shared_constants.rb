@@ -820,11 +820,7 @@ module SharedConstants
   }
 
   AI_CHAT_MODEL_IDS = {
-    ARITHMO: "gen-ai-arithmo2-mistral-7b",
-    BIOMISTRAL: "gen-ai-biomistral-7b",
     MISTRAL: "gen-ai-mistral-7b-inst-v01",
-    KAREN: "gen-ai-karen-creative-mistral-7b",
-    PIRATE: "gen-ai-mistral-pirate-7b",
     CHATGPT: "gpt-4o-mini",
     LEARNLM: "learnlm-2.0-flash-experimental",
     GEMINI_2_0_FLASH: "gemini-2.0-flash",
@@ -832,6 +828,7 @@ module SharedConstants
     GEMINI_2_5_FLASH_LITE: "gemini-2.5-flash-lite",
     GEMINI_2_5_PRO: "gemini-2.5-pro",
     GEMINI_3_PRO_PREVIEW: "gemini-3-pro-preview",
+    GEMINI_2_5_FLASH_IMAGE: "gemini-2.5-flash-image",
   }
 
   AI_CHAT_CLIENT_TYPES = {
@@ -961,6 +958,8 @@ module SharedConstants
   ALLOWED_HOSTNAME_SUFFIXES = [
     # === ENTERTAINMENT ===
     'api.themoviedb.org',         # Movie/TV data - API key required 🔑
+    'api.disneyapi.dev',          # Disney characters data - Public API
+
     # === FINANCE & CRYPTOCURRENCY ===
     'api.coinlayer.com',          # Cryptocurrency exchange rates - API key required 🔑
     'pro-api.coinmarketcap.com',  # Cryptocurrency market data - API key required 🔑
@@ -968,6 +967,7 @@ module SharedConstants
     'currencyapi.com',            # Currency data - API key required 🔑
     'moneyconvert.net',           # Exchange rate data - Public API
     'quandl.com',                 # Financial datasets - API key required 🔑
+
     # === FUN AND GAMES ===
     'api.blizzard.com',           # Blizzard gaming data - API key required 🔑
     'api.nookipedia.com',         # Animal Crossing data -  API key required 🔑
@@ -986,6 +986,8 @@ module SharedConstants
     'textures.minecraft.net',     # Minecraft textures - Public API
     'thecatapi.com',              # Cat photos - API key required 🔑
     'thedogapi.com',              # Dog photos - API key required 🔑
+    'official-joke-api.appspot.com', # Joke API - Public API
+
     # === GOVERNMENT ===
     # SECURITY: Government APIs are generally well-maintained and secure
     'api.census.gov',             # US Census data - Public API
@@ -1000,6 +1002,8 @@ module SharedConstants
     'rejseplanen.dk',             # Denmark public transport
     'transitchicago.com',         # Chicago transit - API key required 🔑
     'vpic.nhtsa.dot.gov',         # Vehicle data - Public API
+    'api.congress.gov',           # Congress data - API key required 🔑
+
     # === SPACE ===
     'api.nasa.gov',               # NASA content - API key required 🔑
     'api.open-notify.org',        # ISS location and space data - Public API
@@ -1007,6 +1011,7 @@ module SharedConstants
     'data.nasa.gov',              # NASA datasets
     'hubblesite.org',             # Hubble telescope data
     'images-api.nasa.gov',        # NASA images - API key required 🔑
+
     # === WEATHER & CLIMATE ===
     # SECURITY: Weather APIs are generally reliable and well-maintained
     'api.open-meteo.com',          # Weather data - Public API
@@ -1017,6 +1022,7 @@ module SharedConstants
     'dataservice.accuweather.com', # Weather data - API key required 🔑
     'data.weather.gov.hk',         # Hong Kong weather
     'noaa.gov',                    # Weather/climate data - API key required 🔑
+
     # === PLACES & GEOGRAPHY ===
     # SECURITY: Geographic APIs are generally safe for educational use
     'api.foursquare.com',       # Points of interest - API key required 🔑
@@ -1026,6 +1032,7 @@ module SharedConstants
     'restcountries.com',        # Country information - Public API
     'worldclockapi.com',        # Time zones - Public API
     'worldtimeapi.org',         # Time zones - Public API
+
     # === MATH ===
     # SECURITY: Simple utility APIs with minimal security concerns
     'api.mathjs.org',           # Mathematical expressions - Public API
@@ -1033,6 +1040,7 @@ module SharedConstants
     'qrng.anu.edu.au',          # Random numbers - Public API
     'random.org',               # Random number generation - API Key required 🔑
     'api.wolframalpha.com',     # Computational knowledge engine - API key required 🔑
+
     # === TOOLS & INTEGRATIONS ===
     # SECURITY: Some require authentication, others are public
     'api.github.com',           # GitHub data - Public API, rate limited
@@ -1040,6 +1048,7 @@ module SharedConstants
     'maker.ifttt.com',          # IFTTT webhooks
     'googleapis.com',           # Google Services - API key required 🔑
     'api.rebrandly.com',        # URL shortening - API key required 🔑
+
     # === CONTENT & MEDIA ===
     # SECURITY: Content APIs are generally safe for educational use
     'api.spotify.com',          # Spotify music data - API key required 🔑
@@ -1047,10 +1056,13 @@ module SharedConstants
     'pixabay.com',              # Photos/videos - API key required 🔑
     'wikipedia.org',            # Wikipedia content - Public API
     'xeno-canto.org',           # Bird sounds - API key required 🔑
+
     # === WORDS & TEXTS ===
     'api.datamuse.com',         # Word-finding engine - Public API
     'gutendex.com',             # Project Gutenberg ebook metadata - Public API
     'api.scripture.api.bible',  # Bible verses - API key required 🔑
+    'api.adviceslip.com',       # Advice API - Public API
+
     # === OTHER ===
     # SECURITY: Varies by API, most are public educational resources
     'api.amadeus.com',          # Travel/flight data - API key required 🔑
@@ -1065,10 +1077,12 @@ module SharedConstants
     # REMOVED: 'myschoolapp.com' - HIGH RISK: DNS resolves but no HTTP/HTTPS service available
     'isenseproject.org',        # Sensor data - Public API
     'lakeside-cs.org',          # Educational data - Public API
+
     # === INTERNAL ===
     # These enable functionality within the Code.org ecosystem
     # For example, so applab apps can access the tables and properties of other applab apps.
     'code.org',
+
     # === LEGACY/DEPRECATED ===
     # These are maintained for backward compatibility
     # These seemed deprecated/have inactive websites as of 9/3/2025
@@ -1087,7 +1101,8 @@ module SharedConstants
   ].freeze
 
   ALLOWED_IMAGE_HOSTNAME_SUFFIXES = [
-    'picsum.photos' # Placeholder images - Public API
+    'picsum.photos', # Placeholder images - Public API
+    'images.code.org' # Code.org hosted images - Public API
   ].freeze
 
   ALLOWED_FONT_HOSTNAMES = [

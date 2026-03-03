@@ -1,7 +1,4 @@
-import {
-  BodyTwoText,
-  Heading3,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
@@ -15,7 +12,6 @@ import {
   ParticipantAudience,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
-import experiments from '@cdo/apps/util/experiments';
 import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -292,7 +288,9 @@ export default function CurriculumQuickAssign({
     <div className={moduleStyles.containerWithMarginTop}>
       {isLoading && !isNewSection ? (
         <>
-          <Heading3>{i18n.assignCurriculum()}</Heading3>
+          <Typography variant="h3" gutterBottom>
+            {i18n.assignCurriculum()}
+          </Typography>
           <div className={moduleStyles.loadingSpinner}>
             <Spinner />
           </div>
@@ -321,8 +319,12 @@ export default function CurriculumQuickAssign({
               id="decide-later"
               onChange={toggleDecideLater}
             />
-            <Heading3>{i18n.assignCurriculum()}</Heading3>
-            <BodyTwoText>{i18n.useDropdownMessage()}</BodyTwoText>
+            <Typography variant="h3" gutterBottom>
+              {i18n.assignCurriculum()}
+            </Typography>
+            <Typography variant="body2" gutterBottom>
+              {i18n.useDropdownMessage()}
+            </Typography>
           </div>
           <CurriculumQuickAssignTopRow
             showPlOfferings={showPlOfferings}
@@ -356,14 +358,12 @@ export default function CurriculumQuickAssign({
               isNewSection={isNewSection}
             />
           )}
-          {experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
-            aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
-              <AssigningEssentialAiChatToolsAlert />
-            )}
-          {experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
-            aiChatToolsDependency === AiChatToolsDependency.AVAILABLE && (
-              <AssigningAvailableAiChatToolsAlert />
-            )}
+          {aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
+            <AssigningEssentialAiChatToolsAlert />
+          )}
+          {aiChatToolsDependency === AiChatToolsDependency.AVAILABLE && (
+            <AssigningAvailableAiChatToolsAlert />
+          )}
         </>
       )}
     </div>

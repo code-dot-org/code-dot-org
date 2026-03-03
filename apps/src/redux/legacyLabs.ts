@@ -8,4 +8,5 @@ export interface LegacyLabsState {
   serverScriptId?: number;
   appType?: string;
   isReadOnlyWorkspace?: boolean;
+  locale?: string;
 }

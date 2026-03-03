@@ -85,6 +85,7 @@ const MainInstructionsContent = forwardRef<
       >
         <EnhancedSafeMarkdown
           markdown={markdown}
+          openExternalLinksInNewTab={true}
           className={classNames(
             moduleStyles.markdownText,
             showTts ? moduleStyles.markdownTts : undefined,
