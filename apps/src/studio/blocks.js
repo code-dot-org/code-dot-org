@@ -176,7 +176,7 @@ exports.install = function (blockly, blockInstallOptions) {
    * Creates a dropdown with options for each sprite number
    * @param {function} stringGenerator A function that takes a spriteIndex and
    *   creates a string from it.
-   * @returns {Blockly.FieldDropdown}
+   * @returns {CdoFieldDropdown}
    */
   function spriteNumberTextDropdown(stringGenerator) {
     return new CdoFieldDropdown(spriteNumberTextArray(stringGenerator));

@@ -103,7 +103,7 @@ exports.install = function (blockly, blockInstallOptions) {
 
   if (skin.id === 'anna' || skin.id === 'elsa') {
     // Create a smaller palette.
-    blockly.FieldColour.COLOURS = [
+    CdoFieldColour.COLOURS = [
       Colours.FROZEN1,
       Colours.FROZEN2,
       Colours.FROZEN3,
@@ -114,10 +114,10 @@ exports.install = function (blockly, blockInstallOptions) {
       Colours.FROZEN8,
       Colours.FROZEN9,
     ];
-    blockly.FieldColour.COLUMNS = 3;
+    CdoFieldColour.COLUMNS = 3;
   } else {
     // Create a smaller palette.
-    blockly.FieldColour.COLOURS = [
+    CdoFieldColour.COLOURS = [
       // Row 1.
       Colours.BLACK,
       Colours.GREY,
@@ -134,7 +134,7 @@ exports.install = function (blockly, blockInstallOptions) {
       Colours.AQUAMARINE,
       Colours.PLUM,
     ];
-    blockly.FieldColour.COLUMNS = 4;
+    CdoFieldColour.COLUMNS = 4;
   }
 
   // Block definitions.
