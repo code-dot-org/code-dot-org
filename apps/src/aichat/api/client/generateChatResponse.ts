@@ -75,7 +75,7 @@ export async function generateChatResponse(
       if (!modelImageSafe) {
         return {
           response: text,
-          status: AiRequestExecutionStatus.MODEL_PROFANITY,
+          status: AiRequestExecutionStatus.MODEL_IMAGE_FLAGGED,
         };
       }
     }

@@ -54,6 +54,5 @@ export async function isTextSafe(
 
 export async function isImageSafe(image: File, ext: string): Promise<boolean> {
   const moderationStatus = await moderateImage(image, ext, 'aichat');
-  console.log('moderationStatus', moderationStatus);
   return moderationStatus === 'ok' || moderationStatus === 'skipped';
 }
