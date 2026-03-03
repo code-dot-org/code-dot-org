@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require 'http_accept_language'
 
 require 'cdo/global_edition'
 require 'cdo/i18n'
@@ -9,17 +10,11 @@ require_relative '../../dashboard/lib/metrics/events' # rubocop:disable CustomCo
 
 class VarnishEnvironment < Sinatra::Base
   LOCALE_PARAM_KEY = 'set_locale'.freeze
-
-  def self.load_supported_locales
-    ::Cdo::I18n.available_languages.map {|cdo_language| cdo_language[:locale_s].downcase}.sort
-  end
-
-  configure do
-    set :locales_supported, load_supported_locales
-  end
+  SUPPORTED_LOCALES = ::Cdo::I18n.available_languages.map {_1[:locale_s].downcase}.sort.freeze
+  FALLBACK_LOCALES = Cdo::I18n::LOCALE_CONFIGS.each_with_object({}) {|(k, v), h| h[k.downcase] = v.downcase if v.is_a?(String)}.freeze
 
   before do
-    request.locale = param_locale || varnish_locale || cookie_locale || default_locale
+    request.locale = param_locale || varnish_locale || cookie_locale || http_locale || default_locale
   end
 
   after do
@@ -64,24 +59,24 @@ class VarnishEnvironment < Sinatra::Base
       Cdo::I18n::DEFAULT_LOCALE
     end
 
+    # Determines the most appropriate locale based on the browser's Accept-Language header.
+    def http_locale
+      http_accept_language_parser = HttpAcceptLanguage::Parser.new(env['HTTP_ACCEPT_LANGUAGE'])
+      http_accept_language_parser.user_preferred_languages.lazy.map {language_to_locale(_1)}.find(&:itself)
+    end
+
+    # @return BCP 47 language tag (a normalized locale suitable for I18n e.g. `en-US` or `es-MX`)
     def language_to_locale(language)
-      case language
-      when 'en'
-        return 'en-US'
-      when 'es'
-        return 'es-ES'
-      when 'fa'
-        return 'fa-IR'
-      else
-        language = begin
-          language.to_s.downcase
-        rescue ArgumentError
-          ""
-        end
-        return nil unless locale = settings.locales_supported.find {|i| i == language || i.split('-').first == language}
-        parts = locale.split('-')
-        return "#{parts[0].downcase}-#{parts[1].upcase}"
+      locale = language.to_s.downcase
+      return if locale.empty?
+
+      unless SUPPORTED_LOCALES.include?(locale)
+        fallback = FALLBACK_LOCALES[locale]
+        return fallback ? language_to_locale(fallback) : nil
       end
+
+      lang, region = locale.split('-', 2)
+      region ? "#{lang}-#{region.upcase}" : lang
     end
 
     def log_ge_region_select_event(ge_region)

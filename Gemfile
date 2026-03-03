@@ -435,3 +435,6 @@ gem 'openssl', '>= 3.3.1'
 
 # Used for Clever Client
 gem 'typhoeus', '~> 1.0', '>= 1.0.1'
+
+# HttpAcceptLanguage helps you detect the users preferred language, as sent by the "Accept-Language" HTTP header.
+gem 'http_accept_language', '~> 2.1', require: false
