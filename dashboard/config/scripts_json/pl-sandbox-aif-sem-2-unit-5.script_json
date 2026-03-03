@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-02-25 17:56:50 UTC",
+    "serialized_at": "2026-03-02 16:27:11 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -106,6 +106,17 @@
       },
       "seeding_key": {
         "activity_section.key": "f75738cd-ac40-478a-aade-eca00a07dac0",
+        "lesson_activity.key": "6cb0d829-446a-42be-ad42-ec07a58a64cd"
+      }
+    },
+    {
+      "key": "a259e062-4bdd-43ac-ad2f-676a806ef188",
+      "position": 5,
+      "properties": {
+        "progression_name": "Displaying Data "
+      },
+      "seeding_key": {
+        "activity_section.key": "a259e062-4bdd-43ac-ad2f-676a806ef188",
         "lesson_activity.key": "6cb0d829-446a-42be-ad42-ec07a58a64cd"
       }
     }
@@ -667,6 +678,116 @@
       "level_keys": [
         "pl-aif2-U5-dotnotaion-weblab"
       ]
+    },
+    {
+      "chapter": 24,
+      "position": 24,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Displaying Data "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-displaying-data"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "a259e062-4bdd-43ac-ad2f-676a806ef188"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-displaying-data"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 25,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Displaying Data "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-parsing-JSON"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "a259e062-4bdd-43ac-ad2f-676a806ef188"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-parsing-JSON"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 26,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Displaying Data "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-weblab-music-app-design"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "a259e062-4bdd-43ac-ad2f-676a806ef188"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-weblab-music-app-design"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 27,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Displaying Data "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-steps-music-app-panal"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "a259e062-4bdd-43ac-ad2f-676a806ef188"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-steps-music-app-panal"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 28,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Displaying Data "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "plaif-2-U5-music-app-weblab"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "a259e062-4bdd-43ac-ad2f-676a806ef188"
+      },
+      "level_keys": [
+        "plaif-2-U5-music-app-weblab"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -944,6 +1065,66 @@
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-5",
         "activity_section.key": "f75738cd-ac40-478a-aade-eca00a07dac0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-displaying-data",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-displaying-data"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "a259e062-4bdd-43ac-ad2f-676a806ef188"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-parsing-JSON",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-parsing-JSON"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "a259e062-4bdd-43ac-ad2f-676a806ef188"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-weblab-music-app-design",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-weblab-music-app-design"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "a259e062-4bdd-43ac-ad2f-676a806ef188"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-steps-music-app-panal",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-steps-music-app-panal"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "a259e062-4bdd-43ac-ad2f-676a806ef188"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "plaif-2-U5-music-app-weblab",
+        "script_level.level_keys": [
+          "plaif-2-U5-music-app-weblab"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "a259e062-4bdd-43ac-ad2f-676a806ef188"
       }
     }
   ],
