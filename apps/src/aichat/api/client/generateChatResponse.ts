@@ -16,7 +16,7 @@ import {
   formatSystemMessages,
 } from './helpers/messageHelpers';
 import {getModel} from './helpers/modelHelpers';
-import {isTextSafe} from './helpers/safetyHelpers';
+import {isTextSafe, isImageSafe} from './helpers/safetyHelpers';
 
 /**
  * Performs all the steps necessary to generate a chat response:
@@ -59,6 +59,22 @@ export async function generateChatResponse(
     messages,
     temperature: modelParameters.temperature,
   });
+
+  for (const file of files) {
+    if (file.mediaType.startsWith('image/')) {
+      const ext = file.mediaType.split('/')[1];
+      const arrayBuffer = file.uint8Array.buffer.slice(
+        file.uint8Array.byteOffset,
+        file.uint8Array.byteOffset + file.uint8Array.byteLength
+      ) as ArrayBuffer;
+      const blob = new Blob([arrayBuffer], {type: file.mediaType});
+      const imageFile = new File([blob], `image.${ext}`, {
+        type: file.mediaType,
+      });
+      const imageSafe = await isImageSafe(imageFile, ext);
+      console.log('imageSafe', imageSafe);
+    }
+  }
 
   // Check model text output for safety.
   const modelOutputSafe = await isTextSafe(text);
