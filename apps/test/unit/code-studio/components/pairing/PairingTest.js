@@ -78,9 +78,7 @@ describe('Pairing component', () => {
       });
       await rejectRequest(getRequest);
 
-      expect(
-        await screen.findByText(i18n.unexpectedError())
-      ).toBeInTheDocument();
+      await screen.findByText(i18n.unexpectedError());
     });
   });
 
@@ -113,12 +111,8 @@ describe('Pairing component', () => {
 
       const sectionSelect = await screen.findByRole('combobox');
       await user.selectOptions(sectionSelect, '1');
-      expect(
-        screen.getByRole('button', {name: 'First student'})
-      ).toBeInTheDocument();
-      expect(
-        screen.getByRole('button', {name: 'Second Student'})
-      ).toBeInTheDocument();
+      screen.getByRole('button', {name: 'First student'});
+      screen.getByRole('button', {name: 'Second Student'});
 
       await user.selectOptions(sectionSelect, '15');
       await waitFor(() => {
@@ -165,9 +159,7 @@ describe('Pairing component', () => {
       ).not.toBeInTheDocument();
 
       await user.click(firstStudentButton);
-      expect(
-        screen.getByRole('button', {name: addPartnersButtonName})
-      ).toBeInTheDocument();
+      screen.getByRole('button', {name: addPartnersButtonName});
 
       await user.click(firstStudentButton);
       expect(
@@ -222,9 +214,7 @@ describe('Pairing component', () => {
       });
       await rejectRequest(putRequest);
 
-      expect(
-        await screen.findByText(i18n.unexpectedError())
-      ).toBeInTheDocument();
+      await screen.findByText(i18n.unexpectedError());
     });
 
     it('does not allow selecting more than 3 partners', async () => {
@@ -260,9 +250,8 @@ describe('Pairing component', () => {
       await user.click(screen.getByRole('button', {name: 'Third Student'}));
       await user.click(screen.getByRole('button', {name: 'Fourth Student'}));
 
-      expect(
-        screen.getByText(i18n.exceededPairProgrammingMax())
-      ).toBeInTheDocument();
+      screen.getByText(i18n.exceededPairProgrammingMax());
+
       expect(
         screen.getByRole('button', {name: 'Fifth Student'})
       ).toBeDisabled();
@@ -313,7 +302,7 @@ describe('Pairing component', () => {
       expect(putRequest.options.data).toBe('{"pairings":[]}');
       await resolveRequest(putRequest, {sections: [], pairings: []});
 
-      expect(await screen.findByRole('combobox')).toBeInTheDocument();
+      await screen.findByRole('combobox');
       expect(screen.queryByText('Josh')).not.toBeInTheDocument();
     });
 
@@ -336,10 +325,7 @@ describe('Pairing component', () => {
         url: '/pairings',
       });
       await rejectRequest(putRequest);
-
-      expect(
-        await screen.findByText(i18n.unexpectedError())
-      ).toBeInTheDocument();
+      await screen.findByText(i18n.unexpectedError());
     });
   });
 });
