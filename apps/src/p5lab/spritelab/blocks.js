@@ -1,5 +1,6 @@
 import {Order} from 'blockly/javascript';
 
+import CdoFieldButton from '@cdo/apps/blockly/addons/cdoFieldButton';
 import CdoFieldImage from '@cdo/apps/blockly/addons/cdoFieldImage';
 import CdoFieldLabel from '@cdo/apps/blockly/addons/cdoFieldLabel';
 import CdoFieldVariable from '@cdo/apps/blockly/addons/cdoFieldVariable';
@@ -346,7 +347,7 @@ const customInputTypes = {
         block.workspace.id === Blockly.getMainWorkspace().id &&
         toolboxConfigurationSupportsEditButton(block)
       ) {
-        const editButton = new Blockly.FieldButton({
+        const editButton = new CdoFieldButton({
           value: i18n.edit(),
           onClick: editButtonHandler,
           colorOverrides: {button: 'blue', text: 'white'},

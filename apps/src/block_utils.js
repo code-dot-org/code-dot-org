@@ -1,6 +1,7 @@
 import * as BlocklyCore from 'blockly/core';
 import _ from 'lodash';
 
+import CdoFieldNumber from '@cdo/apps/blockly/addons/cdoFieldNumber';
 import CdoFieldVariable from '@cdo/apps/blockly/addons/cdoFieldVariable';
 import {
   updatePointerBlockImage,
@@ -649,13 +650,13 @@ const STANDARD_INPUT_TYPES = {
       const {type} = inputConfig;
       let field;
       if (type === Blockly.BlockValueType.NUMBER) {
-        field = new Blockly.FieldNumber();
+        field = new CdoFieldNumber();
       } else if (type.includes('ClampedNumber')) {
         const clampedNumberMatch = type.match(CLAMPED_NUMBER_REGEX);
         if (clampedNumberMatch) {
           const min = parseFloat(clampedNumberMatch[1]);
           const max = parseFloat(clampedNumberMatch[2]);
-          field = new Blockly.FieldNumber(0, min, max);
+          field = new CdoFieldNumber(0, min, max);
         }
       } else {
         field = new Blockly.FieldTextInput();
