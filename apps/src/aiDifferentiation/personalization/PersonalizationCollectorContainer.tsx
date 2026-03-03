@@ -44,16 +44,17 @@ const PersonalizationCollectorContainer: React.FC = () => {
     useTeachingProfileData();
 
   const onCarouselPress = async (direction: number) => {
+    if (direction === NEXT && !showInterstitialState) {
+      analyticsReporter.sendEvent(EVENTS.PERSONALIZATION_ANSWER_SUBMITTED, {
+        question: PERSONALIZATION_PROMPTS[questionsNumber].question,
+        questionNumber: questionsNumber + 1,
+      });
+    }
+
     if (
       direction === NEXT &&
       questionsNumber < PERSONALIZATION_PROMPTS.length - 1
     ) {
-      if (!showInterstitialState) {
-        analyticsReporter.sendEvent(EVENTS.PERSONALIZATION_ANSWER_SUBMITTED, {
-          question: PERSONALIZATION_PROMPTS[questionsNumber].question,
-          questionNumber: questionsNumber + 1,
-        });
-      }
       setIsSaving(true);
       try {
         await saveTeachingProfileData(personalizationData);
