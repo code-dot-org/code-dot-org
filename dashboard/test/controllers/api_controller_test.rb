@@ -1525,6 +1525,8 @@ class ApiControllerTest < ActionController::TestCase
 
   test 'import_google_classroom upgrades eligible teacher to verified' do
     mock_service = mock('Google::Apis::ClassroomV1::ClassroomService')
+    mock_teacher = mock('Google::Apis::ClassroomV1::Teacher')
+    mock_teachers_response = mock('Google::Apis::ClassroomV1::ListTeachersResponse')
     mock_students = Google::Apis::ClassroomV1::ListStudentsResponse.from_json(
       {
         students: (1..5).map do |i|
@@ -1544,17 +1546,22 @@ class ApiControllerTest < ActionController::TestCase
     mock_response = mock('Google::Apis::ClassroomV1::ListStudentsResponse')
     mock_response.stubs(:students).returns(mock_students)
     mock_response.stubs(:next_page_token).returns(nil)
+    mock_teachers_response.stubs(:teachers).returns([mock_teacher])
+    mock_teachers_response.stubs(:next_page_token).returns(nil)
 
     mock_section = mock('GoogleClassroomSection')
     mock_section.stubs(:summarize).returns({section_id: @section.id})
 
     ApiController.any_instance.stubs(:query_google_classroom_service).yields(mock_service)
+    mock_service.stubs(:list_course_teachers).returns(mock_teachers_response)
     mock_service.stubs(:list_course_students).returns(mock_response)
-    GoogleClassroomSection.any_instance.stubs(:from_service).returns(mock_section)
+    GoogleClassroomSection.stubs(:from_service).returns(mock_section)
 
     teacher = create(:teacher, :with_google_authentication_option)
+    google_auth_option = teacher.authentication_options.find_by(credential_type: AuthenticationOption::GOOGLE)
+    mock_teacher.stubs(:user_id).returns(google_auth_option.authentication_id)
     # change teacher email to @gmail.com, which will the teacher ineligible for verified
-    teacher.authentication_options.find_by(credential_type: AuthenticationOption::GOOGLE).update(email: 'test@gmail.com')
+    google_auth_option.update(email: 'test@gmail.com')
     @controller.stubs(:current_user).returns(teacher)
     section = create(:section, user: teacher)
     assert_equal false, teacher.verified_teacher?
@@ -1563,9 +1570,32 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :ok
     assert_equal false, teacher.verified_teacher?
     # change email to non google/gmail email, teacher should now be eligible for verified
-    teacher.authentication_options.find_by(credential_type: AuthenticationOption::GOOGLE).update(email: 'test@test.com')
+    google_auth_option.update(email: 'test@test.com')
     get :import_google_classroom, params: {courseId: section.course_id, courseName: section.name}
     assert_equal true, teacher.verified_teacher?
+  end
+
+  test 'import_google_classroom is Forbidden when current user is not a teacher in the Google course' do
+    mock_service = mock('Google::Apis::ClassroomV1::ClassroomService')
+    mock_teacher = mock('Google::Apis::ClassroomV1::Teacher')
+    mock_teachers_response = mock('Google::Apis::ClassroomV1::ListTeachersResponse')
+
+    mock_teachers_response.stubs(:teachers).returns([mock_teacher])
+    mock_teachers_response.stubs(:next_page_token).returns(nil)
+    mock_teacher.stubs(:user_id).returns('different-google-user-id')
+
+    ApiController.any_instance.stubs(:query_google_classroom_service).yields(mock_service)
+    mock_service.stubs(:list_course_teachers).returns(mock_teachers_response)
+    mock_service.expects(:list_course_students).never
+    GoogleClassroomSection.expects(:from_service).never
+
+    teacher = create(:teacher, :with_google_authentication_option)
+    section = create(:section, user: teacher)
+    sign_in teacher
+
+    get :import_google_classroom, params: {courseId: section.course_id, courseName: section.name}
+
+    assert_response :forbidden
   end
 
   #

@@ -116,6 +116,9 @@ class ApiController < ApplicationController
     course_name = params[:courseName].to_s
 
     query_google_classroom_service do |service|
+      unless google_teacher_for_course?(service, course_id)
+        return head :forbidden
+      end
       students = []
       next_page_token = nil
       loop do
@@ -639,6 +642,23 @@ class ApiController < ApplicationController
     rescue Google::Apis::ClientError, Google::Apis::AuthorizationError => exception
       render status: :forbidden, json: {error: exception}
     end
+  end
+
+  private def google_teacher_for_course?(service, course_id)
+    google_uid = current_user.uid_for_provider(AuthenticationOption::GOOGLE).to_s
+    return false if google_uid.empty?
+
+    next_page_token = nil
+    loop do
+      response = service.list_course_teachers(course_id, page_token: next_page_token)
+      teachers = response.teachers || []
+      return true if teachers.any? {|teacher| teacher.user_id.to_s == google_uid}
+
+      next_page_token = response.next_page_token
+      break unless next_page_token
+    end
+
+    false
   end
 
   # Gets progress-related app_options for the given script and level for the
