@@ -32,7 +32,6 @@ import CdoBlockSerializer from './addons/cdoBlockSerializer';
 import CdoConnectionChecker from './addons/cdoConnectionChecker';
 import initializeCdoConstants from './addons/cdoConstants';
 import initializeCss from './addons/cdoCss';
-import {CdoFieldBitmap} from './addons/cdoFieldBitmap';
 import CdoFieldColour from './addons/cdoFieldColour';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
 import CdoFieldLabel from './addons/cdoFieldLabel';
@@ -219,19 +218,20 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     console.warn(e);
   }
 
+  // Custom fields need to be registered for two reasons:
+  // 1. To be used in JSON block definitions, e.g. in Music Lab
+  // 2. To be used by core Blockly blocks to override default field functionality, e.g. colour blocks
   type registrableFieldType = BlocklyCore.fieldRegistry.RegistrableField;
   // elements in this list should be structured as follows:
   // [field registry name for field, class to use as override]
   const fieldsToRegister: [string, registrableFieldType][] = [
-    ['field_variable', CdoFieldVariable],
-    ['field_dropdown', CdoFieldDropdown],
-    ['field_number', CdoFieldNumber],
-    // CdoFieldBitmap and CdoFieldColour extend from plugins.
-    // We know they're fields, so it's safe to cast as unknown.
-    ['field_bitmap', CdoFieldBitmap as unknown as registrableFieldType],
+    // CdoFieldColour extends from a plugin. We know it's a field, so it's safe to cast as unknown.
     ['field_colour', CdoFieldColour as unknown as registrableFieldType],
+    ['field_dropdown', CdoFieldDropdown],
     ['field_label', CdoFieldLabel],
+    ['field_number', CdoFieldNumber],
     ['field_parameter', CdoFieldParameter],
+    ['field_variable', CdoFieldVariable],
   ];
   // Tell Blockly to use our custom versions of fields
   fieldsToRegister.forEach(override => {
