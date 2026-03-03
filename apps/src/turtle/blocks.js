@@ -21,6 +21,9 @@
  * @fileoverview Demonstration of Blockly: Turtle Graphics.
  * @author fraser@google.com (Neil Fraser)
  */
+import CdoFieldAngleDropdown from '@cdo/apps/blockly/addons/cdoFieldAngleDropdown';
+import CdoFieldAngleTextInput from '@cdo/apps/blockly/addons/cdoFieldAngleTextInput';
+import CdoFieldColour from '@cdo/apps/blockly/addons/cdoFieldColour';
 import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
 import CdoFieldLabel from '@cdo/apps/blockly/addons/cdoFieldLabel';
 import {BlockStyles} from '@cdo/apps/blockly/constants';
@@ -203,7 +206,7 @@ exports.install = function (blockly, blockInstallOptions) {
       );
       this.appendDummyInput()
         .appendField(
-          new blockly.FieldAngleDropdown({
+          new CdoFieldAngleDropdown({
             directionTitleName: 'DIR',
             menuGenerator: this.VALUE,
           }),
@@ -249,7 +252,7 @@ exports.install = function (blockly, blockInstallOptions) {
       );
       this.appendDummyInput()
         .appendField(
-          new blockly.FieldAngleTextInput('90', {
+          new CdoFieldAngleTextInput('90', {
             directionTitle: 'DIR',
           }),
           'VALUE'
@@ -273,7 +276,7 @@ exports.install = function (blockly, blockInstallOptions) {
       );
       this.appendDummyInput()
         .appendField(
-          new blockly.FieldAngleDropdown({
+          new CdoFieldAngleDropdown({
             directionTitleName: 'DIR',
           }),
           'VALUE'
@@ -327,7 +330,7 @@ exports.install = function (blockly, blockInstallOptions) {
       );
       this.appendDummyInput()
         .appendField(
-          new blockly.FieldAngleDropdown({
+          new CdoFieldAngleDropdown({
             directionTitleName: 'DIR',
             menuGenerator: this.VALUE,
           }),
@@ -373,7 +376,7 @@ exports.install = function (blockly, blockInstallOptions) {
       );
       this.appendDummyInput()
         .appendField(
-          new blockly.FieldAngleTextInput('90', {
+          new CdoFieldAngleTextInput('90', {
             directionTitle: 'DIR',
           }),
           'VALUE'
@@ -408,7 +411,7 @@ exports.install = function (blockly, blockInstallOptions) {
     block
       .appendDummyInput()
       .appendField(
-        new blockly.FieldAngleTextInput('0', {
+        new CdoFieldAngleTextInput('0', {
           direction: 'turnRight',
         }),
         'DIRECTION'
@@ -447,7 +450,7 @@ exports.install = function (blockly, blockInstallOptions) {
       block
         .appendDummyInput()
         .appendField(
-          new blockly.FieldAngleDropdown({
+          new CdoFieldAngleDropdown({
             direction: 'turnRight',
             menuGenerator: block.VALUE,
           }),
@@ -1355,7 +1358,7 @@ exports.install = function (blockly, blockInstallOptions) {
       ];
       this.setStyle(BlockStyles.LOGIC);
       // 3-column colour field with an increased height/width for menu options and the field itself.
-      const colourField = new Blockly.FieldColour(
+      const colourField = new CdoFieldColour(
         colours[0],
         undefined,
         {colourOptions: colours, columns: 3},

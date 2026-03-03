@@ -1,3 +1,4 @@
+import CdoFieldColour from '@cdo/apps/blockly/addons/cdoFieldColour';
 import CdoFieldImage from '@cdo/apps/blockly/addons/cdoFieldImage';
 import {CdoFieldImageDropdown} from '@cdo/apps/blockly/addons/cdoFieldImageDropdown';
 import CdoFieldLabel from '@cdo/apps/blockly/addons/cdoFieldLabel';
@@ -75,10 +76,7 @@ const customInputTypes = {
       };
       currentInputRow
         .appendField(inputConfig.label)
-        .appendField(
-          new Blockly.FieldColour('#ff0000', undefined, options),
-          'VAL'
-        );
+        .appendField(new CdoFieldColour('#ff0000', undefined, options), 'VAL');
     },
     generateCode(block, arg) {
       return `'${block.getFieldValue(arg.name)}'`;

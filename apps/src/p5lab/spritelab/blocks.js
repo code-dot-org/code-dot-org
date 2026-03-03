@@ -1,6 +1,10 @@
 import {Order} from 'blockly/javascript';
 
+import CdoFieldAnimationDropdown from '@cdo/apps/blockly/addons/cdoFieldAnimationDropdown';
+import CdoFieldBehaviorPicker from '@cdo/apps/blockly/addons/cdoFieldBehaviorPicker';
+import {CdoFieldBitmap} from '@cdo/apps/blockly/addons/cdoFieldBitmap';
 import CdoFieldButton from '@cdo/apps/blockly/addons/cdoFieldButton';
+import CdoFieldColour from '@cdo/apps/blockly/addons/cdoFieldColour';
 import CdoFieldImage from '@cdo/apps/blockly/addons/cdoFieldImage';
 import CdoFieldLabel from '@cdo/apps/blockly/addons/cdoFieldLabel';
 import CdoFieldVariable from '@cdo/apps/blockly/addons/cdoFieldVariable';
@@ -173,7 +177,7 @@ const customInputTypes = {
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(
-          new Blockly.FieldAnimationDropdown(costumeList, 32, 32, buttons),
+          new CdoFieldAnimationDropdown(costumeList, 32, 32, buttons),
           inputConfig.name
         );
     },
@@ -202,7 +206,7 @@ const customInputTypes = {
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(
-          new Blockly.FieldAnimationDropdown(backgroundList, 40, 40, buttons),
+          new CdoFieldAnimationDropdown(backgroundList, 40, 40, buttons),
           inputConfig.name
         );
     },
@@ -329,9 +333,7 @@ const customInputTypes = {
         return behaviorOptions;
       };
 
-      const dropdownField = new Blockly.FieldBehaviorPicker(
-        menuGeneratorFunction
-      );
+      const dropdownField = new CdoFieldBehaviorPicker(menuGeneratorFunction);
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(dropdownField, inputConfig.name);
@@ -407,10 +409,7 @@ const customInputTypes = {
       };
       currentInputRow
         .appendField(inputConfig.label)
-        .appendField(
-          new Blockly.FieldColour('#ff0000', undefined, options),
-          'VAL'
-        );
+        .appendField(new CdoFieldColour('#ff0000', undefined, options), 'VAL');
     },
     generateCode(block, arg) {
       return `'${block.getFieldValue(arg.name)}'`;
@@ -463,10 +462,7 @@ const customInputTypes = {
       };
       currentInputRow
         .appendField(inputConfig.label)
-        .appendField(
-          new Blockly.FieldBitmap(null, null, config),
-          inputConfig.name
-        );
+        .appendField(new CdoFieldBitmap(null, null, config), inputConfig.name);
     },
     generateCode(block, arg) {
       // Convert 2d array into a string.
