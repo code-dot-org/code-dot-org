@@ -116,11 +116,19 @@ export function addCallouts(callouts) {
         title: {
           button: $(
             '<div class="tooltip-x-close" tabindex="0" role="button" aria-label="Close tooltip"/>'
-          ).on('keydown', function (e) {
-            if (e.key === 'Enter' || e.key === ' ') {
-              $(this).trigger('click'); // Simulate a click when Enter or Space is pressed
-            }
-          }),
+          )
+            .on('keydown', function (e) {
+              if (e.key === 'Enter') {
+                e.preventDefault(); // Prevent default behavior for Enter
+                $(this).trigger('click'); // Trigger click on Enter key
+              }
+            })
+            .on('keyup', function (e) {
+              if (e.key === ' ' || e.code === 'Space') {
+                e.preventDefault(); // Prevent page scrolling
+                $(this).trigger('click'); // Trigger click on Space key
+              }
+            }),
         },
       },
       style: {
