@@ -10,6 +10,7 @@ import {
   shouldShowAiTutor,
 } from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {AI_TUTOR_LEGACY_LABS} from '@cdo/apps/aiTutor/views/legacyLabs/constants';
+import TeacherDisableAiChatEffect from '@cdo/apps/lab2/views/components/TeacherDisableAiChatEffect';
 
 import {AiTutorContainer} from '../../aiTutor/views/legacyLabs/AiTutorContainer';
 import {setInstructionsMaxHeightAvailable} from '../../redux/instructions';
@@ -168,6 +169,7 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
                 : undefined
             }
           >
+            <TeacherDisableAiChatEffect />
             <AiTutorContainer
               toggleAiChat={this.toggleAiChat}
               aiChatOpen={this.state.aiChatOpen}

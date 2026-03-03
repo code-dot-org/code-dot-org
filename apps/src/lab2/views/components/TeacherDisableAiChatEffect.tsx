@@ -1,7 +1,6 @@
 import React, {useEffect} from 'react';
 
 import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
-import {APPS_WITH_ESSENTIAL_AI_CHAT} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {AiChatAccessLevel} from '@cdo/apps/aichat/types/accessControls';
 import {repackageError} from '@cdo/apps/metrics/analyticsUtils';
 import {MetricEvent} from '@cdo/apps/metrics/events';
@@ -17,12 +16,10 @@ import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
  */
 const TeacherDisableAiChatEffect: React.FC = () => {
   const isTeacher = useAppSelector(state => state.currentUser.isTeacher);
-  const labType = useAppSelector(state => state.pageConstants.appType);
   const {setChatDisabledState} = useAiChatDisabled();
 
   useEffect(() => {
-    if (!isTeacher || !labType) return;
-    if (APPS_WITH_ESSENTIAL_AI_CHAT.includes(labType)) return;
+    if (!isTeacher) return;
 
     HttpClient.fetchJson<{ai_chat_access_level?: AiChatAccessLevel}[]>(
       '/dashboardapi/sections'
@@ -47,7 +44,7 @@ const TeacherDisableAiChatEffect: React.FC = () => {
           errorMessage: repackageError(error),
         });
       });
-  }, [isTeacher, labType, setChatDisabledState]);
+  }, [isTeacher, setChatDisabledState]);
 
   return null;
 };

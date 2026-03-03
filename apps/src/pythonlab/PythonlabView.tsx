@@ -21,6 +21,7 @@ import {changeProjectType} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {submitPredictResponse} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
+import TeacherDisableAiChatEffect from '@cdo/apps/lab2/views/components/TeacherDisableAiChatEffect';
 import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import {
   restartPyodideIfProgramIsRunning,
@@ -257,6 +258,7 @@ const PythonlabView: React.FunctionComponent<
 
   return (
     <div className={moduleStyles.pythonlab}>
+      {isAiTutorEnabled && <TeacherDisableAiChatEffect />}
       {hasSource && sourceLevelId === levelProperties.id && (
         <Codebridge
           config={config}
