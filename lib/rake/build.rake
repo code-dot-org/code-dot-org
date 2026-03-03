@@ -42,6 +42,17 @@ namespace :build do
     end
   end
 
+  desc 'Builds new Code Studio App (vite).'
+  timed_task_with_logging :studio do
+    Dir.chdir(frontend_dir) do
+      ChatClient.log 'Installing <b>studio</b> dependencies...'
+      RakeUtils.yarn_install
+
+      ChatClient.log 'Building <b>studio</b>...'
+      RakeUtils.system 'yarn build --filter @code-dot-org/studio'
+    end
+  end
+
   desc 'Builds dashboard (install gems, migrate/seed db, compile assets).'
   timed_task_with_logging dashboard: :package do
     Dir.chdir(dashboard_dir) do
