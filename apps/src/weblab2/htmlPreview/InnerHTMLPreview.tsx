@@ -35,6 +35,7 @@ const InnerHTMLPreview = () => {
   const [renderKey, setRenderKey] = useState(0);
   const [allowScripts, setAllowScripts] = useState(false);
   const [isLevelLoading, setIsLevelLoading] = useState(false);
+  const [currentFileNotFound, setCurrentFileNotFound] = useState(false);
 
   const parentOrigin = useMemo(() => {
     const regex = /[^.]+\.preview\.([^.]+)\.codeprojects\.org/;
@@ -179,12 +180,20 @@ const InnerHTMLPreview = () => {
     }
     let cancelled = false;
     setSwWarmedUp(false);
-    fetch(`${window.location.origin}/${currentFile}`).finally(() => {
-      if (!cancelled) {
-        setSwWarmedUp(true);
-        setRenderKey(prevKey => prevKey + 1);
-      }
-    });
+    setCurrentFileNotFound(false);
+    fetch(`${window.location.origin}/${currentFile}`)
+      .then(response => {
+        if (response.status === 404) {
+          console.warn('got 404!');
+          setCurrentFileNotFound(true);
+        }
+      })
+      .finally(() => {
+        if (!cancelled) {
+          setSwWarmedUp(true);
+          setRenderKey(prevKey => prevKey + 1);
+        }
+      });
     return () => {
       cancelled = true;
     };
@@ -196,7 +205,7 @@ const InnerHTMLPreview = () => {
         <iframe
           ref={iframeRef}
           sandbox={`${
-            allowScripts ? 'allow-scripts ' : ''
+            allowScripts || currentFileNotFound ? 'allow-scripts ' : ''
           }allow-same-origin allow-forms`}
           allow="self"
           title="Inner HTML Preview"
@@ -228,6 +237,7 @@ const InnerHTMLPreview = () => {
     isLevelLoading,
     serviceWorkerUnavailable,
     allowScripts,
+    currentFileNotFound,
     renderKey,
   ]);
 
