@@ -1,7 +1,7 @@
 import * as BlocklyCore from 'blockly/core';
 
 import {EMPTY_OPTION} from '../constants';
-import {ExtendedBlockSvg, AngleHelperOptions} from '../types';
+import {AngleHelperOptions, ExtendedBlockSvg} from '../types';
 
 import CdoAngleHelper from './cdoAngleHelper';
 import {AngleHelperConnection} from './cdoAngleHelperOptions';
@@ -80,7 +80,7 @@ export default class CdoFieldNumber extends BlocklyCore.FieldNumber {
    */
   private initializeAngleHelper() {
     const sourceBlock = this.getSourceBlock();
-    this.angleHelper = new Blockly.AngleHelper(this.getAnglePickerDirection(), {
+    this.angleHelper = new CdoAngleHelper(this.getAnglePickerDirection(), {
       arcColour: (sourceBlock as ExtendedBlockSvg)?.style.colourPrimary,
       onUpdate: this.updateAngleValue.bind(this),
       angle: parseInt(`${this.getValue()}`),

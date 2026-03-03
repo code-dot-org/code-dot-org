@@ -8,7 +8,6 @@ import {javascriptGenerator} from 'blockly/javascript';
 
 import BlockSvgFrame from './addons/blockSvgFrame';
 import BlockSvgLimitIndicator from './addons/blockSvgLimitIndicator';
-import CdoAngleHelper from './addons/cdoAngleHelper';
 import FunctionEditor from './addons/functionEditor';
 import WorkspaceSvgFrame from './addons/workspaceSvgFrame';
 import {BLOCK_TYPES, BlockStyles, Themes, WORKSPACE_EVENTS} from './constants';
@@ -101,7 +100,6 @@ export interface BlocklyWrapperType extends BlocklyCoreType {
     onMainBlockSpaceCreated: (callback: () => void) => void;
   };
 
-  AngleHelper: typeof CdoAngleHelper;
   JavaScript: JavascriptGeneratorType;
   assetUrl: (path: string) => string;
   customSimpleDialog: (config: object) => void;

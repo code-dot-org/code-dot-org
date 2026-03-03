@@ -27,7 +27,6 @@ import * as utils from '@cdo/apps/utils';
 import {START_BLOCKS} from '../constants';
 import {START_SOURCES} from '../lab2/constants';
 
-import CdoAngleHelper from './addons/cdoAngleHelper';
 import CdoBlockSerializer from './addons/cdoBlockSerializer';
 import CdoConnectionChecker from './addons/cdoConnectionChecker';
 import initializeCdoConstants from './addons/cdoConstants';
@@ -244,9 +243,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   // TODO: Can/should we make CdoTrashcan have the same type as Trashcan?
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   blocklyWrapper.Trashcan = CdoTrashcan as any;
-
-  // Code.org custom fields
-  blocklyWrapper.AngleHelper = CdoAngleHelper;
 
   blocklyWrapper.registry.register(
     blocklyWrapper.registry.Type.FLYOUTS_VERTICAL_TOOLBOX,
