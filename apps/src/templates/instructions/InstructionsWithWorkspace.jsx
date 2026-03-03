@@ -189,8 +189,9 @@ export default connect(
     labType: state.pageConstants.appType,
     isShareView: state.pageConstants.isShareView,
     aiChatAccessLevel:
-      selectedSectionSelector(state)?.aiChatAccessLevel ??
-      state.currentUser.aiChatAccessLevel,
+      (state.teacherSections
+        ? selectedSectionSelector(state)?.aiChatAccessLevel
+        : undefined) ?? state.currentUser.aiChatAccessLevel,
   }),
   dispatch => ({
     setInstructionsMaxHeightAvailable(maxHeight) {
