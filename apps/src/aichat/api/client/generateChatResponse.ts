@@ -71,8 +71,13 @@ export async function generateChatResponse(
       const imageFile = new File([blob], `image.${ext}`, {
         type: file.mediaType,
       });
-      const imageSafe = await isImageSafe(imageFile, ext);
-      console.log('imageSafe', imageSafe);
+      const modelImageSafe = await isImageSafe(imageFile, ext);
+      if (!modelImageSafe) {
+        return {
+          response: text,
+          status: AiRequestExecutionStatus.MODEL_PROFANITY,
+        };
+      }
     }
   }
 
