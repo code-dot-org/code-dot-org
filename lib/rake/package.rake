@@ -115,7 +115,7 @@ namespace :package do
 
     desc 'Update Dashboard symlink for studio package.'
     timed_task_with_logging 'symlink' do
-      target = CDO.use_my_studio ? vite_dir('dist', 'frontend-studio') : dashboard_dir('public', 'frontend-studio')
+      target = CDO.use_my_studio ? vite_dir('dist', 'frontend-studio') : dashboard_dir('public', 'studio-package')
       RakeUtils.ln_s target, dashboard_dir('public', 'frontend-studio')
     end
   end
