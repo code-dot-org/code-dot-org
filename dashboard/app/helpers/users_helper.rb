@@ -265,7 +265,7 @@ module UsersHelper
     # If this account has the us_state field and the account was created after
     # CPA started, then the us_state must have come from a trusted source.
     # Therefore, we don't need to show the cap_user_info modal.
-    return false if !Policies::ChildAccount.user_predates_state_collection?(user) && user.us_state.present?
+    return false if user.us_state.present? && user.created_at >= Policies::ChildAccount::US_STATE_TRUST_CUTOFF_AT
     # Is the student a child and using a personal account to access code.org?
     user.under_13? && Policies::User.personal_account?(user)
   end

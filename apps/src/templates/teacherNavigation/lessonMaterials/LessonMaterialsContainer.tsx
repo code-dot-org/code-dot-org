@@ -356,7 +356,10 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
             <div className={styles.lessonSummarySection}>
               <div className={styles.lessonSummarySectionHeader}>
                 <div className={styles.lessonSummarySectionTitle}>
-                  <FontAwesomeV6Icon iconName="headphones" iconStyle="solid" />
+                  <FontAwesomeV6Icon
+                    iconFamily="kit"
+                    iconName="solid-flask-sparkle"
+                  />
                   <Typography variant="body2" gutterBottom>
                     {i18n.audioSummary()}
                   </Typography>
