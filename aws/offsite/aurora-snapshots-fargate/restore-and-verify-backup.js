@@ -8,8 +8,12 @@ const { RDSClient,
   DeleteDBClusterCommand
 } = require("@aws-sdk/client-rds");
 const mysqlPromise = require("promise-mysql");
-const Honeybadger = require("honeybadger");
+const Honeybadger = require("@honeybadger-io/js");
 const crypto = require('crypto');
+
+Honeybadger.configure({
+  apiKey: process.env.HONEYBADGER_API_KEY
+});
 
 function generateSimplePassword(length = 16) {
   const chars = 'abcdefghijklmnopqrstuvwxyz';
@@ -195,11 +199,12 @@ const main = async () => {
     await verifyDb(rdsClient, DB_INSTANCE_ID, NEW_PASSWORD);
     console.log("verified");
   } catch (error) {
-    Honeybadger.notify(error, {
+    // Explicitly wait for the notification to be sent before exiting.
+    await Honeybadger.notifyAsync(error, {
       name: "Offsite account snapshot verification"
     });
-    console.log(error);
-    throw error;
+    console.error("Task failed:", error.message);
+    throw error; // Rethrow to ensure the ECS task is marked as failed
   } finally {
     console.log("deleting cluster");
     await deleteCluster(rdsClient, DB_CLUSTER_ID, DB_INSTANCE_ID);

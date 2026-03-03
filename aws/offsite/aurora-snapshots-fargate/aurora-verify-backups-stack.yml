@@ -125,7 +125,7 @@ Resources:
       NetworkMode: awsvpc
       ExecutionRoleArn: !GetAtt TaskExecutionRole.Arn
       Cpu: 256
-      Memory: 0.5GB
+      Memory: 1GB
       TaskRoleArn: !GetAtt TaskRole.Arn
       ContainerDefinitions:
       - Name: aurora-verify-backups
