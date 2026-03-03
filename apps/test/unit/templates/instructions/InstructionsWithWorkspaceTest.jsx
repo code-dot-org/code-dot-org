@@ -4,16 +4,6 @@ import React from 'react';
 
 import {UnwrappedInstructionsWithWorkspace as InstructionsWithWorkspace} from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
 
-jest.mock('@cdo/apps/aichat/helpers/aiChatAccess', () => ({
-  shouldShowAiTutor: jest.fn(() => true),
-  areAiChatToolsEnabled: jest.fn(() => true),
-}));
-
-jest.mock('@cdo/apps/aichat/helpers/aiChatAccess', () => ({
-  shouldShowAiTutor: jest.fn(() => true),
-  areAiChatToolsEnabled: jest.fn(() => true),
-}));
-
 describe('InstructionsWithWorkspace', () => {
   it('renders instructions and code workspace', () => {
     const wrapper = shallow(
@@ -69,6 +59,7 @@ describe('InstructionsWithWorkspace', () => {
           setInstructionsMaxHeightAvailable={() => {}}
           labType="applab"
           isShareView={false}
+          aiChatAccessLevel="enabled"
         />
       );
       expect(wrapper.find('AiTutorContainer')).toHaveLength(1);
