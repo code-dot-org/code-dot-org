@@ -5,6 +5,7 @@
 import {nonnegativeIntegerValidator} from '@cdo/apps/blockly/utils';
 import commonMsg from '@cdo/locale';
 
+import CdoFieldDropdown from './blockly/addons/cdoFieldDropdown';
 import CdoFieldImage from './blockly/addons/cdoFieldImage';
 import {BLOCK_TYPES, BlockColors, BlockStyles} from './blockly/constants';
 import {
@@ -76,7 +77,7 @@ function installControlsRepeatSimplified(blockly, skin) {
         .appendField(
           blockly.Msg.CONTROLS_REPEAT_TITLE_REPEAT || commonMsg.repeat()
         )
-        .appendField(new blockly.FieldDropdown(), 'TIMES');
+        .appendField(new CdoFieldDropdown(), 'TIMES');
       this.appendStatementInput('DO').appendField(
         new CdoFieldImage(skin.repeatImage)
       );
@@ -103,7 +104,7 @@ function installControlsRepeatDropdown(blockly) {
         .appendField(
           blockly.Msg.CONTROLS_REPEAT_TITLE_REPEAT || commonMsg.repeat()
         )
-        .appendField(new blockly.FieldDropdown(), 'TIMES')
+        .appendField(new CdoFieldDropdown(), 'TIMES')
         .appendField(
           blockly.Msg.CONTROLS_REPEAT_TITLE_TIMES || commonMsg.times()
         );
@@ -125,7 +126,7 @@ function installNumberDropdown(blockly) {
     init: function () {
       this.setHelpUrl(blockly.Msg.MATH_NUMBER_HELPURL);
       this.setStyle(BlockStyles.MATH);
-      this.appendDummyInput().appendField(new blockly.FieldDropdown(), 'NUM');
+      this.appendDummyInput().appendField(new CdoFieldDropdown(), 'NUM');
       this.setOutput(true, Blockly.BlockValueType.NUMBER);
       this.setTooltip(blockly.Msg.MATH_NUMBER_TOOLTIP);
     },
@@ -177,7 +178,7 @@ function installCategory(blockly) {
       this.setStyle(BlockStyles.LOOP);
       this.setInputsInline(true);
 
-      var customDropdown = new blockly.FieldDropdown([
+      var customDropdown = CdoFieldDropdown([
         ['Variables', 'VARIABLE'],
         ['Functions', 'PROCEDURE'],
         ['Behaviors', 'Behavior'],

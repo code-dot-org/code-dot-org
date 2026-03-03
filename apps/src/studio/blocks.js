@@ -8,6 +8,9 @@
 import {Order} from 'blockly/javascript';
 import _ from 'lodash';
 
+import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
+import CdoFieldImage from '@cdo/apps/blockly/addons/cdoFieldImage';
+import {CdoFieldImageDropdown} from '@cdo/apps/blockly/addons/cdoFieldImageDropdown';
 import {
   addSerializationHooksToBlock,
   interpolateMsg,
@@ -15,8 +18,6 @@ import {
 } from '@cdo/apps/blockly/utils';
 import commonMsg from '@cdo/locale';
 
-import CdoFieldImage from '../blockly/addons/cdoFieldImage';
-import {CdoFieldImageDropdown} from '../blockly/addons/cdoFieldImageDropdown';
 import {BlockStyles} from '../blockly/constants';
 import {singleton as studioApp} from '../StudioApp';
 import {stripQuotes, valueOr} from '../utils';
@@ -176,7 +177,7 @@ exports.install = function (blockly, blockInstallOptions) {
    * @returns {Blockly.FieldDropdown}
    */
   function spriteNumberTextDropdown(stringGenerator) {
-    return new blockly.FieldDropdown(spriteNumberTextArray(stringGenerator));
+    return new CdoFieldDropdown(spriteNumberTextArray(stringGenerator));
   }
 
   /**
@@ -378,7 +379,7 @@ exports.install = function (blockly, blockInstallOptions) {
         );
       } else {
         this.appendDummyInput().appendField(
-          new blockly.FieldDropdown(this.VALUES),
+          new CdoFieldDropdown(this.VALUES),
           'VALUE'
         );
       }
@@ -529,7 +530,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.EVENT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.VALUES),
+        new CdoFieldDropdown(this.VALUES),
         'VALUE'
       );
       this.setPreviousStatement(false);
@@ -575,7 +576,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.EVENT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.VALUES),
+        new CdoFieldDropdown(this.VALUES),
         'VALUE'
       );
       this.setPreviousStatement(false);
@@ -630,7 +631,7 @@ exports.install = function (blockly, blockInstallOptions) {
         }
         dropdownArray2 = dropdownArray2.concat(this.GROUPINGS.slice(3, 6));
         dropdownArray2 = dropdownArray2.concat(this.EDGES);
-        dropdown2 = new blockly.FieldDropdown(dropdownArray2);
+        dropdown2 = new CdoFieldDropdown(dropdownArray2);
         this.appendDummyInput().appendField(dropdown1, 'SPRITE1');
         this.appendDummyInput().appendField(dropdown2, 'SPRITE2');
       }
@@ -674,7 +675,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown([
+        new CdoFieldDropdown([
           [msg.allowActorsToLeaveThePlayspace(), 'true'],
           [msg.dontAllowActorsToLeaveThePlayspace(), 'false'],
         ]),
@@ -754,7 +755,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(msg.addCharacter());
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(skin.itemChoices),
+        new CdoFieldDropdown(skin.itemChoices),
         'VALUE'
       );
       this.setPreviousStatement(true);
@@ -785,11 +786,11 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(skin.activityChoices),
+        new CdoFieldDropdown(skin.activityChoices),
         'TYPE'
       );
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(skin.itemChoices),
+        new CdoFieldDropdown(skin.itemChoices),
         'VALUE'
       );
       this.setPreviousStatement(true);
@@ -835,11 +836,11 @@ exports.install = function (blockly, blockInstallOptions) {
 
       this.appendDummyInput().appendField(msg.setItemSpeedSet());
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(skin.itemChoices),
+        new CdoFieldDropdown(skin.itemChoices),
         'CLASS'
       );
 
-      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      var dropdown = new CdoFieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]); // default to slow
       this.appendDummyInput().appendField(dropdown, 'VALUE');
 
@@ -879,12 +880,12 @@ exports.install = function (blockly, blockInstallOptions) {
       appendActorSelect(this, actorSelectDropdown);
       this.appendDummyInput().appendField(msg.throwSprite());
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(skin.projectileChoices),
+        new CdoFieldDropdown(skin.projectileChoices),
         'VALUE'
       );
       this.appendDummyInput().appendField('\t');
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(blockly.Blocks.studio_throw.DIR),
+        new CdoFieldDropdown(blockly.Blocks.studio_throw.DIR),
         'DIR'
       );
       this.setPreviousStatement(true);
@@ -941,12 +942,12 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.VALUES),
+        new CdoFieldDropdown(this.VALUES),
         'VALUE'
       );
       this.appendDummyInput().appendField('\t');
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.ACTIONS),
+        new CdoFieldDropdown(this.ACTIONS),
         'ACTION'
       );
       this.setPreviousStatement(true);
@@ -980,8 +981,8 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for jumping a sprite (selected by dropdown) to different position.
     helpUrl: '',
     init: function () {
-      var dropdown = new blockly.FieldDropdown(this.VALUES);
-      var spriteIndexDropdown = new blockly.FieldDropdown(
+      var dropdown = new CdoFieldDropdown(this.VALUES);
+      var spriteIndexDropdown = new CdoFieldDropdown(
         spriteNumberTextArray(s => s.spriteIndex.toString())
       );
 
@@ -1030,7 +1031,7 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for jumping a sprite (selected by block param) to different position.
     helpUrl: '',
     init: function () {
-      var dropdown = new blockly.FieldDropdown(POSITION_VALUES);
+      var dropdown = new CdoFieldDropdown(POSITION_VALUES);
       dropdown.setValue(POSITION_VALUES[1][1]); // default to top-left
       this.setStyle(BlockStyles.DEFAULT);
       interpolateMsg(
@@ -1116,7 +1117,7 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for adding a goal flag at a specified position
     helpUrl: '',
     init: function () {
-      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      var dropdown = new CdoFieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]); // default to top-left
       this.setStyle(BlockStyles.DEFAULT);
       interpolateMsg(
@@ -1373,7 +1374,7 @@ exports.install = function (blockly, blockInstallOptions) {
         );
       } else {
         this.appendDummyInput().appendField(
-          new blockly.FieldDropdown(this.DIR),
+          new CdoFieldDropdown(this.DIR),
           'DIR'
         );
       }
@@ -1450,7 +1451,7 @@ exports.install = function (blockly, blockInstallOptions) {
         );
       } else {
         this.appendDummyInput().appendField(
-          new blockly.FieldDropdown(this.DIR),
+          new CdoFieldDropdown(this.DIR),
           'DIR'
         );
       }
@@ -1473,7 +1474,7 @@ exports.install = function (blockly, blockInstallOptions) {
           );
         } else {
           this.appendDummyInput().appendField(
-            new blockly.FieldDropdown(this.DISTANCE),
+            new CdoFieldDropdown(this.DISTANCE),
             'DISTANCE'
           );
         }
@@ -1627,7 +1628,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.DIRECTIONS),
+        new CdoFieldDropdown(this.DIRECTIONS),
         'DIR'
       );
       this.setPreviousStatement(true);
@@ -1653,7 +1654,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.DIRECTIONS),
+        new CdoFieldDropdown(this.DIRECTIONS),
         'DIR'
       );
       this.setPreviousStatement(true);
@@ -1702,12 +1703,12 @@ exports.install = function (blockly, blockInstallOptions) {
           .appendField(commonMsg.play())
           .appendField(new CdoFieldImage(skin.soundIcon))
           .appendField(
-            new blockly.FieldDropdown(this.soundChoices(), onSoundSelected),
+            new CdoFieldDropdown(this.soundChoices(), onSoundSelected),
             'SOUND'
           );
       } else {
         this.appendDummyInput().appendField(
-          new blockly.FieldDropdown(this.soundChoices(), onSoundSelected),
+          new CdoFieldDropdown(this.soundChoices(), onSoundSelected),
           'SOUND'
         );
       }
@@ -1752,7 +1753,7 @@ exports.install = function (blockly, blockInstallOptions) {
           .appendField(new CdoFieldImage(skin.scoreCard));
       } else {
         this.appendDummyInput().appendField(
-          new blockly.FieldDropdown(this.VALUES),
+          new CdoFieldDropdown(this.VALUES),
           'VALUE'
         );
       }
@@ -1786,7 +1787,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.VALUES),
+        new CdoFieldDropdown(this.VALUES),
         'VALUE'
       );
       this.setPreviousStatement(true);
@@ -1820,7 +1821,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.VALUES),
+        new CdoFieldDropdown(this.VALUES),
         'VALUE'
       );
       this.setPreviousStatement(true);
@@ -1982,7 +1983,7 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
-      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      var dropdown = new CdoFieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[2][1]); // default to normal
       this.appendDummyInput().appendField(dropdown, 'VALUE');
       this.setInputsInline(true);
@@ -2041,7 +2042,7 @@ exports.install = function (blockly, blockInstallOptions) {
           .appendField(msg.speed())
           .appendField(fieldImageDropdown, 'VALUE');
       } else {
-        var dropdown = new blockly.FieldDropdown(this.VALUES);
+        var dropdown = new CdoFieldDropdown(this.VALUES);
         dropdown.setValue(this.VALUES[3][1]); // default to normal
         this.appendDummyInput().appendField(dropdown, 'VALUE');
       }
@@ -2129,7 +2130,7 @@ exports.install = function (blockly, blockInstallOptions) {
         this.appendDummyInput().appendField(msg.setSprite());
       }
 
-      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      var dropdown = new CdoFieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[3][1]); // default to normal
       this.appendDummyInput().appendField(dropdown, 'VALUE');
 
@@ -2205,7 +2206,7 @@ exports.install = function (blockly, blockInstallOptions) {
         const spriteName = stripQuotes(opt[1]);
         return [createMsg({spriteName: `${msg[spriteName]()}`}), opt[1]];
       });
-    const dropdown = new blockly.FieldDropdown(
+    const dropdown = new CdoFieldDropdown(
       values,
       changeCallback,
       true /* opt_alwaysCallChangeHandler */
@@ -2341,7 +2342,7 @@ exports.install = function (blockly, blockInstallOptions) {
         [msg.setSpriteFlee(), BEHAVIOR_FLEE],
         [msg.toWander(), BEHAVIOR_WANDER],
       ].map(kv => [kv[0], `"${kv[1]}"`]);
-      const behaviorDropdown = new blockly.FieldDropdown(
+      const behaviorDropdown = new CdoFieldDropdown(
         behaviorValues,
         value => {
           // Strip the quotes before comparing
@@ -2467,7 +2468,7 @@ exports.install = function (blockly, blockInstallOptions) {
           .appendField(dropdown, 'VALUE');
       } else {
         this.VALUES = skin.backgroundChoices;
-        dropdown = new blockly.FieldDropdown(skin.backgroundChoices);
+        dropdown = new CdoFieldDropdown(skin.backgroundChoices);
         this.appendDummyInput().appendField(dropdown, 'VALUE');
       }
       dropdown.setValue('"' + skin.defaultBackground + '"');
@@ -2524,7 +2525,7 @@ exports.install = function (blockly, blockInstallOptions) {
         opt[1] === RANDOM_VALUE ? opt[1] : `"${opt[1]}"`,
       ]);
 
-      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      var dropdown = new CdoFieldDropdown(this.VALUES);
       this.appendDummyInput().appendField(dropdown, 'VALUE');
       // default to first item after random
       dropdown.setValue(skin.mapChoices[1][1]);
@@ -2553,7 +2554,7 @@ exports.install = function (blockly, blockInstallOptions) {
         opt[1] === RANDOM_VALUE ? opt[1] : `"${opt[1]}"`,
       ]);
 
-      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      var dropdown = new CdoFieldDropdown(this.VALUES);
       this.appendDummyInput().appendField(dropdown, 'VALUE');
       // default to first item after random
       dropdown.setValue(skin.mapChoices[1][1]);
@@ -2680,7 +2681,7 @@ exports.install = function (blockly, blockInstallOptions) {
       helpUrl: '',
       init: function () {
         this.setStyle(BlockStyles.VARIABLE);
-        var visibilityTextDropdown = new blockly.FieldDropdown(this.VALUES);
+        var visibilityTextDropdown = new CdoFieldDropdown(this.VALUES);
         visibilityTextDropdown.setValue(VISIBLE_VALUE); // default to visible
         this.appendDummyInput().appendField(visibilityTextDropdown, 'VALUE');
         if (spriteCount > 1) {
@@ -2726,7 +2727,7 @@ exports.install = function (blockly, blockInstallOptions) {
             this.VALUES[i][0] = prefix + this.VALUES[i][0];
           }
         }
-        var dropdown = new blockly.FieldDropdown(this.VALUES);
+        var dropdown = new CdoFieldDropdown(this.VALUES);
         // default to first item after random/hidden
         dropdown.setValue(skin.spriteChoices[2][1]);
         this.appendDummyInput().appendField(dropdown, 'VALUE');
@@ -2742,7 +2743,7 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.VALUES = skin.spriteChoices;
-      var dropdown = new blockly.FieldDropdown(skin.spriteChoices);
+      var dropdown = new CdoFieldDropdown(skin.spriteChoices);
       // default to first item after random/hidden
       dropdown.setValue(skin.spriteChoices[2][1]);
 
@@ -2842,7 +2843,7 @@ exports.install = function (blockly, blockInstallOptions) {
           .appendField(msg.emotion())
           .appendField(fieldImageDropdown, 'VALUE');
       } else {
-        var dropdown = new blockly.FieldDropdown(this.VALUES);
+        var dropdown = new CdoFieldDropdown(this.VALUES);
         dropdown.setValue(this.VALUES[1][1]); // default to normal
         this.appendDummyInput().appendField(dropdown, 'VALUE');
       }
@@ -2860,7 +2861,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendValueInput('SPRITE')
         .setCheck(blockly.BlockValueType.NUMBER)
         .appendField(msg.setSpriteN({spriteIndex: ''}));
-      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      var dropdown = new CdoFieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]); // default to normal
       this.appendDummyInput().appendField(dropdown, 'VALUE');
       this.setInputsInline(true);
@@ -2937,7 +2938,7 @@ exports.install = function (blockly, blockInstallOptions) {
           var string = msg['saySpriteChoices_' + i]();
           functionElement[0] = functionElement[1] = string;
         }
-        var dropdown = new blockly.FieldDropdown(functionArray);
+        var dropdown = new CdoFieldDropdown(functionArray);
         this.appendDummyInput().appendField(dropdown, 'VALUE');
       } else if (options.params) {
         this.appendValueInput('TEXT');
@@ -3060,7 +3061,7 @@ exports.install = function (blockly, blockInstallOptions) {
         this.appendDummyInput().appendField(msg.waitSeconds());
       } else {
         if (isK1) {
-          let dropdown = new blockly.FieldDropdown(
+          let dropdown = new CdoFieldDropdown(
             [1, 2, 3, 4, 5].map(val => [
               val.toString(),
               (val * 1000).toString(),
@@ -3073,7 +3074,7 @@ exports.install = function (blockly, blockInstallOptions) {
             .appendField(dropdown, 'VALUE')
             .appendField(msg.waitSeconds());
         } else {
-          let dropdown = new blockly.FieldDropdown(this.VALUES);
+          let dropdown = new CdoFieldDropdown(this.VALUES);
           dropdown.setValue(this.VALUES[2][1]); // default to half second
 
           this.appendDummyInput().appendField(dropdown, 'VALUE');
@@ -3129,7 +3130,7 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
-      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      var dropdown = new CdoFieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[0][1]); // default to win
       this.appendDummyInput().appendField(dropdown, 'VALUE');
       this.setInputsInline(true);
@@ -3602,7 +3603,7 @@ function installConditionals(
           .appendField(msg.emotion())
           .appendField(fieldImageDropdown, 'EMOTION');
       } else {
-        const dropdown = new blockly.FieldDropdown(EMOTION_VALUES);
+        const dropdown = new CdoFieldDropdown(EMOTION_VALUES);
         dropdown.setValue(EMOTION_VALUES[1][1]); // default to normal
         this.appendDummyInput().appendField(dropdown, 'EMOTION');
       }
@@ -3670,12 +3671,12 @@ function installConditionals(
 
       this.appendDummyInput().appendField(' ');
 
-      const positionDropdown = new blockly.FieldDropdown(POSITION_VALUES);
+      const positionDropdown = new CdoFieldDropdown(POSITION_VALUES);
       positionDropdown.setValue(POSITION_VALUES[0][1]);
 
       this.appendDummyInput().appendField(positionDropdown, 'POSITION');
 
-      const operatorDropdown = new Blockly.FieldDropdown(OPERATORS);
+      const operatorDropdown = new CdoFieldDropdown(OPERATORS);
       this.appendDummyInput().appendField(operatorDropdown, 'OPERATOR');
 
       this.appendValueInput('COMPARED_VALUE');
@@ -3739,7 +3740,7 @@ function installConditionals(
 
       appendActorSelect(this, actorSelectDropdown);
 
-      const dropdown = new blockly.FieldDropdown(VISIBILITY_VALUES);
+      const dropdown = new CdoFieldDropdown(VISIBILITY_VALUES);
       dropdown.setValue(VISIBILITY_VALUES[0][1]);
 
       this.appendDummyInput().appendField(dropdown, 'VISIBILITY');
@@ -3791,7 +3792,7 @@ function installConditionals(
 
       appendActorSelect(this, actorSelectDropdown);
 
-      const dropdown = new blockly.FieldDropdown(SPRITE_VALUES);
+      const dropdown = new CdoFieldDropdown(SPRITE_VALUES);
       dropdown.setValue(SPRITE_VALUES[0][1]);
 
       this.appendDummyInput().appendField(dropdown, 'VALUE');

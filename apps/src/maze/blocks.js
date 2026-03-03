@@ -24,6 +24,7 @@
 
 import {utils as mazeUtils} from '@code-dot-org/maze';
 
+import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
 import {
   INFINITE_LOOP_TRAP,
   loopHighlight,
@@ -150,7 +151,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.DIRECTIONS),
+        new CdoFieldDropdown(this.DIRECTIONS),
         'DIR'
       );
       this.setPreviousStatement(true);
@@ -176,7 +177,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.DIRECTIONS),
+        new CdoFieldDropdown(this.DIRECTIONS),
         'DIR'
       );
       this.setPreviousStatement(true);
@@ -203,7 +204,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setStyle(BlockStyles.LOGIC);
       this.setOutput(true, blockly.BlockValueType.NUMBER);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.DIRECTIONS),
+        new CdoFieldDropdown(this.DIRECTIONS),
         'DIR'
       );
       this.setTooltip(msg.isPathTooltip());
@@ -228,7 +229,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.LOGIC);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.DIRECTIONS),
+        new CdoFieldDropdown(this.DIRECTIONS),
         'DIR'
       );
       this.setInputsInline(true);
@@ -256,7 +257,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.LOGIC);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.DIRECTIONS),
+        new CdoFieldDropdown(this.DIRECTIONS),
         'DIR'
       );
       this.setInputsInline(true);
@@ -288,7 +289,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setStyle(BlockStyles.LOGIC);
       this.appendDummyInput().appendField(msg.ifCode());
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.DIRECTIONS),
+        new CdoFieldDropdown(this.DIRECTIONS),
         'DIR'
       );
       this.setInputsInline(true);
@@ -322,7 +323,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setStyle(BlockStyles.LOGIC);
       this.appendDummyInput().appendField(msg.ifCode());
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.DIRECTIONS),
+        new CdoFieldDropdown(this.DIRECTIONS),
         'DIR'
       );
       this.setInputsInline(true);
@@ -352,7 +353,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.LOOP);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.DIRECTIONS),
+        new CdoFieldDropdown(this.DIRECTIONS),
         'DIR'
       );
       this.appendStatementInput('DO').appendField(msg.doCode());
@@ -420,7 +421,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.LOOP);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.DIRECTIONS),
+        new CdoFieldDropdown(this.DIRECTIONS),
         'DIR'
       );
       this.appendStatementInput('DO').appendField(msg.doCode());

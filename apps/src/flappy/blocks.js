@@ -5,6 +5,7 @@
  *
  */
 
+import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
 import CdoFieldImage from '@cdo/apps/blockly/addons/cdoFieldImage';
 import {CdoFieldImageDropdown} from '@cdo/apps/blockly/addons/cdoFieldImageDropdown';
 import {numberValidator} from '@cdo/apps/blockly/utils';
@@ -168,7 +169,7 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for flapping (flying upwards)
     helpUrl: '',
     init: function () {
-      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      var dropdown = new CdoFieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[3][1]); // default to normal
 
       this.setStyle('default');
@@ -205,10 +206,7 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.VALUES = isK1 ? this.k1SoundChoices : this.soundChoices;
-      var soundDropdown = new blockly.FieldDropdown(
-        this.VALUES,
-        onSoundSelected
-      );
+      var soundDropdown = new CdoFieldDropdown(this.VALUES, onSoundSelected);
       soundDropdown.setValue(this.WING_FLAP_SOUND);
 
       if (isK1) {
@@ -329,7 +327,7 @@ exports.install = function (blockly, blockInstallOptions) {
           .appendField(msg.setSpeed())
           .appendField(fieldImageDropdown, 'VALUE');
       } else {
-        var dropdown = new blockly.FieldDropdown(this.VALUES);
+        var dropdown = new CdoFieldDropdown(this.VALUES);
         dropdown.setValue(this.VALUES[3][1]); // default to normal
         this.appendDummyInput().appendField(dropdown, 'VALUE');
       }
@@ -365,7 +363,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.flappy_setGapHeight = {
     helpUrl: '',
     init: function () {
-      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      var dropdown = new CdoFieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[3][1]); // default to normal
 
       this.setStyle('variable_blocks');
@@ -404,7 +402,7 @@ exports.install = function (blockly, blockInstallOptions) {
         dropdown = new CdoFieldImageDropdown(this.K1_CHOICES, 50, 30);
         dropdown.setValue(FLAPPY_VALUE);
       } else {
-        dropdown = new blockly.FieldDropdown(this.VALUES);
+        dropdown = new CdoFieldDropdown(this.VALUES);
         dropdown.setValue(FLAPPY_VALUE);
       }
 
@@ -455,7 +453,7 @@ exports.install = function (blockly, blockInstallOptions) {
         dropdown = new CdoFieldImageDropdown(this.K1_CHOICES, 34, 24);
         dropdown.setValue(FLAPPY_VALUE);
       } else {
-        dropdown = new blockly.FieldDropdown(this.VALUES);
+        dropdown = new CdoFieldDropdown(this.VALUES);
         dropdown.setValue(FLAPPY_VALUE);
       }
       input.appendField(dropdown, 'VALUE');
@@ -521,7 +519,7 @@ exports.install = function (blockly, blockInstallOptions) {
         dropdown = new CdoFieldImageDropdown(this.K1_CHOICES, 50, 30);
         dropdown.setValue(FLAPPY_VALUE);
       } else {
-        dropdown = new blockly.FieldDropdown(this.VALUES);
+        dropdown = new CdoFieldDropdown(this.VALUES);
         dropdown.setValue(FLAPPY_VALUE);
       }
 
@@ -571,7 +569,7 @@ exports.install = function (blockly, blockInstallOptions) {
         dropdown = new CdoFieldImageDropdown(this.K1_CHOICES, 50, 30);
         dropdown.setValue(FLAPPY_VALUE);
       } else {
-        dropdown = new blockly.FieldDropdown(this.VALUES);
+        dropdown = new CdoFieldDropdown(this.VALUES);
         dropdown.setValue(FLAPPY_VALUE);
       }
       input.appendField(dropdown, 'VALUE');
@@ -613,7 +611,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.flappy_setGravity = {
     helpUrl: '',
     init: function () {
-      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      var dropdown = new CdoFieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[3][1]); // default to normal
 
       this.setStyle('variable_blocks');

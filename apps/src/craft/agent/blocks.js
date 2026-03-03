@@ -1,3 +1,4 @@
+import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
 import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {registerCustomProcedureBlocks} from '@cdo/apps/blockly/utils';
 
@@ -107,7 +108,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.DIRECTIONS),
+        new CdoFieldDropdown(this.DIRECTIONS),
         'DIR'
       );
       this.setPreviousStatement(true);
@@ -149,7 +150,7 @@ exports.install = function (blockly, blockInstallOptions) {
       var dropdownOptions = blockTypesToDropdownOptions(
         craftBlockOptions.ifBlockOptions || allDropdownBlocks
       );
-      var dropdown = new blockly.FieldDropdown(dropdownOptions);
+      var dropdown = new CdoFieldDropdown(dropdownOptions);
       dropdown.setValue(dropdownOptions[0][1]);
       this.setStyle(BlockStyles.LOGIC);
       this.appendDummyInput()
@@ -204,7 +205,7 @@ exports.install = function (blockly, blockInstallOptions) {
       var dropdownOptions = blockTypesToDropdownOptions(
         craftBlockOptions.placeBlockOptions || allDropdownBlocks
       );
-      var dropdown = new blockly.FieldDropdown(dropdownOptions);
+      var dropdown = new CdoFieldDropdown(dropdownOptions);
       dropdown.setValue(dropdownOptions[0][1]);
 
       this.setStyle(BlockStyles.DEFAULT);
@@ -234,7 +235,7 @@ exports.install = function (blockly, blockInstallOptions) {
       var dropdownOptions = blockTypesToDropdownOptions(
         craftBlockOptions.placeBlockOptions || allDropdownBlocks
       );
-      var dropdown = new blockly.FieldDropdown(dropdownOptions);
+      var dropdown = new CdoFieldDropdown(dropdownOptions);
       dropdown.setValue(dropdownOptions[0][1]);
 
       this.setStyle(BlockStyles.DEFAULT);
@@ -242,7 +243,7 @@ exports.install = function (blockly, blockInstallOptions) {
         .appendField(i18n.blockPlaceXPlace())
         .appendField(dropdown, 'TYPE')
         .appendField(' ')
-        .appendField(new blockly.FieldDropdown(fourDirections), 'DIR');
+        .appendField(new CdoFieldDropdown(fourDirections), 'DIR');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     },
