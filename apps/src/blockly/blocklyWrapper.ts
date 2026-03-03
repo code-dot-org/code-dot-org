@@ -159,22 +159,6 @@ const BlocklyWrapper = function (
       },
     });
   };
-
-  /**
-   * Override core Blockly fields with Code.org customized versions,
-   * and sets the field on our wrapper for use by our code.
-   * @param {array} overrides (elements are arrays of shape [fieldRegistryName, fieldClassName, fieldClass])
-   */
-  this.overrideFields = function (overrides) {
-    overrides.forEach(override => {
-      const fieldRegistryName = override[0];
-      const fieldClass = override[1];
-
-      // Force Blockly to use our custom versions of fields
-      this.fieldRegistry.unregister(fieldRegistryName);
-      this.fieldRegistry.register(fieldRegistryName, fieldClass);
-    });
-  };
 };
 
 function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
@@ -237,8 +221,8 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
 
   type registrableFieldType = BlocklyCore.fieldRegistry.RegistrableField;
   // elements in this list should be structured as follows:
-  // [field registry name for field, class name of field being overridden, class to use as override]
-  const fieldOverrides: [string, registrableFieldType][] = [
+  // [field registry name for field, class to use as override]
+  const fieldsToRegister: [string, registrableFieldType][] = [
     ['field_variable', CdoFieldVariable],
     ['field_dropdown', CdoFieldDropdown],
     ['field_number', CdoFieldNumber],
@@ -249,7 +233,13 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     ['field_label', CdoFieldLabel],
     ['field_parameter', CdoFieldParameter],
   ];
-  blocklyWrapper.overrideFields(fieldOverrides);
+  // Tell Blockly to use our custom versions of fields
+  fieldsToRegister.forEach(override => {
+    const fieldRegistryName = override[0];
+    const fieldClass = override[1];
+    blocklyWrapper.fieldRegistry.unregister(fieldRegistryName);
+    blocklyWrapper.fieldRegistry.register(fieldRegistryName, fieldClass);
+  });
 
   // TODO: Can/should we make CdoTrashcan have the same type as Trashcan?
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

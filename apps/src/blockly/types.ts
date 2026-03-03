@@ -124,9 +124,6 @@ export interface BlocklyWrapperType extends BlocklyCoreType {
 
   wrapReadOnlyProperty: (propertyName: string) => void;
   wrapSettableProperty: (propertyName: string) => void;
-  overrideFields: (
-    overrides: [string, BlocklyCore.fieldRegistry.RegistrableField][]
-  ) => void;
   getWorkspaceCode: () => string;
   getGenerator: () => ExtendedJavascriptGenerator;
   addEmbeddedWorkspace: (workspace: BlocklyCore.Workspace) => void;
