@@ -35,6 +35,7 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     setInstructionsMaxHeightAvailable: PropTypes.func.isRequired,
     labType: PropTypes.string,
     aiChatAccessLevel: PropTypes.string,
+    isShareView: PropTypes.bool,
   };
 
   state = {
@@ -117,6 +118,7 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
       instructionsHeight,
       labType,
       aiChatAccessLevel,
+      isShareView,
       children,
     } = this.props;
 
@@ -129,6 +131,7 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     });
 
     const showAiTutor =
+      !isShareView &&
       AI_TUTOR_LEGACY_LABS.includes(labType) &&
       shouldShowAiTutor({
         appName: labType,
@@ -184,6 +187,7 @@ export default connect(
     instructionsHeight: state.instructions.renderedHeight,
     labType: state.pageConstants.appType,
     aiChatAccessLevel: state.currentUser.aiChatAccessLevel,
+    isShareView: state.pageConstants.isShareView,
   }),
   dispatch => ({
     setInstructionsMaxHeightAvailable(maxHeight) {

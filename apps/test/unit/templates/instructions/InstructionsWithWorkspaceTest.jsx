@@ -4,6 +4,11 @@ import React from 'react';
 
 import {UnwrappedInstructionsWithWorkspace as InstructionsWithWorkspace} from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
 
+jest.mock('@cdo/apps/aichat/helpers/aiChatAccess', () => ({
+  shouldShowAiTutor: jest.fn(() => true),
+  areAiChatToolsEnabled: jest.fn(() => true),
+}));
+
 describe('InstructionsWithWorkspace', () => {
   it('renders instructions and code workspace', () => {
     const wrapper = shallow(
@@ -28,6 +33,40 @@ describe('InstructionsWithWorkspace', () => {
       windowWidth: undefined,
       windowHeight: undefined,
       aiChatOpen: false,
+    });
+  });
+
+  describe('AI tutor visibility', () => {
+    beforeEach(() => {
+      window.appOptions = {level: {aiTutorAvailable: true}};
+    });
+
+    afterEach(() => {
+      delete window.appOptions;
+    });
+
+    it('does not render AI tutor in share view', () => {
+      const wrapper = shallow(
+        <InstructionsWithWorkspace
+          instructionsHeight={400}
+          setInstructionsMaxHeightAvailable={() => {}}
+          labType="applab"
+          isShareView={true}
+        />
+      );
+      expect(wrapper.find('AiTutorContainer')).toHaveLength(0);
+    });
+
+    it('renders AI tutor when not in share view', () => {
+      const wrapper = shallow(
+        <InstructionsWithWorkspace
+          instructionsHeight={400}
+          setInstructionsMaxHeightAvailable={() => {}}
+          labType="applab"
+          isShareView={false}
+        />
+      );
+      expect(wrapper.find('AiTutorContainer')).toHaveLength(1);
     });
   });
 

@@ -1,0 +1,68 @@
+name 'pl-aif-2-U5-displaying-data'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Displaying Data
+
+####Websites often show the same data in different ways depending on what the user needs.
+
+---
+
+## Compare the Images
+
+#### Look at these two ways of showing the same dishes. One is cards, the other is a list. Both are representations of the exact same data, but they serve different user needs.
+
+<div style="max-width: 800px; margin: 25px auto;">
+
+  <div style="margin-bottom: 25px; text-align: center;">
+    <img src="https://images.code.org/12b02e1143c46402f9576b919a216333-image-1772469092096.png" 
+         alt="Card layout of recipes"
+         style="width: 80%; border-radius: 15px; box-shadow: 0 6px 14px rgba(0,0,0,0.12);">
+    <p style="margin-top: 10px; font-size: 12pt;"><strong>Card Layout</strong></p>
+  </div>
+
+  <div style="text-align: center;">
+    <img src="https://images.code.org/1e2f0a23087eb8b80c0cbb5c8c69a07a-image-1772469353379.png" 
+         alt="List or table layout of recipes"
+         style="width: 80%; border-radius: 15px; box-shadow: 0 6px 14px rgba(0,0,0,0.12);">
+    <p style="margin-top: 10px; font-size: 12pt;"><strong>List Layout</strong></p>
+  </div>
+
+</div>
+
+> #### **When is it more helpful for a user to see the data as a card layout?**  
+> #### **When is it more helpful to see it in a list view?**
+
+---
+
+### ✅ Check Your Thinking
+
+<details style="background-color: #f2f2f2; border-radius: 10px; padding: 12px 16px; margin: 15px 0;">
+  <summary style="cursor: pointer; font-weight: 600; font-size: 12pt;">
+    🔍 Click to reveal the answer
+  </summary>
+
+  <p style="margin-top: 12px; font-size: 12pt; line-height: 1.4;">
+    Layout depends on user needs (for example, searching vs. browsing). Lists are better for sorting and comparing information quickly, while cards are better for visual exploration and featuring images.
+  </p>
+</details>
+
+---
+
+## From Layout to Data
+
+Behind both of these layouts is the same structured data. Developers can take one dataset and display it in multiple ways depending on the experience they want to create. Instead of hard-coding each card or list item, we can generate them directly from data.
+
+That’s where data-driven content comes in.
+
+---
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Data-Driven Content</strong> is web content that is dynamically generated or updated based on arrays or objects from an external source.<br><br>
+<strong>Example:</strong> A sports app that updates scores based on a live data feed.
+</p>
+</div>
+
+
+MARKDOWN

@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-01 22:42:02 UTC",
+    "serialized_at": "2026-03-03 00:39:22 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -1239,30 +1239,6 @@
       }
     },
     {
-      "key": "74c1ceda-5847-455f-847d-b74422818bf7",
-      "position": 20,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the slide aloud. Pause after the first sentence and emphasize that Unit 1 focuses on planning and design decisions before building. Briefly clarify that later units will focus more on coding.",
-        "progression_name": "Check for Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "74c1ceda-5847-455f-847d-b74422818bf7",
-        "lesson_activity.key": "5d9dcce1-b6ee-4c6a-a93b-5431f75f936f"
-      }
-    },
-    {
-      "key": "4b9a04ba-b82c-4b04-b71c-81c03dffa88e",
-      "position": 21,
-      "properties": {
-        "description": "You just made intentional layout decisions. That’s design. You didn’t need code to do it. This is what Unit 1 is about, learning to think and plan like designers before writing code.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "4b9a04ba-b82c-4b04-b71c-81c03dffa88e",
-        "lesson_activity.key": "5d9dcce1-b6ee-4c6a-a93b-5431f75f936f"
-      }
-    },
-    {
       "key": "9020fd0e-91fc-422a-afc2-bf0a1bec01f6",
       "position": 1,
       "properties": {
@@ -1280,8 +1256,38 @@
       }
     },
     {
-      "key": "0a9b8f3a-adaa-462d-8316-4578bb232a2a",
+      "key": "0faba28d-1142-45ee-bf21-0b6965c90bac",
       "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the \"What You'll Do in Unit 1\" slide to connect students’ prototype work and QOTD thinking to the focus of Unit 1. Emphasize that students made intentional layout decisions about structure and interaction, and clarify that Unit 1 strengthens design thinking before moving into coding in later units.",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "0faba28d-1142-45ee-bf21-0b6965c90bac",
+        "lesson_activity.key": "9398289d-fdd7-4aaa-a0f1-e8f38843088d"
+      }
+    },
+    {
+      "key": "639f8b7d-8fb1-4a1c-ba75-74e472a0ba10",
+      "position": 3,
+      "properties": {
+        "description": "Today you made intentional layout decisions. That’s design. You didn’t need code to do it. This is what Unit 1 is about, learning to think and plan like designers before writing code.\n",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This slide is an important bridge between today’s prototype activity and the rest of Unit 1. Take a moment to reinforce that design decisions, not coding, are the focus of this unit.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "639f8b7d-8fb1-4a1c-ba75-74e472a0ba10",
+        "lesson_activity.key": "9398289d-fdd7-4aaa-a0f1-e8f38843088d"
+      }
+    },
+    {
+      "key": "0a9b8f3a-adaa-462d-8316-4578bb232a2a",
+      "position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -1291,7 +1297,7 @@
     },
     {
       "key": "0ed74220-8a9d-4041-8fea-21c8a16b6382",
-      "position": 3,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
       },
@@ -1302,7 +1308,7 @@
     },
     {
       "key": "5706f26d-3f92-4387-bf49-c932affbf79e",
-      "position": 4,
+      "position": 6,
       "properties": {
         "progression_name": "End of Lesson Survey"
       },

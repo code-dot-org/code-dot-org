@@ -6,17 +6,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-// Make sure polyfills are available in all code studio apps and level tests.
-import './polyfills';
 import {
   Renderers,
   stringIsXml,
   stripUserCreated,
 } from '@cdo/apps/blockly/constants';
 import {
-  loadBlocksToWorkspace,
+  appendSharedFunctionsToState,
   highlightBlock,
-  appendSharedFunctions,
+  loadBlocksToWorkspace,
   processToolboxXml,
 } from '@cdo/apps/blockly/utils';
 import {addCallouts} from '@cdo/apps/code-studio/callouts';
@@ -29,11 +27,11 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 import {
-  setUserRoleInCourse,
   CourseRoles,
+  setUserRoleInCourse,
 } from '@cdo/apps/templates/currentUserRedux';
 import InstructionsDialog from '@cdo/apps/templates/instructions/InstructionsDialog';
-import {workspace_running_background, white} from '@cdo/apps/util/color';
+import {white, workspace_running_background} from '@cdo/apps/util/color';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 import msg from '@cdo/locale';
@@ -57,10 +55,10 @@ import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
 import {closeWorkspaceAlert} from './code-studio/projectRedux';
 import {
   KeyCodes,
-  TestResults,
-  TOOLBOX_EDIT_MODE,
   NOTIFICATION_ALERT_TYPE,
   START_BLOCKS,
+  TestResults,
+  TOOLBOX_EDIT_MODE,
 } from './constants';
 import {getValidatedResult, initializeContainedLevel} from './containedLevels';
 import * as dom from './dom';
@@ -69,6 +67,8 @@ import FeedbackUtils from './feedback';
 import Alert from './legacySharedComponents/alert';
 import {isEditWhileRun} from './lib/tools/jsdebugger/redux';
 import {configCircuitPlayground, configMicrobit} from './maker/dropletConfig';
+// Make sure polyfills are available in all code studio apps and level tests.
+import './polyfills';
 import puzzleRatingUtils from './puzzleRatingUtils';
 import {getStore} from './redux';
 import {
@@ -79,12 +79,12 @@ import {
 } from './redux/feedback';
 import {
   determineInstructionsConstants,
-  setInstructionsConstants,
   setFeedback,
+  setInstructionsConstants,
 } from './redux/instructions';
 import {setVisualizationScale} from './redux/layout';
 import {setPageConstants} from './redux/pageConstants';
-import {setIsRunning, setIsEditWhileRun, setStepSpeed} from './redux/runState';
+import {setIsEditWhileRun, setIsRunning, setStepSpeed} from './redux/runState';
 import {
   getIdleTimeSinceLastReport,
   resetIdleTime,
@@ -549,7 +549,14 @@ StudioApp.prototype.init = function (config) {
     // Hook the blockly environment into the localization engine
     if (experiments.isEnabledAllowingQueryString(experiments.LOCALIZEJS)) {
       localization.on('change', info => {
-        BlocklyUtils.updateLocale(info.rtl);
+        const blockDefinitions =
+          BlocklyUtils.getBlockDefinitionsForUpdatedLocale(info.rtl);
+        blockUtils.installCustomBlocks({
+          blockly: Blockly,
+          blockDefinitions,
+          customInputTypes: Blockly.SourceCustomInputTypes,
+        });
+        BlocklyUtils.refreshWorkspacesForUpdatedLocale(info.rtl);
       });
     }
     // Store result so that we can cleanup later in tests
@@ -2835,10 +2842,17 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
 
   // Only used in Sprite Lab.
   if (config.level.sharedFunctions) {
-    startBlocks = appendSharedFunctions(
-      startBlocks,
-      config.level.sharedFunctions
-    );
+    if (stringIsXml(startBlocks)) {
+      startBlocks = blockUtils.appendNewFunctionsXml(
+        startBlocks,
+        config.level.sharedFunctions
+      );
+    } else {
+      startBlocks = appendSharedFunctionsToState(
+        startBlocks,
+        config.level.sharedFunctions
+      );
+    }
   }
   let isXml = stringIsXml(startBlocks);
 

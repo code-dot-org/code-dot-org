@@ -471,22 +471,24 @@ export const HTMLPreview: React.FC = () => {
           isFullScreenView && moduleStyles.fullScreenPreviewContainer
         )}
       >
-        <HTMLPreviewHeader
-          value={inputValue}
-          onChange={setInputValue}
-          onSubmit={handleUrlSubmit}
-          canNavigateBack={canNavigateBack}
-          canNavigateForward={canNavigateForward}
-          onNavigateBack={onNavigateBack}
-          onNavigateForward={onNavigateForward}
-          onRefresh={onRefresh}
-          onToggleFullScreen={toggleFullScreen}
-          previewViewMode={previewViewMode}
-          setPreviewViewMode={setPreviewViewMode}
-          onStopPreview={onStopPreview}
-          isStopEnabled={!isStopped}
-          fetchFileSearchOptions={fetchHtmlFileOptions}
-        />
+        {!widget2 && (
+          <HTMLPreviewHeader
+            value={inputValue}
+            onChange={setInputValue}
+            onSubmit={handleUrlSubmit}
+            canNavigateBack={canNavigateBack}
+            canNavigateForward={canNavigateForward}
+            onNavigateBack={onNavigateBack}
+            onNavigateForward={onNavigateForward}
+            onRefresh={onRefresh}
+            onToggleFullScreen={toggleFullScreen}
+            previewViewMode={previewViewMode}
+            setPreviewViewMode={setPreviewViewMode}
+            onStopPreview={onStopPreview}
+            isStopEnabled={!isStopped}
+            fetchFileSearchOptions={fetchHtmlFileOptions}
+          />
+        )}
         {isEmptyProject ? (
           <PreviewEmptyState />
         ) : isStopped ? (

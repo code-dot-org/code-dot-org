@@ -14,6 +14,7 @@ export interface Weblab2LevelProperties extends LevelProperties {
   widgetView?: boolean;
   initialViewMode?: ViewMode;
   aiTutorMode?: string;
+  levelSystemPrompt?: string;
   aiTutorPromptSettings?: AiTutorPromptSettings;
   widget2?: Widget2;
 }
