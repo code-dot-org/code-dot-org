@@ -1,22 +1,26 @@
 import {Typography} from '@mui/material';
 import React, {FC, useState} from 'react';
 
-import PracticeOptions from './PracticeOptions';
-
-import styles from '@cdo/apps/aiTutor/views/lessonPractice/lesson-practice-ai-tutor.module.scss';
+import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
+
 import {baseModelParameters} from '../../hooks/useAiTutorModelParameters';
+
+import GenericStudentLessonSummary from './GenericStudentLessonSummary';
+import PracticeOptions from './PracticeOptions';
 import VocabularyFlashcards from './VocabularyFlashcards';
 
-type PracticeOption = 'summary' | 'flashcards' | 'chat';
+import styles from '@cdo/apps/aiTutor/views/lessonPractice/lesson-practice-ai-tutor.module.scss';
+
+type PracticeOption = 'summary' | 'flashcards' | 'chat' | null;
 
 export const LessonPractice: FC<{
   lessonName: string;
+  lessonSummary: string;
   vocabulary: {id: string; word: string; definition: string}[];
-}> = ({lessonName, vocabulary}) => {
+}> = ({lessonName, lessonSummary, vocabulary}) => {
   const [selectedOption, setSelectedOption] = useState<PracticeOption | null>(
     null
   );
@@ -36,15 +40,20 @@ export const LessonPractice: FC<{
       <PracticeOptions
         selectedOption={selectedOption || ''}
         onChange={option => setSelectedOption(option as PracticeOption)}
+        showVocabularyOption={vocabulary.length > 0}
       />
-      {/* {selectedOption === 'summary' && <GenericStudentLessonSummary />} */}
-      {selectedOption === 'flashcards' && (
+      {selectedOption === 'summary' && (
+        <GenericStudentLessonSummary lessonSummary={lessonSummary} />
+      )}
+      {selectedOption === 'flashcards' && vocabulary.length > 0 && (
         <VocabularyFlashcards vocabulary={vocabulary} />
       )}
-      <ChatWorkspace
-        modelParameters={baseModelParameters}
-        clientType={AiChatClientTypes.AI_TUTOR}
-      />
+      {selectedOption === 'chat' && (
+        <ChatWorkspace
+          modelParameters={baseModelParameters}
+          clientType={AiChatClientTypes.AI_TUTOR}
+        />
+      )}
     </>
   );
 };

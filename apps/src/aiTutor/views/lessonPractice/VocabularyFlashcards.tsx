@@ -1,4 +1,3 @@
-import React, {FC, useMemo, useState} from 'react';
 import {
   Box,
   Card,
@@ -11,6 +10,7 @@ import {
   Collapse,
   IconButton,
 } from '@mui/material';
+import React, {FC, useMemo, useState} from 'react';
 
 type VocabularyItem = {id: string; word: string; definition: string};
 

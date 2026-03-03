@@ -13,6 +13,7 @@ $(document).ready(() => {
     <Provider store={getStore()}>
       <LessonPractice
         lessonName={lessonPracticeData.lessonName}
+        lessonSummary={lessonPracticeData.lessonSummary}
         vocabulary={lessonPracticeData.vocabulary}
       />
     </Provider>,

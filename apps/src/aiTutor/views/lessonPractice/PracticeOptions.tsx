@@ -5,19 +5,29 @@ import SuggestedPrompts from '@cdo/apps/aiComponentLibrary/suggestedPrompt/Sugge
 const PracticeOptions: FC<{
   selectedOption: string;
   onChange: (option: string) => void;
-}> = ({selectedOption, onChange}) => {
+  showVocabularyOption: boolean;
+}> = ({selectedOption, onChange, showVocabularyOption}) => {
   const practiceOptions = [
     {
       value: 'summary',
       label: 'Summarize Lesson',
       icon: 'file-lines',
       prompt: 'Summarize the main points of the lesson.',
+      show: true,
     },
     {
       value: 'flashcards',
       label: 'Vocabulary Flashcards',
       icon: 'cards-blank',
       prompt: 'Create flashcards for the vocabulary words.',
+      show: showVocabularyOption,
+    },
+    {
+      value: 'chat',
+      label: 'Chat with Tutor',
+      icon: 'comment',
+      prompt: 'I want to chat with the tutor about the lesson.',
+      show: true,
     },
   ];
 
@@ -30,10 +40,11 @@ const PracticeOptions: FC<{
         suggestedPrompts={practiceOptions.map(option => ({
           label: option.label,
           onClick: onClick(option.value),
-          show: true,
+          show: option.show,
           selected: selectedOption === option.value,
           icon: option.icon,
         }))}
+        canToggle={true}
       />
     </>
   );

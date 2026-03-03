@@ -100,6 +100,7 @@ class LessonsController < ApplicationController
     end
     @lesson_practice_data = {
       lessonName: @lesson.localized_name,
+      lessonSummary: @lesson.properties['student_overview'] ||'',
       vocabulary: @lesson.vocabularies.map {|v| {id: v.id, word: v.word, definition: v.definition}},
     }
   end
