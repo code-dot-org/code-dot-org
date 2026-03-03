@@ -2,6 +2,7 @@ import {Order} from 'blockly/javascript';
 
 import CdoFieldImage from '@cdo/apps/blockly/addons/cdoFieldImage';
 import CdoFieldLabel from '@cdo/apps/blockly/addons/cdoFieldLabel';
+import CdoFieldVariable from '@cdo/apps/blockly/addons/cdoFieldVariable';
 import FunctionEditor from '@cdo/apps/blockly/addons/functionEditor';
 import {BLOCK_TYPES, NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
 import {blocks as behaviorBlocks} from '@cdo/apps/blockly/customBlocks/behaviorBlocks';
@@ -285,7 +286,7 @@ const customInputTypes = {
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(
-          new Blockly.FieldVariable(
+          new CdoFieldVariable(
             null,
             null,
             null,
@@ -438,7 +439,7 @@ const customInputTypes = {
     addInput(blockly, block, inputConfig, currentInputRow) {
       currentInputRow
         .appendField(inputConfig.label)
-        .appendField(new Blockly.FieldVariable(), inputConfig.name);
+        .appendField(new CdoFieldVariable(), inputConfig.name);
     },
 
     generateCode(block, arg) {
@@ -630,7 +631,7 @@ export default {
           .appendField(
             Blockly.disableVariableEditing
               ? fieldLabel
-              : new Blockly.FieldVariable(
+              : new CdoFieldVariable(
                   Blockly.Msg.VARIABLES_SET_ITEM,
                   null,
                   null,

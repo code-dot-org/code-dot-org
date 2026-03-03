@@ -12,6 +12,7 @@ import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
 import CdoFieldImage from '@cdo/apps/blockly/addons/cdoFieldImage';
 import {CdoFieldImageDropdown} from '@cdo/apps/blockly/addons/cdoFieldImageDropdown';
 import CdoFieldLabel from '@cdo/apps/blockly/addons/cdoFieldLabel';
+import CdoFieldVariable from '@cdo/apps/blockly/addons/cdoFieldVariable';
 import {
   addSerializationHooksToBlock,
   interpolateMsg,
@@ -3202,7 +3203,7 @@ exports.install = function (blockly, blockInstallOptions) {
         .appendField(
           Blockly.disableVariableEditing
             ? fieldLabel
-            : new Blockly.FieldVariable(Blockly.Msg.VARIABLES_GET_ITEM),
+            : new CdoFieldVariable(Blockly.Msg.VARIABLES_GET_ITEM),
           'VAR'
         )
         .appendField(Blockly.Msg.VARIABLES_GET_TAIL);

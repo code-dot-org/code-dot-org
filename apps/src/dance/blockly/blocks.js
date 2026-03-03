@@ -1,6 +1,7 @@
 import CdoFieldImage from '@cdo/apps/blockly/addons/cdoFieldImage';
 import {CdoFieldImageDropdown} from '@cdo/apps/blockly/addons/cdoFieldImageDropdown';
 import CdoFieldLabel from '@cdo/apps/blockly/addons/cdoFieldLabel';
+import CdoFieldVariable from '@cdo/apps/blockly/addons/cdoFieldVariable';
 import FunctionEditor from '@cdo/apps/blockly/addons/functionEditor';
 import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {registerCustomProcedureBlocks} from '@cdo/apps/blockly/utils';
@@ -52,7 +53,7 @@ const customInputTypes = {
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(
-          new Blockly.FieldVariable(
+          new CdoFieldVariable(
             null,
             null,
             null,
@@ -178,7 +179,7 @@ export default {
           .appendField(
             Blockly.disableVariableEditing
               ? fieldLabel
-              : new Blockly.FieldVariable(
+              : new CdoFieldVariable(
                   Blockly.Msg.VARIABLES_SET_ITEM,
                   null,
                   null,

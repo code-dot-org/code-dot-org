@@ -1,6 +1,7 @@
 import * as BlocklyCore from 'blockly/core';
 import _ from 'lodash';
 
+import CdoFieldVariable from '@cdo/apps/blockly/addons/cdoFieldVariable';
 import {
   updatePointerBlockImage,
   updatePointerBlockWarning,
@@ -635,7 +636,7 @@ const STANDARD_INPUT_TYPES = {
       // Add the variable field to the block
       currentInputRow
         .appendField(inputConfig.label)
-        .appendField(new Blockly.FieldVariable(null), inputConfig.name);
+        .appendField(new CdoFieldVariable(null), inputConfig.name);
     },
     generateCode(block, inputConfig) {
       return Blockly.JavaScript.translateVarName(
