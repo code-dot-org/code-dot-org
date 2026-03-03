@@ -39,17 +39,7 @@ Bundler.require(:default, Rails.env)
 module Dashboard
   class Application < Rails::Application
     # Explicitly load appropriate defaults for this version of Rails.
-    config.load_defaults 6.1
-
-    # Manually configure some values to match defaults for the next version of
-    # Rails; see config/initializers/new_framework_defaults_7_0.rb and
-    # https://guides.rubyonrails.org/v7.0/upgrading_ruby_on_rails.html#new-activesupport-cache-serialization-format
-    # for more.
-    # TODO infra: remove these values once we're loading defaults for 7.0 above
-    config.action_controller.raise_on_open_redirects = true
-    config.active_support.disable_to_s_conversion = true
-    config.active_support.executor_around_test_case = true
-    config.active_support.cache_format_version = 7.0
+    config.load_defaults 7.0
 
     # Convert cookies from old (:marshall) to new (:json) default format
     # TODO infra: remove this override after 40 days in production (as
