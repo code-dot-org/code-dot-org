@@ -32,6 +32,7 @@ import {
 import commonMsg from '@cdo/locale';
 
 import blockUtils from '../block_utils';
+import CdoFieldImage from '../blockly/addons/cdoFieldImage';
 import {BlockStyles} from '../blockly/constants';
 
 import msg from './locale';
@@ -100,7 +101,7 @@ exports.install = function (blockly, blockInstallOptions) {
                 fixedSize: {width: 12, height: 18},
               })
             )
-            .appendField(new blockly.FieldImage(directionConfig.image));
+            .appendField(new CdoFieldImage(directionConfig.image));
           this.setPreviousStatement(true);
           this.setNextStatement(true);
           this.setTooltip(directionConfig.tooltip);
@@ -400,7 +401,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setStyle(BlockStyles.LOOP);
       this.appendDummyInput()
         .appendField(msg.repeatUntil())
-        .appendField(new blockly.FieldImage(skin.maze_forever, 35, 35));
+        .appendField(new CdoFieldImage(skin.maze_forever, 35, 35));
       this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setTooltip(msg.whileTooltip());

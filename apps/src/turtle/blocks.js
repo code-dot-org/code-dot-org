@@ -24,13 +24,15 @@
 
 import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {
-  registerCustomProcedureBlocks,
-  numberValidator,
   interpolateMsg,
+  numberValidator,
+  registerCustomProcedureBlocks,
 } from '@cdo/apps/blockly/utils';
 import commonMsg from '@cdo/locale';
 
 import {setAngleHelperOptions} from '../blockly/addons/cdoAngleHelperOptions';
+import CdoFieldImage from '../blockly/addons/cdoFieldImage';
+import {CdoFieldImageDropdown} from '../blockly/addons/cdoFieldImageDropdown';
 import {Position} from '../constants';
 
 import Colours from './colours';
@@ -978,20 +980,20 @@ exports.install = function (blockly, blockInstallOptions) {
 
           if (directionConfig.imageDimensions) {
             input.appendField(
-              new blockly.FieldImage(
+              new CdoFieldImage(
                 directionConfig.image,
                 directionConfig.imageDimensions.width,
                 directionConfig.imageDimensions.height
               )
             );
           } else {
-            input.appendField(new blockly.FieldImage(directionConfig.image));
+            input.appendField(new CdoFieldImage(directionConfig.image));
           }
           this.setPreviousStatement(true);
           this.setNextStatement(true);
           this.setTooltip(directionConfig.tooltip);
           if (hasLengthInput) {
-            var dropdown = new blockly.FieldImageDropdown(
+            var dropdown = new CdoFieldImageDropdown(
               directionConfig.lengths,
               directionConfig.imageDimensions.width,
               directionConfig.imageDimensions.height
@@ -1384,7 +1386,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendDummyInput()
         .appendField(msg.setPattern())
         .appendField(
-          new blockly.FieldImageDropdown(skin.lineStylePatternOptions, 150, 20),
+          new CdoFieldImageDropdown(skin.lineStylePatternOptions, 150, 20),
           'VALUE'
         );
       this.setTooltip(msg.setPattern());
@@ -1470,7 +1472,7 @@ exports.install = function (blockly, blockInstallOptions) {
           var url = skin.stickers[name];
           values.push([url, name]);
         }
-        dropdown = new blockly.FieldImageDropdown(values, 40, 40);
+        dropdown = new CdoFieldImageDropdown(values, 40, 40);
 
         input.appendField(dropdown, 'VALUE');
 
@@ -1558,7 +1560,7 @@ exports.install = function (blockly, blockInstallOptions) {
           var url = skin[shapeNames][name];
           values.push([url, name]);
         }
-        dropdown = new blockly.FieldImageDropdown(values, 40, 40);
+        dropdown = new CdoFieldImageDropdown(values, 40, 40);
 
         input.appendField(dropdown, 'VALUE');
 

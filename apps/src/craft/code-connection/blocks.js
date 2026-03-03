@@ -1,3 +1,5 @@
+import {CdoFieldImageDropdown} from '@cdo/apps/blockly/addons/cdoFieldImageDropdown';
+
 import items from './items';
 
 var i18n = require('../locale');
@@ -1094,10 +1096,7 @@ export const install = (blockly, blockInstallOptions) => {
     init: function () {
       this.appendDummyInput()
         .appendField(new blockly.FieldLabel(i18n.itemTypeBlock()))
-        .appendField(
-          new blockly.FieldImageDropdown(items.blocks, 32, 32),
-          'BLOCK'
-        );
+        .appendField(new CdoFieldImageDropdown(items.blocks, 32, 32), 'BLOCK');
       this.setOutput(true, ITEM_TYPE);
     },
   };
@@ -1115,7 +1114,7 @@ export const install = (blockly, blockInstallOptions) => {
       this.appendDummyInput()
         .appendField(new blockly.FieldLabel(i18n.itemTypeMiscellaneous()))
         .appendField(
-          new blockly.FieldImageDropdown(items.miscellaneous, 32, 32),
+          new CdoFieldImageDropdown(items.miscellaneous, 32, 32),
           'ITEM'
         );
       this.setOutput(true, ITEM_TYPE);
@@ -1135,7 +1134,7 @@ export const install = (blockly, blockInstallOptions) => {
       this.appendDummyInput()
         .appendField(new blockly.FieldLabel(i18n.itemTypeDecoration()))
         .appendField(
-          new blockly.FieldImageDropdown(items.decorations, 32, 32),
+          new CdoFieldImageDropdown(items.decorations, 32, 32),
           'ITEM'
         );
       this.setOutput(true, ITEM_TYPE);
@@ -1154,10 +1153,7 @@ export const install = (blockly, blockInstallOptions) => {
     init: function () {
       this.appendDummyInput()
         .appendField(new blockly.FieldLabel(i18n.itemTypeTool()))
-        .appendField(
-          new blockly.FieldImageDropdown(items.tools, 32, 32),
-          'ITEM'
-        );
+        .appendField(new CdoFieldImageDropdown(items.tools, 32, 32), 'ITEM');
       this.setOutput(true, ITEM_TYPE);
     },
   };

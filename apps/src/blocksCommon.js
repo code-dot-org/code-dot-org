@@ -5,6 +5,7 @@
 import {nonnegativeIntegerValidator} from '@cdo/apps/blockly/utils';
 import commonMsg from '@cdo/locale';
 
+import CdoFieldImage from './blockly/addons/cdoFieldImage';
 import {BLOCK_TYPES, BlockColors, BlockStyles} from './blockly/constants';
 import {
   addSerializationHooksToBlock,
@@ -58,7 +59,7 @@ function installControlsRepeatSimplified(blockly, skin) {
           'TIMES'
         );
       this.appendStatementInput('DO').appendField(
-        new blockly.FieldImage(skin.repeatImage)
+        new CdoFieldImage(skin.repeatImage)
       );
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -77,7 +78,7 @@ function installControlsRepeatSimplified(blockly, skin) {
         )
         .appendField(new blockly.FieldDropdown(), 'TIMES');
       this.appendStatementInput('DO').appendField(
-        new blockly.FieldImage(skin.repeatImage)
+        new CdoFieldImage(skin.repeatImage)
       );
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -205,7 +206,7 @@ function installWhenRun(blockly, skin, isK1) {
       if (isK1) {
         this.appendDummyInput()
           .appendField(commonMsg.whenRun())
-          .appendField(new blockly.FieldImage(skin.runArrow, 22, 26));
+          .appendField(new CdoFieldImage(skin.runArrow, 22, 26));
       } else {
         this.appendDummyInput().appendField(commonMsg.whenRun());
       }

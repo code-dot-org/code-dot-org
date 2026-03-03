@@ -17,6 +17,8 @@ import {
 } from '@cdo/apps/blockly/utils/fields/miniToolbox';
 import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
 
+import CdoFieldDropdown from './blockly/addons/cdoFieldDropdown';
+import CdoFieldImage from './blockly/addons/cdoFieldImage';
 import MetricsReporter from './metrics/MetricsReporter';
 import xml from './xml';
 
@@ -190,7 +192,7 @@ exports.generateSimpleBlock = function (blockly, generator, options) {
         input.appendField(title);
       }
       if (titleImage) {
-        input.appendField(new blockly.FieldImage(titleImage));
+        input.appendField(new CdoFieldImage(titleImage));
       }
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -581,7 +583,7 @@ const STANDARD_INPUT_TYPES = {
         currentInputRow
           .appendField(inputConfig.label)
           .appendField(
-            new Blockly.FieldImage(
+            new CdoFieldImage(
               Blockly.assetUrl(inputConfig.customOptions.assetUrl),
               inputConfig.customOptions.width,
               inputConfig.customOptions.height
@@ -604,7 +606,7 @@ const STANDARD_INPUT_TYPES = {
   [DROPDOWN_INPUT]: {
     addInput(blockly, block, inputConfig, currentInputRow) {
       const options = sanitizeOptions(inputConfig.options);
-      const dropdown = new blockly.FieldDropdown(options);
+      const dropdown = new CdoFieldDropdown(options);
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(dropdown, inputConfig.name);

@@ -1,3 +1,5 @@
+import {CdoFieldImageDropdown} from '../blockly/addons/cdoFieldImageDropdown';
+
 /**
  * Blockly App: Bounce
  *
@@ -510,7 +512,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.bounce_setPaddleDropdown = {
     helpUrl: '',
     init: function () {
-      var dropdown = new blockly.FieldImageDropdown(this.VALUES, 54, 61);
+      var dropdown = new CdoFieldImageDropdown(this.VALUES, 54, 61);
       if (this.VALUES.length > 1) {
         dropdown.setValue(this.VALUES[1][1]);
       }

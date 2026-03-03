@@ -15,24 +15,26 @@ import {
 } from '@cdo/apps/blockly/utils';
 import commonMsg from '@cdo/locale';
 
+import CdoFieldImage from '../blockly/addons/cdoFieldImage';
+import {CdoFieldImageDropdown} from '../blockly/addons/cdoFieldImageDropdown';
 import {BlockStyles} from '../blockly/constants';
 import {singleton as studioApp} from '../StudioApp';
 import {stripQuotes, valueOr} from '../utils';
 
 import {
-  CardinalDirections,
-  Direction,
-  Emotions,
-  Position,
   BEHAVIOR_CHASE,
   BEHAVIOR_FLEE,
   BEHAVIOR_WANDER,
+  CardinalDirections,
   CLICK_VALUE,
+  Direction,
+  Emotions,
   EMPTY_QUOTES,
   HIDDEN_VALUE,
+  IMAGE_SIZES,
+  Position,
   RANDOM_VALUE,
   VISIBLE_VALUE,
-  IMAGE_SIZES,
 } from './constants';
 import i18n from './locale';
 import paramLists from './paramLists';
@@ -179,7 +181,7 @@ exports.install = function (blockly, blockInstallOptions) {
 
   /**
    * Creates a dropdown with thumbnails for each starting sprite
-   * @returns {Blockly.FieldImageDropdown}
+   * @returns {CdoFieldImageDropdown}
    */
   function startingSpriteImageDropdown() {
     var spriteNumbers = _.range(0, spriteCount);
@@ -187,7 +189,7 @@ exports.install = function (blockly, blockInstallOptions) {
       var skinId = startAvatars[index];
       return [skin[skinId].dropdownThumbnail, index.toString()];
     });
-    return new blockly.FieldImageDropdown(
+    return new CdoFieldImageDropdown(
       choices,
       skin.dropdownThumbnailWidth,
       skin.dropdownThumbnailHeight
@@ -281,7 +283,7 @@ exports.install = function (blockly, blockInstallOptions) {
       if (isK1) {
         this.appendDummyInput()
           .appendField(commonMsg.when())
-          .appendField(new Blockly.FieldImage(skin.whenLeft));
+          .appendField(new CdoFieldImage(skin.whenLeft));
       } else {
         this.appendDummyInput().appendField(msg.whenLeft());
       }
@@ -302,7 +304,7 @@ exports.install = function (blockly, blockInstallOptions) {
       if (isK1) {
         this.appendDummyInput()
           .appendField(commonMsg.when())
-          .appendField(new Blockly.FieldImage(skin.whenRight));
+          .appendField(new CdoFieldImage(skin.whenRight));
       } else {
         this.appendDummyInput().appendField(msg.whenRight());
       }
@@ -323,7 +325,7 @@ exports.install = function (blockly, blockInstallOptions) {
       if (isK1) {
         this.appendDummyInput()
           .appendField(commonMsg.when())
-          .appendField(new Blockly.FieldImage(skin.whenUp));
+          .appendField(new CdoFieldImage(skin.whenUp));
       } else {
         this.appendDummyInput().appendField(msg.whenUp());
       }
@@ -344,7 +346,7 @@ exports.install = function (blockly, blockInstallOptions) {
       if (isK1) {
         this.appendDummyInput()
           .appendField(commonMsg.when())
-          .appendField(new Blockly.FieldImage(skin.whenDown));
+          .appendField(new CdoFieldImage(skin.whenDown));
       } else {
         this.appendDummyInput().appendField(msg.whenDown());
       }
@@ -365,7 +367,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendDummyInput().appendField(commonMsg.when());
       if (isK1) {
         this.appendDummyInput().appendField(
-          new blockly.FieldImageDropdown(
+          new CdoFieldImageDropdown(
             this.K1_VALUES,
             IMAGE_SIZES.K1_ARROW_KEY.width,
             IMAGE_SIZES.K1_ARROW_KEY.height,
@@ -413,7 +415,7 @@ exports.install = function (blockly, blockInstallOptions) {
       if (isK1) {
         this.appendDummyInput().appendField(commonMsg.repeat());
         this.appendStatementInput('DO').appendField(
-          new blockly.FieldImage(skin.repeatImage)
+          new CdoFieldImage(skin.repeatImage)
         );
       } else {
         this.appendDummyInput().appendField(msg.repeatForever());
@@ -442,7 +444,7 @@ exports.install = function (blockly, blockInstallOptions) {
         if (isK1) {
           this.appendDummyInput()
             .appendField(commonMsg.when())
-            .appendField(new blockly.FieldImage(skin.clickIcon))
+            .appendField(new CdoFieldImage(skin.clickIcon))
             .appendField(startingSpriteImageDropdown(), 'SPRITE');
         } else {
           this.appendDummyInput().appendField(
@@ -454,9 +456,9 @@ exports.install = function (blockly, blockInstallOptions) {
         if (isK1) {
           this.appendDummyInput()
             .appendField(commonMsg.when())
-            .appendField(new blockly.FieldImage(skin.clickIcon))
+            .appendField(new CdoFieldImage(skin.clickIcon))
             .appendField(
-              new blockly.FieldImage(
+              new CdoFieldImage(
                 skin[startAvatars[0]].dropdownThumbnail,
                 skin.dropdownThumbnailWidth,
                 skin.dropdownThumbnailHeight
@@ -610,7 +612,7 @@ exports.install = function (blockly, blockInstallOptions) {
         dropdown2 = startingSpriteImageDropdown();
         this.appendDummyInput()
           .appendField(commonMsg.when())
-          .appendField(new blockly.FieldImage(skin.collide))
+          .appendField(new CdoFieldImage(skin.collide))
           .appendField(dropdown1, 'SPRITE1');
         this.appendDummyInput()
           .appendField(commonMsg.and())
@@ -1274,7 +1276,7 @@ exports.install = function (blockly, blockInstallOptions) {
           this.setStyle(BlockStyles.DEFAULT);
           this.appendDummyInput()
             .appendField(msg.moveSprite()) // move
-            .appendField(new blockly.FieldImage(directionConfig.image)) // arrow
+            .appendField(new CdoFieldImage(directionConfig.image)) // arrow
             .appendField(directionConfig.letter); // NESW
 
           if (spriteCount > 1) {
@@ -1286,7 +1288,7 @@ exports.install = function (blockly, blockInstallOptions) {
 
           if (hasLengthInput) {
             this.appendDummyInput().appendField(
-              new blockly.FieldImageDropdown(
+              new CdoFieldImageDropdown(
                 SimpleMove.DISTANCES,
                 IMAGE_SIZES.K1_MOVE_LINE.width,
                 IMAGE_SIZES.K1_MOVE_LINE.height
@@ -1360,7 +1362,7 @@ exports.install = function (blockly, blockInstallOptions) {
 
       if (isK1) {
         this.appendDummyInput().appendField(
-          new blockly.FieldImageDropdown(
+          new CdoFieldImageDropdown(
             this.K1_DIR,
             IMAGE_SIZES.K1_DIR.width,
             IMAGE_SIZES.K1_DIR.height,
@@ -1437,7 +1439,7 @@ exports.install = function (blockly, blockInstallOptions) {
 
       if (isK1) {
         this.appendDummyInput().appendField(
-          new blockly.FieldImageDropdown(
+          new CdoFieldImageDropdown(
             this.K1_DIR,
             IMAGE_SIZES.K1_DIR.width,
             IMAGE_SIZES.K1_DIR.height,
@@ -1462,7 +1464,7 @@ exports.install = function (blockly, blockInstallOptions) {
       } else {
         if (isK1) {
           this.appendDummyInput().appendField(
-            new blockly.FieldImageDropdown(
+            new CdoFieldImageDropdown(
               this.K1_DISTANCE,
               IMAGE_SIZES.K1_MOVE_LINE.width,
               IMAGE_SIZES.K1_MOVE_LINE.height
@@ -1698,7 +1700,7 @@ exports.install = function (blockly, blockInstallOptions) {
       if (isK1) {
         this.appendDummyInput()
           .appendField(commonMsg.play())
-          .appendField(new blockly.FieldImage(skin.soundIcon))
+          .appendField(new CdoFieldImage(skin.soundIcon))
           .appendField(
             new blockly.FieldDropdown(this.soundChoices(), onSoundSelected),
             'SOUND'
@@ -1747,7 +1749,7 @@ exports.install = function (blockly, blockInstallOptions) {
       if (isK1) {
         this.appendDummyInput()
           .appendField(commonMsg.score())
-          .appendField(new blockly.FieldImage(skin.scoreCard));
+          .appendField(new CdoFieldImage(skin.scoreCard));
       } else {
         this.appendDummyInput().appendField(
           new blockly.FieldDropdown(this.VALUES),
@@ -2029,7 +2031,7 @@ exports.install = function (blockly, blockInstallOptions) {
       }
 
       if (isK1) {
-        var fieldImageDropdown = new blockly.FieldImageDropdown(
+        var fieldImageDropdown = new CdoFieldImageDropdown(
           this.K1_VALUES,
           IMAGE_SIZES.K1_SPEEDS.width,
           IMAGE_SIZES.K1_SPEEDS.height
@@ -2455,7 +2457,7 @@ exports.install = function (blockly, blockInstallOptions) {
       var dropdown;
       if (isK1) {
         this.VALUES = skin.backgroundChoicesK1;
-        dropdown = new blockly.FieldImageDropdown(
+        dropdown = new CdoFieldImageDropdown(
           skin.backgroundChoicesK1,
           skin.dropdownThumbnailWidth,
           skin.dropdownThumbnailHeight
@@ -2601,23 +2603,23 @@ exports.install = function (blockly, blockInstallOptions) {
         this.appendDummyInput()
           .appendField(msg.showTitleScreenTitle())
           .appendField(
-            new Blockly.FieldImage(Blockly.assetUrl('media/quote0.png'), 12, 12)
+            new CdoFieldImage(Blockly.assetUrl('media/quote0.png'), 12, 12)
           )
           .appendField(
             new Blockly.FieldTextInput(msg.showTSDefTitle()),
             'TITLE'
           )
           .appendField(
-            new Blockly.FieldImage(Blockly.assetUrl('media/quote1.png'), 12, 12)
+            new CdoFieldImage(Blockly.assetUrl('media/quote1.png'), 12, 12)
           );
         this.appendDummyInput()
           .appendField(msg.showTitleScreenText())
           .appendField(
-            new Blockly.FieldImage(Blockly.assetUrl('media/quote0.png'), 12, 12)
+            new CdoFieldImage(Blockly.assetUrl('media/quote0.png'), 12, 12)
           )
           .appendField(new Blockly.FieldTextInput(msg.showTSDefText()), 'TEXT')
           .appendField(
-            new Blockly.FieldImage(Blockly.assetUrl('media/quote1.png'), 12, 12)
+            new CdoFieldImage(Blockly.assetUrl('media/quote1.png'), 12, 12)
           );
       }
       this.setPreviousStatement(true);
@@ -2830,7 +2832,7 @@ exports.install = function (blockly, blockInstallOptions) {
       }
 
       if (isK1) {
-        var fieldImageDropdown = new blockly.FieldImageDropdown(
+        var fieldImageDropdown = new CdoFieldImageDropdown(
           this.K1_VALUES,
           IMAGE_SIZES.K1_EMOTIONS.width,
           IMAGE_SIZES.K1_EMOTIONS.height
@@ -2942,17 +2944,15 @@ exports.install = function (blockly, blockInstallOptions) {
       } else {
         var quotedTextInput = this.appendDummyInput();
         if (isK1) {
-          quotedTextInput.appendField(
-            new Blockly.FieldImage(skin.speechBubble)
-          );
+          quotedTextInput.appendField(new CdoFieldImage(skin.speechBubble));
         }
         quotedTextInput
           .appendField(
-            new Blockly.FieldImage(Blockly.assetUrl('media/quote0.png'), 12, 12)
+            new CdoFieldImage(Blockly.assetUrl('media/quote0.png'), 12, 12)
           )
           .appendField(new Blockly.FieldTextInput(msg.defaultSayText()), 'TEXT')
           .appendField(
-            new Blockly.FieldImage(Blockly.assetUrl('media/quote1.png'), 12, 12)
+            new CdoFieldImage(Blockly.assetUrl('media/quote1.png'), 12, 12)
           );
       }
       if (options.time) {
@@ -3069,7 +3069,7 @@ exports.install = function (blockly, blockInstallOptions) {
           dropdown.setValue('1000');
           this.appendDummyInput()
             .appendField(msg.wait())
-            .appendField(new blockly.FieldImage(skin.clockIcon))
+            .appendField(new CdoFieldImage(skin.clockIcon))
             .appendField(dropdown, 'VALUE')
             .appendField(msg.waitSeconds());
         } else {
@@ -3188,11 +3188,11 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setInputsInline(true);
       this.appendDummyInput()
         .appendField(
-          new Blockly.FieldImage(Blockly.assetUrl('media/quote0.png'), 12, 12)
+          new CdoFieldImage(Blockly.assetUrl('media/quote0.png'), 12, 12)
         )
         .appendField(new Blockly.FieldTextInput(''), 'TEXT')
         .appendField(
-          new Blockly.FieldImage(Blockly.assetUrl('media/quote1.png'), 12, 12)
+          new CdoFieldImage(Blockly.assetUrl('media/quote1.png'), 12, 12)
         );
       this.appendDummyInput().appendField(msg.toSet());
       this.appendDummyInput()
@@ -3507,7 +3507,7 @@ function installVanish(
         this.appendDummyInput()
           .appendField(msg.vanish())
           .appendField(
-            new blockly.FieldImage(blockInstallOptions.skin.explosionThumbnail)
+            new CdoFieldImage(blockInstallOptions.skin.explosionThumbnail)
           )
           .appendField(startingSpriteImageDropdown(), 'SPRITE');
       } else {
@@ -3592,7 +3592,7 @@ function installConditionals(
       appendActorSelect(this, actorSelectDropdown);
 
       if (blockInstallOptions.isK1) {
-        const fieldImageDropdown = new blockly.FieldImageDropdown(
+        const fieldImageDropdown = new CdoFieldImageDropdown(
           K1_EMOTION_VALUES,
           IMAGE_SIZES.K1_EMOTIONS.width,
           IMAGE_SIZES.K1_EMOTIONS.height
