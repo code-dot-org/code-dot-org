@@ -1897,7 +1897,7 @@
   "ltiSectionSyncDialogDescriptionNoChange": "You're all set! Your sections & students are already up to date.\n\nYou can re-sync your sections at any time. Learn more [about syncing here]({aboutSyncingUrl})",
   "ltiSectionSyncDialogError": "We encountered an error when trying to sync with your LMS.",
   "ltiSectionSyncDialogErrorCode": "Error Code: {code}",
-  "ltiSectionSyncDialogErrorNoCourseFound": "We couldn't find your course. Please try launching Code.org from your LMS again.",
+  "ltiSectionSyncDialogErrorSyncError": "We encountered an error syncing your sections.",
   "ltiSectionSyncDialogErrorNoIntegration": "LTI Integration not found",
   "ltiSectionSyncDialogErrorNoSectionFound": "We couldn't find the given section.",
   "ltiSectionSyncDialogErrorWrongContext": "Sorry, looks like you are attempting to sync a course or section from the wrong place. Please launch the Code.org Integration from inside the course or section you would like to sync. Read more about supported placements [here]({url}).",

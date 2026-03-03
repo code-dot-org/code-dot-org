@@ -318,6 +318,7 @@ class LtiV1Controller < ApplicationController
       # Populate vars from the request params.
       begin
         lti_integration = LtiIntegration.find(params[:lti_integration_id])
+        return render_sync_course_error('User not associated with LTI Integration', :forbidden, 'nrps_error') unless validate_integration_membership(lti_integration, current_user)
       rescue
         return render_sync_course_error('LTI Integration not found', :bad_request, 'no_integration')
       end
@@ -456,5 +457,9 @@ class LtiV1Controller < ApplicationController
       event_name: 'lti_account_linking_page_visit',
       metadata: metadata,
     )
+  end
+
+  private def validate_integration_membership(integration, user)
+    user.lti_user_identities&.find_by(lti_integration_id: integration.id).present?
   end
 end
