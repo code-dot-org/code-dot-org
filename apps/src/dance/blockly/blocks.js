@@ -1,3 +1,5 @@
+import CdoFieldImage from '@cdo/apps/blockly/addons/cdoFieldImage';
+import {CdoFieldImageDropdown} from '@cdo/apps/blockly/addons/cdoFieldImageDropdown';
 import FunctionEditor from '@cdo/apps/blockly/addons/functionEditor';
 import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {registerCustomProcedureBlocks} from '@cdo/apps/blockly/utils';
@@ -108,7 +110,7 @@ const customInputTypes = {
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(
-          new Blockly.FieldImageDropdown(options, 40, 40),
+          new CdoFieldImageDropdown(options, 40, 40),
           inputConfig.name
         );
     },
@@ -121,7 +123,11 @@ const customInputTypes = {
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(
-          new Blockly.FieldImage(getGeneratedDancerHeadUrl(), 40, 40),
+          new CdoFieldImage(
+            [[getGeneratedDancerHeadUrl(), GENERATED_DANCER]],
+            40,
+            40
+          ),
           inputConfig.name
         );
     },

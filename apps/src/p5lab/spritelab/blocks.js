@@ -1,5 +1,6 @@
 import {Order} from 'blockly/javascript';
 
+import CdoFieldImage from '@cdo/apps/blockly/addons/cdoFieldImage';
 import FunctionEditor from '@cdo/apps/blockly/addons/functionEditor';
 import {BLOCK_TYPES, NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
 import {blocks as behaviorBlocks} from '@cdo/apps/blockly/customBlocks/behaviorBlocks';
@@ -253,7 +254,7 @@ const customInputTypes = {
       currentInputRow
         .appendField(label)
         .appendField(
-          new Blockly.FieldImage(imageUrl, width, block.thumbnailSize),
+          new CdoFieldImage(imageUrl, width, block.thumbnailSize),
           inputConfig.name
         );
     },
