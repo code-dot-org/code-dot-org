@@ -89,6 +89,21 @@ class LessonsController < ApplicationController
     @script_name = script.name
   end
 
+  # GET /s/:script_name_or_id/lessons/:lesson_position/practice
+  # GET /courses/:course_course_name/units/:unit_position/lessons/:lesson_position/practice
+  def practice
+    unit_context = get_unit_context(params)
+    script = unit_context[:unit]
+
+    @lesson = script.lessons.find do |l|
+      l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
+    end
+    @lesson_practice_data = {
+      lessonName: @lesson.localized_name,
+      vocabulary: @lesson.vocabularies.map {|v| {id: v.id, word: v.word, definition: v.definition}},
+    }
+  end
+
   # GET /s/:script_name_or_id/lessons/:lesson_position/edit
   # GET /courses/:course_course_name/units/:unit_position/lessons/:lesson_position/edit
   def edit_with_lesson_position
