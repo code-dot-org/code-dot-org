@@ -1,6 +1,5 @@
-import Button from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React, {useState, useRef} from 'react';
 
 import {
@@ -135,18 +134,24 @@ const AiEvaluationFeedbackModal: React.FC<AiEvaluationFeedbackModalProps> = ({
           renderOptionsForStudentAiInteractionFeedback()}
         <hr />
         <div className={style.feedbackPortalButtonContainer}>
-          <Button
+          <MuiButton
+            variant="outlined"
+            color="secondary"
+            size="medium"
             onClick={closeModalHandler}
-            type="secondary"
-            color="black"
-            text={i18n.closeDialog()}
-          />
-          <Button
+            type="button"
+          >
+            {i18n.closeDialog()}
+          </MuiButton>
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
             onClick={handleSubmitButtonClick}
-            type="primary"
-            color="purple"
-            text={i18n.aiFeedbackSubmit()}
-          />
+            type="button"
+          >
+            {i18n.aiFeedbackSubmit()}
+          </MuiButton>
         </div>
       </div>
     </AccessibleDialog>

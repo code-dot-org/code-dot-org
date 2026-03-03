@@ -1,6 +1,6 @@
 import Alert from '@code-dot-org/component-library/alert';
-import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
@@ -571,23 +571,25 @@ const VersionHistoryPanel: React.FunctionComponent<
                 return (
                   <React.Fragment key={`group-${groupIndex}`}>
                     {hasMultipleVersions && !alwaysShowAutoSaves && (
-                      <Button
+                      <MuiButton
+                        variant="text"
+                        color="secondary"
+                        size="extraSmall"
                         className={moduleStyles.collapseButton}
-                        text={
-                          isCollapsed
-                            ? `Show ${versions.length} auto-saves`
-                            : `Hide ${versions.length} auto-saves`
-                        }
-                        iconLeft={{
-                          iconName: isCollapsed ? 'angles-down' : 'angles-up',
-                        }}
-                        color="black"
-                        size="xs"
-                        type="tertiary"
-                        aria-expanded={!isCollapsed}
                         onClick={() => toggleGroupCollapsed(groupIndex)}
+                        type="button"
                         disabled={disabled}
-                      />
+                        aria-expanded={!isCollapsed}
+                        startIcon={
+                          <FontAwesomeV6Icon
+                            iconName={isCollapsed ? 'angles-down' : 'angles-up'}
+                          />
+                        }
+                      >
+                        {isCollapsed
+                          ? `Show ${versions.length} auto-saves`
+                          : `Hide ${versions.length} auto-saves`}
+                      </MuiButton>
                     )}
                     {!isCollapsed &&
                       versions.map(version =>

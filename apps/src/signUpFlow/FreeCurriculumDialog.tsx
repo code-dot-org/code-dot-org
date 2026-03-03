@@ -1,5 +1,4 @@
-import Button from '@code-dot-org/component-library/button';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
@@ -43,11 +42,15 @@ const FreeCurriculumDialog: React.FunctionComponent<
           {locale.dedicated_to_expanding()}
         </Typography>
       </div>
-      <Button
+      <MuiButton
+        variant="contained"
+        color="primary"
+        size="small"
         onClick={closeModal}
-        size={'s'}
-        text={locale.return_to_signup()}
-      />
+        type="button"
+      >
+        {locale.return_to_signup()}
+      </MuiButton>
     </AccessibleDialog>
   ) : null;
 };
