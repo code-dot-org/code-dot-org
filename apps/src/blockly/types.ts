@@ -2,7 +2,6 @@ import {
   ObservableParameterModel,
   ObservableProcedureModel,
 } from '@blockly/block-shareable-procedures';
-import {FieldColour} from '@blockly/field-colour';
 import {KeyboardNavigation} from '@blockly/keyboard-navigation';
 import * as BlocklyCore from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
@@ -10,17 +9,6 @@ import {javascriptGenerator} from 'blockly/javascript';
 import BlockSvgFrame from './addons/blockSvgFrame';
 import BlockSvgLimitIndicator from './addons/blockSvgLimitIndicator';
 import CdoAngleHelper from './addons/cdoAngleHelper';
-import CdoFieldAngleDropdown from './addons/cdoFieldAngleDropdown';
-import CdoFieldAngleTextInput from './addons/cdoFieldAngleTextInput';
-import CdoFieldAnimationDropdown from './addons/cdoFieldAnimationDropdown';
-import CdoFieldBehaviorPicker from './addons/cdoFieldBehaviorPicker';
-import {CdoFieldBitmap} from './addons/cdoFieldBitmap';
-import CdoFieldButton from './addons/cdoFieldButton';
-import CdoFieldFlyout from './addons/cdoFieldFlyout';
-import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
-import CdoFieldParameter from './addons/cdoFieldParameter';
-import CdoFieldToggle from './addons/cdoFieldToggle';
-import CdoFieldVariable from './addons/cdoFieldVariable';
 import FunctionEditor from './addons/functionEditor';
 import WorkspaceSvgFrame from './addons/workspaceSvgFrame';
 import {BLOCK_TYPES, BlockStyles, Themes, WORKSPACE_EVENTS} from './constants';
@@ -114,18 +102,6 @@ export interface BlocklyWrapperType extends BlocklyCoreType {
   };
 
   AngleHelper: typeof CdoAngleHelper;
-  FieldAngleDropdown: typeof CdoFieldAngleDropdown;
-  FieldAngleTextInput: typeof CdoFieldAngleTextInput;
-  FieldBehaviorPicker: typeof CdoFieldBehaviorPicker;
-  FieldButton: typeof CdoFieldButton;
-  FieldImageDropdown: typeof CdoFieldImageDropdown;
-  FieldAnimationDropdown: typeof CdoFieldAnimationDropdown;
-  FieldToggle: typeof CdoFieldToggle;
-  FieldFlyout: typeof CdoFieldFlyout;
-  FieldBitmap: typeof CdoFieldBitmap;
-  FieldColour: typeof FieldColour;
-  FieldVariable: typeof CdoFieldVariable;
-  FieldParameter: typeof CdoFieldParameter;
   JavaScript: JavascriptGeneratorType;
   assetUrl: (path: string) => string;
   customSimpleDialog: (config: object) => void;
@@ -149,7 +125,7 @@ export interface BlocklyWrapperType extends BlocklyCoreType {
   wrapReadOnlyProperty: (propertyName: string) => void;
   wrapSettableProperty: (propertyName: string) => void;
   overrideFields: (
-    overrides: [string, string, BlocklyCore.fieldRegistry.RegistrableField][]
+    overrides: [string, BlocklyCore.fieldRegistry.RegistrableField][]
   ) => void;
   getWorkspaceCode: () => string;
   getGenerator: () => ExtendedJavascriptGenerator;

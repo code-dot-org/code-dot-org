@@ -1,6 +1,6 @@
 import {
-  ObservableProcedureModel,
   ObservableParameterModel,
+  ObservableProcedureModel,
 } from '@blockly/block-shareable-procedures';
 import {installAllBlocks as installFieldColourBlocks} from '@blockly/field-colour';
 import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
@@ -32,21 +32,12 @@ import CdoBlockSerializer from './addons/cdoBlockSerializer';
 import CdoConnectionChecker from './addons/cdoConnectionChecker';
 import initializeCdoConstants from './addons/cdoConstants';
 import initializeCss from './addons/cdoCss';
-import CdoFieldAngleDropdown from './addons/cdoFieldAngleDropdown';
-import CdoFieldAngleTextInput from './addons/cdoFieldAngleTextInput';
-import CdoFieldAnimationDropdown from './addons/cdoFieldAnimationDropdown';
-import CdoFieldBehaviorPicker from './addons/cdoFieldBehaviorPicker';
 import {CdoFieldBitmap} from './addons/cdoFieldBitmap';
-import CdoFieldButton from './addons/cdoFieldButton';
 import CdoFieldColour from './addons/cdoFieldColour';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
-import CdoFieldFlyout from './addons/cdoFieldFlyout';
-import CdoFieldImage from './addons/cdoFieldImage';
-import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldLabel from './addons/cdoFieldLabel';
 import CdoFieldNumber from './addons/cdoFieldNumber';
 import CdoFieldParameter from './addons/cdoFieldParameter';
-import CdoFieldToggle from './addons/cdoFieldToggle';
 import CdoFieldVariable from './addons/cdoFieldVariable';
 import initializeGenerator from './addons/cdoGenerator';
 import {gestureOverrides} from './addons/cdoGesture';
@@ -74,7 +65,7 @@ import {filterFunctionArgVariables} from './addons/plusMinusBlocks/advancedProce
 import registerIfMutator from './addons/plusMinusBlocks/if';
 import registerTextJoinMutator from './addons/plusMinusBlocks/text_join';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
-import {Themes, Renderers} from './constants';
+import {Renderers, Themes} from './constants';
 import {flyoutCategory as behaviorsFlyoutCategory} from './customBlocks/behaviorBlocks';
 import {flyoutCategory as functionsFlyoutCategory} from './customBlocks/proceduresBlocks';
 import {flyoutCategory as variablesFlyoutCategory} from './customBlocks/variableBlocks';
@@ -89,13 +80,13 @@ import {
   updateBlockLimits,
 } from './eventHandlers';
 import {
-  CdoProtanopiaDarkTheme,
   CdoDeuteranopiaDarkTheme,
+  CdoProtanopiaDarkTheme,
   CdoTritanopiaDarkTheme,
 } from './themes/cdoAccessibleDarkThemes';
 import {
-  CdoProtanopiaTheme,
   CdoDeuteranopiaTheme,
+  CdoProtanopiaTheme,
   CdoTritanopiaTheme,
 } from './themes/cdoAccessibleThemes';
 import CdoDarkTheme from './themes/cdoDark';
@@ -104,23 +95,23 @@ import CdoHighContrastDarkTheme from './themes/cdoHighContrastDark';
 import CdoJigsawTheme from './themes/cdoJigsaw';
 import CdoTheme from './themes/cdoTheme';
 import {
+  BlocklyCoreInstance,
   BlocklyWrapperType,
   ExtendedBlocklyOptions,
   ExtendedJavascriptGenerator,
   ExtendedWorkspace,
   ExtendedWorkspaceSvg,
-  BlocklyCoreInstance,
 } from './types';
 import {
+  cleanUp,
+  createBlockLimitMap,
+  getUserTheme,
   handleCodeGenerationFailure,
-  strip,
   initializeVariableLocalization,
   isDarkTheme,
-  setThemeAndRenderBlocks,
-  getUserTheme,
-  createBlockLimitMap,
   loadBlocksToWorkspace,
-  cleanUp,
+  setThemeAndRenderBlocks,
+  strip,
 } from './utils';
 
 const options: {contextMenu: true; shortcut: true} = {
@@ -177,19 +168,11 @@ const BlocklyWrapper = function (
   this.overrideFields = function (overrides) {
     overrides.forEach(override => {
       const fieldRegistryName = override[0];
-      const fieldClassName = override[1];
-      const fieldClass = override[2];
+      const fieldClass = override[1];
 
       // Force Blockly to use our custom versions of fields
       this.fieldRegistry.unregister(fieldRegistryName);
       this.fieldRegistry.register(fieldRegistryName, fieldClass);
-
-      // Add each field for when our wrapper is accessed in /apps code
-      // This method helps us avoid duplicated boilerplate, but we would
-      // need the type of fieldClass to align with fieldClassName
-      // in order to avoid using any here.
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (this as any)[fieldClassName] = fieldClass;
     });
   };
 };
@@ -255,24 +238,16 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   type registrableFieldType = BlocklyCore.fieldRegistry.RegistrableField;
   // elements in this list should be structured as follows:
   // [field registry name for field, class name of field being overridden, class to use as override]
-  const fieldOverrides: [string, string, registrableFieldType][] = [
-    ['field_variable', 'FieldVariable', CdoFieldVariable],
-    ['field_dropdown', 'FieldDropdown', CdoFieldDropdown],
-    ['field_number', 'FieldNumber', CdoFieldNumber],
+  const fieldOverrides: [string, registrableFieldType][] = [
+    ['field_variable', CdoFieldVariable],
+    ['field_dropdown', CdoFieldDropdown],
+    ['field_number', CdoFieldNumber],
     // CdoFieldBitmap and CdoFieldColour extend from plugins.
     // We know they're fields, so it's safe to cast as unknown.
-    [
-      'field_bitmap',
-      'FieldBitmap',
-      CdoFieldBitmap as unknown as registrableFieldType,
-    ],
-    [
-      'field_colour',
-      'FieldColour',
-      CdoFieldColour as unknown as registrableFieldType,
-    ],
-    ['field_label', 'FieldLabel', CdoFieldLabel],
-    ['field_parameter', 'FieldParameter', CdoFieldParameter],
+    ['field_bitmap', CdoFieldBitmap as unknown as registrableFieldType],
+    ['field_colour', CdoFieldColour as unknown as registrableFieldType],
+    ['field_label', CdoFieldLabel],
+    ['field_parameter', CdoFieldParameter],
   ];
   blocklyWrapper.overrideFields(fieldOverrides);
 
@@ -282,15 +257,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
 
   // Code.org custom fields
   blocklyWrapper.AngleHelper = CdoAngleHelper;
-  blocklyWrapper.FieldButton = CdoFieldButton;
-  blocklyWrapper.FieldImage = CdoFieldImage;
-  blocklyWrapper.FieldImageDropdown = CdoFieldImageDropdown;
-  blocklyWrapper.FieldToggle = CdoFieldToggle;
-  blocklyWrapper.FieldFlyout = CdoFieldFlyout;
-  blocklyWrapper.FieldBehaviorPicker = CdoFieldBehaviorPicker;
-  blocklyWrapper.FieldAnimationDropdown = CdoFieldAnimationDropdown;
-  blocklyWrapper.FieldAngleDropdown = CdoFieldAngleDropdown;
-  blocklyWrapper.FieldAngleTextInput = CdoFieldAngleTextInput;
 
   blocklyWrapper.registry.register(
     blocklyWrapper.registry.Type.FLYOUTS_VERTICAL_TOOLBOX,
