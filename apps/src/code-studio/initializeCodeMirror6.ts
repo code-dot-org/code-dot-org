@@ -105,9 +105,7 @@ function initializeCodeMirror6(
   const node = resolveTarget(target);
   const {callback, attachments, preview, game} = options;
   const changeListeners: Array<() => void> = [];
-  const dropListeners: Array<
-    (instance: CodeMirrorLegacyAdapter, event: DragEvent) => void
-  > = [];
+  const dropListeners: Array<(event: DragEvent) => void> = [];
   const editorContainer = document.createElement('div');
   node.style.display = 'none';
   node.insertAdjacentElement('afterend', editorContainer);
@@ -140,11 +138,9 @@ function initializeCodeMirror6(
       if (event === 'change') {
         changeListeners.push(() => listener());
       } else if (event === 'drop') {
-        dropListeners.push(
-          listener as (
-            instance: CodeMirrorLegacyAdapter,
-            event: DragEvent
-          ) => void
+        // This is here to support inline-attach, and inline-attach doesn't use the first argument to its drop event listener, so we ignore it here as well.
+        dropListeners.push((dropEvent: DragEvent) =>
+          listener(undefined, dropEvent)
         );
       }
     },
@@ -188,7 +184,7 @@ function initializeCodeMirror6(
     EditorView.lineWrapping,
     EditorView.domEventHandlers({
       drop(event) {
-        dropListeners.forEach(listener => listener(adapter, event));
+        dropListeners.forEach(listener => listener(event));
       },
     }),
     EditorView.updateListener.of(update => {
