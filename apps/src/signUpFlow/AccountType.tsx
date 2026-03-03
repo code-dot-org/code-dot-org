@@ -1,6 +1,5 @@
-import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React, {useState, useEffect} from 'react';
 
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
@@ -135,15 +134,19 @@ const AccountType: React.FunctionComponent<{
           <Typography component="h2" variant="h6" gutterBottom>
             {locale.free_curriculum_forever()}
           </Typography>
-          <Button
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="small"
             className={style.dialogButton}
-            size="s"
-            text={locale.read_our_commitment_free()}
             onClick={() => {
               sendCurriculumAnalyticsEvent();
               setIsFreeCurriculumDialogOpen(true);
             }}
-          />
+            type="button"
+          >
+            {locale.read_our_commitment_free()}
+          </MuiButton>
         </div>
       </div>
     </main>
