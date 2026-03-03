@@ -6,7 +6,8 @@ type SDKOptions = Parameters<typeof generateText>[0];
 type SDKTools = NonNullable<SDKOptions['tools']>;
 type SDKOutput = NonNullable<SDKOptions['output']>;
 
-type GenerateGatewayOptions = SDKOptions & {
+type GenerateGatewayOptions = Omit<SDKOptions, 'model'> & {
+  model: string;
   token?: string;
 };
 
@@ -86,28 +87,11 @@ const generateTextThroughGateway = async <
   try {
     const {model, ...restOptions} = options;
 
-    let modelString: string;
-
-    if (typeof model === 'string') {
-      modelString = model;
-    } else {
-      const safeModel = model as unknown as Record<string, unknown>;
-      if (
-        safeModel !== null &&
-        typeof safeModel === 'object' &&
-        typeof safeModel.modelId === 'string'
-      ) {
-        modelString = safeModel.modelId;
-      } else {
-        throw new Error('Invalid model provided to Gateway.');
-      }
-    }
-
     const serializedOutput = await serializeOutputSchema(options.output);
 
     const payload = {
       ...restOptions,
-      model: modelString,
+      model,
       output: serializedOutput,
       token: '', // Placeholder to be filled after token fetch
     };
