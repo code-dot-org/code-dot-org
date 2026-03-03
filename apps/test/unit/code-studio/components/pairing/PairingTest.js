@@ -62,6 +62,7 @@ describe('Pairing component', () => {
 
       expect(requests).toHaveLength(1);
       expect(methodForRequest(requests[0])).toBe('GET');
+      // Native <select> (in SectionSelector) has ARIA role 'combobox'.
       expect(screen.queryByRole('combobox')).not.toBeInTheDocument();
     });
   });
@@ -224,6 +225,47 @@ describe('Pairing component', () => {
       expect(
         await screen.findByText(i18n.unexpectedError())
       ).toBeInTheDocument();
+    });
+
+    it('does not allow selecting more than 3 partners', async () => {
+      const user = userEvent.setup();
+      const {requests} = setupAjaxMock();
+      render(<Pairing source="/pairings" />);
+
+      const getRequest = findMostRecentRequest(requests, {
+        method: 'GET',
+        url: '/pairings',
+      });
+      await resolveRequest(getRequest, {
+        sections: [
+          {
+            id: 1,
+            name: 'A section',
+            students: [
+              {id: 11, name: 'First student'},
+              {id: 12, name: 'Second Student'},
+              {id: 13, name: 'Third Student'},
+              {id: 14, name: 'Fourth Student'},
+              {id: 15, name: 'Fifth Student'},
+            ],
+          },
+        ],
+        pairings: [],
+      });
+
+      await user.click(
+        await screen.findByRole('button', {name: 'First student'})
+      );
+      await user.click(screen.getByRole('button', {name: 'Second Student'}));
+      await user.click(screen.getByRole('button', {name: 'Third Student'}));
+      await user.click(screen.getByRole('button', {name: 'Fourth Student'}));
+
+      expect(
+        screen.getByText(i18n.exceededPairProgrammingMax())
+      ).toBeInTheDocument();
+      expect(
+        screen.getByRole('button', {name: 'Fifth Student'})
+      ).toBeDisabled();
     });
   });
 
