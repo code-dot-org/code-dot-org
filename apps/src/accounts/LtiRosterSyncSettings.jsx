@@ -2,7 +2,6 @@ import Toggle from '@code-dot-org/component-library/toggle';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
-import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -26,7 +25,7 @@ export function LtiRosterSyncSettings(props) {
     const eventName = enabled
       ? 'lti_opt_out_toggle_on'
       : 'lti_opt_out_toggle_off';
-    analyticsReporter.sendEvent(eventName, eventPayload, PLATFORMS.STATSIG);
+    analyticsReporter.sendEvent(eventName, eventPayload);
 
     const form = document.getElementById(props.formId);
     form.elements['user_lti_roster_sync_enabled'].value = enabled;

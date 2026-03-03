@@ -15,7 +15,6 @@ import {
   unassignSection,
   sectionHasNewData,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import experiments from '@cdo/apps/util/experiments';
 import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -246,14 +245,12 @@ const MultipleSectionsAssigner = ({
             styleAsText
             color={Button.ButtonColor.brandSecondaryDefault}
           />
-          {experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
-            aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
-              <AssigningEssentialAiChatToolsAlert />
-            )}
-          {experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
-            aiChatToolsDependency === AiChatToolsDependency.AVAILABLE && (
-              <AssigningAvailableAiChatToolsAlert />
-            )}
+          {aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
+            <AssigningEssentialAiChatToolsAlert />
+          )}
+          {aiChatToolsDependency === AiChatToolsDependency.AVAILABLE && (
+            <AssigningAvailableAiChatToolsAlert />
+          )}
         </div>
       </div>
       <div className={moduleStyle.buttonContainer}>

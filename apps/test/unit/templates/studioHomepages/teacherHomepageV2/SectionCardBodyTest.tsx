@@ -11,7 +11,7 @@ import {
 } from 'react-router-dom';
 import {Store} from 'redux';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import SectionCardBody from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/SectionCardBody';
@@ -236,8 +236,7 @@ describe('SectionCardBody', () => {
     screen.getByText('/sections/11/progress');
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_CARD_VIEW_PROGRESS_CLICKED,
-      {},
-      PLATFORMS.STATSIG
+      {}
     );
   });
 
@@ -248,8 +247,7 @@ describe('SectionCardBody', () => {
     screen.getByText('/sections/11/materials');
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_CARD_VIEW_LESSON_MATERIALS_CLICKED,
-      {},
-      PLATFORMS.STATSIG
+      {}
     );
   });
 

@@ -9,7 +9,7 @@ import {
   LmsLoginTypeNames,
 } from '@cdo/apps/accounts/constants';
 import fontConstants from '@cdo/apps/fontConstants';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
 import color from '@cdo/apps/util/color';
@@ -367,11 +367,9 @@ class OauthConnection extends React.Component {
       if (credentialType === SingleSignOnProviders.lti_v1) {
         event.preventDefault();
         this.setShowUnlinkWarning(true);
-        analyticsReporter.sendEvent(
-          EVENTS.LTI_UNLINK_MODAL_SHOWN,
-          {lms_name: displayName},
-          PLATFORMS.STATSIG
-        );
+        analyticsReporter.sendEvent(EVENTS.LTI_UNLINK_MODAL_SHOWN, {
+          lms_name: displayName,
+        });
       }
     };
 

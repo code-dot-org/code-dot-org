@@ -1,7 +1,4 @@
-import {
-  DEFAULT_AI_TUTOR_MODE,
-  TUTOR_MODE_TO_ANSWER_TYPE,
-} from '@cdo/apps/weblab2/constants';
+import {DEFAULT_ANSWER_TYPES} from '@cdo/apps/weblab2/constants';
 import askContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/ask.md';
 import buildCSSContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/buildCSS.md';
 import buildHTMLContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/buildHTML.md';
@@ -117,7 +114,7 @@ const generateFinalAnswerTypeList = (
 ): AiTutorAnswerType[] => {
   let finalAnswerTypes = [...answerTypes];
   if (answerTypes.length === 0) {
-    finalAnswerTypes = TUTOR_MODE_TO_ANSWER_TYPE[DEFAULT_AI_TUTOR_MODE];
+    finalAnswerTypes = DEFAULT_ANSWER_TYPES;
   }
   // Remove any hard-coded refusal modes since we derive the refusal mode
   // based on whether buildJavaScript is included.
@@ -125,22 +122,27 @@ const generateFinalAnswerTypeList = (
     answerType =>
       answerType !== 'refusal' && answerType !== 'refusalJavaScriptSnippets'
   );
-  // If the answer type list includes buildJavaScript, we will use the refusal mode that allows JavaScript,
-  // otherwise we block JavaScript from being generated.
+  // If the answer type list includes buildJavaScript, we will only include the generic
+  // refusal answer type. Otherwise, we also include the refusal answer type to reject JavaScript snippets.
   const hasBuildJavaScript = finalAnswerTypes.includes('buildJavaScript');
-  const refusalMode = hasBuildJavaScript
-    ? 'refusal'
-    : 'refusalJavaScriptSnippets';
-  finalAnswerTypes.push(refusalMode);
+  const refusalAnswerTypes: AiTutorAnswerType[] = hasBuildJavaScript
+    ? ['refusal']
+    : ['refusal', 'refusalJavaScriptSnippets'];
+  finalAnswerTypes.push(...refusalAnswerTypes);
   return finalAnswerTypes;
 };
 
 export const generateAiTutorPrompt = (
-  answerTypes: AiTutorAnswerType[]
+  answerTypes: AiTutorAnswerType[],
+  answerTypeCustomizations?: Partial<Record<AiTutorAnswerType, string>>
 ): string => {
   const parsedAnswerTypes = generateFinalAnswerTypeList(answerTypes);
   const contracts = parsedAnswerTypes
-    .map(answerType => ANSWER_TYPE_CONTRACTS[answerType].trim())
+    .map(answerType => {
+      const baseContract = ANSWER_TYPE_CONTRACTS[answerType].trim();
+      const customization = answerTypeCustomizations?.[answerType]?.trim();
+      return customization ? `${baseContract}\n${customization}` : baseContract;
+    })
     .join('\n\n');
   const allowJs = parsedAnswerTypes.includes('buildJavaScript');
 

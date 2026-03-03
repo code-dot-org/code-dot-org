@@ -35,7 +35,6 @@
   cookie_key = environment_specific_cookie_name('_user_type')
   user_type = request.cookies[cookie_key]
 
-%script{data: {"amplitude-api-key": CDO.safe_amplitude_api_key}}
 %script{data: {'statsig-api-client-key': CDO.safe_statsig_api_client_key}}
 %script{data: {'managed-test-server': CDO.managed_test_server?.to_s}}
 

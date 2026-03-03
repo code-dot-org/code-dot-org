@@ -416,6 +416,12 @@ gem "webrick", "~> 1.9"
 
 gem 'rubyzip'
 
+gem "opentelemetry-exporter-otlp", "~> 0.31.1"
+gem 'opentelemetry-sdk', '~> 1.10'
+
+# pinned due to rails 7, upgrade on rails 7.1
+gem "opentelemetry-instrumentation-all", "0.85.0"
+
 # Automatically include all rails engines
 Dir[Bundler.root.join('**/engines/*/*.gemspec')].sort.each do |gemspec_path|
   gem File.basename(gemspec_path, '.gemspec'), path: '.', glob: '**/engines/*/*.gemspec'

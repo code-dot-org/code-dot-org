@@ -37,8 +37,6 @@ experiments.GENDER_FEATURE_ENABLED = 'gender';
 experiments.AI_DIFFERENTIATION = 'ai-differentiation';
 // Experiment for enabling the AI-TA differentiation artifacts
 experiments.AI_ARTIFACT = 'ai-artifact';
-// Experiment for showing the ai chat new permissions page and enabling permissions to take effect
-experiments.AI_CHAT_NEW_PERMISSIONS = 'ai-chat-new-permissions';
 // Adds a "Get help with this block" option to block context menus if docs exist (e.g. Sprite Lab)
 experiments.BLOCKLY_DOCS = 'blockly_docs';
 // Allows the playspace to be dragged to take up a larger portion of the screen
@@ -51,8 +49,6 @@ experiments.BLOCKLY_KEYBOARD_NAVIGATION = 'blockly-keyboard-navigation';
 experiments.MODULARITY = 'modularity';
 // LocalizeJS
 experiments.LOCALIZEJS = 'localizejs';
-// Show AI Tutor in legacy labs
-experiments.LEGACY_LAB_AI_TUTOR = 'legacy-lab-ai-tutor';
 // Enable ActionCable load testing
 experiments.ACTIONCABLE_LOAD_TESTING = 'actioncable-load-testing';
 // Use AI Tutor system prompts from Langfuse
@@ -65,8 +61,6 @@ experiments.WEBLAB2_FULL_URLS = 'weblab2-full-urls';
 experiments.ACCEPT_REJECT_UNIFIED_DIFF = 'accept-reject-unified-diff';
 // Show split diff view in Code Editor.
 experiments.ACCEPT_REJECT_SPLIT_DIFF = 'accept-reject-split-diff';
-// Show debug panel in Web Lab 2
-experiments.WEBLAB2_DEBUG_PANEL = 'weblab2-show-debug';
 // Enable the new teacher dashboard student snapshot page and features
 experiments.STUDENT_SNAPSHOT = 'student-snapshot';
 

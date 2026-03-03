@@ -34,6 +34,8 @@ import {
   clearRequests,
 } from '@cdo/apps/weblab2/redux/networkRedux';
 
+import {Weblab2LevelProperties} from '../types';
+
 import {
   IframeMessageType,
   PreviewViewMode,
@@ -58,8 +60,11 @@ export const HTMLPreview: React.FC = () => {
   const isEditingExemplar = getAppOptionsEditingExemplar();
   const isStartMode = getIsStartMode();
   const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
-  const {levelProperties} = useCodebridgeContext();
+  const codebridgeContext = useCodebridgeContext();
+  const levelProperties =
+    codebridgeContext.levelProperties as Weblab2LevelProperties;
   const levelId = levelProperties.id;
+  const widget2 = levelProperties.widget2;
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const previewContainerRef = useRef<HTMLDivElement | null>(null);
   const previewUrl = useMemo(() => {
@@ -137,7 +142,8 @@ export const HTMLPreview: React.FC = () => {
   const hasSubmittedPredictResponse = useAppSelector(
     isPredictResponseSubmitted
   );
-  const allowUserScripts = !isPredictLevel || hasSubmittedPredictResponse;
+  const allowUserScripts =
+    !isPredictLevel || hasSubmittedPredictResponse || isStartMode;
   const canNavigateBack = navigationHistoryIndex > 0;
   const canNavigateForward =
     navigationHistoryIndex < navigationHistory.length - 1;
@@ -322,7 +328,11 @@ export const HTMLPreview: React.FC = () => {
         // Send the source immediately when iframe is ready
         if (debouncedSource) {
           iframeRef.current?.contentWindow?.postMessage(
-            {type: IframeMessageType.SET_SOURCE, source: debouncedSource},
+            {
+              type: IframeMessageType.SET_SOURCE,
+              source: debouncedSource,
+              parameters: widget2?.parameters,
+            },
             previewUrl
           );
         }
@@ -369,6 +379,7 @@ export const HTMLPreview: React.FC = () => {
     navigationHistoryIndex,
     debouncedSource,
     dispatch,
+    widget2?.parameters,
   ]);
 
   useEffect(() => {
@@ -417,11 +428,12 @@ export const HTMLPreview: React.FC = () => {
         {
           type: IframeMessageType.SET_SOURCE,
           source: debouncedSource,
+          parameters: widget2?.parameters,
         },
         previewUrl
       );
     }
-  }, [previewUrl, debouncedSource, isIframeLoaded]);
+  }, [previewUrl, debouncedSource, isIframeLoaded, widget2?.parameters]);
 
   // Inform the inner preview when we start/finish loading the level,
   // so it can avoid showing outdated content while we are loading.
@@ -459,22 +471,24 @@ export const HTMLPreview: React.FC = () => {
           isFullScreenView && moduleStyles.fullScreenPreviewContainer
         )}
       >
-        <HTMLPreviewHeader
-          value={inputValue}
-          onChange={setInputValue}
-          onSubmit={handleUrlSubmit}
-          canNavigateBack={canNavigateBack}
-          canNavigateForward={canNavigateForward}
-          onNavigateBack={onNavigateBack}
-          onNavigateForward={onNavigateForward}
-          onRefresh={onRefresh}
-          onToggleFullScreen={toggleFullScreen}
-          previewViewMode={previewViewMode}
-          setPreviewViewMode={setPreviewViewMode}
-          onStopPreview={onStopPreview}
-          isStopEnabled={!isStopped}
-          fetchFileSearchOptions={fetchHtmlFileOptions}
-        />
+        {!widget2 && (
+          <HTMLPreviewHeader
+            value={inputValue}
+            onChange={setInputValue}
+            onSubmit={handleUrlSubmit}
+            canNavigateBack={canNavigateBack}
+            canNavigateForward={canNavigateForward}
+            onNavigateBack={onNavigateBack}
+            onNavigateForward={onNavigateForward}
+            onRefresh={onRefresh}
+            onToggleFullScreen={toggleFullScreen}
+            previewViewMode={previewViewMode}
+            setPreviewViewMode={setPreviewViewMode}
+            onStopPreview={onStopPreview}
+            isStopEnabled={!isStopped}
+            fetchFileSearchOptions={fetchHtmlFileOptions}
+          />
+        )}
         {isEmptyProject ? (
           <PreviewEmptyState />
         ) : isStopped ? (

@@ -20,6 +20,9 @@ const InnerHTMLPreview = () => {
   const [source, setSource] = React.useState<MultiFileSource | undefined>(
     undefined
   );
+  const [parameters, setParameters] = React.useState<object | undefined>(
+    undefined
+  );
   const [currentFile, setCurrentFile] = React.useState<string | undefined>(
     undefined
   );
@@ -48,7 +51,7 @@ const InnerHTMLPreview = () => {
   }, []);
 
   const {serviceWorkerRegistration, serviceWorkerUnavailable} =
-    useProjectServiceWorker(source, parentOrigin);
+    useProjectServiceWorker(source, parentOrigin, parameters);
 
   const handleMessage = useCallback(
     (event: MessageEvent) => {
@@ -59,6 +62,7 @@ const InnerHTMLPreview = () => {
       const {data} = event;
       if (data.type === IframeMessageType.SET_SOURCE) {
         setSource(data.source);
+        setParameters(data.parameters);
       } else if (data.type === IframeMessageType.CHANGE_FILE_URL_BAR) {
         setCurrentFile(data.fileName);
       } else if (data.type === IframeMessageType.SET_ALLOW_SCRIPTS) {

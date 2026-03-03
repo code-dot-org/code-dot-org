@@ -22,7 +22,7 @@ import {useSource} from '../codebridge/hooks/useSource';
 import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
 import {
-  DEFAULT_AI_TUTOR_MODE,
+  DEFAULT_ANSWER_TYPES,
   TUTOR_MODE_TO_ANSWER_TYPE,
   WEBLAB2_EDITABLE_FILE_TYPES,
   WEBLAB2_SUPPORTED_FILE_TYPES,
@@ -125,20 +125,23 @@ const Weblab2View: React.FC<
 
   const systemPrompt = useMemo(() => {
     let answerTypes: AiTutorAnswerType[] | undefined =
-      levelProperties.aiTutorPromptAnswerTypes;
+      levelProperties.aiTutorPromptSettings?.answerTypes;
     if (
-      !levelProperties.aiTutorPromptAnswerTypes &&
+      !levelProperties.aiTutorPromptSettings?.answerTypes &&
       levelProperties.aiTutorMode
     ) {
       answerTypes =
         TUTOR_MODE_TO_ANSWER_TYPE[
           levelProperties.aiTutorMode as keyof typeof TUTOR_MODE_TO_ANSWER_TYPE
-        ] || TUTOR_MODE_TO_ANSWER_TYPE[DEFAULT_AI_TUTOR_MODE];
+        ] || DEFAULT_ANSWER_TYPES;
     } else if (!answerTypes) {
-      answerTypes = TUTOR_MODE_TO_ANSWER_TYPE[DEFAULT_AI_TUTOR_MODE];
+      answerTypes = DEFAULT_ANSWER_TYPES;
     }
-    return generateAiTutorPrompt(answerTypes);
-  }, [levelProperties.aiTutorMode, levelProperties.aiTutorPromptAnswerTypes]);
+    return generateAiTutorPrompt(
+      answerTypes,
+      levelProperties.aiTutorPromptSettings?.answerTypeCustomizations
+    );
+  }, [levelProperties.aiTutorMode, levelProperties.aiTutorPromptSettings]);
 
   // Since there's no run button in Weblab2, set it to true by default
   // to enable the Submit button on edit on submittable levels.

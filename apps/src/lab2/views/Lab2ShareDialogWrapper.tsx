@@ -5,7 +5,7 @@ import ShareDialogLegacy from '@cdo/apps/code-studio/components/ShareDialog';
 import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 import popupWindow from '@cdo/apps/code-studio/popup-window';
 import {PROJECT_TYPES_USING_NEW_SHARE_DIALOG} from '@cdo/apps/lab2/constants';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {MetricEvent} from '@cdo/apps/metrics/events';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
@@ -97,14 +97,10 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
 
   const onSubmitClick = () => {
     setDialogPanel('submit');
-    analyticsReporter.sendEvent(
-      EVENTS.SHARING_DIALOG_SUBMIT_TO_BE_FEATURED,
-      {
-        lab_type: projectType,
-        channel_id: channelId,
-      },
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.SHARING_DIALOG_SUBMIT_TO_BE_FEATURED, {
+      lab_type: projectType,
+      channel_id: channelId,
+    });
   };
 
   if (!isDialogOpen || !channelId || !projectType) {

@@ -10,13 +10,13 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "#Remote Data\n\n**Remote data** is data that is stored on an external server rather than on the device running the application.\n\nIt requires an internet connection to access and is retrieved using an API.\n\n---\n\n**Example**: The current temperature fetched from a weather website.",
+        "text": "#Live Data\n\n**Live data** is data that is stored on an external server rather than on the device running the application.\n\nIt requires an internet connection to access and is retrieved using an API.\n\n---\n\n**Example**: The current temperature fetched from a weather website.",
         "imageUrl": "https://images.code.org/f2750b7cc0e754cf5b8e404d6b51dc56-remote data.png",
         "key": "designing-reliable-apps-lesson10-level3-test_2025-pilot-a46e2638-aa92-44e6-99cc-52b98b620a51",
         "layout": "text-bottom-center"
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2026-02-18 16:17:07 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-18 16:17:07 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-02-26 13:09:44 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Panels>
