@@ -1,0 +1,40 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-03-02T19:24:19.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "# Writing a Function\n## Step 1: Give your function a name \nA function needs a name so you can refer to it later. \n\n**A good function name:**\n- Uses camelCase\n- Starts with a verb\n- Clearly describes what the function does\n\n---\nIn this example, we will write a function that adds 5 to the total. ",
+        "imageUrl": "https://images.code.org/205a13a22649fd1b6fe79283c6768447-function.png",
+        "key": "pl-aif-2-U2-functions-panel-204bad7c-e640-49a1-aa90-6cb39e0a6f93"
+      },
+      {
+        "text": "## Step 2: Define the function\n\nIn JavaScript, a basic function starts with the word `function`, followed by the function's name and parentheses `()` and curly braces `{}`.\n\nThe curly braces hold the code that will run when the function is called.\n\n---\nHere, there is a variable called `total` that we will update and the beginning of our `addFive` function. ",
+        "imageUrl": "https://images.code.org/1992347f43728c576aad609f7682bcb2-function (1).png",
+        "key": "pl-aif-2-U2-functions-panel-3480a14a-6e61-4f50-b80d-ea384d8a4d86",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Step 3: Write the code you want to run\n\nThe code inside the braces {} runs each time a function is called.\n\nYou can put one line or many lines of code inside your function.\n\n---\n\nThis code adds five to the current value of the total and prints the updated total to the console log. ",
+        "imageUrl": "https://images.code.org/cf7a97444cb313b7c3cffea61fd57277-function (2).png",
+        "key": "pl-aif-2-U2-functions-panel-1bf47b3b-f1b1-40e9-a25f-97fdddf22b36",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Step 4: Call the function to make it run\n\nJust defining a function doesn't run it. You have to **call** it by typing its name with parentheses,`addFive()`.\n\n---\nThe function is called once below the code and the total is updated in the console. ",
+        "imageUrl": "https://images.code.org/2d59ad0f73e5d2fe7683728bac0ed274-function (3).png",
+        "key": "pl-aif-2-U2-functions-panel-97022e94-1244-426e-9ae3-592f40cc2f98",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_2024",
+    "offer_browser_tts": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-02T19:24:19.243+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U2-functions-panel\\\"\"],\"cloned_from\":\"pl-aif-2-U2-functions-panel\"}]"
+}]]></config>
+</Panels>
