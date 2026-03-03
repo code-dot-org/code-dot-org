@@ -10,7 +10,10 @@ import {
   PendingChatMessage,
 } from '../../types';
 
-import {generatedFileToAsset} from './helpers/fileHelpers';
+import {
+  generatedFileToAsset,
+  generatedFileToImageFile,
+} from './helpers/fileHelpers';
 import {
   formatChatMessage,
   formatSystemMessages,
@@ -63,14 +66,7 @@ export async function generateChatResponse(
   for (const file of files) {
     if (file.mediaType.startsWith('image/')) {
       const ext = file.mediaType.split('/')[1];
-      const arrayBuffer = file.uint8Array.buffer.slice(
-        file.uint8Array.byteOffset,
-        file.uint8Array.byteOffset + file.uint8Array.byteLength
-      ) as ArrayBuffer;
-      const blob = new Blob([arrayBuffer], {type: file.mediaType});
-      const imageFile = new File([blob], `image.${ext}`, {
-        type: file.mediaType,
-      });
+      const imageFile = generatedFileToImageFile(file, ext);
       const modelImageSafe = await isImageSafe(imageFile, ext);
       if (!modelImageSafe) {
         return {
