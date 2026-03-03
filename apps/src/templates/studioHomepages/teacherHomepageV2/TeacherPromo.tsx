@@ -109,6 +109,11 @@ const TeacherPromo: React.FC<TeacherPromoProps> = ({
         size="small"
         className={styles.promotionButton}
         href={buttonTarget}
+        endIcon={
+          isExternal ? (
+            <FontAwesomeV6Icon iconName="arrow-up-right-from-square" />
+          ) : undefined
+        }
       >
         {buttonLabel}
       </MuiButton>
