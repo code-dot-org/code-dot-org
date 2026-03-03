@@ -9,6 +9,7 @@ import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 import {baseModelParameters} from '../../hooks/useAiTutorModelParameters';
+import VocabularyFlashcards from './VocabularyFlashcards';
 
 type PracticeOption = 'summary' | 'flashcards' | 'chat';
 
@@ -27,7 +28,7 @@ export const LessonPractice: FC<{
       <Typography variant="h2">Lesson Practice for {lessonName}</Typography>
       <div className={styles.welcomeMessage}>
         <ChatMessage
-          text="I'm here you to help you review the material from the lesson. How can I help?"
+          text="Let's review the material from the lesson. How can I help?"
           role={Role.ASSISTANT}
           isAiTutorVersion={true}
         />
@@ -36,22 +37,14 @@ export const LessonPractice: FC<{
         selectedOption={selectedOption || ''}
         onChange={option => setSelectedOption(option as PracticeOption)}
       />
+      {/* {selectedOption === 'summary' && <GenericStudentLessonSummary />} */}
+      {selectedOption === 'flashcards' && (
+        <VocabularyFlashcards vocabulary={vocabulary} />
+      )}
       <ChatWorkspace
         modelParameters={baseModelParameters}
         clientType={AiChatClientTypes.AI_TUTOR}
       />
-      {vocabulary.length > 0 && (
-        <>
-          <Typography variant="h3">Vocabulary</Typography>
-          <ul>
-            {vocabulary.map(v => (
-              <li key={v.id}>
-                <strong>{v.word}</strong>: {v.definition}
-              </li>
-            ))}
-          </ul>
-        </>
-      )}
     </>
   );
 };
