@@ -146,7 +146,7 @@ describe('Java Lab Editor Test', () => {
         );
 
         // Type new filename in dialog
-        const input = await screen.findByDisplayValue('MyClass.java');
+        const input = await screen.findByDisplayValue(oldFilename);
         await user.clear(input);
         await user.type(input, newFilename);
         await user.click(
