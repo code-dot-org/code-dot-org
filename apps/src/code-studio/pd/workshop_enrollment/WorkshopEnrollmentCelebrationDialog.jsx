@@ -1,5 +1,5 @@
-import Button from '@code-dot-org/component-library/button';
-import {Typography} from '@mui/material';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography, Button as MuiButton} from '@mui/material';
 import moment from 'moment-timezone';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
@@ -256,19 +256,24 @@ export default function WorkshopEnrollmentCelebrationDialog({
                     </Typography>
                   </td>
                   <td>
-                    <Button
-                      text={i18n.enrollmentCelebrationAddToCalendarButton()}
-                      ariaLabel={i18n.addToCalendarType({
-                        calendar_type: multipleSessionDialogType,
-                      })}
-                      type={'secondary'}
-                      color={'black'}
-                      iconLeft={{iconName: 'fa-solid fa-plus'}}
+                    <MuiButton
+                      variant="outlined"
+                      color="secondary"
+                      size="medium"
                       className={style.addSessionToCalendarButton}
                       onClick={() =>
                         onClickAddToCalendar(session, multipleSessionDialogType)
                       }
-                    />
+                      aria-label={i18n.addToCalendarType({
+                        calendar_type: multipleSessionDialogType,
+                      })}
+                      type="button"
+                      startIcon={
+                        <FontAwesomeV6Icon iconName="fa-solid fa-plus" />
+                      }
+                    >
+                      {i18n.enrollmentCelebrationAddToCalendarButton()}
+                    </MuiButton>
                   </td>
                 </tr>
               ))}
@@ -276,18 +281,27 @@ export default function WorkshopEnrollmentCelebrationDialog({
           </table>
           <hr />
           <div className={style.closeMultipleSessionDialogContainer}>
-            <Button
-              text={i18n.enrollmentCelebrationChangeCalendarButton()}
-              type={'secondary'}
-              color={'black'}
-              iconLeft={{iconName: 'fa-solid fa-arrow-left'}}
+            <MuiButton
+              variant="outlined"
+              color="secondary"
+              size="medium"
               onClick={() => setMultipleSessionDialogType('')}
-            />
-            <Button
-              text={i18n.enrollmentCelebrationCallToAction()}
-              type={'primary'}
+              type="button"
+              startIcon={
+                <FontAwesomeV6Icon iconName="fa-solid fa-arrow-left" />
+              }
+            >
+              {i18n.enrollmentCelebrationChangeCalendarButton()}
+            </MuiButton>
+            <MuiButton
+              variant="contained"
+              color="primary"
+              size="medium"
               onClick={onCloseBothDialogs}
-            />
+              type="button"
+            >
+              {i18n.enrollmentCelebrationCallToAction()}
+            </MuiButton>
           </div>
         </div>
       </AccessibleDialog>
@@ -318,94 +332,124 @@ export default function WorkshopEnrollmentCelebrationDialog({
                     {i18n.addToYourCalendar()}
                   </Typography>
                   <div className={style.calendarButtons}>
-                    <Button
-                      text={'Apple'}
-                      ariaLabel={i18n.addToCalendarType({
-                        calendar_type: 'Apple',
-                      })}
-                      type={'secondary'}
-                      color={'black'}
-                      iconLeft={{
-                        iconName: 'brands fa-apple',
-                        iconStyle: 'light',
-                      }}
+                    <MuiButton
+                      variant="outlined"
+                      color="secondary"
+                      size="medium"
                       onClick={() =>
                         onClickAddToCalendar(workshopSessionInfo, 'Apple')
                       }
-                    />
+                      aria-label={i18n.addToCalendarType({
+                        calendar_type: 'Apple',
+                      })}
+                      type="button"
+                      startIcon={
+                        <FontAwesomeV6Icon
+                          iconName="brands fa-apple"
+                          iconStyle="light"
+                        />
+                      }
+                    >
+                      {'Apple'}
+                    </MuiButton>
                     {hasMultipleSessions ? (
                       <>
-                        <Button
-                          text={'Google'}
-                          type={'secondary'}
-                          color={'black'}
-                          iconLeft={{
-                            iconName: 'brands fa-google',
-                            iconStyle: 'light',
-                          }}
+                        <MuiButton
+                          variant="outlined"
+                          color="secondary"
+                          size="medium"
                           onClick={() => setMultipleSessionDialogType('Google')}
-                        />
-                        <Button
-                          text={'Outlook'}
-                          type={'secondary'}
-                          color={'black'}
-                          iconLeft={{
-                            iconName: 'brands fa-microsoft',
-                            iconStyle: 'light',
-                          }}
+                          type="button"
+                          startIcon={
+                            <FontAwesomeV6Icon
+                              iconName="brands fa-google"
+                              iconStyle="light"
+                            />
+                          }
+                        >
+                          {'Google'}
+                        </MuiButton>
+                        <MuiButton
+                          variant="outlined"
+                          color="secondary"
+                          size="medium"
                           onClick={() =>
                             setMultipleSessionDialogType('Outlook')
                           }
-                        />
+                          type="button"
+                          startIcon={
+                            <FontAwesomeV6Icon
+                              iconName="brands fa-microsoft"
+                              iconStyle="light"
+                            />
+                          }
+                        >
+                          {'Outlook'}
+                        </MuiButton>
                       </>
                     ) : (
                       <>
-                        <Button
-                          text={'Google'}
-                          ariaLabel={i18n.addToCalendarType({
-                            calendar_type: 'Google',
-                          })}
-                          type={'secondary'}
-                          color={'black'}
-                          iconLeft={{
-                            iconName: 'brands fa-google',
-                            iconStyle: 'light',
-                          }}
+                        <MuiButton
+                          variant="outlined"
+                          color="secondary"
+                          size="medium"
                           onClick={() =>
                             onClickAddToCalendar(
                               workshopSessionInfo[0],
                               'Google'
                             )
                           }
-                        />
-                        <Button
-                          text={'Outlook'}
-                          ariaLabel={i18n.addToCalendarType({
-                            calendar_type: 'Outlook',
+                          aria-label={i18n.addToCalendarType({
+                            calendar_type: 'Google',
                           })}
-                          type={'secondary'}
-                          color={'black'}
-                          iconLeft={{
-                            iconName: 'brands fa-microsoft',
-                            iconStyle: 'light',
-                          }}
+                          type="button"
+                          startIcon={
+                            <FontAwesomeV6Icon
+                              iconName="brands fa-google"
+                              iconStyle="light"
+                            />
+                          }
+                        >
+                          {'Google'}
+                        </MuiButton>
+                        <MuiButton
+                          variant="outlined"
+                          color="secondary"
+                          size="medium"
                           onClick={() =>
                             onClickAddToCalendar(
                               workshopSessionInfo[0],
                               'Outlook'
                             )
                           }
-                        />
+                          aria-label={i18n.addToCalendarType({
+                            calendar_type: 'Outlook',
+                          })}
+                          type="button"
+                          startIcon={
+                            <FontAwesomeV6Icon
+                              iconName="brands fa-microsoft"
+                              iconStyle="light"
+                            />
+                          }
+                        >
+                          {'Outlook'}
+                        </MuiButton>
                       </>
                     )}
                   </div>
                 </div>
               )}
             </div>
-            <Button
+            <MuiButton
+              variant="contained"
+              color="primary"
+              size="medium"
               onClick={onCloseCelebrationDialog}
-              text={i18n.enrollmentCelebrationCallToAction()}
-            />
+              type="button"
+            >
+              {i18n.enrollmentCelebrationCallToAction()}
+            </MuiButton>
           </div>
         </>
       </AccessibleDialog>

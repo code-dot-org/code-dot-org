@@ -1,9 +1,10 @@
-import Button from '@code-dot-org/component-library/button';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {SessionToken} from '@mapbox/search-js-core';
 import {useAddressAutofillCore} from '@mapbox/search-js-react';
+import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import moment from 'moment-timezone';
 import React, {
@@ -202,19 +203,19 @@ export const SessionPart: FC<{
             text: 'Delete workshop session',
           }}
         >
-          <Button
-            icon={{iconName: 'minus'}}
-            onClick={deleteSession}
+          <MuiIconButton
+            variant="outlined"
+            color="error"
+            size="small"
             disabled={deleteDisabled}
-            size="s"
-            isIconOnly={true}
             className={styles.deleteButton}
-            type="secondary"
-            color="destructive"
-            title="delete workshop session"
+            onClick={deleteSession}
             aria-label="delete workshop session"
+            type="button"
             aria-describedby={`delete-session-tooltip-${id}`}
-          />
+          >
+            <FontAwesomeV6Icon iconName="minus" />
+          </MuiIconButton>
         </WithTooltip>
       </div>
       {showAdditionalFields && (
