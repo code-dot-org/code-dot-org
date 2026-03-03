@@ -22,6 +22,7 @@
  * @author fraser@google.com (Neil Fraser)
  */
 import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
+import CdoFieldLabel from '@cdo/apps/blockly/addons/cdoFieldLabel';
 import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {
   interpolateMsg,
@@ -489,7 +490,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setStyle(BlockStyles.VARIABLE);
       this.appendDummyInput()
         .appendField(blockly.Msg.VARIABLES_GET_TITLE)
-        .appendField(new blockly.FieldLabel(msg.loopVariable()), 'VAR');
+        .appendField(new CdoFieldLabel(msg.loopVariable()), 'VAR');
       this.setOutput(true);
       this.setTooltip(blockly.Msg.VARIABLES_GET_TOOLTIP);
     },
@@ -509,7 +510,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setStyle(BlockStyles.VARIABLE);
       this.appendDummyInput()
         .appendField(blockly.Msg.VARIABLES_GET_TITLE)
-        .appendField(new blockly.FieldLabel(msg.lengthParameter()), 'VAR');
+        .appendField(new CdoFieldLabel(msg.lengthParameter()), 'VAR');
       this.setOutput(true);
       this.setTooltip(blockly.Msg.VARIABLES_GET_TOOLTIP);
     },
@@ -527,7 +528,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setStyle(BlockStyles.VARIABLE);
       this.appendDummyInput()
         .appendField(blockly.Msg.VARIABLES_GET_TITLE)
-        .appendField(new blockly.FieldLabel('sides'), 'VAR');
+        .appendField(new CdoFieldLabel('sides'), 'VAR');
       this.setOutput(true);
       this.setTooltip(blockly.Msg.VARIABLES_GET_TOOLTIP);
     },
@@ -656,7 +657,7 @@ exports.install = function (blockly, blockInstallOptions) {
         .appendField(
           blockly.Msg.CONTROLS_FOR_INPUT_WITH || msg.controlsForInputWith()
         )
-        .appendField(new blockly.FieldLabel(msg.loopVariable()), 'VAR');
+        .appendField(new CdoFieldLabel(msg.loopVariable()), 'VAR');
       interpolateMsg(
         this,
         blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY ||
@@ -973,7 +974,7 @@ exports.install = function (blockly, blockInstallOptions) {
             input.appendField(commonMsg.jump());
           }
           input.appendField(
-            new blockly.FieldLabel(directionConfig.title, {
+            new CdoFieldLabel(directionConfig.title, {
               fixedSize: {width: directionLetterWidth, height: 18},
             })
           );

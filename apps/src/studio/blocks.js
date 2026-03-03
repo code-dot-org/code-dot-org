@@ -11,6 +11,7 @@ import _ from 'lodash';
 import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
 import CdoFieldImage from '@cdo/apps/blockly/addons/cdoFieldImage';
 import {CdoFieldImageDropdown} from '@cdo/apps/blockly/addons/cdoFieldImageDropdown';
+import CdoFieldLabel from '@cdo/apps/blockly/addons/cdoFieldLabel';
 import {
   addSerializationHooksToBlock,
   interpolateMsg,
@@ -2391,7 +2392,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setStyle(BlockStyles.EVENT);
 
       var dropdown1 = spriteNumberTextDropdown(msg.whenSpriteN);
-      var endLabel = new Blockly.FieldLabel();
+      var endLabel = new CdoFieldLabel();
       var dropdown2 = createSpriteGroupDropdown(
         msg.collidesWithAnySpriteName,
         value =>
@@ -3181,7 +3182,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.studio_ask = {
     helpUrl: '',
     init: function () {
-      var fieldLabel = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
+      var fieldLabel = new CdoFieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
       // Must be marked EDITABLE so that cloned blocks share the same var name
       fieldLabel.EDITABLE = true;
       this.setStyle(BlockStyles.VARIABLE);

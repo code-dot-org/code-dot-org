@@ -1,6 +1,7 @@
 import {Order} from 'blockly/javascript';
 
 import CdoFieldImage from '@cdo/apps/blockly/addons/cdoFieldImage';
+import CdoFieldLabel from '@cdo/apps/blockly/addons/cdoFieldLabel';
 import FunctionEditor from '@cdo/apps/blockly/addons/functionEditor';
 import {BLOCK_TYPES, NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
 import {blocks as behaviorBlocks} from '@cdo/apps/blockly/customBlocks/behaviorBlocks';
@@ -620,7 +621,7 @@ export default {
     Blockly.Blocks.sprite_variables_get = {
       // Variable getter.
       init: function () {
-        var fieldLabel = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
+        var fieldLabel = new CdoFieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
         // Must be marked EDITABLE so that cloned blocks share the same var name
         fieldLabel.EDITABLE = true;
         this.setHelpUrl('/docs/spritelab/codestudio_spriteName');

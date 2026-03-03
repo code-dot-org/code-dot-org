@@ -1,4 +1,5 @@
 import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
+import CdoFieldLabel from '@cdo/apps/blockly/addons/cdoFieldLabel';
 import {BlockStyles} from '@cdo/apps/blockly/constants';
 
 import {blockTypesToDropdownOptions} from '../utils';
@@ -73,7 +74,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldLabel(i18n.blockMoveForward())
+        new CdoFieldLabel(i18n.blockMoveForward())
       );
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -115,7 +116,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldLabel(i18n.blockDestroyBlock())
+        new CdoFieldLabel(i18n.blockDestroyBlock())
       );
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -130,9 +131,7 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
-      this.appendDummyInput().appendField(
-        new blockly.FieldLabel(i18n.blockShear())
-      );
+      this.appendDummyInput().appendField(new CdoFieldLabel(i18n.blockShear()));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     },

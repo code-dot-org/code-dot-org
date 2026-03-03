@@ -5,6 +5,7 @@
  *
  */
 import CdoFieldImage from '@cdo/apps/blockly/addons/cdoFieldImage';
+import CdoFieldLabel from '@cdo/apps/blockly/addons/cdoFieldLabel';
 import '@cdo/apps/blockly/addons/extensions/jigsawFillPatternMixin';
 
 var levels = require('./levels');
@@ -214,7 +215,7 @@ function generateBlankBlock(blockly, skin, name, hsv, width, label) {
       this.appendDummyInput()
         .appendField(new CdoFieldImage(skin.blank, width, 54))
         .appendField(
-          new blockly.FieldLabel(label, {
+          new CdoFieldLabel(label, {
             fixedSize: {width: width, height: 64},
             fontSize: 32,
           })

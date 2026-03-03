@@ -25,6 +25,7 @@
 import {utils as mazeUtils} from '@code-dot-org/maze';
 
 import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
+import CdoFieldLabel from '@cdo/apps/blockly/addons/cdoFieldLabel';
 import {
   INFINITE_LOOP_TRAP,
   loopHighlight,
@@ -98,7 +99,7 @@ exports.install = function (blockly, blockInstallOptions) {
           this.setStyle(BlockStyles.DEFAULT);
           this.appendDummyInput()
             .appendField(
-              new blockly.FieldLabel(directionConfig.letter, {
+              new CdoFieldLabel(directionConfig.letter, {
                 fixedSize: {width: 12, height: 18},
               })
             )

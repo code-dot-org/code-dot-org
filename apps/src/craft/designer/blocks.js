@@ -2,6 +2,7 @@ import {EventType} from '@code-dot-org/craft';
 import _ from 'lodash';
 
 import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
+import CdoFieldLabel from '@cdo/apps/blockly/addons/cdoFieldLabel';
 import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {addSerializationHooksToBlock} from '@cdo/apps/blockly/utils';
 
@@ -471,7 +472,7 @@ export const install = (blockly, blockInstallOptions) => {
         }
         this.setStyle(BlockStyles.DEFAULT);
         this.appendDummyInput()
-          .appendField(new blockly.FieldLabel(blockText))
+          .appendField(new CdoFieldLabel(blockText))
           .appendField(dropdown, 'TYPE');
         this.setPreviousStatement(true);
         this.setNextStatement(true);
@@ -489,7 +490,7 @@ export const install = (blockly, blockInstallOptions) => {
       helpUrl: '',
       init: function () {
         this.setStyle(BlockStyles.DEFAULT);
-        this.appendDummyInput().appendField(new blockly.FieldLabel(blockText));
+        this.appendDummyInput().appendField(new CdoFieldLabel(blockText));
         this.setPreviousStatement(true);
         this.setNextStatement(true);
       },
@@ -514,7 +515,7 @@ export const install = (blockly, blockInstallOptions) => {
         dropdown.setValue(dropdownOptions[0][1]);
         this.setStyle(BlockStyles.DEFAULT);
         this.appendDummyInput()
-          .appendField(new blockly.FieldLabel(blockText))
+          .appendField(new CdoFieldLabel(blockText))
           .appendField(dropdown, 'TYPE');
         this.setPreviousStatement(true);
         this.setNextStatement(true);
@@ -668,9 +669,9 @@ export const install = (blockly, blockInstallOptions) => {
 
       this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput()
-        .appendField(new blockly.FieldLabel(i18n.blockActionSpawn()))
+        .appendField(new CdoFieldLabel(i18n.blockActionSpawn()))
         .appendField(entityTypeDropdown, 'TYPE')
-        .appendField(new blockly.FieldLabel(' '))
+        .appendField(new CdoFieldLabel(' '))
         .appendField(locationDropdown, 'DIRECTION');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -696,7 +697,7 @@ export const install = (blockly, blockInstallOptions) => {
 
       this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput()
-        .appendField(new blockly.FieldLabel('spawn'))
+        .appendField(new CdoFieldLabel('spawn'))
         .appendField(entityTypeDropdown, 'TYPE');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -712,7 +713,7 @@ export const install = (blockly, blockInstallOptions) => {
     helpUrl: '',
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
-      this.appendDummyInput().appendField(new blockly.FieldLabel('move north'));
+      this.appendDummyInput().appendField(new CdoFieldLabel('move north'));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     },
@@ -726,7 +727,7 @@ export const install = (blockly, blockInstallOptions) => {
     helpUrl: '',
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
-      this.appendDummyInput().appendField(new blockly.FieldLabel('move south'));
+      this.appendDummyInput().appendField(new CdoFieldLabel('move south'));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     },
@@ -740,7 +741,7 @@ export const install = (blockly, blockInstallOptions) => {
     helpUrl: '',
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
-      this.appendDummyInput().appendField(new blockly.FieldLabel('move east'));
+      this.appendDummyInput().appendField(new CdoFieldLabel('move east'));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     },
@@ -754,7 +755,7 @@ export const install = (blockly, blockInstallOptions) => {
     helpUrl: '',
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
-      this.appendDummyInput().appendField(new blockly.FieldLabel('move west'));
+      this.appendDummyInput().appendField(new CdoFieldLabel('move west'));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     },
