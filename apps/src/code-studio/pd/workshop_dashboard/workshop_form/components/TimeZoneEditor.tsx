@@ -1,7 +1,6 @@
-import {Button} from '@code-dot-org/component-library/button';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import moment from 'moment-timezone';
 import React, {FC, memo, useState} from 'react';
 
@@ -54,14 +53,16 @@ export const TimeZoneEditor: FC<{
         </Typography>
       )}
       {!editMode && (
-        <Button
-          type="tertiary"
-          color="black"
-          size="xs"
-          iconLeft={{iconName: 'pencil'}}
-          text={'Edit'}
+        <MuiButton
+          variant="text"
+          color="secondary"
+          size="extraSmall"
           onClick={() => setEditMode(true)}
-        />
+          type="button"
+          startIcon={<FontAwesomeV6Icon iconName="pencil" />}
+        >
+          Edit
+        </MuiButton>
       )}
       {editMode && tzChanged && (
         <FontAwesomeV6Icon

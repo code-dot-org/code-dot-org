@@ -1,3 +1,4 @@
+import CdoFieldColour from '../blockly/addons/cdoFieldColour';
 import {randomValue} from '../utils';
 
 var _ = require('lodash');
@@ -30,7 +31,7 @@ ArtistAPI.prototype.drawSnowflake = function (type, id) {
 
   // mirors Blockly.JavaScript.colour_random.
   var random_colour = function () {
-    var colors = Blockly.FieldColour.COLOURS;
+    var colors = CdoFieldColour.COLOURS;
     return colors[Math.floor(Math.random() * colors.length)];
   };
 

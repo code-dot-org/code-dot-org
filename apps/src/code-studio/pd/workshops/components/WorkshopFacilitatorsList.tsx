@@ -1,7 +1,6 @@
-import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Image from '@code-dot-org/component-library/image';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useState} from 'react';
 
@@ -34,15 +33,22 @@ const FacilitatorItem: React.FC<{facilitator: FacilitatorInfo}> = ({
         </div>
         {facilitator.bio && (
           <div>
-            <Button
-              type="tertiary"
-              size="s"
+            <MuiButton
+              variant="text"
+              color="primary"
+              size="small"
               className={moduleStyles.showBioButton}
-              text={showBio ? 'Hide biography' : 'Show biography'}
-              iconRight={{iconName: showBio ? 'chevron-up' : 'chevron-down'}}
               onClick={() => handleShowBio(!showBio)}
+              type="button"
               aria-expanded={showBio}
-            />
+              endIcon={
+                <FontAwesomeV6Icon
+                  iconName={showBio ? 'chevron-up' : 'chevron-down'}
+                />
+              }
+            >
+              {showBio ? 'Hide biography' : 'Show biography'}
+            </MuiButton>
           </div>
         )}
       </div>
