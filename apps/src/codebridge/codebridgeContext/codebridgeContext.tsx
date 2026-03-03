@@ -33,7 +33,6 @@ export type CodebridgeContextType = {
   aiTutorMultimodalEnabled?: boolean;
   aiTutorChatButtonData?: ChatButtonData[];
   aiTutorContextHelper?: AiTutorContextHelper<object>;
-  aiTutorSystemPromptName?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   aiTutorSystemPrompt?: string;
 };

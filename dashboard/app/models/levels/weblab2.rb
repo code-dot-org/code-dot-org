@@ -27,6 +27,7 @@
 class Weblab2 < Level
   include Widget2Helper
   validate :validate_ai_tutor_prompt_settings
+  validate :validate_widget2
 
   serialized_attrs %w(
     start_sources
@@ -77,13 +78,17 @@ class Weblab2 < Level
     # If this is a widget2 level or we are editing widget2 starter sources,
     # then startSources will come from the files in the repo, rather than
     # that serialized into the level file.
-    widget2_id = properties["widget2"] || widget2_start_sources
+    widget2_id = properties.dig("widget2", "id") || widget2_start_sources
     if widget2_id
       properties_camelized[:startSources] = get_widget2_sources(widget2_id)
+
+      # Also, don't attempt to load project sources, since we always want to use
+      # startSources.
+      properties_camelized[:usesProjects] = false
     end
 
     # And if this is a widget2 level, then show it as a widget.
-    if properties["widget2"]
+    if properties.dig("widget2", "id")
       properties_camelized[:widgetView] = true
     end
 
@@ -97,6 +102,16 @@ class Weblab2 < Level
         answer_types.length >= 1 &&
         answer_types.all?(String)
       errors.add(:ai_tutor_prompt_settings, 'must contain at least one answer type.')
+    end
+  end
+
+  private def validate_widget2
+    return if widget2.blank?
+    unless widget2.is_a?(Hash) && widget2['id'].is_a?(String)
+      errors.add(:widget2, 'must be a hash containing an id string.')
+    end
+    if widget2['parameters'] && !widget2['parameters'].is_a?(Hash)
+      errors.add(:widget2, 'parameters must be a hash if present.')
     end
   end
 end

@@ -17,9 +17,4 @@
 
   - if @level.is_a?(Weblab2) && @widget2_ids.present?
     %h2 Widget2 View
-    = f.select :widget2, options_for_select(@widget2_ids), {include_blank: true}
-    %p
-      If one is selected, the level will be in Widget2 View.
-      As in the above Original Widget View, the code editor workspace is hidden.
-      To see/edit the list of available widgets2s, go to the
-      = link_to('Widget2 Library', '/widget2', target: '_blank') + '.'
+    = render partial: 'levels/editors/fields/widget2', locals: {f: f}
