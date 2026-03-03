@@ -35,7 +35,6 @@ const createMockFile = (
 ): ProjectFile => ({
   id,
   name: `file${id}.txt`,
-  language: 'txt',
   contents: `Content of file ${id}`,
   folderId: DEFAULT_FOLDER_ID,
   active: false,
@@ -59,10 +58,9 @@ const createMockMultiFileSource = (
   files: {
     '1': createMockFile('1', {
       name: 'index.html',
-      language: 'html',
       active: true,
     }),
-    '2': createMockFile('2', {name: 'script.js', language: 'javascript'}),
+    '2': createMockFile('2', {name: 'script.js'}),
   },
   folders: {
     '1': createMockFolder('1'),
@@ -137,7 +135,6 @@ describe('lab2ProjectRedux', () => {
       expect(newFile).toBeDefined();
       expect(newFile?.folderId).toBe('1');
       expect(newFile?.contents).toBe('print("hello world")');
-      expect(newFile?.language).toBe('py');
       expect(state.hasEdited).toBe(true);
     });
 
@@ -176,7 +173,6 @@ describe('lab2ProjectRedux', () => {
       expect(newFile?.folderId).toBe(DEFAULT_FOLDER_ID);
       expect(newFile?.contents).toBe('');
       expect(newFile?.url).toBe(fileUrl);
-      expect(newFile?.language).toBe('png');
       expect(state.hasEdited).toBe(true);
     });
 
@@ -205,7 +201,6 @@ describe('lab2ProjectRedux', () => {
       expect(newFile?.folderId).toBe('1');
       expect(newFile?.contents).toBe('');
       expect(newFile?.url).toBe(fileUrl);
-      expect(newFile?.language).toBe('png');
       expect(state.hasEdited).toBe(true);
     });
 
@@ -236,30 +231,6 @@ describe('lab2ProjectRedux', () => {
       expect(
         (state.projectSources!.source as MultiFileSource).files['1'].name
       ).toBe('renamed.html');
-      expect(state.hasEdited).toBe(true);
-    });
-
-    it('should update file language when renaming with new extension', () => {
-      const initialProjectSources = createMockProjectSources();
-      const initialStateWithSources = {
-        ...initialState,
-        projectSources: initialProjectSources,
-      };
-
-      // Verify initial language
-      const initialFile = (
-        initialStateWithSources.projectSources!.source as MultiFileSource
-      ).files['1'];
-      expect(initialFile.language).toBe('html');
-
-      const state = reducer(
-        initialStateWithSources,
-        renameFile({fileId: '1', newName: 'renamed.css'})
-      );
-
-      const file = (state.projectSources!.source as MultiFileSource).files['1'];
-      expect(file.name).toBe('renamed.css');
-      expect(file.language).toBe('css');
       expect(state.hasEdited).toBe(true);
     });
 
@@ -680,15 +651,12 @@ describe('lab2ProjectRedux', () => {
           files: {
             '1': createMockFile('1', {
               name: 'index.html',
-              language: 'html',
             }),
             '2': createMockFile('2', {
               name: 'script.js',
-              language: 'javascript',
             }),
             '3': createMockFile('3', {
               name: 'style.css',
-              language: 'css',
               folderId: '1',
               active: true,
             }),

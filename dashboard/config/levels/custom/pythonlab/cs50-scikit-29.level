@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-02-18T17:03:16.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# CIW AI Associate Standard: 5.12\n# Standard Description: Explain the concepts of 'agent' and 'action' in reinforcement learning.\n#\n# Rationale: Reinforcement Learning (RL) is like training a dog with treats. \n# It doesn't have a \"key\" of answers; it just has rewards and punishments. \n# This tutorial uses the concept of a \"Fish Battle\" to explain the two \n# main parts of RL: The Agent and the Action.\n\n\"\"\"\nWelcome! Today we are learning about Reinforcement Learning (RL). \nIn RL, we don't tell the AI the answer. Instead, we let it play a game \nand give it points for winning.\n\nThink of a \"Fish Battle\" game:\n1. The Agent: The AI player (the Fish).\n2. The Action: The move the AI makes (using a Skill like 'Water Gun').\n3. The Reward: Getting points for winning the battle.\n\"\"\"\n\nimport random\n\nclass FishAgent:\n    \"\"\"The 'Agent' is the AI character that makes decisions.\"\"\"\n    def __init__(self, name):\n        self.name = name\n        self.points = 0\n    \n    def choose_action(self):\n        \"\"\"The 'Action' is the specific move the agent chooses.\"\"\"\n        actions = [\"Bubbles\", \"Tail Whip\", \"Water Gun\"]\n        choice = random.choice(actions)\n        return choice\n\n# --- THE SIMULATION ---\nprint(\"--- Reinforcement Learning: The Fish Battle ---\")\n\n# 1. Create our Agent\nmy_fish = FishAgent(name=\"Bubbles\")\n\n# 2. Let the Agent take Actions in the environment\nfor turn in range(1, 6):\n    action = my_fish.choose_action()\n    \n    # Let's say \"Water Gun\" is a good move that gets a reward\n    if action == \"Water Gun\":\n        reward = 10\n        my_fish.points += reward\n        outcome = \"CRITICAL HIT! +10 Points (Reward)\"\n    else:\n        reward = 0\n        outcome = \"It was okay. +0 Points\"\n        \n    print(f\"Turn {turn}: {my_fish.name} used {action}. {outcome}\")\n\nprint(f\"\\nFinal Score: {my_fish.points}\")\nprint(\"If we did this 1,000 times, the Agent would 'Learn' to use Water Gun every time!\")\n\n\"\"\"\n--- YOUR TURN ---\nWe've added a new move called \"Deep Dive\" which gives a HUGE reward (+50).\n1. Add \"Deep Dive\" to the 'actions' list in the choose_action function.\n2. Add an 'if' statement to give the fish 50 points if it uses \"Deep Dive\".\n\"\"\"\n\n# STARTING CODE FOR STUDENT:\nclass SmartFish:\n    def __init__(self):\n        self.score = 0\n        \n    def act(self):\n        # TODO: Add \"Deep Dive\" to this list\n        moves = [\"Bubbles\", \"Tail Whip\"]\n        return random.choice(moves)\n\n# TODO: Create a loop and give rewards for \"Deep Dive\"!\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFTDG6jyYgtI/CEUE/82dEkG4hlI8OLsdjJD0In8S\n03BB+jPkGgyYB0/9C3zqHMHEFpKeCsugYbpGMxzBNwrd7qASagJaFzMnVUyM\n2TXS7Hau9lj7JpZIHXn9fmxXRRANWbL79f1mPxUrKq26HNhxZPd3fAjq4wG5\niVlV9pHxhGCvLZS3O+30cEoVnPbc9Te0Nz8uxTwD9eHHl8eL3AfH8zm/m/C1\npdABxvOQpPLgWHIyeJXezwAZpp/EMQ50bEE1mqpctk1ytZERK/DcPqYCQgmq\ng3VjtOk1xF7VemTbuODlL6BUCqnuOrDTrTPIz8K13cxZq1t0ZfCtew8hYDzi\nWIdtAJNdZ8lEDKf7DkjXb+u0xUgm32YdJTWrucSKf38TQCXiZ2nrx5SzGb6B\nXNQNRCus/Lr8OsqA7VEzhAPJoc/GRFycILTX5PRFQmjURpX+Kbolps35KDEh\nDmFK4Pk1DX2nYiIZuPSZwdwOv6U56R0f2Maub4Ju4O26dOOdZ+/MDYpiCKXL\nkJwAHykWWFYfzf4GfjdvSIAXEg4W+At5JYYEx8gflSIu0IawZRtba/ax+jEe\ntyg6Z/Je5tgAl/CNnNCPSSkCHFXQUDZmXhbpn/Q03B7pzj4C920leYUq/tuf\nMo1WflvjUtaEXW5RrqXWDUXZsymoQN3DkMp6ayDF7b5+7ZZlHVkifgLDsopX\nFGuQ9YBgL5AYFLiaqZfDp7nD+wliOd+vsAIbf95PNrerJ/VFtsyGYotL6TFh\nzeusDKfkakdqkXR54Ap5Mj65jBZEKzdxwnJT07AIy4nbDyAyw11i6f63Du66\n/JuIivEsXeDZsU0MaS7r8egAdcB/KOt1S3U6JlBful93AvfvQi9tGPHtN7y4\nPerBseS20sVr7wrhpAU/Gy9epfJ4+KlBnxq56hZ0+k2ODlT4STsM4k52HPyA\nxanNNjNueBBQIrrD07zX4KvM2al1kd3KBdTVnn3Dn68cQV5oGcVz9s2zeTUC\nefL0ITUXvjK/7tpvQaCIFMQNsCwa8TBTJa344JfcgWHz38zsOJrcBffKUNBq\nfctmvw2Wt9Iza1rHAeOx955+aTr3wk82dU5rmggol07Wvrzi7VHG1b702W3C\nhvHSz/sG/6RSw6yREPEcFm0MxLm9Gjg11Z2u1BUDu3AVFHwy9mo6P10GHVeb\nmyCeyJnPpmbVpH1CHhHqSBFm6J7P44LkiyvdUZlh8wn1uj2ZrP2kwPHPd9fY\nUcK1SvSX/pGcRAoLsQxT+P19ybvAaDgfX1FkAR3/5rnnkDOWYq90tm+LlTLA\nYUdymBHlCbaUZV6PAON6fhVtSwM7JLLXRRzthajJP7gZ8T1FwlOHYkr9SStk\nxurXBIklV8sobl9K4FY6gg/puSJva2LNfwnMIzBgBNQsFg3M80e4Zx5ZKB3F\nmkhQ08ZZPgHNXLpSZQNTj66oQv+TkQmYr4bFX5IM6/yHHmc+Ina/J1QLjTcw\nTaeUhLCf4TkAWBe7GtoYrJBXeUFH+Je8qodk\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-18T17:03:16.491+00:00\",\"changed\":[\"cloned from \\\"cs50-scikit-28\\\"\"],\"cloned_from\":\"cs50-scikit-28\"},{\"changed_at\":\"2026-02-18 17:03:19 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:46:32 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:46:40 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>

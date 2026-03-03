@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-02-18 06:50:13 UTC",
+    "serialized_at": "2026-02-23 00:59:11 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -7528,6 +7528,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L9-L1-2025"
+        ],
         "progression": "Sample Website"
       },
       "bonus": false,
@@ -7550,6 +7553,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L9-L2-2025"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -7572,6 +7578,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L9-L3-2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7594,6 +7603,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L9-L4-2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7616,6 +7628,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L9-L5-2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7638,6 +7653,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L9-L6-2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7660,6 +7678,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L9-L7-2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -7682,6 +7703,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2L9-L8-2025"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -7704,6 +7728,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2L9-L9-2025"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -7726,6 +7753,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L9-L10-2025"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -7744,6 +7774,1360 @@
     },
     {
       "chapter": 59,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2L10-L1-2025"
+        ],
+        "progression": "Review: CSS"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L10-L1-2025"
+        ],
+        "lesson.key": "Lesson 10: Mini-Project - Adding Style to a Web Page",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "5e013ea8-83c5-4e6e-a876-7ad6c61cf79d"
+      },
+      "level_keys": [
+        "CSD U2L10-L1-2025"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2L10-L2-2025"
+        ],
+        "progression": "Add Style to Your User's Page"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L10-L2-2025"
+        ],
+        "lesson.key": "Lesson 10: Mini-Project - Adding Style to a Web Page",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "a9c12981-42e9-4f8f-b751-3c42226a5958"
+      },
+      "level_keys": [
+        "CSD U2L10-L2-2025"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2L10-L3-2025"
+        ],
+        "progression": "Add Style to Your User's Page"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L10-L3-2025"
+        ],
+        "lesson.key": "Lesson 10: Mini-Project - Adding Style to a Web Page",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "a9c12981-42e9-4f8f-b751-3c42226a5958"
+      },
+      "level_keys": [
+        "CSD U2L10-L3-2025"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2L10-L4-2025"
+        ],
+        "progression": "Add Style to Your User's Page"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L10-L4-2025"
+        ],
+        "lesson.key": "Lesson 10: Mini-Project - Adding Style to a Web Page",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "a9c12981-42e9-4f8f-b751-3c42226a5958"
+      },
+      "level_keys": [
+        "CSD U2L10-L4-2025"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2L10-L5-2025"
+        ],
+        "progression": "Review Your Page"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L10-L5-2025"
+        ],
+        "lesson.key": "Lesson 10: Mini-Project - Adding Style to a Web Page",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "8aec2807-0ad3-486d-b45e-fd0594e1e12d"
+      },
+      "level_keys": [
+        "CSD U2L10-L5-2025"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Sample Web Page"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L11-L1-2025"
+        ],
+        "lesson.key": "Lesson 11: CSS Classes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "f41a9634-2aa6-4956-bf08-f3af17b9cf84"
+      },
+      "level_keys": [
+        "CSD U2L11-L1-2025"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L11-L2-2025"
+        ],
+        "lesson.key": "Lesson 11: CSS Classes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "6eb52fe4-052c-4774-b312-10a704cbebfb"
+      },
+      "level_keys": [
+        "CSD U2L11-L2-2025"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L11-L3-2025"
+        ],
+        "lesson.key": "Lesson 11: CSS Classes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "bf4a8c58-0d28-4b90-952b-8f078cc276c5"
+      },
+      "level_keys": [
+        "CSD U2L11-L3-2025"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L11-L4-2025"
+        ],
+        "lesson.key": "Lesson 11: CSS Classes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "bf4a8c58-0d28-4b90-952b-8f078cc276c5"
+      },
+      "level_keys": [
+        "CSD U2L11-L4-2025"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L11-L5-2025"
+        ],
+        "lesson.key": "Lesson 11: CSS Classes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "3bc19f4f-7d85-4ff0-9f09-a9223b7e6c28"
+      },
+      "level_keys": [
+        "CSD U2L11-L5-2025"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L11-L6-2025"
+        ],
+        "lesson.key": "Lesson 11: CSS Classes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "1b59a273-cfd0-4094-884c-750719bff47e"
+      },
+      "level_keys": [
+        "CSD U2L11-L6-2025"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L11-L7-2025"
+        ],
+        "lesson.key": "Lesson 11: CSS Classes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "1b59a273-cfd0-4094-884c-750719bff47e"
+      },
+      "level_keys": [
+        "CSD U2L11-L7-2025"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L11-L8-2025"
+        ],
+        "lesson.key": "Lesson 11: CSS Classes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "40b11a30-7f43-422e-9fa2-802d5ddc7c35"
+      },
+      "level_keys": [
+        "CSD U2L11-L8-2025"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Div & Flex Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L12-L1-2025"
+        ],
+        "lesson.key": "Lesson 12: Organizing Content with Flexbox",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "87011cb6-ff69-47d5-93d1-f48a54590e70"
+      },
+      "level_keys": [
+        "CSD U2L12-L1-2025"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L12-L2-2025"
+        ],
+        "lesson.key": "Lesson 12: Organizing Content with Flexbox",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "db23146b-33d4-4f15-8fb5-c370ebff93c9"
+      },
+      "level_keys": [
+        "CSD U2L12-L2-2025"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L12-L3-2025"
+        ],
+        "lesson.key": "Lesson 12: Organizing Content with Flexbox",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "db23146b-33d4-4f15-8fb5-c370ebff93c9"
+      },
+      "level_keys": [
+        "CSD U2L12-L3-2025"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L12-L4-2025"
+        ],
+        "lesson.key": "Lesson 12: Organizing Content with Flexbox",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "db23146b-33d4-4f15-8fb5-c370ebff93c9"
+      },
+      "level_keys": [
+        "CSD U2L12-L4-2025"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L12-L5-2025"
+        ],
+        "lesson.key": "Lesson 12: Organizing Content with Flexbox",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "db23146b-33d4-4f15-8fb5-c370ebff93c9"
+      },
+      "level_keys": [
+        "CSD U2L12-L5-2025"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L12-L6-2025"
+        ],
+        "lesson.key": "Lesson 12: Organizing Content with Flexbox",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "c7d9cb76-8a5c-4e2d-a458-09f75d0e0ea6"
+      },
+      "level_keys": [
+        "CSD U2L12-L6-2025"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment Level"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L12-L7-2025"
+        ],
+        "lesson.key": "Lesson 12: Organizing Content with Flexbox",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "74659af7-4f7b-4dbf-9919-e5e3b972690b"
+      },
+      "level_keys": [
+        "CSD U2L12-L7-2025"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment Level"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L12-L8-2025"
+        ],
+        "lesson.key": "Lesson 12: Organizing Content with Flexbox",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "74659af7-4f7b-4dbf-9919-e5e3b972690b"
+      },
+      "level_keys": [
+        "CSD U2L12-L8-2025"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenge Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L12-L9-2025"
+        ],
+        "lesson.key": "Lesson 12: Organizing Content with Flexbox",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "c3ac93c8-3b35-4b47-a4ca-5c55e925156c"
+      },
+      "level_keys": [
+        "CSD U2L12-L9-2025"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploration level"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L13-L1-2025"
+        ],
+        "lesson.key": "Lesson 13: Flexbox Children for More Control",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "3bbab9df-21d0-49f7-a8d3-cd1eef5d92a0"
+      },
+      "level_keys": [
+        "CSD U2L13-L1-2025"
+      ]
+    },
+    {
+      "chapter": 82,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L13-L2-2025"
+        ],
+        "lesson.key": "Lesson 13: Flexbox Children for More Control",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "049e356d-6ba7-4933-8254-758c398d926a"
+      },
+      "level_keys": [
+        "CSD U2L13-L2-2025"
+      ]
+    },
+    {
+      "chapter": 83,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L13-L3-2025"
+        ],
+        "lesson.key": "Lesson 13: Flexbox Children for More Control",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "049e356d-6ba7-4933-8254-758c398d926a"
+      },
+      "level_keys": [
+        "CSD U2L13-L3-2025"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L13-L4-2025"
+        ],
+        "lesson.key": "Lesson 13: Flexbox Children for More Control",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "049e356d-6ba7-4933-8254-758c398d926a"
+      },
+      "level_keys": [
+        "CSD U2L13-L4-2025"
+      ]
+    },
+    {
+      "chapter": 85,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L13-L5-2025"
+        ],
+        "lesson.key": "Lesson 13: Flexbox Children for More Control",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "049e356d-6ba7-4933-8254-758c398d926a"
+      },
+      "level_keys": [
+        "CSD U2L13-L5-2025"
+      ]
+    },
+    {
+      "chapter": 86,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L13-L6-2025"
+        ],
+        "lesson.key": "Lesson 13: Flexbox Children for More Control",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "31e745f1-0a6d-4971-aab7-a45c3509e87b"
+      },
+      "level_keys": [
+        "CSD U2L13-L6-2025"
+      ]
+    },
+    {
+      "chapter": 87,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment Level"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L13-L7-2025"
+        ],
+        "lesson.key": "Lesson 13: Flexbox Children for More Control",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "15c0947f-ff2d-455d-a441-3265969bcc09"
+      },
+      "level_keys": [
+        "CSD U2L13-L7-2025"
+      ]
+    },
+    {
+      "chapter": 88,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment Level"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L13-L8-2025"
+        ],
+        "lesson.key": "Lesson 13: Flexbox Children for More Control",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "15c0947f-ff2d-455d-a441-3265969bcc09"
+      },
+      "level_keys": [
+        "CSD U2L13-L8-2025"
+      ]
+    },
+    {
+      "chapter": 89,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenge Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L13-L9-2025"
+        ],
+        "lesson.key": "Lesson 13: Flexbox Children for More Control",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "c410f73c-dd29-417f-af60-85156f2ab712"
+      },
+      "level_keys": [
+        "CSD U2L13-L9-2025"
+      ]
+    },
+    {
+      "chapter": 90,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L14-L1-2025"
+        ],
+        "lesson.key": "Lesson 14: Chapter 1 Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "1a2abea2-a07f-4a2e-8c87-63e0739f6f48"
+      },
+      "level_keys": [
+        "CSD U2L14-L1-2025"
+      ]
+    },
+    {
+      "chapter": 91,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L14-L2-2025"
+        ],
+        "lesson.key": "Lesson 14: Chapter 1 Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "1a2abea2-a07f-4a2e-8c87-63e0739f6f48"
+      },
+      "level_keys": [
+        "CSD U2L14-L2-2025"
+      ]
+    },
+    {
+      "chapter": 92,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L14-L3-2025"
+        ],
+        "lesson.key": "Lesson 14: Chapter 1 Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "1a2abea2-a07f-4a2e-8c87-63e0739f6f48"
+      },
+      "level_keys": [
+        "CSD U2L14-L3-2025"
+      ]
+    },
+    {
+      "chapter": 93,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Reflection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L14-L4-2025"
+        ],
+        "lesson.key": "Lesson 14: Chapter 1 Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "debab90a-3de7-457c-b53e-7d91dc20c396"
+      },
+      "level_keys": [
+        "CSD U2L14-L4-2025"
+      ]
+    },
+    {
+      "chapter": 94,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L17-L1-2025"
+        ],
+        "lesson.key": "Lesson 17: Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "f6cbead4-9354-4cf5-b716-e0eca3bbea9c"
+      },
+      "level_keys": [
+        "CSD U2L17-L1-2025"
+      ]
+    },
+    {
+      "chapter": 95,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L17-L2-2025"
+        ],
+        "lesson.key": "Lesson 17: Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "1fa2d9b4-1998-496d-85ca-4c509cda8333"
+      },
+      "level_keys": [
+        "CSD U2L17-L2-2025"
+      ]
+    },
+    {
+      "chapter": 96,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L17-L3-2025"
+        ],
+        "lesson.key": "Lesson 17: Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "1fa2d9b4-1998-496d-85ca-4c509cda8333"
+      },
+      "level_keys": [
+        "CSD U2L17-L3-2025"
+      ]
+    },
+    {
+      "chapter": 97,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L17-L4-2025"
+        ],
+        "lesson.key": "Lesson 17: Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "1fa2d9b4-1998-496d-85ca-4c509cda8333"
+      },
+      "level_keys": [
+        "CSD U2L17-L4-2025"
+      ]
+    },
+    {
+      "chapter": 98,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L17-L5-2025"
+        ],
+        "lesson.key": "Lesson 17: Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "3729082f-023b-4e10-ba4b-6fb2bf8943b3"
+      },
+      "level_keys": [
+        "CSD U2L17-L5-2025"
+      ]
+    },
+    {
+      "chapter": 99,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Adding Pages"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L17-L6-2025"
+        ],
+        "lesson.key": "Lesson 17: Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "12bd456e-2602-4bf4-a8c4-2dc82184efa4"
+      },
+      "level_keys": [
+        "CSD U2L17-L6-2025"
+      ]
+    },
+    {
+      "chapter": 100,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Adding Pages"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L17-L7-2025"
+        ],
+        "lesson.key": "Lesson 17: Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "12bd456e-2602-4bf4-a8c4-2dc82184efa4"
+      },
+      "level_keys": [
+        "CSD U2L17-L7-2025"
+      ]
+    },
+    {
+      "chapter": 101,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L17-L8-2025"
+        ],
+        "lesson.key": "Lesson 17: Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "ad688d27-7830-46b8-a10e-13674cea7bf6"
+      },
+      "level_keys": [
+        "CSD U2L17-L8-2025"
+      ]
+    },
+    {
+      "chapter": 102,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploration Level"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L18-L1-2025"
+        ],
+        "lesson.key": "Lesson 18: CSS Pseudo-classes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "29e8a970-3bfe-4f35-89ca-230b0a957c49"
+      },
+      "level_keys": [
+        "CSD U2L18-L1-2025"
+      ]
+    },
+    {
+      "chapter": 103,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L18-L2-2025"
+        ],
+        "lesson.key": "Lesson 18: CSS Pseudo-classes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "1247cd18-b9f1-43a3-bfa6-12251e0924a9"
+      },
+      "level_keys": [
+        "CSD U2L18-L2-2025"
+      ]
+    },
+    {
+      "chapter": 104,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L18-L3-2025"
+        ],
+        "lesson.key": "Lesson 18: CSS Pseudo-classes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "1247cd18-b9f1-43a3-bfa6-12251e0924a9"
+      },
+      "level_keys": [
+        "CSD U2L18-L3-2025"
+      ]
+    },
+    {
+      "chapter": 105,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L18-L4-2025"
+        ],
+        "lesson.key": "Lesson 18: CSS Pseudo-classes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "1247cd18-b9f1-43a3-bfa6-12251e0924a9"
+      },
+      "level_keys": [
+        "CSD U2L18-L4-2025"
+      ]
+    },
+    {
+      "chapter": 106,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L18-L5-2025"
+        ],
+        "lesson.key": "Lesson 18: CSS Pseudo-classes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "1247cd18-b9f1-43a3-bfa6-12251e0924a9"
+      },
+      "level_keys": [
+        "CSD U2L18-L5-2025"
+      ]
+    },
+    {
+      "chapter": 107,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L18-L6-2025"
+        ],
+        "lesson.key": "Lesson 18: CSS Pseudo-classes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "4e13aa6b-2b03-42cf-bc81-f1f604a7efa0"
+      },
+      "level_keys": [
+        "CSD U2L18-L6-2025"
+      ]
+    },
+    {
+      "chapter": 108,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment Level"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L18-L7-2025"
+        ],
+        "lesson.key": "Lesson 18: CSS Pseudo-classes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "dab3d5b0-9d68-4531-8a57-06de655a4a21"
+      },
+      "level_keys": [
+        "CSD U2L18-L7-2025"
+      ]
+    },
+    {
+      "chapter": 109,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment Level"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L18-L8-2025"
+        ],
+        "lesson.key": "Lesson 18: CSS Pseudo-classes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "dab3d5b0-9d68-4531-8a57-06de655a4a21"
+      },
+      "level_keys": [
+        "CSD U2L18-L8-2025"
+      ]
+    },
+    {
+      "chapter": 110,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenge Levels"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L18-L9-2025"
+        ],
+        "lesson.key": "Lesson 18: CSS Pseudo-classes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "b2f5c457-0b3c-47b9-98b1-535400011315"
+      },
+      "level_keys": [
+        "CSD U2L18-L9-2025"
+      ]
+    },
+    {
+      "chapter": 111,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Upload Your Images"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L19-L1-2025"
+        ],
+        "lesson.key": "Lesson 19: Planning a Multi-Page Site",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "6545b10f-680d-4424-8853-28fbb25bd838"
+      },
+      "level_keys": [
+        "CSD U2L19-L1-2025"
+      ]
+    },
+    {
+      "chapter": 112,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Your Team Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L20-L1-2025"
+        ],
+        "lesson.key": "Lesson 20: Project - Website for a Purpose",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "3bc15758-5039-4089-9926-969fcd5a049a"
+      },
+      "level_keys": [
+        "CSD U2L20-L1-2025"
+      ]
+    },
+    {
+      "chapter": 113,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Add Content and HTML"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L20-L2-2025"
+        ],
+        "lesson.key": "Lesson 20: Project - Website for a Purpose",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "6ff1a699-b005-4b9a-9b2a-5598e269771c"
+      },
+      "level_keys": [
+        "CSD U2L20-L2-2025"
+      ]
+    },
+    {
+      "chapter": 114,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Share Your Pages"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L20-L3-2025"
+        ],
+        "lesson.key": "Lesson 20: Project - Website for a Purpose",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "cda298a3-f747-46e8-9b2c-95380b80cf0e"
+      },
+      "level_keys": [
+        "CSD U2L20-L3-2025"
+      ]
+    },
+    {
+      "chapter": 115,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Add Style"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L20-L4-2025"
+        ],
+        "lesson.key": "Lesson 20: Project - Website for a Purpose",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "70470749-0cc3-45c4-8eed-fc930a6c6a6f"
+      },
+      "level_keys": [
+        "CSD U2L20-L4-2025"
+      ]
+    },
+    {
+      "chapter": 116,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Share Your Stylesheets"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L20-L5-2025"
+        ],
+        "lesson.key": "Lesson 20: Project - Website for a Purpose",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "ffff1b5c-6773-4c04-a765-c5b7c39b6fe5"
+      },
+      "level_keys": [
+        "CSD U2L20-L5-2025"
+      ]
+    },
+    {
+      "chapter": 117,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check Your Work"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L20-L6-2025"
+        ],
+        "lesson.key": "Lesson 20: Project - Website for a Purpose",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "8288440f-1861-410f-bf77-5761e2f20c47"
+      },
+      "level_keys": [
+        "CSD U2L20-L6-2025"
+      ]
+    },
+    {
+      "chapter": 118,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Incorporate Feedback"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L21-L1-2025"
+        ],
+        "lesson.key": "Lesson 21: Peer Review and Final Touches",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "f885f8bc-33c3-4423-9af4-dca06447f129"
+      },
+      "level_keys": [
+        "CSD U2L21-L1-2025"
+      ]
+    },
+    {
+      "chapter": 119,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End Of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L21-L2-2025"
+        ],
+        "lesson.key": "Lesson 21: Peer Review and Final Touches",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "03bd8b13-1f1a-4c9b-be1d-2025bfd11774"
+      },
+      "level_keys": [
+        "CSD U2L21-L2-2025"
+      ]
+    },
+    {
+      "chapter": 120,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7767,7 +9151,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 121,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -8491,6 +9875,738 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSD U2L10-L1-2025",
+        "script_level.level_keys": [
+          "CSD U2L10-L1-2025"
+        ],
+        "lesson.key": "Lesson 10: Mini-Project - Adding Style to a Web Page",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "5e013ea8-83c5-4e6e-a876-7ad6c61cf79d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L10-L2-2025",
+        "script_level.level_keys": [
+          "CSD U2L10-L2-2025"
+        ],
+        "lesson.key": "Lesson 10: Mini-Project - Adding Style to a Web Page",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "a9c12981-42e9-4f8f-b751-3c42226a5958"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L10-L3-2025",
+        "script_level.level_keys": [
+          "CSD U2L10-L3-2025"
+        ],
+        "lesson.key": "Lesson 10: Mini-Project - Adding Style to a Web Page",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "a9c12981-42e9-4f8f-b751-3c42226a5958"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L10-L4-2025",
+        "script_level.level_keys": [
+          "CSD U2L10-L4-2025"
+        ],
+        "lesson.key": "Lesson 10: Mini-Project - Adding Style to a Web Page",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "a9c12981-42e9-4f8f-b751-3c42226a5958"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L10-L5-2025",
+        "script_level.level_keys": [
+          "CSD U2L10-L5-2025"
+        ],
+        "lesson.key": "Lesson 10: Mini-Project - Adding Style to a Web Page",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "8aec2807-0ad3-486d-b45e-fd0594e1e12d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L11-L1-2025",
+        "script_level.level_keys": [
+          "CSD U2L11-L1-2025"
+        ],
+        "lesson.key": "Lesson 11: CSS Classes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "f41a9634-2aa6-4956-bf08-f3af17b9cf84"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L11-L2-2025",
+        "script_level.level_keys": [
+          "CSD U2L11-L2-2025"
+        ],
+        "lesson.key": "Lesson 11: CSS Classes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "6eb52fe4-052c-4774-b312-10a704cbebfb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L11-L3-2025",
+        "script_level.level_keys": [
+          "CSD U2L11-L3-2025"
+        ],
+        "lesson.key": "Lesson 11: CSS Classes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "bf4a8c58-0d28-4b90-952b-8f078cc276c5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L11-L4-2025",
+        "script_level.level_keys": [
+          "CSD U2L11-L4-2025"
+        ],
+        "lesson.key": "Lesson 11: CSS Classes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "bf4a8c58-0d28-4b90-952b-8f078cc276c5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L11-L5-2025",
+        "script_level.level_keys": [
+          "CSD U2L11-L5-2025"
+        ],
+        "lesson.key": "Lesson 11: CSS Classes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "3bc19f4f-7d85-4ff0-9f09-a9223b7e6c28"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L11-L6-2025",
+        "script_level.level_keys": [
+          "CSD U2L11-L6-2025"
+        ],
+        "lesson.key": "Lesson 11: CSS Classes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "1b59a273-cfd0-4094-884c-750719bff47e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L11-L7-2025",
+        "script_level.level_keys": [
+          "CSD U2L11-L7-2025"
+        ],
+        "lesson.key": "Lesson 11: CSS Classes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "1b59a273-cfd0-4094-884c-750719bff47e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L11-L8-2025",
+        "script_level.level_keys": [
+          "CSD U2L11-L8-2025"
+        ],
+        "lesson.key": "Lesson 11: CSS Classes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "40b11a30-7f43-422e-9fa2-802d5ddc7c35"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L12-L1-2025",
+        "script_level.level_keys": [
+          "CSD U2L12-L1-2025"
+        ],
+        "lesson.key": "Lesson 12: Organizing Content with Flexbox",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "87011cb6-ff69-47d5-93d1-f48a54590e70"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L12-L2-2025",
+        "script_level.level_keys": [
+          "CSD U2L12-L2-2025"
+        ],
+        "lesson.key": "Lesson 12: Organizing Content with Flexbox",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "db23146b-33d4-4f15-8fb5-c370ebff93c9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L12-L3-2025",
+        "script_level.level_keys": [
+          "CSD U2L12-L3-2025"
+        ],
+        "lesson.key": "Lesson 12: Organizing Content with Flexbox",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "db23146b-33d4-4f15-8fb5-c370ebff93c9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L12-L4-2025",
+        "script_level.level_keys": [
+          "CSD U2L12-L4-2025"
+        ],
+        "lesson.key": "Lesson 12: Organizing Content with Flexbox",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "db23146b-33d4-4f15-8fb5-c370ebff93c9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L12-L5-2025",
+        "script_level.level_keys": [
+          "CSD U2L12-L5-2025"
+        ],
+        "lesson.key": "Lesson 12: Organizing Content with Flexbox",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "db23146b-33d4-4f15-8fb5-c370ebff93c9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L12-L6-2025",
+        "script_level.level_keys": [
+          "CSD U2L12-L6-2025"
+        ],
+        "lesson.key": "Lesson 12: Organizing Content with Flexbox",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "c7d9cb76-8a5c-4e2d-a458-09f75d0e0ea6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L12-L7-2025",
+        "script_level.level_keys": [
+          "CSD U2L12-L7-2025"
+        ],
+        "lesson.key": "Lesson 12: Organizing Content with Flexbox",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "74659af7-4f7b-4dbf-9919-e5e3b972690b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L12-L8-2025",
+        "script_level.level_keys": [
+          "CSD U2L12-L8-2025"
+        ],
+        "lesson.key": "Lesson 12: Organizing Content with Flexbox",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "74659af7-4f7b-4dbf-9919-e5e3b972690b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L12-L9-2025",
+        "script_level.level_keys": [
+          "CSD U2L12-L9-2025"
+        ],
+        "lesson.key": "Lesson 12: Organizing Content with Flexbox",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "c3ac93c8-3b35-4b47-a4ca-5c55e925156c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L13-L1-2025",
+        "script_level.level_keys": [
+          "CSD U2L13-L1-2025"
+        ],
+        "lesson.key": "Lesson 13: Flexbox Children for More Control",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "3bbab9df-21d0-49f7-a8d3-cd1eef5d92a0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L13-L2-2025",
+        "script_level.level_keys": [
+          "CSD U2L13-L2-2025"
+        ],
+        "lesson.key": "Lesson 13: Flexbox Children for More Control",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "049e356d-6ba7-4933-8254-758c398d926a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L13-L3-2025",
+        "script_level.level_keys": [
+          "CSD U2L13-L3-2025"
+        ],
+        "lesson.key": "Lesson 13: Flexbox Children for More Control",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "049e356d-6ba7-4933-8254-758c398d926a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L13-L4-2025",
+        "script_level.level_keys": [
+          "CSD U2L13-L4-2025"
+        ],
+        "lesson.key": "Lesson 13: Flexbox Children for More Control",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "049e356d-6ba7-4933-8254-758c398d926a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L13-L5-2025",
+        "script_level.level_keys": [
+          "CSD U2L13-L5-2025"
+        ],
+        "lesson.key": "Lesson 13: Flexbox Children for More Control",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "049e356d-6ba7-4933-8254-758c398d926a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L13-L6-2025",
+        "script_level.level_keys": [
+          "CSD U2L13-L6-2025"
+        ],
+        "lesson.key": "Lesson 13: Flexbox Children for More Control",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "31e745f1-0a6d-4971-aab7-a45c3509e87b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L13-L7-2025",
+        "script_level.level_keys": [
+          "CSD U2L13-L7-2025"
+        ],
+        "lesson.key": "Lesson 13: Flexbox Children for More Control",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "15c0947f-ff2d-455d-a441-3265969bcc09"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L13-L8-2025",
+        "script_level.level_keys": [
+          "CSD U2L13-L8-2025"
+        ],
+        "lesson.key": "Lesson 13: Flexbox Children for More Control",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "15c0947f-ff2d-455d-a441-3265969bcc09"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L13-L9-2025",
+        "script_level.level_keys": [
+          "CSD U2L13-L9-2025"
+        ],
+        "lesson.key": "Lesson 13: Flexbox Children for More Control",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "c410f73c-dd29-417f-af60-85156f2ab712"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L14-L1-2025",
+        "script_level.level_keys": [
+          "CSD U2L14-L1-2025"
+        ],
+        "lesson.key": "Lesson 14: Chapter 1 Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "1a2abea2-a07f-4a2e-8c87-63e0739f6f48"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L14-L2-2025",
+        "script_level.level_keys": [
+          "CSD U2L14-L2-2025"
+        ],
+        "lesson.key": "Lesson 14: Chapter 1 Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "1a2abea2-a07f-4a2e-8c87-63e0739f6f48"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L14-L3-2025",
+        "script_level.level_keys": [
+          "CSD U2L14-L3-2025"
+        ],
+        "lesson.key": "Lesson 14: Chapter 1 Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "1a2abea2-a07f-4a2e-8c87-63e0739f6f48"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L14-L4-2025",
+        "script_level.level_keys": [
+          "CSD U2L14-L4-2025"
+        ],
+        "lesson.key": "Lesson 14: Chapter 1 Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "debab90a-3de7-457c-b53e-7d91dc20c396"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L17-L1-2025",
+        "script_level.level_keys": [
+          "CSD U2L17-L1-2025"
+        ],
+        "lesson.key": "Lesson 17: Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "f6cbead4-9354-4cf5-b716-e0eca3bbea9c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L17-L2-2025",
+        "script_level.level_keys": [
+          "CSD U2L17-L2-2025"
+        ],
+        "lesson.key": "Lesson 17: Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "1fa2d9b4-1998-496d-85ca-4c509cda8333"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L17-L3-2025",
+        "script_level.level_keys": [
+          "CSD U2L17-L3-2025"
+        ],
+        "lesson.key": "Lesson 17: Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "1fa2d9b4-1998-496d-85ca-4c509cda8333"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L17-L4-2025",
+        "script_level.level_keys": [
+          "CSD U2L17-L4-2025"
+        ],
+        "lesson.key": "Lesson 17: Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "1fa2d9b4-1998-496d-85ca-4c509cda8333"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L17-L5-2025",
+        "script_level.level_keys": [
+          "CSD U2L17-L5-2025"
+        ],
+        "lesson.key": "Lesson 17: Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "3729082f-023b-4e10-ba4b-6fb2bf8943b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L17-L6-2025",
+        "script_level.level_keys": [
+          "CSD U2L17-L6-2025"
+        ],
+        "lesson.key": "Lesson 17: Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "12bd456e-2602-4bf4-a8c4-2dc82184efa4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L17-L7-2025",
+        "script_level.level_keys": [
+          "CSD U2L17-L7-2025"
+        ],
+        "lesson.key": "Lesson 17: Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "12bd456e-2602-4bf4-a8c4-2dc82184efa4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L17-L8-2025",
+        "script_level.level_keys": [
+          "CSD U2L17-L8-2025"
+        ],
+        "lesson.key": "Lesson 17: Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "ad688d27-7830-46b8-a10e-13674cea7bf6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L18-L1-2025",
+        "script_level.level_keys": [
+          "CSD U2L18-L1-2025"
+        ],
+        "lesson.key": "Lesson 18: CSS Pseudo-classes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "29e8a970-3bfe-4f35-89ca-230b0a957c49"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L18-L2-2025",
+        "script_level.level_keys": [
+          "CSD U2L18-L2-2025"
+        ],
+        "lesson.key": "Lesson 18: CSS Pseudo-classes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "1247cd18-b9f1-43a3-bfa6-12251e0924a9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L18-L3-2025",
+        "script_level.level_keys": [
+          "CSD U2L18-L3-2025"
+        ],
+        "lesson.key": "Lesson 18: CSS Pseudo-classes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "1247cd18-b9f1-43a3-bfa6-12251e0924a9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L18-L4-2025",
+        "script_level.level_keys": [
+          "CSD U2L18-L4-2025"
+        ],
+        "lesson.key": "Lesson 18: CSS Pseudo-classes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "1247cd18-b9f1-43a3-bfa6-12251e0924a9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L18-L5-2025",
+        "script_level.level_keys": [
+          "CSD U2L18-L5-2025"
+        ],
+        "lesson.key": "Lesson 18: CSS Pseudo-classes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "1247cd18-b9f1-43a3-bfa6-12251e0924a9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L18-L6-2025",
+        "script_level.level_keys": [
+          "CSD U2L18-L6-2025"
+        ],
+        "lesson.key": "Lesson 18: CSS Pseudo-classes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "4e13aa6b-2b03-42cf-bc81-f1f604a7efa0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L18-L7-2025",
+        "script_level.level_keys": [
+          "CSD U2L18-L7-2025"
+        ],
+        "lesson.key": "Lesson 18: CSS Pseudo-classes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "dab3d5b0-9d68-4531-8a57-06de655a4a21"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L18-L8-2025",
+        "script_level.level_keys": [
+          "CSD U2L18-L8-2025"
+        ],
+        "lesson.key": "Lesson 18: CSS Pseudo-classes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "dab3d5b0-9d68-4531-8a57-06de655a4a21"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L18-L9-2025",
+        "script_level.level_keys": [
+          "CSD U2L18-L9-2025"
+        ],
+        "lesson.key": "Lesson 18: CSS Pseudo-classes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "b2f5c457-0b3c-47b9-98b1-535400011315"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L19-L1-2025",
+        "script_level.level_keys": [
+          "CSD U2L19-L1-2025"
+        ],
+        "lesson.key": "Lesson 19: Planning a Multi-Page Site",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "6545b10f-680d-4424-8853-28fbb25bd838"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L20-L1-2025",
+        "script_level.level_keys": [
+          "CSD U2L20-L1-2025"
+        ],
+        "lesson.key": "Lesson 20: Project - Website for a Purpose",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "3bc15758-5039-4089-9926-969fcd5a049a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L20-L2-2025",
+        "script_level.level_keys": [
+          "CSD U2L20-L2-2025"
+        ],
+        "lesson.key": "Lesson 20: Project - Website for a Purpose",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "6ff1a699-b005-4b9a-9b2a-5598e269771c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L20-L3-2025",
+        "script_level.level_keys": [
+          "CSD U2L20-L3-2025"
+        ],
+        "lesson.key": "Lesson 20: Project - Website for a Purpose",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "cda298a3-f747-46e8-9b2c-95380b80cf0e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L20-L4-2025",
+        "script_level.level_keys": [
+          "CSD U2L20-L4-2025"
+        ],
+        "lesson.key": "Lesson 20: Project - Website for a Purpose",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "70470749-0cc3-45c4-8eed-fc930a6c6a6f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L20-L5-2025",
+        "script_level.level_keys": [
+          "CSD U2L20-L5-2025"
+        ],
+        "lesson.key": "Lesson 20: Project - Website for a Purpose",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "ffff1b5c-6773-4c04-a765-c5b7c39b6fe5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L20-L6-2025",
+        "script_level.level_keys": [
+          "CSD U2L20-L6-2025"
+        ],
+        "lesson.key": "Lesson 20: Project - Website for a Purpose",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "8288440f-1861-410f-bf77-5761e2f20c47"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L21-L1-2025",
+        "script_level.level_keys": [
+          "CSD U2L21-L1-2025"
+        ],
+        "lesson.key": "Lesson 21: Peer Review and Final Touches",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "f885f8bc-33c3-4423-9af4-dca06447f129"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L21-L2-2025",
+        "script_level.level_keys": [
+          "CSD U2L21-L2-2025"
+        ],
+        "lesson.key": "Lesson 21: Peer Review and Final Touches",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "03bd8b13-1f1a-4c9b-be1d-2025bfd11774"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSD Web Development Post-Project Test_pilot_2026-weblab2",
         "script_level.level_keys": [
           "CSD Web Development Post-Project Test_pilot_2026-weblab2"
@@ -8640,26 +10756,30 @@
     },
     {
       "name": "CSS Classes",
-      "url": "https://docs.google.com/presentation/d/1V5WSBQRbKy8oC12gMzz4U0gPvPRXQFsux2YukegVvOc/template/preview",
-      "key": "css_classes",
+      "url": "https://docs.google.com/presentation/d/1BjZpfjsfXNRzAmtocAJRLpg03V-aQfROw9j7fVXAi10/edit?usp=sharing",
+      "key": "css_classes_1",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "css_classes"
+        "resource.key": "css_classes_1"
       }
     },
     {
       "name": "CSS Pseudo-classes",
-      "url": "https://docs.google.com/presentation/d/1AF-xp1xqMaJZidD5h4PBOTksESaBl0ULWJYRLrLj1VU/template/preview",
-      "key": "css_pseudo-classes",
+      "url": "https://docs.google.com/presentation/d/1vXPcUAGPXrkFQ8tr-PKCqkcPcp_kLxUEpWVMGfkVMnc/edit?usp=sharing",
+      "key": "css_pseudo-classes_1",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "css_pseudo-classes"
+        "resource.key": "css_pseudo-classes_1"
       }
     },
     {
@@ -8834,14 +10954,16 @@
     },
     {
       "name": "Flex Children for More Control",
-      "url": "https://docs.google.com/presentation/d/1jQ-ZeHHBmDYqKgAQ8pvknZzQ6BM8g7pgEv6s9H6kFVE/template/preview",
-      "key": "flex_children_for_more_control",
+      "url": "https://docs.google.com/presentation/d/1yUgxf9JA1Ix8nhJjvUcz0Cc2QHfzZd3T5DoppOdAAKI/edit?usp=sharing",
+      "key": "flex_children_for_more_control_1",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "flex_children_for_more_control"
+        "resource.key": "flex_children_for_more_control_1"
       }
     },
     {
@@ -9389,14 +11511,16 @@
     },
     {
       "name": "Organizing My Content",
-      "url": "https://docs.google.com/presentation/d/1Lbh1y_cxo3tfd_iuiueLi7W0v6VO-9PqZTBuFvNtkfI/template/preview",
-      "key": "organizing_my_content",
+      "url": "https://docs.google.com/presentation/d/1M4zurFpx57j4ZXUug6OSzN6HNw2fPDobGCm1a49mnb4/edit?usp=sharing",
+      "key": "organizing_content_with_flexbox",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "organizing_my_content"
+        "resource.key": "organizing_content_with_flexbox"
       }
     },
     {
@@ -10002,7 +12126,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 11: CSS Classes",
-        "resource.key": "css_classes"
+        "resource.key": "css_classes_1"
       }
     },
     {
@@ -10026,13 +12150,13 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 12: Organizing Content with Flexbox",
-        "resource.key": "organizing_my_content"
+        "resource.key": "organizing_content_with_flexbox"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 13: Flexbox Children for More Control",
-        "resource.key": "flex_children_for_more_control"
+        "resource.key": "flex_children_for_more_control_1"
       }
     },
     {
@@ -10242,7 +12366,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 18: CSS Pseudo-classes",
-        "resource.key": "css_pseudo-classes"
+        "resource.key": "css_pseudo-classes_1"
       }
     },
     {
@@ -12111,6 +14235,46 @@
   ],
   "rubrics": [
     {
+      "level_name": "CSD U2L11-L6-2025",
+      "seeding_key": {
+        "lesson.key": "Lesson 11: CSS Classes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "level_name": "CSD U2L12-L7-2025",
+      "seeding_key": {
+        "lesson.key": "Lesson 12: Organizing Content with Flexbox",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "level_name": "CSD U2L13-L7-2025",
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Flexbox Children for More Control",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "level_name": "CSD U2L17-L6-2025",
+      "seeding_key": {
+        "lesson.key": "Lesson 17: Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "level_name": "CSD U2L18-L7-2025",
+      "seeding_key": {
+        "lesson.key": "Lesson 18: CSS Pseudo-classes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
       "level_name": "CSD U2L2-L7-2025",
       "seeding_key": {
         "lesson.key": "Lesson 2: Intro to HTML",
@@ -12161,6 +14325,71 @@
       "seeding_key": {
         "learning_goal.key": "1809454b-012b-4123-a0ab-f99f811ef8c0",
         "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "key": "28a8f6ce-c2eb-4829-a149-11c02e0c6c82",
+      "position": 1,
+      "learning_goal": "Create a `div` container and a ruleset for the container that uses Flexbox properties.",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "28a8f6ce-c2eb-4829-a149-11c02e0c6c82",
+        "lesson.key": "Lesson 12: Organizing Content with Flexbox",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "key": "6f35025c-0d5c-45ab-ad69-c56da76a046b",
+      "position": 1,
+      "learning_goal": "Adding all four pseudo-class states for the anchor tag.",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "6f35025c-0d5c-45ab-ad69-c56da76a046b",
+        "lesson.key": "Lesson 18: CSS Pseudo-classes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "key": "7c34430f-7356-44b6-8eab-511181e22c2e",
+      "position": 1,
+      "learning_goal": "Correct application and understanding of `order`, `align-self`, and `flex-grow` properties are demonstrated.",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "7c34430f-7356-44b6-8eab-511181e22c2e",
+        "lesson.key": "Lesson 13: Flexbox Children for More Control",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "key": "82a14885-5cb2-4f07-9701-f556c5f37353",
+      "position": 1,
+      "learning_goal": "Creating a digital artifact, linking within a multi-page site",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "82a14885-5cb2-4f07-9701-f556c5f37353",
+        "lesson.key": "Lesson 17: Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "key": "9b4e6421-a1aa-4fa1-8b39-36a33b8bd36e",
+      "position": 1,
+      "learning_goal": "Create classes that can be referenced and affected as a group.",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "9b4e6421-a1aa-4fa1-8b39-36a33b8bd36e",
+        "lesson.key": "Lesson 11: CSS Classes",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-web-lab-update-2025"
       }
@@ -12263,6 +14492,246 @@
         "understanding": 3,
         "learning_goal.key": "1809454b-012b-4123-a0ab-f99f811ef8c0",
         "lesson.key": "Lesson 9: Styling Elements with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "There are no rule sets in the stylesheet for the `div` container, or the rule sets do not have the necessary Flexbox properties to style the images as shown in the instructions.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "28a8f6ce-c2eb-4829-a149-11c02e0c6c82",
+        "lesson.key": "Lesson 12: Organizing Content with Flexbox",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Added a `div` container but did not use a class attribute in the `div` tag. Added a rule for the div in the CSS but did not use all needed Flexbox properties resulting in a page that does not necessarily match the image in the instructions.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "28a8f6ce-c2eb-4829-a149-11c02e0c6c82",
+        "lesson.key": "Lesson 12: Organizing Content with Flexbox",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Added a `div` container with a class attribute around the images in the HTML. Added a rule for the class attribute in the CSS. Used Flexbox properties but the result does not necessarily match the image in the instructions.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "28a8f6ce-c2eb-4829-a149-11c02e0c6c82",
+        "lesson.key": "Lesson 12: Organizing Content with Flexbox",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Added a `div` container with a class attribute around the images in the HTML. Added a rule for the class attribute in the CSS. Used correct Flexbox properties to match the image in the instructions.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "28a8f6ce-c2eb-4829-a149-11c02e0c6c82",
+        "lesson.key": "Lesson 12: Organizing Content with Flexbox",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Does not add any of the four pseudo-class states for the anchor tag.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "6f35025c-0d5c-45ab-ad69-c56da76a046b",
+        "lesson.key": "Lesson 18: CSS Pseudo-classes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Adds two of the four pseudo-class states for the anchor tag with the specific styles in the directions in the CSS file.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "6f35025c-0d5c-45ab-ad69-c56da76a046b",
+        "lesson.key": "Lesson 18: CSS Pseudo-classes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Adds all four pseudo-class states for the anchor tag with the specific styles in the directions for each state. One or two of the states are in the wrong order resulting in those styles not affecting the link.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "6f35025c-0d5c-45ab-ad69-c56da76a046b",
+        "lesson.key": "Lesson 18: CSS Pseudo-classes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Adds all four pseudo-class states for the anchor tag with the specific styles in the directions for each state. States added to the CSS file in the correct order.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "6f35025c-0d5c-45ab-ad69-c56da76a046b",
+        "lesson.key": "Lesson 18: CSS Pseudo-classes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "There are no `order`, `align-self`, or `flex-grow` properties added for child paragraphs or images in order to match the image in the instructions.\n\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "7c34430f-7356-44b6-8eab-511181e22c2e",
+        "lesson.key": "Lesson 13: Flexbox Children for More Control",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Added either `order`, `align-self`, or `flex-grow` properties to child paragraphs and/or images, but not all of the needed properties to match the image in the instructions.\n\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "7c34430f-7356-44b6-8eab-511181e22c2e",
+        "lesson.key": "Lesson 13: Flexbox Children for More Control",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Added `order`, `align-self`, and `flex-grow` properties to child paragraphs and images but the result does not exactly match the image in the instructions.\n\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "7c34430f-7356-44b6-8eab-511181e22c2e",
+        "lesson.key": "Lesson 13: Flexbox Children for More Control",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Added an `order` property to child paragraphs and images to match the layout of the image in the instructions. Added an `align-self` property to paragraphs to match the image in the instructions. Added a `flex-grow` property to paragraph(s) to match the image in the instructions.\n\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "7c34430f-7356-44b6-8eab-511181e22c2e",
+        "lesson.key": "Lesson 13: Flexbox Children for More Control",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "No new page was created and there are no links",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "82a14885-5cb2-4f07-9701-f556c5f37353",
+        "lesson.key": "Lesson 17: Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "There is an `<a>` tag, but syntax errors or problems with the page name may prevent it from working",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "82a14885-5cb2-4f07-9701-f556c5f37353",
+        "lesson.key": "Lesson 17: Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "There is at least one one working link from one HTML page to another",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "82a14885-5cb2-4f07-9701-f556c5f37353",
+        "lesson.key": "Lesson 17: Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "A new page has been created and given a unique and descriptive name ending in “.html”. There is a link from the index.html page to the new page and from the new page back to index.html",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "82a14885-5cb2-4f07-9701-f556c5f37353",
+        "lesson.key": "Lesson 17: Linking Pages",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "No class or rule sets are created, or no website elements are put in the class.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "9b4e6421-a1aa-4fa1-8b39-36a33b8bd36e",
+        "lesson.key": "Lesson 11: CSS Classes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "A class and rule-set are created, and at least some elements in the website are in that class, but there may be major errors that prevent the text from being styled.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "9b4e6421-a1aa-4fa1-8b39-36a33b8bd36e",
+        "lesson.key": "Lesson 11: CSS Classes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "A class and rule-set are created and most elements in the chosen haiku section of the website is affected by this class, but there may be a few minor errors for some parts of text, or there may be fewer than three rules in the rule-set.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "9b4e6421-a1aa-4fa1-8b39-36a33b8bd36e",
+        "lesson.key": "Lesson 11: CSS Classes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "The class and rule-set are created correctly, all elements of the of the chosen haiku are included, and there are at least three rules in the rule-set",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "9b4e6421-a1aa-4fa1-8b39-36a33b8bd36e",
+        "lesson.key": "Lesson 11: CSS Classes",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-web-lab-update-2025"
       }

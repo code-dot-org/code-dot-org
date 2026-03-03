@@ -1,9 +1,5 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
-import {
-  Heading3,
-  Heading5,
-  BodyTwoText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
@@ -19,7 +15,6 @@ import {
   unassignSection,
   sectionHasNewData,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import experiments from '@cdo/apps/util/experiments';
 import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -215,13 +210,15 @@ const MultipleSectionsAssigner = ({
         className={moduleStyle.information}
       >
         <div className={moduleStyle.modalHeader}>
-          <Heading3>{i18n.chooseSectionsPrompt({assignmentName})}</Heading3>
+          <Typography variant="h3">
+            {i18n.chooseSectionsPrompt({assignmentName})}
+          </Typography>
         </div>
         <div className={moduleStyle.sectionsDirections}>
-          <BodyTwoText>{sectionDirections}</BodyTwoText>
+          <Typography variant="body2">{sectionDirections}</Typography>
         </div>
         <div className={moduleStyle.sectionList}>
-          <Heading5>{i18n.yourSectionsList()}</Heading5>
+          <Typography variant="h5">{i18n.yourSectionsList()}</Typography>
           <div className={moduleStyle.sectionListOptionsContainer}>
             {sections &&
               sections.map(
@@ -248,14 +245,12 @@ const MultipleSectionsAssigner = ({
             styleAsText
             color={Button.ButtonColor.brandSecondaryDefault}
           />
-          {experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
-            aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
-              <AssigningEssentialAiChatToolsAlert />
-            )}
-          {experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
-            aiChatToolsDependency === AiChatToolsDependency.AVAILABLE && (
-              <AssigningAvailableAiChatToolsAlert />
-            )}
+          {aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
+            <AssigningEssentialAiChatToolsAlert />
+          )}
+          {aiChatToolsDependency === AiChatToolsDependency.AVAILABLE && (
+            <AssigningAvailableAiChatToolsAlert />
+          )}
         </div>
       </div>
       <div className={moduleStyle.buttonContainer}>

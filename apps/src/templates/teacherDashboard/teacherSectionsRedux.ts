@@ -12,9 +12,10 @@ import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
 import {AiChatAccessLevel} from '@cdo/apps/aichat/types/accessControls';
 import DCDO from '@cdo/apps/dcdo';
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {RootState} from '@cdo/apps/types/redux';
+import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {
   PlGradeValue,
@@ -981,16 +982,29 @@ export const assignToSection = (
 ): SectionThunkAction => {
   return (dispatch, getState) => {
     const section = getState().teacherSections.sections[sectionId];
+    // Generate AI lesson summaries
     if (
       unitId &&
       section.unitId !== unitId &&
       DCDO.get('show-aita-lesson-summaries', false)
     ) {
       HttpClient.get(
-        `/ai_lesson_summaries/perform_ai_lesson_summaries_by_unit?unit_id=${unitId}`
+        `/ai_lesson_summaries/request_ai_lesson_summaries?unit_id=${unitId}`
       ).catch(error => {
         console.error(error);
       });
+      // Generate AI podcasts
+
+      if (
+        DCDO.get('ai-lesson-summary-podcasts', false) ||
+        experiments.isEnabled('ai-lesson-podcasts')
+      ) {
+        HttpClient.get(
+          `/ai_lesson_summary_podcasts/generate_podcasts_by_unit?unit_id=${unitId}`
+        ).catch(error => {
+          console.error(error);
+        });
+      }
     }
     // Only log if the assignment is changing.
     if (
@@ -998,21 +1012,17 @@ export const assignToSection = (
       (courseVersionId && section.courseVersionId !== courseVersionId) ||
       (unitId && section.unitId !== unitId)
     ) {
-      analyticsReporter.sendEvent(
-        EVENTS.CURRICULUM_ASSIGNED,
-        {
-          sectionName: section.name,
-          sectionId,
-          sectionLoginType: section.loginType,
-          previousUnitId: section.unitId,
-          previousCourseId: section.courseOfferingId,
-          previousCourseVersionId: section.courseVersionId,
-          newUnitId: unitId,
-          newCourseId: courseOfferingId,
-          newCourseVersionId: courseVersionId,
-        },
-        PLATFORMS.STATSIG
-      );
+      analyticsReporter.sendEvent(EVENTS.CURRICULUM_ASSIGNED, {
+        sectionName: section.name,
+        sectionId,
+        sectionLoginType: section.loginType,
+        previousUnitId: section.unitId,
+        previousCourseId: section.courseOfferingId,
+        previousCourseVersionId: section.courseVersionId,
+        newUnitId: unitId,
+        newCourseId: courseOfferingId,
+        newCourseVersionId: courseVersionId,
+      });
     }
 
     dispatch(beginEditingSection(sectionId, true));

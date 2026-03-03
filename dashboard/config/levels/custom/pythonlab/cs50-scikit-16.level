@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-02-18T16:58:11.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# CIW AI Associate Standard: 2.7\n# Standard Description: Explain various sampling plans, including subsampling.\n#\n# Rationale: Sometimes a dataset is too big to work with, or it's \"unbalanced\" \n# (too many examples of one thing). Sampling is the technique of picking a \n# subset of data that accurately represents the whole group. We use \n# \"Random Sampling\" to avoid bias.\n\n\"\"\"\nWelcome! Have you ever tasted a single spoonful of soup to see if it needs \nmore salt? You don't have to eat the whole pot! That spoonful is a \"Sample\".\n\nIn AI, we use sampling when:\n1. The data is too huge for our computer to handle (Subsampling).\n2. We want to test our AI on a small group first.\n\"\"\"\n\nimport pandas as pd\nimport numpy as np\n\n# --- OUR GIANT DATASET ---\n# Let's create a \"giant\" dataset of 1,000 students.\nnp.random.seed(42)\ngiant_df = pd.DataFrame({\n    'Student_ID': range(1, 1001),\n    'Grade': np.random.randint(60, 100, 1000),\n    'Subject': np.random.choice(['Math', 'Science', 'History', 'Art'], 1000)\n})\n\nprint(f\"Total rows in giant dataset: {len(giant_df)}\")\nprint(f\"Average Grade of ALL students: {giant_df['Grade'].mean():.2f}\")\nprint(\"\\n\")\n\n# --- TECHNIQUE 1: SIMPLE RANDOM SAMPLING ---\nprint(\"--- Technique 1: Simple Random Sample ---\")\n# We'll take a sample of 50 students (5% of the data).\nsample_df = giant_df.sample(n=50, random_state=42)\n\nprint(f\"Total rows in sample: {len(sample_df)}\")\nprint(f\"Average Grade of the SAMPLE: {sample_df['Grade'].mean():.2f}\")\nprint(\"Notice: The sample average is very close to the real average!\")\nprint(\"\\n\")\n\n# --- TECHNIQUE 2: FRACTIONAL SAMPLING ---\nprint(\"--- Technique 2: Fractional Sample (Subsampling) ---\")\n# Instead of a number, we can ask for a percentage (e.g., 10%).\nsubsample_df = giant_df.sample(frac=0.1, random_state=42)\nprint(f\"Total rows in 10% subsample: {len(subsample_df)}\")\n\n\"\"\"\n--- YOUR TURN ---\nWe have a dataset of 200 \"Website Visits\". \n1. Use .sample() to take a 25% (frac=0.25) sample of the visits.\n2. Calculate the mean 'Duration' of your sample.\n\"\"\"\n\n# STARTING CODE FOR STUDENT:\nvisits = pd.DataFrame({\n    'Visit_ID': range(200),\n    'Duration': np.random.randint(10, 300, 200) # Seconds on site\n})\n\n# TODO: Take a 25% sample of 'visits'\n# my_sample = ...\n\n# TODO: Print the mean Duration of your sample\n# print(my_sample['Duration'].mean())\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFTDG6jyYgtI/CEUE/82dEkG4hlI8OLsdjJD0In8S\n03BB+jPkGgyYB0/9C3zqHMHEFpKeCsugYbpGMxzBNwrd7qASagJaFzMnVUyM\n2TXS7Hau9lj7JpZIHXn9fmxXRRANWfMZ1Q4s8Ke6CHHGe5MwI8MhaYWURcpM\nqObn9jkXYqCkYa09WHr3SFo6aFH/t7jUFjr2VDJaf2MZrs/OmRqwD0VwaCLn\nZ6Nr24mIoxqaBj1WfK7o9gguSxborOwfz50+bQxL2wVhd5y2um1GoBlSaZ3I\nEGt2wy+GQEOiErAZOeu+IzTof1W64jFe1/Kh6Nwsi6W9R5vkwa13Kxu6j992\nAtJApPwbc7RaroQnRpOVr/R4YxFIepsLIewo9C2DXfC1e8XmcgIZcM/1NYME\nOHxpp7Snrd0fVh9T08WnCBZ80aentbdN/1bQx6BcfXGmUqwjW/GlE0pDAnyc\nnzgrzUPlfoZ88hU9Mc2sqqo9Qg36RulanusiG5eyF/ihQYCWyaRLPVNPiHwc\nBXYLy4zu8AdJdwKdcGFIBDclPEnlQ36z7LqyBXuEIajbjU6pROhYJB0uEGUm\nMIRlaNnyKEZBEhEtqKhvhSJb04GDA1LFwBcmjyZZTWdas3M324OQrwxGpZd0\nd/2jUqIKqGP0j1QThkGs2vXRpRCUjoQeeVSbaEuuPbbz8sGJaKoDSYa4iAbZ\ncOukMp6eoiCRl4F0d9eDLfVxHCiJdY7BtSw9UYVfB97Oc3jqAAUNBWHm8J/1\nu0+al5jHfXXC6NQqVlMS4HIB9f2FtWZysJlj3kkmmf1KF2WPtILOvh/39xaS\nsA9fRX/tR8zLtmLJgEySg5LBY2MVMywell9GYe2/TkGGsom1WoDNFqSwTHBl\n6IPGrLpkBTrOr8X4tgx/R4xQjDU9XfdOhVDfkh4lDhKI88qefz/KhLawEWQK\ni0YCtkq4T3RZVx2/nQfZwM0d9XWzOWIon3V4Q+KjXluSiacaKWTAwWnFvWO4\nPhIa0OM/3JeeDIB7RVo74lJQjm/U9AJhrlcD5rGNC4aIdIxQlopXvh2EzLMx\nyVcEm5UNxM+iXj7NaZG44zD6LmTuG8XNxRRbO+Ac44IIfXFLnQ1ilE/iSzg3\nF7cy4rrpPCR9rN3kBiBw2QonUF1+ieJykpe2LKkdmvG1PL8mbsi8k2Qev/Wa\nuF8jZI2mo6/NfcNB8eHa2o+Kqqh4g3bizF98OZmyamxzNe4UPkC16U4rwn4q\nfB9OTa13iiyU6IPrFPnwgUwb2lqE/+cCaCobfZWdeRO3Xsqs8O9p6el07nKP\nSaOaaUW5/+6CVuIIeqvkTgF3yZNZJK8ruD8pWx/um1v2tA==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-18T16:58:11.836+00:00\",\"changed\":[\"cloned from \\\"cs50-scikit-15\\\"\"],\"cloned_from\":\"cs50-scikit-15\"},{\"changed_at\":\"2026-02-18 16:58:15 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:33:21 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:33:46 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:33:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>

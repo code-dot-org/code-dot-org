@@ -1,14 +1,34 @@
 class AiLessonSummaryPodcastsController < ApplicationController
   before_action :authenticate_user!
+  PODCAST_BUCKET = 'org.code.autoscale-prod-studio.user-content'
+  PODCAST_FOLDER = 'podcasts/'
 
-  def generate_podcast
+  def show
+    podcast = AWS::S3.download_from_bucket(PODCAST_BUCKET, PODCAST_FOLDER+'lesson_'+params[:lesson_id].to_s+'_podcast.mp3')
+    send_data podcast, type: 'audio/mpeg', disposition: 'inline'
+  end
+
+  def generate_podcasts_by_unit
     if current_user && DCDO.get('ai-lesson-summary-podcasts', false)
+      unit = Unit.find(params[:unit_id])
 
-      script = AiLessonSummariesHelper.generate_lesson_summary(params[:lesson_id], current_user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])[:json]
-      script = JSON.parse(script)['podcast_script']
-      podcast = AiLessonSummaryPodcastsHelper.get_podcast_from_script(script)
-
-      send_data podcast, :type => 'audio/mpeg', :dispensation => 'attachment', :filename => 'podcast.mp3'
+      # AI Podcasts are currently only available in AIF sections
+      if unit.curriculum_umbrella == 'AIF'
+        lesson_ids = []
+        unit.lessons.each do |lesson|
+          if lesson.has_lesson_plan
+            lesson_ids << lesson.id
+          end
+        end
+        request = {
+          user_id: current_user.id,
+          lesson_ids: lesson_ids,
+          unit_id: unit.id
+        }
+        AiLessonSummaryPodcastsJob.perform_later(request: request)
+      else
+        head :forbidden
+      end
     else
       head :forbidden
     end

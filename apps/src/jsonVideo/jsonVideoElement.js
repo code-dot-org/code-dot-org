@@ -1,8 +1,21 @@
 import styles from './jsonVideoStyles';
 
+// Simulated MediaError to match native <video> behavior
+class SimulatedMediaError {
+  constructor(code, message) {
+    this.code = code;
+    this.message = message;
+    // Standard codes: 1=ABORTED, 2=NETWORK, 3=DECODE, 4=SRC_NOT_SUPPORTED
+    this.MEDIA_ERR_ABORTED = 1;
+    this.MEDIA_ERR_NETWORK = 2;
+    this.MEDIA_ERR_DECODE = 3;
+    this.MEDIA_ERR_SRC_NOT_SUPPORTED = 4;
+  }
+}
+
 export class JsonVideo extends HTMLElement {
   static get observedAttributes() {
-    return ['src', 'controls'];
+    return ['src', 'controls', 'poster'];
   }
 
   constructor() {
@@ -19,6 +32,9 @@ export class JsonVideo extends HTMLElement {
     this._animationFrameId = null;
     this._showCaptions = false;
     this._volume = 1.0;
+
+    // Mimic standard video properties
+    this.error = null;
 
     this._mainAudio = new Audio();
     this._sceneAudio = new Audio();
@@ -42,6 +58,7 @@ export class JsonVideo extends HTMLElement {
     container.id = 'video-container';
 
     container.innerHTML = `
+            <img id="poster" class="hidden" alt="">
             <iframe id="scene-renderer" src="about:blank" scrolling="no"></iframe>
             <div id="closed-caption-overlay" class="hidden"><span class="cc-text"></span></div>
             <div id="controls-bar">
@@ -67,6 +84,7 @@ export class JsonVideo extends HTMLElement {
     this.shadowRoot.appendChild(container);
 
     this.renderer = this.shadowRoot.querySelector('#scene-renderer');
+    this.posterImg = this.shadowRoot.querySelector('#poster');
     this.ccOverlay = this.shadowRoot.querySelector('#closed-caption-overlay');
     this.ccText = this.shadowRoot.querySelector('.cc-text');
 
@@ -126,13 +144,17 @@ export class JsonVideo extends HTMLElement {
     this.shadowRoot.querySelector('#video-container').onclick = e => {
       if (
         e.target.id === 'video-container' ||
-        e.target.id === 'scene-renderer'
+        e.target.id === 'scene-renderer' ||
+        e.target.id === 'poster'
       ) {
         this.paused ? this.play() : this.pause();
       }
     };
 
-    this.addEventListener('play', () => this.classList.add('playing'));
+    this.addEventListener('play', () => {
+      this.classList.add('playing');
+      this.posterImg.classList.add('hidden'); // Hide poster on play
+    });
     this.addEventListener('pause', () => this.classList.remove('playing'));
     this.addEventListener('timeupdate', () => this._updateUI());
   }
@@ -166,15 +188,44 @@ export class JsonVideo extends HTMLElement {
   get paused() {
     return !this._isPlaying;
   }
+  get poster() {
+    return this.getAttribute('poster');
+  }
+  set poster(val) {
+    if (val) this.setAttribute('poster', val);
+    else this.removeAttribute('poster');
+  }
 
   attributeChangedCallback(name, oldVal, newVal) {
-    if (name === 'src' && newVal) this.load();
+    if (name === 'src' && newVal !== oldVal) this.load();
+    if (name === 'poster') this._updatePosterUI(newVal);
+  }
+
+  _updatePosterUI(url) {
+    if (url) {
+      this.posterImg.src = url;
+      // Only show the poster if we haven't started playing yet
+      if (!this._isPlaying) {
+        this.posterImg.classList.remove('hidden');
+      }
+    } else {
+      this.posterImg.src = '';
+      this.posterImg.classList.add('hidden');
+    }
   }
 
   async load() {
     const source = this.src;
     if (!source) return;
+
     this.pause();
+    this.error = null; // Reset error state on new load
+
+    // Show poster while loading if one exists
+    if (this.poster) {
+      this.posterImg.classList.remove('hidden');
+    }
+
     let data = null;
     try {
       if (source.startsWith('data:application/json')) {
@@ -182,11 +233,29 @@ export class JsonVideo extends HTMLElement {
         data = JSON.parse(decodeURIComponent(source.substring(commaIndex + 1)));
       } else {
         const response = await fetch(source);
+        if (!response.ok) {
+          // Throw so we catch it below and simulate a network error
+          throw new SimulatedMediaError(
+            2,
+            `Network response was not ok: ${response.status}`
+          );
+        }
         data = await response.json();
       }
       this._processLoadedData(data);
     } catch (e) {
       console.error('JsonVideo load error:', e);
+
+      this.classList.add('has-error');
+
+      // If it's not our SimulatedMediaError (e.g., a JSON parse error), classify as DECODE error
+      this.error =
+        e instanceof SimulatedMediaError
+          ? e
+          : new SimulatedMediaError(3, e.message);
+
+      // Dispatch standard error event
+      this.dispatchEvent(new Event('error'));
     }
   }
 
@@ -199,7 +268,10 @@ export class JsonVideo extends HTMLElement {
     }
     this.seekTo(0);
     this.ui.totTime.textContent = this._formatTime(this._totalDurationMs);
+
+    // Dispatch success events similar to native <video>
     this.dispatchEvent(new Event('loadedmetadata'));
+    this.dispatchEvent(new Event('loadeddata'));
   }
 
   play() {
@@ -340,9 +412,7 @@ export class JsonVideo extends HTMLElement {
     const scene = this._processedScenes[this._currentSceneIndex];
     if (!scene) return;
 
-    // 1. Handle HTML Rendering via Blob URL
     if (scene.html) {
-      // Clean up previous blob to prevent memory leaks
       if (this._currentBlobUrl) {
         URL.revokeObjectURL(this._currentBlobUrl);
       }
@@ -370,14 +440,12 @@ export class JsonVideo extends HTMLElement {
       this.renderer.src = 'about:blank';
     }
 
-    // 2. Handle Captions
     this.ccText.textContent = scene.speech || '';
     this.ccOverlay.classList.toggle(
       'hidden',
       !(this._showCaptions && scene.speech)
     );
 
-    // 3. Handle Audio Synchronization
     const sceneTime = (this._currentTimeMs - scene.startTimeMs) / 1000;
     if (scene.audio) {
       if (this._sceneAudio.getAttribute('src') !== scene.audio) {
@@ -385,7 +453,6 @@ export class JsonVideo extends HTMLElement {
         this._sceneAudio.load();
       }
 
-      // Only sync if the drift is significant (>200ms)
       try {
         if (Math.abs(this._sceneAudio.currentTime - sceneTime) > 0.2) {
           this._sceneAudio.currentTime = Math.max(0, sceneTime);

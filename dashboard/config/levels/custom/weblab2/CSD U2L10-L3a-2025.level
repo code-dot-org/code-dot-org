@@ -1,0 +1,35 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-02-19T04:15:06.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Lesson 5 User-Add Images",
+    "project_template_level_name": "CSD U2L5-project_template-2025",
+    "long_instructions": "# Add Images\r\n\r\nBefore you start adding style in the CSS file, lets add the images your user would like on the page.\r\n\r\n<a href=\"https://drive.google.com/drive/folders/1m0_KRExxFfTXs_pJr5I44wZuaVV5LJMd?usp=drive_link\" target=\"_blank\">Click here</a> to view and download the images **Alana** would like on her resume web page.\r\n\r\n<a href=\"https://drive.google.com/drive/folders/1mEqPXR3UiikwlcozvLva470pNkS_Pbpu?usp=drive_link\" target=\"_blank\">Click here</a> to view and download the images **Denzel** would like on his baking web page.\r\n\r\n<a href=\"https://drive.google.com/drive/folders/1pWejvaPlWNPzOgR9GMkbpusMPXUZeeRv?usp=drive_link\" target=\"_blank\">Click here</a> to view and download the images **Kiri** would like on her restaurant web page.\r\n\r\n# Do This\r\n1) Open the folder of images for your user and download each one and add them to the web page project.\r\n2) Add the given images to the user's HTML web page according to your plan in your project guide.\r\n3) Make sure you add comments to describe your images for anyone looking at the code.\r\n4) Don't forget to include an \"alt\" attribute for each image.\r\n5) Finally, make sure you cite the images and give credit to their creator:\r\n   - _All images were created by chatGPT and are under the CC0 1.0 creative commons license._",
+    "bubble_choice_description": "Choose this level if you created an HTML web page for a user during the previous mini-project.",
+    "thumbnail_url": "https://images.code.org/d63ac68f142c45840c90dd2053982325-behavior.png",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-02-19 04:41:04 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

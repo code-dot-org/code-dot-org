@@ -26,11 +26,6 @@ Dashboard::Application.routes.draw do
   get "/users/new_sign_up/finish_student_account", to: redirect("/users/sign_up/finish_student_account")
   get "/users/new_sign_up/finish_teacher_account", to: redirect("/users/sign_up/finish_teacher_account")
 
-  # Redirect studio.code.org/sections/teacher_dashboard/first_section/*location to the teacher's most recent section
-  # on teacher dashboard, where *location is one of the following: courses, calendar, progress, or materials.
-  get '/teacher_dashboard/sections/first_section/*location', to: "teacher_dashboard#redirect_to_newest_section"
-  get '/teacher_dashboard/sections/first_section_progress', to: "teacher_dashboard#redirect_to_newest_section_progress"
-
   constraints host: CDO.codeprojects_hostname do
     # Routes needed for the footer on weblab share links on codeprojects
     get '/weblab/footer', to: 'projects#weblab_footer'
@@ -1008,7 +1003,6 @@ Dashboard::Application.routes.draw do
     end
 
     get '/dashboardapi/section/:section_id', to: 'api#section'
-    get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
     get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
     get 'dashboardapi/section_courses/:section_id', to: 'api#show_courses_with_progress'
     scope 'dashboardapi', module: 'api/v1' do
@@ -1042,7 +1036,6 @@ Dashboard::Application.routes.draw do
     get '/dashboardapi/script_structure/courses/:course_name/units/:unit_position', to: 'api#script_structure'
     get '/api/script_structure/courses/:course_name/units/:unit_position', to: 'api#script_structure'
     get '/dashboardapi/script_standards/:script', to: 'api#script_standards'
-    get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
     get '/api/teacher_panel_progress/:section_id', to: 'api#teacher_panel_progress'
     get '/api/teacher_panel_section', to: 'api#teacher_panel_section'
     get '/dashboardapi/section_level_progress/:section_id', to: 'api#section_level_progress', as: 'section_level_progress'
@@ -1078,10 +1071,6 @@ Dashboard::Application.routes.draw do
 
         post 'users/sort_by_family_name', to: 'users#post_sort_by_family_name'
 
-        post 'users/show_progress_table_v2', to: 'users#post_show_progress_table_v2'
-        post 'users/date_progress_table_invitation_last_delayed', to: 'users#post_date_progress_table_invitation_last_delayed'
-        post 'users/has_seen_progress_table_v2_invitation', to: 'users#post_has_seen_progress_table_v2_invitation'
-        post 'users/has_seen_homepage_welcome', to: 'users#post_has_seen_homepage_welcome'
         post 'users/ai_rubrics_disabled', to: 'users#post_ai_rubrics_disabled'
         post 'users/ai_differentiation_enabled', to: 'users#post_ai_differentiation_enabled'
         post 'users/has_seen_ai_assessments_announcement', to: 'users#post_has_seen_ai_assessments_announcement'
@@ -1181,8 +1170,15 @@ Dashboard::Application.routes.draw do
       collection do
         get :show # GET /ai_lesson_summaries/show?lesson_id=2
         get :ai_lesson_summary_podcast_script, controller: :ai_lesson_summaries, action: :ai_lesson_summary_podcast_script # GET /ai_lesson_summaries/ai_lesson_summary_podcast_script?lesson_id=2
-        get :perform_ai_lesson_summaries_by_unit, controller: :ai_lesson_summaries, action: :perform_ai_lesson_summaries_by_unit # GET ai_lesson_summaries/perform_ai_lesson_summaries_by_unit?unit_id=1
-        get :perform_ai_lesson_summary_by_lesson, controller: :ai_lesson_summaries, action: :perform_ai_lesson_summary_by_lesson # GET ai_lesson_summaries/perform_ai_lesson_summary_by_lesson?lesson_id=1
+        get :request_ai_lesson_summaries, controller: :ai_lesson_summaries, action: :request_ai_lesson_summaries # GET ai_lesson_summaries/request_ai_lesson_summaries?unit_id=1 [optional: &lesson_id=1]
+      end
+    end
+
+    # AI Lesson Summary Podcasts routes
+    resources :ai_lesson_summary_podcasts, only: [:show] do
+      collection do
+        get :show # GET /ai_lesson_summary_podcasts/show?lesson_id=2
+        get :generate_podcasts_by_unit, controller: :ai_lesson_summary_podcasts, action: :generate_podcasts_by_unit # GET ai_lesson_summary_podcasts/generate_podcasts_by_unit?unit_id=1
       end
     end
 
@@ -1224,9 +1220,6 @@ Dashboard::Application.routes.draw do
     # Routes used by donor teacher banner
     post '/dashboardapi/v1/users/:user_id/dismiss_donor_teacher_banner', to: 'api/v1/users#dismiss_donor_teacher_banner'
 
-    # Routes used by standards info dialog
-    post '/dashboardapi/v1/users/:user_id/set_standards_report_info_to_seen', to: 'api/v1/users#set_standards_report_info_to_seen'
-
     # Routes used by teacher scores
     post '/dashboardapi/v1/teacher_scores', to: 'api/v1/teacher_scores#score_lessons_for_section'
     get '/dashboardapi/v1/teacher_scores/:section_id/:script_id', to: 'api/v1/teacher_scores#get_teacher_scores_for_script', defaults: {format: 'json'}
@@ -1260,6 +1253,8 @@ Dashboard::Application.routes.draw do
     post '/javabuilder/access_token_with_override_sources', to: 'javabuilder_sessions#access_token_with_override_sources'
     post '/javabuilder/access_token_with_override_validation', to: 'javabuilder_sessions#access_token_with_override_validation'
 
+    get '/ai_gateway/access_token', to: 'ai_gateway_auth#get_access_token'
+
     resources :sprites, only: [:index], controller: 'sprite_management' do
       collection do
         get 'sprite_upload'
@@ -1275,6 +1270,10 @@ Dashboard::Application.routes.draw do
     # but we leave them outside so that we can easily use the simple "/form" paths.
     get '/form/:path/configuration', to: 'foorm/simple_survey_forms#configuration'
     get '/form/:path', to: 'foorm/simple_survey_forms#show'
+
+    get 'widget2', to: 'widget2#index'
+    post 'widget2/:widget2_id/update_code', to: 'widget2#update_code'
+    post 'widget2/new', to: 'widget2#new'
 
     namespace :foorm do
       resources :simple_survey_forms, only: [:index, :new, :create]
@@ -1356,6 +1355,7 @@ Dashboard::Application.routes.draw do
     get '/ai_prompt_management/get_prompt', to: 'ai_prompt_management#get_prompt'
     post '/ai_observability/add_internal_ai_tutor_dataset_item', to: 'ai_observability#add_internal_ai_tutor_dataset_item'
 
+    resources :aichat_requests, only: [:create, :update]
     post '/aichat_request/start_chat_completion', to: 'aichat_requests#start_chat_completion'
     get '/aichat_request/chat_request/:id', to: 'aichat_requests#chat_request'
 

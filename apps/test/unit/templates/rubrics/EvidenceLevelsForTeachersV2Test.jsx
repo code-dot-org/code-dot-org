@@ -30,14 +30,10 @@ describe('EvidenceLevelsForTeachersV2', () => {
         canProvideFeedback={true}
       />
     );
-    expect(wrapper.find('BodyThreeText').length).to.equal(1);
-    expect(wrapper.find('BodyThreeText StrongText').first().text()).to.equal(
-      'Assign a Rubric Score'
-    );
+    expect(wrapper.text()).to.contain('Assign a Rubric Score');
     expect(wrapper.find('button').length).to.equal(
       DEFAULT_PROPS.evidenceLevels.length
     );
-    expect(wrapper.find('BodyFourText').length).to.equal(1);
     const firstEvidenceLevel = DEFAULT_PROPS.evidenceLevels[0];
     expect(wrapper.find('button').first().text()).to.equal(
       UNDERSTANDING_LEVEL_STRINGS_V2[firstEvidenceLevel.understanding]
@@ -62,19 +58,11 @@ describe('EvidenceLevelsForTeachersV2', () => {
 
   it('renders evidence levels without RadioButtons when the teacher cannot provide feedback', () => {
     const wrapper = mount(<EvidenceLevelsForTeachersV2 {...DEFAULT_PROPS} />);
-    expect(wrapper.find('BodyThreeText').first().text()).to.equal(
-      'Rubric Scores'
-    );
-    // Two BodyThreeText per evidence level (plus the header)
-    expect(wrapper.find('BodyThreeText').length).to.equal(
-      DEFAULT_PROPS.evidenceLevels.length * 2 + 1
-    );
+    expect(wrapper.text()).to.contain('Rubric Scores');
     const firstEvidenceLevel = DEFAULT_PROPS.evidenceLevels[0];
-    expect(wrapper.find('StrongText').at(1).text()).to.equal(
+    expect(wrapper.text()).to.contain(
       UNDERSTANDING_LEVEL_STRINGS[firstEvidenceLevel.understanding]
     );
-    expect(wrapper.find('BodyThreeText').at(2).text()).to.equal(
-      firstEvidenceLevel.teacherDescription
-    );
+    expect(wrapper.text()).to.contain(firstEvidenceLevel.teacherDescription);
   });
 });

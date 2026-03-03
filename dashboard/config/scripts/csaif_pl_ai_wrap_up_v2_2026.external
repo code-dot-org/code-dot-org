@@ -88,11 +88,11 @@ This curriculum doesn’t just introduce students to AI—it helps them think cr
 </summary>
 
 <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
-<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">Work through the curriculum levels from <a href='https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/1/lessons/8' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 8: Debugging and Refining Outputs</a> to practice AI prompting.
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">Work through the curriculum levels from <a href='https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/1/lessons/8' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 8: Debugging and Refining Outputs</a> to practice AI prompting.
 </p>
 
 
-<a href="https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/1/lessons/8/levels/1?no_redirect=1" 
+<a href="https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/1/lessons/8/levels/1?no_redirect=1" 
          target="blank" 
          rel="noopener noreferrer" 
          style="display: inline-block; margin-top: 5px; padding: 8px 12px; background-color: #026C7A; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 14px;"> Open Additional Practice
@@ -130,10 +130,10 @@ This curriculum doesn’t just introduce students to AI—it helps them think cr
 </summary>
 
 <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
-<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;"> Work through the curriculum levels from <a href='https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/1/lessons/12' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 12: AI's Role in Society</a> to learn more about about how should AI be used in solving real-world problems.
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;"> Work through the curriculum levels from <a href='https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/1/lessons/12' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 12: AI's Role in Society</a> to learn more about about how should AI be used in solving real-world problems.
 </p>
 
-<a href="https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/1/lessons/12/levels/1" 
+<a href="https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/1/lessons/12/levels/1" 
          target="blank" 
          rel="noopener noreferrer" 
          style="display: inline-block; margin-top: 5px; padding: 8px 12px; background-color: #026C7A; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 14px;"> Open Additional Practice
@@ -141,4 +141,33 @@ This curriculum doesn’t just introduce students to AI—it helps them think cr
 </div>
 
 </details>
+
+
+<div style="max-width:900px; margin:28px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; font-size:16px; color:#292F36;">
+
+<div style="background:#F7F8FA; border-radius:18px; border:1px solid #e3e6ea; box-shadow:0 4px 12px rgba(41,47,54,0.06); overflow:hidden; text-align:center;">
+
+<!-- Top Accent Bar -->
+<div style="height:5px; background:#8C52BA;"></div>
+
+<div style="padding:30px 24px;">
+
+<div style="font-size:26px; font-weight:800; color:#158A92; margin-bottom:10px;">
+Teacher Resource Guide
+</div>
+
+<div style="max-width:620px; margin:0 auto 18px auto; line-height:1.6; font-size:16px;">
+Each unit includes a ready-to-use resource guide with printable materials, classroom posters, unit vocabulary, and additional instructional supports — designed to help you implement each lesson smoothly and confidently.
+</div>
+
+<a href="https://drive.google.com/file/d/1ninbItGveiGVgyndV3-j7yx1rhgEzTSp/view?usp=drive_link" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#8C52BA; color:#FFFFFF; padding:10px 22px; border-radius:999px; font-weight:700; text-decoration:none; box-shadow:0 4px 10px rgba(140,82,186,0.25); font-size:15px;">
+View Teacher Resource Guide →
+</a>
+
+</div>
+</div>
+
+</div>
+
+
 MARKDOWN

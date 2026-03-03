@@ -61,6 +61,7 @@ class AidiffArtifactsControllerTest < ActionController::TestCase
 
     post :create,
       params: {
+        title: "beep boop",
         messageId: message1.id,
         unitId: @unit_in_course.id,
         lessonId: @lesson.id,
@@ -76,6 +77,7 @@ class AidiffArtifactsControllerTest < ActionController::TestCase
     assert_equal expected, json_response["content"]
 
     artifact = AidiffArtifact.find_by_id(json_response["id"])
+    assert_equal "beep boop", artifact.title
     assert_equal 2, artifact.aidiff_artifact_associations.count
 
     association = artifact.aidiff_artifact_associations.first

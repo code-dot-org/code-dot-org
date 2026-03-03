@@ -11,7 +11,6 @@ const rulesToEventuallyReenable = {
   'jsx-a11y/label-has-associated-control': 'off',
   'jsx-a11y/no-noninteractive-element-interactions': 'off',
   'jsx-a11y/no-static-element-interactions': 'off',
-  'jsx-a11y/tabindex-no-positive': 'off',
 };
 
 const accessibilityTestingMessage =
@@ -189,6 +188,11 @@ module.exports = {
           {
             name: 'sinon-chai',
             message: 'Use jest matchers instead of chai',
+          },
+          {
+            name: '@code-dot-org/component-library/typography',
+            message:
+              'DSCO Typography is deprecated. Use MUI Typography from @mui/material instead. From the apps directory (cd apps), run: npx jscodeshift -t ./tools/codemod/typography-to-mui.js "src" --parser=tsx --extensions=tsx,ts,jsx,js',
           },
         ],
         patterns: [

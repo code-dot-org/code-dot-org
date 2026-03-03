@@ -1,8 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
-import {
-  BodyTwoText,
-  BodyThreeText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import styles from './LessonFeedback.module.scss';
@@ -27,11 +24,13 @@ function LessonRecommendedAction({resource}: LessonRecommendedActionProps) {
 
   return (
     <div>
-      <BodyTwoText className={styles.strongText}>
+      <Typography className={styles.strongText} variant="body2" gutterBottom>
         Recommended action
-      </BodyTwoText>
+      </Typography>
       {resource.recommended_action && (
-        <BodyThreeText>{resource.recommended_action}</BodyThreeText>
+        <Typography variant="body3" gutterBottom>
+          {resource.recommended_action}
+        </Typography>
       )}
       {resource.resource_name && resource.resource_link && (
         <Button

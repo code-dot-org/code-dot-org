@@ -14,11 +14,11 @@ import {
   fakeStudentLevelProgress,
   fakeLevelWithSubLevels,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
-import sectionProgress, {
-  addDataByUnit,
-} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import ExpandedProgressDataColumn from '@cdo/apps/templates/sectionProgressV2/ExpandedProgressDataColumn.jsx';
 import {ITEM_TYPE} from '@cdo/apps/templates/sectionProgressV2/ItemType';
+import sectionProgress, {
+  addDataByUnit,
+} from '@cdo/apps/templates/sectionProgressV2/sectionProgressRedux';
 import teacherSections, {
   selectSection,
   setSections,

@@ -1,6 +1,6 @@
 import {useEffect, useMemo, useRef, useState} from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   SCHOOL_COUNTRY_SESSION_KEY,
@@ -98,11 +98,7 @@ export function useSchoolInfo(
 
   // State hooks
   const setCountry = (value: string) => {
-    analyticsReporter.sendEvent(
-      EVENTS.COUNTRY_SELECTED,
-      {country: value},
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.COUNTRY_SELECTED, {country: value});
     setState(prevState => ({
       ...prevState,
       country: value,
@@ -111,26 +107,18 @@ export function useSchoolInfo(
 
   const setSchoolId = (value: string) => {
     if (value === NonSchoolOptions.NO_SCHOOL_SETTING) {
-      analyticsReporter.sendEvent(
-        EVENTS.DO_NOT_TEACH_AT_SCHOOL_CLICKED,
-        {country: country},
-        PLATFORMS.STATSIG
-      );
+      analyticsReporter.sendEvent(EVENTS.DO_NOT_TEACH_AT_SCHOOL_CLICKED, {
+        country: country,
+      });
     } else if (value === NonSchoolOptions.CLICK_TO_ADD) {
-      analyticsReporter.sendEvent(
-        EVENTS.ADD_MANUALLY_CLICKED,
-        {country: country},
-        PLATFORMS.STATSIG
-      );
+      analyticsReporter.sendEvent(EVENTS.ADD_MANUALLY_CLICKED, {
+        country: country,
+      });
     } else {
-      analyticsReporter.sendEvent(
-        EVENTS.SCHOOL_SELECTED_FROM_LIST,
-        {
-          'nces Id': value,
-          country: country,
-        },
-        PLATFORMS.STATSIG
-      );
+      analyticsReporter.sendEvent(EVENTS.SCHOOL_SELECTED_FROM_LIST, {
+        'nces Id': value,
+        country: country,
+      });
     }
     setState(prevState => ({
       ...prevState,
@@ -140,11 +128,10 @@ export function useSchoolInfo(
 
   const setSchoolZip = (value: string) => {
     if (ZIP_REGEX.test(value)) {
-      analyticsReporter.sendEvent(
-        EVENTS.ZIP_CODE_ENTERED,
-        {zip: value, country: country},
-        PLATFORMS.STATSIG
-      );
+      analyticsReporter.sendEvent(EVENTS.ZIP_CODE_ENTERED, {
+        zip: value,
+        country: country,
+      });
     }
 
     setState(prevState => ({
