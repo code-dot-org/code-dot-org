@@ -2,6 +2,9 @@
 @no_firefox
 @no_mobile
 Feature: Send and receive messages in the AI differentiation chat
+  # Was asked to disable the AITA welcome experience without removing any code.
+  # Skipping this test until further notice
+  @skip
   @eyes
   @chrome
   Scenario: Teacher sees welcome screen for AI Differentiation
