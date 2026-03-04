@@ -27,11 +27,12 @@
 
 import Visualization from '@code-dot-org/artist';
 
+import CdoFieldColour from '@cdo/apps/blockly/addons/cdoFieldColour';
 import {
-  loadBlocksToWorkspace,
+  getAllGeneratedCode,
   getCode,
   getCodeFromBlockXmlSource,
-  getAllGeneratedCode,
+  loadBlocksToWorkspace,
 } from '@cdo/apps/blockly/utils';
 import {DEFAULT_EXECUTION_INFO} from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
@@ -576,7 +577,7 @@ Artist.prototype.afterInject_ = function (config) {
         var func = [];
         func.push('function ' + functionName + '() {');
         func.push(
-          '   var colors = ' + JSON.stringify(Blockly.FieldColour.COLOURS) + ';'
+          '   var colors = ' + JSON.stringify(CdoFieldColour.COLOURS) + ';'
         );
         func.push('  return colors[Math.floor(Math.random()*colors.length)];');
         func.push('}');

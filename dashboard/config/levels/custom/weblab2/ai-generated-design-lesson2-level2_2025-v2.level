@@ -1,5 +1,6 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-03-03T05:04:13.000Z",
   "level_num": "custom",
@@ -9,8 +10,8 @@
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "true",
-    "widget_view": "false",
-    "initial_view_mode": "split",
+    "widget_view": "true",
+    "initial_view_mode": "preview",
     "ai_tutor_prompt_answer_types": [
       "ask"
     ],
@@ -223,7 +224,6 @@
       }
     }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-03T05:04:13.522+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson2-level1_2025-v2\\\"\"],\"cloned_from\":\"ai-generated-design-lesson2-level1_2025-v2\"},{\"changed_at\":\"2026-03-03 05:08:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-03 05:43:01 +0000\",\"changed\":[\"widget_view\",\"initial_view_mode\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-03 06:41:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-03 06:45:42 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-03T05:04:13.522+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson2-level1_2025-v2\\\"\"],\"cloned_from\":\"ai-generated-design-lesson2-level1_2025-v2\"},{\"changed_at\":\"2026-03-03 05:08:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-03 05:43:01 +0000\",\"changed\":[\"widget_view\",\"initial_view_mode\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-03 06:41:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-03 06:45:42 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-03 07:30:47 +0000\",\"changed\":[\"widget_view\",\"initial_view_mode\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Weblab2>

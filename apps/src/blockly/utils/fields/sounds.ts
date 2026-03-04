@@ -1,4 +1,5 @@
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
+import CdoFieldButton from '@cdo/apps/blockly/addons/cdoFieldButton';
 import {DEFAULT_SOUND} from '@cdo/apps/blockly/constants';
 
 function capitalizeFirstLetter(string: string) {
@@ -51,7 +52,7 @@ export function soundField(
     }
     return newValue;
   };
-  return new Blockly.FieldButton({
+  return new CdoFieldButton({
     value: DEFAULT_SOUND,
     validator,
     onClick,

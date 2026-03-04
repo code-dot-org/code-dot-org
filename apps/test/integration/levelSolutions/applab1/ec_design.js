@@ -870,14 +870,14 @@ module.exports = {
         assert.equal(parseInt(chart2.style.top), 10);
         assert.equal(chart2.id, 'design_chart2');
 
-        // Add a button at the edge of the container
-        var maxLeft = designModeViz.outerWidth();
-        var maxTop = designModeViz.outerHeight();
+        // Add a button at the bottom-right corner of the container.
+        var maxRight = designModeViz.outerWidth();
+        var maxBottom = designModeViz.outerHeight();
 
         // Relies on default button dimensions (100px width, 40px height)
-        testUtils.dragToVisualization('BUTTON', maxLeft - 100, maxTop - 40);
+        testUtils.dragToVisualization('BUTTON', maxRight - 100, maxBottom - 40);
 
-        var newButton = designModeViz.find('button');
+        var newButton = designModeViz.find('button[id^="design_"]');
         assert.equal(newButton.length, 1);
 
         // Duplicate the button
@@ -885,15 +885,35 @@ module.exports = {
           'button:contains(Duplicate)'
         )[0];
         ReactTestUtils.Simulate.click(buttonDuplicateButton);
-        assert.equal(designModeViz.find('button').length, 2);
+        assert.equal(designModeViz.find('button[id^="design_"]').length, 2);
 
         // Test containment in design mode area by asserting position and ID
-        // Should be the same as the original button
-        var buttons = designModeViz.find('button');
+        // Only count design elements (exclude Run/Reset in PhoneFrame when zoomed)
+        var buttons = designModeViz.find('button[id^="design_"]');
         assert.equal(buttons.length, 2);
+        var button1 = buttons[0];
         var button2 = buttons[1];
-        assert.equal(parseInt(button2.style.left), maxLeft - 100);
-        assert.equal(parseInt(button2.style.top), maxTop - 40);
+        var currentMaxRight = designModeViz.outerWidth();
+        var currentMaxBottom = designModeViz.outerHeight();
+        // Because the original button is at the bottom-right corner of the container,
+        // the duplicate button should be at the same position so that is contained within the visualization.
+        assert.equal(
+          parseInt(button2.style.left, 10),
+          parseInt(button1.style.left, 10),
+          'duplicate same left as original'
+        );
+        assert.equal(parseInt(button2.style.left, 10), currentMaxRight - 100);
+        // Confirm that duplicate button is contained within the visualization container.
+        assert.isAtLeast(
+          parseInt(button2.style.top, 10),
+          0,
+          'duplicate within container top'
+        );
+        assert.isAtMost(
+          parseInt(button2.style.top, 10),
+          currentMaxBottom - 40,
+          'duplicate within container bottom'
+        );
 
         Applab.onPuzzleComplete();
       },
@@ -952,14 +972,14 @@ module.exports = {
         assert.equal(parseInt(image3.style.top), 20);
         assert.equal(image3.id, 'design_image3');
 
-        // Add a button at the edge of the container
-        var maxLeft = designModeViz.outerWidth();
-        var maxTop = designModeViz.outerHeight();
+        // Add a button at the bottom-right corner of the container
+        var maxRight = designModeViz.outerWidth();
+        var maxBottom = designModeViz.outerHeight();
 
         // Relies on default button dimensions (100px width, 40px height)
-        testUtils.dragToVisualization('BUTTON', maxLeft - 100, maxTop - 40);
+        testUtils.dragToVisualization('BUTTON', maxRight - 100, maxBottom - 40);
 
-        var newButton = designModeViz.find('button');
+        var newButton = designModeViz.find('button[id^="design_"]');
         assert.equal(newButton.length, 1);
         newButton[0].focus();
 
@@ -968,12 +988,28 @@ module.exports = {
         designModeElement.dispatchEvent(paste);
 
         // Test containment in design mode area by asserting position and ID
-        // Should be the same as the original button
-        var buttons = designModeViz.find('button');
+        // Only count design elements (exclude Run/Reset in PhoneFrame when zoomed)
+        var buttons = designModeViz.find('button[id^="design_"]');
         assert.equal(buttons.length, 2);
+        var button1 = buttons[0];
         var button2 = buttons[1];
-        assert.equal(parseInt(button2.style.left), maxLeft - 100);
-        assert.equal(parseInt(button2.style.top), maxTop - 40);
+        var currentMaxRight = designModeViz.outerWidth();
+        var currentMaxBottom = designModeViz.outerHeight();
+        // Because the original button is at the bottom-right corner of the container,
+        // the duplicate button should be at the same position so that is contained within the visualization.
+        assert.equal(
+          parseInt(button2.style.left, 10),
+          parseInt(button1.style.left, 10),
+          'duplicate same left as original'
+        );
+        assert.equal(parseInt(button2.style.left, 10), currentMaxRight - 100);
+        // Confirm that duplicate button is contained within the visualization container.
+        assert.isAtLeast(parseInt(button2.style.top, 10), 0);
+        assert.isAtMost(
+          parseInt(button2.style.top, 10),
+          currentMaxBottom - 40,
+          'duplicate within container bottom'
+        );
 
         Applab.onPuzzleComplete();
       },

@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2026-03-03T22:46:11.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##AI in Content Creation\r\n\r\nYou are the Pilot (the Star of the Show). The AI is your Co-Pilot (your Creative Producer). You provide the personality; the AI helps with the patterns of what makes a video click.\r\n\r\n####How to start:\r\n\r\n* Give the Co-Pilot Your Data: Don't just ask for video ideas. Be specific from your brainstorming artifacts so the AI knows your vibe.\r\n\r\n\t* _Example: \"I'm starting a gaming channel for 5th graders. My personality is 'Funny and Sarcastic.' Based on this, give me 5 video titles and a 30-second intro script.\"_\r\n\r\n* Analyze the Script: Read the script the AI wrote. Does it sound like you? Or does it sound like a robot trying to be a human? Give the AI suggestions for specific revisions.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-3-pro-preview",
+        "temperature": 0.8,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Role: You are an AI Content Creation Consultant. Your goal is to help middle school students brainstorm and draft materials for a new YouTube or social media channel.\n\nInstructions:\n\nData-Driven Creativity: Use the student's specific channel details (subject, target audience, and personality traits) to generate ideas. Do not provide generic \"influencer\" advice; tailor everything to their unique inputs.\n\nOutput Requirements: When asked, provide exactly five catchy video titles and one 30-second introductory script.\n\nScripting Style: Write the script as a template with placeholders like \"[Your Name]\" or \"[Unique Catchphrase]\" to ensure the student fills in their own personal identity.\n\nEncourage Brand Consistency: If a student’s subject is \"Cooking\" but their personality is \"Scientific,\" make sure the titles and script reflect a \"Science of Cooking\" vibe.\n\nThe Co-Pilot Check: After generating content, remind the student: \"I’ve built the frame, but you are the star! Which of these titles feels most like the channel you want to build?\"",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-3-pro-preview"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "AI in Content Creation",
+    "bubble_choice_description": "**Inquiry Question**: How do I use AI to grow my channel without losing my original voice?",
+    "thumbnail_url": "https://images.code.org/04c345c8485c6b577971d58b84b39e3b-L3_exploration_3.png",
+    "name_suffix": "_2026-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-03T22:46:11.936+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson3-level2c_2026-test\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson3-level2c_2026-test\"}]"
+}]]></config>
+</Aichat>

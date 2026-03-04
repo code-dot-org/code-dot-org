@@ -10,6 +10,7 @@ import {
   shouldShowAiTutor,
 } from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {AI_TUTOR_LEGACY_LABS} from '@cdo/apps/aiTutor/views/legacyLabs/constants';
+import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 
 import {AiTutorContainer} from '../../aiTutor/views/legacyLabs/AiTutorContainer';
 import {setInstructionsMaxHeightAvailable} from '../../redux/instructions';
@@ -186,8 +187,11 @@ export default connect(
   state => ({
     instructionsHeight: state.instructions.renderedHeight,
     labType: state.pageConstants.appType,
-    aiChatAccessLevel: state.currentUser.aiChatAccessLevel,
     isShareView: state.pageConstants.isShareView,
+    aiChatAccessLevel:
+      (state.teacherSections
+        ? selectedSectionSelector(state)?.aiChatAccessLevel
+        : undefined) ?? state.currentUser.aiChatAccessLevel,
   }),
   dispatch => ({
     setInstructionsMaxHeightAvailable(maxHeight) {
