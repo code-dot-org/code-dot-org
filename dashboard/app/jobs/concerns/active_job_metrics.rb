@@ -78,6 +78,14 @@ module ActiveJobMetrics
     mine(ActiveJobMetrics.waiting_to_start_jobs)
   end
 
+  def self.running_jobs
+    queued_jobs.where.not(locked_at: nil)
+  end
+
+  def running_jobs
+    mine(ActiveJobMetrics.running_jobs)
+  end
+
   def self.oldest_job_age_s(jobs)
     oldest_job = jobs.order(:created_at).first
     oldest_job ? _now_utc - oldest_job.created_at : 0
@@ -99,10 +107,7 @@ module ActiveJobMetrics
     ActiveJobMetrics.oldest_job_age_s(waiting_to_start_jobs)
   end
 
-  def self.report_metrics(job_class, dimensions:)
-    current_worker_count = worker_count
-    current_working_worker_count = working_worker_count
-
+  def self.report_metrics(job_class, dimensions:, report_overall_metrics: false)
     metrics = [
       {
         metric_name: 'QueuedJobCount',
@@ -133,6 +138,13 @@ module ActiveJobMetrics
         dimensions: dimensions,
       },
       {
+        metric_name: 'RunningJobCount',
+        value: job_class.running_jobs.count,
+        unit: 'Count',
+        timestamp: Time.now,
+        dimensions: dimensions,
+      },
+      {
         metric_name: 'OldestPendingJobAge',
         value: job_class.oldest_pending_job_age_s,
         unit: 'Seconds',
@@ -146,42 +158,40 @@ module ActiveJobMetrics
         timestamp: Time.now,
         dimensions: dimensions,
       },
-      {
-        metric_name: 'WorkerCount',
-        value: current_worker_count,
-        unit: 'Count',
-        timestamp: Time.now,
-        dimensions: dimensions,
-      },
-      {
-        metric_name: 'WorkingWorkerCount',
-        value: current_working_worker_count,
-        unit: 'Count',
-        timestamp: Time.now,
-        dimensions: dimensions,
-      },
-      {
-        metric_name: 'IdleWorkerCount',
-        value: current_worker_count - current_working_worker_count,
-        unit: 'Count',
-        timestamp: Time.now,
-        dimensions: dimensions,
-      }
     ]
+
+    if report_overall_metrics
+      current_worker_count = ActiveJobMetrics.worker_count
+      current_running_jobs_count = ActiveJobMetrics.running_jobs.count
+
+      overall_metrics = [
+        {
+          metric_name: 'WorkerCount',
+          value: current_worker_count,
+          unit: 'Count',
+          timestamp: Time.now,
+          dimensions: dimensions,
+        },
+        {
+          metric_name: 'IdleWorkersPercent',
+          value: current_worker_count > 0 ? ((current_worker_count - current_running_jobs_count) / current_worker_count.to_f) * 100 : 0,
+          unit: 'Percent',
+          timestamp: Time.now,
+          dimensions: dimensions,
+        }
+      ]
+      metrics.concat(overall_metrics)
+    end
 
     Cdo::Metrics.push(METRICS_NAMESPACE, metrics)
   end
 
   def self.report_overall_queue_metrics
-    ActiveJobMetrics.report_metrics(ActiveJobMetrics, dimensions: [{name: 'Environment', value: CDO.rack_env}])
+    ActiveJobMetrics.report_metrics(ActiveJobMetrics, dimensions: [{name: 'Environment', value: CDO.rack_env}], report_overall_metrics: true)
   end
 
   def self.worker_count
     Cdo::ActiveJobBackend::ExistingWorkers.get_workers_from_ps.size
-  end
-
-  def self.working_worker_count
-    queued_jobs.where.not(locked_at: nil).distinct.count(:locked_by)
   end
 
   protected def report_job_count

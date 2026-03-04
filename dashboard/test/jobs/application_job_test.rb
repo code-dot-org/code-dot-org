@@ -38,11 +38,13 @@ class ApplicationJobTest < ActiveJob::TestCase
     @expected_my_waiting_to_start_count = 1
     @expected_my_pending_count = 2
     @expected_my_queued_count = 3
+    @expected_my_running_count = 1
 
     @expected_failed_count = @expected_my_failed_count * 2
     @expected_waiting_to_start_count = @expected_my_waiting_to_start_count * 2
     @expected_pending_count = @expected_my_pending_count * 2
     @expected_queued_count = @expected_my_queued_count * 2
+    @expected_running_count = @expected_my_running_count * 2
   end
 
   test 'includes ActiveJobMetrics' do
@@ -83,26 +85,41 @@ class ApplicationJobTest < ActiveJob::TestCase
     assert_equal @expected_my_waiting_to_start_count, ApplicationJob.new.waiting_to_start_jobs.count
   end
 
-  test 'working_worker_count.count returns distinct non-failed workers with active locks' do
-    assert_equal 1, ActiveJobMetrics.working_worker_count
-    assert_equal 1, ApplicationJob.new.working_worker_count
+  test 'running_jobs.count returns the number of jobs currently running' do
+    assert_equal @expected_running_count, ActiveJobMetrics.running_jobs.count
+    assert_equal @expected_my_running_count, ApplicationJob.new.running_jobs.count
   end
 
-  test 'overall queue metrics include worker, working worker, and idle worker counts' do
-    ActiveJobMetrics.stubs(:worker_count).returns(3)
-    ActiveJobMetrics.stubs(:working_worker_count).returns(1)
+  test 'overall queue metrics include worker count and idle workers percent' do
+    ActiveJobMetrics.stubs(:worker_count).returns(4)
 
     Cdo::Metrics.expects(:push).with(
       ApplicationJob::METRICS_NAMESPACE,
       all_of(
-        includes_metrics(WorkerCount: 3, WorkingWorkerCount: 1, IdleWorkerCount: 2),
+        includes_metrics(WorkerCount: 4, RunningJobCount: @expected_running_count, IdleWorkersPercent: 50.0),
         includes_dimensions(:WorkerCount, Environment: CDO.rack_env),
-        includes_dimensions(:WorkingWorkerCount, Environment: CDO.rack_env),
-        includes_dimensions(:IdleWorkerCount, Environment: CDO.rack_env)
+        includes_dimensions(:RunningJobCount, Environment: CDO.rack_env),
+        includes_dimensions(:IdleWorkersPercent, Environment: CDO.rack_env)
       )
     )
 
     ActiveJobMetrics.report_overall_queue_metrics
+  end
+
+  test 'job-specific queue metrics do not include overall-only metrics' do
+    Cdo::Metrics.expects(:push).with do |namespace, metrics|
+      assert_equal ApplicationJob::METRICS_NAMESPACE, namespace
+
+      running_metric = metrics.find {|m| m[:metric_name] == 'RunningJobCount'}
+      worker_metric = metrics.find {|m| m[:metric_name] == 'WorkerCount'}
+      idle_workers_percent_metric = metrics.find {|m| m[:metric_name] == 'IdleWorkersPercent'}
+
+      assert_equal @expected_my_running_count, running_metric[:value]
+      assert_nil worker_metric
+      assert_nil idle_workers_percent_metric
+    end
+
+    ActiveJobMetrics.report_metrics(ApplicationJob.new, dimensions: [{name: 'Environment', value: CDO.rack_env}, {name: 'JobName', value: 'ApplicationJob'}])
   end
 
   test 'enqueued jobs log several metrics' do
@@ -120,6 +137,7 @@ class ApplicationJobTest < ActiveJob::TestCase
         includes_dimensions(:FailedJobCount, Environment: CDO.rack_env),
         includes_dimensions(:PendingJobCount, Environment: CDO.rack_env),
         includes_dimensions(:WaitingToStartJobCount, Environment: CDO.rack_env),
+        includes_dimensions(:RunningJobCount, Environment: CDO.rack_env),
         includes_dimensions(:OldestPendingJobAge, Environment: CDO.rack_env),
         includes_dimensions(:OldestWaitingToStartJobAge, Environment: CDO.rack_env),
       )
@@ -137,6 +155,7 @@ class ApplicationJobTest < ActiveJob::TestCase
         includes_dimensions(:FailedJobCount, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob'),
         includes_dimensions(:PendingJobCount, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob'),
         includes_dimensions(:WaitingToStartJobCount, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob'),
+        includes_dimensions(:RunningJobCount, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob'),
         includes_dimensions(:OldestPendingJobAge, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob'),
         includes_dimensions(:OldestWaitingToStartJobAge, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob'),
       )
