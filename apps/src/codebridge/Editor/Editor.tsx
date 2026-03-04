@@ -140,18 +140,17 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     if (fileExt && langMapping[fileExt]) {
       extensions.push(langMapping[fileExt]);
       if (fileExt === 'js') {
-        extensions.push(
-          linter(
-            esLint(new eslint.Linter(), {
-              ...js.configs.recommended,
-              languageOptions: {
-                globals: {
-                  ...globals.browser,
-                },
-              },
-            })
-          )
-        );
+        // eslint configuration
+        const config = {
+          ...js.configs.recommended,
+          languageOptions: {
+            globals: {
+              ...globals.browser,
+            },
+          },
+        };
+
+        extensions.push(linter(esLint(new eslint.Linter(), config)));
         extensions.push(lintGutter());
       } else if (fileExt === 'css') {
         // Add css color picker and remove white outline from color indicator.

@@ -34,7 +34,6 @@ declare global {
   }
 }
 
-// CodeMirror5-compatible adapter used to migrate existing usages of initializeCodeMirror (which uses CM5).
 interface CodeMirrorLegacyAdapter {
   getValue: () => string;
   setValue: (value: string) => void;
@@ -94,8 +93,7 @@ const getLintExtension = (
       ...(lintConfig?.disableRecommendedJsConfig ? {} : js.configs.recommended),
       languageOptions: {
         globals: {
-          ...globals.browser,
-          ai: 'off',
+          ...(lintConfig?.disableRecommendedJsConfig ? {} : globals.browser),
         },
         ...(lintConfig?.es5 ? {ecmaVersion: 5, sourceType: 'script'} : {}),
       },
@@ -151,7 +149,8 @@ function resolvePreviewElement(
  * @param {!string} mode - editor syntax mode
  * @param {Object} options - misc optional arguments
  * @param {function} [options.callback] - onChange callback for editor
- * ADD DOCS HERE
+ * @param {onUpdateLinting} [options.onUpdateLinting] - callback that receives linting errors on each update.
+ * @param {Object} [options.lintConfig] - configuration options for linting (only applicable for javascript mode).
  * @param {boolean} [options.attachments] - whether to enable attachment
  *        uploading in this editor.
  * @param {(string|Element)} [options.preview] - element or id of element to
