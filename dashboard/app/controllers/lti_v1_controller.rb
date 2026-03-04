@@ -459,7 +459,7 @@ class LtiV1Controller < ApplicationController
     )
   end
 
-  private def validate_integration_membership(integration, deployment, user)
-   deployment.lti_user_identities.exists?(lti_integration: integration, user:)
+  private def validate_integration_membership(lti_integration, lti_deployment, user)
+    lti_deployment.lti_user_identities.exists?(lti_integration:, user:)
   end
 end
