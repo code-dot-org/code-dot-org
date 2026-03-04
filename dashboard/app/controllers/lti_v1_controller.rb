@@ -461,10 +461,10 @@ class LtiV1Controller < ApplicationController
 
   private def validate_integration_membership(integration, deployment, user)
     # Integration-level check
-    lti_user_identity = user.lti_user_identities&.find_by(lti_integration_id: integration.id)
-    return false unless lti_user_identity
+    lti_user_identities = user.lti_user_identities&.where(lti_integration_id: integration.id)
+    return false unless lti_user_identities&.exists?
 
-    # Deployment-level check. Required for Schoology.
-    lti_user_identity.lti_deployments.exists?(id: deployment.id)
+    # Deployment-level check across all matching integration identities. Required for Schoology.
+    lti_user_identities.joins(:lti_deployments).where(lti_deployments: {id: deployment.id}).exists?
   end
 end
