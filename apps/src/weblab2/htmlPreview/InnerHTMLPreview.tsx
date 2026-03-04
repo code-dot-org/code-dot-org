@@ -190,12 +190,15 @@ const InnerHTMLPreview = () => {
         if (response.status === 404) {
           console.warn('got 404!');
           setCurrentFileNotFound(true);
+        } else {
+          console.log('SW warmup fetch succeeded');
         }
       })
       .finally(() => {
         if (!cancelled) {
           setSwWarmedUp(true);
           setRenderKey(prevKey => prevKey + 1);
+          console.log('SW warmup fetch complete, updating render key');
         }
       });
     return () => {
