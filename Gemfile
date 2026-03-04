@@ -434,4 +434,4 @@ gem 'openssl', '>= 3.3.1'
 gem 'typhoeus', '~> 1.0', '>= 1.0.1'
 
 # Used for Vite integration, only available in development and adhoc at this time.
-gem "vite_rails", "~> 3.0", group: [:development, :adhoc]
+gem "vite_rails", "~> 3.0", group: [:development, :adhoc, :staging, :test]
