@@ -9,6 +9,7 @@ import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 import {baseModelParameters} from '../../hooks/useAiTutorModelParameters';
 
 import GenericStudentLessonSummary from './GenericStudentLessonSummary';
+import ParsonsProblem from './ParsonsProblem';
 import PracticeOptions from './PracticeOptions';
 import StudentWorkLessonSummary from './StudentWorkLessonSummary';
 import VocabularyFlashcards from './VocabularyFlashcards';
@@ -20,6 +21,7 @@ type PracticeOption =
   | 'flashcards'
   | 'chat'
   | 'student-work-summary'
+  | 'parsons-problem'
   | null;
 
 export const LessonPractice: FC<{
@@ -75,6 +77,7 @@ export const LessonPractice: FC<{
           clientType={AiChatClientTypes.AI_TUTOR}
         />
       )}
+      {selectedOption === 'parsons-problem' && <ParsonsProblem />}
     </>
   );
 };

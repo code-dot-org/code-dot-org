@@ -36,6 +36,13 @@ const PracticeOptions: FC<{
       prompt: 'I want to chat with the tutor about the lesson.',
       show: true,
     },
+    {
+      value: 'parsons-problem',
+      label: 'Code Scramble',
+      icon: 'puzzle-piece',
+      prompt: 'Show the code scramble activity for this lesson.',
+      show: true,
+    },
   ];
 
   const onClick = (prompt: string) => () => {

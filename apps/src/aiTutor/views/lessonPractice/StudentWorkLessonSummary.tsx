@@ -1,4 +1,4 @@
-import {Card, CardContent, CircularProgress, Typography} from '@mui/material';
+import {CircularProgress, Typography} from '@mui/material';
 import React, {FC, useEffect, useState} from 'react';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
