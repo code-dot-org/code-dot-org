@@ -209,7 +209,7 @@ module AichatAiHelper
 
     usage_reporter = AichatAiUsageReporter.new(model_id, user_id, project_id, level_id)
 
-    use_legacy = !aichat_model_customizations['useVertex']
+    use_legacy = DCDO.get('aichat_disable_vertex_ai', false)
 
     client = use_legacy ?
       create_ai_client_instance_legacy(client_type, model_id, usage_reporter)
