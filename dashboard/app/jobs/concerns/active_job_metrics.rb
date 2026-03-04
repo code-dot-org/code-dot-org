@@ -100,6 +100,9 @@ module ActiveJobMetrics
   end
 
   def self.report_metrics(job_class, dimensions:)
+    current_worker_count = worker_count
+    current_working_worker_count = working_worker_count
+
     metrics = [
       {
         metric_name: 'QueuedJobCount',
@@ -145,7 +148,21 @@ module ActiveJobMetrics
       },
       {
         metric_name: 'WorkerCount',
-        value: worker_count,
+        value: current_worker_count,
+        unit: 'Count',
+        timestamp: Time.now,
+        dimensions: dimensions,
+      },
+      {
+        metric_name: 'WorkingWorkerCount',
+        value: current_working_worker_count,
+        unit: 'Count',
+        timestamp: Time.now,
+        dimensions: dimensions,
+      },
+      {
+        metric_name: 'IdleWorkerCount',
+        value: current_worker_count - current_working_worker_count,
         unit: 'Count',
         timestamp: Time.now,
         dimensions: dimensions,
@@ -161,6 +178,10 @@ module ActiveJobMetrics
 
   def self.worker_count
     Cdo::ActiveJobBackend::ExistingWorkers.get_workers_from_ps.size
+  end
+
+  def self.working_worker_count
+    queued_jobs.where.not(locked_at: nil).distinct.count(:locked_by)
   end
 
   protected def report_job_count

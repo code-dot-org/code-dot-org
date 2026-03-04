@@ -83,14 +83,22 @@ class ApplicationJobTest < ActiveJob::TestCase
     assert_equal @expected_my_waiting_to_start_count, ApplicationJob.new.waiting_to_start_jobs.count
   end
 
-  test 'overall queue metrics include worker count' do
+  test 'working_worker_count.count returns distinct non-failed workers with active locks' do
+    assert_equal 1, ActiveJobMetrics.working_worker_count
+    assert_equal 1, ApplicationJob.new.working_worker_count
+  end
+
+  test 'overall queue metrics include worker, working worker, and idle worker counts' do
     ActiveJobMetrics.stubs(:worker_count).returns(3)
+    ActiveJobMetrics.stubs(:working_worker_count).returns(1)
 
     Cdo::Metrics.expects(:push).with(
       ApplicationJob::METRICS_NAMESPACE,
       all_of(
-        includes_metrics(WorkerCount: 3),
-        includes_dimensions(:WorkerCount, Environment: CDO.rack_env)
+        includes_metrics(WorkerCount: 3, WorkingWorkerCount: 1, IdleWorkerCount: 2),
+        includes_dimensions(:WorkerCount, Environment: CDO.rack_env),
+        includes_dimensions(:WorkingWorkerCount, Environment: CDO.rack_env),
+        includes_dimensions(:IdleWorkerCount, Environment: CDO.rack_env)
       )
     )
 
