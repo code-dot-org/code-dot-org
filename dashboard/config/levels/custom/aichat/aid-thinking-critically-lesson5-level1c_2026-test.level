@@ -1,0 +1,15 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2026-03-03T20:03:27.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "display_name": "What's missing? ",
+    "bubble_choice_description": "Plan a weekend event with AI! How does missing context lead AI to make flawed decisions?",
+    "thumbnail_url": "https://images.code.org/94865517ce1722b8ce012abd04d6b296-star.png"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-04 02:09:19 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-04 02:10:13 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-04 02:11:37 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Aichat>

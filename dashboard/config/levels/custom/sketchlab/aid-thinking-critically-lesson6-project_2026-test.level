@@ -1,0 +1,130 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2026-03-03T20:15:28.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aid-thinking-critically-lesson4-project-template_2026-test",
+    "long_instructions": "Milestone 3 - Truth & Credibility ",
+    "start_sources": {
+      "source": {
+        "type": "excalidraw",
+        "version": 2,
+        "source": "https://levelbuilder-studio.code.org",
+        "elements": [
+          {
+            "id": "OSnZ8Ltdch8IdHQSTyfYc",
+            "type": "arrow",
+            "x": 274.599609375,
+            "y": 267.9443359375,
+            "width": 155.91796875,
+            "height": 12.890625,
+            "angle": 0,
+            "strokeColor": "#e03131",
+            "backgroundColor": "transparent",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "seed": 1924504671,
+            "version": 45,
+            "versionNonce": 742801631,
+            "isDeleted": false,
+            "boundElements": null,
+            "updated": 1772569788895,
+            "link": null,
+            "locked": false,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                155.91796875,
+                12.890625
+              ]
+            ],
+            "lastCommittedPoint": null,
+            "startBinding": null,
+            "endBinding": {
+              "elementId": "b6firXJVHQXYlqTJiYVNr",
+              "focus": -0.5845911840966328,
+              "gap": 14.5263671875
+            },
+            "startArrowhead": null,
+            "endArrowhead": "arrow"
+          },
+          {
+            "id": "b6firXJVHQXYlqTJiYVNr",
+            "type": "text",
+            "x": 445.0439453125,
+            "y": 268.7158203125,
+            "width": 377.7796630859375,
+            "height": 25,
+            "angle": 0,
+            "strokeColor": "#e03131",
+            "backgroundColor": "transparent",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "seed": 1816430001,
+            "version": 55,
+            "versionNonce": 1151913215,
+            "isDeleted": false,
+            "boundElements": [
+              {
+                "id": "OSnZ8Ltdch8IdHQSTyfYc",
+                "type": "arrow"
+              }
+            ],
+            "updated": 1772569788895,
+            "link": null,
+            "locked": false,
+            "text": "Milestone 3 Project Stuff goes here. ",
+            "fontSize": 20,
+            "fontFamily": 1,
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "baseline": 18,
+            "containerId": null,
+            "originalText": "Milestone 3 Project Stuff goes here. ",
+            "lineHeight": 1.25
+          }
+        ],
+        "appState": {
+          "gridSize": null,
+          "viewBackgroundColor": "#ffffff",
+          "scrollX": -125.99934895833337,
+          "scrollY": -70.90151486840986,
+          "zoom": {
+            "value": 1.2000000000000002
+          }
+        },
+        "files": {
+        },
+        "externalFiles": {
+        }
+      }
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-03 20:17:11 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-03 20:17:41 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-03 20:19:17 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-03 20:30:09 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Sketchlab>
