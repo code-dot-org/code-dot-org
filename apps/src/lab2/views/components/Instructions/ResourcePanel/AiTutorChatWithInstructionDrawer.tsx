@@ -185,7 +185,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
         return;
       }
 
-      // Auto-adjust drawer height when new content heigh is less than the current drawer height.
+      // Auto-adjust drawer height when new content height is less than the current drawer height.
       // This will remove a gap betwen instructions and drawer's edge.
       if (contentHeight < currentHeight) {
         setRawInstructionsHeight(
