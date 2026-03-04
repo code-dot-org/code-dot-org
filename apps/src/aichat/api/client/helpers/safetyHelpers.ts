@@ -2,6 +2,7 @@ import {Output} from 'ai';
 import z from 'zod/v3';
 
 import {generateText} from '@cdo/apps/aiGateway/generateTextThroughProxyOrGateway';
+import {moderateImage} from '@cdo/apps/lab2/utils';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
@@ -49,4 +50,9 @@ export async function isTextSafe(
     throw new Error('Invalid classification value: ' + classification);
   }
   return classification === 'OK';
+}
+
+export async function isImageSafe(image: File, ext: string): Promise<boolean> {
+  const moderationStatus = await moderateImage(image, ext, 'aichat');
+  return moderationStatus === 'ok' || moderationStatus === 'skipped';
 }

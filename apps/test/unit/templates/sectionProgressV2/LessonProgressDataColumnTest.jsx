@@ -28,7 +28,6 @@ const LESSON_PROGRESS = {
   [STUDENT_1.id]: {
     [LESSON.id]: {
       incompletePercent: 20,
-      imperfectPercent: 20,
       completedPercent: 60,
       timeSpent: 300, // time spent = 5 minutes
       lastTimestamp: 1614841198, // date = 3/4
@@ -37,7 +36,6 @@ const LESSON_PROGRESS = {
   [STUDENT_2.id]: {
     [LESSON.id]: {
       incompletePercent: 0,
-      imperfectPercent: 0,
       completedPercent: 100,
       timeSpent: 300, // time spent = 5 minutes
       lastTimestamp: 1614841198, // date = 3/4
