@@ -27,14 +27,14 @@ const InnerHTMLPreview = () => {
     undefined
   );
   const [serviceWorkerReady, setServiceWorkerReady] = useState(false);
-  // True once we've made a warmup fetch to the SW immediately before showing the iframe.
+  // True once we've made a warmup fetch to the Service Worker immediately before showing the iframe.
   // Safari aggressively idles SWs; if the SW is idle when the iframe navigate happens,
   // Safari won't intercept it. The warmup fetch ensures the SW is awake.
   const [swWarmedUp, setSwWarmedUp] = useState(false);
   // Key to indicate we should re-warmup the SW on source changes.
   const [previewKey, setPreviewKey] = useState(0);
   // Numerical key used to force a re-render of the iframe when we need to refresh the iframe, such as
-  // when toggling script permissions or when the source doc (or a dependent file) is updated.
+  // when toggling script permissions or when the source document (or a dependent file) is updated.
   const [renderKey, setRenderKey] = useState(0);
   const [allowScripts, setAllowScripts] = useState(false);
   const [isLevelLoading, setIsLevelLoading] = useState(false);
@@ -65,7 +65,6 @@ const InnerHTMLPreview = () => {
       } else if (data.type === IframeMessageType.CHANGE_FILE_URL_BAR) {
         setCurrentFile(data.fileName);
       } else if (data.type === IframeMessageType.SET_ALLOW_SCRIPTS) {
-        console.log(`setting allowScripts to ${!!data.allow}`);
         setAllowScripts(!!data.allow);
         setPreviewKey(prevKey => prevKey + 1);
       } else if (data.type === IframeMessageType.REFRESH) {
@@ -183,21 +182,12 @@ const InnerHTMLPreview = () => {
     }
     let cancelled = false;
     setSwWarmedUp(false);
-    fetch(`${window.location.origin}/${currentFile}`)
-      .then(response => {
-        if (response.status === 404) {
-          console.warn('SW warmup fetch got 404');
-        } else {
-          console.log('SW warmup fetch succeeded');
-        }
-      })
-      .finally(() => {
-        if (!cancelled) {
-          setSwWarmedUp(true);
-          setRenderKey(prevKey => prevKey + 1);
-          console.log('SW warmup fetch complete, updating render key');
-        }
-      });
+    fetch(`${window.location.origin}/${currentFile}`).finally(() => {
+      if (!cancelled) {
+        setSwWarmedUp(true);
+        setRenderKey(prevKey => prevKey + 1);
+      }
+    });
     return () => {
       cancelled = true;
     };
