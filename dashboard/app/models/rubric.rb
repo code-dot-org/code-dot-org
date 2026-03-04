@@ -16,6 +16,7 @@ class Rubric < ApplicationRecord
   has_many :learning_goals, -> {order(:position)}, dependent: :destroy, inverse_of: :rubric
   belongs_to :level
   belongs_to :lesson
+  has_and_belongs_to_many :jit_pl_concepts, join_table: :jit_pl_concepts_rubrics
 
   def get_script_level
     lesson.script_levels.find {|sl| sl.levels.include?(level)}

@@ -41,6 +41,9 @@ class Resource < ApplicationRecord
   has_and_belongs_to_many :lessons, join_table: :lessons_resources
   has_and_belongs_to_many :scripts, class_name: 'Unit', join_table: :scripts_resources, association_foreign_key: 'script_id'
   has_and_belongs_to_many :unit_groups, join_table: :unit_groups_resources
+  has_and_belongs_to_many :jit_pl_concepts, join_table: :jit_pl_concepts_lessons
+  has_and_belongs_to_many :jit_pl_exemplars, join_table: :jit_pl_exemplars_resources
+  has_and_belongs_to_many :jit_pl_misconceptions, join_table: :jit_pl_misconceptions_resources
   belongs_to :course_version, optional: true
 
   before_validation :generate_key, on: :create
