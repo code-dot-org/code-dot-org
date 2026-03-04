@@ -50,7 +50,7 @@ label {
   gap: 0 0.5rem !important;
 }
 
-span {
+span:not(:global(.MuiButton-icon)) {
   margin-bottom: 0.125rem !important;
 }
 
@@ -186,10 +186,6 @@ span {
       button {
         width: 100%;
         margin: 0 0 0.5rem 0;
-      }
-
-      i {
-        margin-bottom: 0.25rem;
       }
     }
 
