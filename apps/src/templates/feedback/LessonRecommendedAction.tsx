@@ -1,8 +1,5 @@
-import {Button} from '@code-dot-org/component-library/button';
-import {
-  BodyTwoText,
-  BodyThreeText,
-} from '@code-dot-org/component-library/typography';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 
 import styles from './LessonFeedback.module.scss';
@@ -27,20 +24,25 @@ function LessonRecommendedAction({resource}: LessonRecommendedActionProps) {
 
   return (
     <div>
-      <BodyTwoText className={styles.strongText}>
+      <Typography className={styles.strongText} variant="body2" gutterBottom>
         Recommended action
-      </BodyTwoText>
+      </Typography>
       {resource.recommended_action && (
-        <BodyThreeText>{resource.recommended_action}</BodyThreeText>
+        <Typography variant="body3" gutterBottom>
+          {resource.recommended_action}
+        </Typography>
       )}
       {resource.resource_name && resource.resource_link && (
-        <Button
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="extraSmall"
           onClick={handleViewResource}
-          text={resource.resource_name || 'View Resource'}
-          type="primary"
-          size="xs"
-          iconLeft={{iconName: 'link'}}
-        />
+          type="button"
+          startIcon={<FontAwesomeV6Icon iconName="link" />}
+        >
+          {resource.resource_name || 'View Resource'}
+        </MuiButton>
       )}
     </div>
   );

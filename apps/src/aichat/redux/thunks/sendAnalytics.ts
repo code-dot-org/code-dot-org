@@ -1,4 +1,3 @@
-import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {RootState} from '@cdo/apps/types/redux';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -15,12 +14,12 @@ export const sendAnalytics =
     const labState = state.lab;
     const progressState = state.progress;
     const clientType = aichatState.clientType;
-    const userHasAichatAccess = aichatState.userHasAichatAccess;
+    const userHasAichatLabAccess = aichatState.userHasAichatLabAccess;
 
-    // Only check `userHasAichatAccess` for AI Chat.
+    // Only check `userHasAichatLabAccess` for AI Chat Lab.
     if (
       clientType !== AiChatClientTypes.AI_CHAT_LAB ||
-      userHasAichatAccess ||
+      userHasAichatLabAccess ||
       skipAccessCheck
     ) {
       const allProperties = {
@@ -37,6 +36,6 @@ export const sendAnalytics =
         levelPath: window.location.pathname,
       };
 
-      analyticsReporter.sendEvent(event, allProperties, PLATFORMS.STATSIG);
+      analyticsReporter.sendEvent(event, allProperties);
     }
   };

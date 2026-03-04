@@ -1,0 +1,24 @@
+name 'ai-generated-design-lesson1-level1_v3_2026'
+title 'Paper App Prototype'
+
+
+markdown <<MARKDOWN
+##Paper App Prototype Activity Guide
+
+<div>
+<img style=" float: left; width:25%; padding-top:10px" src="https://images.code.org/586ba3132676c727ae084216eb2bce03-prototype.png" />
+
+<div style="float: left; width: 70%; padding-left:20px">
+
+###Do This
+1. Open the digital Paper App Prototype Activity Guide.
+2. Complete Steps 1–4 with your partner.
+3. Complete your final one-sentence insight.
+
+
+**Here is a copy of the activity guide if you don't already have one:**  [Paper App Prototype](https://docs.google.com/document/d/1kv-nXmavQp-dQmp5prubQ8sDeduV_iJrIhLSlculVCo/edit?usp=drive_link).
+
+</div>
+
+
+MARKDOWN

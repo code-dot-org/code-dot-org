@@ -1,0 +1,14 @@
+%h1 Widget2 Library
+
+%h2 Widget2s
+- @widget2s.each do |widget2|
+  %a{href: widget2[:url]}= widget2[:id]
+  %br/
+
+%h2 New Widget2
+= form_with url: "/widget2/new", method: :post do |f|
+  .field
+    = f.label "New widget2 ID:"
+    = f.text_field :id, placeholder: "e.g. mywidget1", maxlength: 25, style: "width: 200px", pattern: "[a-z0-9_-]+", title: "Lowercase letters, numbers, underscores, and hyphens only"
+  .field
+    = f.submit "Create widget2", class: "btn"

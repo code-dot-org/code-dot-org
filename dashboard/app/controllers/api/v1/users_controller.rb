@@ -57,14 +57,10 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         under_13: current_user.under_13?,
         over_21: current_user.over_21?,
         sort_by_family_name: current_user.sort_by_family_name?,
-        show_progress_table_v2: current_user.show_progress_table_v2,
         ai_rubrics_disabled: current_user.ai_rubrics_disabled,
-        progress_table_v2_closed_beta: current_user.progress_table_v2_closed_beta?,
         ai_tutor_access_denied: !!current_user.ai_tutor_access_denied,
-        has_seen_progress_table_v2_invitation: current_user.has_seen_progress_table_v2_invitation?,
         has_seen_homepage_welcome: current_user.has_seen_homepage_welcome?,
         has_dismissed_personalization_alert: current_user.has_dismissed_personalization_alert?,
-        date_progress_table_invitation_last_delayed: current_user.date_progress_table_invitation_last_delayed,
         child_account_compliance_state: current_user.cap_status,
         country_code: helpers.country_code(current_user, request),
         us_state_code: current_user.us_state_code,
@@ -77,7 +73,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         educator_role: current_user.educator_role,
         sharing_disabled: current_user.sharing_disabled,
         is_levelbuilder: current_user.levelbuilder?,
-        ai_tutor_enabled_for_pilot: current_user.ai_tutor_enabled_for_pilot?
+        ai_chat_access_level: current_user.ai_chat_access_level,
       }
     else
       render json: {
@@ -225,26 +221,6 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     head :no_content
   end
 
-  # POST /api/v1/users/show_progress_table_v2
-  def post_show_progress_table_v2
-    return head :unauthorized unless current_user
-
-    if params[:show_progress_table_v2] != 'legacy' && params[:show_progress_table_v2] != 'v2'
-      return head :bad_request
-    end
-
-    current_user.show_progress_table_v2 = params[:show_progress_table_v2]
-
-    if params[:show_progress_table_v2] == 'v2'
-      current_user.progress_table_v2_timestamp = DateTime.now
-    else
-      current_user.progress_table_v1_timestamp = DateTime.now
-    end
-    current_user.save!
-
-    head :no_content
-  end
-
   # POST /api/v1/users/has_seen_homepage_welcome
   def post_has_seen_homepage_welcome
     return head :unauthorized unless current_user
@@ -271,34 +247,6 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     render json: {
       has_dismissed_personalization_alert: !!current_user.has_dismissed_personalization_alert
     }
-  end
-
-  # POST /api/v1/users/has_seen_progress_table_v2_invitation
-  def post_has_seen_progress_table_v2_invitation
-    return head :unauthorized unless current_user
-
-    current_user.has_seen_progress_table_v2_invitation = !!params[:has_seen_progress_table_v2_invitation].try(:to_bool)
-
-    show_v2_arg = !!params[:show_progress_table_v2].try(:to_bool)
-    current_user.show_progress_table_v2 = show_v2_arg
-
-    if show_v2_arg
-      current_user.progress_table_v2_timestamp = DateTime.now
-    end
-
-    current_user.save!
-
-    head :no_content
-  end
-
-  # POST /api/v1/users/date_progress_table_invitation_last_delayed
-  def post_date_progress_table_invitation_last_delayed
-    return head :unauthorized unless current_user
-
-    current_user.date_progress_table_invitation_last_delayed = params[:date_progress_table_invitation_last_delayed]
-    current_user.save
-
-    head :no_content
   end
 
   # POST /api/v1/users/ai_rubrics_disabled

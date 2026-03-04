@@ -4,7 +4,10 @@ import {JsonObjectSchema} from '@cdo/apps/aichat/types';
 import {DEFAULT_FOLDER_ID} from '@cdo/apps/codebridge/constants';
 import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
-import {getNextFileId} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
+import {
+  getFileExtension,
+  getNextFileId,
+} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 
 const getAnswerJsonSchema = (): JsonObjectSchema => {
   return {
@@ -258,7 +261,6 @@ export const getMergedAiTutorCodeWithSource = (
         name: aiFile.name,
         contents: aiFile.contents,
         folderId: DEFAULT_FOLDER_ID,
-        language: aiFile.name.split('.').pop() || '',
         isAiTutorVersionCreated: true,
       };
       updatedSource.files[newFileId] = aiTutorVersionFile;
@@ -272,7 +274,9 @@ export const getMergedAiTutorCodeWithSource = (
 
   // Update openFiles to prioritize AI files: active file first, then other AI files, then existing.
   if (aiTutorVersionFiles.length > 0) {
-    const firstHtmlFile = aiTutorVersionFiles.find(f => f.language === 'html');
+    const firstHtmlFile = aiTutorVersionFiles.find(
+      f => getFileExtension(f.name) === 'html'
+    );
     const fileToActivate = firstHtmlFile || aiTutorVersionFiles[0];
 
     updatedSource.files[fileToActivate.id] = {

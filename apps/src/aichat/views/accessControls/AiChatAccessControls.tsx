@@ -84,7 +84,10 @@ const AiChatAccessControls: React.FC = () => {
     );
     analyticsReporter.sendEvent(EVENTS.AI_CHAT_SECTION_ACCESS_LEVEL_UPDATED, {
       sectionId: section.id,
+      oldAccessLevel: section.aiChatAccessLevel,
       newAccessLevel: newAccessLevel,
+      courseAssigned: section.courseVersionName,
+      assignedAiAccessDependency: section.assignedAiChatToolsDependency,
       uiLocation: 'aiSettingsTeacherDashboardTab',
     });
   };
@@ -159,7 +162,7 @@ const AiChatAccessControls: React.FC = () => {
                   />
                   <InfoTooltipIcon
                     id="section-essential-ai-checkbox-info"
-                    tooltipText="The assigned course requires the use of AI tools. This option will give students access to only the AI tools needed to complete the assigned course."
+                    tooltipText="If the course you have assigned requires AI tools, this option will give students access to only the AI tools needed to complete the course."
                   />
                 </div>
               )}

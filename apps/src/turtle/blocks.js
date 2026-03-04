@@ -21,16 +21,22 @@
  * @fileoverview Demonstration of Blockly: Turtle Graphics.
  * @author fraser@google.com (Neil Fraser)
  */
-
+import CdoFieldAngleDropdown from '@cdo/apps/blockly/addons/cdoFieldAngleDropdown';
+import CdoFieldAngleTextInput from '@cdo/apps/blockly/addons/cdoFieldAngleTextInput';
+import CdoFieldColour from '@cdo/apps/blockly/addons/cdoFieldColour';
+import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
+import CdoFieldLabel from '@cdo/apps/blockly/addons/cdoFieldLabel';
 import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {
-  registerCustomProcedureBlocks,
-  numberValidator,
   interpolateMsg,
+  numberValidator,
+  registerCustomProcedureBlocks,
 } from '@cdo/apps/blockly/utils';
 import commonMsg from '@cdo/locale';
 
 import {setAngleHelperOptions} from '../blockly/addons/cdoAngleHelperOptions';
+import CdoFieldImage from '../blockly/addons/cdoFieldImage';
+import {CdoFieldImageDropdown} from '../blockly/addons/cdoFieldImageDropdown';
 import {Position} from '../constants';
 
 import Colours from './colours';
@@ -97,7 +103,7 @@ exports.install = function (blockly, blockInstallOptions) {
 
   if (skin.id === 'anna' || skin.id === 'elsa') {
     // Create a smaller palette.
-    blockly.FieldColour.COLOURS = [
+    CdoFieldColour.COLOURS = [
       Colours.FROZEN1,
       Colours.FROZEN2,
       Colours.FROZEN3,
@@ -108,10 +114,10 @@ exports.install = function (blockly, blockInstallOptions) {
       Colours.FROZEN8,
       Colours.FROZEN9,
     ];
-    blockly.FieldColour.COLUMNS = 3;
+    CdoFieldColour.COLUMNS = 3;
   } else {
     // Create a smaller palette.
-    blockly.FieldColour.COLOURS = [
+    CdoFieldColour.COLOURS = [
       // Row 1.
       Colours.BLACK,
       Colours.GREY,
@@ -128,7 +134,7 @@ exports.install = function (blockly, blockInstallOptions) {
       Colours.AQUAMARINE,
       Colours.PLUM,
     ];
-    blockly.FieldColour.COLUMNS = 4;
+    CdoFieldColour.COLUMNS = 4;
   }
 
   // Block definitions.
@@ -138,7 +144,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(MOVE_BY_DIRECTION_VALUES),
+        new CdoFieldDropdown(MOVE_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
@@ -160,11 +166,11 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(MOVE_BY_DIRECTION_VALUES),
+        new CdoFieldDropdown(MOVE_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
-        .appendField(new blockly.FieldDropdown(), 'VALUE')
+        .appendField(new CdoFieldDropdown(), 'VALUE')
         .appendField(msg.dots());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -195,12 +201,12 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(TURN_BY_DIRECTION_VALUES),
+        new CdoFieldDropdown(TURN_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
         .appendField(
-          new blockly.FieldAngleDropdown({
+          new CdoFieldAngleDropdown({
             directionTitleName: 'DIR',
             menuGenerator: this.VALUE,
           }),
@@ -241,12 +247,12 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(TURN_BY_DIRECTION_VALUES),
+        new CdoFieldDropdown(TURN_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
         .appendField(
-          new blockly.FieldAngleTextInput('90', {
+          new CdoFieldAngleTextInput('90', {
             directionTitle: 'DIR',
           }),
           'VALUE'
@@ -265,12 +271,12 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(TURN_BY_DIRECTION_VALUES),
+        new CdoFieldDropdown(TURN_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
         .appendField(
-          new blockly.FieldAngleDropdown({
+          new CdoFieldAngleDropdown({
             directionTitleName: 'DIR',
           }),
           'VALUE'
@@ -319,12 +325,12 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(TURN_BY_DIRECTION_VALUES),
+        new CdoFieldDropdown(TURN_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
         .appendField(
-          new blockly.FieldAngleDropdown({
+          new CdoFieldAngleDropdown({
             directionTitleName: 'DIR',
             menuGenerator: this.VALUE,
           }),
@@ -365,12 +371,12 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(TURN_BY_DIRECTION_VALUES),
+        new CdoFieldDropdown(TURN_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
         .appendField(
-          new blockly.FieldAngleTextInput('90', {
+          new CdoFieldAngleTextInput('90', {
             directionTitle: 'DIR',
           }),
           'VALUE'
@@ -405,7 +411,7 @@ exports.install = function (blockly, blockInstallOptions) {
     block
       .appendDummyInput()
       .appendField(
-        new blockly.FieldAngleTextInput('0', {
+        new CdoFieldAngleTextInput('0', {
           direction: 'turnRight',
         }),
         'DIRECTION'
@@ -444,7 +450,7 @@ exports.install = function (blockly, blockInstallOptions) {
       block
         .appendDummyInput()
         .appendField(
-          new blockly.FieldAngleDropdown({
+          new CdoFieldAngleDropdown({
             direction: 'turnRight',
             menuGenerator: block.VALUE,
           }),
@@ -487,7 +493,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setStyle(BlockStyles.VARIABLE);
       this.appendDummyInput()
         .appendField(blockly.Msg.VARIABLES_GET_TITLE)
-        .appendField(new blockly.FieldLabel(msg.loopVariable()), 'VAR');
+        .appendField(new CdoFieldLabel(msg.loopVariable()), 'VAR');
       this.setOutput(true);
       this.setTooltip(blockly.Msg.VARIABLES_GET_TOOLTIP);
     },
@@ -507,7 +513,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setStyle(BlockStyles.VARIABLE);
       this.appendDummyInput()
         .appendField(blockly.Msg.VARIABLES_GET_TITLE)
-        .appendField(new blockly.FieldLabel(msg.lengthParameter()), 'VAR');
+        .appendField(new CdoFieldLabel(msg.lengthParameter()), 'VAR');
       this.setOutput(true);
       this.setTooltip(blockly.Msg.VARIABLES_GET_TOOLTIP);
     },
@@ -525,7 +531,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setStyle(BlockStyles.VARIABLE);
       this.appendDummyInput()
         .appendField(blockly.Msg.VARIABLES_GET_TITLE)
-        .appendField(new blockly.FieldLabel('sides'), 'VAR');
+        .appendField(new CdoFieldLabel('sides'), 'VAR');
       this.setOutput(true);
       this.setTooltip(blockly.Msg.VARIABLES_GET_TOOLTIP);
     },
@@ -654,7 +660,7 @@ exports.install = function (blockly, blockInstallOptions) {
         .appendField(
           blockly.Msg.CONTROLS_FOR_INPUT_WITH || msg.controlsForInputWith()
         )
-        .appendField(new blockly.FieldLabel(msg.loopVariable()), 'VAR');
+        .appendField(new CdoFieldLabel(msg.loopVariable()), 'VAR');
       interpolateMsg(
         this,
         blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY ||
@@ -710,7 +716,7 @@ exports.install = function (blockly, blockInstallOptions) {
         msg.moveDirectionByPixels(),
         () => {
           this.appendDummyInput().appendField(
-            new blockly.FieldDropdown(DIRECTION_VALUES),
+            new CdoFieldDropdown(DIRECTION_VALUES),
             'DIR'
           );
         },
@@ -749,7 +755,7 @@ exports.install = function (blockly, blockInstallOptions) {
         msg.jumpByDirection(),
         () => {
           this.appendDummyInput().appendField(
-            new blockly.FieldDropdown(JUMP_DIRECTION_VALUES),
+            new CdoFieldDropdown(JUMP_DIRECTION_VALUES),
             'DIR'
           );
         },
@@ -971,27 +977,27 @@ exports.install = function (blockly, blockInstallOptions) {
             input.appendField(commonMsg.jump());
           }
           input.appendField(
-            new blockly.FieldLabel(directionConfig.title, {
+            new CdoFieldLabel(directionConfig.title, {
               fixedSize: {width: directionLetterWidth, height: 18},
             })
           );
 
           if (directionConfig.imageDimensions) {
             input.appendField(
-              new blockly.FieldImage(
+              new CdoFieldImage(
                 directionConfig.image,
                 directionConfig.imageDimensions.width,
                 directionConfig.imageDimensions.height
               )
             );
           } else {
-            input.appendField(new blockly.FieldImage(directionConfig.image));
+            input.appendField(new CdoFieldImage(directionConfig.image));
           }
           this.setPreviousStatement(true);
           this.setNextStatement(true);
           this.setTooltip(directionConfig.tooltip);
           if (hasLengthInput) {
-            var dropdown = new blockly.FieldImageDropdown(
+            var dropdown = new CdoFieldImageDropdown(
               directionConfig.lengths,
               directionConfig.imageDimensions.width,
               directionConfig.imageDimensions.height
@@ -1048,7 +1054,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(JUMP_BY_DIRECTION_VALUES),
+        new CdoFieldDropdown(JUMP_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
@@ -1071,11 +1077,11 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(JUMP_BY_DIRECTION_VALUES),
+        new CdoFieldDropdown(JUMP_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
-        .appendField(new blockly.FieldDropdown(), 'VALUE')
+        .appendField(new CdoFieldDropdown(), 'VALUE')
         .appendField(msg.dots());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -1104,7 +1110,7 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for jumping to a specified position
     helpUrl: '',
     init: function () {
-      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      var dropdown = new CdoFieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]); // default to top-left
       this.setStyle(BlockStyles.DEFAULT);
       interpolateMsg(
@@ -1180,7 +1186,7 @@ exports.install = function (blockly, blockInstallOptions) {
         msg.turnDirection(),
         () => {
           this.appendDummyInput().appendField(
-            new blockly.FieldDropdown(TURN_DIRECTION_VALUES),
+            new CdoFieldDropdown(TURN_DIRECTION_VALUES),
             'DIR'
           );
         },
@@ -1268,7 +1274,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.STATE),
+        new CdoFieldDropdown(this.STATE),
         'PEN'
       );
       this.setPreviousStatement(true);
@@ -1352,7 +1358,7 @@ exports.install = function (blockly, blockInstallOptions) {
       ];
       this.setStyle(BlockStyles.LOGIC);
       // 3-column colour field with an increased height/width for menu options and the field itself.
-      const colourField = new Blockly.FieldColour(
+      const colourField = new CdoFieldColour(
         colours[0],
         undefined,
         {colourOptions: colours, columns: 3},
@@ -1384,7 +1390,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendDummyInput()
         .appendField(msg.setPattern())
         .appendField(
-          new blockly.FieldImageDropdown(skin.lineStylePatternOptions, 150, 20),
+          new CdoFieldImageDropdown(skin.lineStylePatternOptions, 150, 20),
           'VALUE'
         );
       this.setTooltip(msg.setPattern());
@@ -1406,7 +1412,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.STATE),
+        new CdoFieldDropdown(this.STATE),
         'VISIBILITY'
       );
       this.setTooltip(msg.turtleVisibilityTooltip());
@@ -1429,7 +1435,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.STATE),
+        new CdoFieldDropdown(this.STATE),
         'VISIBILITY'
       );
       this.setTooltip(msg.turtleVisibilityTooltip());
@@ -1470,7 +1476,7 @@ exports.install = function (blockly, blockInstallOptions) {
           var url = skin.stickers[name];
           values.push([url, name]);
         }
-        dropdown = new blockly.FieldImageDropdown(values, 40, 40);
+        dropdown = new CdoFieldImageDropdown(values, 40, 40);
 
         input.appendField(dropdown, 'VALUE');
 
@@ -1558,7 +1564,7 @@ exports.install = function (blockly, blockInstallOptions) {
           var url = skin[shapeNames][name];
           values.push([url, name]);
         }
-        dropdown = new blockly.FieldImageDropdown(values, 40, 40);
+        dropdown = new CdoFieldImageDropdown(values, 40, 40);
 
         input.appendField(dropdown, 'VALUE');
 
@@ -1647,7 +1653,7 @@ exports.install = function (blockly, blockInstallOptions) {
         artist,
       ]);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(values),
+        new CdoFieldDropdown(values),
         'VALUE'
       );
       this.setPreviousStatement(true);

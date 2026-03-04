@@ -5,9 +5,9 @@ import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useState, useCallback, useRef} from 'react';
 
+import {shouldShowAiTutor} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
-import {shouldShowAiTutor} from '@cdo/apps/aiTutor/helpers/shouldShowAiTutor';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
 import lab2I18n from '@cdo/apps/lab2/locale';
@@ -133,7 +133,7 @@ type ResourcePanelProps = InstructionsProps & {
   styleNavigationAsBubble?: boolean;
   isValidationTourEnabled?: boolean;
   isOnboardingTourEnabled?: boolean;
-  aiTutorSystemPromptName?: string;
+  aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   documentationUrl?: string;
   /** Only display the sidebar and hide all tabs. */
@@ -165,7 +165,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   styleNavigationAsBubble = false,
   isValidationTourEnabled,
   isOnboardingTourEnabled,
-  aiTutorSystemPromptName,
+  aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
   documentationUrl,
   sidebarOnly = false,
@@ -184,9 +184,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const floatingPanelRef = useRef<HTMLDivElement | null>(null);
   const tabContentRefs = useRef<{[key in Tabs]?: HTMLDivElement | null}>({});
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
-  const aiTutorEnabledForPilot = useAppSelector(
-    state => state.currentUser.aiTutorEnabledForPilot
-  );
   const [selectedVersion, setSelectedVersion] = useState<string>('');
   const isViewingOldVersion = useAppSelector(
     state => state.lab2Project.viewingOldVersion
@@ -222,11 +219,14 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const isTemporarilyReadOnly = !isPermanentlyReadOnly && isReadOnly;
 
   const levelProperties = instructionsProps.levelProperties;
+  const aiChatAccessLevel = useAppSelector(
+    state => state.currentUser.aiChatAccessLevel
+  );
   const aiTutorVisible =
     shouldShowAiTutor({
       appName,
-      tutorPilot: aiTutorEnabledForPilot,
       tutorLevel: levelProperties.aiTutorAvailable,
+      aiChatAccessLevel: aiChatAccessLevel,
     }) ||
     queryParams('show-ai-tutor2') === 'true' ||
     queryParams('show-ai-tutor') === 'true';
@@ -266,7 +266,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             levelName={levelName}
             channelId={channelId}
             aiTutorChatButtonData={aiTutorChatButtonData}
-            aiTutorSystemPromptName={aiTutorSystemPromptName}
+            aiTutorSystemPrompt={aiTutorSystemPrompt}
             aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
           />
         );
@@ -278,7 +278,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             levelName={levelName}
             channelId={channelId}
             aiTutorChatButtonData={aiTutorChatButtonData}
-            aiTutorSystemPromptName={aiTutorSystemPromptName}
+            aiTutorSystemPrompt={aiTutorSystemPrompt}
             aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
             instructionsContent={instructionsContent}
             isCollapsedByDefault={!!viewAsUserId}
@@ -359,7 +359,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     levelName,
     channelId,
     aiTutorChatButtonData,
-    aiTutorSystemPromptName,
+    aiTutorSystemPrompt,
     aiTutorResponseSchemaSettings,
     selectedVersion,
     levelId,
@@ -377,6 +377,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     return Object.keys(availableTabs).length > 0;
   }, [availableTabs]);
 
+  const hasOnlyVersionHistoryTab = useMemo(() => {
+    return (
+      Object.keys(availableTabs).length === 1 &&
+      availableTabs[Tabs.VersionHistory] !== undefined
+    );
+  }, [availableTabs]);
+
   const floatingSettingsPanelStyles = usePanelPosition(
     isFloatingSettingsOpen,
     hasTabs,
@@ -386,12 +393,17 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
 
   useEffect(() => {
     // Auto-collapse on initial mount if on a standalone project and there are no available tabs.
+    // Also auto-collapse if the only available tab is version history.
     // Only run this once to allow user to toggle the panel.
-    if (!hasAutoCollapsedNoTabs.current && isProjectLevel && !hasTabs) {
+    if (
+      !hasAutoCollapsedNoTabs.current &&
+      isProjectLevel &&
+      (!hasTabs || hasOnlyVersionHistoryTab)
+    ) {
       dispatch(setIsStandaloneCollapsed(true));
       hasAutoCollapsedNoTabs.current = true;
     }
-  }, [isProjectLevel, hasTabs, dispatch]);
+  }, [isProjectLevel, hasTabs, dispatch, hasOnlyVersionHistoryTab]);
 
   useEffect(() => {
     if (currentTab === undefined && Object.keys(availableTabs).length > 0) {

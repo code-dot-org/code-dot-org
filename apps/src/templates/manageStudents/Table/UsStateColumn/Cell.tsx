@@ -1,7 +1,7 @@
 import React, {useCallback} from 'react';
 
 import {STATE_CODES} from '@cdo/apps/geographyConstants';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {editStudent} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
@@ -24,18 +24,14 @@ const Cell: React.FC<CellProps> = ({
 
       dispatch(editStudent(studentId, {usState: selectedUsState}));
 
-      analyticsReporter.sendEvent(
-        EVENTS.SECTION_STUDENTS_TABLE_US_STATE_SET,
-        {
-          studentId: studentId || null,
-          sectionId: section.id,
-          sectionLoginType: section.loginType,
-          teacherUsState: currentUser?.usStateCode,
-          originalUsState: value,
-          selectedUsState,
-        },
-        PLATFORMS.STATSIG
-      );
+      analyticsReporter.sendEvent(EVENTS.SECTION_STUDENTS_TABLE_US_STATE_SET, {
+        studentId: studentId || null,
+        sectionId: section.id,
+        sectionLoginType: section.loginType,
+        teacherUsState: currentUser?.usStateCode,
+        originalUsState: value,
+        selectedUsState,
+      });
     },
     [
       currentUser?.usStateCode,

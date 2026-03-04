@@ -58,3 +58,21 @@
   box-shadow: 0 2px 3px 0 rgb(0 0 0 / 0.05);
   transform: translateX(-50%);
 }
+
+.resizeBar {
+  position: relative;
+}
+.resizeBarDragging {
+  position: relative;
+}
+// When the resize bar is hovered or being dragged, bring it above the toggle button for easier visibility and dragging.
+.container:has(.resizeBar:hover),
+.container:has(.resizeBar.resizeBarDragging) {
+  .toggleButtonContainer {
+    z-index: 2;
+  }
+
+  .resizeBar {
+    z-index: 11;
+  }
+}

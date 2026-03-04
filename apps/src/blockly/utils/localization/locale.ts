@@ -1,5 +1,4 @@
-import * as BlockUtils from '@cdo/apps/block_utils';
-import {ExtendedWorkspaceSvg} from '@cdo/apps/blockly/types';
+import {BlockDefinition, ExtendedWorkspaceSvg} from '@cdo/apps/blockly/types';
 import localization from '@cdo/apps/localization';
 
 import {refreshWorkspace} from '../workspace/refresh';
@@ -8,8 +7,13 @@ import {localizeVariables} from './variables';
 
 /**
  * Updates the locale and localization strings for all workspaces.
+ * This should be used in conjunction with getBlockDefinitionsForUpdatedLocale
+ * after updated block definitions have been installed.
+ * (Formerly these were a single function called updateLocale.)
  */
-export function updateLocale(rtl: boolean) {
+export function getBlockDefinitionsForUpdatedLocale(
+  rtl: boolean
+): BlockDefinition[] {
   // Call into our localization engine to get the new blocks and refresh all active
   // workspaces.
 
@@ -61,16 +65,13 @@ export function updateLocale(rtl: boolean) {
     };
   }
 
-  const blockDefinitions = Object.values(
-    Blockly.SourceCustomBlocks.blockDefinitionsByName
-  );
+  return Object.values(Blockly.SourceCustomBlocks.blockDefinitionsByName);
+}
 
-  BlockUtils.installCustomBlocks({
-    blockly: Blockly,
-    blockDefinitions,
-    customInputTypes: Blockly.SourceCustomInputTypes,
-  });
-
+/**
+ * Refreshes all workspaces and re-localizes all variables in the workspace.
+ */
+export function refreshWorkspacesForUpdatedLocale(rtl: boolean) {
   const mainWorkspace = Blockly.getMainWorkspace();
   if (mainWorkspace) {
     mainWorkspace.RTL = rtl;

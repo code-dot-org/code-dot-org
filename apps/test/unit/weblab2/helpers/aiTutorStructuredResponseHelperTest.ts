@@ -21,7 +21,6 @@ const createProjectFile = (
 ): ProjectFile => ({
   id,
   name,
-  language: name.split('.').pop() || '',
   contents,
   folderId,
   active,
@@ -385,8 +384,8 @@ describe('getMergedAiTutorCodeWithSource', () => {
     });
   });
 
-  describe('file language detection', () => {
-    it('sets language based on file extension', () => {
+  describe('file name preservation', () => {
+    it('preserves file names for new files', () => {
       const source = createSource();
       const aiCode = [
         createAiCodeFile('index.html', '<html></html>'),
@@ -401,9 +400,9 @@ describe('getMergedAiTutorCodeWithSource', () => {
         aiTutorVersionFiles
       );
 
-      expect(result.files['1'].language).toBe('html');
-      expect(result.files['2'].language).toBe('css');
-      expect(result.files['3'].language).toBe('js');
+      expect(result.files['1'].name).toBe('index.html');
+      expect(result.files['2'].name).toBe('style.css');
+      expect(result.files['3'].name).toBe('script.js');
     });
   });
 });
