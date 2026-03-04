@@ -38,7 +38,6 @@ const InnerHTMLPreview = () => {
   const [renderKey, setRenderKey] = useState(0);
   const [allowScripts, setAllowScripts] = useState(false);
   const [isLevelLoading, setIsLevelLoading] = useState(false);
-  const [currentFileNotFound, setCurrentFileNotFound] = useState(false);
 
   const parentOrigin = useMemo(() => {
     const regex = /[^.]+\.preview\.([^.]+)\.codeprojects\.org/;
@@ -51,7 +50,7 @@ const InnerHTMLPreview = () => {
   }, []);
 
   const {serviceWorkerRegistration, serviceWorkerUnavailable} =
-    useProjectServiceWorker(source, parentOrigin, parameters);
+    useProjectServiceWorker(source, parentOrigin, allowScripts, parameters);
 
   const handleMessage = useCallback(
     (event: MessageEvent) => {
@@ -184,12 +183,10 @@ const InnerHTMLPreview = () => {
     }
     let cancelled = false;
     setSwWarmedUp(false);
-    setCurrentFileNotFound(false);
     fetch(`${window.location.origin}/${currentFile}`)
       .then(response => {
         if (response.status === 404) {
-          console.warn('got 404!');
-          setCurrentFileNotFound(true);
+          console.warn('SW warmup fetch got 404');
         } else {
           console.log('SW warmup fetch succeeded');
         }
@@ -211,9 +208,7 @@ const InnerHTMLPreview = () => {
       return (
         <iframe
           ref={iframeRef}
-          sandbox={`${
-            allowScripts || currentFileNotFound ? 'allow-scripts ' : ''
-          }allow-same-origin allow-forms`}
+          sandbox="allow-scripts allow-same-origin allow-forms"
           allow="self"
           title="Inner HTML Preview"
           id="inner-preview"
@@ -243,8 +238,6 @@ const InnerHTMLPreview = () => {
     currentFile,
     isLevelLoading,
     serviceWorkerUnavailable,
-    allowScripts,
-    currentFileNotFound,
     renderKey,
   ]);
 

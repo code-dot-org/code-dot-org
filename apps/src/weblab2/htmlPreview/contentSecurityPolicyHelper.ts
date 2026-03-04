@@ -8,7 +8,10 @@ import {
 // This is copied from codeprojects_preview_controller.rb to enable setting a content security policy
 // on the frontend. Explanation of the policy can be found there. Any changes here should be mirrored there.
 // We don't include the websocket URL here as it's not needed when serving student code in the iframe.
-export function generateContentSecurityPolicyForPreview(codeStudioUrl: string) {
+export function generateContentSecurityPolicyForPreview(
+  codeStudioUrl: string,
+  scriptsAllowed: boolean
+) {
   const previewUrl = location.origin;
   const prefix = 'http://';
   const allowedConnectSrc = AllowedHostnameSuffixes.map(
@@ -31,7 +34,9 @@ export function generateContentSecurityPolicyForPreview(codeStudioUrl: string) {
   const style_src_inline = "'unsafe-inline'";
   const img_src = `'self' blob: ${codeStudioUrl} ${allowedImageSrc} https://studio.code.org/lab_resources/html-placeholder-image.avif`;
   const frame_ancestors = `${codeStudioUrl} 'self' ${previewUrl}`;
-  const script_src = `${script_src_base} ${script_src_eval} ${script_src_inline}`;
+  const script_src = scriptsAllowed
+    ? `${script_src_base} ${script_src_eval} ${script_src_inline}`
+    : "'none'";
   const style_src = `${style_src_base} ${style_src_inline}`;
   const font_src = `'self' ${allowedFontSrc}`;
 
