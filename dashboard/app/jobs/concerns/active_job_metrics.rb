@@ -173,7 +173,7 @@ module ActiveJobMetrics
           dimensions: dimensions,
         },
         {
-          metric_name: 'IdleWorkersPercent',
+          metric_name: 'PercentWorkersIdle',
           value: current_worker_count > 0 ? ((current_worker_count - current_running_jobs_count) / current_worker_count.to_f) * 100 : 0,
           unit: 'Percent',
           timestamp: Time.now,

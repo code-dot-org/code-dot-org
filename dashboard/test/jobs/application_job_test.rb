@@ -96,10 +96,10 @@ class ApplicationJobTest < ActiveJob::TestCase
     Cdo::Metrics.expects(:push).with(
       ApplicationJob::METRICS_NAMESPACE,
       all_of(
-        includes_metrics(WorkerCount: 4, RunningJobCount: @expected_running_count, IdleWorkersPercent: 50.0),
+        includes_metrics(WorkerCount: 4, RunningJobCount: @expected_running_count, PercentWorkersIdle: 50.0),
         includes_dimensions(:WorkerCount, Environment: CDO.rack_env),
         includes_dimensions(:RunningJobCount, Environment: CDO.rack_env),
-        includes_dimensions(:IdleWorkersPercent, Environment: CDO.rack_env)
+        includes_dimensions(:PercentWorkersIdle, Environment: CDO.rack_env)
       )
     )
 
@@ -112,7 +112,7 @@ class ApplicationJobTest < ActiveJob::TestCase
 
       running_metric = metrics.find {|m| m[:metric_name] == 'RunningJobCount'}
       worker_metric = metrics.find {|m| m[:metric_name] == 'WorkerCount'}
-      idle_workers_percent_metric = metrics.find {|m| m[:metric_name] == 'IdleWorkersPercent'}
+      idle_workers_percent_metric = metrics.find {|m| m[:metric_name] == 'PercentWorkersIdle'}
 
       assert_equal @expected_my_running_count, running_metric[:value]
       assert_nil worker_metric
