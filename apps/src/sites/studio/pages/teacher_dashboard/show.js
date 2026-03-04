@@ -8,6 +8,7 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import progressRedux from '@cdo/apps/code-studio/progressRedux';
 import verifiedInstructor from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import viewAs from '@cdo/apps/code-studio/viewAsRedux';
+import {startMockServiceWorker} from '@cdo/apps/demoMode/browser';
 import {FlashHandler} from '@cdo/apps/flashes/FlashHandler';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
@@ -20,9 +21,9 @@ import currentUser, {
 import manageStudents from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgressV2/sectionProgressRedux';
-import TeacherHomepage from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/TeacherHomepage';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import teacherSections, {
+  asyncLoadSectionData,
   setAuthProviders,
   selectSection,
   setSections,
@@ -48,7 +49,8 @@ const {
   flash,
 } = scriptData;
 
-$(document).ready(function () {
+$(document).ready(async function () {
+  await startMockServiceWorker();
   registerReducers({
     teacherSections,
     manageStudents,
@@ -89,17 +91,13 @@ $(document).ready(function () {
     store.dispatch(selectSection(selectedSection.id));
 
     setSelectedSectionData(selectedSection);
+  } else {
+    await store.dispatch(asyncLoadSectionData(undefined, undefined, true));
   }
 
   createReactRoot(
     <Provider store={store}>
-      {sections.length === 0 ? (
-        // If a teacher has no sections, we will send them directly to the homepage to bypass
-        // all of the section loading logic in the TeacherNavigationRouter.
-        <TeacherHomepage studioUrlPrefix={scriptData.studioUrlPrefix} />
-      ) : (
-        <TeacherNavigationRouter studioUrlPrefix={scriptData.studioUrlPrefix} />
-      )}
+      <TeacherNavigationRouter studioUrlPrefix={scriptData.studioUrlPrefix} />
       <FlashHandler flash={flash} autoHideDuration={FLASH_DURATION} />
     </Provider>,
     document.getElementById('teacher-dashboard')

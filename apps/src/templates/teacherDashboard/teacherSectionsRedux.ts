@@ -873,16 +873,27 @@ export const asyncLoadTeacherHomepageSectionData =
   };
 
 export const asyncLoadSectionData =
-  (id: number | void, destructive: boolean | void): SectionThunkAction =>
+  (
+    id: number | void,
+    destructive: boolean | void,
+    setSelectedSection: boolean | void
+  ): SectionThunkAction =>
   dispatch => {
     dispatch(beginAsyncLoad());
 
     const promises: Promise<object>[] = [
-      fetchJSON('/dashboardapi/sections').then(sections =>
-        dispatch(
+      fetchJSON('/dashboardapi/sections').then(sections => {
+        const response = dispatch(
           setSections(sections as ServerSection[], false, null, destructive)
-        )
-      ),
+        );
+        if (setSelectedSection) {
+          const sectionId = id || (sections as ServerSection[])[0]?.id;
+          if (sectionId) {
+            dispatch(selectSection(sectionId));
+          }
+        }
+        return response;
+      }),
       fetchJSON('/dashboardapi/sections/valid_course_offerings').then(
         offerings =>
           dispatch(setCourseOfferings(offerings as CourseOfferingSet))

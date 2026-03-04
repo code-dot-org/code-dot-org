@@ -151,6 +151,7 @@
     "magicast": "^0.3.3",
     "mocha": "^10.6.0",
     "mock-firmata": "0.2.0",
+    "msw": "^2.12.10",
     "prettier": "2.8.7",
     "process": "^0.11.10",
     "progress-bar-webpack-plugin": "^2.1.0",
@@ -403,5 +404,10 @@
     "zod": "^4.3.6",
     "zod-to-json-schema": "^3.25.1"
   },
-  "packageManager": "yarn@4.12.0"
+  "packageManager": "yarn@4.12.0",
+  "msw": {
+    "workerDirectory": [
+      "../dashboard/public"
+    ]
+  }
 }
