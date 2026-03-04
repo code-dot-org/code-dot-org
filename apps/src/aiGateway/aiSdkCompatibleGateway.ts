@@ -1,19 +1,18 @@
-import {generateText, type GenerateTextResult} from 'ai';
+import type {generateText as aiGenerateText, GenerateTextResult} from 'ai';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-type SDKOptions = Parameters<typeof generateText>[0];
-type SDKTools = NonNullable<SDKOptions['tools']>;
+type SDKOptions = Parameters<typeof aiGenerateText>[0];
 type SDKOutput = NonNullable<SDKOptions['output']>;
 
-type GenerateGatewayOptions = SDKOptions & {
-  token?: string;
+type GatewayOptions = Omit<SDKOptions, 'model'> & {
+  model: string;
 };
 
-type SerializableAIResponse<
-  TOOLS extends SDKTools = SDKTools,
-  OUTPUT extends SDKOutput = SDKOutput
-> = Omit<GenerateTextResult<TOOLS, OUTPUT>, 'text' | 'files'> & {
+type SerializableAIResponse<OUTPUT extends SDKOutput = SDKOutput> = Omit<
+  GenerateTextResult<Record<string, never>, OUTPUT>,
+  'text' | 'files'
+> & {
   text?: string;
   files?: {mediaType: string; base64: string}[];
 };
@@ -25,39 +24,32 @@ const base64ToUint8Array = (base64: string): Uint8Array => {
   return Uint8Array.from(binaryString, char => char.charCodeAt(0));
 };
 
-// Make the serializer ASYNC to unwrap the SDK's hidden Promise.
+// Output.object() internally wraps the JSON Schema in a Promise, so we must
+// await it before serializing for JSON transport to the gateway.
 const serializeOutputSchema = async (output?: SDKOptions['output']) => {
   if (!output) return output;
 
-  // Use unknown narrowing to safely access internal SDK properties.
   const safeOutput = output as unknown as Record<string, unknown>;
-
-  if (
-    typeof safeOutput === 'object' &&
-    safeOutput !== null &&
-    'responseFormat' in safeOutput
-  ) {
-    // Await the internal SDK Promise to get the pre-compiled JSON schema!
+  if ('responseFormat' in safeOutput) {
     const format = await (safeOutput.responseFormat as Promise<{
       schema?: Record<string, unknown>;
     }>);
-
     return {
-      type: safeOutput.name as string, // e.g., 'object', 'array', 'json'.
-      schema: format?.schema, // The fully compiled JSON Schema.
+      type: safeOutput.name as string,
+      schema: format?.schema,
     };
   }
 
   return output;
 };
 
-const rehydrateAIResponse = <TOOLS extends SDKTools, OUTPUT extends SDKOutput>(
-  serialized: SerializableAIResponse<TOOLS, OUTPUT>
-): GenerateTextResult<TOOLS, OUTPUT> => {
+const rehydrateAIResponse = <OUTPUT extends SDKOutput>(
+  serialized: SerializableAIResponse<OUTPUT>
+): GenerateTextResult<Record<string, never>, OUTPUT> => {
   return {
     ...serialized,
-    toolCalls: serialized.toolCalls ?? [],
-    toolResults: serialized.toolResults ?? [],
+    toolCalls: [],
+    toolResults: [],
     warnings: serialized.warnings ?? [],
 
     get text() {
@@ -74,52 +66,26 @@ const rehydrateAIResponse = <TOOLS extends SDKTools, OUTPUT extends SDKOutput>(
       base64: file.base64,
       uint8Array: base64ToUint8Array(file.base64),
     })),
-  } as GenerateTextResult<TOOLS, OUTPUT>;
+  } as GenerateTextResult<Record<string, never>, OUTPUT>;
 };
 
-const generateTextThroughGateway = async <
-  TOOLS extends SDKTools = SDKTools,
-  OUTPUT extends SDKOutput = SDKOutput
->(
-  options: GenerateGatewayOptions
-): Promise<GenerateTextResult<TOOLS, OUTPUT>> => {
+export const generateText = async <OUTPUT extends SDKOutput = SDKOutput>(
+  options: GatewayOptions
+): Promise<GenerateTextResult<Record<string, never>, OUTPUT>> => {
   try {
     const {model, ...restOptions} = options;
-
-    let modelString: string;
-
-    if (typeof model === 'string') {
-      modelString = model;
-    } else {
-      const safeModel = model as unknown as Record<string, unknown>;
-      if (
-        safeModel !== null &&
-        typeof safeModel === 'object' &&
-        typeof safeModel.modelId === 'string'
-      ) {
-        modelString = safeModel.modelId;
-      } else {
-        throw new Error('Invalid model provided to Gateway.');
-      }
-    }
-
     const serializedOutput = await serializeOutputSchema(options.output);
+
+    const {
+      value: {token},
+    } = await HttpClient.fetchJson<{token: string}>('/ai_gateway/access_token');
 
     const payload = {
       ...restOptions,
-      model: modelString,
+      model,
       output: serializedOutput,
-      token: '', // Placeholder to be filled after token fetch
+      token,
     };
-
-    const tokenResponse = await HttpClient.get(
-      '/ai_gateway/access_token',
-      true,
-      {'Content-Type': 'application/json; charset=UTF-8'}
-    );
-
-    const {token} = await (tokenResponse.json() as Promise<{token: string}>);
-    payload.token = token;
 
     const response = await fetch(AI_GATEWAY_URL, {
       method: 'POST',
@@ -132,14 +98,12 @@ const generateTextThroughGateway = async <
     }
 
     const data = await (response.json() as Promise<
-      SerializableAIResponse<TOOLS, OUTPUT>
+      SerializableAIResponse<OUTPUT>
     >);
 
-    return rehydrateAIResponse<TOOLS, OUTPUT>(data);
+    return rehydrateAIResponse<OUTPUT>(data);
   } catch (error) {
     console.error('Fetch error:', error);
     throw error;
   }
 };
-
-export {generateTextThroughGateway as generateText};
