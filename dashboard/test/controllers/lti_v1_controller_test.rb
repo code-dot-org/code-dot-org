@@ -791,6 +791,24 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
         assert_match expected_nrps_response_error_2, @response.body
       end
     end
+
+    context 'when caller is not authorized to sync the course' do
+      let(:other_user) {create(:teacher, :with_lti_auth)} # valid LTI user but not associated with the course being synced
+
+      it 'returns unauthorized' do
+        sign_in other_user
+        sync_course
+        assert_response :forbidden
+      end
+
+      it 'does not attempt to call NRPS or sync' do
+        sign_in other_user
+        Clients::LtiAdvantageClient.any_instance.expects(:get_context_membership).never
+        Services::Lti.expects(:parse_nrps_response).never
+        Services::Lti.expects(:sync_course_roster).never
+        sync_course
+      end
+    end
   end
 
   test 'sync - should be able to sync from a section code' do
