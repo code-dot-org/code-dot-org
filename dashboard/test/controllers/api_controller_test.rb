@@ -1571,7 +1571,7 @@ class ApiControllerTest < ActionController::TestCase
 
   test 'import_google_classroom is Forbidden when section exists and current user is not an instructor' do
     mock_service = mock('Google::Apis::ClassroomV1::ClassroomService')
-    course_id = 'existing-google-course-id'
+    course_id = Random.hex(10)
 
     ApiController.any_instance.stubs(:query_google_classroom_service).yields(mock_service)
     mock_service.expects(:list_course_students).never
