@@ -633,7 +633,11 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     let(:params) {{lti_integration_id: integration.id, deployment_id: lti_deployment.id, context_id: lti_course.context_id, rlid: lti_course.resource_link_id, nrps_url: lti_course.nrps_url}}
     let(:user) {create(:teacher, :with_lti_auth)}
     let(:integration) {user.lti_user_identities.first.lti_integration}
-    let(:lti_deployment) {create(:lti_deployment, lti_integration: integration)}
+    let(:lti_deployment) do
+      create(:lti_deployment, lti_integration: integration).tap do |deployment|
+        user.lti_user_identities.first.lti_deployments << deployment
+      end
+    end
     let(:lti_course) {create(:lti_course, lti_integration: integration, context_id: SecureRandom.alphanumeric(10), resource_link_id: SecureRandom.alphanumeric(10), nrps_url: 'https://example.com/nrps')}
     let(:issuer_accepts_resource_link) {true}
 
@@ -792,8 +796,8 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
       end
     end
 
-    context 'when caller is not authorized to sync the course' do
-      let(:other_user) {create(:teacher, :with_lti_auth)} # valid LTI user but not associated with the course being synced
+    context 'when caller is not associated with the integration' do
+      let(:other_user) {create(:teacher, :with_lti_auth)}
 
       it 'returns unauthorized' do
         sign_in other_user
@@ -807,6 +811,56 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
         Services::Lti.expects(:parse_nrps_response).never
         Services::Lti.expects(:sync_course_roster).never
         sync_course
+      end
+    end
+
+    context 'when user is not associated with the deployment' do
+      let(:unlinked_deployment) {create(:lti_deployment, lti_integration: integration)}
+      let(:params) {{lti_integration_id: integration.id, deployment_id: unlinked_deployment.id, context_id: lti_course.context_id, rlid: lti_course.resource_link_id, nrps_url: lti_course.nrps_url}}
+
+      it 'returns forbidden' do
+        sign_in user
+        sync_course
+        assert_response :forbidden
+      end
+
+      it 'does not attempt to call NRPS or sync' do
+        sign_in user
+        Clients::LtiAdvantageClient.any_instance.expects(:get_context_membership).never
+        Services::Lti.expects(:parse_nrps_response).never
+        Services::Lti.expects(:sync_course_roster).never
+        sync_course
+      end
+    end
+
+    context 'when sync raises during transaction' do
+      let(:lti_course) do
+        create(
+          :lti_course,
+          lti_integration: integration,
+          lti_deployment: lti_deployment,
+          context_id: SecureRandom.uuid,
+          resource_link_id: SecureRandom.uuid,
+          nrps_url: 'https://example.com/nrps'
+        )
+      end
+
+      before do
+        user.lti_user_identities.find_by(lti_integration: integration).update!(
+          subject: 'f2a16942-ed81-4c98-96dc-5cac16e354ec'
+        )
+        Clients::LtiAdvantageClient.any_instance.
+          expects(:get_context_membership).
+          with(lti_course.nrps_url, lti_course.resource_link_id)
+        Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
+        Services::Lti.expects(:sync_section_roster).raises(Exception, 'sync error')
+      end
+
+      it 'returns internal server error and rolls back section creation' do
+        sign_in user
+        sync_course
+        assert_empty lti_course.reload.lti_sections
+        assert_response :internal_server_error
       end
     end
   end
@@ -823,33 +877,6 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
     get '/lti/v1/sync_course', params: {section_code: lti_section.section.code}
     assert_response :ok
-  end
-
-  test 'transaction prevents partial sync from creating a partially-synced state' do
-    user = create(:teacher, :with_lti_auth)
-    sign_in user
-    lti_integration = create(:lti_integration)
-    lti_course = create(:lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps')
-    create(:lti_user_identity, lti_integration: lti_integration, user: user, subject: 'f2a16942-ed81-4c98-96dc-5cac16e354ec')
-
-    Clients::LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, lti_course.resource_link_id)
-    Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
-
-    # Set up a situation where a sync has partially progressed, including saving some objects, but then
-    # encounters an error. Raising an exception during the section sync should cause the transaction to rollback after
-    # creating the first Section and LtiSection in the course sync method.
-    Services::Lti.expects(:sync_section_roster).raises(Exception, 'sync error')
-
-    get '/lti/v1/sync_course', params: {
-      lti_integration_id: lti_integration.id,
-      deployment_id: lti_course.lti_deployment_id,
-      context_id: lti_course.context_id,
-      rlid: lti_course.resource_link_id,
-      nrps_url: lti_course.nrps_url
-    }
-
-    assert_empty lti_course.lti_sections
-    assert_response :internal_server_error
   end
 
   test 'attempting to sync a section with no LTI course should return a 400' do

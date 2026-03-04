@@ -318,7 +318,6 @@ class LtiV1Controller < ApplicationController
       # Populate vars from the request params.
       begin
         lti_integration = LtiIntegration.find(params[:lti_integration_id])
-        return render_sync_course_error('User not associated with LTI Integration', :forbidden, 'nrps_error') unless validate_integration_membership(lti_integration, current_user)
       rescue
         return render_sync_course_error('LTI Integration not found', :bad_request, 'no_integration')
       end
@@ -326,6 +325,7 @@ class LtiV1Controller < ApplicationController
 
       lti_deployment = lti_integration.lti_deployments.find_by(id: params[:deployment_id])
       return render_sync_course_error('LTI Deployment not found', :bad_request, 'no_deployment') unless lti_deployment
+      return render_sync_course_error('User not associated with LTI Integration', :forbidden, 'nrps_error') unless validate_integration_membership(lti_integration, lti_deployment, current_user)
 
       Retryable.retryable(on: ActiveRecord::RecordNotUnique) do
         lti_course = lti_integration.lti_courses.find_or_create_by!(context_id: params[:context_id]) do |new_record|
@@ -459,7 +459,12 @@ class LtiV1Controller < ApplicationController
     )
   end
 
-  private def validate_integration_membership(integration, user)
-    user.lti_user_identities&.find_by(lti_integration_id: integration.id).present?
+  private def validate_integration_membership(integration, deployment, user)
+    # Integration-level check
+    lti_user_identity = user.lti_user_identities&.find_by(lti_integration_id: integration.id)
+    return false unless lti_user_identity
+
+    # Deployment-level check. Required for Schoology.
+    lti_user_identity.lti_deployments.exists?(id: deployment.id)
   end
 end
