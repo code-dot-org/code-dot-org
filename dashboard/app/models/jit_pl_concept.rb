@@ -14,8 +14,8 @@ class JitPlConcept < ApplicationRecord
 
   has_many :jit_pl_exemplars, dependent: :destroy
   has_many :jit_pl_misconceptions, dependent: :destroy
-  has_and_belongs_to_many :lessons, join_table: :jit_pl_concepts_resources
-  has_and_belongs_to_many :resources, join_table: :jit_pl_concepts_lessons
+  has_and_belongs_to_many :resources, join_table: :jit_pl_concepts_resources
+  has_and_belongs_to_many :lessons, join_table: :jit_pl_concepts_lessons
   has_and_belongs_to_many :rubrics, join_table: :jit_pl_concepts_rubrics
 
   serialized_attrs %w(
