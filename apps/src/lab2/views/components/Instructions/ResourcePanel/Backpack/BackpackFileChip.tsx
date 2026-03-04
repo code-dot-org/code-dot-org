@@ -1,8 +1,9 @@
+import {Button} from '@code-dot-org/component-library/button';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tags from '@code-dot-org/component-library/tags';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {Typography, IconButton as MuiIconButton} from '@mui/material';
+import {Typography} from '@mui/material';
 import React, {useMemo} from 'react';
 
 import {getFileIconNameAndStyle} from '@cdo/apps/codebridge';
@@ -248,16 +249,15 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
             }}
           >
             <div>
-              <MuiIconButton
-                variant="outlined"
-                color="tertiary"
-                size="extraSmall"
+              <Button
+                size="xs"
+                isIconOnly
+                icon={{iconName: 'plus'}}
+                color="gray"
+                type="secondary"
                 onClick={() => handleAdd(isSecondaryBackpack)}
-                type="button"
                 disabled={addButtonDisabled}
-              >
-                <FontAwesomeV6Icon iconName="plus" />
-              </MuiIconButton>
+              />
             </div>
           </WithTooltip>
         )}

@@ -1,7 +1,7 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button} from '@code-dot-org/component-library/button';
 import {useSortable} from '@dnd-kit/sortable';
 import {CSS} from '@dnd-kit/utilities';
-import {Typography, IconButton as MuiIconButton} from '@mui/material';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
@@ -46,18 +46,17 @@ export const SectionCard: React.FC<SectionCardProps> = ({
       <div className={styles.sectionCardHeader}>
         <div className={styles.sectionCardHeaderLeft}>
           {!section.hidden && (
-            <MuiIconButton
+            <Button
               {...attributes}
               {...listeners}
-              variant="text"
-              color="tertiary"
-              size="small"
               onClick={() => {}} // Uses attributes and listeners to make the button draggable
+              isIconOnly
+              icon={{iconName: 'grip-vertical'}}
+              color="gray"
+              size="s"
               aria-label={i18n.dragSection()}
-              type="button"
-            >
-              <FontAwesomeV6Icon iconName="grip-vertical" />
-            </MuiIconButton>
+              type="tertiary"
+            />
           )}
           <SectionAvatar
             color={section.avatar_color || 0}

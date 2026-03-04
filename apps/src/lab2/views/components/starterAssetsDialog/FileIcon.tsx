@@ -1,7 +1,8 @@
+import {Button} from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {Typography, IconButton as MuiIconButton} from '@mui/material';
+import {Typography} from '@mui/material';
 import React, {memo, useEffect, useRef, useState} from 'react';
 
 import lab2I18n from '@cdo/apps/lab2/locale';
@@ -72,16 +73,14 @@ const FileIcon: React.FC<FileIconProps> = ({
         />
       )}
       {onDelete && !loadingMetadata && (
-        <MuiIconButton
-          variant="outlined"
-          color="error"
-          size="extraSmall"
+        <Button
+          size="xs"
+          isIconOnly={true}
           onClick={() => onDelete(filename)}
-          type="button"
-          aria-label={`Delete ${filename}`}
-        >
-          <FontAwesomeV6Icon iconName="trash" />
-        </MuiIconButton>
+          icon={{iconName: 'trash'}}
+          color="destructive"
+          type="secondary"
+        />
       )}
       {loadingMetadata && (
         <div className={styles.loadingIcon}>

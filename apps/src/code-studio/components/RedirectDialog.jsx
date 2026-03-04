@@ -1,4 +1,4 @@
-import {Button as MuiButton} from '@mui/material';
+import Button from '@code-dot-org/component-library/button';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -30,24 +30,20 @@ const RedirectDialog = ({
         {details}
       </div>
       <DialogFooter>
-        <MuiButton
-          variant="outlined"
-          color="tertiary"
-          size="small"
+        <Button
+          text={i18n.stayHere()}
           onClick={handleClose}
-          type="button"
-        >
-          {i18n.stayHere()}
-        </MuiButton>
-        <MuiButton
-          variant="contained"
-          color="primary"
-          size="small"
+          type="secondary"
+          color="gray"
+          size="s"
+        />
+        <Button
+          text={redirectButtonText}
           onClick={redirect}
-          type="button"
-        >
-          {redirectButtonText}
-        </MuiButton>
+          type="primary"
+          color="purple"
+          size="s"
+        />
       </DialogFooter>
     </BaseDialog>
   );

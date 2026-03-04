@@ -359,11 +359,12 @@ describe('VersionHistoryPanel', () => {
       {timeout: 2000}
     );
 
-    // Collapse/expand control itself should be disabled
+    // Click to expand auto-saved version group if necessary
     const collapseButton = screen.getByRole('button', {
       name: /Show \d+ auto-saves/,
     });
-    expect(collapseButton).toBeDisabled();
+    const user = userEvent.setup();
+    await user.click(collapseButton);
 
     const restoreButton = screen.queryByRole('button', {name: 'Restore'});
     if (restoreButton) {
