@@ -1,5 +1,6 @@
-import Button from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tags from '@code-dot-org/component-library/tags';
+import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -43,15 +44,16 @@ const AiDiffHeader: React.FC<AiDiffHeaderProps> = ({
         </span>
       </div>
       <div className={style.aiDiffHeaderRightSide}>
-        <Button
-          className={closeButtonClassName}
+        <MuiIconButton
+          variant="text"
           color="white"
-          icon={{iconName: 'times', iconStyle: 'solid'}}
-          type="tertiary"
-          isIconOnly={true}
+          size="small"
+          className={closeButtonClassName}
           onClick={closeTutor}
-          size="s"
-        />
+          type="button"
+        >
+          <FontAwesomeV6Icon iconName="times" iconStyle="solid" />
+        </MuiIconButton>
       </div>
     </div>
   );

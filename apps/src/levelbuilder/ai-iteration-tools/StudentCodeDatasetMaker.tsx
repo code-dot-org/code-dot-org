@@ -1,6 +1,6 @@
-import Button from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import TextField from '@code-dot-org/component-library/textField';
+import {Button as MuiButton} from '@mui/material';
 import Papa from 'papaparse';
 import React, {useState} from 'react';
 
@@ -180,12 +180,17 @@ const StudentCodeDatasetMaker: React.FC = () => {
         <br />
         <br />
         <div>
-          <Button
-            text="Fetch Student Code Samples"
-            onClick={getStudentCodeSamples}
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
+            loading={pending}
             disabled={pending}
-            isPending={pending}
-          />
+            onClick={getStudentCodeSamples}
+            type="button"
+          >
+            {'Fetch Student Code Samples'}
+          </MuiButton>
         </div>
         <br />
         <Checkbox
@@ -198,20 +203,30 @@ const StudentCodeDatasetMaker: React.FC = () => {
         <br />
         <br />
         <div>
-          <Button
-            text="Evaluate Student Code Samples"
-            onClick={getAIEvaluations}
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
+            loading={evaluationPending}
             disabled={fetchedSamples.length === 0}
-            isPending={evaluationPending}
-          />
+            onClick={getAIEvaluations}
+            type="button"
+          >
+            {'Evaluate Student Code Samples'}
+          </MuiButton>
         </div>
         <br />
         <div>
-          <Button
-            text="Download CSV"
-            onClick={downloadCSV}
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
             disabled={evaluatedSamples.length === 0}
-          />
+            onClick={downloadCSV}
+            type="button"
+          >
+            {'Download CSV'}
+          </MuiButton>
         </div>
       </div>
     </div>

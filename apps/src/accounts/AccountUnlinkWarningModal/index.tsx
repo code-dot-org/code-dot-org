@@ -1,5 +1,4 @@
-import {Button, buttonColors} from '@code-dot-org/component-library/button';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 import {Fade} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
@@ -60,17 +59,25 @@ const AccountUnlinkWarningModal = ({
         </Typography>
         <hr className={styles.line} />
         <div className={styles.warningFooter}>
-          <Button
-            onClick={handleCancel}
-            color={buttonColors.white}
-            text={i18n.cancel()}
+          <MuiButton
+            variant="contained"
+            color="white"
+            size="medium"
             className={styles.cancelButton}
-          />
-          <Button
+            onClick={handleCancel}
+            type="button"
+          >
+            {i18n.cancel()}
+          </MuiButton>
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
             onClick={handleSubmit}
-            color={buttonColors.purple}
-            text={i18n.manageLinkedAccounts_warning_button()}
-          />
+            type="button"
+          >
+            {i18n.manageLinkedAccounts_warning_button()}
+          </MuiButton>
         </div>
       </AccessibleDialog>
     </Fade>

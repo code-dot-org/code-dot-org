@@ -1,4 +1,4 @@
-import Button, {buttonColors} from '@code-dot-org/component-library/button';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -173,14 +173,16 @@ class InstructionsCsfMiddleCol extends React.Component {
           {this.props.overlayVisible && (
             <div>
               <hr />
-              <Button
-                color={buttonColors.purple}
-                text={i18n.dialogOK()}
+              <MuiButton
+                variant="contained"
+                color="primary"
+                size="medium"
                 onClick={this.closeOverlay}
-                size="m"
-                type="primary"
                 aria-label={i18n.dialogOK()}
-              />
+                type="button"
+              >
+                {i18n.dialogOK()}
+              </MuiButton>
             </div>
           )}
         </ChatBubble>

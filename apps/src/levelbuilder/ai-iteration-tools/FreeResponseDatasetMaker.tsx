@@ -1,5 +1,5 @@
-import Button from '@code-dot-org/component-library/button';
 import TextField from '@code-dot-org/component-library/textField';
+import {Button as MuiButton} from '@mui/material';
 import Papa from 'papaparse';
 import React, {useState} from 'react';
 
@@ -121,29 +121,44 @@ const FreeResponseDatasetMaker: React.FC = () => {
         <br />
         <br />
         <div>
-          <Button
-            text="Fetch Free Responses"
-            onClick={getStudentFreeResponseAnswers}
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
+            loading={fetchPending}
             disabled={fetchPending}
-            isPending={fetchPending}
-          />
+            onClick={getStudentFreeResponseAnswers}
+            type="button"
+          >
+            {'Fetch Free Responses'}
+          </MuiButton>
         </div>
         <br />
         <div>
-          <Button
-            text="Evaluate Free Responses"
-            onClick={getAIEvaluations}
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
+            loading={evaluationPending}
             disabled={fetchedSamples.length === 0}
-            isPending={evaluationPending}
-          />
+            onClick={getAIEvaluations}
+            type="button"
+          >
+            {'Evaluate Free Responses'}
+          </MuiButton>
         </div>
         <br />
         <div>
-          <Button
-            text="Download CSV"
-            onClick={downloadCSV}
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
             disabled={evaluatedSamples.length === 0}
-          />
+            onClick={downloadCSV}
+            type="button"
+          >
+            {'Download CSV'}
+          </MuiButton>
         </div>
       </div>
     </div>

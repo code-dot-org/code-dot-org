@@ -1,16 +1,16 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
 
-import fontConstants from '@cdo/apps/fontConstants';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
-import color from '@cdo/apps/util/color';
 import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
 import i18n from '@cdo/locale';
 
 import {levelWithProgress, studentShape} from './types';
+
+import styles from './student-table.module.scss';
 
 class StudentTable extends React.Component {
   static propTypes = {
@@ -45,9 +45,9 @@ class StudentTable extends React.Component {
     return url + queryStr;
   };
 
-  getRowStyle = (selectedUserId, id) => {
+  getRowClass = (selectedUserId, id) => {
     const isSelected = selectedUserId === id;
-    return isSelected ? [styles.tr, styles.selected] : styles.tr;
+    return classNames(styles.row, {[styles.selected]: isSelected});
   };
 
   componentDidMount() {
@@ -72,22 +72,22 @@ class StudentTable extends React.Component {
     const {sortedStudents} = this.state;
 
     return (
-      <table style={styles.table} className="student-table">
+      <table className={classNames(styles.table, 'student-table')}>
         <tbody>
           <tr
-            style={this.getRowStyle(selectedUserId, null)}
+            className={this.getRowClass(selectedUserId, null)}
             onClick={() => onSelectUser(null)}
           >
-            <td style={styles.meRow}>{i18n.studentTableTeacherDemo()}</td>
+            <td className={styles.meRow}>{i18n.studentTableTeacherDemo()}</td>
           </tr>
           {sortedStudents.map(student => (
             <tr
               key={`tr-${student.id}`}
-              style={this.getRowStyle(selectedUserId, student.id)}
+              className={this.getRowClass(selectedUserId, student.id)}
               onClick={() => onSelectUser(student.id)}
             >
-              <td key={`td-${student.id}`} style={styles.td}>
-                <div style={styles.studentTableRow}>
+              <td key={`td-${student.id}`} className={styles.td}>
+                <div className={styles.studentTableRow}>
                   {!!levelsWithProgress?.length && (
                     <ProgressBubble
                       level={levelsWithProgress.find(
@@ -98,13 +98,13 @@ class StudentTable extends React.Component {
                       hideAssessmentBadge={true}
                     />
                   )}
-                  <div style={styles.name}>
+                  <div className={styles.name}>
                     {`${student.name} ${student.familyName || ''}`}
                     <a
                       href={this.getRowLink(student.id)}
                       target="_blank"
                       rel="noopener noreferrer"
-                      style={styles.linkIcon}
+                      className={styles.linkIcon}
                     >
                       <FontAwesome icon="external-link" />
                     </a>
@@ -119,48 +119,7 @@ class StudentTable extends React.Component {
   }
 }
 
-const styles = {
-  table: {
-    width: '90%',
-    margin: '8px auto auto',
-  },
-  tr: {
-    height: 41,
-    color: color.cyan,
-    border: `1px solid ${color.lighter_cyan}`,
-    backgroundColor: color.lightest_gray,
-    ':hover': {
-      backgroundColor: color.lighter_cyan,
-      cursor: 'pointer',
-    },
-  },
-  td: {
-    padding: 1,
-  },
-  selected: {
-    ...fontConstants['main-font-bold'],
-    color: color.white,
-    backgroundColor: color.light_cyan,
-  },
-  studentTableRow: {
-    display: 'flex',
-    alignItems: 'center',
-    width: '100%',
-  },
-  meRow: {
-    padding: '1px 1px 1px 5px',
-  },
-  name: {
-    paddingLeft: 5,
-    margin: '1px 1px 1px 0',
-    flexGrow: 1,
-  },
-  linkIcon: {
-    marginLeft: 10,
-  },
-};
-
-export const UnconnectedStudentTable = Radium(StudentTable);
+export const UnconnectedStudentTable = StudentTable;
 export default connect(state => ({
   isSortedByFamilyName: state.currentUser.isSortedByFamilyName,
 }))(UnconnectedStudentTable);

@@ -8,7 +8,8 @@
     "self-paced-pl-designing-reliable-apps-with-ai-and-apis-pilot-2025",
     "self-paced-pl-web-apps-with-ai-capstone-project-pilot-2025",
     "self-paced-pl-teaching-ai-foundations-sem2-core-content-2025",
-    "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025"
+    "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+    "self-paced-pl-iterating-with-ai-pilot-26"
   ],
   "unit_prefixes": [
     "2",
@@ -18,6 +19,7 @@
     "6",
     "7",
     "1",
+    null,
     null
   ],
   "original_script_names": [
@@ -28,7 +30,8 @@
     "self-paced-pl-designing-reliable-apps-with-ai-and-apis-pilot-2025",
     "self-paced-pl-web-apps-with-ai-capstone-project-pilot-2025",
     "self-paced-pl-teaching-ai-foundations-sem2-core-content-2025",
-    "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025"
+    "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025",
+    "self-paced-pl-iterating-with-ai-pilot-26"
   ],
   "published_state": "preview",
   "instruction_type": "self_paced",

@@ -54,6 +54,15 @@ module ActiveJobMetrics
     mine(ActiveJobMetrics.queued_jobs)
   end
 
+  # Workable jobs are queued jobs that are eligible to run now (run_at is not in the future)
+  def self.workable_queued_jobs
+    queued_jobs.where('run_at <= ?', _now_utc)
+  end
+
+  def workable_queued_jobs
+    mine(ActiveJobMetrics.workable_queued_jobs)
+  end
+
   # Overridable for testing
   def self._now_utc
     Time.now.utc
@@ -112,6 +121,13 @@ module ActiveJobMetrics
       {
         metric_name: 'QueuedJobCount',
         value: job_class.queued_jobs.count,
+        unit: 'Count',
+        timestamp: Time.now,
+        dimensions: dimensions,
+      },
+      {
+        metric_name: 'WorkableQueuedJobCount',
+        value: job_class.workable_queued_jobs.count,
         unit: 'Count',
         timestamp: Time.now,
         dimensions: dimensions,

@@ -1,4 +1,4 @@
-import Button from '@code-dot-org/component-library/button';
+import {Button as MuiButton} from '@mui/material';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -103,13 +103,13 @@ describe('InstructionsCsfMiddleCol', () => {
 
   it('display Button when overlayVisible', () => {
     const wrapper = setUp({overlayVisible: true});
-    expect(wrapper.find(Button)).toHaveLength(1);
+    expect(wrapper.find(MuiButton)).toHaveLength(1);
   });
 
   it('calls hideOverlay when overlayVisible and Button is clicked', () => {
     const hideOverlaySpy = jest.fn();
     const wrapper = setUp({overlayVisible: true, hideOverlay: hideOverlaySpy});
-    wrapper.find(Button).simulate('click');
+    wrapper.find(MuiButton).simulate('click');
     expect(hideOverlaySpy).toHaveBeenCalledTimes(1);
   });
 

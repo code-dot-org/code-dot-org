@@ -85,7 +85,7 @@ const live = [
   '/courses/elementaryai-2024',
   '/courses/3-5gamedesign-2024',
   '/courses/elem-game-design-2024',
-  '/courses/artificial-intelligence-foundations-2025/',
+  '/courses/artificial-intelligence-foundations-2025',
   '/courses/mix-move-ai-2025',
   '/courses/teaching-ai-foundations-2025',
   '/courses/oceans',

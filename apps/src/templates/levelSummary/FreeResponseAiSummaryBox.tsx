@@ -1,7 +1,6 @@
-import Button from '@code-dot-org/component-library/button';
 import Link from '@code-dot-org/component-library/link';
 import Tags from '@code-dot-org/component-library/tags';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 
 import {StudentWorkEvaluation} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
@@ -171,7 +170,7 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
               onThumbsDownClick={() => {
                 handleIconClick(false);
               }}
-              size="xs"
+              size="extraSmall"
               color="gray"
             />
           </div>
@@ -192,16 +191,18 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
     <div className={styles.aiSummaryContainer}>
       <div className={styles.leftSide}>
         <img src={aiBot} alt="Ai Bot" className={styles.botImage} />
-        <Button
-          text={i18n.evaluateStudentResponses()}
-          onClick={aiEvaluationHandler}
-          size={'s'}
-          color={'gray'}
+        <MuiButton
+          variant="outlined"
+          color="tertiary"
+          size="small"
+          loading={isPending}
           disabled={disabled}
-          type="secondary"
-          isPending={isPending}
           className={styles.evaluateButton}
-        />
+          onClick={aiEvaluationHandler}
+          type="button"
+        >
+          {i18n.evaluateStudentResponses()}
+        </MuiButton>
       </div>
       <div className={styles.rightSide}>
         {showEvaluationSummary && aiSummaryContent()}

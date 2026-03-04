@@ -1,7 +1,12 @@
-import {Button} from '@code-dot-org/component-library/button';
 import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Card, CardContent, Box, Typography} from '@mui/material';
+import {
+  Card,
+  CardContent,
+  Box,
+  Typography,
+  Button as MuiButton,
+} from '@mui/material';
 import classNames from 'classnames';
 import React, {FC, useMemo, useState} from 'react';
 
@@ -95,13 +100,16 @@ export const ScoreCard: FC<ScoreCardProps> = ({
             <Typography variant="body4">{footer}</Typography>
           </Box>
           {breakdown && !insufficientData && (
-            <Button
+            <MuiButton
+              variant="text"
+              color="primary"
+              size="small"
               className={styles.breakdownButton}
-              text="See breakdown"
-              type="tertiary"
-              size="s"
               onClick={() => setShowBreakdown(true)}
-            />
+              type="button"
+            >
+              {'See breakdown'}
+            </MuiButton>
           )}
         </Box>
       </Card>
@@ -149,11 +157,16 @@ export const ScoreCard: FC<ScoreCardProps> = ({
               </Box>
             )}
           </Box>
-          <Button
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
             className={styles.breakdownCloseButton}
-            text="Return to dashboard"
             onClick={() => setShowBreakdown(false)}
-          />
+            type="button"
+          >
+            {'Return to dashboard'}
+          </MuiButton>
         </CustomDialog>
       )}
     </>

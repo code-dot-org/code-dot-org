@@ -37,12 +37,14 @@ class ApplicationJobTest < ActiveJob::TestCase
     @expected_my_failed_count = 1
     @expected_my_waiting_to_start_count = 1
     @expected_my_pending_count = 2
+    @expected_my_workable_count = 2
     @expected_my_queued_count = 3
     @expected_my_running_count = 1
 
     @expected_failed_count = @expected_my_failed_count * 2
     @expected_waiting_to_start_count = @expected_my_waiting_to_start_count * 2
     @expected_pending_count = @expected_my_pending_count * 2
+    @expected_workable_count = @expected_my_workable_count * 2
     @expected_queued_count = @expected_my_queued_count * 2
     @expected_running_count = @expected_my_running_count * 2
   end
@@ -78,6 +80,11 @@ class ApplicationJobTest < ActiveJob::TestCase
   test 'failed_jobs.count returns the number of failed jobs' do
     assert_equal @expected_failed_count, ActiveJobMetrics.failed_jobs.count
     assert_equal @expected_my_failed_count, ApplicationJob.new.failed_jobs.count
+  end
+
+  test 'workable_queued_jobs.count returns the number of workable jobs' do
+    assert_equal @expected_workable_count, ActiveJobMetrics.workable_queued_jobs.count
+    assert_equal @expected_my_workable_count, ApplicationJob.new.workable_queued_jobs.count
   end
 
   test 'waiting_to_start_jobs.count returns the number of jobs waiting to start' do
@@ -129,11 +136,13 @@ class ApplicationJobTest < ActiveJob::TestCase
       all_of(
         includes_metrics(
           QueuedJobCount: @expected_queued_count,
+          WorkableQueuedJobCount: @expected_workable_count,
           FailedJobCount: @expected_failed_count,
           PendingJobCount: @expected_pending_count,
           WaitingToStartJobCount: @expected_waiting_to_start_count,
         ),
         includes_dimensions(:QueuedJobCount, Environment: CDO.rack_env),
+        includes_dimensions(:WorkableQueuedJobCount, Environment: CDO.rack_env),
         includes_dimensions(:FailedJobCount, Environment: CDO.rack_env),
         includes_dimensions(:PendingJobCount, Environment: CDO.rack_env),
         includes_dimensions(:WaitingToStartJobCount, Environment: CDO.rack_env),
@@ -147,11 +156,13 @@ class ApplicationJobTest < ActiveJob::TestCase
       all_of(
         includes_metrics(
           QueuedJobCount: @expected_my_queued_count,
+          WorkableQueuedJobCount: @expected_my_workable_count,
           FailedJobCount: @expected_my_failed_count,
           PendingJobCount: @expected_my_pending_count,
           WaitingToStartJobCount: @expected_my_waiting_to_start_count,
         ),
         includes_dimensions(:QueuedJobCount, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob'),
+        includes_dimensions(:WorkableQueuedJobCount, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob'),
         includes_dimensions(:FailedJobCount, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob'),
         includes_dimensions(:PendingJobCount, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob'),
         includes_dimensions(:WaitingToStartJobCount, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob'),

@@ -144,7 +144,7 @@ BlocklyCore.Extensions.register(
       toolboxConfigurationSupportsEditButton(this) &&
       !Blockly.isEmbeddedWorkspace(this.workspace)
     ) {
-      const button = new Blockly.FieldButton({
+      const button = new CdoFieldButton({
         value: commonI18n.edit(),
         onClick: editButtonHandler,
         colorOverrides: {button: 'blue', text: 'white'},

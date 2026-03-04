@@ -43,7 +43,7 @@ steps:
   - name: get-cached-staging-build
     image: plugins/s3-cache
     settings:
-      filename: cache-staging-ci-build-rails-7.tar.gz
+      filename: cache-staging-ci-build.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
@@ -164,7 +164,7 @@ steps:
       - name: mysql
         path: /drone/src/var/lib/mysql
     settings:
-      filename: cache-staging-ci-build-rails-7.tar.gz
+      filename: cache-staging-ci-build.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
@@ -314,15 +314,13 @@ steps:
       - "find . -type f -not -path './.git/*' | wc -l > .cached-staging-build-file-count"
       - 'printf "Baseline file count: %s\n" "$(cat .cached-staging-build-file-count)"'
 
-  # TODO infra: revert all references to `cache-staging-ci-build-rails-7` back
-  # to `cache-staging-ci-build` once the latter has been updated with Rails 7
-  - name: cache-staging-ci-build-rails-7
+  - name: cache-staging-ci-build
     image: plugins/s3-cache
     volumes:
       - name: mysql
         path: /var/lib/mysql
     settings:
-      filename: cache-staging-ci-build-rails-7.tar.gz
+      filename: cache-staging-ci-build.tar.gz
       endpoint: s3://cdo-drone
       rebuild: true
       debug: true
@@ -344,6 +342,6 @@ trigger:
 
 ---
 kind: signature
-hmac: f9b0f9f41eb12a7fb19f494f7f8ac425129152b07c9766077a59ced998eed5fc
+hmac: 8380ec279dc40128beca1b341a9fff3212255c2a343d9fed59c9c839ab095669
 
 ...

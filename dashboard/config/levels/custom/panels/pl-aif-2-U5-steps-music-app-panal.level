@@ -1,0 +1,71 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-03-02T16:25:43.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "##Playlist Activity Tutorial\nIn the next activity, you’ll build a music web app. These panels walk you through each step, including using an API to fetch and display a playlist.",
+        "imageUrl": "https://images.code.org/3eaba7ae3cf636121186d76653a82d58-playlist.png",
+        "key": "pl-aif-2-U5-steps-music-app-panal-1a2d86f6-474a-4004-b046-1e5049309d79",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Layout Design \nIn the previous level, you sketched how the playlist data should appear. Be sure to save that image, as you’ll upload it in the next level to create the card layout.",
+        "imageUrl": "https://images.code.org/87785242bda4c100776dda0ed7db2270-playlist (1).png",
+        "key": "pl-aif-2-U5-steps-music-app-panal-18be9ff4-aa9b-4aed-8224-e17a316df41c",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Starter Files\nThis activity begins with a blank project. You’ll see a JSON file that contains the music data, but the other files—HTML, CSS, and JavaScript—are currently empty.",
+        "imageUrl": "https://images.code.org/c1a8e0bcaaffbaab5e83da3668e5e218-playlist (2).png",
+        "key": "pl-aif-2-U5-steps-music-app-panal-51d25811-5444-44d6-a815-e2231ada547b",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Upload the layout image\nFirst, upload the layout card image you created earlier.\nOpen the AI Tutor, attach your image file, and include a brief description of what you’d like it to help you build.",
+        "imageUrl": "https://images.code.org/38f51c21a5fbb20d1d72d70eb564b633-playlist (3).png",
+        "key": "pl-aif-2-U5-steps-music-app-panal-a71e2a5c-f44c-4368-a991-9dda3d2dd025",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Build the HTML Structure\nStart with the HTML—the foundation of your website.\nUpload your layout image to the AI Tutor, then write a simple prompt explaining what you want to build and how the playlist cards should be structured.\n",
+        "imageUrl": "https://images.code.org/9f112e59dc21365a6b74fbe334a218ef-playlist (4).png",
+        "key": "pl-aif-2-U5-steps-music-app-panal-70132e35-b3f0-4f70-984c-9892671f8e77",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Review the AI plan\nThe AI Tutor will suggest a plan and describe the changes it wants to make.\nRead the description carefully and decide whether to accept or reject it.\n\n- If you reject the plan, revise your prompt and try again.\n\n- If you accept the plan, the updated HTML code will appear in your project.",
+        "imageUrl": "https://images.code.org/ff42d56bd1157486886f036f33707f66-playlist (5).png",
+        "key": "pl-aif-2-U5-steps-music-app-panal-b4d07980-4e0b-4f4a-b8a2-764b39a63688",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Add the CSS styling\nNext, add the CSS layer. Remember, CSS controls the look and style of your web app.\n\nPrompt the AI Tutor to create and style the CSS file for your music cards. After reviewing and accepting the suggested changes, check the code preview.\n\nDecide whether you want to keep the first version or revise your prompt to tweak the styling.\n\n*Feel free to adjust the design to match your original layout.*",
+        "imageUrl": "https://images.code.org/56bd544a00d0921f6c58a5fabdb173ee-playlist (6).png",
+        "key": "pl-aif-2-U5-steps-music-app-panal-284050e0-e4be-449a-bd32-ff2287499764",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Add the JavaScript Functionality\n\nFinally, add the JavaScript. This code has two main steps:\n\n- 1. Fetch and render the data\n\n- 2. Loop through the array to build the HTML\n\nStart by asking the AI Tutor to help you write a function that fetches the data from the JSON file and renders it to the page.\n\nWhen reviewing the code, look for the use of async and await. These keywords allow your app to load the data properly before displaying it.",
+        "imageUrl": "https://images.code.org/4547ae3805560418e32f103271aa0532-playlist (7).png",
+        "key": "pl-aif-2-U5-steps-music-app-panal-8824c347-e5bc-4020-bf8c-e565b3f65257",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Loop Through the Array and Build the Cards\nNext, check whether your code loops through the entire array of songs. You can confirm this by looking at the preview—if it’s working, you should see all of the playlist cards filled in with the correct information.\n\n- If the preview still shows only one card, return to the AI Tutor and ask for code that loops through the array and builds the HTML for each item.\n\n*Remember: the AI Tutor may generate slightly different code each time. It’s normal to iterate a few times to get the result you want.*\n\n---\nNow, it's your turn to try. Return to this tutorial anytime. ",
+        "imageUrl": "https://images.code.org/1ba73ecd741fc56a82494e64e966e995-playlist (8).png",
+        "key": "pl-aif-2-U5-steps-music-app-panal-21671b8b-b0cf-4ba8-91b8-12f30ca5b1a6",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_2025-pilot"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-02T16:25:43.405+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U5-API-Calll-POkemon-panel\\\"\"],\"cloned_from\":\"pl-aif-2-U5-API-Calll-POkemon-panel\"},{\"changed_at\":\"2026-03-03 17:49:27 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Panels>
