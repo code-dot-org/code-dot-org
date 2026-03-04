@@ -52,6 +52,7 @@ const AfeCareerTourBlock: React.FunctionComponent = () => {
         className={moduleStyles.shareDialogButton}
         aria-label={i18n.careerTourAction()}
         href={careersUrl}
+        rel="noopener noreferrer"
         target="_blank"
         endIcon={
           <FontAwesomeV6Icon
