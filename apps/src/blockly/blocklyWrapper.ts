@@ -33,6 +33,7 @@ import initializeCdoConstants from './addons/cdoConstants';
 import initializeCss from './addons/cdoCss';
 import CdoFieldColour from './addons/cdoFieldColour';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
+import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldLabel from './addons/cdoFieldLabel';
 import CdoFieldNumber from './addons/cdoFieldNumber';
 import CdoFieldParameter from './addons/cdoFieldParameter';
@@ -231,6 +232,7 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     ['field_number', CdoFieldNumber],
     ['field_parameter', CdoFieldParameter],
     ['field_variable', CdoFieldVariable],
+    ['field_image_dropdown', CdoFieldImageDropdown],
   ];
   // Tell Blockly to use our custom versions of fields
   fieldsToRegister.forEach(override => {
