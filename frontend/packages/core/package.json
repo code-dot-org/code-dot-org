@@ -21,7 +21,7 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
+      "require": "./dist/index.cjs"
     }
   },
   "scripts": {
@@ -36,7 +36,7 @@
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "dependencies": {
-    "tldjs": "^2.3.2"
+    "tldts": "^7.0.23"
   },
   "devDependencies": {
     "@code-dot-org/lint-config": "workspace:*",

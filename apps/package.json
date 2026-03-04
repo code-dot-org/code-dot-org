@@ -204,6 +204,7 @@
     "@code-dot-org/artist": "0.2.1",
     "@code-dot-org/component-library": "portal:../frontend/packages/component-library/",
     "@code-dot-org/component-library-styles": "portal:../frontend/packages/component-library-styles/",
+    "@code-dot-org/core": "portal:../frontend/packages/core/",
     "@code-dot-org/craft": "0.2.2",
     "@code-dot-org/dance-party": "2.0.4",
     "@code-dot-org/fonts": "portal:../frontend/packages/fonts/",
