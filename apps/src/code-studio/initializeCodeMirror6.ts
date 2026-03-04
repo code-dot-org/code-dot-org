@@ -61,6 +61,7 @@ type EditorMode = 'javascript' | 'json' | 'markdown' | 'xml' | 'html';
 const levelbuilderEditorTheme = EditorView.theme({
   '&': {
     border: '1px solid #eee',
+    backgroundColor: 'white',
   },
 });
 
