@@ -95,8 +95,10 @@ class ApiController < ApplicationController
 
     course_id = params[:courseId].to_s
     course_name = params[:courseName].to_s
+    section = CleverSection.find_by(code: CleverSection.code_for_section(course_id))
 
     query_clever_service("sections/#{course_id}/users?role=student") do |students|
+      return head :forbidden if section.present? && !section_instructor?(section)
       section = CleverSection.from_service(course_id, current_user.id, students, course_name)
       render json: section.summarize
     end
@@ -114,11 +116,11 @@ class ApiController < ApplicationController
     return head :forbidden unless current_user
     course_id = params[:courseId].to_s
     course_name = params[:courseName].to_s
+    section = GoogleClassroomSection.find_by(code: GoogleClassroomSection.code_for_section(course_id))
 
     query_google_classroom_service do |service|
-      unless google_teacher_for_course?(service, course_id)
-        return head :forbidden
-      end
+      return head :forbidden if section.present? && !section_instructor?(section)
+
       students = []
       next_page_token = nil
       loop do
@@ -644,21 +646,9 @@ class ApiController < ApplicationController
     end
   end
 
-  private def google_teacher_for_course?(service, course_id)
-    google_uid = current_user.uid_for_provider(AuthenticationOption::GOOGLE).to_s
-    return false if google_uid.empty?
-
-    next_page_token = nil
-    loop do
-      response = service.list_course_teachers(course_id, page_token: next_page_token)
-      teachers = response.teachers || []
-      return true if teachers.any? {|teacher| teacher.user_id.to_s == google_uid}
-
-      next_page_token = response.next_page_token
-      break unless next_page_token
-    end
-
-    false
+  private def section_instructor?(section)
+    return false unless current_user
+    section&.instructors&.include?(current_user)
   end
 
   # Gets progress-related app_options for the given script and level for the
