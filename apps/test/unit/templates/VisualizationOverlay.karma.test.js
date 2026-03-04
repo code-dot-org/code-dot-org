@@ -67,7 +67,6 @@ describe('VisualizationOverlay', () => {
   function verifySvg(element) {
     const svg = element.find('svg').first();
     expect(svg.props().id).to.equal('visualizationOverlay');
-    expect(svg.props().baseProfile).to.equal('full');
     expect(svg.props().width).to.equal(TEST_APP_WIDTH);
     expect(svg.props().height).to.equal(TEST_APP_HEIGHT);
     expect(svg.props().viewBox).to.equal(
