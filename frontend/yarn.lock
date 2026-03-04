@@ -1343,7 +1343,7 @@ __metadata:
     eslint-plugin-react-refresh: "npm:^0.4.24"
     prettier: "npm:3.4.2"
     react: "npm:^19.2.0"
-    tldjs: "npm:^2.3.2"
+    tldts: "npm:^7.0.23"
     typescript: "npm:~5.9.3"
     vite: "npm:^7.2.4"
     vite-plugin-dts: "npm:^4.5.4"
@@ -17284,7 +17284,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"punycode@npm:^2.0.0, punycode@npm:^2.1.0, punycode@npm:^2.1.1, punycode@npm:^2.3.1":
+"punycode@npm:^2.1.0, punycode@npm:^2.1.1, punycode@npm:^2.3.1":
   version: 2.3.1
   resolution: "punycode@npm:2.3.1"
   checksum: 10c0/14f76a8206bc3464f794fb2e3d3cc665ae416c01893ad7a02b23766eb07159144ee612ad67af5e84fa4479ccfe67678c4feb126b0485651b302babf66f04f9e9
@@ -19653,12 +19653,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tldjs@npm:^2.3.2":
-  version: 2.3.2
-  resolution: "tldjs@npm:2.3.2"
+"tldts-core@npm:^7.0.23":
+  version: 7.0.23
+  resolution: "tldts-core@npm:7.0.23"
+  checksum: 10c0/b3d936a75b5f65614c356a58ef37563681c6224187dcce9f57aac76d92aae83b1a6fe6ab910f77472b35456bc145a8441cb3e572b4850be43cb4f3465e0610ec
+  languageName: node
+  linkType: hard
+
+"tldts@npm:^7.0.23":
+  version: 7.0.23
+  resolution: "tldts@npm:7.0.23"
   dependencies:
-    punycode: "npm:^2.0.0"
-  checksum: 10c0/2f77a376e2f0fb6e4ff2d1b92b89bb6078ede87a9170c18132e121421f5b9e19f6b98bef1f7e8c256111cf03a7426720580a1b7f50cb4a46de47b24a6d2d5644
+    tldts-core: "npm:^7.0.23"
+  bin:
+    tldts: bin/cli.js
+  checksum: 10c0/492874770afaade724a10f8a97cce511d74bed07735c7f1100b7957254d7a5bbbc18becaf5cd049f9d7b0feeb945a64af64d5a300dfb851a4ac57cf3a5998afc
   languageName: node
   linkType: hard
 
