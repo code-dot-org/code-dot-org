@@ -5,6 +5,8 @@
 # Work was already done to confirm that none of the users with invalid usernames
 # are using username+password to login.
 
+require_relative '../../../dashboard/config/environment'
+
 require 'optparse'
 require 'ruby-progressbar'
 
@@ -19,8 +21,6 @@ OptionParser.new do |opts|
     exit
   end
 end.parse!
-
-require_relative '../../../dashboard/config/environment'
 
 # rubocop:disable Metrics/CollectionLiteralLength
 user_ids =
