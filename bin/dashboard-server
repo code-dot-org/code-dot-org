@@ -13,7 +13,6 @@ def main
   end.parse!
 
   rerun_dirs = [deploy_dir('lib'), deploy_dir('shared/middleware'), deploy_dir('dashboard/legacy')]
-  rerun_dirs += [pegasus_dir] if CDO.dashboard_enable_pegasus
   rerun = ['rerun']
   rerun << "-p '**/*.{rb,ru,yml}'"
   rerun << "-d '#{rerun_dirs.join(',')}'"

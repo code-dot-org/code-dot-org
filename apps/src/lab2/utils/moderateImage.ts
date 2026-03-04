@@ -1,29 +1,30 @@
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {WEBLAB2_IMAGE_FILE_TYPES} from '@cdo/apps/weblab2/constants';
+
+const LAB2_LABS_MODERATE_IMAGES = ['weblab2', 'aichat'];
 
 export const moderateImage = async (
   file: File,
   ext: string,
   appName?: string
 ): Promise<'ok' | 'flagged' | 'skipped'> => {
-  if (appName !== 'weblab2' || !WEBLAB2_IMAGE_FILE_TYPES.includes(ext)) {
+  if (
+    !LAB2_LABS_MODERATE_IMAGES.includes(appName ?? '') ||
+    !WEBLAB2_IMAGE_FILE_TYPES.includes(ext)
+  ) {
     return 'skipped';
   }
   const metricsReporter = Lab2Registry.getInstance().getMetricsReporter();
   metricsReporter.incrementCounter('ModerateCustomImage.Attempt', [
     {name: 'UploaderType', value: 'Lab2FileUploader'},
   ]);
-  analyticsReporter.sendEvent(
-    EVENTS.MODERATE_CUSTOM_IMAGE,
-    {
-      UploaderType: 'Lab2 File Uploader',
-      ProjectType: appName,
-    },
-    PLATFORMS.STATSIG
-  );
+  analyticsReporter.sendEvent(EVENTS.MODERATE_CUSTOM_IMAGE, {
+    UploaderType: 'Lab2 File Uploader',
+    ProjectType: appName,
+  });
   try {
     const response = await HttpClient.post(`/v3/images/moderate`, file, true, {
       'Content-Type': file.type || 'application/octet-stream',
@@ -45,14 +46,10 @@ export const moderateImage = async (
     metricsReporter.incrementCounter('ModerateCustomImage.Flagged', [
       {name: 'UploaderType', value: 'Lab2FileUploader'},
     ]);
-    analyticsReporter.sendEvent(
-      EVENTS.FLAGGED_CUSTOM_IMAGE,
-      {
-        UploaderType: 'Lab2 File Uploader',
-        ProjectType: appName,
-      },
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.FLAGGED_CUSTOM_IMAGE, {
+      UploaderType: 'Lab2 File Uploader',
+      ProjectType: appName,
+    });
     return 'flagged';
   } catch (error) {
     metricsReporter.logError('Error with image moderation: ' + error);

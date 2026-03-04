@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
+require_relative '../../../dashboard/config/environment'
 require 'csv'
 
 # This script creates Clever v3 AuthenticationOptions for existing teachers
@@ -17,8 +18,6 @@ do_dry_run = true
 if ARGV[0] == "commit"
   do_dry_run = false
 end
-
-require_relative '../../../dashboard/config/environment'
 
 csv_file_path = File.join(File.dirname(__FILE__), 'clever_v2_to_v3_ids.csv')
 begin

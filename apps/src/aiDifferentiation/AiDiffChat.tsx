@@ -1,4 +1,5 @@
-import {LinkButton} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
 
 import {
@@ -19,7 +20,7 @@ import {
   AiInteractionStatus,
 } from '@cdo/generated-scripts/sharedConstants';
 
-import {EVENTS, PLATFORMS} from '../metrics/AnalyticsConstants';
+import {EVENTS} from '../metrics/AnalyticsConstants';
 import analyticsReporter from '../metrics/AnalyticsReporter';
 import HttpClient from '../util/HttpClient';
 
@@ -29,11 +30,7 @@ import AiDiffChatHeader from './AiDiffChatHeader';
 import AiDiffCreateArtifactButtons from './AiDiffCreateArtifactButtons';
 import AiDiffSuggestedPrompts from './AiDiffSuggestedPrompts';
 import {DEFAULT_THREAD_TITLE} from './constants';
-import {
-  EXIT_TICKET_PROMPT,
-  LESSON_HOOK_PROMPT,
-  SUGGESTED_PROMPTS_FOR_SELECTION,
-} from './predefinedPrompts';
+import {SUGGESTED_PROMPTS_FOR_SELECTION} from './predefinedPrompts';
 import {
   AiArtifact,
   ChatItem,
@@ -67,16 +64,18 @@ const AiDiffArtifactLink: React.FC<{artifact: AiArtifact | undefined}> = ({
       : `Lesson Hook`;
     return (
       <div className={style.artifactShowButtons}>
-        <LinkButton
-          color="gray"
-          size="s"
-          type="secondary"
-          target="_blank"
+        <MuiButton
+          variant="outlined"
+          color="tertiary"
+          size="small"
+          aria-label="Open artifact"
           href={artifact.url}
-          aria-label={'Open artifact'}
-          iconLeft={{iconName: 'shapes'}}
-          text={title}
-        />
+          target="_blank"
+          rel="noopener noreferrer"
+          startIcon={<FontAwesomeV6Icon iconName="shapes" />}
+        >
+          {title}
+        </MuiButton>
       </div>
     );
   } else {
@@ -130,11 +129,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
         threadId: thread,
         url: window.location.href,
       };
-      analyticsReporter.sendEvent(
-        EVENTS.AI_DIFF_CHAT_EVENT,
-        responseEventData,
-        PLATFORMS.STATSIG
-      );
+      analyticsReporter.sendEvent(EVENTS.AI_DIFF_CHAT_EVENT, responseEventData);
     },
     [reportingData]
   );
@@ -263,11 +258,8 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
       if (!prompt.followUpPrompts && !prompt.response) {
         getAIResponse(prompt.prompt, true, prompt.label);
       }
-      if (prompt === EXIT_TICKET_PROMPT) {
-        dispatch(setArtifactType(AiDiffArtifactType.EXIT_TICKET));
-      }
-      if (prompt === LESSON_HOOK_PROMPT) {
-        dispatch(setArtifactType(AiDiffArtifactType.LESSON_HOOK));
+      if (prompt.artifactCandidateType) {
+        dispatch(setArtifactType(prompt.artifactCandidateType));
       }
     },
     [dispatch, getAIResponse, threadTitle]

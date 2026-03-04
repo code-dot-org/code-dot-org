@@ -960,6 +960,7 @@ class Level < ApplicationRecord
         end
       end
     end
+
     properties_camelized
   end
 

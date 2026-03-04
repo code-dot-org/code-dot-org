@@ -564,7 +564,7 @@ html body .sidebarActionTooltip {
       padding: 4px;
       margin-inline-start: 4px;
       border-radius: 4px;
-      background: var(--background-brand-aqua-light, #BFFFFC);
+      background: var(--background-brand-aqua-light, #bffffc);
       color: var(--text-brand-aqua-secondary);
     }
   }
@@ -588,7 +588,7 @@ html body .sidebarActionTooltip {
       margin-bottom: 12px;
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
+      align-items: flex-end;
       align-self: stretch;
 
       a {
@@ -719,23 +719,23 @@ html body .sidebarActionTooltip {
   margin-top: -16px;
   border-radius: 4px;
 
-  p{
+  p {
     white-space: pre-line;
   }
 
   &Blue {
-    border: 1px solid var(--borders-brand-teal-primary, #0093A4);
-    background: var(--background-brand-teal-extra-light, #E0F8F9);
+    border: 1px solid var(--borders-brand-teal-primary, #0093a4);
+    background: var(--background-brand-teal-extra-light, #e0f8f9);
   }
 
   &Red {
-    border: 1px solid var(--accent-strawberry-50, #ED6060);
-    background: var(--accent-strawberry-10, #FFE3E3);
+    border: 1px solid var(--accent-strawberry-50, #ed6060);
+    background: var(--accent-strawberry-10, #ffe3e3);
   }
 
   &Purple {
-    border: 1px solid var(--borders-brand-purple-primary, #8C52BA);
-    background: var(--background-brand-purple-extra-light, #F6EDFD);
+    border: 1px solid var(--borders-brand-purple-primary, #8c52ba);
+    background: var(--background-brand-purple-extra-light, #f6edfd);
   }
 }
 
@@ -745,22 +745,22 @@ html body .sidebarActionTooltip {
   align-items: center;
   gap: 8px;
   border-radius: 4px;
-  background: var(--background-brand-teal-primary, #0093A4);
+  background: var(--background-brand-teal-primary, #0093a4);
   z-index: 1;
-  p{
+  p {
     color: $neutral_white;
     margin: 0;
   }
   &Blue {
-    background: var(--background-brand-teal-primary, #0093A4);
+    background: var(--background-brand-teal-primary, #0093a4);
   }
 
   &Red {
-    background: var(--accent-strawberry-50, #ED6060);
+    background: var(--accent-strawberry-50, #ed6060);
   }
 
   &Purple {
-    background: var(--borders-brand-purple-primary, #8C52BA);
+    background: var(--borders-brand-purple-primary, #8c52ba);
   }
 }
 
@@ -773,16 +773,16 @@ html body .sidebarActionTooltip {
 
 .markdownStyle {
   p {
-  color: var(--text-neutral-primary, #292F36);
-  text-align: center;
-  font-feature-settings: 'liga' off, 'clig' off;
+    color: var(--text-neutral-primary, #292f36);
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
 
-  /* Body/Body 1 - ExtraStrong */
-  font-family: var(--font-family-body, Figtree);
-  font-size: var(--font-size-body-lg, 20px);
-  font-style: normal;
-  font-weight: 700;
-  line-height: var(--font-line-height-body-lg, 28px); /* 140% */
+    /* Body/Body 1 - ExtraStrong */
+    font-family: var(--font-family-body, Figtree);
+    font-size: var(--font-size-body-lg, 20px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: var(--font-line-height-body-lg, 28px); /* 140% */
   }
 }
 
@@ -793,8 +793,8 @@ html body .sidebarActionTooltip {
   padding: 12px 20px;
   gap: 20px;
   border-radius: 4px;
-  border: 1px solid var(--borders-neutral-primary, #D4DAE1);
-  background: var(--background-neutral-secondary, #F0F2F5);
+  border: 1px solid var(--borders-neutral-primary, #d4dae1);
+  background: var(--background-neutral-secondary, #f0f2f5);
 }
 
 .answerKeyHeader {

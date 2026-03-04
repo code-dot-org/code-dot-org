@@ -34,7 +34,7 @@ class SchoolDistrict < ApplicationRecord
   # Gets the seeding file name.
   # @param stub_school_data [Boolean] True for stub file.
   def self.get_seed_filename(stub_school_data)
-    stub_school_data ? 'test/fixtures/school_districts.tsv' : 'config/school_districts.tsv'
+    stub_school_data ? 'test/fixtures/files/school_districts.tsv' : 'config/school_districts.tsv'
   end
 
   # Seeds all the data from the source file.

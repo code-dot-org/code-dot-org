@@ -1,6 +1,8 @@
+import {html} from '@codemirror/lang-html';
 import {esLint, javascript} from '@codemirror/lang-javascript';
 import {json, jsonParseLinter} from '@codemirror/lang-json';
 import {markdown} from '@codemirror/lang-markdown';
+import {xml} from '@codemirror/lang-xml';
 import {
   Diagnostic,
   forEachDiagnostic,
@@ -12,8 +14,49 @@ import {EditorView, ViewUpdate} from '@codemirror/view';
 import js from '@eslint/js';
 import * as eslint from 'eslint-linter-browserify';
 import globals from 'globals';
+import React from 'react';
 
 import {editorConfig} from '@cdo/apps/codemirror/editorConfig';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+
+import MainInstructionsPreview from '../lab2/views/components/Instructions/MainInstructionsPreview';
+import SafeMarkdown from '../templates/SafeMarkdown';
+import './vendor/codemirror.inline-attach';
+
+declare global {
+  interface Window {
+    inlineAttach?: {
+      attachToCodeMirror: (
+        editor: CodeMirrorLegacyAdapter,
+        options: Record<string, unknown>
+      ) => void;
+    };
+  }
+}
+
+// CodeMirror5-compatible adapter used to migrate existing usages of initializeCodeMirror (which uses CM5).
+interface CodeMirrorLegacyAdapter {
+  getValue: () => string;
+  setValue: (value: string) => void;
+  getWrapperElement: () => HTMLElement;
+  getCursor: () => number;
+  setCursor: (position: number) => void;
+  on: (event: string, listener: (...args: unknown[]) => void) => void;
+}
+
+interface Options {
+  callback?: (editor: CodeMirrorLegacyAdapter, update: ViewUpdate) => void;
+  attachments?: boolean;
+  // Kept for CodeMirror 5 callback compatibility; current callers only use errors.
+  onUpdateLinting?: (
+    _editor: CodeMirrorLegacyAdapter,
+    errors: Array<{message: string}>
+  ) => void;
+  preview?: string | Element;
+  game?: string;
+}
+
+type EditorMode = 'javascript' | 'json' | 'markdown' | 'xml' | 'html';
 
 const levelbuilderEditorTheme = EditorView.theme({
   '&': {
@@ -21,28 +64,16 @@ const levelbuilderEditorTheme = EditorView.theme({
   },
 });
 
-// CodeMirror5-compatible adapter used to migrate existing usages of initializeCodeMirror (which uses CM5).
-interface CodeMirrorLegacyAdapter {
-  getValue: () => string;
-  setValue: (value: string) => void;
-  on: (event: string, listener: () => void) => void;
-}
-
 interface Options {
   callback?: (editor: CodeMirrorLegacyAdapter, update: ViewUpdate) => void;
-  // Kept for CodeMirror 5 callback compatibility; current callers only use errors.
-  onUpdateLinting?: (
-    _editor: CodeMirrorLegacyAdapter,
-    errors: Array<{message: string}>
-  ) => void;
 }
-
-type EditorMode = 'javascript' | 'json' | 'markdown';
 
 const languageExtensionMap: Record<EditorMode, Extension> = {
   javascript: javascript(),
   json: json(),
   markdown: markdown(),
+  xml: xml(),
+  html: html(),
 };
 
 function getLanguageExtension(mode: EditorMode): Extension {
@@ -88,18 +119,50 @@ function getErrorMessages(diagnostics: Diagnostic[]): Array<{message: string}> {
     .map(diagnostic => ({message: diagnostic.message}));
 }
 
+function resolvePreviewElement(
+  preview: string | Element | undefined,
+  node: HTMLTextAreaElement
+): Element | null {
+  if (preview instanceof Element) {
+    return preview;
+  }
+
+  const selector = preview || (node.id ? `#${node.id}_preview` : undefined);
+  return selector ? document.querySelector(selector) : null;
+}
+
+/**
+ * initializeCodeMirror6 syncs a textarea on the page with a full-featured
+ * CodeMirror6 editor.
+ * @param {!string|!Element} target - element or id of element to replace.
+ * @param {!string} mode - editor syntax mode
+ * @param {Object} options - misc optional arguments
+ * @param {function} [options.callback] - onChange callback for editor
+ * ADD DOCS HERE
+ * @param {boolean} [options.attachments] - whether to enable attachment
+ *        uploading in this editor.
+ * @param {(string|Element)} [options.preview] - element or id of element to
+ *        populate with a preview. If none specified, will look for an element
+ *        by appending "_preview" to the id of the target element. Only supported for markdown mode.
+ * @param {string} [options.game] optional game name, used to determine which preview to use.
+ */
 function initializeCodeMirror6(
   target: string | Element,
   mode: EditorMode,
   options: Options = {}
 ): CodeMirrorLegacyAdapter {
   const node = resolveTarget(target);
-  const {callback, onUpdateLinting} = options;
+
+  const {callback, attachments, onUpdateLinting, preview, game} = options;
   const changeListeners: Array<() => void> = [];
+  const dropListeners: Array<(event: DragEvent) => void> = [];
   const lintExtension = lintExtensionMap[mode];
+
   const editorContainer = document.createElement('div');
   node.style.display = 'none';
   node.insertAdjacentElement('afterend', editorContainer);
+  const previewElement =
+    mode === 'markdown' ? resolvePreviewElement(preview, node) : null;
 
   const adapter: CodeMirrorLegacyAdapter = {
     getValue() {
@@ -110,11 +173,60 @@ function initializeCodeMirror6(
         changes: {from: 0, to: editor.state.doc.length, insert: value},
       });
     },
+    getWrapperElement() {
+      return editor.dom;
+    },
+    // inline-attach only uses getCursor/setCursor as a round-trip pair around setValue,
+    // so we simply get/set the cursor position as an absolute offset within the document.
+    getCursor() {
+      return editor.state.selection.main.head;
+    },
+    setCursor(position) {
+      editor.dispatch({
+        selection: {anchor: position},
+      });
+    },
     on(event, listener) {
       if (event === 'change') {
-        changeListeners.push(listener);
+        changeListeners.push(() => listener());
+      } else if (event === 'drop') {
+        // This is here to support inline-attach, and inline-attach doesn't use the first argument to its drop event listener, so we ignore it here as well.
+        dropListeners.push((dropEvent: DragEvent) =>
+          listener(undefined, dropEvent)
+        );
       }
     },
+  };
+
+  const updatePreview = () => {
+    if (!previewElement) {
+      return;
+    }
+
+    if (game === 'Pythonlab' || game === 'Weblab2') {
+      createReactRoot(
+        React.createElement(MainInstructionsPreview, {
+          instructionsText: adapter.getValue(),
+          theme: 'Dark',
+        }),
+        previewElement
+      );
+    } else if (game === 'Aichat' || game === 'Music') {
+      createReactRoot(
+        React.createElement(MainInstructionsPreview, {
+          instructionsText: adapter.getValue(),
+          theme: 'Light',
+        }),
+        previewElement
+      );
+    } else {
+      createReactRoot(
+        React.createElement(SafeMarkdown, {
+          markdown: adapter.getValue(),
+        }),
+        previewElement
+      );
+    }
   };
 
   const extensions: Extension[] = [
@@ -123,6 +235,11 @@ function initializeCodeMirror6(
     levelbuilderEditorTheme,
     EditorView.lineWrapping,
     ...(onUpdateLinting && lintExtension ? [lintExtension, lintGutter()] : []),
+    EditorView.domEventHandlers({
+      drop(event) {
+        dropListeners.forEach(listener => listener(event));
+      },
+    }),
     EditorView.updateListener.of(update => {
       if (update.docChanged) {
         node.value = update.state.doc.toString();
@@ -135,6 +252,7 @@ function initializeCodeMirror6(
         const diagnostics = getLintDiagnostics(update.state);
         onUpdateLinting(adapter, getErrorMessages(diagnostics));
       }
+      updatePreview();
     }),
   ];
 
@@ -145,6 +263,36 @@ function initializeCodeMirror6(
     }),
     parent: editorContainer,
   });
+
+  updatePreview();
+
+  if (attachments && window.inlineAttach?.attachToCodeMirror) {
+    const csrfToken =
+      document.querySelector<HTMLMetaElement>('meta[name="csrf-token"]')
+        ?.content || '';
+
+    // Default options assume markdown mode.
+    const attachOptions = {
+      uploadUrl: '/level_assets/upload',
+      uploadFieldName: 'file',
+      downloadFieldName: 'newAssetUrl',
+      allowedTypes: ['image/jpeg', 'image/png', 'image/jpg', 'image/gif'],
+      progressText: '![Uploading file...]()',
+      urlText: '![]({filename})',
+      errorText: 'Error uploading file; images must be no larger than 2MB',
+      extraHeaders: {
+        'X-CSRF-Token': csrfToken,
+      },
+    };
+
+    // Adjust options for javascript mode, which doesn't use markdown syntax for attachments.
+    if (mode === 'javascript') {
+      attachOptions.progressText = '"Uploading file..."';
+      attachOptions.urlText = '"{filename}"';
+    }
+
+    window.inlineAttach.attachToCodeMirror(adapter, attachOptions);
+  }
 
   return adapter;
 }

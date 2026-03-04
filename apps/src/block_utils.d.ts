@@ -6,7 +6,7 @@ import type {BlockDefinition, CustomInputTypes} from './blockly/types';
  *  * Adds any functions from functionsXml to blocksXml. If a function with the
  *   * same id is already present in blocksXml, it won't be added again.
  *    */
-export declare function appendNewFunctions(
+export declare function appendNewFunctionsXml(
   blocksXml: string,
   functionsXml: string
 );

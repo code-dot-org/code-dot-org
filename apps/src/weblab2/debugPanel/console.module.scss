@@ -11,6 +11,12 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  max-width: 100%;
+
+  .consoleLogMessage {
+    min-width: 0; // Allow flex item to shrink so long text wraps.
+    word-break: break-word;
+  }
 
   p {
     margin-bottom: 0;
@@ -25,6 +31,9 @@
 }
 
 .consoleLog {
+  max-width: 100%;
+  min-width: 0; // Allow this flex child to shrink so content inside can wrap within panel width.
+
   span {
     display: block;
     width: 100%;

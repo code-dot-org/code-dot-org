@@ -332,7 +332,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   return (
     <BackpackAPIContext.Provider value={backpackContext}>
       <div className={moduleStyles.sketchlabContainer}>
-        <IntroJSTourWrapper>
+        <IntroJSTourWrapper enabled={true}>
           <SketchlabTourSteps />
         </IntroJSTourWrapper>
         <div style={{width: leftPanelWidth}} className={panelClassName}>

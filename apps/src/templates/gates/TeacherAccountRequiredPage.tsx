@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 import AccountCard from '@cdo/apps/templates/account/AccountCard';
@@ -16,8 +16,7 @@ const TeacherAccountRequiredPage: React.FunctionComponent = () => {
   useEffect(() => {
     analyticsReporter.sendEvent(
       EVENTS.UPGRADE_TO_TEACHER_ACCOUNT_PAGE_VISITED_EVENT,
-      {source: sourcePage},
-      PLATFORMS.STATSIG
+      {source: sourcePage}
     );
   }, [sourcePage]);
 

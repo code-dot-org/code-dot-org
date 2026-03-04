@@ -1,0 +1,15 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2026-03-03T20:00:35.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "display_name": "What makes something look real?",
+    "bubble_choice_description": "Explore how AI creates images that look real by copying patterns it has seen before and test what happens when you ask for detailed.",
+    "thumbnail_url": "https://images.code.org/42fdc7c6c601804d869d4215bc636739-generative-image.png"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-04 02:05:43 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-04 02:08:04 +0000\",\"changed\":[\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Aichat>
