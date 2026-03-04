@@ -4,12 +4,17 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {WEBLAB2_IMAGE_FILE_TYPES} from '@cdo/apps/weblab2/constants';
 
+const LAB2_LABS_MODERATE_IMAGES = ['weblab2', 'aichat'];
+
 export const moderateImage = async (
   file: File,
   ext: string,
   appName?: string
 ): Promise<'ok' | 'flagged' | 'skipped'> => {
-  if (appName !== 'weblab2' || !WEBLAB2_IMAGE_FILE_TYPES.includes(ext)) {
+  if (
+    !LAB2_LABS_MODERATE_IMAGES.includes(appName ?? '') ||
+    !WEBLAB2_IMAGE_FILE_TYPES.includes(ext)
+  ) {
     return 'skipped';
   }
   const metricsReporter = Lab2Registry.getInstance().getMetricsReporter();
