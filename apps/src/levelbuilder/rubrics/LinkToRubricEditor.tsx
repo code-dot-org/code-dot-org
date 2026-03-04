@@ -41,6 +41,7 @@ export default function LinkToRubricEditor({lessons}: LinkToRubricEditorProps) {
                 size="small"
                 href={'/rubrics/' + lesson.rubric_id + '/edit'}
                 target="_blank"
+                rel="noopener noreferrer"
               >{`Edit Rubric`}</MuiButton>
             ) : (
               <MuiButton
@@ -49,6 +50,7 @@ export default function LinkToRubricEditor({lessons}: LinkToRubricEditorProps) {
                 size="small"
                 href={'/rubrics/new?lessonId=' + lesson.id}
                 target="_blank"
+                rel="noopener noreferrer"
               >{`Add Rubric`}</MuiButton>
             )}
             <Typography

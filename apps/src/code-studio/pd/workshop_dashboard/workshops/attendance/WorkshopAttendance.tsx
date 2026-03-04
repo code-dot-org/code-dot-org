@@ -122,6 +122,7 @@ export const WorkshopAttendance: FC = () => {
                         aria-label={`View daily roster for ${formattedDate} in new tab`}
                         href={rosterUrl}
                         target="_blank"
+                        rel="noopener noreferrer"
                       >
                         {rosterLabel}
                       </MuiButton>
