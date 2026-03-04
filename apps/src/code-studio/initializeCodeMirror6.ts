@@ -89,6 +89,9 @@ const getLintExtension = (
   }
 
   if (mode === 'javascript') {
+    // Our core existing use case is for block editing, which needs to enforce ES5.
+    // It also doesn't want to enforce normal linting rules since the code being edited is often just a snippet that won't run on its own.
+    // So, we allow those existing use cases to override "normal" linting, but still offer the normal config for future use cases that want it.
     const eslintConfig = {
       ...(lintConfig?.disableRecommendedJsConfig ? {} : js.configs.recommended),
       languageOptions: {
