@@ -169,7 +169,7 @@ Levels: [{
       sublevel_data = sublevels&.any? ? sublevels.map {|sublevel| get_assessment_level_prompt_info(sublevel, student_id, unit_id, section_id, teacher_id, level, level_number)} : []
     end
 
-    section_stats = get_section_stats_for_level(level, section_id, teacher_id, unit_id)
+    section_stats = section_id ? get_section_stats_for_level(level, section_id, teacher_id, unit_id) : nil
 
     if user_level.nil? && sublevels.nil?
       level_data["Attempted"] = false

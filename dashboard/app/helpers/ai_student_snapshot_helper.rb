@@ -54,7 +54,7 @@ module AiStudentSnapshotHelper
       feedback_json = JSON.parse(response_body)
       feedback_string = feedback_json.is_a?(Hash) ? feedback_json['feedback'] : feedback_json
       saved_record = save_lesson_feedback(feedback_string, student_id, lesson_id, section_id, teacher_id)
-      return {status: evaluation[:status], record: saved_record}
+      return {status: evaluation[:status], record: saved_record, json: feedback_json['feedback']}
     else
       raise StandardError.new("Received status code #{response.code} when processing AI lesson feedback: #{response.body}")
     end

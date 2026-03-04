@@ -34,15 +34,15 @@ class StudentSnapshotsController < ApplicationController
     teacher_id = current_user.id
     section_id = params[:section_id]
 
-    return render json: {error: "Missing required parameters"}, status: :bad_request unless lesson_id && unit_id && student_id && section_id
+    return render json: {error: "Missing required parameters"}, status: :bad_request unless lesson_id && unit_id && student_id
 
     # Validate that the section belongs to the current teacher
-    section = Section.find_by(id: section_id)
-    return render json: {error: "Section not found"}, status: :not_found unless section
+    # section = Section.find_by(id: section_id)
+    # return render json: {error: "Section not found"}, status: :not_found unless section
 
-    unless section.user_id == teacher_id || section.instructors.exists?(id: teacher_id)
-      return render json: {error: "Unauthorized access to section"}, status: :forbidden
-    end
+    # unless section.user_id == teacher_id || section.instructors.exists?(id: teacher_id)
+    #   return render json: {error: "Unauthorized access to section"}, status: :forbidden
+    # end
 
     response = AiStudentSnapshotHelper.generate_lesson_feedback(unit_id, lesson_id, teacher_id, student_id, section_id)
 
@@ -226,7 +226,7 @@ class StudentSnapshotsController < ApplicationController
     section_id = params[:section_id]
     teacher_id = current_user.id
 
-    return render json: {error: "Missing required parameters"}, status: :bad_request unless lesson_id && unit_id && student_id && section_id
+    return render json: {error: "Missing required parameters"}, status: :bad_request unless lesson_id && unit_id && student_id
 
     response = AiStudentSnapshotHelper.generate_lesson_insight(unit_id, lesson_id, teacher_id, student_id, section_id)
 
