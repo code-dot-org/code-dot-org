@@ -223,6 +223,7 @@ namespace :build do
 
   tasks = []
   tasks << :apps if CDO.build_apps
+  tasks << :studio if CDO.build_studio
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
   tasks << :i18n if CDO.build_i18n

@@ -3,6 +3,7 @@
     "sourceCodeDir": ".",
     "root": ".",
     "watchAdditionalPaths": [],
+    "autoBuild": false,
     "publicDir": "dist",
     "publicOutputDir": "frontend-studio"
   },
