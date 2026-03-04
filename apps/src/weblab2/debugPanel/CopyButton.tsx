@@ -1,6 +1,6 @@
-import Button from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {Typography} from '@mui/material';
+import {Typography, IconButton as MuiIconButton} from '@mui/material';
 import React, {useCallback, useRef, useState} from 'react';
 
 import moduleStyles from './details-box.module.scss';
@@ -44,15 +44,16 @@ const CopyButton: React.FunctionComponent<CopyButtonProps> = ({
           text: `Copy ${label}`,
         }}
       >
-        <Button
-          icon={{iconStyle: 'solid', iconName: 'copy'}}
-          isIconOnly
-          size="xs"
-          type="tertiary"
-          color="gray"
-          ariaLabel={`Copy ${label}`}
+        <MuiIconButton
+          variant="text"
+          color="tertiary"
+          size="extraSmall"
           onClick={handleCopy}
-        />
+          aria-label={`Copy ${label}`}
+          type="button"
+        >
+          <FontAwesomeV6Icon iconStyle="solid" iconName="copy" />
+        </MuiIconButton>
       </WithTooltip>
     </div>
   );

@@ -1,8 +1,7 @@
 import Alert from '@code-dot-org/component-library/alert';
-import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useEffect} from 'react';
@@ -119,8 +118,10 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
             <Typography variant="h3" gutterBottom>
               {i18n.pinnedResponses()}
             </Typography>
-            <Button
-              text={i18n.unpinAll()}
+            <MuiButton
+              variant="outlined"
+              color="tertiary"
+              size="medium"
               onClick={() => {
                 analyticsReporter.sendEvent(
                   EVENTS.CFU_RESPONSE_ALL_UNPINNED,
@@ -128,9 +129,10 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
                 );
                 setPinnedResponseIds([]);
               }}
-              color={buttonColors.gray}
-              type="secondary"
-            />
+              type="button"
+            >
+              {i18n.unpinAll()}
+            </MuiButton>
           </div>
           <div className={styles.pinnedResponsesColumns}>
             {pinnedResponses

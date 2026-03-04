@@ -1,6 +1,6 @@
 import Alert, {AlertProps} from '@code-dot-org/component-library/alert';
-import Button from '@code-dot-org/component-library/button';
-import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import React, {useCallback} from 'react';
 import {useSelector} from 'react-redux';
 
@@ -48,11 +48,6 @@ const PublishNotes: React.FunctionComponent = () => {
   const onPublish = useCallback(() => {
     dispatch(publishModelCard());
   }, [dispatch]);
-
-  const spinnerIconProps: FontAwesomeV6IconProps = {
-    iconName: 'spinner',
-    animationType: 'spin',
-  };
 
   const [alertText, type]: [string, AlertProps['type']] = hasFilledOutModelCard
     ? [aichatI18n.modelCard_publishSuccess(), 'success']
@@ -113,32 +108,36 @@ const PublishNotes: React.FunctionComponent = () => {
         })}
       </div>
       <div className={modelCustomizationStyles.footerButtonContainer}>
-        <Button
-          id="uitest-publish-notes-save"
-          text={aichatI18n.modelCustomizationSaveButtonText()}
-          iconLeft={
-            saveInProgress && currentSaveType === 'saveModelCard'
-              ? spinnerIconProps
-              : {iconName: 'download'}
-          }
-          type="secondary"
-          color="black"
+        <MuiButton
+          variant="outlined"
+          color="secondary"
+          size="medium"
           disabled={isReadOnly || saveInProgress || !havePropertiesChanged}
+          className={modelCustomizationStyles.updateButton}
+          id="uitest-publish-notes-save"
           onClick={onSave}
-          className={modelCustomizationStyles.updateButton}
-        />
-        <Button
-          id="uitest-publish-notes-publish"
-          text="Publish"
-          iconLeft={
-            saveInProgress && currentSaveType === 'publishModelCard'
-              ? spinnerIconProps
-              : {iconName: 'upload'}
-          }
+          loading={saveInProgress && currentSaveType === 'saveModelCard'}
+          loadingPosition="start"
+          startIcon={<FontAwesomeV6Icon iconName="download" />}
+          type="button"
+        >
+          {aichatI18n.modelCustomizationSaveButtonText()}
+        </MuiButton>
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
           disabled={isReadOnly || !hasFilledOutModelCard || saveInProgress}
-          onClick={onPublish}
           className={modelCustomizationStyles.updateButton}
-        />
+          id="uitest-publish-notes-publish"
+          onClick={onPublish}
+          loading={saveInProgress && currentSaveType === 'publishModelCard'}
+          loadingPosition="start"
+          startIcon={<FontAwesomeV6Icon iconName="upload" />}
+          type="button"
+        >
+          {'Publish'}
+        </MuiButton>
       </div>
       <SaveChangesAlerts isReadOnly={isReadOnly} />
     </div>
