@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-03 00:39:22 UTC",
+    "serialized_at": "2026-03-04 03:05:22 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -161,7 +161,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "**How can we draw inspiration from existing designs to guide our own?**\n\nIn this lesson, students analyze how visual style communicates mood and audience fit. They examine strengths and weaknesses in existing designs, then apply what they notice by creating AI-assisted mood boards that express a clear aesthetic direction. Through reflection and peer critique, students practice giving constructive, professional-style design feedback.",
-        "preparation": "- Print copies of the Style Critique activity guide (one for each student)\n- (Optional) Print copies of the Mood Boarding activity guide if your students will not use Sketch Lab on Level 1",
+        "preparation": "- Print copies of the Style Critique activity guide (one for each student)\n",
         "student_overview": "**How can we draw inspiration from existing designs to guide our own?**\n\nIn this lesson, you explore how different design styles communicate mood and audience. You create a mood board that expresses your own visual direction and give feedback to help others strengthen their designs."
       },
       "seeding_key": {
@@ -1874,11 +1874,11 @@
       "key": "d0112596-fbb4-4b04-9729-5a541c8cd420",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the first of four websites that varies in style (e.g., clean vs. cluttered, playful vs. serious). Ask students to jot down one first-impression word that captures their reaction to the site and one idea for who this website might be designed for. Encourage quick, instinctive responses—students shouldn't overthink.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the first of three websites that varies in style (e.g., clean, cluttered, playful, serious). Ask students to jot down one first-impression word that captures their reaction to the site and one idea for who this website might be designed for. Encourage quick, instinctive responses—students shouldn't overthink.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If students hesitate, prompt with: \"What's the very first word that pops into your head?\" Reassure them that there are no wrong answers—every impression is valid."
+            "markdown": "If students hesitate, prompt with: “What’s the very first word that pops into your head?” Reassure them there are no wrong answers—every impression is valid. Keep this quick and instinctive.\n"
           }
         ]
       },
@@ -1901,11 +1901,11 @@
       "key": "217b3b22-a8f4-44e9-95af-dff98db06087",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the second website, which has a playful and colorful style. Ask students to jot down one first-impression word that captures their reaction to the site and one idea for who this website might be designed for. Continue to encourage quick, instinctive responses—students shouldn't overthink.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the second website, which has an elegant, high-contrast design. Ask students to jot down one first-impression word that captures their reaction to the site and one idea for who this website might be designed for. Continue to encourage quick, instinctive responses.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If time allows, ask: \"What design choices made you think this was for a younger audience?\""
+            "markdown": "Keep the pace brisk. This is about noticing differences in tone and style—not analyzing them yet.\n"
           }
         ]
       },
@@ -1928,13 +1928,7 @@
       "key": "2967cfe6-3904-45e0-86cd-e7c9a1e84059",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the third website, which has an elegant, high-contrast design. Ask students to jot down one first-impression word that captures their reaction to the site and one idea for who this website might be designed for. Continue to encourage quick, instinctive responses.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time allows, ask: \"What design choices—like color, font, or layout—made you think this site was meant for a creative or professional audience?\""
-          }
-        ]
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the last website, which has a warm and cozy design for a small business or café. Ask students to jot down one first-impression word that captures their reaction to the site and one idea for who this website might be designed for. Once again, encourage quick, instinctive responses."
       },
       "seeding_key": {
         "activity_section.key": "2967cfe6-3904-45e0-86cd-e7c9a1e84059",
@@ -1952,37 +1946,10 @@
       }
     },
     {
-      "key": "19d44515-6f2c-49c0-8b93-be23ad9c9a57",
+      "key": "1cc59677-fcb0-41b6-8ef3-e2239152c47d",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the fourth website, which has a warm and cozy design for a small business or café.\nAsk students to jot down one first-impression word that captures their reaction to the site and one idea for who this website might be designed for. Once again, encourage quick, instinctive responses.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time allows, ask: \"What parts of this design—like color, images, or fonts—make it feel welcoming or personal?\""
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "19d44515-6f2c-49c0-8b93-be23ad9c9a57",
-        "lesson_activity.key": "1354b0be-f562-45f3-9daf-637442727506"
-      }
-    },
-    {
-      "key": "7a883c65-f458-4e16-a8d4-3ed884807d10",
-      "position": 8,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "7a883c65-f458-4e16-a8d4-3ed884807d10",
-        "lesson_activity.key": "1354b0be-f562-45f3-9daf-637442727506"
-      }
-    },
-    {
-      "key": "1cc59677-fcb0-41b6-8ef3-e2239152c47d",
-      "position": 9,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Gather student responses for each site (use the board, sticky notes, or a digital tool). As students share their first-impression words and ideas for who each site might be for, record patterns such as repeated words, shared audiences, or clear differences between designs.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Gather student responses for each site (use the board, sticky notes, or a digital tool). As students share their first-impression words and ideas for who each site might be for, record patterns such as repeated words, shared audiences, or clear differences between designs.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1997,7 +1964,7 @@
     },
     {
       "key": "bc34b66a-e9aa-4baf-87e5-b2f3a462173f",
-      "position": 10,
+      "position": 8,
       "properties": {
       },
       "seeding_key": {
@@ -2007,7 +1974,7 @@
     },
     {
       "key": "f169f3dc-407c-42dc-99fc-387c6f72f4bd",
-      "position": 11,
+      "position": 9,
       "properties": {
         "description": "Notice how some of your words and audience ideas overlap while others are totally different. That shows how quickly design choices communicate — and how much style affects who a site appeals to.",
         "remarks": true
@@ -2019,7 +1986,7 @@
     },
     {
       "key": "17de11b2-3169-46f9-b2f4-c4afca9d8f92",
-      "position": 12,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
@@ -2032,13 +1999,13 @@
       "key": "27a0989b-8e9e-49b0-85a6-0ce0d76d818c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Style Critique activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students annotate the website images in their Style Critique activity guide by labeling Strengths and Weaknesses. Remind them to think about clarity (is it easy to read?), cohesion (do the design elements feel consistent?), and audience fit (does the style match who the site is for?).\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, check that they're using the three criteria to explain their annotations. If students write vague notes (e.g., \"bad colors\"), prompt them to be specific (e.g., \"low contrast between text and background makes it hard to read\").",
-        "duration": "15",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Style Critique activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students annotate the website images in their Style Critique activity guide by labeling Strengths and Weaknesses. Remind them to think about clarity (is it easy to read?), cohesion (do the design elements feel consistent?), and audience fit (does the style match who the site is for?). Have students refer back to their Usability Checklist from Lesson 2 in their Unit Guides if needed.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, check that they're explaining their annotations. If students write vague notes (e.g., \"bad colors\"), prompt them to be specific (e.g., \"low contrast between text and background makes it hard to read\").",
+        "duration": "10",
         "name": "Style Critique",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Model one example first — circle a feature and label it Strength or Weakness with a short note like \"easy to read\" or \"too crowded\". This shows students that their annotations don't need to be elaborate to be effective."
+            "markdown": "Model one example first — circle a feature and label it Strength or Weakness with a short note like \"easy to read\" or \"too crowded\". This shows students that their annotations don't need to be elaborate to be effective. \n\nFor advanced students, challenge them to explain how a weakness could be redesigned.\n"
           }
         ]
       },
@@ -2061,11 +2028,11 @@
       "key": "ebc80107-20eb-4b64-a9f6-7d396c3e9397",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What made one site's design stronger than another?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to identify specific design strengths (e.g., clear navigation, balanced color scheme, readable text). Help students notice how design choices—like layout, color, or readability—affect how effective a site feels. Use this moment to introduce the idea of competitive analysis (learning by comparing what works and what doesn't in different designs) and establish criteria that students will later apply to their own mood boards.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What made one site's design stronger than another?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to identify specific, observable design strengths and weaknesses (e.g., readability, layout consistency, color balance) and explain how those choices affect clarity and audience fit. Use this comparison to introduce the idea of competitive analysis—learning by examining what works and what doesn’t in different designs—and to establish criteria students will apply to their own mood boards.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If discussion stalls, prompt with focused comparisons:\n\n- \"Which site was easier to read, and why?\"\n- \"Which site felt more consistent in style?\"\n- \"Which site seemed to fit its audience best?\"\n\nThis keeps the conversation grounded in observable design choices rather than personal preference."
+            "markdown": "If students respond with vague responses (“It just looks better”), push for specificity and prompt with focused comparisons:\n\n- \"Which site was easier to read, and why?\"\n- \"Which site felt more consistent in style?\"\n- \"Which site seemed to fit its audience best?\"\n\nThis keeps the discussion brief and grounded in observable design choices rather than personal preference."
           }
         ]
       },
@@ -2088,11 +2055,11 @@
       "key": "b527b5c7-c948-45eb-9047-458fb2f85183",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How do these tools help them test or share their ideas before building the final design?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to see that designers use these tools to explore and communicate style or direction before committing to a final design. Students should understand that these tools allow designers to test ideas quickly, get feedback, and align with teammates or clients on the \"feel\" of a project.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How do these tools help them test or share their ideas before building the final design?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to recognize that designers use tools like sketches, mood boards, and AI to explore ideas, compare options, and gather feedback before building a final product. Emphasize that these tools make design intentional, collaborative, and iterative—not guesswork.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If discussion stalls, prompt with: \"Why might a designer want to try different styles before building the full site?\" or \"How do these tools make collaboration or feedback easier?\""
+            "markdown": "If discussion stalls, prompt with: \"Why might a designer want to try different styles before building the full site?\" or \"How do these tools make collaboration or feedback easier?\"\n\nEncourage students to connect back to the Style Critique activity they just completed. \n\n"
           }
         ]
       },
@@ -2112,24 +2079,33 @@
       }
     },
     {
-      "key": "cf0fbed3-6c35-40f2-8674-87316086e1a0",
+      "key": "34386084-772f-4778-b8ce-907f0db4c033",
       "position": 7,
       "properties": {
-        "description": "Now you'll work like visual designers—exploring style and mood before deciding on details.",
-        "remarks": true
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students get out their copy of the AI-Generated Design Unit Guide.\n",
+        "duration": "25",
+        "name": "Mood Boarding"
       },
       "seeding_key": {
-        "activity_section.key": "cf0fbed3-6c35-40f2-8674-87316086e1a0",
+        "activity_section.key": "34386084-772f-4778-b8ce-907f0db4c033",
+        "lesson_activity.key": "5a6f26a2-1567-4477-9e23-d27e8b51eb0d"
+      }
+    },
+    {
+      "key": "961c900f-2d65-440f-befe-a2a7250299c7",
+      "position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "961c900f-2d65-440f-befe-a2a7250299c7",
         "lesson_activity.key": "5a6f26a2-1567-4477-9e23-d27e8b51eb0d"
       }
     },
     {
       "key": "bd57988a-4bbe-4755-98e1-c73d8be6b5b7",
-      "position": 8,
+      "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define mood boarding as a tool designers use to collect visual inspiration. Emphasize that mood boards are a familiar way to express feeling or style, not to create a finished product.",
-        "duration": "20",
-        "name": "Mood Boarding",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define mood boarding and direct students to record the definition in their Unit Guide. Explain that designers use mood boards as a tool to collect visual inspiration. Emphasize that mood boards are a familiar way to express feeling or style, not to create a finished product.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2143,10 +2119,42 @@
       }
     },
     {
-      "key": "46b5d44c-d36e-4d90-87ee-ef5405ff30a6",
-      "position": 9,
+      "key": "2e03b14a-2855-4386-ac1b-50b54588604e",
+      "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 3.\n- Level 1: Students use Sketch Lab to build a mood board that communicates a clear style direction\n- Level 2: Students read the vocabulary definition for mood boarding.\n- Level 3: Students add their own explanation or example of mood boarding to the vocab free response.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are including all key components (colors, fonts/typography, images, and 2–3 style words). Encourage students who are only picking random images/colors to think about how their choices connect to the user experience and the vibe they want to communicate. Ask probing questions like: \"What feeling do you want your user to have when they see this?\" or \"Do these colors and fonts work together as a set?\"",
+      },
+      "seeding_key": {
+        "activity_section.key": "2e03b14a-2855-4386-ac1b-50b54588604e",
+        "lesson_activity.key": "5a6f26a2-1567-4477-9e23-d27e8b51eb0d"
+      }
+    },
+    {
+      "key": "cf0fbed3-6c35-40f2-8674-87316086e1a0",
+      "position": 11,
+      "properties": {
+        "description": "Now you'll work like visual designers—exploring style and mood before deciding on details.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cf0fbed3-6c35-40f2-8674-87316086e1a0",
+        "lesson_activity.key": "5a6f26a2-1567-4477-9e23-d27e8b51eb0d"
+      }
+    },
+    {
+      "key": "ff5e3567-d076-4b46-a083-602f0bcffceb",
+      "position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ff5e3567-d076-4b46-a083-602f0bcffceb",
+        "lesson_activity.key": "5a6f26a2-1567-4477-9e23-d27e8b51eb0d"
+      }
+    },
+    {
+      "key": "46b5d44c-d36e-4d90-87ee-ef5405ff30a6",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1-3.\n- Level 1: Students use Sketch Lab to build a mood board that communicates a clear style.\n- Level 2: Students learn how to save to their “backpack” in Sketch Lab.\n- Level 3: Students refine their mood board and save it to their backpack.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, check that they include all key components (colors, fonts/typography, images, and 2–3 style words). Encourage students who are only picking random images/colors to think about how their choices connect to the user experience and the vibe they want to communicate. Ask probing questions like: \"What feeling do you want your user to have when they see this?\" or \"Do these colors and fonts work together as a set?\"\n",
         "progression_name": "Mood Board Design"
       },
       "seeding_key": {
@@ -2156,7 +2164,7 @@
     },
     {
       "key": "666b4c67-273a-4226-9489-2b3a6887e2ff",
-      "position": 10,
+      "position": 14,
       "properties": {
         "progression_name": "Vocab: Mood Boarding",
         "tips": [
@@ -2177,7 +2185,7 @@
     },
     {
       "key": "c1264cad-c2b7-4001-9456-6eb07f09d44f",
-      "position": 11,
+      "position": 15,
       "properties": {
       },
       "seeding_key": {
@@ -2187,13 +2195,13 @@
     },
     {
       "key": "66f24e0b-15aa-48be-b71c-dc53a306fcf7",
-      "position": 12,
+      "position": 16,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students walk around and look at other mood boards created for the same use case. Explain that this mirrors real design reviews, where teams give each other feedback focused on clarity, cohesion, and audience fit. Direct each student to leave at least one sticky note of feedback using one of the sentence frames.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Encourage students to give feedback that is both specific and kind. If you notice vague notes like \"Looks good,\" redirect them with:\n- \"What exactly about it communicates the style?\"\n- \"What detail could they adjust to make it stronger?\"\n\nThis keeps feedback actionable and helps students practice constructive critique."
+            "markdown": "Encourage students to give feedback that is specific, kind, and actionable. If you notice vague notes like \"Looks good,\" redirect them with:\n\n- \"What exactly about it communicates the style?\"\n- \"What detail could they adjust to make it stronger?\"\n\nThis keeps feedback actionable and helps students practice constructive critique."
           }
         ]
       },
@@ -2206,7 +2214,7 @@
       "key": "90c3c012-db85-457a-b2c0-ece76d31a94d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Facilitate a quick reflection using the Three W's."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the Question of the Day in their Unit Guide. Give them 2–3 minutes to write independently. Then invite a few volunteers to share. As students share, press for connections to today’s critique and mood board work (strengths, weaknesses, clarity, cohesion, audience fit).\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that designers draw inspiration by analyzing what works and doesn’t work in existing designs, then intentionally applying those insights to guide their own style decisions.\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "90c3c012-db85-457a-b2c0-ece76d31a94d",
@@ -2214,15 +2222,19 @@
       }
     },
     {
-      "key": "e3f02903-6912-4ef4-a76b-1edc2fcce5ad",
+      "key": "d95714b0-7b27-41cd-a5a5-6bbdefd8a18f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 4 to complete the End of Lesson Survey.",
-        "name": "End of Lesson Survey",
-        "progression_name": "End of Lesson Survey"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Facilitate a brief whole-class reflection using the Three W’s. Invite a few volunteers to respond to each question. Keep the pace brisk — this is a synthesis moment, not a new discussion.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "As students respond, reinforce these connections explicitly:\n- **What did we learn?** Designers analyze existing designs to identify strengths, weakness, and audience fit.\n- **So what?** Studying other designs helps us make intentional style decisions instead of guessing.\n- **Now what?** We can use tools like mood boards, style critique, and AI to test and refine ideas before building. "
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "e3f02903-6912-4ef4-a76b-1edc2fcce5ad",
+        "activity_section.key": "d95714b0-7b27-41cd-a5a5-6bbdefd8a18f",
         "lesson_activity.key": "286637ee-7e0d-4ffc-8082-a13cb7e1ee8b"
       }
     },
@@ -4751,7 +4763,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-generated-design-lesson4-level1_2026"
+          "ai-generated-design-lesson4-level1a_2026"
         ],
         "lesson.key": "Lesson 4: Finding Your Style",
         "lesson_group.key": "lessonGroup-3",
@@ -4759,77 +4771,55 @@
         "activity_section.key": "46b5d44c-d36e-4d90-87ee-ef5405ff30a6"
       },
       "level_keys": [
-        "ai-generated-design-lesson4-level1_2026"
+        "ai-generated-design-lesson4-level1a_2026"
       ]
     },
     {
       "chapter": 21,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Vocab: Mood Boarding"
+        "progression": "Mood Board Design"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-generated-design-lesson4-level2_2026"
+          "ai-generated-design-lesson4-level2_v2026"
         ],
         "lesson.key": "Lesson 4: Finding Your Style",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "666b4c67-273a-4226-9489-2b3a6887e2ff"
+        "activity_section.key": "46b5d44c-d36e-4d90-87ee-ef5405ff30a6"
       },
       "level_keys": [
-        "ai-generated-design-lesson4-level2_2026"
+        "ai-generated-design-lesson4-level2_v2026"
       ]
     },
     {
       "chapter": 22,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Vocab: Mood Boarding"
+        "progression": "Mood Board Design"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-generated-design-lesson4-level3_2026"
+          "ai-generated-design-lesson4-level3-v2_2026"
         ],
         "lesson.key": "Lesson 4: Finding Your Style",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "666b4c67-273a-4226-9489-2b3a6887e2ff"
+        "activity_section.key": "46b5d44c-d36e-4d90-87ee-ef5405ff30a6"
       },
       "level_keys": [
-        "ai-generated-design-lesson4-level3_2026"
+        "ai-generated-design-lesson4-level3-v2_2026"
       ]
     },
     {
       "chapter": 23,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "End of Lesson Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson4-level4_2026"
-        ],
-        "lesson.key": "Lesson 4: Finding Your Style",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "e3f02903-6912-4ef4-a76b-1edc2fcce5ad"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson4-level4_2026"
-      ]
-    },
-    {
-      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4851,7 +4841,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 24,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4873,7 +4863,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 25,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4895,7 +4885,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 26,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -4917,7 +4907,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 27,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -4939,7 +4929,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 28,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4961,7 +4951,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4983,7 +4973,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5005,7 +4995,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 31,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5027,7 +5017,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 32,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5049,7 +5039,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 33,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -5071,7 +5061,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 34,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5093,7 +5083,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -5115,7 +5105,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5137,7 +5127,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -5159,7 +5149,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5181,7 +5171,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5203,7 +5193,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 40,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5225,7 +5215,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 41,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5247,7 +5237,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 42,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -5269,7 +5259,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 43,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5291,7 +5281,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5313,7 +5303,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5335,7 +5325,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 46,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5357,7 +5347,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 47,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -5379,7 +5369,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 48,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5401,7 +5391,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 49,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5423,7 +5413,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 50,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -5445,7 +5435,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 51,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5467,7 +5457,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 52,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -5489,7 +5479,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5511,7 +5501,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5533,7 +5523,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 55,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5555,7 +5545,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 56,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5577,7 +5567,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 57,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5599,7 +5589,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 58,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5621,7 +5611,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5643,7 +5633,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 60,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5665,7 +5655,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 61,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5687,7 +5677,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 62,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5709,7 +5699,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5731,7 +5721,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 64,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5753,7 +5743,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 65,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -5775,7 +5765,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 66,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5797,7 +5787,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 67,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5819,7 +5809,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 68,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5841,7 +5831,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 69,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5863,7 +5853,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 70,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -5885,7 +5875,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 71,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5907,7 +5897,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 72,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5929,7 +5919,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 73,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5951,7 +5941,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 74,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5973,7 +5963,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 75,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5995,7 +5985,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 76,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6017,7 +6007,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 77,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6270,9 +6260,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-generated-design-lesson4-level1_2026",
+        "level.key": "ai-generated-design-lesson4-level1a_2026",
         "script_level.level_keys": [
-          "ai-generated-design-lesson4-level1_2026"
+          "ai-generated-design-lesson4-level1a_2026"
         ],
         "lesson.key": "Lesson 4: Finding Your Style",
         "lesson_group.key": "lessonGroup-3",
@@ -6282,38 +6272,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-generated-design-lesson4-level2_2026",
+        "level.key": "ai-generated-design-lesson4-level2_v2026",
         "script_level.level_keys": [
-          "ai-generated-design-lesson4-level2_2026"
+          "ai-generated-design-lesson4-level2_v2026"
         ],
         "lesson.key": "Lesson 4: Finding Your Style",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "666b4c67-273a-4226-9489-2b3a6887e2ff"
+        "activity_section.key": "46b5d44c-d36e-4d90-87ee-ef5405ff30a6"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ai-generated-design-lesson4-level3_2026",
+        "level.key": "ai-generated-design-lesson4-level3-v2_2026",
         "script_level.level_keys": [
-          "ai-generated-design-lesson4-level3_2026"
+          "ai-generated-design-lesson4-level3-v2_2026"
         ],
         "lesson.key": "Lesson 4: Finding Your Style",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "666b4c67-273a-4226-9489-2b3a6887e2ff"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson4-level4_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson4-level4_2026"
-        ],
-        "lesson.key": "Lesson 4: Finding Your Style",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "e3f02903-6912-4ef4-a76b-1edc2fcce5ad"
+        "activity_section.key": "46b5d44c-d36e-4d90-87ee-ef5405ff30a6"
       }
     },
     {
@@ -6993,6 +6971,20 @@
       }
     },
     {
+      "name": "[KEY] AI-Generated Design Unit Guide",
+      "url": "https://docs.google.com/document/d/1wSc_2IjW_waULYQCyeD6XR-8azoO21FOf5BXgP4PnJc/edit?usp=sharing",
+      "key": "_key_ai-generated_design_unit_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai-generated_design_unit_guide"
+      }
+    },
+    {
       "name": "[KEY] Brand Analysis",
       "url": "https://docs.google.com/document/d/1WLOJbjXpvQS8JkO2xZXhyzotjgpLvmhv60Ry7XEdL-w/edit?usp=sharing",
       "key": "_key_brand_analysis",
@@ -7049,20 +7041,6 @@
       }
     },
     {
-      "name": "[KEY] Mood Boarding (Optional)",
-      "url": "https://docs.google.com/document/d/18snRpFpKjxtdM6lhd2Ldz_fgyJCcaFH7-leZJwA6RY4/edit?usp=sharing",
-      "key": "_key_mood_boarding_optional_",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_mood_boarding_optional_"
-      }
-    },
-    {
       "name": "[KEY] Site Maps (Optional)",
       "url": "https://docs.google.com/document/d/1c_Dlt_AqMWlGaAH1qjObZzEOaiXmUK_a0V7m9dm03HE/edit?usp=drive_link",
       "key": "_key_site_maps_optional_",
@@ -7078,7 +7056,7 @@
     },
     {
       "name": "[KEY] Style Critique",
-      "url": "https://docs.google.com/document/d/1jAY__4f0ZLQwtCHKKwqoXDbQWzPC3sI0PYS2H7YiQCw/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1JMjlvqYvyaqtaSuYoRr5tvrpa-BRuktCeIGJ2q7oULw/edit?usp=sharing",
       "key": "_key_style_critique",
       "properties": {
         "audience": "Verified Teacher",
@@ -7159,6 +7137,21 @@
       },
       "seeding_key": {
         "resource.key": "accessibility_in_design_1"
+      }
+    },
+    {
+      "name": "AI-Generated Design Unit Guide",
+      "url": "https://docs.google.com/document/d/1Znt4C-uU4F-fVcYYlwx6qD3XcGqky9nbDbV84Kzqu5g/edit?usp=drive_link",
+      "key": "ai-generated_design_unit_guide",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ai-generated_design_unit_guide"
       }
     },
     {
@@ -7294,7 +7287,7 @@
     },
     {
       "name": "Finding Your Style",
-      "url": "https://docs.google.com/presentation/d/1HXmN7QLfDOcCGi2qa1vrDAlpf4EJK0ZsKIXFxE11G0Q/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1x4OKlHp446ePQ2Ansg-K2bkBdz4spxrkDPLeIIuiwC8/edit?usp=sharing",
       "key": "finding_your_style",
       "properties": {
         "audience": "Teacher",
@@ -7379,21 +7372,6 @@
       }
     },
     {
-      "name": "Mood Boarding (Optional)",
-      "url": "https://docs.google.com/document/d/1XM2kXyUqddHYFE9LO_3Elo_0D9GZ0TxIih14JXISJMs/edit?usp=sharing",
-      "key": "mood_boarding_optional_",
-      "properties": {
-        "audience": "Student",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "mood_boarding_optional_"
-      }
-    },
-    {
       "name": "Paper App Prototype Mystery Components",
       "url": "https://docs.google.com/presentation/d/1xtYFEWOOm06tpjkvQXtLUT8BREPlFQBuigkgroeS3iU/edit?usp=sharing",
       "key": "paper_app_prototype_mystery_components",
@@ -7437,7 +7415,7 @@
     },
     {
       "name": "Style Critique",
-      "url": "https://docs.google.com/document/d/12QHka84PlsiOyx3l1fgbCqvhE8-BcT2vElNVMhmCTyg/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1HJy1HXexMN-EZSgzkavSn7h33flnojt95wXGbWibR30/edit?usp=sharing",
       "key": "style_critique",
       "properties": {
         "audience": "Student",
@@ -7665,6 +7643,18 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 1: Introduction to Web Apps",
+        "resource.key": "_key_ai-generated_design_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Introduction to Web Apps",
+        "resource.key": "ai-generated_design_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Introduction to Web Apps",
         "resource.key": "paper_app_prototype_mystery_components"
       }
     },
@@ -7713,12 +7703,6 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 4: Finding Your Style",
-        "resource.key": "_key_mood_boarding_optional_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 4: Finding Your Style",
         "resource.key": "_key_style_critique"
       }
     },
@@ -7726,12 +7710,6 @@
       "seeding_key": {
         "lesson.key": "Lesson 4: Finding Your Style",
         "resource.key": "finding_your_style"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 4: Finding Your Style",
-        "resource.key": "mood_boarding_optional_"
       }
     },
     {

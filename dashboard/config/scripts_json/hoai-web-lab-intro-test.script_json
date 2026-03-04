@@ -1,0 +1,215 @@
+{
+  "script": {
+    "name": "hoai-web-lab-intro-test",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-03-03 20:58:50 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "hoai-web-lab-intro-test"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "hoai-web-lab-intro-test"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Progression Idea 1",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-lab-intro-test"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Progression Idea 2",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-lab-intro-test"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "46c412b5-d645-4c7d-9eaa-a37a7541aab0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "46c412b5-d645-4c7d-9eaa-a37a7541aab0",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-lab-intro-test"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "ade557a8-b728-4b6d-8965-7b915e3634f5",
+      "position": 1,
+      "properties": {
+        "progression_name": "AI Chat - HTML"
+      },
+      "seeding_key": {
+        "activity_section.key": "ade557a8-b728-4b6d-8965-7b915e3634f5",
+        "lesson_activity.key": "46c412b5-d645-4c7d-9eaa-a37a7541aab0"
+      }
+    },
+    {
+      "key": "c721aa63-954b-458a-931a-8bd6805ae8bb",
+      "position": 2,
+      "properties": {
+        "progression_name": "AI Chat - CSS"
+      },
+      "seeding_key": {
+        "activity_section.key": "c721aa63-954b-458a-931a-8bd6805ae8bb",
+        "lesson_activity.key": "46c412b5-d645-4c7d-9eaa-a37a7541aab0"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Chat - HTML"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dan-experiment-ai-chat-copy-paste"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-lab-intro-test",
+        "activity_section.key": "ade557a8-b728-4b6d-8965-7b915e3634f5"
+      },
+      "level_keys": [
+        "dan-experiment-ai-chat-copy-paste"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Chat - CSS"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dan-experiment-ai-chat-copy-paste2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-lab-intro-test",
+        "activity_section.key": "c721aa63-954b-458a-931a-8bd6805ae8bb"
+      },
+      "level_keys": [
+        "dan-experiment-ai-chat-copy-paste2"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "dan-experiment-ai-chat-copy-paste",
+        "script_level.level_keys": [
+          "dan-experiment-ai-chat-copy-paste"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-lab-intro-test",
+        "activity_section.key": "ade557a8-b728-4b6d-8965-7b915e3634f5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dan-experiment-ai-chat-copy-paste2",
+        "script_level.level_keys": [
+          "dan-experiment-ai-chat-copy-paste2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-lab-intro-test",
+        "activity_section.key": "c721aa63-954b-458a-931a-8bd6805ae8bb"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

@@ -1,0 +1,52 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-03-03T19:16:29.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Style Content\r\n\r\nAnswer the prompts from the AI Chat to start building a website around one of your interests",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "**Core Instructions:**  \nYou are helping a middle school student describe how they want their website to look.  \n\nAsk the 5 questions below **one at a time**. Wait for their answer before asking the next question. Encourage short, simple answers (a few words or 1 sentence).  \n\nAfter all 5 answers, create a clean **style brief** using the template at the bottom. You may interpret their answers to make smart design decisions (for example, if they say “fun and bright,” you can infer bold fonts and high-contrast colors).  \n\nDo **not** show your reasoning.  \nDo **not** ask extra questions.  \nKeep everything clear and simple.\n\n---\n\n## Ask These 5 Questions (One at a Time)\n\n1) If your website were a vibe, what would it feel like?  \n(Examples: calm, sporty, dark, colorful, cozy, futuristic, elegant, fun, bold.)\n\n2) What colors do you like for this website?  \n(Name 2–4 colors you want to see.)\n\n3) How should the titles (big headings) look? For example: Big and bold, Fancy and stylish, Simple and clean, Fun and playful? You can choose one or describe your own!\n\n4) How should the regular text look? For example: Easy and simple to read, Small and compact, Big and spaced out, Neat and centered? Choose one or describe something else!\n\n5) Do you want different parts of the page to look different?  \nFor example: Different background colors, Dark sections and light sections, Picture backgrounds, All the same?\n\n---\n\n## After collecting answers, output ONLY this:\n\n```txt\nGenerate the CSS for a website using the following style brief, and then link the CSS to the HTML:\n\n- Overall Vibe: [LLM summarizes student's vibe]\n- Font Direction:\n  - Headings: [LLM interprets from answers]\n  - Body Text: [LLM interprets from answers]\n- Color Palette:\n  - Primary: [LLM selects from student colors]\n  - Secondary: [LLM selects from student colors]\n  - Background: [LLM determines based on vibe]\n  - Accent: [LLM determines if appropriate]\n- Heading Appearance: [LLM interprets size, weight, alignment, style]\n- Paragraph Appearance: [LLM interprets readability, spacing, alignment]\n- Section Background Styles: [LLM interprets contrast, variation, images, or consistency]\n```\n\nImportant:\n- Keep the design cohesive and readable.\n- Use consistent fonts and colors.\n- Make sure the design matches the student’s vibe.",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "editable",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "thumbnail_url": "https://images.code.org/cb50057a78bf7c950df533fe4c511fd9-mood-board.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-03T19:16:29.801+00:00\",\"changed\":[\"cloned from \\\"dan-experiment-ai-chat-copy-paste\\\"\"],\"cloned_from\":\"dan-experiment-ai-chat-copy-paste\"},{\"changed_at\":\"2026-03-03 19:16:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-03 19:42:09 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-03 20:13:49 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Aichat>

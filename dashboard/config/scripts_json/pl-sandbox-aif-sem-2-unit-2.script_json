@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-02 19:25:50 UTC",
+    "serialized_at": "2026-03-03 20:53:54 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -582,31 +582,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "pl-sandbox-aif2-u2-arrowfunction-17"
-        ],
-        "progression": "Functions in JavaScript"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "pl-sandbox-aif2-u2-arrowfunction-17"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-sandbox-aif-sem-2-unit-2",
-        "activity_section.key": "fac4da79-8679-42d5-ac3c-39b5d9d69a16"
-      },
-      "level_keys": [
-        "pl-sandbox-aif2-u2-arrowfunction-17"
-      ]
-    },
-    {
-      "chapter": 20,
-      "position": 20,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
         "progression": "Functions in JavaScript"
       },
       "bonus": false,
@@ -624,9 +599,9 @@
       ]
     },
     {
-      "chapter": 21,
-      "position": 21,
-      "activity_section_position": 6,
+      "chapter": 20,
+      "position": 20,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -649,9 +624,9 @@
       ]
     },
     {
-      "chapter": 22,
-      "position": 22,
-      "activity_section_position": 7,
+      "chapter": 21,
+      "position": 21,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -674,9 +649,9 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 23,
-      "activity_section_position": 8,
+      "chapter": 22,
+      "position": 22,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -699,8 +674,8 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 24,
+      "chapter": 23,
+      "position": 23,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -724,8 +699,8 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 25,
+      "chapter": 24,
+      "position": 24,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -749,8 +724,8 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 26,
+      "chapter": 25,
+      "position": 25,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -774,8 +749,8 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 27,
+      "chapter": 26,
+      "position": 26,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -799,8 +774,8 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 28,
+      "chapter": 27,
+      "position": 27,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -824,8 +799,8 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 29,
+      "chapter": 28,
+      "position": 28,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
@@ -849,8 +824,8 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 30,
+      "chapter": 29,
+      "position": 29,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -874,8 +849,8 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 31,
+      "chapter": 30,
+      "position": 30,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -899,8 +874,8 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 32,
+      "chapter": 31,
+      "position": 31,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -924,8 +899,8 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 33,
+      "chapter": 32,
+      "position": 32,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -949,8 +924,8 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 34,
+      "chapter": 33,
+      "position": 33,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -974,8 +949,8 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 35,
+      "chapter": 34,
+      "position": 34,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
@@ -999,8 +974,8 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 36,
+      "chapter": 35,
+      "position": 35,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
@@ -1234,18 +1209,6 @@
         "level.key": "pl-sandbox-aif2-U2-functions-Lab-16",
         "script_level.level_keys": [
           "pl-sandbox-aif2-U2-functions-Lab-16"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-sandbox-aif-sem-2-unit-2",
-        "activity_section.key": "fac4da79-8679-42d5-ac3c-39b5d9d69a16"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "pl-sandbox-aif2-u2-arrowfunction-17",
-        "script_level.level_keys": [
-          "pl-sandbox-aif2-u2-arrowfunction-17"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

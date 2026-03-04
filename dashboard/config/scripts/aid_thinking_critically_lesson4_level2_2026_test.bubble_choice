@@ -1,0 +1,10 @@
+name 'aid-thinking-critically-lesson4-level2_2026-test'
+display_name 'Project Templates'
+description 'Choose the medium you prefer and draft the Co-Creation with AI section for your project'
+
+sublevels
+level 'aid-thinking-critically-lesson4-level2a_2026-test'
+level 'aid-thinking-critically-lesson4-level2b_2026-test'
+level 'aid-thinking-critically-lesson4-level2c_2026-test'
+
+uses_lab2
