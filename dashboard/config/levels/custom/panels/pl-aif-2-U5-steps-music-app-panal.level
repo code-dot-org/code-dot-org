@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2026-03-02T16:25:43.000Z",
   "level_num": "custom",
@@ -9,89 +10,62 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "## Deep Dive\n\nThis panel level takes a closer look at what the code from the previous level is doing.\n\nAs you click through, focus on **noticing patterns and ideas**, not memorizing syntax. You are not expected to understand or remember every line of code yet.\n\nThe goal is simply to start building a mental picture of how:\n- an app asks for data\n- receives a response\n- and updates what the user sees\n\nMore explanation and practice are coming next.\n",
-        "imageUrl": "https://images.code.org/4b6f2f8ca728eb8505c67b3d446ca49b-pokemonAPI.png",
-        "key": "pl-aif-2-U5-API-Calll-POkemon-panel-ca1b435a-713a-44b6-9ca1-5de1dddec908"
-      },
-      {
-        "text": "## Getting Started\nThis variable finds the Generate button on the page and saves a reference to it so the code can react when the user clicks it.",
-        "imageUrl": "https://images.code.org/9b74f92ef4c5ee0611e31852a6fc117e-pokemonAPI (1).png",
-        "key": "pl-aif-2-U5-API-Calll-POkemon-panel-7c7e183a-9912-4f38-8b6d-555ee595e195",
+        "text": "##Playlist Activity Tutorial\nIn the next activity, you’ll build a music web app. These panels walk you through each step, including using an API to fetch and display a playlist.",
+        "imageUrl": "https://images.code.org/3eaba7ae3cf636121186d76653a82d58-playlist.png",
+        "key": "pl-aif-2-U5-steps-music-app-panal-1a2d86f6-474a-4004-b046-1e5049309d79",
         "layout": "text-bottom-right"
       },
       {
-        "text": "## Main Fetch Logic \nListens for a click on the Generate button. When clicked, the function inside runs — this starts the whole process of picking and showing a Pokémon.",
-        "imageUrl": "https://images.code.org/a26ee9fe9cadc66b321e2889fb25f731-pokemonAPI (14).png",
-        "key": "pl-aif-2-U5-API-Calll-POkemon-panel-3f21111e-1637-4492-b93c-cea694ddda8c",
+        "text": "## Layout Design \nIn the previous level, you sketched how the playlist data should appear. Be sure to save that image, as you’ll upload it in the next level to create the card layout.",
+        "imageUrl": "https://images.code.org/87785242bda4c100776dda0ed7db2270-playlist (1).png",
+        "key": "pl-aif-2-U5-steps-music-app-panal-18be9ff4-aa9b-4aed-8224-e17a316df41c",
         "layout": "text-bottom-right"
       },
       {
-        "text": "## Getting a random ID\nHere, the variable stores and picks a random number between 1 and 898 (covers Pokémon Generations 1–8). That number will identify which Pokémon to request from the API.",
-        "imageUrl": "https://images.code.org/577947bd85cb3d77ec55df8d0878599b-pokemonAPI (3).png",
-        "key": "pl-aif-2-U5-API-Calll-POkemon-panel-2260ddbd-0adb-45f6-b017-c05c5c3baa93",
+        "text": "## Starter Files\nThis activity begins with a blank project. You’ll see a JSON file that contains the music data, but the other files—HTML, CSS, and JavaScript—are currently empty.",
+        "imageUrl": "https://images.code.org/c1a8e0bcaaffbaab5e83da3668e5e218-playlist (2).png",
+        "key": "pl-aif-2-U5-steps-music-app-panal-51d25811-5444-44d6-a815-e2231ada547b",
         "layout": "text-bottom-right"
       },
       {
-        "text": "## Getting the API URL\nThis constant builds the API web address (URL) using the random number. The app will fetch data from this address to get details for that specific Pokémon.",
-        "imageUrl": "https://images.code.org/f9ad35f60e211d913e2441b6aafc07f7-pokemonAPI (4).png",
-        "key": "pl-aif-2-U5-API-Calll-POkemon-panel-2928995b-8f3c-46d9-9eb2-c9a47b1f486d",
+        "text": "## Upload the layout image\nFirst, upload the layout card image you created earlier.\nOpen the AI Tutor, attach your image file, and include a brief description of what you’d like it to help you build.",
+        "imageUrl": "https://images.code.org/38f51c21a5fbb20d1d72d70eb564b633-playlist (3).png",
+        "key": "pl-aif-2-U5-steps-music-app-panal-a71e2a5c-f44c-4368-a991-9dda3d2dd025",
         "layout": "text-bottom-right"
       },
       {
-        "text": "## The Fetch function\nSends a network request to the Pokémon API URL you built. It asks the server, “Give me the data for this Pokémon.”",
-        "imageUrl": "https://images.code.org/e103bed776b625a9668b597fb65132cd-pokemonAPI (5).png",
-        "key": "pl-aif-2-U5-API-Calll-POkemon-panel-86cc61ce-1545-44c2-89f8-c3f48427fe91",
+        "text": "## Build the HTML Structure\nStart with the HTML—the foundation of your website.\nUpload your layout image to the AI Tutor, then write a simple prompt explaining what you want to build and how the playlist cards should be structured.\n",
+        "imageUrl": "https://images.code.org/9f112e59dc21365a6b74fbe334a218ef-playlist (4).png",
+        "key": "pl-aif-2-U5-steps-music-app-panal-70132e35-b3f0-4f70-984c-9892671f8e77",
         "layout": "text-bottom-right"
       },
       {
-        "text": "## Checking for success\nThis part checks whether the server returned a successful response. If it did, convert the response into JSON (a JavaScript object the app can use). If not, throw an error so we can handle it.",
-        "imageUrl": "https://images.code.org/8e5cc1d8bf30719aa90dae3f6c6f88a7-pokemonAPI (6).png",
-        "key": "pl-aif-2-U5-API-Calll-POkemon-panel-c5aca680-fa2a-4025-be59-c679a667357b",
+        "text": "## Review the AI plan\nThe AI Tutor will suggest a plan and describe the changes it wants to make.\nRead the description carefully and decide whether to accept or reject it.\n\n- If you reject the plan, revise your prompt and try again.\n\n- If you accept the plan, the updated HTML code will appear in your project.",
+        "imageUrl": "https://images.code.org/ff42d56bd1157486886f036f33707f66-playlist (5).png",
+        "key": "pl-aif-2-U5-steps-music-app-panal-b4d07980-4e0b-4f4a-b8a2-764b39a63688",
         "layout": "text-bottom-right"
       },
       {
-        "text": "## Updating the UI\nWhen the JSON is ready, pass it to updateUI. That function reads the data and updates what the user sees on the screen.\n",
-        "imageUrl": "https://images.code.org/3451708c61aaf99eb730deee16bd78b4-pokemonAPI (7).png",
-        "key": "pl-aif-2-U5-API-Calll-POkemon-panel-c2e76c31-f703-4d0e-9256-096fc3290e43",
+        "text": "## Add the CSS styling\nNext, add the CSS layer. Remember, CSS controls the look and style of your web app.\n\nPrompt the AI Tutor to create and style the CSS file for your music cards. After reviewing and accepting the suggested changes, check the code preview.\n\nDecide whether you want to keep the first version or revise your prompt to tweak the styling.\n\n*Feel free to adjust the design to match your original layout.*",
+        "imageUrl": "https://images.code.org/56bd544a00d0921f6c58a5fabdb173ee-playlist (6).png",
+        "key": "pl-aif-2-U5-steps-music-app-panal-284050e0-e4be-449a-bd32-ff2287499764",
         "layout": "text-bottom-right"
       },
       {
-        "text": "## Catching Errors\nIf something goes wrong with the fetch (network issue, bad response), catch the error, log it for debugging, and show a simple “Error!” message in the UI.",
-        "imageUrl": "https://images.code.org/5a66778e08552162fb5c587cf0c6134c-pokemonAPI (8).png",
-        "key": "pl-aif-2-U5-API-Calll-POkemon-panel-bc9a2f73-10c2-426c-8e8f-f9d25da1af5a",
+        "text": "## Add the JavaScript Functionality\n\nFinally, add the JavaScript. This code has two main steps:\n\n- 1. Fetch and render the data\n\n- 2. Loop through the array to build the HTML\n\nStart by asking the AI Tutor to help you write a function that fetches the data from the JSON file and renders it to the page.\n\nWhen reviewing the code, look for the use of async and await. These keywords allow your app to load the data properly before displaying it.",
+        "imageUrl": "https://images.code.org/4547ae3805560418e32f103271aa0532-playlist (7).png",
+        "key": "pl-aif-2-U5-steps-music-app-panal-8824c347-e5bc-4020-bf8c-e565b3f65257",
         "layout": "text-bottom-right"
       },
       {
-        "text": "## Updating the content\nThis function takes the Pokémon data and fills the page with it. It’s the bridge from data → visible content.",
-        "imageUrl": "https://images.code.org/3e394592b627dcd176509f290742f96f-pokemonAPI (9).png",
-        "key": "pl-aif-2-U5-API-Calll-POkemon-panel-575ab061-a683-464a-9a67-cf153a0b9424"
-      },
-      {
-        "text": "## Getting type and name elements\n- Shows the Pokémon’s name on the page by reading data.name from the JSON.\n\n- Gets the list of the Pokémon’s types (like “grass” or “flying”), turns them into a simple string, and displays them. If there are multiple types, they’re joined with a bullet (•).",
-        "imageUrl": "https://images.code.org/8483996de5e42db2f8243a166fdcb5db-pokemonAPI (10).png",
-        "key": "pl-aif-2-U5-API-Calll-POkemon-panel-c70a5ff4-74fc-40bc-8a87-b8a0ec654a26",
+        "text": "## Loop Through the Array and Build the Cards\nNext, check whether your code loops through the entire array of songs. You can confirm this by looking at the preview—if it’s working, you should see all of the playlist cards filled in with the correct information.\n\n- If the preview still shows only one card, return to the AI Tutor and ask for code that loops through the array and builds the HTML for each item.\n\n*Remember: the AI Tutor may generate slightly different code each time. It’s normal to iterate a few times to get the result you want.*\n\n---\nNow, it's your turn to try. Return to this tutorial anytime. ",
+        "imageUrl": "https://images.code.org/1ba73ecd741fc56a82494e64e966e995-playlist (8).png",
+        "key": "pl-aif-2-U5-steps-music-app-panal-21671b8b-b0cf-4ba8-91b8-12f30ca5b1a6",
         "layout": "text-bottom-right"
-      },
-      {
-        "text": "## Update Stats\nShows basic stats: base experience, height, and weight. Note the code divides height and weight by 10 to convert units into meters/kilograms. If base_experience isn’t available, it shows N/A.",
-        "imageUrl": "https://images.code.org/e52bb4654f70dbed09ee16ec5e00fb00-pokemonAPI (11).png",
-        "key": "pl-aif-2-U5-API-Calll-POkemon-panel-6da1910e-92b5-4124-9723-bb20f08028ff",
-        "layout": "text-bottom-right"
-      },
-      {
-        "text": "## Ability formatting\nShows basic stats: base experience, height, and weight. Note the code divides height and weight by 10 to convert units into meters/kilograms. If base_experience isn’t available, it shows N/A.",
-        "imageUrl": "https://images.code.org/e19a5a587b6adb77c0559e60109cc5f3-pokemonAPI (12).png",
-        "key": "pl-aif-2-U5-API-Calll-POkemon-panel-922a898b-5a46-4750-b57c-c73ac3983242"
-      },
-      {
-        "text": "## Button Update\nUpdates the button text so users know they can click again to fetch another random Pokémon.",
-        "imageUrl": "https://images.code.org/73d084440d46c869a5510c42ca8155e1-pokemonAPI (13).png",
-        "key": "pl-aif-2-U5-API-Calll-POkemon-panel-ed058273-3ab2-4bd9-ad08-b2e7bd981ce3"
       }
     ],
     "name_suffix": "_2025-pilot"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-02T16:25:43.405+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U5-API-Calll-POkemon-panel\\\"\"],\"cloned_from\":\"pl-aif-2-U5-API-Calll-POkemon-panel\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-02T16:25:43.405+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U5-API-Calll-POkemon-panel\\\"\"],\"cloned_from\":\"pl-aif-2-U5-API-Calll-POkemon-panel\"},{\"changed_at\":\"2026-03-03 17:49:27 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Panels>
