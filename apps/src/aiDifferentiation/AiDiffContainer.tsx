@@ -53,7 +53,6 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   scriptName,
   unreadNotificationCount,
 }) => {
-
   // Welcome experience shut off in preparation for spring 2026 redesign.
   const [showWelcomeExperience, setShowWelcomeExperience] = useState(false);
   const {personalizationData} = useTeachingProfileData();
