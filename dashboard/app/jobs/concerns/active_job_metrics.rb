@@ -79,7 +79,7 @@ module ActiveJobMetrics
   end
 
   def self.running_jobs
-    queued_jobs.where.not(locked_at: nil)
+    Delayed::Job.where.not(locked_at: nil)
   end
 
   def running_jobs
