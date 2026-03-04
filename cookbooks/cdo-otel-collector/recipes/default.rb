@@ -4,6 +4,24 @@
 # Installs and configures DataDog OpenTelemetry Collector
 # See: https://docs.datadoghq.com/opentelemetry/setup/ddot_collector/
 
+unless node['cdo-otel-collector']['enabled']
+  # Disable and stop the service if the agent is installed.
+  # The agent binary is intentionally left in place so that re-enabling
+  # (setting 'enabled' back to true) only needs to restart the service and
+  # re-apply config — it does not require reinstalling the agent.
+  service 'datadog-agent' do
+    action [:disable, :stop]
+    supports status: true
+    only_if {File.exist?('/usr/bin/datadog-agent')}
+  end
+
+  # Skip all installation and configuration steps when disabled.
+  # If re-enabled later, Chef will converge the full recipe on the next run:
+  # the install script is guarded by not_if, so it won't re-run, but all
+  # config templates will be re-applied and the service will be re-enabled.
+  return
+end
+
 # Download and cache the installation script
 install_script_path = "#{Chef::Config[:file_cache_path]}/datadog_install_script.sh"
 
