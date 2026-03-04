@@ -170,7 +170,7 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
               onThumbsDownClick={() => {
                 handleIconClick(false);
               }}
-              size="xs"
+              size="extraSmall"
               color="gray"
             />
           </div>

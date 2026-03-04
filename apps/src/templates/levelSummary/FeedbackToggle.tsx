@@ -1,6 +1,5 @@
-import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {IconButton as MuiIconButton} from '@mui/material';
+import {IconButton as MuiIconButton, IconButtonProps} from '@mui/material';
 import React, {useState} from 'react';
 
 import i18n from '@cdo/locale';
@@ -9,7 +8,7 @@ import style from './feedback-toggle.module.scss';
 
 interface FeedbackToggleProps {
   color?: 'gray' | 'white' | 'black' | 'multi';
-  size?: ComponentSizeXSToL;
+  size?: IconButtonProps['size'];
   onThumbsUpClick: () => void;
   onThumbsDownClick: () => void;
 }
@@ -17,7 +16,7 @@ interface FeedbackToggleProps {
 const FeedbackToggle: React.FC<FeedbackToggleProps> = ({
   onThumbsUpClick,
   onThumbsDownClick,
-  size = 'm',
+  size = 'medium',
   color = 'gray',
 }) => {
   const [thumbsUp, setThumbsUp] = useState(false);
@@ -60,7 +59,7 @@ const FeedbackToggle: React.FC<FeedbackToggleProps> = ({
       <MuiIconButton
         variant="contained"
         color="white"
-        size="medium"
+        size={size}
         className={getIconStyle(thumbsUp, 'thumbs-up')}
         onClick={handleThumbsUpClick}
         aria-label={i18n.aiResponseThumbsUp()}
@@ -74,7 +73,7 @@ const FeedbackToggle: React.FC<FeedbackToggleProps> = ({
       <MuiIconButton
         variant="contained"
         color="white"
-        size="medium"
+        size={size}
         className={getIconStyle(thumbsDown, 'thumbs-down')}
         onClick={handleThumbsDownClick}
         aria-label={i18n.aiResponseThumbsDown()}
