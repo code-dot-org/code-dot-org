@@ -1,8 +1,7 @@
 import React from 'react';
+import {Provider} from 'react-redux';
 
 import {LessonPractice} from '@cdo/apps/aiTutor/views/lessonPractice/LessonPractice';
-
-import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';

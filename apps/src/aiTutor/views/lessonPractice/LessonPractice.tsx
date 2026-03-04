@@ -10,17 +10,27 @@ import {baseModelParameters} from '../../hooks/useAiTutorModelParameters';
 
 import GenericStudentLessonSummary from './GenericStudentLessonSummary';
 import PracticeOptions from './PracticeOptions';
+import StudentWorkLessonSummary from './StudentWorkLessonSummary';
 import VocabularyFlashcards from './VocabularyFlashcards';
 
 import styles from '@cdo/apps/aiTutor/views/lessonPractice/lesson-practice-ai-tutor.module.scss';
 
-type PracticeOption = 'summary' | 'flashcards' | 'chat' | null;
+type PracticeOption =
+  | 'summary'
+  | 'flashcards'
+  | 'chat'
+  | 'student-work-summary'
+  | null;
 
 export const LessonPractice: FC<{
-  lessonName: string;
-  lessonSummary: string;
-  vocabulary: {id: string; word: string; definition: string}[];
-}> = ({lessonName, lessonSummary, vocabulary}) => {
+  lessonPracticeData: {
+    lessonId: number;
+    unitId: number;
+    lessonName: string;
+    lessonSummary: string;
+    vocabulary: {id: string; word: string; definition: string}[];
+  };
+}> = ({lessonPracticeData}) => {
   const [selectedOption, setSelectedOption] = useState<PracticeOption | null>(
     null
   );
@@ -29,7 +39,9 @@ export const LessonPractice: FC<{
 
   return (
     <>
-      <Typography variant="h2">Lesson Practice for {lessonName}</Typography>
+      <Typography variant="h2">
+        Lesson Practice for {lessonPracticeData.lessonName}
+      </Typography>
       <div className={styles.welcomeMessage}>
         <ChatMessage
           text="Let's review the material from the lesson. How can I help?"
@@ -40,14 +52,23 @@ export const LessonPractice: FC<{
       <PracticeOptions
         selectedOption={selectedOption || ''}
         onChange={option => setSelectedOption(option as PracticeOption)}
-        showVocabularyOption={vocabulary.length > 0}
+        showVocabularyOption={lessonPracticeData.vocabulary.length > 0}
       />
       {selectedOption === 'summary' && (
-        <GenericStudentLessonSummary lessonSummary={lessonSummary} />
+        <GenericStudentLessonSummary
+          lessonSummary={lessonPracticeData.lessonSummary}
+        />
       )}
-      {selectedOption === 'flashcards' && vocabulary.length > 0 && (
-        <VocabularyFlashcards vocabulary={vocabulary} />
+      {selectedOption === 'student-work-summary' && (
+        <StudentWorkLessonSummary
+          lessonId={lessonPracticeData.lessonId}
+          unitId={lessonPracticeData.unitId}
+        />
       )}
+      {selectedOption === 'flashcards' &&
+        lessonPracticeData.vocabulary.length > 0 && (
+          <VocabularyFlashcards vocabulary={lessonPracticeData.vocabulary} />
+        )}
       {selectedOption === 'chat' && (
         <ChatWorkspace
           modelParameters={baseModelParameters}

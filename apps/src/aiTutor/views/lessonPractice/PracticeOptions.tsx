@@ -16,6 +16,13 @@ const PracticeOptions: FC<{
       show: true,
     },
     {
+      value: 'student-work-summary',
+      label: 'Analyze Student Work',
+      icon: 'list-check',
+      prompt: 'Summarize the student work for this lesson.',
+      show: true,
+    },
+    {
       value: 'flashcards',
       label: 'Vocabulary Flashcards',
       icon: 'cards-blank',
