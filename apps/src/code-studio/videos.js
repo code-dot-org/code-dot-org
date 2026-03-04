@@ -102,7 +102,6 @@ function createVideo(options) {
   const videoDiv = $('<iframe id="video"/>').addClass('video-player').attr({
     src: options.src,
     allowfullscreen: 'true',
-    scrolling: 'no',
   });
 
   const videoTabContainerDiv = $("<div id='videoTabContainer'></div>").append(
