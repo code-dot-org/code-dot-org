@@ -4,7 +4,7 @@ module Cdo
   class Redshift
     class QueryError < StandardError; end
 
-    def initialize(cluster_id: CDO.redshift_cluster_id, database: 'dashboard', db_user: CDO.redshift_admin_username)
+    def initialize(cluster_id: CDO.redshift_cluster_id, database: 'dashboard', db_user: CDO.redshift_username)
       @client = Aws::RedshiftDataAPIService::Client.new
       @cluster_id = cluster_id
       @database = database

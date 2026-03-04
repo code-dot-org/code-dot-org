@@ -561,20 +561,14 @@ instance_type:
 branch:
 database_username:
 
-# Data-stack parameters.
-rds_host:
-rds_identifier:
-rds_username:
-rds_password:
-redshift_database:
+## Redshift
+redshift_cluster_id:
+# Legacy Redshift configuration (for connecting with a SQL client via the `pg` gem).
+redshift_host:
 redshift_username:
-rds_backup_account:
-logs_bucket:
+redshift_password:
 
 ### Database configuration
-
-redshift_host:
-redshift_password:
 
 devinternal_db_writer: !Secret
 
