@@ -1,5 +1,5 @@
 require "ostruct"
-require_relative '../../../../lib/cdo/shared_constants'
+require_relative '../../../../../lib/cdo/shared_constants'
 
 module Config
   # Configuration for each endpoint used in the Gen AI Curriculum. Required properties:
