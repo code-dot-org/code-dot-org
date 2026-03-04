@@ -1,6 +1,7 @@
+import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
-import {Typography, Button as MuiButton} from '@mui/material';
+import {Typography} from '@mui/material';
 import cookies from 'js-cookie';
 import React, {useState, useEffect} from 'react';
 
@@ -245,76 +246,43 @@ const LoginTypeSelection: React.FunctionComponent<{
             </Typography>
           </div>
           <form action="/users/auth/google_oauth2" method="POST">
-            <MuiButton
-              variant="contained"
-              color="primary"
-              size="medium"
-              className={style.googleButton}
+            <Button
+              text={locale.sign_up_google()}
               onClick={() => selectOauthLoginType('google')}
-              type="submit"
-              startIcon={
-                <FontAwesomeV6Icon
-                  iconName="brands fa-google"
-                  iconStyle="solid"
-                />
-              }
-            >
-              {locale.sign_up_google()}
-            </MuiButton>
+              iconLeft={{iconName: 'brands fa-google', iconStyle: 'solid'}}
+              className={style.googleButton}
+              buttonTagTypeAttribute="submit"
+            />
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           <form action="/users/auth/microsoft_v2_auth" method="POST">
-            <MuiButton
-              variant="contained"
-              color="primary"
-              size="medium"
-              className={style.microsoftButton}
+            <Button
+              text={locale.sign_up_microsoft()}
               onClick={() => selectOauthLoginType('microsoft')}
-              type="submit"
-              startIcon={
-                <FontAwesomeV6Icon
-                  iconName="brands fa-microsoft"
-                  iconStyle="light"
-                />
-              }
-            >
-              {locale.sign_up_microsoft()}
-            </MuiButton>
+              iconLeft={{iconName: 'brands fa-microsoft', iconStyle: 'light'}}
+              className={style.microsoftButton}
+              buttonTagTypeAttribute="submit"
+            />
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           <form action="/users/auth/facebook" method="POST">
-            <MuiButton
-              variant="contained"
-              color="primary"
-              size="medium"
-              className={style.facebookButton}
+            <Button
+              text={locale.sign_up_facebook()}
               onClick={() => selectOauthLoginType('facebook')}
-              type="submit"
-              startIcon={
-                <FontAwesomeV6Icon
-                  iconName="brands fa-facebook-f"
-                  iconStyle="solid"
-                />
-              }
-            >
-              {locale.sign_up_facebook()}
-            </MuiButton>
+              iconLeft={{iconName: 'brands fa-facebook-f', iconStyle: 'solid'}}
+              className={style.facebookButton}
+              buttonTagTypeAttribute="submit"
+            />
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           <form action="/users/auth/clever" method="POST">
-            <MuiButton
-              variant="contained"
-              color="primary"
-              size="medium"
-              className={style.cleverButton}
+            <Button
+              text={locale.sign_up_clever()}
               onClick={() => selectOauthLoginType('clever')}
-              type="submit"
-              startIcon={
-                <FontAwesomeV6Icon iconName="kit fa-clever" iconStyle="solid" />
-              }
-            >
-              {locale.sign_up_clever()}
-            </MuiButton>
+              iconLeft={{iconName: 'kit fa-clever', iconStyle: 'solid'}}
+              className={style.cleverButton}
+              buttonTagTypeAttribute="submit"
+            />
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           {/* TODO: once the Classlink icon has been added to our Font Awesome account,
@@ -460,18 +428,14 @@ const LoginTypeSelection: React.FunctionComponent<{
               )}
             </div>
           </div>
-          <MuiButton
-            variant="contained"
-            color="primary"
-            size="medium"
-            className={style.shortButton}
+          <Button
             id="createAccountButton"
+            className={style.shortButton}
+            text={locale.create_my_account()}
             onClick={submitLoginType}
-            type="submit"
             disabled={createAccountButtonDisabled}
-          >
-            {locale.create_my_account()}
-          </MuiButton>
+            buttonTagTypeAttribute="submit"
+          />
         </div>
       </div>
       <SafeMarkdown

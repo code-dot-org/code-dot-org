@@ -1,7 +1,7 @@
 import Alert from '@code-dot-org/component-library/alert';
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Button from '@code-dot-org/component-library/button';
 import Link from '@code-dot-org/component-library/link';
-import {Typography, Button as MuiButton} from '@mui/material';
+import {Typography} from '@mui/material';
 import React, {useCallback, useEffect, useState} from 'react';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -152,26 +152,20 @@ const SubmitProjectDialog: React.FunctionComponent<
           />
         </div>
         <div className={moduleStyles.bottomSectionButtons}>
-          <MuiButton
-            variant="outlined"
-            color="white"
-            size="medium"
+          <Button
+            iconLeft={{iconName: 'arrow-left'}}
             onClick={onGoBack}
-            type="button"
-            startIcon={<FontAwesomeV6Icon iconName="arrow-left" />}
-          >
-            {i18n.submitProjectGallery_goBack()}
-          </MuiButton>
-          <MuiButton
-            variant="contained"
+            type="secondary"
             color="white"
-            size="medium"
+            text={i18n.submitProjectGallery_goBack()}
+          />
+          <Button
             onClick={onSubmit}
-            type="button"
+            type="primary"
+            color="white"
+            text={i18n.submit()}
             disabled={isSubmitButtonDisabled}
-          >
-            {i18n.submit()}
-          </MuiButton>
+          />
         </div>
       </div>
     </AccessibleDialog>

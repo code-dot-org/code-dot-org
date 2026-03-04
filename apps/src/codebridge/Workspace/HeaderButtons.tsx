@@ -1,5 +1,4 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton} from '@mui/material';
+import {Button} from '@code-dot-org/component-library/button';
 import React, {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -60,49 +59,38 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
   return (
     <div className={moduleStyles.rightHeaderButtons}>
       {projectPickerSettings && (
-        <MuiButton
-          variant="contained"
-          color="secondary"
-          size="extraSmall"
+        <Button
+          iconRight={{iconName: 'rotate'}}
+          size={'xs'}
+          text={projectPickerSettings.currentType}
           onClick={projectPickerSettings.showProjectTypePicker}
+          type={'primary'}
           aria-label={codebridgeI18n.projectPickerAriaLabel()}
-          type="button"
-          endIcon={<FontAwesomeV6Icon iconName="rotate" />}
-        >
-          {projectPickerSettings.currentType}
-        </MuiButton>
+          color={'black'}
+        />
       )}
       {enableMicroBit && (
-        <MuiButton
-          variant="text"
-          color="secondary"
-          size="extraSmall"
+        <Button
+          iconRight={{iconStyle: 'solid', iconName: 'arrow-right-from-arc'}}
           onClick={onClickFlash}
-          type="button"
-          endIcon={
-            <FontAwesomeV6Icon
-              iconStyle="solid"
-              iconName="arrow-right-from-arc"
-            />
-          }
-        >
-          {codebridgeI18n.sendToMicroBit()}
-        </MuiButton>
+          size={'xs'}
+          type={'tertiary'}
+          text={codebridgeI18n.sendToMicroBit()}
+          color={'black'}
+        />
       )}
       {skipUrl && (
-        <MuiButton
-          variant="text"
-          color="secondary"
-          size="extraSmall"
-          className={moduleStyles.buttonSkip}
+        <Button
+          iconRight={{iconStyle: 'solid', iconName: 'arrow-right'}}
           onClick={onClickSkip}
-          type="button"
-          endIcon={
-            <FontAwesomeV6Icon iconStyle="solid" iconName="arrow-right" />
-          }
+          size={'xs'}
+          type={'tertiary'}
+          text={commonI18n.skipToProject()}
+          className={moduleStyles.buttonSkip}
+          color={'black'}
         >
-          {commonI18n.skipToProject()}
-        </MuiButton>
+          <span>{commonI18n.skipToProject()}</span>
+        </Button>
       )}
     </div>
   );

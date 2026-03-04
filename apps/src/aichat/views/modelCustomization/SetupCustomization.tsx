@@ -1,6 +1,6 @@
+import Button from '@code-dot-org/component-library/button';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import Slider, {SliderProps} from '@code-dot-org/component-library/slider';
-import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useState, useMemo} from 'react';
 import {useSelector} from 'react-redux';
@@ -107,17 +107,14 @@ const SetupCustomization: React.FunctionComponent = () => {
           disabled={isDisabled(selectedModelId) || readOnlyWorkspace}
         />
         {canCompare && (
-          <MuiButton
-            variant="outlined"
-            color="tertiary"
-            size="medium"
-            disabled={readOnlyWorkspace}
-            className={classNames(styles.compareModelsButton)}
+          <Button
+            text={aichatI18n.modelCustomization_compareButtonText()}
             onClick={() => setIsShowingModelDialog(true)}
-            type="button"
-          >
-            {aichatI18n.modelCustomization_compareButtonText()}
-          </MuiButton>
+            type="secondary"
+            color="gray"
+            className={classNames(styles.compareModelsButton)}
+            disabled={readOnlyWorkspace}
+          />
         )}
         {isShowingModelDialog && (
           <CompareModelsDialog

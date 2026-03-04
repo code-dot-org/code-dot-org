@@ -1,8 +1,7 @@
 import Alert from '@code-dot-org/component-library/alert';
-import {buttonColors} from '@code-dot-org/component-library/button';
+import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import Dialog from '@code-dot-org/component-library/dialog';
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
 import {
   Table,
@@ -16,8 +15,6 @@ import {
   Box,
   Divider,
   Typography,
-  Button as MuiButton,
-  IconButton as MuiIconButton,
 } from '@mui/material';
 import classNames from 'classnames';
 import React, {
@@ -253,32 +250,28 @@ export const WorkshopEnrollments: FC = () => {
   return (
     <>
       <Box className={styles.bulkActionRow}>
-        <MuiIconButton
-          variant="contained"
-          color="primary"
-          size="small"
+        <Button
+          ariaLabel="Refresh enrollment table data"
+          icon={{
+            iconName: 'refresh',
+            animationType:
+              animateRefreshButton || enrollmentsLoading ? 'spin' : undefined,
+          }}
+          isIconOnly
           onClick={handleRefreshClick}
-          aria-label="Refresh enrollment table data"
-          type="button"
-        >
-          <FontAwesomeV6Icon
-            iconName="refresh"
-            animationType={
-              animateRefreshButton || enrollmentsLoading ? 'spin' : undefined
-            }
-          />
-        </MuiIconButton>
-        <MuiButton
-          variant="outlined"
-          color="tertiary"
-          size="small"
+          size="s"
+        />
+        <Button
+          ariaLabel="Export all enrollment data as csv"
+          iconLeft={{
+            iconName: 'download',
+          }}
           onClick={handleDownload}
-          aria-label="Export all enrollment data as csv"
-          type="button"
-          startIcon={<FontAwesomeV6Icon iconName="download" />}
-        >
-          Export all
-        </MuiButton>
+          size="s"
+          type="secondary"
+          color={buttonColors.gray}
+          text="Export all"
+        />
         {selected.length > 0 && (
           <>
             <Divider
@@ -289,22 +282,22 @@ export const WorkshopEnrollments: FC = () => {
             <Typography className={styles.numSelectedText} variant="overline2">
               {selected.length} selected
             </Typography>
-            <MuiButton
-              variant="outlined"
-              color="tertiary"
-              size="small"
+            <Button
+              ariaLabel={`Move selected enrollment${s}`}
               onClick={() => setActiveDialog('move')}
-              aria-label={`Move selected enrollment${s}`}
-              type="button"
-            >{`Move selected enrollment${s}`}</MuiButton>
-            <MuiButton
-              variant="outlined"
-              color="error"
-              size="small"
+              size="s"
+              type="secondary"
+              color={buttonColors.gray}
+              text={`Move selected enrollment${s}`}
+            />
+            <Button
+              ariaLabel={`Remove selected enrollment${s}`}
               onClick={() => setActiveDialog('remove')}
-              aria-label={`Remove selected enrollment${s}`}
-              type="button"
-            >{`Remove selected enrollment${s}`}</MuiButton>
+              size="s"
+              type="secondary"
+              color={buttonColors.destructive}
+              text={`Remove selected enrollment${s}`}
+            />
           </>
         )}
       </Box>
