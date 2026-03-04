@@ -1,4 +1,4 @@
-import {Button as MuiButton} from '@mui/material';
+import Button, {buttonColors} from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -104,27 +104,21 @@ class ChallengeDialog extends React.Component {
           )}
           {this.props.children}
         </div>
-        <MuiButton
-          variant="outlined"
-          color="tertiary"
-          size="medium"
+        <Button
           id="challengeCancelButton"
           onClick={this.handleCancel}
-          type="button"
-        >
-          {this.props.cancelButtonLabel}
-        </MuiButton>
-        <MuiButton
-          variant="contained"
-          color="primary"
-          size="medium"
-          className={isRtl ? styles.primaryButtonRtl : styles.primaryButton}
+          text={this.props.cancelButtonLabel}
+          type="secondary"
+          color={buttonColors.gray}
+        />
+        <Button
           id="challengePrimaryButton"
           onClick={this.handlePrimary}
-          type="button"
-        >
-          {this.props.primaryButtonLabel}
-        </MuiButton>
+          text={this.props.primaryButtonLabel}
+          type="primary"
+          color={buttonColors.purple}
+          className={isRtl ? styles.primaryButtonRtl : styles.primaryButton}
+        />
         {this.props.showPuzzleRatingButtons && (
           <div className={styles.footer}>
             <PuzzleRatingButtons

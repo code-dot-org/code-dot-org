@@ -1,3 +1,4 @@
+import Button, {buttonColors} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {
@@ -7,8 +8,6 @@ import {
   ListItemButton,
   ListItemText,
   Typography,
-  Button as MuiButton,
-  IconButton as MuiIconButton,
 } from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useState} from 'react';
@@ -194,20 +193,19 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
               size: 's',
             }}
           >
-            <MuiIconButton
-              variant="outlined"
-              color="tertiary"
-              size="small"
-              className={styles.sidebarToggleButton}
+            <Button
+              isIconOnly
               onClick={toggleSidebar}
-              type="button"
-            >
-              <FontAwesomeV6Icon
-                iconName={
-                  isCollapsed ? 'arrow-right-to-line' : 'arrow-left-to-line'
-                }
-              />
-            </MuiIconButton>
+              icon={{
+                iconName: isCollapsed
+                  ? 'arrow-right-to-line'
+                  : 'arrow-left-to-line',
+              }}
+              color="gray"
+              type="secondary"
+              size="s"
+              className={styles.sidebarToggleButton}
+            />
           </WithTooltip>
           {isCollapsed ? (
             <WithTooltip
@@ -220,29 +218,26 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
                 size: 's',
               }}
             >
-              <MuiIconButton
-                variant="contained"
-                color="primary"
-                size="small"
+              <Button
+                color={buttonColors.purple}
+                size="s"
+                type="primary"
                 onClick={onNewChatButtonClick}
+                isIconOnly
+                icon={{iconName: 'plus'}}
                 aria-label={commonI18n.aiDifferentiation_new_chat()}
-                type="button"
-              >
-                <FontAwesomeV6Icon iconName="plus" />
-              </MuiIconButton>
+              />
             </WithTooltip>
           ) : (
-            <MuiButton
-              variant="contained"
-              color="primary"
-              size="small"
-              className={styles.expandedNewChatButton}
+            <Button
+              color={buttonColors.purple}
+              size="s"
+              type="primary"
               onClick={onNewChatButtonClick}
-              type="button"
-              startIcon={<FontAwesomeV6Icon iconName="plus" />}
-            >
-              {commonI18n.aiDifferentiation_new_chat()}
-            </MuiButton>
+              iconLeft={{iconName: 'plus'}}
+              text={commonI18n.aiDifferentiation_new_chat()}
+              className={styles.expandedNewChatButton}
+            />
           )}
         </Box>
         {isCollapsed ? (
@@ -257,19 +252,18 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
                 size: 's',
               }}
             >
-              <MuiIconButton
-                variant="text"
-                color="secondary"
-                size="small"
+              <Button
+                isIconOnly
+                onClick={onNotificationsButtonClick}
                 className={classNames(
                   unreadNotificationCount > 0 && styles.buttonWithUnreadDot
                 )}
-                onClick={onNotificationsButtonClick}
+                color="black"
+                type="tertiary"
+                size="s"
+                icon={{iconName: 'bell'}}
                 aria-label={commonI18n.notifications()}
-                type="button"
-              >
-                <FontAwesomeV6Icon iconName="bell" />
-              </MuiIconButton>
+              />
             </WithTooltip>
             {experiments.isEnabled('daily-bytes') && (
               <WithTooltip
@@ -282,16 +276,15 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
                   size: 's',
                 }}
               >
-                <MuiIconButton
-                  variant="text"
-                  color="secondary"
-                  size="small"
+                <Button
+                  isIconOnly
                   onClick={onDailyBytesButtonClick}
+                  color="black"
+                  type="tertiary"
+                  size="s"
+                  icon={{iconName: 'podcast'}}
                   aria-label="Daily Bytes"
-                  type="button"
-                >
-                  <FontAwesomeV6Icon iconName="podcast" />
-                </MuiIconButton>
+                />
               </WithTooltip>
             )}
           </Box>

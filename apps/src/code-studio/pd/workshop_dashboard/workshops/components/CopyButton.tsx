@@ -1,5 +1,4 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton} from '@mui/material';
+import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import React, {useState, useEffect} from 'react';
 
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
@@ -33,16 +32,14 @@ export const CopyButton: React.FC<CopyButtonProps> = ({
   }, [icon, setIcon]);
 
   return (
-    <MuiButton
-      variant="outlined"
-      color="tertiary"
-      size="extraSmall"
+    <Button
+      text={icon === 'copy' ? buttonText : 'Copied!'}
+      type="secondary"
+      size="xs"
+      color={buttonColors.gray}
+      iconLeft={{iconName: icon, iconStyle: 'solid'}}
       onClick={() => copyToClipboard(textToCopy, () => setIcon('check'))}
-      aria-label={ariaLabel}
-      type="button"
-      startIcon={<FontAwesomeV6Icon iconName={icon} iconStyle="solid" />}
-    >
-      {icon === 'copy' ? buttonText : 'Copied!'}
-    </MuiButton>
+      ariaLabel={ariaLabel}
+    />
   );
 };

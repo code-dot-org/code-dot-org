@@ -1,5 +1,5 @@
+import {buttonColors, Button} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useContext} from 'react';
 
@@ -60,16 +60,14 @@ const LtiExistingAccountCard = () => {
         })}
       </CardContent>
       <CardActions>
-        <MuiButton
-          variant="contained"
-          color="primary"
-          size="medium"
+        <Button
           className={styles.button}
+          color={buttonColors.purple}
+          type={'primary'}
+          size="m"
           onClick={handleExistingAccountSubmit}
-          type="button"
-        >
-          {i18n.ltiLinkAccountExistingAccountCardActionLabel()}
-        </MuiButton>
+          text={i18n.ltiLinkAccountExistingAccountCardActionLabel()}
+        />
       </CardActions>
     </Card>
   );

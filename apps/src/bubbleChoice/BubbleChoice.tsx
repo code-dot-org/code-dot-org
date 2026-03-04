@@ -3,7 +3,8 @@
 // This is a React client for a bubble_choice level.  Note that this is
 // only used for levels that use Lab2.  For levels that don't use Lab2,
 // they will get an older-style level.
-import {Typography, Button as MuiButton} from '@mui/material';
+import {Button} from '@code-dot-org/component-library/button';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import _ from 'lodash';
 import React, {useEffect, useMemo, useRef} from 'react';
@@ -226,17 +227,12 @@ const BubbleChoice: React.FC<LabProps<BubbleChoiceLevelProperties>> = ({
         </div>
       </div>
       <div className={styles.buttonRow}>
-        <MuiButton
-          variant="contained"
-          color="primary"
-          size="medium"
-          className={styles.continueButton}
+        <Button
+          ariaLabel={commonI18n.continue()}
+          text={commonI18n.continue()}
           onClick={() => dispatch(continueOrFinishLesson())}
-          aria-label={commonI18n.continue()}
-          type="button"
-        >
-          {commonI18n.continue()}
-        </MuiButton>
+          className={styles.continueButton}
+        />
       </div>
     </div>
   );

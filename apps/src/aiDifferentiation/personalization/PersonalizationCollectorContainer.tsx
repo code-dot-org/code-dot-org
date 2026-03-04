@@ -1,5 +1,4 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton} from '@mui/material';
+import Button from '@code-dot-org/component-library/button';
 import React from 'react';
 
 import PersonalizationInterstitial from '@cdo/apps/aiDifferentiation/personalization/components/personalizationInterstitial/PersonalizationInterstitial';
@@ -298,33 +297,24 @@ const PersonalizationCollectorContainer: React.FC = () => {
               </>
             )}
             <div className={style.navigationButtons}>
-              <MuiButton
-                variant="outlined"
-                color="tertiary"
-                size="medium"
-                id="back-button"
+              <Button
+                id={'back-button'}
+                text={i18n.back()}
+                type="secondary"
+                color="gray"
+                size="m"
                 onClick={() => onCarouselPress(BACK)}
-                type="button"
-                startIcon={<FontAwesomeV6Icon iconName="angle-left" />}
-              >
-                {i18n.back()}
-              </MuiButton>
-              <MuiButton
-                variant="contained"
-                color="primary"
-                size="medium"
-                id="next-button"
+                iconLeft={{iconName: 'angle-left'}}
+              />
+              <Button
+                id={'next-button'}
+                text={isSaving ? i18n.saving() : i18n.next()}
+                type="primary"
+                size="m"
                 onClick={() => onCarouselPress(NEXT)}
-                type="button"
                 disabled={isSaving}
-                endIcon={
-                  isSaving ? undefined : (
-                    <FontAwesomeV6Icon iconName="angle-right" />
-                  )
-                }
-              >
-                {isSaving ? i18n.saving() : i18n.next()}
-              </MuiButton>
+                iconRight={isSaving ? undefined : {iconName: 'angle-right'}}
+              />
             </div>
           </>
         )}

@@ -1,5 +1,4 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton} from '@mui/material';
+import {Button} from '@code-dot-org/component-library/button';
 import React, {useCallback, useState} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -102,19 +101,20 @@ const SaveVersionPanel: React.FC<SaveVersionPanelProps> = ({
             placeholder={lab2I18n.describeYourChanges()}
           />
         </div>
-        <MuiButton
-          variant="outlined"
-          color="tertiary"
-          size="small"
-          className={moduleStyles.versionButton}
+        <Button
           id="save-version-button"
+          size="s"
+          type="secondary"
+          color="gray"
+          iconLeft={{
+            iconName: 'save',
+            iconStyle: 'solid',
+          }}
+          className={moduleStyles.versionButton}
+          text={buttonLabel}
           onClick={onSaveVersion}
-          type="button"
           disabled={disabled || isSaving || commitDescription.trim() === ''}
-          startIcon={<FontAwesomeV6Icon iconName="save" iconStyle="solid" />}
-        >
-          {buttonLabel}
-        </MuiButton>
+        />
       </div>
     </div>
   );

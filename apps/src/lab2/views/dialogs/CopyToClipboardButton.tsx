@@ -1,5 +1,4 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton} from '@mui/material';
+import {Button} from '@code-dot-org/component-library/button';
 import React, {useCallback, useState} from 'react';
 
 import {ProjectType} from '@cdo/apps/lab2/types';
@@ -30,21 +29,17 @@ export const CopyToClipboardButton: React.FunctionComponent<{
   }, [shareUrl, projectType, channelId]);
 
   return (
-    <MuiButton
-      variant="outlined"
-      color="secondary"
-      size="medium"
-      className={moduleStyles.shareDialogButton}
+    <Button
+      iconLeft={{
+        iconName: copiedToClipboard ? 'clipboard-check' : 'clipboard',
+      }}
+      ariaLabel={i18n.copyLinkToProject()}
+      text={i18n.copyLinkToProject()}
+      type="secondary"
+      color="black"
+      size="m"
       onClick={handleCopyToClipboard}
-      aria-label={i18n.copyLinkToProject()}
-      type="button"
-      startIcon={
-        <FontAwesomeV6Icon
-          iconName={copiedToClipboard ? 'clipboard-check' : 'clipboard'}
-        />
-      }
-    >
-      {i18n.copyLinkToProject()}
-    </MuiButton>
+      className={moduleStyles.shareDialogButton}
+    />
   );
 };

@@ -5,9 +5,7 @@ https://github.com/code-dot-org/code-dot-org/blob/b2efc7ca8331f8261ebd55a326e23f
 */
 
 /* eslint-disable react/jsx-no-target-blank */
-
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {IconButton as MuiIconButton} from '@mui/material';
+import {Button} from '@code-dot-org/component-library/button';
 import _ from 'lodash';
 import debounce from 'lodash/debounce';
 import PropTypes from 'prop-types';
@@ -217,17 +215,19 @@ export default class SmallFooter extends React.Component {
 
   renderCopyright() {
     return (
-      <MuiIconButton
-        variant="outlined"
-        color="tertiary"
-        size="extraSmall"
-        className="copyright-button no-mc"
-        onClick={this.clickBaseCopyright}
+      <Button
         aria-label={i18n.copyrightInfoButton()}
-        type="button"
-      >
-        <FontAwesomeV6Icon iconName="copyright" iconStyle="light" />
-      </MuiIconButton>
+        className="copyright-button no-mc"
+        color="gray"
+        icon={{
+          iconName: 'copyright',
+          iconStyle: 'light',
+        }}
+        isIconOnly
+        onClick={this.clickBaseCopyright}
+        size="xs"
+        type="secondary"
+      />
     );
   }
 

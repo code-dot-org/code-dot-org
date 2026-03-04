@@ -1,5 +1,4 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {IconButton as MuiIconButton} from '@mui/material';
+import Button from '@code-dot-org/component-library/button';
 import React from 'react';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -48,17 +47,16 @@ const AiTutorSidebar: React.FC<AiTutorSidebarProps> = ({
         <img src={aiBotOutlineIcon} alt="" className={styles['bot-icon']} />
       </div>
       <div className={styles['ai-tutor-sidebar-content']}>
-        <MuiIconButton
-          variant="contained"
-          color="white"
-          size="medium"
+        <Button
           className={styles['ai-tutor-suggested-prompt-item']}
-          onClick={openTutor}
           aria-label="Open AI tutor"
-          type="button"
-        >
-          <FontAwesomeV6Icon iconName="arrow-from-right" />
-        </MuiIconButton>
+          isIconOnly
+          icon={{iconName: 'arrow-from-right'}}
+          onClick={openTutor}
+          size="m"
+          type="primary"
+          color="white"
+        />
         <AiTutorSidebarSuggestedPrompts
           suggestedPrompts={suggestedPrompts}
           hiddenContextCallback={hiddenContextCallback}
