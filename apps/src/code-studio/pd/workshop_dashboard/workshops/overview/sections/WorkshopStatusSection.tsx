@@ -1,9 +1,16 @@
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
-import {Button, buttonColors} from '@code-dot-org/component-library/button';
+import {buttonColors} from '@code-dot-org/component-library/button';
 import {Dialog} from '@code-dot-org/component-library/dialog';
 import Link from '@code-dot-org/component-library/link';
 import Tags from '@code-dot-org/component-library/tags';
-import {Card, CardContent, CardHeader, Box, Typography} from '@mui/material';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  Box,
+  Typography,
+  Button as MuiButton,
+} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
@@ -150,22 +157,26 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
                 />
               </Box>
               {isWorkshopAdmin && inProgress && (
-                <Button
-                  text="Unstart (admin)"
-                  size="xs"
-                  type="secondary"
-                  color={buttonColors.gray}
+                <MuiButton
+                  variant="outlined"
+                  color="tertiary"
+                  size="extraSmall"
                   onClick={() => handleClick('unstart')}
-                />
+                  type="button"
+                >
+                  Unstart (admin)
+                </MuiButton>
               )}
               {isWorkshopAdmin && ended && (
-                <Button
-                  text="Reopen (admin)"
-                  size="xs"
-                  type="secondary"
-                  color={buttonColors.gray}
+                <MuiButton
+                  variant="outlined"
+                  color="tertiary"
+                  size="extraSmall"
                   onClick={() => handleClick('reopen')}
-                />
+                  type="button"
+                >
+                  Reopen (admin)
+                </MuiButton>
               )}
             </Box>
           }
@@ -304,23 +315,29 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
 
               <Box>
                 {notStarted && (
-                  <Button
-                    size="s"
-                    text="Start Workshop"
+                  <MuiButton
+                    variant="contained"
+                    color="primary"
+                    size="small"
                     onClick={() => handleClick('start')}
+                    type="button"
                     disabled={isUpdating}
-                  />
+                  >
+                    Start Workshop
+                  </MuiButton>
                 )}
 
                 {inProgress && (
-                  <Button
-                    size="s"
-                    text="End workshop"
-                    type="secondary"
-                    color={buttonColors.destructive}
+                  <MuiButton
+                    variant="outlined"
+                    color="error"
+                    size="small"
                     onClick={() => handleClick('end')}
+                    type="button"
                     disabled={isUpdating}
-                  />
+                  >
+                    End workshop
+                  </MuiButton>
                 )}
               </Box>
             </Box>

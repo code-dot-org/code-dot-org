@@ -1,0 +1,9 @@
+name 'aid-thinking-critically-lesson3-level3_2026-test_2026-pilot'
+display_name 'AI Ethical Impact Mini-Lessons'
+description 'Choose a topic you would like to learn more about.'
+
+sublevels
+level 'aid-thinking-critically-lesson3-level3_choicea_2026-test_2026-pilot'
+level 'aid-thinking-critically-lesson3-level3_choiceb_2026-test_2026-pilot'
+level 'aid-thinking-critically-lesson3-level3e_2026-test_2026-pilot'
+level 'aid-thinking-critically-lesson3-level3d_2026-test_2026-pilot'

@@ -68,3 +68,15 @@ export async function generatedFileToAsset(
 
   return asset;
 }
+
+export function generatedFileToImageFile(
+  file: GeneratedFile,
+  ext: string
+): File {
+  const arrayBuffer = file.uint8Array.buffer.slice(
+    file.uint8Array.byteOffset,
+    file.uint8Array.byteOffset + file.uint8Array.byteLength
+  ) as ArrayBuffer;
+  const blob = new Blob([arrayBuffer], {type: file.mediaType});
+  return new File([blob], `image.${ext}`, {type: file.mediaType});
+}

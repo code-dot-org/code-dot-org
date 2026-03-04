@@ -1158,20 +1158,19 @@ StudioApp.prototype.toggleRunReset = function (button) {
     lockContainedLevelAnswers();
   }
 
-  var run = document.getElementById('runButton');
-  if (run) {
+  // Toggle all run/reset buttons, including duplicates in the phone frame.
+  document.querySelectorAll('#runButton, #topRunButton').forEach(run => {
     // Note: Checking alwaysHideRunButton is necessary because are some levels where we never
     // want to show the "run" button (e.g., maze levels that are "stepOnly").
     run.style.display =
       showRun && !this.config.alwaysHideRunButton ? 'inline-block' : 'none';
     run.disabled = !showRun;
-  }
+  });
 
-  var reset = document.getElementById('resetButton');
-  if (reset) {
+  document.querySelectorAll('#resetButton, #topResetButton').forEach(reset => {
     reset.style.display = !showRun ? 'inline-block' : 'none';
     reset.disabled = showRun;
-  }
+  });
 
   if (this.isUsingBlockly() && !this.config.readonlyWorkspace) {
     // craft has a darker color scheme than other blockly labs. It needs to
@@ -2201,9 +2200,19 @@ StudioApp.prototype.configureDom = function (config) {
     }
   };
 
+  // Bind click handlers to all run/reset buttons, including duplicates
+  // in the phone frame top bar.
+  var runButtons = container.querySelectorAll('#runButton, #topRunButton');
+  var resetButtons = container.querySelectorAll(
+    '#resetButton, #topResetButton'
+  );
+  runButtons.forEach(btn => {
+    dom.addClickTouchEvent(btn, _.bind(throttledRunClick, this));
+  });
+  resetButtons.forEach(btn => {
+    dom.addClickTouchEvent(btn, _.bind(this.resetButtonClick, this));
+  });
   if (runButton && resetButton) {
-    dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
-    dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
     this.keyHandler.registerEvent(['Control', 'Enter'], () => {
       if (this.isRunning()) {
         this.resetButtonClick();

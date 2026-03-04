@@ -377,6 +377,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     return Object.keys(availableTabs).length > 0;
   }, [availableTabs]);
 
+  const hasOnlyVersionHistoryTab = useMemo(() => {
+    return (
+      Object.keys(availableTabs).length === 1 &&
+      availableTabs[Tabs.VersionHistory] !== undefined
+    );
+  }, [availableTabs]);
+
   const floatingSettingsPanelStyles = usePanelPosition(
     isFloatingSettingsOpen,
     hasTabs,
@@ -386,12 +393,17 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
 
   useEffect(() => {
     // Auto-collapse on initial mount if on a standalone project and there are no available tabs.
+    // Also auto-collapse if the only available tab is version history.
     // Only run this once to allow user to toggle the panel.
-    if (!hasAutoCollapsedNoTabs.current && isProjectLevel && !hasTabs) {
+    if (
+      !hasAutoCollapsedNoTabs.current &&
+      isProjectLevel &&
+      (!hasTabs || hasOnlyVersionHistoryTab)
+    ) {
       dispatch(setIsStandaloneCollapsed(true));
       hasAutoCollapsedNoTabs.current = true;
     }
-  }, [isProjectLevel, hasTabs, dispatch]);
+  }, [isProjectLevel, hasTabs, dispatch, hasOnlyVersionHistoryTab]);
 
   useEffect(() => {
     if (currentTab === undefined && Object.keys(availableTabs).length > 0) {

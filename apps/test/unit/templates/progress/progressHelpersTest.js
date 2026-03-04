@@ -367,7 +367,6 @@ describe('progressHelpers', () => {
       );
       expect(studentLessonProgress).toEqual({
         incompletePercent: 0,
-        imperfectPercent: 0,
         completedPercent: 100,
         timeSpent: 0,
         lastTimestamp: 0,
@@ -386,7 +385,6 @@ describe('progressHelpers', () => {
       );
       expect(studentLessonProgress).toEqual({
         incompletePercent: 100,
-        imperfectPercent: 0,
         completedPercent: 0,
         timeSpent: 0,
         lastTimestamp: 0,
@@ -399,7 +397,7 @@ describe('progressHelpers', () => {
       studentProgress[1].status = LevelStatus.submitted;
       studentProgress[2].status = LevelStatus.perfect;
       studentProgress[3].status = LevelStatus.attempted;
-      studentProgress[4].status = LevelStatus.passed;
+      studentProgress[4].status = LevelStatus.passed; // "too many blocks" - should count as completed
       studentProgress[5].status = LevelStatus.free_play_complete;
       studentProgress[6].isLocked = true;
       studentProgress[7].status = 'other';
@@ -408,10 +406,32 @@ describe('progressHelpers', () => {
         studentProgress,
         levels
       );
+      // 4 completed (submitted, perfect, passed, free_play_complete) / 8 = 50%
+      // 4 incomplete (attempted, locked, other, untried) / 8 = 50%
       expect(studentLessonProgress).toEqual({
         incompletePercent: 50,
-        imperfectPercent: 12.5,
-        completedPercent: 37.5,
+        completedPercent: 50,
+        timeSpent: 0,
+        lastTimestamp: 0,
+      });
+    });
+
+    it('counts "too many blocks" (passed) as completed, not imperfect', () => {
+      const levels = fakeLevels(3);
+      const studentProgress = fakeProgressForLevels(levels);
+      // All levels completed with "too many blocks" status
+      studentProgress[1].status = LevelStatus.passed;
+      studentProgress[2].status = LevelStatus.passed;
+      studentProgress[3].status = LevelStatus.passed;
+
+      const studentLessonProgress = getStudentLessonProgress(
+        studentProgress,
+        levels
+      );
+      // Should show 100% completed (dark green), not 100% imperfect (light green)
+      expect(studentLessonProgress).toEqual({
+        incompletePercent: 0,
+        completedPercent: 100,
         timeSpent: 0,
         lastTimestamp: 0,
       });
@@ -432,7 +452,6 @@ describe('progressHelpers', () => {
       );
       expect(studentLessonProgress).toEqual({
         incompletePercent: 100,
-        imperfectPercent: 0,
         completedPercent: 0,
         timeSpent: 3,
         lastTimestamp: 0,
@@ -454,7 +473,6 @@ describe('progressHelpers', () => {
       );
       expect(studentLessonProgress).toEqual({
         incompletePercent: 100,
-        imperfectPercent: 0,
         completedPercent: 0,
         timeSpent: 0,
         lastTimestamp: 2,
