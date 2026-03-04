@@ -119,7 +119,13 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
               className={moduleStyles.playViewButton}
               onClick={() => setPlaying(!isPlaying)}
               type="button"
-            />
+              aria-label={isPlaying ? 'Stop' : 'Play'}
+            >
+              <FontAwesomeV6Icon
+                iconStyle="solid"
+                iconName={!isPlaying ? 'play' : 'stop'}
+              />
+            </MuiIconButton>
             <ProgressSlider percentProgress={percentPlayed} />
           </div>
 

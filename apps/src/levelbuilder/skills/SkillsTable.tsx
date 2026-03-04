@@ -162,6 +162,7 @@ const SkillsTable: React.FC<SkillsTableProps> = ({skills, canModifySkill}) => {
                     disabled={skill.hasLevels}
                     onClick={() => handleDelete(skill.id)}
                     type="button"
+                    aria-label="Delete skill"
                   >
                     <FontAwesomeV6Icon iconName="trash" />
                   </MuiIconButton>

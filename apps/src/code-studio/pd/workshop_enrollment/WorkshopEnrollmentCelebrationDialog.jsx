@@ -269,7 +269,7 @@ export default function WorkshopEnrollmentCelebrationDialog({
                       })}
                       type="button"
                       startIcon={
-                        <FontAwesomeV6Icon iconName="fa-solid fa-plus" />
+                        <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />
                       }
                     >
                       {i18n.enrollmentCelebrationAddToCalendarButton()}
@@ -288,7 +288,7 @@ export default function WorkshopEnrollmentCelebrationDialog({
               onClick={() => setMultipleSessionDialogType('')}
               type="button"
               startIcon={
-                <FontAwesomeV6Icon iconName="fa-solid fa-arrow-left" />
+                <FontAwesomeV6Icon iconName="arrow-left" iconStyle="solid" />
               }
             >
               {i18n.enrollmentCelebrationChangeCalendarButton()}
@@ -345,7 +345,8 @@ export default function WorkshopEnrollmentCelebrationDialog({
                       type="button"
                       startIcon={
                         <FontAwesomeV6Icon
-                          iconName="brands fa-apple"
+                          iconName="apple"
+                          iconFamily="brands"
                           iconStyle="light"
                         />
                       }
