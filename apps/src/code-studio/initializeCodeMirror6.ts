@@ -47,11 +47,11 @@ interface CodeMirrorLegacyAdapter {
 interface Options {
   callback?: (editor: CodeMirrorLegacyAdapter, update: ViewUpdate) => void;
   attachments?: boolean;
-  // Kept for CodeMirror 5 callback compatibility; current callers only use errors.
-  onUpdateLinting?: (
-    _editor: CodeMirrorLegacyAdapter,
-    errors: Array<{message: string}>
-  ) => void;
+  onUpdateLinting?: (errors: Array<{message: string}>) => void;
+  lintConfig?: {
+    es5?: boolean;
+    disableRecommendedJsConfig?: boolean;
+  };
   preview?: string | Element;
   game?: string;
 }
@@ -80,18 +80,30 @@ function getLanguageExtension(mode: EditorMode): Extension {
   return languageExtensionMap[mode];
 }
 
-const lintExtensionMap: Partial<Record<EditorMode, Extension>> = {
-  javascript: linter(
-    esLint(new eslint.Linter(), {
-      ...js.configs.recommended,
+const getLintExtension = (
+  mode: EditorMode,
+  lintConfig?: Options['lintConfig']
+): Extension | null => {
+  if (mode === 'json') {
+    return linter(jsonParseLinter());
+  }
+
+  if (mode === 'javascript') {
+    const eslintConfig = {
+      ...(lintConfig?.disableRecommendedJsConfig ? {} : js.configs.recommended),
       languageOptions: {
         globals: {
           ...globals.browser,
+          ai: 'off',
         },
+        ...(lintConfig?.es5 ? {ecmaVersion: 5, sourceType: 'script'} : {}),
       },
-    })
-  ),
-  json: linter(jsonParseLinter()),
+    };
+
+    return linter(esLint(new eslint.Linter(), eslintConfig));
+  }
+
+  return null;
 };
 
 const resolveTarget = (target: string | Element): HTMLTextAreaElement => {
@@ -156,7 +168,7 @@ function initializeCodeMirror6(
   const {callback, attachments, onUpdateLinting, preview, game} = options;
   const changeListeners: Array<() => void> = [];
   const dropListeners: Array<(event: DragEvent) => void> = [];
-  const lintExtension = lintExtensionMap[mode];
+  const lintExtension = getLintExtension(mode, options.lintConfig);
 
   const editorContainer = document.createElement('div');
   node.style.display = 'none';
@@ -250,7 +262,7 @@ function initializeCodeMirror6(
       }
       if (onUpdateLinting) {
         const diagnostics = getLintDiagnostics(update.state);
-        onUpdateLinting(adapter, getErrorMessages(diagnostics));
+        onUpdateLinting(getErrorMessages(diagnostics));
       }
       updatePreview();
     }),

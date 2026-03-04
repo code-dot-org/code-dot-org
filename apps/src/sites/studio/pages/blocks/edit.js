@@ -73,6 +73,10 @@ function initializeEditPage(defaultSprites) {
   helperEditor = initializeCodeMirror6(helperCodeElement, 'javascript', {
     callback: _ => validateBlockConfig(),
     onUpdateLinting: onUpdateLinting,
+    lintConfig: {
+      es5: true,
+      disableRecommendedJsConfig: true,
+    },
   });
   poolField.addEventListener('change', updateBlockPreview);
 
@@ -85,7 +89,7 @@ function initializeEditPage(defaultSprites) {
   $('.alert.alert-success').delay(5000).fadeOut(1000);
 }
 
-function onUpdateLinting(_, errors) {
+function onUpdateLinting(errors) {
   if (errors.length) {
     hasLintingErrors = true;
   } else {
