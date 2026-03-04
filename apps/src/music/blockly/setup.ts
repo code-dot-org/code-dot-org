@@ -1,6 +1,11 @@
+import * as BlockUtils from '@cdo/apps/block_utils';
 import localization from '@cdo/apps/localization';
 
-import {localizeBlockDefinition, updateLocale} from '../../blockly/utils';
+import {
+  getBlockDefinitionsForUpdatedLocale,
+  localizeBlockDefinition,
+  refreshWorkspacesForUpdatedLocale,
+} from '../../blockly/utils';
 import {Triggers} from '../constants';
 import musicI18n from '../locale';
 
@@ -8,23 +13,23 @@ import {backupFunctionDefinitons} from './blockUtils';
 import {
   DEFAULT_TRACK_NAME_EXTENSION,
   FIELD_CHORD_TYPE,
-  FIELD_PATTERN_TYPE,
-  FIELD_PATTERN_AI_TYPE,
-  FIELD_TUNE_TYPE,
-  FIELD_SOUNDS_TYPE,
-  PLAY_MULTI_MUTATOR,
   FIELD_EFFECTS_EXTENSION,
-  FIELD_SOUNDS_VALIDATOR,
+  FIELD_PATTERN_AI_TYPE,
+  FIELD_PATTERN_TYPE,
   FIELD_PATTERNS_VALIDATOR,
+  FIELD_SOUNDS_TYPE,
+  FIELD_SOUNDS_VALIDATOR,
+  FIELD_TUNE_TYPE,
   NEXT_CONNECTION_MUTATOR,
+  PLAY_MULTI_MUTATOR,
 } from './constants';
 import {
-  getDefaultTrackNameExtension,
-  playMultiMutator,
   effectsFieldExtension,
-  fieldSoundsValidator,
   fieldPatternsValidator,
+  fieldSoundsValidator,
+  getDefaultTrackNameExtension,
   nextConnectionMutator,
+  playMultiMutator,
 } from './extensions';
 import FieldChord from './FieldChord';
 import FieldPattern from './FieldPattern';
@@ -76,7 +81,15 @@ export function setUpBlocklyForMusicLab() {
   // Ensure that Blockly localizes when the locale changes
   localization.on('change', info => {
     initializeBlocks();
-    updateLocale(localization.rtl);
+    const blockDefinitions = getBlockDefinitionsForUpdatedLocale(
+      localization.rtl
+    );
+    BlockUtils.installCustomBlocks({
+      blockly: Blockly,
+      blockDefinitions,
+      customInputTypes: Blockly.SourceCustomInputTypes,
+    });
+    refreshWorkspacesForUpdatedLocale(localization.rtl);
   });
   initializeBlocks();
 
