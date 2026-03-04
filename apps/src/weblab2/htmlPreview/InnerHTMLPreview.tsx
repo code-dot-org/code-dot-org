@@ -69,7 +69,6 @@ const InnerHTMLPreview = () => {
         setPreviewKey(prevKey => prevKey + 1);
       } else if (data.type === IframeMessageType.REFRESH) {
         setPreviewKey(prevKey => prevKey + 1);
-        iframeRef.current?.contentWindow?.location.reload();
       } else if (data.type === IframeMessageType.LEVEL_LOADING) {
         setIsLevelLoading(data.isLoading);
         if (data.isLoading) {
@@ -182,12 +181,16 @@ const InnerHTMLPreview = () => {
     }
     let cancelled = false;
     setSwWarmedUp(false);
-    fetch(`${window.location.origin}/${currentFile}`).finally(() => {
-      if (!cancelled) {
-        setSwWarmedUp(true);
-        setRenderKey(prevKey => prevKey + 1);
-      }
-    });
+    fetch(`${window.location.origin}/${currentFile}`)
+      .catch(() => {
+        // Swallow fetch errors to avoid unhandled promise rejections during Service Worker warmup.
+      })
+      .finally(() => {
+        if (!cancelled) {
+          setSwWarmedUp(true);
+          setRenderKey(prevKey => prevKey + 1);
+        }
+      });
     return () => {
       cancelled = true;
     };
