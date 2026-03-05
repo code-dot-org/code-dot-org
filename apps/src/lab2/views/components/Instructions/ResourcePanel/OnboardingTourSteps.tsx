@@ -1,5 +1,5 @@
 import React, {useEffect, useRef} from 'react';
-import {useShepherd} from 'react-shepherd';
+import Shepherd, {type Tour} from 'shepherd.js';
 
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -23,8 +23,7 @@ const RESOURCE_PANEL_ONBOARDING_FLOW_NAME = 'Resource Panel Onboarding';
 // at the bottom of the resource panel (whether it's enabled or not).
 // Some labs do not always show the navigation button so this tour is not appropriate for all labs.
 const OnboardingTourSteps: React.FC = () => {
-  const shepherd = useShepherd();
-  const tourRef = useRef<InstanceType<typeof shepherd.Tour> | null>(null);
+  const tourRef = useRef<Tour | null>(null);
 
   const tourSeen = tryGetLocalStorage(
     RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
@@ -38,7 +37,7 @@ const OnboardingTourSteps: React.FC = () => {
   useEffect(() => {
     if (!shouldShowTour) return;
 
-    const tour = new shepherd.Tour({
+    const tour = new Shepherd.Tour({
       useModalOverlay: true,
       exitOnEsc: false,
       keyboardNavigation: false,
@@ -93,7 +92,7 @@ const OnboardingTourSteps: React.FC = () => {
       }
       tourRef.current = null;
     };
-  }, [shouldShowTour, shepherd]);
+  }, [shouldShowTour]);
 
   return null;
 };
