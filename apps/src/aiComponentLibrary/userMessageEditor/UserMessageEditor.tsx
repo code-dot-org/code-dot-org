@@ -1,5 +1,4 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
+import Button from '@code-dot-org/component-library/button';
 import classnames from 'classnames';
 import React, {useState, useMemo, useEffect, useRef} from 'react';
 
@@ -24,8 +23,6 @@ export interface UserMessageEditorProps {
   customPlaceholder?: string;
   children?: React.ReactNode;
 }
-
-const EditorButtonIcon = () => <FontAwesomeV6Icon iconName="arrow-up" />;
 
 const UserMessageEditor = React.forwardRef<
   HTMLTextAreaElement,
@@ -70,20 +67,7 @@ const UserMessageEditor = React.forwardRef<
         internalInputRef.current.scrollHeight + 2 + 'px'; // Add a couple of pixels to avoid scrollbars.
     }, [userMessage]);
 
-    const editorButtonCommonProps = {
-      variant: 'contained' as const,
-      color: 'primary' as const,
-      size: 'extraSmall' as const,
-      disabled: disabled || !userMessage || userMessageIsEmpty,
-      id: 'uitest-chat-submit',
-      onClick: (e: React.MouseEvent) => {
-        e.stopPropagation();
-        onSubmit(userMessage);
-      },
-      'aria-label': commonI18n.submit(),
-      type: 'button' as const,
-      component: 'button' as const,
-    };
+    const icon = {iconName: 'arrow-up'};
 
     return (
       <div
@@ -122,18 +106,19 @@ const UserMessageEditor = React.forwardRef<
         />
         <div className={moduleStyles.chatActionsContainer}>
           {children}
-          {showSubmitLabel ? (
-            <MuiButton
-              {...editorButtonCommonProps}
-              startIcon={<EditorButtonIcon />}
-            >
-              {commonI18n.submit()}
-            </MuiButton>
-          ) : (
-            <MuiIconButton {...editorButtonCommonProps}>
-              <EditorButtonIcon />
-            </MuiIconButton>
-          )}
+          <Button
+            aria-label={commonI18n.submit()}
+            id="uitest-chat-submit"
+            isIconOnly={!showSubmitLabel}
+            size="xs"
+            onClick={e => {
+              e.stopPropagation();
+              onSubmit(userMessage);
+            }}
+            disabled={disabled || !userMessage || userMessageIsEmpty}
+            text={showSubmitLabel ? commonI18n.submit() : undefined}
+            {...{[showSubmitLabel ? 'iconLeft' : 'icon']: icon}}
+          />
         </div>
       </div>
     );

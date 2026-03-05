@@ -1,5 +1,5 @@
 /** @overview Component for editing a key/value pair row. */
-import {Button as MuiButton} from '@mui/material';
+import {Button} from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -113,59 +113,53 @@ class EditKeyRow extends React.Component {
         <td className={classNames(dataStyles.cell, dataStyles.editButton)}>
           {!this.state.isDeleting &&
             (this.state.isEditing ? (
-              <MuiButton
-                variant="outlined"
-                color="tertiary"
-                size="small"
-                loading={this.state.isSaving}
-                disabled={this.state.isSaving}
-                className={classNames(
-                  dataStyles.button,
-                  dataStyles.buttonText,
-                  dataStyles.buttonRightMargin
-                )}
+              <Button
                 id="saveKeyValueButton"
+                text={msg.save()}
                 onClick={this.handleSave}
-                aria-label={msg.save()}
-                type="button"
-              >
-                {msg.save()}
-              </MuiButton>
-            ) : (
-              <MuiButton
-                variant="outlined"
-                color="tertiary"
-                size="small"
                 disabled={this.state.isSaving}
+                isPending={this.state.isSaving}
+                ariaLabel={msg.save()}
                 className={classNames(
                   dataStyles.button,
                   dataStyles.buttonText,
                   dataStyles.buttonRightMargin
                 )}
+                size="s"
+                type="secondary"
+                color="gray"
+              />
+            ) : (
+              <Button
                 id="editKeyValueButton"
+                text={msg.edit()}
                 onClick={this.handleEdit}
-                aria-label={msg.edit()}
-                type="button"
-              >
-                {msg.edit()}
-              </MuiButton>
+                disabled={this.state.isSaving}
+                ariaLabel={msg.edit()}
+                className={classNames(
+                  dataStyles.button,
+                  dataStyles.buttonText,
+                  dataStyles.buttonRightMargin
+                )}
+                size="s"
+                type="secondary"
+                color="gray"
+              />
             ))}
 
           {!this.state.isSaving && (
-            <MuiButton
-              variant="contained"
-              color="error"
-              size="small"
-              loading={this.state.isDeleting}
-              disabled={this.state.isDeleting}
-              className={classNames(dataStyles.button, dataStyles.buttonText)}
+            <Button
               id="deleteKeyValueButton"
+              text={msg.delete()}
               onClick={this.handleDelete}
-              aria-label={msg.delete()}
-              type="button"
-            >
-              {msg.delete()}
-            </MuiButton>
+              disabled={this.state.isDeleting}
+              isPending={this.state.isDeleting}
+              ariaLabel={msg.delete()}
+              className={classNames(dataStyles.button, dataStyles.buttonText)}
+              size="s"
+              type="primary"
+              color="destructive"
+            />
           )}
         </td>
       </tr>

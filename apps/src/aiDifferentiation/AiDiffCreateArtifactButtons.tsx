@@ -1,5 +1,5 @@
+import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton} from '@mui/material';
 import React from 'react';
 
 import {setPendingArtifactMessage} from '@cdo/apps/aichat/redux/slice';
@@ -18,17 +18,15 @@ const AiDiffCreateArtifactButtons: React.FC<Props> = ({message}) => {
 
   return message.isArtifactCandidate ? (
     <div className={style.artifactButtons}>
-      <MuiButton
-        variant="outlined"
-        color="tertiary"
-        size="small"
+      <Button
+        color="gray"
+        size="s"
+        type="secondary"
         onClick={() => dispatch(setPendingArtifactMessage(message))}
-        aria-label="Create artifact"
-        type="button"
-        startIcon={<FontAwesomeV6Icon iconName="shapes" />}
-      >
-        {'Create artifact'}
-      </MuiButton>
+        aria-label={'Create artifact'}
+        iconLeft={{iconName: 'shapes'}}
+        text="Create artifact"
+      />
       <br />
       <a
         href="https://support.code.org/hc/en-us/articles/43794573137805-Artifacts-in-AI-Teaching-Assistant"

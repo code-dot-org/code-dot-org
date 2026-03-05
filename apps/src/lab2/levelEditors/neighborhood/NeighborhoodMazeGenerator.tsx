@@ -1,6 +1,6 @@
+import {Button} from '@code-dot-org/component-library/button';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton} from '@mui/material';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import {MazeCell} from '@cdo/apps/lab2/types';
@@ -197,32 +197,22 @@ const NeighborhoodMazeGenerator: React.FunctionComponent<
               />
             ))}
           </div>
-          <MuiButton
-            variant="outlined"
-            color="secondary"
-            size="extraSmall"
-            disabled={selectedAsset === undefined}
-            className={moduleStyles.unselectButton}
+          <Button
+            text="Unselect Asset"
             onClick={() => setSelectedAsset(undefined)}
-            type="button"
-          >
-            {'Unselect Asset'}
-          </MuiButton>
+            type={'secondary'}
+            color={'black'}
+            className={moduleStyles.unselectButton}
+            size={'xs'}
+            disabled={selectedAsset === undefined}
+          />
         </div>
       </div>
       {selectedPaintAmount !== undefined && (
         <p>Selected paint can amount: {selectedPaintAmount}</p>
       )}
       <div className={moduleStyles.saveButtonContainer}>
-        <MuiButton
-          variant="contained"
-          color="primary"
-          size="medium"
-          onClick={save}
-          type="button"
-        >
-          {'Save Maze'}
-        </MuiButton>
+        <Button text="Save Maze" onClick={save} />
         {showSaveConfirmation && (
           <div className={moduleStyles.saveConfirmation}>
             <FontAwesomeV6Icon

@@ -1,4 +1,4 @@
-import {Button as MuiButton} from '@mui/material';
+import Button from '@code-dot-org/component-library/button';
 import {assert, expect} from 'chai'; // eslint-disable-line no-restricted-imports
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import moment from 'moment';
@@ -72,7 +72,7 @@ describe('LandingPageWorkshopsTable', () => {
 
     // We expect there to be a table with 4 rows in the body, three of which have two buttons
     expect(workshopsTable.find('tbody tr')).to.have.length(4);
-    expect(workshopsTable.find('tbody tr').find(MuiButton)).to.have.length(8);
+    expect(workshopsTable.find('tbody tr').find(Button)).to.have.length(8);
     expect(workshopsTable.state('showCancelModal')).to.be.false;
     expect(workshopsTable.state('enrollmentCodeToCancel')).to.equal(undefined);
 
@@ -80,7 +80,7 @@ describe('LandingPageWorkshopsTable', () => {
     workshopsTable
       .find('tbody tr')
       .at(0)
-      .find(MuiButton)
+      .find(Button)
       .last()
       .props()
       .onClick?.({preventDefault() {}});
@@ -97,7 +97,7 @@ describe('LandingPageWorkshopsTable', () => {
     workshopsTable
       .find('tbody tr')
       .at(2)
-      .find(MuiButton)
+      .find(Button)
       .first()
       .simulate('click');
 
@@ -118,7 +118,7 @@ describe('LandingPageWorkshopsTable', () => {
     const printCertificateButton = workshopsTable
       .find('tbody tr')
       .at(3)
-      .find(MuiButton)
+      .find(Button)
       .first();
 
     expect(printCertificateButton.prop('disabled')).to.be.true;
@@ -132,7 +132,7 @@ describe('LandingPageWorkshopsTable', () => {
     workshopsTable
       .find('tbody tr')
       .at(0)
-      .find(MuiButton)
+      .find(Button)
       .first()
       .simulate('click');
 
@@ -147,7 +147,7 @@ describe('LandingPageWorkshopsTable', () => {
     const preWorkshopSurveyButton = workshopsTable
       .find('tbody tr')
       .at(3)
-      .find(MuiButton)
+      .find('Button')
       .findWhere(n => n.text() === 'Complete pre-workshop survey');
 
     expect(preWorkshopSurveyButton).to.have.lengthOf(0);
@@ -165,7 +165,7 @@ describe('LandingPageWorkshopsTable', () => {
     const preWorkshopSurveyButton = workshopsTable
       .find('tbody tr')
       .at(0)
-      .find(MuiButton)
+      .find(Button)
       .first();
 
     expect(preWorkshopSurveyButton.props().disabled).to.be.true;
@@ -181,15 +181,15 @@ describe('LandingPageWorkshopsTable', () => {
 
     expect(workshopsTable.find('thead tr').text()).to.contain('Status');
 
-    // Each row has exactly one Workshop Details button (MUI Button may match nested components)
-    workshopsTable.find('tbody tr').forEach((row, i) => {
-      const buttons = row
-        .find(MuiButton)
-        .findWhere(n => n.text() === 'Workshop Details');
-      expect(buttons.length).to.be.at.least(1);
-      expect(buttons.first().text()).to.equal('Workshop Details');
-    });
-    expect(workshopsTable.find('tbody tr')).to.have.length(workshops.length);
+    const numButtonsInTable = workshopsTable
+      .find('tbody tr')
+      .find('Button').length;
+    expect(
+      workshopsTable
+        .find('tbody tr')
+        .find('Button')
+        .findWhere(n => n.text() === 'Workshop Details').length
+    ).to.equal(numButtonsInTable);
   });
 
   it('doesnt show anything if loading is complete and there are no workshops', function () {

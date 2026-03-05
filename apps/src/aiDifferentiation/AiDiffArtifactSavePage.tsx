@@ -1,7 +1,7 @@
+import Button from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton} from '@mui/material';
 import React, {ChangeEvent, useCallback, useMemo, useState} from 'react';
 
 import {
@@ -221,15 +221,13 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
         </h4>
         <div className={style.artifactConfigurationSectionHeader}>
           <h6>Class Sections</h6>
-          <MuiButton
-            variant="outlined"
-            color="secondary"
-            size="small"
+          <Button
+            size="s"
+            type="secondary"
+            color="black"
+            text="Select All"
             onClick={toggleAll}
-            type="button"
-          >
-            {'Select All'}
-          </MuiButton>
+          />
         </div>
 
         <div className={style.artifactConfigurationCheckboxes}>
@@ -284,19 +282,19 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
         <FontAwesomeV6Icon iconName="arrow-up-right-from-square" />
       </a>
       <div className={style.artifactConfigurationSaveButtons}>
-        <MuiButton
-          variant="outlined"
-          color="secondary"
-          size="medium"
+        <Button
+          size="m"
+          type="secondary"
+          color="black"
           onClick={() => dispatch(clearPendingArtifactMessage())}
-          type="button"
-        >
-          {'Cancel'}
-        </MuiButton>
-        <MuiButton
-          variant="contained"
-          color="primary"
-          size="medium"
+          text="Cancel"
+        />
+        <Button
+          size="m"
+          type="primary"
+          color="purple"
+          onClick={onSubmit}
+          text="Save selections"
           disabled={
             Object.values(selectedSectionIds).filter(value => value === true)
               .length === 0 ||
@@ -304,11 +302,7 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
             !selectedLessonId ||
             artifactTitleIsEmpty
           }
-          onClick={onSubmit}
-          type="button"
-        >
-          {'Save selections'}
-        </MuiButton>
+        />
       </div>
     </div>
   ) : (
@@ -320,15 +314,13 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
         create this artifact again.
       </div>
       <div className={style.artifactConfigurationSaveButtons}>
-        <MuiButton
-          variant="outlined"
-          color="secondary"
-          size="medium"
+        <Button
+          size="m"
+          type="secondary"
+          color="black"
           onClick={() => dispatch(clearPendingArtifactMessage())}
-          type="button"
-        >
-          {'Cancel'}
-        </MuiButton>
+          text="Cancel"
+        />
       </div>
     </div>
   );

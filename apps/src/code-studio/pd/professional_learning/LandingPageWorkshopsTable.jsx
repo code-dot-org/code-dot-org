@@ -1,5 +1,6 @@
+import Button from '@code-dot-org/component-library/button';
 import Modal from '@code-dot-org/component-library/modal';
-import {Typography, Button as MuiButton} from '@mui/material';
+import {Typography} from '@mui/material';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -19,10 +20,9 @@ import {
 import moduleStyles from './landingPageWorkshopsTable.module.scss';
 
 const workshopsTableButtonCommonProps = {
-  variant: 'outlined',
-  color: 'secondary',
-  size: 'small',
-  type: 'button',
+  size: 's',
+  type: 'secondary',
+  color: 'black',
 };
 
 export default class LandingPageWorkshopsTable extends React.Component {
@@ -66,15 +66,14 @@ export default class LandingPageWorkshopsTable extends React.Component {
 
   renderPreWorkshopSurveyButton = workshop => {
     const preWorkshopSurveyButton = (
-      <MuiButton
+      <Button
         {...workshopsTableButtonCommonProps}
+        onClick={() => utils.windowOpen(workshop.pre_workshop_survey_url)}
         disabled={this.moreThanTenDaysUntilWorkshop(
           workshop.workshop_starting_date
         )}
-        onClick={() => utils.windowOpen(workshop.pre_workshop_survey_url)}
-      >
-        {'Complete pre-workshop survey'}
-      </MuiButton>
+        text="Complete pre-workshop survey"
+      />
     );
 
     const surveyWaitMessage = `
@@ -107,45 +106,41 @@ export default class LandingPageWorkshopsTable extends React.Component {
             workshop.pre_workshop_survey_url &&
             this.renderPreWorkshopSurveyButton(workshop)}
           {workshop.state === 'Ended' && (
-            <MuiButton
+            <Button
               {...workshopsTableButtonCommonProps}
-              disabled={!workshop.attended}
               onClick={() => this.openCertificate(workshop)}
-            >
-              {'Print certificate'}
-            </MuiButton>
+              disabled={!workshop.attended}
+              text="Print certificate"
+            />
           )}
-          <MuiButton
+          <Button
             {...workshopsTableButtonCommonProps}
             onClick={() =>
               utils.windowOpen(
                 `/professional-learning/workshops/${workshop.id}`
               )
             }
-          >
-            {'Workshop details'}
-          </MuiButton>
+            text="Workshop details"
+          />
           {workshop.state === 'Not Started' && (
-            <MuiButton
+            <Button
               {...workshopsTableButtonCommonProps}
-              color="error"
               onClick={() => this.showCancelModal(workshop.enrollment_code)}
-            >
-              {'Cancel enrollment'}
-            </MuiButton>
+              color="destructive"
+              text="Cancel enrollment"
+            />
           )}
         </div>
       );
     } else {
       return (
-        <MuiButton
+        <Button
           {...workshopsTableButtonCommonProps}
           onClick={() =>
             utils.windowOpen(`/pd/workshop_dashboard/workshops/${workshop.id}`)
           }
-        >
-          {'Workshop Details'}
-        </MuiButton>
+          text="Workshop Details"
+        />
       );
     }
   }

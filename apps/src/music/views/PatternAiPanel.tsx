@@ -1,7 +1,7 @@
+import {Button} from '@code-dot-org/component-library/button';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Slider from '@code-dot-org/component-library/slider';
-import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {
   ChangeEvent,
@@ -710,19 +710,17 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
                   </div>
                 </div>
               )}
-              <MuiButton
-                variant="contained"
-                color="white"
-                size="small"
-                disabled={generateState === 'generating'}
-                className={styles.button}
+              <Button
+                ariaLabel={musicI18n.generate()}
+                text={musicI18n.generate()}
                 onClick={handleAiClick}
-                aria-label={musicI18n.generate()}
-                type="button"
+                disabled={generateState === 'generating'}
+                type="primary"
+                color="white"
+                size="s"
+                className={styles.button}
                 tabIndex={showBotArea ? 0 : -1} // Only allow tabbing to the button when the bot area is visible
-              >
-                {musicI18n.generate()}
-              </MuiButton>
+              />
             </div>
           </div>
         </div>
