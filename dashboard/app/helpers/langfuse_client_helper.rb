@@ -28,6 +28,7 @@ module LangfuseClientHelper
     end
 
     def add_dataset_item(dataset_item)
+      puts "In LangfuseClientHelper::Client.add_dataset_item with dataset_item: #{dataset_item}"
       headers = {
         "Content-Type" => "application/json",
       }
@@ -40,6 +41,7 @@ module LangfuseClientHelper
         headers: headers,
         body: dataset_item.to_json
       )
+      puts "Received response from Langfuse: #{response.code} - #{response.body}"
       response
     end
   end

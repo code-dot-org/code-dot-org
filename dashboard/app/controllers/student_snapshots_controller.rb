@@ -1,5 +1,6 @@
 class StudentSnapshotsController < ApplicationController
   include LevelsHelper
+  include LangfuseHelper
   include Rails.application.routes.url_helpers
 
   before_action :authenticate_user!
@@ -229,6 +230,27 @@ class StudentSnapshotsController < ApplicationController
     return render json: {error: "Missing required parameters"}, status: :bad_request unless lesson_id && unit_id && student_id && section_id
 
     response = AiStudentSnapshotHelper.generate_lesson_insight(unit_id, lesson_id, teacher_id, student_id, section_id)
+
+    puts response
+    dataset_item = {
+      "timestamp" => Time.now.utc.iso8601,
+      "input" => {
+        "progress" => JSON.parse(response[:json])["progress"],
+        "misconceptions" => JSON.parse(response[:json])["misconceptions"],
+        "assessment" => JSON.parse(response[:json])["assessment"],
+        "next_steps" => JSON.parse(response[:json])["next_steps"]
+      },
+      "metadata" => {
+        "student_id" => student_id,
+        "lesson_id" => lesson_id,
+        "unit_id" => unit_id,
+        "section_id" => section_id,
+        "teacher_id" => teacher_id,
+      },
+      "datasetName" => "lesson-insights"
+    }
+    # pp "Adding dataset item to Langfuse: #{dataset_item}"
+    LangfuseHelper.ta_add_dataset_item(dataset_item)
 
     render json: response
   end
