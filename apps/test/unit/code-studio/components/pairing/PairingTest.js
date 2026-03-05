@@ -1,122 +1,89 @@
-import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import {act, render, screen, waitFor} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import $ from 'jquery';
 import React from 'react';
-import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import Pairing from '@cdo/apps/code-studio/components/pairing/Pairing.jsx';
+import i18n from '@cdo/locale';
 
-import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
-
-describe('Pairing component', function () {
-  function createDomElement() {
-    return mount(<Pairing source="/pairings" />);
+describe('Pairing component', () => {
+  function setupAjaxMock() {
+    const requests = [];
+    const ajaxSpy = jest.spyOn($, 'ajax').mockImplementation(options => {
+      const deferred = $.Deferred();
+      requests.push({options, deferred});
+      return deferred;
+    });
+    return {ajaxSpy, requests};
   }
 
-  function setupFakeAjax(response, httpCode = 200) {
-    var server = sinon.fakeServer.create();
-    server.respondWith('GET', '/pairings', [
-      httpCode,
-      {'Content-Type': 'application/json'},
-      JSON.stringify(response),
-    ]);
-    return server;
+  function methodForRequest(request) {
+    return (
+      request.options.method ||
+      request.options.type ||
+      'GET'
+    ).toUpperCase();
   }
 
-  function teardownFakeAjax(server) {
-    server.restore();
+  function findMostRecentRequest(requests, {url, method}) {
+    for (let i = requests.length - 1; i >= 0; i--) {
+      const request = requests[i];
+      const methodMatches = methodForRequest(request) === method.toUpperCase();
+      const urlMatches = request.options.url === url;
+      if (methodMatches && urlMatches) {
+        return request;
+      }
+    }
+    throw new Error(`No request found for ${method} ${url}`);
   }
 
-  function verifyStartingValues(component, student = 0, select = 0, stop = 0) {
-    expect(component.find('Pairing').length).to.equal(1);
-    expect(component.find('.selected').length).to.equal(0);
-    expect(component.find('.addPartners').length).to.equal(0);
-    expect(component.find('.student').length).to.equal(student);
-    expect(component.find('select').length).to.equal(select);
-    expect(component.find('.stop').length).to.equal(stop);
+  async function resolveRequest(request, response) {
+    await act(async () => {
+      request.deferred.resolve(response);
+      await Promise.resolve();
+    });
   }
+
+  async function rejectRequest(request, error = {}) {
+    await act(async () => {
+      request.deferred.reject(error);
+      await Promise.resolve();
+    });
+  }
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
+  describe('before ajax response is received', () => {
+    it('does not render a section dropdown', () => {
+      const {requests} = setupAjaxMock();
+      render(<Pairing />);
+
+      expect(requests).toHaveLength(1);
+      expect(methodForRequest(requests[0])).toBe('GET');
+      // Native <select> (in SectionSelector) has ARIA role 'combobox'.
+      expect(screen.queryByRole('combobox')).not.toBeInTheDocument();
+    });
+  });
 
   describe('handles http errors', () => {
-    let server, component;
-    afterEach(function () {
-      teardownFakeAjax(server);
-      component = null;
-    });
+    it('shows an error when the initial GET request fails', async () => {
+      const {requests} = setupAjaxMock();
+      render(<Pairing source="/pairings" />);
 
-    it('when the GET request fails', () => {
-      server = setupFakeAjax('', 500);
-      component = createDomElement();
-      expect(component.state().loading).to.be.true;
-      server.respond();
-      component.update();
+      const getRequest = findMostRecentRequest(requests, {
+        method: 'GET',
+        url: '/pairings',
+      });
+      await rejectRequest(getRequest);
 
-      expect(component.state().hasError).to.be.true;
-      expect(component.state().loading).to.be.false;
+      await screen.findByText(i18n.unexpectedError());
     });
   });
 
-  describe('handles failed PUT requests', () => {
-    let server, component;
-    let ajaxState = {
-      sections: [
-        {
-          id: 1,
-          name: 'A section',
-          students: [{id: 11, name: 'First student'}],
-        },
-      ],
-      pairings: [],
-    };
-
-    beforeEach(() => {
-      server = setupFakeAjax(ajaxState);
-      server.respondWith('PUT', '/pairings', [
-        500,
-        {'Content-Type': 'application/json'},
-        '',
-      ]);
-      component = createDomElement();
-      server.respond();
-      component.update();
-    });
-
-    afterEach(() => {
-      teardownFakeAjax(server);
-      component = null;
-    });
-
-    it('in handleAddPartners', () => {
-      expect(component.state().hasError).to.be.false;
-      expect(component.state().loading).to.be.false;
-
-      component.instance().handleAddPartners([11]);
-      component.update();
-      expect(component.state().loading).to.be.true;
-      expect(component.state().hasError).to.be.false;
-      server.respond();
-      component.update();
-
-      expect(component.state().hasError).to.be.true;
-      expect(component.state().loading).to.be.false;
-    });
-
-    it('in handleStop', () => {
-      expect(component.state().hasError).to.be.false;
-
-      component.instance().handleStop({preventDefault: () => {}});
-      component.update();
-      expect(component.state().loading).to.be.true;
-      expect(component.state().hasError).to.be.false;
-      server.respond();
-      component.update();
-
-      expect(component.state().hasError).to.be.true;
-      expect(component.state().loading).to.be.false;
-    });
-  });
-
-  describe('for student in multiple sections', function () {
-    var component;
-    var server;
-    var ajaxState = {
+  describe('for student in multiple sections', () => {
+    const ajaxState = {
       sections: [
         {
           id: 1,
@@ -131,55 +98,33 @@ describe('Pairing component', function () {
       pairings: [],
     };
 
-    beforeEach(function () {
-      server = setupFakeAjax(ajaxState);
-      component = createDomElement();
-      server.respond();
-      component.update();
-    });
+    it('changes selected section and updates visible students', async () => {
+      const user = userEvent.setup();
+      const {requests} = setupAjaxMock();
+      render(<Pairing source="/pairings" />);
 
-    afterEach(function () {
-      teardownFakeAjax(server);
-      component = null;
-    });
+      const getRequest = findMostRecentRequest(requests, {
+        method: 'GET',
+        url: '/pairings',
+      });
+      await resolveRequest(getRequest, ajaxState);
 
-    it('should change the section and render a list of students when a section with students is selected', function () {
-      verifyStartingValues(component, 0, 1);
+      const sectionSelect = await screen.findByRole('combobox');
+      await user.selectOptions(sectionSelect, '1');
+      screen.getByRole('button', {name: 'First student'});
+      screen.getByRole('button', {name: 'Second Student'});
 
-      // choose first section
-      component.find('select').prop('onChange')({target: {value: '1'}});
-      component.update();
-      expect(component.find('select').props().value).to.equal(1);
-      expect(component.find('.student').length).to.equal(2);
-
-      // choose second section
-      component.find('select').prop('onChange')({target: {value: '15'}});
-      component.update();
-      expect(component.find('select').props().value).to.equal(15);
-      expect(component.find('.student').length).to.equal(0);
+      await user.selectOptions(sectionSelect, '15');
+      await waitFor(() => {
+        expect(
+          screen.queryByRole('button', {name: 'First student'})
+        ).not.toBeInTheDocument();
+      });
     });
   });
 
-  describe('before ajax response is received', function () {
-    var component;
-    beforeEach(function () {
-      component = mount(React.createElement(Pairing, {}));
-      component.update();
-    });
-
-    afterEach(function () {
-      component = null;
-    });
-
-    it('should not render a section dropdown', function () {
-      verifyStartingValues(component);
-    });
-  });
-
-  describe('for student in one section', function () {
-    var component;
-    var server;
-    var ajaxState = {
+  describe('for student in one section', () => {
+    const ajaxState = {
       sections: [
         {
           id: 1,
@@ -193,69 +138,128 @@ describe('Pairing component', function () {
       pairings: [],
     };
 
-    beforeEach(function () {
-      server = setupFakeAjax(ajaxState);
-      component = createDomElement();
-      server.respond();
-      component.update();
-    });
+    it('shows and hides Add Partners as student selections change', async () => {
+      const user = userEvent.setup();
+      const {requests} = setupAjaxMock();
+      render(<Pairing source="/pairings" />);
 
-    afterEach(function () {
-      teardownFakeAjax(server);
-      component = null;
-    });
+      const getRequest = findMostRecentRequest(requests, {
+        method: 'GET',
+        url: '/pairings',
+      });
+      await resolveRequest(getRequest, ajaxState);
 
-    it('should recall two students are selected when two students are clicked', function () {
-      verifyStartingValues(component, 2);
+      const firstStudentButton = await screen.findByRole('button', {
+        name: 'First student',
+      });
+      const addPartnersButtonName = i18n.addPartners();
 
-      // click on both students to select
-      component.find('.student').first().simulate('click');
-      component.find('.student').last().simulate('click');
-      expect(component.find('.student').length).to.equal(2);
-      expect(component.find('.selected').length).to.equal(2);
-      expect(component.find('.addPartners').length).to.equal(1);
-    });
-
-    it('should stop displaying addPartners when student is unclicked', function () {
-      verifyStartingValues(component, 2);
-
-      // click on first student to select
-      component.find('.student').first().simulate('click');
-      expect(component.find('.student').length).to.equal(2);
-      expect(component.find('.selected').length).to.equal(1);
-      expect(component.find('.addPartners').length).to.equal(1);
-
-      // click on first student again to unselect
-      component.find('.student').first().simulate('click');
-      expect(component.find('.student').length).to.equal(2);
-      expect(component.find('.selected').length).to.equal(0);
-      expect(component.find('.addPartners').length).to.equal(0);
-    });
-
-    it('should let you select a student and add them as a partner', function () {
-      verifyStartingValues(component, 2);
-
-      // click on first student to select
-      component.find('.student').first().simulate('click');
-      expect(component.find('.student').length).to.equal(2);
-      expect(component.find('.selected').length).to.equal(1);
-      expect(component.find('.addPartners').length).to.equal(1);
-
-      // click on Add Partner to confirm
-      component.find('.addPartners').first().simulate('click');
-
-      // verify that the right data is sent to the server
-      let data = server.requests[server.requests.length - 1].requestBody;
       expect(
+        screen.queryByRole('button', {name: addPartnersButtonName})
+      ).not.toBeInTheDocument();
+
+      await user.click(firstStudentButton);
+      screen.getByRole('button', {name: addPartnersButtonName});
+
+      await user.click(firstStudentButton);
+      expect(
+        screen.queryByRole('button', {name: addPartnersButtonName})
+      ).not.toBeInTheDocument();
+    });
+
+    it('submits selected partners with expected payload', async () => {
+      const user = userEvent.setup();
+      const {requests} = setupAjaxMock();
+      render(<Pairing source="/pairings" />);
+
+      const getRequest = findMostRecentRequest(requests, {
+        method: 'GET',
+        url: '/pairings',
+      });
+      await resolveRequest(getRequest, ajaxState);
+
+      await user.click(
+        await screen.findByRole('button', {name: 'First student'})
+      );
+      await user.click(screen.getByRole('button', {name: i18n.addPartners()}));
+
+      const putRequest = findMostRecentRequest(requests, {
+        method: 'PUT',
+        url: '/pairings',
+      });
+      expect(putRequest.options.data).toBe(
         '{"pairings":[{"id":11,"name":"First student"}],"sectionId":1}'
-      ).to.equal(data);
+      );
+    });
+
+    it('shows an error if adding partners fails', async () => {
+      const user = userEvent.setup();
+      const {requests} = setupAjaxMock();
+      render(<Pairing source="/pairings" />);
+
+      const getRequest = findMostRecentRequest(requests, {
+        method: 'GET',
+        url: '/pairings',
+      });
+      await resolveRequest(getRequest, ajaxState);
+
+      await user.click(
+        await screen.findByRole('button', {name: 'First student'})
+      );
+      await user.click(screen.getByRole('button', {name: i18n.addPartners()}));
+
+      const putRequest = findMostRecentRequest(requests, {
+        method: 'PUT',
+        url: '/pairings',
+      });
+      await rejectRequest(putRequest);
+
+      await screen.findByText(i18n.unexpectedError());
+    });
+
+    it('does not allow selecting more than 3 partners', async () => {
+      const user = userEvent.setup();
+      const {requests} = setupAjaxMock();
+      render(<Pairing source="/pairings" />);
+
+      const getRequest = findMostRecentRequest(requests, {
+        method: 'GET',
+        url: '/pairings',
+      });
+      await resolveRequest(getRequest, {
+        sections: [
+          {
+            id: 1,
+            name: 'A section',
+            students: [
+              {id: 11, name: 'First student'},
+              {id: 12, name: 'Second Student'},
+              {id: 13, name: 'Third Student'},
+              {id: 14, name: 'Fourth Student'},
+              {id: 15, name: 'Fifth Student'},
+            ],
+          },
+        ],
+        pairings: [],
+      });
+
+      await user.click(
+        await screen.findByRole('button', {name: 'First student'})
+      );
+      await user.click(screen.getByRole('button', {name: 'Second Student'}));
+      await user.click(screen.getByRole('button', {name: 'Third Student'}));
+      await user.click(screen.getByRole('button', {name: 'Fourth Student'}));
+
+      screen.getByText(i18n.exceededPairProgrammingMax());
+
+      expect(
+        screen.getByRole('button', {name: 'Fifth Student'})
+      ).toBeDisabled();
     });
   });
 
-  describe('for student who is currently pairing', function () {
-    var component;
-    var server;
-    var ajaxState = {
+  describe('for student who is currently pairing', () => {
+    const ajaxState = {
       sections: [
         {
           id: 1,
@@ -277,32 +281,51 @@ describe('Pairing component', function () {
       ],
     };
 
-    beforeEach(function () {
-      server = setupFakeAjax(ajaxState);
-      server.respondWith('PUT', '/pairings', [
-        200,
-        {'Content-Type': 'application/json'},
-        JSON.stringify({sections: [], pairings: []}),
-      ]);
-      component = createDomElement();
-      server.respond();
-      component.update();
+    it('returns to selection mode when Stop succeeds', async () => {
+      const user = userEvent.setup();
+      const {requests} = setupAjaxMock();
+      render(<Pairing source="/pairings" />);
+
+      const getRequest = findMostRecentRequest(requests, {
+        method: 'GET',
+        url: '/pairings',
+      });
+      await resolveRequest(getRequest, ajaxState);
+
+      await user.click(
+        await screen.findByRole('button', {name: i18n.pairProgrammingStop()})
+      );
+      const putRequest = findMostRecentRequest(requests, {
+        method: 'PUT',
+        url: '/pairings',
+      });
+      expect(putRequest.options.data).toBe('{"pairings":[]}');
+      await resolveRequest(putRequest, {sections: [], pairings: []});
+
+      await screen.findByRole('combobox');
+      expect(screen.queryByText('Josh')).not.toBeInTheDocument();
     });
 
-    afterEach(function () {
-      teardownFakeAjax(server);
-      component = null;
-    });
+    it('shows an error when Stop fails', async () => {
+      const user = userEvent.setup();
+      const {requests} = setupAjaxMock();
+      render(<Pairing source="/pairings" />);
 
-    it('should remove all students and go back to selection mode when clicking Stop', function () {
-      verifyStartingValues(component, 3, 0, 1);
+      const getRequest = findMostRecentRequest(requests, {
+        method: 'GET',
+        url: '/pairings',
+      });
+      await resolveRequest(getRequest, ajaxState);
 
-      // click on stop button
-      component.find('.stop').simulate('click');
-      server.respond();
-      component.update();
-      expect(component.find('.student').length).to.equal(0);
-      expect(component.find('select').length).to.equal(1);
+      await user.click(
+        await screen.findByRole('button', {name: i18n.pairProgrammingStop()})
+      );
+      const putRequest = findMostRecentRequest(requests, {
+        method: 'PUT',
+        url: '/pairings',
+      });
+      await rejectRequest(putRequest);
+      await screen.findByText(i18n.unexpectedError());
     });
   });
 });

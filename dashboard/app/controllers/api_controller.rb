@@ -198,6 +198,7 @@ class ApiController < ApplicationController
       section_hash[section.id] = {
         section_id: section.id,
         section_name: section.name,
+        ai_chat_access_level: section.ai_chat_access_level,
         lessons: script.lessons.each_with_object({}) do |lesson, lesson_hash|
           lesson_state = lesson.lockable_state(section.students)
           lesson_hash[lesson.id] = lesson_state unless lesson_state.nil?

@@ -10,13 +10,16 @@ import {
   PendingChatMessage,
 } from '../../types';
 
-import {generatedFileToAsset} from './helpers/fileHelpers';
+import {
+  generatedFileToAsset,
+  generatedFileToImageFile,
+} from './helpers/fileHelpers';
 import {
   formatChatMessage,
   formatSystemMessages,
 } from './helpers/messageHelpers';
 import {getModel} from './helpers/modelHelpers';
-import {isTextSafe} from './helpers/safetyHelpers';
+import {isTextSafe, isImageSafe} from './helpers/safetyHelpers';
 
 /**
  * Performs all the steps necessary to generate a chat response:
@@ -59,6 +62,20 @@ export async function generateChatResponse(
     messages,
     temperature: modelParameters.temperature,
   });
+
+  for (const file of files) {
+    if (file.mediaType.startsWith('image/')) {
+      const ext = file.mediaType.split('/')[1];
+      const imageFile = generatedFileToImageFile(file, ext);
+      const modelImageSafe = await isImageSafe(imageFile, ext);
+      if (!modelImageSafe) {
+        return {
+          response: text,
+          status: AiRequestExecutionStatus.MODEL_IMAGE_FLAGGED,
+        };
+      }
+    }
+  }
 
   // Check model text output for safety.
   const modelOutputSafe = await isTextSafe(text);

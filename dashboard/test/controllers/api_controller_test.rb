@@ -283,6 +283,7 @@ class ApiControllerTest < ActionController::TestCase
     section_response = body[@section.id.to_s]
     assert_equal @section.id, section_response['section_id']
     assert_equal @section.name, section_response['section_name']
+    assert_equal @section.ai_chat_access_level, section_response['ai_chat_access_level']
     assert_equal 1, section_response['lessons'].length
 
     lessons_response = section_response['lessons']

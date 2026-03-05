@@ -1,6 +1,10 @@
-import {Button, ButtonProps} from '@code-dot-org/component-library/button';
 import Image, {ImageProps} from '@code-dot-org/component-library/image';
-import {Box, Typography} from '@mui/material';
+import {
+  Box,
+  Button as MuiButton,
+  ButtonProps as MuiButtonProps,
+  Typography,
+} from '@mui/material';
 import classNames from 'classnames';
 import React, {FC} from 'react';
 
@@ -11,7 +15,7 @@ export interface CodebridgeEmptyStateProps {
   title?: string;
   description?: string;
   className?: string;
-  buttonProps?: ButtonProps;
+  buttonProps?: MuiButtonProps;
 }
 
 export const CodebridgeEmptyState: FC<CodebridgeEmptyStateProps> = ({
@@ -45,7 +49,15 @@ export const CodebridgeEmptyState: FC<CodebridgeEmptyStateProps> = ({
           </Typography>
         )}
       </div>
-      {buttonProps && <Button {...buttonProps} />}
+      {buttonProps && (
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
+          type="button"
+          {...buttonProps}
+        />
+      )}
     </Box>
   );
 };
