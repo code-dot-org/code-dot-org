@@ -1,79 +1,171 @@
-// This is the primary JavaScript linting rules for the entire
-// project.  In a few places, some of these rules are extended
-// or overridden for a particular subset of the project.  See
-// other .eslintrc.js files for those rules.
-module.exports = {
-  "globals": {
-  },
-  "plugins": [
-  ],
-  "extends": [
-    'plugin:react/recommended',
-    "eslint:recommended",
-  ],
-  "env": {
-    "browser": true,
-    "node": true,
-    "es6": true
-  },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  },
-  "parser": "babel-eslint",
-  "parserOptions": {
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true,
-      "modules": true,
-      "ecmaVersion": 6,
-      "experimentalObjectRestSpread": true
-    }
-  },
-  "rules": {
-    "array-bracket-spacing": ["error", "never"],
-    "brace-style": ["error", "1tbs", { allowSingleLine: true }],
-    "comma-dangle": "off",
-    curly: "error",
-    "dot-location": ["error", "property"],
-    "eol-last": "error",
-    eqeqeq: "error",
-    "jsx-quotes": "error", // autofixable
-    "keyword-spacing": "error",
-    "no-array-constructor": "error",
-    "no-console": "off",
-    "no-duplicate-imports": "error",
-    "no-empty": "off",
-    "no-eval": "error",
-    "no-ex-assign": "off",
-    "no-extra-boolean-cast": "off",
-    "no-implicit-globals": "error",
-    "no-new-object": "error",
-    "no-trailing-spaces": "error",
-    "no-undef": "error",
-    "no-unused-vars": ["error", { args: "none" }],
-    "no-useless-escape": "off",
-    "no-with": "error",
-    "object-curly-spacing": "off",
-    "react/button-has-type": "error",
-    "react/display-name": "off",
-    "react/jsx-closing-bracket-location": "error", // autofixable
-    "react/jsx-curly-spacing": "error", // autofixable
-    "react/jsx-first-prop-new-line": ["error", "multiline"],
-    "react/jsx-indent-props": ["error", 2], // autofixable
-    "react/jsx-key": "off",
-    "react/jsx-no-target-blank": "off",
-    "react/jsx-wrap-multilines": "error", // autofixable
-    "react/no-danger": "error",
-    "react/no-find-dom-node": "off",
-    "react/no-render-return-value": "off",
-    "react/no-string-refs": "off",
-    "react/no-unescaped-entities": "off",
-    "react/self-closing-comp": "error",
-    semi: "off", // enforced by babel/semi
-    "space-before-blocks": "error",
-    strict: "error"
+// There are some rules that we would like to have enabled, but which have
+// existing violations that need to be fixed (or individually ignored) before
+// we can do so.
+//
+// Adding them here separately from the other, intentionally-disabled rules
+// below, so that we can more easily track fixing violations and eventually
+// reenabling.
+const rulesToEventuallyReenable = {
+  'jsx-a11y/anchor-is-valid': 'off',
+  'jsx-a11y/click-events-have-key-events': 'off',
+  'jsx-a11y/label-has-associated-control': 'off',
+  'jsx-a11y/no-noninteractive-element-interactions': 'off',
+  'jsx-a11y/no-static-element-interactions': 'off',
+};
 
-  }
+const accessibilityTestingMessage =
+  'Tests should resemble how the user interacts with the application and should not rely on technical details, see docs https://testing-library.com/docs/queries/about/#priority and playbook https://docs.google.com/document/d/1U4MRbH1kthYn40mbAFK59fOWWJNcvrMIDpAZzYd9q9Y/edit';
+
+const noDataTestIdMessage =
+  'Attribute data-testid does not meet accessibility guidelines. ' +
+  accessibilityTestingMessage;
+
+// This config defines globals available especially in apps,
+// enables es6, and enables apps-specific plugins and rules.
+// See the root .eslintrc.js for generic eslint linting rules.
+module.exports = {
+  parser: '@babel/eslint-parser',
+  plugins: [
+    'react'
+  ],
+  parserOptions: {
+    babelOptions: {
+      presets: ['@babel/preset-react'],
+    },
+  },
+  extends: [
+    'plugin:react/recommended',
+  ],
+  env: {
+    es6: true
+  },
+  globals: {
+    $: 'readonly',
+    ace: 'readonly',
+    addToHome: 'readonly',
+    adjustScroll: 'readonly',
+    Applab: 'readonly',
+    appOptions: 'readonly',
+    Blockly: 'readonly',
+    Bounce: 'readonly',
+    Calc: 'readonly',
+    CanvasPixelArray: 'readonly',
+    CDOSounds: 'readonly',
+    censusErrorMessage: 'readonly',
+    Craft: 'readonly',
+    dashboard: 'readonly',
+    Dialog: 'readonly',
+    droplet: 'readonly',
+    Eval: 'readonly',
+    Flappy: 'readonly',
+    ga: 'readonly',
+    gtag: 'readonly',
+    Gamelab: 'readonly',
+    google: 'readonly',
+    Handsontable: 'readonly',
+    hocYear: 'readonly',
+    IN_STORYBOOK: 'readonly',
+    IN_UNIT_TEST: 'readonly',
+    inlineAttach: 'readonly',
+    Jigsaw: 'readonly',
+    jQuery: 'readonly',
+    MapboxGeocoder: 'readonly',
+    mapboxgl: 'readonly',
+    Maze: 'readonly',
+    options: 'readonly',
+    p5: 'readonly',
+    Phaser: 'readonly',
+    // PISKEL_DEVELOPMENT_MODE is a build flag.  See Gruntfile.js for how to enable it.
+    PISKEL_DEVELOPMENT_MODE: 'readonly',
+    requirejs: 'readonly',
+    SerialPort: 'readonly',
+    signupErrorMessage: 'readonly',
+    Studio: 'readonly',
+    // Only used in Web Lab 2.
+    stylelint: 'readonly',
+    thanksUrl: 'readonly',
+    Turtle: 'readonly',
+    YT: 'readonly',
+  },
+  reportUnusedDisableDirectives: true,
+  rules: {
+    ...rulesToEventuallyReenable,
+    'react/button-has-type': 'error',
+    'react/display-name': 'off',
+    'react/jsx-closing-bracket-location': 'error', // autofixable
+    'react/jsx-curly-spacing': 'error', // autofixable
+    'react/jsx-first-prop-new-line': ['error', 'multiline'],
+    'react/jsx-indent-props': ['error', 2], // autofixable
+    'react/jsx-key': 'off',
+    'react/jsx-no-target-blank': 'error',
+    'react/jsx-wrap-multilines': 'error', // autofixable
+    'react/no-find-dom-node': 'off',
+    'react/no-render-return-value': 'off',
+    'react/no-string-refs': 'off',
+    'react/no-unescaped-entities': 'off',
+    'react/self-closing-comp': 'error',
+    'react/no-danger': 'error',
+    'no-restricted-imports': [
+      'error',
+      {
+        paths: [
+          {
+            name: 'chai',
+            message: 'Use jest matchers instead of chai',
+          },
+          {
+            // We are deprecating enzyme in favor of react-testing-library. See further work at https://docs.google.com/document/d/1eX-LV7d2GtuAypy9BYiT5HOwu7FQjc4kVu6qx_6bDiI
+            name: 'enzyme',
+            message: 'Use react-testing-library instead of enzyme',
+          },
+          {
+            // We are now using 'react-bootstrap-2'. See further work at https://github.com/code-dot-org/code-dot-org/pull/51681
+            name: 'react-bootstrap',
+            message: 'Use react-bootstrap-2 instead of react-bootstrap',
+          },
+          {
+            name: 'react-router',
+            message: 'Use react-router-dom instead of react-router',
+          },
+          {
+            name: 'sinon',
+            message: 'Use jest spies and stubs instead of sinon',
+          },
+          {
+            name: 'sinon-chai',
+            message: 'Use jest matchers instead of chai',
+          },
+          {
+            name: '@code-dot-org/component-library/typography',
+            message:
+              'DSCO Typography is deprecated. Use MUI Typography from @mui/material instead. From the apps directory (cd apps), run: npx jscodeshift -t ./tools/codemod/typography-to-mui.js "src" --parser=tsx --extensions=tsx,ts,jsx,js',
+          },
+        ],
+        patterns: [
+          {
+            group: ['*deprecatedChai', '*reconfiguredChai'],
+            message: 'Use jest matchers instead of chai',
+          },
+        ],
+      },
+    ],
+    'react/forbid-dom-props': [
+      'error',
+      {
+        forbid: [{propName: 'data-testid', message: noDataTestIdMessage}],
+      },
+    ],
+    'react/forbid-component-props': [
+      'error',
+      {
+        forbid: [{propName: 'data-testid', message: noDataTestIdMessage}],
+      },
+    ],
+  },
+  settings: {
+    react: {
+      version: 'detect',
+    },
+    'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
+  },
 };
