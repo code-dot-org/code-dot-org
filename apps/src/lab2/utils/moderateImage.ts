@@ -9,7 +9,8 @@ const LAB2_LABS_MODERATE_IMAGES = ['weblab2', 'aichat'];
 export const moderateImage = async (
   file: File,
   ext: string,
-  appName?: string
+  appName: string,
+  isModelOutputImage?: boolean
 ): Promise<'ok' | 'flagged' | 'skipped'> => {
   if (
     !LAB2_LABS_MODERATE_IMAGES.includes(appName ?? '') ||
@@ -21,7 +22,10 @@ export const moderateImage = async (
   metricsReporter.incrementCounter('ModerateCustomImage.Attempt', [
     {name: 'UploaderType', value: 'Lab2FileUploader'},
   ]);
-  analyticsReporter.sendEvent(EVENTS.MODERATE_CUSTOM_IMAGE, {
+  const moderateImageStatsigEvent = isModelOutputImage
+    ? EVENTS.MODERATE_MODEL_OUTPUT_IMAGE_AZURE
+    : EVENTS.MODERATE_CUSTOM_IMAGE;
+  analyticsReporter.sendEvent(moderateImageStatsigEvent, {
     UploaderType: 'Lab2 File Uploader',
     ProjectType: appName,
   });
@@ -46,7 +50,10 @@ export const moderateImage = async (
     metricsReporter.incrementCounter('ModerateCustomImage.Flagged', [
       {name: 'UploaderType', value: 'Lab2FileUploader'},
     ]);
-    analyticsReporter.sendEvent(EVENTS.FLAGGED_CUSTOM_IMAGE, {
+    const flaggedImageStatsigEvent = isModelOutputImage
+      ? EVENTS.FLAGGED_MODEL_OUTPUT_IMAGE_AZURE
+      : EVENTS.FLAGGED_CUSTOM_IMAGE;
+    analyticsReporter.sendEvent(flaggedImageStatsigEvent, {
       UploaderType: 'Lab2 File Uploader',
       ProjectType: appName,
     });

@@ -19,7 +19,7 @@ import {
   formatSystemMessages,
 } from './helpers/messageHelpers';
 import {getModel} from './helpers/modelHelpers';
-import {isTextSafe, isImageSafe} from './helpers/safetyHelpers';
+import {isTextSafe, isModelOutputImageSafe} from './helpers/safetyHelpers';
 
 /**
  * Performs all the steps necessary to generate a chat response:
@@ -85,7 +85,7 @@ export async function generateChatResponse(
     if (file.mediaType.startsWith('image/')) {
       const ext = file.mediaType.split('/')[1];
       const imageFile = generatedFileToImageFile(file, ext);
-      const modelImageSafe = await isImageSafe(imageFile, ext);
+      const modelImageSafe = await isModelOutputImageSafe(imageFile, ext);
       if (!modelImageSafe) {
         return {
           response: text,

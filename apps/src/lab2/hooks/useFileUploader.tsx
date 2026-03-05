@@ -30,7 +30,7 @@ export type FileUploaderProps = {
     eventName: analyticsEvents,
     payload: Record<string, string>
   ) => void;
-  appName?: string;
+  appName: string;
   isBlockedAbuse?: boolean;
   onImageFlagged?: (
     file: File,
