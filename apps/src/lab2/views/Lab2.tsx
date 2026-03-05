@@ -6,6 +6,7 @@
 import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
 import React from 'react';
 import {Provider} from 'react-redux';
+import {ShepherdJourneyProvider} from 'react-shepherd';
 
 import {AiChatDisabledProvider} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {getStore} from '@cdo/apps/redux';
@@ -28,19 +29,21 @@ const Lab2: React.FunctionComponent = () => {
       <BrowserTextToSpeechWrapper>
         <Lab2IdleTimer />
         <ThemeProvider>
-          <AiChatDisabledProvider>
-            <DialogManager>
-              <Lab2Wrapper>
-                <RubricWrapper>
-                  <MetricsAdapter />
-                  <ProjectContainer channelId={getStandaloneProjectId()}>
-                    <LabViewsRenderer />
-                  </ProjectContainer>
-                  <RubricFABContainer />
-                </RubricWrapper>
-              </Lab2Wrapper>
-            </DialogManager>
-          </AiChatDisabledProvider>
+          <ShepherdJourneyProvider>
+            <AiChatDisabledProvider>
+              <DialogManager>
+                <Lab2Wrapper>
+                  <RubricWrapper>
+                    <MetricsAdapter />
+                    <ProjectContainer channelId={getStandaloneProjectId()}>
+                      <LabViewsRenderer />
+                    </ProjectContainer>
+                    <RubricFABContainer />
+                  </RubricWrapper>
+                </Lab2Wrapper>
+              </DialogManager>
+            </AiChatDisabledProvider>
+          </ShepherdJourneyProvider>
         </ThemeProvider>
       </BrowserTextToSpeechWrapper>
     </Provider>

@@ -57,6 +57,19 @@ interface Window {
   };
 }
 
+// react-shepherd is an ESM package without a separate .d.cts file, which causes TS1479
+// under moduleResolution:node16. This ambient declaration overrides the package types
+// to avoid the CJS/ESM interop error while preserving the exports we use.
+declare module 'react-shepherd' {
+  import type {ReactNode} from 'react';
+  import type {ShepherdBase} from 'shepherd.js';
+
+  export function ShepherdJourneyProvider(props: {
+    children?: ReactNode;
+  }): JSX.Element;
+  export function useShepherd(): ShepherdBase;
+}
+
 // Modules without types
 declare module '@blockly/plugin-scroll-options';
 declare module '@blockly/keyboard-navigation';

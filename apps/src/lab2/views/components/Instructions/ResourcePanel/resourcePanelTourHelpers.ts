@@ -1,4 +1,7 @@
+import {type StepOptions, type StepOptionsButton, type Tour} from 'shepherd.js';
+
 import lab2I18n from '@cdo/apps/lab2/locale';
+import {commonI18n} from '@cdo/apps/types/locale';
 
 import {
   resourcePanelInstructionsElementId,
@@ -6,27 +9,54 @@ import {
   resourcePanelLinksElementId,
   resourcePanelNavigationButtonElementId,
 } from './constants';
-export const INITIAL_STEP = 0;
-export const STEPS = [
+
+const nextButton = (tour: Tour): StepOptionsButton => ({
+  text: commonI18n.next(),
+  action: () => tour.next(),
+});
+
+const doneButton = (tour: Tour): StepOptionsButton => ({
+  text: commonI18n.done(),
+  action: () => tour.next(),
+});
+
+export const createResourcePanelTourSteps = (tour: Tour): StepOptions[] => [
   {
-    element: `#${resourcePanelInstructionsElementId}`,
+    id: 'instructions',
+    attachTo: {
+      element: `#${resourcePanelInstructionsElementId}`,
+      on: 'right',
+    },
     title: lab2I18n.resourcePanelOnboarding_title(),
-    intro: lab2I18n.resourcePanelOnboarding_text(),
+    text: lab2I18n.resourcePanelOnboarding_text(),
+    buttons: [nextButton(tour)],
+    scrollTo: false,
   },
   {
-    element: `#${resourcePanelTabsElementId}`,
+    id: 'tabs',
+    attachTo: {element: `#${resourcePanelTabsElementId}`, on: 'right'},
     title: lab2I18n.resourcePanelOnboarding_tabsTitle(),
-    intro: lab2I18n.resourcePanelOnboarding_tabsText(),
-    position: 'right',
+    text: lab2I18n.resourcePanelOnboarding_tabsText(),
+    buttons: [nextButton(tour)],
+    scrollTo: false,
   },
   {
-    element: `#${resourcePanelLinksElementId}`,
+    id: 'links',
+    attachTo: {element: `#${resourcePanelLinksElementId}`, on: 'right'},
     title: lab2I18n.resourcePanelOnboarding_linksTitle(),
-    intro: lab2I18n.resourcePanelOnboarding_linksText(),
+    text: lab2I18n.resourcePanelOnboarding_linksText(),
+    buttons: [nextButton(tour)],
+    scrollTo: false,
   },
   {
-    element: `#${resourcePanelNavigationButtonElementId}`,
+    id: 'navigation',
+    attachTo: {
+      element: `#${resourcePanelNavigationButtonElementId}`,
+      on: 'top',
+    },
     title: lab2I18n.resourcePanelOnboarding_finishTitle(),
-    intro: lab2I18n.resourcePanelOnboarding_finishText(),
+    text: lab2I18n.resourcePanelOnboarding_finishText(),
+    buttons: [doneButton(tour)],
+    scrollTo: false,
   },
 ];

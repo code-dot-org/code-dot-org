@@ -357,6 +357,7 @@
     "react-schemaorg": "^2.0.0",
     "react-select": "^1.2.1",
     "react-select-5": "npm:react-select@5",
+    "react-shepherd": "^7.0.3",
     "react-sticky": "^6.0.3",
     "react-string-replace": "^1.1.1",
     "react-tether": "^1.0.4",
