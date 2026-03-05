@@ -29,31 +29,29 @@
       "folders": {
       },
       "files": {
-        "1": {
-          "id": "1",
-          "name": "index.html",
-          "language": "html",
-          "contents": "<!DOCTYPE html>\n<html>\n  <body>\n    Content goes here!\n  </body>\n</html>\n  ",
-          "active": true,
-          "folderId": "0"
-        },
-        "2": {
-          "id": "2",
-          "name": "styles.css",
-          "language": "css",
-          "contents": "Add your changes to styles.css",
-          "folderId": "0",
-          "active": false
-        }
       },
       "openFiles": [
-        "1",
-        "2"
+
       ]
     },
-    "name_suffix": "_2026"
+    "name_suffix": "_2026",
+    "project_template_level_name": "ai-generated-design-lesson3-template_2026",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:10:38.243+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson3-level8_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson3-level8_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:10:38.243+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson3-level8_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson3-level8_2025\"},{\"changed_at\":\"2026-03-04 23:28:59 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 23:29:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>
