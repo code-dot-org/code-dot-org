@@ -88,7 +88,8 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   const [canShowPodcasts, setCanShowPodcasts] = useState(false);
   const [audioSummaryTranscript, setAudioSummaryTranscript] =
     useState<string>('');
-  const [playStartTime, setPlayStartTime] = useState<number>(0);
+  const [playStartTime, setPlayStartTime] = useState(0);
+  const audioPlayerRef = React.useRef<HTMLAudioElement | null>(null);
 
   const userId = useAppSelector(state => state.currentUser.userId);
 
@@ -266,8 +267,6 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   };
 
   React.useEffect(() => {
-    const audioPlayer = document.getElementById('lesson-summary-audio');
-
     const handlePodcastPlay = () => {
       setPlayStartTime(Date.now());
       analyticsReporter.sendEvent(EVENTS.TA_PODCAST_PLAYED, {
@@ -282,11 +281,9 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
         time_played: play_time,
       });
     };
-
+    const audioPlayer = audioPlayerRef.current;
     audioPlayer?.addEventListener('play', handlePodcastPlay);
-
     audioPlayer?.addEventListener('pause', handlePodcastStop);
-
     return () => {
       audioPlayer?.removeEventListener('play', handlePodcastPlay);
       audioPlayer?.removeEventListener('pause', handlePodcastStop);
@@ -421,6 +418,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
                 {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
                 <audio
                   id="lesson-summary-audio"
+                  ref={audioPlayerRef}
                   src={`/ai_lesson_summary_podcasts/show?lesson_id=${selectedLesson?.id}`}
                   preload="auto"
                   controls
