@@ -53,6 +53,7 @@ interface Options {
     disableRecommendedJsConfig?: boolean;
   };
   lineNumberFormatter?: (line: number) => string;
+  themeStyles?: Record<string, Record<string, string | number>>;
   preview?: string | Element;
   game?: string;
 }
@@ -171,6 +172,7 @@ function initializeCodeMirror6(
     attachments,
     onUpdateLinting,
     lineNumberFormatter,
+    themeStyles,
     preview,
     game,
   } = options;
@@ -256,6 +258,7 @@ function initializeCodeMirror6(
     ),
     getLanguageExtension(mode),
     levelbuilderEditorTheme,
+    ...(themeStyles ? [EditorView.theme(themeStyles)] : []),
     EditorView.lineWrapping,
     ...(onUpdateLinting && lintExtension ? [lintExtension, lintGutter()] : []),
     EditorView.domEventHandlers({

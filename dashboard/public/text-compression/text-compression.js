@@ -172,12 +172,41 @@
 
   var poemSelect = document.getElementById("poemsList");
   $('#writeYourOwn').click(showWriteYourOwnDialog);
+
+  var themeStyles = {
+    '&': {
+      height: '100%',
+      fontSize: '14pt',
+      lineHeight: '1.4em',
+      minHeight: '200px',
+    },
+    '.cm-gutters': {
+      backgroundColor: '#ff9'
+    },
+    '.cm-lineNumbers .cm-gutterElement': {
+      color: '#000',
+      textAlign: 'center'
+    },
+    '.cm-scroller': {
+      overflow: 'auto'
+    }
+  };
+
   window.editor = window.initializeCodeMirror6($dictionary[0], 'markdown', {
     lineNumberFormatter: function (lineNumber) {
       return dictEntries[lineNumber - 1] || '';
-    }
+    },
+    themeStyles: themeStyles,
   });
+
   editor.on("change", compress);
+
+  var editorMount = editor.getWrapperElement().parentElement;
+  if (editorMount) {
+    editorMount.style.height = '100%';
+    editorMount.style.width = '100%';
+  }
+
   editor.getWrapperElement().addEventListener("keydown", function (e) {
     if (e.keyCode === 32) {
       e.preventDefault();
@@ -191,7 +220,9 @@
       editor.setCursor(cursorPosition + 1);
     }
   });
+
   editor.getWrapperElement().style.width = '100%';
   editor.getWrapperElement().style.height = '100%';
+
   poemChanged();
 })();
