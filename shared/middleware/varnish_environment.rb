@@ -13,7 +13,7 @@ class VarnishEnvironment < Sinatra::Base
   FALLBACK_LOCALES = Cdo::I18n::LOCALE_CONFIGS.each_with_object({}) {|(k, v), h| h[k.downcase] = v.downcase if v.is_a?(String)}.freeze
 
   before do
-    request.locale = param_locale || varnish_locale || cookie_locale || http_locale || default_locale
+    request.locale = param_locale || cookie_locale || http_locale || default_locale
   end
 
   after do
@@ -41,10 +41,6 @@ class VarnishEnvironment < Sinatra::Base
 
   helpers do
     include Middleware::Helpers::Cookies
-
-    def varnish_locale
-      language_to_locale(request.env['HTTP_X_VARNISH_ACCEPT_LANGUAGE'])
-    end
 
     def cookie_locale
       language_to_locale(request.cookies[LOCALE_KEY])

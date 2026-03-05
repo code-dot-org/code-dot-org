@@ -11,7 +11,6 @@ class LanguageTest < ActionDispatch::IntegrationTest
         request_env = {}
         request_params = {}
 
-        request_env['HTTP_X_VARNISH_ACCEPT_LANGUAGE'] = varnish_locale         if varnish_locale
         request_env['HTTP_ACCEPT_LANGUAGE']           = "#{http_locale};q=0.9" if http_locale
         request_params[:set_locale]                   = param_locale           if param_locale
         cookies[:language_]                           = cookie_locale          if cookie_locale
@@ -33,6 +32,5 @@ class LanguageTest < ActionDispatch::IntegrationTest
   it_behaves_like 'renders in expected locale', 'en-US', http_locale: 'en'
   it_behaves_like 'renders in expected locale', 'uk-UA', http_locale: 'uk'
   it_behaves_like 'renders in expected locale', 'es-ES', http_locale: 'uk', cookie_locale: 'es'
-  it_behaves_like 'renders in expected locale', 'fa-IR', http_locale: 'uk', cookie_locale: 'es', varnish_locale: 'fa'
-  it_behaves_like 'renders in expected locale', 'de-DE', http_locale: 'uk', cookie_locale: 'es', varnish_locale: 'fa', param_locale: 'de-DE'
+  it_behaves_like 'renders in expected locale', 'fa-IR', http_locale: 'uk', cookie_locale: 'es', param_locale: 'fa'
 end
