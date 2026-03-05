@@ -19,8 +19,9 @@ export const moderateImage = async (
     return 'skipped';
   }
   const metricsReporter = Lab2Registry.getInstance().getMetricsReporter();
+  const uploaderType = isModelOutputImage ? 'n/a' : 'Lab2FileUploader';
   metricsReporter.incrementCounter('ModerateCustomImage.Attempt', [
-    {name: 'UploaderType', value: 'Lab2FileUploader'},
+    {name: 'UploaderType', value: uploaderType},
   ]);
   const moderateImageStatsigEvent = isModelOutputImage
     ? EVENTS.MODERATE_MODEL_OUTPUT_IMAGE_AZURE
@@ -36,19 +37,19 @@ export const moderateImage = async (
     if (!response.ok) {
       metricsReporter.logError('Error with image moderation: HTTP error');
       metricsReporter.incrementCounter('ModerateCustomImage.Error', [
-        {name: 'UploaderType', value: 'Lab2FileUploader'},
+        {name: 'UploaderType', value: uploaderType},
       ]);
       return 'skipped';
     }
     const json = await response.json();
     metricsReporter.incrementCounter('ModerateCustomImage.Success', [
-      {name: 'UploaderType', value: 'Lab2FileUploader'},
+      {name: 'UploaderType', value: uploaderType},
     ]);
     if (json?.rating === 'everyone' || json?.rating === 'unknown') {
       return 'ok';
     }
     metricsReporter.incrementCounter('ModerateCustomImage.Flagged', [
-      {name: 'UploaderType', value: 'Lab2FileUploader'},
+      {name: 'UploaderType', value: uploaderType},
     ]);
     const flaggedImageStatsigEvent = isModelOutputImage
       ? EVENTS.FLAGGED_MODEL_OUTPUT_IMAGE_AZURE
@@ -61,7 +62,7 @@ export const moderateImage = async (
   } catch (error) {
     metricsReporter.logError('Error with image moderation: ' + error);
     metricsReporter.incrementCounter('ModerateCustomImage.Error', [
-      {name: 'UploaderType', value: 'Lab2FileUploader'},
+      {name: 'UploaderType', value: uploaderType},
     ]);
     return 'skipped';
   }
