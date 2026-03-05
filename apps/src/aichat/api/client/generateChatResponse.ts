@@ -1,6 +1,8 @@
 import {type ModelMessage} from 'ai';
 
 import {generateText} from '@cdo/apps/aiGateway/generateTextThroughProxyOrGateway';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {AiRequestExecutionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {
@@ -83,6 +85,7 @@ export async function generateChatResponse(
 
   for (const file of files) {
     if (file.mediaType.startsWith('image/')) {
+      sendLab2AnalyticsEvent(EVENTS.MODEL_OUTPUT_IMAGE_CREATED);
       const ext = file.mediaType.split('/')[1];
       const imageFile = generatedFileToImageFile(file, ext);
       const modelImageSafe = await isModelOutputImageSafe(imageFile, ext);
