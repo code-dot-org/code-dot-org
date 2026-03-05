@@ -177,8 +177,6 @@ const RegionalWorkshopCatalogCard = ({
           className={style.wsCardButton}
           onClick={() => handleClickLearnMore()}
           aria-label="learnMore"
-          target="_blank"
-          rel="noopener noreferrer"
           type="button"
         >
           {'Learn more'}

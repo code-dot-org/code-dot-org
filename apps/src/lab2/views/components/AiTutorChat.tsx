@@ -63,13 +63,15 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
           onClick={() => onClick(button.value, button.analyticsProperties)}
           aria-label={button.label}
           startIcon={
-            <FontAwesomeV6Icon
-              {...(button.icon as FontAwesomeV6IconProps)}
-              className={classNames({
-                [moduleStyles['icon']]: true,
-                [moduleStyles[`icon-${button.icon?.iconName}`]]: button.icon,
-              })}
-            />
+            button.icon ? (
+              <FontAwesomeV6Icon
+                {...(button.icon as FontAwesomeV6IconProps)}
+                className={classNames({
+                  [moduleStyles['icon']]: true,
+                  [moduleStyles[`icon-${button.icon.iconName}`]]: true,
+                })}
+              />
+            ) : undefined
           }
           type="button"
         >

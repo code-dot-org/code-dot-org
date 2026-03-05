@@ -22,6 +22,7 @@ export const PreviewEmailLink: FC<{href?: string}> = ({href}) => {
       size="small"
       href={href}
       target="_blank"
+      rel="noopener noreferrer"
       endIcon={<FontAwesomeV6Icon iconName="up-right-from-square" />}
     >
       {'Preview email'}

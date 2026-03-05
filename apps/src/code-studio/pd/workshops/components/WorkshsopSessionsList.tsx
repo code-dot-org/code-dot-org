@@ -30,6 +30,7 @@ const SessionItemVirtualLocationContent = ({
     <MuiButton
       {...commonButtonProps}
       href={meetingLink ?? ''}
+      disabled={!meetingLink}
       target="_blank"
       rel="noopener noreferrer"
       startIcon={<FontAwesomeV6Icon iconName="video" />}

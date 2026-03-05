@@ -240,7 +240,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
           }
           endIcon={
             <FontAwesomeV6Icon
-              iconName={isCollapsed ? 'chevron-up' : 'chevron-down'}
+              iconName={isCollapsed ? 'chevron-down' : 'chevron-up'}
               iconStyle="solid"
             />
           }

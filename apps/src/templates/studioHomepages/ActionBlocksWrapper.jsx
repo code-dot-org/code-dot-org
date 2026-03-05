@@ -46,6 +46,9 @@ const OneColumnActionBlock = ({
               aria-label={button.ariaLabel}
               href={button.url}
               target={button.target}
+              rel={
+                button.target === '_blank' ? 'noopener noreferrer' : undefined
+              }
             >
               {button.text}
             </MuiButton>
