@@ -8,13 +8,6 @@ markdown <<MARKDOWN
 <!-- Card Wrapper -->
 <div style="border-radius:18px; overflow:hidden; box-shadow:0 6px 18px rgba(41,47,54,0.08); border:1px solid #e3e6ea;">
 
-<!-- Header -->
-<div style="background:#8C52BA; padding:26px;">
-<div style="color:#FFFFFF; font-size:26px; font-weight:800;">
-Pitfall 1: Treating AI Like It Has Awareness of the Current World
-</div>
-</div>
-
 <!-- Light Grey Content Band -->
 <div style="background:#F4F6F8; padding:36px;">
 
@@ -32,11 +25,8 @@ Ms. Alvarez, a 10th-grade civics teacher in Arizona, asks an AI tool on Monday m
 </div>
 
 <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:18px; margin-bottom:18px;">
-<div style="font-size:14px; font-weight:700; color:#8C52BA; margin-bottom:8px;">
-Prompt to AI
-</div>
-<div style="font-size:16px; font-weight:600;">
-“Create a warm-up activity about the major election news happening this week.”
+<div style="font-size:16px">
+Create a warm-up activity about the major election news happening this week.
 </div>
 </div>
 
@@ -69,11 +59,8 @@ If timing matters, always specify the exact date, event, or context instead of a
 </div>
 
 <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:18px;">
-<div style="font-size:14px; font-weight:700; color:#8C52BA; margin-bottom:8px;">
-Safer Prompt Example
-</div>
-<div style="font-size:16px; font-weight:600;">
-“Create a warm-up activity about major U.S. election news for the week of <b>March 4–8, 2026</b>. Include 3 discussion questions.”
+<div style="font-size:16px">
+Create a warm-up activity about major U.S. election news for the week of <b>March 4–8, 2026</b>. Include 3 discussion questions.
 </div>
 </div>
 

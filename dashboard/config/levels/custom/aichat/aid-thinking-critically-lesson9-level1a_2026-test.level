@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-03-04T20:20:52.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Skeptical Teen\r\n\r\nPushes back like a peer who thinks rules are \"dramatic\" or unnecessary.\r\n\r\nStudents \"stress test\" their Responsible AI Guide by interacting with purpose-built chatbots designed to challenge their thinking.\r\n\r\nRefine their guidelines based on the bot's pushback, ensuring their advice is defensible and grounded in reality.\r\n\r\nRecord one suggestion from the AI bot that was logically correct but felt \"fake\" or wrong for a middle school audience.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-3-pro-preview",
+        "temperature": 0.7,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-3-pro-preview"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "Skeptical Teen",
+    "bubble_choice_description": "Designed to push back like a peer who thinks rules are dramatic or unnecessary.",
+    "thumbnail_url": "https://images.code.org/957fe2186fdc373b9638744f4426fbbc-think.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-04 20:20:55 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:24:17 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

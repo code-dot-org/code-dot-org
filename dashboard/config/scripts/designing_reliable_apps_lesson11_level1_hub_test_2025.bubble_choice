@@ -1,0 +1,13 @@
+name 'designing-reliable-apps-lesson11-level1-hub-test-2025'
+display_name 'Your Explore-Style App Support Hub'
+description 'Your goal: Use these levels in whatever way helps you move your Explore-Style App forward — whether that means testing an API, understanding JSON data, planning your async flow, rendering your dynamic list, or debugging connection issues. You are in control of when and how to use each level to meet the milestone requirements and build a reliable app.'
+
+sublevels
+level 'designing-reliable-apps-lesson11-level1a-test_2025-pilot'
+level 'designing-reliable-apps-lesson11-level1b-test_2025-pilot'
+level 'designing-reliable-apps-lesson11-level1c-test_2025-pilot'
+level 'designing-reliable-apps-lesson11-level1d-test_2025-pilot'
+level 'designing-reliable-apps-lesson11-level1e-test_2025-pilot'
+level 'designing-reliable-apps-lesson11-level1f-test_2025-pilot'
+
+uses_lab2

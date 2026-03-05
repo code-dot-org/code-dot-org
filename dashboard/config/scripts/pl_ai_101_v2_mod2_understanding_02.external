@@ -16,10 +16,9 @@ markdown <<MARKDOWN
 <div style="font-weight:800; font-size:20px; margin-bottom:14px; color:#0093A4;">Scenario</div>
 <div style="margin-bottom:18px;">Mr. Chen, a middle school science teacher, asks:</div>
 <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:18px; margin-bottom:18px;">
-<div style="font-size:14px; font-weight:700; color:#8C52BA; margin-bottom:8px;">Prompt to AI</div>
-<div style="font-size:16px; font-weight:600;">“What are the most research-backed strategies for teaching climate change to 7th graders?”</div>
+<div style="font-size:16px;">What are the most research-backed strategies for teaching climate change to 7th graders?</div>
 </div>
-<div>The AI returns a clean list with strategies like “teach both sides equally” and “avoid emotionally charged examples,” complete with author names and years. Mr. Chen later tries to find the cited studies and realizes two of the authors don’t exist and one claim contradicts guidance from the National Science Teaching Association. He has to rewrite the lesson the night before teaching it.</div>
+<div>The AI returns a clean list with strategies like “teach both sides equally” and “avoid emotionally charged examples,” complete with author names and years. <br> Mr. Chen later tries to find the cited studies and realizes two of the authors don’t exist and one claim contradicts guidance from the National Science Teaching Association. He has to rewrite the lesson the night before teaching it.</div>
 </div>
 </div>
 <div>
@@ -31,8 +30,7 @@ markdown <<MARKDOWN
 <div style="font-weight:800; font-size:20px; margin-bottom:12px; color:#0093A4;">Quick Tip</div>
 <div style="margin-bottom:18px;">Use AI to brainstorm and organize ideas, but verify research claims and citations independently.</div>
 <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:18px;">
-<div style="font-size:14px; font-weight:700; color:#8C52BA; margin-bottom:8px;">Safer Prompt Example</div>
-<div style="font-size:16px; font-weight:600;">“Suggest lesson approaches for teaching climate change to 7th graders. For each suggestion, label it as ‘needs verification’ and list what I should verify (e.g., standards, NSTA guidance, peer-reviewed sources).”</div>
+<div style="font-size:16px">Suggest lesson approaches for teaching climate change to 7th graders. For each suggestion, label it as ‘needs verification’ and list what I should verify (e.g., standards, NSTA guidance, peer-reviewed sources).</div>
 </div>
 </div>
 </div>
