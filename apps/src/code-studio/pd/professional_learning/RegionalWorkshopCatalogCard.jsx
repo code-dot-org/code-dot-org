@@ -1,8 +1,7 @@
-import {Button} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tags from '@code-dot-org/component-library/tags';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {Fragment} from 'react';
@@ -170,15 +169,20 @@ const RegionalWorkshopCatalogCard = ({
         </div>
       </div>
       <div className={style.buttonContainer}>
-        <Button
-          aria-label="learnMore"
-          text="Learn more"
-          target="_blank"
-          color="purple"
-          onClick={() => handleClickLearnMore()}
-          className={style.wsCardButton}
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
           disabled={isFull}
-        />
+          className={style.wsCardButton}
+          onClick={() => handleClickLearnMore()}
+          aria-label="learnMore"
+          target="_blank"
+          rel="noopener noreferrer"
+          type="button"
+        >
+          {'Learn more'}
+        </MuiButton>
       </div>
     </div>
   );
