@@ -406,14 +406,14 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     let(:payload) {get_valid_payload}
     let(:jwt) {create_jwt_and_stub(payload)}
     subject(:authenticate) {post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}}
-    
+
     context 'when user not associated with deployment' do
       it 'associates LtiUserIdentity with LtiDeployment' do
         create_preexisting_user(payload)
         assert @integration.lti_deployments.empty?
         authenticate
         deployment = @integration.lti_deployments.find_by(deployment_id: @deployment_id)
-        assert deployment.lti_user_identities.any? {|identity| identity.subject == payload[:sub]}
+        assert(deployment.lti_user_identities.any? {|identity| identity.subject == payload[:sub]})
       end
     end
   end
