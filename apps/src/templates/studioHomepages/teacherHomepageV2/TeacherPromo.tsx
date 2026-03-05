@@ -1,7 +1,6 @@
-import {LinkButton} from '@code-dot-org/component-library/button';
 import CloseButton from '@code-dot-org/component-library/closeButton';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import _ from 'lodash';
 import React from 'react';
@@ -104,15 +103,20 @@ const TeacherPromo: React.FC<TeacherPromoProps> = ({
           />
         </Typography>
       )}
-      <LinkButton
-        href={buttonTarget}
-        color="black"
-        text={buttonLabel}
-        iconRight={isExternal ? {iconName: 'up-right-from-square'} : undefined}
-        type="secondary"
-        size="s"
+      <MuiButton
+        variant="outlined"
+        color="secondary"
+        size="small"
         className={styles.promotionButton}
-      />
+        href={buttonTarget}
+        endIcon={
+          isExternal ? (
+            <FontAwesomeV6Icon iconName="arrow-up-right-from-square" />
+          ) : undefined
+        }
+      >
+        {buttonLabel}
+      </MuiButton>
     </li>
   );
 };
