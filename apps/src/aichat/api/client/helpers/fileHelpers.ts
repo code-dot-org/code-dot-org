@@ -45,12 +45,12 @@ export async function assetToFilePart(
 /**
  * Converts a model generated file to a ChatAsset by uploading the file's contents to the user's project.
  */
-export async function generatedFileToAsset(
-  file: GeneratedFile,
+export async function fileToAsset(
+  filename: string,
+  fileBuffer: ArrayBuffer,
+  mediaType: string,
   buildAssetUrl: (asset: ChatAsset) => string
 ): Promise<ChatAsset> {
-  const extension = file.mediaType.split('/')[1];
-  const filename = `generated-file-${Date.now()}.${extension}`;
   const asset: ChatAsset = {
     filename,
     source: AssetSource.PROJECT,
@@ -58,25 +58,40 @@ export async function generatedFileToAsset(
   const assetUrl = buildAssetUrl(asset);
 
   // Upload file contents to assetUrl
-  const arrayBuffer = file.uint8Array.buffer.slice(
-    file.uint8Array.byteOffset,
-    file.uint8Array.byteOffset + file.uint8Array.byteLength
-  ) as ArrayBuffer;
-  await HttpClient.put(assetUrl, arrayBuffer, true, {
-    'Content-Type': file.mediaType,
+  await HttpClient.put(assetUrl, fileBuffer, true, {
+    'Content-Type': mediaType,
   });
 
   return asset;
 }
 
-export function generatedFileToImageFile(
-  file: GeneratedFile,
-  ext: string
+export function fileToImage(
+  filename: string,
+  fileBuffer: ArrayBuffer,
+  mediaType: string
 ): File {
-  const arrayBuffer = file.uint8Array.buffer.slice(
+  const blob = new Blob([fileBuffer], {type: mediaType});
+  return new File([blob], filename, {type: mediaType});
+}
+
+export interface PreparedFile {
+  filename: string;
+  fileBuffer: ArrayBuffer;
+  mediaType: string;
+  extension: string;
+}
+
+/**
+ * Extracts the buffer and derives filename/extension from a model-generated file,
+ * ready to be passed to fileToAsset or fileToImage.
+ */
+export function prepareGeneratedFile(file: GeneratedFile): PreparedFile {
+  const fileBuffer = file.uint8Array.buffer.slice(
     file.uint8Array.byteOffset,
     file.uint8Array.byteOffset + file.uint8Array.byteLength
   ) as ArrayBuffer;
-  const blob = new Blob([arrayBuffer], {type: file.mediaType});
-  return new File([blob], `image.${ext}`, {type: file.mediaType});
+  const {mediaType} = file;
+  const extension = mediaType.split('/')[1];
+  const filename = `generated-file-${crypto.randomUUID()}.${extension}`;
+  return {filename, fileBuffer, mediaType, extension};
 }
