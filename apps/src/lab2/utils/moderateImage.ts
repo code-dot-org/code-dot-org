@@ -1,6 +1,6 @@
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {WEBLAB2_IMAGE_FILE_TYPES} from '@cdo/apps/weblab2/constants';
 
@@ -25,10 +25,10 @@ export const moderateImage = async (
   const moderateImageStatsigEvent = isModelOutputImage
     ? EVENTS.MODERATE_MODEL_OUTPUT_IMAGE_AZURE
     : EVENTS.MODERATE_CUSTOM_IMAGE;
-  analyticsReporter.sendEvent(moderateImageStatsigEvent, {
-    UploaderType: 'Lab2 File Uploader',
-    ProjectType: appName,
-  });
+  sendLab2AnalyticsEvent(
+    moderateImageStatsigEvent,
+    !isModelOutputImage ? {UploaderType: 'Lab2 File Uploader'} : {}
+  );
   try {
     const response = await HttpClient.post(`/v3/images/moderate`, file, true, {
       'Content-Type': file.type || 'application/octet-stream',
@@ -53,10 +53,10 @@ export const moderateImage = async (
     const flaggedImageStatsigEvent = isModelOutputImage
       ? EVENTS.FLAGGED_MODEL_OUTPUT_IMAGE_AZURE
       : EVENTS.FLAGGED_CUSTOM_IMAGE;
-    analyticsReporter.sendEvent(flaggedImageStatsigEvent, {
-      UploaderType: 'Lab2 File Uploader',
-      ProjectType: appName,
-    });
+    sendLab2AnalyticsEvent(
+      flaggedImageStatsigEvent,
+      !isModelOutputImage ? {UploaderType: 'Lab2 File Uploader'} : {}
+    );
     return 'flagged';
   } catch (error) {
     metricsReporter.logError('Error with image moderation: ' + error);
