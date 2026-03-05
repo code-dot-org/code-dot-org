@@ -457,7 +457,6 @@ const EVENTS = {
   MODERATE_MODEL_OUTPUT_IMAGE_AZURE: 'Model output image moderated by Azure',
   FLAGGED_MODEL_OUTPUT_IMAGE_AZURE:
     'Model output image flagged by Azure moderation service',
-  MODEL_OUTPUT_IMAGE_FLAGGED_BY_MODEL: 'Model output image flagged by model',
 
   // Export app
   EXPORT_APP: 'User Exports App From Share Advanced Options',
