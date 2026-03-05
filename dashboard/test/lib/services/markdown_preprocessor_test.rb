@@ -48,6 +48,7 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
     Rails.cache.clear
     ActiveRecord::Base.connection.uncached do
       input = "[r first-resource/test-course/1999]"
+
       # First invocation queries the database
       assert_queries 2 do
         Services::MarkdownPreprocessor.process(input)
@@ -72,19 +73,21 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
   end
 
   test 'process caching can be modified with options' do
-    input = "[r first-resource/test-course/1999][v first_vocab/test-course/1999]"
+    ActiveRecord::Base.connection.uncached do
+      input = "[r first-resource/test-course/1999][v first_vocab/test-course/1999]"
 
-    # populate the cache
-    Services::MarkdownPreprocessor.process(input)
-
-    # verify that we use the cache by default
-    assert_queries 0 do
+      # populate the cache
       Services::MarkdownPreprocessor.process(input)
-    end
 
-    # verify that the cache can be skipped
-    assert_queries 3 do
-      Services::MarkdownPreprocessor.process(input, cache_options: {force: true})
+      # verify that we use the cache by default
+      assert_queries 0 do
+        Services::MarkdownPreprocessor.process(input)
+      end
+
+      # verify that the cache can be skipped
+      assert_queries 3 do
+        Services::MarkdownPreprocessor.process(input, cache_options: {force: true})
+      end
     end
   end
 
