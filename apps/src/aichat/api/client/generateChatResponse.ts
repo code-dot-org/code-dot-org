@@ -12,10 +12,7 @@ import {
   PendingChatMessage,
 } from '../../types';
 
-import {
-  generatedFileToAsset,
-  generatedFileToImageFile,
-} from './helpers/fileHelpers';
+import {fileToAsset, fileToImage} from './helpers/fileHelpers';
 import {
   formatChatMessage,
   formatSystemMessages,
@@ -83,12 +80,29 @@ export async function generateChatResponse(
     };
   }
 
+  // Upload generated assets, if any.
+  const assets: ChatAsset[] = [];
   for (const file of files) {
-    if (file.mediaType.startsWith('image/')) {
+    const fileBuffer = file.uint8Array.buffer.slice(
+      file.uint8Array.byteOffset,
+      file.uint8Array.byteOffset + file.uint8Array.byteLength
+    ) as ArrayBuffer;
+    const mediaType = file.mediaType;
+    const extension = mediaType.split('/')[1];
+    const filename = `generated-file-${crypto.randomUUID()}.${extension}`;
+
+    const asset = await fileToAsset(
+      filename,
+      fileBuffer,
+      mediaType,
+      buildAssetUrl
+    );
+    assets.push(asset);
+
+    if (mediaType.startsWith('image/')) {
       sendLab2AnalyticsEvent(EVENTS.MODEL_OUTPUT_IMAGE_CREATED);
-      const ext = file.mediaType.split('/')[1];
-      const imageFile = generatedFileToImageFile(file, ext);
-      const modelImageSafe = await isModelOutputImageSafe(imageFile, ext);
+      const imageFile = fileToImage(filename, fileBuffer, mediaType);
+      const modelImageSafe = await isModelOutputImageSafe(imageFile, extension);
       if (!modelImageSafe) {
         return {
           response: text,
@@ -102,13 +116,6 @@ export async function generateChatResponse(
   const modelOutputSafe = await isTextSafe(text);
   if (!modelOutputSafe) {
     return {response: text, status: AiRequestExecutionStatus.MODEL_PROFANITY};
-  }
-
-  // Upload generated assets, if any.
-  const assets: ChatAsset[] = [];
-  for (const file of files) {
-    const asset = await generatedFileToAsset(file, buildAssetUrl);
-    assets.push(asset);
   }
 
   return {response: text, assets, status: AiRequestExecutionStatus.SUCCESS};
