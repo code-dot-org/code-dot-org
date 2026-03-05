@@ -1,5 +1,4 @@
 require 'sinatra/base'
-require 'http_accept_language'
 
 require 'cdo/global_edition'
 require 'cdo/i18n'
@@ -59,10 +58,23 @@ class VarnishEnvironment < Sinatra::Base
       Cdo::I18n::DEFAULT_LOCALE
     end
 
-    # Determines the most appropriate locale based on the browser's Accept-Language header.
+    # Resolves the preferred locale from the `HTTP_ACCEPT_LANGUAGE` header.
+    # Languages are ordered by quality and mapped via {#language_to_locale}.
+    #
+    # @return [String, nil] the first supported locale or nil if none matches
     def http_locale
-      http_accept_language_parser = HttpAcceptLanguage::Parser.new(env['HTTP_ACCEPT_LANGUAGE'])
-      http_accept_language_parser.user_preferred_languages.lazy.map {language_to_locale(_1)}.find(&:itself)
+      http_locales_qualities = env['HTTP_ACCEPT_LANGUAGE'].to_s.gsub(/\s+/, '').split(',').each_with_object({}) do |language, hash|
+        locale, quality = language.split(';q=')
+
+        next if locale == '*'
+        next unless /^[a-z\-0-9]+|\*$/i.match?(locale)
+
+        hash[locale.downcase] = quality ? quality.to_f : 1.0
+      end
+
+      http_locales_qualities.sort_by {|_l, q| -q}.lazy.map {|l, _q| language_to_locale(l)}.find(&:itself)
+    rescue ArgumentError
+      nil
     end
 
     # @return BCP 47 language tag (a normalized locale suitable for I18n e.g. `en-US` or `es-MX`)
