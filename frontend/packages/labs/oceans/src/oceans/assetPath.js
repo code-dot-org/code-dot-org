@@ -1,5 +1,5 @@
-global.__ml_activities_asset_public_path__ = './assets/';
+global.__webpack_public_path__ = './assets/';
 
 export const setAssetPath = (path) => {
-  global.__ml_activities_asset_public_path__  = path;
+  global.__webpack_public_path__ = path;
 };
