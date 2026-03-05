@@ -6,33 +6,33 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
     course_version = create(:course_version,
       course_offering: course_offering,
       key: '1999'
-)
+    )
 
     create(:resource,
       key: 'first-resource',
       name: "First Resource",
       url: "example.com/first",
       course_version: course_version
-)
+    )
     create(:resource,
       key: 'second-resource',
       name: "Second Resource",
       url: "example.com/second",
       course_version: course_version
-)
+    )
 
     create(:vocabulary,
       key: 'first_vocab',
       word: "First Vocabulary",
       definition: "The first of the vocabulary entries.",
       course_version: course_version
-)
+    )
     create(:vocabulary,
       key: 'second_vocab',
       word: "Second Vocabulary",
       definition: "The second of the vocabulary entries.",
       course_version: course_version
-)
+    )
   end
 
   test 'process method invokes both resource and vocab substitutions' do
@@ -43,28 +43,31 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
   end
 
   test 'process is cached' do
+    # Make sure we start with a clean rails cache and that we don't attempt to
+    # use the ActiveRecord query cache, to ensure consistent results.
     Rails.cache.clear
-    input = "[r first-resource/test-course/1999]"
+    ActiveRecord::Base.connection.uncached do
+      input = "[r first-resource/test-course/1999]"
+      # First invocation queries the database
+      assert_queries 2 do
+        Services::MarkdownPreprocessor.process(input)
+      end
 
-    # First invocation queries the database
-    assert_queries 2 do
-      Services::MarkdownPreprocessor.process(input)
-    end
+      # Future invocations do not
+      assert_queries 0 do
+        Services::MarkdownPreprocessor.process(input)
+      end
 
-    # Future invocations do not
-    assert_queries 0 do
-      Services::MarkdownPreprocessor.process(input)
-    end
+      # Each content string is cached individually
+      assert_queries 2 do
+        Services::MarkdownPreprocessor.process("[r second-resource/test-course/1999]")
+      end
 
-    # Each content string is cached individually
-    assert_queries 2 do
-      Services::MarkdownPreprocessor.process("[r second-resource/test-course/1999]")
-    end
-
-    # Clearing the cache causes us to start querying again
-    Rails.cache.clear
-    assert_queries 2 do
-      Services::MarkdownPreprocessor.process(input)
+      # Clearing the cache causes us to start querying again
+      Rails.cache.clear
+      assert_queries 2 do
+        Services::MarkdownPreprocessor.process(input)
+      end
     end
   end
 
