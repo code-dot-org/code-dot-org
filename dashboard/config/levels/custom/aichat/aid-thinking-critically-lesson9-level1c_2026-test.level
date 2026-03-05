@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-03-04T20:25:57.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Overconfident Know-It-All\r\n\r\nResponds with confident and reasonable-sounding advice, but it might help to double-check.\r\n\r\nStudents \"stress test\" their Responsible AI Guide by interacting with purpose-built chatbots designed to challenge their thinking.\r\n\r\nRefine their guidelines based on the bot's pushback, ensuring their advice is defensible and grounded in reality.\r\n\r\nRecord one suggestion from the AI bot that was logically correct but felt \"fake\" or wrong for a middle school audience.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-3-pro-preview",
+        "temperature": 0.7,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-3-pro-preview"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "Overconfident Know-It-All",
+    "bubble_choice_description": "Responds with confident and reasonable-sounding advice...",
+    "thumbnail_url": "https://images.code.org/15515dba0acd4d72331f5c196105c813-eating.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-04T20:25:57.517+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson9-level1b_2026-test\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson9-level1b_2026-test\"},{\"changed_at\":\"2026-03-04 20:27:35 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

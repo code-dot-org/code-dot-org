@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-04 03:04:34 UTC",
+    "serialized_at": "2026-03-04 20:30:09 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -279,6 +279,18 @@
         "lesson_group.key": "",
         "script.name": "6-12-aid-thinking-critically-about-ai-2026"
       }
+    },
+    {
+      "key": "708145f2-a000-491e-870d-7aaec8d42ecc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "708145f2-a000-491e-870d-7aaec8d42ecc",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-thinking-critically-about-ai-2026"
+      }
     }
   ],
   "activity_sections": [
@@ -467,6 +479,17 @@
       "seeding_key": {
         "activity_section.key": "6a877a35-c028-4f46-b355-a6bca9ebb3a8",
         "lesson_activity.key": "af093cc5-5676-43a4-bc99-f2cc069f9ab4"
+      }
+    },
+    {
+      "key": "acefc40c-dbd7-4adb-98d3-ba00fcd16dcb",
+      "position": 1,
+      "properties": {
+        "progression_name": "The AI Stress Test"
+      },
+      "seeding_key": {
+        "activity_section.key": "acefc40c-dbd7-4adb-98d3-ba00fcd16dcb",
+        "lesson_activity.key": "708145f2-a000-491e-870d-7aaec8d42ecc"
       }
     }
   ],
@@ -866,6 +889,28 @@
       "level_keys": [
         "aid-thinking-critically-lesson8-level1_2026-test"
       ]
+    },
+    {
+      "chapter": 19,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The AI Stress Test"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aid-thinking-critically-lesson9-level1_2026-test"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-thinking-critically-about-ai-2026",
+        "activity_section.key": "acefc40c-dbd7-4adb-98d3-ba00fcd16dcb"
+      },
+      "level_keys": [
+        "aid-thinking-critically-lesson9-level1_2026-test"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -1083,6 +1128,18 @@
         "lesson_group.key": "",
         "script.name": "6-12-aid-thinking-critically-about-ai-2026",
         "activity_section.key": "6a877a35-c028-4f46-b355-a6bca9ebb3a8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aid-thinking-critically-lesson9-level1_2026-test",
+        "script_level.level_keys": [
+          "aid-thinking-critically-lesson9-level1_2026-test"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-thinking-critically-about-ai-2026",
+        "activity_section.key": "acefc40c-dbd7-4adb-98d3-ba00fcd16dcb"
       }
     }
   ],
