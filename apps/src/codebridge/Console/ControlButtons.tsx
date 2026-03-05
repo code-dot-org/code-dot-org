@@ -19,9 +19,7 @@ import {
   setHasError,
 } from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
-import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils/analyticsReporterHelper';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
@@ -74,7 +72,6 @@ const ControlButtons: React.FunctionComponent = () => {
   const handleRun = () => {
     if (onRun) {
       dispatch(setIsRunning(true));
-      sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_RUN_CLICK);
       logUserLevelInteraction({
         levelId: levelId,
         scriptId: scriptId,

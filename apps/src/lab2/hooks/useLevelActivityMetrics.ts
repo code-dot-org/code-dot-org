@@ -39,22 +39,21 @@ export function useLevelActivityMetrics(
     if (hasLoggedRef.current) {
       return;
     }
+    if (levelProperties.isProjectLevel) {
+      return;
+    }
 
     hasLoggedRef.current = true;
 
-    const eventName = levelProperties.isProjectLevel
-      ? EVENTS.PROJECT_ACTIVITY
-      : EVENTS.LEVEL_ACTIVITY;
-
-    sendLab2AnalyticsEvent(eventName, {
+    sendLab2AnalyticsEvent(EVENTS.LEVEL_ACTIVITY, {
       signedIn: signedIn,
       unitName: scriptName ?? '',
       levelId: levelProperties.id,
       levelName: levelProperties.name,
     });
   }, [
-    levelProperties.isProjectLevel,
     levelProperties.id,
+    levelProperties.isProjectLevel,
     levelProperties.name,
     signedIn,
     scriptName,

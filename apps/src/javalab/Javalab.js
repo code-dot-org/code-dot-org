@@ -373,9 +373,6 @@ Javalab.prototype.onRun = function () {
     scriptId: this.scriptIdForAnalytics,
     interaction: UserLevelInteractions.click_run,
   });
-  analyticsReporter.sendEvent(EVENTS.JAVALAB_RUN_BUTTON_CLICK, {
-    levelId: this.levelIdForAnalytics,
-  });
   this.executeJavabuilder(ExecutionType.RUN);
 };
 
