@@ -97,9 +97,19 @@ export default class ImagePickerPropertyRow extends React.Component {
             style={rowStyle.input}
           />
           &nbsp;
-          <a style={rowStyle.link} onClick={this.handleButtonClick}>
+          <button
+            type="button"
+            style={{
+              ...rowStyle.link,
+              background: 'none',
+              border: 'none',
+              padding: 0,
+              font: 'inherit',
+            }}
+            onClick={this.handleButtonClick}
+          >
             {commonMsg.choosePrefix()}
-          </a>
+          </button>
         </div>
       </div>
     );

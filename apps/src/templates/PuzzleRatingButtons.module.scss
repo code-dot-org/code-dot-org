@@ -16,6 +16,14 @@
   border: 1px solid #949ca2;
   padding: 5px 5px 0;
   vertical-align: middle;
+  // Ensure consistent appearance when rendered as <button>
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.button:focus-visible {
+  outline: 2px solid;
+  outline-offset: 2px;
 }
 
 .button:active {

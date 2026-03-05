@@ -53,14 +53,20 @@ class LibraryTable extends React.Component {
 
     return (
       <div>
-        <a
-          style={styles.tableName}
+        <button
+          type="button"
+          style={{
+            ...styles.tableName,
+            background: 'none',
+            border: 'none',
+            padding: 0,
+          }}
           onClick={this.toggleCollapsed}
           className="uitest-dataset-table-link"
         >
           <FontAwesome className="fa fa-fw" icon={icon} />
           <span>{name}</span>
-        </a>
+        </button>
         {!this.state.collapsed && (
           <div style={styles.collapsibleContainer}>
             <div style={styles.tableDescription}>

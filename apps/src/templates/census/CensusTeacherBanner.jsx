@@ -265,12 +265,18 @@ export default function CensusTeacherBanner({
             </h2>
             <p style={styles.updateSchool}>
               Not teaching at this school anymore?&ensp;
-              <a
-                style={styles.updateSchoolLink}
+              <button
+                type="button"
+                style={{
+                  ...styles.updateSchoolLink,
+                  background: 'none',
+                  border: 'none',
+                  padding: 0,
+                }}
                 onClick={() => setShowSchoolInfoForm(true)}
               >
                 Update here
-              </a>
+              </button>
             </p>
             {showCensusUnknownError && (
               <p style={styles.error}>

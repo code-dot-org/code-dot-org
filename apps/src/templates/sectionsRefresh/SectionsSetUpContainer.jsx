@@ -424,9 +424,13 @@ export default function SectionsSetUpContainer({
             {i18n.setUpClassSectionsSubheader()}
           </Typography>
           <Typography variant="body2" gutterBottom>
-            <a onClick={onURLClick} className={moduleStyles.textPopUp}>
+            <button
+              type="button"
+              onClick={onURLClick}
+              className={moduleStyles.textPopUp}
+            >
               {i18n.setUpClassSectionsSubheaderLink()}
-            </a>
+            </button>
           </Typography>
         </>
       )}

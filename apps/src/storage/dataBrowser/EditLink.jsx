@@ -11,9 +11,13 @@ class EditLink extends React.Component {
 
   render() {
     return (
-      <a className={dataStyles.link} onClick={this.props.onClick}>
+      <button
+        type="button"
+        className={dataStyles.link}
+        onClick={this.props.onClick}
+      >
         {this.props.name}
-      </a>
+      </button>
     );
   }
 }

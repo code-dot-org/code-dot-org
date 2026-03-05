@@ -528,12 +528,19 @@ class UnitEditor extends React.Component {
             <span>
               {'Select additional locales supported by this unit. Click '}
             </span>
-            <a
-              style={{cursor: 'pointer'}}
+            <button
+              type="button"
+              style={{
+                cursor: 'pointer',
+                background: 'none',
+                border: 'none',
+                padding: 0,
+                font: 'inherit',
+              }}
               onClick={this.handleClearSupportedLocalesSelectClick}
             >
               none
-            </a>
+            </button>
             <span>{' to clear the selection.'}</span>
           </p>
           <p>A list of other locales supported by this unit besides en-US.</p>

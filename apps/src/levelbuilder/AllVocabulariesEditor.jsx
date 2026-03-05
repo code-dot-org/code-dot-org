@@ -133,15 +133,22 @@ class AllVocabulariesEditor extends Component {
       <div>
         <div style={styles.header}>
           <h1>{`Vocabulary for ${this.props.courseName}`}</h1>
-          <a
-            onClick={this.handleAddVocabularyClick}
-            style={styles.addButton}
+          <button
             type="button"
+            onClick={this.handleAddVocabularyClick}
+            style={{
+              ...styles.addButton,
+              background: 'none',
+              border: 'none',
+              padding: 0,
+              font: 'inherit',
+              cursor: 'pointer',
+            }}
             className="unit-test-add-vocabulary"
           >
             <i className="fa fa-plus" style={{marginRight: 7}} />
             Create New Vocabulary
-          </a>
+          </button>
         </div>
         {this.state.addVocabularyDialogOpen && (
           <AddVocabularyDialog

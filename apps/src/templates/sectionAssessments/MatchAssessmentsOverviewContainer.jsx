@@ -56,13 +56,21 @@ class MatchAssessmentsOverviewContainer extends Component {
                     0,
                     QUESTION_CHARACTER_LIMIT
                   )}`}
-                  <a
+                  <button
+                    type="button"
                     onClick={() => {
                       this.selectQuestion(question.questionNumber - 1);
                     }}
+                    style={{
+                      background: 'none',
+                      border: 'none',
+                      padding: 0,
+                      font: 'inherit',
+                      cursor: 'pointer',
+                    }}
                   >
                     <span>{i18n.seeFullQuestion()}</span>
-                  </a>
+                  </button>
                 </div>
                 <MatchAssessmentsOverviewTable
                   questionAnswerData={question.options}

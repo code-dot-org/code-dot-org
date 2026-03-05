@@ -21,8 +21,8 @@ export const DropdownButton = class DropdownButtonComponent extends Component {
     className: PropTypes.string,
     children: props => {
       React.Children.map(props.children, child => {
-        if (child.type !== 'a') {
-          throw new Error('only accepts children of type <a/>');
+        if (child.type !== 'a' && child.type !== 'button') {
+          throw new Error('only accepts children of type <a/> or <button/>');
         }
         if (!child.props.href && !child.props.onClick) {
           throw new Error('each child must have an href or onclick');
@@ -102,23 +102,27 @@ export const DropdownButton = class DropdownButtonComponent extends Component {
             className={style.dropdown}
             ref={ref => (this.dropdownList = ref)}
           >
-            {this.props.children.map((child, index) => (
-              <a
-                {...child.props}
-                onClick={event => this.onClickChild(event, child.props)}
-                key={index}
-                className={classNames(
-                  child.props.className,
-                  style.anchor,
-                  index > 0 && style.nonFirstAnchor
-                )}
-                style={{
-                  ...child.props.style,
-                }}
-              >
-                {child.props.children}
-              </a>
-            ))}
+            {this.props.children.map((child, index) => {
+              const Element = child.type === 'a' ? 'a' : 'button';
+              return (
+                <Element
+                  {...child.props}
+                  type={Element === 'button' ? 'button' : undefined}
+                  onClick={event => this.onClickChild(event, child.props)}
+                  key={index}
+                  className={classNames(
+                    child.props.className,
+                    style.anchor,
+                    index > 0 && style.nonFirstAnchor
+                  )}
+                  style={{
+                    ...child.props.style,
+                  }}
+                >
+                  {child.props.children}
+                </Element>
+              );
+            })}
           </div>
         )}
       </div>

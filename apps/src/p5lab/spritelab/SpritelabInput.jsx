@@ -171,11 +171,21 @@ class SpritelabInput extends React.Component {
             </span>
           )}
           <div style={styles.promptText}>{promptText}</div>
-          <a onClick={this.toggleCollapsed}>
+          <button
+            type="button"
+            onClick={this.toggleCollapsed}
+            style={{
+              background: 'none',
+              border: 'none',
+              padding: 0,
+              font: 'inherit',
+              cursor: 'pointer',
+            }}
+          >
             <span style={styles.icon} className="fa-stack">
               <i className={`fa fa-${icon} fa-stack-2x`} />
             </span>
-          </a>
+          </button>
         </div>
         {!this.state.collapsed && inputRow}
       </div>

@@ -121,17 +121,19 @@ class DataTableView extends React.Component {
       >
         <div className={style.viewHeader}>
           <span className={style.backLink}>
-            <a
+            <button
+              type="button"
               id="tableBackToOverview"
               className={dataStyles.link}
               onClick={() => onViewChange(DataView.OVERVIEW)}
             >
               <FontAwesome icon="arrow-circle-left" />
               &nbsp;{msg.backToData()}
-            </a>
+            </button>
           </span>
           <span className={isRtl ? style.debugLinkRtl : style.debugLink}>
-            <a
+            <button
+              type="button"
               id="uitest-tableDebugLink"
               className={dataStyles.link}
               onClick={this.toggleDebugView}
@@ -139,7 +141,7 @@ class DataTableView extends React.Component {
               {this.state.showDebugView
                 ? msg.dataTableTableView()
                 : msg.dataTableDebugView()}
-            </a>
+            </button>
           </span>
         </div>
         <TableControls

@@ -231,9 +231,19 @@ class SetupChecklist extends Component {
       >
         {errorDetails}
         {applabI18n.makerSetupPlugInBoardCheck()}
-        <a href="#" onClick={this.redetect.bind(this)}>
+        <button
+          type="button"
+          onClick={this.redetect.bind(this)}
+          style={{
+            background: 'none',
+            border: 'none',
+            padding: 0,
+            font: 'inherit',
+            cursor: 'pointer',
+          }}
+        >
           {applabI18n.redetect()}
-        </a>
+        </button>
         .{this.contactSupport()}
         {windowDetails}
       </ValidationStep>

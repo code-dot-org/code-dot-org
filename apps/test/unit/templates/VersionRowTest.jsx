@@ -24,6 +24,7 @@ describe('VersionRow', () => {
     );
     expect(wrapper).to.not.have.className('highlight');
     expect(wrapper).to.containMatchingElement(
+      // eslint-disable-next-line jsx-a11y/anchor-is-valid
       <a target="_blank">
         <button type="button" className="btn-info">
           {msg.view()}

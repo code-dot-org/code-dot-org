@@ -1,6 +1,7 @@
 @import 'color.scss';
 @import 'font.scss';
 @import '@code-dot-org/component-library-styles/mixins';
+@import '../../mixins.scss';
 
 .withBorderTop {
   border-top: 1px solid $neutral_dark20;
@@ -222,6 +223,14 @@ button.advancedSettingsButton {
 
 .textPopUp {
   cursor: pointer;
+  // Reset <button> browser defaults to preserve link-like appearance
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+
+  @include focus-styles;
 }
 
 .toolTipContainer {

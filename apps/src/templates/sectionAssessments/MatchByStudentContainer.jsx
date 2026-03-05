@@ -57,13 +57,21 @@ class MatchByStudentContainer extends Component {
                     QUESTION_CHARACTER_LIMIT
                   )}`}
                   {question.question.length >= QUESTION_CHARACTER_LIMIT && (
-                    <a
+                    <button
+                      type="button"
                       onClick={() => {
                         this.selectQuestion(question.questionNumber - 1);
                       }}
+                      style={{
+                        background: 'none',
+                        border: 'none',
+                        padding: 0,
+                        font: 'inherit',
+                        cursor: 'pointer',
+                      }}
                     >
                       <span>{i18n.seeFullQuestion()}</span>
-                    </a>
+                    </button>
                   )}
                 </div>
                 <MatchByStudentTable

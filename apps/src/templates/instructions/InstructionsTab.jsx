@@ -78,13 +78,13 @@ export default class InstructionsTab extends Component {
         className={classNames(moduleStyles.tabButton, 'no-mc')}
         type="button"
       >
-        <a
+        <span
           className={this.props.className}
           style={combinedStyle}
           title={this.props.text}
         >
           {this.props.text}
-        </a>
+        </span>
       </button>
     );
   }

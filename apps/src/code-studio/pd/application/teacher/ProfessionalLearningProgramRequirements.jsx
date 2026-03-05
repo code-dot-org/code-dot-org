@@ -211,7 +211,19 @@ const ProfessionalLearningProgramRequirements = props => {
                   ? regionalPartner.name
                   : 'my local Code.org Regional Partner'
               )}{' '}
-              <a onClick={openPrivacyDialog}>Learn more.</a>
+              <button
+                type="button"
+                onClick={openPrivacyDialog}
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  padding: 0,
+                  font: 'inherit',
+                  cursor: 'pointer',
+                }}
+              >
+                Learn more.
+              </button>
             </span>
           }
         />

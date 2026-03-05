@@ -8,7 +8,9 @@ const clickSpy = jest.fn();
 
 const defaultProps = {
   icon: 'icon',
+  /* eslint-disable jsx-a11y/anchor-is-valid */
   children: [<a href="foo">href</a>, <a onClick={clickSpy}>onclick</a>],
+  /* eslint-enable jsx-a11y/anchor-is-valid */
 };
 
 describe('InlineDropdownMenu', () => {

@@ -39,7 +39,8 @@ class LibraryCategory extends React.Component {
     const icon = this.state.collapsed ? 'caret-right' : 'caret-down';
     return (
       <div>
-        <a
+        <button
+          type="button"
           className={classNames(style.categoryName, 'uitest-dataset-category')}
           onClick={this.toggleCollapsed}
         >
@@ -49,7 +50,7 @@ class LibraryCategory extends React.Component {
             {this.props.datasets.length}{' '}
             {this.props.datasets.length === 1 ? 'table' : 'tables'}
           </span>
-        </a>
+        </button>
         {!this.state.collapsed && (
           <div className={style.collapsibleContainer}>
             {this.props.description && (

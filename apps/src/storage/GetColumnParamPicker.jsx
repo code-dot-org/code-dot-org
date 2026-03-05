@@ -64,13 +64,21 @@ export default class GetColumnParamPicker extends React.Component {
           ) : (
             options.map(option => (
               <p key={option}>
-                <a
-                  href="#"
+                <button
+                  type="button"
                   onClick={() => this.chooseOption(option)}
-                  style={styles.option}
+                  style={{
+                    ...styles.option,
+                    background: 'none',
+                    border: 'none',
+                    paddingTop: 0,
+                    paddingRight: 0,
+                    paddingBottom: 0,
+                    cursor: 'pointer',
+                  }}
                 >
                   {option}
-                </a>
+                </button>
               </p>
             ))
           )}

@@ -118,15 +118,15 @@ class LessonOverview extends Component {
       ));
     } else {
       return [
-        <a
+        <button
+          type="button"
           key={WINDOW_PRINT}
           onClick={e =>
             this.handleResource(e, WINDOW_PRINT, ResourceActions.PRINT)
           }
-          href="#"
         >
           {i18n.printLessonPlan()}
-        </a>,
+        </button>,
       ];
     }
   };

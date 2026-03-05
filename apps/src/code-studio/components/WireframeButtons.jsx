@@ -102,12 +102,13 @@ NewProjectButton.propTypes = {
 
 const SendToPhoneButton = ({active, onClick}) => (
   <span style={{display: 'inline-block'}}>
-    <a
+    <button
+      type="button"
       className={active ? 'WireframeButtons_active' : 'WireframeButtons_button'}
       onClick={onClick}
     >
       <i className="fa fa-mobile" /> {i18n.sendToPhone()}
-    </a>
+    </button>
   </span>
 );
 SendToPhoneButton.propTypes = {

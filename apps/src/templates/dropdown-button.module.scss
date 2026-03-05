@@ -1,5 +1,6 @@
 @import 'color';
 @import '@code-dot-org/component-library-styles/font';
+@import '../mixins.scss';
 
 .main {
   display: inline-block;
@@ -27,7 +28,8 @@
 .anchor,
 a.anchor,
 a:link.anchor,
-a:visited.anchor {
+a:visited.anchor,
+button.anchor {
   @include main-font-semi-bold;
   padding: 10px;
   color: $charcoal;
@@ -36,6 +38,10 @@ a:visited.anchor {
   text-decoration: none;
   line-height: 20px;
   transition: background-color 0.2s ease-out;
+  // Reset <button> browser defaults
+  border: none;
+  width: 100%;
+  text-align: left;
 
   &:hover {
     background-color: $lightest_gray;
@@ -43,6 +49,8 @@ a:visited.anchor {
     // Overwrite site-wide application.css a:hover.
     text-decoration: none;
   }
+
+  @include focus-styles;
 }
 
 .nonFirstAnchor {

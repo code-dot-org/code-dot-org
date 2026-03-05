@@ -59,32 +59,38 @@ const ReviewNavigator = ({
   const getDropdownElements = () => {
     if (loadInProgress) {
       return [
-        <a key="loading" onClick={() => {}}>
+        <button type="button" key="loading" onClick={() => {}}>
           <Spinner size="medium" />
-        </a>,
+        </button>,
       ];
     }
     if (loadError || !Array.isArray(peers)) {
       return [
-        <a key="error" onClick={() => {}}>
+        <button type="button" key="error" onClick={() => {}}>
           {javalabMsg.errorLoadingClassmates()}
-        </a>,
+        </button>,
       ];
     } else if (peers.length === 0) {
       return [
-        <a key="no-reviews" onClick={() => {}} className="code-review-no-peers">
+        <button
+          type="button"
+          key="no-reviews"
+          onClick={() => {}}
+          className="code-review-no-peers"
+        >
           {javalabMsg.noOtherReviews()}
-        </a>,
+        </button>,
       ];
     } else {
       return peers.map(peer => (
-        <a
+        <button
+          type="button"
           key={peer.ownerId}
           onClick={() => onSelectPeer(peer.ownerId)}
           className="code-review-peer-link"
         >
           {peer.ownerName}
-        </a>
+        </button>
       ));
     }
   };

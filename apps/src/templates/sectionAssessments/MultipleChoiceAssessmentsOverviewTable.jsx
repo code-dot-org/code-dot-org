@@ -100,12 +100,22 @@ class MultipleChoiceAssessmentsOverviewTable extends Component {
   ) => {
     return (
       <div>
-        <a
-          style={styles.link}
+        <button
+          type="button"
+          style={{
+            ...styles.link,
+            background: 'none',
+            border: 'none',
+            padding: 0,
+            font: 'inherit',
+            cursor: 'pointer',
+            width: '100%',
+            textAlign: 'left',
+          }}
           onClick={() => this.selectQuestion(rowData.questionNumber - 1)}
         >
           {`${rowData.questionNumber}. ${question}`}
-        </a>
+        </button>
       </div>
     );
   };

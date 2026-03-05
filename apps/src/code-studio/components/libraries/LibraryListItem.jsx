@@ -32,9 +32,13 @@ export class LibraryListItem extends React.Component {
           className={classNames(styles.titleSection, styles.overflowEllipsis)}
         >
           <Tooltip text={i18n.viewCode()} place="bottom">
-            <a onClick={this.viewCode} className={styles.libraryTitle}>
+            <button
+              type="button"
+              onClick={this.viewCode}
+              className={styles.libraryTitle}
+            >
               {library.name}
-            </a>
+            </button>
           </Tooltip>
           {library.userName && (
             <div className={classNames(styles.author, styles.overflowEllipsis)}>

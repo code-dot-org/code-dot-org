@@ -26,13 +26,20 @@ export default class FallbackPlayerCaptionDialogLink extends React.Component {
           handleClose={this.close}
         />
         {!this.props.inDialog && <span>| &nbsp;</span>}
-        <a
+        <button
+          type="button"
           className="ui-test-fallback-player-caption-dialog-link"
           onClick={this.open}
-          style={styles.link}
+          style={{
+            ...styles.link,
+            background: 'none',
+            border: 'none',
+            padding: 0,
+            font: 'inherit',
+          }}
         >
           {i18n.fallbackVideoClosedCaptioningLink()}
-        </a>
+        </button>
       </div>
     );
   }

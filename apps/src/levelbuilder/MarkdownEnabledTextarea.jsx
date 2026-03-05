@@ -102,19 +102,53 @@ export default class MarkdownEnabledTextarea extends React.Component {
                 <ul className="dropdown-menu">
                   {this.props.features.imageUpload && (
                     <li>
-                      <a onClick={this.handleOpenUploadImage}>Image</a>
+                      <button
+                        type="button"
+                        onClick={this.handleOpenUploadImage}
+                        style={{
+                          background: 'none',
+                          border: 'none',
+                          padding: 0,
+                          font: 'inherit',
+                          cursor: 'pointer',
+                        }}
+                      >
+                        Image
+                      </button>
                     </li>
                   )}
                   {this.props.features.resourceLink && (
                     <li>
-                      <a onClick={this.handleOpenAddResourceLink}>Resource</a>
+                      <button
+                        type="button"
+                        onClick={this.handleOpenAddResourceLink}
+                        style={{
+                          background: 'none',
+                          border: 'none',
+                          padding: 0,
+                          font: 'inherit',
+                          cursor: 'pointer',
+                        }}
+                      >
+                        Resource
+                      </button>
                     </li>
                   )}
                   {this.props.features.programmingExpression && (
                     <li>
-                      <a onClick={this.handleOpenAddProgrammingExpression}>
+                      <button
+                        type="button"
+                        onClick={this.handleOpenAddProgrammingExpression}
+                        style={{
+                          background: 'none',
+                          border: 'none',
+                          padding: 0,
+                          font: 'inherit',
+                          cursor: 'pointer',
+                        }}
+                      >
                         Code Block
-                      </a>
+                      </button>
                     </li>
                   )}
                 </ul>

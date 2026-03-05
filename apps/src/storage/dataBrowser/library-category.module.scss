@@ -1,10 +1,24 @@
 @import 'color';
 @import '@code-dot-org/component-library-styles/font';
+@import '../../mixins.scss';
 
 .categoryName {
   @include main-font-bold;
   cursor: pointer;
   color: $dark_charcoal;
+  // Reset <button> browser defaults to preserve link-like appearance
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  // block + full-width so the float:right on .tableNumber behaves correctly
+  // (inline-block, the <button> default, collapses to content width)
+  display: block;
+  width: 100%;
+  text-align: left;
+
+  @include focus-styles;
 }
 
 .tableNumber {

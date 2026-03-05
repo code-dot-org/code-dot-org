@@ -10,7 +10,9 @@ const clickSpy = sinon.spy();
 const defaultProps = {
   text: 'Click me',
   color: Button.ButtonColor.brandSecondaryDefault,
+  /* eslint-disable jsx-a11y/anchor-is-valid */
   children: [<a href="foo">href</a>, <a onClick={clickSpy}>onclick</a>],
+  /* eslint-enable jsx-a11y/anchor-is-valid */
 };
 
 describe('DropdownButton', () => {

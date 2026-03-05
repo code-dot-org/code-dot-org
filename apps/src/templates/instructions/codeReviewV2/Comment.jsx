@@ -140,13 +140,25 @@ function Comment({
       };
 
       return (
-        <a onClick={onClickWrapper} key={index} className="comment-menu-item">
+        <button
+          type="button"
+          onClick={onClickWrapper}
+          key={index}
+          className="comment-menu-item"
+          style={{
+            background: 'none',
+            border: 'none',
+            padding: 0,
+            font: 'inherit',
+            cursor: 'pointer',
+          }}
+        >
           <span
             style={styles.icon}
             className={'fa fa-fw fa-' + item.iconClass}
           />
           <span style={styles.text}>{item.text}</span>
-        </a>
+        </button>
       );
     });
   };

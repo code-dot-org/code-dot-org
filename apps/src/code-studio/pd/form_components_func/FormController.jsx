@@ -42,9 +42,20 @@ const InvalidPagesSummary = ({pages, setPage}) => (
     Please fill out all required fields on {pages.length > 1 ? 'pages' : 'page'}{' '}
     {pages
       .map(p => (
-        <a key={p} onClick={() => setPage(p)} style={{cursor: 'pointer'}}>
+        <button
+          key={p}
+          type="button"
+          onClick={() => setPage(p)}
+          style={{
+            cursor: 'pointer',
+            background: 'none',
+            border: 'none',
+            padding: 0,
+            font: 'inherit',
+          }}
+        >
           {p + 1}
-        </a>
+        </button>
       ))
       .reduce((prev, curr) => [prev, ', ', curr])}
     . Once you are done, head to the last page to confirm and submit your

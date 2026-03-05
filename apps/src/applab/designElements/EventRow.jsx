@@ -33,9 +33,20 @@ export default class EventRow extends React.Component {
         <div style={style.name}>{this.props.name}</div>
         <div style={style.desc}>{this.props.desc}</div>
         <div>
-          <a onClick={this.props.handleInsert} className="hover-pointer">
+          <button
+            type="button"
+            onClick={this.props.handleInsert}
+            className="hover-pointer"
+            style={{
+              background: 'none',
+              border: 'none',
+              padding: 0,
+              font: 'inherit',
+              cursor: 'pointer',
+            }}
+          >
             {applabMsg.designWorkspace_eventInsertButton()}
-          </a>
+          </button>
         </div>
       </div>
     );

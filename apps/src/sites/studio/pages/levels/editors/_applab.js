@@ -107,13 +107,33 @@ $(document).ready(function () {
         <div>
           <div>(shift-click or cmd-click to select multiple)</div>
           <div>
-            <a href="#" onClick={this.selectAll}>
+            <button
+              type="button"
+              onClick={this.selectAll}
+              style={{
+                background: 'none',
+                border: 'none',
+                padding: 0,
+                font: 'inherit',
+                cursor: 'pointer',
+              }}
+            >
               Select All
-            </a>
+            </button>
             <span> | </span>
-            <a href="#" onClick={this.clearAll}>
+            <button
+              type="button"
+              onClick={this.clearAll}
+              style={{
+                background: 'none',
+                border: 'none',
+                padding: 0,
+                font: 'inherit',
+                cursor: 'pointer',
+              }}
+            >
               Select None
-            </a>
+            </button>
           </div>
           <select
             value={this.state.value}

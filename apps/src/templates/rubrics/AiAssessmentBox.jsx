@@ -106,23 +106,37 @@ export default function AiAssessmentBox({
         {text.split('<>').map((subtext, k) => {
           if (subtext === '<first-line>') {
             return (
-              <a
+              <button
+                type="button"
                 key={`${i}-${k}`}
-                href="#"
                 onClick={lineNumberClickHandler.bind(this, evidence.firstLine)}
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  padding: 0,
+                  font: 'inherit',
+                  cursor: 'pointer',
+                }}
               >
                 {evidence.firstLine}
-              </a>
+              </button>
             );
           } else if (subtext === '<last-line>') {
             return (
-              <a
+              <button
+                type="button"
                 key={`${i}-${k}`}
-                href="#"
                 onClick={lineNumberClickHandler.bind(this, evidence.lastLine)}
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  padding: 0,
+                  font: 'inherit',
+                  cursor: 'pointer',
+                }}
               >
                 {evidence.lastLine}
-              </a>
+              </button>
             );
           } else {
             return <span key={`${i}-${k}`}>{subtext}</span>;

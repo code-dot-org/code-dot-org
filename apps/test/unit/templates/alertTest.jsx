@@ -12,6 +12,7 @@ describe('Alert', () => {
       <Alert type="error" onClose={() => {}}>
         <div>
           <div>Arbitrary</div>
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
           <a href="#">Children</a>
           <i>Are Allowed</i>
         </div>
@@ -20,6 +21,7 @@ describe('Alert', () => {
     expect(wrapper).to.containMatchingElement(
       <div>
         <div>Arbitrary</div>
+        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
         <a href="#">Children</a>
         <i>Are Allowed</i>
       </div>

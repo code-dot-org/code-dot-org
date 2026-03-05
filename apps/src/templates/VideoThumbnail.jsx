@@ -36,14 +36,25 @@ export default class VideoThumbnail extends Component {
   render() {
     const video = this.props.video;
     return (
-      <a style={styles.videoLink} onClick={this.onThumbnailClick}>
+      <button
+        type="button"
+        style={{
+          ...styles.videoLink,
+          background: 'none',
+          border: 'none',
+          padding: 0,
+          font: 'inherit',
+          cursor: 'pointer',
+        }}
+        onClick={this.onThumbnailClick}
+      >
         <img
           style={styles.videoThumbnail}
           src={video.thumbnail}
           alt={video.name}
         />
         <span>{video.name}</span>
-      </a>
+      </button>
     );
   }
 }

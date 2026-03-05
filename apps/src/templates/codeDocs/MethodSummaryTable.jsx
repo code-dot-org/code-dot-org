@@ -13,13 +13,20 @@ export default function MethodSummaryTable({methods}) {
           <tr key={method.key}>
             <td style={styles.method}>
               <h3>
-                <a
+                <button
+                  type="button"
                   onClick={() => $(`#method-${method.key}`)[0].scrollIntoView()}
                   aria-label="link to details"
-                  style={styles.methodLink}
+                  style={{
+                    ...styles.methodLink,
+                    background: 'none',
+                    border: 'none',
+                    padding: 0,
+                    font: 'inherit',
+                  }}
                 >
                   {method.name}
-                </a>
+                </button>
               </h3>
               {method.content && (
                 <EnhancedSafeMarkdown markdown={method.content} />

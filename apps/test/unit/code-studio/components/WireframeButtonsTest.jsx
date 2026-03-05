@@ -75,6 +75,7 @@ describe('WireframeButtons', () => {
   describe('View Code button', () => {
     const VIEW_CODE_BUTTON_TEMPLATE = (
       <span>
+        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
         <a className="WireframeButtons_button">
           <i className="fa fa-code" /> {i18n.viewCode()}
         </a>

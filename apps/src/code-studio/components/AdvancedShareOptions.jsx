@@ -233,9 +233,9 @@ class AdvancedShareOptions extends React.Component {
     }
     const expand =
       expanded && selectedOption ? null : (
-        <a onClick={onExpand} className={styles.expand}>
+        <button type="button" onClick={onExpand} className={styles.expand}>
           {i18n.advancedShare()}
-        </a>
+        </button>
       );
     return (
       <div className={styles.root}>

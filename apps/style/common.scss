@@ -1,15 +1,15 @@
-@use "sass:math";
-@import "color.scss";
+@use 'sass:math';
+@import 'color.scss';
 @import '@code-dot-org/component-library-styles/font';
-@import "curriculum/markdown";
-@import "responsive-visualization";
-@import "style-constants";
-@import "aniGif";
-@import "RotateContainer";
-@import "HideToolbarHelper";
-@import "blockly";
+@import 'curriculum/markdown';
+@import 'responsive-visualization';
+@import 'style-constants';
+@import 'aniGif';
+@import 'RotateContainer';
+@import 'HideToolbarHelper';
+@import 'blockly';
 
-$common-root: "/blockly/media/common_images/";
+$common-root: '/blockly/media/common_images/';
 
 @mixin fill-container {
   height: 100%;
@@ -37,10 +37,18 @@ $common-root: "/blockly/media/common_images/";
 }
 
 @keyframes wiggle {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(-20deg); }
-  75% { transform: rotate(20deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  75% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .animate-hint {
@@ -303,7 +311,7 @@ button.arrow:disabled {
   top: $workspace-headers-height + 30;
 }
 
-html[dir="rtl"] .editor-column {
+html[dir='rtl'] .editor-column {
   right: 400px;
 }
 
@@ -324,7 +332,8 @@ html[dir="rtl"] .editor-column {
   // special cases for:
   .blocklySvg, // blockly
   .droplet-main-scroller, // droplet block view
-  .ace_scroller, { // droplet code view
+  .ace_scroller, {
+    // droplet code view
     background-color: rgb(0 0 0 / 0.1);
   }
   // Note: We do something similar in our DesignModeBox React component's
@@ -344,7 +353,7 @@ html[dir="rtl"] .editor-column {
 // icon.
 .ace_gutter-cell.ace_breakpoint,
 .droplet-gutter-line.droplet_breakpoint {
-  background-image: url("#{$common-root}gutterPause.png");
+  background-image: url('#{$common-root}gutterPause.png');
   background-size: 16px 16px;
   background-repeat: no-repeat;
   border-radius: 15px 0 0 15px;
@@ -358,7 +367,7 @@ html[dir="rtl"] .editor-column {
 
 .ace_gutter-cell.ace_error,
 .droplet-gutter-line.droplet_error {
-  background-image: url("#{$common-root}gutterError.png");
+  background-image: url('#{$common-root}gutterError.png');
   background-size: 16px 16px;
   background-repeat: no-repeat;
 }
@@ -370,7 +379,7 @@ html[dir="rtl"] .editor-column {
 
 .ace_gutter-cell.ace_warning,
 .droplet-gutter-line.droplet_warning {
-  background-image: url("#{$common-root}gutterWarn.png");
+  background-image: url('#{$common-root}gutterWarn.png');
   background-size: 16px 16px;
   background-repeat: no-repeat;
 }
@@ -384,7 +393,7 @@ html[dir="rtl"] .editor-column {
   background-position: 2px 2px;
 }
 
-html[dir="rtl"] {
+html[dir='rtl'] {
   // !Important is used to overwrite droplet.min styling for RTL languages support.
   #codeTextbox {
     .droplet-wrapper-div {
@@ -421,7 +430,7 @@ html[dir="rtl"] {
   line-height: 400px;
 }
 
-html[dir="rtl"] div#visualizationResizeBar {
+html[dir='rtl'] div#visualizationResizeBar {
   right: 400px;
 }
 
@@ -441,7 +450,7 @@ html[dir="rtl"] div#visualizationResizeBar {
   stroke-width: 1;
   cursor: default;
 
-  html[dir="RTL"] & {
+  html[dir='RTL'] & {
     text-anchor: start;
   }
 }
@@ -458,7 +467,7 @@ html[dir="rtl"] div#visualizationResizeBar {
   -ms-transform-origin: 0 0;
   transform-origin: 0 0;
 
-  html[dir="RTL"] & {
+  html[dir='RTL'] & {
     -webkit-transform-origin: 100% 0;
     -ms-transform-origin: 100% 0;
     transform-origin: 100% 0;
@@ -470,7 +479,7 @@ html[dir="rtl"] div#visualizationResizeBar {
   -ms-transform-origin: 0 0;
   transform-origin: 0 0;
 
-  html[dir="RTL"] & {
+  html[dir='RTL'] & {
     -webkit-transform-origin: 100% 0;
     -ms-transform-origin: 100% 0;
     transform-origin: 100% 0;
@@ -525,8 +534,7 @@ html[dir="rtl"] div#visualizationResizeBar {
   @include karel-counter(28px, 1.6px);
 }
 
-@media screen and (max-width: 1000px),
-  screen and (max-height: 600px) {
+@media screen and (max-width: 1000px), screen and (max-height: 600px) {
   @include visualization-width(200px);
   @include studio-dpad-container-width(200px);
   @include karel-counter(32px, 2px);
@@ -570,7 +578,7 @@ button.launch {
 button.launch[disabled] {
   pointer-events: none;
 }
-html[dir="RTL"] button.launch {
+html[dir='RTL'] button.launch {
   text-align: right;
 }
 button.launch > img {
@@ -610,7 +618,7 @@ button.blocklyLaunch {
       min-width: 45px;
     }
   }
-  html[dir="RTL"] & {
+  html[dir='RTL'] & {
     margin-right: 0;
   }
 
@@ -659,7 +667,7 @@ button:hover {
   box-shadow: 2px 2px 5px $shadow;
 }
 button.disabled,
-button[disabled="disabled"],
+button[disabled='disabled'],
 button:disabled {
   border: 1px solid #c7c7c7;
   background-color: #c7c7c7;
@@ -681,7 +689,7 @@ label.img-upload {
   display: inline-block;
   vertical-align: middle;
 }
-input[type="radio"] {
+input[type='radio'] {
   margin-left: 40px;
   margin-right: 10px;
 }
@@ -728,7 +736,7 @@ input[type="radio"] {
 }
 
 #gameButtons:after {
-  content: "";
+  content: '';
   display: inline-block;
   width: 100%;
   height: 0;
@@ -836,7 +844,7 @@ input[type="radio"] {
     color: $light-gray;
     margin-right: 10px;
 
-    html[dir="rtl"] & {
+    html[dir='rtl'] & {
       float: right;
       margin-right: 0;
       margin-left: 10px;
@@ -914,7 +922,7 @@ input[type="radio"] {
   }
 }
 
-html[dir="RTL"] .prompt-icon-cell {
+html[dir='RTL'] .prompt-icon-cell {
   padding-right: 0;
   padding-left: 10px;
   &.authored_hints {
@@ -950,7 +958,6 @@ html[dir="RTL"] .prompt-icon-cell {
 }
 
 .authored-hints {
-
   h1,
   p,
   pre {
@@ -971,7 +978,7 @@ html[dir="RTL"] .prompt-icon-cell {
       list-style: none;
       position: relative;
       &:before {
-        content: counter(list, decimal) ") ";
+        content: counter(list, decimal) ') ';
         counter-increment: list;
         position: absolute;
         left: -35px;
@@ -1015,7 +1022,9 @@ html[dir="RTL"] .prompt-icon-cell {
 }
 
 $workspace-header-button-height: 24px;
-$workspace-header-button-margin: ($workspace-headers-height - $workspace-header-button-height) * 0.5;
+$workspace-header-button-margin: (
+    $workspace-headers-height - $workspace-header-button-height
+  ) * 0.5;
 .workspace-header-button {
   @include main-font-semi-bold;
   cursor: pointer;
@@ -1114,7 +1123,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 }
 
-#headers[dir="rtl"] {
+#headers[dir='rtl'] {
   div {
     margin-right: 0;
   }
@@ -1230,7 +1239,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     .generated-code-container {
       margin: 25px 10px 25px 0;
 
-      html[dir="rtl"] & {
+      html[dir='rtl'] & {
         margin: 25px 0 25px 10px;
       }
     }
@@ -1248,7 +1257,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 .generated-code-container {
   margin-top: 10px;
   .generatedCodeMessage {
-    html[dir="rtl"] & {
+    html[dir='rtl'] & {
       text-align: right;
     }
 
@@ -1390,7 +1399,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     border: $lighter_gray;
     border-style: solid;
 
-    html[dir="rtl"] & {
+    html[dir='rtl'] & {
       float: right;
     }
   }
@@ -1403,12 +1412,12 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
       &.no-image {
         margin-left: 0;
 
-        html[dir="rtl"] & {
+        html[dir='rtl'] & {
           margin-right: 0;
         }
       }
 
-      html[dir="rtl"] & {
+      html[dir='rtl'] & {
         margin-right: $image_width + 15px;
         margin-left: 25px;
       }
@@ -1430,7 +1439,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
       color: white;
     }
 
-    html[dir="rtl"] & {
+    html[dir='rtl'] & {
       display: flex;
       flex-wrap: wrap;
       flex-direction: row-reverse;
@@ -1447,7 +1456,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     margin: 2px 0;
 
     .disabled,
-    &[disabled="disabled"],
+    &[disabled='disabled'],
     &:disabled {
       border: 1px solid $purple;
       background-color: $lighter_gray;
@@ -1531,7 +1540,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   $y-offset: $y * 26px;
   width: 26px;
   height: 26px;
-  background: url("#{$common-root}shared-sprites-26x26.png") $x-offset $y-offset;
+  background: url('#{$common-root}shared-sprites-26x26.png') $x-offset $y-offset;
 }
 
 .run26 {
@@ -1595,7 +1604,8 @@ $tooltip-border-radius: 14px;
 $tooltip-shadow-color: $shadow;
 $see-examples-font-weight: bold;
 $tooltip-font: var(--font-family-main);
-$function-name-font: 'Source Code Pro', Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', Terminal, monospace;
+$function-name-font: 'Source Code Pro', Monaco, 'Bitstream Vera Sans Mono',
+  'Lucida Console', Terminal, monospace;
 $see-examples-thick-underline-color: $yellow;
 
 .tooltip-example-link,
@@ -1691,7 +1701,8 @@ $see-examples-thick-underline-color: $yellow;
   }
 }
 
-a.WireframeButtons_button {
+a.WireframeButtons_button,
+button.WireframeButtons_button {
   background-color: $purple;
   border-radius: 5px;
   color: $white;
@@ -1702,12 +1713,19 @@ a.WireframeButtons_button {
   padding: 8px;
   text-decoration: none;
   white-space: nowrap;
+  // Reset <button> browser defaults
+  border: none;
+  font-family: inherit;
 }
 
-a.WireframeButtons_active {
+a.WireframeButtons_active,
+button.WireframeButtons_active {
   cursor: pointer;
   text-decoration: none;
   white-space: nowrap;
+  // Reset <button> browser defaults
+  border: none;
+  font-family: inherit;
 }
 
 div.WireframeButtons_active {
@@ -1716,6 +1734,7 @@ div.WireframeButtons_active {
 }
 
 a.WireframeButtons_active,
+button.WireframeButtons_active,
 div.WireframeButtons_active {
   background-color: $lightest-purple;
   border-radius: 5px;
@@ -1727,7 +1746,7 @@ div.WireframeButtons_active {
 }
 
 #visualizationColumn.wireframeShare {
-  background: url("#{$common-root}phone_wireframe.png") center center no-repeat;
+  background: url('#{$common-root}phone_wireframe.png') center center no-repeat;
   background-size: 432px 757px;
 }
 

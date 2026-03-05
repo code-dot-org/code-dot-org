@@ -71,7 +71,20 @@ export default class LessonExtrasEditor extends React.Component {
               <p>
                 Select up to 4 project type options to appear in the 'Start a
                 new project' section. Select
-                <a onClick={this.handleClearProjectWidgetSelectClick}> none </a>
+                <button
+                  type="button"
+                  onClick={this.handleClearProjectWidgetSelectClick}
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    padding: 0,
+                    font: 'inherit',
+                    cursor: 'pointer',
+                  }}
+                >
+                  {' '}
+                  none{' '}
+                </button>
                 or shift-click or cmd-click to select multiple.
               </p>
               <select
