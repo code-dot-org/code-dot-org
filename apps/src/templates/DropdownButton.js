@@ -25,7 +25,7 @@ export const DropdownButton = class DropdownButtonComponent extends Component {
           throw new Error('only accepts children of type <a/> or <button/>');
         }
         if (!child.props.href && !child.props.onClick) {
-          throw new Error('each child must have an href or onclick');
+          throw new Error('each child must have an href or onClick');
         }
       });
     },
