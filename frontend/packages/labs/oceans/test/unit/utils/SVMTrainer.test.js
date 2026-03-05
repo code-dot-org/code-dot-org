@@ -6,7 +6,7 @@ const {
   BodyShape
 } = require('@ml/utils/fishData');
 const {generateOcean, filterOcean} = require('@ml/utils/generateOcean');
-const SVMTrainer = require('@ml/utils/SVMTrainer');
+import SVMTrainer from '@ml/utils/SVMTrainer';
 import {ClassType} from '@ml/oceans/constants';
 
 const floatEquals = (a, b) => {
