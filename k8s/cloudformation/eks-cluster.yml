@@ -46,7 +46,7 @@ Parameters:
 
 Resources:
   #=================================
-  # === code-aiEKS Cluster ===
+  # === code-ai EKS Cluster ===
   #=================================
 
   # Create the code-dot-org Kubernetes cluster
