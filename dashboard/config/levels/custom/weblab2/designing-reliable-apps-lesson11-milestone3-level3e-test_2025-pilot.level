@@ -1,0 +1,59 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-03-05T01:05:36.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+      },
+      "openFiles": [
+
+      ]
+    },
+    "encrypted": "false",
+    "display_name": "Run a Reliability Test",
+    "long_instructions": "# Run a Reliability Test\r\n\r\n**Goal:** Make sure your app handles problems gracefully and never looks frozen or broken.\r\n\r\n1. **Break the API URL:** Temporarily change the endpoint so it fails. Confirm your error message appears.\r\n2. **Test Empty Results:** Modify a search or endpoint so it returns zero results. Confirm your empty state appears.\r\n3. **Watch the Loading State:** Click your button and confirm the loading message appears immediately and disappears when finished.\r\n4. **Check for Crashes:** Make sure the app does not freeze, throw visible errors, or stay blank.\r\n5. **Restore Your Endpoint:** Fix your URL and confirm everything works again.\r\n\r\n**Optional:** Take a screenshot of your error state as proof of testing.",
+    "bubble_choice_description": "Intentionally break or stress test your app to make sure loading, error, and empty states work correctly.",
+    "thumbnail_url": "https://images.code.org/18a05087d480da8a4ae2cac0072efe0f-devops.png",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase",
+        "buildJavaScript"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-05 03:23:00 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-05 03:25:24 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

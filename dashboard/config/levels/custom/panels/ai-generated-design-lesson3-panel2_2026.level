@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-03-04T23:31:52.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Restore a Previous Version\n\nTo restore a previous version of your program, navigate to the Version History tab. Select the version you want to restore and click \"Restore\".",
+        "imageUrl": "https://images.code.org/a95a774bee9a473fd18bc45a163a143d-revert.gif",
+        "key": "ai-generated-design-lesson3-level1-panels-test-2025-649bd13d-64f8-4b90-bede-e0ef37621fe0"
+      }
+    ],
+    "name_suffix": "_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-04T23:31:52.539+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson3-level1_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson3-level1_2026\"},{\"changed_at\":\"2026-03-04 23:31:58 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

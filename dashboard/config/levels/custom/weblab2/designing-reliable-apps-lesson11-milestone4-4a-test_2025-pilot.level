@@ -1,0 +1,58 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-03-05T03:52:33.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+      },
+      "openFiles": [
+
+      ]
+    },
+    "encrypted": "false",
+    "display_name": "Write Your README",
+    "long_instructions": "# Write Your README\r\n\r\n**Goal:** Document your app so someone else can understand and use it without you explaining it.\r\n\r\nYour README should include:\r\n\r\n### 1. App Description\r\n\r\n* What is the name of your app?\r\n* What does it do?\r\n* Who is it for?\r\n* What problem or purpose does it serve?\r\n\r\n### 2. How to Use It\r\n\r\n* What does the user see first?\r\n* How does the user interact with the app?\r\n* What happens when they click or search?\r\n\r\n\r\n### 3. Data Attribution\r\n\r\n* What API did you use?\r\n* Include a working link to the API source.\r\n* Briefly explain what kind of data it provides.\r\n\r\n",
+    "bubble_choice_description": "Create a clear README that explains your app’s purpose, how to use it, and which API it depends on.",
+    "thumbnail_url": "https://images.code.org/102bb7ceaf00d9a6e8ea2343b9baec8a-readership.png",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-05 03:55:18 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-05 03:57:49 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>
