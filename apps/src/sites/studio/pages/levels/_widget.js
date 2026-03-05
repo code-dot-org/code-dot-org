@@ -6,6 +6,7 @@ import $ from 'jquery';
 import React from 'react';
 
 import {setupApp} from '@cdo/apps/code-studio/initApp/loadApp';
+import initializeCodeMirror6 from '@cdo/apps/code-studio/initializeCodeMirror6';
 import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {
   showDialog,
@@ -41,7 +42,7 @@ function setupWidgetLevel() {
 }
 
 // Add globals
-window.CodeMirror = require('codemirror');
+window.initializeCodeMirror6 = initializeCodeMirror6;
 window.dashboard = window.dashboard || {};
 window.dashboard.widget = {
   setupWidgetLevel: setupWidgetLevel,

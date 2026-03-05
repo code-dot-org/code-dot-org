@@ -10,13 +10,13 @@ import {
   linter,
 } from '@codemirror/lint';
 import {EditorState, Extension} from '@codemirror/state';
-import {EditorView, ViewUpdate} from '@codemirror/view';
+import {EditorView, ViewUpdate, lineNumbers} from '@codemirror/view';
 import js from '@eslint/js';
 import * as eslint from 'eslint-linter-browserify';
 import globals from 'globals';
 import React from 'react';
 
-import {editorConfig} from '@cdo/apps/codemirror/editorConfig';
+import {editorConfigWithoutLineNumbers} from '@cdo/apps/codemirror/editorConfig';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 import MainInstructionsPreview from '../lab2/views/components/Instructions/MainInstructionsPreview';
@@ -52,6 +52,7 @@ interface Options {
     es5?: boolean;
     disableRecommendedJsConfig?: boolean;
   };
+  lineNumberFormatter?: (line: number) => string;
   preview?: string | Element;
   game?: string;
 }
@@ -64,10 +65,6 @@ const levelbuilderEditorTheme = EditorView.theme({
     backgroundColor: 'white',
   },
 });
-
-interface Options {
-  callback?: (editor: CodeMirrorLegacyAdapter, update: ViewUpdate) => void;
-}
 
 const languageExtensionMap: Record<EditorMode, Extension> = {
   javascript: javascript(),
@@ -169,7 +166,14 @@ function initializeCodeMirror6(
 ): CodeMirrorLegacyAdapter {
   const node = resolveTarget(target);
 
-  const {callback, attachments, onUpdateLinting, preview, game} = options;
+  const {
+    callback,
+    attachments,
+    onUpdateLinting,
+    lineNumberFormatter,
+    preview,
+    game,
+  } = options;
   const changeListeners: Array<() => void> = [];
   const dropListeners: Array<(event: DragEvent) => void> = [];
   const lintExtension = getLintExtension(mode, options.lintConfig);
@@ -246,7 +250,10 @@ function initializeCodeMirror6(
   };
 
   const extensions: Extension[] = [
-    ...editorConfig,
+    ...editorConfigWithoutLineNumbers,
+    lineNumbers(
+      lineNumberFormatter ? {formatNumber: lineNumberFormatter} : undefined
+    ),
     getLanguageExtension(mode),
     levelbuilderEditorTheme,
     EditorView.lineWrapping,
