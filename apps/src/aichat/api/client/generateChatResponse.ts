@@ -12,7 +12,11 @@ import {
   PendingChatMessage,
 } from '../../types';
 
-import {fileToAsset, fileToImage} from './helpers/fileHelpers';
+import {
+  fileToAsset,
+  fileToImage,
+  prepareGeneratedFile,
+} from './helpers/fileHelpers';
 import {
   formatChatMessage,
   formatSystemMessages,
@@ -83,13 +87,8 @@ export async function generateChatResponse(
   // Upload generated assets, if any.
   const assets: ChatAsset[] = [];
   for (const file of files) {
-    const fileBuffer = file.uint8Array.buffer.slice(
-      file.uint8Array.byteOffset,
-      file.uint8Array.byteOffset + file.uint8Array.byteLength
-    ) as ArrayBuffer;
-    const mediaType = file.mediaType;
-    const extension = mediaType.split('/')[1];
-    const filename = `generated-file-${crypto.randomUUID()}.${extension}`;
+    const {filename, fileBuffer, mediaType, extension} =
+      prepareGeneratedFile(file);
 
     const asset = await fileToAsset(
       filename,

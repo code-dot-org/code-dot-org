@@ -1,4 +1,4 @@
-import {type FilePart} from 'ai';
+import {type FilePart, type GeneratedFile} from 'ai';
 
 import {AssetSource, ChatAsset} from '@cdo/apps/aichat/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -72,4 +72,26 @@ export function fileToImage(
 ): File {
   const blob = new Blob([fileBuffer], {type: mediaType});
   return new File([blob], filename, {type: mediaType});
+}
+
+export interface PreparedFile {
+  filename: string;
+  fileBuffer: ArrayBuffer;
+  mediaType: string;
+  extension: string;
+}
+
+/**
+ * Extracts the buffer and derives filename/extension from a model-generated file,
+ * ready to be passed to fileToAsset or fileToImage.
+ */
+export function prepareGeneratedFile(file: GeneratedFile): PreparedFile {
+  const fileBuffer = file.uint8Array.buffer.slice(
+    file.uint8Array.byteOffset,
+    file.uint8Array.byteOffset + file.uint8Array.byteLength
+  ) as ArrayBuffer;
+  const {mediaType} = file;
+  const extension = mediaType.split('/')[1];
+  const filename = `generated-file-${crypto.randomUUID()}.${extension}`;
+  return {filename, fileBuffer, mediaType, extension};
 }
