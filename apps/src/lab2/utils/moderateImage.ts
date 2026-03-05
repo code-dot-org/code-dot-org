@@ -1,5 +1,5 @@
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils/analyticsReporterHelper';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {WEBLAB2_IMAGE_FILE_TYPES} from '@cdo/apps/weblab2/constants';
