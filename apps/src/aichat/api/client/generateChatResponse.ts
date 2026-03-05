@@ -57,11 +57,29 @@ export async function generateChatResponse(
   }
 
   // Generate a response with the model.
-  const {text, files} = await generateText({
+  const {text, files, finishReason, response} = await generateText({
     model: getModel(modelParameters.selectedModelId),
     messages,
     temperature: modelParameters.temperature,
   });
+
+  if (['content-filter', 'other'].includes(finishReason)) {
+    // response.body is expected to be an object with a "candidates" array
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const candidate = (response.body as any)?.candidates?.[0];
+
+    return {
+      response: `Blocked reason: ${candidate?.finishReason}. ${candidate?.finishMessage}`,
+      status: AiRequestExecutionStatus.MODEL_PROFANITY,
+    };
+  }
+
+  if (finishReason !== 'stop') {
+    return {
+      response: `Unexpected finish reason: ${finishReason}`,
+      status: AiRequestExecutionStatus.FAILURE,
+    };
+  }
 
   for (const file of files) {
     if (file.mediaType.startsWith('image/')) {
