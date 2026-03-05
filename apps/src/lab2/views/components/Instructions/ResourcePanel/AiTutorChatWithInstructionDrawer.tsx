@@ -1,4 +1,5 @@
-import {Button} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import {throttle} from 'lodash';
 import React, {useState, useCallback, useMemo, useEffect, useRef} from 'react';
@@ -31,12 +32,6 @@ const MIN_INSTRUCTIONS_HEIGHT = 150;
 const DEFAULT_INITIAL_INSTRUCTIONS_HEIGHT = 250; // Initial height needed before instructions content is measured.
 // Matches .instructionsDrawer padding (8px top + 8px bottom).
 const INSTRUCTIONS_DRAWER_VERTICAL_PADDING_PX = 16;
-
-const TOGGLE_BUTTON_ICONS = {
-  left: {iconName: 'info-circle', iconStyle: 'solid'} as const,
-  collapsed: {iconName: 'chevron-down', iconStyle: 'solid'} as const,
-  expanded: {iconName: 'chevron-up', iconStyle: 'solid'} as const,
-};
 
 const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   AiTutorChatWithInstructionDrawerProps
@@ -233,20 +228,25 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
         className={styles.toggleButtonContainer}
         style={{top: instructionsHeight}}
       >
-        <Button
+        <MuiButton
+          variant="text"
+          color="secondary"
+          size="extraSmall"
           className={styles.toggleButton}
           onClick={toggleInstructions}
-          text={isCollapsed ? 'Show Instructions' : 'Hide Instructions'}
-          type="tertiary"
-          size="xs"
-          color="black"
-          iconLeft={TOGGLE_BUTTON_ICONS.left}
-          iconRight={
-            isCollapsed
-              ? TOGGLE_BUTTON_ICONS.collapsed
-              : TOGGLE_BUTTON_ICONS.expanded
+          type="button"
+          startIcon={
+            <FontAwesomeV6Icon iconName="info-circle" iconStyle="solid" />
           }
-        />
+          endIcon={
+            <FontAwesomeV6Icon
+              iconName={isCollapsed ? 'chevron-up' : 'chevron-down'}
+              iconStyle="solid"
+            />
+          }
+        >
+          {isCollapsed ? 'Show Instructions' : 'Hide Instructions'}
+        </MuiButton>
       </div>
       {!isCollapsed && (
         <ResizeBar
