@@ -11567,7 +11567,6 @@ __metadata:
     react-schemaorg: "npm:^2.0.0"
     react-select: "npm:^1.2.1"
     react-select-5: "npm:react-select@5"
-    react-shepherd: "npm:^7.0.3"
     react-sticky: "npm:^6.0.3"
     react-string-replace: "npm:^1.1.1"
     react-tether: "npm:^1.0.4"
@@ -11599,6 +11598,7 @@ __metadata:
     schema-dts: "npm:^1.1.5"
     script-loader: "npm:^0.7.2"
     seedrandom: "npm:2.4.2"
+    shepherd.js: "npm:^15.2.1"
     sinon: "npm:^11.0.0"
     sinon-chai: "npm:^3.1.0"
     slate: "npm:^0.81.0"
@@ -26092,19 +26092,6 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"react-shepherd@npm:^7.0.3":
-  version: 7.0.3
-  resolution: "react-shepherd@npm:7.0.3"
-  dependencies:
-    shepherd.js: "npm:15.2.1"
-  peerDependencies:
-    react: ^18.0.0 || ^19.0.0
-    react-dom: ^18.0.0 || ^19.0.0
-    typescript: ^5.0.0
-  checksum: 10/4e31f4e35146ff01dcaac8f3a5aced6a67168734da64688fbf037b0a2bc510016b6f7b4c0242410fb38836bbdcb0a8664ec4cea0f97c210f9d0a79209f1bf508
-  languageName: node
-  linkType: hard
-
 "react-smooth@npm:^4.0.4":
   version: 4.0.4
   resolution: "react-smooth@npm:4.0.4"
@@ -28143,7 +28130,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"shepherd.js@npm:15.2.1":
+"shepherd.js@npm:^15.2.1":
   version: 15.2.1
   resolution: "shepherd.js@npm:15.2.1"
   dependencies:
