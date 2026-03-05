@@ -88,7 +88,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   const [canShowPodcasts, setCanShowPodcasts] = useState(false);
   const [audioSummaryTranscript, setAudioSummaryTranscript] =
     useState<string>('');
-  // const [playStartTime, setPlayStartTime] = useState<number>(0);
+  const [playStartTime, setPlayStartTime] = useState<number>(0);
 
   const userId = useAppSelector(state => state.currentUser.userId);
 
@@ -265,21 +265,33 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     }
   };
 
-  // const handlePodcastPlay = () => {
-  //   setPlayStartTime(Date.now());
-  //   console.log('playing audio');
-  //   analyticsReporter.sendEvent(EVENTS.TA_PODCAST_PLAYED, {
-  //     lesson_id: selectedLesson?.id,
-  //   });
-  // };
+  React.useEffect(() => {
+    const audioPlayer = document.getElementById('lesson-summary-audio');
 
-  const handlePodcastStop = () => {
-    setFinishedListeningToSummary(true);
-    console.log('stopped audio');
-    analyticsReporter.sendEvent(EVENTS.TA_PODCAST_PLAYED, {
-      lesson_id: selectedLesson?.id,
-    });
-  };
+    const handlePodcastPlay = () => {
+      setPlayStartTime(Date.now());
+      analyticsReporter.sendEvent(EVENTS.TA_PODCAST_PLAYED, {
+        lesson_id: selectedLesson?.id,
+      });
+    };
+
+    const handlePodcastStop = () => {
+      const play_time = (Date.now() - playStartTime) / 1000;
+      analyticsReporter.sendEvent(EVENTS.TA_PODCAST_STOPPED, {
+        lesson_id: selectedLesson?.id,
+        time_played: play_time,
+      });
+    };
+
+    audioPlayer?.addEventListener('play', handlePodcastPlay);
+
+    audioPlayer?.addEventListener('pause', handlePodcastStop);
+
+    return () => {
+      audioPlayer?.removeEventListener('play', handlePodcastPlay);
+      audioPlayer?.removeEventListener('pause', handlePodcastStop);
+    };
+  }, [playStartTime, selectedLesson]);
 
   const renderHeader = () => {
     return (
@@ -412,8 +424,8 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
                   src={`/ai_lesson_summary_podcasts/show?lesson_id=${selectedLesson?.id}`}
                   preload="auto"
                   controls
-                  onEnded={() => handlePodcastStop}
                   className={styles.audioPlayer}
+                  onEnded={() => setFinishedListeningToSummary(true)}
                 />
                 {finishedListeningToSummary && (
                   <FontAwesomeV6Icon
