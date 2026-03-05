@@ -803,6 +803,8 @@ module SharedConstants
     USER_INPUT_TOO_LARGE: 1005,
     # The model took too long to respond.
     MODEL_TIMEOUT: 1006,
+    # Model output image flagged.
+    MODEL_IMAGE_FLAGGED: 1007,
   }
 
   STUDENT_WORK_EVALUATION_STATUS = {

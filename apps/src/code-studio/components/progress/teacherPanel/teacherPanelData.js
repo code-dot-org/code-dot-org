@@ -32,6 +32,7 @@ export const queryLockStatus = async scriptId => {
     const teacherSections = Object.values(data).map(section => ({
       id: section.section_id,
       name: section.section_name,
+      ai_chat_access_level: section.ai_chat_access_level,
     }));
 
     return {

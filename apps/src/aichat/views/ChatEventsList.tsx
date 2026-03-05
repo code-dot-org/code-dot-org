@@ -1,4 +1,5 @@
-import Button from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState, useCallback, useMemo} from 'react';
 
@@ -230,17 +231,18 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
       </div>
       {showScrollToBottom && (
         <div className={moduleStyles.floatingScrollToBottomButtonContainer}>
-          <Button
-            isIconOnly
-            icon={{iconName: 'arrow-down'}}
-            size="xs"
-            color="black"
-            type="secondary"
-            onClick={() => scrollToLastMessage()}
+          <MuiIconButton
+            variant="outlined"
+            color="secondary"
+            size="extraSmall"
             className={moduleStyles.scrollToBottomButton}
-            ariaLabel="Scroll to bottom of messages"
+            onClick={() => scrollToLastMessage()}
+            aria-label="Scroll to bottom of messages"
+            type="button"
             aria-controls="chat-workspace-conversation"
-          />
+          >
+            <FontAwesomeV6Icon iconName="arrow-down" />
+          </MuiIconButton>
         </div>
       )}
     </div>

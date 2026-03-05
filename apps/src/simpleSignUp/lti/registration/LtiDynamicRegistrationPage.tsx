@@ -1,5 +1,4 @@
-import {Button} from '@code-dot-org/component-library/button';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import $ from 'jquery';
 import React, {useState} from 'react';
 
@@ -80,13 +79,17 @@ export const LtiDynamicRegistrationPage = ({
           </form>
         </div>
         <div>
-          <Button
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="large"
             disabled={submitDisable}
             className={styles.callToAction}
             onClick={handleSubmit}
-            size="l"
-            text={i18n.ltiDynamicRegistrationSubmit()}
-          />
+            type="button"
+          >
+            {i18n.ltiDynamicRegistrationSubmit()}
+          </MuiButton>
         </div>
       </div>
     </main>

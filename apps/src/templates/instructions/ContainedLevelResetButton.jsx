@@ -1,4 +1,5 @@
-import {Button, buttonColors} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
@@ -30,9 +31,11 @@ export const UnconnectedContainedLevelResetButton = ({
   }
   return (
     <div>
-      <Button
+      <MuiButton
+        variant="outlined"
+        color="error"
+        size="small"
         name="containedLevelResetButton"
-        text={i18n.deleteAnswer()}
         onClick={() => {
           resetContainedLevel().then(
             () => {
@@ -42,12 +45,12 @@ export const UnconnectedContainedLevelResetButton = ({
             () => setResetFailed(true)
           );
         }}
-        size={'s'}
         disabled={!hasLevelResults || !!codeIsRunning}
-        color={buttonColors.destructive}
-        iconLeft={{iconStyle: 'solid', iconName: 'trash'}}
-        type={'secondary'}
-      />
+        type="button"
+        startIcon={<FontAwesomeV6Icon iconStyle="solid" iconName="trash" />}
+      >
+        {i18n.deleteAnswer()}
+      </MuiButton>
       <HelpTip>{i18n.deleteAnswerHelpTip()}</HelpTip>
       {resetFailed && (
         <span style={styles.error}>{i18n.errorResettingAnswer()}</span>
