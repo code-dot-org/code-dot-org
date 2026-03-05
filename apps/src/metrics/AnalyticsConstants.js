@@ -302,6 +302,12 @@ const EVENTS = {
   TA_RUBRIC_ANNOUNCEMENT_CLICKED: 'TA Rubric Announcement Clicked',
   TA_RUBRIC_ANNOUNCEMENT_DISMISSED: 'TA Rubric Announcement Dismissed',
 
+  // AI TA Lesson Summary Podcasts
+  TA_PODCAST_OPEN_TRANSCRIPT: 'TA podcast transcript opened',
+  TA_PODCAST_CLOSE_TRANSCRIPT: 'TA podcast transcript closed',
+  TA_PODCAST_PLAYED: 'TA podcast played',
+  TA_PODCAST_STOPPED: 'TA podcast stopped',
+
   //AI Differentiation
   AI_DIFF_CHAT_OPENED: 'AI Differentiation Chat Opened',
   AI_DIFF_CHAT_CLOSED: 'AI Differentiation Chat Closed',

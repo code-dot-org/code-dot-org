@@ -88,6 +88,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   const [canShowPodcasts, setCanShowPodcasts] = useState(false);
   const [audioSummaryTranscript, setAudioSummaryTranscript] =
     useState<string>('');
+  // const [playStartTime, setPlayStartTime] = useState<number>(0);
 
   const userId = useAppSelector(state => state.currentUser.userId);
 
@@ -250,6 +251,36 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     dispatch(setChatIsOpen(true));
   };
 
+  const handleTranscriptButtonClick = () => {
+    if (showTranscriptDialog) {
+      setShowTranscriptDialog(false);
+      analyticsReporter.sendEvent(EVENTS.TA_PODCAST_CLOSE_TRANSCRIPT, {
+        lesson_id: selectedLesson?.id,
+      });
+    } else {
+      setShowTranscriptDialog(true);
+      analyticsReporter.sendEvent(EVENTS.TA_PODCAST_OPEN_TRANSCRIPT, {
+        lesson_id: selectedLesson?.id,
+      });
+    }
+  };
+
+  // const handlePodcastPlay = () => {
+  //   setPlayStartTime(Date.now());
+  //   console.log('playing audio');
+  //   analyticsReporter.sendEvent(EVENTS.TA_PODCAST_PLAYED, {
+  //     lesson_id: selectedLesson?.id,
+  //   });
+  // };
+
+  const handlePodcastStop = () => {
+    setFinishedListeningToSummary(true);
+    console.log('stopped audio');
+    analyticsReporter.sendEvent(EVENTS.TA_PODCAST_PLAYED, {
+      lesson_id: selectedLesson?.id,
+    });
+  };
+
   const renderHeader = () => {
     return (
       <div className={styles.lessonMaterialsPageHeader}>
@@ -339,9 +370,9 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
             title={i18n.audioTranscript()}
             primaryButtonProps={{
               text: i18n.closeDialog(),
-              onClick: () => setShowTranscriptDialog(false),
+              onClick: () => handleTranscriptButtonClick(),
             }}
-            onClose={() => setShowTranscriptDialog(false)}
+            onClose={() => handleTranscriptButtonClick()}
             closeLabel={i18n.closeTranscript()}
             customContent={
               <div className={styles.transcriptDialogContent}>
@@ -370,7 +401,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
                   color="black"
                   className={styles.openTranscriptButton}
                   text={i18n.transcript()}
-                  onClick={() => setShowTranscriptDialog(true)}
+                  onClick={() => handleTranscriptButtonClick()}
                 />
               </div>
               <div className={styles.audioPlayerContainer}>
@@ -381,7 +412,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
                   src={`/ai_lesson_summary_podcasts/show?lesson_id=${selectedLesson?.id}`}
                   preload="auto"
                   controls
-                  onEnded={() => setFinishedListeningToSummary(true)}
+                  onEnded={() => handlePodcastStop}
                   className={styles.audioPlayer}
                 />
                 {finishedListeningToSummary && (
