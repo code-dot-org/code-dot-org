@@ -200,6 +200,10 @@ class LtiV1Controller < ApplicationController
           session: session,
         )
 
+        # Ensure the LTI user identity and deployment association exists
+        lti_user_identity = user.lti_user_identities&.find_by(lti_integration_id: integration.id, subject: decoded_jwt[:sub])
+        deployment.lti_user_identities << lti_user_identity if lti_user_identity && !deployment.lti_user_identities.include?(lti_user_identity)
+
         # If this is the user's first login, send them into the account linking flow
         unless user.lms_landing_opted_out
           Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'continue', user.user_type)
