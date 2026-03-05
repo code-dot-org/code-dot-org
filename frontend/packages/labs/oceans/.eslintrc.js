@@ -31,7 +31,7 @@ module.exports = {
       "ecmaVersion": 6,
       "experimentalObjectRestSpread": true
     }
-},
+  },
   "rules": {
     "array-bracket-spacing": ["error", "never"],
     "brace-style": ["error", "1tbs", { allowSingleLine: true }],
