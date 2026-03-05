@@ -75,7 +75,11 @@ class VarnishEnvironment < Sinatra::Base
 
     # @return BCP 47 language tag (a normalized locale suitable for I18n e.g. `en-US` or `es-MX`)
     def language_to_locale(language)
-      locale = language.to_s.downcase
+      locale = begin
+        language.to_s.downcase
+      rescue ArgumentError
+        ''
+      end
       return if locale.empty?
 
       unless SUPPORTED_LOCALES.include?(locale)
