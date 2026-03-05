@@ -18,7 +18,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "start": "yarn run dev",
-    "dev": "webpack-dev-server --mode development --static public --host 0.0.0.0 --disable-host-check",
+    "dev": "webpack-dev-server --mode development --static public --host 0.0.0.0",
     "lint": "eslint --ext .js,.jsx src",
     "test": "yarn run lint && jest",
     "test:unit": "jest ./test/unit/*.js",

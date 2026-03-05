@@ -81,7 +81,7 @@ const firstConfigOnly = {
       patterns: [
         {
           from: 'src/oceans/*.bin',
-          to: 'assets/models/[name][ext]'
+          to: 'models/[name][ext]'
         }
       ]
     })
