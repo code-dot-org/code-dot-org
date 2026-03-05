@@ -39,6 +39,7 @@ module Dashboard
     # Rails; see config/initializers/new_framework_defaults_7_0.rb for more.
     # TODO infra: remove these values once we're loading defaults for 7.0 above
     config.active_support.disable_to_s_conversion = true
+    config.action_controller.raise_on_open_redirects = true
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
