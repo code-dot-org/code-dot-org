@@ -88,7 +88,6 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   const [canShowPodcasts, setCanShowPodcasts] = useState(false);
   const [audioSummaryTranscript, setAudioSummaryTranscript] =
     useState<string>('');
-  const [playStartTime, setPlayStartTime] = useState(0);
   const audioPlayerRef = React.useRef<HTMLAudioElement | null>(null);
 
   const userId = useAppSelector(state => state.currentUser.userId);
@@ -267,8 +266,9 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   };
 
   React.useEffect(() => {
+    let playStartTime: number;
     const handlePodcastPlay = () => {
-      setPlayStartTime(Date.now());
+      playStartTime = Date.now();
       analyticsReporter.sendEvent(EVENTS.TA_PODCAST_PLAYED, {
         lesson_id: selectedLesson?.id,
       });
@@ -282,13 +282,16 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
       });
     };
     const audioPlayer = audioPlayerRef.current;
-    audioPlayer?.addEventListener('play', handlePodcastPlay);
-    audioPlayer?.addEventListener('pause', handlePodcastStop);
-    return () => {
-      audioPlayer?.removeEventListener('play', handlePodcastPlay);
-      audioPlayer?.removeEventListener('pause', handlePodcastStop);
-    };
-  }, [playStartTime, selectedLesson]);
+
+    if (audioPlayer) {
+      audioPlayer.addEventListener('play', handlePodcastPlay);
+      audioPlayer.addEventListener('pause', handlePodcastStop);
+      return () => {
+        audioPlayer.removeEventListener('play', handlePodcastPlay);
+        audioPlayer.removeEventListener('pause', handlePodcastStop);
+      };
+    }
+  }, [selectedLesson, canShowLessonSummaries]);
 
   const renderHeader = () => {
     return (
