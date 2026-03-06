@@ -106,7 +106,7 @@ class MetricsReporter {
     }
 
     // Send to DataDog RUM as a custom action
-    if (DCDO.get('datadog-rum-enabled', false)) {
+    if (DCDO.get('datadog-enabled', false)) {
       datadogRum.addAction(name, {
         value,
         unit,
@@ -131,7 +131,7 @@ class MetricsReporter {
     };
 
     // Send to DataDog Logs in parallel, independently of isReportingEnabled
-    if (DCDO.get('datadog-rum-enabled', false)) {
+    if (DCDO.get('datadog-enabled', false)) {
       this.sendToDataDogLogs(level, message);
     }
 
