@@ -459,7 +459,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
         xmlns: 'http://www.w3.org/2000/svg',
         'xmlns:html': 'http://www.w3.org/1999/xhtml',
         'xmlns:xlink': 'http://www.w3.org/1999/xlink',
-        version: '1.1',
         class: `${Renderers.DEFAULT}-renderer modern-theme readOnlyBlockSpace injectionDiv`,
       },
       null

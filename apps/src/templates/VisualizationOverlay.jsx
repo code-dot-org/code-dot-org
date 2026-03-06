@@ -129,8 +129,6 @@ export class VisualizationOverlay extends React.Component {
         ref="root"
         id="visualizationOverlay"
         className={this.props.className}
-        version="1.1"
-        baseProfile="full"
         width={this.props.width}
         height={this.props.height}
         style={{left: 'auto'}}

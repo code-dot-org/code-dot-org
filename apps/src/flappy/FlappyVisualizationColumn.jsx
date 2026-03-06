@@ -12,7 +12,7 @@ const FlappyVisualizationColumn = ({showFinishButton}) => {
   return (
     <span>
       <ProtectedVisualizationDiv>
-        <svg version="1.1" id="svgFlappy" />
+        <svg id="svgFlappy" />
       </ProtectedVisualizationDiv>
       <GameButtons>
         {showFinishButton && (
