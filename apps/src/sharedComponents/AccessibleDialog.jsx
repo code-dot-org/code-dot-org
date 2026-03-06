@@ -49,7 +49,6 @@ function AccessibleDialog({
           <div
             id={id}
             aria-modal
-            aria-labelledby={`${id}-title`}
             className={classnames(modalStyle, className)}
             role="dialog"
             aria-label={ariaLabel}

@@ -33,7 +33,7 @@ const CopyrightDialog: React.FC<CopyrightDialogProps> = ({
       className="copyrightDialog"
       onClose={closeModal}
       closeOnClickBackdrop={true}
-      ariaLabel="Copyright Information"
+      ariaLabel={i18n.copyright()}
     >
       <div>
         <div>
