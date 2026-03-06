@@ -1,3 +1,4 @@
+import {LinkButton, buttonColors} from '@code-dot-org/component-library/button';
 import Link from '@code-dot-org/component-library/link';
 import {
   Card,
@@ -10,7 +11,6 @@ import {
   TableRow,
   TableCell,
   Typography,
-  Button as MuiButton,
 } from '@mui/material';
 import React, {FC} from 'react';
 
@@ -115,17 +115,15 @@ export const WorkshopAttendance: FC = () => {
                       )}
                     </TableCell>
                     <TableCell>
-                      <MuiButton
-                        variant="outlined"
-                        color="tertiary"
-                        size="extraSmall"
-                        aria-label={`View daily roster for ${formattedDate} in new tab`}
+                      <LinkButton
+                        text={rosterLabel}
                         href={rosterUrl}
+                        size="xs"
+                        color={buttonColors.gray}
+                        type="secondary"
                         target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {rosterLabel}
-                      </MuiButton>
+                        aria-label={`View daily roster for ${formattedDate} in new tab`}
+                      />
                     </TableCell>
                   </TableRow>
                 );

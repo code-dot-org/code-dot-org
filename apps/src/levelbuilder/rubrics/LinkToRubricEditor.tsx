@@ -1,4 +1,5 @@
-import {Typography, Button as MuiButton} from '@mui/material';
+import {LinkButton} from '@code-dot-org/component-library/button';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import moduleStyles from './link-to-rubric-editor.module.scss';
@@ -35,23 +36,19 @@ export default function LinkToRubricEditor({lessons}: LinkToRubricEditorProps) {
         {lessons.map(lesson => (
           <div key={lesson.id} className={moduleStyles.rubricRow}>
             {lesson.rubric_id ? (
-              <MuiButton
-                variant="contained"
-                color="primary"
-                size="small"
+              <LinkButton
                 href={'/rubrics/' + lesson.rubric_id + '/edit'}
                 target="_blank"
-                rel="noopener noreferrer"
-              >{`Edit Rubric`}</MuiButton>
+                text={`Edit Rubric`}
+                size={'s'}
+              />
             ) : (
-              <MuiButton
-                variant="contained"
-                color="primary"
-                size="small"
+              <LinkButton
                 href={'/rubrics/new?lessonId=' + lesson.id}
                 target="_blank"
-                rel="noopener noreferrer"
-              >{`Add Rubric`}</MuiButton>
+                text={`Add Rubric`}
+                size={'s'}
+              />
             )}
             <Typography
               className={moduleStyles.lessonText}

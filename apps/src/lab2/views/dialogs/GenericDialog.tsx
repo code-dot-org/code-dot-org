@@ -1,8 +1,8 @@
+import Button from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import Dialog from '@code-dot-org/component-library/dialog';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Modal from '@code-dot-org/component-library/modal';
-import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
@@ -153,16 +153,13 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
       }
       customBottomContent={
         buttons?.neutral && buttons?.cancel ? (
-          <MuiButton
-            variant="text"
-            color="primary"
-            size="medium"
-            disabled={buttons.cancel.disabled}
+          <Button
             onClick={cancelCallback}
-            type="button"
-          >
-            {buttons.cancel.text || commonI18n.cancel()}
-          </MuiButton>
+            type="tertiary"
+            disabled={buttons.cancel.disabled}
+            color={theme === 'Dark' ? 'white' : 'black'}
+            text={buttons.cancel.text || commonI18n.cancel()}
+          />
         ) : undefined
       }
       onClose={buttons?.cancel ? cancelCallback : undefined}

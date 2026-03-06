@@ -1,6 +1,7 @@
+import {Button} from '@code-dot-org/component-library/button';
 import {Dialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography, Button as MuiButton} from '@mui/material';
+import {Typography} from '@mui/material';
 import _ from 'lodash';
 import React, {useState, useMemo} from 'react';
 import {useSelector} from 'react-redux';
@@ -363,16 +364,14 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
                     {i18n.audioSummary()}
                   </Typography>
                 </div>
-                <MuiButton
-                  variant="outlined"
-                  color="secondary"
-                  size="extraSmall"
+                <Button
+                  type="secondary"
+                  size="xs"
+                  color="black"
                   className={styles.openTranscriptButton}
+                  text={i18n.transcript()}
                   onClick={() => setShowTranscriptDialog(true)}
-                  type="button"
-                >
-                  {i18n.transcript()}
-                </MuiButton>
+                />
               </div>
               <div className={styles.audioPlayerContainer}>
                 {/* We're including our own custom time-stamped transcript dialog, so no need for media caption. */}
@@ -457,16 +456,13 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
                 </ul>
               </div>
             </div>
-            <MuiButton
-              variant="outlined"
-              color="secondary"
-              size="medium"
+            <Button
+              type="secondary"
+              color="black"
               className={styles.askAITAButton}
+              text={i18n.questionForAITA()}
               onClick={handleLessonSummaryAskAITAClick}
-              type="button"
-            >
-              {i18n.questionForAITA()}
-            </MuiButton>
+            />
             {!hasCompletedPersonalizationQuiz && (
               <div className={styles.personalizationQuizSection}>
                 <div className={styles.horizontalLine} />

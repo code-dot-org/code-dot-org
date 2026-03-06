@@ -1,5 +1,7 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton} from '@mui/material';
+import Button, {
+  ButtonColor,
+  ButtonType,
+} from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -13,6 +15,8 @@ interface ValidationButtonProps {
   onStopValidation: () => void;
   isValidating: boolean;
   isValidateDisabled: boolean;
+  buttonColor?: ButtonColor;
+  buttonType?: ButtonType;
 }
 
 const ValidationButton: React.FunctionComponent<ValidationButtonProps> = ({
@@ -20,6 +24,8 @@ const ValidationButton: React.FunctionComponent<ValidationButtonProps> = ({
   onStopValidation,
   isValidating,
   isValidateDisabled = false,
+  buttonColor = 'black',
+  buttonType = 'secondary',
 }) => {
   const hasConditions = useAppSelector(
     state => state.lab.validationState?.hasConditions
@@ -29,39 +35,32 @@ const ValidationButton: React.FunctionComponent<ValidationButtonProps> = ({
   }
 
   return isValidating ? (
-    <MuiButton
-      variant="contained"
-      color="error"
-      size="small"
-      className={classNames(
-        moduleStyles.buttonInstruction,
-        moduleStyles.validationButton
-      )}
+    <Button
+      text={codebridgeI18n.stopValidation()}
       onClick={onStopValidation}
-      type="button"
-      startIcon={<FontAwesomeV6Icon iconStyle="solid" iconName="square" />}
-    >
-      {codebridgeI18n.stopValidation()}
-    </MuiButton>
-  ) : (
-    <MuiButton
-      variant="contained"
-      color="primary"
-      size="small"
-      disabled={isValidateDisabled}
+      color={'destructive'}
+      iconLeft={{iconStyle: 'solid', iconName: 'square'}}
       className={classNames(
         moduleStyles.buttonInstruction,
         moduleStyles.validationButton
       )}
-      id="uitest-validate-button"
+      size={'s'}
+    />
+  ) : (
+    <Button
+      text={codebridgeI18n.validate()}
       onClick={onValidate}
-      type="button"
-      startIcon={
-        <FontAwesomeV6Icon iconStyle="solid" iconName="clipboard-check" />
-      }
-    >
-      {codebridgeI18n.validate()}
-    </MuiButton>
+      type={buttonType}
+      disabled={isValidateDisabled}
+      iconLeft={{iconStyle: 'solid', iconName: 'clipboard-check'}}
+      className={classNames(
+        moduleStyles.buttonInstruction,
+        moduleStyles.validationButton
+      )}
+      color={buttonColor}
+      size={'s'}
+      id={'uitest-validate-button'}
+    />
   );
 };
 

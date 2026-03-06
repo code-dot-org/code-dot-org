@@ -1,9 +1,5 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  Typography,
-  Button as MuiButton,
-  IconButton as MuiIconButton,
-} from '@mui/material';
+import {Button} from '@code-dot-org/component-library/button';
+import {Typography} from '@mui/material';
 import React, {memo, useCallback, useContext, useMemo} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -111,69 +107,52 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
             </Typography>
           </div>
           <div className={moduleStyles.playSection}>
-            <MuiIconButton
-              variant="outlined"
-              color="white"
-              size="large"
-              disabled={isLoading}
-              className={moduleStyles.playViewButton}
+            <Button
+              isIconOnly={true}
+              icon={{
+                iconStyle: 'solid',
+                iconName: !isPlaying ? 'play' : 'stop',
+              }}
               onClick={() => setPlaying(!isPlaying)}
-              type="button"
-              aria-label={isPlaying ? 'Stop' : 'Play'}
-            >
-              <FontAwesomeV6Icon
-                iconStyle="solid"
-                iconName={!isPlaying ? 'play' : 'stop'}
-              />
-            </MuiIconButton>
+              disabled={isLoading}
+              size="l"
+              color="white"
+              type="secondary"
+              className={moduleStyles.playViewButton}
+            />
             <ProgressSlider percentProgress={percentPlayed} />
           </div>
 
           <div className={moduleStyles.buttonsSection}>
-            <MuiButton
-              variant="text"
-              color="secondary"
-              size="extraSmall"
+            <Button
+              text={commonI18n.viewCode()}
+              type="tertiary"
+              color="black"
+              size="xs"
+              iconLeft={{iconStyle: 'solid', iconName: 'code'}}
               onClick={onViewCode}
-              type="button"
-              startIcon={
-                <FontAwesomeV6Icon iconStyle="solid" iconName="code" />
-              }
-            >
-              {commonI18n.viewCode()}
-            </MuiButton>
+            />
             {canShare && (
-              <MuiButton
-                variant="text"
-                color="secondary"
-                size="extraSmall"
+              <Button
+                text={musicI18n.share()}
+                type="tertiary"
+                color="black"
+                size="xs"
+                iconLeft={{
+                  iconStyle: 'solid',
+                  iconName: 'arrow-up-from-bracket',
+                }}
                 onClick={onShareProject}
-                type="button"
-                startIcon={
-                  <FontAwesomeV6Icon
-                    iconStyle="solid"
-                    iconName="arrow-up-from-bracket"
-                  />
-                }
-              >
-                {musicI18n.share()}
-              </MuiButton>
+              />
             )}
-            <MuiButton
-              variant="text"
-              color="secondary"
-              size="extraSmall"
+            <Button
+              text={commonI18n.makeMyOwn()}
+              type="tertiary"
+              color="black"
+              size="xs"
+              iconLeft={{iconStyle: 'regular', iconName: 'pen-to-square'}}
               onClick={onRemix}
-              type="button"
-              startIcon={
-                <FontAwesomeV6Icon
-                  iconStyle="regular"
-                  iconName="pen-to-square"
-                />
-              }
-            >
-              {commonI18n.makeMyOwn()}
-            </MuiButton>
+            />
           </div>
         </div>
       </div>

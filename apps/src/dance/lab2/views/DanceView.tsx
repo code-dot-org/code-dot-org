@@ -1,6 +1,5 @@
+import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton} from '@mui/material';
 import * as BlocklyCore from 'blockly/core';
 import classNames from 'classnames';
 import {isEqual} from 'lodash';
@@ -686,19 +685,15 @@ const DanceView: React.FunctionComponent<{
           headerClassName={moduleStyles.panelHeader}
           rightHeaderContent={
             !readonlyWorkspace && (
-              <MuiButton
-                variant="outlined"
-                color="secondary"
-                size="extraSmall"
+              <Button
+                text={commonI18n.startOver()}
+                iconRight={{iconStyle: 'solid', iconName: 'refresh'}}
+                color={'black'}
                 onClick={onClickStartOver}
-                aria-label={commonI18n.startOver()}
-                type="button"
-                endIcon={
-                  <FontAwesomeV6Icon iconStyle="solid" iconName="refresh" />
-                }
-              >
-                {commonI18n.startOver()}
-              </MuiButton>
+                ariaLabel={commonI18n.startOver()}
+                size={'xs'}
+                type="secondary"
+              />
             )
           }
         >

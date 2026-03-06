@@ -1,5 +1,6 @@
+import Button from '@code-dot-org/component-library/button';
 import Chips from '@code-dot-org/component-library/chips';
-import {Typography, Button as MuiButton} from '@mui/material';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
@@ -80,17 +81,15 @@ export default function SingleSectionSetUp({
                 emoji={section.avatar_emoji || 0}
                 size={'m'}
               />
-              <MuiButton
-                variant="outlined"
-                color="tertiary"
-                size="small"
+              <Button
                 className={styles.avatarButton}
-                onClick={() => setShowAvatarDialog(true)}
+                text={i18n.editAvatar()}
                 aria-label={i18n.editAvatar()}
-                type="button"
-              >
-                {i18n.editAvatar()}
-              </MuiButton>
+                type={'secondary'}
+                color={'gray'}
+                size={'s'}
+                onClick={() => setShowAvatarDialog(true)}
+              />
             </>
           )}
         </div>

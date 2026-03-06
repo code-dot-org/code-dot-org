@@ -1,6 +1,6 @@
+import Button from '@code-dot-org/component-library/button';
 import Link from '@code-dot-org/component-library/link';
 import NotificationBanner from '@code-dot-org/component-library/notification-banner';
-import {Button as MuiButton} from '@mui/material';
 import React from 'react';
 
 import {AI_SETTINGS_SUPPORT_LINK} from '@cdo/apps/aichat/constants';
@@ -59,15 +59,12 @@ const RequiresAiChatToolsAlert: React.FC = () => {
           icon={{iconName: 'triangle-exclamation', iconStyle: 'solid'}}
           actions={
             selectedSection?.id && (
-              <MuiButton
-                variant="outlined"
-                color="secondary"
-                size="medium"
+              <Button
+                type="secondary"
+                color="black"
                 onClick={handleReviewAiSettings}
-                type="button"
-              >
-                {'Review AI Settings'}
-              </MuiButton>
+                text="Review AI Settings"
+              />
             )
           }
         />

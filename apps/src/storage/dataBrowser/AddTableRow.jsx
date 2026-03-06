@@ -1,4 +1,4 @@
-import {Button as MuiButton} from '@mui/material';
+import {Button} from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
@@ -88,20 +88,18 @@ class AddTableRow extends React.Component {
         <td className={dataStyles.cell} />
 
         <td className={classNames(dataStyles.cell, dataStyles.addButton)}>
-          <MuiButton
-            variant="outlined"
-            color="tertiary"
-            size="small"
-            loading={this.state.isAdding}
-            disabled={this.state.isAdding}
-            className={classNames(dataStyles.buttonText)}
+          <Button
             id="addTableRowButton"
+            text={msg.addRowToTable()}
             onClick={this.handleAdd}
-            aria-label={msg.addRowToTable()}
-            type="button"
-          >
-            {msg.addRowToTable()}
-          </MuiButton>
+            disabled={this.state.isAdding}
+            isPending={this.state.isAdding}
+            ariaLabel={msg.addRowToTable()}
+            className={classNames(dataStyles.buttonText)}
+            size="s"
+            type="secondary"
+            color="gray"
+          />
         </td>
       </tr>
     );

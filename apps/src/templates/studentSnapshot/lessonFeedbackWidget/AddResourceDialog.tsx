@@ -1,5 +1,6 @@
+import {Button} from '@code-dot-org/component-library/button';
 import TextField from '@code-dot-org/component-library/textField';
-import {Divider, Button as MuiButton} from '@mui/material';
+import {Divider} from '@mui/material';
 import React from 'react';
 
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
@@ -44,24 +45,8 @@ const AddResourceDialog: React.FC<AddResourceDialogProps> = ({
         />
         <Divider className={styles.resourcePopUpDivider} />
         <div className={styles.resourceLinkPopUpButtons}>
-          <MuiButton
-            variant="outlined"
-            color="primary"
-            size="medium"
-            onClick={onCancel}
-            type="button"
-          >
-            {'Cancel'}
-          </MuiButton>
-          <MuiButton
-            variant="contained"
-            color="primary"
-            size="medium"
-            onClick={onSave}
-            type="button"
-          >
-            {'Save'}
-          </MuiButton>
+          <Button text="Cancel" type="secondary" onClick={onCancel} />
+          <Button text="Save" onClick={onSave} />
         </div>
       </div>
     </AccessibleDialog>

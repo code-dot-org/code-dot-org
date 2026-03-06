@@ -27,7 +27,7 @@ describe('EditKeyRow', () => {
       const wrapper = createEditKeyRow();
 
       let button = wrapper.find('[id="editKeyValueButton"]').at(0);
-      expect(button.prop('children')).toContain('i18n-edit');
+      expect(button.prop('text')).toContain('i18n-edit');
     });
 
     it('should render a localized string for "Save"', () => {
@@ -39,7 +39,7 @@ describe('EditKeyRow', () => {
       wrapper.setState({isEditing: true});
 
       let saveButton = wrapper.find('[id="saveKeyValueButton"]').at(0);
-      expect(saveButton.prop('children')).toContain('i18n-save');
+      expect(saveButton.prop('text')).toContain('i18n-save');
     });
 
     it('should render a localized string for "Delete"', () => {
@@ -51,7 +51,7 @@ describe('EditKeyRow', () => {
       const wrapper = createEditKeyRow();
 
       let deleteButton = wrapper.find('[id="deleteKeyValueButton"]').at(0);
-      expect(deleteButton.prop('children')).toContain('i18n-delete');
+      expect(deleteButton.prop('text')).toContain('i18n-delete');
     });
   });
 });

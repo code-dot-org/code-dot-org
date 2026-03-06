@@ -1,7 +1,7 @@
+import Button from '@code-dot-org/component-library/button';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import {ActionDropdownOption} from '@code-dot-org/component-library/dropdown/actionDropdown';
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography, IconButton as MuiIconButton} from '@mui/material';
+import {Typography} from '@mui/material';
 import {PDFDownloadLink} from '@react-pdf/renderer';
 import React, {useMemo} from 'react';
 
@@ -132,16 +132,15 @@ const AiDiffChatHeader: React.FC<AiDiffChatHeaderProps> = ({
           document={<AiDiffPdf messages={messages} />}
           fileName="ai_differentiation_chat.pdf"
         >
-          <MuiIconButton
-            variant="outlined"
-            color="tertiary"
-            size="small"
+          <Button
+            color="gray"
+            size="s"
+            type="secondary"
+            isIconOnly
+            icon={{iconName: 'download'}}
             onClick={() => {}}
             aria-label={commonI18n.aiDifferentiation_download_pdf()}
-            type="button"
-          >
-            <FontAwesomeV6Icon iconName="download" />
-          </MuiIconButton>
+          />
         </PDFDownloadLink>
       </div>
     </div>
