@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-03-05T08:46:12.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check For Understanding",
+    "long_instructions": "Why did the Level 1 app feel difficult to use for your user? How did you apply user-centered design to improve usability and clarity?\r\n\r\n> The Level 1 app felt difficult for [user’s name] because ... I applied user-centered design by changing ..., which improved usability and clarity by ...",
+    "stay_on_level_after_submit": "false",
+    "height": "300",
+    "allow_user_uploads": "false",
+    "submittable": "true",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-05T08:46:12.126+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson2-level7_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson2-level7_2025\"},{\"changed_at\":\"2026-03-05 08:48:35 +0000\",\"changed\":[\"long_instructions\",\"submittable\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

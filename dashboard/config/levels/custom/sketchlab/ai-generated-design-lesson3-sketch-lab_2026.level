@@ -1,12 +1,13 @@
 <Sketchlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 75,
   "created_at": "2026-03-04T19:12:15.000Z",
   "level_num": "custom",
   "user_id": 18762,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## The Green Gardener: Designing for Sam\r\n\r\n**The User:** Sam needs a digital plant-tracking app with a built-in watering schedule. He is often outside, in direct sunlight, with dirt on his hands while using the app.\r\n\r\n**Your Task:** Write a detailed prompt for AI Tutor to help you generate your web app layout. Your prompt must address the following three questions:\r\n\r\n> 1. What are the requirements?\r\n> 2. What are the constraints?\r\n> 3. What are the edge cases?",
+    "long_instructions": "## The Green Gardener: Designing for Sam\r\n\r\n**The User:** Sam needs a digital plant-tracking app with a built-in watering schedule. He is often outside, in direct sunlight, with dirt on his hands while using the app.\r\n\r\n**Your Task:** Write a detailed prompt for AI Tutor to help you generate your web app layout. Your prompt must address the following three questions:\r\n\r\n> 1. What is the goal?\r\n> 2. What are the constraints?\r\n> 3. What are the edge cases?",
     "start_sources": {
       "source": {
         "type": "excalidraw",
@@ -161,8 +162,8 @@
           },
           {
             "type": "text",
-            "version": 2186,
-            "versionNonce": 809971639,
+            "version": 2187,
+            "versionNonce": 2069679523,
             "isDeleted": false,
             "id": "Ox0FGDZUcEeblNZl8a-ir",
             "fillStyle": "hachure",
@@ -175,7 +176,7 @@
             "y": -392.89823116403386,
             "strokeColor": "#1e1e1e",
             "backgroundColor": "transparent",
-            "width": 1103.336669921875,
+            "width": 1103.06201171875,
             "height": 92.21140487497088,
             "seed": 1607243833,
             "groupIds": [
@@ -186,7 +187,7 @@
             "boundElements": [
 
             ],
-            "updated": 1772655016193,
+            "updated": 1772738741859,
             "link": null,
             "locked": false,
             "fontSize": 40.09191516303082,
@@ -201,8 +202,8 @@
           },
           {
             "type": "text",
-            "version": 1785,
-            "versionNonce": 431759513,
+            "version": 1802,
+            "versionNonce": 1356298445,
             "isDeleted": false,
             "id": "FPOUY6y8DvkRvMdYRkRtP",
             "fillStyle": "hachure",
@@ -215,7 +216,7 @@
             "y": -498.5554656065757,
             "strokeColor": "#000000",
             "backgroundColor": "transparent",
-            "width": 875.7830810546875,
+            "width": 500.99017333984375,
             "height": 74.57639443541592,
             "seed": 95723609,
             "groupIds": [
@@ -226,16 +227,16 @@
             "boundElements": [
 
             ],
-            "updated": 1772655078906,
+            "updated": 1772738747059,
             "link": null,
             "locked": false,
             "fontSize": 64.84903863949211,
             "fontFamily": 2,
-            "text": "1. What are the requirements?",
+            "text": "What is the goal?",
             "textAlign": "left",
             "verticalAlign": "top",
             "containerId": null,
-            "originalText": "1. What are the requirements?",
+            "originalText": "What is the goal?",
             "lineHeight": 1.15,
             "baseline": 60
           },
@@ -575,7 +576,7 @@
         "appState": {
           "gridSize": null,
           "viewBackgroundColor": "#ffffff",
-          "scrollX": 2933.2296307851148,
+          "scrollX": 3033.555086404919,
           "scrollY": 1172.2744583733165,
           "zoom": {
             "value": 0.2098456101220709
@@ -700,7 +701,7 @@
             "containerId": "AdJ3UdjBxGrDa_1PeUnIB",
             "originalText": "Design a gardening app that displays a photo of each plant, its common name, a countdown timer for the next watering, and a \"Days until Harvest\" badge.",
             "lineHeight": 1.25,
-            "baseline": 121
+            "baseline": 122
           },
           {
             "type": "text",
@@ -824,8 +825,8 @@
           },
           {
             "type": "text",
-            "version": 1787,
-            "versionNonce": 193257786,
+            "version": 1804,
+            "versionNonce": 714441915,
             "isDeleted": false,
             "id": "biGLDTsST3APU09KUEMJ0",
             "fillStyle": "hachure",
@@ -838,7 +839,7 @@
             "y": -573.0704118725334,
             "strokeColor": "#000000",
             "backgroundColor": "transparent",
-            "width": 875.7830810546875,
+            "width": 500.99017333984375,
             "height": 74.57639443541592,
             "seed": 734190630,
             "groupIds": [
@@ -849,16 +850,16 @@
             "boundElements": [
 
             ],
-            "updated": 1772655452897,
+            "updated": 1772738764003,
             "link": null,
             "locked": false,
             "fontSize": 64.84903863949211,
             "fontFamily": 2,
-            "text": "1. What are the requirements?",
+            "text": "What is the goal?",
             "textAlign": "left",
             "verticalAlign": "top",
             "containerId": null,
-            "originalText": "1. What are the requirements?",
+            "originalText": "What is the goal?",
             "lineHeight": 1.15,
             "baseline": 60
           },
@@ -1056,7 +1057,7 @@
             "containerId": "eEPBkx-BLhu0F5lpwEV1M",
             "originalText": "Use a high-contrast theme with black text on a light cream background. Ensure all buttons are at least 60px tall for easy clicking with muddy hands.",
             "lineHeight": 1.25,
-            "baseline": 121
+            "baseline": 122
           },
           {
             "type": "rectangle",
@@ -1132,7 +1133,7 @@
             "containerId": "zFVHJDD4q9gIAyhmh4UXy",
             "originalText": "If a plant is missing a photo or a schedule, the app should display a generic \"seedling\" icon and a button that says \"Set Schedule Now\" instead of leaving a blank space.",
             "lineHeight": 1.25,
-            "baseline": 121
+            "baseline": 122
           },
           {
             "type": "rectangle",
@@ -1321,14 +1322,14 @@
             "containerId": "rn5vZF917P3dmt5USPQev",
             "originalText": "Design a gardening app that displays a photo of each plant, its common name, a countdown timer for the next watering, and a \"Days until Harvest\" badge. \n\nUse a high-contrast theme with black text on a light cream background. Ensure all buttons are at least 60px tall for easy clicking with muddy hands. \n\nIf a plant is missing a photo or a schedule, the app should display a generic \"seedling\" icon and a button that says \"Set Schedule Now\" instead of leaving a blank space.",
             "lineHeight": 1.25,
-            "baseline": 481
+            "baseline": 482
           }
         ],
         "appState": {
           "gridSize": null,
           "viewBackgroundColor": "#ffffff",
-          "scrollX": 1453.1774183923806,
-          "scrollY": 747.7325827749272,
+          "scrollX": 1623.9626385839647,
+          "scrollY": 884.9756169152816,
           "zoom": {
             "value": 0.2974041680606027
           }
@@ -1341,9 +1342,9 @@
     },
     "display_name": "The Green Gardener",
     "bubble_choice_description": "Sam needs a digital plant-tracking app and watering schedule.",
-    "thumbnail_url": "https://images.code.org/d0ff69c2c1e9a4a38e3f83f98cf3299a-Screenshot 2026-03-04 at 1.41.59 PM.png"
+    "thumbnail_url": "https://images.code.org/d0ff69c2c1e9a4a38e3f83f98cf3299a-Screenshot 2026-03-04 at 1.41.59 PM.png",
+    "teacher_markdown": "Have students read over their prompt to \"see\" their web app in their mind. \r\n\r\nIf their requirements are too vague for them to visualize the webpage, encourage them to add at least one more specific detail to each category. \r\n\r\nThe more detailed and specific their prompt, the more likely AI is to build exactly what they are envisioning."
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-04 19:27:37 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 19:32:59 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 19:33:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 19:34:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 19:44:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:02:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:04:48 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:09:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:11:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:11:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:13:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:17:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:17:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:17:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:22:35 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:23:00 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:36:31 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:37:36 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:37:53 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:43:57 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 22:27:43 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-04 19:27:37 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 19:32:59 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 19:33:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 19:34:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 19:44:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:02:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:04:48 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:09:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:11:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:11:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:13:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:17:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:17:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:17:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:22:35 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:23:00 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:36:31 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:37:36 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:37:53 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:43:57 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 22:27:43 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 19:24:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 19:25:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 19:26:06 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 19:56:01 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

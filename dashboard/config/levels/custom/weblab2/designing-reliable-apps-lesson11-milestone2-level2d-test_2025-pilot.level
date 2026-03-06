@@ -18,7 +18,7 @@
     "encrypted": "false",
     "display_name": "Debug Interaction Flow",
     "long_instructions": "\r\n# Debug Interaction Flow\r\n\r\n**Goal:** Make sure clicking a button shows the correct details for the correct card.\r\n\r\n1. **Test a Button Click:** Click one card and watch what happens. Does only that card change?\r\n2. **Check the Console:** Add a console.log inside your click handler to confirm which card was clicked.\r\n3. **Confirm the Right Card Updates:** Make sure your code updates only the selected card, not all of them.\r\n4. **Check Your Data:** If the wrong details appear, confirm you are using the correct id or index.\r\n5. **Prevent Repeating Content:** If details show up multiple times, clear the detail area before adding new content.\r\n\r\n**Optional:** If nothing shows up, double check that your reveal logic runs after the button is clicked.",
-    "bubble_choice_description": "Trace what happens when a user clicks a card. Fix issues with targeting, async timing, or details showing up in the wrong place.",
+    "bubble_choice_description": "Trace what happens when a user clicks a card. Fix issues with targeting, async timing, or details showing up in the wrong place. ***(supports completing Milestone 2 tasks)***",
     "thumbnail_url": "https://images.code.org/793156019883699f9b83a22432873007-debug.png",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -52,8 +52,9 @@
       ],
       "answerTypeCustomizations": {
       }
-    }
+    },
+    "project_template_level_name": "designing-reliable-apps-lesson11-template-test-2025"
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-05 00:37:38 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-05 00:41:47 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-05 00:43:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-05 00:37:38 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-05 00:41:47 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-05 00:43:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-05 15:35:37 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-05 15:59:58 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Weblab2>
