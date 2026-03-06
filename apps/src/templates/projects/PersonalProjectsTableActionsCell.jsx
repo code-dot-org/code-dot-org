@@ -1,4 +1,4 @@
-import {Button as MuiButton} from '@mui/material';
+import Button, {buttonColors} from '@code-dot-org/component-library/button';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
@@ -90,27 +90,22 @@ export class PersonalProjectsTableActionsCell extends Component {
         )}
         {isEditing && (
           <div>
-            <MuiButton
-              variant="contained"
-              color="primary"
-              size="small"
-              disabled={isSaving}
-              className={moduleStyles.buttonMargin}
-              id="ui-projects-rename-save"
+            <Button
               onClick={this.onSave}
-              type="button"
-            >
-              {i18n.save()}
-            </MuiButton>
-            <MuiButton
-              variant="outlined"
-              color="tertiary"
-              size="small"
+              text={i18n.save()}
+              size="s"
+              color={buttonColors.purple}
+              disabled={isSaving}
+              id="ui-projects-rename-save"
+              className={moduleStyles.buttonMargin}
+            />
+            <Button
               onClick={this.onCancel}
-              type="button"
-            >
-              {i18n.cancel()}
-            </MuiButton>
+              text={i18n.cancel()}
+              size="s"
+              type="secondary"
+              color={buttonColors.gray}
+            />
           </div>
         )}
         <ProjectNameFailureDialog

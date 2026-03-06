@@ -29,6 +29,8 @@ const ValidationPanel: React.FC<ValidationSettings> = ({
             onStopValidation={onStopValidation}
             isValidating={isValidating}
             isValidateDisabled={isValidateDisabled}
+            buttonColor="purple"
+            buttonType="primary"
           />
         </div>
       </div>

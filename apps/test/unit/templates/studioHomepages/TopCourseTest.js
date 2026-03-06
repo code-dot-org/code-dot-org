@@ -1,4 +1,4 @@
-import {Button as MuiButton} from '@mui/material';
+import Button from '@code-dot-org/component-library/button';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -39,22 +39,8 @@ describe('TopCourse', () => {
             <div>{i18n.topCourseExplanation()}</div>
           </div>
           <div>
-            <MuiButton
-              variant="contained"
-              color="primary"
-              size="medium"
-              href={topCourse.linkToOverview}
-            >
-              {'View course'}
-            </MuiButton>
-            <MuiButton
-              variant="contained"
-              color="primary"
-              size="medium"
-              href={topCourse.linkToLesson}
-            >
-              {'Continue lesson'}
-            </MuiButton>
+            <Button href={topCourse.linkToOverview} text="View course" />
+            <Button href={topCourse.linkToLesson} text="Continue lesson" />
           </div>
         </div>
       )

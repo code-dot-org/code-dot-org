@@ -1,5 +1,4 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {IconButton as MuiIconButton} from '@mui/material';
+import Button from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
@@ -33,16 +32,15 @@ const ClearButton: React.FunctionComponent<ClearButtonProps> = ({
     onClickClear();
   }, [cancelPreviews, onClickClear]);
   return (
-    <MuiIconButton
-      variant="outlined"
-      color="white"
-      size="small"
-      disabled={!enabled}
+    <Button
+      color={'white'}
+      type="secondary"
       onClick={onClick}
-      type="button"
-    >
-      <FontAwesomeV6Icon iconName="ban" />
-    </MuiIconButton>
+      isIconOnly={true}
+      icon={{iconName: 'ban'}}
+      size="s"
+      disabled={!enabled}
+    />
   );
 };
 
@@ -68,16 +66,15 @@ const PreviewButton: React.FunctionComponent<PreviewButtonProps> = ({
   }, [cancelPreviews, isPlayingPreview, playPreview]);
 
   return (
-    <MuiIconButton
-      variant="outlined"
-      color="white"
-      size="small"
-      disabled={!enabled}
+    <Button
+      color={'white'}
+      type="secondary"
       onClick={onClick}
-      type="button"
-    >
-      <FontAwesomeV6Icon iconName={isPlayingPreview ? 'stop' : 'play'} />
-    </MuiIconButton>
+      isIconOnly={true}
+      icon={{iconName: isPlayingPreview ? 'stop' : 'play'}}
+      size="s"
+      disabled={!enabled}
+    />
   );
 };
 

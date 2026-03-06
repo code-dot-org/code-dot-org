@@ -1,3 +1,4 @@
+import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import CloseButton from '@code-dot-org/component-library/closeButton';
 import {
@@ -6,7 +7,7 @@ import {
 } from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
-import {Typography, Button as MuiButton} from '@mui/material';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import cookies from 'js-cookie';
 import React, {useState, useEffect, useMemo} from 'react';
@@ -532,26 +533,20 @@ const FinishTeacherAccount: React.FunctionComponent<{
           </div>
         </fieldset>
         <div className={style.finishSignUpButtonContainer}>
-          <MuiButton
-            variant="contained"
-            color="primary"
-            size="medium"
-            loading={isSubmitting}
-            loadingPosition="end"
-            disabled={formDisabled}
+          <Button
             className={style.finishSignUpButton}
+            color={buttonColors.purple}
+            type="primary"
             onClick={submitTeacherAccount}
-            type="button"
-            endIcon={
-              <FontAwesomeV6Icon
-                iconName="arrow-right"
-                iconStyle="solid"
-                title="arrow-right"
-              />
-            }
-          >
-            {locale.go_to_my_account()}
-          </MuiButton>
+            text={locale.go_to_my_account()}
+            iconRight={{
+              iconName: 'arrow-right',
+              iconStyle: 'solid',
+              title: 'arrow-right',
+            }}
+            disabled={formDisabled}
+            isPending={isSubmitting}
+          />
         </div>
       </div>
       <SafeMarkdown

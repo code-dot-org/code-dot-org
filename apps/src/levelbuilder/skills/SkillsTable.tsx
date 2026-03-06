@@ -1,5 +1,5 @@
+import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {IconButton as MuiIconButton} from '@mui/material';
 import React, {useState} from 'react';
 import * as Table from 'reactabular-table';
 
@@ -155,17 +155,14 @@ const SkillsTable: React.FC<SkillsTableProps> = ({skills, canModifySkill}) => {
                   }
                   place="right"
                 >
-                  <MuiIconButton
-                    variant="contained"
-                    color="error"
-                    size="small"
-                    disabled={skill.hasLevels}
+                  <Button
+                    icon={{iconName: 'trash'}}
+                    isIconOnly
                     onClick={() => handleDelete(skill.id)}
-                    type="button"
-                    aria-label="Delete skill"
-                  >
-                    <FontAwesomeV6Icon iconName="trash" />
-                  </MuiIconButton>
+                    size="s"
+                    color={buttonColors.destructive}
+                    disabled={skill.hasLevels}
+                  />
                 </Tooltip>
               </>
             ),

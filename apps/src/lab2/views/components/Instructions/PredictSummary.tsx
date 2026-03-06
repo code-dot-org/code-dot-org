@@ -1,4 +1,4 @@
-import {Button as MuiButton} from '@mui/material';
+import {LinkButton} from '@code-dot-org/component-library/button';
 import React, {useEffect, useState} from 'react';
 
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
@@ -66,15 +66,14 @@ const PredictSummary: React.FunctionComponent = () => {
           </div>
         </div>
       )}
-      <MuiButton
-        variant="outlined"
-        color="secondary"
-        size="small"
-        className={moduleStyles.studentResponsesButton}
+      <LinkButton
         href={summaryUrl}
-      >
-        {commonI18n.viewStudentResponses()}
-      </MuiButton>
+        text={commonI18n.viewStudentResponses()}
+        size={'s'}
+        type={'secondary'}
+        color={'black'}
+        className={moduleStyles.studentResponsesButton}
+      />
     </div>
   );
 };

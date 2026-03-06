@@ -1,5 +1,5 @@
+import {Button} from '@code-dot-org/component-library/button';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
-import {Button as MuiButton} from '@mui/material';
 import React, {useCallback, useMemo} from 'react';
 
 import {getFullName} from '@cdo/apps/templates/manageStudents/utils';
@@ -153,28 +153,22 @@ const Header: React.FC<HeaderProps> = ({
           labelText="Lesson"
         />
         <div className={styles.buttonGroup}>
-          <MuiButton
-            variant="outlined"
-            color="tertiary"
-            size="medium"
-            disabled={!previousLesson || !lessons?.length || isLessonsLoading}
+          <Button
             className={styles.button}
+            text="< Previous lesson"
             onClick={handlePreviousLesson}
-            type="button"
-          >
-            {'< Previous lesson'}
-          </MuiButton>
-          <MuiButton
-            variant="outlined"
-            color="tertiary"
-            size="medium"
-            disabled={!nextLesson || !lessons?.length || isLessonsLoading}
+            color="gray"
+            type="secondary"
+            disabled={!previousLesson || !lessons?.length || isLessonsLoading}
+          />
+          <Button
             className={styles.button}
+            text="Next lesson >"
             onClick={handleNextLesson}
-            type="button"
-          >
-            {'Next lesson >'}
-          </MuiButton>
+            color="gray"
+            type="secondary"
+            disabled={!nextLesson || !lessons?.length || isLessonsLoading}
+          />
         </div>
       </div>
 
@@ -197,28 +191,20 @@ const Header: React.FC<HeaderProps> = ({
           color="gray"
         />
         <div className={styles.buttonGroup}>
-          <MuiButton
-            variant="outlined"
-            color="tertiary"
-            size="medium"
-            disabled={!previousStudent || !selectedStudents?.length}
+          <Button
             className={styles.button}
+            text="< Previous student"
             onClick={handlePreviousStudent}
-            type="button"
-          >
-            {'< Previous student'}
-          </MuiButton>
-          <MuiButton
-            variant="contained"
-            color="primary"
-            size="medium"
-            disabled={!nextStudent || !selectedStudents?.length}
+            color="gray"
+            type="secondary"
+            disabled={!previousStudent || !selectedStudents?.length}
+          />
+          <Button
             className={styles.button}
+            text="Next student >"
             onClick={handleNextStudent}
-            type="button"
-          >
-            {'Next student >'}
-          </MuiButton>
+            disabled={!nextStudent || !selectedStudents?.length}
+          />
         </div>
       </div>
     </div>

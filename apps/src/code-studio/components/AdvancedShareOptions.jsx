@@ -1,5 +1,5 @@
 import Alert from '@code-dot-org/component-library/alert';
-import {Button as MuiButton} from '@mui/material';
+import Button, {buttonColors} from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -140,17 +140,13 @@ class AdvancedShareOptions extends React.Component {
           </a>
           .
         </p>
-        <MuiButton
-          variant="contained"
-          color="secondary"
-          size="medium"
-          loading={this.state.exporting}
-          className={styles.exportButton}
+        <Button
+          color={buttonColors.black}
+          isPending={this.state.exporting}
+          text={i18n.exportForWeb()}
           onClick={this.downloadExport}
-          type="button"
-        >
-          {i18n.exportForWeb()}
-        </MuiButton>
+          className={styles.exportButton}
+        />
         {alert}
       </div>
     );
@@ -164,16 +160,12 @@ class AdvancedShareOptions extends React.Component {
     return (
       <div>
         <p className={styles.paragraph}>{i18n.shareLibraryWithClassmate()}</p>
-        <MuiButton
-          variant="contained"
-          color="secondary"
-          size="medium"
-          className={styles.shareLibraryButton}
+        <Button
+          color={buttonColors.black}
           onClick={this.props.openLibraryCreationDialog}
-          type="button"
-        >
-          {i18n.shareLibrary()}
-        </MuiButton>
+          className={styles.shareLibraryButton}
+          text={i18n.shareLibrary()}
+        />
       </div>
     );
   };

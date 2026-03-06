@@ -1,4 +1,4 @@
-import {Button as MuiButton} from '@mui/material';
+import Button from '@code-dot-org/component-library/button';
 import React, {useState} from 'react';
 
 import {useExtraLinks} from '@cdo/apps/lab2/hooks/useExtraLinks';
@@ -27,17 +27,13 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
 
   return (
     <>
-      <MuiButton
-        variant="contained"
-        color="primary"
-        size="small"
-        className={moduleStyles.extraLinksButton}
-        id="uitest-extra-links-button"
+      <Button
         onClick={() => setIsModalOpen(true)}
-        type="button"
-      >
-        {'Extra Links'}
-      </MuiButton>
+        text={'Extra Links'}
+        className={moduleStyles.extraLinksButton}
+        size={'s'}
+        id={'uitest-extra-links-button'}
+      />
       {levelLinkData && (
         <ExtraLinksModal
           levelLinkData={levelLinkData}
