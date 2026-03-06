@@ -191,10 +191,8 @@ class CoursesController < ApplicationController
 
   private def get_unit_group
     course_name = params[:course_name]
-    puts course_name.inspect
 
     unit_group = UnitGroup.get_from_cache(course_name)
-    puts unit_group.inspect
     return unit_group if unit_group
 
     # When the url of a course family is requested, redirect to a specific course version.
