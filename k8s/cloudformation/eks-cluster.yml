@@ -45,9 +45,9 @@ Parameters:
     Description: 'CIDR block for private subnet 2.'
 
 Resources:
-  #=================================
-  # === code-ai EKS Cluster ===
-  #=================================
+  #============================================================
+  # code-ai EKS Cluster
+  #============================================================
 
   # Create the code-dot-org Kubernetes cluster
   EKSCluster:
@@ -108,9 +108,9 @@ Resources:
   # AWSReservedSSO_InfraEngineer-ReadOnlyAccess_*
   # We should confirm whether these suffixes are stable enough for IaC references.
 
-  #=================================================
-  # === A Fargate Profile for each k8s namespace ===
-  #==================================================
+  #============================================================
+  # A Fargate Profile for each k8s namespace
+  #============================================================
 
   # Fargate is AWS's "serverless" provider for Kubernetes Pods.
   # It allows Pods to run without managing EC2 instances.
@@ -212,7 +212,7 @@ Resources:
   #   DependsOn: DefaultFargateProfile
 
 
-  # === IAM Roles for EKS & Fargate ===
+  # IAM Roles for EKS & Fargate
   # IAM role allowing EKS to manage cluster operations
   EKSClusterRole:
     Type: AWS::IAM::Role
@@ -248,9 +248,9 @@ Resources:
         - Key: Name
           Value: !Sub "${AWS::StackName}-fargate-pod-execution-role"
 
-  # ====================
-  # ===  NETWORKING  ===
-  # ====================
+  #============================================================
+  # Networking
+  #============================================================
 
   # We have public and private subnets for the cluster, each in two AZs for 
   # high availability. If and when we want a real production namespace, it should
@@ -270,9 +270,9 @@ Resources:
           Value: owned
 
 
-  # =========================
-  # === PUBLIC NETWORKING ===
-  # =========================
+  #============================================================
+  # Public Networking
+  #============================================================
 
   # === Public Routing ===
   # Public route table and route to the Internet
@@ -330,9 +330,9 @@ Resources:
       RouteTableId: !Ref PublicRouteTable
 
 
-  # ==========================
-  # === PRIVATE NETWORKING ===
-  # ==========================
+  #============================================================
+  # Private Networking
+  #============================================================
 
   # === NAT Gateway for Private Subnets ===
   # Provides private subnets outbound-only internet access,
