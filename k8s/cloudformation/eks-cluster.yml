@@ -57,6 +57,9 @@ Resources:
       Name: !Ref ClusterName
       Version: "1.35" # kubernetes version, increase to upgrade or use EKS console
       RoleArn: !GetAtt EKSClusterRole.Arn
+      AccessConfig:
+        # use AWS::EKS::AccessEntry objects to configure cluster IAM access:
+        AuthenticationMode: API 
       ResourcesVpcConfig:
         SubnetIds:
           - !Ref PublicSubnet1
@@ -65,6 +68,45 @@ Resources:
           - !Ref PrivateSubnet2
         SecurityGroupIds:
           - !Ref ClusterSecurityGroup
+
+  #============================================================
+  # Cluster RBAC based on AWS IAM roles (affects kubectl etc)
+  #============================================================
+  EngineeringReadOnlyAccessEntry:
+    Type: AWS::EKS::AccessEntry
+    Properties:
+      ClusterName: !Ref EKSCluster
+      PrincipalArn: arn:aws:iam::475661607190:role/Engineering_ReadOnly
+      AccessPolicies:
+        - PolicyArn: arn:aws:eks::aws:cluster-access-policy/AmazonEKSViewPolicy
+          AccessScope:
+            Type: cluster
+
+  EngineeringFullAccessEntry:
+    Type: AWS::EKS::AccessEntry
+    Properties:
+      ClusterName: !Ref EKSCluster
+      PrincipalArn: arn:aws:iam::475661607190:role/Engineering_FullAccess
+      AccessPolicies:
+        - PolicyArn: arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy
+          AccessScope:
+            Type: cluster
+
+  GoogleAdminAccessEntry:
+    Type: AWS::EKS::AccessEntry
+    Properties:
+      ClusterName: !Ref EKSCluster
+      PrincipalArn: arn:aws:iam::475661607190:role/GoogleAdmin
+      AccessPolicies:
+        - PolicyArn: arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy
+          AccessScope:
+            Type: cluster
+
+  # TODO: Consider access entries for these IAM Identity Center reserved roles:
+  # AWSReservedSSO_InfraEngineer-Standard_*
+  # AWSReservedSSO_InfraEngineer-BreakGlass_*
+  # AWSReservedSSO_InfraEngineer-ReadOnlyAccess_*
+  # We should confirm whether these suffixes are stable enough for IaC references.
 
   #=================================================
   # === A Fargate Profile for each k8s namespace ===
