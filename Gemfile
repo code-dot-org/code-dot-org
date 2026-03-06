@@ -281,6 +281,7 @@ gem 'aws-sdk-glue'
 gem 'aws-sdk-rds'
 gem 'aws-sdk-route53'
 gem 'aws-sdk-s3', '~> 1.113'
+gem 'aws-sdk-sagemaker'
 gem 'aws-sdk-sagemakerruntime'
 gem 'aws-sdk-secretsmanager'
 
