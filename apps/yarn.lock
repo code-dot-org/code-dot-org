@@ -11461,7 +11461,7 @@ __metadata:
     html2canvas: "npm:^0.5.0-beta4"
     htmlhint: "npm:^1.1.4"
     identity-obj-proxy: "npm:^3.0.0"
-    immutable: "npm:3.8.1"
+    immutable: "npm:3.8.3"
     intro.js: "npm:^7.2.0"
     intro.js-react: "npm:^1.0.0"
     isolate-react: "npm:^2.3.0"
@@ -18947,10 +18947,10 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"immutable@npm:3.8.1":
-  version: 3.8.1
-  resolution: "immutable@npm:3.8.1"
-  checksum: 10/710840ea37dc97fcddb14aa80defb8ac644a5d0aa6de063e52c1b65d37a7b1fd840bb4050c53b4237aafb2cf2a3ebebeedb8fa4af5e2343f140243e534a14496
+"immutable@npm:3.8.3":
+  version: 3.8.3
+  resolution: "immutable@npm:3.8.3"
+  checksum: 10/29db366d4dff83b0b296150c351b08db24837005909a71c123d860c1d2a40605f19a3ecd56d1e96be9799e947ddf7906897a28fa2e81f0b8c63c652b6bfe5550
   languageName: node
   linkType: hard
 
