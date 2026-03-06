@@ -23,7 +23,7 @@ describe('NewCourseFieldsTest', () => {
           instructor_audience: 'universal_instructor',
           participant_audience: 'teacher',
           instruction_type: 'self_paced',
-          existing_version_keys: ['1991.01'],
+          existing_version_keys: ['1991-01'],
         },
         'family-3': {
           instructor_audience: 'teacher',
@@ -211,9 +211,9 @@ describe('NewCourseFieldsTest', () => {
     wrapper
       .find('.versionYearSelector')
       .simulate('change', {target: {value: '1991'}});
-    // family-1 has no existing versions, so first CalVer key for 1991 is 1991.01
-    expect(setVersionYear).toHaveBeenCalledWith('1991.01');
-    wrapper.setProps({versionYear: '1991.01'});
+    // family-1 has no existing versions, so first CalVer key for 1991 is 1991-01
+    expect(setVersionYear).toHaveBeenCalledWith('1991-01');
+    wrapper.setProps({versionYear: '1991-01'});
 
     // The dropdown tracks selectedYear (the YYYY part), not the full CalVer key
     expect(wrapper.find('.versionYearSelector').props().value).toBe('1991');
@@ -243,9 +243,9 @@ describe('NewCourseFieldsTest', () => {
     wrapper
       .find('.versionYearSelector')
       .simulate('change', {target: {value: '1991'}});
-    // New family has no existing versions, so first CalVer key is 1991.01
-    expect(setVersionYear).toHaveBeenCalledWith('1991.01');
-    wrapper.setProps({versionYear: '1991.01'});
+    // New family has no existing versions, so first CalVer key is 1991-01
+    expect(setVersionYear).toHaveBeenCalledWith('1991-01');
+    wrapper.setProps({versionYear: '1991-01'});
 
     expect(wrapper.find('.versionYearSelector').props().value).toBe('1991');
     expect(wrapper.find('.versionYearSelector').props().disabled).toBe(false);
@@ -270,8 +270,8 @@ describe('NewCourseFieldsTest', () => {
     wrapper
       .find('.versionYearSelector')
       .simulate('change', {target: {value: '1991'}});
-    // family-2 already has 1991.01, so next is 1991.02
-    expect(setVersionYear).toHaveBeenCalledWith('1991.02');
+    // family-2 already has 1991-01, so next is 1991-02
+    expect(setVersionYear).toHaveBeenCalledWith('1991-02');
   });
 
   it('starts at .02 when only a plain-year (legacy) version exists for that year', () => {
@@ -293,7 +293,7 @@ describe('NewCourseFieldsTest', () => {
     wrapper
       .find('.versionYearSelector')
       .simulate('change', {target: {value: '1991'}});
-    // family-3 has legacy "1991" (counts as slot 1), so next CalVer is 1991.02
-    expect(setVersionYear).toHaveBeenCalledWith('1991.02');
+    // family-3 has legacy "1991" (counts as slot 1), so next CalVer is 1991-02
+    expect(setVersionYear).toHaveBeenCalledWith('1991-02');
   });
 });

@@ -7,8 +7,8 @@ import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
 function computeNextCalVerKey(existingVersionKeys, selectedYear) {
   const hasPlainYearVersion = existingVersionKeys.includes(selectedYear);
   const nns = existingVersionKeys
-    .filter(v => v.startsWith(selectedYear + '.'))
-    .map(v => parseInt(v.split('.')[1], 10))
+    .filter(v => v.startsWith(selectedYear + '-'))
+    .map(v => parseInt(v.split('-')[1], 10))
     .filter(n => !isNaN(n));
   let next;
   if (nns.length > 0) {
@@ -18,7 +18,7 @@ function computeNextCalVerKey(existingVersionKeys, selectedYear) {
   } else {
     next = 1;
   }
-  return `${selectedYear}.${String(next).padStart(2, '0')}`;
+  return `${selectedYear}-${String(next).padStart(2, '0')}`;
 }
 
 export default function NewCourseFields(props) {

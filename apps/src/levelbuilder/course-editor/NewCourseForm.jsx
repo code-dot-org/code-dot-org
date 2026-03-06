@@ -66,8 +66,8 @@ export default function NewCourseForm(props) {
               <p>
                 The course slug is used to create the link to the course. It is
                 in the format of studio.code.org/courses/course-slug-here. A
-                course slug can only contain lowercase letters, numbers, dashes,
-                and periods. Once you set the slug it can not be updated.
+                course slug can only contain lowercase letters, numbers, and
+                dashes. Once you set the slug it can not be updated.
               </p>
             </HelpTip>
             {/* Need both of these inputs because if the hidden one with name=

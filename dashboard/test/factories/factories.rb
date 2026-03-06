@@ -35,8 +35,8 @@ FactoryBot.define do
   end
 
   factory :course_version do
-    sequence(:key) {|n| "2025.#{n.to_s.rjust(2, '0')}"}
-    sequence(:display_name) {|n| "2025.#{n.to_s.rjust(2, '0')}"}
+    sequence(:key) {|n| "2025-#{n.to_s.rjust(2, '0')}"}
+    sequence(:display_name) {|n| "2025-#{n.to_s.rjust(2, '0')}"}
     association :course_offering
     with_unit_group
 
@@ -62,7 +62,7 @@ FactoryBot.define do
   factory :unit_group do
     sequence(:name) {|n| "bogus-course-#{n}"}
     sequence(:family_name) {|n| "bogus-course-#{n}"}
-    version_year {"2025.01"}
+    version_year {"2025-01"}
     published_state {"beta"}
     instruction_type {"teacher_led"}
     participant_audience {"student"}
