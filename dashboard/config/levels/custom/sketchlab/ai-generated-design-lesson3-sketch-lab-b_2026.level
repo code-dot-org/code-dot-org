@@ -1,12 +1,13 @@
 <Sketchlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 75,
   "created_at": "2026-03-04T20:25:25.000Z",
   "level_num": "custom",
   "user_id": 18762,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## The High-Score Hub: Designing for Alex\r\n\r\n**The User:** Alex wants an online marketplace app for trading vintage video games. She wants the site to feel retro, like it's from the 1980s.\r\n\r\n**Your Task:** Write a detailed prompt for AI Tutor to help you generate your web app layout. Your prompt must address the following three questions:\r\n\r\n> 1. What are the requirements?\r\n> 2. What are the constraints?\r\n> 3. What are the edge cases?",
+    "long_instructions": "## The High-Score Hub: Designing for Alex\r\n\r\n**The User:** Alex wants an online marketplace app for trading vintage video games. She wants the site to feel retro, like it's from the 1980s.\r\n\r\n**Your Task:** Write a detailed prompt for AI Tutor to help you generate your web app layout. Your prompt must address the following three questions:\r\n\r\n> 1. What is the goal?\r\n> 2. What are the constraints?\r\n> 3. What are the edge cases?",
     "start_sources": {
       "source": {
         "type": "excalidraw",
@@ -201,8 +202,8 @@
           },
           {
             "type": "text",
-            "version": 1785,
-            "versionNonce": 431759513,
+            "version": 1797,
+            "versionNonce": 1256008252,
             "isDeleted": false,
             "id": "FPOUY6y8DvkRvMdYRkRtP",
             "fillStyle": "hachure",
@@ -211,11 +212,11 @@
             "roughness": 1,
             "opacity": 100,
             "angle": 0,
-            "x": -2337.929682467371,
+            "x": -2336.8049805782357,
             "y": -498.5554656065757,
             "strokeColor": "#000000",
             "backgroundColor": "transparent",
-            "width": 875.7830810546875,
+            "width": 573.080322265625,
             "height": 74.57639443541592,
             "seed": 95723609,
             "groupIds": [
@@ -226,16 +227,16 @@
             "boundElements": [
 
             ],
-            "updated": 1772655078906,
+            "updated": 1772738821522,
             "link": null,
             "locked": false,
             "fontSize": 64.84903863949211,
             "fontFamily": 2,
-            "text": "1. What are the requirements?",
+            "text": "1. What is the goal?",
             "textAlign": "left",
             "verticalAlign": "top",
             "containerId": null,
-            "originalText": "1. What are the requirements?",
+            "originalText": "1. What is the goal?",
             "lineHeight": 1.15,
             "baseline": 60
           },
@@ -700,7 +701,7 @@
             "containerId": "AdJ3UdjBxGrDa_1PeUnIB",
             "originalText": "Design a video game marketplace app where each listing must display a pixelated thumbnail of the game, its title, the release year, and whether the user wants to \"Trade\" or \"Sell\" it.",
             "lineHeight": 1.25,
-            "baseline": 166
+            "baseline": 167
           },
           {
             "type": "text",
@@ -784,8 +785,8 @@
           },
           {
             "type": "text",
-            "version": 1787,
-            "versionNonce": 193257786,
+            "version": 1800,
+            "versionNonce": 1366466269,
             "isDeleted": false,
             "id": "biGLDTsST3APU09KUEMJ0",
             "fillStyle": "hachure",
@@ -794,11 +795,11 @@
             "roughness": 1,
             "opacity": 100,
             "angle": 0,
-            "x": -1040.8077372173102,
-            "y": -573.0704118725334,
+            "x": -1039.7010102980694,
+            "y": -571.9636849532927,
             "strokeColor": "#000000",
             "backgroundColor": "transparent",
-            "width": 875.7830810546875,
+            "width": 573.080322265625,
             "height": 74.57639443541592,
             "seed": 734190630,
             "groupIds": [
@@ -809,16 +810,16 @@
             "boundElements": [
 
             ],
-            "updated": 1772655452897,
+            "updated": 1772738846469,
             "link": null,
             "locked": false,
             "fontSize": 64.84903863949211,
             "fontFamily": 2,
-            "text": "1. What are the requirements?",
+            "text": "1. What is the goal?",
             "textAlign": "left",
             "verticalAlign": "top",
             "containerId": null,
-            "originalText": "1. What are the requirements?",
+            "originalText": "1. What is the goal?",
             "lineHeight": 1.15,
             "baseline": 60
           },
@@ -1016,7 +1017,7 @@
             "containerId": "eEPBkx-BLhu0F5lpwEV1M",
             "originalText": "Use a \"Cyber-Purple\" background with neon pink borders and a blocky pixel font for headings, ensuring all body text remains a crisp white for readability.",
             "lineHeight": 1.25,
-            "baseline": 121
+            "baseline": 122
           },
           {
             "type": "rectangle",
@@ -1092,7 +1093,7 @@
             "containerId": "zFVHJDD4q9gIAyhmh4UXy",
             "originalText": "If an item is sold out, a \"Game Over\" stamp should appear over the image; for low-quality photos, the app should automatically apply a filter to make them look intentionally vintage.",
             "lineHeight": 1.25,
-            "baseline": 166
+            "baseline": 167
           },
           {
             "type": "rectangle",
@@ -1281,7 +1282,7 @@
             "containerId": "rn5vZF917P3dmt5USPQev",
             "originalText": "Design a video game marketplace app where each listing must display a pixelated thumbnail of the game, its title, the release year, and whether the user wants to \"Trade\" or \"Sell\" it.\n\nUse a \"Cyber-Purple\" background with neon pink borders and a blocky pixel font for headings, ensuring all body text remains a crisp white for readability.\n\nIf an item is sold out, a \"Game Over\" stamp should appear over the image; for low-quality photos, the app should automatically apply a filter to make them look intentionally vintage.",
             "lineHeight": 1.25,
-            "baseline": 571
+            "baseline": 572
           },
           {
             "type": "text",
@@ -1327,10 +1328,10 @@
         "appState": {
           "gridSize": null,
           "viewBackgroundColor": "#ffffff",
-          "scrollX": 772.6944007417165,
-          "scrollY": 552.6264644375015,
+          "scrollX": 2116.1770262223445,
+          "scrollY": 1397.2201456469302,
           "zoom": {
-            "value": 0.3852016533461128
+            "value": 0.218832212164998
           }
         },
         "files": {
@@ -1341,9 +1342,9 @@
     },
     "display_name": "The High-Score Hub",
     "bubble_choice_description": "Alex needs a community marketplace app for trading vintage video games.",
-    "thumbnail_url": "https://images.code.org/9e0beca304ff1e5672f5a1eefc63776c-Screenshot 2026-03-04 at 1.43.44 PM.png"
+    "thumbnail_url": "https://images.code.org/9e0beca304ff1e5672f5a1eefc63776c-Screenshot 2026-03-04 at 1.43.44 PM.png",
+    "teacher_markdown": "Have students read over their prompt to \"see\" their web app in their mind. \r\n\r\nIf their requirements are too vague for them to visualize the webpage, encourage them to add at least one more specific detail to each category. \r\n\r\nThe more detailed and specific their prompt, the more likely AI is to build exactly what they are envisioning."
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-04T20:25:25.973+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson3-sketch-lab_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson3-sketch-lab_2026\"},{\"changed_at\":\"2026-03-04 20:27:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:30:35 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:30:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:31:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:32:57 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:33:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:36:32 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:36:49 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:38:29 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:44:05 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-04T20:25:25.973+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson3-sketch-lab_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson3-sketch-lab_2026\"},{\"changed_at\":\"2026-03-04 20:27:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:30:35 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:30:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:31:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:32:57 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:33:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:36:32 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:36:49 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:38:29 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:44:05 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 19:25:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 19:27:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 19:27:28 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 19:56:12 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

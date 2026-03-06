@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-05 01:20:20 UTC",
+    "serialized_at": "2026-03-05 23:21:47 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -142,9 +142,9 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "**How can AI help us create quickly?**\n\nIn this lesson, students use AI as a design partner to build their first simple web page. They explore how AI generates code, practice crafting and refining prompts, and apply version control to save and revert their work. Through hands-on iteration, students see how AI can speed up creation while humans remain responsible for reviewing, improving, and shaping the final design.",
-        "preparation": "- Print and cut out copies of the Feature Roulette Cards (one set of cards for each pair of students)\n- Print copies of the Web Page Features activity guide (one for each student)",
-        "student_overview": "**How can AI help us create quickly?**\n\nIn this lesson, you use AI to help design and build a simple web page. By experimenting with prompts and saving different versions, you explore how AI and humans work together to create and improve designs."
+        "overview": "**How can AI help us turn our ideas into a web page?**\n\nIn this lesson, students use AI as a design partner to build their first simple web page. They explore how AI generates code, practice crafting and refining prompts, and apply version control to save and revert their work. Through hands-on iteration, students see how AI can speed up creation while humans remain responsible for reviewing, improving, and shaping the final design.",
+        "preparation": "- Print and cut out copies of the Feature Roulette Cards (one set of cards for each pair of students)",
+        "student_overview": "**How can AI help us turn our ideas into a web page?**\n\nIn this lesson, you use AI to help design and build a simple web page. By experimenting with prompts and saving different versions, you explore how AI and humans work together to create and improve designs."
       },
       "seeding_key": {
         "lesson.key": "Lesson 3: Build Your First Web Page with AI",
@@ -7188,7 +7188,7 @@
     },
     {
       "name": "Build Your First Web Page",
-      "url": "https://docs.google.com/presentation/d/1aNRG5OeT1JINgGpEOmQ3vYH903_PumeHam9anKpxLvY/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1MFxOJDgJEmefZHVueUkY8FmuDaVg3KYUWal0nPAaa7E/edit?usp=sharing",
       "key": "build_your_first_web_page",
       "properties": {
         "audience": "Teacher",
@@ -7260,7 +7260,7 @@
     },
     {
       "name": "Feature Roulette Cards",
-      "url": "https://docs.google.com/document/d/1qHXRW6jtk6Y7WfJQcdVWH65cfWnLevQ78ORn3bcLX0c/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/10Cl4CVYY7JcJejq31biaTFNFl5U2_1h-A-QR6i2os5s/edit?usp=sharing",
       "key": "feature_roulette_cards",
       "properties": {
         "audience": "Student",
@@ -7461,21 +7461,6 @@
       }
     },
     {
-      "name": "Web Page Features",
-      "url": "https://docs.google.com/document/d/1TSmOSvEMkfEYQ4c7CldrgFeWTwjKbZz6BSMUHnWK7Ig/edit?usp=sharing",
-      "key": "web_page_features",
-      "properties": {
-        "audience": "Student",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "web_page_features"
-      }
-    },
-    {
       "name": "Website Cards",
       "url": "https://docs.google.com/document/d/19_gsi7BBEXpmo8cfkK0U2sqs9K8ti-nWDN4ldI7Ziqg/edit?usp=sharing",
       "key": "website_cards",
@@ -7673,6 +7658,18 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "resource.key": "_key_ai-generated_design_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "resource.key": "ai-generated_design_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
         "resource.key": "build_your_first_web_page"
       }
     },
@@ -7680,12 +7677,6 @@
       "seeding_key": {
         "lesson.key": "Lesson 3: Build Your First Web Page with AI",
         "resource.key": "feature_roulette_cards"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "resource.key": "web_page_features"
       }
     },
     {
@@ -7809,6 +7800,16 @@
       }
     },
     {
+      "key": "css_cascading_style_sheets_",
+      "word": "CSS (Cascading Style Sheets)",
+      "definition": "Controls the layout, colors, fonts, and overall style",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "css_cascading_style_sheets_"
+      }
+    },
+    {
       "key": "footer",
       "word": "Footer",
       "definition": "The strip at the bottom that often includes contact info or copyright details.",
@@ -7836,6 +7837,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "hero_section"
+      }
+    },
+    {
+      "key": "html_hypertext_markup_language_",
+      "word": "HTML (HyperText Markup Language)",
+      "definition": "Provides the structure and content of a web page",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "html_hypertext_markup_language_"
       }
     },
     {
@@ -8048,6 +8059,18 @@
       "seeding_key": {
         "lesson.key": "Lesson 2: The User's Experience",
         "vocabulary.key": "user_profile"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "vocabulary.key": "css_cascading_style_sheets_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "vocabulary.key": "html_hypertext_markup_language_"
       }
     },
     {
@@ -8477,12 +8500,139 @@
 
   ],
   "rubrics": [
-
+    {
+      "level_name": "ai-generated-design-lesson3-level8_2026",
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    }
   ],
   "learning_goals": [
-
+    {
+      "key": "101bd276-4291-4e6f-a220-2d532606f976",
+      "position": 2,
+      "learning_goal": "Evaluate and refine AI-generated output.",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "101bd276-4291-4e6f-a220-2d532606f976",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "key": "bd1484a8-9fa0-4023-9bfe-36a3a0d06c7f",
+      "position": 1,
+      "learning_goal": "Plan a clear and intentional AI prompt.",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "bd1484a8-9fa0-4023-9bfe-36a3a0d06c7f",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    }
   ],
   "learning_goal_evidence_levels": [
-
+    {
+      "understanding": 0,
+      "teacher_description": "Student accepts AI output without evaluating or refining.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "101bd276-4291-4e6f-a220-2d532606f976",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student accepts AI output with little evidence of review or refinement.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "101bd276-4291-4e6f-a220-2d532606f976",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student reviews output and makes at least one meaningful adjustment through re-prompting.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "101bd276-4291-4e6f-a220-2d532606f976",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student reviews AI output, identifies strengths or gaps, and revises their prompt to better align with user needs.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "101bd276-4291-4e6f-a220-2d532606f976",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Prompt is incomplete or lacks meaningful design intent.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "bd1484a8-9fa0-4023-9bfe-36a3a0d06c7f",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Prompt lists basic features but lacks clarity, constraints, or edge cases.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "bd1484a8-9fa0-4023-9bfe-36a3a0d06c7f",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Prompt includes most requirements and some constraints. Edge cases may be partially addressed.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "bd1484a8-9fa0-4023-9bfe-36a3a0d06c7f",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Prompt clearly indicates user needs, requirements, constraints, and edge cases. Design intent is specific and purposeful.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "bd1484a8-9fa0-4023-9bfe-36a3a0d06c7f",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    }
   ]
 }

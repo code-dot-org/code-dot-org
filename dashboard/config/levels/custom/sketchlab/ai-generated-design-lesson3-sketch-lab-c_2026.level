@@ -1,12 +1,13 @@
 <Sketchlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 75,
   "created_at": "2026-03-04T20:33:25.000Z",
   "level_num": "custom",
   "user_id": 18762,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## The Cozy Nook: Designing for Jada\r\n\r\n**The User:** Jada owns \"The Purr-fect Page,\" a cat café and bookstore where customers can rent cozy reading nooks. She needs a booking system with a \"Cottagecore\" vibe.\r\n\r\n**Your Task:** Write a detailed prompt for AI Tutor to help you generate your web app layout. Your prompt must address the following three questions:\r\n\r\n> 1. What are the requirements?\r\n> 2. What are the constraints?\r\n> 3. What are the edge cases?",
+    "long_instructions": "## The Cozy Nook: Designing for Jada\r\n\r\n**The User:** Jada owns \"The Purr-fect Page,\" a cat café and bookstore where customers can rent cozy reading nooks. She needs a booking system with a \"Cottagecore\" vibe.\r\n\r\n**Your Task:** Write a detailed prompt for AI Tutor to help you generate your web app layout. Your prompt must address the following three questions:\r\n\r\n> 1. What is the goal?\r\n> 2. What are the constraints?\r\n> 3. What are the edge cases?",
     "start_sources": {
       "source": {
         "type": "excalidraw",
@@ -201,8 +202,8 @@
           },
           {
             "type": "text",
-            "version": 1785,
-            "versionNonce": 431759513,
+            "version": 1807,
+            "versionNonce": 1763920369,
             "isDeleted": false,
             "id": "FPOUY6y8DvkRvMdYRkRtP",
             "fillStyle": "hachure",
@@ -211,11 +212,11 @@
             "roughness": 1,
             "opacity": 100,
             "angle": 0,
-            "x": -2337.929682467371,
-            "y": -498.5554656065757,
+            "x": -2348.9325234460066,
+            "y": -505.8733928612344,
             "strokeColor": "#000000",
             "backgroundColor": "transparent",
-            "width": 875.7830810546875,
+            "width": 573.080322265625,
             "height": 74.57639443541592,
             "seed": 95723609,
             "groupIds": [
@@ -226,16 +227,16 @@
             "boundElements": [
 
             ],
-            "updated": 1772655078906,
+            "updated": 1772738805408,
             "link": null,
             "locked": false,
             "fontSize": 64.84903863949211,
             "fontFamily": 2,
-            "text": "1. What are the requirements?",
+            "text": "1. What is the goal?",
             "textAlign": "left",
             "verticalAlign": "top",
             "containerId": null,
-            "originalText": "1. What are the requirements?",
+            "originalText": "1. What is the goal?",
             "lineHeight": 1.15,
             "baseline": 60
           },
@@ -575,7 +576,7 @@
         "appState": {
           "gridSize": null,
           "viewBackgroundColor": "#ffffff",
-          "scrollX": 3212.501964848367,
+          "scrollX": 3874.021287965177,
           "scrollY": 1146.4496030288342,
           "zoom": {
             "value": 0.22579395674480188
@@ -700,12 +701,12 @@
             "containerId": "AdJ3UdjBxGrDa_1PeUnIB",
             "originalText": "Design a cat cafe booking system app where there is live count of \"napping\" vs. \"active\" cats, a list of available reading nooks, and a calendar for booking 1-hour sessions.",
             "lineHeight": 1.25,
-            "baseline": 121
+            "baseline": 122
           },
           {
             "type": "text",
-            "version": 1787,
-            "versionNonce": 193257786,
+            "version": 1804,
+            "versionNonce": 981063803,
             "isDeleted": false,
             "id": "biGLDTsST3APU09KUEMJ0",
             "fillStyle": "hachure",
@@ -718,7 +719,7 @@
             "y": -573.0704118725334,
             "strokeColor": "#000000",
             "backgroundColor": "transparent",
-            "width": 875.7830810546875,
+            "width": 573.080322265625,
             "height": 74.57639443541592,
             "seed": 734190630,
             "groupIds": [
@@ -729,16 +730,16 @@
             "boundElements": [
 
             ],
-            "updated": 1772655452897,
+            "updated": 1772738832642,
             "link": null,
             "locked": false,
             "fontSize": 64.84903863949211,
             "fontFamily": 2,
-            "text": "1. What are the requirements?",
+            "text": "1. What is the goal?",
             "textAlign": "left",
             "verticalAlign": "top",
             "containerId": null,
-            "originalText": "1. What are the requirements?",
+            "originalText": "1. What is the goal?",
             "lineHeight": 1.15,
             "baseline": 60
           },
@@ -936,7 +937,7 @@
             "containerId": "eEPBkx-BLhu0F5lpwEV1M",
             "originalText": "Use a warm \"parchment\" colored background with soft brown text and rounded, bubble-like buttons that look like cat paws to create a friendly, cutesy feel.",
             "lineHeight": 1.25,
-            "baseline": 121
+            "baseline": 122
           },
           {
             "type": "rectangle",
@@ -1012,7 +1013,7 @@
             "containerId": "zFVHJDD4q9gIAyhmh4UXy",
             "originalText": "If the \"Cat-O-Meter\" shows all cats are napping, the app should display a \"Shhh... Nap Time\" banner and suggest booking a later slot for more interaction. If all the reading nooks are booked, the app should show the next available time slot.",
             "lineHeight": 1.25,
-            "baseline": 166
+            "baseline": 167
           },
           {
             "type": "rectangle",
@@ -1201,12 +1202,12 @@
             "containerId": "rn5vZF917P3dmt5USPQev",
             "originalText": "Design a cat cafe booking system app where there is live count of \"napping\" vs. \"active\" cats, a list of available reading nooks, and a calendar for booking 1-hour sessions.\n\nUse a warm \"parchment\" colored background with soft brown text and rounded, bubble-like buttons that look like cat paws to create a friendly, cutesy feel.\n\nIf the \"Cat-O-Meter\" shows all cats are napping, the app should display a \"Shhh... Nap Time\" banner and suggest booking a later slot for more interaction. If all the reading nooks are booked, the app should show the next available time slot.",
             "lineHeight": 1.25,
-            "baseline": 526
+            "baseline": 527
           },
           {
             "type": "text",
-            "version": 2301,
-            "versionNonce": 1128660922,
+            "version": 2302,
+            "versionNonce": 601497237,
             "isDeleted": false,
             "id": "vb4E4VyNZzBcL6g1z6fEX",
             "fillStyle": "hachure",
@@ -1219,8 +1220,8 @@
             "y": -466.5146350312865,
             "strokeColor": "#1e1e1e",
             "backgroundColor": "transparent",
-            "width": 1166.555237552702,
-            "height": 95.22599309168078,
+            "width": 1166.537841796875,
+            "height": 95.22599309168076,
             "seed": 625924602,
             "groupIds": [
 
@@ -1230,7 +1231,7 @@
             "boundElements": [
 
             ],
-            "updated": 1772657199987,
+            "updated": 1772738809291,
             "link": null,
             "locked": false,
             "fontSize": 41.40260569203512,
@@ -1241,7 +1242,7 @@
             "containerId": null,
             "originalText": "What information (e.g., cat names, available time slots, waitlist) \ndoes the booking system keep track of?",
             "lineHeight": 1.15,
-            "baseline": 85.00000000000001
+            "baseline": 86
           },
           {
             "type": "text",
@@ -1341,9 +1342,9 @@
     },
     "display_name": "The Cozy Nook",
     "bubble_choice_description": "Jada needs a booking system for her cat cafe and bookstore.",
-    "thumbnail_url": "https://images.code.org/71568ca9a6613b89c3200330a2434dee-Screenshot 2026-03-04 at 1.43.09 PM.png"
+    "thumbnail_url": "https://images.code.org/71568ca9a6613b89c3200330a2434dee-Screenshot 2026-03-04 at 1.43.09 PM.png",
+    "teacher_markdown": "Have students read over their prompt to \"see\" their web app in their mind. \r\n\r\nIf their requirements are too vague for them to visualize the webpage, encourage them to add at least one more specific detail to each category. \r\n\r\nThe more detailed and specific their prompt, the more likely AI is to build exactly what they are envisioning."
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-04T20:33:25.387+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson3-sketch-lab-b_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson3-sketch-lab-b_2026\"},{\"changed_at\":\"2026-03-04 20:34:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:36:33 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:37:39 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:38:13 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:44:16 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:47:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:47:50 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:48:33 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:48:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:48:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:49:38 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:50:10 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:50:46 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:51:00 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:51:21 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-04T20:33:25.387+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson3-sketch-lab-b_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson3-sketch-lab-b_2026\"},{\"changed_at\":\"2026-03-04 20:34:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:36:33 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:37:39 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:38:13 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:44:16 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:47:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:47:50 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:48:33 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:48:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:48:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:49:38 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:50:10 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:50:46 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:51:00 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:51:21 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 19:26:24 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 19:26:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 19:27:14 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 19:55:16 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 19:55:42 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>
