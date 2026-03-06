@@ -113,6 +113,20 @@ class Queries::ScriptActivityTest < ActiveSupport::TestCase
     assert_equal unit_group_2, context[:unit_group_unit].unit_group
   end
 
+  test 'primary_student_unit_context skips deleted scripts' do
+    new_script = create(:script)
+    old_script = create(:script)
+
+    create(:user_script, user: @user, script: new_script, started_at: 3.days.ago)
+    create(:user_script, user: @user, script: old_script, started_at: 1.day.ago)
+
+    old_script.destroy!
+
+    context = Queries::ScriptActivity.primary_student_unit_context(@user)
+    refute_nil context
+    assert_equal new_script, context[:unit]
+  end
+
   test 'user is working on pl scripts' do
     teacher = create(:teacher)
     script1 = create(:single_unit_course, :pl_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable).first_unit
