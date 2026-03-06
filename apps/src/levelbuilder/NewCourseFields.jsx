@@ -4,10 +4,28 @@ import React, {useState} from 'react';
 import CourseTypeEditor from '@cdo/apps/levelbuilder/course-editor/CourseTypeEditor';
 import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
 
+function computeNextCalVerKey(existingVersionKeys, selectedYear) {
+  const hasPlainYearVersion = existingVersionKeys.includes(selectedYear);
+  const nns = existingVersionKeys
+    .filter(v => v.startsWith(selectedYear + '.'))
+    .map(v => parseInt(v.split('.')[1], 10))
+    .filter(n => !isNaN(n));
+  let next;
+  if (nns.length > 0) {
+    next = Math.max(...nns) + 1;
+  } else if (hasPlainYearVersion) {
+    next = 2; // plain-year version counts as slot 1
+  } else {
+    next = 1;
+  }
+  return `${selectedYear}.${String(next).padStart(2, '0')}`;
+}
+
 export default function NewCourseFields(props) {
   const [selectedFamilyName, setSelectedFamilyName] = useState('');
   const [newFamilyName, setNewFamilyName] = useState('');
   const [versionedCourse, setVersionedCourse] = useState('');
+  const [selectedYear, setSelectedYear] = useState('');
 
   return (
     <div>
@@ -65,9 +83,11 @@ export default function NewCourseFields(props) {
               onChange={e => {
                 setVersionedCourse(e.target.value);
                 if (e.target.value === 'no') {
+                  setSelectedYear('unversioned');
                   props.setVersionYear('unversioned');
                 } else {
                   // Make sure to clear version year if change this question
+                  setSelectedYear('');
                   props.setVersionYear('');
                 }
               }}
@@ -92,14 +112,30 @@ export default function NewCourseFields(props) {
           </label>
           {versionedCourse !== '' && (
             <label>
-              What year is this course for?
+              What year is this version of the course for?
               <select
-                value={props.versionYear}
+                value={selectedYear}
                 name="version_year"
                 style={styles.dropdown}
                 className="versionYearSelector"
                 disabled={versionedCourse === 'no'}
-                onChange={event => props.setVersionYear(event.target.value)}
+                onChange={event => {
+                  const year = event.target.value;
+                  setSelectedYear(year);
+                  if (year === '') {
+                    props.setVersionYear('');
+                  } else {
+                    const family = selectedFamilyName || props.familyName;
+                    const existingVersionKeys =
+                      (props.familiesCourseTypes[family] &&
+                        props.familiesCourseTypes[family]
+                          .existing_version_keys) ||
+                      [];
+                    props.setVersionYear(
+                      computeNextCalVerKey(existingVersionKeys, year)
+                    );
+                  }
+                }}
               >
                 <option value="">(None)</option>
                 {versionedCourse === 'no' && (
@@ -115,6 +151,11 @@ export default function NewCourseFields(props) {
                     </option>
                   ))}
               </select>
+              {versionedCourse === 'yes' && props.versionYear && (
+                <span style={styles.versionKeyPreview}>
+                  Version key: {props.versionYear}
+                </span>
+              )}
             </label>
           )}
           {/* Set allowMajorCurriculumChanges to false to disable editing of these fields since they have to match other courses in family*/}
@@ -135,6 +176,7 @@ export default function NewCourseFields(props) {
 NewCourseFields.propTypes = {
   families: PropTypes.arrayOf(PropTypes.string).isRequired,
   versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
+  familiesCourseTypes: PropTypes.object.isRequired,
   familyName: PropTypes.string.isRequired,
   setFamilyName: PropTypes.func.isRequired,
   setFamilyAndCourseType: PropTypes.func.isRequired,
@@ -157,5 +199,10 @@ const styles = {
   },
   dropdown: {
     margin: '0 6px',
+  },
+  versionKeyPreview: {
+    marginLeft: 8,
+    color: '#555',
+    fontStyle: 'italic',
   },
 };

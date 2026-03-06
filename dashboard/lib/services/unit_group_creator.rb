@@ -111,7 +111,7 @@ module Services
       )
       unless @unit_group.save
         new_name = case @unit_group.errors[:name]&.first
-                   when "can only contain lowercase letters, numbers and dashes"
+                   when "can only contain lowercase letters, numbers, dashes, and periods"
                      @unit.name.downcase.tr(' ', '-').tr('_', '-')
                    when "has already been taken"
                      @unit.name + "-course"

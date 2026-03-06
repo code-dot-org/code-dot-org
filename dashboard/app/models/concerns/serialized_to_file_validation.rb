@@ -9,8 +9,8 @@ module SerializedToFileValidation
       uniqueness: {case_sensitive: false},
       format: {
         unless: ->(model) {model.try(:skip_name_format_validation)},
-        with: /\A[a-z0-9\-]+\z/,
-        message: 'can only contain lowercase letters, numbers and dashes'
+        with: /\A[a-z0-9\-\.]+\z/,
+        message: 'can only contain lowercase letters, numbers, dashes, and periods'
       }
   end
 end

@@ -24,7 +24,7 @@ class CoursesController < ApplicationController
       first_cv = co.course_versions.first
       ug = first_cv.content_root
       @versioned_course_families << cf unless first_cv.key == 'unversioned'
-      @course_families_course_types << [cf, {instruction_type: ug.instruction_type, instructor_audience: ug.instructor_audience, participant_audience: ug.participant_audience}]
+      @course_families_course_types << [cf, {instruction_type: ug.instruction_type, instructor_audience: ug.instructor_audience, participant_audience: ug.participant_audience, existing_version_keys: co.course_versions.pluck(:key)}]
     end
 
     @course_families_course_types = @course_families_course_types.to_h
@@ -191,8 +191,10 @@ class CoursesController < ApplicationController
 
   private def get_unit_group
     course_name = params[:course_name]
+    puts course_name.inspect
 
     unit_group = UnitGroup.get_from_cache(course_name)
+    puts unit_group.inspect
     return unit_group if unit_group
 
     # When the url of a course family is requested, redirect to a specific course version.

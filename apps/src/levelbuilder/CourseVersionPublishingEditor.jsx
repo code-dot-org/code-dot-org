@@ -148,7 +148,7 @@ export default class CourseVersionPublishingEditor extends Component {
             </HelpTip>
           </label>
           <label>
-            Version Year
+            Version Key
             <select
               value={this.props.versionYear}
               style={styles.dropdown}
@@ -165,6 +165,12 @@ export default class CourseVersionPublishingEditor extends Component {
                 </option>
               ))}
             </select>
+            <HelpTip>
+              <p>
+                New curriculum uses CalVer format YYYY.NN (e.g. 2025.01).
+                Existing curriculum uses a plain year (e.g. 2025).
+              </p>
+            </HelpTip>
           </label>
         </div>
         <label>

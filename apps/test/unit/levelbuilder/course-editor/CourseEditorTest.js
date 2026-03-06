@@ -390,14 +390,14 @@ describe('CourseEditor', () => {
 
       chaiExpect(courseEditor.state().isSaving).to.equal(false);
       chaiExpect(courseEditor.state().error).to.equal(
-        'Please set both version year and family name.'
+        'Please set both version key and family name.'
       );
 
       chaiExpect(
         wrapper
           .find('.saveBar')
           .contains(
-            'Error Saving: Please set both version year and family name.'
+            'Error Saving: Please set both version key and family name.'
           )
       ).to.be.true;
 
@@ -425,14 +425,14 @@ describe('CourseEditor', () => {
 
       chaiExpect(courseEditor.state().isSaving).to.equal(false);
       chaiExpect(courseEditor.state().error).to.equal(
-        'Please set both version year and family name.'
+        'Please set both version key and family name.'
       );
 
       chaiExpect(
         wrapper
           .find('.saveBar')
           .contains(
-            'Error Saving: Please set both version year and family name.'
+            'Error Saving: Please set both version key and family name.'
           )
       ).to.be.true;
 
