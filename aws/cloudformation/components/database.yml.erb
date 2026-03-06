@@ -323,11 +323,7 @@
         - "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:${ClusterId}"
         - ClusterId: <%=rack_env?(:production) ? PRODUCTION_DB_CLUSTER_ID : '!Ref AuroraCluster' %>
       TargetArn: !ImportValue DATA-production-RedshiftClusterNamespace
-      DataFilter: >-
-        include: dashboard_<%=rack_env%>.levels,
-        include: dashboard_<%=rack_env%>.user_levels,
-        include: dashboard_<%=rack_env%>.level_sources,
-        include: dashboard_<%=rack_env%>.projects
+      DataFilter: !Sub "include: dashboard_<%=rack_env %>.levels"
       Tags:
         - Key: environment
           Value: "<%=rack_env %>"
