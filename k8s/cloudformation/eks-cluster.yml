@@ -117,30 +117,22 @@ Resources:
   # It costs about 20% more than dedicated EC2 instances, but
   # you save 33% on K8S footguns, so scientifically its a 13% win.
 
-  # default namepace: for all your f around and find out needs
+  # This is a default/fallback fargate profile that matches all namespaces (*)
+  # if you need more specific settings for a namespace, create a new profile
   DefaultFargateProfile:
     Type: AWS::EKS::FargateProfile
     Properties:
       ClusterName: !Ref EKSCluster
-      FargateProfileName: default
+      # When multiple fargate profiles match a namespace, it picks by alphanumeric order
+      # Using the "zz-" prefix means this one matches last, i.e. its the fallback profile
+      # if a more specific namespace match can't be found.
+      FargateProfileName: zz-default
       PodExecutionRoleArn: !GetAtt EKSFargatePodExecutionRole.Arn
       Subnets:
         - !Ref PrivateSubnet1
         - !Ref PrivateSubnet2
       Selectors:
-        # Eventually some of these should be in their own profile, but for now simple wins:
-        - Namespace: default
-        - Namespace: staging
-        - Namespace: test
-        - Namespace: levelbuilder
-        - Namespace: infra
-        - Namespace: argocd
-        - Namespace: kube-system # required for CoreDNS etc to have compute
-        # Production being here is a temporary hack while we're not actually IN production,
-        # this should probably be its own cluster, more security analysis TBD. For now,
-        # we pay on a per-cluster basis, and we want our experiments to be cheap until we're
-        # ready. Also, see below for an alternative approach to keeping prod in a special namespace.
-        - Namespace: production
+        - Namespace: '*'
 
   # # staging namespace
   # Staging:
