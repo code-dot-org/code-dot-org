@@ -17,6 +17,9 @@ module Cdo
       data.symbolize_keys! if data.is_a?(Hash)
     end.freeze
 
+    # Mapping of short locale codes to normalized I18n locale codes (e.g., 'en' => 'en-US').
+    LOCALE_ALIASES = LOCALE_CONFIGS.each_with_object({}) {|(k, v), h| h[k] = v if v.is_a?(String)}.freeze
+
     TEXT_DIRECTIONS = Set[
       TEXT_DIRECTION_LTR = 'ltr', # the left-to-right text direction
       TEXT_DIRECTION_RTL = 'rtl', # the right-to-left text direction
