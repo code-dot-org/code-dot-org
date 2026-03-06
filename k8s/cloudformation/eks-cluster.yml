@@ -135,7 +135,7 @@ Resources:
         - Namespace: levelbuilder
         - Namespace: infra
         - Namespace: argocd
-        - Namespace: kube-system
+        - Namespace: kube-system # required for CoreDNS etc to have compute
         # Production being here is a temporary hack while we're not actually IN production,
         # this should probably be its own cluster, more security analysis TBD. For now,
         # we pay on a per-cluster basis, and we want our experiments to be cheap until we're
