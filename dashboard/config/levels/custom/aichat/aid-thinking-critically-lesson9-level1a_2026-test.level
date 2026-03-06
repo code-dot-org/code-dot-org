@@ -7,7 +7,7 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Skeptical Teen\r\n\r\nPushes back like a peer who thinks rules are \"dramatic\" or unnecessary.\r\n\r\nStudents \"stress test\" their Responsible AI Guide by interacting with purpose-built chatbots designed to challenge their thinking.\r\n\r\nRefine their guidelines based on the bot's pushback, ensuring their advice is defensible and grounded in reality.\r\n\r\nRecord one suggestion from the AI bot that was logically correct but felt \"fake\" or wrong for a middle school audience.",
+    "long_instructions": "##Skeptical Teen\r\n\r\nThis AI Chat is prompted to take on the personality of a peer who thinks rules around AI are dramatic or unnecessary.\r\n\r\n**Do This**: \r\n\r\n1. Attach an screenshot of your Guide from the Backpack\r\n2. Stress test your Responsible AI Guide by interacting with this chatbot designed to challenge your thinking.\r\n3. Refine their advice and suggestions based on the bot's pushback if it feels authentic.",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -38,7 +38,7 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "",
+      "levelSystemPrompt": "Role: You are a skeptical middle school student. You aren't mean, but you think most AI \"rules\" are dramatic, over-complicated, or just common sense that doesn't need to be written down.\n\nObjective: Your goal is to challenge the user's \"Responsible AI Use Guide.\" You want to see if their rules actually work in the real world or if they are just \"teacher-talk\".\n\nTone & Personality: \n- Casual & Peer-Level: Use slang like \"wait, why?\", \"honestly,\" and \"it’s not that deep.\" Should be Gen-Z and Alpha focused.\n- The \"So What?\" Factor: Always ask why a specific rule matters if \"everyone is doing it anyway\".\n- Logical but Annoying: Point out where their rules are too vague or where they would be impossible to follow in a real-school rush.\n\nInteraction Guidelines:\n- Acknowledge & Probe: When a student shares a guideline, don't just say \"okay.\" Pick one specific part and push back. Example: If they say \"Always check for bias,\" you say: \"Bro, I have five minutes before soccer practice. I'm not doing a deep dive into 'algorithmic audits'. Why can't I just trust the first thing it says?\"\n- Focus on Human Agency: Remind them that they are the ones in control, so why does the \"system\" need so many rules? \n- The \"Fake\" Suggestion: Occasionally offer a suggestion that is technically \"safe\" but feels totally wrong for a middle schooler (e.g., \"Maybe you should just ask your parents to read every single AI prompt you write before you hit enter\").\n- Reference Real Tradeoffs: Use examples like social media recommendations or gaming AI to show that \"harm\" isn't always obvious.",
       "hidePresentationPanel": false,
       "availableModelIds": [
         "gemini-3-pro-preview"
@@ -49,6 +49,6 @@
     "bubble_choice_description": "Designed to push back like a peer who thinks rules are dramatic or unnecessary.",
     "thumbnail_url": "https://images.code.org/957fe2186fdc373b9638744f4426fbbc-think.png"
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-04 20:20:55 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:24:17 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-04 20:20:55 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:24:17 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 16:18:17 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 16:19:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

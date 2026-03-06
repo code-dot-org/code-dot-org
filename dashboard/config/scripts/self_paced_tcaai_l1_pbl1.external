@@ -5,27 +5,90 @@ description 'description here'
 markdown <<MARKDOWN
 # What is Project Based Learning (PBL)?
 
-#### **Project Based Learning** is an instructional approach where students learn by actively working on a meaningful project over time. Instead of learning concepts first and applying them later, students build understanding as they investigate a compelling question and create a final product.
+#### **Project Based Learning** is an instructional approach developed by <a href="www.pblworks.org" target="blank" rel="noopener noreferrer">PBLWorks at the Buck Institute of Education</a> wherein students learn by actively working on a meaningful project over time. Instead of learning concepts first and applying them later, students build understanding as they investigate a central driving question.
 
-#### In PBL, learning is a process of inquiry, feedback, and revision that leads to a final product similar to what industry professional might generate, just at an age-appropriate level!
+#### In PBL, learning is a process of inquiry, feedback, and revision that leads to a final product similar to what industry professional might generate, just at an age-appropriate level.
 
 ## Driving Question
 
-#### A driving question is...
+#### In PBL, a driving question is an open-ended, provocative question that frames a unit. This becomes the foundation for the project that students work toward.
 
-> The driving question for this unit is...
+#### In Thinking Critically About AI, the driving question is:
 
-## Project Based Learning Design Approaches
+<div style="background-color: #B7E0E5; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
+        ❓ How can people make thoughtful decisions about when and how to use AI?
+    </p>
+</div>
 
-![](https://images.code.org/bf4bd2a9e4e8d94867ab59784ea68b20-image-1772670604470.png)
+#### Later in this section, you'll learn more about the **Responsible Use Guide** that students will create to answer this question.
 
-![](https://images.code.org/c0b2d3deb1a26ba6c1c31537dd445292-image-1772670604475.png)
+## Project Based Learning Design Elements
 
-![](https://images.code.org/e802f4cab694dd5bb83adb5f3c37f3bf-image-1772670604477.png)
+#### In addition to the Driving Question, PBL uses several design elements to create meaningful learning experiences. We've utilized the following in this unit: 
 
-![](https://images.code.org/b553f8594e621f659863b8fcb8b13c42-image-1772670604477.png)
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; width: 100%; margin: 20px auto;">
 
-![](https://images.code.org/234056f4fd813d75217d121475d904b7-image-1772670604478.png)
+  <!-- Card 1 -->
+  <div style="background-color: #F5F7F8; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); text-align: center;">
+    <p style="font-size: 13pt; font-weight: bold; margin: 0 0 10px 0;">Sustained Inquiry</p>
+    <img src="https://images.code.org/60e7ab3ba61ec1c166508500e627aa2a-image-1772670747215.png"
+         alt="" style="width: 50px; height: 50px; margin-bottom: 10px;">
+    <p style="font-size: 12pt; margin: 0; line-height: 1.3;">
+      Projects are grounded in a compelling driving question and include structured opportunities to revisit ideas and deepen understanding over time.
+    </p>
+  </div>
 
-![](https://images.code.org/60e7ab3ba61ec1c166508500e627aa2a-image-1772670747215.png)
+  <!-- Card 2 -->
+  <div style="background-color: #F5F7F8; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); text-align: center;">
+    <p style="font-size: 13pt; font-weight: bold; margin: 0 0 10px 0;">Reflection</p>
+    <img src="https://images.code.org/c0b2d3deb1a26ba6c1c31537dd445292-image-1772670604475.png"
+         alt="" style="width: 50px; height: 50px; margin-bottom: 10px;">
+    <p style="font-size: 12pt; margin: 0; line-height: 1.3;">
+      Students consistently document and reflect on their progress to refine their thinking, processes, and final products.
+    </p>
+  </div>
+
+  <!-- Card 3 -->
+  <div style="background-color: #F5F7F8; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); text-align: center;">
+    <p style="font-size: 13pt; font-weight: bold; margin: 0 0 10px 0;">Voice &amp; Choice</p>
+    <img src="https://images.code.org/b553f8594e621f659863b8fcb8b13c42-image-1772670604477.png"
+         alt="" style="width: 50px; height: 50px; margin-bottom: 10px;">
+    <p style="font-size: 12pt; margin: 0; line-height: 1.3;">
+      Students make meaningful decisions about their learning pathways, research focus, and how they design and present their final work.
+    </p>
+  </div>
+
+  <!-- Card 4 -->
+  <div style="background-color: #F5F7F8; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); text-align: center;">
+    <p style="font-size: 13pt; font-weight: bold; margin: 0 0 10px 0;">Authentic Audience Communication</p>
+    <img src="https://images.code.org/bf4bd2a9e4e8d94867ab59784ea68b20-image-1772670604470.png"
+         alt="" style="width: 50px; height: 50px; margin-bottom: 10px;">
+    <p style="font-size: 12pt; margin: 0; line-height: 1.3;">
+      Students consider real-world stakeholders and communicate their work with a clear audience, purpose, and intended impact.
+    </p>
+  </div>
+
+  <!-- Card 5 -->
+  <div style="background-color: #F5F7F8; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); text-align: center;">
+    <p style="font-size: 13pt; font-weight: bold; margin: 0 0 10px 0;">Critique &amp; Revision</p>
+    <br>
+    <img src="https://images.code.org/e802f4cab694dd5bb83adb5f3c37f3bf-image-1772670604477.png"
+         alt="" style="width: 50px; height: 50px; margin-bottom: 10px;">
+    <p style="font-size: 12pt; margin: 0; line-height: 1.3;">
+      Students engage in structured feedback cycles, using peer input and rubrics to revise and strengthen their work.
+    </p>
+  </div>
+
+  <!-- Card 6 -->
+  <div style="background-color: #F5F7F8; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); text-align: center;">
+    <p style="font-size: 13pt; font-weight: bold; margin: 0 0 10px 0;">Public Product Generation</p>
+    <img src="https://images.code.org/234056f4fd813d75217d121475d904b7-image-1772670604478.png"
+         alt="" style="width: 50px; height: 50px; margin-bottom: 10px;">
+    <p style="font-size: 12pt; margin: 0; line-height: 1.3;">
+      Each project culminates in a tangible product shared beyond the individual student, reinforcing purpose and accountability.
+    </p>
+  </div>
+
+</div>
 MARKDOWN

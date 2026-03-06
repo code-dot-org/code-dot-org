@@ -53,8 +53,9 @@
       ],
       "answerTypeCustomizations": {
       }
-    }
+    },
+    "project_template_level_name": "designing-reliable-apps-lesson11-template-test-2025"
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-04T22:12:25.493+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson11-level1b-test_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson11-level1b-test_2025-pilot\"},{\"changed_at\":\"2026-03-04 22:14:48 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-04T22:12:25.493+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson11-level1b-test_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson11-level1b-test_2025-pilot\"},{\"changed_at\":\"2026-03-04 22:14:48 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-05 15:57:49 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Weblab2>
