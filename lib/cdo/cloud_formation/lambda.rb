@@ -198,7 +198,7 @@ module Cdo::CloudFormation
     # Zip an array of JS files (along with the `node_modules` folder), and upload to S3.
     def js_zip(files)
       Dir.chdir(aws_dir('cloudformation')) do
-        RakeUtils.yarn_install '--production'
+        RakeUtils.npm_install('--omit=dev')
       end
       lambda_zip(*files, 'node_modules', key_prefix: 'lambdajs')
     end
