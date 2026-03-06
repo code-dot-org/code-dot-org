@@ -61,7 +61,6 @@ window.onYouTubeIframeAPIReady = function () {
   // requires there be an iframe#video present on the page
   new YT.Player('video', {
     events: {
-      onReady: function (event) {},
       onStateChange: function (state) {
         if (state.data === YT.PlayerState.ENDED) {
           onVideoEnded();

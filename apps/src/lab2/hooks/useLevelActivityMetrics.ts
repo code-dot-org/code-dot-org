@@ -7,8 +7,8 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LevelProperties} from '../types';
 
 /**
- * Custom hook that provides a callback to log LEVEL_ACTIVITY or PROJECT_ACTIVITY
- * analytics events when a user performs their first activity in a Lab2 environment.
+ * Custom hook that provides a callback to log a LEVEL_ACTIVITY
+ * analytics event when a user performs their first activity in a Lab2 environment.
  *
  * This hook returns a callback function that labs should call when activity occurs.
  * The callback will log exactly once per level, preventing duplicate events.
