@@ -1,0 +1,26 @@
+# Infer CloudFormation stack name from kubectl context:
+{{ $eksClusterName := regexReplaceAll ".*cluster/" (exec "kubectl" (list "config" "current-context") | trim) "" }}
+
+# Look up AWSLoadBalancerControllerRoleArn from CloudFormation stack outputs:
+{{ $awsLoadBalancerRoleArn := exec "aws" (list "cloudformation" "describe-stacks" "--stack-name" $eksClusterName "--query" "Stacks[0].Outputs[?OutputKey==`AWSLoadBalancerControllerRoleArn`].OutputValue | [0]" "--output" "text") | trim }}
+
+repositories:
+  - name: eks
+    url: https://aws.github.io/eks-charts
+
+releases:
+  - name: aws-load-balancer-controller
+    namespace: kube-system
+    chart: eks/aws-load-balancer-controller
+    version: 3.1.0
+    values:
+      - clusterName: {{ $eksClusterName | quote }}
+        region: us-east-1
+        vpcId: vpc-6e98810a
+        ingressClassConfig:
+          default: true
+        serviceAccount:
+          create: true
+          name: aws-load-balancer-controller
+          annotations:
+            eks.amazonaws.com/role-arn: {{ $awsLoadBalancerRoleArn | quote }}

@@ -4,14 +4,9 @@
 # needs both public (maybe?) and private (definitely) subnets, and a lot of IPs.
 
 AWSTemplateFormatVersion: '2010-09-09'
-Description: 'code-ai kubernetes/k8s/eks fargate cluster'
+Description: 'codeai-k8s kubernetes/k8s/eks fargate cluster'
 
 Parameters:
-  ClusterName:
-    Type: String
-    Default: "nonprod-code-ai"
-    Description: "The name of the k8s/EKS cluster, canonically nonprod-code-ai. Prefix it with your stack name for dev and testing, e.g.: my-stack-code-ai"
-
   VpcId:
     Type: AWS::EC2::VPC::Id
     Default: vpc-6e98810a
@@ -46,15 +41,15 @@ Parameters:
 
 Resources:
   #============================================================
-  # code-ai EKS Cluster
+  # codeai-k8s EKS Cluster
   #============================================================
 
   # Create the code-dot-org Kubernetes cluster
   EKSCluster:
     Type: AWS::EKS::Cluster
     Properties:
-      # ClusterName is canonically *-code-ai:
-      Name: !Ref ClusterName
+      # Cluster name follows CloudFormation stack name.
+      Name: !Ref AWS::StackName
       Version: "1.35" # kubernetes version, increase to upgrade or use EKS console
       RoleArn: !GetAtt EKSClusterRole.Arn
       AccessConfig:
@@ -92,21 +87,13 @@ Resources:
           AccessScope:
             Type: cluster
 
-  GoogleAdminAccessEntry:
-    Type: AWS::EKS::AccessEntry
-    Properties:
-      ClusterName: !Ref EKSCluster
-      PrincipalArn: arn:aws:iam::475661607190:role/GoogleAdmin
-      AccessPolicies:
-        - PolicyArn: arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy
-          AccessScope:
-            Type: cluster
-
   # TODO: Consider access entries for these IAM Identity Center reserved roles:
-  # AWSReservedSSO_InfraEngineer-Standard_*
-  # AWSReservedSSO_InfraEngineer-BreakGlass_*
+  # We should confirm whether the ones with * suffixes are stable enough for IaC references.
+  # - GoogleAdminAccessEntry
+  # - AWSReservedSSO_InfraEngineer-Standard_*
+  # - AWSReservedSSO_InfraEngineer-BreakGlass_*
   # AWSReservedSSO_InfraEngineer-ReadOnlyAccess_*
-  # We should confirm whether these suffixes are stable enough for IaC references.
+  
 
   #============================================================
   # A Fargate Profile for each k8s namespace
@@ -209,6 +196,7 @@ Resources:
   EKSClusterRole:
     Type: AWS::IAM::Role
     Properties:
+      RoleName: !Sub "${AWS::StackName}-eks-cluster-role"
       AssumeRolePolicyDocument:
         Version: '2012-10-17'
         Statement:
@@ -241,6 +229,33 @@ Resources:
           Value: !Sub "${AWS::StackName}-fargate-pod-execution-role"
 
   #============================================================
+  # AWS Load Balancer Controller (IRSA + Helm custom resource)
+  #============================================================
+
+  EKSClusterOIDCProvider:
+    Type: AWS::IAM::OIDCProvider
+    Properties:
+      Url: !GetAtt EKSCluster.OpenIdConnectIssuerUrl
+      ClientIdList:
+        - sts.amazonaws.com
+      ThumbprintList:
+        - 9e99a48a9960b14926bb7f3b02e22da2b0ab7280
+
+  AWSLoadBalancerControllerRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub "${AWS::StackName}-aws-load-balancer-controller"
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Federated: !Ref EKSClusterOIDCProvider
+            Action: sts:AssumeRoleWithWebIdentity
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AmazonEKSLoadBalancingPolicy
+
+  #============================================================
   # Networking
   #============================================================
 
@@ -258,7 +273,7 @@ Resources:
       GroupDescription: EKS Cluster security group
       VpcId: !Ref VpcId
       Tags:
-        - Key: !Sub "kubernetes.io/cluster/${ClusterName}"
+        - Key: !Sub "kubernetes.io/cluster/${AWS::StackName}"
           Value: owned
 
 
@@ -293,7 +308,7 @@ Resources:
       Tags:
         - Key: kubernetes.io/role/elb
           Value: '1'
-        - Key: !Sub "kubernetes.io/cluster/${ClusterName}"
+        - Key: !Sub "kubernetes.io/cluster/${AWS::StackName}"
           Value: shared
 
   PublicSubnet1RouteTableAssociation:
@@ -312,7 +327,7 @@ Resources:
       Tags:
         - Key: kubernetes.io/role/elb
           Value: '1'
-        - Key: !Sub "kubernetes.io/cluster/${ClusterName}"
+        - Key: !Sub "kubernetes.io/cluster/${AWS::StackName}"
           Value: shared
 
   PublicSubnet2RouteTableAssociation:
@@ -394,7 +409,7 @@ Resources:
       Tags:
         - Key: kubernetes.io/role/internal-elb
           Value: '1'
-        - Key: !Sub "kubernetes.io/cluster/${ClusterName}"
+        - Key: !Sub "kubernetes.io/cluster/${AWS::StackName}"
           Value: shared
 
   PrivateSubnet1RouteTableAssociation:
@@ -413,7 +428,7 @@ Resources:
       Tags:
         - Key: kubernetes.io/role/internal-elb
           Value: '1'
-        - Key: !Sub "kubernetes.io/cluster/${ClusterName}"
+        - Key: !Sub "kubernetes.io/cluster/${AWS::StackName}"
           Value: shared
 
   PrivateSubnet2RouteTableAssociation:
@@ -426,6 +441,14 @@ Outputs:
   ClusterName:
     Description: 'EKS Cluster Name'
     Value: !Ref EKSCluster
+    Export:
+      Name: !Sub "${AWS::StackName}-ClusterName"
+
+  ClusterArn:
+    Description: 'EKS Cluster ARN'
+    Value: !GetAtt EKSCluster.Arn
+    Export:
+      Name: !Sub "${AWS::StackName}-ClusterArn"
 
   ClusterEndpoint:
     Description: 'EKS Cluster Endpoint'
@@ -438,6 +461,14 @@ Outputs:
   VPCId:
     Description: 'VPC ID'
     Value: !Ref VpcId
+    Export:
+      Name: !Sub "${AWS::StackName}-VpcId"
+
+  AWSLoadBalancerControllerRoleArn:
+    Description: 'IRSA role ARN for aws-load-balancer-controller'
+    Value: !GetAtt AWSLoadBalancerControllerRole.Arn
+    Export:
+      Name: !Sub "${AWS::StackName}-AWSLoadBalancerControllerRoleArn"
 
   PublicSubnet1Id:
     Description: 'Public Subnet 1 ID'
