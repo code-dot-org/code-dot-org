@@ -534,13 +534,13 @@ class HomeControllerTest < ActionController::TestCase
 
   test "home does not 404 for users with deleted unit references" do
     student = create(:student)
-    real_script = create(:script, :with_levels)
-    fake_script = create(:script, :with_levels)
+    current_script = create(:script, :with_levels)
+    deleted_script = create(:script, :with_levels)
 
-    create(:user_script, user: student, script: real_script, started_at: 2.days.ago)
-    create(:user_script, user: student, script: fake_script, started_at: 1.day.ago)
+    create(:user_script, user: student, script: current_script, started_at: 2.days.ago)
+    create(:user_script, user: student, script: deleted_script, started_at: 1.day.ago)
 
-    fake_script.destroy!
+    deleted_script.destroy!
 
     sign_in student
     get :home

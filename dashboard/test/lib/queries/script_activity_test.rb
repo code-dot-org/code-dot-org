@@ -114,17 +114,17 @@ class Queries::ScriptActivityTest < ActiveSupport::TestCase
   end
 
   test 'primary_student_unit_context skips deleted scripts' do
-    new_script = create(:script)
-    old_script = create(:script)
+    current_script = create(:script)
+    deleted_script = create(:script)
 
-    create(:user_script, user: @user, script: new_script, started_at: 3.days.ago)
-    create(:user_script, user: @user, script: old_script, started_at: 1.day.ago)
+    create(:user_script, user: @user, script: current_script, started_at: 3.days.ago)
+    create(:user_script, user: @user, script: deleted_script, started_at: 1.day.ago)
 
-    old_script.destroy!
+    deleted_script.destroy!
 
     context = Queries::ScriptActivity.primary_student_unit_context(@user)
     refute_nil context
-    assert_equal new_script, context[:unit]
+    assert_equal current_script, context[:unit]
   end
 
   test 'user is working on pl scripts' do
