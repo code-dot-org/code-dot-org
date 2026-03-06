@@ -266,6 +266,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   };
 
   React.useEffect(() => {
+    const audioPlayer = audioPlayerRef.current;
     let playStartTime: number;
     const handlePodcastPlay = () => {
       playStartTime = Date.now();
@@ -281,14 +282,22 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
         time_played: play_time,
       });
     };
-    const audioPlayer = audioPlayerRef.current;
+
+    const handleSpeedChanged = () => {
+      analyticsReporter.sendEvent(EVENTS.TA_PODCAST_PLAYBACK_SPEED_CHANGED, {
+        lesson_id: selectedLesson?.id,
+        playback_rate: audioPlayer?.playbackRate,
+      });
+    };
 
     if (audioPlayer) {
       audioPlayer.addEventListener('play', handlePodcastPlay);
       audioPlayer.addEventListener('pause', handlePodcastStop);
+      audioPlayer.addEventListener('ratechange', handleSpeedChanged);
       return () => {
         audioPlayer.removeEventListener('play', handlePodcastPlay);
         audioPlayer.removeEventListener('pause', handlePodcastStop);
+        audioPlayer.removeEventListener('ratechange', handleSpeedChanged);
       };
     }
   }, [selectedLesson, canShowLessonSummaries]);

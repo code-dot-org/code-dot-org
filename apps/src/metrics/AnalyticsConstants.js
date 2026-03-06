@@ -307,6 +307,7 @@ const EVENTS = {
   TA_PODCAST_CLOSE_TRANSCRIPT: 'TA podcast transcript closed',
   TA_PODCAST_PLAYED: 'TA podcast played',
   TA_PODCAST_STOPPED: 'TA podcast stopped',
+  TA_PODCAST_PLAYBACK_SPEED_CHANGED: 'TA podcast playback speed changed',
 
   //AI Differentiation
   AI_DIFF_CHAT_OPENED: 'AI Differentiation Chat Opened',
