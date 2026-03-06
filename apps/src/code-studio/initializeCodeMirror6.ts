@@ -9,8 +9,19 @@ import {
   lintGutter,
   linter,
 } from '@codemirror/lint';
-import {EditorState, Extension} from '@codemirror/state';
-import {EditorView, ViewUpdate, lineNumbers} from '@codemirror/view';
+import {
+  EditorState,
+  Extension,
+  StateEffect,
+  StateField,
+} from '@codemirror/state';
+import {
+  Decoration,
+  DecorationSet,
+  EditorView,
+  ViewUpdate,
+  lineNumbers,
+} from '@codemirror/view';
 import js from '@eslint/js';
 import * as eslint from 'eslint-linter-browserify';
 import globals from 'globals';
@@ -41,6 +52,7 @@ interface CodeMirrorLegacyAdapter {
   getWrapperElement: () => HTMLElement;
   getCursor: () => number;
   setCursor: (position: number) => void;
+  setErrorLineIndexes: (lineIndexes: number[]) => void;
   on: (event: string, listener: (...args: unknown[]) => void) => void;
 }
 
@@ -53,6 +65,7 @@ interface Options {
     disableRecommendedJsConfig?: boolean;
   };
   lineNumberFormatter?: (line: number) => string;
+  lineHighlightClassName?: string;
   themeStyles?: Record<string, Record<string, string | number>>;
   preview?: string | Element;
   game?: string;
@@ -66,6 +79,46 @@ const levelbuilderEditorTheme = EditorView.theme({
     backgroundColor: 'white',
   },
 });
+
+const setErrorLineIndexesEffect = StateEffect.define<number[]>();
+
+function createErrorLineDecorations(
+  state: EditorState,
+  lineIndexes: number[],
+  className: string
+): DecorationSet {
+  const decorations = lineIndexes
+    .filter(index => index >= 0 && index < state.doc.lines)
+    .map(index => {
+      const line = state.doc.line(index + 1);
+      return Decoration.line({class: className}).range(line.from);
+    });
+  return Decoration.set(decorations, true);
+}
+
+const createErrorLineHighlightField = (className: string) =>
+  StateField.define<DecorationSet>({
+    create() {
+      return Decoration.none;
+    },
+    update(decorations, transaction) {
+      const effect = transaction.effects.find(e =>
+        e.is(setErrorLineIndexesEffect)
+      );
+      if (effect) {
+        return createErrorLineDecorations(
+          transaction.state,
+          effect.value,
+          className
+        );
+      }
+      if (transaction.docChanged) {
+        return decorations.map(transaction.changes);
+      }
+      return decorations;
+    },
+    provide: field => EditorView.decorations.from(field),
+  });
 
 const languageExtensionMap: Record<EditorMode, Extension> = {
   javascript: javascript(),
@@ -172,6 +225,7 @@ function initializeCodeMirror6(
     attachments,
     onUpdateLinting,
     lineNumberFormatter,
+    lineHighlightClassName,
     themeStyles,
     preview,
     game,
@@ -179,6 +233,9 @@ function initializeCodeMirror6(
   const changeListeners: Array<() => void> = [];
   const dropListeners: Array<(event: DragEvent) => void> = [];
   const lintExtension = getLintExtension(mode, options.lintConfig);
+  const errorLineHighlightField = lineHighlightClassName
+    ? createErrorLineHighlightField(lineHighlightClassName)
+    : null;
 
   const editorContainer = document.createElement('div');
   node.style.display = 'none';
@@ -206,6 +263,16 @@ function initializeCodeMirror6(
     setCursor(position) {
       editor.dispatch({
         selection: {anchor: position},
+      });
+    },
+    setErrorLineIndexes(lineIndexes) {
+      if (!lineHighlightClassName) {
+        throw new Error(
+          'initializeCodeMirror6 requires options.lineHighlightClassName to use setErrorLineIndexes'
+        );
+      }
+      editor.dispatch({
+        effects: setErrorLineIndexesEffect.of(lineIndexes),
       });
     },
     on(event, listener) {
@@ -260,6 +327,7 @@ function initializeCodeMirror6(
     levelbuilderEditorTheme,
     ...(themeStyles ? [EditorView.theme(themeStyles)] : []),
     EditorView.lineWrapping,
+    ...(errorLineHighlightField ? [errorLineHighlightField] : []),
     ...(onUpdateLinting && lintExtension ? [lintExtension, lintGutter()] : []),
     EditorView.domEventHandlers({
       drop(event) {

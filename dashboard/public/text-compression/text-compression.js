@@ -144,15 +144,8 @@
     compressedPoemSize = poemDisplay.length;
     document.getElementById("compressedPoem").innerHTML = poemDisplay.replace(
       new RegExp('[' + SYMBOL_REGEX + ']+', "g"), "<mark>$&</mark>");
-    updateLineStyles(errorLineIndexes);
+    editor.setErrorLineIndexes(errorLineIndexes);
     calculateData(errorInDictionary);
-  }
-
-  function updateLineStyles(errorLineIndexes) {
-    var lines = editor.getWrapperElement().querySelectorAll('.cm-line');
-    lines.forEach(function (line, index) {
-      line.classList.toggle('dict-error', errorLineIndexes.indexOf(index) >= 0);
-    });
   }
 
   var $dictionary = $('#dictionary');
@@ -196,6 +189,7 @@
     lineNumberFormatter: function (lineNumber) {
       return dictEntries[lineNumber - 1] || '';
     },
+    lineHighlightClassName: 'dict-error',
     themeStyles: themeStyles,
   });
 
