@@ -273,6 +273,8 @@ class CourseVersionTest < ActiveSupport::TestCase
     refute course_version.valid?
     course_version.key = '0123456789abcdefghijklmnopqrstuvwxyz-'
     assert course_version.valid?
+    course_version.key = '2025.01'
+    assert course_version.valid?
   end
 
   test "throws exception if changing course version of content root that prevent course version change" do

@@ -257,7 +257,7 @@ class CourseOffering < ApplicationRecord
   def summarize_for_unit_selector(unit_ids)
     {
       display_name: any_versions_launched? ? localized_display_name : localized_display_name + ' *',
-      units: course_versions.map(&:units).flatten.select {|u| u.included_in_units?(unit_ids)}.map(&:summarize_for_unit_selector).sort_by {|u| -1 * u[:version_year].to_i}
+      units: course_versions.map(&:units).flatten.select {|u| u.included_in_units?(unit_ids)}.map(&:summarize_for_unit_selector).sort_by {|u| u[:version_year] == CourseVersion::UNVERSIONED ? '' : u[:version_year]}.reverse
     }
   end
 
