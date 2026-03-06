@@ -18,7 +18,7 @@
     "encrypted": "false",
     "display_name": "Handle Empty Results",
     "long_instructions": "# Handle Empty Results\r\n\r\n**Goal:** Show a helpful message when your API returns zero results or invalid data.\r\n\r\n1. **Check the Response Data:** After your fetch completes, check if the returned array is empty.\r\n2. **Display an Empty State Message:** Show a friendly message such as \"No results found\" instead of leaving the page blank.\r\n3. **Keep the Layout Stable:** Make sure your app still looks clean and organized when showing the empty message.\r\n4. **Test It:** Modify your endpoint or search input to force zero results and confirm the message appears.\r\n5. **Remove the Message When Data Exists:** If results return again, hide the empty state message.\r\n\r\n",
-    "bubble_choice_description": "Display a clear message when no data is returned so users understand what happened instead of seeing a blank screen.",
+    "bubble_choice_description": "Display a clear message when no data is returned so users understand what happened instead of seeing a blank screen. ***(supports completing Milestone 3 tasks)***",
     "thumbnail_url": "https://images.code.org/4aa7378d0974b716c8e96c489016b7d6-data.png",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -47,12 +47,14 @@
         "explainCode",
         "documentation",
         "pseudocode",
-        "testCase"
+        "testCase",
+        "buildJavaScript"
       ],
       "answerTypeCustomizations": {
       }
-    }
+    },
+    "project_template_level_name": "designing-reliable-apps-lesson11-template-test-2025"
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-05 02:11:51 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-05 02:16:04 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-05 02:11:51 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-05 02:16:04 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-05 15:40:31 +0000\",\"changed\":[\"bubble_choice_description\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-05 16:01:17 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Weblab2>

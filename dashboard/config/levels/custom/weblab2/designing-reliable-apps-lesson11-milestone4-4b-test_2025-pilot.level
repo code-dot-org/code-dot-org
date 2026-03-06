@@ -18,7 +18,7 @@
     "encrypted": "false",
     "display_name": "Comment Your Code",
     "long_instructions": "# Comment Your Code\r\n\r\n**Goal:** Show that you understand how your app works by explaining key parts of your code.\r\n\r\nAdd short, clear comments that explain:\r\n\r\n* **Your async fetch function**\r\n  What does it request? When does it run?\r\n\r\n* **Your event listener logic**\r\n  What happens when a user clicks a button?\r\n\r\n* **Your try/catch block**\r\n  What errors are you protecting against?\r\n\r\n* **Your loading or empty state logic**\r\n  When do these appear and why?\r\n",
-    "bubble_choice_description": "Add clear comments that explain how your async logic, event handling, and error handling work.",
+    "bubble_choice_description": "Add clear comments that explain how your async logic, event handling, and error handling work.  ***(supports completing Milestone 4 tasks)***",
     "thumbnail_url": "https://images.code.org/cd453d4dbe7f1bd74e95ab625c4e8a05-comments-balloons-developer-coding.png",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -47,12 +47,14 @@
         "explainCode",
         "documentation",
         "pseudocode",
-        "testCase"
+        "testCase",
+        "buildJavaScript"
       ],
       "answerTypeCustomizations": {
       }
-    }
+    },
+    "project_template_level_name": "designing-reliable-apps-lesson11-template-test-2025"
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-05 03:55:30 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-05 04:00:51 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-05 03:55:30 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-05 04:00:51 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-05 15:53:11 +0000\",\"changed\":[\"bubble_choice_description\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-05 16:02:45 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Weblab2>

@@ -3542,9 +3542,9 @@
     "encrypted": "false",
     "display_name": "Design a Status Message",
     "long_instructions": "# Design Your Status Messages\r\n\r\n**Goal:** Decide what your app will say and where it will say it when something is loading, missing, or broken.\r\n\r\n1. **Write Your Loading Message:** What will the user see while the app is waiting? (Example: \"Loading results...\")\r\n2. **Write Your Error Message:** What will the user see if the API fails? (Example: \"Something went wrong. Please try again.\")\r\n3. **Write Your Empty Message:** What will the user see if there are no results? (Example: \"No matches found. Try a different search.\")\r\n",
-    "bubble_choice_description": "Plan the exact words and placement for your loading, error, and empty messages so your app feels clear, respectful, and trustworthy.",
+    "bubble_choice_description": "Plan the exact words and placement for your loading, error, and empty messages so your app feels clear, respectful, and trustworthy. ***(supports completing Milestone 3 tasks)***",
     "thumbnail_url": "https://images.code.org/59b38c11d90d878435662284fce05fff-d2f6256449032ef4cee95fe915800e7c-mood-board.png"
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-05 02:21:16 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-05 02:52:53 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-05 02:53:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-05 02:21:16 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-05 02:52:53 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-05 02:53:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-05 15:39:00 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Sketchlab>

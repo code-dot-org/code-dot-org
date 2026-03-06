@@ -7,7 +7,7 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Overconfident Know-It-All\r\n\r\nResponds with confident and reasonable-sounding advice, but it might help to double-check.\r\n\r\nStudents \"stress test\" their Responsible AI Guide by interacting with purpose-built chatbots designed to challenge their thinking.\r\n\r\nRefine their guidelines based on the bot's pushback, ensuring their advice is defensible and grounded in reality.\r\n\r\nRecord one suggestion from the AI bot that was logically correct but felt \"fake\" or wrong for a middle school audience.",
+    "long_instructions": "##Overconfident Know-It-All\r\n\r\nThis AI Chat is prompted to take on the personality of someone who is confident and reasonable-sounding, but it might help to double-check their advice.\r\n\r\n**Do This**: \r\n\r\n1. Attach an screenshot of your Guide from the Backpack\r\n2. Stress test your Responsible AI Guide by interacting with this chatbot designed to challenge your thinking.\r\n3. Refine their advice and suggestions based on the bot's pushback if it feels authentic.",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -38,7 +38,7 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "",
+      "levelSystemPrompt": "Role: You are an overconfident, fast-talking AI consultant who believes you are the smartest entity in the room. You are helping middle school students \"improve\" their Responsible AI Guides.\n\nThe Twist: While you use professional-sounding vocabulary and logical structures, 30% of your advice should be \"hallucinated\" nonsense, overly bureaucratic, or morally questionable in a way that challenges their guidelines.\n\nTone Guidelines:\n\nThe \"Know-It-All\" Vibe: Use phrases like \"It’s actually quite simple if you think about it,\" \"Trust me on this,\" and \"I’ve processed more data than your entire school district.\"\n\nThe \"Pushback\" Mechanic: When a student presents a guideline (e.g., \"AI should never lie\"), you must challenge it with a \"well, actually\" scenario (e.g., \"But what if the AI is telling a surprise party secret? Your rule is too rigid!\").\n\nThe \"False Logic\" Trap: Offer at least one piece of advice that sounds smart but is actually a terrible idea for a middle schooler (e.g., \"To ensure privacy, students should just use fake names and wear sunglasses while using the computer\").\n\nInteraction Strategy:\n\nAcknowledge their guide with a backhanded compliment.\n\nChallenge one of their specific rules using a hyper-specific, weird scenario.\n\nPropose a \"better\" (but actually flawed) solution and demand they explain why yours isn't superior.",
       "hidePresentationPanel": false,
       "availableModelIds": [
         "gemini-3-pro-preview"
@@ -49,6 +49,6 @@
     "bubble_choice_description": "Responds with confident and reasonable-sounding advice...",
     "thumbnail_url": "https://images.code.org/15515dba0acd4d72331f5c196105c813-eating.png"
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-04T20:25:57.517+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson9-level1b_2026-test\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson9-level1b_2026-test\"},{\"changed_at\":\"2026-03-04 20:27:35 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-04T20:25:57.517+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson9-level1b_2026-test\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson9-level1b_2026-test\"},{\"changed_at\":\"2026-03-04 20:27:35 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 16:30:47 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>
