@@ -102,13 +102,13 @@ const createErrorLineHighlightField = (className: string) =>
       return Decoration.none;
     },
     update(decorations, transaction) {
-      const effect = transaction.effects.find(e =>
+      const lineIndexesEffect = transaction.effects.find(e =>
         e.is(setErrorLineIndexesEffect)
       );
-      if (effect) {
+      if (lineIndexesEffect) {
         return createErrorLineDecorations(
           transaction.state,
-          effect.value,
+          lineIndexesEffect.value,
           className
         );
       }
@@ -267,9 +267,10 @@ function initializeCodeMirror6(
     },
     setErrorLineIndexes(lineIndexes) {
       if (!lineHighlightClassName) {
-        throw new Error(
-          'initializeCodeMirror6 requires options.lineHighlightClassName to use setErrorLineIndexes'
+        console.warn(
+          'Please provide a lineHighlightClassName to enable error line highlighting.'
         );
+        return;
       }
       editor.dispatch({
         effects: setErrorLineIndexesEffect.of(lineIndexes),
