@@ -158,11 +158,7 @@ describe('Words', () => {
 
     expect(() => {
       shallow(<Words {...DEFAULT_PROPS} />);
-    }).toThrowError(
-      new Error(
-        "Could not find a set of choices in wordSet for appMode 'a-fake-one!'"
-      )
-    );
+    }).toThrow("Could not find a set of choices in wordSet for appMode 'a-fake-one!'");
   });
 
   describe('onChangeWord', () => {

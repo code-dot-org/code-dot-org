@@ -15,7 +15,9 @@ const commonConfig = {
   },
   output: {
     filename: '[name].js',
-    libraryTarget: 'umd'
+    library: {
+      type: 'umd'
+    }
   },
   module: {
     rules: [
@@ -23,7 +25,7 @@ const commonConfig = {
         test: /\.js$/,
         loader: 'babel-loader'
       },
-      {test: /\.css$/, loader: 'style-loader!css-loader'},
+      {test: /\.css$/, use: ['style-loader', 'css-loader']},
       {
         test: /\.jsx$/,
         enforce: 'pre',
@@ -32,49 +34,28 @@ const commonConfig = {
           {
             loader: 'babel-loader',
             options: {
-              presets: ['react', 'env'],
-              plugins: ['transform-class-properties']
+              presets: ['@babel/preset-react', '@babel/preset-env'],
+              plugins: ['@babel/plugin-transform-class-properties']
             }
           }
         ]
       },
       {
         test: /\.(png|gif|svg)$/,
-        loader: 'url-loader',
-        options: {
-          limit: 8192,
-          outputPath: 'assets/images',
-          publicPath: 'images',
-          postTransformPublicPath: p =>
-            `__ml_activities_asset_public_path__ + ${p}`,
-          name: '[name].[ext]?[contenthash]'
+        type: 'asset/inline',
+      },
+      {
+        type: 'asset/resource',
+        test: /src\/oceans\/model.json$/,
+        generator: {
+          filename: 'models/[name][ext]?[contenthash]'
         }
       },
       {
-        type: 'javascript/auto',
-        test: /src\/oceans\/model.json$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              outputPath: 'assets/models',
-              publicPath: 'models',
-              postTransformPublicPath: p =>
-                `__ml_activities_asset_public_path__ + ${p}`,
-              name: '[name].[ext]?[contenthash]'
-            }
-          }
-        ]
-      },
-      {
         test: /\.(mp3|ogg|wav)$/,
-        loader: 'file-loader',
-        options: {
-          outputPath: 'assets/sounds',
-          publicPath: 'sounds',
-          postTransformPublicPath: p =>
-            `__ml_activities_asset_public_path__ + ${p}`,
-          name: '[name].[ext]?[contenthash]'
+        type: 'asset/resource',
+        generator: {
+          filename: 'sounds/[name][ext]?[contenthash]'
         }
       }
     ]
@@ -85,19 +66,25 @@ const commonConfig = {
     },
     maxAssetSize: 300000,
     maxEntrypointSize: 10500000
-  }
+  },
+  plugins: [
+    new (require('webpack').ProvidePlugin)({
+      process: 'process/browser'
+    })
+  ]
 };
 
 const firstConfigOnly = {
   plugins: [
     new CleanWebpackPlugin(),
-    new CopyPlugin([
-      {
-        from: 'src/oceans/*.bin',
-        to: 'assets/models/',
-        flatten: true
-      }
-    ])
+    new CopyPlugin({
+      patterns: [
+        {
+          from: 'src/oceans/*.bin',
+          to: 'models/[name][ext]'
+        }
+      ]
+    })
   ]
 };
 

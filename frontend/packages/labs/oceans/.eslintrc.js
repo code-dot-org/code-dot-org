@@ -6,6 +6,7 @@ module.exports = {
   "globals": {
   },
   "plugins": [
+    "react"
   ],
   "extends": [
     'plugin:react/recommended',
@@ -21,7 +22,7 @@ module.exports = {
       "version": "detect"
     }
   },
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
     "sourceType": "module",
     "ecmaFeatures": {

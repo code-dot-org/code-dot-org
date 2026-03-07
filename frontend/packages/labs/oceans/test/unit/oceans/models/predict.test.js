@@ -8,7 +8,6 @@ import {TrashOceanObject} from '@ml/oceans/OceanObject';
 describe('Predict test', () => {
   beforeAll(() => {
     initFishData();
-    jasmine.DEFAULT_TIMEOUT_INTERVAL = 5000;
   });
 
   beforeEach(() => {
