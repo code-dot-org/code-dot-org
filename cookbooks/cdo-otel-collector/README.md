@@ -14,7 +14,7 @@ The DataDog OpenTelemetry Collector acts as a bridge between applications instru
 
 ### Network
 
-The following ports must be accessible:
+The following ports must be locally accessible:
 
 - **4317** (TCP): OTLP gRPC receiver
 - **4318** (TCP): OTLP HTTP receiver  
