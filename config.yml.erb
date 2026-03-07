@@ -386,9 +386,16 @@ custom_error_response: true
 # Whether rake:build should rebuild the apps package
 build_apps: false
 
+# Whether rake:build should rebuild the studio package
+build_studio: false
+
 # Whether dashboard should use your local build of the apps package.
 # If false, dashboard will try to use a prepackaged version from S3.
 use_my_apps:
+
+# Whether dashboard should use your local build of the studio package.
+# If false, dashboard will try to use a prepackaged version from S3.
+use_my_studio:
 
 optimize_webpack_assets: true
 
