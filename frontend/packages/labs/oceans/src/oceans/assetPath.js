@@ -10,4 +10,5 @@ export const setAssetPath = (path) => {
 // asset/resource URLs (sounds, model.json) resolve to the correct location.
 // Fall back to '/' for running locally.
 
+/* eslint-disable-next-line no-undef */
 __webpack_public_path__ = global.__webpack_public_path__ || '/';
