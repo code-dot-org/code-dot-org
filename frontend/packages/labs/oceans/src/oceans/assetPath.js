@@ -1,5 +1,5 @@
 export const setAssetPath = (path) => {
-  global.__webpack_public_path__ = path;
+  global.__desired_webpack_public_path__ = path;
 };
 
 // Sync webpack's internal public path (__webpack_require__.p) with the global.
@@ -11,4 +11,4 @@ export const setAssetPath = (path) => {
 // Fall back to '/' for running locally.
 
 /* eslint-disable-next-line no-undef */
-__webpack_public_path__ = global.__webpack_public_path__ || '/';
+__webpack_public_path__ = global.__desired_webpack_public_path__ || '/';
