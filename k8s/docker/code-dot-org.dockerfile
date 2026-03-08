@@ -36,7 +36,7 @@ COPY --chown=${UID} \
 
 COPY --chown=${UID} \
   --parents \
-  ./dashboard/engines/**/version.rb \
+  ./dashboard/engines/*/lib/*/version.rb \
   ./
 
 RUN --mount=type=cache,sharing=locked,uid=${UID},gid=${GID},target=${HOME}/.rbenv/versions/3.0.5/lib/ruby/gems/3.0.0/cache <<EOF
@@ -87,9 +87,11 @@ COPY --chown=${UID} \
   ./apps/eslint \
   ./apps/eslint/
 
+# NOTE: Docker supports `**` globs here, but Skaffold dependency/context handling
+# does not yet, so we use `*` for now.
 COPY --chown=${UID} \
   --parents \
-  ./frontend/**/package.json \
+  ./frontend/packages/*/package.json \
   ./
 
 RUN \
