@@ -27,14 +27,16 @@ COPY --chown=${UID} \
   Gemfile.lock \
   ./
 
-# Gemfile includes **/engines/*/*.gemspec, so we need to include them here too
-#
-# WARNING: we are using `COPY --parents` here, which requires syntax with
-# `--parents` support (for example `docker/dockerfile:1.22`).
-# the alternative would be to manually list each engine gemspec file as it gets added.
+# Gemfile includes **/engines/*/*.gemspec, so we need to include them here too,
+# and gemspecs by default depend on a version.rb file so we copy that in too.
 COPY --chown=${UID} \
   --parents \
-  ./**/engines/*/*.gemspec \
+  ./dashboard/engines/*/*.gemspec \
+  ./
+
+COPY --chown=${UID} \
+  --parents \
+  ./dashboard/engines/**/version.rb \
   ./
 
 RUN --mount=type=cache,sharing=locked,uid=${UID},gid=${GID},target=${HOME}/.rbenv/versions/3.0.5/lib/ruby/gems/3.0.0/cache <<EOF
