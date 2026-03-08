@@ -452,6 +452,12 @@ const EVENTS = {
     'User accepts and uploads a flagged custom image',
   CANCEL_FLAGGED_CUSTOM_IMAGE: 'User cancels upload of flagged custom image',
 
+  // Moderate model output image
+  MODEL_OUTPUT_IMAGE_CREATED: 'Model output image created',
+  MODERATE_MODEL_OUTPUT_IMAGE_AZURE: 'Model output image moderated by Azure',
+  FLAGGED_MODEL_OUTPUT_IMAGE_AZURE:
+    'Model output image flagged by Azure moderation service',
+
   // Export app
   EXPORT_APP: 'User Exports App From Share Advanced Options',
 

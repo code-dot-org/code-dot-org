@@ -1,0 +1,2 @@
+import{c as r,R as a,j as n,r as c}from"./application-DTNUuEc_.js";function l(){const e=r.c(3),{LabEntrypoint:s}=a.useLoaderData();let t;e[0]===Symbol.for("react.memo_cache_sentinel")?(t=n.jsx("div",{children:"Loading..."}),e[0]=t):t=e[0];let o;return e[1]!==s?(o=n.jsx(c.Suspense,{fallback:t,children:n.jsx(s,{})}),e[1]=s,e[2]=o):o=e[2],o}export{l as component};
+//# sourceMappingURL=edit-DKYQE6KJ.js.map

@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-04 03:55:06 UTC",
+    "serialized_at": "2026-03-04 17:13:39 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -112,7 +112,7 @@
     },
     {
       "key": "Responsible Co-creation & Impact",
-      "name": "Lesson 3: Responsible Co-Creation and Impact",
+      "name": "Lesson 3: Responsible Co-Creation",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -960,7 +960,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "✅ Assessment Opportunity: Check if students can articulate why they rejected specific AI ideas. A strong response identifies a conflict between the AI's pattern and the student's original voice or values."
+            "markdown": "Check if students can articulate why they rejected specific AI ideas. A strong response identifies a conflict between the AI's pattern and the student's original voice or values."
           },
           {
             "type": "teachingTip",
@@ -1224,8 +1224,18 @@
       }
     },
     {
-      "key": "3d570c8c-9a52-4a73-85af-77f4d9915236",
+      "key": "77399d9d-4771-4a4d-8b52-57927a12a531",
       "position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "77399d9d-4771-4a4d-8b52-57927a12a531",
+        "lesson_activity.key": "a208bf3f-69f5-4585-92d5-07f33bd811af"
+      }
+    },
+    {
+      "key": "3d570c8c-9a52-4a73-85af-77f4d9915236",
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 1. Students will begin drafting the Co-Creation with AI portion of their project.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for drafts that include (a) a clear evidence from explorations and mini-lessons, (b) rules, guidance, and advice that comes from those sources, and (c) a connections to specific conversations from the jigsaw. Prompt students who miss any of these to add one concrete example or check.",
         "progression_name": "Project Work - Milestone 2"
@@ -1820,6 +1830,28 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/courses/aid-thinking-critically-about-ai-2025/units/1/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/courses/aid-thinking-critically-about-ai-2025/units/1/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
       "name": "Exploration Guide: AI as Campaign Manager",
       "url": "https://docs.google.com/document/d/1YRJ7V-_2mMw17i3jAwQ-MqL5HjmMX7WVsdf2BfOU4cI/edit?usp=sharing",
       "key": "exploration_guide_ai_as_campaign_manager",
@@ -1859,6 +1891,17 @@
       },
       "seeding_key": {
         "resource.key": "exploration_guide_ai_in_creative_writing"
+      }
+    },
+    {
+      "name": "Guide to Project-Based Learning",
+      "url": "https://docs.google.com/document/d/1ieLxLxiCZQXHzvhXX6ebvlX2ce1KFeKE5NSrPzF9ff4/edit?usp=sharing",
+      "key": "guide_to_project-based_learning",
+      "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_project-based_learning"
       }
     },
     {
@@ -2058,7 +2101,24 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "aid-thinking-critically-about-ai-pilot-2026"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "aid-thinking-critically-about-ai-pilot-2026"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_project-based_learning",
+        "script.name": "aid-thinking-critically-about-ai-pilot-2026"
+      }
+    }
   ],
   "scripts_student_resources": [
 

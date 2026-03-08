@@ -11,7 +11,7 @@ import {LOOK_ID, SVG_ID} from './constants';
 // include the option to not use ProtectedVisualizationDiv.
 const Visualization = function ({useProtectedDiv = true}) {
   const innerComponent = (
-    <svg version="1.1" id={SVG_ID}>
+    <svg id={SVG_ID}>
       <g id={LOOK_ID}>
         <path d="M 0,-15 a 15 15 0 0 1 15 15" />
         <path d="M 0,-35 a 35 35 0 0 1 35 35" />

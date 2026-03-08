@@ -59,16 +59,6 @@ const rehydrateAIResponse = <TOOLS extends SDKTools, OUTPUT extends SDKOutput>(
     toolCalls: serialized.toolCalls ?? [],
     toolResults: serialized.toolResults ?? [],
     warnings: serialized.warnings ?? [],
-
-    get text() {
-      if (serialized.text === undefined) {
-        throw new Error(
-          'No text was generated. The model likely finished due to tool calls.'
-        );
-      }
-      return serialized.text;
-    },
-
     files: serialized.files?.map(file => ({
       mediaType: file.mediaType,
       base64: file.base64,

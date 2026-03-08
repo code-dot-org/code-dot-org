@@ -215,7 +215,7 @@
         "35"
       ]
     },
-    "long_instructions": "# Do This:\r\nComplete this task from your persona’s perspective.\r\n\r\nAs you work, notice what feels frustrating or harder than it should.\r\n\r\n### Task\r\n\r\nFind one **dog** that is:\r\n\r\n- Under 2 years old  \r\n- Good with kids  \r\n- Small  \r\n\r\nOpen **Details** to confirm.  \r\nClick **Adopt**.\r\n\r\nWhen you’re done, move Part 1 of your activty guide.",
+    "long_instructions": "# Usability Checklist\r\n\r\n### Do This:\r\n\r\n1. Complete the task below from your selected user’s perspective.  \r\n2. Then return to your Activity Guide and complete **Part 2: Usability Checklist** based on your experience.\r\n\r\n### Task\r\n\r\n1. Find one **dog** that is:\r\n\t- Under 2 years old  \r\n\t- Good with kids  \r\n\t- Small  \r\n2. Open **Details** to confirm you've found an appropriate dog.  \r\n3. Click **Adopt**.",
     "ai_tutor_prompt_settings": {
       "answerTypes": [
         "ask"
@@ -224,6 +224,6 @@
       }
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-03T05:04:13.522+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson2-level1_2025-v2\\\"\"],\"cloned_from\":\"ai-generated-design-lesson2-level1_2025-v2\"},{\"changed_at\":\"2026-03-03 05:08:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-03 05:43:01 +0000\",\"changed\":[\"widget_view\",\"initial_view_mode\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-03 06:41:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-03 06:45:42 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-03 07:30:47 +0000\",\"changed\":[\"widget_view\",\"initial_view_mode\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-03T05:04:13.522+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson2-level1_2025-v2\\\"\"],\"cloned_from\":\"ai-generated-design-lesson2-level1_2025-v2\"},{\"changed_at\":\"2026-03-03 05:08:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-03 05:43:01 +0000\",\"changed\":[\"widget_view\",\"initial_view_mode\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-03 06:41:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-03 06:45:42 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-03 07:30:47 +0000\",\"changed\":[\"widget_view\",\"initial_view_mode\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-05 09:09:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Weblab2>
