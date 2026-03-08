@@ -10,6 +10,7 @@ module Cdo
       raise 'jemalloc is only supported on Linux' unless RUBY_PLATFORM.include?('linux')
       raise 'jemalloc was not found in `ldconfig -p`' unless installed?
 
+      puts "jemalloc_env_if_enabled(): returning LD_PRELOAD=#{JEMALLOC_SONAME}"
       "LD_PRELOAD=#{JEMALLOC_SONAME} "
     end
 
