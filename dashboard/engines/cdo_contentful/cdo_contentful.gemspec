@@ -1,6 +1,8 @@
+require_relative 'lib/cdo_contentful/version'
+
 Gem::Specification.new do |spec|
   spec.name     = 'cdo_contentful'
-  spec.version  = '0.1.0'
+  spec.version  = CdoContentful::VERSION
   spec.authors  = ['Code.org']
   spec.licenses = [Gem::Licenses::NONSTANDARD] # ['Code.org License']
   spec.summary  = 'Code.org Contentful space clients for Dashboard'
