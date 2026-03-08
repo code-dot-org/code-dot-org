@@ -16,8 +16,7 @@ markdown <<MARKDOWN
 <div style="font-weight:800; font-size:20px; margin-bottom:14px; color:#0093A4;">Scenario</div>
 <div style="margin-bottom:18px;">Ms. Thompson, a 3rd-grade teacher, pastes her reading lesson into an AI tool and asks:</div>
 <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:18px; margin-bottom:18px;">
-<div style="font-size:14px; font-weight:700; color:#8C52BA; margin-bottom:8px;">Prompt to AI</div>
-<div style="font-size:16px; font-weight:600;">“Make this lesson more engaging.”</div>
+<div style="font-size:16px">Make this lesson more engaging.</div>
 </div>
 <div>The AI suggests small-group debates, independent online research, and a written reflection. None of these fit her students’ reading level, classroom setup, or time constraints. She feels frustrated and decides the tool “isn’t useful for elementary teachers.”</div>
 </div>
@@ -31,8 +30,7 @@ markdown <<MARKDOWN
 <div style="font-weight:800; font-size:20px; margin-bottom:12px; color:#0093A4;">Quick Tip</div>
 <div style="margin-bottom:18px;">The more specific your context, the more useful and realistic the AI’s response will be.</div>
 <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:18px;">
-<div style="font-size:14px; font-weight:700; color:#8C52BA; margin-bottom:8px;">Safer Prompt Example</div>
-<div style="font-size:16px; font-weight:600;">“Make this 3rd-grade reading lesson more engaging. Constraints: 30 minutes, no devices, whole-group then pairs, reading level around ___, goal: ___, and I need 2 options that use simple materials.”</div>
+<div style="font-size:16px;">Make this 3rd-grade reading lesson more engaging. Constraints: 30 minutes, no devices, whole-group then pairs, reading level around ___, goal: ___, and I need 2 options that use simple materials.</div>
 </div>
 </div>
 </div>

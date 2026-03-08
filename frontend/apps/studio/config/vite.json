@@ -2,12 +2,14 @@
   "all": {
     "sourceCodeDir": ".",
     "root": ".",
-    "watchAdditionalPaths": []
+    "watchAdditionalPaths": [],
+    "autoBuild": false,
+    "publicDir": "dist",
+    "publicOutputDir": "frontend-studio"
   },
   "development": {
     "host": "0.0.0.0",
     "autoBuild": true,
-    "publicOutputDir": "app",
     "port": 3036
   }
 }

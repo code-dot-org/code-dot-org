@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-02 16:27:11 UTC",
+    "serialized_at": "2026-03-05 17:45:17 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -117,6 +117,27 @@
       },
       "seeding_key": {
         "activity_section.key": "a259e062-4bdd-43ac-ad2f-676a806ef188",
+        "lesson_activity.key": "6cb0d829-446a-42be-ad42-ec07a58a64cd"
+      }
+    },
+    {
+      "key": "034d1f92-6e99-4959-b13c-1184aafc69b7",
+      "position": 6,
+      "properties": {
+        "progression_name": "Catching Problems"
+      },
+      "seeding_key": {
+        "activity_section.key": "034d1f92-6e99-4959-b13c-1184aafc69b7",
+        "lesson_activity.key": "6cb0d829-446a-42be-ad42-ec07a58a64cd"
+      }
+    },
+    {
+      "key": "83febae5-1619-47b6-ad18-17eaf24b1a84",
+      "position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "83febae5-1619-47b6-ad18-17eaf24b1a84",
         "lesson_activity.key": "6cb0d829-446a-42be-ad42-ec07a58a64cd"
       }
     }
@@ -788,6 +809,116 @@
       "level_keys": [
         "plaif-2-U5-music-app-weblab"
       ]
+    },
+    {
+      "chapter": 29,
+      "position": 29,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Catching Problems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-catching-problems"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "034d1f92-6e99-4959-b13c-1184aafc69b7"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-catching-problems"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 30,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Catching Problems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif2-U5-try-catch-video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "034d1f92-6e99-4959-b13c-1184aafc69b7"
+      },
+      "level_keys": [
+        "pl-aif2-U5-try-catch-video"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 31,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Catching Problems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl=aif-2-U5- try-catch-weblab"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "034d1f92-6e99-4959-b13c-1184aafc69b7"
+      },
+      "level_keys": [
+        "pl=aif-2-U5- try-catch-weblab"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 32,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Catching Problems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-keeping-users-informed"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "034d1f92-6e99-4959-b13c-1184aafc69b7"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-keeping-users-informed"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 33,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Catching Problems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-matching-errorstates"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "034d1f92-6e99-4959-b13c-1184aafc69b7"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-matching-errorstates"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -1125,6 +1256,66 @@
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-5",
         "activity_section.key": "a259e062-4bdd-43ac-ad2f-676a806ef188"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-catching-problems",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-catching-problems"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "034d1f92-6e99-4959-b13c-1184aafc69b7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif2-U5-try-catch-video",
+        "script_level.level_keys": [
+          "pl-aif2-U5-try-catch-video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "034d1f92-6e99-4959-b13c-1184aafc69b7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl=aif-2-U5- try-catch-weblab",
+        "script_level.level_keys": [
+          "pl=aif-2-U5- try-catch-weblab"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "034d1f92-6e99-4959-b13c-1184aafc69b7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-keeping-users-informed",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-keeping-users-informed"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "034d1f92-6e99-4959-b13c-1184aafc69b7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-matching-errorstates",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-matching-errorstates"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "034d1f92-6e99-4959-b13c-1184aafc69b7"
       }
     }
   ],

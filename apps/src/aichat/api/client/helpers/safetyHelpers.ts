@@ -52,7 +52,10 @@ export async function isTextSafe(
   return classification === 'OK';
 }
 
-export async function isImageSafe(image: File, ext: string): Promise<boolean> {
-  const moderationStatus = await moderateImage(image, ext, 'aichat');
+export async function isModelOutputImageSafe(
+  image: File,
+  ext: string
+): Promise<boolean> {
+  const moderationStatus = await moderateImage(image, ext, 'aichat', true); // isModelOutputImage = true
   return moderationStatus === 'ok' || moderationStatus === 'skipped';
 }
