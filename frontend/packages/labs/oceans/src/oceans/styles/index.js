@@ -6,6 +6,13 @@ const styles = {
     width: '100%',
     paddingTop: '56.25%' // for 16:9
   },
+  bodyChildren: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%'
+  },
   content: {
     position: 'absolute',
     top: 0,
@@ -418,7 +425,8 @@ const styles = {
     cursor: 'pointer',
     height: '100%',
     border: 'none',
-    padding: '10px',
+    padding: '12%',
+    display: 'flex',
     margin: 0,
     ':focus': {
       position: 'relative',
