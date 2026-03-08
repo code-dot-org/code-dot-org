@@ -219,6 +219,7 @@ steps:
         path: /var/lib/mysql
     environment:
       CI_JOB: 'ui_tests'
+      CDO_DASHBOARD_USE_JEMALLOC: 'true'
       # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_env.sh
       CLOUDFRONT_KEY_PAIR_ID:
         from_secret: CLOUDFRONT_KEY_PAIR_ID

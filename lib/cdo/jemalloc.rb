@@ -25,5 +25,19 @@ module Cdo
       maps = File.exist?('/proc/self/maps') ? File.read('/proc/self/maps') : ''
       maps.include?('libjemalloc')
     end
+
+    def self.log_jemalloc_status
+      return unless CDO.dashboard_use_jemalloc
+
+      if preloaded?
+        message = 'USING JEMALLOC'
+        puts message
+        Rails.logger.info(message)
+      else
+        message = 'ERROR: NOT USING JEMALLOC. CDO.dashboard_use_jemalloc was true, but jemalloc was NOT found preloaded in /proc/self/maps'
+        puts message
+        Rails.logger.error(message)
+      end
+    end
   end
 end

@@ -440,6 +440,9 @@ dashboard_sock:
 puma_control_server_relative_socket_path: tmp/pumactl.sock
 puma_control_server_token: !Secret
 
+# Linux only: preload jemalloc when launching puma / dashboard-server
+dashboard_use_jemalloc: false
+
 # Session timeout in days. Controls both the Devise timeout and the Rails session store (Redis) TTL.
 dashboard_session_ttl_days: 40
 

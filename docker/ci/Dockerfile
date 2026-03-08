@@ -82,6 +82,7 @@ RUN apt-get install -y --no-install-recommends \
     imagemagick \
     jq \
     libicu-dev \
+    libjemalloc2 \
     libmagickwand-dev \
     locales \
     moreutils \

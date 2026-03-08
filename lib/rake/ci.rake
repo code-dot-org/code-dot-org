@@ -3,6 +3,7 @@ require 'cdo/chat_client'
 require 'cdo/rake_utils'
 require 'cdo/ci_utils'
 require 'cdo/git_utils'
+require 'cdo/jemalloc'
 require 'cdo/sauce_connect'
 require 'open-uri'
 require 'json'
@@ -123,7 +124,9 @@ namespace :ci do
     RakeUtils.system_stream_output 'mkdir -p $CI_TEST_REPORTS/cucumber'
 
     Dir.chdir('dashboard') do
-      RakeUtils.exec_in_background 'RAILS_ENV=test bundle exec puma -e test'
+      puma_cmd = "RAILS_ENV=test #{Cdo::Jemalloc.jemalloc_env_if_enabled} "
+      puma_cmd << 'bundle exec puma -e test'
+      RakeUtils.exec_in_background puma_cmd
     end
     ui_test_browsers = browsers_to_run
     use_saucelabs = !ui_test_browsers.empty?

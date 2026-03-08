@@ -1,3 +1,5 @@
+require_relative 'jemalloc'
+
 module Cdo
   # NOTE: these hooks are only executed when running in puma clustered mode, which spawns worker processes.
   # These hooks will NOT be run in local development unless you set `dashboard_workers: 1` (or greater)
@@ -48,6 +50,8 @@ module Cdo
     end
 
     def self.after_booted
+      Cdo::Jemalloc.log_jemalloc_status
+
       # Publish puma metrics in production, the managed test server, and adhoc environments.
       if CDO.rack_env?(:production) || CDO.test_system? || CDO.rack_env?(:adhoc)
         require 'cdo/app_server_metrics'
