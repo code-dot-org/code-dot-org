@@ -2,21 +2,20 @@
 
 Recreation of ../../cloudformation/codeai-k8s.cloudformation.yml
 
+See: `tofu.tfvars.example` if you need to change defaults
+
 ## Usage
 
 From this directory:
 
 ```bash
 tofu init
-tofu plan -var-file=tofu.tfvars
-tofu apply -var-file=tofu.tfvars
+tofu plan
+tofu apply
 ```
-
-If you are just starting, copy `tofu.tfvars.example` to `tofu.tfvars` and adjust values as needed.
 
 Configure `kubectl` to reach the new cluster:
 
 ```bash
-CLUSTER_NAME=codeai-k8s
-aws eks update-kubeconfig --region us-east-1 --name "$CLUSTER_NAME"
+aws eks update-kubeconfig --region us-east-1 --name "$(tofu output -raw cluster_name)"
 ```

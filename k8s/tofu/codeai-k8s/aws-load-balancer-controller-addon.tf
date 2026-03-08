@@ -30,6 +30,6 @@ module "aws_load_balancer_controller_addon" {
 
   depends_on = [
     module.eks,
-    terraform_data.restart_coredns_after_deploy,
+    # terraform_data.restart_coredns_after_deploy,
   ]
 }
