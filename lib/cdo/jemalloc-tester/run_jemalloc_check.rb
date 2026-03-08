@@ -8,4 +8,4 @@ end
 
 require_relative './jemalloc'
 
-exec('bash', '-lc', "#{Cdo::Jemalloc.jemalloc_env} ruby ./jemalloc_check.rb")
+exec('bash', '-lc', "#{Cdo::Jemalloc.jemalloc_env_if_enabled} ruby ./jemalloc_check.rb")
