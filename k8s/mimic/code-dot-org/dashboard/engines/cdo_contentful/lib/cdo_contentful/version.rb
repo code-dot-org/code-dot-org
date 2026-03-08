@@ -1,0 +1,1 @@
+../../../../../../../../dashboard/engines/cdo_contentful/lib/cdo_contentful/version.rb
