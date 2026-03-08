@@ -1,7 +1,9 @@
-# syntax=docker/dockerfile:1.7-labs
+# syntax=docker/dockerfile:1.22
 
-# We use syntax=docker/dockerfile:1.7-labs to get access to:
+# We pin to syntax=docker/dockerfile:1.22 to get access to:
 # - `COPY --parents`, see: https://docs.docker.com/reference/dockerfile/#copy---parents
+#
+# NOTE: switch back to `docker/dockerfile:1` once it updates to track a version >=1.22
 
 # Pull in the static assets and db seed layers
 # built from separate dockerfiles by skaffold
@@ -27,7 +29,8 @@ COPY --chown=${UID} \
 
 # Gemfile includes **/engines/*/*.gemspec, so we need to include them here too
 #
-# WARNING: we are using `COPY --parents` here, which currently (mar 2025) requires `syntax=docker/dockerfile:1.7-labs`
+# WARNING: we are using `COPY --parents` here, which requires syntax with
+# `--parents` support (for example `docker/dockerfile:1.22`).
 # the alternative would be to manually list each engine gemspec file as it gets added.
 COPY --chown=${UID} \
   --parents \
@@ -82,15 +85,10 @@ COPY --chown=${UID} \
   ./apps/eslint \
   ./apps/eslint/
 
-# Required to handle the `portal:../frontend/packages/component-library` link in apps/package.json
 COPY --chown=${UID} \
-  ./frontend/packages/component-library/package.json \
-  ./frontend/packages/component-library/
-
-# Required to handle the `portal:../frontend/packages/component-library-styles` link in apps/package.json
-COPY --chown=${UID} \
-  ./frontend/packages/component-library-styles/package.json \
-  ./frontend/packages/component-library-styles/
+  --parents \
+  ./frontend/**/package.json \
+  ./
 
 RUN \
   #
