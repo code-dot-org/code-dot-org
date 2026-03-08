@@ -20,6 +20,7 @@ module "eks" {
 
   # Fargate pods use the cluster primary security group, not a node SG:
   create_node_security_group = false
+  endpoint_public_access     = true
 
   #=============================================================
   # Map AWS IAM roles to cluster permissions (affects kubectl)
