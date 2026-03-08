@@ -13,7 +13,7 @@
 version: "3"
 services:
   site:
-    image: codedotorg/cdo-ci:1.18
+    image: codedotorg/cdo-ci:jemalloc
     user: ${FIXUID:-1000}:${FIXGID:-1000}
     volumes:
       - ../:/home/ci/code-dot-org:delegated
