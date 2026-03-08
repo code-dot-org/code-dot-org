@@ -51,9 +51,3 @@ variable "private_subnet_2_cidr" {
   type        = string
   default     = "10.0.208.0/20"
 }
-
-variable "aws_load_balancer_controller_chart_version" {
-  description = "Helm chart version for the AWS Load Balancer Controller."
-  type        = string
-  default     = "3.1.0"
-}

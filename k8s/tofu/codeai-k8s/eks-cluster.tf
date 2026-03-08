@@ -49,6 +49,21 @@ module "eks" {
     }
   }
 
+  #=============================================================
+  # Core EKS managed addons
+  #=============================================================
+  addons = {
+    coredns = {
+      most_recent = true
+    }
+    kube-proxy = {
+      most_recent = true
+    }
+    vpc-cni = {
+      most_recent = true
+    }
+  }
+
   #============================================================
   # Fargate profiles: which namespaces run on Fargate?
   #============================================================
