@@ -10,8 +10,12 @@ From this directory:
 
 ```bash
 tofu init
-tofu plan
-tofu apply
+
+# Make a plan with read-only creds
+AWS_PROFILE=cdo tofu plan -lock=false
+
+# Executing the plan requires admin (not cdo-readwrite) because it adds IAM roles
+AWS_PROFILE=codeorg-admin tofu apply
 ```
 
 Configure `kubectl` to reach the new cluster:
