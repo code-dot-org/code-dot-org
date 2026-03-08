@@ -85,13 +85,4 @@ module "eks" {
     }
   }
 
-  depends_on = [
-    aws_route_table_association.public_1,
-    aws_route_table_association.public_2,
-    aws_route_table_association.private_1,
-    aws_route_table_association.private_2,
-    aws_route.public_internet,
-    aws_route.private_1_nat,
-    aws_route.private_2_nat,
-  ]
 }
