@@ -1,7 +1,9 @@
-# syntax=docker/dockerfile:1.7-labs
+# syntax=docker/dockerfile:1.22
 
-# We use syntax=docker/dockerfile:1.7-labs to get access to:
+# We pin to syntax=docker/dockerfile:1.22 to get access to:
 # - `COPY --parents`, see: https://docs.docker.com/reference/dockerfile/#copy---parents
+#
+# NOTE: switch back to `docker/dockerfile:1` once it updates to track a version >=1.22
 
 # Pull in the static assets and db seed layers
 # built from separate dockerfiles by skaffold
@@ -25,13 +27,16 @@ COPY --chown=${UID} \
   Gemfile.lock \
   ./
 
-# Gemfile includes **/engines/*/*.gemspec, so we need to include them here too
-#
-# WARNING: we are using `COPY --parents` here, which currently (mar 2025) requires `syntax=docker/dockerfile:1.7-labs`
-# the alternative would be to manually list each engine gemspec file as it gets added.
+# Gemfile includes **/engines/*/*.gemspec, so we need to include them here too,
+# and gemspecs by default depend on a version.rb file so we copy that in too.
 COPY --chown=${UID} \
   --parents \
-  ./**/engines/*/*.gemspec \
+  ./dashboard/engines/*/*.gemspec \
+  ./
+
+COPY --chown=${UID} \
+  --parents \
+  ./dashboard/engines/*/lib/*/version.rb \
   ./
 
 RUN --mount=type=cache,sharing=locked,uid=${UID},gid=${GID},target=${HOME}/.rbenv/versions/3.0.5/lib/ruby/gems/3.0.0/cache <<EOF
@@ -82,15 +87,12 @@ COPY --chown=${UID} \
   ./apps/eslint \
   ./apps/eslint/
 
-# Required to handle the `portal:../frontend/packages/component-library` link in apps/package.json
+# NOTE: Docker supports `**` globs here, but Skaffold dependency/context handling
+# does not yet, so we use `*` for now.
 COPY --chown=${UID} \
-  ./frontend/packages/component-library/package.json \
-  ./frontend/packages/component-library/
-
-# Required to handle the `portal:../frontend/packages/component-library-styles` link in apps/package.json
-COPY --chown=${UID} \
-  ./frontend/packages/component-library-styles/package.json \
-  ./frontend/packages/component-library-styles/
+  --parents \
+  ./frontend/packages/*/package.json \
+  ./
 
 RUN \
   #

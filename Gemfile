@@ -89,9 +89,6 @@ group :development do
   # We only use it in development atm to get a feel for it, and the benefit is greatest here.
   gem 'bootsnap', '>= 1.14.0', require: false
   gem 'localhost'
-
-  # This gem is installed in development only for now while the node version in deployed environments is upgraded.
-  gem "vite_rails", "~> 3.0"
 end
 
 # Rack::Cache middleware used in development/test;
@@ -281,6 +278,7 @@ gem 'aws-sdk-glue'
 gem 'aws-sdk-rds'
 gem 'aws-sdk-route53'
 gem 'aws-sdk-s3', '~> 1.113'
+gem 'aws-sdk-sagemaker'
 gem 'aws-sdk-sagemakerruntime'
 gem 'aws-sdk-secretsmanager'
 
@@ -435,3 +433,6 @@ gem 'openssl', '>= 3.3.1'
 
 # Used for Clever Client
 gem 'typhoeus', '~> 1.0', '>= 1.0.1'
+
+# Used for Vite integration, only available in development and adhoc at this time.
+gem "vite_rails", "~> 3.0", group: [:development, :adhoc, :staging, :test]
