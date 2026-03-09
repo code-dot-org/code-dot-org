@@ -1,17 +1,18 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-02-24T18:10:37.000Z",
   "level_num": "custom",
   "user_id": 1574,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "1. **Prompt and Refine**  \r\n   Ask AI to recreate your chosen feature from Level 1. If it’s off, ask for a fix.\r\n   &nbsp\r\n   \r\n   - _Example Initial Prompt_: “Create a nav bar with a logo left and 3 links right.”\r\n   - _Example Revision Prompt_: “Add more spacing between the links.”\r\n\r\n2. **Save Version 1 (v1)**  \r\n   When it looks right, open Version History and describe your changes with a short message. For example, *“v1 – working nav bar.”* Then click Save version.\r\n\r\n:::details [**(Optional) Break It On Purpose**]\r\n   Try a risky prompt (e.g., “Rebuild layout with CSS Grid everywhere”).  \r\n   Observe what breaks, then **Revert** to your saved v1.\r\n:::\r\n\r\n",
+    "long_instructions": "## Use AI to Code Your Web App - Structure \r\n\r\n1. **Prompt AI for HTML**  \r\n   Ask AI to create the web app you outlined for your selected user. Copy and paste the prompt you drafted in Level 1 and clarify that you just want the `index.html` file.\r\n\r\n2. **Accept and Save**  \r\n   Briefly describe what AI changed, e.g. `Created index.html for garden web app` Then click **\"Accept and save version\"**.\r\n\r\n\r\n",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "false",
     "widget_view": "false",
-    "initial_view_mode": "split",
+    "initial_view_mode": "code",
     "ai_tutor_mode": "designer",
     "predict_settings": {
       "isPredictLevel": false,
@@ -29,62 +30,23 @@
       "folders": {
       },
       "files": {
-        "1": {
-          "id": "1",
-          "name": "index.html",
-          "language": "html",
-          "contents": "<!DOCTYPE html>\n<html>\n  <body>\n    Content goes here!\n  </body>\n</html>\n  ",
-          "active": true,
-          "folderId": "0"
-        },
-        "2": {
-          "id": "2",
-          "name": "styles.css",
-          "language": "css",
-          "contents": "Add your changes to styles.css",
-          "folderId": "0",
-          "active": false
-        },
-        "3": {
-          "id": "3",
-          "name": "stainless_steel_bottle.jpg",
-          "language": "jpg",
-          "contents": "",
-          "folderId": "0",
-          "url": "/level_starter_assets/ai-generated-design-lesson3-level2-test-2025/uuid/10ecea80-7e9b-4058-aaab-84e4ac0ddb49.jpg",
-          "type": "starter",
-          "active": false
-        },
-        "4": {
-          "id": "4",
-          "name": "collapsible_cup.jpg",
-          "language": "jpg",
-          "contents": "",
-          "folderId": "0",
-          "url": "/level_starter_assets/ai-generated-design-lesson3-level2-test-2025/uuid/ffd265be-122d-42e8-844a-c2cc37f23f35.jpg",
-          "type": "starter",
-          "active": false
-        },
-        "5": {
-          "id": "5",
-          "name": "glass_tumbler.jpg",
-          "language": "jpg",
-          "contents": "",
-          "folderId": "0",
-          "url": "/level_starter_assets/ai-generated-design-lesson3-level2-test-2025/uuid/9f715de5-aa90-4d5c-b0f6-387cd4f5dd77.jpg",
-          "type": "starter",
-          "active": false
-        }
       },
       "openFiles": [
-        "1",
-        "2"
+
       ]
     },
-    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMq6axOHbZCY2Ot6j2ta\nc2xUssWeFgyQik6LW5d9KjvGXB0WNtSc6Aew3gFAHiWxOPOkXODL1KEHdyrC\n197vfOvUyempysyXw77NCjviYRUdHKAC/uKseWjOSd/luHbWryZdQXxfD7z9\nokjk2ZoJgIn0RmH7MQyBfBRo712t2rVGvMzGUGBWJezz+P1nZNSkE+MKb3lQ\nVL6GabeoJcLoT6nBisCPR8ivDC3JWcTUMZbKwKubpziZwVWL+cpBX0EHkw03\nmhpRXForCi4z/sXzgUfcgQcaDwP+3y4Bm+l4HqfT+ymhzgWcYaYZXTe8RatI\nECHrtQVlocAECKCxrZizta4i7+uH7TUnQ9j4SgeQ2AWcki+dINAC8U1ePjPm\nlZfEQ0h2e+51fJiAlLi/ahyiJyq2gM/9qVIb4sIzAzG91vI3JlH6cqDm79Iw\n59UHPLR/IWIanyfR4ut3AJrtQnrY3/3naGRopJ2m5h50oarJ7gPO/Nu3JppB\nHU6fnuDcd9ht+rH8o4d2lM0Wn3Vy6e6c2NAiXx8qoArcgdRq7nc1b+vTu6a7\n7dQPDqtQzdL08zx6qSZiTrrx0OU6qVB1QtXq2QwnwQjyLKDgm2HGrTJ+m4UP\nWo/hBm0rO0vXqy//9gk1/UppoS1Iuw5G08yKE6y4WeVXuMBvBBJphEZHi+h3\nnzM+OxJg6Mw3AlHfqRYPpJOlHSD2iPeKGvOr5c5RiVTI5TCsQqfEQHkPpA4A\nRu8Put6R+is/svhw/Dx+daG4xcd96mpcNwZVUPXsLgW3gsZEVIuF9ZDlQAbX\nFfPKAnzFAzgaqi4GOHU0OuIrP7rW7dQoBOL4NGjL+XiNlUHkT3YsjIDg5lOa\nzB/IEnmYCtdj2dTR7rx9enfBdAMBb8HBggd02r0gHDpKbKrWzT2OhrJHHV7a\neavyCc/LOpqWHq7adiZToV61RmK5AGIqyrSeEKy7B4vjfcl+LMve5IfamyZ7\nlsGWDiwZSY08jldXdOFNoUw5JaUH94iIwBUzq2wpUnUVBI7psePJZAwW/OsB\nCy0WmuWwGfVmmUWHB8eGjD+zPSD3FWuUWfOadO+tNA3JJzklnLtA3h9Wuwod\n/Kw2JXiJ7KMsbM4nlUwKR4lOktH855KEEm5uMCBtlcNC671Z5wE0nXShImWR\nPSGRPNkGLHPEncpu9tvgeYDh3Tz5xwMjkDCSy3Wfp1Z8x+bZWU95AulF7OpE\nsMShNWlCqwoqM2xp52dDyLhi17Ttq/cn2gpHbbbdZzYtdcvDw4eQdk5wKWC4\n1RhsqfzsESsYC2ScNqZUNRovwFNSAVqSN2OW83V+xEXvBodp5O9eK16hoNcE\nYcq/CS3P6s3KsvoANz7dgu+ir0Ay17wI/RPqj0DtT/k1BrUcND/Faoh2stdE\ncMbVXPDzqGQYVgjmbQagS75wGnJ/xOObDli0UZ1+xtScUM9C5lGMA3vw8Qg6\nHCCL6uvkxoXU8lFAvzyRBHsGir5KUE7haWDQp+1QuGhiurcllYOEmLT70kGe\nfq16UBtqbMZnfKdiOaRZ+FokC1Z9Xv55ysmwQKlNucmnT57dScPWfJdSMwVF\nazTtIbHXKQbmxFMKuVchdn+QSU0804FFaQwXWnwaYx2Y8AlLprBSwThXHfcD\nOgnphIVuUSlRnI7UpN2TXdYmnY8sZNuXmfcc8XOa9r5gNEPj9MDvib5dzqZx\nZ310fpjeor4UlmVzL5LG08377O5nPYUcLzIOoYH6WGSBb6EoUOHkaIJT9Og2\nJmOOHirFr476BUdKvQAnsU0i4cszD/yz6Gi1CqsJFFT3B/vGSAPM5KGuHJb0\nUp83IB+FPAG03veMktGHMMzbhSBET0aoKb6iZBhFJ02mmD7kD++qXdopB0Eq\n",
-    "name_suffix": "_2026"
+    "encrypted_exemplar_sources": "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\nI6YJTDe0C8wx+5A=\n",
+    "name_suffix": "_2026",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "project_template_level_name": "ai-generated-design-lesson3-template_2026",
+    "teacher_markdown": "## Level 3 — Teaching Tips (HTML / Structure)\r\n\r\n- **Reinforce structure vs. style.**  \r\n  This level focuses only on *structure* (what appears on the page), not colors or fonts yet.\r\n\r\n- **Watch for under-specific prompts.**  \r\n  If students write something vague like “make me a gardening app,” push them to include:\r\n  - What information appears  \r\n  - What buttons exist  \r\n  - How missing data should be handled  \r\n\r\n- **Ensure they request only `index.html`.**  \r\n  AI may generate CSS or extra files unless students clearly state:  \r\n  > “Generate only the `index.html` file.”\r\n\r\n- **Address the “AI must be right” misconception.**  \r\n  Encourage students to skim the output and ask:\r\n  - Is anything missing?  \r\n  - Are edge cases handled?  \r\n  - Does this match the plan from Level 1?\r\n\r\n- **Connect back to planning.**  \r\n  Remind students they already defined requirements, constraints, and edge cases — now they are translating that thinking into HTML.\r\n\r\n\r\n"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:10:37.244+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson3-level3_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson3-level3_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:10:37.244+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson3-level3_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson3-level3_2025\"},{\"changed_at\":\"2026-03-04 22:19:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 22:24:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 22:25:06 +0000\",\"changed\":[\"initial_view_mode\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 22:26:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 22:29:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 23:27:11 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 19:32:13 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 20:57:45 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 22:08:56 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

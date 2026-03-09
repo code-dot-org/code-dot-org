@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 require 'aws-sdk-applicationautoscaling'
+require 'aws-sdk-sagemaker'
 require 'aws-sdk-secretsmanager'
 require 'colorize'
 require 'optparse'
@@ -74,7 +75,7 @@ def main
     print "\nFetching HuggingFace Access Token..."
     secrets_manager = Aws::SecretsManager::Client.new
     value = secrets_manager.get_secret_value(
-      {secret_id: "#{options[:environment]}/gen-ai-curriculum/huggingface_token"}
+      {secret_id: "#{options[:environment]}/cdo/gen_ai_curriculum_huggingface_token"}
     )
     options[:token] = value.secret_string
     puts "done".colorize(:light_green)
@@ -87,7 +88,11 @@ def main
   unless options[:dry_run]
     puts "\nChecking autoscaling targets...\n"
     Config::ENDPOINT_CONFIGS.each do |config|
-      deregister_auto_scaling(config[:model_id], options[:environment])
+      if instance_type_changed?(config[:model_id], options[:environment], config[:instance_type])
+        deregister_auto_scaling(config[:model_id], options[:environment])
+      else
+        puts "Instance type unchanged for #{config[:model_id]}, skipping deregistration."
+      end
     end
   end
 
@@ -138,6 +143,24 @@ def main
   puts "Done!".colorize(:light_green)
 rescue StandardError => exception
   puts "Error #{exception.message}"
+end
+
+# Checks whether the instance type for the given endpoint has changed from what's currently deployed.
+def instance_type_changed?(model_id, environment, new_instance_type)
+  client = Aws::SageMaker::Client.new
+  endpoint_name = "#{model_id}-#{environment}"
+
+  endpoint = client.describe_endpoint(endpoint_name: endpoint_name)
+  endpoint_config = client.describe_endpoint_config(
+    endpoint_config_name: endpoint.endpoint_config_name
+  )
+  current_instance_type = endpoint_config.production_variants[0].instance_type
+  changed = current_instance_type != new_instance_type
+  puts "Instance type for #{model_id}: current=#{current_instance_type}, desired=#{new_instance_type}, changed=#{changed}"
+  changed
+rescue Aws::SageMaker::Errors::ServiceError => exception
+  puts "Could not check instance type for #{model_id} (#{exception.message}), skipping deregistration."
+  false
 end
 
 # There is currently no Cloudformation support for deregistering scalable targets.

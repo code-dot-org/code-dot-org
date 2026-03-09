@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-03-03T20:00:35.000Z",
   "level_num": "custom",
@@ -7,9 +8,47 @@
   "properties": {
     "display_name": "What makes something look real?",
     "bubble_choice_description": "Explore how AI creates images that look real by copying patterns it has seen before and test what happens when you ask for detailed.",
-    "thumbnail_url": "https://images.code.org/42fdc7c6c601804d869d4215bc636739-generative-image.png"
+    "thumbnail_url": "https://images.code.org/42fdc7c6c601804d869d4215bc636739-generative-image.png",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash-image",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an AI image generator creating realistic, visually appealing images.\n\nWhen generating images:\n\nPrioritize strong visual style and professional composition.\n\nUse familiar advertising and social media design patterns.\n\nMake images look polished and believable at first glance.\n\nInclude realistic lighting, textures, and layout.\n\nDo not prioritize precise real-world accuracy in small details.\n\nText in images may be approximate or stylistic rather than exact.\n\nWhen asked for more detail, attempt to add it but do not verify consistency across all elements.\n\nYour goal is to create images that feel realistic and trustworthy at a glance, even if fine details are imperfect.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gemini-2.5-flash-image"
+      ],
+      "multimodalEnabled": false
+    },
+    "long_instructions": "#Step 1: Generate It.\r\n\r\n1. Create three images using nearly the same prompt.\r\n\r\n\t- Which one looks most real at first glance?\r\n\r\n#Step 2: Stress It.\r\n\r\n2. Push the image toward real-world details.\r\n\r\n\t- Show people actually using it\r\n\r\n\t- Add labels or text\r\n\r\n\t- Put it in a real setting\r\n\r\n\t- Zoom in on details\r\n\r\n**Does it stay consistent?\r\nOr does it start to fall apart?**"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-04 02:05:43 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-04 02:08:04 +0000\",\"changed\":[\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-04 02:05:43 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-04 02:08:04 +0000\",\"changed\":[\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-04 16:17:26 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-04 16:18:23 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-04 16:20:01 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-05 18:39:25 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Aichat>

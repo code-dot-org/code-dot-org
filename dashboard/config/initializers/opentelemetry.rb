@@ -1,5 +1,6 @@
-# Only configure OpenTelemetry if enabled in CDO config, to avoid unnecessary overhead in environments where it's not needed
-if CDO.enable_opentelemetry
+# Only configure OpenTelemetry if enabled in CDO config, to avoid unnecessary overhead in environments where it's not needed.
+# Also skip in unit tests to avoid instrumentation overhead.
+if CDO.enable_opentelemetry && !ENV['UNIT_TEST']
   require 'opentelemetry/sdk'
   require 'opentelemetry/instrumentation/all'
   require 'opentelemetry-exporter-otlp'

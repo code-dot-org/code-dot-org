@@ -39,8 +39,10 @@
 #
 
 class GoogleClassroomSection < OmniAuthSection
+  CODE_PREFIX = 'G-'.freeze
+
   def self.from_service(course_id, owner_id, student_list, section_name)
-    code = "G-#{course_id}"
+    code = "#{CODE_PREFIX}#{course_id}"
 
     set_family_name = DCDO.get('google_classroom_family_name', false)
 
