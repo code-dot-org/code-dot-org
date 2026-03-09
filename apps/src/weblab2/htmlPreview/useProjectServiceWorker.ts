@@ -18,6 +18,7 @@ import {
 function useProjectServiceWorker(
   source: MultiFileSource | undefined,
   codeStudioUrl: string,
+  allowScripts: boolean,
   parameters?: object
 ) {
   const [serviceWorker, setServiceWorker] = useState<ServiceWorker | null>(
@@ -30,8 +31,8 @@ function useProjectServiceWorker(
     useState<boolean>(false);
 
   const contentSecurityPolicy = useMemo(
-    () => generateContentSecurityPolicyForPreview(codeStudioUrl),
-    [codeStudioUrl]
+    () => generateContentSecurityPolicyForPreview(codeStudioUrl, allowScripts),
+    [codeStudioUrl, allowScripts]
   );
 
   useEffect(() => {
