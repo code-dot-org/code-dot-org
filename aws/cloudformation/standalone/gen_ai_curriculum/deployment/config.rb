@@ -1,5 +1,6 @@
 require "ostruct"
-require_relative '../../../../lib/cdo/shared_constants'
+require "digest"
+require_relative '../../../../../lib/cdo/shared_constants'
 
 module Config
   # Configuration for each endpoint used in the Gen AI Curriculum. Required properties:
@@ -21,4 +22,16 @@ module Config
       autoscaling_target_value: 150
     }
   ].freeze
+
+  # Generate a stable fingerprint for SageMaker Model resource naming.
+  # Only changes when the model definition changes (requiring a new Model resource).
+  def self.model_fingerprint(config)
+    Digest::MD5.hexdigest(config[:hf_model_id])[0..7]
+  end
+
+  # Generate a stable fingerprint for SageMaker EndpointConfig resource naming.
+  # Only changes when EndpointConfig properties change (requiring a new EndpointConfig resource).
+  def self.endpoint_config_fingerprint(config)
+    Digest::MD5.hexdigest("#{config[:hf_model_id]}-#{config[:instance_type]}-#{config[:min_num_instances]}")[0..7]
+  end
 end

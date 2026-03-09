@@ -43,9 +43,11 @@ markdown <<MARKDOWN
 <details>
 <summary style="cursor:pointer; list-style:none; background:#f3f0fb; padding:18px; border-radius:16px; font-weight:800; font-size:1.25em; box-shadow:0 6px 18px rgba(0,0,0,.08);">1. Training: Learning Patterns in Language</summary>
 <div style="margin-top:14px; background:#f8fafc; padding:22px; border-radius:16px; line-height:1.6;">
-AI models are trained on massive text datasets—books, articles, websites, and conversations. Training does not teach facts, rules, or understanding. Instead, the model learns statistical patterns by predicting missing or next words in sequences. When a prediction is wrong, the model adjusts its internal parameters to improve future predictions.
+AI models are trained on massive collections of text such as books, articles, and websites. During training, the model repeatedly predicts missing or next words in sentences. When its predictions are incorrect, its internal parameters adjust slightly to improve future predictions.
 <br><br>
-This training does not provide real-world knowledge. The model cannot perceive events or update itself after training. Once complete, its knowledge is frozen; it can only reproduce patterns it saw in its training data, not current or future reality.
+Over time, the system becomes very good at recognizing and reproducing patterns in language.
+<br><br>
+Training does not involve memorizing rules or developing awareness — it is a process of refining statistical pattern recognition at scale.
 </div>
 </details>
 </div>
@@ -55,9 +57,17 @@ This training does not provide real-world knowledge. The model cannot perceive e
 <details>
 <summary style="cursor:pointer; list-style:none; background:#f3f0fb; padding:18px; border-radius:16px; font-weight:800; font-size:1.25em; box-shadow:0 6px 18px rgba(0,0,0,.08);">2. Embeddings: Capturing Relationships in Language</summary>
 <div style="margin-top:14px; background:#f8fafc; padding:22px; border-radius:16px; line-height:1.6;">
-During training, the model creates embeddings, numerical representations of words and concepts. Words and ideas that frequently appear together, like “teacher,” “student,” and “classroom,” are positioned close together in a high-dimensional space, while unrelated concepts are distant.
+As the model trains, it converts words and phrases into numerical representations called <strong>embeddings</strong>.
 <br><br>
-Embeddings allow the model to detect patterns of similarity and analogy in text, but they do not convey understanding. The AI does not know what a classroom is—it only knows how words relate statistically. This is why AI can switch between related ideas fluidly, yet still miss important situational or human-relevant context.
+In this system:
+<ul>
+  <li>Words that frequently appear together are positioned close to one another.</li>
+  <li>Related ideas cluster in a high-dimensional mathematical space.</li>
+  <li>Unrelated concepts are farther apart.</li>
+</ul>
+This structure allows the model to detect similarity, analogy, and thematic connections. For example, words like “teacher,” “student,” and “classroom” tend to cluster together because they often appear in similar contexts.
+<br><br>
+Embeddings allow the model to work with relationships between ideas — not meanings in a human sense, but patterns of association.
 </div>
 </details>
 </div>
@@ -67,9 +77,19 @@ Embeddings allow the model to detect patterns of similarity and analogy in text,
 <details>
 <summary style="cursor:pointer; list-style:none; background:#f3f0fb; padding:18px; border-radius:16px; font-weight:800; font-size:1.25em; box-shadow:0 6px 18px rgba(0,0,0,.08);">3. Next-Token Prediction: Generating Text Step by Step</summary>
 <div style="margin-top:14px; background:#f8fafc; padding:22px; border-radius:16px; line-height:1.6;">
-Once prompted, the model generates language one token at a time, predicting the most probable next word based on the text so far. Attention mechanisms determine which parts of the input should influence each prediction, helping the model maintain coherence across long passages and follow instructions.
+When you enter a prompt, the model generates text one <strong>token</strong> at a time (a token is typically a word or part of a word).
 <br><br>
-However, attention is purely statistical. It does not verify facts, reason about correctness, or assess appropriateness. The model can produce confident explanations, logical step-by-step outputs, or even persuasive arguments without knowing if they are accurate or meaningful.
+At each step, it:
+<ol>
+  <li>Looks at the prompt and previously generated words.</li>
+  <li>Calculates probabilities for possible next tokens.</li>
+  <li>Selects one based on those probabilities.</li>
+  <li>Repeats the process.</li>
+</ol>
+
+An internal mechanism called <strong>attention</strong> helps the model weigh which parts of the input are most relevant as it continues generating text. This helps it stay coherent across longer responses and follow instructions.
+<br><br>
+The result is language that can sound logical, structured, and confident — because it mirrors patterns commonly found in similar texts.
 </div>
 </details>
 </div>
@@ -79,9 +99,14 @@ However, attention is purely statistical. It does not verify facts, reason about
 <details>
 <summary style="cursor:pointer; list-style:none; background:#f3f0fb; padding:18px; border-radius:16px; font-weight:800; font-size:1.25em; box-shadow:0 6px 18px rgba(0,0,0,.08);">4. Steering Output: Temperature and System Prompts</summary>
 <div style="margin-top:14px; background:#f8fafc; padding:22px; border-radius:16px; line-height:1.6;">
-Finally, humans can shape the model’s outputs using temperature settings and system prompts. Temperature controls randomness: low temperatures produce predictable, conservative outputs, while high temperatures allow creativity and variation. System prompts can set tone, role, or style—for instance, instructing the model to “act as a middle school science teacher.”
+Humans influence AI output primarily through the prompts they write. The level of detail, constraints, and framing in a prompt strongly affect the response.
 <br><br>
-These tools influence presentation and style, but not understanding or judgment. A confident, playful, or authoritative tone is a reflection of statistical probabilities, not comprehension. The AI still operates solely on patterns learned from text.
+AI tools may also adjust internal settings that influence how predictable or varied responses are. One of these settings is called <strong>temperature</strong>:
+<ul>
+  <li>Lower temperature → more predictable and consistent responses</li>
+  <li>Higher temperature → more varied or creative responses</li>
+</ul>
+In most AI tools, this setting is controlled by the platform rather than the user. Regardless of the setting, temperature affects style and variability — not knowledge or understanding.
 </div>
 </details>
 </div>
