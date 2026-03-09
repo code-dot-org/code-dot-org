@@ -45,7 +45,6 @@ const ValidationButton: React.FunctionComponent<ValidationButtonProps> = ({
         moduleStyles.validationButton
       )}
       size={'s'}
-      id={'instructions-stop-validate-button'}
     />
   ) : (
     <Button
