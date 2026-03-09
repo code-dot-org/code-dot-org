@@ -1,6 +1,8 @@
 import {type ModelMessage} from 'ai';
 
 import {generateText} from '@cdo/apps/aiGateway/generateTextThroughProxyOrGateway';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {AiRequestExecutionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {
@@ -11,15 +13,16 @@ import {
 } from '../../types';
 
 import {
-  generatedFileToAsset,
-  generatedFileToImageFile,
+  fileToAsset,
+  fileToImage,
+  prepareGeneratedFile,
 } from './helpers/fileHelpers';
 import {
   formatChatMessage,
   formatSystemMessages,
 } from './helpers/messageHelpers';
 import {getModel} from './helpers/modelHelpers';
-import {isTextSafe, isImageSafe} from './helpers/safetyHelpers';
+import {isTextSafe, isModelOutputImageSafe} from './helpers/safetyHelpers';
 
 /**
  * Performs all the steps necessary to generate a chat response:
@@ -81,11 +84,24 @@ export async function generateChatResponse(
     };
   }
 
+  // Upload generated assets, if any.
+  const assets: ChatAsset[] = [];
   for (const file of files) {
-    if (file.mediaType.startsWith('image/')) {
-      const ext = file.mediaType.split('/')[1];
-      const imageFile = generatedFileToImageFile(file, ext);
-      const modelImageSafe = await isImageSafe(imageFile, ext);
+    const {filename, fileBuffer, mediaType, extension} =
+      prepareGeneratedFile(file);
+
+    const asset = await fileToAsset(
+      filename,
+      fileBuffer,
+      mediaType,
+      buildAssetUrl
+    );
+    assets.push(asset);
+
+    if (mediaType.startsWith('image/')) {
+      sendLab2AnalyticsEvent(EVENTS.MODEL_OUTPUT_IMAGE_CREATED);
+      const imageFile = fileToImage(filename, fileBuffer, mediaType);
+      const modelImageSafe = await isModelOutputImageSafe(imageFile, extension);
       if (!modelImageSafe) {
         return {
           response: text,
@@ -99,13 +115,6 @@ export async function generateChatResponse(
   const modelOutputSafe = await isTextSafe(text);
   if (!modelOutputSafe) {
     return {response: text, status: AiRequestExecutionStatus.MODEL_PROFANITY};
-  }
-
-  // Upload generated assets, if any.
-  const assets: ChatAsset[] = [];
-  for (const file of files) {
-    const asset = await generatedFileToAsset(file, buildAssetUrl);
-    assets.push(asset);
   }
 
   return {response: text, assets, status: AiRequestExecutionStatus.SUCCESS};
