@@ -83,16 +83,35 @@ module "eks" {
   # If you need more specific settings for a namespace, create a new profile.
   # zz-default is our default fargate profile that matches all namespaces (*)
   fargate_profiles = {
+    # Production gets its own profile for isolation and independent lifecycle management.
+    # Its quite possible we'll want to break production into its own cluster eventually.
+    # But for now, a separate profile is simple and cost-effective.
+    production = {
+      name       = "production"
+      subnet_ids = [aws_subnet.private_1.id, aws_subnet.private_2.id]
+      selectors  = [{ namespace = "production" }]
+    }
+
+    # Staging, test, levelbuilder, and adhoc-* deployments share a profile.
+    non-prod = {
+      name       = "non-prod"
+      subnet_ids = [aws_subnet.private_1.id, aws_subnet.private_2.id]
+      selectors = [
+        { namespace = "staging" },
+        { namespace = "test" },
+        { namespace = "levelbuilder" },
+        { namespace = "adhoc-*" },
+      ]
+    }
+
     default = {
-      # When multiple fargate profiles match a namespace, it picks by alphanumeric order
-      # Using the "zz-" prefix means this one matches last, i.e. its the fallback profile
-      # if a more specific namespace match can't be found.
+      # When multiple fargate profiles match a namespace, it picks by alphanumeric order.
+      # Using the "zz-" prefix means this one matches last, i.e. it's the fallback profile
+      # if a more specific namespace match can't be found (e.g. kube-system, external-secrets).
       name       = "zz-default"
       subnet_ids = [aws_subnet.private_1.id, aws_subnet.private_2.id]
       selectors = [
-        {
-          namespace = "*"
-        }
+        { namespace = "*" }
       ]
     }
   }

@@ -4,10 +4,10 @@ module "aws_load_balancer_controller_addon" {
   source  = "aws-ia/eks-blueprints-addons/aws"
   version = "~> 1.13.0"
 
-  cluster_name      = module.eks.cluster_name
-  cluster_endpoint  = module.eks.cluster_endpoint
-  cluster_version   = module.eks.cluster_version
-  oidc_provider_arn = module.eks.oidc_provider_arn
+  cluster_name      = local.cluster_name
+  cluster_endpoint  = local.cluster_endpoint
+  cluster_version   = local.cluster_version
+  oidc_provider_arn = local.oidc_provider_arn
 
   enable_aws_load_balancer_controller = true
 
@@ -19,7 +19,7 @@ module "aws_load_balancer_controller_addon" {
       },
       {
         name  = "vpcId"
-        value = var.vpc_id
+        value = local.vpc_id
       },
       {
         name  = "ingressClassConfig.default"
@@ -27,8 +27,4 @@ module "aws_load_balancer_controller_addon" {
       }
     ]
   }
-
-  depends_on = [
-    module.eks,
-  ]
 }
