@@ -329,6 +329,7 @@ class LtiV1Controller < ApplicationController
 
       lti_deployment = lti_integration.lti_deployments.find_by(id: params[:deployment_id])
       return render_sync_course_error('LTI Deployment not found', :bad_request, 'no_deployment') unless lti_deployment
+      return render_sync_course_error('User not associated with LTI Integration', :forbidden, 'nrps_error') unless validate_integration_membership(lti_integration, lti_deployment, current_user)
 
       Retryable.retryable(on: ActiveRecord::RecordNotUnique) do
         lti_course = lti_integration.lti_courses.find_or_create_by!(context_id: params[:context_id]) do |new_record|
@@ -460,5 +461,9 @@ class LtiV1Controller < ApplicationController
       event_name: 'lti_account_linking_page_visit',
       metadata: metadata,
     )
+  end
+
+  private def validate_integration_membership(lti_integration, lti_deployment, user)
+    lti_deployment.lti_user_identities.exists?(lti_integration:, user:)
   end
 end
