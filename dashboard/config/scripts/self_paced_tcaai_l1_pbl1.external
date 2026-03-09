@@ -3,15 +3,15 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# What is Project Based Learning (PBL)?
+# What is Project Based Learning?
 
-#### **Project Based Learning** is an instructional approach developed by <a href="www.pblworks.org" target="blank" rel="noopener noreferrer">PBLWorks at the Buck Institute of Education</a> wherein students learn by actively working on a meaningful project over time. Instead of learning concepts first and applying them later, students build understanding as they investigate a central driving question.
+#### **Project Based Learning** (PBL) is an instructional approach developed by <a href="www.pblworks.org" target="blank" rel="noopener noreferrer">PBLWorks at the Buck Institute of Education</a> wherein students learn by actively working on a meaningful project over time. Instead of learning concepts first and applying them later, students build understanding as they investigate a central driving question.
 
 #### In PBL, learning is a process of inquiry, feedback, and revision that leads to a final product similar to what industry professional might generate, just at an age-appropriate level.
 
 ## Driving Question
 
-#### In PBL, a driving question is an open-ended, provocative question that frames a unit. This becomes the foundation for the project that students work toward.
+#### A driving question is an open-ended, provocative question that frames a unit. This becomes the foundation for the project that students work toward.
 
 #### In Thinking Critically About AI, the driving question is:
 
@@ -20,8 +20,6 @@ markdown <<MARKDOWN
         ❓ How can people make thoughtful decisions about when and how to use AI?
     </p>
 </div>
-
-#### Later in this section, you'll learn more about the **Responsible Use Guide** that students will create to answer this question.
 
 ## Project Based Learning Design Elements
 

@@ -3,31 +3,55 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Introduction to Programming with Music Lab
+# Lesson Types
 
-#### Let's dive in to the first section of this professional learning module. This section sets a foundation for the pedagogical structures and tool that students will use throughout the curriculum.
+#### In **Thinking Critically with AI**, Milestone 1 is the project launch, while Milestone 5 is the project shareout.
 
-<div style="display: flex; align-items: flex-start; gap: 20px; margin-top: 20px; margin-bottom:0px">
-    <div style="width: 70%;">
-        <p style="line-height: 1.5; font-size: 18px;">
-            In this section, you will:
-        </p>
-        <ul style="margin-left: 20px; line-height: 1.6;">
-            <li style="line-height: 1.5;font-size: 18px;">
-                Describe the structure and flow of the Music Lab unit
-            </li>
-            <li style="line-height: 1.5;font-size: 18px;">
-               Identify key pedagogical features that support student learning
-            </li>
-            <li style="line-height: 1.5;font-size: 18px;">
-				Navigate the Music Lab coding environment and recognize how students will interact with it
-            </li>
-        </ul>
-        <p style="font-size: 16px; color: black;">
-    </div>
-    <!-- Image on the right -->
-    <img src="https://images.code.org/4cbb267089510a7a5b3d35ac3aba2899-image-1732315294356.jpeg" alt="A teacher and a student look on to a laptop computer together, smiling." style="width: 30%; height: auto; border-radius: 5px;">
+#### Milestones 2, 3, and 4 follow a consistent two-lesson structure. In each milestone, students first build knowledge about a key AI concept, then apply that learning to create or refine a section of their final project.
+
+* #### The first lesson in each milestone is a **Build Knowledge** lesson.  
+* #### The second lesson is a **Develop & Critique** lesson, where students synthesize ideas, draft guidance, learn from feedback, and evaluate their thinking.
+
+<div style="text-align: center; margin: 20px auto;">
+  <img src="https://images.code.org/4559dffca35fd2e13ed96b3f1979ed6c-image-1772838094454.01.21 PM.png" 
+    alt="" 
+    style="width: 80%; border-radius: 10px;">
+  <p style="font-size: 10pt; margin-top: 8px;">
+    Image by PBLWorks
+  </p>
 </div>
 
-#### **Suggested time for this section:** 30 minutes
+## Build Knowledge Lessons
+#### **Lessons 3, 5, and 7**
+
+#### During Build Knowledge lessons, students investigate key concepts and skills. They will have the opportunity to choose from one of three explorations related to the milestone's theme. Students gather insights that will directly inform their evolving project work. 
+
+<!-- Voice & Choice -->
+<div style="background-color: #F5F7F8; padding: 15px; border-radius: 10px; margin: 20px 0; display: flex; align-items: flex-start; gap: 12px;">
+  <img src="https://images.code.org/b553f8594e621f659863b8fcb8b13c42-image-1772670604477.png" alt="" style="width: 40px; height: 40px;">
+  <div>
+    <p style="font-size: 12pt; font-weight: bold; margin: 0;">PBL Design Element: Voice &amp; Choice</p>
+    <p style="font-size: 12pt; font-style: italic; margin: 5px 0 0 0; line-height: 1.3;">
+      Students make meaningful decisions about how they learn, what they explore, and how they demonstrate understanding.
+    </p>
+  </div>
+</div>
+
+
+## Develop & Critique Lessons 
+#### **Lessons 4, 6, and 8**
+
+#### In the Develop & Critique lessons, students synthesize their learning into a tangible artifact that ladders up to the final project. This work unfolds over multiple cycles of feedback and revision. Structured peer discussions, self-assessment tools, and teacher feedback make revision intentional.
+
+<!-- Critique & Revision -->
+<div style="background-color: #F5F7F8; padding: 15px; border-radius: 10px; margin: 20px 0; display: flex; align-items: flex-start; gap: 12px;">
+  <img src="https://images.code.org/e802f4cab694dd5bb83adb5f3c37f3bf-image-1772670604477.png" alt="" style="width: 40px; height: 40px;">
+  <div>
+    <p style="font-size: 12pt; font-weight: bold; margin: 0;">PBL Design Element: Critique &amp; Revision</p>
+    <p style="font-size: 12pt; font-style: italic; margin: 5px 0 0 0; line-height: 1.3;">
+      Structured feedback cycles help students strengthen their work through revision and collaboration.
+    </p>
+  </div>
+</div>
+
 MARKDOWN
