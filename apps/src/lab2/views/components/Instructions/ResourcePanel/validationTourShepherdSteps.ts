@@ -1,11 +1,7 @@
 import {type StepOptions, type Tour} from 'shepherd.js';
 
 import lab2I18n from '@cdo/apps/lab2/locale';
-import {
-  backButton,
-  doneButton,
-  nextButton,
-} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
+import {doneButton} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 
 import {
   resourcePanelTabValidationElementId,
@@ -22,7 +18,10 @@ export const createValidationTourSteps = (tour: Tour): StepOptions[] => [
     },
     title: lab2I18n.validationTour_tabTitle(),
     text: lab2I18n.validationTour_tabText(),
-    buttons: [nextButton(tour)],
+    advanceOn: {
+      selector: `#${resourcePanelTabValidationElementId}`,
+      event: 'click',
+    },
     scrollTo: false,
   },
   {
@@ -33,7 +32,10 @@ export const createValidationTourSteps = (tour: Tour): StepOptions[] => [
     },
     title: lab2I18n.validationTour_buttonTitle(),
     text: lab2I18n.validationTour_buttonText(),
-    buttons: [backButton(tour), nextButton(tour)],
+    advanceOn: {
+      selector: `#${resourcePanelValidateButtonElementId}`,
+      event: 'click',
+    },
     scrollTo: false,
   },
   {
@@ -44,7 +46,7 @@ export const createValidationTourSteps = (tour: Tour): StepOptions[] => [
     },
     title: lab2I18n.validationTour_resultsTitle(),
     text: lab2I18n.validationTour_resultsText(),
-    buttons: [backButton(tour), doneButton(tour)],
+    buttons: [doneButton(tour)],
     scrollTo: false,
   },
 ];
