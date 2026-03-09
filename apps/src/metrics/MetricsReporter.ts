@@ -105,7 +105,7 @@ class MetricsReporter {
       return;
     }
 
-    // Send to DataDog RUM as a custom action
+    // Send to Datadog RUM as a custom action
     if (DCDO.get('datadog-enabled', false)) {
       datadogRum.addAction(name, {
         value,
@@ -130,9 +130,9 @@ class MetricsReporter {
       deviceInfo: this.getDeviceInfo(),
     };
 
-    // Send to DataDog Logs in parallel, independently of isReportingEnabled
+    // Send to Datadog Logs in parallel, independently of isReportingEnabled
     if (DCDO.get('datadog-enabled', false)) {
-      this.sendToDataDogLogs(level, message);
+      this.sendToDatadogLogs(level, message);
     }
 
     if (!this.isReportingEnabled()) {
@@ -148,7 +148,7 @@ class MetricsReporter {
     }
   }
 
-  private sendToDataDogLogs(level: LogLevel, message: string | object) {
+  private sendToDatadogLogs(level: LogLevel, message: string | object) {
     const msgStr =
       typeof message === 'string' ? message : JSON.stringify(message);
     const context = this.getDeviceInfo();
