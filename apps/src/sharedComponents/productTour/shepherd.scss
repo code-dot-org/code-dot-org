@@ -1,1 +1,10 @@
 @import 'shepherd.js/dist/css/shepherd.css';
+
+.shepherd-button-primary {
+  background-color: var(--button-brand-purple-primary);
+}
+
+.shepherd-button-secondary {
+  border: 1px solid var(--borders-neutral-solid);
+  background-color: var(--background-neutral-primary);
+}

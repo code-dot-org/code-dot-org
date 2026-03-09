@@ -28,6 +28,7 @@ import {useExtraLinksButtonContext} from '@cdo/apps/lab2/views/LabViewsRenderer'
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
+import experiments from '@cdo/apps/util/experiments';
 import {findFirstFocusableElement} from '@cdo/apps/util/findFirstFocusableElement';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import '@cdo/apps/lab2/introjs.scss';
@@ -211,6 +212,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     []
   );
   const [backpackRefreshKey, setBackpackRefreshKey] = useState(0);
+  const showShepherdProductTours = experiments.isEnabledAllowingQueryString(
+    experiments.SHEPHERD_PRODUCT_TOURS
+  );
 
   // Tooltip should disappear quickly.
   const hideTooltipDelayMs = 10;
@@ -512,17 +516,21 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         id={resourcePanelInstructionsElementId}
         className={classNames(styles.resourcePanel, className)}
       >
-        <IntroJSTourWrapper enabled={isOnboardingTourEnabled}>
-          <OnboardingTourSteps />
-        </IntroJSTourWrapper>
-        <IntroJSTourWrapper enabled={isValidationTourEnabled}>
-          <ValidationTourSteps
-            hasValidationConditions={hasValidationConditions}
-            validationSettings={instructionsProps.validationSettings}
-            setCurrentTab={setCurrentTab}
-            onValidate={instructionsProps.validationSettings?.onValidate}
-          />
-        </IntroJSTourWrapper>
+        {!showShepherdProductTours && (
+          <>
+            <IntroJSTourWrapper enabled={isOnboardingTourEnabled}>
+              <OnboardingTourSteps />
+            </IntroJSTourWrapper>
+            <IntroJSTourWrapper enabled={isValidationTourEnabled}>
+              <ValidationTourSteps
+                hasValidationConditions={hasValidationConditions}
+                validationSettings={instructionsProps.validationSettings}
+                setCurrentTab={setCurrentTab}
+                onValidate={instructionsProps.validationSettings?.onValidate}
+              />
+            </IntroJSTourWrapper>
+          </>
+        )}
         <div
           className={classNames(
             styles.sidebar,
