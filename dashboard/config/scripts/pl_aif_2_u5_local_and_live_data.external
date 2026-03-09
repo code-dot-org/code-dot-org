@@ -1,0 +1,136 @@
+name 'pl-aif-2-U5-local-and-live-data'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+## Local vs. Live Data
+
+<p style="font-size:16px;">
+Some information in an app should be <strong>stored locally</strong> (because it’s stable and loads instantly), while other information should be <strong>fetched live</strong> (because it changes often or is time-sensitive).  
+Look at each example below and choose whether it should use <strong>Hardcoded / Local Data</strong> or <strong>Fetched / Live Data</strong>.
+</p>
+
+<br/>
+
+<!-- 2x2 Image Grid (FIXED) -->
+<div style="
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:24px;
+  align-items:start;
+">
+
+  <!-- Card 1: NBA Scores -->
+<div style="width:100%;">
+<div style="width:100%; height:220px; border-radius:12px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.15); position:relative;">
+<img src="https://images.code.org/ba49b3fb8b5d898bfc3abe2b08c673ff-image-1772819280728.png"
+           style="position:absolute; width:100%; height:100%; object-fit:cover; object-position:center;">
+    </div>
+
+<div style="text-align:center; margin-top:8px; font-size:18px;"><strong>Live NBA Scores</strong></div>
+
+<details style="margin-top:12px;">
+<summary style="background-color:#e0e0e0; padding:10px; cursor:pointer; font-weight:bold;">
+        ✅ Choose: Hardcode or Fetch Data
+      </summary>
+<div style="background-color:#f5f5f5; padding:12px; border:1px solid #ccc; font-size:14px;">
+<strong>Answer:</strong> Fetch data (Live) <br/><br/>
+        Scores change constantly during games and depend on the current date/time. This is time-sensitive, frequently changing information, so it should be retrieved from an API.
+      </div>
+    </details>
+  </div>
+
+  <!-- Card 2: Home Icon -->
+<div style="width:100%;">
+<div style="width:100%; height:220px; border-radius:12px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.15); position:relative;">
+<img src="https://images.code.org/6c54593def425ea67846bd01abbc740a-image-1772819242083.png"
+           alt="Home icon example"
+           style="position:absolute; width:100%; height:100%; object-fit:cover; object-position:center;">
+    </div>
+
+<div style="text-align:center; margin-top:8px; font-size:18px;"><strong>Home Icon</strong></div>
+
+<details style="margin-top:12px;">
+<summary style="background-color:#e0e0e0; padding:10px; cursor:pointer; font-weight:bold;">
+        ✅ Choose: Hardcode or Fetch Data
+      </summary>
+<div style="background-color:#f5f5f5; padding:12px; border:1px solid #ccc; font-size:14px;">
+<strong>Answer:</strong> Hardcode data (Local) <br/><br/>
+        Icons are stable, structural parts of an interface. They rarely change and should load instantly—even offline—so keeping them local is faster and more reliable.
+      </div>
+    </details>
+  </div>
+
+  <!-- Card 3: Music Genres -->
+<div style="width:100%;">
+<div style="width:100%; height:220px; border-radius:12px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.15); position:relative;">
+<img src="https://images.code.org/3983a65f36b7a8863562e3298bc9a342-image-1772819336118.png"
+           alt="Music genres list example"
+           style="position:absolute; width:100%; height:100%; object-fit:cover; object-position:center;">
+    </div>
+
+<div style="text-align:center; margin-top:8px; font-size:18px;"><strong>Music Genres</strong></div>
+
+<details style="margin-top:12px;">
+<summary style="background-color:#e0e0e0; padding:10px; cursor:pointer; font-weight:bold;">
+        ✅ Choose: Hardcode or Fetch Data
+      </summary>
+<div style="background-color:#f5f5f5; padding:12px; border:1px solid #ccc; font-size:14px;">
+        <strong>Answer:</strong> Hardcode data (Local) <br/><br/>
+        Genre categories don’t change often and are usually the same for everyone. Keeping this list local makes the app feel fast and ensures the interface still works without internet.
+      </div>
+    </details>
+  </div>
+
+  <!-- Card 4: Weather Forecast -->
+<div style="width:100%;">
+<div style="width:100%; height:220px; border-radius:12px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.15); position:relative;">
+<img src="https://images.code.org/83717f8523a8c4c59b0a7b33791e93ed-image-1772819427560.png"
+           alt="Weather forecast example"
+           style="position:absolute; width:100%; height:100%; object-fit:cover; object-position:center;">
+    </div>
+
+<div style="text-align:center; margin-top:8px; font-size:18px;"><strong>Weather Forecast</strong></div>
+
+<details style="margin-top:12px;">
+<summary style="background-color:#e0e0e0; padding:10px; cursor:pointer; font-weight:bold;">
+        ✅ Choose: Hardcode or Fetch Data
+      </summary>
+<div style="background-color:#f5f5f5; padding:12px; border:1px solid #ccc; font-size:14px;">
+<strong>Answer:</strong> Fetch data (Live) <br/><br/>
+        Forecasts depend on location and change hour-to-hour. Since it’s time-sensitive and frequently changing, it should be retrieved live from an API.
+      </div>
+    </details>
+  </div>
+
+</div>
+
+<br/>
+
+## Rule of Thumb
+
+#### Frequently changing, time-sensitive data should be fetched **Live**, while stable, structural, or rarely changing data is better stored **Locally** for speed and reliability.
+  
+
+
+<!-- Vocabulary Boxes -->
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+  <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">
+    📖 <strong>Live Data</strong> is data that is stored on an external server rather than on the device running the application.  
+    It requires an internet connection to access and is retrieved using an API.
+  </p>
+</div>
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+  <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">
+    📖 <strong>Local Data</strong> is data that is stored directly on the device that is running the application.  
+    It is available immediately and does not require internet connection.
+  </p>
+</div>
+
+![]()
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
