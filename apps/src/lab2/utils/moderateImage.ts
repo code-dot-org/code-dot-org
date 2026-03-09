@@ -8,7 +8,7 @@ const LAB2_LABS_MODERATE_IMAGES = ['weblab2', 'aichat'];
 
 interface AnalyticsData {
   appName: string;
-  uploaderType?: 'Lab2 File Uploader' | 'n/a';
+  uploaderType?: 'Lab2FileUploader' | 'n/a';
   moderateEvent?: string;
   flaggedEvent?: string;
 }
