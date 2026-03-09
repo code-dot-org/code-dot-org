@@ -2,6 +2,7 @@
  * Blocks specific to Harvester
  */
 
+import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
 import {INFINITE_LOOP_TRAP} from '@cdo/apps/blockly/utils';
 
 var blockUtils = require('../block_utils');
@@ -238,7 +239,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setStyle(BlockStyles.LOGIC);
       this.appendDummyInput().appendField([msg.ifCode(), msg.at()].join(' '));
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(AT_OPTIONS),
+        new CdoFieldDropdown(AT_OPTIONS),
         'LOC'
       );
       this.setInputsInline(true);
@@ -261,7 +262,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setStyle(BlockStyles.LOGIC);
       this.appendDummyInput().appendField([msg.ifCode(), msg.at()].join(' '));
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(AT_OPTIONS),
+        new CdoFieldDropdown(AT_OPTIONS),
         'LOC'
       );
       this.setInputsInline(true);
@@ -288,7 +289,7 @@ exports.install = function (blockly, blockInstallOptions) {
         [msg.repeatUntil(), msg.at()].join(' ')
       );
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(AT_OPTIONS),
+        new CdoFieldDropdown(AT_OPTIONS),
         'LOC'
       );
       this.setInputsInline(true);
@@ -312,7 +313,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setStyle(BlockStyles.LOGIC);
       this.appendDummyInput().appendField(msg.ifCode());
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(HAS_OPTIONS),
+        new CdoFieldDropdown(HAS_OPTIONS),
         'LOC'
       );
       this.setInputsInline(true);
@@ -337,7 +338,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setStyle(BlockStyles.LOGIC);
       this.appendDummyInput().appendField(msg.ifCode());
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(HAS_OPTIONS),
+        new CdoFieldDropdown(HAS_OPTIONS),
         'LOC'
       );
       this.setInputsInline(true);
@@ -364,7 +365,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setStyle(BlockStyles.LOOP);
       this.appendDummyInput().appendField(msg.whileMsg());
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(HAS_OPTIONS),
+        new CdoFieldDropdown(HAS_OPTIONS),
         'LOC'
       );
       this.setInputsInline(true);
@@ -390,7 +391,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setStyle(BlockStyles.LOOP);
       this.appendDummyInput().appendField(msg.repeatUntil());
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(HAS_OPTIONS),
+        new CdoFieldDropdown(HAS_OPTIONS),
         'LOC'
       );
       this.setInputsInline(true);

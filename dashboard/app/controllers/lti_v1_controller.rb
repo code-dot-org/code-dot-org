@@ -326,11 +326,7 @@ class LtiV1Controller < ApplicationController
       lti_deployment = lti_integration.lti_deployments.find_by(id: params[:deployment_id])
       return render_sync_course_error('LTI Deployment not found', :bad_request, 'no_deployment') unless lti_deployment
 
-      # Temporary lock to prevent concurrent requests from racing past
-      # the ActiveRecord level uniqueness check and creating LtiCourse duplicates.
-      # TODO(P20-1796): Remove the lock once a DB-level unique constraint
-      #                 on (lti_integration_id, context_id) prevents duplicates.
-      lti_deployment.with_lock do
+      Retryable.retryable(on: ActiveRecord::RecordNotUnique) do
         lti_course = lti_integration.lti_courses.find_or_create_by!(context_id: params[:context_id]) do |new_record|
           new_record.assign_attributes(lti_deployment:, nrps_url:, resource_link_id:)
         end

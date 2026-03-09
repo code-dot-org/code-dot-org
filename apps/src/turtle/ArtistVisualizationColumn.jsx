@@ -26,7 +26,7 @@ export default class ArtistVisualizationColumn extends React.Component {
             <SaveImageButton displayCanvas={this.props.displayCanvas} />
           )}
           <div id="slider-cell">
-            <svg id="slider" version="1.1" width="150" height="50">
+            <svg id="slider" width="150" height="50">
               {/* Slow icon. */}
               <clipPath id="slowClipPath">
                 <rect width="26" height="12" x="5" y="14" />

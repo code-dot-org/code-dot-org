@@ -1,0 +1,85 @@
+name 'self-paced-TCaAI-L1-ModuleRoadmap1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Module Overview 
+
+#### Thinking Critically About AI is split into **five milestones**, each containing **two lessons** and centering around a **theme**. This structure helps students break complex ideas into manageable phases while building toward a final product.
+
+<div style="text-align: center; margin: 40px auto;"> <img src="https://images.code.org/c3ca251afe5aa4d2e1adebbc0658980e-image-1772224430522.jpg" alt="A diagram showing the layout of the unit, with two lessons per milestone. Five milestones and ten lessons total." style="width: 95%; height: auto; border-radius: 10px;"> </div>
+
+## What's included in this module? 
+
+#### This professional learning module mirrors the structure of the Thinking Critically About AI Unit. There are six sections total:
+
+<div style="background-color: #FAFBFC; padding: 20px; border-radius: 10px; width: 88%; margin: 20px auto;">
+
+  <p style="font-size: 13pt; font-weight: bold; margin-top: 0;">
+    ⭐ Introduction to Thinking Critically About AI (You're here!)
+  </p>
+  <p style="font-size: 13pt;">
+    This section orients you to the learning you will do in this module. It introduces the overarching
+    structures of the unit and the key concepts students will learn.
+  </p>
+
+  <br>
+
+  <p style="font-size: 13pt; font-weight: bold;">
+    🌏 Milestone 1: AI in My World (Lessons 1–2)
+  </p>
+  <p style="font-size: 13pt;">
+    Students explore how AI shows up in their daily lives and begin building accurate mental models
+    of how AI systems work. You’ll learn how to launch the driving question of the unit and establish
+    norms for questioning AI outputs.
+  </p>
+
+  <br>
+
+  <p style="font-size: 13pt; font-weight: bold;">
+    🔨 Milestone 2: Responsible Creation & Impact (Lessons 3–4)
+  </p>
+  <p style="font-size: 13pt;">
+    Students examine how human decisions shape AI systems and their impact on individuals and
+    communities. You’ll explore how to facilitate ethical discussions and guide students in turning
+    analysis into actionable recommendations.
+  </p>
+
+  <br>
+
+  <p style="font-size: 13pt; font-weight: bold;">
+    💻 Milestone 3: Truth & Credibility (Lessons 5–6)
+  </p>
+  <p style="font-size: 13pt;">
+    Students investigate AI-generated misinformation and develop strategies for evaluating
+    accuracy and reliability. You’ll learn how to support fact-checking investigations and critical
+    analysis of AI outputs.
+  </p>
+
+  <br>
+
+  <p style="font-size: 13pt; font-weight: bold;">
+    🦺 Milestone 4: Safety & Privacy (Lessons 7–8)
+  </p>
+  <p style="font-size: 13pt;">
+    Students analyze privacy risks and data-sharing implications when interacting with AI systems.
+    In this section, you’ll explore how to guide structured risk analysis and synthesis into clear
+    safety guidance.
+  </p>
+
+  <br>
+
+  <p style="font-size: 13pt; font-weight: bold;">
+    🗣️ Milestone 5: Synthesis & Sharing (Lessons 9–10)
+  </p>
+  <p style="font-size: 13pt; margin-bottom: 0;">
+    Students revise their thinking and prepare their final Responsible AI Use Guide for presentation.
+    You’ll examine strategies for supporting revision, peer critique, and meaningful reflection.
+  </p>
+
+</div>
+
+___
+
+#### This professional learning module is designed to prepare you to teach two lessons in Thinking Critically About AI at a time. Feel free to use this module to prepare for a chunk of the curriculum as you see fit - you can always pick up where you left off when you're ready.
+MARKDOWN

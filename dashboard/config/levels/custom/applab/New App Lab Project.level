@@ -32,7 +32,8 @@
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "libraries_enabled": "true",
-    "ai_enabled": "true"
+    "ai_enabled": "true",
+    "ai_tutor_available": "true"
   }
 }]]></config>
   <blocks/>

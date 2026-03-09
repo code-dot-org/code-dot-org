@@ -16,8 +16,7 @@ markdown <<MARKDOWN
 <div style="font-weight:800; font-size:20px; margin-bottom:14px; color:#0093A4;">Scenario</div>
 <div style="margin-bottom:18px;">Over several days, Mr. Johnson works with AI to design a 6-week algebra unit. In a new session, he asks:</div>
 <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:18px; margin-bottom:18px;">
-<div style="font-size:14px; font-weight:700; color:#8C52BA; margin-bottom:8px;">Prompt to AI</div>
-<div style="font-size:16px; font-weight:600;">“Can you rewrite the quiz we planned to better support English learners?”</div>
+<div style="font-size:16px">Can you rewrite the quiz we planned to better support English learners?</div>
 </div>
 <div>The AI creates a brand-new quiz unrelated to the unit. Mr. Johnson realizes the model has no memory of their earlier work and has to re-upload the materials.</div>
 </div>
@@ -31,8 +30,7 @@ markdown <<MARKDOWN
 <div style="font-weight:800; font-size:20px; margin-bottom:12px; color:#0093A4;">Quick Tip</div>
 <div style="margin-bottom:18px;">Reintroduce key materials and context whenever you want the AI to build on previous work.</div>
 <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:18px;">
-<div style="font-size:14px; font-weight:700; color:#8C52BA; margin-bottom:8px;">Safer Prompt Example</div>
-<div style="font-size:16px; font-weight:600;">“Here is our unit outline and the original quiz (pasted below). Rewrite the quiz to support English learners while staying aligned to Unit Week 3 objectives. Keep the same skills and difficulty.”</div>
+<div style="font-size:16px">Here is our unit outline and the original quiz (pasted below). Rewrite the quiz to support English learners while staying aligned to Unit Week 3 objectives. Keep the same skills and difficulty.</div>
 </div>
 </div>
 </div>

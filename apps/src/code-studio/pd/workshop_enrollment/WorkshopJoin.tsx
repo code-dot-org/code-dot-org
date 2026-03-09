@@ -1,5 +1,4 @@
-import {Button} from '@code-dot-org/component-library/button';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 /**
  * Join workshop page
  */
@@ -93,16 +92,20 @@ const WorkshopJoin: React.FunctionComponent<WorkshopJoinProps> = ({
             also update your account. You can update your account info at any
             time in your account settings.
           </Typography>
-          <Button
-            id="joinWorkshop"
-            name="joinWorkshop"
-            text="Join this workshop"
-            color="purple"
-            className={style.joinWorkshopButton}
-            onClick={handleSubmitEnrollment}
-            isPending={isSubmitting}
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
+            loading={isSubmitting}
             disabled={isMissingUserInfo(userInfo) || !!error}
-          />
+            className={style.joinWorkshopButton}
+            id="joinWorkshop"
+            onClick={handleSubmitEnrollment}
+            type="button"
+            name="joinWorkshop"
+          >
+            {'Join this workshop'}
+          </MuiButton>
         </div>
         {userInfo && (
           <UserPassport

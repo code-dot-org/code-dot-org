@@ -553,7 +553,7 @@ FactoryBot.define do
 
       factory :cpa_non_compliant_student, traits: [:U13, :in_colorado], aliases: %i[non_compliant_child] do
         trait :predates_policy do
-          created_at {Policies::ChildAccount::StatePolicies.state_policies.dig('CO', :start_date).ago(1.second)}
+          created_at {Policies::ChildAccount::StatePolicies.state_policies.dig('CO', :lockout_date).ago(1.second)}
         end
 
         trait :in_grace_period do
@@ -2135,8 +2135,8 @@ FactoryBot.define do
   end
 
   factory :lti_course do
-    lti_integration {create(:lti_integration)}
-    lti_deployment {create(:lti_deployment, lti_integration: lti_integration)}
+    association :lti_integration
+    lti_deployment {build(:lti_deployment, lti_integration:)}
     context_id {SecureRandom.uuid}
     course_id {SecureRandom.uuid}
     nrps_url {"http://test.org/api/names_and_roles"}
