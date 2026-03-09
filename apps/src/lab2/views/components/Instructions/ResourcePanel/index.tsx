@@ -54,7 +54,7 @@ import ResourcePanelExtraLinks from './ResourcePanelExtraLinks';
 import setFooterVisibility from './setFooterVisibility';
 import SettingsPanel from './SettingsPanel';
 import {Tabs} from './types';
-import ValidationPanel from './ValidationPanel';
+import ValidationPanel, {ValidationSettings} from './ValidationPanel';
 import ValidationTourSteps from './ValidationTourSteps';
 import {VersionHistoryPanel} from './VersionHistory';
 
@@ -147,6 +147,7 @@ type ResourcePanelProps = InstructionsProps & {
     uploadFunction: () => Promise<void>
   ) => void;
   hasInstructionsDrawer?: boolean;
+  validationSettings?: ValidationSettings;
 };
 
 /**
@@ -174,6 +175,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   backpackProps,
   onImageFlagged,
   hasInstructionsDrawer,
+  validationSettings,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -220,7 +222,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isOnboardingTourEnabled: isOnboardingTourEnabled || false,
     isValidationTourEnabled: isValidationTourEnabled || false,
     hasValidationConditions,
-    validationSettings: instructionsProps.validationSettings,
+    validationSettings,
   });
 
   // Tooltip should disappear quickly.
@@ -262,35 +264,26 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       tabMap[Tabs.Instructions] = instructionsContent;
     }
 
-    if (instructionsProps.validationSettings && hasValidationConditions) {
-      tabMap[Tabs.Validation] = (
-        <ValidationPanel {...instructionsProps.validationSettings} />
-      );
+    if (validationSettings && hasValidationConditions) {
+      tabMap[Tabs.Validation] = <ValidationPanel {...validationSettings} />;
     }
 
     if (hiddenContextCallback && aiTutorVisible) {
+      const aiTutorProps = {
+        hiddenContextCallback,
+        aiTutorMultimodalEnabled,
+        levelName,
+        channelId,
+        aiTutorChatButtonData,
+        aiTutorSystemPrompt,
+        aiTutorResponseSchemaSettings,
+      };
       if (!hasInstructionsDrawer || !levelProperties.longInstructions) {
-        tabMap[Tabs.AiTutor] = (
-          <AiTutorChat
-            hiddenContextCallback={hiddenContextCallback}
-            aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
-            levelName={levelName}
-            channelId={channelId}
-            aiTutorChatButtonData={aiTutorChatButtonData}
-            aiTutorSystemPrompt={aiTutorSystemPrompt}
-            aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
-          />
-        );
+        tabMap[Tabs.AiTutor] = <AiTutorChat {...aiTutorProps} />;
       } else {
         tabMap[Tabs.AiTutor] = (
           <AiTutorChatWithInstructionDrawer
-            hiddenContextCallback={hiddenContextCallback}
-            aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
-            levelName={levelName}
-            channelId={channelId}
-            aiTutorChatButtonData={aiTutorChatButtonData}
-            aiTutorSystemPrompt={aiTutorSystemPrompt}
-            aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
+            {...aiTutorProps}
             instructionsContent={instructionsContent}
             isCollapsedByDefault={!!viewAsUserId}
           />
@@ -382,6 +375,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     backpackRefreshKey,
     onImageFlagged,
     hasInstructionsDrawer,
+    validationSettings,
   ]);
 
   const hasTabs = useMemo(() => {
@@ -531,9 +525,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             <IntroJSTourWrapper enabled={isValidationTourEnabled}>
               <ValidationTourSteps
                 hasValidationConditions={hasValidationConditions}
-                validationSettings={instructionsProps.validationSettings}
+                hasValidationSettings={!!validationSettings}
                 setCurrentTab={setCurrentTab}
-                onValidate={instructionsProps.validationSettings?.onValidate}
+                onValidate={validationSettings?.onValidate}
               />
             </IntroJSTourWrapper>
           </>
