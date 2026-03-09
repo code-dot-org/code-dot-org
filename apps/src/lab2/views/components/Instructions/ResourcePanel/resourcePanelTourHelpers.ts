@@ -1,7 +1,6 @@
 import {type StepOptions, type StepOptionsButton, type Tour} from 'shepherd.js';
 
 import lab2I18n from '@cdo/apps/lab2/locale';
-import {commonI18n} from '@cdo/apps/types/locale';
 
 import {
   resourcePanelInstructionsElementId,
@@ -11,13 +10,21 @@ import {
 } from './constants';
 
 const nextButton = (tour: Tour): StepOptionsButton => ({
-  text: commonI18n.next(),
+  text: 'Next',
   action: () => tour.next(),
+  classes: 'shepherd-button-primary',
 });
 
 const doneButton = (tour: Tour): StepOptionsButton => ({
-  text: commonI18n.done(),
-  action: () => tour.next(),
+  text: 'Done',
+  action: () => tour.complete(),
+  classes: 'shepherd-button-primary',
+});
+
+const backButton = (tour: Tour): StepOptionsButton => ({
+  text: 'Back',
+  action: () => tour.back(),
+  classes: 'shepherd-button-secondary',
 });
 
 export const createResourcePanelTourSteps = (tour: Tour): StepOptions[] => [
@@ -37,7 +44,7 @@ export const createResourcePanelTourSteps = (tour: Tour): StepOptions[] => [
     attachTo: {element: `#${resourcePanelTabsElementId}`, on: 'right'},
     title: lab2I18n.resourcePanelOnboarding_tabsTitle(),
     text: lab2I18n.resourcePanelOnboarding_tabsText(),
-    buttons: [nextButton(tour)],
+    buttons: [backButton(tour), nextButton(tour)],
     scrollTo: false,
   },
   {
@@ -45,7 +52,7 @@ export const createResourcePanelTourSteps = (tour: Tour): StepOptions[] => [
     attachTo: {element: `#${resourcePanelLinksElementId}`, on: 'right'},
     title: lab2I18n.resourcePanelOnboarding_linksTitle(),
     text: lab2I18n.resourcePanelOnboarding_linksText(),
-    buttons: [nextButton(tour)],
+    buttons: [backButton(tour), nextButton(tour)],
     scrollTo: false,
   },
   {
@@ -56,7 +63,7 @@ export const createResourcePanelTourSteps = (tour: Tour): StepOptions[] => [
     },
     title: lab2I18n.resourcePanelOnboarding_finishTitle(),
     text: lab2I18n.resourcePanelOnboarding_finishText(),
-    buttons: [doneButton(tour)],
+    buttons: [backButton(tour), doneButton(tour)],
     scrollTo: false,
   },
 ];

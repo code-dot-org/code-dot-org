@@ -648,6 +648,11 @@ const EVENTS = {
   INTROJS_FLOW_EXIT: 'IntroJS Flow Exited',
   INTROJS_FLOW_COMPLETED: 'IntroJS Flow Completed',
 
+  // Generic Intro flow events
+  INTRO_FLOW_STARTED: 'Intro Flow Started',
+  INTRO_FLOW_EXIT: 'Intro Flow Exited',
+  INTRO_FLOW_COMPLETED: 'Intro Flow Completed',
+
   // AI Teaching Assistant - Differentiation
   // Just In Time Professional Learning
   PERSONALIZATION_ANSWER_SUBMITTED:

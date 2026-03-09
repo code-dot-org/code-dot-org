@@ -13,6 +13,7 @@ import {createResourcePanelTourSteps} from './resourcePanelTourHelpers';
 
 // Check if tour should be disabled (e.g., during UI tests) before any rendering.
 // This runs when the module is first imported so localStorage is set early.
+// TODO: change this constant to be generic
 const urlParams = new URLSearchParams(window.location.search);
 if (urlParams.get('noIntrojs') === 'true') {
   trySetLocalStorage(RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN, 'yes');
@@ -32,17 +33,18 @@ const OnboardingTourSteps: React.FC = () => {
   const isStandaloneCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
   );
-  const shouldShowTour = tourSeen !== 'yes' && !isStandaloneCollapsed;
+  //const shouldShowTour = tourSeen !== 'yes' && !isStandaloneCollapsed;
+  const shouldShowTour = true;
 
   useEffect(() => {
     if (!shouldShowTour) return;
 
     const tour = new Shepherd.Tour({
       useModalOverlay: true,
-      exitOnEsc: false,
-      keyboardNavigation: false,
+      exitOnEsc: true,
+      keyboardNavigation: true,
       defaultStepOptions: {
-        cancelIcon: {enabled: false},
+        cancelIcon: {enabled: true},
         scrollTo: false,
       },
     });
@@ -50,7 +52,7 @@ const OnboardingTourSteps: React.FC = () => {
     tour.addSteps(createResourcePanelTourSteps(tour));
 
     tour.on('start', () => {
-      sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_STARTED, {
+      sendLab2AnalyticsEvent(EVENTS.INTRO_FLOW_STARTED, {
         flowName: RESOURCE_PANEL_ONBOARDING_FLOW_NAME,
       });
     });
@@ -60,10 +62,10 @@ const OnboardingTourSteps: React.FC = () => {
         RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
         'yes'
       );
-      sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_COMPLETED, {
+      sendLab2AnalyticsEvent(EVENTS.INTRO_FLOW_COMPLETED, {
         flowName: RESOURCE_PANEL_ONBOARDING_FLOW_NAME,
       });
-      sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_EXIT, {
+      sendLab2AnalyticsEvent(EVENTS.INTRO_FLOW_EXIT, {
         flowName: RESOURCE_PANEL_ONBOARDING_FLOW_NAME,
         step: String(tour.steps.length - 1),
       });
@@ -77,7 +79,7 @@ const OnboardingTourSteps: React.FC = () => {
         RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
         'yes'
       );
-      sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_EXIT, {
+      sendLab2AnalyticsEvent(EVENTS.INTRO_FLOW_EXIT, {
         flowName: RESOURCE_PANEL_ONBOARDING_FLOW_NAME,
         step: String(currentIndex),
       });
