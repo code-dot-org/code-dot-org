@@ -76,6 +76,9 @@ namespace :package do
 
     desc 'Update studio static asset package.'
     timed_task_with_logging 'update' do
+      # temporarily skip if levelbuilder or production
+      next if rack_env?(:levelbuilder) || rack_env?(:production)
+
       # never download if we build our own and we're not building a package ourselves.
       next if CDO.use_my_studio && !BUILD_PACKAGE
 
@@ -90,6 +93,9 @@ namespace :package do
 
     desc 'Build and test studio package and upload to S3.'
     timed_task_with_logging 'build' do
+      # temporarily skip if levelbuilder or production
+      next if rack_env?(:levelbuilder) || rack_env?(:production)
+
       # Store initial turbo hash to make sure inputs don't change during the build.
       # Turborepo's hash covers all source inputs, replacing the git-tree-hash
       # approach used for apps.
