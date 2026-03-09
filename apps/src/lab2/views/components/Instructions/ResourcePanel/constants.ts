@@ -23,3 +23,5 @@ export const resourcePanelValidationTableElementId =
 
 export const RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME =
   'Resource Panel Onboarding Tour';
+
+export const RESOURCE_PANEL_VALIDATION_FLOW_NAME = 'Resource Panel Validation';

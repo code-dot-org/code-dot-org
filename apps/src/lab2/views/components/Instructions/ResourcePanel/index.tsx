@@ -216,7 +216,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const showShepherdProductTours = experiments.isEnabledAllowingQueryString(
     experiments.SHEPHERD_PRODUCT_TOURS
   );
-  useResourcePanelShepherdTours(isOnboardingTourEnabled || false);
+  useResourcePanelShepherdTours({
+    isOnboardingTourEnabled: isOnboardingTourEnabled || false,
+    isValidationTourEnabled: isValidationTourEnabled || false,
+    hasValidationConditions,
+    validationSettings: instructionsProps.validationSettings,
+  });
 
   // Tooltip should disappear quickly.
   const hideTooltipDelayMs = 10;
