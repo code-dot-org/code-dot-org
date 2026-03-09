@@ -528,7 +528,7 @@ const styles = {
   },
   guideFinalText: {
     padding: 20,
-    opacity: 0
+    color: 'rgba(0,0,0,0)'
   },
   guideClickToContinueReminderContainer: {
     position: 'absolute',
