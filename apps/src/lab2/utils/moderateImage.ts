@@ -7,7 +7,6 @@ import {WEBLAB2_IMAGE_FILE_TYPES} from '@cdo/apps/weblab2/constants';
 const LAB2_LABS_MODERATE_IMAGES = ['weblab2', 'aichat'];
 
 interface AnalyticsData {
-  appName: string;
   uploaderType?: 'Lab2FileUploader' | 'n/a';
   moderateEvent?: string;
   flaggedEvent?: string;
@@ -16,8 +15,8 @@ interface AnalyticsData {
 export const moderateImage = async (
   file: File,
   ext: string,
+  appName: string,
   {
-    appName,
     uploaderType = 'n/a',
     moderateEvent = EVENTS.MODERATE_CUSTOM_IMAGE,
     flaggedEvent = EVENTS.FLAGGED_CUSTOM_IMAGE,

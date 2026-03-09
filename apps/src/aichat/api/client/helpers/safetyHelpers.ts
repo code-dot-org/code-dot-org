@@ -58,8 +58,7 @@ export async function isImageSafe(file: GeneratedFile): Promise<boolean> {
   const {filename, fileBuffer, mediaType, extension} =
     prepareGeneratedFile(file);
   const image = new File([fileBuffer], filename, {type: mediaType});
-  const moderationStatus = await moderateImage(image, extension, {
-    appName: 'aichat',
+  const moderationStatus = await moderateImage(image, extension, 'aichat', {
     moderateEvent: EVENTS.MODERATE_MODEL_OUTPUT_IMAGE_AZURE,
     flaggedEvent: EVENTS.FLAGGED_MODEL_OUTPUT_IMAGE_AZURE,
   });
