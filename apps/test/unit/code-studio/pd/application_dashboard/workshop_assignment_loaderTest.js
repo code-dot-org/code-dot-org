@@ -1,6 +1,7 @@
 import {expect} from 'chai'; // eslint-disable-line no-restricted-imports
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import React, {act} from 'react';
+import React from 'react';
+import {act} from 'react-dom/test-utils';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import WorkshopAssignmentLoader from '@cdo/apps/code-studio/pd/application_dashboard/workshop_assignment_loader';
