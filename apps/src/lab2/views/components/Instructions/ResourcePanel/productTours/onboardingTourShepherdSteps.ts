@@ -12,9 +12,9 @@ import {
   resourcePanelTabsElementId,
   resourcePanelLinksElementId,
   resourcePanelNavigationButtonElementId,
-} from './constants';
+} from '../constants';
 
-export const createResourcePanelTourSteps = (tour: Tour): StepOptions[] => [
+export const createOnboardingTourSteps = (tour: Tour): StepOptions[] => [
   {
     id: 'instructions',
     attachTo: {

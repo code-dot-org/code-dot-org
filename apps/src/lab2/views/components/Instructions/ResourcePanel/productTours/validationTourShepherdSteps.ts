@@ -6,7 +6,7 @@ import {
   resourcePanelValidationTabButtonElementId,
   instructionsValidateButtonElementId,
   resourcePanelValidationTableElementId,
-} from './constants';
+} from '../constants';
 
 export const createValidationTourSteps = (tour: Tour): StepOptions[] => [
   {

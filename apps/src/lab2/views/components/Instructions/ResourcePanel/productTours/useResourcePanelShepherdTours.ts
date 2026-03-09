@@ -10,8 +10,9 @@ import {tryGetLocalStorage} from '@cdo/apps/utils';
 import {
   RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME,
   RESOURCE_PANEL_VALIDATION_FLOW_V2_NAME,
-} from './constants';
-import {createResourcePanelTourSteps} from './resourcePanelTourShepherdSteps';
+} from '../constants';
+
+import {createOnboardingTourSteps} from './onboardingTourShepherdSteps';
 import {createValidationTourSteps} from './validationTourShepherdSteps';
 
 const ONBOARDING_TOUR_LOCAL_STORAGE_KEY = 'resourcePanelOnboardingTourV2Seen';
@@ -59,7 +60,7 @@ const useResourcePanelShepherdTours = ({
   }, []);
 
   const {tour: onboardingTour} = useProductTour({
-    getSteps: createResourcePanelTourSteps,
+    getSteps: createOnboardingTourSteps,
     localStorageKey: ONBOARDING_TOUR_LOCAL_STORAGE_KEY,
     tourAvailable: showOnboardingTour,
     onStart: onTourStart(RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME),

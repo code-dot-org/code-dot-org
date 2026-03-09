@@ -49,11 +49,11 @@ import {
 import CopyrightButton from './CopyrightButton';
 import DisclaimerButton from './DisclaimerButton';
 import OnboardingTourSteps from './OnboardingTourSteps';
+import useResourcePanelShepherdTours from './productTours/useResourcePanelShepherdTours';
 import ResourcePanelExtraLinks from './ResourcePanelExtraLinks';
 import setFooterVisibility from './setFooterVisibility';
 import SettingsPanel from './SettingsPanel';
 import {Tabs} from './types';
-import useResourcePanelShepherdTours from './useResourcePanelShepherdTours';
 import ValidationPanel from './ValidationPanel';
 import ValidationTourSteps from './ValidationTourSteps';
 import {VersionHistoryPanel} from './VersionHistory';
