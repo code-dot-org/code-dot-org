@@ -36,8 +36,8 @@ const useProductTour = ({
       keyboardNavigation: true,
       defaultStepOptions: {
         cancelIcon: {enabled: true},
-        scrollTo: false,
-        classes: 'shepherd-step-container',
+        scrollTo: true,
+        classes: 'custom-shepherd-step-container',
       },
     });
     tour.addSteps(getSteps(tour));

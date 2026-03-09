@@ -1,3 +1,4 @@
+import {offset} from '@floating-ui/dom';
 import {type StepOptions, type Tour} from 'shepherd.js';
 
 import lab2I18n from '@cdo/apps/lab2/locale';
@@ -23,7 +24,6 @@ export const createOnboardingTourSteps = (tour: Tour): StepOptions[] => [
     title: lab2I18n.resourcePanelOnboarding_title(),
     text: lab2I18n.resourcePanelOnboarding_text(),
     buttons: [nextButton(tour)],
-    scrollTo: false,
   },
   {
     id: 'tabs',
@@ -31,7 +31,6 @@ export const createOnboardingTourSteps = (tour: Tour): StepOptions[] => [
     title: lab2I18n.resourcePanelOnboarding_tabsTitle(),
     text: lab2I18n.resourcePanelOnboarding_tabsText(),
     buttons: [backButton(tour), nextButton(tour)],
-    scrollTo: false,
   },
   {
     id: 'links',
@@ -39,7 +38,6 @@ export const createOnboardingTourSteps = (tour: Tour): StepOptions[] => [
     title: lab2I18n.resourcePanelOnboarding_linksTitle(),
     text: lab2I18n.resourcePanelOnboarding_linksText(),
     buttons: [backButton(tour), nextButton(tour)],
-    scrollTo: false,
   },
   {
     id: 'navigation',
@@ -50,6 +48,8 @@ export const createOnboardingTourSteps = (tour: Tour): StepOptions[] => [
     title: lab2I18n.resourcePanelOnboarding_finishTitle(),
     text: lab2I18n.resourcePanelOnboarding_finishText(),
     buttons: [backButton(tour), doneButton(tour)],
-    scrollTo: false,
+    floatingUIOptions: {
+      middleware: [offset(12)],
+    },
   },
 ];

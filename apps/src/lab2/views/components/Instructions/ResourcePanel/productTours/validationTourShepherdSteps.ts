@@ -1,3 +1,4 @@
+import {offset} from '@floating-ui/dom';
 import {type StepOptions, type Tour} from 'shepherd.js';
 
 import {
@@ -20,7 +21,6 @@ export const createValidationTourSteps = (tour: Tour): StepOptions[] => [
       selector: `#${resourcePanelValidationTabButtonElementId}`,
       event: 'click',
     },
-    scrollTo: false,
   },
   {
     id: 'validate-button',
@@ -34,7 +34,9 @@ export const createValidationTourSteps = (tour: Tour): StepOptions[] => [
       selector: `#${instructionsValidateButtonElementId}`,
       event: 'click',
     },
-    scrollTo: false,
+    floatingUIOptions: {
+      middleware: [offset(12)],
+    },
   },
   {
     id: 'validation-results',
@@ -45,6 +47,5 @@ export const createValidationTourSteps = (tour: Tour): StepOptions[] => [
     title: 'Validation Results',
     text: "Your results will appear in this table, showing which tests passed and what still needs work. You can click 'Validate' again to rerun the tests.",
     buttons: [doneButton(tour)],
-    scrollTo: false,
   },
 ];
