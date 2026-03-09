@@ -1,11 +1,13 @@
-import {Output} from 'ai';
+import {type GeneratedFile, Output} from 'ai';
 import z from 'zod/v3';
 
 import {generateText} from '@cdo/apps/aiGateway/generateTextThroughProxyOrGateway';
 import {moderateImage} from '@cdo/apps/lab2/utils';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
+import {prepareGeneratedFile} from './fileHelpers';
 import {getModel} from './modelHelpers';
 
 const outputSchema = Output.object({
@@ -52,10 +54,14 @@ export async function isTextSafe(
   return classification === 'OK';
 }
 
-export async function isModelOutputImageSafe(
-  image: File,
-  ext: string
-): Promise<boolean> {
-  const moderationStatus = await moderateImage(image, ext, 'aichat', true); // isModelOutputImage = true
+export async function isImageSafe(file: GeneratedFile): Promise<boolean> {
+  const {filename, fileBuffer, mediaType, extension} =
+    prepareGeneratedFile(file);
+  const image = new File([fileBuffer], filename, {type: mediaType});
+  const moderationStatus = await moderateImage(image, extension, {
+    appName: 'aichat',
+    moderateEvent: EVENTS.MODERATE_MODEL_OUTPUT_IMAGE_AZURE,
+    flaggedEvent: EVENTS.FLAGGED_MODEL_OUTPUT_IMAGE_AZURE,
+  });
   return moderationStatus === 'ok' || moderationStatus === 'skipped';
 }

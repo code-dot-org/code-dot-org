@@ -170,11 +170,10 @@ export const fetchAndSaveFile = async ({
       const file = new File([blob], selectedFileName, {type: contentType});
       const appName = Lab2Registry.getInstance().getAppName();
 
-      const moderationStatus = await moderateImage(
-        file,
-        fileType,
-        appName ?? ''
-      );
+      const moderationStatus = await moderateImage(file, fileType, {
+        appName: appName ?? '',
+        uploaderType: 'Lab2 File Uploader',
+      });
       if (moderationStatus === 'flagged') {
         // Callback function so if user accepts flagged image, we can save the image to the project.
         const saveBackpackImageFileToProjectFunction = async () => {
