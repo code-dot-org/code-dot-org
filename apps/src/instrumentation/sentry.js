@@ -21,6 +21,7 @@ Sentry.init({
   integrations: [
     Sentry.browserTracingIntegration(),
     Sentry.replayIntegration(),
+    Sentry.replayCanvasIntegration(),
   ],
   tracesSampleRate: 1.0,
   tracePropagationTargets: [getAllowedTracingUrls()],
