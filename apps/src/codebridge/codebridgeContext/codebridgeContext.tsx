@@ -24,7 +24,6 @@ export type CodebridgeContextType = {
   levelProperties: CodebridgeLevelProperties;
   projectPickerSettings?: ProjectPickerSettings;
   hiddenContextCallback?: () => Promise<string>;
-  AiTutorResponseView?: React.ReactNode;
   onImageFlagged?: (
     file: File,
     fileType: string,
