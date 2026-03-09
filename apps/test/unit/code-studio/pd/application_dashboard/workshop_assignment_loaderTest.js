@@ -1,6 +1,6 @@
 import {expect} from 'chai'; // eslint-disable-line no-restricted-imports
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import React from 'react';
+import React, {act} from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import WorkshopAssignmentLoader from '@cdo/apps/code-studio/pd/application_dashboard/workshop_assignment_loader';
@@ -40,6 +40,14 @@ describe('WorkshopAssignmentLoader', () => {
   const respondWithTeachercon = response =>
     respondWith(/upcoming_teachercons/, response);
 
+  const respondAndFlush = async () => {
+    await act(async () => {
+      sandbox.server.respond();
+      await defer();
+    });
+    workshopAssignmentLoader.update();
+  };
+
   it('initially displays spinner', () => {
     workshopAssignmentLoader = mountWorkshopAssignmentLoader();
     expect(workshopAssignmentLoader.find('Spinner')).to.have.length(1);
@@ -73,10 +81,7 @@ describe('WorkshopAssignmentLoader', () => {
       respondWithTeachercon([
         {id: 11, date_and_location_name: 'July 22 - 27, 2018, Phoenix AZ'},
       ]);
-      sandbox.server.respond();
-
-      await defer();
-      workshopAssignmentLoader.update();
+      await respondAndFlush();
 
       expect(workshopAssignmentLoader.find('Spinner')).to.have.length(0);
       const select = workshopAssignmentLoader.find('WorkshopAssignmentSelect');
@@ -108,10 +113,7 @@ describe('WorkshopAssignmentLoader', () => {
           {id: 2, date_and_location_name: 'Dec 15 - 20, 2018, Buffalo NY'},
         ],
       });
-      sandbox.server.respond();
-
-      await defer();
-      workshopAssignmentLoader.update();
+      await respondAndFlush();
 
       expect(workshopAssignmentLoader.find('Spinner')).to.have.length(0);
       const select = workshopAssignmentLoader.find('WorkshopAssignmentSelect');
@@ -128,10 +130,7 @@ describe('WorkshopAssignmentLoader', () => {
 
     // bad request
     sandbox.server.respondWith([400, {}, '']);
-    sandbox.server.respond();
-
-    await defer();
-    workshopAssignmentLoader.update();
+    await respondAndFlush();
 
     expect(
       workshopAssignmentLoader.find('div.workshop-load-error').text()
