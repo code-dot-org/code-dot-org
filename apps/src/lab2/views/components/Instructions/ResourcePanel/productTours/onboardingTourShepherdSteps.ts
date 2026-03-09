@@ -2,17 +2,16 @@ import {type StepOptions, type Tour} from 'shepherd.js';
 
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {
-  nextButton,
-  backButton,
-  doneButton,
-} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
-
-import {
   resourcePanelInstructionsElementId,
   resourcePanelTabsElementId,
   resourcePanelLinksElementId,
   resourcePanelNavigationButtonElementId,
-} from '../constants';
+} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/constants';
+import {
+  nextButton,
+  backButton,
+  doneButton,
+} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 
 export const createOnboardingTourSteps = (tour: Tour): StepOptions[] => [
   {

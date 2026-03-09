@@ -1,16 +1,15 @@
 import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
-import {ValidationSettings} from '@cdo/apps/lab2/views/components/Instructions/InstructionsV2';
+import {
+  RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME,
+  RESOURCE_PANEL_VALIDATION_FLOW_V2_NAME,
+} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/constants';
+import {ValidationSettings} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/ValidationPanel';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import useProductTour from '@cdo/apps/sharedComponents/productTour/useProductTour';
 import experiments from '@cdo/apps/util/experiments';
 import {tryGetLocalStorage} from '@cdo/apps/utils';
-
-import {
-  RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME,
-  RESOURCE_PANEL_VALIDATION_FLOW_V2_NAME,
-} from '../constants';
 
 import {createOnboardingTourSteps} from './onboardingTourShepherdSteps';
 import {createValidationTourSteps} from './validationTourShepherdSteps';
@@ -47,6 +46,7 @@ const useResourcePanelShepherdTours = ({
     experiments.SHEPHERD_PRODUCT_TOURS
   );
 
+  // ONBOARDING TOUR
   const showOnboardingTour = useMemo(
     () => (showShepherdProductTours && isOnboardingTourEnabled) || false,
     [showShepherdProductTours, isOnboardingTourEnabled]
@@ -67,6 +67,16 @@ const useResourcePanelShepherdTours = ({
     onComplete: onOnboardingTourComplete,
     onCancel: onTourCancel(RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME),
   });
+
+  const onboardingTourStarted = useRef(false);
+  useEffect(() => {
+    if (onboardingTour && !onboardingTourStarted.current) {
+      onboardingTourStarted.current = true;
+      onboardingTour.start();
+    }
+  }, [onboardingTour]);
+
+  // VALIDATION TOUR
   const showValidationTour = useMemo(
     () =>
       (showShepherdProductTours &&
@@ -83,6 +93,7 @@ const useResourcePanelShepherdTours = ({
       onboardingTourSeen,
     ]
   );
+
   const {tour: validationTour} = useProductTour({
     getSteps: createValidationTourSteps,
     localStorageKey: VALIDATION_TOUR_LOCAL_STORAGE_KEY,
@@ -91,14 +102,6 @@ const useResourcePanelShepherdTours = ({
     onComplete: onTourComplete(RESOURCE_PANEL_VALIDATION_FLOW_V2_NAME),
     onCancel: onTourCancel(RESOURCE_PANEL_VALIDATION_FLOW_V2_NAME),
   });
-
-  const tourStarted = useRef(false);
-  useEffect(() => {
-    if (onboardingTour && !tourStarted.current) {
-      tourStarted.current = true;
-      onboardingTour.start();
-    }
-  }, [onboardingTour]);
 
   const validationTourStarted = useRef(false);
   useEffect(() => {

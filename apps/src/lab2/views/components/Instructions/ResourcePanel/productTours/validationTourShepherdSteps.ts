@@ -1,12 +1,11 @@
 import {type StepOptions, type Tour} from 'shepherd.js';
 
-import {doneButton} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
-
 import {
   resourcePanelValidationTabButtonElementId,
   instructionsValidateButtonElementId,
   resourcePanelValidationTableElementId,
-} from '../constants';
+} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/constants';
+import {doneButton} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 
 export const createValidationTourSteps = (tour: Tour): StepOptions[] => [
   {
