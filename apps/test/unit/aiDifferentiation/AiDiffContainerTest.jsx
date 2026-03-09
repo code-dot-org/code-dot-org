@@ -167,9 +167,11 @@ describe('AiDiffContainer', () => {
     });
   });
 
-  it('Shows the welcome experience when user property is false', () => {
-    renderDefault({disableWelcome: false}, false);
+  // Was asked to disable the AITA welcome experience without removing any code.
+  // Commenting out this test until further notice.
+  // it('Shows the welcome experience when user property is false', () => {
+  //   renderDefault({disableWelcome: false}, false);
 
-    screen.getByText('Empowering teachers. Enhancing learning.');
-  });
+  //   screen.getByText('Empowering teachers. Enhancing learning.');
+  // });
 });

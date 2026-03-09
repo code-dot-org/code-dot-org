@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-04 03:04:34 UTC",
+    "serialized_at": "2026-03-06 19:36:56 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -124,7 +124,7 @@
     },
     {
       "key": "lesson-7",
-      "name": "How AI \"Knows\" Your Secrets",
+      "name": "Exploring Data in AI",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -279,6 +279,30 @@
         "lesson_group.key": "",
         "script.name": "6-12-aid-thinking-critically-about-ai-2026"
       }
+    },
+    {
+      "key": "708145f2-a000-491e-870d-7aaec8d42ecc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "708145f2-a000-491e-870d-7aaec8d42ecc",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-thinking-critically-about-ai-2026"
+      }
+    },
+    {
+      "key": "4becd360-04ec-4459-bb82-bbb8cdca3437",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4becd360-04ec-4459-bb82-bbb8cdca3437",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-thinking-critically-about-ai-2026"
+      }
     }
   ],
   "activity_sections": [
@@ -382,6 +406,17 @@
       }
     },
     {
+      "key": "58d89344-1227-486f-ab1b-3b8c87437a09",
+      "position": 2,
+      "properties": {
+        "progression_name": "Project Work - Image Generation"
+      },
+      "seeding_key": {
+        "activity_section.key": "58d89344-1227-486f-ab1b-3b8c87437a09",
+        "lesson_activity.key": "f9175d8e-20e3-4520-9ea2-2cdf2bdf51e1"
+      }
+    },
+    {
       "key": "5d9799ef-3f75-449c-81d7-69216f8902cf",
       "position": 1,
       "properties": {
@@ -422,6 +457,17 @@
       },
       "seeding_key": {
         "activity_section.key": "959a1f9b-2dc8-492d-b9fd-c0e3a4bb6f97",
+        "lesson_activity.key": "3da1819d-2d5e-4bec-b935-fb9c1c5fd0bf"
+      }
+    },
+    {
+      "key": "de210e2d-4ebb-437a-8a01-b87718f54b6b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Project Work - Image Generation"
+      },
+      "seeding_key": {
+        "activity_section.key": "de210e2d-4ebb-437a-8a01-b87718f54b6b",
         "lesson_activity.key": "3da1819d-2d5e-4bec-b935-fb9c1c5fd0bf"
       }
     },
@@ -467,6 +513,61 @@
       "seeding_key": {
         "activity_section.key": "6a877a35-c028-4f46-b355-a6bca9ebb3a8",
         "lesson_activity.key": "af093cc5-5676-43a4-bc99-f2cc069f9ab4"
+      }
+    },
+    {
+      "key": "7ad588c2-1d6e-4ee3-b026-c4962b9fca2a",
+      "position": 2,
+      "properties": {
+        "progression_name": "Project Work - Image Generation"
+      },
+      "seeding_key": {
+        "activity_section.key": "7ad588c2-1d6e-4ee3-b026-c4962b9fca2a",
+        "lesson_activity.key": "af093cc5-5676-43a4-bc99-f2cc069f9ab4"
+      }
+    },
+    {
+      "key": "8761bfd1-9b79-47e0-80b3-9c75a9902cc7",
+      "position": 1,
+      "properties": {
+        "progression_name": "Project Work - Milestone 5"
+      },
+      "seeding_key": {
+        "activity_section.key": "8761bfd1-9b79-47e0-80b3-9c75a9902cc7",
+        "lesson_activity.key": "708145f2-a000-491e-870d-7aaec8d42ecc"
+      }
+    },
+    {
+      "key": "acefc40c-dbd7-4adb-98d3-ba00fcd16dcb",
+      "position": 2,
+      "properties": {
+        "progression_name": "AI Feedback Test"
+      },
+      "seeding_key": {
+        "activity_section.key": "acefc40c-dbd7-4adb-98d3-ba00fcd16dcb",
+        "lesson_activity.key": "708145f2-a000-491e-870d-7aaec8d42ecc"
+      }
+    },
+    {
+      "key": "8bd4e191-d698-472a-97ff-88c886a0a51c",
+      "position": 3,
+      "properties": {
+        "progression_name": "Project Work - Image Generation"
+      },
+      "seeding_key": {
+        "activity_section.key": "8bd4e191-d698-472a-97ff-88c886a0a51c",
+        "lesson_activity.key": "708145f2-a000-491e-870d-7aaec8d42ecc"
+      }
+    },
+    {
+      "key": "cc4e07ad-2c7b-4481-b88a-0d997b32d065",
+      "position": 1,
+      "properties": {
+        "progression_name": "Final Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "cc4e07ad-2c7b-4481-b88a-0d997b32d065",
+        "lesson_activity.key": "4becd360-04ec-4459-bb82-bbb8cdca3437"
       }
     }
   ],
@@ -693,6 +794,28 @@
     },
     {
       "chapter": 11,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Project Work - Image Generation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aid-thinking-critically-lesson4-level3_2026-test"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-thinking-critically-about-ai-2026",
+        "activity_section.key": "58d89344-1227-486f-ab1b-3b8c87437a09"
+      },
+      "level_keys": [
+        "aid-thinking-critically-lesson4-level3_2026-test"
+      ]
+    },
+    {
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -714,7 +837,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -736,7 +859,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -758,7 +881,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -780,7 +903,29 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Project Work - Image Generation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aid-thinking-critically-lesson6-level2_2026-test"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-thinking-critically-about-ai-2026",
+        "activity_section.key": "de210e2d-4ebb-437a-8a01-b87718f54b6b"
+      },
+      "level_keys": [
+        "aid-thinking-critically-lesson6-level2_2026-test"
+      ]
+    },
+    {
+      "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -802,7 +947,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 18,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -824,7 +969,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 19,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -846,7 +991,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -865,6 +1010,116 @@
       },
       "level_keys": [
         "aid-thinking-critically-lesson8-level1_2026-test"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Project Work - Image Generation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aid-thinking-critically-lesson8-level2_2026-test"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-thinking-critically-about-ai-2026",
+        "activity_section.key": "7ad588c2-1d6e-4ee3-b026-c4962b9fca2a"
+      },
+      "level_keys": [
+        "aid-thinking-critically-lesson8-level2_2026-test"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Project Work - Milestone 5"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aid-thinking-critically-lesson9-project_2026-test"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-thinking-critically-about-ai-2026",
+        "activity_section.key": "8761bfd1-9b79-47e0-80b3-9c75a9902cc7"
+      },
+      "level_keys": [
+        "aid-thinking-critically-lesson9-project_2026-test"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Feedback Test"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aid-thinking-critically-lesson9-level1_2026-test"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-thinking-critically-about-ai-2026",
+        "activity_section.key": "acefc40c-dbd7-4adb-98d3-ba00fcd16dcb"
+      },
+      "level_keys": [
+        "aid-thinking-critically-lesson9-level1_2026-test"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Project Work - Image Generation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aid-thinking-critically-lesson9-level2_2026-test"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-thinking-critically-about-ai-2026",
+        "activity_section.key": "8bd4e191-d698-472a-97ff-88c886a0a51c"
+      },
+      "level_keys": [
+        "aid-thinking-critically-lesson9-level2_2026-test"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Final Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aid-thinking-critically-lesson10-project_2026-test"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-thinking-critically-about-ai-2026",
+        "activity_section.key": "cc4e07ad-2c7b-4481-b88a-0d997b32d065"
+      },
+      "level_keys": [
+        "aid-thinking-critically-lesson10-project_2026-test"
       ]
     }
   ],
@@ -991,6 +1246,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "aid-thinking-critically-lesson4-level3_2026-test",
+        "script_level.level_keys": [
+          "aid-thinking-critically-lesson4-level3_2026-test"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-thinking-critically-about-ai-2026",
+        "activity_section.key": "58d89344-1227-486f-ab1b-3b8c87437a09"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "aid-thinking-critically-lesson5-level1_2026-test",
         "script_level.level_keys": [
           "aid-thinking-critically-lesson5-level1_2026-test"
@@ -1039,6 +1306,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "aid-thinking-critically-lesson6-level2_2026-test",
+        "script_level.level_keys": [
+          "aid-thinking-critically-lesson6-level2_2026-test"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-thinking-critically-about-ai-2026",
+        "activity_section.key": "de210e2d-4ebb-437a-8a01-b87718f54b6b"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "aid-thinking-critically-lesson7-level1_2026-test",
         "script_level.level_keys": [
           "aid-thinking-critically-lesson7-level1_2026-test"
@@ -1083,6 +1362,66 @@
         "lesson_group.key": "",
         "script.name": "6-12-aid-thinking-critically-about-ai-2026",
         "activity_section.key": "6a877a35-c028-4f46-b355-a6bca9ebb3a8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aid-thinking-critically-lesson8-level2_2026-test",
+        "script_level.level_keys": [
+          "aid-thinking-critically-lesson8-level2_2026-test"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-thinking-critically-about-ai-2026",
+        "activity_section.key": "7ad588c2-1d6e-4ee3-b026-c4962b9fca2a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aid-thinking-critically-lesson9-project_2026-test",
+        "script_level.level_keys": [
+          "aid-thinking-critically-lesson9-project_2026-test"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-thinking-critically-about-ai-2026",
+        "activity_section.key": "8761bfd1-9b79-47e0-80b3-9c75a9902cc7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aid-thinking-critically-lesson9-level1_2026-test",
+        "script_level.level_keys": [
+          "aid-thinking-critically-lesson9-level1_2026-test"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-thinking-critically-about-ai-2026",
+        "activity_section.key": "acefc40c-dbd7-4adb-98d3-ba00fcd16dcb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aid-thinking-critically-lesson9-level2_2026-test",
+        "script_level.level_keys": [
+          "aid-thinking-critically-lesson9-level2_2026-test"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-thinking-critically-about-ai-2026",
+        "activity_section.key": "8bd4e191-d698-472a-97ff-88c886a0a51c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aid-thinking-critically-lesson10-project_2026-test",
+        "script_level.level_keys": [
+          "aid-thinking-critically-lesson10-project_2026-test"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-thinking-critically-about-ai-2026",
+        "activity_section.key": "cc4e07ad-2c7b-4481-b88a-0d997b32d065"
       }
     }
   ],

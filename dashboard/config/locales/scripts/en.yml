@@ -26028,6 +26028,8 @@ en:
               name: Unit 5 Code Examples
             lesson-6:
               name: Unit 5 Prototypes
+            lesson-7:
+              name: AI Prompt Modes
           lesson_groups: {}
           name: aif-all-the-things
           title: All the AIF Things!

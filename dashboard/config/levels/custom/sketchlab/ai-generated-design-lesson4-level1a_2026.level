@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "#Mood Board Design\r\n\r\n## Do This:\r\n1. Choose one of the fictional brand or event from the options on your canvas.\r\n2. Create a mood board that captures your chosen brand’s vibe. Include:\r\n   - At least 2 colors that match your mood.\r\n   - 1 font style that fits your brand's tone.\r\n   - 1 image that represents your brand's world or feeling.\r\n   - At least 2 style words that describe your brand's personality.\r\n   - (Optional) 1 logo, icon, or background texture that ties your design together.\r\n3. Move to Level 2 to learn how to save your mood board to the backpack.",
+    "long_instructions": "#Mood Board Design\r\n\r\n## Do This:\r\n1. Choose one of the fictional brand or event from the options on your canvas.\r\n2. Create a mood board that captures your chosen brand’s vibe. Include:\r\n   - At least 2 colors that match your mood.\r\n   - 1 font style that fits your brand's tone.\r\n   - 1 image that represents your brand's world or feeling.\r\n   - At least 2 style words that describe your brand's personality.\r\n   - (Optional) 1 logo, icon, or background texture that ties your design together.\r\n3. Move to Level 2 to learn how to save your mood board to the backpack.\r\n\r\n*If you feel stuck or need help generating ideas, return to the AI Chat level to brainstorm colors, fonts, imagery, or style words to help with your design.*",
     "start_sources": {
       "source": {
         "type": "excalidraw",
@@ -941,7 +941,7 @@
     },
     "display_name": "Sketch Lab",
     "thumbnail_url": "https://images.code.org/d2f6256449032ef4cee95fe915800e7c-mood-board.png",
-    "bubble_choice_description": "Use Sketch Lab to design your brand or event's mood board.",
+    "bubble_choice_description": "Build a mood board in Sketch Lab that captures the feeling and personality of your chosen brand or event.",
     "exemplar_sources": {
       "source": {
         "type": "excalidraw",
@@ -2373,6 +2373,6 @@
     "name_suffix": "_2026",
     "project_template_level_name": "ai-generated-design-lesson4-level1-template_2026"
   },
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:10:59.153+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson4-level1a_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson4-level1a_2025\"},{\"changed_at\":\"2026-03-03 22:25:29 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-03 22:38:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-03 22:40:41 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:10:59.153+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson4-level1a_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson4-level1a_2025\"},{\"changed_at\":\"2026-03-03 22:25:29 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-03 22:38:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-03 22:40:41 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 18:29:30 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>
