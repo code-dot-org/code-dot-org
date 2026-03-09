@@ -10,7 +10,7 @@
 }
 
 // Aligned with purple primary button styles.
-.shepherd-button-primary {
+.custom-shepherd-button-primary {
   background-color: var(--background-brand-purple-primary);
   color: var(--text-neutral-white-fixed);
 
@@ -26,7 +26,7 @@
 }
 
 // Aligned with secondary black button styles.
-.shepherd-button-secondary {
+.custom-shepherd-button-secondary {
   border: 1px solid var(--borders-neutral-solid);
   background-color: var(--background-neutral-primary);
   color: var(--text-neutral-primary);

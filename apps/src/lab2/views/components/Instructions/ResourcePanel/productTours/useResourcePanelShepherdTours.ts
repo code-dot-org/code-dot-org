@@ -59,13 +59,18 @@ const useResourcePanelShepherdTours = ({
     setOnboardingTourSeen(true);
   }, []);
 
+  const onOnboardingTourCancel = useCallback((stepIndex: number) => {
+    onTourCancel(RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME)(stepIndex);
+    setOnboardingTourSeen(true);
+  }, []);
+
   const {tour: onboardingTour} = useProductTour({
     getSteps: createOnboardingTourSteps,
     localStorageKey: ONBOARDING_TOUR_LOCAL_STORAGE_KEY,
     tourAvailable: showOnboardingTour,
     onStart: onTourStart(RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME),
     onComplete: onOnboardingTourComplete,
-    onCancel: onTourCancel(RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME),
+    onCancel: onOnboardingTourCancel,
   });
 
   const onboardingTourStarted = useRef(false);
