@@ -166,6 +166,7 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
   );
 
   return (
+    /* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */
     <div
       className={classNames(
         'sounds-panel-sound-row',
@@ -357,6 +358,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
 
   return (
     <FocusLock>
+      {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
       <div
         id="sounds-panel"
         className={classNames(styles.soundsPanel)}
