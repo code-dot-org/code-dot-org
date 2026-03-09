@@ -46,6 +46,30 @@
     - It takes ~10s to typecheck, so it can be run too frequently too.
     - A good litmus test is if you've made a batch of changes, or before reporting success to the user, run `yarn run typecheck` first.
 
+## Design System (`@code-dot-org/component-library`)
+- Our design system lives in `frontend/packages/component-library/` (React components, TypeScript) with shared styles in `frontend/packages/component-library-styles/` (colors, typography, mixins).
+- **Always prefer design system components** over legacy ones in `apps/src/sharedComponents/` or `apps/src/legacySharedComponents/`. Only use legacy components when no design system equivalent exists. Never create custom UI primitives (buttons, modals, alerts, etc.) when a design system component is available.
+- Available components include: Accordion, ActionBlock, Alert, Breadcrumbs, Button/LinkButton, Carousel, Checkbox, Chips, Dialog, Divider, Dropdown (action, checkbox, icon, simple), FontAwesomeV6Icon, Header, HeroBanner, Image, Link, List, Modal, NotificationBanner, Popover, RadioButton, SegmentedButtons, Slider, Snackbar, Tabs, Tags, TextField, Toggle, Tooltip, Typography, Video, and more.
+- Import pattern: `import {Button} from '@code-dot-org/component-library/button';`
+- Each component has a JSDoc status header (`Stable`, `Ready for dev`, `WIP`, `DEPRECATED`) -- check it before using.
+- For full API reference, check the component source or Storybook at https://code-dot-org.github.io/code-dot-org/component-library-storybook
+
+### Styling Rules:
+- Use **SCSS modules** (`.module.scss`) for all component styling. Never use inline styles or global styles.
+- **Color priority**: always use semantic colors (`@code-dot-org/component-library-styles/colors.scss`) first, then primitive colors (`primitiveColors.scss`) second, then other colors only as last resort.
+- Semantic colors are CSS variables (e.g., `var(--text-neutral-primary)`) that support light/dark theming via the `data-theme` attribute.
+- **Never rely on stylesheet load order** for specificity. Always use CSS selector specificity rules.
+- Override component styles via parent element selectors or component-specific class selectors in SCSS modules.
+- Typography mixins and font variables are in `@code-dot-org/component-library-styles/typography.module.scss` and `fontVariables.css`.
+
+### When building new design system components:
+- Use **TypeScript**. All new components must be in `.tsx`/`.ts`.
+- Follow the existing component structure: `src/componentName/` with `index.ts`, `ComponentName.tsx`, `componentName.module.scss`, `types.ts`, `__tests__/`, `stories/`.
+- Add Storybook stories (CSF3 format) in `stories/ComponentName.story.tsx`.
+- Write tests with Jest + React Testing Library + `@testing-library/user-event`.
+- Ensure accessibility: keyboard navigation, screen reader support, APCA color contrast, RTL support.
+- See `frontend/packages/component-library/CONTRIBUTING.md` and `README.md` for the full contribution process and best practices.
+
 ## Levelbuilder
 - An important part of dashboard conceptually is "levelbuilder", which is used by curriculum authors to, well, write curriculum also called "levels".
 - Levelbuilder is mostly implemented in rails, but with some react views
