@@ -3,6 +3,7 @@ require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/page_mode'
 require 'cdo/shared_constants'
+require 'cdo/brand'
 require 'policies/child_account'
 
 class ApplicationController < ActionController::Base
@@ -29,6 +30,8 @@ class ApplicationController < ActionController::Base
   before_action :clear_sign_up_session_vars
 
   before_action :initialize_statsig_stable_id
+
+  before_action :persist_brand_params
 
   around_action :with_global_current_user
 
@@ -62,6 +65,30 @@ class ApplicationController < ActionController::Base
         cookies[:dbg] = (params[:dbg] == 'off') ? nil : 'on'
       end
       @use_web_console = cookies[:dbg]
+    end
+  end
+
+  # Persist brand experiment params as cookies so the brand sticks across
+  # page navigations. Uses the same URL param > cookie pattern as configure_web_console.
+  # Set brand:   ?studio-brand-codeai=1
+  # Clear brand: ?studio-brand-codeai=0 or ?studio-brand-reset=1
+  BRAND_PARAM_KEYS = Cdo::Brand::BRANDS.keys.map {|code| "studio-brand-#{code}"}.freeze
+
+  def persist_brand_params
+    return unless DCDO.get('studio-brand-update-enabled', false)
+
+    if params['studio-brand-reset']
+      BRAND_PARAM_KEYS.each {|key| cookies.delete(key)}
+      return
+    end
+
+    BRAND_PARAM_KEYS.each do |key|
+      next unless params.key?(key)
+      if params[key].to_s == '0'
+        cookies.delete(key)
+      else
+        cookies[key] = {value: params[key], httponly: true}
+      end
     end
   end
 
