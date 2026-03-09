@@ -4386,6 +4386,83 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@datadog/browser-core@npm:6.28.0":
+  version: 6.28.0
+  resolution: "@datadog/browser-core@npm:6.28.0"
+  checksum: 10/9a20ff987a80025755b1cc2958da8f76a16ce2f7032299785cee9910d3a3b44da6d691a1382d4bbc9be45daa2b71f827cad59bb0b344e911f7728c7e4311a2b5
+  languageName: node
+  linkType: hard
+
+"@datadog/browser-core@npm:6.30.1":
+  version: 6.30.1
+  resolution: "@datadog/browser-core@npm:6.30.1"
+  checksum: 10/c7b94fb1d046be22b09e489fdc995a690c7dc927dbf1267e7d1d9e1882fd00bd7606063268f144cedb2a5d35f2ba48d24d97c3d5c101e164fe7f868b11b9aeef
+  languageName: node
+  linkType: hard
+
+"@datadog/browser-logs@npm:^6.30.1":
+  version: 6.30.1
+  resolution: "@datadog/browser-logs@npm:6.30.1"
+  dependencies:
+    "@datadog/browser-core": "npm:6.30.1"
+  peerDependencies:
+    "@datadog/browser-rum": 6.30.1
+  peerDependenciesMeta:
+    "@datadog/browser-rum":
+      optional: true
+  checksum: 10/6b58ad5a53fa5b8d1f7e3ddf766e56654abaec65f2a79b4831305a0a2f96bbe6195d7d671f396df0d04cb7e0acf6213b233241a9ecc274c7e0ca61c6935dd8d8
+  languageName: node
+  linkType: hard
+
+"@datadog/browser-rum-core@npm:6.28.0":
+  version: 6.28.0
+  resolution: "@datadog/browser-rum-core@npm:6.28.0"
+  dependencies:
+    "@datadog/browser-core": "npm:6.28.0"
+  checksum: 10/5044469a440f6dbbfb4484f4c1d69f3217d509128ef8ef7b466c95bf7a725956bfd073f55a122675d382419e76231a323b476300ed7303597d7f82cf438d521e
+  languageName: node
+  linkType: hard
+
+"@datadog/browser-rum-react@npm:^6.28.0":
+  version: 6.28.0
+  resolution: "@datadog/browser-rum-react@npm:6.28.0"
+  dependencies:
+    "@datadog/browser-core": "npm:6.28.0"
+    "@datadog/browser-rum-core": "npm:6.28.0"
+  peerDependencies:
+    react: 18 || 19
+    react-router: 6 || 7
+    react-router-dom: 6 || 7
+  peerDependenciesMeta:
+    "@datadog/browser-rum":
+      optional: true
+    "@datadog/browser-rum-slim":
+      optional: true
+    react:
+      optional: true
+    react-router:
+      optional: true
+    react-router-dom:
+      optional: true
+  checksum: 10/7a93ed21d89b7de827d81a1ca9927ed06bea7277cdf9a0165e9fb0a38c6c048e303c6097677fb9b61df8220a1c6f7795e5c23e1e0ec4577ff0df9c75dfce87a8
+  languageName: node
+  linkType: hard
+
+"@datadog/browser-rum@npm:^6.28.0":
+  version: 6.28.0
+  resolution: "@datadog/browser-rum@npm:6.28.0"
+  dependencies:
+    "@datadog/browser-core": "npm:6.28.0"
+    "@datadog/browser-rum-core": "npm:6.28.0"
+  peerDependencies:
+    "@datadog/browser-logs": 6.28.0
+  peerDependenciesMeta:
+    "@datadog/browser-logs":
+      optional: true
+  checksum: 10/f341ee63b630a361b2804f370be8513c9a15f25944f313046b3cd747f65e75dbc08692676d11198e7755503f630e50fc94807c2d8d5b609d963ea4c3a80a7433
+  languageName: node
+  linkType: hard
+
 "@discoveryjs/json-ext@npm:0.5.7, @discoveryjs/json-ext@npm:^0.5.0, @discoveryjs/json-ext@npm:^0.5.3":
   version: 0.5.7
   resolution: "@discoveryjs/json-ext@npm:0.5.7"
@@ -11328,6 +11405,9 @@ __metadata:
     "@codemirror/search": "npm:^6.5.10"
     "@codemirror/state": "npm:^6.5.2"
     "@codemirror/view": "npm:^6.36.5"
+    "@datadog/browser-logs": "npm:^6.30.1"
+    "@datadog/browser-rum": "npm:^6.28.0"
+    "@datadog/browser-rum-react": "npm:^6.28.0"
     "@dnd-kit/core": "npm:^6.3.0"
     "@dnd-kit/modifiers": "npm:^9.0.0"
     "@dnd-kit/sortable": "npm:^10.0.0"
