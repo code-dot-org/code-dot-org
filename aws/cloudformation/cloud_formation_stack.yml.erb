@@ -526,7 +526,7 @@ Resources:
                 Resource:
                   - !Sub "arn:aws:redshift:${AWS::Region}:${AWS::AccountId}:dbuser:${DATA_STACK_NAME}-RedshiftCluster/etl_client"
                   - !Sub "arn:aws:redshift:${AWS::Region}:${AWS::AccountId}:dbname:${DATA_STACK_NAME}-RedshiftCluster/dashboard"
-                  - !Sub "arn:aws:redshift:${AWS::Region}:${AWS::AccountId}:dbname:${DATA_STACK_NAME}-RedshiftCluster/<%=rack_env%>_learningplatform_mysql_zeroetl>"
+                  - !Sub "arn:aws:redshift:${AWS::Region}:${AWS::AccountId}:dbname:${DATA_STACK_NAME}-RedshiftCluster/<%=rack_env%>_learningplatform_mysql_zeroetl"
 <% end -%>
 <% if rack_env?(:production) -%>
         - PolicyName: StopInactiveAdhocInstances
