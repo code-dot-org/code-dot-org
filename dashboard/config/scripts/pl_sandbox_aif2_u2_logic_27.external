@@ -8,12 +8,17 @@ markdown <<MARKDOWN
 #### Sometimes, one condition isn’t enough.
 #### We can combine conditions to make our programs smarter and add deeper logic to web apps.
 
-<div style="background-color:#e3f2fd; padding:10px; border-left:5px solid #1976d2; margin-bottom:20px; font-size:16px; border-radius:8px;">
-  <strong>🧢 Examples</strong><br><br>
-  <p style = "font-size:14pt;"><b>You are hip</b>: if you’re wearing sneakers <b>AND</b> sunglasses.<br></p>
-  <p style = "font-size:14pt;"><b>You are winter-ready</b>: if you have a scarf <b>OR</b> a hat.</p>
-</div>
+> #### 🧢 **Examples**
+> #### **You are hip:** if you’re wearing sneakers **AND** sunglasses.
+> #### **You are winter-ready**: if you have a scarf **OR** a hat.
 
+
+---
+
+#### Read the descriptions for the logical operators and truth tables below. 
+- #### Column A - represents the state of one condition
+- #### Column B - represetns the state of the second condition
+- #### The thrid column shows the outcome based on the states of each condition. 
 
 
 <div style="width:90%; margin:auto; font-family:sans-serif;">
@@ -25,7 +30,7 @@ markdown <<MARKDOWN
     <!-- Left Box -->
     <div style="flex:2; background-color:#f0f0f0; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); padding:10px; margin-right:10px;font-size:14pt;">
       <strong>Definition:</strong>
-      <p style = "font-size:14pt;">AND (&&) is a logical operator used in conditional statements. For a condition using AND to be true, all parts of the condition must be true. 
+      <p style = "font-size:14pt;">For a condition using AND to be true, all parts of the condition must be true. 
 </p>
       <strong>Example:</strong>
       <p style = "font-size:14pt;"> To get a student discount, you must be a student AND have a valid ID.
@@ -44,7 +49,7 @@ markdown <<MARKDOWN
 <div style="display:flex; margin-bottom:10px;">
     <div style="flex:2; background-color:#f0f0f0; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); padding:10px; margin-right:10px;font-size:14pt;">
       <strong>Definition:</strong>
-      <p style = "font-size:14pt;">OR (||) is a logical operator used in conditional statements. For a condition using OR to be true, at least one part of the condition must be true.</p>
+      <p style = "font-size:14pt;"> For a condition using OR to be true, at least one part of the condition must be true.</p>
       <strong>Example:</strong>
       <p style = "font-size:14pt;">To get free shipping, spend over $50 OR use a special coupon.
 </p>

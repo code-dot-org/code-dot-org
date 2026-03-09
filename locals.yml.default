@@ -11,6 +11,13 @@
 #openai_measures_of_learning_api_key: localoverride
 #langfuse_secret_key: localoverride
 #langfuse_public_key: localoverride
+#google_gemini_ai_chat_lab_api_key: localoverride
+#google_gemini_ai_tutor_api_key: localoverride
+#ai_gateway_auth_key: localoverride
+#ai_gateway_auth_public_key: localoverride
+#ai_gateway_auth_key_passphrase: localoverride
+#google_vertex_ai_tutor_service_account_key: localoverride
+#google_vertex_ai_chat_service_account_key: localoverride
 
 # Run dashboard-server with the level editing interface enabled (for admins)
 #levelbuilder_mode: true
@@ -25,11 +32,16 @@
 # Whether rake:build should rebuild the apps package
 build_apps: true
 
+# Whether rake:build should rebuild the studio package
+build_studio: true
 
 # Whether dashboard should use your local build of the apps package.
 # If false, dashboard will try to use a prepackaged version from S3.
 use_my_apps: true
 
+# Whether dashboard should use your local build of the studio package.
+# If false, dashboard will try to use a prepackaged version from S3.
+use_my_studio: true
 
 # Improves local environment load time by loading only the i18n data for the current locale.
 # Defaults to `true` in the development environment.

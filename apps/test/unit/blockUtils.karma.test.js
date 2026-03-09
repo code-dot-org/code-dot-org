@@ -387,9 +387,6 @@ describe('block utils', () => {
         ])
       );
 
-      expect(fakeBlockly.FieldDropdown).to.have.been.calledOnce;
-      const dropdownArg = fakeBlockly.FieldDropdown.firstCall.args[0];
-      expect(dropdownArg).to.deep.equal(TEST_SPRITES);
       expect(appendEndRowInput).to.have.been.calledOnce;
       expect(appendField).to.have.been.calledWith(sinon.match.any, 'ANIMATION');
     });

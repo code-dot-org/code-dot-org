@@ -356,7 +356,10 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
             <div className={styles.lessonSummarySection}>
               <div className={styles.lessonSummarySectionHeader}>
                 <div className={styles.lessonSummarySectionTitle}>
-                  <FontAwesomeV6Icon iconName="headphones" iconStyle="solid" />
+                  <FontAwesomeV6Icon
+                    iconFamily="kit"
+                    iconName="solid-flask-sparkle"
+                  />
                   <Typography variant="body2" gutterBottom>
                     {i18n.audioSummary()}
                   </Typography>
@@ -427,7 +430,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
                   {i18n.tipsHeader()}
                 </Typography>
                 <ol>
-                  {aiTALessonSummaryInfo?.tips.map((tip, index) => (
+                  {aiTALessonSummaryInfo?.tips?.map((tip, index) => (
                     <li key={`tip-${index}`}>
                       <Typography variant="body3" gutterBottom>
                         {tip}
@@ -441,7 +444,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
                   {i18n.commonMisconceptions()}
                 </Typography>
                 <ul>
-                  {aiTALessonSummaryInfo?.misconceptions.map(
+                  {aiTALessonSummaryInfo?.misconceptions?.map(
                     (misconception, index) => (
                       <li key={`misconception-${index}`}>
                         <Typography variant="body3" gutterBottom>

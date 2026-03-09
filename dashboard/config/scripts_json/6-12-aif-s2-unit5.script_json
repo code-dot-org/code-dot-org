@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-02-27 21:36:47 UTC",
+    "serialized_at": "2026-03-05 04:18:33 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -400,6 +400,54 @@
       "seeding_key": {
         "lesson_activity.key": "a2b0dd80-358a-4d10-88da-bc5e53012d28",
         "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5"
+      }
+    },
+    {
+      "key": "1f27fd9a-a8aa-41fc-a51d-33f6aa8deef5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1f27fd9a-a8aa-41fc-a51d-33f6aa8deef5",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5"
+      }
+    },
+    {
+      "key": "b51f6fdf-c77c-4633-be4b-a354c9432ec6",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b51f6fdf-c77c-4633-be4b-a354c9432ec6",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5"
+      }
+    },
+    {
+      "key": "e001de8a-94e4-495e-9764-bb9047d5c2b1",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e001de8a-94e4-495e-9764-bb9047d5c2b1",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5"
+      }
+    },
+    {
+      "key": "093174d0-f0da-486a-b062-0233a901cbe0",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "093174d0-f0da-486a-b062-0233a901cbe0",
+        "lesson.key": "lesson-11",
         "lesson_group.key": "",
         "script.name": "6-12-aif-s2-unit5"
       }
@@ -973,6 +1021,50 @@
       "seeding_key": {
         "activity_section.key": "aacb6777-4c10-4fe9-af3b-7e9966627a00",
         "lesson_activity.key": "a2b0dd80-358a-4d10-88da-bc5e53012d28"
+      }
+    },
+    {
+      "key": "f76bb4fe-2eab-4ac7-914f-c07bb0d28b05",
+      "position": 1,
+      "properties": {
+        "progression_name": "Milestone 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "f76bb4fe-2eab-4ac7-914f-c07bb0d28b05",
+        "lesson_activity.key": "1f27fd9a-a8aa-41fc-a51d-33f6aa8deef5"
+      }
+    },
+    {
+      "key": "6196aaac-ea1f-43c3-a879-1915913841e5",
+      "position": 1,
+      "properties": {
+        "progression_name": "Milestone 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "6196aaac-ea1f-43c3-a879-1915913841e5",
+        "lesson_activity.key": "b51f6fdf-c77c-4633-be4b-a354c9432ec6"
+      }
+    },
+    {
+      "key": "c7e4d09e-3dc5-40bd-b9de-8dfe3fd7e08e",
+      "position": 1,
+      "properties": {
+        "progression_name": "Milestone 3"
+      },
+      "seeding_key": {
+        "activity_section.key": "c7e4d09e-3dc5-40bd-b9de-8dfe3fd7e08e",
+        "lesson_activity.key": "e001de8a-94e4-495e-9764-bb9047d5c2b1"
+      }
+    },
+    {
+      "key": "c9a272cf-b183-42dc-9c4e-8a824dab8288",
+      "position": 1,
+      "properties": {
+        "progression_name": "Milestone 4"
+      },
+      "seeding_key": {
+        "activity_section.key": "c9a272cf-b183-42dc-9c4e-8a824dab8288",
+        "lesson_activity.key": "093174d0-f0da-486a-b062-0233a901cbe0"
       }
     }
   ],
@@ -2689,6 +2781,94 @@
       "level_keys": [
         "designing-reliable-apps-lesson10-level7-test_2025-pilot"
       ]
+    },
+    {
+      "chapter": 70,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Milestone 1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson11-level1-hub-test-2025"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "f76bb4fe-2eab-4ac7-914f-c07bb0d28b05"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson11-level1-hub-test-2025"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Milestone 2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson11-milestone2-test_2025-pilot"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "6196aaac-ea1f-43c3-a879-1915913841e5"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson11-milestone2-test_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Milestone 3"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson11-milestone3-test_2025-pilot"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "c7e4d09e-3dc5-40bd-b9de-8dfe3fd7e08e"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson11-milestone3-test_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Milestone 4"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson11-milestone4-test_2025-pilot"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "c9a272cf-b183-42dc-9c4e-8a824dab8288"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson11-milestone4-test_2025-pilot"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -3518,6 +3698,54 @@
         "lesson_group.key": "",
         "script.name": "6-12-aif-s2-unit5",
         "activity_section.key": "aacb6777-4c10-4fe9-af3b-7e9966627a00"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson11-level1-hub-test-2025",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson11-level1-hub-test-2025"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "f76bb4fe-2eab-4ac7-914f-c07bb0d28b05"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson11-milestone2-test_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson11-milestone2-test_2025-pilot"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "6196aaac-ea1f-43c3-a879-1915913841e5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson11-milestone3-test_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson11-milestone3-test_2025-pilot"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "c7e4d09e-3dc5-40bd-b9de-8dfe3fd7e08e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson11-milestone4-test_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson11-milestone4-test_2025-pilot"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "c9a272cf-b183-42dc-9c4e-8a824dab8288"
       }
     }
   ],

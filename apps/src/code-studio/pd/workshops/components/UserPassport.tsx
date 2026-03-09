@@ -1,7 +1,6 @@
-import {LinkButton} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tags from '@code-dot-org/component-library/tags';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -100,13 +99,18 @@ const UserPassport: React.FunctionComponent<{
             ]}
           />
         ) : (
-          <LinkButton
-            text="Edit"
-            size="xs"
-            iconLeft={{iconName: 'pencil', iconStyle: 'solid'}}
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="extraSmall"
             className={style.editButton}
             href={buildEditLink()}
-          />
+            startIcon={
+              <FontAwesomeV6Icon iconName="pencil" iconStyle="solid" />
+            }
+          >
+            {'Edit'}
+          </MuiButton>
         )}
       </span>
       {!isUserEnrolled && (

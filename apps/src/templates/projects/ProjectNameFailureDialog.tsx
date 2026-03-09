@@ -1,5 +1,4 @@
-import {Button, buttonColors} from '@code-dot-org/component-library/button';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 
 import i18n from '@cdo/locale';
@@ -31,11 +30,15 @@ const ProjectNameFailureDialog: React.FunctionComponent<
         <p>{i18n.nameFailureDialogBody({text: flaggedText})}</p>
       </div>
       <DialogFooter rightAlign>
-        <Button
-          text={i18n.ok()}
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
           onClick={handleClose}
-          color={buttonColors.purple}
-        />
+          type="button"
+        >
+          {i18n.ok()}
+        </MuiButton>
       </DialogFooter>
     </BaseDialog>
   );

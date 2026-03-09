@@ -1,10 +1,9 @@
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
-import {Button} from '@code-dot-org/component-library/button';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FormFieldWrapper from '@code-dot-org/component-library/formFieldWrapper';
 import Link from '@code-dot-org/component-library/link';
 import TextField from '@code-dot-org/component-library/textField';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {ChangeEvent, useEffect, useMemo, useState} from 'react';
 
@@ -613,12 +612,17 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
           )}
         </div>
         <div>
-          <Button
-            id="submit-update"
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
             className={commonStyles.submit}
-            text={i18n.accountInformation_updateAccountInformation()}
+            id="submit-update"
             onClick={handleSubmitAccountSettingsUpdate}
-          />
+            type="button"
+          >
+            {i18n.accountInformation_updateAccountInformation()}
+          </MuiButton>
         </div>
       </form>
     </>

@@ -89,4 +89,8 @@ class OmniAuthSection < Section
   def provider_managed?
     true
   end
+
+  def self.code_for_section(section_id)
+    "#{self::CODE_PREFIX}#{section_id}"
+  end
 end

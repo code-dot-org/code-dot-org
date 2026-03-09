@@ -17,6 +17,15 @@ namespace :test do
     TestRunUtils.run_apps_tests
   end
 
+  desc 'Runs studio tests.'
+  timed_task_with_logging :studio do
+    Dir.chdir(frontend_dir) do
+      ChatClient.wrap('studio tests') do
+        RakeUtils.system_stream_output 'yarn test --filter @code-dot-org/studio'
+      end
+    end
+  end
+
   desc 'Run a single eyes test locally using chromedriver.'
   timed_task_with_logging :ui do
     TestRunUtils.run_local_ui_test
