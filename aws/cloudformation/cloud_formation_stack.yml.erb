@@ -510,16 +510,17 @@ Resources:
         - PolicyName: RedshiftDataAPI
           PolicyDocument:
             Statement:
-              # Required actions to run, monitor, and retrieve results from the Data API.
               - Effect: Allow
                 Action:
-                  - 'redshift-data:ExecuteStatement'
+                  - 'redshift-data:BatchExecuteStatement'
+                  - 'redshift-data:CancelStatement'
                   - 'redshift-data:DescribeStatement'
-                  - 'redshift-data:GetStatement_result'
+                  - 'redshift-data:ExecuteStatement'
+                  - 'redshift-data:GetStatementResult'
                   - 'redshift-data:CancelStatement'
                   - 'redshift-data:ListStatements'
+                  - 'redshift-data:ListTables'
                 Resource: '*'
-              # Scoped permission to assume the SQL identity of 'etl_client'.
               - Effect: Allow
                 Action: 'redshift:GetClusterCredentials'
                 Resource:
