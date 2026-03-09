@@ -13,9 +13,7 @@ import {
   asyncLoadCoteacherInvite,
   asyncLoadSectionData,
 } from '../teacherDashboard/teacherSectionsRedux';
-import {
-  hiddenStudentSectionIds,
-} from '../teacherDashboard/teacherSectionsReduxSelectors';
+import {hiddenStudentSectionIds} from '../teacherDashboard/teacherSectionsReduxSelectors';
 
 import CoteacherInviteNotification from './CoteacherInviteNotification';
 import SetUpSections from './SetUpSections';
