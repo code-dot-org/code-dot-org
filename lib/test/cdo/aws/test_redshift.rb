@@ -5,7 +5,6 @@ require 'cdo/aws/redshift'
 class TestRedshift < Minitest::Test
   def setup
     CDO.stubs(:redshift_cluster_id).returns('test-cluster')
-    CDO.stubs(:redshift_admin_username).returns('admin')
 
     @redshift = Cdo::Redshift.new
     # Stub sleep so tests execute instantly instead of waiting in the polling loop.

@@ -4,6 +4,8 @@ module Cdo
   class Redshift
     class QueryError < StandardError; end
 
+    # The EC2 Instance using this logic must have IAM permissions to the Redshift Data API for the specified cluster, database,
+    # and user: https://github.com/code-dot-org/code-dot-org/blob/5520c3c2c034135aa061ed6a279e19c74ab64550/aws/cloudformation/cloud_formation_stack.yml.erb#L543-L566
     def initialize(cluster_id: CDO.redshift_cluster_id, database: 'dashboard', db_user: CDO.redshift_username)
       @client = Aws::RedshiftDataAPIService::Client.new
       @cluster_id = cluster_id
