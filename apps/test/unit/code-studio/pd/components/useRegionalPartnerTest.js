@@ -35,7 +35,9 @@ describe('useRegionalPartner tests', () => {
   });
 
   it('returns undefined when loading', () => {
+    // Mock fetch to never resolve, so that the hook stays in the loading state.
     fetchStub.mockImplementation(() => new Promise(() => {}));
+
     const {result} = renderHook(() => useRegionalPartner({}));
 
     expect(result.current[0]).toBe(undefined);
@@ -51,7 +53,12 @@ describe('useRegionalPartner tests', () => {
   });
 
   it('errors when server errors', async () => {
-    fetchStub.mockResolvedValue(mockApiResponse(500, GOOD_RESPONSE));
+    fetchStub.mockResolvedValue(
+      mockApiResponse(500, {
+        error: 'server error',
+      })
+    );
+
     const {result, waitFor} = renderHook(() =>
       useRegionalPartner({
         school: '-1',
@@ -60,6 +67,7 @@ describe('useRegionalPartner tests', () => {
         program: PROGRAM_CSA,
       })
     );
+
     await waitFor(() => result.current[1] === true);
     expect(result.current).toEqual([null, true]);
   });
