@@ -166,7 +166,6 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
   );
 
   return (
-    /* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */
     <div
       className={classNames(
         'sounds-panel-sound-row',
@@ -186,7 +185,7 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
         String(getLengthRepresentation(sound.length))
       }
       tabIndex={0}
-      role="tabpanel"
+      role="button"
     >
       <div className={styles.soundRowLeft}>
         <FontAwesomeV6Icon
