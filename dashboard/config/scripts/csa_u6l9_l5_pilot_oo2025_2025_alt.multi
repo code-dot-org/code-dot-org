@@ -27,9 +27,73 @@ System.out.println(evenNums);
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-The code segment iterates through `nums` using a `for` loop and checks if each element is even or odd. If an even number is found, it is added to the `evenNums` list. If an odd number is found, it is removed from the `nums`.
 
-During the first iteration of the loop, the element `3` is removed from `nums`, which causes the subsequent elements to shift down by one index. This leads to the removal of the `6` and 1 elements during the next two iterations of the loop.
 
-After the loop has finished executing, `evenNums` contains only the even numbers from the original `nums` list, which are `6`, `8`, and `2`. Therefore, the output of the print statement will be `[2, 6, 8]`.
+### What the code is trying to do
+
+* Create a new list `evenNums`.
+* Walk through `nums`.
+* If the current number is **even**, copy it into `evenNums`.
+* If the current number is **odd**, remove it from `nums`.
+* **Important detail:** when you remove from an ArrayList, everything to the right shifts left (indices change).
+  That’s why the code does `i--` after a removal: it “rewinds” so the next loop iteration checks the element that just shifted into the current index.
+
+Initial list:
+`nums = [3, 6, 9, 1, 8, 5, 2]`
+`evenNums = []`
+
+---
+
+### Step-by-step trace (index, value, action)
+
+**i = 0**, `nums.get(0) = 3` (odd)
+→ remove 3
+`nums` becomes `[6, 9, 1, 8, 5, 2]`
+→ `i--` makes `i = -1` (so after the loop’s `i++`, we go back to `i = 0`)
+
+**i = 0**, `nums.get(0) = 6` (even)
+→ add 6 to `evenNums`
+`evenNums = [6]`
+`nums` unchanged
+
+**i = 1**, `nums.get(1) = 9` (odd)
+→ remove 9
+`nums` becomes `[6, 1, 8, 5, 2]`
+→ `i--` makes `i = 0` (so after `i++`, we return to `i = 1`)
+
+**i = 1**, `nums.get(1) = 1` (odd)
+→ remove 1
+`nums` becomes `[6, 8, 5, 2]`
+→ `i--` makes `i = 0` (so after `i++`, we return to `i = 1`)
+
+**i = 1**, `nums.get(1) = 8` (even)
+→ add 8
+`evenNums = [6, 8]`
+
+**i = 2**, `nums.get(2) = 5` (odd)
+→ remove 5
+`nums` becomes `[6, 8, 2]`
+→ `i--` makes `i = 1` (so after `i++`, we return to `i = 2`)
+
+**i = 2**, `nums.get(2) = 2` (even)
+→ add 2
+`evenNums = [6, 8, 2]`
+
+Loop ends because `i` reaches `nums.size()`.
+
+---
+
+### Final output
+
+`System.out.println(evenNums);` prints:
+
+**`[6, 8, 2]`** (choice **C**)
+
+---
+
+### Why there’s no IndexOutOfBoundsException
+
+Because the loop condition uses `i < nums.size()`, and after removals the code adjusts `i` with `i--`, keeping the index aligned with the shifted elements.
+
+
 MARKDOWN
