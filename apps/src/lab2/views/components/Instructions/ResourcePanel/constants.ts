@@ -26,3 +26,9 @@ export const RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME =
 
 export const RESOURCE_PANEL_VALIDATION_FLOW_V2_NAME =
   'Resource Panel Validation Tour';
+
+export const instructionsValidateButtonElementId =
+  'instructions-validate-button';
+
+export const resourcePanelValidationTabButtonElementId =
+  'resource-panel-tab-button-validation';

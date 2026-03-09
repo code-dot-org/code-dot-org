@@ -1,11 +1,10 @@
 import {type StepOptions, type Tour} from 'shepherd.js';
 
-import lab2I18n from '@cdo/apps/lab2/locale';
 import {doneButton} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 
 import {
-  resourcePanelTabValidationElementId,
-  resourcePanelValidateButtonElementId,
+  resourcePanelValidationTabButtonElementId,
+  instructionsValidateButtonElementId,
   resourcePanelValidationTableElementId,
 } from './constants';
 
@@ -13,13 +12,13 @@ export const createValidationTourSteps = (tour: Tour): StepOptions[] => [
   {
     id: 'validation-tab',
     attachTo: {
-      element: `#${resourcePanelTabValidationElementId}`,
+      element: `#${resourcePanelValidationTabButtonElementId}`,
       on: 'right',
     },
-    title: lab2I18n.validationTour_tabTitle(),
-    text: lab2I18n.validationTour_tabText(),
+    title: 'Validation Tour',
+    text: 'For most levels you will need to run validation after completing the steps in the instructions to continue to the next level. Click the validation tab to open it.',
     advanceOn: {
-      selector: `#${resourcePanelTabValidationElementId}`,
+      selector: `#${resourcePanelValidationTabButtonElementId}`,
       event: 'click',
     },
     scrollTo: false,
@@ -27,13 +26,13 @@ export const createValidationTourSteps = (tour: Tour): StepOptions[] => [
   {
     id: 'validate-button',
     attachTo: {
-      element: `#${resourcePanelValidateButtonElementId}`,
+      element: `#${instructionsValidateButtonElementId}`,
       on: 'right',
     },
-    title: lab2I18n.validationTour_buttonTitle(),
-    text: lab2I18n.validationTour_buttonText(),
+    title: 'Validate Button',
+    text: "Use the 'Validate' button to check if your code meets the level's requirements. Go ahead and click 'Validate' now.",
     advanceOn: {
-      selector: `#${resourcePanelValidateButtonElementId}`,
+      selector: `#${instructionsValidateButtonElementId}`,
       event: 'click',
     },
     scrollTo: false,
@@ -44,8 +43,8 @@ export const createValidationTourSteps = (tour: Tour): StepOptions[] => [
       element: `#${resourcePanelValidationTableElementId}`,
       on: 'bottom',
     },
-    title: lab2I18n.validationTour_resultsTitle(),
-    text: lab2I18n.validationTour_resultsText(),
+    title: 'Validation Results',
+    text: "Your results will appear in this table, showing which tests passed and what still needs work. You can click 'Validate' again to rerun the tests.",
     buttons: [doneButton(tour)],
     scrollTo: false,
   },

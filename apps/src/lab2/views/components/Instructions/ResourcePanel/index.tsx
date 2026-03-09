@@ -620,6 +620,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                           : undefined,
                       }}
                       aria-label={tabInfo[tab].title}
+                      id={`resource-panel-tab-button-${tab}`}
                     />
                   </div>
                 </WithTooltip>
