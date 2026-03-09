@@ -26,6 +26,7 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
 import {useExtraLinksButtonContext} from '@cdo/apps/lab2/views/LabViewsRenderer';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import useProductTour from '@cdo/apps/sharedComponents/productTour/useProductTour';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
 import experiments from '@cdo/apps/util/experiments';
@@ -45,11 +46,13 @@ import {
   resourcePanelInstructionsElementId,
   resourcePanelTabsElementId,
   resourcePanelLinksElementId,
+  RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME,
 } from './constants';
 import CopyrightButton from './CopyrightButton';
 import DisclaimerButton from './DisclaimerButton';
 import OnboardingTourSteps from './OnboardingTourSteps';
 import ResourcePanelExtraLinks from './ResourcePanelExtraLinks';
+import {createResourcePanelTourSteps} from './resourcePanelTourHelpersV2';
 import setFooterVisibility from './setFooterVisibility';
 import SettingsPanel from './SettingsPanel';
 import {Tabs} from './types';
@@ -215,6 +218,36 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const showShepherdProductTours = experiments.isEnabledAllowingQueryString(
     experiments.SHEPHERD_PRODUCT_TOURS
   );
+  const showOnboardingTour = useMemo(
+    () => (showShepherdProductTours && isOnboardingTourEnabled) || false,
+    [showShepherdProductTours, isOnboardingTourEnabled]
+  );
+  const {tour: onboardingTour} = useProductTour({
+    getSteps: createResourcePanelTourSteps,
+    localStorageKey: 'resourcePanelOnboardingTourV2Seen',
+    tourAvailable: showOnboardingTour,
+    onStart: () =>
+      sendLab2AnalyticsEvent(EVENTS.INTRO_FLOW_STARTED, {
+        flowName: RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME,
+      }),
+    onComplete: () =>
+      sendLab2AnalyticsEvent(EVENTS.INTRO_FLOW_COMPLETED, {
+        flowName: RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME,
+      }),
+    onCancel: (stepIndex: number) =>
+      sendLab2AnalyticsEvent(EVENTS.INTRO_FLOW_EXIT, {
+        flowName: RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME,
+        step: stepIndex.toString(),
+      }),
+  });
+
+  const tourStarted = useRef(false);
+  useEffect(() => {
+    if (onboardingTour && !tourStarted.current) {
+      tourStarted.current = true;
+      onboardingTour.start();
+    }
+  }, [onboardingTour]);
 
   // Tooltip should disappear quickly.
   const hideTooltipDelayMs = 10;

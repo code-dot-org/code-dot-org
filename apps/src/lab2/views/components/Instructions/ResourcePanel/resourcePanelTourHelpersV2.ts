@@ -1,6 +1,11 @@
-import {type StepOptions, type StepOptionsButton, type Tour} from 'shepherd.js';
+import {type StepOptions, type Tour} from 'shepherd.js';
 
 import lab2I18n from '@cdo/apps/lab2/locale';
+import {
+  nextButton,
+  backButton,
+  doneButton,
+} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 
 import {
   resourcePanelInstructionsElementId,
@@ -8,24 +13,6 @@ import {
   resourcePanelLinksElementId,
   resourcePanelNavigationButtonElementId,
 } from './constants';
-
-const nextButton = (tour: Tour): StepOptionsButton => ({
-  text: 'Next',
-  action: () => tour.next(),
-  classes: 'shepherd-button-primary',
-});
-
-const doneButton = (tour: Tour): StepOptionsButton => ({
-  text: 'Done',
-  action: () => tour.complete(),
-  classes: 'shepherd-button-primary',
-});
-
-const backButton = (tour: Tour): StepOptionsButton => ({
-  text: 'Back',
-  action: () => tour.back(),
-  classes: 'shepherd-button-secondary',
-});
 
 export const createResourcePanelTourSteps = (tour: Tour): StepOptions[] => [
   {

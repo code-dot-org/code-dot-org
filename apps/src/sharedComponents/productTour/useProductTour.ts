@@ -1,11 +1,11 @@
-import {useCallback} from 'react';
-import Shepherd, {StepOptions} from 'shepherd.js';
+import {useMemo} from 'react';
+import Shepherd, {StepOptions, Tour} from 'shepherd.js';
 
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import '@cdo/apps/sharedComponents/productTour/shepherd.scss';
 
 interface useProductTourProps {
-  steps: StepOptions[];
+  getSteps: (tour: Tour) => StepOptions[];
   localStorageKey: string;
   tourAvailable: boolean;
   onStart?: () => void;
@@ -14,14 +14,14 @@ interface useProductTourProps {
 }
 
 const useProductTour = ({
-  steps,
+  getSteps,
   localStorageKey,
   tourAvailable,
   onStart,
   onComplete,
   onCancel,
 }: useProductTourProps) => {
-  const tour = useCallback(() => {
+  const tour = useMemo(() => {
     const tourSeen = tryGetLocalStorage(localStorageKey, 'no');
     if (!tourAvailable || tourSeen === 'yes') {
       return null;
@@ -33,9 +33,10 @@ const useProductTour = ({
       defaultStepOptions: {
         cancelIcon: {enabled: true},
         scrollTo: false,
+        classes: 'shepherd-step-container',
       },
     });
-    tour.addSteps(steps);
+    tour.addSteps(getSteps(tour));
 
     if (onStart) {
       tour.on('start', onStart);
@@ -54,7 +55,7 @@ const useProductTour = ({
       onCancel && onCancel(currentIndex);
     });
     return tour;
-  }, [localStorageKey, onCancel, onComplete, onStart, steps, tourAvailable]);
+  }, [getSteps, localStorageKey, onCancel, onComplete, onStart, tourAvailable]);
 
   return {tour};
 };

@@ -1,10 +1,46 @@
 @import 'shepherd.js/dist/css/shepherd.css';
 
-.shepherd-button-primary {
-  background-color: var(--button-brand-purple-primary);
+.shepherd-step-container {
+  font-family: Figtree, sans-serif;
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
 }
 
+// Aligned with purple primary button styles.
+.shepherd-button-primary {
+  background-color: var(--background-brand-purple-primary);
+  color: var(--text-neutral-white-fixed);
+
+  &:not(:disabled):hover {
+    background-color: var(--background-brand-purple-strong);
+  }
+
+  &:disabled,
+  &[aria-disabled='true']  {
+      background-color: var(--background-neutral-disabled);
+      color: var(--text-neutral-disabled-inverse);
+  }
+}
+
+// Aligned with secondary black button styles.
 .shepherd-button-secondary {
   border: 1px solid var(--borders-neutral-solid);
   background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+
+  &:not(:disabled):hover {
+    background-color: var(--background-neutral-tertiary);
+    border: 1px solid var(--borders-neutral-solid);
+    color: var(--text-neutral-primary);
+  }
+
+  &:disabled,
+  &[aria-disabled='true'] {
+    border-color: var(--borders-neutral-disabled) !important;
+    color: var(--text-neutral-disabled);
+    background-color: var(--background-neutral-primary);
+  }
 }
