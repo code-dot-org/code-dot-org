@@ -53,22 +53,13 @@
 - Import pattern: `import {Button} from '@code-dot-org/component-library/button';`
 - Each component has a JSDoc status header (`Stable`, `Ready for dev`, `WIP`, `DEPRECATED`) -- check it before using.
 - For full API reference, check the component source or Storybook at https://code-dot-org.github.io/code-dot-org/component-library-storybook
-
-### Styling Rules:
 - Use **SCSS modules** (`.module.scss`) for all component styling. Never use inline styles or global styles.
 - **Color priority**: always use semantic colors (`@code-dot-org/component-library-styles/colors.scss`) first, then primitive colors (`primitiveColors.scss`) second, then other colors only as last resort.
 - Semantic colors are CSS variables (e.g., `var(--text-neutral-primary)`) that support light/dark theming via the `data-theme` attribute.
 - **Never rely on stylesheet load order** for specificity. Always use CSS selector specificity rules.
 - Override component styles via parent element selectors or component-specific class selectors in SCSS modules.
 - Typography mixins and font variables are in `@code-dot-org/component-library-styles/typography.module.scss` and `fontVariables.css`.
-
-### When building new design system components:
-- Use **TypeScript**. All new components must be in `.tsx`/`.ts`.
-- Follow the existing component structure: `src/componentName/` with `index.ts`, `ComponentName.tsx`, `componentName.module.scss`, `types.ts`, `__tests__/`, `stories/`.
-- Add Storybook stories (CSF3 format) in `stories/ComponentName.story.tsx`.
-- Write tests with Jest + React Testing Library + `@testing-library/user-event`.
-- Ensure accessibility: keyboard navigation, screen reader support, APCA color contrast, RTL support.
-- See `frontend/packages/component-library/CONTRIBUTING.md` and `README.md` for the full contribution process and best practices.
+- When building new design system components, see `frontend/packages/component-library/CONTRIBUTING.md` and `README.md` for the full contribution process and best practices.
 
 ### DSCO-to-MUI Migration (in progress):
 - We are gradually migrating from our custom design system (DSCO / `@code-dot-org/component-library`) to MUI (`@mui/material`). Before using a DSCO component, check whether it has been deprecated (look for `@deprecated` or `DEPRECATED` status in its JSDoc header) and whether MUI style overrides already exist for it in `frontend/packages/component-library/src/themes/code.org/styleOverrides/`.
