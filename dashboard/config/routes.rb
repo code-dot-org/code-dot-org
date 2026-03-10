@@ -2,6 +2,7 @@
 
 Dashboard::Application.routes.draw do
   mount ActionCable.server => '/cable'
+  mount DemoMode::Engine => '/demo'
   get 'chatter/index'
 
   draw :api

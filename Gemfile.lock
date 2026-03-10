@@ -330,6 +330,7 @@ GEM
     cld (0.13.0)
       ffi
     cldr-plurals-runtime-rb (1.1.0)
+    cli-ui (2.7.0)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.8)
@@ -387,6 +388,13 @@ GEM
     delayed_job_active_record (4.1.7)
       activerecord (>= 3.0, < 8.0)
       delayed_job (>= 3.0, < 5)
+    demo_mode (3.2.0)
+      actionpack (>= 6.1, < 8.1)
+      activejob (>= 6.1, < 8.1)
+      activerecord (>= 6.1, < 8.1)
+      activesupport (>= 6.1, < 8.1)
+      cli-ui (~> 2.3)
+      railties (>= 6.1, < 8.1)
     devise (4.9.3)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -1251,6 +1259,7 @@ DEPENDENCIES
   dalli-elasticache
   database_cleaner-active_record (~> 2.1.0)
   delayed_job_active_record (~> 4.1)
+  demo_mode
   devise (~> 4.9.0)
   devise_invitable (~> 2.0.2)
   dotiw

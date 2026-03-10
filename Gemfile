@@ -82,6 +82,7 @@ gem 'memory_profiler'
 gem 'rack-mini-profiler'
 
 group :development do
+  gem 'demo_mode'
   gem 'annotaterb', '~> 4.19'
   gem 'aws-google', '~> 0.2.3'
   gem 'web-console', '~> 4.2.0'
