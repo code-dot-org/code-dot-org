@@ -53,6 +53,18 @@ app.kubernetes.io/instance: {{ .Release.Name }}
 app.kubernetes.io/component: {{ .component }}
 {{- end }}
 
+{{- define "cdo.mysqlServiceName" -}}
+{{- include "cdo.fullname" (merge (dict "component" "mysql") .) -}}
+{{- end }}
+
+{{- define "cdo.redisServiceName" -}}
+{{- include "cdo.fullname" (merge (dict "component" "redis") .) -}}
+{{- end }}
+
+{{- define "cdo.minioServiceName" -}}
+{{- include "cdo.fullname" (merge (dict "component" "minio") .) -}}
+{{- end }}
+
 {{/*
 Return a decoded value from an existing Secret when present, otherwise use a
 provided default or generate a random string.
