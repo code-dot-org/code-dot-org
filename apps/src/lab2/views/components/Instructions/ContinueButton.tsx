@@ -25,6 +25,7 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
   hideIfDisabled,
   disabled,
   onContinue,
+  children,
   ...buttonProps
 }) => {
   const dispatch = useAppDispatch();
@@ -59,7 +60,9 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
           }}
           disabled={disabled}
           {...buttonProps}
-        />
+        >
+          <span>{children}</span>
+        </MuiButton>
       </WithConditionalTooltip>
     </div>
   );
