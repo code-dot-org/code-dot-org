@@ -77,17 +77,17 @@ class ApplicationController < ActionController::Base
     cookie_key = environment_specific_cookie_name(Cdo::Brand::BRAND_COOKIE_NAME)
 
     if params['brand-reset']
-      cookies.delete(cookie_key)
+      cookies.delete(cookie_key, domain: :all)
       return
     end
 
-    return unless params['brand'].present?
+    return if params['brand'].blank?
 
     brand = params['brand']
     if Cdo::Brand::BRANDS.key?(brand)
       cookies[cookie_key] = {value: brand, domain: :all}
     else
-      cookies.delete(cookie_key)
+      cookies.delete(cookie_key, domain: :all)
     end
   end
 
