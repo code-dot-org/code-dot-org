@@ -8,6 +8,7 @@ import {
   getFileExtension,
   getNextFileId,
 } from '@cdo/apps/lab2/utils/multiFileSourceUtils';
+import {AI_TUTOR_ANSWER_TYPES} from '@cdo/apps/weblab2/types';
 
 const getAnswerJsonSchema = (): JsonObjectSchema => {
   return {
@@ -15,21 +16,7 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
     properties: {
       tutorMode: {
         type: 'string',
-        enum: [
-          'buildHTML',
-          'buildCSS',
-          'buildJavaScript',
-          'ask',
-          'hint',
-          'debug',
-          'explainCode',
-          'example',
-          'pseudocode',
-          'documentation',
-          'testCase',
-          'refusalJavaScriptSnippets',
-          'refusal',
-        ],
+        enum: [...AI_TUTOR_ANSWER_TYPES],
       },
       goal: {
         type: 'string',
