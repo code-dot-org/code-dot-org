@@ -1,6 +1,5 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Button from '@code-dot-org/component-library/button';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import React, {useState} from 'react';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -76,20 +75,19 @@ const FlagResponseButton: React.FC<{
           className: style.tooltip,
         }}
       >
-        <MuiIconButton
-          variant="text"
-          color="tertiary"
-          size="extraSmall"
+        <Button
           onClick={() => {
             setShowInput(!showInput);
           }}
-          type="button"
-        >
-          <FontAwesomeV6Icon
-            iconStyle="solid"
-            iconName="magnifying-glass-chart"
-          />
-        </MuiIconButton>
+          color="gray"
+          size="xs"
+          isIconOnly
+          icon={{
+            iconStyle: 'solid',
+            iconName: 'magnifying-glass-chart',
+          }}
+          type="tertiary"
+        />
       </WithTooltip>
       {showInput && (
         <>
@@ -99,10 +97,7 @@ const FlagResponseButton: React.FC<{
             placeholder="Reason"
             onChange={event => setFlagReason(event.target.value)}
           />
-          <MuiButton
-            variant="contained"
-            color="primary"
-            size="extraSmall"
+          <Button
             onClick={() => {
               setFlagReason('');
               saveResponseToLangfuse(
@@ -113,10 +108,11 @@ const FlagResponseButton: React.FC<{
                 modelParameters?.systemPrompt as string
               );
             }}
-            type="button"
-          >
-            {'save'}
-          </MuiButton>
+            color="purple"
+            size="xs"
+            type="primary"
+            text="save"
+          />
         </>
       )}
     </div>

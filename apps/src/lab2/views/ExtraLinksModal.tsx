@@ -1,4 +1,5 @@
-import {Typography, Button as MuiButton} from '@mui/material';
+import Button, {buttonColors} from '@code-dot-org/component-library/button';
+import {Typography} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
@@ -242,15 +243,11 @@ const CloneLevelButton: React.FunctionComponent<CloneLevelButtonProps> = ({
   }
   return (
     <div>
-      <MuiButton
-        variant="contained"
-        color="primary"
-        size="extraSmall"
+      <Button
+        size="xs"
         onClick={() => setShowCloneField(!showCloneField)}
-        type="button"
-      >
-        {showCloneField ? 'Cancel Clone' : 'Clone'}
-      </MuiButton>
+        text={showCloneField ? 'Cancel Clone' : 'Clone'}
+      />
       {showCloneField && (
         <div>
           {'New level name: '}
@@ -259,15 +256,7 @@ const CloneLevelButton: React.FunctionComponent<CloneLevelButtonProps> = ({
             value={clonedLevelName}
             onChange={event => setClonedLevelName(event.target.value)}
           />
-          <MuiButton
-            variant="contained"
-            color="primary"
-            size="extraSmall"
-            onClick={handleClone}
-            type="button"
-          >
-            {'Clone'}
-          </MuiButton>
+          <Button onClick={handleClone} text={'Clone'} size="xs" />
           {cloneError && (
             <p className={moduleStyles.errorMessage}>{cloneError}</p>
           )}
@@ -298,28 +287,17 @@ const DeleteLevelButton: React.FunctionComponent<DeleteLevelButtonProps> = ({
   }
   return (
     <div>
-      <MuiButton
-        variant="contained"
-        color="error"
-        size="extraSmall"
-        className={moduleStyles.bottomButton}
+      <Button
+        size="xs"
+        text={showDeleteConfirm ? 'Cancel Delete' : 'Delete'}
+        color={buttonColors.destructive}
         onClick={() => setShowDeleteConfirm(!showDeleteConfirm)}
-        type="button"
-      >
-        {showDeleteConfirm ? 'Cancel Delete' : 'Delete'}
-      </MuiButton>
+        className={moduleStyles.bottomButton}
+      />
       {showDeleteConfirm && (
         <div>
           {'Are you sure you want to delete this level? '}
-          <MuiButton
-            variant="contained"
-            color="primary"
-            size="extraSmall"
-            onClick={handleDelete}
-            type="button"
-          >
-            {'Confirm Delete'}
-          </MuiButton>
+          <Button onClick={handleDelete} text={'Confirm Delete'} size="xs" />
           {deleteError && (
             <p className={moduleStyles.errorMessage}>{deleteError}</p>
           )}
@@ -340,15 +318,7 @@ const FeaturedProjectInfo: React.FunctionComponent<
     return (
       <>
         <div>Not a featured project</div>
-        <MuiButton
-          variant="contained"
-          color="primary"
-          size="extraSmall"
-          onClick={onBookmark}
-          type="button"
-        >
-          {'Bookmark as featured'}
-        </MuiButton>
+        <Button size="xs" onClick={onBookmark} text={'Bookmark as featured'} />
       </>
     );
   }
@@ -395,27 +365,19 @@ const AbuseScoreInfo: React.FunctionComponent<{
         <li>{msg}</li>
       </ul>
       <div>
-        <MuiButton
-          variant="contained"
-          color="primary"
-          size="extraSmall"
+        <Button
+          size="xs"
+          text={'Reset abuse score to 0'}
           onClick={onResetAbuseScore}
-          type="button"
-        >
-          {'Reset abuse score to 0'}
-        </MuiButton>
+        />
       </div>
       <div>
-        <MuiButton
-          variant="contained"
-          color="primary"
-          size="extraSmall"
-          className={moduleStyles.bottomButton}
+        <Button
+          size="xs"
+          text={'Report abuse'}
           onClick={onReportAbuse}
-          type="button"
-        >
-          {'Report abuse'}
-        </MuiButton>
+          className={moduleStyles.bottomButton}
+        />
       </div>
     </>
   );

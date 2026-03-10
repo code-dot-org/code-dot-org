@@ -1,5 +1,6 @@
+import {Button} from '@code-dot-org/component-library/button';
 import Slider from '@code-dot-org/component-library/slider';
-import {Typography, Button as MuiButton} from '@mui/material';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import {MazeCell} from '@cdo/apps/lab2/types';
@@ -62,15 +63,13 @@ const EditNeighborhoodSettings: React.FunctionComponent<
           </div>
         </div>
         <div className={moduleStyles.mazeSizeControl}>
-          <MuiButton
-            variant="outlined"
-            color="secondary"
-            size="small"
+          <Button
             onClick={generateEmptyMaze}
-            type="button"
-          >
-            {'Generate empty maze'}
-          </MuiButton>
+            text="Generate empty maze"
+            type={'secondary'}
+            color={'black'}
+            size={'s'}
+          />
           <Slider
             name="mazeSize"
             value={mazeSize}
@@ -80,15 +79,13 @@ const EditNeighborhoodSettings: React.FunctionComponent<
             label="Maze Size"
           />
         </div>
-        <MuiButton
-          variant="outlined"
-          color="secondary"
-          size="small"
+        <Button
           onClick={editExistingMaze}
-          type="button"
-        >
-          {'Edit existing maze'}
-        </MuiButton>
+          text="Edit existing maze"
+          type={'secondary'}
+          color={'black'}
+          size={'s'}
+        />
         {showMazeGenerator && (
           <NeighborhoodMazeGenerator
             saveMaze={setMaze}

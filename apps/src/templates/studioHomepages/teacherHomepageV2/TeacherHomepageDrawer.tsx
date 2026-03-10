@@ -1,7 +1,7 @@
 import Alert from '@code-dot-org/component-library/alert';
+import {Button} from '@code-dot-org/component-library/button';
 import CloseButton from '@code-dot-org/component-library/closeButton';
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography, Button as MuiButton} from '@mui/material';
+import {Typography} from '@mui/material';
 import Drawer from '@mui/material/Drawer';
 import React from 'react';
 
@@ -156,52 +156,40 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
   const primaryButton: () => React.ReactNode = () => {
     if (schoolInfoInterstitialOpen) {
       return (
-        <MuiButton
-          variant="contained"
-          color="primary"
-          size="medium"
+        <Button
+          type={'primary'}
+          size={'m'}
+          text={i18n.save()}
           onClick={handlePrimaryButtonClick}
-          type="button"
-        >
-          {i18n.save()}
-        </MuiButton>
+        />
       );
     } else if (schoolInfoConfirmationOpen) {
       return (
-        <MuiButton
-          variant="contained"
-          color="primary"
-          size="medium"
+        <Button
+          type={'primary'}
+          size={'m'}
+          text={i18n.imAtaNewSchool()}
           onClick={handlePrimaryButtonClick}
-          type="button"
-        >
-          {i18n.imAtaNewSchool()}
-        </MuiButton>
+        />
       );
     } else if (success) {
       return (
-        <MuiButton
-          variant="contained"
-          color="primary"
-          size="medium"
+        <Button
+          type={'primary'}
+          size={'m'}
+          text={i18n.closeDialog()}
           onClick={handlePrimaryButtonClick}
-          type="button"
-        >
-          {i18n.closeDialog()}
-        </MuiButton>
+        />
       );
     } else if (AFEDrawerOpen) {
       return (
-        <MuiButton
-          variant="contained"
-          color="primary"
-          size="medium"
+        <Button
+          type={'primary'}
+          size={'m'}
+          iconRight={{iconName: 'up-right-from-square'}}
+          text={i18n.learnMore()}
           onClick={handlePrimaryButtonClick}
-          type="button"
-          endIcon={<FontAwesomeV6Icon iconName="up-right-from-square" />}
-        >
-          {i18n.learnMore()}
-        </MuiButton>
+        />
       );
     }
   };
@@ -209,41 +197,35 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
   const secondaryButton: () => React.ReactNode = () => {
     if (schoolInfoConfirmationOpen) {
       return (
-        <MuiButton
-          variant="outlined"
-          color="tertiary"
-          size="medium"
+        <Button
+          type={'secondary'}
+          size={'m'}
+          color={'gray'}
+          text={i18n.imStillTeachingHere()}
           onClick={onDrawerClose}
-          type="button"
-        >
-          {i18n.imStillTeachingHere()}
-        </MuiButton>
+        />
       );
     } else if (success) {
       return null;
     } else if (AFEDrawerOpen) {
       return (
-        <MuiButton
-          variant="outlined"
-          color="tertiary"
-          size="medium"
+        <Button
+          type={'secondary'}
+          size={'m'}
+          color={'gray'}
+          text={i18n.notInterested()}
           onClick={onDrawerClose}
-          type="button"
-        >
-          {i18n.notInterested()}
-        </MuiButton>
+        />
       );
     } else {
       return (
-        <MuiButton
-          variant="outlined"
-          color="tertiary"
-          size="medium"
+        <Button
+          type={'secondary'}
+          size={'m'}
+          color={'gray'}
+          text={i18n.dismiss()}
           onClick={onDrawerClose}
-          type="button"
-        >
-          {i18n.dismiss()}
-        </MuiButton>
+        />
       );
     }
   };

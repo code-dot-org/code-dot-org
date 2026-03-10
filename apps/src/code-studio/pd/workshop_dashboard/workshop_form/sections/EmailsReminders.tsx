@@ -1,6 +1,6 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {LinkButton} from '@code-dot-org/component-library/button';
 import Toggle from '@code-dot-org/component-library/toggle';
-import {Typography, Button as MuiButton} from '@mui/material';
+import {Typography} from '@mui/material';
 import React, {FC, memo, useCallback} from 'react';
 
 import {SectionProps, WorkshopFormState} from '../../workshops/types';
@@ -16,17 +16,17 @@ export interface EmailsRemindersProps
 export const PreviewEmailLink: FC<{href?: string}> = ({href}) => {
   if (!href) return null;
   return (
-    <MuiButton
-      variant="text"
-      color="secondary"
-      size="small"
+    <LinkButton
       href={href}
+      text="Preview email"
       target="_blank"
-      rel="noopener noreferrer"
-      endIcon={<FontAwesomeV6Icon iconName="up-right-from-square" />}
-    >
-      {'Preview email'}
-    </MuiButton>
+      color="black"
+      type="tertiary"
+      size="s"
+      iconRight={{
+        iconName: 'up-right-from-square',
+      }}
+    />
   );
 };
 

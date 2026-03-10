@@ -1,5 +1,5 @@
+import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useContext, useState} from 'react';
 
@@ -80,18 +80,15 @@ const LtiNewAccountCard = () => {
         })}
       </CardContent>
       <CardActions>
-        <MuiButton
-          variant="contained"
-          color="white"
-          size="medium"
-          loading={isSaving}
-          disabled={isSaving}
+        <Button
           className={classNames(styles.button, styles.cardSecondaryButton)}
+          color={buttonColors.white}
+          size="m"
+          text={i18n.ltiLinkAccountNewAccountCardActionLabel()}
+          isPending={isSaving}
+          disabled={isSaving}
           onClick={handleNewAccountSubmit}
-          type="button"
-        >
-          {i18n.ltiLinkAccountNewAccountCardActionLabel()}
-        </MuiButton>
+        />
       </CardActions>
     </Card>
   );

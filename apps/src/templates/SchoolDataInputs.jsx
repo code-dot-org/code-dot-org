@@ -1,6 +1,7 @@
+import {Button} from '@code-dot-org/component-library/button';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography, Button as MuiButton} from '@mui/material';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useMemo} from 'react';
@@ -166,19 +167,17 @@ export default function SchoolDataInputs({
               dropdownTextThickness="thin"
             />
             {showNoSchoolSettingButton && (
-              <MuiButton
-                variant="text"
-                color="primary"
-                size="small"
+              <Button
+                text={i18n.noSchoolSetting()}
                 disabled={!schoolZipIsValid}
+                color={'purple'}
+                type={'tertiary'}
+                size={'s'}
                 onClick={e => {
                   e.preventDefault();
                   handleSchoolChange(NonSchoolOptions.NO_SCHOOL_SETTING);
                 }}
-                type="button"
-              >
-                {i18n.noSchoolSetting()}
-              </MuiButton>
+              />
             )}
             {schoolsLoading && (
               <FontAwesomeV6Icon iconName="spinner" animationType="spin" />
@@ -192,17 +191,15 @@ export default function SchoolDataInputs({
               schoolName={schoolName}
               setSchoolName={setSchoolName}
             />
-            <MuiButton
-              variant="text"
-              color="primary"
-              size="small"
+            <Button
+              text={i18n.returnToResults()}
+              color={'purple'}
+              type={'tertiary'}
+              size={'s'}
               onClick={() => {
                 handleSchoolChange(NonSchoolOptions.SELECT_A_SCHOOL);
               }}
-              type="button"
-            >
-              {i18n.returnToResults()}
-            </MuiButton>
+            />
           </div>
         )}
       </div>

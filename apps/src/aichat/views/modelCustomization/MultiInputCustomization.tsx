@@ -1,5 +1,6 @@
+import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography, Button as MuiButton} from '@mui/material';
+import {Typography} from '@mui/material';
 import React, {useState, useCallback} from 'react';
 
 import aichatI18n from '../../locale';
@@ -65,18 +66,16 @@ const MultiInputCustomization: React.FunctionComponent<{
             {!isReadOnly && validationAlert}
           </div>
           <div className={modelCustomizationStyles.addItemContainer}>
-            <MuiButton
+            <Button
               id={addButtonId}
-              variant="outlined"
-              color="tertiary"
-              size="small"
-              disabled={!newItem.trim() || isReadOnly}
+              text={aichatI18n.addCustomizationButtonText()}
+              type="secondary"
+              color="gray"
+              size="s"
               onClick={onAdd}
-              type="button"
-              startIcon={<FontAwesomeV6Icon iconName="plus" />}
-            >
-              {aichatI18n.addCustomizationButtonText()}
-            </MuiButton>
+              iconLeft={{iconName: 'plus'}}
+              disabled={!newItem.trim() || isReadOnly}
+            />
           </div>
         </>
       )}

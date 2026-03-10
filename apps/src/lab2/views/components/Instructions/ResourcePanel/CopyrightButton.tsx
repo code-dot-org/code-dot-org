@@ -34,7 +34,7 @@ const CopyrightButton: React.FunctionComponent<CopyrightButtonProps> = ({
       iconName={'copyright'}
       setIsDialogOpen={setIsCopyrightOpen}
       ariaLabel={commonI18n.copyright()}
-      buttonSize="small"
+      buttonSize="s"
     />
   );
 };

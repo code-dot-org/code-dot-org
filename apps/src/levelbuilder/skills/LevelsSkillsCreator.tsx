@@ -1,5 +1,5 @@
+import {Button} from '@code-dot-org/component-library/button';
 import Link from '@code-dot-org/component-library/link';
-import {Button as MuiButton} from '@mui/material';
 import Papa from 'papaparse';
 import React, {useState} from 'react';
 
@@ -105,17 +105,12 @@ const LevelsSkillsCreator: React.FC = () => {
       </div>
       <br />
       <div>
-        <MuiButton
-          variant="contained"
-          color="primary"
-          size="medium"
-          loading={addingSkillsToLevels}
-          disabled={!csvSelected}
+        <Button
+          text="Add Skills to Levels"
           onClick={importCSV}
-          type="button"
-        >
-          {'Add Skills to Levels'}
-        </MuiButton>
+          disabled={!csvSelected}
+          isPending={addingSkillsToLevels}
+        />
       </div>
     </div>
   );

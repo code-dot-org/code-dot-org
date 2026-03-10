@@ -1,6 +1,5 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Button from '@code-dot-org/component-library/button';
 import Toggle from '@code-dot-org/component-library/toggle';
-import {Button as MuiButton} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
 import {hasPreview} from '@cdo/apps/codebridge';
@@ -70,43 +69,30 @@ const ShareView: React.FunctionComponent = () => {
             />
           </div>
         )}
-        <MuiButton
-          variant="text"
-          color="secondary"
-          size="extraSmall"
+        <Button
+          text={commonI18n.viewCode()}
+          type="tertiary"
+          color="black"
+          size="xs"
+          iconLeft={{iconStyle: 'solid', iconName: 'code'}}
           onClick={onViewCode}
-          type="button"
-          startIcon={<FontAwesomeV6Icon iconStyle="solid" iconName="code" />}
-        >
-          {commonI18n.viewCode()}
-        </MuiButton>
-        <MuiButton
-          variant="text"
-          color="secondary"
-          size="extraSmall"
+        />
+        <Button
+          text={commonI18n.makeMyOwn()}
+          type="tertiary"
+          color="black"
+          size="xs"
+          iconLeft={{iconStyle: 'regular', iconName: 'pen-to-square'}}
           onClick={onRemix}
-          type="button"
-          startIcon={
-            <FontAwesomeV6Icon iconStyle="regular" iconName="pen-to-square" />
-          }
-        >
-          {commonI18n.makeMyOwn()}
-        </MuiButton>
-        <MuiButton
-          variant="text"
-          color="secondary"
-          size="extraSmall"
+        />
+        <Button
+          text="Report abuse"
+          type="tertiary"
+          color="black"
+          size="xs"
+          iconLeft={{iconStyle: 'regular', iconName: 'message-exclamation'}}
           onClick={() => window.open('/report_abuse', '_blank')}
-          type="button"
-          startIcon={
-            <FontAwesomeV6Icon
-              iconStyle="regular"
-              iconName="message-exclamation"
-            />
-          }
-        >
-          {'Report abuse'}
-        </MuiButton>
+        />
       </div>
       <div
         className={moduleStyles.previewContainer}

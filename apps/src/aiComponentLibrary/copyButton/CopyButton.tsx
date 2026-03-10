@@ -1,7 +1,6 @@
+import Button from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {IconButton as MuiIconButton} from '@mui/material';
 import React, {useState} from 'react';
 
 import {sendAnalytics} from '@cdo/apps/aichat/redux';
@@ -40,20 +39,22 @@ const CopyButton: React.FC<{copyText: string; usage: string}> = ({
         'data-theme': theme,
       }}
     >
-      <MuiIconButton
-        variant="text"
-        color="tertiary"
-        size="extraSmall"
+      <Button
         onClick={() => {
           copyToClipboard(copyText);
           setShowCopyConfirmation(true);
           setTimeout(() => setShowCopyConfirmation(false), CONFIRM_TIMEOUT_MS);
           dispatch(sendAnalytics(EVENTS.CHAT_COPIED, {usage: usage}));
         }}
-        type="button"
-      >
-        <FontAwesomeV6Icon iconStyle="solid" iconName="copy" />
-      </MuiIconButton>
+        color="gray"
+        size="xs"
+        isIconOnly
+        icon={{
+          iconStyle: 'solid',
+          iconName: 'copy',
+        }}
+        type="tertiary"
+      />
     </WithTooltip>
   );
 };

@@ -412,7 +412,7 @@ function LandingPage({
         description: i18n.plLandingStaticPLMidHighDesc(),
         buttons: [
           {
-            color: 'primary',
+            color: 'purple',
             url: '/professional-learning/workshops',
             text: i18n.plLandingStaticPLMidHighButton(),
           },
@@ -428,7 +428,7 @@ function LandingPage({
         description: i18n.plLandingStaticPLSelfPacedDesc(),
         buttons: [
           {
-            color: 'primary',
+            color: 'purple',
             url: pegasus(
               myPLStaticRecommendedPLSelfPacedBlockButtonUrl ||
                 '/educate/professional-development-online'

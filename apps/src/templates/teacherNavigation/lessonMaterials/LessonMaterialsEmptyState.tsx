@@ -1,4 +1,4 @@
-import {Button as MuiButton} from '@mui/material';
+import {LinkButton} from '@code-dot-org/component-library/button';
 import React from 'react';
 import {generatePath} from 'react-router-dom';
 
@@ -59,10 +59,7 @@ export const getNoLessonMaterialsForLegacyCourses = (
       />
     ),
     button: (
-      <MuiButton
-        variant="contained"
-        color="primary"
-        size="medium"
+      <LinkButton
         href={
           '/teacher_dashboard' +
           generatePath(
@@ -73,9 +70,8 @@ export const getNoLessonMaterialsForLegacyCourses = (
             }
           )
         }
-      >
-        {i18n.goToCoursePage()}
-      </MuiButton>
+        text={i18n.goToCoursePage()}
+      />
     ),
   };
 };

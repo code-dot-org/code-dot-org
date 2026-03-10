@@ -1,4 +1,5 @@
-import {Typography, Button as MuiButton} from '@mui/material';
+import {LinkButton} from '@code-dot-org/component-library/button';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -38,20 +39,15 @@ const OneColumnActionBlock = ({
       <div className={styles.buttonWrapper}>
         {buttons &&
           buttons.map((button, index) => (
-            <MuiButton
+            <LinkButton
               key={index}
-              variant={button.variant || 'contained'}
-              color={button.color || 'primary'}
-              size="medium"
-              aria-label={button.ariaLabel}
+              color={button.color}
               href={button.url}
-              target={button.target}
-              rel={
-                button.target === '_blank' ? 'noopener noreferrer' : undefined
-              }
-            >
-              {button.text}
-            </MuiButton>
+              size="m"
+              text={button.text}
+              type={button.type}
+              ariaLabel={button.ariaLabel}
+            />
           ))}
       </div>
     </div>
@@ -65,11 +61,12 @@ OneColumnActionBlock.propTypes = {
   description: PropTypes.string,
   buttons: PropTypes.arrayOf(
     PropTypes.shape({
-      variant: PropTypes.string,
       color: PropTypes.string,
       url: PropTypes.string,
+      size: PropTypes.string,
       text: PropTypes.string,
       target: PropTypes.string,
+      type: PropTypes.string,
       ariaLabel: PropTypes.string,
     })
   ),

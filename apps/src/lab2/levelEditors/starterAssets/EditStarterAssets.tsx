@@ -1,4 +1,4 @@
-import {Button as MuiButton} from '@mui/material';
+import {Button} from '@code-dot-org/component-library/button';
 import React, {useState} from 'react';
 
 import StarterAssetsDialog from '../../views/components/starterAssetsDialog';
@@ -19,15 +19,7 @@ const EditStarterAssets: React.FC<{levelName: string}> = ({levelName}) => {
           />
         </div>
       )}
-      <MuiButton
-        variant="contained"
-        color="primary"
-        size="medium"
-        onClick={() => setShowDialog(true)}
-        type="button"
-      >
-        {'Edit Starter Assets'}
-      </MuiButton>
+      <Button text="Edit Starter Assets" onClick={() => setShowDialog(true)} />
     </>
   );
 };

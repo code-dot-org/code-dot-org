@@ -1,5 +1,4 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton} from '@mui/material';
+import {Button} from '@code-dot-org/component-library/button';
 import React from 'react';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -27,22 +26,21 @@ const DanceControls: React.FunctionComponent<DanceControlsProps> = ({
       state => state.dance.isLoading || state.dance.runIsStarting
     ) || disabled;
 
+  const props = isRunning
+    ? {
+        text: 'Reset',
+        onClick: onReset,
+        iconLeft: {iconName: 'rotate-right'},
+      }
+    : {text: 'Run', onClick: onRun, iconLeft: {iconName: 'play'}};
+
   return (
     <div className={moduleStyles.controlsContainer}>
-      <MuiButton
-        variant="contained"
-        color="primary"
-        size="medium"
+      <Button
+        {...props}
         disabled={isDisabled}
         className={moduleStyles.controlButton}
-        onClick={isRunning ? onReset : onRun}
-        type="button"
-        startIcon={
-          <FontAwesomeV6Icon iconName={isRunning ? 'rotate-right' : 'play'} />
-        }
-      >
-        {isRunning ? 'Reset' : 'Run'}
-      </MuiButton>
+      />
     </div>
   );
 };

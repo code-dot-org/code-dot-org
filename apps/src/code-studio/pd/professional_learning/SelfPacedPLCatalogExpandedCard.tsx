@@ -1,9 +1,10 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
-  Typography,
-  Button as MuiButton,
-  IconButton as MuiIconButton,
-} from '@mui/material';
+  Button,
+  LinkButton,
+  buttonColors,
+} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import i18n from '@cdo/locale';
@@ -106,33 +107,32 @@ const SelfPacedPLCatalogExpandedCard: React.FunctionComponent<{
               </div>
               <hr className={style.horizontalDivider} />
               <div className={style.buttonsContainer}>
-                <MuiButton
-                  variant="outlined"
-                  color="secondary"
-                  size="medium"
-                  className={style.buttonFlex}
-                  aria-label={i18n.quickViewDescription({
+                <LinkButton
+                  text={i18n.seeCurriculumDetails()}
+                  ariaLabel={i18n.quickViewDescription({
                     course_name: displayName,
                   })}
+                  color={buttonColors.black}
+                  type="secondary"
+                  className={style.buttonFlex}
                   href={pathToCourse}
-                >
-                  {i18n.seeCurriculumDetails()}
-                </MuiButton>
+                />
               </div>
             </div>
             <div className={style.sideBar}>
               <div className={style.closeButtonContainer}>
-                <MuiIconButton
-                  variant="text"
-                  color="secondary"
-                  size="medium"
+                <Button
+                  icon={{
+                    iconName: 'xmark',
+                    iconStyle: 'solid',
+                  }}
+                  ariaLabel="Close Button"
+                  isIconOnly
+                  type="tertiary"
+                  color={buttonColors.black}
                   className={style.closeButton}
                   onClick={onClose}
-                  aria-label="Close Button"
-                  type="button"
-                >
-                  <FontAwesomeV6Icon iconName="xmark" iconStyle="solid" />
-                </MuiIconButton>
+                />
               </div>
             </div>
           </div>

@@ -42,7 +42,7 @@ const ResourcePanelExtraLinks: React.FunctionComponent<
       Dialog={innerDialog}
       iconName={'link'}
       setIsDialogOpen={setIsModalOpen}
-      buttonSize="small"
+      buttonSize="s"
     />
   );
 };

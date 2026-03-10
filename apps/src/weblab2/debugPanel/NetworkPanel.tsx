@@ -1,5 +1,6 @@
+import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography, Button as MuiButton} from '@mui/material';
+import {Typography} from '@mui/material';
 import {isEqual} from 'lodash';
 import React, {useEffect, useMemo, useState} from 'react';
 
@@ -194,16 +195,14 @@ const NetworkPanel: React.FC = () => {
               <Typography variant="body4" gutterBottom>
                 <Typography variant="strong">Activity</Typography>
               </Typography>
-              <MuiButton
-                variant="outlined"
-                color="tertiary"
-                size="extraSmall"
+              <Button
                 onClick={() => setNewestFirst(!newestFirst)}
-                type="button"
-                startIcon={<FontAwesomeV6Icon iconName="sort" />}
-              >
-                {newestFirst ? 'Newest first' : 'Oldest first'}
-              </MuiButton>
+                size="xs"
+                type="secondary"
+                iconLeft={{iconName: 'sort'}}
+                text={newestFirst ? 'Newest first' : 'Oldest first'}
+                color={'gray'}
+              />
             </div>
             <div className={moduleStyles.requestList}>
               {orderedNetworkRequests.map(request => (

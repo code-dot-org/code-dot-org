@@ -1,5 +1,4 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton} from '@mui/material';
+import {Button} from '@code-dot-org/component-library/button';
 import React from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -12,17 +11,14 @@ const AddToAiTutorChatButton: React.FC<AddToAiTutorChatButtonProps> = ({
   saveSelectionContext,
 }) => {
   return (
-    <MuiButton
-      variant="text"
-      color="secondary"
-      size="extraSmall"
-      loadingPosition="start"
+    <Button
+      text={codebridgeI18n.addToAiTutorContext()}
       onClick={saveSelectionContext}
-      type="button"
-      startIcon={<FontAwesomeV6Icon iconName="message-code" />}
-    >
-      {codebridgeI18n.addToAiTutorContext()}
-    </MuiButton>
+      size="xs"
+      type="tertiary"
+      color="black"
+      iconLeft={{iconName: 'message-code'}}
+    />
   );
 };
 

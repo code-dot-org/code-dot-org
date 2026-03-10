@@ -1,6 +1,6 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {LinkButton} from '@code-dot-org/component-library/button';
 import Link from '@code-dot-org/component-library/link';
-import {Typography, Button as MuiButton} from '@mui/material';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -58,25 +58,25 @@ const CourseRow = ({
     <td>
       <div className="flexWrapper">
         {percent_completed < 100 && (
-          <MuiButton
-            variant="contained"
-            color="primary"
-            size="small"
+          <LinkButton
+            color={'purple'}
             href={path}
-          >
-            {i18n.selfPacedPlContinueCourse()}
-          </MuiButton>
+            size="s"
+            text={i18n.selfPacedPlContinueCourse()}
+          />
         )}
         {finish_url && (
-          <MuiButton
-            variant="outlined"
-            color="secondary"
-            size="small"
+          <LinkButton
+            color={'black'}
             href={studio(finish_url)}
-            startIcon={<FontAwesomeV6Icon iconName="print" iconStyle="solid" />}
-          >
-            {i18n.selfPacedPlPrintCertificates()}
-          </MuiButton>
+            size="s"
+            text={i18n.selfPacedPlPrintCertificates()}
+            type={'secondary'}
+            iconLeft={{
+              iconName: 'print',
+              iconStyle: 'solid',
+            }}
+          />
         )}
       </div>
     </td>

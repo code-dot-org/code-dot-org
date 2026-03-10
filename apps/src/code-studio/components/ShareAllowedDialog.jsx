@@ -1,6 +1,5 @@
+import Button, {buttonColors} from '@code-dot-org/component-library/button';
 import Dialog from '@code-dot-org/component-library/dialog';
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import QRCode from 'qrcode.react';
 import React from 'react';
@@ -310,23 +309,19 @@ class ShareAllowedDialog extends React.Component {
                     />
                   </div>
                   <div>
-                    <MuiButton
-                      variant="contained"
-                      color="primary"
-                      size="medium"
-                      loadingPosition="start"
+                    <Button
+                      color={buttonColors.purple}
+                      type="primary"
                       id="sharing-dialog-copy-button"
+                      iconLeft={{iconName: 'copy'}}
                       onClick={wrapShareClick(
                         this.copy,
                         'SHARING_LINK_COPY',
                         this.props.appType
                       )}
-                      type="button"
+                      text={i18n.copyLinkToProject()}
                       value={shareUrl}
-                      startIcon={<FontAwesomeV6Icon iconName="copy" />}
-                    >
-                      {i18n.copyLinkToProject()}
-                    </MuiButton>
+                    />
                     <DownloadReplayVideoButton
                       style={{...styles.button, marginBottom: 8}}
                       onError={this.replayVideoNotFound}
@@ -334,34 +329,26 @@ class ShareAllowedDialog extends React.Component {
                   </div>
                 </div>
                 <div className="social-buttons" style={{marginTop: 12}}>
-                  <MuiButton
-                    variant="outlined"
-                    color="secondary"
-                    size="medium"
-                    loadingPosition="start"
+                  <Button
                     id="sharing-phone"
+                    color={buttonColors.black}
+                    type="secondary"
                     onClick={wrapShareClick(
                       this.showSendToPhone,
                       'SHARING_LINK_SEND_TO_PHONE',
                       this.props.appType
                     )}
-                    type="button"
-                    startIcon={<FontAwesomeV6Icon iconName="mobile-screen" />}
-                  >
-                    {i18n.sendToPhone()}
-                  </MuiButton>
+                    text={i18n.sendToPhone()}
+                    iconLeft={{iconName: 'mobile-screen'}}
+                  />
                   {canPrint && hasThumbnail && (
-                    <MuiButton
-                      variant="contained"
-                      color="primary"
-                      size="medium"
-                      loadingPosition="start"
+                    <Button
+                      color={buttonColors.purple}
+                      type="primary"
                       onClick={wrapShareClick(this.print, 'print')}
-                      type="button"
-                      startIcon={<FontAwesomeV6Icon iconName="print" />}
-                    >
-                      {i18n.print()}
-                    </MuiButton>
+                      iconLeft={{iconName: 'print'}}
+                      text={i18n.print()}
+                    />
                   )}
                   {this.isSocialShareAllowed() && (
                     <span>

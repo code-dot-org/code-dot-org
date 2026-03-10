@@ -1,4 +1,4 @@
-import {Button as MuiButton} from '@mui/material';
+import {buttonColors, LinkButton} from '@code-dot-org/component-library/button';
 import type {Meta, StoryObj} from '@storybook/react';
 import React from 'react';
 
@@ -30,15 +30,14 @@ export const UserSignupCard: Story = {
         })}
       </CardContent>
       <CardActions>
-        <MuiButton
-          variant="contained"
-          color="primary"
-          size="large"
+        <LinkButton
           className={styles.button}
-          href="/"
-        >
-          {i18n.ltiLinkAccountExistingAccountCardActionLabel()}
-        </MuiButton>
+          color={buttonColors.purple}
+          type={'primary'}
+          size="l"
+          href={'/'}
+          text={i18n.ltiLinkAccountExistingAccountCardActionLabel()}
+        />
       </CardActions>
     </Card>
   ),

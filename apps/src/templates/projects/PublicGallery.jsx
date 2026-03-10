@@ -1,4 +1,4 @@
-import {Button as MuiButton} from '@mui/material';
+import Button, {buttonColors} from '@code-dot-org/component-library/button';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
@@ -67,15 +67,15 @@ class PublicGallery extends Component {
           galleryType="public"
         />
         <div style={styles.bottomButton}>
-          <MuiButton
-            variant="outlined"
-            color="tertiary"
-            size="small"
-            aria-label={i18n.reportAbuse()}
+          <Button
+            useAsLink={true}
+            ariaLabel={i18n.reportAbuse()}
             href="https://support.code.org/hc/en-us/articles/360001143952"
-          >
-            {i18n.reportAbuse()}
-          </MuiButton>
+            color={buttonColors.gray}
+            text={i18n.reportAbuse()}
+            type="secondary"
+            size="s"
+          />
         </div>
       </div>
     );

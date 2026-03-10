@@ -1,5 +1,6 @@
+import Button from '@code-dot-org/component-library/button';
 import {CustomDialog} from '@code-dot-org/component-library/dialog';
-import {Typography, Button as MuiButton} from '@mui/material';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import i18n from '@cdo/locale';
@@ -90,24 +91,19 @@ const SectionAvatarEditDialog: React.FC<SectionAvatarEditDialogProps> = ({
       </div>
       <hr />
       <div className={styles.avatarDialogFooter}>
-        <MuiButton
-          variant="outlined"
-          color="tertiary"
-          size="small"
+        <Button
+          text={i18n.dialogCancel()}
           onClick={() => closeCallback()}
-          type="button"
-        >
-          {i18n.dialogCancel()}
-        </MuiButton>
-        <MuiButton
-          variant="contained"
-          color="primary"
-          size="small"
+          color={'gray'}
+          size={'s'}
+          type={'secondary'}
+        />
+        <Button
+          text={i18n.selectAvatar()}
           onClick={() => saveCallback(selectedColor, selectedEmoji)}
-          type="button"
-        >
-          {i18n.selectAvatar()}
-        </MuiButton>
+          size={'s'}
+          type={'primary'}
+        />
       </div>
     </CustomDialog>
   );

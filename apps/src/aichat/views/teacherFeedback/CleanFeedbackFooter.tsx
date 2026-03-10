@@ -1,6 +1,5 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {memo} from 'react';
 
@@ -62,25 +61,24 @@ const CleanFeedbackFooter: React.FC<Props> = ({
         iconLeft: teacherFlagged ? {iconName: 'check'} : undefined,
       }}
     >
-      <MuiIconButton
-        variant="text"
-        color="secondary"
-        size="extraSmall"
+      <Button
+        color={buttonColors.black}
+        icon={{
+          iconName: 'flag-pennant',
+          iconStyle: teacherFlagged ? 'solid' : 'regular',
+        }}
+        isIconOnly={true}
+        onClick={handleFlagClick}
+        size="xs"
+        type={'tertiary'}
         className={classNames(
           moduleStyles[`icon-button-negative`],
           teacherFlagged && moduleStyles.selected
         )}
-        onClick={handleFlagClick}
-        aria-label={
+        ariaLabel={
           teacherFlagged ? aichatI18n.aria_unflag() : aichatI18n.aria_flag()
         }
-        type="button"
-      >
-        <FontAwesomeV6Icon
-          iconName="flag-pennant"
-          iconStyle={teacherFlagged ? 'solid' : 'regular'}
-        />
-      </MuiIconButton>
+      />
     </WithTooltip>
   );
 

@@ -1,5 +1,4 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton} from '@mui/material';
+import {Button, LinkButton} from '@code-dot-org/component-library/button';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -161,31 +160,24 @@ class ProjectAppTypeArea extends React.Component {
     return (
       <div style={styles.viewMoreButtons}>
         {showViewMore && (
-          <MuiButton
-            variant="outlined"
-            color="secondary"
-            size="small"
+          <Button
+            text={i18n.viewMore()}
             onClick={this.loadMore}
+            size="s"
+            type="secondary"
+            color="black"
+            iconLeft={{iconStyle: 'solid', iconName: 'plus-circle'}}
             style={styles.buttonRightMargin}
-            type="button"
-            startIcon={
-              <FontAwesomeV6Icon iconStyle="solid" iconName="plus-circle" />
-            }
-          >
-            {i18n.viewMore()}
-          </MuiButton>
+          />
         )}
-        <MuiButton
-          variant="outlined"
-          color="secondary"
-          size="small"
+        <LinkButton
+          text={i18n.backToTop()}
           href="#top"
-          startIcon={
-            <FontAwesomeV6Icon iconStyle="solid" iconName="chevron-circle-up" />
-          }
-        >
-          {i18n.backToTop()}
-        </MuiButton>
+          size="s"
+          type="secondary"
+          color="black"
+          iconLeft={{iconStyle: 'solid', iconName: 'chevron-circle-up'}}
+        />
       </div>
     );
   };
