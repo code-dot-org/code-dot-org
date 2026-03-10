@@ -231,7 +231,6 @@ class StudentSnapshotsController < ApplicationController
 
     response = AiStudentSnapshotHelper.generate_lesson_insight(unit_id, lesson_id, teacher_id, student_id, section_id)
 
-    puts response
     dataset_item = {
       "timestamp" => Time.now.utc.iso8601,
       "progress" => JSON.parse(response[:json])["progress"],
@@ -239,7 +238,7 @@ class StudentSnapshotsController < ApplicationController
         "progress" => JSON.parse(response[:json])["progress"],
         "misconceptions" => JSON.parse(response[:json])["misconceptions"],
         "assessment" => JSON.parse(response[:json])["assessment"],
-        "next_steps" => JSON.parse(response[:json])["next_steps"]
+        "next_steps" => JSON.parse(response[:json])["next_steps"],
       },
       "metadata" => {
         "student_id" => student_id,
@@ -247,29 +246,12 @@ class StudentSnapshotsController < ApplicationController
         "unit_id" => unit_id,
         "section_id" => section_id,
         "teacher_id" => teacher_id,
+        "system_prompt" => AiSystemPrompts::StudentSnapshotPromptHelper.get_insight_system_prompt(lesson_id, unit_id, student_id, teacher_id, section_id),
+        "test_run" => "by_erinbond"
       },
       "datasetName" => "lesson-insights"
     }
-    # pp "Adding dataset item to Langfuse: #{dataset_item}"
-    # LangfuseHelper.ta_add_dataset_item(dataset_item)
-    LangfuseHelper.ta_add_trace(
-      {
-        "name" => "lesson_insight_generated",
-        "timestamp" => Time.now.utc.iso8601,
-        "attributes" =>
-        {
-          "student_id" => student_id,
-          "lesson_id" => lesson_id,
-          "unit_id" => unit_id,
-          "section_id" => section_id,
-          "teacher_id" => teacher_id,
-          "progress" => JSON.parse(response[:json])["progress"],
-          "misconceptions" => JSON.parse(response[:json])["misconceptions"],
-          "assessment" => JSON.parse(response[:json])["assessment"],
-          "next_steps" => JSON.parse(response[:json])["next_steps"]
-        }
-      }
-    )
+    LangfuseHelper.ta_add_dataset_item(dataset_item)
 
     render json: response
   end

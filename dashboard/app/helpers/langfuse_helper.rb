@@ -17,7 +17,6 @@ module LangfuseHelper
   end
 
   def self.tutor_add_dataset_item(dataset_item)
-    pp "In LangfuseHelper: #{dataset_item}"
     response = tutor_client.add_dataset_item(dataset_item)
 
     if response.code == 200
@@ -28,18 +27,7 @@ module LangfuseHelper
   end
 
   def self.ta_add_dataset_item(dataset_item)
-    pp "In LangfuseHelper: #{dataset_item}"
     response = ta_client.add_dataset_item(dataset_item)
-
-    if response.code == 200
-      {status: :ok, json: JSON.parse(response.body)}
-    else
-      {status: response.code, json: {error: response.body}}
-    end
-  end
-
-  def self.ta_add_trace(trace)
-    response = ta_client.log_trace(trace)
 
     if response.code == 200
       {status: :ok, json: JSON.parse(response.body)}
