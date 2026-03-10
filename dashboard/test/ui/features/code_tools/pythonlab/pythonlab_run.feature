@@ -38,7 +38,7 @@ Scenario: Continue button and progress status shows up correctly
   And I press "resource-panel-tab-validation"
   And I wait to see "#instructions-validate-button"
   And I wait until "#instructions-validate-button" is not disabled
-  And I press "#instructions-validate-button"
+  And I press "instructions-validate-button"
   And I wait until element "#instructions-continue-button" is visible
   And element "#instructions-continue-button" contains text "Continue"
   Then I verify progress in the header of the current page is "perfect" for level 2
