@@ -12,7 +12,7 @@ export const getRosterSyncErrorMessage = (syncResult: LtiSectionSyncResult) => {
     case 'no_section':
       return i18n.ltiSectionSyncDialogErrorNoSectionFound();
     case 'nrps_error':
-      return i18n.ltiSectionSyncDialogErrorNoCourseFound();
+      return i18n.ltiSectionSyncDialogError();
     default:
       return syncResult.message
         ? syncResult.message
