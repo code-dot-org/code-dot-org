@@ -51,6 +51,23 @@ spec:
             value: {{ .Values.localDev.mounts.AWS_PROFILE }}
           {{- end }}
 
+
+        envFrom:
+          # Inject our Secrets as CDO_* ENV vars. K8S has a "last defined wins", so the order here matters:
+
+          {{- if .Values.use_aws_secrets_manager }}
+          # Secrets synced from AWS Secrets Manager (lower precedence)
+          - prefix: CDO_
+            secretRef:
+              name: cdo-secrets
+          {{- end }}
+
+          # Secrets defined locally in this chart (higher precedence)
+          # come second so Helm-managed local service secrets can override AWS-synced ones.
+          - prefix: CDO_
+            secretRef:
+              name: cdo-secrets-local
+
         securityContext:
           allowPrivilegeEscalation: {{ if .Values.user.allowSudo }}true{{ else }}false{{ end }}
 

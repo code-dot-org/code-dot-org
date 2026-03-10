@@ -52,3 +52,20 @@ app.kubernetes.io/name: {{ include "cdo.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 app.kubernetes.io/component: {{ .component }}
 {{- end }}
+
+{{/*
+Return a decoded value from an existing Secret when present, otherwise use a
+provided default or generate a random string.
+Usage:
+{{ include "cdo.secretValue" (dict "secret" $existing "key" "_redis_password" "randLen" 24) }}
+{{ include "cdo.secretValue" (dict "secret" $existing "key" "_minio_root_user" "default" "local-development") }}
+*/}}
+{{- define "cdo.secretValue" -}}
+{{- if and .secret (hasKey .secret.data .key) -}}
+{{- index .secret.data .key | b64dec -}}
+{{- else if hasKey . "default" -}}
+{{- .default -}}
+{{- else -}}
+{{- randAlphaNum .randLen -}}
+{{- end -}}
+{{- end }}

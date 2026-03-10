@@ -33,8 +33,8 @@ pegasus/
 # We have disabled /i18n
 i18n/
 
-# We have disabled dashboard/config/locales EXCEPT for *en.yml
-!dashboard/config/locales/*en.yml
+# We have disabled dashboard/config/locales EXCEPT for *en.yml files
+!dashboard/config/locales/**/*en.yml
 
 
 **/.git
