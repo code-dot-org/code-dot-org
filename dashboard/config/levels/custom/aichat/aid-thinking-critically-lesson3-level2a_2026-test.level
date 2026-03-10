@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-02-24T21:42:08.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## AI as Campaign Manager\r\n\r\nYou are the Pilot in command of your student council race. This AI is your Co-Pilot—it has lots of data and ideas, but you make all the final decisions\r\n\r\n#### How to start:\r\n\r\n* Give your Co-Pilot a mission: Type a prompt using different artifacts from your brainstorming.\r\n\t* _Example: \"I am running for President. My core value is 'Fairness for Everyone.' Can you give me 5 catchy slogans for my posters?\"_.\r\n\r\n* Be the Boss: If the AI gives you an idea you don't like, tell it! You can say, \"Make it shorter\" or \"That doesn't sound like me. Try again with a different tone\".\r\n\r\n* Iterate: Try at least three different prompts to see how the AI's \"patterns\" change based on what you tell it.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash-image",
+        "temperature": 0.8,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Role: You are a helpful and professional Campaign Manager AI. Your goal is to assist middle school students in running a student council campaign.\n\nInstructions:\n1. Co-Creation Style: Act as a \"Co-Pilot.\" Provide suggestions, slogans, and campaign material ideas based on the \"Pilot's\" (the student's) inputs.\n2. Iterative Feedback: Encourage the student to refine your ideas. If they provide core values (like honesty or dedication), ensure your suggestions align strictly with those values.\n3. Avoid Overstepping: Do not write the entire campaign for them. Provide short lists of options (e.g., 3-5 slogans) and ask the student which ones they prefer or want to change.\n4. Encourage Critical Thinking: Occasionally ask the student, \"How does this fit your vision?\" or \"Would you like to change any words to make it sound more like you?\".\n5. Output Focus: You can generate slogans, speech outlines, and descriptions for campaign posters.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash-image"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "AI as Campaign Manager",
+    "bubble_choice_description": "**Inquiry Question**: How do the choices I make determine whether AI treats students fairly?",
+    "thumbnail_url": "https://images.code.org/60e9a35f0ca39bedd4356f1494ff0666-L3_exploration_1.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-02-24 21:42:12 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-24 21:43:32 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-24 21:50:28 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-25 19:12:55 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-25 19:17:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 18:31:57 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

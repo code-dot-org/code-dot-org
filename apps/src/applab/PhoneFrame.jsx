@@ -5,6 +5,7 @@ import React from 'react';
 import FontAwesome from '../legacySharedComponents/FontAwesome';
 import {styles as CompletionButtonStyles} from '../templates/CompletionButton';
 import {RunButton, ResetButton} from '../templates/GameButtons';
+import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
 
 import ScreenSelector from './ScreenSelector';
 
@@ -20,12 +21,78 @@ export default class PhoneFrame extends React.Component {
     children: PropTypes.node,
   };
 
+  wrapperRef = React.createRef();
+  scrollPinHandler = null;
+  scrollPinTimeout = null;
+
+  componentDidMount() {
+    this.pinScroll(0);
+    // Use capture phase to save scroll position BEFORE StudioApp's
+    // imperative click handlers modify the DOM and cause scroll shifts.
+    this.wrapperRef.current?.addEventListener(
+      'click',
+      this.onWrapperClick,
+      true
+    );
+  }
+
+  componentWillUnmount() {
+    this.clearPin();
+    this.wrapperRef.current?.removeEventListener(
+      'click',
+      this.onWrapperClick,
+      true
+    );
+  }
+
+  onWrapperClick = e => {
+    if (e.target.closest('button') && this.wrapperRef.current) {
+      this.pinScroll(this.wrapperRef.current.scrollTop);
+    }
+  };
+
+  // Temporarily pins the wrapper scroll position for 200ms to prevent
+  // jumps caused by DOM changes (e.g. resizeVisualization, button toggling).
+  pinScroll(target) {
+    this.clearPin();
+    const wrapper = this.wrapperRef.current;
+    if (!wrapper) return;
+    wrapper.scrollTop = target;
+    this.scrollPinHandler = () => {
+      wrapper.scrollTop = target;
+    };
+    wrapper.addEventListener('scroll', this.scrollPinHandler);
+    this.scrollPinTimeout = setTimeout(() => {
+      wrapper.removeEventListener('scroll', this.scrollPinHandler);
+      this.scrollPinHandler = null;
+      this.scrollPinTimeout = null;
+    }, 200);
+  }
+
+  clearPin() {
+    if (this.scrollPinTimeout) {
+      clearTimeout(this.scrollPinTimeout);
+      this.scrollPinTimeout = null;
+    }
+    if (this.scrollPinHandler && this.wrapperRef.current) {
+      this.wrapperRef.current.removeEventListener(
+        'scroll',
+        this.scrollPinHandler
+      );
+      this.scrollPinHandler = null;
+    }
+  }
+
   render() {
     const {isDark, screenIds, showSelector, isPaused, onScreenCreate} =
       this.props;
     return (
       <span id="phoneFrame">
-        <div id="phoneFrameWrapper">
+        <div
+          id="phoneFrameWrapper"
+          ref={this.wrapperRef}
+          className={style.phoneFrameWrapper}
+        >
           <div
             className={classNames(
               style.phoneFrame,
@@ -47,6 +114,12 @@ export default class PhoneFrame extends React.Component {
                 PAUSED
               </div>
             )}
+            {/* Top run/reset button only renders when user is so zoomed in
+            that the bottom run button is hidden*/}
+            <ProtectedStatefulDiv className={style.topButtons} canUnmount>
+              <RunButton id="topRunButton" />
+              <ResetButton id="topResetButton" />
+            </ProtectedStatefulDiv>
           </div>
           {this.props.children}
           <div

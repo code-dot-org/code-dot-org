@@ -1,0 +1,102 @@
+name 'self-paced-TCaAI-L1-Welcome'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<div style="
+  background: linear-gradient(135deg, #0aa7a0 0%, #048899 45%, #026C7A 100%);
+  border-radius: 12px;
+  padding: 60px 20px;
+  text-align: center;
+  color: #ffffff;
+  margin: 20px 0px;
+">
+
+  <p style="
+      font-size: 18pt; 
+      margin: 0; 
+      letter-spacing: 1px; 
+      opacity: 0.95;
+  ">
+    <strong>Educator Module:</strong>
+  </p>
+
+  <p style="
+      font-size: 36pt; 
+      margin: 12px 0 0 0; 
+      line-height: 1.1; 
+      font-weight: 700;
+  ">
+    Thinking Critically About AI
+  </p>
+
+</div>
+
+# Welcome!
+
+#### This professional learning module is designed to prepare you to teach Code.org's Thinking Critically About AI unit, part of the AI Discoveries curriculum. This curriculum is an engaging, hands-on dive into artificial intelligence, equipping students to evaluate AI-generated information, recognize its limitations, and apply thoughtful human judgment.
+
+___
+
+
+<div style="display: flex; justify-content: space-between; width: 95%; margin: 20pt auto; padding: 0 5px;">
+  <img src="https://images.code.org/74f3ec76174ef6324dcf99cd83747c77-MS20.png"
+       alt=""
+       style="border-radius: 10px; width: 32%;">
+  <img src="https://images.code.org/39865d85d9b427a3d61825ec2b7b2a8d-MS23.png"
+       alt=""
+       style="border-radius: 10px; width: 32%;">
+  <img src="https://images.code.org/94cdfab9f34af898f2dcefba81b8798a-image-1772147512323.47.44 PM.png"
+       alt=""
+       style="border-radius: 10px; width: 32%;">
+</div>
+
+___
+
+
+#### By the end of this professional learning module, you will be able to:
+
+* #### Articulate how human decisions can influence AI behavior, including issues of bias, privacy, credibility, and environmental impact.
+* #### Guide students in analyzing AI outputs for accuracy, bias, safety, and ethical implications.
+* #### Understand how Thinking Critically About AI models key Project Based Learning (PBL) elements such as sustained inquiry, critique and revision, student voice and choice, and public product development.
+
+---
+
+<div style="
+  margin: 32px 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+">
+  <a
+    class="btn btn-large btn-primary"
+    href="https://form.jotform.com/260644998906171"
+    target="_blank"
+    rel="noopener noreferrer"
+    style="white-space: nowrap;"
+  >
+    Take the Pre-Survey
+  </a>
+
+  <div>
+    <div style="
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    ">
+      Help us improve this module
+    </div>
+    <div style="
+      font-size: 16px;
+      line-height: 1.4;
+      color: #555;
+    ">
+      Take a quick pre-survey - it takes fewer than five minutes to complete.
+    </div>
+  </div>
+</div>
+
+---
+
+### **Suggested total time for this module:** <mark>UPDATE</mark> minutes
+MARKDOWN

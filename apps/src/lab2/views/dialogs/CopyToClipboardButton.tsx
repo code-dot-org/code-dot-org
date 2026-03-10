@@ -1,8 +1,9 @@
-import {Button} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import React, {useCallback, useState} from 'react';
 
 import {ProjectType} from '@cdo/apps/lab2/types';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {commonI18n as i18n} from '@cdo/apps/types/locale';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
@@ -22,28 +23,28 @@ export const CopyToClipboardButton: React.FunctionComponent<{
       setCopiedToClipboard(true);
     });
     trackEvent('share', 'share_copy_url', {value: projectType});
-    analyticsReporter.sendEvent(
-      EVENTS.SHARING_LINK_COPY,
-      {
-        lab_type: projectType,
-        channel_id: channelId,
-      },
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.SHARING_LINK_COPY, {
+      lab_type: projectType,
+      channel_id: channelId,
+    });
   }, [shareUrl, projectType, channelId]);
 
   return (
-    <Button
-      iconLeft={{
-        iconName: copiedToClipboard ? 'clipboard-check' : 'clipboard',
-      }}
-      ariaLabel={i18n.copyLinkToProject()}
-      text={i18n.copyLinkToProject()}
-      type="secondary"
-      color="black"
-      size="m"
-      onClick={handleCopyToClipboard}
+    <MuiButton
+      variant="outlined"
+      color="secondary"
+      size="medium"
       className={moduleStyles.shareDialogButton}
-    />
+      onClick={handleCopyToClipboard}
+      aria-label={i18n.copyLinkToProject()}
+      type="button"
+      startIcon={
+        <FontAwesomeV6Icon
+          iconName={copiedToClipboard ? 'clipboard-check' : 'clipboard'}
+        />
+      }
+    >
+      {i18n.copyLinkToProject()}
+    </MuiButton>
   );
 };

@@ -114,17 +114,17 @@ const PythonlabView: React.FunctionComponent<
   );
   const hasRun = useAppSelector(state => state.lab2System.hasRun);
   const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
-  const aiTutorEnabledForPilot = useAppSelector(
-    state => state.currentUser.aiTutorEnabledForPilot
+  const aiChatAccessLevel = useAppSelector(
+    state => state.currentUser.aiChatAccessLevel
   );
 
   const hasSource = !!source;
 
   const isAiTutorEnabled =
     shouldShowAiTutor({
-      tutorPilot: aiTutorEnabledForPilot,
       appName: levelProperties.appName,
       tutorLevel: levelProperties.aiTutorAvailable,
+      aiChatAccessLevel: aiChatAccessLevel,
     }) ||
     queryParams('show-ai-tutor2') === 'true' ||
     queryParams('show-ai-tutor') === 'true';

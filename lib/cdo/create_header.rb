@@ -17,36 +17,45 @@ class CreateHeader
       image: "logo_minecraft_aquatic_square.jpg"
     },
     spritelab: {
-      image: "header-sprite-lab-icon.png"
+      image: "sprite-lab-icon.png"
+    },
+    game_design: {
+      image: "game-design-icon.png"
     },
     artist: {
-      image: "header-artist-icon.png"
+      image: "artist-icon.png"
     },
     applab: {
-      image: "header-app-lab-icon.png"
+      image: "app-lab-icon.png"
     },
     gamelab: {
-      image: "header-game-lab-icon.png"
+      image: "game-lab-icon.png"
     },
     playlab_k1: {
       image: "logo_playlab.png"
     },
     artist_k1: {
-      image: "header-artist-icon.png"
+      image: "artist-icon.png"
     },
     poetry_hoc: {
       image: "logo_poetry.png"
     },
     music: {
-      image: "header-music-lab-icon.png",
+      image: "music-lab-icon.png",
       url: CDO.code_org_url("/music")
     },
     dance: {
-      image: "header-dance-party-icon.png"
+      image: "dance-party-icon.png"
     },
     music_dance_ai: {
-      image: "header-music-dance-ai-icon.png",
+      image: "music-dance-ai-icon.png",
       url: CDO.code_org_url("/mix-move-ai")
+    },
+    javalab: {
+      image: "java-lab-icon.png"
+    },
+    pythonlab: {
+      image: "python-lab-icon.png"
     },
   }.freeze
 

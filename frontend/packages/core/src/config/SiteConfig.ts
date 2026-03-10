@@ -2,7 +2,7 @@ import type {Brand} from '../brand/brand';
 import {getBrandFromHostname} from '../brand/getBrandFromHostname';
 import {getDashboardApiUrl} from '../dashboard/getDashboardApiUrl';
 import {getEnvironmentFromHostname, type Environment} from '../environment';
-import tldjs from 'tldjs';
+import {parse} from 'tldts';
 
 declare global {
   interface Window {
@@ -11,13 +11,13 @@ declare global {
 }
 
 export class SiteConfig {
-  public readonly host: ReturnType<typeof tldjs.parse>;
+  public readonly host: ReturnType<typeof parse>;
   public readonly brand: Brand;
   public readonly environment: Environment;
   public readonly dashboardApiUrl: string;
 
   constructor() {
-    this.host = tldjs.parse(window.location.hostname);
+    this.host = parse(window.location.hostname);
     this.brand = getBrandFromHostname(this.host);
     this.environment = getEnvironmentFromHostname();
     this.dashboardApiUrl = getDashboardApiUrl(this.environment);

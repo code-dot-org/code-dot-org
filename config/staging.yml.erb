@@ -13,9 +13,6 @@ custom_error_response: false
 # Configurations for making calls to the Immersive Reader API on Azure
 imm_reader_client_id:     '74937af0-55ee-411a-867a-57eefadec7d9'
 
-# General CDO Amplitude key
-cdo_amplitude_api_key: !Secret
-
 # MailGun/MailJet API keys
 mailjet_api_key: !Secret
 mailjet_secret_key: !Secret
@@ -24,3 +21,6 @@ mailgun_api_key: !Secret
 # Number of workers to start when running `rake build:start_active_job_workers`:
 active_job_backend_n_workers_to_start: 4
 active_job_backend_rolling_restart_in_n_batches: 2
+
+# Enables OpenTelemetry instrumentation
+enable_opentelemetry: true

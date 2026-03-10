@@ -8,7 +8,6 @@
 const rulesToEventuallyReenable = {
   'jsx-a11y/anchor-is-valid': 'off',
   'jsx-a11y/click-events-have-key-events': 'off',
-  'jsx-a11y/no-noninteractive-element-interactions': 'off',
   'jsx-a11y/no-static-element-interactions': 'off',
 };
 
@@ -195,6 +194,11 @@ module.exports = {
           {
             name: 'sinon-chai',
             message: 'Use jest matchers instead of chai',
+          },
+          {
+            name: '@code-dot-org/component-library/typography',
+            message:
+              'DSCO Typography is deprecated. Use MUI Typography from @mui/material instead. From the apps directory (cd apps), run: npx jscodeshift -t ./tools/codemod/typography-to-mui.js "src" --parser=tsx --extensions=tsx,ts,jsx,js',
           },
         ],
         patterns: [

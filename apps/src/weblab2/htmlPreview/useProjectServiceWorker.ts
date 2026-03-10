@@ -10,13 +10,16 @@ import {generateContentSecurityPolicyForPreview} from './contentSecurityPolicyHe
 import {
   addBaseTagToDocument,
   addConsoleOverrideToDocument,
+  addParametersToDocument,
   addCSPViolationListenerToDocument,
 } from './htmlParsingHelpers';
 
 // Hook that handles registering and communicating with the project service worker.
 function useProjectServiceWorker(
   source: MultiFileSource | undefined,
-  codeStudioUrl: string
+  codeStudioUrl: string,
+  allowScripts: boolean,
+  parameters?: object
 ) {
   const [serviceWorker, setServiceWorker] = useState<ServiceWorker | null>(
     null
@@ -28,8 +31,8 @@ function useProjectServiceWorker(
     useState<boolean>(false);
 
   const contentSecurityPolicy = useMemo(
-    () => generateContentSecurityPolicyForPreview(codeStudioUrl),
-    [codeStudioUrl]
+    () => generateContentSecurityPolicyForPreview(codeStudioUrl, allowScripts),
+    [codeStudioUrl, allowScripts]
   );
 
   useEffect(() => {
@@ -60,6 +63,27 @@ function useProjectServiceWorker(
           serviceWorkerRegistration = registration;
           setServiceWorkerRegistration(registration);
         });
+    } else if (
+      window.location.hostname ===
+      'localtesting.preview.localhost.codeprojects.org'
+    ) {
+      console.error(
+        `
+Unable to use service workers in your development environment.
+
+The easiest way to access this functionality locally by using Chrome, then navigating to:
+chrome://flags/#unsafely-treat-insecure-origin-as-secure
+
+Once you're there, set the value to the following (copy all four lines):
+http://localhost-studio.code.org:9000,
+http://localhost-studio.code.org:3000,
+http://localtesting.preview.localhost.codeprojects.org:9000,
+http://localtesting.preview.localhost.codeprojects.org:3000
+
+More information is available in the README in apps/src/weblab2 directory.
+        `
+      );
+      setServiceWorkerUnavailable(true);
     } else {
       console.error('Service workers are not supported in this browser.');
       setServiceWorkerUnavailable(true);
@@ -103,6 +127,9 @@ function useProjectServiceWorker(
           addBaseTagToDocument(doc, `${window.location.origin}/${urlSuffix}`);
           addConsoleOverrideToDocument(doc);
           addCSPViolationListenerToDocument(doc);
+          if (parameters) {
+            addParametersToDocument(parameters, doc);
+          }
           content = doc.documentElement.outerHTML;
         } else if (fileExt === 'css') {
           mimeType = 'text/css';
@@ -120,7 +147,7 @@ function useProjectServiceWorker(
         contentSecurityPolicy,
       });
     }
-  }, [contentSecurityPolicy, serviceWorker, source]);
+  }, [contentSecurityPolicy, parameters, serviceWorker, source]);
 
   // Send an intermittent keep-alive message to the service worker to ensure it stays active.
   useEffect(() => {

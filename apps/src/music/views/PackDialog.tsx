@@ -1,6 +1,5 @@
-import {Button} from '@code-dot-org/component-library/button';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {
   useCallback,
@@ -313,25 +312,29 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({
           <div className={styles.footer}>
             <div className={styles.buttonContainer}>
               {!forcePackSelect && (
-                <Button
-                  ariaLabel={musicI18n.skip()}
-                  text={musicI18n.skip()}
-                  type="secondary"
-                  color="black"
-                  size="s"
+                <MuiButton
+                  variant="outlined"
+                  color="secondary"
+                  size="small"
                   onClick={setPackToDefault}
-                />
+                  aria-label={musicI18n.skip()}
+                  type="button"
+                >
+                  {musicI18n.skip()}
+                </MuiButton>
               )}
-              <Button
-                id="pack-dialog-select-button"
-                ariaLabel={musicI18n.select()}
-                text={musicI18n.select()}
-                type="primary"
-                color="purple"
-                size="s"
+              <MuiButton
+                variant="contained"
+                color="primary"
+                size="small"
                 disabled={!selectedFolderId}
+                id="pack-dialog-select-button"
                 onClick={setPackToSelectedFolder}
-              />
+                aria-label={musicI18n.select()}
+                type="button"
+              >
+                {musicI18n.select()}
+              </MuiButton>
             </div>
           </div>
         </div>

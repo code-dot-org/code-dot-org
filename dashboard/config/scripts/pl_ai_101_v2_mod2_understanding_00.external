@@ -7,9 +7,483 @@ markdown <<MARKDOWN
 
 #### Understanding how AI works can help keep yourself and your students from falling to common pitfalls.
 
-#### Review the scenarios on the following levels to explore various pitfalls, to learn more about why each occured, and to learn how to avoid them in the future.
+#### Click on each of the pitfalls below to expand each one. Review the scenarios to learn more about what happened, why it occured, and how to avoid making similar mistakes in the future.
 
 >#### **💬 Quick Reflection:** What pitfalls have you fallen into when using AI? What pitfalls have you seen your colleagues or students fall into?
 >#### Keep an eye out for these pitfalls as you're reviewing the following scenarios.
+
+<details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
+
+<summary style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF;">
+1️⃣ Treating AI Like It Has Awareness of the Current World
+</summary>
+
+<div style="padding:20px 24px 24px 24px;">
+
+<!-- Card Wrapper -->
+<div style="border-radius:18px; overflow:hidden; box-shadow:0 6px 18px rgba(41,47,54,0.08); border:1px solid #e3e6ea;">
+
+<!-- Light Grey Content Band -->
+<div style="background:#F4F6F8; padding:24px;">
+
+<div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px;">
+
+<!-- LEFT COLUMN -->
+<div>
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+
+<div style="font-weight:800; font-size:20px; margin-bottom:10px; color:#0093A4;">
+Scenario
+</div>
+
+<div style="margin-bottom:12px;">
+Ms. Alvarez, a 10th-grade civics teacher in Arizona, asks an AI tool on Monday morning:
+</div>
+
+<div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:14px; margin-bottom:12px;">
+<div style="font-size:16px">
+Create a warm-up activity about the major election news happening this week.
+</div>
+</div>
+
+<div>
+The AI generates a discussion prompt about the Iowa caucuses and early primary voting. Ms. Alvarez copies it into her slide deck without double-checking. <br><br>During class, a student says, “That already happened months ago.” The class loses confidence, and time is spent explaining the error instead of discussing civics.
+</div>
+
+</div>
+</div>
+
+<!-- RIGHT COLUMN -->
+<div>
+
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; margin-bottom:16px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:8px; color:#0093A4;">
+What's Going On Here
+</div>
+<div>
+AI generates responses based on patterns in past training data and does not have real-time awareness of current events or dates.
+</div>
+</div>
+
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:8px; color:#0093A4;">
+Try This Instead
+</div>
+
+<div style="margin-bottom:12px;">
+If timing matters, always specify the exact date, event, or context instead of assuming the AI knows what is current.
+</div>
+
+<div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:14px;">
+<div style="font-size:16px">
+Create a warm-up activity about major U.S. election news for the week of <b>March 4–8, 2026</b>. Include 3 discussion questions.
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+
+
+
+</div>
+
+</div>
+</div>
+</details>
+
+
+<details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
+
+<summary style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF;">
+2️⃣ Assuming AI Works Like a Google Search
+</summary>
+
+<div style="padding:24px;">
+
+<!-- Card Wrapper -->
+<div style="border-radius:18px; overflow:hidden; box-shadow:0 6px 18px rgba(41,47,54,0.08); border:1px solid #e3e6ea;">
+
+<!-- Light Grey Content Band -->
+<div style="background:#F4F6F8; padding:24px;">
+
+<div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px;">
+
+<!-- LEFT COLUMN -->
+<div>
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:10px; color:#0093A4;">
+Scenario
+</div>
+
+<div style="margin-bottom:12px;">
+Mr. Chen, a middle school science teacher, asks:
+</div>
+
+<div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:14px; margin-bottom:12px;">
+<div style="font-size:16px;">
+What are the most research-backed strategies for teaching climate change to 7th graders?
+</div>
+</div>
+
+<div>
+The AI returns a clean list with strategies like “teach both sides equally” and “avoid emotionally charged examples,” complete with author names and years. <br><br>Mr. Chen later tries to find the cited studies and realizes two of the authors don’t exist and one claim contradicts guidance from the National Science Teaching Association. He has to rewrite the lesson the night before teaching it.
+</div>
+
+</div>
+</div>
+
+<!-- RIGHT COLUMN -->
+<div>
+
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; margin-bottom:16px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:8px; color:#0093A4;">
+What's Going On Here
+</div>
+<div>
+AI predicts what a plausible answer looks like rather than retrieving or verifying information from authoritative sources.
+</div>
+</div>
+
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:8px; color:#0093A4;">
+Try This Instead
+</div>
+
+<div style="margin-bottom:12px;">
+Use AI to brainstorm and organize ideas, but verify research claims and citations independently.
+</div>
+
+<div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:14px;">
+<div style="font-size:16px;">
+Suggest lesson approaches for teaching climate change to 7th graders. For each suggestion, label it as ‘needs verification’ and list what I should verify (e.g., standards, NSTA guidance, peer-reviewed sources).
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+</details>
+
+
+<details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
+
+<summary style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF;">
+3️⃣ Mistaking Confidence for Accuracy
+</summary>
+
+<div style="padding:24px;">
+
+<!-- Card Wrapper -->
+<div style="border-radius:18px; overflow:hidden; box-shadow:0 6px 18px rgba(41,47,54,0.08); border:1px solid #e3e6ea;">
+
+<!-- Light Grey Content Band -->
+<div style="background:#F4F6F8; padding:24px;">
+
+<div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px;">
+
+<!-- LEFT COLUMN -->
+<div>
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:10px; color:#0093A4;">
+Scenario
+</div>
+
+<div style="margin-bottom:12px;">
+Dr. Patel, an assistant principal, asks AI to summarize a newly released district grading policy before a staff meeting.
+</div>
+
+<div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:14px; margin-bottom:12px;">
+<div style="font-size:16px">
+Summarize this newly released district grading policy for me to share with staff.
+</div>
+</div>
+
+<div>
+The summary states that late work can no longer receive full credit under any circumstances. The language is clear and decisive, so Dr. Patel shares it with the faculty. <br><br>During the staff meeting, a teacher points out that the policy actually allows exceptions at teacher discretion. The incorrect summary causes frustration and a follow-up email clarifying the mistake.
+</div>
+
+</div>
+</div>
+
+<!-- RIGHT COLUMN -->
+<div>
+
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; margin-bottom:16px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:8px; color:#0093A4;">
+What's Going On Here
+</div>
+<div>
+AI is optimized to produce fluent, confident language, not to signal uncertainty or guarantee correctness.
+</div>
+</div>
+
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:8px; color:#0093A4;">
+Try This Instead
+</div>
+
+<div style="margin-bottom:12px;">
+Confidence in tone does not equal accuracy — always compare AI summaries directly to original documents.
+</div>
+
+<div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:14px;">
+<div style="font-size:16px">
+Summarize this policy in bullet points and include 3 direct quotes (with section headings) that support each key claim. Also list any sections that are ambiguous or allow exceptions.
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+</details>
+
+
+<details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
+
+<summary style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF;">
+4️⃣ Leaving Out Critical Context
+</summary>
+
+<div style="padding:24px;">
+
+<!-- Card Wrapper -->
+<div style="border-radius:18px; overflow:hidden; box-shadow:0 6px 18px rgba(41,47,54,0.08); border:1px solid #e3e6ea;">
+
+<!-- Light Grey Content Band -->
+<div style="background:#F4F6F8; padding:24px;">
+
+<div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px;">
+
+<!-- LEFT COLUMN -->
+<div>
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:10px; color:#0093A4;">
+Scenario
+</div>
+
+<div style="margin-bottom:12px;">
+Ms. Thompson, a 3rd-grade teacher, pastes her reading lesson into an AI tool and asks:
+</div>
+
+<div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:14px; margin-bottom:12px;">
+<div style="font-size:16px">
+Make this lesson more engaging.
+</div>
+</div>
+
+<div>
+The AI suggests small-group debates, independent online research, and a written reflection. <br><br>None of these fit her students’ reading level, classroom setup, or time constraints. She feels frustrated and decides the tool “isn’t useful for elementary teachers.”
+</div>
+
+</div>
+</div>
+
+<!-- RIGHT COLUMN -->
+<div>
+
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; margin-bottom:16px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:8px; color:#0093A4;">
+What's Going On Here
+</div>
+<div>
+AI can only respond to the details provided in the prompt and has no built-in knowledge of your specific context.
+</div>
+</div>
+
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:8px; color:#0093A4;">
+Try This Instead
+</div>
+
+<div style="margin-bottom:12px;">
+The more specific your context, the more useful and realistic the AI’s response will be.
+</div>
+
+<div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:14px;">
+<div style="font-size:16px;">
+Make this 3rd-grade reading lesson more engaging. Constraints: 30 minutes, no devices, whole-group then pairs, reading level around ___, goal: ___, and I need 2 options that use simple materials.
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+</details>
+
+
+<details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
+
+<summary style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF;">
+5️⃣ Believing AI Has Long-Term Memory
+</summary>
+
+<div style="padding:24px;">
+
+<!-- Card Wrapper -->
+<div style="border-radius:18px; overflow:hidden; box-shadow:0 6px 18px rgba(41,47,54,0.08); border:1px solid #e3e6ea;">
+
+<!-- Light Grey Content Band -->
+<div style="background:#F4F6F8; padding:24px;">
+
+<div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px;">
+
+<!-- LEFT COLUMN -->
+<div>
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:10px; color:#0093A4;">
+Scenario
+</div>
+
+<div style="margin-bottom:12px;">
+Over several days, Mr. Johnson works with AI to design assessments for a 6-week algebra unit. In a new session, he asks:
+</div>
+
+<div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:14px; margin-bottom:12px;">
+<div style="font-size:16px">
+Can you rewrite the quiz we planned to better support English learners?
+</div>
+</div>
+
+<div>
+The AI creates a brand-new quiz unrelated to the unit. <br><br>In a rush, Mr. Johnson doesn't read the quiz before printing it out. He realizes just before handing out the assessment to his first class of the day, and ends up having to delay the quiz until the next class period.
+</div>
+
+</div>
+</div>
+
+<!-- RIGHT COLUMN -->
+<div>
+
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; margin-bottom:16px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:8px; color:#0093A4;">
+What's Going On Here
+</div>
+<div>
+AI does not retain memory across sessions and cannot recall prior work unless the information is reintroduced.
+</div>
+</div>
+
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+<div style="font-weight:800; font-size:20px; margin-bottom:8px; color:#0093A4;">
+Try This Instead
+</div>
+
+<div style="margin-bottom:12px;">
+Reintroduce key materials and context whenever you want the AI to build on previous work.
+</div>
+
+<div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:14px;">
+<div style="font-size:16px">
+Here is our unit outline and the original quiz (pasted below). Rewrite the quiz to support English learners while staying aligned to Unit Week 3 objectives. Keep the same skills and difficulty.
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+</details>
+
+<details style="max-width:1000px; margin:0 auto 14px auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#FFFFFF; color:#292F36; line-height:1.6; font-size:16px;">
+
+<summary style="cursor:pointer; padding:16px 24px; font-weight:800; font-size:22px; color:#141414; list-style:none; border:1px solid #e3e6ea; border-radius:16px; background:#FFFFFF;">
+6️⃣ Leading AI Toward a Pre-Chosen Solution
+</summary>
+
+<div style="padding:20px 24px 24px 24px;">
+
+<!-- Card Wrapper -->
+<div style="border-radius:18px; overflow:hidden; box-shadow:0 6px 18px rgba(41,47,54,0.08); border:1px solid #e3e6ea;">
+
+<!-- Light Grey Content Band -->
+<div style="background:#F4F6F8; padding:24px;">
+
+<div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px;">
+
+<!-- LEFT COLUMN -->
+<div>
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+
+<div style="font-weight:800; font-size:20px; margin-bottom:10px; color:#0093A4;">
+Scenario
+</div>
+
+<div style="margin-bottom:12px;">
+Ms. Rivera is thinking about changing her classroom seating chart to help a student, Jimmy, who struggles with focus and participation. She asks:
+</div>
+
+<div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:14px; margin-bottom:12px;">
+<div style="font-size:16px">
+Jimmy struggles in class. Come up with a strategy for changing the seating chart frequently so he can be successful.
+</div>
+</div>
+
+<div>
+The AI enthusiastically develops a detailed rotating seating system. <br><br>Ms. Rivera feels validated — but she never learns whether seating changes are actually the strongest intervention. She unintentionally steered the AI toward the solution she already had in mind.
+</div>
+
+</div>
+</div>
+
+<!-- RIGHT COLUMN -->
+<div>
+
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; margin-bottom:16px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+
+<div style="font-weight:800; font-size:20px; margin-bottom:8px; color:#0093A4;">
+What's Going On Here
+</div>
+
+<div>
+AI expands on how a problem is framed, so it will reinforce the solution implied in the prompt rather than evaluate alternatives.
+</div>
+
+</div>
+
+<div style="border:1px solid #dfe3e8; border-radius:18px; padding:18px; background:#FFFFFF; box-shadow:0 2px 6px rgba(41,47,54,0.04);">
+
+<div style="font-weight:800; font-size:20px; margin-bottom:8px; color:#0093A4;">
+Try This Instead
+</div>
+
+<div style="margin-bottom:12px;">
+Describe the challenge clearly, then ask for multiple recommendations before narrowing to one approach.
+</div>
+
+<div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:14px;">
+<div style="font-size:16px">
+Jimmy struggles with focus and participation during whole-group instruction. Provide 3 evidence-informed recommendations to support him. Briefly explain the rationale for each and suggest which you would prioritize.
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+</div>
+</details>
 
 MARKDOWN

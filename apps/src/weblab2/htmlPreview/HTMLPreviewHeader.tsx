@@ -7,7 +7,6 @@ import classNames from 'classnames';
 import React, {useEffect, ChangeEvent, useCallback, useRef} from 'react';
 
 import {AutocompleteInput} from '@cdo/apps/templates/autocompleteInput/AutocompleteInput';
-import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import weblab2I18n from '@cdo/apps/weblab2/locale';
 
@@ -51,9 +50,6 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
 }) => {
   const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
   const isShareView = useAppSelector(state => state.lab.isShareView);
-  const enableDebugPanel = experiments.isEnabledAllowingQueryString(
-    experiments.WEBLAB2_DEBUG_PANEL
-  );
   const debugPanelOpen = useAppSelector(state => state.weblab2.debugPanelOpen);
   const dispatch = useAppDispatch();
 
@@ -202,31 +198,27 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
         className={moduleStyles.previewViewModeButtons}
         {...previewViewModeButtonsProps}
       />
-      {enableDebugPanel && (
-        <WithTooltip
-          tooltipProps={{
-            tooltipId: 'toggle-debug-panel',
-            direction: 'onBottom',
-            size: 'xs',
-            text: debugPanelOpen ? 'Close debug panel' : 'Open debug panel',
-          }}
-        >
-          <Button
-            onClick={() => dispatch(setDebugPanelOpen(!debugPanelOpen))}
-            aria-label={
-              debugPanelOpen ? 'Close debug panel' : 'Open debug panel'
-            }
-            size="xs"
-            type="secondary"
-            color={'gray'}
-            icon={{iconName: 'bug'}}
-            isIconOnly={true}
-            className={
-              debugPanelOpen ? moduleStyles.closeDebugPanelButton : undefined
-            }
-          />
-        </WithTooltip>
-      )}
+      <WithTooltip
+        tooltipProps={{
+          tooltipId: 'toggle-debug-panel',
+          direction: 'onBottom',
+          size: 'xs',
+          text: debugPanelOpen ? 'Close debug panel' : 'Open debug panel',
+        }}
+      >
+        <Button
+          onClick={() => dispatch(setDebugPanelOpen(!debugPanelOpen))}
+          aria-label={debugPanelOpen ? 'Close debug panel' : 'Open debug panel'}
+          size="xs"
+          type="secondary"
+          color={'gray'}
+          icon={{iconName: 'bug'}}
+          isIconOnly={true}
+          className={
+            debugPanelOpen ? moduleStyles.closeDebugPanelButton : undefined
+          }
+        />
+      </WithTooltip>
       {!isShareView && (
         <ToggleFullScreenButton
           isFullScreenView={isFullScreenView}

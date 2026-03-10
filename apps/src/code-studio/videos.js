@@ -102,7 +102,6 @@ function createVideo(options) {
   const videoDiv = $('<iframe id="video"/>').addClass('video-player').attr({
     src: options.src,
     allowfullscreen: 'true',
-    scrolling: 'no',
   });
 
   const videoTabContainerDiv = $("<div id='videoTabContainer'></div>").append(
@@ -165,6 +164,17 @@ videos.showVideoDialog = function (options, forceShowVideo) {
     options.key,
     function (data) {
       notesDiv.children('#notes').html(data);
+      // Ensure all <img> elements inside #notes default to empty alt text,
+      // but do not overwrite any existing descriptive alt text.
+      notesDiv
+        .children('#notes')
+        .find('img')
+        .each(function () {
+          var $img = $(this);
+          if (!$img.is('[alt]')) {
+            $img.attr('alt', '');
+          }
+        });
     },
     function () {
       openVideoTab();

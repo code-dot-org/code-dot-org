@@ -915,6 +915,11 @@ en:
         aif2-weblab-html-tutorial: Web Lab HTML Tutoral
         aif2-weblab-tutorial-CSS: Web Lab CSS Tutorial
         aif2-weblab-tutorial-wireframe: Creating a Website with a Wireframe
+        aid-thinking-critically-lesson5-minilesson1-2026-test: Confident AI - Pilot
+        aid-thinking-critically-lesson5-minilesson2-2026-test: AI Makes Guesses
+        aid-thinking-critically-lesson5-minilesson3-2026-test: Missing Perspectives - Pilot
+        Dot-Notation: 'Dot Notation: Accessing Data in APIs'
+        aif2-pl-tray-and-catch: Try and Catch Blocks
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

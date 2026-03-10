@@ -8,6 +8,7 @@ interface ResizeBarProps {
   isVertical: boolean;
   isDragging: boolean;
   separatorProps: SeparatorProps;
+  className?: string;
 }
 
 export const RESIZE_BAR_SIZE_PX = 1;
@@ -22,6 +23,7 @@ const ResizeBar: React.FunctionComponent<ResizeBarProps> = ({
   isVertical,
   isDragging,
   separatorProps,
+  className,
 }) => {
   const [isActive, setIsActive] = React.useState(false);
 
@@ -63,7 +65,7 @@ const ResizeBar: React.FunctionComponent<ResizeBarProps> = ({
 
   return (
     // The always-visible 1px bar
-    <div className={classNames(moduleStyles.resizeBar, layoutClass)}>
+    <div className={classNames(moduleStyles.resizeBar, layoutClass, className)}>
       {/* The visible 3px bar */}
       <div
         className={classNames(moduleStyles.absoluteBar, resizingBarClass)}

@@ -11,12 +11,12 @@ class Clients::CleverRestTest < ActiveSupport::TestCase
 
     let(:endpoint) {'expected/endpoint'}
 
-    it 'returns parsed JSON response from Clever v2.1 API endpoint' do
+    it 'returns parsed JSON response from Clever v3.0 API endpoint' do
       expected_response = 'expected_response'
 
       RestClient.
         expects(:get).
-        with("https://api.clever.com/v2.1/#{endpoint}", {authorization: "Bearer #{oauth_token}"}).
+        with("https://api.clever.com/v3.0/#{endpoint}", {authorization: "Bearer #{oauth_token}"}).
         returns(expected_response.to_json)
 
       _get_request.must_equal expected_response

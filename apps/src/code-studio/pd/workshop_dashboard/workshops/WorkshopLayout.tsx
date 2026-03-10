@@ -1,6 +1,6 @@
 import Alert from '@code-dot-org/component-library/alert';
-import {LinkButton} from '@code-dot-org/component-library/button';
 import {SegmentedButtonsProps} from '@code-dot-org/component-library/segmentedButtons';
+import {Button as MuiButton} from '@mui/material';
 import React, {
   FC,
   useMemo,
@@ -246,10 +246,14 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
       </nav>
       <main>
         {showLegacySurveyLinkButton ? (
-          <LinkButton
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
             href={`/pd/workshop_dashboard/workshop_daily_survey_results/${workshopId}`}
-            text="Survey results"
-          />
+          >
+            Survey results
+          </MuiButton>
         ) : (
           <>
             {showNoSurveyResponses && <NoSurveyResponses />}

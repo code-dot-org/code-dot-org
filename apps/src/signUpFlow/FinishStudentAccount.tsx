@@ -1,15 +1,14 @@
-import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import CloseButton from '@code-dot-org/component-library/closeButton';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import cookies from 'js-cookie';
 import React, {useState, useEffect, useMemo} from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
@@ -95,11 +94,9 @@ const FinishStudentAccount: React.FunctionComponent<{
       setName(prepopulatedName);
     }
 
-    analyticsReporter.sendEvent(
-      EVENTS.FINISH_ACCOUNT_PAGE_LOADED,
-      {'user type': 'student'},
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.FINISH_ACCOUNT_PAGE_LOADED, {
+      'user type': 'student',
+    });
 
     const fetchGdprData = async () => {
       const urlParams = new URLSearchParams(window.location.search);
@@ -140,11 +137,7 @@ const FinishStudentAccount: React.FunctionComponent<{
   };
 
   const onIsParentChange = (): void => {
-    analyticsReporter.sendEvent(
-      EVENTS.PARENT_OR_GUARDIAN_SIGN_UP_CLICKED,
-      {},
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.PARENT_OR_GUARDIAN_SIGN_UP_CLICKED, {});
     const newIsParentCheckedChoice = !isParent;
     // If the user unchecks the parent checkbox, clear the parent email field
     if (!newIsParentCheckedChoice) {
@@ -213,16 +206,12 @@ const FinishStudentAccount: React.FunctionComponent<{
 
   const sendFinishEvent = (): void => {
     // Log to Statsig and Amplitude
-    analyticsReporter.sendEvent(
-      EVENTS.SIGN_UP_FINISHED_EVENT,
-      {
-        'user type': 'student',
-        'has school': false,
-        'has marketing value selected': true,
-        'has display name': !nameErrorMessage,
-      },
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.SIGN_UP_FINISHED_EVENT, {
+      'user type': 'student',
+      'has school': false,
+      'has marketing value selected': true,
+      'has display name': !nameErrorMessage,
+    });
 
     // Log to Google Analytics
     trackEvent('sign_up', 'sign_up_success', {
@@ -455,17 +444,12 @@ const FinishStudentAccount: React.FunctionComponent<{
           )}
         </fieldset>
         <div className={style.finishSignUpButtonContainer}>
-          <Button
-            className={style.finishSignUpButton}
-            color={buttonColors.purple}
-            type="primary"
-            onClick={submitStudentAccount}
-            text={locale.go_to_my_account()}
-            iconRight={{
-              iconName: 'arrow-right',
-              iconStyle: 'solid',
-              title: 'arrow-right',
-            }}
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
+            loading={isSubmitting}
+            loadingPosition="end"
             disabled={
               name?.trim() === '' ||
               name?.length > MAX_DISPLAY_NAME_LENGTH ||
@@ -474,8 +458,19 @@ const FinishStudentAccount: React.FunctionComponent<{
               (isParent && (parentEmail === '' || showParentEmailError)) ||
               !gdprValid
             }
-            isPending={isSubmitting}
-          />
+            className={style.finishSignUpButton}
+            onClick={submitStudentAccount}
+            type="button"
+            endIcon={
+              <FontAwesomeV6Icon
+                iconName="arrow-right"
+                iconStyle="solid"
+                title="arrow-right"
+              />
+            }
+          >
+            {locale.go_to_my_account()}
+          </MuiButton>
         </div>
       </div>
       <SafeMarkdown

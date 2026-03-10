@@ -1,14 +1,13 @@
-import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import cookies from 'js-cookie';
 import React, {useState, useEffect} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import OldButton from '@cdo/apps/legacySharedComponents/Button';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import canvas from '@cdo/apps/signUpFlow/images/canvas.png';
 import schoology from '@cdo/apps/signUpFlow/images/schoology.png';
@@ -94,8 +93,7 @@ const LoginTypeSelection: React.FunctionComponent<{
             : {};
           analyticsReporter.sendEvent(
             EVENTS.SIGN_UP_STARTED_EVENT,
-            sourceParam,
-            PLATFORMS.STATSIG
+            sourceParam
           );
           sessionStorage.setItem(
             ACCOUNT_TYPE_SESSION_KEY,
@@ -206,21 +204,13 @@ const LoginTypeSelection: React.FunctionComponent<{
   };
 
   const sendLMSAnalyticsEvent = () => {
-    analyticsReporter.sendEvent(
-      EVENTS.LMS_INFORMATION_BUTTON_CLICKED,
-      {},
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.LMS_INFORMATION_BUTTON_CLICKED, {});
   };
 
   function logUserLoginType(loginType: string) {
-    analyticsReporter.sendEvent(
-      EVENTS.SIGN_UP_LOGIN_TYPE_PICKED_EVENT,
-      {
-        'user login type': loginType,
-      },
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.SIGN_UP_LOGIN_TYPE_PICKED_EVENT, {
+      'user login type': loginType,
+    });
   }
 
   function selectOauthLoginType(loginType: string) {
@@ -255,43 +245,76 @@ const LoginTypeSelection: React.FunctionComponent<{
             </Typography>
           </div>
           <form action="/users/auth/google_oauth2" method="POST">
-            <Button
-              text={locale.sign_up_google()}
-              onClick={() => selectOauthLoginType('google')}
-              iconLeft={{iconName: 'brands fa-google', iconStyle: 'solid'}}
+            <MuiButton
+              variant="contained"
+              color="primary"
+              size="medium"
               className={style.googleButton}
-              buttonTagTypeAttribute="submit"
-            />
+              onClick={() => selectOauthLoginType('google')}
+              type="submit"
+              startIcon={
+                <FontAwesomeV6Icon
+                  iconName="brands fa-google"
+                  iconStyle="solid"
+                />
+              }
+            >
+              {locale.sign_up_google()}
+            </MuiButton>
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           <form action="/users/auth/microsoft_v2_auth" method="POST">
-            <Button
-              text={locale.sign_up_microsoft()}
-              onClick={() => selectOauthLoginType('microsoft')}
-              iconLeft={{iconName: 'brands fa-microsoft', iconStyle: 'light'}}
+            <MuiButton
+              variant="contained"
+              color="primary"
+              size="medium"
               className={style.microsoftButton}
-              buttonTagTypeAttribute="submit"
-            />
+              onClick={() => selectOauthLoginType('microsoft')}
+              type="submit"
+              startIcon={
+                <FontAwesomeV6Icon
+                  iconName="brands fa-microsoft"
+                  iconStyle="light"
+                />
+              }
+            >
+              {locale.sign_up_microsoft()}
+            </MuiButton>
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           <form action="/users/auth/facebook" method="POST">
-            <Button
-              text={locale.sign_up_facebook()}
-              onClick={() => selectOauthLoginType('facebook')}
-              iconLeft={{iconName: 'brands fa-facebook-f', iconStyle: 'solid'}}
+            <MuiButton
+              variant="contained"
+              color="primary"
+              size="medium"
               className={style.facebookButton}
-              buttonTagTypeAttribute="submit"
-            />
+              onClick={() => selectOauthLoginType('facebook')}
+              type="submit"
+              startIcon={
+                <FontAwesomeV6Icon
+                  iconName="brands fa-facebook-f"
+                  iconStyle="solid"
+                />
+              }
+            >
+              {locale.sign_up_facebook()}
+            </MuiButton>
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           <form action="/users/auth/clever" method="POST">
-            <Button
-              text={locale.sign_up_clever()}
-              onClick={() => selectOauthLoginType('clever')}
-              iconLeft={{iconName: 'kit fa-clever', iconStyle: 'solid'}}
+            <MuiButton
+              variant="contained"
+              color="primary"
+              size="medium"
               className={style.cleverButton}
-              buttonTagTypeAttribute="submit"
-            />
+              onClick={() => selectOauthLoginType('clever')}
+              type="submit"
+              startIcon={
+                <FontAwesomeV6Icon iconName="kit fa-clever" iconStyle="solid" />
+              }
+            >
+              {locale.sign_up_clever()}
+            </MuiButton>
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           {/* TODO: once the Classlink icon has been added to our Font Awesome account,
@@ -437,14 +460,18 @@ const LoginTypeSelection: React.FunctionComponent<{
               )}
             </div>
           </div>
-          <Button
-            id="createAccountButton"
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
             className={style.shortButton}
-            text={locale.create_my_account()}
+            id="createAccountButton"
             onClick={submitLoginType}
+            type="submit"
             disabled={createAccountButtonDisabled}
-            buttonTagTypeAttribute="submit"
-          />
+          >
+            {locale.create_my_account()}
+          </MuiButton>
         </div>
       </div>
       <SafeMarkdown

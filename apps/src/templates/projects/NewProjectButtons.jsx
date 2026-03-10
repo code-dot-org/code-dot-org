@@ -4,7 +4,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import {studio, pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {pegasus, studio} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 import styleConstants from '../../styleConstants';
@@ -21,31 +21,23 @@ const PROJECT_INFO = {
   },
   artist: {
     label: i18n.projectTypeArtist(),
-    thumbnail: studio('/shared/images/courses/logo_artist.png'),
+    thumbnail: studio('/shared/images/courses/artist-icon.png'),
   },
   artist_k1: {
     label: i18n.projectTypeArtistPreReader(),
-    thumbnail: studio('/shared/images/courses/logo_artist.png'),
+    thumbnail: studio('/shared/images/courses/artist-icon.png'),
   },
   applab: {
     label: i18n.projectTypeApplab(),
-    thumbnail: studio('/shared/images/courses/logo_applab_square.png'),
+    thumbnail: studio('/shared/images/courses/app-lab-icon.png'),
   },
   gamelab: {
     label: i18n.projectTypeGamelab(),
-    thumbnail: studio('/shared/images/courses/logo_gamelab_square.png'),
+    thumbnail: studio('/shared/images/courses/game-lab-icon.png'),
   },
   weblab: {
     label: i18n.projectTypeWeblab(),
     thumbnail: studio('/shared/images/courses/logo_weblab.png'),
-  },
-  calc: {
-    label: i18n.projectTypeCalc(),
-    thumbnail: studio('/shared/images/courses/logo_calc.png'),
-  },
-  eval: {
-    label: i18n.projectTypeEval(),
-    thumbnail: studio('/shared/images/courses/logo_eval.png'),
   },
   frozen: {
     label: i18n.projectTypeFrozen(),
@@ -107,28 +99,36 @@ const PROJECT_INFO = {
   },
   spritelab: {
     label: i18n.projectTypeSpriteLab(),
-    thumbnail: studio('/shared/images/courses/logo_spritelab.png'),
+    thumbnail: studio('/shared/images/courses/sprite-lab-icon.png'),
+  },
+  game_design: {
+    label: i18n.projectTypeGameDesign(),
+    thumbnail: studio('/shared/images/courses/game-design-icon.png'),
   },
   dance: {
     label: i18n.projectTypeDance(),
-    thumbnail: studio('/shared/images/courses/logo_dance.png'),
+    thumbnail: studio('/shared/images/courses/dance-party-icon.png'),
   },
   poetry: {
     label: i18n.projectTypePoetry(),
     thumbnail: studio('/shared/images/courses/logo_poetry.png'),
   },
+  poetry_hoc: {
+    label: i18n.projectTypePoetryHoc(),
+    thumbnail: studio('/shared/images/courses/logo_poetry.png'),
+  },
   music: {
     label: i18n.projectTypeMusic(),
-    thumbnail: studio('/shared/images/courses/logo_music.png'),
+    thumbnail: studio('/shared/images/courses/music-lab-icon.png'),
     urlOverride: pegasus('/music'),
   },
   pythonlab: {
     label: i18n.projectTypePythonlab(),
-    thumbnail: studio('/shared/images/courses/logo_pythonlab.png'),
+    thumbnail: studio('/shared/images/courses/python-lab-icon.png'),
   },
   music_dance_ai: {
     label: 'Mix & Move with AI',
-    thumbnail: studio('/shared/images/courses/header-music-dance-ai-icon.png'),
+    thumbnail: studio('/shared/images/courses/music-dance-ai-icon.png'),
     urlOverride: pegasus('/mix-move-ai'),
   },
 };

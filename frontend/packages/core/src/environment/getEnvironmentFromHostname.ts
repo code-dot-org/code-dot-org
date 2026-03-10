@@ -1,5 +1,5 @@
 import type {Environment} from './environment';
-import {parse} from 'tldjs';
+import {parse} from 'tldts';
 
 /**
  * Get the current environment.

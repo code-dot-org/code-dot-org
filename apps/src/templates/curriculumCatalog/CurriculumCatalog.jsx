@@ -12,7 +12,7 @@ import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect} from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import NoMatchingSearchResultsFound from '@cdo/apps/templates/courseOfferings/noMatchingSearchResultsFound/NoMatchingSearchResultsFound';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
@@ -77,8 +77,7 @@ const CurriculumCatalog = ({
       EVENTS.CURRICULUM_CATALOG_ASSIGN_COMPLETED_EVENT,
       {
         curriculum_offering: assignmentData.assignedTitle,
-      },
-      PLATFORMS.STATSIG
+      }
     );
   };
 

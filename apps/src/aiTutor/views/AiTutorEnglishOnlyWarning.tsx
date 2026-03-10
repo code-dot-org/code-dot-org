@@ -12,7 +12,7 @@ const AiTutorEnglishOnlyWarning: React.FunctionComponent = () => {
   const lab2Locale = useLocalization();
   const locale = legacyLabState ? legacyLabState.locale : lab2Locale;
   const isEnglishLocale =
-    locale && ['en_us', 'en_gb', 'en-US', 'en-GB'].includes(locale);
+    locale && ['en_us', 'en_gb', 'en-US', 'en-GB', 'en'].includes(locale);
 
   const showEnglishOnlyWarning =
     !isEnglishLocale && clientType === AiChatClientTypes.AI_TUTOR;

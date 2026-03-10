@@ -199,6 +199,130 @@ IconButton.args = {
   onClick: () => null,
 };
 
+const LoadingIconButtonTemplate: StoryFn<{
+  components: IconButtonStoryProps[];
+}> = args => (
+  <div
+    style={{
+      display: 'flex',
+      flexFlow: 'wrap',
+      alignItems: 'flex-start',
+      gap: '20px',
+    }}
+  >
+    {args.components?.map((componentArg, index) => {
+      const {icon, ...iconButtonProps} = componentArg;
+      return (
+        <MuiIconButton key={`loading-icon-btn-${index}`} {...iconButtonProps}>
+          {icon && <FontAwesomeV6Icon {...icon} />}
+        </MuiIconButton>
+      );
+    })}
+  </div>
+);
+
+export const LoadingIconButtons = LoadingIconButtonTemplate.bind({});
+LoadingIconButtons.args = {
+  components: [
+    {
+      icon: {iconName: 'house', iconStyle: 'solid'},
+      'aria-label': 'contained primary loading',
+      size: 'medium',
+      variant: 'contained',
+      color: 'primary',
+      loading: true,
+    },
+    {
+      icon: {iconName: 'house', iconStyle: 'solid'},
+      'aria-label': 'contained secondary loading',
+      size: 'medium',
+      variant: 'contained',
+      color: 'secondary',
+      loading: true,
+    },
+    {
+      icon: {iconName: 'house', iconStyle: 'solid'},
+      'aria-label': 'contained white loading',
+      size: 'medium',
+      variant: 'contained',
+      color: 'white',
+      loading: true,
+    },
+    {
+      icon: {iconName: 'house', iconStyle: 'solid'},
+      'aria-label': 'contained error loading',
+      size: 'medium',
+      variant: 'contained',
+      color: 'error',
+      loading: true,
+    },
+    {
+      icon: {iconName: 'house', iconStyle: 'solid'},
+      'aria-label': 'outlined primary loading',
+      size: 'medium',
+      variant: 'outlined',
+      color: 'primary',
+      loading: true,
+    },
+    {
+      icon: {iconName: 'house', iconStyle: 'solid'},
+      'aria-label': 'outlined secondary loading',
+      size: 'medium',
+      variant: 'outlined',
+      color: 'secondary',
+      loading: true,
+    },
+    {
+      icon: {iconName: 'house', iconStyle: 'solid'},
+      'aria-label': 'outlined tertiary loading',
+      size: 'medium',
+      variant: 'outlined',
+      color: 'tertiary',
+      loading: true,
+    },
+    {
+      icon: {iconName: 'house', iconStyle: 'solid'},
+      'aria-label': 'outlined error loading',
+      size: 'medium',
+      variant: 'outlined',
+      color: 'error',
+      loading: true,
+    },
+    {
+      icon: {iconName: 'house', iconStyle: 'solid'},
+      'aria-label': 'text primary loading',
+      size: 'medium',
+      variant: 'text',
+      color: 'primary',
+      loading: true,
+    },
+    {
+      icon: {iconName: 'house', iconStyle: 'solid'},
+      'aria-label': 'text secondary loading',
+      size: 'medium',
+      variant: 'text',
+      color: 'secondary',
+      loading: true,
+    },
+    {
+      icon: {iconName: 'house', iconStyle: 'solid'},
+      'aria-label': 'text tertiary loading',
+      size: 'medium',
+      variant: 'text',
+      color: 'tertiary',
+      loading: true,
+    },
+    {
+      icon: {iconName: 'house', iconStyle: 'solid'},
+      'aria-label': 'text error loading',
+      size: 'medium',
+      variant: 'text',
+      color: 'error',
+      loading: true,
+    },
+  ],
+};
+
 export const GroupOfColorsOfButtons = MultipleTemplate.bind({});
 GroupOfColorsOfButtons.args = {
   components: [
