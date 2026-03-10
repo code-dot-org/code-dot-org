@@ -20,6 +20,35 @@ receivers:
           static_configs:
             - targets: ["0.0.0.0:8888"]
 
+  # Reads Ubuntu formatted syslog
+  # TODO: Replace with rsyslog implementation using standardized log format to eliminate reliance on Regex.
+  filelog/syslog:
+    include:
+      - /var/log/syslog
+    start_at: end
+    include_file_name: true
+    include_file_path: true
+    operators:
+      - type: regex_parser
+        regex: '^(?P<timestamp>\w{3}\s+\d+\s+\d{2}:\d{2}:\d{2})\s+(?P<hostname>\S+)\s+(?P<process>[^\[:\s]+)\[(?P<pid>\d+)\]:\s+(?P<message>.*)$'
+        timestamp:
+          parse_from: attributes.timestamp
+          layout: '%b %d %H:%M:%S'
+          location: Local
+      - type: move
+        from: attributes.message
+        to: body
+      - type: move
+        from: attributes.hostname
+        to: resource["host.name"]
+      - type: move
+        from: attributes.process
+        to: attributes["process.name"]
+      - type: move
+        from: attributes.pid
+        to: attributes["process.pid"]
+
+
 processors:
   # Batch processor for efficient data transmission
   batch:
@@ -38,6 +67,21 @@ processors:
           - set(attributes["resource.name"], name)
             where instrumentation_scope.name == "OpenTelemetry::Instrumentation::Rack"
               and span.kind == SPAN_KIND_SERVER
+
+  # Converts OpenTelemetry error spans to Datadog formatted error spans
+  # OpenTelemetry specs are different than what Datadog expects for where the error lives.
+  # See: https://docs.datadoghq.com/tracing/error_tracking/
+  transform/datadog_errors:
+    error_mode: ignore
+    trace_statements:
+      - context: spanevent
+        statements:
+          - set(span.attributes["error.type"], attributes["exception.type"])
+            where name == "exception" and attributes["exception.type"] != nil
+          - set(span.attributes["error.message"], attributes["exception.message"])
+            where name == "exception" and attributes["exception.message"] != nil
+          - set(span.attributes["error.stack"], attributes["exception.stacktrace"])
+            where name == "exception" and attributes["exception.stacktrace"] != nil
 
   # Resource processor to add additional resource attributes
   resource:
@@ -92,6 +136,6 @@ service:
     
     # Logs pipeline  
     logs:
-      receivers: [otlp]
+      receivers: [filelog/syslog, otlp]
       processors: [resource, batch]
       exporters: [datadog]

@@ -25,21 +25,12 @@
     },
     "ai_tutor_prompt_settings": {
       "answerTypes": [
-        "buildHTML",
-        "buildCSS",
-        "ask",
-        "hint",
-        "debug",
-        "example",
-        "explainCode",
-        "documentation",
-        "pseudocode",
-        "testCase"
+        "ask"
       ],
       "answerTypeCustomizations": {
       }
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-07T02:42:52.487+00:00\",\"changed\":[\"cloned from \\\"all-the-aif-things-web-lab-tutor-ai-prompt-mode-erik\\\"\"],\"cloned_from\":\"all-the-aif-things-web-lab-tutor-ai-prompt-mode-erik\"},{\"changed_at\":\"2026-03-07 02:42:54 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-07T02:42:52.487+00:00\",\"changed\":[\"cloned from \\\"all-the-aif-things-web-lab-tutor-ai-prompt-mode-erik\\\"\"],\"cloned_from\":\"all-the-aif-things-web-lab-tutor-ai-prompt-mode-erik\"},{\"changed_at\":\"2026-03-07 02:42:54 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-09 23:49:45 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>
