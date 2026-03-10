@@ -32,3 +32,5 @@ export const instructionsValidateButtonElementId =
 
 export const resourcePanelValidationTabButtonElementId =
   'resource-panel-tab-button-validation';
+
+export const VALIDATION_COMPLETE_EVENT = 'validation-complete';

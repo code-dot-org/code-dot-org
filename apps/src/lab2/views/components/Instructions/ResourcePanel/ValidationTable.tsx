@@ -1,5 +1,5 @@
 import {Typography} from '@mui/material';
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {
@@ -8,6 +8,11 @@ import {
 } from '@cdo/apps/lab2/views/components/Instructions/validationHelpers';
 import ValidationStatusIcon from '@cdo/apps/lab2/views/components/Instructions/ValidationStatusIcon';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {
+  resourcePanelValidationTableElementId,
+  VALIDATION_COMPLETE_EVENT,
+} from './constants';
 
 import moduleStyles from './validation-panel.module.scss';
 
@@ -21,6 +26,18 @@ const ValidationTable: React.FunctionComponent<ValidationResultsProps> = ({
   const validationResults = useAppSelector(
     state => state.lab.validationState.validationResults
   );
+
+  useEffect(() => {
+    if (validationResults) {
+      document
+        .querySelector(`#${resourcePanelValidationTableElementId}`)
+        ?.dispatchEvent(
+          new CustomEvent(VALIDATION_COMPLETE_EVENT, {
+            bubbles: true,
+          })
+        );
+    }
+  }, [validationResults]);
 
   if (!validationResults) {
     return null;
