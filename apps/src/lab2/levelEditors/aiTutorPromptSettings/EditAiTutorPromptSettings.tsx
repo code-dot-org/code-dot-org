@@ -11,6 +11,7 @@ import askContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/ask.md';
 import buildCSSContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/buildCSS.md';
 import buildHTMLContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/buildHTML.md';
 import buildJavaScriptContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/buildJavaScript.md';
+import buildJSONContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/buildJSON.md';
 import debugContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/debug.md';
 import documentationContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/documentation.md';
 import exampleContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/example.md';
@@ -31,6 +32,7 @@ const ANSWER_TYPE_TO_CONTRACT: Record<string, string> = {
   buildCSS: buildCSSContract,
   buildHTML: buildHTMLContract,
   buildJavaScript: buildJavaScriptContract,
+  buildJSON: buildJSONContract,
   debug: debugContract,
   documentation: documentationContract,
   example: exampleContract,
@@ -45,6 +47,7 @@ const TOGGLEABLE_TUTOR_ANSWER_TYPES = [
   'buildCSS',
   'buildHTML',
   'buildJavaScript',
+  'buildJSON',
   'debug',
   'documentation',
   'example',
@@ -59,6 +62,7 @@ const ANSWER_TYPE_TO_LABEL = {
   buildCSS: 'Build CSS',
   buildHTML: 'Build HTML',
   buildJavaScript: 'Build JavaScript',
+  buildJSON: 'Build JSON',
   debug: 'Debug',
   documentation: 'Documentation',
   example: 'Example',

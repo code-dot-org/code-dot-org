@@ -30,6 +30,7 @@ export type AiTutorAnswerType =
   | 'buildCSS'
   | 'buildHTML'
   | 'buildJavaScript'
+  | 'buildJSON'
   | 'debug'
   | 'documentation'
   | 'example'
