@@ -79,6 +79,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
         fixedDarkBackground
           ? moduleStyles.fixedDarkBackground
           : moduleStyles.standardBackground,
+        moduleStyles.vertical,
         'instructions'
       )}
       data-theme={overrideTheme || defaultTheme}
