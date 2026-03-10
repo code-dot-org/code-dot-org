@@ -4,7 +4,7 @@ import Shepherd, {StepOptions, Tour} from 'shepherd.js';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import '@cdo/apps/sharedComponents/productTour/shepherd.scss';
 
-interface useProductTourProps {
+interface UseProductTourProps {
   getSteps: (tour: Tour) => StepOptions[];
   localStorageKey: string;
   tourAvailable: boolean;
@@ -24,7 +24,7 @@ const useProductTour = ({
   onStart,
   onComplete,
   onCancel,
-}: useProductTourProps) => {
+}: UseProductTourProps) => {
   const tour = useMemo(() => {
     const tourSeen = tryGetLocalStorage(localStorageKey, 'no');
     if (!tourAvailable || tourSeen === 'yes') {

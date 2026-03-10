@@ -49,7 +49,7 @@ const useResourcePanelShepherdTours = ({
   );
 
   // We track level load state to avoid starting tours while the level is still loading.
-  // This can cause mutliple tours to show up if we load one for the previous level and
+  // This can cause multiple tours to show up if we load one for the previous level and
   // then one for the new level.
   const [isLevelLoading, setIsLevelLoading] = useState(false);
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
