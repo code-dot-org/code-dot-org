@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-nlb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-nlb
+  template:
+    metadata:
+      labels:
+        app: hello-nlb
+    spec:
+      containers:
+        - name: hello
+          image: hashicorp/http-echo:1.0.0
+          args:
+            - "-text=hello from nlb service"
+          ports:
+            - containerPort: 5678
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-nlb
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-type: external
+    service.beta.kubernetes.io/aws-load-balancer-nlb-target-type: ip
+    service.beta.kubernetes.io/aws-load-balancer-scheme: internet-facing
+spec:
+  type: LoadBalancer
+  selector:
+    app: hello-nlb
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 5678

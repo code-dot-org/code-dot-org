@@ -70,13 +70,6 @@ const EVENTS = {
   CAP_STUDENT_WARNING_LINK_CLICKED:
     'CAP Teacher Students Warning Modal Documentation Clicked',
   CAP_AGE_GATED_BANNER_SHOWN: 'CAP Teacher Students Banner Shown',
-  CAP_AGE_GATED_SECTIONS_BANNER_SHOWN: 'CAP Teacher Sections Banner Shown',
-  CAP_AGE_GATED_SECTIONS_MODAL_SHOWN:
-    'CAP Teacher Sections Warning Modal Shown',
-  CAP_AGE_GATED_SECTIONS_MODAL_CLOSED:
-    'CAP Teacher Sections Warning Modal Closed',
-  CAP_AGE_GATED_SECTIONS_TABLE_SECTION_NAME_LINK_CLICKED:
-    'CAP Teacher Sections Table Section Name Clicked',
 
   // School Selection Component
   COUNTRY_SELECTED: 'User Selects Country',
@@ -301,6 +294,13 @@ const EVENTS = {
   TA_RUBRIC_ANNOUNCEMENT_VIEWED: 'TA Rubric Announcement Viewed',
   TA_RUBRIC_ANNOUNCEMENT_CLICKED: 'TA Rubric Announcement Clicked',
   TA_RUBRIC_ANNOUNCEMENT_DISMISSED: 'TA Rubric Announcement Dismissed',
+
+  // AI TA Lesson Summary Podcasts
+  TA_PODCAST_OPEN_TRANSCRIPT: 'TA podcast transcript opened',
+  TA_PODCAST_CLOSE_TRANSCRIPT: 'TA podcast transcript closed',
+  TA_PODCAST_PLAYED: 'TA podcast played',
+  TA_PODCAST_STOPPED: 'TA podcast stopped',
+  TA_PODCAST_PLAYBACK_SPEED_CHANGED: 'TA podcast playback speed changed',
 
   //AI Differentiation
   AI_DIFF_CHAT_OPENED: 'AI Differentiation Chat Opened',
