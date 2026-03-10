@@ -16,19 +16,19 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
       tutorMode: {
         type: 'string',
         enum: [
-          'Build HTML',
-          'Build CSS',
-          'Build JavaScript',
-          'Ask',
-          'Hint',
-          'Debug',
-          'Explain Code',
-          'Example',
-          'Pseudocode',
-          'Documentation',
-          'Test Case',
-          'Refusal JavaScript Snippet',
-          'Refusal',
+          'buildHTML',
+          'buildCSS',
+          'buildJavaScript',
+          'ask',
+          'hint',
+          'debug',
+          'explainCode',
+          'example',
+          'pseudocode',
+          'documentation',
+          'testCase',
+          'refusalJavaScriptSnippets',
+          'refusal',
         ],
       },
       goal: {
@@ -95,9 +95,9 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
 // for which we format the model response with formatAcceptRejectResponse. Otherwise, we format
 // the model response with formatCopyPasteResponse.
 export const acceptRejectAnswerTypes = [
-  'Build HTML',
-  'Build CSS',
-  'Build JavaScript',
+  'buildHTML',
+  'buildCSS',
+  'buildJavaScript',
 ];
 
 const acceptRejectCodeFileTypes = ['html', 'css', 'js'];
@@ -136,7 +136,7 @@ const formatSection = (title: string, content?: string): string => {
   return content ? `**${title}**\n\n${content}\n\n` : '';
 };
 
-// This is used when the AI Tutor response's tutorMode is not 'Build HTML', 'Build CSS', nor 'Build JavaScript'.
+// This is used when the AI Tutor response's tutorMode is not 'buildHTML', 'buildCSS', nor 'buildJavaScript'.
 // Parsed json comes in as 'any', but it follows the structure defined in getAnswerJsonSchemaAcceptReject().
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const formatCopyPasteResponse = (response: any): string => {
@@ -170,7 +170,7 @@ type AcceptRejectFormattedResponse = {
   answerType: string;
 };
 
-// This is used when the AI Tutor response's tutorMode is 'Build HTML', 'Build CSS', or 'Build JavaScript'.
+// This is used when the AI Tutor response's tutorMode is 'buildHTML', 'buildCSS', or 'buildJavaScript'.
 // Parsed json comes in as 'any', but it follows the structure defined in acceptRejectJsonSchema.
 export const formatAcceptRejectResponse = (
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
