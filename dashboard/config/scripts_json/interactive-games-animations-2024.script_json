@@ -4,6 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "ai_rubric_s3_config": {
+        "CSD U3 L7 mini project_2024": "csd3-2023-L7",
+        "CSD U3 Sprites scene challenge_2024": "csd3-2023-L11",
+        "CSD web project animated review_2024": "csd3-2023-L14",
+        "CSD U3 Interactive Card Final_2024": "csd3-2023-L18",
+        "CSD games sidescroll review_2024": "csd3-2023-L21",
+        "CSD U3 collisions flyman bounceOff_2024": "csd3-2023-L24",
+        "CSD games project review_2024": "csd3-2023-L28"
+      },
       "announcements": [
         {
           "key": "97ecbd36-57f8-4462-9e93-3e0b046645eb",

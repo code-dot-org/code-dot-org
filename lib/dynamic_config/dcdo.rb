@@ -67,7 +67,8 @@ class DCDOBase < DynamicConfigBase
       'student-snapshot-feedback-link': DCDO.get('student-snapshot-feedback-link', false),
       'sketchlab-s3-image-storage': DCDO.get('sketchlab-s3-image-storage', true),
       'brand-router-enabled': DCDO.get('brand-router-enabled', false),
-      'ai-gateway-enabled': DCDO.get('ai-gateway-enabled', true)
+      'ai-gateway-enabled': DCDO.get('ai-gateway-enabled', true),
+      'datadog-enabled': DCDO.get('datadog-enabled', false)
     }
   end
 end

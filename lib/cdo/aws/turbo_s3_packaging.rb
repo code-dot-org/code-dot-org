@@ -27,6 +27,7 @@ class TurboS3Packaging < S3Packaging
   # initialize and again inside create_package to detect mid-build changes.
   def regenerate_commit_hash
     Dir.chdir(@frontend_dir) do
+      RakeUtils.yarn_install
       output = `yarn turbo build --filter #{@turbo_filter} --dry-run=json 2>/dev/null`
       data = JSON.parse(output)
       task_id = "#{@turbo_filter}#build"

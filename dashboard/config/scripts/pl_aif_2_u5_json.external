@@ -23,7 +23,7 @@ markdown <<MARKDOWN
 - #### A map app displaying real-time traffic  
 - #### A fitness app pulling step data from a device  
 
-
+<div style="clear:both;"></div>
 
 ---
 
