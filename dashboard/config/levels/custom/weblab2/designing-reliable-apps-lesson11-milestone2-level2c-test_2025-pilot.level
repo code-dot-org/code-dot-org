@@ -18,7 +18,7 @@
     "encrypted": "false",
     "display_name": "Build the Reveal",
     "long_instructions": "# Build the Reveal\r\n\r\n**Goal:** When a user clicks the button, show more information for that specific item without reloading the page.\r\n\r\n1. **Choose Your Reveal Method:** Pick one approach:\r\n   * **Toggle Method:** Show and hide a hidden section inside the card, OR\r\n   * **Fetch Method:** Request extra detail data for that item and display it inside the card.\r\n2. **Create a Detail Area:** Add a placeholder area in your card where the extra info will appear (even if it starts empty or hidden).\r\n3. **Update Only One Card:** When the button is clicked, reveal or fill in the detail area for the selected card only.\r\n4. **Test the Result:** Click different cards and confirm each one reveals the correct details.",
-    "bubble_choice_description": "Write the code that reveals extra information for the selected card, either by toggling hidden content or by fetching detail data and injecting it into the card.",
+    "bubble_choice_description": "Write the code that reveals extra information for the selected card, either by toggling hidden content or by fetching detail data and injecting it into the card. ***(supports completing Milestone 2 tasks)***",
     "thumbnail_url": "https://images.code.org/5b29c2c87c6bb293f603d59dad655f8c-algorithm.png",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -52,8 +52,9 @@
       ],
       "answerTypeCustomizations": {
       }
-    }
+    },
+    "project_template_level_name": "designing-reliable-apps-lesson11-template-test-2025"
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-05 00:18:27 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-05 00:20:28 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-05 00:18:27 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-05 00:20:28 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-05 15:33:54 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-05 15:59:42 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Weblab2>

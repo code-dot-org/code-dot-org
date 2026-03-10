@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-05 01:20:20 UTC",
+    "serialized_at": "2026-03-10 05:42:20 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -125,7 +125,7 @@
       "relative_position": 2,
       "properties": {
         "overview": "**Why do some web apps feel easy and others frustrating?**\n\nStudents explore how technology is designed for people. They compare old and modern websites, uncover the concept of Human-Centered Design (HCD), and connect it to the real-world work of User Experience (UX) Designers. Through a guided critique activity, students practice empathy by analyzing how different users experience different web apps and suggest improvements that make the design more inclusive.",
-        "preparation": "- Print copies of the Welcome to The User’s Experience (one for each student)\n- Gather markers or colored pencils (2 different colors for each student)",
+        "preparation": "- Print copies of the The User’s Experience (one for each student)",
         "student_overview": "**Why do some web apps feel easy and others frustrating?**\n\nIn this lesson, you’ll explore how technology is designed for people. You’ll compare old and modern websites to see how design has changed, learn about Human-Centered Design (HCD), and discover what User Experience (UX) Designers do. Then, you’ll practice empathy by looking at how different users experience different web apps and suggest ways to make the design easier and more inclusive."
       },
       "seeding_key": {
@@ -142,9 +142,9 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "**How can AI help us create quickly?**\n\nIn this lesson, students use AI as a design partner to build their first simple web page. They explore how AI generates code, practice crafting and refining prompts, and apply version control to save and revert their work. Through hands-on iteration, students see how AI can speed up creation while humans remain responsible for reviewing, improving, and shaping the final design.",
-        "preparation": "- Print and cut out copies of the Feature Roulette Cards (one set of cards for each pair of students)\n- Print copies of the Web Page Features activity guide (one for each student)",
-        "student_overview": "**How can AI help us create quickly?**\n\nIn this lesson, you use AI to help design and build a simple web page. By experimenting with prompts and saving different versions, you explore how AI and humans work together to create and improve designs."
+        "overview": "**How can AI help us turn our ideas into a web page?**\n\nIn this lesson, students use AI as a design partner to build their first simple web page. They explore how AI generates code, practice crafting and refining prompts, and apply version control to save and revert their work. Through hands-on iteration, students see how AI can speed up creation while humans remain responsible for reviewing, improving, and shaping the final design.",
+        "preparation": "- Print and cut out copies of the Feature Roulette Cards (one set of cards for each pair of students)",
+        "student_overview": "**How can AI help us turn our ideas into a web page?**\n\nIn this lesson, you use AI to help design and build a simple web page. By experimenting with prompts and saving different versions, you explore how AI and humans work together to create and improve designs."
       },
       "seeding_key": {
         "lesson.key": "Lesson 3: Build Your First Web Page with AI",
@@ -1383,11 +1383,11 @@
       "key": "c5fa8006-9095-46fd-ab10-62e6b41129a6",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Keep the 2025 Amazon site on screen. Ask students to look closely and describe what makes it feel easier or more useful for real people today.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Why do you think there are more pictures now?*\n- *What makes it easier to find or buy things?*\n- *How might the site change based on who's using it?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should note how the site reflects people's habits and needs, such as being able to see items before buying, simple layouts that make shopping quicker, and personalized suggestions that save time. These observations help students see that design is becoming more human-centered — built around what people need and do.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\nConsider the web page features you've learned about:\n- Nav Bar\n- Hero Section\n- Cards\n- Footer (not visible here)\n\nHow do these features make the site easier to use?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify how common web page features such as the navigation bar, hero section, cards, and footer support user needs by making information easier to find, compare, and act on. They should recognize that these design choices reflect real user habits like scanning quickly, previewing items before deciding, and completing tasks efficiently.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If students mention AI features (like \"it knows what I want\"), connect it lightly: \"That's right, even AI can be part of human-centered design when it helps people find what they need.\" You can also mention that modern sites adapt to different devices and users — a sign of human-centered design"
+            "markdown": "If students mention AI features such as \"it knows what I want,\" briefly affirm the idea and connect it to design choices that respond to user behavior. For example, you might say, \"Yes, some websites use tools that learn from what people click so they can make things easier to find.\" You can also point out that many modern sites adjust to different devices and screen sizes, which shows that designers think about how people actually use technology."
           }
         ]
       },
@@ -1421,9 +1421,9 @@
       "key": "142d2369-4d96-4e4c-bf8d-38bed733d89b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Introduce students to Human-Centered Design (HCD) as the idea that good design starts with understanding people's needs, and show how this connects to User Experience (UX) Design—the process of putting that idea into practice. Students learn that HCD is the mindset (empathy and understanding), while UX design is the work designers do to make technology easy, clear, and enjoyable for users.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define human-centered design.",
-        "duration": "15",
-        "name": "Intro to Human-Centered and User Experience Design"
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Establish the foundational concepts of user-centered design, user profiles, and user experience (UX) to prepare students for critiquing digital experiences.",
+        "duration": "10",
+        "name": "User Experience"
       },
       "seeding_key": {
         "activity_section.key": "142d2369-4d96-4e4c-bf8d-38bed733d89b",
@@ -1434,7 +1434,7 @@
       "key": "8c7ad3c1-660e-4414-9ac3-4e67c7eb31e5",
       "position": 2,
       "properties": {
-        "description": "Think about what we just saw on the modern Amazon site: it's full of visuals, easy to navigate, and even adjusts to your interests. Those choices came from understanding what people need and how they actually shop. That's what it means to design with the user in mind.",
+        "description": "Today, you'll step into the role of a UX designer. You'll look at your app through a user's eyes and think about how design affects different people",
         "remarks": true
       },
       "seeding_key": {
@@ -1443,127 +1443,187 @@
       }
     },
     {
-      "key": "3b75e767-6b71-4850-89a7-549b936f3e04",
+      "key": "f6a8289a-d4d9-4ef9-aaa8-ba71629eb756",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the Amazon screenshot with callouts showing examples of human-centered design choices (e.g., large images, clear categories, personalized recommendations). Walk students through each design decision one at a time.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Do you think these choices help everyone equally? Why or why not?*\n- *Who might find this design confusing or less helpful?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize how that even designs meant to help users can still work better for some people than others. Encourage them to consider factors like ability, access, identity, or personal preferences. Encourage students to think about whose experiences are missing and why fairness and accessibility matter in design. Students might note that:\n- People who can't see well might struggle with image-heavy layouts.\n- Recommendations might not show the same options to everyone.\n- Some users might not see their style or interests represented."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the three UX Designer tasks: Observe, Evaluate, Suggest. Explain that these are the same steps real designers use to make technology more human-centered.\n"
       },
       "seeding_key": {
-        "activity_section.key": "3b75e767-6b71-4850-89a7-549b936f3e04",
+        "activity_section.key": "f6a8289a-d4d9-4ef9-aaa8-ba71629eb756",
         "lesson_activity.key": "9af8ff25-c671-4396-9af1-2bfdaa320c8f"
       }
     },
     {
-      "key": "1d54785f-a276-4b12-8aee-efc341da6d9e",
+      "key": "0005d12a-a3ef-481b-9f6f-042dfe960d62",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the clip from the \"What is UX Design?\" video.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What skills do you think a UX designer needs to make sure technology works for people?*\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that UX designers use a mix of empathy, observation, creativity, and problem-solving to make technology fit users' needs. Students might say: listening, testing, creativity, empathy, noticing details.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 6.\n- Level 1: Students read the definition for user experience.\n- Level 2: Students write the definition in their own words and/or include examples.\n- Level 3: Students read the definition for user profile.\n- Level 4: Students write the definition in their own words and/or include examples.\n- Level 5: Students read the definition for human-centered design.\n- Level 6: Students write the definition in their own words and/or include examples.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to use their own language and examples when adding context.",
-        "progression_name": "Vocab: User Experience"
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the AI-Generated Design Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define user profile."
       },
       "seeding_key": {
-        "activity_section.key": "1d54785f-a276-4b12-8aee-efc341da6d9e",
+        "activity_section.key": "0005d12a-a3ef-481b-9f6f-042dfe960d62",
         "lesson_activity.key": "9af8ff25-c671-4396-9af1-2bfdaa320c8f"
       }
     },
     {
-      "key": "e3cd47f2-8256-4313-8a72-1f77eec4ce56",
+      "key": "5a373e1b-837f-4ab9-975c-253fe1c0c1f2",
       "position": 5,
       "properties": {
-        "progression_name": "Vocab: User Profile"
+        "description": "Think about what we just saw on the modern Amazon site: it's full of visuals, easier to navigate, and sometimes even changes based on the user. Those choices came from understanding what people need and how they actually shop. That's what it means to design with the user in mind. Now connect that idea to your user profile: which of these design decisions would matter most for Jordan, Mark, or Sam?",
+        "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "e3cd47f2-8256-4313-8a72-1f77eec4ce56",
+        "activity_section.key": "5a373e1b-837f-4ab9-975c-253fe1c0c1f2",
         "lesson_activity.key": "9af8ff25-c671-4396-9af1-2bfdaa320c8f"
       }
     },
     {
-      "key": "51c71e7a-a0b5-4bfc-aa1b-5bdc7ba9dfea",
+      "key": "594acdbc-2d50-4751-b26f-bae1c436eed3",
       "position": 6,
       "properties": {
-        "progression_name": "Vocab: Human-Centered Design"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the Amazon screenshot with callouts showing examples of human-centered design choices (e.g., large images, clear categories, personalized recommendations). Click through the animated slide to walk through each design decision one at a time. Then have students do a quick turn-and-talk: Which decision would help your user the most, and why?"
       },
       "seeding_key": {
-        "activity_section.key": "51c71e7a-a0b5-4bfc-aa1b-5bdc7ba9dfea",
+        "activity_section.key": "594acdbc-2d50-4751-b26f-bae1c436eed3",
         "lesson_activity.key": "9af8ff25-c671-4396-9af1-2bfdaa320c8f"
       }
     },
     {
-      "key": "00a2b206-7a69-4ff8-b049-012146e062ad",
+      "key": "5655b73e-9def-4444-9f6c-15b784480c1e",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Help students practice empathy by seeing apps through the eyes of different users. Reinforce that usability depends on the context and the person, not just the design itself. Provide a structured, hands-on critique activity that makes user-centered design concrete.",
+        "description": "You've been thinking like designers already – noticing what works for users and what doesn't. Let's see how professionals do this in the real world.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5655b73e-9def-4444-9f6c-15b784480c1e",
+        "lesson_activity.key": "9af8ff25-c671-4396-9af1-2bfdaa320c8f"
+      }
+    },
+    {
+      "key": "9bd60557-6e9b-414f-8a95-7a611d9fa841",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the clip from the \"What is UX Design?\" video (0:05-0:48)."
+      },
+      "seeding_key": {
+        "activity_section.key": "9bd60557-6e9b-414f-8a95-7a611d9fa841",
+        "lesson_activity.key": "9af8ff25-c671-4396-9af1-2bfdaa320c8f"
+      }
+    },
+    {
+      "key": "6da1cfd2-0e05-4f6f-916d-4c3161f4d125",
+      "position": 9,
+      "properties": {
+        "description": "User Experience Designers take all of these things into account when designing a webpage by practicing something called human-centered design.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6da1cfd2-0e05-4f6f-916d-4c3161f4d125",
+        "lesson_activity.key": "9af8ff25-c671-4396-9af1-2bfdaa320c8f"
+      }
+    },
+    {
+      "key": "0c115197-28ec-42d8-85c2-9d999eafc3f3",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define user experience.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define human-centered design.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "0c115197-28ec-42d8-85c2-9d999eafc3f3",
+        "lesson_activity.key": "9af8ff25-c671-4396-9af1-2bfdaa320c8f"
+      }
+    },
+    {
+      "key": "8cf654ed-cc02-4b14-b68e-116d524c652f",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Help students practice empathy by seeing apps through the eyes of different users. Reinforce that usability depends on the context and the person, not just the design itself. Provide a structured, hands-on critique activity that makes user-centered design concrete.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in groups of three.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of The User's Experience activity guide.",
         "duration": "20",
         "name": "See It Like a User"
       },
       "seeding_key": {
-        "activity_section.key": "00a2b206-7a69-4ff8-b049-012146e062ad",
+        "activity_section.key": "8cf654ed-cc02-4b14-b68e-116d524c652f",
         "lesson_activity.key": "9af8ff25-c671-4396-9af1-2bfdaa320c8f"
       }
     },
     {
-      "key": "b1741b03-0be7-4f8f-87ba-482044236778",
-      "position": 8,
+      "key": "67dd7b1f-4db6-4802-836b-1cf7a48af005",
+      "position": 12,
       "properties": {
-        "description": "Today, you'll step into the role of a UX designer. You'll look at your app through a user's eyes and think about how design affects different people.",
+        "description": "Each person in your group will represent one user profile: Jordan, Mark, or Sam. Read your assigned profile carefully and think about that person's needs and frustrations. Consider what a well-designed page would look like for them.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "b1741b03-0be7-4f8f-87ba-482044236778",
+        "activity_section.key": "67dd7b1f-4db6-4802-836b-1cf7a48af005",
         "lesson_activity.key": "9af8ff25-c671-4396-9af1-2bfdaa320c8f"
       }
     },
     {
-      "key": "75d608e8-4f2b-4d0e-a213-70b1ea8c7e84",
-      "position": 9,
+      "key": "48ac358c-6b1f-4acc-8938-763d66f8821a",
+      "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the three UX Designer tasks: Observe, Evaluate, Suggest. Explain that these are the same steps real designers use to make technology more human-centered.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in groups of three.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of The User's Experience activity guide and several markers or colored pencils."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have each student select a profile and annotate key needs in the activity guide before reviewing the app.\n"
       },
       "seeding_key": {
-        "activity_section.key": "75d608e8-4f2b-4d0e-a213-70b1ea8c7e84",
+        "activity_section.key": "48ac358c-6b1f-4acc-8938-763d66f8821a",
         "lesson_activity.key": "9af8ff25-c671-4396-9af1-2bfdaa320c8f"
       }
     },
     {
-      "key": "0f044db8-db80-4846-b689-89c5d01cde02",
-      "position": 10,
+      "key": "2a8454ef-ec8c-40c3-bbda-75b1e1430f44",
+      "position": 14,
       "properties": {
-        "description": "Each person in your group will represent one of these user profiles: Jordan, Mark, or Sam. Students should read through their assigned user profile in their activity guide and think about their needs and how they might use an app.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "0f044db8-db80-4846-b689-89c5d01cde02",
-        "lesson_activity.key": "9af8ff25-c671-4396-9af1-2bfdaa320c8f"
-      }
-    },
-    {
-      "key": "67a5bbd2-bd18-4fb9-9920-eeb1d765e7ca",
-      "position": 11,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Each person takes one user profile (Jordan, Mark, or Sam). Students review the app and annotate it using the Usability Checklist, focusing on how well it meets their user's needs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct groups to discussion their ratings and annotations and identify any patterns across the different user profiles.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Students should begin to recognize that usability is not absolute but depends on the user's context and needs. Encourage students to share specific examples from their critiques. Listen for students connecting specific app features (or lack thereof) to the needs of their user profiles.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Level 7.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students to make specific, user-centered suggestions for improvement. Probe students who are struggling to connect their critique to a concrete change. Ask: \"Why would that specific change be important for Jordan/Mark/Sam?\"",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 1. Students should complete the task as their selected user, then complete the Usability Checklist in their activity guide based on that experience.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students evaluating the app from their user's perspective and supporting their checklist responses with specific details from the profile.\n",
+        "progression_name": "Usability Checklist",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Encourage students to connect their suggested change to the idea of empathy and how would this change make life easier for their user."
-          },
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "This prompt can serve as a formative assessment. Collect student responses to gauge their understanding of applying user-centered design principles."
+            "markdown": "If students move through the checklist quickly without explanation, prompt them to connect each decision to the user profile. Ask, \"What in the profile supports that?\" Encourage user-specific reasoning such as, \"Mark might struggle with this small text because of vision changes,\" rather than general comments like, \"The text is small.\""
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "67a5bbd2-bd18-4fb9-9920-eeb1d765e7ca",
+        "activity_section.key": "2a8454ef-ec8c-40c3-bbda-75b1e1430f44",
         "lesson_activity.key": "9af8ff25-c671-4396-9af1-2bfdaa320c8f"
       }
     },
     {
-      "key": "df0278a9-554f-4779-8fcf-9741d2a50cdc",
-      "position": 12,
+      "key": "0d6a28eb-5e27-4503-b71a-4edd73972a0a",
+      "position": 15,
       "properties": {
-        "progression_name": "Check for Understanding"
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 2. Have them adjust the app using the control panel to better support their selected user. Remind them they may change up to three settings and must document their reasoning in the activity guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students making purposeful changes that connect clearly to their user's needs. Check that they are completing the rationale, user impact, and tradeoff for each adjustment.",
+        "progression_name": "App Redesign",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students focus only on \"making it look better,\" ask, \"How does this change specifically help your user?\" Encourage them to consider tradeoffs and think about how a change that helps one user might create challenges for another."
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "df0278a9-554f-4779-8fcf-9741d2a50cdc",
+        "activity_section.key": "0d6a28eb-5e27-4503-b71a-4edd73972a0a",
+        "lesson_activity.key": "9af8ff25-c671-4396-9af1-2bfdaa320c8f"
+      }
+    },
+    {
+      "key": "4a189b31-0f33-42f8-a644-05a154a1ed53",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Level 3.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students clearly explaining both parts of the question: why the Level 1 app lacked usability and clarity for their user, and how their redesign applied user-centered design. If students are vague, ask, \"How did that specific change improve usability?\" or \"What part of the user profile supports your reasoning?\"",
+        "progression_name": "Check Your Understanding",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use this prompt as a formative assessment to determine whether students can critique usability and clarity and explain how their redesign reflects user-centered design."
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to move beyond general statements like \"it was hard to use\" and focus on clarity and usability. Prompt them to explain how their change intentionally addressed a specific user need."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4a189b31-0f33-42f8-a644-05a154a1ed53",
         "lesson_activity.key": "9af8ff25-c671-4396-9af1-2bfdaa320c8f"
       }
     },
@@ -1594,7 +1654,7 @@
       "key": "3f506085-21dc-45e3-b3f4-662a146397cb",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to share what they wrote for the Level 7 prompt: \"If I designed with [user profile], I'd change ___.\" Encourage them to refer back to the reasons they noted with their color ratings. Students will articulate specific design changes based on the needs of their user profile, demonstrating an understanding of user-centered design.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to share what they wrote for the Level 3 prompt: \"The Level 1 app felt difficult for [user’s name] because _ _ _ _ _ _ _ _ _ _ I applied user-centered design by changing _ _ _ _ _ _ _ _ _ _, which improved usability and clarity by _ _ _ _ _ _ _ _ _ _.\" Encourage them to refer back to their activity guide to reference their usability checklist and app redesign table. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
       },
       "seeding_key": {
         "activity_section.key": "3f506085-21dc-45e3-b3f4-662a146397cb",
@@ -1602,29 +1662,10 @@
       }
     },
     {
-      "key": "4bd4085e-6b23-40e8-8e2c-17d4d4045a99",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 8 to complete the End of Lesson Survey.",
-        "name": "End of Lesson Survey",
-        "progression_name": "End of Lesson Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "4bd4085e-6b23-40e8-8e2c-17d4d4045a99",
-        "lesson_activity.key": "e57dd28b-37d7-4a9c-9592-781f76eed38d"
-      }
-    },
-    {
       "key": "3b782fb7-5fe8-444c-bfb0-e568abcafd13",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students recognize that AI can generate web layouts quickly but still requires human oversight to ensure quality, accuracy, and usability.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show video demonstrating AI building an app.\n\n**Questions to consider with the video:** \n- What do you notice about what the AI did well versus what a human might still need to check?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify that while AI speeds up development, human developers remain responsible for checking the work, refining outputs, and making design decisions. This sets the stage for understanding iteration and accountability in AI-assisted development.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Would you trust or edit this output if you were the developer? Why?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students consider the reliability of AI-generated code and the importance of human oversight. Emphasize that reviewing, testing, and refining AI code is part of a developer's job—AI can speed up creation, but humans remain responsible for ensuring quality, accuracy, and safety. This discussion should reinforce ethical awareness and human accountability in AI-assisted development.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If students say they'd \"just trust it,\" prompt them to think critically by asking: \"What could go wrong if the AI made a small mistake?\" or \"Who's responsible if something doesn't work or breaks a site?\"\nThis helps students articulate that humans—not AI—own the final product."
-          }
-        ]
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students recognize that AI can generate web layouts quickly using pattern recognition, but it still requires human oversight to ensure quality, accuracy, and usability.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "3b782fb7-5fe8-444c-bfb0-e568abcafd13",
@@ -1632,8 +1673,20 @@
       }
     },
     {
-      "key": "1d412ed3-b0de-4f38-b162-83cc30ae3874",
+      "key": "b3b87389-f293-4cbf-b6c4-df766ccb2baa",
       "position": 2,
+      "properties": {
+        "description": "Before we look at what the AI actually generates, let’s pause and make a prediction. Take a moment to read the prompt carefully and think about the restaurant websites you’ve seen before. If you were the AI, what would you create? What sections, design elements, or buttons usually show up on sites like this? Try not to guess randomly — think about the patterns you’ve noticed across similar websites.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b3b87389-f293-4cbf-b6c4-df766ccb2baa",
+        "lesson_activity.key": "aa10ae43-719a-4e27-95a0-d71e01cb7e25"
+      }
+    },
+    {
+      "key": "1d412ed3-b0de-4f38-b162-83cc30ae3874",
+      "position": 3,
       "properties": {
       },
       "seeding_key": {
@@ -1643,9 +1696,9 @@
     },
     {
       "key": "1aa6de63-1d7f-4b6c-bac2-0350de0b033c",
-      "position": 3,
+      "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *How might this make the developer's job easier?*\n- *Where could it make the job harder?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students consider how AI can change the development process—making some parts faster or simpler while introducing new challenges. They recognize that AI can boost productivity but also misinterpret instructions or produce flawed code, requiring human review and refinement. This discussion should aim to build nuance around the idea of AI as a helpful but fallible partner.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *What sections will likely appear?*\n- *What elements do you expect?*\n- *What words will show up?*\n- *What makes this predictable?*\n\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students begin to see that AI-generated websites are predictable because they follow common design and language patterns.\n"
       },
       "seeding_key": {
         "activity_section.key": "1aa6de63-1d7f-4b6c-bac2-0350de0b033c",
@@ -1653,16 +1706,148 @@
       }
     },
     {
-      "key": "89a80367-e96a-436b-829e-c605b0479ddb",
-      "position": 1,
+      "key": "62cb0bd2-7e83-4962-9627-47d95d63a648",
+      "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Help students understand that AI generates code by predicting patterns from examples of real web pages—not by reasoning or understanding. This idea sets the foundation for why precise prompting and iteration are important.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the slide to explain to students that before they start using AI to write code, think about how it actually knows what to write. Remind students that AI doesn't really ‘understand' code the way a developer does — it predicts patterns it has seen in examples of real web pages.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Why might AI sometimes misunderstand what we mean?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students hypothesize possible causes of AI misunderstanding prompts—such as unclear wording, missing details, conflicting instructions, or biases in training data. The goal isn't for them to know exactly how models work, but to start reasoning about why clarity and iteration are essential in coding with AI.",
-        "duration": "15",
-        "name": "Exploring Prompting",
+      },
+      "seeding_key": {
+        "activity_section.key": "62cb0bd2-7e83-4962-9627-47d95d63a648",
+        "lesson_activity.key": "aa10ae43-719a-4e27-95a0-d71e01cb7e25"
+      }
+    },
+    {
+      "key": "378d8505-2425-4d13-9a7a-e87c47a70c14",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts:\n- *What matched your predictions?*\n- *What feels similar?*\n- *What looks generic?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students analyze the AI-generated webpage and identify how it reflects common website conventions and design patterns. They connect what they predicted to what actually appeared and begin recognizing that the layout, language, and structure feel familiar because they follow widely used patterns — not because the AI “understands” restaurants.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "378d8505-2425-4d13-9a7a-e87c47a70c14",
+        "lesson_activity.key": "aa10ae43-719a-4e27-95a0-d71e01cb7e25"
+      }
+    },
+    {
+      "key": "02bf17c8-0fb5-4460-b954-b868b99220cf",
+      "position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "02bf17c8-0fb5-4460-b954-b868b99220cf",
+        "lesson_activity.key": "aa10ae43-719a-4e27-95a0-d71e01cb7e25"
+      }
+    },
+    {
+      "key": "8aabd494-e948-4d67-a57f-a804b5619697",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** If it feels familiar to us, what might that tell us about how the AI generated it?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reason that:\n- The output feels familiar because it follows common website patterns.\n- AI likely learned from many similar examples.\n- It generates by using patterns from past examples.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "8aabd494-e948-4d67-a57f-a804b5619697",
+        "lesson_activity.key": "aa10ae43-719a-4e27-95a0-d71e01cb7e25"
+      }
+    },
+    {
+      "key": "a78ed03f-1294-43e5-a2ab-43205f7b671f",
+      "position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a78ed03f-1294-43e5-a2ab-43205f7b671f",
+        "lesson_activity.key": "aa10ae43-719a-4e27-95a0-d71e01cb7e25"
+      }
+    },
+    {
+      "key": "37df22f3-dcf0-48db-88b4-43c835e8d5ee",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the slide to explain to students that before they start using AI to write code, think about how it actually knows what to write. Remind students that AI doesn't really ‘understand' code the way a developer does — it predicts patterns it has seen in examples of real web pages.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students’ attention to the collection of website examples feeding into the brain graphic. Explain that these represent the training data the AI learned from before anyone ever typed a prompt. Clarify that training data consists of real websites created by humans and that the AI studied many examples to learn from them. Emphasize that the AI does not begin with built-in knowledge about restaurants or web design, it learns from large collections of human-created content. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Point to the repeated website elements shown on the slide and explain that the AI looks across many examples to identify what appears frequently. Highlight specific repeated features such as navigation bars at the top, red call-to-action buttons, large headlines, and menu sections with prices. Introduce the term “patterns” as structures or design choices that show up again and again across many sites. Reinforce that this step is about noticing similarities, not generating anything yet. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students’ attention to the brain-to-website diagram and explain that this step represents generation. Clarify that after identifying patterns, the AI produces new content by predicting what usually comes next based on what it has learned. Emphasize that the AI is not copying a single website but creating something new that fits the patterns it observed. Connect this explanation back to the pizza webpage students analyzed earlier to show how the prediction step results in the final output. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "37df22f3-dcf0-48db-88b4-43c835e8d5ee",
+        "lesson_activity.key": "aa10ae43-719a-4e27-95a0-d71e01cb7e25"
+      }
+    },
+    {
+      "key": "04f9a1b6-8b67-4a54-948b-75aaf400babf",
+      "position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "04f9a1b6-8b67-4a54-948b-75aaf400babf",
+        "lesson_activity.key": "aa10ae43-719a-4e27-95a0-d71e01cb7e25"
+      }
+    },
+    {
+      "key": "dc014145-95de-4884-bcf0-0573aec7c522",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Ask students whether they would publish the AI-generated address as is or edit it before putting the site live. Have them explain their reasoning as if they were the developer responsible for the website.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that AI-generated content may look realistic but can contain errors or fabricated details. They understand that developers are responsible for reviewing, verifying, and refining AI output before publishing. The goal is to reinforce that AI is a tool that supports development, but humans remain accountable for accuracy, functionality, and safety.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Validate all ideas. Highlight that these misunderstandings are normal and exactly why iteration matters: developers test, adjust, and refine prompts to guide AI toward what they want.\nIf discussion stalls, prompt with:\n- Have you ever written a message and someone misunderstood you? What caused that?\n- How could that happen between a person and an AI?"
+            "markdown": "If students say they would trust the AI without checking, guide them to think about potential risks. Ask what could happen if the address were incorrect or if a small mistake went unnoticed. Prompt them to consider who would be responsible if customers showed up at the wrong location or if the site malfunctioned. Use this moment to reinforce that responsibility belongs to the human developer, not the AI.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "dc014145-95de-4884-bcf0-0573aec7c522",
+        "lesson_activity.key": "aa10ae43-719a-4e27-95a0-d71e01cb7e25"
+      }
+    },
+    {
+      "key": "96dd7fa6-ee79-4294-a269-93f2fdd959da",
+      "position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "96dd7fa6-ee79-4294-a269-93f2fdd959da",
+        "lesson_activity.key": "aa10ae43-719a-4e27-95a0-d71e01cb7e25"
+      }
+    },
+    {
+      "key": "6f6124c7-3b0f-455c-bee5-d57441e60237",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "6f6124c7-3b0f-455c-bee5-d57441e60237",
+        "lesson_activity.key": "aa10ae43-719a-4e27-95a0-d71e01cb7e25"
+      }
+    },
+    {
+      "key": "e7f71c5a-d6fa-4d10-b0d1-4650a31b5d6d",
+      "position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e7f71c5a-d6fa-4d10-b0d1-4650a31b5d6d",
+        "lesson_activity.key": "aa10ae43-719a-4e27-95a0-d71e01cb7e25"
+      }
+    },
+    {
+      "key": "0f6565d1-9fb5-42ac-a90f-486abde3f962",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Briefly remind students of the purpose and arc of Unit 1. Read through the slide and emphasize that this unit focuses on how designers plan and structure digital experiences before writing code. Clarify that students will explore how AI tools can support that planning process by helping turn ideas into working prototypes."
+      },
+      "seeding_key": {
+        "activity_section.key": "0f6565d1-9fb5-42ac-a90f-486abde3f962",
+        "lesson_activity.key": "aa10ae43-719a-4e27-95a0-d71e01cb7e25"
+      }
+    },
+    {
+      "key": "89a80367-e96a-436b-829e-c605b0479ddb",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students recognize how to prompt AI for structure and style of their webpages using a requirements focused lens – stating the goals, constraints, and edge cases.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Present HTML and CSS and ask students what the difference is between these two images. Explain that HTML provides the structure, text, and content of a page, while CSS adds the style and visual design. Direct students to look closely at the two versions of the page on the slide. Have them record in their activity guide what they think HTML is controlling and what CSS is controlling based on what they notice in each image.\n",
+        "duration": "10",
+        "name": "Prompting for HTML and CSS ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to share a few observations before you confirm or elaborate. Use simple analogies to keep it intuitive:\n- HTML is the skeleton or blueprint that shapes the page.\n- CSS is the paint, layout, and personality that make it visually appealing.\n\nRemind students that they don't need to know any code yet—just focus on what seems to belong to structure versus style.\n"
           }
         ]
       },
@@ -1685,13 +1870,7 @@
       "key": "a18f2a99-34d9-4ad2-90d0-7ff86d441d78",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Briefly review the three strategies with students as an introduction to prompting. Explain that they'll get more detailed guidance and examples in Level 1's Prompting & Versioning panel, which they can revisit whenever they need support.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time allows, ask students a follow-up question: \"Why might being specific and organized help the AI understand you better?\" Let a few quick ideas surface before transitioning to Level 1."
-          }
-        ]
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Briefly review the three requirements that students need to include when writing AI prompts. Explain that they'll get more detailed guidance and examples in the following slides.\n"
       },
       "seeding_key": {
         "activity_section.key": "a18f2a99-34d9-4ad2-90d0-7ff86d441d78",
@@ -1712,7 +1891,13 @@
       "key": "0db34686-f33b-4d5b-b62a-6670db56b209",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Web Page Features activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 7.\n- Level 1: Students review the prompting strategies and learn about version control.\n- Level 2: Students explore the example webpage and identify its main features on their Web Page Features activity guide\n- Level 3: Students try prompting the AI to recreate one feature from Level 2 and prompt the AI to revise as needed.\n- Level 4: Students read the vocabulary definition for prompt engineering.\n- Level 5: Students add their own explanation or example of prompt engineering to the vocab free response.\n- Level 6: Students read the vocabulary definition for versioning.\n- Level 7: Students add their own explanation or example of versioning to the vocab free response.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through the levels, check that they're using details from their prompts (not just \"make a nav bar\"). Ask students questions like, \"What changed after you refined your prompt?\" or \"Why did you save that version?\" Make sure to reinforce that iteration—trying, refining, and saving—is how developers manage complex builds."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Which AI prompt is better? Why?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify that Prompt #2 is better because it gives a specific HTML layout for AI to generate. They should recognize that while Prompt #1 describes the same type of web app, it is too vague and open-ended. Likely, Prompt #1 will lead AI to generate something different from what the student actually wanted.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Follow-up question: What are the goals stated in each prompt?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify the difference between a vague goal (\"a menu app\") in Prompt #1 and a specific goal (\"3x4 grid,\" \"price in bold,\" \"bulleted list of ingredients\") in Prompt #2.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The more specific students can get in drafting their prompt the less back and forth they will have to do with AI later in the development process.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0db34686-f33b-4d5b-b62a-6670db56b209",
@@ -1720,10 +1905,71 @@
       }
     },
     {
-      "key": "df2abb80-4d28-43a6-9721-13f4bfe1ae5a",
+      "key": "d47915c7-ebf3-4c11-b008-2442972e0b8d",
       "position": 6,
       "properties": {
-        "progression_name": "Plan Your AI Prompt"
+      },
+      "seeding_key": {
+        "activity_section.key": "d47915c7-ebf3-4c11-b008-2442972e0b8d",
+        "lesson_activity.key": "428bfd05-6979-44b4-b140-2e049c3dd8c8"
+      }
+    },
+    {
+      "key": "a8dc6cd2-7130-4ac9-99ed-d998adcb617f",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Which AI prompt is better? Why?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify that Prompt #2 is better because it provides concrete, objective constraints like \"Dark Mode\" and \"sans-serif fonts\". They should recognize that \"nice\" and \"easy to read\" in Prompt #1 are subjective opinions that AI may interpret differently than the student.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Which AI prompt is better? Why?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify that Prompt #1 is better because it provides specific, logical behaviors for the AI to program into the app, like \"zero inventory.\" They should recognize that while Prompt #2 identifies potential problems like \"weird orders\" or \"no internet,\" it doesn't give the AI any instructions on how to handle them.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "a8dc6cd2-7130-4ac9-99ed-d998adcb617f",
+        "lesson_activity.key": "428bfd05-6979-44b4-b140-2e049c3dd8c8"
+      }
+    },
+    {
+      "key": "c223f16e-aff1-469c-9d12-1121cd368953",
+      "position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c223f16e-aff1-469c-9d12-1121cd368953",
+        "lesson_activity.key": "428bfd05-6979-44b4-b140-2e049c3dd8c8"
+      }
+    },
+    {
+      "key": "1899a295-ae57-4acc-851a-6a896f4298d9",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *prompt engineering*. Direct students to fill in the vocab definition in their Unit Guide.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "1899a295-ae57-4acc-851a-6a896f4298d9",
+        "lesson_activity.key": "428bfd05-6979-44b4-b140-2e049c3dd8c8"
+      }
+    },
+    {
+      "key": "8b12435b-3b71-447a-a1e9-95202b68370a",
+      "position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8b12435b-3b71-447a-a1e9-95202b68370a",
+        "lesson_activity.key": "428bfd05-6979-44b4-b140-2e049c3dd8c8"
+      }
+    },
+    {
+      "key": "df2abb80-4d28-43a6-9721-13f4bfe1ae5a",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 5.\n- **Level 1**: Students practice the ROPE prompting framework and draft their own prompt.\n- **Level 2**: Students review how to prompt AI using the Accept/Reject flow and save their work.\n- **Level 3**: Students prompt AI to create the HTML for their webpage.\n- **Level 4**: Students prompt AI to create the CSS for their webpage.\n- **Level 5**: Students review how to roll back version history.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through the levels, check that they're using details from their prompts (not just \"make a nav bar\"). Ask students questions like, \"What constraints did you give to AI?\" or \"How well did AI do in matching your expected output?\" Make sure to reinforce that iteration—trying, refining, and saving—is how developers manage complex builds.",
+        "duration": "10",
+        "name": "Prompting with AI",
+        "progression_name": "Plan Your AI Prompt",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students that refining prompts and prompting AI is normal and expected. Encourage them to focus on clear communication—naming elements, structure, and purpose. Connect this to real developer practice: \"Developers don't just write perfect code once. They iterate, version, and improve—just like you're doing here.\"\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "df2abb80-4d28-43a6-9721-13f4bfe1ae5a",
@@ -1732,7 +1978,7 @@
     },
     {
       "key": "5f153896-fb66-48c3-a3f2-125542c04821",
-      "position": 7,
+      "position": 12,
       "properties": {
       },
       "seeding_key": {
@@ -1742,8 +1988,9 @@
     },
     {
       "key": "14b90b2a-8095-48cf-bcc5-849ea8d2a142",
-      "position": 8,
+      "position": 13,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *versioning*. Direct students to fill in the vocab definition in their Unit Guide.\n",
         "progression_name": "Web Page Features"
       },
       "seeding_key": {
@@ -1753,7 +2000,7 @@
     },
     {
       "key": "62537cfc-35be-494d-b584-277ed3b6a919",
-      "position": 9,
+      "position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -1763,15 +2010,11 @@
     },
     {
       "key": "378ce071-67ad-40dc-b749-070aff7d8a9c",
-      "position": 10,
+      "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *Why do developers iterate?*\n- *What does it say about our role when the AI doesn't get it right the first time?*\n- *How do you think real developers use AI like this?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students connect iteration to real development practice. They recognize that iteration isn't just rework—it's how developers refine, debug, and improve both their own instructions and AI outputs. Students also understand that AI speeds up creation but still relies on human judgment, creativity, and accountability for quality results.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If students focus only on AI's mistakes, reframe the conversation: Iteration is how humans guide the AI toward what we actually want. What does that tell us about the developer's role? After students respond, connect explicitly to industry practice: AI can generate layouts quickly, but developers still test, fix, and make design choices."
-          }
-        ]
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy set of the Feature Roulette Cards.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Tell students they'll draw one card at a time and prompt the AI to create that feature or follow the instructions. Encourage them to refer to the Prompting & Versioning panels as needed. \n",
+        "duration": "10",
+        "name": "Building with AI"
       },
       "seeding_key": {
         "activity_section.key": "378ce071-67ad-40dc-b749-070aff7d8a9c",
@@ -1780,7 +2023,7 @@
     },
     {
       "key": "3922f3d4-170b-4288-b158-4f8a08e4eb64",
-      "position": 11,
+      "position": 16,
       "properties": {
         "progression_name": "Revert to a Previous Version"
       },
@@ -1791,25 +2034,46 @@
     },
     {
       "key": "2f857318-f2cd-47d0-adbd-c8d194391f2f",
-      "position": 12,
+      "position": 17,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy set of the Feature Roulette Cards.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Tell students they'll draw one card at a time and prompt the AI to create that feature or follow the instructions. Encourage them to refer to the Prompting & Versioning panels as needed.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 8. Explain that this is their chance to apply everything they've learned—prompting, refining, and versioning—to build their first AI-assisted web page.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Observe pair as they work. Check if they are successfully refining their prompts and if they understand how to revert to a previous version. Ask probing questions about why they are making certain prompt changes or why they chose to revert such as: \"What did you change in your latest version?\" or \"How are you deciding when your page looks finished?\" or \"What did the AI get right—or wrong—this time?\" Encourage students to compare different AI outputs and think critically about what each version improved or broke.",
-        "duration": "15",
-        "name": "Building with AI",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 6. Explain that this is their chance to apply everything they've learned—prompting, refining, and versioning—to finish building their first AI-assisted web page.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Observe students as they work. Check if they are successfully refining their prompts and if they understand how to revert to a previous version. Ask probing questions about why they are making certain prompt changes or why they chose to revert such as: \"What did you change in your latest version?\" or \"How are you deciding when your page looks finished?\" or \"What did the AI get right—or wrong—this time?\" Encourage students to compare different AI outputs and think critically about what each version improved or broke.",
         "progression_name": "AI Prompt Roulette",
         "tips": [
           {
-            "type": "assessmentOpportunity",
-            "markdown": "Use student interactions and final AI-generated pages to gauge understanding of how to apply prompting strategies, refine results, and use version history. Listen for language that shows students can explain their design choices or how they fixed an issue."
-          },
-          {
             "type": "teachingTip",
-            "markdown": "Emphasize that this activity is about experimentation and iteration. Developers rarely get a design perfect on the first try—they refine prompts, fix errors, and test new versions to get closer to their vision. Connect this to professional practice: \"Developers use AI as a creative partner, but they're still responsible for making decisions and improving the final product.\""
+            "markdown": "Emphasize that this activity is about experimentation and iteration. Developers rarely get a design perfect on the first try—they refine prompts, fix errors, and test new versions to get closer to their vision. Connect this to professional practice: \"Developers use AI as a creative partner, but they're still responsible for making decisions and improving the final product.\"\n"
           }
         ]
       },
       "seeding_key": {
         "activity_section.key": "2f857318-f2cd-47d0-adbd-c8d194391f2f",
+        "lesson_activity.key": "428bfd05-6979-44b4-b140-2e049c3dd8c8"
+      }
+    },
+    {
+      "key": "efbf6c24-0596-4de5-8a7a-4a01f3a33df1",
+      "position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "efbf6c24-0596-4de5-8a7a-4a01f3a33df1",
+        "lesson_activity.key": "428bfd05-6979-44b4-b140-2e049c3dd8c8"
+      }
+    },
+    {
+      "key": "c9eb31b8-e2fe-4270-9b2b-65d2938a0d2f",
+      "position": 19,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Why might AI sometimes misunderstand what we mean?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students hypothesize possible causes of AI misunderstanding prompts—such as unclear wording, missing details, conflicting instructions, or biases in training data. The goal isn't for them to know exactly how models work, but to start reasoning about why clarity and iteration are essential in coding with AI.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Validate all ideas. Emphasize that AI misunderstandings are normal and highlight why iteration matters: developers test, adjust, and refine prompts to guide AI toward what they want.\nIf discussion stalls, prompt students with:\n- Have you ever written a message and someone misunderstood you? What caused that?\n- How could that happen between a person and an AI?\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c9eb31b8-e2fe-4270-9b2b-65d2938a0d2f",
         "lesson_activity.key": "428bfd05-6979-44b4-b140-2e049c3dd8c8"
       }
     },
@@ -2769,7 +3033,13 @@
       "key": "ab2c1929-103b-4431-8df7-2d49b5537500",
       "position": 3,
       "properties": {
-        "progression_name": "Apply a Stylesheet"
+        "progression_name": "Apply a Stylesheet",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to \"debug like a developer.\" If the AI's output doesn't look right, they should describe why instead of just retrying the prompt. This models safe, reflective use of AI tools — not just trust in automation. If time allows, connect back to the Front-End Designer role: \"This is the testing phase — where developers validate the AI's work before the site goes live.\""
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "ab2c1929-103b-4431-8df7-2d49b5537500",
@@ -2777,25 +3047,8 @@
       }
     },
     {
-      "key": "52256e1d-78c5-4d55-9864-46b2c1aac673",
-      "position": 4,
-      "properties": {
-        "progression_name": "Vocab: Stylesheet",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Encourage students to \"debug like a developer.\" If the AI's output doesn't look right, they should describe why instead of just retrying the prompt. This models safe, reflective use of AI tools — not just trust in automation.\nIf time allows, connect back to the Front-End Designer role: \"This is the testing phase — where developers validate the AI's work before the site goes live.\""
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "52256e1d-78c5-4d55-9864-46b2c1aac673",
-        "lesson_activity.key": "c96e3610-ec79-4376-b1b9-33779c8442f0"
-      }
-    },
-    {
       "key": "eb19e8c6-032e-459a-a171-d7d33faf20d8",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *What did the AI change in your CSS — and why?*\n- *Did it make any styling choices you wouldn't have made yourself?*\n- *How do you know if its output matches your brand goals?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on how AI interprets prompts and makes automated styling decisions. They consider when AI-generated CSS aligns with their intent and when it diverges. The goal is for students to see themselves as responsible reviewers, not passive users — understanding that AI can enhance efficiency but still requires human judgment for accuracy, accessibility, and design intent."
       },
@@ -2806,7 +3059,7 @@
     },
     {
       "key": "334832a8-868c-44f9-ab42-48736fbf0c38",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "When developers use AI tools, they don't assume every output is correct — they check what changed, why it changed, and whether it still fits the brand's tone and user needs. You're doing the same thing here: validating the AI's choices.",
         "remarks": true
@@ -2818,7 +3071,7 @@
     },
     {
       "key": "9eb75f7b-e630-4c51-95f4-156f04da9d5c",
-      "position": 7,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> Goal of the Activity: Students demonstrate mastery by refining and experimenting with CSS using AI assistance — improving accuracy, readability, and brand consistency.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students go to Level 8 and choose one challenge to complete. Encourage them to think like developers in a testing phase: What small refinements could make your page more polished, consistent, or accessible?\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, check that they:\n- Understand what their AI-generated CSS is doing before changing it.\n- Test updates across multiple elements (e.g., headers, buttons, cards).\n- Document changes and explain their reasoning",
         "duration": "15",
@@ -4537,178 +4790,68 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Vocab: User Experience"
+        "progression": "Usability Checklist"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-generated-design-lesson2-level1_2026"
+          "ai-generated-design-lesson2-level1_2025-v3"
         ],
         "lesson.key": "Lesson 2: The User's Experience",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "1d54785f-a276-4b12-8aee-efc341da6d9e"
+        "activity_section.key": "2a8454ef-ec8c-40c3-bbda-75b1e1430f44"
       },
       "level_keys": [
-        "ai-generated-design-lesson2-level1_2026"
+        "ai-generated-design-lesson2-level1_2025-v3"
       ]
     },
     {
       "chapter": 4,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Vocab: User Experience"
+        "progression": "App Redesign"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-generated-design-lesson2-level2_2026"
+          "ai-generated-design-lesson2-level2_2025-v2"
         ],
         "lesson.key": "Lesson 2: The User's Experience",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "1d54785f-a276-4b12-8aee-efc341da6d9e"
+        "activity_section.key": "0d6a28eb-5e27-4503-b71a-4edd73972a0a"
       },
       "level_keys": [
-        "ai-generated-design-lesson2-level2_2026"
+        "ai-generated-design-lesson2-level2_2025-v2"
       ]
     },
     {
       "chapter": 5,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
-        "progression": "Vocab: User Profile"
+        "progression": "Check Your Understanding"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-generated-design-lesson2-level3_2026"
+          "ai-generated-design-lesson2-level3_2025-v2"
         ],
         "lesson.key": "Lesson 2: The User's Experience",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "e3cd47f2-8256-4313-8a72-1f77eec4ce56"
+        "activity_section.key": "4a189b31-0f33-42f8-a644-05a154a1ed53"
       },
       "level_keys": [
-        "ai-generated-design-lesson2-level3_2026"
+        "ai-generated-design-lesson2-level3_2025-v2"
       ]
     },
     {
       "chapter": 6,
-      "position": 4,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: User Profile"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson2-level4_2026"
-        ],
-        "lesson.key": "Lesson 2: The User's Experience",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "e3cd47f2-8256-4313-8a72-1f77eec4ce56"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson2-level4_2026"
-      ]
-    },
-    {
-      "chapter": 7,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Human-Centered Design"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson2-level5_2026"
-        ],
-        "lesson.key": "Lesson 2: The User's Experience",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "51c71e7a-a0b5-4bfc-aa1b-5bdc7ba9dfea"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson2-level5_2026"
-      ]
-    },
-    {
-      "chapter": 8,
-      "position": 6,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Human-Centered Design"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson2-level6_2026"
-        ],
-        "lesson.key": "Lesson 2: The User's Experience",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "51c71e7a-a0b5-4bfc-aa1b-5bdc7ba9dfea"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson2-level6_2026"
-      ]
-    },
-    {
-      "chapter": 9,
-      "position": 7,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "Check for Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson2-level7_2026"
-        ],
-        "lesson.key": "Lesson 2: The User's Experience",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "df0278a9-554f-4779-8fcf-9741d2a50cdc"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson2-level7_2026"
-      ]
-    },
-    {
-      "chapter": 10,
-      "position": 8,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "End of Lesson Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson2-level8_2026"
-        ],
-        "lesson.key": "Lesson 2: The User's Experience",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "4bd4085e-6b23-40e8-8e2c-17d4d4045a99"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson2-level8_2026"
-      ]
-    },
-    {
-      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4730,12 +4873,12 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 7,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Web Page Features"
+        "progression": "Plan Your AI Prompt"
       },
       "bonus": false,
       "seeding_key": {
@@ -4745,19 +4888,19 @@
         "lesson.key": "Lesson 3: Build Your First Web Page with AI",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "14b90b2a-8095-48cf-bcc5-849ea8d2a142"
+        "activity_section.key": "df2abb80-4d28-43a6-9721-13f4bfe1ae5a"
       },
       "level_keys": [
         "ai-generated-design-lesson3-level1_2026"
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 8,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Web Page Features"
+        "progression": "Plan Your AI Prompt"
       },
       "bonus": false,
       "seeding_key": {
@@ -4767,19 +4910,19 @@
         "lesson.key": "Lesson 3: Build Your First Web Page with AI",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "14b90b2a-8095-48cf-bcc5-849ea8d2a142"
+        "activity_section.key": "df2abb80-4d28-43a6-9721-13f4bfe1ae5a"
       },
       "level_keys": [
         "ai-generated-design-lesson3-level3_2026"
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 9,
       "position": 4,
-      "activity_section_position": 3,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Web Page Features"
+        "progression": "Plan Your AI Prompt"
       },
       "bonus": false,
       "seeding_key": {
@@ -4789,19 +4932,19 @@
         "lesson.key": "Lesson 3: Build Your First Web Page with AI",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "14b90b2a-8095-48cf-bcc5-849ea8d2a142"
+        "activity_section.key": "df2abb80-4d28-43a6-9721-13f4bfe1ae5a"
       },
       "level_keys": [
         "ai-generated-design-lesson3-level2_2026"
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 10,
       "position": 5,
-      "activity_section_position": 1,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Revert to a Previous Version"
+        "progression": "Plan Your AI Prompt"
       },
       "bonus": false,
       "seeding_key": {
@@ -4811,14 +4954,14 @@
         "lesson.key": "Lesson 3: Build Your First Web Page with AI",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "3922f3d4-170b-4288-b158-4f8a08e4eb64"
+        "activity_section.key": "df2abb80-4d28-43a6-9721-13f4bfe1ae5a"
       },
       "level_keys": [
         "ai-generated-design-lesson3-panel2_2026"
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 11,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4840,7 +4983,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4862,7 +5005,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 13,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4884,7 +5027,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 14,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4906,7 +5049,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 15,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4928,7 +5071,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4950,7 +5093,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4972,7 +5115,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 18,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4994,7 +5137,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 19,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -5016,7 +5159,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5038,7 +5181,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5060,7 +5203,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 22,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5082,7 +5225,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 23,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5104,7 +5247,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 24,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -5126,52 +5269,8 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 25,
       "position": 6,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Stylesheet"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson6-level6_2026"
-        ],
-        "lesson.key": "Lesson 6: Intro to CSS",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "52256e1d-78c5-4d55-9864-46b2c1aac673"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson6-level6_2026"
-      ]
-    },
-    {
-      "chapter": 31,
-      "position": 7,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Stylesheet"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson6-level7_2026"
-        ],
-        "lesson.key": "Lesson 6: Intro to CSS",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "52256e1d-78c5-4d55-9864-46b2c1aac673"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson6-level7_2026"
-      ]
-    },
-    {
-      "chapter": 32,
-      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5192,8 +5291,8 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 9,
+      "chapter": 26,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5214,7 +5313,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5236,7 +5335,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5258,7 +5357,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 29,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5280,7 +5379,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 30,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5302,7 +5401,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 31,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -5324,7 +5423,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 32,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5346,7 +5445,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5368,7 +5467,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5390,7 +5489,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 35,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5412,7 +5511,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 36,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -5434,7 +5533,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 37,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5456,7 +5555,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 38,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5478,7 +5577,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 39,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -5500,7 +5599,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 40,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5522,7 +5621,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 41,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -5544,7 +5643,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5566,7 +5665,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5588,7 +5687,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5610,7 +5709,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 45,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5632,7 +5731,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 46,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5654,7 +5753,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 47,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5676,7 +5775,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5698,7 +5797,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 49,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5720,7 +5819,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 50,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5742,7 +5841,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 51,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5764,7 +5863,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5786,7 +5885,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 53,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5808,7 +5907,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 54,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -5830,7 +5929,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 55,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5852,7 +5951,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5874,7 +5973,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 57,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5896,7 +5995,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 58,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5918,7 +6017,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 59,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -5940,7 +6039,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 60,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5962,7 +6061,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 61,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5984,7 +6083,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 62,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6006,7 +6105,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 63,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6028,7 +6127,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 64,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6050,7 +6149,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 65,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6072,7 +6171,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6121,98 +6220,38 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-generated-design-lesson2-level1_2026",
+        "level.key": "ai-generated-design-lesson2-level1_2025-v3",
         "script_level.level_keys": [
-          "ai-generated-design-lesson2-level1_2026"
+          "ai-generated-design-lesson2-level1_2025-v3"
         ],
         "lesson.key": "Lesson 2: The User's Experience",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "1d54785f-a276-4b12-8aee-efc341da6d9e"
+        "activity_section.key": "2a8454ef-ec8c-40c3-bbda-75b1e1430f44"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ai-generated-design-lesson2-level2_2026",
+        "level.key": "ai-generated-design-lesson2-level2_2025-v2",
         "script_level.level_keys": [
-          "ai-generated-design-lesson2-level2_2026"
+          "ai-generated-design-lesson2-level2_2025-v2"
         ],
         "lesson.key": "Lesson 2: The User's Experience",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "1d54785f-a276-4b12-8aee-efc341da6d9e"
+        "activity_section.key": "0d6a28eb-5e27-4503-b71a-4edd73972a0a"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ai-generated-design-lesson2-level3_2026",
+        "level.key": "ai-generated-design-lesson2-level3_2025-v2",
         "script_level.level_keys": [
-          "ai-generated-design-lesson2-level3_2026"
+          "ai-generated-design-lesson2-level3_2025-v2"
         ],
         "lesson.key": "Lesson 2: The User's Experience",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "e3cd47f2-8256-4313-8a72-1f77eec4ce56"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson2-level4_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson2-level4_2026"
-        ],
-        "lesson.key": "Lesson 2: The User's Experience",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "e3cd47f2-8256-4313-8a72-1f77eec4ce56"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson2-level5_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson2-level5_2026"
-        ],
-        "lesson.key": "Lesson 2: The User's Experience",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "51c71e7a-a0b5-4bfc-aa1b-5bdc7ba9dfea"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson2-level6_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson2-level6_2026"
-        ],
-        "lesson.key": "Lesson 2: The User's Experience",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "51c71e7a-a0b5-4bfc-aa1b-5bdc7ba9dfea"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson2-level7_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson2-level7_2026"
-        ],
-        "lesson.key": "Lesson 2: The User's Experience",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "df0278a9-554f-4779-8fcf-9741d2a50cdc"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson2-level8_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson2-level8_2026"
-        ],
-        "lesson.key": "Lesson 2: The User's Experience",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "4bd4085e-6b23-40e8-8e2c-17d4d4045a99"
+        "activity_section.key": "4a189b31-0f33-42f8-a644-05a154a1ed53"
       }
     },
     {
@@ -6236,7 +6275,7 @@
         "lesson.key": "Lesson 3: Build Your First Web Page with AI",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "14b90b2a-8095-48cf-bcc5-849ea8d2a142"
+        "activity_section.key": "df2abb80-4d28-43a6-9721-13f4bfe1ae5a"
       }
     },
     {
@@ -6248,7 +6287,7 @@
         "lesson.key": "Lesson 3: Build Your First Web Page with AI",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "14b90b2a-8095-48cf-bcc5-849ea8d2a142"
+        "activity_section.key": "df2abb80-4d28-43a6-9721-13f4bfe1ae5a"
       }
     },
     {
@@ -6260,7 +6299,7 @@
         "lesson.key": "Lesson 3: Build Your First Web Page with AI",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "14b90b2a-8095-48cf-bcc5-849ea8d2a142"
+        "activity_section.key": "df2abb80-4d28-43a6-9721-13f4bfe1ae5a"
       }
     },
     {
@@ -6272,7 +6311,7 @@
         "lesson.key": "Lesson 3: Build Your First Web Page with AI",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "3922f3d4-170b-4288-b158-4f8a08e4eb64"
+        "activity_section.key": "df2abb80-4d28-43a6-9721-13f4bfe1ae5a"
       }
     },
     {
@@ -6441,30 +6480,6 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
         "activity_section.key": "ab2c1929-103b-4431-8df7-2d49b5537500"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson6-level6_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson6-level6_2026"
-        ],
-        "lesson.key": "Lesson 6: Intro to CSS",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "52256e1d-78c5-4d55-9864-46b2c1aac673"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson6-level7_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson6-level7_2026"
-        ],
-        "lesson.key": "Lesson 6: Intro to CSS",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "52256e1d-78c5-4d55-9864-46b2c1aac673"
       }
     },
     {
@@ -7188,7 +7203,7 @@
     },
     {
       "name": "Build Your First Web Page",
-      "url": "https://docs.google.com/presentation/d/1aNRG5OeT1JINgGpEOmQ3vYH903_PumeHam9anKpxLvY/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1MFxOJDgJEmefZHVueUkY8FmuDaVg3KYUWal0nPAaa7E/edit?slide=id.gca418c6afa_0_1070#slide=id.gca418c6afa_0_1070",
       "key": "build_your_first_web_page",
       "properties": {
         "audience": "Teacher",
@@ -7260,7 +7275,7 @@
     },
     {
       "name": "Feature Roulette Cards",
-      "url": "https://docs.google.com/document/d/1qHXRW6jtk6Y7WfJQcdVWH65cfWnLevQ78ORn3bcLX0c/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/10Cl4CVYY7JcJejq31biaTFNFl5U2_1h-A-QR6i2os5s/edit?usp=sharing",
       "key": "feature_roulette_cards",
       "properties": {
         "audience": "Student",
@@ -7433,46 +7448,30 @@
     },
     {
       "name": "The User's Experience",
-      "url": "https://docs.google.com/presentation/d/1sBrBOjbUJgBjOPXQno87D8v329VIDecLqy34W00KOK8/edit?usp=sharing",
-      "key": "the_user_s_experience",
+      "url": "https://docs.google.com/presentation/d/1BkwdM0vfy8JYMLajMMxRXGV-K4FzpeVA1TTsc1uIUog/edit?usp=sharing",
+      "key": "the_user_s_experience_2",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
         "curriculum_category": "curriculum",
         "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "the_user_s_experience"
+        "resource.key": "the_user_s_experience_2"
       }
     },
     {
       "name": "The User's Experience",
-      "url": "https://docs.google.com/document/d/1YVTimIly9J7L-d-Emz5b5JumzGPdazl6FqA9g4vLEH8/edit?usp=sharing",
-      "key": "the_user_s_experience_1",
+      "url": "https://docs.google.com/document/d/1ZJ1TXv9EEma3mcTE9wVZy1fbiKxrlV8qy9Xb9lSl7xE/edit?usp=sharing",
+      "key": "the_user_s_experience_3",
       "properties": {
         "audience": "Student",
         "curriculum_category": "curriculum",
         "embeddability_type": "embed_and_resource_dropdown",
-        "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {
-        "resource.key": "the_user_s_experience_1"
-      }
-    },
-    {
-      "name": "Web Page Features",
-      "url": "https://docs.google.com/document/d/1TSmOSvEMkfEYQ4c7CldrgFeWTwjKbZz6BSMUHnWK7Ig/edit?usp=sharing",
-      "key": "web_page_features",
-      "properties": {
-        "audience": "Student",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "web_page_features"
+        "resource.key": "the_user_s_experience_3"
       }
     },
     {
@@ -7661,13 +7660,25 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 2: The User's Experience",
-        "resource.key": "the_user_s_experience"
+        "resource.key": "the_user_s_experience_2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 2: The User's Experience",
-        "resource.key": "the_user_s_experience_1"
+        "resource.key": "the_user_s_experience_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "resource.key": "_key_ai-generated_design_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "resource.key": "ai-generated_design_unit_guide"
       }
     },
     {
@@ -7680,12 +7691,6 @@
       "seeding_key": {
         "lesson.key": "Lesson 3: Build Your First Web Page with AI",
         "resource.key": "feature_roulette_cards"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "resource.key": "web_page_features"
       }
     },
     {
@@ -7809,6 +7814,16 @@
       }
     },
     {
+      "key": "css_cascading_style_sheets_",
+      "word": "CSS (Cascading Style Sheets)",
+      "definition": "Controls the layout, colors, fonts, and overall style",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "css_cascading_style_sheets_"
+      }
+    },
+    {
       "key": "footer",
       "word": "Footer",
       "definition": "The strip at the bottom that often includes contact info or copyright details.",
@@ -7836,6 +7851,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "hero_section"
+      }
+    },
+    {
+      "key": "html_hypertext_markup_language_",
+      "word": "HTML (HyperText Markup Language)",
+      "definition": "Provides the structure and content of a web page",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "html_hypertext_markup_language_"
       }
     },
     {
@@ -7951,7 +7976,7 @@
     {
       "key": "user_profile",
       "word": "user profile",
-      "definition": "a description of a typical user of a product or service. It includes demographic information, goals, needs, and behaviors",
+      "definition": "a description of a typical person who uses a product or service. Designers use it to understand the user's goals, needs, and behaviors.",
       "properties": {
       },
       "seeding_key": {
@@ -8048,6 +8073,18 @@
       "seeding_key": {
         "lesson.key": "Lesson 2: The User's Experience",
         "vocabulary.key": "user_profile"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "vocabulary.key": "css_cascading_style_sheets_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "vocabulary.key": "html_hypertext_markup_language_"
       }
     },
     {
@@ -8172,7 +8209,7 @@
     {
       "key": "1551ce07-c780-4ddd-9ac4-45e6c5d91853",
       "properties": {
-        "description": "Describe the idea of user-centered design."
+        "description": "Describe the idea of human-centered design."
       },
       "seeding_key": {
         "lesson.key": "Lesson 2: The User's Experience",
@@ -8477,12 +8514,208 @@
 
   ],
   "rubrics": [
-
+    {
+      "level_name": "ai-generated-design-lesson2-level3_2025-v2",
+      "seeding_key": {
+        "lesson.key": "Lesson 2: The User's Experience",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "level_name": "ai-generated-design-lesson3-level8_2026",
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    }
   ],
   "learning_goals": [
-
+    {
+      "key": "101bd276-4291-4e6f-a220-2d532606f976",
+      "position": 2,
+      "learning_goal": "Evaluate and refine AI-generated output.",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "101bd276-4291-4e6f-a220-2d532606f976",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "key": "4341a09b-b347-472d-b82e-8d6bcdb0f03a",
+      "position": 1,
+      "learning_goal": "Critique usability and clarity and apply user-centered design to improve a digital experience.",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "4341a09b-b347-472d-b82e-8d6bcdb0f03a",
+        "lesson.key": "Lesson 2: The User's Experience",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "key": "bd1484a8-9fa0-4023-9bfe-36a3a0d06c7f",
+      "position": 1,
+      "learning_goal": "Plan a clear and intentional AI prompt.",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "bd1484a8-9fa0-4023-9bfe-36a3a0d06c7f",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    }
   ],
   "learning_goal_evidence_levels": [
-
+    {
+      "understanding": 0,
+      "teacher_description": "Student accepts AI output without evaluating or refining.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "101bd276-4291-4e6f-a220-2d532606f976",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student accepts AI output with little evidence of review or refinement.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "101bd276-4291-4e6f-a220-2d532606f976",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student reviews output and makes at least one meaningful adjustment through re-prompting.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "101bd276-4291-4e6f-a220-2d532606f976",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student reviews AI output, identifies strengths or gaps, and revises their prompt to better align with user needs.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "101bd276-4291-4e6f-a220-2d532606f976",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Does not clearly identify usability issues or explain how the redesign reflects user-centered design.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "4341a09b-b347-472d-b82e-8d6bcdb0f03a",
+        "lesson.key": "Lesson 2: The User's Experience",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Identifies issues or redesign changes, but does not clearly connect them to the user or user-centered design.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "4341a09b-b347-472d-b82e-8d6bcdb0f03a",
+        "lesson.key": "Lesson 2: The User's Experience",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Explains usability issues and describes how the redesign improved the experience, but reasoning may be general.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "4341a09b-b347-472d-b82e-8d6bcdb0f03a",
+        "lesson.key": "Lesson 2: The User's Experience",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Clearly explains why the app lacked usability and clarity for the selected user and shows how the redesign improved the experience using user-centered design.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "4341a09b-b347-472d-b82e-8d6bcdb0f03a",
+        "lesson.key": "Lesson 2: The User's Experience",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Prompt is incomplete or lacks meaningful design intent.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "bd1484a8-9fa0-4023-9bfe-36a3a0d06c7f",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Prompt lists basic features but lacks clarity, constraints, or edge cases.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "bd1484a8-9fa0-4023-9bfe-36a3a0d06c7f",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Prompt includes most requirements and some constraints. Edge cases may be partially addressed.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "bd1484a8-9fa0-4023-9bfe-36a3a0d06c7f",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Prompt clearly indicates user needs, requirements, constraints, and edge cases. Design intent is specific and purposeful.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "bd1484a8-9fa0-4023-9bfe-36a3a0d06c7f",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    }
   ]
 }

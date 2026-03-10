@@ -18,7 +18,7 @@ markdown <<MARKDOWN
   </p>
   <br>
   <p style="font-size: 14pt; margin: 0;">
-  At the end of the unit, students create an <strong>AI Safety Report</strong> that synthesizes their findings into evidence-based recommendations for responsible use.
+  At the end of the unit, students create a <strong>Responsible AI Use Guide</strong> that synthesizes their findings into evidence-based recommendations for responsible use.
   </p>
   <br>
   <p style="font-size: 14pt; margin: 0;">
@@ -52,7 +52,7 @@ markdown <<MARKDOWN
   </tr>
   <tr>
     <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;"><strong>Projects</strong></td>
-    <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;">1 milestone-based project culminating in an AI Safety or Guidance Report</td>
+    <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;">1 milestone-based project culminating in a Responsible AI Use Guide</td>
   </tr>
 </table>
 
@@ -62,11 +62,11 @@ markdown <<MARKDOWN
 
 ### **Do I need prior experience with Project Based Learning (PBL) to teach this unit?**
 
-#### This unit is intentionally structured to guide both teachers and students through the Project Based Learning process. While the unit models core elements of high-quality PBL, teachers are supported with clear pacing, discussion prompts, and milestone checkpoints throughout. Later levels in this module will elaborate on these structures.
+#### This unit is intentionally structured to guide both teachers and students through the PBL process. While the unit models core elements of high-quality PBL, teachers are supported with clear pacing, discussion prompts, and milestone checkpoints throughout. Later levels in this module will elaborate on these structures.
 
 ### **Will students use tools like ChatGPT or other public AI systems?**
 
-#### Students will interact with AI as part of this unit, but they will do so within a classroom-appropriate environment. AI Discoveries uses a secure, Code.org–managed AI chat interface designed specifically for educational use. Students are not required to create personal accounts on external platforms. 
+#### Students will interact with AI as part of this unit, but they will do so within a classroom-appropriate environment. AI Discoveries uses a secure, Code.org-managed AI chat interface designed specifically for educational use. Students are not required to create personal accounts on external platforms. 
 
 
 MARKDOWN
