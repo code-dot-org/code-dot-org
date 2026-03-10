@@ -1,10 +1,6 @@
 locals {
-  cfn_stack_name = coalesce(var.cfn_stack_name, var.environment)
-
   # Strip "https://" from the issuer URL to get the OIDC provider host used in IAM condition keys
   oidc_host = replace(var.cluster_oidc_issuer_url, "https://", "")
-
-  service_account_name = "external-secrets-sa"
 }
 
 #============================================================
@@ -12,8 +8,10 @@ locals {
 #============================================================
 
 resource "kubernetes_namespace_v1" "this" {
+  count = var.single_namespace_environment_type ? 1 : 0
+
   metadata {
-    name = var.environment
+    name = var.environment_type
   }
 }
 
@@ -23,17 +21,19 @@ resource "kubernetes_namespace_v1" "this" {
 
 resource "kubernetes_service_account_v1" "eso" {
   metadata {
-    name      = local.service_account_name
-    namespace = kubernetes_namespace_v1.this.metadata[0].name
+    name      = "external-secrets-sa-${var.environment_type}"
+    namespace = var.single_namespace_environment_type ? var.environment_type : "external-secrets"
 
     annotations = {
       "eks.amazonaws.com/role-arn" = aws_iam_role.eso.arn
     }
   }
+
+  depends_on = [kubernetes_namespace_v1.this]
 }
 
 #============================================================
-# ESO SecretStore — one per namespace, backed by the IRSA role above
+# ESO SecretStore — backed by the IRSA role above
 #
 # Note: The ESO CRDs must be installed before this resource can be
 # planned/applied. Ensure the root module's helm_release.external_secrets
@@ -41,12 +41,14 @@ resource "kubernetes_service_account_v1" "eso" {
 #============================================================
 
 resource "kubernetes_manifest" "secret_store" {
+  count = var.single_namespace_environment_type ? 1 : 0
+
   manifest = {
     apiVersion = "external-secrets.io/v1"
     kind       = "SecretStore"
     metadata = {
-      name      = "aws-secrets-manager"
-      namespace = kubernetes_namespace_v1.this.metadata[0].name
+      name      = "aws-secrets-manager-store"
+      namespace = var.environment_type
     }
     spec = {
       provider = {
@@ -57,6 +59,41 @@ resource "kubernetes_manifest" "secret_store" {
             jwt = {
               serviceAccountRef = {
                 name = kubernetes_service_account_v1.eso.metadata[0].name
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  depends_on = [kubernetes_service_account_v1.eso]
+}
+
+resource "kubernetes_manifest" "cluster_secret_store" {
+  count = var.single_namespace_environment_type ? 0 : 1
+
+  manifest = {
+    apiVersion = "external-secrets.io/v1"
+    kind       = "ClusterSecretStore"
+    metadata = {
+      name = "aws-secrets-manager-store-${var.environment_type}"
+    }
+    spec = {
+      conditions = [
+        {
+          namespaceRegexes = var.multi_namespace_regexes
+        }
+      ]
+      provider = {
+        aws = {
+          service = "SecretsManager"
+          region  = var.region
+          auth = {
+            jwt = {
+              serviceAccountRef = {
+                name      = kubernetes_service_account_v1.eso.metadata[0].name
+                namespace = "external-secrets"
               }
             }
           }

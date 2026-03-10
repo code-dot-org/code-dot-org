@@ -21,13 +21,13 @@ for _ in {1..60}; do
   phase="$(kubectl get pod "${POD_NAME}" -n default -o jsonpath='{.status.phase}' 2>/dev/null || true)"
   if [[ "${phase}" == "Succeeded" ]]; then
     kubectl logs "${POD_NAME}" -n default | sed -n '1,30p'
-    echo "PASS: pod resolved DNS and pinged google.com."
+    echo "PASS ✅: pod resolved DNS and pinged google.com."
     exit 0
   fi
   if [[ "${phase}" == "Failed" ]]; then
     kubectl logs "${POD_NAME}" -n default || true
     kubectl describe pod "${POD_NAME}" -n default | sed -n '1,160p'
-    echo "FAIL: pod failed DNS/ping check."
+    echo "FAIL ❌: pod failed DNS/ping check."
     exit 1
   fi
   sleep 2
@@ -35,5 +35,5 @@ done
 
 kubectl logs "${POD_NAME}" -n default || true
 kubectl describe pod "${POD_NAME}" -n default | sed -n '1,160p'
-echo "FAIL: timed out waiting for DNS/ping pod."
+echo "FAIL ❌: timed out waiting for DNS/ping pod."
 exit 1

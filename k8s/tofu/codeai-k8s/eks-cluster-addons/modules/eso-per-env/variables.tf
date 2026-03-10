@@ -1,12 +1,27 @@
-variable "environment" {
-  description = "Environment name (production, staging, test, levelbuilder). Also used as the k8s namespace name and the AWS secret path prefix."
+variable "environment_type" {
+  description = "Environment type (production, staging, test, levelbuilder). Also used as the k8s namespace name and the AWS secret path prefix."
   type        = string
 }
 
-variable "cfn_stack_name" {
-  description = "CloudFormation stack name for CfnStack/* secret access. Defaults to var.environment if not set."
-  type        = string
+variable "single_namespace_environment_type" {
+  description = "Whether this environment type uses a single namespace-scoped SecretStore rather than a regex-restricted ClusterSecretStore."
+  type        = bool
+}
+
+variable "multi_namespace_regexes" {
+  description = "Optional namespace regex restrictions for a ClusterSecretStore. When set, the module creates a cluster-scoped store and skips namespace creation."
+  type        = list(string)
   default     = null
+
+  validation {
+    condition     = var.multi_namespace_regexes == null || length(var.multi_namespace_regexes) > 0
+    error_message = "multi_namespace_regexes must be null or a non-empty list."
+  }
+
+  validation {
+    condition     = var.single_namespace_environment_type ? var.multi_namespace_regexes == null : var.multi_namespace_regexes != null
+    error_message = "multi_namespace_regexes must be null when single_namespace_environment_type is true, and set when it is false."
+  }
 }
 
 variable "cluster_oidc_issuer_url" {

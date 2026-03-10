@@ -1,9 +1,9 @@
 data "terraform_remote_state" "eks_cluster" {
   backend = "s3"
   config = {
-    bucket = "seth-tmp-opentofu-state"
+    bucket = "codeai-tofu-state"
     key    = "codeai-k8s/eks-cluster.tfstate"
-    region = "us-east-1"
+    region = "us-west-2"
   }
 }
 

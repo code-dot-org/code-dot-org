@@ -25,7 +25,7 @@ done
 
 if [[ -z "${host}" ]]; then
   kubectl describe service hello-nlb -n default | sed -n '1,140p'
-  echo "FAIL: NLB hostname not assigned."
+  echo "FAIL ❌: NLB hostname not assigned."
   exit 1
 fi
 
@@ -35,12 +35,12 @@ for _ in {1..60}; do
   if curl -fsS --max-time 5 "http://${host}/" >/tmp/hello-nlb-response.txt 2>/dev/null; then
     echo "Response sample:"
     sed -n '1,3p' /tmp/hello-nlb-response.txt
-    echo "PASS: NLB service is publicly reachable."
+    echo "PASS ✅: NLB service is publicly reachable."
     exit 0
   fi
   sleep 3
 done
 
 kubectl get service hello-nlb -n default -o wide
-echo "FAIL: NLB hostname exists but HTTP was not reachable."
+echo "FAIL ❌: NLB hostname exists but HTTP was not reachable."
 exit 1

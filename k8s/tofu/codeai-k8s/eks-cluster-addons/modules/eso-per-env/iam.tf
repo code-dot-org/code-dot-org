@@ -11,7 +11,9 @@ data "aws_iam_policy_document" "eso_trust" {
     condition {
       test     = "StringEquals"
       variable = "${local.oidc_host}:sub"
-      values   = ["system:serviceaccount:${var.environment}:${local.service_account_name}"]
+      values = [
+        "system:serviceaccount:${var.single_namespace_environment_type ? var.environment_type : "external-secrets"}:external-secrets-sa-${var.environment_type}"
+      ]
     }
 
     condition {
@@ -27,10 +29,14 @@ data "aws_iam_policy_document" "eso_secrets" {
     effect  = "Allow"
     actions = ["secretsmanager:GetSecretValue"]
 
-    resources = [
-      "arn:aws:secretsmanager:${var.region}:${var.aws_account_id}:secret:${var.environment}/cdo/*",
-      "arn:aws:secretsmanager:${var.region}:${var.aws_account_id}:secret:CfnStack/${local.cfn_stack_name}/*",
-    ]
+    resources = concat(
+      [
+        "arn:aws:secretsmanager:${var.region}:${var.aws_account_id}:secret:${var.environment_type}/cdo/*",
+      ],
+      var.single_namespace_environment_type ? [
+        "arn:aws:secretsmanager:${var.region}:${var.aws_account_id}:secret:CfnStack/${var.environment_type}/*",
+      ] : []
+    )
 
     condition {
       test     = "StringEquals"
@@ -41,7 +47,7 @@ data "aws_iam_policy_document" "eso_secrets" {
 }
 
 resource "aws_iam_role" "eso" {
-  name               = "codeai-k8s-eso-${var.environment}"
+  name               = "codeai-k8s-eso-${var.environment_type}"
   assume_role_policy = data.aws_iam_policy_document.eso_trust.json
 }
 

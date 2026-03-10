@@ -25,7 +25,7 @@ done
 
 if [[ -z "${host}" ]]; then
   kubectl describe ingress hello -n default | sed -n '1,120p'
-  echo "FAIL: ingress hostname not assigned."
+  echo "FAIL ❌: ingress hostname not assigned."
   exit 1
 fi
 
@@ -35,12 +35,12 @@ for _ in {1..60}; do
   if curl -fsS --max-time 5 "http://${host}/" >/tmp/hello-ingress-response.txt 2>/dev/null; then
     echo "Response sample:"
     sed -n '1,3p' /tmp/hello-ingress-response.txt
-    echo "PASS: ingress is publicly reachable."
+    echo "PASS ✅: ingress is publicly reachable."
     exit 0
   fi
   sleep 3
 done
 
 kubectl get ingress hello -n default -o wide
-echo "FAIL: ingress hostname exists but HTTP was not reachable."
+echo "FAIL ❌: ingress hostname exists but HTTP was not reachable."
 exit 1
