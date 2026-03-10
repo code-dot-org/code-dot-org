@@ -31,7 +31,7 @@ export const createValidationTourSteps = (tour: Tour): StepOptions[] => [
     },
     title: 'Validate Button',
     text: "Use the 'Validate' button to check if your code meets the level's requirements. Go ahead and click 'Validate' now.",
-    // We advance on a custom event fired from ValidationTable.tsx so we can wait to advance until the validation results is visible.
+    // We advance on a custom event fired from ValidationTable.tsx so we can wait to advance until the validation results are visible.
     advanceOn: {
       selector: `#${resourcePanelValidationTableElementId}`,
       event: VALIDATION_COMPLETE_EVENT,
