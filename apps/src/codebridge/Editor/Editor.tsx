@@ -162,6 +162,9 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
             },
           })
         );
+      } else if (fileExt === 'md') {
+        // Wrap lines for markdown files.
+        extensions.push(EditorView.lineWrapping);
       }
     }
     if (hasUnifiedDiffView) {
