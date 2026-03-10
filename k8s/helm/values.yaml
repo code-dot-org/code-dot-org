@@ -11,6 +11,9 @@ RAILS_ENV:
 
 locals.yml:
 
+# Provide access to AWS Secrets Manager secrets via k8s secrets? Enables ESO
+use_aws_secrets_manager: false
+
 healthChecks:
   enabled: false
 
