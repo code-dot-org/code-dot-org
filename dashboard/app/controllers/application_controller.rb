@@ -68,27 +68,26 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  # Persist brand experiment params as cookies so the brand sticks across
-  # page navigations. Uses the same URL param > cookie pattern as configure_web_console.
-  # Set brand:   ?studio-brand-codeai=1
-  # Clear brand: ?studio-brand-codeai=0 or ?studio-brand-reset=1
-  BRAND_PARAM_KEYS = Cdo::Brand::BRANDS.keys.map {|code| "studio-brand-#{code}"}.freeze
-
+  # Persist brand selection as a cookie so the brand sticks across page navigations.
+  # Set brand:   ?brand=codeai
+  # Clear brand: ?brand-reset=1
   def persist_brand_params
-    return unless DCDO.get('studio-brand-update-enabled', false)
+    return unless DCDO.get('brand-router-enabled', false)
 
-    if params['studio-brand-reset']
-      BRAND_PARAM_KEYS.each {|key| cookies.delete(key)}
+    cookie_key = environment_specific_cookie_name(Cdo::Brand::BRAND_COOKIE_NAME)
+
+    if params['brand-reset']
+      cookies.delete(cookie_key)
       return
     end
 
-    BRAND_PARAM_KEYS.each do |key|
-      next unless params.key?(key)
-      if params[key].to_s == '0'
-        cookies.delete(key)
-      else
-        cookies[key] = {value: params[key], httponly: true}
-      end
+    return unless params['brand'].present?
+
+    brand = params['brand']
+    if Cdo::Brand::BRANDS.key?(brand)
+      cookies[cookie_key] = {value: brand, domain: :all}
+    else
+      cookies.delete(cookie_key)
     end
   end
 

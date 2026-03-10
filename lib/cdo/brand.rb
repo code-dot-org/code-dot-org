@@ -1,17 +1,22 @@
 # Brand configuration module that provides brand-specific assets and URLs.
-# Uses DCDO flag as on/off switch and experiments (URL param > cookie > DCDO)
-# to determine which brand to use, allowing per-user brand testing.
-require_relative '../../shared/middleware/helpers/experiments'
+# Uses DCDO flag 'brand-router-enabled' as on/off switch.
+# When enabled, brand is resolved from URL param > cookie > default:
+#   ?brand=codeai  → sets brand to codeai and persists in cookie
+#   ?brand-reset=1 → clears brand cookie, reverts to default
+require_relative 'cookie_helpers'
 
 module Cdo
   class Brand
     # Brand code enum
-    BRAND_CODE_CODE_ORG = 'code'.freeze
+    BRAND_CODE_ORG = 'code'.freeze
     BRAND_CODE_CODEAI = 'codeai'.freeze
+
+    # Base cookie name for brand persistence (env suffix added by environment_specific_cookie_name)
+    BRAND_COOKIE_NAME = 'brand'.freeze
 
     # Brand configurations keyed by brand code
     BRANDS = {
-      BRAND_CODE_CODE_ORG => {
+      BRAND_CODE_ORG => {
         logo_filename: 'logo-inverse.svg',
         logo_alt_key: :code_org_logo_alt,
         favicon: 'favicon.ico',
@@ -28,26 +33,21 @@ module Cdo
     }.freeze
 
     # Get the current brand code.
-    # First checks the DCDO boolean flag studio-brand-update-enabled.
-    # If disabled, returns the default brand.
-    # If enabled, uses experiment_value to check per-brand flags with priority:
-    #   URL param > cookie > DCDO fallback
-    # This allows per-user brand testing via e.g. ?studio-brand-codeai=1
-    # On the frontend, the same keys are checked via experiments.isEnabled().
-    # @param request [ActionDispatch::Request, nil] the current request (for URL param/cookie checks)
+    # When brand-router-enabled is off, always returns default brand.
+    # When enabled, checks URL param > cookie for brand code.
+    # @param request [ActionDispatch::Request, nil] the current request
     def self.current_brand_code(request = nil)
-      return BRAND_CODE_CODE_ORG unless DCDO.get('studio-brand-update-enabled', false)
+      return BRAND_CODE_ORG unless DCDO.get('brand-router-enabled', false)
 
-      return BRAND_CODE_CODEAI if request && experiment_value("studio-brand-#{BRAND_CODE_CODEAI}", request)
-
-      BRAND_CODE_CODE_ORG
+      brand = resolve_brand(request)
+      BRANDS.key?(brand) ? brand : BRAND_CODE_ORG
     end
 
     # Get the current brand configuration
     # @param request [ActionDispatch::Request, nil] the current request
     def self.current_brand_configuration(request = nil)
       brand_code = current_brand_code(request)
-      BRANDS[brand_code] || BRANDS[BRAND_CODE_CODE_ORG]
+      BRANDS[brand_code] || BRANDS[BRAND_CODE_ORG]
     end
 
     # Get the logo filename for the current brand
@@ -93,6 +93,18 @@ module Cdo
     # @return [String] Marketing URL
     def self.marketing_url(ge_region: nil)
       CDO.code_org_url('', '', ge_region: ge_region)
+    end
+
+    private_class_method def self.resolve_brand(request)
+      return nil unless request
+
+      # URL param takes priority
+      brand = request.params['brand']
+      return brand if brand.present?
+
+      # Then env-specific cookie
+      cookie_key = environment_specific_cookie_name(BRAND_COOKIE_NAME)
+      request.cookies[cookie_key]
     end
   end
 end

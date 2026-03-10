@@ -141,7 +141,7 @@ class HttpCache
       session_key,
       storage_id,
       'sign_up_user_type',
-      'studio-brand-codeai',
+      "brand#{env_suffix}",
     ].concat(default_cookies)
 
     {
