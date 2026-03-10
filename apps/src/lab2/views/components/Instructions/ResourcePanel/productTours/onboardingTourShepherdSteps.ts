@@ -1,7 +1,6 @@
 import {offset} from '@floating-ui/dom';
 import {type StepOptions, type Tour} from 'shepherd.js';
 
-import lab2I18n from '@cdo/apps/lab2/locale';
 import {
   resourcePanelInstructionsElementId,
   resourcePanelTabsElementId,
@@ -21,22 +20,22 @@ export const createOnboardingTourSteps = (tour: Tour): StepOptions[] => [
       element: `#${resourcePanelInstructionsElementId}`,
       on: 'right',
     },
-    title: lab2I18n.resourcePanelOnboarding_title(),
-    text: lab2I18n.resourcePanelOnboarding_text(),
+    title: 'Resource area',
+    text: 'All your helpful resources can be found in the resource area.',
     buttons: [nextButton(tour)],
   },
   {
     id: 'tabs',
     attachTo: {element: `#${resourcePanelTabsElementId}`, on: 'right'},
-    title: lab2I18n.resourcePanelOnboarding_tabsTitle(),
-    text: lab2I18n.resourcePanelOnboarding_tabsText(),
+    title: 'Resource tabs',
+    text: 'There are tabs for each of the resources you need while working on a level including Instructions, Validation and Version History.',
     buttons: [backButton(tour), nextButton(tour)],
   },
   {
     id: 'links',
     attachTo: {element: `#${resourcePanelLinksElementId}`, on: 'right'},
-    title: lab2I18n.resourcePanelOnboarding_linksTitle(),
-    text: lab2I18n.resourcePanelOnboarding_linksText(),
+    title: 'Extra links',
+    text: "Here is where you'll find links to documentation and lab settings including light/dark and font size.",
     buttons: [backButton(tour), nextButton(tour)],
   },
   {
@@ -45,8 +44,8 @@ export const createOnboardingTourSteps = (tour: Tour): StepOptions[] => [
       element: `#${resourcePanelNavigationButtonElementId}`,
       on: 'top',
     },
-    title: lab2I18n.resourcePanelOnboarding_finishTitle(),
-    text: lab2I18n.resourcePanelOnboarding_finishText(),
+    title: 'Finish level',
+    text: 'The button that allows you to submit or move to the next level can always be found at the bottom of the resource area. It will be disabled if you need to do more work to complete the level.',
     buttons: [backButton(tour), doneButton(tour)],
     floatingUIOptions: {
       middleware: [offset(12)],
