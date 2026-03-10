@@ -71,6 +71,7 @@ const CODE_STUDIO_ENTRIES = {
   'essential': './src/sites/studio/pages/essential.js',
   'errors/deprecated_course': './src/sites/studio/pages/errors/deprecated_course.js',
   'home/_homepage': './src/sites/studio/pages/home/_homepage.js',
+  'layouts/_google_analytics': './src/sites/studio/pages/layouts/_google_analytics.js',
   'layouts/_parent_email_banner': './src/sites/studio/pages/layouts/_parent_email_banner.js',
   'layouts/_race_interstitial': './src/sites/studio/pages/layouts/_race_interstitial.js',
   'layouts/_section_creation_celebration_dialog': './src/sites/studio/pages/layouts/_section_creation_celebration_dialog.js',
