@@ -5,7 +5,7 @@ import i18n from '@cdo/locale';
 import {EmptyState} from '../../teacherNavigation/EmptyState';
 
 import noArchivedSections from './images/no_archived_sections.png';
-import noSections from './images/no_sections.png';
+import SectionPreview from './SectionPreview';
 
 import styles from './teacherHomepage.module.scss';
 interface EmptyHomepageProps {
@@ -15,20 +15,16 @@ interface EmptyHomepageProps {
 export const EmptyHomepage: React.FC<EmptyHomepageProps> = ({
   showHiddenOnly,
 }) => {
+  if (!showHiddenOnly) {
+    return <SectionPreview />;
+  }
+
   return (
     <EmptyState
       headline={i18n.emptySectionHeadline()}
-      descriptionText={
-        showHiddenOnly
-          ? i18n.emptyArchivedClassSections()
-          : i18n.emptyClassSections()
-      }
+      descriptionText={i18n.emptyArchivedClassSections()}
       imageComponent={
-        <img
-          className={styles.emptyImage}
-          src={showHiddenOnly ? noArchivedSections : noSections}
-          alt=""
-        />
+        <img className={styles.emptyImage} src={noArchivedSections} alt="" />
       }
       button={null}
     />
