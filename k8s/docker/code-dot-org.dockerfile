@@ -183,6 +183,13 @@ COPY --chown=${UID} --link ./ ./
 # Temporary locals.yml used to bootstrap `rake build`
 COPY --chown=${UID} ./k8s/docker/locals.rake-build.yml locals.yml
 
+# Following the "Sparse checkout pegasus PR", see:
+# See: https://github.com/code-dot-org/code-dot-org/pull/65825
+#
+# See also ./code-dot-org-pegasus.dockerfile.dockerignore, which is the
+# inverse of the pegasus/sparse-patterns/no-pegasus-content pattern from that PR.
+ENV HAS_PEGASUS_CONTENT='false'
+
 RUN <<EOF
   # Run final build optimizations that require full source code
   #
