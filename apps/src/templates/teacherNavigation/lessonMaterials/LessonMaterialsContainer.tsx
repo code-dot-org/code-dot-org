@@ -87,6 +87,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   const [canShowPodcasts, setCanShowPodcasts] = useState(false);
   const [audioSummaryTranscript, setAudioSummaryTranscript] =
     useState<string>('');
+  const audioPlayerRef = React.useRef<HTMLAudioElement | null>(null);
 
   const userId = useAppSelector(state => state.currentUser.userId);
 
@@ -249,6 +250,57 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     dispatch(setChatIsOpen(true));
   };
 
+  const handleTranscriptButtonClick = () => {
+    if (showTranscriptDialog) {
+      setShowTranscriptDialog(false);
+      analyticsReporter.sendEvent(EVENTS.TA_PODCAST_CLOSE_TRANSCRIPT, {
+        lesson_id: selectedLesson?.id,
+      });
+    } else {
+      setShowTranscriptDialog(true);
+      analyticsReporter.sendEvent(EVENTS.TA_PODCAST_OPEN_TRANSCRIPT, {
+        lesson_id: selectedLesson?.id,
+      });
+    }
+  };
+
+  React.useEffect(() => {
+    const audioPlayer = audioPlayerRef.current;
+    let playStartTime: number;
+    const handlePodcastPlay = () => {
+      playStartTime = Date.now();
+      analyticsReporter.sendEvent(EVENTS.TA_PODCAST_PLAYED, {
+        lesson_id: selectedLesson?.id,
+      });
+    };
+
+    const handlePodcastStop = () => {
+      const play_time = (Date.now() - playStartTime) / 1000;
+      analyticsReporter.sendEvent(EVENTS.TA_PODCAST_STOPPED, {
+        lesson_id: selectedLesson?.id,
+        time_played: play_time,
+      });
+    };
+
+    const handleSpeedChanged = () => {
+      analyticsReporter.sendEvent(EVENTS.TA_PODCAST_PLAYBACK_SPEED_CHANGED, {
+        lesson_id: selectedLesson?.id,
+        playback_rate: audioPlayer?.playbackRate,
+      });
+    };
+
+    if (audioPlayer) {
+      audioPlayer.addEventListener('play', handlePodcastPlay);
+      audioPlayer.addEventListener('pause', handlePodcastStop);
+      audioPlayer.addEventListener('ratechange', handleSpeedChanged);
+      return () => {
+        audioPlayer.removeEventListener('play', handlePodcastPlay);
+        audioPlayer.removeEventListener('pause', handlePodcastStop);
+        audioPlayer.removeEventListener('ratechange', handleSpeedChanged);
+      };
+    }
+  }, [selectedLesson, canShowLessonSummaries]);
+
   const renderHeader = () => {
     return (
       <div className={styles.lessonMaterialsPageHeader}>
@@ -338,9 +390,9 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
             title={i18n.audioTranscript()}
             primaryButtonProps={{
               text: i18n.closeDialog(),
-              onClick: () => setShowTranscriptDialog(false),
+              onClick: () => handleTranscriptButtonClick(),
             }}
-            onClose={() => setShowTranscriptDialog(false)}
+            onClose={() => handleTranscriptButtonClick()}
             closeLabel={i18n.closeTranscript()}
             customContent={
               <div className={styles.transcriptDialogContent}>
@@ -368,7 +420,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
                   color="secondary"
                   size="extraSmall"
                   className={styles.openTranscriptButton}
-                  onClick={() => setShowTranscriptDialog(true)}
+                  onClick={() => handleTranscriptButtonClick()}
                   type="button"
                 >
                   {i18n.transcript()}
@@ -379,11 +431,12 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
                 {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
                 <audio
                   id="lesson-summary-audio"
+                  ref={audioPlayerRef}
                   src={`/ai_lesson_summary_podcasts/show?lesson_id=${selectedLesson?.id}`}
                   preload="auto"
                   controls
-                  onEnded={() => setFinishedListeningToSummary(true)}
                   className={styles.audioPlayer}
+                  onEnded={() => setFinishedListeningToSummary(true)}
                 />
                 {finishedListeningToSummary && (
                   <FontAwesomeV6Icon
@@ -431,7 +484,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
                   {i18n.tipsHeader()}
                 </Typography>
                 <ol>
-                  {aiTALessonSummaryInfo?.tips.map((tip, index) => (
+                  {aiTALessonSummaryInfo?.tips?.map((tip, index) => (
                     <li key={`tip-${index}`}>
                       <Typography variant="body3" gutterBottom>
                         {tip}
@@ -445,7 +498,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
                   {i18n.commonMisconceptions()}
                 </Typography>
                 <ul>
-                  {aiTALessonSummaryInfo?.misconceptions.map(
+                  {aiTALessonSummaryInfo?.misconceptions?.map(
                     (misconception, index) => (
                       <li key={`misconception-${index}`}>
                         <Typography variant="body3" gutterBottom>

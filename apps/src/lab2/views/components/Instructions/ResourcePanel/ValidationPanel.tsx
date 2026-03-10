@@ -1,6 +1,5 @@
 import React from 'react';
 
-import {ValidationSettings} from '../InstructionsV2';
 import ValidationButton from '../ValidationButton';
 
 import {
@@ -10,6 +9,13 @@ import {
 import ValidationTable from './ValidationTable';
 
 import validationStyles from './validation-panel.module.scss';
+
+export interface ValidationSettings {
+  onValidate: () => void;
+  onStopValidation: () => void;
+  isValidating: boolean;
+  isValidateDisabled: boolean;
+}
 
 const ValidationPanel: React.FC<ValidationSettings> = ({
   onValidate,
