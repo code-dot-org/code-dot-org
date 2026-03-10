@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-08 18:14:58 UTC",
+    "serialized_at": "2026-03-10 05:42:20 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -125,7 +125,7 @@
       "relative_position": 2,
       "properties": {
         "overview": "**Why do some web apps feel easy and others frustrating?**\n\nStudents explore how technology is designed for people. They compare old and modern websites, uncover the concept of Human-Centered Design (HCD), and connect it to the real-world work of User Experience (UX) Designers. Through a guided critique activity, students practice empathy by analyzing how different users experience different web apps and suggest improvements that make the design more inclusive.",
-        "preparation": "- Print copies of the Welcome to The User’s Experience (one for each student)\n- Gather markers or colored pencils (2 different colors for each student)",
+        "preparation": "- Print copies of the The User’s Experience (one for each student)",
         "student_overview": "**Why do some web apps feel easy and others frustrating?**\n\nIn this lesson, you’ll explore how technology is designed for people. You’ll compare old and modern websites to see how design has changed, learn about Human-Centered Design (HCD), and discover what User Experience (UX) Designers do. Then, you’ll practice empathy by looking at how different users experience different web apps and suggest ways to make the design easier and more inclusive."
       },
       "seeding_key": {
@@ -1383,11 +1383,11 @@
       "key": "c5fa8006-9095-46fd-ab10-62e6b41129a6",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Keep the 2025 Amazon site on screen. Ask students to look closely and describe what makes it feel easier or more useful for real people today.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Why do you think there are more pictures now?*\n- *What makes it easier to find or buy things?*\n- *How might the site change based on who's using it?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should note how the site reflects people's habits and needs, such as being able to see items before buying, simple layouts that make shopping quicker, and personalized suggestions that save time. These observations help students see that design is becoming more human-centered — built around what people need and do.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\nConsider the web page features you've learned about:\n- Nav Bar\n- Hero Section\n- Cards\n- Footer (not visible here)\n\nHow do these features make the site easier to use?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify how common web page features such as the navigation bar, hero section, cards, and footer support user needs by making information easier to find, compare, and act on. They should recognize that these design choices reflect real user habits like scanning quickly, previewing items before deciding, and completing tasks efficiently.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If students mention AI features (like \"it knows what I want\"), connect it lightly: \"That's right, even AI can be part of human-centered design when it helps people find what they need.\" You can also mention that modern sites adapt to different devices and users — a sign of human-centered design"
+            "markdown": "If students mention AI features such as \"it knows what I want,\" briefly affirm the idea and connect it to design choices that respond to user behavior. For example, you might say, \"Yes, some websites use tools that learn from what people click so they can make things easier to find.\" You can also point out that many modern sites adjust to different devices and screen sizes, which shows that designers think about how people actually use technology."
           }
         ]
       },
@@ -1421,9 +1421,9 @@
       "key": "142d2369-4d96-4e4c-bf8d-38bed733d89b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Introduce students to Human-Centered Design (HCD) as the idea that good design starts with understanding people's needs, and show how this connects to User Experience (UX) Design—the process of putting that idea into practice. Students learn that HCD is the mindset (empathy and understanding), while UX design is the work designers do to make technology easy, clear, and enjoyable for users.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define human-centered design.",
-        "duration": "15",
-        "name": "Intro to Human-Centered and User Experience Design"
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Establish the foundational concepts of user-centered design, user profiles, and user experience (UX) to prepare students for critiquing digital experiences.",
+        "duration": "10",
+        "name": "User Experience"
       },
       "seeding_key": {
         "activity_section.key": "142d2369-4d96-4e4c-bf8d-38bed733d89b",
@@ -1434,7 +1434,7 @@
       "key": "8c7ad3c1-660e-4414-9ac3-4e67c7eb31e5",
       "position": 2,
       "properties": {
-        "description": "Think about what we just saw on the modern Amazon site: it's full of visuals, easy to navigate, and even adjusts to your interests. Those choices came from understanding what people need and how they actually shop. That's what it means to design with the user in mind.",
+        "description": "Today, you'll step into the role of a UX designer. You'll look at your app through a user's eyes and think about how design affects different people",
         "remarks": true
       },
       "seeding_key": {
@@ -1443,127 +1443,187 @@
       }
     },
     {
-      "key": "3b75e767-6b71-4850-89a7-549b936f3e04",
+      "key": "f6a8289a-d4d9-4ef9-aaa8-ba71629eb756",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the Amazon screenshot with callouts showing examples of human-centered design choices (e.g., large images, clear categories, personalized recommendations). Walk students through each design decision one at a time.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Do you think these choices help everyone equally? Why or why not?*\n- *Who might find this design confusing or less helpful?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize how that even designs meant to help users can still work better for some people than others. Encourage them to consider factors like ability, access, identity, or personal preferences. Encourage students to think about whose experiences are missing and why fairness and accessibility matter in design. Students might note that:\n- People who can't see well might struggle with image-heavy layouts.\n- Recommendations might not show the same options to everyone.\n- Some users might not see their style or interests represented."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the three UX Designer tasks: Observe, Evaluate, Suggest. Explain that these are the same steps real designers use to make technology more human-centered.\n"
       },
       "seeding_key": {
-        "activity_section.key": "3b75e767-6b71-4850-89a7-549b936f3e04",
+        "activity_section.key": "f6a8289a-d4d9-4ef9-aaa8-ba71629eb756",
         "lesson_activity.key": "9af8ff25-c671-4396-9af1-2bfdaa320c8f"
       }
     },
     {
-      "key": "1d54785f-a276-4b12-8aee-efc341da6d9e",
+      "key": "0005d12a-a3ef-481b-9f6f-042dfe960d62",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the clip from the \"What is UX Design?\" video.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What skills do you think a UX designer needs to make sure technology works for people?*\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that UX designers use a mix of empathy, observation, creativity, and problem-solving to make technology fit users' needs. Students might say: listening, testing, creativity, empathy, noticing details.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 6.\n- Level 1: Students read the definition for user experience.\n- Level 2: Students write the definition in their own words and/or include examples.\n- Level 3: Students read the definition for user profile.\n- Level 4: Students write the definition in their own words and/or include examples.\n- Level 5: Students read the definition for human-centered design.\n- Level 6: Students write the definition in their own words and/or include examples.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to use their own language and examples when adding context.",
-        "progression_name": "Vocab: User Experience"
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the AI-Generated Design Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define user profile."
       },
       "seeding_key": {
-        "activity_section.key": "1d54785f-a276-4b12-8aee-efc341da6d9e",
+        "activity_section.key": "0005d12a-a3ef-481b-9f6f-042dfe960d62",
         "lesson_activity.key": "9af8ff25-c671-4396-9af1-2bfdaa320c8f"
       }
     },
     {
-      "key": "e3cd47f2-8256-4313-8a72-1f77eec4ce56",
+      "key": "5a373e1b-837f-4ab9-975c-253fe1c0c1f2",
       "position": 5,
       "properties": {
-        "progression_name": "Vocab: User Profile"
+        "description": "Think about what we just saw on the modern Amazon site: it's full of visuals, easier to navigate, and sometimes even changes based on the user. Those choices came from understanding what people need and how they actually shop. That's what it means to design with the user in mind. Now connect that idea to your user profile: which of these design decisions would matter most for Jordan, Mark, or Sam?",
+        "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "e3cd47f2-8256-4313-8a72-1f77eec4ce56",
+        "activity_section.key": "5a373e1b-837f-4ab9-975c-253fe1c0c1f2",
         "lesson_activity.key": "9af8ff25-c671-4396-9af1-2bfdaa320c8f"
       }
     },
     {
-      "key": "51c71e7a-a0b5-4bfc-aa1b-5bdc7ba9dfea",
+      "key": "594acdbc-2d50-4751-b26f-bae1c436eed3",
       "position": 6,
       "properties": {
-        "progression_name": "Vocab: Human-Centered Design"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the Amazon screenshot with callouts showing examples of human-centered design choices (e.g., large images, clear categories, personalized recommendations). Click through the animated slide to walk through each design decision one at a time. Then have students do a quick turn-and-talk: Which decision would help your user the most, and why?"
       },
       "seeding_key": {
-        "activity_section.key": "51c71e7a-a0b5-4bfc-aa1b-5bdc7ba9dfea",
+        "activity_section.key": "594acdbc-2d50-4751-b26f-bae1c436eed3",
         "lesson_activity.key": "9af8ff25-c671-4396-9af1-2bfdaa320c8f"
       }
     },
     {
-      "key": "00a2b206-7a69-4ff8-b049-012146e062ad",
+      "key": "5655b73e-9def-4444-9f6c-15b784480c1e",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Help students practice empathy by seeing apps through the eyes of different users. Reinforce that usability depends on the context and the person, not just the design itself. Provide a structured, hands-on critique activity that makes user-centered design concrete.",
+        "description": "You've been thinking like designers already – noticing what works for users and what doesn't. Let's see how professionals do this in the real world.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5655b73e-9def-4444-9f6c-15b784480c1e",
+        "lesson_activity.key": "9af8ff25-c671-4396-9af1-2bfdaa320c8f"
+      }
+    },
+    {
+      "key": "9bd60557-6e9b-414f-8a95-7a611d9fa841",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the clip from the \"What is UX Design?\" video (0:05-0:48)."
+      },
+      "seeding_key": {
+        "activity_section.key": "9bd60557-6e9b-414f-8a95-7a611d9fa841",
+        "lesson_activity.key": "9af8ff25-c671-4396-9af1-2bfdaa320c8f"
+      }
+    },
+    {
+      "key": "6da1cfd2-0e05-4f6f-916d-4c3161f4d125",
+      "position": 9,
+      "properties": {
+        "description": "User Experience Designers take all of these things into account when designing a webpage by practicing something called human-centered design.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6da1cfd2-0e05-4f6f-916d-4c3161f4d125",
+        "lesson_activity.key": "9af8ff25-c671-4396-9af1-2bfdaa320c8f"
+      }
+    },
+    {
+      "key": "0c115197-28ec-42d8-85c2-9d999eafc3f3",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define user experience.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define human-centered design.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "0c115197-28ec-42d8-85c2-9d999eafc3f3",
+        "lesson_activity.key": "9af8ff25-c671-4396-9af1-2bfdaa320c8f"
+      }
+    },
+    {
+      "key": "8cf654ed-cc02-4b14-b68e-116d524c652f",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Help students practice empathy by seeing apps through the eyes of different users. Reinforce that usability depends on the context and the person, not just the design itself. Provide a structured, hands-on critique activity that makes user-centered design concrete.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in groups of three.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of The User's Experience activity guide.",
         "duration": "20",
         "name": "See It Like a User"
       },
       "seeding_key": {
-        "activity_section.key": "00a2b206-7a69-4ff8-b049-012146e062ad",
+        "activity_section.key": "8cf654ed-cc02-4b14-b68e-116d524c652f",
         "lesson_activity.key": "9af8ff25-c671-4396-9af1-2bfdaa320c8f"
       }
     },
     {
-      "key": "b1741b03-0be7-4f8f-87ba-482044236778",
-      "position": 8,
+      "key": "67dd7b1f-4db6-4802-836b-1cf7a48af005",
+      "position": 12,
       "properties": {
-        "description": "Today, you'll step into the role of a UX designer. You'll look at your app through a user's eyes and think about how design affects different people.",
+        "description": "Each person in your group will represent one user profile: Jordan, Mark, or Sam. Read your assigned profile carefully and think about that person's needs and frustrations. Consider what a well-designed page would look like for them.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "b1741b03-0be7-4f8f-87ba-482044236778",
+        "activity_section.key": "67dd7b1f-4db6-4802-836b-1cf7a48af005",
         "lesson_activity.key": "9af8ff25-c671-4396-9af1-2bfdaa320c8f"
       }
     },
     {
-      "key": "75d608e8-4f2b-4d0e-a213-70b1ea8c7e84",
-      "position": 9,
+      "key": "48ac358c-6b1f-4acc-8938-763d66f8821a",
+      "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the three UX Designer tasks: Observe, Evaluate, Suggest. Explain that these are the same steps real designers use to make technology more human-centered.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in groups of three.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of The User's Experience activity guide and several markers or colored pencils."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have each student select a profile and annotate key needs in the activity guide before reviewing the app.\n"
       },
       "seeding_key": {
-        "activity_section.key": "75d608e8-4f2b-4d0e-a213-70b1ea8c7e84",
+        "activity_section.key": "48ac358c-6b1f-4acc-8938-763d66f8821a",
         "lesson_activity.key": "9af8ff25-c671-4396-9af1-2bfdaa320c8f"
       }
     },
     {
-      "key": "0f044db8-db80-4846-b689-89c5d01cde02",
-      "position": 10,
+      "key": "2a8454ef-ec8c-40c3-bbda-75b1e1430f44",
+      "position": 14,
       "properties": {
-        "description": "Each person in your group will represent one of these user profiles: Jordan, Mark, or Sam. Students should read through their assigned user profile in their activity guide and think about their needs and how they might use an app.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "0f044db8-db80-4846-b689-89c5d01cde02",
-        "lesson_activity.key": "9af8ff25-c671-4396-9af1-2bfdaa320c8f"
-      }
-    },
-    {
-      "key": "67a5bbd2-bd18-4fb9-9920-eeb1d765e7ca",
-      "position": 11,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Each person takes one user profile (Jordan, Mark, or Sam). Students review the app and annotate it using the Usability Checklist, focusing on how well it meets their user's needs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct groups to discussion their ratings and annotations and identify any patterns across the different user profiles.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Students should begin to recognize that usability is not absolute but depends on the user's context and needs. Encourage students to share specific examples from their critiques. Listen for students connecting specific app features (or lack thereof) to the needs of their user profiles.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Level 7.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students to make specific, user-centered suggestions for improvement. Probe students who are struggling to connect their critique to a concrete change. Ask: \"Why would that specific change be important for Jordan/Mark/Sam?\"",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 1. Students should complete the task as their selected user, then complete the Usability Checklist in their activity guide based on that experience.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students evaluating the app from their user's perspective and supporting their checklist responses with specific details from the profile.\n",
+        "progression_name": "Usability Checklist",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Encourage students to connect their suggested change to the idea of empathy and how would this change make life easier for their user."
-          },
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "This prompt can serve as a formative assessment. Collect student responses to gauge their understanding of applying user-centered design principles."
+            "markdown": "If students move through the checklist quickly without explanation, prompt them to connect each decision to the user profile. Ask, \"What in the profile supports that?\" Encourage user-specific reasoning such as, \"Mark might struggle with this small text because of vision changes,\" rather than general comments like, \"The text is small.\""
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "67a5bbd2-bd18-4fb9-9920-eeb1d765e7ca",
+        "activity_section.key": "2a8454ef-ec8c-40c3-bbda-75b1e1430f44",
         "lesson_activity.key": "9af8ff25-c671-4396-9af1-2bfdaa320c8f"
       }
     },
     {
-      "key": "df0278a9-554f-4779-8fcf-9741d2a50cdc",
-      "position": 12,
+      "key": "0d6a28eb-5e27-4503-b71a-4edd73972a0a",
+      "position": 15,
       "properties": {
-        "progression_name": "Check for Understanding"
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 2. Have them adjust the app using the control panel to better support their selected user. Remind them they may change up to three settings and must document their reasoning in the activity guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students making purposeful changes that connect clearly to their user's needs. Check that they are completing the rationale, user impact, and tradeoff for each adjustment.",
+        "progression_name": "App Redesign",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students focus only on \"making it look better,\" ask, \"How does this change specifically help your user?\" Encourage them to consider tradeoffs and think about how a change that helps one user might create challenges for another."
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "df0278a9-554f-4779-8fcf-9741d2a50cdc",
+        "activity_section.key": "0d6a28eb-5e27-4503-b71a-4edd73972a0a",
+        "lesson_activity.key": "9af8ff25-c671-4396-9af1-2bfdaa320c8f"
+      }
+    },
+    {
+      "key": "4a189b31-0f33-42f8-a644-05a154a1ed53",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Level 3.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students clearly explaining both parts of the question: why the Level 1 app lacked usability and clarity for their user, and how their redesign applied user-centered design. If students are vague, ask, \"How did that specific change improve usability?\" or \"What part of the user profile supports your reasoning?\"",
+        "progression_name": "Check Your Understanding",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use this prompt as a formative assessment to determine whether students can critique usability and clarity and explain how their redesign reflects user-centered design."
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to move beyond general statements like \"it was hard to use\" and focus on clarity and usability. Prompt them to explain how their change intentionally addressed a specific user need."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4a189b31-0f33-42f8-a644-05a154a1ed53",
         "lesson_activity.key": "9af8ff25-c671-4396-9af1-2bfdaa320c8f"
       }
     },
@@ -1594,23 +1654,10 @@
       "key": "3f506085-21dc-45e3-b3f4-662a146397cb",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to share what they wrote for the Level 7 prompt: \"If I designed with [user profile], I'd change ___.\" Encourage them to refer back to the reasons they noted with their color ratings. Students will articulate specific design changes based on the needs of their user profile, demonstrating an understanding of user-centered design.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to share what they wrote for the Level 3 prompt: \"The Level 1 app felt difficult for [user’s name] because _ _ _ _ _ _ _ _ _ _ I applied user-centered design by changing _ _ _ _ _ _ _ _ _ _, which improved usability and clarity by _ _ _ _ _ _ _ _ _ _.\" Encourage them to refer back to their activity guide to reference their usability checklist and app redesign table. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
       },
       "seeding_key": {
         "activity_section.key": "3f506085-21dc-45e3-b3f4-662a146397cb",
-        "lesson_activity.key": "e57dd28b-37d7-4a9c-9592-781f76eed38d"
-      }
-    },
-    {
-      "key": "4bd4085e-6b23-40e8-8e2c-17d4d4045a99",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 8 to complete the End of Lesson Survey.",
-        "name": "End of Lesson Survey",
-        "progression_name": "End of Lesson Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "4bd4085e-6b23-40e8-8e2c-17d4d4045a99",
         "lesson_activity.key": "e57dd28b-37d7-4a9c-9592-781f76eed38d"
       }
     },
@@ -4743,178 +4790,68 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Vocab: User Experience"
+        "progression": "Usability Checklist"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-generated-design-lesson2-level1_2026"
+          "ai-generated-design-lesson2-level1_2025-v3"
         ],
         "lesson.key": "Lesson 2: The User's Experience",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "1d54785f-a276-4b12-8aee-efc341da6d9e"
+        "activity_section.key": "2a8454ef-ec8c-40c3-bbda-75b1e1430f44"
       },
       "level_keys": [
-        "ai-generated-design-lesson2-level1_2026"
+        "ai-generated-design-lesson2-level1_2025-v3"
       ]
     },
     {
       "chapter": 4,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Vocab: User Experience"
+        "progression": "App Redesign"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-generated-design-lesson2-level2_2026"
+          "ai-generated-design-lesson2-level2_2025-v2"
         ],
         "lesson.key": "Lesson 2: The User's Experience",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "1d54785f-a276-4b12-8aee-efc341da6d9e"
+        "activity_section.key": "0d6a28eb-5e27-4503-b71a-4edd73972a0a"
       },
       "level_keys": [
-        "ai-generated-design-lesson2-level2_2026"
+        "ai-generated-design-lesson2-level2_2025-v2"
       ]
     },
     {
       "chapter": 5,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
-        "progression": "Vocab: User Profile"
+        "progression": "Check Your Understanding"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-generated-design-lesson2-level3_2026"
+          "ai-generated-design-lesson2-level3_2025-v2"
         ],
         "lesson.key": "Lesson 2: The User's Experience",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "e3cd47f2-8256-4313-8a72-1f77eec4ce56"
+        "activity_section.key": "4a189b31-0f33-42f8-a644-05a154a1ed53"
       },
       "level_keys": [
-        "ai-generated-design-lesson2-level3_2026"
+        "ai-generated-design-lesson2-level3_2025-v2"
       ]
     },
     {
       "chapter": 6,
-      "position": 4,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: User Profile"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson2-level4_2026"
-        ],
-        "lesson.key": "Lesson 2: The User's Experience",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "e3cd47f2-8256-4313-8a72-1f77eec4ce56"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson2-level4_2026"
-      ]
-    },
-    {
-      "chapter": 7,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Human-Centered Design"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson2-level5_2026"
-        ],
-        "lesson.key": "Lesson 2: The User's Experience",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "51c71e7a-a0b5-4bfc-aa1b-5bdc7ba9dfea"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson2-level5_2026"
-      ]
-    },
-    {
-      "chapter": 8,
-      "position": 6,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Human-Centered Design"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson2-level6_2026"
-        ],
-        "lesson.key": "Lesson 2: The User's Experience",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "51c71e7a-a0b5-4bfc-aa1b-5bdc7ba9dfea"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson2-level6_2026"
-      ]
-    },
-    {
-      "chapter": 9,
-      "position": 7,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "Check for Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson2-level7_2026"
-        ],
-        "lesson.key": "Lesson 2: The User's Experience",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "df0278a9-554f-4779-8fcf-9741d2a50cdc"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson2-level7_2026"
-      ]
-    },
-    {
-      "chapter": 10,
-      "position": 8,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "End of Lesson Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson2-level8_2026"
-        ],
-        "lesson.key": "Lesson 2: The User's Experience",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "4bd4085e-6b23-40e8-8e2c-17d4d4045a99"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson2-level8_2026"
-      ]
-    },
-    {
-      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4936,7 +4873,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 7,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4958,7 +4895,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 8,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4980,7 +4917,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 9,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5002,7 +4939,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 10,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -5024,7 +4961,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 11,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5046,7 +4983,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5068,7 +5005,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 13,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5090,7 +5027,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 14,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5112,7 +5049,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 15,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5134,7 +5071,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5156,7 +5093,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5178,7 +5115,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 18,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5200,7 +5137,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 19,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -5222,7 +5159,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5244,7 +5181,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5266,7 +5203,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 22,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5288,7 +5225,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 23,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5310,7 +5247,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 24,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -5332,7 +5269,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 25,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5354,7 +5291,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 26,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5376,7 +5313,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5398,7 +5335,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5420,7 +5357,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 29,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5442,7 +5379,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 30,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5464,7 +5401,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 31,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -5486,7 +5423,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 32,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5508,7 +5445,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5530,7 +5467,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5552,7 +5489,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 35,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5574,7 +5511,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 36,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -5596,7 +5533,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 37,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5618,7 +5555,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 38,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5640,7 +5577,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 39,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -5662,7 +5599,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 40,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5684,7 +5621,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 41,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -5706,7 +5643,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5728,7 +5665,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5750,7 +5687,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5772,7 +5709,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 45,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5794,7 +5731,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 46,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5816,7 +5753,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 47,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5838,7 +5775,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5860,7 +5797,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 49,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5882,7 +5819,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 50,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5904,7 +5841,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 51,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5926,7 +5863,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5948,7 +5885,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 53,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5970,7 +5907,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 54,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -5992,7 +5929,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 55,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6014,7 +5951,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6036,7 +5973,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 57,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6058,7 +5995,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 58,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6080,7 +6017,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 59,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -6102,7 +6039,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 60,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6124,7 +6061,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 61,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6146,7 +6083,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 62,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6168,7 +6105,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 63,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6190,7 +6127,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 64,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6212,7 +6149,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 65,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6234,7 +6171,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6283,98 +6220,38 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-generated-design-lesson2-level1_2026",
+        "level.key": "ai-generated-design-lesson2-level1_2025-v3",
         "script_level.level_keys": [
-          "ai-generated-design-lesson2-level1_2026"
+          "ai-generated-design-lesson2-level1_2025-v3"
         ],
         "lesson.key": "Lesson 2: The User's Experience",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "1d54785f-a276-4b12-8aee-efc341da6d9e"
+        "activity_section.key": "2a8454ef-ec8c-40c3-bbda-75b1e1430f44"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ai-generated-design-lesson2-level2_2026",
+        "level.key": "ai-generated-design-lesson2-level2_2025-v2",
         "script_level.level_keys": [
-          "ai-generated-design-lesson2-level2_2026"
+          "ai-generated-design-lesson2-level2_2025-v2"
         ],
         "lesson.key": "Lesson 2: The User's Experience",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "1d54785f-a276-4b12-8aee-efc341da6d9e"
+        "activity_section.key": "0d6a28eb-5e27-4503-b71a-4edd73972a0a"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ai-generated-design-lesson2-level3_2026",
+        "level.key": "ai-generated-design-lesson2-level3_2025-v2",
         "script_level.level_keys": [
-          "ai-generated-design-lesson2-level3_2026"
+          "ai-generated-design-lesson2-level3_2025-v2"
         ],
         "lesson.key": "Lesson 2: The User's Experience",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "e3cd47f2-8256-4313-8a72-1f77eec4ce56"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson2-level4_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson2-level4_2026"
-        ],
-        "lesson.key": "Lesson 2: The User's Experience",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "e3cd47f2-8256-4313-8a72-1f77eec4ce56"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson2-level5_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson2-level5_2026"
-        ],
-        "lesson.key": "Lesson 2: The User's Experience",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "51c71e7a-a0b5-4bfc-aa1b-5bdc7ba9dfea"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson2-level6_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson2-level6_2026"
-        ],
-        "lesson.key": "Lesson 2: The User's Experience",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "51c71e7a-a0b5-4bfc-aa1b-5bdc7ba9dfea"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson2-level7_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson2-level7_2026"
-        ],
-        "lesson.key": "Lesson 2: The User's Experience",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "df0278a9-554f-4779-8fcf-9741d2a50cdc"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson2-level8_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson2-level8_2026"
-        ],
-        "lesson.key": "Lesson 2: The User's Experience",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "4bd4085e-6b23-40e8-8e2c-17d4d4045a99"
+        "activity_section.key": "4a189b31-0f33-42f8-a644-05a154a1ed53"
       }
     },
     {
@@ -7571,31 +7448,30 @@
     },
     {
       "name": "The User's Experience",
-      "url": "https://docs.google.com/presentation/d/1sBrBOjbUJgBjOPXQno87D8v329VIDecLqy34W00KOK8/edit?usp=sharing",
-      "key": "the_user_s_experience",
+      "url": "https://docs.google.com/presentation/d/1BkwdM0vfy8JYMLajMMxRXGV-K4FzpeVA1TTsc1uIUog/edit?usp=sharing",
+      "key": "the_user_s_experience_2",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
         "curriculum_category": "curriculum",
         "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "the_user_s_experience"
+        "resource.key": "the_user_s_experience_2"
       }
     },
     {
       "name": "The User's Experience",
-      "url": "https://docs.google.com/document/d/1YVTimIly9J7L-d-Emz5b5JumzGPdazl6FqA9g4vLEH8/edit?usp=sharing",
-      "key": "the_user_s_experience_1",
+      "url": "https://docs.google.com/document/d/1ZJ1TXv9EEma3mcTE9wVZy1fbiKxrlV8qy9Xb9lSl7xE/edit?usp=sharing",
+      "key": "the_user_s_experience_3",
       "properties": {
         "audience": "Student",
         "curriculum_category": "curriculum",
         "embeddability_type": "embed_and_resource_dropdown",
-        "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {
-        "resource.key": "the_user_s_experience_1"
+        "resource.key": "the_user_s_experience_3"
       }
     },
     {
@@ -7784,13 +7660,13 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 2: The User's Experience",
-        "resource.key": "the_user_s_experience"
+        "resource.key": "the_user_s_experience_2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 2: The User's Experience",
-        "resource.key": "the_user_s_experience_1"
+        "resource.key": "the_user_s_experience_3"
       }
     },
     {
@@ -8100,7 +7976,7 @@
     {
       "key": "user_profile",
       "word": "user profile",
-      "definition": "a description of a typical user of a product or service. It includes demographic information, goals, needs, and behaviors",
+      "definition": "a description of a typical person who uses a product or service. Designers use it to understand the user's goals, needs, and behaviors.",
       "properties": {
       },
       "seeding_key": {
@@ -8333,7 +8209,7 @@
     {
       "key": "1551ce07-c780-4ddd-9ac4-45e6c5d91853",
       "properties": {
-        "description": "Describe the idea of user-centered design."
+        "description": "Describe the idea of human-centered design."
       },
       "seeding_key": {
         "lesson.key": "Lesson 2: The User's Experience",
@@ -8639,6 +8515,14 @@
   ],
   "rubrics": [
     {
+      "level_name": "ai-generated-design-lesson2-level3_2025-v2",
+      "seeding_key": {
+        "lesson.key": "Lesson 2: The User's Experience",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
       "level_name": "ai-generated-design-lesson3-level8_2026",
       "seeding_key": {
         "lesson.key": "Lesson 3: Build Your First Web Page with AI",
@@ -8657,6 +8541,19 @@
       "seeding_key": {
         "learning_goal.key": "101bd276-4291-4e6f-a220-2d532606f976",
         "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "key": "4341a09b-b347-472d-b82e-8d6bcdb0f03a",
+      "position": 1,
+      "learning_goal": "Critique usability and clarity and apply user-centered design to improve a digital experience.",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "4341a09b-b347-472d-b82e-8d6bcdb0f03a",
+        "lesson.key": "Lesson 2: The User's Experience",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026"
       }
@@ -8720,6 +8617,54 @@
         "understanding": 3,
         "learning_goal.key": "101bd276-4291-4e6f-a220-2d532606f976",
         "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Does not clearly identify usability issues or explain how the redesign reflects user-centered design.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "4341a09b-b347-472d-b82e-8d6bcdb0f03a",
+        "lesson.key": "Lesson 2: The User's Experience",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Identifies issues or redesign changes, but does not clearly connect them to the user or user-centered design.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "4341a09b-b347-472d-b82e-8d6bcdb0f03a",
+        "lesson.key": "Lesson 2: The User's Experience",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Explains usability issues and describes how the redesign improved the experience, but reasoning may be general.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "4341a09b-b347-472d-b82e-8d6bcdb0f03a",
+        "lesson.key": "Lesson 2: The User's Experience",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Clearly explains why the app lacked usability and clarity for the selected user and shows how the redesign improved the experience using user-centered design.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "4341a09b-b347-472d-b82e-8d6bcdb0f03a",
+        "lesson.key": "Lesson 2: The User's Experience",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026"
       }
