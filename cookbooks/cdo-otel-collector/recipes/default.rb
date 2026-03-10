@@ -90,6 +90,13 @@ template '/etc/datadog-agent/otel-config.yaml' do
   notifies :restart, 'service[datadog-agent]', :delayed
 end
 
+# Allow OTel Collector to read the syslog
+group 'syslog' do
+  action :modify
+  members 'dd-agent'
+  append true
+end
+
 # Manage the DataDog agent service
 service 'datadog-agent' do
   action [:enable, :start]

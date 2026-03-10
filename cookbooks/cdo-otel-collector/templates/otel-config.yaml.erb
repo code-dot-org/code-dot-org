@@ -125,7 +125,7 @@ service:
     # Traces pipeline
     traces:
       receivers: [otlp]
-      processors: [resource, transform/rails_resource_name_from_rack, batch]
+      processors: [resource, transform/datadog_errors, transform/rails_resource_name_from_rack, batch]
       exporters: [datadog/connector, datadog]
     
     # Metrics pipeline
