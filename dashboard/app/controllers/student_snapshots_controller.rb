@@ -233,7 +233,6 @@ class StudentSnapshotsController < ApplicationController
 
     dataset_item = {
       "timestamp" => Time.now.utc.iso8601,
-      "progress" => JSON.parse(response[:json])["progress"],
       "input" => {
         "progress" => JSON.parse(response[:json])["progress"],
         "misconceptions" => JSON.parse(response[:json])["misconceptions"],
@@ -247,7 +246,6 @@ class StudentSnapshotsController < ApplicationController
         "section_id" => section_id,
         "teacher_id" => teacher_id,
         "system_prompt" => AiSystemPrompts::StudentSnapshotPromptHelper.get_insight_system_prompt(lesson_id, unit_id, student_id, teacher_id, section_id),
-        "test_run" => "by_erinbond"
       },
       "datasetName" => "lesson-insights"
     }
