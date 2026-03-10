@@ -37,7 +37,7 @@ import ForTeachersOnly from '../ForTeachersOnly';
 import Instructions, {InstructionsProps} from '../InstructionsV2';
 import NavigationArea from '../NavigationArea';
 
-import AiTutorChatWithInstructionDrawer from './AiTutorChatWithInstructionDrawer';
+import AiTutorChatWithInstructionDrawer from './AiTutorChatWithInstructionsDrawer/AiTutorChatWithInstructionDrawer';
 import BackpackHeaderButtons from './Backpack/BackpackHeaderButtons';
 import BackpackPanel from './Backpack/BackpackPanel';
 import {
@@ -45,15 +45,17 @@ import {
   resourcePanelTabsElementId,
   resourcePanelLinksElementId,
 } from './constants';
-import CopyrightButton from './CopyrightButton';
-import DisclaimerButton from './DisclaimerButton';
-import OnboardingTourSteps from './OnboardingTourSteps';
-import ResourcePanelExtraLinks from './ResourcePanelExtraLinks';
-import setFooterVisibility from './setFooterVisibility';
-import SettingsPanel from './SettingsPanel';
+import CopyrightButton from './Footer/CopyrightButton';
+import DisclaimerButton from './Footer/DisclaimerButton';
+import ResourcePanelExtraLinks from './Footer/ResourcePanelExtraLinks';
+import setFooterVisibility from './Footer/setFooterVisibility';
+import SettingsPanel from './Footer/SettingsPanel';
+import OnboardingTourSteps from './OnboardingTour/OnboardingTourSteps';
 import {Tabs} from './types';
-import ValidationPanel, {ValidationSettings} from './ValidationPanel';
-import ValidationTourSteps from './ValidationTourSteps';
+import ValidationPanel, {
+  ValidationSettings,
+} from './Validation/ValidationPanel';
+import ValidationTourSteps from './Validation/ValidationTourSteps';
 import {VersionHistoryPanel} from './VersionHistory';
 
 import styles from './styles.module.scss';
