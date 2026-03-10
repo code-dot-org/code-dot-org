@@ -430,7 +430,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
                   {i18n.tipsHeader()}
                 </Typography>
                 <ol>
-                  {aiTALessonSummaryInfo?.tips.map((tip, index) => (
+                  {aiTALessonSummaryInfo?.tips?.map((tip, index) => (
                     <li key={`tip-${index}`}>
                       <Typography variant="body3" gutterBottom>
                         {tip}
@@ -444,7 +444,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
                   {i18n.commonMisconceptions()}
                 </Typography>
                 <ul>
-                  {aiTALessonSummaryInfo?.misconceptions.map(
+                  {aiTALessonSummaryInfo?.misconceptions?.map(
                     (misconception, index) => (
                       <li key={`misconception-${index}`}>
                         <Typography variant="body3" gutterBottom>

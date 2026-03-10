@@ -21,7 +21,7 @@ Resources:
   <%= config[:model_name] %>Model:
     Type: AWS::SageMaker::Model
     Properties:
-      ModelName: !Sub "<%= "#{config[:model_name]}-${Environment}-#{Time.now.to_i}" %>"
+      ModelName: !Sub "<%= "#{config[:model_name]}-${Environment}-#{Config.model_fingerprint(config)}" %>"
       ExecutionRoleArn: !ImportValue IAM-SagemakerExecutionRoleARN
       PrimaryContainer:
         Environment:
@@ -40,7 +40,7 @@ Resources:
   <%= config[:model_name] %>EndpointConfig:
     Type: AWS::SageMaker::EndpointConfig
     Properties:
-      EndpointConfigName: !Sub "<%= "#{config[:model_name]}-${Environment}-EndpointConfig-#{Time.now.to_i}" %>"
+      EndpointConfigName: !Sub "<%= "#{config[:model_name]}-${Environment}-EndpointConfig-#{Config.endpoint_config_fingerprint(config)}" %>"
       ProductionVariants:
         - ContainerStartupHealthCheckTimeoutInSeconds: 600
           InitialInstanceCount: <%= config[:min_num_instances] %>
