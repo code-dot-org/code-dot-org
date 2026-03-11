@@ -112,10 +112,7 @@
         "message": "",
         "next": true,
         "conditions": [
-          {
-            "name": "played_anything_in_same_loop",
-            "value": 5
-          }
+
         ]
       },
       {
@@ -130,9 +127,12 @@
     "predict_settings": {
       "isPredictLevel": false
     },
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_version_history": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-15T18:00:52.120+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-sythesize-skill-3\\\"\"],\"cloned_from\":\"test-music-lab-loops-sythesize-skill-3\"},{\"changed_at\":\"2025-04-17 02:05:53 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-15T18:00:52.120+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-sythesize-skill-3\\\"\"],\"cloned_from\":\"test-music-lab-loops-sythesize-skill-3\"},{\"changed_at\":\"2025-04-17 02:05:53 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2026-03-10 16:09:44 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

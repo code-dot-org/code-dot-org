@@ -1,0 +1,19 @@
+name 'self-paced-TCaAI-L6-Milestone5Overview'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Milestone 5: Synthesis & Sharing
+
+#### Milestone 5 is the unit’s project shareout milestone. Students finalize their Responsible AI Use Guides, test them with both AI and peers, and prepare to defend their recommendations publicly. Across Lessons 9 and 10, students refine products using mixed feedback and then synthesize evidence into a defended position about how humans should use AI.
+
+## Milestone 5 Overview
+
+#### **Lesson 9** is a Build Knowledge → Develop practice day where students iterate on their guides using AI stress tests and peer review to strengthen clarity, evidence, and audience fit.
+
+#### **Lesson 10** is a Develop & Critique / Culminating lesson where students defend a claim about how humans should interact with AI and submit their final projects.
+
+## 🧩 Project Progress
+
+#### By the end of Milestone 5, students will finalize and submit their Responsible AI Use Guides and complete a short defended position (The Final Verdict) that cites unit evidence.
+MARKDOWN
