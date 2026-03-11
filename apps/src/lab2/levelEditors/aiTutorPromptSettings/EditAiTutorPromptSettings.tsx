@@ -7,18 +7,7 @@ import {
   DEFAULT_ANSWER_TYPES,
   TUTOR_MODE_TO_ANSWER_TYPE,
 } from '@cdo/apps/weblab2/constants';
-import askContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/ask.md';
-import buildCSSContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/buildCSS.md';
-import buildHTMLContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/buildHTML.md';
-import buildJavaScriptContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/buildJavaScript.md';
-import buildJSONContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/buildJSON.md';
-import debugContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/debug.md';
-import documentationContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/documentation.md';
-import exampleContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/example.md';
-import explainCodeContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/explainCode.md';
-import hintContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/hint.md';
-import pseudocodeContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/pseudocode.md';
-import testCaseContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/testCase.md';
+import {ANSWER_TYPE_CONTRACTS} from '@cdo/apps/weblab2/prompts/promptMaps';
 import {
   AiTutorAnswerType,
   AiTutorMode,
@@ -26,21 +15,6 @@ import {
 } from '@cdo/apps/weblab2/types';
 
 import moduleStyles from './edit-ai-tutor-prompt-settings.module.scss';
-
-const ANSWER_TYPE_TO_CONTRACT: Record<string, string> = {
-  ask: askContract,
-  buildCSS: buildCSSContract,
-  buildHTML: buildHTMLContract,
-  buildJavaScript: buildJavaScriptContract,
-  buildJSON: buildJSONContract,
-  debug: debugContract,
-  documentation: documentationContract,
-  example: exampleContract,
-  explainCode: explainCodeContract,
-  hint: hintContract,
-  pseudocode: pseudocodeContract,
-  testCase: testCaseContract,
-};
 
 const TOGGLEABLE_TUTOR_ANSWER_TYPES = [
   'ask',
@@ -149,7 +123,7 @@ const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
               </summary>
               <div className={moduleStyles.contractContent}>
                 <EnhancedSafeMarkdown
-                  markdown={ANSWER_TYPE_TO_CONTRACT[answerType]}
+                  markdown={ANSWER_TYPE_CONTRACTS[answerType]}
                 />
               </div>
               <textarea
