@@ -172,8 +172,8 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
     let(:cookie_key) {environment_specific_cookie_name(Cdo::Brand::BRAND_COOKIE_NAME)}
 
     before do
+      DCDO.stubs(:get)
       DCDO.stubs(:get).with('brand-router-enabled', false).returns(true)
-      DCDO.stubs(:get).with('global_edition_enabled', false).returns(false)
     end
 
     it 'does nothing when brand router is disabled' do
@@ -184,7 +184,7 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
 
     it 'sets brand cookie from URL param' do
       get root_path, params: {brand: 'codeai'}
-      assert_equal 'codeai', cookies[cookie_key]
+      assert_equal 'codeai', response.cookies[cookie_key]
     end
 
     it 'ignores unknown brand codes' do
@@ -195,7 +195,7 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
     it 'clears brand cookie on brand-reset' do
       cookies[cookie_key] = 'codeai'
       get root_path, params: {'brand-reset' => '1'}
-      assert_nil cookies[cookie_key]
+      assert_nil response.cookies[cookie_key]
     end
 
     it 'does not set cookie when no brand param present' do
