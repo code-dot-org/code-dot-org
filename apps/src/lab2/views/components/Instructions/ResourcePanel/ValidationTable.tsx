@@ -27,6 +27,8 @@ const ValidationTable: React.FunctionComponent<ValidationResultsProps> = ({
     state => state.lab.validationState.validationResults
   );
 
+  // Fire an event when validation results are first available.
+  // This is used by the validation intro tour to auto-advance the tour.
   useEffect(() => {
     if (validationResults) {
       document
