@@ -16,6 +16,23 @@ variable "kubernetes_version" {
   default     = "1.35"
 }
 
+variable "cluster_admin_role_arns" {
+  description = "IAM role ARNs granted EKS cluster-admin access and KMS key administration for secrets encryption."
+  type        = list(string)
+  default = [
+    "arn:aws:iam::475661607190:role/Engineering_FullAccess",
+    "arn:aws:iam::475661607190:role/GoogleSignInAdmin",
+  ]
+}
+
+variable "cluster_readonly_role_arns" {
+  description = "IAM role ARNs granted read-only EKS cluster access."
+  type        = list(string)
+  default = [
+    "arn:aws:iam::475661607190:role/Engineering_ReadOnly",
+  ]
+}
+
 variable "vpc_id" {
   description = "Existing VPC ID to use for EKS and subnet resources."
   type        = string
