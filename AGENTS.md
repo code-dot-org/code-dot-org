@@ -19,8 +19,7 @@
 - Some non-rails ruby code also lives in `lib/`
 - We use CanCanCan for authorization and Devise for authentication
 - Use `bundle exec` to run ruby commands (exception: most ./bin/* commands automatically load the rails environment)
-- To execute/test Ruby / Rails code snippets (recommended!), use `./bin/rails runner` from the `dashboard/` directory. note: expect ~30s to start
-- `./bin/dashboard-console-skip-reload` can be used to more quickly launch `rails console` / `./bin/dashboard-console`. note: expect ~15s to start
+- To execute/test Ruby / Rails code snippets (recommended!), use `./bin/rails runner` from the `dashboard/` directory.
 - `./bin/mysql-client-dashboard-reader` can be used to safely query the local db with SQL commands
 - `./bin/mysql-client-dashboard-writer` is also available, but is not safe and usage should be approved by the user first
 - `config/*.yml.erb` (e.g. `config/development.yml.erb`) contains per-rails-env configuration, also related to local config keys settable in locals.yml. API keys, passwords, etc are often set using this system.
