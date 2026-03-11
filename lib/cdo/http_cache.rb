@@ -138,6 +138,98 @@ class HttpCache
     ].concat(default_cookies)
 
     {
+      pegasus: {
+        behaviors: [
+          # NextJS assets path for the marketing app
+          {
+            path: '/_next/static/*',
+            proxy: 'marketing',
+            headers: [],
+            cookies: default_cookies,
+            include_marketing_router_lambda: true,
+          },
+          # NextJS dynamic image api
+          {
+            path: '/_next/image',
+            proxy: 'marketing',
+            headers: ALLOWLISTED_HEADERS,
+            cookies: 'none',
+            include_marketing_router_lambda: true,
+          },
+          {
+            # Serve Sprockets-bundled assets directly from the S3 bucket synced via `assets:precompile`.
+            #
+            path: '/assets/*',
+            proxy: 'cdo-assets',
+            headers: S3_FORWARD_HEADERS,
+            cookies: 'none',
+            include_marketing_router_lambda: true,
+          },
+          # For .png images, don't forward any cookies or additional headers.
+          {
+            path: '/*.png',
+            headers: [],
+            cookies: 'none',
+            include_marketing_router_lambda: true,
+          },
+          # For static-asset paths, don't forward any cookies or additional headers.
+          {
+            path: STATIC_ASSET_EXTENSION_PATHS - %w(/*.png) + %w(/files/* /images/* /fonts/*),
+            headers: [],
+            cookies: 'none',
+            include_marketing_router_lambda: true,
+          },
+          # Dashboard-based API paths in Pegasus are session-specific, allowlist all cookies.
+          {
+            path: %w(
+              /v2/*
+              /v3/*
+              /private*
+            ) +
+              # TODO: Collapse these paths into /private to simplify Pegasus caching config.
+              %w(
+                /amazon-future-engineer*
+                /manage-professional-development-workshops*
+                /professional-development-workshop-surveys*
+                /pd-program-registration*
+                /poste*
+              ),
+            headers: ALLOWLISTED_HEADERS,
+            cookies: allowlisted_cookies,
+            include_marketing_router_lambda: true,
+          },
+          {
+            path: '/dashboardapi/*',
+            proxy: 'dashboard',
+            headers: ALLOWLISTED_HEADERS,
+            cookies: allowlisted_cookies,
+            include_marketing_router_lambda: true,
+          },
+          {
+            path: '/i18n/track_string_usage',
+            proxy: 'dashboard',
+            headers: ALLOWLISTED_HEADERS,
+            cookies: allowlisted_cookies,
+            include_marketing_router_lambda: true,
+          },
+          # Cached paths that specifically filter query-parameters.
+          {
+            path: %w(
+              /
+            ),
+            query: false,
+            headers: ALLOWLISTED_HEADERS,
+            cookies: default_cookies,
+            include_marketing_router_lambda: true,
+          },
+        ],
+        # Remaining Pegasus paths are cached, and vary only on language, country, and default cookies.
+        default: {
+          headers: LANGUAGE_HEADER + COUNTRY_HEADER,
+          cookies: default_cookies,
+          include_marketing_router_lambda: true,
+        }
+      },
       dashboard: {
         behaviors: [
           {
