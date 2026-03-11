@@ -1,7 +1,7 @@
 import {Output} from 'ai';
 import z from 'zod/v3';
 
-import {generateText} from '@cdo/apps/aiGateway/generateTextThroughProxyOrGateway';
+import {generateText} from '@cdo/apps/aiGateway';
 import {moderateImage} from '@cdo/apps/lab2/utils';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
