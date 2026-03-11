@@ -1,0 +1,58 @@
+name 'self-paced-TCaAI-L2-Lesson4'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Milestone 2 Lesson Overviews
+
+## Lesson 4: Guidelines for Working with AI
+
+#### Lesson 4 is a **Develop & Critique** lesson. Students synthesize evidence from their explorations and establish clear boundaries to ensure AI remains a tool for support rather than a replacement for human creativity. This lesson completes the Co-Creation Guidelines portion of the final project.
+
+### **📝 Lesson Overview**
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block; width: 100%"> <a href="https://studio.code.org/courses/aid-thinking-critically-about-ai-2025/units/1/lessons/4" target="blank" rel="noopener noreferrer">Access Lesson 4: Guidelines for Working with AI</a> </p> 
+
+<!-- Warm Up --> 
+<details style="background-color: #ececec; padding: 12px; margin-top: 15px; margin-bottom: 15px; border-radius: 6px;"> 
+<summary style="font-size: 13pt; font-weight: bold;">Warm Up (5 minutes)</summary> 
+<div style="margin-top: 12px; font-size: 13pt; line-height: 1.4;"> 
+  <p style="font-size: 13pt"> Students revisit the previous lesson’s explorations and mini-lessons, recalling the Campaign Managers, Creative Writers, and Content Creators pathways as well as ethical topics such as environmental impact, human skills, and artist rights.</p> 
+  <p style="font-size: 13pt"> This discussion helps students shift from individual experimentation to shared synthesis, preparing them to identify patterns across experiences. </p> 
+</div> 
+</details> 
+
+<!-- Activity --> 
+<details style="background-color: #ececec; padding: 12px; margin-bottom: 15px; border-radius: 6px;"> 
+  <summary style="font-size: 13pt; font-weight: bold;">Activity (35 minutes)</summary> 
+  <div style="margin-top: 12px; font-size: 13pt; line-height: 1.4;"> 
+    <p style="font-size: 14pt; line-height: 1.4;"><b>🔄 Jigsaw Synthesis</b></p> <p style="font-size: 13pt"> Students first meet in <strong>Expert Groups</strong> based on their exploration pathway. Using their color-coded drafts, they analyze where AI began to overshadow human voice, where personal values were preserved, and what specific human input mattered most. </p> 
+    <p style="font-size: 13pt"> Students then reorganize into <strong>Jigsaw Groups</strong> to share findings across creative domains. Rather than retelling steps, they focus on identifying patterns, rules, and tipping points that apply across all contexts of co-creation. </p> 
+    <br>
+    <p style="font-size: 14pt"><b>🧾 Project Work</b></p> <p style="font-size: 13pt"> Using their evidence from explorations and jigsaw conversations, students draft the <strong>Co-Creation with AI Guidelines</strong> section of their Responsible AI Use Guide. They are expected to cite specific examples from their testing and clearly articulate when AI is helpful and when human judgment must lead. </p> 
+    
+  <!-- PBL Callout --> <div style="background-color: #F5F7F8; padding: 15px; border-radius: 10px; margin: 18px 0; display: flex; align-items: flex-start; gap: 12px;"> <img src="https://images.code.org/b553f8594e621f659863b8fcb8b13c42-image-1772670604477.png" alt="" style="width: 40px; height: 40px;"> <div> <p style="font-size: 12pt; font-weight: bold; margin: 0;">PBL Design Element: Critique &amp; Revision</p> <p style="font-size: 12pt; font-style: italic; margin: 5px 0 0 0; line-height: 1.3;"> Students refine their thinking by analyzing evidence, identifying patterns, and drafting actionable guidance based on peer synthesis. </p> 
+  </div> 
+  </div> 
+  </div> 
+</details> 
+  
+<!-- Wrap Up --> 
+<details style="background-color: #ececec; padding: 12px; margin-bottom: 15px; border-radius: 6px;"> 
+  <summary style="font-size: 13pt; font-weight: bold;">Wrap Up (5 minutes)</summary> 
+  <div style="margin-top: 12px; font-size: 13pt; line-height: 1.4;"> 
+    <p style="font-size: 13pt"> Students add a new question to the <strong>Want to Know</strong> column of their KWL Chart, reflecting on tensions such as authorship, bias, or skill development. </p> 
+    <p style="font-size: 13pt"> Close by reinforcing the guiding question: <em>When I use AI, who is in control and where should I draw the line?</em></p> 
+  </div> 
+</details>
+
+### **🧾 What to Prepare:**
+* #### Ensure students bring their Milestone 2 Learning Log and KWL Chart.
+* #### Make a copy of the Lesson 4 slides and review timing for Expert and Jigsaw groups.
+* #### Prepare clear instructions for transitioning between Expert and Jigsaw groups.
+* #### Review the checklist in the Learning Log so students understand expectations for the Co-Creation Guidelines section.
+  
+### **💡 Tips for Teaching:**
+* #### Push for evidence-based guidelines. Each rule should be tied to a specific example from student testing.
+* #### Encourage nuance from students - have them avoid “always” and “never” statements.
+* #### Support students who give general answers by prompting them to cite a concrete moment from their exploration.
+MARKDOWN
