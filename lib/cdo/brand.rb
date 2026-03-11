@@ -9,7 +9,7 @@ module Cdo
   class Brand
     # Brand code enum
     BRAND_CODE_ORG = 'code'.freeze
-    BRAND_CODE_CODEAI = 'codeai'.freeze
+    BRAND_CODEAI = 'codeai'.freeze
 
     # Base cookie name for brand persistence (env suffix added by environment_specific_cookie_name)
     BRAND_COOKIE_NAME = 'brand'.freeze

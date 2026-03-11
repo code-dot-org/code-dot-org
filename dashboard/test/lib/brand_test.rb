@@ -23,14 +23,14 @@ class BrandTest < ActiveSupport::TestCase
   test 'returns codeai brand from URL param when router enabled' do
     DCDO.stubs(:get).with('brand-router-enabled', false).returns(true)
     request = mock_request(params: {'brand' => 'codeai'})
-    assert_equal Cdo::Brand::BRAND_CODE_CODEAI, Cdo::Brand.current_brand_code(request)
+    assert_equal Cdo::Brand::BRAND_CODEAI, Cdo::Brand.current_brand_code(request)
   end
 
   test 'returns codeai brand from cookie when router enabled' do
     DCDO.stubs(:get).with('brand-router-enabled', false).returns(true)
     cookie_key = environment_specific_cookie_name(Cdo::Brand::BRAND_COOKIE_NAME)
     request = mock_request(cookies: {cookie_key => 'codeai'})
-    assert_equal Cdo::Brand::BRAND_CODE_CODEAI, Cdo::Brand.current_brand_code(request)
+    assert_equal Cdo::Brand::BRAND_CODEAI, Cdo::Brand.current_brand_code(request)
   end
 
   test 'URL param takes priority over cookie' do
