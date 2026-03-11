@@ -171,6 +171,7 @@ class S3PackagingTest < Minitest::Test
     assert @packager.upload_package_to_s3(@packager.create_package('/build'))
 
     # try uploading a different package under the same name, it fails
+    @packager.instance_variable_get(:@logger).expects(:warn).with(includes('Packages differed:'))
     threw = false
     begin
       refute @packager.upload_package_to_s3(@packager.create_package('/src'))

@@ -79,7 +79,6 @@ export default function initPage(unitEditorData) {
         initialWeeklyInstructionalMinutes={
           scriptData.weeklyInstructionalMinutes
         }
-        initialAiRubricS3Config={scriptData.aiRubricS3Config}
         initialCourseVersionId={scriptData.courseVersionId}
         isMigrated={scriptData.is_migrated}
         initialIncludeStudentLessonPlans={

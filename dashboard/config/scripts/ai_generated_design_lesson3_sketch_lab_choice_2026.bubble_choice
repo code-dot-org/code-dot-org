@@ -1,10 +1,10 @@
 name 'ai-generated-design-lesson3-sketch-lab-choice_2026'
 display_name 'Plan Your AI Prompt'
-description 'Plan your prompt for AI Tutor in Sketch Lab. Choose from one of the personas below and design a web app to meet their needs..'
+description 'Plan your prompt for AI Tutor in a markdown file. Choose from one of the personas below and design a web app to meet their needs.'
 
 sublevels
-level 'ai-generated-design-lesson3-sketch-lab_2026'
-level 'ai-generated-design-lesson3-sketch-lab-b_2026'
-level 'ai-generated-design-lesson3-sketch-lab-c_2026'
+level 'ai-generated-design-lesson3-level1-prompting_2026'
+level 'ai-generated-design-lesson3-level1b-prompting_2026'
+level 'ai-generated-design-lesson3-level1c-prompting_2026'
 
 uses_lab2
