@@ -92,7 +92,7 @@ const acceptRejectCodeFileTypes = ['html', 'css', 'js', 'json'];
 
 /**
  * Validates that all files have file types that are supported in the accept-reject flow.
- * Returns true if all files are html, css, or js files.
+ * Returns true if all files are of supported types, false otherwise.
  */
 export const isAcceptRejectCodeFileTypes = (
   files: Array<{name: string}>
