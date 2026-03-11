@@ -278,6 +278,7 @@ class Unit < ApplicationRecord
     content_area
     topic_tags
     enable_blockly_keyboard_navigation
+    ai_rubric_s3_config
   )
 
   def self.hoc_2014_unit
@@ -1319,6 +1320,7 @@ class Unit < ApplicationRecord
         scriptPath: unit_path,
         showCalendar: is_migrated ? show_calendar : false, #prevent calendar from showing for non-migrated units for now
         weeklyInstructionalMinutes: weekly_instructional_minutes,
+        aiRubricS3Config: ai_rubric_s3_config,
         includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false,
         useLegacyLessonPlans: is_migrated && use_legacy_lesson_plans,
         courseVersionId: unit_group_unit&.cached_unit_group&.course_version&.id,
@@ -1614,7 +1616,8 @@ class Unit < ApplicationRecord
       :curriculum_umbrella,
       :weekly_instructional_minutes,
       :content_area,
-      :topic_tags
+      :topic_tags,
+      :ai_rubric_s3_config
     ]
     boolean_keys = [
       :has_unnumbered_lessons,
