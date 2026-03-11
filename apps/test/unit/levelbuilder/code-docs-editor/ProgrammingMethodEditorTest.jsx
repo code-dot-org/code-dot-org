@@ -190,7 +190,6 @@ describe('ProgrammingMethodEditor', () => {
     await act(async () => {
       saveAndCloseButton.simulate('click');
     });
-    wrapper.update();
 
     expect(fetchSpy).to.be.called.once;
     const fetchCall = fetchSpy.getCall(0);
