@@ -12,7 +12,7 @@ export default function HelpTip({children}) {
   return (
     <span data-for={id} data-tip>
       <FontAwesome
-        icon="question-circle-o"
+        icon="question-circle"
         style={{cursor: 'pointer', marginLeft: '0.5em', marginRight: '0.5em'}}
       />
       <Portal>

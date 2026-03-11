@@ -274,7 +274,7 @@ const LoginTypeSelection: React.FunctionComponent<{
               startIcon={
                 <FontAwesomeV6Icon
                   iconName="brands fa-microsoft"
-                  iconStyle="light"
+                  iconStyle="regular"
                 />
               }
             >

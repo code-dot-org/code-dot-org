@@ -327,7 +327,7 @@ export default function WorkshopEnrollmentCelebrationDialog({
                       color={'black'}
                       iconLeft={{
                         iconName: 'brands fa-apple',
-                        iconStyle: 'light',
+                        iconStyle: 'regular',
                       }}
                       onClick={() =>
                         onClickAddToCalendar(workshopSessionInfo, 'Apple')
@@ -341,7 +341,7 @@ export default function WorkshopEnrollmentCelebrationDialog({
                           color={'black'}
                           iconLeft={{
                             iconName: 'brands fa-google',
-                            iconStyle: 'light',
+                            iconStyle: 'regular',
                           }}
                           onClick={() => setMultipleSessionDialogType('Google')}
                         />
@@ -351,7 +351,7 @@ export default function WorkshopEnrollmentCelebrationDialog({
                           color={'black'}
                           iconLeft={{
                             iconName: 'brands fa-microsoft',
-                            iconStyle: 'light',
+                            iconStyle: 'regular',
                           }}
                           onClick={() =>
                             setMultipleSessionDialogType('Outlook')
@@ -369,7 +369,7 @@ export default function WorkshopEnrollmentCelebrationDialog({
                           color={'black'}
                           iconLeft={{
                             iconName: 'brands fa-google',
-                            iconStyle: 'light',
+                            iconStyle: 'regular',
                           }}
                           onClick={() =>
                             onClickAddToCalendar(
@@ -387,7 +387,7 @@ export default function WorkshopEnrollmentCelebrationDialog({
                           color={'black'}
                           iconLeft={{
                             iconName: 'brands fa-microsoft',
-                            iconStyle: 'light',
+                            iconStyle: 'regular',
                           }}
                           onClick={() =>
                             onClickAddToCalendar(

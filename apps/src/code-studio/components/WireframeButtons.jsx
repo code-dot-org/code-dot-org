@@ -92,7 +92,7 @@ const ViewCodeButton = () => (
 const NewProjectButton = ({url}) => (
   <span style={{display: 'inline-block'}}>
     <a className="WireframeButtons_button" href={url}>
-      <i className="fa fa-pencil-square-o" /> {i18n.makeMyOwn()}
+      <i className="fa fa-pen-to-square" /> {i18n.makeMyOwn()}
     </a>
   </span>
 );

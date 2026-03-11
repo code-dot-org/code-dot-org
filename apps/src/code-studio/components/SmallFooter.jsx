@@ -226,7 +226,7 @@ export default class SmallFooter extends React.Component {
         aria-label={i18n.copyrightInfoButton()}
         type="button"
       >
-        <FontAwesomeV6Icon iconName="copyright" iconStyle="light" />
+        <FontAwesomeV6Icon iconName="copyright" iconStyle="regular" />
       </MuiIconButton>
     );
   }

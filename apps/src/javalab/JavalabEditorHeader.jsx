@@ -58,7 +58,7 @@ function JavalabEditorHeader({
       <PaneButton
         id="data-mode-versions-header"
         isLegacyStyles
-        iconClass="fa fa-clock-o"
+        iconClass="fa fa-clock"
         label={msg.showVersionsHeader()}
         headerHasFocus
         isRtl={false}
