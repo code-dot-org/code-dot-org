@@ -1,11 +1,12 @@
 import React from 'react';
 
-import ValidationButton from '../ValidationButton';
+import ValidationButton from '@cdo/apps/lab2/views/components/Instructions/ValidationButton';
 
 import {
   resourcePanelValidationTableElementId,
   resourcePanelValidateButtonElementId,
-} from './constants';
+} from '../constants';
+
 import ValidationTable from './ValidationTable';
 
 import validationStyles from './validation-panel.module.scss';

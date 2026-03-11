@@ -3,7 +3,7 @@ import {Theme} from '@code-dot-org/component-library/common/contexts';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import React from 'react';
 
-import styles from './styles.module.scss';
+import styles from '../styles.module.scss';
 
 interface ButtonWithDialogProps {
   text: string;

@@ -1,4 +1,4 @@
-import styles from './styles.module.scss';
+import styles from '../styles.module.scss';
 
 /**
  * Shows or hides the page small footer, which is rendered by the server in HAML.
