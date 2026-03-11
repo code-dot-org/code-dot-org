@@ -121,7 +121,7 @@ const aichatSlice = createSlice({
         // We always reset conversation history when the user clears the chat.
         // In addition, for AI Chat lab, clear the history when the model changes, as the user controls model changes.
         if (
-          (state.clientType !== AiChatClientTypes.AI_CHAT_LAB &&
+          (state.clientType === AiChatClientTypes.AI_CHAT_LAB &&
             isModelUpdate(event) &&
             RESET_CONVERSATION_CUSTOMIZATION_UPDATES.includes(
               event.updatedField
