@@ -3,7 +3,7 @@
 #
 # This is currently an experimental feature, see: k8s/experimental.yaml
 
-apiVersion: skaffold/v4beta12
+apiVersion: skaffold/v4beta13
 kind: Config
 build:
   artifacts:
@@ -80,8 +80,8 @@ deploy:
           # https://github.com/GoogleContainerTools/skaffold/issues/2479
           # If we find a solution, we can drop this override:
           user.username: root
-          user.uid: 0
-          user.gid: 0
+          user.uid: "0"
+          user.gid: "0"
           user.home: /home/root
         valuesFiles:
           # This list will be extended by skaffold profiles e.g.: k8s/helm/development.values.yaml
