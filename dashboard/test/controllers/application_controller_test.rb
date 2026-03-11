@@ -173,6 +173,7 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
 
     before do
       DCDO.stubs(:get).with('brand-router-enabled', false).returns(true)
+      DCDO.stubs(:get).with('global_edition_enabled', false).returns(false)
     end
 
     it 'does nothing when brand router is disabled' do

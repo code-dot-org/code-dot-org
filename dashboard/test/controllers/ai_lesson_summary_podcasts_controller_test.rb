@@ -13,6 +13,8 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
 
   setup do
     DCDO.stubs(:get).with('brand-router-enabled', false).returns(false)
+    DCDO.stubs(:get).with('modularity', true).returns(true)
+    DCDO.stubs(:get).with('i18n_string_tracking', false).returns(false)
   end
 
   # *****
