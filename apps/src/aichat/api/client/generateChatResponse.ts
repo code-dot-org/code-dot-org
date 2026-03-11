@@ -1,6 +1,6 @@
 import {type ModelMessage} from 'ai';
 
-import {generateText} from '@cdo/apps/aiGateway/generateTextThroughProxyOrGateway';
+import {generateText} from '@cdo/apps/aiGateway';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {AiRequestExecutionStatus} from '@cdo/generated-scripts/sharedConstants';

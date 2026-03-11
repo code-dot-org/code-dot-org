@@ -31,3 +31,7 @@ export function getModel(modelId: ValueOf<typeof AiChatModelIds>) {
   }
   return modelMap[modelId]!;
 }
+
+export function getTranscriptionModel() {
+  return openAiProvider.transcription('whisper-1');
+}
