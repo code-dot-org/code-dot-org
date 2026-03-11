@@ -1,46 +1,102 @@
 @import 'shepherd.js/dist/css/shepherd.css';
 
+// Style the shepherd step container to approximately match the dsco popover.
 .custom-shepherd-step-container {
   font-family: Figtree, sans-serif;
+  color: var(--text-neutral-primary);
+  background-color: var(--background-neutral-primary);
+  box-shadow: 0 12px 40px rgb(28 45 94 / 16%);
+  border-radius: 8px;
+
+  &.shepherd-has-title .shepherd-content .shepherd-header {
+    background-color: var(--background-neutral-primary);
+    padding: 0;
+    margin-bottom: 8px;
+  }
+
+  &.shepherd-has-title .shepherd-content .shepherd-cancel-icon {
+    color: var(--text-neutral-tertiary);
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    &:hover {
+      color: var(--text-neutral-primary);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--borders-brand-teal-primary);
+      outline-offset: 2px;
+    }
+  }
+
+  .shepherd-content {
+    padding: 24px;
+  }
+
+  .shepherd-text {
+    padding: 0;
+    margin-bottom: 16px;
+    color: var(--text-neutral-tertiary);
+  }
+
+  .shepherd-footer {
+    padding: 0;
+    gap: 8px;
+  }
 
   h3 {
     font-size: 1.25rem;
     font-weight: 500;
-  }
-}
-
-// Aligned with purple primary button styles.
-.custom-shepherd-button-primary {
-  background-color: var(--background-brand-purple-primary);
-  color: var(--text-neutral-white-fixed);
-
-  &:not(:disabled):hover {
-    background-color: var(--background-brand-purple-strong);
+    line-height: 28px;
   }
 
-  &:disabled,
-  &[aria-disabled='true']  {
-      background-color: var(--background-neutral-disabled);
-      color: var(--text-neutral-disabled-inverse);
+  .shepherd-button {
+    margin: 0;
+    padding: 8px 16px;
+    transition: none;
+    font-size: 16px;
+    font-weight: 600;
   }
-}
 
-// Aligned with secondary black button styles.
-.custom-shepherd-button-secondary {
-  border: 1px solid var(--borders-neutral-solid);
-  background-color: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
+  .shepherd-button:focus-visible {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: 2px;
+  }
 
-  &:not(:disabled):hover {
-    background-color: var(--background-neutral-tertiary);
+  // Aligned with purple primary button styles.
+  .custom-shepherd-button-primary {
+    background: var(--background-brand-purple-primary);
+    color: var(--text-neutral-white-fixed);
+
+    &:not(:disabled):hover {
+      background: var(--background-brand-purple-strong);
+    }
+
+    &:disabled,
+    &[aria-disabled='true']  {
+        background: var(--background-neutral-disabled);
+        color: var(--text-neutral-disabled-inverse);
+    }
+  }
+
+  // Aligned with secondary black button styles.
+  .custom-shepherd-button-secondary {
     border: 1px solid var(--borders-neutral-solid);
-    color: var(--text-neutral-primary);
-  }
-
-  &:disabled,
-  &[aria-disabled='true'] {
-    border-color: var(--borders-neutral-disabled) !important;
-    color: var(--text-neutral-disabled);
     background-color: var(--background-neutral-primary);
+    color: var(--text-neutral-primary);
+
+    &:not(:disabled):hover {
+      background-color: var(--background-neutral-tertiary);
+      border: 1px solid var(--borders-neutral-solid);
+      color: var(--text-neutral-primary);
+    }
+
+    &:disabled,
+    &[aria-disabled='true'] {
+      border-color: var(--borders-neutral-disabled) !important;
+      color: var(--text-neutral-disabled);
+      background-color: var(--background-neutral-primary);
+    }
   }
 }
