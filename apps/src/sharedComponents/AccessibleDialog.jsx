@@ -22,6 +22,7 @@ function AccessibleDialog({
   onDeactivate = onClose,
   noMC = false, // exclude MineCraft button styles
   theme,
+  ariaLabel,
 }) {
   // If these styles are provided by the given stylesheet, use them
   const modalStyle = styles?.modal || defaultStyle.modal;
@@ -48,9 +49,9 @@ function AccessibleDialog({
           <div
             id={id}
             aria-modal
-            aria-labelledby={`${id}-title`}
             className={classnames(modalStyle, className)}
             role="dialog"
+            aria-label={ariaLabel}
           >
             <CloseButton
               id="ui-close-dialog"
@@ -79,6 +80,7 @@ AccessibleDialog.propTypes = {
   onDeactivate: PropTypes.func,
   noMC: PropTypes.bool,
   theme: PropTypes.string,
+  ariaLabel: PropTypes.string,
 };
 
 export default AccessibleDialog;
