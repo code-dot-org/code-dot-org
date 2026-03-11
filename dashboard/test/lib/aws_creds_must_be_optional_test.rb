@@ -24,6 +24,7 @@ class AWSCredsMustBeOptionalTest < ActiveSupport::TestCase
     LEGACY_SECRETS_THAT_ALREADY_BREAK_THINGS = %w(
       slack_bot_token
       openai_lesson_summaries_api_key
+      elevenlabs_api_key
       openai_student_learning_api_key
       langfuse_secret_key
       langfuse_public_key
@@ -40,6 +41,7 @@ class AWSCredsMustBeOptionalTest < ActiveSupport::TestCase
         we_have_aws_access = Aws::STS::Client.new.get_caller_identity rescue false
         raise "Test invalidated: we have AWS access here and should not" if we_have_aws_access
 
+        # Success! We ran `rails runner` without AWS access
         puts :rails_booted_without_aws
       RUBY
       chdir: Rails.root.to_s
