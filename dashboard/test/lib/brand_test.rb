@@ -60,9 +60,7 @@ class BrandTest < ActiveSupport::TestCase
     assert_equal 'Code.org', Cdo::Brand.legal_name
   end
 
-  private
-
-  def mock_request(params: {}, cookies: {})
+  private def mock_request(params: {}, cookies: {})
     request = stub('request')
     request.stubs(:params).returns(params.with_indifferent_access)
     request.stubs(:cookies).returns(cookies.with_indifferent_access)
