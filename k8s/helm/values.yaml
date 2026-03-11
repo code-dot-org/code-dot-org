@@ -52,6 +52,8 @@ user:
   home: /home/code-dot-org
   allowSudo: false
 
+# Use the AWS creds from your local machine inside the dashboard container
+# Tip: activate with the skaffold local-dev profile: `skaffold dev -p local-dev`
 localDev:
   mounts:
     mountDotAWS: false

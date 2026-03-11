@@ -121,6 +121,19 @@ profiles:
       path: /deploy/helm/releases/0/setValueTemplates/localDev.mounts.AWS_PROFILE
       value: '{{ cmd "sh" "-c" "echo $AWS_PROFILE" }}'
 
+# Mount local machine credential directories into the dashboard container so it can
+# use your local AWS and gcloud credentials. To use: `skaffold dev -p local-dev`
+- name: local-dev
+  patches:
+    - op: add
+      path: /deploy/helm/releases/0/setValues
+      value:
+        localDev:
+          mounts:
+            mountDotAWS: true
+            mountDotConfigGcloud: true
+
+# Run `rake dashboard:setup_db`, see k8s/README.md
 - name: setup-db
   patches:
       - op: add
@@ -130,6 +143,7 @@ profiles:
           name: setup-db
           args: ["cd dashboard && rake dashboard:setup_db && echo 'setup-db COMPLETE'"]
 
+# Create standard cdo-v3-* S3 buckets in minio.
 - name: setup-s3
   patches:
       - op: add

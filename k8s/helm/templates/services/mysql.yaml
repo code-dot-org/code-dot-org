@@ -42,6 +42,8 @@ spec:
             secretKeyRef:
               name: cdo-secrets-local
               key: _mysql_root_password
+        - name: MYSQL_DATABASE
+          value: {{ printf "dashboard_%s" .Values.RAILS_ENV | quote }}
         volumeMounts:
         - name: mysql-data
           mountPath: /var/lib/mysql/
