@@ -1,5 +1,8 @@
 require_relative "boot"
 
+$LOAD_PATH.unshift(File.expand_path("../../lib", __dir__))
+require "cdo"
+
 require "rails"
 require "action_controller/railtie"
 
