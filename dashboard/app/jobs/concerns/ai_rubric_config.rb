@@ -23,6 +23,7 @@ class AiRubricConfig
   # name of the lesson directory within the S3 release dir used for AI evaluation.
   # For example: {"CSD U3 Sprites scene challenge_2024" => "csd3-2023-L11"}
   def self.get_lesson_s3_name(script_level)
+    puts "get_lesson_s3_name: script_level.script.name=#{script_level.script.name} script_level.script.ai_rubric_s3_config=#{script_level.script.ai_rubric_s3_config.inspect}"
     script_level&.script&.ai_rubric_s3_config.try(:[], script_level&.level&.name)
   end
 
@@ -32,6 +33,7 @@ class AiRubricConfig
 
   def self.read_file_from_s3(lesson_s3_name, key_suffix, allow_missing: false)
     key = "#{S3_AI_RELEASE_PATH}#{lesson_s3_name}/#{key_suffix}"
+    puts "read_file_from_s3: lesson_s3_name=#{lesson_s3_name}, key_suffix=#{key_suffix}, allow_missing=#{allow_missing} key=#{key}"
     if [:development, :test].include?(rack_env) && File.exist?(File.join("local-aws", S3_AI_BUCKET, key))
       puts "Note: Reading AI prompt from local file: #{key}"
       File.read(File.join("local-aws", S3_AI_BUCKET, key))
@@ -59,6 +61,7 @@ class AiRubricConfig
   end
 
   def self.get_openai_params(lesson_s3_name, code)
+    puts "get_openai_params: lesson_s3_name=#{lesson_s3_name}"
     params = JSON.parse(read_file_from_s3(lesson_s3_name, 'params.json'))
     prompt = read_file_from_s3(lesson_s3_name, 'system_prompt.txt')
     rubric = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
@@ -74,6 +77,7 @@ class AiRubricConfig
   end
 
   def self.validate_ai_config
+    puts "AiRubricConfig.validate_ai_config"
     # use SQL query to effeciently narrow down the set of units we need to check, then verify the presence of the property to confirm.
     units_with_ai_config = Unit.where('properties like ?', '%ai_rubric_s3_config%').select {|u| u.ai_rubric_s3_config.present?}
     lesson_s3_names = units_with_ai_config.flat_map {|u| u.ai_rubric_s3_config.values}.uniq
@@ -86,12 +90,14 @@ class AiRubricConfig
   end
 
   def self.get_s3_learning_goals(lesson_s3_name)
+    puts "get_s3_learning_goals: lesson_s3_name=#{lesson_s3_name}"
     rubric_csv = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
     rubric_rows = CSV.parse(rubric_csv, headers: true).map(&:to_h)
     rubric_rows.map {|row| row['Key Concept']}
   end
 
   private_class_method def self.validate_ai_config_for_lesson(lesson_s3_name, code)
+    puts "validate_ai_config_for_lesson: lesson_s3_name=#{lesson_s3_name}"
     # this step should raise an error if any essential config files are missing
     # from the S3 release directory
     get_openai_params(lesson_s3_name, code)
@@ -104,6 +110,7 @@ class AiRubricConfig
   # goal in the rubric in S3.
   private_class_method def self.validate_learning_goals(units)
     units.each do |unit|
+      puts "validate_learning_goals: unit=#{unit.name} ai_rubric_s3_config=#{unit.ai_rubric_s3_config.inspect}"
       unit.ai_rubric_s3_config.each_key do |level_name|
         level = Level.find_by_name!(level_name)
         script_level = level.script_levels.select {|sl| sl.script.name == unit.name}.first
@@ -117,6 +124,7 @@ class AiRubricConfig
   end
 
   private_class_method def self.validate_learning_goals_for_rubric(rubric)
+    puts "validate_learning_goals_for_rubric: rubric=#{rubric.id}"
     lesson_s3_name = get_lesson_s3_name(rubric.get_script_level)
     db_learning_goals = rubric.learning_goals.select(&:ai_enabled).map(&:learning_goal)
     s3_learning_goals = get_s3_learning_goals(lesson_s3_name)

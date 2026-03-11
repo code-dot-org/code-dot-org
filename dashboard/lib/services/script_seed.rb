@@ -238,6 +238,8 @@ module Services
 
         seed_context.lesson_groups = import_lesson_groups(lesson_groups_data, seed_context)
         seed_context.lessons = import_lessons(lessons_data, seed_context)
+        first_lesson_script = seed_context.lessons.first.script
+        puts "imported lessons. first_lesson_script name=#{first_lesson_script.name} ai_rubric_s3_config=#{first_lesson_script.ai_rubric_s3_config.inspect}"
         seed_context.lesson_activities = import_lesson_activities(lesson_activities_data, seed_context)
         seed_context.activity_sections = import_activity_sections(activity_sections_data, seed_context)
 
@@ -305,6 +307,7 @@ module Services
       # reassess the pattern being used here.
       imported_script = Unit.find_by!(name: script_to_import.name)
       imported_script.run_callbacks(:save)
+      puts "import_script: name=#{imported_script.name} ai_rubric_s3_config=#{imported_script.ai_rubric_s3_config.inspect}"
       return imported_script
     end
 
@@ -722,6 +725,7 @@ module Services
     end
 
     def self.import_learning_goals(learning_goals_data, seed_context)
+      puts "import_learning_goals"
       learning_goals_to_import = learning_goals_data.map do |learning_goal_data|
         rubric = seed_context.lessons.find {|l| l.key == learning_goal_data['seeding_key']['lesson.key']}.rubric
         raise 'No rubric found' if rubric.nil?
