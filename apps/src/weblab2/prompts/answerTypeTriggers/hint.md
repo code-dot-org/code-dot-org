@@ -1,1 +1,1 @@
-**Hint**: Trigger when student needs a quick hint on a concept
+**hint**: Trigger when student needs a quick hint on a concept

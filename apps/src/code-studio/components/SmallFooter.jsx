@@ -76,12 +76,10 @@ export default class SmallFooter extends React.Component {
     );
 
     localization.on('change', info => {
-      debounce(() => {
-        this.setState({
-          localeOptions: localization.locales,
-          currentLocale: info.locale,
-        });
-      }, 100);
+      this.setState({
+        localeOptions: localization.locales,
+        currentLocale: info.locale,
+      });
     });
   }
 
