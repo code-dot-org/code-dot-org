@@ -8967,14 +8967,7 @@
 
   ],
   "rubrics": [
-    {
-      "level_name": "ai-generated-design-lesson6-level8_2026-v2",
-      "seeding_key": {
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-pilot-2025"
-      }
-    }
+
   ],
   "learning_goals": [
 
