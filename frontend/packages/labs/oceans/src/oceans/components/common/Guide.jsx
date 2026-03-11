@@ -42,7 +42,7 @@ let UnwrappedGuide = class Guide extends React.Component {
       this.guideDialogRef &&
       this.guideDialogRef.current
     ) {
-      this.guideDialogRef.current.focus();
+      this.guideDialogRef.current.focus({focusVisible: false});
       this.lastFocusedGuideId = currentGuideId;
     } else if (!currentGuide) {
       this.lastFocusedGuideId = null;
@@ -53,7 +53,7 @@ let UnwrappedGuide = class Guide extends React.Component {
     setState({guideShowing: true, guideTypingTimer: undefined});
   }
 
-  onGuideKeyDown = (e) => {
+  onGuideKeyDown = e => {
     if (e.key === ' ' || e.key === 'Enter' || e.key === 'Spacebar') {
       e.preventDefault();
       this.onGuideClick();
@@ -74,14 +74,18 @@ let UnwrappedGuide = class Guide extends React.Component {
         {skipCallback: true}
       );
     } else {
-      // This click did not start text to speech, so attempt
-      // to dismiss the guide.
-      const dismissed = guide.dismissCurrentGuide();
-      if (dismissed) {
-        if (state.textToSpeechLocale) {
-          stopTextToSpeech();
+      // Make sure we don't try and dismiss a guide if it's
+      // not modal.
+      if (currentGuide && !currentGuide.noDimBackground) {
+        // This click did not start text to speech, so attempt
+        // to dismiss the guide.
+        const dismissed = guide.dismissCurrentGuide();
+        if (dismissed) {
+          if (state.textToSpeechLocale) {
+            stopTextToSpeech();
+          }
+          soundLibrary.playSound('other');
         }
-        soundLibrary.playSound('other');
       }
     }
   };
@@ -101,10 +105,7 @@ let UnwrappedGuide = class Guide extends React.Component {
     // Do nothing if there is no current guide, or if we've already started
     // text to speech for the current guide (which might have finished
     // playing by now).
-    if (
-      !currentGuide ||
-      state.textToSpeechCurrentGuide === currentGuide
-    ) {
+    if (!currentGuide || state.textToSpeechCurrentGuide === currentGuide) {
       return false;
     }
 
@@ -183,14 +184,9 @@ let UnwrappedGuide = class Guide extends React.Component {
               key={currentGuide.id}
               style={guideBgStyle}
               onClick={this.onGuideClick}
-              onKeyDown={this.onGuideKeyDown}
-              tabIndex={0}
-              role="button"
-              aria-label={I18n.t('continue')}
               id="uitest-dismiss-guide"
             >
               <div
-                ref={this.guideDialogRef}
                 aria-labelledby="guide-heading"
                 tabIndex={-1}
                 className="guide-dialog"
@@ -206,11 +202,6 @@ let UnwrappedGuide = class Guide extends React.Component {
                     </div>
                   )}
 
-
-                  {/* Visually hidden aria-live region for screen readers */}
-                  <div style={{position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden'}} aria-live="polite">
-                    {currentGuide.textFn(getState())}
-                  </div>
                   {/* Visible Typist animation for sighted users */}
                   <div style={styles.guideTypingText} aria-hidden="true">
                     <Typist
@@ -230,7 +221,13 @@ let UnwrappedGuide = class Guide extends React.Component {
                         : styles.guideFinalTextContainer
                     }
                   >
-                    <div style={styles.guideFinalText} aria-hidden="true">
+                    <div
+                      ref={this.guideDialogRef}
+                      aria-live="polite"
+                      tabIndex={0}
+                      onKeyDown={this.onGuideKeyDown}
+                      style={styles.guideFinalText}
+                    >
                       {currentGuide.textFn(getState())}
                     </div>
                   </div>
