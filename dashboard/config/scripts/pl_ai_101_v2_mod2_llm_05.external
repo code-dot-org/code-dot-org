@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Prompting Large Language Models
 
-#### You may be familiar with one or more of the following AI tools:
+#### Let's try out working with a Large Language Model. You may be familiar with one or more of the following:
 
 <div style="display:flex;justify-content:space-between;align-items:center;width:95%;margin:20pt auto;padding:0 5px;">
 <div style="width:20%;text-align:center;">
@@ -29,7 +29,7 @@ markdown <<MARKDOWN
 
 #### Most consumer AI tools, including all of the above, are now **multimodal**, meaning they can work with more than just text. They can understand and create content using text, images, audio, and sometimes video.
 
-#### Users interact with these tools using prompts, usually through a AI chat interface.
+#### Users interact with these tools by writing **prompts** in an AI chat interface. How you word and structure your prompt will have a large effect on the output produced by the LLM.
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Prompt Engineering:</strong> A technique that involves refining and adjusting the inputs given to AI models to achieve more accurate or desired outputs.</p>
