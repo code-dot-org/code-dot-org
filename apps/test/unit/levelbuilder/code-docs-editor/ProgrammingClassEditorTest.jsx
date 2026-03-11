@@ -154,7 +154,6 @@ describe('ProgrammingClassEditor', () => {
 
     const saveAndCloseButton = saveBar.find('button').at(2);
     expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
-    saveAndCloseButton.simulate('click');
     await act(async () => {
       saveAndCloseButton.simulate('click');
     });
