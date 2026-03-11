@@ -1,6 +1,7 @@
 RAILS_ENV: production
-autoscaling.enabled: true
-autoscaling.minReplicas: 1
-autoscaling.maxReplicas: 10
+autoscaling:
+  enabled: true
+  minReplicas: 1
+  maxReplicas: 10
 healthChecks:
   enabled: true
