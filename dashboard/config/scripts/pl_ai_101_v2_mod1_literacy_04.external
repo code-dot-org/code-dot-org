@@ -1,58 +1,156 @@
 name 'pl-ai-101-V2-mod1-literacy-04'
 title 'title'
 description 'description here'
+display_name 'Elementary School'
+bubble_choice_description 'Explore AI Literacy Skills with Elementary School Examples'
+thumbnail_url 'https://images.code.org/5394516c25f360d45e47665aa5eecd86-Screenshot 2026-02-13 at 1.22.31 PM.png'
 
 markdown <<MARKDOWN
-# AI Chat Lab Overview
+# AI Literacy Skills, Elementary
 
 
-<img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="Code.org AI bot character" style="border-radius:40px; float: right; padding-right: 12px; height: 225px; clear: both; margin: 0 10px 10px 0;">
-
-## Working with AI
-
-#### Throughout the AI Foundations Curriculum, students will have the opportunity to interact with an AI Chatbot.
-
-#### Code.org has created an **AI Chat Lab** that is safe for student use and embedded into the curriculum seamlessly so students can engage with generative AI in an authentic and secure way without leaving the platform.
-
-## Why use AI?
-
-#### By working with AI in a structured and responsible setting, students will learn how to engage ethically with these technologies, use AI as a tool for problem-solving, and develop essential skills for the future of work. 
-
-#### Understanding how to interact with AI effectively will prepare them to navigate an increasingly AI-driven world with confidence and critical thinking.
-<br>
-
----
-#### To ensure safety and appropriate use, a pop-up message displays before each use of the Chat Lab. 
-
-<div style="background-color: #FFFFFF; color: #000000; padding: 15px; border-radius: 5px; width: 90%; margin: 20px auto; border: 4px solid #000000; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); position: relative;">
-    
-    <!-- Close Button -->
-    <span style="position: absolute; top: 10px; right: 10px; font-size: 20pt; font-weight: bold; border: 2px solid black; border-radius: 2px; padding: 0 10px; cursor: pointer; line-height: 1;">X</span>
-    
-<h2>Remember to chat responsibly!</h2>
-    <hr>
-
-<div style="font-size: 14pt; line-height: 1.5; margin-top: 10px; padding-left: 10px;">
-        <p style="font-size: 14pt;"><b>All messages you send will be visible to your teacher, including blocked messages.</b></p>
-        <p style="font-size: 14pt;">Inappropriate messages will be flagged by our content moderation policy.</p>
-        <p style="font-size: 14pt;">All unsaved changes will be lost.</p>
-        <p style="font-size: 14pt;">In order to protect your privacy, anything considered personal information (name, phone number, address, etc.) should not be submitted.</p>
-    </div>
-
-<hr>
-
-<!-- Start Chatting Button -->
-<div align="right">
-  <a href="#start" style="background-color: #8c52ba; color: #ffffff; text-decoration: none; padding: 10px 20px; font-size: 14pt; border-radius: 8px; display: inline-block;">
-    Start Chatting
-  </a>
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">1. Recognize and Explain AI in Everyday Life</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+<p style="font-size: 18px">Students can identify when AI is being used and describe how it works in realistic terms.</p>
+<p style="font-size: 16px">
+<strong>Examples:</strong></p>
+ <ul style="font-size: 16px">
+  <li>Identify tools that use AI (voice assistants, recommendations, filters).</li>
+  <li>Explain that AI uses patterns from data to make suggestions.</li>
+  <li>Describe what information AI uses (inputs) and what it produces (outputs).</li>
+  <li>Avoid saying AI “thinks” or “feels.”</li>
+ </ul>
+ 
+<p style="font-size: 16px"><strong>Why it Matters:</strong> Students must first see AI clearly before they can evaluate or manage it — recognizing AI is the first step to using it responsibly and critically.</p>
 </div>
+</details>
 
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">2. Evaluate AI Outputs for Accuracy, Bias, and Relevance</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+<p style="font-size: 18px">Students critically assess AI-generated content before accepting or using it.</p>
+<p style="font-size: 16px">
+<strong>Examples:</strong></p>
+ <ul style="font-size: 16px">
+  <li>Check AI answers against class materials or trusted sources.</li>
+  <li>Ask: “Does this make sense?” and “Is this fair?”</li>
+  <li>Identify when AI gives incorrect or silly answers.</li>
+  <li>Decide whether to use or ignore an AI suggestion.</li>
+ </ul>
+ 
+<p style="font-size: 16px"><strong>Why it Matters:</strong> AI can produce convincing but incorrect or unfair results; learning to verify outputs builds critical thinking and safer use habits.</p>
 </div>
+</details>
 
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> Before students use the AI chatbot for the first time, take a few minutes to review the Chat Responsibly box together. Use this moment to set expectations for appropriate, respectful communication and reinforce that the goal is to stay safe, stay on task, and use the tool to support their learning.   
-</p>
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">3. Understand How AI Systems Are Built and Trained</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+<p style="font-size: 18px">Students understand, at an age-appropriate level, how AI systems learn from data and patterns.</p>
+<p style="font-size: 16px">
+<strong>Examples:</strong></p>
+ <ul style="font-size: 16px">
+  <li>Sort and label examples to simulate how AI learns patterns.</li>
+  <li>Explain that AI needs lots of examples to learn.</li>
+  <li>Understand that humans choose and organize the data.</li>
+  <li>Notice how different examples change results.</li>
+ </ul>
+ 
+<p style="font-size: 16px"><strong>Why it Matters:</strong> Understanding how AI is trained helps students see how inputs shape outputs and why fairness and data quality matter.</p>
 </div>
+</details>
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">4. Collaborate Creatively and Responsibly with AI</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+<p style="font-size: 18px">Students use AI as a creative partner while maintaining ownership and accountability for their work.</p>
+<p style="font-size: 16px">
+<strong>Examples:</strong></p>
+ <ul style="font-size: 16px">
+  <li>Use AI to brainstorm ideas for stories or projects.</li>
+  <li>Choose which suggestions fit their creative vision.</li>
+  <li>Revise AI-generated ideas in their own words.</li>
+  <li>Give credit when AI helped.</li>
+ </ul>
+ 
+<p style="font-size: 16px"><strong>Why it Matters:</strong> AI can amplify creativity, but students must remain the authors of their work and learn to take responsibility for final products.</p>
+</div>
+</details>
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">5. Decide When and How to Use AI</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+<p style="font-size: 18px">Students determine whether AI is appropriate for a given task.</p>
+<p style="font-size: 16px">
+<strong>Examples:</strong></p>
+ <ul style="font-size: 16px">
+  <li>Decide whether AI is helpful for a task (e.g., spelling vs. storytelling).</li>
+  <li>Recognize tasks that require personal effort.</li>
+  <li>Ask a teacher before using AI for assignments.</li>
+  <li>Consider if AI makes the task better or worse.</li>
+ </ul>
+ 
+<p style="font-size: 16px"><strong>Why it Matters:</strong> Learning to choose tools intentionally protects learning goals and builds responsible technology habits.</p>
+</div>
+</details>
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">6. Manage AI to Augment — Not Replace — Human Judgment</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+<p style="font-size: 18px">Students intentionally use AI to support their work while keeping human judgment at the center.</p>
+<p style="font-size: 16px">
+<strong>Examples:</strong></p>
+ <ul style="font-size: 16px">
+  <li>Use AI for structured tasks (e.g., spelling checks).</li>
+  <li>Keep control over important decisions.</li>
+  <li>Improve AI responses with clearer instructions.</li>
+  <li>Explain how they used AI.</li>
+ </ul>
+ 
+<p style="font-size: 16px"><strong>Why it Matters:</strong> AI should enhance human thinking, not replace it — students need to maintain agency and responsibility in their work.</p>
+</div>
+</details>
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">7. Analyze AI’s Societal and Environmental Impact</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+<p style="font-size: 18px">Students examine how AI affects people, communities, and the environment.</p>
+<p style="font-size: 16px">
+<strong>Examples:</strong></p>
+ <ul style="font-size: 16px">
+  <li>Discuss how AI can help or hurt people.</li>
+  <li>Notice when recommendations seem unfair.</li>
+  <li>Learn that AI uses electricity and devices.</li>
+  <li>Talk about being kind and fair when using AI.</li>
+ </ul>
+ 
+<p style="font-size: 16px"><strong>Why it Matters:</strong> Understanding AI’s broader impact builds empathy, fairness, and responsible digital citizenship.</p>
+</div>
+</details>
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">8. Design and Improve AI Systems for Human Good</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+<p style="font-size: 18px">Students explore how AI systems can be shaped, tested, and improved.</p>
+<p style="font-size: 16px">
+<strong>Examples:</strong></p>
+ <ul style="font-size: 16px">
+  <li>Create simple sorting systems using rules.</li>
+  <li>Label data and test how it changes results.</li>
+  <li>Identify when a system makes mistakes.</li>
+  <li>Suggest ways to improve fairness.</li>
+ </ul>
+ 
+<p style="font-size: 16px"><strong>Why it Matters:</strong> Designing and improving systems empowers students to see themselves as creators and shapers of technology, not just consumers.</p>
+</div>
+</details>
+
+
+
 MARKDOWN

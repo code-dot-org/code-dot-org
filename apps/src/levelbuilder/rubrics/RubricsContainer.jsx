@@ -1,8 +1,4 @@
-import {
-  BodyThreeText,
-  BodyTwoText,
-  Heading1,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
@@ -159,6 +155,7 @@ export default function RubricsContainer({
     const selectOptions = submittableLevels.map(level => (
       <option key={level.id} value={level.id}>
         {level.name}
+        {level.sublevels?.length > 0 && ' (contains sublevels)'}
       </option>
     ));
     return selectOptions;
@@ -172,12 +169,26 @@ export default function RubricsContainer({
 
   return (
     <div>
-      <Heading1>{pageHeader}</Heading1>
+      <Typography variant="h1" gutterBottom>
+        {pageHeader}
+      </Typography>
       {hasSubmittableLevels && (
         <div>
-          <BodyTwoText>
+          <Typography variant="body2" gutterBottom>
             This rubric will be used for {unitName}, lesson {lessonNumber}.
-          </BodyTwoText>
+            <br />
+            In legacy labs, the rubric will be shown on all levels in the
+            lesson.
+            <br />
+            If you are writing a rubric for a lab2 level (Music Lab, Python Lab,
+            Web Lab 2, AI Chat, etc.), rubrics will only show up on the level
+            they are defined on, as well as any levels that share the same
+            project template level. If you want to define a rubric on a choice
+            level, assign the rubric to the parent level that contains the
+            choice level. The same rubric will be shared for all choice levels
+            under that parent, as well as any levels that share project template
+            levels with those choice levels.
+          </Typography>
           <div style={styles.containerStyle}>
             <label htmlFor="rubric_level_id">
               Choose a level for this rubric to be evaluated on
@@ -208,19 +219,21 @@ export default function RubricsContainer({
             />
           </div>
           <div style={styles.bottomRow}>
-            <BodyThreeText>{saveNotificationText}</BodyThreeText>
+            <Typography variant="body3" gutterBottom>
+              {saveNotificationText}
+            </Typography>
           </div>
         </div>
       )}
       {!hasSubmittableLevels && (
         <div>
-          <BodyTwoText>
+          <Typography variant="body2" gutterBottom>
             {unitName}, lesson {lessonNumber} currently has no submittable
             levels. To create or modify a rubric, there must be a submittable
             level connected to the rubric. Go back to the lesson landing page
             and either add a new submittable level or modify an existing level
             to be submittable.
-          </BodyTwoText>
+          </Typography>
         </div>
       )}
     </div>
@@ -234,6 +247,7 @@ RubricsContainer.propTypes = {
     PropTypes.shape({
       id: PropTypes.number,
       name: PropTypes.string,
+      sublevels: PropTypes.array,
     })
   ),
   rubric: PropTypes.object,

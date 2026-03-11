@@ -1,10 +1,14 @@
 {
   "name": "sandbox-pl-ai101-v2",
   "script_names": [
-    "self-paced-pl-ai-101-v2-mod1"
+    "self-paced-pl-ai-101-v2-mod1",
+    "self-paced-pl-ai-101-v2-mod2",
+    "self-paced-pl-ai-101-v2-mod4"
   ],
   "original_script_names": [
-    "self-paced-pl-ai-101-v2-mod1"
+    "self-paced-pl-ai-101-v2-mod1",
+    "self-paced-pl-ai-101-v2-mod2",
+    "self-paced-pl-ai-101-v2-mod4"
   ],
   "published_state": "in_development",
   "instruction_type": "teacher_led",
@@ -12,7 +16,6 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "sandbox-pl-ai101-v2",
-    "numbered_units": "auto",
     "version_year": "unversioned"
   },
   "resources": [

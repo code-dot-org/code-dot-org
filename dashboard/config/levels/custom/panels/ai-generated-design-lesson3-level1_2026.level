@@ -1,0 +1,41 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-02-24T18:10:36.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Send Your Prompt to AI\n\nThe easiest way to prompt AI Tutor is to highlight the text in `prompt.md` and click **Add to AI Tutor Chat**.\n\nMake sure to tell AI Tutor what you want it to do. For example, \"Generate the `index.html` file\".\n\nWhen you're ready, click the purple **Send** arrow or hit **Enter** on your keyboard.",
+        "imageUrl": "https://images.code.org/b7dce0cce69e8973f41e20bf842320ab-add_to_ai_chat.gif",
+        "key": "ai-generated-design-lesson3-level1_2026-87754b33-b9cd-49ec-8e00-71cdb619bec7",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "# Typing Out Your Prompt\n\nYou can also choose to type your prompt directly into AI Tutor's chat box. When you're ready, click the purple **Send** arrow or hit **Enter** on your keyboard.\n\n_Note: You may want to minimize the instructions to see your full prompt._",
+        "imageUrl": "https://images.code.org/c6b3a11953c61cf07147a0f199f35112-AI-prompt.gif",
+        "key": "undefined-205a9cb6-4e78-4814-929e-fec9c89b847c",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "#Preview the Output\n\nClick **Preview** to see what AI created. \n\n_Note: In the following level, AI will only generate the HTML (structure) for your webpage. You'll have a chance to update the style, colors, and text later._",
+        "imageUrl": "https://images.code.org/6896ac8fde793e2de0ba0a1b032f6f80-previewover.gif",
+        "key": "ai-generated-design-lesson3-level1_2026-9b8c74a7-b72a-4930-8b41-4cade9e230fe",
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "# Accept / Reject AI Code\n\nIf the code matches what you want, click **Accept**. Write a brief message like \"Generated index.html for gardening app\". Then click **Accept and save version**.\n\nIf the code is not quite right, click **Reject** and try re-prompting AI.\n\n",
+        "imageUrl": "https://images.code.org/f3e5c97fb6edb8cf4f96094477101bd5-accepton.gif",
+        "key": "ai-generated-design-lesson3-level1_2026-96e6e9af-0122-48a5-a798-ceafe83766a9",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:10:36.856+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson3-level1_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson3-level1_2025\"},{\"changed_at\":\"2026-03-04 22:20:04 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 22:23:06 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 22:27:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 23:32:47 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 18:06:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 18:36:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 18:48:39 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 18:59:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 19:11:50 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 19:13:44 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 19:16:40 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 21:20:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 21:20:49 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

@@ -1,6 +1,5 @@
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
-import {Button} from '@code-dot-org/component-library/button';
-import {Heading2} from '@code-dot-org/component-library/typography';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -113,12 +112,14 @@ export const SchoolInformation: React.FC<SchoolInformationProps> = ({
   return (
     <>
       <hr />
-      <Heading2
-        visualAppearance="heading-sm"
+      <Typography
         className={commonStyles.sectionHeader}
+        component="h2"
+        variant="h5"
+        gutterBottom
       >
         {i18n.schoolInformation_schoolInformation()}
-      </Heading2>
+      </Typography>
       <form name="school-information-form">
         <div className={commonStyles.inputContainer}>
           <SchoolDataInputs {...schoolDataInfoProps} includeHeaders={false} />
@@ -140,12 +141,17 @@ export const SchoolInformation: React.FC<SchoolInformationProps> = ({
           )}
         </div>
         <div>
-          <Button
-            className={commonStyles.submit}
-            text={i18n.schoolInformation_updateSchoolInformation()}
-            onClick={handleSchoolInformationUpdate}
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
             disabled={saveDisabled}
-          />
+            className={commonStyles.submit}
+            onClick={handleSchoolInformationUpdate}
+            type="button"
+          >
+            {i18n.schoolInformation_updateSchoolInformation()}
+          </MuiButton>
         </div>
       </form>
     </>

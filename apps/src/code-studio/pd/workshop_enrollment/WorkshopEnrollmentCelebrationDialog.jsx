@@ -1,10 +1,5 @@
 import Button from '@code-dot-org/component-library/button';
-import Typography, {
-  Heading2,
-  Heading3,
-  Heading6,
-  BodyTwoText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import moment from 'moment-timezone';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
@@ -224,19 +219,25 @@ export default function WorkshopEnrollmentCelebrationDialog({
         closeOnClickBackdrop={true}
       >
         <div className={style.showMultipleSessionDialogContainer}>
-          <Heading3>{i18n.enrollmentCelebrationAddToCalendarTitle()}</Heading3>
+          <Typography variant="h3" gutterBottom>
+            {i18n.enrollmentCelebrationAddToCalendarTitle()}
+          </Typography>
           <hr />
-          <BodyTwoText>
+          <Typography variant="body2" gutterBottom>
             {i18n.enrollmentCelebrationAddToCalendarDesc()}
-          </BodyTwoText>
+          </Typography>
           <table>
             <thead>
               <tr>
                 <th className={style.calendarTableHeaderCell}>
-                  <Heading6>{i18n.date()}</Heading6>
+                  <Typography variant="h6" gutterBottom>
+                    {i18n.date()}
+                  </Typography>
                 </th>
                 <th className={style.calendarTableHeaderCell}>
-                  <Heading6>{i18n.time()}</Heading6>
+                  <Typography variant="h6" gutterBottom>
+                    {i18n.time()}
+                  </Typography>
                 </th>
                 <th />
               </tr>
@@ -245,10 +246,14 @@ export default function WorkshopEnrollmentCelebrationDialog({
               {workshopSessionInfo.map(session => (
                 <tr key={`session-${session.id}`}>
                   <td>
-                    <BodyTwoText>{generateDateText(session)}</BodyTwoText>
+                    <Typography variant="body2" gutterBottom>
+                      {generateDateText(session)}
+                    </Typography>
                   </td>
                   <td>
-                    <BodyTwoText>{generateTimeText(session)}</BodyTwoText>
+                    <Typography variant="body2" gutterBottom>
+                      {generateTimeText(session)}
+                    </Typography>
                   </td>
                   <td>
                     <Button
@@ -301,16 +306,15 @@ export default function WorkshopEnrollmentCelebrationDialog({
           <div className={style.dialogContainer}>
             <div className={style.contentContainer}>
               <img src={CelebrationImage} alt="" />
-              <Heading2>{i18n.enrollmentCelebrationTitle()}</Heading2>
-              <BodyTwoText>
+              <Typography variant="h2" gutterBottom>
+                {i18n.enrollmentCelebrationTitle()}
+              </Typography>
+              <Typography variant="body2" gutterBottom>
                 {i18n.enrollmentCelebrationBody({workshopName: workshopTitle})}
-              </BodyTwoText>
+              </Typography>
               {workshopSessionInfo && (
                 <div className={style.calendarButtonContainer}>
-                  <Typography
-                    semanticTag={'h3'}
-                    visualAppearance={'overline-two'}
-                  >
+                  <Typography component="h3" variant="overline2" gutterBottom>
                     {i18n.addToYourCalendar()}
                   </Typography>
                   <div className={style.calendarButtons}>

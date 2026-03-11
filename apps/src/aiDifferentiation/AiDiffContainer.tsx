@@ -7,6 +7,7 @@ import {useTeachingProfileData} from '@cdo/apps/aiDifferentiation/hooks/useTeach
 import {useAppSelector} from '../util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '../utils';
 
+import AiDiffArtifactSavePage from './AiDiffArtifactSavePage';
 import AiDiffHeader from './AiDiffHeader';
 import AiDiffWorkSpace from './AiDiffWorkspace';
 import {Context} from './types';
@@ -52,7 +53,8 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   scriptName,
   unreadNotificationCount,
 }) => {
-  const [showWelcomeExperience, setShowWelcomeExperience] = useState(true);
+  // Welcome experience shut off in preparation for spring 2026 redesign.
+  const [showWelcomeExperience, setShowWelcomeExperience] = useState(false);
   const {personalizationData} = useTeachingProfileData();
 
   const [positionX, setPositionX] = useState(
@@ -65,6 +67,11 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   const hasCompletedAiDifferentiationWelcome = useAppSelector(
     state => state.currentUser.hasCompletedAiDifferentiationWelcome
   );
+
+  const pendingArtifactMessage = useAppSelector(
+    state => state.aichat.pendingArtifactMessage
+  );
+
   const chatIsOpen = useAppSelector(state => state.aichat.chatIsOpen);
 
   useEffect(() => {
@@ -104,6 +111,32 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     setPositionY(data.y);
   };
 
+  let content;
+  if (pendingArtifactMessage) {
+    content = <AiDiffArtifactSavePage message={pendingArtifactMessage} />;
+  } else if (curriculumCourses) {
+    if (!hasCompletedAiDifferentiationWelcome && showWelcomeExperience) {
+      content = (
+        <AiDiffWelcome
+          setShowWelcomeExperience={setShowWelcomeExperience}
+          context={context}
+          scriptName={scriptName}
+          curriculumCourses={curriculumCourses}
+        />
+      );
+    } else {
+      content = (
+        <AiDiffWorkSpace
+          context={context}
+          personalizationData={personalizationData}
+          scriptName={scriptName}
+          curriculumCourses={curriculumCourses}
+          unreadNotificationCount={unreadNotificationCount}
+        />
+      );
+    }
+  }
+
   return (
     <Draggable
       handle=".ai_diff_handle"
@@ -127,24 +160,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
             closeTutor={closeTutor}
             closeButtonClassName={AI_DIFF_CLOSE_BUTTON_CLASSNAME}
           />
-          <div className={style.fabBackground}>
-            {!hasCompletedAiDifferentiationWelcome && showWelcomeExperience ? (
-              <AiDiffWelcome
-                setShowWelcomeExperience={setShowWelcomeExperience}
-                context={context}
-                curriculumCourses={curriculumCourses}
-                scriptName={scriptName}
-              />
-            ) : (
-              <AiDiffWorkSpace
-                context={context}
-                personalizationData={personalizationData}
-                curriculumCourses={curriculumCourses}
-                scriptName={scriptName}
-                unreadNotificationCount={unreadNotificationCount}
-              />
-            )}
-          </div>
+          <div className={style.fabBackground}>{content}</div>
         </FocusLock>
       </div>
     </Draggable>

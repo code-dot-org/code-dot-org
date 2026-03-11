@@ -7,7 +7,6 @@ import Hammer from 'hammerjs';
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {getCodeBlocks, getCode} from '@cdo/apps/blockly/utils';
@@ -20,6 +19,7 @@ import {
   dismissSwipeOverlay,
 } from '@cdo/apps/templates/arrowDisplayRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import {trySetLocalStorage} from '@cdo/apps/utils';
 
 import {TestResults} from '../../constants';
@@ -449,7 +449,7 @@ Craft.init = function (config) {
     isMinecraft: true,
   });
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <div>
         <AppView
@@ -717,7 +717,6 @@ Craft.runButtonClick = function () {
   }
 
   studioApp().toggleRunReset('reset');
-  Blockly.mainBlockSpace.traceOn(true);
   studioApp().attempts++;
 
   Craft.executeUserCode();
@@ -753,9 +752,6 @@ Craft.executeUserCode = function () {
   }
 
   studioApp().playAudio('start');
-
-  // Start tracing calls.
-  Blockly.mainBlockSpace.traceOn(true);
 
   var appCodeOrgAPI = Craft.gameController.codeOrgAPI;
   appCodeOrgAPI.startCommandCollection();

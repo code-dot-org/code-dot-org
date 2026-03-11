@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -11,6 +12,7 @@ export interface SuggestedPrompt {
   label: string;
   show: boolean;
   selected: boolean;
+  icon?: string;
 }
 
 interface SuggestedPromptsProps {
@@ -46,6 +48,7 @@ const SuggestedPrompts: React.FC<SuggestedPromptsProps> = ({
             aria-label={prompt.label}
           >
             <span>{prompt.label}</span>
+            {prompt.icon && <FontAwesomeV6Icon iconName={prompt.icon} />}
           </button>
         );
       })}

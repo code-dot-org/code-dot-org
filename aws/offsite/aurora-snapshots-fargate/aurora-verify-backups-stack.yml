@@ -125,7 +125,7 @@ Resources:
       NetworkMode: awsvpc
       ExecutionRoleArn: !GetAtt TaskExecutionRole.Arn
       Cpu: 256
-      Memory: 0.5GB
+      Memory: 1GB
       TaskRoleArn: !GetAtt TaskRole.Arn
       ContainerDefinitions:
       - Name: aurora-verify-backups
@@ -159,7 +159,7 @@ Resources:
             Value: !Ref AWS::Region
           -
             Name: DB_INSTANCE_CLASS
-            Value: db.t3.medium
+            Value: db.t4g.large
           -
             Name: DB_ENGINE
             Value: aurora-mysql
@@ -169,6 +169,11 @@ Resources:
           -
             Name: HONEYBADGER_API_KEY
             Value: !Ref HoneybadgerApiKey
+          # Wait for Cluster to restore from Snapshot.
+          - Name: DB_RESTORE_MAX_ATTEMPTS
+            Value: "240"
+          - Name: DB_RESTORE_DELAY_SECONDS
+            Value: "60"
   CloudwatchLogsGroup:
     Type: AWS::Logs::LogGroup
     Properties:

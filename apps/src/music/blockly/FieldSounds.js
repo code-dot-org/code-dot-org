@@ -1,8 +1,8 @@
 import * as BlocklyCore from 'blockly/core';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import color from '@cdo/apps/util/color';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 
 import MusicRegistry from '../MusicRegistry';
@@ -149,7 +149,7 @@ class FieldSounds extends BlocklyCore.Field {
     const sortUnrestrictedPacksByType =
       MusicRegistry.sortUnrestrictedPacksByType;
 
-    ReactDOM.render(
+    createReactRoot(
       <SoundsPanel
         library={MusicLibrary.getInstance()}
         currentValue={this.getValue()}

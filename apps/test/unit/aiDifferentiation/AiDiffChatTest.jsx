@@ -33,7 +33,7 @@ import {
   AIF_MATERIALS_MENU,
   SUGGESTED_PROMPTS_FOR_SELECTION,
 } from '@cdo/apps/aiDifferentiation/predefinedPrompts';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   getStore,
@@ -251,13 +251,11 @@ describe('AiDiffChat', () => {
       );
       expect(sendEventSpy).toHaveBeenCalledWith(
         EVENTS.AI_DIFF_CHAT_EVENT,
-        responseEventData,
-        PLATFORMS.STATSIG
+        responseEventData
       );
       expect(sendEventSpy).toHaveBeenCalledWith(
         EVENTS.AI_DIFF_CHAT_EVENT,
-        responseEventData2,
-        PLATFORMS.STATSIG
+        responseEventData2
       );
     });
 
@@ -367,13 +365,11 @@ describe('AiDiffChat', () => {
       );
       expect(sendEventSpy).toHaveBeenCalledWith(
         EVENTS.AI_DIFF_CHAT_EVENT,
-        responseEventData,
-        PLATFORMS.STATSIG
+        responseEventData
       );
       expect(sendEventSpy).toHaveBeenCalledWith(
         EVENTS.AI_DIFF_CHAT_EVENT,
-        responseEventData2,
-        PLATFORMS.STATSIG
+        responseEventData2
       );
     });
   });
@@ -478,13 +474,11 @@ describe('AiDiffChat', () => {
       );
       expect(sendEventSpy).toHaveBeenCalledWith(
         EVENTS.AI_DIFF_CHAT_EVENT,
-        responseEventData,
-        PLATFORMS.STATSIG
+        responseEventData
       );
       expect(sendEventSpy).toHaveBeenCalledWith(
         EVENTS.AI_DIFF_CHAT_EVENT,
-        responseEventData2,
-        PLATFORMS.STATSIG
+        responseEventData2
       );
     });
   });
@@ -560,13 +554,11 @@ describe('AiDiffChat', () => {
       );
       expect(sendEventSpy).toHaveBeenCalledWith(
         EVENTS.AI_DIFF_CHAT_EVENT,
-        responseEventData,
-        PLATFORMS.STATSIG
+        responseEventData
       );
       expect(sendEventSpy).toHaveBeenCalledWith(
         EVENTS.AI_DIFF_CHAT_EVENT,
-        responseEventData2,
-        PLATFORMS.STATSIG
+        responseEventData2
       );
     });
 
@@ -596,8 +588,7 @@ describe('AiDiffChat', () => {
       );
       expect(sendEventSpy).toHaveBeenCalledWith(
         EVENTS.AI_DIFF_FEEDBACK_EVENT,
-        feedbackEventData,
-        PLATFORMS.STATSIG
+        feedbackEventData
       );
     });
   });
@@ -663,13 +654,11 @@ describe('AiDiffChat', () => {
       );
       expect(sendEventSpy).toHaveBeenCalledWith(
         EVENTS.AI_DIFF_CHAT_EVENT,
-        responseEventData,
-        PLATFORMS.STATSIG
+        responseEventData
       );
       expect(sendEventSpy).toHaveBeenCalledWith(
         EVENTS.AI_DIFF_CHAT_EVENT,
-        responseEventData2,
-        PLATFORMS.STATSIG
+        responseEventData2
       );
     });
     // One user message
@@ -765,13 +754,11 @@ describe('AiDiffChat', () => {
       );
       expect(sendEventSpy).toHaveBeenCalledWith(
         EVENTS.AI_DIFF_CHAT_EVENT,
-        responseEventData,
-        PLATFORMS.STATSIG
+        responseEventData
       );
       expect(sendEventSpy).toHaveBeenCalledWith(
         EVENTS.AI_DIFF_CHAT_EVENT,
-        responseEventData2,
-        PLATFORMS.STATSIG
+        responseEventData2
       );
     });
     // Two user message
@@ -841,13 +828,11 @@ describe('AiDiffChat', () => {
       );
       expect(sendEventSpy).toHaveBeenCalledWith(
         EVENTS.AI_DIFF_CHAT_EVENT,
-        responseEventData,
-        PLATFORMS.STATSIG
+        responseEventData
       );
       expect(sendEventSpy).toHaveBeenCalledWith(
         EVENTS.AI_DIFF_CHAT_EVENT,
-        responseEventData2,
-        PLATFORMS.STATSIG
+        responseEventData2
       );
     });
     // One user message

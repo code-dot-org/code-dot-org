@@ -1,11 +1,11 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import videojs from 'video.js';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import i18n from '@cdo/locale';
 
 import FallbackPlayerCaptionDialogLink from '../templates/FallbackPlayerCaptionDialogLink';
@@ -102,7 +102,6 @@ function createVideo(options) {
   const videoDiv = $('<iframe id="video"/>').addClass('video-player').attr({
     src: options.src,
     allowfullscreen: 'true',
-    scrolling: 'no',
   });
 
   const videoTabContainerDiv = $("<div id='videoTabContainer'></div>").append(
@@ -165,6 +164,17 @@ videos.showVideoDialog = function (options, forceShowVideo) {
     options.key,
     function (data) {
       notesDiv.children('#notes').html(data);
+      // Ensure all <img> elements inside #notes default to empty alt text,
+      // but do not overwrite any existing descriptive alt text.
+      notesDiv
+        .children('#notes')
+        .find('img')
+        .each(function () {
+          var $img = $(this);
+          if (!$img.is('[alt]')) {
+            $img.attr('alt', '');
+          }
+        });
     },
     function () {
       openVideoTab();
@@ -568,7 +578,7 @@ function showFallbackPlayerCaptionLink(inDialog) {
     'fallback-player-caption-dialog-link'
   );
   if (mountPoint) {
-    ReactDOM.render(
+    createReactRoot(
       <FallbackPlayerCaptionDialogLink inDialog={inDialog} />,
       mountPoint
     );

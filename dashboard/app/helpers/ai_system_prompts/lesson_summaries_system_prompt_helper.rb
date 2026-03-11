@@ -82,11 +82,11 @@ module AiSystemPrompts::LessonSummariesSystemPromptHelper
     tips: additional strategies or ideas to help with teaching the lesson}",
     PODCAST_SCRIPT: "Your summary should be the script of a podcast returned as a string. It should be written in the 2nd person directed at the listener and organized as follows:
     - First, start with the opening sentence: You're listening to AI Teaching Assistant's Daily Byte, your quick check-in before class
-    - Second, give a one sentence overview that lists the lesson name and describes what its about
+    - Second, give a one sentence overview that states the lesson name and describes what it is about
     - Third, describe what materials are needed for the lesson
     - Fourth, summarize the lesson's Learning Objectives, give an overview of what the lesson entails, describe the activities and new vocabulary terms, and describe how this lesson connects to the Goals and Big Questions in the Unit Overview
     - Fifth, provide step by step instructions using the Teacher Tips and Misconceptions in the lesson plan to show the teacher how to run the lesson
-    - Sixth, end with a closing remark that repeats the name of the lesson and thanks them for listening.",
+    - Sixth, end with the closing statement: Happy teaching!",
   }
 
   def self.get_system_prompt(lesson_id, user_id = nil, response_format = RESPONSE_FORMATS[:BRIEF_SUMMARY])

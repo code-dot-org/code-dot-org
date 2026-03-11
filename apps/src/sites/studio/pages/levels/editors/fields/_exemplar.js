@@ -1,8 +1,8 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import ExemplarSettings from '@cdo/apps/lab2/levelEditors/exemplar/ExemplarSettings';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(function () {
@@ -11,7 +11,7 @@ $(document).ready(function () {
   const exemplarDefined = !!getScriptData('exemplarsources');
   const exemplarSettings = getScriptData('exemplarsettings');
 
-  ReactDOM.render(
+  createReactRoot(
     <div>
       <ExemplarSettings
         appName={appName}

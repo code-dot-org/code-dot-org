@@ -1,19 +1,14 @@
-import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import CloseButton from '@code-dot-org/component-library/closeButton';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
-import {
-  Heading2,
-  BodyTwoText,
-  BodyThreeText,
-} from '@code-dot-org/component-library/typography';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import cookies from 'js-cookie';
 import React, {useState, useEffect, useMemo} from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
@@ -99,11 +94,9 @@ const FinishStudentAccount: React.FunctionComponent<{
       setName(prepopulatedName);
     }
 
-    analyticsReporter.sendEvent(
-      EVENTS.FINISH_ACCOUNT_PAGE_LOADED,
-      {'user type': 'student'},
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.FINISH_ACCOUNT_PAGE_LOADED, {
+      'user type': 'student',
+    });
 
     const fetchGdprData = async () => {
       const urlParams = new URLSearchParams(window.location.search);
@@ -144,11 +137,7 @@ const FinishStudentAccount: React.FunctionComponent<{
   };
 
   const onIsParentChange = (): void => {
-    analyticsReporter.sendEvent(
-      EVENTS.PARENT_OR_GUARDIAN_SIGN_UP_CLICKED,
-      {},
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.PARENT_OR_GUARDIAN_SIGN_UP_CLICKED, {});
     const newIsParentCheckedChoice = !isParent;
     // If the user unchecks the parent checkbox, clear the parent email field
     if (!newIsParentCheckedChoice) {
@@ -217,16 +206,12 @@ const FinishStudentAccount: React.FunctionComponent<{
 
   const sendFinishEvent = (): void => {
     // Log to Statsig and Amplitude
-    analyticsReporter.sendEvent(
-      EVENTS.SIGN_UP_FINISHED_EVENT,
-      {
-        'user type': 'student',
-        'has school': false,
-        'has marketing value selected': true,
-        'has display name': !nameErrorMessage,
-      },
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.SIGN_UP_FINISHED_EVENT, {
+      'user type': 'student',
+      'has school': false,
+      'has marketing value selected': true,
+      'has display name': !nameErrorMessage,
+    });
 
     // Log to Google Analytics
     trackEvent('sign_up', 'sign_up_success', {
@@ -284,8 +269,12 @@ const FinishStudentAccount: React.FunctionComponent<{
     <div>
       <div className={style.finishAccountContainer}>
         <div className={style.headerTextContainer}>
-          <Heading2>{locale.finish_creating_student_account()}</Heading2>
-          <BodyTwoText>{locale.tailor_experience()}</BodyTwoText>
+          <Typography variant="h2" gutterBottom>
+            {locale.finish_creating_student_account()}
+          </Typography>
+          <Typography variant="body2" gutterBottom>
+            {locale.tailor_experience()}
+          </Typography>
         </div>
         {errorCreatingAccountMessage && (
           <div className={style.errorSigningUpMessage}>
@@ -294,9 +283,13 @@ const FinishStudentAccount: React.FunctionComponent<{
                 iconName={'circle-xmark'}
                 className={style.xIcon}
               />
-              <BodyThreeText className={style.errorMessageText}>
+              <Typography
+                className={style.errorMessageText}
+                variant="body3"
+                gutterBottom
+              >
                 <SafeMarkdown markdown={errorCreatingAccountMessage} />
-              </BodyThreeText>
+              </Typography>
             </div>
             <CloseButton
               onClick={() => setErrorCreatingAccountMessage('')}
@@ -324,15 +317,23 @@ const FinishStudentAccount: React.FunctionComponent<{
                     onChange={onParentEmailChange}
                   />
                   {showParentEmailError && (
-                    <BodyThreeText className={style.errorMessage}>
+                    <Typography
+                      className={style.errorMessage}
+                      variant="body3"
+                      gutterBottom
+                    >
                       {locale.email_error_message()}
-                    </BodyThreeText>
+                    </Typography>
                   )}
                 </div>
                 <div>
-                  <BodyThreeText className={style.parentKeepMeUpdated}>
+                  <Typography
+                    className={style.parentKeepMeUpdated}
+                    variant="body3"
+                    gutterBottom
+                  >
                     <strong>{locale.keep_me_updated()}</strong>
-                  </BodyThreeText>
+                  </Typography>
                   <Checkbox
                     name="parentEmailOptIn"
                     label={locale.email_me_with_updates()}
@@ -354,9 +355,13 @@ const FinishStudentAccount: React.FunctionComponent<{
               onChange={onNameChange}
             />
             {nameErrorMessage && (
-              <BodyThreeText className={style.errorMessage}>
+              <Typography
+                className={style.errorMessage}
+                variant="body3"
+                gutterBottom
+              >
                 {nameErrorMessage}
-              </BodyThreeText>
+              </Typography>
             )}
           </div>
           <div>
@@ -371,9 +376,13 @@ const FinishStudentAccount: React.FunctionComponent<{
               onChange={onAgeChange}
             />
             {showAgeError && (
-              <BodyThreeText className={style.errorMessage}>
+              <Typography
+                className={style.errorMessage}
+                variant="body3"
+                gutterBottom
+              >
                 {locale.age_error_message()}
-              </BodyThreeText>
+              </Typography>
             )}
           </div>
           {usIp && (
@@ -389,9 +398,13 @@ const FinishStudentAccount: React.FunctionComponent<{
                 onChange={onStateChange}
               />
               {showStateError && (
-                <BodyThreeText className={style.errorMessage}>
+                <Typography
+                  className={style.errorMessage}
+                  variant="body3"
+                  gutterBottom
+                >
                   {locale.state_error_message()}
-                </BodyThreeText>
+                </Typography>
               )}
             </div>
           )}
@@ -403,14 +416,16 @@ const FinishStudentAccount: React.FunctionComponent<{
           />
           {showGDPR && (
             <div>
-              <BodyThreeText
+              <Typography
                 className={classNames(
                   style.teacherKeepMeUpdated,
                   style.required
                 )}
+                variant="body3"
+                gutterBottom
               >
                 <strong>{locale.data_transfer_notice()}</strong>
-              </BodyThreeText>
+              </Typography>
               <Checkbox
                 name="gdprAcknowledge"
                 label={locale.data_transfer_agreement_student()}
@@ -429,17 +444,12 @@ const FinishStudentAccount: React.FunctionComponent<{
           )}
         </fieldset>
         <div className={style.finishSignUpButtonContainer}>
-          <Button
-            className={style.finishSignUpButton}
-            color={buttonColors.purple}
-            type="primary"
-            onClick={submitStudentAccount}
-            text={locale.go_to_my_account()}
-            iconRight={{
-              iconName: 'arrow-right',
-              iconStyle: 'solid',
-              title: 'arrow-right',
-            }}
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
+            loading={isSubmitting}
+            loadingPosition="end"
             disabled={
               name?.trim() === '' ||
               name?.length > MAX_DISPLAY_NAME_LENGTH ||
@@ -448,8 +458,19 @@ const FinishStudentAccount: React.FunctionComponent<{
               (isParent && (parentEmail === '' || showParentEmailError)) ||
               !gdprValid
             }
-            isPending={isSubmitting}
-          />
+            className={style.finishSignUpButton}
+            onClick={submitStudentAccount}
+            type="button"
+            endIcon={
+              <FontAwesomeV6Icon
+                iconName="arrow-right"
+                iconStyle="solid"
+                title="arrow-right"
+              />
+            }
+          >
+            {locale.go_to_my_account()}
+          </MuiButton>
         </div>
       </div>
       <SafeMarkdown

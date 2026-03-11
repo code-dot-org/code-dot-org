@@ -4,6 +4,10 @@
  * Copyright 2013 Code.org
  *
  */
+import CdoFieldImage from '@cdo/apps/blockly/addons/cdoFieldImage';
+import CdoFieldLabel from '@cdo/apps/blockly/addons/cdoFieldLabel';
+import '@cdo/apps/blockly/addons/extensions/jigsawFillPatternMixin';
+
 var levels = require('./levels');
 
 var patternCache = {
@@ -99,7 +103,7 @@ var addPattern = function (id, imagePath, width, height, offsetX, offsetY) {
     // add the pattern
     x = typeof offsetX === 'function' ? -offsetX() : -offsetX;
     y = typeof offsetY === 'function' ? -offsetY() : -offsetY;
-    pattern = Blockly.createSvgElement(
+    pattern = Blockly.utils.dom.createSvgElement(
       'pattern',
       {
         id: id,
@@ -111,7 +115,7 @@ var addPattern = function (id, imagePath, width, height, offsetX, offsetY) {
       },
       svgDefs
     );
-    patternImage = Blockly.createSvgElement(
+    patternImage = Blockly.utils.dom.createSvgElement(
       'image',
       {
         width: width,
@@ -209,9 +213,9 @@ function generateBlankBlock(blockly, skin, name, hsv, width, label) {
       const [h, s, v] = hsv;
       this.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
       this.appendDummyInput()
-        .appendField(new blockly.FieldImage(skin.blank, width, 54))
+        .appendField(new CdoFieldImage(skin.blank, width, 54))
         .appendField(
-          new blockly.FieldLabel(label, {
+          new CdoFieldLabel(label, {
             fixedSize: {width: width, height: 64},
             fontSize: 32,
           })
@@ -244,8 +248,9 @@ function generateJigsawBlocksForLevel(blockly, skin, options) {
     blockly.Blocks[blockName] = {
       helpUrl: '',
       init: function () {
+        Blockly.Extensions.apply('jigsaw_fill_pattern_mixin', this, false);
         this.appendDummyInput().appendField(
-          new blockly.FieldImage(skin.blank, titleWidth, titleHeight)
+          new CdoFieldImage(skin.blank, titleWidth, titleHeight)
         );
         this.setPreviousStatement(blockNum !== 1 || notchedEnds);
         this.setNextStatement(blockNum !== numBlocks || notchedEnds);

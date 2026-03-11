@@ -1,4 +1,5 @@
-import Button from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import React, {useState, useCallback} from 'react';
 
 import AiTutorVersionFileChip from '@cdo/apps/aiComponentLibrary/aiTutorVersionFileChip/AiTutorVersionFileChip';
@@ -59,32 +60,40 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
       </div>
       {!isAcceptMode && (
         <div className={moduleStyles.buttonContainer}>
-          <Button
-            text="Reject"
-            size="s"
-            color="gray"
-            type="secondary"
-            iconLeft={{
-              iconStyle: 'solid',
-              iconName: 'close',
-              title: 'Reject',
-            }}
+          <MuiButton
+            variant="outlined"
+            color="tertiary"
+            size="small"
+            className={moduleStyles.actionButton}
             onClick={handleReject}
+            type="button"
+            startIcon={
+              <FontAwesomeV6Icon
+                iconStyle="solid"
+                iconName="close"
+                title="Reject"
+              />
+            }
+          >
+            Reject
+          </MuiButton>
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="small"
             className={moduleStyles.actionButton}
-          />
-          <Button
-            text="Accept"
-            size="s"
-            type="primary"
-            color="purple"
-            iconLeft={{
-              iconStyle: 'solid',
-              iconName: 'check',
-              title: 'Accept',
-            }}
             onClick={() => setIsAcceptMode(true)}
-            className={moduleStyles.actionButton}
-          />
+            type="button"
+            startIcon={
+              <FontAwesomeV6Icon
+                iconStyle="solid"
+                iconName="check"
+                title="Accept"
+              />
+            }
+          >
+            Accept
+          </MuiButton>
         </div>
       )}
       {isAcceptMode && (
@@ -102,19 +111,19 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
             />
             This is what you'll see in the version history.
           </div>
-          <Button
-            id="save-ai-tutor-version-button"
-            size="s"
-            type="primary"
-            iconLeft={{
-              iconName: 'save',
-              iconStyle: 'solid',
-            }}
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="small"
             className={moduleStyles.saveAiTutorVersionButton}
-            text={'Accept and save version'}
-            onClick={handleSaveAiTutorVersion}
+            id="save-ai-tutor-version-button"
             disabled={isSaving || commitDescription.trim() === ''}
-          />
+            onClick={handleSaveAiTutorVersion}
+            type="button"
+            startIcon={<FontAwesomeV6Icon iconName="save" iconStyle="solid" />}
+          >
+            Accept and save version
+          </MuiButton>
         </div>
       )}
     </div>

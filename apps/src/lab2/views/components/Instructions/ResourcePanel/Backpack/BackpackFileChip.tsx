@@ -1,13 +1,8 @@
-import {Button} from '@code-dot-org/component-library/button';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tags from '@code-dot-org/component-library/tags';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {
-  BodyFourText,
-  BodyThreeText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import {Typography, IconButton as MuiIconButton} from '@mui/material';
 import React, {useMemo} from 'react';
 
 import {getFileIconNameAndStyle} from '@cdo/apps/codebridge';
@@ -67,7 +62,6 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
       getFileIconNameAndStyle({
         name: fileName,
         id: '',
-        language: '',
         contents: '',
         folderId: '',
       }),
@@ -216,12 +210,20 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
         </div>
       )}
       <div className={moduleStyles.fileInfo} title={fileName}>
-        <BodyThreeText className={moduleStyles.infoText}>
-          <StrongText>{fileName}</StrongText>
-        </BodyThreeText>
-        <BodyFourText className={moduleStyles.infoText}>
+        <Typography
+          className={moduleStyles.infoText}
+          variant="body3"
+          gutterBottom
+        >
+          <Typography variant="strong">{fileName}</Typography>
+        </Typography>
+        <Typography
+          className={moduleStyles.infoText}
+          variant="body4"
+          gutterBottom
+        >
           {fileExtension?.toUpperCase()}
-        </BodyFourText>
+        </Typography>
       </div>
       <div className={moduleStyles.fileActions}>
         {isRecentlyAdded ? (
@@ -246,15 +248,16 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
             }}
           >
             <div>
-              <Button
-                size="xs"
-                isIconOnly
-                icon={{iconName: 'plus'}}
-                color="gray"
-                type="secondary"
+              <MuiIconButton
+                variant="outlined"
+                color="tertiary"
+                size="extraSmall"
                 onClick={() => handleAdd(isSecondaryBackpack)}
+                type="button"
                 disabled={addButtonDisabled}
-              />
+              >
+                <FontAwesomeV6Icon iconName="plus" />
+              </MuiIconButton>
             </div>
           </WithTooltip>
         )}

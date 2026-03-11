@@ -1,15 +1,7 @@
 import {Button} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Link from '@code-dot-org/component-library/link';
-import {
-  BodyOneText,
-  BodyThreeText,
-  BodyTwoText,
-  Heading1,
-  Heading3,
-  Heading6,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 import Confetti from 'react-dom-confetti';
@@ -29,7 +21,7 @@ import ai101Thumnail from '@cdo/static/ai-101-pl-course-thumbnail.png';
 import aiBotHappy from '@cdo/static/ai-bot-happy.png';
 import aiBotScanning from '@cdo/static/ai-bot-scanning.png';
 
-import {EVENTS, PLATFORMS} from '../../metrics/AnalyticsConstants';
+import {EVENTS} from '../../metrics/AnalyticsConstants';
 import analyticsReporter from '../../metrics/AnalyticsReporter';
 import AiDiffChat from '../AiDiffChat';
 import {SUGGESTED_PROMPTS_FOR_SELECTION} from '../predefinedPrompts';
@@ -80,14 +72,18 @@ const optionButton = (
         className={style.optionIcon}
       />
       <div className={style.optionText}>
-        <BodyTwoText className={style.optionTitle}>
-          <StrongText>{title}</StrongText>
-        </BodyTwoText>
+        <Typography className={style.optionTitle} variant="body2" gutterBottom>
+          <Typography variant="strong">{title}</Typography>
+        </Typography>
 
         {description && (
-          <BodyThreeText className={style.optionDescription}>
+          <Typography
+            className={style.optionDescription}
+            variant="body3"
+            gutterBottom
+          >
             {description}
-          </BodyThreeText>
+          </Typography>
         )}
       </div>
     </button>
@@ -104,8 +100,12 @@ const getStartedPage = (onClick: () => void) => {
             className={style.botScanning}
             alt={'AI Teaching Assistant'}
           />
-          <Heading1>AI Teaching Assistant</Heading1>
-          <BodyOneText>Empowering teachers. Enhancing learning.</BodyOneText>
+          <Typography variant="h1" gutterBottom>
+            AI Teaching Assistant
+          </Typography>
+          <Typography variant="body1" gutterBottom>
+            Empowering teachers. Enhancing learning.
+          </Typography>
         </div>
         <Button onClick={onClick} text="Get Started" />
       </div>
@@ -184,11 +184,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
 
   const updateShowWelcomeExperience = React.useCallback(
     (statsigKey: string) => {
-      analyticsReporter.sendEvent(
-        statsigKey,
-        reportingContext,
-        PLATFORMS.STATSIG
-      );
+      analyticsReporter.sendEvent(statsigKey, reportingContext);
       HttpClient.post(HAS_SEEN_WELCOME_URL, undefined, true).then(() => {
         setShowWelcomeExperience(false);
       });
@@ -210,11 +206,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
         return null;
       })();
       if (statsigKey) {
-        analyticsReporter.sendEvent(
-          statsigKey,
-          reportingContext,
-          PLATFORMS.STATSIG
-        );
+        analyticsReporter.sendEvent(statsigKey, reportingContext);
       }
 
       setCurrentWelcomeState(nextState);
@@ -253,10 +245,16 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
         <div className={style.selectOptionPage}>
           {progressBarHeader(30, () => setCurrentWelcomeState('get_started'))}
           <div className={style.selectOptionContent}>
-            <Heading3>Pick a skill to practice</Heading3>
-            <Heading6 className={style.selectOptionSubtitle}>
+            <Typography variant="h3" gutterBottom>
+              Pick a skill to practice
+            </Typography>
+            <Typography
+              className={style.selectOptionSubtitle}
+              variant="h6"
+              gutterBottom
+            >
               Using AI in multiple ways increases productivity.
-            </Heading6>
+            </Typography>
             {context.type === AiDiffContext.GENERAL &&
               optionButton(
                 selectedOption === 'support',
@@ -316,10 +314,16 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             className={style.botHappy}
             alt={'Congratulations!'}
           />
-          <Heading3>You’re on your way to becoming an AI all-star!</Heading3>
-          <Heading6 className={style.endPageSubTitle}>
+          <Typography variant="h3" gutterBottom>
+            You’re on your way to becoming an AI all-star!
+          </Typography>
+          <Typography
+            className={style.endPageSubTitle}
+            variant="h6"
+            gutterBottom
+          >
             Continue your learning journey
-          </Heading6>
+          </Typography>
           {optionButton(
             false,
             () => setCurrentWelcomeState(WelcomeStates.select_option),
@@ -332,11 +336,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             className={classNames(style.optionRow, style.optionRowWithPic)}
             href="https://code.org/ai/pl/101"
             onClick={() =>
-              analyticsReporter.sendEvent(
-                EVENTS.AI_DIFF_101,
-                reportingContext,
-                PLATFORMS.STATSIG
-              )
+              analyticsReporter.sendEvent(EVENTS.AI_DIFF_101, reportingContext)
             }
           >
             <div className={style.optionWithPicTop}>
@@ -345,11 +345,15 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
                 iconFamily="duotone"
                 className={style.optionIcon}
               />
-              <BodyTwoText className={style.optionTitle}>
-                <StrongText>
+              <Typography
+                className={style.optionTitle}
+                variant="body2"
+                gutterBottom
+              >
+                <Typography variant="strong">
                   Take Code.org’s self-paced AI 101 professional learning course
-                </StrongText>
-              </BodyTwoText>
+                </Typography>
+              </Typography>
             </div>
             <img
               src={ai101Thumnail}

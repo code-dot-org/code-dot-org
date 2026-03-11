@@ -24,10 +24,17 @@
 
 import {utils as mazeUtils} from '@code-dot-org/maze';
 
-import {registerCustomProcedureBlocks} from '@cdo/apps/blockly/utils';
+import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
+import CdoFieldLabel from '@cdo/apps/blockly/addons/cdoFieldLabel';
+import {
+  INFINITE_LOOP_TRAP,
+  loopHighlight,
+  registerCustomProcedureBlocks,
+} from '@cdo/apps/blockly/utils';
 import commonMsg from '@cdo/locale';
 
 import blockUtils from '../block_utils';
+import CdoFieldImage from '../blockly/addons/cdoFieldImage';
 import {BlockStyles} from '../blockly/constants';
 
 import msg from './locale';
@@ -92,11 +99,11 @@ exports.install = function (blockly, blockInstallOptions) {
           this.setStyle(BlockStyles.DEFAULT);
           this.appendDummyInput()
             .appendField(
-              new blockly.FieldLabel(directionConfig.letter, {
+              new CdoFieldLabel(directionConfig.letter, {
                 fixedSize: {width: 12, height: 18},
               })
             )
-            .appendField(new blockly.FieldImage(directionConfig.image));
+            .appendField(new CdoFieldImage(directionConfig.image));
           this.setPreviousStatement(true);
           this.setNextStatement(true);
           this.setTooltip(directionConfig.tooltip);
@@ -145,7 +152,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.DIRECTIONS),
+        new CdoFieldDropdown(this.DIRECTIONS),
         'DIR'
       );
       this.setPreviousStatement(true);
@@ -171,7 +178,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.DIRECTIONS),
+        new CdoFieldDropdown(this.DIRECTIONS),
         'DIR'
       );
       this.setPreviousStatement(true);
@@ -198,7 +205,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setStyle(BlockStyles.LOGIC);
       this.setOutput(true, blockly.BlockValueType.NUMBER);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.DIRECTIONS),
+        new CdoFieldDropdown(this.DIRECTIONS),
         'DIR'
       );
       this.setTooltip(msg.isPathTooltip());
@@ -223,7 +230,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.LOGIC);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.DIRECTIONS),
+        new CdoFieldDropdown(this.DIRECTIONS),
         'DIR'
       );
       this.setInputsInline(true);
@@ -251,7 +258,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.LOGIC);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.DIRECTIONS),
+        new CdoFieldDropdown(this.DIRECTIONS),
         'DIR'
       );
       this.setInputsInline(true);
@@ -283,7 +290,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setStyle(BlockStyles.LOGIC);
       this.appendDummyInput().appendField(msg.ifCode());
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.DIRECTIONS),
+        new CdoFieldDropdown(this.DIRECTIONS),
         'DIR'
       );
       this.setInputsInline(true);
@@ -317,7 +324,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setStyle(BlockStyles.LOGIC);
       this.appendDummyInput().appendField(msg.ifCode());
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.DIRECTIONS),
+        new CdoFieldDropdown(this.DIRECTIONS),
         'DIR'
       );
       this.setInputsInline(true);
@@ -347,7 +354,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.LOOP);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.DIRECTIONS),
+        new CdoFieldDropdown(this.DIRECTIONS),
         'DIR'
       );
       this.appendStatementInput('DO').appendField(msg.doCode());
@@ -361,7 +368,7 @@ exports.install = function (blockly, blockInstallOptions) {
     var argument =
       'Maze.' + this.getFieldValue('DIR') + "('block_id_" + this.id + "')";
     var branch = generator.statementToCode(this, 'DO');
-    branch = Blockly.getInfiniteLoopTrap() + branch;
+    branch = INFINITE_LOOP_TRAP + branch;
     return 'while (' + argument + ') {\n' + branch + '}\n';
   };
 
@@ -385,7 +392,7 @@ exports.install = function (blockly, blockInstallOptions) {
   generator.maze_untilBlocked = function () {
     var argument = 'Maze.isPathForward' + "('block_id_" + this.id + "')";
     var branch = generator.statementToCode(this, 'DO');
-    branch = Blockly.getInfiniteLoopTrap() + branch;
+    branch = INFINITE_LOOP_TRAP + branch;
     return 'while (' + argument + ') {\n' + branch + '}\n';
   };
 
@@ -396,7 +403,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setStyle(BlockStyles.LOOP);
       this.appendDummyInput()
         .appendField(msg.repeatUntil())
-        .appendField(new blockly.FieldImage(skin.maze_forever, 35, 35));
+        .appendField(new CdoFieldImage(skin.maze_forever, 35, 35));
       this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setTooltip(msg.whileTooltip());
@@ -406,10 +413,7 @@ exports.install = function (blockly, blockInstallOptions) {
   generator.maze_forever = function () {
     // Generate JavaScript for do forever loop.
     var branch = generator.statementToCode(this, 'DO');
-    branch =
-      Blockly.getInfiniteLoopTrap() +
-      Blockly.loopHighlight('Maze', this.id) +
-      branch;
+    branch = INFINITE_LOOP_TRAP + loopHighlight('Maze', this.id) + branch;
     return 'while (Maze.notFinished()) {\n' + branch + '}\n';
   };
 
@@ -418,7 +422,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setStyle(BlockStyles.LOOP);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.DIRECTIONS),
+        new CdoFieldDropdown(this.DIRECTIONS),
         'DIR'
       );
       this.appendStatementInput('DO').appendField(msg.doCode());
@@ -432,7 +436,7 @@ exports.install = function (blockly, blockInstallOptions) {
     var argument =
       'Maze.' + this.getFieldValue('DIR') + "('block_id_" + this.id + "')";
     var branch = generator.statementToCode(this, 'DO');
-    branch = Blockly.getInfiniteLoopTrap() + branch;
+    branch = INFINITE_LOOP_TRAP + branch;
     return 'while (' + argument + ') {\n' + branch + '}\n';
   };
 

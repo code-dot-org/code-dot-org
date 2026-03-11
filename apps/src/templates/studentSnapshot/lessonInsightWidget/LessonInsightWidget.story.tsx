@@ -1,5 +1,3 @@
-import {CdoTheme} from '@code-dot-org/component-library/themes';
-import {ThemeProvider as MuiThemeProvider} from '@mui/material/styles';
 import type {Meta, StoryObj} from '@storybook/react';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -19,21 +17,19 @@ const meta: Meta<typeof LessonInsightWidget> = {
   component: LessonInsightWidget,
   decorators: [
     Story => (
-      <MuiThemeProvider theme={CdoTheme}>
-        <Provider store={mockStore}>
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: '1fr 1fr 1fr',
-              gridAutoRows: '200px',
-              gap: '12px',
-              minWidth: '600px',
-            }}
-          >
-            <Story />
-          </div>
-        </Provider>
-      </MuiThemeProvider>
+      <Provider store={mockStore}>
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr 1fr',
+            gridAutoRows: '200px',
+            gap: '12px',
+            minWidth: '600px',
+          }}
+        >
+          <Story />
+        </div>
+      </Provider>
     ),
   ],
   parameters: {

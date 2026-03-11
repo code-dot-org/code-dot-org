@@ -59,14 +59,6 @@ const CfuWidgetHeader: React.FC<CfuWidgetHeaderProps> = ({
 }) => {
   return (
     <div className={styles.studentCFUWidgetSummaryHeader}>
-      <div className={styles.titleRow}>
-        <Typography variant="h3">
-          <Typography variant="strong">
-            Check For Understanding Questions
-          </Typography>
-        </Typography>
-      </div>
-
       <div className={styles.summarySection}>
         <div className={styles.summaryLabel}>
           <Typography variant="body2">

@@ -7,7 +7,7 @@ class AichatEventsControllerTest < ActionController::TestCase
     @unauthorized_student = create(:student)
     @unauthorized_teacher = create(:teacher)
     unit_group = create(:unit_group, name: 'exploring-gen-ai-2024')
-    @section = create(:section, user: @authorized_teacher1, unit_group: unit_group)
+    @section = create(:section, user: @authorized_teacher1, unit_group: unit_group, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY])
     @authorized_student1 = create(:follower, section: @section).student_user
 
     @level = create(:level)

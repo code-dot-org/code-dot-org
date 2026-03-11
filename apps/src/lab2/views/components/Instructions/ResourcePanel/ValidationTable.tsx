@@ -1,8 +1,4 @@
-import {
-  BodyThreeText,
-  OverlineThreeText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import lab2I18n from '@cdo/apps/lab2/locale';
@@ -39,10 +35,14 @@ const ValidationTable: React.FunctionComponent<ValidationResultsProps> = ({
         <thead>
           <tr>
             <td>
-              <OverlineThreeText>{lab2I18n.test()}</OverlineThreeText>
+              <Typography variant="overline3" gutterBottom>
+                {lab2I18n.test()}
+              </Typography>
             </td>
             <td>
-              <OverlineThreeText>{lab2I18n.result()}</OverlineThreeText>
+              <Typography variant="overline3" gutterBottom>
+                {lab2I18n.result()}
+              </Typography>
             </td>
           </tr>
         </thead>
@@ -50,14 +50,18 @@ const ValidationTable: React.FunctionComponent<ValidationResultsProps> = ({
           {validationResults.map((result, index) => (
             <tr key={index}>
               <td>
-                <BodyThreeText>{result.message}</BodyThreeText>
+                <Typography variant="body3" gutterBottom>
+                  {result.message}
+                </Typography>
               </td>
               <td>
                 <div className={moduleStyles.resultsText}>
                   <ValidationStatusIcon status={getStatusForResult(result)} />
-                  <BodyThreeText>
-                    <StrongText>{getTranslatedResult(result)}</StrongText>
-                  </BodyThreeText>
+                  <Typography variant="body3" gutterBottom>
+                    <Typography variant="strong">
+                      {getTranslatedResult(result)}
+                    </Typography>
+                  </Typography>
                 </div>
               </td>
             </tr>

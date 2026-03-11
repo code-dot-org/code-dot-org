@@ -1,0 +1,107 @@
+name 'pl-ai-101-V2-mod2-llm-05b'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Practice
+
+#### Let’s try it out!
+
+#### We’ll dive into how to use these tools as an educator in Module 3, Transforming Teaching with AI. For now, your primary goal should be getting started using an LLM and practicing good prompting strategies.
+
+
+## Educator’s Choice
+
+#### **1. Choose an LLM.** Click on the image to open the link in a new tab.
+
+#### If your school/district uses a particular LLM (even if it's not on the list below), we recommend that you practice using that one.
+
+
+<div style="display:flex;justify-content:space-between;align-items:center;width:95%;margin:20pt auto;padding:0 5px;">
+  <div style="width:20%;text-align:center;">
+    <a href="https://chatgpt.com/" target="_blank">
+      <img src="https://images.code.org/c22ec02e808ca32157566d9fb91efbe0-Screenshot%202026-01-29%20at%2011.40.54%20AM.png" alt="ChatGPT Logo" style="display:block;width:100%;height:auto !important;max-height:90px;object-fit:contain;border-radius:5pt;margin:0 auto;">
+    </a>
+  </div>
+  <div style="width:20%;text-align:center;">
+    <a href="https://gemini.google.com/" target="_blank">
+      <img src="https://images.code.org/c2897744ec844dadc387c770574cbefb-Screenshot%202026-01-29%20at%2011.39.33%20AM.png" alt="Gemini Logo" style="display:block;width:100%;height:auto !important;max-height:90px;object-fit:contain;border-radius:5pt;margin:0 auto;">
+    </a>
+  </div>
+  <div style="width:20%;text-align:center;">
+    <a href="https://claude.ai/login" target="_blank">
+      <img src="https://images.code.org/4ac56eafff87360544c03cc012c9bd4a-Screenshot%202026-01-29%20at%2011.40.17%20AM.png" alt="Claude Logo" style="display:block;width:100%;height:auto !important;max-height:90px;object-fit:contain;border-radius:5pt;margin:0 auto;">
+    </a>
+  </div>
+  <div style="width:20%;text-align:center;">
+    <a href="https://copilot.microsoft.com/" target="_blank">
+      <img src="https://images.code.org/bbfada5f0e117d70f873c77c7271e7eb-images.jpg" alt="Copilot Logo" style="display:block;width:100%;height:auto !important;max-height:90px;object-fit:contain;border-radius:5pt;margin:0 auto;">
+    </a>
+  </div>
+</div>
+
+#### <i>As of the writing of this module, **Claude** is the only LLM on this list that requires you to create an account.</i>
+
+<br>
+
+#### **2. Choose a topic.** It can be anything you wish to explore, such as:
+
+* #### *How do I make a taco?*
+* #### *What is the environmental impact of AI technology?*
+* #### *How is AI being integrated into everyday technology?*
+* #### *What materials do I need to make the best pillow fort?*
+
+<br>
+
+#### **3. Try a simple prompt**. Start with something open-ended such as:
+
+<div style="width:80%; margin:0 auto 18px auto;">
+  <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:18px;">
+    <div style="font-size:16px;">
+      How do you make the best pillow fort?
+    </div>
+  </div>
+</div>
+
+<br>
+
+#### **4. Add detail.** For example, you can add some context and a tone to your prompt:
+
+
+<div style="width:80%; margin:0 auto 18px auto;">
+  <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:18px;">
+    <div style="font-size:16px;">
+      Using fun and silly language, describe the materials needed to make the best pillow fort. Assume that the builders have access to supplies that might generally be found in a three bedroom house in Vermont.
+    </div>
+  </div>
+</div>
+
+
+#### You don't have to, but you may choose to use the TaCo FoRT prompting structure. 
+
+<p align="center">
+<img src="https://images.code.org/a9b6ae8f94bfa64afbf2af4a60ec6609-Screenshot 2025-04-07 at 2.01.43 PM.png" alt="lesson plan diagram" width="70%" style="border-radius:10px; border: 5px solid black;">
+</p>
+
+<br>
+
+#### **5. Keep exploring.** Continue to practice prompting. Explore with different prompting techniques, amount of detail, or even try multimodal prompting.
+
+<div style="width:80%; margin:0 auto 18px auto;">
+  <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:18px;">
+    <div style="font-size:16px;">
+      Give me an image of the ultimate pillow fort. Make it as warm and cozy as possible.
+    </div>
+  </div>
+</div>
+
+
+<br>
+
+#### **6. Take it further.** If you have time, try prompting in two or more LLMs to see how the responses differ.
+
+<br>
+
+>#### **💬 Quick Reflection:** How successful where different prompting techniques? What were some aspects of a good prompt? What were some aspects of an unsuccessful prompt?
+
+MARKDOWN

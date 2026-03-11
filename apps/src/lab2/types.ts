@@ -129,7 +129,7 @@ export type ExcalidrawSourceWithExternalFiles = Omit<
 };
 
 export type SketchlabProjectFile = Pick<ProjectFile, 'id' | 'url'> & {
-  uploadFailed?: boolean;
+  uploaded?: boolean;
   starterAsset?: boolean;
   filenameWithExtension?: string;
 };
@@ -153,7 +153,6 @@ export interface MultiFileSource {
 export interface ProjectFile {
   id: FileId;
   name: string;
-  language: string;
   contents: string;
   active?: boolean;
   folderId: string;
@@ -228,7 +227,7 @@ export interface LevelProperties {
   referenceLinks?: string[];
   helpVideos?: VideoData[];
   // Exemplars
-  exampleSolutions?: string[];
+  showExemplarLink?: boolean;
   exemplarSources?: ProjectSources | MultiFileSource;
   exemplarSettings?: ExemplarSettings;
   // For Teachers Only value
@@ -249,6 +248,7 @@ export interface LevelProperties {
   widgetView?: boolean;
   widgetViewAllowShowCode?: boolean;
   aiTutorMode?: string;
+  levelSystemPrompt?: string;
   // Properties added for parity with non-lab2 AI Tutor levels
   aiTutorAvailable?: boolean;
   isAssessment?: boolean;
@@ -258,6 +258,7 @@ export interface LevelProperties {
   customHelperLibrary?: string;
   validationCode?: string;
   hideVersionHistory?: boolean;
+  parentLevelName?: string;
 }
 
 export type LevelPropertiesMap = {[levelId: string]: LevelProperties};

@@ -1,0 +1,48 @@
+name 'pl-aif-2-U5-project-overview-4'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Begin with the End in Mind: Final Project Overview
+
+#### Unit 5: Designing Reliable Apps with AI and APIs culminates with a final **Explore-Style Web App** project.
+
+## Tap for More: Explore-Style App
+
+#### In the *Tap for More* project, students design an interactive explore-style app that fetches live data from an external API and presents it in a grid of cards with a detail view. Inspired by apps like Pinterest, Yelp, TikTok, and news feeds, students curate content and design how users explore and learn more about individual items.
+
+---
+
+## Sample project
+
+<img src="https://images.code.org/b6518963d37d9630807dcd0085aa5036-image-1770400989649.png" alt="sample explore-style app with grid of cards and detail view" width="750px" style="display: block; margin-left: auto; margin-right: auto; border-radius:10px;"><br>
+
+<p style= "font-size: 14pt;">
+ <a href="https://erikdillaman.github.io/U5_Project_Prototype_One/" target="_blank" rel="noopener noreferrer">Explore a sample student project</a>
+</p>
+
+---
+
+#### **When Project Begins:** Final three lessons of the unit
+
+#### The project extends over multiple class periods following introductory lessons on `async/await`, error handling, and working with JSON data from APIs.
+
+---
+
+## What success looks like
+
+> #### **By the end, students will:**
+> - #### Fetch and display live data from an external API
+> - #### Build an explore-style interface with a “Tap for More” detail view
+> - #### Communicate system status using loading indicators, empty states, and error messages
+> - #### Design defensively to keep apps usable when data is delayed, incomplete, or unavailable
+> - #### Reflect on the reliability, ownership, and risks of relying on external data sources
+
+---
+
+#### This project gives students an authentic opportunity to combine technical skills and design thinking while building apps that depend on real-world data and AI-powered systems.
+
+## Now, let’s see how we get here!
+
+
+MARKDOWN

@@ -1,4 +1,9 @@
-import React, {useState, ChangeEvent} from 'react';
+import React, {useState, useEffect, ChangeEvent} from 'react';
+
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+
+import styles from './lessonFeeedback.module.scss';
 
 interface FeedbackTextboxProps {
   feedbackText: string;
@@ -10,6 +15,11 @@ const FeedbackTextbox: React.FC<FeedbackTextboxProps> = ({
   onFeedbackChange,
 }) => {
   const [text, setText] = useState(feedbackText);
+  const [originalText, setOriginalText] = useState<string>('');
+
+  useEffect(() => {
+    setText(feedbackText);
+  }, [feedbackText]);
 
   const handleTextChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
     const newText = event.target.value;
@@ -17,16 +27,31 @@ const FeedbackTextbox: React.FC<FeedbackTextboxProps> = ({
     onFeedbackChange?.(newText);
   };
 
+  // Capture the original text when user clicks into the textbox for event tracking
+  const handleFocus = () => {
+    setOriginalText(text);
+  };
+
+  const handleBlur = () => {
+    if (originalText !== text) {
+      analyticsReporter.sendEvent(EVENTS.LESSON_SNAPSHOT_AI_FEEDBACK_EDITED, {
+        originalTextLength: originalText.length,
+        endingTextLength: text.length,
+        textChanged: originalText !== text,
+      });
+    }
+  };
+
   return (
-    <div>
-      <textarea
-        value={text}
-        onChange={handleTextChange}
-        placeholder="Enter your feedback here..."
-        rows={5}
-        cols={50}
-      />
-    </div>
+    <textarea
+      value={text}
+      onChange={handleTextChange}
+      onFocus={handleFocus}
+      onBlur={handleBlur}
+      placeholder="Enter your feedback here..."
+      rows={5}
+      className={styles.feedbackInputBox}
+    />
   );
 };
 

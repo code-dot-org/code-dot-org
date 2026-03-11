@@ -1,8 +1,7 @@
-import {Button} from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {BodyThreeText} from '@code-dot-org/component-library/typography';
+import {Typography, IconButton as MuiIconButton} from '@mui/material';
 import React, {memo, useEffect, useRef, useState} from 'react';
 
 import lab2I18n from '@cdo/apps/lab2/locale';
@@ -73,14 +72,16 @@ const FileIcon: React.FC<FileIconProps> = ({
         />
       )}
       {onDelete && !loadingMetadata && (
-        <Button
-          size="xs"
-          isIconOnly={true}
+        <MuiIconButton
+          variant="outlined"
+          color="error"
+          size="extraSmall"
           onClick={() => onDelete(filename)}
-          icon={{iconName: 'trash'}}
-          color="destructive"
-          type="secondary"
-        />
+          type="button"
+          aria-label={`Delete ${filename}`}
+        >
+          <FontAwesomeV6Icon iconName="trash" />
+        </MuiIconButton>
       )}
       {loadingMetadata && (
         <div className={styles.loadingIcon}>
@@ -101,18 +102,22 @@ const FileIcon: React.FC<FileIconProps> = ({
           </div>
         )}
         <div className={styles.fileInfo}>
-          <BodyThreeText className={styles.filename}>
+          <Typography className={styles.filename} variant="body3" gutterBottom>
             {truncateFilename(filename)}
-          </BodyThreeText>
-          <BodyThreeText className={styles.fileSize}>
+          </Typography>
+          <Typography className={styles.fileSize} variant="body3" gutterBottom>
             {getSizeText(size)}
-          </BodyThreeText>
+          </Typography>
           {pageCount && (
             <div className={styles.fileInfoRow}>
-              <BodyThreeText className={styles.fileDetail}>
+              <Typography
+                className={styles.fileDetail}
+                variant="body3"
+                gutterBottom
+              >
                 {pageCount}{' '}
                 {pageCount === 1 ? lab2I18n.page() : lab2I18n.pages()}
-              </BodyThreeText>
+              </Typography>
               {showWarnings && pageCount > PDF_PAGE_WARNING && (
                 <WarningIcon text="This PDF has many pages and may result in degraded performance." />
               )}
@@ -120,9 +125,13 @@ const FileIcon: React.FC<FileIconProps> = ({
           )}
           {width && height && (
             <div className={styles.fileInfoRow}>
-              <BodyThreeText className={styles.fileDetail}>
+              <Typography
+                className={styles.fileDetail}
+                variant="body3"
+                gutterBottom
+              >
                 {width} x {height}
-              </BodyThreeText>
+              </Typography>
               {showWarnings &&
                 (width > IMAGE_DIMENSION_WARNING ||
                   height > IMAGE_DIMENSION_WARNING) && (

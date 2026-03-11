@@ -1745,11 +1745,6 @@ class UnitTest < ActiveSupport::TestCase
     refute @hoc_unit.show_unit_overview_between_lessons?
   end
 
-  test "has_standards_associations?" do
-    assert @csf_unit_2019.has_standards_associations?
-    refute @csp_unit.has_standards_associations?
-  end
-
   test 'all_descendant_levels returns nested levels of all types' do
     # simple level
     level1 = create(:level, name: 'level1')

@@ -1,0 +1,10 @@
+name 'pl-ai-101-V2-mod2-llm-02'
+title 'Check for Understanding: Large Language Models'
+description ''
+question 'Why do large language models produce responses that seem human-like?'
+
+wrong 'They understand language, emotions, and intentions the same way humans do'
+right 'They analyze patterns and contextual relationships across massive amounts of text data'
+wrong 'They store complete copies of books and websites and retrieve the most relevant passages'
+wrong  'They rely on complex algorithms that simulate reasoning processes during conversations'
+allow_multiple_attempts true

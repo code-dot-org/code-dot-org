@@ -165,14 +165,13 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = () => {
       redirectScriptUrl={unitSummaryResponse.unitData.redirect_unit_url}
       versions={unitSummaryResponse.unitData.course_versions}
       courseName={unitSummaryResponse.unitData.course_name}
-      scriptPath={unitSummaryResponse.unitData.scriptPath}
+      scriptPath={unitSummaryResponse.unitData.scriptPath ?? ''}
       showAssignButton={unitSummaryResponse.unitData.show_assign_button}
       isProfessionalLearningCourse={unitSummaryResponse.unitData.isPlCourse}
       userId={userId}
       userType={userType}
       assignedSectionId={selectedSection.id}
       showCalendar={unitSummaryResponse.unitData.showCalendar}
-      versionYear={unitSummaryResponse.unitData.version_year}
       weeklyInstructionalMinutes={
         unitSummaryResponse.unitData.weeklyInstructionalMinutes
       }
@@ -189,6 +188,7 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = () => {
       participantAudience={unitSummaryResponse.unitData.participantAudience}
       showAiAssessmentsAnnouncement={showAiAssessmentsAnnouncement}
       isOnTeacherDashboard={true}
+      aiChatToolsDependency={selectedSection.assignedAiChatToolsDependency}
     />
   );
 };

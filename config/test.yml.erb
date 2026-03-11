@@ -11,7 +11,7 @@ slack_start_build_token: !Secret
 azure_content_moderation_key: !Secret
 saucelabs_authkey: !Secret
 saucelabs_username: !Secret
-
+puma_control_server_token: !Secret
 <% else %>
 
 ##
@@ -30,6 +30,8 @@ poste_secret: not a real secret
 channels_api_secret: not a real secret
 dashboard_devise_pepper: not a pepper!
 dashboard_secret_key_base: not a secret
+puma_control_server_token: correct-horse-battery-staple
+
 google_maps_api_key: boguskey
 
 db_cluster_id: localhost
@@ -102,6 +104,9 @@ use_cookie_dcdo: true
 # Allows Geolocation to be altered via cookies.
 use_geolocation_override: true
 
+# Enables OpenTelemetry instrumentation
+enable_opentelemetry: true
+
 ##
 ## CI-specific config settings
 ##
@@ -112,7 +117,9 @@ use_geolocation_override: true
 
 # customize build steps in CI
 build_apps: true
+build_studio: true
 use_my_apps: true
+use_my_studio: true
 skip_seed_all: true
 
 # Pass in secrets via env vars, since Drone cannot access secrets directly.
@@ -124,11 +131,8 @@ saucelabs_username: <%= ENV['SAUCE_USERNAME'] %>
 properties_encryption_key: <%= ENV['PROPERTIES_ENCRYPTION_KEY'] %>
 
 # customize rails server to run on localhost
-dashboard_enable_pegasus: true
 override_dashboard: localhost-studio.code.org
-override_pegasus: localhost.code.org
 dashboard_port: 3000
-pegasus_port: 3000
 no_https_store: true
 
 # custom redis config for CI

@@ -8,7 +8,12 @@ import {
 // This is copied from codeprojects_preview_controller.rb to enable setting a content security policy
 // on the frontend. Explanation of the policy can be found there. Any changes here should be mirrored there.
 // We don't include the websocket URL here as it's not needed when serving student code in the iframe.
-export function generateContentSecurityPolicyForPreview(codeStudioUrl: string) {
+// We also handle allowing or disallowing scripts here, but not on the server. We do this here to support disabling
+// scripts for predict levels.
+export function generateContentSecurityPolicyForPreview(
+  codeStudioUrl: string,
+  scriptsAllowed: boolean
+) {
   const previewUrl = location.origin;
   const prefix = 'http://';
   const allowedConnectSrc = AllowedHostnameSuffixes.map(
@@ -29,9 +34,11 @@ export function generateContentSecurityPolicyForPreview(codeStudioUrl: string) {
   const script_src_inline = "'unsafe-inline'";
   const style_src_base = `'self' blob: ${allowedFontSrc}`;
   const style_src_inline = "'unsafe-inline'";
-  const img_src = `'self' blob: ${codeStudioUrl} ${allowedImageSrc}`;
+  const img_src = `'self' blob: ${codeStudioUrl} ${allowedImageSrc} https://studio.code.org/lab_resources/html-placeholder-image.avif`;
   const frame_ancestors = `${codeStudioUrl} 'self' ${previewUrl}`;
-  const script_src = `${script_src_base} ${script_src_eval} ${script_src_inline}`;
+  const script_src = scriptsAllowed
+    ? `${script_src_base} ${script_src_eval} ${script_src_inline}`
+    : "'none'";
   const style_src = `${style_src_base} ${style_src_inline}`;
   const font_src = `'self' ${allowedFontSrc}`;
 
@@ -43,6 +50,7 @@ export function generateContentSecurityPolicyForPreview(codeStudioUrl: string) {
     `style-src ${style_src}`,
     `img-src ${img_src}`,
     `font-src ${font_src}`,
+    "form-action 'none'",
   ];
 
   if (!isDevelopmentEnvironment() || !isTestEnvironment()) {

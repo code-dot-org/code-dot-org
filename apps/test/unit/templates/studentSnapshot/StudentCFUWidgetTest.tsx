@@ -145,9 +145,9 @@ describe('StudentCFUWidget', () => {
     );
 
     await waitFor(() => {
-      expect(
-        screen.getByText('No CFU data available for this lesson.')
-      ).toBeInTheDocument();
+      screen.getByText(
+        'This lesson doesn\'t have any "Check for Understanding" questions.'
+      );
     });
   });
 

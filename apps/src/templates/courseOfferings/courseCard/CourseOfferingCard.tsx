@@ -1,11 +1,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Image from '@code-dot-org/component-library/image';
 import Tags, {TagProps} from '@code-dot-org/component-library/tags';
-import {
-  Heading4,
-  BodyThreeText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import {concat, intersection} from 'lodash';
 import React, {useMemo} from 'react';
 
@@ -140,27 +136,29 @@ const CourseOfferingCard: React.FC<CourseOfferingCardProps> = ({
                 {/*  <FontAwesomeV6Icon iconName="language" iconStyle="solid" />*/}
                 {/*)}*/}
               </div>
-              <Heading4 noMargin className={moduleStyles.courseTitle}>
+              <Typography className={moduleStyles.courseTitle} variant="h4">
                 {display_name}
-              </Heading4>
+              </Typography>
             </div>
             <div className={moduleStyles.details}>
               {translatedGradeRange[0] && (
                 <div>
                   <FontAwesomeV6Icon iconName="user" iconStyle="solid" />
-                  <BodyThreeText noMargin>
-                    <StrongText noMargin>{translatedGradeRange[0]}</StrongText>{' '}
+                  <Typography variant="body3">
+                    <Typography variant="strong">
+                      {translatedGradeRange[0]}
+                    </Typography>{' '}
                     {translatedGradeRange[1]}
                     {isThisCourseForTeachers && '  Teachers'}
-                  </BodyThreeText>
+                  </Typography>
                 </div>
               )}
               <div>
                 <FontAwesomeV6Icon iconName="clock" iconStyle="solid" />
-                <BodyThreeText noMargin>
-                  <StrongText noMargin>{i18n.duration()}:</StrongText>{' '}
+                <Typography variant="body3">
+                  <Typography variant="strong">{i18n.duration()}:</Typography>{' '}
                   {courseDurationLabel}
-                </BodyThreeText>
+                </Typography>
               </div>
             </div>
           </div>

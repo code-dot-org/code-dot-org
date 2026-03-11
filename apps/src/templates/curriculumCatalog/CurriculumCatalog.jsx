@@ -8,11 +8,11 @@ import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/Curricu
 /* eslint-enable import/order */
 
 import HeroBanner from '@code-dot-org/component-library/heroBanner';
-import {BodyTwoText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect} from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import NoMatchingSearchResultsFound from '@cdo/apps/templates/courseOfferings/noMatchingSearchResultsFound/NoMatchingSearchResultsFound';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
@@ -77,8 +77,7 @@ const CurriculumCatalog = ({
       EVENTS.CURRICULUM_CATALOG_ASSIGN_COMPLETED_EVENT,
       {
         curriculum_offering: assignmentData.assignedTitle,
-      },
-      PLATFORMS.STATSIG
+      }
     );
   };
 
@@ -213,6 +212,7 @@ const CurriculumCatalog = ({
                 duration,
                 school_subject,
                 cs_topic,
+                ai_chat_tools_dependency,
                 course_version_path,
                 course_version_id,
                 course_id,
@@ -240,6 +240,7 @@ const CurriculumCatalog = ({
                   gradesArray={grade_levels.split(',')}
                   subjects={school_subject?.split(',')}
                   topics={cs_topic?.split(',')}
+                  aiChatToolsDependency={ai_chat_tools_dependency}
                   isTranslated={is_translated}
                   isEnglish={isEnglish}
                   pathToCourse={course_version_path}
@@ -297,11 +298,12 @@ const CurriculumCatalog = ({
         withWideText
         hideImageOnSmallScreen
       />
-
       {showAssignSuccessMessage && (
         <div className={style.assignSuccessMessageCenter}>
           <div className={style.assignSuccessMessageContainer}>
-            <BodyTwoText>{assignSuccessMessage}</BodyTwoText>
+            <Typography variant="body2" gutterBottom>
+              {assignSuccessMessage}
+            </Typography>
             <button
               aria-label="close success message"
               onClick={handleCloseAssignSuccessMessage}

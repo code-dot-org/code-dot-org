@@ -4,11 +4,7 @@ import {
   ButtonProps,
 } from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  BodyThreeText,
-  BodyFourText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import {
@@ -46,7 +42,9 @@ const SessionItemVirtualLocationContent = ({
   ) : (
     <>
       <FontAwesomeV6Icon iconName="video" />
-      <BodyThreeText>Virtual / Zoom</BodyThreeText>
+      <Typography variant="body3" gutterBottom>
+        Virtual / Zoom
+      </Typography>
     </>
   );
 
@@ -61,7 +59,9 @@ const SessionItemInPersonLocationContent = ({
 }) => (
   <>
     <FontAwesomeV6Icon iconName="location-dot" />
-    <BodyThreeText>{locationLabel}</BodyThreeText>
+    <Typography variant="body3" gutterBottom>
+      {locationLabel}
+    </Typography>
     {isUserEnrolled && (
       <Button
         {...commonButtonProps}
@@ -98,10 +98,12 @@ const renderSessionsListItem = (
   return (
     <li key={session.id}>
       <div className={moduleStyles.sessionItemTime}>
-        <BodyThreeText>
-          <StrongText>{dateLabel}</StrongText>
-        </BodyThreeText>
-        <BodyFourText>{timeRange}</BodyFourText>
+        <Typography variant="body3" gutterBottom>
+          <Typography variant="strong">{dateLabel}</Typography>
+        </Typography>
+        <Typography variant="body4" gutterBottom>
+          {timeRange}
+        </Typography>
       </div>
       <div className={moduleStyles.sessionItemLocation}>
         {isVirtual ? (

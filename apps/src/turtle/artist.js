@@ -27,11 +27,12 @@
 
 import Visualization from '@code-dot-org/artist';
 
+import CdoFieldColour from '@cdo/apps/blockly/addons/cdoFieldColour';
 import {
-  loadBlocksToWorkspace,
+  getAllGeneratedCode,
   getCode,
   getCodeFromBlockXmlSource,
-  getAllGeneratedCode,
+  loadBlocksToWorkspace,
 } from '@cdo/apps/blockly/utils';
 import {DEFAULT_EXECUTION_INFO} from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
@@ -47,6 +48,7 @@ import dom from '../dom';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {getStore} from '../redux';
 import AppView from '../templates/AppView';
+import {createReactRoot} from '../util/createReactRoot';
 import experiments from '../util/experiments';
 import {captureThumbnailFromCanvas} from '../util/thumbnail';
 
@@ -54,7 +56,6 @@ import ArtistSkins from './skins';
 
 var _ = require('lodash');
 var React = require('react');
-var ReactDOM = require('react-dom');
 var Provider = require('react-redux').Provider;
 
 var commonMsg = require('@cdo/locale');
@@ -420,7 +421,7 @@ Artist.prototype.init = function (config) {
     this.preloadAllShapeImages(),
     this.preloadAllPatternImages(),
   ]).then(() => {
-    ReactDOM.render(
+    createReactRoot(
       <Provider store={getStore()}>
         <AppView
           visualizationColumn={visualizationColumn}
@@ -576,7 +577,7 @@ Artist.prototype.afterInject_ = function (config) {
         var func = [];
         func.push('function ' + functionName + '() {');
         func.push(
-          '   var colors = ' + JSON.stringify(Blockly.FieldColour.COLOURS) + ';'
+          '   var colors = ' + JSON.stringify(CdoFieldColour.COLOURS) + ';'
         );
         func.push('  return colors[Math.floor(Math.random()*colors.length)];');
         func.push('}');
@@ -792,9 +793,6 @@ Artist.prototype.runButtonClick = function () {
   this.shouldAnimate_ = !this.instant_;
   this.studioApp_.toggleRunReset('reset');
   document.getElementById('spinner').style.visibility = 'visible';
-  if (this.studioApp_.isUsingBlockly()) {
-    Blockly.mainBlockSpace.traceOn(true);
-  }
   this.studioApp_.attempts++;
   this.execute(this.executionInfo);
 };

@@ -1,5 +1,5 @@
-import Button from '@code-dot-org/component-library/button';
-import {BodyThreeText} from '@code-dot-org/component-library/typography';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography, IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {FC} from 'react';
 
@@ -96,18 +96,19 @@ export const AiTutorContainer: FC<{
             alt=""
             className={styles['mini-bot-icon']}
           />
-          <BodyThreeText noMargin className={styles['header-text']}>
+          <Typography className={styles['header-text']} variant="body3">
             AI Tutor
-          </BodyThreeText>
-          <Button
-            aria-label="Close AI tutor"
-            isIconOnly
-            icon={{iconName: 'dash'}}
+          </Typography>
+          <MuiIconButton
+            variant="text"
+            color="secondary"
+            size="extraSmall"
             onClick={toggleAiChat}
-            size="xs"
-            type="tertiary"
-            color="black"
-          />
+            aria-label="Close AI tutor"
+            type="button"
+          >
+            <FontAwesomeV6Icon iconName="dash" />
+          </MuiIconButton>
         </div>
         <AiTutorChat
           hiddenContextCallback={getHiddenContext}

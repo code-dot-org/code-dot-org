@@ -1,0 +1,66 @@
+name 'self-paced-TCaAI-L2-Lesson2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Milestone 1 Lesson Overviews
+
+## Lesson 2: A Deeper Look Into AI
+#### Lesson 2 helps students understand how AI systems generate outputs by learning from training data and using pattern recognition. Students then begin the unit’s culminating project by exploring how real-world guides help people use tools safely and effectively.
+
+### 📝 **Lesson Overview**
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block; width: 100%"> <a href="https://studio.code.org/courses/aid-thinking-critically-about-ai-2025/units/1/lessons/2" target="blank" rel="noopener noreferrer">Access Lesson 2: A Deeper Look Into AI</a></p> 
+
+<!-- Warm Up -->
+<details style="background-color:#ececec;padding:12px;margin-top:15px;margin-bottom:15px;border-radius:6px;">
+<summary style="font-size:13pt;font-weight:bold;">Warm Up (5 minutes)</summary>
+<div style="margin-top:12px;font-size:13pt;line-height:1.4;">
+  
+<img src="https://images.code.org/af643a229ac8403af19e9c421293a29a-image-1773179810212.56.46 PM.png" 
+alt="AI training simulation image" 
+style="width:20%;border-radius:10px;margin:0px 0px 10px 15px;float:right;height:auto;">
+
+<p style="font-size:13pt;margin-top:0;">Students recap Lesson 1 by discussing: <strong>How did the AI dancer learn what a “preppy” or “fire” dancer looked like?</strong> The goal is to shift student thinking from “AI is magic” to “AI is trained on examples and finds patterns.”</p>
+<p style="font-size:13pt;margin-bottom:0;">Introduce the day’s focus: how patterns in data shape what AI generates, and how that impacts accuracy and trust.</p>
+</div>
+</details>
+
+<!-- Activity -->
+<details style="background-color:#ececec;padding:12px;margin-bottom:15px;border-radius:6px;">
+<summary style="font-size:13pt;font-weight:bold;">Activity (30 minutes)</summary>
+<div style="margin-top:12px;font-size:12pt;line-height:1.4;">
+<p style="font-size:13pt;margin-top:0;"><strong>AI Training Under the Hood (Unplugged + Level 1)</strong></p>
+<p style="font-size:13pt;">In groups of four (working in pairs), students run a two-round simulation. As <strong>Data Creators</strong>, they generate a small set of “training data” that follows a secret pattern. As <strong>AI-in-Training</strong>, they analyze the data, infer the pattern, and generate a new example to test whether their prediction matches the original logic.</p>
+<p style="font-size:13pt;">After testing, students reflect on accuracy and discuss what it means if they found a <strong>false pattern</strong> - a reminder that limited or unclear training data can lead to incorrect outputs.</p>
+<p style="font-size:13pt;margin-bottom:0;">Connect the simulation to real AI by defining <strong>training data</strong> and <strong>pattern recognition</strong>, emphasizing that AI generates outputs by making predictions based on what it has seen before.</p>
+</div>
+</details>
+
+<!-- Wrap Up -->
+<details style="background-color:#ececec;padding:12px;margin-bottom:15px;border-radius:6px;">
+<summary style="font-size:13pt;font-weight:bold;">Wrap Up (10 minutes)</summary>
+<div style="margin-top:12px;font-size:12pt;line-height:1.4;">
+<p style="font-size:13pt;margin-top:0;"><strong>Project Launch: Responsible AI Use Guide (Level 2)</strong></p>
+<p style="font-size:13pt;">Students open their Milestone 1 Learning Log, read the project overview, and discuss where they’ve seen guides before and what makes a guide helpful. They then complete a digital gallery walk of real-world guide formats, noting styles and features they might borrow for their own work (clear sections, visuals, tone, and examples).</p>
+<p style="font-size:13pt;">Close by reinforcing the “Tester” role: students are learning to evaluate tools for helpfulness and safety so others can use them responsibly.</p>
+</div>
+</details>
+
+### 🧾 **What to Prepare:**
+* #### Print and cut out the <strong>Secret Patterns</strong> for the unplugged simulation.
+* #### Make sure students have their <strong>Milestone 1 Learning Logs</strong> from Lesson 1.
+* #### Make a copy of the <strong>Lesson 2 slides</strong> and adjust timing or grouping as needed.
+* #### Plan student groupings (groups of four, then pairs) for the simulation activity.
+* #### Prepare students to interact with AI Chat Lab - consider what classroom norms and routines will be important for your students/
+* #### Preview the <strong>Digital Gallery Walk</strong> level so you can support students in noticing formatting and style features.
+
+
+### 💡 **Tips for Teaching:**
+* #### During the simulation, emphasize that AI “learning” depends on the quality and variety of the training data students create.
+* #### Use “false patterns” as a productive moment: students can see how limited data can lead to incorrect conclusions.
+* #### Connect the project launch to students’ role as “Testers” - their job is to protect others by checking AI for helpfulness and harm.
+* #### Encourage students to notice visual communication strategies in the gallery walk (icons, sections, tone, layout), not just the words.
+
+![]()
+MARKDOWN

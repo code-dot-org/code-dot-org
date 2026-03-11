@@ -1,0 +1,40 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-03-03T20:12:01.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Project-Backed Template\r\n\r\n",
+    "start_sources": {
+      "source": {
+        "type": "excalidraw",
+        "version": 2,
+        "source": "https://levelbuilder-studio.code.org",
+        "elements": [
+
+        ],
+        "appState": {
+          "gridSize": null,
+          "viewBackgroundColor": "#ffffff",
+          "scrollX": 1905.1218081342977,
+          "scrollY": 2130.0674403996845,
+          "zoom": {
+            "value": 0.161156018383785
+          }
+        },
+        "files": {
+        },
+        "externalFiles": {
+        }
+      }
+    },
+    "display_name": "Sketch Lab",
+    "bubble_choice_description": "Create your project in Sketch Lab!",
+    "thumbnail_url": "https://images.code.org/036edeb5693631c7f5819c9f4ce3187e-wireframe.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-03T20:12:01.051+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson4-level2a_2026-test\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson4-level2a_2026-test\"},{\"changed_at\":\"2026-03-03 20:12:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

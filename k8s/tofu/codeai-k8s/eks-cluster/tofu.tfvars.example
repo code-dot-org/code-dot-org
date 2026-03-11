@@ -1,0 +1,10 @@
+cluster_name = "codeai-k8s"
+region       = "us-east-1"
+
+vpc_id              = "vpc-6e98810a"
+internet_gateway_id = "igw-04a32960"
+
+public_subnet_1_cidr  = "10.0.64.0/20"
+public_subnet_2_cidr  = "10.0.80.0/20"
+private_subnet_1_cidr = "10.0.192.0/20"
+private_subnet_2_cidr = "10.0.208.0/20"

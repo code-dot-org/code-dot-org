@@ -22,10 +22,7 @@
   line-height: 1.5;
   display: flex;
   overflow: hidden;
-
-  &.vertical {
-    flex-direction: column;
-  }
+  flex-direction: column;
 }
 
 .fixedDarkBackground {
@@ -42,10 +39,7 @@
   flex: 1;
   opacity: 1;
   height: 100%;
-
-  &.itemVertical {
-    flex-direction: column;
-  }
+  flex-direction: column;
 }
 
 .mainInstructions {
@@ -230,6 +224,7 @@
   code {
     // Allow code to wrap.
     white-space: pre-wrap;
+    line-height: 1.8;
   }
 
   p {

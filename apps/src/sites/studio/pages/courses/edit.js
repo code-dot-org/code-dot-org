@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {getStore} from '@cdo/apps/code-studio/redux';
@@ -8,6 +7,7 @@ import createResourcesReducer, {
   initResources,
 } from '@cdo/apps/levelbuilder/lesson-editor/resourcesEditorRedux';
 import {registerReducers} from '@cdo/apps/redux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 $(document).ready(showCourseEditor);
 
@@ -34,7 +34,7 @@ function showCourseEditor() {
   let announcements = courseEditorData.course_summary.announcements || [];
 
   // Eventually we want to do this all via redux
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <CourseEditor
         name={courseEditorData.course_summary.name}

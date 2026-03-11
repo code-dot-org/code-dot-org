@@ -1,4 +1,4 @@
-import {BodyThreeText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
 import WidgetTemplate from '@cdo/apps/templates/studentSnapshot/widgetTemplate';
@@ -215,7 +215,12 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
     );
     const completed = total - counts.incomplete;
     const accuracy =
-      completed === 0 ? 0 : Math.round((counts.correct / completed) * 100);
+      completed === 0
+        ? 0
+        : Math.round(
+            ((counts.correct + 0.5 * counts.partially_correct) / completed) *
+              100
+          );
     return {total, completed, accuracy, counts};
   }, [fetchedCfuLevels, statusBuckets]);
 
@@ -223,10 +228,16 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
   let scrollable = false;
 
   if (loading) {
-    content = <BodyThreeText>Loading CFU data...</BodyThreeText>;
+    content = (
+      <Typography variant="body3" gutterBottom>
+        Loading CFU data...
+      </Typography>
+    );
   } else if (!fetchedCfuLevels || fetchedCfuLevels.length === 0) {
     content = (
-      <BodyThreeText>No CFU data available for this lesson.</BodyThreeText>
+      <Typography variant="body3" gutterBottom>
+        This lesson doesn't have any "Check for Understanding" questions.
+      </Typography>
     );
   } else {
     scrollable = true;
@@ -251,7 +262,7 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
 
   return (
     <WidgetTemplate
-      widgetName="CFU"
+      widgetName="Check For Understanding Questions"
       gridWidth={gridWidth}
       gridHeight={gridHeight}
       loading={loading}

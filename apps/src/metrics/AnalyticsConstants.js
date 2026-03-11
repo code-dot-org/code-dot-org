@@ -1,11 +1,6 @@
 // Analytics constants used within the apps directory.
 // (See pegasus/helpers/analytics_constants.rb for constants in the
 // pegasus directory)
-const PLATFORMS = {
-  AMPLITUDE: 'Amplitude',
-  STATSIG: 'Statsig',
-  BOTH: 'Both',
-};
 
 const EVENTS = {
   // Sign-up flow
@@ -75,13 +70,6 @@ const EVENTS = {
   CAP_STUDENT_WARNING_LINK_CLICKED:
     'CAP Teacher Students Warning Modal Documentation Clicked',
   CAP_AGE_GATED_BANNER_SHOWN: 'CAP Teacher Students Banner Shown',
-  CAP_AGE_GATED_SECTIONS_BANNER_SHOWN: 'CAP Teacher Sections Banner Shown',
-  CAP_AGE_GATED_SECTIONS_MODAL_SHOWN:
-    'CAP Teacher Sections Warning Modal Shown',
-  CAP_AGE_GATED_SECTIONS_MODAL_CLOSED:
-    'CAP Teacher Sections Warning Modal Closed',
-  CAP_AGE_GATED_SECTIONS_TABLE_SECTION_NAME_LINK_CLICKED:
-    'CAP Teacher Sections Table Section Name Clicked',
 
   // School Selection Component
   COUNTRY_SELECTED: 'User Selects Country',
@@ -307,6 +295,13 @@ const EVENTS = {
   TA_RUBRIC_ANNOUNCEMENT_CLICKED: 'TA Rubric Announcement Clicked',
   TA_RUBRIC_ANNOUNCEMENT_DISMISSED: 'TA Rubric Announcement Dismissed',
 
+  // AI TA Lesson Summary Podcasts
+  TA_PODCAST_OPEN_TRANSCRIPT: 'TA podcast transcript opened',
+  TA_PODCAST_CLOSE_TRANSCRIPT: 'TA podcast transcript closed',
+  TA_PODCAST_PLAYED: 'TA podcast played',
+  TA_PODCAST_STOPPED: 'TA podcast stopped',
+  TA_PODCAST_PLAYBACK_SPEED_CHANGED: 'TA podcast playback speed changed',
+
   //AI Differentiation
   AI_DIFF_CHAT_OPENED: 'AI Differentiation Chat Opened',
   AI_DIFF_CHAT_CLOSED: 'AI Differentiation Chat Closed',
@@ -457,6 +452,12 @@ const EVENTS = {
     'User accepts and uploads a flagged custom image',
   CANCEL_FLAGGED_CUSTOM_IMAGE: 'User cancels upload of flagged custom image',
 
+  // Moderate model output image
+  MODEL_OUTPUT_IMAGE_CREATED: 'Model output image created',
+  MODERATE_MODEL_OUTPUT_IMAGE_AZURE: 'Model output image moderated by Azure',
+  FLAGGED_MODEL_OUTPUT_IMAGE_AZURE:
+    'Model output image flagged by Azure moderation service',
+
   // Export app
   EXPORT_APP: 'User Exports App From Share Advanced Options',
 
@@ -520,6 +521,8 @@ const EVENTS = {
   SUBMIT_AICHAT_TEACHER_FEEDBACK: 'Teacher submits feedback on aichat message',
   AICHAT_MULTIMODAL_UPLOAD_OPENED: 'User clicks to upload multimodal assets',
   AICHAT_MULTIMODAL_UPLOAD_STAGED: 'User stages multimodal assets',
+  AICHAT_UNSUPPORTED_MODEL_SELECTED:
+    'User had previously selected a model that is no longer supported',
 
   // AI chat response copied. Shared across features; check event properties for usage and clientType
   // to determine feature.
@@ -630,6 +633,16 @@ const EVENTS = {
   RESOURCE_PANEL_LANGUAGE_CHANGE: 'Resource Panel Language Change',
   RESOURCE_PANEL_SETTINGS_CHANGE: 'Resource Panel Settings Change',
 
+  // Resource Panel - Instructions Drawer
+  RESOURCE_PANEL_INSTRUCTIONS_DRAWER_COLLAPSED:
+    'Resource Panel Instructions Drawer Collapsed',
+  RESOURCE_PANEL_INSTRUCTIONS_DRAWER_EXPANDED:
+    'Resource Panel Instructions Drawer Expanded',
+  RESOURCE_PANEL_INSTRUCTIONS_DRAWER_RESIZED_INCREASED:
+    'Resource Panel Instructions Drawer Resized Increased',
+  RESOURCE_PANEL_INSTRUCTIONS_DRAWER_RESIZED_DECREASED:
+    'Resource Panel Instructions Drawer Resized Decreased',
+
   // IntroJS flows
   INTROJS_FLOW_STARTED: 'IntroJS Flow Started',
   INTROJS_FLOW_EXIT: 'IntroJS Flow Exited',
@@ -684,6 +697,20 @@ const EVENTS = {
   IMPORT_FROM_BACKPACK_REPLACE:
     'Import a file from backpack, replacing existing file',
   IMPORT_FROM_BACKPACK_RENAME: 'Import a file from backpack, renaming it',
+
+  // student snapshot events
+  LESSON_SNAPSHOT_RESOURCE_LINK_ADDED:
+    'Teacher clicks “Add resource link” and successfully adds a URL',
+  LESSON_SNAPSHOT_SAVE_AS_DRAFT_CLICKED:
+    'Teacher clicks "Save as draft" and feedback is successfully saved as draft',
+  LESSON_SNAPSHOT_AI_FEEDBACK_EDITED:
+    'Teacher modifies the AI-generated feedback text before saving or sending',
+  LESSON_SNAPSHOT_SEND_FEEDBACK_TO_STUDENT_CLICKED:
+    'Teacher clicks "Send feedback to student" and feedback is successfully sent',
+  LESSON_SNAPSHOT_AI_FEEDBACK_GENERATED:
+    'AI-generated feedback is successfully returned and displayed in the feedback text box',
+  LESSON_SNAPSHOT_FEEDBACK_WIDGET_LOADED:
+    "Teacher opens a student's lesson view and the feedback widget is rendered",
 };
 
 const EVENT_GROUP_NAMES = {
@@ -737,4 +764,4 @@ const EXPERIMENTS = {
   ENABLE_SELECTING_GRADES: 'enable_selecting_grades',
 };
 
-export {EVENTS, EVENT_GROUP_NAMES, EVENT_GROUPS, PLATFORMS, EXPERIMENTS};
+export {EVENTS, EVENT_GROUP_NAMES, EVENT_GROUPS, EXPERIMENTS};

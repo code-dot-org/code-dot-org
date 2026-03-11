@@ -286,10 +286,6 @@ namespace :seed do
   end
 
   timed_task_with_logging scripts: SCRIPTS_DEPENDENCIES do
-    update_scripts(incremental: false)
-  end
-
-  timed_task_with_logging scripts_incremental: SCRIPTS_DEPENDENCIES do
     update_scripts(incremental: true)
   end
 
@@ -306,7 +302,7 @@ namespace :seed do
   # an empty DB. For more context, see
   # https://github.com/code-dot-org/code-dot-org/pull/64792
   timed_task_with_logging reseed_scripts_ui_tests: :environment do
-    update_scripts(script_files: UI_TEST_SCRIPTS)
+    update_scripts(script_files: UI_TEST_SCRIPTS, incremental: true)
   end
 
   timed_task_with_logging scripts_adhoc: SCRIPTS_DEPENDENCIES do
@@ -667,9 +663,6 @@ namespace :seed do
   desc "seed all dashboard data"
   timed_task_with_logging all: FULL_SEED_TASKS
   timed_task_with_logging ui_test: UI_TEST_SEED_TASKS
-
-  desc "seed all dashboard data that has changed since last seed"
-  timed_task_with_logging incremental: [:check_migrations, :videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :donors, :foorms]
 
   desc "seed only dashboard data required for tests"
   timed_task_with_logging test: [:check_migrations, :videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools, :standards, :foorms]
