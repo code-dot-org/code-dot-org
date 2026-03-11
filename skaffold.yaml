@@ -224,15 +224,16 @@ portForward:
 - resourceType: Service
   resourceName: cdo-mysql
   port: mysql
-  localPort: 16379
+  localPort: 13306
 - resourceType: Service
   resourceName: cdo-redis
   port: redis
-- resourceType: service
+  localPort: 16379
+- resourceType: Service
   resourceName: cdo-minio
   port: api
   localPort: 29000
-- resourceType: service
+- resourceType: Service
   resourceName: cdo-minio
   port: console
   localPort: 29001
