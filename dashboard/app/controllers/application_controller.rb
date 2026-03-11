@@ -74,7 +74,7 @@ class ApplicationController < ActionController::Base
   def persist_brand_params
     return unless DCDO.get('brand-router-enabled', false)
 
-    cookie_key = environment_specific_cookie_name(Cdo::Brand::BRAND_COOKIE_NAME)
+    brand_cookie = environment_specific_cookie_name(Cdo::Brand::BRAND_COOKIE_NAME)
 
     if params['brand-reset']
       cookies.delete(cookie_key, domain: :all)
