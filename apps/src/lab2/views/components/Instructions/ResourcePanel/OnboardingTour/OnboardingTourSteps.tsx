@@ -7,7 +7,8 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
-import {RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN} from './constants';
+import {RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN} from '../constants';
+
 import {STEPS, INITIAL_STEP} from './resourcePanelTourHelpers';
 
 // Check if tour should be disabled (e.g., during UI tests) before any rendering.

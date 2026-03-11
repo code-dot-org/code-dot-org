@@ -4,7 +4,7 @@ import {
   resourcePanelTabValidationElementId,
   resourcePanelValidateButtonElementId,
   resourcePanelValidationTableElementId,
-} from './constants';
+} from '../constants';
 
 export const VALIDATION_TOUR_STEPS = [
   {
