@@ -133,7 +133,8 @@ profiles:
             mountDotAWS: true
             mountDotConfigGcloud: true
 
-# Run `rake dashboard:setup_db`, see k8s/README.md
+# Populates Dashboard DB (rake dashboard:setup_db)
+# Run: skaffold dev --trigger=manual -p setup-db -p setup-s3
 - name: setup-db
   patches:
       - op: add
@@ -144,6 +145,7 @@ profiles:
           args: ["cd dashboard && rake dashboard:setup_db && echo 'setup-db COMPLETE'"]
 
 # Create standard cdo-v3-* S3 buckets in minio.
+# Run: skaffold dev --trigger=manual -p setup-db -p setup-s3
 - name: setup-s3
   patches:
       - op: add
