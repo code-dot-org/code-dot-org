@@ -1,5 +1,4 @@
 module OpenaiPersonalizationHelper
-  # NEED TO CHANGE THIS KEY
   MODEL = SharedConstants::PERSONALIZATION_MODEL_VERSION
 
   def self.match_teaching_profile(teaching_profile_data)
@@ -106,6 +105,7 @@ module OpenaiPersonalizationHelper
   end
 
   def self.client
+    # NEED TO CHANGE THIS KEY
     PersonalizationOpenaiHelper::Client.new(CDO.openai_measures_of_learning_api_key, MODEL)
   end
 
