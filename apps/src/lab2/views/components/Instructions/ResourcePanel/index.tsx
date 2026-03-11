@@ -23,6 +23,7 @@ import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
 import IntroJSTourWrapper from '@cdo/apps/lab2/views/components/IntroJSTourWrapper';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import {useRubric} from '@cdo/apps/lab2/views/components/rubrics/RubricWrapper';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
 import {useExtraLinksButtonContext} from '@cdo/apps/lab2/views/LabViewsRenderer';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -32,7 +33,6 @@ import {findFirstFocusableElement} from '@cdo/apps/util/findFirstFocusableElemen
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import '@cdo/apps/lab2/introjs.scss';
 
-import {useRubric} from '../../rubrics/RubricWrapper';
 import ForTeachersOnly from '../ForTeachersOnly';
 import Instructions, {InstructionsProps} from '../InstructionsV2';
 import NavigationArea from '../NavigationArea';
