@@ -25,21 +25,24 @@ export enum ViewMode {
   PREVIEW = 'preview',
 }
 
-export type AiTutorAnswerType =
-  | 'ask'
-  | 'buildCSS'
-  | 'buildHTML'
-  | 'buildJavaScript'
-  | 'buildJSON'
-  | 'debug'
-  | 'documentation'
-  | 'example'
-  | 'explainCode'
-  | 'hint'
-  | 'pseudocode'
-  | 'refusal'
-  | 'refusalJavaScriptSnippets'
-  | 'testCase';
+export const AI_TUTOR_ANSWER_TYPES = [
+  'ask',
+  'buildCSS',
+  'buildHTML',
+  'buildJavaScript',
+  'buildJSON',
+  'debug',
+  'documentation',
+  'example',
+  'explainCode',
+  'hint',
+  'pseudocode',
+  'refusal',
+  'refusalJavaScriptSnippets',
+  'testCase',
+] as const;
+
+export type AiTutorAnswerType = (typeof AI_TUTOR_ANSWER_TYPES)[number];
 
 export type AiTutorMode =
   | 'suggest'

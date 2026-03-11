@@ -85,7 +85,7 @@ export const generateAiTutorPrompt = (
   const parsedAnswerTypes = generateFinalAnswerTypeList(answerTypes);
   const contracts = parsedAnswerTypes
     .map(answerType => {
-      const baseContract = ANSWER_TYPE_CONTRACTS[answerType].trim();
+      const baseContract = ANSWER_TYPE_CONTRACTS[answerType]?.trim();
       const customization = answerTypeCustomizations?.[answerType]?.trim();
       return customization ? `${baseContract}\n${customization}` : baseContract;
     })
