@@ -23,7 +23,7 @@ module Cdo
         legal_name: 'Code.org',
         trademark_html: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo, Hour of Code&reg; and CS Discoveries&reg; are trademarks of Code.org.'
       },
-      BRAND_CODE_CODEAI => {
+      BRAND_CODEAI => {
         logo_filename: 'logo.svg',
         logo_alt_key: :code_org_logo_alt,
         favicon: 'favicon.ico',
