@@ -19,6 +19,7 @@ class AWSCredsMustBeOptionalTest < ActiveSupport::TestCase
     LOCALOVERRIDE_LEGACY_SECRETS = %w(
       slack_bot_token
       openai_lesson_summaries_api_key
+      elevenlabs_api_key
       openai_student_learning_api_key
       langfuse_secret_key
       langfuse_public_key
