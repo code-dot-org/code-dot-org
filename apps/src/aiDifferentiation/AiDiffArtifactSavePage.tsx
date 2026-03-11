@@ -18,6 +18,9 @@ import {
   AiInteractionStatus as Status,
 } from '@cdo/generated-scripts/sharedConstants';
 
+import {EVENTS} from '../metrics/AnalyticsConstants';
+import analyticsReporter from '../metrics/AnalyticsReporter';
+
 import {ChatTextMessage, artifactValidatorHelper} from './types';
 
 import style from './ai-differentiation.module.scss';
@@ -56,6 +59,7 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
   const sections: TeacherSectionState = useAppSelector(state => {
     return state.teacherSections || {};
   });
+  const threadId = useAppSelector(state => state.aichat.threadId);
 
   const artifactTitleIsEmpty = useMemo(() => {
     return artifactTitle.trim() === '';
@@ -66,6 +70,41 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
     .filter(section => {
       return !section.hidden && section.participantType === 'student';
     });
+
+  const reportingData = React.useMemo(() => {
+    return {
+      messageId: message.id,
+      artifactType: message.artifactCandidateType,
+      artifactContent: message.chatMessageText,
+      candidateSectionIds: activeStudentSections.map(section => {
+        return section.id;
+      }),
+    };
+  }, [message, activeStudentSections]);
+
+  const sendArtifactEvent = React.useCallback(
+    (event: (typeof EVENTS)[keyof typeof EVENTS], prompt?: string) => {
+      const responseEventData = {
+        ...reportingData,
+        threadId: threadId,
+        url: window.location.href,
+        prompt: prompt,
+        selectedSectionIds,
+        artifactTitle,
+        selectedUnitId,
+        selectedLessonId,
+      };
+      analyticsReporter.sendEvent(event, responseEventData);
+    },
+    [
+      reportingData,
+      threadId,
+      selectedSectionIds,
+      artifactTitle,
+      selectedUnitId,
+      selectedLessonId,
+    ]
+  );
 
   const swapLessonInfo = useCallback(
     async (unitId: string) => {
@@ -138,7 +177,10 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
           })
         );
       })
-      .finally(() => dispatch(clearPendingArtifactMessage()));
+      .finally(() => {
+        dispatch(clearPendingArtifactMessage());
+        sendArtifactEvent(EVENTS.AI_ARTIFACT_SAVED);
+      });
   };
 
   const unitMenuList = useMemo(() => {
@@ -286,7 +328,10 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
           size="m"
           type="secondary"
           color="black"
-          onClick={() => dispatch(clearPendingArtifactMessage())}
+          onClick={() => {
+            dispatch(clearPendingArtifactMessage());
+            sendArtifactEvent(EVENTS.AI_ARTIFACT_SAVE_CANCELLED);
+          }}
           text="Cancel"
         />
         <Button
