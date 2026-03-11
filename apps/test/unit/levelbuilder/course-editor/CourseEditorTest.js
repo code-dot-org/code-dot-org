@@ -2,6 +2,7 @@ import {render, screen} from '@testing-library/react';
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
@@ -85,6 +86,20 @@ describe('CourseEditor', () => {
         <CourseEditor {...combinedProps} />
       </Provider>
     );
+  }
+
+  function clickButton(button, wrapper) {
+    act(() => {
+      button.simulate('click');
+    });
+    wrapper.update();
+  }
+
+  function setCourseEditorState(courseEditor, wrapper, nextState) {
+    act(() => {
+      courseEditor.setState(nextState);
+    });
+    wrapper.update();
   }
 
   describe('Course Editor - RTL', () => {
@@ -196,7 +211,7 @@ describe('CourseEditor', () => {
         const saveAndKeepEditingButton = saveBar.find('button').at(1);
         chaiExpect(saveAndKeepEditingButton.contains('Save and Keep Editing'))
           .to.be.true;
-        saveAndKeepEditingButton.simulate('click');
+        clickButton(saveAndKeepEditingButton, wrapper);
 
         // check the the spinner is showing
         chaiExpect(
@@ -206,8 +221,11 @@ describe('CourseEditor', () => {
 
         clock = sinon.useFakeTimers(new Date('2020-12-01'));
         const expectedLastSaved = Date.now();
-        server.respond();
-        clock.tick(50);
+        act(() => {
+          server.respond();
+          clock.tick(50);
+        });
+        wrapper.update();
 
         courseEditor.update();
         chaiExpect(utils.navigateToHref).to.not.have.been.called;
@@ -236,7 +254,7 @@ describe('CourseEditor', () => {
         const saveAndKeepEditingButton = saveBar.find('button').at(1);
         chaiExpect(saveAndKeepEditingButton.contains('Save and Keep Editing'))
           .to.be.true;
-        saveAndKeepEditingButton.simulate('click');
+        clickButton(saveAndKeepEditingButton, wrapper);
 
         // check the the spinner is showing
         chaiExpect(
@@ -244,7 +262,10 @@ describe('CourseEditor', () => {
         ).to.equal(1);
         chaiExpect(courseEditor.state().isSaving).to.equal(true);
 
-        server.respond();
+        act(() => {
+          server.respond();
+        });
+        wrapper.update();
         courseEditor.update();
         chaiExpect(utils.navigateToHref).to.not.have.been.called;
         chaiExpect(courseEditor.state().isSaving).to.equal(false);
@@ -276,7 +297,7 @@ describe('CourseEditor', () => {
 
         const saveAndCloseButton = saveBar.find('button').at(2);
         chaiExpect(saveAndCloseButton.contains('Save and Close')).to.be.true;
-        saveAndCloseButton.simulate('click');
+        clickButton(saveAndCloseButton, wrapper);
 
         // check the the spinner is showing
         chaiExpect(
@@ -284,7 +305,10 @@ describe('CourseEditor', () => {
         ).to.equal(1);
         chaiExpect(courseEditor.state().isSaving).to.equal(true);
 
-        server.respond();
+        act(() => {
+          server.respond();
+        });
+        wrapper.update();
         courseEditor.update();
         chaiExpect(utils.navigateToHref).to.have.been.calledWith(
           `/courses/test-course${window.location.search}`
@@ -308,7 +332,7 @@ describe('CourseEditor', () => {
 
         const saveAndCloseButton = saveBar.find('button').at(2);
         chaiExpect(saveAndCloseButton.contains('Save and Close')).to.be.true;
-        saveAndCloseButton.simulate('click');
+        clickButton(saveAndCloseButton, wrapper);
 
         // check the the spinner is showing
         chaiExpect(
@@ -316,7 +340,10 @@ describe('CourseEditor', () => {
         ).to.equal(1);
         chaiExpect(courseEditor.state().isSaving).to.equal(true);
 
-        server.respond();
+        act(() => {
+          server.respond();
+        });
+        wrapper.update();
 
         courseEditor.update();
         chaiExpect(utils.navigateToHref).to.not.have.been.called;
@@ -338,7 +365,7 @@ describe('CourseEditor', () => {
         const wrapper = createWrapper({});
 
         const courseEditor = wrapper.find('CourseEditor');
-        courseEditor.setState({
+        setCourseEditorState(courseEditor, wrapper, {
           publishedState: PublishedState.pilot,
           pilotExperiment: '',
         });
@@ -348,10 +375,9 @@ describe('CourseEditor', () => {
         const saveAndKeepEditingButton = saveBar.find('button').at(1);
         chaiExpect(saveAndKeepEditingButton.contains('Save and Keep Editing'))
           .to.be.true;
-        saveAndKeepEditingButton.simulate('click');
+        clickButton(saveAndKeepEditingButton, wrapper);
 
         chaiExpect($.ajax).to.not.have.been.called;
-
         chaiExpect(courseEditor.state().isSaving).to.equal(false);
         chaiExpect(courseEditor.state().error).to.equal(
           'Please provide a pilot experiment in order to save with published state as pilot.'
@@ -374,7 +400,7 @@ describe('CourseEditor', () => {
       const wrapper = createWrapper({});
 
       const courseEditor = wrapper.find('CourseEditor');
-      courseEditor.setState({
+      setCourseEditorState(courseEditor, wrapper, {
         versionYear: '1991',
         familyName: '',
       });
@@ -384,10 +410,9 @@ describe('CourseEditor', () => {
       const saveAndKeepEditingButton = saveBar.find('button').at(1);
       chaiExpect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to
         .be.true;
-      saveAndKeepEditingButton.simulate('click');
+      clickButton(saveAndKeepEditingButton, wrapper);
 
       chaiExpect($.ajax).to.not.have.been.called;
-
       chaiExpect(courseEditor.state().isSaving).to.equal(false);
       chaiExpect(courseEditor.state().error).to.equal(
         'Please set both version year and family name.'
@@ -409,7 +434,7 @@ describe('CourseEditor', () => {
       const wrapper = createWrapper({});
 
       const courseEditor = wrapper.find('CourseEditor');
-      courseEditor.setState({
+      setCourseEditorState(courseEditor, wrapper, {
         versionYear: '',
         familyName: 'new-family-name',
       });
@@ -419,10 +444,9 @@ describe('CourseEditor', () => {
       const saveAndKeepEditingButton = saveBar.find('button').at(1);
       chaiExpect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to
         .be.true;
-      saveAndKeepEditingButton.simulate('click');
+      clickButton(saveAndKeepEditingButton, wrapper);
 
       chaiExpect($.ajax).to.not.have.been.called;
-
       chaiExpect(courseEditor.state().isSaving).to.equal(false);
       chaiExpect(courseEditor.state().error).to.equal(
         'Please set both version year and family name.'
@@ -446,7 +470,7 @@ describe('CourseEditor', () => {
       });
 
       const courseEditor = wrapper.find('CourseEditor');
-      courseEditor.setState({
+      setCourseEditorState(courseEditor, wrapper, {
         publishedState: PublishedState.preview,
         courseOfferingDeviceCompatibilities: null,
       });
@@ -456,10 +480,9 @@ describe('CourseEditor', () => {
       const saveAndKeepEditingButton = saveBar.find('button').at(1);
       chaiExpect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to
         .be.true;
-      saveAndKeepEditingButton.simulate('click');
+      clickButton(saveAndKeepEditingButton, wrapper);
 
       chaiExpect($.ajax).to.not.have.been.called;
-
       chaiExpect(courseEditor.state().isSaving).to.equal(false);
       chaiExpect(courseEditor.state().error).to.equal(
         'Please set all device compatibilities in order to save with published state as preview or stable.'
@@ -483,7 +506,7 @@ describe('CourseEditor', () => {
       });
 
       const courseEditor = wrapper.find('CourseEditor');
-      courseEditor.setState({
+      setCourseEditorState(courseEditor, wrapper, {
         publishedState: PublishedState.stable,
         courseOfferingDeviceCompatibilities:
           '{"computer":"","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
@@ -494,10 +517,9 @@ describe('CourseEditor', () => {
       const saveAndKeepEditingButton = saveBar.find('button').at(1);
       chaiExpect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to
         .be.true;
-      saveAndKeepEditingButton.simulate('click');
+      clickButton(saveAndKeepEditingButton, wrapper);
 
       chaiExpect($.ajax).to.not.have.been.called;
-
       chaiExpect(courseEditor.state().isSaving).to.equal(false);
       chaiExpect(courseEditor.state().error).to.equal(
         'Please set all device compatibilities in order to save with published state as preview or stable.'
