@@ -26,7 +26,7 @@ $card-gap: 16px;
 }
 
 .fileIconCard {
-  border: 1px solid #d0d0d0;
+  border: 1px solid var(--borders-neutral-primary);
   border-radius: 4px;
   overflow: hidden;
 }
@@ -64,7 +64,7 @@ $card-gap: 16px;
 .fileInfo {
   display: flex;
   flex-direction: column;
-  padding: 6px 8px;
+  padding: 4px 8px 6px 8px;
   gap: 2px;
 
   .filenameRow {
@@ -83,12 +83,12 @@ $card-gap: 16px;
   .filename {
     overflow: hidden;
     text-overflow: ellipsis;
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .fileDetail {
     color: var(--text-neutral-quaternary);
-    font-size: 10px;
+    font-size: 11px;
   }
 }
 
