@@ -49,14 +49,26 @@ describe('AutocompleteInput Component', () => {
   const renderComponent = (props = {}) =>
     render(<ComponentWithState {...defaultProps} {...props} />);
 
+  const flushDebounce = async () => {
+    await act(async () => {
+      jest.advanceTimersByTime(defaultProps.debounceDelay);
+    });
+  };
+
   beforeEach(() => {
-    user = userEvent.setup();
+    jest.useFakeTimers();
+    user = userEvent.setup({advanceTimers: jest.advanceTimersByTime});
     jest.clearAllMocks();
     mockOnChange = jest.fn();
     mockFetchOptions = jest.fn();
     defaultProps.onChange = mockOnChange;
     defaultProps.fetchOptions = mockFetchOptions;
     mockFetchOptions.mockResolvedValue([]);
+  });
+
+  afterEach(() => {
+    jest.clearAllTimers();
+    jest.useRealTimers();
   });
 
   it('renders the TextField with correct initial props', () => {
@@ -79,15 +91,13 @@ describe('AutocompleteInput Component', () => {
     const input = screen.getByLabelText('Location Address');
     const newValue = 'New York';
     await act(async () => {
-      await userEvent.type(input, newValue);
+      await user.type(input, newValue);
     });
     expect(mockOnChange).toHaveBeenCalledTimes(newValue.length);
   });
 
   it('calls fetchOptions after debounce', async () => {
-    mockFetchOptions.mockResolvedValue({
-      options: ['123 Main St'],
-    });
+    mockFetchOptions.mockResolvedValue(['123 Main St']);
 
     renderComponent({value: '123'}); // Initial render doesn't trigger suggest
 
@@ -95,8 +105,9 @@ describe('AutocompleteInput Component', () => {
 
     const input = screen.getByLabelText('Location Address');
     await act(async () => {
-      await userEvent.type(input, ' Main');
+      await user.type(input, ' Main');
     });
+    await flushDebounce();
 
     // Wait for the debounced effect and API call
     await waitFor(() => {
@@ -116,8 +127,9 @@ describe('AutocompleteInput Component', () => {
 
     const input = screen.getByLabelText('Location Address');
     await act(async () => {
-      await userEvent.type(input, '123');
+      await user.type(input, '123');
     });
+    await flushDebounce();
 
     await waitFor(() => {
       expect(screen.getByRole('listbox')).toBeInTheDocument();
@@ -141,8 +153,9 @@ describe('AutocompleteInput Component', () => {
 
     const input = screen.getByLabelText('Location Address');
     await act(async () => {
-      await userEvent.type(input, '123 Main St');
+      await user.type(input, '123 Main St');
     });
+    await flushDebounce();
 
     await waitFor(() => {
       expect(mockFetchOptions).toHaveBeenCalledTimes(1);
@@ -166,8 +179,9 @@ describe('AutocompleteInput Component', () => {
 
     const input = screen.getByLabelText('Location Address');
     await act(async () => {
-      await userEvent.type(input, value);
+      await user.type(input, value);
     });
+    await flushDebounce();
 
     await waitFor(() => {
       expect(screen.getByRole('listbox')).toBeInTheDocument();
@@ -205,8 +219,9 @@ describe('AutocompleteInput Component', () => {
       renderComponent();
       input = screen.getByLabelText('Location Address');
       await act(async () => {
-        await userEvent.type(input, value);
+        await user.type(input, value);
       });
+      await flushDebounce();
       await waitFor(() => {
         expect(screen.getByRole('listbox')).toBeInTheDocument();
       });

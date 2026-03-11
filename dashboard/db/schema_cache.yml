@@ -8299,69 +8299,6 @@ columns:
   - *13
   - *14
   - *29
-  videos:
-  - *5
-  - *86
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: youtube_code
-    sql_type_metadata: *3
-    'null': true
-    default: 
-    default_function: 
-    collation: utf8mb3_unicode_ci
-    comment: 
-  - *27
-  - *28
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: download
-    sql_type_metadata: *3
-    'null': true
-    default: 
-    default_function: 
-    collation: utf8mb3_unicode_ci
-    comment: 
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: locale
-    sql_type_metadata: *3
-    'null': false
-    default: en-US
-    default_function: 
-    collation: utf8mb3_unicode_ci
-    comment: 
-  concepts:
-  - *5
-  - *41
-  - *27
-  - *28
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: video_key
-    sql_type_metadata: *3
-    'null': true
-    default: 
-    default_function: 
-    collation: utf8mb3_unicode_ci
-    comment: 
-  games:
-  - *5
-  - *41
-  - *27
-  - *28
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: app
-    sql_type_metadata: *3
-    'null': true
-    default: 
-    default_function: 
-    collation: utf8mb3_unicode_ci
-    comment: 
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: intro_video_id
-    sql_type_metadata: *2
-    'null': true
-    default: 
-    default_function: 
-    collation: 
-    comment: 
   callouts:
   - *5
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -8471,6 +8408,69 @@ columns:
     comment: 
   - *16
   - *17
+  videos:
+  - *5
+  - *86
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: youtube_code
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb3_unicode_ci
+    comment: 
+  - *27
+  - *28
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: download
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb3_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: locale
+    sql_type_metadata: *3
+    'null': false
+    default: en-US
+    default_function: 
+    collation: utf8mb3_unicode_ci
+    comment: 
+  concepts:
+  - *5
+  - *41
+  - *27
+  - *28
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: video_key
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb3_unicode_ci
+    comment: 
+  games:
+  - *5
+  - *41
+  - *27
+  - *28
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: app
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb3_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: intro_video_id
+    sql_type_metadata: *2
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
 primary_keys:
   activities: id
   activity_sections: id
@@ -8689,13 +8689,13 @@ primary_keys:
   sections: id
   lesson_feedbacks: id
   lti_courses: id
-  videos: id
-  concepts: id
-  games: id
   callouts: id
   secret_words: id
   secret_pictures: id
   donors: id
+  videos: id
+  concepts: id
+  games: id
 data_sources:
   activities: true
   activity_sections: true
@@ -8905,13 +8905,13 @@ data_sources:
   sections: true
   lesson_feedbacks: true
   lti_courses: true
-  videos: true
-  concepts: true
-  games: true
   callouts: true
   secret_words: true
   secret_pictures: true
   donors: true
+  videos: true
+  concepts: true
+  games: true
 indexes:
   activities:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
@@ -14929,49 +14929,6 @@ indexes:
     type: 
     using: :btree
     comment: 
-  videos:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: videos
-    name: index_videos_on_key_and_locale
-    unique: true
-    columns:
-    - key
-    - locale
-    lengths: {}
-    orders: {}
-    opclasses: {}
-    where: 
-    type: 
-    using: :btree
-    comment: 
-  concepts:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: concepts
-    name: index_concepts_on_video_key
-    unique: false
-    columns:
-    - video_key
-    lengths: {}
-    orders: {}
-    opclasses: {}
-    where: 
-    type: 
-    using: :btree
-    comment: 
-  games:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: games
-    name: index_games_on_intro_video_id
-    unique: false
-    columns:
-    - intro_video_id
-    lengths: {}
-    orders: {}
-    opclasses: {}
-    where: 
-    type: 
-    using: :btree
-    comment: 
   callouts: []
   secret_words:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
@@ -15015,6 +14972,49 @@ indexes:
     using: :btree
     comment: 
   donors: []
+  videos:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: videos
+    name: index_videos_on_key_and_locale
+    unique: true
+    columns:
+    - key
+    - locale
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  concepts:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: concepts
+    name: index_concepts_on_video_key
+    unique: false
+    columns:
+    - video_key
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  games:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: games
+    name: index_games_on_intro_video_id
+    unique: false
+    columns:
+    - intro_video_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
 version: 20260211145245
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
