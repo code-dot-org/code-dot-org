@@ -104,7 +104,7 @@ const FileIcon: React.FC<FileIconProps> = ({
           </Typography>
           <MuiIconButton
             size="extraSmall"
-            onClick={() => window.open(url, '_blank')}
+            onClick={() => window.open(url, '_blank', 'noopener,noreferrer')}
             type="button"
             aria-label={`Preview ${filename}`}
             className={styles.previewButton}
