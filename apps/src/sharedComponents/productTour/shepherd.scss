@@ -2,6 +2,13 @@
 
 .custom-shepherd-step-container {
   font-family: Figtree, sans-serif;
+  background-color: var(--background-neutral-primary);
+  box-shadow: 0 12px 40px rgb(28 45 94 / 16%);
+  border-radius: 8px;
+
+  &.shepherd-has-title .shepherd-content .shepherd-header {
+    background-color: var(--background-neutral-primary);
+  }
 
   h3 {
     font-size: 1.25rem;
