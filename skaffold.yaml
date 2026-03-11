@@ -146,10 +146,6 @@ profiles:
 # For details, see: ./k8s/mimic/README.md
 - name: mimic
   patches:
-    # Name the helm release 'mimic' instead of 'code-dot-org'
-    - op: replace
-      path: /deploy/helm/releases/0/name
-      value: mimic
     # Create the k8s/mimic/cdo-no-symlinks dir to serve as the build context for the
     # mimic docker build. This is just a copy of k8s/mimic/code-dot-org, but symlinks
     # have been replaced by copies of the real files, because docker doesn't follow
