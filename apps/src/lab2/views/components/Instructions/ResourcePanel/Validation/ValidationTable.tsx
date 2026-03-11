@@ -3,16 +3,15 @@ import React, {useEffect} from 'react';
 
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {
+  resourcePanelValidationTableElementId,
+  VALIDATION_COMPLETE_EVENT,
+} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/constants';
+import {
   getStatusForResult,
   getTranslatedResult,
 } from '@cdo/apps/lab2/views/components/Instructions/validationHelpers';
 import ValidationStatusIcon from '@cdo/apps/lab2/views/components/Instructions/ValidationStatusIcon';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import {
-  resourcePanelValidationTableElementId,
-  VALIDATION_COMPLETE_EVENT,
-} from './constants';
 
 import moduleStyles from './validation-panel.module.scss';
 

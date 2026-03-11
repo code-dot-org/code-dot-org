@@ -6,7 +6,7 @@ import {
   RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME,
   RESOURCE_PANEL_VALIDATION_FLOW_V2_NAME,
 } from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/constants';
-import {ValidationSettings} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/ValidationPanel';
+import {ValidationSettings} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/Validation/ValidationPanel';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import useProductTour from '@cdo/apps/sharedComponents/productTour/useProductTour';
 import useStartTourWhenAvailable from '@cdo/apps/sharedComponents/productTour/useStartTourWhenAvailable';
