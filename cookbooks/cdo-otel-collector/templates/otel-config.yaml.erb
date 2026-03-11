@@ -48,7 +48,27 @@ receivers:
         from: attributes.pid
         to: attributes["process.pid"]
 
+<% if @prometheus_remote_write_url && !@prometheus_remote_write_url.empty? %>
+connectors:
+  # Generates RED (Rate, Errors, Duration) metrics from Rack spans for Prometheus.
+  # span.name is automatically included as a label and serves as the route identifier
+  # since http.route is not available in our Rails 6.1 Rack instrumentation.
+  # Buckets are coarse by design: CloudWatch-oriented teams monitor at SLO boundaries
+  # (p50 ~100ms, p99 ~500ms-1s) rather than sub-10ms granularity.
+  spanmetrics/rack_prometheus:
+    namespace: rack
+    dimensions:
+      - name: http.method
+      - name: http.status_code
+      - name: span.status.code
+    exemplars:
+      enabled: true
+    histogram:
+      explicit:
+        buckets: [10ms, 50ms, 100ms, 250ms, 500ms, 1s, 2500ms, 5s, 10s, 30s]
+    metrics_flush_interval: 60s
 
+<% end %>
 processors:
   # Batch processor for efficient data transmission
   batch:
@@ -56,6 +76,15 @@ processors:
     send_batch_size: 1024
     send_batch_max_size: 2048
 
+<% if @prometheus_remote_write_url && !@prometheus_remote_write_url.empty? %>
+  # Keeps only Rack instrumentation spans to feed the spanmetrics/rack_prometheus connector.
+  filter/rack_prometheus:
+    error_mode: ignore
+    traces:
+      span:
+        - 'instrumentation_scope.name != "OpenTelemetry::Instrumentation::Rack"'
+
+<% end %>
   # In the compatible version of OpenTelemetry for Rails 6.1, the included instrumentation does not support `http.route` as a span attribute (this is made available in Rails 7.1).
   # Due to this, DataDog will interpret the resource name as simply the HTTP method (e.g. `GET`) instead of the full route (e.g. `GET /users/:id`).
   # This processor adds a custom statement to set the resource name to the value of `http.route` when available so that resource name comes out as `GET [PATH]`.
@@ -93,6 +122,14 @@ processors:
         from_attribute: host.name
         action: insert
 
+<% if @prometheus_remote_write_url && !@prometheus_remote_write_url.empty? %>
+extensions:
+  # SigV4 signing for Amazon Managed Prometheus remote write requests.
+  sigv4auth/prometheus:
+    region: <%= @prometheus_region %>
+    service: aps
+
+<% end %>
 exporters:
   # DataDog exporter for sending telemetry to DataDog.
   # APM stats (request/error/duration by service and resource) are computed
@@ -117,7 +154,22 @@ exporters:
       batch:
         flush_timeout: 10s
 
+<% if @prometheus_remote_write_url && !@prometheus_remote_write_url.empty? %>
+  # Prometheus Remote Write exporter for Amazon Managed Prometheus.
+  prometheusremotewrite/rack_prometheus:
+    endpoint: <%= @prometheus_remote_write_url %>
+    auth:
+      authenticator: sigv4auth/prometheus
+    resource_to_telemetry_conversion:
+      enabled: true
+    target_info:
+      enabled: true
+<% end %>
+
 service:
+<% if @prometheus_remote_write_url && !@prometheus_remote_write_url.empty? %>
+  extensions: [sigv4auth/prometheus]
+<% end %>
   pipelines:
     # Traces pipeline
     traces:
@@ -136,3 +188,17 @@ service:
       receivers: [filelog/syslog, otlp]
       processors: [resource, batch]
       exporters: [datadog]
+
+<% if @prometheus_remote_write_url && !@prometheus_remote_write_url.empty? %>
+    # Rack spans pipeline: filters to Rack spans and feeds the spanmetrics connector
+    traces/rack_prometheus:
+      receivers: [otlp]
+      processors: [filter/rack_prometheus]
+      exporters: [spanmetrics/rack_prometheus]
+
+    # RED metrics pipeline: receives generated metrics from spanmetrics and ships to Prometheus
+    metrics/rack_prometheus:
+      receivers: [spanmetrics/rack_prometheus]
+      processors: [resource, batch]
+      exporters: [prometheusremotewrite/rack_prometheus]
+<% end %>

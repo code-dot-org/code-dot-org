@@ -61,8 +61,11 @@ template '/etc/otelcol-contrib/config.yaml' do
   mode '0600'
   variables({
               site: node['cdo-otel-collector']['site'],
-              datadog_api_key: datadog_api_key
-            })
+              datadog_api_key: datadog_api_key,
+              prometheus_remote_write_url: node['cdo-otel-collector']['prometheus_remote_write_url'],
+              prometheus_region: node['cdo-otel-collector']['prometheus_region']
+            }
+)
   notifies :restart, 'service[otelcol-contrib]', :delayed
 end
 
