@@ -2,7 +2,6 @@ require 'cdo/aws/metrics'
 
 # Provides functionality to detect toxicity in user input and model output used in the AI Chat Lab.
 module AichatSafetyHelper
-  API_KEY = CDO.openai_student_learning_api_key
   MODEL = SharedConstants::AICHAT_MODEL_VERSION
 
   class ToxicityDetector
@@ -94,7 +93,11 @@ module AichatSafetyHelper
     end
 
     private def client
-      AichatOpenaiResponsesHelper::Client.new(API_KEY, MODEL)
+      AichatOpenaiResponsesHelper::Client.new(api_key, MODEL)
+    end
+
+    private def api_key
+      @api_key ||= CDO.openai_student_learning_api_key
     end
 
     private def get_safety_system_prompt(level_id)
