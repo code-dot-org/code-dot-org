@@ -2,7 +2,6 @@ import {Steps} from 'intro.js-react';
 import React, {useState, useEffect} from 'react';
 
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
-import {ValidationSettings} from '@cdo/apps/lab2/views/components/Instructions/InstructionsV2';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
@@ -26,7 +25,7 @@ const VALIDATION_FLOW_NAME = 'Resource Panel Validation';
 
 interface ValidationTourStepsProps {
   hasValidationConditions: boolean;
-  validationSettings: ValidationSettings | undefined;
+  hasValidationSettings: boolean;
   setCurrentTab: (tab: Tabs) => void;
   onValidate: (() => void) | undefined;
 }
@@ -35,7 +34,7 @@ interface ValidationTourStepsProps {
 // have a validation system similar to Python Lab.
 const ValidationTourSteps: React.FC<ValidationTourStepsProps> = ({
   hasValidationConditions,
-  validationSettings,
+  hasValidationSettings,
   setCurrentTab,
   onValidate,
 }) => {
@@ -69,7 +68,7 @@ const ValidationTourSteps: React.FC<ValidationTourStepsProps> = ({
 
   useEffect(() => {
     const shouldShowValidationTour =
-      validationSettings &&
+      hasValidationSettings &&
       hasValidationConditions &&
       validationTourSeen !== 'yes' &&
       onboardingTourSeen === 'yes'; // If user hasn't seen both tours, show onboarding tour first.
@@ -77,7 +76,7 @@ const ValidationTourSteps: React.FC<ValidationTourStepsProps> = ({
       setValidationTourEnabled(true);
     }
   }, [
-    validationSettings,
+    hasValidationSettings,
     hasValidationConditions,
     validationTourSeen,
     onboardingTourSeen,
