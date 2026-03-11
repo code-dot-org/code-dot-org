@@ -1,10 +1,15 @@
 require_relative "boot"
 
+# This is symlinked to the real top-level lib/ dir:
 $LOAD_PATH.unshift(File.expand_path("../../lib", __dir__))
 require "cdo"
 
+$LOAD_PATH.unshift(File.expand_path("../lib", __dir__))
+require "dashboard_shims"
+
 require "rails"
 require "action_controller/railtie"
+require "active_record/railtie"
 
 module DashboardServerMimic
   class Application < Rails::Application

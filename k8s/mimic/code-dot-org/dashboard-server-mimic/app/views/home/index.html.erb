@@ -25,11 +25,15 @@
     <li>To find this Rails app's code: <code>k8s/mimic/code-dot-org/dashboard-server-mimic</code></li>
   </ol>
 
-  <p>
-    DB status: <code><%= @db[:message] %></code>
+  <p style="margin-top: 4em">
+    Server Status:
+
+    <ul>
+      <li>DB: <%= @db_connection[:message] %>, <%= @read_data_docs_sql_table ? "populated (data_docs table)" : "not populated (data_docs table)" %></li>
+      <li>Redis: <%= @redis_connection %></li>
+      <li>S3 status: <%= @s3_status[:connected] ? "connected" : "not connected" %>, <%= @s3_status[:read] ? "populated (cdo-v3-sources bucket)" : "not populated (cdo-v3-sources bucket)" %></li>
+      <li>Rails.env: <code><%= Rails.env %></code></li>
+    </ul>
   </p>
 
-  <p>
-    Rails env: <code><%= Rails.env %></code>
-  </p>
 </div>
