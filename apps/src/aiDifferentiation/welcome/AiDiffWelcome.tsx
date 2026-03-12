@@ -1,7 +1,6 @@
-import {Button} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Link from '@code-dot-org/component-library/link';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 import Confetti from 'react-dom-confetti';
@@ -107,7 +106,15 @@ const getStartedPage = (onClick: () => void) => {
             Empowering teachers. Enhancing learning.
           </Typography>
         </div>
-        <Button onClick={onClick} text="Get Started" />
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
+          onClick={onClick}
+          type="button"
+        >
+          {'Get Started'}
+        </MuiButton>
       </div>
     </div>
   );
@@ -218,12 +225,17 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
     (nextState: WelcomeState, continueDisabled: boolean) => {
       return (
         <div className={style.bottomButtons}>
-          <Button
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
+            disabled={continueDisabled}
             id="uitest_aiDiffWelcomeContinue"
             onClick={() => moveForwardTo(nextState)}
-            text="Continue"
-            disabled={continueDisabled}
-          />
+            type="button"
+          >
+            {'Continue'}
+          </MuiButton>
           <Link
             className={style.skipLink}
             onClick={() =>
@@ -362,12 +374,17 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             />
           </a>
         </div>
-        <Button
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
           onClick={() =>
             updateShowWelcomeExperience(EVENTS.AI_DIFF_CELEBRATION)
           }
-          text="Finish"
-        />
+          type="button"
+        >
+          {'Finish'}
+        </MuiButton>
       </div>
     );
   }, [updateShowWelcomeExperience, confettiActive, reportingContext]);

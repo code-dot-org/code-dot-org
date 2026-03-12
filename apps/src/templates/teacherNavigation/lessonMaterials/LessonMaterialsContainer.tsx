@@ -1,7 +1,6 @@
-import {Button} from '@code-dot-org/component-library/button';
 import {Dialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import _ from 'lodash';
 import React, {useState, useMemo} from 'react';
 import {useSelector} from 'react-redux';
@@ -416,14 +415,16 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
                     {i18n.audioSummary()}
                   </Typography>
                 </div>
-                <Button
-                  type="secondary"
-                  size="xs"
-                  color="black"
+                <MuiButton
+                  variant="outlined"
+                  color="secondary"
+                  size="extraSmall"
                   className={styles.openTranscriptButton}
-                  text={i18n.transcript()}
                   onClick={() => handleTranscriptButtonClick()}
-                />
+                  type="button"
+                >
+                  {i18n.transcript()}
+                </MuiButton>
               </div>
               <div className={styles.audioPlayerContainer}>
                 {/* We're including our own custom time-stamped transcript dialog, so no need for media caption. */}
@@ -509,13 +510,16 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
                 </ul>
               </div>
             </div>
-            <Button
-              type="secondary"
-              color="black"
+            <MuiButton
+              variant="outlined"
+              color="secondary"
+              size="medium"
               className={styles.askAITAButton}
-              text={i18n.questionForAITA()}
               onClick={handleLessonSummaryAskAITAClick}
-            />
+              type="button"
+            >
+              {i18n.questionForAITA()}
+            </MuiButton>
             {!hasCompletedPersonalizationQuiz && (
               <div className={styles.personalizationQuizSection}>
                 <div className={styles.horizontalLine} />
