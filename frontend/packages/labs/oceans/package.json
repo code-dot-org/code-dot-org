@@ -1,6 +1,6 @@
 {
   "name": "@code-dot-org/ml-activities",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "",
   "main": "dist/main.js",
   "jest": {
@@ -13,7 +13,9 @@
       "^@ml(.*)$": "<rootDir>/src/$1",
       "^@public(.*)$": "<rootDir>/public/$1"
     },
-    "setupFilesAfterEnv": ["<rootDir>/test/setup.js"],
+    "setupFilesAfterEnv": [
+      "<rootDir>/test/setup.js"
+    ],
     "globals": {
       "window": {},
       "location": {}
