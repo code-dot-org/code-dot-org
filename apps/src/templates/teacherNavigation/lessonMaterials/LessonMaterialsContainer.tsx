@@ -372,7 +372,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     if (selectedLesson && experiments.isEnabled(experiments.AI_ARTIFACT)) {
       return (
         <CustomLessonResources
-          unitId={selectedSection.unitId}
+          unitId={selectedUnitId}
           lessonId={selectedLesson.id}
           sectionId={selectedSection.id}
         />
