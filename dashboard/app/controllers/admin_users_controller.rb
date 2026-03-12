@@ -443,7 +443,7 @@ class AdminUsersController < ApplicationController
 
     csv_data = params[:csv_data]
     teacher_id = params[:teacher_id]
-    dry_run = params[:dry_run]
+    dry_run = params[:dry_run] == 'true'
 
     if csv_data.blank? || teacher_id.blank?
       render json: {error: 'CSV data and teacher ID are required'}, status: :bad_request
@@ -483,7 +483,7 @@ class AdminUsersController < ApplicationController
         return
       end
 
-      commit_flag = dry_run == 'true' ? '' : 'for-real'
+      commit_flag = dry_run ? '' : 'for-real'
 
       success = execute_delete_script(script_path, teacher_id, temp_file.path, commit_flag, output_file.path, repo_root)
 
@@ -498,8 +498,8 @@ class AdminUsersController < ApplicationController
       render json: {
         success: true,
         output: output,
-        dry_run: dry_run == 'true',
-        message: dry_run == 'true' ? "Dry run completed successfully" : "Progress deletion completed successfully"
+        dry_run: dry_run,
+        message: dry_run ? "Dry run completed successfully" : "Progress deletion completed successfully"
       }
     rescue => exception
       Rails.logger.error "Error in delete_user_progress: #{exception.message}"
