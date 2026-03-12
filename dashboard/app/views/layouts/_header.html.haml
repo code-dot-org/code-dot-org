@@ -76,9 +76,9 @@
       .header_left
         .header_logo
           - if current_user
-            = link_to(image_tag(Cdo::Brand.logo_filename, alt: Cdo::Brand.logo_alt_text), home_path, {id: "logo_home_link"})
+            = link_to(image_tag(Cdo::Brand.logo_filename(request), alt: Cdo::Brand.logo_alt_text(request)), home_path, {id: "logo_home_link"})
           - else
-            = link_to(image_tag(Cdo::Brand.logo_filename, alt: Cdo::Brand.logo_alt_text), Cdo::Brand.marketing_url(ge_region: request.ge_region), {id: "logo_home_link"})
+            = link_to(image_tag(Cdo::Brand.logo_filename(request), alt: Cdo::Brand.logo_alt_text(request)), Cdo::Brand.marketing_url(ge_region: request.ge_region), {id: "logo_home_link"})
 
       .header_middle{dir: locale_dir}
         - if should_show_progress || level
