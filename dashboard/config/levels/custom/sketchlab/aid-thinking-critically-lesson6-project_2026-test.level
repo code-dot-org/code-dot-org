@@ -1,5 +1,6 @@
 <Sketchlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 75,
   "created_at": "2026-03-03T20:15:28.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "project_template_level_name": "aid-thinking-critically-lesson4-project-template_2026-test",
-    "long_instructions": "Milestone 3 - Truth & Credibility ",
+    "long_instructions": "#Project Work: Truth & Crediblity Meter\r\n\r\n**Create a scale that shows levels of trust** For example: High Trust → Check Carefully → Low Trust.\r\n1.  Design it in a way that fits your project style.\r\n2.  Describe each level of your tool\r\n\r\n\t**Consider:** \r\n\t- What makes an AI response more trustworthy?\r\n\t- Add tips and warning signs that mean “slow down and check”?\r\n\r\n<br>\r\n\r\n3. Add at least two actions someone should take before trusting AI.\r\n\r\n\t**For examples:**\r\n\t- Ask for sources\r\n\t- Add missing details\r\n\t- Cross-check with another source\r\n\t- Look for assumptions",
     "start_sources": {
       "source": {
         "type": "excalidraw",
@@ -124,7 +125,6 @@
       }
     }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-03 20:17:11 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-03 20:17:41 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-03 20:19:17 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-03 20:30:09 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-03 20:17:11 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-03 20:17:41 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-03 20:19:17 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-03 20:30:09 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-03-04 16:49:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Sketchlab>

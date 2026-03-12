@@ -1,4 +1,4 @@
-import Button from '@code-dot-org/component-library/button';
+import {Button as MuiButton} from '@mui/material';
 import {Handle, NodeProps, NodeResizer, Position} from '@xyflow/react';
 import React, {memo, useCallback} from 'react';
 
@@ -64,14 +64,16 @@ function ResultNode({selected, width}: NodeProps) {
       </div>
       {combinedResultTexts.length > 0 && (
         <div className={styles.copyToClipboardContainer}>
-          <Button
-            size="xs"
-            color="gray"
-            type="secondary"
-            text="Copy to clipboard"
-            onClick={onCopyToClipboard}
+          <MuiButton
+            variant="outlined"
+            color="tertiary"
+            size="extraSmall"
             className={styles.copytoClipboardButton}
-          />
+            onClick={onCopyToClipboard}
+            type="button"
+          >
+            {'Copy to clipboard'}
+          </MuiButton>
         </div>
       )}
     </div>

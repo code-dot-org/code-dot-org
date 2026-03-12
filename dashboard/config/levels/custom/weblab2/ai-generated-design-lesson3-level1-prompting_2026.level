@@ -1,0 +1,55 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-03-10T18:20:00.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## The Green Gardener: Designing for Sam\r\n\r\n**The User:** Sam needs a digital plant-tracking app with a built-in watering schedule. He is often outside, in direct sunlight, with dirt on his hands while using the app.\r\n\r\n**Your Task:** Write a detailed prompt for AI Tutor to help you generate your web app layout. Your prompt must address the following three questions:\r\n\r\n1. What is the goal?   \r\n> Think about: What information (e.g. plant type, watering schedule, ready to harvest) does the app keep track of?\r\n\r\n2. What are the constraints?\r\n> What colors, buttons, and text should the page use to be visible in extreme sunlight?\r\n\r\n3. What are the edge cases?\r\n>How should the website handle missing information (e.g. no known watering schedule, missing picture of a plant)?\r\n",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "code",
+    "ai_tutor_mode": "designer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+      },
+      "openFiles": [
+
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMqwElaoRX309s+kb2KI\nu5Zkxr2RaxqUcfpzOz5ACyIE60yUORzRLItSXu9YGVACk5NcuHs+w/Hix5mY\nSCChPZ0jp2qjzeq/HF8/jmF8Xcq6tSA+ktUCkoWh6YLc/ZB8bgElkm/zje3n\nKpwCcQHiOXxIfyo6+MvbX+NESbb4196MtPgw04eiMLAbdO7dUbCYDngPKc42\nAH/VpGkqSoJ+iQSKKreovkcFhu/mxX3AV6nseulFOirY+l1Cnb98DZgj3DWq\ncn22uMwrOdsBko51/oVT3b4gktpJXKi4IBHvz3SzBDDp38l3/Ui0tjAv4Sor\njfOSmV40icquS2TCEXSx1s+cN45tfa/PqEY4QYr2KIPZcIeQSIWGCHaqh1bp\nP0cqaPD62Asdr1Gg5qpvNlamPkxo5qJmvW0rbAh4Jxd3ZLimV6JdW2N/b/8P\nuO/pJ1wDaq/5C9N4TPL3ktN3LC2ftKTC/sKohSVLZu2cW7yXUKnh/X9gZjqb\nYk89SwqpLevwLmxoAiqlGqX4mc6B8LH77R6OIExcKhRHsYFdLSzQXJq0jRG0\nLTNfpufAnkDHGtItpN8L9WJ0MICQ0ae65UOFCVR3CzS9zS0UEypmacS4dhj6\nNZ5oQz+XvvRtHfleFfKTLJzafhNcEVg1qk1NW/4K7nAP3lEGJzcsc71HXXKa\ngwAchxT2Fp8XJPLASGJGQ9WEePzJNkdK1YKaXbmC/yTR831ElC5Q2vJpIs3v\nV7uOMk2OiavacXUd68rbSXdZBjCgTSKkJ/UqgiWkUirmI9GZwR8aYPIuutHI\nduDYsPP3SPx9u1joRJm7eM6D0M+YcjMfDLa1ebSYBZvSFGWjZD68KBJ6M4ka\n/PHYh6dxVSJ+6/U1JlJPDDmDgiMbuGjl6PsB/GuiUTqELVpuMCQh93YNWthE\nqFkHDTUX1ZDZ4IRHNG0JwSV7BQieYVV09Z25lOOvR/k=\n",
+    "name_suffix": "_2026",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "project_template_level_name": "ai-generated-design-lesson3-template_2026",
+    "teacher_markdown": "Have students read over their prompt to \"see\" their web app in their mind. \r\n\r\nIf their requirements are too vague for them to visualize the webpage, encourage them to add at least one more specific detail to each category. \r\n\r\nThe more detailed and specific their prompt, the more likely AI is to build exactly what they are envisioning.",
+    "display_name": "The Green Gardener",
+    "bubble_choice_description": "Sam needs a digital plant-tracking app and watering schedule.",
+    "thumbnail_url": "https://images.code.org/1707afb0d3e0d1d788deab547787c1c3-green_gardener.png"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-10T18:20:00.092+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson3-level3_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson3-level3_2026\"},{\"changed_at\":\"2026-03-10 18:23:00 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 18:26:21 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 18:47:04 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 18:47:11 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 18:47:39 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 18:49:38 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 18:59:33 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

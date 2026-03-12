@@ -1,0 +1,136 @@
+name 'self-paced-TCaAI-L2-Lesson3'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Milestone 2 Lesson Overviews
+
+## Lesson 3: Responsible Co-Creation
+
+#### Lesson 3 is a **Building Knowledge** lesson. Students explore how humans and AI can work together creatively while maintaining human agency, voice, and ethical responsibility. They will use this knowledge to make progress toward the final project in Lesson 4.
+
+### 📝 **Lesson Overview**
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block; width: 100%"> <a href="https://studio.code.org/courses/aid-thinking-critically-about-ai-2025/units/1/lessons/3" target="blank" rel="noopener noreferrer">Access Lesson 3: Responsible Co-Creation</a> </p> 
+
+<!-- Warm Up -->
+<details style="background-color: #ececec; padding: 12px; margin-top: 15px; margin-bottom: 15px; border-radius: 6px;">
+  <summary style="font-size: 13pt; font-weight: bold;">Warm Up (5 minutes)</summary>
+  <div style="margin-top: 12px; font-size: 13pt; line-height: 1.4;">
+    <p style="font-size: 13pt">
+      Students are introduced to the <strong>Pilot / Co-Pilot</strong> metaphor for human-AI collaboration: the AI can suggest routes using patterns, but the human remains responsible for the final call.</p>
+    <p style="font-size: 13pt">Students respond to quick “stand/sit” scenarios (Team Pilot vs. Team Co-Pilot) to surface their instincts about control, trust, and decision-making when AI disagrees with human judgment.
+    </p>
+    <p style="font-size: 13pt; margin-bottom: 0;">
+    Use this moment to set the tone for the lesson: the goal isn’t to use AI blindly-it’s to learn how to stay in command while using it productively.
+    </p>
+  </div>
+</details>
+
+<!-- Activity -->
+<details style="background-color: #ececec; padding: 12px; margin-bottom: 15px; border-radius: 6px;">
+  <summary style="font-size: 13pt; font-weight: bold;">Activity (35 minutes)</summary>
+  <div style="margin-top: 12px; font-size: 13pt; line-height: 1.4;">
+    <p style="font-size: 14pt; line-height: 1.4;"><b>🗺️ Station Explorations</b></p>
+    
+    <p style="font-size: 13pt">Students complete one of three exploration pathways in stations: </p>
+
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; width: 100%; margin: 15px auto;">
+
+  <!-- Campaign Card -->
+  <div style="background-color: #F5F7F8; padding: 20px; border-radius: 12px; text-align: center;">
+    <img src="https://images.code.org/3122c4950d33d4f0a37cdfda89ccef12-image-1773179115236.png" 
+         alt="" 
+         style="width: 60px; height: auto; margin-bottom: 10px;">
+    <p style="font-size: 14pt; font-weight: bold; margin: 0 0 8px 0;">
+      Campaign Strategy &amp; Messaging
+    </p>
+    <p style="font-size: 12pt; margin: 0; line-height: 1.4;">
+      How can I use AI to run an effective campaign while maintaining my vision and voice?
+    </p>
+  </div>
+
+  <!-- Writing Card -->
+  <div style="background-color: #F5F7F8; padding: 20px; border-radius: 12px; text-align: center;">
+    <img src="https://images.code.org/dfac78a66fe619001283ed37122723bf-image-1773179113021.png" 
+         alt="" 
+         style="width: 60px; height: auto; margin-bottom: 10px;">
+    <p style="font-size: 14pt; font-weight: bold; margin: 0 0 8px 0;">
+      Creative Writing &amp; Imagination
+    </p>
+    <p style="font-size: 12pt; margin: 0; line-height: 1.4;">
+      How can I use AI to expand my own imagination?
+    </p>
+  </div>
+
+  <!-- Content Card -->
+  <div style="background-color: #F5F7F8; padding: 20px; border-radius: 12px; text-align: center;">
+    <img src="https://images.code.org/dde8b6c4186f712e1384be3f594fde26-image-1773179104577.png" 
+         alt="" 
+         style="width: 60px; height: auto; margin-bottom: 10px;">
+    <p style="font-size: 14pt; font-weight: bold; margin: 0 0 8px 0;">
+      Content Creation &amp; Branding
+    </p>
+    <p style="font-size: 12pt; margin: 0; line-height: 1.4;">
+      How do I use AI to grow my channel without losing my original voice?
+    </p>
+  </div>
+
+</div>
+    
+<p style="font-size: 13pt">At each station, students move through a consistent three-part flow:
+      <strong>Collaborative Brainstorming (Learning Log)→ AI Testing (AI Chat Lab) → Initial Judgment (Sketch Lab)</strong>.</p>
+      <p style="font-size: 13pt">Students use their Learning Log to capture their human goals first, then compare those goals to AI outputs in AI Chat Lab, and finally color-code what is AI-generated vs. human-created to analyze ownership and control in Sketch Lab.
+    </p>
+    <br>
+    <p style="font-size: 14pt"><b>🧑‍🎓 Further Learning</b></p>
+<p style="margin-bottom: 0; font-size: 13pt">
+      The lesson closes this work by having students explore ethical trade-offs (such as environmental impacts, skill atrophy, and artist rights) through a choice of four short, self-guided mini-lessons, so they can connect personal co-creation choices to wider real-world consequences.
+    </p>
+
+<!-- PBL Callout -->
+<div style="background-color: #F5F7F8; padding: 15px; border-radius: 10px; margin: 18px 0; display: flex; align-items: flex-start; gap: 12px;">
+      <img src="https://images.code.org/b553f8594e621f659863b8fcb8b13c42-image-1772670604477.png" alt="" style="width: 40px; height: 40px;">
+      <div>
+        <p style="font-size: 12pt; font-weight: bold; margin: 0;">PBL Design Element: Voice &amp; Choice</p>
+        <p style="font-size: 12pt; font-style: italic; margin: 5px 0 0 0; line-height: 1.3;">
+          Students make meaningful decisions about what they explore and how they demonstrate understanding.
+        </p>
+      </div>
+    </div>
+    
+  </div>
+</details>
+
+<!-- Wrap Up -->
+<details style="background-color: #ececec; padding: 12px; margin-bottom: 15px; border-radius: 6px;">
+  <summary style="font-size: 13pt; font-weight: bold;">Wrap Up (5 minutes)</summary>
+  <div style="margin-top: 12px; font-size: 13pt; line-height: 1.4;">
+    <p style="font-size: 13pt">
+      Students return to their Milestone 2 Learning Log to reflect on where they felt most like the <strong>Pilot</strong> and where AI started to feel like it was taking over.
+      They draft a personal “line in the sand” for responsible co-creation, naming specific ways AI can support them while keeping human voice and values in control.
+    </p>
+    <p style="margin-bottom: 0; font-size: 13pt">
+      Close by revisiting the lesson question and vocabulary and previewing that Lesson 4 will ask students to synthesize and formalize shared guidelines for the final project.
+    </p>
+  </div>
+</details>
+
+
+### 🧾 **What to Prepare**:
+* #### Print multiple copies of each Exploration Guide and set them up as stations around the room.
+* #### Organize stations clearly so students can move efficiently between brainstorming, AI testing, and Sketch Lab.
+* #### Ensure students bring their Milestone 2 Learning Log to record brainstorming diagrams, AI outputs, and reflections.
+* #### Preview AI Chat and Sketch Lab levels so you can support students with prompt testing and color-coding.
+* #### Plan timing carefully so all students move into synthesis discussion together.
+
+### 💡 **Tips for Teaching**:
+* #### Emphasize that this is about decision-making, not just using AI. Students should remain the “Pilot” when using AI.
+* #### During brainstorming, push specificity. The clearer students are about their human vision, the easier it is to evaluate AI output.
+* #### Watch for students accepting AI suggestions without critique. Ask:
+  * #### “Does this match your original intent?”
+  * #### “Where did the AI change your voice?”
+
+___
+
+#### **Up Next**: Preview *only* the AI Chat Lab levels for Lesson 3 to get an idea of what students will create.
+MARKDOWN

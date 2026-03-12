@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-03 20:53:54 UTC",
+    "serialized_at": "2026-03-10 19:15:11 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -626,56 +626,6 @@
     {
       "chapter": 21,
       "position": 21,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "pl-sandbox-aif2-u2-function-paramenter-lab-20"
-        ],
-        "progression": "Functions in JavaScript"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "pl-sandbox-aif2-u2-function-paramenter-lab-20"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-sandbox-aif-sem-2-unit-2",
-        "activity_section.key": "fac4da79-8679-42d5-ac3c-39b5d9d69a16"
-      },
-      "level_keys": [
-        "pl-sandbox-aif2-u2-function-paramenter-lab-20"
-      ]
-    },
-    {
-      "chapter": 22,
-      "position": 22,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "pl-sandbox-aif2- U2-teacher-tips-21"
-        ],
-        "progression": "Functions in JavaScript"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "pl-sandbox-aif2- U2-teacher-tips-21"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-sandbox-aif-sem-2-unit-2",
-        "activity_section.key": "fac4da79-8679-42d5-ac3c-39b5d9d69a16"
-      },
-      "level_keys": [
-        "pl-sandbox-aif2- U2-teacher-tips-21"
-      ]
-    },
-    {
-      "chapter": 23,
-      "position": 23,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -699,8 +649,8 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 24,
+      "chapter": 22,
+      "position": 22,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -724,34 +674,9 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 25,
+      "chapter": 23,
+      "position": 23,
       "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "pl-sandbox-aif2-u2-sketchlab_panels-23"
-        ],
-        "progression": "Conditionals"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "pl-sandbox-aif2-u2-sketchlab_panels-23"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-sandbox-aif-sem-2-unit-2",
-        "activity_section.key": "3b1a4787-c620-4786-b0ef-297733c5ebe8"
-      },
-      "level_keys": [
-        "pl-sandbox-aif2-u2-sketchlab_panels-23"
-      ]
-    },
-    {
-      "chapter": 26,
-      "position": 26,
-      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -774,8 +699,30 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 27,
+      "chapter": 24,
+      "position": 24,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U2-conditionals-video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-2",
+        "activity_section.key": "3b1a4787-c620-4786-b0ef-297733c5ebe8"
+      },
+      "level_keys": [
+        "pl-aif-2-U2-conditionals-video"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 25,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -799,33 +746,8 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 28,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "pl-sandbox-aif2-u2-conditionals-CFU-28"
-        ],
-        "progression": "Conditionals"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "pl-sandbox-aif2-u2-conditionals-CFU-28"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-sandbox-aif-sem-2-unit-2",
-        "activity_section.key": "3b1a4787-c620-4786-b0ef-297733c5ebe8"
-      },
-      "level_keys": [
-        "pl-sandbox-aif2-u2-conditionals-CFU-28"
-      ]
-    },
-    {
-      "chapter": 29,
-      "position": 29,
+      "chapter": 26,
+      "position": 26,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -849,9 +771,31 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 30,
+      "chapter": 27,
+      "position": 27,
       "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Logic in Conditionals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-logic-code-panel"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-2",
+        "activity_section.key": "b4848b79-7a36-475b-b888-5925085e061a"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-logic-code-panel"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 28,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -874,9 +818,9 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 31,
-      "activity_section_position": 3,
+      "chapter": 29,
+      "position": 29,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -899,9 +843,9 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 32,
-      "activity_section_position": 4,
+      "chapter": 30,
+      "position": 30,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -924,9 +868,9 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 33,
-      "activity_section_position": 5,
+      "chapter": 31,
+      "position": 31,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -949,9 +893,9 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 34,
-      "activity_section_position": 6,
+      "chapter": 32,
+      "position": 32,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -974,9 +918,9 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 35,
-      "activity_section_position": 7,
+      "chapter": 33,
+      "position": 33,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1242,30 +1186,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-sandbox-aif2-u2-function-paramenter-lab-20",
-        "script_level.level_keys": [
-          "pl-sandbox-aif2-u2-function-paramenter-lab-20"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-sandbox-aif-sem-2-unit-2",
-        "activity_section.key": "fac4da79-8679-42d5-ac3c-39b5d9d69a16"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "pl-sandbox-aif2- U2-teacher-tips-21",
-        "script_level.level_keys": [
-          "pl-sandbox-aif2- U2-teacher-tips-21"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-sandbox-aif-sem-2-unit-2",
-        "activity_section.key": "fac4da79-8679-42d5-ac3c-39b5d9d69a16"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "pl-sandbox-aif2-u2-if-else-22",
         "script_level.level_keys": [
           "pl-sandbox-aif2-u2-if-else-22"
@@ -1290,9 +1210,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-sandbox-aif2-u2-sketchlab_panels-23",
+        "level.key": "pl-sandbox-aif2-u2-sketchtutorial-conditionals-23-2",
         "script_level.level_keys": [
-          "pl-sandbox-aif2-u2-sketchlab_panels-23"
+          "pl-sandbox-aif2-u2-sketchtutorial-conditionals-23-2"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1302,9 +1222,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-sandbox-aif2-u2-sketchtutorial-conditionals-23-2",
+        "level.key": "pl-aif-2-U2-conditionals-video",
         "script_level.level_keys": [
-          "pl-sandbox-aif2-u2-sketchtutorial-conditionals-23-2"
+          "pl-aif-2-U2-conditionals-video"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1326,21 +1246,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-sandbox-aif2-u2-conditionals-CFU-28",
+        "level.key": "pl-sandbox-aif2-u2-logic-27",
         "script_level.level_keys": [
-          "pl-sandbox-aif2-u2-conditionals-CFU-28"
+          "pl-sandbox-aif2-u2-logic-27"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-2",
-        "activity_section.key": "3b1a4787-c620-4786-b0ef-297733c5ebe8"
+        "activity_section.key": "b4848b79-7a36-475b-b888-5925085e061a"
       }
     },
     {
       "seeding_key": {
-        "level.key": "pl-sandbox-aif2-u2-logic-27",
+        "level.key": "pl-aif-2-U5-logic-code-panel",
         "script_level.level_keys": [
-          "pl-sandbox-aif2-u2-logic-27"
+          "pl-aif-2-U5-logic-code-panel"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

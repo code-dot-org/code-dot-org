@@ -1,5 +1,7 @@
-# Only configure OpenTelemetry if enabled in CDO config, to avoid unnecessary overhead in environments where it's not needed
-if CDO.enable_opentelemetry
+# Only configure OpenTelemetry if enabled in CDO config, to avoid unnecessary overhead in environments where it's not needed.
+# Also skip when not running a web server (e.g., unit tests) to avoid instrumentation overhead.
+# Note: ENV['UNIT_TEST'] is set too late (in test_helper.rb) to be reliable here.
+if CDO.enable_opentelemetry && CDO.running_web_application?
   require 'opentelemetry/sdk'
   require 'opentelemetry/instrumentation/all'
   require 'opentelemetry-exporter-otlp'
