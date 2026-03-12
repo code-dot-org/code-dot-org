@@ -8,8 +8,9 @@ import experiments from '@cdo/apps/util/experiments';
 
 import {createSketchlabTourSteps} from './sketchlabShepherdTourSteps';
 
-const SKETCHLAB_SHEPHERD_TOUR_LOCAL_STORAGE_KEY = 'sketchlabOnboardingTourV2Seen';
-const SKETCHLAB_ONBOARDING_FLOW_NAME = 'Sketch Lab Onboarding';
+const SKETCHLAB_SHEPHERD_TOUR_LOCAL_STORAGE_KEY =
+  'sketchlabOnboardingTourV2Seen';
+const SKETCHLAB_ONBOARDING_FLOW_NAME = 'Sketch Lab Onboarding V2';
 
 const onTourStart = () =>
   sendLab2AnalyticsEvent(EVENTS.INTRO_FLOW_STARTED, {
@@ -32,8 +33,7 @@ const useSketchlabShepherdTour = () => {
     experiments.SHEPHERD_PRODUCT_TOURS
   );
 
-  // Wait for the Excalidraw toolbar to be fully rendered before starting the tour,
-  // matching the same readiness check used by the intro.js version.
+  // Wait for the Excalidraw toolbar to be fully rendered before starting the tour.
   const [isToolbarReady, setIsToolbarReady] = useState(false);
   useEffect(() => {
     const checkToolbarReady = () => {
