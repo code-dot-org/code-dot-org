@@ -1,6 +1,7 @@
-import {Button} from '@code-dot-org/component-library/button';
 import CloseButton from '@code-dot-org/component-library/closeButton';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
+import {IconButton as MuiIconButton} from '@mui/material';
 import React, {useMemo} from 'react';
 
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -42,15 +43,16 @@ const DebugPanelRightHeaderButtons: React.FunctionComponent<
           size: 'xs',
         }}
       >
-        <Button
-          isIconOnly={true}
-          icon={{iconName: 'eraser'}}
+        <MuiIconButton
+          variant="outlined"
+          color="tertiary"
+          size="extraSmall"
           onClick={handleClear}
           aria-label={label}
-          size={'xs'}
-          type={'secondary'}
-          color={'gray'}
-        />
+          type="button"
+        >
+          <FontAwesomeV6Icon iconName="eraser" />
+        </MuiIconButton>
       </WithTooltip>
       <CloseButton
         onClick={() => dispatch(setDebugPanelOpen(false))}

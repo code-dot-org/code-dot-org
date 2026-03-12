@@ -1,4 +1,4 @@
-import {LinkButton} from '@code-dot-org/component-library/button';
+import {Button as MuiButton} from '@mui/material';
 import React from 'react';
 import {NavLink, generatePath} from 'react-router-dom';
 
@@ -36,7 +36,16 @@ export const getNoCurriculumAssignedEmptyState = () => {
     headline: i18n.emptySectionHeadline(),
     descriptionText: i18n.noCurriculumAssigned(),
     imageComponent: <img src={blankScreen} alt="blank screen" />,
-    button: <LinkButton href="/catalog" text={i18n.browseCurriculum()} />,
+    button: (
+      <MuiButton
+        variant="contained"
+        color="primary"
+        size="medium"
+        href="/catalog"
+      >
+        {i18n.browseCurriculum()}
+      </MuiButton>
+    ),
   };
 };
 
@@ -51,7 +60,10 @@ export const getNoUnitAssignedEmptyState = (
     }),
     imageComponent: <img src={NoUnitAssigned} alt={i18n.almostThere()} />,
     button: (
-      <LinkButton
+      <MuiButton
+        variant="contained"
+        color="primary"
+        size="medium"
         href={
           '/teacher_dashboard' +
           generatePath(
@@ -62,8 +74,9 @@ export const getNoUnitAssignedEmptyState = (
             }
           )
         }
-        text={i18n.assignAUnit()}
-      />
+      >
+        {i18n.assignAUnit()}
+      </MuiButton>
     ),
   };
 };
@@ -82,7 +95,10 @@ export const getNoUnitAssignedForCalendarOrLessonMaterials = (
     }),
     imageComponent: <img src={NoUnitAssigned} alt={i18n.almostThere()} />,
     button: (
-      <LinkButton
+      <MuiButton
+        variant="contained"
+        color="primary"
+        size="medium"
         href={
           '/teacher_dashboard' +
           generatePath(
@@ -93,8 +109,9 @@ export const getNoUnitAssignedForCalendarOrLessonMaterials = (
             }
           )
         }
-        text={i18n.assignAUnit()}
-      />
+      >
+        {i18n.assignAUnit()}
+      </MuiButton>
     ),
   };
 };
