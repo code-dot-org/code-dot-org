@@ -1,3 +1,4 @@
+import {offset} from '@floating-ui/dom';
 import {useEffect, useState} from 'react';
 
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
@@ -68,6 +69,11 @@ const useSketchlabShepherdTour = () => {
     onStart: onTourStart,
     onComplete: onTourComplete,
     onCancel: onTourCancel,
+    additionalStepOptions: {
+      floatingUIOptions: {
+        middleware: [offset(12)],
+      },
+    },
   });
 
   useStartTourWhenAvailable(tour);

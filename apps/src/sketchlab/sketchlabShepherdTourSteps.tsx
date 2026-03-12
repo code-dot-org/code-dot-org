@@ -1,4 +1,3 @@
-import {offset} from '@floating-ui/dom';
 import React from 'react';
 import {renderToStaticMarkup} from 'react-dom/server';
 import {type StepOptions, type Tour} from 'shepherd.js';
@@ -116,9 +115,6 @@ export const createSketchlabTourSteps = (tour: Tour): StepOptions[] => [
     },
     title: 'Move on to the next level',
     text: "When you're done with your Sketch Lab creation, click Continue to move on to the next level.",
-    floatingUIOptions: {
-      middleware: [offset(12)],
-    },
     buttons: [backButton(tour), doneButton(tour)],
   },
 ];
