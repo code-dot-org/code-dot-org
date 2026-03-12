@@ -318,8 +318,8 @@ describe('Notification', () => {
       />
     );
     expect(wrapper.find('FontAwesome').length).toBe(2);
-    expect(wrapper.find('FontAwesome').at(0).props().icon).toBe('info-circle');
-    expect(wrapper.find('FontAwesome').at(1).props().icon).toBe('times');
+    expect(wrapper.find('FontAwesome').at(0).props().icon).toBe('circle-info');
+    expect(wrapper.find('FontAwesome').at(1).props().icon).toBe('xmark');
   });
   it('renders a tooltip', () => {
     const wrapper = wrapped(
@@ -332,8 +332,8 @@ describe('Notification', () => {
       />
     );
     expect(wrapper.find('FontAwesome').length).toBe(2);
-    expect(wrapper.find('FontAwesome').at(0).props().icon).toBe('info-circle');
-    expect(wrapper.find('FontAwesome').at(1).props().icon).toBe('info-circle');
+    expect(wrapper.find('FontAwesome').at(0).props().icon).toBe('circle-info');
+    expect(wrapper.find('FontAwesome').at(1).props().icon).toBe('circle-info');
 
     expect(wrapper.text()).toContain(information.notice);
     expect(wrapper.text()).toContain(information.details);

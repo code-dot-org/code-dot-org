@@ -37,7 +37,7 @@ describe('WireframeButtons', () => {
       );
       expect(wrapper.find(SendToPhone)).to.be.empty;
 
-      wrapper.find('.fa-mobile').simulate('click');
+      wrapper.find('.fa-mobile-screen-button').simulate('click');
       expect(wrapper.find(SendToPhone)).not.to.be.empty;
     });
   });

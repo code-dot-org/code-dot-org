@@ -72,7 +72,7 @@ class SoundListEntry extends React.Component {
         <div className={styles.icon}>
           <i
             onClick={this.clickSoundControl}
-            className={'fa ' + playIcon + ' fa-2x'}
+            className={'fa-solid ' + playIcon + ' fa-2x'}
           />
         </div>
         <div className={styles.metadata}>

@@ -65,10 +65,10 @@ const Notification = ({
   const desktop = responsiveSize === undefined || responsiveSize === 'lg';
 
   const icons = {
-    information: 'info-circle',
+    information: 'circle-info',
     success: 'check-circle',
-    failure: 'exclamation-triangle',
-    warning: 'exclamation-triangle',
+    failure: 'triangle-exclamation',
+    warning: 'triangle-exclamation',
     bullhorn: 'bullhorn',
     bullhorn_yellow: 'bullhorn',
     feedback: 'envelope',
