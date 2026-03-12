@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import color from '@cdo/apps/util/color';
@@ -29,14 +28,11 @@ class LessonExtrasFlagIcon extends React.PureComponent {
   }
 }
 
-export default Radium(LessonExtrasFlagIcon);
+export default LessonExtrasFlagIcon;
 
 const styles = {
   default: {
     color: color.lighter_gray,
-    ':hover': {
-      color: color.orange,
-    },
   },
   selected: {
     color: color.charcoal,
